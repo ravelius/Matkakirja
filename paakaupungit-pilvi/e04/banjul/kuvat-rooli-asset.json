@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "banjul",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+  "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
   "assets": [
     {
       "era": "e04",
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
         "semanticContextSHA256": "d33016e96b96611efb38c34242e9d0844bd670935abe4005d974637412afd6fd",
@@ -190,7 +190,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
       "contextAfterSHA256": "d33016e96b96611efb38c34242e9d0844bd670935abe4005d974637412afd6fd",
       "ownerApproved": true,
@@ -217,7 +217,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "690390ec20db00321276b7d87652da855380ee4ab7d114d0feee891b69bad9a0",
         "sameImageExportSHA256": "690390ec20db00321276b7d87652da855380ee4ab7d114d0feee891b69bad9a0",
         "independentNativeQAEvidencePreserved": true,
@@ -273,7 +273,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
         "semanticContextSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
@@ -415,7 +415,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
       "contextAfterSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
       "ownerApproved": true,
@@ -442,7 +442,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "c642c657fc731e669a12498a800f5f00eabb2533528fb5cc17ccc41d0fe2fe9d",
         "sameImageExportSHA256": "c642c657fc731e669a12498a800f5f00eabb2533528fb5cc17ccc41d0fe2fe9d",
         "independentNativeQAEvidencePreserved": true,
@@ -501,7 +501,7 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ee24a039049f299e762e34fe64599796fe3f2fc95ab4817b36cd757b12137e6e",
         "semanticContextSHA256": "ee24a039049f299e762e34fe64599796fe3f2fc95ab4817b36cd757b12137e6e",
@@ -763,7 +763,7 @@
         "vuosi": "2013"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "ee24a039049f299e762e34fe64599796fe3f2fc95ab4817b36cd757b12137e6e",
       "contextAfterSHA256": "ee24a039049f299e762e34fe64599796fe3f2fc95ab4817b36cd757b12137e6e",
       "ownerApproved": true,
@@ -790,7 +790,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "f2a793d1ec66e9601ddfe3fbc8efdf0d3342ac6a4cdb83ffe8ddeeb48c9d3300",
         "sameImageExportSHA256": "f2a793d1ec66e9601ddfe3fbc8efdf0d3342ac6a4cdb83ffe8ddeeb48c9d3300",
         "independentNativeQAEvidencePreserved": true,
@@ -849,7 +849,7 @@
         1656
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "81f97aa31ab4c5ff9046e1a47347a82e85fc091465856299b4596b761cd3d810",
         "semanticContextSHA256": "81f97aa31ab4c5ff9046e1a47347a82e85fc091465856299b4596b761cd3d810",
@@ -1074,7 +1074,7 @@
         "tiedosto": "Banjul, The Gambia (ASTER).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "81f97aa31ab4c5ff9046e1a47347a82e85fc091465856299b4596b761cd3d810",
       "contextAfterSHA256": "81f97aa31ab4c5ff9046e1a47347a82e85fc091465856299b4596b761cd3d810",
       "ownerApproved": true,
@@ -1101,7 +1101,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "d171d042950cef00e9cef6ef60b4df07cef79be6e485c99b820aa2bccf882a52",
         "sameImageExportSHA256": "d171d042950cef00e9cef6ef60b4df07cef79be6e485c99b820aa2bccf882a52",
         "independentNativeQAEvidencePreserved": true,
@@ -1160,7 +1160,7 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "fe91ba7b4a16119007de59078b77297635a986e42b40d67b0ead4d763d509590",
         "semanticContextSHA256": "fe91ba7b4a16119007de59078b77297635a986e42b40d67b0ead4d763d509590",
@@ -1385,7 +1385,7 @@
         "tiedosto": "Banjul Ferry (5197915925).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "fe91ba7b4a16119007de59078b77297635a986e42b40d67b0ead4d763d509590",
       "contextAfterSHA256": "fe91ba7b4a16119007de59078b77297635a986e42b40d67b0ead4d763d509590",
       "ownerApproved": true,
@@ -1412,7 +1412,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "8b48a389de105c96f1cc407f69688ac132f1766e1afc86c2677fe4975766e839",
         "sameImageExportSHA256": "8b48a389de105c96f1cc407f69688ac132f1766e1afc86c2677fe4975766e839",
         "independentNativeQAEvidencePreserved": true,
@@ -1471,7 +1471,7 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "29f5f831646622d92b313b21ecb395b1169d48e94f37ed9134b67a18f7cfdf7d",
         "semanticContextSHA256": "29f5f831646622d92b313b21ecb395b1169d48e94f37ed9134b67a18f7cfdf7d",
@@ -1696,7 +1696,7 @@
         "tiedosto": "Gambia (9383665686).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "29f5f831646622d92b313b21ecb395b1169d48e94f37ed9134b67a18f7cfdf7d",
       "contextAfterSHA256": "29f5f831646622d92b313b21ecb395b1169d48e94f37ed9134b67a18f7cfdf7d",
       "ownerApproved": true,
@@ -1723,7 +1723,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "d16a95f1fb6d50413980c555eb729d85576474c889a83ce2257b69b8c6333405",
         "sameImageExportSHA256": "d16a95f1fb6d50413980c555eb729d85576474c889a83ce2257b69b8c6333405",
         "independentNativeQAEvidencePreserved": true,
@@ -1785,7 +1785,7 @@
         2263
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9adb7601d022fe21ad0fe668b3fe10789060ba6bbc085e62d7eeaceab210b314",
         "semanticContextSHA256": "f1dfc55f247e78057c53753aa45ca88f37ab661659fdc555ad49b2b727567d99",
@@ -2015,7 +2015,7 @@
         "tiedosto": "Banjul, The Gambia (CAPELLA C09 SP GEO HH 20241121154435 20241121154459).png"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "9adb7601d022fe21ad0fe668b3fe10789060ba6bbc085e62d7eeaceab210b314",
       "contextAfterSHA256": "f1dfc55f247e78057c53753aa45ca88f37ab661659fdc555ad49b2b727567d99",
       "ownerApproved": true,
@@ -2042,7 +2042,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "8cde4d215495ef718db3df3a0de194be1b658f87a4ed8c1cb5fe2a13c98833d6",
         "sameImageExportSHA256": "8cde4d215495ef718db3df3a0de194be1b658f87a4ed8c1cb5fe2a13c98833d6",
         "independentNativeQAEvidencePreserved": true,
@@ -2104,7 +2104,7 @@
         4149
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "662d2575aa1b4c8a60bfffcc9f5190b08e47313fdbba8f04c3e91ec3f33e430d",
         "semanticContextSHA256": "a25333a9073ce2140b7060d2aeacff9b02d67dcd6224908197cbc865d7922aca",
@@ -2329,7 +2329,7 @@
         "tiedosto": "Flying osprey (Pandion haliaetus), Waquoit Bay National Estuarine Research Reserve, Maine, US (PPL1-Corrected) julesvernex2.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "662d2575aa1b4c8a60bfffcc9f5190b08e47313fdbba8f04c3e91ec3f33e430d",
       "contextAfterSHA256": "a25333a9073ce2140b7060d2aeacff9b02d67dcd6224908197cbc865d7922aca",
       "ownerApproved": true,
@@ -2356,7 +2356,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "2d0e68ca638d28ef05bf53933f6bf68a54cfe7dc00fd13f74951af905b24bcc0",
         "sameImageExportSHA256": "2d0e68ca638d28ef05bf53933f6bf68a54cfe7dc00fd13f74951af905b24bcc0",
         "independentNativeQAEvidencePreserved": true,
@@ -2418,7 +2418,7 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "70c5e0664ad6e846ccdc04672fa849c8e44285b8d4a5949547a924c45da1946f",
         "semanticContextSHA256": "e2d583ed4745d639ef6eb3b0ceb4f438d9d4013aaadb54a96b34a794bd415a8d",
@@ -2643,7 +2643,7 @@
         "tiedosto": "1723Cooked rice.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "70c5e0664ad6e846ccdc04672fa849c8e44285b8d4a5949547a924c45da1946f",
       "contextAfterSHA256": "e2d583ed4745d639ef6eb3b0ceb4f438d9d4013aaadb54a96b34a794bd415a8d",
       "ownerApproved": true,
@@ -2670,7 +2670,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "2b7edebdaf48173f2091d6a466a075beea8e0e2ff558a05a1ba4799b4743ec96",
         "sameImageExportSHA256": "2b7edebdaf48173f2091d6a466a075beea8e0e2ff558a05a1ba4799b4743ec96",
         "independentNativeQAEvidencePreserved": true,
@@ -2729,7 +2729,7 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "59fd9ec191d6a883af8a17df45a53f012e9f3338f1880fa769c53c6e6f03166c",
         "semanticContextSHA256": "59fd9ec191d6a883af8a17df45a53f012e9f3338f1880fa769c53c6e6f03166c",
@@ -2954,7 +2954,7 @@
         "tiedosto": "Gambia03Banjul029 (5400734200).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "59fd9ec191d6a883af8a17df45a53f012e9f3338f1880fa769c53c6e6f03166c",
       "contextAfterSHA256": "59fd9ec191d6a883af8a17df45a53f012e9f3338f1880fa769c53c6e6f03166c",
       "ownerApproved": true,
@@ -2981,7 +2981,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "f0195a09786f0f0241a5db6cff15b889193fcc6e811804eb8897cd86b8880fab",
         "sameImageExportSHA256": "f0195a09786f0f0241a5db6cff15b889193fcc6e811804eb8897cd86b8880fab",
         "independentNativeQAEvidencePreserved": true,
@@ -3040,7 +3040,7 @@
         2832
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ff7df1cd992e7ed26ede72045c4ecab6ea5c09ad12c5d689a62b7a454b9a479d",
         "semanticContextSHA256": "ff7df1cd992e7ed26ede72045c4ecab6ea5c09ad12c5d689a62b7a454b9a479d",
@@ -3265,7 +3265,7 @@
         "tiedosto": "Banjul, The Gambia.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "ff7df1cd992e7ed26ede72045c4ecab6ea5c09ad12c5d689a62b7a454b9a479d",
       "contextAfterSHA256": "ff7df1cd992e7ed26ede72045c4ecab6ea5c09ad12c5d689a62b7a454b9a479d",
       "ownerApproved": true,
@@ -3292,7 +3292,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "ff81ce70a9c945a53746594758c4a0be6a89e5bac02ca7bfc61a0eacd783d6f7",
         "sameImageExportSHA256": "ff81ce70a9c945a53746594758c4a0be6a89e5bac02ca7bfc61a0eacd783d6f7",
         "independentNativeQAEvidencePreserved": true,
@@ -3351,7 +3351,7 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d3ba3731d2d96ad545b6f31d563310eab0211837d38192cfa57d2ea7e4874391",
         "semanticContextSHA256": "d3ba3731d2d96ad545b6f31d563310eab0211837d38192cfa57d2ea7e4874391",
@@ -3581,7 +3581,7 @@
         "tiedosto": "Uher Report Monitor 4000 (31591411977).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "d3ba3731d2d96ad545b6f31d563310eab0211837d38192cfa57d2ea7e4874391",
       "contextAfterSHA256": "d3ba3731d2d96ad545b6f31d563310eab0211837d38192cfa57d2ea7e4874391",
       "ownerApproved": true,
@@ -3608,7 +3608,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "3e483719d8b2f2126591e6a43f37503eedfc65832c430e17ca73fe9b1c082fe8",
         "sameImageExportSHA256": "3e483719d8b2f2126591e6a43f37503eedfc65832c430e17ca73fe9b1c082fe8",
         "independentNativeQAEvidencePreserved": true,
@@ -3667,7 +3667,7 @@
         2297
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "cee31416b9cdfead83d3c7e0c62c58d93ecf2decd411acbfe1dedd1f480e8329",
         "semanticContextSHA256": "cee31416b9cdfead83d3c7e0c62c58d93ecf2decd411acbfe1dedd1f480e8329",
@@ -3892,7 +3892,7 @@
         "tiedosto": "Magroves at lamin lodge gambia (32863863515).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "cee31416b9cdfead83d3c7e0c62c58d93ecf2decd411acbfe1dedd1f480e8329",
       "contextAfterSHA256": "cee31416b9cdfead83d3c7e0c62c58d93ecf2decd411acbfe1dedd1f480e8329",
       "ownerApproved": true,
@@ -3919,7 +3919,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "22f071969ec8f66501764844e8f811454826b6660ffc69bac9877fbf2de1af44",
         "sameImageExportSHA256": "22f071969ec8f66501764844e8f811454826b6660ffc69bac9877fbf2de1af44",
         "independentNativeQAEvidencePreserved": true,
@@ -3978,10 +3978,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8300b65db6039377ff0f7d19b5c199cc5b37e13639c611ac84cdbfcef68f6c9a",
-        "semanticContextSHA256": "8300b65db6039377ff0f7d19b5c199cc5b37e13639c611ac84cdbfcef68f6c9a",
+        "targetBeforeSHA256": "852d7ab51cb176940d4216527ebcde9348de70a478f199a36dab952c36b455d4",
+        "semanticContextSHA256": "852d7ab51cb176940d4216527ebcde9348de70a478f199a36dab952c36b455d4",
         "subjectTitle": "Rantametsä ottaa vettä vastaan",
         "targetState": "existing-target"
       },
@@ -4203,9 +4203,9 @@
         "tiedosto": "Gambia (9383666900).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
-      "targetAfterSHA256": "8300b65db6039377ff0f7d19b5c199cc5b37e13639c611ac84cdbfcef68f6c9a",
-      "contextAfterSHA256": "8300b65db6039377ff0f7d19b5c199cc5b37e13639c611ac84cdbfcef68f6c9a",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
+      "targetAfterSHA256": "852d7ab51cb176940d4216527ebcde9348de70a478f199a36dab952c36b455d4",
+      "contextAfterSHA256": "852d7ab51cb176940d4216527ebcde9348de70a478f199a36dab952c36b455d4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -4230,7 +4230,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "f356cf0a3fcc6785eb0e3603134b72489645fce4d9195db5d6a7d3105c5a8fbc",
         "sameImageExportSHA256": "f356cf0a3fcc6785eb0e3603134b72489645fce4d9195db5d6a7d3105c5a8fbc",
         "independentNativeQAEvidencePreserved": true,
@@ -4289,7 +4289,7 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3c4ded03f646271bd3735d346a14c4d836f8faa18c184288e547902dfe227193",
         "semanticContextSHA256": "3c4ded03f646271bd3735d346a14c4d836f8faa18c184288e547902dfe227193",
@@ -4514,7 +4514,7 @@
         "tiedosto": "Gambia (9383674042).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "3c4ded03f646271bd3735d346a14c4d836f8faa18c184288e547902dfe227193",
       "contextAfterSHA256": "3c4ded03f646271bd3735d346a14c4d836f8faa18c184288e547902dfe227193",
       "ownerApproved": true,
@@ -4541,7 +4541,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "48a71a6d4f43e81d62fc2db1c303c9d8ce85cc2e747e973969ae0548a2a2f212",
         "sameImageExportSHA256": "48a71a6d4f43e81d62fc2db1c303c9d8ce85cc2e747e973969ae0548a2a2f212",
         "independentNativeQAEvidencePreserved": true,
@@ -4600,7 +4600,7 @@
         3371
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a0b537436b5305e2dd222c0081e46afda960f2c83a41e4f19bdc0965bdb17f06",
         "semanticContextSHA256": "a0b537436b5305e2dd222c0081e46afda960f2c83a41e4f19bdc0965bdb17f06",
@@ -4825,7 +4825,7 @@
         "tiedosto": "20260411 osprey wethersfield cove PD03910.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "a0b537436b5305e2dd222c0081e46afda960f2c83a41e4f19bdc0965bdb17f06",
       "contextAfterSHA256": "a0b537436b5305e2dd222c0081e46afda960f2c83a41e4f19bdc0965bdb17f06",
       "ownerApproved": true,
@@ -4852,7 +4852,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "15e9ae7d74b47e79f64d6e5f941644853a4e6f3b39c3e879a8918fd5da9c53a2",
         "sameImageExportSHA256": "15e9ae7d74b47e79f64d6e5f941644853a4e6f3b39c3e879a8918fd5da9c53a2",
         "independentNativeQAEvidencePreserved": true,
@@ -4911,7 +4911,7 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "24a88f7872411edbbf602a080defe1a733a764af997cb7211ebf79cc38ae5545",
         "semanticContextSHA256": "2f23e770b33e4d7b67d709b00f2c250cb301378bdec5bf5cb116aaf15296ec34",
@@ -5136,7 +5136,7 @@
         "tiedosto": "Banjul Ferry (5197916345).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "24a88f7872411edbbf602a080defe1a733a764af997cb7211ebf79cc38ae5545",
       "contextAfterSHA256": "2f23e770b33e4d7b67d709b00f2c250cb301378bdec5bf5cb116aaf15296ec34",
       "ownerApproved": true,
@@ -5163,7 +5163,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "822e470f7b7601a368ffe372ecf5c50b1443f3128a8d3e2c8151827fe3d42176",
         "sameImageExportSHA256": "822e470f7b7601a368ffe372ecf5c50b1443f3128a8d3e2c8151827fe3d42176",
         "independentNativeQAEvidencePreserved": true,
@@ -5222,7 +5222,7 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "semanticSourceBind": {
         "targetBeforeSHA256": "dfd33c6baa04260000452026e76832c53ae0e75dfc88664b648efb24d4e6caa1",
         "semanticContextSHA256": "ca0b7bb7ae2655673a7f002f622c34e925c85bcab9e8570dbcb18fa988d4ed45",
@@ -5447,7 +5447,7 @@
         "tiedosto": "Gambia (9383665170).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+      "sourceContentAfterSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
       "targetAfterSHA256": "dfd33c6baa04260000452026e76832c53ae0e75dfc88664b648efb24d4e6caa1",
       "contextAfterSHA256": "ca0b7bb7ae2655673a7f002f622c34e925c85bcab9e8570dbcb18fa988d4ed45",
       "ownerApproved": true,
@@ -5474,7 +5474,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "28d32fc83710cadada05f001b1f7b249b0abd958ca8a5a497417043fecbe1a57",
+        "sourceSHA256": "145f0dd148c38e4838e58a06d4ddfe9209085ca5efc3e1d2779616a2ffb62b59",
         "sameImageNativeSHA256": "ec170997ac73f36d15aa7e190d8e5bffe4506c571354205034f6a5bc6802b82e",
         "sameImageExportSHA256": "ec170997ac73f36d15aa7e190d8e5bffe4506c571354205034f6a5bc6802b82e",
         "independentNativeQAEvidencePreserved": true,
@@ -5492,9 +5492,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/banjul/59d5e5cde05f8c883da5cba92a21e5fe58d464da2832d43d8dbcefd3efe2cabd.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/banjul/7d91b21e0e234fabdd4ea0af9f18f083411cb9099059a1f21facf9fb68fb8da1.json",
   "task118ReboundAt": "2026-10-13T16:33:23.929108+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:10:00.018512+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:46.624694+00:00"
 }

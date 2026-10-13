@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "**Rabat** on Marokon pääkaupunki Atlantin rannalla, kohdassa jossa Bou Regreg -joki laskee mereen. Joen etelärannalla on Rabat ja pohjoisrannalla Salé, joten vastarannan katot kuuluvat täällä jokapäiväiseen kaupunkinäkymään. Rabatin prefektuurissa oli vuonna 2024 noin puoli miljoonaa asukasta.\n\nKukkulan **Udayan kasbah** on keskiaikainen linnoitettu kaupunginosa, jonka sinivalkoisilla kujilla asutaan yhä. Sen vieressä oleva medina sai 1600-luvulla uuden muurin vanhemman ja laajemman kaupunginmuurin sisään. Chellahissa taas roomalaisen Salan jäännökset ja marinidien hautausmaa ovat saman raunioalueen kerroksia.\n\nVanhan kaupungin rinnalle suunniteltiin 1900-luvulla uusi kaupunginosa, jonka kanssa historiallinen ydin muodostaa maailmanperintökohteen. Nykyinen raitiovaunu yhdistää Rabatin ja Salén joen yli. Rabatin nimi juontuu arabian sanasta ribāṭ, joka tarkoittaa linnoitettua tukikohtaa.",
-    "teksti": "Rabatin keskiaikainen kaupunkihanke oli asuttua medinaa laajempi. Almohadien muurien sisään jäi myös avoimia alueita, ja myöhemmin rakennettu Andalusialainen muuri rajasi oman, tiiviimmän kaupunginosansa. Andalusialainen muuri jäi kokonaan vanhemman muurikehän sisäpuolelle.\n\nKasbahin rakennusten käyttö on muuttunut muurien pysyessä. Moulay Ismailin vanha paviljonki on ollut palatsiasunto, uskonnollinen oppilaitos ja museo. Nykyisen museon aiheena on marokkolainen koru- ja pukeutumisperintö, mutta rakennuksen sisäpiha kuuluu sen omaan historiaan.\n\nChellah vie vielä kauemmas taaksepäin: roomalainen Sala Colonia rakennettiin aiempien mauretanialaisten rakenteiden päälle. Marinidit ottivat paikan myöhemmin hautausmaakseen ja rakensivat oman uskonnollisen kompleksinsa. Näkyvät roomalaiskorttelit ovat myös arkeologisen työn tulosta; samaa avointa kaivausnäkymää ei ollut vuonna 1873."
+    "teksti": "Rabatin keskiaikainen kaupunkihanke oli asuttua medinaa laajempi. Almohadien muurien sisään jäi myös avoimia alueita; 1600-luvun Andalusialainen muuri rajasi niiden sisään tiiviimmän medinan.\n\nKasbahin rakennusten käyttö on muuttunut muurien pysyessä. Moulay Ismailin vanha paviljonki on ollut palatsiasunto, uskonnollinen oppilaitos ja museo. Nykyisen museon aiheena on marokkolainen koru- ja pukeutumisperintö, mutta rakennuksen sisäpiha kuuluu sen omaan historiaan.\n\nChellah vie vielä kauemmas taaksepäin: roomalainen Sala Colonia rakennettiin aiempien mauretanialaisten rakenteiden päälle. Marinidit ottivat paikan myöhemmin hautausmaakseen ja rakensivat oman uskonnollisen kompleksinsa. Näkyvät roomalaiskorttelit ovat myös arkeologisen työn tulosta; samaa avointa kaivausnäkymää ei ollut vuonna 1873."
   },
   "kysymykset": [
     {
@@ -70,7 +70,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Selvitä ensin Rabatin ja Salén sijainti toisiinsa nähden.",
+      "hint": "Rabatissa vaunu kulkee päärautatieaseman läheltä ja kaupunginmuuriin tehdystä aukosta.",
       "fact": "Rabat–Salén raitiovaunu kulkee Bou Regreg -joen yli ja palvelee kummankin kaupungin aluetta.",
       "source": "https://en.wikipedia.org/wiki/Rabat%E2%80%93Sal%C3%A9_tramway"
     },
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Paikan historia ulottuu paljon keskiaikaista hautausmaata kauemmas.",
+      "hint": "Kaupungin julkisia rakennuksia sijoitettiin rinteeseen tehdyille terasseille.",
       "fact": "Chellahin antiikin kerros on Sala Colonia. Marinidit käyttivät paikkaa myöhemmin dynastiansa hautausmaana.",
       "source": "https://en.wikipedia.org/wiki/Chellah"
     }
@@ -140,8 +140,8 @@
           "otsikko": "Salé vanha, Salé uusi",
           "teksti": "Bou Regreg erottaa nykyisin Rabatin ja Salén, mutta kaupunkien vanhat nimet kulkevat joen yli. 1600-luvulla etelärannan Rabat tunnettiin nimellä New Salé, Uusi Salé, ja pohjoisrannan kaupunki nimellä Old Salé, Vanha Salé. Espanjasta karkotettuja moriskoja ja andalusialaistaustaisia pakolaisia asettui Rabatin kasbahiin ja sen alapuolelle. Asutus kasvoi, ja sen rajaksi tuli Andalusialainen muuri.",
           "tiedosto": "Salé from the Plateforme du Sémaphore (Kasbah des Oudais) (5509116076).jpg",
-          "lyhyt": "Salé on Rabatin vastarannan historiallinen kaupunki.",
-          "selite": "Bou Regregin pohjoisrannalla sijaitseva Salé tunnettiin Vanhan Salén nimellä, kun nykyisen Rabatin puolta kutsuttiin Uudeksi Saléksi.",
+          "lyhyt": "Salén kaupungin kattoja Bou Regregin vastarannalla.",
+          "selite": "Salén talojen yläpuolelle kohoaa minareetti. Kuvan etualalla näkyvät muuri, hautausmaa ja leveä hiekkaranta.",
           "lahde": "Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)",
           "wiki": "Rabat"
         },
@@ -149,8 +149,8 @@
           "otsikko": "Palatsiasunto sai uusia tehtäviä",
           "teksti": "Kasbahin eteläosan Moulay Ismailin paviljonki rakennettiin sulttaanin palatsiasunnoksi 1600-luvun lopulla. Sisäpihan ympärille järjestetty talo palveli myöhemmin uskonnollisena oppilaitoksena ja 1900-luvun alusta museona. Ensimmäisiä kokoelmia kartutettiin yksityisillä lahjoituksilla. Kokoelmaa laajennettiin koruilla, asuilla, keramiikalla ja soittimilla eri puolilta Marokkoa. Museon painopisteeksi tuli sittemmin koru- ja pukeutumisperintö, vaikka talon vanha piha ja torni kertovat edelleen palatsiasunnosta.",
           "tiedosto": "Pavilion of Moulay Ismail 03.jpg",
-          "lyhyt": "Moulay Ismailin paviljonki on ollut myös oppilaitos.",
-          "selite": "Moulay Ismailin vanha palatsiasunto on palvellut uskonnollisena oppilaitoksena ja museona, jonka aiheena on marokkolainen koru- ja pukeutumisperintö.",
+          "lyhyt": "Moulay Ismailin paviljongin sisäpihan pylväitä ja kaaria.",
+          "selite": "Moulay Ismailin paviljongin sisäpihalla kivipylväät kannattavat vaaleita kaaria. Käytävien lattiassa on mustavalkoista laatoitusta.",
           "lahde": "Hannolans, Wikimedia Commons (CC BY 4.0)",
           "wiki": "Kasbah of the Udayas"
         },
@@ -181,7 +181,7 @@
             },
             {
               "otsikko": "Vanhakaupunki ja kasbah",
-              "teksti": "Medina ja Udayan kasbah ovat vierekkäisiä mutta erillisiä historiallisia alueita. Medinassa ovat vanhat asuinkadut, portit ja Moulay Slimanen moskeija; kasbah kohoaa kukkulalle joen suulle. Kasbahin Rue Jamaa kulkee suuren portin ja jokinäkymän välillä. Eteläosassa on Moulay Ismailin vanha paviljonki. Kasbahin pohjoisosassa on vanha moskeija; paviljonki ja Andalusialainen puutarha ovat sen eteläosassa.",
+              "teksti": "Medina ja Udayan kasbah ovat vierekkäisiä mutta erillisiä historiallisia alueita. Medinassa ovat vanhat asuinkadut, portit ja Moulay Slimanen moskeija; kasbah kohoaa kukkulalle joen suulle. Kasbahin Rue Jamaa kulkee suuren portin ja jokinäkymän välillä. Kasbahin pohjoisosassa on vanha moskeija; paviljonki ja Andalusialainen puutarha ovat sen eteläosassa.",
               "kuva": {
                 "tiedosto": "Pavilion of Moulay Ismail in Andalusian Garden Rabat DSCF2755.jpg",
                 "lyhyt": "Moulay Ismailin paviljonki kuuluu kasbahin eteläosaan.",
@@ -447,8 +447,8 @@
       "kuvat": [
         {
           "tiedosto": "Sidi Makhlouf 1.jpg",
-          "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi.",
-          "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
+          "lyhyt": "Borj Sidi Makhloufin pyöristetty torni ja pitkä muuri.",
+          "selite": "Linnakkeen pyöristetty torni kohoaa pitkän vaalean muurin yläpuolelle. Oikealla näkyy Bou Regregin vettä ja vastarannan rakennuksia.",
           "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],

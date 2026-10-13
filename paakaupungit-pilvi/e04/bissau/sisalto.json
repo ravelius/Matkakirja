@@ -23,12 +23,12 @@
       "options": [
         "Guinea-Bissaun",
         "Guinean tasavallan",
-        "Sierra Leonen",
-        "Senegalin tasavallan"
+        "São Tomén ja Príncipen",
+        "Angolan"
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Valtio sijaitsee Länsi-Afrikan Atlantin rannikolla.",
+      "hint": "Portugalilainen kauppa-asema perustettiin tänne 1600-luvun lopulla.",
       "fact": "Bissau on Guinea-Bissaun pääkaupunki ja tärkeä merisatama.",
       "source": "https://en.wikipedia.org/wiki/Bissau"
     },
@@ -156,7 +156,7 @@
           "selite": "Bissau Velhon kujan päässä avautuva Geban vesi liittää vanhan keskustan satamamaisemaan elokuussa 2026.",
           "lahde": "Laércia Valeriana Insali, Wikimedia Commons (CC BY 4.0)"
         },
-        "kappale": "Bissau Velhon siirtomaa-ajan taloissa toimii liikkeitä ja apteekkeja. Bandimissa kauppa liittyy ruokaan, vaatteisiin ja arkisiin tarvikkeisiin. Vanhan keskustan lähellä ovat Amuran linnoitus ja satama. Pidjiguitin vanha laituripaikka kuuluu sataman eri-ikäisiin rakennusvaiheisiin.",
+        "kappale": "Bandimissa kauppa liittyy ruokaan, vaatteisiin ja arkisiin tarvikkeisiin. Vanhan keskustan lähellä ovat Amuran linnoitus ja satama. Pidjiguitin vanha laituripaikka kuuluu sataman eri-ikäisiin rakennusvaiheisiin.",
         "artikkeli": {
           "nimi": "Matkailijan Bissau",
           "taitto": "opas",
@@ -169,7 +169,7 @@
             },
             {
               "otsikko": "Vanhan keskustan käyttö jatkuu",
-              "teksti": "Bissau Velhon siirtomaa-ajan taloissa toimii liikkeitä ja apteekkeja. Katujen lähellä ovat Amuran linnoitus ja satama. Linnoituksen vaiheisiin kuuluu rakentamista, hylkäämistä ja myöhempää kunnostamista."
+              "teksti": "Katujen lähellä ovat Amuran linnoitus ja satama. Linnoituksen vaiheisiin kuuluu rakentamista, hylkäämistä ja myöhempää kunnostamista."
             },
             {
               "otsikko": "Torilta kokoelmien muistiin",
@@ -228,7 +228,7 @@
             "hyvaTietaa": [
               {
                 "otsikko": "Vierailujen järjestelyt",
-                "teksti": "Museon käyntipaikka ja kuljetusten lähtöpisteet selvitetään paikallisesti. Linnoitukseen pääsyä ei oleteta; myös kuvaamisessa noudatetaan kohteen ohjeita."
+                "teksti": "Museon käyntipaikka, kuljetusten lähtöpisteet sekä linnoituksen käynti- ja kuvaamiskäytännöt selvitetään paikallisesti."
               },
               {
                 "otsikko": "Maksaminen",
@@ -266,7 +266,7 @@
       "nostot": [
         {
           "otsikko": "Linnoitus rakentui uudelleen",
-          "teksti": "Amuran linnoituksen historia alkaa 1600-luvun lopun kauppa-asemavaiheesta. Varhainen linnake hylättiin ja tuhoutui; nykyinen kokonaisuus rakennettiin sen jälkeen uusissa vaiheissa. Nykyisen kokonaisuuden keskeisiä vaiheita rakennettiin 1700-luvulla. Linnoitusta korjattiin myös 1800-luvulla ja restauroitiin seuraavalla vuosisadalla. Vuonna 1873 paikalla oli jo linnoitus, mutta sen kaikki nykyiset osat eivät kuulu samaan aikaan.",
+          "teksti": "Amuran linnoituksen historia alkaa 1600-luvun lopun kauppa-asemavaiheesta. Varhainen linnake hylättiin ja tuhoutui; nykyinen kokonaisuus rakennettiin sen jälkeen uusissa vaiheissa. Nykyisen linnoituksen tärkeät rakennusvaiheet ajoittuvat 1700-luvulle. Linnoitusta korjattiin myös 1800-luvulla ja restauroitiin seuraavalla vuosisadalla. Vuonna 1873 paikalla oli jo linnoitus, mutta sen kaikki nykyiset osat eivät kuulu samaan aikaan.",
           "wiki": "Fortaleza de São José da Amura"
         },
         {
@@ -280,7 +280,7 @@
         },
         {
           "otsikko": "Satama oli ennen nykyistä laituria",
-          "teksti": "Bissaun satamakauppa on vanhempaa kuin sen nykyisin tunnetut laiturirakenteet. Yritykset käyttivät varhain puisia lastaus- ja maihinnousulaitureita. Pidjiguitin julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle, ja sen alkuvaiheessa yhdistettiin puuta ja muurattua rakennetta. Laituri tunnettiin nimellä Ponte-cais Correia e Lança. Myöhemmin sataman muualle rakennettiin uudempia laitureita.",
+          "teksti": "Bissaun satamakauppa on vanhempaa kuin sen nykyisin tunnetut laiturirakenteet. Yritykset käyttivät varhain puisia lastaus- ja maihinnousulaitureita. Pidjiguitin julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle, ja sen alkuvaiheessa yhdistettiin puuta ja muurattua rakennetta. Laituri tunnettiin nimellä Ponte-cais Correia e Lança. Myöhemmin sataman muihin osiin rakennettiin uusia laitureita.",
           "wiki": "Port of Bissau",
           "tiedosto": "Pidjiguiti.jpg",
           "lyhyt": "Pidjiguitin satamapaikka veneineen vuonna 2007.",
@@ -336,7 +336,7 @@
     },
     "Pidjiguitin laituri": {
       "aika": "1800-luvun loppupuoli ja myöhemmät muutokset",
-      "teksti": "Pidjiguiti on tunnistettu laituripaikka Bissaun satamassa. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Satamassa oli myös yritysten käyttämiä puisia lastaus- ja maihinnousulaitureita. Isoisän matkavuonna 1873 Bissau oli jo kauppapaikka, kun taas Pidjiguitin julkisen laiturin rakennusvaihe kuuluu myöhempään aikaan.\n\nMyöhemmin Bissaun sataman muualle rakennettiin uudempia laitureita.",
+      "teksti": "Pidjiguiti on Bissaun sataman vanha laituripaikka. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Satamassa oli myös yritysten käyttämiä puisia lastaus- ja maihinnousulaitureita. Isoisän matkavuonna 1873 Bissau oli jo kauppapaikka, kun taas Pidjiguitin julkisen laiturin rakennusvaihe kuuluu myöhempään aikaan.\n\nMyöhemmin sataman muihin osiin rakennettiin uusia laitureita.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },

@@ -56,7 +56,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Laajan kaupunkialueen ja varsinaisen pääkaupungin rajat eroavat toisistaan.",
+      "hint": "Varsinainen Banjul sijaitsee St Mary's -saarella joen suulla.",
       "fact": "Suur-Banjuliin kuuluu Banjulin saarikaupungin lisäksi Kanifingin kunta mantereella.",
       "source": "https://en.wikipedia.org/wiki/Banjul"
     },
@@ -78,13 +78,13 @@
       "q": "Kehen Albertin torin nimi viittaa?",
       "options": [
         "Victorian puolisoon prinssi Albertiin",
-        "Saksin kuninkaaseen Albertiin",
-        "Itävallan arkkiherttua Albrechtiin",
-        "Preussin prinssiin Albrechtiin"
+        "Victorian poikaan prinssi Albert Edwardiin",
+        "Victorian pojanpoikaan prinssi Albert Victoriin",
+        "Saksin kuninkaaseen Albertiin"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Tori sai nimensä ennen kuin kaupungista tuli Banjul.",
+      "hint": "Torin vanhassa virallisessa nimessä oli sana Royal; se rakennettiin Britannian siirtomaavallan aikana.",
       "fact": "Royal Albert Market nimettiin kuningatar Victorian puolison, prinssi Albertin mukaan.",
       "source": "https://en.wikipedia.org/wiki/Albert_Market"
     }
@@ -289,7 +289,7 @@
         },
         {
           "otsikko": "Rantametsä ottaa vettä vastaan",
-          "teksti": "Tanbin mangroveranta tekee myös työtä kaupungin ympäristössä. Kosteikko vastaanottaa virtaavaa vettä ja sadetta, osallistuu rannan vakauttamiseen sekä pidättää ja siirtää sedimenttejä ja ravinteita. Sen tehtäviin kuuluu pohjaveden täydentyminen ja tulvaveden hallinta. Rannikkoluontoa onkin kuvattu Banjulin hydrologiseksi puskuriksi. Kosteikon kanavat, lieju ja kasvillisuus tasaavat veden liikettä kaupungin rantaympäristössä. Mangrovien varjostama vesi on samalla katkarapujen lisääntymisympäristöä.",
+          "teksti": "Tanbin mangroveranta tekee myös työtä kaupungin ympäristössä. Kosteikko vastaanottaa virtaavaa vettä ja sadetta, osallistuu rannan vakauttamiseen sekä pidättää ja siirtää sedimenttejä ja ravinteita. Sen tehtäviin kuuluu pohjaveden täydentyminen ja tulvaveden hallinta. Kosteikon kanavat, lieju ja kasvillisuus tasaavat veden liikettä kaupungin rantaympäristössä. Mangrovien varjostama vesi on samalla katkarapujen lisääntymisympäristöä.",
           "tiedosto": "Gambia (9383666900).jpg",
           "lyhyt": "Mangroven juuret ovat osa Tanbin vuorovesirannan kasvillisuutta.",
           "selite": "Tanbin mangrovejuuristo kiinnittyy liejuiseen rantaan, jonka luonnolliset veden ja sedimenttien liikkeet kuuluvat kosteikon toimintaan.",

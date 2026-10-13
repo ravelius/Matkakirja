@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "monrovia",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+  "sourceContentAfterSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
   "assets": [
     {
       "era": "e04",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
         "semanticContextSHA256": "1bc59e286bbac40c5ea39be5e0077d213018a33f4937ae0be81ba8b8c729acb4",
@@ -339,7 +339,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentAfterSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "targetAfterSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
       "contextAfterSHA256": "1bc59e286bbac40c5ea39be5e0077d213018a33f4937ae0be81ba8b8c729acb4",
       "ownerApproved": true,
@@ -366,7 +366,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sourceSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
         "sameImageNativeSHA256": "c60c51199f05af50758ac3dbf637b5461c19baaf006625ea65747feba8b273be",
         "sameImageExportSHA256": "492551f2087ae1a5f6d6829058b5f01914ed455ef95763f26a3f004522aa1d90",
         "independentNativeQAEvidencePreserved": true,
@@ -425,10 +425,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-        "semanticContextSHA256": "e2c7216e547e25275874ec91712417c767a3a56d557feb6bc841c34a5588b4a5",
+        "semanticContextSHA256": "bf522e0e264605e05e6a595758e16809084acd33d753ae94f248483230f4be6e",
         "subjectTitle": "Ruokapaikka arjen ääreltä",
         "targetState": "existing-target"
       },
@@ -607,9 +607,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentAfterSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "targetAfterSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-      "contextAfterSHA256": "e2c7216e547e25275874ec91712417c767a3a56d557feb6bc841c34a5588b4a5",
+      "contextAfterSHA256": "bf522e0e264605e05e6a595758e16809084acd33d753ae94f248483230f4be6e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -634,7 +634,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sourceSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
         "sameImageNativeSHA256": "565b827ba317603f6ff4c5b0c6a766ff6c23b66dbc02519189a88c0cd2d0eec9",
         "sameImageExportSHA256": "c5118e270f112f60f8ca1d2d9b5052f86b385195be40cece3288407753303c31",
         "independentNativeQAEvidencePreserved": true,
@@ -690,10 +690,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-        "semanticContextSHA256": "fe0b5446334dfe9140dbcb00495ad1385c12758a4ad5050a33cc46126e1652ae",
+        "semanticContextSHA256": "1dc128f7e9d04ce449080e5613cf94d7a508eb5b7ee59b7de37539fc3aba30c8",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -832,9 +832,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentAfterSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "targetAfterSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-      "contextAfterSHA256": "fe0b5446334dfe9140dbcb00495ad1385c12758a4ad5050a33cc46126e1652ae",
+      "contextAfterSHA256": "1dc128f7e9d04ce449080e5613cf94d7a508eb5b7ee59b7de37539fc3aba30c8",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -859,7 +859,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sourceSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
         "sameImageNativeSHA256": "a0710566edaae83dd0852dd8ae00a89e0fbf4715d4aa6f7f18622d3c8d286103",
         "sameImageExportSHA256": "a0710566edaae83dd0852dd8ae00a89e0fbf4715d4aa6f7f18622d3c8d286103",
         "independentNativeQAEvidencePreserved": true,
@@ -915,7 +915,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "852312f8ea6e39f3ac4f786dc3a9f3f88abfe0861740c78c7753fe3cddaf147b",
         "semanticContextSHA256": "852312f8ea6e39f3ac4f786dc3a9f3f88abfe0861740c78c7753fe3cddaf147b",
@@ -1057,7 +1057,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentAfterSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "targetAfterSHA256": "852312f8ea6e39f3ac4f786dc3a9f3f88abfe0861740c78c7753fe3cddaf147b",
       "contextAfterSHA256": "852312f8ea6e39f3ac4f786dc3a9f3f88abfe0861740c78c7753fe3cddaf147b",
       "ownerApproved": true,
@@ -1084,7 +1084,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sourceSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
         "sameImageNativeSHA256": "6efe90e45ddd2ffd52c9a168a18e08eea8f7933a312e821eade3aa551df9961d",
         "sameImageExportSHA256": "6efe90e45ddd2ffd52c9a168a18e08eea8f7933a312e821eade3aa551df9961d",
         "independentNativeQAEvidencePreserved": true,
@@ -1140,7 +1140,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ecea259872bf7187e814ab79a9ca465faae96d1e2225316c3ed3f9a8d18d1698",
         "semanticContextSHA256": "ecea259872bf7187e814ab79a9ca465faae96d1e2225316c3ed3f9a8d18d1698",
@@ -1282,7 +1282,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentAfterSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "targetAfterSHA256": "ecea259872bf7187e814ab79a9ca465faae96d1e2225316c3ed3f9a8d18d1698",
       "contextAfterSHA256": "ecea259872bf7187e814ab79a9ca465faae96d1e2225316c3ed3f9a8d18d1698",
       "ownerApproved": true,
@@ -1309,7 +1309,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sourceSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
         "sameImageNativeSHA256": "065997f3508ac5ec30118a990a4b0babe60bfce580be42d1933355b364aa9f57",
         "sameImageExportSHA256": "065997f3508ac5ec30118a990a4b0babe60bfce580be42d1933355b364aa9f57",
         "independentNativeQAEvidencePreserved": true,
@@ -1368,7 +1368,7 @@
         3264
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
         "semanticContextSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
@@ -1541,7 +1541,7 @@
         "vuosi": "2013"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentAfterSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "targetAfterSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
       "contextAfterSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
       "ownerApproved": true,
@@ -1568,7 +1568,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sourceSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
         "sameImageNativeSHA256": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
         "sameImageExportSHA256": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
         "independentNativeQAEvidencePreserved": true,
@@ -1627,10 +1627,10 @@
         4358
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "13e4888cdeb9513325e19d71b0ffe6b5a24e90293ad32270d98a321075d7887b",
-        "semanticContextSHA256": "a29818a238393b97e5d837f630a3d4aba577a8192b78db413b4d097be8e35bd3",
+        "semanticContextSHA256": "77efadd45ca80ad7c828fecb62af188200e1a80a2eb17f40f45fe5622441f1e9",
         "subjectTitle": "Mesuradon kosteikkoalue",
         "targetState": "existing-target"
       },
@@ -1811,9 +1811,9 @@
         "tiedosto": "ASC Leiden - F. van der Kraaij Collection - 05 - 021 - Providence Island in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentAfterSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "targetAfterSHA256": "13e4888cdeb9513325e19d71b0ffe6b5a24e90293ad32270d98a321075d7887b",
-      "contextAfterSHA256": "a29818a238393b97e5d837f630a3d4aba577a8192b78db413b4d097be8e35bd3",
+      "contextAfterSHA256": "77efadd45ca80ad7c828fecb62af188200e1a80a2eb17f40f45fe5622441f1e9",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1838,7 +1838,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sourceSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
         "sameImageNativeSHA256": "19150940222a598fe5696769f44a8bd20ad5a5acf6c07fe3d159fca7716e640f",
         "sameImageExportSHA256": "589160cd108ec7cf85d01e5d2f3cd09968327e5712c1437f16dea0f715c77fa4",
         "independentNativeQAEvidencePreserved": true,
@@ -1897,10 +1897,10 @@
         4358
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4628b60b4d52fbfc022b2fcbd77a8616f1bdaa51f31ee91a55bfde04efec75a5",
-        "semanticContextSHA256": "d7cbec4978e2b68fb16baaf1be1ae2cb3ad6f696af624378ad02b5d26ce3475b",
+        "semanticContextSHA256": "bc7e84efccf11873dd0eb2c98e76568e70ac96808fd08e226fa6bfe4af0fdc8a",
         "subjectTitle": "Providence Island",
         "targetState": "existing-target"
       },
@@ -2081,9 +2081,9 @@
         "tiedosto": "ASC Leiden - F. van der Kraaij Collection - 05 - 022 - A close up of Providence Island in full, in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentAfterSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "targetAfterSHA256": "4628b60b4d52fbfc022b2fcbd77a8616f1bdaa51f31ee91a55bfde04efec75a5",
-      "contextAfterSHA256": "d7cbec4978e2b68fb16baaf1be1ae2cb3ad6f696af624378ad02b5d26ce3475b",
+      "contextAfterSHA256": "bc7e84efccf11873dd0eb2c98e76568e70ac96808fd08e226fa6bfe4af0fdc8a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2108,7 +2108,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sourceSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
         "sameImageNativeSHA256": "7daa520de9c604487de2a402dd24cd49961c5493bbac0ad1c28360edc742d166",
         "sameImageExportSHA256": "ff065f646d1eb2dc146ab66a324197082f4759c523ce9ff433c51309abfa6a6d",
         "independentNativeQAEvidencePreserved": true,
@@ -2167,7 +2167,7 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b172da6a3a416a7c8c3b0cc1ebd8b3b6152693a93fd48c7958b0f805fda9ab35",
         "semanticContextSHA256": "23d7a16ceff1356bea4349e0938c7da55d4cb639bcb27ca7b03c312de8675ac1",
@@ -2352,7 +2352,7 @@
         "tiedosto": "An aerial view of the West Point area of Monrovia.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "sourceContentAfterSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
       "targetAfterSHA256": "b172da6a3a416a7c8c3b0cc1ebd8b3b6152693a93fd48c7958b0f805fda9ab35",
       "contextAfterSHA256": "23d7a16ceff1356bea4349e0938c7da55d4cb639bcb27ca7b03c312de8675ac1",
       "ownerApproved": true,
@@ -2379,7 +2379,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sourceSHA256": "6d93ef78521c7aed6bc60d4294ce805bbde6dfd8ece5c7e0ec897a3d7d3563e4",
         "sameImageNativeSHA256": "ca7af30b933106c217b2116f5b00759dc26278e0b8d66ed1f488eb93ecce6f10",
         "sameImageExportSHA256": "ca7af30b933106c217b2116f5b00759dc26278e0b8d66ed1f488eb93ecce6f10",
         "independentNativeQAEvidencePreserved": true,
@@ -3579,7 +3579,7 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/monrovia/c5ac85bfb1c10816a09d3d7abc1bfcc5d77f9cbb2b077a12af2f164c9c45f865.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/monrovia/ad23b858989813df214fd87da4d9492b5f036d76a5770053c2cd5da6d9d19420.json",
   "task118ReboundAt": "2026-10-13T16:33:24.003488+00:00",
   "task228ExcludedAssets": [
     {
@@ -4765,5 +4765,5 @@
     }
   ],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:10:00.125620+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:46.784202+00:00"
 }

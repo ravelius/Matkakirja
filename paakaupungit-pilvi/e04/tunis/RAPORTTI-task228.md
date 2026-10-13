@@ -1,7 +1,7 @@
 # Korjauskierros 2 — tunis
 
-Tehtävät 228 ja 229; lähde b1b84a6c8a34e8e459aa1cb5afd704c6fe92be36.
+Tehtävät 228/229 sekä lisäohjeet 235/236. Lähteet b1b84a6c8a34e8e459aa1cb5afd704c6fe92be36 ja b0d92e3e38ecfe4e58466f02133c6da96b4aafba.
 
-Tekstin työversio korjattu. Tämä on välitallennus, ei Sisältökirjurin hyväksyntä eikä pelikytkentä. Nykyiset kuvat säilyvät; kuvatekstien sidokset seuraavat tätä C-versiota. Legacy-kuva- ja karttaportit eivät kuulu kierrokseen.
+Tekstin korjausversio valmis lähdehaaran toimitukseen. Kanoninen postikuitti toimitetaan erikseen; Sisältökirjurin pistokoe sekä PK/PT-hyväksyntä ja pelikytkentä odottavat. Nykyiset kuvat säilyvät; kuvatekstien sidokset seuraavat tätä C-versiota. Legacy-kuva- ja karttaportit eivät kuulu kierrokseen.
 
-C SHA256: b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c
+C SHA256: 0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361

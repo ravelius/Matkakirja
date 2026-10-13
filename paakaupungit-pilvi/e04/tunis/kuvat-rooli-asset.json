@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "tunis",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+  "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
   "assets": [
     {
       "era": "e04",
@@ -53,7 +53,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5503167b55af2885fc4d91ea10fe948e3e6ca8b053b875e52d10ca32fd5ba4e9",
         "semanticContextSHA256": "5503167b55af2885fc4d91ea10fe948e3e6ca8b053b875e52d10ca32fd5ba4e9",
@@ -234,7 +234,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "5503167b55af2885fc4d91ea10fe948e3e6ca8b053b875e52d10ca32fd5ba4e9",
       "contextAfterSHA256": "5503167b55af2885fc4d91ea10fe948e3e6ca8b053b875e52d10ca32fd5ba4e9",
       "ownerApproved": true,
@@ -261,7 +261,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "be61bb27fa8ac3b92d58e3c1e1ac32421428ebac6b22ba5dbce09fc6c9593e2a",
         "sameImageExportSHA256": "d8a0d6f47dbd852b5660eebfcf829b62dd45e133dc3e500783f51aa0fe2c8190",
         "independentNativeQAEvidencePreserved": true,
@@ -317,7 +317,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "693af1758562548e2e7e91ae4558f586afa70590c17ccf70a893cf535e55554e",
         "semanticContextSHA256": "693af1758562548e2e7e91ae4558f586afa70590c17ccf70a893cf535e55554e",
@@ -498,7 +498,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "693af1758562548e2e7e91ae4558f586afa70590c17ccf70a893cf535e55554e",
       "contextAfterSHA256": "693af1758562548e2e7e91ae4558f586afa70590c17ccf70a893cf535e55554e",
       "ownerApproved": true,
@@ -525,7 +525,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "bfa3a91f9e72d6e8f34c3b5b9e6e0b6cc4612e8b8b5e8b0e613d6fd2fe496bbd",
         "sameImageExportSHA256": "a56d98b047cae594897edab1f5b24591fb26042987cec2c407bc5affb5bf57b4",
         "independentNativeQAEvidencePreserved": true,
@@ -584,7 +584,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "82aa21646dea9580d46f316323a69b13962801d57c715526373d86749c82f10e",
@@ -763,7 +763,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "82aa21646dea9580d46f316323a69b13962801d57c715526373d86749c82f10e",
       "ownerApproved": true,
@@ -790,7 +790,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
         "sameImageExportSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
         "independentNativeQAEvidencePreserved": true,
@@ -849,7 +849,7 @@
         3648
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a5f823f23b811e0150c93228afbe98321963669fcd211faa4fde0edf07267581",
         "semanticContextSHA256": "a5f823f23b811e0150c93228afbe98321963669fcd211faa4fde0edf07267581",
@@ -1011,7 +1011,7 @@
         "vuosi": "2019"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "a5f823f23b811e0150c93228afbe98321963669fcd211faa4fde0edf07267581",
       "contextAfterSHA256": "a5f823f23b811e0150c93228afbe98321963669fcd211faa4fde0edf07267581",
       "ownerApproved": true,
@@ -1038,7 +1038,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
         "sameImageExportSHA256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
         "independentNativeQAEvidencePreserved": true,
@@ -1097,7 +1097,7 @@
         5300
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2e2b7e857d8b0649c4b280686c042f041d592b0661cf8e7e0525d3c15d5557f7",
         "semanticContextSHA256": "2e2b7e857d8b0649c4b280686c042f041d592b0661cf8e7e0525d3c15d5557f7",
@@ -1257,7 +1257,7 @@
         "tiedosto": "Medina old Town of Tunis.jpeg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "2e2b7e857d8b0649c4b280686c042f041d592b0661cf8e7e0525d3c15d5557f7",
       "contextAfterSHA256": "2e2b7e857d8b0649c4b280686c042f041d592b0661cf8e7e0525d3c15d5557f7",
       "ownerApproved": true,
@@ -1284,7 +1284,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "1633b039121424d015379b1a9d26f2903808669f8816ef8d6b1b36f2abbb8e0d",
         "sameImageExportSHA256": "1633b039121424d015379b1a9d26f2903808669f8816ef8d6b1b36f2abbb8e0d",
         "independentNativeQAEvidencePreserved": true,
@@ -1343,7 +1343,7 @@
         3937
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "80dcce7e07c423a753d2a70b77f33d16ba2170df76b6c0bdf3686e74b191b0f5",
         "semanticContextSHA256": "80dcce7e07c423a753d2a70b77f33d16ba2170df76b6c0bdf3686e74b191b0f5",
@@ -1503,7 +1503,7 @@
         "tiedosto": "Tunisia-2024-1-4035.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "80dcce7e07c423a753d2a70b77f33d16ba2170df76b6c0bdf3686e74b191b0f5",
       "contextAfterSHA256": "80dcce7e07c423a753d2a70b77f33d16ba2170df76b6c0bdf3686e74b191b0f5",
       "ownerApproved": true,
@@ -1530,7 +1530,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "f2f3b4248b4acb2ddf870c08db524a791edb71e59aef0e03f07a136fa5416e18",
         "sameImageExportSHA256": "f2f3b4248b4acb2ddf870c08db524a791edb71e59aef0e03f07a136fa5416e18",
         "independentNativeQAEvidencePreserved": true,
@@ -1589,7 +1589,7 @@
         2496
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7c1e20ebb70d30332c33582a378dd1f54cf0ec08ce08dea9d304f1dc383c075d",
         "semanticContextSHA256": "7c1e20ebb70d30332c33582a378dd1f54cf0ec08ce08dea9d304f1dc383c075d",
@@ -1751,7 +1751,7 @@
         "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "7c1e20ebb70d30332c33582a378dd1f54cf0ec08ce08dea9d304f1dc383c075d",
       "contextAfterSHA256": "7c1e20ebb70d30332c33582a378dd1f54cf0ec08ce08dea9d304f1dc383c075d",
       "ownerApproved": true,
@@ -1778,7 +1778,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
         "sameImageExportSHA256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
         "independentNativeQAEvidencePreserved": true,
@@ -1837,7 +1837,7 @@
         4128
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "eb9c2498822f087d191588348e314da38be1eb54233a91e1ed19273f2579d691",
         "semanticContextSHA256": "eb9c2498822f087d191588348e314da38be1eb54233a91e1ed19273f2579d691",
@@ -1997,7 +1997,7 @@
         "tiedosto": "Rue Medina de Tunis.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "eb9c2498822f087d191588348e314da38be1eb54233a91e1ed19273f2579d691",
       "contextAfterSHA256": "eb9c2498822f087d191588348e314da38be1eb54233a91e1ed19273f2579d691",
       "ownerApproved": true,
@@ -2024,7 +2024,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "73ec1830c043e5ea3a1eee00b7086fc93af9c37a2c266dfff595a3533c76dac4",
         "sameImageExportSHA256": "73ec1830c043e5ea3a1eee00b7086fc93af9c37a2c266dfff595a3533c76dac4",
         "independentNativeQAEvidencePreserved": true,
@@ -2083,10 +2083,10 @@
         1944
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5c3bd690486f8759a18cb10094afeb0467b7bfcb017e324fa53f440258d67506",
-        "semanticContextSHA256": "5c3bd690486f8759a18cb10094afeb0467b7bfcb017e324fa53f440258d67506",
+        "targetBeforeSHA256": "249a36007a0bf20c7bd340fc43e4281c6b0d005f0f2f9ade952df43426095ed8",
+        "semanticContextSHA256": "249a36007a0bf20c7bd340fc43e4281c6b0d005f0f2f9ade952df43426095ed8",
         "subjectTitle": "Merenportti on kaupungin kynnys",
         "targetState": "existing-target"
       },
@@ -2243,9 +2243,9 @@
         "tiedosto": "Bab Bhar2.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
-      "targetAfterSHA256": "5c3bd690486f8759a18cb10094afeb0467b7bfcb017e324fa53f440258d67506",
-      "contextAfterSHA256": "5c3bd690486f8759a18cb10094afeb0467b7bfcb017e324fa53f440258d67506",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
+      "targetAfterSHA256": "249a36007a0bf20c7bd340fc43e4281c6b0d005f0f2f9ade952df43426095ed8",
+      "contextAfterSHA256": "249a36007a0bf20c7bd340fc43e4281c6b0d005f0f2f9ade952df43426095ed8",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2270,7 +2270,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "df556cbe960c788d29d527de51b0504f17a52937ccd1244a0ccea2a383107838",
         "sameImageExportSHA256": "df556cbe960c788d29d527de51b0504f17a52937ccd1244a0ccea2a383107838",
         "independentNativeQAEvidencePreserved": true,
@@ -2329,7 +2329,7 @@
         3240
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "95ed0c289f028e2ffb0444cb378c091465aec5a7a43406fcd50e0f881407671d",
         "semanticContextSHA256": "95ed0c289f028e2ffb0444cb378c091465aec5a7a43406fcd50e0f881407671d",
@@ -2489,7 +2489,7 @@
         "tiedosto": "Mosquée Zitouna (cour) 04.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "95ed0c289f028e2ffb0444cb378c091465aec5a7a43406fcd50e0f881407671d",
       "contextAfterSHA256": "95ed0c289f028e2ffb0444cb378c091465aec5a7a43406fcd50e0f881407671d",
       "ownerApproved": true,
@@ -2516,7 +2516,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "a0f37cdb58d41fdb85a3a976bc38ba3bd3c2662cafef6d1372a246025905c6d8",
         "sameImageExportSHA256": "a0f37cdb58d41fdb85a3a976bc38ba3bd3c2662cafef6d1372a246025905c6d8",
         "independentNativeQAEvidencePreserved": true,
@@ -2575,7 +2575,7 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2018e382b776d502411631bc1c1c73851a0d7db3634c22f1390b27ecb63e8753",
         "semanticContextSHA256": "2018e382b776d502411631bc1c1c73851a0d7db3634c22f1390b27ecb63e8753",
@@ -2787,7 +2787,7 @@
         "tiedosto": "Souk El Attarine avant l'ouverture des boutiques.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "2018e382b776d502411631bc1c1c73851a0d7db3634c22f1390b27ecb63e8753",
       "contextAfterSHA256": "2018e382b776d502411631bc1c1c73851a0d7db3634c22f1390b27ecb63e8753",
       "ownerApproved": true,
@@ -2814,7 +2814,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "fc731908e29900f350757bd94c6adee38dd1514d118d6977b837f635167555d1",
         "sameImageExportSHA256": "fc731908e29900f350757bd94c6adee38dd1514d118d6977b837f635167555d1",
         "independentNativeQAEvidencePreserved": true,
@@ -2873,7 +2873,7 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "53bd67df7eb988ad5fea91ee2854e65c53b6492953a1d402ab601d250299634c",
         "semanticContextSHA256": "53bd67df7eb988ad5fea91ee2854e65c53b6492953a1d402ab601d250299634c",
@@ -3033,7 +3033,7 @@
         "tiedosto": "Mosquée de la casba.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "53bd67df7eb988ad5fea91ee2854e65c53b6492953a1d402ab601d250299634c",
       "contextAfterSHA256": "53bd67df7eb988ad5fea91ee2854e65c53b6492953a1d402ab601d250299634c",
       "ownerApproved": true,
@@ -3060,7 +3060,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "36230a0dab63641fdcb67af55201e14f2dd30fc5be62fde81da0db43366942b9",
         "sameImageExportSHA256": "36230a0dab63641fdcb67af55201e14f2dd30fc5be62fde81da0db43366942b9",
         "independentNativeQAEvidencePreserved": true,
@@ -3119,10 +3119,10 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "aa21afc40e84711415411928051460d124035d49b1b4dc1ca06193d2e54faed0",
-        "semanticContextSHA256": "269aa35033f30cc01e6674716bbbec06b62436ae622d017d3a5724ba974a4ba9",
+        "semanticContextSHA256": "dc5eed74164197701b6b739786a897064f5851fc8fda7ccce90e21343d15ee0e",
         "subjectTitle": "Bab el Bhar – Merenportti",
         "targetState": "existing-target"
       },
@@ -3279,9 +3279,9 @@
         "tiedosto": "Bab Bhar photo 2 باب البحر.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "aa21afc40e84711415411928051460d124035d49b1b4dc1ca06193d2e54faed0",
-      "contextAfterSHA256": "269aa35033f30cc01e6674716bbbec06b62436ae622d017d3a5724ba974a4ba9",
+      "contextAfterSHA256": "dc5eed74164197701b6b739786a897064f5851fc8fda7ccce90e21343d15ee0e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3306,7 +3306,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "111f7de60f0fb4f9f627b3ab65af43ea5dc9cd196b5ff599ced61857dff78d8f",
         "sameImageExportSHA256": "111f7de60f0fb4f9f627b3ab65af43ea5dc9cd196b5ff599ced61857dff78d8f",
         "independentNativeQAEvidencePreserved": true,
@@ -3365,7 +3365,7 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b48c6eeb2ad0d9869d5fef95c8267f836a587bf69490dc262de57bcb4dc30e4c",
         "semanticContextSHA256": "eb928924a448273984f84fe0b7af1cc53088c749907cc87bff8eeae28f71392b",
@@ -3525,7 +3525,7 @@
         "tiedosto": "Gate of Dar Lasrem - Porte du Dar Lasrem - باب دار الأصرم.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "b48c6eeb2ad0d9869d5fef95c8267f836a587bf69490dc262de57bcb4dc30e4c",
       "contextAfterSHA256": "eb928924a448273984f84fe0b7af1cc53088c749907cc87bff8eeae28f71392b",
       "ownerApproved": true,
@@ -3552,7 +3552,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "1fdba48d816acee49d95cd7030d8f1a07abf7d56b7d43d572533402d1ffef038",
         "sameImageExportSHA256": "1fdba48d816acee49d95cd7030d8f1a07abf7d56b7d43d572533402d1ffef038",
         "independentNativeQAEvidencePreserved": true,
@@ -3611,7 +3611,7 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "50e91b7f4392d14ce854f06091bb2c59405b1ee7f96acbe491a56f97196a5f1d",
         "semanticContextSHA256": "0749952b4580fe82cad94c8a0e122ff7fa4ac33b5864fd67fdcb1db14a50fc73",
@@ -3769,7 +3769,7 @@
         "tiedosto": "Tunis Mosqué Kasbah.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "50e91b7f4392d14ce854f06091bb2c59405b1ee7f96acbe491a56f97196a5f1d",
       "contextAfterSHA256": "0749952b4580fe82cad94c8a0e122ff7fa4ac33b5864fd67fdcb1db14a50fc73",
       "ownerApproved": true,
@@ -3796,7 +3796,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
         "sameImageExportSHA256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
         "independentNativeQAEvidencePreserved": true,
@@ -3855,7 +3855,7 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e42ac317b95b1ef3e94110cab1b8746d86a53ba4e8bec04bbb21166856c18625",
         "semanticContextSHA256": "569bd5f8ef6296fca3e3e35b508014eb70be7d397e920ee42c80b4d994b1e1d9",
@@ -4015,7 +4015,7 @@
         "tiedosto": "Corridor of Al-Zaytuna Mosque.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+      "sourceContentAfterSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
       "targetAfterSHA256": "e42ac317b95b1ef3e94110cab1b8746d86a53ba4e8bec04bbb21166856c18625",
       "contextAfterSHA256": "569bd5f8ef6296fca3e3e35b508014eb70be7d397e920ee42c80b4d994b1e1d9",
       "ownerApproved": true,
@@ -4042,7 +4042,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "b1af7404f54bd88bc50f69b9106008ae5cf5815fa9b4f91785bb132acbd2ad0c",
+        "sourceSHA256": "0de97997d4095402109836a1c42482e2315074bc9538e1e20a33731981a5e361",
         "sameImageNativeSHA256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
         "sameImageExportSHA256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
         "independentNativeQAEvidencePreserved": true,
@@ -4060,7 +4060,7 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/tunis/6aae80d12cbea6bfa1e833ea4ba908136a14ebbd40595584f4012a6f7421b79c.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/tunis/8e78c6b5206b6628614143e71d9360ebca8ce6306683c6eab7ec14e3a775cd00.json",
   "task118ReboundAt": "2026-10-13T16:33:24.096332+00:00",
   "task228ExcludedAssets": [
     {
@@ -4308,5 +4308,5 @@
     }
   ],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:10:00.259336+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:46.928807+00:00"
 }

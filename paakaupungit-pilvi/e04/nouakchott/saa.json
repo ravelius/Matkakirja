@@ -1,10 +1,51 @@
 {
- "lat": 18.09,
- "lon": -15.98,
- "keskilampo": [21.8,23,24.5,25.5,26.7,27.9,27.3,28.3,29.6,29.1,26.2,22.9],
- "ylin": [29,31,32,34,34,34,31,32,35,36,33,30],
- "alin": [15,15,17,18,20,22,23,24,25,22,19,16],
- "sade": [1,1,0,0,0,1,11,51,36,8,3,1],
- "lahde": {"nimi":"en-Wikipedia, ilmastotaulukko","kausi":"1991–2020"},
- "tausta": {"artikkeli":"Nouakchott","revisio":1376939788,"taulukko":"Climate data for Nouakchott (Oumtounsy Airport) (1991–2020, extremes 1934–present)","lahteet":"Source: Deutscher Wetterdienst","keskilampo":"Daily mean °C (°F)","sade":"Average precipitation mm (inches)","vuosisade":113,"luettu":"2026-10-11","huomiot":[]}
+  "keskilampo": [
+    21.6,
+    23.3,
+    24.4,
+    24.6,
+    25.7,
+    26.9,
+    27.4,
+    28.7,
+    29.6,
+    29.2,
+    25.9,
+    22.9
+  ],
+  "sade": [
+    1.0,
+    0.1,
+    0.7,
+    0.0,
+    0.0,
+    3.6,
+    10.2,
+    46.4,
+    51.3,
+    7.9,
+    1.7,
+    8.8
+  ],
+  "lahde": {
+    "nimi": "JMA",
+    "kausi": "1991–2020"
+  },
+  "lat": 18.1,
+  "lon": -15.95,
+  "tausta": {
+    "artikkeli": "JMA ClimatView / Nouakchott station61442",
+    "taulukko": "Monthly Normal: Mean Temp. / Precip.",
+    "lahteet": [
+      "https://ds.data.jma.go.jp/gmd/tcc/tcc/products/climate/climatview/graph_mkhtml_nrm.php?e=6&k=0&m=3&n=61442&r=1&s=3&y=2021",
+      "https://ds.data.jma.go.jp/gmd/tcc/tcc/products/climate/climatview/outline.html"
+    ],
+    "luettu": "2026-10-13",
+    "osittainen": true,
+    "ylinAlinSaatavilla": false,
+    "varmistettuKuukausiarvoja": 24,
+    "normalSourceSHA256": "5219980802b1970a4b4c61fc71edb987953c0341e18a686d5ba99a62a96ebb02",
+    "periodSourceSHA256": "7db6d671cc5a485f8de08020fbc22afbb7ced8fc3effe8a29b129e7ea6fd994a",
+    "korvausperuste": "PT task229 hyväksyi keskilämpötilan ja sademäärän 1991–2020. Aiempi Oumtounsy/DWD-aineistoketju ristiriitainen; ei yhdistetty."
+  }
 }

@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "**Monrovia** on Liberian pääkaupunki Atlantin rannalla Mesuradojoen äärellä. Vanha keskusta levittäytyy Cape Mesuradon niemimaalle, ja Bushrod Island jää veden erottamaksi saareksi sen pohjoispuolelle. Vanhan keskustan pääkatu on Broad Street. Sen pohjoispuolella Watersiden markkina-alue jatkuu satamavesien äärelle.\n\nKaupunki kasvoi 1800-luvun alun uudisasutuksesta alueella, jolla paikalliset yhteisöt jo kalastivat, viljelivät ja kävivät kauppaa. Nimi annettiin James Monroen mukaan. Isoisän matkavuonna **1873** kaupungissa olivat jo vanha oikeustalo, Providence Baptistin historiallinen pyhäkkö, sanomalehdet ja Liberia College.\n\nKansallismuseo toimii vanhassa oikeustalossa. Kaupungin muisti säilyy myös sanomalehtien toimitusteksteissä ja varhaisissa valokuvissa. **Mesuradon mangrovemetsät** puolestaan pidättävät sedimenttiä ja vakauttavat rantaviivaa aivan kaupunkielämän rinnalla.",
-    "teksti": "Monrovian vanhan keskustan pääakseliin kuuluu Broad Street. Watersiden markkina-alue sijaitsee sen pohjoispuolella satamaveden äärellä. Kaupungin asiointia voi seurata sekä kaduilla että markkinan sisä- ja ulkotilojen kapeilla käytävillä.\n\n1800-luvun kaupunki tallensi itseään monella tavalla. Liberia Heraldin varhaisia toimitustekstejä kuuluu museon aineistoon, ja Augustus Washington teki Monroviassa daguerreotyyppimuotokuvia. Kirjoja, tiiliä ja puutavaraa lahjoitettiin puolestaan Liberia Collegen rakentamiseen ja opetukseen.\n\nVesi erottaa kaupungin paikkoja toisistaan. Bushrod Islandin ympärillä ovat Atlantti, Saint Paul -joki, Mesuradojoki ja Stockton Creek. West Point on oma niemekkeen asuinalueensa, jonka synty liittyy 1900-luvun kalastukseen. Mesuradon kosteikkojen mangrove tuo tähän rantakaupunkiin myös lintujen ruokailupaikat ja elinkeinoihin liittyvän luontoympäristön."
+    "teksti": "Monrovian vanhan keskustan pääakseliin kuuluu Broad Street. Watersiden markkina-alue sijaitsee sen pohjoispuolella satamaveden äärellä. Kaupungin asiointia voi seurata sekä kaduilla että markkinan sisä- ja ulkotilojen kapeilla käytävillä.\n\n1800-luvun kaupunki tallensi itseään monella tavalla. Liberia Heraldin varhaisia toimitustekstejä kuuluu museon aineistoon, ja Augustus Washington teki Monroviassa daguerreotyyppimuotokuvia. Kirjoja, tiiliä ja puutavaraa lahjoitettiin puolestaan Liberia Collegen rakentamiseen ja opetukseen.\n\nVesi erottaa kaupungin paikkoja toisistaan. Bushrod Islandin ympärillä ovat Atlantti, Saint Paul -joki, Mesuradojoki ja Stockton Creek. West Point on niemekkeellä sijaitseva asuinalue, jonka synty liittyy 1900-luvun kalastukseen. Mesuradon kosteikkojen mangrove tuo tähän rantakaupunkiin myös lintujen ruokailupaikat ja elinkeinoihin liittyvän luontoympäristön."
   },
   "kysymykset": [
     {
@@ -28,7 +28,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Maa sijaitsee Länsi-Afrikan Atlantin rannikolla.",
+      "hint": "Kaupunki kasvoi Yhdysvalloista tulleiden uudisasukkaiden siirtokuntana.",
       "fact": "Monrovia on Liberian pääkaupunki ja tärkeä satamakaupunki.",
       "source": "https://en.wikipedia.org/wiki/Monrovia"
     },
@@ -56,7 +56,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Mieti, millaisia julkisia rakennuksia 1800-luvun hallintokeskukseen tarvittiin.",
+      "hint": "Rakennuksessa hoidettiin koko Liberian asioita, ei vain kaupungin kunnallishallintoa.",
       "fact": "Liberian kansallismuseo toimii vanhassa Supreme Court -oikeustalossa.",
       "source": "https://en.wikipedia.org/wiki/Liberian_National_Museum"
     },
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Nimitausta kuuluu Yhdysvaltain varhaisen tasavallan historiaan.",
+      "hint": "Vertaile kaupungin nimeä ja henkilöiden sukunimiä.",
       "fact": "Monrovia nimettiin Yhdysvaltain presidentin James Monroen mukaan.",
       "source": "https://en.wikipedia.org/wiki/Monrovia"
     }
@@ -156,7 +156,7 @@
             },
             {
               "otsikko": "Ruokapaikka arjen ääreltä",
-              "teksti": "Cook shops -ruokapaikoissa tarjoillaan liberialaista ruokaa, kuten riisiä ja mausteisia kastikkeita. Monrovian ruokatarjonnassa on myös libanonilaista ja muuta kansainvälistä keittiötä. Kaupungin markkinoilla ja kaupoissa myydään hedelmiä, vihanneksia ja kalaa. Ruokapaikat täydentävät Broad Streetin ja Watersiden kauppa-arkea.",
+              "teksti": "Cook shops -ruokapaikoissa tarjoillaan liberialaista ruokaa, kuten riisiä ja mausteisia kastikkeita. Monrovian ruokatarjonnassa on myös libanonilaista ja muuta kansainvälistä keittiötä. Kaupungin markkinoilla ja kaupoissa myydään hedelmiä, vihanneksia ja kalaa.",
               "kuva": {}
             },
             {
@@ -189,7 +189,7 @@
               {
                 "mita": "Kaupungin ruokapaikkojen kirjo",
                 "tahdet": 2,
-                "selite": "Arkiset ruokapaikat ja kansainväliset keittiöt tarjoavat erilaisia näkökulmia kaupunkiruokailuun."
+                "selite": "Cook shops -ruokapaikoissa tarjoillaan riisiä ja mausteisia kastikkeita."
               }
             ],
             "hyvaTietaa": [
@@ -313,7 +313,7 @@
     },
     "Providence Island": {
       "aika": "Vanha jokisaari, myöhempiä paikkakäytön kerroksia",
-      "teksti": "Providence Island on Monroviassa Mesuradojoen vesialueella oleva saari. Sen sijainti liittyy myös Stockton Creekiin, joka yhdistää kaupungin jokivesiä. Vesireitit erottavat saaren Cape Mesuradon niemimaalla sijaitsevasta keskustasta.\n\nSaaren kaakkoisosaan on dokumentoitu mangrovekasvillisuutta. Paikkakuvauksessa mainitaan vanha kaivo ja rantautumislaiturin jälkiä. Saarella on myös puustoa, ja myöhemmin rakennettuja majoja on sovitettu perinteisiä rakennustapoja jäljitteleviksi.",
+      "teksti": "Providence Island on Monroviassa Mesuradojoen vesialueella oleva saari. Sen sijainti liittyy myös Stockton Creekiin, joka yhdistää kaupungin jokivesiä. Vesireitit erottavat saaren Cape Mesuradon niemimaalla sijaitsevasta keskustasta.\n\nSaaren kaakkoisosassa kasvaa mangrovea. Saarella on vanha kaivo ja rantautumislaiturin jälkiä. Saarella on myös puustoa, ja myöhemmin rakennettuja majoja on sovitettu perinteisiä rakennustapoja jäljitteleviksi.",
       "kuvat": [
         {
           "tiedosto": "ASC Leiden - F. van der Kraaij Collection - 05 - 022 - A close up of Providence Island in full, in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif",
@@ -345,7 +345,7 @@
     },
     "Mesuradon kosteikkoalue": {
       "aika": "Luonnonpaikka, nykyinen suojeluvaihe myöhempi",
-      "teksti": "Mesuradon kosteikkoalue on nimetty luontopaikka Monrovian ja Montserradon alueella. Sen keskeistä kasvillisuutta on mangrove. Rantakasvillisuus vakauttaa rantaviivaa ja kosteikko pidättää sedimenttiä, joten puusto, veden liike ja maan kertyminen liittyvät toisiinsa.\n\nLinnut käyttävät kosteikkoa ravinnonhakuun. Kalastus ja äyriäiset yhdistävät ympäristön myös kaupunkilaisten ruokaan ja elinkeinoihin. Kosteikon historiasta on dokumentoitu polttopuun ja hiilen keruuta sekä teollista kuormitusta luontoympäristön paineina.",
+      "teksti": "Mesuradon kosteikkoalue sijaitsee Monrovian ja Montserradon alueella. Sen keskeistä kasvillisuutta on mangrove. Rantakasvillisuus vakauttaa rantaviivaa ja kosteikko pidättää sedimenttiä, joten puusto, veden liike ja maan kertyminen liittyvät toisiinsa.\n\nLinnut käyttävät kosteikkoa ravinnonhakuun. Kalastus ja äyriäiset yhdistävät ympäristön myös kaupunkilaisten ruokaan ja elinkeinoihin. Kosteikon historiasta on dokumentoitu polttopuun ja hiilen keruuta sekä teollista kuormitusta luontoympäristön paineina.",
       "kuvat": [
         {
           "tiedosto": "ASC Leiden - F. van der Kraaij Collection - 05 - 021 - Providence Island in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif",

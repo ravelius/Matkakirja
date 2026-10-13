@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Merenportti on kaupungin kynnys",
-          "teksti": "Bab el Bhar tarkoittaa Merenporttia, mutta nimi ei sijoita nykyistä porttia meren rantaviivalle. Se seisoo medinan itäpuolella. Portti tunnetaan myös nimellä Porte de France. Nykyiseen muotoon kuuluu suuri kaari ja sakarareunainen yläosa. Portti on muuttunut historiansa aikana. Portin kautta päästiin myös funduq-rakennuksiin, joissa asui kristittyjä kauppiaita.",
+          "teksti": "Bab el Bhar tarkoittaa Merenporttia, mutta nimi ei sijoita nykyistä porttia meren rantaviivalle. Se seisoo medinan itäpuolella. Portti tunnetaan myös nimellä Porte de France. Nykyiseen muotoon kuuluu suuri kaari ja sakarareunainen yläosa. Portin kautta päästiin myös funduq-rakennuksiin, joissa asui kristittyjä kauppiaita. Portti seisoo Place Beb Bhar -aukiolla.",
           "tiedosto": "Bab Bhar2.JPG",
           "lyhyt": "Bab el Bhar on Tunisin medinan Merenportti.",
           "selite": "Bab el Bharin kaaren yläpuolella on sakarareunainen osa. Portti on kuvattu Tunisissa alaviistosta.",
@@ -194,7 +194,7 @@
             },
             {
               "otsikko": "Kahvitauko medinassa",
-              "teksti": "Medinan kahvitaukoon voi liittyä näkymä kattojen yli: Panorama-kahvilan terassilta on kuvattu tämän lehden valokuva vuonna 2019. Matalien talojen yllä erottuu minareetteja ja kauempana kukkuloita. Habib Bourguiban avenuen kahvilat ovat puolestaan uudemman kaupungin pitkän pääkadun varrella.",
+              "teksti": "Panorama-kahvilan terassilta vuonna 2019 kuvattu näkymä ulottuu medinan kattojen yli. Matalien talojen yllä erottuu minareetteja ja kauempana kukkuloita. Habib Bourguiban avenuen kahvilat ovat puolestaan uudemman kaupungin pitkän pääkadun varrella.",
               "kuva": {}
             },
             {
@@ -353,7 +353,7 @@
   "nahtavyydet": {
     "Bab el Bhar – Merenportti": {
       "aika": "Vanha kaupunginportti, eri aikojen muutoksia",
-      "teksti": "Bab el Bhar on Tunisin medinan itäpuolinen portti. Sen nimi tarkoittaa Merenporttia, ja toinen tunnettu nimi on Porte de France. Portti erottaa vanhan kaupungin uudemmasta Tunisista, vaikka se ei seiso nykyisellä merenrantaviivalla.\n\nSuuren kaaren yläpuolella on sakarareunainen osa. Portti on muuttunut historiansa aikana. Sen kautta päästiin funduq-rakennuksiin, joissa asui kristittyjä kauppiaita. Unescon medinakuvauksessa Bab el Bhar on yksi nimetyistä monumenteista.",
+      "teksti": "Bab el Bhar on Tunisin medinan itäpuolinen portti. Sen nimi tarkoittaa Merenporttia, ja toinen tunnettu nimi on Porte de France. Portti erottaa vanhan kaupungin uudemmasta Tunisista, vaikka se ei seiso nykyisellä merenrantaviivalla. Merenportti-nimi liittyy reittiin, joka yhdisti medinan Tunisinjärven satamaan ja Tunisinlahdelle.\n\nSuuren kaaren yläpuolella on sakarareunainen osa. Sen kautta päästiin funduq-rakennuksiin, joissa asui kristittyjä kauppiaita.",
       "kuvat": [
         {
           "tiedosto": "Bab Bhar photo 2 باب البحر.jpg",

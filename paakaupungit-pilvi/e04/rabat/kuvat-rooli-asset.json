@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "rabat",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+  "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
   "assets": [
     {
       "era": "e04",
@@ -56,7 +56,7 @@
         2560
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "110ea7062a7c559171c3360988a8e8cf21eb1c3b0ca6bfc0abc11d64b3220d8b",
         "semanticContextSHA256": "110ea7062a7c559171c3360988a8e8cf21eb1c3b0ca6bfc0abc11d64b3220d8b",
@@ -215,7 +215,7 @@
         "vuosi": "2007"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "110ea7062a7c559171c3360988a8e8cf21eb1c3b0ca6bfc0abc11d64b3220d8b",
       "contextAfterSHA256": "110ea7062a7c559171c3360988a8e8cf21eb1c3b0ca6bfc0abc11d64b3220d8b",
       "ownerApproved": true,
@@ -242,7 +242,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "94f135d13d027ffbba619dc1e1395f1b5734fe796fbf13232e23bca867bb1609",
         "sameImageExportSHA256": "94f135d13d027ffbba619dc1e1395f1b5734fe796fbf13232e23bca867bb1609",
         "independentNativeQAEvidencePreserved": true,
@@ -301,7 +301,7 @@
         3264
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "202697c5b2f374d6903f46c2a909bdb57e6b53b8b2e30ec0819aa88f74fbb332",
         "semanticContextSHA256": "202697c5b2f374d6903f46c2a909bdb57e6b53b8b2e30ec0819aa88f74fbb332",
@@ -458,7 +458,7 @@
         "tiedosto": "Rabat panorama.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "202697c5b2f374d6903f46c2a909bdb57e6b53b8b2e30ec0819aa88f74fbb332",
       "contextAfterSHA256": "202697c5b2f374d6903f46c2a909bdb57e6b53b8b2e30ec0819aa88f74fbb332",
       "ownerApproved": true,
@@ -485,7 +485,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "a6e5f596accfa6be51629f4628766f2e23c6600ffedd18bed1bcde1f46e0f94b",
         "sameImageExportSHA256": "a6e5f596accfa6be51629f4628766f2e23c6600ffedd18bed1bcde1f46e0f94b",
         "independentNativeQAEvidencePreserved": true,
@@ -544,7 +544,7 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d707f5048a861d70410955932378d578a32318d63eafe9bd15fbae8c69b559c9",
         "semanticContextSHA256": "d707f5048a861d70410955932378d578a32318d63eafe9bd15fbae8c69b559c9",
@@ -711,7 +711,7 @@
         "tiedosto": "Late-Afternoon View over Medina (Old City) - From Hotel Majestic - Rabat - Morocco.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "d707f5048a861d70410955932378d578a32318d63eafe9bd15fbae8c69b559c9",
       "contextAfterSHA256": "d707f5048a861d70410955932378d578a32318d63eafe9bd15fbae8c69b559c9",
       "ownerApproved": true,
@@ -738,7 +738,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
         "sameImageExportSHA256": "cff10e64146a0bd73c1e0548657d4727ad817cb25bd3cc0d3c5a85ce292c2436",
         "independentNativeQAEvidencePreserved": true,
@@ -797,7 +797,7 @@
         1920
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "674efe86899c51f4a28a2f764a146fb2d85f1e63d7bb98935d8b5b8bed3ee3bb",
         "semanticContextSHA256": "674efe86899c51f4a28a2f764a146fb2d85f1e63d7bb98935d8b5b8bed3ee3bb",
@@ -954,7 +954,7 @@
         "tiedosto": "Chellah (Sala Colonia) 3.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "674efe86899c51f4a28a2f764a146fb2d85f1e63d7bb98935d8b5b8bed3ee3bb",
       "contextAfterSHA256": "674efe86899c51f4a28a2f764a146fb2d85f1e63d7bb98935d8b5b8bed3ee3bb",
       "ownerApproved": true,
@@ -981,7 +981,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "d8ca4878f6a5442a07ece69c8c9bce1bd2e459d136b7d30b493eb52436d74ea0",
         "sameImageExportSHA256": "d8ca4878f6a5442a07ece69c8c9bce1bd2e459d136b7d30b493eb52436d74ea0",
         "independentNativeQAEvidencePreserved": true,
@@ -1040,10 +1040,10 @@
         1855
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "fbae45c3417f238594057d969c0ea517d91981b741e98364153aeebff01347a9",
-        "semanticContextSHA256": "8c5e4191ac52b4bf4489e3195c558250dbed0f38a55c86406c5ef071651a4724",
+        "semanticContextSHA256": "57fd15c7930a858c2af5dc30708a3ccf6076cd118989d4ef70c4debdebbbfea7",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -1197,9 +1197,9 @@
         "tiedosto": "Moulay Slimane Mosque Rabat DSCF2465.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "fbae45c3417f238594057d969c0ea517d91981b741e98364153aeebff01347a9",
-      "contextAfterSHA256": "8c5e4191ac52b4bf4489e3195c558250dbed0f38a55c86406c5ef071651a4724",
+      "contextAfterSHA256": "57fd15c7930a858c2af5dc30708a3ccf6076cd118989d4ef70c4debdebbbfea7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1224,7 +1224,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "56c912742a31573e3d7e30e5825bad247f48efad96301663742da72f0dd52f67",
         "sameImageExportSHA256": "56c912742a31573e3d7e30e5825bad247f48efad96301663742da72f0dd52f67",
         "independentNativeQAEvidencePreserved": true,
@@ -1286,10 +1286,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "81c1ebb8c3c88e79fb4e5360ce2973029e03a2f081c2cfe73d8021b3e8ed315e",
-        "semanticContextSHA256": "5beb3ce8f7ac41cd698cf56d7855fdd0fd7ddcac026b0bf7282b9011fb595b9e",
+        "semanticContextSHA256": "1466aa413d954a5ace15719fbe7e43a138ebb6b3fd4fdd67c0c16e1c42844bae",
         "subjectTitle": "Vanhakaupunki ja kasbah",
         "targetState": "existing-target"
       },
@@ -1443,9 +1443,9 @@
         "tiedosto": "Pavilion of Moulay Ismail in Andalusian Garden Rabat DSCF2755.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "81c1ebb8c3c88e79fb4e5360ce2973029e03a2f081c2cfe73d8021b3e8ed315e",
-      "contextAfterSHA256": "5beb3ce8f7ac41cd698cf56d7855fdd0fd7ddcac026b0bf7282b9011fb595b9e",
+      "contextAfterSHA256": "1466aa413d954a5ace15719fbe7e43a138ebb6b3fd4fdd67c0c16e1c42844bae",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1470,7 +1470,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "e46be404382014ae18e50b1f05d2b75258bb86919a34f756c9bdc03c02ba0265",
         "sameImageExportSHA256": "e46be404382014ae18e50b1f05d2b75258bb86919a34f756c9bdc03c02ba0265",
         "independentNativeQAEvidencePreserved": true,
@@ -1532,7 +1532,7 @@
         8069
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "74f7e3b88ef0742fe881910be4d82ebdc74a7cba648000071818931bba41d7f3",
         "semanticContextSHA256": "ceb2723f1b9b6147578a0ba9aa42e3619a7aa539bcdda255e12ec54643347db6",
@@ -1718,7 +1718,7 @@
         "tiedosto": "Interior Stork Zawiya Chellah Rabat Nov25 A7CR 08934.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "74f7e3b88ef0742fe881910be4d82ebdc74a7cba648000071818931bba41d7f3",
       "contextAfterSHA256": "ceb2723f1b9b6147578a0ba9aa42e3619a7aa539bcdda255e12ec54643347db6",
       "ownerApproved": true,
@@ -1745,7 +1745,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "036322792fa374cbe4be6cb3cbf83f9e57e2de784a3b7d3423a16b6d73e5a186",
         "sameImageExportSHA256": "036322792fa374cbe4be6cb3cbf83f9e57e2de784a3b7d3423a16b6d73e5a186",
         "independentNativeQAEvidencePreserved": true,
@@ -1804,7 +1804,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7b7ce8731f837a655fab73ada324e030c81898541feb2e38c0e3f239decc083e",
         "semanticContextSHA256": "7b7ce8731f837a655fab73ada324e030c81898541feb2e38c0e3f239decc083e",
@@ -1961,7 +1961,7 @@
         "tiedosto": "Ruelle bleue, Kasbah des Oudayas (Rabat, Maroc) (15561666480).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "7b7ce8731f837a655fab73ada324e030c81898541feb2e38c0e3f239decc083e",
       "contextAfterSHA256": "7b7ce8731f837a655fab73ada324e030c81898541feb2e38c0e3f239decc083e",
       "ownerApproved": true,
@@ -1988,7 +1988,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "8fb29a17c4ab0a6520b50d5a3bea5214731c318e2230869b528019790662963c",
         "sameImageExportSHA256": "8fb29a17c4ab0a6520b50d5a3bea5214731c318e2230869b528019790662963c",
         "independentNativeQAEvidencePreserved": true,
@@ -2016,23 +2016,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/k2-7d7a1f457e1bb4678b22.jpg",
         "suora": true,
         "lahde": "Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Bou Regregin pohjoisrannalla sijaitseva Salé tunnettiin Vanhan Salén nimellä, kun nykyisen Rabatin puolta kutsuttiin Uudeksi Saléksi.",
-        "lyhyt": "Salé on Rabatin vastarannan historiallinen kaupunki.",
+        "selite": "Salén talojen yläpuolelle kohoaa minareetti. Kuvan etualalla näkyvät muuri, hautausmaa ja leveä hiekkaranta.",
+        "lyhyt": "Salén kaupungin kattoja Bou Regregin vastarannalla.",
         "tiedosto": "Salé from the Plateforme du Sémaphore (Kasbah des Oudais) (5509116076).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Bou Regregin pohjoisrannalla sijaitseva Salé tunnettiin Vanhan Salén nimellä, kun nykyisen Rabatin puolta kutsuttiin Uudeksi Saléksi.",
-        "lyhyt": "Salé on Rabatin vastarannan historiallinen kaupunki.",
+        "selite": "Salén talojen yläpuolelle kohoaa minareetti. Kuvan etualalla näkyvät muuri, hautausmaa ja leveä hiekkaranta.",
+        "lyhyt": "Salén kaupungin kattoja Bou Regregin vastarannalla.",
         "tiedosto": "Salé from the Plateforme du Sémaphore (Kasbah des Oudais) (5509116076).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/k2-7d7a1f457e1bb4678b22.jpg",
         "suora": true,
         "lahde": "Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Bou Regregin pohjoisrannalla sijaitseva Salé tunnettiin Vanhan Salén nimellä, kun nykyisen Rabatin puolta kutsuttiin Uudeksi Saléksi.",
-        "lyhyt": "Salé on Rabatin vastarannan historiallinen kaupunki.",
+        "selite": "Salén talojen yläpuolelle kohoaa minareetti. Kuvan etualalla näkyvät muuri, hautausmaa ja leveä hiekkaranta.",
+        "lyhyt": "Salén kaupungin kattoja Bou Regregin vastarannalla.",
         "tiedosto": "Salé from the Plateforme du Sémaphore (Kasbah des Oudais) (5509116076).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2047,10 +2047,10 @@
         2717
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c35f886338c82b2b8a2c4142393e7fb217905295172a95f1aa5d9ee847915b07",
-        "semanticContextSHA256": "c35f886338c82b2b8a2c4142393e7fb217905295172a95f1aa5d9ee847915b07",
+        "targetBeforeSHA256": "d830e1311010f5d6e57b74d77c3099b8dab81eb9b2e8e82cb6bec2de77ad8f75",
+        "semanticContextSHA256": "d830e1311010f5d6e57b74d77c3099b8dab81eb9b2e8e82cb6bec2de77ad8f75",
         "subjectTitle": "Salé vanha, Salé uusi",
         "targetState": "existing-target"
       },
@@ -2171,8 +2171,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Salé from the Plateforme du Sémaphore (Kasbah des Oudais) (5509116076).jpg",
-        "lyhyt": "Salé on Rabatin vastarannan historiallinen kaupunki.",
-        "selite": "Bou Regregin pohjoisrannalla sijaitseva Salé tunnettiin Vanhan Salén nimellä, kun nykyisen Rabatin puolta kutsuttiin Uudeksi Saléksi.",
+        "lyhyt": "Salén kaupungin kattoja Bou Regregin vastarannalla.",
+        "selite": "Salén talojen yläpuolelle kohoaa minareetti. Kuvan etualalla näkyvät muuri, hautausmaa ja leveä hiekkaranta.",
         "lahde": "Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2199,14 +2199,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Bou Regregin pohjoisrannalla sijaitseva Salé tunnettiin Vanhan Salén nimellä, kun nykyisen Rabatin puolta kutsuttiin Uudeksi Saléksi.",
-        "lyhyt": "Salé on Rabatin vastarannan historiallinen kaupunki.",
+        "selite": "Salén talojen yläpuolelle kohoaa minareetti. Kuvan etualalla näkyvät muuri, hautausmaa ja leveä hiekkaranta.",
+        "lyhyt": "Salén kaupungin kattoja Bou Regregin vastarannalla.",
         "tiedosto": "Salé from the Plateforme du Sémaphore (Kasbah des Oudais) (5509116076).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
-      "targetAfterSHA256": "c35f886338c82b2b8a2c4142393e7fb217905295172a95f1aa5d9ee847915b07",
-      "contextAfterSHA256": "c35f886338c82b2b8a2c4142393e7fb217905295172a95f1aa5d9ee847915b07",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
+      "targetAfterSHA256": "d830e1311010f5d6e57b74d77c3099b8dab81eb9b2e8e82cb6bec2de77ad8f75",
+      "contextAfterSHA256": "d830e1311010f5d6e57b74d77c3099b8dab81eb9b2e8e82cb6bec2de77ad8f75",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2231,12 +2231,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "7d7a1f457e1bb4678b2280c3eb7fc9623f020c57d7fab315e9f5cdfce763d36b",
         "sameImageExportSHA256": "7d7a1f457e1bb4678b2280c3eb7fc9623f020c57d7fab315e9f5cdfce763d36b",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     },
     {
@@ -2259,23 +2259,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/k3-c901643f787fcd3ae86a.jpg",
         "suora": true,
         "lahde": "Hannolans, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Moulay Ismailin vanha palatsiasunto on palvellut uskonnollisena oppilaitoksena ja museona, jonka aiheena on marokkolainen koru- ja pukeutumisperintö.",
-        "lyhyt": "Moulay Ismailin paviljonki on ollut myös oppilaitos.",
+        "selite": "Moulay Ismailin paviljongin sisäpihalla kivipylväät kannattavat vaaleita kaaria. Käytävien lattiassa on mustavalkoista laatoitusta.",
+        "lyhyt": "Moulay Ismailin paviljongin sisäpihan pylväitä ja kaaria.",
         "tiedosto": "Pavilion of Moulay Ismail 03.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Hannolans, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Moulay Ismailin vanha palatsiasunto on palvellut uskonnollisena oppilaitoksena ja museona, jonka aiheena on marokkolainen koru- ja pukeutumisperintö.",
-        "lyhyt": "Moulay Ismailin paviljonki on ollut myös oppilaitos.",
+        "selite": "Moulay Ismailin paviljongin sisäpihalla kivipylväät kannattavat vaaleita kaaria. Käytävien lattiassa on mustavalkoista laatoitusta.",
+        "lyhyt": "Moulay Ismailin paviljongin sisäpihan pylväitä ja kaaria.",
         "tiedosto": "Pavilion of Moulay Ismail 03.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/k3-c901643f787fcd3ae86a.jpg",
         "suora": true,
         "lahde": "Hannolans, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Moulay Ismailin vanha palatsiasunto on palvellut uskonnollisena oppilaitoksena ja museona, jonka aiheena on marokkolainen koru- ja pukeutumisperintö.",
-        "lyhyt": "Moulay Ismailin paviljonki on ollut myös oppilaitos.",
+        "selite": "Moulay Ismailin paviljongin sisäpihalla kivipylväät kannattavat vaaleita kaaria. Käytävien lattiassa on mustavalkoista laatoitusta.",
+        "lyhyt": "Moulay Ismailin paviljongin sisäpihan pylväitä ja kaaria.",
         "tiedosto": "Pavilion of Moulay Ismail 03.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2290,10 +2290,10 @@
         4032
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f4e8598e489b2f3ce958415db74217bd908068614ad25bb8c814f5f3396ee075",
-        "semanticContextSHA256": "f4e8598e489b2f3ce958415db74217bd908068614ad25bb8c814f5f3396ee075",
+        "targetBeforeSHA256": "bcf171d98414cd0532453e29fd8a31ed0bec4d0474aaa6f53916d8f17c93d7d3",
+        "semanticContextSHA256": "bcf171d98414cd0532453e29fd8a31ed0bec4d0474aaa6f53916d8f17c93d7d3",
         "subjectTitle": "Palatsiasunto sai uusia tehtäviä",
         "targetState": "existing-target"
       },
@@ -2415,8 +2415,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Pavilion of Moulay Ismail 03.jpg",
-        "lyhyt": "Moulay Ismailin paviljonki on ollut myös oppilaitos.",
-        "selite": "Moulay Ismailin vanha palatsiasunto on palvellut uskonnollisena oppilaitoksena ja museona, jonka aiheena on marokkolainen koru- ja pukeutumisperintö.",
+        "lyhyt": "Moulay Ismailin paviljongin sisäpihan pylväitä ja kaaria.",
+        "selite": "Moulay Ismailin paviljongin sisäpihalla kivipylväät kannattavat vaaleita kaaria. Käytävien lattiassa on mustavalkoista laatoitusta.",
         "lahde": "Hannolans, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2443,14 +2443,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Hannolans, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Moulay Ismailin vanha palatsiasunto on palvellut uskonnollisena oppilaitoksena ja museona, jonka aiheena on marokkolainen koru- ja pukeutumisperintö.",
-        "lyhyt": "Moulay Ismailin paviljonki on ollut myös oppilaitos.",
+        "selite": "Moulay Ismailin paviljongin sisäpihalla kivipylväät kannattavat vaaleita kaaria. Käytävien lattiassa on mustavalkoista laatoitusta.",
+        "lyhyt": "Moulay Ismailin paviljongin sisäpihan pylväitä ja kaaria.",
         "tiedosto": "Pavilion of Moulay Ismail 03.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
-      "targetAfterSHA256": "f4e8598e489b2f3ce958415db74217bd908068614ad25bb8c814f5f3396ee075",
-      "contextAfterSHA256": "f4e8598e489b2f3ce958415db74217bd908068614ad25bb8c814f5f3396ee075",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
+      "targetAfterSHA256": "bcf171d98414cd0532453e29fd8a31ed0bec4d0474aaa6f53916d8f17c93d7d3",
+      "contextAfterSHA256": "bcf171d98414cd0532453e29fd8a31ed0bec4d0474aaa6f53916d8f17c93d7d3",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2475,12 +2475,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "c901643f787fcd3ae86a1c8ffa74fefced6531ee4ecec07a31b072c9e27b4c7a",
         "sameImageExportSHA256": "c901643f787fcd3ae86a1c8ffa74fefced6531ee4ecec07a31b072c9e27b4c7a",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     },
     {
@@ -2534,7 +2534,7 @@
         2432
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "782a740bc13ed50fc78eb4b3b7951e0853930eb32603971e3c2c00a541a9be12",
         "semanticContextSHA256": "782a740bc13ed50fc78eb4b3b7951e0853930eb32603971e3c2c00a541a9be12",
@@ -2691,7 +2691,7 @@
         "tiedosto": "باب الرواح.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "782a740bc13ed50fc78eb4b3b7951e0853930eb32603971e3c2c00a541a9be12",
       "contextAfterSHA256": "782a740bc13ed50fc78eb4b3b7951e0853930eb32603971e3c2c00a541a9be12",
       "ownerApproved": true,
@@ -2718,7 +2718,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "756be9a5dc78247e713ba90bcaf503e538f558e33eec042b11b557e44af5e7a8",
         "sameImageExportSHA256": "756be9a5dc78247e713ba90bcaf503e538f558e33eec042b11b557e44af5e7a8",
         "independentNativeQAEvidencePreserved": true,
@@ -2777,7 +2777,7 @@
         1592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "436984fb5a31fbc739733762138b6dd8bef9fee808e270fe668c1b5e94a53c04",
         "semanticContextSHA256": "436984fb5a31fbc739733762138b6dd8bef9fee808e270fe668c1b5e94a53c04",
@@ -2934,7 +2934,7 @@
         "tiedosto": "Muraille des Andalous 1 - Rabat.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "436984fb5a31fbc739733762138b6dd8bef9fee808e270fe668c1b5e94a53c04",
       "contextAfterSHA256": "436984fb5a31fbc739733762138b6dd8bef9fee808e270fe668c1b5e94a53c04",
       "ownerApproved": true,
@@ -2961,7 +2961,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "d72f52c7a8f18646143498cc464b9a9e1dc20118f28cd3fe00a44a07c14bf53e",
         "sameImageExportSHA256": "d72f52c7a8f18646143498cc464b9a9e1dc20118f28cd3fe00a44a07c14bf53e",
         "independentNativeQAEvidencePreserved": true,
@@ -3020,7 +3020,7 @@
         4805
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "bb81a1f57121a2e0b8b0d4b332ba193afc618952192f9b2cb6fe1e06ddb6f526",
         "semanticContextSHA256": "bb81a1f57121a2e0b8b0d4b332ba193afc618952192f9b2cb6fe1e06ddb6f526",
@@ -3206,7 +3206,7 @@
         "tiedosto": "Sala Colonia, Morocco (32853576932).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "bb81a1f57121a2e0b8b0d4b332ba193afc618952192f9b2cb6fe1e06ddb6f526",
       "contextAfterSHA256": "bb81a1f57121a2e0b8b0d4b332ba193afc618952192f9b2cb6fe1e06ddb6f526",
       "ownerApproved": true,
@@ -3233,7 +3233,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
         "sameImageExportSHA256": "fa054ee4a589e63d107b669979e34305437bab439ca286c390de4ffe48680aca",
         "independentNativeQAEvidencePreserved": true,
@@ -3292,7 +3292,7 @@
         3264
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "32047b1a632a9fad4c9201964491421184d6a8f8874b1cc2a4de916f70d68ba8",
         "semanticContextSHA256": "32047b1a632a9fad4c9201964491421184d6a8f8874b1cc2a4de916f70d68ba8",
@@ -3449,7 +3449,7 @@
         "tiedosto": "Chellah Mosque.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "32047b1a632a9fad4c9201964491421184d6a8f8874b1cc2a4de916f70d68ba8",
       "contextAfterSHA256": "32047b1a632a9fad4c9201964491421184d6a8f8874b1cc2a4de916f70d68ba8",
       "ownerApproved": true,
@@ -3476,7 +3476,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "91bab45082a7110da3a5d45fe8a6528bcc37042416f9800ec4e855f04cd84761",
         "sameImageExportSHA256": "91bab45082a7110da3a5d45fe8a6528bcc37042416f9800ec4e855f04cd84761",
         "independentNativeQAEvidencePreserved": true,
@@ -3535,7 +3535,7 @@
         1901
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b36b9cb548d676083acfad00227acc1763bd414b1659d98b824037e93099967a",
         "semanticContextSHA256": "f440854edb563675bd4a62305edc0617c41b50f119353db521486982500aad7f",
@@ -3705,7 +3705,7 @@
         "tiedosto": "Muraille des Andalous 2 - Rabat.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "b36b9cb548d676083acfad00227acc1763bd414b1659d98b824037e93099967a",
       "contextAfterSHA256": "f440854edb563675bd4a62305edc0617c41b50f119353db521486982500aad7f",
       "ownerApproved": true,
@@ -3732,7 +3732,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
         "sameImageExportSHA256": "baaac7f30b68e5c6563aef44695d47713b10a78750c0a5490e50816f63005318",
         "independentNativeQAEvidencePreserved": true,
@@ -3791,7 +3791,7 @@
         1704
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "47dd943ab89cf208cf1f43945eda3d43aa3f43f06fbd2f8c5089abfa5ab48da4",
         "semanticContextSHA256": "9e1652cfc869dc90f95d72e7c71c23509641e95f53c2c94bfb6d84fa5132bf26",
@@ -3948,7 +3948,7 @@
         "tiedosto": "Bab Rouah inner facade edit.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "47dd943ab89cf208cf1f43945eda3d43aa3f43f06fbd2f8c5089abfa5ab48da4",
       "contextAfterSHA256": "9e1652cfc869dc90f95d72e7c71c23509641e95f53c2c94bfb6d84fa5132bf26",
       "ownerApproved": true,
@@ -3975,7 +3975,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "51a9dd0e4256f4cbd16a87365e4fa6cb0934ff96bc0785ee41c186d91ab09eac",
         "sameImageExportSHA256": "51a9dd0e4256f4cbd16a87365e4fa6cb0934ff96bc0785ee41c186d91ab09eac",
         "independentNativeQAEvidencePreserved": true,
@@ -4003,23 +4003,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg",
         "suora": true,
         "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
-        "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi.",
+        "selite": "Linnakkeen pyöristetty torni kohoaa pitkän vaalean muurin yläpuolelle. Oikealla näkyy Bou Regregin vettä ja vastarannan rakennuksia.",
+        "lyhyt": "Borj Sidi Makhloufin pyöristetty torni ja pitkä muuri.",
         "tiedosto": "Sidi Makhlouf 1.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
-        "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi.",
+        "selite": "Linnakkeen pyöristetty torni kohoaa pitkän vaalean muurin yläpuolelle. Oikealla näkyy Bou Regregin vettä ja vastarannan rakennuksia.",
+        "lyhyt": "Borj Sidi Makhloufin pyöristetty torni ja pitkä muuri.",
         "tiedosto": "Sidi Makhlouf 1.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg",
         "suora": true,
         "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
-        "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi.",
+        "selite": "Linnakkeen pyöristetty torni kohoaa pitkän vaalean muurin yläpuolelle. Oikealla näkyy Bou Regregin vettä ja vastarannan rakennuksia.",
+        "lyhyt": "Borj Sidi Makhloufin pyöristetty torni ja pitkä muuri.",
         "tiedosto": "Sidi Makhlouf 1.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -4034,10 +4034,10 @@
         1944
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "106b24f1f3fa68dbdcd64edf35a8fef20ecf44d411be576b200ad2c23aeef1d4",
-        "semanticContextSHA256": "cb2ed0fb7514ea5b7d58274ae893ebcede993d57ff4b46bca05f27a63526cf10",
+        "targetBeforeSHA256": "eca2ed4d9221f3190bbdb9ec08566f8662baf5b62bcc6e6b6e1ad4b12b68a92b",
+        "semanticContextSHA256": "fa3f0a23aa148664c99ee2442389e3f95eebf66d9d15dbdbd6ad78b6f09e90b9",
         "subjectTitle": "Borj Sidi Makhlouf -linnake",
         "targetState": "existing-target"
       },
@@ -4158,8 +4158,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Sidi Makhlouf 1.jpg",
-        "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi.",
-        "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
+        "lyhyt": "Borj Sidi Makhloufin pyöristetty torni ja pitkä muuri.",
+        "selite": "Linnakkeen pyöristetty torni kohoaa pitkän vaalean muurin yläpuolelle. Oikealla näkyy Bou Regregin vettä ja vastarannan rakennuksia.",
         "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -4186,14 +4186,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Omar-toons, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.",
-        "lyhyt": "Borj Sidi Makhlouf rakennettiin sataman suojaksi.",
+        "selite": "Linnakkeen pyöristetty torni kohoaa pitkän vaalean muurin yläpuolelle. Oikealla näkyy Bou Regregin vettä ja vastarannan rakennuksia.",
+        "lyhyt": "Borj Sidi Makhloufin pyöristetty torni ja pitkä muuri.",
         "tiedosto": "Sidi Makhlouf 1.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
-      "targetAfterSHA256": "106b24f1f3fa68dbdcd64edf35a8fef20ecf44d411be576b200ad2c23aeef1d4",
-      "contextAfterSHA256": "cb2ed0fb7514ea5b7d58274ae893ebcede993d57ff4b46bca05f27a63526cf10",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
+      "targetAfterSHA256": "eca2ed4d9221f3190bbdb9ec08566f8662baf5b62bcc6e6b6e1ad4b12b68a92b",
+      "contextAfterSHA256": "fa3f0a23aa148664c99ee2442389e3f95eebf66d9d15dbdbd6ad78b6f09e90b9",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -4218,12 +4218,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9",
         "sameImageExportSHA256": "d2117c6c38e7e5e9e66d2572636dcdba84d51713fc7bb70f1cdd640c6bfe49b9",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     },
     {
@@ -4277,7 +4277,7 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4c376a78913ec6b1b1f21cc517ec21ff6fd4ebe912d9a5b2da47a6e5b7e810c8",
         "semanticContextSHA256": "6abf65eb14b07c51fdbc1ea3850ca1951b6620138738df2f688f9b9c223ff806",
@@ -4444,7 +4444,7 @@
         "tiedosto": "Boats in Bouregreg (2).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "4c376a78913ec6b1b1f21cc517ec21ff6fd4ebe912d9a5b2da47a6e5b7e810c8",
       "contextAfterSHA256": "6abf65eb14b07c51fdbc1ea3850ca1951b6620138738df2f688f9b9c223ff806",
       "ownerApproved": true,
@@ -4471,7 +4471,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326",
         "sameImageExportSHA256": "1e534244a1db91b816ceea5e88db03701a2dd6d76d8202b80b5309116092d326",
         "independentNativeQAEvidencePreserved": true,
@@ -4530,7 +4530,7 @@
         2000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5643b421bf0ee0890414b4cba29af1675b3226ab73f770f912241091b1611cd0",
         "semanticContextSHA256": "f525ffab2937c9cedf5c83e02b72efc599da8e6b006e8b37d7f87c95b1989703",
@@ -4687,7 +4687,7 @@
         "tiedosto": "Chellah interior hill.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "5643b421bf0ee0890414b4cba29af1675b3226ab73f770f912241091b1611cd0",
       "contextAfterSHA256": "f525ffab2937c9cedf5c83e02b72efc599da8e6b006e8b37d7f87c95b1989703",
       "ownerApproved": true,
@@ -4714,7 +4714,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13",
         "sameImageExportSHA256": "24091cc6837de1b2ad1733a2acb855c9ea631f1a0db3a1ec0b6c847c9cae0d13",
         "independentNativeQAEvidencePreserved": true,
@@ -4773,7 +4773,7 @@
         8000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d5999533474521e69655fd4744f11307ae7bb9f4630c56e1f42b6f7ee58385f2",
         "semanticContextSHA256": "6f9bb8a593176a33a306c29e935276392a14a2c577b1a20ef1626edb822e4bd2",
@@ -4943,7 +4943,7 @@
         "tiedosto": "Moulay Slimane Mosque.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "d5999533474521e69655fd4744f11307ae7bb9f4630c56e1f42b6f7ee58385f2",
       "contextAfterSHA256": "6f9bb8a593176a33a306c29e935276392a14a2c577b1a20ef1626edb822e4bd2",
       "ownerApproved": true,
@@ -4970,7 +4970,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
         "sameImageExportSHA256": "9d598a35fe3f75e4c980907823460ee94713b72ae198e25f78de1fd1d2311e88",
         "independentNativeQAEvidencePreserved": true,
@@ -5029,7 +5029,7 @@
         1872
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/rabat/sisalto.json",
-      "sourceContentSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ec32be1cbd2f121442a779c28b2724376decc3b8a5867b067e448065255d1afe",
         "semanticContextSHA256": "d48cf923bab1e15ce9c35605183fb65972cfaa6c967bf01aba48328dd5953aa1",
@@ -5187,7 +5187,7 @@
         "tiedosto": "Kasbah des Oudaias P1060323.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+      "sourceContentAfterSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
       "targetAfterSHA256": "ec32be1cbd2f121442a779c28b2724376decc3b8a5867b067e448065255d1afe",
       "contextAfterSHA256": "d48cf923bab1e15ce9c35605183fb65972cfaa6c967bf01aba48328dd5953aa1",
       "ownerApproved": true,
@@ -5214,7 +5214,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "465fca50fdc9c0a854cce0c83aecfc25642d4556ea1c19bfcbf113c6332483da",
+        "sourceSHA256": "96d9346d28b65bfeebed7d6390efc5170eed69d8bc5667856e882eac321dfd0d",
         "sameImageNativeSHA256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
         "sameImageExportSHA256": "5b76fc42301d3b9908a645b8614bd72f54dae905649e4b71d75d8119776e96ed",
         "independentNativeQAEvidencePreserved": true,
@@ -5232,9 +5232,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/rabat/5841a5f6c9c8ac7faf59dd8ee6fb6eddbd0af2d6946d66c13ab4cf91544db053.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/rabat/f7391bf82f58b4986dc498abcf612829c5411cfdce357edde8956e59a8568c08.json",
   "task118ReboundAt": "2026-10-13T16:33:24.072499+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:10:00.215339+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:46.869766+00:00"
 }

@@ -56,21 +56,21 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Puutarha perustettiin 1800-luvun lopulla.",
+      "hint": "Puun lehti muodostuu useasta lehdykästä.",
       "fact": "Camayennen kasvitieteellinen puutarha tunnetaan kapokkipuistaan.",
       "source": "https://en.wikipedia.org/wiki/Conakry_Botanical_Garden"
     },
     {
-      "q": "Mihin portugalinkieliseen sanaan Kassa-nimen selitetään liittyvän?",
+      "q": "Minkä eurooppalaisen kielen sanaan Kassa-nimen selitetään liittyvän?",
       "options": [
-        "Casa, talo",
-        "Praia, ranta",
-        "Porto, satama",
-        "Pedra, kivi"
+        "Portugalin",
+        "Ranskan",
+        "Espanjan",
+        "Englannin"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Nimitausta liittyy saariston aiempaan eurooppalaiseen nimikerrostumaan.",
+      "hint": "Nimen pohjaksi ehdotettu sana tarkoittaa taloa.",
       "fact": "Kassa-nimen selitetään liittyvän portugalin taloa tarkoittavaan sanaan casa.",
       "source": "https://en.wikipedia.org/wiki/%C3%8Eles_de_Los"
     },
@@ -281,7 +281,7 @@
       "nostot": [
         {
           "otsikko": "Kallio kaartuu saarten renkaaksi",
-          "teksti": "Los-saaristossa Roume jää Kassan ja Tamaran muodostaman kaaren sisään. Saariston kallioperään kuuluu syeniittiä, joka on magmakivi. Saarten syntyhistoria liitetään Atlantin avautumisen aikaiseen magmakivitoimintaan. Rengasmuodon on tulkittu liittyvän todennäköisesti kuluneen tulivuorirakenteen magmasäiliöön. Saariston nefeliinisyeniittiä leikkaavat fonoliittijuonet.",
+          "teksti": "Los-saaristossa Roume jää Kassan ja Tamaran muodostaman kaaren sisään. Saariston kallioperään kuuluu syeniittiä, joka on magmakivi. Saarten syntyhistoria liitetään Atlantin avautumisen aikaiseen magmakivitoimintaan. Rengasmuodon on tulkittu liittyvän todennäköisesti kuluneen tulivuorirakenteen magmasäiliöön. Saaristoon kuuluvat myös pienemmät Blanchen ja Corailin saaret.",
           "wiki": "Îles de Los",
           "tiedosto": "Los Islands, Guinea.jpg",
           "lyhyt": "Los-saariston kaari Conakryn edustalla vuonna 2017.",
@@ -390,7 +390,7 @@
     },
     "Camayennen kasvitieteellinen puutarha": {
       "aika": "1800-luvun loppu",
-      "teksti": "Camayennen kasvitieteellinen puutarha sijaitsee Conakryn Camayennen kaupunginosassa. Puutarha tunnetaan kapokkipuista. Ambroise Paré -sairaala jää sen eteläpuolelle ja Conakryn suuri moskeija pohjoispuolelle.\n\nRanskalaiset perustivat puutarhan 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä.\n\nPuutarhan alue on pienentynyt kaupungin kasvun yhteydessä. Puutarha tunnetaan myös nimellä Conakry Botanical Garden.",
+      "teksti": "Camayennen kasvitieteellinen puutarha sijaitsee Conakryn Camayennen kaupunginosassa. Puutarha tunnetaan kapokkipuista. Ambroise Paré -sairaala jää sen eteläpuolelle ja Conakryn suuri moskeija pohjoispuolelle.\n\nRanskalaiset perustivat puutarhan 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä.\n\nKaupunkirakentaminen on vähentänyt puutarhan pinta-alaa: 2000-luvun alussa jäljellä oli vain osa alkuperäisestä istutusalueesta.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
@@ -422,7 +422,7 @@
     },
     "Tamaran saari": {
       "aika": "Vanha luonnon- ja asutuspaikka, kaivostoimintaa 1900-luvulla",
-      "teksti": "Tamara sijaitsee Los-saariston läntisellä laidalla. Pitkä kaareva saari muodostaa Kassan kanssa Roumea ympäröivän saaristokehän. Tamara tunnetaan myös nimellä Fotoba; nimen Fortoba-kirjoitusasu esiintyy osassa lähteitä.\n\nSaariston luonnonmaisemaan kuuluvat rannat ja metsäiset sisäosat. Tamaran historiassa on myös 1900-luvun bauksiittikaivostoimintaa. Saareen liittyvät merenkulun majakka ja Fotoban entinen vankila ovat myöhempien rakennettujen paikkojen historiaa. ",
+      "teksti": "Tamara sijaitsee Los-saariston läntisellä laidalla. Pitkä kaareva saari muodostaa Kassan kanssa Roumea ympäröivän saaristokehän. Tamara tunnetaan myös nimellä Fotoba; nimestä käytetään myös kirjoitusasua Fortoba.\n\nSaariston luonnonmaisemaan kuuluvat rannat ja metsäiset sisäosat. Tamaran historiassa on myös 1900-luvun bauksiittikaivostoimintaa. Saaren rakennushistoriaan kuuluvat myös merenkulun majakka ja Fotoban entinen vankila. ",
       "kuvat": [
         {
           "tiedosto": "Île de fotoba 2.jpg",

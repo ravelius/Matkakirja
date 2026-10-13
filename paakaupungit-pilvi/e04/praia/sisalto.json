@@ -121,8 +121,8 @@
               }
             },
             {
-              "otsikko": "Rannalla ja tasanteilla",
-              "teksti": "Praia sijaitsee Atlantin rannalla, mutta vanha Plateau-keskusta on meren yläpuolisella tasanteella. Gamboan rantaan laskeudutaan keskustasta alaspäin, kun taas muu kaupunki jatkuu myös laaksoihin ja muille tasanteille.",
+              "otsikko": "Pitkä kuiva kausi",
+              "teksti": "Praiassa pitkä kuiva kausi kattaa suuren osan vuodesta. Lyhyt sadekausi painottuu elo-, syys- ja lokakuuhun. Meren äärellä sijaitsevan kaupungin lämpötila vaihtelee vuodenaikojen välillä vähemmän kuin sen sateisuus.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -381,7 +381,7 @@
     },
     "Praian etnografinen museo": {
       "aika": "1800-luvun talo, myöhempi museo",
-      "teksti": "Praian etnografinen museo sijaitsee vanhassa Plateau-keskustassa Rua 5 de Julholla. Se toimii 1800-luvun rakennuksessa, mutta museon synty liittyy myöhäisen 1900-luvun kulttuuriperintöhankkeisiin. Kokoelmia kerättiin eri Kap Verden saarilta: Praia kokoaa samassa museossa koko saariston esineperintöä.\n\nAineisto kertoo arjen taidoista ja elinkeinoista, kuten kalastuksesta, maataloudesta, kudonnasta, korinpunonnasta ja keramiikasta. Mukana on myös kertomuksia, arvoituksia ja muuta suullista perinnettä. Museo aloitti toimintansa vasta 1900-luvun loppupuolella; sen 1800-luvun talo oli alun perin toisessa käytössä.",
+      "teksti": "Praian etnografinen museo sijaitsee vanhassa Plateau-keskustassa Rua 5 de Julholla. Se toimii 1800-luvun rakennuksessa, mutta museon synty liittyy myöhäisen 1900-luvun kulttuuriperintöhankkeisiin. Kokoelmia kerättiin eri Kap Verden saarilta: Praia kokoaa samassa museossa koko saariston esineperintöä.\n\nAineisto kertoo arjen taidoista ja elinkeinoista, kuten kalastuksesta, maataloudesta, kudonnasta, korinpunonnasta ja keramiikasta. Mukana on myös kertomuksia, arvoituksia ja muuta suullista perinnettä.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -394,7 +394,7 @@
     },
     "Maria Pian majakka": {
       "aika": "1800-luvun loppu",
-      "teksti": "Maria Pian majakka on Ponta Temerosa -niemellä, missä se kuuluu Praian lahden sisääntulon merenkulun maamerkkeihin. Niemi on osa Santiagon eteläistä rannikkoa. Muurattu torni on valkoinen ja kahdeksankulmainen; siihen liittyy majakanvartijan matalampi rakennus sekä valohuoneen ja parvekkeen rakenteita.\n\nMajakka rakennettiin 1800-luvun loppupuolella ja nimettiin Portugalin kuningattaren Maria Pian mukaan. Sitä ei vielä ollut vuonna 1873, vaikka satamalahti ja niemi olivat jo osa paikan maantiedettä.",
+      "teksti": "Maria Pian majakka on Ponta Temerosa -niemellä, missä se kuuluu Praian lahden sisääntulon merenkulun maamerkkeihin. Niemi on osa Santiagon eteläistä rannikkoa. Muurattu torni on valkoinen ja kahdeksankulmainen; siihen liittyy majakanvartijan matalampi rakennus sekä valohuoneen ja parvekkeen rakenteita.\n\nMajakka rakennettiin 1800-luvun loppupuolella ja nimettiin Portugalin kuningattaren Maria Pian mukaan. Majakkaa ei vielä ollut vuonna 1873.",
       "kuvat": [
         {
           "tiedosto": "",

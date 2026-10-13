@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "alger",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+  "sourceContentAfterSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
   "assets": [
     {
       "era": "e04",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "9ef5a17a69caed68a28d88603edbf459b860c77139af7981214d8416aaf01e34",
@@ -281,7 +281,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentAfterSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "9ef5a17a69caed68a28d88603edbf459b860c77139af7981214d8416aaf01e34",
       "ownerApproved": true,
@@ -308,7 +308,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+        "sourceSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
         "sameImageNativeSHA256": "de5b2256ad0870448e5ddc0cc4605dc185e5002f40408b6ecfb7f383ae7af2f8",
         "sameImageExportSHA256": "6a47059fd683c605379175e72444f69e3e8742b185dbdd6637ec250312014328",
         "independentNativeQAEvidencePreserved": true,
@@ -364,7 +364,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5f90f0242bf394afb148fbe7c26a5fa145439dc31679c91181ea8b1385d96112",
         "semanticContextSHA256": "5f90f0242bf394afb148fbe7c26a5fa145439dc31679c91181ea8b1385d96112",
@@ -547,7 +547,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentAfterSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "targetAfterSHA256": "5f90f0242bf394afb148fbe7c26a5fa145439dc31679c91181ea8b1385d96112",
       "contextAfterSHA256": "5f90f0242bf394afb148fbe7c26a5fa145439dc31679c91181ea8b1385d96112",
       "ownerApproved": true,
@@ -574,7 +574,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+        "sourceSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
         "sameImageNativeSHA256": "2bc5887f42ee87462be54e4d97b5b76390164a55019a7b42989836087d4e17bd",
         "sameImageExportSHA256": "d56cecaed5f8123a06ea264c0055d8949a46879cced44de3ce0a09ccfc5e2045",
         "independentNativeQAEvidencePreserved": true,
@@ -630,7 +630,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0aae26fde805ed343eff155ad6caa86268c091be071d3327f6398ae986249c36",
         "semanticContextSHA256": "0aae26fde805ed343eff155ad6caa86268c091be071d3327f6398ae986249c36",
@@ -861,7 +861,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentAfterSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "targetAfterSHA256": "0aae26fde805ed343eff155ad6caa86268c091be071d3327f6398ae986249c36",
       "contextAfterSHA256": "0aae26fde805ed343eff155ad6caa86268c091be071d3327f6398ae986249c36",
       "ownerApproved": true,
@@ -888,7 +888,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+        "sourceSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
         "sameImageNativeSHA256": "6025bab9fb78c1550e0b36308358f6438ac9f9829a3cff3b2d9b1643af3f8d07",
         "sameImageExportSHA256": "9c35970035ce83f2e7669b7e96324ddfc2002610f4c880e93fb84a35465060e5",
         "independentNativeQAEvidencePreserved": true,
@@ -944,7 +944,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8fddcb1a60a7f6c262a168bd6287e16fa6a091f81c889bec3baa9a439f109001",
         "semanticContextSHA256": "8fddcb1a60a7f6c262a168bd6287e16fa6a091f81c889bec3baa9a439f109001",
@@ -1173,7 +1173,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentAfterSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "targetAfterSHA256": "8fddcb1a60a7f6c262a168bd6287e16fa6a091f81c889bec3baa9a439f109001",
       "contextAfterSHA256": "8fddcb1a60a7f6c262a168bd6287e16fa6a091f81c889bec3baa9a439f109001",
       "ownerApproved": true,
@@ -1200,7 +1200,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+        "sourceSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
         "sameImageNativeSHA256": "4b19c4afbdccbb327ac8b93ba873546fd8bb4f9642ef43f0d504d4b0864aa2b9",
         "sameImageExportSHA256": "e02a2169d59181a99f7a115098256bf73d338a10980ca239fbd44e2abd0add9c",
         "independentNativeQAEvidencePreserved": true,
@@ -1256,7 +1256,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7a3c74853b3df75cc99e51434fb706a246e431b932b47130e8852d03b83f3578",
         "semanticContextSHA256": "7a3c74853b3df75cc99e51434fb706a246e431b932b47130e8852d03b83f3578",
@@ -1512,7 +1512,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentAfterSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "targetAfterSHA256": "7a3c74853b3df75cc99e51434fb706a246e431b932b47130e8852d03b83f3578",
       "contextAfterSHA256": "7a3c74853b3df75cc99e51434fb706a246e431b932b47130e8852d03b83f3578",
       "ownerApproved": true,
@@ -1539,7 +1539,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+        "sourceSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
         "sameImageNativeSHA256": "8451d8d057abe4a9672066528470c4b777e039b0a2e23ee411f2389807486521",
         "sameImageExportSHA256": "29858b7889374ec98b81038b143911a59f6d84d8b8525b9436c6609a5b93fb40",
         "independentNativeQAEvidencePreserved": true,
@@ -1598,7 +1598,7 @@
         2048
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "semanticSourceBind": {
         "targetBeforeSHA256": "04edcc31dce2b2941236b6ee12ad774451ccfa809720483da363a72eb5a4dbf0",
         "semanticContextSHA256": "04edcc31dce2b2941236b6ee12ad774451ccfa809720483da363a72eb5a4dbf0",
@@ -1871,7 +1871,7 @@
         "vuosi": "2014"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentAfterSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "targetAfterSHA256": "04edcc31dce2b2941236b6ee12ad774451ccfa809720483da363a72eb5a4dbf0",
       "contextAfterSHA256": "04edcc31dce2b2941236b6ee12ad774451ccfa809720483da363a72eb5a4dbf0",
       "ownerApproved": true,
@@ -1898,7 +1898,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+        "sourceSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
         "sameImageNativeSHA256": "c2eb1d11378a520468fed3954f7f58a6db9ccb39651d55df5981279ae3f90fa9",
         "sameImageExportSHA256": "c2eb1d11378a520468fed3954f7f58a6db9ccb39651d55df5981279ae3f90fa9",
         "independentNativeQAEvidencePreserved": true,
@@ -1957,7 +1957,7 @@
         3712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7e10074c5731c6acc8a347edf9dc3d4ebee2533f96ce34f6846e3abb42b1b25e",
         "semanticContextSHA256": "7e10074c5731c6acc8a347edf9dc3d4ebee2533f96ce34f6846e3abb42b1b25e",
@@ -2227,7 +2227,7 @@
         "tiedosto": "ISS064-E-411 - View of Earth.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentAfterSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "targetAfterSHA256": "7e10074c5731c6acc8a347edf9dc3d4ebee2533f96ce34f6846e3abb42b1b25e",
       "contextAfterSHA256": "7e10074c5731c6acc8a347edf9dc3d4ebee2533f96ce34f6846e3abb42b1b25e",
       "ownerApproved": true,
@@ -2254,7 +2254,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+        "sourceSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
         "sameImageNativeSHA256": "e2b365d26138f19ee857e45d3dae16fcf508e966b743ce188f66e28b19003ab5",
         "sameImageExportSHA256": "e2b365d26138f19ee857e45d3dae16fcf508e966b743ce188f66e28b19003ab5",
         "independentNativeQAEvidencePreserved": true,
@@ -2313,10 +2313,10 @@
         2048
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a4d2fb07702b8d3c4bf42a25093db58bbf32675652fbb87e23dab4b1bf6c409c",
-        "semanticContextSHA256": "5822f87df7237016b1363c066b991f58bf0aef26fb1be7cea671216162e3dc49",
+        "semanticContextSHA256": "5cd99a16b1085a1cdd282803299fef94002713c383ee52a95bbc468d39cf1d68",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -2577,9 +2577,9 @@
         "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentAfterSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "targetAfterSHA256": "a4d2fb07702b8d3c4bf42a25093db58bbf32675652fbb87e23dab4b1bf6c409c",
-      "contextAfterSHA256": "5822f87df7237016b1363c066b991f58bf0aef26fb1be7cea671216162e3dc49",
+      "contextAfterSHA256": "5cd99a16b1085a1cdd282803299fef94002713c383ee52a95bbc468d39cf1d68",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2604,7 +2604,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+        "sourceSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
         "sameImageNativeSHA256": "a05e4c410fb09e36360676a4944c92a80f77d8491ab798c6a5dd99f1ab12e93f",
         "sameImageExportSHA256": "a05e4c410fb09e36360676a4944c92a80f77d8491ab798c6a5dd99f1ab12e93f",
         "independentNativeQAEvidencePreserved": true,
@@ -2666,7 +2666,7 @@
         2048
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5739ea83b6867b684f0b519ba11c002bfdd71280b9210ecc70896123f01aa1a6",
         "semanticContextSHA256": "da5c53e5db66bfcc69d691dc961533af62cdc30af679f2b8413b348c8eea723e",
@@ -2939,7 +2939,7 @@
         "tiedosto": "Algiers Hamma Botanical Garden plant.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentAfterSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "targetAfterSHA256": "5739ea83b6867b684f0b519ba11c002bfdd71280b9210ecc70896123f01aa1a6",
       "contextAfterSHA256": "da5c53e5db66bfcc69d691dc961533af62cdc30af679f2b8413b348c8eea723e",
       "ownerApproved": true,
@@ -2966,7 +2966,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+        "sourceSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
         "sameImageNativeSHA256": "239e39b54527a38dcb3d9d1b144e847ad7483d0749761e7a82f4e91812b9c7a1",
         "sameImageExportSHA256": "239e39b54527a38dcb3d9d1b144e847ad7483d0749761e7a82f4e91812b9c7a1",
         "independentNativeQAEvidencePreserved": true,
@@ -3025,7 +3025,7 @@
         2000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "semanticSourceBind": {
         "targetBeforeSHA256": "eb0eff5d14ee6380efdeea0db71847a4b5ca6dc7a67e17f443575389c821cba4",
         "semanticContextSHA256": "eb0eff5d14ee6380efdeea0db71847a4b5ca6dc7a67e17f443575389c821cba4",
@@ -3287,7 +3287,7 @@
         "tiedosto": "Botanical Garden of Hamma.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+      "sourceContentAfterSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
       "targetAfterSHA256": "eb0eff5d14ee6380efdeea0db71847a4b5ca6dc7a67e17f443575389c821cba4",
       "contextAfterSHA256": "eb0eff5d14ee6380efdeea0db71847a4b5ca6dc7a67e17f443575389c821cba4",
       "ownerApproved": true,
@@ -3314,7 +3314,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "36661bdd9d7bfc23ec8e94bf8f8193f8832c21cf61f48706ceadfc3e429284f5",
+        "sourceSHA256": "ea8c31255b2afb029370d364e79a3dece90a28e6f1fe0ade6862424cc2f25dc6",
         "sameImageNativeSHA256": "1209f2268a6b02f62b1f47f87ef9b62e47e6c8ef8630273941d3b57515592b90",
         "sameImageExportSHA256": "1209f2268a6b02f62b1f47f87ef9b62e47e6c8ef8630273941d3b57515592b90",
         "independentNativeQAEvidencePreserved": true,
@@ -3332,9 +3332,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/alger/07b2e60141e906c612e5239649b2c884eec4a70de183316f1d459780c40b5dbe.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/alger/aee03a11bcc90cf931af7eca0200e49a38db3af524d64fe347d708d036119444.json",
   "task118ReboundAt": "2026-10-13T16:33:23.904565+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:09:59.988628+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:46.596024+00:00"
 }
