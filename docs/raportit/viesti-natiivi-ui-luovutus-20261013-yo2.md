@@ -101,6 +101,21 @@ muste 56×30 = ohjausnappi--iso, "⟨Linssit⟩" 3×5) ja lähetä PT:lle löyd�
   mittaamatta luotettavasti), kahden kirjasimen rivit (Kertoja/PÄÄLLÄ −0,9), radio −1,3, iPad shakki Ohita −6,5 (selvittämättä),
   mikserin × (oletuskirjasin, kehittäjätyökalu). Uusia ajoja ei ennen NS:n 188-käännöstä (Julkaisija 23.09).
 
+## PÄIVITYS 14.10. 00.4x
+- KESKITYS (juna 189, PT: lopullinen arkki kun testi läpi): keskitys-188 2818fcdba. Ajot 7–10: linna LÄPI; pallo iPad ja iPhone vain
+  "Mikä tämä on?" (sähke napin päällä, piirtojärjestyspeitto 2818fcdba vielä ajamatta) + ei-keskitysviat (aarretehtävä ei avautunut,
+  metrolinja, taidehallin turva-alue = muiden). Testin linjaukset: monen osan ja monirivinen teksti pystyssä laatikostaan, reunaton
+  tekstilinkki ohitetaan, mikseri ohitetaan (PT), valikkorivin 1 px reunus (Linssit.uss). Pallo kolmena varauksena (iphone-pysty,
+  iphone-vaaka, ipad) → keskitys188k.sh. HUOM ut-editori.sh EI tunnista Editor-kansion virheitä (28 CS0433 peittää) → CS0136 meni ajoon.
+- RAKETIN MITTARITAULU (omistaja 14.10. 00.1x "vihreä taulu tyylikkäämmin, teksti ei mahdu"; PT): haara natiivi-ui/raketti-lcd-189
+  (pohja PK:n pelikoodari/raketti-laukaisu-189 02754cfdd; PK ei enää muokkaa RakettiNakyma.cs:ää), worktree
+  /Users/Shared/Claude/wt/proto-natiivi-ui-rakettilcd189: 196e3e507 Cupolan v3-nahka (mini-kehys 9-slice, IssOhjaamo.Pukeudu internal),
+  rivit aika / "km · G" / nopeudet Mittari-kirjasimella keskitettyinä, napit lasilla, leveys 92 % ≤ 520, Sovita (30→17, 15→12).
+  ui.raketti.lukemat = "{0} km · {1} G". Ennen-haara natiivi-ui/raketti-lcd-189-ennen (acb78a37c, testinäkymä "raketin paneeli lennossa").
+  SEURAAVAKSI: raketti189-kuvat.sh <linja> (Julkaisijan lupa; jono PK+LS2 00.3x) → kuva-arkki ennen/jälkeen iPhone + iPad PT:lle.
+- Pelikoodarille vastattu: KÄYNNISTÄ/NYT = .mk-issohjaamo__lcdnappi, lähtölaskenta LCD:n isolla rivillä, Pulun Kuvat = GALLERIA-pohja
+  (osio per kohde), iso keskinumero = ei pohjaa → PT.
+
 ## Opetukset
 - Taulu sijoittuu PulunTauluNakyma.PulunLaatikko → Pulu.TaulunAnkkuri; liikkuva Pulu siirsi taulua.
 - Simulaattorin iPad-video tallentuu pystyyn; kuvaruudut (c1–c3) ovat oikein päin.
