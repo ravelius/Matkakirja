@@ -9,7 +9,7 @@ TAIDEMUSEON (sali, lähestymislento) rooli.
 
 Lue ensin:
 - CLAUDE.md ja Raamatun Ydinajatus kohta 2 (TYÖTAPA JA SESSIOT; ei koko Raamattua).
-- **docs/raportit/viesti-linssiseppa-luovutus-20261013-1753.md** (UUSIN). Edellinen: -20261013-paiva.md.
+- **docs/raportit/viesti-linssiseppa-luovutus-20261013-2000.md** (UUSIN). Edellinen: -20261013-1753.md.
 - Muistio linssiseppa-tila-20261009.md (uusimmat rivit).
 
 ENSIMMÄINEN TEHTÄVÄ: luovutuksen luku 2 (vesilaikut muissa 0,4 m:n merikaupungeissa): kysy PT:ltä päätös kartoituksesta
