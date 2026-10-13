@@ -1,0 +1,467 @@
+{
+  "cityName": "Bryssel",
+  "gameCityId": "bryssel",
+  "mediaSlug": "brussels",
+  "taskNumber": 96,
+  "updatedAt": "2026-10-13T09:46:10.681001+00:00",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [
+    {
+      "slot": 5,
+      "title": "vesi tai luonto — Bois de la Cambre, nurmi ja vanhat puut kesäaamuna.",
+      "sceneSpec": "Mitä kuvataan: Bois de la Cambre -puiston laaja avoin nurmi ja sen reunalla korkeita vanhoja pyökkejä ja tammia (Soignesin metsän jatke); vasemmalla hiekkapolku, jolla muutama kävelijä ja yksi lenkkeilijä pieninä ja selin, nurmella kaukana piknikpeitto ja pari lepäilijää; ei järveä, ei saarta, ei ravintolarakennuksia eikä muita rakennuksia. Kulma: vaakakuva, polun varrelta silmänkorkeudelta kohti nurmen toista reunaa ja puurivistöä; tätä katselusuuntaa käytetään kuvassa 8. Valo: pehmeä kesäaamun valo lehvästön läpi, hieman usvaa nurmen yllä. Ei saa näkyä: tekstiä, kylttejä, opasteita, logoja, kasvoja, roskiksia ja penkkejä lähikuvassa, katuvalaisimia, ajoneuvoja, Chalet Robinsonia tai muita rakennuksia. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Bois de la Cambre, nurmi ja vanhat puut kesäaamuna. Havainnekuva.\n\n",
+      "caption": "Bois de la Cambre, nurmi ja vanhat puut kesäaamuna. Havainnekuva.",
+      "filename": "brussels-5-luonto-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/brussels/20261013-full/brussels-5-luonto-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Bryssel",
+      "gameCityId": "bryssel",
+      "mediaSlug": "brussels",
+      "taskNumber": 96,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/native-5.png",
+      "nativeSHA256": "f89677f6bec41f98df156699fe230afb99af5965499edc71ec1c5b2cddebf933",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/brussels-5-luonto-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/brussels/brussels-5-luonto-intro-v1.png",
+      "sha256": "cedb973f60d7ef3337c92c99681463d52e86a40b3b774d17ea49452ec64982db",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival intro. Generate ONE completely new natural photographic illustrative scene, landscape PNG exactly 1536 by 1024 pixels, 3:2, opaque RGB. No frames, no writing anywhere, no signage, no logos, no watermarks. Never include the caption as picture text. Natural optical perspective, unretouched documentary camera appearance, soft real light, restrained lifelike color, credible exposure. No HDR, no cinematic grading, no painterly rendering, no CGI finish. Every organic surface irregular and real: uneven blades and leaves, heterogeneous foliage, mottled bark, ordinary wear and imperfect masonry. Small or distant people seen from behind except the single foreground adult specifically requested for slot 6. No recognizable real person.\n\nPrimary scene specification (Finnish; obey every constraint):\nMitä kuvataan: Bois de la Cambre -puiston laaja avoin nurmi ja sen reunalla korkeita vanhoja pyökkejä ja tammia (Soignesin metsän jatke); vasemmalla hiekkapolku, jolla muutama kävelijä ja yksi lenkkeilijä pieninä ja selin, nurmella kaukana piknikpeitto ja pari lepäilijää; ei järveä, ei saarta, ei ravintolarakennuksia eikä muita rakennuksia. Kulma: vaakakuva, polun varrelta silmänkorkeudelta kohti nurmen toista reunaa ja puurivistöä; tätä katselusuuntaa käytetään kuvassa 8. Valo: pehmeä kesäaamun valo lehvästön läpi, hieman usvaa nurmen yllä. Ei saa näkyä: tekstiä, kylttejä, opasteita, logoja, kasvoja, roskiksia ja penkkejä lähikuvassa, katuvalaisimia, ajoneuvoja, Chalet Robinsonia tai muita rakennuksia. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nComposition and realism: Camera stands beside a gently curving sandy walking path on the LEFT, looking across a broad open lawn to old irregular beech and oak trees. Spacious eye-level 35mm camera composition, tree line across the far lawn, overcast-soft morning light with faint mist. Grass must be an uneven lived-in lawn, not perfectly uniform. Two or three tiny distant back-facing walkers plus one tiny jogger, a subtle far-away picnic blanket and two resting people. All are contemporary. Nothing built is visible. This framing will later be reconstructed as a new 1873 image.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://archives.brussels.be/extension-south",
+          "title": "Extension to the south - Brussels Archives",
+          "supports": "Bois de la Cambre converted to a park by Keilig in 1862, annexed in 1864",
+          "slots": [
+            5,
+            8
+          ],
+          "verification": "Official indexed text read; direct open timed out"
+        },
+        {
+          "url": "https://www.patrimoine.brussels/decouvrir/publications/bruxelles-ville-dart-et-dhistoire/le-bois-de-la-cambre?set_language=fr",
+          "title": "Le Bois de la Cambre - Brussels heritage service",
+          "supports": "Former part of Soignes forest landscaped by city in 1862",
+          "slots": [
+            5,
+            8
+          ],
+          "verification": "Official indexed text read"
+        }
+      ],
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1348d-5abb-74a3-861e-05594dd0baea/exec-da024ffc-9d7b-49f9-9eaa-acad534600f6.png",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/qa-5.json",
+      "producerQAAccepted": true,
+      "independentQAPending": true,
+      "id": "brussels-5-luonto-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/brussels-5-luonto-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-5-luonto-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-5-luonto-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 5,
+        "verdict": "accepted",
+        "reason": "Luonnollinen nurmi ja vanhat puut, vasemman reunan hiekkapolku, pienet selin kuvatut kävelijät; ei rakennuksia tai kylttejä.",
+        "nativeSHA256": "f89677f6bec41f98df156699fe230afb99af5965499edc71ec1c5b2cddebf933",
+        "finalSHA256": "cedb973f60d7ef3337c92c99681463d52e86a40b3b774d17ea49452ec64982db",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 5,
+        "r2Key": "julisteet/saapumisintro/brussels/20261013-full/brussels-5-luonto-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-5-luonto-intro-v1.png",
+        "sha256": "cedb973f60d7ef3337c92c99681463d52e86a40b3b774d17ea49452ec64982db",
+        "nativeSHA256": "f89677f6bec41f98df156699fe230afb99af5965499edc71ec1c5b2cddebf933",
+        "bytes": 3063112,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "cedb973f60d7ef3337c92c99681463d52e86a40b3b774d17ea49452ec64982db",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "cedb973f60d7ef3337c92c99681463d52e86a40b3b774d17ea49452ec64982db",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:33.545575+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 6,
+      "title": "elämän makuinen juhla (värikuva, yksi nuori etualalla) — Kesäilta Place Saint-Géryllä, nuoria juhlimassa.",
+      "sceneSpec": "Mitä kuvataan: ELÄMÄN MAKUINEN JUHLA, kesäilta Place Saint-Géry -aukiolla Brysselin vanhassa keskustassa heti auringonlaskun jälkeen. YKSI nuori ihminen etualalla (puolikuva, noin 20–25-vuotias, nauraa luonnollisesti, katsoo hieman sivuun ystäviään kohti; keksitty hahmo, ei kenenkään todellisen henkilön näköinen; Brysselin tavallisen nuoren, monikulttuurisen väestön näköinen), muodikkaat nykyvaatteet (väljä vaalea paita tai ohut bomber-takki, leveälahkeiset housut, ei logoja eikä kirjoitusta). Ympärillä 20–30 nuorta istuu aukion reunoilla ja hallin edustalla ja seisoo ryhminä: yksi katusoittaja kitaran kanssa, pari tanssii, nauretaan; juomat sivuosassa (limonadit, vesi, pieniä laseja, ei olutlaseja kuvan pääaiheena). Taustalla punatiilinen, kivikoristeinen neoflaamilainen Halles Saint-Géry -markkinahalli (1881–1882) lämpimin ikkunavaloin sekä valonauhoja ja lyhtyjä aukion yllä. Kulma: vaakakuva, aukion laidalta silmänkorkeudelta, etualan henkilö kuvan vasemmassa kolmanneksessa, tausta pehmeästi epäterävä. Valo: sininen hetki, lämpimät valoköynnökset ja ikkunavalot. Ei saa näkyä: tekstiä, kylttejä, valomainoksia, baarien nimiä, markiiseja, logoja, brändejä, alkoholimainontaa, Atomiumia, väkivaltaa. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Kesäilta Place Saint-Géryllä, nuoria juhlimassa. Havainnekuva.\n\n",
+      "caption": "Kesäilta Place Saint-Géryllä, nuoria juhlimassa. Havainnekuva.",
+      "filename": "brussels-6-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/brussels/20261013-full/brussels-6-juhla-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Bryssel",
+      "gameCityId": "bryssel",
+      "mediaSlug": "brussels",
+      "taskNumber": 96,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/native-6.png",
+      "nativeSHA256": "792250d6142430fcab9e3714bd39399ec11970b84db0daa091569f15507308ad",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/brussels-6-juhla-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/brussels/brussels-6-juhla-intro-v1.png",
+      "sha256": "b66c81735c66af3028a03f5330754aeb89bcd77b19c427c0e46492fd5e0f174d",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival intro. Generate ONE completely new natural photographic illustrative scene, landscape PNG exactly 1536 by 1024 pixels, 3:2, opaque RGB. No frames, no writing anywhere, no signage, no logos, no watermarks. Never include the caption as picture text. Natural optical perspective, unretouched documentary camera appearance, soft real light, restrained lifelike color, credible exposure. No HDR, no cinematic grading, no painterly rendering, no CGI finish. Every organic surface irregular and real: uneven blades and leaves, heterogeneous foliage, mottled bark, ordinary wear and imperfect masonry. Small or distant people seen from behind except the single foreground adult specifically requested for slot 6. No recognizable real person.\n\nPrimary scene specification (Finnish; obey every constraint):\nMitä kuvataan: ELÄMÄN MAKUINEN JUHLA, kesäilta Place Saint-Géry -aukiolla Brysselin vanhassa keskustassa heti auringonlaskun jälkeen. YKSI nuori ihminen etualalla (puolikuva, noin 20–25-vuotias, nauraa luonnollisesti, katsoo hieman sivuun ystäviään kohti; keksitty hahmo, ei kenenkään todellisen henkilön näköinen; Brysselin tavallisen nuoren, monikulttuurisen väestön näköinen), muodikkaat nykyvaatteet (väljä vaalea paita tai ohut bomber-takki, leveälahkeiset housut, ei logoja eikä kirjoitusta). Ympärillä 20–30 nuorta istuu aukion reunoilla ja hallin edustalla ja seisoo ryhminä: yksi katusoittaja kitaran kanssa, pari tanssii, nauretaan; juomat sivuosassa (limonadit, vesi, pieniä laseja, ei olutlaseja kuvan pääaiheena). Taustalla punatiilinen, kivikoristeinen neoflaamilainen Halles Saint-Géry -markkinahalli (1881–1882) lämpimin ikkunavaloin sekä valonauhoja ja lyhtyjä aukion yllä. Kulma: vaakakuva, aukion laidalta silmänkorkeudelta, etualan henkilö kuvan vasemmassa kolmanneksessa, tausta pehmeästi epäterävä. Valo: sininen hetki, lämpimät valoköynnökset ja ikkunavalot. Ei saa näkyä: tekstiä, kylttejä, valomainoksia, baarien nimiä, markiiseja, logoja, brändejä, alkoholimainontaa, Atomiumia, väkivaltaa. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nComposition and realism: Contemporary Place Saint-Gery summer blue hour. ONE fictional 23-year-old woman in left foreground, waist-up, warm medium-olive complexion and natural untidy dark curly hair, naturally laughing looking sideways to friends rather than camera. An ordinary young adult from cosmopolitan Brussels, no real-person likeness. Loose pale unbranded shirt, stylish contemporary clothing. Her skin has visible fine pores, slight uneven tone, tiny creases and natural flyaway hair; anatomically normal teeth, hands and fingers. Candid documentary photograph rather than beauty advertising. Twenty to thirty fictional adult friends in varied contemporary clothes, mostly back-facing or soft distant profiles, gather behind her in small groups. One guitar street musician and two relaxed dancers, laughter, water and small soft-drink glasses secondary. Halles Saint-Gery appears in soft-focus background as its real compact red-brick neo-Flemish market hall with pale stone bands and ornament, slate roof and stepped/gabled central roofline, softly warm windows; modest strings of warm bulbs overhead, no neon or special light show. No marquee, bar names, brands, food emphasis, beer emphasis or readable sign.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://hallessaintgery.be/a-propos/",
+          "title": "Les Halles - Halles Saint-Gery",
+          "supports": "Hall constructed in 1881 and inaugurated in 1882, architect A. Vanderheggen",
+          "slots": [
+            6
+          ],
+          "verification": "Official page read"
+        }
+      ],
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1348d-5abb-74a3-861e-05594dd0baea/exec-9aceae54-8087-482a-b2b9-db64755ec5c9.png",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/qa-6.json",
+      "producerQAAccepted": true,
+      "independentQAPending": true,
+      "id": "brussels-6-juhla-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/brussels-6-juhla-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-6-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-6-juhla-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 6,
+        "verdict": "accepted",
+        "reason": "Keksitty nuori aikuinen etualalla, halli ja iloinen musiikki-/tanssijoukko sinisellä hetkellä. Ei näkyvää tekstiä tai brändejä.",
+        "nativeSHA256": "792250d6142430fcab9e3714bd39399ec11970b84db0daa091569f15507308ad",
+        "finalSHA256": "b66c81735c66af3028a03f5330754aeb89bcd77b19c427c0e46492fd5e0f174d",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/brussels/20261013-full/brussels-6-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-6-juhla-intro-v1.png",
+        "sha256": "b66c81735c66af3028a03f5330754aeb89bcd77b19c427c0e46492fd5e0f174d",
+        "nativeSHA256": "792250d6142430fcab9e3714bd39399ec11970b84db0daa091569f15507308ad",
+        "bytes": 2256108,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b66c81735c66af3028a03f5330754aeb89bcd77b19c427c0e46492fd5e0f174d",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b66c81735c66af3028a03f5330754aeb89bcd77b19c427c0e46492fd5e0f174d",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:35.906526+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 7,
+      "title": "ilta ja kaupungin valot (sininen hetki) — Notre-Dame du Sablon sinisellä hetkellä.",
+      "sceneSpec": "Mitä kuvataan: Notre-Dame du Sablon -kirkon goottilainen ulkoseinä ja korkeat kapeat ikkunat lämpimästi valaistuina, kirkon yllä sininen hämäräinen taivas, kivikatu ja puiden siluetit etualalla; muutama ihminen kaukana ja selin kävelemässä. Kulma: vaakakuva, Rue de la Régence -kadun kirkon puoleiselta jalkakäytävältä kaduntasolta, hieman viistosti kirkon julkisivua kohti; rajaa Petit Sablonin aita ja sen patsaat sekä kauppojen julkisivut kokonaan pois (kuvassa vain kirkko, katu, puita ja katulamppujen lämmin hehku). Valo: sininen hetki, kirkon ikkunoista ja neutraalista lämpimästä ulkovalosta tuleva valo, kadun märkä kivetys heijastaa; ei valaistuksen erikoistehosteita. Ei saa näkyä: tekstiä, kylttejä, kauppojen nimiä, valomainoksia, logoja, kasvoja, Petit Sablonin patsaita, lähikuvaa kirkon kiviveistoksista, Atomiumia. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Notre-Dame du Sablon sinisellä hetkellä. Havainnekuva.\n\n",
+      "caption": "Notre-Dame du Sablon sinisellä hetkellä. Havainnekuva.",
+      "filename": "brussels-7-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/brussels/20261013-full/brussels-7-ilta-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Bryssel",
+      "gameCityId": "bryssel",
+      "mediaSlug": "brussels",
+      "taskNumber": 96,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/native-7.png",
+      "nativeSHA256": "f1f8d7fb869eef4b5901507f97d6d2b0ed4a5962b524f21e891a8bc8cb0f3e82",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/brussels-7-ilta-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/brussels/brussels-7-ilta-intro-v1.png",
+      "sha256": "e7b1bbc408033e25a5eb3fad882c2a677374c8ae1f594a8ad327949b23f5e08d",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival intro. Generate ONE completely new natural photographic illustrative scene, landscape PNG exactly 1536 by 1024 pixels, 3:2, opaque RGB. No frames, no writing anywhere, no signage, no logos, no watermarks. Never include the caption as picture text. Natural optical perspective, unretouched documentary camera appearance, soft real light, restrained lifelike color, credible exposure. No HDR, no cinematic grading, no painterly rendering, no CGI finish. Every organic surface irregular and real: uneven blades and leaves, heterogeneous foliage, mottled bark, ordinary wear and imperfect masonry. Small or distant people seen from behind except the single foreground adult specifically requested for slot 6. No recognizable real person.\n\nPrimary scene specification (Finnish; obey every constraint):\nMitä kuvataan: Notre-Dame du Sablon -kirkon goottilainen ulkoseinä ja korkeat kapeat ikkunat lämpimästi valaistuina, kirkon yllä sininen hämäräinen taivas, kivikatu ja puiden siluetit etualalla; muutama ihminen kaukana ja selin kävelemässä. Kulma: vaakakuva, Rue de la Régence -kadun kirkon puoleiselta jalkakäytävältä kaduntasolta, hieman viistosti kirkon julkisivua kohti; rajaa Petit Sablonin aita ja sen patsaat sekä kauppojen julkisivut kokonaan pois (kuvassa vain kirkko, katu, puita ja katulamppujen lämmin hehku). Valo: sininen hetki, kirkon ikkunoista ja neutraalista lämpimästä ulkovalosta tuleva valo, kadun märkä kivetys heijastaa; ei valaistuksen erikoistehosteita. Ei saa näkyä: tekstiä, kylttejä, kauppojen nimiä, valomainoksia, logoja, kasvoja, Petit Sablonin patsaita, lähikuvaa kirkon kiviveistoksista, Atomiumia. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nComposition and realism: Current Notre-Dame du Sablon at blue hour, a street-level oblique SIDE view from Rue de la Regence on church-side pavement. Authentic Brabantine Gothic church: elongated pale-stone exterior, tall narrow pointed traceried windows, buttresses and steep dark roof, intricate stonework distant enough not to isolate sculptures. Do not invent twin cathedral towers. Wet cobbled street foreground, a few silhouettes of trees and subtle old-style streetlamp glow. Windows vary gently in warm brightness and stone receives modest neutral warm illumination, natural deep blue sky, controlled exposure without exaggerated golden lighting. A few tiny back-facing pedestrians far away. Crop all surrounding shops, Petit Sablon railings and statues out completely. Only church, street and trees; no signs.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://www.visit.brussels/en/visitors/venue-details.Eglise-Notre-Dame-du-Sablon.207330",
+          "title": "Eglise Notre-Dame du Sablon - Visit Brussels",
+          "supports": "15th-century Brabantine Gothic church, many stained glass windows",
+          "slots": [
+            7
+          ],
+          "verification": "Official tourism text read"
+        }
+      ],
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1348d-5abb-74a3-861e-05594dd0baea/exec-fd9537f9-73cd-419c-b48b-7a75692f1510.png",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/qa-7.json",
+      "producerQAAccepted": true,
+      "independentQAPending": true,
+      "id": "brussels-7-ilta-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/brussels-7-ilta-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-7-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-7-ilta-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 7,
+        "verdict": "accepted",
+        "reason": "Laaja kirkon julkisivunäkymä, lämmin neutraali valaistus ja sininen hetki; ei Petit Sablonin patsaita tai kauppakylttejä.",
+        "nativeSHA256": "f1f8d7fb869eef4b5901507f97d6d2b0ed4a5962b524f21e891a8bc8cb0f3e82",
+        "finalSHA256": "e7b1bbc408033e25a5eb3fad882c2a677374c8ae1f594a8ad327949b23f5e08d",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 7,
+        "r2Key": "julisteet/saapumisintro/brussels/20261013-full/brussels-7-ilta-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-7-ilta-intro-v1.png",
+        "sha256": "e7b1bbc408033e25a5eb3fad882c2a677374c8ae1f594a8ad327949b23f5e08d",
+        "nativeSHA256": "f1f8d7fb869eef4b5901507f97d6d2b0ed4a5962b524f21e891a8bc8cb0f3e82",
+        "bytes": 3060115,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "e7b1bbc408033e25a5eb3fad882c2a677374c8ae1f594a8ad327949b23f5e08d",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "e7b1bbc408033e25a5eb3fad882c2a677374c8ae1f594a8ad327949b23f5e08d",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:38.181025+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 8,
+      "title": "sama näkymä vuonna 1873, MUSTAVALKOINEN — Bois de la Cambre vuonna 1873 (mustavalkoinen, sama näkymä kuin kuva 5).",
+      "sceneSpec": "Mitä kuvataan: SAMA NÄKYMÄ KUIN KUVASSA 5 VUONNA 1873, MUSTAVALKOISENA: Bois de la Cambre -puiston laaja avoin nurmi ja sen reunalla korkeat vanhat pyökit ja tammet, vasemmalla hiekkapolku (sama polku, sama puurivi, sama katselusuunta ja sama horisontti kuin kuvassa 5); polulla hevosvaunut tai avovaunu ja muutama kävelijä 1870-luvun vaatteissa (silinterihatut, pitkät hameet, päällystakit) kaukana ja selin; nurmella pari lepäilijää kaukana. Ei järveä, ei saarta, ei rakennuksia. Kulma ja valo: sama kuin kuva 5, pehmeä aamuvalo ja kevyt usva. Tyyli: PUHDAS HARMAASÄVY (ei sepiaa, ei värisävyä), albumiinivedoksen pehmeä kontrasti, hienoinen rakeisuus, kevyt reunojen tummuus. Ei saa näkyä: autoja, moottoripyöriä, polkupyöriä, asfalttia, sähkö- ja nykykatuvalaisimia, nykypenkkejä, roskiksia, opasteita, rakennuksia, tekstiä, logoja, kasvoja lähikuvassa. Havainnekuva, puhdas harmaasävy, 1536 x 1024.\n1873-tarkistus: On: puisto oli 1873 olemassa (kilpailu 1862, pääosa töistä viidessä vuodessa, alue kuului Brysselin kaupunkiin kuninkaallisella asetuksella 1864; en.wikipedia: yleisön käytössä 1866), nurmet, polut ja vanhat metsäpuut (kaksi kolmasosaa puista piti säilyttää, nl.wikipedia), hevosvaunut, ajan vaatteet. Ei ole: autoja, sähkövaloja, asfalttia, nykypenkkejä, opasteita; Chalet Robinson (1877) ja järvi (täytetty 1871) jätetty kokonaan pois.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Bois de la Cambre vuonna 1873. Havainnekuva.\n\n",
+      "caption": "Bois de la Cambre vuonna 1873. Havainnekuva.",
+      "filename": "brussels-8-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/brussels/20261013-full/brussels-8-1873-intro-v1.png",
+      "historical": true,
+      "referenceSlot": 5,
+      "cityName": "Bryssel",
+      "gameCityId": "bryssel",
+      "mediaSlug": "brussels",
+      "taskNumber": 96,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/native-8.png",
+      "nativeSHA256": "5d19076776ee30ab3e18aa970e44c24e0094c9b1065c4ebfda656a38adc852b6",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/brussels-8-1873-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/brussels/brussels-8-1873-intro-v1.png",
+      "sha256": "47c34d763ab99d0ae48ac747b39dae874ef22fcab401b75bdbba2fd1fab7724e",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": true,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": false,
+      "historicalGrayscaleEncodingNormalized": true,
+      "exportProcessing": "Neutral grayscale file encoding plus metadata/sRGB only; original preserved; no geometry/content/contrast changes",
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city arrival intro. Generate ONE completely new natural photographic illustrative scene, landscape PNG exactly 1536 by 1024 pixels, 3:2, opaque RGB. No frames, no writing anywhere, no signage, no logos, no watermarks. Never include the caption as picture text. Natural optical perspective, unretouched documentary camera appearance, soft real light, strict neutral grayscale, credible exposure. No HDR, no cinematic grading, no painterly rendering, no CGI finish. Every organic surface irregular and real: uneven blades and leaves, heterogeneous foliage, mottled bark, ordinary wear and imperfect masonry. Small or distant people seen from behind except the single foreground adult specifically requested for slot 6. No recognizable real person.\n\nPrimary scene specification (Finnish; obey every constraint):\nMitä kuvataan: SAMA NÄKYMÄ KUIN KUVASSA 5 VUONNA 1873, MUSTAVALKOISENA: Bois de la Cambre -puiston laaja avoin nurmi ja sen reunalla korkeat vanhat pyökit ja tammet, vasemmalla hiekkapolku (sama polku, sama puurivi, sama katselusuunta ja sama horisontti kuin kuvassa 5); polulla hevosvaunut tai avovaunu ja muutama kävelijä 1870-luvun vaatteissa (silinterihatut, pitkät hameet, päällystakit) kaukana ja selin; nurmella pari lepäilijää kaukana. Ei järveä, ei saarta, ei rakennuksia. Kulma ja valo: sama kuin kuva 5, pehmeä aamuvalo ja kevyt usva. Tyyli: PUHDAS HARMAASÄVY (ei sepiaa, ei värisävyä), albumiinivedoksen pehmeä kontrasti, hienoinen rakeisuus, kevyt reunojen tummuus. Ei saa näkyä: autoja, moottoripyöriä, polkupyöriä, asfalttia, sähkö- ja nykykatuvalaisimia, nykypenkkejä, roskiksia, opasteita, rakennuksia, tekstiä, logoja, kasvoja lähikuvassa. Havainnekuva, puhdas harmaasävy, 1536 x 1024.\n1873-tarkistus: On: puisto oli 1873 olemassa (kilpailu 1862, pääosa töistä viidessä vuodessa, alue kuului Brysselin kaupunkiin kuninkaallisella asetuksella 1864; en.wikipedia: yleisön käytössä 1866), nurmet, polut ja vanhat metsäpuut (kaksi kolmasosaa puista piti säilyttää, nl.wikipedia), hevosvaunut, ajan vaatteet. Ei ole: autoja, sähkövaloja, asfalttia, nykypenkkejä, opasteita; Chalet Robinson (1877) ja järvi (täytetty 1871) jätetty kokonaan pois.\n\nComposition and realism: Use case: historical-scene. Reference image is ONLY a location/camera framing reference. Create a wholly new photographic reconstruction of this scene in YEAR 1873, not a recolor or filter of modern photograph. SAME camera eye-level and 3:2 framing: sandy path on left foreground curving left around trunks, broad lawn spans centre/right, two dark large near beech/oak trunks at x roughly 0.14 and 0.22, canopy along upper left/top, distant old woodland enclosing far edge at mid-height, large isolated oak on far right. Preserve horizon and viewing direction. The park was laid out in 1862 and mature forest trees retained, so tall older trees are credible. Tiny open horse carriage with ONE horse on the left path in the middle distance traveling AWAY from camera; two or three small walkers from behind in 1870s coats/top hats/long skirts, a couple of far away resting figures on lawn. Real horse/carriage proportions. Morning mist and fine photographic grain, soft albumen-print contrast with slight edge darkness. No buildings, lake, island, modern clothing or objects. Output STRICT achromatic BLACK AND WHITE native RGB: for EVERY pixel RED=GREEN=BLUE, without any sepia, brown, yellow, cyan or other tint. This exact neutral grayscale is an absolute delivery requirement. No decorative antique frame or fake scratches.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://archives.brussels.be/extension-south",
+          "title": "Extension to the south - Brussels Archives",
+          "supports": "Bois de la Cambre converted to a park by Keilig in 1862, annexed in 1864",
+          "slots": [
+            5,
+            8
+          ],
+          "verification": "Official indexed text read; direct open timed out"
+        },
+        {
+          "url": "https://www.patrimoine.brussels/decouvrir/publications/bruxelles-ville-dart-et-dhistoire/le-bois-de-la-cambre?set_language=fr",
+          "title": "Le Bois de la Cambre - Brussels heritage service",
+          "supports": "Former part of Soignes forest landscaped by city in 1862",
+          "slots": [
+            5,
+            8
+          ],
+          "verification": "Official indexed text read"
+        }
+      ],
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1348d-5abb-74a3-861e-05594dd0baea/exec-a6036032-d91e-49a1-8e03-514cd25d84ae.png",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/qa-8.json",
+      "producerQAAccepted": true,
+      "independentQAPending": true,
+      "id": "brussels-8-1873-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/brussels-8-1873-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-8-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-8-1873-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 8,
+        "verdict": "accepted",
+        "reason": "Sama puistopolun, nurmen ja puurivin kuvapaikka kuin5; hevosvaunut ja ajan vaatteet, ei nykyajan rakennelmia. Puhtaan harmaasävyn vienti varmennettu.",
+        "nativeSHA256": "5d19076776ee30ab3e18aa970e44c24e0094c9b1065c4ebfda656a38adc852b6",
+        "finalSHA256": "47c34d763ab99d0ae48ac747b39dae874ef22fcab401b75bdbba2fd1fab7724e",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": true,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/brussels/20261013-full/brussels-8-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/brussels/20261013-full/brussels-8-1873-intro-v1.png",
+        "sha256": "47c34d763ab99d0ae48ac747b39dae874ef22fcab401b75bdbba2fd1fab7724e",
+        "nativeSHA256": "5d19076776ee30ab3e18aa970e44c24e0094c9b1065c4ebfda656a38adc852b6",
+        "bytes": 1703686,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "47c34d763ab99d0ae48ac747b39dae874ef22fcab401b75bdbba2fd1fab7724e",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "47c34d763ab99d0ae48ac747b39dae874ef22fcab401b75bdbba2fd1fab7724e",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:40.380372+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "slot": 4,
+      "reason": "Foreground book spines contain visible golden lettering-like markings, contrary to no-text requirement. Crop qa-4-crop-books.png inspected; no attempt to alter or regenerate this candidate.",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/native-4.png",
+      "nativeSHA256": "861c5a8ff7557b19ce436ec0d279e3923cad2d6e2c2b132511d2867f88207277",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/brussels/brussels-4-arki-intro-v1.png",
+      "finalSHA256": "951a0e6921cba35c2ddf0dad5fd16c493cc15af5767f6d778b21cc38e3949835"
+    }
+  ],
+  "actualCalls": 5,
+  "maximumGenerationCalls": 5,
+  "allRequestedSlotsHandled": true,
+  "allRequestedSlotsDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationAllowedWithoutOwnerAcceptance": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": false,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-viimeiset-5-20261013.md",
+  "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+  "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+  "prior206ImageDeliveryPreserved": true
+}
