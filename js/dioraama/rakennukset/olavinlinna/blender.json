@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "4560a5ff0e58a958",
-  "kansio": "dioraama/olavinlinna/blender/4560a5ff0e58a958/",
+  "hash": "d644a27259d8dcd7",
+  "kansio": "dioraama/olavinlinna/blender/d644a27259d8dcd7/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -2385,8 +2385,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "93196fb0242d4f0076b929cc063dc5fce5715c5c3bb5a22adc4a5d870e2d53df",
-      "tavuja": 73967
+      "sha256": "1e249205917107329c8a1e69b6e9fee22113158ae82c1a9be9de078f531922bf",
+      "tavuja": 73895
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
@@ -2405,8 +2405,8 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "9a5f1524966e68074782550264dcd7eb0f357ac5d921777342673f78852f14d7",
-      "tavuja": 34574
+      "sha256": "9ebd9014d1461dd1367fbfaa4d4091e9d4e7cd51e238bb85cfe5ae4bc6a1624e",
+      "tavuja": 33582
     },
     {
       "polku": "kavely/ovi-tammi-100x190-normaali-6x6.astcm",
@@ -3795,8 +3795,8 @@
     },
     {
       "polku": "tilat/kappeli.glb",
-      "sha256": "09fc1b08c345a6f6aae1dee14dec602e8b673226fda7a92357885bb755f4353d",
-      "tavuja": 1361264
+      "sha256": "fc598de216ea66ff184ed1b0b32f59424abc260c99eaf77806307c677c18be14",
+      "tavuja": 1482248
     },
     {
       "polku": "tilat/keittio-g102.glb",
@@ -3810,8 +3810,8 @@
     },
     {
       "polku": "tilat/kierreportaat.glb",
-      "sha256": "a87c8f24c2def03920e316b964a5c0fcd3f5db6c06f9e45b767b937d72461f06",
-      "tavuja": 2048804
+      "sha256": "9d0f495eb07b53c7f87d3cf15fa8d0866aac47e19776bc3cd2c5e631f23b4d23",
+      "tavuja": 1835812
     },
     {
       "polku": "tilat/laituri.glb",
@@ -3839,84 +3839,89 @@
       "tavuja": 720688
     },
     {
+      "polku": "ulkokuori/asu.json",
+      "sha256": "0f61909300a30faece7187972582582ac33fc6190328256e4e3d18983bf91b47",
+      "tavuja": 16
+    },
+    {
       "polku": "ulkokuori/hybridi/kuori-materiaali-2k.png",
       "sha256": "faa252124d2b97443c185e06f27fd1979d980bbfc9a6157002f3e75c2146e706",
       "tavuja": 4408350
     },
     {
       "polku": "ulkokuori/ulkokuori-2k-4x4.astcm",
-      "sha256": "fca4abc8a9fa9242540fb95f92440636c31bc4bf422440f087c090dd6109b286",
+      "sha256": "e5274ade4afb42a056fb3b73e9d7b8285af31d842505904d11c0784936475bd0",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-2k.jpg",
-      "sha256": "0ee70c29b2100f03a9819b9600463b48262a4afd864facdf879b831354551735",
-      "tavuja": 2627428
+      "sha256": "1ff2c1fa90b954641250b8a1db82cbb2944196ce38100fb4136e5efff759b515",
+      "tavuja": 2632939
     },
     {
       "polku": "ulkokuori/ulkokuori-4k-4x4.astcm",
-      "sha256": "5cab0da0090a43e705f23ff00cb5028b61a60231c0d4e1435bce15ebcd6e9428",
+      "sha256": "5a36462bd4787a10dc391e1b51cd797dd4b092ec091e3a7ff53017932265173d",
       "tavuja": 22369664
     },
     {
       "polku": "ulkokuori/ulkokuori-4k.jpg",
-      "sha256": "aff0844269272e6d2d2b7f639be7ef0a5af49d29ccd71f572c0243171bad3523",
-      "tavuja": 9994287
+      "sha256": "05c2929e940c4c8f93324855df5d7a854906272937a454ae569fd20147c82596",
+      "tavuja": 10064879
     },
     {
       "polku": "ulkokuori/ulkokuori-8k-4x4.astcm",
-      "sha256": "213e48eafc5e52454b35ce3f34d50feb93b9bcae3fa4ad725fd2451103d18c58",
+      "sha256": "fa05b7a57fee30180ef51a95c59320464d4c1dc9ae69e61f89fd40a9bdfd752e",
       "tavuja": 39816848
     },
     {
       "polku": "ulkokuori/ulkokuori-8k.jpg",
-      "sha256": "02101bd965446cd9901ac6ffa7702c345eda515fe24fe3df49629fa9ccbde7bb",
-      "tavuja": 26757781
+      "sha256": "93cba9e83c16f40af69a3a24cc620928f0f332a770d71145700518a27acaa223",
+      "tavuja": 25760778
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k-4x4.astcm",
-      "sha256": "cbf77423798f879fc921afb823cae83c3c7ff98dff1be83d059631811433523e",
+      "sha256": "91f18894fc52f2afd2c3b99ee0dbdb9bcbc56248956f2643fbb873b8982235bd",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k.jpg",
-      "sha256": "aa9974191f823f88981b1630f9ef3247b7364619ba2b301f0ffe4d0baa07f6ac",
-      "tavuja": 2053745
+      "sha256": "424d10fab9bb8d60e411d19069a989069d509fb149861197d0748ba71a616dcf",
+      "tavuja": 2050719
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k-4x4.astcm",
-      "sha256": "e93438a98069124689decad510e8c331e8bfc23f77341753d8f08d9a74d5752f",
+      "sha256": "2dee76a5df60394d758b06c633bf73605a416f735e24cd238807993862cff12c",
       "tavuja": 22369664
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k.jpg",
-      "sha256": "1766edd93a7621bb8255c51fc358b737e2036a53a440c4c27141dd4f79812ccd",
-      "tavuja": 7348417
+      "sha256": "43943efbdc8d1629b337113bd416f6b643b85264d827177f108095f34fb54686",
+      "tavuja": 7334875
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k-4x4.astcm",
-      "sha256": "b57b0cb9d6b74f74ae2cb591b5173bbfd20eb7c1c89f05b4abeb1981ab25f640",
+      "sha256": "667466d455e9dfa94bbdcc3e33787194a8fc097c10d50424d60e5d90d23700aa",
       "tavuja": 39816848
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k.jpg",
-      "sha256": "e00b94c3e7f90574841b84b23a88d520ddcfcf1b1b2b2b567139a8d0bfaa214e",
-      "tavuja": 20188599
+      "sha256": "a42e084feda7c4715be4e33036cf2481bbba2fc0dad53d12d8f0431a6fea8c6e",
+      "tavuja": 20137836
     },
     {
       "polku": "ulkokuori/ulkokuori_huippu.glb",
-      "sha256": "f63ac3a481c3ea5273332e765c0a96187c13e84680c1842e20e1fde7d85064a3",
-      "tavuja": 73093600
+      "sha256": "07304dfcfdb9a095cd6b5743fdecac7754376188d1c263911ffec6d88bacada1",
+      "tavuja": 71249792
     },
     {
       "polku": "ulkokuori/ulkokuori_kevyt.glb",
-      "sha256": "e2e8f0facc56d4d31c750165b02965316ab461e69657fc8bb4d2eb33726a2370",
-      "tavuja": 13296360
+      "sha256": "30fed900ee3e76899bb5b447c2963f22180ca158461f3235067cf32331ec01e3",
+      "tavuja": 13082492
     },
     {
       "polku": "ulkokuori/ulkokuori_normaali.glb",
-      "sha256": "e7900cf6206cb2cb48050bbb83bd4239cfa843ed91a3579515719d6845c06c02",
-      "tavuja": 33649324
+      "sha256": "a5981fec191b64c72f8b945fba43158106f6339a29e1e3ad58f00e358bce2c3f",
+      "tavuja": 33020200
     },
     {
       "polku": "vaiheet/haapiot.glb",
@@ -3970,123 +3975,123 @@
     },
     {
       "polku": "valot/fatabuuri-2k-4x4.astcm",
-      "sha256": "ceb2f42e932adcf853903628702f6568fc3a8ceb1a351b9c5bfb5ad8e2b9c0af",
+      "sha256": "8723a3e179deea5ebb86c123db575510265d0e5025b9fbfa6e3873546ee8f1b6",
       "tavuja": 1398144
     },
     {
       "polku": "valot/fatabuuri-2k.jpg",
-      "sha256": "02a7960eaaa8bfb4b0dc99e4317fc534f338b93cf5b2287a767cf2fc391ca388",
-      "tavuja": 263248
+      "sha256": "1cb9ee9500cfd43dd2e42b6f4e6f99f11a4179ee84ca1b419c853b35c8b277a8",
+      "tavuja": 301810
     },
     {
       "polku": "valot/fatabuuri-4x4.astcm",
-      "sha256": "09046cc531f63f5abd9bc6d555a3ec0c9010981a060562408fcfd4bcf2eed3b4",
+      "sha256": "5440bcb79f512c31014efa1a69a53d4e3d4ab5abe02e7864cf032d6fcd879464",
       "tavuja": 5592448
     },
     {
       "polku": "valot/fatabuuri-8k-6x6.astcm",
-      "sha256": "18942705ea6abbef9a4dbe0134b359d3bbe0cfdef9dbdde68b6bd8fe06cfc06a",
+      "sha256": "5d60c5a219a0f045124305424aa5fa09f0272c13aafbb7c1f3a8bbdb1e2602d2",
       "tavuja": 39816848
     },
     {
       "polku": "valot/fatabuuri-8k.jpg",
-      "sha256": "afcbbdc4b79029fccee045d050e2f3c6978051855e2ca4a3c32f4e4c85d62eda",
-      "tavuja": 7684269
+      "sha256": "330872fd1d94dd3fe2682f508b0ccd7ff1c62901e86f9e34ac062966dee5439f",
+      "tavuja": 9285341
     },
     {
       "polku": "valot/fatabuuri-hamara-2k-4x4.astcm",
-      "sha256": "6fe81f15e3f40eb97bb51451f27b37f510bcf82db3ae6f5db14e69342a23a2c8",
+      "sha256": "8f40c18ca88a615b33da33054aa4e39ca37fce78e6b3f4e95632ac49656791da",
       "tavuja": 1398144
     },
     {
       "polku": "valot/fatabuuri-hamara-2k.jpg",
-      "sha256": "e788fc07d0706d5011fc9dc6e3db8281e89df204c0ce2898f9afda6e746e2ccd",
-      "tavuja": 228938
+      "sha256": "0a79bee676a13a5ff53618e74828e64845dfbf5ee77f222ad0c3aece26851fe4",
+      "tavuja": 276635
     },
     {
       "polku": "valot/fatabuuri-hamara-4x4.astcm",
-      "sha256": "dcd816fb9df7367cd26ab2df76af554249df9e5da38ca69ca410428bd96727c8",
+      "sha256": "da959b755d0bcbc60b9876da4d50f3aca886f781c09f47466d50c93fb05d2b1f",
       "tavuja": 5592448
     },
     {
       "polku": "valot/fatabuuri-hamara-8k-6x6.astcm",
-      "sha256": "57f9b0a9dc77f92d43c26ff94207d84363b2cf8635a23976af3e7fb6c028f7ff",
+      "sha256": "80dfa7cfe8c46b93063567269db8f883e38379c418b8f09b0ec834e1d80adb7b",
       "tavuja": 39816848
     },
     {
       "polku": "valot/fatabuuri-hamara-8k.jpg",
-      "sha256": "6aa7b34494f80f1163e3a75d6937faeaffb245132df04a4be88a916840875e0b",
-      "tavuja": 6513240
+      "sha256": "246cc87c92691682cc30dd914c93a4b3a8d78eb59a07a113221f717c5df289bd",
+      "tavuja": 8676248
     },
     {
       "polku": "valot/fatabuuri-hamara.jpg",
-      "sha256": "f68dcfd193ede45fb93731dfbbcb0516158c2f74019bd84ce1861d310809c536",
-      "tavuja": 700414
+      "sha256": "67e1919777907e7e0e5a84e8d8c1a3309af3602eb7ef7b0df7bd2bcb3b6ec79c",
+      "tavuja": 863505
     },
     {
       "polku": "valot/fatabuuri.jpg",
-      "sha256": "1129a325534725b70df7a5e7be4534f1101a26525db16fbd7af0d985f3046d14",
-      "tavuja": 808341
+      "sha256": "cc555f1983b681bb5e9f6658006dd50a2d0dbef7353c1848c717a65267c0f451",
+      "tavuja": 946192
     },
     {
       "polku": "valot/kappeli-2k-4x4.astcm",
-      "sha256": "3cb7c70d1732d2c229c09e3390f90faf4c9809b67c54be35270538549ec73a40",
+      "sha256": "e7ffc41c2948e06485140187169a006edb8be34a19c5a606f77099099598d0de",
       "tavuja": 1398144
     },
     {
       "polku": "valot/kappeli-2k.jpg",
-      "sha256": "5aaf864236934a19a0243b74d30be212c60085405a03b411d8718635585e7260",
-      "tavuja": 217515
+      "sha256": "e7f83c55d82c75fcddd06abec5010d0903235122ce4f1ec780ba4202e9b1ca65",
+      "tavuja": 253385
     },
     {
       "polku": "valot/kappeli-4x4.astcm",
-      "sha256": "9e2cfd10f1f9d5ad2c64cf81bbd8e6951fba097da3c614dd8bd7ad761fb27211",
+      "sha256": "a8bc9c31b722f94715eab0e9cf38c1d00c48226ec65b00fd9dfd42824ede6722",
       "tavuja": 5592448
     },
     {
       "polku": "valot/kappeli-8k-6x6.astcm",
-      "sha256": "52b305bcdb0398fd68f892aa8de10562fce212268b0d0f46aa2228c40339a94a",
+      "sha256": "38607bb157e1ef0006540b4eadbceb6086cd00b27d6c63d5e56c9c89b1d2cb6e",
       "tavuja": 39816848
     },
     {
       "polku": "valot/kappeli-8k.jpg",
-      "sha256": "803c1129a8d233a29ce1a3ee91d0b82d95786967202df12e1a9d254c0a35063c",
-      "tavuja": 6916040
+      "sha256": "515fa96e57f54506730359e88427ae73710fa11e8f1ce6b948e66ef79c0b31e7",
+      "tavuja": 8349624
     },
     {
       "polku": "valot/kappeli-hamara-2k-4x4.astcm",
-      "sha256": "fba63fe6dc86f4419b89aec7c526731d0d6e369cc52b0e19cdd4565bfd4bfb16",
+      "sha256": "087be79cb73e7feb562d7e058ccde001042cd29e5439dcc64af1933299440820",
       "tavuja": 1398144
     },
     {
       "polku": "valot/kappeli-hamara-2k.jpg",
-      "sha256": "426919cfb708132445c16eb6d75ed7640048a75e3b3ba159348ea21670dfd9ca",
-      "tavuja": 171711
+      "sha256": "9ccceb8bf9e7fa4a4014bbe40f5f6fd19d98fd34915458d51f1c2ec37cf52d94",
+      "tavuja": 241576
     },
     {
       "polku": "valot/kappeli-hamara-4x4.astcm",
-      "sha256": "c390db2c3bb2eb0e79491edd75202d7186d9547b7ef8eadc73bf28adc1bb2c1f",
+      "sha256": "72d12642748081d2a5d354cf398b9985a9989a00b3e6e7c6f2d06b01980a40c7",
       "tavuja": 5592448
     },
     {
       "polku": "valot/kappeli-hamara-8k-6x6.astcm",
-      "sha256": "d6a89d0ea352e40d44918c47a591ed4843ac3bb3500aa3002bc4b84b0ac4baaa",
+      "sha256": "a6e349e36bf9bd8b264d3b0cdb3763ac7bd6ab6792c2e5afef291d1f66235095",
       "tavuja": 39816848
     },
     {
       "polku": "valot/kappeli-hamara-8k.jpg",
-      "sha256": "b5c7b68378db42dda7197206a49dbe1dc61e338d1eac91e792969f3cb0c5ee80",
-      "tavuja": 5240356
+      "sha256": "a9aec01f688d80e6d5d33f35ea0714ca99d24374ca59c7a095feb0a0cfb504e9",
+      "tavuja": 8089860
     },
     {
       "polku": "valot/kappeli-hamara.jpg",
-      "sha256": "e35ea2e6cd8db09e5a68c7cebe801b5c53e4ff17d2f86230f537174b8b8915b1",
-      "tavuja": 522270
+      "sha256": "4ce4fa265397db4376f27e6510cf21cc60ba015126404ea85e9b44799f2e4628",
+      "tavuja": 760420
     },
     {
       "polku": "valot/kappeli.jpg",
-      "sha256": "eadc0c7a54d6bb816d64ad8b4a95c2684bea75cb930e61c9e25e5ae8742018d2",
-      "tavuja": 677906
+      "sha256": "ce32fb0ff8555d4d2f4b9fedcf195d8bd69dfb4bd3c59e6c9195b03ac611f81a",
+      "tavuja": 806075
     },
     {
       "polku": "valot/keittio-g102-2k-4x4.astcm",
@@ -4170,123 +4175,123 @@
     },
     {
       "polku": "valot/keskushalli-2k-4x4.astcm",
-      "sha256": "8b191d7adaa1cc742c61bb7a197989899e1ae029db0f096090361ba53484b2e2",
+      "sha256": "c7b10bd7a797b087bdde306a7bc7c7f806c0737c2e99329612937459b12816f3",
       "tavuja": 1398144
     },
     {
       "polku": "valot/keskushalli-2k.jpg",
-      "sha256": "c7f01f5e9834c5c83834ee6a76cce7dd1b817157e8dac1f51e51a55adf3aa8df",
-      "tavuja": 98351
+      "sha256": "8c150350390b65f0f25b51a33b52e27359e242dfd1f54ccd95ae90c0250dfe24",
+      "tavuja": 86546
     },
     {
       "polku": "valot/keskushalli-4x4.astcm",
-      "sha256": "cc474272cf1b64fdd94c8c20e240cdadccb7e5f02799db4a3b0c6786cbcbd8f3",
+      "sha256": "fc261654a4c7c0d0afe393931bcf676f1bec55afc8572db5bfc38dd6712e6e1d",
       "tavuja": 5592448
     },
     {
       "polku": "valot/keskushalli-8k-6x6.astcm",
-      "sha256": "8addd2336690881aee3a26c318ffa9e46c30072993d074f315f799f123907678",
+      "sha256": "778b167e71e83bae5a64261a6b29792b9a5394f1d00674bdb9ec162642ef9e1f",
       "tavuja": 39816848
     },
     {
       "polku": "valot/keskushalli-8k.jpg",
-      "sha256": "878a8ae74d919ec7f88746359bc1923bae08ad5060a99f1f8f0f303559e45311",
-      "tavuja": 2490151
+      "sha256": "5c45ddc5827340aed5e199c0b123560ce6a920f06d3b8239cd1184e5138e2945",
+      "tavuja": 2325375
     },
     {
       "polku": "valot/keskushalli-hamara-2k-4x4.astcm",
-      "sha256": "3a8ed49a4cef6e4cc672282b698fb1906f2c698e21ad0c0dfa4af25a8c16ac4b",
+      "sha256": "8fbf300251090646dec338a0a155fa892e4f52d2bffd844631cd795e33cd5dcb",
       "tavuja": 1398144
     },
     {
       "polku": "valot/keskushalli-hamara-2k.jpg",
-      "sha256": "8b4899891bfbc82688bc76efb8a973ced4679c2bf2342cad29eb847a8ab3686b",
-      "tavuja": 70498
+      "sha256": "88c76a1743962a42200b03fe4fc5a9b1fcc892eaa9f621cee09aed5d77cb95d5",
+      "tavuja": 77104
     },
     {
       "polku": "valot/keskushalli-hamara-4x4.astcm",
-      "sha256": "8afb63f4b86e69cd9015bb47c778ac110cd12793e4e21a924e5da920c34896f7",
+      "sha256": "3a4fbd36fdb801420d180bbf77b43dea07c1bd51d751df089c7659be6c10a62a",
       "tavuja": 5592448
     },
     {
       "polku": "valot/keskushalli-hamara-8k-6x6.astcm",
-      "sha256": "e188262621e5bb6f15923e4a32e111deafc2073a037f4032fc475c037e0dacbe",
+      "sha256": "c61905b0700b426dc9c2113127aade6da17d5990874ddf3f66f97e40c3341b76",
       "tavuja": 39816848
     },
     {
       "polku": "valot/keskushalli-hamara-8k.jpg",
-      "sha256": "814649eb1406622941547169830d288809d77979854d9d5164d6eb72cd1cf685",
-      "tavuja": 2034484
+      "sha256": "8d099659ae2893c753ccf17e18e9365a8202fed802c1a972a9be48d04d5b1256",
+      "tavuja": 2217027
     },
     {
       "polku": "valot/keskushalli-hamara.jpg",
-      "sha256": "740512de880821c668163958c93f22c425f02f6f1e5c695d134081f993c352ca",
-      "tavuja": 209471
+      "sha256": "028a501550adc6a3cb81a7aaacbfa51e162c945cba70d2182c426685c4102a15",
+      "tavuja": 227574
     },
     {
       "polku": "valot/keskushalli.jpg",
-      "sha256": "c5a73a99ab3bba554d9664f13753af2f308f3393131bc51aa53fef96d316364e",
-      "tavuja": 278960
+      "sha256": "c1bca59188ae39ba84949827c8edaf2120cf2e6c1d245b0e7cca79b1b86e6d2d",
+      "tavuja": 251367
     },
     {
       "polku": "valot/kierreportaat-2k-4x4.astcm",
-      "sha256": "5953af893884deb8600eadd879fd3602b37047a4b67ed31aa7ad26b8beb4325e",
+      "sha256": "532cf6ea32298690d6dd04e6d088c2df8545c7f9cb7270afefbc0f28b92664b9",
       "tavuja": 1398144
     },
     {
       "polku": "valot/kierreportaat-2k.jpg",
-      "sha256": "e1b3fbd3be877809485c4a61c1886a832bfb63ff4ee901933f47bfda4379d34e",
-      "tavuja": 251484
+      "sha256": "c347d2720621e8041841931c41cb1988ba24f206bbc3d2b726577632d68bb6b0",
+      "tavuja": 246471
     },
     {
       "polku": "valot/kierreportaat-4x4.astcm",
-      "sha256": "1bcb09c061ca87aa53f5e59b5d68524713d5fce5b3bf303dfa2605985b6130e5",
+      "sha256": "441ca4d3d0a8497e2414938cc8948a5d2a39fab394bba183cbf789604a9c9280",
       "tavuja": 5592448
     },
     {
       "polku": "valot/kierreportaat-8k-6x6.astcm",
-      "sha256": "85118970f8f7b38f0a82a1254f5d7da0b30f52868a3344d4566dea2e9d49eb12",
+      "sha256": "5679375455e370fc0d9c05eb2584dc44f1525dfe7370c66b2d2888a2dc554758",
       "tavuja": 39816848
     },
     {
       "polku": "valot/kierreportaat-8k.jpg",
-      "sha256": "c46cfd8fcda3f390861a23c24fbc8274088edaa0e6def68950e48593cbc14644",
-      "tavuja": 8875308
+      "sha256": "2e5ed9c6d46252a6ec69909f8da42e120719f9cb06884411b257b69921c28604",
+      "tavuja": 8880367
     },
     {
       "polku": "valot/kierreportaat-hamara-2k-4x4.astcm",
-      "sha256": "d77696c37f4aa9f0b34adb3c24a0ac52035ddca4272ac3598704bebedb0607ba",
+      "sha256": "cea261ea4ca9c13be08e324b8d883d87f58ce31ac93b6702198680c88a239710",
       "tavuja": 1398144
     },
     {
       "polku": "valot/kierreportaat-hamara-2k.jpg",
-      "sha256": "e26ceb53bf913b5cc826ea3c1c95f6bf17a8168fbafed190aaa403302676c9c8",
-      "tavuja": 194042
+      "sha256": "86670a2ea4a0f03cf472dd5ccb22a254d7e52978c6d10b29677f648f6adc4c6f",
+      "tavuja": 231086
     },
     {
       "polku": "valot/kierreportaat-hamara-4x4.astcm",
-      "sha256": "c21d66a190eeed17e4723e763ef2c89de380b7126d9b3de9997fca150db303b4",
+      "sha256": "a0f22b55ce23346d16ca94fab0470e4e32d9315a2c82a6cabfced01923c0b626",
       "tavuja": 5592448
     },
     {
       "polku": "valot/kierreportaat-hamara-8k-6x6.astcm",
-      "sha256": "e83ce3696322c77cac36079b5e323770545728a7be94422d1e473a6534e993b3",
+      "sha256": "6932f8d4fbfa9117fde336f5eb1f25f47d4e93c75a9439da0dd213e09cfea77c",
       "tavuja": 39816848
     },
     {
       "polku": "valot/kierreportaat-hamara-8k.jpg",
-      "sha256": "7fd2b0c093cae3ca9715b33b3eeddf5f34ead12d24fdf7f9d21b1aa7b0e1db8c",
-      "tavuja": 6534208
+      "sha256": "86fb874425ac94d3dc7e744429a0d5d5c56708b4cec0f89c73750dcc60448c3e",
+      "tavuja": 8646515
     },
     {
       "polku": "valot/kierreportaat-hamara.jpg",
-      "sha256": "00d1dd3f65aba2f30c99a6e767c9900cb84626e8cf4dfaab21faa524354fc65f",
-      "tavuja": 621488
+      "sha256": "01adf443b02e624f473fd50a91f63e05d50e699c7ec30fde6fab959a11575703",
+      "tavuja": 752157
     },
     {
       "polku": "valot/kierreportaat.jpg",
-      "sha256": "410e51bb5da495e688a9a2d625d15e111bd861f8c895272684716721396f1436",
-      "tavuja": 810994
+      "sha256": "8c610b2ee3fb8a9ae33033c4d35730081f32b5122f9447d603aa18a762336766",
+      "tavuja": 797076
     },
     {
       "polku": "valot/laituri-2k-4x4.astcm",
@@ -4350,63 +4355,63 @@
     },
     {
       "polku": "valot/linnantupa-2k-4x4.astcm",
-      "sha256": "1ff68b03778e827e5fb7edd6649199e56b444514669e739ee9212ef29201708e",
+      "sha256": "640c788284b6a76eb91b74de94a8c54cc71c7a327f65f57dbf5b1b3a4105de38",
       "tavuja": 1398144
     },
     {
       "polku": "valot/linnantupa-2k.jpg",
-      "sha256": "ecad30e5c684ae338d4c10e2e4d6937bec619b839a4f0df4ae48320f8587f1eb",
-      "tavuja": 266247
+      "sha256": "46d78e53a93514beac54c81479d52b7f72f2db46d55b4dd0a2990070210bb3a7",
+      "tavuja": 247647
     },
     {
       "polku": "valot/linnantupa-4x4.astcm",
-      "sha256": "b2aff8647830ea3f4e9bd631da0aae112686a1130c728de0f501d33a70cbddbc",
+      "sha256": "eb4c4098f63cc94a543ba09b4d01e592d51ddb723ceb83e9e45229edd2b7ebcf",
       "tavuja": 5592448
     },
     {
       "polku": "valot/linnantupa-8k-6x6.astcm",
-      "sha256": "b1be37c7b81d3795607d8c9b6f162d1c86c62e8d63378a30e76f2c4705fdb236",
+      "sha256": "6b2dbd437ebf5daebb76c3e091f661fb17d1e8a8beb3eebb459fa344eb125c2d",
       "tavuja": 39816848
     },
     {
       "polku": "valot/linnantupa-8k.jpg",
-      "sha256": "c69b964b8e78027e6c731601a2f4c1849526af4deb2f29bb8bbf1528f90784f1",
-      "tavuja": 10629610
+      "sha256": "19269074a75c0f8a6bab6565f446fe47bf4336c1324e5aab81f7c6d856b31e3f",
+      "tavuja": 9736200
     },
     {
       "polku": "valot/linnantupa-hamara-2k-4x4.astcm",
-      "sha256": "02df1fcf1a3906b37296b81a3fdd65e72473e6b3155c60aafea3c952fd5804de",
+      "sha256": "beb0c1263c323bb17df05f17f7e7da6bc9653ddcbb3c9ecfcf4a5cf3bcc892a3",
       "tavuja": 1398144
     },
     {
       "polku": "valot/linnantupa-hamara-2k.jpg",
-      "sha256": "75a551f58191a6c1d8d21623a1c3c41cd4d266087695c4e34190e3bfee02091f",
-      "tavuja": 243895
+      "sha256": "c029002aa17132756e80b3ed8983568e77b98504274ab47bcb59682f9c19eada",
+      "tavuja": 240564
     },
     {
       "polku": "valot/linnantupa-hamara-4x4.astcm",
-      "sha256": "39007ee2582323f6fda3799a0c790ff37c7ee89c7a86eec75f6ce87c701154df",
+      "sha256": "97b1ebfd4d4d5550f0ded6045d312c306f066eb00c5def679810e5a0209f945e",
       "tavuja": 5592448
     },
     {
       "polku": "valot/linnantupa-hamara-8k-6x6.astcm",
-      "sha256": "e2adf79efc4d9eeba47fbbd2cb13a70cb16841d21b170388722d3197861fb549",
+      "sha256": "59492a265a71f18753c4e68284a6503b2443b7b149992b3991dfcead234c4b3d",
       "tavuja": 39816848
     },
     {
       "polku": "valot/linnantupa-hamara-8k.jpg",
-      "sha256": "a75155e9fd009f4aa758d38037d5c2ffc71986133cd73aebc8d67a15daf805ed",
-      "tavuja": 9127457
+      "sha256": "6bc8d5c9ed9e62024aa3575f04606e1412a4f9fbdaefd3236e32970b0b3b5003",
+      "tavuja": 9436559
     },
     {
       "polku": "valot/linnantupa-hamara.jpg",
-      "sha256": "949ae20a30c1689c12a84cde647046d38d07d5ccf238dd48f29814f6dd15070a",
-      "tavuja": 770131
+      "sha256": "1b185456ca16f94a1b1ef278a318ede5c26fe5a4b24d4f27473e9c5509d58315",
+      "tavuja": 763623
     },
     {
       "polku": "valot/linnantupa.jpg",
-      "sha256": "7907a269c261e0df6e79d3ffc78db3ce29a6f7e27ff7273ac36f812baf1d74aa",
-      "tavuja": 857191
+      "sha256": "05969d5b8dd13f8519a163a18e45b86457a28b51f6d20ee9c7342bf35cf72899",
+      "tavuja": 787574
     },
     {
       "polku": "valot/muurinharja-2k-4x4.astcm",
@@ -4490,63 +4495,63 @@
     },
     {
       "polku": "valot/voudin-sali-2k-4x4.astcm",
-      "sha256": "31615dfdf483cc0faef6a1ab05d7b1d9c267f5647d9f3c205ca7ea3107a7c82c",
+      "sha256": "2bddabcefa3cc18b73dfb39349f1e359a9063bfa92da3b8b4ff1da044f3b7966",
       "tavuja": 1398144
     },
     {
       "polku": "valot/voudin-sali-2k.jpg",
-      "sha256": "8001b954e2a12f7acb035b69fbc95bcb2d59d5fad315b66237b500e223ad3829",
-      "tavuja": 260559
+      "sha256": "88395fab3991e6201a808b257926582a5682268dfa1fe05d432d1ce7f8ea7f6f",
+      "tavuja": 247546
     },
     {
       "polku": "valot/voudin-sali-4x4.astcm",
-      "sha256": "5e9bcfd6af1986c32ecbf4cea8864b4cd5dd21b13fed426abac46ef65291084f",
+      "sha256": "ccc0f97c946636a9eb9561ac9bf6de1eddfa0753eecdd307de0d1d91e5e088c0",
       "tavuja": 5592448
     },
     {
       "polku": "valot/voudin-sali-8k-6x6.astcm",
-      "sha256": "906849eede42b6712bf5d999581607675b0b28bbfaf57f0db201b3937ce78e88",
+      "sha256": "33964bf403b37302569d44c63f1b249a2bf0948f8615002dc150ae7c1e432042",
       "tavuja": 39816848
     },
     {
       "polku": "valot/voudin-sali-8k.jpg",
-      "sha256": "90bd45db85eca875d41739e8e68ed1eb85a19457427562f3100c8f09e5c0286b",
-      "tavuja": 10532534
+      "sha256": "655eb9b9be319710d7573543daa9207caa7d730f9f3e72bcdcdd0793435ef99a",
+      "tavuja": 9954573
     },
     {
       "polku": "valot/voudin-sali-hamara-2k-4x4.astcm",
-      "sha256": "e9a73dd6871b993c542e2cd2e48b08cc73a19a964a585ecacc2f33ac17706e2f",
+      "sha256": "1149535e923c1756ce246f3ca613805e381736f3eda8eab8944d8834d27c079f",
       "tavuja": 1398144
     },
     {
       "polku": "valot/voudin-sali-hamara-2k.jpg",
-      "sha256": "96f39769726f73c8d6da1f4e06ef4f32707c8e3efd3b5fada2bd2c24c546bbdc",
-      "tavuja": 207809
+      "sha256": "ebb9026e85da8688f2816057c32c737833bcf06b01de3e83916e4a8ecf9f2087",
+      "tavuja": 210419
     },
     {
       "polku": "valot/voudin-sali-hamara-4x4.astcm",
-      "sha256": "bdffc3ee272cbd94385be4f1d5df763ab8b17fcd06628ee33f64959b1e371a97",
+      "sha256": "2c76e0d1068a208c0b68b7a1873068f198fa91906966ea474262d9341790f6e2",
       "tavuja": 5592448
     },
     {
       "polku": "valot/voudin-sali-hamara-8k-6x6.astcm",
-      "sha256": "b52e9406bfc4599e8ef4c67fc9c258d3d31b56706504f25e8098a9d3d589d798",
+      "sha256": "712ce6bdd20735372da79c5c6d9c8f59d45ecc993634f5c72136e6b9e2de1cab",
       "tavuja": 39816848
     },
     {
       "polku": "valot/voudin-sali-hamara-8k.jpg",
-      "sha256": "09513bcf6ba430ceac051838fdb4565e0facb8a2f47dc92f164d77b7477492b7",
-      "tavuja": 8364859
+      "sha256": "b389357a592ea895c99cdd9a287a3d8a8fa1decaaad29a44f8d5e6db7118477e",
+      "tavuja": 9126484
     },
     {
       "polku": "valot/voudin-sali-hamara.jpg",
-      "sha256": "3f1375878c0b28c21e14ff304a3cafda3d020dd3eabe572b5f6395b56f2dcebb",
-      "tavuja": 697197
+      "sha256": "9fd8d47182858c85da13bd3236e65c1593bbf96d1d51c3ed1a2ff07f35623ae3",
+      "tavuja": 715674
     },
     {
       "polku": "valot/voudin-sali.jpg",
-      "sha256": "49abeb1521a7a2e43ccf4a27af27f018c2aa5125d3ffb047d1cb148b30ee0a4b",
-      "tavuja": 880105
+      "sha256": "310d03de74e77b8336f147ba6b5806e94035ba2c3c0ad3be2b855719f41ea659",
+      "tavuja": 832795
     },
     {
       "polku": "ymparisto/aluskasvit-4x4.astcm",
