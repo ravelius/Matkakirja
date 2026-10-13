@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "cityName": "MADRID",
+  "gameCityId": "madrid",
+  "mediaSlug": "madrid",
+  "taskNumbers": [
+    175,
+    176
+  ],
+  "updatedAt": "2026-10-13T18:28:19.786608+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [],
+  "omittedItems": [
+    {
+      "taskNumber": 175,
+      "slot": 6,
+      "reason": "Metrópolis-talon pienen kupolin huipulla erottuu siipimäinen hahmosiluetti. Lähde kieltää patsaat, ja tämän yksityiskohdan vuoksi poissulkua ei pysty luotettavasti varmentamaan. Kohteen tarkkaa identiteettiä ei väitetä varmasti tunnistetuksi.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "fabb392f65ad83bb8e41250d5066bba884959b4a06ff137fd9d5a0dcc29aee95",
+      "finalSHA256": "82b08b83dc88bd5c301e8c01322e33091238bcb1cab941274c9f09b030315dd8"
+    },
+    {
+      "taskNumber": 176,
+      "slot": 8,
+      "reason": "Koko junassa näkyy neljä selkeää paljeliitosta eli viisi vaunurunkoa. Lähde vaatii kuusi vaunua, eikä kuudes jää kuvan ulkopuolelle; myös87%leveys on selvästi pyydettyä noin kahta kolmasosaa suurempi.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "9c960a45110f042f20e257cad2281986cc2a454571bc1e898708cffd38655ec7",
+      "finalSHA256": "f4d4365af0f394b61c1110e17c482f98b9ceb29a96035a99e4220a0420cb8ecd"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
