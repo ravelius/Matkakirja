@@ -124,7 +124,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -181,7 +181,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -391,7 +391,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "O2",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
@@ -445,7 +445,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -656,7 +656,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -711,7 +711,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -920,7 +920,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -976,7 +976,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -1184,7 +1184,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -1239,7 +1239,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -1447,7 +1447,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -1502,7 +1502,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -1709,7 +1709,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -1763,7 +1763,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -1853,269 +1853,6 @@
       "sourceContentAfterSHA256": "a9772abde00255ada5fea39c448a17db2581505d807a596ac7e20bd97f8fda9b",
       "targetAfterSHA256": "a894312ede01a8d9608698e6a89e9b497cb5cb67cb63ff093e4a415a4a1e8911",
       "contextAfterSHA256": "a894312ede01a8d9608698e6a89e9b497cb5cb67cb63ff093e4a415a4a1e8911"
-    },
-    {
-      "era": "e14",
-      "city": "majuro",
-      "slot": "L2",
-      "type": "illustration",
-      "assetID": "e14-majuro-l2-v1-20261012",
-      "galleryImageID": "e14-majuro-l2-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        1
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Aaltojen eri suunnat voi lukea veden liikkeestä; yleinen havainnekuva.",
-        "lyhyt": "Aaltojen eri suunnat voi lukea veden liikkeestä; yleinen havainnekuva."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Aaltojen eri suunnat voi lukea veden liikkeestä; yleinen havainnekuva.",
-        "lyhyt": "Aaltojen eri suunnat voi lukea veden liikkeestä; yleinen havainnekuva."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
-      "exportSHA256": "a9b08a2652ffd84defd08d80cfbfa99924e871b2a9971ebe136d5705467deb3c",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "a9772abde00255ada5fea39c448a17db2581505d807a596ac7e20bd97f8fda9b",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "924404b55449271c7a204a090f46aac65e5f72e58bd4c661163c6a71deb134ac",
-        "semanticContextSHA256": "924404b55449271c7a204a090f46aac65e5f72e58bd4c661163c6a71deb134ac",
-        "subjectTitle": "Saari tuntuu veneen liikkeessä",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
-          "QA": {
-            "visuallyReviewed": false,
-            "independentVisualReviewVerified": true,
-            "reviewBasis": "extra-QA-exact-native-SHA",
-            "extraIndependentReview": {
-              "reviewerGroup": "kuvitus-4",
-              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
-              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa-evidence/extra-b26d447696780cc94ce87edf1403f88bf104272b61ac9d3296518b9a185de060.json",
-              "sourceSHA256": "b26d447696780cc94ce87edf1403f88bf104272b61ac9d3296518b9a185de060",
-              "assetID": "e14-majuro-l2-v1-20261012",
-              "nativeSHA256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
-              "nativeSHA256IndependentlyChecked": true,
-              "verdict": "accepted",
-              "reason": "Eri suuntiin etenevä matala aallokko havainnollistaa L2:n navigointiaihetta; vesipinta on vaihteleva ilman ruudukkoa tai toistuvaa synteettistä laatoitusta.",
-              "reviewedAt": "2026-10-12T18:24:15.255272+00:00",
-              "visualReviewEvidence": {
-                "contentSHA256": "d8fd2c6517abf04392f994e25f875050372f4ab8e2e30e1b60fa16d78f101983",
-                "visualObservationFi": "Tummansininen meri, kaksi vinoa aallonharjojen suuntaa, epäsäännöllisiä pieniä väreitä ja vaahtoa sekä luonteva auringon heijastus. Ei veneitä, ihmisiä, tekstiä, taideteosta tai kaupunkia.",
-                "topicMatchFi": "L2 käsittelee saarien vaikutusta aallokkoon ja navigointia. Selite on yleinen aallokon havainne; kaukaisia matalia luonnonsiluetteja ei nimetä Majuron kartaksi tai todelliseksi navigointihavainnoksi.",
-                "sourceEvidence": [
-                  "e14/paakaupungit-pilvi/e14/majuro/sisalto.json, Saari tuntuu veneen liikkeessä"
-                ],
-                "rightsScopeFi": "Yleinen luonnonilmiö.",
-                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/assets/e14-majuro-l2-v1-20261012/image.png",
-                "nativeDimensions": [
-                  1536,
-                  1024
-                ],
-                "nativeSHA256Verified": true,
-                "viewedByReviewer": true
-              },
-              "readByJob24": true,
-              "personallyViewedByJob24": false
-            },
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/assets/e14-majuro-l2-v1-20261012/image.png",
-            "width": 1536,
-            "height": 1024,
-            "currentContentSHA256": "d8fd2c6517abf04392f994e25f875050372f4ab8e2e30e1b60fa16d78f101983",
-            "checkedAt": "2026-10-12T18:38:22.041972+00:00"
-          },
-          "qaReason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Eri suuntiin etenevä matala aallokko havainnollistaa L2:n navigointiaihetta; vesipinta on vaihteleva ilman ruudukkoa tai toistuvaa synteettistä laatoitusta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Aaltojen eri suunnat voi lukea veden liikkeestä; yleinen havainnekuva.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
-        "item": {
-          "slot": "L2",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
-          "assetID": "e14-majuro-l2-v1-20261012",
-          "commonsFile": null,
-          "sha256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
-          "verdict": "accepted",
-          "reason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Eri suuntiin etenevä matala aallokko havainnollistaa L2:n navigointiaihetta; vesipinta on vaihteleva ilman ruudukkoa tai toistuvaa synteettistä laatoitusta.",
-          "required": true,
-          "status": "reviewed",
-          "evidence": {
-            "visuallyReviewed": false,
-            "independentVisualReviewVerified": true,
-            "reviewBasis": "extra-QA-exact-native-SHA",
-            "extraIndependentReview": {
-              "reviewerGroup": "kuvitus-4",
-              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
-              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa-evidence/extra-b26d447696780cc94ce87edf1403f88bf104272b61ac9d3296518b9a185de060.json",
-              "sourceSHA256": "b26d447696780cc94ce87edf1403f88bf104272b61ac9d3296518b9a185de060",
-              "assetID": "e14-majuro-l2-v1-20261012",
-              "nativeSHA256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
-              "nativeSHA256IndependentlyChecked": true,
-              "verdict": "accepted",
-              "reason": "Eri suuntiin etenevä matala aallokko havainnollistaa L2:n navigointiaihetta; vesipinta on vaihteleva ilman ruudukkoa tai toistuvaa synteettistä laatoitusta.",
-              "reviewedAt": "2026-10-12T18:24:15.255272+00:00",
-              "visualReviewEvidence": {
-                "contentSHA256": "d8fd2c6517abf04392f994e25f875050372f4ab8e2e30e1b60fa16d78f101983",
-                "visualObservationFi": "Tummansininen meri, kaksi vinoa aallonharjojen suuntaa, epäsäännöllisiä pieniä väreitä ja vaahtoa sekä luonteva auringon heijastus. Ei veneitä, ihmisiä, tekstiä, taideteosta tai kaupunkia.",
-                "topicMatchFi": "L2 käsittelee saarien vaikutusta aallokkoon ja navigointia. Selite on yleinen aallokon havainne; kaukaisia matalia luonnonsiluetteja ei nimetä Majuron kartaksi tai todelliseksi navigointihavainnoksi.",
-                "sourceEvidence": [
-                  "e14/paakaupungit-pilvi/e14/majuro/sisalto.json, Saari tuntuu veneen liikkeessä"
-                ],
-                "rightsScopeFi": "Yleinen luonnonilmiö.",
-                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/assets/e14-majuro-l2-v1-20261012/image.png",
-                "nativeDimensions": [
-                  1536,
-                  1024
-                ],
-                "nativeSHA256Verified": true,
-                "viewedByReviewer": true
-              },
-              "readByJob24": true,
-              "personallyViewedByJob24": false
-            },
-            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/assets/e14-majuro-l2-v1-20261012/image.png",
-            "width": 1536,
-            "height": 1024,
-            "currentContentSHA256": "d8fd2c6517abf04392f994e25f875050372f4ab8e2e30e1b60fa16d78f101983",
-            "checkedAt": "2026-10-12T18:38:22.041972+00:00"
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
-            "sha256": "d97181a0c914dd12cb075dfa5a8c685128dc77f35da2d7209b848adecaf4172c"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png?t=a9b08a2652ffd84d",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
-        "sha256": "a9b08a2652ffd84defd08d80cfbfa99924e871b2a9971ebe136d5705467deb3c",
-        "bytes": 2550259,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e14-majuro-l2-v1-20261012",
-        "nativeSHA256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e14",
-        "city": "majuro",
-        "slot": "L2",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
-        "verifiedAt": "2026-10-12T18:28:32.540963+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
-        "sha256": "a9b08a2652ffd84defd08d80cfbfa99924e871b2a9971ebe136d5705467deb3c",
-        "bytes": 2550259,
-        "SHAReadAt": "2026-10-12T18:30:06.986116+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
-        "rgbPixelSHA256": "fc5719d32cadccd8f688e452fda7a26990418a64df9e831f30aaf9608d94f8f9",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a9772abde00255ada5fea39c448a17db2581505d807a596ac7e20bd97f8fda9b",
-      "targetAfterSHA256": "924404b55449271c7a204a090f46aac65e5f72e58bd4c661163c6a71deb134ac",
-      "contextAfterSHA256": "924404b55449271c7a204a090f46aac65e5f72e58bd4c661163c6a71deb134ac"
     },
     {
       "era": "e14",
@@ -2234,7 +1971,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -2289,7 +2026,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -2379,6 +2116,269 @@
       "sourceContentAfterSHA256": "a9772abde00255ada5fea39c448a17db2581505d807a596ac7e20bd97f8fda9b",
       "targetAfterSHA256": "b806d83d98ad0b0d4ca890d6ab97d9ee6506384489014814efb0ad482dea3243",
       "contextAfterSHA256": "b806d83d98ad0b0d4ca890d6ab97d9ee6506384489014814efb0ad482dea3243"
+    },
+    {
+      "era": "e14",
+      "city": "majuro",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e14-majuro-l2-v1-20261012",
+      "galleryImageID": "e14-majuro-l2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Aaltojen eri suunnat voi lukea veden liikkeestä; yleinen havainnekuva.",
+        "lyhyt": "Aaltojen eri suunnat voi lukea veden liikkeestä; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Aaltojen eri suunnat voi lukea veden liikkeestä; yleinen havainnekuva.",
+        "lyhyt": "Aaltojen eri suunnat voi lukea veden liikkeestä; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
+      "exportSHA256": "a9b08a2652ffd84defd08d80cfbfa99924e871b2a9971ebe136d5705467deb3c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
+      "sourceContentSHA256": "a9772abde00255ada5fea39c448a17db2581505d807a596ac7e20bd97f8fda9b",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "924404b55449271c7a204a090f46aac65e5f72e58bd4c661163c6a71deb134ac",
+        "semanticContextSHA256": "924404b55449271c7a204a090f46aac65e5f72e58bd4c661163c6a71deb134ac",
+        "subjectTitle": "Saari tuntuu veneen liikkeessä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-4",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa-evidence/extra-b26d447696780cc94ce87edf1403f88bf104272b61ac9d3296518b9a185de060.json",
+              "sourceSHA256": "b26d447696780cc94ce87edf1403f88bf104272b61ac9d3296518b9a185de060",
+              "assetID": "e14-majuro-l2-v1-20261012",
+              "nativeSHA256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Eri suuntiin etenevä matala aallokko havainnollistaa L2:n navigointiaihetta; vesipinta on vaihteleva ilman ruudukkoa tai toistuvaa synteettistä laatoitusta.",
+              "reviewedAt": "2026-10-12T18:24:15.255272+00:00",
+              "visualReviewEvidence": {
+                "contentSHA256": "d8fd2c6517abf04392f994e25f875050372f4ab8e2e30e1b60fa16d78f101983",
+                "visualObservationFi": "Tummansininen meri, kaksi vinoa aallonharjojen suuntaa, epäsäännöllisiä pieniä väreitä ja vaahtoa sekä luonteva auringon heijastus. Ei veneitä, ihmisiä, tekstiä, taideteosta tai kaupunkia.",
+                "topicMatchFi": "L2 käsittelee saarien vaikutusta aallokkoon ja navigointia. Selite on yleinen aallokon havainne; kaukaisia matalia luonnonsiluetteja ei nimetä Majuron kartaksi tai todelliseksi navigointihavainnoksi.",
+                "sourceEvidence": [
+                  "e14/paakaupungit-pilvi/e14/majuro/sisalto.json, Saari tuntuu veneen liikkeessä"
+                ],
+                "rightsScopeFi": "Yleinen luonnonilmiö.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/assets/e14-majuro-l2-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/assets/e14-majuro-l2-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "d8fd2c6517abf04392f994e25f875050372f4ab8e2e30e1b60fa16d78f101983",
+            "checkedAt": "2026-10-12T18:38:22.041972+00:00"
+          },
+          "qaReason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Eri suuntiin etenevä matala aallokko havainnollistaa L2:n navigointiaihetta; vesipinta on vaihteleva ilman ruudukkoa tai toistuvaa synteettistä laatoitusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Aaltojen eri suunnat voi lukea veden liikkeestä; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e14-majuro-l2-v1-20261012",
+          "commonsFile": null,
+          "sha256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
+          "verdict": "accepted",
+          "reason": "Dokumentoitu lisätarkistajan arvio, exact assetID/nativeSHA tarkistettu itse; kuvaa en ole itse katsonut. Eri suuntiin etenevä matala aallokko havainnollistaa L2:n navigointiaihetta; vesipinta on vaihteleva ilman ruudukkoa tai toistuvaa synteettistä laatoitusta.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "visuallyReviewed": false,
+            "independentVisualReviewVerified": true,
+            "reviewBasis": "extra-QA-exact-native-SHA",
+            "extraIndependentReview": {
+              "reviewerGroup": "kuvitus-4",
+              "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
+              "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa-evidence/extra-b26d447696780cc94ce87edf1403f88bf104272b61ac9d3296518b9a185de060.json",
+              "sourceSHA256": "b26d447696780cc94ce87edf1403f88bf104272b61ac9d3296518b9a185de060",
+              "assetID": "e14-majuro-l2-v1-20261012",
+              "nativeSHA256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
+              "nativeSHA256IndependentlyChecked": true,
+              "verdict": "accepted",
+              "reason": "Eri suuntiin etenevä matala aallokko havainnollistaa L2:n navigointiaihetta; vesipinta on vaihteleva ilman ruudukkoa tai toistuvaa synteettistä laatoitusta.",
+              "reviewedAt": "2026-10-12T18:24:15.255272+00:00",
+              "visualReviewEvidence": {
+                "contentSHA256": "d8fd2c6517abf04392f994e25f875050372f4ab8e2e30e1b60fa16d78f101983",
+                "visualObservationFi": "Tummansininen meri, kaksi vinoa aallonharjojen suuntaa, epäsäännöllisiä pieniä väreitä ja vaahtoa sekä luonteva auringon heijastus. Ei veneitä, ihmisiä, tekstiä, taideteosta tai kaupunkia.",
+                "topicMatchFi": "L2 käsittelee saarien vaikutusta aallokkoon ja navigointia. Selite on yleinen aallokon havainne; kaukaisia matalia luonnonsiluetteja ei nimetä Majuron kartaksi tai todelliseksi navigointihavainnoksi.",
+                "sourceEvidence": [
+                  "e14/paakaupungit-pilvi/e14/majuro/sisalto.json, Saari tuntuu veneen liikkeessä"
+                ],
+                "rightsScopeFi": "Yleinen luonnonilmiö.",
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/assets/e14-majuro-l2-v1-20261012/image.png",
+                "nativeDimensions": [
+                  1536,
+                  1024
+                ],
+                "nativeSHA256Verified": true,
+                "viewedByReviewer": true
+              },
+              "readByJob24": true,
+              "personallyViewedByJob24": false
+            },
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/assets/e14-majuro-l2-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "currentContentSHA256": "d8fd2c6517abf04392f994e25f875050372f4ab8e2e30e1b60fa16d78f101983",
+            "checkedAt": "2026-10-12T18:38:22.041972+00:00"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
+            "sha256": "d97181a0c914dd12cb075dfa5a8c685128dc77f35da2d7209b848adecaf4172c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png?t=a9b08a2652ffd84d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
+        "sha256": "a9b08a2652ffd84defd08d80cfbfa99924e871b2a9971ebe136d5705467deb3c",
+        "bytes": 2550259,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-majuro-l2-v1-20261012",
+        "nativeSHA256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "majuro",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T18:28:32.540963+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/majuro/e14-majuro-l2-v1-20261012-cc6364b51325.png",
+        "sha256": "a9b08a2652ffd84defd08d80cfbfa99924e871b2a9971ebe136d5705467deb3c",
+        "bytes": 2550259,
+        "SHAReadAt": "2026-10-12T18:30:06.986116+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
+        "rgbPixelSHA256": "fc5719d32cadccd8f688e452fda7a26990418a64df9e831f30aaf9608d94f8f9",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "a9772abde00255ada5fea39c448a17db2581505d807a596ac7e20bd97f8fda9b",
+      "targetAfterSHA256": "924404b55449271c7a204a090f46aac65e5f72e58bd4c661163c6a71deb134ac",
+      "contextAfterSHA256": "924404b55449271c7a204a090f46aac65e5f72e58bd4c661163c6a71deb134ac"
     },
     {
       "era": "e14",
@@ -2496,7 +2496,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -2550,7 +2550,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -2757,7 +2757,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -2811,7 +2811,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -3030,7 +3030,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -3096,7 +3096,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -3308,7 +3308,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -3376,7 +3376,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -3597,7 +3597,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -3674,7 +3674,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",
@@ -3889,7 +3889,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-        "fileSHA256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9",
+        "fileSHA256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -3960,7 +3960,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/qa.json",
-            "sha256": "1a8ed62881d0df3ca09f4068ad4a8663f965403d476c4b4da5fb3982003f89a9"
+            "sha256": "5dffd4b15648e9f1c0eb82442c13569172c3f3150b7bf07b67d7b613b67c7105"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/majuro/illustration-qa-extra.json",

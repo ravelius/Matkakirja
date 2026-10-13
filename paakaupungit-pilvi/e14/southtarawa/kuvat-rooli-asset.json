@@ -100,7 +100,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-        "fileSHA256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755",
+        "fileSHA256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -135,7 +135,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-            "sha256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755"
+            "sha256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a"
           }
         ]
       },
@@ -318,7 +318,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-        "fileSHA256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755",
+        "fileSHA256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a",
         "item": {
           "slot": "O2",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
@@ -351,7 +351,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-            "sha256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755"
+            "sha256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a"
           }
         ]
       },
@@ -535,7 +535,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-        "fileSHA256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755",
+        "fileSHA256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a",
         "item": {
           "slot": "O3",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
@@ -569,7 +569,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-            "sha256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755"
+            "sha256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a"
           }
         ]
       },
@@ -752,7 +752,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-        "fileSHA256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755",
+        "fileSHA256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -785,7 +785,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-            "sha256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755"
+            "sha256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a"
           }
         ]
       },
@@ -966,7 +966,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-        "fileSHA256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755",
+        "fileSHA256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -1000,7 +1000,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-            "sha256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755"
+            "sha256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a"
           }
         ]
       },
@@ -1180,7 +1180,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-        "fileSHA256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755",
+        "fileSHA256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -1213,7 +1213,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-            "sha256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755"
+            "sha256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a"
           }
         ]
       },
@@ -1394,7 +1394,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-        "fileSHA256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755",
+        "fileSHA256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1428,7 +1428,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
-            "sha256": "dbf536a00381a5a971a711df86b57e1f54c7789f54bd24133ac7077c149e7755"
+            "sha256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a"
           }
         ]
       },
@@ -1514,6 +1514,241 @@
       "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
       "targetAfterSHA256": "bff3bab88a3861fee7bb162c1d8c3afa04f7b5195772bc104bfdd34371e2b228",
       "contextAfterSHA256": "bff3bab88a3861fee7bb162c1d8c3afa04f7b5195772bc104bfdd34371e2b228"
+    },
+    {
+      "era": "e14",
+      "city": "southtarawa",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e14-southtarawa-l4-v1-20261012",
+      "galleryImageID": "e14-southtarawa-l4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-l4-v1-20261012-1de3241c0d6a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuivattu kookoksen malto eli kopra havainnollistaa kaupunginosan nykyistä työtä; yleinen havainnekuva.",
+        "lyhyt": "Betion toinen muisti."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-l4-v1-20261012-1de3241c0d6a.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kuivattu kookoksen malto eli kopra havainnollistaa kaupunginosan nykyistä työtä; yleinen havainnekuva.",
+        "lyhyt": "Betion toinen muisti."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1de3241c0d6a31ceefbad2afd2d6d7e5f3c9272f5dd3e57eb9d887d8a5d43545",
+      "exportSHA256": "3377a95de0f95ff7a784b301d5e995cd38e88146d7a2e3be6048d267a7a2d6a8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-l4-v1-20261012-1de3241c0d6a.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-l4-v1-20261012-1de3241c0d6a.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/southtarawa/e14-southtarawa-l4-v1-20261012-1de3241c0d6a.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
+      "sourceContentSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c",
+        "semanticContextSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c",
+        "subjectTitle": "Betion toinen muisti",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Nykyisen L4-noston viimeinen osa mainitsee Betion nykyisen sataman ja kopran käsittelyn. Tavallinen luonnonmateriaali, ei paikkarekonstruktio, sotahistoriallinen tapahtuma tai suojattu teos.",
+          "QA": {
+            "viewedByReviewer": true,
+            "reviewerSession": "01a131d7-3d77-7eb1-8050-5a07a27179f3",
+            "visualObservationFi": "Merkitsemättömällä puutarjottimella kasa erikokoisia kaarevia kookoksen malto-osia, joista osassa on tumma ruskea reunakerros. Vaaleissa pinnoissa näkyy kuivumisen ryppyjä, säikeitä ja epäsäännöllisiä lohkeamia; ei märkää kiiltoa, toistuvaa tekstuuria tai sulautuvia kappaleita. Ei ihmisiä, käsiä, tekstiä, logoja, etikettejä, vesileimaa tai kehystä.",
+            "topicMatchFi": "L4:n historiallinen nosto käsittelee lopussa Betion nykyistä satamaa ja kopran käsittelyä. Selite nimeää kuivatun kookoksen malton ja yleisen havainnekuvan. Kuva ei esitä taistelupaikkaa, todellista tehdasta tai sotahistoriallista esinettä.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/assets/e14-southtarawa-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "nativeByteLength": 2480999,
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
+            "contentSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+            "targetObjectExists": true,
+            "targetTextTitleFi": "Betion toinen muisti",
+            "targetTextExcerptFi": "Betiota ei kuitenkaan voi kuvata pelkkänä entisenä taistelupaikkana: samassa kaupunginosassa ovat nykyinen satama ja kopran käsittely.",
+            "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/faktapohja.md",
+            "sourceFactSheetSHA256": "3248c152db87d27906f67187d80b4662ba8b78a3b6d7ae29ce0b8043a920fe81",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/South_Tarawa",
+              "https://en.wikipedia.org/wiki/Copra"
+            ],
+            "captionReviewedFi": "Kuivattu kookoksen malto eli kopra havainnollistaa kaupunginosan nykyistä työtä; yleinen havainnekuva.",
+            "rightsScopeFi": "Yleinen luonnonmateriaali tai eläin, ei nimettyä rakennusta, suojattua nykyteosta tai tunnistettavaa henkilöä.",
+            "colorMetadataFi": "Natiivi PNG on väritunnisteeton; sRGB/provenance-metatiedon lisääminen myöhemmin pikseleitä muuttamatta on erillinen toimitusvaihe."
+          },
+          "qaReason": "Kuivat, epäsäännöllisesti lohjenneet kookoksen malto-osat havainnollistavat kopraa uskottavasti. L4-teksti mainitsee Betion nykyisen koprankäsittelyn, ja selite rajaa kuvan yleiseksi materiaalihavainnollistukseksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kuivattu kookoksen malto eli kopra havainnollistaa kaupunginosan nykyistä työtä; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
+        "fileSHA256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e14-southtarawa-l4-v1-20261012",
+          "sha256": "1de3241c0d6a31ceefbad2afd2d6d7e5f3c9272f5dd3e57eb9d887d8a5d43545",
+          "verdict": "accepted",
+          "reason": "Kuivat, epäsäännöllisesti lohjenneet kookoksen malto-osat havainnollistavat kopraa uskottavasti. L4-teksti mainitsee Betion nykyisen koprankäsittelyn, ja selite rajaa kuvan yleiseksi materiaalihavainnollistukseksi.",
+          "evidence": {
+            "viewedByReviewer": true,
+            "reviewerSession": "01a131d7-3d77-7eb1-8050-5a07a27179f3",
+            "visualObservationFi": "Merkitsemättömällä puutarjottimella kasa erikokoisia kaarevia kookoksen malto-osia, joista osassa on tumma ruskea reunakerros. Vaaleissa pinnoissa näkyy kuivumisen ryppyjä, säikeitä ja epäsäännöllisiä lohkeamia; ei märkää kiiltoa, toistuvaa tekstuuria tai sulautuvia kappaleita. Ei ihmisiä, käsiä, tekstiä, logoja, etikettejä, vesileimaa tai kehystä.",
+            "topicMatchFi": "L4:n historiallinen nosto käsittelee lopussa Betion nykyistä satamaa ja kopran käsittelyä. Selite nimeää kuivatun kookoksen malton ja yleisen havainnekuvan. Kuva ei esitä taistelupaikkaa, todellista tehdasta tai sotahistoriallista esinettä.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/assets/e14-southtarawa-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "nativeByteLength": 2480999,
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/sisalto.json",
+            "contentSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+            "targetObjectExists": true,
+            "targetTextTitleFi": "Betion toinen muisti",
+            "targetTextExcerptFi": "Betiota ei kuitenkaan voi kuvata pelkkänä entisenä taistelupaikkana: samassa kaupunginosassa ovat nykyinen satama ja kopran käsittely.",
+            "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/southtarawa/faktapohja.md",
+            "sourceFactSheetSHA256": "3248c152db87d27906f67187d80b4662ba8b78a3b6d7ae29ce0b8043a920fe81",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/South_Tarawa",
+              "https://en.wikipedia.org/wiki/Copra"
+            ],
+            "captionReviewedFi": "Kuivattu kookoksen malto eli kopra havainnollistaa kaupunginosan nykyistä työtä; yleinen havainnekuva.",
+            "rightsScopeFi": "Yleinen luonnonmateriaali tai eläin, ei nimettyä rakennusta, suojattua nykyteosta tai tunnistettavaa henkilöä.",
+            "colorMetadataFi": "Natiivi PNG on väritunnisteeton; sRGB/provenance-metatiedon lisääminen myöhemmin pikseleitä muuttamatta on erillinen toimitusvaihe."
+          },
+          "reviewedAt": "2026-10-12T20:44:29.661810+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/qa.json",
+            "sha256": "beb30861fd337f4397edf2c17375ca67ebc089c97634026fd5b5f8d59f0fd77e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/southtarawa/illustration-qa-extra.json",
+            "sha256": "88031fa918b1aa17f09873c34250b799009ee82a1fb6a674c16a3a490d9eba7a"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-l4-v1-20261012-1de3241c0d6a.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-l4-v1-20261012-1de3241c0d6a.png?t=3377a95de0f95ff7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/southtarawa/e14-southtarawa-l4-v1-20261012-1de3241c0d6a.png",
+        "sha256": "3377a95de0f95ff7a784b301d5e995cd38e88146d7a2e3be6048d267a7a2d6a8",
+        "bytes": 2306644,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-southtarawa-l4-v1-20261012",
+        "nativeSHA256": "1de3241c0d6a31ceefbad2afd2d6d7e5f3c9272f5dd3e57eb9d887d8a5d43545",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/southtarawa/e14-southtarawa-l4-v1-20261012-1de3241c0d6a.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "southtarawa",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T20:45:29.914469+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/southtarawa/e14-southtarawa-l4-v1-20261012-1de3241c0d6a.png",
+        "sha256": "3377a95de0f95ff7a784b301d5e995cd38e88146d7a2e3be6048d267a7a2d6a8",
+        "bytes": 2306644,
+        "SHAReadAt": "2026-10-12T20:45:13.956703+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "1de3241c0d6a31ceefbad2afd2d6d7e5f3c9272f5dd3e57eb9d887d8a5d43545",
+        "rgbPixelSHA256": "b088d008f24b7fae3d35a399481178ccc1a31bdc1ac7c126be927212c85380ec",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "aed2b0e3f5915a1a6e3907e9fb4e3a847d8f807f1e596ccc1df1cbb4b01fb684",
+      "targetAfterSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c",
+      "contextAfterSHA256": "9b3f9a232881686b3ecb04cdff81d89e1487c244e5a277d5f8ff19700cd1944c"
     }
   ],
   "runtimeIntegrationPending": true,

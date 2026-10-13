@@ -325,10 +325,11 @@
     }
   ],
   "valokuva": {
-    "tiedosto": "",
-    "lyhyt": "",
-    "selite": "",
-    "lahde": ""
+    "tiedosto": "Ngerulmud 06.jpg",
+    "lyhyt": "Näkymä Ngerulmudista, vuodelta 2026.",
+    "selite": "Näkymä Ngerulmudista, vuodelta 2026.",
+    "lahde": "Zykasaa, Commons (CC BY 4.0)",
+    "vuosi": "2026"
   },
   "kohdekartta": {
     "numeroympyrat": true,

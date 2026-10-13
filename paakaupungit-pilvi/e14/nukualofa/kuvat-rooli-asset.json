@@ -3,7 +3,7 @@
   "era": "e14",
   "city": "nukualofa",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+  "sourceContentAfterSHA256": "eca6fe460d902ffa2589d204a2a06a65e891272ce3c89a4eaa4df8f3da3da4a2",
   "assets": [
     {
       "era": "e14",
@@ -130,7 +130,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "fileSHA256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -225,7 +225,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+            "sha256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
@@ -312,7 +312,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "sourceContentAfterSHA256": "eca6fe460d902ffa2589d204a2a06a65e891272ce3c89a4eaa4df8f3da3da4a2",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "dfae2da736c4bdfba8a3a90ae663e951346ae8fcce0adb4b20ab54b7caa49f93"
     },
@@ -443,7 +443,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "fileSHA256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51",
         "item": {
           "slot": "O3",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
@@ -536,7 +536,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+            "sha256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
@@ -623,7 +623,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "sourceContentAfterSHA256": "eca6fe460d902ffa2589d204a2a06a65e891272ce3c89a4eaa4df8f3da3da4a2",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "d20a7dab5d406de9defd4ac4037a59d387fb9d0605319388d3e1759f132e3354"
     },
@@ -744,7 +744,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "fileSHA256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -876,7 +876,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+            "sha256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
@@ -963,7 +963,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "sourceContentAfterSHA256": "eca6fe460d902ffa2589d204a2a06a65e891272ce3c89a4eaa4df8f3da3da4a2",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "2396ded8e0eb62e66ddb529c21b2252a9c417258d5d104da5a01c076428588fc"
     },
@@ -1081,7 +1081,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "fileSHA256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1213,7 +1213,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+            "sha256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
@@ -1300,7 +1300,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "sourceContentAfterSHA256": "eca6fe460d902ffa2589d204a2a06a65e891272ce3c89a4eaa4df8f3da3da4a2",
       "targetAfterSHA256": "49b39c5e53c323fd556c07b1c392ae69c8240ad12c02873b767a058038aef1bd",
       "contextAfterSHA256": "49b39c5e53c323fd556c07b1c392ae69c8240ad12c02873b767a058038aef1bd"
     },
@@ -1428,7 +1428,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "fileSHA256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1521,7 +1521,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+            "sha256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
@@ -1608,7 +1608,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "sourceContentAfterSHA256": "eca6fe460d902ffa2589d204a2a06a65e891272ce3c89a4eaa4df8f3da3da4a2",
       "targetAfterSHA256": "c86de5418e59114ebeab75805514e3d5b75228dcdfb56089098db3dc42551eee",
       "contextAfterSHA256": "c86de5418e59114ebeab75805514e3d5b75228dcdfb56089098db3dc42551eee"
     },
@@ -1726,7 +1726,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "fileSHA256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1858,7 +1858,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+            "sha256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
@@ -1945,7 +1945,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "sourceContentAfterSHA256": "eca6fe460d902ffa2589d204a2a06a65e891272ce3c89a4eaa4df8f3da3da4a2",
       "targetAfterSHA256": "323a6b8c023e1bd8faf8dbba04cafc212b2ad6bfcfc90bb51430d648db917184",
       "contextAfterSHA256": "323a6b8c023e1bd8faf8dbba04cafc212b2ad6bfcfc90bb51430d648db917184"
     },
@@ -2060,7 +2060,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "fileSHA256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2110,7 +2110,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+            "sha256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
@@ -2185,7 +2185,7 @@
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "sourceContentAfterSHA256": "eca6fe460d902ffa2589d204a2a06a65e891272ce3c89a4eaa4df8f3da3da4a2",
       "targetAfterSHA256": "876e3f0de3cef7b48a32809f899adfd88663d1cf0429687925e6a05082a90473",
       "contextAfterSHA256": "876e3f0de3cef7b48a32809f899adfd88663d1cf0429687925e6a05082a90473"
     },
@@ -2303,7 +2303,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-        "fileSHA256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e",
+        "fileSHA256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -2353,7 +2353,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
-            "sha256": "707650302870bd1661a36b236294cb068ecacb75dd2eb5ecd448262473e5b91e"
+            "sha256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
@@ -2428,9 +2428,326 @@
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "sourceContentAfterSHA256": "eca6fe460d902ffa2589d204a2a06a65e891272ce3c89a4eaa4df8f3da3da4a2",
       "targetAfterSHA256": "cb22bf2eec51d430bbfc1157f88b3a554b6767ae995a0517af89949b51aff55e",
       "contextAfterSHA256": "cb22bf2eec51d430bbfc1157f88b3a554b6767ae995a0517af89949b51aff55e"
+    },
+    {
+      "era": "e14",
+      "city": "nukualofa",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e14-nukualofa-c3-9d625d0159095eb8",
+      "galleryImageID": "capital-cc-e14-nukualofa-c3-9d625d0159095eb8",
+      "commonsFile": "Nuku'alofa satellite view.png",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c3-9d625d0159095eb836ee.png",
+        "suora": true,
+        "lahde": "Landsat 8 and UGS (NASA) - derivative work: Skimel, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nukuʻalofan kaupunkialue ja laguuni vuoden 2013 satelliittiaineistossa.",
+        "lyhyt": "Nukuʻalofan kaupunkialue ja laguuni vuoden 2013 satelliittiaineistossa.",
+        "tiedosto": "Nuku'alofa satellite view.png"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Landsat 8 and UGS (NASA) - derivative work: Skimel, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nukuʻalofan kaupunkialue ja laguuni vuoden 2013 satelliittiaineistossa.",
+        "lyhyt": "Nukuʻalofan kaupunkialue ja laguuni vuoden 2013 satelliittiaineistossa.",
+        "tiedosto": "Nuku'alofa satellite view.png"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c3-9d625d0159095eb836ee.png",
+        "suora": true,
+        "lahde": "Landsat 8 and UGS (NASA) - derivative work: Skimel, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nukuʻalofan kaupunkialue ja laguuni vuoden 2013 satelliittiaineistossa.",
+        "lyhyt": "Nukuʻalofan kaupunkialue ja laguuni vuoden 2013 satelliittiaineistossa.",
+        "tiedosto": "Nuku'alofa satellite view.png"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9d625d0159095eb836ee8ddf59af47cbd0c7038b037ae9945bac7bb3cbb4de2b",
+      "exportSHA256": "9d625d0159095eb836ee8ddf59af47cbd0c7038b037ae9945bac7bb3cbb4de2b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c3-9d625d0159095eb836ee.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c3-9d625d0159095eb836ee.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e14/nukualofa/f69bec3dc539293a04b44654c25bd593b918cae7484e52838fe689e95afc5fee.png",
+      "dimensions": [
+        5595,
+        3478
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
+      "sourceContentSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Nukuʻalofa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Landsat 8 and UGS (NASA) - derivative work: Skimel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_satellite_view.png",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Nuku%27alofa_satellite_view.png",
+        "rightsEvidence": {
+          "selection": "Rajauksen Author-rivi Landsat8 and UGS(NASA) - derivative work:Skimel, CC BY-SA4.0. Nimenomainen lähtötiedosto Satellite view of Tonga(Tongatapu,Ha’apai).jpg: PaulQuast-Landsat8 and UGS, CC BY2.0. Molemmat kaupalliset CC-lisenssit ja versionlinkit luettu tiedostosivuilta. Ei NASA-nimestä pääteltyä PD-vapautusta; myös lähtötiedoston tekijäkrediitti säilytetään. Kaupunkikudos kokonaisuutena, ei yksittäisen rakennusteoksen pääaihe.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/1e1439967a76-original.jpg",
+            "width": 5595,
+            "height": 3478,
+            "sha256": "9d625d0159095eb836ee8ddf59af47cbd0c7038b037ae9945bac7bb3cbb4de2b",
+            "nativeGeometry": {
+              "rawWidth": 5595,
+              "rawHeight": 3478,
+              "exifOrientation": 1,
+              "width": 5595,
+              "height": 3478
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_satellite_view.png",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/cc-source-snapshots/946d28c0a1c586e4b0ffe2c5bf96f4759866935e683e76cda1160648e287ada0.html",
+            "sourcePageSHA256": "946d28c0a1c586e4b0ffe2c5bf96f4759866935e683e76cda1160648e287ada0",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/30646917f41dcbd9b0b0e3e0de1fbed977247f3e695b8aa5511aca1c24c246e5.body",
+            "sourceFields": {
+              "Date": "3 December 2013",
+              "Source": "This file was derived from: Satellite view of Tonga (Tongatapu, Ha'apai).jpg",
+              "Author": "Landsat 8 and UGS (NASA) - derivative work: Skimel"
+            },
+            "authors": [
+              "Landsat 8 and UGS (NASA) - derivative work: Skimel"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/1e1439967a76-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen PNG 5595×3478 itse katsottu: Nukuʻalofan todellinen katu- ja ranta-asettelu sekä laguuni satelliittiaineistossa. Rasteri on pehmeä/pikselöity, mutta laaja kaupunkiverkko ja luonnollinen rantaviiva erottuvat; ei lisättyä nimilappua, vesileimaa, logoa, kasvoja tai yksittäistä arkkitehtuuriteoksen pääaihetta. Description yksilöi Nuku’alofa/Tongatapu. Rajauksen Source/Author: Landsat 8 and UGS (NASA) - derivative work: Skimel, CC BY-SA 4.0. Myös nimenomaisen lähtötiedoston lähdesivu itse luettu: Paul Quast - Landsat 8 and UGS, CC BY 2.0, Flickr-lisenssivarmennus 2018. Date 3.12.2013 molemmissa; digitointi 2017 ei kuvausaika. Säilytettävä lähtökuvan ja rajauksen krediittiketju; NASA-nimestä ei päätellä PD-vapautusta.",
+            "workLayerAssessment": "Alkuperäinen PNG 5595×3478 itse katsottu: Nukuʻalofan todellinen katu- ja ranta-asettelu sekä laguuni satelliittiaineistossa. Rasteri on pehmeä/pikselöity, mutta laaja kaupunkiverkko ja luonnollinen rantaviiva erottuvat; ei lisättyä nimilappua, vesileimaa, logoa, kasvoja tai yksittäistä arkkitehtuuriteoksen pääaihetta. Description yksilöi Nuku’alofa/Tongatapu. Rajauksen Source/Author: Landsat 8 and UGS (NASA) - derivative work: Skimel, CC BY-SA 4.0. Myös nimenomaisen lähtötiedoston lähdesivu itse luettu: Paul Quast - Landsat 8 and UGS, CC BY 2.0, Flickr-lisenssivarmennus 2018. Date 3.12.2013 molemmissa; digitointi 2017 ei kuvausaika. Säilytettävä lähtökuvan ja rajauksen krediittiketju; NASA-nimestä ei päätellä PD-vapautusta.",
+            "ccFragment": "cc-selection.json",
+            "canonicalCaptureDate": "3 December 2013",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen PNG 5595×3478 itse katsottu: Nukuʻalofan todellinen katu- ja ranta-asettelu sekä laguuni satelliittiaineistossa. Rasteri on pehmeä/pikselöity, mutta laaja kaupunkiverkko ja luonnollinen rantaviiva erottuvat; ei lisättyä nimilappua, vesileimaa, logoa, kasvoja tai yksittäistä arkkitehtuuriteoksen pääaihetta. Description yksilöi Nuku’alofa/Tongatapu. Rajauksen Source/Author: Landsat 8 and UGS (NASA) - derivative work: Skimel, CC BY-SA 4.0. Myös nimenomaisen lähtötiedoston lähdesivu itse luettu: Paul Quast - Landsat 8 and UGS, CC BY 2.0, Flickr-lisenssivarmennus 2018. Date 3.12.2013 molemmissa; digitointi 2017 ei kuvausaika. Säilytettävä lähtökuvan ja rajauksen krediittiketju; NASA-nimestä ei päätellä PD-vapautusta."
+            },
+            "sourceChainReview": [
+              {
+                "commonsFile": "Satellite view of Tonga (Tongatapu, Ha'apai).jpg",
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Satellite_view_of_Tonga_(Tongatapu,_Ha%27apai).jpg",
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0e0205dcca45bdc11199107d9eb387d1920321834341ae08b12297fcca8dc137.html",
+                "author": "Paul Quast - Landsat 8 and UGS",
+                "license": "CC BY 2.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+                "sourceSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/cc-source-snapshots/59dea916f20a23ddaa123e93fd0a67f44ce664f7558e02bd24b8d3022cd43745.html",
+                "sourceSnapshotSHA256": "59dea916f20a23ddaa123e93fd0a67f44ce664f7558e02bd24b8d3022cd43745",
+                "readByThisSession": true
+              }
+            ],
+            "requiredDeliveryMetadata": {
+              "attribution": "Landsat 8 and UGS (NASA) - derivative work: Skimel; lähtökuva Paul Quast - Landsat 8 and UGS",
+              "sourceLicense": "CC BY 2.0",
+              "sourceLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+              "derivativeLicense": "CC BY-SA 4.0",
+              "derivativeLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "derivation": "Rajaus lähtötiedostosta Satellite view of Tonga (Tongatapu, Ha'apai).jpg",
+              "captureYear": 2013,
+              "mimeType": "image/png"
+            }
+          },
+          "qaReason": "Alkuperäinen PNG 5595×3478 itse katsottu: Nukuʻalofan todellinen katu- ja ranta-asettelu sekä laguuni satelliittiaineistossa. Rasteri on pehmeä/pikselöity, mutta laaja kaupunkiverkko ja luonnollinen rantaviiva erottuvat; ei lisättyä nimilappua, vesileimaa, logoa, kasvoja tai yksittäistä arkkitehtuuriteoksen pääaihetta. Description yksilöi Nuku’alofa/Tongatapu. Rajauksen Source/Author: Landsat 8 and UGS (NASA) - derivative work: Skimel, CC BY-SA 4.0. Myös nimenomaisen lähtötiedoston lähdesivu itse luettu: Paul Quast - Landsat 8 and UGS, CC BY 2.0, Flickr-lisenssivarmennus 2018. Date 3.12.2013 molemmissa; digitointi 2017 ei kuvausaika. Säilytettävä lähtökuvan ja rajauksen krediittiketju; NASA-nimestä ei päätellä PD-vapautusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nukuʻalofan kaupunkialue ja laguuni vuoden 2013 satelliittiaineistossa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+        "fileSHA256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "Nuku'alofa satellite view.png",
+          "type": "commons",
+          "sha256": "9d625d0159095eb836ee8ddf59af47cbd0c7038b037ae9945bac7bb3cbb4de2b",
+          "nativeSHA256": "9d625d0159095eb836ee8ddf59af47cbd0c7038b037ae9945bac7bb3cbb4de2b",
+          "nativeOriginalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/1e1439967a76-original.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen PNG 5595×3478 itse katsottu: Nukuʻalofan todellinen katu- ja ranta-asettelu sekä laguuni satelliittiaineistossa. Rasteri on pehmeä/pikselöity, mutta laaja kaupunkiverkko ja luonnollinen rantaviiva erottuvat; ei lisättyä nimilappua, vesileimaa, logoa, kasvoja tai yksittäistä arkkitehtuuriteoksen pääaihetta. Description yksilöi Nuku’alofa/Tongatapu. Rajauksen Source/Author: Landsat 8 and UGS (NASA) - derivative work: Skimel, CC BY-SA 4.0. Myös nimenomaisen lähtötiedoston lähdesivu itse luettu: Paul Quast - Landsat 8 and UGS, CC BY 2.0, Flickr-lisenssivarmennus 2018. Date 3.12.2013 molemmissa; digitointi 2017 ei kuvausaika. Säilytettävä lähtökuvan ja rajauksen krediittiketju; NASA-nimestä ei päätellä PD-vapautusta.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/1e1439967a76-original.jpg",
+            "width": 5595,
+            "height": 3478,
+            "sha256": "9d625d0159095eb836ee8ddf59af47cbd0c7038b037ae9945bac7bb3cbb4de2b",
+            "nativeGeometry": {
+              "rawWidth": 5595,
+              "rawHeight": 3478,
+              "exifOrientation": 1,
+              "width": 5595,
+              "height": 3478
+            },
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_satellite_view.png",
+            "sourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/cc-source-snapshots/946d28c0a1c586e4b0ffe2c5bf96f4759866935e683e76cda1160648e287ada0.html",
+            "sourcePageSHA256": "946d28c0a1c586e4b0ffe2c5bf96f4759866935e683e76cda1160648e287ada0",
+            "upstreamSourcePagePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/lahdevarasto/30646917f41dcbd9b0b0e3e0de1fbed977247f3e695b8aa5511aca1c24c246e5.body",
+            "sourceFields": {
+              "Date": "3 December 2013",
+              "Source": "This file was derived from: Satellite view of Tonga (Tongatapu, Ha'apai).jpg",
+              "Author": "Landsat 8 and UGS (NASA) - derivative work: Skimel"
+            },
+            "authors": [
+              "Landsat 8 and UGS (NASA) - derivative work: Skimel"
+            ],
+            "authorOrigin": "Author table",
+            "licenseChoices": [
+              "CC BY-SA 4.0"
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+            "existingGameUse": [],
+            "sameCityOtherSlots": [],
+            "sameCityAcceptedQASlots": [],
+            "sameCityAcceptedNativeSHASlots": [],
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/1e1439967a76-technical-source.json",
+            "visualViewedByThisSession": true,
+            "nativeOriginalViewed": true,
+            "visualObservation": "Alkuperäinen PNG 5595×3478 itse katsottu: Nukuʻalofan todellinen katu- ja ranta-asettelu sekä laguuni satelliittiaineistossa. Rasteri on pehmeä/pikselöity, mutta laaja kaupunkiverkko ja luonnollinen rantaviiva erottuvat; ei lisättyä nimilappua, vesileimaa, logoa, kasvoja tai yksittäistä arkkitehtuuriteoksen pääaihetta. Description yksilöi Nuku’alofa/Tongatapu. Rajauksen Source/Author: Landsat 8 and UGS (NASA) - derivative work: Skimel, CC BY-SA 4.0. Myös nimenomaisen lähtötiedoston lähdesivu itse luettu: Paul Quast - Landsat 8 and UGS, CC BY 2.0, Flickr-lisenssivarmennus 2018. Date 3.12.2013 molemmissa; digitointi 2017 ei kuvausaika. Säilytettävä lähtökuvan ja rajauksen krediittiketju; NASA-nimestä ei päätellä PD-vapautusta.",
+            "workLayerAssessment": "Alkuperäinen PNG 5595×3478 itse katsottu: Nukuʻalofan todellinen katu- ja ranta-asettelu sekä laguuni satelliittiaineistossa. Rasteri on pehmeä/pikselöity, mutta laaja kaupunkiverkko ja luonnollinen rantaviiva erottuvat; ei lisättyä nimilappua, vesileimaa, logoa, kasvoja tai yksittäistä arkkitehtuuriteoksen pääaihetta. Description yksilöi Nuku’alofa/Tongatapu. Rajauksen Source/Author: Landsat 8 and UGS (NASA) - derivative work: Skimel, CC BY-SA 4.0. Myös nimenomaisen lähtötiedoston lähdesivu itse luettu: Paul Quast - Landsat 8 and UGS, CC BY 2.0, Flickr-lisenssivarmennus 2018. Date 3.12.2013 molemmissa; digitointi 2017 ei kuvausaika. Säilytettävä lähtökuvan ja rajauksen krediittiketju; NASA-nimestä ei päätellä PD-vapautusta.",
+            "ccFragment": "cc-selection.json",
+            "canonicalCaptureDate": "3 December 2013",
+            "coverLayoutAssessment": {
+              "passes": true,
+              "required": "broad real city/place view",
+              "observed": "Alkuperäinen PNG 5595×3478 itse katsottu: Nukuʻalofan todellinen katu- ja ranta-asettelu sekä laguuni satelliittiaineistossa. Rasteri on pehmeä/pikselöity, mutta laaja kaupunkiverkko ja luonnollinen rantaviiva erottuvat; ei lisättyä nimilappua, vesileimaa, logoa, kasvoja tai yksittäistä arkkitehtuuriteoksen pääaihetta. Description yksilöi Nuku’alofa/Tongatapu. Rajauksen Source/Author: Landsat 8 and UGS (NASA) - derivative work: Skimel, CC BY-SA 4.0. Myös nimenomaisen lähtötiedoston lähdesivu itse luettu: Paul Quast - Landsat 8 and UGS, CC BY 2.0, Flickr-lisenssivarmennus 2018. Date 3.12.2013 molemmissa; digitointi 2017 ei kuvausaika. Säilytettävä lähtökuvan ja rajauksen krediittiketju; NASA-nimestä ei päätellä PD-vapautusta."
+            },
+            "sourceChainReview": [
+              {
+                "commonsFile": "Satellite view of Tonga (Tongatapu, Ha'apai).jpg",
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Satellite_view_of_Tonga_(Tongatapu,_Ha%27apai).jpg",
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0e0205dcca45bdc11199107d9eb387d1920321834341ae08b12297fcca8dc137.html",
+                "author": "Paul Quast - Landsat 8 and UGS",
+                "license": "CC BY 2.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+                "sourceSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa-evidence/cc-source-snapshots/59dea916f20a23ddaa123e93fd0a67f44ce664f7558e02bd24b8d3022cd43745.html",
+                "sourceSnapshotSHA256": "59dea916f20a23ddaa123e93fd0a67f44ce664f7558e02bd24b8d3022cd43745",
+                "readByThisSession": true
+              }
+            ],
+            "requiredDeliveryMetadata": {
+              "attribution": "Landsat 8 and UGS (NASA) - derivative work: Skimel; lähtökuva Paul Quast - Landsat 8 and UGS",
+              "sourceLicense": "CC BY 2.0",
+              "sourceLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+              "derivativeLicense": "CC BY-SA 4.0",
+              "derivativeLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "derivation": "Rajaus lähtötiedostosta Satellite view of Tonga (Tongatapu, Ha'apai).jpg",
+              "captureYear": 2013,
+              "mimeType": "image/png"
+            }
+          },
+          "checkedAt": "2026-10-12T20:46:54.288740+00:00",
+          "contentSHA256": "62ba7f1be41d7e56e371b3f71a9f7de6c96bade2e9f5ba19a352d535124f80d1",
+          "targetSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/qa.json",
+            "sha256": "5f17ce6d7eada58c821b543e0e19521a3d53373c110b628ea8e0541882710a51"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/nukualofa/illustration-qa-extra.json",
+            "sha256": "bbf48d1f5acb2602f708997b80549f29aee2fb10425d7989cd532109ac2e4eea"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e14",
+        "city": "nukualofa",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Nuku'alofa satellite view.png",
+        "sha256": "9d625d0159095eb836ee8ddf59af47cbd0c7038b037ae9945bac7bb3cbb4de2b",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Nuku%27alofa_satellite_view.png",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Nuku%27alofa_satellite_view.png",
+        "author": "Landsat 8 and UGS (NASA) - derivative work: Skimel",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 5595,
+        "height": 3478,
+        "originalSHA256": "9d625d0159095eb836ee8ddf59af47cbd0c7038b037ae9945bac7bb3cbb4de2b",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c3-9d625d0159095eb836ee.png",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c3-9d625d0159095eb836ee.png",
+        "bytes": 13825099,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:47:38.322847+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Landsat 8 and UGS (NASA) - derivative work: Skimel, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Nukuʻalofan kaupunkialue ja laguuni vuoden 2013 satelliittiaineistossa.",
+        "lyhyt": "Nukuʻalofan kaupunkialue ja laguuni vuoden 2013 satelliittiaineistossa.",
+        "tiedosto": "Nuku'alofa satellite view.png"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "eca6fe460d902ffa2589d204a2a06a65e891272ce3c89a4eaa4df8f3da3da4a2",
+      "targetAfterSHA256": "5b15801e125fd88d8fc01c4fd0ca752500ca3b8acc877adfa726308ea8cfaadd",
+      "contextAfterSHA256": "5b15801e125fd88d8fc01c4fd0ca752500ca3b8acc877adfa726308ea8cfaadd"
     }
   ],
   "runtimeIntegrationPending": true,

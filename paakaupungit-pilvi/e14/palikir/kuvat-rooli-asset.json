@@ -99,7 +99,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-        "fileSHA256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178",
+        "fileSHA256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -133,7 +133,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-            "sha256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178"
+            "sha256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75"
           }
         ]
       },
@@ -219,6 +219,220 @@
       "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "86d5f6b5ce3639041e3bae77a9ef4bbe24c31059b192fadf2a314de70355ad38"
+    },
+    {
+      "era": "e14",
+      "city": "palikir",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e14-palikir-o3-v1-20261012",
+      "galleryImageID": "e14-palikir-o3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mangroven juuret rannikkokasvillisuuden havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Mangroven juuret rannikkokasvillisuuden havainnollistuksena; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mangroven juuret rannikkokasvillisuuden havainnollistuksena; yleinen havainnekuva.",
+        "lyhyt": "Mangroven juuret rannikkokasvillisuuden havainnollistuksena; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "04876d289a58bb8eb59661495174cac6a6c378da1f5ac99c64b6564a7fd18cfd",
+      "exportSHA256": "9e6d316fb22c5e6b9d30b4b0a46b312e6669dc3f85d0313a6ba58a7da5cc24ce",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
+      "sourceContentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "4a1b4ab917b04a25868aa3f3476f94248e1515cbf2e0dca663a44d209018b8aa",
+        "subjectTitle": "Kolonia ja metsän reuna",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
+          "QA": {
+            "contentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+            "visualObservationFi": "Rungosta haarautuvia vaihtelevanpaksuisia juuria, luonnollista kaarnaa ja kosteutta. Ei monistuvaa pintaa, tekstiä, logoa tai ihmisiä.",
+            "topicMatchFi": "Selite rajaa kuvan rannikkokasvillisuuden havainnollistukseen, ei Pohnpein todelliseen rantaan tai reittiin.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Pohnpei"
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/assets/e14-palikir-o3-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Mangroven juuret, lehdet ja rantavesi ovat luontevat ja vastaavat O3-aihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mangroven juuret rannikkokasvillisuuden havainnollistuksena; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
+        "fileSHA256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e14-palikir-o3-v1-20261012",
+          "sha256": "04876d289a58bb8eb59661495174cac6a6c378da1f5ac99c64b6564a7fd18cfd",
+          "verdict": "accepted",
+          "reason": "Mangroven juuret, lehdet ja rantavesi ovat luontevat ja vastaavat O3-aihetta.",
+          "evidence": {
+            "contentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+            "visualObservationFi": "Rungosta haarautuvia vaihtelevanpaksuisia juuria, luonnollista kaarnaa ja kosteutta. Ei monistuvaa pintaa, tekstiä, logoa tai ihmisiä.",
+            "topicMatchFi": "Selite rajaa kuvan rannikkokasvillisuuden havainnollistukseen, ei Pohnpein todelliseen rantaan tai reittiin.",
+            "sourceEvidence": [
+              "https://en.wikivoyage.org/wiki/Pohnpei"
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/assets/e14-palikir-o3-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T20:05:45.921142+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
+            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
+            "sha256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png?t=9e6d316fb22c5e6b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
+        "sha256": "9e6d316fb22c5e6b9d30b4b0a46b312e6669dc3f85d0313a6ba58a7da5cc24ce",
+        "bytes": 2887692,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-palikir-o3-v1-20261012",
+        "nativeSHA256": "04876d289a58bb8eb59661495174cac6a6c378da1f5ac99c64b6564a7fd18cfd",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "palikir",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T20:06:13.814724+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
+        "sha256": "9e6d316fb22c5e6b9d30b4b0a46b312e6669dc3f85d0313a6ba58a7da5cc24ce",
+        "bytes": 2887692,
+        "SHAReadAt": "2026-10-12T20:06:10.659718+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "04876d289a58bb8eb59661495174cac6a6c378da1f5ac99c64b6564a7fd18cfd",
+        "rgbPixelSHA256": "c91e9155d5264f0b1430a87ec9605a4a68991b40ca2bf65e4f4d299dd26a0a1f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "4a1b4ab917b04a25868aa3f3476f94248e1515cbf2e0dca663a44d209018b8aa"
     },
     {
       "era": "e14",
@@ -316,7 +530,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-        "fileSHA256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178",
+        "fileSHA256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -349,7 +563,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-            "sha256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178"
+            "sha256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75"
           }
         ]
       },
@@ -435,433 +649,6 @@
       "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "967793aaaaee9b4d4f6f369ae396d0a4c3938a34f518d97ab97cfb402b1e8296"
-    },
-    {
-      "era": "e14",
-      "city": "palikir",
-      "slot": "L4",
-      "type": "illustration",
-      "assetID": "e14-palikir-l4-v1-20261012",
-      "galleryImageID": "e14-palikir-l4-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        3
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kavan juuret ja kuorikuitu kuuluvat sakaun valmistukseen; yleinen havainnekuva.",
-        "lyhyt": "Kavan juuret ja kuorikuitu kuuluvat sakaun valmistukseen; yleinen havainnekuva."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kavan juuret ja kuorikuitu kuuluvat sakaun valmistukseen; yleinen havainnekuva.",
-        "lyhyt": "Kavan juuret ja kuorikuitu kuuluvat sakaun valmistukseen; yleinen havainnekuva."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "f0ee5e42ed39b738e8156ad4ea4cef737860c5502e0e8795065ac6ce6d59ff00",
-      "exportSHA256": "79b002ef2859b0a2ab37eed0b3ffc7e56a6b5685423cdabcd88cb873b8214514",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
-      "sourceContentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "ced05e59b364784e11261f96f2a1a1ee525ac4eaa2bfb6c2cf478712066458ae",
-        "semanticContextSHA256": "ced05e59b364784e11261f96f2a1a1ee525ac4eaa2bfb6c2cf478712066458ae",
-        "subjectTitle": "Juuri, kuori ja sakau",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
-          "QA": {
-            "contentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
-            "visualObservationFi": "Vaaleanruskeita epäsäännöllisiä juuria hienoine sivujuurineen ja leikattuine päineen, vieressä vaaleita pitkittäisiä kuorikuituja puisella alustalla. Kuidut ja juurten pintakulumat vaihtelevat; ei toistuvaa kuorta, tekstiä, logoa, käsiä tai valmisrituaaliesinettä.",
-            "topicMatchFi": "L4 kertoo Piper methysticumin juurista ja Hibiscus tiliaceuksen kuorikuidusta. Selite nimeää materiaalien yleishavainnollistuksen eikä tietyn valmistushetken kuvaa tai lääkinnällistä vaikutusta.",
-            "sourceEvidence": [
-              "https://en.wikipedia.org/wiki/Kava, Traditional preparation / Pohnpei"
-            ],
-            "rightsScopeFi": "Yleiset luonnonmateriaalit.",
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/assets/e14-palikir-l4-v1-20261012/image.png",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "nativeSHA256Verified": true,
-            "viewedByReviewer": true
-          },
-          "qaReason": "Epätasaiset juuret ja kuituiset kuorikaistaleet havainnollistavat L4:n sakaun materiaaleja ilman seremonian tai nimetyn työpajan rekonstruktiota."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Kavan juuret ja kuorikuitu kuuluvat sakaun valmistukseen; yleinen havainnekuva.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-        "fileSHA256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178",
-        "item": {
-          "slot": "L4",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-          "assetID": "e14-palikir-l4-v1-20261012",
-          "sha256": "f0ee5e42ed39b738e8156ad4ea4cef737860c5502e0e8795065ac6ce6d59ff00",
-          "verdict": "accepted",
-          "reason": "Epätasaiset juuret ja kuituiset kuorikaistaleet havainnollistavat L4:n sakaun materiaaleja ilman seremonian tai nimetyn työpajan rekonstruktiota.",
-          "evidence": {
-            "contentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
-            "visualObservationFi": "Vaaleanruskeita epäsäännöllisiä juuria hienoine sivujuurineen ja leikattuine päineen, vieressä vaaleita pitkittäisiä kuorikuituja puisella alustalla. Kuidut ja juurten pintakulumat vaihtelevat; ei toistuvaa kuorta, tekstiä, logoa, käsiä tai valmisrituaaliesinettä.",
-            "topicMatchFi": "L4 kertoo Piper methysticumin juurista ja Hibiscus tiliaceuksen kuorikuidusta. Selite nimeää materiaalien yleishavainnollistuksen eikä tietyn valmistushetken kuvaa tai lääkinnällistä vaikutusta.",
-            "sourceEvidence": [
-              "https://en.wikipedia.org/wiki/Kava, Traditional preparation / Pohnpei"
-            ],
-            "rightsScopeFi": "Yleiset luonnonmateriaalit.",
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/assets/e14-palikir-l4-v1-20261012/image.png",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "nativeSHA256Verified": true,
-            "viewedByReviewer": true
-          },
-          "reviewedAt": "2026-10-12T18:28:07.974439+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
-            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-            "sha256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png?t=79b002ef2859b0a2",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
-        "sha256": "79b002ef2859b0a2ab37eed0b3ffc7e56a6b5685423cdabcd88cb873b8214514",
-        "bytes": 2746248,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e14-palikir-l4-v1-20261012",
-        "nativeSHA256": "f0ee5e42ed39b738e8156ad4ea4cef737860c5502e0e8795065ac6ce6d59ff00",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e14",
-        "city": "palikir",
-        "slot": "L4",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-        "verifiedAt": "2026-10-12T18:31:34.440971+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
-        "sha256": "79b002ef2859b0a2ab37eed0b3ffc7e56a6b5685423cdabcd88cb873b8214514",
-        "bytes": 2746248,
-        "SHAReadAt": "2026-10-12T18:30:07.536048+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "f0ee5e42ed39b738e8156ad4ea4cef737860c5502e0e8795065ac6ce6d59ff00",
-        "rgbPixelSHA256": "2c8ffcea8536aedf35ad52c22c46d710483df32746412a94aca6ac68bfbd1082",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
-      "targetAfterSHA256": "ced05e59b364784e11261f96f2a1a1ee525ac4eaa2bfb6c2cf478712066458ae",
-      "contextAfterSHA256": "ced05e59b364784e11261f96f2a1a1ee525ac4eaa2bfb6c2cf478712066458ae"
-    },
-    {
-      "era": "e14",
-      "city": "palikir",
-      "slot": "O3",
-      "type": "illustration",
-      "assetID": "e14-palikir-o3-v1-20261012",
-      "galleryImageID": "e14-palikir-o3-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        2,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroven juuret rannikkokasvillisuuden havainnollistuksena; yleinen havainnekuva.",
-        "lyhyt": "Mangroven juuret rannikkokasvillisuuden havainnollistuksena; yleinen havainnekuva."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroven juuret rannikkokasvillisuuden havainnollistuksena; yleinen havainnekuva.",
-        "lyhyt": "Mangroven juuret rannikkokasvillisuuden havainnollistuksena; yleinen havainnekuva."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "04876d289a58bb8eb59661495174cac6a6c378da1f5ac99c64b6564a7fd18cfd",
-      "exportSHA256": "9e6d316fb22c5e6b9d30b4b0a46b312e6669dc3f85d0313a6ba58a7da5cc24ce",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
-      "sourceContentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "4a1b4ab917b04a25868aa3f3476f94248e1515cbf2e0dca663a44d209018b8aa",
-        "subjectTitle": "Kolonia ja metsän reuna",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Tekstin lähteistä perusteltu yleinen kasvi-, eläin-, materiaali- tai arkiesinekuva. Ei nimetyn kohteen paikkarekonstruktio, alkuperäisen museoesineen jäljennös, koristeltu käsityöteos tai suojattu arkkitehtuuri. Kuvateksti nimeää havainnekuvan. Yhteinen varaus tarkistetaan ennen erillistä built-in-kutsua.",
-          "QA": {
-            "contentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
-            "visualObservationFi": "Rungosta haarautuvia vaihtelevanpaksuisia juuria, luonnollista kaarnaa ja kosteutta. Ei monistuvaa pintaa, tekstiä, logoa tai ihmisiä.",
-            "topicMatchFi": "Selite rajaa kuvan rannikkokasvillisuuden havainnollistukseen, ei Pohnpein todelliseen rantaan tai reittiin.",
-            "sourceEvidence": [
-              "https://en.wikivoyage.org/wiki/Pohnpei"
-            ],
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/assets/e14-palikir-o3-v1-20261012/image.png",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "nativeSHA256Verified": true,
-            "viewedByReviewer": true
-          },
-          "qaReason": "Mangroven juuret, lehdet ja rantavesi ovat luontevat ja vastaavat O3-aihetta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Mangroven juuret rannikkokasvillisuuden havainnollistuksena; yleinen havainnekuva.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-        "fileSHA256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178",
-        "item": {
-          "slot": "O3",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-          "assetID": "e14-palikir-o3-v1-20261012",
-          "sha256": "04876d289a58bb8eb59661495174cac6a6c378da1f5ac99c64b6564a7fd18cfd",
-          "verdict": "accepted",
-          "reason": "Mangroven juuret, lehdet ja rantavesi ovat luontevat ja vastaavat O3-aihetta.",
-          "evidence": {
-            "contentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
-            "visualObservationFi": "Rungosta haarautuvia vaihtelevanpaksuisia juuria, luonnollista kaarnaa ja kosteutta. Ei monistuvaa pintaa, tekstiä, logoa tai ihmisiä.",
-            "topicMatchFi": "Selite rajaa kuvan rannikkokasvillisuuden havainnollistukseen, ei Pohnpein todelliseen rantaan tai reittiin.",
-            "sourceEvidence": [
-              "https://en.wikivoyage.org/wiki/Pohnpei"
-            ],
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/assets/e14-palikir-o3-v1-20261012/image.png",
-            "nativeDimensions": [
-              1536,
-              1024
-            ],
-            "nativeSHA256Verified": true,
-            "viewedByReviewer": true
-          },
-          "reviewedAt": "2026-10-12T20:05:45.921142+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
-            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-            "sha256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png?t=9e6d316fb22c5e6b",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
-        "sha256": "9e6d316fb22c5e6b9d30b4b0a46b312e6669dc3f85d0313a6ba58a7da5cc24ce",
-        "bytes": 2887692,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e14-palikir-o3-v1-20261012",
-        "nativeSHA256": "04876d289a58bb8eb59661495174cac6a6c378da1f5ac99c64b6564a7fd18cfd",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e14",
-        "city": "palikir",
-        "slot": "O3",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-        "verifiedAt": "2026-10-12T20:06:13.814724+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-o3-v1-20261012-04876d289a58.png",
-        "sha256": "9e6d316fb22c5e6b9d30b4b0a46b312e6669dc3f85d0313a6ba58a7da5cc24ce",
-        "bytes": 2887692,
-        "SHAReadAt": "2026-10-12T20:06:10.659718+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "04876d289a58bb8eb59661495174cac6a6c378da1f5ac99c64b6564a7fd18cfd",
-        "rgbPixelSHA256": "c91e9155d5264f0b1430a87ec9605a4a68991b40ca2bf65e4f4d299dd26a0a1f",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "4a1b4ab917b04a25868aa3f3476f94248e1515cbf2e0dca663a44d209018b8aa"
     },
     {
       "era": "e14",
@@ -955,7 +742,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-        "fileSHA256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178",
+        "fileSHA256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -987,7 +774,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-            "sha256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178"
+            "sha256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75"
           }
         ]
       },
@@ -1166,7 +953,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-        "fileSHA256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178",
+        "fileSHA256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1198,7 +985,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
-            "sha256": "ee1ae9722c485fd8e15534b859dc5e138c389613603107abbc0f50954f37b178"
+            "sha256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75"
           }
         ]
       },
@@ -1284,6 +1071,436 @@
       "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
       "targetAfterSHA256": "948c097f4ab6c65d3175280da866a627d18f2eec21dab3ad7acf2307db3621f8",
       "contextAfterSHA256": "948c097f4ab6c65d3175280da866a627d18f2eec21dab3ad7acf2307db3621f8"
+    },
+    {
+      "era": "e14",
+      "city": "palikir",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e14-palikir-l2-v1-20261012",
+      "galleryImageID": "e14-palikir-l2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l2-v1-20261012-71e4cbf8df60.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Pohnpei lorikeet -lajin havainnekuva, ei todellinen paikallinen havainto.",
+        "lyhyt": "Pohnpei lorikeet -lajin havainnekuva, ei todellinen paikallinen havainto."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l2-v1-20261012-71e4cbf8df60.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Pohnpei lorikeet -lajin havainnekuva, ei todellinen paikallinen havainto.",
+        "lyhyt": "Pohnpei lorikeet -lajin havainnekuva, ei todellinen paikallinen havainto."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "71e4cbf8df6007f11d86f15e8ca160483c9f95081c85e7069c5baaf49d406a44",
+      "exportSHA256": "0a7e1c5307866736eee612938e45f973a3bbf951819d3f22eb23a2918ff851e4",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l2-v1-20261012-71e4cbf8df60.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l2-v1-20261012-71e4cbf8df60.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-l2-v1-20261012-71e4cbf8df60.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
+      "sourceContentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "129d2790d4bb286b614880763c5b0e889a59dcd38a99552afb3b9048b365be46",
+        "semanticContextSHA256": "129d2790d4bb286b614880763c5b0e889a59dcd38a99552afb3b9048b365be46",
+        "subjectTitle": "Linnut, joiden maailma on Pohnpei",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Lähdetekstin eläinlaji ja haetun lajikuvauksen piirteet, yleinen havainnekuva. Ei nimetyn paikan havaintovalokuva, uskonnollinen tapahtumakuva, ihmismuotokuva tai suojattu teos.",
+          "QA": {
+            "contentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+            "visualObservationFi": "Yhtenäinen papukaijan anatomia, kaksi oksaan tarttuvaa jalkaa ja luonnollinen höyhenpinta. Ei lisäraajoja, tekstiä tai logoja.",
+            "topicMatchFi": "L2 nimeää tämän endeemisen lajin. NAS-lajilähteen Description-rivi132 tukee kuvan tuntomerkkejä; selite erottaa havainnekuvan todellisesta paikallishavainnosta.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Pohnpei_lorikeet"
+            ],
+            "sourceEvidenceVerified": [
+              "kuvat-nopeasti/city/e14/palikir/illustration-work/pohnpei-lorikeet.txt:132"
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/assets/e14-palikir-l2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Pohnpei lorikeet -koiraan punaruskea väritys, oliivinkeltaiset siipi-/pyrstösulat, oranssi nokka ja kellanoranssi silmä vastaavat tallennettua lajilähdettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Pohnpei lorikeet -lajin havainnekuva, ei todellinen paikallinen havainto.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
+        "fileSHA256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e14-palikir-l2-v1-20261012",
+          "sha256": "71e4cbf8df6007f11d86f15e8ca160483c9f95081c85e7069c5baaf49d406a44",
+          "verdict": "accepted",
+          "reason": "Pohnpei lorikeet -koiraan punaruskea väritys, oliivinkeltaiset siipi-/pyrstösulat, oranssi nokka ja kellanoranssi silmä vastaavat tallennettua lajilähdettä.",
+          "evidence": {
+            "contentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+            "visualObservationFi": "Yhtenäinen papukaijan anatomia, kaksi oksaan tarttuvaa jalkaa ja luonnollinen höyhenpinta. Ei lisäraajoja, tekstiä tai logoja.",
+            "topicMatchFi": "L2 nimeää tämän endeemisen lajin. NAS-lajilähteen Description-rivi132 tukee kuvan tuntomerkkejä; selite erottaa havainnekuvan todellisesta paikallishavainnosta.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Pohnpei_lorikeet"
+            ],
+            "sourceEvidenceVerified": [
+              "kuvat-nopeasti/city/e14/palikir/illustration-work/pohnpei-lorikeet.txt:132"
+            ],
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/assets/e14-palikir-l2-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T20:20:27.090564+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
+            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
+            "sha256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l2-v1-20261012-71e4cbf8df60.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l2-v1-20261012-71e4cbf8df60.png?t=0a7e1c5307866736",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l2-v1-20261012-71e4cbf8df60.png",
+        "sha256": "0a7e1c5307866736eee612938e45f973a3bbf951819d3f22eb23a2918ff851e4",
+        "bytes": 2052825,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-palikir-l2-v1-20261012",
+        "nativeSHA256": "71e4cbf8df6007f11d86f15e8ca160483c9f95081c85e7069c5baaf49d406a44",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-l2-v1-20261012-71e4cbf8df60.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "palikir",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-12T20:21:09.092505+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-l2-v1-20261012-71e4cbf8df60.png",
+        "sha256": "0a7e1c5307866736eee612938e45f973a3bbf951819d3f22eb23a2918ff851e4",
+        "bytes": 2052825,
+        "SHAReadAt": "2026-10-12T20:20:31.601073+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "71e4cbf8df6007f11d86f15e8ca160483c9f95081c85e7069c5baaf49d406a44",
+        "rgbPixelSHA256": "33cc7c2db4885e3bfc1e89a889c06bf9702a17a5b21e9eadf1e02533b7e22108",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "targetAfterSHA256": "129d2790d4bb286b614880763c5b0e889a59dcd38a99552afb3b9048b365be46",
+      "contextAfterSHA256": "129d2790d4bb286b614880763c5b0e889a59dcd38a99552afb3b9048b365be46"
+    },
+    {
+      "era": "e14",
+      "city": "palikir",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e14-palikir-l4-v1-20261012",
+      "galleryImageID": "e14-palikir-l4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kavan juuret ja kuorikuitu kuuluvat sakaun valmistukseen; yleinen havainnekuva.",
+        "lyhyt": "Kavan juuret ja kuorikuitu kuuluvat sakaun valmistukseen; yleinen havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kavan juuret ja kuorikuitu kuuluvat sakaun valmistukseen; yleinen havainnekuva.",
+        "lyhyt": "Kavan juuret ja kuorikuitu kuuluvat sakaun valmistukseen; yleinen havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f0ee5e42ed39b738e8156ad4ea4cef737860c5502e0e8795065ac6ce6d59ff00",
+      "exportSHA256": "79b002ef2859b0a2ab37eed0b3ffc7e56a6b5685423cdabcd88cb873b8214514",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
+      "sourceContentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "ced05e59b364784e11261f96f2a1a1ee525ac4eaa2bfb6c2cf478712066458ae",
+        "semanticContextSHA256": "ced05e59b364784e11261f96f2a1a1ee525ac4eaa2bfb6c2cf478712066458ae",
+        "subjectTitle": "Juuri, kuori ja sakau",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty lähdetekstin aiheeseen perustuva luonnon/ruoan/arkisen materiaalin havainnekuva; ei nimetyn paikan valokuva, taiteilijan teoksen jäljennös, rakennuspääaihe, logo tai tunnistettava henkilö. CC-vapautus ja lähteen rajaus tarkistetaan ennen kutsua.",
+          "QA": {
+            "contentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+            "visualObservationFi": "Vaaleanruskeita epäsäännöllisiä juuria hienoine sivujuurineen ja leikattuine päineen, vieressä vaaleita pitkittäisiä kuorikuituja puisella alustalla. Kuidut ja juurten pintakulumat vaihtelevat; ei toistuvaa kuorta, tekstiä, logoa, käsiä tai valmisrituaaliesinettä.",
+            "topicMatchFi": "L4 kertoo Piper methysticumin juurista ja Hibiscus tiliaceuksen kuorikuidusta. Selite nimeää materiaalien yleishavainnollistuksen eikä tietyn valmistushetken kuvaa tai lääkinnällistä vaikutusta.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Kava, Traditional preparation / Pohnpei"
+            ],
+            "rightsScopeFi": "Yleiset luonnonmateriaalit.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/assets/e14-palikir-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "qaReason": "Epätasaiset juuret ja kuituiset kuorikaistaleet havainnollistavat L4:n sakaun materiaaleja ilman seremonian tai nimetyn työpajan rekonstruktiota."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kavan juuret ja kuorikuitu kuuluvat sakaun valmistukseen; yleinen havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
+        "fileSHA256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e14-palikir-l4-v1-20261012",
+          "sha256": "f0ee5e42ed39b738e8156ad4ea4cef737860c5502e0e8795065ac6ce6d59ff00",
+          "verdict": "accepted",
+          "reason": "Epätasaiset juuret ja kuituiset kuorikaistaleet havainnollistavat L4:n sakaun materiaaleja ilman seremonian tai nimetyn työpajan rekonstruktiota.",
+          "evidence": {
+            "contentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+            "visualObservationFi": "Vaaleanruskeita epäsäännöllisiä juuria hienoine sivujuurineen ja leikattuine päineen, vieressä vaaleita pitkittäisiä kuorikuituja puisella alustalla. Kuidut ja juurten pintakulumat vaihtelevat; ei toistuvaa kuorta, tekstiä, logoa, käsiä tai valmisrituaaliesinettä.",
+            "topicMatchFi": "L4 kertoo Piper methysticumin juurista ja Hibiscus tiliaceuksen kuorikuidusta. Selite nimeää materiaalien yleishavainnollistuksen eikä tietyn valmistushetken kuvaa tai lääkinnällistä vaikutusta.",
+            "sourceEvidence": [
+              "https://en.wikipedia.org/wiki/Kava, Traditional preparation / Pohnpei"
+            ],
+            "rightsScopeFi": "Yleiset luonnonmateriaalit.",
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/assets/e14-palikir-l4-v1-20261012/image.png",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeSHA256Verified": true,
+            "viewedByReviewer": true
+          },
+          "reviewedAt": "2026-10-12T18:28:07.974439+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
+            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
+            "sha256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png?t=79b002ef2859b0a2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
+        "sha256": "79b002ef2859b0a2ab37eed0b3ffc7e56a6b5685423cdabcd88cb873b8214514",
+        "bytes": 2746248,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e14-palikir-l4-v1-20261012",
+        "nativeSHA256": "f0ee5e42ed39b738e8156ad4ea4cef737860c5502e0e8795065ac6ce6d59ff00",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e14",
+        "city": "palikir",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-12T18:31:34.440971+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e14/palikir/e14-palikir-l4-v1-20261012-f0ee5e42ed39.png",
+        "sha256": "79b002ef2859b0a2ab37eed0b3ffc7e56a6b5685423cdabcd88cb873b8214514",
+        "bytes": 2746248,
+        "SHAReadAt": "2026-10-12T18:30:07.536048+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f0ee5e42ed39b738e8156ad4ea4cef737860c5502e0e8795065ac6ce6d59ff00",
+        "rgbPixelSHA256": "2c8ffcea8536aedf35ad52c22c46d710483df32746412a94aca6ac68bfbd1082",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "targetAfterSHA256": "ced05e59b364784e11261f96f2a1a1ee525ac4eaa2bfb6c2cf478712066458ae",
+      "contextAfterSHA256": "ced05e59b364784e11261f96f2a1a1ee525ac4eaa2bfb6c2cf478712066458ae"
     }
   ],
   "runtimeIntegrationPending": true,
