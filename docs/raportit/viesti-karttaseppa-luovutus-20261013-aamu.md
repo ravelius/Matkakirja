@@ -10,6 +10,12 @@ Linjaukset ovat Raamatussa ja muistissa: `karttaseppa-tila-20261010-ilta.md` (p�
 - **Oslon ja Bergenin kippi-agentti** (Sonnet) kirjoittaa scratchpad `kippi/luonnos-{oslo,bergen}.json`. Maa ja puut ovat ämpärissä (Julkaisija 07.18).
   Oslo/Bergen-kansiossa LUEMINUT.md puuttuu vielä.
 
+**Nollaus 07.2x (PT):** Bryssel/Amsterdam/Krakova jatkuvat IRROTETTUNA: T7 `vesimaski/ajot/jatka-10km-20261013.sh` (perl setsid, loki samassa kansiossa
+`jatka-10km-20261013.log`). Se odottaa session ajon päättymistä ja ajaa kaupungit, joiden aja.log:ssa ei ole VALMIS (Bryssel oli puut-vaiheessa 07.19).
+Oslon/Bergenin kippi-agentti kuolee nollauksessa: jos `scratchpad/kippi/luonnos-{oslo,bergen}.json` puuttuu, aja agentti uudelleen (prompti kuten Helsinki;
+kohteet Slottsplassen, Akershus, Stortorvet, Karl Johan / Bryggen, Torget, Bergenhus, Domkirken; Norjan § 31). HUOM scratchpad on istuntokohtainen →
+apuskriptit (tarkistus-kaupunki.py, kippi-lahteet.py, kamera-rakennus.py, kippi-luonnokset) kopioitu T7 `vesimaski/ajot/apu-20261013/`.
+
 ## Valmiit kaupunkipaketit (LS1:llä)
 
 Lontoo, Praha, Wien, Rooma, Berliini, Kööpenhamina, Helsinki, Barcelona, Lissabon, Madrid, Marseille, Ljubljana, Granada, Budapest, Firenze, Edinburgh, Dublin
