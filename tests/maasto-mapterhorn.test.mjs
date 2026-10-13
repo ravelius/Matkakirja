@@ -128,3 +128,27 @@ test('koodaaLaatta: pisteNormaalit kirjoitetaan sellaisenaan (oktaedrikoodattuna
   const [x, y] = oktaKoodi(v);
   for (let i = 0; i < 4; i += 1) { assert.equal(b[b.length - 8 + 2 * i], x); assert.equal(b[b.length - 7 + 2 * i], y); }
 });
+
+test('korostusvara: otsakkeen maxHeight = K × max(h), korkeudet säilyvät ~0,1 m:n tarkkuudella, muu laatta tavulleen', async () => {
+  const { koodaaLaatta, puraLaatta, korostusvara } = await import('../tools/maasto/quantized-mesh.mjs');
+  const alue = { west: 7, south: 62, east: 7.01, north: 62.01 };
+  const pisteet = [[0, 0, 0], [1, 0, 1200], [1, 1, 2400], [0, 1, 300], [0.5, 0.5, 1777]];
+  const kolmiot = [[0, 1, 4], [1, 2, 4], [2, 3, 4], [3, 0, 4]];
+  const raaka = koodaaLaatta({ alue, pisteet, kolmiot });
+  const uusi = korostusvara(raaka, 2);
+  assert.equal(uusi.length, raaka.length);
+  assert.equal(uusi.readFloatLE(28), 4800);
+  const a = puraLaatta(raaka); const b = puraLaatta(uusi);
+  const korkeudet = (buf, L) => { const mn = buf.readFloatLE(24); const mx = buf.readFloatLE(28); return L.pisteet.map((p) => mn + (p[2] / 32767) * (mx - mn)); };
+  const ka = korkeudet(raaka, a); const kb = korkeudet(uusi, b);
+  ka.forEach((v, i) => assert.ok(Math.abs(v - kb[i]) < 0.15, `piste ${i}: ${v} vs ${kb[i]}`));
+  assert.deepEqual(a.kolmiot, b.kolmiot);
+  assert.deepEqual(a.reunat, b.reunat);
+  assert.deepEqual(a.pisteet.map((p) => [p[0], p[1]]), b.pisteet.map((p) => [p[0], p[1]]));
+  const n = raaka.readUInt32LE(88); const loppuOsa = 92 + 6 * n;   // korkeuksien jälkeen: kolmiot, reunat, normaalit
+  assert.ok(raaka.subarray(loppuOsa).equals(uusi.subarray(loppuOsa)));
+  assert.ok(raaka.subarray(0, 24).equals(uusi.subarray(0, 24)) && raaka.subarray(32, 92 + 4 * n).equals(uusi.subarray(32, 92 + 4 * n)));
+  // Meri tai negatiivinen maksimi: ei muutosta.
+  const meri = koodaaLaatta({ alue, pisteet: pisteet.map(([u, v]) => [u, v, -5]), kolmiot });
+  assert.ok(korostusvara(meri, 2).equals(meri));
+});

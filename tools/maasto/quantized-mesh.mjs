@@ -198,3 +198,34 @@ export function puraLaatta(b) {
     kolmiot, reunat, laajennukset, loppu: o,
   };
 }
+
+/**
+ * KOROSTUSVARA (Karttaseppä 13.10.2026, LS2:n vuoristopilotti, Geirangerin "porras"): natiivi korostaa maaston
+ * varjostimessa (KorkeusKerroin, p' = p + n·max(h, 0)·(k − 1), oletus 2), mutta cesium-native karsii ja valitsee
+ * laatat otsakkeen min/max-korkeudesta tehdyllä BoundingRegionilla, joka ei tiedä korostuksesta. Kameran edessä
+ * olevan harjanteen laatat jäivät korostamattomina näkökentän alapuolelle ja karsittiin. Tämä kirjoittaa
+ * otsakkeen maxHeightiksi K × max(h) (kun max(h) > 0) ja kvantisoi korkeudet uudelle välille; muu laatta (u, v,
+ * kolmiot, reunat, laajennukset) säilyy tavulleen. Tarkkuus: (K·max − min) / 32767, esim. 3 000 m → 0,09 m.
+ * @param {Buffer} raaka purettu (ei gzip) laatta
+ * @param {number} K korostusvara (≥ 1)
+ * @returns {Buffer} uusi laatta (sama pituus)
+ */
+export function korostusvara(raaka, K) {
+  const b = Buffer.from(raaka);
+  const hMin = b.readFloatLE(24); const hMax = b.readFloatLE(28);
+  const uusi = hMax > 0 ? Math.max(hMax, K * hMax) : hMax;
+  if (!(uusi > hMax)) return b;
+  const n = b.readUInt32LE(88);
+  const alku = 92 + 4 * n;
+  let q = 0; let ed = 0;
+  for (let i = 0; i < n; i += 1) {
+    const z = b.readUInt16LE(alku + 2 * i);
+    q += (z >> 1) ^ (-(z & 1));
+    const h = hMin + (q / 32767) * (hMax - hMin);
+    const q2 = Math.max(0, Math.min(32767, Math.round(((h - hMin) / (uusi - hMin)) * 32767)));
+    b.writeUInt16LE(zigzag(q2 - ed), alku + 2 * i);
+    ed = q2;
+  }
+  b.writeFloatLE(uusi, 28);
+  return b;
+}
