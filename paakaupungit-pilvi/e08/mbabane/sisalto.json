@@ -14,7 +14,7 @@
     }
   },
   "artikkeli": {
-    "intro": "**Mbabane** on Eswatinin eli Swazimaan hallinnollinen pääkaupunki Highveld-ylängöllä. Se sijaitsee Mdzimba-vuoristossa Mbabane-joen ja sen sivujoen Polinjanen luona. Keskustan kaupat ja palvelut keskittyvät Swazi Plazan ja Mbabane Mallin ympärille, kun taas monet majapaikat ovat ympäröivillä rinteillä. Kuninkaallinen ja lainsäädännöllinen keskus on läheisessä Lobambassa, joten pääkaupungin tehtävät jakautuvat eri paikkoihin.\n\nMbabanen kauppapaikka kasvoi joenylityksen ympärille 1800-luvun lopulla ja sai hallinnollisen roolinsa seuraavan vuosisadan alussa. Isoisän matkavuonna 1873 nykyistä hallintokaupunkia ei vielä ollut, mutta alue ei ollut asumaton: nimi liittyy paikalliseen Mbabane Kunene -päällikköön. Kaupungin lähellä toimiva Waterford Kamhlaba perustettiin kouluksi, joka otti oppilaita eri taustoista naapurimaan rotuerottelun aikana. **Sibeben graniittikallio** puolestaan vie huomion paljon kaupunkia vanhempaan maisemaan. Mbabane on hyvä tukikohta ylängön tutkimiseen, mutta kaupungin katuja ja seudun erillisiä luontoretkiä ei pidä sekoittaa toisiinsa.",
+    "intro": "**Mbabane** on Eswatinin eli Swazimaan hallinnollinen pääkaupunki Highveld-ylängöllä. Se sijaitsee Mdzimba-vuoristossa Mbabane-joen ja sen sivujoen Polinjanen luona. Keskustan kaupat ja palvelut keskittyvät Swazi Plazan ja Mbabane Mallin ympärille, kun taas monet majapaikat ovat ympäröivillä rinteillä. Kuninkaallinen ja lainsäädännöllinen keskus on läheisessä Lobambassa, joten pääkaupungin tehtävät jakautuvat eri paikkoihin.\n\nMbabanen kauppapaikka kasvoi joenylityksen ympärille 1800-luvun lopulla ja sai hallinnollisen roolinsa seuraavan vuosisadan alussa. Isoisän matkavuonna 1873 nykyistä hallintokaupunkia ei vielä ollut, mutta alue ei ollut asumaton: nimi liittyy paikalliseen Mbabane Kunene -päällikköön. Kaupungin lähellä toimiva Waterford Kamhlaba perustettiin kouluksi, joka otti oppilaita eri taustoista naapurimaan rotuerottelun aikana. **Sibeben graniittikallio** puolestaan vie huomion paljon kaupunkia vanhempaan maisemaan. Sibebeltä löytyy paljaiden rinteiden lisäksi lohkareita, ruohomaita ja metsäisiä uurteita.",
     "teksti": "Mbabanen synty liittyy Transvaalista Mosambikiin kulkeneen kauppareitin joenylitykseen. Myöhempi hallintokeskus kasvoi paikassa, jossa oli jo paikallista asutusta ja oma nimihistoria. Siirtomaa-ajan kaupunki kuitenkin rajoitti swazien asumista varsinaisella kaupunkialueella.\n\nKaupungin kulttuuri löytyy myös koulusta ja galleriasta. Waterford Kamhlaba hyväksyi oppilaita eri rodullisista ja etnisistä taustoista aikana, jolloin naapurimaan apartheid erotteli ihmisiä. Indingilizi Galleryn valikoima taas ulottuu maalauksista ja veistoksista batiikkiin, mohairiin, koruihin ja keramiikkaan.\n\nKaupungin lähiseudulla luonto ja ihmisen historia limittyvät. Sibebe on graniittikallio, jota ympäröivät ylängön ruohomaat ja rinteet. Ngwenyassa rautamalmia hyödynnettiin ensin väriaineeksi, myöhemmin myös raudan valmistukseen. Malolotjan suojelualueella maisema vaihtuu ruohomaista jokilaaksoihin ja vuoristometsään."
   },
   "kysymykset": [
@@ -50,13 +50,13 @@
       "q": "Mitä Ngwenyan hematiitista saatiin jo ennen raudansulatusta?",
       "options": [
         "Punaista okraa",
-        "Sinistä lasia",
-        "Valkoista suolaa",
-        "Keltaista rikkiä"
+        "Kuparin vihreää patinaa",
+        "Valkoista kalkkia",
+        "Mustaa puuhiiltä"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Materiaalia käytettiin muun muassa kalliomaalauksissa.",
+      "hint": "Louhinta alkoi ennen metallurgian kehittymistä.",
       "fact": "Ngwenyan hematiittia louhittiin kivikaudella väriaineeksi; raudan valmistus kuuluu myöhempään vaiheeseen.",
       "source": "https://en.wikipedia.org/wiki/Ngwenya_Mine"
     },
@@ -75,29 +75,29 @@
       "source": "https://en.wikipedia.org/wiki/Eswatini"
     },
     {
-      "q": "Mihin kansainväliseen kouluverkostoon Waterford Kamhlaba kuuluu?",
+      "q": "Mikä oli Waterford Kamhlaban perustamisen keskeinen ajatus?",
       "options": [
-        "United World Collegesiin",
-        "European Schoolsiin",
-        "Round Square -verkostoon",
-        "UNESCO ASPnet -verkostoon"
+        "Eri taustaisten yhteisopetus",
+        "Opetus vain yhden kansan oppilaille",
+        "Opetus vain eurooppalaisille",
+        "Opetus vain paikallisille"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Verkosto korostaa eri maiden ja kulttuurien yhteyttä opetuksessa.",
-      "fact": "Waterford Kamhlaba on osa United World Colleges -verkostoa ja tarjoaa kansainvälistä opetusta Mbabanen lähellä.",
+      "hint": "Koulu perustettiin Etelä-Afrikan apartheidin aikana.",
+      "fact": "Waterford Kamhlaba hyväksyi eri rodullisista ja etnisistä taustoista tulevia oppilaita aikana, jolloin naapurimaan koulutus erotteli ihmisiä.",
       "source": "https://en.wikipedia.org/wiki/Waterford_Kamhlaba"
     }
   ],
   "tiedot": [
     "Mbabanen nimi liittyy paikalliseen Mbabane Kunene -päällikköön. Kaupungin historia ei siis ala eurooppalaisen kauppapaikan perustamisesta.",
     "Indingilizi Galleryssa taide ei rajoitu maalauksiin: valikoimassa on myös batiikkeja, mohairtuotteita, koruja ja keramiikkaa.",
-    "Malolotjan luonnonsuojelukokonaisuus jatkuu Etelä-Afrikan puolelle Songimveloon. Valtioraja ei ole samalla suojelualueen kokonaisuuden raja."
+    "Malolotja Eswatinissa ja Songimvelo Etelä-Afrikassa muodostavat yhteisen, valtiorajan ylittävän suojelualuekokonaisuuden."
   ],
   "valokuva": {
     "tiedosto": "Mbabane (6035476964).jpg",
-    "lyhyt": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
-    "selite": "Mbabanen asutus levittäytyy Eswatinin ylänkömaisemaan.",
+    "lyhyt": "Mbabanen asutusta ylängön rinteillä.",
+    "selite": "Mbabanen talot ja tiet näkyvät puustoisten rinteiden lomassa heinäkuussa 2011 otetussa kuvassa.",
     "lahde": "Athena Lao from Bulgaria, Commons (CC BY 2.0)"
   },
   "kaupunkilehti": [
@@ -108,8 +108,8 @@
       "kansikuvat": [
         {
           "tiedosto": "Mbabane, Eswatini.jpg",
-          "lyhyt": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
-          "selite": "Mbabanen kaupunki- ja jokilaaksoaluetta Hodoyoshi-1-satelliitista, 2017.",
+          "lyhyt": "Mbabane Hodoyoshi-1-satelliitista.",
+          "selite": "Hodoyoshi-1 kuvasi Mbabanen asutuksen ja sitä ympäröivän maaston 5. heinäkuuta 2017.",
           "lahde": "Axelspace Corporation, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Pääkaupungin tehtävät jaettiin",
-          "teksti": "Mbabane hoitaa Eswatinin hallinnollisen pääkaupungin roolia, mutta kuninkaallinen ja lainsäädännöllinen keskus on Lobambassa. Kaikkia pääkaupungin tehtäviä ei siis löydy samasta kaupungista. Mbabane on myös Hhohhon alueen keskus. Sen keskustan sydämessä Swazi Plaza ja Mbabane Mall kokoavat pankkeja, kauppoja ja palveluja, kun monet majapaikat ovat ympäröivillä rinteillä. Kaupunkia ei tarvitse etsiä vain palatseista ja monumenteista: sen hallinnollinen ja kaupallinen arki näkyy palvelujen ympärille rakentuneessa keskustassa.",
+          "teksti": "Mbabane on Eswatinin hallinnollinen pääkaupunki, mutta kuninkaallinen ja lainsäädännöllinen keskus on Lobambassa. Pääkaupungin tehtävät jakautuvat siis kahteen paikkaan. Mbabane on myös Hhohhon alueen keskus. Sen keskustan palvelut ovat keskittyneet Swazi Plazan ja Mbabane Mallin ympärille: samalla kierroksella vastaan tulevat pankit, kaupat ja ruokapaikat. Monet majapaikat sijaitsevat keskustaa ympäröivillä rinteillä. Mbabane-joen ja Polinjanen sivujoen luona kasvanutta kaupunkia kehystää Mdzimba-vuoristo.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Joenylitys ei ollut tyhjä lähtöruutu",
-          "teksti": "Transvaalista Mosambikiin kulkenut reitti ylitti Mbabane-joen kohdassa, jonka ympärille kauppapaikka kasvoi 1800-luvun lopulla. Nimi liittyy paikalliseen Mbabane Kunene -päällikköön, joka eli alueella ennen myöhempää siirtomaakaupunkia. Isoisän matkavuonna 1873 nykyinen hallintokeskus ei vielä ollut syntynyt, mutta alueella oli oma historiansa. Kaupungin kasvukaan ei ollut kaikille samanlainen mahdollisuus: siirtomaa-ajan säännöt estivät swazien asumisen varsinaisessa kaupunkialueessa ja ohjasivat heidät ympäröiville maaseutualueille.",
+          "teksti": "Transvaalista Mosambikiin kulkenut reitti ylitti Mbabane-joen kohdassa, jonka ympärille kauppapaikka kasvoi 1800-luvun lopulla. Nimi liittyy paikalliseen Mbabane Kunene -päällikköön, joka eli alueella ennen myöhempää siirtomaakaupunkia. Isoisän matkavuonna 1873 nykyinen hallintokeskus ei vielä ollut syntynyt, mutta alueella oli oma historiansa. Kaupungin kasvu ei ollut kaikille yhtä avointa: siirtomaa-ajan säännöt eivät sallineet mustien swazien asua varsinaisella kaupunkialueella.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Koulu avasi ovet eri taustoille",
-          "teksti": "Waterford Kamhlaba perustettiin Mbabanen lähelle 1900-luvun jälkipuoliskolla. Michael Sternin perustama koulu hyväksyi oppilaita eri rodullisista ja etnisistä taustoista aikana, jolloin Etelä-Afrikan apartheid erotteli ihmisiä. Koulun lähtökohta oli käytännöllinen vastalause: oppilaan tausta ei saanut sulkea ovea. Myöhemmin Waterford liittyi United World Colleges -verkostoon. Se tarjoaa IB- ja IGCSE-opetusta, ja koulun oma ohjelma yhdistää opiskelua luovaan toimintaan, liikuntaan ja yhteisöjen kanssa tehtävään työhön.",
+          "teksti": "Waterford Kamhlaba perustettiin Mbabanen lähelle 1900-luvun jälkipuoliskolla. Michael Sternin perustama koulu hyväksyi oppilaita eri rodullisista ja etnisistä taustoista aikana, jolloin Etelä-Afrikan apartheid erotteli ihmisiä. Koulun lähtökohta oli käytännöllinen vastalause: oppilaan tausta ei saanut sulkea ovea. Myöhemmin Waterford liittyi United World Colleges -verkostoon. Se tarjoaa kansainväliseen ylioppilastutkintoon ja kansainvälisiin toisen asteen tutkintoihin valmistavaa opetusta, ja koulun oma ohjelma yhdistää opiskelua luovaan toimintaan, liikuntaan ja yhteisöjen kanssa tehtävään työhön.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -170,7 +170,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Mbabanessa keskusta ja ylängön retkipaikat ovat eri kierroksia. Aloita Swazi Plazan ja Mbabane Mallin ympäriltä, ja varaa Sibeben tai Malolotjan luonnolle oma retkipäivä. Majoitusta on myös ympäröivillä rinteillä, joten selvitä sijainti ennen varausta. Matkalla tulee noudattaa erityistä varovaisuutta ja välttää suuria väkijoukkoja. Järjestä siirtymät päiväsaikaan, sillä pimeällä liikkumista ja ajamista tulee välttää.",
+        "kappale": "Mbabanen kierros alkaa Swazi Plazan ja Mbabane Mallin palvelukortteleista. Indingilizi Galleryn valikoimassa on maalauksia, batiikkeja ja keramiikkaa. Sibeben graniittikallio on erillinen kävelyretki, Malolotjan ruohomaille ja jokilaaksoihin varataan oma päivä. Monet majapaikat ovat keskustaa ympäröivillä rinteillä. Korkeuserot kannattaa huomioida majoituksen ja retkien sijaintia valitessa.",
         "artikkeli": {
           "nimi": "Matkailijan Mbabane",
           "taitto": "opas",
@@ -179,7 +179,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "King Mswati III International Airport käyttää tunnusta SHO. Sovi kuljetus kentältä etukäteen; lentoasema ja Mbabanen keskusta ovat erillisiä paikkoja. Keskustaa voi tutkia jalan, mutta majoitus voi olla ympäröivillä rinteillä. Julkista liikennettä ei suositella turvallisuuspuutteiden vuoksi. Liikenne on vasemmanpuoleista, ja etenkin maaseudulla tien kunto vaihtelee. Vältä ajamista ja ulkona liikkumista pimeällä.",
+              "teksti": "King Mswati III International Airport (SHO) sijaitsee Sikhuphessa, kaukana Mbabanen keskustasta. Sovi kenttäkuljetus etukäteen. Keskustaa voi tutkia jalan, mutta majapaikka voi olla ympäröivillä rinteillä. Swazi Plaza ja Mbabane Mall ovat hyödyllisiä kiintopisteitä kaupungissa liikkumiseen. Liikenne on vasemmanpuoleista.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Sibebe ja ylängön retket",
-              "teksti": "Sibeben graniittikallio sijaitsee Mbabanen lähellä, ja sen poluille on saatavilla paikallisia oppaita. Sateen jälkeen paljas kallio on liukas: seuraa merkittyä reittiä ja paikallista ohjausta. Malolotjan suojelualue ja Ngwenyan vanha kaivos ovat erillisiä seudun retkikohteita, eivät keskustan kävelypysähdyksiä. Varaa kuljetus myös takaisin, lähde päiväsaikaan ja tarkista reitin ajantasainen käyttö ennen retkeä.",
+              "teksti": "Sibeben graniittikallio sijaitsee Mbabanen lähellä, ja sen poluille on saatavilla paikallisia oppaita. Sateen jälkeen paljas kallio on liukas: seuraa merkittyä reittiä ja paikallista ohjausta. Malolotjan suojelualue ja Ngwenyan vanha kaivos ovat erillisiä seudun retkikohteita, eivät keskustan kävelypysähdyksiä. Malolotjassa voi kulkea ruohomaiden, jokilaaksojen ja vuoristometsän maisemissa; Ngwenyassa tutustutaan pigmenttien louhinnan historiaan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Etsi paikallisia makuja ruokalistalta: bhatata tarkoittaa bataattia ja emasi hapanmaitoa. Ne ovat esimerkkejä swaziruokien tutuista raaka-aineista, joita voi maistaa matkan aikana. Mbabanen keskustassa on kahviloita, kansainvälistä ruokaa tarjoavia ravintoloita ja pikaruokapaikkoja. Jos haluat maistaa paikallista ruokaa, kysy tarjonnasta erikseen; ruokalista ei ole sama kaikkialla.",
+              "teksti": "Bhatata tarkoittaa bataattia ja emasi hapanmaitoa: nämä kaksi nimeä auttavat tunnistamaan swazikeittiön ruokia. Bataatti ja hapanmaito poikkeavat toisistaan sekä maultaan että käyttötavaltaan. Swazi Plazan ja Mbabane Mallin ympärillä on kahviloita, ravintoloita ja pikaruokapaikkoja; kaupungin ruokatarjontaan kuuluvat myös kansainväliset keittiöt.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -258,8 +258,8 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Liiku päiväsaikaan",
-                "teksti": "Matkalla tulee noudattaa erityistä varovaisuutta. Vältä suuria väkijoukkoja sekä pimeällä liikkumista ja ajamista."
+                "otsikko": "Matkan valmistelu",
+                "teksti": "Tarkista Ulkoministeriön ajantasainen matkustustiedote ennen matkaa. Suunnittele siirtymät ja paluu päiväsaikaan."
               },
               {
                 "otsikko": "Kallio vaatii reittitiedon",
@@ -275,7 +275,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage: Mbabane; Eswatinin matkailusivusto; https://um.fi/matkustustiedote/-/c/SZ"
         }
       }
     },
@@ -287,9 +287,9 @@
         "kysymys": "Mihin Etelä-Afrikan suojelualueeseen Malolotja liittyy?",
         "vaihtoehdot": [
           "Songimveloon",
-          "Serengetiin",
-          "Etoshaan",
-          "Krugeriin"
+          "Krugeriin",
+          "Hluhluwe–iMfoloziin",
+          "uKhahlamba–Drakensbergiin"
         ],
         "oikea": 0,
         "fakta": "Malolotja on mukana suojelukokonaisuudessa, jonka toinen puoli sijaitsee Songimvelossa Etelä-Afrikassa."
@@ -297,7 +297,7 @@
       "nostot": [
         {
           "otsikko": "Sibebe on graniittia",
-          "teksti": "Sibebe kohoaa Mbabanen lähellä Mbuluzi-joen laakson yläpuolella. Suuri graniittimuodostuma tunnetaan myös nimellä Bald Rock, Kalju kallio. Sen paljaiden rinteiden lisäksi ympäristössä on ruohomaita, lohkareita ja metsän peittämiä uurteita. Kallio on myös yhteisön retkipaikka: Rotaryn Sibebe Survivor -kävelyllä kerätään varoja hyväntekeväisyyteen. Maisemaa ei tarvitse arvioida maailmanennätyksen kautta. Luonnonmuodostuman ja kaupunkilaisten yhteys näkyy siinä, että samalle kalliolle noustaan myös yhdessä.",
+          "teksti": "Sibebe kohoaa Mbabanen lähellä Mbuluzi-joen laakson yläpuolella. Suuri graniittimuodostuma tunnetaan myös nimellä Bald Rock, Kalju kallio. Sen paljaiden rinteiden lisäksi ympäristössä on ruohomaita, lohkareita ja metsän peittämiä uurteita. Kallio on myös yhteisön retkipaikka: Rotaryn Sibebe Survivor -kävelyllä kerätään varoja hyväntekeväisyyteen. Merkitty reitti kulkee tämän vaihtelevan maaston halki, ja retkelle on saatavilla paikallisia oppaita. Sateen jälkeen paljas graniitti muuttuu liukkaaksi.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -306,7 +306,7 @@
         },
         {
           "otsikko": "Luonto jatkuu valtiorajan yli",
-          "teksti": "Malolotjan suojelualueella Eswatinin luoteisosassa avoin ruohomaa vaihtuu jokivarsien pensaikkoon ja vuoristometsään. Alueella elää esimerkiksi seeproja ja antelooppeja, ja jokilaaksoihin kuuluu myös Malolotjan putous. Suojelualue liittyy Etelä-Afrikan Songimveloon rajat ylittävässä kokonaisuudessa. Valtiollinen kartta jakaa alueen, mutta luonnonsuojelu yhdistää sen osat. Mbabanesta Malolotjaan lähdetään omalle retkelle: kaupungin ulkopuolella maisemaa tutkitaan myös jalan, eikä kaikkialle kuljeta autolla.",
+          "teksti": "Malolotjan suojelualueella Eswatinin luoteisosassa avoin ruohomaa vaihtuu jokivarsien pensaikkoon ja vuoristometsään. Alueella elää esimerkiksi seeproja ja antelooppeja, ja jokilaaksoihin kuuluu myös Malolotjan putous. Suojelualue liittyy Etelä-Afrikan Songimveloon rajat ylittävässä kokonaisuudessa. Malolotja ja Songimvelo muodostavat yhdessä kahteen valtioon ulottuvan suojelualueen. Mbabanesta Malolotjaan lähdetään omalle retkelle: kaupungin ulkopuolella maisemaa tutkitaan myös jalan, eikä kaikkialle kuljeta autolla.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -359,8 +359,8 @@
       "kuvat": [
         {
           "tiedosto": "Granite monolith.jpg",
-          "lyhyt": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
-          "selite": "Retkeilijöitä Sibeben graniittivuorella, 2012.",
+          "lyhyt": "Kävelijöitä Sibeben rinteellä.",
+          "selite": "Pitkä kävelijäjono nousee ruohomaisen rinteen kautta kohti Sibeben paljasta graniittia lokakuussa 2012.",
           "lahde": "theswazigirl, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
@@ -371,7 +371,7 @@
   "ehdotukset": {
     "lentoasema": "King Mswati III International Airport (SHO)",
     "huomiot": [
-      "Nopea C-tekstiluonnos: 8 nostoa, 5 opasjaksoa, 5 kysymystä ja 3 tietoa. Riippumaton D/E/F tekemättä.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 3 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "19 kuvaroolia tyhjin neljän kentän arvoin; erillinen kuvaputki. Ei Commons-valintaa.",
       "Kartta partial: yksi Sibeben omaan Wikidata P625 -pisteeseen perustuva luontokohde. Väitteessä 0 viitettä; riippumaton paikkatarkistus ja kuuden kohteen portti avoin.",
       "Kartta on Sibeben lähiympäristön rajaus eikä koko kaupungin valmis kohdekartta; Malolotja ja Ngwenya ovat erillisiä seudun retkiä.",

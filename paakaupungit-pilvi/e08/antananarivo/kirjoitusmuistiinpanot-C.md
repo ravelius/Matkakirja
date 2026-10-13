@@ -32,3 +32,44 @@ Lähdetallenteet, robots-todisteet, tarkistinlokit ja tiedosto-SHA:t: `sessio-72
 Madagascar Tourism -organisaation oma Antananarivo-sivu luettu tallenteesta `tourism-city.txt`. Se vahvistaa kaupungin aseman, yläkaupungin historiallisen luonteen ja Analakelyn kauppapaviljongit. Sen markkinointilukuja, eläinsuperlatiiveja, matka-aikoja ja selitystä ”tuhannen aarteen kaupungista” ei käytetty. Ravinala Airports -operaattorin sivu luettu: Antananarivon kansainvälisen lentoaseman toiminta vahvistuu.
 
 Lopullinen intro 974 merkkiä. Lopullinen alkuperäisen --lyhyt-tarkistimen ajo `tarkistus-lopullinen.txt`: **19 virhettä, 2 varoitusta, 0 kuvaa**, exit 1; virheet edelleen yksinomaan 19 puuttuvaa kuvatiedostoa. Ei tekstien tai rakenteen virheitä. Kartan määrä ja sää ovat yllä nimetyt kaksi varoitusta. Lopulliset SHA256:t `SHA256SUMS.txt`:ssä; ei commit-SHA:ta, koska Git-operaatiot kuuluvat pääsessiolle.
+
+
+## Task118 korjaus 13.10.2026
+Kaikki pelaajatekstikentät luettu ja sovellettu otoksen yleissäännöt. Lähdepohja, C-muistio sekä nykyiset Commons-lähdetiedot tarkistettu. Meta- ja täytelauseita korvattu kaupungin omilla faktoilla; vihjeet ja houkuttimet täsmennetty. Nykyiset kuvat, pisteet ja sää säilytetty; niiden puutteet ovat erillisiä portteja. Tuore mainin js/data-haku tehty ennen kirjoittamista. Ei Git, kuvia, pelikytkentää tai julkaisua.
+
+
+```text
+VIRHE antananarivo: kansi nosto 1: tiedosto puuttuu
+VIRHE antananarivo: kansi nosto 2: tiedosto puuttuu
+VIRHE antananarivo: kansi nosto 3: tiedosto puuttuu
+VIRHE antananarivo: kansi nosto 4: tiedosto puuttuu
+VIRHE antananarivo: matkailijalle.kuva: tiedosto puuttuu
+VIRHE antananarivo: opas jakso 1: tiedosto puuttuu
+VIRHE antananarivo: opas jakso 2: tiedosto puuttuu
+VIRHE antananarivo: opas jakso 3: tiedosto puuttuu
+VIRHE antananarivo: opas jakso 4: tiedosto puuttuu
+VIRHE antananarivo: opas jakso 5: tiedosto puuttuu
+VIRHE antananarivo: teemasivu historia nosto 1: tiedosto puuttuu
+VIRHE antananarivo: teemasivu historia nosto 2: tiedosto puuttuu
+VIRHE antananarivo: teemasivu historia nosto 3: tiedosto puuttuu
+VIRHE antananarivo: teemasivu historia nosto 4: tiedosto puuttuu
+== antananarivo: 14 virhettä, 3 varoitusta, 5 kuvaa
+YHTEENSÄ 1 kaupunkia: 14 virhettä, 3 varoitusta
+```
+SHA256 dad05295e6350861f4ab7ea1dc5e051e21d13ffe5866c0089a20ba1132812951
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS antananarivo: kansi nosto 2: teksti 422 mrk (440–660)
+VAROITUS antananarivo: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS antananarivo: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS antananarivo: kansi nosto 2: teksti 422 mrk (440–660)
+VAROITUS antananarivo: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS antananarivo: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

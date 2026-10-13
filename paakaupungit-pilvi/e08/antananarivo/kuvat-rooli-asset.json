@@ -3,7 +3,7 @@
   "era": "e08",
   "city": "antananarivo",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+  "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
   "assets": [
     {
       "era": "e08",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina.",
-        "lyhyt": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina."
+        "selite": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-TRAVELER-illustration-v1-20261012-11bbb765553e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina.",
-        "lyhyt": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina."
+        "selite": "Havainnekuva puusta ja tiilestä rakennusmateriaaleina."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "478b7dfb2752c4d18172101af224b800522c562f78201aa146aa795bf8b91c77",
+        "semanticContextSHA256": "4f3c25e5895ca1b12b8f207fa58e7ffd4de9eee404ca8a457b7c3befe462dfec",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -315,9 +315,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -336,17 +336,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "478b7dfb2752c4d18172101af224b800522c562f78201aa146aa795bf8b91c77",
+      "contextAfterSHA256": "4f3c25e5895ca1b12b8f207fa58e7ffd4de9eee404ca8a457b7c3befe462dfec",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "478b7dfb2752c4d18172101af224b800522c562f78201aa146aa795bf8b91c77",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "478b7dfb2752c4d18172101af224b800522c562f78201aa146aa795bf8b91c77",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "11bbb765553ec58842cbc042c96c0495e0c387e5deaff1256424c69fa1b09f3e",
+        "sameImageExportSHA256": "ebe21f4e3f0f1211edb3f55d4a928b417892a36da6ab05ece098dd0c1f51ad4b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -371,10 +392,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva jakarandan kukista ja lehdistä.",
-        "lyhyt": "Havainnekuva jakarandan kukista ja lehdistä."
+        "selite": "Havainnekuva jakarandan kukista ja lehdistä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -382,10 +403,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O3-illustration-v1-20261012-7e99148f4e48.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva jakarandan kukista ja lehdistä.",
-        "lyhyt": "Havainnekuva jakarandan kukista ja lehdistä."
+        "selite": "Havainnekuva jakarandan kukista ja lehdistä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -399,7 +420,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "3bd2a72ccf39b55dd3813f1e9aeb941dea49b6fc310d1eb398602f8af0e30bfa",
@@ -543,9 +564,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -564,17 +585,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "3bd2a72ccf39b55dd3813f1e9aeb941dea49b6fc310d1eb398602f8af0e30bfa",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "3bd2a72ccf39b55dd3813f1e9aeb941dea49b6fc310d1eb398602f8af0e30bfa",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "3bd2a72ccf39b55dd3813f1e9aeb941dea49b6fc310d1eb398602f8af0e30bfa",
+          "subjectTitle": "Anosy ja vanhat asuinkorttelit",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "7e99148f4e48c3062ef1db2e2b94d7453b7f9b5b0ee8cca05940d0032f59a4eb",
+        "sameImageExportSHA256": "0da62ad5e4a2e0cf5348ba3cbb5b55abe150af925e9b7d6bf9e91552b6a91cba",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -599,10 +641,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Mitä täällä syödään.",
-        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+        "selite": "Havainnekuva: Mitä täällä syödään."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -610,10 +652,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-O4-illustration-v1-20261012-5ddbd5d5bbe2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Mitä täällä syödään.",
-        "lyhyt": "Havainnekuva: Mitä täällä syödään."
+        "selite": "Havainnekuva: Mitä täällä syödään."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -627,10 +669,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "c667d6de427e8553a93cb67bddee5bd53bb004b27433492c40b39d506dcc3ce0",
+        "semanticContextSHA256": "57843b3a767eb94452f127494937538981cf12583a65f4d24bfdf3e798407af2",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -904,9 +946,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -925,17 +967,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "c667d6de427e8553a93cb67bddee5bd53bb004b27433492c40b39d506dcc3ce0",
+      "contextAfterSHA256": "57843b3a767eb94452f127494937538981cf12583a65f4d24bfdf3e798407af2",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "c667d6de427e8553a93cb67bddee5bd53bb004b27433492c40b39d506dcc3ce0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "c667d6de427e8553a93cb67bddee5bd53bb004b27433492c40b39d506dcc3ce0",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "5ddbd5d5bbe259eb13d40850d92e939d1d8d1802f268d20a0c7fb838ac556dc6",
+        "sameImageExportSHA256": "d9285a7954da1faba6deb349a889740e81427ef462447e77b9bd83c3b3d017ca",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -957,10 +1020,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
-        "lyhyt": "Havainnekuva torin valkoisen päivänvarjon materiaalista."
+        "selite": "Havainnekuva torin valkoisen päivänvarjon materiaalista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -968,10 +1031,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-K1-illustration-v1-20261012-8ff222a4147c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torin valkoisen päivänvarjon materiaalista.",
-        "lyhyt": "Havainnekuva torin valkoisen päivänvarjon materiaalista."
+        "selite": "Havainnekuva torin valkoisen päivänvarjon materiaalista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -985,7 +1048,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
         "semanticContextSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
@@ -1129,9 +1192,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1150,17 +1213,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "targetAfterSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
       "contextAfterSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
+        "contextAfterSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
+          "semanticContextSHA256": "e12c7218f7f96beb38d791abfd33940065fe2bad7c6ecce7686fc37f92661517",
+          "subjectTitle": "Perjantai muutti osoitetta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "8ff222a4147cfd6fa2758e38f1b4a97b34307a3a0d5eb2eff2828db3a39e1e97",
+        "sameImageExportSHA256": "dc36dbc6e3279f4b6ed664c40886ca7262439690edceafa267d2bd6fd4901f1f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -1182,10 +1266,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Kivi kuului aluksi vainajille.",
-        "lyhyt": "Havainnekuva: Kivi kuului aluksi vainajille."
+        "selite": "Havainnekuva: Kivi kuului aluksi vainajille."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1193,10 +1277,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L1-illustration-v1-20261012-ef177889303a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Kivi kuului aluksi vainajille.",
-        "lyhyt": "Havainnekuva: Kivi kuului aluksi vainajille."
+        "selite": "Havainnekuva: Kivi kuului aluksi vainajille."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1210,7 +1294,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
         "semanticContextSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
@@ -1487,9 +1571,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1508,17 +1592,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "targetAfterSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
       "contextAfterSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
+        "contextAfterSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
+          "semanticContextSHA256": "7680619c36cad7a005a93b2e61946f6c23877c2c1e4f26423789f0cd3cd3f7a1",
+          "subjectTitle": "Kivi kuului aluksi vainajille",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "ef177889303a2f224584d8575693659db72a6bb99f67b059927084d253ec563c",
+        "sameImageExportSHA256": "003d811b370358e3cbd28627212875391e7d150ec6e92c9383c9dc26cf3fe0df",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -1540,10 +1645,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Veranta kertoo vaikutteiden matkasta.",
-        "lyhyt": "Havainnekuva: Veranta kertoo vaikutteiden matkasta."
+        "selite": "Havainnekuva: Veranta kertoo vaikutteiden matkasta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1551,10 +1656,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L2-illustration-v1-20261012-7cee3eb10673.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Veranta kertoo vaikutteiden matkasta.",
-        "lyhyt": "Havainnekuva: Veranta kertoo vaikutteiden matkasta."
+        "selite": "Havainnekuva: Veranta kertoo vaikutteiden matkasta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1568,7 +1673,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
         "semanticContextSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
@@ -1845,9 +1950,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1866,17 +1971,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "targetAfterSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
       "contextAfterSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
+        "contextAfterSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
+          "semanticContextSHA256": "c3a0886069f4269e5fcc8d018da18d58f4a57dbe55c4737649511b2c95554dc3",
+          "subjectTitle": "Veranta kertoo vaikutteiden matkasta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "7cee3eb10673f799acb3e9d24657ab37bd429199b42f6be1ce5f333286689682",
+        "sameImageExportSHA256": "8a4a11e47b2992f2d7e63aa5cd2f39ae3b8f4ebfc6f3e47e0d13a401b8682b1d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -1898,10 +2024,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Koulut tulivat käsityöläisten mukana.",
-        "lyhyt": "Havainnekuva: Koulut tulivat käsityöläisten mukana."
+        "selite": "Havainnekuva: Koulut tulivat käsityöläisten mukana."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1909,10 +2035,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/antananarivo/e08-antananarivo-L4-illustration-v1-20261012-324d681be439.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Koulut tulivat käsityöläisten mukana.",
-        "lyhyt": "Havainnekuva: Koulut tulivat käsityöläisten mukana."
+        "selite": "Havainnekuva: Koulut tulivat käsityöläisten mukana."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1926,7 +2052,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
         "semanticContextSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
@@ -2203,9 +2329,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2224,17 +2350,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "targetAfterSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
       "contextAfterSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
+        "contextAfterSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
+          "semanticContextSHA256": "d72212096727b0711a2bfff0fc45307ad32ab8da07b9a3747dd6fa14adf044f6",
+          "subjectTitle": "Koulut tulivat käsityöläisten mukana",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "324d681be4396b457370ff1bec0866b76d7d7ca94f3970e866a3cc49f74021a0",
+        "sameImageExportSHA256": "5771a6764debe7f69d007840d17487d07bc8d8962f365c4b7fe2ad0a3ef6868f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -2253,23 +2400,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/photo-16a8ea20880a8414989e.jpg",
         "suora": true,
         "lahde": "Raveloaritiana Mamisoa, Commons (CC0)",
-        "selite": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
-        "lyhyt": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "selite": "Antananarivon ympäristön viljelyalueita ja maaseutuasutusta.",
+        "lyhyt": "Viljelyä Antananarivon ympäristössä.",
         "tiedosto": "Ambanivohitra ao Antananarivo.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Raveloaritiana Mamisoa, Commons (CC0)",
-        "selite": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
-        "lyhyt": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "selite": "Antananarivon ympäristön viljelyalueita ja maaseutuasutusta.",
+        "lyhyt": "Viljelyä Antananarivon ympäristössä.",
         "tiedosto": "Ambanivohitra ao Antananarivo.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/photo-16a8ea20880a8414989e.jpg",
         "suora": true,
         "lahde": "Raveloaritiana Mamisoa, Commons (CC0)",
-        "selite": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
-        "lyhyt": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "selite": "Antananarivon ympäristön viljelyalueita ja maaseutuasutusta.",
+        "lyhyt": "Viljelyä Antananarivon ympäristössä.",
         "tiedosto": "Ambanivohitra ao Antananarivo.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2284,10 +2431,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
-        "semanticContextSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
+        "targetBeforeSHA256": "4a42cdcd5228154f6ea662fbb6efce9540baffc16d10ec16d7ef94d64ccd4f32",
+        "semanticContextSHA256": "4a42cdcd5228154f6ea662fbb6efce9540baffc16d10ec16d7ef94d64ccd4f32",
         "subjectTitle": "antananarivo — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2464,9 +2611,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Ambanivohitra ao Antananarivo.jpg",
-        "lahde": "Raveloaritiana Mamisoa, Commons (CC0)",
-        "selite": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
-        "lyhyt": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä."
+        "lyhyt": "Viljelyä Antananarivon ympäristössä.",
+        "selite": "Antananarivon ympäristön viljelyalueita ja maaseutuasutusta.",
+        "lahde": "Raveloaritiana Mamisoa, Commons (CC0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2485,23 +2632,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Raveloaritiana Mamisoa, Commons (CC0)",
-        "selite": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
-        "lyhyt": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+        "selite": "Antananarivon ympäristön viljelyalueita ja maaseutuasutusta.",
+        "lyhyt": "Viljelyä Antananarivon ympäristössä.",
         "tiedosto": "Ambanivohitra ao Antananarivo.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
-      "targetAfterSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
-      "contextAfterSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "targetAfterSHA256": "4a42cdcd5228154f6ea662fbb6efce9540baffc16d10ec16d7ef94d64ccd4f32",
+      "contextAfterSHA256": "4a42cdcd5228154f6ea662fbb6efce9540baffc16d10ec16d7ef94d64ccd4f32",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
+        "contextAfterSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
+          "semanticContextSHA256": "817b1bc59dc27a3934558b59b8f8be98e8722b86bf29bae9879055efd74cc052",
+          "subjectTitle": "antananarivo — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+        "sameImageExportSHA256": "16a8ea20880a8414989e7eb19eeaf2f3664d9d8411b5561da04f5fc9cecad035",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -2523,23 +2691,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/c1-4ee143522131beeb2727.jpg",
         "suora": true,
         "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
-        "selite": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
-        "lyhyt": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
+        "selite": "Antananarivon kaupunkialue ja sitä ympäröivät viljelymaat vuonna 2017 otetussa satelliittikuvassa.",
+        "lyhyt": "Antananarivo Sentinel-2-satelliitista.",
         "tiedosto": "Antananarivo in Madagascar ESA23267313.jpeg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
-        "selite": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
-        "lyhyt": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
+        "selite": "Antananarivon kaupunkialue ja sitä ympäröivät viljelymaat vuonna 2017 otetussa satelliittikuvassa.",
+        "lyhyt": "Antananarivo Sentinel-2-satelliitista.",
         "tiedosto": "Antananarivo in Madagascar ESA23267313.jpeg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/c1-4ee143522131beeb2727.jpg",
         "suora": true,
         "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
-        "selite": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
-        "lyhyt": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
+        "selite": "Antananarivon kaupunkialue ja sitä ympäröivät viljelymaat vuonna 2017 otetussa satelliittikuvassa.",
+        "lyhyt": "Antananarivo Sentinel-2-satelliitista.",
         "tiedosto": "Antananarivo in Madagascar ESA23267313.jpeg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2554,10 +2722,10 @@
         3765
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
-        "semanticContextSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
+        "targetBeforeSHA256": "f5bee518ea5127b601553c7cd72211a62ba8376c80c12fedd30e0d7da00ced36",
+        "semanticContextSHA256": "f5bee518ea5127b601553c7cd72211a62ba8376c80c12fedd30e0d7da00ced36",
         "subjectTitle": "Antananarivo",
         "targetState": "existing-target"
       },
@@ -2782,9 +2950,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Antananarivo in Madagascar ESA23267313.jpeg",
-        "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
-        "selite": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
-        "lyhyt": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017."
+        "lyhyt": "Antananarivo Sentinel-2-satelliitista.",
+        "selite": "Antananarivon kaupunkialue ja sitä ympäröivät viljelymaat vuonna 2017 otetussa satelliittikuvassa.",
+        "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2803,23 +2971,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
-        "selite": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
-        "lyhyt": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
+        "selite": "Antananarivon kaupunkialue ja sitä ympäröivät viljelymaat vuonna 2017 otetussa satelliittikuvassa.",
+        "lyhyt": "Antananarivo Sentinel-2-satelliitista.",
         "tiedosto": "Antananarivo in Madagascar ESA23267313.jpeg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
-      "targetAfterSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
-      "contextAfterSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "targetAfterSHA256": "f5bee518ea5127b601553c7cd72211a62ba8376c80c12fedd30e0d7da00ced36",
+      "contextAfterSHA256": "f5bee518ea5127b601553c7cd72211a62ba8376c80c12fedd30e0d7da00ced36",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
+        "contextAfterSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
+          "semanticContextSHA256": "1c443fe66abbe157315c18822a07a2b29451d01258fb47d9fb6ba6c1f0e74906",
+          "subjectTitle": "Antananarivo",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "4ee143522131beeb27279e0804efd71d1fddc873b1d36cf7db014d02143c167a",
+        "sameImageExportSHA256": "4ee143522131beeb27279e0804efd71d1fddc873b1d36cf7db014d02143c167a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -2841,23 +3030,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/c2-544682655e9263422cbe.jpg",
         "suora": true,
         "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
-        "lyhyt": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
+        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
+        "lyhyt": "Antananarivon kaupunkinäkymää.",
         "tiedosto": "Antananarivo 2013 1.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
-        "lyhyt": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
+        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
+        "lyhyt": "Antananarivon kaupunkinäkymää.",
         "tiedosto": "Antananarivo 2013 1.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/c2-544682655e9263422cbe.jpg",
         "suora": true,
         "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
-        "lyhyt": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
+        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
+        "lyhyt": "Antananarivon kaupunkinäkymää.",
         "tiedosto": "Antananarivo 2013 1.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2872,10 +3061,10 @@
         3216
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
-        "semanticContextSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
+        "targetBeforeSHA256": "9710fc498dbfdc1d17115629da52ebb13856ccce156f57ad3ccb2018086f6939",
+        "semanticContextSHA256": "9710fc498dbfdc1d17115629da52ebb13856ccce156f57ad3ccb2018086f6939",
         "subjectTitle": "Antananarivo",
         "targetState": "existing-target"
       },
@@ -3065,9 +3254,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Antananarivo 2013 1.jpg",
-        "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
-        "lyhyt": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013."
+        "lyhyt": "Antananarivon kaupunkinäkymää.",
+        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
+        "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3086,23 +3275,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
-        "lyhyt": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
+        "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
+        "lyhyt": "Antananarivon kaupunkinäkymää.",
         "tiedosto": "Antananarivo 2013 1.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
-      "targetAfterSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
-      "contextAfterSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "targetAfterSHA256": "9710fc498dbfdc1d17115629da52ebb13856ccce156f57ad3ccb2018086f6939",
+      "contextAfterSHA256": "9710fc498dbfdc1d17115629da52ebb13856ccce156f57ad3ccb2018086f6939",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
+        "contextAfterSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
+          "semanticContextSHA256": "78e4a0c352b298b753666004f7452f50cbd8db82270b462e79fde77312e60154",
+          "subjectTitle": "Antananarivo",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "544682655e9263422cbea1f6d30cdaf562e765738bba8d63a80fc22e6bf04a92",
+        "sameImageExportSHA256": "544682655e9263422cbea1f6d30cdaf562e765738bba8d63a80fc22e6bf04a92",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -3124,23 +3334,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/c3-f5681bbb8796f5395ea1.jpg",
         "suora": true,
         "lahde": "Robin Taylor (robin.elaine) from Washington, DC, USA, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
-        "lyhyt": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
+        "selite": "Asutusta ja kasvillisuutta Antananarivon kukkulamaisemassa vuonna 2004.",
+        "lyhyt": "Antananarivon kukkuloiden asutusta.",
         "tiedosto": "Antananarivo (atamari).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Robin Taylor (robin.elaine) from Washington, DC, USA, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
-        "lyhyt": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
+        "selite": "Asutusta ja kasvillisuutta Antananarivon kukkulamaisemassa vuonna 2004.",
+        "lyhyt": "Antananarivon kukkuloiden asutusta.",
         "tiedosto": "Antananarivo (atamari).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/c3-f5681bbb8796f5395ea1.jpg",
         "suora": true,
         "lahde": "Robin Taylor (robin.elaine) from Washington, DC, USA, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
-        "lyhyt": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
+        "selite": "Asutusta ja kasvillisuutta Antananarivon kukkulamaisemassa vuonna 2004.",
+        "lyhyt": "Antananarivon kukkuloiden asutusta.",
         "tiedosto": "Antananarivo (atamari).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3155,10 +3365,10 @@
         1200
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
-        "semanticContextSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
+        "targetBeforeSHA256": "c4a4cad2a377ca22361f5618d12e6dbdd62b4f66b65ccfd2555a5a74cde10607",
+        "semanticContextSHA256": "c4a4cad2a377ca22361f5618d12e6dbdd62b4f66b65ccfd2555a5a74cde10607",
         "subjectTitle": "Antananarivo",
         "targetState": "existing-target"
       },
@@ -3350,9 +3560,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Antananarivo (atamari).jpg",
-        "lahde": "Robin Taylor (robin.elaine) from Washington, DC, USA, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
-        "lyhyt": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004."
+        "lyhyt": "Antananarivon kukkuloiden asutusta.",
+        "selite": "Asutusta ja kasvillisuutta Antananarivon kukkulamaisemassa vuonna 2004.",
+        "lahde": "Robin Taylor (robin.elaine) from Washington, DC, USA, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3371,23 +3581,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Robin Taylor (robin.elaine) from Washington, DC, USA, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
-        "lyhyt": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
+        "selite": "Asutusta ja kasvillisuutta Antananarivon kukkulamaisemassa vuonna 2004.",
+        "lyhyt": "Antananarivon kukkuloiden asutusta.",
         "tiedosto": "Antananarivo (atamari).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
-      "targetAfterSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
-      "contextAfterSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "targetAfterSHA256": "c4a4cad2a377ca22361f5618d12e6dbdd62b4f66b65ccfd2555a5a74cde10607",
+      "contextAfterSHA256": "c4a4cad2a377ca22361f5618d12e6dbdd62b4f66b65ccfd2555a5a74cde10607",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
+        "contextAfterSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
+          "semanticContextSHA256": "727f5c3845194b099c6b240da50a593e531765712102c4bc9bfa777514475d18",
+          "subjectTitle": "Antananarivo",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "f5681bbb8796f5395ea18e8f028968c2f6fc9a1ca4883fba3b22e1a980f84923",
+        "sameImageExportSHA256": "f5681bbb8796f5395ea18e8f028968c2f6fc9a1ca4883fba3b22e1a980f84923",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -3409,23 +3640,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg",
         "suora": true,
         "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Anosy-järven rantaa Antananarivossa, 2019.",
-        "lyhyt": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
+        "lyhyt": "Anosy-järven rantaa.",
         "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Anosy-järven rantaa Antananarivossa, 2019.",
-        "lyhyt": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
+        "lyhyt": "Anosy-järven rantaa.",
         "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg",
         "suora": true,
         "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Anosy-järven rantaa Antananarivossa, 2019.",
-        "lyhyt": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
+        "lyhyt": "Anosy-järven rantaa.",
         "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3440,10 +3671,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/antananarivo/sisalto.json",
-      "sourceContentSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+      "sourceContentSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "49163db1c788a209883607c0ed4401632dbb2f22df6b0412f500ae5f2cb3fbd5",
-        "semanticContextSHA256": "a88ac8717e75369d72c94c5fb9c947a66ce3a7c09a4b5a66dea8e4601be3c0f3",
+        "targetBeforeSHA256": "142d8758042f4890d460168b391d77062e5d4e4f5ef7ab507a65d6d3da622080",
+        "semanticContextSHA256": "cb05be365691cbf7686de7c98f76dfa45bff94cb5ec03775acae7b1b619c2167",
         "subjectTitle": "Anosy-järvi",
         "targetState": "existing-target"
       },
@@ -3624,9 +3855,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg",
-        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Anosy-järven rantaa Antananarivossa, 2019.",
-        "lyhyt": "Anosy-järven rantaa Antananarivossa, 2019."
+        "lyhyt": "Anosy-järven rantaa.",
+        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
+        "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3645,28 +3876,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Anosy-järven rantaa Antananarivossa, 2019.",
-        "lyhyt": "Anosy-järven rantaa Antananarivossa, 2019.",
+        "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
+        "lyhyt": "Anosy-järven rantaa.",
         "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
-      "targetAfterSHA256": "49163db1c788a209883607c0ed4401632dbb2f22df6b0412f500ae5f2cb3fbd5",
-      "contextAfterSHA256": "a88ac8717e75369d72c94c5fb9c947a66ce3a7c09a4b5a66dea8e4601be3c0f3",
+      "sourceContentAfterSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+      "targetAfterSHA256": "142d8758042f4890d460168b391d77062e5d4e4f5ef7ab507a65d6d3da622080",
+      "contextAfterSHA256": "cb05be365691cbf7686de7c98f76dfa45bff94cb5ec03775acae7b1b619c2167",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "7a4d5fa01aec14637573d2a248aade78ed1939ca47659a70f1924ad1de3aaf17",
+        "targetAfterSHA256": "49163db1c788a209883607c0ed4401632dbb2f22df6b0412f500ae5f2cb3fbd5",
+        "contextAfterSHA256": "a88ac8717e75369d72c94c5fb9c947a66ce3a7c09a4b5a66dea8e4601be3c0f3",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "49163db1c788a209883607c0ed4401632dbb2f22df6b0412f500ae5f2cb3fbd5",
+          "semanticContextSHA256": "a88ac8717e75369d72c94c5fb9c947a66ce3a7c09a4b5a66dea8e4601be3c0f3",
+          "subjectTitle": "Anosy-järvi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "9f6e4a42a4c1bf17b635a090122cd8dad52e523b4381d3da887add80ccee287f",
+        "sameImageNativeSHA256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+        "sameImageExportSHA256": "339e419e9c7f59e3e985d682eb669d36a64e45336a190e872fff1d70cc905c87",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e08/antananarivo/6caf248e0fd56038004f58bab5d4db078be7857ccb3489f0adb52b3fb16d364e.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.303700+00:00"
 }

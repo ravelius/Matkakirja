@@ -36,9 +36,9 @@
       "q": "Mitä Zoma-perjantaitorin kauppiaille tehtiin kaupungin muuttuessa?",
       "options": [
         "Heidät siirrettiin eri alueille",
-        "Heille rakennettiin yksi satama",
-        "Heidät koottiin rautatiejunaan",
-        "Heille varattiin kuninkaallinen mäki"
+        "Heidät koottiin yhteen kauppahalliin",
+        "Heidät sijoitettiin aseman pihaan",
+        "Heidät siirrettiin järven rantaan"
       ],
       "correct": 0,
       "level": 3,
@@ -50,13 +50,13 @@
       "q": "Mihin tiilisten trano gasy -talojen edessä usein törmää?",
       "options": [
         "Puiseen verantaan",
-        "Lasiseen kupoliin",
-        "Kiviseen nostosiltaan",
-        "Maanalaiseen atriumiin"
+        "Kiviseen holvikaareen",
+        "Lasitettuun parvekkeeseen",
+        "Pylväskäytävään"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Talon julkisivuun kuuluu katettu ulkotila.",
+      "hint": "Taloissa yhdistyy paikallisia ja ulkomailta tulleita rakennusvaikutteita.",
       "fact": "Trano gasy -talon tunnuspiirteisiin kuuluu puinen veranta.",
       "source": "https://en.wikipedia.org/wiki/Antananarivo"
     },
@@ -64,13 +64,13 @@
       "q": "Mihin Andohalon aukiota käytettiin Merinan kuningaskunnan aikana?",
       "options": [
         "Hallitsijoiden julkisiin puheisiin",
-        "Merilaivojen lastaukseen",
-        "Kaukojunien lähtöasemaksi",
-        "Lentokoneiden kokoamiseen"
+        "Viikoittaisen torin pitämiseen",
+        "Käsityöpajojen yhteiseksi pihaksi",
+        "Karavaanien majoituspaikaksi"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Paikan tehtävä liittyi siihen, miten yhteisiä asioita ilmoitettiin.",
+      "hint": "Aukio sijaitsi kuninkaallisen kaupungin portin ulkopuolella.",
       "fact": "Merinan kuninkaat ja kuningattaret esittivät Andohalossa julkisia puheita ja ilmoituksia.",
       "source": "https://en.wikipedia.org/wiki/Antananarivo"
     },
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Ambanivohitra ao Antananarivo.jpg",
-    "lyhyt": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
-    "selite": "Viljelyä ja maaseutuasutusta Antananarivon ympäristössä.",
+    "lyhyt": "Viljelyä Antananarivon ympäristössä.",
+    "selite": "Antananarivon ympäristön viljelyalueita ja maaseutuasutusta.",
     "lahde": "Raveloaritiana Mamisoa, Commons (CC0)"
   },
   "kaupunkilehti": [
@@ -108,20 +108,20 @@
       "kansikuvat": [
         {
           "tiedosto": "Antananarivo in Madagascar ESA23267313.jpeg",
-          "lyhyt": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
-          "selite": "Antananarivo ja sitä ympäröiviä viljelyalueita Sentinel-2-satelliitista, 2017.",
+          "lyhyt": "Antananarivo Sentinel-2-satelliitista.",
+          "selite": "Antananarivon kaupunkialue ja sitä ympäröivät viljelymaat vuonna 2017 otetussa satelliittikuvassa.",
           "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)"
         },
         {
           "tiedosto": "Antananarivo 2013 1.jpg",
-          "lyhyt": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
-          "selite": "Antananarivon laaja kaupunkinäkymä Rovan suunnasta, 2013.",
+          "lyhyt": "Antananarivon kaupunkinäkymää.",
+          "selite": "Rovan suunnasta avautuva laaja näkymä Antananarivoon vuonna 2013 otetussa kuvassa.",
           "lahde": "Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Antananarivo (atamari).jpg",
-          "lyhyt": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
-          "selite": "Antananarivon asutusta ja kasvillisuutta kukkulamaisemassa, 2004.",
+          "lyhyt": "Antananarivon kukkuloiden asutusta.",
+          "selite": "Asutusta ja kasvillisuutta Antananarivon kukkulamaisemassa vuonna 2004.",
           "lahde": "Robin Taylor (robin.elaine) from Washington, DC, USA, Wikimedia Commons (CC BY 2.0)"
         }
       ],
@@ -136,8 +136,8 @@
           "lahde": ""
         },
         {
-          "otsikko": "Asema, josta ei kannata päätellä aikataulua",
-          "teksti": "Soaranon rautatieasema on Avenue de l’Indépendancen päässä, aivan kaupungin kaupallisen keskustan tuntumassa. Sen taakse kuuluu rautatiehistoriaa: Antananarivo yhdistettiin radalla itärannikon Toamasinaan. Asemarakennuksessa on nykyään pieni kauppakeskus. Matkustajajunaliikenne on ollut viime vuosina vähäistä tai olematonta, joten junan lähtö pitää selvittää erikseen. Rakennuksen osoite on yhä sama, vaikka matkalipun rinnalle tai tilalle on tullut ostoskassi.",
+          "otsikko": "Asemarakennukseen tuli kauppoja",
+          "teksti": "Soaranon rautatieasema on Avenue de l’Indépendancen päässä, aivan kaupungin kaupallisen keskustan tuntumassa. Sen taakse kuuluu rautatiehistoriaa: Antananarivo yhdistettiin radalla itärannikon Toamasinaan. Asemarakennuksessa on nykyään pieni kauppakeskus. Rautatie yhdisti sisämaan ylängön Intian valtameren rannikon satamakaupunkiin. Aseman halli on sittemmin saanut kauppakeskuksen tehtävän vanhan ratayhteyden rinnalle.",
           "wiki": "Antananarivo",
           "tiedosto": "",
           "lyhyt": "",
@@ -179,7 +179,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Ivato on Antananarivon lentoasema. Keskustan ruuhkat voivat pidentää matkaa, joten sovittu lentokenttäkuljetus helpottaa saapumista. Kaupungissa kuljetaan taksilla, paikallisbusseilla ja kävellen. Takseissa ei yleensä ole mittaria: sovi hinta ennen lähtöä. Soaranon aseman perusteella ei kannata suunnitella jatkomatkaa junalla, vaan liikenteen tilanne on selvitettävä erikseen.",
+              "teksti": "Ivato on Antananarivon lentoasema. Keskustan ruuhkat voivat pidentää matkaa, joten sovittu lentokenttäkuljetus helpottaa saapumista. Kaupungissa kuljetaan taksilla, paikallisbusseilla ja kävellen. Takseissa ei yleensä ole mittaria: sovi hinta ennen lähtöä. Avenue de l’Indépendance päättyy Soaranon vanhan aseman luo.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Antananarivossa voi etsiä malagassikeittiötä tai ranskalaisia vaikutteita yhdistelevän ravintolan. Matkaoppaassa on myös kasvisruokaa tarjoavia paikkoja, joten aterian ei tarvitse aina perustua lihaan. Isorakan taloja on muutettu ravintoloiksi ja majataloiksi; ruokailuun voi siten yhdistää tutustumisen asuinkortteliin. Juomavedeksi kannattaa valita pullotettu vesi.",
+              "teksti": "Antananarivossa voi etsiä malagassikeittiötä tai ranskalaisia vaikutteita yhdistelevän ravintolan. Kaupungissa on myös kasvisruokaa tarjoavia ravintoloita. Isorakan taloja on muutettu ravintoloiksi ja majataloiksi; ruokailuun voi siten yhdistää tutustumisen asuinkortteliin. Juomavedeksi kannattaa valita pullotettu vesi.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -359,8 +359,8 @@
       "kuvat": [
         {
           "tiedosto": "Lac anosy Antananarivo 2019-10-02 8.jpg",
-          "lyhyt": "Anosy-järven rantaa Antananarivossa, 2019.",
-          "selite": "Anosy-järven rantaa Antananarivossa, 2019.",
+          "lyhyt": "Anosy-järven rantaa.",
+          "selite": "Antananarivon Anosy-järven ranta 2. lokakuuta 2019 otetussa kuvassa.",
           "lahde": "Z thomas, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
@@ -371,7 +371,7 @@
   "ehdotukset": {
     "lentoasema": "Ivato (TNR)",
     "huomiot": [
-      "C-tekstiluonnos, kartta partial: vain Anosy-järven oma WP-piste varmennettu.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 5 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Kuvat odottavat erillistä kuvaputkea; kaikkien kuvaroolien neljä kenttää on jätetty tyhjiksi.",
       "Sääpoiminnan 48/48-primäärivarmennus avoin; saatiedot:null, saa.json ei muutettu.",
       "Anosyn saaren muistomerkki ei kuulu karttakohteeseen eikä kuva-aiheeseen.",

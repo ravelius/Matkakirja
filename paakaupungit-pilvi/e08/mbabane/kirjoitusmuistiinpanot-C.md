@@ -15,3 +15,46 @@ Faktapoikkeamat: hallinnon siirtovuosi E1/E4 ristiriitainen, joten 1900-luvun al
 E12:n merkitty polku, oppaat, kasvillisuus ja märän kallion liukkaus sekä E13:n CAS-ohjelma luettiin itse tallennetuista primäärisivuista. UM:n erityisen varovaisuuden ja pimeällä liikkumisen välttämisen ohje näkyy lyhyesti oppaassa, ilman nykykonflikti-/rikollisuus-/politiikkatarinaa.
 
 A/C on saman kirjoittajan työ. Riippumaton D/E/F, kuvat, kartan täydennys, sääauditointi, hyväksyntä, pelikytkentä ja julkaisu avoinna. Ei Git-operaatioita eikä pelitiedostojen muutoksia.
+
+
+## Task 118 — korjauskierros 13.10.2026
+
+Korjauslistan nimetyt tekstilöydökset käsitelty. Lähdepohja ja tallennetut /wiki/-sivut luettu. Tuore origin/main haettu erän omaan klooniin; kaupungin/aiheiden js/data-päällekkäisyyshaku tehty. Koneellisen tarkistuksen kuva-, kartta- ja sääpuutteet ovat erillisiä avoimia portteja. Nykyiset kuvatiedostot ja muut kuin tekstikentät säilytetty. Kuvatekstien lyhyt ja selite erotettu; käytetyt Commons-kuvat ja tallennetut lähde-/pikselitodisteet tarkistettu. Ei generointia eikä pelikytkentää.
+
+Paikallinen tarkistin (`--lyhyt`, ei verkkokierrosta):
+
+```text
+VIRHE mbabane: kansikuva 2: tiedosto puuttuu
+VIRHE mbabane: kansikuva 3: tiedosto puuttuu
+VIRHE mbabane: kansi nosto 1: tiedosto puuttuu
+VIRHE mbabane: kansi nosto 2: tiedosto puuttuu
+VIRHE mbabane: kansi nosto 3: tiedosto puuttuu
+VIRHE mbabane: kansi nosto 4: tiedosto puuttuu
+VIRHE mbabane: matkailijalle.kuva: tiedosto puuttuu
+VIRHE mbabane: opas jakso 1: tiedosto puuttuu
+VIRHE mbabane: opas jakso 2: tiedosto puuttuu
+VIRHE mbabane: opas jakso 3: tiedosto puuttuu
+VIRHE mbabane: opas jakso 4: tiedosto puuttuu
+VIRHE mbabane: opas jakso 5: tiedosto puuttuu
+VIRHE mbabane: teemasivu luonto nosto 1: tiedosto puuttuu
+VIRHE mbabane: teemasivu luonto nosto 2: tiedosto puuttuu
+VIRHE mbabane: teemasivu luonto nosto 3: tiedosto puuttuu
+VIRHE mbabane: teemasivu luonto nosto 4: tiedosto puuttuu
+== mbabane: 16 virhettä, 2 varoitusta, 3 kuvaa
+YHTEENSÄ 1 kaupunkia: 16 virhettä, 2 varoitusta
+```
+SHA256: 72a1425ed4c07e467b9c59d9e2b248078dda579b6fd356f60564ea96117a67a2
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 643c0fac087c719eac8d936ad359bc393138769c70453ea76d212f1f804fefef. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS mbabane: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS mbabane: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 643c0fac087c719eac8d936ad359bc393138769c70453ea76d212f1f804fefef. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS mbabane: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS mbabane: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

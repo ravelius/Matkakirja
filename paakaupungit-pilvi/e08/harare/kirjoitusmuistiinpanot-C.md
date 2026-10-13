@@ -75,3 +75,40 @@ Todisteet: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex
 ## C:n viimeistely
 
 Pelaajatekstin tekniset tarkistusselostukset poistettu kohdejutuista. A:n 1873-rajoja noudatetaan ilman rakennusten ulkoasun tai jokiuoman rekonstruktiota. Konevaroitusten täydet rivit tallennettu paikalliseen tarkistuslokiin.
+
+
+## Task118 korjaus 13.10.2026
+Kaikki pelaajatekstikentät luettu ja sovellettu otoksen yleissäännöt. Lähdepohja, C-muistio sekä nykyiset Commons-lähdetiedot tarkistettu. Meta- ja täytelauseita korvattu kaupungin omilla faktoilla; vihjeet ja houkuttimet täsmennetty. Nykyiset kuvat, pisteet ja sää säilytetty; niiden puutteet ovat erillisiä portteja. Tuore mainin js/data-haku tehty ennen kirjoittamista. Ei Git, kuvia, pelikytkentää tai julkaisua.
+
+
+```text
+VIRHE harare: kansikuva 3: tiedosto puuttuu
+VIRHE harare: kansi nosto 1: tiedosto puuttuu
+VIRHE harare: kansi nosto 2: tiedosto puuttuu
+VIRHE harare: kansi nosto 3: tiedosto puuttuu
+VIRHE harare: kansi nosto 4: tiedosto puuttuu
+VIRHE harare: matkailijalle.kuva: tiedosto puuttuu
+VIRHE harare: opas jakso 1: tiedosto puuttuu
+VIRHE harare: opas jakso 2: tiedosto puuttuu
+VIRHE harare: opas jakso 3: tiedosto puuttuu
+VIRHE harare: opas jakso 4: tiedosto puuttuu
+VIRHE harare: opas jakso 5: tiedosto puuttuu
+VIRHE harare: teemasivu luonto nosto 1: tiedosto puuttuu
+VIRHE harare: teemasivu luonto nosto 4: tiedosto puuttuu
+VIRHE harare: kohteita 0 (1–15)
+== harare: 14 virhettä, 1 varoitusta, 5 kuvaa
+YHTEENSÄ 1 kaupunkia: 14 virhettä, 1 varoitusta
+```
+SHA256 e856f726c3ba57af08e16b546e1f927891e0a23b871644f8ac5e33f1b8981ca6
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 93653af328fb40ff8c28db2a49d0a75661466e2b4f0fac7b38702350003049b3. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS harare: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 93653af328fb40ff8c28db2a49d0a75661466e2b4f0fac7b38702350003049b3. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS harare: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

@@ -47,16 +47,16 @@
       "source": "https://en.wikipedia.org/wiki/Mbare_Musika"
     },
     {
-      "q": "Mitkä erilaiset kasvikokoelmat kuuluvat Alexandra Parkin kokonaisuuteen?",
+      "q": "Mikä kokoelma säilyttää kasvinäytteitä Hararen kasvitieteellisen puutarhan rinnalla?",
       "options": [
-        "Puutarha ja herbaario",
-        "Kirjasto ja kuva-arkisto",
-        "Siemenpankki ja akvaario",
-        "Museo ja tähtitorni"
+        "Kansallinen herbaario",
+        "Mukuvisin metsäalue",
+        "Puutarhan taimitarha",
+        "Mbaren kasvitori"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Toisessa kokoelmassa kasvit kasvavat, toisessa säilytetään näytteitä.",
+      "hint": "Elävä kasvi ja säilytetty näyte palvelevat eri tarkoituksia.",
       "fact": "Kansallisen kasvitieteellisen puutarhan yhteydessä on herbaario.",
       "source": "https://en.wikipedia.org/wiki/National_Botanic_Garden_(Zimbabwe)"
     },
@@ -70,7 +70,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Lajin kotiseutu on Atlantin toisella puolella.",
+      "hint": "Sinijakarandaa on istutettu kaupunkien koristepuuksi myös alkuperäalueensa ulkopuolelle.",
       "fact": "Jacaranda mimosifolia on Etelä-Amerikasta peräisin oleva koristepuu.",
       "source": "https://en.wikipedia.org/wiki/Jacaranda_mimosifolia"
     },
@@ -78,9 +78,9 @@
       "q": "Miten kansallisarkiston suullisen historian ohjelma täydentää aineistoja?",
       "options": [
         "Keräämällä ihmisten haastatteluja",
-        "Laskemalla markkinoiden myyntimääriä",
-        "Mittaamalla puutarhan sateita",
-        "Luetteloimalla teatterin istuimia"
+        "Digitoinnilla vanhoista asiakirjoista",
+        "Luetteloimalla sanomalehtiä",
+        "Kokoamalla viranomaisraportteja"
       ],
       "correct": 0,
       "level": 3,
@@ -92,12 +92,12 @@
   "tiedot": [
     "Hararen kansallisarkistossa menneisyyden aineisto voi olla tekstin lisäksi ääntä tai liikkuvaa kuvaa.",
     "Mbare Musika toimii hedelmä- ja vihanneskaupan ohella maaseutubussien solmukohtana.",
-    "Kasvipuutarhassa nähty istutettu laji ei yksin todista sen luonnonvaraista esiintymistä Zimbabwessa."
+    "Hararen kasvitieteellisen puutarhan elävät kasvit ja kansallisen herbaarion kuivatut näytteet ovat kaksi erilaista kasvikokoelmaa."
   ],
   "valokuva": {
     "tiedosto": "Harare 2024 1.jpg",
-    "lyhyt": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
-    "selite": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
+    "lyhyt": "Hararen puukujannetta.",
+    "selite": "Hararen kaupunkimaisemaa ja katupuustoa vuonna 2024 otetussa kuvassa.",
     "lahde": "Peter in s, Commons (CC BY-SA 4.0)",
     "vuosi": "2024"
   },
@@ -109,14 +109,14 @@
       "kansikuvat": [
         {
           "tiedosto": "Planting season in Harare.jpg",
-          "lyhyt": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020.",
-          "selite": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020.",
+          "lyhyt": "Kaupunkiviljelyä Hararessa.",
+          "selite": "Istutuskauden viljelyä Hararen asutuksen lomassa vuonna 2020 otetussa kuvassa.",
           "lahde": "Itaisibanda, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Harare from the Kopje.jpg",
-          "lyhyt": "Hararen kaupunkinäkymä Kopjelta, 2001.",
-          "selite": "Hararen kaupunkinäkymä Kopjelta, 2001.",
+          "lyhyt": "Harare Kopjelta nähtynä.",
+          "selite": "Kopjelta avautuva näkymä Hararen kortteleihin ja katuverkkoon vuonna 2001.",
           "lahde": "Andrew Balet, Wikimedia Commons (CC BY 2.5)"
         },
         {
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Kaupunki on kokoelmiaan nuorempi",
-          "teksti": "Zimbabwe Museum of Human Sciences tarkastelee antropologiaa ja arkeologiaa. Museon aiempi nimi oli Queen Victoria Museum, ja nimi vaihtui itsenäisyyden jälkeen. Kokoelmissa on etnografista ja arkeologista aineistoa, jonka historia ulottuu modernin Hararen perustamista kauemmas. Museoon kuuluu kirjasto ja näyttelygallerioita sekä Shona-kylän malli. Malli on näyttelyä varten rakennettu esitys, ei paikalle vuoden 1873 maisemasta säilynyt kylä. Museon kokoelma ja kaupunki kertovat siten eri pituisista aikajanoista.",
+          "teksti": "Zimbabwe Museum of Human Sciences tarkastelee antropologiaa ja arkeologiaa. Museon aiempi nimi oli Queen Victoria Museum, ja nimi vaihtui itsenäisyyden jälkeen. Kokoelmissa on etnografista ja arkeologista aineistoa, jonka historia ulottuu modernin Hararen perustamista kauemmas. Museoon kuuluu kirjasto ja näyttelygallerioita sekä Shona-kylän malli, joka havainnollistaa perinteistä asumista museon näyttelyssä. Museon kokoelma ja kaupunki kertovat siten eri pituisista aikajanoista.",
           "wiki": "Zimbabwe Museum of Human Sciences",
           "tiedosto": "",
           "lyhyt": "",
@@ -171,16 +171,16 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Hararen keskustassa on puiden reunustamia paikkoja ja erilaisia museo- sekä kulttuurilaitoksia. Kasvitieteellinen puutarha ja Mukuvisi Woodlands ovat keskustasta erillisiä luontokohteita. Matkalla on noudatettava erityistä varovaisuutta ja sovittava kuljetukset luotettavasti. Kohteiden vierailumahdollisuudet ja kuvaussäännöt selvitetään erikseen.",
+        "kappale": "Hararen keskustassa Africa Unity Square, Harare Gardens ja Kopje muodostavat erilaisia ulkokohteita. Ihmistieteiden museossa tutustutaan arkeologiaan ja antropologiaan, Repsissä teatteritoimintaan. Alexandra Parkin kasvitieteellinen puutarha ja Mukuvisi Woodlands ovat erillisiä luontoretkiä. Mukuvisissa kasvava msasa on paikallinen metsäpuu, katujen sinijakarandat istutettuja koristepuita.",
         "artikkeli": {
           "nimi": "Matkailijan Harare",
           "taitto": "opas",
           "teksti": "Tutustu ylänköpääkaupungin muistipaikkoihin, teatteriin ja puiden erilaisiin alkuperiin.",
-          "nosto": "Noudata erityistä varovaisuutta ja järjestä liikkuminen luotettavasti; luontokohteet ovat eri paikkoja kuin ydinkeskustan puistot.",
+          "nosto": "Kopje ja Mbare Musika näyttävät kaupungin eri puolia. Kasvitieteellisen puutarhan rinnalla kansallinen herbaario säilyttää kasvinäytteitä.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Robert Gabriel Mugabe International Airport on Hararen kansainvälinen lentoasema. Kentällä on kansainväliset ja kotimaan terminaalit sekä kuljetuspalveluja. Sovi kuljetus luotettavan toimijan tai majoituksen kanssa. Liikenne on vasemmanpuoleista, ja pimeällä ajamista kannattaa välttää erityisesti kaupungin ulkopuolella.",
+              "teksti": "Robert Gabriel Mugabe International Airport on Hararen kansainvälinen lentoasema. Kentällä on kansainväliset ja kotimaan terminaalit sekä kuljetuspalveluja. Sovi kuljetus luotettavan toimijan tai majoituksen kanssa. Liikenne on vasemmanpuoleista.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -220,7 +220,7 @@
             },
             {
               "otsikko": "Ajankohta ja valmistautuminen",
-              "teksti": "Eteläisen pallonpuoliskon kesä on sateinen, ja keskivuoden talvikausi on kuivempi sekä viileämpi. Rankkasateet voivat vaikuttaa teihin ja liikkumiseen. Noudata erityistä varovaisuutta, sovi pimeän ajan kuljetukset ja selvitä maahantulon sekä vierailupaikkojen ajantasaiset ehdot.",
+              "teksti": "Eteläisen pallonpuoliskon kesä on sateinen, talvikausi kuivempi ja viileämpi. Hararen puustossa väri voi tulla eri lähteistä: jakarandan violeteista kukista tai msasan punertavista nuorista lehdistä. Kasvitieteellinen puutarha tarjoaa elävien kokoelmien kierroksen, kansallisarkisto puolestaan dokumenttien, kuvan ja äänen tutkimista sisätiloissa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,8 +259,8 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Varovaisuus",
-                "teksti": "Sovi kuljetukset luotettavasti ja vältä pimeällä ajamista."
+                "otsikko": "Matkan valmistelu",
+                "teksti": "Tarkista Ulkoministeriön ajantasainen matkustustiedote ennen matkaa. Sovi siirtymät ja paluu päiväsaikaan."
               },
               {
                 "otsikko": "Asiointi",
@@ -310,8 +310,8 @@
           "teksti": "Sinijakaranda eli Jacaranda mimosifolia on alkuperältään Etelä-Amerikasta. Hararen katujen jakarandat ovat istutettuja koristepuita, jotka tunnetaan violeteista kukistaan. Lehdet jakautuvat moniin hentoihin lehdyköihin, ja kukinnan jälkeen muodostuu puutuneita siemenkotia. Niiden sisällä on litteitä siivellisiä siemeniä. Kaupungin runsas istutus ja lajin luonnollinen kotiseutu ovat eri asioita: Hararessa tuttu puu ei ole paikallinen miombolaji, vaan kaupunkimaisemaan tuotu kasvi.",
           "wiki": "Jacaranda mimosifolia",
           "tiedosto": "Jacaranda1212.jpg",
-          "lyhyt": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva.",
-          "selite": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva.",
+          "lyhyt": "Sinijakarandan violetteja kukkia.",
+          "selite": "Sinijakaranda (Jacaranda mimosifolia) kukkii violettina tässä lajin esittelykuvassa.",
           "lahde": "Kahuroa, Wikimedia Commons (PD)"
         },
         {
@@ -319,13 +319,13 @@
           "teksti": "Liekkipuu eli Delonix regia on alkuperältään Madagaskarista. Hararen katujen koristepuissa sitä tavataan jakarandan rinnalla, mutta kyse on eri lajista. Sen kukat ovat tavallisesti oranssinpunaisia tai punaisia, ja höyhenmäiset lehdet koostuvat monista pienistä lehdyköistä. Pitkät palot muuttuvat kypsyessään tummiksi ja puutuneiksi. Puun tunnistamisessa kukka, lehti ja hedelmä antavat eri tuntomerkkejä. Punainen liekkipuu, violetti jakaranda ja uuden lehdistönsä värittämä msasa ovat kolme erilaista kasvitarinaa.",
           "wiki": "Delonix regia",
           "tiedosto": "Royal Poinciana.jpg",
-          "lyhyt": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva.",
-          "selite": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva.",
+          "lyhyt": "Liekkipuun punaisia kukkia.",
+          "selite": "Liekkipuu (Delonix regia) on Madagaskarista lähtöisin oleva koristepuu. Kuvassa on laji, ei Hararen kasvupaikka.",
           "lahde": "Averette, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
           "otsikko": "Elävä kokoelma ja kuivattu näyte",
-          "teksti": "Hararen kansallinen kasvitieteellinen puutarha sijaitsee Alexandra Parkissa. Samalla alueella on kansallinen herbaario: elävät kasvit ja säilytetyt kasvinäytteet ovat eri kokoelmia. Puutarhan pohjana on miombometsäympäristöä, josta osia on säilynyt, mutta alueelle on myös luotu istutettuja kasvupaikkoja. Kokoelmissa kasvatetaan kotimaisia ja ulkomaisia lajeja. Puutarhassa nähty kasvi ei siksi yksin todista, että laji kasvaisi luonnonvaraisena juuri samassa paikassa tai edes samassa maassa.",
+          "teksti": "Hararen kansallinen kasvitieteellinen puutarha sijaitsee Alexandra Parkissa. Samalla alueella on kansallinen herbaario: elävät kasvit ja säilytetyt kasvinäytteet ovat eri kokoelmia. Puutarhan pohjana on miombometsäympäristöä, josta osia on säilynyt, mutta alueelle on myös luotu istutettuja kasvupaikkoja. Kokoelmissa kasvatetaan kotimaisia ja ulkomaisia lajeja. Eläviä kasveja voi seurata puutarhassa niiden kasvaessa, herbaarion näytteistä taas tutkia säilöttyjä lehtiä ja muita tuntomerkkejä.",
           "wiki": "National Botanic Garden (Zimbabwe)",
           "tiedosto": "",
           "lyhyt": "",
@@ -337,7 +337,7 @@
   ],
   "kohdekartta": {
     "numeroympyrat": true,
-    "esittely": "Hararen historiallinen keskusta tarvitsee vielä varmennetut omat puisto-, aukio- ja kukkulapisteet.",
+    "esittely": "Hararen keskustaan kuuluvat Africa Unity Square, Harare Gardens ja Kopje. Mbare Musika yhdistää kaupungin maatalouskauppaan ja maaseutubussien liikenteeseen.",
     "rajat": {
       "pohjoinen": -17.826,
       "etela": -17.832,
@@ -351,7 +351,7 @@
   "ehdotukset": {
     "lentoasema": "Robert Gabriel Mugabe International Airport (HRE)",
     "huomiot": [
-      "Kohdekartta partial: 0 hyväksyttyä ydinkohdetta. Africa Unity Squaren, Harare Gardensin ja Kopjen omat pisteet puuttuvat.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 5 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Museon, katedraalin ja gallerian nykyisten rakennusosien tekijä-/teosketjut avoinna; ei kohteita.",
       "Botanicin ja Mukuvisin omat luontopisteet eivät korvaa historiallisen keskustan aukio-/puistopisteitä; käsitelty vain oppaassa.",
       "WMO-sääauditointi 36/48, NOAA-keskilämpö/asema 12 arvolle avoin; saatiedot:null, ei numeromuotoisia ilmastoväitteitä.",

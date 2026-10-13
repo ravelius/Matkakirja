@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "Moronissa pääkaupungin takana kohoava vuori on **aktiivinen tulivuori**. Karthala hallitsee Ngazidjan eli Grande Comoren maisemaa, ja kaupungin rannikko on paikoin kallioista laavakiveä. Komorien pääkaupunki sijaitsee saaren länsirannikolla Intian valtameressä. Sen historiallinen ydin on medina, jossa kapeat kujat yhdistävät taloja, moskeijoita ja kokoontumispaikkoja. Kaupunki osallistui Intian valtameren kauppaan jo vuosisatoja ennen nykyistä pääkaupunkiasemaansa.\n\n**Volo Volo -torilla** kaupunki näkyy jokapäiväisten ostosten ja ruokapaikkojen kautta. Kansallismuseon aiheisiin kuuluvat ihmisten historian lisäksi valtameri ja tulivuoret. Niitä ei tarvitse kuvitella kovin kauas: meri alkaa kaupungin laidasta ja Karthala kohoaa sen takana. Moroni onkin paikka, jossa kaupunkihistoria ja luonnonhistoria ovat jatkuvasti saman näkymän osia.",
-    "teksti": "Moronin varhainen historia ei tarjoa yksiselitteistä perustamispäivää. Kaupunki kuului kuitenkin Intian valtameren kauppaverkostoihin jo kauan ennen isoisän matkavuotta 1873. Se oli osa Bambao-sulttaanikunnan kaupunkiverkkoa, jossa myös läheisellä Ikonilla oli tärkeä asema.\n\nPääkaupunkiasema on tätä kaupunkihistoriaa nuorempi. Saariston hallintokeskus siirtyi 1900-luvulla Dzaoudzista Moroniin. Medina jäi osaksi kasvavaa pääkaupunkia, ja sen kujat, talot sekä yhteiset kokoontumispaikat kantavat vanhempaa kaupunkirakennetta nykyiseen arkeen.\n\nKarthala ja meri liittävät Moronin luonnonhistorian osaksi kaupungin tutkimista. Tulivuoren kaldera ja rinteiden kasvillisuus muuttuvat eri tavoin, ja rannikon laavakivet muistuttavat saaren vulkaanisesta alkuperästä. Kansallismuseossa merelliset ja geologiset aiheet kohtaavat ihmisten historian; Volo Volo -torilla taas saariston tuotteet päätyvät ostoksiin ja aterioihin."
+    "teksti": "Moroni kuului Intian valtameren kauppaverkostoihin jo kauan ennen isoisän matkavuotta 1873. Se oli osa Bambao-sulttaanikunnan kaupunkiverkkoa, jossa myös läheisellä Ikonilla oli tärkeä asema.\n\nPääkaupunkiasema on tätä kaupunkihistoriaa nuorempi. Saariston hallintokeskus siirtyi 1900-luvulla Dzaoudzista Moroniin. Medina jäi osaksi kasvavaa pääkaupunkia, ja sen kujat, talot sekä yhteiset kokoontumispaikat kantavat vanhempaa kaupunkirakennetta nykyiseen arkeen.\n\nKarthala ja meri liittävät Moronin luonnonhistorian osaksi kaupungin tutkimista. Tulivuoren kaldera ja rinteiden kasvillisuus muuttuvat eri tavoin, ja rannikon laavakivet muistuttavat saaren vulkaanisesta alkuperästä. Kansallismuseossa merelliset ja geologiset aiheet kohtaavat ihmisten historian; Volo Volo -torilla taas saariston tuotteet päätyvät ostoksiin ja aterioihin."
   },
   "kysymykset": [
     {
@@ -50,9 +50,9 @@
       "q": "Mikä tulivuori kohoaa Moronin takana?",
       "options": [
         "Karthala",
-        "Etna",
-        "Vesuvius",
-        "Tambora"
+        "La Grille",
+        "Piton de la Fournaise",
+        "Piton des Neiges"
       ],
       "correct": 0,
       "level": 1,
@@ -64,13 +64,13 @@
       "q": "Mitä Moronin medina tarkoittaa?",
       "options": [
         "Vanhaa kaupunkia",
-        "Uutta lentoasemaa",
-        "Sataman laituria",
-        "Vuoren huippua"
+        "Satamakorttelia",
+        "Kauppatoria",
+        "Hallintokorttelia"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Siellä kuljetaan kapeilla kujilla talojen ja moskeijoiden lomassa.",
+      "hint": "Sana kuuluu monen Intian valtameren kaupungin nimistöön.",
       "fact": "Medina on Moronin historiallinen kaupunkikeskusta.",
       "source": "https://en.wikipedia.org/wiki/Moroni,_Comoros"
     },
@@ -78,13 +78,13 @@
       "q": "Mikä luonnonmuodostuma rajoittaa suurten alusten pääsyä Moronin satamaan?",
       "options": [
         "Koralliriutat",
-        "Jäätiköt",
-        "Hiekkadyynit",
-        "Putoavat jäävuoret"
+        "Hiekkasärkät",
+        "Laavakynnykset",
+        "Jokisuun lietekerrostumat"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Vastaus liittyy trooppiseen mereen ja aluksen turvalliseen syväykseen.",
+      "hint": "Alusten koko ja syväys vaikuttavat satamaan saapumiseen.",
       "fact": "Sataman koralliriutat vaikeuttavat suurten alusten pääsyä sisään.",
       "source": "https://en.wikipedia.org/wiki/Moroni,_Comoros"
     }
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Moroni sunset palm trees.jpg",
-    "lyhyt": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
-    "selite": "Palmut ja auringonlasku Moronin rannikolla, 2019.",
+    "lyhyt": "Palmuja Moronin rannikon iltavalossa.",
+    "selite": "Moronin rannikon palmuja auringonlaskun aikaan vuonna 2019 otetussa kuvassa.",
     "lahde": "Radosław Botev, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
@@ -108,8 +108,8 @@
       "kansikuvat": [
         {
           "tiedosto": "Moroni beach.jpg",
-          "lyhyt": "Itsandran rantaa Moronissa, 2019.",
-          "selite": "Itsandran rantaa Moronissa, 2019.",
+          "lyhyt": "Itsandran rantaa Moronin lähellä.",
+          "selite": "Itsandran hiekkarantaa Moronin pohjoispuolella vuonna 2019 otetussa kuvassa.",
           "lahde": "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
@@ -170,7 +170,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Tutustu medinan kujiin ja sataman ympäristöön kävellen. Volo Volo -torilla voi yhdistää ostokset ja paikallisen aterian. Kansallismuseo antaa taustaa sekä kaupunkihistorialle että Karthalan luonnolle. Hahayan lentoasemalta tarvitaan erillinen siirtymä Moroniin. Kaupungissa liikutaan jaetuilla takseilla, joiden reitti riippuu matkustajien määränpäistä. Karthalan retki on erillinen vuoristoretki, johon lähdetään paikallisen oppaan kanssa vasta ajankohtaisen tilanteen tarkistamisen jälkeen.",
+        "kappale": "Tutustu medinan kujiin ja sataman ympäristöön kävellen. Volo Volo -torilla voi yhdistää ostokset ja paikallisen aterian. Kansallismuseo antaa taustaa sekä kaupunkihistorialle että Karthalan luonnolle. Hahayan lentoasemalta tarvitaan erillinen siirtymä Moroniin. Kaupungissa liikutaan jaetuilla takseilla, joiden reitti riippuu matkustajien määränpäistä. Karthala on kaupungin ulkopuolinen vuoristokohde, jonka kaldera ja metsäiset rinteet ovat erillinen retki.",
         "artikkeli": {
           "nimi": "Matkailijan Moroni",
           "taitto": "opas",
@@ -189,7 +189,7 @@
             },
             {
               "otsikko": "Medina ja sataman kaupunkihistoria",
-              "teksti": "Moronin vanhassa keskustassa kannattaa huomata kujien lisäksi puuovet ja bangwe-kokoontumispaikat. Vanha perjantaimoskeija kuuluu Badjananin alueen näkyviin maamerkkeihin,. Moskeija on käytössä oleva uskonnollinen paikka; tarkista mahdollinen vierailu ja paikalliset käytännöt paikan päällä. Sataman ympäristö yhdistää vanhan keskustan merelliseen maisemaan.",
+              "teksti": "Moronin vanhassa keskustassa kannattaa huomata kujien lisäksi puuovet ja bangwe-kokoontumispaikat. Vanha perjantaimoskeija kuuluu Badjananin alueen näkyviin maamerkkeihin. Moskeija on käytössä oleva uskonnollinen paikka; tarkista mahdollinen vierailu ja paikalliset käytännöt paikan päällä. Sataman ympäristö yhdistää vanhan keskustan merelliseen maisemaan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Museosta vuoren maisemaan",
-              "teksti": "Kansallismuseon aiheisiin kuuluvat myös valtameri, geologia ja tulivuoret. Ne antavat taustaa Karthalan erilliselle retkelle. Vuorella kasvillisuus vaihtuu kosteista metsistä ylempien rinteiden matalampiin puihin ja kanervikkoon. Karthala on aktiivinen tulivuori, joten retken toteutuminen riippuu ajankohtaisesta tilanteesta. Sovi suunnitelma paikallisen oppaan kanssa ja tarkista olosuhteet ennen lähtöä.",
+              "teksti": "Kansallismuseon aiheisiin kuuluvat myös valtameri, geologia ja tulivuoret. Ne antavat taustaa Karthalan erilliselle retkelle. Vuorella kasvillisuus vaihtuu kosteista metsistä ylempien rinteiden matalampiin puihin ja kanervikkoon.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Moronissa sataa ympäri vuoden, ja monsuunikausi tuo lisää kosteutta. Kaupunkipäivään kannattaa varata sadevarusteet ja joustoa: museo, tori ja medinan kävely tarjoavat erilaisia tapoja käyttää päivä. Vuorella sää ja tulivuoren toiminta on arvioitava erikseen. Tarkista ajankohtainen ennuste ja retken toteutumisedellytykset ennen lähtöä, sillä kaupungin suunnitelma ei sellaisenaan sovi Karthalan rinteille.",
+              "teksti": "Moronissa sataa ympäri vuoden, ja monsuunikausi tuo lisää kosteutta. Medinan kujat, Volo Volo -tori ja satama ovat ulkokohteita; kansallismuseo käsittelee saariston luonnon- ja kaupunkihistoriaa sisätiloissa. Karthalan rinteillä kuljetaan kosteasta metsästä ylempien rinteiden mataliin puihin ja kanervikkoon. Vuoristoretken olosuhteet eroavat rannikon kävelystä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -287,9 +287,9 @@
         "kysymys": "Millainen kasvillisuus seuraa Karthalan kosteaa metsää ylempänä vuorella?",
         "vaihtoehdot": [
           "Matalat puut ja kanervikko",
-          "Mangrove ja ruovikko",
-          "Vain palmulehdot",
-          "Ainoastaan merilevät"
+          "Savanni ja piikkipuut",
+          "Korkeat bambutiheiköt",
+          "Saniais- ja palmumetsä"
         ],
         "oikea": 0,
         "fakta": "Vuoren ylemmillä rinteillä kasvaa matalampia puita ja kanervakasvillisuutta."
@@ -299,8 +299,8 @@
           "otsikko": "Tulivuori, jonka huippu muuttuu",
           "teksti": "Karthala on kilpitulivuori ja kuuluu Ngazidjan muodostaneisiin tulivuoriin. Sen huipulla on laaja kaldera, jonka muotoa purkaukset ovat muuttaneet. Moronista katsottu vuori voi näyttää pysyvältä taustalta, vaikka sen huipun maisema ei pysy samanlaisena. Karthalan toiminta kuuluu saaren luonnonhistoriaan, ja vuori on edelleen aktiivinen. Kaupungin läheisyydessä maapallon sisäiset prosessit näkyvät poikkeuksellisen suoraan: saman maiseman osia ovat sekä asuttu rannikko että toimiva tulivuori.",
           "tiedosto": "Volcan Karthala vue du grand cratere 13 août 2019.jpg",
-          "lyhyt": "Karthalan kraatteria elokuussa 2019.",
-          "selite": "Karthalan kraatteria elokuussa 2019.",
+          "lyhyt": "Karthalan suuri kraatteri.",
+          "selite": "Näkymä Karthalan kraatteriin 13. elokuuta 2019 otetussa kuvassa.",
           "lahde": "Lolodevenelles, Wikimedia Commons (CC BY-SA 4.0)",
           "wiki": "Mount Karthala"
         },
@@ -308,14 +308,14 @@
           "otsikko": "Kraatterijärvi katosi",
           "teksti": "Karthalan kalderassa oli kraatterijärvi, joka katosi 2000-luvun purkauksen yhteydessä. Purkaus muutti kraatteria, ja järven paikalle jäi tummia kiviä, mahdollisesti jäähtynyttä laavaa tai romahtaneen kraatterin ainesta. Tapahtuma kertoo, ettei tulivuoren huippua voi ajatella kerran valmiiksi muotoutuneena paikkana. Sama vuori voi olla kaupungin taustalla sukupolvesta toiseen, mutta ylhäällä oleva maisema muuttuu purkausten mukana. Moronin läheinen luonnonmaamerkki on samalla jatkuvasti muokkautuva geologinen paikka.",
           "tiedosto": "Overviewing to Karthala crater.jpg",
-          "lyhyt": "Karthalan kraatteri retkellä vuonna 2018.",
-          "selite": "Karthalan kraatteri retkellä vuonna 2018.",
+          "lyhyt": "Näkymä Karthalan kraatteriin.",
+          "selite": "Karthalan huipun kraatteri vuonna 2018 otetussa retkikuvassa.",
           "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)",
           "wiki": "Mount Karthala"
         },
         {
           "otsikko": "Metsä vaihtuu kanervikkoon",
-          "teksti": "Karthalan rinteillä kasvaa kosteaa ainavihantaa metsää. Ylempänä puut jäävät matalammiksi ja kasvillisuus vaihtuu kanervikoksi, jossa kasvaa myös Erica comorensis -kanervaa. Vuoren eri korkeuksilla ei siis katsota samaa kasvillisuutta vähän ylempää, vaan erilaisia elinympäristöjä. Karthala on myös tärkeä lintujen alue: sen rinteillä elää saaristolle ominaisia lajeja, kuten Karthala white-eye -niminen rillilintu. Vuoren luontoa voi tutkia yhtä hyvin kasvien ja lintujen kuin kraatterin kautta.",
+          "teksti": "Karthalan rinteillä kasvaa kosteaa ainavihantaa metsää. Ylempänä puut jäävät matalammiksi ja kasvillisuus vaihtuu kanervikoksi, jossa kasvaa myös Erica comorensis -kanervaa. Vuoren eri korkeuksilla ei siis katsota samaa kasvillisuutta vähän ylempää, vaan erilaisia elinympäristöjä. Karthala on myös tärkeä lintujen alue: sen rinteillä elää saaristolle ominaisia lajeja, kuten rillilintuihin kuuluva Zosterops mouroniensis. Vuoren luontoa voi tutkia yhtä hyvin kasvien ja lintujen kuin kraatterin kautta.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -355,12 +355,12 @@
   "nahtavyydet": {
     "Karthala": {
       "aika": "Tulivuorimaisema; historiallisia purkauksia 1800-luvulta",
-      "teksti": "Karthala on Ngazidjan aktiivinen kilpitulivuori, joka kohoaa Moronin taustalla. Huipulla on laaja kaldera, ja sen ympäristö on muuttunut purkausten seurauksena. Vuoren rinteillä kostea ainavihanta metsä vaihtuu ylempänä matalampiin puihin ja kanervikkoon. Maisema kertoo yhtä aikaa tulivuoren toiminnasta ja eri korkeuksien elinympäristöistä.\n\nKarthalan tutkiminen on erillinen vuoristoretki, jonka olosuhteet eroavat kaupungin kävelystä. Retki vuorelle on suunniteltava nykyolojen mukaan. Tulivuori on aktiivinen, joten ajankohtainen toiminta ja sää on tarkistettava ennen lähtöä paikallisen oppaan kanssa. Moronista näkyvä tuttu taustavuori ja huipun muuttuva kraatterimaisema ovat saman tulivuoren eri puolia.",
+      "teksti": "Karthala on Ngazidjan aktiivinen kilpitulivuori, joka kohoaa Moronin taustalla. Huipulla on laaja kaldera, ja sen ympäristö on muuttunut purkausten seurauksena. Vuoren rinteillä kostea ainavihanta metsä vaihtuu ylempänä matalampiin puihin ja kanervikkoon. Maisema kertoo yhtä aikaa tulivuoren toiminnasta ja eri korkeuksien elinympäristöistä.\n\nKarthalan tutkiminen on erillinen vuoristoretki, jonka olosuhteet eroavat kaupungin kävelystä. Rinteiden metsä ja huipun kaldera muodostavat erilliset elinympäristöt. Kraatterijärvi katosi 2000-luvun purkauksen yhteydessä, mikä muutti huipun maisemaa. Moronista näkyvä tuttu taustavuori ja huipun muuttuva kraatterimaisema ovat saman tulivuoren eri puolia.",
       "kuvat": [
         {
           "tiedosto": "Hiking to Karthala crater.jpg",
-          "lyhyt": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
-          "selite": "Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.",
+          "lyhyt": "Retkellä kohti Karthalan kraatteria.",
+          "selite": "Karthalan kraatterille suuntautuva retki kulkee vuoren kasvillisuuden keskellä.",
           "lahde": "Rokaso, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
@@ -371,7 +371,7 @@
   "ehdotukset": {
     "lentoasema": "Prince Said Ibrahim International Airport (HAH)",
     "huomiot": [
-      "C-tekstiluonnos; B-kuvat puuttuvat, kuvaroolien neljä kenttää tyhjiä.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 5 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Kartta partial: vain Karthalan oma WP-piste; noin 13 km kaupungin kontekstipisteestä. Historiallisen keskuksen omat pisteet ja oikeusketjut auki; karttarajaus jättää tilan myös ytimelle.",
       "Vanhan perjantaimoskeijan rakennusaika ristiriitainen eri kieliversioissa; tarkka vuosi ja kohdekarttavalinta jätetty pois.",
       "Sääauditointi avoin; saatiedot null eikä ilmastolukuja.",

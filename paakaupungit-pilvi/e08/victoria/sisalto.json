@@ -36,13 +36,13 @@
       "q": "Mikä on Victorian kellotornin esikuva?",
       "options": [
         "Lontoon Little Ben",
-        "Pariisin Eiffel-torni",
-        "Pisan katedraalitorni",
-        "Venetsian kellotorni"
+        "Lontoon Big Ben",
+        "Lontoon Albert Memorial",
+        "Lontoon Monument"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Esikuva sijaitsee brittiläisen pääkaupungin rautatieaseman lähellä.",
+      "hint": "Torni pystytettiin brittiläisellä siirtomaakaudella.",
       "fact": "Lorloz-kellotornin esikuva on Lontoon Victoria-aseman lähellä sijaitseva Little Ben.",
       "source": "https://en.wikipedia.org/wiki/Victoria,_Seychelles"
     },
@@ -50,13 +50,13 @@
       "q": "Mikä oli Mont Fleurin puutarhan alkuperäinen tehtävä?",
       "options": [
         "Maatalousasema",
-        "Laivastotukikohta",
-        "Sotilassairaala",
-        "Säähavaintoasema"
+        "Metsäntutkimusasema",
+        "Lääkekasvien tutkimusasema",
+        "Kasvien karanteeniasema"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Kokoelmaan kuului esimerkiksi mauste- ja hedelmäkasveja.",
+      "hint": "Puutarhan ensimmäiset kokoelmat palvelivat myös kasvien hyötykäyttöä.",
       "fact": "Kasvitieteellinen puutarha aloitti maatalousasemana 1900-luvun alussa.",
       "source": "https://en.wikipedia.org/wiki/National_Botanical_Garden_of_Seychelles"
     },
@@ -70,7 +70,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Siemenen massa suhteessa sen tilavuuteen ratkaisee.",
+      "hint": "Meressä kulkeutunut kuori on erilainen kuin elinkelpoinen siemen.",
       "fact": "Veden mukana kelluvat ontoksi muuttuneet kuoret, eivät elinkelpoiset tiheät siemenet.",
       "source": "https://en.wikipedia.org/wiki/Lodoicea"
     },
@@ -78,13 +78,13 @@
       "q": "Mitä tuotteita Victorian toriperinteeseen kuuluu?",
       "options": [
         "Kalaa ja hedelmiä",
-        "Turkiksia ja villaa",
-        "Viiniä ja oliiveja",
-        "Vehnää ja ohraa"
+        "Maitotuotteita ja viljaa",
+        "Lihaa ja riisiä",
+        "Papuja ja öljysiemeniä"
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Merestä ja kasveista saadut tuoreet tuotteet kuuluvat samaan ostoskierrokseen.",
+      "hint": "Kysymys koskee Sir Selwyn Selwyn-Clarke -torin perinteistä tarjontaa.",
       "fact": "Victorian torilla on perinteisesti myyty kalaa, hedelmiä ja vihanneksia.",
       "source": "https://en.wikipedia.org/wiki/Victoria,_Seychelles"
     }
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Sey Botanical Garden Entrance.JPG",
-    "lyhyt": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
-    "selite": "Mont Fleurin kasvitieteellinen puutarha sijaitsee Victorian kaupungissa Mahélla.",
+    "lyhyt": "Mont Fleurin kasvitieteellisen puutarhan sisäänkäynti.",
+    "selite": "Victorian Mont Fleurin puutarhan sisäänkäynti Mahén saarella.",
     "lahde": "Marek Gehrmann, Commons (CC BY-SA 3.0)",
     "vuosi": "2009"
   },
@@ -109,27 +109,27 @@
       "kansikuvat": [
         {
           "tiedosto": "Ile de Mahe - Victoria (1).JPG",
-          "lyhyt": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
-          "selite": "Victorian rannikon asutusta ja venesatamaa lentokoneesta nähtynä, 2015.",
+          "lyhyt": "Victorian rannikkoa ilmasta nähtynä.",
+          "selite": "Lentokoneesta kuvattu Victorian rannikon asutus ja venesatama vuonna 2015.",
           "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
           "tiedosto": "Ile de Mahe - Victoria (7).JPG",
-          "lyhyt": "Victorian rannikkoaluetta ja asutusta Mahélla, 2015.",
-          "selite": "Victorian rannikkoaluetta ja asutusta Mahélla, 2015.",
+          "lyhyt": "Victorian rannikkoaluetta Mahélla.",
+          "selite": "Mahén rannikon asutusta Victorian ympäristössä vuonna 2015 otetussa kuvassa.",
           "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
           "tiedosto": "Ile de Mahe - Victoria (10).JPG",
-          "lyhyt": "Victorian satamaa ja rannikon asutusta lentokoneesta nähtynä, 2015.",
-          "selite": "Victorian satamaa ja rannikon asutusta lentokoneesta nähtynä, 2015.",
+          "lyhyt": "Victorian satama ilmasta nähtynä.",
+          "selite": "Lentokoneesta kuvattu satama ja rannikon asutus Victoriassa vuonna 2015.",
           "lahde": "Remi Jouan, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
       "nostot": [
         {
           "otsikko": "Little Ben päätyi Victoriaan",
-          "teksti": "Victorian kellotornia kutsutaan kreoliksi nimellä Lorloz. Sen esikuva on Lontoon Victoria-aseman lähellä seisova Little Ben, ei parlamenttitalon suuri kellotorni. Valurautainen torni pystytettiin 1900-luvun alussa kuningatar Victorian muistoksi. Se oli aluksi musta ja maalattiin myöhemmin hopeanväriseksi. Pienen tornin ulkoasu kertoo siis sekä englantilaisesta kellonvalmistuksesta että paikallisesta tavasta hoitaa maamerkkiä. Isoisän matkavuonna 1873 tätä tuttua keskustan tunnusta ei vielä ollut.",
+          "teksti": "Victorian kellotornia kutsutaan kreoliksi nimellä Lorloz. Sen esikuva on Lontoon Victoria-aseman lähellä seisova Little Ben, ei parlamenttitalon suuri kellotorni. Valurautainen torni pystytettiin 1900-luvun alussa kuningatar Victorian muistoksi. Se oli aluksi musta ja maalattiin myöhemmin hopeanväriseksi. Pienen tornin ulkoasu kertoo siis sekä englantilaisesta kellonvalmistuksesta että paikallisesta tavasta hoitaa maamerkkiä. Kreolinkielinen Lorloz-nimi tarkoittaa kelloa.",
           "wiki": "Victoria, Seychelles",
           "tiedosto": "",
           "lyhyt": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Torin osoite voi vaihtua",
-          "teksti": "Sir Selwyn Selwyn-Clarke Market kuuluu Victorian historialliseen keskustaan. Kauppahallin historia ulottuu 1800-luvulle, ja sen perinteisiin kuuluvat kala, hedelmät ja vihannekset. Torin kunnostamista varten suunniteltiin kaupankäynnille väliaikaiset tilat entiseen STC Supermarketiin. Hankkeessa haluttiin parantaa muun muassa ilmanvaihtoa ja vedenpoistoa. Torikierros kannattaa siksi aloittaa tarkistamalla myyjien nykyinen käyntipaikka: tuttu nimi ei välttämättä tarkoita, että kauppa käydään vanhassa hallissa.",
+          "teksti": "Sir Selwyn Selwyn-Clarke Market kuuluu Victorian historialliseen keskustaan. Kauppahallin perinteisiin kuuluvat kala, hedelmät ja vihannekset. Kalastuksen tuotteet saapuvat täällä samaan myyntipaikkaan Mahén viljelytuotteiden kanssa. Kaupungin sataman tonnikalateollisuus ja torikojun saalis näyttävät merellisen työn eri puolia: toinen on teollista säilöntää, toinen paikallisten ostajien kauppaa. Tori ja Mont Fleurin puutarha liittyvät molemmat saaren hyötykasveihin, mutta toinen myy tuotteita ja toinen säilyttää eläviä kasveja.",
           "wiki": "Victoria, Seychelles",
           "tiedosto": "",
           "lyhyt": "",
@@ -171,7 +171,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Aloita Victorian keskustan kävely Lorloz-kellotornin ympäristöstä. Yhdistä siihen Mont Fleurin kasvitieteellinen puutarha ja sen elävä kasvikokoelma. Torin kunnostukseen liittyy suunniteltu väliaikainen kaupankäyntipaikka, joten varmista myyjien nykyinen osoite. Museoiden käyntitilanne kannattaa tarkistaa ennen vierailua. Jätä ulkokierroksen järjestykseen vaihtovaraa päivän sään mukaan.",
+        "kappale": "Victorian keskustan kävely alkaa Lorloz-kellotornin ympäristöstä. Mont Fleurin kasvitieteellinen puutarha yhdistää paikalliset kasvit, coco de mer -palmut ja jättiläiskilpikonnat samaan kohteeseen. Sir Selwyn Selwyn-Clarke -torin perinteeseen kuuluvat kalat, hedelmät ja vihannekset. Satama ja kasvikokoelmat näyttävät saariston työtä eri tavoilla. Mahén muihin kohteisiin järjestetään omat siirtymät.",
         "artikkeli": {
           "nimi": "Matkailijan Victoria",
           "taitto": "opas",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Seychellien kansainvälinen lentoasema palvelee Victoriaa Mahén saarella. Kaupungissa voi liikkua bussilla tai taksilla ja yhdistää lähekkäisiä keskustakohteita kävellen. Tarkista paikallisesti bussin reitti ja paluuyhteys, sillä vuorojen säännöllisyyteen ei kannata luottaa samanlaisena kuin suurkaupungissa. Mont Fleurin puutarha on keskustan tuntumassa, mutta saaren muut kohteet vaativat oman siirtymäsuunnitelman.",
+              "teksti": "Seychellien kansainvälinen lentoasema palvelee Victoriaa Mahén saarella. Kaupungissa voi liikkua bussilla tai taksilla ja yhdistää lähekkäisiä keskustakohteita kävellen. Tarkista paikallisesti bussin reitti ja paluuyhteys, jotta saat saman reitin myös takaisin. Mont Fleurin puutarha on keskustan tuntumassa, mutta saaren muut kohteet vaativat oman siirtymäsuunnitelman.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Kellotorni ja torin historia",
-              "teksti": "Lorloz-kellotorni on selkeä kiintopiste keskustan kävelylle. Sen esikuva on Lontoon Little Ben, ja nykyinen torni on 1900-luvun alusta. Sir Selwyn Selwyn-Clarke -torin kunnostushankkeessa kaupankäynnille suunniteltiin väliaikainen paikka entiseen STC Supermarketiin. Varmista torin nykyinen käyntipaikka ennen kierrosta; vanhan kauppahallin nimi on säilynyt, vaikka toiminta voi olla muualla.",
+              "teksti": "Lorloz-kellotorni on keskustan kiintopiste. Sen esikuva on Lontoon Little Ben, ja valurautainen torni pystytettiin 1900-luvun alussa. Sir Selwyn Selwyn-Clarke Market kuuluu saman historiallisen keskustan kauppaperinteeseen. Torin kala, hedelmät ja vihannekset muistuttavat saariston raaka-aineista; kellotorni kaupungin brittiläisestä siirtomaakaudesta.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Puutarha ja luonnon kokoelmat",
-              "teksti": "Mont Fleurin kasvitieteellisessä puutarhassa on paikallisia ja muualta tuotuja kasveja, coco de mer -palmuja ja jättiläiskilpikonnia. Katso palmun lehtiä ja eri puiden kukkia, sillä hede- ja emikukat ovat eri yksilöissä. Victorian luonnonhistoriallisen museon aiheisiin kuuluvat kasvit, eläimet, geologia ja ihmisen kulttuurit. Tarkista museoiden ajantasainen käyntitilanne erikseen ennen kuin rakennat päivän näyttelyvierailun varaan.",
+              "teksti": "Mont Fleurin kasvitieteellisessä puutarhassa on paikallisia ja muualta tuotuja kasveja, coco de mer -palmuja ja jättiläiskilpikonnia. Katso palmun lehtiä ja eri puiden kukkia, sillä hede- ja emikukat ovat eri yksilöissä. Victorian luonnonhistoriallisen museon aiheisiin kuuluvat kasvit, eläimet, geologia ja ihmisen kulttuurit. Puutarhan kasvit ovat eläviä kokoelmia, museon aiheita esitellään näyttelyissä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -249,7 +249,7 @@
               {
                 "mita": "Luonnonhistoriallinen museo",
                 "tahdet": 2,
-                "selite": "Kasvit, eläimet ja geologia avaavat saariston luontoa; tarkista käyntitilanne."
+                "selite": "Kasvit, eläimet ja geologia avaavat saariston luontoa."
               },
               {
                 "mita": "Satamakaupungin kävely",
@@ -260,7 +260,7 @@
             "hyvaTietaa": [
               {
                 "otsikko": "Torin käyntipaikka",
-                "teksti": "Vanhan hallin kunnostukseen liittyy väistötilasuunnitelma; varmista, missä myyjät toimivat nyt."
+                "teksti": "Tarkista Sir Selwyn Selwyn-Clarke -torin nykyinen käyntipaikka: vanhan hallin kunnostukseen suunniteltiin väistötila Seychellien kauppayhtiön entiseen supermarkettiin."
               },
               {
                 "otsikko": "Valuutta",
@@ -294,7 +294,7 @@
       "nostot": [
         {
           "otsikko": "Siemen ei tule merenpohjasta",
-          "teksti": "Coco de mer tarkoittaa merikookosta, mutta nimi johtaa harhaan. Palmun siemenet ajautuivat kaukaisille rannoille ennen kuin niiden lähtöpaikka tunnettiin, ja kasvin uskottiin jopa kasvavan meren pohjassa. Elinkelpoinen siemen on kuitenkin liian tiheä kelluakseen. Vasta tyhjentynyt tai pilaantunut kuori voi kulkeutua veden mukana. Luonnonvaraisena palmu kasvaa Praslinilla ja Curieusella; Victorian puutarhassa se on kasvatettu kasvi. Maailmalle matkannut siemen ei siis todista meressä kasvavasta puusta.",
+          "teksti": "Coco de mer tarkoittaa merikookosta, mutta nimi johtaa harhaan. Palmun siemenet ajautuivat kaukaisille rannoille ennen kuin niiden lähtöpaikka tunnettiin, ja kasvin uskottiin jopa kasvavan meren pohjassa. Elinkelpoinen siemen on kuitenkin liian tiheä kelluakseen. Vasta tyhjentynyt tai pilaantunut kuori voi kulkeutua veden mukana. Luonnonvaraisena palmu kasvaa Praslinilla ja Curieusella; Victorian puutarhassa se on kasvatettu kasvi. Merivirrat levittivät onttoja kuoria paljon palmun elinalueen ulkopuolelle.",
           "wiki": "Lodoicea",
           "tiedosto": "",
           "lyhyt": "",
@@ -356,8 +356,8 @@
       "kuvat": [
         {
           "tiedosto": "Giant alocasia.jpg",
-          "lyhyt": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
-          "selite": "Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.",
+          "lyhyt": "Alokasia Mont Fleurin puutarhassa.",
+          "selite": "Mont Fleurin kasvitieteellisessä puutarhassa kuvattu suurilehtinen alokasia vuonna 2007.",
           "lahde": "Anatoly Terentiev, Wikimedia Commons (PD)"
         }
       ],
@@ -368,7 +368,7 @@
   "ehdotukset": {
     "lentoasema": "Seychelles International Airport (SEZ)",
     "huomiot": [
-      "C-tekstiluonnos, A rajattu ja kartta partial 1/6. Kuvat odottavat erillistä kuvaputkea; neljä kuvakenttää tyhjät joka roolissa.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 5 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Kontekstin lat +4.6236 on väärällä pallonpuoliskolla. Kaupunkipallo korjattu kaupungin WP-pisteeseen -4.62306,55.45250; kontekstiin ja pelidataan ei koskettu.",
       "Wiki Victoria oli epätarkka; käytetään fi-kielistä otsikkoa Victoria (Seychellit), johon luettu kaupungin artikkeli linkittää.",
       "Torin viranomaistiedote käsittelee kunnostusta ja väistötilasuunnitelmaa. Nykyistä valmistumista/toimipaikkaa ei väitetä varmennetuksi.",

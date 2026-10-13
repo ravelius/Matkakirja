@@ -36,9 +36,9 @@
       "q": "Millaisessa maastossa Windhoek sijaitsee?",
       "options": [
         "Ylängöllä",
-        "Jokisuistossa",
-        "Korallisaarella",
-        "Rannikkotasangolla"
+        "Laajassa jokilaaksossa",
+        "Rannikkotasangolla",
+        "Kuivan järven pohjalla"
       ],
       "correct": 0,
       "level": 1,
@@ -70,7 +70,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Puhdistus päätyy pidemmälle kuin tavallinen jäteveden käsittely.",
+      "hint": "Kaupungin niukat vesivarat ovat vauhdittaneet uudelleenkäytön kehittämistä.",
       "fact": "Windhoekissa käytettyä vettä puhdistetaan niin, että se voidaan palauttaa juomaveden lähteeksi.",
       "source": "https://en.wikipedia.org/wiki/Windhoek"
     },
@@ -78,13 +78,13 @@
       "q": "Mihin rakennusperinteeseen Windhoekin aseman tyyli liittyy?",
       "options": [
         "Kap-hollantilaiseen",
-        "Venetsialaiseen",
-        "Japanilaiseen",
-        "Persialaiseen"
+        "Uusgoottilaiseen",
+        "Jugendarkkitehtuuriin",
+        "Uusromaaniseen"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Rautatie yhdisti kaupungin myös eteläisen Afrikan yhteyksiin.",
+      "hint": "Asemarakennuksen tyyli on peräisin Afrikan eteläosasta.",
       "fact": "Asemarakennus edustaa Etelä-Afrikkaan liittyvää kap-hollantilaista tyyliä.",
       "source": "https://en.wikipedia.org/wiki/Windhoek_railway_station"
     }
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "A big shaped rock in the Avis dam vicinity.jpg",
-    "lyhyt": "Kivistä ylänkömaisemaa Avis-padon lähellä Windhoekin tuntumassa.",
-    "selite": "Kivistä ylänkömaisemaa Avis-padon lähellä Windhoekin tuntumassa.",
+    "lyhyt": "Kalliomuodostuma Avisin padon lähistöllä.",
+    "selite": "Suuri muodoltaan erottuva kallio Avisin padon ympäristössä Windhoekin tuntumassa.",
     "lahde": "Pekondjelo Himufe, Commons (CC BY-SA 4.0)",
     "vuosi": "2023"
   },
@@ -109,20 +109,20 @@
       "kansikuvat": [
         {
           "tiedosto": "Blick auf Katutura.jpg",
-          "lyhyt": "Katuturaa Windhoekissa, 2007.",
-          "selite": "Katuturaa Windhoekissa, 2007.",
+          "lyhyt": "Katuturaa Windhoekissa.",
+          "selite": "Näkymä Windhoekin Katuturan asutukseen vuonna 2007 otetussa kuvassa.",
           "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
           "tiedosto": "Hakahana.JPG",
-          "lyhyt": "Hakahanan asutusta Windhoekissa, 2011.",
-          "selite": "Hakahanan asutusta Windhoekissa, 2011.",
+          "lyhyt": "Hakahanan asutusta Windhoekissa.",
+          "selite": "Windhoekin Hakahanan alue vuonna 2011 otetussa kuvassa.",
           "lahde": "Oshilumbu5, Wikimedia Commons (PD)"
         },
         {
           "tiedosto": "Klein-Windhoek 01.jpg",
-          "lyhyt": "Klein Windhoekin asuinalueen näkymä, 2010.",
-          "selite": "Klein Windhoekin asuinalueen näkymä, 2010.",
+          "lyhyt": "Klein Windhoekin asuinaluetta.",
+          "selite": "Näkymä Klein Windhoekiin vuonna 2010 otetussa kuvassa.",
           "lahde": ":Benutzer:Chtrede, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
@@ -171,7 +171,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Aloita Windhoekin keskustan rakennuksista ja jätä aikaa myös kansalliselle kasvitieteelliselle puutarhalle. Christuskirche ja Alte Feste kertovat siirtomaakaupungin synnystä eri tavoin. Hosea Kutakon lentoasema sijaitsee kaupungin ulkopuolella, joten järjestä siirtymä keskustaan etukäteen. Kaupungissa liikutaan takseilla, ja yöksi kannattaa tilata kuljetus. Ruokapaikoissa voi kokeilla mahangua eli helmihirssiä lisukkeena. Vanhojen museorakennusten käyntimahdollisuudet on syytä tarkistaa erikseen.",
+        "kappale": "Aloita Windhoekin keskustan rakennuksista ja jätä aikaa myös kansalliselle kasvitieteelliselle puutarhalle. Christuskirche ja Alte Feste kertovat siirtomaakaupungin synnystä eri tavoin. Hosea Kutakon lentoasema sijaitsee kaupungin ulkopuolella, joten järjestä siirtymä keskustaan etukäteen. Kaupungissa liikutaan takseilla. Ruokapaikoissa voi kokeilla mahangua eli helmihirssiä lisukkeena. Kansallisen kasvitieteellisen puutarhan kallioiset kumpareet säilyttävät kaupungin paikallista kasvillisuutta.",
         "artikkeli": {
           "nimi": "Matkailijan Windhoek",
           "taitto": "opas",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Hosea Kutakon kansainvälinen lentoasema sijaitsee kaupungin ulkopuolella; Erosin pienkonekenttä on lähempänä keskustaa. Varmista lipusta oikea kenttä ja sovi lentoasemakuljetus majoituksen kanssa. Windhoekissa on sekä jaettuja takseja että etukäteen tilattavia kyytejä. Tilatussa kyydissä voit sopia määränpään suoraan, ja yöllä se on suositeltava tapa liikkua.",
+              "teksti": "Hosea Kutakon kansainvälinen lentoasema sijaitsee kaupungin ulkopuolella; Erosin pienkonekenttä on lähempänä keskustaa. Varmista lipusta oikea kenttä ja sovi lentoasemakuljetus majoituksen kanssa. Windhoekissa on sekä jaettuja takseja että etukäteen tilattavia kyytejä. Tilatussa kyydissä voit sopia määränpään suoraan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Kiveä ja siirtomaahistoriaa",
-              "teksti": "Christuskirchessä paikallinen hiekkakivi ja tuontimarmori muodostavat tunnistettavan kokonaisuuden. Lähellä sijaitseva Alte Feste rakennettiin saksalaisen siirtomaajoukon tukikohdaksi. Sen myöhempiin käyttötapoihin kuuluivat koulun asuntola ja museo. Linnakkeen kunnostus ja museokäyttö ovat muuttuneet, joten tarkista käyntimahdollisuus ennen kuin rakennat päivän sen varaan.",
+              "teksti": "Christuskirchessä paikallinen hiekkakivi ja tuontimarmori muodostavat tunnistettavan kokonaisuuden. Lähellä sijaitseva Alte Feste rakennettiin saksalaisen siirtomaajoukon tukikohdaksi. Sen myöhempiin käyttötapoihin kuuluivat koulun asuntola ja museo. Koulun asuntola ja museo olivat saman linnakkeen eri käyttövaiheita.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -263,8 +263,8 @@
                 "teksti": "Hosea Kutako ja Eros palvelevat eri lentoyhteyksiä; kaupungin nimi ei yksin riitä."
               },
               {
-                "otsikko": "Tilaa yökyyti",
-                "teksti": "Yöllä kannattaa käyttää etukäteen tilattavaa taksia."
+                "otsikko": "Matkan valmistelu",
+                "teksti": "Tarkista Ulkoministeriön ajantasainen matkustustiedote ennen matkaa. Tilaa yösiirtymiin kyyti etukäteen."
               },
               {
                 "otsikko": "Museokäynti erikseen",
@@ -360,8 +360,8 @@
       "kuvat": [
         {
           "tiedosto": "Iglesia de Cristo, Windhoek, Namibia, 2018-08-04, DD 05.jpg",
-          "lyhyt": "Christuskirche Windhoekissa, 2018.",
-          "selite": "Christuskirche Windhoekissa, 2018.",
+          "lyhyt": "Windhoekin Christuskirche.",
+          "selite": "Christuskirchen kirkko Windhoekissa 4. elokuuta 2018 otetussa kuvassa.",
           "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
@@ -369,7 +369,7 @@
     },
     "Alte Feste": {
       "aika": "1800-luvun loppu ja 1900-luvun alku",
-      "teksti": "Alte Feste eli Vanha linnake rakennettiin saksalaisen siirtomaajoukon päämajaksi Windhoekin keskustaan. Curt von François suunnitteli rakennuksen, jonka kokonaisuutta muutettiin rakentamisen eri vaiheissa. Korkeat seinät, sisäpiha ja kulmatornit muodostavat linnakkeen rungon. Rakennus sijaitsee Robert Mugabe Avenuen varrella.\n\nIsoisän matkavuonna 1873 linnaketta ei vielä ollut; sen rakentaminen alkoi vasta 1800-luvun lopulla. Sotilaskäytön jälkeen rakennuksessa toimi koulun asuntola ja myöhemmin museon historiallinen kokoelma. Kunnostus ja museokäyttö ovat muuttuneet, joten rakennusta ei pidä pitää automaattisesti avoimena museona. Sen käyttövaiheet näyttävät, miten sama rakennus voi palvella kaupungissa hyvin erilaisia tarkoituksia.",
+      "teksti": "Alte Feste eli Vanha linnake rakennettiin saksalaisen siirtomaajoukon päämajaksi Windhoekin keskustaan. Curt von François suunnitteli rakennuksen, jonka kokonaisuutta muutettiin rakentamisen eri vaiheissa. Korkeat seinät, sisäpiha ja kulmatornit muodostavat linnakkeen rungon. Rakennus sijaitsee Robert Mugabe Avenuen varrella.\n\nIsoisän matkavuonna 1873 linnaketta ei vielä ollut; sen rakentaminen alkoi vasta 1800-luvun lopulla. Sotilaskäytön jälkeen rakennuksessa toimi koulun asuntola ja myöhemmin museon historiallinen kokoelma. Myöhemmät kunnostukset ovat muokanneet rakennuksen käyttöä. Sen käyttövaiheet näyttävät, miten sama rakennus voi palvella kaupungissa hyvin erilaisia tarkoituksia.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -385,7 +385,7 @@
   "ehdotukset": {
     "lentoasema": "Hosea Kutako International Airport (WDH)",
     "huomiot": [
-      "C-tekstiluonnos; kuvat erillisessä kuvaputkessa ja kaikki kuvaroolien neljä kenttää tyhjiä.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 5 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Kartta partial: kaksi omaan WP-pisteeseen sidottua historiallista rakennusta. Aseman tekijäketju ja puutarhan oma piste odottavat varmennusta.",
       "Sääauditointi avoin; saatiedot null. Ilmastolukuja ei ole kirjoitettu.",
       "Goreangabin aloitusvuosi ristiriitainen: kaupungin WP 1958, laitoksen oma historia 1968; pelaajatekstistä poistettu tarkka vuosi.",

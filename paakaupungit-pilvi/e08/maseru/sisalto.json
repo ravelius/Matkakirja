@@ -56,7 +56,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Etsi kaupungin työelämää käsittelevästä nostosta eteläistä teollisuusaluetta.",
+      "hint": "Alue kuuluu Maserun eteläosan kaupunginosiin.",
       "fact": "Thetsanen teollisuusalueella on tekstiili- ja jalkineyrityksiä.",
       "source": "https://en.wikipedia.org/wiki/Maseru"
     },
@@ -75,16 +75,16 @@
       "source": "https://en.wikipedia.org/wiki/Mokorotlo"
     },
     {
-      "q": "Mitä Maserun rautatie nykyisin kuljettaa?",
+      "q": "Mihin kuljetuksiin Maserun rautatie on keskittynyt?",
       "options": [
-        "Tavaraa",
-        "Turisteja",
-        "Työmatkalaisia",
-        "Laskettelijoita"
+        "Tavaraliikenteeseen",
+        "Paikallisjuniin",
+        "Kaukojuniin",
+        "Matkailujuniin"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Aseman tehtävä liittyy kaupan kuljetuksiin.",
+      "hint": "Rata liittyy Etelä-Afrikan verkkoon.",
       "fact": "Maserun rata on yhteydessä Etelä-Afrikan verkkoon, mutta sillä ei ole matkustajaliikennettä.",
       "source": "https://en.wikipedia.org/wiki/Maseru"
     }
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "ISS024-E-12750 - View of Lesotho - Maseru - Caledon River - mountains Qoaling Quotsaneng Likotsi - Maqalika Lake - Platbergsdrift (cropped).jpg",
-    "lyhyt": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
-    "selite": "Maseru ja Mohokare-jokilaakso näkyvät ISS:ltä otetussa ilmakuvassa.",
+    "lyhyt": "Maseru ja Mohokare avaruudesta nähtynä.",
+    "selite": "ISS-avaruusasemalta otetussa kuvassa näkyvät Maseru, Mohokare- eli Caledonjoki ja ympäröivä vuorimaasto.",
     "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)"
   },
   "kaupunkilehti": [
@@ -108,27 +108,27 @@
       "kansikuvat": [
         {
           "tiedosto": "Maseru Lower Thetsane seen from Greater Heights Guesthouse.jpg",
-          "lyhyt": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
-          "selite": "Lower Thetsanen kaupunginosaa Maserussa, 2025.",
+          "lyhyt": "Lower Thetsanen kaupunginosaa Maserussa.",
+          "selite": "Näkymä Greater Heights Guesthouselta Lower Thetsaneen vuonna 2025.",
           "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Maseru Moretele Street and Qoaling Mountain seen from Greater Heights Guesthouse.jpg",
-          "lyhyt": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
-          "selite": "Moretele Street ja Qoalingin vuorimaisema Maserussa, 2025.",
+          "lyhyt": "Moretele Street ja Qoalingin vuori.",
+          "selite": "Maserun Moretele Street ja Qoalingin vuori Greater Heights Guesthouselta nähtyinä vuonna 2025.",
           "lahde": "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Maseru South West Phase III (Masowe III) Housing Estate - panoramio.jpg",
-          "lyhyt": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
-          "selite": "Historiallinen näkymä Masowe III -asutukseen Maserun lounaispuolella; julkaistu 2010.",
+          "lyhyt": "Masowe III -asutusaluetta Maserussa.",
+          "selite": "Maserun lounaisosan Masowe III -asutusalueen kuva; tiedosto julkaistiin vuonna 2010.",
           "lahde": "Paramente Phamotse, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
       "nostot": [
         {
           "otsikko": "Joella on kaksi nimeä",
-          "teksti": "Mohokare ja Caledon ovat sama joki. Maserussa se erottaa Lesothon Etelä-Afrikasta, mutta sillan kohdalla raja myös yhdistää: sen yli kulkee tie naapurimaan Ladybrandin suuntaan. Kaupunki on matalassa laaksossa Maloti-vuoriston reunalla. Maan pääkaupunki ei siis sijaitse valtionsa keskellä vaan aivan sen laidassa. Rajan toisella puolella ei tarvitse kuvitella kaukaista maailmaa, sillä se alkaa jo vastarannasta. Maserun sijainnin ymmärtää parhaiten seuraamalla jokilinjaa.",
+          "teksti": "Mohokare ja Caledon ovat sama joki. Maserussa se erottaa Lesothon Etelä-Afrikasta, mutta sillan kohdalla raja myös yhdistää: sen yli kulkee tie naapurimaan Ladybrandin suuntaan. Kaupunki on matalassa laaksossa Maloti-vuoriston reunalla. Maan pääkaupunki ei siis sijaitse valtionsa keskellä vaan aivan sen laidassa. Maseru Bridge on sekä joen ylitys että maantien raja-asema. Samalla joella on siis paikallinen sesothonkielinen ja englanninkielinen nimi.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Kauppa vaihtaa mittakaavaa",
-          "teksti": "Kingswayn ympärille on kasvanut vierekkäisiä liikekeskuksia, joilla on erilaiset kasvot. Läntisellä puolella ovat suuret toimistorakennukset, tavaratalot ja pankit; idempänä pienemmät liikkeet, torit ja katukauppiaat. Samasta keskustasta löytyy siten sekä virallisten asioiden kaupunki että arkisten ostosten kaupunki. Kingsway ei ole vain läpikulkutie: sen ympäristö kokoaa yhteen Maserun työpaikkoja ja palveluja. Kauppojen mittakaava muuttuu, vaikka kaupungin nimi pysyy samana.",
+          "teksti": "Kingswayn ympärille on kasvanut vierekkäisiä liikekeskuksia, joilla on erilaiset kasvot. Läntisellä puolella ovat suuret toimistorakennukset, tavaratalot ja pankit; idempänä pienemmät liikkeet, torit ja katukauppiaat. Samasta keskustasta löytyy siten sekä virallisten asioiden kaupunki että arkisten ostosten kaupunki. Kingsway ei ole vain läpikulkutie: sen ympäristö kokoaa yhteen Maserun työpaikkoja ja palveluja. Basotho Hat -käsityökauppa sijaitsee samalla Kingswayn kauppa-alueella.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Maserun lounasarkeen kuuluvat mukaan pakatut ruoka-annokset. Kingswayn ruokamyyjiltä on tarjolla esimerkiksi kanaa, sianlihaa, riisiä ja papaa. Papa on maissista tehtyä puuroa, jota syödään muun ruoan rinnalla. Näissä annoksissa pääkaupunki näkyy työpaikkana: ruokaa ostavat myös keskustan toimistojen työntekijät. Ruokalajit ja myyjät vaihtelevat, joten katso päivän tarjontaa sen sijaan, että etsisit yhtä koko kaupungin virallista ateriaa.",
+              "teksti": "Maserun lounasarkeen kuuluvat mukaan pakatut ruoka-annokset. Kingswayn ruokamyyjiltä on tarjolla esimerkiksi kanaa, sianlihaa, riisiä ja papaa. Papa on maissista tehtyä puuroa, jota syödään muun ruoan rinnalla. Näissä annoksissa pääkaupunki näkyy työpaikkana: ruokaa ostavat myös keskustan toimistojen työntekijät. Papa on aterian lisäke; kanan ja sianlihan kaltaiset pääruoat tekevät annoksista erilaisia.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Maserussa kesät ovat lämpimiä ja sateisia, talvet viileitä ja kuivempia. Eteläisen pallonpuoliskon vuodenaikojen rytmi poikkeaa Suomen kalenterista: keskikesä osuu Suomen talveen. Talvella kaupungissakin esiintyy pakkasta, ja vuoristoon jatkuva matka tarvitsee oman sääarvionsa. Ota mukaan lämpimiä kerroksia ja tarkista ajankohtainen ennuste ennen Thaba Bosiun kaltaista kävelyretkeä. Pelkkä tieto siitä, että ollaan Afrikassa, ei ratkaise vaatetusta.",
+              "teksti": "Maserussa kesät ovat lämpimiä ja sateisia, talvet viileitä ja kuivempia. Eteläisen pallonpuoliskon vuodenaikojen rytmi poikkeaa Suomen kalenterista: keskikesä osuu Suomen talveen. Talvella kaupungissakin esiintyy pakkasta, ja vuoristoon jatkuva matka tarvitsee oman sääarvionsa. Ota mukaan lämpimiä kerroksia ja tarkista ajankohtainen ennuste ennen Thaba Bosiun kaltaista kävelyretkeä. Thaba Bosiun tasanteelle noustaan jalan, joten sen retkipäivä eroaa Kingswayn kauppakierroksesta.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -293,7 +293,7 @@
       "nostot": [
         {
           "otsikko": "Kaupunki vuonna 1873",
-          "teksti": "Isoisän matkavuonna 1873 Maseru oli jo olemassa, mutta nykyistä laajaa pääkaupunkia ei pidä siirtää sellaisenaan menneisyyteen. Paikka oli kasvanut pienen poliisileirin ympärille, ja Basutomaan hallinto oli tuolloin Kapsiirtomaan yhteydessä. Myöhemmin Maseru sai jälleen pääkaupungin aseman. Joenvarsipaikan historia kulkee siis hallinnollisten muutosten kautta. Lesothon itsenäistyessä kaupunki säilyi pääkaupunkina, mutta sen varhainen mittakaava oli aivan toinen kuin nykyinen.",
+          "teksti": "Isoisän matkavuonna 1873 Maseru oli jo olemassa, mutta paikka oli paljon nykyistä pienempi. Paikka oli kasvanut pienen poliisileirin ympärille, ja Basutomaan hallinto oli tuolloin Kapsiirtomaan yhteydessä. Myöhemmin Maseru sai jälleen pääkaupungin aseman. Joenvarsipaikan historia kulkee siis hallinnollisten muutosten kautta. Lesothon itsenäistyessä kaupunki säilyi pääkaupunkina, mutta sen varhainen mittakaava oli aivan toinen kuin nykyinen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -346,7 +346,7 @@
   "ehdotukset": {
     "lentoasema": "Moshoeshoe I International Airport (MSU)",
     "huomiot": [
-      "C-tekstiluonnos: kuvat odottavat erillistä kuvaputkea; kaikkien kuvaroolien neljä kenttää ovat tyhjiä.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 4 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Kartta partial: ei hyväksyttyjä kohdepisteitä; rajat ovat kontekstin ympärille tehty alustava rajausehdotus. Thaba Bosiu jää kaupungin ydinkartan ulkopuolelle.",
       "Sääauditointi avoin: saatiedot null; saa.json säilytetty koskemattomana.",
       "Väestö jätetty tekstistä pois: kontekstin urban/peri-urban 343541 (2016) ei vastaa WP:n 330760-lukua.",

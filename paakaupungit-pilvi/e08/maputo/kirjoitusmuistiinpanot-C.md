@@ -13,3 +13,45 @@ Sää: saatiedot null. 48/48 primäärivarmennus ei ole tässä valmistunut; sä
 Faktapoikkeamat: tarkat paikalliset vuosiluvut, väestöluvut, pinta-alat, etäisyydet ja korkeudet jätetty pois tai vuosisatatasolle. 1873 on annettu pelivuosi; ei keksittyä paikallista tapahtumaa. Rautatalon kuumuuslegendaa ei kerrota varmana syynä. Aseman yhteydet kirjoitettu rakennettuina raideyhteyksinä, ei voimassa olevana henkilöliikennelupauksena. Nimeämisen syy-yhteys ristiriitainen M1/M10:ssa ja pois tekstistä.
 
 A/C on saman kirjoittajan työ. Riippumaton D/E/F, kuvaputki, karttaportti, sääauditointi, hyväksyntä, pelikytkentä ja julkaisu ovat avoinna. Ei Git-operaatioita eikä pelitiedostojen muutoksia.
+
+
+## Task118 korjaus 13.10.2026
+Kaikki pelaajatekstikentät luettu ja sovellettu otoksen yleissäännöt. Lähdepohja, C-muistio sekä nykyiset Commons-lähdetiedot tarkistettu. Meta- ja täytelauseita korvattu kaupungin omilla faktoilla; vihjeet ja houkuttimet täsmennetty. Nykyiset kuvat, pisteet ja sää säilytetty; niiden puutteet ovat erillisiä portteja. Tuore mainin js/data-haku tehty ennen kirjoittamista. Ei Git, kuvia, pelikytkentää tai julkaisua.
+
+
+```text
+VIRHE maputo: kansikuva 1: tiedosto puuttuu
+VIRHE maputo: kansikuva 2: tiedosto puuttuu
+VIRHE maputo: kansikuva 3: tiedosto puuttuu
+VIRHE maputo: kansi nosto 1: tiedosto puuttuu
+VIRHE maputo: kansi nosto 2: tiedosto puuttuu
+VIRHE maputo: kansi nosto 3: tiedosto puuttuu
+VIRHE maputo: kansi nosto 4: tiedosto puuttuu
+VIRHE maputo: matkailijalle.kuva: tiedosto puuttuu
+VIRHE maputo: opas jakso 1: tiedosto puuttuu
+VIRHE maputo: opas jakso 2: tiedosto puuttuu
+VIRHE maputo: opas jakso 3: tiedosto puuttuu
+VIRHE maputo: opas jakso 4: tiedosto puuttuu
+VIRHE maputo: opas jakso 5: tiedosto puuttuu
+VIRHE maputo: teemasivu historia nosto 1: tiedosto puuttuu
+VIRHE maputo: teemasivu historia nosto 2: tiedosto puuttuu
+VIRHE maputo: teemasivu historia nosto 3: tiedosto puuttuu
+VIRHE maputo: teemasivu historia nosto 4: tiedosto puuttuu
+VIRHE maputo: kohdekartta.rajat { pohjoinen > etela, ita > lansi }
+VIRHE maputo: kohteita 0 (1–15)
+== maputo: 19 virhettä, 1 varoitusta, 1 kuvaa
+YHTEENSÄ 1 kaupunkia: 19 virhettä, 1 varoitusta
+```
+SHA256 4b96f6933e01ad2e9b1a8a8d86d836b36393f0e2628bdde66aa01e2bbb16d4ea
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash dd1b44b9f48ddf8f703cec086a01cb22950b5f82dc9ab42c09af456f68f58a83. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS maputo: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash dd1b44b9f48ddf8f703cec086a01cb22950b5f82dc9ab42c09af456f68f58a83. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS maputo: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

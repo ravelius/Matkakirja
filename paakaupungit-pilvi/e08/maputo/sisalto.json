@@ -14,7 +14,7 @@
     }
   },
   "artikkeli": {
-    "intro": "**Maputo** avautuu Intian valtamereen suuren lahden kautta, ja sen satama yhdistää Mosambikin rannikon eteläisen Afrikan sisämaahan. Maan pääkaupunki sijaitsee kaukana etelässä, Maputonlahden länsirannalla. Historiallista keskustaa kutsutaan Baixaksi, ja leveiden katujen varrella kasvaa jakarandoja ja akaasioita. Ruutukortteleiden lomassa kohtaavat uusklassismi, art deco ja modernismi.\n\nKaupungin rakennuksilla on yllättäviä tarinoita: **Casa de Ferro** tuotiin Belgiasta osina, ja kuparikupolinen rautatieasema luetaan usein virheellisesti Eiffelin työksi. Isoisän matkavuonna 1873 paikalla oli jo Lourenço Marquesin asutus ja linnoitus, mutta monet nykyiset maamerkit syntyivät myöhemmin. Itsenäistymisen jälkeen kaupunki sai nimen Maputo. Se on samalla oma maakuntatasoinen hallintoalue, jota ei pidä sekoittaa ympäröivään Maputon maakuntaan. Salmen vastaranta ja Inhacan saari kuuluvat nekin kaupungin hallinnolliseen kokonaisuuteen.",
+    "intro": "**Maputo** avautuu Intian valtamereen suuren lahden kautta, ja sen satama yhdistää Mosambikin rannikon eteläisen Afrikan sisämaahan. Maan pääkaupunki sijaitsee kaukana etelässä, Maputonlahden länsirannalla. Historiallista keskustaa kutsutaan Baixaksi, ja leveiden katujen varrella kasvaa jakarandoja ja akaasioita. Ruutukortteleiden lomassa kohtaavat uusklassismi, art deco ja modernismi.\n\nKaupungin rakennuksilla on yllättäviä tarinoita: **Casa de Ferro** tuotiin Belgiasta osina, ja kuparikupolinen rautatieasema luetaan usein virheellisesti Eiffelin työksi. Isoisän matkavuonna 1873 paikalla oli jo Lourenço Marquesin asutus ja linnoitus, mutta monet nykyiset maamerkit syntyivät myöhemmin. Itsenäistymisen jälkeen kaupunki sai nimen Maputo. Se on samalla oma maakuntatasoinen hallintoalue, joka on erillään ympäröivästä Maputon maakunnasta. Salmen vastaranta ja Inhacan saari kuuluvat nekin kaupungin hallinnolliseen kokonaisuuteen.",
     "teksti": "Maputon satama ei palvele vain rannikkoa. Raiteet yhdistävät sitä eteläisen Afrikan sisämaahan, ja satamassa on eri lastityypeille omia terminaaleja. Kaupungin vanha rautatieasema tekee yhteyden näkyväksi: kuljetusten käytännöllinen solmukohta sai komean Beaux-Arts-julkisivun.\n\nKeskustassa rakennusmateriaalikin voi olla tarinan päähenkilö. Casa de Ferron metalliosat valmistettiin Belgiassa ja koottiin Mosambikissa. Kuvernöörin asunnoksi hankittu talo päätyi muihin käyttötarkoituksiin, eikä sen suunnittelua voi panna Gustave Eiffelin nimiin.\n\nVanhat rakennukset ovat myös muuttaneet tehtävää. Linnoitus toimii museona, torihallissa myydään yhä elintarvikkeita ja Tundurun puutarhassa on tennisliiton kenttiä. Nykyinen Maputo ei ole yksi säilynyt aikakausi, vaan kaupunki, jossa sataman, hallinnon, kaupan ja vapaa-ajan paikat ovat kasvaneet rinnakkain."
   },
   "kysymykset": [
@@ -36,9 +36,9 @@
       "q": "Mikä hallinnollinen erikoisuus Maputon kaupungilla on?",
       "options": [
         "Se on oma maakunta",
-        "Se on erillinen valtio",
-        "Se on yhteinen rajakunta",
-        "Se on maakuntien liitto"
+        "Se kuuluu kahteen maakuntaan",
+        "Se kuuluu ympäröivään maakuntaan",
+        "Se on kuntien yhteinen alue"
       ],
       "correct": 0,
       "level": 2,
@@ -70,8 +70,8 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Nimi liittyy kaupungin arkiseen joukkoliikenteeseen.",
-      "fact": "Chapas ovat minibussiliikennettä; niiden turvallisuudessa on puutteita, eikä käyttöä suositella matkailijalle.",
+      "hint": "Nimi kuuluu Maputon liikennesanastoon.",
+      "fact": "Chapas ovat Maputon minibussiliikennettä.",
       "source": "https://en.wikipedia.org/wiki/Maputo"
     },
     {
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Costa do Sol – estruturas de protecção costeira na Avenida Marginal 03.jpg",
-    "lyhyt": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
-    "selite": "Costa do Solin ranta sijaitsee Maputonlahdella Avenida Marginalin varrella.",
+    "lyhyt": "Costa do Solin rantaa Maputossa.",
+    "selite": "Rannikon suojarakenteita Costa do Solin alueella Avenida Marginalin varrella Maputonlahdella.",
     "lahde": "Salazar Sérgio, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Kaupunki on myös maakunta",
-          "teksti": "Maputon nimi voi johtaa kartanlukijan harhaan. Kaupunki on oma maakuntatasoinen hallintoalue, ja sitä ympäröi erillinen Maputon maakunta. Naapurikaupunki Matola taas kuuluu laajempaan metropolialueeseen, mutta ei muutu siksi osaksi Maputon kaupunkia. Kaupungin hallinnolliseen kokonaisuuteen kuuluu myös KaTembe salmen toisella puolella sekä Inhacan saaren alue. Kun kuulet Maputon asukasluvun, kannattaa siis selvittää, mistä Maputosta puhutaan: keskustan näkymä ei yksin kerro hallintorajoja.",
+          "teksti": "Maputon nimi voi johtaa kartanlukijan harhaan. Kaupunki on oma maakuntatasoinen hallintoalue, ja sitä ympäröi erillinen Maputon maakunta. Naapurikaupunki Matola taas kuuluu laajempaan metropolialueeseen, mutta ei muutu siksi osaksi Maputon kaupunkia. Kaupungin hallinnolliseen kokonaisuuteen kuuluu myös KaTembe salmen toisella puolella sekä Inhacan saaren alue. Saman niminen maakunta ja kaupunki kattavat siten eri alueet: Matola on metropoliseutua, KaTembe ja Inhaca kaupungin omia osia.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -170,7 +170,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Aloita Maputon historiallisesta Baixasta, jossa rautatieasema, torihalli ja linnoitus kertovat kaupungin yhteydestä satamaan. Tundurun puutarha tarjoaa toisenlaisen pysähdyksen keskellä kaupunkia. Rannikon ravintoloissa kala ja äyriäiset ovat luonteva lounasvalinta. Suunnittele kävelyt päiväsaikaan ja sovi pidemmät siirtymät luotettavan kyydin avulla. Maputon matkalla tarvitaan varovaisuutta, ja pimeällä liikkumista tulee välttää.",
+        "kappale": "Maputon historiallinen Baixa kokoaa rautatieaseman, Mercado Centralin torihallin ja linnoituksen sataman läheisyyteen. Tundurun puutarhassa yhdistyvät puistokävely ja tennisliiton kentät. Casa de Ferron metalliosat valmistettiin Belgiassa ja koottiin kaupungissa. Polanan Avenida Julius Nyereren varrella on ravintoloita ja liikkeitä. Kalat ja äyriäiset kuuluvat rannikon ruokatarjontaan.",
         "artikkeli": {
           "nimi": "Matkailijan Maputo",
           "taitto": "opas",
@@ -179,7 +179,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Maputon kansainvälinen lentoasema käyttää tunnusta MPM. Järjestä kuljetus kaupunkiin ja sovi taksin hinnasta ennen lähtöä. Kaduilla näkyvät chapas ovat minibussiliikennettä, mutta niiden kunto ja ajotapa aiheuttavat turvallisuusriskejä, eikä käyttöä suositella. Tee kävelykierrokset päiväsaikaan ja järjestä iltasiirtymät luotettavalla kyydillä. Portugalin osaamisesta on hyötyä, kun selvität osoitteita ja liikkumista.",
+              "teksti": "Maputon kansainvälinen lentoasema käyttää tunnusta MPM. Järjestä kenttäkuljetus taksilla tai majoituksen kautta. Chapas ovat kaupungissa näkyviä minibusseja. Portugalin osaamisesta on hyötyä osoitteiden ja kulkuyhteyksien selvittämisessä. Baixan vanha rautatieasema ja kansainvälinen lentoasema ovat eri liikenteen solmukohtia.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -189,7 +189,7 @@
             },
             {
               "otsikko": "Baixan rakennuksia",
-              "teksti": "Historiallinen Baixa kokoaa aseman, Mercado Centralin torihallin ja linnoituksen lähelle kaupungin satamaa. Asemalla huomio kiinnittyy keskuskaareen ja kupoleihin, torihallissa taas kauppaan, joka jatkuu vanhassa rakennuksessa. Tundurun puutarha ja Casa de Ferro tuovat kierrokseen puiston ja osista kootun talon. Rakennukset ovat eri ajoilta: niitä ei pidä kuvitella samanlaiseksi katunäkymäksi isoisän matkavuonna.",
+              "teksti": "Historiallinen Baixa kokoaa aseman, Mercado Centralin torihallin ja linnoituksen lähelle kaupungin satamaa. Asemalla huomio kiinnittyy keskuskaareen ja kupoleihin, torihallissa taas kauppaan, joka jatkuu vanhassa rakennuksessa. Tundurun puutarha ja Casa de Ferro tuovat kierrokseen puiston ja osista kootun talon. Rautatalo koottiin 1800-luvun lopulla, nykyinen asema ja torihalli rakennettiin seuraavan vuosisadan alussa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Rannasta Polanaan",
-              "teksti": "Polanan kaupunginosassa Avenida Julius Nyereren varrella on ravintoloita ja liikkeitä. Rannikon äärellä sijaitseva Polana-hotelli edustaa 1900-luvun alun suurhotellien arkkitehtuuria. Kaupungin merenpuoleista osaa voi yhdistää ravintolapysähdykseen ja katukierrokseen, mutta tyhjälle rannalle ei kannata lähteä yksin. Näkymä lahdelle ja uimapaikka ovat eri asioita: kaupunkirantaa ei tässä suositella uimakohteena.",
+              "teksti": "Polanan kaupunginosassa Avenida Julius Nyereren varrella on ravintoloita ja liikkeitä. Rannikon äärellä sijaitseva Polana-hotelli edustaa 1900-luvun alun suurhotellien arkkitehtuuria. Polana ja historiallinen Baixa näyttävät kaupungin eri rakennusvaiheita: vanha sataman ydin ja myöhemmät liike- ja hotellialueet ovat erillisiä kierroksen osia.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Lounas meren äärellä",
-              "teksti": "Maputon keittiössä kohtaavat afrikkalaiset, portugalilaiset sekä Intian valtameren ympäriltä tulleet vaikutteet. Kalaa ja äyriäisiä tarjotaan rannikon ravintoloissa, ja myös grillattu kana on tavallinen valinta. Pienistä ruokapaikoista löytyy riisin kanssa tarjoiltuja aterioita, kahviloista voileipiä ja leivonnaisia. Bhajia-papupaistokset sopivat pieneksi maistiaiseksi. Juomavesi kannattaa hankkia pullossa, sillä vesijohtovesi ei ole juotavaa.",
+              "teksti": "Maputon keittiössä kohtaavat afrikkalaiset, portugalilaiset sekä Intian valtameren ympäriltä tulleet vaikutteet. Kalaa ja äyriäisiä tarjotaan rannikon ravintoloissa, ja myös grillattu kana on tavallinen valinta. Pienistä ruokapaikoista löytyy riisin kanssa tarjoiltuja aterioita, kahviloista voileipiä ja leivonnaisia. Bhajia-papupaistokset sopivat pieneksi maistiaiseksi. Bhajia kuuluu Intian valtameren piiristä tulleisiin ruokavaikutteisiin.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -258,8 +258,8 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Suunnittele siirtymät",
-                "teksti": "Vältä pimeällä liikkumista ja järjestä pidemmät matkat luotettavalla kyydillä. Chapojen käyttöä ei suositella turvallisuuspuutteiden vuoksi."
+                "otsikko": "Matkan valmistelu",
+                "teksti": "Tarkista Ulkoministeriön ajantasainen matkustustiedote ennen matkaa. Suunnittele siirtymät ja paluu päiväsaikaan."
               },
               {
                 "otsikko": "Juomavesi",
@@ -270,8 +270,8 @@
                 "teksti": "Kielen osaaminen helpottaa asiointia ja osoitteiden selvittämistä."
               },
               {
-                "otsikko": "Maa on laaja",
-                "teksti": "Maputon matka ja Mosambikin pohjoisosiin suuntautuva matka vaativat eri suunnitelmat. Tarkista ajantasaiset matkustusrajoitukset ennen jatkomatkaa."
+                "otsikko": "Baixa ja Polana",
+                "teksti": "Baixa on historiallinen satamakeskusta, Polana oma kaupunginosansa ravintoloineen ja liikkeineen."
               }
             ]
           },
@@ -345,7 +345,7 @@
   "ehdotukset": {
     "lentoasema": "Maputon kansainvälinen lentoasema (MPM)",
     "huomiot": [
-      "Nopea C-tekstiluonnos: 8 nostoa, 5 opasjaksoa, 5 kysymystä ja 3 tietoa. Riippumaton D/E/F tekemättä.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 1 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "18 kuvaroolia tyhjin neljän kentän arvoin; erillinen kuvaputki. Ei Commons-valintaa.",
       "Kartta partial: nolla hyväksyttyä kohdetta, rajaus null ja nähtävyysjutut tyhjät. Kohteiden omia WP-pisteitä ja tekijäketjun puutteita faktapohjassa.",
       "Sääauditointi avoin; saatiedot null, saa.json koskematta. Ei ilmastolukuja.",

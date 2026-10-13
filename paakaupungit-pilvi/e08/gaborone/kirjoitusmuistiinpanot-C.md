@@ -15,3 +15,47 @@ SHA256:
 - faktapohja.md: `ae989c67f81a2aab6b338e994448beb014e20f166091be0a0e06ff45bf52703c`
 
 Todisteet: `/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e08-gaborone`: HTML/tekstipoiminnat, fetch-log.jsonl, tarkistin-lyhyt.txt, tarkistin-kaikki.txt, mitta-sha.json ja robots-lokit.jsonl.
+
+
+## Task 118 — korjauskierros 13.10.2026
+
+Korjauslistan nimetyt tekstilöydökset käsitelty. Lähdepohja ja tallennetut /wiki/-sivut luettu. Tuore origin/main haettu erän omaan klooniin; kaupungin/aiheiden js/data-päällekkäisyyshaku tehty. Koneellisen tarkistuksen kuva-, kartta- ja sääpuutteet ovat erillisiä avoimia portteja. Nykyiset kuvatiedostot ja muut kuin tekstikentät säilytetty. Kuvatekstien lyhyt ja selite erotettu; käytetyt Commons-kuvat ja tallennetut lähde-/pikselitodisteet tarkistettu. Ei generointia eikä pelikytkentää.
+
+Paikallinen tarkistin (`--lyhyt`, ei verkkokierrosta):
+
+```text
+VIRHE gaborone: kansikuva 3: tiedosto puuttuu
+VIRHE gaborone: kansi nosto 1: tiedosto puuttuu
+VIRHE gaborone: kansi nosto 2: tiedosto puuttuu
+VIRHE gaborone: kansi nosto 4: tiedosto puuttuu
+VIRHE gaborone: matkailijalle.kuva: tiedosto puuttuu
+VIRHE gaborone: opas jakso 1: tiedosto puuttuu
+VIRHE gaborone: opas jakso 2: tiedosto puuttuu
+VIRHE gaborone: opas jakso 3: tiedosto puuttuu
+VIRHE gaborone: opas jakso 4: tiedosto puuttuu
+VIRHE gaborone: opas jakso 5: tiedosto puuttuu
+VIRHE gaborone: teemasivu historia nosto 1: tiedosto puuttuu
+VIRHE gaborone: teemasivu historia nosto 2: tiedosto puuttuu
+VIRHE gaborone: teemasivu historia nosto 3: tiedosto puuttuu
+VIRHE gaborone: teemasivu historia nosto 4: tiedosto puuttuu
+VIRHE gaborone: juttu Kansallinen kasvitieteellinen puutarha kuva 1: tiedosto puuttuu
+== gaborone: 15 virhettä, 3 varoitusta, 6 kuvaa
+YHTEENSÄ 1 kaupunkia: 15 virhettä, 3 varoitusta
+```
+SHA256: 13cc9ea5f3de2d8ef4e5e6531361964f130790e049f1f96cb64229a25dc7307a
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS gaborone: teemasivu historia nosto 2: teksti 420 mrk (440–660)
+VAROITUS gaborone: kohteita 3 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS gaborone: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 04845ed6c138bfb44cccb188c65102e2dd060c12b8bbdeed35af8a5f3938d6ed. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS gaborone: teemasivu historia nosto 2: teksti 420 mrk (440–660)
+VAROITUS gaborone: kohteita 3 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS gaborone: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

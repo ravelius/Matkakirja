@@ -3,7 +3,7 @@
   "era": "e08",
   "city": "harare",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+  "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
   "assets": [
     {
       "era": "e08",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-TRAVELER-illustration-v1-20261012-925b536a3f60.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva msasan nuoresta lehdistöstä.",
-        "lyhyt": "Havainnekuva msasan nuoresta lehdistöstä."
+        "selite": "Havainnekuva msasan nuoresta lehdistöstä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-TRAVELER-illustration-v1-20261012-925b536a3f60.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva msasan nuoresta lehdistöstä.",
-        "lyhyt": "Havainnekuva msasan nuoresta lehdistöstä."
+        "selite": "Havainnekuva msasan nuoresta lehdistöstä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "1935233577c8f4fe5d3921e7f323d5a3f255192947d6f47813937269e3852343",
+        "semanticContextSHA256": "1cf3390e816234805540ad22d2efe90c22bea149460df0386f6ddd5c5a566075",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -234,9 +234,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -255,17 +255,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "1935233577c8f4fe5d3921e7f323d5a3f255192947d6f47813937269e3852343",
+      "contextAfterSHA256": "1cf3390e816234805540ad22d2efe90c22bea149460df0386f6ddd5c5a566075",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "1935233577c8f4fe5d3921e7f323d5a3f255192947d6f47813937269e3852343",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "1935233577c8f4fe5d3921e7f323d5a3f255192947d6f47813937269e3852343",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "925b536a3f605c1651a8eb76ab523e56bc0e69f30aadfc4106982d4ffd283d61",
+        "sameImageExportSHA256": "85234c4d24911d90f17edf06ae80f20fe569a20e1112c8b1611920439808b342",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -290,10 +311,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-O3-illustration-v1-20261012-51abee80a24c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva msasan lehvästöstä.",
-        "lyhyt": "Havainnekuva msasan lehvästöstä."
+        "selite": "Havainnekuva msasan lehvästöstä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -301,10 +322,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-O3-illustration-v1-20261012-51abee80a24c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva msasan lehvästöstä.",
-        "lyhyt": "Havainnekuva msasan lehvästöstä."
+        "selite": "Havainnekuva msasan lehvästöstä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -318,7 +339,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "9a51f14365a9bb62a63b36b8d1faa2e9f0529b0baa5d4ed4f763e9ceefa12abe",
@@ -462,9 +483,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -483,17 +504,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "9a51f14365a9bb62a63b36b8d1faa2e9f0529b0baa5d4ed4f763e9ceefa12abe",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "9a51f14365a9bb62a63b36b8d1faa2e9f0529b0baa5d4ed4f763e9ceefa12abe",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "9a51f14365a9bb62a63b36b8d1faa2e9f0529b0baa5d4ed4f763e9ceefa12abe",
+          "subjectTitle": "Puita ja luontokäynti",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "51abee80a24c8fd9bffe45bca17523d19207b0fcfcfcf85cb4da38ce0eac2bad",
+        "sameImageExportSHA256": "f8e5df7ab135fce4d3f937909488c3c52f1dbdc614276fd0b19124c5c3a8bc8b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -518,10 +560,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-O4-illustration-v1-20261012-941d4726cd46.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Syöminen ja asiointi.",
-        "lyhyt": "Havainnekuva: Syöminen ja asiointi."
+        "selite": "Havainnekuva: Syöminen ja asiointi."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -529,10 +571,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-O4-illustration-v1-20261012-941d4726cd46.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Syöminen ja asiointi.",
-        "lyhyt": "Havainnekuva: Syöminen ja asiointi."
+        "selite": "Havainnekuva: Syöminen ja asiointi."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -546,7 +588,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "a0f53684c0a017b7cc32a4fd5131574d2af817e05a06ee3fcf217b68bebc7d2b",
@@ -835,9 +877,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -856,17 +898,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "a0f53684c0a017b7cc32a4fd5131574d2af817e05a06ee3fcf217b68bebc7d2b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "a0f53684c0a017b7cc32a4fd5131574d2af817e05a06ee3fcf217b68bebc7d2b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "a0f53684c0a017b7cc32a4fd5131574d2af817e05a06ee3fcf217b68bebc7d2b",
+          "subjectTitle": "Syöminen ja asiointi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "941d4726cd46ebd8fc4cbce25315888e8a910b9896e55a409cff7aabd9c1c76d",
+        "sameImageExportSHA256": "3fc7c89683bf6401137d362188967ad2f3308277710163115aee61ee8225a5fa",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -888,10 +951,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-K1-illustration-v1-20261012-92b7dc277df0.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torin maataloustuotteista, ei Mbare Musikan paikkavalokuva.",
-        "lyhyt": "Havainnekuva torin maataloustuotteista, ei Mbare Musikan paikkavalokuva."
+        "selite": "Havainnekuva torin maataloustuotteista, ei Mbare Musikan paikkavalokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -899,10 +962,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-K1-illustration-v1-20261012-92b7dc277df0.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva torin maataloustuotteista, ei Mbare Musikan paikkavalokuva.",
-        "lyhyt": "Havainnekuva torin maataloustuotteista, ei Mbare Musikan paikkavalokuva."
+        "selite": "Havainnekuva torin maataloustuotteista, ei Mbare Musikan paikkavalokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -916,7 +979,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1e185e0d9d9569d224d5c764b2549cfd11c0af1782aae2a301f80907efd50c11",
         "semanticContextSHA256": "1e185e0d9d9569d224d5c764b2549cfd11c0af1782aae2a301f80907efd50c11",
@@ -1075,9 +1138,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1096,17 +1159,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "targetAfterSHA256": "1e185e0d9d9569d224d5c764b2549cfd11c0af1782aae2a301f80907efd50c11",
       "contextAfterSHA256": "1e185e0d9d9569d224d5c764b2549cfd11c0af1782aae2a301f80907efd50c11",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "1e185e0d9d9569d224d5c764b2549cfd11c0af1782aae2a301f80907efd50c11",
+        "contextAfterSHA256": "1e185e0d9d9569d224d5c764b2549cfd11c0af1782aae2a301f80907efd50c11",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "1e185e0d9d9569d224d5c764b2549cfd11c0af1782aae2a301f80907efd50c11",
+          "semanticContextSHA256": "1e185e0d9d9569d224d5c764b2549cfd11c0af1782aae2a301f80907efd50c11",
+          "subjectTitle": "Torilta lähdetään maaseudulle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "92b7dc277df07761c6c6c055639ac97fb8cb980fa78a4d44a410d333b50eacba",
+        "sameImageExportSHA256": "b02a4793fd41c1f2897788ab90e1d270a0101c6a4babd06990e270b86fc894f2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -1128,10 +1212,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-K2-illustration-v1-20261012-1b7487b8ebbf.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva äänentallennusvälineestä ja arkistokansiosta.",
-        "lyhyt": "Havainnekuva äänentallennusvälineestä ja arkistokansiosta."
+        "selite": "Havainnekuva äänentallennusvälineestä ja arkistokansiosta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1139,10 +1223,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-K2-illustration-v1-20261012-1b7487b8ebbf.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva äänentallennusvälineestä ja arkistokansiosta.",
-        "lyhyt": "Havainnekuva äänentallennusvälineestä ja arkistokansiosta."
+        "selite": "Havainnekuva äänentallennusvälineestä ja arkistokansiosta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1156,7 +1240,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
         "targetBeforeSHA256": "86405688784b898696592eeb69f6551c213c66de3d690c8afb8d562001737c3e",
         "semanticContextSHA256": "86405688784b898696592eeb69f6551c213c66de3d690c8afb8d562001737c3e",
@@ -1346,9 +1430,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1367,17 +1451,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "targetAfterSHA256": "86405688784b898696592eeb69f6551c213c66de3d690c8afb8d562001737c3e",
       "contextAfterSHA256": "86405688784b898696592eeb69f6551c213c66de3d690c8afb8d562001737c3e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "86405688784b898696592eeb69f6551c213c66de3d690c8afb8d562001737c3e",
+        "contextAfterSHA256": "86405688784b898696592eeb69f6551c213c66de3d690c8afb8d562001737c3e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "86405688784b898696592eeb69f6551c213c66de3d690c8afb8d562001737c3e",
+          "semanticContextSHA256": "86405688784b898696592eeb69f6551c213c66de3d690c8afb8d562001737c3e",
+          "subjectTitle": "Arkistoon mahtuu myös ääni",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "1b7487b8ebbfab1404e886588d9f4c7dcbea9d84f85bba1057c9f0f2f7e11080",
+        "sameImageExportSHA256": "59066bf4046c1cf5b871513d90335b91e7bda6862df656df6cc3a32d2ae7d682",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -1399,10 +1504,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-K3-illustration-v3-20261012-280b6bb5f7be.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Teatteria tehdään myös näyttämön takana.",
-        "lyhyt": "Havainnekuva: Teatteria tehdään myös näyttämön takana."
+        "selite": "Havainnekuva: Teatteria tehdään myös näyttämön takana."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1410,10 +1515,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-K3-illustration-v3-20261012-280b6bb5f7be.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Teatteria tehdään myös näyttämön takana.",
-        "lyhyt": "Havainnekuva: Teatteria tehdään myös näyttämön takana."
+        "selite": "Havainnekuva: Teatteria tehdään myös näyttämön takana."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1427,7 +1532,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0d4224fb31aae5c8562d4838440cdcec9861233859f59a4e6a13121a80e18ec4",
         "semanticContextSHA256": "0d4224fb31aae5c8562d4838440cdcec9861233859f59a4e6a13121a80e18ec4",
@@ -1714,9 +1819,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1735,17 +1840,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "targetAfterSHA256": "0d4224fb31aae5c8562d4838440cdcec9861233859f59a4e6a13121a80e18ec4",
       "contextAfterSHA256": "0d4224fb31aae5c8562d4838440cdcec9861233859f59a4e6a13121a80e18ec4",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "0d4224fb31aae5c8562d4838440cdcec9861233859f59a4e6a13121a80e18ec4",
+        "contextAfterSHA256": "0d4224fb31aae5c8562d4838440cdcec9861233859f59a4e6a13121a80e18ec4",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0d4224fb31aae5c8562d4838440cdcec9861233859f59a4e6a13121a80e18ec4",
+          "semanticContextSHA256": "0d4224fb31aae5c8562d4838440cdcec9861233859f59a4e6a13121a80e18ec4",
+          "subjectTitle": "Teatteria tehdään myös näyttämön takana",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "280b6bb5f7be17632bf1085a2c6d9fe9ac12bf737366d84e603b4159c002fbef",
+        "sameImageExportSHA256": "365b1ce2fc6eae91a9d93f15972da0a6b4e368940d70ed942793e99c6e93c8eb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -1767,10 +1893,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-K4-illustration-v1-20261012-623cc607f99c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kirjaston aineistosta.",
-        "lyhyt": "Havainnekuva kirjaston aineistosta."
+        "selite": "Havainnekuva kirjaston aineistosta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1778,10 +1904,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-K4-illustration-v1-20261012-623cc607f99c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kirjaston aineistosta.",
-        "lyhyt": "Havainnekuva kirjaston aineistosta."
+        "selite": "Havainnekuva kirjaston aineistosta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1795,10 +1921,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c9f00b1e74b5b89dd7edbc454518a7f821739d3bafae971248488acbf855a0f7",
-        "semanticContextSHA256": "c9f00b1e74b5b89dd7edbc454518a7f821739d3bafae971248488acbf855a0f7",
+        "targetBeforeSHA256": "a2e4758c3fcef3244f54eab9791f2c466c225e49d45209a5e86682332ef87cbd",
+        "semanticContextSHA256": "a2e4758c3fcef3244f54eab9791f2c466c225e49d45209a5e86682332ef87cbd",
         "subjectTitle": "Kaupunki on kokoelmiaan nuorempi",
         "targetState": "existing-target"
       },
@@ -1939,9 +2065,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1960,17 +2086,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
-      "targetAfterSHA256": "c9f00b1e74b5b89dd7edbc454518a7f821739d3bafae971248488acbf855a0f7",
-      "contextAfterSHA256": "c9f00b1e74b5b89dd7edbc454518a7f821739d3bafae971248488acbf855a0f7",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+      "targetAfterSHA256": "a2e4758c3fcef3244f54eab9791f2c466c225e49d45209a5e86682332ef87cbd",
+      "contextAfterSHA256": "a2e4758c3fcef3244f54eab9791f2c466c225e49d45209a5e86682332ef87cbd",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "c9f00b1e74b5b89dd7edbc454518a7f821739d3bafae971248488acbf855a0f7",
+        "contextAfterSHA256": "c9f00b1e74b5b89dd7edbc454518a7f821739d3bafae971248488acbf855a0f7",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c9f00b1e74b5b89dd7edbc454518a7f821739d3bafae971248488acbf855a0f7",
+          "semanticContextSHA256": "c9f00b1e74b5b89dd7edbc454518a7f821739d3bafae971248488acbf855a0f7",
+          "subjectTitle": "Kaupunki on kokoelmiaan nuorempi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "623cc607f99c2e4b62971800c7a30841630f5069b0787e5d6a375bf325931059",
+        "sameImageExportSHA256": "bb719e351d33cf11099dd73d55abd3521585f50a5692d43643a6c57a91141492",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -1992,10 +2139,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-L1-illustration-v1-20261012-62241d4de7c1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Punainen msasa tekee uusia lehtiä.",
-        "lyhyt": "Havainnekuva: Punainen msasa tekee uusia lehtiä."
+        "selite": "Havainnekuva: Punainen msasa tekee uusia lehtiä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2003,10 +2150,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-L1-illustration-v1-20261012-62241d4de7c1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Punainen msasa tekee uusia lehtiä.",
-        "lyhyt": "Havainnekuva: Punainen msasa tekee uusia lehtiä."
+        "selite": "Havainnekuva: Punainen msasa tekee uusia lehtiä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2020,7 +2167,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8398a02b34319cee315a67182afba53b988fa7b7f33382c0f77196f6f13c001f",
         "semanticContextSHA256": "8398a02b34319cee315a67182afba53b988fa7b7f33382c0f77196f6f13c001f",
@@ -2197,9 +2344,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2218,17 +2365,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "targetAfterSHA256": "8398a02b34319cee315a67182afba53b988fa7b7f33382c0f77196f6f13c001f",
       "contextAfterSHA256": "8398a02b34319cee315a67182afba53b988fa7b7f33382c0f77196f6f13c001f",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "8398a02b34319cee315a67182afba53b988fa7b7f33382c0f77196f6f13c001f",
+        "contextAfterSHA256": "8398a02b34319cee315a67182afba53b988fa7b7f33382c0f77196f6f13c001f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8398a02b34319cee315a67182afba53b988fa7b7f33382c0f77196f6f13c001f",
+          "semanticContextSHA256": "8398a02b34319cee315a67182afba53b988fa7b7f33382c0f77196f6f13c001f",
+          "subjectTitle": "Punainen msasa tekee uusia lehtiä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "62241d4de7c16670a6f053293c67d7c03713fe4909828cb4980f0d8750760d34",
+        "sameImageExportSHA256": "dd712fc92fcc811bd23d84763645bcb4db385390b9aeb7186aab6ac55659e3e3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -2250,10 +2418,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-L4-illustration-v1-20261012-451d18274646.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Elävä kokoelma ja kuivattu näyte.",
-        "lyhyt": "Havainnekuva: Elävä kokoelma ja kuivattu näyte."
+        "selite": "Havainnekuva: Elävä kokoelma ja kuivattu näyte."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2261,10 +2429,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/harare/e08-harare-L4-illustration-v1-20261012-451d18274646.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Elävä kokoelma ja kuivattu näyte.",
-        "lyhyt": "Havainnekuva: Elävä kokoelma ja kuivattu näyte."
+        "selite": "Havainnekuva: Elävä kokoelma ja kuivattu näyte."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2278,10 +2446,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9dc1d8d1bcac4faf28b7fe54aeba18688700e8b3073dd1f3e86d6e2b1625b88c",
-        "semanticContextSHA256": "9dc1d8d1bcac4faf28b7fe54aeba18688700e8b3073dd1f3e86d6e2b1625b88c",
+        "targetBeforeSHA256": "1d597f72e11f28f3e8895e45c17e924bc662d600e8ee838019f1b225c2fb53ae",
+        "semanticContextSHA256": "1d597f72e11f28f3e8895e45c17e924bc662d600e8ee838019f1b225c2fb53ae",
         "subjectTitle": "Elävä kokoelma ja kuivattu näyte",
         "targetState": "existing-target"
       },
@@ -2565,9 +2733,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2586,17 +2754,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
-      "targetAfterSHA256": "9dc1d8d1bcac4faf28b7fe54aeba18688700e8b3073dd1f3e86d6e2b1625b88c",
-      "contextAfterSHA256": "9dc1d8d1bcac4faf28b7fe54aeba18688700e8b3073dd1f3e86d6e2b1625b88c",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+      "targetAfterSHA256": "1d597f72e11f28f3e8895e45c17e924bc662d600e8ee838019f1b225c2fb53ae",
+      "contextAfterSHA256": "1d597f72e11f28f3e8895e45c17e924bc662d600e8ee838019f1b225c2fb53ae",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "9dc1d8d1bcac4faf28b7fe54aeba18688700e8b3073dd1f3e86d6e2b1625b88c",
+        "contextAfterSHA256": "9dc1d8d1bcac4faf28b7fe54aeba18688700e8b3073dd1f3e86d6e2b1625b88c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "9dc1d8d1bcac4faf28b7fe54aeba18688700e8b3073dd1f3e86d6e2b1625b88c",
+          "semanticContextSHA256": "9dc1d8d1bcac4faf28b7fe54aeba18688700e8b3073dd1f3e86d6e2b1625b88c",
+          "subjectTitle": "Elävä kokoelma ja kuivattu näyte",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "451d1827464624deb3ae73c62ec0176b548f461b1201e206aa10145f16e01a01",
+        "sameImageExportSHA256": "66ee16801462073a3f5d9fea684caa8f4881fb002f4c11161f75e2177cb6312b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -2615,16 +2804,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/harare/photo-e1b4c4940ca8fe2170ab.jpg",
         "suora": true,
         "lahde": "Peter in s, Commons (CC BY-SA 4.0)",
-        "selite": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
-        "lyhyt": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
+        "selite": "Hararen kaupunkimaisemaa ja katupuustoa vuonna 2024 otetussa kuvassa.",
+        "lyhyt": "Hararen puukujannetta.",
         "tiedosto": "Harare 2024 1.jpg",
         "vuosi": "2024"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Peter in s, Commons (CC BY-SA 4.0)",
-        "selite": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
-        "lyhyt": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
+        "selite": "Hararen kaupunkimaisemaa ja katupuustoa vuonna 2024 otetussa kuvassa.",
+        "lyhyt": "Hararen puukujannetta.",
         "tiedosto": "Harare 2024 1.jpg",
         "vuosi": "2024"
       },
@@ -2632,8 +2821,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/harare/photo-e1b4c4940ca8fe2170ab.jpg",
         "suora": true,
         "lahde": "Peter in s, Commons (CC BY-SA 4.0)",
-        "selite": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
-        "lyhyt": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
+        "selite": "Hararen kaupunkimaisemaa ja katupuustoa vuonna 2024 otetussa kuvassa.",
+        "lyhyt": "Hararen puukujannetta.",
         "tiedosto": "Harare 2024 1.jpg",
         "vuosi": "2024"
       },
@@ -2649,10 +2838,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b4ab7574dae3ac315e080dca2e2b391d5aef22b5805710e76e4c87fdc3499b79",
-        "semanticContextSHA256": "b4ab7574dae3ac315e080dca2e2b391d5aef22b5805710e76e4c87fdc3499b79",
+        "targetBeforeSHA256": "36a17fdc32bf92a98d4c8cec8553285fb7f0f51d922ba5002545b3d39f52916c",
+        "semanticContextSHA256": "36a17fdc32bf92a98d4c8cec8553285fb7f0f51d922ba5002545b3d39f52916c",
         "subjectTitle": "harare — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2818,9 +3007,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Harare 2024 1.jpg",
+        "lyhyt": "Hararen puukujannetta.",
+        "selite": "Hararen kaupunkimaisemaa ja katupuustoa vuonna 2024 otetussa kuvassa.",
         "lahde": "Peter in s, Commons (CC BY-SA 4.0)",
-        "selite": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
-        "lyhyt": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
         "vuosi": "2024"
       },
       "preservePreviousMediaObjects": true,
@@ -2840,24 +3029,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Peter in s, Commons (CC BY-SA 4.0)",
-        "selite": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
-        "lyhyt": "Hararen puukujanteet ovat osa sen kaupunkimaisemaa.",
+        "selite": "Hararen kaupunkimaisemaa ja katupuustoa vuonna 2024 otetussa kuvassa.",
+        "lyhyt": "Hararen puukujannetta.",
         "tiedosto": "Harare 2024 1.jpg",
         "vuosi": "2024"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
-      "targetAfterSHA256": "b4ab7574dae3ac315e080dca2e2b391d5aef22b5805710e76e4c87fdc3499b79",
-      "contextAfterSHA256": "b4ab7574dae3ac315e080dca2e2b391d5aef22b5805710e76e4c87fdc3499b79",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+      "targetAfterSHA256": "36a17fdc32bf92a98d4c8cec8553285fb7f0f51d922ba5002545b3d39f52916c",
+      "contextAfterSHA256": "36a17fdc32bf92a98d4c8cec8553285fb7f0f51d922ba5002545b3d39f52916c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "b4ab7574dae3ac315e080dca2e2b391d5aef22b5805710e76e4c87fdc3499b79",
+        "contextAfterSHA256": "b4ab7574dae3ac315e080dca2e2b391d5aef22b5805710e76e4c87fdc3499b79",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "b4ab7574dae3ac315e080dca2e2b391d5aef22b5805710e76e4c87fdc3499b79",
+          "semanticContextSHA256": "b4ab7574dae3ac315e080dca2e2b391d5aef22b5805710e76e4c87fdc3499b79",
+          "subjectTitle": "harare — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "e1b4c4940ca8fe2170ab5708b03761cfaa6d1e22db384d40ada09149abf83068",
+        "sameImageExportSHA256": "e1b4c4940ca8fe2170ab5708b03761cfaa6d1e22db384d40ada09149abf83068",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -2879,23 +3089,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/harare/c1-b266d7d63efbe212a0ec.jpg",
         "suora": true,
         "lahde": "Itaisibanda, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020.",
-        "lyhyt": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020.",
+        "selite": "Istutuskauden viljelyä Hararen asutuksen lomassa vuonna 2020 otetussa kuvassa.",
+        "lyhyt": "Kaupunkiviljelyä Hararessa.",
         "tiedosto": "Planting season in Harare.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Itaisibanda, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020.",
-        "lyhyt": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020.",
+        "selite": "Istutuskauden viljelyä Hararen asutuksen lomassa vuonna 2020 otetussa kuvassa.",
+        "lyhyt": "Kaupunkiviljelyä Hararessa.",
         "tiedosto": "Planting season in Harare.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/harare/c1-b266d7d63efbe212a0ec.jpg",
         "suora": true,
         "lahde": "Itaisibanda, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020.",
-        "lyhyt": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020.",
+        "selite": "Istutuskauden viljelyä Hararen asutuksen lomassa vuonna 2020 otetussa kuvassa.",
+        "lyhyt": "Kaupunkiviljelyä Hararessa.",
         "tiedosto": "Planting season in Harare.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2910,10 +3120,10 @@
         1836
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "116f9d0ae8ce5e176356204f4a52fa4265d5540068e1755d71e35f17f5bf708a",
-        "semanticContextSHA256": "116f9d0ae8ce5e176356204f4a52fa4265d5540068e1755d71e35f17f5bf708a",
+        "targetBeforeSHA256": "2949a9a0959f6b60cb832e468f6f67d7a4eb663855a6f6861ceff2314d341fed",
+        "semanticContextSHA256": "2949a9a0959f6b60cb832e468f6f67d7a4eb663855a6f6861ceff2314d341fed",
         "subjectTitle": "Harare",
         "targetState": "existing-target"
       },
@@ -3210,9 +3420,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Planting season in Harare.jpg",
-        "lahde": "Itaisibanda, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020.",
-        "lyhyt": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020."
+        "lyhyt": "Kaupunkiviljelyä Hararessa.",
+        "selite": "Istutuskauden viljelyä Hararen asutuksen lomassa vuonna 2020 otetussa kuvassa.",
+        "lahde": "Itaisibanda, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3231,23 +3441,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Itaisibanda, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020.",
-        "lyhyt": "Kaupunkiviljelyä Hararen asutuksen lomassa, 2020.",
+        "selite": "Istutuskauden viljelyä Hararen asutuksen lomassa vuonna 2020 otetussa kuvassa.",
+        "lyhyt": "Kaupunkiviljelyä Hararessa.",
         "tiedosto": "Planting season in Harare.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
-      "targetAfterSHA256": "116f9d0ae8ce5e176356204f4a52fa4265d5540068e1755d71e35f17f5bf708a",
-      "contextAfterSHA256": "116f9d0ae8ce5e176356204f4a52fa4265d5540068e1755d71e35f17f5bf708a",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+      "targetAfterSHA256": "2949a9a0959f6b60cb832e468f6f67d7a4eb663855a6f6861ceff2314d341fed",
+      "contextAfterSHA256": "2949a9a0959f6b60cb832e468f6f67d7a4eb663855a6f6861ceff2314d341fed",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "116f9d0ae8ce5e176356204f4a52fa4265d5540068e1755d71e35f17f5bf708a",
+        "contextAfterSHA256": "116f9d0ae8ce5e176356204f4a52fa4265d5540068e1755d71e35f17f5bf708a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "116f9d0ae8ce5e176356204f4a52fa4265d5540068e1755d71e35f17f5bf708a",
+          "semanticContextSHA256": "116f9d0ae8ce5e176356204f4a52fa4265d5540068e1755d71e35f17f5bf708a",
+          "subjectTitle": "Harare",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "b266d7d63efbe212a0ecc9a29a5a573e3d527192eaa26ba4fa4d38b92a52bbaf",
+        "sameImageExportSHA256": "b266d7d63efbe212a0ecc9a29a5a573e3d527192eaa26ba4fa4d38b92a52bbaf",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -3269,23 +3500,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/harare/c2-47cc37dee60f2163c507.jpg",
         "suora": true,
         "lahde": "Andrew Balet, Wikimedia Commons (CC BY 2.5)",
-        "selite": "Hararen kaupunkinäkymä Kopjelta, 2001.",
-        "lyhyt": "Hararen kaupunkinäkymä Kopjelta, 2001.",
+        "selite": "Kopjelta avautuva näkymä Hararen kortteleihin ja katuverkkoon vuonna 2001.",
+        "lyhyt": "Harare Kopjelta nähtynä.",
         "tiedosto": "Harare from the Kopje.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Andrew Balet, Wikimedia Commons (CC BY 2.5)",
-        "selite": "Hararen kaupunkinäkymä Kopjelta, 2001.",
-        "lyhyt": "Hararen kaupunkinäkymä Kopjelta, 2001.",
+        "selite": "Kopjelta avautuva näkymä Hararen kortteleihin ja katuverkkoon vuonna 2001.",
+        "lyhyt": "Harare Kopjelta nähtynä.",
         "tiedosto": "Harare from the Kopje.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/harare/c2-47cc37dee60f2163c507.jpg",
         "suora": true,
         "lahde": "Andrew Balet, Wikimedia Commons (CC BY 2.5)",
-        "selite": "Hararen kaupunkinäkymä Kopjelta, 2001.",
-        "lyhyt": "Hararen kaupunkinäkymä Kopjelta, 2001.",
+        "selite": "Kopjelta avautuva näkymä Hararen kortteleihin ja katuverkkoon vuonna 2001.",
+        "lyhyt": "Harare Kopjelta nähtynä.",
         "tiedosto": "Harare from the Kopje.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3300,10 +3531,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "94a04a2ba1a85e0832cffa8faa585914353259f53a5a693e4410cf429a804680",
-        "semanticContextSHA256": "94a04a2ba1a85e0832cffa8faa585914353259f53a5a693e4410cf429a804680",
+        "targetBeforeSHA256": "9648b6465a2ab6217649671f0526c06cbe03037c8d40f9f66472f67d8178a1cd",
+        "semanticContextSHA256": "9648b6465a2ab6217649671f0526c06cbe03037c8d40f9f66472f67d8178a1cd",
         "subjectTitle": "Harare",
         "targetState": "existing-target"
       },
@@ -3625,9 +3856,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Harare from the Kopje.jpg",
-        "lahde": "Andrew Balet, Wikimedia Commons (CC BY 2.5)",
-        "selite": "Hararen kaupunkinäkymä Kopjelta, 2001.",
-        "lyhyt": "Hararen kaupunkinäkymä Kopjelta, 2001."
+        "lyhyt": "Harare Kopjelta nähtynä.",
+        "selite": "Kopjelta avautuva näkymä Hararen kortteleihin ja katuverkkoon vuonna 2001.",
+        "lahde": "Andrew Balet, Wikimedia Commons (CC BY 2.5)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3646,23 +3877,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Andrew Balet, Wikimedia Commons (CC BY 2.5)",
-        "selite": "Hararen kaupunkinäkymä Kopjelta, 2001.",
-        "lyhyt": "Hararen kaupunkinäkymä Kopjelta, 2001.",
+        "selite": "Kopjelta avautuva näkymä Hararen kortteleihin ja katuverkkoon vuonna 2001.",
+        "lyhyt": "Harare Kopjelta nähtynä.",
         "tiedosto": "Harare from the Kopje.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
-      "targetAfterSHA256": "94a04a2ba1a85e0832cffa8faa585914353259f53a5a693e4410cf429a804680",
-      "contextAfterSHA256": "94a04a2ba1a85e0832cffa8faa585914353259f53a5a693e4410cf429a804680",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+      "targetAfterSHA256": "9648b6465a2ab6217649671f0526c06cbe03037c8d40f9f66472f67d8178a1cd",
+      "contextAfterSHA256": "9648b6465a2ab6217649671f0526c06cbe03037c8d40f9f66472f67d8178a1cd",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "94a04a2ba1a85e0832cffa8faa585914353259f53a5a693e4410cf429a804680",
+        "contextAfterSHA256": "94a04a2ba1a85e0832cffa8faa585914353259f53a5a693e4410cf429a804680",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "94a04a2ba1a85e0832cffa8faa585914353259f53a5a693e4410cf429a804680",
+          "semanticContextSHA256": "94a04a2ba1a85e0832cffa8faa585914353259f53a5a693e4410cf429a804680",
+          "subjectTitle": "Harare",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "47cc37dee60f2163c507f820101e9c2d8f27653e7de8325934a0ecc0b1308b12",
+        "sameImageExportSHA256": "47cc37dee60f2163c507f820101e9c2d8f27653e7de8325934a0ecc0b1308b12",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -3684,23 +3936,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/harare/l2-b17a97c85e92731b9282.jpg",
         "suora": true,
         "lahde": "Kahuroa, Wikimedia Commons (PD)",
-        "selite": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva.",
-        "lyhyt": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva.",
+        "selite": "Sinijakaranda (Jacaranda mimosifolia) kukkii violettina tässä lajin esittelykuvassa.",
+        "lyhyt": "Sinijakarandan violetteja kukkia.",
         "tiedosto": "Jacaranda1212.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Kahuroa, Wikimedia Commons (PD)",
-        "selite": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva.",
-        "lyhyt": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva.",
+        "selite": "Sinijakaranda (Jacaranda mimosifolia) kukkii violettina tässä lajin esittelykuvassa.",
+        "lyhyt": "Sinijakarandan violetteja kukkia.",
         "tiedosto": "Jacaranda1212.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/harare/l2-b17a97c85e92731b9282.jpg",
         "suora": true,
         "lahde": "Kahuroa, Wikimedia Commons (PD)",
-        "selite": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva.",
-        "lyhyt": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva.",
+        "selite": "Sinijakaranda (Jacaranda mimosifolia) kukkii violettina tässä lajin esittelykuvassa.",
+        "lyhyt": "Sinijakarandan violetteja kukkia.",
         "tiedosto": "Jacaranda1212.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3715,10 +3967,10 @@
         2112
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "758f66c70a60070f9d45a93a63f4a21e860de0736261ab649be480fc9bc73ed0",
-        "semanticContextSHA256": "758f66c70a60070f9d45a93a63f4a21e860de0736261ab649be480fc9bc73ed0",
+        "targetBeforeSHA256": "1db3dea467869000ed8c50b6f3fd07b5071f9c957e527392a77ae47152b223fc",
+        "semanticContextSHA256": "1db3dea467869000ed8c50b6f3fd07b5071f9c957e527392a77ae47152b223fc",
         "subjectTitle": "Violetti katuvieras Etelä-Amerikasta",
         "targetState": "existing-target"
       },
@@ -3994,9 +4246,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Jacaranda1212.jpg",
-        "lahde": "Kahuroa, Wikimedia Commons (PD)",
-        "selite": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva.",
-        "lyhyt": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva."
+        "lyhyt": "Sinijakarandan violetteja kukkia.",
+        "selite": "Sinijakaranda (Jacaranda mimosifolia) kukkii violettina tässä lajin esittelykuvassa.",
+        "lahde": "Kahuroa, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4015,23 +4267,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Kahuroa, Wikimedia Commons (PD)",
-        "selite": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva.",
-        "lyhyt": "Jakaranda mimosifolia kukkii violetein kukin; yleinen lajikuva.",
+        "selite": "Sinijakaranda (Jacaranda mimosifolia) kukkii violettina tässä lajin esittelykuvassa.",
+        "lyhyt": "Sinijakarandan violetteja kukkia.",
         "tiedosto": "Jacaranda1212.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
-      "targetAfterSHA256": "758f66c70a60070f9d45a93a63f4a21e860de0736261ab649be480fc9bc73ed0",
-      "contextAfterSHA256": "758f66c70a60070f9d45a93a63f4a21e860de0736261ab649be480fc9bc73ed0",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+      "targetAfterSHA256": "1db3dea467869000ed8c50b6f3fd07b5071f9c957e527392a77ae47152b223fc",
+      "contextAfterSHA256": "1db3dea467869000ed8c50b6f3fd07b5071f9c957e527392a77ae47152b223fc",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "758f66c70a60070f9d45a93a63f4a21e860de0736261ab649be480fc9bc73ed0",
+        "contextAfterSHA256": "758f66c70a60070f9d45a93a63f4a21e860de0736261ab649be480fc9bc73ed0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "758f66c70a60070f9d45a93a63f4a21e860de0736261ab649be480fc9bc73ed0",
+          "semanticContextSHA256": "758f66c70a60070f9d45a93a63f4a21e860de0736261ab649be480fc9bc73ed0",
+          "subjectTitle": "Violetti katuvieras Etelä-Amerikasta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "b17a97c85e92731b92825d93586c994d5cd476dc554225444dac4037ab854d32",
+        "sameImageExportSHA256": "b17a97c85e92731b92825d93586c994d5cd476dc554225444dac4037ab854d32",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e08",
@@ -4053,23 +4326,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/harare/l3-cb30a6d549acd5deab00.jpg",
         "suora": true,
         "lahde": "Averette, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva.",
-        "lyhyt": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva.",
+        "selite": "Liekkipuu (Delonix regia) on Madagaskarista lähtöisin oleva koristepuu. Kuvassa on laji, ei Hararen kasvupaikka.",
+        "lyhyt": "Liekkipuun punaisia kukkia.",
         "tiedosto": "Royal Poinciana.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Averette, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva.",
-        "lyhyt": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva.",
+        "selite": "Liekkipuu (Delonix regia) on Madagaskarista lähtöisin oleva koristepuu. Kuvassa on laji, ei Hararen kasvupaikka.",
+        "lyhyt": "Liekkipuun punaisia kukkia.",
         "tiedosto": "Royal Poinciana.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/harare/l3-cb30a6d549acd5deab00.jpg",
         "suora": true,
         "lahde": "Averette, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva.",
-        "lyhyt": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva.",
+        "selite": "Liekkipuu (Delonix regia) on Madagaskarista lähtöisin oleva koristepuu. Kuvassa on laji, ei Hararen kasvupaikka.",
+        "lyhyt": "Liekkipuun punaisia kukkia.",
         "tiedosto": "Royal Poinciana.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -4084,10 +4357,10 @@
         1920
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/harare/sisalto.json",
-      "sourceContentSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+      "sourceContentSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "802a219817a5a31b7588aee256c37a83d34412f99d9826c626250ad9aa0700d1",
-        "semanticContextSHA256": "802a219817a5a31b7588aee256c37a83d34412f99d9826c626250ad9aa0700d1",
+        "targetBeforeSHA256": "b8d1c59fa653224ccd56121ce2b53a4fa359877634a3ecd657579f2d4bdb1c07",
+        "semanticContextSHA256": "b8d1c59fa653224ccd56121ce2b53a4fa359877634a3ecd657579f2d4bdb1c07",
         "subjectTitle": "Liekkipuu kasvattaa tummat palot",
         "targetState": "existing-target"
       },
@@ -4367,9 +4640,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Royal Poinciana.jpg",
-        "lahde": "Averette, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva.",
-        "lyhyt": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva."
+        "lyhyt": "Liekkipuun punaisia kukkia.",
+        "selite": "Liekkipuu (Delonix regia) on Madagaskarista lähtöisin oleva koristepuu. Kuvassa on laji, ei Hararen kasvupaikka.",
+        "lahde": "Averette, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4388,28 +4661,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Averette, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva.",
-        "lyhyt": "Liekkipuu Delonix regia kukkii punaisena; yleinen lajikuva.",
+        "selite": "Liekkipuu (Delonix regia) on Madagaskarista lähtöisin oleva koristepuu. Kuvassa on laji, ei Hararen kasvupaikka.",
+        "lyhyt": "Liekkipuun punaisia kukkia.",
         "tiedosto": "Royal Poinciana.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
-      "targetAfterSHA256": "802a219817a5a31b7588aee256c37a83d34412f99d9826c626250ad9aa0700d1",
-      "contextAfterSHA256": "802a219817a5a31b7588aee256c37a83d34412f99d9826c626250ad9aa0700d1",
+      "sourceContentAfterSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+      "targetAfterSHA256": "b8d1c59fa653224ccd56121ce2b53a4fa359877634a3ecd657579f2d4bdb1c07",
+      "contextAfterSHA256": "b8d1c59fa653224ccd56121ce2b53a4fa359877634a3ecd657579f2d4bdb1c07",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "c75cb75450cc3acd9da021a80f1cb9f1702d1aa4ae905389cab9e69970b99cf2",
+        "targetAfterSHA256": "802a219817a5a31b7588aee256c37a83d34412f99d9826c626250ad9aa0700d1",
+        "contextAfterSHA256": "802a219817a5a31b7588aee256c37a83d34412f99d9826c626250ad9aa0700d1",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "802a219817a5a31b7588aee256c37a83d34412f99d9826c626250ad9aa0700d1",
+          "semanticContextSHA256": "802a219817a5a31b7588aee256c37a83d34412f99d9826c626250ad9aa0700d1",
+          "subjectTitle": "Liekkipuu kasvattaa tummat palot",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c9b46eb02d9e0bed38b8269728c3a4b52b3de965572daa4bfed43722ea0c6287",
+        "sameImageNativeSHA256": "cb30a6d549acd5deab005b0adf3a96f98befb023706b92bc6c5094d31b9296b7",
+        "sameImageExportSHA256": "cb30a6d549acd5deab005b0adf3a96f98befb023706b92bc6c5094d31b9296b7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e08/harare/80dcdbdab6cdea53ca8364027e5287fa2f0d25de25d8855b8e9f7efbb67188b9.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.357240+00:00"
 }

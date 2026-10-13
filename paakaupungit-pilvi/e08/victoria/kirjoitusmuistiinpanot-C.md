@@ -11,3 +11,44 @@ Kartta partial 1/6: vain puutarhan oma WP-piste ja sen luonto-/historiaketju. Ke
 Sää `null`, 48/48-primäärivarmennus avoin. Tekstissä vain lähteestä luettu sanallinen ilmaston luonnehdinta ilman lukuja. Torin viranomaistiedote kertoo kunnostus-/väistötilasuunnitelmasta, ei varmenna nykyistä myyntipaikkaa. Myös museoiden nykyinen käyntitilanne jätetty varmistettavaksi. Kellotornin alkuperäisvärin ristiriita on faktapohjassa: paikallinen primääri valittu, D:n tulee tarkistaa valinta.
 
 Ei Git-operaatioita, muiden kaupunkien kirjoitusta, pelimuutoksia, hyväksyntää tai julkaisua. **C-luonnos on olemassa ja tekstimitat tarkistettu; koko kaupunki ei ole toimitusvalmis.** D/E/F ja lähteiden riippumaton tarkistus ovat avoinna.
+
+
+## Task118 korjaus 13.10.2026
+Kaikki pelaajatekstikentät luettu ja sovellettu otoksen yleissäännöt. Lähdepohja, C-muistio sekä nykyiset Commons-lähdetiedot tarkistettu. Meta- ja täytelauseita korvattu kaupungin omilla faktoilla; vihjeet ja houkuttimet täsmennetty. Nykyiset kuvat, pisteet ja sää säilytetty; niiden puutteet ovat erillisiä portteja. Tuore mainin js/data-haku tehty ennen kirjoittamista. Ei Git, kuvia, pelikytkentää tai julkaisua.
+
+
+```text
+VIRHE victoria: kansi nosto 1: tiedosto puuttuu
+VIRHE victoria: kansi nosto 2: tiedosto puuttuu
+VIRHE victoria: kansi nosto 3: tiedosto puuttuu
+VIRHE victoria: kansi nosto 4: tiedosto puuttuu
+VIRHE victoria: matkailijalle.kuva: tiedosto puuttuu
+VIRHE victoria: opas jakso 1: tiedosto puuttuu
+VIRHE victoria: opas jakso 2: tiedosto puuttuu
+VIRHE victoria: opas jakso 3: tiedosto puuttuu
+VIRHE victoria: opas jakso 4: tiedosto puuttuu
+VIRHE victoria: opas jakso 5: tiedosto puuttuu
+VIRHE victoria: teemasivu luonto nosto 1: tiedosto puuttuu
+VIRHE victoria: teemasivu luonto nosto 2: tiedosto puuttuu
+VIRHE victoria: teemasivu luonto nosto 3: tiedosto puuttuu
+VIRHE victoria: teemasivu luonto nosto 4: tiedosto puuttuu
+== victoria: 14 virhettä, 3 varoitusta, 5 kuvaa
+YHTEENSÄ 1 kaupunkia: 14 virhettä, 3 varoitusta
+```
+SHA256 050e381a8fa814562b20b6cdf7b069abc6f7cc555f71ce5971f191019832e3ce
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS victoria: kaupunki.pallo poikkeaa yli 0,1° kevyen pisteen sijainnista
+VAROITUS victoria: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS victoria: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 14ba341c2a98f447610cb2ff6f578409cf7cd6b4f0ad32c62436c8cca3304bf4. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS victoria: kaupunki.pallo poikkeaa yli 0,1° kevyen pisteen sijainnista
+VAROITUS victoria: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS victoria: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
