@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "yaounde",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+  "sourceContentAfterSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
   "assets": [
     {
       "era": "e05",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
-      "sourceContentSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "10fcfb1029253ed00e35478421f6e6b8d44f7dc822056646141faf34abe14887",
+        "semanticContextSHA256": "e54627bf75b335e8384fd9b0f5b33e4099b879acb9c4cc3c8fa224d314d72899",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -232,9 +232,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentAfterSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "10fcfb1029253ed00e35478421f6e6b8d44f7dc822056646141faf34abe14887",
+      "contextAfterSHA256": "e54627bf75b335e8384fd9b0f5b33e4099b879acb9c4cc3c8fa224d314d72899",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -257,7 +257,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
+        "sameImageNativeSHA256": "989b3168658a4d0ce00ad3877423f94042c2d9ae6e5f569161d4e506372e5e97",
+        "sameImageExportSHA256": "cb8f0659e5c49b55acd7da387592ed72c76eaf23f08ba36f223ba4304e8e9a52",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -310,7 +318,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
-      "sourceContentSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "72db5c07ee54bf1559a0402c8b9e120c4de57e29d8df39b6c8dda518a13aadf2",
@@ -526,7 +534,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentAfterSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "72db5c07ee54bf1559a0402c8b9e120c4de57e29d8df39b6c8dda518a13aadf2",
       "ownerApproved": true,
@@ -551,7 +559,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
+        "sameImageNativeSHA256": "0edb8f1c2df547bed38ddc668c3753bae9e618598adb7f192076bbed70e4235a",
+        "sameImageExportSHA256": "9802d0988f7d4cf5959bb8df715c6854334b4af082596843eec694062f285248",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -601,7 +617,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
-      "sourceContentSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ca6d7d684aa60d4c21052b4908ec2411292da0b95347b64a88c800da53e6b200",
         "semanticContextSHA256": "ca6d7d684aa60d4c21052b4908ec2411292da0b95347b64a88c800da53e6b200",
@@ -778,7 +794,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentAfterSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "targetAfterSHA256": "ca6d7d684aa60d4c21052b4908ec2411292da0b95347b64a88c800da53e6b200",
       "contextAfterSHA256": "ca6d7d684aa60d4c21052b4908ec2411292da0b95347b64a88c800da53e6b200",
       "ownerApproved": true,
@@ -803,7 +819,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
+        "sameImageNativeSHA256": "7ab972c099da7287e0eb852acb064ed3aa0caee9a01417167e1433b3247bdb09",
+        "sameImageExportSHA256": "227e27d321f2a6fd7ec9099cf05d96c9eca47269056bd3f5c2b8667a9714ada7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -853,7 +877,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
-      "sourceContentSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d1cdb023f07a9d704d3fb9ca8e00444bb86d70f3d2f8c3f8fe3d7c203ffea5e5",
         "semanticContextSHA256": "d1cdb023f07a9d704d3fb9ca8e00444bb86d70f3d2f8c3f8fe3d7c203ffea5e5",
@@ -1030,7 +1054,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentAfterSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "targetAfterSHA256": "d1cdb023f07a9d704d3fb9ca8e00444bb86d70f3d2f8c3f8fe3d7c203ffea5e5",
       "contextAfterSHA256": "d1cdb023f07a9d704d3fb9ca8e00444bb86d70f3d2f8c3f8fe3d7c203ffea5e5",
       "ownerApproved": true,
@@ -1055,7 +1079,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
+        "sameImageNativeSHA256": "34ca95374ca752eed899a33ac2e2ed83058387183a2c8a6a8693594c2e8e3aa3",
+        "sameImageExportSHA256": "0453415d01cf33365275428ea5c45778fc833f1b4b4b0d14ce0dc63288f5579e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1105,7 +1137,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
-      "sourceContentSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d57fde819f48f1c5723e7f14ca847ab74620423d69f18caa304d518bab0bb8d9",
         "semanticContextSHA256": "d57fde819f48f1c5723e7f14ca847ab74620423d69f18caa304d518bab0bb8d9",
@@ -1282,7 +1314,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentAfterSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "targetAfterSHA256": "d57fde819f48f1c5723e7f14ca847ab74620423d69f18caa304d518bab0bb8d9",
       "contextAfterSHA256": "d57fde819f48f1c5723e7f14ca847ab74620423d69f18caa304d518bab0bb8d9",
       "ownerApproved": true,
@@ -1307,7 +1339,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
+        "sameImageNativeSHA256": "6433f46d7e68498625577710b86dedd735b44e5ab32f0166d05652c05f8fd848",
+        "sameImageExportSHA256": "9bcb6dfdd12f2cdaf734b0dd7bd75395b058dc6dd78bb9b11bd3d8f89f2f453e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1357,7 +1397,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
-      "sourceContentSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3cbd1ebdebea59807056a492d8d0ccec903fe5f8c09e942dcd155799cd62c791",
         "semanticContextSHA256": "3cbd1ebdebea59807056a492d8d0ccec903fe5f8c09e942dcd155799cd62c791",
@@ -1538,7 +1578,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentAfterSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "targetAfterSHA256": "3cbd1ebdebea59807056a492d8d0ccec903fe5f8c09e942dcd155799cd62c791",
       "contextAfterSHA256": "3cbd1ebdebea59807056a492d8d0ccec903fe5f8c09e942dcd155799cd62c791",
       "ownerApproved": true,
@@ -1563,7 +1603,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
+        "sameImageNativeSHA256": "952f760a5cbe5e464a37829c767399b844c844b8c166b51f962733f389c9b2c5",
+        "sameImageExportSHA256": "df3d67be6d82405c9be3bd3e2395f0fb3867ef7c47cd442cc2cd0a2b3b55619e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1616,7 +1664,7 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
-      "sourceContentSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0fec186af1eb6f2888f369be75e083ef14d9c55c8a6d88badca09c2c80758818",
         "semanticContextSHA256": "0fec186af1eb6f2888f369be75e083ef14d9c55c8a6d88badca09c2c80758818",
@@ -1835,7 +1883,7 @@
         "vuosi": "2020"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentAfterSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "targetAfterSHA256": "0fec186af1eb6f2888f369be75e083ef14d9c55c8a6d88badca09c2c80758818",
       "contextAfterSHA256": "0fec186af1eb6f2888f369be75e083ef14d9c55c8a6d88badca09c2c80758818",
       "ownerApproved": true,
@@ -1860,7 +1908,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
+        "sameImageNativeSHA256": "5ec5250f4484d91e19d2d8660c532e1190cd978bc175379e4885ece8a926bd4c",
+        "sameImageExportSHA256": "5ec5250f4484d91e19d2d8660c532e1190cd978bc175379e4885ece8a926bd4c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -1913,7 +1969,7 @@
         1800
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
-      "sourceContentSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9467a6960dd309efced33fa1140d6080d528dd3f5dbf560dd5e8cd1f8b5919d5",
         "semanticContextSHA256": "9467a6960dd309efced33fa1140d6080d528dd3f5dbf560dd5e8cd1f8b5919d5",
@@ -2120,7 +2176,7 @@
         "tiedosto": "Cloudy valley covering human habitat.png"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentAfterSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "targetAfterSHA256": "9467a6960dd309efced33fa1140d6080d528dd3f5dbf560dd5e8cd1f8b5919d5",
       "contextAfterSHA256": "9467a6960dd309efced33fa1140d6080d528dd3f5dbf560dd5e8cd1f8b5919d5",
       "ownerApproved": true,
@@ -2145,7 +2201,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
+        "sameImageNativeSHA256": "28dadd02cab8e65410a439f66865e0d209f17c08e48c810120ebe286faff69f6",
+        "sameImageExportSHA256": "28dadd02cab8e65410a439f66865e0d209f17c08e48c810120ebe286faff69f6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -2198,7 +2262,7 @@
         1960
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
-      "sourceContentSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "semanticSourceBind": {
         "targetBeforeSHA256": "aca439aad1fbbfd2ef0b6d41fce588d0c0b857031b17e300df6839b0a60e8bed",
         "semanticContextSHA256": "aca439aad1fbbfd2ef0b6d41fce588d0c0b857031b17e300df6839b0a60e8bed",
@@ -2429,7 +2493,7 @@
         "tiedosto": "Hillside Yaounde View.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentAfterSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "targetAfterSHA256": "aca439aad1fbbfd2ef0b6d41fce588d0c0b857031b17e300df6839b0a60e8bed",
       "contextAfterSHA256": "aca439aad1fbbfd2ef0b6d41fce588d0c0b857031b17e300df6839b0a60e8bed",
       "ownerApproved": true,
@@ -2454,7 +2518,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
+        "sameImageNativeSHA256": "6671c86b41cce9df3a140900a40b903f328ab992bedba136a130ca8ecf33f1d1",
+        "sameImageExportSHA256": "6671c86b41cce9df3a140900a40b903f328ab992bedba136a130ca8ecf33f1d1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e05",
@@ -2507,7 +2579,7 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yaounde/sisalto.json",
-      "sourceContentSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "semanticSourceBind": {
         "targetBeforeSHA256": "52fbb15c68a7977e7b3b023b43666cbcd4ed689a0f30e66adb805b7baae3678d",
         "semanticContextSHA256": "52fbb15c68a7977e7b3b023b43666cbcd4ed689a0f30e66adb805b7baae3678d",
@@ -2738,7 +2810,7 @@
         "tiedosto": "Végétation sur le Mont Fébé.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0eac06489ecfcf172f4c0f3b9cd9612249b81a5ce29430a0ad9fa9c23c1a8f0c",
+      "sourceContentAfterSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
       "targetAfterSHA256": "52fbb15c68a7977e7b3b023b43666cbcd4ed689a0f30e66adb805b7baae3678d",
       "contextAfterSHA256": "52fbb15c68a7977e7b3b023b43666cbcd4ed689a0f30e66adb805b7baae3678d",
       "ownerApproved": true,
@@ -2763,7 +2835,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0712b421f8480e301570166229eebcc84fd21330511ee87c2de0560647fd1834",
+        "sameImageNativeSHA256": "a19964ed2ad042166967d8aad0beb6c3257d6361717c52746801825e72b232a1",
+        "sameImageExportSHA256": "a19964ed2ad042166967d8aad0beb6c3257d6361717c52746801825e72b232a1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2775,6 +2855,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e05/yaounde/e2079e09b938ab2ccf7170c3b53b3a2400bbed266d91b3284af205ce7eb53f06.json",
-  "task118ReboundAt": "2026-10-13T16:31:24.792565+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/yaounde/b0f9374941da9e21779d4307009dd98e03623d6139dc397cbba4651a4e898a94.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.792565+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:00:24.024212+00:00"
 }

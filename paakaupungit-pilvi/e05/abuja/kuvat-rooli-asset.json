@@ -1992,7 +1992,7 @@
         "sameImageExportSHA256": "89d3b11177592bb5b491cbfdf7e73df1c4c9f4bf1782940881e8172ab3c7975a",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -2324,7 +2324,7 @@
         "sameImageExportSHA256": "49dfc2746397ae36bb373f4a9c8620ab4890295ae0b7910c26acf4cf892eb2e0",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -2618,7 +2618,7 @@
         "sameImageExportSHA256": "b049f268e4a9877cb064eae4fe120fd106b88e90cdae316f42f0d821bfbf9fa0",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -2912,7 +2912,7 @@
         "sameImageExportSHA256": "e2c169b693ba98f424a30747f438fe84ce6172546a6586f0efb2d35c595d4ea4",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3248,7 +3248,7 @@
         "sameImageExportSHA256": "0d72678fe9bc9fe06b16fd5f8a6373a9fcafb6461741fa5e76abbb71c5237a2d",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3587,9 +3587,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/abuja/643aaf84455c34dba69534d8c062b6cedcee374e3ab513c557bd7bc3c015147f.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e05/abuja/4081c57cf61aad64b89db7224397d2e82f88bd8c5616bdb41f80cf008ff95e55.json",
   "task118ReboundAt": "2026-10-13T16:31:24.562122+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T17:52:01.730076+00:00"
+  "task228ReboundAt": "2026-10-13T18:00:23.783258+00:00"
 }

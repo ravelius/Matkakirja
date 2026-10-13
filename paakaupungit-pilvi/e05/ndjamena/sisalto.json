@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "N’Djamena on Tšadin pääkaupunki maan lounaisosassa, **Charin ja Logonen yhtymäkohdassa**. Vastarannalla sijaitsee Kamerunin Kousséri. Joet kuuluvat sekä kaupungin maantieteeseen että sen kulkuyhteyksien historiaan. Nykyinen kaupunki kasvoi Fort-Lamy-nimisestä siirtomaa-asemasta 1900-luvun alussa.\n\nVuonna 1873 tätä myöhempää kaupunkia ei ollut, vaikka alueen paikallinen asutushistoria on vanhempi. Nykyinen N’Djamenan nimi otettiin käyttöön 1970-luvulla, ja se liittyy paikalliseen arabialaiseen nimikerrokseen. Torikauppa kokoaa kaupunkiin karjaa, viljaa, taateleita ja suolaa. **Kansallismuseon** tutkimusaiheisiin kuuluvat esihistoria ja paleoantropologia, ja museon kokoelmien kuvauksessa mainitaan Tšadin fossiililöydöistä tehtyjä valoksia. Pääkaupungin kautta voi näin tutustua myös paljon kaupunkia vanhempiin menneisyyden jälkiin.",
-    "teksti": "N’Djamenan paikalla ollut aiempi asutus ja Fort-Lamyn siirtomaakaupunki ovat historian eri kerroksia. Nykyinen pääkaupunki alkoi kasvaa 1900-luvun alussa. Nimen vaihtuminen myöhemmin N’Djamenaksi toi kaupungin nimeen paikallisen arabialaisen kerroksen.\n\nCharin rannalla oleva kaupunki sijaitsee kohdassa, jossa Logone liittyy siihen. Vastarannan Kousséri on Kamerunissa, joten kaupunkiseudun maantieteeseen kuuluu myös valtioiden raja. Jokien historiallisten kulkuyhteyksien rinnalla nykykaupungissa on tieverkko ja lentoasema.\n\nKansallismuseo esittelee luonnonhistoriaa, arkeologiaa ja kulttuuriperintöä. Tšadin fossiililöytöihin liittyvät Toumaï- ja Abel-nimet avaavat tutkijoiden työtä, jossa yksittäisistä luista tulkitaan kaukaista menneisyyttä. Löytöpaikat ovat muualla maassa, ja museovalos on erotettava alkuperäisestä fossiilista."
+    "intro": "N’Djamena on Tšadin pääkaupunki maan lounaisosassa, **Charin ja Logonen yhtymäkohdassa**. Vastarannalla sijaitsee Kamerunin Kousséri. Joet kuuluvat sekä kaupungin maantieteeseen että sen kulkuyhteyksien historiaan. Nykyinen kaupunki kasvoi Fort-Lamy-nimisestä siirtomaa-asemasta 1900-luvun alussa. Vuonna 1873 tätä myöhempää kaupunkia ei ollut, vaikka alueen paikallinen asutushistoria on vanhempi. Nykyinen N’Djamenan nimi otettiin käyttöön 1970-luvulla, ja se liittyy paikalliseen arabialaiseen nimikerrokseen. Torikauppa kokoaa kaupunkiin karjaa, viljaa, taateleita ja suolaa. **Kansallismuseon** tutkimusaiheisiin kuuluvat esihistoria ja paleoantropologia, ja museon kokoelmien kuvauksessa mainitaan Tšadin fossiililöydöistä tehtyjä valoksia.",
+    "teksti": "N’Djamenan paikalla ollut aiempi asutus ja Fort-Lamyn siirtomaakaupunki ovat historian eri kerroksia. Nykyinen pääkaupunki alkoi kasvaa 1900-luvun alussa. Nimen vaihtuminen myöhemmin N’Djamenaksi toi kaupungin nimeen paikallisen arabialaisen kerroksen. Charin rannalla oleva kaupunki sijaitsee kohdassa, jossa Logone liittyy siihen. Vastarannan Kousséri on Kamerunissa, joten kaupunkiseudun maantieteeseen kuuluu myös valtioiden raja. Jokien historiallisten kulkuyhteyksien rinnalla nykykaupungissa on tieverkko ja lentoasema. Kansallismuseo esittelee luonnonhistoriaa, arkeologiaa ja kulttuuriperintöä. Tšadin fossiililöytöihin liittyvät Toumaï- ja Abel-nimet avaavat tutkijoiden työtä, jossa yksittäisistä luista tulkitaan kaukaista menneisyyttä. Löytöpaikat ovat muualla maassa, ja museovalos on erotettava alkuperäisestä fossiilista."
   },
   "kysymykset": [
     {
@@ -61,16 +61,16 @@
       "source": "https://en.wikipedia.org/wiki/Logone_River"
     },
     {
-      "q": "Mihin Toumaï-lempinimi liittyy?",
+      "q": "Mihin fossiiliaineistoon Toumaï-lempinimi liittyy?",
       "options": [
-        "Fossiiliseen kalloaineistoon",
-        "Muinaiseen kuningaskuntaan",
-        "Perinteiseen metallisoittimeen",
-        "Historialliseen jokiveneeseen"
+        "Sahelanthropus-fossiiliaineistoon",
+        "Australopithecus-fossiiliaineistoon",
+        "Homo erectus -fossiiliaineistoon",
+        "Homo habilis -fossiiliaineistoon"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Aihe kuuluu paleoantropologiseen tutkimukseen.",
+      "hint": "Lempinimi kuuluu Tšadissa tehtyyn löytöön.",
       "fact": "Toumaï on Sahelanthropus tchadensis -fossiiliaineiston lempinimi.",
       "source": "https://en.wikipedia.org/wiki/Sahelanthropus"
     },
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Lajinimi liittyy Tšadin löytöalueeseen.",
+      "hint": "Kyse on Tšadista löydetystä leuka- ja hammasaineistosta.",
       "fact": "Abel on Australopithecus bahrelghazali -aineiston lempinimi.",
       "source": "https://en.wikipedia.org/wiki/Australopithecus_bahrelghazali"
     }
@@ -176,7 +176,7 @@
           "nimi": "Matkailijan N'Djamena",
           "taitto": "opas",
           "teksti": "Tutustu jokien kaupunkiin ja pääkaupungissa esiteltäviin menneisyyden jälkiin.",
-          "nosto": "Tavallista lomamatkailua N’Djamenaan ei nykytilanteessa suositella; kaupunkiin voi tutustua myös etäältä.",
+          "nosto": "Kansallismuseossa esihistoriaa esitellään muun muassa fossiilivalosten avulla.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
@@ -233,7 +233,7 @@
             "parasta": [
               {
                 "mita": "Paikannimen historia",
-                "tahdet": 3,
+                "tahdet": 2,
                 "selite": "Vanha ja nykyinen nimi avaavat kaupungin eri vaiheita."
               },
               {
@@ -248,16 +248,20 @@
               },
               {
                 "mita": "Museon tutkimusaiheet",
-                "tahdet": 3,
+                "tahdet": 2,
                 "selite": "Esihistoria ja luonnonhistoria kuuluvat kansallismuseoon."
               },
               {
-                "mita": "Fossiilien tulkinta",
-                "tahdet": 3,
-                "selite": "Säilynyt aineisto ja tutkijoiden selitys ovat eri asioita."
+                "mita": "Charin rantamaisema",
+                "tahdet": 2,
+                "selite": "Charin jokivarsi kuuluu kaupungin luontoympäristöön."
               }
             ],
             "hyvaTietaa": [
+              {
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Tšadin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
+              },
               {
                 "otsikko": "Ennen matkapäätöstä",
                 "teksti": "Tarkista Tšadin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
@@ -284,9 +288,9 @@
         "kysymys": "Millaisina esineinä museon kuvaus esittelee näitä fossiililöytöjä?",
         "vaihtoehdot": [
           "Löytöjen muodon toisintavina valoksina",
-          "Kaikkien lajien kokonaisina luurankoina",
-          "Muinaisina pronssisina ihmisveistoksina",
-          "Elävien eläinten liikkumisnäytöksinä"
+          "Alkuperäisinä kokonaisina luurankoina",
+          "Fossiilien muotoa esittävinä piirustuksina",
+          "Koko luuston täyttävinä rekonstruktioina"
         ],
         "oikea": 0,
         "fakta": "Näyttelyaineistossa käytetään fossiilien jäljennöksiä; alkuperäinen luu ja siitä tehty museoesine eivät ole sama asia."
@@ -320,8 +324,8 @@
           "lahde": ""
         },
         {
-          "otsikko": "Nimi, luu ja valos ovat eri asioita",
-          "teksti": "Kansallismuseon kokoelmien kuvauksessa on Tchadanthropus uxoris -nimellä mainittu valos. Tchadanthropus kuuluu historiallisiin taksoninimiin, joita käsitellään nykyisessä Homo erectus -nimistössä. Vanha nimi kertoo luokittelun historiasta; se ei yksin ratkaise yksittäisen fossiilin tulkintaa. Myös museoesineen muoto on erotettava sen alkuperästä: alkuperäinen fossiili, siitä tehty valos ja ihmishahmon rekonstruktio ovat eri asioita. Löydön nimi, näyttelyesine ja tutkijoiden selitys vastaavat eri kysymyksiin.",
+          "otsikko": "Fossiilien luokittelu muuttuu",
+          "teksti": "Kansallismuseon kokoelmien kuvauksessa on Tchadanthropus uxoris -nimellä mainittu valos. Tchadanthropus kuuluu historiallisiin taksoninimiin, joita käsitellään nykyisessä Homo erectus -nimistössä. Museossa esillä oleva valos jäljentää fossiilin muodon.",
           "wiki": "Chad National Museum",
           "tiedosto": "",
           "lyhyt": "",
@@ -352,7 +356,7 @@
   "nahtavyydet": {
     "Logonen ja Charin yhtymäkohta": {
       "aika": "Luonnonvesistön yhtymäkohta",
-      "teksti": "Logone liittyy Chariin N’Djamenan ja Koussérin luona. Tšadin pääkaupunki sijaitsee jokirannassa, ja vastarannan Kousséri kuuluu Kameruniin. Chari jatkaa yhtymäkohdasta pohjoiseen. Joet ovat osa valtioiden rajaympäristöä ja kaupunkien paikallista maantiedettä.\n\nLogonen valuma-alue ulottuu usean maan puolelle, ja sen päähaaroihin kuuluvat Pendé ja Mbéré. Charin ja Logonen vedet jatkavat yhtymäkohdasta yhteisenä jokena Tšadjärven suuntaan. Vuonna 1873 paikalla ei vielä ollut myöhemmin Fort-Lamysta kasvanutta kaupunkia. Nykyinen pääkaupunki kasvoi jokirannan ympärille myöhemmin; vesistö ja rakennettu kaupunki ovat historian eri kerroksia.",
+      "teksti": "Logone liittyy Chariin N’Djamenan ja Koussérin luona. Tšadin pääkaupunki sijaitsee jokirannassa, ja vastarannan Kousséri kuuluu Kameruniin. Chari jatkaa yhtymäkohdasta pohjoiseen. Joet ovat osa valtioiden rajaympäristöä ja kaupunkien paikallista maantiedettä. Logonen valuma-alue ulottuu usean maan puolelle, ja sen päähaaroihin kuuluvat Pendé ja Mbéré. Charin ja Logonen vedet jatkavat yhtymäkohdasta yhteisenä jokena Tšadjärven suuntaan. Vuonna 1873 paikalla ei vielä ollut myöhemmin Fort-Lamysta kasvanutta kaupunkia.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -367,13 +371,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "N’Djamena International Airport (NDJ)",
-    "huomiot": [
-      "Kartta partial: yksi A:ssa varmennettu jokien yhtymäpiste; 6–8 määrän portti avoin.",
-      "Museon nykyisen rakennuksen identiteetti/oikeudet ja näyttelyiden ajantasainen tila avoin; museo ei karttakohde.",
-      "Tiedeteeman kuva-aiheet vaativat täsmällisen fossiili/valos-tunnistuksen; ihmishahmorekonstruktioita ei tilata.",
-      "Maalehden valtakunta-, Sao-, ruoka- ja musiikkiaiheita sekä Charin jokialueen fokusnostoa ei toistettu.",
-      "Ruokaopas on lähteiden sallima yleinen markkina-/ruokapaikkakuvaus; yksittäinen ruokalaji puuttuu.",
-      "Turvallisuusvirke perustuu A:n tallennettuun FCDO-lähteeseen 11.10.2026; ajantasaisuus D/F:ssä."
-    ]
+    "huomiot": []
   }
 }

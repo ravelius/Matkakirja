@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Porto-Novo on **Beninin virallinen pääkaupunki** maan eteläosassa, laguunin rannalla. Kaupunki tunnetaan myös nimillä Àjàṣẹ́ ja Hogbonu. Portugalinkielinen Porto-Novo tarkoittaa uutta satamaa. Paikallinen kuningaskunta kuului kaupungin historiaan jo ennen siirtomaahallinnon laajentumista.\n\nVuonna 1873 Porto-Novo oli jo paikallisen kuningaskunnan keskus laguunin rannalla. Honmèn vanha kuninkaallinen asuinpaikka on nykyisin hovin historiaa esittelevä museo. **Jardin des plantes et de la nature** puolestaan kasvoi aiemman pyhän metsän paikalle ja säilyttää kaupungissa vanhoja puita. Parlamentti sijaitsee Porto-Novossa, kun taas monet muut hallintotoiminnot ovat Cotonoussa. Laguuni, museot ja erilaiset nimet näyttävät kaupungin historiaa useasta suunnasta.",
-    "teksti": "Porto-Novon rinnakkaiset nimet kertovat sen eri kieli- ja historiakerroksista. Portugalinkielisen nimen ohella käytetään Àjàṣẹ́- ja Hogbonu-nimiä. Kaupunki oli paikallisen kuningaskunnan keskus ennen myöhempää siirtomaa-aikaa.\n\nHonmèn paikkamuseossa huomio kohdistuu entiseen kuninkaalliseen asuinpaikkaan, sen pihoihin ja hovin elämään. Alexandre Sènou Adandén etnografinen museo taas esittelee kulttuuriesineitä ja niiden rooleja yhteisöissä. Museoilla on siten erilaiset tehtävät saman kaupungin historian kertomisessa.\n\nVanhan pyhän metsän paikalla sijaitseva kasvipuutarha toimii myös kasvien säilyttämisen ja opetuksen ympäristönä. Kaupungin arkiseen liikkumiseen kuuluvat moottoripyörätaksit eli zemijanit. Laguunin rannalla oleva pääkaupunki liittyy tieyhteyksin läheiseen Cotonouhun, jossa on myös saapumiseen käytetty lentoasema."
+    "intro": "Porto-Novo on **Beninin virallinen pääkaupunki** maan eteläosassa, laguunin rannalla. Kaupunki tunnetaan myös nimillä Àjàṣẹ́ ja Hogbonu. Portugalinkielinen Porto-Novo tarkoittaa uutta satamaa. Paikallinen kuningaskunta kuului kaupungin historiaan jo ennen siirtomaahallinnon laajentumista. Vuonna 1873 Porto-Novo oli jo paikallisen kuningaskunnan keskus laguunin rannalla. Honmèn vanha kuninkaallinen asuinpaikka on nykyisin hovin historiaa esittelevä museo. **Jardin des plantes et de la nature** puolestaan kasvoi aiemman pyhän metsän paikalle ja säilyttää kaupungissa vanhoja puita. Parlamentti sijaitsee Porto-Novossa, kun taas monet muut hallintotoiminnot ovat Cotonoussa.",
+    "teksti": "Porto-Novon rinnakkaiset nimet kertovat sen eri kieli- ja historiakerroksista. Portugalinkielisen nimen ohella käytetään Àjàṣẹ́- ja Hogbonu-nimiä. Kaupunki oli paikallisen kuningaskunnan keskus ennen myöhempää siirtomaa-aikaa. Honmèn paikkamuseossa huomio kohdistuu entiseen kuninkaalliseen asuinpaikkaan, sen pihoihin ja hovin elämään. Alexandre Sènou Adandén etnografinen museo taas esittelee kulttuuriesineitä ja niiden rooleja yhteisöissä. Vanhan pyhän metsän paikalla sijaitseva kasvipuutarha toimii myös kasvien säilyttämisen ja opetuksen ympäristönä. Kaupungin arkiseen liikkumiseen kuuluvat moottoripyörätaksit eli zemijanit. Laguunin rannalla oleva pääkaupunki liittyy tieyhteyksin läheiseen Cotonouhun, jossa on myös saapumiseen käytetty lentoasema."
   },
   "kysymykset": [
     {
@@ -47,16 +47,16 @@
       "source": "https://en.wikipedia.org/wiki/Porto-Novo"
     },
     {
-      "q": "Mikä matala rannikon vesialue on Porto-Novon edustalla?",
+      "q": "Millainen vesialue sijaitsee Porto-Novon edustalla?",
       "options": [
         "Laguuni",
-        "Tekojärvi",
-        "Kraatterijärvi",
-        "Jokikoski"
+        "Suisto",
+        "Estuaari",
+        "Tulvajärvi"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Kyseessä on rannikon matala vesialue.",
+      "hint": "Kaupunki sijaitsee Guineanlahden rannikkoseudulla.",
       "fact": "Porto-Novo sijaitsee laguunin rannalla.",
       "source": "https://en.wikipedia.org/wiki/Porto-Novo"
     },
@@ -64,9 +64,9 @@
       "q": "Mikä on zemijan?",
       "options": [
         "Moottoripyörätaksi",
-        "Laguunivene",
-        "Torikoju",
-        "Kasvipuutarha"
+        "Polkupyörätaksi",
+        "Jaettu minibussi",
+        "Kolmipyörätaksi"
       ],
       "correct": 0,
       "level": 2,
@@ -92,7 +92,7 @@
   "tiedot": [
     "Alounlounin metallisauvassa on liikkuvia renkaita, jotka osallistuvat soittimen äänen tuottamiseen.",
     "Porto-Novon kasvipuutarhassa kasvillisuuden säilyttäminen yhdistyy opetukseen.",
-    "Adandén etnografisen museon kokoelmien taustalla on Ranskan Länsi-Afrikan tutkimusinstituutti IFAN."
+    "Adandén etnografisen museon kokoelmien taustalla on siirtomaa-ajan Institut français d’Afrique noire -tutkimuslaitos (IFAN)."
   ],
   "valokuva": {
     "tiedosto": "IROKO au CAEB.jpg",
@@ -242,21 +242,25 @@
               },
               {
                 "mita": "Adandén museo",
-                "tahdet": 3,
+                "tahdet": 2,
                 "selite": "Kokoelmissa tarkastellaan kulttuuriesineiden yhteisörooleja."
               },
               {
                 "mita": "Laguunin maantiede",
-                "tahdet": 3,
+                "tahdet": 2,
                 "selite": "Vesi kuuluu kaupungin sijaintiin ja ympäristöön."
               },
               {
                 "mita": "Rinnakkaiset nimet",
-                "tahdet": 3,
+                "tahdet": 2,
                 "selite": "Àjàṣẹ́ ja Hogbonu avaavat paikallisia historiakerroksia."
               }
             ],
             "hyvaTietaa": [
+              {
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Beninin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
+              },
               {
                 "otsikko": "Ennen matkapäätöstä",
                 "teksti": "Tarkista Beninin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
@@ -320,7 +324,7 @@
         },
         {
           "otsikko": "Museoilla on erilaiset tehtävät",
-          "teksti": "Alexandre Sènou Adandén etnografisen museon kokoelmien taustalla on Ranskan Länsi-Afrikan tutkimusinstituutti IFAN. Adandé oli etnografi ja teki myös arkisto- ja kirjastotyötä. Museo esittelee kulttuuriesineitä ja niiden yhteisörooleja, ja kokoelmiin kuuluu Gèlèdé-aineistoa. Honmè puolestaan on entisen kuninkaallisen asuinpaikan historiaan keskittyvä paikkamuseo. Museokäyntien aiheet ovat siten erilaiset: yhdessä tarkastellaan yhteisöjen kulttuuria ja esineiden käyttöä, toisessa vanhaa hovipaikkaa ja sen elämää.",
+          "teksti": "Alexandre Sènou Adandén etnografisen museon kokoelmien taustalla on siirtomaa-ajan Institut français d’Afrique noire -tutkimuslaitos (IFAN). Adandé oli etnografi ja teki myös arkisto- ja kirjastotyötä. Museo esittelee kulttuuriesineitä ja niiden yhteisörooleja, ja kokoelmiin kuuluu Gèlèdé-aineistoa. Honmè puolestaan on entisen kuninkaallisen asuinpaikan historiaan keskittyvä paikkamuseo. Museokäyntien aiheet ovat siten erilaiset: yhdessä tarkastellaan yhteisöjen kulttuuria ja esineiden käyttöä, toisessa vanhaa hovipaikkaa ja sen elämää.",
           "wiki": "Musée ethnographique Alexandre Sènou Adandé",
           "tiedosto": "",
           "lyhyt": "",
@@ -351,7 +355,7 @@
   "nahtavyydet": {
     "Jardin des plantes et de la nature": {
       "aika": "Aiempi pyhä metsä, myöhempi puutarha",
-      "teksti": "Jardin des plantes et de la nature on Porto-Novon viheralue hallinto- ja sairaalakortteleiden välissä. Paikassa kasvaa suuria vanhoja puita, muun muassa irokoa ja Ceiba pentandraa. Kasvillisuuden ohella alueelta on kirjattu lintu-, apina- ja sammakkoeläinhavaintoja. Puutarha palvelee kasvien säilyttämistä ja opetusta.\n\nAlue oli aiemmin Hogbonun pyhä metsä, joka liittyi kuningaskunnan perinteiseen auktoriteettiin. Sittemmin paikasta tuli koekasvipuutarha, ja sitä on kunnostettu eri vaiheissa. Vuoden 1873 kuningaskunnan historia ja myöhemmät puutarhavaiheet kuuluvat paikan eri käyttöhistorioihin. Vanha käyttöhistoria ja nykyinen kasvipuutarha kuuluvat saman luonnonympäristön eri kerroksiin: puusto yhdistyy sekä paikalliseen merkitykseen että kasvien tuntemuksen välittämiseen.",
+      "teksti": "Jardin des plantes et de la nature on Porto-Novon viheralue hallinto- ja sairaalakortteleiden välissä. Paikassa kasvaa suuria vanhoja puita, muun muassa irokoa ja Ceiba pentandraa. Kasvillisuuden ohella alueelta on kirjattu lintu-, apina- ja sammakkoeläinhavaintoja. Puutarha palvelee kasvien säilyttämistä ja opetusta. Alue oli aiemmin Hogbonun pyhä metsä, joka liittyi kuningaskunnan perinteiseen auktoriteettiin. Sittemmin paikasta tuli koekasvipuutarha, ja sitä on kunnostettu eri vaiheissa.",
       "kuvat": [
         {
           "tiedosto": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg",
@@ -366,12 +370,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Cotonou Cadjehoun Airport (COO)",
-    "huomiot": [
-      "Kartta partial: yksi A:ssa hyväksytty puutarhan luontopiste; määräportti 6–8 avoin.",
-      "Honmèn, suurmoskeijan, Adandén ja Da-Silvan rakennusten oikeus-/ajoitusketjut jäävät A:n mukaan avoimiksi; jätetty kartasta.",
-      "Ruokaosassa ei nimetä ruokalajia, koska A ei tue yksittäistä paikallista ruoka-aihetta; rajattu opasluonnos.",
-      "Lagosin paluumuuttajien rakentamistarinaa ja Badagryn kauppareittitarinaa ei toistettu.",
-      "Säärivillä ei ole varmennettua normaalikautta; ei numeroita. Kohdejuttu jää lähteiden sallimaan 691 merkin kuvaukseen tavoitepituuden sijasta."
-    ]
+    "huomiot": []
   }
 }

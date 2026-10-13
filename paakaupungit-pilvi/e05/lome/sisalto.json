@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Lomé on Togon pääkaupunki **Guineanlahden rannalla**, lähellä Ghanan rajaa. Vanha kaupunkitila asettui meren, laguunin, Bèn ja Aflaon väliin. Ewe-kauppiaat toimivat rannikolla jo ennen siirtomaahallintoa. Kauppakaupunki kasvoi 1800-luvun loppupuolella, ja sen siirtomaapääkaupungin asema tuli myöhemmin.\n\n**Grand Marché** kokoaa keskustaan kankaita, mausteita ja arjen käyttöesineitä. Nana Benz -nimellä tunnetut naispuoliset kangaskauppiaat kuuluvat kaupungin kaupalliseen historiaan. Merisatama, rannikon tiet ja lentoasema yhdistävät Lomén muihin paikkoihin. Rannalla puolestaan kalastetaan, myydään ruokaa ja vietetään vapaa-aikaa. Kaupunkiviljely ja puutarhojen kasvit tuovat rannikon kaupunkikuvaan oman kerroksensa, jossa paikalliset elinkeinot ja viheralueet ovat yhtä lailla osa pääkaupunkia.",
-    "teksti": "Lomén historia alkaa paikallisista asukkaista ja kauppiaista. Bè kuuluu rannikon vanhaan ewe-asutukseen, ja kauppayhteyksiä kulki Aflaon ja Ketan suuntaan sekä sisämaahan. Kaupungin kasvu ja myöhempi siirtomaahallinto ovat tämän historian eri vaiheita.\n\nKeskustan Grand Marché sijaitsee katedraalin lähellä. Sen eri osissa myydään niin mausteita ja arkisia tavaroita kuin kankaitakin. Nana Benz -kauppiaat tunnetaan vahakuvioitujen kankaiden kaupasta, mutta torin valikoima ulottuu paljon tekstiilejä laajemmalle.\n\nMeri on kaupungin eteläreuna ja arjen työympäristö. Rannalla harjoitetaan kalastusta ja vietetään vapaa-aikaa, kun taas satama palvelee tuontia ja vientiä. Laguunin pohjoispuolella sijaitsee Tokoinin ylänkö. Kaupungin kasvu on ulottunut näiden vanhojen maantieteellisten rajojen yli."
+    "intro": "Lomé on Togon pääkaupunki **Guineanlahden rannalla**, lähellä Ghanan rajaa. Vanha kaupunkitila asettui meren, laguunin, Bèn ja Aflaon väliin. Ewe-kauppiaat toimivat rannikolla jo ennen siirtomaahallintoa. Kauppakaupunki kasvoi 1800-luvun loppupuolella, ja sen siirtomaapääkaupungin asema tuli myöhemmin. **Grand Marché** kokoaa keskustaan kankaita, mausteita ja arjen käyttöesineitä. Nana Benz -nimellä tunnetut naispuoliset kangaskauppiaat kuuluvat kaupungin kaupalliseen historiaan. Merisatama, rannikon tiet ja lentoasema yhdistävät Lomén muihin paikkoihin. Rannalla puolestaan kalastetaan, myydään ruokaa ja vietetään vapaa-aikaa. Kaupungissa kasvatetaan myös vihanneksia, ja palatsin puutarhassa kasvaa Guineanlahden alueen kasveja.",
+    "teksti": "Lomén historia alkaa paikallisista asukkaista ja kauppiaista. Bè kuuluu rannikon vanhaan ewe-asutukseen, ja kauppayhteyksiä kulki Aflaon ja Ketan suuntaan sekä sisämaahan. Kaupungin kasvu ja myöhempi siirtomaahallinto ovat tämän historian eri vaiheita. Keskustan Grand Marché sijaitsee katedraalin lähellä. Sen eri osissa myydään niin mausteita ja arkisia tavaroita kuin kankaitakin. Nana Benz -kauppiaat tunnetaan vahakuvioitujen kankaiden kaupasta, mutta torin valikoima ulottuu paljon tekstiilejä laajemmalle. Meri on kaupungin eteläreuna ja arjen työympäristö. Rannalla harjoitetaan kalastusta ja vietetään vapaa-aikaa, kun taas satama palvelee tuontia ja vientiä. Laguunin pohjoispuolella sijaitsee Tokoinin ylänkö. Kaupungin kasvu on ulottunut näiden vanhojen maantieteellisten rajojen yli."
   },
   "kysymykset": [
     {
@@ -42,7 +42,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Lahti kuuluu Atlantin valtamereen.",
+      "hint": "Kaupunki sijaitsee Länsi-Afrikan etelärannikolla.",
       "fact": "Lomé sijaitsee Guineanlahden rannalla.",
       "source": "https://en.wikipedia.org/wiki/Lomé"
     },
@@ -50,13 +50,13 @@
       "q": "Mikä on Nana Benz -naisten tunnettu ammatti?",
       "options": [
         "Kangaskauppias",
-        "Kalastusaluksen kapteeni",
-        "Puutarhan suunnittelija",
-        "Rautatien kuljettaja"
+        "Maustekauppias",
+        "Korukauppias",
+        "Viljakauppias"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "He toimivat Grand Marchéssa.",
+      "hint": "Nimitys kuuluu kaupungin kauppahistoriaan.",
       "fact": "Nana Benz -kauppiaat tunnetaan vahakuvioitujen kankaiden kaupasta.",
       "source": "https://en.wikipedia.org/wiki/Nana_Benz"
     },
@@ -65,7 +65,7 @@
       "options": [
         "Laguuni",
         "Tekojärvi",
-        "Vuono",
+        "Jokiuoma",
         "Suisto"
       ],
       "correct": 0,
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Kyse on rannikon paikallisesta kielestä.",
+      "hint": "Nimityksessä paikallinen sana yhdistyy automerkin nimeen.",
       "fact": "Nana-nimitys liittyy Gen-kielen na- tai ena-sanaan.",
       "source": "https://en.wikipedia.org/wiki/Nana_Benz"
     }
@@ -232,12 +232,12 @@
             "parasta": [
               {
                 "mita": "Kauppiaiden historia",
-                "tahdet": 3,
+                "tahdet": 2,
                 "selite": "Ewe-kauppiaat kuuluivat rannikon toimijoihin ennen siirtomaahallintoa."
               },
               {
                 "mita": "Nana Benz",
-                "tahdet": 3,
+                "tahdet": 2,
                 "selite": "Naispuolisilla kangaskauppiailla on oma paikkansa kaupungin historiassa."
               },
               {
@@ -252,11 +252,15 @@
               },
               {
                 "mita": "Puutarhan kasvit",
-                "tahdet": 3,
+                "tahdet": 2,
                 "selite": "Guineanlahden kasvillisuutta on myös kaupunkipuutarhassa."
               }
             ],
             "hyvaTietaa": [
+              {
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Togon ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
+              },
               {
                 "otsikko": "Ennen matkapäätöstä",
                 "teksti": "Tarkista Togon ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
@@ -351,7 +355,7 @@
   "nahtavyydet": {
     "Lomén keskustan meriranta": {
       "aika": "Luonnonrannikko",
-      "teksti": "Lomén meriranta kuuluu Guineanlahden hiekkarannikkoon. Sen maisemassa on hiekkaa, dyynejä ja kookospuita. Rannalla harjoitetaan paikallista kalastusta, myydään ruokaa ja vietetään vapaa-aikaa, esimerkiksi rantaurheilun parissa. Se on näin sekä työympäristö että kaupungin julkisen elämän paikka.\n\nRannikko on luonnonympäristö, jonka olemassaolo edeltää myöhempää pääkaupunkia. Lomén rannikon asutushistoriassa Bè ja muut ewe-yhteisöt kuuluvat varhaiseen kerrokseen. Vuonna 1873 Lomé ei vielä ollut myöhempi siirtomaapääkaupunki. Nykyisen rannikon olosuhteisiin kuuluvat eroosio joillakin osuuksilla sekä aallokko ja virtaukset. Rannikon eroosio muuttaa rantaviivaa, ja aallokko sekä virtaukset kuuluvat sen luonnonoloihin.",
+      "teksti": "Lomén meriranta kuuluu Guineanlahden hiekkarannikkoon. Sen maisemassa on hiekkaa, dyynejä ja kookospuita. Rannalla harjoitetaan paikallista kalastusta, myydään ruokaa ja vietetään vapaa-aikaa, esimerkiksi rantaurheilun parissa. Se on näin sekä työympäristö että kaupungin julkisen elämän paikka. Rannikko on luonnonympäristö, jonka olemassaolo edeltää myöhempää pääkaupunkia. Lomén rannikon asutushistoriassa Bè ja muut ewe-yhteisöt kuuluvat varhaiseen kerrokseen. Vuonna 1873 Lomé ei vielä ollut myöhempi siirtomaapääkaupunki. Nykyisen rannikon olosuhteisiin kuuluvat eroosio joillakin osuuksilla sekä aallokko ja virtaukset. ",
       "kuvat": [
         {
           "tiedosto": "",
@@ -366,11 +370,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Lomé–Tokoin International Airport (LFW)",
-    "huomiot": [
-      "Kartta partial: yksi A:ssa varmennettu rannan luontopiste; 6–8 kohteen määräportti avoin.",
-      "Palatsin, katedraalin ja vanhan wharfin tekijäketjut/oikeusvapautuminen sekä wharfin nykyjäännösten identiteetti avoimia; jätetty kartasta.",
-      "Bèn laguuni- ja metsäpisteet puuttuvat; kaupunginosapistettä ei lainata.",
-      "Oppaan yhteys-, vierailu- ja aluevarausten ajantasaisuus tarkistettava D/F:ssä."
-    ]
+    "huomiot": []
   }
 }
