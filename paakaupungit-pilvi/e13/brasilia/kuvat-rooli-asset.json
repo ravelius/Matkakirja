@@ -3,7 +3,7 @@
   "era": "e13",
   "city": "brasilia",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+  "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
   "assets": [
     {
       "era": "e13",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e35ed0e5272db67a6cac8e0f0cca6a784587826408b8a51842ebad308c022211",
+        "semanticContextSHA256": "bb7d07977b5a8ac1ecbf3e990e4060aea7397e2c7f8a32453a126b710737036d",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -276,9 +276,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "e35ed0e5272db67a6cac8e0f0cca6a784587826408b8a51842ebad308c022211",
+      "contextAfterSHA256": "bb7d07977b5a8ac1ecbf3e990e4060aea7397e2c7f8a32453a126b710737036d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -301,7 +301,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "98465f8c6d033104b9da00ef8f4b2807fec5508eb47e736f0d8abbf02118ed03",
+        "sameImageExportSHA256": "455cb35b516e380314064a3bb2bd686c407afd80c0ff04f8127056248a4bf11c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -354,10 +362,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "125e167f40c90f4a8fb24e4196ca07388e78aafc8d4865ef864059171d53dcdd",
+        "semanticContextSHA256": "e5fd07c8bf7c8dc29ca44c1e47a7110f434518843eb58f64898d6cb668c612b2",
         "subjectTitle": "Järvi ja cerrado",
         "targetState": "existing-target"
       },
@@ -571,9 +579,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "125e167f40c90f4a8fb24e4196ca07388e78aafc8d4865ef864059171d53dcdd",
+      "contextAfterSHA256": "e5fd07c8bf7c8dc29ca44c1e47a7110f434518843eb58f64898d6cb668c612b2",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -596,7 +604,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "f0cd3630d202970187a5fd37488d7d9d8716919fea73a9da7b9d3a3a8794f4f4",
+        "sameImageExportSHA256": "24798af2890e62fbd297b27197bda9d9a4e9ab78ace843762a826b8acb94f7db",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -649,10 +665,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "4a0d32172d96753498d57b3d323b1d6c4afc8380e529de73946ad92c8aadded4",
+        "semanticContextSHA256": "1c6e6277c510044f7f6c787b3d8f1ff68283feb959dbcbe74c5a1e7e4f2897f0",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -868,9 +884,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "4a0d32172d96753498d57b3d323b1d6c4afc8380e529de73946ad92c8aadded4",
+      "contextAfterSHA256": "1c6e6277c510044f7f6c787b3d8f1ff68283feb959dbcbe74c5a1e7e4f2897f0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -893,7 +909,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "eb81681f3fd456e7c2237f6a3671947464f10cffb294be947278882c8a5de12a",
+        "sameImageExportSHA256": "1bea5d1c2dd5bd55eabab9ad5f6baac6cd9897309593ee0c33dc9ec18c3e5961",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -943,10 +967,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5fd4aad1a8bce8d948e9812063be6727a6ba56e554d51499c1c1b7e03b8f98e4",
-        "semanticContextSHA256": "5fd4aad1a8bce8d948e9812063be6727a6ba56e554d51499c1c1b7e03b8f98e4",
+        "targetBeforeSHA256": "25fd8602615c3fef0d7a4baf97ec4760f7b22771d8cf746ec199a19641e707dd",
+        "semanticContextSHA256": "25fd8602615c3fef0d7a4baf97ec4760f7b22771d8cf746ec199a19641e707dd",
         "subjectTitle": "Pääkaupungin oma ääni",
         "targetState": "existing-target"
       },
@@ -1160,9 +1184,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
-      "targetAfterSHA256": "5fd4aad1a8bce8d948e9812063be6727a6ba56e554d51499c1c1b7e03b8f98e4",
-      "contextAfterSHA256": "5fd4aad1a8bce8d948e9812063be6727a6ba56e554d51499c1c1b7e03b8f98e4",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+      "targetAfterSHA256": "25fd8602615c3fef0d7a4baf97ec4760f7b22771d8cf746ec199a19641e707dd",
+      "contextAfterSHA256": "25fd8602615c3fef0d7a4baf97ec4760f7b22771d8cf746ec199a19641e707dd",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1185,7 +1209,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "40f7c1de791c3c951db85c74e156fa518332db728baeca585f9d8f3f6a306231",
+        "sameImageExportSHA256": "d3ef2ec147653ea80ea4bddfb0ba9f9e7598cee8d2b4d42f63d402ae03a5408d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -1235,10 +1267,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "22d3980ae52b3fa68dcfdc80ad9b53e9212d3e79e2ad17ed5eed8217035f0a26",
-        "semanticContextSHA256": "22d3980ae52b3fa68dcfdc80ad9b53e9212d3e79e2ad17ed5eed8217035f0a26",
+        "targetBeforeSHA256": "d9cd712b3349d38131fa9595f884801abd91d7c000ef06498834b6bde9ce7dfa",
+        "semanticContextSHA256": "d9cd712b3349d38131fa9595f884801abd91d7c000ef06498834b6bde9ce7dfa",
         "subjectTitle": "Savanni vaihtaa muotoa",
         "targetState": "existing-target"
       },
@@ -1454,9 +1486,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
-      "targetAfterSHA256": "22d3980ae52b3fa68dcfdc80ad9b53e9212d3e79e2ad17ed5eed8217035f0a26",
-      "contextAfterSHA256": "22d3980ae52b3fa68dcfdc80ad9b53e9212d3e79e2ad17ed5eed8217035f0a26",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+      "targetAfterSHA256": "d9cd712b3349d38131fa9595f884801abd91d7c000ef06498834b6bde9ce7dfa",
+      "contextAfterSHA256": "d9cd712b3349d38131fa9595f884801abd91d7c000ef06498834b6bde9ce7dfa",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1479,7 +1511,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "b34a05fb5e8483fa2566837807c3f7036b659e8c2b3e364d70b8719fa17981d7",
+        "sameImageExportSHA256": "afee22d77ea30ad03638b7fc7ae0f0e6af5f658e8fd6212eccb04ed55e511c81",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -1529,10 +1569,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0722a1c6ff99f780f899cb9bdc398a72ca72202e2703e80da39ee13866fc3b0a",
-        "semanticContextSHA256": "0722a1c6ff99f780f899cb9bdc398a72ca72202e2703e80da39ee13866fc3b0a",
+        "targetBeforeSHA256": "2ec7d7b240d23d9ee16acf61389e0c09d23465a7f5a645f47a9961c3d381f5f0",
+        "semanticContextSHA256": "2ec7d7b240d23d9ee16acf61389e0c09d23465a7f5a645f47a9961c3d381f5f0",
         "subjectTitle": "Puun kuori suojaa kuumuudelta",
         "targetState": "existing-target"
       },
@@ -1773,9 +1813,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
-      "targetAfterSHA256": "0722a1c6ff99f780f899cb9bdc398a72ca72202e2703e80da39ee13866fc3b0a",
-      "contextAfterSHA256": "0722a1c6ff99f780f899cb9bdc398a72ca72202e2703e80da39ee13866fc3b0a",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+      "targetAfterSHA256": "2ec7d7b240d23d9ee16acf61389e0c09d23465a7f5a645f47a9961c3d381f5f0",
+      "contextAfterSHA256": "2ec7d7b240d23d9ee16acf61389e0c09d23465a7f5a645f47a9961c3d381f5f0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1798,7 +1838,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "c775b61bbd17eb7ea88cbca43ba362ae12d4b3f29cd4323dd45da87fd5f5ff02",
+        "sameImageExportSHA256": "43615f3f5c0322a2660d31ce90cceefb9dcba14e10ff239f1ff3b8cf0daa570c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -1848,7 +1896,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
         "targetBeforeSHA256": "11380d6dad2cc050794f40f5b59f02e9ff0b440dadb8f2c08ff0e37591c44fd4",
         "semanticContextSHA256": "11380d6dad2cc050794f40f5b59f02e9ff0b440dadb8f2c08ff0e37591c44fd4",
@@ -2067,7 +2115,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "targetAfterSHA256": "11380d6dad2cc050794f40f5b59f02e9ff0b440dadb8f2c08ff0e37591c44fd4",
       "contextAfterSHA256": "11380d6dad2cc050794f40f5b59f02e9ff0b440dadb8f2c08ff0e37591c44fd4",
       "ownerApproved": true,
@@ -2092,7 +2140,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "4dc2a884618999cfc461c101d787de9b677d6ac35d36ef9871a6943b7ec65fee",
+        "sameImageExportSHA256": "bb529fa85a3a4cc274e44b83a397f2c6ac1c3f18e89252b10bbc45c60ddd8854",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -2142,10 +2198,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7c1fca0389e11076ee8c8b60fb9059a0b35b1e227969f82118bd9a2e20f1add9",
-        "semanticContextSHA256": "7c1fca0389e11076ee8c8b60fb9059a0b35b1e227969f82118bd9a2e20f1add9",
+        "targetBeforeSHA256": "f2a616863a150fa124631d3b203544396013ba978e77bf5b1235432b9f63bcff",
+        "semanticContextSHA256": "f2a616863a150fa124631d3b203544396013ba978e77bf5b1235432b9f63bcff",
         "subjectTitle": "Harjasusi kuljettaa hedelmän siemeniä",
         "targetState": "existing-target"
       },
@@ -2361,9 +2417,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
-      "targetAfterSHA256": "7c1fca0389e11076ee8c8b60fb9059a0b35b1e227969f82118bd9a2e20f1add9",
-      "contextAfterSHA256": "7c1fca0389e11076ee8c8b60fb9059a0b35b1e227969f82118bd9a2e20f1add9",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+      "targetAfterSHA256": "f2a616863a150fa124631d3b203544396013ba978e77bf5b1235432b9f63bcff",
+      "contextAfterSHA256": "f2a616863a150fa124631d3b203544396013ba978e77bf5b1235432b9f63bcff",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2386,7 +2442,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "4bb506df5f024045bacbf126e5e2eb029e18117be05db000c97053d3f8f8e6f1",
+        "sameImageExportSHA256": "c4ca45f679eb7b7299c8185a762d1437326a2de828cbfbe6e6862eefef402b85",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -2405,14 +2469,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/photo-b9cb9c8f84f63a72a308.jpg",
         "suora": true,
         "lahde": "EliasTheHorse, Commons (PD)",
-        "selite": "Matala, kasvillisuuden peittämä saari näkyy järven keskellä; vastarannalla on asuinrakennuksia.",
+        "selite": "Paranoá-järven saari kuvattuna vuonna 2008.",
         "lyhyt": "Saari Paranoá-järvellä vuonna 2008.",
         "tiedosto": "Paranoa-Island-Brasilia.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "EliasTheHorse, Commons (PD)",
-        "selite": "Matala, kasvillisuuden peittämä saari näkyy järven keskellä; vastarannalla on asuinrakennuksia.",
+        "selite": "Paranoá-järven saari kuvattuna vuonna 2008.",
         "lyhyt": "Saari Paranoá-järvellä vuonna 2008.",
         "tiedosto": "Paranoa-Island-Brasilia.JPG"
       },
@@ -2420,7 +2484,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/photo-b9cb9c8f84f63a72a308.jpg",
         "suora": true,
         "lahde": "EliasTheHorse, Commons (PD)",
-        "selite": "Matala, kasvillisuuden peittämä saari näkyy järven keskellä; vastarannalla on asuinrakennuksia.",
+        "selite": "Paranoá-järven saari kuvattuna vuonna 2008.",
         "lyhyt": "Saari Paranoá-järvellä vuonna 2008.",
         "tiedosto": "Paranoa-Island-Brasilia.JPG"
       },
@@ -2436,10 +2500,10 @@
         1047
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "bdd5569b9240b3d1a65602a17328dab6d26804047fa0c4790158b68439cbb861",
-        "semanticContextSHA256": "bdd5569b9240b3d1a65602a17328dab6d26804047fa0c4790158b68439cbb861",
+        "targetBeforeSHA256": "05f3809370b8aa7303b4fbc9546b3be8159edb6e9ebbfe807e144e2ae0f932ca",
+        "semanticContextSHA256": "05f3809370b8aa7303b4fbc9546b3be8159edb6e9ebbfe807e144e2ae0f932ca",
         "subjectTitle": "brasilia — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2587,7 +2651,7 @@
       "priorMediaFields": {
         "tiedosto": "Paranoa-Island-Brasilia.JPG",
         "lyhyt": "Saari Paranoá-järvellä vuonna 2008.",
-        "selite": "Matala, kasvillisuuden peittämä saari näkyy järven keskellä; vastarannalla on asuinrakennuksia.",
+        "selite": "Paranoá-järven saari kuvattuna vuonna 2008.",
         "lahde": "EliasTheHorse, Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -2614,14 +2678,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "EliasTheHorse, Commons (PD)",
-        "selite": "Matala, kasvillisuuden peittämä saari näkyy järven keskellä; vastarannalla on asuinrakennuksia.",
+        "selite": "Paranoá-järven saari kuvattuna vuonna 2008.",
         "lyhyt": "Saari Paranoá-järvellä vuonna 2008.",
         "tiedosto": "Paranoa-Island-Brasilia.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
-      "targetAfterSHA256": "bdd5569b9240b3d1a65602a17328dab6d26804047fa0c4790158b68439cbb861",
-      "contextAfterSHA256": "bdd5569b9240b3d1a65602a17328dab6d26804047fa0c4790158b68439cbb861",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+      "targetAfterSHA256": "05f3809370b8aa7303b4fbc9546b3be8159edb6e9ebbfe807e144e2ae0f932ca",
+      "contextAfterSHA256": "05f3809370b8aa7303b4fbc9546b3be8159edb6e9ebbfe807e144e2ae0f932ca",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2644,7 +2708,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "b9cb9c8f84f63a72a3080db22a08082578c73ccb387894689d214ea4a7e4625b",
+        "sameImageExportSHA256": "b9cb9c8f84f63a72a3080db22a08082578c73ccb387894689d214ea4a7e4625b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e13",
@@ -2666,14 +2738,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/c1-a7391bf8ae9d93844422.jpg",
         "suora": true,
         "lahde": "Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Panoraamassa matalat rantakorttelit ja järven vesi näkyvät etualalla, korkeammat kaupunkirakennukset kauempana.",
+        "selite": "Lago Norten ja Plano Piloton panoraama heinäkuussa 2014.",
         "lyhyt": "Lago Norte ja Plano Piloto heinäkuussa 2014.",
         "tiedosto": "Panorama Lago Norte & Plano Piloto BSB 07 2014 9921.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Panoraamassa matalat rantakorttelit ja järven vesi näkyvät etualalla, korkeammat kaupunkirakennukset kauempana.",
+        "selite": "Lago Norten ja Plano Piloton panoraama heinäkuussa 2014.",
         "lyhyt": "Lago Norte ja Plano Piloto heinäkuussa 2014.",
         "tiedosto": "Panorama Lago Norte & Plano Piloto BSB 07 2014 9921.jpg"
       },
@@ -2681,7 +2753,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/c1-a7391bf8ae9d93844422.jpg",
         "suora": true,
         "lahde": "Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Panoraamassa matalat rantakorttelit ja järven vesi näkyvät etualalla, korkeammat kaupunkirakennukset kauempana.",
+        "selite": "Lago Norten ja Plano Piloton panoraama heinäkuussa 2014.",
         "lyhyt": "Lago Norte ja Plano Piloto heinäkuussa 2014.",
         "tiedosto": "Panorama Lago Norte & Plano Piloto BSB 07 2014 9921.jpg"
       },
@@ -2697,10 +2769,10 @@
         750
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3b366866da905dd8b2693becb7f03d2d4e754b1d26bcfd00ef6a6bfab34d92fd",
-        "semanticContextSHA256": "3b366866da905dd8b2693becb7f03d2d4e754b1d26bcfd00ef6a6bfab34d92fd",
+        "targetBeforeSHA256": "7573d037d53e82c9f336f11707a71d450db738a48bcfeb3ca438dd8acb8658ab",
+        "semanticContextSHA256": "7573d037d53e82c9f336f11707a71d450db738a48bcfeb3ca438dd8acb8658ab",
         "subjectTitle": "Brasília",
         "targetState": "existing-target"
       },
@@ -2958,7 +3030,7 @@
       "priorMediaFields": {
         "tiedosto": "Panorama Lago Norte & Plano Piloto BSB 07 2014 9921.jpg",
         "lyhyt": "Lago Norte ja Plano Piloto heinäkuussa 2014.",
-        "selite": "Panoraamassa matalat rantakorttelit ja järven vesi näkyvät etualalla, korkeammat kaupunkirakennukset kauempana.",
+        "selite": "Lago Norten ja Plano Piloton panoraama heinäkuussa 2014.",
         "lahde": "Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2985,14 +3057,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Panoraamassa matalat rantakorttelit ja järven vesi näkyvät etualalla, korkeammat kaupunkirakennukset kauempana.",
+        "selite": "Lago Norten ja Plano Piloton panoraama heinäkuussa 2014.",
         "lyhyt": "Lago Norte ja Plano Piloto heinäkuussa 2014.",
         "tiedosto": "Panorama Lago Norte & Plano Piloto BSB 07 2014 9921.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
-      "targetAfterSHA256": "3b366866da905dd8b2693becb7f03d2d4e754b1d26bcfd00ef6a6bfab34d92fd",
-      "contextAfterSHA256": "3b366866da905dd8b2693becb7f03d2d4e754b1d26bcfd00ef6a6bfab34d92fd",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+      "targetAfterSHA256": "7573d037d53e82c9f336f11707a71d450db738a48bcfeb3ca438dd8acb8658ab",
+      "contextAfterSHA256": "7573d037d53e82c9f336f11707a71d450db738a48bcfeb3ca438dd8acb8658ab",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3015,7 +3087,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "a7391bf8ae9d938444224eefac8cd09dd3e1f36a33b014960ed9f7e52d1423d3",
+        "sameImageExportSHA256": "a7391bf8ae9d938444224eefac8cd09dd3e1f36a33b014960ed9f7e52d1423d3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e13",
@@ -3037,14 +3117,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/c2-5d61cf7bca7f6b580b8b.jpg",
         "suora": true,
         "lahde": "Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Järven ja vehreän asutuksen takana näkyvät Brasílian korkeat rakennukset laajassa panoraamassa.",
+        "selite": "Panoraamakuva Lago Nortesta Monumentaaliakselin suuntaan vuonna 2014.",
         "lyhyt": "Lago Norte ja Monumentaaliakselin seutu vuonna 2014.",
         "tiedosto": "Panorama Lago Norte & Eixo Monumental BSB 07 2014 9908.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Järven ja vehreän asutuksen takana näkyvät Brasílian korkeat rakennukset laajassa panoraamassa.",
+        "selite": "Panoraamakuva Lago Nortesta Monumentaaliakselin suuntaan vuonna 2014.",
         "lyhyt": "Lago Norte ja Monumentaaliakselin seutu vuonna 2014.",
         "tiedosto": "Panorama Lago Norte & Eixo Monumental BSB 07 2014 9908.jpg"
       },
@@ -3052,7 +3132,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/c2-5d61cf7bca7f6b580b8b.jpg",
         "suora": true,
         "lahde": "Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Järven ja vehreän asutuksen takana näkyvät Brasílian korkeat rakennukset laajassa panoraamassa.",
+        "selite": "Panoraamakuva Lago Nortesta Monumentaaliakselin suuntaan vuonna 2014.",
         "lyhyt": "Lago Norte ja Monumentaaliakselin seutu vuonna 2014.",
         "tiedosto": "Panorama Lago Norte & Eixo Monumental BSB 07 2014 9908.jpg"
       },
@@ -3068,10 +3148,10 @@
         750
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7c3eb030260b76da4d5c20f92356ff52d64d146d6722f1c821b0a2b619886c44",
-        "semanticContextSHA256": "7c3eb030260b76da4d5c20f92356ff52d64d146d6722f1c821b0a2b619886c44",
+        "targetBeforeSHA256": "ef4f53936ce1c9396f3f09a9d11bf7914ccf4ae06bc784d81bfd6849e53ee657",
+        "semanticContextSHA256": "ef4f53936ce1c9396f3f09a9d11bf7914ccf4ae06bc784d81bfd6849e53ee657",
         "subjectTitle": "Brasília",
         "targetState": "existing-target"
       },
@@ -3329,7 +3409,7 @@
       "priorMediaFields": {
         "tiedosto": "Panorama Lago Norte & Eixo Monumental BSB 07 2014 9908.jpg",
         "lyhyt": "Lago Norte ja Monumentaaliakselin seutu vuonna 2014.",
-        "selite": "Järven ja vehreän asutuksen takana näkyvät Brasílian korkeat rakennukset laajassa panoraamassa.",
+        "selite": "Panoraamakuva Lago Nortesta Monumentaaliakselin suuntaan vuonna 2014.",
         "lahde": "Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3356,14 +3436,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Järven ja vehreän asutuksen takana näkyvät Brasílian korkeat rakennukset laajassa panoraamassa.",
+        "selite": "Panoraamakuva Lago Nortesta Monumentaaliakselin suuntaan vuonna 2014.",
         "lyhyt": "Lago Norte ja Monumentaaliakselin seutu vuonna 2014.",
         "tiedosto": "Panorama Lago Norte & Eixo Monumental BSB 07 2014 9908.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
-      "targetAfterSHA256": "7c3eb030260b76da4d5c20f92356ff52d64d146d6722f1c821b0a2b619886c44",
-      "contextAfterSHA256": "7c3eb030260b76da4d5c20f92356ff52d64d146d6722f1c821b0a2b619886c44",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+      "targetAfterSHA256": "ef4f53936ce1c9396f3f09a9d11bf7914ccf4ae06bc784d81bfd6849e53ee657",
+      "contextAfterSHA256": "ef4f53936ce1c9396f3f09a9d11bf7914ccf4ae06bc784d81bfd6849e53ee657",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3386,7 +3466,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "5d61cf7bca7f6b580b8bb025af75f0d1564afad4fc641e6260108b8ecc10c590",
+        "sameImageExportSHA256": "5d61cf7bca7f6b580b8bb025af75f0d1564afad4fc641e6260108b8ecc10c590",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e13",
@@ -3408,14 +3496,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/n1-7f523a2f1fdcf525ded6.jpg",
         "suora": true,
         "lahde": "Fabio Rodrigues Pozzebom/ABr, Wikimedia Commons (CC BY 3.0 br)",
-        "selite": "Kivirakenteisen altaan reunalta virtaa vettä etualalle; metsän puut ympäröivät allasta.",
+        "selite": "Brasílian kansallispuiston lähdevesien uima-allas.",
         "lyhyt": "Uima-allas Brasílian kansallispuistossa.",
         "tiedosto": "Piscina parquenacionalbrasilia.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Fabio Rodrigues Pozzebom/ABr, Wikimedia Commons (CC BY 3.0 br)",
-        "selite": "Kivirakenteisen altaan reunalta virtaa vettä etualalle; metsän puut ympäröivät allasta.",
+        "selite": "Brasílian kansallispuiston lähdevesien uima-allas.",
         "lyhyt": "Uima-allas Brasílian kansallispuistossa.",
         "tiedosto": "Piscina parquenacionalbrasilia.jpg"
       },
@@ -3423,7 +3511,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/n1-7f523a2f1fdcf525ded6.jpg",
         "suora": true,
         "lahde": "Fabio Rodrigues Pozzebom/ABr, Wikimedia Commons (CC BY 3.0 br)",
-        "selite": "Kivirakenteisen altaan reunalta virtaa vettä etualalle; metsän puut ympäröivät allasta.",
+        "selite": "Brasílian kansallispuiston lähdevesien uima-allas.",
         "lyhyt": "Uima-allas Brasílian kansallispuistossa.",
         "tiedosto": "Piscina parquenacionalbrasilia.jpg"
       },
@@ -3439,10 +3527,10 @@
         2598
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8e4eaad0ed9d440dbd9e7f698408a68dce451e6d01157b3d0a2eae43e6736acb",
-        "semanticContextSHA256": "cedfe26ef0f72529f9956fe91553ee005ca0cc2426445f5e618aca451b9400a2",
+        "targetBeforeSHA256": "c04a02eea384309634e1450d0e6469336a007b4d5bdc897f1adc1a00d0011ce3",
+        "semanticContextSHA256": "33692258eccbd6faab575e0d0866eacc55d9977e4a2d1cdbf4621ced63408d13",
         "subjectTitle": "Brasílian kansallispuisto",
         "targetState": "existing-target"
       },
@@ -3642,7 +3730,7 @@
       "priorMediaFields": {
         "tiedosto": "Piscina parquenacionalbrasilia.jpg",
         "lyhyt": "Uima-allas Brasílian kansallispuistossa.",
-        "selite": "Kivirakenteisen altaan reunalta virtaa vettä etualalle; metsän puut ympäröivät allasta.",
+        "selite": "Brasílian kansallispuiston lähdevesien uima-allas.",
         "lahde": "Fabio Rodrigues Pozzebom/ABr, Wikimedia Commons (CC BY 3.0 br)"
       },
       "preservePreviousMediaObjects": true,
@@ -3669,14 +3757,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Fabio Rodrigues Pozzebom/ABr, Wikimedia Commons (CC BY 3.0 br)",
-        "selite": "Kivirakenteisen altaan reunalta virtaa vettä etualalle; metsän puut ympäröivät allasta.",
+        "selite": "Brasílian kansallispuiston lähdevesien uima-allas.",
         "lyhyt": "Uima-allas Brasílian kansallispuistossa.",
         "tiedosto": "Piscina parquenacionalbrasilia.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
-      "targetAfterSHA256": "8e4eaad0ed9d440dbd9e7f698408a68dce451e6d01157b3d0a2eae43e6736acb",
-      "contextAfterSHA256": "cedfe26ef0f72529f9956fe91553ee005ca0cc2426445f5e618aca451b9400a2",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+      "targetAfterSHA256": "c04a02eea384309634e1450d0e6469336a007b4d5bdc897f1adc1a00d0011ce3",
+      "contextAfterSHA256": "33692258eccbd6faab575e0d0866eacc55d9977e4a2d1cdbf4621ced63408d13",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3699,7 +3787,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "7f523a2f1fdcf525ded6de64891289a5f032c9a4464ed44148f165e6a8ad08ba",
+        "sameImageExportSHA256": "7f523a2f1fdcf525ded6de64891289a5f032c9a4464ed44148f165e6a8ad08ba",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e13",
@@ -3721,14 +3817,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/n2-0e8a0b9750cdfdf01957.jpg",
         "suora": true,
         "lahde": "EliasTheHorse, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Kasvillisuuden peittämällä saarella on merimerkki; järven vastarannalla näkyy taloja.",
+        "selite": "Ilha dos Clubes on Paranoá-järven saari.",
         "lyhyt": "Ilha dos Clubesin pieni saari Paranoá-järvellä.",
         "tiedosto": "IlhaDosClubes.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "EliasTheHorse, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Kasvillisuuden peittämällä saarella on merimerkki; järven vastarannalla näkyy taloja.",
+        "selite": "Ilha dos Clubes on Paranoá-järven saari.",
         "lyhyt": "Ilha dos Clubesin pieni saari Paranoá-järvellä.",
         "tiedosto": "IlhaDosClubes.jpg"
       },
@@ -3736,7 +3832,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/n2-0e8a0b9750cdfdf01957.jpg",
         "suora": true,
         "lahde": "EliasTheHorse, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Kasvillisuuden peittämällä saarella on merimerkki; järven vastarannalla näkyy taloja.",
+        "selite": "Ilha dos Clubes on Paranoá-järven saari.",
         "lyhyt": "Ilha dos Clubesin pieni saari Paranoá-järvellä.",
         "tiedosto": "IlhaDosClubes.jpg"
       },
@@ -3752,10 +3848,10 @@
         1944
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/brasilia/sisalto.json",
-      "sourceContentSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
+      "sourceContentSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5cb4c0b9f0f18ac1252f6565026310578e4f03b3b6ec716c733653fade9e6c3a",
-        "semanticContextSHA256": "d24a937b1b453346386c4c1d0c2f6401d9b3da9bc919ae132ec6a87bfa8fabee",
+        "targetBeforeSHA256": "f41646b43929ff6dee6498bb9ee011842cde5ea7e0ab70bb385ccb171f8c5017",
+        "semanticContextSHA256": "1b9c1c03030612d8f7b7e234cfa1da623ef590800522be8c443140dc100cf1fa",
         "subjectTitle": "Paranoá-järvi",
         "targetState": "existing-target"
       },
@@ -3955,7 +4051,7 @@
       "priorMediaFields": {
         "tiedosto": "IlhaDosClubes.jpg",
         "lyhyt": "Ilha dos Clubesin pieni saari Paranoá-järvellä.",
-        "selite": "Kasvillisuuden peittämällä saarella on merimerkki; järven vastarannalla näkyy taloja.",
+        "selite": "Ilha dos Clubes on Paranoá-järven saari.",
         "lahde": "EliasTheHorse, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3982,14 +4078,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "EliasTheHorse, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Kasvillisuuden peittämällä saarella on merimerkki; järven vastarannalla näkyy taloja.",
+        "selite": "Ilha dos Clubes on Paranoá-järven saari.",
         "lyhyt": "Ilha dos Clubesin pieni saari Paranoá-järvellä.",
         "tiedosto": "IlhaDosClubes.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "985f1fceff8d4878563852e38deb9848c871ba264a71282d71dec76bcf1dfa70",
-      "targetAfterSHA256": "5cb4c0b9f0f18ac1252f6565026310578e4f03b3b6ec716c733653fade9e6c3a",
-      "contextAfterSHA256": "d24a937b1b453346386c4c1d0c2f6401d9b3da9bc919ae132ec6a87bfa8fabee",
+      "sourceContentAfterSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+      "targetAfterSHA256": "f41646b43929ff6dee6498bb9ee011842cde5ea7e0ab70bb385ccb171f8c5017",
+      "contextAfterSHA256": "1b9c1c03030612d8f7b7e234cfa1da623ef590800522be8c443140dc100cf1fa",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -4012,7 +4108,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ddadf6ad93943ec451bbc03a91f6a117e9ffaafad2f6c73e249d7b54761d7e96",
+        "sameImageNativeSHA256": "0e8a0b9750cdfdf0195743f4670274f0398991f5bcc52b0c10cb7a0d746d5717",
+        "sameImageExportSHA256": "0e8a0b9750cdfdf0195743f4670274f0398991f5bcc52b0c10cb7a0d746d5717",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -4024,6 +4128,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e13/brasilia/8fbeea81cfb4f95ef39c0ed9ff4357fac4afd1210e7759e0bd4377fb60ad51f0.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.467528+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e13/brasilia/36bac929b3816c2106b479bbbbdd9beff5e131945a58a36a474c17ed186e3806.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.467528+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:32:54.127919+00:00"
 }

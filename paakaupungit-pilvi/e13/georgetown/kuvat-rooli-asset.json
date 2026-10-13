@@ -3,7 +3,7 @@
   "era": "e13",
   "city": "georgetown",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+  "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
   "assets": [
     {
       "era": "e13",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "a705904fd4e526d8c869af81c370cde49179a543fc7f086e2efcf7f3135dd1e9",
+        "semanticContextSHA256": "d472d99805f42ffd9d91389d01f8d1c46736f5e7c246a9c1f6ba761544faff69",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -226,9 +226,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "a705904fd4e526d8c869af81c370cde49179a543fc7f086e2efcf7f3135dd1e9",
+      "contextAfterSHA256": "d472d99805f42ffd9d91389d01f8d1c46736f5e7c246a9c1f6ba761544faff69",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -251,7 +251,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "735565d49c55f462e0cbfd50ae7a7ff427626b713f37023a7301390035c5a2e5",
+        "sameImageExportSHA256": "268a85b4b5a809d3f8ee5927e7f995d0e1f72c94bbcaa7820613af0365e37ccc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -304,10 +312,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "74e94e32c005f5394675e59a46931a232ccc26344ad72cb1234fd89220068595",
+        "semanticContextSHA256": "9947b01a69e235c14ecac5bcb06733436dd861611ea3dce4c3f14f4b3afbdc27",
         "subjectTitle": "Puutarhat ovat eri paikkoja",
         "targetState": "existing-target"
       },
@@ -473,9 +481,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "74e94e32c005f5394675e59a46931a232ccc26344ad72cb1234fd89220068595",
+      "contextAfterSHA256": "9947b01a69e235c14ecac5bcb06733436dd861611ea3dce4c3f14f4b3afbdc27",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -498,7 +506,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "4c969dadd9bd08f5f6d36fe081a32b614883b4e7c25e93ef9e8e373e33989754",
+        "sameImageExportSHA256": "d7fd752972714a18e965031459393453854dbc0fc25e095ff9436182337fa36e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -551,10 +567,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "012abc609370bb2b30d93104e9c0156904e444b75a22afa91ae2ad872d6c7082",
+        "semanticContextSHA256": "cad285df83f2f3c640bbb9cd108294ca405924b7e5546806a2c266164eda2ebd",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -720,9 +736,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "012abc609370bb2b30d93104e9c0156904e444b75a22afa91ae2ad872d6c7082",
+      "contextAfterSHA256": "cad285df83f2f3c640bbb9cd108294ca405924b7e5546806a2c266164eda2ebd",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -745,7 +761,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "5494e3502f060da6a2c8e002338bb2d2c4f1c6985c7c5f1a285b63040837c7eb",
+        "sameImageExportSHA256": "0ef232f302a0a1879e36957f11028669b32192de414f886f89b6148e47c32329",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -795,7 +819,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "6afcf74283957f70ec26083e3dd92a8956457c9c4bc1742fb1b02ae28446edb5",
         "semanticContextSHA256": "6afcf74283957f70ec26083e3dd92a8956457c9c4bc1742fb1b02ae28446edb5",
@@ -966,7 +990,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "targetAfterSHA256": "6afcf74283957f70ec26083e3dd92a8956457c9c4bc1742fb1b02ae28446edb5",
       "contextAfterSHA256": "6afcf74283957f70ec26083e3dd92a8956457c9c4bc1742fb1b02ae28446edb5",
       "ownerApproved": true,
@@ -991,7 +1015,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "c5113234477f51409c20690a4bf5720c5bf0d1c9b495ef3784f0b1f916af2ef2",
+        "sameImageExportSHA256": "37ed02d84188adefd89f896152b923d0a9fd5fd86797602f61852dc83f34881e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -1041,10 +1073,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "bf3b95348610ec35cd6dedbcd3e036ccd5d7d718f43ed2c3498ac9c748cd2e2a",
-        "semanticContextSHA256": "bf3b95348610ec35cd6dedbcd3e036ccd5d7d718f43ed2c3498ac9c748cd2e2a",
+        "targetBeforeSHA256": "c79f85ca19bf650babab14543e1c47a295b22483abb9b956ffe2582008fbb20d",
+        "semanticContextSHA256": "c79f85ca19bf650babab14543e1c47a295b22483abb9b956ffe2582008fbb20d",
         "subjectTitle": "Puutarhan lammessa on manaatteja",
         "targetState": "existing-target"
       },
@@ -1222,9 +1254,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
-      "targetAfterSHA256": "bf3b95348610ec35cd6dedbcd3e036ccd5d7d718f43ed2c3498ac9c748cd2e2a",
-      "contextAfterSHA256": "bf3b95348610ec35cd6dedbcd3e036ccd5d7d718f43ed2c3498ac9c748cd2e2a",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+      "targetAfterSHA256": "c79f85ca19bf650babab14543e1c47a295b22483abb9b956ffe2582008fbb20d",
+      "contextAfterSHA256": "c79f85ca19bf650babab14543e1c47a295b22483abb9b956ffe2582008fbb20d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1247,7 +1279,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "21f5ecd7c3ed8d85804ac1e1df47ee47545c1c27542a0dea1e891b1c39a91312",
+        "sameImageExportSHA256": "8e1ebe58710d0377c6cdff21e92a185ad1d957cfba1b5452aff0d810f42b6bd8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -1297,10 +1337,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9c9b704e820dd53c48e8c590ddd99ec3a89ac3407f07f395a41bc112b912441f",
-        "semanticContextSHA256": "9c9b704e820dd53c48e8c590ddd99ec3a89ac3407f07f395a41bc112b912441f",
+        "targetBeforeSHA256": "57e42452c13a9ea4dac5c4d9a29ace38e9302b0c6a4c8c068964ec55a2f9fbce",
+        "semanticContextSHA256": "57e42452c13a9ea4dac5c4d9a29ace38e9302b0c6a4c8c068964ec55a2f9fbce",
         "subjectTitle": "Lentoasemien vanhat nimet kulkevat mukana",
         "targetState": "existing-target"
       },
@@ -1466,9 +1506,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
-      "targetAfterSHA256": "9c9b704e820dd53c48e8c590ddd99ec3a89ac3407f07f395a41bc112b912441f",
-      "contextAfterSHA256": "9c9b704e820dd53c48e8c590ddd99ec3a89ac3407f07f395a41bc112b912441f",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+      "targetAfterSHA256": "57e42452c13a9ea4dac5c4d9a29ace38e9302b0c6a4c8c068964ec55a2f9fbce",
+      "contextAfterSHA256": "57e42452c13a9ea4dac5c4d9a29ace38e9302b0c6a4c8c068964ec55a2f9fbce",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1491,7 +1531,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "6e9a1378d556fb85c02ac529041fe0812e28b69b514e8029aa0772ba66b1e542",
+        "sameImageExportSHA256": "bfb52268f901b11a6afe090db3c21b89353c002a7420d0cf6b1a9164f9fd0a24",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -1541,10 +1589,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "252acb795b2ec7eb755804f9263376da6dfdbc4eb10ebbc916723168568fd567",
-        "semanticContextSHA256": "252acb795b2ec7eb755804f9263376da6dfdbc4eb10ebbc916723168568fd567",
+        "targetBeforeSHA256": "ac55408822fcf17f91965bd67de8e10e4ba3d52336657dff25fe4b4ae0c74113",
+        "semanticContextSHA256": "ac55408822fcf17f91965bd67de8e10e4ba3d52336657dff25fe4b4ae0c74113",
         "subjectTitle": "Kokers-portit hoitavat vedenpoistoa",
         "targetState": "existing-target"
       },
@@ -1719,9 +1767,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
-      "targetAfterSHA256": "252acb795b2ec7eb755804f9263376da6dfdbc4eb10ebbc916723168568fd567",
-      "contextAfterSHA256": "252acb795b2ec7eb755804f9263376da6dfdbc4eb10ebbc916723168568fd567",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+      "targetAfterSHA256": "ac55408822fcf17f91965bd67de8e10e4ba3d52336657dff25fe4b4ae0c74113",
+      "contextAfterSHA256": "ac55408822fcf17f91965bd67de8e10e4ba3d52336657dff25fe4b4ae0c74113",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1744,7 +1792,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "fbbda4c5809c71ce867d0ad8f3da153efd10c6766d6da46fbe8d8442b4f3aa11",
+        "sameImageExportSHA256": "4c9273c41c1d145792882aefed84c993edfb2bd9a72c39c8ece54f67c1eefe96",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -1794,10 +1850,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "282abe6ea332e4f2a69c293a5654020943b47d148615267cbc116fee93e20332",
-        "semanticContextSHA256": "282abe6ea332e4f2a69c293a5654020943b47d148615267cbc116fee93e20332",
+        "targetBeforeSHA256": "127ee3f5f04bdb827dab5408d6adc264811c5c20ebb1c1646ac70980a2b872db",
+        "semanticContextSHA256": "127ee3f5f04bdb827dab5408d6adc264811c5c20ebb1c1646ac70980a2b872db",
         "subjectTitle": "Majakan alla on puupaaluja",
         "targetState": "existing-target"
       },
@@ -1963,9 +2019,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
-      "targetAfterSHA256": "282abe6ea332e4f2a69c293a5654020943b47d148615267cbc116fee93e20332",
-      "contextAfterSHA256": "282abe6ea332e4f2a69c293a5654020943b47d148615267cbc116fee93e20332",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+      "targetAfterSHA256": "127ee3f5f04bdb827dab5408d6adc264811c5c20ebb1c1646ac70980a2b872db",
+      "contextAfterSHA256": "127ee3f5f04bdb827dab5408d6adc264811c5c20ebb1c1646ac70980a2b872db",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1988,7 +2044,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "ecbce8501e084fc2aab9d7addd18dd280a3a40f9b99338cccfdf87b358c73ba4",
+        "sameImageExportSHA256": "ef3338974fedd091cb7f8988176e993e1778f8657fdc55c1b146eb70be6c9906",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -2038,10 +2102,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e4adcdbfa1a83d5dedf9b5337d608b48c0bca19ff3dd5c44659b97e1fcc017f3",
-        "semanticContextSHA256": "e4adcdbfa1a83d5dedf9b5337d608b48c0bca19ff3dd5c44659b97e1fcc017f3",
+        "targetBeforeSHA256": "6029130f48c40d51e2a05fdf2839548eaa66bfe75107d0dbf49caef806f25d87",
+        "semanticContextSHA256": "6029130f48c40d51e2a05fdf2839548eaa66bfe75107d0dbf49caef806f25d87",
         "subjectTitle": "Yksi kirkko, kaksi rakennuttajayhteisöä",
         "targetState": "existing-target"
       },
@@ -2205,9 +2269,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
-      "targetAfterSHA256": "e4adcdbfa1a83d5dedf9b5337d608b48c0bca19ff3dd5c44659b97e1fcc017f3",
-      "contextAfterSHA256": "e4adcdbfa1a83d5dedf9b5337d608b48c0bca19ff3dd5c44659b97e1fcc017f3",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+      "targetAfterSHA256": "6029130f48c40d51e2a05fdf2839548eaa66bfe75107d0dbf49caef806f25d87",
+      "contextAfterSHA256": "6029130f48c40d51e2a05fdf2839548eaa66bfe75107d0dbf49caef806f25d87",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2230,7 +2294,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "bc31b4b3be45b9e66c0e21e1500dcac5b628d0390969ecf4f48782b2356a7a44",
+        "sameImageExportSHA256": "f9a7c56f3318c0a74cf0d6eddc6b2a24bdd9c20d9b987c06f880f3c2c200ee33",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -2280,7 +2352,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "4b47bba832ef2b1d5d72c5307bfae3dc402b65bcf6b25a372fda574260971194",
@@ -2451,7 +2523,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "4b47bba832ef2b1d5d72c5307bfae3dc402b65bcf6b25a372fda574260971194",
       "ownerApproved": true,
@@ -2476,7 +2548,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "25f5069e0e63d989ee24bf971b746cc7410f5ba45b4d7fba87c07d57a279ab49",
+        "sameImageExportSHA256": "378567ddb6d7f736bcc16aa52e6be5f6d8f28ff7875523b77c4c77f6b2d26c29",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -2526,7 +2606,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "a120c34622e85486201257052efb914faf7354379c64faf424df1e384b59786d",
@@ -2697,7 +2777,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "a120c34622e85486201257052efb914faf7354379c64faf424df1e384b59786d",
       "ownerApproved": true,
@@ -2722,7 +2802,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "e6bf4c8676c03f45de2728e430ed2dd2a2d3c640286ecb80714302496b823bf8",
+        "sameImageExportSHA256": "a8eeabfff64a733582ba64534932d16833e0ace4d05055a71b8e15283327e776",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e13",
@@ -2741,14 +2829,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/photo-48ba9b9f1f62fd4ad9c6.jpg",
         "suora": true,
         "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)",
-        "selite": "Manaatin pää näkyy veden pinnassa Georgetownin kasvitieteellisen puutarhan lammessa.",
+        "selite": "Manaatti elää Guyana Botanical Gardensin lammessa Georgetownissa.",
         "lyhyt": "Manaatti Guyana Botanical Gardensin lammessa.",
         "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)",
-        "selite": "Manaatin pää näkyy veden pinnassa Georgetownin kasvitieteellisen puutarhan lammessa.",
+        "selite": "Manaatti elää Guyana Botanical Gardensin lammessa Georgetownissa.",
         "lyhyt": "Manaatti Guyana Botanical Gardensin lammessa.",
         "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg"
       },
@@ -2756,7 +2844,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/photo-48ba9b9f1f62fd4ad9c6.jpg",
         "suora": true,
         "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)",
-        "selite": "Manaatin pää näkyy veden pinnassa Georgetownin kasvitieteellisen puutarhan lammessa.",
+        "selite": "Manaatti elää Guyana Botanical Gardensin lammessa Georgetownissa.",
         "lyhyt": "Manaatti Guyana Botanical Gardensin lammessa.",
         "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg"
       },
@@ -2772,10 +2860,10 @@
         3648
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d507d28cbf14414be9a3df1129d9e8311673069ad0fd3f48b645b721046b202b",
-        "semanticContextSHA256": "d507d28cbf14414be9a3df1129d9e8311673069ad0fd3f48b645b721046b202b",
+        "targetBeforeSHA256": "a45ac969a88dd0e7179054683be3ab4bcece9c5c17bba56c3fdc707960f55d45",
+        "semanticContextSHA256": "a45ac969a88dd0e7179054683be3ab4bcece9c5c17bba56c3fdc707960f55d45",
         "subjectTitle": "georgetown — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2964,7 +3052,7 @@
       "priorMediaFields": {
         "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg",
         "lyhyt": "Manaatti Guyana Botanical Gardensin lammessa.",
-        "selite": "Manaatin pää näkyy veden pinnassa Georgetownin kasvitieteellisen puutarhan lammessa.",
+        "selite": "Manaatti elää Guyana Botanical Gardensin lammessa Georgetownissa.",
         "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2991,14 +3079,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)",
-        "selite": "Manaatin pää näkyy veden pinnassa Georgetownin kasvitieteellisen puutarhan lammessa.",
+        "selite": "Manaatti elää Guyana Botanical Gardensin lammessa Georgetownissa.",
         "lyhyt": "Manaatti Guyana Botanical Gardensin lammessa.",
         "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
-      "targetAfterSHA256": "d507d28cbf14414be9a3df1129d9e8311673069ad0fd3f48b645b721046b202b",
-      "contextAfterSHA256": "d507d28cbf14414be9a3df1129d9e8311673069ad0fd3f48b645b721046b202b",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+      "targetAfterSHA256": "a45ac969a88dd0e7179054683be3ab4bcece9c5c17bba56c3fdc707960f55d45",
+      "contextAfterSHA256": "a45ac969a88dd0e7179054683be3ab4bcece9c5c17bba56c3fdc707960f55d45",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3021,7 +3109,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "48ba9b9f1f62fd4ad9c6ad6c2013093d24299d05cb50d8ffb5f79d8e48a544ba",
+        "sameImageExportSHA256": "48ba9b9f1f62fd4ad9c6ad6c2013093d24299d05cb50d8ffb5f79d8e48a544ba",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e13",
@@ -3043,14 +3139,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/k3-526d8ec8963db0f58d88.jpg",
         "suora": true,
         "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Katedraalin korkeat suippokaari-ikkunat ja torni erottuvat katutasolta vuonna 2019 otetussa kuvassa.",
+        "selite": "St. George’s Cathedral on Georgetownin uusgoottilainen puukatedraali; kuva vuodelta 2019.",
         "lyhyt": "St. George’s Cathedralin valkoinen puurakennus.",
         "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Katedraalin korkeat suippokaari-ikkunat ja torni erottuvat katutasolta vuonna 2019 otetussa kuvassa.",
+        "selite": "St. George’s Cathedral on Georgetownin uusgoottilainen puukatedraali; kuva vuodelta 2019.",
         "lyhyt": "St. George’s Cathedralin valkoinen puurakennus.",
         "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg"
       },
@@ -3058,7 +3154,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/k3-526d8ec8963db0f58d88.jpg",
         "suora": true,
         "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Katedraalin korkeat suippokaari-ikkunat ja torni erottuvat katutasolta vuonna 2019 otetussa kuvassa.",
+        "selite": "St. George’s Cathedral on Georgetownin uusgoottilainen puukatedraali; kuva vuodelta 2019.",
         "lyhyt": "St. George’s Cathedralin valkoinen puurakennus.",
         "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg"
       },
@@ -3074,10 +3170,10 @@
         3648
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e303190d03f7a8975b187b00c5a074fa04bb7495ca8e136f973f7b1ca5cf18c5",
-        "semanticContextSHA256": "e303190d03f7a8975b187b00c5a074fa04bb7495ca8e136f973f7b1ca5cf18c5",
+        "targetBeforeSHA256": "0279410790467894c77236e228ff4e4354b1b47c1f17d41746051ca403175bc5",
+        "semanticContextSHA256": "0279410790467894c77236e228ff4e4354b1b47c1f17d41746051ca403175bc5",
         "subjectTitle": "Goottilainen kirkko on puuta",
         "targetState": "existing-target"
       },
@@ -3284,7 +3380,7 @@
       "priorMediaFields": {
         "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg",
         "lyhyt": "St. George’s Cathedralin valkoinen puurakennus.",
-        "selite": "Katedraalin korkeat suippokaari-ikkunat ja torni erottuvat katutasolta vuonna 2019 otetussa kuvassa.",
+        "selite": "St. George’s Cathedral on Georgetownin uusgoottilainen puukatedraali; kuva vuodelta 2019.",
         "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3311,14 +3407,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Katedraalin korkeat suippokaari-ikkunat ja torni erottuvat katutasolta vuonna 2019 otetussa kuvassa.",
+        "selite": "St. George’s Cathedral on Georgetownin uusgoottilainen puukatedraali; kuva vuodelta 2019.",
         "lyhyt": "St. George’s Cathedralin valkoinen puurakennus.",
         "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
-      "targetAfterSHA256": "e303190d03f7a8975b187b00c5a074fa04bb7495ca8e136f973f7b1ca5cf18c5",
-      "contextAfterSHA256": "e303190d03f7a8975b187b00c5a074fa04bb7495ca8e136f973f7b1ca5cf18c5",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+      "targetAfterSHA256": "0279410790467894c77236e228ff4e4354b1b47c1f17d41746051ca403175bc5",
+      "contextAfterSHA256": "0279410790467894c77236e228ff4e4354b1b47c1f17d41746051ca403175bc5",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3341,7 +3437,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "526d8ec8963db0f58d8814deca0c75846afb32bc704842eb9eb5942964963d42",
+        "sameImageExportSHA256": "526d8ec8963db0f58d8814deca0c75846afb32bc704842eb9eb5942964963d42",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e13",
@@ -3363,14 +3467,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/l1-8c302efd60dff221f0d7.jpg",
         "suora": true,
         "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Suorat kadut ja matalat rakennukset näkyvät Atlantin rannikon edessä; vettä ja rantatasankoa erottuu taustalla.",
+        "selite": "Ilmakuva Georgetownista Guyanan Atlantin-rannikolla vuonna 2015.",
         "lyhyt": "Georgetownin rantakortteleita ilmasta vuonna 2015.",
         "tiedosto": "Georgetown from the air (23284743859).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Suorat kadut ja matalat rakennukset näkyvät Atlantin rannikon edessä; vettä ja rantatasankoa erottuu taustalla.",
+        "selite": "Ilmakuva Georgetownista Guyanan Atlantin-rannikolla vuonna 2015.",
         "lyhyt": "Georgetownin rantakortteleita ilmasta vuonna 2015.",
         "tiedosto": "Georgetown from the air (23284743859).jpg"
       },
@@ -3378,7 +3482,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/georgetown/l1-8c302efd60dff221f0d7.jpg",
         "suora": true,
         "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Suorat kadut ja matalat rakennukset näkyvät Atlantin rannikon edessä; vettä ja rantatasankoa erottuu taustalla.",
+        "selite": "Ilmakuva Georgetownista Guyanan Atlantin-rannikolla vuonna 2015.",
         "lyhyt": "Georgetownin rantakortteleita ilmasta vuonna 2015.",
         "tiedosto": "Georgetown from the air (23284743859).jpg"
       },
@@ -3394,10 +3498,10 @@
         3522
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/georgetown/sisalto.json",
-      "sourceContentSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
+      "sourceContentSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ecfca68511ba3bb7c26c29389425a93f9120f4ea4107abf233b8a903dca6d471",
-        "semanticContextSHA256": "ecfca68511ba3bb7c26c29389425a93f9120f4ea4107abf233b8a903dca6d471",
+        "targetBeforeSHA256": "a6b2f7d01dd1b6911bbe12e7c36dd6171d9ad1242a01dea77a1faa29657c3e8b",
+        "semanticContextSHA256": "a6b2f7d01dd1b6911bbe12e7c36dd6171d9ad1242a01dea77a1faa29657c3e8b",
         "subjectTitle": "Kaupunki ehti olla Longchamps ja Stabroek",
         "targetState": "existing-target"
       },
@@ -3593,7 +3697,7 @@
       "priorMediaFields": {
         "tiedosto": "Georgetown from the air (23284743859).jpg",
         "lyhyt": "Georgetownin rantakortteleita ilmasta vuonna 2015.",
-        "selite": "Suorat kadut ja matalat rakennukset näkyvät Atlantin rannikon edessä; vettä ja rantatasankoa erottuu taustalla.",
+        "selite": "Ilmakuva Georgetownista Guyanan Atlantin-rannikolla vuonna 2015.",
         "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3620,14 +3724,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Suorat kadut ja matalat rakennukset näkyvät Atlantin rannikon edessä; vettä ja rantatasankoa erottuu taustalla.",
+        "selite": "Ilmakuva Georgetownista Guyanan Atlantin-rannikolla vuonna 2015.",
         "lyhyt": "Georgetownin rantakortteleita ilmasta vuonna 2015.",
         "tiedosto": "Georgetown from the air (23284743859).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "6a78ea0ff59a8bdbffb720f91592da7004c4ca3028e8c1c9eeaaa6e582374b3c",
-      "targetAfterSHA256": "ecfca68511ba3bb7c26c29389425a93f9120f4ea4107abf233b8a903dca6d471",
-      "contextAfterSHA256": "ecfca68511ba3bb7c26c29389425a93f9120f4ea4107abf233b8a903dca6d471",
+      "sourceContentAfterSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+      "targetAfterSHA256": "a6b2f7d01dd1b6911bbe12e7c36dd6171d9ad1242a01dea77a1faa29657c3e8b",
+      "contextAfterSHA256": "a6b2f7d01dd1b6911bbe12e7c36dd6171d9ad1242a01dea77a1faa29657c3e8b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3650,7 +3754,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0ec225c89c1a1e56cb2cbecb1f00405176cebf376d5be50f543e4c8c5fb4efb0",
+        "sameImageNativeSHA256": "8c302efd60dff221f0d723fcef968e63ad6b18e8ae6dca40d815f5172386f043",
+        "sameImageExportSHA256": "8c302efd60dff221f0d723fcef968e63ad6b18e8ae6dca40d815f5172386f043",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3662,6 +3774,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e13/georgetown/e8a3410a8b372a869e403fba43cbdb3daaec3a368756febe38c448f668336a69.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.495076+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e13/georgetown/75c14296986282f11bebbf0d62f0dc061fac3c6ea95d940336bfa81cc325a12c.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.495076+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:32:54.157042+00:00"
 }
