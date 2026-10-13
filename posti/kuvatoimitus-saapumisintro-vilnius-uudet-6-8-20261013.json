@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "cityName": "VILNA",
+  "gameCityId": "vilna",
+  "mediaSlug": "vilnius",
+  "taskNumbers": [
+    213,
+    214
+  ],
+  "updatedAt": "2026-10-13T19:57:24.196093+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [],
+  "omittedItems": [
+    {
+      "city": "vilnius",
+      "taskNumber": 213,
+      "slot": 6,
+      "stage": "source-preflight-no-call",
+      "actualGenerationCalls": 0,
+      "reason": "Ohje pyytää tuomiokirkon erillistä kellotornia neliömäisenä. Tarkistettu kaupungin matkailuorganisaation aineisto vahvistaa tornin mutta ei pyydetyn muodon paikkansapitävyyttä; oman tietoni kanssa ristiriitaista yksityiskohtaa ei saatu luotettavasti ratkaistua. Muotoa ei muuteta hiljaisesti eikä virheellistä nykymaamerkkiä tuoteta: lähteen sallima perusteltu0-kutsun poisjättö. Tämä ei väitä virallisen sivun todistavan tornia neliömäiseksi tai muoto-ohjetta vääräksi.",
+      "evidenceURLs": [
+        "https://www.govilnius.lt/visit-vilnius/places/vilnius-cathedral-bell-tower"
+      ],
+      "additionalGenerationAllowed": false,
+      "decisionFinalForCurrentOrder": true
+    },
+    {
+      "taskNumber": 214,
+      "slot": 8,
+      "reason": "Johdinauto täyttää selvästi yli puolet kuvan leveydestä (noin56%), kun ohje pyytää noin kolmannesta. Kaupunkikadun etäisempi kokonaisuus jää näin kulkuneuvon suuren lähikuvan taakse; kuvakortin sommittelua ei täytetä.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "dc887d5043a046b1653be25d300a82b3265cc274dafcbf8e933e9c5f0f8a7106",
+      "finalSHA256": "4058358f5b474d24f81acc519c29d37d5af9f724124fc1a7b24e599e0f19bee6"
+    }
+  ],
+  "actualCalls": 1,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
