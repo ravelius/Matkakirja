@@ -87,6 +87,20 @@ muste 56×30 = ohjausnappi--iso, "⟨Linssit⟩" 3×5) ja lähetä PT:lle löyd�
   (ajossa 4 "toinen osa päällä"; katso uudessa ajossa), mylly-napit/LAAJA/TELE peittona ajossa 4 → 10b4e302b korjaa todennäköisesti.
   Peli-asettelutestin omat viat (aarretehtävä ei avautunut ×2, metrolinja päällekkäin iPhone vaaka) eivät ole keskitystä.
 
+## PÄIVITYS 23.15
+- PT hyväksyi kohdan 2 (kuvake piirtoalueesta) ja OMISTAJA kohdan 3 (kortti 22.2x "Kyllä, keskelle": optinen keskitys pohjana).
+- Haara keskitys-188 77c73328d: Kirjasimet.KeskitaOptisesti (Kosketusnappi kutsuu): translate kirjasimen mitoista; pysty
+  versaali–peruslinja (symboli omasta piirroksestaan), monirivisen riviväli, yksirivisen sivutilat. EI lisää merkkejä kirjasimeen
+  (HasCharacter-lisäys teki laatikoita, b4d0e943a; myös testi lukee vain). Testi: nappikuvat MATKAKIRJA_KESKITYS_NAPPIKUVAT=1,
+  ohut viiva = koriste, vikariville osat + kirjasin + siirto (heijastuksella).
+- Ennen-haara natiivi-ui/keskitys-188-ennen = HEAD + UI 10b4e302b:stä (tehdään commit-tree:llä, ks. komennot tästä luovutuksesta).
+- Kuva-arkki PT:lle 23.15: proto-3d/lokit/natiivi-ui-keskitys188-arkki/arkki-{iphone,ipad}-{pysty,vaaka}.png
+  (keskitys-arkki.py <ennen/napit> <jalkeen/napit> <laite> <ulos> <otsikko> <ennen-lokikansio>).
+- Tyylikirja-PR ravelius/Matkakirja#4571 (worktree /Users/Shared/Claude/wt/natiivi-ui-tyylikirja-optinen).
+- Juna 188 lähti ILMAN nappeja (omistaja 23.0x). Ehdotettu junaan 189, kun testi läpi. Jäljellä: moniriviset (korjaus 455872b43
+  mittaamatta luotettavasti), kahden kirjasimen rivit (Kertoja/PÄÄLLÄ −0,9), radio −1,3, iPad shakki Ohita −6,5 (selvittämättä),
+  mikserin × (oletuskirjasin, kehittäjätyökalu). Uusia ajoja ei ennen NS:n 188-käännöstä (Julkaisija 23.09).
+
 ## Opetukset
 - Taulu sijoittuu PulunTauluNakyma.PulunLaatikko → Pulu.TaulunAnkkuri; liikkuva Pulu siirsi taulua.
 - Simulaattorin iPad-video tallentuu pystyyn; kuvaruudut (c1–c3) ovat oikein päin.
