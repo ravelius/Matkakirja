@@ -1,0 +1,515 @@
+{
+  "cityName": "Luxemburg",
+  "gameCityId": "luxemburg",
+  "mediaSlug": "luxembourg",
+  "taskNumber": 97,
+  "updatedAt": "2026-10-13T09:46:16.540345+00:00",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [
+    {
+      "slot": 4,
+      "title": "arki ja ihmiset — Pfaffenthal: arkiaamu Alzetten laakson vanhassa kaupunginosassa.",
+      "sceneSpec": "Mitä kuvataan (nykyaikainen värivalokuva): Luxemburgin Pfaffenthalin kaupunginosa arkiaamuna, Alzetten laakson pohjalla. Kapea mukulakivikuja, jonka varrella matalia kaksi- ja kolmikerroksisia taloja, liuskekattoja, ikkunaluukkuja ja vaaleita rapattuja julkisivuja; kujan pää avautuu kohti hiekkakivikalliota, jonka päällä ylempi vanha kaupunki ja vanhat linnoitusmuurit häämöttävät. Ihmisiä vain pieninä ja selin: nainen ostoskassin kanssa, kaksi pyöräilijää kaukana, mies avaamassa ikkunaluukkuja. Kulma: vaakakuva, silmänkorkeudelta kujan suuntaisesti, kuja kaartuu hieman, kalliorinne taustalla. Valo: pehmeä aamupäivän valo, vaimeat värit, hieman kosteaa laaksoilmaa. Ei saa näkyä: lasista panoraamahissiä, funikulaaria tai Kirchbergin uudisrakennuksia, Vauban-tornien yksityiskohtia, tekstiä, kylttejä, kahvilaopasteita, brändejä, tunnistettavia kasvoja, katutaidetta, nykyaikaisia mainoksia.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Pfaffenthal: arkiaamu Alzetten laakson vanhassa kaupunginosassa. Havainnekuva.\n\n",
+      "caption": "Pfaffenthal: arkiaamu Alzetten laakson vanhassa kaupunginosassa. Havainnekuva.",
+      "filename": "luxembourg-4-arki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-4-arki-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Luxemburg",
+      "gameCityId": "luxemburg",
+      "mediaSlug": "luxembourg",
+      "taskNumber": 97,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/native-4.png",
+      "nativeSHA256": "b6cd7b74dd2a79b6a632032e262aba57d1636299443c69c65b33c2ebc0426ded",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-4-arki-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-4-arki-intro-v1.png",
+      "sha256": "d3c34c4abe071fd4f03448c453f6784e25c84c704973812b399de2c9d821dce7",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja arrival introduction illustrative image.\nOutput requirement: one new complete PNG image, exactly 1536 x 1024 pixels, landscape 3:2, fully opaque. Natural camera photorealism: believable optical perspective, modest natural colors and dynamic range, realistic subtly imperfect walls, individually irregular leaves and branches, varied natural stone and weathered surfaces. No render or CGI appearance, no HDR, no painterly stylization, no cinematic oversaturation or dramatic grading. No text anywhere in image, no signs, lettering, brands, logos, watermark, captions or border. Buildings should have their correct distinctive basic shape and proportions. Caption provided in source is metadata only: NEVER draw it. All depicted people are invented, adults, no real-person likeness. Except slot6 people are tiny, distant or back-facing with no identifiable face.\nContemporary quiet inhabited Pfaffenthal alley, not a medieval fantasy castle. Soft pale plaster, slate roofs, old shutters, moist cobbles and real sandstone cliff. Do not place tall Gothic spires in the background. Small back-facing people only.\nFollow this complete source scene specification (do not render the caption):\nMitä kuvataan (nykyaikainen värivalokuva): Luxemburgin Pfaffenthalin kaupunginosa arkiaamuna, Alzetten laakson pohjalla. Kapea mukulakivikuja, jonka varrella matalia kaksi- ja kolmikerroksisia taloja, liuskekattoja, ikkunaluukkuja ja vaaleita rapattuja julkisivuja; kujan pää avautuu kohti hiekkakivikalliota, jonka päällä ylempi vanha kaupunki ja vanhat linnoitusmuurit häämöttävät. Ihmisiä vain pieninä ja selin: nainen ostoskassin kanssa, kaksi pyöräilijää kaukana, mies avaamassa ikkunaluukkuja. Kulma: vaakakuva, silmänkorkeudelta kujan suuntaisesti, kuja kaartuu hieman, kalliorinne taustalla. Valo: pehmeä aamupäivän valo, vaimeat värit, hieman kosteaa laaksoilmaa. Ei saa näkyä: lasista panoraamahissiä, funikulaaria tai Kirchbergin uudisrakennuksia, Vauban-tornien yksityiskohtia, tekstiä, kylttejä, kahvilaopasteita, brändejä, tunnistettavia kasvoja, katutaidetta, nykyaikaisia mainoksia.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Pfaffenthal: arkiaamu Alzetten laakson vanhassa kaupunginosassa. Havainnekuva.\n\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://bnl.public.lu/de/a-la-une/actualites/articles-actualites/2010/restauration-lithographie.html",
+          "title": "BnL: Lithographie restaurée, Pierre Brandebourg (~1861)",
+          "kind": "national library and original 1861 lithograph",
+          "verifiedClaims": [
+            "Passerelle built 1859–1861, opened 29 August 1861",
+            "Original lithograph identified as Viaduc sur la Pétrusse, BnL shelfmark C. & P. 3525"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.luxembourg-city.com/en/about-luxembourg-city/meng-stad-my-city/details/the-10-must-see-bridges-in-luxembourg-city",
+          "title": "Luxembourg City Tourist Office: 10 must-see bridges",
+          "kind": "official city tourism",
+          "verifiedClaims": [
+            "Passerelle has 24 arches, length 290 m, height 45 m, construction 1859–1861",
+            "Pétrusse creek flows through rewilded bed beneath Passerelle"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.vdl.lu/en/city/a-glance/history",
+          "title": "Ville de Luxembourg: History",
+          "kind": "city authority",
+          "verifiedClaims": [
+            "Fortress dismantling began 1867 and finished 1883"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        }
+      ],
+      "producerQAAccepted": true,
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/qa-4.json",
+      "id": "luxembourg-4-arki-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-4-arki-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-4-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-4-arki-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 4,
+        "verdict": "accepted",
+        "reason": "Pfaffenthalin matalat talot, vanha kalliorinne ja muurit; arjen hahmot selin eikä panoraamahissiä, nimikylttejä tai korkeaa uudisrakentamista.",
+        "nativeSHA256": "b6cd7b74dd2a79b6a632032e262aba57d1636299443c69c65b33c2ebc0426ded",
+        "finalSHA256": "d3c34c4abe071fd4f03448c453f6784e25c84c704973812b399de2c9d821dce7",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 4,
+        "r2Key": "julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-4-arki-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-4-arki-intro-v1.png",
+        "sha256": "d3c34c4abe071fd4f03448c453f6784e25c84c704973812b399de2c9d821dce7",
+        "nativeSHA256": "b6cd7b74dd2a79b6a632032e262aba57d1636299443c69c65b33c2ebc0426ded",
+        "bytes": 3144865,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "d3c34c4abe071fd4f03448c453f6784e25c84c704973812b399de2c9d821dce7",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "d3c34c4abe071fd4f03448c453f6784e25c84c704973812b399de2c9d821dce7",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:44:20.438768+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 5,
+      "title": "vesi tai luonto — Pétrussen laakso ja Passerelle-viadukti kesäaamuna.",
+      "sceneSpec": "Mitä kuvataan (nykyaikainen värivalokuva): Pétrussen laakso Luxemburgissa kesäaamuna. Etualalla Pétrussen kapea, luonnonmukaisesti mutkitteleva puro ruovikkoineen ja tyyni vesi, jossa heijastuu puiden lehvästö; rannoilla niitty, vanhoja lehmuksia ja pajuja sekä hiekkakivikallion rinne, jossa näkyy vanhojen linnoitusmuurien ja bastionien jäänteitä. Taustalla korkealla laakson yllä pitkä kivinen kaarisilta (Passerelle eli Vanha silta: yksi rivi pyöreitä kaaria, kapeat korkeat pilarit, 24 kaarta, vaalea hiekkakivi). Ihmisiä vain pieninä: kaksi kävelijää polulla kaukana, selin, ja yksi lenkkeilijä. Kulma: vaakakuva, laakson pohjalta puron varrelta katse ylävirtaan (lounaaseen) kohti siltaa; Adolphe-silta jää kameran taakse eikä saa näkyä. Valo: pehmeä kesäaamun valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: Adolphe-siltaa, rautatieasemaa, Notre-Damen tornia, autoja, tekstiä, kylttejä, penkkien mainoksia, tunnistettavia kasvoja, nykytaiteen veistoksia.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Pétrussen laakso ja Passerelle-viadukti kesäaamuna. Havainnekuva.\n\n",
+      "caption": "Pétrussen laakso ja Passerelle-viadukti kesäaamuna. Havainnekuva.",
+      "filename": "luxembourg-5-luonto-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-5-luonto-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Luxemburg",
+      "gameCityId": "luxemburg",
+      "mediaSlug": "luxembourg",
+      "taskNumber": 97,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/native-5.png",
+      "nativeSHA256": "2f4ff796d61b8dc4f1dec863ec53d1bf5ef9966a175b129f19fabb16bc1ff68b",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-5-luonto-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-5-luonto-intro-v1.png",
+      "sha256": "24413462016f626c6d3fcc2402ba9bf4255293ca6bb85eef9d4ea7ee6741aeed",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja arrival introduction illustrative image.\nOutput requirement: one new complete PNG image, exactly 1536 x 1024 pixels, landscape 3:2, fully opaque. Natural camera photorealism: believable optical perspective, modest natural colors and dynamic range, realistic subtly imperfect walls, individually irregular leaves and branches, varied natural stone and weathered surfaces. No render or CGI appearance, no HDR, no painterly stylization, no cinematic oversaturation or dramatic grading. No text anywhere in image, no signs, lettering, brands, logos, watermark, captions or border. Buildings should have their correct distinctive basic shape and proportions. Caption provided in source is metadata only: NEVER draw it. All depicted people are invented, adults, no real-person likeness. Except slot6 people are tiny, distant or back-facing with no identifiable face.\nCamera is low on the valley floor by the narrow natural Pétrusse creek, looking along it toward the long Passerelle road viaduct. Bridge occupies upper middle-to-background, spanning the valley horizontally, with ONE tier of many semicircular arches and tall slender straight piers of pale weathered sandstone, 24 arches total in the actual bridge. Do not make an aqueduct or two-tier structure, giant single-span arch, suspension bridge or covered bridge. Creek is narrow and meandering, not a river. Keep small people far behind.\nFollow this complete source scene specification (do not render the caption):\nMitä kuvataan (nykyaikainen värivalokuva): Pétrussen laakso Luxemburgissa kesäaamuna. Etualalla Pétrussen kapea, luonnonmukaisesti mutkitteleva puro ruovikkoineen ja tyyni vesi, jossa heijastuu puiden lehvästö; rannoilla niitty, vanhoja lehmuksia ja pajuja sekä hiekkakivikallion rinne, jossa näkyy vanhojen linnoitusmuurien ja bastionien jäänteitä. Taustalla korkealla laakson yllä pitkä kivinen kaarisilta (Passerelle eli Vanha silta: yksi rivi pyöreitä kaaria, kapeat korkeat pilarit, 24 kaarta, vaalea hiekkakivi). Ihmisiä vain pieninä: kaksi kävelijää polulla kaukana, selin, ja yksi lenkkeilijä. Kulma: vaakakuva, laakson pohjalta puron varrelta katse ylävirtaan (lounaaseen) kohti siltaa; Adolphe-silta jää kameran taakse eikä saa näkyä. Valo: pehmeä kesäaamun valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: Adolphe-siltaa, rautatieasemaa, Notre-Damen tornia, autoja, tekstiä, kylttejä, penkkien mainoksia, tunnistettavia kasvoja, nykytaiteen veistoksia.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Pétrussen laakso ja Passerelle-viadukti kesäaamuna. Havainnekuva.\n\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://bnl.public.lu/de/a-la-une/actualites/articles-actualites/2010/restauration-lithographie.html",
+          "title": "BnL: Lithographie restaurée, Pierre Brandebourg (~1861)",
+          "kind": "national library and original 1861 lithograph",
+          "verifiedClaims": [
+            "Passerelle built 1859–1861, opened 29 August 1861",
+            "Original lithograph identified as Viaduc sur la Pétrusse, BnL shelfmark C. & P. 3525"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.luxembourg-city.com/en/about-luxembourg-city/meng-stad-my-city/details/the-10-must-see-bridges-in-luxembourg-city",
+          "title": "Luxembourg City Tourist Office: 10 must-see bridges",
+          "kind": "official city tourism",
+          "verifiedClaims": [
+            "Passerelle has 24 arches, length 290 m, height 45 m, construction 1859–1861",
+            "Pétrusse creek flows through rewilded bed beneath Passerelle"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.vdl.lu/en/city/a-glance/history",
+          "title": "Ville de Luxembourg: History",
+          "kind": "city authority",
+          "verifiedClaims": [
+            "Fortress dismantling began 1867 and finished 1883"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        }
+      ],
+      "producerQAAccepted": true,
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/qa-5.json",
+      "id": "luxembourg-5-luonto-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-5-luonto-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-5-luonto-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-5-luonto-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 5,
+        "verdict": "accepted",
+        "reason": "Puro, luonnonpinnat ja yksi pyöreiden kaarien rivi korkeilla pylväillä; Adolphe-sillan suuret kaksoiskaaret eivät näy.",
+        "nativeSHA256": "2f4ff796d61b8dc4f1dec863ec53d1bf5ef9966a175b129f19fabb16bc1ff68b",
+        "finalSHA256": "24413462016f626c6d3fcc2402ba9bf4255293ca6bb85eef9d4ea7ee6741aeed",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 5,
+        "r2Key": "julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-5-luonto-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-5-luonto-intro-v1.png",
+        "sha256": "24413462016f626c6d3fcc2402ba9bf4255293ca6bb85eef9d4ea7ee6741aeed",
+        "nativeSHA256": "2f4ff796d61b8dc4f1dec863ec53d1bf5ef9966a175b129f19fabb16bc1ff68b",
+        "bytes": 3348924,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "24413462016f626c6d3fcc2402ba9bf4255293ca6bb85eef9d4ea7ee6741aeed",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "24413462016f626c6d3fcc2402ba9bf4255293ca6bb85eef9d4ea7ee6741aeed",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:44:22.196469+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 6,
+      "title": "elämän makuinen juhla (värikuva, yksi nuori etualalla) — Kansallispäivän aaton katujuhla vanhassa kaupungissa (ilta).",
+      "sceneSpec": "Mitä kuvataan: kesäilta Luxemburgin vanhassa kaupungissa, kansallispäivän aaton katujuhlan tunnelma. Kapealla vanhankaupungin aukiolla ja kadulla kymmeniä nuoria tanssimassa ja kuuntelemassa livemusiikkia, taustalla vaaleista hiekkakivestä rakennettuja kerrostaloja ja kirkkaita ikkunavaloja, ylhäällä kattojen yllä värikkäitä ilotulituksen välähdyksiä ja valoköynnöksiä. YKSI nuori ihminen etualalla (puolikuva, noin 18–25-vuotias, luonnollinen nauru, katse hieman sivuun kamerasta): keksitty hahmo, ei kenenkään todellisen henkilön näköinen. Ihmiset ovat Luxemburgin kaupungin väestön näköisiä: monikansallinen eurooppalainen joukko, osa vaaleita, osa tummempia hiuksia, mukana portugalilais-, ranskalais- ja italialaistaustaisen näköisiä nuoria. Muodikkaat nykyvaatteet: ylisuuret takit ja paidat, farkut, ohuet bomber-takit, lenkkarit, pienet laukut, kierrätysmuotia; kädessä puhelin tai painamaton paperimuki; vaatteissa ei logoja eikä tekstiä. Ei alkoholipulloja eikä lasikuppeja pääosassa. Kulma: vaakakuva, etualan nuori kolmasosa-puolikuvassa silmänkorkeudelta, tausta pehmeästi epätarkka. Valo: lämmin katulyhty- ja valoköynnösvalo, taivaalla sininen hetki. Ei saa näkyä: tekstiä, kylttejä, banderolleja, logoja, brändejä, mainoksia, lippuja, suuriruhtinaan palatsia, juhlakatsomoa, univormuja, Adolphe-siltaa, patsaita tai julkisia taideteoksia, väkivaltaa, humalaisuutta.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Kansallispäivän aaton katujuhla vanhassa kaupungissa. Havainnekuva.\n\n",
+      "caption": "Kansallispäivän aaton katujuhla vanhassa kaupungissa. Havainnekuva.",
+      "filename": "luxembourg-6-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-6-juhla-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Luxemburg",
+      "gameCityId": "luxemburg",
+      "mediaSlug": "luxembourg",
+      "taskNumber": 97,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/native-6.png",
+      "nativeSHA256": "8628475d9634a1ca410be960558be0c0bb3bc59990eb5d6b8770adf4969e53e1",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-6-juhla-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-6-juhla-intro-v1.png",
+      "sha256": "4d8c557a6ca5741067f6edc50a5306a82e693747ab0e3bb820caf91c97d285eb",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja arrival introduction illustrative image.\nOutput requirement: one new complete PNG image, exactly 1536 x 1024 pixels, landscape 3:2, fully opaque. Natural camera photorealism: believable optical perspective, modest natural colors and dynamic range, realistic subtly imperfect walls, individually irregular leaves and branches, varied natural stone and weathered surfaces. No render or CGI appearance, no HDR, no painterly stylization, no cinematic oversaturation or dramatic grading. No text anywhere in image, no signs, lettering, brands, logos, watermark, captions or border. Buildings should have their correct distinctive basic shape and proportions. Caption provided in source is metadata only: NEVER draw it. All depicted people are invented, adults, no real-person likeness. Except slot6 people are tiny, distant or back-facing with no identifiable face.\nExactly ONE prominent invented adult aged about 23 in foreground half-length, laughing naturally, gaze slightly off-camera; plain contemporary fashionable unbranded overshirt/light bomber. Behind, many invented adult young people dance and smile, multicultural Luxembourg population. Subtle actual-camera evening exposure with warm bulbs, pale sandstone houses, blue-hour sky and small fireworks over rooftops. Visible faces are fictional, no celebrity resemblance. No drinks as focal point.\nFollow this complete source scene specification (do not render the caption):\nMitä kuvataan: kesäilta Luxemburgin vanhassa kaupungissa, kansallispäivän aaton katujuhlan tunnelma. Kapealla vanhankaupungin aukiolla ja kadulla kymmeniä nuoria tanssimassa ja kuuntelemassa livemusiikkia, taustalla vaaleista hiekkakivestä rakennettuja kerrostaloja ja kirkkaita ikkunavaloja, ylhäällä kattojen yllä värikkäitä ilotulituksen välähdyksiä ja valoköynnöksiä. YKSI nuori ihminen etualalla (puolikuva, noin 18–25-vuotias, luonnollinen nauru, katse hieman sivuun kamerasta): keksitty hahmo, ei kenenkään todellisen henkilön näköinen. Ihmiset ovat Luxemburgin kaupungin väestön näköisiä: monikansallinen eurooppalainen joukko, osa vaaleita, osa tummempia hiuksia, mukana portugalilais-, ranskalais- ja italialaistaustaisen näköisiä nuoria. Muodikkaat nykyvaatteet: ylisuuret takit ja paidat, farkut, ohuet bomber-takit, lenkkarit, pienet laukut, kierrätysmuotia; kädessä puhelin tai painamaton paperimuki; vaatteissa ei logoja eikä tekstiä. Ei alkoholipulloja eikä lasikuppeja pääosassa. Kulma: vaakakuva, etualan nuori kolmasosa-puolikuvassa silmänkorkeudelta, tausta pehmeästi epätarkka. Valo: lämmin katulyhty- ja valoköynnösvalo, taivaalla sininen hetki. Ei saa näkyä: tekstiä, kylttejä, banderolleja, logoja, brändejä, mainoksia, lippuja, suuriruhtinaan palatsia, juhlakatsomoa, univormuja, Adolphe-siltaa, patsaita tai julkisia taideteoksia, väkivaltaa, humalaisuutta.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Kansallispäivän aaton katujuhla vanhassa kaupungissa. Havainnekuva.\n\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://bnl.public.lu/de/a-la-une/actualites/articles-actualites/2010/restauration-lithographie.html",
+          "title": "BnL: Lithographie restaurée, Pierre Brandebourg (~1861)",
+          "kind": "national library and original 1861 lithograph",
+          "verifiedClaims": [
+            "Passerelle built 1859–1861, opened 29 August 1861",
+            "Original lithograph identified as Viaduc sur la Pétrusse, BnL shelfmark C. & P. 3525"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.luxembourg-city.com/en/about-luxembourg-city/meng-stad-my-city/details/the-10-must-see-bridges-in-luxembourg-city",
+          "title": "Luxembourg City Tourist Office: 10 must-see bridges",
+          "kind": "official city tourism",
+          "verifiedClaims": [
+            "Passerelle has 24 arches, length 290 m, height 45 m, construction 1859–1861",
+            "Pétrusse creek flows through rewilded bed beneath Passerelle"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.vdl.lu/en/city/a-glance/history",
+          "title": "Ville de Luxembourg: History",
+          "kind": "city authority",
+          "verifiedClaims": [
+            "Fortress dismantling began 1867 and finished 1883"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        }
+      ],
+      "producerQAAccepted": true,
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/qa-6.json",
+      "id": "luxembourg-6-juhla-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-6-juhla-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-6-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-6-juhla-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 6,
+        "verdict": "accepted",
+        "reason": "Yksi keksitty nuori aikuinen ja iloinen monikansallinen katujuhlajoukko, nykyvaatteet, kevyt ilotulitus; ei pääaiheena alkoholia, logoja tai lippuja.",
+        "nativeSHA256": "8628475d9634a1ca410be960558be0c0bb3bc59990eb5d6b8770adf4969e53e1",
+        "finalSHA256": "4d8c557a6ca5741067f6edc50a5306a82e693747ab0e3bb820caf91c97d285eb",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-6-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-6-juhla-intro-v1.png",
+        "sha256": "4d8c557a6ca5741067f6edc50a5306a82e693747ab0e3bb820caf91c97d285eb",
+        "nativeSHA256": "8628475d9634a1ca410be960558be0c0bb3bc59990eb5d6b8770adf4969e53e1",
+        "bytes": 2092800,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "4d8c557a6ca5741067f6edc50a5306a82e693747ab0e3bb820caf91c97d285eb",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "4d8c557a6ca5741067f6edc50a5306a82e693747ab0e3bb820caf91c97d285eb",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:44:24.219842+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 7,
+      "title": "ilta ja kaupungin valot (sininen hetki) — Chemin de la Corniche ja Grund sinisellä hetkellä.",
+      "sceneSpec": "Mitä kuvataan (nykyaikainen värivalokuva): Chemin de la Corniche -kävelytie sinisenä hetkenä, katse Alzetten laaksoon. Etualalla vanha hiekkakivinen suojamuuri ja kapea kävelytie lämpimin, himmein katulyhdyin; alhaalla laakson pohjalla Grundin kaupunginosa: lämpimiä ikkunavaloja, vanhojen talojen liuskekattoja, Alzetten tyyni vesi, jossa heijastuu valoja, ja barokkinen Neumünsterin luostarirakennus lempeästi valaistuna. Vastarinteellä Rham-ylängön tummuva rinne muutamin valoin. Taivas syvän sininen, horisontissa viimeinen oranssi hehku. Ihmisiä vain kaksi pientä hahmoa kävelemässä polulla kaukana selin tai siluettina. Kulma: vaakakuva, hieman koholta, kävelytien kaarteesta kohti Grundia ja Rham-ylänköä. Valo: sininen hetki, lämmin-viileä kontrasti, vaimeat värit, ei HDR:ää, ei ylikylläisyyttä. Ei saa näkyä: Kirchbergin lasi- ja teräsrakennuksia, Adolphe-siltaa, Notre-Damen mustia torneja, mainos- ja kauppavaloja, valaistusesityksiä, tekstiä, kylttejä, tunnistettavia kasvoja.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Chemin de la Corniche ja Grund sinisellä hetkellä. Havainnekuva.\n\n",
+      "caption": "Chemin de la Corniche ja Grund sinisellä hetkellä. Havainnekuva.",
+      "filename": "luxembourg-7-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-7-ilta-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Luxemburg",
+      "gameCityId": "luxemburg",
+      "mediaSlug": "luxembourg",
+      "taskNumber": 97,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/native-7.png",
+      "nativeSHA256": "71c523e1517e2ecb2f56465736faba93da4ba6cc8d03e5b0158c14a05e9239fb",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-7-ilta-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-7-ilta-intro-v1.png",
+      "sha256": "2498e04882be6ef25c912e3f75f24448911fc57e1ca757c2b4ca44ba26fe8b92",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja arrival introduction illustrative image.\nOutput requirement: one new complete PNG image, exactly 1536 x 1024 pixels, landscape 3:2, fully opaque. Natural camera photorealism: believable optical perspective, modest natural colors and dynamic range, realistic subtly imperfect walls, individually irregular leaves and branches, varied natural stone and weathered surfaces. No render or CGI appearance, no HDR, no painterly stylization, no cinematic oversaturation or dramatic grading. No text anywhere in image, no signs, lettering, brands, logos, watermark, captions or border. Buildings should have their correct distinctive basic shape and proportions. Caption provided in source is metadata only: NEVER draw it. All depicted people are invented, adults, no real-person likeness. Except slot6 people are tiny, distant or back-facing with no identifiable face.\nA plausible elevated walking-path bend of Chemin de la Corniche with sandstone parapet overlooking Grund and the Alzette. Real baroque Neumünster abbey ensemble, slate roofs, warm modest window lights and Rham slope beyond. Deep but softly exposed natural blue hour, avoid black crushed shadows or intense neon orange. Only two tiny back-facing walkers.\nFollow this complete source scene specification (do not render the caption):\nMitä kuvataan (nykyaikainen värivalokuva): Chemin de la Corniche -kävelytie sinisenä hetkenä, katse Alzetten laaksoon. Etualalla vanha hiekkakivinen suojamuuri ja kapea kävelytie lämpimin, himmein katulyhdyin; alhaalla laakson pohjalla Grundin kaupunginosa: lämpimiä ikkunavaloja, vanhojen talojen liuskekattoja, Alzetten tyyni vesi, jossa heijastuu valoja, ja barokkinen Neumünsterin luostarirakennus lempeästi valaistuna. Vastarinteellä Rham-ylängön tummuva rinne muutamin valoin. Taivas syvän sininen, horisontissa viimeinen oranssi hehku. Ihmisiä vain kaksi pientä hahmoa kävelemässä polulla kaukana selin tai siluettina. Kulma: vaakakuva, hieman koholta, kävelytien kaarteesta kohti Grundia ja Rham-ylänköä. Valo: sininen hetki, lämmin-viileä kontrasti, vaimeat värit, ei HDR:ää, ei ylikylläisyyttä. Ei saa näkyä: Kirchbergin lasi- ja teräsrakennuksia, Adolphe-siltaa, Notre-Damen mustia torneja, mainos- ja kauppavaloja, valaistusesityksiä, tekstiä, kylttejä, tunnistettavia kasvoja.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Chemin de la Corniche ja Grund sinisellä hetkellä. Havainnekuva.\n\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://bnl.public.lu/de/a-la-une/actualites/articles-actualites/2010/restauration-lithographie.html",
+          "title": "BnL: Lithographie restaurée, Pierre Brandebourg (~1861)",
+          "kind": "national library and original 1861 lithograph",
+          "verifiedClaims": [
+            "Passerelle built 1859–1861, opened 29 August 1861",
+            "Original lithograph identified as Viaduc sur la Pétrusse, BnL shelfmark C. & P. 3525"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.luxembourg-city.com/en/about-luxembourg-city/meng-stad-my-city/details/the-10-must-see-bridges-in-luxembourg-city",
+          "title": "Luxembourg City Tourist Office: 10 must-see bridges",
+          "kind": "official city tourism",
+          "verifiedClaims": [
+            "Passerelle has 24 arches, length 290 m, height 45 m, construction 1859–1861",
+            "Pétrusse creek flows through rewilded bed beneath Passerelle"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.vdl.lu/en/city/a-glance/history",
+          "title": "Ville de Luxembourg: History",
+          "kind": "city authority",
+          "verifiedClaims": [
+            "Fortress dismantling began 1867 and finished 1883"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        }
+      ],
+      "producerQAAccepted": true,
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/qa-7.json",
+      "id": "luxembourg-7-ilta-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/luxembourg/luxembourg-7-ilta-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-7-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-7-ilta-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 7,
+        "verdict": "accepted",
+        "reason": "Cornichen kävelyreuna ja Grundin luostarilaakso sinisellä hetkellä. Ei Adolphe-siltaa, Kirchbergin uudisrakennuksia tai mainosvaloja.",
+        "nativeSHA256": "71c523e1517e2ecb2f56465736faba93da4ba6cc8d03e5b0158c14a05e9239fb",
+        "finalSHA256": "2498e04882be6ef25c912e3f75f24448911fc57e1ca757c2b4ca44ba26fe8b92",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 7,
+        "r2Key": "julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-7-ilta-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-full/luxembourg-7-ilta-intro-v1.png",
+        "sha256": "2498e04882be6ef25c912e3f75f24448911fc57e1ca757c2b4ca44ba26fe8b92",
+        "nativeSHA256": "71c523e1517e2ecb2f56465736faba93da4ba6cc8d03e5b0158c14a05e9239fb",
+        "bytes": 2613657,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "2498e04882be6ef25c912e3f75f24448911fc57e1ca757c2b4ca44ba26fe8b92",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "2498e04882be6ef25c912e3f75f24448911fc57e1ca757c2b4ca44ba26fe8b92",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:44:26.099277+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "slot": 8,
+      "reason": "Sillan kannen päällä on valaisinpylvään kaltaisia pystyvarsia ja pieniä pääosia; ne säilyvät nykyajan5-referenssin mukaisina. Lähde8 kieltää valaisimet. Root tarkisti natiivirajauksen; ei uusintayritystä.",
+      "stage": "independent-QA-rejection",
+      "additionalGenerationAllowed": false
+    }
+  ],
+  "actualCalls": 5,
+  "maximumGenerationCalls": 5,
+  "allRequestedSlotsHandled": true,
+  "allRequestedSlotsDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationAllowedWithoutOwnerAcceptance": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": false,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-viimeiset-5-20261013.md",
+  "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+  "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+  "prior206ImageDeliveryPreserved": true
+}
