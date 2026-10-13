@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "cityName": "BUDAPEST",
+  "gameCityId": "budapest",
+  "mediaSlug": "budapest",
+  "taskNumbers": [
+    167,
+    168
+  ],
+  "updatedAt": "2026-10-13T17:44:59.230349+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 167,
+      "mediaSlug": "budapest",
+      "slot": 6,
+      "filename": "budapest-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Gellért-vuoren Citadella: Tonava, sillat, Parlamentti ja Budan linna päivällä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Gellért-vuoren Citadella: Tonava, sillat, Parlamentti ja Budan linna päivällä.** Tiedosto `budapest-6-nakoala-intro-v1.png`.\nMitä kuvataan: koko Budapestin keskusta päivällä Gellért-vuoren Citadellan pohjoismuurilta (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivimuuria tai kaidetta sekä alhaalla jyrkkä, puiden peittämä rinne, ei ihmisiä lähellä. Alhaalla keskellä Tonava leveänä, vihertävänharmaana vyönä ja sen yli kaarena kulkevat sillat: lähellä alhaalla valkoinen ripustussilta (Erzsébet-silta) ja kauempana keskellä vasemmalla Széchenyin Ketjusilta pienenä kivitorneineen ja kaapeleineen (noin 1,3 km päässä). Keskellä kaukana Parlamentin pitkä, vaalea uusgoottilainen rakennus kupoleineen pienenä ja tunnistettavana (noin 2,2 km päässä), Tonavan Pestin puolella. Vasemmalla Budan linnanmäki: Budan linnan pitkä kupolillinen palatsirakennus pienenä rinteen päällä ja kauempana sen takana Matiaksen kirkon kapea torni pienenä. Oikealla Pestin kattomeri vaaleina kerrostaloina. Maamerkit ovat pieniä osia laajaa kokonaisuutta, pääaihe on joen, siltojen ja kattojen panoraama. Kulma: vaakakuva, katse pohjoiseen-luoteeseen (noin 350 astetta, vaakakulma noin 50 astetta eli noin 325-15 astetta): Budan linna vasemmalla (noin 332 astetta), Ketjusilta vasemmalla keskellä (noin 351 astetta), Parlamentti keskellä oikealla (noin 358 astetta), Pestin kattomeri oikealla; kamera muurin kaiteen takaa silmänkorkeudelta, hieman alaspäin; kaupunki ja joki täyttävät vähintään puolet kuvasta. Valo: kirkas mutta pehmeä iltapäivävalo takaa etelästä, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: Vapauden patsasta (se jää kameran taakse, linnoituksen itäpäähän) ja muita patsaita tai muistomerkkejä, Gellért-muistomerkkiä rinteellä, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, Ketjusillan leijonia lähikuvassa, Citadellan uusia lasi- tai teräsrakenteita, lippuja, valaistuksia, drooneja, nostureita pääaiheena. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Gellért-vuoren Citadella: Tonava, sillat, Parlamentti ja Budan linna päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "BUDAPEST",
+      "gameID": "budapest",
+      "part": 1,
+      "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceCharacterSpan": [
+        73534,
+        75798
+      ],
+      "sourceByteSpan": [
+        76265,
+        78629
+      ],
+      "fullDeliveryRequirementSHA256": "d67525c2cabea073126b2a9fad569edcba288692a9384179934a1725030a0b14",
+      "fullDirective": "koko Budapestin keskusta päivällä Gellért-vuoren Citadellan pohjoismuurilta (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivimuuria tai kaidetta sekä alhaalla jyrkkä, puiden peittämä rinne, ei ihmisiä lähellä. Alhaalla keskellä Tonava leveänä, vihertävänharmaana vyönä ja sen yli kaarena kulkevat sillat: lähellä alhaalla valkoinen ripustussilta (Erzsébet-silta) ja kauempana keskellä vasemmalla Széchenyin Ketjusilta pienenä kivitorneineen ja kaapeleineen (noin 1,3 km päässä). Keskellä kaukana Parlamentin pitkä, vaalea uusgoottilainen rakennus kupoleineen pienenä ja tunnistettavana (noin 2,2 km päässä), Tonavan Pestin puolella. Vasemmalla Budan linnanmäki: Budan linnan pitkä kupolillinen palatsirakennus pienenä rinteen päällä ja kauempana sen takana Matiaksen kirkon kapea torni pienenä. Oikealla Pestin kattomeri vaaleina kerrostaloina. Maamerkit ovat pieniä osia laajaa kokonaisuutta, pääaihe on joen, siltojen ja kattojen panoraama. Kulma: vaakakuva, katse pohjoiseen-luoteeseen (noin 350 astetta, vaakakulma noin 50 astetta eli noin 325-15 astetta): Budan linna vasemmalla (noin 332 astetta), Ketjusilta vasemmalla keskellä (noin 351 astetta), Parlamentti keskellä oikealla (noin 358 astetta), Pestin kattomeri oikealla; kamera muurin kaiteen takaa silmänkorkeudelta, hieman alaspäin; kaupunki ja joki täyttävät vähintään puolet kuvasta. Valo: kirkas mutta pehmeä iltapäivävalo takaa etelästä, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: Vapauden patsasta (se jää kameran taakse, linnoituksen itäpäähän) ja muita patsaita tai muistomerkkejä, Gellért-muistomerkkiä rinteellä, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, Ketjusillan leijonia lähikuvassa, Citadellan uusia lasi- tai teräsrakenteita, lippuja, valaistuksia, drooneja, nostureita pääaiheena. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Gellért-vuoren Citadella: Tonava, sillat, Parlamentti ja Budan linna päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/budapest/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-budapest-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/budapest/20261013-uudet-6-8/budapest-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "budapest-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "BUDAPEST",
+      "gameCityId": "budapest",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/budapest/native-6.png",
+      "nativeSHA256": "09fe21b7fb0a3efb3767a275544a87d906e0252fb907744beeb224c2f6e2b629",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/budapest/budapest-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/budapest/budapest-6-nakoala-intro-v1.png",
+      "sha256": "8deb7443227c493d34d1b4db396ed54ac683e43333b8506d63fc9fd9a2819679",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: koko kaupunki tunnetulta näköalapaikalta päivällä — Gellért-vuoren Citadella: Tonava, sillat, Parlamentti ja Budan linna päivällä.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nkoko Budapestin keskusta päivällä Gellért-vuoren Citadellan pohjoismuurilta (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivimuuria tai kaidetta sekä alhaalla jyrkkä, puiden peittämä rinne, ei ihmisiä lähellä. Alhaalla keskellä Tonava leveänä, vihertävänharmaana vyönä ja sen yli kaarena kulkevat sillat: lähellä alhaalla valkoinen ripustussilta (Erzsébet-silta) ja kauempana keskellä vasemmalla Széchenyin Ketjusilta pienenä kivitorneineen ja kaapeleineen (noin 1,3 km päässä). Keskellä kaukana Parlamentin pitkä, vaalea uusgoottilainen rakennus kupoleineen pienenä ja tunnistettavana (noin 2,2 km päässä), Tonavan Pestin puolella. Vasemmalla Budan linnanmäki: Budan linnan pitkä kupolillinen palatsirakennus pienenä rinteen päällä ja kauempana sen takana Matiaksen kirkon kapea torni pienenä. Oikealla Pestin kattomeri vaaleina kerrostaloina. Maamerkit ovat pieniä osia laajaa kokonaisuutta, pääaihe on joen, siltojen ja kattojen panoraama. Kulma: vaakakuva, katse pohjoiseen-luoteeseen (noin 350 astetta, vaakakulma noin 50 astetta eli noin 325-15 astetta): Budan linna vasemmalla (noin 332 astetta), Ketjusilta vasemmalla keskellä (noin 351 astetta), Parlamentti keskellä oikealla (noin 358 astetta), Pestin kattomeri oikealla; kamera muurin kaiteen takaa silmänkorkeudelta, hieman alaspäin; kaupunki ja joki täyttävät vähintään puolet kuvasta. Valo: kirkas mutta pehmeä iltapäivävalo takaa etelästä, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: Vapauden patsasta (se jää kameran taakse, linnoituksen itäpäähän) ja muita patsaita tai muistomerkkejä, Gellért-muistomerkkiä rinteellä, ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, Ketjusillan leijonia lähikuvassa, Citadellan uusia lasi- tai teräsrakenteita, lippuja, valaistuksia, drooneja, nostureita pääaiheena. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261013-uudet-6-8/budapest-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261013-uudet-6-8/budapest-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 167,
+        "assetID": "budapest-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/budapest/asset-6.json",
+        "nativeSHA256": "09fe21b7fb0a3efb3767a275544a87d906e0252fb907744beeb224c2f6e2b629",
+        "finalSHA256": "8deb7443227c493d34d1b4db396ed54ac683e43333b8506d63fc9fd9a2819679",
+        "verdict": "accepted",
+        "reason": "Budan linnanmäki vasemmalla, Ketjusilta vasemmalla keskellä, parlamentti oikealla keskellä sekä Tonava ja kattomeri täyttävät panoraman. Ei havaittavaa Vapauden patsasta tai lähimuistomerkkiä.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T17:44:35.147870+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/budapest/20261013-uudet-6-8/budapest-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/budapest/20261013-uudet-6-8/budapest-6-nakoala-intro-v1.png",
+        "sha256": "8deb7443227c493d34d1b4db396ed54ac683e43333b8506d63fc9fd9a2819679",
+        "nativeSHA256": "09fe21b7fb0a3efb3767a275544a87d906e0252fb907744beeb224c2f6e2b629",
+        "bytes": 2832565,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "8deb7443227c493d34d1b4db396ed54ac683e43333b8506d63fc9fd9a2819679",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "8deb7443227c493d34d1b4db396ed54ac683e43333b8506d63fc9fd9a2819679",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T17:44:59.152838+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "taskNumber": 168,
+      "slot": 8,
+      "reason": "Kaksi portaittaista merkitöntä vaunua ja rinnakkaiset radat ovat selkeät, mutta kumpikin yksittäinen vaunu on vain noin 12–15 prosenttia leveydestä. Lähde pyytää päävaunua noin kolmanneksen levyisenä; yhdistetty kahden vaunun leveys ei korvaa sitä.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "2ae414d963818b4eb773697bd82db80f4fe79d8a1866d98af49096f6dd31fe7d",
+      "finalSHA256": "e4c08917b1ecce954c7e1c53b3336f64ecc06de074063010379d2217781e71b8"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
