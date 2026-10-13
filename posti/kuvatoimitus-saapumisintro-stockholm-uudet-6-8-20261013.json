@@ -1,0 +1,342 @@
+{
+  "cityName": "Tukholma",
+  "gameCityId": "tukholma",
+  "mediaSlug": "stockholm",
+  "taskNumbers": [
+    110,
+    111
+  ],
+  "updatedAt": "2026-10-13T13:59:15.006409+00:00",
+  "requestedNewSlots": [
+    6,
+    8
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [
+    {
+      "slot": 6,
+      "taskNumber": 110,
+      "title": "Näköala",
+      "sceneSpec": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Fjällgatan, Södermalmin näköalakatu: koko kaupunki päivällä (Gamla stan, Saltsjön, Djurgården).** Tiedosto `stockholm-6-nakoala-intro-v1.png`.\nMitä kuvataan: koko Tukholman keskusta päivällä Södermalmin Fjällgatanin näköalakadulta (nykyaikainen värikuva): etualalla kivinen kaide ja vehreä rinne, jonka alla kuparikatot ja vanhat punaiset ja okrat puutalojen katot; keskellä Saltsjönin tumma vesi, jolla muutama pieni vene ja yksi kaukainen saaristolaiva; vastarannalla Gamla stanin tiiviit kattomaisemat, Storkyrkanin torni ja kuninkaanlinnan massiivinen kylki sekä Tyska kyrkanin korkea vihreä kuparispiri pieninä ja kaukana; oikealla Skeppsholmen matalana vehreänä siluettina ja kauempana Djurgårdenin metsäinen ranta. Maamerkit ovat pieniä osia laajaa kokonaisuutta, kuvan pääaihe on koko kaupungin kattojen ja veden panoraama. Ei ihmisiä lähellä; korkeintaan muutama pieni hahmo kaukana rannalla. Kulma: vaakakuva, korkealta ja hieman koholta kadun reunalta kohti pohjoista ja koillista (Gamla stan vasemmalla, Djurgården oikealla), laaja panoraama, kaupunki täyttää vähintään puolet kuvasta. Valo: kirkas mutta pehmeä päivävalo, hieman pilvinen taivas, vaimeat luonnolliset värit, ei HDR:ää eikä ylikylläisyyttä. Ei saa näkyä: tekstiä, kylttejä, logoja, mainoksia, kasvoja, ihmisiä lähikuvassa, veistoksia, patsaita tai muistomerkkejä, rakennustyömaata ja nostureita Slussenin suunnalla, Gröna Lundin huvipuiston laitteita, Vasa-museota, Moderna Museetin yksityiskohtia, Katarina kyrkan tornia, Stadsgårdenin laiturin suuria matkustaja- tai risteilyaluksia, autoja lähikuvassa, valaistuksia. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Fjällgatan, Södermalmin näköalakatu: koko kaupunki päivällä. Havainnekuva.\n",
+      "caption": "Fjällgatan, Södermalmin näköalakatu: koko kaupunki päivällä. Havainnekuva.",
+      "filename": "stockholm-6-nakoala-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/stockholm/20261013-uudet-6-8/stockholm-6-nakoala-intro-v1.png",
+      "historical": false,
+      "newTopic": true,
+      "topic": "daytime-city-panorama",
+      "version": 1,
+      "sourceOwnerAcceptanceRequiredBeforeGameIntegration": true,
+      "cityName": "Tukholma",
+      "gameCityId": "tukholma",
+      "mediaSlug": "stockholm",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/stockholm/native-6.png",
+      "nativeSHA256": "9b4e183138b0750e1ed2c8e8b0ce239583272dd88dd0ccf7f3beb9120f0efdb4",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/stockholm/stockholm-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-pilotti-20261013/stockholm/stockholm-6-nakoala-intro-v1.png",
+      "sha256": "556b2694c073efe11cc5d345998060df5a20d9a19c4d1a0aa3e5dcae4c3a43a2",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: game city-arrival introduction, a single new present-day full-color landscape photograph-like illustration. Exactly 1536 x 1024 pixels, 3:2, opaque.\nPrimary request: Stockholm in daytime, a geographically coherent wide city panorama from the elevated Fjällgatan viewpoint on Södermalm, looking toward north and northeast across Saltsjön. The city and harbor panorama is the subject; distant landmarks are small parts of a broad real cityscape, never isolated giant monuments.\nComposition: From the cliff-edge street, human eye height with a slight raised view and downward tilt. A narrow worn natural stone parapet at the bottom edge, irregular green shrubs and a sloping leafy hillside, with a few red and ochre wooden-house roofs and copper roofs below. Dark harbor water in the middle. Gamla stan and its dense warm plaster facades and copper roofscape on the LEFT background: Royal Palace's broad low stone side, small distant Storkyrkan tower and the slender green copper spire of Tyska kyrkan, in plausible real positions and scale. To the RIGHT, low green Skeppsholmen and farther right the wooded shoreline of Djurgården. The built city, roofs, islands, and harbor occupy at least half the image; sky is a modest upper band. No fisheye distortion or aerial drone view. A few tiny distant neutral boats and one small distant archipelago passenger vessel, none near the camera.\nLighting and color: ordinary bright softly cloudy Scandinavian daylight. True full color with subdued natural greens, warm ochre buildings, grey-green copper, dark blue-green water. Slight distance haze. Real camera exposure with restrained contrast and naturally varied fine texture. Unposed travel photograph, no HDR, no cinematic grading, no glossy CGI or synthetic repeating foliage.\nCritical constraints: no readable text, no pseudo-writing, no lettering, no digits, signs, plaques, advertising, logos, trademarks, watermarks, frame or flags anywhere. No people nearby, no faces; at most minute distant silhouettes on the opposite shore. No statues, sculptures or memorials. No Slussen construction works or cranes. No Gröna Lund amusement park machinery, rides or towers. No Vasa Museum. No discernible Moderna Museet detail. No Katarina church tower. No giant Stadsgården passenger ships or cruise liners. No foreground cars, lighting installations or night effects. Do not combine incompatible waterfronts or invent a skyline. This is a NEW current-day panorama, not a celebration and not a historical scene. Natural photograph-like image only, with no text embedded in the pixels.\n",
+      "sourceCommit": "f71ff6871eb83ee7d461079680a64facf5fa70cc",
+      "sourceBlob": "3424c5088a5f1a210d7d2a5331ed8ae5eb696921",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "references": [
+        {
+          "id": "visit-stockholm-fjallgatan",
+          "title": "Fjällgatan — Visit Stockholm",
+          "url": "https://www.visitstockholm.se/o/fjallgatan/",
+          "publisher": "Stockholm official visitor bureau",
+          "supports": "Fjällgatan is an elevated cliff-edge city viewpoint beside preserved wooden-house streets."
+        },
+        {
+          "id": "visit-stockholm-viewpoints",
+          "title": "Svindlande utsikter — Visit Stockholm",
+          "url": "https://www.visitstockholm.se/se-gora/sevardheter/svindlande-utsikter/",
+          "publisher": "Stockholm official visitor bureau",
+          "supports": "Fjällgatan panorama includes Saltsjön, Gamla stan, Norrmalm, Skeppsholmen and Djurgården."
+        },
+        {
+          "id": "sl-djurgardsfarjan",
+          "title": "Pendelbåtarna — SL",
+          "url": "https://sl.se/reseplanering/var-trafik/pendelbatarna",
+          "publisher": "Stockholm public transport operator",
+          "supports": "Djurgårdsfärjan line 82 serves Slussen, Allmänna gränd on Djurgården, and Skeppsholmen."
+        }
+      ],
+      "refs": [
+        {
+          "id": "visit-stockholm-fjallgatan",
+          "title": "Fjällgatan — Visit Stockholm",
+          "url": "https://www.visitstockholm.se/o/fjallgatan/",
+          "publisher": "Stockholm official visitor bureau",
+          "supports": "Fjällgatan is an elevated cliff-edge city viewpoint beside preserved wooden-house streets."
+        },
+        {
+          "id": "visit-stockholm-viewpoints",
+          "title": "Svindlande utsikter — Visit Stockholm",
+          "url": "https://www.visitstockholm.se/se-gora/sevardheter/svindlande-utsikter/",
+          "publisher": "Stockholm official visitor bureau",
+          "supports": "Fjällgatan panorama includes Saltsjön, Gamla stan, Norrmalm, Skeppsholmen and Djurgården."
+        },
+        {
+          "id": "sl-djurgardsfarjan",
+          "title": "Pendelbåtarna — SL",
+          "url": "https://sl.se/reseplanering/var-trafik/pendelbatarna",
+          "publisher": "Stockholm public transport operator",
+          "supports": "Djurgårdsfärjan line 82 serves Slussen, Allmänna gränd on Djurgården, and Skeppsholmen."
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/stockholm/qa-6.json",
+      "producerQA": "accepted",
+      "generationTool": "built-in image_gen__imagegen",
+      "actualGenerationCalls": 1,
+      "id": "stockholm-6-nakoala-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/stockholm/stockholm-6-nakoala-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261013-uudet-6-8/stockholm-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261013-uudet-6-8/stockholm-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 110,
+        "verdict": "accepted",
+        "reason": "Fjällgatanin päiväpanoraama: Gamla stan vasemmalla, vesi ja Skeppsholmen/Djurgården oikealla. Kaupunkikokonaisuus ja etäiset maamerkit, luonnolliset katot, lehvästö ja vesi. Ei havaittua tekstiä, lähikasvoja, risteilijää tai huvipuistolaitteita.",
+        "nativeSHA256": "9b4e183138b0750e1ed2c8e8b0ce239583272dd88dd0ccf7f3beb9120f0efdb4",
+        "finalSHA256": "556b2694c073efe11cc5d345998060df5a20d9a19c4d1a0aa3e5dcae4c3a43a2",
+        "rootWholeNativeVisualInspection": true,
+        "rootWholeFinalVisualInspection": true,
+        "nativeAndFinalPixelIdentityVerified": true,
+        "exactExportFormatVerified": true,
+        "currentDayColorVerified": true,
+        "sourceOwnerAcceptanceRequiredBeforeRuntime": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false,
+        "producerQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/stockholm/qa-6.json",
+        "sourceBlob": "3424c5088a5f1a210d7d2a5331ed8ae5eb696921"
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/stockholm/20261013-uudet-6-8/stockholm-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261013-uudet-6-8/stockholm-6-nakoala-intro-v1.png",
+        "sha256": "556b2694c073efe11cc5d345998060df5a20d9a19c4d1a0aa3e5dcae4c3a43a2",
+        "nativeSHA256": "9b4e183138b0750e1ed2c8e8b0ce239583272dd88dd0ccf7f3beb9120f0efdb4",
+        "bytes": 2880900,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "556b2694c073efe11cc5d345998060df5a20d9a19c4d1a0aa3e5dcae4c3a43a2",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "556b2694c073efe11cc5d345998060df5a20d9a19c4d1a0aa3e5dcae4c3a43a2",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T13:56:43.993654+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 8,
+      "taskNumber": 111,
+      "title": "Kulkuneuvo liikkeessä",
+      "sceneSpec": "**8 / kaupungin oma kulkuneuvo liikkeessä — Djurgårdsfärjan (SL-linja 82), Tukholman oma lautta liikkeessä Saltsjönillä.** Tiedosto `stockholm-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: Tukholman Djurgården-lautta (Djurgårdsfärjan), pieni sisäsaariston matkustajalautta, liikkeessä Saltsjönin tyynellä vedellä (nykyaikainen värikuva): lautta sivuprofiilissa keskellä kuvaa, matala valkoinen yksiväriseksi pelkistetty runko ja avoin ylädekki, peräaalto vedessä; kannella ja ikkunoissa matkustajia pieninä ja kaukaa, selin tai siluetteina (pari seisoo kannella kaiteella, muutama istuu); kulkuneuvon värit neutraalit: runko ja rakenteet valkoinen ja vaaleanharmaa, ei raitoja, ei maalattuja kuvioita, ei mainoksia eikä brändimaalausta. Taustalla Djurgårdenin länsirannan vehreä rantametsä (Galärparkenin suunta) lehtipuineen ja matalat rantarakennukset kaukana; rajaus tiukka ja kapea, ei Gröna Lundin hurjapyöriä tai torneja, ei Vasa-museota, etualalla tumma vesi ja kevyt aallokko. Kulma: vaakakuva, vesirajan tasolta Skeppsholmenin itärannalta kohti itää ja kaakkoa, hieman sivusta, lautta kuvan keskikolmanneksessa liikkumassa vasemmalta oikealle, taustana avoin taivas. Valo: pehmeä päivävalo, hieman pilvinen, vaimeat värit, ei HDR:ää. Ei saa näkyä: numeroita, aluksen nimeä tai tunnusta rungossa, reittikylttejä, tekstiä, logoja, brändejä, lippuja, mainoksia, kasvoja lähikuvassa, Vasa-museota, Gröna Lundin huvipuiston laitteita, Slussenin työmaata ja nostureita, muita aluksia lähietualalla. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Djurgårdsfärjan, Tukholman oma lautta liikkeessä Saltsjönillä. Havainnekuva.\n",
+      "caption": "Djurgårdsfärjan, Tukholman oma lautta liikkeessä Saltsjönillä. Havainnekuva.",
+      "filename": "stockholm-8-kulkuneuvo-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/stockholm/20261013-uudet-6-8/stockholm-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "newTopic": true,
+      "topic": "local-transport-in-motion",
+      "version": 1,
+      "sourceOwnerAcceptanceRequiredBeforeGameIntegration": true,
+      "cityName": "Tukholma",
+      "gameCityId": "tukholma",
+      "mediaSlug": "stockholm",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/stockholm/native-8.png",
+      "nativeSHA256": "bc123fe0db91dc3127c91f165d0fe2f7c8f2e5304678d66b79f1b620771130dc",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/stockholm/stockholm-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-pilotti-20261013/stockholm/stockholm-8-kulkuneuvo-intro-v1.png",
+      "sha256": "e001b5d3de67b5484a27cdd5e3538d31e4bcef8a9ff07b8731285c89945d0b1f",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: game city-arrival introduction, one new present-day full-color photograph-like illustration. Exactly 1536 x 1024 pixels, landscape 3:2, opaque.\nPrimary request: a small Stockholm Djurgården inner-harbor passenger ferry underway on calm Saltsjön, seen from almost water level at the eastern shore of Skeppsholmen looking east/southeast toward the green west shore of Djurgården in the Galärparken direction. Geographically plausible harbor scene.\nComposition: horizontal scene, ferry in clean SIDE PROFILE across the MIDDLE THIRD of the frame, approximately one third of image width, moving from LEFT TO RIGHT. Bow faces right with a small bow wave; a convincing irregular stern wake trails to its LEFT. A low white small inner-city passenger ferry, a glazed lower passenger salon and modest open upper deck. A few small passengers behind windows and on the upper deck, a couple standing with backs turned at the railing, others seated; silhouettes only, no identifiable faces. The ferry is sharply captured and naturally modest in scale. Dark subtly rippling water fills the foreground. Background is distant, softly resolved leafy deciduous shoreline forest and a few low unobtrusive waterfront buildings, Galärparken side of Djurgården, with open softly cloudy sky above. Restrict the shoreline framing so the Vasa Museum and Gröna Lund lie wholly outside the view. No nearby other vessels.\nFerry paint and features: hull, cabins, railings, funnel and all structures plain WHITE and light neutral GREY only. No colored band, stripe, painted shape, branding, lettering, ship name, number, emblem, logo, advertisement or destination screen. Plain unmarked surfaces, no pennants or flags, no flagpoles with any cloth. Realistic ferry windows are dark clear glass, without writing or decals. No decorative paint markings at all.\nLighting and realism: ordinary soft Scandinavian daylight, lightly cloudy, restrained natural blue-green water, varied green leaves and neutral ferry whites. A real camera snapshot with natural exposure, subtle changing water ripples and irregular leaf textures. No HDR, CGI, oversaturation, cinematic grading, plastic surfaces or repeating patterned vegetation.\nAvoid throughout: every form of text, pseudo-writing, digits, vessel identifier, route sign, shore sign, advertisement, watermark, frame, logo, trademark, flag, red-orange life equipment used as a decorative accent, close-up face, large close-up people, sculpture, memorial, Vasa Museum, Gröna Lund rides, towers or Ferris wheels, Slussen cranes or construction works, cruise liner or any nearby second boat. This is an entirely NEW neutral-paint ferry-in-motion illustration, current-day in COLOR, not a party and not a historical scene. No caption or disclosure embedded in the pixels.\n",
+      "sourceCommit": "f71ff6871eb83ee7d461079680a64facf5fa70cc",
+      "sourceBlob": "3424c5088a5f1a210d7d2a5331ed8ae5eb696921",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "references": [
+        {
+          "id": "visit-stockholm-fjallgatan",
+          "title": "Fjällgatan — Visit Stockholm",
+          "url": "https://www.visitstockholm.se/o/fjallgatan/",
+          "publisher": "Stockholm official visitor bureau",
+          "supports": "Fjällgatan is an elevated cliff-edge city viewpoint beside preserved wooden-house streets."
+        },
+        {
+          "id": "visit-stockholm-viewpoints",
+          "title": "Svindlande utsikter — Visit Stockholm",
+          "url": "https://www.visitstockholm.se/se-gora/sevardheter/svindlande-utsikter/",
+          "publisher": "Stockholm official visitor bureau",
+          "supports": "Fjällgatan panorama includes Saltsjön, Gamla stan, Norrmalm, Skeppsholmen and Djurgården."
+        },
+        {
+          "id": "sl-djurgardsfarjan",
+          "title": "Pendelbåtarna — SL",
+          "url": "https://sl.se/reseplanering/var-trafik/pendelbatarna",
+          "publisher": "Stockholm public transport operator",
+          "supports": "Djurgårdsfärjan line 82 serves Slussen, Allmänna gränd on Djurgården, and Skeppsholmen."
+        }
+      ],
+      "refs": [
+        {
+          "id": "visit-stockholm-fjallgatan",
+          "title": "Fjällgatan — Visit Stockholm",
+          "url": "https://www.visitstockholm.se/o/fjallgatan/",
+          "publisher": "Stockholm official visitor bureau",
+          "supports": "Fjällgatan is an elevated cliff-edge city viewpoint beside preserved wooden-house streets."
+        },
+        {
+          "id": "visit-stockholm-viewpoints",
+          "title": "Svindlande utsikter — Visit Stockholm",
+          "url": "https://www.visitstockholm.se/se-gora/sevardheter/svindlande-utsikter/",
+          "publisher": "Stockholm official visitor bureau",
+          "supports": "Fjällgatan panorama includes Saltsjön, Gamla stan, Norrmalm, Skeppsholmen and Djurgården."
+        },
+        {
+          "id": "sl-djurgardsfarjan",
+          "title": "Pendelbåtarna — SL",
+          "url": "https://sl.se/reseplanering/var-trafik/pendelbatarna",
+          "publisher": "Stockholm public transport operator",
+          "supports": "Djurgårdsfärjan line 82 serves Slussen, Allmänna gränd on Djurgården, and Skeppsholmen."
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/stockholm/qa-8.json",
+      "producerQA": "accepted",
+      "generationTool": "built-in image_gen__imagegen",
+      "actualGenerationCalls": 1,
+      "id": "stockholm-8-kulkuneuvo-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/stockholm/stockholm-8-kulkuneuvo-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261013-uudet-6-8/stockholm-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261013-uudet-6-8/stockholm-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 111,
+        "verdict": "accepted",
+        "reason": "Merkitsemätön valkoinen/vaaleanharmaa lautta sivuprofiilissa liikkeessä, matkustajat pieninä tai ikkunoiden siluetteina. Vehreä rajattu rantatausta; ei tekstiä, numeroita, lippuja, logoja tai mainoksia. Tumma alareuna on vesirajan/varjon fyysinen yksityiskohta, ei brändimaalaus. Leveys noin46% ei ole numeerisesti kielletty lähteessä; alus pysyy keskellä rauhallista kokonaisuutta.",
+        "nativeSHA256": "bc123fe0db91dc3127c91f165d0fe2f7c8f2e5304678d66b79f1b620771130dc",
+        "finalSHA256": "e001b5d3de67b5484a27cdd5e3538d31e4bcef8a9ff07b8731285c89945d0b1f",
+        "rootWholeNativeVisualInspection": true,
+        "rootWholeFinalVisualInspection": true,
+        "nativeAndFinalPixelIdentityVerified": true,
+        "exactExportFormatVerified": true,
+        "currentDayColorVerified": true,
+        "sourceOwnerAcceptanceRequiredBeforeRuntime": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false,
+        "producerQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/stockholm/qa-8.json",
+        "sourceBlob": "3424c5088a5f1a210d7d2a5331ed8ae5eb696921"
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/stockholm/20261013-uudet-6-8/stockholm-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/stockholm/20261013-uudet-6-8/stockholm-8-kulkuneuvo-intro-v1.png",
+        "sha256": "e001b5d3de67b5484a27cdd5e3538d31e4bcef8a9ff07b8731285c89945d0b1f",
+        "nativeSHA256": "bc123fe0db91dc3127c91f165d0fe2f7c8f2e5304678d66b79f1b620771130dc",
+        "bytes": 2309815,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "e001b5d3de67b5484a27cdd5e3538d31e4bcef8a9ff07b8731285c89945d0b1f",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "e001b5d3de67b5484a27cdd5e3538d31e4bcef8a9ff07b8731285c89945d0b1f",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T13:56:45.987008+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedSlotsHandled": true,
+  "allRequestedSlotsDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationAllowedWithoutOwnerAcceptance": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": false,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uudet-6-8-pilotti-20261013.md",
+  "sourceCommit": "f71ff6871eb83ee7d461079680a64facf5fa70cc",
+  "sourceBlob": "3424c5088a5f1a210d7d2a5331ed8ae5eb696921",
+  "oldRejectedTopicsRemainWithdrawn": true,
+  "pilotOnly": true,
+  "remaining88ImagesNotAuthorized": true,
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
