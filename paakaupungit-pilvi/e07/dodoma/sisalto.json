@@ -14,17 +14,17 @@
     }
   },
   "artikkeli": {
-    "intro": "Dodoma on Tansanian pääkaupunki **maan keskiosassa**, vanhan kaupankäyntialueen päällä. Ennen nykyistä kaupunkia paikalla oli Idodomya-niminen markkinapaikka. Ugogon seutu ja Gogo-asukkaiden yhteisöt kuuluivat jo 1800-luvun karavaanireittien maailmaan. Nykyinen rautatiekaupunki syntyi 1900-luvun alkupuolella, joten isoisän matkavuonna 1873 myöhempää asemaa ja katuverkkoa ei vielä ollut.\n\n1970-luvulla Dodomaan ryhdyttiin suunnittelemaan pääkaupunkia, jossa korostui kylämäisen kaupungin ajatus. Vanha markkinapaikka, rautatiekaupunki ja hallintokaupunki ovat siksi eri kehitysvaiheita samalla seudulla. Dodoman ympäristö tunnetaan myös **rypäleiden viljelystä**, ja Makutupora on paikallisen lajikkeen nimi. Kaupungissa geologinen tutkimus säilyttää kiviä, mineraaleja ja kairausnäytteitä, kun taas korkeakoulut tuovat alueelle monien alojen opetusta.",
-    "teksti": "Idodomyasta kasvanut Dodoma ei syntynyt asumattomalle alueelle. Ugogo liittyi vanhoihin karavaanireitteihin, ja myöhempi rata muutti kuljetusten rakennetta. Kaupungin siirtomaakauden asemakaavassa eurooppalainen kortteli ja paikallinen kylä erotettiin toisistaan.\n\nPääkaupungin suunnitteluhanke alkoi 1970-luvulla. Maan keskinen sijainti oli hankkeen perusteiden joukossa, ja valittu suunnittelutoimisto oli kanadalainen Project Planning Associates. Suunnitelmassa korostettiin kylämäistä pääkaupunkia, mutta myöhemmät instituutiot eivät kaikki sijoittuneet alkuperäisen suunnitelman paikkoihin.\n\nDodoman seudun rypäleenkasvatus ja kaupungin geotieteellinen tutkimus ovat hallinnon rinnalla omia paikallisia aiheitaan. Museon kivinäytteet voivat olla eri puolilta Tansaniaa; näyttelypaikka ei ole sama asia kuin näytteen löytöpaikka. Myös kaupunki ja Dodoman maakunta ovat eri aluerajauksia."
+    "intro": "Dodoma on Tansanian pääkaupunki **maan keskiosassa**, vanhan kaupankäyntialueen päällä. Ennen nykyistä kaupunkia paikalla oli Idodomya-niminen markkinapaikka. Ugogon seutu ja Gogo-asukkaiden yhteisöt kuuluivat jo 1800-luvun karavaanireittien maailmaan. Nykyinen rautatiekaupunki syntyi 1900-luvun alkupuolella, joten vuonna 1873 myöhempää asemaa ja katuverkkoa ei vielä ollut.\n\n1970-luvulla Dodomaan ryhdyttiin suunnittelemaan pääkaupunkia, jossa korostui kylämäisen kaupungin ajatus. Dodoman ympäristö tunnetaan myös **rypäleiden viljelystä**, ja Makutupora on paikallisen lajikkeen nimi. Kaupungissa geologinen tutkimus säilyttää kiviä, mineraaleja ja kairausnäytteitä, kun taas korkeakoulut tuovat alueelle monien alojen opetusta.",
+    "teksti": "Ugogo liittyi vanhoihin karavaanireitteihin, ja myöhempi rata muutti kuljetusten rakennetta. Kaupungin siirtomaakauden asemakaavassa eurooppalainen kortteli ja paikallinen kylä erotettiin toisistaan.\n\nPääkaupungin suunnitteluhanke alkoi 1970-luvulla. Maan keskinen sijainti oli hankkeen perusteiden joukossa, ja valittu suunnittelutoimisto oli kanadalainen Project Planning Associates. Suunnitelmassa korostettiin kylämäistä pääkaupunkia, mutta myöhemmät instituutiot eivät kaikki sijoittuneet alkuperäisen suunnitelman paikkoihin.\n\nDodoman seudun rypäleenkasvatus ja kaupungin geotieteellinen tutkimus ovat hallinnon rinnalla omia paikallisia aiheitaan. Myös kaupunki ja Dodoman maakunta ovat eri aluerajauksia."
   },
   "kysymykset": [
     {
       "q": "Missä osassa Tansaniaa Dodoma sijaitsee?",
       "options": [
         "Maan keskiosassa",
-        "Maan koillisrannikolla",
-        "Maan eteläisellä saarella",
-        "Maan luoteisessa suistossa"
+        "Maan koillisosassa",
+        "Maan lounaisosassa",
+        "Maan luoteisosassa"
       ],
       "correct": 0,
       "level": 1,
@@ -56,12 +56,12 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Sana voi tarkoittaa paikallisen lajikkeen nimeä.",
+      "hint": "Nimi liittyy Dodoman seudun paikalliseen tuotantoon.",
       "fact": "Makutupora on paikallinen rypälelajike.",
       "source": "https://en.wikipedia.org/wiki/Tanzanian_wine"
     },
     {
-      "q": "Millaiseen tutkimukseen Tansanian geologinen tutkimuslaitos GST käyttää kairausnäytteitä ja karttoja?",
+      "q": "Mihin tutkimusaineistoon Dodoman laitoksen kairausnäytteet ja kartat kuuluvat?",
       "options": [
         "Geotieteelliseen tutkimukseen",
         "Arkeologiseen tutkimukseen",
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Suunnittelussa ei ajateltu vain suuria hallintotaloja.",
+      "hint": "Suunnittelutoimisto oli kanadalainen Project Planning Associates.",
       "fact": "1970-luvun suunnitelmassa korostettiin kylämäisen pääkaupungin ajatusta.",
       "source": "https://en.wikipedia.org/wiki/Dodoma"
     }
@@ -92,7 +92,7 @@
   "tiedot": [
     "Dodoman rautatiekaupungin taustalla on vanhempi Idodomya-markkinapaikka ja Ugogon kauppareittien historia.",
     "Jamhuri-nimiset stadionit Dodomassa ja Morogorossa ovat eri urheilupaikkoja.",
-    "Dodoman geologisen museon kivi voi olla eri puolelta maata kuin sen näyttelypaikka."
+    "Tansanian geologisen tutkimuslaitoksen Dodoman museossa on kiviä ja mineraaleja eri puolilta maata."
   ],
   "valokuva": {
     "tiedosto": "Iyumbu ward landscape, Dodoma City.jpg",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Mgogo, Wagogo ja Kigogo",
-          "teksti": "Gogo eli Wagogo on Dodoman seutuun ja Ugogoon liittyvä kansan nimi. Yhdestä ihmisestä käytetään nimitystä Mgogo, ihmisryhmästä Wagogo ja kielestä Kigogo. Samantapaiset nimet tarkoittavat siis eri asioita. Yhteisöjen alue kuului 1800-luvun karavaanireittien historiaan jo ennen nykyistä rautatiekaupunkia. Wagogo on monikkomuoto ihmisistä, Mgogo yksikkö ja Kigogo kieli. Nämä paikalliset nimimuodot kuuluvat Ugogon seudun historiaan, joka jatkui karavaanikaupan ja rautatien vaiheiden läpi.",
+          "teksti": "Gogo eli Wagogo on Dodoman seutuun ja Ugogoon liittyvä kansan nimi. Yhdestä ihmisestä käytetään nimitystä Mgogo, ihmisryhmästä Wagogo ja kielestä Kigogo. Yhteisöjen alue kuului 1800-luvun karavaanireittien historiaan jo ennen nykyistä rautatiekaupunkia. Nämä paikalliset nimimuodot kuuluvat Ugogon seudun historiaan, joka jatkui karavaanikaupan ja rautatien vaiheiden läpi.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -171,16 +171,16 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Dodoman vanha keskusta ja uusi SGR-asema ovat eri paikkoja. Myös Chimwagan yliopistoalue sijaitsee keskustan ulkopuolella. Geologisen museon palvelu ja näytevarasto ovat erillisiä asioita. Parlamenttialueella on pääsy- ja kuvausrajoituksia.",
+        "kappale": "Dodoman vanha keskusta ja uusi SGR-asema ovat eri paikkoja. Myös Chimwagan yliopistoalue sijaitsee keskustan ulkopuolella.",
         "artikkeli": {
           "nimi": "Matkailijan Dodoma",
           "taitto": "opas",
           "teksti": "Tutustu rautatiekaupungin kerroksiin ja sen rinnalla tutkimuksen sekä viljelyn seutuun.",
-          "nosto": "Vanha asema, uusi rata ja eri lentoasemat erotetaan ennen matkaa.",
+          "nosto": "Vanha rautatieasema sijaitsee keskustassa, uudempi SGR-asema pohjoisempana.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Dodoman lentoaseman tunnus on DOD. Msalato on erillinen lentoasemahanke. Vanha rautatieasema on keskustassa ja uudempi normaaliraiteisen radan asema pohjoisempana. Tarkista lähtöpaikka ja yhteys liikennöitsijältä.",
+              "teksti": "Dodoman lentoaseman tunnus on DOD. Msalato on erillinen lentoasemahanke. Vanha rautatieasema on keskustassa ja uudempi normaaliraiteisen radan asema pohjoisempana.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Vanha kaupunkikeskus",
-              "teksti": "Kaupungin historia liittyy markkinapaikkaan ja rautatieasemaan. Lion Rock eli Simba Hill mainitaan maaston näkymäkohteena, mutta reitin nykyiset kulkujärjestelyt selvitetään paikallisesti. Parlamenttialueen pääsy- ja kuvausrajoituksia noudatetaan.",
+              "teksti": "Kaupungin historia liittyy Idodomya-markkinapaikkaan ja rautatieasemaan. Lion Rock eli Simba Hill on kaupungin seudun maaston näköalapaikka.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Seudun viiniköynnökset",
-              "teksti": "Dodoman ympäristön rypäleenkasvatus on oma alueellinen aiheensa. Viljelmä ja viininvalmistuspaikka eivät välttämättä ole sama kohde, ja tilat voivat sijaita kaupungin ulkopuolella. Sovi tilavierailu suoraan viljelmän tai valmistajan kanssa.",
+              "teksti": "Dodoman ympäristössä kasvatetaan muun muassa paikallista Makutupora-lajiketta. Muita viljelyssä esiintyviä rypäleitä ovat Chenin Blanc, Syrah ja Cabernet Sauvignon.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Kiviä ja oppimisen paikkoja",
-              "teksti": "Tansanian geologisen tutkimuslaitoksen museopalvelu liittyy kiviin ja mineraaleihin, mutta kairausnäytevarasto on erillinen tutkimusaineisto. Museon käynti ja näyttelyn nykyinen toiminta varmistetaan. UDOMin Chimwaga-alue ja St. John’sin kampus ovat eri korkeakoulupaikkoja.",
+              "teksti": "Tansanian geologisen tutkimuslaitoksen museopalvelu liittyy kiviin ja mineraaleihin, mutta kairausnäytevarasto on erillinen tutkimusaineisto. UDOMin Chimwaga-alue ja St. John’sin kampus ovat eri korkeakoulupaikkoja.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -235,18 +235,6 @@
               {
                 "otsikko": "Ennen matkapäätöstä",
                 "teksti": "Tarkista Tansanian ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
-              },
-              {
-                "otsikko": "Lentoasemahanke",
-                "teksti": "Msalaton hanketta ei oleteta valmiiksi matkustajakentäksi."
-              },
-              {
-                "otsikko": "Kuvaus ja pääsy",
-                "teksti": "Parlamenttialueen ja muiden paikkojen rajoitukset selvitetään erikseen."
-              },
-              {
-                "otsikko": "Maahantulo ja vakuutus",
-                "teksti": "Nykyiset ehdot tarkistetaan ennen matkaa."
               }
             ]
           },
@@ -281,7 +269,7 @@
         },
         {
           "otsikko": "Korkeakoulut ovat eri paikoissa",
-          "teksti": "University of Dodoma eli UDOM on julkinen yliopisto, joka sijaitsee mäkisellä Chimwaga-alueella keskustan ulkopuolella. St. John’s University on puolestaan yksityinen yliopisto, jolla on anglikaaninen institutionaalinen yhteys. UDOMissa opetetaan esimerkiksi kasvatustiedettä, luonnontiedettä ja maantiedettä; St. John’sin opintosuuntiin kuuluvat koulutus, hoito- ja farmasia-ala sekä yhteisökehitys. Sama kaupunki sisältää siis erilaisia oppimisen ympäristöjä eri paikoissa.",
+          "teksti": "University of Dodoma eli UDOM on julkinen yliopisto, joka sijaitsee mäkisellä Chimwaga-alueella keskustan ulkopuolella. St. John’s University on puolestaan yksityinen yliopisto, jolla on anglikaaninen institutionaalinen yhteys. UDOMissa opetetaan esimerkiksi kasvatustiedettä, luonnontiedettä ja maantiedettä; St. John’sin opintosuuntiin kuuluvat koulutus, hoito- ja farmasia-ala sekä yhteisökehitys.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -319,12 +307,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Dodoma Airport (DOD)",
-    "huomiot": [
-      "8 nostoa, 5 opasjaksoa, 5 kysymystä ja 3 tietoa; Tansanian maalehden TAZARA-, ruoka- ja musiikkiaiheet vältetty.",
-      "Kartta partial 0: Lion Rock, asema, aukio ja museo eivät saa omaa sallittua pistettä; stadion-/yliopisto-/moskeijakohteiden paikkafakta- ja tekijäportit auki. Ei ward- tai instituutiopisteitä kohteiksi.",
-      "Parasta-lista tyhjä: lähdepaketin viisi aihetta eivät ole viisi vahvistettua käyntikohdetta. Paikallinen ruokalähde puuttuu; viidessä opasjaksossa tutkimus, viljely ja käytännöt ilman yleistä ruokatoistoa.",
-      "Sää null: A:n 48/48 on varmennettu, mutta NOAA/JMA-asemaotsikon sijaintiristiriita ja pääsession ratkaisu avoinna. Ei saa.json-muutoksia tai ilmastolukuja.",
-      "Kaikki kuvakentät tyhjiä, kuvaputki avoin. Nykykäytäntöjen D-tarkistus erillinen."
-    ]
+    "huomiot": []
   }
 }

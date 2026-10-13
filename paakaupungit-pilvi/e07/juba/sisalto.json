@@ -1,7 +1,7 @@
 {
   "artikkeli": {
-    "intro": "Juba on Etelä-Sudanin pääkaupunki **Valkoisen Niilin varrella**. Nykyinen kaupunkirakenne alkoi kehittyä 1900-luvulla vanhemman Bari-asutuksen paikalle. Koulun olemassaolo ja jokikuljetuksen läheisyys vaikuttivat uuden hallintopaikan valintaan. Isoisän matkavuonna 1873 tätä hallintokaupunkia ei vielä ollut, mutta paikka ei ollut asumaton. Joen ja maareittien yhteydet kuuluivat myöhempään kaupungin rakentumiseen.\n\nJebel Kujur erottuu kaupungin luonnonmuotona, ja sen kiveä sekä soraa on käytetty rakentamiseen. Konyo Konyon ruokatori välittää tuotteita myös pienemmille markkinoille. Oppimisen myöhempiin vaiheisiin kuuluvat julkinen yliopisto ja yhteistyöstä syntynyt **yleinen kirjasto**. Kaupungin muisti näkyy myös Hai Cinema -nimessä, joka jäi alueelle vanhan elokuvateatterin käytön vaihduttua.",
-    "teksti": "Juban historian eri vaiheet eivät mahdu yhteen perustamisvuoteen. Vanhempaa Bari-kylää seurasivat 1900-luvun alun lähetysasema ja koulu sekä myöhemmin hallintokaupungin rakentaminen. Koulu, joen läheisyys, hallintotyö ja kauppa liittyivät paikan kehitykseen.\n\nKaupunki syntyi myös paikallisesta työstä. Lentopaikka raivattiin ja sen pinta rakennettiin; polttoaine ja matkatavarat kulkivat työntekijöiden käsien kautta. Konyo Konyon torilla paikallinen sato ja tuontituotteet jatkoivat edelleen pienemmille markkinoille.\n\nVanhat kartat näyttivät viralliset kadut, mutta jättivät monia pihoja ja polkuja pois. Elokuvateatterin historia taas säilyi alueen nimessä. Katujen lisäksi Jubaa voi näin lukea arjen jäljistä, joista kaikki eivät näkyneet hallintokartalla."
+    "intro": "Juba on Etelä-Sudanin pääkaupunki **Valkoisen Niilin varrella**. Nykyinen kaupunkirakenne alkoi kehittyä 1900-luvulla vanhemman Bari-asutuksen paikalle. Koulun olemassaolo ja jokikuljetuksen läheisyys vaikuttivat uuden hallintopaikan valintaan. Joen ja maareittien yhteydet kuuluivat myöhempään kaupungin rakentumiseen.\n\nJebel Kujur erottuu kaupungin luonnonmuotona, ja sen kiveä sekä soraa on käytetty rakentamiseen. Konyo Konyon ruokatori välittää tuotteita myös pienemmille markkinoille. Oppimisen myöhempiin vaiheisiin kuuluvat julkinen yliopisto ja yhteistyöstä syntynyt **yleinen kirjasto**. Kaupungin muisti näkyy myös Hai Cinema -nimessä, joka jäi alueelle vanhan elokuvateatterin käytön vaihduttua.",
+    "teksti": "Vanhempaa Bari-kylää seurasivat 1900-luvun alun lähetysasema ja koulu sekä myöhemmin hallintokaupungin rakentaminen. Koulu, joen läheisyys, hallintotyö ja kauppa liittyivät paikan kehitykseen. Lähetyskoulun tiloihin kuului myös työpaja.\n\nKaupunki syntyi myös paikallisesta työstä. Lentopaikka raivattiin ja sen pinta rakennettiin; polttoaine ja matkatavarat kulkivat työntekijöiden käsien kautta. Konyo Konyon torilla paikallinen sato ja tuontituotteet jatkoivat edelleen pienemmille markkinoille.\n\nVanhat kartat näyttivät viralliset kadut, mutta jättivät monia pihoja ja polkuja pois. Elokuvateatterin historia taas säilyi alueen nimessä."
   },
   "kaupunkilehti": [
     {
@@ -40,7 +40,7 @@
         },
         {
           "otsikko": "Kukkulasta tuli rakennusmateriaalia",
-          "teksti": "Jebel Kujur on Juban maisemassa erottuva pitkänomainen kukkula, jonka vanha paikallinen nimi on Korok. Kaupungin kasvu on ympäröinyt sitä. Kukkulan juurelle on sijoittunut varastoja ja kivimateriaalin käsittelyä, ja kiveä sekä soraa on käytetty teihin ja betonirakentamiseen. Materiaalia käsitellään käsin ja koneellisesti. Rinteillä on kuvattu myös pienimuotoista viljelyä. Luonnonmuoto ei siis ole vain kaukaa katsottava siluetti: sen materiaali on ollut osa kasvavan kaupungin käytännön rakentamista.",
+          "teksti": "Jebel Kujur on Juban maisemassa erottuva pitkänomainen kukkula, jonka vanha paikallinen nimi on Korok. Kaupungin kasvu on ympäröinyt sitä. Kukkulan juurelle on sijoittunut varastoja ja kivimateriaalin käsittelyä, ja kiveä sekä soraa on käytetty teihin ja betonirakentamiseen. Materiaalia käsitellään käsin ja koneellisesti. Rinteillä on myös pienimuotoista viljelyä.",
           "wiki": "Juba",
           "tiedosto": "",
           "lyhyt": "",
@@ -49,7 +49,7 @@
         },
         {
           "otsikko": "Ruokatori on tavaran jatkoyhteys",
-          "teksti": "Konyo Konyossa myydään ruokatarvikkeiden lisäksi vaatteita ja ruoanvalmistusvälineitä. Tuotteissa on paikallista satoa, mutta tuoreita hedelmiä ja vihanneksia on tuotu myös Ugandasta maanteitse. Konyo Konyo ja Gumbo Market välittävät tuoretuotteita pienemmille toreille Juban piirikunnassa ja sen ulkopuolella. Tori on siis myös jakelupaikka. Siellä on lisäksi järjestetty kansallisarkiston asiakirjojen pop-up-esittely: torikaupan keskellä asiakirjat toivat nähtäville kaupungin vanhoja vaiheita.",
+          "teksti": "Konyo Konyossa myydään ruokatarvikkeiden lisäksi vaatteita ja ruoanvalmistusvälineitä. Tuotteissa on paikallista satoa, mutta tuoreita hedelmiä ja vihanneksia on tuotu myös Ugandasta maanteitse. Konyo Konyo ja Gumbo Market välittävät tuoretuotteita pienemmille toreille Juban piirikunnassa ja sen ulkopuolella. Siellä on lisäksi järjestetty kansallisarkiston asiakirjojen pop-up-esittely: torikaupan keskellä asiakirjat toivat nähtäville kaupungin vanhoja vaiheita.",
           "wiki": "Juba",
           "tiedosto": "",
           "lyhyt": "",
@@ -73,12 +73,12 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Jubaan matkustamista tulee toistaiseksi välttää. Maassa olevia kehotetaan poistumaan. Torit, jokivarsi ja koulupaikkojen historia auttavat ymmärtämään kaupunkia. Hoidon ja kuljetusten saatavuudessa on suuria rajoitteita. Valokuvaaminen vaatii erillisen luvan.",
+        "kappale": "Konyo Konyon ruokatori, jokivarsi ja koulupaikkojen historia kertovat Juban kehityksestä. Kukkulan rakennuskivi, yleinen kirjasto ja elokuvateatterin muistava paikannimi ovat muita kaupungin aiheita.",
         "artikkeli": {
           "nimi": "Matkailijan Juba",
           "taitto": "opas",
-          "teksti": "Tunne kaupunki sen arjen jälkien, oppimisen ja tavaravirtojen kautta.",
-          "nosto": "Tunne kaupunki sen arjen jälkien, oppimisen ja tavaravirtojen kautta.",
+          "teksti": "Juban vanhempi Bari-asutus, lähetyskoulu ja jokivarren kauppa edelsivät nykyistä pääkaupunkirakennetta.",
+          "nosto": "Konyo Konyo ja Gumbo Market välittävät tuoretuotteita pienemmille toreille.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
@@ -112,7 +112,7 @@
             },
             {
               "otsikko": "Ruokaperinne",
-              "teksti": "Ful medames kuuluu Jubassa kuvattuihin aamiaisruokiin. Siinä kypsennettyjä härkäpapuja muussataan ja maustetaan esimerkiksi valkosipulilla, sitruunamehulla ja oliiviöljyllä. Ruokaa voidaan tarjota leivän kanssa. Se ei ole vain Juban oma ruoka, vaan liittyy laajempaan ruokaperinteeseen.",
+              "teksti": "Ful medames kuuluu Juban aamiaisruokiin. Siinä kypsennettyjä härkäpapuja muussataan ja maustetaan esimerkiksi valkosipulilla, sitruunamehulla ja oliiviöljyllä. Ruokaa voidaan tarjota leivän kanssa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -163,18 +163,6 @@
               {
                 "otsikko": "Ennen matkapäätöstä",
                 "teksti": "Tarkista Etelä-Sudanin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
-              },
-              {
-                "otsikko": "Hoidon saatavuus",
-                "teksti": "Terveydenhuollon saatavuus on hyvin heikko."
-              },
-              {
-                "otsikko": "Kuvauslupa",
-                "teksti": "Valokuvaaminen edellyttää informaatioministeriön lupaa."
-              },
-              {
-                "otsikko": "Asiakirjat",
-                "teksti": "Ajantasaiset maahantulosäännöt on varmistettava kohdemaan viranomaiselta."
               }
             ]
           },
@@ -189,7 +177,7 @@
       "nostot": [
         {
           "otsikko": "Kartalta puuttuvat pihat",
-          "teksti": "Juban vanhat kaupunkikartat näyttävät hallintorajoja, katuja, kortteleita ja tonttinumeroita. Niihin piirrettiin myös lentopaikka, virallisia rakennuksia ja metsävarauksia. Tavallisten majojen välisiä polkuja jäi kuitenkin pois. Samoin puuttuivat pihat, joilla levättiin ja syötiin yhdessä, sekä vedenhakupaikat. Paperilla tyhjältä näyttävä tila saattoi siis sisältää asuttuja kotipaikkoja. Vanha kartta voi kertoa tarkasti virallisesta kaupunkirakenteesta ja silti jättää suuren osan arkisesta elämästä näkymättömäksi.",
+          "teksti": "Juban vanhat kaupunkikartat näyttävät hallintorajoja, katuja, kortteleita ja tonttinumeroita. Niihin piirrettiin myös lentopaikka, virallisia rakennuksia ja metsävarauksia. Tavallisten majojen välisiä polkuja jäi kuitenkin pois. Samoin puuttuivat pihat, joilla levättiin ja syötiin yhdessä, sekä vedenhakupaikat. Vanha kartta voi kertoa tarkasti virallisesta kaupunkirakenteesta ja silti jättää suuren osan arkisesta elämästä näkymättömäksi.",
           "wiki": "Juba",
           "tiedosto": "",
           "lyhyt": "",
@@ -198,7 +186,7 @@
         },
         {
           "otsikko": "Elokuvailta jatkui yleisössä",
-          "teksti": "Juba Picture House esitti 1900-luvulla muun muassa intialaisia, egyptiläisiä ja yhdysvaltalaisia elokuvia. Ohjelmassa oli lännenelokuvia, rakkaustarinoita, seikkailuja ja luontokuvauksia. Katsojat saattoivat nauraa, huutaa sekä selittää tai kääntää tapahtumia toisilleen. Salissa oli myös eri hintaluokan istumapaikkoja. Rakennusta käytettiin myöhemmin seurakuntatilana, mutta alueelle jäi nimi Hai Cinema. Teatterin toiminta siis päättyi, kun sen muisto jatkoi elämää kaupungin paikannimessä.",
+          "teksti": "Juba Picture House esitti 1900-luvulla muun muassa intialaisia, egyptiläisiä ja yhdysvaltalaisia elokuvia. Ohjelmassa oli lännenelokuvia, rakkaustarinoita, seikkailuja ja luontokuvauksia. Katsojat saattoivat nauraa, huutaa sekä selittää tai kääntää tapahtumia toisilleen. Salissa oli myös eri hintaluokan istumapaikkoja. Rakennusta käytettiin myöhemmin seurakuntatilana, mutta alueelle jäi nimi Hai Cinema.",
           "wiki": "Juba",
           "tiedosto": "",
           "lyhyt": "",
@@ -216,7 +204,7 @@
         },
         {
           "otsikko": "Lentomatka tarvitsi työtä maassa",
-          "teksti": "Jubaan raivattiin lentopaikka 1900-luvun alkupuolella hallintokaupungin rakennusvaiheessa. Kiitotiehen käytettiin myöhemmin murskattua lateriittia eli murramia. Juba kuului kaukoliikenteen välilaskupaikkoihin, ja yöksi pysähtyneitä matkustajia vietiin autolla hotelliin. Lentotoiminta vaati myös kentän raivaamista, polttoaineen kuljettamista sekä koneiden ja matkatavaroiden käsittelyä. Ilmassa kulkevan matkan taustalla oli siis paljon paikallista työtä maassa. Laituri taas liitti maanteitse saapuneen tavaran jokikuljetukseen.",
+          "teksti": "Jubaan raivattiin lentopaikka 1900-luvun alkupuolella hallintokaupungin rakennusvaiheessa. Kiitotiehen käytettiin myöhemmin murskattua lateriittia eli murramia. Juba kuului kaukoliikenteen välilaskupaikkoihin, ja yöksi pysähtyneitä matkustajia vietiin autolla hotelliin. Lentotoiminta vaati myös kentän raivaamista, polttoaineen kuljettamista sekä koneiden ja matkatavaroiden käsittelyä. Laituri taas liitti maanteitse saapuneen tavaran jokikuljetukseen.",
           "wiki": "Juba",
           "tiedosto": "",
           "lyhyt": "",
@@ -242,13 +230,13 @@
       "q": "Minkä maan pääkaupunki Juba on?",
       "options": [
         "Etelä-Sudanin",
-        "Keski-Afrikan",
-        "Päiväntasaajan Guinean",
-        "Etelä-Afrikan"
+        "Sudanin",
+        "Ugandan",
+        "Etiopian"
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Maa erotetaan pohjoisemmasta samannimisestä valtiosta.",
+      "hint": "Kaupunki sijaitsee Valkoisen Niilin varrella.",
       "fact": "Juba on Etelä-Sudanin pääkaupunki.",
       "source": "https://en.wikipedia.org/wiki/Juba"
     },
@@ -276,7 +264,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Materiaaleja on käytetty teihin ja betoniin.",
+      "hint": "Kukkulan vanha paikallinen nimi on Korok.",
       "fact": "Kukkulan kiviaines liittyy teihin ja betonirakentamiseen.",
       "source": "https://jubainthemaking.com/jebel-kudjur/"
     },
@@ -295,17 +283,17 @@
       "source": "https://csrf-southsudan.org/county_profile/juba/"
     },
     {
-      "q": "Mikä vanhan toiminnan muisto säilyy Hai Cinema -nimessä?",
+      "q": "Millaiseen käyttöön Juba Picture House muutettiin?",
       "options": [
-        "Elokuvateatteri",
-        "Koulun työpaja",
-        "Tullivarasto",
-        "Laivan telakka"
+        "Seurakuntatilaksi",
+        "Kirjaston lukusaliksi",
+        "Koulun liikuntasaliksi",
+        "Kauppavarastoksi"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Nimi liittyy alueen aiempaan yhteiseen ajanviettoon.",
-      "fact": "Vanhan teatterin rakennusta käytettiin myöhemmin seurakuntatilana.",
+      "hint": "Alueelle jäi nimi Hai Cinema.",
+      "fact": "Elokuvateatterin rakennusta käytettiin myöhemmin seurakuntatilana.",
       "source": "https://jubainthemaking.com/hai-cinema/"
     }
   ],
@@ -328,15 +316,7 @@
   "nahtavyydet": {},
   "ehdotukset": {
     "lentoasema": "Juba International Airport (JUB)",
-    "huomiot": [
-      "Kartta partial 0/6–8: A:n ehdokkaat eivät hyväksyttyjä kohteita. Kukkula/torit ilman omaa WP/WD-pistettä, rakennukset tekijä-/vaiheportissa.",
-      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
-      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
-      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja.",
-      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
-      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
-      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja."
-    ]
+    "huomiot": []
   },
   "$skeema": "matkakirja-paakaupunki/1",
   "id": "juba",
@@ -354,8 +334,8 @@
   },
   "valokuva": {
     "tiedosto": "ISS-30 Juba - South Sudan.jpg",
-    "lyhyt": "Juban.",
-    "selite": "Juban ja Niilin seutua avaruusasemalta kuvattuna.",
+    "lyhyt": "Juba avaruusasemalta.",
+    "selite": "Juban seutua avaruusasemalta kuvattuna.",
     "lahde": "NASA, Commons (PD)"
   },
   "saatiedot": null

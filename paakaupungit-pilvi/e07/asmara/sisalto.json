@@ -1,7 +1,7 @@
 {
   "artikkeli": {
-    "intro": "Asmara on Eritrean pääkaupunki **ylängöllä rannikon alangon yläpuolella**. Paikalla oli asutusta ja kauppaa jo ennen nykyisen keskustan suuria rakennusvaiheita. Paikallinen perimätieto liittää kaupungin nimen kylien yhdistymiseen naisten aloitteesta. Isoisän matkavuonna 1873 täällä oli vanhempi asutus- ja toripaikka. Nykyisen keskustan kirkot, teatteri ja rautatieasema tulivat myöhemmin.\n\nAsmaran katuverkossa suora ruutukaava kohtaa kaartuvat kadut, vanhat paikat ja maaston. Medeber kehittyi karavaanien pysähdyspaikasta kaupan, käsityön ja kierrätysmateriaalien ympäristöksi. Rautatie nousi Punaisenmeren rannikolta ylängölle, mikä vaati siltoja, tunneleita ja paljon rakennustyötä. Kaupungin kahviloissa ja ruokaperinteessä näkyy puolestaan **paikallisten makujen ja italialaisten ruokalajien kohtaaminen**, kuten berbere-mausteella maustettu tomaattikastikepasta.",
-    "teksti": "Asmaran vanha asutus oli olemassa ennen siirtomaakauden kaupunkisuunnittelua. Paikallinen asutus, torit, Mai Bela -joki ja ylängön maasto vaikuttivat kaupungin suunnitteluun. Katuverkkoon syntyi ruutua ja kaartuvia linjoja, mutta siirtomaahallinto myös erotteli asuinalueita.\n\nRakennusten arki ulottui niiden julkisivuja pidemmälle. Ruusukransin kirkon pihapiirissä oli koulu, kirjasto ja painokone, jolla tuotettiin paikalliskielisiä tekstejä. Teatterin myöhempi elokuvakäyttö puolestaan toi vanhaan rakennukseen projektoritilan.\n\nKaupungin tehtävät ovat myös vaihtaneet paikkaa. Medeber siirrettiin koilliseen teollisuusalueelle, ja kansallismuseo muutti entisestä palatsista entiseen tyttökouluun. Käyttö, sijainti ja rakennuksen ulkoasu eivät aina kerro samaa vaihetta kaupungin historiasta."
+    "intro": "Asmara on Eritrean pääkaupunki **ylängöllä rannikon alangon yläpuolella**. Paikalla oli asutusta ja kauppaa jo ennen nykyisen keskustan suuria rakennusvaiheita. Paikallinen perimätieto liittää kaupungin nimen kylien yhdistymiseen naisten aloitteesta. Vuonna 1873 täällä oli vanhempi asutus- ja toripaikka. Nykyisen keskustan kirkot, teatteri ja rautatieasema tulivat myöhemmin.\n\nAsmaran katuverkossa suora ruutukaava kohtaa kaartuvat kadut, vanhat paikat ja maaston. Medeber kehittyi karavaanien pysähdyspaikasta kaupan, käsityön ja kierrätysmateriaalien ympäristöksi. Rautatie nousi Punaisenmeren rannikolta ylängölle, mikä vaati siltoja, tunneleita ja paljon rakennustyötä. Kaupungin kahviloissa ja ruokaperinteessä näkyy puolestaan **paikallisten makujen ja italialaisten ruokalajien kohtaaminen**, kuten berbere-mausteella maustettu tomaattikastikepasta.",
+    "teksti": "Asmaran vanha asutus oli olemassa ennen siirtomaakauden kaupunkisuunnittelua. Paikallinen asutus, torit, Mai Bela -joki ja ylängön maasto vaikuttivat kaupungin suunnitteluun. Katuverkkoon syntyi ruutua ja kaartuvia linjoja, mutta siirtomaahallinto myös erotteli asuinalueita.\n\nRakennusten arki ulottui niiden julkisivuja pidemmälle. Ruusukransin kirkon pihapiirissä oli koulu, kirjasto ja painokone, jolla tuotettiin paikalliskielisiä tekstejä. Teatterin myöhempi elokuvakäyttö puolestaan toi vanhaan rakennukseen projektoritilan.\n\nKaupungin tehtävät ovat myös vaihtaneet paikkaa. Medeber siirrettiin koilliseen teollisuusalueelle, ja kansallismuseo muutti entisestä palatsista entiseen tyttökouluun."
   },
   "kaupunkilehti": [
     {
@@ -49,7 +49,7 @@
         },
         {
           "otsikko": "Pasta sai berbereä",
-          "teksti": "Asmaran italialais-eritrealaisessa ruokaperinteessä pasta al sugo e berbere yhdistää pastan, tomaattikastikkeen ja berbere-mausteen. Seoksessa on tyypillisesti chiliä ja muita mausteita, mutta yhtä kaikille keittiöille kuuluvaa reseptiä ei ole. Kaupungin ruokakuvauksissa mainitaan myös lasagne, espresso, cappuccino ja gelato. Tutut italialaiset ruokalajit ovat näin liittyneet paikallisiin makuihin. Pasta tai kahvi eivät syntyneet vain Asmarassa, mutta niiden ja eritrealaisen maustamisen kohtaaminen kuuluu kaupungin ruokailuun.",
+          "teksti": "Asmaran italialais-eritrealaisessa ruokaperinteessä pasta al sugo e berbere yhdistää pastan, tomaattikastikkeen ja berbere-mausteen. Kaupungin ruokaperinteeseen kuuluvat myös lasagne, espresso, cappuccino ja gelato. Tutut italialaiset ruokalajit ovat näin liittyneet paikallisiin makuihin. Pasta tai kahvi eivät syntyneet vain Asmarassa, mutta niiden ja eritrealaisen maustamisen kohtaaminen kuuluu kaupungin ruokailuun.",
           "wiki": "Italian Eritrean cuisine",
           "tiedosto": "",
           "lyhyt": "",
@@ -92,7 +92,7 @@
             },
             {
               "otsikko": "Tori ja käsityön kaupunginosa",
-              "teksti": "Keskustan markkinapaikka on pääkirkon pohjoispuolella. Toritavaroihin kuuluu esimerkiksi puuvillatekstiilejä ja keraamisia kahvipannuja. Medeberin historia yhdistää käsityön, kierrätysmateriaalit ja chilin jauhamisen. Kunnioita työpajojen omaa toimintaa ja selvitä vierailumahdollisuudet paikallisesti.",
+              "teksti": "Keskustan markkinapaikka on pääkirkon pohjoispuolella. Toritavaroihin kuuluu esimerkiksi puuvillatekstiilejä ja keraamisia kahvipannuja. Medeberin historia yhdistää käsityön, kierrätysmateriaalit ja chilin jauhamisen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -102,7 +102,7 @@
             },
             {
               "otsikko": "Rakennusten eri vaiheet",
-              "teksti": "Ruusukransin kirkon tiilirakennus ja myöhempi erillinen kellotorni ovat eri vaiheita. Teatterin portiikki ja katutason liiketilat kertovat myös muutoksista. Kaupungin kirkot, moskeija ja synagoga kuuluvat uskonnolliseen ympäristöön; pukeudu kunnioittavasti ja noudata paikkojen rajoituksia.",
+              "teksti": "Ruusukransin kirkon tiilirakennus ja myöhempi erillinen kellotorni ovat eri vaiheita. Teatterin portiikki ja katutason liiketilat kertovat myös muutoksista.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -112,7 +112,7 @@
             },
             {
               "otsikko": "Kahvila-ateria",
-              "teksti": "Asmaran kahviloissa tarjotaan espressoa ja cappuccinoa. Italialais-eritrealaiseen ruokaan kuuluu tomaattikastikepasta, jota maustetaan berbere-mausteella. Myös lasagne ja gelato esiintyvät kaupungin ruokaperinteessä. Kahviloita on kuvattu etenkin Harnet Avenuen ja Sematat Avenuen suunnalla.",
+              "teksti": "Asmaran kahviloissa tarjotaan espressoa ja cappuccinoa. Italialais-eritrealaiseen ruokaan kuuluu tomaattikastikepasta, jota maustetaan berbere-mausteella. Myös lasagne ja gelato esiintyvät kaupungin ruokaperinteessä. Kahviloita on etenkin Harnet Avenuen ja Sematat Avenuen suunnalla.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -184,7 +184,7 @@
     },
     {
       "id": "historia",
-      "nimi": "Kaupunki ei ole pelkkä julkisivu",
+      "nimi": "Katuja, painotyötä ja teatteria",
       "johdanto": "Katujen lisäksi kaupungin historiasta kertovat painotyö, teatterin muutokset ja museon siirtyminen.",
       "nostot": [
         {
@@ -198,7 +198,7 @@
         },
         {
           "otsikko": "Kirkon pihapiirissä oli painokone",
-          "teksti": "Ruusukransin Neitsyt Marian kirkko kehittyi vanhan katolisen lähetysaseman ympärille. Nykyistä suurempaa kirkkoa edelsi pieni Pyhän Markuksen kirkko. Oreste Scanavinin suunnitteleman tiilikirkon kokonaisuuteen kuului myös koulu ja kirjasto. Painokoneella tuotettiin uskonnollisia ja koulutekstejä paikallisilla kielillä. Erillinen kellotorni valmistui kirkon päävaihetta myöhemmin. Pihapiiri oli siis myös oppimisen ja tekstien ympäristö. Ruskea tiili ja lombardialainen uusromaanisuus kertovat rakennuksen omasta arkkitehtuurista.",
+          "teksti": "Ruusukransin Neitsyt Marian kirkko kehittyi vanhan katolisen lähetysaseman ympärille. Nykyistä suurempaa kirkkoa edelsi pieni Pyhän Markuksen kirkko. Oreste Scanavinin suunnitteleman tiilikirkon kokonaisuuteen kuului myös koulu ja kirjasto. Painokoneella tuotettiin uskonnollisia ja koulutekstejä paikallisilla kielillä. Erillinen kellotorni valmistui kirkon päävaihetta myöhemmin. Ruskea tiili ja lombardialainen uusromaanisuus kertovat rakennuksen omasta arkkitehtuurista.",
           "wiki": "Church of Our Lady of the Rosary, Asmara",
           "tiedosto": "",
           "lyhyt": "",
@@ -216,7 +216,7 @@
         },
         {
           "otsikko": "Museo vaihtoi palatsin kouluun",
-          "teksti": "Eritrean kansallismuseo perustettiin Asmaraan 1900-luvun loppupuolella. Se toimi aluksi entisessä kuvernöörin palatsissa ja siirrettiin myöhemmin Comboni-sisarten entiseen tyttökouluun. Museon historia ei siten kuulu vain yhteen taloon. Sen tehtäviin kuuluu historiallisten esineiden ja kulttuuriaineiston säilyttäminen, mutta myös arkeologisia kartoituksia ja kaivauksia. Kokoelmissa on paikallisista arkeologisista kohteista peräisin olevaa aineistoa. Pääkaupungin museo liittyy näin myös tutkimustyöhön talonsa ulkopuolella.",
+          "teksti": "Eritrean kansallismuseo perustettiin Asmaraan 1900-luvun loppupuolella. Se toimi aluksi entisessä kuvernöörin palatsissa ja siirrettiin myöhemmin Comboni-sisarten entiseen tyttökouluun. Sen tehtäviin kuuluu historiallisten esineiden ja kulttuuriaineiston säilyttäminen, mutta myös arkeologisia kartoituksia ja kaivauksia. Kokoelmissa on paikallisista arkeologisista kohteista peräisin olevaa aineistoa. Pääkaupungin museo liittyy näin myös tutkimustyöhön talonsa ulkopuolella.",
           "wiki": "National Museum of Eritrea",
           "tiedosto": "",
           "lyhyt": "",
@@ -228,9 +228,9 @@
         "kysymys": "Mitä työtä Ruusukransin kirkon pihapiirissä tehtiin koulun ja kirjaston lisäksi?",
         "vaihtoehdot": [
           "Paikalliskielisten tekstien painamista",
-          "Rannikon laivojen korjaamista",
-          "Rautatiekaluston kokoamista",
-          "Karavaanien kuormien punnitsemista"
+          "Maahan tuotujen kirjojen sitomista",
+          "Soittimien rakentamista",
+          "Koulupukuja valmistavaa ompelua"
         ],
         "oikea": 0,
         "fakta": "Lähetyskokonaisuuden painokone tuotti sekä oppimiseen että uskontoon liittyviä tekstejä."
@@ -256,9 +256,9 @@
       "q": "Keiden aloitteeseen paikallinen kylien yhdistymistarina liittyy?",
       "options": [
         "Kylien naisten",
-        "Karavaanien johtajien",
-        "Sataman kauppiaiden",
-        "Rautatien rakentajien"
+        "Kylien vanhinten",
+        "Paikallisten maanviljelijöiden",
+        "Kylien päälliköiden"
       ],
       "correct": 0,
       "level": 2,
@@ -276,7 +276,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Matkalla olleet huolsivat varusteita ja hankkivat tarvikkeita.",
+      "hint": "Paikka siirrettiin myöhemmin koilliseen teollisuusalueelle.",
       "fact": "Medeberin alku liittyy matkaajien huoltoon ja kauppaan.",
       "source": "https://whc.unesco.org/document/155767"
     },
@@ -284,9 +284,9 @@
       "q": "Mikä mauste liittyy Asmaran tomaattikastikepastaan?",
       "options": [
         "Berbere",
-        "Sahrami",
-        "Vanilja",
-        "Kardemumma"
+        "Harissa",
+        "Garam masala",
+        "Ras el hanout"
       ],
       "correct": 0,
       "level": 2,
@@ -304,7 +304,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Katsomoon tuli uudenlainen esitystekniikka.",
+      "hint": "Muutos tapahtui teatterin valmistumisen jälkeen.",
       "fact": "Teatteriin rakennettiin projektoritila elokuvien esittämistä varten. Rakennusta on käytetty myös teatterina.",
       "source": "https://whc.unesco.org/document/155767"
     }
@@ -325,16 +325,16 @@
     },
     "kohteet": [
       {
-        "nimi": "Ruusukon Neitsyt Marian kirkko",
+        "nimi": "Ruusukransin Neitsyt Marian kirkko",
         "lat": 15.33675,
         "lon": 38.93789
       }
     ]
   },
   "nahtavyydet": {
-    "Ruusukon Neitsyt Marian kirkko": {
+    "Ruusukransin Neitsyt Marian kirkko": {
       "aika": "1900-luvun alkupuoli",
-      "teksti": "Ruusukransin Neitsyt Marian kirkko sijaitsee Asmaran keskustassa. Oreste Scanavini suunnitteli sen lombardialaisen uusromaanisuuden hengessä, ja rakennuksessa käytettiin ruskeaa tiiltä. Pohjakaavassa on keskilaiva, sivulaivat ja poikkilaiva. Nykyistä kirkkoa edelsi pienempi Pyhän Markuksen kirkko vanhan katolisen lähetysaseman yhteydessä.\n\nKokonaisuuteen kuului koulutoimintaa, kirjasto ja painokone, jolla tuotettiin uskonnollisia sekä koulutekstejä paikallisilla kielillä. Erillinen kellotorni on kirkon päävaihetta myöhempi. Nykyistä rakennusta ja tätä lähetyskokonaisuutta ei ollut vuonna 1873. Paikkaa kutsutaan usein katedraaliksi, mutta se ei ole sama kuin nykyinen Kidane Mehret -katedraali. Sen historia yhdistää arkkitehtuurin ja tekstien tekemisen.",
+      "teksti": "Ruusukransin Neitsyt Marian kirkko sijaitsee Asmaran keskustassa. Oreste Scanavini suunnitteli sen lombardialaisen uusromaanisuuden hengessä, ja rakennuksessa käytettiin ruskeaa tiiltä. Pohjakaavassa on keskilaiva, sivulaivat ja poikkilaiva. Nykyistä kirkkoa edelsi pienempi Pyhän Markuksen kirkko vanhan katolisen lähetysaseman yhteydessä. Kokonaisuuteen kuului koulutoimintaa, kirjasto ja painokone, jolla tuotettiin uskonnollisia sekä koulutekstejä paikallisilla kielillä. Erillinen kellotorni on kirkon päävaihetta myöhempi. Nykyistä rakennusta ja tätä lähetyskokonaisuutta ei ollut vuonna 1873. Paikkaa kutsutaan usein katedraaliksi, mutta se ei ole sama kuin nykyinen Kidane Mehret -katedraali.",
       "kuvat": [
         {
           "tiedosto": "Asmara, cattedrale cattolica, campanile 01.JPG",
@@ -348,15 +348,7 @@
   },
   "ehdotukset": {
     "lentoasema": "Asmara International Airport (ASM)",
-    "huomiot": [
-      "Kartta partial 1/6–8: vain A5:n varmennetun vanhan arkkitehdin Rosary-kirkon alkuperäinen rakennusaihe. Uudet osat/taide eivät kohdeaiheita.",
-      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
-      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
-      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja.",
-      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
-      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
-      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja."
-    ]
+    "huomiot": []
   },
   "$skeema": "matkakirja-paakaupunki/1",
   "id": "asmara",

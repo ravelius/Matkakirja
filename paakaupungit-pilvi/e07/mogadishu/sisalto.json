@@ -1,7 +1,7 @@
 {
   "artikkeli": {
-    "intro": "Mogadishu on Somalian pääkaupunki **Intian valtameren rannikolla**. Se oli jo vanha kaupunki isoisän matkavuonna 1873. Historialliseen ytimeen kuuluvat Hamar Weyne ja Shangani, joiden moskeijat ja kauppapaikat kertovat rannikon pitkästä asutuksesta. Nykyinen katedraali, rautatien historiallinen linja ja radioasema tulivat myöhemmin. Kaupungin historia jatkuu myös asukkaiden työssä ja arjen taidoissa.\n\nLiidon nimi kertoo rannan myöhemmästä käytöstä, kun kalatorin kehittäminen liittyy saaliin käsittelyyn ja säilyttämiseen. Radio Mogadishun arkistossa säilytetään musiikin lisäksi radioteatteria, kirjallisuutta ja urheilun ääniä. **Magneettinauhojen puhdistus ja digitointi** ovat osa tämän muistin hoitamista. Rakennuksillakin on eri vaiheensa: Garesasta tuli museon vanha koti, myöhemmin kokoelma siirtyi uuteen taloon, ja rannikon majakka on osittain sortuneena säilyttämistyön kohde.",
-    "teksti": "Mogadishun vanha rannikkokaupunki edeltää 1900-luvun siirtomaarakennuksia. Arba’a Rukunin alkuperäinen moskeija on keskiajalta, kun taas katedraalin esikuva on keskiaikaisessa Sisiliassa ja rakennus itse myöhemmältä ajalta. Katedraali rakennettiin 1900-luvulla keskiaikaisen esikuvan pohjalta.\n\nKaupungin muistia on säilytetty myös rakennusten ulkopuolella. Radioarkiston magneettinauhoilla on kirjallisuutta, radioteatteria, musiikkia ja urheilua. Nauhojen puhdistus, arviointi ja digitointi tekevät säilyttämisestä konkreettista työtä.\n\nMogadishun museon kokoelma on muuttanut vanhasta Garesasta uudempaan taloon. Majakan rakenteita tutkitaan pitkäaikaisen säilyttämisen suunnittelemiseksi. Näissä paikoissa rakennuksen vaihe ja kulttuurimuistin jatkuminen eivät ole yksi ja sama asia."
+    "intro": "Mogadishu on Somalian pääkaupunki **Intian valtameren rannikolla**. Se oli jo vanha kaupunki vuonna 1873. Historialliseen ytimeen kuuluvat Hamar Weyne ja Shangani, joiden moskeijat ja kauppapaikat kertovat rannikon pitkästä asutuksesta. Nykyinen katedraali, rautatien historiallinen linja ja radioasema tulivat myöhemmin. Liidon rannalla on myös Mogadishun tärkeä kalan rantautumispaikka ja kalatori. Sen kehittämiseen kuuluvat saaliin käsittely, jäähdytys ja jätevesien johtaminen pois. Radio Mogadishun arkistossa säilytetään musiikin lisäksi radiodraamaa, kirjallisuutta ja urheilun ääniä.\n\n**Magneettinauhojen puhdistus ja digitointi** ovat osa tämän muistin hoitamista. Rakennuksillakin on eri vaiheensa: Garesasta tuli museon vanha koti, myöhemmin kokoelma siirtyi uuteen taloon, ja rannikon majakka on osittain sortuneena säilyttämistyön kohde.",
+    "teksti": "Mogadishun vanha rannikkokaupunki edeltää 1900-luvun siirtomaarakennuksia. Arba’a Rukunin alkuperäinen moskeija on keskiajalta, kun taas katedraalin esikuva on keskiaikaisessa Sisiliassa ja rakennus itse myöhemmältä ajalta.\n\nKaupungin muistia on säilytetty myös rakennusten ulkopuolella. Radioarkiston magneettinauhoilla on kirjallisuutta, radiodraamaa, musiikkia ja urheilua. Nauhojen puhdistus, arviointi ja digitointi tekevät säilyttämisestä konkreettista työtä.\n\nMogadishun museon kokoelma on muuttanut vanhasta Garesasta uudempaan taloon. Majakan rakenteita tutkitaan pitkäaikaisen säilyttämisen suunnittelemiseksi."
   },
   "kaupunkilehti": [
     {
@@ -31,7 +31,7 @@
       "nostot": [
         {
           "otsikko": "Ranta, jonka nimi on Liido",
-          "teksti": "Mogadishun Liido on kaupunkiranta vanhan ydinkeskustan pohjoisemmalla rannikolla. Sen nimi tulee italian lido-sanasta, joka tarkoittaa rantaa; paikallisessa käytössä kirjoitetaan Liido. Nykyinen nimetty ranta- ja palvelualue kehittyi siirtomaakaudella. Luonnon hiekkaranta ja sen ääreen myöhemmin rakennetut hotellit sekä ravintolat ovat eri kerroksia. Italian lido-sana jäi paikalliseen käyttöön Liido-muodossa ja nimeää rantavyöhykkeen. Paikka kuuluu kaupungin arkiseen rannikkoympäristöön Intian valtameren äärellä.",
+          "teksti": "Mogadishun Liido on hiekkaranta kaupungin pohjoisemmalla rannikolla. Nimi tulee italian lido-sanasta, joka tarkoittaa rantaa; paikallisessa käytössä kirjoitetaan Liido. Ranta-aluetta kehitettiin 1930-luvun lopulla italialaisten siirtomaakauden asukkaiden käyttöön. Rakentaminen jatkui 1950-luvulla, jolloin läheistä hotellia laajennettiin. Liidon rannalla on myös kalan rantautumispaikka ja kalatori.",
           "wiki": "Lido Beach, Mogadishu",
           "tiedosto": "",
           "lyhyt": "",
@@ -40,7 +40,7 @@
         },
         {
           "otsikko": "Ompelija oppi kauppaa äidiltään",
-          "teksti": "CISP:n julkaisuun haastateltu Dahabo kertoi vaatekauppiaan työstään Hamar Weynessä. Hän oppi kaupankäyntiä auttamalla äitinsä pienessä kaupassa. Työhön kuului tavaran hankkimista myytäväksi ja arkisten tuotteiden, kuten kahvin ja suolan, myyntiä. Myöhemmin hänellä oli oma liike, ja hän myös ompeli vaatteita sekä lakanoita. Äidin kaupassa opitut hankinta- ja myyntitaidot jatkuivat myöhemmin hänen omassa liikkeessään. Kaupan ja käsityön taidot liittyivät hänen työssään toisiinsa: sama ihminen sekä hankki että valmisti myytävää.",
+          "teksti": "Vaatekauppias Dahabo työskenteli Hamar Weynessä. Hän oppi kaupankäyntiä auttamalla äitinsä pienessä kaupassa. Työhön kuului tavaran hankkimista myytäväksi ja arkisten tuotteiden, kuten kahvin ja suolan, myyntiä. Myöhemmin hänellä oli oma liike, ja hän myös ompeli vaatteita sekä lakanoita. Äidin kaupassa opitut hankinta- ja myyntitaidot jatkuivat myöhemmin hänen omassa liikkeessään. Kaupan ja käsityön taidot liittyivät hänen työssään toisiinsa: sama ihminen sekä hankki että valmisti myytävää.",
           "wiki": "Mogadishu",
           "tiedosto": "",
           "lyhyt": "",
@@ -49,7 +49,7 @@
         },
         {
           "otsikko": "Ääni ei säily itsestään",
-          "teksti": "Radio Mogadishun arkistossa ääniä on tallennettu magneettinauhakeloille. Musiikin lisäksi aineistoon kuuluu radioteatteria, kirjallisuutta ja urheilutapahtumia. Nauhoja uhkaavat ikääntyminen ja kosteus. Säilyttämistyössä niitä puhdistetaan, niiden kuntoa arvioidaan ja ääniä digitoidaan myöhempää kuuntelua varten. Arkisto on siten myös materiaalien hoitoa, ei pelkkä hylly täynnä menneisyyttä. Puhdistuksen ja kuntotarkastuksen jälkeen ääni voidaan siirtää nauhalta digitaaliseen muotoon. Työ etenee tallenne kerrallaan.",
+          "teksti": "Radio Mogadishun arkistossa ääniä on tallennettu magneettinauhakeloille. Musiikin lisäksi aineistoon kuuluu radiodraamaa, kirjallisuutta ja urheilutapahtumia. Nauhoja uhkaavat ikääntyminen ja kosteus. Säilyttämistyössä niitä puhdistetaan, niiden kuntoa arvioidaan ja ääniä digitoidaan myöhempää kuuntelua varten. Puhdistuksen ja kuntotarkastuksen jälkeen ääni voidaan siirtää nauhalta digitaaliseen muotoon. Työ etenee tallenne kerrallaan. Säilyttämistä tukee UNESCO Maailman muisti -ohjelmansa kautta Japanin rahoituksella.",
           "wiki": "Radio Mogadishu",
           "tiedosto": "",
           "lyhyt": "",
@@ -58,7 +58,7 @@
         },
         {
           "otsikko": "Kalatori tarvitsee vedenpoiston",
-          "teksti": "Liido Fish Market on Mogadishun kalan rantautumispaikka. Sen kehittämissuunnitelmassa kalankäsittelyn rinnalle kuuluvat säilytys, jäähdytys ja hygienia. Kalan pesu ja alueen puhdistus tuottavat jätevettä, joten vedenpoiston järjestäminen on osa suunnittelua. Saaliin matka ei siis pääty siihen, että vene saapuu rantaan: myös käsittelypaikan toiminta vaikuttaa jatkoon. Kunnostus- ja laajennussuunnitelma kertoo näistä tavoitteista, mutta ei tarkoita, että kaikki uudet kylmätilat ja rakenteet olisivat jo valmistuneet.",
+          "teksti": "Liido Fish Market on Mogadishun kalan rantautumispaikka. Sen kehittämissuunnitelmassa kalankäsittelyn rinnalle kuuluvat säilytys, jäähdytys ja hygienia. Kalan pesu ja alueen puhdistus tuottavat jätevettä, joten vedenpoiston järjestäminen on osa suunnittelua. Kunnostusta tukevat FAO, Japani ja Somalian hallinto. Hanke painottuu Mogadishun ja Banaadirin kalastusyhteisöön.",
           "wiki": "Mogadishu",
           "tiedosto": "",
           "lyhyt": "",
@@ -77,8 +77,8 @@
         "artikkeli": {
           "nimi": "Matkailijan Mogadishu",
           "taitto": "opas",
-          "teksti": "Tunne rannikkokaupunki sen muistista, työstä ja tallenteiden säilyttämisestä.",
-          "nosto": "Tunne rannikkokaupunki sen muistista, työstä ja tallenteiden säilyttämisestä.",
+          "teksti": "Hamar Weyne ja Shangani muodostavat Mogadishun vanhan rannikkoytimen. Radioarkiston tallenteet säilyttävät kaupungin musiikkia, kirjallisuutta ja radiodraamaa.",
+          "nosto": "Radio Mogadishun magneettinauhoja puhdistetaan ja digitoidaan.",
           "jaksot": [
             {
               "otsikko": "Rannikon pääkaupunki",
@@ -102,7 +102,7 @@
             },
             {
               "otsikko": "Radio ja museo",
-              "teksti": "Radio Mogadishun nauhakeloja puhdistetaan ja digitoidaan. Arkistossa on musiikkia, radioteatteria, kirjallisuutta ja urheilutallenteita. Kansallismuseon kokoelmat puolestaan siirrettiin vanhasta Garesasta myöhempään museotaloon.",
+              "teksti": "Radio Mogadishun nauhakeloja puhdistetaan ja digitoidaan. Arkistossa on musiikkia, radiodraamaa, kirjallisuutta ja urheilutallenteita. Kansallismuseon kokoelmat puolestaan siirrettiin vanhasta Garesasta myöhempään museotaloon.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -178,7 +178,7 @@
               }
             ]
           },
-          "lahde": "Wikipedia; FAO; CISP"
+          "lahde": "Wikipedia; UNESCO; FAO; CISP"
         }
       }
     },
@@ -189,7 +189,7 @@
       "nostot": [
         {
           "otsikko": "Garesasta tuli museon vaihe",
-          "teksti": "Mogadishun ensimmäinen museo sijoitettiin Garesaan, aiempaan hallitsijan edustajan asuinrakennukseen. Museo aloitti siirtomaakaudella 1900-luvun alkupuolella. Myöhemmin kokoelma siirrettiin uudempaan kansallismuseorakennukseen, ja instituutio avattiin uudelleen kunnostusten jälkeen. Garesa ja uusi museo eivät siis ole sama talo. Museon esineryhmiin kuuluu vanhoja kolikoita ja keramiikkaa. Kokoelman ja museon nimi voivat jatkua, vaikka rakennus vaihtuu; rakennusten eri vaiheet auttavat erottamaan, mistä paikasta kulloinkin puhutaan.",
+          "teksti": "Mogadishun ensimmäinen museo sijoitettiin Garesaan. Rakennus tehtiin 1800-luvun lopulla Sansibarin sulttaanin edustajan asuinpaikaksi. Se muutettiin museoksi 1930-luvulla. Myöhemmin kokoelma siirrettiin suurempaan, nelikerroksiseen kansallismuseoon. Vanhasta Garesasta tuli alueellinen museo. Kansallismuseon esineryhmiin kuuluu vanhoja kolikoita, keramiikkaa ja perinteistä taidetta.",
           "wiki": "National Museum of Somalia",
           "tiedosto": "",
           "lyhyt": "",
@@ -197,8 +197,8 @@
           "lahde": ""
         },
         {
-          "otsikko": "Sortunut majakka tutkitaan ensin",
-          "teksti": "Mogadishun vanhan rannikkokaupungin majakka Al-Munaara on nykyisin osittain sortunut. Sen historiallinen tehtävä oli meriliikenteen opastaminen. Säilyttämistyössä rakenteen kuntoa ovat tutkineet rakennesuunnittelijat, säilyttämisarkkitehdit ja somalialaiset perintöalan ammattilaiset. Työhön kuuluu dokumentointia ja kiireellisiä tuentatoimia. Tutkimuksen avulla suunnitellaan pitkäaikaista säilyttämistä ja mahdollista restaurointia. Vanha ehjä valokuva ja nykyinen raunio kertovat eri vaiheista; tutkimus ei vielä ole valmis kunnostus.",
+          "otsikko": "Majakan rakenteita säilytetään",
+          "teksti": "Al-Munaara eli Lido Secondo on italialaisten siirtomaa-aikana rakentama majakka Mogadishussa. Osa sen seinästä sortui mereen vuonna 2023. Rakennetta ovat tutkineet rakennesuunnittelijat, säilyttämisarkkitehdit ja somalialaiset perintöalan ammattilaiset. Säilyttämisen suunnitteluun kuuluu rakenteen dokumentointi, kiireellinen tuenta ja suojaaminen lisävaurioilta.",
           "wiki": "Mogadishu Lighthouse",
           "tiedosto": "",
           "lyhyt": "",
@@ -264,10 +264,10 @@
       "level": 1,
       "hint": "Vanhojen tallenteiden materiaalia puhdistetaan ja sen kunto tarkastetaan.",
       "fact": "Vanhoja tallenteita säilytetään nauhakeloilla.",
-      "source": "https://en.wikipedia.org/wiki/Radio_Mogadishu"
+      "source": "https://www.unesco.org/en/articles/safeguarding-voices-shaped-nation"
     },
     {
-      "q": "Millä saarella Mogadishun katedraalin esikuva on?",
+      "q": "Missä Välimeren saaressa Mogadishun katedraalin esikuva sijaitsee?",
       "options": [
         "Sisiliassa",
         "Sardiniassa",
@@ -276,7 +276,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Esikuva on Cefalùn katedraali Italiassa.",
+      "hint": "Esikuvana käytettiin keskiaikaista katedraalia.",
       "fact": "Cefalù sijaitsee Sisiliassa.",
       "source": "https://en.wikipedia.org/wiki/Mogadishu_Cathedral"
     },
@@ -316,7 +316,7 @@
   ],
   "kohdekartta": {
     "numeroympyrat": true,
-    "esittely": "Vanha moskeija, katedraalin rauniot ja Liidon ranta liittyvät rannikkokaupungin eri aikatasoihin. Nykyistä vierailupääsyä ei luvata.",
+    "esittely": "Arba’a Rukunin moskeija, katedraalin rauniot ja Liidon ranta kuuluvat Mogadishun rannikkokaupungin eri rakennus- ja käyttövaiheisiin.",
     "rajat": {
       "pohjoinen": 2.04275,
       "etela": 2.0321,
@@ -345,7 +345,7 @@
   "nahtavyydet": {
     "Arba'a Rukun -moskeija": {
       "aika": "keskiaika",
-      "teksti": "Arba'a Rukun on Shanganin historiallisessa kaupunginosassa oleva moskeija, joka tunnetaan myös nimellä Arba Rucun. Sen alkuperäinen rakennus on keskiajalta. Perustajaksi nimetään Khusra ibn Mubarak al-Shirazi, jonka nimi esiintyy rukoussyvennyksen eli mihrabin piirtokirjoituksessa.\n\nAlkuperäinen moskeija oli vanha jo vuonna 1873, mutta sen tarkkaa rakennustilaa tuolloin ei tunneta. Keskiaikainen alku, myöhemmät korjaukset ja nykyinen rukouspaikan käyttö kuuluvat saman paikan eri vaiheisiin. Kohde on eri moskeija kuin Fakhr al-Din, eikä sen historiaan pidä siirtää naapurikohteen yksityiskohtia.",
+      "teksti": "Arba'a Rukun on Shanganin historiallisessa kaupunginosassa oleva moskeija, joka tunnetaan myös nimellä Arba Rucun. Sen alkuperäinen rakennus on keskiajalta. Perustajaksi nimetään Khusra ibn Mubarak al-Shirazi, jonka nimi esiintyy rukoussyvennyksen eli mihrabin piirtokirjoituksessa.\n\nMoskeijan arkkitehtuuriin kuuluu kupoli ja minareetteja. Mihrabin piirtokirjoitus ajoittuu 1200-luvun jälkipuoliskolle.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -358,7 +358,7 @@
     },
     "Mogadishun katedraalin rauniot": {
       "aika": "1900-luvun alkupuoli",
-      "teksti": "Mogadishun katedraalin alkuperäisen suunnitelman teki Antonio Vandone. Esikuvana oli Cefalùn katedraali Sisiliassa, ja rakennus edusti normannivaikutteista historiallistyyliä. Alkuperäisessä julkisivussa tornit olivat molemmilla sivuilla. Pohjamuoto oli latinalainen risti; sisätilan laivoja erottivat pilarit ja teräväkaaret.\n\nKatedraali rakennettiin 1900-luvun alkupuolen siirtomaakaudella. Sitä ei ollut vuonna 1873, eikä sen keskiaikainen esikuva tee Mogadishun rakennuksesta keskiaikaista. Nykyisin katedraali on raunioitunut. Sen historiallinen arkkitehtuuri ja tämän päivän vaurioitunut tila ovat molemmat osa paikan kertomusta. Rauniokohde ei kuitenkaan tarkoita avoinna olevaa vierailupaikkaa: matkailu Mogadishuun ei tällä hetkellä ole turvallista.",
+      "teksti": "Mogadishun katedraalin alkuperäisen suunnitelman teki Antonio Vandone. Esikuvana oli Cefalùn katedraali Sisiliassa, ja rakennus edusti normannivaikutteista historiallistyyliä. Alkuperäisessä julkisivussa tornit olivat molemmilla sivuilla. Pohjamuoto oli latinalainen risti; sisätilan laivoja erottivat pilarit ja teräväkaaret.\n\nKatedraali rakennettiin 1900-luvun alkupuolen siirtomaakaudella. Nykyisin katedraali on raunioitunut.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -371,7 +371,7 @@
     },
     "Liidon ranta": {
       "aika": "luonnonranta; nimetty palvelualue 1900-luvulta",
-      "teksti": "Liido on Mogadishun hiekkaranta vanhan ydinkeskustan pohjoisemmalla rannikolla. Nimi tulee italian lido-sanasta, joka tarkoittaa rantaa. Paikallisessa käytössä kirjoitusasu on Liido. Luonnonrannan yhteyteen kehittyi siirtomaakaudella nimetty ranta- ja palvelualue, ja rannalla on ollut myöhempiä hotelli- ja ravintolarakennuksia.\n\nNykyinen Liido-nimi ja rannan palvelurakentaminen tulivat vasta 1900-luvun siirtomaakaudella. Ranta on luonnonpaikka kaupungin Intian valtameren rannikolla, mutta rakennukset ja rannikon palvelut kuuluvat omiin vaiheisiinsa. Liidon historiaa voi käsitellä kaupunkiympäristönä ilman uimisen tai paikalle pääsyn lupausta; matkailua Mogadishuun tulee tällä hetkellä välttää.",
+      "teksti": "Liido on Mogadishun hiekkaranta vanhan ydinkeskustan pohjoisemmalla rannikolla. Nimi tulee italian lido-sanasta, joka tarkoittaa rantaa. Paikallisessa käytössä kirjoitusasu on Liido. Luonnonrannan yhteyteen kehittyi siirtomaakaudella nimetty ranta- ja palvelualue, ja rannalla on ollut myöhempiä hotelli- ja ravintolarakennuksia.\n\nNykyinen Liido-nimi ja rannan palvelurakentaminen tulivat vasta 1900-luvun siirtomaakaudella.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -385,15 +385,7 @@
   },
   "ehdotukset": {
     "lentoasema": "Aden Adde International Airport (MGQ)",
-    "huomiot": [
-      "Kartta partial 3/6–8. Majakan piste/tekijäketju, Garesan identiteetti ja Ansalotin paikallisfaktat avoinna.",
-      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
-      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
-      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja.",
-      "C-luonnos: kuvaroolit tyhjät, kuvaputki ja oma kuvakatselu avoinna.",
-      "Sää null: 48/48 primäärivarmennus puuttuu; saa.json ei muutettu.",
-      "D/E/F ja pelikytkentä/julkaisu erillisiä avoimia portteja."
-    ]
+    "huomiot": []
   },
   "$skeema": "matkakirja-paakaupunki/1",
   "id": "mogadishu",
@@ -412,7 +404,7 @@
   "valokuva": {
     "tiedosto": "Mogadishu Sea Port.jpg",
     "lyhyt": "Mogadishun satama.",
-    "selite": "Mogadishun satama ja sen takana avautuvaa kaupunkia ilmasta nähtynä.",
+    "selite": "Mogadishun satama ilmasta nähtynä marraskuussa 2022.",
     "lahde": "Atmis Somalia, Commons (CC0)",
     "vuosi": "2022"
   },

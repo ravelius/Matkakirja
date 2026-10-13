@@ -3,7 +3,7 @@
   "era": "e07",
   "city": "mogadishu",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+  "sourceContentAfterSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
   "assets": [
     {
       "era": "e07",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-      "sourceContentSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sourceContentSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "a9b3b74c7b3a856e6d9721b16abffe82fb96a3dcb1b061d0252052144f74ec95",
+        "semanticContextSHA256": "30c360de736adfcc0120c9ba1d090f52ea5f6022c27ae08d111155ad67825d80",
         "subjectTitle": "Radio ja museo",
         "targetState": "existing-target"
       },
@@ -243,9 +243,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sourceContentAfterSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "a9b3b74c7b3a856e6d9721b16abffe82fb96a3dcb1b061d0252052144f74ec95",
+      "contextAfterSHA256": "30c360de736adfcc0120c9ba1d090f52ea5f6022c27ae08d111155ad67825d80",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -268,7 +268,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+        "sameImageNativeSHA256": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
+        "sameImageExportSHA256": "b189b1467847dee81b6fff479b564bcc27a335d4d98f406d8fd0005f1ef3f20f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -321,7 +329,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-      "sourceContentSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sourceContentSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "78e7cf7d138aaf253c0201c58e62373b595e34d26f4df19c5887ae126620af93",
@@ -508,7 +516,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sourceContentAfterSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "78e7cf7d138aaf253c0201c58e62373b595e34d26f4df19c5887ae126620af93",
       "ownerApproved": true,
@@ -533,7 +541,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+        "sameImageNativeSHA256": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
+        "sameImageExportSHA256": "ba15310f1b97ea11edef14e11e8dde4808590a861754046abc439aad071f11e6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -583,10 +599,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-      "sourceContentSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sourceContentSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "31f9c29ac31d09f597de6322066e13586c0402aec9ea7a266bf793dfa96ef9d3",
-        "semanticContextSHA256": "31f9c29ac31d09f597de6322066e13586c0402aec9ea7a266bf793dfa96ef9d3",
+        "targetBeforeSHA256": "92fb3d06a3f8393e09e8d4f36f29c285ae96230b9116ff443af3efc69ae7498e",
+        "semanticContextSHA256": "92fb3d06a3f8393e09e8d4f36f29c285ae96230b9116ff443af3efc69ae7498e",
         "subjectTitle": "Ompelija oppi kauppaa äidiltään",
         "targetState": "existing-target"
       },
@@ -833,9 +849,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
-      "targetAfterSHA256": "31f9c29ac31d09f597de6322066e13586c0402aec9ea7a266bf793dfa96ef9d3",
-      "contextAfterSHA256": "31f9c29ac31d09f597de6322066e13586c0402aec9ea7a266bf793dfa96ef9d3",
+      "sourceContentAfterSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+      "targetAfterSHA256": "92fb3d06a3f8393e09e8d4f36f29c285ae96230b9116ff443af3efc69ae7498e",
+      "contextAfterSHA256": "92fb3d06a3f8393e09e8d4f36f29c285ae96230b9116ff443af3efc69ae7498e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -858,7 +874,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+        "sameImageNativeSHA256": "740ea6c616ea5fbaccb6647fd229af32f71bd4b0deea045dbfc9f9f162eb5540",
+        "sameImageExportSHA256": "c7b7518551e45144cf9e2d1247e63b7ca0ede1068046a8d678fcbcb68bb1ef7e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -908,10 +932,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-      "sourceContentSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sourceContentSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "112e24f99a10e21066b78b287641fdfe029d5957f4138dc5fd687b069d1b0fb2",
-        "semanticContextSHA256": "112e24f99a10e21066b78b287641fdfe029d5957f4138dc5fd687b069d1b0fb2",
+        "targetBeforeSHA256": "e5e6e8c6349bb995972356f9e9dcfe07b0954c52b21ec3c625a09c46acedbe40",
+        "semanticContextSHA256": "e5e6e8c6349bb995972356f9e9dcfe07b0954c52b21ec3c625a09c46acedbe40",
         "subjectTitle": "Ääni ei säily itsestään",
         "targetState": "existing-target"
       },
@@ -1164,9 +1188,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
-      "targetAfterSHA256": "112e24f99a10e21066b78b287641fdfe029d5957f4138dc5fd687b069d1b0fb2",
-      "contextAfterSHA256": "112e24f99a10e21066b78b287641fdfe029d5957f4138dc5fd687b069d1b0fb2",
+      "sourceContentAfterSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+      "targetAfterSHA256": "e5e6e8c6349bb995972356f9e9dcfe07b0954c52b21ec3c625a09c46acedbe40",
+      "contextAfterSHA256": "e5e6e8c6349bb995972356f9e9dcfe07b0954c52b21ec3c625a09c46acedbe40",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1189,7 +1213,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+        "sameImageNativeSHA256": "2651f58b55d86e70904db9da6ca76f9e94a5524e37ead157a56b924f9bdd2435",
+        "sameImageExportSHA256": "b9247595e813f66fc28968b683c932e7af6d7d9f1473ebbcda9a988a5f4a81d4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -1239,10 +1271,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-      "sourceContentSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sourceContentSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6261da09de8d30e2814b993e70d801ce44711e99c2cf8433086cd348b812e902",
-        "semanticContextSHA256": "6261da09de8d30e2814b993e70d801ce44711e99c2cf8433086cd348b812e902",
+        "targetBeforeSHA256": "4ac91047cb94349d7ca8150e5983c60c8b2a8cec710cc2a132c1eca46554f8ad",
+        "semanticContextSHA256": "4ac91047cb94349d7ca8150e5983c60c8b2a8cec710cc2a132c1eca46554f8ad",
         "subjectTitle": "Kalatori tarvitsee vedenpoiston",
         "targetState": "existing-target"
       },
@@ -1636,9 +1668,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
-      "targetAfterSHA256": "6261da09de8d30e2814b993e70d801ce44711e99c2cf8433086cd348b812e902",
-      "contextAfterSHA256": "6261da09de8d30e2814b993e70d801ce44711e99c2cf8433086cd348b812e902",
+      "sourceContentAfterSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+      "targetAfterSHA256": "4ac91047cb94349d7ca8150e5983c60c8b2a8cec710cc2a132c1eca46554f8ad",
+      "contextAfterSHA256": "4ac91047cb94349d7ca8150e5983c60c8b2a8cec710cc2a132c1eca46554f8ad",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1661,7 +1693,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+        "sameImageNativeSHA256": "530bb5575bafeaf727d1d6b18d27f6579bfb99748f19ba4ae0ede02ff67c9b45",
+        "sameImageExportSHA256": "042d084406257d0e07d517623424654b2b8041de06080ae69261425e33ddb115",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -1711,10 +1751,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-      "sourceContentSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sourceContentSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "eec74a11947a2f736949d883ca437fb183e90471689ba3bd069ef4057720892e",
-        "semanticContextSHA256": "eec74a11947a2f736949d883ca437fb183e90471689ba3bd069ef4057720892e",
+        "targetBeforeSHA256": "e6d8b05e520e9ce2d68c0d83994b1abcb36139434e71a941549c8c8269cb8dc1",
+        "semanticContextSHA256": "e6d8b05e520e9ce2d68c0d83994b1abcb36139434e71a941549c8c8269cb8dc1",
         "subjectTitle": "Garesasta tuli museon vaihe",
         "targetState": "existing-target"
       },
@@ -1898,9 +1938,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
-      "targetAfterSHA256": "eec74a11947a2f736949d883ca437fb183e90471689ba3bd069ef4057720892e",
-      "contextAfterSHA256": "eec74a11947a2f736949d883ca437fb183e90471689ba3bd069ef4057720892e",
+      "sourceContentAfterSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+      "targetAfterSHA256": "e6d8b05e520e9ce2d68c0d83994b1abcb36139434e71a941549c8c8269cb8dc1",
+      "contextAfterSHA256": "e6d8b05e520e9ce2d68c0d83994b1abcb36139434e71a941549c8c8269cb8dc1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1923,7 +1963,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+        "sameImageNativeSHA256": "e31185325b262e564b6e1b20ffb9ecd6bd93bde171139ea22c42740479b96d03",
+        "sameImageExportSHA256": "af8bff738539108e13941df7228a14ff6292685db700826c0164efb52ec2cb60",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -1973,7 +2021,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-      "sourceContentSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sourceContentSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
       "semanticSourceBind": {
         "targetBeforeSHA256": "f7b13d91cdd1f7fda7c2df55ede50beb1653b0a47b256c5b283ec46be86efbe5",
         "semanticContextSHA256": "f7b13d91cdd1f7fda7c2df55ede50beb1653b0a47b256c5b283ec46be86efbe5",
@@ -2160,7 +2208,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sourceContentAfterSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
       "targetAfterSHA256": "f7b13d91cdd1f7fda7c2df55ede50beb1653b0a47b256c5b283ec46be86efbe5",
       "contextAfterSHA256": "f7b13d91cdd1f7fda7c2df55ede50beb1653b0a47b256c5b283ec46be86efbe5",
       "ownerApproved": true,
@@ -2185,7 +2233,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+        "sameImageNativeSHA256": "dbf427cd4dfa44a8558f7da95bee7ef69f3fa657da60d85b444ac0ed9f3be158",
+        "sameImageExportSHA256": "f9f7d443deffa302c7ef93236d62dd2430277d561b0f01fc2f1d6dbddee3f35a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -2204,7 +2260,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/mogadishu/photo-acd0e70ee72f496f6509.jpg",
         "suora": true,
         "lahde": "Atmis Somalia, Commons (CC0)",
-        "selite": "Mogadishun satama ja sen takana avautuvaa kaupunkia ilmasta nähtynä.",
+        "selite": "Mogadishun satama ilmasta nähtynä marraskuussa 2022.",
         "lyhyt": "Mogadishun satama.",
         "tiedosto": "Mogadishu Sea Port.jpg",
         "vuosi": "2022"
@@ -2212,7 +2268,7 @@
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Atmis Somalia, Commons (CC0)",
-        "selite": "Mogadishun satama ja sen takana avautuvaa kaupunkia ilmasta nähtynä.",
+        "selite": "Mogadishun satama ilmasta nähtynä marraskuussa 2022.",
         "lyhyt": "Mogadishun satama.",
         "tiedosto": "Mogadishu Sea Port.jpg",
         "vuosi": "2022"
@@ -2221,7 +2277,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/mogadishu/photo-acd0e70ee72f496f6509.jpg",
         "suora": true,
         "lahde": "Atmis Somalia, Commons (CC0)",
-        "selite": "Mogadishun satama ja sen takana avautuvaa kaupunkia ilmasta nähtynä.",
+        "selite": "Mogadishun satama ilmasta nähtynä marraskuussa 2022.",
         "lyhyt": "Mogadishun satama.",
         "tiedosto": "Mogadishu Sea Port.jpg",
         "vuosi": "2022"
@@ -2238,10 +2294,10 @@
         3712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-      "sourceContentSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
+      "sourceContentSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0d428d60588efca0ed25a93591a0b7c8b8f224c51b257837e8ccb9081d399434",
-        "semanticContextSHA256": "0d428d60588efca0ed25a93591a0b7c8b8f224c51b257837e8ccb9081d399434",
+        "targetBeforeSHA256": "45627af33f3513d38bff217889d86863bdde00cc1e65ad38457496c3f6d5ab44",
+        "semanticContextSHA256": "45627af33f3513d38bff217889d86863bdde00cc1e65ad38457496c3f6d5ab44",
         "subjectTitle": "mogadishu — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2397,7 +2453,7 @@
       "priorMediaFields": {
         "tiedosto": "Mogadishu Sea Port.jpg",
         "lyhyt": "Mogadishun satama.",
-        "selite": "Mogadishun satama ja sen takana avautuvaa kaupunkia ilmasta nähtynä.",
+        "selite": "Mogadishun satama ilmasta nähtynä marraskuussa 2022.",
         "lahde": "Atmis Somalia, Commons (CC0)",
         "vuosi": "2022"
       },
@@ -2425,15 +2481,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Atmis Somalia, Commons (CC0)",
-        "selite": "Mogadishun satama ja sen takana avautuvaa kaupunkia ilmasta nähtynä.",
+        "selite": "Mogadishun satama ilmasta nähtynä marraskuussa 2022.",
         "lyhyt": "Mogadishun satama.",
         "tiedosto": "Mogadishu Sea Port.jpg",
         "vuosi": "2022"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "4346ec4f9ef96475ad48c911c60dfa382beebeed73eca7b9f850bbdb9946903f",
-      "targetAfterSHA256": "0d428d60588efca0ed25a93591a0b7c8b8f224c51b257837e8ccb9081d399434",
-      "contextAfterSHA256": "0d428d60588efca0ed25a93591a0b7c8b8f224c51b257837e8ccb9081d399434",
+      "sourceContentAfterSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+      "targetAfterSHA256": "45627af33f3513d38bff217889d86863bdde00cc1e65ad38457496c3f6d5ab44",
+      "contextAfterSHA256": "45627af33f3513d38bff217889d86863bdde00cc1e65ad38457496c3f6d5ab44",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2456,7 +2512,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ee0c812d34e035f0631935e6cec31941562c2ff13a22d4d3b0b3a66c25db36ef",
+        "sameImageNativeSHA256": "acd0e70ee72f496f65094208c322bfd4be5afbb673e13d906b6c5696b2a29e14",
+        "sameImageExportSHA256": "acd0e70ee72f496f65094208c322bfd4be5afbb673e13d906b6c5696b2a29e14",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2468,6 +2532,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e07/mogadishu/18c2971460fa53ea593618d15673ea3af6b265262b67ad8cae9f361bd11a4a8d.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.266995+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e07/mogadishu/9036c8b6c6ef1a10cd661a3885a2cc4edf07f15e83ed0292d45231ea8f98d5e8.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.266995+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:31:16.585153+00:00"
 }

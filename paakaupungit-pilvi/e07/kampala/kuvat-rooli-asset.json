@@ -3,7 +3,7 @@
   "era": "e07",
   "city": "kampala",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+  "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
   "assets": [
     {
       "era": "e07",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "54feff1d4cc4283e5915b911751a7bb9ef046aea56b7246d048f80b6328aaad0",
+        "semanticContextSHA256": "aed1a989869a5da682a5ed870577ae4310d607925c53610e0b6e793c7dcf6872",
         "subjectTitle": "Tori ja arki",
         "targetState": "existing-target"
       },
@@ -243,9 +243,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "54feff1d4cc4283e5915b911751a7bb9ef046aea56b7246d048f80b6328aaad0",
+      "contextAfterSHA256": "aed1a989869a5da682a5ed870577ae4310d607925c53610e0b6e793c7dcf6872",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -268,7 +268,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+        "sameImageNativeSHA256": "faad3183cc9a53c8cae819b869238865e6f81ec304b3768548f35fec6549e98a",
+        "sameImageExportSHA256": "6a1b324ccc4d1bc21c10ce8606eb38eb28b78a01a7d09cfe0f283002bc725d71",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -321,10 +329,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "5e5dcb80ec8479cc32bf8b516cdd5c83553f0aaf3bfa27a186b522ce4a7064d6",
+        "semanticContextSHA256": "a07da3738717c491940ddfeaee6e34d6da812707271b45aa7ed376a899c26501",
         "subjectTitle": "Opetus ja kulttuuri",
         "targetState": "existing-target"
       },
@@ -508,9 +516,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "5e5dcb80ec8479cc32bf8b516cdd5c83553f0aaf3bfa27a186b522ce4a7064d6",
+      "contextAfterSHA256": "a07da3738717c491940ddfeaee6e34d6da812707271b45aa7ed376a899c26501",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -533,7 +541,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+        "sameImageNativeSHA256": "9f08bffba439519862177d789f3e0dd3296cf0e0dc1d063d303ea39db4df7633",
+        "sameImageExportSHA256": "4d2ad3b2c25970a995dc3e58b51ac1a7c552a8ceade31971511859e01abc62a5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -583,10 +599,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3a462a7a92019be25b5c7a70a866be76f035954eaa7a9e57148499e2a6dc4f94",
-        "semanticContextSHA256": "3a462a7a92019be25b5c7a70a866be76f035954eaa7a9e57148499e2a6dc4f94",
+        "targetBeforeSHA256": "0fb8e2bc95e09605743e01acd0c65c74e5db2127f187f516c01d76c44b6c780d",
+        "semanticContextSHA256": "0fb8e2bc95e09605743e01acd0c65c74e5db2127f187f516c01d76c44b6c780d",
         "subjectTitle": "Kukkulan nimi levisi kaupungiksi",
         "targetState": "existing-target"
       },
@@ -771,9 +787,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
-      "targetAfterSHA256": "3a462a7a92019be25b5c7a70a866be76f035954eaa7a9e57148499e2a6dc4f94",
-      "contextAfterSHA256": "3a462a7a92019be25b5c7a70a866be76f035954eaa7a9e57148499e2a6dc4f94",
+      "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+      "targetAfterSHA256": "0fb8e2bc95e09605743e01acd0c65c74e5db2127f187f516c01d76c44b6c780d",
+      "contextAfterSHA256": "0fb8e2bc95e09605743e01acd0c65c74e5db2127f187f516c01d76c44b6c780d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -796,7 +812,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+        "sameImageNativeSHA256": "cd3fbb607c614816c7c9979f04c3ee12f0bcac1ac9c19069cb7580a853f16314",
+        "sameImageExportSHA256": "837b562105e60c82a4870d63a253f2eb0e13d52ce2f6a83a2543f570dbff7201",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -846,10 +870,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
-        "semanticContextSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
+        "targetBeforeSHA256": "ba46d0e1cda10993fc1ceedbf3332c966c577797f3dbaa5c8f493a1c388ea24e",
+        "semanticContextSHA256": "ba46d0e1cda10993fc1ceedbf3332c966c577797f3dbaa5c8f493a1c388ea24e",
         "subjectTitle": "Torilla on kaksi eri puolta",
         "targetState": "existing-target"
       },
@@ -1034,9 +1058,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
-      "targetAfterSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
-      "contextAfterSHA256": "1053d7a844545f27e0b88ac4f926603667a3194a554c6d6b6e9c3d59774799d7",
+      "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+      "targetAfterSHA256": "ba46d0e1cda10993fc1ceedbf3332c966c577797f3dbaa5c8f493a1c388ea24e",
+      "contextAfterSHA256": "ba46d0e1cda10993fc1ceedbf3332c966c577797f3dbaa5c8f493a1c388ea24e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1059,7 +1083,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+        "sameImageNativeSHA256": "4eb73babb345522321068b12b8b75db0edbaff7aa9444f402ca2d9fc270d73f4",
+        "sameImageExportSHA256": "ee60c5e7317fdd09d36316f694924c042bc76dbfba2bc58916d224be4aacbb82",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -1109,10 +1141,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
-        "semanticContextSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
+        "targetBeforeSHA256": "f239eb6524eb5787a6ec93679a485315c78bf685f068f6f73e45910279e1e518",
+        "semanticContextSHA256": "f239eb6524eb5787a6ec93679a485315c78bf685f068f6f73e45910279e1e518",
         "subjectTitle": "Puusepästä korkeakouluun",
         "targetState": "existing-target"
       },
@@ -1297,9 +1329,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
-      "targetAfterSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
-      "contextAfterSHA256": "0c3cd287071a79f5834fb6223abac1dfb2391f4ca519e7ce43816c92fe467ab8",
+      "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+      "targetAfterSHA256": "f239eb6524eb5787a6ec93679a485315c78bf685f068f6f73e45910279e1e518",
+      "contextAfterSHA256": "f239eb6524eb5787a6ec93679a485315c78bf685f068f6f73e45910279e1e518",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1322,7 +1354,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+        "sameImageNativeSHA256": "f327e1be7e57cd261b58e58aff505d6d3e2219b1e68955789d78e0ef392a23ef",
+        "sameImageExportSHA256": "7f89e9b55ce0ab1271d0f3b001584e87f4087abbba7d09d2a93325c3ca2ff449",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -1372,7 +1412,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "cf4637100f27e2aac7e8c398d82d91bf4bdcdd5e49b646fefdbab67d233b9367",
         "semanticContextSHA256": "cf4637100f27e2aac7e8c398d82d91bf4bdcdd5e49b646fefdbab67d233b9367",
@@ -1559,7 +1599,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "targetAfterSHA256": "cf4637100f27e2aac7e8c398d82d91bf4bdcdd5e49b646fefdbab67d233b9367",
       "contextAfterSHA256": "cf4637100f27e2aac7e8c398d82d91bf4bdcdd5e49b646fefdbab67d233b9367",
       "ownerApproved": true,
@@ -1584,7 +1624,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+        "sameImageNativeSHA256": "b4decc0e7737eee36c2d67b1aee6d96b3b93c98d76e9f6b31227959cf272c49b",
+        "sameImageExportSHA256": "a163af3631159f6dc399ec6bb266303bcc60216602f76dafe611d2f30948a754",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -1634,10 +1682,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
-        "semanticContextSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
+        "targetBeforeSHA256": "81a206bcd0f79c4a8f658095dda39594219b0e35a44c17422a6a8bf2e8f50ff5",
+        "semanticContextSHA256": "81a206bcd0f79c4a8f658095dda39594219b0e35a44c17422a6a8bf2e8f50ff5",
         "subjectTitle": "Mengo ja jauhinkiven nimi",
         "targetState": "existing-target"
       },
@@ -1822,9 +1870,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
-      "targetAfterSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
-      "contextAfterSHA256": "a9f6de8f0a7afc5680f8df13f893039b4c896a416d6b072c905c029d1144c3b8",
+      "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+      "targetAfterSHA256": "81a206bcd0f79c4a8f658095dda39594219b0e35a44c17422a6a8bf2e8f50ff5",
+      "contextAfterSHA256": "81a206bcd0f79c4a8f658095dda39594219b0e35a44c17422a6a8bf2e8f50ff5",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1847,7 +1895,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+        "sameImageNativeSHA256": "5d4d0e4b3e93740ac23447857c27ad5189b43a10f1bf3b33c7861bdd8f11ce6c",
+        "sameImageExportSHA256": "2cfcaab6efd84430f6fc7a873b4673007c9a0d42ff07e7ea0714b293a2dcd439",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -1897,7 +1953,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a3b109239c25e7936bead27556150e3a70516430a582eab4249e069cc876d1e1",
         "semanticContextSHA256": "a3b109239c25e7936bead27556150e3a70516430a582eab4249e069cc876d1e1",
@@ -2084,7 +2140,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "targetAfterSHA256": "a3b109239c25e7936bead27556150e3a70516430a582eab4249e069cc876d1e1",
       "contextAfterSHA256": "a3b109239c25e7936bead27556150e3a70516430a582eab4249e069cc876d1e1",
       "ownerApproved": true,
@@ -2109,7 +2165,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+        "sameImageNativeSHA256": "52828b31b161cda34b3e7781d80f22fd1331d0310d9ca6efbe275a779bf8fe46",
+        "sameImageExportSHA256": "ea5e329f048ad25bcec998f6e1f50b71e90cdd60f97d6f33b16940efd7517c97",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -2128,16 +2192,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/photo-6eab2bed7c8efd04a62d.jpg",
         "suora": true,
         "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
-        "selite": "Puustoa, matalaa kasvillisuutta ja polku Kampalassa vuonna 2026.",
-        "lyhyt": "Metsäkaistale Kampalassa.",
+        "selite": "Kampalassa kuvattu pieni metsäalue vuonna 2026.",
+        "lyhyt": "Pieni metsäalue Kampalassa.",
         "tiedosto": "A local small forest in Kampala Uganda.jpg",
         "vuosi": "2026"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
-        "selite": "Puustoa, matalaa kasvillisuutta ja polku Kampalassa vuonna 2026.",
-        "lyhyt": "Metsäkaistale Kampalassa.",
+        "selite": "Kampalassa kuvattu pieni metsäalue vuonna 2026.",
+        "lyhyt": "Pieni metsäalue Kampalassa.",
         "tiedosto": "A local small forest in Kampala Uganda.jpg",
         "vuosi": "2026"
       },
@@ -2145,8 +2209,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/photo-6eab2bed7c8efd04a62d.jpg",
         "suora": true,
         "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
-        "selite": "Puustoa, matalaa kasvillisuutta ja polku Kampalassa vuonna 2026.",
-        "lyhyt": "Metsäkaistale Kampalassa.",
+        "selite": "Kampalassa kuvattu pieni metsäalue vuonna 2026.",
+        "lyhyt": "Pieni metsäalue Kampalassa.",
         "tiedosto": "A local small forest in Kampala Uganda.jpg",
         "vuosi": "2026"
       },
@@ -2162,10 +2226,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e0be75848ecdcd6ec6cb736e96bb18d82e5df85322a5d0f9a1aa4ea0e88e88ae",
-        "semanticContextSHA256": "e0be75848ecdcd6ec6cb736e96bb18d82e5df85322a5d0f9a1aa4ea0e88e88ae",
+        "targetBeforeSHA256": "ecd141a6529f13b8bffd7b388fab45a6b245c847a91fe3dd8a3bf390dfefbc4e",
+        "semanticContextSHA256": "ecd141a6529f13b8bffd7b388fab45a6b245c847a91fe3dd8a3bf390dfefbc4e",
         "subjectTitle": "kampala — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2311,8 +2375,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "A local small forest in Kampala Uganda.jpg",
-        "lyhyt": "Metsäkaistale Kampalassa.",
-        "selite": "Puustoa, matalaa kasvillisuutta ja polku Kampalassa vuonna 2026.",
+        "lyhyt": "Pieni metsäalue Kampalassa.",
+        "selite": "Kampalassa kuvattu pieni metsäalue vuonna 2026.",
         "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
         "vuosi": "2026"
       },
@@ -2340,15 +2404,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Gratypius, Commons (CC BY-SA 4.0)",
-        "selite": "Puustoa, matalaa kasvillisuutta ja polku Kampalassa vuonna 2026.",
-        "lyhyt": "Metsäkaistale Kampalassa.",
+        "selite": "Kampalassa kuvattu pieni metsäalue vuonna 2026.",
+        "lyhyt": "Pieni metsäalue Kampalassa.",
         "tiedosto": "A local small forest in Kampala Uganda.jpg",
         "vuosi": "2026"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
-      "targetAfterSHA256": "e0be75848ecdcd6ec6cb736e96bb18d82e5df85322a5d0f9a1aa4ea0e88e88ae",
-      "contextAfterSHA256": "e0be75848ecdcd6ec6cb736e96bb18d82e5df85322a5d0f9a1aa4ea0e88e88ae",
+      "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+      "targetAfterSHA256": "ecd141a6529f13b8bffd7b388fab45a6b245c847a91fe3dd8a3bf390dfefbc4e",
+      "contextAfterSHA256": "ecd141a6529f13b8bffd7b388fab45a6b245c847a91fe3dd8a3bf390dfefbc4e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2371,7 +2435,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+        "sameImageNativeSHA256": "6eab2bed7c8efd04a62d0392135ad2f83406eaf9db24075437d5b5a921bbc4c4",
+        "sameImageExportSHA256": "6eab2bed7c8efd04a62d0392135ad2f83406eaf9db24075437d5b5a921bbc4c4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e07",
@@ -2424,7 +2496,7 @@
         4640
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c338ff9f64e5deb8d607dda85319853e3016af2c36191d0fb0826c56ec61c04a",
         "semanticContextSHA256": "c338ff9f64e5deb8d607dda85319853e3016af2c36191d0fb0826c56ec61c04a",
@@ -2646,7 +2718,7 @@
         "tiedosto": "Makerere, Kikoni.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "targetAfterSHA256": "c338ff9f64e5deb8d607dda85319853e3016af2c36191d0fb0826c56ec61c04a",
       "contextAfterSHA256": "c338ff9f64e5deb8d607dda85319853e3016af2c36191d0fb0826c56ec61c04a",
       "ownerApproved": true,
@@ -2671,7 +2743,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+        "sameImageNativeSHA256": "46ac10f97fd0f72df743df384cc159043e84beb81deaac66fe3689576aad4c92",
+        "sameImageExportSHA256": "46ac10f97fd0f72df743df384cc159043e84beb81deaac66fe3689576aad4c92",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -2724,10 +2804,10 @@
         2448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/kampala/sisalto.json",
-      "sourceContentSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "62776d7fd8b7ff8ee2c156429eb0a01e0cd1d83575a1c26f5c4d25f37340cea1",
-        "semanticContextSHA256": "45ceb6ba37d3ba80c06c83ced6ccdbbf3176965b4f975cf140b536250ada8469",
+        "semanticContextSHA256": "e00479d7ef68bf87d8241b5af4d001a4439c0a87c3637c7752d7bff331333ec8",
         "subjectTitle": "Vanhan Kampalan kukkula",
         "targetState": "existing-target"
       },
@@ -2953,9 +3033,9 @@
         "tiedosto": "Gaddafi Mosque view 24.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3b55da80adcdfc6b4b42c2b832e07459bd1ae4087d802fd442e9b858dca8fae0",
+      "sourceContentAfterSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
       "targetAfterSHA256": "62776d7fd8b7ff8ee2c156429eb0a01e0cd1d83575a1c26f5c4d25f37340cea1",
-      "contextAfterSHA256": "45ceb6ba37d3ba80c06c83ced6ccdbbf3176965b4f975cf140b536250ada8469",
+      "contextAfterSHA256": "e00479d7ef68bf87d8241b5af4d001a4439c0a87c3637c7752d7bff331333ec8",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2978,7 +3058,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "1d67ed76079d0d5a8049afe39d286b6ffdf2317b4f20b09c3ff837ffad7bea3c",
+        "sameImageNativeSHA256": "eafe7854d6088fb13cb890a4a47d1bfc92ecd73862a68f6a671483c88b7bdd2d",
+        "sameImageExportSHA256": "eafe7854d6088fb13cb890a4a47d1bfc92ecd73862a68f6a671483c88b7bdd2d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2990,6 +3078,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e07/kampala/ef56e6a0d28fa082ce14ba34af485eb3505713313960504417b1ed004e4de231.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.160360+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e07/kampala/75638dd0bb1e2da39a3f3d89d5b6814d1b10ab17a509f461215f2f94f8948c35.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.160360+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:31:16.454655+00:00"
 }

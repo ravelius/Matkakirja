@@ -3,7 +3,7 @@
   "era": "e07",
   "city": "lusaka",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+  "sourceContentAfterSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
   "assets": [
     {
       "era": "e07",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "062fb62b46d813e9d3b08d5626453ffe0918e05ef7151dd427430af6986693b9",
+        "semanticContextSHA256": "3424788ce1e55fb74dc030a234686b4d64deec05c6127cae76a51e9dd8693bd7",
         "subjectTitle": "Mitä nshiman rinnalla syödään",
         "targetState": "existing-target"
       },
@@ -243,9 +243,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentAfterSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "062fb62b46d813e9d3b08d5626453ffe0918e05ef7151dd427430af6986693b9",
+      "contextAfterSHA256": "3424788ce1e55fb74dc030a234686b4d64deec05c6127cae76a51e9dd8693bd7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -268,7 +268,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+        "sameImageNativeSHA256": "158c2e0c9aa64ee3b0da2c552d9abf35f86593c532d0f3931603cf14dc33927f",
+        "sameImageExportSHA256": "793f6e317e0f1e745f65e947e9538f9a8c1bf62a58c7c94648e9cba6da3abad6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -318,7 +326,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
         "semanticContextSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
@@ -505,7 +513,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentAfterSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "targetAfterSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
       "contextAfterSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
       "ownerApproved": true,
@@ -530,7 +538,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+        "sameImageNativeSHA256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+        "sameImageExportSHA256": "b90f56bcf0abcbe5bad18db958a4b588f9e5ba257296d37e079d1e6cc4f2dd9c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -580,10 +596,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
-        "semanticContextSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
+        "targetBeforeSHA256": "35c3f3c61dee84e02abb11cae637c019ce302cbe1498229221c27cf15dd27e3b",
+        "semanticContextSHA256": "35c3f3c61dee84e02abb11cae637c019ce302cbe1498229221c27cf15dd27e3b",
         "subjectTitle": "Puuro ottaa lisukkeen mukaansa",
         "targetState": "existing-target"
       },
@@ -768,9 +784,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
-      "targetAfterSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
-      "contextAfterSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
+      "sourceContentAfterSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+      "targetAfterSHA256": "35c3f3c61dee84e02abb11cae637c019ce302cbe1498229221c27cf15dd27e3b",
+      "contextAfterSHA256": "35c3f3c61dee84e02abb11cae637c019ce302cbe1498229221c27cf15dd27e3b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -793,7 +809,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+        "sameImageNativeSHA256": "c300d9baeac2fc16c54eb3b7e1048ce8d46980bce4e0be7bf89fae0fc9f46dcb",
+        "sameImageExportSHA256": "066ede738cf85ce0e2d3609ba94c272bc0ce5ac8a955977783d9e6e3391773ac",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -843,7 +867,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
         "semanticContextSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
@@ -1031,7 +1055,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentAfterSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "targetAfterSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
       "contextAfterSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
       "ownerApproved": true,
@@ -1056,7 +1080,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+        "sameImageNativeSHA256": "d3b6e91121742b9a465270dbb0a6f16cb43a1a6757a9734dd2d31e61a8dc3fcd",
+        "sameImageExportSHA256": "8d448542013b03ed9a181ab493bc2680e602ed8e2fb47e970826028de29c33eb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -1106,7 +1138,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "84360acaf93067b81a6e5a549e18ab07fa724544723ecf954245f67d8f77450f",
         "semanticContextSHA256": "84360acaf93067b81a6e5a549e18ab07fa724544723ecf954245f67d8f77450f",
@@ -1293,7 +1325,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentAfterSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "targetAfterSHA256": "84360acaf93067b81a6e5a549e18ab07fa724544723ecf954245f67d8f77450f",
       "contextAfterSHA256": "84360acaf93067b81a6e5a549e18ab07fa724544723ecf954245f67d8f77450f",
       "ownerApproved": true,
@@ -1318,7 +1350,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+        "sameImageNativeSHA256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+        "sameImageExportSHA256": "e2ce78a1192c09867fd64b5b5128c428bb33e43d8f212221db9a6f01d079147a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -1368,10 +1408,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
-        "semanticContextSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
+        "targetBeforeSHA256": "0ea35ba6b8205562c080dd6cb6c2f1c2d70cf1d6848806074b4c284f9af32203",
+        "semanticContextSHA256": "0ea35ba6b8205562c080dd6cb6c2f1c2d70cf1d6848806074b4c284f9af32203",
         "subjectTitle": "Saviastia on historian havainto",
         "targetState": "existing-target"
       },
@@ -1556,9 +1596,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
-      "targetAfterSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
-      "contextAfterSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
+      "sourceContentAfterSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+      "targetAfterSHA256": "0ea35ba6b8205562c080dd6cb6c2f1c2d70cf1d6848806074b4c284f9af32203",
+      "contextAfterSHA256": "0ea35ba6b8205562c080dd6cb6c2f1c2d70cf1d6848806074b4c284f9af32203",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1581,7 +1621,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+        "sameImageNativeSHA256": "74ce0c0044eb677e77973d63a9397b11a9abb948bcae95e8581cf3a54977fa00",
+        "sameImageExportSHA256": "9e0213f6a77f72afc49fd5a4fb3c5c6a34ed40d56d771a3556e3392dd4697301",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -1631,10 +1679,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
-        "semanticContextSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
+        "targetBeforeSHA256": "a3f07a3ec0f84f5d4c7d52ec5802449b9041fb3902d15a0d745297883a64dfcb",
+        "semanticContextSHA256": "a3f07a3ec0f84f5d4c7d52ec5802449b9041fb3902d15a0d745297883a64dfcb",
         "subjectTitle": "Lentoaseman sää on paikan sää",
         "targetState": "existing-target"
       },
@@ -1819,9 +1867,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
-      "targetAfterSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
-      "contextAfterSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
+      "sourceContentAfterSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+      "targetAfterSHA256": "a3f07a3ec0f84f5d4c7d52ec5802449b9041fb3902d15a0d745297883a64dfcb",
+      "contextAfterSHA256": "a3f07a3ec0f84f5d4c7d52ec5802449b9041fb3902d15a0d745297883a64dfcb",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1844,7 +1892,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+        "sameImageNativeSHA256": "398720eb51834c56d75bc66de6fde7184864b871eabd743547983ee02bbf6312",
+        "sameImageExportSHA256": "243c0d338c9068446f9fb29411ef2a315792ddca3688bbce63e449d3d5bbe682",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -1894,7 +1950,7 @@
         2268
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "97c5c94ffd7355e3c01d3833c77c6a56c80563d1ea705daa2b781032ac9f13cc",
         "semanticContextSHA256": "97c5c94ffd7355e3c01d3833c77c6a56c80563d1ea705daa2b781032ac9f13cc",
@@ -2103,7 +2159,7 @@
         "tiedosto": "Lusaka Jun 1 2023 001.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentAfterSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "targetAfterSHA256": "97c5c94ffd7355e3c01d3833c77c6a56c80563d1ea705daa2b781032ac9f13cc",
       "contextAfterSHA256": "97c5c94ffd7355e3c01d3833c77c6a56c80563d1ea705daa2b781032ac9f13cc",
       "ownerApproved": true,
@@ -2128,7 +2184,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+        "sameImageNativeSHA256": "5435d99b97dc36d60fdccd5dd048a966f0a529d3f626859cc9c46d0c90acacb3",
+        "sameImageExportSHA256": "5435d99b97dc36d60fdccd5dd048a966f0a529d3f626859cc9c46d0c90acacb3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -2181,7 +2245,7 @@
         6000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9c0c399de066e3a26b823f4816fc5fdb247f4fa30b37124a6765d07f817c9faf",
         "semanticContextSHA256": "9c0c399de066e3a26b823f4816fc5fdb247f4fa30b37124a6765d07f817c9faf",
@@ -2380,7 +2444,7 @@
         "tiedosto": "Taking off from bauleni.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentAfterSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "targetAfterSHA256": "9c0c399de066e3a26b823f4816fc5fdb247f4fa30b37124a6765d07f817c9faf",
       "contextAfterSHA256": "9c0c399de066e3a26b823f4816fc5fdb247f4fa30b37124a6765d07f817c9faf",
       "ownerApproved": true,
@@ -2405,7 +2469,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+        "sameImageNativeSHA256": "4e1ab8e51d3ef69bffec18754e670c021cb50eee85a63e637adf8899fadba467",
+        "sameImageExportSHA256": "4e1ab8e51d3ef69bffec18754e670c021cb50eee85a63e637adf8899fadba467",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e07",
@@ -2458,7 +2530,7 @@
         1020
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0998e31cb8a15c48c5c3463c83e859d74b204ff4de3d29d673d71c16180211e8",
         "semanticContextSHA256": "0998e31cb8a15c48c5c3463c83e859d74b204ff4de3d29d673d71c16180211e8",
@@ -2747,7 +2819,7 @@
         "tiedosto": "Lusaka, capital city of Zambia.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "adb84071d9870a51896c248cf17c6c84685eb8b333446a26194665698902c732",
+      "sourceContentAfterSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
       "targetAfterSHA256": "0998e31cb8a15c48c5c3463c83e859d74b204ff4de3d29d673d71c16180211e8",
       "contextAfterSHA256": "0998e31cb8a15c48c5c3463c83e859d74b204ff4de3d29d673d71c16180211e8",
       "ownerApproved": true,
@@ -2772,7 +2844,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "707f941e890915588b18d32aa4b74e7cc242061738d21d7c75f025b4debb15b4",
+        "sameImageNativeSHA256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+        "sameImageExportSHA256": "d24f631ace7494d4064b2cebb7f35b420de1a7ee7362ddf1b919ec3563a99a1e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2784,6 +2864,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e07/lusaka/b21087f4df7a2f5c8d4397279cc7993b93112b5f1033d4f7f09e8e753fd09d7a.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.240397+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e07/lusaka/26846055871a2f01a4c00ce04f8ae3756133224907589688fca9bd14b89ee9bf.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.240397+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:31:16.554368+00:00"
 }

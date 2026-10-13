@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Lusaka on Sambian pääkaupunki **sisämaan ylängöllä**, jossa kaupallinen keskusta kulkee rautatien vieressä. Cairo Roadin kaupat ja palvelut sijaitsevat radan länsipuolella, hallinnon alueet idempänä Cathedral Hillin ja Ridgewayn suunnalla. Nykyinen taajama kasvoi rautatieyhteyden ympärille 1900-luvun alussa. Pääkaupungin tehtävät siirtyivät tänne Livingstonesta 1930-luvulla.\n\nIsoisän matkavuonna 1873 tätä myöhempää pääkaupunkia ei ollut, mutta Lenje- ja Soli-yhteisöjen historia alueella oli jo olemassa. Nykyisen kaupungin kieliarkeen kuuluu **Town Nyanja**, joka yhdistää Nyanjan pohjaan vaikutteita muista kielistä ja poikkeaa myös standardikielen rakenteesta. Ruokapöydässä nshiman maissipuuro saa makunsa kasvis-, kala- tai lihalisukkeista. Lusakassa syntynyt jalkapalloilija Barbra Banda on puolestaan vienyt kaupunkisidoksen maailmalle, kahteen hattutemppuun Tokion olympiaturnauksessa asti.",
-    "teksti": "Cairo Road on Lusakan pohjois–eteläsuuntainen kaupallinen pääväylä. Rautatien päärata kulkee sen rinnalla idässä, ja hallinnon alueet sijoittuvat kaupallisesta ytimestä vielä idemmäksi. Kaupungin rakennetta voi siten hahmottaa kiskojen ja pääkadun suhteesta.\n\nTown Nyanja toimii eri kieliryhmien välisen viestinnän kielenä. Sen sanastoon kuuluu vaikutteita englannista, bembasta ja muista paikallisista kielistä. Myös kieliopilliset rakenteet erottavat sitä koulussa käytetystä standardimuodosta.\n\nLusakan alla kalkkikivi ja dolomiittinen marmori liittyvät karstiseen maaperään. Vesi voi kulkea rakoja pitkin maan alla, vaikka kadulla ei näkyisi suurta jokea. Kansallismuseossa taas työkalut, keramiikka ja koriste-esineet kertovat Sambian historiasta: maaperä ja esineet tarjoavat kaupungissa erilaisia tiedon reittejä."
+    "intro": "Lusaka on Sambian pääkaupunki **sisämaan ylängöllä**, jossa kaupallinen keskusta kulkee rautatien vieressä. Cairo Roadin kaupat ja palvelut sijaitsevat radan länsipuolella, hallinnon alueet idempänä Cathedral Hillin ja Ridgewayn suunnalla. Nykyinen taajama kasvoi rautatieyhteyden ympärille 1900-luvun alussa. Pääkaupungin tehtävät siirtyivät tänne Livingstonesta 1930-luvulla. Vuonna 1873 tätä myöhempää pääkaupunkia ei ollut, mutta Lenje- ja Soli-yhteisöjen historia alueella oli jo olemassa.\n\nNykyisen kaupungin kieliarkeen kuuluu **Town Nyanja**, joka yhdistää Nyanjan pohjaan vaikutteita muista kielistä ja poikkeaa myös standardikielen rakenteesta. Ruokapöydässä nshiman maissipuuro saa makunsa kasvis-, kala- tai lihalisukkeista. Lusakassa syntynyt jalkapalloilija Barbra Banda on puolestaan vienyt kaupunkisidoksen maailmalle, kahteen hattutemppuun Tokion olympiaturnauksessa asti.",
+    "teksti": "Cairo Road on Lusakan pohjois–eteläsuuntainen kaupallinen pääväylä. Rautatien päärata kulkee sen rinnalla idässä, ja hallinnon alueet sijoittuvat kaupallisesta ytimestä vielä idemmäksi. Central Market ja New City Market sijaitsevat Cairo Roadin länsipuolella.\n\nTown Nyanja toimii eri kieliryhmien välisen viestinnän kielenä. Sen sanastoon kuuluu vaikutteita englannista, bembasta ja muista paikallisista kielistä. Myös kieliopilliset rakenteet erottavat sitä koulussa käytetystä standardimuodosta.\n\nLusakan alla kalkkikivi ja dolomiittinen marmori liittyvät karstiseen maaperään. Vesi voi kulkea rakoja pitkin maan alla, vaikka kadulla ei näkyisi suurta jokea."
   },
   "kysymykset": [
     {
@@ -64,9 +64,9 @@
       "q": "Mikä on Lusakan matkailijan kansainvälinen lentoasema?",
       "options": [
         "Kenneth Kaunda International Airport",
-        "Melchior Ndadaye International Airport",
-        "São Tomé International Airport",
-        "President Obiang Nguema International Airport"
+        "Harry Mwanga Nkumbula International Airport",
+        "Simon Mwansa Kapwepwe International Airport",
+        "Mfuwe International Airport"
       ],
       "correct": 0,
       "level": 2,
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Puuro ottaa lisukkeen mukaansa",
-          "teksti": "Nshima on Sambian paksu maissijauhopuuro, jota syödään erilaisten lisukkeiden kanssa. Kasvikset, kala tai liha muuttavat aterian kokonaisuutta; pelkkä puuron nimi ei vielä kerro kaikkia makuja. Chibwabwa tarkoittaa kurpitsan lehtiä, ja ifisashi yhdistää vihreitä kasviksia sekä maapähkinöitä, joskus myös lihaa. Käsin syödessä puuron pala voi toimia lisukkeen ottamisen välineenä. Lusakan ruokapaikoissa ateriaa voi siis ymmärtää myös osiensa kautta: pohjaruoka ja sen rinnalla syötävät ruoat tekevät kokonaisuuden.",
+          "teksti": "Nshima on Sambian paksu maissijauhopuuro, jota syödään erilaisten lisukkeiden kanssa. Kasvikset, kala tai liha muuttavat aterian kokonaisuutta; pelkkä puuron nimi ei vielä kerro kaikkia makuja. Chibwabwa tarkoittaa kurpitsan lehtiä, ja ifisashi yhdistää vihreitä kasviksia sekä maapähkinöitä, joskus myös lihaa. Käsin syödessä puuron pala voi toimia lisukkeen ottamisen välineenä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -170,16 +170,16 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Lusakan kierros alkaa kaupallisen keskuksen ja hallintoalueen erottamisesta. Cairo Road kulkee rautatien vierellä, kansallismuseo sijoittuu Independence Avenuen suunnalle. Luontopäiväretket ovat erillisiä keskustan käynnistä. Kuljetuksissa valitaan luotettava ja turvavyöllinen järjestely. Lentoasemalle saavutaan Kenneth Kaundan kansainvälisen kentän kautta; City Airport on eri paikka.",
+        "kappale": "Lusakan kierros alkaa kaupallisen keskuksen ja hallintoalueen erottamisesta. Cairo Road kulkee rautatien vierellä, kansallismuseo sijoittuu Independence Avenuen suunnalle. Luontopäiväretket ovat erillisiä keskustan käynnistä. Lentoasemalle saavutaan Kenneth Kaundan kansainvälisen kentän kautta; City Airport on eri paikka.",
         "artikkeli": {
           "nimi": "Matkailijan Lusaka",
           "taitto": "opas",
           "teksti": "Tutustu kiskojen viereiseen keskustaan, museon esinehistoriaan ja nshiman lisukkeisiin.",
-          "nosto": "Keskustan kävely, luontoretki ja lentoasemasiirtymä suunnitellaan eri järjestelyinä.",
+          "nosto": "Cairo Road on kaupallinen pääväylä rautatien länsipuolella. Hallinnon alueet sijaitsevat idempänä.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Kenneth Kaundan kansainvälisen lentoaseman koodi on LUN. Siirtyminen kaupunkiin sovitaan luotettavan kuljettajan tai majoituksen kanssa, ja kuljetuksessa käytetään turvavyötä. Liikenne on vasemmanpuoleista. City Airport on erillinen kenttä, eikä vanha Njanji-tarina ole tämän päivän lähijunaohje.",
+              "teksti": "Kenneth Kaundan kansainvälisen lentoaseman koodi on LUN. Kaupungissa on myös erillinen Lusaka City Airport. Liikenne on vasemmanpuoleista.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -189,7 +189,7 @@
             },
             {
               "otsikko": "Cairo Roadin kaupallinen keskusta",
-              "teksti": "Pohjois–eteläsuuntainen Cairo Road ja sen itäpuolinen päärata auttavat hahmottamaan keskustaa. Kaupat, toimistot ja torit ovat erilaisia asiointipaikkoja. Lyhyt kävelyosuus suunnitellaan valoisaan aikaan; Central Market ja New City Market ovat erillisiä kauppapaikkoja Cairo Roadin länsipuolella.",
+              "teksti": "Cairo Road kulkee pohjois–eteläsuunnassa pääradan länsipuolella. Central Market ja New City Market ovat erillisiä kauppapaikkoja Cairo Roadin länsipuolella.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Historiaa museossa, luontoa retkellä",
-              "teksti": "Lusakan kansallismuseo esittelee Sambian historiaa ja kulttuuria: kokoelmissa on työkaluja, keramiikkaa ja koriste-esineitä. Munda Wanga ja Lusaka National Park ovat keskustan ulkopuolisia luontokohteita, joiden retket järjestetään erikseen.",
+              "teksti": "Lusakan kansallismuseo esittelee Sambian historiaa ja kulttuuria: kokoelmissa on työkaluja, keramiikkaa ja koriste-esineitä. Munda Wanga ja Lusaka National Park ovat keskustan ulkopuolisia luontokohteita, jotka sijaitsevat kaupungin ulkopuolella.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Mitä nshiman rinnalla syödään",
-              "teksti": "Nshima on maissipuuroa, jonka lisukkeet voivat sisältää kasviksia, kalaa tai lihaa. Ifisashi ja kurpitsan lehdet avaavat paikallista ruokasanastoa. Aterian kokonaisuus selviää lisukkeista, eikä yhden annoksen nimi edusta kaikkia kaupungin ruokapaikkoja. Juomavetenä käytetään pullotettua vettä.",
+              "teksti": "Nshima on maissipuuroa, jonka lisukkeet voivat sisältää kasviksia, kalaa tai lihaa. Ifisashi ja kurpitsan lehdet avaavat paikallista ruokasanastoa. Aterian kokonaisuus selviää lisukkeista, eikä yhden annoksen nimi edusta kaikkia kaupungin ruokapaikkoja.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Sateet keskittyvät loppuvuodesta alkuvuoteen, ja vuoden keskivaiheen kuukaudet ovat kuivia ja viileämpiä. Kuivan kauden loppupuolella lämpenee ennen seuraavaa sateista jaksoa. Sadekaudella tiet voivat tulvia ja sivuteiden kulku vaikeutua. Majoituksen sähkön ja veden varajärjestelyt selvitetään ennen matkaa.",
+              "teksti": "Sateet keskittyvät loppuvuodesta alkuvuoteen, ja vuoden keskivaiheen kuukaudet ovat kuivia ja viileämpiä. Kuivan kauden loppupuolella lämpenee ennen seuraavaa sateista jaksoa. Sadekaudella tiet voivat tulvia ja sivuteiden kulku vaikeutua.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -238,7 +238,7 @@
               {
                 "mita": "Kansallismuseon esinehistoria",
                 "tahdet": 2,
-                "selite": "Varmistettu käynti avaa Sambian historiaa ja kulttuuria."
+                "selite": "Museon kokoelmissa on työkaluja, keramiikkaa ja koriste-esineitä."
               },
               {
                 "mita": "Nshima lisukkeineen",
@@ -253,25 +253,13 @@
               {
                 "mita": "Erillinen luontoretki",
                 "tahdet": 1,
-                "selite": "Keskustan ulkopuolinen kohde käydään ylläpitäjän nykyohjein."
+                "selite": "Munda Wanga ja Lusaka National Park sijaitsevat keskustan ulkopuolella."
               }
             ],
             "hyvaTietaa": [
               {
                 "otsikko": "Ennen matkapäätöstä",
                 "teksti": "Tarkista Sambian ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
-              },
-              {
-                "otsikko": "Turvavyöllinen kuljetus",
-                "teksti": "Vasemmanpuoleisessa liikenteessä käytetään luotettavaa kuljetusta."
-              },
-              {
-                "otsikko": "Vesi ja sähkö",
-                "teksti": "Varajärjestelyt selvitetään, ja juomavetenä käytetään pullotettua vettä."
-              },
-              {
-                "otsikko": "Paikkakohtaiset ehdot",
-                "teksti": "Aukiolo, pääsy ja kuvaus varmistetaan kohteelta ennen käyntiä."
               }
             ]
           },
@@ -282,14 +270,14 @@
     {
       "id": "tiede",
       "nimi": "Kiviä, kiskoja ja mittauksia",
-      "johdanto": "Karstissa vesi kulkee maan alla, vanhassa lähijunassa bussin kori vaihtoi alustaa ja mittauspaikka ratkaisee, mitä säätaulukko kertoo.",
+      "johdanto": "Lusakan karstikallioon liittyy maanalaisia veden reittejä. Kaupungin rautatiekalusto, museo ja sateiden vuodenaikaisuus ovat muita tieteen ja tekniikan aiheita.",
       "tehtava": {
         "kysymys": "Mikä Lusakan kallioperässä auttaa vettä kulkemaan pinnan alla?",
         "vaihtoehdot": [
           "Liukeneva kallio ja sen raot",
-          "Meren vuorovesi ja sen salmet",
-          "Jäätikön pinta ja sen purot",
-          "Tekosaarten väliset kanavat"
+          "Tiivis graniittikallio",
+          "Vettä pidättävä savikerros",
+          "Maaperään jäätynyt routa"
         ],
         "oikea": 0,
         "fakta": "Karstisessa kallioperässä veden reittejä voi olla raoissa ja liukenemisen avaamissa kohdissa."
@@ -315,7 +303,7 @@
         },
         {
           "otsikko": "Saviastia on historian havainto",
-          "teksti": "Lusakan kansallismuseo käsittelee Sambian historiaa ja kulttuuria kivikaudesta nykyiseen aikaan. Arkeologisessa ja historiallisessa aineistossa on työkaluja, keramiikkaa ja koriste-esineitä. Museo avautui yleisölle 1990-luvulla, kun aiempi itsenäistymishistoriaan painottunut suunnitelma oli laajentunut kulttuurihistoriaksi. Mukana on myös nykytaidetta. Arkinen saviastia ja työkalu voivat siten säilyttää tietoa ajasta, josta ei ole katuvalokuvia; kokoelma ulottuu paljon museon omaa rakennushistoriaa kauemmas.",
+          "teksti": "Lusakan kansallismuseo käsittelee Sambian historiaa ja kulttuuria kivikaudesta nykyiseen aikaan. Arkeologisessa ja historiallisessa aineistossa on työkaluja, keramiikkaa ja koriste-esineitä. Museo avautui yleisölle 1990-luvulla, kun aiempi itsenäistymishistoriaan painottunut suunnitelma oli laajentunut kulttuurihistoriaksi. Mukana on myös nykytaidetta.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -323,8 +311,8 @@
           "wiki": "Lusaka National Museum"
         },
         {
-          "otsikko": "Lentoaseman sää on paikan sää",
-          "teksti": "Lusakassa on erilliset ilmastotaulukot City Airportille ja Kenneth Kaundan kansainväliselle lentoasemalle. Ne kuvaavat eri mittauspaikkoja, ja niiden kuukausiarvot eroavat. Pitkän kauden kuukausikeskiarvo ei ole saapumispäivän ennuste: keskilämpö, päivän keskimääräinen ylin ja yön keskimääräinen alin ovat myös eri suureita. Matkailijan lentoaseman nimi ja mittausaseman nimi voivat siksi johtaa eri taulukoihin saman kaupungin sisällä. Paikka, ajanjakso ja mitattava suure kuuluvat kaikki luvun merkitykseen.",
+          "otsikko": "Sateella on selvä vuodenkierto",
+          "teksti": "Lusakassa sateet keskittyvät loppuvuodesta alkuvuoteen. Tammikuun keskilämpö on 22,1 astetta ja sademäärä 210 millimetriä. Heinäkuun keskilämpö on 18,3 astetta, ja kesä–syyskuun kuukausisateet pyöristyvät nollaan millimetriin. Lokakuussa keskilämpö nousee 24,8 asteeseen ja sademäärä on 11 millimetriä. Marraskuussa sademäärä kasvaa 78 millimetriin, joulukuussa 179 millimetriin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -404,16 +392,10 @@
       "nimi": "en-Wikipedia, ilmastotaulukko",
       "kausi": "1991–2020"
     },
-    "luonnehdinta": "Sateet painottuvat loppuvuodesta alkuvuoteen, kun taas vuoden keskivaiheen kuukaudet ovat kuivia. Keskivuoden viileämmän jakson jälkeen lämpenee kuivan kauden lopulla ennen sateiden runsastumista."
+    "luonnehdinta": "Sateet painottuvat loppuvuodesta alkuvuoteen, kun taas vuoden keskivaiheen kuukaudet ovat kuivia. Vuoden keskivaiheen viileämmän jakson jälkeen lämpenee kuivan kauden lopulla ennen sateiden runsastumista."
   },
   "ehdotukset": {
     "lentoasema": "Kenneth Kaunda International Airport (LUN)",
-    "huomiot": [
-      "8 nostoa, 5 opasjaksoa, 5 kysymystä ja 3 tietoa. Bandan hattutemppujen luvut kahdesta riippumattomasta P3/P4-lähteestä, ei kohuja tai nykyurheiluennusteita.",
-      "Kartta partial 0: N1–N3 rakennusten tekijä-/muutosketjut avoimia; N4–N7 omat pisteet tai historiapohja puuttuvat. Cairo Road ei ole aukio, kaukaiset luontokohteet vain oppaassa.",
-      "Sää poikkeaa yhdeksästä muusta: valmis A-auditointi 48/48 NOAA/WMO City Airport 67666, 1991–2020. saa.json SHA vastaa auditointia. Kopio ilman tausta-kenttää, ei käsin numeroita, ei vuosisummaa 759. Laadullinen kuvaus vain tämän sarjan järjestyksestä.",
-      "Njanji-korien yksityiskohta S6:sta, P5 vain abstrakti taustaan. Ei visaan ilman toista korikalustolähdettä; D:n faktaportti avoin.",
-      "Kuvaputki avoin, kaikki kuvakentät tyhjiä. Nimettyjen rakennusten tai museon nykytaiteen kaupallista kuvalupaa ei oletettu."
-    ]
+    "huomiot": []
   }
 }
