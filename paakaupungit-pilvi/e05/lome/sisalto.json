@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "Aboukey Mangrove5.jpg",
-    "lyhyt": "Mangrovekasvillisuutta Loméssa.",
+    "lyhyt": "Lomén mangrovekasvillisuutta.",
     "selite": "Mangrovekasvillisuutta Loméssa.",
     "lahde": "Aboukey, Commons (CC BY-SA 4.0)"
   },
@@ -108,7 +108,7 @@
       "kansikuvat": [
         {
           "tiedosto": "Lac Ouest – Lomé.jpg",
-          "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
+          "lyhyt": "Lomén Lac Ouest -järveä ja sen rantakortteleita.",
           "selite": "Lomén Lac Ouest -järveä ja sen rantakortteleita tammikuussa 2025.",
           "lahde": "Edison McCullen, Wikimedia Commons (CC BY 4.0)"
         },
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Tavara vaihtaa kulkuvälinettä",
-          "teksti": "Lomén merisatama palvelee tuontia ja vientiä. Rannikon päätie vie kaupungista muihin paikkoihin, ja vanhat rautatiereitit ulottuvat sisämaahan. Nykyinen lentoasema on osa samaa liikenteen kokonaisuutta. Kaupungin kaduilla taas liikutaan takseilla ja kaksipyöräisillä, ja keskustaa kiertää Boulevard Circulaire. Lomén liikenne näkyy näin useassa mittakaavassa: kadun lyhyessä kyydissä, rannikkotien matkassa ja mereltä saapuvassa lastissa. Vanhan reitin olemassaolo ei vielä kerro tämän päivän matkustajavuoroista.",
+          "teksti": "Lomén merisatama palvelee tuontia ja vientiä. Rannikon päätie vie kaupungista muihin paikkoihin, ja vanhat rautatiereitit ulottuvat sisämaahan. Nykyinen lentoasema on osa samaa liikenteen kokonaisuutta. Kaupungin kaduilla taas liikutaan takseilla ja kaksipyöräisillä, ja keskustaa kiertää Boulevard Circulaire. Lomén liikenne näkyy näin useassa mittakaavassa: kadun lyhyessä kyydissä, rannikkotien matkassa ja mereltä saapuvassa lastissa. Satama siirtää mereltä tulevaa tavaraa maantiekuljetuksiin, ja keskustan kadut palvelevat paikallisia kyytejä.",
           "wiki": "Lomé",
           "tiedosto": "",
           "lyhyt": "",
@@ -218,8 +218,8 @@
               }
             },
             {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Matkan ajankohdaksi tarvitaan ajantasaiset kulkuyhteys- ja vierailutiedot. Togon eri alueilla on erilaisia matkustamisen varauksia. Merirannan olosuhteita arvioidaan paikan päällä; rannikkoon tutustuminen ei edellytä uimista.",
+              "otsikko": "Meren ja laguunin kaupunki",
+              "teksti": "Lomén vanhan kaupunkitilan etelässä on Atlantti, pohjoisessa laguuni. Bè on idässä ja Aflaon rajapaikka lännessä. Tokoinin ylänkö kohoaa laguunin pohjoispuolella.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -258,12 +258,12 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Merivirrat",
-                "teksti": "Rannikon virtaukset voivat olla voimakkaita."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Togon ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
-                "otsikko": "Vierailut",
-                "teksti": "Puutarhan pääsy ja näyttelyt tarkistetaan ajantasaisesti."
+                "otsikko": "Grand Marché",
+                "teksti": "Atipoji, Asigame ja Assivito ovat keskustorin eri osia."
               },
               {
                 "otsikko": "Grand Lomé",
@@ -311,7 +311,7 @@
         },
         {
           "otsikko": "Puutarha vanhan palatsin ympärillä",
-          "teksti": "Palais de Lomén ympärillä on puisto, joka kuuluu nykyiseen kasvitieteelliseen puutarhakokonaisuuteen. Siellä kasvaa Guineanlahden alueen kasveja ja elää lintuja, ja meri on lähellä. Paikassa on samalla vanhan rakennuksen ja kasvillisuuden historiaa. Kasveihin tutustuminen avaa rannikon luontoa kaupunkiympäristössä, jossa puutarha ja rakennus ovat eri kohteita. Puutarhan lajistoa voi tarkastella omana aiheena ilman, että jokainen sen teos tai rakennelma muuttuu osaksi luonnonpaikan kuvausta.",
+          "teksti": "Palais de Lomén ympärillä on puisto, joka kuuluu nykyiseen kasvitieteelliseen puutarhakokonaisuuteen. Siellä kasvaa Guineanlahden alueen kasveja ja elää lintuja, ja meri on lähellä. Paikassa on samalla vanhan rakennuksen ja kasvillisuuden historiaa. Kasveihin tutustuminen avaa rannikon luontoa kaupunkiympäristössä, jossa puutarha ja rakennus ovat eri kohteita. Guineanlahden alueen kasvillisuus muodostaa puistossa elinympäristöä myös linnuille; vanhan palatsin ympärille jää vihreä alue tiiviin pääkaupungin sisään.",
           "wiki": "Palais de Lomé",
           "tiedosto": "",
           "lyhyt": "",
@@ -351,7 +351,7 @@
   "nahtavyydet": {
     "Lomén keskustan meriranta": {
       "aika": "Luonnonrannikko",
-      "teksti": "Lomén meriranta kuuluu Guineanlahden hiekkarannikkoon. Sen maisemassa on hiekkaa, dyynejä ja kookospuita. Rannalla harjoitetaan paikallista kalastusta, myydään ruokaa ja vietetään vapaa-aikaa, esimerkiksi rantaurheilun parissa. Se on näin sekä työympäristö että kaupungin julkisen elämän paikka.\n\nRannikko on luonnonympäristö, jonka olemassaolo edeltää myöhempää pääkaupunkia. Lomén rannikon asutushistoriassa Bè ja muut ewe-yhteisöt kuuluvat varhaiseen kerrokseen. Vuonna 1873 Lomé ei vielä ollut myöhempi siirtomaapääkaupunki. Nykyisen rannikon olosuhteisiin kuuluvat eroosio joillakin osuuksilla sekä aallokko ja virtaukset. Meri ei ole muuttumaton kulissi, ja rannalla oleskelu on erotettava uimisen edellytyksistä.",
+      "teksti": "Lomén meriranta kuuluu Guineanlahden hiekkarannikkoon. Sen maisemassa on hiekkaa, dyynejä ja kookospuita. Rannalla harjoitetaan paikallista kalastusta, myydään ruokaa ja vietetään vapaa-aikaa, esimerkiksi rantaurheilun parissa. Se on näin sekä työympäristö että kaupungin julkisen elämän paikka.\n\nRannikko on luonnonympäristö, jonka olemassaolo edeltää myöhempää pääkaupunkia. Lomén rannikon asutushistoriassa Bè ja muut ewe-yhteisöt kuuluvat varhaiseen kerrokseen. Vuonna 1873 Lomé ei vielä ollut myöhempi siirtomaapääkaupunki. Nykyisen rannikon olosuhteisiin kuuluvat eroosio joillakin osuuksilla sekä aallokko ja virtaukset. Rannikon eroosio muuttaa rantaviivaa, ja aallokko sekä virtaukset kuuluvat sen luonnonoloihin.",
       "kuvat": [
         {
           "tiedosto": "",

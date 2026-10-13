@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "ISS021-E-26414 - View of Chad.jpg",
-    "lyhyt": "N’Djamenan seutua avaruudesta kuvattuna.",
+    "lyhyt": "N’Djamena avaruudesta.",
     "selite": "N’Djamenan seutua avaruudesta kuvattuna.",
     "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Commons (PD)",
     "vuosi": "2009"
@@ -109,19 +109,19 @@
       "kansikuvat": [
         {
           "tiedosto": "NDjamena, Chad.jpg",
-          "lyhyt": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
+          "lyhyt": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta.",
           "selite": "N’Djamenan kaupunkirakennetta ja jokivarsia avaruudesta toukokuussa 2010.",
           "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
         },
         {
           "tiedosto": "ISS021-E-26415 - View of Chad.jpg",
-          "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+          "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta.",
           "selite": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
           "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)"
         },
         {
           "tiedosto": "ISS021-E-26419 - View of Chad.jpg",
-          "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+          "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta.",
           "selite": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
           "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)"
         }
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Jokiväylästä lentoasemalle",
-          "teksti": "Charilla ja Logonella kuljettiin historiallisesti jokiveneillä. N’Djamena on myös tieverkon solmukohta, ja nykyinen kansainvälinen lentoasema yhdistää kaupungin kauemmas. Kaupungin sisäiseen liikkumiseen käytetään takseja ja moottoripyörätakseja. Kulkuyhteyksien kuvaan kuuluu näin eri aikakausia ja matkan pituuksia: joen vanha väylä, maanteiden verkosto ja kaupungin kaduilla kulkeva kyyti. Historiallinen veneily ei kuitenkaan yksin kerro, että joella olisi nykyinen säännöllinen matkustajapalvelu.",
+          "teksti": "Charilla ja Logonella kuljettiin historiallisesti jokiveneillä. N’Djamena on myös tieverkon solmukohta, ja nykyinen kansainvälinen lentoasema yhdistää kaupungin kauemmas. Kaupungin sisäiseen liikkumiseen käytetään takseja ja moottoripyörätakseja. Kulkuyhteyksien kuvaan kuuluu näin eri aikakausia ja matkan pituuksia: joen vanha väylä, maanteiden verkosto ja kaupungin kaduilla kulkeva kyyti. Lentoasema tunnetaan myös Hassan Djamous’n nimellä, ja sen tunnus NDJ viittaa pääkaupunkiin.",
           "wiki": "N'Djamena",
           "tiedosto": "",
           "lyhyt": "",
@@ -167,11 +167,11 @@
       "matkailijalle": {
         "kuva": {
           "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg",
-          "lyhyt": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
+          "lyhyt": "Charin rantakasvillisuutta.",
           "selite": "Kasvillisuutta Chari-joen rannalla N’Djamenassa.",
           "lahde": "MAKIA ANNAELLE Hyacinthe, Wikimedia Commons (CC0)"
         },
-        "kappale": "N’Djamenan jokimaisema ja markkinat kuuluvat kaupungin arkeen. Kansallismuseon aiheissa on myös esihistoriaa ja fossiililöytöjä. Tavallista lomamatkailua N’Djamenaan ei nykytilanteessa suositella. Museon pääsy, yhteydet ja mahdolliset vierailut selvitetään ajantasaisesti.",
+        "kappale": "N’Djamenan jokimaisema ja markkinat kuuluvat kaupungin arkeen. Kansallismuseon aiheissa on myös esihistoriaa ja fossiililöytöjä. Museon pääsy, yhteydet ja mahdolliset vierailut selvitetään ajantasaisesti.",
         "artikkeli": {
           "nimi": "Matkailijan N'Djamena",
           "taitto": "opas",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Torit ja ruokapaikat",
-              "teksti": "Kaupungin kaupassa näkyvät vilja, taatelit, karja ja kala. N’Djamenassa on erilaisia markkinoita ja ravintolapalveluja. Yksittäisen ruokapaikan tämänhetkinen tarjonta selvitetään ajantasaisesti.",
+              "teksti": "N’Djamenan torikaupassa näkyvät vilja, taatelit, karja ja kala. Kalasta, lihasta ja puuvillasta valmistetaan myös jalostettuja tuotteita. Kauppa yhdistää pääkaupungin ympäröivän seudun tuotantoon.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,8 +219,8 @@
               }
             },
             {
-              "otsikko": "Matkan ajankohta",
-              "teksti": "Tavallista lomamatkailua N’Djamenaan ei nykytilanteessa suositella. Mahdollinen matka vaatii ajantasaista tietoa olosuhteista ja yhteyksistä. Myös museovierailut, vesiliikenne ja rajanylitys pitää selvittää erikseen.",
+              "otsikko": "Kaupungin kaksi nimeä",
+              "teksti": "Fort-Lamy-nimi liittyy siirtomaa-aseman perustamiseen. N’Djamena puolestaan on paikalliseen arabialaiseen Am Djamena -kylännimeen liittyvä nimi. Samalla paikalla on näin eri historiallisista vaiheista periytyvät nimet.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,16 +259,16 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Matkustusvaraus",
-                "teksti": "Tavallista lomamatkailua ei nykytilanteessa suositella."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Tšadin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
-                "otsikko": "Museon pääsy",
-                "teksti": "Nykyinen näyttely- ja vierailutilanne selvitetään erikseen."
+                "otsikko": "Kousséri",
+                "teksti": "Charin vastarannalla oleva Kousséri kuuluu Kameruniin."
               },
               {
-                "otsikko": "Joki ja raja",
-                "teksti": "Vene- ja rajanylitysmahdollisuuksia ei ole vahvistettu."
+                "otsikko": "Museovalos",
+                "teksti": "Valos näyttää fossiilin muodon; se on alkuperäisestä luusta tehty jäljennös."
               }
             ]
           },
@@ -294,7 +294,7 @@
       "nostot": [
         {
           "otsikko": "Museossa on myös fossiilivaloksia",
-          "teksti": "Tšadin kansallismuseon aiheisiin kuuluvat paleontologia, esihistoria, arkeologia ja kulttuuriperintö. Sen kuvauksessa mainitaan myös historia- ja arkistoaineistoa sekä islamilaista perintöä. Paleoantropologian huoneessa esitellään fossiilivaloksia. Ne välittävät löydön muodon museoyleisölle, mutta niitä ei pidä sekoittaa alkuperäisiin luihin. Pääkaupungin museo liittää näin yhteen eri puolilta maata tulevaa aineistoa: kaupungissa voi tarkastella myös paikkoja ja ajanjaksoja, jotka ovat kaukana sen omasta historiasta.",
+          "teksti": "Tšadin kansallismuseon aiheisiin kuuluvat paleontologia, esihistoria, arkeologia ja kulttuuriperintö. Kokoelmiin kuuluu historia- ja arkistoaineistoa sekä islamilaista perintöä. Paleoantropologian huoneessa esitellään fossiilivaloksia. Valoksesta voidaan tarkastella löydön muotoa, vaikka alkuperäinen fossiili säilytetään muualla. Pääkaupungin museo liittää näin yhteen eri puolilta maata tulevaa aineistoa: kaupungissa voi tarkastella myös paikkoja ja ajanjaksoja, jotka ovat kaukana sen omasta historiasta.",
           "wiki": "Chad National Museum",
           "tiedosto": "",
           "lyhyt": "",
@@ -352,7 +352,7 @@
   "nahtavyydet": {
     "Logonen ja Charin yhtymäkohta": {
       "aika": "Luonnonvesistön yhtymäkohta",
-      "teksti": "Logone liittyy Chariin N’Djamenan ja Koussérin luona. Tšadin pääkaupunki sijaitsee jokirannassa, ja vastarannan Kousséri kuuluu Kameruniin. Chari jatkaa yhtymäkohdasta pohjoiseen. Joet ovat osa valtioiden rajaympäristöä ja kaupunkien paikallista maantiedettä.\n\nLogonen valuma-alue ulottuu usean maan puolelle, ja sen päähaaroihin kuuluvat Pendé ja Mbéré. Ylempänä vesistöön liittyy kosteikkoja, joiden luontoa ei voi sellaisenaan siirtää tämän jokisuun kuvaukseen. Vuonna 1873 paikalla ei vielä ollut myöhemmin Fort-Lamysta kasvanutta kaupunkia. Nykyinen pääkaupunki kasvoi jokirannan ympärille myöhemmin; vesistö ja rakennettu kaupunki ovat historian eri kerroksia.",
+      "teksti": "Logone liittyy Chariin N’Djamenan ja Koussérin luona. Tšadin pääkaupunki sijaitsee jokirannassa, ja vastarannan Kousséri kuuluu Kameruniin. Chari jatkaa yhtymäkohdasta pohjoiseen. Joet ovat osa valtioiden rajaympäristöä ja kaupunkien paikallista maantiedettä.\n\nLogonen valuma-alue ulottuu usean maan puolelle, ja sen päähaaroihin kuuluvat Pendé ja Mbéré. Charin ja Logonen vedet jatkavat yhtymäkohdasta yhteisenä jokena Tšadjärven suuntaan. Vuonna 1873 paikalla ei vielä ollut myöhemmin Fort-Lamysta kasvanutta kaupunkia. Nykyinen pääkaupunki kasvoi jokirannan ympärille myöhemmin; vesistö ja rakennettu kaupunki ovat historian eri kerroksia.",
       "kuvat": [
         {
           "tiedosto": "",

@@ -109,20 +109,20 @@
       "kansikuvat": [
         {
           "tiedosto": "View of Accra.jpg",
-          "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019.",
+          "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa.",
           "selite": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019.",
           "lahde": "Snapdragon66, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Labadi Beach 2025.jpg",
-          "lyhyt": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa.",
+          "lyhyt": "Labadin rantaa Accrassa.",
           "selite": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa.",
           "lahde": "Afus199620, Wikimedia Commons (CC0)"
         },
         {
           "tiedosto": "Accra 12 (117438223).jpeg",
-          "lyhyt": "Accran kaupunkiseutua pohjoisen ylängön suunnasta.",
-          "selite": "Accran kaupunkiseutua pohjoisen ylängön suunnasta.",
+          "lyhyt": "Accran kaupunkiseudun näkymä.",
+          "selite": "Accran kaupunkiseudun asutusta laajassa näkymässä.",
           "lahde": "Alexandre Ultré, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
@@ -149,14 +149,14 @@
           "otsikko": "Pikkubussilla on oma reitti",
           "teksti": "Accran tro trot ovat matkustajakäyttöön otettuja pikkubusseja ja pakettiautoja. Ne kulkevat vakiintuneilla reiteillä liikenneterminaalien välillä ja poimivat matkustajia myös matkan varrelta. Kyse on yhteisestä kyydistä, joten auton löytäminen ei vielä kerro, viekö se oikeaan suuntaan. Reitti ja määränpää kannattaa selvittää ennen nousua. Ajoneuvojen kyljissä näkyy usein sanontoja, mutta niiden tärkein tehtävä on arkinen: kuljettaa ihmisiä kaupungin läpi. Tro tro on pieni auto osana suurta liikenneverkkoa.",
           "tiedosto": "'trotro' in Ghana.jpg",
-          "lyhyt": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
+          "lyhyt": "Tro tro -pikkubussi Ghanassa.",
           "selite": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
           "lahde": "DaSupremo, Wikimedia Commons (CC BY-SA 4.0)",
           "wiki": "Accra"
         },
         {
           "otsikko": "Yliopisto ulottuu Legonia pidemmälle",
-          "teksti": "Ghanan yliopiston pääkampus on Legonissa, Accran keskustan koillispuolella. Julkinen yliopisto aloitti nimellä University College of the Gold Coast, ja sen opetusta sekä tutkintoja valvoi aluksi Lontoon yliopisto. Nykyisiin aloihin kuuluvat muun muassa humanistiset ja yhteiskuntatieteet, luonnontieteet, maataloustieteet ja lääketiede. Kaikki opetus ei mahdu yhdelle kampukselle: lääketieteen ja hammaslääketieteen opetusta on myös Korle-Bussa. Yliopistokaupungin tunnistaa siis muustakin kuin Legonin osoitteesta.",
+          "teksti": "Ghanan yliopiston pääkampus on Legonissa, Accran keskustan koillispuolella. Julkinen yliopisto aloitti nimellä University College of the Gold Coast, ja sen opetusta sekä tutkintoja valvoi aluksi Lontoon yliopisto. Nykyisiin aloihin kuuluvat muun muassa humanistiset ja yhteiskuntatieteet, luonnontieteet, maataloustieteet ja lääketiede. Kaikki opetus ei mahdu yhdelle kampukselle: lääketieteen ja hammaslääketieteen opetusta on myös Korle-Bussa. Yliopiston lääketieteen opetusta järjestetään sairaalan yhteydessä Korle-Bussa.",
           "tiedosto": "Pen-writing-notes-studying.jpg",
           "lyhyt": "Muistiinpanojen kirjoittaminen on opiskelun arkea.",
           "selite": "Muistiinpanojen kirjoittaminen kuuluu opiskelun arkeen.",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Kaupungin lentoaseman nykyinen nimi on Accra International Airport, ja sen tunnus on ACC. Kotoka-nimi näkyy yhä vanhemmissa lähteissä. Kaupungissa voi liikkua taksilla tai yhteistä kyytiä tarjoavalla tro trolla. Taksin hinta kannattaa sopia ennen lähtöä, jos mittaria ei käytetä. Tro trohon noustessa kysy määränpää ja varmista, että ajoneuvon reitti sopii omaan matkaasi.",
+              "teksti": "Kaupungin lentoaseman nykyinen nimi on Accra International Airport, ja sen tunnus on ACC. Lentoasema tunnettiin aiemmin nimellä Kotoka International Airport. Kaupungissa voi liikkua taksilla tai yhteistä kyytiä tarjoavalla tro trolla. Taksin hinta kannattaa sopia ennen lähtöä, jos mittaria ei käytetä. Tro trohon noustessa kysy määränpää ja varmista, että ajoneuvon reitti sopii omaan matkaasi.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -213,8 +213,8 @@
               "teksti": "Osun ravintoloista löytyy sekä ghanalaista että kansainvälistä ruokaa. Makolan markkinoilla puolestaan näet ruoan raaka-aineita osana kaupungin tavallista kaupankäyntiä. Torikierroksen ja ravintola-aterian voi yhdistää samaan päivään, mutta ne näyttävät ruoasta eri puolen. Jos annoksen sisältö on epäselvä, kysy ennen tilaamista. Riisin ja papupadan kaltaiset ateriat muistuttavat, että tutustuminen voi alkaa arkiselta lautaselta.",
               "kuva": {
                 "tiedosto": "Rice and beans stew in bowl.jpg",
-                "lyhyt": "Riisi ja papupata muodostavat aterian.",
-                "selite": "Riisi ja papupata muodostavat aterian.",
+                "lyhyt": "Riisiä ja papupataa kulhossa.",
+                "selite": "Kulhossa on riisiä ja papupataa.",
                 "lahde": "daSupremo, Wikimedia Commons (CC BY-SA 4.0)"
               }
             },
@@ -316,7 +316,7 @@
         },
         {
           "otsikko": "Kalastuskaupunginosassa myös asutaan",
-          "teksti": "Jamestown ja Usshertown ovat Accran rannikon kalastusyhteisöjä ja osa Ga-asukkaiden vanhaa kaupunkia. Asuminen, kaupankäynti ja kalastus sijaitsevat samalla rannikkovyöhykkeellä. Vanhat eurooppalaiset linnoitukset kuuluvat maiseman historiaan, mutta niiden ympäristö on myös ihmisten kotiseutua ja työpaikkoja. Nykyinen kalasatama edustaa uudempaa rakentamista. Rannikkoa katsellessa kannattaa erottaa nämä kerrokset: kalastuksen pitkä historia ei tarkoita, että nykyiset satamarakenteet olisivat yhtä vanhoja.",
+          "teksti": "Jamestown ja Usshertown ovat Accran rannikon kalastusyhteisöjä ja osa Ga-asukkaiden vanhaa kaupunkia. Asuminen, kaupankäynti ja kalastus sijaitsevat samalla rannikkovyöhykkeellä. Vanhat eurooppalaiset linnoitukset kuuluvat maiseman historiaan, mutta niiden ympäristö on myös ihmisten kotiseutua ja työpaikkoja. Nykyinen kalasatama edustaa uudempaa rakentamista. Jamestownin kalastusyhteisöjen työ jatkuu nykyisessä kalasatamassa, joka on rannikon uusia rakennushankkeita.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -394,7 +394,7 @@
     },
     "Osun linna": {
       "aika": "1600-luku, myöhempiä rakennuskerroksia",
-      "teksti": "Osun linna seisoo Guineanlahden rannalla Osun kaupunginosassa. Christiansborg-nimelläkin tunnetun rakennuksen kehitys liittyy rannikon kauppaan: varastotiloja ja puolustusvarustuksia laajennettiin, kun alkuperäisen kauppapaikan tila ei enää riittänyt. Kullan ja norsunluun rinnalla kaupattiin orjuutettuja ihmisiä. Kaupankäynnin ja puolustuksen tarpeet muokkasivat siten samaa rakennusta.\n\nVuonna 1873 paikalla oli jo linna, mutta nykyiseen kokonaisuuteen kuuluu myös myöhempien aikojen muutoksia. Yhtenäinen julkisivu ei kerro kaikkien huoneiden samaa ikää. Linnan ympäristössä on lisäksi puutarha, jossa kasvaa sekä paikallisia että muualta tuotuja kasveja. Osu kuuluu Unescon Ghanan rannikon linnojen ja linnoitusten maailmanperintökokonaisuuteen. Rakennukseen pääsy on erillinen asia: paikalle ei voi olettaa pääsevänsä sisään vapaana kävelyvierailuna.",
+      "teksti": "Osun linna seisoo Guineanlahden rannalla Osun kaupunginosassa. Christiansborg-nimelläkin tunnetun rakennuksen kehitys liittyy rannikon kauppaan: varastotiloja ja puolustusvarustuksia laajennettiin, kun alkuperäisen kauppapaikan tila ei enää riittänyt. Kullan ja norsunluun rinnalla kaupattiin orjuutettuja ihmisiä. Kaupankäynnin ja puolustuksen tarpeet muokkasivat siten samaa rakennusta.\n\nVuonna 1873 paikalla oli jo linna, mutta nykyiseen kokonaisuuteen kuuluu myös myöhempien aikojen muutoksia. Yhtenäinen julkisivu ei kerro kaikkien huoneiden samaa ikää. Linnan ympäristössä on lisäksi puutarha, jossa kasvaa sekä paikallisia että muualta tuotuja kasveja. Osu kuuluu Unescon Ghanan rannikon linnojen ja linnoitusten maailmanperintökokonaisuuteen. Linna on ollut sekä kauppapaikka että valtion hallinnon käytössä.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },

@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "yamoussoukro",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+  "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
   "assets": [
     {
       "era": "e05",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: ruokabanaanit kasvissa.",
-        "lyhyt": "Havainnekuva: ruokabanaanit kasvissa."
+        "selite": "Havainnekuva: ruokabanaanit kasvissa."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-traveler-v1-20261012T182050Z-3f4237f9a7f5.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: ruokabanaanit kasvissa.",
-        "lyhyt": "Havainnekuva: ruokabanaanit kasvissa."
+        "selite": "Havainnekuva: ruokabanaanit kasvissa."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "c82cb340fc11180c905d16cc0bcb7988cd5fbe333ce28cc269fa82490800d8e9",
+        "semanticContextSHA256": "eb685b67fea9f28f7465b14357a2e80426f7bdbe4497a4e21354be213554ec8f",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -205,9 +205,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -226,17 +226,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "c82cb340fc11180c905d16cc0bcb7988cd5fbe333ce28cc269fa82490800d8e9",
+      "contextAfterSHA256": "eb685b67fea9f28f7465b14357a2e80426f7bdbe4497a4e21354be213554ec8f",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "c82cb340fc11180c905d16cc0bcb7988cd5fbe333ce28cc269fa82490800d8e9",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "c82cb340fc11180c905d16cc0bcb7988cd5fbe333ce28cc269fa82490800d8e9",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "3f4237f9a7f505f2a80a77cf6d0bc49da1665cd6bd51f1f4ad37067834f1d98d",
+        "sameImageExportSHA256": "90dc1a089f1fc36be33b5a689e3d11ec947580f8f2f0327d9cb89dd1ed9b40dd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -261,10 +282,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: attiéké kalan kanssa.",
-        "lyhyt": "Havainnekuva: attiéké kalan kanssa."
+        "selite": "Havainnekuva: attiéké kalan kanssa."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -272,10 +293,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-o4-v2-20261012T181713Z-2fae412ea12a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: attiéké kalan kanssa.",
-        "lyhyt": "Havainnekuva: attiéké kalan kanssa."
+        "selite": "Havainnekuva: attiéké kalan kanssa."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -289,7 +310,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "8c8cead08ed686405cb7b82720cc5b4bd2f073d81b874259247e3e389d80f20c",
@@ -469,9 +490,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -490,17 +511,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "8c8cead08ed686405cb7b82720cc5b4bd2f073d81b874259247e3e389d80f20c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "8c8cead08ed686405cb7b82720cc5b4bd2f073d81b874259247e3e389d80f20c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "8c8cead08ed686405cb7b82720cc5b4bd2f073d81b874259247e3e389d80f20c",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "2fae412ea12a0f71cc3b18ae0501ce2e914474b389077ef2f17ddaae79378587",
+        "sameImageExportSHA256": "ea38242573a693dca23666d6f30b917ff18404c7176a0e99a879b00ba895f840",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -522,10 +564,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-k4-v1-20261012T200152Z-370925b26c8e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: hedelmien kuljetus.",
-        "lyhyt": "Havainnekuva: hedelmien kuljetus."
+        "selite": "Havainnekuva: hedelmien kuljetus."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -533,10 +575,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-k4-v1-20261012T200152Z-370925b26c8e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: hedelmien kuljetus.",
-        "lyhyt": "Havainnekuva: hedelmien kuljetus."
+        "selite": "Havainnekuva: hedelmien kuljetus."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -550,7 +592,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
         "targetBeforeSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
         "semanticContextSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
@@ -745,9 +787,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -766,17 +808,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "targetAfterSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
       "contextAfterSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
+        "contextAfterSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
+          "semanticContextSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
+          "subjectTitle": "Torimatka kulkee kahteen suuntaan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "370925b26c8e4828709743a51002c0870e6fe9fe22e898685975418097b8f154",
+        "sameImageExportSHA256": "0e2302275eaabf17b4d6b36371f062c7a264f360db823d4bdaa92d62f564349f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -798,10 +861,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: maniokkimassan höyrytys.",
-        "lyhyt": "Havainnekuva: maniokkimassan höyrytys."
+        "selite": "Havainnekuva: maniokkimassan höyrytys."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -809,10 +872,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l1-v1-20261012T191248Z-8397f97d9b4f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: maniokkimassan höyrytys.",
-        "lyhyt": "Havainnekuva: maniokkimassan höyrytys."
+        "selite": "Havainnekuva: maniokkimassan höyrytys."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -826,7 +889,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
         "semanticContextSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
@@ -980,9 +1043,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1001,17 +1064,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "targetAfterSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
       "contextAfterSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
+        "contextAfterSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
+          "semanticContextSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
+          "subjectTitle": "Maniokki muuttuu rakeiksi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "8397f97d9b4fe7d135128abf7c0d82295e1f3e5d89da8b720e322f4c83ad3770",
+        "sameImageExportSHA256": "d0f205be5ebe22fb3fe266954409cf0a8e593192b5877ee2aaa00a76a20a8346",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1033,10 +1117,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: ruokabanaanit.",
-        "lyhyt": "Havainnekuva: ruokabanaanit."
+        "selite": "Havainnekuva: ruokabanaanit."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1044,10 +1128,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l2-v1-20261012T181814Z-390be92759b1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: ruokabanaanit.",
-        "lyhyt": "Havainnekuva: ruokabanaanit."
+        "selite": "Havainnekuva: ruokabanaanit."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1061,7 +1145,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
         "semanticContextSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
@@ -1211,9 +1295,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1232,17 +1316,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "targetAfterSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
       "contextAfterSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
+        "contextAfterSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
+          "semanticContextSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
+          "subjectTitle": "Banaani kuuluu myös kattilaan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "390be92759b1f1662f3d0d52b04c6bf891a44d7250af6145ba883f6538addb5b",
+        "sameImageExportSHA256": "fd6894aa234b23a4b76acd8de94a1c7df8b8e1490a32955a32652c912f0294ba",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1264,10 +1369,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: jamssin mukulat.",
-        "lyhyt": "Havainnekuva: jamssin mukulat."
+        "selite": "Havainnekuva: jamssin mukulat."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1275,10 +1380,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l3-v1-20261012T181945Z-18662bfb65dc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: jamssin mukulat.",
-        "lyhyt": "Havainnekuva: jamssin mukulat."
+        "selite": "Havainnekuva: jamssin mukulat."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1292,7 +1397,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
         "targetBeforeSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
         "semanticContextSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
@@ -1442,9 +1547,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1463,17 +1568,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "targetAfterSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
       "contextAfterSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
+        "contextAfterSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
+          "semanticContextSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
+          "subjectTitle": "Jamssi kasvaa maan alla",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "18662bfb65dcdbf2918297b89119e32b54dc1e0c999df0ad579bebd8db538e42",
+        "sameImageExportSHA256": "fe5030a14bc308982e3a277af9f8d0f8be0dff5be3f9e22b8d935b5f5d1432f7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1495,10 +1621,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l4-v1-20261012T195904Z-8a24c49f248e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: karppi.",
-        "lyhyt": "Havainnekuva: karppi."
+        "selite": "Havainnekuva: karppi."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1506,10 +1632,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/yamoussoukro/e05-yamoussoukro-l4-v1-20261012T195904Z-8a24c49f248e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: karppi.",
-        "lyhyt": "Havainnekuva: karppi."
+        "selite": "Havainnekuva: karppi."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1523,10 +1649,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
-        "semanticContextSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
+        "targetBeforeSHA256": "68e4b9117d081aebde1a1f39dd412f01b13652771ca135994b40a4eb30e8412c",
+        "semanticContextSHA256": "68e4b9117d081aebde1a1f39dd412f01b13652771ca135994b40a4eb30e8412c",
         "subjectTitle": "Kala tulee myös tekojärvestä",
         "targetState": "existing-target"
       },
@@ -1730,9 +1856,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1751,17 +1877,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
-      "targetAfterSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
-      "contextAfterSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "targetAfterSHA256": "68e4b9117d081aebde1a1f39dd412f01b13652771ca135994b40a4eb30e8412c",
+      "contextAfterSHA256": "68e4b9117d081aebde1a1f39dd412f01b13652771ca135994b40a4eb30e8412c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
+        "contextAfterSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
+          "semanticContextSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
+          "subjectTitle": "Kala tulee myös tekojärvestä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "8a24c49f248ea748250777852e8d987b8065c48a7557ec1288aeea084316f49c",
+        "sameImageExportSHA256": "e01e8141bb642cedfc8d86d45559bfc1a1fcc42c20b2e6877ff33ffdf3256ed7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1781,14 +1928,14 @@
         "suora": true,
         "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)",
         "selite": "Lisko Yamoussoukrossa.",
-        "lyhyt": "Lisko Yamoussoukrossa.",
+        "lyhyt": "Yamoussoukron lisko.",
         "tiedosto": "20240521 - Agama agama.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)",
         "selite": "Lisko Yamoussoukrossa.",
-        "lyhyt": "Lisko Yamoussoukrossa.",
+        "lyhyt": "Yamoussoukron lisko.",
         "tiedosto": "20240521 - Agama agama.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -1796,7 +1943,7 @@
         "suora": true,
         "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)",
         "selite": "Lisko Yamoussoukrossa.",
-        "lyhyt": "Lisko Yamoussoukrossa.",
+        "lyhyt": "Yamoussoukron lisko.",
         "tiedosto": "20240521 - Agama agama.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1811,10 +1958,10 @@
         3888
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
-        "semanticContextSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
+        "targetBeforeSHA256": "02937f2e15473046a06ba649d606b43fb42a85abdf42e84eba962040b866589e",
+        "semanticContextSHA256": "02937f2e15473046a06ba649d606b43fb42a85abdf42e84eba962040b866589e",
         "subjectTitle": "yamoussoukro — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1984,9 +2131,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "20240521 - Agama agama.jpg",
-        "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)",
+        "lyhyt": "Yamoussoukron lisko.",
         "selite": "Lisko Yamoussoukrossa.",
-        "lyhyt": "Lisko Yamoussoukrossa."
+        "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2005,7 +2152,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2013,15 +2160,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)",
         "selite": "Lisko Yamoussoukrossa.",
-        "lyhyt": "Lisko Yamoussoukrossa.",
+        "lyhyt": "Yamoussoukron lisko.",
         "tiedosto": "20240521 - Agama agama.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
-      "targetAfterSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
-      "contextAfterSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "targetAfterSHA256": "02937f2e15473046a06ba649d606b43fb42a85abdf42e84eba962040b866589e",
+      "contextAfterSHA256": "02937f2e15473046a06ba649d606b43fb42a85abdf42e84eba962040b866589e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
+        "contextAfterSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
+          "semanticContextSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
+          "subjectTitle": "yamoussoukro — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "fd0034461890b1eefb392929043ea9650651752aa643672f548786ebe2e58711",
+        "sameImageExportSHA256": "fd0034461890b1eefb392929043ea9650651752aa643672f548786ebe2e58711",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2044,14 +2212,14 @@
         "suora": true,
         "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Yamoussoukron golfkentän puistomaista maisemaa.",
-        "lyhyt": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "lyhyt": "Yamoussoukron golfkenttä.",
         "tiedosto": "20240521 - Yamoussoukro - Golf.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Yamoussoukron golfkentän puistomaista maisemaa.",
-        "lyhyt": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "lyhyt": "Yamoussoukron golfkenttä.",
         "tiedosto": "20240521 - Yamoussoukro - Golf.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2059,7 +2227,7 @@
         "suora": true,
         "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Yamoussoukron golfkentän puistomaista maisemaa.",
-        "lyhyt": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "lyhyt": "Yamoussoukron golfkenttä.",
         "tiedosto": "20240521 - Yamoussoukro - Golf.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2074,10 +2242,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
-        "semanticContextSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
+        "targetBeforeSHA256": "4bea3dbd8422990185852ac95b83f2bd5bf7dcc8b65b0286f37ef678aea17c78",
+        "semanticContextSHA256": "4bea3dbd8422990185852ac95b83f2bd5bf7dcc8b65b0286f37ef678aea17c78",
         "subjectTitle": "Yamoussoukro",
         "targetState": "existing-target"
       },
@@ -2247,9 +2415,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "20240521 - Yamoussoukro - Golf.jpg",
-        "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Yamoussoukron golfkenttä.",
         "selite": "Yamoussoukron golfkentän puistomaista maisemaa.",
-        "lyhyt": "Yamoussoukron golfkentän puistomaista maisemaa."
+        "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2268,7 +2436,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2276,15 +2444,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Yamoussoukron golfkentän puistomaista maisemaa.",
-        "lyhyt": "Yamoussoukron golfkentän puistomaista maisemaa.",
+        "lyhyt": "Yamoussoukron golfkenttä.",
         "tiedosto": "20240521 - Yamoussoukro - Golf.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
-      "targetAfterSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
-      "contextAfterSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "targetAfterSHA256": "4bea3dbd8422990185852ac95b83f2bd5bf7dcc8b65b0286f37ef678aea17c78",
+      "contextAfterSHA256": "4bea3dbd8422990185852ac95b83f2bd5bf7dcc8b65b0286f37ef678aea17c78",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
+        "contextAfterSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
+          "semanticContextSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
+          "subjectTitle": "Yamoussoukro",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "e82d57b26856a9e02ca81ed19ad66d601a534d4f01aa77f0ac74c0e8b21af09c",
+        "sameImageExportSHA256": "e82d57b26856a9e02ca81ed19ad66d601a534d4f01aa77f0ac74c0e8b21af09c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2307,14 +2496,14 @@
         "suora": true,
         "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)",
         "selite": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
-        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita.",
         "tiedosto": "Yamoussoukro panorama.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)",
         "selite": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
-        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita.",
         "tiedosto": "Yamoussoukro panorama.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2322,7 +2511,7 @@
         "suora": true,
         "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)",
         "selite": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
-        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita.",
         "tiedosto": "Yamoussoukro panorama.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2337,10 +2526,10 @@
         2048
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
-        "semanticContextSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
+        "targetBeforeSHA256": "1dae157e383432c5d1da832d8ee0dbc4e7876b43c0f7917d1126046b548ad03b",
+        "semanticContextSHA256": "1dae157e383432c5d1da832d8ee0dbc4e7876b43c0f7917d1126046b548ad03b",
         "subjectTitle": "Yamoussoukro",
         "targetState": "existing-target"
       },
@@ -2506,9 +2695,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Yamoussoukro panorama.jpg",
-        "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)",
+        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita.",
         "selite": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
-        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015."
+        "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2527,7 +2716,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2535,15 +2724,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)",
         "selite": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
-        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+        "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita.",
         "tiedosto": "Yamoussoukro panorama.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
-      "targetAfterSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
-      "contextAfterSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "targetAfterSHA256": "1dae157e383432c5d1da832d8ee0dbc4e7876b43c0f7917d1126046b548ad03b",
+      "contextAfterSHA256": "1dae157e383432c5d1da832d8ee0dbc4e7876b43c0f7917d1126046b548ad03b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
+        "contextAfterSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
+          "semanticContextSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
+          "subjectTitle": "Yamoussoukro",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "3d781414bd19dadb9c382f99b635c68e746081e0e7901aa7acd357dedb0bb0d8",
+        "sameImageExportSHA256": "3d781414bd19dadb9c382f99b635c68e746081e0e7901aa7acd357dedb0bb0d8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2566,14 +2776,14 @@
         "suora": true,
         "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
         "selite": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
-        "lyhyt": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
+        "lyhyt": "Yamoussoukro ja Kossoun järvi satelliittikuvassa.",
         "tiedosto": "Earth from Space- Côte d'Ivoire ESA25482285.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
         "selite": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
-        "lyhyt": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
+        "lyhyt": "Yamoussoukro ja Kossoun järvi satelliittikuvassa.",
         "tiedosto": "Earth from Space- Côte d'Ivoire ESA25482285.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2581,7 +2791,7 @@
         "suora": true,
         "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
         "selite": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
-        "lyhyt": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
+        "lyhyt": "Yamoussoukro ja Kossoun järvi satelliittikuvassa.",
         "tiedosto": "Earth from Space- Côte d'Ivoire ESA25482285.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2596,10 +2806,10 @@
         4223
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
-        "semanticContextSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
+        "targetBeforeSHA256": "82e0017685bb1d16a30e5f52ba1280553237ac71a065be41c0db30d327481311",
+        "semanticContextSHA256": "82e0017685bb1d16a30e5f52ba1280553237ac71a065be41c0db30d327481311",
         "subjectTitle": "Yamoussoukro",
         "targetState": "existing-target"
       },
@@ -2819,9 +3029,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Earth from Space- Côte d'Ivoire ESA25482285.jpg",
-        "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
+        "lyhyt": "Yamoussoukro ja Kossoun järvi satelliittikuvassa.",
         "selite": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
-        "lyhyt": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa."
+        "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2840,7 +3050,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2848,15 +3058,36 @@
       "CcommonsFieldPayload": {
         "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
         "selite": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
-        "lyhyt": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
+        "lyhyt": "Yamoussoukro ja Kossoun järvi satelliittikuvassa.",
         "tiedosto": "Earth from Space- Côte d'Ivoire ESA25482285.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
-      "targetAfterSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
-      "contextAfterSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "targetAfterSHA256": "82e0017685bb1d16a30e5f52ba1280553237ac71a065be41c0db30d327481311",
+      "contextAfterSHA256": "82e0017685bb1d16a30e5f52ba1280553237ac71a065be41c0db30d327481311",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
+        "contextAfterSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
+          "semanticContextSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
+          "subjectTitle": "Yamoussoukro",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "d4f228a437c89a068fc7a6d842f23bd0b7cd0fb83fc06186a9595313fcb651ef",
+        "sameImageExportSHA256": "d4f228a437c89a068fc7a6d842f23bd0b7cd0fb83fc06186a9595313fcb651ef",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2879,14 +3110,14 @@
         "suora": true,
         "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
         "selite": "Valomikroskooppi laboratoriotyön välineenä.",
-        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Laboratorion valomikroskooppi.",
         "tiedosto": "Biology microscope.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
         "selite": "Valomikroskooppi laboratoriotyön välineenä.",
-        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Laboratorion valomikroskooppi.",
         "tiedosto": "Biology microscope.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2894,7 +3125,7 @@
         "suora": true,
         "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
         "selite": "Valomikroskooppi laboratoriotyön välineenä.",
-        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Laboratorion valomikroskooppi.",
         "tiedosto": "Biology microscope.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2909,10 +3140,10 @@
         4284
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "sourceContentSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
-        "semanticContextSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+        "targetBeforeSHA256": "8275784964cf386869d5b88fe6b507c1d59cd3391eccc61e4150d8ac3b37f981",
+        "semanticContextSHA256": "8275784964cf386869d5b88fe6b507c1d59cd3391eccc61e4150d8ac3b37f981",
         "subjectTitle": "Korkeakoulu yhdistää ammattialat",
         "targetState": "existing-target"
       },
@@ -3070,9 +3301,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Biology microscope.jpg",
-        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
+        "lyhyt": "Laboratorion valomikroskooppi.",
         "selite": "Valomikroskooppi laboratoriotyön välineenä.",
-        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä."
+        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3091,7 +3322,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3099,20 +3330,47 @@
       "CcommonsFieldPayload": {
         "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
         "selite": "Valomikroskooppi laboratoriotyön välineenä.",
-        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Laboratorion valomikroskooppi.",
         "tiedosto": "Biology microscope.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
-      "targetAfterSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
-      "contextAfterSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+      "sourceContentAfterSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+      "targetAfterSHA256": "8275784964cf386869d5b88fe6b507c1d59cd3391eccc61e4150d8ac3b37f981",
+      "contextAfterSHA256": "8275784964cf386869d5b88fe6b507c1d59cd3391eccc61e4150d8ac3b37f981",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+        "targetAfterSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+        "contextAfterSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+          "semanticContextSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+          "subjectTitle": "Korkeakoulu yhdistää ammattialat",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "acb8eef0954ad2bbbc9c952985d4bd6441e8a323ede101667fb35c0fb09585f3",
+        "sameImageNativeSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+        "sameImageExportSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e05/yamoussoukro/75f831b711034ba02193bb3081366d198c04d0c25185fca4d18130164fd83008.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.767025+00:00"
 }

@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "accra",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+  "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
   "assets": [
     {
       "era": "e05",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/accra/e05-accra-k1-v1-20261012T182252Z-913ff7eef0bd.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: tavalliset nyrkkeilyhanskat.",
-        "lyhyt": "Havainnekuva: tavalliset nyrkkeilyhanskat."
+        "selite": "Havainnekuva: tavalliset nyrkkeilyhanskat."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/accra/e05-accra-k1-v1-20261012T182252Z-913ff7eef0bd.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: tavalliset nyrkkeilyhanskat.",
-        "lyhyt": "Havainnekuva: tavalliset nyrkkeilyhanskat."
+        "selite": "Havainnekuva: tavalliset nyrkkeilyhanskat."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,7 +53,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b8706a78214fd32201dfabf946097c7243dd00865577f798ca17eb6960052b6a",
         "semanticContextSHA256": "b8706a78214fd32201dfabf946097c7243dd00865577f798ca17eb6960052b6a",
@@ -215,9 +215,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -236,17 +236,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "targetAfterSHA256": "b8706a78214fd32201dfabf946097c7243dd00865577f798ca17eb6960052b6a",
       "contextAfterSHA256": "b8706a78214fd32201dfabf946097c7243dd00865577f798ca17eb6960052b6a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "b8706a78214fd32201dfabf946097c7243dd00865577f798ca17eb6960052b6a",
+        "contextAfterSHA256": "b8706a78214fd32201dfabf946097c7243dd00865577f798ca17eb6960052b6a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "b8706a78214fd32201dfabf946097c7243dd00865577f798ca17eb6960052b6a",
+          "semanticContextSHA256": "b8706a78214fd32201dfabf946097c7243dd00865577f798ca17eb6960052b6a",
+          "subjectTitle": "Vanha kaupunki ei ole kulissi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "913ff7eef0bd32fd7e2582f1d9f98a602d99abdc7e5c291dd5c1198b7f904930",
+        "sameImageExportSHA256": "47a6d039bbeb7ed8f17fa04471b3fd6975a83ff3c2c02ecb35d80ae9c2166763",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -271,10 +292,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-o1-tro-tro.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tro tro on yhteinen pikkubussikyyti, yleiskuvitus. Havainnekuva.",
-        "lyhyt": "Tro tro on yhteinen pikkubussikyyti, yleiskuvitus. Havainnekuva."
+        "selite": "Tro tro on yhteinen pikkubussikyyti, yleiskuvitus. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -282,10 +303,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-o1-tro-tro.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tro tro on yhteinen pikkubussikyyti, yleiskuvitus. Havainnekuva.",
-        "lyhyt": "Tro tro on yhteinen pikkubussikyyti, yleiskuvitus. Havainnekuva."
+        "selite": "Tro tro on yhteinen pikkubussikyyti, yleiskuvitus. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -299,10 +320,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "b7cdaf4a4b83a7276e71a28a893c50a836f627c4e535dc48764cfbe9451a6df6",
+        "semanticContextSHA256": "9b53fc6c9b54269d593a5fc20a1bcc6d72e3c011cbcd00566e4756fa540eede2",
         "subjectTitle": "Perille ja liikkeelle",
         "targetState": "existing-target"
       },
@@ -455,9 +476,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -476,17 +497,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "b7cdaf4a4b83a7276e71a28a893c50a836f627c4e535dc48764cfbe9451a6df6",
+      "contextAfterSHA256": "9b53fc6c9b54269d593a5fc20a1bcc6d72e3c011cbcd00566e4756fa540eede2",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "b7cdaf4a4b83a7276e71a28a893c50a836f627c4e535dc48764cfbe9451a6df6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "b7cdaf4a4b83a7276e71a28a893c50a836f627c4e535dc48764cfbe9451a6df6",
+          "subjectTitle": "Perille ja liikkeelle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "9d6c6a51f426064c406e98fb4b423291ca27f4d92eba37c35010eb5fd5bedef1",
+        "sameImageExportSHA256": "9d6c6a51f426064c406e98fb4b423291ca27f4d92eba37c35010eb5fd5bedef1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -508,10 +550,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-l2-havainne-v1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Rannan aamukäyttö, Labadin aiheen yleiskuvitus. Havainnekuva.",
-        "lyhyt": "Rannan aamukäyttö, Labadin aiheen yleiskuvitus. Havainnekuva."
+        "selite": "Rannan aamukäyttö, Labadin aiheen yleiskuvitus. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -519,10 +561,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-l2-havainne-v1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Rannan aamukäyttö, Labadin aiheen yleiskuvitus. Havainnekuva.",
-        "lyhyt": "Rannan aamukäyttö, Labadin aiheen yleiskuvitus. Havainnekuva."
+        "selite": "Rannan aamukäyttö, Labadin aiheen yleiskuvitus. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -536,7 +578,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "49a4f4d09a638d0ddf32da15b3c2d0af7e667a25b7faadc966c8bd5bd560d1fa",
         "semanticContextSHA256": "49a4f4d09a638d0ddf32da15b3c2d0af7e667a25b7faadc966c8bd5bd560d1fa",
@@ -698,9 +740,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -719,17 +761,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "targetAfterSHA256": "49a4f4d09a638d0ddf32da15b3c2d0af7e667a25b7faadc966c8bd5bd560d1fa",
       "contextAfterSHA256": "49a4f4d09a638d0ddf32da15b3c2d0af7e667a25b7faadc966c8bd5bd560d1fa",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "49a4f4d09a638d0ddf32da15b3c2d0af7e667a25b7faadc966c8bd5bd560d1fa",
+        "contextAfterSHA256": "49a4f4d09a638d0ddf32da15b3c2d0af7e667a25b7faadc966c8bd5bd560d1fa",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "49a4f4d09a638d0ddf32da15b3c2d0af7e667a25b7faadc966c8bd5bd560d1fa",
+          "semanticContextSHA256": "49a4f4d09a638d0ddf32da15b3c2d0af7e667a25b7faadc966c8bd5bd560d1fa",
+          "subjectTitle": "Labadissa kaupunki tulee meren äärelle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "21f7eea9641d01248b2119c64f8ccb344f6c10ba24f72baa5ab9eba67a9bb20e",
+        "sameImageExportSHA256": "21f7eea9641d01248b2119c64f8ccb344f6c10ba24f72baa5ab9eba67a9bb20e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -751,10 +814,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-l3-havainne-v2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kalastus ja asuminen samalla rannikkovyöhykkeellä. Havainnekuva.",
-        "lyhyt": "Kalastus ja asuminen samalla rannikkovyöhykkeellä. Havainnekuva."
+        "selite": "Kalastus ja asuminen samalla rannikkovyöhykkeellä. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -762,10 +825,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/accra-l3-havainne-v2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kalastus ja asuminen samalla rannikkovyöhykkeellä. Havainnekuva.",
-        "lyhyt": "Kalastus ja asuminen samalla rannikkovyöhykkeellä. Havainnekuva."
+        "selite": "Kalastus ja asuminen samalla rannikkovyöhykkeellä. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -779,10 +842,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0c31c1729abc6653ccf29088eae558a0089fa9cf190ad1ea2284ff1356f699fc",
-        "semanticContextSHA256": "0c31c1729abc6653ccf29088eae558a0089fa9cf190ad1ea2284ff1356f699fc",
+        "targetBeforeSHA256": "7807cea2e771313a0f2ce4812e2eaf4357705c503c004b1deee503459266d8b1",
+        "semanticContextSHA256": "7807cea2e771313a0f2ce4812e2eaf4357705c503c004b1deee503459266d8b1",
         "subjectTitle": "Kalastuskaupunginosassa myös asutaan",
         "targetState": "existing-target"
       },
@@ -941,9 +1004,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -962,17 +1025,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
-      "targetAfterSHA256": "0c31c1729abc6653ccf29088eae558a0089fa9cf190ad1ea2284ff1356f699fc",
-      "contextAfterSHA256": "0c31c1729abc6653ccf29088eae558a0089fa9cf190ad1ea2284ff1356f699fc",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+      "targetAfterSHA256": "7807cea2e771313a0f2ce4812e2eaf4357705c503c004b1deee503459266d8b1",
+      "contextAfterSHA256": "7807cea2e771313a0f2ce4812e2eaf4357705c503c004b1deee503459266d8b1",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "0c31c1729abc6653ccf29088eae558a0089fa9cf190ad1ea2284ff1356f699fc",
+        "contextAfterSHA256": "0c31c1729abc6653ccf29088eae558a0089fa9cf190ad1ea2284ff1356f699fc",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0c31c1729abc6653ccf29088eae558a0089fa9cf190ad1ea2284ff1356f699fc",
+          "semanticContextSHA256": "0c31c1729abc6653ccf29088eae558a0089fa9cf190ad1ea2284ff1356f699fc",
+          "subjectTitle": "Kalastuskaupunginosassa myös asutaan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "dee329fb3028ac2e48d4ebb9794708d54d164455fc04f085c7130ad94fa31a4d",
+        "sameImageExportSHA256": "dee329fb3028ac2e48d4ebb9794708d54d164455fc04f085c7130ad94fa31a4d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -993,14 +1077,16 @@
         "lahde": "Elijah Johnson, Commons (CC BY-SA 4.0)",
         "selite": "Korle Gonnon kaupunkinäkymä kuuluu Guineanlahden rannalle kasvaneeseen Accraan.",
         "lyhyt": "Accra on Guineanlahden rannikkokaupunki.",
-        "tiedosto": "Accra, korle gonno.jpg"
+        "tiedosto": "Accra, korle gonno.jpg",
+        "vuosi": "2020-luku"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Elijah Johnson, Commons (CC BY-SA 4.0)",
         "selite": "Korle Gonnon kaupunkinäkymä kuuluu Guineanlahden rannalle kasvaneeseen Accraan.",
         "lyhyt": "Accra on Guineanlahden rannikkokaupunki.",
-        "tiedosto": "Accra, korle gonno.jpg"
+        "tiedosto": "Accra, korle gonno.jpg",
+        "vuosi": "2020-luku"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/accra/photo-79d9743236d4672b1520.jpg",
@@ -1008,7 +1094,8 @@
         "lahde": "Elijah Johnson, Commons (CC BY-SA 4.0)",
         "selite": "Korle Gonnon kaupunkinäkymä kuuluu Guineanlahden rannalle kasvaneeseen Accraan.",
         "lyhyt": "Accra on Guineanlahden rannikkokaupunki.",
-        "tiedosto": "Accra, korle gonno.jpg"
+        "tiedosto": "Accra, korle gonno.jpg",
+        "vuosi": "2020-luku"
       },
       "runtimeRemoveMediaKeys": [],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1022,7 +1109,7 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "fd38baf0653274a2757833687048df26cbadfafd17cde013de761c14b7df3428",
         "semanticContextSHA256": "fd38baf0653274a2757833687048df26cbadfafd17cde013de761c14b7df3428",
@@ -1210,9 +1297,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Accra, korle gonno.jpg",
-        "lahde": "Elijah Johnson, Commons (CC BY-SA 4.0)",
-        "selite": "Korle Gonnon kaupunkinäkymä kuuluu Guineanlahden rannalle kasvaneeseen Accraan.",
         "lyhyt": "Accra on Guineanlahden rannikkokaupunki.",
+        "selite": "Korle Gonnon kaupunkinäkymä kuuluu Guineanlahden rannalle kasvaneeseen Accraan.",
+        "lahde": "Elijah Johnson, Commons (CC BY-SA 4.0)",
         "vuosi": "2020-luku"
       },
       "preservePreviousMediaObjects": true,
@@ -1232,7 +1319,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -1241,14 +1328,36 @@
         "lahde": "Elijah Johnson, Commons (CC BY-SA 4.0)",
         "selite": "Korle Gonnon kaupunkinäkymä kuuluu Guineanlahden rannalle kasvaneeseen Accraan.",
         "lyhyt": "Accra on Guineanlahden rannikkokaupunki.",
-        "tiedosto": "Accra, korle gonno.jpg"
+        "tiedosto": "Accra, korle gonno.jpg",
+        "vuosi": "2020-luku"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "targetAfterSHA256": "fd38baf0653274a2757833687048df26cbadfafd17cde013de761c14b7df3428",
       "contextAfterSHA256": "fd38baf0653274a2757833687048df26cbadfafd17cde013de761c14b7df3428",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "fd38baf0653274a2757833687048df26cbadfafd17cde013de761c14b7df3428",
+        "contextAfterSHA256": "fd38baf0653274a2757833687048df26cbadfafd17cde013de761c14b7df3428",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "fd38baf0653274a2757833687048df26cbadfafd17cde013de761c14b7df3428",
+          "semanticContextSHA256": "fd38baf0653274a2757833687048df26cbadfafd17cde013de761c14b7df3428",
+          "subjectTitle": "accra — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "79d9743236d4672b1520c59e8fc905856b1151e8f55acca0ef7e6edbfa4a4f64",
+        "sameImageExportSHA256": "79d9743236d4672b1520c59e8fc905856b1151e8f55acca0ef7e6edbfa4a4f64",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1271,14 +1380,14 @@
         "suora": true,
         "lahde": "Snapdragon66, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019.",
-        "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019.",
+        "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa.",
         "tiedosto": "View of Accra.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Snapdragon66, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019.",
-        "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019.",
+        "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa.",
         "tiedosto": "View of Accra.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -1286,7 +1395,7 @@
         "suora": true,
         "lahde": "Snapdragon66, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019.",
-        "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019.",
+        "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa.",
         "tiedosto": "View of Accra.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1301,10 +1410,10 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "217b18c3ec1b616aaabd6c8606e82a9e60851c5d65c4278c08f5a7943d624dee",
-        "semanticContextSHA256": "217b18c3ec1b616aaabd6c8606e82a9e60851c5d65c4278c08f5a7943d624dee",
+        "targetBeforeSHA256": "455cb5386de55f5e337ea80900bbad36a0f1bc6fbb4f26d525aef061f59eb672",
+        "semanticContextSHA256": "455cb5386de55f5e337ea80900bbad36a0f1bc6fbb4f26d525aef061f59eb672",
         "subjectTitle": "Accra",
         "targetState": "existing-target"
       },
@@ -1620,9 +1729,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "View of Accra.jpg",
-        "lahde": "Snapdragon66, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa.",
         "selite": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019.",
-        "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019."
+        "lahde": "Snapdragon66, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1641,7 +1750,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -1649,15 +1758,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Snapdragon66, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019.",
-        "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa vuonna 2019.",
+        "lyhyt": "Puiden ja asutuksen kaupunkimaisemaa Accrassa.",
         "tiedosto": "View of Accra.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
-      "targetAfterSHA256": "217b18c3ec1b616aaabd6c8606e82a9e60851c5d65c4278c08f5a7943d624dee",
-      "contextAfterSHA256": "217b18c3ec1b616aaabd6c8606e82a9e60851c5d65c4278c08f5a7943d624dee",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+      "targetAfterSHA256": "455cb5386de55f5e337ea80900bbad36a0f1bc6fbb4f26d525aef061f59eb672",
+      "contextAfterSHA256": "455cb5386de55f5e337ea80900bbad36a0f1bc6fbb4f26d525aef061f59eb672",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "217b18c3ec1b616aaabd6c8606e82a9e60851c5d65c4278c08f5a7943d624dee",
+        "contextAfterSHA256": "217b18c3ec1b616aaabd6c8606e82a9e60851c5d65c4278c08f5a7943d624dee",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "217b18c3ec1b616aaabd6c8606e82a9e60851c5d65c4278c08f5a7943d624dee",
+          "semanticContextSHA256": "217b18c3ec1b616aaabd6c8606e82a9e60851c5d65c4278c08f5a7943d624dee",
+          "subjectTitle": "Accra",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "e54222d402e5dbea7d039f1fd80927b1cf4847aa47137cb4d483a7e227458605",
+        "sameImageExportSHA256": "e54222d402e5dbea7d039f1fd80927b1cf4847aa47137cb4d483a7e227458605",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1680,14 +1810,14 @@
         "suora": true,
         "lahde": "Afus199620, Wikimedia Commons (CC0)",
         "selite": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa.",
-        "lyhyt": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa.",
+        "lyhyt": "Labadin rantaa Accrassa.",
         "tiedosto": "Labadi Beach 2025.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Afus199620, Wikimedia Commons (CC0)",
         "selite": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa.",
-        "lyhyt": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa.",
+        "lyhyt": "Labadin rantaa Accrassa.",
         "tiedosto": "Labadi Beach 2025.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -1695,7 +1825,7 @@
         "suora": true,
         "lahde": "Afus199620, Wikimedia Commons (CC0)",
         "selite": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa.",
-        "lyhyt": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa.",
+        "lyhyt": "Labadin rantaa Accrassa.",
         "tiedosto": "Labadi Beach 2025.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1710,10 +1840,10 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "11f57033556ccfc74c38862bce38bc5260203fdcd9da7aa6d40bad4114e16822",
-        "semanticContextSHA256": "11f57033556ccfc74c38862bce38bc5260203fdcd9da7aa6d40bad4114e16822",
+        "targetBeforeSHA256": "a2f98bd829886fd68f59e5151b5b7e66e3f0f6338b026bb198073a7d824605d2",
+        "semanticContextSHA256": "a2f98bd829886fd68f59e5151b5b7e66e3f0f6338b026bb198073a7d824605d2",
         "subjectTitle": "Accra",
         "targetState": "existing-target"
       },
@@ -2041,9 +2171,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Labadi Beach 2025.jpg",
-        "lahde": "Afus199620, Wikimedia Commons (CC0)",
+        "lyhyt": "Labadin rantaa Accrassa.",
         "selite": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa.",
-        "lyhyt": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa."
+        "lahde": "Afus199620, Wikimedia Commons (CC0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2062,7 +2192,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2070,15 +2200,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Afus199620, Wikimedia Commons (CC0)",
         "selite": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa.",
-        "lyhyt": "Labadin rantaa Accrassa heinäkuun 2025 iltavalossa.",
+        "lyhyt": "Labadin rantaa Accrassa.",
         "tiedosto": "Labadi Beach 2025.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
-      "targetAfterSHA256": "11f57033556ccfc74c38862bce38bc5260203fdcd9da7aa6d40bad4114e16822",
-      "contextAfterSHA256": "11f57033556ccfc74c38862bce38bc5260203fdcd9da7aa6d40bad4114e16822",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+      "targetAfterSHA256": "a2f98bd829886fd68f59e5151b5b7e66e3f0f6338b026bb198073a7d824605d2",
+      "contextAfterSHA256": "a2f98bd829886fd68f59e5151b5b7e66e3f0f6338b026bb198073a7d824605d2",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "11f57033556ccfc74c38862bce38bc5260203fdcd9da7aa6d40bad4114e16822",
+        "contextAfterSHA256": "11f57033556ccfc74c38862bce38bc5260203fdcd9da7aa6d40bad4114e16822",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "11f57033556ccfc74c38862bce38bc5260203fdcd9da7aa6d40bad4114e16822",
+          "semanticContextSHA256": "11f57033556ccfc74c38862bce38bc5260203fdcd9da7aa6d40bad4114e16822",
+          "subjectTitle": "Accra",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "cdf60ebcea07ea7607d5ef2bac4e8ea777d40697bff8d4894d7809d9a5a9c921",
+        "sameImageExportSHA256": "cdf60ebcea07ea7607d5ef2bac4e8ea777d40697bff8d4894d7809d9a5a9c921",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2100,23 +2251,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/accra/c3-a0f681cd362a4d890b3e.jpg",
         "suora": true,
         "lahde": "Alexandre Ultré, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Accran kaupunkiseutua pohjoisen ylängön suunnasta.",
-        "lyhyt": "Accran kaupunkiseutua pohjoisen ylängön suunnasta.",
+        "selite": "Accran kaupunkiseudun asutusta laajassa näkymässä.",
+        "lyhyt": "Accran kaupunkiseudun näkymä.",
         "tiedosto": "Accra 12 (117438223).jpeg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Alexandre Ultré, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Accran kaupunkiseutua pohjoisen ylängön suunnasta.",
-        "lyhyt": "Accran kaupunkiseutua pohjoisen ylängön suunnasta.",
+        "selite": "Accran kaupunkiseudun asutusta laajassa näkymässä.",
+        "lyhyt": "Accran kaupunkiseudun näkymä.",
         "tiedosto": "Accra 12 (117438223).jpeg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/accra/c3-a0f681cd362a4d890b3e.jpg",
         "suora": true,
         "lahde": "Alexandre Ultré, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Accran kaupunkiseutua pohjoisen ylängön suunnasta.",
-        "lyhyt": "Accran kaupunkiseutua pohjoisen ylängön suunnasta.",
+        "selite": "Accran kaupunkiseudun asutusta laajassa näkymässä.",
+        "lyhyt": "Accran kaupunkiseudun näkymä.",
         "tiedosto": "Accra 12 (117438223).jpeg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2131,10 +2282,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f00d2fd26d9e5bd93383fded9863243460bb03f754ccaf0153360273cd2a78a0",
-        "semanticContextSHA256": "f00d2fd26d9e5bd93383fded9863243460bb03f754ccaf0153360273cd2a78a0",
+        "targetBeforeSHA256": "d12c2416d2c3098d0221eb80aa0352b1d1006e780176ea352d945493c0df2a8a",
+        "semanticContextSHA256": "d12c2416d2c3098d0221eb80aa0352b1d1006e780176ea352d945493c0df2a8a",
         "subjectTitle": "Accra",
         "targetState": "existing-target"
       },
@@ -2450,9 +2601,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Accra 12 (117438223).jpeg",
-        "lahde": "Alexandre Ultré, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Accran kaupunkiseutua pohjoisen ylängön suunnasta.",
-        "lyhyt": "Accran kaupunkiseutua pohjoisen ylängön suunnasta."
+        "lyhyt": "Accran kaupunkiseudun näkymä.",
+        "selite": "Accran kaupunkiseudun asutusta laajassa näkymässä.",
+        "lahde": "Alexandre Ultré, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2471,23 +2622,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Alexandre Ultré, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Accran kaupunkiseutua pohjoisen ylängön suunnasta.",
-        "lyhyt": "Accran kaupunkiseutua pohjoisen ylängön suunnasta.",
+        "selite": "Accran kaupunkiseudun asutusta laajassa näkymässä.",
+        "lyhyt": "Accran kaupunkiseudun näkymä.",
         "tiedosto": "Accra 12 (117438223).jpeg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
-      "targetAfterSHA256": "f00d2fd26d9e5bd93383fded9863243460bb03f754ccaf0153360273cd2a78a0",
-      "contextAfterSHA256": "f00d2fd26d9e5bd93383fded9863243460bb03f754ccaf0153360273cd2a78a0",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+      "targetAfterSHA256": "d12c2416d2c3098d0221eb80aa0352b1d1006e780176ea352d945493c0df2a8a",
+      "contextAfterSHA256": "d12c2416d2c3098d0221eb80aa0352b1d1006e780176ea352d945493c0df2a8a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "f00d2fd26d9e5bd93383fded9863243460bb03f754ccaf0153360273cd2a78a0",
+        "contextAfterSHA256": "f00d2fd26d9e5bd93383fded9863243460bb03f754ccaf0153360273cd2a78a0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "f00d2fd26d9e5bd93383fded9863243460bb03f754ccaf0153360273cd2a78a0",
+          "semanticContextSHA256": "f00d2fd26d9e5bd93383fded9863243460bb03f754ccaf0153360273cd2a78a0",
+          "subjectTitle": "Accra",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "a0f681cd362a4d890b3ee49611240cb3dc29090b76e0a3d6bd0b7b780747490d",
+        "sameImageExportSHA256": "a0f681cd362a4d890b3ee49611240cb3dc29090b76e0a3d6bd0b7b780747490d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2540,10 +2712,10 @@
         2498
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ca509292b625a7fb06e8fac344ef6f561fc8bb4b16d00e00bacfdbce4257e522",
-        "semanticContextSHA256": "785a3e44e69e2da6d86680196f61c4b72648c78ce80a0967f73b9419e108cfc1",
+        "semanticContextSHA256": "31bb363b16be569dffc4f0c6ed656e949b87b53e0abaa70aac2218ad18336a63",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -2726,9 +2898,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Labadi Beach Resort 02.jpg",
-        "lahde": "Tahiru Rajab, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Labadin meriranta kuuluu Accran rannikkoympäristöön.",
         "selite": "Labadin meriranta on yksi tapa tutustua Accran rannikkoympäristöön.",
-        "lyhyt": "Labadin meriranta kuuluu Accran rannikkoympäristöön."
+        "lahde": "Tahiru Rajab, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2747,7 +2919,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2759,11 +2931,32 @@
         "tiedosto": "Labadi Beach Resort 02.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "targetAfterSHA256": "ca509292b625a7fb06e8fac344ef6f561fc8bb4b16d00e00bacfdbce4257e522",
-      "contextAfterSHA256": "785a3e44e69e2da6d86680196f61c4b72648c78ce80a0967f73b9419e108cfc1",
+      "contextAfterSHA256": "31bb363b16be569dffc4f0c6ed656e949b87b53e0abaa70aac2218ad18336a63",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "ca509292b625a7fb06e8fac344ef6f561fc8bb4b16d00e00bacfdbce4257e522",
+        "contextAfterSHA256": "785a3e44e69e2da6d86680196f61c4b72648c78ce80a0967f73b9419e108cfc1",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ca509292b625a7fb06e8fac344ef6f561fc8bb4b16d00e00bacfdbce4257e522",
+          "semanticContextSHA256": "785a3e44e69e2da6d86680196f61c4b72648c78ce80a0967f73b9419e108cfc1",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "8ab2f172d0915b1e75291667853e8131f404485c708babc89373443fbba20146",
+        "sameImageExportSHA256": "8ab2f172d0915b1e75291667853e8131f404485c708babc89373443fbba20146",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2819,7 +3012,7 @@
         2560
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2e9b3385764ed3d1542c2e75d23429315708587fd566e75580d7cbee0d71bbe2",
         "semanticContextSHA256": "faea7a244aeceabef6aa14f071c4af5f67284ebf35bd0ecdb982e9d3978a7def",
@@ -3005,9 +3198,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Aburi Botanical Gardens Feb 2024 11.jpg",
-        "lahde": "Pearl Akofa, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Aburin puutarhassa on myös ontto puunrunko.",
         "selite": "Aburin kasvitieteellisen puutarhan ontto puunrunko kuuluu kaupungin ulkopuoliseen retkikohteeseen.",
-        "lyhyt": "Aburin puutarhassa on myös ontto puunrunko."
+        "lahde": "Pearl Akofa, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3026,7 +3219,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3038,11 +3231,32 @@
         "tiedosto": "Aburi Botanical Gardens Feb 2024 11.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "targetAfterSHA256": "2e9b3385764ed3d1542c2e75d23429315708587fd566e75580d7cbee0d71bbe2",
       "contextAfterSHA256": "faea7a244aeceabef6aa14f071c4af5f67284ebf35bd0ecdb982e9d3978a7def",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "2e9b3385764ed3d1542c2e75d23429315708587fd566e75580d7cbee0d71bbe2",
+        "contextAfterSHA256": "faea7a244aeceabef6aa14f071c4af5f67284ebf35bd0ecdb982e9d3978a7def",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "2e9b3385764ed3d1542c2e75d23429315708587fd566e75580d7cbee0d71bbe2",
+          "semanticContextSHA256": "faea7a244aeceabef6aa14f071c4af5f67284ebf35bd0ecdb982e9d3978a7def",
+          "subjectTitle": "Rannat ja retki Aburiin",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "89e5a0c5b9d86a1401b69803a8f9d9323987ccb1213bfa4ea04fac36fa69272a",
+        "sameImageExportSHA256": "89e5a0c5b9d86a1401b69803a8f9d9323987ccb1213bfa4ea04fac36fa69272a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -3067,23 +3281,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/accra/o4-9bfae153a15eb423fb91.jpg",
         "suora": true,
         "lahde": "daSupremo, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Riisi ja papupata muodostavat aterian.",
-        "lyhyt": "Riisi ja papupata muodostavat aterian.",
+        "selite": "Kulhossa on riisiä ja papupataa.",
+        "lyhyt": "Riisiä ja papupataa kulhossa.",
         "tiedosto": "Rice and beans stew in bowl.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "daSupremo, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Riisi ja papupata muodostavat aterian.",
-        "lyhyt": "Riisi ja papupata muodostavat aterian.",
+        "selite": "Kulhossa on riisiä ja papupataa.",
+        "lyhyt": "Riisiä ja papupataa kulhossa.",
         "tiedosto": "Rice and beans stew in bowl.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/accra/o4-9bfae153a15eb423fb91.jpg",
         "suora": true,
         "lahde": "daSupremo, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Riisi ja papupata muodostavat aterian.",
-        "lyhyt": "Riisi ja papupata muodostavat aterian.",
+        "selite": "Kulhossa on riisiä ja papupataa.",
+        "lyhyt": "Riisiä ja papupataa kulhossa.",
         "tiedosto": "Rice and beans stew in bowl.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3098,10 +3312,10 @@
         1654
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c81168620dd901817751207f5a0c8784981aca7a2826285aed33bde582e16bb0",
-        "semanticContextSHA256": "0c3cbdee772a34a9c224e3bf36c409abc348b1cfa29ce7c02c6bebda6066adab",
+        "targetBeforeSHA256": "4089498e79d4de88751c8c355d1cc5845984f91ce1dc5233e46311a8c7f79242",
+        "semanticContextSHA256": "b98365e0becc2ef7d6f68878935b36649aabc9b57cf1745032a6dd431d734052",
         "subjectTitle": "Mitä syödään",
         "targetState": "existing-target"
       },
@@ -3284,9 +3498,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Rice and beans stew in bowl.jpg",
-        "lahde": "daSupremo, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Riisi ja papupata muodostavat aterian.",
-        "lyhyt": "Riisi ja papupata muodostavat aterian."
+        "lyhyt": "Riisiä ja papupataa kulhossa.",
+        "selite": "Kulhossa on riisiä ja papupataa.",
+        "lahde": "daSupremo, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3305,23 +3519,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "daSupremo, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Riisi ja papupata muodostavat aterian.",
-        "lyhyt": "Riisi ja papupata muodostavat aterian.",
+        "selite": "Kulhossa on riisiä ja papupataa.",
+        "lyhyt": "Riisiä ja papupataa kulhossa.",
         "tiedosto": "Rice and beans stew in bowl.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
-      "targetAfterSHA256": "c81168620dd901817751207f5a0c8784981aca7a2826285aed33bde582e16bb0",
-      "contextAfterSHA256": "0c3cbdee772a34a9c224e3bf36c409abc348b1cfa29ce7c02c6bebda6066adab",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+      "targetAfterSHA256": "4089498e79d4de88751c8c355d1cc5845984f91ce1dc5233e46311a8c7f79242",
+      "contextAfterSHA256": "b98365e0becc2ef7d6f68878935b36649aabc9b57cf1745032a6dd431d734052",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "c81168620dd901817751207f5a0c8784981aca7a2826285aed33bde582e16bb0",
+        "contextAfterSHA256": "0c3cbdee772a34a9c224e3bf36c409abc348b1cfa29ce7c02c6bebda6066adab",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c81168620dd901817751207f5a0c8784981aca7a2826285aed33bde582e16bb0",
+          "semanticContextSHA256": "0c3cbdee772a34a9c224e3bf36c409abc348b1cfa29ce7c02c6bebda6066adab",
+          "subjectTitle": "Mitä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "9bfae153a15eb423fb91c29e77e64505b0d1bd8007f2d237aecdedf553236f31",
+        "sameImageExportSHA256": "9bfae153a15eb423fb91c29e77e64505b0d1bd8007f2d237aecdedf553236f31",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -3374,7 +3609,7 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "189de08a201df5725a1b6430ef8bc0c23f08074647a418f5ba264eca25154af6",
         "semanticContextSHA256": "189de08a201df5725a1b6430ef8bc0c23f08074647a418f5ba264eca25154af6",
@@ -3566,9 +3801,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Snails, Makola Market, Accra, Ghana.JPG",
-        "lahde": "Benggriff, Wikimedia Commons (CC BY-SA 3.0)",
+        "lyhyt": "Makolan torilla myydään myös maakotiloita.",
         "selite": "Maakotilot kuuluvat Makolan monipuoliseen elintarvikekauppaan.",
-        "lyhyt": "Makolan torilla myydään myös maakotiloita."
+        "lahde": "Benggriff, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3587,7 +3822,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3599,11 +3834,32 @@
         "tiedosto": "Snails, Makola Market, Accra, Ghana.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "targetAfterSHA256": "189de08a201df5725a1b6430ef8bc0c23f08074647a418f5ba264eca25154af6",
       "contextAfterSHA256": "189de08a201df5725a1b6430ef8bc0c23f08074647a418f5ba264eca25154af6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "189de08a201df5725a1b6430ef8bc0c23f08074647a418f5ba264eca25154af6",
+        "contextAfterSHA256": "189de08a201df5725a1b6430ef8bc0c23f08074647a418f5ba264eca25154af6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "189de08a201df5725a1b6430ef8bc0c23f08074647a418f5ba264eca25154af6",
+          "semanticContextSHA256": "189de08a201df5725a1b6430ef8bc0c23f08074647a418f5ba264eca25154af6",
+          "subjectTitle": "Torilta löytyy myös kattila",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "3cfeab054e54975d9e2fb8387119edb91d06d8500e0676010ceb30d416ecac9b",
+        "sameImageExportSHA256": "3cfeab054e54975d9e2fb8387119edb91d06d8500e0676010ceb30d416ecac9b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -3626,14 +3882,14 @@
         "suora": true,
         "lahde": "DaSupremo, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
-        "lyhyt": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
+        "lyhyt": "Tro tro -pikkubussi Ghanassa.",
         "tiedosto": "'trotro' in Ghana.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "DaSupremo, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
-        "lyhyt": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
+        "lyhyt": "Tro tro -pikkubussi Ghanassa.",
         "tiedosto": "'trotro' in Ghana.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -3641,7 +3897,7 @@
         "suora": true,
         "lahde": "DaSupremo, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
-        "lyhyt": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
+        "lyhyt": "Tro tro -pikkubussi Ghanassa.",
         "tiedosto": "'trotro' in Ghana.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3656,10 +3912,10 @@
         2448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "685d7ba1aded64d3310e3a73d09fdc7ad9be360ee49535fb353bace87d35aab6",
-        "semanticContextSHA256": "685d7ba1aded64d3310e3a73d09fdc7ad9be360ee49535fb353bace87d35aab6",
+        "targetBeforeSHA256": "ca92161605bc00fbb345c3933620d8cafe2e7572cd1979187cb60770f71ec70b",
+        "semanticContextSHA256": "ca92161605bc00fbb345c3933620d8cafe2e7572cd1979187cb60770f71ec70b",
         "subjectTitle": "Pikkubussilla on oma reitti",
         "targetState": "existing-target"
       },
@@ -3848,9 +4104,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "'trotro' in Ghana.jpg",
-        "lahde": "DaSupremo, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Tro tro -pikkubussi Ghanassa.",
         "selite": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
-        "lyhyt": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti."
+        "lahde": "DaSupremo, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3869,7 +4125,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3877,15 +4133,36 @@
       "CcommonsFieldPayload": {
         "lahde": "DaSupremo, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
-        "lyhyt": "Tro tro on Ghanassa käytetty yhteinen pikkubussikyyti.",
+        "lyhyt": "Tro tro -pikkubussi Ghanassa.",
         "tiedosto": "'trotro' in Ghana.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
-      "targetAfterSHA256": "685d7ba1aded64d3310e3a73d09fdc7ad9be360ee49535fb353bace87d35aab6",
-      "contextAfterSHA256": "685d7ba1aded64d3310e3a73d09fdc7ad9be360ee49535fb353bace87d35aab6",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+      "targetAfterSHA256": "ca92161605bc00fbb345c3933620d8cafe2e7572cd1979187cb60770f71ec70b",
+      "contextAfterSHA256": "ca92161605bc00fbb345c3933620d8cafe2e7572cd1979187cb60770f71ec70b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "685d7ba1aded64d3310e3a73d09fdc7ad9be360ee49535fb353bace87d35aab6",
+        "contextAfterSHA256": "685d7ba1aded64d3310e3a73d09fdc7ad9be360ee49535fb353bace87d35aab6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "685d7ba1aded64d3310e3a73d09fdc7ad9be360ee49535fb353bace87d35aab6",
+          "semanticContextSHA256": "685d7ba1aded64d3310e3a73d09fdc7ad9be360ee49535fb353bace87d35aab6",
+          "subjectTitle": "Pikkubussilla on oma reitti",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "d419139eb2aebc51ae8e8e38fb9b0842f2c37229764b7e167f4bf5a77d6a7185",
+        "sameImageExportSHA256": "d419139eb2aebc51ae8e8e38fb9b0842f2c37229764b7e167f4bf5a77d6a7185",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -3938,10 +4215,10 @@
         3168
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "619dbd2480b2d370e51e70bd5542680ea2dd4fbbc5dbdac090f4142fc9501d62",
-        "semanticContextSHA256": "619dbd2480b2d370e51e70bd5542680ea2dd4fbbc5dbdac090f4142fc9501d62",
+        "targetBeforeSHA256": "653eadec315ef98c219756a08e0eafe9493b98ba45ba1d1b7666c466479f3f30",
+        "semanticContextSHA256": "653eadec315ef98c219756a08e0eafe9493b98ba45ba1d1b7666c466479f3f30",
         "subjectTitle": "Yliopisto ulottuu Legonia pidemmälle",
         "targetState": "existing-target"
       },
@@ -4132,9 +4409,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Pen-writing-notes-studying.jpg",
-        "lahde": "Tookapic, Wikimedia Commons (CC0)",
+        "lyhyt": "Muistiinpanojen kirjoittaminen on opiskelun arkea.",
         "selite": "Muistiinpanojen kirjoittaminen kuuluu opiskelun arkeen.",
-        "lyhyt": "Muistiinpanojen kirjoittaminen on opiskelun arkea."
+        "lahde": "Tookapic, Wikimedia Commons (CC0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4153,7 +4430,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -4165,11 +4442,32 @@
         "tiedosto": "Pen-writing-notes-studying.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
-      "targetAfterSHA256": "619dbd2480b2d370e51e70bd5542680ea2dd4fbbc5dbdac090f4142fc9501d62",
-      "contextAfterSHA256": "619dbd2480b2d370e51e70bd5542680ea2dd4fbbc5dbdac090f4142fc9501d62",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+      "targetAfterSHA256": "653eadec315ef98c219756a08e0eafe9493b98ba45ba1d1b7666c466479f3f30",
+      "contextAfterSHA256": "653eadec315ef98c219756a08e0eafe9493b98ba45ba1d1b7666c466479f3f30",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "619dbd2480b2d370e51e70bd5542680ea2dd4fbbc5dbdac090f4142fc9501d62",
+        "contextAfterSHA256": "619dbd2480b2d370e51e70bd5542680ea2dd4fbbc5dbdac090f4142fc9501d62",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "619dbd2480b2d370e51e70bd5542680ea2dd4fbbc5dbdac090f4142fc9501d62",
+          "semanticContextSHA256": "619dbd2480b2d370e51e70bd5542680ea2dd4fbbc5dbdac090f4142fc9501d62",
+          "subjectTitle": "Yliopisto ulottuu Legonia pidemmälle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "4c371d7bb627927667fced4fb6ef5d80bff264ff19ce4f4403d7dbf5d192fd96",
+        "sameImageExportSHA256": "4c371d7bb627927667fced4fb6ef5d80bff264ff19ce4f4403d7dbf5d192fd96",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -4222,7 +4520,7 @@
         2324
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ee6fa968eab66d426b61b6930014d35dacad982056d1c1d12ea42e0fa2c6efc3",
         "semanticContextSHA256": "ee6fa968eab66d426b61b6930014d35dacad982056d1c1d12ea42e0fa2c6efc3",
@@ -4414,9 +4712,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Korle Lagoon 2.jpg",
-        "lahde": "SAgbley, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Korlen laguuni kuuluu Accran vanhaan asutusympäristöön.",
         "selite": "Korlen laguuni liittyy Jamestownin asutushistoriaan ja oli aikanaan tärkeä kalan lähde.",
-        "lyhyt": "Korlen laguuni kuuluu Accran vanhaan asutusympäristöön."
+        "lahde": "SAgbley, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4435,7 +4733,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -4447,11 +4745,32 @@
         "tiedosto": "Korle Lagoon 2.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "targetAfterSHA256": "ee6fa968eab66d426b61b6930014d35dacad982056d1c1d12ea42e0fa2c6efc3",
       "contextAfterSHA256": "ee6fa968eab66d426b61b6930014d35dacad982056d1c1d12ea42e0fa2c6efc3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "ee6fa968eab66d426b61b6930014d35dacad982056d1c1d12ea42e0fa2c6efc3",
+        "contextAfterSHA256": "ee6fa968eab66d426b61b6930014d35dacad982056d1c1d12ea42e0fa2c6efc3",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ee6fa968eab66d426b61b6930014d35dacad982056d1c1d12ea42e0fa2c6efc3",
+          "semanticContextSHA256": "ee6fa968eab66d426b61b6930014d35dacad982056d1c1d12ea42e0fa2c6efc3",
+          "subjectTitle": "Laguunin historia kulkee kaupungin mukana",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "1b60d5a13897d27bb2a24d4479130cbe55a7766a2332312c8c7a5f3783f3b7bf",
+        "sameImageExportSHA256": "1b60d5a13897d27bb2a24d4479130cbe55a7766a2332312c8c7a5f3783f3b7bf",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -4504,7 +4823,7 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d0ddfe56cf8f1c137c75d9838f1ad7f1dd0edb81fbaefca045bda56656e921e2",
         "semanticContextSHA256": "d0ddfe56cf8f1c137c75d9838f1ad7f1dd0edb81fbaefca045bda56656e921e2",
@@ -4696,9 +5015,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Aburi garden 10.jpg",
-        "lahde": "Lionel Scheepmans, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Aburin kasvitieteellinen puutarha sijaitsee omalla paikkakunnallaan.",
         "selite": "Aburin puutarhan kukkivat kasvit kuuluvat pääkaupungin ulkopuoliseen retkikohteeseen.",
-        "lyhyt": "Aburin kasvitieteellinen puutarha sijaitsee omalla paikkakunnallaan."
+        "lahde": "Lionel Scheepmans, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4717,7 +5036,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -4729,11 +5048,32 @@
         "tiedosto": "Aburi garden 10.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "targetAfterSHA256": "d0ddfe56cf8f1c137c75d9838f1ad7f1dd0edb81fbaefca045bda56656e921e2",
       "contextAfterSHA256": "d0ddfe56cf8f1c137c75d9838f1ad7f1dd0edb81fbaefca045bda56656e921e2",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "d0ddfe56cf8f1c137c75d9838f1ad7f1dd0edb81fbaefca045bda56656e921e2",
+        "contextAfterSHA256": "d0ddfe56cf8f1c137c75d9838f1ad7f1dd0edb81fbaefca045bda56656e921e2",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d0ddfe56cf8f1c137c75d9838f1ad7f1dd0edb81fbaefca045bda56656e921e2",
+          "semanticContextSHA256": "d0ddfe56cf8f1c137c75d9838f1ad7f1dd0edb81fbaefca045bda56656e921e2",
+          "subjectTitle": "Aburi on retki toiseen paikkakuntaan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "65e549d457b977ce02817bf7d3c8f5442bea3a76041fa6e98ec5252cc9310c88",
+        "sameImageExportSHA256": "65e549d457b977ce02817bf7d3c8f5442bea3a76041fa6e98ec5252cc9310c88",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -4786,7 +5126,7 @@
         2300
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/accra/sisalto.json",
-      "sourceContentSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "49b379d7b1b2f4a1449dda40ffff7a136b8b3f93d6503b69e4ef754b07a78745",
         "semanticContextSHA256": "5b35993f482d401284c887e7be6e152fc2c154576aad72b46ba304b278de8547",
@@ -4972,9 +5312,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Korle Lagoon 4.jpg",
-        "lahde": "SAgbley, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Korlen laguuni sijaitsee Accran keskustan länsipuolella.",
         "selite": "Korlen laguuni on keskustan länsipuolinen vesistö, jonka rannat liittyvät Jamestownin historiaan.",
-        "lyhyt": "Korlen laguuni sijaitsee Accran keskustan länsipuolella."
+        "lahde": "SAgbley, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4993,7 +5333,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -5005,16 +5345,43 @@
         "tiedosto": "Korle Lagoon 4.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+      "sourceContentAfterSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
       "targetAfterSHA256": "49b379d7b1b2f4a1449dda40ffff7a136b8b3f93d6503b69e4ef754b07a78745",
       "contextAfterSHA256": "5b35993f482d401284c887e7be6e152fc2c154576aad72b46ba304b278de8547",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "b98a0dd82d6f60fec66ce4b3e1e30fd4b7493f7cfa294625d71ff430b17a8cac",
+        "targetAfterSHA256": "49b379d7b1b2f4a1449dda40ffff7a136b8b3f93d6503b69e4ef754b07a78745",
+        "contextAfterSHA256": "5b35993f482d401284c887e7be6e152fc2c154576aad72b46ba304b278de8547",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "49b379d7b1b2f4a1449dda40ffff7a136b8b3f93d6503b69e4ef754b07a78745",
+          "semanticContextSHA256": "5b35993f482d401284c887e7be6e152fc2c154576aad72b46ba304b278de8547",
+          "subjectTitle": "Korlen laguuni",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "29e5761ffe121c12186dab8c486056e3461161de5153aa264593381698370d1a",
+        "sameImageNativeSHA256": "145f61c60cde0072d65c665d13a6420820eee304b385c2f129c9ce0303645751",
+        "sameImageExportSHA256": "145f61c60cde0072d65c665d13a6420820eee304b385c2f129c9ce0303645751",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e05/accra/901b5b982545e19e1f033d031b0c03c2d03245fccfa3a4c590c997b93079eccb.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.588906+00:00"
 }

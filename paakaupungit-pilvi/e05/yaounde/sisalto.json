@@ -36,9 +36,9 @@
       "q": "Mikä oli kaupungin varhaisen saksalaisen aseman tehtävä?",
       "options": [
         "Tutkimusasema",
-        "Merisatama",
-        "Lentoasema",
-        "Rautatievarikko"
+        "Kauppa-asema",
+        "Sotilasvarikko",
+        "Lähetysasema"
       ],
       "correct": 0,
       "level": 1,
@@ -78,13 +78,13 @@
       "q": "Mihin Ongola-nimitys liittyy?",
       "options": [
         "Aitaukseen",
-        "Vesiputoukseen",
-        "Kalastusveneeseen",
-        "Kuparikaivokseen"
+        "Kukkulaan",
+        "Markkinaan",
+        "Metsään"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Nimi liittyy rakennetun rajan ajatukseen.",
+      "hint": "Kyse on kaupungin rinnakkaisesta paikallisesta nimityksestä.",
       "fact": "Ongola-nimitys liittyy ewondon aitaukseen viittaavaan ilmaukseen.",
       "source": "https://fr.wikipedia.org/wiki/Yaound%C3%A9"
     }
@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "Clouds surround hill.jpg",
-    "lyhyt": "Yaoundén kukkulamaisemaa pilvien keskellä.",
+    "lyhyt": "Pilviä Yaoundén kukkulalla.",
     "selite": "Yaoundén kukkulamaisemaa pilvien keskellä.",
     "lahde": "Thetaxiphotographer, Commons (CC BY-SA 4.0)",
     "vuosi": "2020"
@@ -109,19 +109,19 @@
       "kansikuvat": [
         {
           "tiedosto": "Cloudy valley covering human habitat.png",
-          "lyhyt": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
+          "lyhyt": "Yaoundén asutusta ja pilviä.",
           "selite": "Yaoundén kukkuloita ja asutusta pilvisessä maisemassa.",
           "lahde": "JusatTop, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Hillside Yaounde View.jpg",
-          "lyhyt": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
+          "lyhyt": "Yaoundén kaupunkimaisemaa rinteeltä.",
           "selite": "Yaoundén kaupunkimaisemaa rinteeltä vuonna 2018.",
           "lahde": "Heather Powell, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Végétation sur le Mont Fébé.jpg",
-          "lyhyt": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
+          "lyhyt": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa.",
           "selite": "Mont Fébén rinnettä ja kasvillisuutta Yaoundéssa vuonna 2017.",
           "lahde": "ADAMBITA, Wikimedia Commons (CC BY-SA 4.0)"
         }
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Tiet nousevat, laaksot vihertyvät",
-          "teksti": "Yaoundén maastoon kuuluvat kukkulat, ylängöt ja laaksot, ja alueen kallioperässä on gneissiä. Tiet ja rakennukset sijaitsevat usein korkeammilla kohdilla. Laaksoissa on puolestaan kasvillisuutta ja viljelyä, ja kaupungin ympäristöä halkovat pienet vesiväylät, kuten Mfoundi, Ekozoa ja Biyeme. Maastonmuodot ovat siis osa kaupunginosien rakennetta. Pääkaupunkia ei tarvitse ajatella tasaisena katuverkkona: korkeammat paikat, veden reitit ja laaksojen kasvillisuus jäsentävät saman kaupungin erilaisia ympäristöjä.",
+          "teksti": "Yaoundén maastoon kuuluvat kukkulat, ylängöt ja laaksot, ja alueen kallioperässä on gneissiä. Tiet ja rakennukset sijaitsevat usein korkeammilla kohdilla. Laaksoissa on puolestaan kasvillisuutta ja viljelyä, ja kaupungin ympäristöä halkovat pienet vesiväylät, kuten Mfoundi, Ekozoa ja Biyeme. Maastonmuodot ovat siis osa kaupunginosien rakennetta. Mfoundin varrella kasvillisuus ja viljely täyttävät alavaa maata, kun taas rinteet ja kukkulat nostavat tiet sekä asuinalueet ylemmäs.",
           "wiki": "Yaoundé",
           "tiedosto": "",
           "lyhyt": "",
@@ -219,8 +219,8 @@
               }
             },
             {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Matkan ajankohdaksi tarvitaan ajantasaiset kulkuyhteys- ja vierailutiedot. Kamerunin eri alueilla on erilaisia matkustamisen varauksia. Kukkuloiden reittien ja puistojen pääsy tarkistetaan kohdekohtaisesti.",
+              "otsikko": "Kaksi lentoasemaa",
+              "teksti": "Yaoundé Nsimalen on kansainvälinen lentoasema kaupungin ulkopuolella. Keskustaa palveleva pienempi lentoasema on eri paikka. Varmista saapumiskentän nimi ennen kyydin sopimista.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,12 +259,12 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Lentoasemat",
-                "teksti": "Kansainvälinen Nsimalen ja keskustan pienempi kenttä ovat eri paikkoja."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Kamerunin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
-                "otsikko": "Vierailut",
-                "teksti": "Museoiden, puiston ja kukkuloiden pääsy selvitetään ajantasaisesti."
+                "otsikko": "Kaupungin maasto",
+                "teksti": "Kukkulat ja laaksot jäsentävät Yaoundén asuinalueita."
               },
               {
                 "otsikko": "Maasto",
@@ -294,7 +294,7 @@
       "nostot": [
         {
           "otsikko": "Nimitarinoita on useita",
-          "teksti": "Yaoundén nimi liittyy ewondo- eli yaunde-kansaan, ja vanhoissa kirjoitusasuissa esiintyvät myös Jaunde ja Jeundo. Suosittu kertomus selittää nimeä maapähkinän kylväjillä, mutta tätä nimitarinaa ei ole todistettu. Ongola-nimi puolestaan liittyy aitaukseen, ja siitäkin tunnetaan erilaisia paikallisia tulkintoja. Nimen historia ei siis ole yksi varma keskustelu, joka voitaisiin toistaa sanasta sanaan. Rinnakkaiset nimet ja kirjoitusasut kertovat paikallisen kielen sekä kaupungista kertomisen eri vaiheista.",
+          "teksti": "Yaoundén nimi liittyy ewondo- eli yaunde-kansaan, ja vanhoissa kirjoitusasuissa esiintyvät myös Jaunde ja Jeundo. Suosittu kertomus selittää nimeä maapähkinän kylväjillä, mutta tätä nimitarinaa ei ole todistettu. Ongola-nimi puolestaan liittyy aitaukseen, ja siitäkin tunnetaan erilaisia paikallisia tulkintoja. Ongola on yhä kaupungista käytetty paikallinen nimitys Yaoundén rinnalla. Rinnakkaiset nimet ja kirjoitusasut kertovat paikallisen kielen sekä kaupungista kertomisen eri vaiheista.",
           "wiki": "Yaoundé",
           "tiedosto": "",
           "lyhyt": "",
@@ -383,7 +383,7 @@
     },
     "Mont Eloundem": {
       "aika": "Luonnonkukkula",
-      "teksti": "Mont Eloundem sijaitsee Yaoundén lounaisessa lähialueessa, Mbankomon koillispuolella. Se kuuluu Kamerunin Centre-alueen ja Mfoundin hallintoalueen kukkulamaisemaan. Kukkulalta tunnetaan näkymä kaupunkiin, ja se liittyy pääkaupungin lounaispuolen erillisiin kalliokohoumiin.\n\nEloundem on luonnonmuodostuma, joka edeltää Yaoundén tutkimusasemaa ja myöhempää pääkaupunkia. Vuonna 1873 nykyistä tutkimusasemasta kasvanutta kaupunkia ei vielä ollut. Kukkulan maantiede voidaan erottaa nykyisistä vierailureiteistä: maiseman olemassaolo ei yksin kerro, millaisia kulkumahdollisuuksia paikalla juuri nyt on.",
+      "teksti": "Mont Eloundem sijaitsee Yaoundén lounaisessa lähialueessa, Mbankomon koillispuolella. Se kuuluu Kamerunin Centre-alueen ja Mfoundin hallintoalueen kukkulamaisemaan. Kukkulalta tunnetaan näkymä kaupunkiin, ja se liittyy pääkaupungin lounaispuolen erillisiin kalliokohoumiin.\n\nEloundem on luonnonmuodostuma, joka edeltää Yaoundén tutkimusasemaa ja myöhempää pääkaupunkia. Vuonna 1873 nykyistä tutkimusasemasta kasvanutta kaupunkia ei vielä ollut. Kukkulan rinteet ja laaksot ovat osa Yaoundén ympäröivää maastoa, jossa asutus ja kasvillisuus vuorottelevat.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -409,7 +409,7 @@
     },
     "Mvog-Betsin zoo-botaaninen puisto": {
       "aika": "1900-luvun laitos",
-      "teksti": "Mvog-Betsin zoo-botaaninen puisto sijaitsee Yaoundé VI:n alueella. Sen historia alkoi elävien villieläinten pitopaikkana, ja toimintaan kuului myös karanteenitehtävä. Myöhemmin paikka siirtyi valtion hallintoon ja sen kunnostettuun toimintaan liitettiin tutkimusta, opetusta sekä virkistystä.\n\nPuisto on 1900-luvun laitos, joten sitä ei ollut vuonna 1873. Zoo-botaaninen nimi yhdistää eläin- ja kasvimaailman samaan paikkaan. Sen historiaa tarkastellessa huomio voi kiinnittyä sekä kasveihin että eri vaiheiden eläintoimintaan. Nykyisen vierailun sisältö ja eläimet selvitetään ajantasaisesti; vanha laitoshistoria ei ole luettelo siitä, mitä kävijä tänään näkee.",
+      "teksti": "Mvog-Betsin zoo-botaaninen puisto sijaitsee Yaoundé VI:n alueella. Sen historia alkoi elävien villieläinten pitopaikkana, ja toimintaan kuului myös karanteenitehtävä. Myöhemmin paikka siirtyi valtion hallintoon ja sen kunnostettuun toimintaan liitettiin tutkimusta, opetusta sekä virkistystä.\n\nPuisto on 1900-luvun laitos, joten sitä ei ollut vuonna 1873. Zoo-botaaninen nimi yhdistää eläin- ja kasvimaailman samaan paikkaan. Sen historiaa tarkastellessa huomio voi kiinnittyä sekä kasveihin että eri vaiheiden eläintoimintaan. Puiston vaiheisiin kuuluvat eläinten hoito, kasvien kasvattaminen, opetus ja luonnontutkimus.",
       "kuvat": [
         {
           "tiedosto": "",

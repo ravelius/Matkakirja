@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "portonovo",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+  "sourceContentAfterSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
   "assets": [
     {
       "era": "e05",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: suuren puun tyvi.",
-        "lyhyt": "Havainnekuva: suuren puun tyvi."
+        "selite": "Havainnekuva: suuren puun tyvi."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-traveler-v1-20261012T183227Z-6025435c502f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: suuren puun tyvi.",
-        "lyhyt": "Havainnekuva: suuren puun tyvi."
+        "selite": "Havainnekuva: suuren puun tyvi."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "77745ab5884f624c4fa4e0e80db7193247aa17e182e2647023e40c2a2029432c",
+        "semanticContextSHA256": "82e45a992e0da7af0079053ec9c7111c20aadac51da4ceb6f3ccccc72697f1d4",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -205,9 +205,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -226,17 +226,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentAfterSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "77745ab5884f624c4fa4e0e80db7193247aa17e182e2647023e40c2a2029432c",
+      "contextAfterSHA256": "82e45a992e0da7af0079053ec9c7111c20aadac51da4ceb6f3ccccc72697f1d4",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "77745ab5884f624c4fa4e0e80db7193247aa17e182e2647023e40c2a2029432c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "77745ab5884f624c4fa4e0e80db7193247aa17e182e2647023e40c2a2029432c",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+        "sameImageNativeSHA256": "6025435c502fb41b9aa83bffdfa14ab90aeeb6d1e6061d52a57719665f12834f",
+        "sameImageExportSHA256": "6a0a9d56133dd68e95b17a818c9f798456ea6f8ed00353e22aaa777ea7632f61",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -261,10 +282,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: suuren puun juurenniska.",
-        "lyhyt": "Havainnekuva: suuren puun juurenniska."
+        "selite": "Havainnekuva: suuren puun juurenniska."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -272,10 +293,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: suuren puun juurenniska.",
-        "lyhyt": "Havainnekuva: suuren puun juurenniska."
+        "selite": "Havainnekuva: suuren puun juurenniska."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -289,10 +310,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "02b29909b868cf9a5315b97ec513bc3d58a6a5b9c12c62c539a78bd1029675b2",
+        "semanticContextSHA256": "61adf5f1af7291fec45000ae7fbca463baec2c3b43087443069b547127af5344",
         "subjectTitle": "Vanhojen puiden luona",
         "targetState": "existing-target"
       },
@@ -486,9 +507,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -507,17 +528,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentAfterSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "02b29909b868cf9a5315b97ec513bc3d58a6a5b9c12c62c539a78bd1029675b2",
+      "contextAfterSHA256": "61adf5f1af7291fec45000ae7fbca463baec2c3b43087443069b547127af5344",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "02b29909b868cf9a5315b97ec513bc3d58a6a5b9c12c62c539a78bd1029675b2",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "02b29909b868cf9a5315b97ec513bc3d58a6a5b9c12c62c539a78bd1029675b2",
+          "subjectTitle": "Vanhojen puiden luona",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+        "sameImageNativeSHA256": "b8fd9c2ef1256587f7fd0784b8cc16c1e0424643bb039687bc7248959d3ffd77",
+        "sameImageExportSHA256": "2f023e9042df9a1101b3ba4ae49b2bf5391b9752d2fa48df24c7cd575b94eda5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -539,10 +581,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: vanhojen puiden lehvästö.",
-        "lyhyt": "Havainnekuva: vanhojen puiden lehvästö."
+        "selite": "Havainnekuva: vanhojen puiden lehvästö."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -550,10 +592,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k1-v1-20261012T183034Z-9d52e4eefba6.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: vanhojen puiden lehvästö.",
-        "lyhyt": "Havainnekuva: vanhojen puiden lehvästö."
+        "selite": "Havainnekuva: vanhojen puiden lehvästö."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -567,7 +609,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
         "semanticContextSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
@@ -717,9 +759,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -738,17 +780,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentAfterSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "targetAfterSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
       "contextAfterSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+        "targetAfterSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
+        "contextAfterSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
+          "semanticContextSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
+          "subjectTitle": "Pyhästä metsästä kasvipuutarhaksi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+        "sameImageNativeSHA256": "9d52e4eefba6bf6dd2ea2225a1a573180d6ea025342e47d32f5fa0fa4a678c39",
+        "sameImageExportSHA256": "3e1355a12e7fe530e2f023d50e4a2df720e554b475287d75abb22fb2d299eb09",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -770,10 +833,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline.",
-        "lyhyt": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline."
+        "selite": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -781,10 +844,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-k3-v1-20261012T175320Z-39dab86eb961.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline.",
-        "lyhyt": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline."
+        "selite": "Havainnekuva: moottoripyörätaksin arkinen kulkuväline."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -798,10 +861,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
-        "semanticContextSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
+        "targetBeforeSHA256": "f84b02a27599035701c79662ef12c3881ce4ed74c46feb3203de93044ba63bac",
+        "semanticContextSHA256": "f84b02a27599035701c79662ef12c3881ce4ed74c46feb3203de93044ba63bac",
         "subjectTitle": "Zemijan vie kaupungin läpi",
         "targetState": "existing-target"
       },
@@ -949,9 +1012,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -970,17 +1033,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
-      "targetAfterSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
-      "contextAfterSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
+      "sourceContentAfterSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+      "targetAfterSHA256": "f84b02a27599035701c79662ef12c3881ce4ed74c46feb3203de93044ba63bac",
+      "contextAfterSHA256": "f84b02a27599035701c79662ef12c3881ce4ed74c46feb3203de93044ba63bac",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+        "targetAfterSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
+        "contextAfterSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
+          "semanticContextSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
+          "subjectTitle": "Zemijan vie kaupungin läpi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+        "sameImageNativeSHA256": "39dab86eb961fb5f2ffe3f552c88323cb91c4e17c4979e1f5998ea6563c1d86f",
+        "sameImageExportSHA256": "4654ac88992fc27dc5de38a9e49bcb5baa244b29391296f070103d86832320a6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1002,10 +1086,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: arkistotyön tavalliset materiaalit.",
-        "lyhyt": "Havainnekuva: arkistotyön tavalliset materiaalit."
+        "selite": "Havainnekuva: arkistotyön tavalliset materiaalit."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1013,10 +1097,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-l4-v1-20261012T192830Z-ff5a82446850.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: arkistotyön tavalliset materiaalit.",
-        "lyhyt": "Havainnekuva: arkistotyön tavalliset materiaalit."
+        "selite": "Havainnekuva: arkistotyön tavalliset materiaalit."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1030,10 +1114,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
-        "semanticContextSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
+        "targetBeforeSHA256": "fa9a62155222ebf44bea7c8613a6e1bbabce7bc7c9c8df00359caab6b65dfcb4",
+        "semanticContextSHA256": "fa9a62155222ebf44bea7c8613a6e1bbabce7bc7c9c8df00359caab6b65dfcb4",
         "subjectTitle": "Museoilla on erilaiset tehtävät",
         "targetState": "existing-target"
       },
@@ -1194,9 +1278,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1215,17 +1299,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
-      "targetAfterSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
-      "contextAfterSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
+      "sourceContentAfterSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+      "targetAfterSHA256": "fa9a62155222ebf44bea7c8613a6e1bbabce7bc7c9c8df00359caab6b65dfcb4",
+      "contextAfterSHA256": "fa9a62155222ebf44bea7c8613a6e1bbabce7bc7c9c8df00359caab6b65dfcb4",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+        "targetAfterSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
+        "contextAfterSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
+          "semanticContextSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
+          "subjectTitle": "Museoilla on erilaiset tehtävät",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+        "sameImageNativeSHA256": "ff5a8244685068be2ab3e29988553095673e05882ee388685a46914563624127",
+        "sameImageExportSHA256": "f7a8403cb3cf084dcef1ed927c8dccb2a990470a3065abe6a4f67379a85a6653",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1245,14 +1350,14 @@
         "suora": true,
         "lahde": "Thepipha12, Commons (CC BY-SA 4.0)",
         "selite": "Kaupungin puustoa Porto-Novossa.",
-        "lyhyt": "Kaupungin puustoa Porto-Novossa.",
+        "lyhyt": "Puu Porto-Novossa.",
         "tiedosto": "IROKO au CAEB.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Thepipha12, Commons (CC BY-SA 4.0)",
         "selite": "Kaupungin puustoa Porto-Novossa.",
-        "lyhyt": "Kaupungin puustoa Porto-Novossa.",
+        "lyhyt": "Puu Porto-Novossa.",
         "tiedosto": "IROKO au CAEB.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -1260,7 +1365,7 @@
         "suora": true,
         "lahde": "Thepipha12, Commons (CC BY-SA 4.0)",
         "selite": "Kaupungin puustoa Porto-Novossa.",
-        "lyhyt": "Kaupungin puustoa Porto-Novossa.",
+        "lyhyt": "Puu Porto-Novossa.",
         "tiedosto": "IROKO au CAEB.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1275,10 +1380,10 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
-        "semanticContextSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
+        "targetBeforeSHA256": "9c0b10a513eead43344e53368916aa87c16ca324e7e01f029a0cf37326a1267b",
+        "semanticContextSHA256": "9c0b10a513eead43344e53368916aa87c16ca324e7e01f029a0cf37326a1267b",
         "subjectTitle": "portonovo — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1421,9 +1526,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "IROKO au CAEB.jpg",
-        "lahde": "Thepipha12, Commons (CC BY-SA 4.0)",
+        "lyhyt": "Puu Porto-Novossa.",
         "selite": "Kaupungin puustoa Porto-Novossa.",
-        "lyhyt": "Kaupungin puustoa Porto-Novossa."
+        "lahde": "Thepipha12, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1442,7 +1547,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -1450,15 +1555,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Thepipha12, Commons (CC BY-SA 4.0)",
         "selite": "Kaupungin puustoa Porto-Novossa.",
-        "lyhyt": "Kaupungin puustoa Porto-Novossa.",
+        "lyhyt": "Puu Porto-Novossa.",
         "tiedosto": "IROKO au CAEB.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
-      "targetAfterSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
-      "contextAfterSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
+      "sourceContentAfterSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+      "targetAfterSHA256": "9c0b10a513eead43344e53368916aa87c16ca324e7e01f029a0cf37326a1267b",
+      "contextAfterSHA256": "9c0b10a513eead43344e53368916aa87c16ca324e7e01f029a0cf37326a1267b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+        "targetAfterSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
+        "contextAfterSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
+          "semanticContextSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
+          "subjectTitle": "portonovo — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+        "sameImageNativeSHA256": "97c82d3d0131e3d1e6d79b738f0eec5533ff1b018a2e4e7d7999472b622f2f54",
+        "sameImageExportSHA256": "97c82d3d0131e3d1e6d79b738f0eec5533ff1b018a2e4e7d7999472b622f2f54",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1481,14 +1607,14 @@
         "suora": true,
         "lahde": "Puzzle29, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Porto-Novon laguunia ja rantaa vuonna 2020.",
-        "lyhyt": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "lyhyt": "Porto-Novon laguunia ja rantaa.",
         "tiedosto": "Photo lagune de Porto-Novo.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Puzzle29, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Porto-Novon laguunia ja rantaa vuonna 2020.",
-        "lyhyt": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "lyhyt": "Porto-Novon laguunia ja rantaa.",
         "tiedosto": "Photo lagune de Porto-Novo.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -1496,7 +1622,7 @@
         "suora": true,
         "lahde": "Puzzle29, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Porto-Novon laguunia ja rantaa vuonna 2020.",
-        "lyhyt": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "lyhyt": "Porto-Novon laguunia ja rantaa.",
         "tiedosto": "Photo lagune de Porto-Novo.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1511,10 +1637,10 @@
         3120
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
-        "semanticContextSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
+        "targetBeforeSHA256": "88841e42a3de686613ae016a81e5edc44649b8b3aeb58fdc8c7261a8a8eafb77",
+        "semanticContextSHA256": "88841e42a3de686613ae016a81e5edc44649b8b3aeb58fdc8c7261a8a8eafb77",
         "subjectTitle": "Porto-Novo",
         "targetState": "existing-target"
       },
@@ -1655,9 +1781,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Photo lagune de Porto-Novo.jpg",
-        "lahde": "Puzzle29, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Porto-Novon laguunia ja rantaa.",
         "selite": "Porto-Novon laguunia ja rantaa vuonna 2020.",
-        "lyhyt": "Porto-Novon laguunia ja rantaa vuonna 2020."
+        "lahde": "Puzzle29, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1676,7 +1802,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -1684,15 +1810,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Puzzle29, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Porto-Novon laguunia ja rantaa vuonna 2020.",
-        "lyhyt": "Porto-Novon laguunia ja rantaa vuonna 2020.",
+        "lyhyt": "Porto-Novon laguunia ja rantaa.",
         "tiedosto": "Photo lagune de Porto-Novo.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
-      "targetAfterSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
-      "contextAfterSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
+      "sourceContentAfterSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+      "targetAfterSHA256": "88841e42a3de686613ae016a81e5edc44649b8b3aeb58fdc8c7261a8a8eafb77",
+      "contextAfterSHA256": "88841e42a3de686613ae016a81e5edc44649b8b3aeb58fdc8c7261a8a8eafb77",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+        "targetAfterSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
+        "contextAfterSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
+          "semanticContextSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
+          "subjectTitle": "Porto-Novo",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+        "sameImageNativeSHA256": "3b51fbc08ce17c17c30d14c40c3b57592123e436c2738ba3fc40c76771a0840a",
+        "sameImageExportSHA256": "3b51fbc08ce17c17c30d14c40c3b57592123e436c2738ba3fc40c76771a0840a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1715,14 +1862,14 @@
         "suora": true,
         "lahde": "SebEsteban, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
-        "lyhyt": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "lyhyt": "Porto-Novon kortteleita ja laguuni.",
         "tiedosto": "Vue de Porto Novo (Bénin).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "SebEsteban, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
-        "lyhyt": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "lyhyt": "Porto-Novon kortteleita ja laguuni.",
         "tiedosto": "Vue de Porto Novo (Bénin).jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -1730,7 +1877,7 @@
         "suora": true,
         "lahde": "SebEsteban, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
-        "lyhyt": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "lyhyt": "Porto-Novon kortteleita ja laguuni.",
         "tiedosto": "Vue de Porto Novo (Bénin).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1745,10 +1892,10 @@
         960
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
-        "semanticContextSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
+        "targetBeforeSHA256": "19c04d9e86d3e0c2c157619b114bbc54db833374a0c1aa056462ddb1bd850ee2",
+        "semanticContextSHA256": "19c04d9e86d3e0c2c157619b114bbc54db833374a0c1aa056462ddb1bd850ee2",
         "subjectTitle": "Porto-Novo",
         "targetState": "existing-target"
       },
@@ -1889,9 +2036,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Vue de Porto Novo (Bénin).jpg",
-        "lahde": "SebEsteban, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Porto-Novon kortteleita ja laguuni.",
         "selite": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
-        "lyhyt": "Porto-Novon kortteleita ja laguuni vuonna 2005."
+        "lahde": "SebEsteban, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1910,7 +2057,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -1918,15 +2065,36 @@
       "CcommonsFieldPayload": {
         "lahde": "SebEsteban, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
-        "lyhyt": "Porto-Novon kortteleita ja laguuni vuonna 2005.",
+        "lyhyt": "Porto-Novon kortteleita ja laguuni.",
         "tiedosto": "Vue de Porto Novo (Bénin).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
-      "targetAfterSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
-      "contextAfterSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
+      "sourceContentAfterSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+      "targetAfterSHA256": "19c04d9e86d3e0c2c157619b114bbc54db833374a0c1aa056462ddb1bd850ee2",
+      "contextAfterSHA256": "19c04d9e86d3e0c2c157619b114bbc54db833374a0c1aa056462ddb1bd850ee2",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+        "targetAfterSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
+        "contextAfterSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
+          "semanticContextSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
+          "subjectTitle": "Porto-Novo",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+        "sameImageNativeSHA256": "49def641ad244db2c05a7d02bf1632e61d590874bed76f4d9de2838a23d2bec4",
+        "sameImageExportSHA256": "49def641ad244db2c05a7d02bf1632e61d590874bed76f4d9de2838a23d2bec4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1949,14 +2117,14 @@
         "suora": true,
         "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
         "selite": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
-        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta.",
         "tiedosto": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
         "selite": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
-        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta.",
         "tiedosto": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -1964,7 +2132,7 @@
         "suora": true,
         "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
         "selite": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
-        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta.",
         "tiedosto": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1979,10 +2147,10 @@
         5504
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
-        "semanticContextSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
+        "targetBeforeSHA256": "d2995bfe83ba906693d18f6fc447ad32f4c89ed81ac635d812556b387c4aeb83",
+        "semanticContextSHA256": "d2995bfe83ba906693d18f6fc447ad32f4c89ed81ac635d812556b387c4aeb83",
         "subjectTitle": "Porto-Novo",
         "targetState": "existing-target"
       },
@@ -2135,9 +2303,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg",
-        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta.",
         "selite": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
-        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024."
+        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2156,7 +2324,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2164,15 +2332,36 @@
       "CcommonsFieldPayload": {
         "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
         "selite": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
-        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta.",
         "tiedosto": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
-      "targetAfterSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
-      "contextAfterSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
+      "sourceContentAfterSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+      "targetAfterSHA256": "d2995bfe83ba906693d18f6fc447ad32f4c89ed81ac635d812556b387c4aeb83",
+      "contextAfterSHA256": "d2995bfe83ba906693d18f6fc447ad32f4c89ed81ac635d812556b387c4aeb83",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+        "targetAfterSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
+        "contextAfterSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
+          "semanticContextSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
+          "subjectTitle": "Porto-Novo",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+        "sameImageNativeSHA256": "140542f8dffaf17fe0149c5b70507bfab742727cdd23bb6e65869e738ec682c6",
+        "sameImageExportSHA256": "140542f8dffaf17fe0149c5b70507bfab742727cdd23bb6e65869e738ec682c6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2195,14 +2384,14 @@
         "suora": true,
         "lahde": "Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
-        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa.",
         "tiedosto": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
-        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa.",
         "tiedosto": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2210,7 +2399,7 @@
         "suora": true,
         "lahde": "Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
-        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa.",
         "tiedosto": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2225,10 +2414,10 @@
         3264
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "sourceContentSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7c5fcfd36ae1f5372464e1f3a1534294800e49125f426bb46df952d54712a16d",
-        "semanticContextSHA256": "3b6ff3dac0a06f4ac10253e188dcfd28bb03db5d9ec9a8b463311c6c5e4ed1cc",
+        "targetBeforeSHA256": "a83ec60186aff2fdda664e922163daba9814d44e5c57bc08e891059bcbb3518b",
+        "semanticContextSHA256": "fe75480f811759f844b1df63250fbbde1742fc76ac46ffa0ea1fd334d9236214",
         "subjectTitle": "Jardin des plantes et de la nature",
         "targetState": "existing-target"
       },
@@ -2363,9 +2552,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg",
-        "lahde": "Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa.",
         "selite": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
-        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019."
+        "lahde": "Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2384,7 +2573,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2392,20 +2581,47 @@
       "CcommonsFieldPayload": {
         "lahde": "Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
-        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa.",
         "tiedosto": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
-      "targetAfterSHA256": "7c5fcfd36ae1f5372464e1f3a1534294800e49125f426bb46df952d54712a16d",
-      "contextAfterSHA256": "3b6ff3dac0a06f4ac10253e188dcfd28bb03db5d9ec9a8b463311c6c5e4ed1cc",
+      "sourceContentAfterSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+      "targetAfterSHA256": "a83ec60186aff2fdda664e922163daba9814d44e5c57bc08e891059bcbb3518b",
+      "contextAfterSHA256": "fe75480f811759f844b1df63250fbbde1742fc76ac46ffa0ea1fd334d9236214",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+        "targetAfterSHA256": "7c5fcfd36ae1f5372464e1f3a1534294800e49125f426bb46df952d54712a16d",
+        "contextAfterSHA256": "3b6ff3dac0a06f4ac10253e188dcfd28bb03db5d9ec9a8b463311c6c5e4ed1cc",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "7c5fcfd36ae1f5372464e1f3a1534294800e49125f426bb46df952d54712a16d",
+          "semanticContextSHA256": "3b6ff3dac0a06f4ac10253e188dcfd28bb03db5d9ec9a8b463311c6c5e4ed1cc",
+          "subjectTitle": "Jardin des plantes et de la nature",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "27240310dcccc00f8dd885b870029e6bd24f0f2f84ffa9cf7714a3846fc7292a",
+        "sameImageNativeSHA256": "1fce9ad67678da7d8a7b98d5c92ad4189cb4eecd9ec4b1dbe12b1ce93a2308d3",
+        "sameImageExportSHA256": "1fce9ad67678da7d8a7b98d5c92ad4189cb4eecd9ec4b1dbe12b1ce93a2308d3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e05/portonovo/84f2570db7aa521b5cdfd1fe553c8eabb00175c079774618062cc36ec0542616.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.739757+00:00"
 }

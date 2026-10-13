@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "bamako",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+  "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
   "assets": [
     {
       "era": "e05",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-traveler-v1-20261012T180130Z-045361f4c464.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: puun lehvästö.",
-        "lyhyt": "Havainnekuva: puun lehvästö."
+        "selite": "Havainnekuva: puun lehvästö."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-traveler-v1-20261012T180130Z-045361f4c464.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: puun lehvästö.",
-        "lyhyt": "Havainnekuva: puun lehvästö."
+        "selite": "Havainnekuva: puun lehvästö."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "8d05acaa5a71a48ca660c9e4b71897c61c6db23a951c7e2272f9d1cfd8c1600b",
+        "semanticContextSHA256": "7d8bd4a1bdceab1eb7990ea58ce6119a77390e9ab47088c1d2642529be01fe1a",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -270,9 +270,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -291,17 +291,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "8d05acaa5a71a48ca660c9e4b71897c61c6db23a951c7e2272f9d1cfd8c1600b",
+      "contextAfterSHA256": "7d8bd4a1bdceab1eb7990ea58ce6119a77390e9ab47088c1d2642529be01fe1a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "8d05acaa5a71a48ca660c9e4b71897c61c6db23a951c7e2272f9d1cfd8c1600b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "8d05acaa5a71a48ca660c9e4b71897c61c6db23a951c7e2272f9d1cfd8c1600b",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+        "sameImageNativeSHA256": "045361f4c4643b1315684bb6cd3531ce445596d83ab1fc1fd718ab05de6db05e",
+        "sameImageExportSHA256": "f5de771e122e13203c1f3942c23b01fc15ac830aefb41ea7167316c47900e023",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -326,10 +347,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-o3-v1-20261012T192531Z-162523fa8de2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: nahan luonnollinen pinta.",
-        "lyhyt": "Havainnekuva: nahan luonnollinen pinta."
+        "selite": "Havainnekuva: nahan luonnollinen pinta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -337,10 +358,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-o3-v1-20261012T192531Z-162523fa8de2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: nahan luonnollinen pinta.",
-        "lyhyt": "Havainnekuva: nahan luonnollinen pinta."
+        "selite": "Havainnekuva: nahan luonnollinen pinta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -354,10 +375,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "09fd8d922492d8c6b522b3e9c0f74aadcd6b7552d4c19bad17e61ff39e31e124",
+        "semanticContextSHA256": "0789444dd34e8a299e4f8732ac8efa21234cd5e5efd4ee9cb4503e18a257b381",
         "subjectTitle": "Markkinat ja kokoelmat",
         "targetState": "existing-target"
       },
@@ -564,9 +585,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -585,17 +606,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "09fd8d922492d8c6b522b3e9c0f74aadcd6b7552d4c19bad17e61ff39e31e124",
+      "contextAfterSHA256": "0789444dd34e8a299e4f8732ac8efa21234cd5e5efd4ee9cb4503e18a257b381",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "09fd8d922492d8c6b522b3e9c0f74aadcd6b7552d4c19bad17e61ff39e31e124",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "09fd8d922492d8c6b522b3e9c0f74aadcd6b7552d4c19bad17e61ff39e31e124",
+          "subjectTitle": "Markkinat ja kokoelmat",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+        "sameImageNativeSHA256": "162523fa8de29ca897c8bef6a03d9c20ae131ecec673b63310cbfe923769b6d9",
+        "sameImageExportSHA256": "83d4f4c50edeec090f7a01a0974af377fb622c3ef3a68e84b47f1a2e930ebbb5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -620,10 +662,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-o4-v1-20261012T174027Z-72c6c4577b18.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: riisi ja maapähkinäkastike.",
-        "lyhyt": "Havainnekuva: riisi ja maapähkinäkastike."
+        "selite": "Havainnekuva: riisi ja maapähkinäkastike."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -631,10 +673,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-o4-v1-20261012T174027Z-72c6c4577b18.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: riisi ja maapähkinäkastike.",
-        "lyhyt": "Havainnekuva: riisi ja maapähkinäkastike."
+        "selite": "Havainnekuva: riisi ja maapähkinäkastike."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -648,10 +690,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "16f62afd804eafaf1307f1bc1fb804bbdf4707fa52825815b590f5a6221643b8",
+        "semanticContextSHA256": "9f3557978f618c4943bcf29b0c6b99a2e1ea0ca1fbc44c8800914740a52883b8",
         "subjectTitle": "Mitä kaupungissa syödään",
         "targetState": "existing-target"
       },
@@ -903,9 +945,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -924,17 +966,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "16f62afd804eafaf1307f1bc1fb804bbdf4707fa52825815b590f5a6221643b8",
+      "contextAfterSHA256": "9f3557978f618c4943bcf29b0c6b99a2e1ea0ca1fbc44c8800914740a52883b8",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "16f62afd804eafaf1307f1bc1fb804bbdf4707fa52825815b590f5a6221643b8",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "16f62afd804eafaf1307f1bc1fb804bbdf4707fa52825815b590f5a6221643b8",
+          "subjectTitle": "Mitä kaupungissa syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+        "sameImageNativeSHA256": "72c6c4577b184f63f3208a0909c4b14527e2a9ab14193a33c082c746b2e40449",
+        "sameImageExportSHA256": "d3f9c2020e17759198c3455b0bae04065a572a24528c9135d5328a0dd37f1ff3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -956,10 +1019,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-k2-v1-20261012T190021Z-7118e605fe48.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: rautatien kisko.",
-        "lyhyt": "Havainnekuva: rautatien kisko."
+        "selite": "Havainnekuva: rautatien kisko."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -967,10 +1030,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-k2-v1-20261012T190021Z-7118e605fe48.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: rautatien kisko.",
-        "lyhyt": "Havainnekuva: rautatien kisko."
+        "selite": "Havainnekuva: rautatien kisko."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -984,10 +1047,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "cfdad0b360bfef4361fb00e567ed67662afa2e3b51483efae9fd771da21b5fc3",
-        "semanticContextSHA256": "cfdad0b360bfef4361fb00e567ed67662afa2e3b51483efae9fd771da21b5fc3",
+        "targetBeforeSHA256": "b40b64588a9c96d45bf0ab292ccf7c3ffb1c89bdb05b398bb7a8868a634f4063",
+        "semanticContextSHA256": "b40b64588a9c96d45bf0ab292ccf7c3ffb1c89bdb05b398bb7a8868a634f4063",
         "subjectTitle": "Kiskot saapuivat valmiiseen kaupunkiin",
         "targetState": "existing-target"
       },
@@ -1188,9 +1251,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1209,17 +1272,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
-      "targetAfterSHA256": "cfdad0b360bfef4361fb00e567ed67662afa2e3b51483efae9fd771da21b5fc3",
-      "contextAfterSHA256": "cfdad0b360bfef4361fb00e567ed67662afa2e3b51483efae9fd771da21b5fc3",
+      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "targetAfterSHA256": "b40b64588a9c96d45bf0ab292ccf7c3ffb1c89bdb05b398bb7a8868a634f4063",
+      "contextAfterSHA256": "b40b64588a9c96d45bf0ab292ccf7c3ffb1c89bdb05b398bb7a8868a634f4063",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+        "targetAfterSHA256": "cfdad0b360bfef4361fb00e567ed67662afa2e3b51483efae9fd771da21b5fc3",
+        "contextAfterSHA256": "cfdad0b360bfef4361fb00e567ed67662afa2e3b51483efae9fd771da21b5fc3",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "cfdad0b360bfef4361fb00e567ed67662afa2e3b51483efae9fd771da21b5fc3",
+          "semanticContextSHA256": "cfdad0b360bfef4361fb00e567ed67662afa2e3b51483efae9fd771da21b5fc3",
+          "subjectTitle": "Kiskot saapuivat valmiiseen kaupunkiin",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+        "sameImageNativeSHA256": "7118e605fe4865325b835bae727768b0ecca1e9f50904e464f8a170403e88599",
+        "sameImageExportSHA256": "15fcdf83dc68481b8c12395b2e84d8f174fcfbba0a469290f3a4d8a33f9d7e21",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1241,10 +1325,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-k3-v1-20261012T180027Z-d3f64cb5fb11.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: nahka ja käsityön välineet.",
-        "lyhyt": "Havainnekuva: nahka ja käsityön välineet."
+        "selite": "Havainnekuva: nahka ja käsityön välineet."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1252,10 +1336,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-k3-v1-20261012T180027Z-d3f64cb5fb11.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: nahka ja käsityön välineet.",
-        "lyhyt": "Havainnekuva: nahka ja käsityön välineet."
+        "selite": "Havainnekuva: nahka ja käsityön välineet."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1269,10 +1353,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5bf2e06a72639bf03d7c0d06c039665600690ac39d5068801e9b305921dc2b2e",
-        "semanticContextSHA256": "5bf2e06a72639bf03d7c0d06c039665600690ac39d5068801e9b305921dc2b2e",
+        "targetBeforeSHA256": "4564e0e5f774170778e1cd18b7079d7ac30527fdf15d30914630a8a44f20a623",
+        "semanticContextSHA256": "4564e0e5f774170778e1cd18b7079d7ac30527fdf15d30914630a8a44f20a623",
         "subjectTitle": "Torilta lähtee myös soitin",
         "targetState": "existing-target"
       },
@@ -1485,9 +1569,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1506,17 +1590,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
-      "targetAfterSHA256": "5bf2e06a72639bf03d7c0d06c039665600690ac39d5068801e9b305921dc2b2e",
-      "contextAfterSHA256": "5bf2e06a72639bf03d7c0d06c039665600690ac39d5068801e9b305921dc2b2e",
+      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "targetAfterSHA256": "4564e0e5f774170778e1cd18b7079d7ac30527fdf15d30914630a8a44f20a623",
+      "contextAfterSHA256": "4564e0e5f774170778e1cd18b7079d7ac30527fdf15d30914630a8a44f20a623",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+        "targetAfterSHA256": "5bf2e06a72639bf03d7c0d06c039665600690ac39d5068801e9b305921dc2b2e",
+        "contextAfterSHA256": "5bf2e06a72639bf03d7c0d06c039665600690ac39d5068801e9b305921dc2b2e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "5bf2e06a72639bf03d7c0d06c039665600690ac39d5068801e9b305921dc2b2e",
+          "semanticContextSHA256": "5bf2e06a72639bf03d7c0d06c039665600690ac39d5068801e9b305921dc2b2e",
+          "subjectTitle": "Torilta lähtee myös soitin",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+        "sameImageNativeSHA256": "d3f64cb5fb114ab612ef23244f65b8ad294f53e639ccb565ba436d30caf65a27",
+        "sameImageExportSHA256": "b15d05b3d930349dcf81dc0960cfda00bd8577e44a0dd6806097dc3a7635263c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1538,10 +1643,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-k4-v1-20261012T190323Z-8d3e4d3505fb.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: pikkubussin sisätila.",
-        "lyhyt": "Havainnekuva: pikkubussin sisätila."
+        "selite": "Havainnekuva: pikkubussin sisätila."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1549,10 +1654,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-k4-v1-20261012T190323Z-8d3e4d3505fb.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: pikkubussin sisätila.",
-        "lyhyt": "Havainnekuva: pikkubussin sisätila."
+        "selite": "Havainnekuva: pikkubussin sisätila."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1566,10 +1671,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a23397aba5ca802b4569a73f9689b0c3a2079428e443d5052714af61719ae9bf",
-        "semanticContextSHA256": "a23397aba5ca802b4569a73f9689b0c3a2079428e443d5052714af61719ae9bf",
+        "targetBeforeSHA256": "b9795e277413e336183acdf51c405bd2e7fc6e34b1b143279610037d6f0d1468",
+        "semanticContextSHA256": "b9795e277413e336183acdf51c405bd2e7fc6e34b1b143279610037d6f0d1468",
         "subjectTitle": "Sotrama yhdistää kaupunginosia",
         "targetState": "existing-target"
       },
@@ -1770,9 +1875,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1791,17 +1896,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
-      "targetAfterSHA256": "a23397aba5ca802b4569a73f9689b0c3a2079428e443d5052714af61719ae9bf",
-      "contextAfterSHA256": "a23397aba5ca802b4569a73f9689b0c3a2079428e443d5052714af61719ae9bf",
+      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "targetAfterSHA256": "b9795e277413e336183acdf51c405bd2e7fc6e34b1b143279610037d6f0d1468",
+      "contextAfterSHA256": "b9795e277413e336183acdf51c405bd2e7fc6e34b1b143279610037d6f0d1468",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+        "targetAfterSHA256": "a23397aba5ca802b4569a73f9689b0c3a2079428e443d5052714af61719ae9bf",
+        "contextAfterSHA256": "a23397aba5ca802b4569a73f9689b0c3a2079428e443d5052714af61719ae9bf",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a23397aba5ca802b4569a73f9689b0c3a2079428e443d5052714af61719ae9bf",
+          "semanticContextSHA256": "a23397aba5ca802b4569a73f9689b0c3a2079428e443d5052714af61719ae9bf",
+          "subjectTitle": "Sotrama yhdistää kaupunginosia",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+        "sameImageNativeSHA256": "8d3e4d3505fba707087aab190f993b0fcaf1d1838e1b4e9990342460dd6d4f70",
+        "sameImageExportSHA256": "673b59ed38831c71499e6dd5c14d6374245ac50d63252b34dfacd1de56653f6b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1823,10 +1949,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-l3-v1-20261012T190449Z-686e822b9d23.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: lehden luonnollinen pinta.",
-        "lyhyt": "Havainnekuva: lehden luonnollinen pinta."
+        "selite": "Havainnekuva: lehden luonnollinen pinta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1834,10 +1960,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/bamako/e05-bamako-l3-v1-20261012T190449Z-686e822b9d23.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: lehden luonnollinen pinta.",
-        "lyhyt": "Havainnekuva: lehden luonnollinen pinta."
+        "selite": "Havainnekuva: lehden luonnollinen pinta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1851,10 +1977,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e8005ca9e09a8ccf09b72b37947f30552ff3d85ad627c3d3bb9610a978baf209",
-        "semanticContextSHA256": "e8005ca9e09a8ccf09b72b37947f30552ff3d85ad627c3d3bb9610a978baf209",
+        "targetBeforeSHA256": "2bee83147341c44da45b76e83e504b66a362403b005400979cfb98e846d04ab5",
+        "semanticContextSHA256": "2bee83147341c44da45b76e83e504b66a362403b005400979cfb98e846d04ab5",
         "subjectTitle": "Puutarhassa katsotaan lähelle",
         "targetState": "existing-target"
       },
@@ -2055,9 +2181,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2076,17 +2202,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
-      "targetAfterSHA256": "e8005ca9e09a8ccf09b72b37947f30552ff3d85ad627c3d3bb9610a978baf209",
-      "contextAfterSHA256": "e8005ca9e09a8ccf09b72b37947f30552ff3d85ad627c3d3bb9610a978baf209",
+      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "targetAfterSHA256": "2bee83147341c44da45b76e83e504b66a362403b005400979cfb98e846d04ab5",
+      "contextAfterSHA256": "2bee83147341c44da45b76e83e504b66a362403b005400979cfb98e846d04ab5",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+        "targetAfterSHA256": "e8005ca9e09a8ccf09b72b37947f30552ff3d85ad627c3d3bb9610a978baf209",
+        "contextAfterSHA256": "e8005ca9e09a8ccf09b72b37947f30552ff3d85ad627c3d3bb9610a978baf209",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e8005ca9e09a8ccf09b72b37947f30552ff3d85ad627c3d3bb9610a978baf209",
+          "semanticContextSHA256": "e8005ca9e09a8ccf09b72b37947f30552ff3d85ad627c3d3bb9610a978baf209",
+          "subjectTitle": "Puutarhassa katsotaan lähelle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+        "sameImageNativeSHA256": "686e822b9d238319c7bec61c80a2252e5a3b180498125dbc0db94eb228aa14fd",
+        "sameImageExportSHA256": "3f8c294268a490189b32fa6f19b95c3716d94f7ba0b1ad2e0670908d11b29705",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2106,7 +2253,7 @@
         "suora": true,
         "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
         "selite": "Bamako yömaisemassa vuonna 2007.",
-        "lyhyt": "Bamako yömaisemassa vuonna 2007.",
+        "lyhyt": "Bamakon yömaisema.",
         "tiedosto": "Bamako night hills may 2007.jpg",
         "vuosi": "2007"
       },
@@ -2114,7 +2261,7 @@
       "CvalidatorCompatiblePayload": {
         "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
         "selite": "Bamako yömaisemassa vuonna 2007.",
-        "lyhyt": "Bamako yömaisemassa vuonna 2007.",
+        "lyhyt": "Bamakon yömaisema.",
         "tiedosto": "Bamako night hills may 2007.jpg",
         "vuosi": "2007"
       },
@@ -2123,7 +2270,7 @@
         "suora": true,
         "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
         "selite": "Bamako yömaisemassa vuonna 2007.",
-        "lyhyt": "Bamako yömaisemassa vuonna 2007.",
+        "lyhyt": "Bamakon yömaisema.",
         "tiedosto": "Bamako night hills may 2007.jpg",
         "vuosi": "2007"
       },
@@ -2139,10 +2286,10 @@
         2040
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "92f9ec0f165b3d004e286c911b7e79eb8eaf861f296e6dd4e25253c91a69ce87",
-        "semanticContextSHA256": "92f9ec0f165b3d004e286c911b7e79eb8eaf861f296e6dd4e25253c91a69ce87",
+        "targetBeforeSHA256": "0de0af2c0b26c705b4e9acc671c88701a30ebbffa5b59bea666ae926a2af8cc3",
+        "semanticContextSHA256": "0de0af2c0b26c705b4e9acc671c88701a30ebbffa5b59bea666ae926a2af8cc3",
         "subjectTitle": "bamako — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2303,9 +2450,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Bamako night hills may 2007.jpg",
-        "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
+        "lyhyt": "Bamakon yömaisema.",
         "selite": "Bamako yömaisemassa vuonna 2007.",
-        "lyhyt": "Bamako yömaisemassa vuonna 2007.",
+        "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
         "vuosi": "2007"
       },
       "preservePreviousMediaObjects": true,
@@ -2325,7 +2472,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2333,16 +2480,37 @@
       "CcommonsFieldPayload": {
         "lahde": "https://www.flickr.com/photos/gigawebs/, Commons (CC BY 2.0)",
         "selite": "Bamako yömaisemassa vuonna 2007.",
-        "lyhyt": "Bamako yömaisemassa vuonna 2007.",
+        "lyhyt": "Bamakon yömaisema.",
         "tiedosto": "Bamako night hills may 2007.jpg",
         "vuosi": "2007"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
-      "targetAfterSHA256": "92f9ec0f165b3d004e286c911b7e79eb8eaf861f296e6dd4e25253c91a69ce87",
-      "contextAfterSHA256": "92f9ec0f165b3d004e286c911b7e79eb8eaf861f296e6dd4e25253c91a69ce87",
+      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "targetAfterSHA256": "0de0af2c0b26c705b4e9acc671c88701a30ebbffa5b59bea666ae926a2af8cc3",
+      "contextAfterSHA256": "0de0af2c0b26c705b4e9acc671c88701a30ebbffa5b59bea666ae926a2af8cc3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+        "targetAfterSHA256": "92f9ec0f165b3d004e286c911b7e79eb8eaf861f296e6dd4e25253c91a69ce87",
+        "contextAfterSHA256": "92f9ec0f165b3d004e286c911b7e79eb8eaf861f296e6dd4e25253c91a69ce87",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "92f9ec0f165b3d004e286c911b7e79eb8eaf861f296e6dd4e25253c91a69ce87",
+          "semanticContextSHA256": "92f9ec0f165b3d004e286c911b7e79eb8eaf861f296e6dd4e25253c91a69ce87",
+          "subjectTitle": "bamako — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+        "sameImageNativeSHA256": "9ad63c42d2d2461e08113f8cd9ab5ff3766a44bd517902a9c102ee26dc90fba4",
+        "sameImageExportSHA256": "9ad63c42d2d2461e08113f8cd9ab5ff3766a44bd517902a9c102ee26dc90fba4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2365,14 +2533,14 @@
         "suora": true,
         "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
-        "lyhyt": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
+        "lyhyt": "Vene Nigerjoen rannalla Bamakossa.",
         "tiedosto": "Dan Flore Bamako-Mali-Boat-on-the-Niger-River-and-King-Fahd-Bridge.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
-        "lyhyt": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
+        "lyhyt": "Vene Nigerjoen rannalla Bamakossa.",
         "tiedosto": "Dan Flore Bamako-Mali-Boat-on-the-Niger-River-and-King-Fahd-Bridge.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2380,7 +2548,7 @@
         "suora": true,
         "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
-        "lyhyt": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
+        "lyhyt": "Vene Nigerjoen rannalla Bamakossa.",
         "tiedosto": "Dan Flore Bamako-Mali-Boat-on-the-Niger-River-and-King-Fahd-Bridge.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2395,10 +2563,10 @@
         1992
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "08d5fbc592eb1933e30cd11b0b1503313b8e17bfa6a2a189a58aa5fb6fa1686a",
-        "semanticContextSHA256": "08d5fbc592eb1933e30cd11b0b1503313b8e17bfa6a2a189a58aa5fb6fa1686a",
+        "targetBeforeSHA256": "1e38d1eec97a88c6dd5b0f5645dcb31f29e78256ffd5a17e83bf36fcb07371f9",
+        "semanticContextSHA256": "1e38d1eec97a88c6dd5b0f5645dcb31f29e78256ffd5a17e83bf36fcb07371f9",
         "subjectTitle": "Bamako",
         "targetState": "existing-target"
       },
@@ -2604,9 +2772,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Dan Flore Bamako-Mali-Boat-on-the-Niger-River-and-King-Fahd-Bridge.jpg",
-        "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Vene Nigerjoen rannalla Bamakossa.",
         "selite": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
-        "lyhyt": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009."
+        "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2625,7 +2793,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2633,16 +2801,630 @@
       "CcommonsFieldPayload": {
         "lahde": "Dan Flore, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
-        "lyhyt": "Nigerjoen rantamaisemaa ja vene Bamakossa toukokuussa 2009.",
+        "lyhyt": "Vene Nigerjoen rannalla Bamakossa.",
         "tiedosto": "Dan Flore Bamako-Mali-Boat-on-the-Niger-River-and-King-Fahd-Bridge.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
-      "targetAfterSHA256": "08d5fbc592eb1933e30cd11b0b1503313b8e17bfa6a2a189a58aa5fb6fa1686a",
-      "contextAfterSHA256": "08d5fbc592eb1933e30cd11b0b1503313b8e17bfa6a2a189a58aa5fb6fa1686a",
+      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "targetAfterSHA256": "1e38d1eec97a88c6dd5b0f5645dcb31f29e78256ffd5a17e83bf36fcb07371f9",
+      "contextAfterSHA256": "1e38d1eec97a88c6dd5b0f5645dcb31f29e78256ffd5a17e83bf36fcb07371f9",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+        "targetAfterSHA256": "08d5fbc592eb1933e30cd11b0b1503313b8e17bfa6a2a189a58aa5fb6fa1686a",
+        "contextAfterSHA256": "08d5fbc592eb1933e30cd11b0b1503313b8e17bfa6a2a189a58aa5fb6fa1686a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "08d5fbc592eb1933e30cd11b0b1503313b8e17bfa6a2a189a58aa5fb6fa1686a",
+          "semanticContextSHA256": "08d5fbc592eb1933e30cd11b0b1503313b8e17bfa6a2a189a58aa5fb6fa1686a",
+          "subjectTitle": "Bamako",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+        "sameImageNativeSHA256": "0b2102bd95c698c32c9d3b5c8481d3c1de8784d233767ecef3555f9e9e742469",
+        "sameImageExportSHA256": "0b2102bd95c698c32c9d3b5c8481d3c1de8784d233767ecef3555f9e9e742469",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
+    {
+      "era": "e05",
+      "city": "bamako",
+      "slot": "L1",
+      "type": "commons",
+      "assetID": "capital-cc-e05-bamako-l1-329d4b7c37017b15",
+      "galleryImageID": "capital-cc-e05-bamako-l1-329d4b7c37017b15",
+      "commonsFile": "Cité du Niger.jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
+        "suora": true,
+        "lahde": "Efiads, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
+        "lyhyt": "Vesikasvillisuutta Bamakossa.",
+        "tiedosto": "Cité du Niger.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Efiads, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
+        "lyhyt": "Vesikasvillisuutta Bamakossa.",
+        "tiedosto": "Cité du Niger.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
+        "suora": true,
+        "lahde": "Efiads, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
+        "lyhyt": "Vesikasvillisuutta Bamakossa.",
+        "tiedosto": "Cité du Niger.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
+      "exportSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-fe566f8d4a7b9a.jpg",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
+      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "978adb740b2371c4abec517ca2fc885c8b609ed9f830f3e544823736f82ab156",
+        "semanticContextSHA256": "978adb740b2371c4abec517ca2fc885c8b609ed9f830f3e544823736f82ab156",
+        "subjectTitle": "Jokitasanko ei ole tyhjä rakennusmaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Efiads",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Niger.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Niger.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Efiads",
+            "licenseSourceSha256": "25ee5d687167256ace864804bb9139f9d69d8292eb5d88a779797e5af3d8a95b",
+            "depictedWorkLayer": "Valokuvan Efiads ja CC BY-SA 4.0 todettu alkuperäissivulta. Pääaihe luonnollinen vesi ja kasvillisuus, ei yksilöityä taideteos-/rakennuspääaihetta. Alkuperäissivun city category Nature of Bamako yksilöi kaupungin; kuvausvuosi 2017 säilyy, nosto ei ole tuore oppaankuva.",
+            "sourcePlaceDescription": "This is an image with the theme \" Play \" from: Mali",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true,
+            "originalSourceCategories": [
+              "Nature of Bamako",
+              "Images from Wiki Loves Africa 2019",
+              "Images from Wiki Loves Africa 2019 in Mali",
+              "CC-BY-SA-4.0",
+              "Self-published work",
+              "Images from Wiki Loves Africa 2019 to check",
+              "Uploaded via Campaign:wlafrica"
+            ]
+          },
+          "QA": {
+            "author": "Efiads",
+            "license": "CC BY-SA 4.0",
+            "width": 6000,
+            "height": 4000,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-fe566f8d4a7b9a.jpg",
+            "nativeSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa-evidence/25ee5d687167256ace864804bb9139f9d69d8292eb5d88a779797e5af3d8a95b.html",
+            "sourceSnapshotSHA256": "25ee5d687167256ace864804bb9139f9d69d8292eb5d88a779797e5af3d8a95b",
+            "sourceRowsRead": {
+              "Description Cité du Niger.jpg": "This is an image with the theme \" Play \" from: Mali",
+              "Date": "7 May 2017, 16:19:54",
+              "Source": "Own work",
+              "Author": "Efiads"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "6,000",
+              "4,000"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-fe566f8d4a7b9a.jpg\n  pixelWidth: 6000\n  pixelHeight: 4000\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "7 May 2017, 16:19:54",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: luonnollista vesikasvillisuutta veden pinnalla ja puustoa, kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. Ei ihmisiä, overlayta, vesileimaa tai nimetyn suojatun teoksen pääaihetta. Kirkas taivas, mutta kasvillisuuden sävyt luontevat ja pääaihe erottuu; noston veden/tasangon aiheeseen soveltuva. Alkuperäissivun oma Category:Nature of Bamako luettu kaupungin paikkasidonnaksi; pelkkä Mali-kuvateema ei peruste. Ei arvausta Nigerin haarasta, tulvatilanteesta tai kasvilajista. Efiads/CC BY-SA4.0 Author/licensetpl, native6000×4000; kuvaus7.5.2017.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "sourceCategoryPersonallyRead": "Nature of Bamako",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Niger.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-selection.json",
+            "currentContentSHA256": "3f44fdb00fbdaa6154ada806602e2f0b4ed47e62685d1a9b071f3bb70b4cea8e",
+            "photoDate": "7 May 2017, 16:19:54",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
+            "captionFi": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
+            "checkedAt": "2026-10-12T19:43:32.932966+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Cité du Niger.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Oma natiivin silmätarkistus: luonnollista vesikasvillisuutta veden pinnalla ja puustoa, kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. Ei ihmisiä, overlayta, vesileimaa tai nimetyn suojatun teoksen pääaihetta. Kirkas taivas, mutta kasvillisuuden sävyt luontevat ja pääaihe erottuu; noston veden/tasangon aiheeseen soveltuva. Alkuperäissivun oma Category:Nature of Bamako luettu kaupungin paikkasidonnaksi; pelkkä Mali-kuvateema ei peruste. Ei arvausta Nigerin haarasta, tulvatilanteesta tai kasvilajista. Efiads/CC BY-SA4.0 Author/licensetpl, native6000×4000; kuvaus7.5.2017."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa.json",
+        "fileSHA256": "ba4632fe2160eeb34ea579cb5ceb05cb947e1753b87d2df7e2b50885e3892344",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": null,
+          "commonsFile": "Cité du Niger.jpg",
+          "sha256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
+          "verdict": "accepted",
+          "reason": "Oma natiivin silmätarkistus: luonnollista vesikasvillisuutta veden pinnalla ja puustoa, kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. Ei ihmisiä, overlayta, vesileimaa tai nimetyn suojatun teoksen pääaihetta. Kirkas taivas, mutta kasvillisuuden sävyt luontevat ja pääaihe erottuu; noston veden/tasangon aiheeseen soveltuva. Alkuperäissivun oma Category:Nature of Bamako luettu kaupungin paikkasidonnaksi; pelkkä Mali-kuvateema ei peruste. Ei arvausta Nigerin haarasta, tulvatilanteesta tai kasvilajista. Efiads/CC BY-SA4.0 Author/licensetpl, native6000×4000; kuvaus7.5.2017.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "Efiads",
+            "license": "CC BY-SA 4.0",
+            "width": 6000,
+            "height": 4000,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-fe566f8d4a7b9a.jpg",
+            "nativeSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa-evidence/25ee5d687167256ace864804bb9139f9d69d8292eb5d88a779797e5af3d8a95b.html",
+            "sourceSnapshotSHA256": "25ee5d687167256ace864804bb9139f9d69d8292eb5d88a779797e5af3d8a95b",
+            "sourceRowsRead": {
+              "Description Cité du Niger.jpg": "This is an image with the theme \" Play \" from: Mali",
+              "Date": "7 May 2017, 16:19:54",
+              "Source": "Own work",
+              "Author": "Efiads"
+            },
+            "licenseTemplatesRead": [
+              "CC BY-SA 4.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "6,000",
+              "4,000"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-fe566f8d4a7b9a.jpg\n  pixelWidth: 6000\n  pixelHeight: 4000\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "sourceDateRaw": "7 May 2017, 16:19:54",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: luonnollista vesikasvillisuutta veden pinnalla ja puustoa, kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. Ei ihmisiä, overlayta, vesileimaa tai nimetyn suojatun teoksen pääaihetta. Kirkas taivas, mutta kasvillisuuden sävyt luontevat ja pääaihe erottuu; noston veden/tasangon aiheeseen soveltuva. Alkuperäissivun oma Category:Nature of Bamako luettu kaupungin paikkasidonnaksi; pelkkä Mali-kuvateema ei peruste. Ei arvausta Nigerin haarasta, tulvatilanteesta tai kasvilajista. Efiads/CC BY-SA4.0 Author/licensetpl, native6000×4000; kuvaus7.5.2017.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "sourceCategoryPersonallyRead": "Nature of Bamako",
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Niger.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-selection.json",
+            "currentContentSHA256": "3f44fdb00fbdaa6154ada806602e2f0b4ed47e62685d1a9b071f3bb70b4cea8e",
+            "photoDate": "7 May 2017, 16:19:54",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
+            "captionFi": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
+            "checkedAt": "2026-10-12T19:43:32.932966+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "sourceTitlePersonallyRead": "Cité du Niger.jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa.json",
+            "sha256": "ba4632fe2160eeb34ea579cb5ceb05cb947e1753b87d2df7e2b50885e3892344"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/illustration-qa-extra.json",
+            "sha256": "da13c93affa40963faf666b336682427a4971c29529a0b699728b2db0f813c9a"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "bamako",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "commonsFile": "Cité du Niger.jpg",
+        "sha256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Niger.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
+        "author": "Efiads",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 6000,
+        "height": 4000,
+        "originalSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
+        "bytes": 10533200,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:44:37.681472+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Cité du Niger.jpg",
+        "lyhyt": "Vesikasvillisuutta Bamakossa.",
+        "selite": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
+        "lahde": "Efiads, Wikimedia Commons (CC BY-SA 4.0)"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": true,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Efiads, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
+        "lyhyt": "Vesikasvillisuutta Bamakossa.",
+        "tiedosto": "Cité du Niger.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "targetAfterSHA256": "978adb740b2371c4abec517ca2fc885c8b609ed9f830f3e544823736f82ab156",
+      "contextAfterSHA256": "978adb740b2371c4abec517ca2fc885c8b609ed9f830f3e544823736f82ab156",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+        "targetAfterSHA256": "f3f1ca3daaf0fae6f4b40d3cd89f28555586663693ecb4b19f5a27e0b34394bd",
+        "contextAfterSHA256": "f3f1ca3daaf0fae6f4b40d3cd89f28555586663693ecb4b19f5a27e0b34394bd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "f3f1ca3daaf0fae6f4b40d3cd89f28555586663693ecb4b19f5a27e0b34394bd",
+          "semanticContextSHA256": "f3f1ca3daaf0fae6f4b40d3cd89f28555586663693ecb4b19f5a27e0b34394bd",
+          "subjectTitle": "Jokitasanko ei ole tyhjä rakennusmaa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+        "sameImageNativeSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
+        "sameImageExportSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
+    },
+    {
+      "era": "e05",
+      "city": "bamako",
+      "slot": "L4",
+      "type": "commons",
+      "assetID": "capital-cc-e05-bamako-l4-ebb580fe9d0fe97f",
+      "galleryImageID": "capital-cc-e05-bamako-l4-ebb580fe9d0fe97f",
+      "commonsFile": "Bamako Garden (31115610468).jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
+        "suora": true,
+        "lahde": "Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Pieniä viljelypalstoja Bamakossa.",
+        "lyhyt": "Bamakon viljelypalstoja.",
+        "tiedosto": "Bamako Garden (31115610468).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Pieniä viljelypalstoja Bamakossa.",
+        "lyhyt": "Bamakon viljelypalstoja.",
+        "tiedosto": "Bamako Garden (31115610468).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
+        "suora": true,
+        "lahde": "Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Pieniä viljelypalstoja Bamakossa.",
+        "lyhyt": "Bamakon viljelypalstoja.",
+        "tiedosto": "Bamako Garden (31115610468).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
+      "exportSHA256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/meta-5eb127633abe24.jpg",
+      "dimensions": [
+        3993,
+        2244
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
+      "sourceContentSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "91e496236a1b1a6d7a442f61f3615177438353bd3b3d88b45fb80ceb015bcb72",
+        "semanticContextSHA256": "91e496236a1b1a6d7a442f61f3615177438353bd3b3d88b45fb80ceb015bcb72",
+        "subjectTitle": "Niger on myös työpaikka",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Mark Fischer",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bamako_Garden_(31115610468).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Bamako_Garden_(31115610468).jpg",
+            "artistFieldSource": "Author table",
+            "explicitAuthorOnly": true,
+            "workLayer": "Katsottu alkuperäinen: ylhäältä kuvatut vihreät viljelypalstat, maa, kasvit ja arkisia esineitä. Ei ihmisiä tai tunnistettavia kasvoja, lisättyä tekstiä, logoja, vesileimaa tai kehystä; ei taideteosta tai nimettyä suojattua rakennusta. Ei nimetä kasvilajeja kuvasta.",
+            "sourceDescription": null,
+            "captureDate": "1 January 2018, 00:00",
+            "imageLocation": "Commons camera location 12.636025, -8.030143 inside Bamako; no claim of a specific botanical garden"
+          },
+          "QA": {
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa-evidence/2567b079cb0aa17e1eddc7f9293cd06bfc16a0bbfdd29663f0a72ba5b1b55834.html",
+            "sourceSnapshotSHA256": "2567b079cb0aa17e1eddc7f9293cd06bfc16a0bbfdd29663f0a72ba5b1b55834",
+            "author": "Mark Fischer",
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+            "width": 3993,
+            "height": 2244,
+            "profile": "sRGB IEC61966-2.1",
+            "cameraLocation": [
+              12.636025,
+              -8.030143
+            ],
+            "rightsLayer": "Kasvit/viljelymaa; ei suojattua taide- tai arkkitehtuuripääaihetta",
+            "gameReuseVerified": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Bamako_Garden_(31115610468).jpg",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/meta-5eb127633abe24.jpg",
+            "currentContentSHA256": "3f44fdb00fbdaa6154ada806602e2f0b4ed47e62685d1a9b071f3bb70b4cea8e",
+            "photoDate": "1 January 2018, 00:00",
+            "captionFi": "Pieniä viljelypalstoja Bamakossa.",
+            "checkedAt": "2026-10-12T17:51:17.719844+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "gameReuseRecheckedAt": "2026-10-12T19:22:24.645547+00:00",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
+            "sourceTitlePersonallyRead": "Bamako Garden (31115610468).jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          },
+          "qaReason": "Itse katsottu aito viljelypalstakuva: erikokoisia vihreitä kasvustoja, palstoja erottavaa maata ja tavallisia arkiesineitä. Ei tunnistettavia kasvoja, päälle lisättyä tekstiä, logoa tai taideteos-/rakennuspääaihetta. Source Description sijoittaa palstat Bamako Maliin, ja kamerapaikka12.636025,-8.030143 on Bamakossa. Sopii L4:n kaupungin viljelyaiheeseen; ei nimetty tarkaksi Niger-rannaksi tai kasvilajiksi, joita kuva ei yksin todista."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Pieniä viljelypalstoja Bamakossa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa.json",
+        "fileSHA256": "ba4632fe2160eeb34ea579cb5ceb05cb947e1753b87d2df7e2b50885e3892344",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": null,
+          "commonsFile": "Bamako Garden (31115610468).jpg",
+          "sha256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
+          "verdict": "accepted",
+          "reason": "Itse katsottu aito viljelypalstakuva: erikokoisia vihreitä kasvustoja, palstoja erottavaa maata ja tavallisia arkiesineitä. Ei tunnistettavia kasvoja, päälle lisättyä tekstiä, logoa tai taideteos-/rakennuspääaihetta. Source Description sijoittaa palstat Bamako Maliin, ja kamerapaikka12.636025,-8.030143 on Bamakossa. Sopii L4:n kaupungin viljelyaiheeseen; ei nimetty tarkaksi Niger-rannaksi tai kasvilajiksi, joita kuva ei yksin todista.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa-evidence/2567b079cb0aa17e1eddc7f9293cd06bfc16a0bbfdd29663f0a72ba5b1b55834.html",
+            "sourceSnapshotSHA256": "2567b079cb0aa17e1eddc7f9293cd06bfc16a0bbfdd29663f0a72ba5b1b55834",
+            "author": "Mark Fischer",
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
+            "width": 3993,
+            "height": 2244,
+            "profile": "sRGB IEC61966-2.1",
+            "cameraLocation": [
+              12.636025,
+              -8.030143
+            ],
+            "rightsLayer": "Kasvit/viljelymaa; ei suojattua taide- tai arkkitehtuuripääaihetta",
+            "gameReuseVerified": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Bamako_Garden_(31115610468).jpg",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/meta-5eb127633abe24.jpg",
+            "currentContentSHA256": "3f44fdb00fbdaa6154ada806602e2f0b4ed47e62685d1a9b071f3bb70b4cea8e",
+            "photoDate": "1 January 2018, 00:00",
+            "captionFi": "Pieniä viljelypalstoja Bamakossa.",
+            "checkedAt": "2026-10-12T17:51:17.719844+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false,
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "gameReuseRecheckedAt": "2026-10-12T19:22:24.645547+00:00",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
+            "sourceTitlePersonallyRead": "Bamako Garden (31115610468).jpg",
+            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
+            "exactCommonsFileSourcePointerVerified": true
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa.json",
+            "sha256": "ba4632fe2160eeb34ea579cb5ceb05cb947e1753b87d2df7e2b50885e3892344"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/illustration-qa-extra.json",
+            "sha256": "da13c93affa40963faf666b336682427a4971c29529a0b699728b2db0f813c9a"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "bamako",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "commonsFile": "Bamako Garden (31115610468).jpg",
+        "sha256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bamako_Garden_(31115610468).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
+        "author": "Mark Fischer",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "width": 3993,
+        "height": 2244,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
+        "bytes": 4805491,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:02:21.329109+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Bamako Garden (31115610468).jpg",
+        "lyhyt": "Bamakon viljelypalstoja.",
+        "selite": "Pieniä viljelypalstoja Bamakossa.",
+        "lahde": "Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)"
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": true,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Pieniä viljelypalstoja Bamakossa.",
+        "lyhyt": "Bamakon viljelypalstoja.",
+        "tiedosto": "Bamako Garden (31115610468).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+      "targetAfterSHA256": "91e496236a1b1a6d7a442f61f3615177438353bd3b3d88b45fb80ceb015bcb72",
+      "contextAfterSHA256": "91e496236a1b1a6d7a442f61f3615177438353bd3b3d88b45fb80ceb015bcb72",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
+        "targetAfterSHA256": "dc8610b3f21622b4c23516488e17c53528672db88ec965737f841930462ed851",
+        "contextAfterSHA256": "dc8610b3f21622b4c23516488e17c53528672db88ec965737f841930462ed851",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "dc8610b3f21622b4c23516488e17c53528672db88ec965737f841930462ed851",
+          "semanticContextSHA256": "dc8610b3f21622b4c23516488e17c53528672db88ec965737f841930462ed851",
+          "subjectTitle": "Niger on myös työpaikka",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "89128d0109c59a9282f45217471f4774f83fc6c47eb70343ce0df9efac559323",
+        "sameImageNativeSHA256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
+        "sameImageExportSHA256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
+    }
+  ],
+  "runtimeIntegrationPending": true,
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [
     {
       "era": "e05",
       "city": "bamako",
@@ -2978,556 +3760,15 @@
       "targetAfterSHA256": "543af2e1cd00606b6f985699b3e00805a14fe43773511137b686fe808e92ffc6",
       "contextAfterSHA256": "543af2e1cd00606b6f985699b3e00805a14fe43773511137b686fe808e92ffc6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
-    },
-    {
-      "era": "e05",
-      "city": "bamako",
-      "slot": "L1",
-      "type": "commons",
-      "assetID": "capital-cc-e05-bamako-l1-329d4b7c37017b15",
-      "galleryImageID": "capital-cc-e05-bamako-l1-329d4b7c37017b15",
-      "commonsFile": "Cité du Niger.jpg",
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
-        "suora": true,
-        "lahde": "Efiads, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-        "lyhyt": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-        "tiedosto": "Cité du Niger.jpg"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Efiads, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-        "lyhyt": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-        "tiedosto": "Cité du Niger.jpg"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
-        "suora": true,
-        "lahde": "Efiads, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-        "lyhyt": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-        "tiedosto": "Cité du Niger.jpg"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
-      "exportSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-fe566f8d4a7b9a.jpg",
-      "dimensions": [
-        6000,
-        4000
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "f3f1ca3daaf0fae6f4b40d3cd89f28555586663693ecb4b19f5a27e0b34394bd",
-        "semanticContextSHA256": "f3f1ca3daaf0fae6f4b40d3cd89f28555586663693ecb4b19f5a27e0b34394bd",
-        "subjectTitle": "Jokitasanko ei ole tyhjä rakennusmaa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Efiads",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Niger.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
-        "rightsEvidence": {
-          "selection": {
-            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Niger.jpg",
-            "artistFieldSource": "Author table",
-            "explicitCreditFromSource": "Efiads",
-            "licenseSourceSha256": "25ee5d687167256ace864804bb9139f9d69d8292eb5d88a779797e5af3d8a95b",
-            "depictedWorkLayer": "Valokuvan Efiads ja CC BY-SA 4.0 todettu alkuperäissivulta. Pääaihe luonnollinen vesi ja kasvillisuus, ei yksilöityä taideteos-/rakennuspääaihetta. Alkuperäissivun city category Nature of Bamako yksilöi kaupungin; kuvausvuosi 2017 säilyy, nosto ei ole tuore oppaankuva.",
-            "sourcePlaceDescription": "This is an image with the theme \" Play \" from: Mali",
-            "sourcePlaceGeo": [],
-            "noFopOrBuildingAgeAssumption": true,
-            "originalSourceCategories": [
-              "Nature of Bamako",
-              "Images from Wiki Loves Africa 2019",
-              "Images from Wiki Loves Africa 2019 in Mali",
-              "CC-BY-SA-4.0",
-              "Self-published work",
-              "Images from Wiki Loves Africa 2019 to check",
-              "Uploaded via Campaign:wlafrica"
-            ]
-          },
-          "QA": {
-            "author": "Efiads",
-            "license": "CC BY-SA 4.0",
-            "width": 6000,
-            "height": 4000,
-            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-fe566f8d4a7b9a.jpg",
-            "nativeSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
-            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa-evidence/25ee5d687167256ace864804bb9139f9d69d8292eb5d88a779797e5af3d8a95b.html",
-            "sourceSnapshotSHA256": "25ee5d687167256ace864804bb9139f9d69d8292eb5d88a779797e5af3d8a95b",
-            "sourceRowsRead": {
-              "Description Cité du Niger.jpg": "This is an image with the theme \" Play \" from: Mali",
-              "Date": "7 May 2017, 16:19:54",
-              "Source": "Own work",
-              "Author": "Efiads"
-            },
-            "licenseTemplatesRead": [
-              "CC BY-SA 4.0"
-            ],
-            "sourceOriginalFileDimensions": [
-              "6,000",
-              "4,000"
-            ],
-            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-fe566f8d4a7b9a.jpg\n  pixelWidth: 6000\n  pixelHeight: 4000\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
-            "sourceDateRaw": "7 May 2017, 16:19:54",
-            "gameReuseIndependentlyChecked": true,
-            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/js/packs",
-            "gameReuseFilesRead": 373,
-            "gameReuseMatches": [],
-            "duplicateCitySlots": [],
-            "visualReview": "Oma natiivin silmätarkistus: luonnollista vesikasvillisuutta veden pinnalla ja puustoa, kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. Ei ihmisiä, overlayta, vesileimaa tai nimetyn suojatun teoksen pääaihetta. Kirkas taivas, mutta kasvillisuuden sävyt luontevat ja pääaihe erottuu; noston veden/tasangon aiheeseen soveltuva. Alkuperäissivun oma Category:Nature of Bamako luettu kaupungin paikkasidonnaksi; pelkkä Mali-kuvateema ei peruste. Ei arvausta Nigerin haarasta, tulvatilanteesta tai kasvilajista. Efiads/CC BY-SA4.0 Author/licensetpl, native6000×4000; kuvaus7.5.2017.",
-            "depictedWorkLayerIndependentlyReviewed": true,
-            "sourceCategoryPersonallyRead": "Nature of Bamako",
-            "visuallyReviewed": true,
-            "originalPixelsViewed": true,
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Niger.jpg",
-            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-selection.json",
-            "currentContentSHA256": "3f44fdb00fbdaa6154ada806602e2f0b4ed47e62685d1a9b071f3bb70b4cea8e",
-            "photoDate": "7 May 2017, 16:19:54",
-            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
-            "captionFi": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-            "checkedAt": "2026-10-12T19:43:32.932966+00:00",
-            "published": false,
-            "gameIntegrated": false,
-            "ownerAcceptance": false,
-            "sourceTitlePersonallyRead": "Cité du Niger.jpg",
-            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
-            "exactCommonsFileSourcePointerVerified": true
-          },
-          "qaReason": "Oma natiivin silmätarkistus: luonnollista vesikasvillisuutta veden pinnalla ja puustoa, kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. Ei ihmisiä, overlayta, vesileimaa tai nimetyn suojatun teoksen pääaihetta. Kirkas taivas, mutta kasvillisuuden sävyt luontevat ja pääaihe erottuu; noston veden/tasangon aiheeseen soveltuva. Alkuperäissivun oma Category:Nature of Bamako luettu kaupungin paikkasidonnaksi; pelkkä Mali-kuvateema ei peruste. Ei arvausta Nigerin haarasta, tulvatilanteesta tai kasvilajista. Efiads/CC BY-SA4.0 Author/licensetpl, native6000×4000; kuvaus7.5.2017."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa.json",
-        "fileSHA256": "ba4632fe2160eeb34ea579cb5ceb05cb947e1753b87d2df7e2b50885e3892344",
-        "item": {
-          "slot": "L1",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-          "assetID": null,
-          "commonsFile": "Cité du Niger.jpg",
-          "sha256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
-          "verdict": "accepted",
-          "reason": "Oma natiivin silmätarkistus: luonnollista vesikasvillisuutta veden pinnalla ja puustoa, kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. Ei ihmisiä, overlayta, vesileimaa tai nimetyn suojatun teoksen pääaihetta. Kirkas taivas, mutta kasvillisuuden sävyt luontevat ja pääaihe erottuu; noston veden/tasangon aiheeseen soveltuva. Alkuperäissivun oma Category:Nature of Bamako luettu kaupungin paikkasidonnaksi; pelkkä Mali-kuvateema ei peruste. Ei arvausta Nigerin haarasta, tulvatilanteesta tai kasvilajista. Efiads/CC BY-SA4.0 Author/licensetpl, native6000×4000; kuvaus7.5.2017.",
-          "required": true,
-          "status": "reviewed",
-          "evidence": {
-            "author": "Efiads",
-            "license": "CC BY-SA 4.0",
-            "width": 6000,
-            "height": 4000,
-            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-fe566f8d4a7b9a.jpg",
-            "nativeSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
-            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa-evidence/25ee5d687167256ace864804bb9139f9d69d8292eb5d88a779797e5af3d8a95b.html",
-            "sourceSnapshotSHA256": "25ee5d687167256ace864804bb9139f9d69d8292eb5d88a779797e5af3d8a95b",
-            "sourceRowsRead": {
-              "Description Cité du Niger.jpg": "This is an image with the theme \" Play \" from: Mali",
-              "Date": "7 May 2017, 16:19:54",
-              "Source": "Own work",
-              "Author": "Efiads"
-            },
-            "licenseTemplatesRead": [
-              "CC BY-SA 4.0"
-            ],
-            "sourceOriginalFileDimensions": [
-              "6,000",
-              "4,000"
-            ],
-            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/candidate-fe566f8d4a7b9a.jpg\n  pixelWidth: 6000\n  pixelHeight: 4000\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
-            "sourceDateRaw": "7 May 2017, 16:19:54",
-            "gameReuseIndependentlyChecked": true,
-            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/js/packs",
-            "gameReuseFilesRead": 373,
-            "gameReuseMatches": [],
-            "duplicateCitySlots": [],
-            "visualReview": "Oma natiivin silmätarkistus: luonnollista vesikasvillisuutta veden pinnalla ja puustoa, kaukainen vähäinen tavallinen rakennusympäristö sivuseikka. Ei ihmisiä, overlayta, vesileimaa tai nimetyn suojatun teoksen pääaihetta. Kirkas taivas, mutta kasvillisuuden sävyt luontevat ja pääaihe erottuu; noston veden/tasangon aiheeseen soveltuva. Alkuperäissivun oma Category:Nature of Bamako luettu kaupungin paikkasidonnaksi; pelkkä Mali-kuvateema ei peruste. Ei arvausta Nigerin haarasta, tulvatilanteesta tai kasvilajista. Efiads/CC BY-SA4.0 Author/licensetpl, native6000×4000; kuvaus7.5.2017.",
-            "depictedWorkLayerIndependentlyReviewed": true,
-            "sourceCategoryPersonallyRead": "Nature of Bamako",
-            "visuallyReviewed": true,
-            "originalPixelsViewed": true,
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Niger.jpg",
-            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-selection.json",
-            "currentContentSHA256": "3f44fdb00fbdaa6154ada806602e2f0b4ed47e62685d1a9b071f3bb70b4cea8e",
-            "photoDate": "7 May 2017, 16:19:54",
-            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
-            "captionFi": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-            "checkedAt": "2026-10-12T19:43:32.932966+00:00",
-            "published": false,
-            "gameIntegrated": false,
-            "ownerAcceptance": false,
-            "sourceTitlePersonallyRead": "Cité du Niger.jpg",
-            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
-            "exactCommonsFileSourcePointerVerified": true
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa.json",
-            "sha256": "ba4632fe2160eeb34ea579cb5ceb05cb947e1753b87d2df7e2b50885e3892344"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/illustration-qa-extra.json",
-            "sha256": "da13c93affa40963faf666b336682427a4971c29529a0b699728b2db0f813c9a"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e05",
-        "city": "bamako",
-        "slot": "L1",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-        "commonsFile": "Cité du Niger.jpg",
-        "sha256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Cit%C3%A9_du_Niger.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Cit%C3%A9_du_Niger.jpg",
-        "author": "Efiads",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "width": 6000,
-        "height": 4000,
-        "originalSHA256": "329d4b7c37017b1538cb32134dc25c1f0dccd66d5ed9fc3814d71173db7284bb",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l1-329d4b7c37017b1538cb.jpg",
-        "bytes": 10533200,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T19:44:37.681472+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Cité du Niger.jpg",
-        "lahde": "Efiads, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-        "lyhyt": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Efiads, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-        "lyhyt": "Vesikasvillisuuden peittämää vettä Bamakossa vuonna 2017.",
-        "tiedosto": "Cité du Niger.jpg"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
-      "targetAfterSHA256": "f3f1ca3daaf0fae6f4b40d3cd89f28555586663693ecb4b19f5a27e0b34394bd",
-      "contextAfterSHA256": "f3f1ca3daaf0fae6f4b40d3cd89f28555586663693ecb4b19f5a27e0b34394bd",
-      "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
-    },
-    {
-      "era": "e05",
-      "city": "bamako",
-      "slot": "L4",
-      "type": "commons",
-      "assetID": "capital-cc-e05-bamako-l4-ebb580fe9d0fe97f",
-      "galleryImageID": "capital-cc-e05-bamako-l4-ebb580fe9d0fe97f",
-      "commonsFile": "Bamako Garden (31115610468).jpg",
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        3
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
-        "suora": true,
-        "lahde": "Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Pieniä viljelypalstoja Bamakossa.",
-        "lyhyt": "Pieniä viljelypalstoja Bamakossa.",
-        "tiedosto": "Bamako Garden (31115610468).jpg"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Pieniä viljelypalstoja Bamakossa.",
-        "lyhyt": "Pieniä viljelypalstoja Bamakossa.",
-        "tiedosto": "Bamako Garden (31115610468).jpg"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
-        "suora": true,
-        "lahde": "Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Pieniä viljelypalstoja Bamakossa.",
-        "lyhyt": "Pieniä viljelypalstoja Bamakossa.",
-        "tiedosto": "Bamako Garden (31115610468).jpg"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
-      "exportSHA256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/meta-5eb127633abe24.jpg",
-      "dimensions": [
-        3993,
-        2244
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/bamako/sisalto.json",
-      "sourceContentSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "dc8610b3f21622b4c23516488e17c53528672db88ec965737f841930462ed851",
-        "semanticContextSHA256": "dc8610b3f21622b4c23516488e17c53528672db88ec965737f841930462ed851",
-        "subjectTitle": "Niger on myös työpaikka",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Mark Fischer",
-        "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bamako_Garden_(31115610468).jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
-        "rightsEvidence": {
-          "selection": {
-            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Bamako_Garden_(31115610468).jpg",
-            "artistFieldSource": "Author table",
-            "explicitAuthorOnly": true,
-            "workLayer": "Katsottu alkuperäinen: ylhäältä kuvatut vihreät viljelypalstat, maa, kasvit ja arkisia esineitä. Ei ihmisiä tai tunnistettavia kasvoja, lisättyä tekstiä, logoja, vesileimaa tai kehystä; ei taideteosta tai nimettyä suojattua rakennusta. Ei nimetä kasvilajeja kuvasta.",
-            "sourceDescription": null,
-            "captureDate": "1 January 2018, 00:00",
-            "imageLocation": "Commons camera location 12.636025, -8.030143 inside Bamako; no claim of a specific botanical garden"
-          },
-          "QA": {
-            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa-evidence/2567b079cb0aa17e1eddc7f9293cd06bfc16a0bbfdd29663f0a72ba5b1b55834.html",
-            "sourceSnapshotSHA256": "2567b079cb0aa17e1eddc7f9293cd06bfc16a0bbfdd29663f0a72ba5b1b55834",
-            "author": "Mark Fischer",
-            "license": "CC BY-SA 2.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
-            "width": 3993,
-            "height": 2244,
-            "profile": "sRGB IEC61966-2.1",
-            "cameraLocation": [
-              12.636025,
-              -8.030143
-            ],
-            "rightsLayer": "Kasvit/viljelymaa; ei suojattua taide- tai arkkitehtuuripääaihetta",
-            "gameReuseVerified": true,
-            "visuallyReviewed": true,
-            "originalPixelsViewed": true,
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Bamako_Garden_(31115610468).jpg",
-            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/meta-5eb127633abe24.jpg",
-            "currentContentSHA256": "3f44fdb00fbdaa6154ada806602e2f0b4ed47e62685d1a9b071f3bb70b4cea8e",
-            "photoDate": "1 January 2018, 00:00",
-            "captionFi": "Pieniä viljelypalstoja Bamakossa.",
-            "checkedAt": "2026-10-12T17:51:17.719844+00:00",
-            "published": false,
-            "gameIntegrated": false,
-            "ownerAcceptance": false,
-            "gameReuseIndependentlyChecked": true,
-            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/js/packs",
-            "gameReuseFilesRead": 373,
-            "gameReuseMatches": [],
-            "gameReuseRecheckedAt": "2026-10-12T19:22:24.645547+00:00",
-            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
-            "sourceTitlePersonallyRead": "Bamako Garden (31115610468).jpg",
-            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
-            "exactCommonsFileSourcePointerVerified": true
-          },
-          "qaReason": "Itse katsottu aito viljelypalstakuva: erikokoisia vihreitä kasvustoja, palstoja erottavaa maata ja tavallisia arkiesineitä. Ei tunnistettavia kasvoja, päälle lisättyä tekstiä, logoa tai taideteos-/rakennuspääaihetta. Source Description sijoittaa palstat Bamako Maliin, ja kamerapaikka12.636025,-8.030143 on Bamakossa. Sopii L4:n kaupungin viljelyaiheeseen; ei nimetty tarkaksi Niger-rannaksi tai kasvilajiksi, joita kuva ei yksin todista."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Pieniä viljelypalstoja Bamakossa.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa.json",
-        "fileSHA256": "ba4632fe2160eeb34ea579cb5ceb05cb947e1753b87d2df7e2b50885e3892344",
-        "item": {
-          "slot": "L4",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-          "assetID": null,
-          "commonsFile": "Bamako Garden (31115610468).jpg",
-          "sha256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
-          "verdict": "accepted",
-          "reason": "Itse katsottu aito viljelypalstakuva: erikokoisia vihreitä kasvustoja, palstoja erottavaa maata ja tavallisia arkiesineitä. Ei tunnistettavia kasvoja, päälle lisättyä tekstiä, logoa tai taideteos-/rakennuspääaihetta. Source Description sijoittaa palstat Bamako Maliin, ja kamerapaikka12.636025,-8.030143 on Bamakossa. Sopii L4:n kaupungin viljelyaiheeseen; ei nimetty tarkaksi Niger-rannaksi tai kasvilajiksi, joita kuva ei yksin todista.",
-          "required": true,
-          "status": "reviewed",
-          "evidence": {
-            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa-evidence/2567b079cb0aa17e1eddc7f9293cd06bfc16a0bbfdd29663f0a72ba5b1b55834.html",
-            "sourceSnapshotSHA256": "2567b079cb0aa17e1eddc7f9293cd06bfc16a0bbfdd29663f0a72ba5b1b55834",
-            "author": "Mark Fischer",
-            "license": "CC BY-SA 2.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/deed.en",
-            "width": 3993,
-            "height": 2244,
-            "profile": "sRGB IEC61966-2.1",
-            "cameraLocation": [
-              12.636025,
-              -8.030143
-            ],
-            "rightsLayer": "Kasvit/viljelymaa; ei suojattua taide- tai arkkitehtuuripääaihetta",
-            "gameReuseVerified": true,
-            "visuallyReviewed": true,
-            "originalPixelsViewed": true,
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Bamako_Garden_(31115610468).jpg",
-            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/cc-evidence/meta-5eb127633abe24.jpg",
-            "currentContentSHA256": "3f44fdb00fbdaa6154ada806602e2f0b4ed47e62685d1a9b071f3bb70b4cea8e",
-            "photoDate": "1 January 2018, 00:00",
-            "captionFi": "Pieniä viljelypalstoja Bamakossa.",
-            "checkedAt": "2026-10-12T17:51:17.719844+00:00",
-            "published": false,
-            "gameIntegrated": false,
-            "ownerAcceptance": false,
-            "gameReuseIndependentlyChecked": true,
-            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/js/packs",
-            "gameReuseFilesRead": 373,
-            "gameReuseMatches": [],
-            "gameReuseRecheckedAt": "2026-10-12T19:22:24.645547+00:00",
-            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
-            "sourceTitlePersonallyRead": "Bamako Garden (31115610468).jpg",
-            "sourceOriginalMediaUrlPersonallyRead": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
-            "exactCommonsFileSourcePointerVerified": true
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/qa.json",
-            "sha256": "ba4632fe2160eeb34ea579cb5ceb05cb947e1753b87d2df7e2b50885e3892344"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/bamako/illustration-qa-extra.json",
-            "sha256": "da13c93affa40963faf666b336682427a4971c29529a0b699728b2db0f813c9a"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e05",
-        "city": "bamako",
-        "slot": "L4",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
-        "commonsFile": "Bamako Garden (31115610468).jpg",
-        "sha256": "ebb580fe9d0fe97fa6ff6916b972807ee9f9fa1e4db16b180eb97dfd1805cdab",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Bamako_Garden_(31115610468).jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Bamako_Garden_%2831115610468%29.jpg",
-        "author": "Mark Fischer",
-        "license": "CC BY-SA 2.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-        "width": 3993,
-        "height": 2244,
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/bamako/l4-ebb580fe9d0fe97fa6ff.jpg",
-        "bytes": 4805491,
-        "http": 200,
-        "mime": "image/jpeg",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T18:02:21.329109+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Bamako Garden (31115610468).jpg",
-        "lahde": "Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Pieniä viljelypalstoja Bamakossa.",
-        "lyhyt": "Pieniä viljelypalstoja Bamakossa."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Pieniä viljelypalstoja Bamakossa.",
-        "lyhyt": "Pieniä viljelypalstoja Bamakossa.",
-        "tiedosto": "Bamako Garden (31115610468).jpg"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bb4a779d974ea7887e3b1d030eaa3f49a3885ea8acebc428a2c83a04c23cc627",
-      "targetAfterSHA256": "dc8610b3f21622b4c23516488e17c53528672db88ec965737f841930462ed851",
-      "contextAfterSHA256": "dc8610b3f21622b4c23516488e17c53528672db88ec965737f841930462ed851",
-      "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "task118ExclusionReason": "old-CC-image-cleared-or-replaced-by-task118",
+      "runtimeUseAllowed": false,
+      "originalBinaryPreserved": true
     }
   ],
-  "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": false,
-  "gameIntegrated": false,
-  "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e05/bamako/4db77f7cac16b8b2341e6629abf6598463d88fbd5da1573535199a9ed3192a39.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.614575+00:00"
 }

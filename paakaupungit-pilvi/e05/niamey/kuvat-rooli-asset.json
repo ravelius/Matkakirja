@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "niamey",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+  "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
   "assets": [
     {
       "era": "e05",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: mangopuun lehti ja hedelmä.",
-        "lyhyt": "Havainnekuva: mangopuun lehti ja hedelmä."
+        "selite": "Havainnekuva: mangopuun lehti ja hedelmä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-traveler-v1-20261012T181309Z-1807761d2b9d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: mangopuun lehti ja hedelmä.",
-        "lyhyt": "Havainnekuva: mangopuun lehti ja hedelmä."
+        "selite": "Havainnekuva: mangopuun lehti ja hedelmä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "2a651f2cf1642167df450a84dfebe36950ad312262904b98fa78a7a285a8be03",
+        "semanticContextSHA256": "ef60e135aef57a2e6b3237b40e285a1e31f6753f06c34c8eddd52c28245c1eb3",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -205,9 +205,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -226,17 +226,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "2a651f2cf1642167df450a84dfebe36950ad312262904b98fa78a7a285a8be03",
+      "contextAfterSHA256": "ef60e135aef57a2e6b3237b40e285a1e31f6753f06c34c8eddd52c28245c1eb3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "2a651f2cf1642167df450a84dfebe36950ad312262904b98fa78a7a285a8be03",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "2a651f2cf1642167df450a84dfebe36950ad312262904b98fa78a7a285a8be03",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "1807761d2b9dded50195d4d07ce1a20acf7aa1d26fdf12b561e3fb6afc69708f",
+        "sameImageExportSHA256": "328620873911bb1ebbe5e358606d002c408870b5fe3c98e13b9942e98c72646a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -261,10 +282,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o2-v1-20261012T200108Z-a8cd936ab262.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: lateriittimaan rakenne.",
-        "lyhyt": "Havainnekuva: lateriittimaan rakenne."
+        "selite": "Havainnekuva: lateriittimaan rakenne."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -272,10 +293,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o2-v1-20261012T200108Z-a8cd936ab262.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: lateriittimaan rakenne.",
-        "lyhyt": "Havainnekuva: lateriittimaan rakenne."
+        "selite": "Havainnekuva: lateriittimaan rakenne."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -289,10 +310,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "01d9a0cec404f6257b95339e930d351c1401c79d491232f7893ae4fd83211b7e",
+        "semanticContextSHA256": "8aa504e5e8c1081e4f4a13c52a3a48d6d8fff4bf75a23335e39ad5ad5dc696a9",
         "subjectTitle": "Joki, uoma ja kukkulat",
         "targetState": "existing-target"
       },
@@ -492,9 +513,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -513,17 +534,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "01d9a0cec404f6257b95339e930d351c1401c79d491232f7893ae4fd83211b7e",
+      "contextAfterSHA256": "8aa504e5e8c1081e4f4a13c52a3a48d6d8fff4bf75a23335e39ad5ad5dc696a9",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "01d9a0cec404f6257b95339e930d351c1401c79d491232f7893ae4fd83211b7e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "01d9a0cec404f6257b95339e930d351c1401c79d491232f7893ae4fd83211b7e",
+          "subjectTitle": "Joki, uoma ja kukkulat",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "a8cd936ab26299675c77d788fa93d8cf7793fe7a9beba60ee5588b9bb957b235",
+        "sameImageExportSHA256": "41d080acba49ab1a71f2cf5add39bf940a060b4d1d68a9a2a17a6e32d037cfb2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -548,10 +590,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: savityön raaka-aine.",
-        "lyhyt": "Havainnekuva: savityön raaka-aine."
+        "selite": "Havainnekuva: savityön raaka-aine."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -559,10 +601,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o3-v1-20261012T191048Z-383b97ff19d8.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: savityön raaka-aine.",
-        "lyhyt": "Havainnekuva: savityön raaka-aine."
+        "selite": "Havainnekuva: savityön raaka-aine."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -576,7 +618,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "9e0cd7c17d6559b7926b5b27680c535e1c5bfed7f2f2a3b70ee0a0cd1e620911",
@@ -730,9 +772,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -751,17 +793,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "9e0cd7c17d6559b7926b5b27680c535e1c5bfed7f2f2a3b70ee0a0cd1e620911",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "9e0cd7c17d6559b7926b5b27680c535e1c5bfed7f2f2a3b70ee0a0cd1e620911",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "9e0cd7c17d6559b7926b5b27680c535e1c5bfed7f2f2a3b70ee0a0cd1e620911",
+          "subjectTitle": "Tori ja käsityö",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "383b97ff19d85745ac804a6d4f2527a53f0a120d1a125ff08d59a90eda2b488a",
+        "sameImageExportSHA256": "9739e388dfcc0edf7fea8356d78a011c351b94bcd9bab81df2ede400664e0b92",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -786,10 +849,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: dégué eli hirssiä jogurtissa.",
-        "lyhyt": "Havainnekuva: dégué eli hirssiä jogurtissa."
+        "selite": "Havainnekuva: dégué eli hirssiä jogurtissa."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -797,10 +860,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-o4-v2-20261012T181127Z-9f1ddd3fd6b1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: dégué eli hirssiä jogurtissa.",
-        "lyhyt": "Havainnekuva: dégué eli hirssiä jogurtissa."
+        "selite": "Havainnekuva: dégué eli hirssiä jogurtissa."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -814,10 +877,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "1ebebf8bbdaa09d740b76796cf3edb13c4db15f2d7c099b23707db54517173a0",
+        "semanticContextSHA256": "766d2a7c42164945b57ec2eef0d08d0823070ece2fae905b7c89f2ca48e2fbac",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -1020,9 +1083,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1041,17 +1104,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "1ebebf8bbdaa09d740b76796cf3edb13c4db15f2d7c099b23707db54517173a0",
+      "contextAfterSHA256": "766d2a7c42164945b57ec2eef0d08d0823070ece2fae905b7c89f2ca48e2fbac",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "1ebebf8bbdaa09d740b76796cf3edb13c4db15f2d7c099b23707db54517173a0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "1ebebf8bbdaa09d740b76796cf3edb13c4db15f2d7c099b23707db54517173a0",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "9f1ddd3fd6b19f10aa46d08920f73386763b417ee538976b4ede2de0dafefb56",
+        "sameImageExportSHA256": "17a1d4adc04696d106af57fb462c26588fa8f6803cdc120e480a1aea539bcf0e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1073,10 +1157,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: vedenkuljetuksen työntökärry.",
-        "lyhyt": "Havainnekuva: vedenkuljetuksen työntökärry."
+        "selite": "Havainnekuva: vedenkuljetuksen työntökärry."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1084,10 +1168,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k3-v1-20261012T180544Z-20acdbdbf21b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: vedenkuljetuksen työntökärry.",
-        "lyhyt": "Havainnekuva: vedenkuljetuksen työntökärry."
+        "selite": "Havainnekuva: vedenkuljetuksen työntökärry."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1101,7 +1185,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10",
         "semanticContextSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10",
@@ -1251,9 +1335,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1272,17 +1356,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "targetAfterSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10",
       "contextAfterSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10",
+        "contextAfterSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10",
+          "semanticContextSHA256": "2b6a6b1d3207a0941cca82f166a0e8d6dff9054235b3c7f6f3f91c788238fb10",
+          "subjectTitle": "Vesi kulkee työntökärryssä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "20acdbdbf21b9adfb1e55199b650d5729f6079efd83e50f161790f8565b10e49",
+        "sameImageExportSHA256": "d5f1032fa0dfcd0d0d1220cab5db068359243a36927ad637078e0adc125d1a41",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1304,10 +1409,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: tavallinen saviastia.",
-        "lyhyt": "Havainnekuva: tavallinen saviastia."
+        "selite": "Havainnekuva: tavallinen saviastia."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1315,10 +1420,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-k4-v1-20261012T180735Z-99a0016edf82.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: tavallinen saviastia.",
-        "lyhyt": "Havainnekuva: tavallinen saviastia."
+        "selite": "Havainnekuva: tavallinen saviastia."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1332,7 +1437,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134",
         "semanticContextSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134",
@@ -1482,9 +1587,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1503,17 +1608,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "targetAfterSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134",
       "contextAfterSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134",
+        "contextAfterSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134",
+          "semanticContextSHA256": "9e96b7e1effab48a8b729b2936aaaced6dd9022aac02dbbdd90f4f5b8fa99134",
+          "subjectTitle": "Saviruukun matka jokivartta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "99a0016edf82387bc73b806aa9f946eb06ce7df8f7ff51df81c09977a614a7c4",
+        "sameImageExportSHA256": "ad4c4c599d42f04c16569029f095408bf890466178f5dd18f15901557ec801ba",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1535,10 +1661,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l1-v1-20261012T195739Z-8931cbc7be5b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: vihannesviljely tavallisessa maassa.",
-        "lyhyt": "Havainnekuva: vihannesviljely tavallisessa maassa."
+        "selite": "Havainnekuva: vihannesviljely tavallisessa maassa."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1546,10 +1672,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l1-v1-20261012T195739Z-8931cbc7be5b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: vihannesviljely tavallisessa maassa.",
-        "lyhyt": "Havainnekuva: vihannesviljely tavallisessa maassa."
+        "selite": "Havainnekuva: vihannesviljely tavallisessa maassa."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1563,7 +1689,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
         "targetBeforeSHA256": "56a888856846c53bcd240b756c7f393f9a082c6ffa8c3d88e2c3f5faa7e97b93",
         "semanticContextSHA256": "56a888856846c53bcd240b756c7f393f9a082c6ffa8c3d88e2c3f5faa7e97b93",
@@ -1758,9 +1884,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1779,17 +1905,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "targetAfterSHA256": "56a888856846c53bcd240b756c7f393f9a082c6ffa8c3d88e2c3f5faa7e97b93",
       "contextAfterSHA256": "56a888856846c53bcd240b756c7f393f9a082c6ffa8c3d88e2c3f5faa7e97b93",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "56a888856846c53bcd240b756c7f393f9a082c6ffa8c3d88e2c3f5faa7e97b93",
+        "contextAfterSHA256": "56a888856846c53bcd240b756c7f393f9a082c6ffa8c3d88e2c3f5faa7e97b93",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "56a888856846c53bcd240b756c7f393f9a082c6ffa8c3d88e2c3f5faa7e97b93",
+          "semanticContextSHA256": "56a888856846c53bcd240b756c7f393f9a082c6ffa8c3d88e2c3f5faa7e97b93",
+          "subjectTitle": "Uoma, joka herää sateesta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "8931cbc7be5b5b2b4510a08eb224c47457484039be3adddfb8341add12c6b859",
+        "sameImageExportSHA256": "e09a1c67a2344eec4ea937d9c14e954104f53ac8e4467b287bf67f0b53af474e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -1811,10 +1958,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: kilpikorppi.",
-        "lyhyt": "Havainnekuva: kilpikorppi."
+        "selite": "Havainnekuva: kilpikorppi."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1822,10 +1969,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l2-v1-20261012T192753Z-2f2998fcc11d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: kilpikorppi.",
-        "lyhyt": "Havainnekuva: kilpikorppi."
+        "selite": "Havainnekuva: kilpikorppi."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1839,7 +1986,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
         "targetBeforeSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1",
         "semanticContextSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1",
@@ -2013,9 +2160,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2034,17 +2181,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "targetAfterSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1",
       "contextAfterSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1",
+        "contextAfterSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1",
+          "semanticContextSHA256": "94f676131dc2f3c14178389ebc60c6840936fddfdc5b36880a9dce09b939d1e1",
+          "subjectTitle": "Kolme sisarta kaupungin laidalla",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "2f2998fcc11d07468ff9a38c64c98b77c870711defd30510481df35ec0142faf",
+        "sameImageExportSHA256": "4b61ff953f4611023b5b173dc14560635c4918a22d8f14464eb3f7c437222088",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2066,10 +2234,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: mangopuun varjo.",
-        "lyhyt": "Havainnekuva: mangopuun varjo."
+        "selite": "Havainnekuva: mangopuun varjo."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2077,10 +2245,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/niamey/e05-niamey-l3-v1-20261012T180857Z-8e467dcd847e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: mangopuun varjo.",
-        "lyhyt": "Havainnekuva: mangopuun varjo."
+        "selite": "Havainnekuva: mangopuun varjo."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2094,7 +2262,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
         "targetBeforeSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7",
         "semanticContextSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7",
@@ -2244,9 +2412,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2265,17 +2433,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "targetAfterSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7",
       "contextAfterSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7",
+        "contextAfterSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7",
+          "semanticContextSHA256": "616332cc031eaa05c6ae509e38033981b85dd1868ce0576e5c3a330c014cc2e7",
+          "subjectTitle": "Varjo on asukkaiden työtä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "8e467dcd847e99e4de727a7842672bbd4c3a13caab90dfa41b14a163d19088dc",
+        "sameImageExportSHA256": "52b0dfb330c42f38ed3d1d552106d242fa95d5021d95d2661e3ec14c5507a41a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2295,7 +2484,7 @@
         "suora": true,
         "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
         "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
-        "lyhyt": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "lyhyt": "Niameyn asutusta ilmasta.",
         "tiedosto": "Niamey from the sky.jpg",
         "vuosi": "2011"
       },
@@ -2303,7 +2492,7 @@
       "CvalidatorCompatiblePayload": {
         "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
         "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
-        "lyhyt": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "lyhyt": "Niameyn asutusta ilmasta.",
         "tiedosto": "Niamey from the sky.jpg",
         "vuosi": "2011"
       },
@@ -2312,7 +2501,7 @@
         "suora": true,
         "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
         "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
-        "lyhyt": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "lyhyt": "Niameyn asutusta ilmasta.",
         "tiedosto": "Niamey from the sky.jpg",
         "vuosi": "2011"
       },
@@ -2328,10 +2517,10 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99",
-        "semanticContextSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99",
+        "targetBeforeSHA256": "a68539bafb43f02c0ef331c55c2d3b8dfe1808b87c83231b3ff5854705a54c03",
+        "semanticContextSHA256": "a68539bafb43f02c0ef331c55c2d3b8dfe1808b87c83231b3ff5854705a54c03",
         "subjectTitle": "niamey — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2482,9 +2671,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Niamey from the sky.jpg",
-        "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
+        "lyhyt": "Niameyn asutusta ilmasta.",
         "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
-        "lyhyt": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
         "vuosi": "2011"
       },
       "preservePreviousMediaObjects": true,
@@ -2504,7 +2693,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2512,16 +2701,37 @@
       "CcommonsFieldPayload": {
         "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
         "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
-        "lyhyt": "Niameyn asuinkortteleita ilmasta nähtynä.",
+        "lyhyt": "Niameyn asutusta ilmasta.",
         "tiedosto": "Niamey from the sky.jpg",
         "vuosi": "2011"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
-      "targetAfterSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99",
-      "contextAfterSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+      "targetAfterSHA256": "a68539bafb43f02c0ef331c55c2d3b8dfe1808b87c83231b3ff5854705a54c03",
+      "contextAfterSHA256": "a68539bafb43f02c0ef331c55c2d3b8dfe1808b87c83231b3ff5854705a54c03",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99",
+        "contextAfterSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99",
+          "semanticContextSHA256": "15553e34e812c5d794a831d5f6ebc610d448f4d4419fd9452bd260b976463b99",
+          "subjectTitle": "niamey — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "5c9036251b9fee0a7ad1226afa16b6497328318d9d31a7ff2ceb2c081210d6cd",
+        "sameImageExportSHA256": "5c9036251b9fee0a7ad1226afa16b6497328318d9d31a7ff2ceb2c081210d6cd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2544,14 +2754,14 @@
         "suora": true,
         "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)",
         "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
-        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta.",
         "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)",
         "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
-        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta.",
         "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2559,7 +2769,7 @@
         "suora": true,
         "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)",
         "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
-        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta.",
         "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2574,10 +2784,10 @@
         1997
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34",
-        "semanticContextSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34",
+        "targetBeforeSHA256": "299e987e3c79e4eb0abf2556be6fe3f35abed6c26272b596e2389d69417d2dd6",
+        "semanticContextSHA256": "299e987e3c79e4eb0abf2556be6fe3f35abed6c26272b596e2389d69417d2dd6",
         "subjectTitle": "Niamey",
         "targetState": "existing-target"
       },
@@ -2772,9 +2982,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg",
-        "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)",
+        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta.",
         "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
-        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006."
+        "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2793,7 +3003,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2801,15 +3011,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)",
         "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
-        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+        "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta.",
         "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
-      "targetAfterSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34",
-      "contextAfterSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+      "targetAfterSHA256": "299e987e3c79e4eb0abf2556be6fe3f35abed6c26272b596e2389d69417d2dd6",
+      "contextAfterSHA256": "299e987e3c79e4eb0abf2556be6fe3f35abed6c26272b596e2389d69417d2dd6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34",
+        "contextAfterSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34",
+          "semanticContextSHA256": "08d044c91fae55b164e309b65c0828372027318f6d9f01b6f6b3f47f39e7fe34",
+          "subjectTitle": "Niamey",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "c966432e9ab7f6ce7938c4c6c7a78d71e145ed7c46d5984d8c3f34e2b32ab3df",
+        "sameImageExportSHA256": "c966432e9ab7f6ce7938c4c6c7a78d71e145ed7c46d5984d8c3f34e2b32ab3df",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e05",
@@ -2832,14 +3063,14 @@
         "suora": true,
         "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
-        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta.",
         "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
-        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta.",
         "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -2847,7 +3078,7 @@
         "suora": true,
         "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
-        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta.",
         "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2862,10 +3093,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/niamey/sisalto.json",
-      "sourceContentSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+      "sourceContentSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922",
-        "semanticContextSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922",
+        "targetBeforeSHA256": "03b4cc1d72311fc1c7738db74b776cd079d7b54e1a150105dd47b2aab4a47d04",
+        "semanticContextSHA256": "03b4cc1d72311fc1c7738db74b776cd079d7b54e1a150105dd47b2aab4a47d04",
         "subjectTitle": "Niamey",
         "targetState": "existing-target"
       },
@@ -3054,9 +3285,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg",
-        "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta.",
         "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
-        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023."
+        "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3075,7 +3306,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3083,20 +3314,47 @@
       "CcommonsFieldPayload": {
         "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
-        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+        "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta.",
         "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
-      "targetAfterSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922",
-      "contextAfterSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922",
+      "sourceContentAfterSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+      "targetAfterSHA256": "03b4cc1d72311fc1c7738db74b776cd079d7b54e1a150105dd47b2aab4a47d04",
+      "contextAfterSHA256": "03b4cc1d72311fc1c7738db74b776cd079d7b54e1a150105dd47b2aab4a47d04",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "765ff7ebe8b7581bacb607773d81edec2db54e785d32ae2a9bdfd0732917c08d",
+        "targetAfterSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922",
+        "contextAfterSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922",
+          "semanticContextSHA256": "cb288989bfad0213b685902c1a333ee3a6a1cd57e53454c4f7fc07beedbfc922",
+          "subjectTitle": "Niamey",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "b985e23c6ab60afbf7d1afe413c3d348022171ec35f527308f80b73b3d5ffe74",
+        "sameImageNativeSHA256": "591faae4e4eaacafd0adc723c29d65ac967f599578601ee2db688fa9907a288e",
+        "sameImageExportSHA256": "591faae4e4eaacafd0adc723c29d65ac967f599578601ee2db688fa9907a288e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e05/niamey/69f66f959f3ead0641a25415cf0752a0341f2845317e635bcab2500e706eb369.json",
+  "task118ReboundAt": "2026-10-13T16:31:24.687617+00:00"
 }

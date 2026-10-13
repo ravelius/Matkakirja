@@ -70,8 +70,8 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Ala liittyy viljelyyn ja maatalouteen.",
-      "fact": "INP-HB kouluttaa muun muassa agronomian osaajia.",
+      "hint": "Korkeakoulussa on useita käytännön ammattialoja.",
+      "fact": "Institut National Polytechnique Félix Houphouët-Boigny (INP-HB) kouluttaa muun muassa agronomian osaajia.",
       "source": "https://en.wikipedia.org/wiki/Institut_National_Polytechnique_Félix_Houphouët-Boigny"
     },
     {
@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "20240521 - Agama agama.jpg",
-    "lyhyt": "Lisko Yamoussoukrossa.",
+    "lyhyt": "Yamoussoukron lisko.",
     "selite": "Lisko Yamoussoukrossa.",
     "lahde": "Fabricio Cardenas, Commons (CC BY-SA 4.0)"
   },
@@ -108,19 +108,19 @@
       "kansikuvat": [
         {
           "tiedosto": "20240521 - Yamoussoukro - Golf.jpg",
-          "lyhyt": "Yamoussoukron golfkentän puistomaista maisemaa.",
+          "lyhyt": "Yamoussoukron golfkenttä.",
           "selite": "Yamoussoukron golfkentän puistomaista maisemaa.",
           "lahde": "Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Yamoussoukro panorama.jpg",
-          "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
+          "lyhyt": "Yamoussoukron kaupunkimaisemaa ja vesialueita.",
           "selite": "Yamoussoukron kaupunkimaisemaa ja vesialueita vuonna 2015.",
           "lahde": "Mickaël T., Wikimedia Commons (CC BY 2.0)"
         },
         {
           "tiedosto": "Earth from Space- Côte d'Ivoire ESA25482285.jpg",
-          "lyhyt": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
+          "lyhyt": "Yamoussoukro ja Kossoun järvi satelliittikuvassa.",
           "selite": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
           "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)"
         }
@@ -149,7 +149,7 @@
           "teksti": "Institut National Polytechnique Félix Houphouët-Boigny muodostui aiempien korkeakoulujen yhdistymisestä. Sen aloihin kuuluvat agronomia ja agroteollisuus, tekniikka ja tietotekniikka sekä kaivokset ja geologia. Lisäksi siellä koulutetaan rakentamisen, infrastruktuurin, kaupan ja yrityshallinnon osaajia. Mukana on jatko- ja täydennyskoulutusta. Yamoussoukron koulutustarina ulottuu siis pellolta tietokoneelle ja kallioperästä rakennustyömaalle: saman korkeakoulun piirissä tarkastellaan monia käytännön ammatteja.",
           "wiki": "Institut National Polytechnique Félix Houphouët-Boigny",
           "tiedosto": "Biology microscope.jpg",
-          "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+          "lyhyt": "Laboratorion valomikroskooppi.",
           "selite": "Valomikroskooppi laboratoriotyön välineenä.",
           "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)"
         },
@@ -179,7 +179,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Yamoussoukrolla on oma lentoasema, mutta sen olemassaolo ei takaa säännöllistä lentovuoroa. Abidjanista on tieyhteys kaupunkiin. Bussiaseman ympäristö kuuluu kaupunkielämän keskeisiin paikkoihin.",
+              "teksti": "Yamoussoukrolla on oma lentoasema; Abidjanista kaupunkiin pääsee maanteitse. Abidjanista on tieyhteys kaupunkiin. Bussiaseman ympäristö kuuluu kaupunkielämän keskeisiin paikkoihin.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -218,8 +218,8 @@
               }
             },
             {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Matkan suunnittelussa kannattaa tarkistaa ajantasaiset kulkuyhteydet ja paikalliset vierailumahdollisuudet. Norsunluurannikon turvallisuusolosuhteet vaihtelevat alueittain. Järvi-, puisto- ja palatsikohteiden pääsyä ei voi päätellä siitä, että paikka mainitaan kaupungin esittelyssä.",
+              "otsikko": "Kaupungin nimet",
+              "teksti": "Yamoussoukron vanha nimi oli N’Gokro. Nykyinen nimi yhdistää kuningatar Yamousson nimen baoulén kylää tarkoittavaan kro-päätteeseen. Paikallinen historia säilyy näin suunnitellun pääkaupungin nimessä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -258,12 +258,12 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Lentoasema",
-                "teksti": "Nykyiset lentoyhteydet pitää selvittää erikseen."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Norsunluurannikon ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
-                "otsikko": "Vierailupaikat",
-                "teksti": "Museoiden ja muiden kohteiden pääsy tarkistetaan matkan ajankohtana."
+                "otsikko": "Koulutus",
+                "teksti": "Kaupungin polyteknillinen korkeakoulu kouluttaa muun muassa agronomian, rakentamisen ja tekniikan aloille."
               },
               {
                 "otsikko": "Alue-erot",
@@ -320,7 +320,7 @@
         },
         {
           "otsikko": "Kala tulee myös tekojärvestä",
-          "teksti": "Kossoun järvi kuuluu Bandamajoen vesistöön Yamoussoukron lähialueella. Se on padon synnyttämä allas, jonka hyötyihin liitettiin myös kalastus. Seudun kalankulutuksessa mainitaan karpit ja capitaine-nimellä tunnettu kala. Kossou on laaja vesialue kaupungin keskustan ulkopuolella, joten sitä ei pidä sekoittaa pääkaupungin pienempiin järviin. Kun Yamoussoukron ruokaa tarkastellaan, katse ulottuu näin peltojen lisäksi vesille: kaupungin ja sen ympäristön ruokatalouteen kuuluu myös kalastajien työ.",
+          "teksti": "Kossoun järvi kuuluu Bandamajoen vesistöön Yamoussoukron lähialueella. Se on padon synnyttämä allas, jonka hyötyihin liitettiin myös kalastus. Seudun kalankulutuksessa mainitaan karpit ja capitaine-nimellä tunnettu kala. Kossoun tekojärvi sijaitsee kaupungin keskustan ulkopuolella Bandamajoen vesistössä. Kun Yamoussoukron ruokaa tarkastellaan, katse ulottuu näin peltojen lisäksi vesille: kaupungin ja sen ympäristön ruokatalouteen kuuluu myös kalastajien työ.",
           "wiki": "Lake Kossou",
           "tiedosto": "",
           "lyhyt": "",

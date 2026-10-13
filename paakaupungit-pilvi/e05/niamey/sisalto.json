@@ -42,7 +42,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Sama nimi kuuluu myös kaupungin kotimaalle.",
+      "hint": "Kaupunkialue jatkuu joen molemmilla rannoilla.",
       "fact": "Niger on Niameyn pysyvä joki.",
       "source": "https://en.wikipedia.org/wiki/Niamey"
     },
@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "Niamey from the sky.jpg",
-    "lyhyt": "Niameyn asuinkortteleita ilmasta nähtynä.",
+    "lyhyt": "Niameyn asutusta ilmasta.",
     "selite": "Niameyn asuinkortteleita ilmasta nähtynä.",
     "lahde": "Jean Rebiffé, Commons (CC BY 3.0)",
     "vuosi": "2011"
@@ -109,13 +109,13 @@
       "kansikuvat": [
         {
           "tiedosto": "Blvd Mali Bero from grand mosquee niamey.jpg",
-          "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
+          "lyhyt": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta.",
           "selite": "Mali Bero -bulevardia ja Niameyn kaupunkirakennetta vuonna 2006.",
           "lahde": "Roland Huziaker, Wikimedia Commons (CC BY-SA 2.0)"
         },
         {
           "tiedosto": "Le majestueux fleuve Niger serpente à travers la capitale du Niger Niamey , offrant un spectacle captivant.jpg",
-          "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
+          "lyhyt": "Nigerjoki ja Niameyn rantakorttelit ilmasta.",
           "selite": "Nigerjoki ja Niameyn rantakorttelit ilmasta vuonna 2023.",
           "lahde": "Fhadel ALOU, Wikimedia Commons (CC BY-SA 4.0)"
         },
@@ -171,7 +171,7 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Niameyn jokimaisema, torit ja käsityö kertovat kaupungin arjesta. Nigeriin matkustaminen ei tällä hetkellä ole turvallista. Kaupungin kansallismuseossa esitellään kulttuuria ja arkeologiaa. Saaret ovat myös asuttuja paikkoja, joiden kulkuyhteyksiä ja vierailumahdollisuuksia ei voi olettaa.",
+        "kappale": "Niameyn jokimaisema, torit ja käsityö kertovat kaupungin arjesta. Kaupungin kansallismuseossa esitellään kulttuuria ja arkeologiaa. Néini Goungoun saarella on oma kylä ja paikallisen päällikön johtama yhteisö.",
         "artikkeli": {
           "nimi": "Matkailijan Niamey",
           "taitto": "opas",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Niameyn lentoasema on Diori Hamanin kansainvälinen lentoasema. Kaupungissa liikutaan takseilla ja jaetuilla kyydeillä. Juna-aseman olemassaolosta ei voi päätellä, että matkustajajunia kulkisi: toimivia matkustajavuoroja ei ole tässä aineistossa vahvistettu.",
+              "teksti": "Niameyn lentoasema on Diori Hamanin kansainvälinen lentoasema. Kaupungissa liikutaan takseilla ja jaetuilla kyydeillä. Varmista käytettävän yhteyden reitti ja aikataulu liikennöitsijältä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Joki, uoma ja kukkulat",
-              "teksti": "Nigerjoen rinnalla Niameyssä on kausittainen Gounti Yénan uoma. Trois Sœursin kukkulat näyttävät kaupungin lateriittista maastoa, ja Néini Goungoun saari on asuttu. Jokimaisemaan tutustuminen ei tarkoita automaattisesti pääsyä saarelle tai järjestettyä venekuljetusta.",
+              "teksti": "Nigerjoen rinnalla Niameyssä on kausittainen Gounti Yénan uoma. Trois Sœursin kukkulat näyttävät kaupungin lateriittista maastoa, ja Néini Goungoun saari on asuttu. Néini Goungou on jokisaarella sijaitseva asuttu kylä, jonka vastarannalla on Gamkalé.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Kossaï on lehmänpavuista tehty ruoka, jota syödään aamulla. Ruokavalikoimaan kuuluu myös riisiä maapähkinäkastikkeella. Dégué yhdistää hirssipallot ja jogurtin, ja baobabin hedelmästä tehdään juomaa. Nämä ovat ruoka-aiheita, eivät lupaus tietyn myyntipaikan tarjonnasta.",
+              "teksti": "Kossaï on lehmänpavuista tehty ruoka, jota syödään aamulla. Ruokavalikoimaan kuuluu myös riisiä maapähkinäkastikkeella. Dégué yhdistää hirssipallot ja jogurtin, ja baobabin hedelmästä tehdään juomaa. Näissä aterioissa ja juomissa yhdistyvät palkokasvit, vilja ja hedelmät.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,8 +219,8 @@
               }
             },
             {
-              "otsikko": "Matkan ajankohta",
-              "teksti": "Nigeriin matkustaminen ei tällä hetkellä ole turvallista. Matkan suunnittelu edellyttää ajantasaista tietoa turvallisuudesta ja kulkuyhteyksistä. Nigerjoen ja sen saarten olosuhteet vaihtelevat, ja tulvat ovat vaikuttaneet asukkaiden elämään.",
+              "otsikko": "Asuttu jokisaari",
+              "teksti": "Néini Goungoun saari kuuluu Niameyn kaupunkiseutuun. Saarella on kylä ja oma paikallisen päällikön johtama yhteisö. Tulvat ovat muuttaneet asukkaiden elämää ja vaatineet osalta muuttoa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,12 +259,12 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Turvallisuus",
-                "teksti": "Nigeriin matkustaminen ei tällä hetkellä ole turvallista."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Nigerin ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
-                "otsikko": "Junat",
-                "teksti": "Matkustajavuoroja ei ole vahvistettu."
+                "otsikko": "Kaksi erilaista uomaa",
+                "teksti": "Niger on pysyvä joki, Gounti Yéna kausittainen uoma."
               },
               {
                 "otsikko": "Asutut saaret",

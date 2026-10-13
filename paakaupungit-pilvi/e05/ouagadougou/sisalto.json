@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "Ouagadougou on **hovin ja valkokankaiden kaupunki** Burkina Fason keskiosassa. Mossien valtakunnan ja Moro-Naban hovin historia ulottuu aikaan ennen siirtomaahallintoa. Vuonna 1873 kaupunki oli jo olemassa, mutta myöhempi rautatie ei vielä yhdistänyt sitä Norsunluurannikon suuntaan.\n\nNykyisessä pääkaupungissa kauppa jatkuu keskustasta kaupunginosiin ja pääteiden varsille. Torit kokoavat tuotteita kaupunkilaisille ja edelleen maaseudulle, kun taas käsityötapahtumat tuovat yhteen tekijöitä eri Afrikan maista. Metsäkin mahtuu kaupungin sisään: Bangr Weogo on sekä vanha paikallinen ympäristö että nykyinen ympäristökasvatuksen paikka.\n\n**FESPACO tekee elokuvasta yhteisen kohtaamispaikan**, jossa katsomisen rinnalla kulkevat työpajat ja ammattilaisten tapaamiset. Palkinnon nimi voi avata legendaa, mutta festivaalin työ ei pääty palkintogaalaan. Ouagadougoun kulttuuri yhdistää näin hoviperinnettä, päivittäistä kaupankäyntiä ja liikkuvaa elokuvaa.",
-    "teksti": "Ouagadougou oli mossien hovin keskus jo ennen siirtomaakauden hallintorakennuksia. Nykyinen Moro-Naban hoviperinne liittyy tähän pitkään kaupunkihistoriaan. Kaupungin perustaminen, hovin pysyvä sijoittuminen ja myöhempi pääkaupunkiasema ovat kuitenkin eri vaiheita, joille ei tarvitse antaa yhtä yhteistä syntymävuotta.\n\nTorit yhdistävät keskustaa, kaupunginosia ja ympäröivää maaseutua. Käsityöntekijät voivat kohdata sekä paikallisessa Village Artisanalissa että kansainvälisessä SIAO-tapahtumassa. Bangr Weogon metsä puolestaan säilyttää kaupunkirakenteen sisällä toisenlaisen ympäristön.\n\nFESPACOn näytökset, elokuvamarkkina ja ammattilaisten tapaamiset tekevät elokuvasta enemmän kuin yhden illan katsomista. Yennengan nimeä kantava palkinto muistuttaa perinteen ja uuden taiteen yhteydestä. Matkailu Burkina Fasoon ei silti ole nyt turvallista: kulttuuripaikkojen historia ja tämän päivän matkapäätös pitää erottaa toisistaan."
+    "intro": "Ouagadougou on **hovin ja valkokankaiden kaupunki** Burkina Fason keskiosassa. Mossien valtakunnan ja Moro-Naban hovin historia ulottuu aikaan ennen siirtomaahallintoa. Vuonna 1873 kaupunki oli jo olemassa, mutta myöhempi rautatie ei vielä yhdistänyt sitä Norsunluurannikon suuntaan.\n\nNykyisessä pääkaupungissa kauppa jatkuu keskustasta kaupunginosiin ja pääteiden varsille. Torit kokoavat tuotteita kaupunkilaisille ja edelleen maaseudulle, kun taas käsityötapahtumat tuovat yhteen tekijöitä eri Afrikan maista. Metsäkin mahtuu kaupungin sisään: Bangr Weogo on sekä vanha paikallinen ympäristö että nykyinen ympäristökasvatuksen paikka.\n\n**FESPACO tekee elokuvasta yhteisen kohtaamispaikan**, jossa katsomisen rinnalla kulkevat työpajat ja ammattilaisten tapaamiset. Yennengan ori -palkinto kantaa mossien myyttiseen perustajaprinsessaan liittyvää nimeä. Ouagadougoun kulttuuri yhdistää näin hoviperinnettä, päivittäistä kaupankäyntiä ja liikkuvaa elokuvaa.",
+    "teksti": "Ouagadougou oli mossien hovin keskus jo ennen siirtomaakauden hallintorakennuksia. Nykyinen Moro-Naban hoviperinne liittyy tähän pitkään kaupunkihistoriaan. Perjantaiaamuisin Moro-Naba ja päälliköt kokoontuvat lyhyeen hoviseremoniaan.\n\nTorit yhdistävät keskustaa, kaupunginosia ja ympäröivää maaseutua. Käsityöntekijät voivat kohdata sekä paikallisessa Village Artisanalissa että kansainvälisessä SIAO-tapahtumassa. Bangr Weogon metsä puolestaan säilyttää kaupunkirakenteen sisällä toisenlaisen ympäristön.\n\nFESPACOn näytökset, elokuvamarkkina ja ammattilaisten tapaamiset tekevät elokuvasta enemmän kuin yhden illan katsomista. Yennengan nimeä kantava palkinto muistuttaa perinteen ja uuden taiteen yhteydestä. Festivaalin MICA-markkinassa tekijät ja levittäjät etsivät elokuville uusia esityspaikkoja."
   },
   "kysymykset": [
     {
@@ -47,12 +47,12 @@
       "source": "https://en.wikipedia.org/wiki/Panafrican_Film_and_Television_Festival_of_Ouagadougou"
     },
     {
-      "q": "Mikä nimitys liittyy Ouagadougoun historialliseen hoviin?",
+      "q": "Millä nimellä mossien hallitsijaa kutsutaan Ouagadougoussa?",
       "options": [
         "Moro-Naba",
         "Suurvisiiri",
         "Sulttaani",
-        "Keisari"
+        "Maharadza"
       ],
       "correct": 0,
       "level": 2,
@@ -64,9 +64,9 @@
       "q": "Millainen ympäristö Bangr Weogo on?",
       "options": [
         "Metsä",
-        "Aavikko",
-        "Koralliriutta",
-        "Jäätikkö"
+        "Savanni",
+        "Viljelmä",
+        "Kosteikko"
       ],
       "correct": 0,
       "level": 2,
@@ -75,7 +75,7 @@
       "source": "https://fr.wikipedia.org/wiki/Parc_urbain_Bangr_Weogo"
     },
     {
-      "q": "Mikä musiikkimuseon soitinperhe tarkoittaa kielisoittimia?",
+      "q": "Mikä Burkina Fason kansallisessa musiikkimuseossa esitelty soitinperhe tarkoittaa kielisoittimia?",
       "options": [
         "Kordofonit",
         "Aerofonit",
@@ -96,7 +96,7 @@
   ],
   "valokuva": {
     "tiedosto": "Crocodile BangrWeoogoPark.JPG",
-    "lyhyt": "Krokotiili Bangr Weogon puistossa Ouagadougoussa.",
+    "lyhyt": "Bangr Weogon krokotiili.",
     "selite": "Krokotiili Bangr Weogon puistossa Ouagadougoussa.",
     "lahde": "Yann Fauché & Alma Mulalic, Commons (CC BY-SA 3.0)",
     "vuosi": "2011"
@@ -109,27 +109,27 @@
       "kansikuvat": [
         {
           "tiedosto": "Ouaga aerial view.jpg",
-          "lyhyt": "Ouagadougoun Cissinin kortteleita ilmasta joulukuussa 2007.",
+          "lyhyt": "Cissinin asutusta ilmasta.",
           "selite": "Ouagadougoun Cissinin kortteleita ilmasta joulukuussa 2007.",
           "lahde": "kyselak, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "tiedosto": "Aerialview ouaga.png",
-          "lyhyt": "Ouagadougoun Secteur 17:n kaupunkirakennetta ilmasta vuonna 2008.",
+          "lyhyt": "Secteur 17:n kaupunkirakenne.",
           "selite": "Ouagadougoun Secteur 17:n kaupunkirakennetta ilmasta vuonna 2008.",
           "lahde": "Neonstar, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
           "tiedosto": "Ouagaaerialview.png",
-          "lyhyt": "Ouagadougoun lounaisosan kortteleita ilmasta joulukuussa 2007.",
-          "selite": "Ouagadougoun lounaisosan kortteleita ilmasta joulukuussa 2007.",
+          "lyhyt": "Tiheää matalaa asutusta Ouagadougoun lounaisosassa.",
+          "selite": "Ouagadougoun lounaisosan epävirallista asutusta ilmasta joulukuussa 2007.",
           "lahde": "Neonstar, Wikimedia Commons (CC BY-SA 3.0)"
         }
       ],
       "nostot": [
         {
           "otsikko": "Hovi ei jää menneisyyteen",
-          "teksti": "Ouagadougou oli mossien valtakunnan ja hovin keskus jo ennen siirtomaahallintoa. Moro-Naban, myös Mogho Naaban nimellä tunnetun hallitsijan, palatsi kuuluu kaupungin historiallisiin paikkoihin. Viikoittaisessa seremoniassa hallitsija ja päälliköt kokoontuvat saman perinteen äärelle. Rituaaliin liittyviä kertomuksia ei tarvitse pitää todisteena yhdestä tarkasti ajoitetusta sotatapahtumasta. Hovin jatkuva kulttuurinen rooli kertoo siitä, ettei kaupungin vanha historia ole pelkästään rakennuksia tai arkistopapereita.",
+          "teksti": "Ouagadougou oli mossien valtakunnan ja hovin keskus jo ennen siirtomaahallintoa. Moro-Naba, myös Mogho Naaba, on mossien hallitsijan nimitys. Hänen palatsillaan järjestetään perjantaiaamuisin lyhyt seremonia, johon hallitsija ja päälliköt kokoontuvat. Hoviperinne jatkuu näin pääkaupungissa kaupungin muun elämän rinnalla. Palatsin seremonia, torit ja myöhemmin syntyneet kulttuuritapahtumat kuuluvat eri aikojen Ouagadougouhun; vanha hallitsijanimitys on edelleen osa kaupungin kulttuuria.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Tori jatkuu kaupunginosiin",
-          "teksti": "Ouagadougoun kauppa ei keskity vain yhteen torirakennukseen. Keskustan markkinoiden rinnalla on pienempiä kauppapaikkoja kaupunginosissa ja pääteiden varsilla. Tavaroita kootaan myös edelleen maaseudulle, joten toriverkko ulottuu kaupungin rajojen yli. Gounghinin kauppapaikoista kerrotaan esimerkiksi tekstiilejä ja hedelmiä. Keskustan tori puolestaan on rakennettu palon jälkeen uudelleen. Vanha markkinapaikka ja tämänhetkinen rakennus eivät siksi välttämättä ole sama historiallinen kerros.",
+          "teksti": "Ouagadougoun kauppa ei keskity vain yhteen torirakennukseen. Keskustan markkinoiden rinnalla on pienempiä kauppapaikkoja kaupunginosissa ja pääteiden varsilla. Tavaroita kootaan myös edelleen maaseudulle, joten toriverkko ulottuu kaupungin rajojen yli. Gounghinin kauppapaikoista kerrotaan esimerkiksi tekstiilejä ja hedelmiä. Keskustan tori puolestaan on rakennettu palon jälkeen uudelleen. Gounghinin lisäksi keskustan ja pääteiden kauppapaikat palvelevat eri kaupunginosia; niistä hankitaan sekä päivittäisiä tuotteita että edelleen myytävää tavaraa.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Käsityö tarvitsee kohtaamispaikan",
-          "teksti": "Ouagadougoussa käsityötä esitellään sekä tavallisissa kauppapaikoissa että kansainvälisessä SIAO-tapahtumassa. Tapahtuma kokoaa käsityöläisiä eri Afrikan maista, kun taas Village Artisanalissa myydään paikallisia käsitöitä ja sisäpihalla on myös kahvila. Tekeminen, näyttäminen ja kaupankäynti voivat näin kuulua samaan ympäristöön. Kaupungin kulttuuritoimintaan kuuluu lisäksi teatteri- ja nukketeatteritapahtuma FITMO. Elokuvan tunnettu nimi ei siis kerro kaikkea Ouagadougoun näyttämöistä ja työpajoista.",
+          "teksti": "Ouagadougoussa käsityötä esitellään sekä tavallisissa kauppapaikoissa että kansainvälisessä SIAO-tapahtumassa. Tapahtuma kokoaa käsityöläisiä eri Afrikan maista, kun taas Village Artisanalissa myydään paikallisia käsitöitä ja sisäpihalla on myös kahvila. Tekeminen, näyttäminen ja kaupankäynti voivat näin kuulua samaan ympäristöön. Kaupungin kulttuuritoimintaan kuuluu lisäksi teatteri- ja nukketeatteritapahtuma FITMO. SIAO on kansainvälinen afrikkalaisen käsityön messu, FITMO taas teatteri- ja nukketeatterifestivaali: kaupungin kulttuurikalenterissa on monta taiteenalaa.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Tiedon metsällä on pitkä muisti",
-          "teksti": "Bangr Weogon metsä kuului aikanaan mossipäälliköiden hallitsemaan ympäristöön. Siellä pidettiin pyhinä koettuja paikkoja sekä säilytettiin eläimiä ja pyhiä esineitä. Nykyinen kaupunkipuisto on kaupungin hallinnoima, ja sen nimi merkitsee lähteen mukaan tiedon metsää. Metsä palvelee myös ympäristökasvatusta ja virkistystä. Kaupungin sisäinen vihreä alue voi siten olla yhtä aikaa paikallisen perinteen paikka ja nykyinen oppimisympäristö. Metsän historia ei kuitenkaan tee sen uusista rakennuksista yhtä vanhoja.",
+          "teksti": "Bangr Weogon metsä kuului ennen siirtomaakautta mossipäälliköiden hallitsemaan ympäristöön. Siellä pidettiin pyhinä koettuja paikkoja, eläimiä ja esineitä. Bangr Weogo merkitsee tiedon metsää. Nykyinen kaupunkipuisto palvelee ympäristökasvatusta ja virkistystä: alueella on kävely- ja juoksupolkuja sekä eläintarha. Krokotiileja elää puiston kosteikossa. Tiiviin kaupungin sisään jäävä metsä yhdistää paikallisen pyhän alueen historian kasveihin, eläimiin ja ulkoiluun.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -171,16 +171,16 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Matkailu Burkina Fasoon ei ole tällä hetkellä turvallista. Ouagadougoun kulttuuriin voi silti perehtyä hoviperinteen, elokuvan ja torikaupan kautta. Bangr Weogo kertoo kaupungin sisällä säilyvästä metsäympäristöstä. Käsityö- ja soitinkokoelmat avaavat toisenlaisia näkökulmia tekijöiden työhön. Vanhojen matkaoppaiden palvelutietoja ei pidä tulkita nykyiseksi turvalliseksi retkisuunnitelmaksi.",
+        "kappale": "Ouagadougoun hoviperinne näkyy Moro-Naban palatsin seremoniassa. Torikauppa jatkuu keskustasta kaupunginosiin. Village Artisanalissa myydään paikallisia käsitöitä, ja sisäpihalla on kahvila. Bangr Weogon polut vievät kaupunkimetsään, musiikkimuseon kokoelma taas eri soitinperheiden äärelle.",
         "artikkeli": {
           "nimi": "Matkailijan Ouagadougou",
           "taitto": "opas",
           "teksti": "Ouagadougoun kulttuuria voi hahmottaa hovin, kaupan ja elokuvan kohtaamispaikkojen kautta.",
-          "nosto": "Matkailu Burkina Fasoon ei nyt ole turvallista; kaupungin kulttuurihistoriaa kuvaavat paikkatiedot eivät ole matkustuskehotus.",
+          "nosto": "Ouagadougoussa elokuva, käsityö ja hoviperinne kohtaavat kaupunkimetsän ja torien arjen.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Kaupungin lentoasema tunnetaan nimellä Thomas Sankara International Airport Ouagadougou, tunnus OUA. Vanhoissa oppaissa kuvataan myös vihreitä ja valkoisia takseja, joiden hinta sovitaan ennen kyytiä. Nykyisiä lento- tai junavuoroja ei tässä luvata. Matkailu Burkina Fasoon ei ole tällä hetkellä turvallista, joten kulkutapojen esittely on kaupungin taustatietoa eikä suositus lähteä matkalle.",
+              "teksti": "Ouagadougoun lentoasema tunnetaan nimellä Thomas Sankaran kansainvälinen lentoasema (OUA). Kaupungissa kuljetaan muun muassa vihreillä takseilla, joiden hinnasta sovitaan ennen kyytiä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Vanha markkinapaikka",
-              "teksti": "Place de la Nation, myös Place de la Révolution, on keskustan julkinen aukio. Paikalla oli markkina jo ennen siirtomaakautta, ja myöhemmät nimikerrokset kuuluvat aukion historiaan. Kaupungin kauppa jatkuu myös pienemmissä toripaikoissa ja pääteiden varsilla. Nykyisen aukion muistomerkki on eri asia kuin vanha markkinapaikka, eikä sen ikää pidä päätellä alueen pitkästä historiasta.",
+              "teksti": "Place de la Nation eli Kansakunnan aukio tunnetaan myös nimellä Place de la Révolution. Paikalla oli markkina ennen siirtomaakautta. Keskustan lisäksi torikauppa jatkuu Gounghinissa, muissa kaupunginosissa ja pääteiden varsilla.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Metsä ja soittimien kokoelmat",
-              "teksti": "Bangr Weogo on Ouagadougoun kaupunkimetsä, johon liittyy sekä paikallista perinnettä että ympäristökasvatusta. Musiikkimuseossa esitellään puolestaan erilaisia soitinperheitä: aerofoneja, membranofoneja, idiofoneja ja kordofoneja. Metsän polut ja kokoelman esineet ovat erilaisia tapoja oppia ympäristöstä ja kulttuurista. Niiden nykyisiä käynti- tai kuvauskäytäntöjä ei luvata vanhojen palvelutietojen perusteella.",
+              "teksti": "Bangr Weogo on kaupunkimetsä, jonka kosteikossa elää krokotiileja. Burkina Fason kansallinen musiikkimuseo esittelee kieli-, puhallin-, kalvo- ja muita värähtelyyn perustuvia soittimia.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Mitä kaupungissa syödään",
-              "teksti": "Ouagadougoun ruokapaikkojen kuvauksissa esiintyvät riisiä ja papuja yhdistävä benga, kastikkeen kanssa syötävä tô sekä tomaattikastikkeinen riz gras. Katukaupan valikoimaan kerrotaan myös maapähkinöitä, taateleita ja kuivattua mangoa. Nimet auttavat hahmottamaan annosta, mutta kaikkia aineksia tai tämän päivän saatavuutta ei voi päätellä niiden perusteella. Hintaa tai ravintola-arviota ei tässä anneta.",
+              "teksti": "Benga yhdistää riisin ja pavut, tô syödään kastikkeen kanssa ja riz gras on tomaattikastikkeessa valmistettua riisiä. Katukaupassa myydään myös maapähkinöitä, taateleita ja kuivattua mangoa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,8 +219,8 @@
               }
             },
             {
-              "otsikko": "Ajankohta ja varaukset",
-              "teksti": "Matkailu Burkina Fasoon ei ole nykyisessä turvallisuustilanteessa turvallista. Festivaalin historia tai vanha liikenneopas eivät muuta tätä matkustusrajaa. Elokuvatapahtumien päivät, liikennöinti ja kohteiden pääsykäytännöt on selvitettävä erikseen ajantasaisista tiedoista. Kaupungin elokuva-, hovi- ja metsäympäristöihin voi perehtyä kulttuuritietona tekemättä niiden perusteella tavallista lomamatkasuunnitelmaa.",
+              "otsikko": "Festivaalien kaupunki",
+              "teksti": "FESPACO järjestetään joka toinen vuosi, tavallisesti helmi–maaliskuun vaihteessa. Se kokoaa elokuvanäytöksiä, työpajoja ja alan ammattilaisia. SIAO-käsityömessu ja FITMO-teatteritapahtuma ovat kaupungin muita kansainvälisiä kohtaamispaikkoja.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -259,24 +259,24 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Turvallisuusraja koskee koko maata",
-                "teksti": "Matkailu Burkina Fasoon ei ole tällä hetkellä turvallista."
+                "otsikko": "Ennen matkapäätöstä",
+                "teksti": "Tarkista Burkina Fason ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
               },
               {
-                "otsikko": "Rautatien historia ei ole palvelulupaus",
-                "teksti": "Nykyistä matkustajaliikennettä tai junavuoroja ei tässä vahvisteta."
+                "otsikko": "Taksikyyti",
+                "teksti": "Sovi taksin hinta ennen kyytiin lähtöä."
               },
               {
-                "otsikko": "Käynti ja kuvaaminen ovat erillisiä",
-                "teksti": "Kohteiden pääsy- ja kuvauskäytännöt tarkistetaan ylläpitäjältä."
+                "otsikko": "Hoviseremonia",
+                "teksti": "Moro-Naban palatsin perinteinen kokoontuminen on perjantaiaamuna."
               },
               {
-                "otsikko": "Festivaali ei ole kalenteri",
-                "teksti": "Tapahtumahistoria ei vahvista seuraavan ohjelman päivämääriä."
+                "otsikko": "Kaksi aukion nimeä",
+                "teksti": "Place de la Nation ja Place de la Révolution tarkoittavat samaa keskustan aukiota."
               }
             ]
           },
-          "lahde": "Wikipedia"
+          "lahde": "Wikipedia; Wikivoyage"
         }
       }
     },
@@ -298,7 +298,7 @@
       "nostot": [
         {
           "otsikko": "Festivaalista tulee kaupungin kieli",
-          "teksti": "FESPACO perustettiin Ouagadougoussa 1960-luvun lopulla. Panafrikkalainen elokuva- ja televisiofestivaali kokoaa afrikkalaisia tekijöitä ja yleisöjä saman ohjelman äärelle. Sen historiassa toiminta on vakiintunut kahden vuoden rytmiin. Elokuvan katsominen saa kaupungissa yhteisen paikan, mutta tapahtuman merkitys ei rajoitu yhteen kilpailuun. Näytökset, työpajat ja ammattilaisten kohtaamiset kuuluvat kokonaisuuteen. Festivaalin historia ei silti ole tämänhetkinen kalenteri: seuraavan ohjelman päivät on tarkistettava erikseen.",
+          "teksti": "FESPACO perustettiin Ouagadougoussa 1960-luvun lopulla. Panafrikkalainen elokuva- ja televisiofestivaali kokoaa afrikkalaisia tekijöitä ja yleisöjä saman ohjelman äärelle. Sen historiassa toiminta on vakiintunut kahden vuoden rytmiin. Elokuvan katsominen saa kaupungissa yhteisen paikan, mutta tapahtuman merkitys ei rajoitu yhteen kilpailuun. Näytökset, työpajat ja ammattilaisten kohtaamiset kuuluvat kokonaisuuteen. FESPACO järjestetään joka toinen vuosi, ja ohjelma sijoittuu tavallisesti helmi–maaliskuun vaihteeseen.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -308,15 +308,15 @@
         {
           "otsikko": "Elokuvan matka jatkuu salin ovella",
           "teksti": "Valmis elokuva tarvitsee myös katsojia ja paikkoja, joissa se voidaan esittää. FESPACOn toimintaan kuuluu MICA, elokuva- ja televisiomarkkina, jossa alan ammattilaiset voivat tavata ja esitellä työtään. Festivaalissa järjestetään lisäksi työpajoja ja ajatustenvaihtoa. Yleisö katsoo valkokangasta, mutta salin ulkopuolella rakennetaan työn seuraavia mahdollisuuksia. Katsominen ja levittäminen ovat näin eri vaiheita saman elokuvan elämässä, eikä festivaali ole pelkästään lista toisistaan irrallisia näytöksiä.",
-          "tiedosto": "16 mm Film Projector From Japan.jpg",
-          "lyhyt": "Kelallinen filmiprojektori elokuvien esittämiseen.",
-          "selite": "Kelallinen filmiprojektori elokuvien esittämiseen.",
-          "lahde": "পাপৰি বৰা, Wikimedia Commons (CC BY-SA 4.0)",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
           "wiki": "Panafrican Film and Television Festival of Ouagadougou"
         },
         {
           "otsikko": "Palkinnon nimi tulee perinteestä",
-          "teksti": "Étalon de Yennenga on FESPACOn elokuvakilpailuun liittyvä palkinto. Sen nimi viittaa Yennengan perinteeseen, jossa Yennenga on legendaarinen hahmo. Legendan merkitys ei edellytä, että jokainen sen tapahtuma voitaisiin todistaa historialliseksi. Elokuvapalkinto tuo nimen uuden taiteen yhteyteen ja muistuttaa siitä, kuinka vanha kertomus voi saada uuden käyttötavan. Palkinnon nimi, sen kuvanveisto ja kulloinenkin voittaja ovat silti eri asioita: niiden alkuperää tai nykyistä kilpailutulosta ei voi päätellä pelkästä nimestä.",
+          "teksti": "Étalon de Yennenga tarkoittaa Yennengan oria. FESPACOn palkinto on nimetty prinsessa Yennengan mukaan, jota pidetään mossivaltakunnan myyttisenä perustajana. Festivaali yhdistää näin afrikkalaisen elokuvan paikalliseen kertomusperinteeseen. Kilpailun kultainen ori on sen tunnetuin palkinto, ja rinnalla jaetaan myös hopeinen ja pronssinen ori. Palkinnon ovat saaneet ohjaajat eri Afrikan maista: Ouagadougoussa valittu elokuva voi tuoda valkokankaalle aivan toisen seudun ihmisiä ja tarinoita.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -325,7 +325,7 @@
         },
         {
           "otsikko": "Näytös voi liikkua yleisön luo",
-          "teksti": "FESPACOn aloitteisiin kuuluu elokuva-arkiston ja elokuvakirjaston työtä, julkaisuja sekä kiertäviä näytöksiä. Yhteistyötä tehdään koulujen ja yhdistysten kanssa, ja elokuvia esitellään myös muilla festivaaleilla. Yleisön ei siis tarvitse liittyä elokuvan tarinaan vain yhdessä suuressa salissa tai yhtenä kilpailuiltana. Säilyttäminen, tiedon kokoaminen ja esittäminen jatkavat elokuvan elämää eri ympäristöissä. Historiallinen toimintamuoto ei kuitenkaan lupaa, että jokainen näytös tai palvelu olisi jatkuvasti saatavilla.",
+          "teksti": "FESPACOn aloitteisiin kuuluu elokuva-arkiston ja elokuvakirjaston työtä, julkaisuja sekä kiertäviä näytöksiä. Yhteistyötä tehdään koulujen ja yhdistysten kanssa, ja elokuvia esitellään myös muilla festivaaleilla. Yleisön ei siis tarvitse liittyä elokuvan tarinaan vain yhdessä suuressa salissa tai yhtenä kilpailuiltana. Säilyttäminen, tiedon kokoaminen ja esittäminen jatkavat elokuvan elämää eri ympäristöissä. Arkiston ja kirjaston työ tukee afrikkalaisten elokuvien säilyttämistä, kun taas kiertävät näytökset vievät niitä uusien katsojien luo.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -362,12 +362,12 @@
   "nahtavyydet": {
     "Bangr Weogon kaupunkimetsä": {
       "aika": "Vanha metsäympäristö, nykyinen kaupunkipuisto myöhempi",
-      "teksti": "Bangr Weogo on Ouagadougoun kaupunkimetsä, joka kuului ennen siirtomaakautta mossipäälliköiden hallitsemaan ympäristöön. Metsään liittyi pyhinä koettuja paikkoja, eläimiä ja pyhiä esineitä. Vuonna 1873 paikalla oli jo tämä paikalliseen perinteeseen liittyvä metsäkerros, mutta nykyistä puistopalvelua ei pidä siirtää sellaisenaan menneisyyteen.\n\nKaupungin hallinnoima puisto toimii nykyisin myös ympäristökasvatuksessa ja virkistyksessä. Sen nimellä on lähteen mukaan tiedon metsän merkitys. Kävely- ja juoksupolut ovat nykyisiä tapoja käyttää metsää, kun taas vanha paikallinen historia muistuttaa alueen aikaisemmista rooleista. Sama metsä voi kantaa eri aikojen merkityksiä ilman, että jokainen sen rakennus tai esine olisi yhtä vanha. Puiston nykyiset käyntijärjestelyt ovat erillinen asia.",
+      "teksti": "Bangr Weogo on Ouagadougoun kaupunkimetsä, joka kuului ennen siirtomaakautta mossipäälliköiden hallitsemaan ympäristöön. Metsään liittyi pyhinä koettuja paikkoja, eläimiä ja pyhiä esineitä. Kaupungin hallinnoima puisto toimii nykyisin myös ympäristökasvatuksessa ja virkistyksessä. Sen nimellä on tiedon metsän merkitys. Kävely- ja juoksupolut ovat nykyisiä tapoja käyttää metsää, kun taas vanha paikallinen historia muistuttaa alueen aikaisemmista rooleista. Puistossa on kävely- ja juoksupolkuja sekä kosteikko, jossa elää krokotiileja.",
       "kuvat": [
         {
           "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
-          "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-          "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+          "selite": "Bangr Weogon kosteikon vettä ja rannan puustoa Ouagadougoussa.",
+          "lyhyt": "Vettä ja kasvillisuutta Bangr Weogon kaupunkipuistossa.",
           "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
         }
       ],
@@ -375,7 +375,7 @@
     },
     "Kansakunnan aukion vanha markkinapaikka": {
       "aika": "Markkinapaikka ennen siirtomaakautta, nykyinen aukio myöhempi",
-      "teksti": "Ouagadougoun keskustan Kansakunnan aukio tunnetaan nimillä Place de la Nation ja Place de la Révolution. Paikalla oli suuri markkina jo ennen siirtomaakautta. Aukion historia alkaa siten kaupankäynnin ympäristöstä, ei vain sen nykyisestä nimestä tai ulkoasusta. Vuonna 1873 täällä oli kaupungin vanhaan elämään kuuluva markkinapaikka.\n\nTori siirrettiin siirtomaakaudella, ja paikka sai tuolloin d’Arboussier-nimen. Myöhemmät nimet ovat uusia kerroksia saman julkisen paikan historiassa. Aukio sijaitsee Avenue du Yatengan tuntumassa, lähellä kaupungin julkisia instituutioita. Nykyinen aukio ja sen muistomerkit ovat eri asioita kuin ennen siirtomaakautta toiminut tori: alueen pitkä historia ei anna jokaiselle siellä seisovalle teokselle samaa ikää.",
+      "teksti": "Ouagadougoun keskustan Kansakunnan aukio tunnetaan nimillä Place de la Nation ja Place de la Révolution. Paikalla oli suuri markkina jo ennen siirtomaakautta. Aukion historia alkaa siten kaupankäynnin ympäristöstä, ei vain sen nykyisestä nimestä tai ulkoasusta. Tori siirrettiin siirtomaakaudella, ja paikka sai tuolloin d’Arboussier-nimen. Myöhemmät nimet ovat uusia kerroksia saman julkisen paikan historiassa. Aukio sijaitsee Avenue du Yatengan tuntumassa, lähellä kaupungin julkisia instituutioita. Markkinapaikan siirtäminen muutti alueen käyttöä kaupankäynnin paikasta julkiseksi aukioksi.",
       "kuvat": [],
       "lahde": "Wikipedia"
     }
