@@ -61,4 +61,4 @@ Huom: Ensimmäinen virke riippuu PK:n aikasiirtosuunnitelmasta (tunteja, vuoroka
 ## Avoimet
 - Jaksot 2 ja 8 riippuvat PK:n suunnitelmasta (ruudun nimi, aikasiirron muoto); päivitän kun suunnitelma on.
 - Jakson 6 luvut (23 astetta, 2 600 km) on laskettu, ei suoraan lähteestä; tarkistettavissa kaavalla huomiossa.
-- Seuraava osa: ylilentokertomukset astronautin kameran 64 kohteelle (15–25 s, pohjana X4:n tekstit ja lähteet), kun PK:n aikataulu on.
+- PERUTTU (omistaja 14.10. 00.0x via PT): kohdekohtaisia ylilentotekstejä ei tehdä; johdanto pysyy lyhyenä. Jaksot 2 ja 8 vain jos PK:n suunnitelma tarvitsee, lyhyinä.
