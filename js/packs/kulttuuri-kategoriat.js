@@ -156,6 +156,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/london/20261013-uudet-6-8/london-6-nakoala-intro-v1.png',
+          lyhyt: 'Sky Gardenista Lontoossa näkyvät Thames, Tower Bridge ja Tower of London.',
+          selite: 'Sky Garden on julkinen puutarha ja näköalapaikka 20 Fenchurch Street '
+            + '-pilvenpiirtäjän ylimmissä kerroksissa. Ulkoterassilta näkee Thamesin, Tower Bridgen '
+            + 'ja Tower of Londonin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -1846,6 +1859,18 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Čertovka-kanava kulkee Prahan Malá Stranan läpi vesimyllyn ohi.',
           selite: 'Čertovka on keskiajalla rakennettu kanava, joka säätelee vettä joenvarren '
             + 'myllyille ja erottaa Kampan saaren mantereesta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/prague/20261013-uudet-6-8/prague-6-nakoala-intro-v1.png',
+          lyhyt: 'Letnán puistosta näkyvät Vltavan sillat, Vanhakaupunki ja Prahan linna.',
+          selite: 'Letná on Vltavan yläpuolella, jyrkän rantatörmän reunalla sijaitseva tasanne. Sen '
+            + 'näköalapaikoilta näkyvät joen sillat, Vanhakaupunki ja Prahan linna.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -11043,6 +11068,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/marseille/20261013-uudet-6-8/marseille-6-nakoala-intro-v1.png',
+          lyhyt: 'Notre-Dame de la Garde -kukkulalta näkyvät Vieux-Port, Mucem ja Marseillen katot.',
+          selite: 'Notre-Dame de la Garde seisoo kukkulalla sataman eteläpuolella, ja sen terassilta '
+            + 'aukeaa näkymä kaupungin katoille, Vieux-Portille ja saarille. Kirkkoon on vapaa '
+            + 'pääsy.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -14207,6 +14245,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/rome/20261013-uudet-6-8/rome-6-nakoala-intro-v1.png',
+          lyhyt: 'Gianicolon näköalapaikalta näkyvät Rooman katot ja Pietarinkirkon kupoli.',
+          selite: 'Gianicolo on Tiberin länsipuolella Trastevere-kaupunginosassa, ja sen laelta '
+            + 'katsotaan Rooman keskustan kattojen ja kupolien yli. Pietarinkirkon kupoli erottuu '
+            + 'kaupungin ylle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -14248,6 +14299,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Gian Lorenzo Bernini vuonna 1651, ja sen neljä jokijumalaa '
             + 'kuvaavat neljän maanosan suuria virtoja.',
           lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/rome/20261013-uudet-6-8/rome-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Rooman ensimmäinen raitiolinja avattiin 1877, ja vaunuja veti aluksi hevonen.',
+          selite: 'Roomassa ajettiin hevosraitiovaunuilla vuodesta 1877, ja sähköraitiovaunut tulivat '
+            + 'vuonna 1895. Nykyään kaupungissa ajetaan matalalattiaisilla nivelvaunuilla, joita on '
+            + 'nähty myös Viale Aventinolla.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -15449,6 +15513,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/warsaw/20261013-uudet-6-8/warsaw-6-nakoala-intro-v1.png',
+          lyhyt: 'Kulttuuri- ja tiedepalatsin 30. kerroksen terassi on 114 metrin korkeudessa.',
+          selite: 'Kulttuuri- ja tiedepalatsin 30. kerroksessa on yleisölle avoin katselutasanne noin '
+            + '114 metrin korkeudessa. Sieltä aukeaa panoraama Varsovaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -15490,6 +15566,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Złota 44 -asuintorni on 192 metriä korkea, ja Daniel '
             + 'Libeskind sai sen muotoon idean kotkan siivestä.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/warsaw/20261013-uudet-6-8/warsaw-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Varsovan raitiotie alkoi hevosvetoisena 1866, ja sähkövaunut ajoivat 1908.',
+          selite: 'Varsovan hevosraitiotie avattiin joulukuussa 1866, ja sähköistys oli valmis vuoteen '
+            + '1908 mennessä. Raitiovaunut ovat edelleen osa kaupungin joukkoliikennettä.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -16364,6 +16452,18 @@ export const KULTTUURI_KATEGORIAT = {
             + '124 metrin korkeudessa tekee täyden kierroksen 45 minuutissa.',
           lahde: 'Matkakirjan havainnekuva',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/tampere/20261013-uudet-6-8/tampere-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Tampereen raitiovaunu kulkee Hämeenkadulla kaupungin keskustassa.',
+          selite: 'Tampereen raitiotien säännöllinen liikenne alkoi 9. elokuuta 2021. Vaunut ovat '
+            + 'matalalattiaisia ja kulkevat molempiin suuntiin, ja raitiotiellä on kaksi linjaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
       ],
       ennenNyt: [
         {
@@ -17207,6 +17307,21 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Pirita-joen suulla.',
           selite: 'Piritan ranta on noin 2–2,5 kilometrin pituinen hiekkaranta Pirita-joen '
             + 'suun tuntumassa Tallinnan Piritan kaupunginosassa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/tallinn/20261013-uudet-6-8/tallinn-6-nakoala-intro-v1.png',
+          lyhyt: 'Kohtuotsan tasanteelta Toompealta näkyvät vanhankaupungin katot ja Pyhän Olavin '
+            + 'torni.',
+          selite: 'Toompea on kalkkikivinen kukkula, joka erottaa Tallinnan vanhankaupungin ylä- ja '
+            + 'alakaupungin. Kohtuotsan tasanne on sen pohjoispuolella, ja sieltä näkyy '
+            + 'alakaupungin kattojen yli Pyhän Olavin kirkko, jonka torni on noin 124 metriä '
+            + 'korkea.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -18244,6 +18359,18 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Sininen silta ylittää Moikan Iisakinkirkon aukion kohdalla Pietarissa.',
           selite: 'Sininen silta on noin 97 metriä leveä, ja se kuuluu Pietarin leveimpiin '
             + 'siltoihin. Se sijaitsee Mariinski-palatsin edessä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/saint-petersburg/20261013-uudet-6-8/saint-petersburg-6-nakoala-intro-v1.png',
+          lyhyt: 'Iisakinkirkon kolonnadilta näkee Admiraliteetin tornin ja Verikirkon kupolit.',
+          selite: 'Iisakinkirkon kupolia kiertävä kolonnaditasanne on noin 43 metrin korkeudessa. '
+            + 'Sieltä näkyvät Admiraliteetin torni ja kaukana Verikirkon kupolit.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -19531,6 +19658,20 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/sofia/20261013-uudet-6-8/sofia-6-nakoala-intro-v1.png',
+          lyhyt: 'Vitosha-vuoren Kopitotolta näkee koko Sofian ja selkeällä säällä pohjoisessa '
+            + 'Balkanvuoret.',
+          selite: 'Kopitoto on noin 1 350 metrin korkeudessa Vitosha-vuorella, ja sen televisiotornin '
+            + 'ympäristö on suosittu näköalapaikka. Selkeällä säällä sieltä näkyvät Sofian kaupunki '
+            + 'sekä pohjoisessa Balkanvuoret.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -19554,6 +19695,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Vitosan luonnonpuisto rauhoitettiin 1934 ensimmäisenä '
             + 'koko Balkanilla, ja sen korkein huippu yltää 2 292 metriin.',
           lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/sofia/20261013-uudet-6-8/sofia-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Sofian raitiotie avattiin vuoden 1901 alussa ja on yhä käytössä.',
+          selite: 'Sofian ensimmäinen raitiovaunu lähti liikkeelle vuoden 1901 alussa, ja sen reitti '
+            + 'kulki muun muassa Graf Ignatievin kadun kautta. Raitiotie on yhä käytössä.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -26854,6 +27007,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/lapland/20261013-uudet-6-8/lapland-6-nakoala-intro-v1.png',
+          lyhyt: 'Ounasvaaran näkötornista näkyvät Rovaniemen keskusta, Kemijoki ja Jätkänkynttilä.',
+          selite: 'Ounasvaaran näkötorni on vaaran länsirinteellä noin 2,2 kilometriä keskustasta '
+            + 'itään, noin 160 metrin korkeudessa merenpinnasta. Tornista näkyvät keskusta ja '
+            + 'Kemijoki, ja joen yli kulkee Jätkänkynttilä-silta.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -28081,6 +28247,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/sicily/20261013-uudet-6-8/sicily-6-nakoala-intro-v1.png',
+          lyhyt: 'Taorminan Piazza IX Aprilelta näkyvät Giardini Naxosin lahti ja Etna.',
+          selite: 'Piazza IX Aprile on Taorminan pääkadun Corso Umberto I:n varrella, ja sen laidalta '
+            + 'avautuu näkymä Joonianmerelle ja Giardini Naxosin lahdelle. Kauempana siintää Etna.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -28089,6 +28267,18 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Marzamemin nimen alkuosa on arabiaa: marsa tarkoittaa satamaa tai lahtea.',
           selite: 'Nimeä on selitetty sekä kyyhkysten lahdeksi että pieneksi satamaksi. Kylän '
             + 'elinkeino oli vuosisatoja tonnikalan pyynti.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/sicily/20261013-uudet-6-8/sicily-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Taorminan köysirata laskee kukkulalta Mazzaròn rannalle muutamassa minuutissa.',
+          selite: 'Taorminan köysirata yhdistää kaupungin ylärinteen Mazzaròn rannalle, ja matka kestää '
+            + 'vain muutaman minuutin. Vaunut lähtevät noin vartin välein.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -29820,6 +30010,19 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Riian kaupunginkanava on vanhan linnoituksen vallihaudan jäänne.',
           selite: 'Kun Riian linnoitusvallien purkaminen alkoi 1857, vallihaudasta jäi kanava '
             + 'ja vallien maista kohosi Bastejkalnsin tekokumpu.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/riga/20261013-uudet-6-8/riga-6-nakoala-intro-v1.png',
+          lyhyt: 'Pyhän Pietarin kirkon tornista 72 metrin korkeudesta näkyvät vanhakaupunki ja '
+            + 'Daugava.',
+          selite: 'Pyhän Pietarin kirkon tornin näköalatasanne on noin 72 metrin korkeudessa, ja sinne '
+            + 'noustaan hissillä. Ylhäältä näkyy vanhankaupungin katot ja Daugava-joki.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
