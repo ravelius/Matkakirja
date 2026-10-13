@@ -57,6 +57,10 @@ Luovuttaja: Linssiseppä 2 (Opus, high). Edellinen: viesti-linssiseppa-2-luovutu
 4. **Avaus**: Nousu.AvausKamera valmis (11b3ba639); PK kytkee (RakettiLaukaisu.AvausS) ja ajoittaa SK:n tekstin
    (proto-3d/_tyo/sisaltokirjuri/raketti-andoya-20261014/raketti-andoya-alku.json): PT HYVÄKSYI 00.2x ("Länsi-Euroopasta"),
    25 sanaa ~11 s, lähti Äänittäjälle; mahtuu 14 s:n avaukseen (jos .mp3 > 13 s, pidennä Nousu.AvausKestoS).
+4b. **PK 00.2x**: avaus kytketty, pelikoodari/raketti-laukaisu-189 **02754cfdd** (ff 11b3ba639 + PK:n commit). Rebasea oma
+   0c65d55b4 (valaistus) sen päälle (`git rebase 02754cfdd` raketti-worktreessa) ja jatka siitä. Latauksen aikana kamera =
+   AvausKamera(0); avaus kestää max(AvausKestoS, repliikki + 0,5 s). savu1 iPhone valmis 00.19 (todistus-savu1-iphone-20261014-0016,
+   katsomatta), SIMU VAPAA ilmoitettu.
 5. **Lähtöalusta**: LR:n malli (PT pyytää) → kytke RakettiMalli.Osa("alusta").
 
 ## Raketin parannuslista (luonnos, lähetä PT:lle)
