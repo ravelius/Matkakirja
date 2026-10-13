@@ -6,11 +6,11 @@ Tilaus: PT (omistajan museopalaute, juna 188): kertoja ei jatka Yövartion salis
 
 Salissa `yv` on 5 teospaikkaa (sali.json teospaikat): yv-yovartio SK-C-5, yv-v1 mauritshuis-146, yv-v2 mauritshuis-840, yv-o1 mauritshuis-92, yv-o2 mauritshuis-670. Kierros (kierros.json, 33 pysähdystä) päättyy SK-C-5:een; äänite (taidemuseo-kertoja-v2/paasali) on vain SK-C-5:llä. **Ilman kertojatekstiä ja äänitettä: 4 teosta, kaikki Mauritshuis-lainoja** (mauritshuis-146, -840, -92, -670). Lähteet: LS1:n worktree proto-linssiseppa-museo188 (a29af6561) ja proto-3d/_valmiit/taidemuseo-kertoja-v2-vienti-20261011.
 
-## Tekstit (kertoja William, sama tyyli kuin pääsalin 20: koukku, "Katso …", 54–64 sanaa, luvut tee.py muuttaa sanoiksi)
+## Tekstit (kertoja William, sama tyyli kuin pääsalin 20: koukku, "Katso …", 54–66 sanaa, luvut tee.py muuttaa sanoiksi)
 
 ### Tohtori Nicolaes Tulpin anatomian oppitunti (mauritshuis-146, yv-v1, 54 sanaa, ~23 s)
 
-Pöydällä makaa Aris Kindt, ryöstöstä tuomittu mies, joka teloitettiin samana päivänä vuonna 1632. Kirurgikilta sai pitää vain yhden julkisen ruumiinavauksen vuodessa, ja ruumiin täytyi olla teloitetun rikollisen. Rembrandt oli maalatessaan 26-vuotias. Katso doktori Tulpia keskellä: hän näyttää kuolleen miehen käsivarren lihaksia seitsemälle kirurgille. Käsivarren anatomisesta tarkkuudesta on kiistelty vielä tutkimuksissa vuosina 2006 ja 2007.
+Pöydällä makaa Aris Kindt, ryöstöstä tuomittu mies, joka teloitettiin samana päivänä vuonna 1632. Kirurgikilta sai pitää vain yhden julkisen ruumiinavauksen vuodessa, ja ruumiin täytyi olla teloitetun rikollisen. Rembrandt oli maalatessaan 26-vuotias. Katso tohtori Tulpia oikealla: hän näyttää kuolleen miehen käsivarren lihaksia seitsemälle kirurgille. Käsivarren anatomisesta tarkkuudesta on kiistelty vielä tutkimuksissa vuosina 2006 ja 2007.
 
 Lähteet: [Wikipedia: The Anatomy Lesson of Dr. Nicolaes Tulp](https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp)
 
@@ -28,7 +28,7 @@ Lähteet: [Wikipedia: View of Delft](https://en.wikipedia.org/wiki/View_of_Delft
 
 ### Tyttö helmikorvakorulla (mauritshuis-670, yv-o2, 64 sanaa, ~27 s)
 
-Tämä ei ole muotokuva vaan tronie, kuvitteellisen hahmon pään tutkielma, eikä kukaan tiedä, kuka malli oli. Vuoden 2018 tutkimus löysi tytölle ripset ja taustalta haalistuneen vihreän verhon. Katso helmeä: se on todennäköisesti muuta kuin aito helmi, koska aito olisi liian suuri, ja vaikutelma syntyy muutamasta valkoisesta vedosta. Arnoldus des Tombe osti maalauksen Haagin huutokaupasta vuonna 1881 kahdella guldenilla ja testamenttasi sen Mauritshuisille vuonna 1902.
+Tämä ei ole muotokuva vaan tronie, kuvitteellisen hahmon pään tutkielma, eikä kukaan tiedä, kuka malli oli. Vuoden 2018 tutkimus löysi tytölle ripset ja taustalta haalistuneen vihreän verhon. Katso helmeä: se tuskin on aito helmi, koska aito olisi ollut liian suuri, ja vaikutelma syntyy muutamasta valkoisesta vedosta. Arnoldus des Tombe osti maalauksen Haagin huutokaupasta vuonna 1881 kahdella guldenilla ja 30 sentillä ja testamenttasi sen Mauritshuisille vuonna 1902.
 
 Lähteet: [Wikipedia: Girl with a Pearl Earring](https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring); [PBS NewsHour: Girl with a Pearl Earring, 2018 scans](https://www.pbs.org/newshour/amp/arts/hi-tech-scans-uncover-new-details-of-girl-with-a-pearl-earring-but-not-her-identity)
 
