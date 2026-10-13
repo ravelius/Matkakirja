@@ -6,8 +6,8 @@ Kirjoittaja: Sisältökirjuri (Sonnet 5.5). Lähteet luettu itse WebFetch/WebSea
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
-| Kööpenhamina sijaitsee Seelannin saaren itärannalla, osin myös Amagerin saarella, Juutinrauman (Øresund) äärellä | https://en.wikipedia.org/wiki/Copenhagen | https://lex.dk/København (ved Øresund langs med strædet mellem Sjælland og Amager) |
-| Sisäsatama erottaa Christianshavnin muusta keskustasta; Christianshavn on tekosaarilla Seelannin ja Amagerin välissä | https://en.wikipedia.org/wiki/Christianshavn | https://www.storyhunt.io/en/articles/christianshavn-neighborhood-guide |
+| Kööpenhamina sijaitsee Själlannin saaren itärannalla, osin myös Amagerin saarella, Juutinrauman (Øresund) äärellä | https://en.wikipedia.org/wiki/Copenhagen | https://lex.dk/København (ved Øresund langs med strædet mellem Sjælland og Amager) |
+| Sisäsatama erottaa Christianshavnin muusta keskustasta; Christianshavn on tekosaarilla Själlannin ja Amagerin välissä | https://en.wikipedia.org/wiki/Christianshavn | https://www.storyhunt.io/en/articles/christianshavn-neighborhood-guide |
 | Vapahtajan kirkon torni on 90 metriä korkea ja sen huipulle johtaa noin 400 porrasta | https://en.wikipedia.org/wiki/Church_of_Our_Saviour,_Copenhagen | https://www.storyhunt.io/en/articles/church-of-our-saviour |
 | Tivolin järvi on jäänne vanhasta vallihaudasta; puisto oli kaupungin linnoitusten ulkopuolella | https://en.wikipedia.org/wiki/Tivoli_Gardens | https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens |
 | Keskustan länsilaitaa kiertää kolme tekojärveä (Sortedams Sø, Peblinge Sø, Sankt Jørgens Sø), jotka kuuluivat kaupungin puolustukseen | https://en.wikipedia.org/wiki/The_Lakes_(Copenhagen) | https://lex.dk/Søerne (puolustuksellinen merkitys 1860-luvulle asti) |
@@ -85,8 +85,8 @@ Korkeus H (kameralle): ei määritelty
 | Nykyinen linnoitus rakennettiin 1660-luvulla kuningas Frederik III:n aikana (Lex 1662, Wikipedia 1663–64, History Hit 1663) | https://lex.dk/Kastellet | https://www.historyhit.com/locations/kastellet/ |
 | Hollantilainen insinööri Henrik Rüse oli suunnittelussa mukana | https://lex.dk/Kastellet | https://en.wikipedia.org/wiki/Kastellet,_Copenhagen |
 | Kastellet on yhä sotilasaluetta (puolustusministeriö) ja samalla yleinen puisto | https://en.wikipedia.org/wiki/Kastellet,_Copenhagen | https://www.historyhit.com/locations/kastellet/ |
-| Gefion-suihkulähde esittää jumalatar Gefjonia, joka kyntää neljällä härällä Seelannin irti Ruotsista; härät ovat hänen neljä poikaansa | https://en.wikipedia.org/wiki/Gefion_Fountain | https://www.visitcopenhagen.com/copenhagen/gefion-fountain-gdk410604 |
-| Seelanti on saari, jolla Kööpenhamina sijaitsee | https://en.wikipedia.org/wiki/Gefion_Fountain | https://www.visitcopenhagen.com/copenhagen/gefion-fountain-gdk410604 (Zealand-saari); lisäksi W+Zealand |
+| Gefion-suihkulähde esittää jumalatar Gefjonia, joka kyntää neljällä härällä Själlannin irti Ruotsista; härät ovat hänen neljä poikaansa | https://en.wikipedia.org/wiki/Gefion_Fountain | https://www.visitcopenhagen.com/copenhagen/gefion-fountain-gdk410604 |
+| Själland on saari, jolla Kööpenhamina sijaitsee | https://en.wikipedia.org/wiki/Gefion_Fountain | https://www.visitcopenhagen.com/copenhagen/gefion-fountain-gdk410604 (Zealand-saari); lisäksi W+Zealand |
 | Suihkulähteen suunnitteli kuvanveistäjä Anders Bundgaard (1864–1937) ja se paljastettiin 1908 | https://lex.dk/Anders_Bundgaard | https://en.wikipedia.org/wiki/Gefion_Fountain |
 | Suihkulähde on Kastelletin vieressä Langelinien puistossa | https://en.wikipedia.org/wiki/Gefion_Fountain | https://www.visitcopenhagen.com/copenhagen/gefion-fountain-gdk410604 |
 

@@ -8,9 +8,9 @@ Kierros: 8 pysähdystä, noin 5,2 km, arviolta 6 min. Kertoja kuten Pariisissa, 
 
 ## 1. Mitä katsojan pitää muistaa
 
-1. **Kööpenhamina on veden ehdoilla rakennettu kauppasatama: Seelannin ja Amagerin välissä kulkee sisäsatama, kanavat ja vanhat vallihaudat kuuluvat kaupunkiin, ja nimikin tarkoittaa kauppiaiden satamaa.**
-2. **Kööpenhamina on kuninkaiden kaupunki: Christian neljäs rakensi Rosenborgin ja Rundetårnin ja aloitti Christianshavnin, Frederik viides Amalienborgin, ja vallan keskus Christiansborg seisoo yhä saarella, jolle piispa Absalon rakensi linnansa vuonna 1167.**
-3. **Kööpenhaminassa sadut ovat paikoissa: Gefjonin taru kertoo Seelannin synnyn, Andersen asui Nyhavnissa ja sai Tivolista aiheen satuunsa, ja Tivoli avattiin jo vuonna 1843.**
+1. **Kööpenhamina on veden ehdoilla rakennettu kauppasatama: Själlannin ja Amagerin välissä kulkee sisäsatama, kanavat ja vanhat vallihaudat kuuluvat kaupunkiin, ja nimikin tarkoittaa kauppiaiden satamaa.**
+2. **Kööpenhamina on kuninkaiden kaupunki: Christian neljäs rakensi Rosenborgin ja Rundetårnin ja aloitti Christianshavnin, Frederik viides Frederiksstadenin kaupunginosan, ja vallan keskus Christiansborg seisoo yhä saarella, jolle piispa Absalon rakensi linnansa vuonna 1167.**
+3. **Kööpenhaminassa sadut ovat paikoissa: Gefjonin taru kertoo Själlannin synnyn, Andersen asui Nyhavnissa ja sai Tivolista aiheen satuunsa, ja Tivoli avattiin jo vuonna 1843.**
 
 Kierroksen tehtävä on jättää kaupungista muistikuva, ei luetella kohteita: sisäsatama näkyy avauksessa ja jokaisessa yläkuvassa (Christianshavn, Nyhavn, Slotsholmen), kuninkaiden kaupunki kulkee läpi (Christian IV: Christianshavn, Rosenborg, Rundetårn; Frederik V: Amalienborg), ja sadut sulkevat kierroksen Tivolissa, jossa isoisän merkintä on.
 
@@ -20,80 +20,80 @@ Järjestys on lyhin kierros 8 valitun kohteen kesken (kaikki 40 320 järjestyst�
 
 | Nro | Asema (metrokartan nimi) | Q | Siirtymä edelliseltä | Kerronta |
 |---|---|---|---|---|
-| 1 | Vapahtajan kirkko ja Christianshavn | Q29157 / Q861363 | avauksesta suora lasku (≥ 24 s) | 72 sanaa, ~40 s |
-| 2 | Nyhavn | Q943946 | 850 m, lento 23,4 s | 64 sanaa, ~36 s |
-| 3 | Amalienborg ja Marmorikirkko | Q211053 / Q1321231 | 483 m, lento 23,4 s | 65 sanaa, ~36 s |
-| 4 | Kastellet ja Gefion-suihkulähde | Q221812 / Q952817 | 790 m, lento 23,4 s | 70 sanaa, ~39 s |
-| 5 | Rosenborgin linna | Q206101 | 1 190 m, lento 23,4 s | 45 sanaa, ~25 s |
-| 6 | Rundetårn | Q1140534 | 521 m, lento 23,4 s | 64 sanaa, ~36 s |
-| 7 | Christiansborgin linna | Q940733 | 630 m, lento 23,4 s | 56 sanaa, ~31 s |
-| 8 | Tivoli | Q110289 | 775 m, lento 23,4 s | 67 sanaa, ~38 s |
+| 1 | Vapahtajan kirkko ja Christianshavn | Q29157 / Q861363 | avauksesta suora lasku (≥ 24 s) | 72 sanaa, ~50 s |
+| 2 | Nyhavn | Q943946 | 850 m, lento 23,4 s | 64 sanaa, ~45 s |
+| 3 | Amalienborg ja Marmorikirkko | Q211053 / Q1321231 | 483 m, lento 23,4 s | 65 sanaa, ~46 s |
+| 4 | Kastellet ja Gefion-suihkulähde | Q221812 / Q952817 | 790 m, lento 23,4 s | 70 sanaa, ~49 s |
+| 5 | Rosenborgin linna | Q206101 | 1 190 m, lento 23,4 s | 45 sanaa, ~32 s |
+| 6 | Rundetårn | Q1140534 | 521 m, lento 23,4 s | 61 sanaa, ~43 s |
+| 7 | Christiansborgin linna | Q940733 | 630 m, lento 23,4 s | 56 sanaa, ~39 s |
+| 8 | Tivoli | Q110289 | 775 m, lento 23,4 s | 66 sanaa, ~46 s |
 
 - **Asemien napautus** (omistajan 10.10. korjaus): kaikki asemat napautettavia (≥ 44 pt), seliteteksti koko kohteen ajan.
 - **Ei nopeaa lentoa:** pisin väli on Kastellet ja Gefion-suihkulähde → Rosenborgin linna (1 190 m), eikä mikään väli yllä 3 km:iin, joten liikesääntö (enintään yksi nopea lento) ei vaadi tehokeinoa. Jos LS1 haluaa yhden, ainoa järkevä on Kastellet ja Gefion-suihkulähde → Rosenborgin linna.
-- **Lyhyin väli:** Nyhavn → Amalienborg ja Marmorikirkko (483 m); kaikki välit ovat yli 300 m, joten kaaria ei ole ja kaikki siirtymät ovat lentoja. Yli 300 m:n välit 483 ja 521 m ovat lähellä rajaa: LS1 voi korvata ne 10–12 s liu'ulla.
-- **Koordinaatit:** KAUPUNKIKARTAT.kobenhavn (js/packs/maakartat.js); kaikki 8 pysäkkiä ovat kaupunkikartan kohteita. Gefion-suihkulähde on noin 360 m Kastelletista pohjoiseen-itään: yksi pysäkki, kaksi Q:ta.
-- **Satama ja saaret (maantiede):** avaus (Seelanti, Amager, sisäsatama), pysäkki 1 (Christianshavnin tekosaaret ja kanavat), pysäkki 4 (Gefjonin taru Seelannin synnystä), pysäkki 7 (Slotsholmen saarena), loppu (Tivolin vallihauta, kolme tekojärveä).
+- **Lyhyin väli:** Nyhavn → Amalienborg ja Marmorikirkko (483 m); kaikki 7 väliä ovat ≥ 483 m eli lentoja (LiukuMaxM 450 m); lyhin 483 m on lähellä rajaa, ja LS1 voi korvata sen ja 521 m:n välin liu'ulla.
+- **Koordinaatit:** KAUPUNKIKARTAT.kobenhavn (js/packs/maakartat.js); kaikki 8 pysäkkiä ovat kaupunkikartan kohteita. Gefion-suihkulähde on noin 320–360 m Kastelletista kaakkoon: yksi pysäkki, kaksi Q:ta.
+- **Satama ja saaret (maantiede):** avaus (Själland, Amager, sisäsatama), pysäkki 1 (Christianshavnin tekosaaret ja kanavat), pysäkki 4 (Gefjonin taru Själlannin synnystä), pysäkki 7 (Slotsholmen saarena), loppu (Tivolin vallihauta, kolme tekojärveä).
 
 ## 3. Kohtauslista (alku- ja lopputilat)
 
-Arvot liikesäännöistä: avausnäkymä 1 100 m / 50°, tavallinen lento 23,4 s, kaari kestää pysähdyksen, esittelykorkeus 0,5–0,7 × H (matalilla kattojen + 10 m), kallistus 64° rakennus / 72° aukio, katu ja alue. Ajat ovat kerronnan arvio (0,56 s/sana). **Silmä- ja katsearvot ovat vain kaava; KS lukitsee.**
+Arvot liikesäännöistä: avausnäkymä 1 100 m / 50°, tavallinen lento 23,4 s, kaari kestää pysähdyksen, esittelykorkeus 0,5–0,7 × H (matalilla kattojen + 10 m), kallistus 64° rakennus / 72° aukio, katu ja alue. Ajat ovat kerronnan arvio (0,70 s/sana). **Silmä- ja katsearvot ovat vain kaava; KS lukitsee.**
 
 | Nro | Kohtaus | Alkutila | Lopputila | Syy olla olemassa | Kerronta |
 |---|---|---|---|---|---|
 | 1 | Siirtoruutu | tumma latausruutu | avausnäkymä auki | laatat latautuvat piilossa | ei puhetta |
-| 2 | Avaus | avausnäkymä 1 100 m / 50°, Christianshavn alakolmanneksessa, sisäsatama ja Seelannin ranta kuvassa | sama, kiertynyt 14° ja 15 % lähempänä | muistettava 1: saaret ja satama | avaus 3 virkettä, ~20 s |
+| 2 | Avaus | avausnäkymä 1 100 m / 50°, Christianshavn alakolmanneksessa, sisäsatama ja Själlannin ranta kuvassa | sama, kiertynyt 14° ja 15 % lähempänä | muistettava 1: saaret ja satama | avaus 3 virkettä, ~25 s |
 | 3 | Lento → Vapahtajan kirkko ja Christianshavn | avausnäkymä | torni, kallistus 64°, silmä 0,5–0,7 × H (H 90 m: 45–63 m), KS lukitsee | suora lasku ≥ 24 s | pysäkin 1 alku |
-| 4 | Pysähdys 1: Vapahtajan kirkko ja Christianshavn | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 2 | muistettava 1 | pysäkki 1, ~40 s; silmä 0,5–0,7 × H (H 90 m: 45–63 m), KS lukitsee |
+| 4 | Pysähdys 1: Vapahtajan kirkko ja Christianshavn | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 2 | muistettava 1 | pysäkki 1, ~50 s; silmä 0,5–0,7 × H (H 90 m: 45–63 m), KS lukitsee |
 | 5 | Laskeutuminen: Vapahtajan kirkko ja Christianshavn | pysähdyksen alku | silmä 0,5–0,7 × H (H 90 m: 45–63 m), KS lukitsee, katse pääkohteeseen | omistaja TF 169: matala katse pääkohteeseen | pysäkki 1 virkkeet 1–2 |
 | 6 | Lento → Nyhavn | edellisen kehys | Nyhavn, kallistus 72°, silmä kattojen + 10 m (KS lukitsee) | 850 m, 23,4 s | pysäkin 2 alku |
-| 7 | Pysähdys 2: Nyhavn | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 3 | muistettava 1 ja 3 | pysäkki 2, ~36 s; silmä kattojen + 10 m (KS lukitsee) |
-| 8 | Lento → Amalienborg ja Marmorikirkko | edellisen kehys | Amalienborg ja Marmorikirkko, kallistus 72°, silmä kattojen + 10 m (KS lukitsee) | 483 m, 23,4 s (lyhyt: LS1 voi korvata 10–12 s liu'ulla) | pysäkin 3 alku |
-| 9 | Pysähdys 3: Amalienborg ja Marmorikirkko | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 4 | muistettava 2 | pysäkki 3, ~36 s; silmä kattojen + 10 m (KS lukitsee) |
+| 7 | Pysähdys 2: Nyhavn | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 3 | muistettava 1 ja 3 | pysäkki 2, ~45 s; silmä kattojen + 10 m (KS lukitsee) |
+| 8 | Lento → Amalienborg ja Marmorikirkko | edellisen kehys | Amalienborg ja Marmorikirkko, kallistus 64°, silmä kattojen + 10 m (KS lukitsee) | 483 m, 23,4 s (lyhyt: LS1 voi korvata 10–12 s liu'ulla) | pysäkin 3 alku |
+| 9 | Pysähdys 3: Amalienborg ja Marmorikirkko | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 4 | muistettava 2 | pysäkki 3, ~46 s; silmä kattojen + 10 m (KS lukitsee) |
 | 10 | Lento → Kastellet ja Gefion-suihkulähde | edellisen kehys | Kastellet ja Gefion-suihkulähde, kallistus 72°, silmä kattojen + 10 m (KS lukitsee) | 790 m, 23,4 s | pysäkin 4 alku |
-| 11 | Pysähdys 4: Kastellet ja Gefion-suihkulähde | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 5 | muistettava 1 ja 3 | pysäkki 4, ~39 s; silmä kattojen + 10 m (KS lukitsee) |
+| 11 | Pysähdys 4: Kastellet ja Gefion-suihkulähde | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 5 | muistettava 1 ja 3 | pysäkki 4, ~49 s; silmä kattojen + 10 m (KS lukitsee) |
 | 12 | Lento → Rosenborgin linna | edellisen kehys | Rosenborgin linna, kallistus 64°, silmä kattojen + 10 m (KS lukitsee) | 1 190 m, 23,4 s | pysäkin 5 alku |
-| 13 | Pysähdys 5: Rosenborgin linna | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 6 | muistettava 2 | pysäkki 5, ~25 s; silmä kattojen + 10 m (KS lukitsee) |
+| 13 | Pysähdys 5: Rosenborgin linna | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 6 | muistettava 2 | pysäkki 5, ~32 s; silmä kattojen + 10 m (KS lukitsee) |
 | 14 | Lento → Rundetårn | edellisen kehys | Rundetårn, kallistus 64°, silmä 0,5–0,7 × H (H 34,8 m: 17–24 m, alaraja kattojen + 10 m), KS lukitsee | 521 m, 23,4 s (lyhyt: LS1 voi korvata 10–12 s liu'ulla) | pysäkin 6 alku |
-| 15 | Pysähdys 6: Rundetårn | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 7 | muistettava 2 | pysäkki 6, ~36 s; silmä 0,5–0,7 × H (H 34,8 m: 17–24 m, alaraja kattojen + 10 m), KS lukitsee |
+| 15 | Pysähdys 6: Rundetårn | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 7 | muistettava 2 | pysäkki 6, ~43 s; silmä 0,5–0,7 × H (H 34,8 m: 17–24 m, alaraja kattojen + 10 m), KS lukitsee |
 | 16 | Laskeutuminen: Rundetårn | pysähdyksen alku | silmä 0,5–0,7 × H (H 34,8 m: 17–24 m, alaraja kattojen + 10 m), KS lukitsee, katse pääkohteeseen | omistaja TF 169: matala katse pääkohteeseen | pysäkki 6 virkkeet 1–2 |
 | 17 | Lento → Christiansborgin linna | edellisen kehys | Christiansborgin linna, kallistus 64°, silmä kattojen + 10 m (KS lukitsee) | 630 m, 23,4 s | pysäkin 7 alku |
-| 18 | Pysähdys 7: Christiansborgin linna | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 8 | muistettava 2 | pysäkki 7, ~31 s; silmä kattojen + 10 m (KS lukitsee) |
+| 18 | Pysähdys 7: Christiansborgin linna | saapuu levosta | kaari ≤ 80° kohti pysäkkiä 8 | muistettava 2 | pysäkki 7, ~39 s; silmä kattojen + 10 m (KS lukitsee) |
 | 19 | Lento → Tivoli | edellisen kehys | Tivoli, kallistus 72°, silmä kattojen + 10 m (KS lukitsee) | 775 m, 23,4 s | pysäkin 8 alku |
-| 20 | Pysähdys 8: Tivoli | saapuu levosta | kehys leijuu | muistettava 3 | pysäkki 8, ~38 s; silmä kattojen + 10 m (KS lukitsee) |
-| 21 | Loppu | Tivolin kehys | nousu hitaasti yläkuvaan, satama ja koko keskusta kuvassa | puuttuva lopetus | loppulause ~16 s |
+| 20 | Pysähdys 8: Tivoli | saapuu levosta | kehys leijuu | muistettava 3 | pysäkki 8, ~46 s; silmä kattojen + 10 m (KS lukitsee) |
+| 21 | Loppu | Tivolin kehys | nousu hitaasti yläkuvaan luoteeseen katsoen, keskusta ja kolme tekojärveä kuvassa | puuttuva lopetus | loppulause ~20 s |
 
-Kierroksen kesto arviolta 6 min: kerronta 281 s + avaus 20 s + loppu 16 s, lennot päällekkäin kerronnan kanssa, lisäksi laattaodotukset. Kohteen ensimmäinen virke päättyy saapumishetkellä ±1 s; pysähdys kestää koko kerronnan ja kaari koko pysähdyksen.
+Kierroksen kesto arviolta 6,6 min: kerronta 350 s + avaus 25 s + loppu 20 s, lennot päällekkäin kerronnan kanssa, lisäksi laattaodotukset. Kohteen ensimmäinen virke päättyy saapumishetkellä ±1 s; pysähdys kestää koko kerronnan ja kaari koko pysähdyksen.
 
 ## 4. Kertojan käsikirjoitus
 
-**Avaus** (3 virkettä): Tervetuloa Kööpenhaminaan. Ylhäältä kaupunki on matala kattojen ja tornien kenttä Seelannin saaren itärannalla, ja sisäsatama erottaa sen keskustan Amagerin saaren Christianshavnista. Kierros alkaa Christianshavnin kirkontornista, josta avautuu näkymä sataman, kanavien ja koko vanhan kaupungin yli.
+**Avaus** (3 virkettä): Tervetuloa Kööpenhaminaan. Ylhäältä kaupunki on matala kattojen ja tornien kenttä Själlannin saaren itärannalla, ja sisäsatama erottaa sen keskustan Amagerin saaren Christianshavnista. Kierros alkaa Christianshavnin kirkontornista, josta avautuu näkymä sataman, kanavien ja koko vanhan kaupungin yli.
 
 **Pysäkki 1: Vapahtajan kirkko ja Christianshavn** (72 sanaa)
-Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Christian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Seelannin ja Amagerin väliin. Kaupunginosa suunniteltiin hollantilaisten kanavakaupunkien mallin mukaan, ja kanavat hallitsevat sitä yhä, vaikka sisäsatama erottaa sen muusta keskustasta. Tornin huipun suunnitteli Lauritz de Thurah, se valmistui vuonna 1752, ja kierteen esikuvana oli Rooman Sant'Ivon kirkon lyhty. Torni on 90 metriä korkea, ja sen huipulle johtaa noin 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolella.
+Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Christian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Själlannin ja Amagerin väliin. Kaupunginosa suunniteltiin hollantilaisten kanavakaupunkien mallin mukaan, ja kanavat hallitsevat sitä yhä, vaikka sisäsatama erottaa sen muusta keskustasta. Tornin huipun suunnitteli Lauritz de Thurah, se valmistui vuonna 1752, ja kierteen esikuvana oli Rooman Sant'Ivon kirkon lyhty. Torni on 90 metriä korkea, ja sen huipulle johtaa noin 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolella.
 
 **Pysäkki 2: Nyhavn** (64 sanaa)
 Nyhavn on kapea satamakanava, jonka kuningas Christian viides kaivatti 1670-luvulla Kongens Nytorvilta satamaan, jotta laivat pääsivät purkamaan lastinsa keskelle kaupunkia. Vanhin yhä seisova talo, numero 9, on vuodelta 1681. Pitkään kanavan varsi oli merimiesten, oluen ja huonomaineisen yöelämän aluetta. Hans Christian Andersen asui talossa numero 20 vuodesta 1834 vuoteen 1838, ja hänen ensimmäiset satunsa ilmestyivät sinä aikana. Kaikkiaan hän asui kolmessa kanavan varren talossa.
 
 **Pysäkki 3: Amalienborg ja Marmorikirkko** (65 sanaa)
-Amalienborg näkyy ylhäältä neljänä samanlaisena palatsina, jotka ympäröivät kahdeksankulmaista aukiota. Palatsit rakennettiin 1700-luvun puolivälissä neljälle aatelissuvulle, ja kuninkaallinen perhe muutti niihin vuonna 1794, kun Christiansborg paloi. Aukion keskellä seisoo kuningas Frederik viidennen ratsastajapatsas, ja aukion akseli osoittaa länteen Marmorikirkolle, jonka kupolin halkaisija on 31 metriä. Kirkon peruskivi laskettiin vuonna 1749, mutta rakennus seisoi yli sata vuotta keskeneräisenä rauniona, ja se vihittiin käyttöön vasta vuonna 1894.
+Amalienborg näkyy ylhäältä neljänä samanlaisena palatsina, jotka ympäröivät kahdeksankulmaista aukiota. Palatsit rakennettiin 1700-luvun puolivälissä neljälle aatelissuvulle, ja kuninkaallinen perhe asettui sinne vuonna 1794, kun Christiansborg paloi. Aukion keskellä seisoo kuningas Frederik viidennen ratsastajapatsas, ja aukion akseli osoittaa länteen Marmorikirkolle, jonka kupolin halkaisija on 31 metriä. Kirkon peruskivi laskettiin vuonna 1749, mutta rakennus seisoi yli sata vuotta keskeneräisenä rauniona, ja se vihittiin käyttöön vasta vuonna 1894.
 
 **Pysäkki 4: Kastellet ja Gefion-suihkulähde** (70 sanaa)
-Kastellet näkyy ylhäältä viisikulmaisena tähtenä, jonka kulmissa ovat bastionit ja jota kiertävät vesihaudat. Linnoitus rakennettiin 1660-luvulla kuningas Frederik kolmannen aikana, ja hollantilainen insinööri Henrik Rüse oli mukana sen suunnittelussa. Se on yhä sotilasaluetta, mutta samalla yleinen puisto. Aivan vieressä on Gefion-suihkulähde, jossa jumalatar Gefjon ajaa neljää härkää, jotka ovat hänen poikiaan. Tarun mukaan hän kynti niillä yhdessä yössä Ruotsista irti Seelannin, saaren, jolla Kööpenhamina sijaitsee, ja suihkulähde paljastettiin vuonna 1908.
+Kastellet näkyy ylhäältä viisikulmaisena tähtenä, jonka kulmissa ovat bastionit ja jota kiertävät vesihaudat. Linnoitus rakennettiin 1660-luvulla kuningas Frederik kolmannen aikana, ja hollantilainen insinööri Henrik Rüse oli mukana sen suunnittelussa. Se on yhä sotilasaluetta, mutta samalla yleinen puisto. Aivan vieressä on Gefion-suihkulähde, jossa jumalatar Gefjon ajaa neljää härkää, jotka ovat hänen poikiaan. Tarun mukaan hän kynti niillä yhdessä yössä Ruotsista irti Själlannin saaren, jolla Kööpenhamina sijaitsee, ja suihkulähde paljastettiin vuonna 1908.
 
 **Pysäkki 5: Rosenborgin linna** (45 sanaa)
 Rosenborgin linna on kuningas Christian neljännen punatiilinen hollantilaistyylinen renessanssilinna, jonka rakentaminen alkoi vuonna 1606 puutarhan huvilana. Linnaa ympäröivä Kuninkaan puutarha on kaupungin vanhimpia puistoja. Linnan alla olevassa aarrekammiossa säilytetään Tanskan kruununjalokiviä ja kruununinsignioita. Christian neljäs kuoli linnassa vuonna 1648. Linnan vieressä on kuninkaallisen henkivartiokaartin kasarmi.
 
 **Pysäkki 6: Rundetårn** (64 sanaa)
-Rundetårn eli Pyöreä torni on vanhan keskustan leveä torni, jonka kuningas Christian neljäs rakennutti vuodesta 1637 vuoteen 1642. Se kuului Trinitatis-kokonaisuuteen, johon tuli opiskelijoiden kirkko, yliopiston kirjasto ja tähtitorni. Huipulle ei johda portaita vaan noin seitsemän ja puolen kierroksen ramppi, jota pitkin hevoset ja vaunut saattoivat kuljettaa kirjoja ja raskaita mittalaitteita. Rampin kerrotaan palvelleen tsaari Pietari Suurta, joka ratsasti sen ylös hevosella vuonna 1716.
+Rundetårn eli Pyöreä torni kohoaa vanhassa keskustassa, ja kuningas Christian neljäs rakennutti sen vuodesta 1637 vuoteen 1642. Se kuului Trinitatis-kokonaisuuteen, johon tuli opiskelijoiden kirkko, yliopiston kirjasto ja tähtitorni. Huipulle ei johda portaita vaan yli seitsemän kierroksen ramppi, jota pitkin hevoset ja vaunut saattoivat kuljettaa kirjoja ja raskaita mittalaitteita. Rampin kerrotaan palvelleen tsaari Pietari Suurta, joka ratsasti sen ylös hevosella vuonna 1716.
 
 **Pysäkki 7: Christiansborgin linna** (56 sanaa)
 Christiansborgin linna hallitsee Slotsholmenin saarta, jota sisäsatama ja kanavat kiertävät. Saarelle piispa Absalon rakensi linnan vuonna 1167, ja sen rauniot ovat nykyisen palatsin alla. Kaksi aiempaa Christiansborgia tuhoutui tulipalossa vuosina 1794 ja 1884, ja nykyinen, kolmas, valmistui vuonna 1928 Thorvald Jørgensenin suunnitelmien mukaan. Palatsissa kokoontuu Tanskan parlamentti, ja siellä toimivat myös korkein oikeus ja pääministerin virasto.
 
 **Pysäkki 8: Tivoli** (67 sanaa)
-Tivoli avattiin 15. elokuuta 1843 kaupungin linnoitusten ulkopuolelle, ja puiston järvi on jäänne vanhasta vallihaudasta. Perustaja Georg Carstensen sai tarun mukaan kuninkaan luvan sanomalla, ettei huvitteleva kansa ajattele politiikkaa. Hans Christian Andersen vieraili puistossa vuonna 1843 ja sai siitä aiheen satuunsa Satakieli. Isoisäsi istui kesäkuussa 1873 Tivolin teatterissa ja katsoi, kuinka palvelija piilotti paistin isännältään, eikä kukaan sanonut sanaakaan, ja hänen vieressään tanskalainen poika nauroi samoissa kohdissa.
+Tivoli avattiin 15. elokuuta 1843 kaupungin linnoitusten ulkopuolelle, ja puiston järvi on jäänne vanhasta vallihaudasta. Perustaja Georg Carstensen sai tarun mukaan kuninkaan luvan sanomalla, ettei huvitteleva kansa ajattele politiikkaa. Hans Christian Andersen vieraili puistossa vuonna 1843 ja sai siitä aiheen satuunsa Satakieli. Isoisäsi istui kesäkuussa 1873 Tivolin teatterissa ja katsoi, kuinka palvelija piilotti paistin isännältään, eikä sanaakaan lausuttu, ja hänen vieressään tanskalainen poika nauroi samoissa kohdissa.
 
-**Loppu**: Kierros päättyy Tivoliin vanhan vallihaudan rannalle, ja kaupunki jatkuu siitä länteen kolmen tekojärven jonona, jotka puolustivat sitä ennen. Satoja kilometrejä pyöräteitä halkoo kaupunkia, jonka nimi tarkoittaa kauppiaiden satamaa.
+**Loppu**: Kierros päättyy Tivoliin vanhan vallihaudan rannalle, ja kaupungin länsilaitaa kiertää kolmen tekojärven jono, joka oli ennen osa sen puolustusta. Satoja kilometrejä pyöräteitä halkoo kaupunkia, jonka nimi tarkoittaa kauppiaiden satamaa.
 
 ## 5. Pysäkkien tekijänoikeus- ja suojatarkastus
 

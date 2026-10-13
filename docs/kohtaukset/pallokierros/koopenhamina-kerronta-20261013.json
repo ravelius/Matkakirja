@@ -4,20 +4,20 @@
   "kaupunki": "koopenhamina",
   "huomio": "Kööpenhaminan pallokierros esittely-v2 (PT 13.10.2026; kippi Lontoon ja Prahan mallilla). Pieni merenneito (Eriksen k. 1959) ja kaikki elävien tai vuonna 1956 tai myöhemmin kuolleiden tekijöiden kohteet pois. Ääni vasta omistajan luvalla; katse/silmä/suunta määrittää Karttaseppä; kuvat (tarinakuvat/lisakuvat) puuttuvat, tehdään erillisellä Commons-kierroksella. Isoisäviittaus vain pysäkillä 8.",
   "muistettavat": [
-    "Kööpenhamina on veden ehdoilla rakennettu kauppasatama: Seelannin ja Amagerin välissä kulkee sisäsatama, kanavat ja vanhat vallihaudat kuuluvat kaupunkiin, ja nimikin tarkoittaa kauppiaiden satamaa.",
-    "Kööpenhamina on kuninkaiden kaupunki: Christian neljäs rakensi Rosenborgin ja Rundetårnin ja aloitti Christianshavnin, Frederik viides Amalienborgin, ja vallan keskus Christiansborg seisoo yhä saarella, jolle piispa Absalon rakensi linnansa vuonna 1167.",
-    "Kööpenhaminassa sadut ovat paikoissa: Gefjonin taru kertoo Seelannin synnyn, Andersen asui Nyhavnissa ja sai Tivolista aiheen satuunsa, ja Tivoli avattiin jo vuonna 1843."
+    "Kööpenhamina on veden ehdoilla rakennettu kauppasatama: Själlannin ja Amagerin välissä kulkee sisäsatama, kanavat ja vanhat vallihaudat kuuluvat kaupunkiin, ja nimikin tarkoittaa kauppiaiden satamaa.",
+    "Kööpenhamina on kuninkaiden kaupunki: Christian neljäs rakensi Rosenborgin ja Rundetårnin ja aloitti Christianshavnin, Frederik viides Frederiksstadenin kaupunginosan, ja vallan keskus Christiansborg seisoo yhä saarella, jolle piispa Absalon rakensi linnansa vuonna 1167.",
+    "Kööpenhaminassa sadut ovat paikoissa: Gefjonin taru kertoo Själlannin synnyn, Andersen asui Nyhavnissa ja sai Tivolista aiheen satuunsa, ja Tivoli avattiin jo vuonna 1843."
   ],
   "avaus": {
     "virkkeet": [
       "Tervetuloa Kööpenhaminaan.",
-      "Ylhäältä kaupunki on matala kattojen ja tornien kenttä Seelannin saaren itärannalla, ja sisäsatama erottaa sen keskustan Amagerin saaren Christianshavnista.",
+      "Ylhäältä kaupunki on matala kattojen ja tornien kenttä Själlannin saaren itärannalla, ja sisäsatama erottaa sen keskustan Amagerin saaren Christianshavnista.",
       "Kierros alkaa Christianshavnin kirkontornista, josta avautuu näkymä sataman, kanavien ja koko vanhan kaupungin yli."
     ],
-    "kerronta": "Tervetuloa Kööpenhaminaan. Ylhäältä kaupunki on matala kattojen ja tornien kenttä Seelannin saaren itärannalla, ja sisäsatama erottaa sen keskustan Amagerin saaren Christianshavnista. Kierros alkaa Christianshavnin kirkontornista, josta avautuu näkymä sataman, kanavien ja koko vanhan kaupungin yli."
+    "kerronta": "Tervetuloa Kööpenhaminaan. Ylhäältä kaupunki on matala kattojen ja tornien kenttä Själlannin saaren itärannalla, ja sisäsatama erottaa sen keskustan Amagerin saaren Christianshavnista. Kierros alkaa Christianshavnin kirkontornista, josta avautuu näkymä sataman, kanavien ja koko vanhan kaupungin yli."
   },
   "loppu": {
-    "kerronta": "Kierros päättyy Tivoliin vanhan vallihaudan rannalle, ja kaupunki jatkuu siitä länteen kolmen tekojärven jonona, jotka puolustivat sitä ennen. Satoja kilometrejä pyöräteitä halkoo kaupunkia, jonka nimi tarkoittaa kauppiaiden satamaa."
+    "kerronta": "Kierros päättyy Tivoliin vanhan vallihaudan rannalle, ja kaupungin länsilaitaa kiertää kolmen tekojärven jono, joka oli ennen osa sen puolustusta. Satoja kilometrejä pyöräteitä halkoo kaupunkia, jonka nimi tarkoittaa kauppiaiden satamaa."
   },
   "metrokartta": [
     {
@@ -48,7 +48,7 @@
     {
       "nro": 6,
       "nimi": "Rundetårn",
-      "selite": "Rundetårn eli Pyöreä torni on vanhan keskustan leveä torni"
+      "selite": "Rundetårn eli Pyöreä torni kohoaa vanhassa keskustassa"
     },
     {
       "nro": 7,
@@ -118,9 +118,9 @@
         "https://en.wikipedia.org/wiki/Church_of_Our_Saviour,_Copenhagen",
         "https://lex.dk/Vor_Frelsers_Kirke"
       ],
-      "kerronta": "Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Christian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Seelannin ja Amagerin väliin. Kaupunginosa suunniteltiin hollantilaisten kanavakaupunkien mallin mukaan, ja kanavat hallitsevat sitä yhä, vaikka sisäsatama erottaa sen muusta keskustasta. Tornin huipun suunnitteli Lauritz de Thurah, se valmistui vuonna 1752, ja kierteen esikuvana oli Rooman Sant'Ivon kirkon lyhty. Torni on 90 metriä korkea, ja sen huipulle johtaa noin 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolella.",
+      "kerronta": "Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Christian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Själlannin ja Amagerin väliin. Kaupunginosa suunniteltiin hollantilaisten kanavakaupunkien mallin mukaan, ja kanavat hallitsevat sitä yhä, vaikka sisäsatama erottaa sen muusta keskustasta. Tornin huipun suunnitteli Lauritz de Thurah, se valmistui vuonna 1752, ja kierteen esikuvana oli Rooman Sant'Ivon kirkon lyhty. Torni on 90 metriä korkea, ja sen huipulle johtaa noin 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolella.",
       "virkkeet": [
-        "Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Christian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Seelannin ja Amagerin väliin.",
+        "Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Christian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Själlannin ja Amagerin väliin.",
         "Kaupunginosa suunniteltiin hollantilaisten kanavakaupunkien mallin mukaan, ja kanavat hallitsevat sitä yhä, vaikka sisäsatama erottaa sen muusta keskustasta.",
         "Tornin huipun suunnitteli Lauritz de Thurah, se valmistui vuonna 1752, ja kierteen esikuvana oli Rooman Sant'Ivon kirkon lyhty.",
         "Torni on 90 metriä korkea, ja sen huipulle johtaa noin 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolella."
@@ -267,10 +267,10 @@
       "lon": 12.5934,
       "H_m": null,
       "H_lahteet": [],
-      "kerronta": "Amalienborg näkyy ylhäältä neljänä samanlaisena palatsina, jotka ympäröivät kahdeksankulmaista aukiota. Palatsit rakennettiin 1700-luvun puolivälissä neljälle aatelissuvulle, ja kuninkaallinen perhe muutti niihin vuonna 1794, kun Christiansborg paloi. Aukion keskellä seisoo kuningas Frederik viidennen ratsastajapatsas, ja aukion akseli osoittaa länteen Marmorikirkolle, jonka kupolin halkaisija on 31 metriä. Kirkon peruskivi laskettiin vuonna 1749, mutta rakennus seisoi yli sata vuotta keskeneräisenä rauniona, ja se vihittiin käyttöön vasta vuonna 1894.",
+      "kerronta": "Amalienborg näkyy ylhäältä neljänä samanlaisena palatsina, jotka ympäröivät kahdeksankulmaista aukiota. Palatsit rakennettiin 1700-luvun puolivälissä neljälle aatelissuvulle, ja kuninkaallinen perhe asettui sinne vuonna 1794, kun Christiansborg paloi. Aukion keskellä seisoo kuningas Frederik viidennen ratsastajapatsas, ja aukion akseli osoittaa länteen Marmorikirkolle, jonka kupolin halkaisija on 31 metriä. Kirkon peruskivi laskettiin vuonna 1749, mutta rakennus seisoi yli sata vuotta keskeneräisenä rauniona, ja se vihittiin käyttöön vasta vuonna 1894.",
       "virkkeet": [
         "Amalienborg näkyy ylhäältä neljänä samanlaisena palatsina, jotka ympäröivät kahdeksankulmaista aukiota.",
-        "Palatsit rakennettiin 1700-luvun puolivälissä neljälle aatelissuvulle, ja kuninkaallinen perhe muutti niihin vuonna 1794, kun Christiansborg paloi.",
+        "Palatsit rakennettiin 1700-luvun puolivälissä neljälle aatelissuvulle, ja kuninkaallinen perhe asettui sinne vuonna 1794, kun Christiansborg paloi.",
         "Aukion keskellä seisoo kuningas Frederik viidennen ratsastajapatsas, ja aukion akseli osoittaa länteen Marmorikirkolle, jonka kupolin halkaisija on 31 metriä.",
         "Kirkon peruskivi laskettiin vuonna 1749, mutta rakennus seisoi yli sata vuotta keskeneräisenä rauniona, ja se vihittiin käyttöön vasta vuonna 1894."
       ],
@@ -366,13 +366,13 @@
       "lon": 12.5938,
       "H_m": null,
       "H_lahteet": [],
-      "kerronta": "Kastellet näkyy ylhäältä viisikulmaisena tähtenä, jonka kulmissa ovat bastionit ja jota kiertävät vesihaudat. Linnoitus rakennettiin 1660-luvulla kuningas Frederik kolmannen aikana, ja hollantilainen insinööri Henrik Rüse oli mukana sen suunnittelussa. Se on yhä sotilasaluetta, mutta samalla yleinen puisto. Aivan vieressä on Gefion-suihkulähde, jossa jumalatar Gefjon ajaa neljää härkää, jotka ovat hänen poikiaan. Tarun mukaan hän kynti niillä yhdessä yössä Ruotsista irti Seelannin, saaren, jolla Kööpenhamina sijaitsee, ja suihkulähde paljastettiin vuonna 1908.",
+      "kerronta": "Kastellet näkyy ylhäältä viisikulmaisena tähtenä, jonka kulmissa ovat bastionit ja jota kiertävät vesihaudat. Linnoitus rakennettiin 1660-luvulla kuningas Frederik kolmannen aikana, ja hollantilainen insinööri Henrik Rüse oli mukana sen suunnittelussa. Se on yhä sotilasaluetta, mutta samalla yleinen puisto. Aivan vieressä on Gefion-suihkulähde, jossa jumalatar Gefjon ajaa neljää härkää, jotka ovat hänen poikiaan. Tarun mukaan hän kynti niillä yhdessä yössä Ruotsista irti Själlannin saaren, jolla Kööpenhamina sijaitsee, ja suihkulähde paljastettiin vuonna 1908.",
       "virkkeet": [
         "Kastellet näkyy ylhäältä viisikulmaisena tähtenä, jonka kulmissa ovat bastionit ja jota kiertävät vesihaudat.",
         "Linnoitus rakennettiin 1660-luvulla kuningas Frederik kolmannen aikana, ja hollantilainen insinööri Henrik Rüse oli mukana sen suunnittelussa.",
         "Se on yhä sotilasaluetta, mutta samalla yleinen puisto.",
         "Aivan vieressä on Gefion-suihkulähde, jossa jumalatar Gefjon ajaa neljää härkää, jotka ovat hänen poikiaan.",
-        "Tarun mukaan hän kynti niillä yhdessä yössä Ruotsista irti Seelannin, saaren, jolla Kööpenhamina sijaitsee, ja suihkulähde paljastettiin vuonna 1908."
+        "Tarun mukaan hän kynti niillä yhdessä yössä Ruotsista irti Själlannin saaren, jolla Kööpenhamina sijaitsee, ja suihkulähde paljastettiin vuonna 1908."
       ],
       "faktat": [
         {
@@ -396,12 +396,12 @@
           "lahde2": "https://www.historyhit.com/locations/kastellet/"
         },
         {
-          "vaite": "Gefion-suihkulähde esittää jumalatar Gefjonia, joka kyntää neljällä härällä Seelannin irti Ruotsista; härät ovat hänen neljä poikaansa",
+          "vaite": "Gefion-suihkulähde esittää jumalatar Gefjonia, joka kyntää neljällä härällä Själlannin irti Ruotsista; härät ovat hänen neljä poikaansa",
           "lahde1": "https://en.wikipedia.org/wiki/Gefion_Fountain",
           "lahde2": "https://www.visitcopenhagen.com/copenhagen/gefion-fountain-gdk410604"
         },
         {
-          "vaite": "Seelanti on saari, jolla Kööpenhamina sijaitsee [(Zealand-saari); lisäksi W+Zealand]",
+          "vaite": "Själland on saari, jolla Kööpenhamina sijaitsee [(Zealand-saari); lisäksi W+Zealand]",
           "lahde1": "https://en.wikipedia.org/wiki/Gefion_Fountain",
           "lahde2": "https://www.visitcopenhagen.com/copenhagen/gefion-fountain-gdk410604"
         },
@@ -498,11 +498,11 @@
         "https://en.wikipedia.org/wiki/Rundetaarn",
         "https://lex.dk/Rundetårn"
       ],
-      "kerronta": "Rundetårn eli Pyöreä torni on vanhan keskustan leveä torni, jonka kuningas Christian neljäs rakennutti vuodesta 1637 vuoteen 1642. Se kuului Trinitatis-kokonaisuuteen, johon tuli opiskelijoiden kirkko, yliopiston kirjasto ja tähtitorni. Huipulle ei johda portaita vaan noin seitsemän ja puolen kierroksen ramppi, jota pitkin hevoset ja vaunut saattoivat kuljettaa kirjoja ja raskaita mittalaitteita. Rampin kerrotaan palvelleen tsaari Pietari Suurta, joka ratsasti sen ylös hevosella vuonna 1716.",
+      "kerronta": "Rundetårn eli Pyöreä torni kohoaa vanhassa keskustassa, ja kuningas Christian neljäs rakennutti sen vuodesta 1637 vuoteen 1642. Se kuului Trinitatis-kokonaisuuteen, johon tuli opiskelijoiden kirkko, yliopiston kirjasto ja tähtitorni. Huipulle ei johda portaita vaan yli seitsemän kierroksen ramppi, jota pitkin hevoset ja vaunut saattoivat kuljettaa kirjoja ja raskaita mittalaitteita. Rampin kerrotaan palvelleen tsaari Pietari Suurta, joka ratsasti sen ylös hevosella vuonna 1716.",
       "virkkeet": [
-        "Rundetårn eli Pyöreä torni on vanhan keskustan leveä torni, jonka kuningas Christian neljäs rakennutti vuodesta 1637 vuoteen 1642.",
+        "Rundetårn eli Pyöreä torni kohoaa vanhassa keskustassa, ja kuningas Christian neljäs rakennutti sen vuodesta 1637 vuoteen 1642.",
         "Se kuului Trinitatis-kokonaisuuteen, johon tuli opiskelijoiden kirkko, yliopiston kirjasto ja tähtitorni.",
-        "Huipulle ei johda portaita vaan noin seitsemän ja puolen kierroksen ramppi, jota pitkin hevoset ja vaunut saattoivat kuljettaa kirjoja ja raskaita mittalaitteita.",
+        "Huipulle ei johda portaita vaan yli seitsemän kierroksen ramppi, jota pitkin hevoset ja vaunut saattoivat kuljettaa kirjoja ja raskaita mittalaitteita.",
         "Rampin kerrotaan palvelleen tsaari Pietari Suurta, joka ratsasti sen ylös hevosella vuonna 1716."
       ],
       "faktat": [
@@ -546,7 +546,7 @@
         "EI KÄYTETTY: 'Euroopan vanhin yhä toimiva tähtitorni' (VisitCopenhagen, Storyhunt vs Lex: observatorio paloi 1728, nykyinen kansantähtitorni 1929, kunnostettu observatorio avautuu 2026).",
         "H_m 34,8 on näköalatasanteen korkeus (Wikipedia, Lex); observatorion katto noin 41,8 m (vain Lex)."
       ],
-      "sanoja": 64
+      "sanoja": 61
     },
     {
       "nro": 7,
@@ -625,12 +625,12 @@
       "lon": 12.5681,
       "H_m": null,
       "H_lahteet": [],
-      "kerronta": "Tivoli avattiin 15. elokuuta 1843 kaupungin linnoitusten ulkopuolelle, ja puiston järvi on jäänne vanhasta vallihaudasta. Perustaja Georg Carstensen sai tarun mukaan kuninkaan luvan sanomalla, ettei huvitteleva kansa ajattele politiikkaa. Hans Christian Andersen vieraili puistossa vuonna 1843 ja sai siitä aiheen satuunsa Satakieli. Isoisäsi istui kesäkuussa 1873 Tivolin teatterissa ja katsoi, kuinka palvelija piilotti paistin isännältään, eikä kukaan sanonut sanaakaan, ja hänen vieressään tanskalainen poika nauroi samoissa kohdissa.",
+      "kerronta": "Tivoli avattiin 15. elokuuta 1843 kaupungin linnoitusten ulkopuolelle, ja puiston järvi on jäänne vanhasta vallihaudasta. Perustaja Georg Carstensen sai tarun mukaan kuninkaan luvan sanomalla, ettei huvitteleva kansa ajattele politiikkaa. Hans Christian Andersen vieraili puistossa vuonna 1843 ja sai siitä aiheen satuunsa Satakieli. Isoisäsi istui kesäkuussa 1873 Tivolin teatterissa ja katsoi, kuinka palvelija piilotti paistin isännältään, eikä sanaakaan lausuttu, ja hänen vieressään tanskalainen poika nauroi samoissa kohdissa.",
       "virkkeet": [
         "Tivoli avattiin 15. elokuuta 1843 kaupungin linnoitusten ulkopuolelle, ja puiston järvi on jäänne vanhasta vallihaudasta.",
         "Perustaja Georg Carstensen sai tarun mukaan kuninkaan luvan sanomalla, ettei huvitteleva kansa ajattele politiikkaa.",
         "Hans Christian Andersen vieraili puistossa vuonna 1843 ja sai siitä aiheen satuunsa Satakieli.",
-        "Isoisäsi istui kesäkuussa 1873 Tivolin teatterissa ja katsoi, kuinka palvelija piilotti paistin isännältään, eikä kukaan sanonut sanaakaan, ja hänen vieressään tanskalainen poika nauroi samoissa kohdissa."
+        "Isoisäsi istui kesäkuussa 1873 Tivolin teatterissa ja katsoi, kuinka palvelija piilotti paistin isännältään, eikä sanaakaan lausuttu, ja hänen vieressään tanskalainen poika nauroi samoissa kohdissa."
       ],
       "faktat": [
         {
@@ -683,7 +683,7 @@
         "Andersen: Tivoli.dk (inspiroitui Satakieleen) ja CSM (päiväkirja 1843: 'started my Chinese fairy tale'); satu ilmestyi 1844: ei tekstissä.",
         "EI MUKANA: Rutschebanen (1914; rakentaja Valdemar Lebech, kuolinvuosi tuntematon), Disneyn vierailu 1951, Tivolin suihkulähteet ja moderni taide (tekijät epäselvät), konserttisali (1956)."
       ],
-      "sanoja": 67
+      "sanoja": 66
     }
   ]
 }
