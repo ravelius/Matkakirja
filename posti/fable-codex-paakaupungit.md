@@ -1,3 +1,22 @@
+## 2026-10-13 17.33 UTC — KORJAUSKIERROS 2 e04–e14 (PT 13.10.)
+
+Sisältökirjuri teki task118-korjauksille riippumattoman uusintapistokokeen (22 kaupunkia, 2/erä): kaikki 22 KORJATTAVA, uusia löydöksiä VIRHE 2 / KORJAA 99 / HUOM 122; faktat ja oikeat vastaukset kunnossa, aiemmista löydöksistä ~85 % korjattu. e06 EI KYTKETTÄVISSÄ. Korjaa:
+
+1. **Yleissäännöt KAIKKIIN 93 kaupunkiin** (toistuvat viat; sovella koko aineistoon, ei vain otokseen). Korjauskierros 1 vaihtoi virheiden muotoa mutta ei poistanut niitä, joten tarkista koneellisesti ja luvulla:
+   - **Ei metapuhetta eikä "tarkista/varmista/kysy ajantasainen" -varoituksia** (myös uusissa muodoissa: "aiemmissa paikkakuvauksissa", "ei luvata", "ei anneta"). Aikasidonnainen varoitus enintään KERRAN per kaupunki (nyt 6–9 kertaa mm. Tunis, Mogadishu, Dušanbe, Apia).
+   - **Ei vastauksen paljastavia vihjeitä** (esim. Apia "Hän kirjoitti Aarresaaren"; Windhoek Q4; Yamoussoukro) eikä sisällyksettömiä vihjeitä.
+   - **Väärät vaihtoehdot uskottaviksi** mutta selvästi vääriksi (Windhoek, Dušanbe Gurminj, Nassau satama, Kingston dub, Paramaribo, Vientiane Wat Si Saket: nyt epäuskottavia tai osin oikeita).
+   - **Ei täytelauseita** ("siis/siten"-kaneetit, tyhjät abstraktiolauseet, saman faktan toisto 4–8 kertaa, esim. Brazzaville FESPAM, Kinshasa "Isoisän matkavuonna 1873", Christuskirchen). Poista, älä korvaa uudella täytteellä.
+   - **Kuvatekstit enintään Commonsin kuvasivun mukaisiksi**: ei yksityiskohtia joita sivu ei sano (Gaborone, Nouakchott, Khartum, Mogadishu); lyhyt ≠ selite; tekijäkentissä ei raakaa ":Benutzer:".
+   - **Korjauksen rikkomat/orvot/tuplalauseet**: lue jokainen muokattu virke kokonaisena (esim. Kinshasa "syntynyt puutarhaa hallinnoi", La Paz Illimani-nosto, Palikir "jokaisessa neljässä osavaltiossa osavaltiokampus" ilman lähdettä).
+   - **Päällekkäisyys pelin kanssa** (`git grep -n -i <aihe> origin/main -- js data`): Brazzaville (Livingstone, Pool Malebo), Windhoek (kohdekartan kaksi kohdetta samoilla koordinaateilla), Ašgabat (dutarin puulaji, Uzbekistanin maalehti), Bamako (kafu/Niaré), Nouakchott/Tunis (3 kohdekarttapistettä maakartat.js:ssä).
+   - **Nimimuodot** täsmäävät peliin: Paramaribo "Surinam-joen" (js/packs/paakaupungit.js rivit 108 ja 348) vs uusi "Surinamejoki"; paikannimien taivutus (Basseterre: Basseterreen/-stä); lähde-URL tukee juuri väitettä (Mogadishu kysymys 2).
+2. **Kaupunkikohtaiset löydökset:** `posti/fable-codex-paakaupungit-korjauslista2-20261013.md` (VIRHE 2: Gaborone Kgale kpl 3, Kingston Devon House/Hope Gardens; KORJAA 99; HUOM 122 tiivistettynä; kenttäpolut sisalto.json:iin).
+3. **e06 kokonaiskorjaus**: Brazzaville (8/12 aiemmasta korjattu: Livingstone- ja Pool Malebo -päällekkäisyys, droonikuvan kuvateksti, kuolleiden määrä 17 000, kartta/voimala) ja Kinshasa (rikkoutunut lause, kuvatekstit typistetty yhteen sanaan) uusiksi koko erälle samoin säännöin.
+4. **Nouakchott sää (PT päätti):** osittainen data kelpaa: `saatiedot`-kenttään vain `keskilampo` ja `sade` (JMA 1991–2020, `lahde.nimi` JMA, `lahde.kausi` 1991–2020); `ylin`/`alin` jätetään pois, mitään ei arvioida.
+5. Kuvat vain Commonsista; Khartumin Semna-kuva CC BY-SA 4.0 (ei ristiriitaa upotetun All rights reserved -kentän kanssa). Kuva-/karttaportit (legacy) eivät kuulu tähän kierrokseen.
+6. **Toimitus:** korjatut sisalto.json:t erän haaraan `paakaupungit-eNN-codex` ja rivi tähän tiedostoon. Sisältökirjuri tekee kevyen tarkistuksen (yleissäännöt koneellisesti + muutama kaupunki silmällä) ja kuittaa PK:lle ja PT:lle. PK ei kytke ennen kuittausta.
+
 ## 2026-10-13 18.xx UTC — KORJAUSKIERROS e04–e14 (PT 13.10.)
 
 Sisältökirjuri teki riippumattoman tekstipistokokeen (31 kaupunkia / 93, 3 per erä; faktat tarkistettu lähteistä). Faktat ovat pääosin oikein (yhtään väärää oikeaa vastausta ei löytynyt 93 otoskysymyksestä), mutta kaikki erät tarvitsevat korjauskierroksen ennen pelikytkentää. Omistajan päätös: pääkaupunkien viimeistely on Codexin työtä, joten korjaa:
