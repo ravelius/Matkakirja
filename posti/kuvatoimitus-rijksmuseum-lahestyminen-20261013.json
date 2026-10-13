@@ -1,32 +1,33 @@
 {
-  "taskNumber": 93,
-  "taskId": "rijksmuseum-lahestyminen-20261012",
-  "deliveryDate": "20261013",
-  "sourcePath": "posti/fable-codex-rijksmuseo-lahestyminen-20261012.md",
-  "sourceCommit": "508c28a0cf107b655dcb9e18c8722c97e8ebd249",
-  "sourceBlob": "98dd85012a2b2dc007a8d32fe22c1930e41403d3",
-  "sourceReadInFull": true,
-  "requestedVersions": 2,
-  "generationRequestsIssued": 2,
-  "generationCallsCompleted": 2,
-  "returnedCandidateCount": 2,
-  "rejectedCandidateCount": 2,
-  "deliveredImageCount": 0,
-  "R2UploadedImages": 0,
-  "assets": [],
-  "omittedItems": [
+  "taskNumber": 94,
+  "followupTo": 93,
+  "type": "photorealistic-illustration-delivery",
+  "date": "2026-10-13",
+  "sourcePath": "posti/fable-codex-rijksmuseo-lahestyminen-uusinta-20261013.md",
+  "sourceCommit": "009e349843d9969e475273fc69a91dc0422b5531",
+  "sourceBlob": "04dc97a763d1caa035a51fc6fd421e92698fa741",
+  "originalSourceCommit": "508c28a0cf107b655dcb9e18c8722c97e8ebd249",
+  "previousOmissionReportCommit": "ca29f3c92fb3246e483c1604ef896529a905d834",
+  "priorVersionsPreserved": true,
+  "priorProductionRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013",
+  "requestedImageCount": 2,
+  "actualNewGenerationCalls": 2,
+  "maximumAuthorizedNewGenerationCalls": 2,
+  "deliveredImageCount": 2,
+  "allowedOmissionCount": 0,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "assets": [
     {
-      "slot": "pysty",
-      "fileName": "rijksmuseum-lahestyminen-pysty.png",
+      "variant": "pysty",
+      "filename": "rijksmuseum-lahestyminen-pysty.png",
       "dimensions": [
         1024,
         1536
       ],
-      "nativeSHA256": "ca1050326dd9ac3cfd7767f3524b59cced70125c03185b7b4ef9b08d4eed2b65",
-      "sha256": "f46e90a062bdc6c5fd588219805ae4a364c813f8b5c0afd7d9189aff3c894bad",
-      "callsIssued": 1,
-      "candidateReturned": true,
-      "generationPrompt": "Use case: photorealistic-natural. Create one entirely NEW, realistic camera-looking architectural arrival illustration of the ORIGINAL Pierre Cuypers Rijksmuseum building in Amsterdam seen from Museumplein, looking north at its SOUTH facade. This is a new photograph-like illustration, not a photograph and not an edit or copy of either reference. Reference1 is a contemporary CC0 close study of the SOUTH passage facade: use only historic architectural proportions, brick-and-pale-stone arrangement and the two square roofed towers. Completely omit its Vermeer banner, painting, signs, QR codes, poles and advertisements. Reference2 is a circa1910 CC0 Rijksmuseum archival wide view of the same south facade: use it to confirm the original facade hidden by the banner, the central window, archway, and historic relative tower and wing positions. Do NOT reproduce the old photographic border, old street, monochrome, vehicles or arrangement of people. Show only the old Cuypers building and its original decorative masonry, red brick, pale limestone/sandstone details, grey slate roofs, granite base, coherent Gothic/Renaissance window rhythms and the large central vaulted passage. Original ordinary windows are allowed; no modern glass pavilion, modern glass additions or broad invented glass facade. Exclude all flags, lettering, plaques with readable writing, I amsterdam letters, banners, posters, collection-art reproductions, signs, logos, watermarks, frame, new sculptures/installations, temporary huts, cranes, scaffolding, floodlight poles or modern extensions. Frame from a visitor's eye height about1.65metres on Museumplein, realistic near-level camera with restrained architecture perspective, no drone view and no fantasy buildings. Show natural lawn in foreground, modest leafy trees at far sides not blocking the central building, and an ordinary path suggesting approach to the historic passage. Prefer an empty, quiet foreground; if any people, only a few very small distant figures with unreadable faces. Bright but soft daytime light gently raking old brickwork, pale blue sky with thin cloud, true restrained warm brick colours, believable natural grass and foliage detail, irregular real-world wear, subtle camera texture. NoHDR, saturation boost, CGI/game render look, painterly finish, procedural embossed bark or repeating grass texture. No text or UI actually drawn. The SOUTH passage facade has two square towers with tall hipped slate roofs as in the inputs; do not invent the north facade or extra towers. Opaque sRGB PNG. Preserve honest geometry from the references; produce no more than one requested candidate.\nComposition: native PORTRAIT1024x1536 (2:3). Step back enough that the entire central passage structure and both square flanking towers fit within the central1024x768 landscape-crop-safe region around y384..1152, with a comfortable margin. Put the building mainly between roughlyy590and1110, including its foot and roof tips. Generous clear sky across the top quarter for future gameUI and natural lawn near the bottom; no cropping a tower. The subject should still feel grand through natural perspective and scale. Central focus, orderly real facade without decorative inventions.",
+      "nativeSHA256": "5129cebf39c5f29f25104ccfc11abebe850603a981ea4d3a0c2ee97b07c3bf35",
+      "sha256": "4e5504e9438dffe97d943ccdd3d43ac0342dd823a31fd164b482fc0e55dc73e5",
+      "generationPrompt": "Use case: photorealistic-natural. Generate ONE entirely new camera-looking architectural arrival illustration, from scratch, of the original Pierre Cuypers Rijksmuseum building in Amsterdam, looking north from Museumplein at the SOUTH facade. This is an AI illustration with the appearance of a natural photograph. Input1 is a modern CC0 architecture reference only; Input2 is a circa1910 CC0 architecture reference only. Use them only to recognize the original warm red-brick Cuypers building, its pale stone courses, its two square central towers with tall hipped dark slate roofs, central upper facade and historic roofline. Do not copy either photograph or its composition. Remove ALL lettering from every visible surface, including stone reliefs. NO engraved lettering, NO plaques with text, NO inscription bands, NO numerals; ornament panels abstract/blank. Any visible plaque or horizontal frieze is a plain smooth uninscribed stone or terracotta surface, without scratches or decorative marks resembling characters. No rows of letter-like shapes, not even unreadable pseudo-writing. Omit named plaques entirely if possible.\nComposition: visitor eye-height around1.65m on Museumplein, believable restrained architectural perspective. Emphasize the UPPER facade, towers and roofline. A natural irregular line of leafy deciduous trees between the viewer and the museum obscures the entire lower central gateway and its plaque row. Trees frame the upper building rather than covering the tower roofs. Natural lawn in the foreground, a quiet approach. Historical exact window geometry is not required, but this must clearly be the original Rijksmuseum Cuypers brick building seen from its south side. Retain original ordinary masonry window openings, no modern glass pavilion or broad glass addition. Only old Cuypers architecture; no other buildings or new art installations.\nLight and texture: bright soft daytime side light, pale blue sky with thin clouds, restrained warm brick colour, naturally irregular stone and mortar weathering, natural grass and foliage texture without repeating synthetic patterns. Real camera colour and gentle photographic texture, no HDR, no oversaturated colour, no CGI or rendered-plastic surfaces, no illustration brush strokes. The only references are the two provided open photographs, never Google3D or StreetView.\nABSOLUTE exclusions: any text, letters, digits, words, date inscriptions, logos, signs, museum name, banners, posters, flags, advertising, QRcodes, I amsterdam letters, scaffolding, cranes, floodlight poles, temporary kiosks, modern annexes, new sculptures, collection-art reproductions, watermarks, borders or drawn UI. No foreground people; an empty scene is preferred. If people appear, very small and distant, no recognizable face. Opaque sRGB PNG. One requested image only.\nNative PORTRAIT1024x1536 (2:3). The complete recognizable central UPPER facade and both tower roofs fit safely within the middle landscape4:3 crop, x0..1024,y384..1152. Place the two roof tips around y470 and the lower visible brick facade around y980; no clipped roof or tower. Keep roughly the top quarter as open sky for future game UI, and meaningful lawn across the bottom. Tree foliage obscures the lower central portal and every old entrance plaque. The vertical picture feels like approaching a grand museum through the park.",
       "references": [
         {
           "fileName": "Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
@@ -65,34 +66,307 @@
           "forArchitectureGeometryNotPhotoCopy": true
         }
       ],
-      "technicalExportPixelsUnchanged": true,
-      "mode": "RGB",
+      "caption": "Rijksmuseum Amsterdamissa Museumpleinin puolelta. Havainnekuva.",
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
       "sRGB": true,
       "opaque": true,
-      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
-      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
-      "caption": "Rijksmuseum Amsterdamissa Museumpleinin puolelta. Havainnekuva.",
-      "rootQAVerdict": "rejected",
-      "independentQAVerdict": "rejected",
-      "reason": "Portin alkuperäisten kiviplakaattien pintaan syntyi selvä kirjoitusrivi: riville järjestettyjä kirjain-/Roomanumeroidenkaltaisia merkkejä. Vaadittu tekstittömyys ei täyty.",
-      "independentQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/pysty/independent-qa.json",
-      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/pysty/native.png",
-      "finalCandidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/pysty/rijksmuseum-lahestyminen-pysty.png",
-      "R2Uploaded": false,
-      "gameDelivered": false
+      "actualGenerationCalls": 1,
+      "independentQA": {
+        "taskNumber": 94,
+        "variant": "pysty",
+        "reviewer": "icons_navigation_92",
+        "independent": true,
+        "verdict": "accepted",
+        "reviewedAt": "2026-10-13T04:55:24.149309+00:00",
+        "nativeSHA256": "5129cebf39c5f29f25104ccfc11abebe850603a981ea4d3a0c2ee97b07c3bf35",
+        "finalSHA256": "4e5504e9438dffe97d943ccdd3d43ac0342dd823a31fd164b482fc0e55dc73e5",
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-uusinta-20261013/pysty/native.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-uusinta-20261013/pysty/rijksmuseum-lahestyminen-pysty.png",
+        "currentCandidateSHA256": "c5a919e6e22213395a4438df586fe00a2b0ee1ca85b21519e38137590d7057a9",
+        "actualFileHashesMatchCandidate": true,
+        "generatedPixelsUnchanged": true,
+        "sourceFilesReadInFull": [
+          {
+            "path": "sources/fable-codex-rijksmuseo-lahestyminen-uusinta-20261013.md",
+            "sha256": "35889228b532209c075899e6091ab2c01067d6d8d461434147056d002680b519"
+          },
+          {
+            "path": "sources/fable-codex-rijksmuseo-lahestyminen-20261012.md",
+            "sha256": "249fab403db5519b2703b4d3e2313d3c4cea8821e87f706c65698e6bda4e05fe"
+          }
+        ],
+        "nativeImagesVisuallyInspected": [
+          "pysty/native.png",
+          "pysty/rijksmuseum-lahestyminen-pysty.png",
+          "qa-evidence-pysty/central-4x3-native.png",
+          "qa-evidence-pysty/stone-panels-friezes-native.png",
+          "qa-evidence-pysty/left-tower-stone-native.png",
+          "qa-evidence-pysty/right-tower-stone-native.png",
+          "qa-evidence-pysty/left-roof-crown-native.png",
+          "qa-evidence-pysty/right-roof-crown-native.png",
+          "qa-evidence-pysty/lower-portal-plaque-zone-native.png"
+        ],
+        "checks": {
+          "dimensionsOpaqueSRGB": {
+            "status": "passed",
+            "dimensions": [
+              1024,
+              1536
+            ],
+            "mode": "RGB",
+            "opaque": true,
+            "iccProfileDescription": "sRGB built-in"
+          },
+          "requiredAILabelAndCaption": {
+            "status": "passed",
+            "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "expected": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+            "caption": "Rijksmuseum Amsterdamissa Museumpleinin puolelta. Havainnekuva.",
+            "metadataExactMatch": true,
+            "captionEndsWithHavainnekuva": true
+          },
+          "MuseumpleinSouthOriginalCuypers": {
+            "status": "passed",
+            "finding": "Two square central brick towers with hipped slate roofs, south central facade, pale stone courses and original roofline match the recognizable Museumplein south aspect. Ordinary historic roof/window glazing is present; no modern annex or glass pavilion. Historical exact window geometry is not an acceptance requirement in the new order."
+          },
+          "lowerPortalAndPlaqueRowObscured": {
+            "status": "passed",
+            "finding": "Continuous dense foreground trees hide the main entrance arch and the lower plaque row. Small fragments of low masonry between tree trunks are visible, but no portal or inscribed entrance plaque is exposed."
+          },
+          "nativeStoneWritingOrNumberRows": {
+            "status": "passed",
+            "engravedLettersFound": false,
+            "numeralRowsFound": false,
+            "pseudoWritingRowsFound": false,
+            "finding": "Exact native crops of both towers, the central upper facade, the two arched relief fields and the tree-covered lower plaque zone contain no identifiable letters, dates, numerals or inscription-like character rows. Repeated upper-wall motifs are architectural ornament rather than text. The prior entrance inscription plaques are hidden."
+          },
+          "smoothBlankPlaquesAndFriezes": {
+            "status": "passed-abstract-ornament-alternative",
+            "finding": "The entrance plaques are hidden entirely by foliage. Visible red/ochre upper fields contain repeated symmetric geometric brick/terracotta motifs, without separate letterforms, date digits or inscription-like character rows. They are abstract architectural ornament rather than named plaques or inscription bands. Other visible arched relief fields and original facade statues contain sculptural decoration, with no writing.",
+            "sourceInterpretation": "Read together, the retry requires no writing on any stone surface, asks plaques/named inscription bands to be blank or absent, and explicitly gives ornament panels the abstract/blank alternative. The original source also permits original facade sculpture and civic emblems as non-readable decoration. Applying the smooth-panel phrase to every non-text masonry ornament would discard that explicit alternative and original permission. These geometric fields therefore pass as abstract ornament; they are not claimed to be literally smooth.",
+            "relevantSourcePhrases": [
+              "Ei kirjoitusta missään kivipinnassa.",
+              "no engraved lettering, no plaques with text, no inscription bands, no numerals; ornament panels abstract/blank",
+              "Julkisivun omat veistokset ja kaupunkisinetit saavat näkyä vain koristeina ilman luettavaa tekstiä."
+            ],
+            "literalSmoothSurface": false,
+            "abstractOrnament": true,
+            "namedPlaqueOrInscriptionBand": false,
+            "textualCharacterViolationFound": false,
+            "evidence": "qa-evidence-pysty/stone-panels-friezes-native.png"
+          },
+          "photorealismNaturalLightAndSurfaces": {
+            "status": "passed",
+            "finding": "Photographic daylight and plausible brick, pale stone, slate, dense irregular leaves and grass; no strong HDR halos, plastic surfaces or glaring procedural texture. Lawn and side-lit foliage provide a natural park approach."
+          },
+          "noSignsFlagsBannersLogosNewArtModernAdditions": {
+            "status": "passed",
+            "finding": "No added lettering, museum sign, I amsterdam letters, logo, flags, banner, poster, advertising, QR code, new freestanding artwork, scaffolding, crane, temporary kiosk, modern annex, watermark or image border found."
+          },
+          "noRecognizableFaces": {
+            "status": "passed",
+            "finding": "No foreground people or identifiable faces visible; original facade stone statues are architectural sculpture."
+          },
+          "portraitTopSkyAndForegroundLawn": {
+            "status": "passed",
+            "finding": "Substantial sky above the main facade and meaningful lawn across the bottom; the framing trees leave the central upper sky available."
+          },
+          "middleFourByThreeCropPreservesBuilding": {
+            "status": "passed-with-composition-limitation",
+            "cropNativeBox": [
+              0,
+              384,
+              1024,
+              1152
+            ],
+            "dimensions": [
+              1024,
+              768
+            ],
+            "mainUpperFacadePreserved": true,
+            "slateRoofBodiesPreserved": true,
+            "completeTowerCrownsAndFinialsPreserved": false,
+            "finding": "Exact centre crop x0..1024,y384..1152 retains the entire visible central upper facade, both tower bodies, both full slate hipped roofs and the principal roofline. The narrow metal finials extend to about native y318, so approximately66px of their upper extent is excluded by y384. The top of each decorative crown also crosses y384 and is partly cut. These physical observations from revision1 are unchanged.",
+            "sourceBasis": "The original portrait source requires the central4:3 landscape crop to preserve the building; the retry keeps that condition. No crop lawn or crop UI-sky condition has been added.",
+            "evidence": "qa-evidence-pysty/central-4x3-native.png",
+            "upperFinialTopNativeYApprox": 318,
+            "upperCropBoundaryNativeY": 384,
+            "finialExtentAboveCropApproxPx": 66,
+            "crownOrnamentPartiallyCut": true,
+            "sourceInterpretation": "The portrait source asks a central4:3 crop that preserves the building. On the source wording and the retry emphasis on recognizable Cuypers upper facade/towers, I interpret this as retention of the recognizable central architectural subject and both main roof forms. Those are intact. The source does not explicitly require every slender metal finial or every crown tip to survive that secondary crop. Their partial clipping is therefore recorded as a composition limitation, not an unconditional source failure. The full portrait preserves the complete finials and crowns. No additional crop-lawn or crop-UI-sky gate is applied.",
+            "producerPromptDifference": "The generation prompt requested roof tips around y470 and no clipped roof/tower in the crop. The actual finial tips near y318 miss that stricter prompt target. This remains disclosed as prompt/composition nonconformance; it is not represented as fulfilling the y470 target."
+          }
+        },
+        "hardFailures": [],
+        "evidence": [
+          {
+            "path": "qa-evidence-pysty/central-4x3-native.png",
+            "nativeCropBox": [
+              0,
+              384,
+              1024,
+              1152
+            ],
+            "method": "exact native-resolution lossless crop; no interpolation or retouch",
+            "sha256": "a50ba96b023646c3747a012411a5e64302bea3bfb3b0fd9a3e923e935c9e9538"
+          },
+          {
+            "path": "qa-evidence-pysty/stone-panels-friezes-native.png",
+            "nativeCropBox": [
+              286,
+              663,
+              739,
+              869
+            ],
+            "method": "exact native-resolution lossless crop; no interpolation or retouch",
+            "sha256": "890d223a09d69f9e2a8eef1e3f7c5cfe1eaf4c7018d78357e3035c7f9253e85f"
+          },
+          {
+            "path": "qa-evidence-pysty/left-tower-stone-native.png",
+            "nativeCropBox": [
+              142,
+              503,
+              297,
+              896
+            ],
+            "method": "exact native-resolution lossless crop; no interpolation or retouch",
+            "sha256": "a0c5c53abada9d8c87f7461d9f3d001c6128390e3b47fa26b302f42a62037533"
+          },
+          {
+            "path": "qa-evidence-pysty/right-tower-stone-native.png",
+            "nativeCropBox": [
+              714,
+              503,
+              867,
+              896
+            ],
+            "method": "exact native-resolution lossless crop; no interpolation or retouch",
+            "sha256": "24a7c3645e41d677a776075b34d8bf3ee3ff01871c83fae14fe9582942d98ec4"
+          },
+          {
+            "path": "qa-evidence-pysty/left-roof-crown-native.png",
+            "nativeCropBox": [
+              144,
+              304,
+              303,
+              529
+            ],
+            "method": "exact native-resolution lossless crop; no interpolation or retouch",
+            "sha256": "c3a8325c6b36ae6a258465ee57985c7abccfcdc9d1f93213f6dfb95875f49857"
+          },
+          {
+            "path": "qa-evidence-pysty/right-roof-crown-native.png",
+            "nativeCropBox": [
+              713,
+              304,
+              872,
+              529
+            ],
+            "method": "exact native-resolution lossless crop; no interpolation or retouch",
+            "sha256": "440b5d2f761aa6aaf263f575373bcc7f4196fa82ffc1172a36d509982702953f"
+          },
+          {
+            "path": "qa-evidence-pysty/lower-portal-plaque-zone-native.png",
+            "nativeCropBox": [
+              282,
+              841,
+              741,
+              1251
+            ],
+            "method": "exact native-resolution lossless crop; no interpolation or retouch",
+            "sha256": "20503084f4e770bacf2d1680de2eff2205c84621e915be21048e2cf0d5cd1e85"
+          }
+        ],
+        "scopeAndMutation": {
+          "generationCallsByReviewer": 0,
+          "imageFilesChanged": false,
+          "candidateChanged": false,
+          "r2Touched": false,
+          "gitTouched": false,
+          "onlyWrites": [
+            "pysty/independent-qa.json",
+            "pysty/independent-qa.revision1.json",
+            "qa-evidence-pysty/diagnostic crops"
+          ],
+          "callsIssuedInCandidate": 1,
+          "automaticRetryPermitted": false
+        },
+        "recommendation": "Accepted against the two source orders, with the disclosed secondary-crop finial/crown limitation. This is independent visual QA acceptance only; no pixels or export metadata were changed, no generation or upload was performed.",
+        "revision": 2,
+        "revisionHistory": [
+          {
+            "revision": 1,
+            "verdict": "rejected",
+            "preservedAs": "pysty/independent-qa.revision1.json",
+            "sha256": "6de1fa5894a6e4a8b88e76736ab6f1470b96c254b28c7caff7f9bbb4de4b3937",
+            "findings": [
+              "Upper abstract ornament fields treated as failing smooth-frieze requirement.",
+              "Central crop cuts upper finials and some crown ornament."
+            ]
+          },
+          {
+            "revision": 2,
+            "verdict": "accepted",
+            "reason": "Re-read both complete source orders and re-viewed unchanged native diagnostics. The first surface interpretation overlooked the explicit abstract/blank alternative and the original permission for non-text facade ornament. The crop condition preserves recognizable central architecture and both main roofs; the source does not separately demand every metal finial remain inside the central crop. Physical crop measurements are unchanged and remain a composition limitation."
+          }
+        ],
+        "compositionLimitations": [
+          {
+            "condition": "Central4:3 secondary crop",
+            "finding": "Both tower metal finials lose approximately66px of upper extent, and the top of the crown ornament is clipped. Both full slate roofs, tower bodies and central upper facade survive. Full portrait is uncut.",
+            "evidence": "qa-evidence-pysty/central-4x3-native.png"
+          }
+        ],
+        "sourceDecisionBasis": "Decision changed after source and native-evidence re-evaluation, not because the image or thresholds were edited. Surface abstract/blank alternative and original non-text ornament permission govern the ornament classification; crop interpretation retains the central architectural subject without inventing a full-metal-finial acceptance gate."
+      },
+      "independentQASHA256": "6b3816bf5e139c4095f6929bf72fdfb716f11ba7dd29a2d78b3e83f69c3e3a62",
+      "ownerAcceptanceVerified": false,
+      "url": "https://media.matkakirja.app/julisteet/taidemuseo/rijksmuseum/20261013/rijksmuseum-lahestyminen-pysty.png",
+      "r2Key": "julisteet/taidemuseo/rijksmuseum/20261013/rijksmuseum-lahestyminen-pysty.png",
+      "bytes": 2851458,
+      "R2ByteVerified": true,
+      "R2Receipt": {
+        "taskNumber": 94,
+        "variant": "pysty",
+        "r2Key": "julisteet/taidemuseo/rijksmuseum/20261013/rijksmuseum-lahestyminen-pysty.png",
+        "url": "https://media.matkakirja.app/julisteet/taidemuseo/rijksmuseum/20261013/rijksmuseum-lahestyminen-pysty.png",
+        "sha256": "4e5504e9438dffe97d943ccdd3d43ac0342dd823a31fd164b482fc0e55dc73e5",
+        "nativeSHA256": "5129cebf39c5f29f25104ccfc11abebe850603a981ea4d3a0c2ee97b07c3bf35",
+        "bytes": 2851458,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "4e5504e9438dffe97d943ccdd3d43ac0342dd823a31fd164b482fc0e55dc73e5",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "4e5504e9438dffe97d943ccdd3d43ac0342dd823a31fd164b482fc0e55dc73e5",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T04:56:01.421948+00:00"
+      }
     },
     {
-      "slot": "vaaka",
-      "fileName": "rijksmuseum-lahestyminen-vaaka.png",
+      "variant": "vaaka",
+      "filename": "rijksmuseum-lahestyminen-vaaka.png",
       "dimensions": [
         1536,
         1024
       ],
-      "nativeSHA256": "3e3ce246e48abcd9c275fdc576995e74b077b08082cdcc22e5a7a49fd03c3dc1",
-      "sha256": "23b728dcf39005ced7661336ebafbb2b2b6134b1ab4d255aa2269a1836d60dc4",
-      "callsIssued": 1,
-      "candidateReturned": true,
-      "generationPrompt": "Use case: photorealistic-natural. Create one entirely NEW, realistic camera-looking architectural arrival illustration of the ORIGINAL Pierre Cuypers Rijksmuseum building in Amsterdam seen from Museumplein, looking north at its SOUTH facade. This is a new photograph-like illustration, not a photograph and not an edit or copy of either reference. Reference1 is a contemporary CC0 close study of the SOUTH passage facade: use only historic architectural proportions, brick-and-pale-stone arrangement and the two square roofed towers. Completely omit its Vermeer banner, painting, signs, QR codes, poles and advertisements. Reference2 is a circa1910 CC0 Rijksmuseum archival wide view of the same south facade: use it to confirm the original facade hidden by the banner, the central window, archway, and historic relative tower and wing positions. Do NOT reproduce the old photographic border, old street, monochrome, vehicles or arrangement of people. Show only the old Cuypers building and its original decorative masonry, red brick, pale limestone/sandstone details, grey slate roofs, granite base, coherent Gothic/Renaissance window rhythms and the large central vaulted passage. Original ordinary windows are allowed; no modern glass pavilion, modern glass additions or broad invented glass facade. Exclude all flags, lettering, plaques with readable writing, I amsterdam letters, banners, posters, collection-art reproductions, signs, logos, watermarks, frame, new sculptures/installations, temporary huts, cranes, scaffolding, floodlight poles or modern extensions. Frame from a visitor's eye height about1.65metres on Museumplein, realistic near-level camera with restrained architecture perspective, no drone view and no fantasy buildings. Show natural lawn in foreground, modest leafy trees at far sides not blocking the central building, and an ordinary path suggesting approach to the historic passage. Prefer an empty, quiet foreground; if any people, only a few very small distant figures with unreadable faces. Bright but soft daytime light gently raking old brickwork, pale blue sky with thin cloud, true restrained warm brick colours, believable natural grass and foliage detail, irregular real-world wear, subtle camera texture. NoHDR, saturation boost, CGI/game render look, painterly finish, procedural embossed bark or repeating grass texture. No text or UI actually drawn. The SOUTH passage facade has two square towers with tall hipped slate roofs as in the inputs; do not invent the north facade or extra towers. Opaque sRGB PNG. Preserve honest geometry from the references; produce no more than one requested candidate.\nComposition: native LANDSCAPE1536x1024 (3:2). Visitor eye-level from sufficiently far back on Museumplein. Show both central towers, passage and either the full connected historic south-facing wings or a complete coherent central section. The central building is clearly visible, with generous clear sky in the top quarter for futureUI, and a meaningful band of lawn/path in the foreground. No tall foreground object, no clipped roofs and no close people.",
+      "nativeSHA256": "e1038baa51c47d9edd7fe15009eb78b87d35aecacc8bc36361bebc845d14bdd8",
+      "sha256": "d5902bce7e102df2bd951123694149db4eec100333f6e556fb1f52cb6ccb3294",
+      "generationPrompt": "Use case: photorealistic-natural. Generate ONE entirely new camera-looking architectural arrival illustration, from scratch, of the original Pierre Cuypers Rijksmuseum building in Amsterdam, looking north from Museumplein at the SOUTH facade. This is an AI illustration with the appearance of a natural photograph. Input1 is a modern CC0 architecture reference only; Input2 is a circa1910 CC0 architecture reference only. Use them only to recognize the original warm red-brick Cuypers building, its pale stone courses, its two square central towers with tall hipped dark slate roofs, central upper facade and historic roofline. Do not copy either photograph or its composition. Remove ALL lettering from every visible surface, including stone reliefs. NO engraved lettering, NO plaques with text, NO inscription bands, NO numerals; ornament panels abstract/blank. Any visible plaque or horizontal frieze is a plain smooth uninscribed stone or terracotta surface, without scratches or decorative marks resembling characters. No rows of letter-like shapes, not even unreadable pseudo-writing. Omit named plaques entirely if possible.\nComposition: visitor eye-height around1.65m on Museumplein, believable restrained architectural perspective. Emphasize the UPPER facade, towers and roofline. A natural irregular line of leafy deciduous trees between the viewer and the museum obscures the entire lower central gateway and its plaque row. Trees frame the upper building rather than covering the tower roofs. Natural lawn in the foreground, a quiet approach. Historical exact window geometry is not required, but this must clearly be the original Rijksmuseum Cuypers brick building seen from its south side. Retain original ordinary masonry window openings, no modern glass pavilion or broad glass addition. Only old Cuypers architecture; no other buildings or new art installations.\nLight and texture: bright soft daytime side light, pale blue sky with thin clouds, restrained warm brick colour, naturally irregular stone and mortar weathering, natural grass and foliage texture without repeating synthetic patterns. Real camera colour and gentle photographic texture, no HDR, no oversaturated colour, no CGI or rendered-plastic surfaces, no illustration brush strokes. The only references are the two provided open photographs, never Google3D or StreetView.\nABSOLUTE exclusions: any text, letters, digits, words, date inscriptions, logos, signs, museum name, banners, posters, flags, advertising, QRcodes, I amsterdam letters, scaffolding, cranes, floodlight poles, temporary kiosks, modern annexes, new sculptures, collection-art reproductions, watermarks, borders or drawn UI. No foreground people; an empty scene is preferred. If people appear, very small and distant, no recognizable face. Opaque sRGB PNG. One requested image only.\nNative LANDSCAPE1536x1024 (3:2). Show a coherent broad row of the UPPER south facade between natural trees: both central tower roofs and the connected original roofline clearly visible and not clipped, either the original wings or complete central upper section. The portal and the inscription/plaque row below are completely hidden behind the natural tree canopy band. Leave open sky across the upper quarter and lawn near the bottom. A real visitor eye-height park view, not a drone view.",
       "references": [
         {
           "fileName": "Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
@@ -131,95 +405,209 @@
           "forArchitectureGeometryNotPhotoCopy": true
         }
       ],
-      "technicalExportPixelsUnchanged": true,
-      "mode": "RGB",
+      "caption": "Rijksmuseum Amsterdamissa Museumpleinin puolelta. Havainnekuva.",
+      "metadataDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadataSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
       "sRGB": true,
       "opaque": true,
-      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
-      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
-      "caption": "Rijksmuseum Amsterdamissa Museumpleinin puolelta. Havainnekuva.",
-      "rootQAVerdict": "rejected",
-      "independentQAVerdict": "rejected",
-      "reason": "Portin alkuperäisten kiviplakaattien pintaan syntyi selvä kirjoitusrivi: riville järjestettyjä kirjain-/Roomanumeroidenkaltaisia merkkejä. Vaadittu tekstittömyys ei täyty.",
-      "independentQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/vaaka/independent-qa.json",
-      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/vaaka/native.png",
-      "finalCandidatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/vaaka/rijksmuseum-lahestyminen-vaaka.png",
-      "R2Uploaded": false,
-      "gameDelivered": false
+      "actualGenerationCalls": 1,
+      "independentQA": {
+        "taskNumber": 94,
+        "variant": "vaaka",
+        "reviewType": "Independent native-size visual and technical QA under the complete retry order and original order",
+        "checkedAt": "2026-10-13T04:54:41.926290+00:00",
+        "verdict": "accepted",
+        "approvedForDelivery": true,
+        "reason": "The native-size upper arched panels show abstract architectural ornament, with no recognizable specific pictorial artwork, name plaque, inscription frieze or text-like character row. The complete retry source expressly allows ornament panels abstract/blank, and the original source permits the building's own non-textual ornament. The previous rejection applied the smooth-surface instruction too broadly to non-textual building ornament. All applicable source requirements pass.",
+        "nativeSHA256": "e1038baa51c47d9edd7fe15009eb78b87d35aecacc8bc36361bebc845d14bdd8",
+        "finalSHA256": "d5902bce7e102df2bd951123694149db4eec100333f6e556fb1f52cb6ccb3294",
+        "hashesMatchCandidate": true,
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-uusinta-20261013/vaaka/native.png",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-uusinta-20261013/vaaka/rijksmuseum-lahestyminen-vaaka.png",
+        "appliedSourceFiles": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-uusinta-20261013/sources/fable-codex-rijksmuseo-lahestyminen-uusinta-20261013.md",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-uusinta-20261013/sources/fable-codex-rijksmuseo-lahestyminen-20261012.md"
+        ],
+        "sourcePriority": "Retry changes override the original order. Exact historical window geometry is explicitly not required and is not used as a rejection reason.",
+        "observations": [
+          {
+            "requirement": "No writing on any stone surface, including text-like numeral or inscription rows",
+            "status": "passed-visually",
+            "nativeInspection": "The old lower date plaques are hidden. The visible carved/mosaic panels, courses, tower trim and cornices show no clearly identifiable writing or numeral row. I do not assert a readable string or diagnose pseudo-writing from these native pixels.",
+            "evidence": [
+              "qa-evidence-vaaka/native-left-panel.png",
+              "qa-evidence-vaaka/native-right-panel.png",
+              "qa-evidence-vaaka/native-upper-center-friezes.png",
+              "qa-evidence-vaaka/native-left-tower-stone-surfaces.png",
+              "qa-evidence-vaaka/native-right-tower-stone-surfaces.png"
+            ]
+          },
+          {
+            "requirement": "Name/inscription plaques and writing friezes blank/smooth or absent; non-textual ornament panels abstract/blank",
+            "status": "passed",
+            "nativeInspection": "The two upper arched panels are abstract non-textual architectural ornament. At native size I cannot identify a specific pictorial artwork or a coherent letter/numeral sequence in either panel. The old lower inscription/name-plaque row is hidden behind trees. Under the whole source, abstract/blank is an expressly permitted option for ornament panels, so relief texture alone is not a failure.",
+            "evidence": [
+              "qa-evidence-vaaka/native-left-panel.png",
+              "qa-evidence-vaaka/native-right-panel.png"
+            ]
+          },
+          {
+            "requirement": "Lower gateway and its inscription/plaque row behind trees/lawn or outside frame",
+            "status": "passed",
+            "nativeInspection": "The dense natural canopy band obscures the lower central gateway and its original plaque row. Lower glimpses through foliage show base masonry/fence, with no exposed central portal plaque.",
+            "evidence": [
+              "qa-evidence-vaaka/native-hidden-gateway-plaque-zone.png"
+            ]
+          },
+          {
+            "requirement": "Recognizable original Cuypers Rijksmuseum from Museumplein south side",
+            "status": "passed",
+            "nativeInspection": "Warm red brick, pale masonry courses, two square central towers with tall hipped slate roofs, the broad upper south facade and connected historic roofline identify the requested building and side. Exact window spacing is not a requirement in the retry source."
+          },
+          {
+            "requirement": "Complete upper central section/towers and connected roofline for landscape composition",
+            "status": "passed",
+            "nativeInspection": "Both central tower roofs and finials, central upper facade and the connected roofline are in frame. The lower part is intentionally concealed by the canopy as the retry source requests."
+          },
+          {
+            "requirement": "Sky and lawn space",
+            "status": "passed",
+            "nativeInspection": "Ample sky is visible above/between the towers; a broad lawn foreground remains below the trees. No extra requirement for a numerical completely clear sky-band percentage is applied."
+          },
+          {
+            "requirement": "Photorealistic natural camera mode, restrained colours and natural surfaces",
+            "status": "passed",
+            "nativeInspection": "Believable near-level architectural park view, soft side light, realistic brick/mortar, irregular leafy canopies and grass with natural shadows. No evident painterly brushwork, plastic render surfaces, HDR halos or tiled procedural grass.",
+            "evidence": [
+              "qa-evidence-vaaka/native-ground-and-natural-surfaces.png",
+              "qa-evidence-vaaka/native-left-tower-stone-surfaces.png",
+              "qa-evidence-vaaka/native-right-tower-stone-surfaces.png"
+            ]
+          },
+          {
+            "requirement": "No signs, text/logos, banners/flags, I amsterdam letters, advertisements, QR codes, watermark or frame",
+            "status": "passed-visually",
+            "nativeInspection": "None observed across the full native image or crops."
+          },
+          {
+            "requirement": "No modern annex/pavilion, new artworks, collection-art replicas, scaffolding/cranes/kiosks",
+            "status": "passed-at-scene-level",
+            "nativeInspection": "Visible architecture is historic-style masonry with original-style roof statues; no separate modern glass pavilion/addition, installation, collection painting, kiosk, crane or scaffold is visible."
+          },
+          {
+            "requirement": "People small/distant without recognizable faces",
+            "status": "passed",
+            "nativeInspection": "The scene is empty at native size; no foreground figures or identifiable faces."
+          },
+          {
+            "requirement": "1536x1024 opaque sRGB PNG and correct Havainnekuva metadata/caption",
+            "status": "passed",
+            "nativeInspection": "Both files are1536x1024 RGB and pixel-identical; the export has an sRGB profile, matching Description/Source and a title ending Havainnekuva."
+          }
+        ],
+        "technical": {
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "sRGB": true,
+          "iccProfileDescription": "sRGB built-in",
+          "nativeFinalRGBPixelsIdentical": true,
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "captionMetadataKey": "Title",
+          "caption": "Rijksmuseum Amsterdamissa Museumpleinin puolelta. Havainnekuva.",
+          "provenanceMetadataMatches": true,
+          "captionEndsHavainnekuva": true
+        },
+        "diagnosticEvidence": {
+          "directory": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-uusinta-20261013/qa-evidence-vaaka",
+          "manifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-uusinta-20261013/qa-evidence-vaaka/diagnostic-manifest.json",
+          "fullNativeAndFinalViewedOriginal": true,
+          "nativeStoneAndPanelCropsViewedOriginal": true,
+          "cropsAtNativeScale": true,
+          "resamplingOrSharpening": false
+        },
+        "generationPolicy": {
+          "callsIssuedInCandidateMetadata": 1,
+          "callsByReviewer": 0,
+          "additionalVariantsCreated": 0,
+          "candidateRetouched": false,
+          "instruction": "No further attempt without a new order."
+        },
+        "originalCandidateFilesUnmodified": true,
+        "r2Written": false,
+        "gitWritten": false,
+        "writeScope": [
+          "vaaka/independent-qa.json",
+          "vaaka/independent-qa.revision1.json",
+          "qa-evidence-vaaka/*"
+        ],
+        "revision": 2,
+        "sourceInterpretation": {
+          "retryReadAsWhole": true,
+          "explicitPermittedOption": "ornament panels abstract/blank",
+          "originalPermission": "Julkisivun omat veistokset ja kaupunkisinetit saavat näkyä vain koristeina ilman luettavaa tekstiä.",
+          "smoothSurfaceScope": "Plaques, name/inscription boards and writing friezes must be blank/smooth or absent. Non-textual architectural ornament is evaluated under the expressly allowed abstract/blank option; the smooth-surface clause is not automatically extended to every decorative stone surface.",
+          "nativePanelFinding": "Both arched panels contain fine abstract ornamental relief/texture. Neither reveals a recognizable specific pictorial art reproduction, name plaque, inscription band or text-like glyph sequence at the native1536x1024 resolution.",
+          "whyRevision1Changed": "Revision1 treated relief texture alone as a failure and described pictorial detail without identifying a recognizable pictured work. That added a blanket smoothness requirement to the permitted abstract ornament option. Native reinspection does not support that rejection.",
+          "historicalGeometry": "Exact historical window division remains explicitly waived; no geometry-perfect or aesthetic-perfect requirement is added."
+        },
+        "revisionHistory": [
+          {
+            "revision": 1,
+            "verdict": "rejected",
+            "report": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-uusinta-20261013/vaaka/independent-qa.revision1.json",
+            "sha256": "4efab99fb50f7b9289975177f232dc71f354601127e5eb377e5798d0b745b4eb",
+            "preservedVerbatim": true,
+            "reasonForSuperseding": "Overbroad application of smoothness to expressly permitted abstract non-textual ornament."
+          }
+        ],
+        "sameCandidateAsRevision1": true
+      },
+      "independentQASHA256": "4e3e1d7be8f67de2accb5eb6578b260f80508dfb9d1c1ed3a70edc6d6e809e2b",
+      "ownerAcceptanceVerified": false,
+      "url": "https://media.matkakirja.app/julisteet/taidemuseo/rijksmuseum/20261013/rijksmuseum-lahestyminen-vaaka.png",
+      "r2Key": "julisteet/taidemuseo/rijksmuseum/20261013/rijksmuseum-lahestyminen-vaaka.png",
+      "bytes": 3023423,
+      "R2ByteVerified": true,
+      "R2Receipt": {
+        "taskNumber": 94,
+        "variant": "vaaka",
+        "r2Key": "julisteet/taidemuseo/rijksmuseum/20261013/rijksmuseum-lahestyminen-vaaka.png",
+        "url": "https://media.matkakirja.app/julisteet/taidemuseo/rijksmuseum/20261013/rijksmuseum-lahestyminen-vaaka.png",
+        "sha256": "d5902bce7e102df2bd951123694149db4eec100333f6e556fb1f52cb6ccb3294",
+        "nativeSHA256": "e1038baa51c47d9edd7fe15009eb78b87d35aecacc8bc36361bebc845d14bdd8",
+        "bytes": 3023423,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "d5902bce7e102df2bd951123694149db4eec100333f6e556fb1f52cb6ccb3294",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "d5902bce7e102df2bd951123694149db4eec100333f6e556fb1f52cb6ccb3294",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T04:56:03.273057+00:00"
+      }
     }
   ],
-  "omissionAllowedBySource": "Kaksi versiota (yksi generointi per versio, ei lisävariantteja; jos ei onnistu, jätä tekemättä ja kerro syy)",
-  "allReturnedImagesProcessed": true,
-  "productionComplete": true,
-  "productionActive": false,
-  "allRequestedImagesDelivered": false,
-  "personalOwnerApprovalRequired": false,
-  "ownerAcceptanceVerified": false,
+  "omittedItems": [],
   "gameIntegrated": false,
   "published": false,
-  "R2RequestedPrefix": "julisteet/taidemuseo/rijksmuseum/20261013/",
-  "referenceRightsEvidence": {
-    "references": [
-      {
-        "fileName": "Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/references/Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Rijksmuseum_Amsterdam_-_South_facade_-_Vermeer_exhibition.jpg",
-        "author": "Rlbberlin",
-        "license": "CC0 1.0",
-        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "photoDate": "2023-05-01",
-        "dimensions": [
-          4000,
-          3000
-        ],
-        "exifOrientation": 3,
-        "sha256": "c731fba7dfe2eeeb4acec6b7199289a3a00a2046e5db293ff7e7efb0a1f1f900",
-        "referenceOnly": true,
-        "forArchitectureGeometryNotPhotoCopy": true
-      },
-      {
-        "fileName": "Zuidgevel_met_deel_van_het_Museumplein,_HA-0012557.jpg",
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rijksmuseum-lahestyminen-20261013/references/Zuidgevel_met_deel_van_het_Museumplein,_HA-0012557.jpg",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Zuidgevel_met_deel_van_het_Museumplein%2C_HA-0012557.jpg",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Zuidgevel_met_deel_van_het_Museumplein%2C_HA-0012557.jpg",
-        "author": "Rijksmuseum Afdeling Beeld",
-        "license": "CC0 1.0",
-        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "photoDate": "circa1910",
-        "dimensions": [
-          2500,
-          1945
-        ],
-        "exifOrientation": 1,
-        "sha256": "f29c8b3d74b5deabd11277ccb875479a8b000de69bd5aed15d44f10b70485ce7",
-        "referenceOnly": true,
-        "forArchitectureGeometryNotPhotoCopy": true
-      }
-    ],
-    "museumPrimarySource": "https://www.rijksmuseum.nl/en/visitor-information/inside-the-rijksmuseum/the-building-from-the-exterior",
-    "correctFacade": "Museumplein/south-facing; not Stadhouderskade/north"
-  },
-  "rootQA": {
-    "reviewedAt": "2026-10-12T21:18:58.421410+00:00",
-    "rootIndependentVisualReviewComplete": true,
-    "viewedWholeImagesAndNativePlaqueDetails": true,
-    "items": [
-      {
-        "slot": "pysty",
-        "sha256": "f46e90a062bdc6c5fd588219805ae4a364c813f8b5c0afd7d9189aff3c894bad",
-        "verdict": "rejected",
-        "reason": "Portin alkuperäisten kiviplakaattien pintaan syntyi selvä kirjoitusrivi: riville järjestettyjä kirjain-/Roomanumeroidenkaltaisia merkkejä. Vaadittu tekstittömyys ei täyty."
-      },
-      {
-        "slot": "vaaka",
-        "sha256": "23b728dcf39005ced7661336ebafbb2b2b6134b1ab4d255aa2269a1836d60dc4",
-        "verdict": "rejected",
-        "reason": "Portin alkuperäisten kiviplakaattien pintaan syntyi selvä kirjoitusrivi: riville järjestettyjä kirjain-/Roomanumeroidenkaltaisia merkkejä. Vaadittu tekstittömyys ei täyty."
-      }
-    ],
-    "portraitCropDecision": "Source only requires centre4:3 crop to retain building; this passes. Crop grass/UI margins were not a rejection condition.",
-    "noPixelEditsOrAdditionalGenerations": true
-  },
-  "updatedAt": "2026-10-12T21:18:58.421410+00:00"
+  "ownerApprovalRequired": false,
+  "ownerAcceptanceVerified": false,
+  "completedAt": "2026-10-13T04:56:33.505382+00:00"
 }
