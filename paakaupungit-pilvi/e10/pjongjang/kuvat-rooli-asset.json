@@ -3,7 +3,7 @@
   "era": "e10",
   "city": "pjongjang",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+  "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
   "assets": [
     {
       "era": "e10",
@@ -53,7 +53,7 @@
         1448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "5445789b05eb197d9360c3f8d6a0dae3c9aa1e15d563c9a6a11813c3fd03d56d",
@@ -528,7 +528,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "5445789b05eb197d9360c3f8d6a0dae3c9aa1e15d563c9a6a11813c3fd03d56d",
       "ownerApproved": true,
@@ -555,7 +555,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sourceSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
         "sameImageNativeSHA256": "dfa325507f9fd28a4f3c371961d922b2c0333d22e82c3260d378f13cd7e5c286",
         "sameImageExportSHA256": "24f70d0715f79f3b929ede843ccc2e159ff4b1ed250fb223fe9084971aad9991",
         "independentNativeQAEvidencePreserved": true,
@@ -614,7 +614,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "d93c286aa24b4cdf578eb5e94f794460b941e141275c718e5307f1870c0ca7e4",
@@ -867,7 +867,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "d93c286aa24b4cdf578eb5e94f794460b941e141275c718e5307f1870c0ca7e4",
       "ownerApproved": true,
@@ -894,7 +894,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sourceSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
         "sameImageNativeSHA256": "1129d651c5628636d2ac1b28e47e42b1ae65c065411a5100258ebbe155c98d8b",
         "sameImageExportSHA256": "689f32186cfc0e12bce641e95ccc27542a1d4e327fcb170c49c6ed86d1df1370",
         "independentNativeQAEvidencePreserved": true,
@@ -950,7 +950,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1e25d814b2d7058c24dc4773f5cd18ade6f22924dce0a46fad10eed60d05b0ec",
         "semanticContextSHA256": "1e25d814b2d7058c24dc4773f5cd18ade6f22924dce0a46fad10eed60d05b0ec",
@@ -1201,7 +1201,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "targetAfterSHA256": "1e25d814b2d7058c24dc4773f5cd18ade6f22924dce0a46fad10eed60d05b0ec",
       "contextAfterSHA256": "1e25d814b2d7058c24dc4773f5cd18ade6f22924dce0a46fad10eed60d05b0ec",
       "ownerApproved": true,
@@ -1228,7 +1228,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sourceSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
         "sameImageNativeSHA256": "6c6d8213c9abbbe3bb914f432e087aee00b1ad083db8e2699748402e42137205",
         "sameImageExportSHA256": "65c5813562cf5ae62d2a8eb8400eac455da1c66655b882d252a785c5ed440833",
         "independentNativeQAEvidencePreserved": true,
@@ -1284,10 +1284,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ebf83d18ef7d897455c9021b6449bb1f8588abf29d788a96224092a11fa354cc",
-        "semanticContextSHA256": "ebf83d18ef7d897455c9021b6449bb1f8588abf29d788a96224092a11fa354cc",
+        "targetBeforeSHA256": "18f9feca29465ef2aa0e8010afacd1172e505a51a25f52c69ca17acafdbbafab",
+        "semanticContextSHA256": "18f9feca29465ef2aa0e8010afacd1172e505a51a25f52c69ca17acafdbbafab",
         "subjectTitle": "Viileä liemi kuuluu annokseen",
         "targetState": "existing-target"
       },
@@ -1521,9 +1521,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
-      "targetAfterSHA256": "ebf83d18ef7d897455c9021b6449bb1f8588abf29d788a96224092a11fa354cc",
-      "contextAfterSHA256": "ebf83d18ef7d897455c9021b6449bb1f8588abf29d788a96224092a11fa354cc",
+      "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
+      "targetAfterSHA256": "18f9feca29465ef2aa0e8010afacd1172e505a51a25f52c69ca17acafdbbafab",
+      "contextAfterSHA256": "18f9feca29465ef2aa0e8010afacd1172e505a51a25f52c69ca17acafdbbafab",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1548,7 +1548,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sourceSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
         "sameImageNativeSHA256": "ed9a35f068d2b68062eebec2ae188e560be9da819f02ecad5111665adbc3e6e5",
         "sameImageExportSHA256": "b0f6e00c694c5e8cbd23ce0d8dd85941c106ed4c161233a9aa6788a548d35ca1",
         "independentNativeQAEvidencePreserved": true,
@@ -1604,7 +1604,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8921afb2c249b3a9bcbda16ebf2caa7931412af6d8555a93b7801ebf01ecf9bf",
         "semanticContextSHA256": "8921afb2c249b3a9bcbda16ebf2caa7931412af6d8555a93b7801ebf01ecf9bf",
@@ -1867,7 +1867,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "targetAfterSHA256": "8921afb2c249b3a9bcbda16ebf2caa7931412af6d8555a93b7801ebf01ecf9bf",
       "contextAfterSHA256": "8921afb2c249b3a9bcbda16ebf2caa7931412af6d8555a93b7801ebf01ecf9bf",
       "ownerApproved": true,
@@ -1894,7 +1894,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sourceSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
         "sameImageNativeSHA256": "3386a3b91908ce7205b24525972f1110212d4f8589525cf0a56246c963161377",
         "sameImageExportSHA256": "6c837a11af045a4e8645dde07482e51122d6e43cf7adfe30dd6e4e06a2914aff",
         "independentNativeQAEvidencePreserved": true,
@@ -1950,10 +1950,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "feff9196925b0f2e52bc2e3d9e103f837d7ddee07c9d1576f1cf2f37f526440d",
-        "semanticContextSHA256": "feff9196925b0f2e52bc2e3d9e103f837d7ddee07c9d1576f1cf2f37f526440d",
+        "targetBeforeSHA256": "75d4e2d48ef33c5f3f4e6882b7707cdaf9caf1dea4a4efc977aba7817f9c35e6",
+        "semanticContextSHA256": "75d4e2d48ef33c5f3f4e6882b7707cdaf9caf1dea4a4efc977aba7817f9c35e6",
         "subjectTitle": "Perintö jatkuu myös keittiössä",
         "targetState": "existing-target"
       },
@@ -2213,9 +2213,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
-      "targetAfterSHA256": "feff9196925b0f2e52bc2e3d9e103f837d7ddee07c9d1576f1cf2f37f526440d",
-      "contextAfterSHA256": "feff9196925b0f2e52bc2e3d9e103f837d7ddee07c9d1576f1cf2f37f526440d",
+      "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
+      "targetAfterSHA256": "75d4e2d48ef33c5f3f4e6882b7707cdaf9caf1dea4a4efc977aba7817f9c35e6",
+      "contextAfterSHA256": "75d4e2d48ef33c5f3f4e6882b7707cdaf9caf1dea4a4efc977aba7817f9c35e6",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2240,7 +2240,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sourceSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
         "sameImageNativeSHA256": "9d66a66b1423db0821d2e3bebb76c8bd1accb13eaae08c4bbf5037cdcea2902e",
         "sameImageExportSHA256": "4647a7f88c95bd30600d03a2827a90f8316db484bb46d56a0508b2333dcb626b",
         "independentNativeQAEvidencePreserved": true,
@@ -2296,7 +2296,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "semanticSourceBind": {
         "targetBeforeSHA256": "eb3e5c283a90554ecdfb3f63a029b503ddf1c722fd6bedb737131ef480db5215",
         "semanticContextSHA256": "eb3e5c283a90554ecdfb3f63a029b503ddf1c722fd6bedb737131ef480db5215",
@@ -2547,7 +2547,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "targetAfterSHA256": "eb3e5c283a90554ecdfb3f63a029b503ddf1c722fd6bedb737131ef480db5215",
       "contextAfterSHA256": "eb3e5c283a90554ecdfb3f63a029b503ddf1c722fd6bedb737131ef480db5215",
       "ownerApproved": true,
@@ -2574,7 +2574,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sourceSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
         "sameImageNativeSHA256": "14d497534714e900f1bbfe273179912fa6298febc2aab0a3b0becb39011843ff",
         "sameImageExportSHA256": "9d173b1a5f81777698efce0087c006269e11b8cf0989a2ce9a51c999741e2ed9",
         "independentNativeQAEvidencePreserved": true,
@@ -2630,7 +2630,7 @@
         5504
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8b51e01731a9f1b744d9ddb40a27421ada56b4861a4bf8e208ff9533d00e411b",
         "semanticContextSHA256": "8b51e01731a9f1b744d9ddb40a27421ada56b4861a4bf8e208ff9533d00e411b",
@@ -2847,7 +2847,7 @@
         "tiedosto": "Moranbong Park - 02.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "targetAfterSHA256": "8b51e01731a9f1b744d9ddb40a27421ada56b4861a4bf8e208ff9533d00e411b",
       "contextAfterSHA256": "8b51e01731a9f1b744d9ddb40a27421ada56b4861a4bf8e208ff9533d00e411b",
       "ownerApproved": true,
@@ -2874,12 +2874,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sourceSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
         "sameImageNativeSHA256": "e29f697b1e459be99ecde7eb0a2d4b8f0b65dec52406eb1f15023105055d4dd8",
         "sameImageExportSHA256": "e29f697b1e459be99ecde7eb0a2d4b8f0b65dec52406eb1f15023105055d4dd8",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -2933,7 +2933,7 @@
         2976
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "semanticSourceBind": {
         "targetBeforeSHA256": "f548652513dab902b6350399bd291c9e2ed42eb9eed622a24929209ad6692b6c",
         "semanticContextSHA256": "f548652513dab902b6350399bd291c9e2ed42eb9eed622a24929209ad6692b6c",
@@ -3156,7 +3156,7 @@
         "tiedosto": "De daken van Pyongyang Gezicht op de daken van eenvoudige, dicht op elkaar gebouwde huizen, Pyongyang, Noord-Korea, RP-F-2000-9-51.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "targetAfterSHA256": "f548652513dab902b6350399bd291c9e2ed42eb9eed622a24929209ad6692b6c",
       "contextAfterSHA256": "f548652513dab902b6350399bd291c9e2ed42eb9eed622a24929209ad6692b6c",
       "ownerApproved": true,
@@ -3183,12 +3183,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sourceSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
         "sameImageNativeSHA256": "fd7017ca13ed352038efb5d341bc292d77b0637c07a8ea51d8f9cdf84a7f0f75",
         "sameImageExportSHA256": "fd7017ca13ed352038efb5d341bc292d77b0637c07a8ea51d8f9cdf84a7f0f75",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3242,7 +3242,7 @@
         3712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "semanticSourceBind": {
         "targetBeforeSHA256": "db0038634fc6bfc46a217bcd53c14cd0da9e0b50f9ab9d63d6013a128a060299",
         "semanticContextSHA256": "db0038634fc6bfc46a217bcd53c14cd0da9e0b50f9ab9d63d6013a128a060299",
@@ -3464,7 +3464,7 @@
         "tiedosto": "ISS066-E-7985 - View of Earth.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "targetAfterSHA256": "db0038634fc6bfc46a217bcd53c14cd0da9e0b50f9ab9d63d6013a128a060299",
       "contextAfterSHA256": "db0038634fc6bfc46a217bcd53c14cd0da9e0b50f9ab9d63d6013a128a060299",
       "ownerApproved": true,
@@ -3491,12 +3491,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sourceSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
         "sameImageNativeSHA256": "e11a84194ce966bf19376107d67a9c30debfc388592c16f945f7cde4cc4285b7",
         "sameImageExportSHA256": "e11a84194ce966bf19376107d67a9c30debfc388592c16f945f7cde4cc4285b7",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3550,7 +3550,7 @@
         3096
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1fea15ab51e140e073a5312f680d05677ad51f8db4a12317247c2acd3eba4019",
         "semanticContextSHA256": "81124b09b3778d190708f71d9b22ecf77c31e8a06e859896bf945fd4ce10f7c2",
@@ -3767,7 +3767,7 @@
         "tiedosto": "Moranbong Park - 03.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+      "sourceContentAfterSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
       "targetAfterSHA256": "1fea15ab51e140e073a5312f680d05677ad51f8db4a12317247c2acd3eba4019",
       "contextAfterSHA256": "81124b09b3778d190708f71d9b22ecf77c31e8a06e859896bf945fd4ce10f7c2",
       "ownerApproved": true,
@@ -3794,7 +3794,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "162ec0f745e68a18bd6a6a0785c6ef84b6a2d8700b94c6c91336cccd8aac4820",
+        "sourceSHA256": "637d21e96629124a1dad232dca8115f8d4d8d753a2470fb67d1949e1d8e42e76",
         "sameImageNativeSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
         "sameImageExportSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
         "independentNativeQAEvidencePreserved": true,
@@ -3812,9 +3812,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e10/pjongjang/280c9e6e1053f1df140c1b83e1b80db576b96ef9ed11a5992e1e3dadb6aea20a.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e10/pjongjang/e457fc4882d589344304051f780d29b0b644042a3ae7a11860c4d38f3953a286.json",
   "task118ReboundAt": "2026-10-13T16:31:25.895536+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:10:08.039260+00:00"
+  "task228ReboundAt": "2026-10-13T18:32:12.603980+00:00"
 }

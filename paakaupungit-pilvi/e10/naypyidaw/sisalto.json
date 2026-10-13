@@ -14,7 +14,7 @@
     }
   },
   "artikkeli": {
-    "intro": "Naypyidaw on Myanmarin hallinnollinen pääkaupunki maan keskiosassa. Se rakennettiin **suunniteltuna kaupunkina** 2000-luvulla, joten sen historia on aivan eri mittainen kuin maan vanhojen kuninkaallisten keskusten. Lähellä sijaitseva Pyinmana on kuitenkin uutta pääkaupunkia vanhempi asutus. Naypyidawin nimi puolestaan tarkoittaa kuninkaallista asuinpaikkaa tai pääkaupunkia, ja sama sana kuului jo vanhempien hallitsijakaupunkien nimiin. \n\nKaupunki sijaitsee Bago Yoman ja Shan Yoman vuoristojen välisellä alueella, ja sen toimintoja on jaettu eri vyöhykkeisiin. **Kansallismuseon** kokoelmat ulottuvat fossiileista esihistorian työkaluihin ja vanhoihin kaupunkikulttuureihin. National Herbal Park kokoaa puolestaan perinteiseen lääkekasvien käyttöön liittyviä kasveja maan eri alueilta. Isoisän matkavuonna 1873 nykyistä Naypyidawia ei ollut: sen vanhaa menneisyyttä etsivä katse suuntautuu naapuriasutukseen ja muualta tuotuihin museokokoelmiin.",
+    "intro": "Naypyidaw on Myanmarin hallinnollinen pääkaupunki maan keskiosassa. Se rakennettiin **suunniteltuna kaupunkina** 2000-luvulla, joten sen historia on aivan eri mittainen kuin maan vanhojen kuninkaallisten keskusten. Lähellä sijaitseva Pyinmana on kuitenkin uutta pääkaupunkia vanhempi asutus. Naypyidawin nimi puolestaan tarkoittaa kuninkaallista asuinpaikkaa tai pääkaupunkia, ja sama sana kuului jo vanhempien hallitsijakaupunkien nimiin.\n\nKaupunki sijaitsee Bago Yoman ja Shan Yoman vuoristojen välisellä alueella, ja sen toimintoja on jaettu eri vyöhykkeisiin. **Kansallismuseon** kokoelmat ulottuvat fossiileista esihistorian työkaluihin ja vanhoihin kaupunkikulttuureihin. National Herbal Park kokoaa puolestaan perinteiseen lääkekasvien käyttöön liittyviä kasveja maan eri alueilta. Isoisän matkavuonna 1873 nykyistä Naypyidawia ei ollut: sen vanhaa menneisyyttä etsivä katse suuntautuu naapuriasutukseen ja muualta tuotuihin museokokoelmiin.",
     "teksti": "Naypyidaw tunnetaan myös kirjoitusasulla Nay Pyi Taw. Nimi liittyy kuninkaalliseen asuinpaikkaan, vaikka nykyinen kaupunki on rakennettu vasta 2000-luvulla. Vanhan sanan käyttö yhdistää nimen maan aiempiin hallitsijakaupunkeihin.\n\nKaupunki sijaitsee Naypyidawin liittoalueella. Liittoalueeseen kuuluu suunnitellun kaupungin lisäksi vanhempia paikkoja, kuten Pyinmana ja Lewe. Uuden pääkaupungin vyöhykkeet ja vanhat asutukset sijaitsevat saman hallintoalueen sisällä.\n\nKansallismuseossa pääkaupungin nuori ikä ja kokoelmien pitkä aikajänne kohtaavat. Pondaungin fossiilit, esihistorian välineet ja Pyu-kaupunkien rakennusosat kertovat eri puolilta Myanmaria saadusta aineistosta. Lääkekasvipuistossa alueellinen kirjo näkyy kasvavina kasveina."
   },
   "kysymykset": [
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Junger Papayabaum (Carica papaya).jpg",
-    "lyhyt": "Nuori papayapuu National Herbal Parkissa.",
-    "selite": "Papayapuu (Carica papaya) Naypyidawin kasvipuistossa tammikuussa 2018.",
+    "lyhyt": "Tarhapapaija National Herbal Parkissa.",
+    "selite": "Tarhapapaija (Carica papaya) Naypyidawin National Herbal Parkissa tammikuussa 2018.",
     "lahde": "Myrmux, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
@@ -128,16 +128,16 @@
       "nostot": [
         {
           "otsikko": "Kaupunki on jaettu käyttötarkoituksiin",
-          "teksti": "Naypyidawin kaupunginosia on järjestetty eri toimintojen vyöhykkeiksi. Asuinalueiden ja hotellialueen sijoittuminen on osa suunnitellun kaupungin rakennetta, ja kohteiden välillä on pitkiä etäisyyksiä.",
+          "teksti": "Naypyidawin kaupunginosia on järjestetty eri toimintojen vyöhykkeiksi. Asuinalueiden ja hotellialueen sijoittuminen on osa suunnitellun kaupungin rakennetta, ja kohteiden välillä on pitkiä etäisyyksiä. Asuintalojen katot on merkitty eri väreillä asukkaiden työpaikkojen mukaan: terveyshallinnon työntekijöiden taloissa katot ovat sinisiä, maataloushallinnon taloissa vihreitä.",
           "wiki": "Naypyidaw",
           "tiedosto": "Jogging trails - panoramio.jpg",
-          "lyhyt": "Naypyidawin ulkoilureitti.",
-          "selite": "Ulkoilureitti Naypyidawissa marraskuussa 2015.",
+          "lyhyt": "Juoksureitti.",
+          "selite": "Juoksureitin näkymä marraskuussa 2015.",
           "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
           "otsikko": "Uusi kaupunki sai vanhan sanan",
-          "teksti": "Naypyidaw rakennettiin 2000-luvulla, mutta sen nimi ei syntynyt tyhjästä. Burmankielinen sana tarkoittaa kuninkaallista asuinpaikkaa tai pääkaupunkia, ja sitä on käytetty vanhempien kuninkaallisten kaupunkien nimien osana. Esimerkiksi Mandalay tunnettiin myös nimellä Yadanabon Naypyidaw.",
+          "teksti": "Naypyidaw rakennettiin 2000-luvulla, mutta sen nimi ei syntynyt tyhjästä. Burmankielinen sana tarkoittaa kuninkaallista asuinpaikkaa tai pääkaupunkia, ja sitä on käytetty vanhempien kuninkaallisten kaupunkien nimien osana. Esimerkiksi Mandalay tunnettiin myös nimellä Yadanabon Naypyidaw. Virallisessa latinalaisessa kirjoitusasussa nimi jaetaan sanoiksi Nay Pyi Taw.",
           "wiki": "Naypyidaw",
           "tiedosto": "",
           "lyhyt": "",
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Pyinmana oli paikalla ennen pääkaupunkia",
-          "teksti": "Naypyidaw nousi Pyinmanan lähelle, ja Pyinmana kuuluu alueen vanhempiin paikkoihin. Myös Naypyidawin liittoalueeseen sisältyy vanhoja asutuksia uuden kaupungin vyöhykkeiden rinnalla. Pyinmana ja Lewe kuuluvat saman liittoalueen vanhempiin asutuksiin.",
+          "teksti": "Naypyidaw nousi Pyinmanan lähelle, ja Pyinmana kuuluu alueen vanhempiin paikkoihin. Myös Naypyidawin liittoalueeseen sisältyy vanhoja asutuksia uuden kaupungin vyöhykkeiden rinnalla. Pyinmana ja Lewe kuuluvat saman liittoalueen vanhempiin asutuksiin. Pyinmana tunnetaan myös puutavaran kaupasta ja sokeriruo’on jalostuksesta. Se sijaitsee uuden pääkaupungin itäpuolella.",
           "wiki": "Naypyidaw",
           "tiedosto": "",
           "lyhyt": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Rata oli olemassa ennen uutta asemaa",
-          "teksti": "Naypyidawin keskusasema rakennettiin uuden pääkaupungin aikana, mutta Yangon–Mandalay-rautatie ei ole saman rakennushankkeen tuote. Ennen uuden aseman valmistumista aluetta palvelivat Pyinmanan ja Lewen asemat, joista Pyinmana oli pääradan varrella.",
+          "teksti": "Naypyidawin keskusasema rakennettiin uuden pääkaupungin aikana, mutta Yangon–Mandalay-rautatie ei ole saman rakennushankkeen tuote. Ennen uuden aseman valmistumista aluetta palvelivat Pyinmanan ja Lewen asemat, joista Pyinmana oli pääradan varrella. Keskusasema on Ywatawin ja Kyihtaungganin asemien välissä. Lewen rata erkanee Pyinmanasta Kyaukpadaungin suuntaan.",
           "wiki": "Naypyidaw",
           "tiedosto": "",
           "lyhyt": "",
@@ -293,7 +293,7 @@
       "nostot": [
         {
           "otsikko": "Kasvikokoelma kasvaa saman taivaan alla",
-          "teksti": "National Herbal Park tuo Naypyidawiin perinteisessä lääkekasvien käytössä tunnettuja kasveja eri puolilta Myanmaria. Puiston tarkoitus liittyy niiden säilyttämiseen ja perinteisten käyttötapojen ylläpitämiseen. Eri alueilta tuodut kasvit kasvavat nyt samassa puistossa.",
+          "teksti": "National Herbal Park tuo Naypyidawiin perinteisessä lääkekasvien käytössä tunnettuja kasveja eri puolilta Myanmaria. Puiston tarkoitus liittyy niiden säilyttämiseen ja perinteisten käyttötapojen ylläpitämiseen. Eri alueilta tuodut kasvit kasvavat nyt samassa puistossa. Puisto sijaitsee Naypyidaw–Taungnyo-tien lähellä ja avattiin 2000-luvun ensimmäisellä vuosikymmenellä.",
           "wiki": "National Herbal Park",
           "tiedosto": "",
           "lyhyt": "",
@@ -302,7 +302,7 @@
         },
         {
           "otsikko": "Museon vanhimmat asukkaat ovat fossiileja",
-          "teksti": "Naypyidawin kansallismuseon fossiilinäyttely vie aikaan ennen Myanmarin kaupunkeja. Siinä esitellään Pondaungin muodostuman fossiileja sekä kivettyneitä kasveja Pondaungin ja Irrawaddyn sedimenttikerrostumista.",
+          "teksti": "Naypyidawin kansallismuseon fossiilinäyttely vie aikaan ennen Myanmarin kaupunkeja. Siinä esitellään Pondaungin muodostuman fossiileja sekä kivettyneitä kasveja Pondaungin ja Irrawaddyn sedimenttikerrostumista. Pondaungin muodostuma on eoseenikaudelta. Fossiilien aikainen ympäristö oli lämmin, metsäinen sisämaa, jossa virtasi jokia. Metsien lomassa oli myös kosteikkoja.",
           "wiki": "National Museum of Myanmar (Naypyidaw)",
           "tiedosto": "",
           "lyhyt": "",
@@ -311,7 +311,7 @@
         },
         {
           "otsikko": "Työkalu tekee aikakauden näkyväksi",
-          "teksti": "Kansallismuseon esihistorian näyttely esittelee kivikauden, pronssikauden ja rautakauden työkaluja, aseita ja käyttöesineitä. Näyttelyyn kuuluu myös luolaympäristöä ja kaivauskohdetta havainnollistavia pienoismalleja.",
+          "teksti": "Kansallismuseon esihistorian näyttely esittelee kivikauden, pronssikauden ja rautakauden työkaluja, aseita ja käyttöesineitä. Näyttelyyn kuuluu myös luolaympäristöä ja kaivauskohdetta havainnollistavia pienoismalleja. Näyttelyssä on Padah-Linin luolien pienoismalleja. Pronssikautista kaivauspaikkaa esittävää mallia täydentävät ruukut, uurnat, helmet ja pronssiaseet.",
           "wiki": "National Museum of Myanmar (Naypyidaw)",
           "tiedosto": "",
           "lyhyt": "",
@@ -320,7 +320,7 @@
         },
         {
           "otsikko": "Muinaiskaupungit mahtuvat museoon",
-          "teksti": "Kansallismuseossa esitellään Pyu-kaupunkien rakennusosia ja pienoismalleja. Halin, Beikthano ja Sri Ksetra sijaitsevat muualla Myanmarissa ja muodostavat yhteisen maailmanperintökohteen. Niiden tiilirakenteiset kaupungit olivat muurien ja vallihautojen ympäröimiä, ja ympäröivään maisemaan kuului kastelujärjestelmiä.",
+          "teksti": "Kansallismuseossa esitellään Pyu-kaupunkien rakennusosia ja pienoismalleja. Halin, Beikthano ja Sri Ksetra sijaitsevat muualla Myanmarissa ja muodostavat yhteisen maailmanperintökohteen. Niiden tiilirakenteiset kaupungit olivat muurien ja vallihautojen ympäröimiä, ja ympäröivään maisemaan kuului kastelujärjestelmiä. Esillä on myös kaivauksissa löytyneitä kulta-, hopea-, pronssi- ja saviesineitä.",
           "wiki": "National Museum of Myanmar (Naypyidaw)",
           "tiedosto": "",
           "lyhyt": "",

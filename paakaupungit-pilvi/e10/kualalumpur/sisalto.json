@@ -115,8 +115,8 @@
         },
         {
           "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG",
-          "lyhyt": "Kuala Lumpurin kaupunkialue avaruudesta nähtynä.",
-          "selite": "Kuala Lumpurin kaupunkialue ja sitä ympäröivä maasto ISS-avaruusasemalta 27. maaliskuuta 2010.",
+          "lyhyt": "Kuala Lumpur avaruudesta.",
+          "selite": "Kuala Lumpur ISS-avaruusasemalta maaliskuussa 2010.",
           "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
         },
         {
@@ -321,7 +321,7 @@
         },
         {
           "otsikko": "Aterian alusta kasvaa puussa",
-          "teksti": "Brickfieldsin intialaisissa ruokapaikoissa riisiateria voidaan tarjota banaaninlehdeltä. Riisin rinnalle asetellaan esimerkiksi vihanneksia, currya, suolaisia lisukkeita ja rapeaa papadamia. Lehti toimii lautasena eikä sitä syödä. Banaaninlehtiriisi liittyy eteläintialaiseen ruokaperinteeseen, joka on saanut oman paikkansa Malesiassa.",
+          "teksti": "Brickfieldsin intialaisissa ruokapaikoissa riisiateria voidaan tarjota banaaninlehdeltä. Riisin rinnalle asetellaan esimerkiksi vihanneksia, currya, suolaisia lisukkeita ja rapeaa papadamia. Lehti toimii lautasena eikä sitä syödä. Banaaninlehtiriisi liittyy eteläintialaiseen ruokaperinteeseen, joka on saanut oman paikkansa Malesiassa. Banaaninlehti on suuri, taipuisa ja vettä hylkivä.",
           "wiki": "Banana leaf",
           "tiedosto": "",
           "lyhyt": "",
@@ -370,7 +370,7 @@
     },
     "Bukit Nanas": {
       "aika": "Metsän suojelualue 1900-luvun alusta",
-      "teksti": "Bukit Nanas on Kuala Lumpurin keskustan kukkula, jonka alueella on säilynyt trooppista sademetsää. Metsässä on kävelypolkuja, ja suojelualue tunnetaan nykyisin nimellä KL Forest Eco Park. Rakentaminen on vähentänyt metsän pinta-alaa, joten nykyinen vihreä alue on osa laajemmasta historiallisesta kokonaisuudesta. \n\nBukit Nanas merkitsee ananaskukkulaa. Perimätiedon mukaan ananaksia kasvatettiin puolustusasemaa ympäröivänä esteenä, mutta nimen selitys esitetään kertomuksena eikä todistettuna tapahtumana. Suojelualue perustettiin vasta 1900-luvun alussa.",
+      "teksti": "Bukit Nanas on Kuala Lumpurin keskustan kukkula, jonka alueella on säilynyt trooppista sademetsää. Metsässä on kävelypolkuja, ja suojelualue tunnetaan nykyisin nimellä KL Forest Eco Park. Rakentaminen on vähentänyt metsän pinta-alaa, joten nykyinen vihreä alue on osa laajemmasta historiallisesta kokonaisuudesta.\n\nBukit Nanas merkitsee ananaskukkulaa. Perimätiedon mukaan ananaksia kasvatettiin puolustusasemaa ympäröivänä esteenä, mutta nimen selitys esitetään kertomuksena eikä todistettuna tapahtumana. Suojelualue perustettiin vasta 1900-luvun alussa.",
       "kuvat": [
         {
           "tiedosto": "",

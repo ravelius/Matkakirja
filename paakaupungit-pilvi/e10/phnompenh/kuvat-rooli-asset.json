@@ -3,7 +3,7 @@
   "era": "e10",
   "city": "phnompenh",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+  "sourceContentAfterSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
   "assets": [
     {
       "era": "e10",
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+      "sourceContentSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "41f94d6142d4216137cef0086a98e1936d7201a996c56d675d8b3224307f5337",
@@ -668,7 +668,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+      "sourceContentAfterSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "41f94d6142d4216137cef0086a98e1936d7201a996c56d675d8b3224307f5337",
       "ownerApproved": true,
@@ -695,7 +695,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+        "sourceSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
         "sameImageNativeSHA256": "4e78af5c0b89875b925dc258ca667cd59bbbcfbeef600ee9447ae2dc8fe37e49",
         "sameImageExportSHA256": "71cda3c7bca24c9afc99d82626ac8665f7ebdc84b254eff79676b8ad34695c40",
         "independentNativeQAEvidencePreserved": true,
@@ -754,7 +754,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+      "sourceContentSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "85508f3ef33eade1d4c0986d926008b748a536b0321d53b186cb70bc45e0bd33",
@@ -1091,7 +1091,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+      "sourceContentAfterSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "85508f3ef33eade1d4c0986d926008b748a536b0321d53b186cb70bc45e0bd33",
       "ownerApproved": true,
@@ -1118,7 +1118,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+        "sourceSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
         "sameImageNativeSHA256": "e0db2c9bb0cee86192de09ab254877f3b11350184a8ecd903e78b652b19ee286",
         "sameImageExportSHA256": "a221355fa547ba909bc24cd2850674ba3f17758e7ded7410a59b00d42a0727b4",
         "independentNativeQAEvidencePreserved": true,
@@ -1174,7 +1174,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+      "sourceContentSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
       "semanticSourceBind": {
         "targetBeforeSHA256": "41a79b492deadfecfe6999dd4d04a3c4f567c221d46719580ae974ebc93dab6c",
         "semanticContextSHA256": "41a79b492deadfecfe6999dd4d04a3c4f567c221d46719580ae974ebc93dab6c",
@@ -1419,7 +1419,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+      "sourceContentAfterSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
       "targetAfterSHA256": "41a79b492deadfecfe6999dd4d04a3c4f567c221d46719580ae974ebc93dab6c",
       "contextAfterSHA256": "41a79b492deadfecfe6999dd4d04a3c4f567c221d46719580ae974ebc93dab6c",
       "ownerApproved": true,
@@ -1446,7 +1446,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+        "sourceSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
         "sameImageNativeSHA256": "b5d05d2feb519c6b1735f27b082463ebfd4b91d8e106c9107cf3ec6a62ef0136",
         "sameImageExportSHA256": "1552ac6ef0cf9c7e8b3091948baf3fa9cf0a125630c794261a9b67f2bcf305b7",
         "independentNativeQAEvidencePreserved": true,
@@ -1502,10 +1502,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+      "sourceContentSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "fc78d13c41046e4cada70acecdc2f4851c318b2477b4018da6640350cc94f202",
-        "semanticContextSHA256": "fc78d13c41046e4cada70acecdc2f4851c318b2477b4018da6640350cc94f202",
+        "targetBeforeSHA256": "0e1e9e9eabb1234fd06ae1ceb69257f4acbdc11316f39bebd688e6dea805a223",
+        "semanticContextSHA256": "0e1e9e9eabb1234fd06ae1ceb69257f4acbdc11316f39bebd688e6dea805a223",
         "subjectTitle": "Vesilaitos löysi hukkaan valuvan veden",
         "targetState": "existing-target"
       },
@@ -1747,9 +1747,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
-      "targetAfterSHA256": "fc78d13c41046e4cada70acecdc2f4851c318b2477b4018da6640350cc94f202",
-      "contextAfterSHA256": "fc78d13c41046e4cada70acecdc2f4851c318b2477b4018da6640350cc94f202",
+      "sourceContentAfterSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
+      "targetAfterSHA256": "0e1e9e9eabb1234fd06ae1ceb69257f4acbdc11316f39bebd688e6dea805a223",
+      "contextAfterSHA256": "0e1e9e9eabb1234fd06ae1ceb69257f4acbdc11316f39bebd688e6dea805a223",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1774,7 +1774,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+        "sourceSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
         "sameImageNativeSHA256": "93ea351eac13af3f01ac329f8c450f8eb83349ced37e4b11743d412f77dd2146",
         "sameImageExportSHA256": "bf9d14c236df748411d6abefd1478032b9620fed8e46fcd43805385288ba8c33",
         "independentNativeQAEvidencePreserved": true,
@@ -1830,7 +1830,7 @@
         4907
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+      "sourceContentSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1df0aa0e9499df423b4f0360ddf7135a77de943d73e7e664fa3d815f896fb4f0",
         "semanticContextSHA256": "1df0aa0e9499df423b4f0360ddf7135a77de943d73e7e664fa3d815f896fb4f0",
@@ -1998,7 +1998,7 @@
         "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+      "sourceContentAfterSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
       "targetAfterSHA256": "1df0aa0e9499df423b4f0360ddf7135a77de943d73e7e664fa3d815f896fb4f0",
       "contextAfterSHA256": "1df0aa0e9499df423b4f0360ddf7135a77de943d73e7e664fa3d815f896fb4f0",
       "ownerApproved": true,
@@ -2025,12 +2025,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+        "sourceSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
         "sameImageNativeSHA256": "1b7c8438b7ec333b74ba24c9fbb1281305299069a1055fb27f7e57f68d702466",
         "sameImageExportSHA256": "1b7c8438b7ec333b74ba24c9fbb1281305299069a1055fb27f7e57f68d702466",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -2084,7 +2084,7 @@
         2929
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+      "sourceContentSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
       "semanticSourceBind": {
         "targetBeforeSHA256": "caab044eba23bac021c538a0276ffdfcdc871e997a3b15793714657fb660d8e0",
         "semanticContextSHA256": "caab044eba23bac021c538a0276ffdfcdc871e997a3b15793714657fb660d8e0",
@@ -2234,7 +2234,7 @@
         "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+      "sourceContentAfterSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
       "targetAfterSHA256": "caab044eba23bac021c538a0276ffdfcdc871e997a3b15793714657fb660d8e0",
       "contextAfterSHA256": "caab044eba23bac021c538a0276ffdfcdc871e997a3b15793714657fb660d8e0",
       "ownerApproved": true,
@@ -2261,12 +2261,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "7f592c307b4fd141bcba59397d310260415d592d2c2620e87806374bd9d8874a",
+        "sourceSHA256": "60d08afeb364674c7668086f411d3696d84fec4b4001ec97125ac8572c2377c5",
         "sameImageNativeSHA256": "d02fd8997df314a73cb8999a87b10a5886c8d5e82ef8cadecb2b44d9f5c2289b",
         "sameImageExportSHA256": "d02fd8997df314a73cb8999a87b10a5886c8d5e82ef8cadecb2b44d9f5c2289b",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     }
   ],
@@ -2279,9 +2279,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e10/phnompenh/ebb91bfc2eb71a346f3076654642fdd0c05aa4ecfd2e22ba4613700460d7a777.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e10/phnompenh/7ce5bc3de16670109215f3f2486365e49c4385ba52b591baa5ad737b934ed0df.json",
   "task118ReboundAt": "2026-10-13T16:31:25.870925+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:10:08.011209+00:00"
+  "task228ReboundAt": "2026-10-13T18:32:12.579552+00:00"
 }

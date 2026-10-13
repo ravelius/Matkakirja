@@ -116,8 +116,8 @@
         {
           "tiedosto": "Port of Malé.jpg",
           "lahde": "Shahee Ilyas, Wikimedia Commons (CC BY 4.0)",
-          "lyhyt": "Malén satama ja kaupunkiranta.",
-          "selite": "Sataman laitureita ja pääkaupungin rantaa joulukuussa 2017."
+          "lyhyt": "Malén sataman ilmakuva.",
+          "selite": "Malén satama ilmasta nähtynä joulukuussa 2017."
         },
         {
           "tiedosto": "Aerial view of Malé.jpg",
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Palatsikaupunki, josta muuri katosi",
-          "teksti": "Malé oli sulttaanien saari: palatsi sijaitsi täällä, ja kaupunkia ympäröivät muurit, portit ja linnakkeet. Vanhojen linnoitusten purkaminen ja katujen leventäminen muuttivat kaupunkia jo ennen monarkian päättymistä. Myöhemmin myös kuninkaallinen palatsi purettiin. Vanha perjantaimoskeija säilyi keskellä muuttuvaa kaupunkia.",
+          "teksti": "Malé oli sulttaanien saari: palatsi sijaitsi täällä, ja kaupunkia ympäröivät muurit, portit ja linnakkeet. Vanhojen linnoitusten purkaminen ja katujen leventäminen muuttivat kaupunkia jo ennen monarkian päättymistä. Myöhemmin myös kuninkaallinen palatsi purettiin. Vanha perjantaimoskeija säilyi keskellä muuttuvaa kaupunkia. Kaupunki tunnettiin aiemmin nimellä Mahal.",
           "tiedosto": "",
           "lahde": "",
           "lyhyt": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Kotilonkuoret odottivat kauppaa",
-          "teksti": "Keskiaikainen matkailija Ibn Battuta kuvasi Maléssa kuningattaren asuinpaikkaa ja palatsialueen kuoppia, joihin oli varastoitu kaurikotilon kuoria kaupattaviksi. Saari kuului siis pitkän matkan kaupan verkostoon jo paljon ennen lentoasemaa ja lomahotelleja. Hänen kuvauksessaan kaupungissa oli myös puisia moskeijoita.",
+          "teksti": "Keskiaikainen matkailija Ibn Battuta kuvasi Maléssa kuningattaren asuinpaikkaa ja palatsialueen kuoppia, joihin oli varastoitu kaurikotilon kuoria kaupattaviksi. Saari kuului siis pitkän matkan kaupan verkostoon jo paljon ennen lentoasemaa ja lomahotelleja. Hänen kuvauksessaan kaupungissa oli myös puisia moskeijoita. Kuningattaren nimi hänen kertomuksessaan on Rehendhi Khadeeja.",
           "tiedosto": "",
           "lahde": "",
           "lyhyt": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Satamassa ruoka saa osoitteen",
-          "teksti": "Malén pohjoisrannan kalatorille tuodaan saalista, joka perataan ja myydään paikalliseen käyttöön. Viereisen paikallistorin kojuihin saapuu atolleilta hedelmiä, vihanneksia, banaaneja, jamssia, leipäpuun lastuja sekä savustettua ja kuivattua kalaa. Kalatorin yhteydessä syödään myös pieniä välipaloja.",
+          "teksti": "Malén pohjoisrannan kalatorille tuodaan saalista, joka perataan ja myydään paikalliseen käyttöön. Viereisen paikallistorin kojuihin saapuu atolleilta hedelmiä, vihanneksia, banaaneja, jamssia, leipäpuun lastuja sekä savustettua ja kuivattua kalaa. Kalatorin yhteydessä syödään myös pieniä välipaloja. Kalatori on Republic Squaren länsipuolella; veneitä kiinnitetään sitä vastapäätä.",
           "tiedosto": "",
           "lahde": "",
           "lyhyt": "",
@@ -298,7 +298,7 @@
           "tiedosto": "Mashuni (382668832).jpg",
           "lahde": "╚ DD╔ from Male, Maldives, Wikimedia Commons (CC BY-SA 2.0)",
           "lyhyt": "Mas huni -aamiaisruokaa.",
-          "selite": "Kala, raastettu kookos, sipuli ja chili yhdistyvät mas hunissa, jota syödään roshi-leivän kanssa.",
+          "selite": "Malediivilainen mas huni helmikuussa 2007.",
           "wiki": "Maldivian cuisine"
         },
         {
@@ -316,7 +316,7 @@
           "tiedosto": "Garudiya.jpg",
           "lahde": "LittleT889, Wikimedia Commons (CC BY 4.0)",
           "lyhyt": "Garudhiya-kalalientä.",
-          "selite": "Garudhiya, tonnikalasta keitetty kirkas liemi.",
+          "selite": "Garudhiya joulukuussa 2024.",
           "wiki": "Maldivian cuisine"
         },
         {
@@ -351,7 +351,7 @@
   "nahtavyydet": {
     "Hukuru Miskiy, vanha perjantaimoskeija": {
       "aika": "1600-luku",
-      "teksti": "Hukuru Miskiy rakennettiin Malén keskustaan 1600-luvulla vanhemman moskeijan paikalle. \n\nSeinien Porites-koralli nostettiin merestä, leikattiin kosteana ja kuivattiin rakennuskiviksi. Lohkojen liittäminen pontti-uraliitoksilla muistuttaa puusepäntyötä. Rakennuksen puuosissa on kaiverruksia ja lakattuja koristeita; taitavat paikalliset käsityöläiset tekivät sekä katon että sisäosien työt.\n\nMoskeijakompleksiin kuuluu minareetti ja hautausmaa korallikivisine hautamuistomerkkeineen. Kohde on edelleen uskonnollisessa käytössä.",
+      "teksti": "Hukuru Miskiy rakennettiin Malén keskustaan 1600-luvulla vanhemman moskeijan paikalle.\n\nSeinien Porites-koralli nostettiin merestä, leikattiin kosteana ja kuivattiin rakennuskiviksi. Lohkojen liittäminen pontti-uraliitoksilla muistuttaa puusepäntyötä. Rakennuksen puuosissa on kaiverruksia ja lakattuja koristeita; taitavat paikalliset käsityöläiset tekivät sekä katon että sisäosien työt.\n\nMoskeijakompleksiin kuuluu minareetti ja hautausmaa korallikivisine hautamuistomerkkeineen. Kohde on edelleen uskonnollisessa käytössä.",
       "kuvat": [
         {
           "tiedosto": "",

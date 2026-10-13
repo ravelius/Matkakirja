@@ -3,7 +3,7 @@
   "era": "e10",
   "city": "kualalumpur",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+  "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
   "assets": [
     {
       "era": "e10",
@@ -53,7 +53,7 @@
         1448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "f23b1c7b4b1a939e4fef561a7c9e5b8bbb68d0f89bdcee5515d1dba41fd916ca",
@@ -560,7 +560,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "f23b1c7b4b1a939e4fef561a7c9e5b8bbb68d0f89bdcee5515d1dba41fd916ca",
       "ownerApproved": true,
@@ -587,7 +587,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "b93dc2da31ad0f4ca8d714e5255a19a13c263fd342174ced9c8eaa763bdd334e",
         "sameImageExportSHA256": "ba99c128e62d840978a6da0a441397aa2b81da91ff0769e4b301a40e2da310ef",
         "independentNativeQAEvidencePreserved": true,
@@ -646,7 +646,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "c26d53429c3fc108a8d8217c48501caa6016c1644f549ceea9265263c88a82e0",
@@ -943,7 +943,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "c26d53429c3fc108a8d8217c48501caa6016c1644f549ceea9265263c88a82e0",
       "ownerApproved": true,
@@ -970,7 +970,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "d2f797dbe8cc93d655b5dd4b862ea43037f928c33643b5e9d144e855f5fce0b8",
         "sameImageExportSHA256": "90c648b3c8c98a3b406b4de7d75335772cdf68c53c8611bb94ad9a5c3894c365",
         "independentNativeQAEvidencePreserved": true,
@@ -1026,7 +1026,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "49cadc0f9292fe2fe26deb3f46e78f5472ceaa3ceecc043f98b1366e21d814b2",
         "semanticContextSHA256": "49cadc0f9292fe2fe26deb3f46e78f5472ceaa3ceecc043f98b1366e21d814b2",
@@ -1319,7 +1319,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "targetAfterSHA256": "49cadc0f9292fe2fe26deb3f46e78f5472ceaa3ceecc043f98b1366e21d814b2",
       "contextAfterSHA256": "49cadc0f9292fe2fe26deb3f46e78f5472ceaa3ceecc043f98b1366e21d814b2",
       "ownerApproved": true,
@@ -1346,7 +1346,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "39b8fb508843bfe0aba83b91feb5b9ddb67268665857e5288f7f4ae13dee4992",
         "sameImageExportSHA256": "90c9270db2f501255ffcbe39f90dc54c66b6476a73f850bce9e6dd046dc6ca01",
         "independentNativeQAEvidencePreserved": true,
@@ -1402,7 +1402,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2a15299f20d218cf0f6ca8050f259725052d47ff7cbef4cf8f53d3a17c310669",
         "semanticContextSHA256": "2a15299f20d218cf0f6ca8050f259725052d47ff7cbef4cf8f53d3a17c310669",
@@ -1697,7 +1697,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "targetAfterSHA256": "2a15299f20d218cf0f6ca8050f259725052d47ff7cbef4cf8f53d3a17c310669",
       "contextAfterSHA256": "2a15299f20d218cf0f6ca8050f259725052d47ff7cbef4cf8f53d3a17c310669",
       "ownerApproved": true,
@@ -1724,7 +1724,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "d824543024c9695fe8696045b5d705e0977ef7d430d895530469b46d87b014d8",
         "sameImageExportSHA256": "ebfdd9966172d822b7841555d7e2e729e7bfac1b60176da24945d459f86169c3",
         "independentNativeQAEvidencePreserved": true,
@@ -1780,7 +1780,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3d7bf405efc9d23f3fe80aadc90555d06bb684bf570b7490c90cfefaece61373",
         "semanticContextSHA256": "3d7bf405efc9d23f3fe80aadc90555d06bb684bf570b7490c90cfefaece61373",
@@ -2073,7 +2073,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "targetAfterSHA256": "3d7bf405efc9d23f3fe80aadc90555d06bb684bf570b7490c90cfefaece61373",
       "contextAfterSHA256": "3d7bf405efc9d23f3fe80aadc90555d06bb684bf570b7490c90cfefaece61373",
       "ownerApproved": true,
@@ -2100,7 +2100,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "cccfb3486396ec8eb086d4b52f68a16b822ff4fa5855f0cec2a6ca0d255160f8",
         "sameImageExportSHA256": "939284ee977aef56b05224aa2d0a3055aaed25946fa86298fb7d5e99bf309f27",
         "independentNativeQAEvidencePreserved": true,
@@ -2156,7 +2156,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "6e3a56685f3fe44ca9182a9ff97c2b4f5e5064726eb3b8aabb1008f3e951f390",
         "semanticContextSHA256": "6e3a56685f3fe44ca9182a9ff97c2b4f5e5064726eb3b8aabb1008f3e951f390",
@@ -2451,7 +2451,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "targetAfterSHA256": "6e3a56685f3fe44ca9182a9ff97c2b4f5e5064726eb3b8aabb1008f3e951f390",
       "contextAfterSHA256": "6e3a56685f3fe44ca9182a9ff97c2b4f5e5064726eb3b8aabb1008f3e951f390",
       "ownerApproved": true,
@@ -2478,7 +2478,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "ca3b1b9a744637761f68e812794e275a8b7eb436e9ba149affc2ba2740678fba",
         "sameImageExportSHA256": "665836311477063f4d345e76ab26a9d0bd03b6e768f7bb8921d40596ff919718",
         "independentNativeQAEvidencePreserved": true,
@@ -2534,7 +2534,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "86e675c162b93c4ec2850ea233dac98ba477efd58a42302dd47a1140fea4d03c",
         "semanticContextSHA256": "86e675c162b93c4ec2850ea233dac98ba477efd58a42302dd47a1140fea4d03c",
@@ -2829,7 +2829,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "targetAfterSHA256": "86e675c162b93c4ec2850ea233dac98ba477efd58a42302dd47a1140fea4d03c",
       "contextAfterSHA256": "86e675c162b93c4ec2850ea233dac98ba477efd58a42302dd47a1140fea4d03c",
       "ownerApproved": true,
@@ -2856,7 +2856,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "e26647d89b66932ec41bee8abc55abbeb30c79251e8d18ec2de456721d5e8c44",
         "sameImageExportSHA256": "163042ee7da10e84a7da104120d7537f26b9064e4a2266319f77bf927d857066",
         "independentNativeQAEvidencePreserved": true,
@@ -2912,7 +2912,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e364126a85092e87453eadbd3c2e2c32a4fcced6b0a29f4c3e2162afe8b7824f",
         "semanticContextSHA256": "e364126a85092e87453eadbd3c2e2c32a4fcced6b0a29f4c3e2162afe8b7824f",
@@ -3205,7 +3205,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "targetAfterSHA256": "e364126a85092e87453eadbd3c2e2c32a4fcced6b0a29f4c3e2162afe8b7824f",
       "contextAfterSHA256": "e364126a85092e87453eadbd3c2e2c32a4fcced6b0a29f4c3e2162afe8b7824f",
       "ownerApproved": true,
@@ -3232,7 +3232,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "b0e2186ff396af008e91ca4062a30a268f719fc2f62353d5bda0e5a36c9d6705",
         "sameImageExportSHA256": "8d05a633d4a014ae88ea8281ee4596d5f9ec5f910a242149a89472f86b3672f4",
         "independentNativeQAEvidencePreserved": true,
@@ -3288,10 +3288,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3d402072dbe2893d851ccdb68b3926c34166336ede1388366d87ffb6b156bdd4",
-        "semanticContextSHA256": "3d402072dbe2893d851ccdb68b3926c34166336ede1388366d87ffb6b156bdd4",
+        "targetBeforeSHA256": "70cf1a045f7060141139c46ed252874a96fe542dc0ca6d52170ffccab2ecf893",
+        "semanticContextSHA256": "70cf1a045f7060141139c46ed252874a96fe542dc0ca6d52170ffccab2ecf893",
         "subjectTitle": "Aterian alusta kasvaa puussa",
         "targetState": "existing-target"
       },
@@ -3583,9 +3583,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
-      "targetAfterSHA256": "3d402072dbe2893d851ccdb68b3926c34166336ede1388366d87ffb6b156bdd4",
-      "contextAfterSHA256": "3d402072dbe2893d851ccdb68b3926c34166336ede1388366d87ffb6b156bdd4",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
+      "targetAfterSHA256": "70cf1a045f7060141139c46ed252874a96fe542dc0ca6d52170ffccab2ecf893",
+      "contextAfterSHA256": "70cf1a045f7060141139c46ed252874a96fe542dc0ca6d52170ffccab2ecf893",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3610,7 +3610,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "d29f8926254d0c8f92e881d28e716699c69ce57ee0c1c90e30e82d759f126b87",
         "sameImageExportSHA256": "a80a3331155e900e153c2bb22b33c87bf464d69469b58ce1fdd7063f52e47458",
         "independentNativeQAEvidencePreserved": true,
@@ -3669,7 +3669,7 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5d4aa75f3d79d1f2b73bd4c557c8a73e27ffa4869646e06f2c0458eab46ebf84",
         "semanticContextSHA256": "5d4aa75f3d79d1f2b73bd4c557c8a73e27ffa4869646e06f2c0458eab46ebf84",
@@ -3878,7 +3878,7 @@
         "vuosi": "2024"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "targetAfterSHA256": "5d4aa75f3d79d1f2b73bd4c557c8a73e27ffa4869646e06f2c0458eab46ebf84",
       "contextAfterSHA256": "5d4aa75f3d79d1f2b73bd4c557c8a73e27ffa4869646e06f2c0458eab46ebf84",
       "ownerApproved": true,
@@ -3905,12 +3905,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "26ca0e84bba3e74997fb3801b73f2bf80aaec06af4c5d8e81261d9eaa087adce",
         "sameImageExportSHA256": "26ca0e84bba3e74997fb3801b73f2bf80aaec06af4c5d8e81261d9eaa087adce",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3964,7 +3964,7 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "54c869aadff44406a26cfd63da973e433c4d926699150ff209eacd26db903b46",
         "semanticContextSHA256": "54c869aadff44406a26cfd63da973e433c4d926699150ff209eacd26db903b46",
@@ -4171,7 +4171,7 @@
         "tiedosto": "2024-09 Kuala Lumpur station 01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "targetAfterSHA256": "54c869aadff44406a26cfd63da973e433c4d926699150ff209eacd26db903b46",
       "contextAfterSHA256": "54c869aadff44406a26cfd63da973e433c4d926699150ff209eacd26db903b46",
       "ownerApproved": true,
@@ -4198,7 +4198,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "8e70e4f55c7a3e9694261c0e55a7e061c2e6ecafcfcb4c2eb3026b2be9f1cc00",
         "sameImageExportSHA256": "8e70e4f55c7a3e9694261c0e55a7e061c2e6ecafcfcb4c2eb3026b2be9f1cc00",
         "independentNativeQAEvidencePreserved": true,
@@ -4226,23 +4226,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c2-36cd7b44ba0e6d5efc4e.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kuala Lumpurin kaupunkialue ja sitä ympäröivä maasto ISS-avaruusasemalta 27. maaliskuuta 2010.",
-        "lyhyt": "Kuala Lumpurin kaupunkialue avaruudesta nähtynä.",
+        "selite": "Kuala Lumpur ISS-avaruusasemalta maaliskuussa 2010.",
+        "lyhyt": "Kuala Lumpur avaruudesta.",
         "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kuala Lumpurin kaupunkialue ja sitä ympäröivä maasto ISS-avaruusasemalta 27. maaliskuuta 2010.",
-        "lyhyt": "Kuala Lumpurin kaupunkialue avaruudesta nähtynä.",
+        "selite": "Kuala Lumpur ISS-avaruusasemalta maaliskuussa 2010.",
+        "lyhyt": "Kuala Lumpur avaruudesta.",
         "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c2-36cd7b44ba0e6d5efc4e.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kuala Lumpurin kaupunkialue ja sitä ympäröivä maasto ISS-avaruusasemalta 27. maaliskuuta 2010.",
-        "lyhyt": "Kuala Lumpurin kaupunkialue avaruudesta nähtynä.",
+        "selite": "Kuala Lumpur ISS-avaruusasemalta maaliskuussa 2010.",
+        "lyhyt": "Kuala Lumpur avaruudesta.",
         "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -4257,10 +4257,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8ac32cc03c5d0c7956eb6f2878a457c19159b9d9803fd1069ebfbbe06a8d75f3",
-        "semanticContextSHA256": "8ac32cc03c5d0c7956eb6f2878a457c19159b9d9803fd1069ebfbbe06a8d75f3",
+        "targetBeforeSHA256": "d1d92dedd29f11d6e7518a269c9853f3ebc43e5a90166bd47a991512b48e107f",
+        "semanticContextSHA256": "d1d92dedd29f11d6e7518a269c9853f3ebc43e5a90166bd47a991512b48e107f",
         "subjectTitle": "Kuala Lumpur",
         "targetState": "existing-target"
       },
@@ -4469,8 +4469,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG",
-        "lyhyt": "Kuala Lumpurin kaupunkialue avaruudesta nähtynä.",
-        "selite": "Kuala Lumpurin kaupunkialue ja sitä ympäröivä maasto ISS-avaruusasemalta 27. maaliskuuta 2010.",
+        "lyhyt": "Kuala Lumpur avaruudesta.",
+        "selite": "Kuala Lumpur ISS-avaruusasemalta maaliskuussa 2010.",
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -4497,14 +4497,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kuala Lumpurin kaupunkialue ja sitä ympäröivä maasto ISS-avaruusasemalta 27. maaliskuuta 2010.",
-        "lyhyt": "Kuala Lumpurin kaupunkialue avaruudesta nähtynä.",
+        "selite": "Kuala Lumpur ISS-avaruusasemalta maaliskuussa 2010.",
+        "lyhyt": "Kuala Lumpur avaruudesta.",
         "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
-      "targetAfterSHA256": "8ac32cc03c5d0c7956eb6f2878a457c19159b9d9803fd1069ebfbbe06a8d75f3",
-      "contextAfterSHA256": "8ac32cc03c5d0c7956eb6f2878a457c19159b9d9803fd1069ebfbbe06a8d75f3",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
+      "targetAfterSHA256": "d1d92dedd29f11d6e7518a269c9853f3ebc43e5a90166bd47a991512b48e107f",
+      "contextAfterSHA256": "d1d92dedd29f11d6e7518a269c9853f3ebc43e5a90166bd47a991512b48e107f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -4529,12 +4529,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
         "sameImageExportSHA256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     },
     {
@@ -4588,7 +4588,7 @@
         3472
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7abbdd0be0c9020d98ea55605ab7ab3c4c15d0672424f4e3fd8f44b9ec5518b8",
         "semanticContextSHA256": "aaa404e72cc324f0b53761bb24f5313a204c9a7e13294cdd5faa904994a578c6",
@@ -4831,7 +4831,7 @@
         "tiedosto": "2024-09 Kuala Lumpur station 03.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+      "sourceContentAfterSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
       "targetAfterSHA256": "7abbdd0be0c9020d98ea55605ab7ab3c4c15d0672424f4e3fd8f44b9ec5518b8",
       "contextAfterSHA256": "aaa404e72cc324f0b53761bb24f5313a204c9a7e13294cdd5faa904994a578c6",
       "ownerApproved": true,
@@ -4858,7 +4858,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "311e7c7d3485f35a7f5376b3f605558cec82f495bf3795419f4425c864d4dfc9",
+        "sourceSHA256": "5d180c66f00b8920014c69b773ef365844de3e24e868daed685118a1437791ed",
         "sameImageNativeSHA256": "819b4c7b1af87ad392bb37ebdffda6386afc58a9b19e2023bb5145d46451c457",
         "sameImageExportSHA256": "819b4c7b1af87ad392bb37ebdffda6386afc58a9b19e2023bb5145d46451c457",
         "independentNativeQAEvidencePreserved": true,
@@ -4876,9 +4876,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e10/kualalumpur/b971e7119fd947be8b28693f7e434480594a84b659234c49c4b80de40a7e8f09.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e10/kualalumpur/83f3b95da4ecf2b56facc810b50569a02951bd276f37eb26c23882c0f10cf30b.json",
   "task118ReboundAt": "2026-10-13T16:31:25.790820+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:10:07.919364+00:00"
+  "task228ReboundAt": "2026-10-13T18:32:12.435294+00:00"
 }
