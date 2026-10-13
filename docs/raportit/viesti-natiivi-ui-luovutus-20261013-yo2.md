@@ -19,7 +19,10 @@ Simuhistoria: 20.58 (8caebc5fe) napautus ei hilannut + visiiri hehkui → d99798
 lepo täysin musta, vain kypärälamput; napautus → Pulu lasin keskelle ~1,5× ja valaistuna; paluu siluetiksi. MUTTA taulu hyppäsi
 kahdesti Pulun liikkuessa → 56de0538a (ei vielä simussa).
 
-SEURAAVAKSI:
+PÄIVITYS 21.5x: simu 24420556f (56de0538a) iPhone + iPad OK, taulu ei hypi. Kuva-arkit (kuva-arkki-iphone/-ipad.png) ja
+ruutusarja-iphone.png toimitettu PT:lle kansiosta lokit/natiivi-ui-siluetti188-toimitus. ODOTTAA PT:N KUITTAUSTA → SHA 56de0538a
+Natiivisepälle (pohja juna-188). Vaiheet 1–4 alla on tehty.
+VANHA SEURAAVAKSI:
 1. SIMU NYT Julkaisijalta (jonossa ~21.50, LS2 → LS1 palaute188 → NUI) → `zsh siluetti188c.sh` (UUSI iPhone + iPad, sammuttaa simut
    lopuksi) → SIMU VAPAA Julkaisijalle.
 2. Tarkista ruutusarjasta, ettei taulu hypi: `python3 ruutusarja.py <todistus>/hilaus.mp4 <ulos.png> 260 "<otsikko>" <napautus−0,15 s> 12
