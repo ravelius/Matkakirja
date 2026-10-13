@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-8 QA/R2-varmennettua kuvaa toimitettu, 2 perusteltua lopullista poisjättöä. Käsitelty 10/47 tämän osan nimetyistä kuvista; 10 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+8 QA/R2-varmennettua kuvaa toimitettu, 4 perusteltua lopullista poisjättöä. Käsitelty 12/47 tämän osan nimetyistä kuvista; 12 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -38,6 +38,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-saint-petersburg-uudet-6-8-20261013
 
 - #205, slot 6: Pietarin keskusta Iisakinkirkon kolonnadilta koilliseen päivällä: Admiraliteetin torni, Talvipalatsin katto ja Verikirkon kupolit kaukana. Havainnekuva.
 - Poisjättö #206, slot 8: Johtava ohjaamo ja palavat ajovalot osoittavat vasemmalle; lähteen oikealle ja kohti kameraa liike ei välity. Tämä on merkittävä suuntapoikkeama, vaikka neutraali vaunu ja katu ovat muuten kameramaisia.
+
+## SARAJEVO
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-sarajevo-uudet-6-8-20261013.json`. Toimitettu 0/2; kutsuja 2.
+
+- Poisjättö #207, slot 6: Vasemman horisontin useat selvästi erottuvat korkeat modernit kerrostaloblokit rikkovat lähteen nimenomaisen kiellon. Ne eivät häivy taustan utuun.
+- Poisjättö #208, slot 8: Vasemman kadun pylväässä näkyy punavalkoinen kylttimäinen levy, myös native-diagnostiikkarajauksessa. Sen vuoksi kyltittömyyttä ei voi luotettavasti varmentaa. Varovainen lähteen sallima poisjättö; kirjaimia ei väitetä luettaviksi. Kulkusuunta on muuten oikein.
 
 Kuvat toimitetaan suoraan lähteen mukaisesti Päätoimittajan arvioitaviksi omistajan valtuutuksella. Todellista PT/omistajahyväksyntää, Fable-vastaanottokuittausta, runtime-kytkentää tai pelijulkaisua ei väitetä varmennetuiksi. Jokaisen toimitetun kuvan natiivi on rootin tarkastama, ja R2 on luettu takaisin kahdesti (kanoninen ja välimuistin ohittava URL), tavut, PNG-MIME ja CORS varmennettu. PNG 1536×1024, sRGB, läpinäkymätön; vain ICC/metadata lisätty, pikselit säilytetty. Promptit, viitteet sekä natiivi- ja vienti-SHA ovat manifesteissa.
 

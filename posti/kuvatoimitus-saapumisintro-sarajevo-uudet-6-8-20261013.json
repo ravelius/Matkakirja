@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "cityName": "SARAJEVO",
+  "gameCityId": "sarajevo",
+  "mediaSlug": "sarajevo",
+  "taskNumbers": [
+    207,
+    208
+  ],
+  "updatedAt": "2026-10-13T18:10:20.068984+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [],
+  "omittedItems": [
+    {
+      "taskNumber": 207,
+      "slot": 6,
+      "reason": "Vasemman horisontin useat selvästi erottuvat korkeat modernit kerrostaloblokit rikkovat lähteen nimenomaisen kiellon. Ne eivät häivy taustan utuun.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "0aa9157e45dc570b655396f8a2784c7ec98b7c93ac187140c2550fb0df855e73",
+      "finalSHA256": "35fd9b05d0c8833afffdbe6f00a40ced1ea66870b7ca4c674d970402ded223f8"
+    },
+    {
+      "taskNumber": 208,
+      "slot": 8,
+      "reason": "Vasemman kadun pylväässä näkyy punavalkoinen kylttimäinen levy, myös native-diagnostiikkarajauksessa. Sen vuoksi kyltittömyyttä ei voi luotettavasti varmentaa. Varovainen lähteen sallima poisjättö; kirjaimia ei väitetä luettaviksi. Kulkusuunta on muuten oikein.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "aeda28d84834807fd1241662a633b83eb89ce46daa9765f6965206e0a6d204ae",
+      "finalSHA256": "ce02c59e8d4f04da965f606dd147a22eb2d7989d40e38ebda3a7e75488c9097a"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
