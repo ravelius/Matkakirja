@@ -132,3 +132,12 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
 - Vesipojan rintakaista = varjo (kolme valoa), ei mallia; LR vie pehmennyksen PT:lle. Vartija2: siirto muurikäytävään käynnistää K3:n (mh-tarkistus
   odottaa 12 s); vartija2-kuva yhä huono, istuva vartija ok.
 - Skenaariot: botti-mustat (täysi ruutu botin saapuessa 86/90), mh-tarkistus, v48x-kappeli; odottajapohja lokit/siirtoseppa-botti-nakyma/odota-v48x.sh.
+
+## PÄIVITYS 13.10. 05.0x — JUNA 186 KUITATTU
+
+- **Olavinlinna junaan 186 (PT kuittasi 04.5x):** linnahaara **cbad45ba9** + paketti **siirtoseppa/v48z 87cd75e03** (pala f8dc4a8cddbb4245,
+  esittely e63eed0f1149d99a; v48v-asut + kuuden tilan uudelleenleivonta). BOTTI 17/17 (olavinlinna-auto-1013-0427 abe73f861), askel 0 -arkki 10/10
+  (lokit/siirtoseppa-askel0/askel0-arkki-cbad-v48z.jpg). NS:lle ilmoitettu.
+- Piste 86 korjaantui (LR: v48t–x leivottu ilman fotogrammetriakuorta). Kappelin kuvat lokit/siirtoseppa-v48tu-kuvat/v48z-*.
+- Seuraavaksi: LR:n laajennuserä 3 (linnantupa, Kuninkaansali) LR:n ja LS2:n tahdissa; vartija2-MH-kuva yhä auki (K3 + agentti/malli);
+  porttikäytävän äänimaisema LS2:lla (omistaja ei vielä kuunnellut).
