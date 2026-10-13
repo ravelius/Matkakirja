@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "bridgetown",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
+  "sourceContentAfterSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
   "assets": [
     {
       "era": "e12",
@@ -53,10 +53,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
+      "sourceContentSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0a3ad040b0e58f90da6a40ae2be4e046579f199276ec0c51fab8ee155dfc8531",
-        "semanticContextSHA256": "0a3ad040b0e58f90da6a40ae2be4e046579f199276ec0c51fab8ee155dfc8531",
+        "targetBeforeSHA256": "4797cbfef9c701d6c730f6ca3cd1545499b70504f0dde16da035637a306b2b2b",
+        "semanticContextSHA256": "4797cbfef9c701d6c730f6ca3cd1545499b70504f0dde16da035637a306b2b2b",
         "subjectTitle": "Paraateista hevoskilpailuihin",
         "targetState": "existing-target"
       },
@@ -307,9 +307,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
-      "targetAfterSHA256": "0a3ad040b0e58f90da6a40ae2be4e046579f199276ec0c51fab8ee155dfc8531",
-      "contextAfterSHA256": "0a3ad040b0e58f90da6a40ae2be4e046579f199276ec0c51fab8ee155dfc8531",
+      "sourceContentAfterSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+      "targetAfterSHA256": "4797cbfef9c701d6c730f6ca3cd1545499b70504f0dde16da035637a306b2b2b",
+      "contextAfterSHA256": "4797cbfef9c701d6c730f6ca3cd1545499b70504f0dde16da035637a306b2b2b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -332,7 +332,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+        "sameImageNativeSHA256": "1c71856c6aadefd880a602a7300c6beb9c7668e2e7a4de880b6ae800c9c50482",
+        "sameImageExportSHA256": "b62da914c700c3b1d8d67a39e826b41353095c83501d59998aa2a4083945570d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -382,10 +390,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
+      "sourceContentSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0",
-        "semanticContextSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0",
+        "targetBeforeSHA256": "be07a9f97188eb6e0ccc88999f4a6ef72a01fb17eb65cab61de8f1857f07d5ee",
+        "semanticContextSHA256": "be07a9f97188eb6e0ccc88999f4a6ef72a01fb17eb65cab61de8f1857f07d5ee",
         "subjectTitle": "Kellotorni vaihtoi puolta",
         "targetState": "existing-target"
       },
@@ -629,9 +637,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
-      "targetAfterSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0",
-      "contextAfterSHA256": "35f88a14f6a82cb987ef11ab5929bc8d3746424a6922229f309a51625193aad0",
+      "sourceContentAfterSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+      "targetAfterSHA256": "be07a9f97188eb6e0ccc88999f4a6ef72a01fb17eb65cab61de8f1857f07d5ee",
+      "contextAfterSHA256": "be07a9f97188eb6e0ccc88999f4a6ef72a01fb17eb65cab61de8f1857f07d5ee",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -654,7 +662,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+        "sameImageNativeSHA256": "38af43766757eceb74bb39cc622bda703cf92ea033ca321c6e56a27b31cebbab",
+        "sameImageExportSHA256": "ba51cd8eefaae6668a29ee029361a665a0e5213db8c00e18040dfa678cdfd8a6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -673,14 +689,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/photo-e41b58c9edff18c1c555.jpg",
         "suora": true,
         "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)",
-        "selite": "Vaalealla rannalla on kävelijöitä ja uimareita; veden puolella näkyy purjeveneitä sekä laituri.",
+        "selite": "Bridgetownin rantaa ja purjeveneitä Barbadosilla.",
         "lyhyt": "Bridgetownin hiekkarantaa ja purjevene.",
         "tiedosto": "Bridgetown beach.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)",
-        "selite": "Vaalealla rannalla on kävelijöitä ja uimareita; veden puolella näkyy purjeveneitä sekä laituri.",
+        "selite": "Bridgetownin rantaa ja purjeveneitä Barbadosilla.",
         "lyhyt": "Bridgetownin hiekkarantaa ja purjevene.",
         "tiedosto": "Bridgetown beach.jpg"
       },
@@ -688,7 +704,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/photo-e41b58c9edff18c1c555.jpg",
         "suora": true,
         "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)",
-        "selite": "Vaalealla rannalla on kävelijöitä ja uimareita; veden puolella näkyy purjeveneitä sekä laituri.",
+        "selite": "Bridgetownin rantaa ja purjeveneitä Barbadosilla.",
         "lyhyt": "Bridgetownin hiekkarantaa ja purjevene.",
         "tiedosto": "Bridgetown beach.jpg"
       },
@@ -704,10 +720,10 @@
         3216
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
+      "sourceContentSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ff08be1344aaac64ef927da64fe4cb89485ed53936730c95c49bc243a796a014",
-        "semanticContextSHA256": "ff08be1344aaac64ef927da64fe4cb89485ed53936730c95c49bc243a796a014",
+        "targetBeforeSHA256": "dee4323524cbbcc7e6f92af7fd61665d3fac587a6197604b55d9d22d4993823d",
+        "semanticContextSHA256": "dee4323524cbbcc7e6f92af7fd61665d3fac587a6197604b55d9d22d4993823d",
         "subjectTitle": "bridgetown — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -905,7 +921,7 @@
       "priorMediaFields": {
         "tiedosto": "Bridgetown beach.jpg",
         "lyhyt": "Bridgetownin hiekkarantaa ja purjevene.",
-        "selite": "Vaalealla rannalla on kävelijöitä ja uimareita; veden puolella näkyy purjeveneitä sekä laituri.",
+        "selite": "Bridgetownin rantaa ja purjeveneitä Barbadosilla.",
         "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -932,14 +948,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)",
-        "selite": "Vaalealla rannalla on kävelijöitä ja uimareita; veden puolella näkyy purjeveneitä sekä laituri.",
+        "selite": "Bridgetownin rantaa ja purjeveneitä Barbadosilla.",
         "lyhyt": "Bridgetownin hiekkarantaa ja purjevene.",
         "tiedosto": "Bridgetown beach.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
-      "targetAfterSHA256": "ff08be1344aaac64ef927da64fe4cb89485ed53936730c95c49bc243a796a014",
-      "contextAfterSHA256": "ff08be1344aaac64ef927da64fe4cb89485ed53936730c95c49bc243a796a014",
+      "sourceContentAfterSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+      "targetAfterSHA256": "dee4323524cbbcc7e6f92af7fd61665d3fac587a6197604b55d9d22d4993823d",
+      "contextAfterSHA256": "dee4323524cbbcc7e6f92af7fd61665d3fac587a6197604b55d9d22d4993823d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -962,7 +978,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+        "sameImageNativeSHA256": "e41b58c9edff18c1c5559c6ea4e27d5e952320264027a2eb34219a643a201f90",
+        "sameImageExportSHA256": "e41b58c9edff18c1c5559c6ea4e27d5e952320264027a2eb34219a643a201f90",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -984,14 +1008,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c1-0e2b9f04ae3b2113fc82.jpg",
         "suora": true,
         "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Palmut kasvavat vaalealla hiekkarannalla, jonka edustalla murtuu aaltoja.",
+        "selite": "Drill Hall Beach on Barbadosin ranta.",
         "lyhyt": "Drill Hall Beachin palmuranta Barbadosilla.",
         "tiedosto": "Drill Hall Beach Barbados.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Palmut kasvavat vaalealla hiekkarannalla, jonka edustalla murtuu aaltoja.",
+        "selite": "Drill Hall Beach on Barbadosin ranta.",
         "lyhyt": "Drill Hall Beachin palmuranta Barbadosilla.",
         "tiedosto": "Drill Hall Beach Barbados.jpg"
       },
@@ -999,7 +1023,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c1-0e2b9f04ae3b2113fc82.jpg",
         "suora": true,
         "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Palmut kasvavat vaalealla hiekkarannalla, jonka edustalla murtuu aaltoja.",
+        "selite": "Drill Hall Beach on Barbadosin ranta.",
         "lyhyt": "Drill Hall Beachin palmuranta Barbadosilla.",
         "tiedosto": "Drill Hall Beach Barbados.jpg"
       },
@@ -1015,10 +1039,10 @@
         3418
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
+      "sourceContentSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "70709c723394ea807c2efdbc29781541db2e4e26258a619fe96fcbf8358bd487",
-        "semanticContextSHA256": "70709c723394ea807c2efdbc29781541db2e4e26258a619fe96fcbf8358bd487",
+        "targetBeforeSHA256": "efb9ac68b2f0ca19d6111202ca517f9acf224c209d080797e3971e066d52101a",
+        "semanticContextSHA256": "efb9ac68b2f0ca19d6111202ca517f9acf224c209d080797e3971e066d52101a",
         "subjectTitle": "Bridgetown",
         "targetState": "existing-target"
       },
@@ -1226,7 +1250,7 @@
       "priorMediaFields": {
         "tiedosto": "Drill Hall Beach Barbados.jpg",
         "lyhyt": "Drill Hall Beachin palmuranta Barbadosilla.",
-        "selite": "Palmut kasvavat vaalealla hiekkarannalla, jonka edustalla murtuu aaltoja.",
+        "selite": "Drill Hall Beach on Barbadosin ranta.",
         "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -1253,14 +1277,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Palmut kasvavat vaalealla hiekkarannalla, jonka edustalla murtuu aaltoja.",
+        "selite": "Drill Hall Beach on Barbadosin ranta.",
         "lyhyt": "Drill Hall Beachin palmuranta Barbadosilla.",
         "tiedosto": "Drill Hall Beach Barbados.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
-      "targetAfterSHA256": "70709c723394ea807c2efdbc29781541db2e4e26258a619fe96fcbf8358bd487",
-      "contextAfterSHA256": "70709c723394ea807c2efdbc29781541db2e4e26258a619fe96fcbf8358bd487",
+      "sourceContentAfterSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+      "targetAfterSHA256": "efb9ac68b2f0ca19d6111202ca517f9acf224c209d080797e3971e066d52101a",
+      "contextAfterSHA256": "efb9ac68b2f0ca19d6111202ca517f9acf224c209d080797e3971e066d52101a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1283,7 +1307,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+        "sameImageNativeSHA256": "0e2b9f04ae3b2113fc82273893eb8268fa4527d468e78856b9b54dcf6c547b02",
+        "sameImageExportSHA256": "0e2b9f04ae3b2113fc82273893eb8268fa4527d468e78856b9b54dcf6c547b02",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -1305,14 +1337,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c2-64eb525c63ffc9b9933f.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Katuverkko ja rakennukset levittäytyvät rannikolta sisämaahan; satama-allas ja hiekkarannat erottuvat veden äärellä.",
+        "selite": "Bridgetown avaruusasemalta kuvattuna.",
         "lyhyt": "Bridgetownin kaupunkialuetta avaruusasemalta.",
         "tiedosto": "Bridgetown, Barbados.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Katuverkko ja rakennukset levittäytyvät rannikolta sisämaahan; satama-allas ja hiekkarannat erottuvat veden äärellä.",
+        "selite": "Bridgetown avaruusasemalta kuvattuna.",
         "lyhyt": "Bridgetownin kaupunkialuetta avaruusasemalta.",
         "tiedosto": "Bridgetown, Barbados.jpg"
       },
@@ -1320,7 +1352,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c2-64eb525c63ffc9b9933f.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Katuverkko ja rakennukset levittäytyvät rannikolta sisämaahan; satama-allas ja hiekkarannat erottuvat veden äärellä.",
+        "selite": "Bridgetown avaruusasemalta kuvattuna.",
         "lyhyt": "Bridgetownin kaupunkialuetta avaruusasemalta.",
         "tiedosto": "Bridgetown, Barbados.jpg"
       },
@@ -1336,10 +1368,10 @@
         2845
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
+      "sourceContentSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5ce820f3f4f57b7d0c1f6d83882d1643e721831dc81c4afc46dfd22ce771a0e7",
-        "semanticContextSHA256": "5ce820f3f4f57b7d0c1f6d83882d1643e721831dc81c4afc46dfd22ce771a0e7",
+        "targetBeforeSHA256": "12e27afc2f10cd633b57c5ff17d4ecd6bbf53134be84dcd97b2c3e8ebea5c029",
+        "semanticContextSHA256": "12e27afc2f10cd633b57c5ff17d4ecd6bbf53134be84dcd97b2c3e8ebea5c029",
         "subjectTitle": "Bridgetown",
         "targetState": "existing-target"
       },
@@ -1509,7 +1541,7 @@
       "priorMediaFields": {
         "tiedosto": "Bridgetown, Barbados.jpg",
         "lyhyt": "Bridgetownin kaupunkialuetta avaruusasemalta.",
-        "selite": "Katuverkko ja rakennukset levittäytyvät rannikolta sisämaahan; satama-allas ja hiekkarannat erottuvat veden äärellä.",
+        "selite": "Bridgetown avaruusasemalta kuvattuna.",
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -1536,14 +1568,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Katuverkko ja rakennukset levittäytyvät rannikolta sisämaahan; satama-allas ja hiekkarannat erottuvat veden äärellä.",
+        "selite": "Bridgetown avaruusasemalta kuvattuna.",
         "lyhyt": "Bridgetownin kaupunkialuetta avaruusasemalta.",
         "tiedosto": "Bridgetown, Barbados.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
-      "targetAfterSHA256": "5ce820f3f4f57b7d0c1f6d83882d1643e721831dc81c4afc46dfd22ce771a0e7",
-      "contextAfterSHA256": "5ce820f3f4f57b7d0c1f6d83882d1643e721831dc81c4afc46dfd22ce771a0e7",
+      "sourceContentAfterSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+      "targetAfterSHA256": "12e27afc2f10cd633b57c5ff17d4ecd6bbf53134be84dcd97b2c3e8ebea5c029",
+      "contextAfterSHA256": "12e27afc2f10cd633b57c5ff17d4ecd6bbf53134be84dcd97b2c3e8ebea5c029",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1566,7 +1598,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+        "sameImageNativeSHA256": "64eb525c63ffc9b9933f22242690b1ca0b5a73e8364145f16c2dbc61046cce65",
+        "sameImageExportSHA256": "64eb525c63ffc9b9933f22242690b1ca0b5a73e8364145f16c2dbc61046cce65",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -1588,14 +1628,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c3-6d30c93da5e8bc1f3925.jpg",
         "suora": true,
         "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Veden takana näkyvät sataman nostureita ja rakennuksia, ja taivaalla on suuria pilviä.",
+        "selite": "Bridgetownin sataman edusta mereltä katsottuna.",
         "lyhyt": "Bridgetownin sataman edusta mereltä.",
         "tiedosto": "Approaching Barbados - Bridgetown Harbour - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Veden takana näkyvät sataman nostureita ja rakennuksia, ja taivaalla on suuria pilviä.",
+        "selite": "Bridgetownin sataman edusta mereltä katsottuna.",
         "lyhyt": "Bridgetownin sataman edusta mereltä.",
         "tiedosto": "Approaching Barbados - Bridgetown Harbour - panoramio.jpg"
       },
@@ -1603,7 +1643,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/c3-6d30c93da5e8bc1f3925.jpg",
         "suora": true,
         "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Veden takana näkyvät sataman nostureita ja rakennuksia, ja taivaalla on suuria pilviä.",
+        "selite": "Bridgetownin sataman edusta mereltä katsottuna.",
         "lyhyt": "Bridgetownin sataman edusta mereltä.",
         "tiedosto": "Approaching Barbados - Bridgetown Harbour - panoramio.jpg"
       },
@@ -1619,10 +1659,10 @@
         2040
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
+      "sourceContentSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "72cdc46c6717ac167e603ffde8f3a5d2351c1a27adb9f86f3c635549c5190d33",
-        "semanticContextSHA256": "72cdc46c6717ac167e603ffde8f3a5d2351c1a27adb9f86f3c635549c5190d33",
+        "targetBeforeSHA256": "a2b4a1a2a5d73bec465feed5c47cf14c33259b108d50dd57274090c579fcc25f",
+        "semanticContextSHA256": "a2b4a1a2a5d73bec465feed5c47cf14c33259b108d50dd57274090c579fcc25f",
         "subjectTitle": "Bridgetown",
         "targetState": "existing-target"
       },
@@ -1816,7 +1856,7 @@
       "priorMediaFields": {
         "tiedosto": "Approaching Barbados - Bridgetown Harbour - panoramio.jpg",
         "lyhyt": "Bridgetownin sataman edusta mereltä.",
-        "selite": "Veden takana näkyvät sataman nostureita ja rakennuksia, ja taivaalla on suuria pilviä.",
+        "selite": "Bridgetownin sataman edusta mereltä katsottuna.",
         "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -1843,14 +1883,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Veden takana näkyvät sataman nostureita ja rakennuksia, ja taivaalla on suuria pilviä.",
+        "selite": "Bridgetownin sataman edusta mereltä katsottuna.",
         "lyhyt": "Bridgetownin sataman edusta mereltä.",
         "tiedosto": "Approaching Barbados - Bridgetown Harbour - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
-      "targetAfterSHA256": "72cdc46c6717ac167e603ffde8f3a5d2351c1a27adb9f86f3c635549c5190d33",
-      "contextAfterSHA256": "72cdc46c6717ac167e603ffde8f3a5d2351c1a27adb9f86f3c635549c5190d33",
+      "sourceContentAfterSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+      "targetAfterSHA256": "a2b4a1a2a5d73bec465feed5c47cf14c33259b108d50dd57274090c579fcc25f",
+      "contextAfterSHA256": "a2b4a1a2a5d73bec465feed5c47cf14c33259b108d50dd57274090c579fcc25f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1873,7 +1913,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+        "sameImageNativeSHA256": "6d30c93da5e8bc1f39256166e808078452ccebf655521b3a49c8f003425b3964",
+        "sameImageExportSHA256": "6d30c93da5e8bc1f39256166e808078452ccebf655521b3a49c8f003425b3964",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -1895,14 +1943,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/l2-23e978c9e6de4fd93c97.jpg",
         "suora": true,
         "lahde": "Rennboot, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Pitkät ruuvit reunustavat vedellä täyttynyttä telakka-allasta, jonka suulla näkyy veneitä.",
+        "selite": "Bridgetownin historiallinen Blackwoods Screw Dock -telakka.",
         "lyhyt": "Bridgetownin Screw Dockin ruuvit ja telakka-allas.",
         "tiedosto": "191223 Bridgetown Screw Dock.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Rennboot, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Pitkät ruuvit reunustavat vedellä täyttynyttä telakka-allasta, jonka suulla näkyy veneitä.",
+        "selite": "Bridgetownin historiallinen Blackwoods Screw Dock -telakka.",
         "lyhyt": "Bridgetownin Screw Dockin ruuvit ja telakka-allas.",
         "tiedosto": "191223 Bridgetown Screw Dock.jpg"
       },
@@ -1910,7 +1958,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/bridgetown/l2-23e978c9e6de4fd93c97.jpg",
         "suora": true,
         "lahde": "Rennboot, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Pitkät ruuvit reunustavat vedellä täyttynyttä telakka-allasta, jonka suulla näkyy veneitä.",
+        "selite": "Bridgetownin historiallinen Blackwoods Screw Dock -telakka.",
         "lyhyt": "Bridgetownin Screw Dockin ruuvit ja telakka-allas.",
         "tiedosto": "191223 Bridgetown Screw Dock.jpg"
       },
@@ -1926,10 +1974,10 @@
         1200
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/bridgetown/sisalto.json",
-      "sourceContentSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
+      "sourceContentSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a85c33add0c70d8c21cf14e4b19743a875449d7cf1cd575f50b91396c615cdbc",
-        "semanticContextSHA256": "a85c33add0c70d8c21cf14e4b19743a875449d7cf1cd575f50b91396c615cdbc",
+        "targetBeforeSHA256": "f7a636731d3b0d6d481edd0ef14047f515a0c528af5ea782265407f78c7163f2",
+        "semanticContextSHA256": "f7a636731d3b0d6d481edd0ef14047f515a0c528af5ea782265407f78c7163f2",
         "subjectTitle": "Telakka nosti koko laivan",
         "targetState": "existing-target"
       },
@@ -2107,7 +2155,7 @@
       "priorMediaFields": {
         "tiedosto": "191223 Bridgetown Screw Dock.jpg",
         "lyhyt": "Bridgetownin Screw Dockin ruuvit ja telakka-allas.",
-        "selite": "Pitkät ruuvit reunustavat vedellä täyttynyttä telakka-allasta, jonka suulla näkyy veneitä.",
+        "selite": "Bridgetownin historiallinen Blackwoods Screw Dock -telakka.",
         "lahde": "Rennboot, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2134,14 +2182,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Rennboot, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Pitkät ruuvit reunustavat vedellä täyttynyttä telakka-allasta, jonka suulla näkyy veneitä.",
+        "selite": "Bridgetownin historiallinen Blackwoods Screw Dock -telakka.",
         "lyhyt": "Bridgetownin Screw Dockin ruuvit ja telakka-allas.",
         "tiedosto": "191223 Bridgetown Screw Dock.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "577cf24beaaebe927378b911cbb3a023e3ce46193235f7011828e34046fc6fa0",
-      "targetAfterSHA256": "a85c33add0c70d8c21cf14e4b19743a875449d7cf1cd575f50b91396c615cdbc",
-      "contextAfterSHA256": "a85c33add0c70d8c21cf14e4b19743a875449d7cf1cd575f50b91396c615cdbc",
+      "sourceContentAfterSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+      "targetAfterSHA256": "f7a636731d3b0d6d481edd0ef14047f515a0c528af5ea782265407f78c7163f2",
+      "contextAfterSHA256": "f7a636731d3b0d6d481edd0ef14047f515a0c528af5ea782265407f78c7163f2",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2164,7 +2212,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "e4d2dcf34cd94ce1586a1887237a3b9537739e0f30cf8032dd8a59bf6ea76a75",
+        "sameImageNativeSHA256": "23e978c9e6de4fd93c972cf553b6014ee53aa1f41e8848de9a0d604045730d10",
+        "sameImageExportSHA256": "23e978c9e6de4fd93c972cf553b6014ee53aa1f41e8848de9a0d604045730d10",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2176,6 +2232,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e12/bridgetown/5d6f6cf299c1f37e7427b627a9e729120038be3a3978d7647d2d664e14e12384.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.235947+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e12/bridgetown/2216b26babdac6ff6ff5a8be0ba2c5d8fbd2257dccfd0d441cdc0d22150eaca8.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.235947+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:48.670765+00:00"
 }

@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "roseau",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+  "sourceContentAfterSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
   "assets": [
     {
       "era": "e12",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "afff1df63ea68c8d02ff922ae7bf289688b856845127fbc458d6807d70489aee",
+        "semanticContextSHA256": "e05803d55ff979c23a695f2c07c311f5688b30df727abc8e14d854e55e32708b",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -337,9 +337,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentAfterSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "afff1df63ea68c8d02ff922ae7bf289688b856845127fbc458d6807d70489aee",
+      "contextAfterSHA256": "e05803d55ff979c23a695f2c07c311f5688b30df727abc8e14d854e55e32708b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -362,7 +362,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+        "sameImageNativeSHA256": "0051aefde97623afdff55890b5bd72aa151c97e883f0eb6fbcb0bf96303fae5f",
+        "sameImageExportSHA256": "fa7e141fe461ac2065bc8e55d72436d61aaafe79c4a8e5b19902ef3fab29bc66",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -412,10 +420,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "15ec1f1b3991ce644c915e8fa4a3102586064882ad9e11e4f0d9a443095eb037",
-        "semanticContextSHA256": "15ec1f1b3991ce644c915e8fa4a3102586064882ad9e11e4f0d9a443095eb037",
+        "targetBeforeSHA256": "b1bcdfbc75524e0283150f7586bb7f95a28b5d3cb2aa9c96ad0c8bc90e2a1642",
+        "semanticContextSHA256": "b1bcdfbc75524e0283150f7586bb7f95a28b5d3cb2aa9c96ad0c8bc90e2a1642",
         "subjectTitle": "Jokirannan syötävä kokoelma",
         "targetState": "existing-target"
       },
@@ -692,9 +700,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
-      "targetAfterSHA256": "15ec1f1b3991ce644c915e8fa4a3102586064882ad9e11e4f0d9a443095eb037",
-      "contextAfterSHA256": "15ec1f1b3991ce644c915e8fa4a3102586064882ad9e11e4f0d9a443095eb037",
+      "sourceContentAfterSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+      "targetAfterSHA256": "b1bcdfbc75524e0283150f7586bb7f95a28b5d3cb2aa9c96ad0c8bc90e2a1642",
+      "contextAfterSHA256": "b1bcdfbc75524e0283150f7586bb7f95a28b5d3cb2aa9c96ad0c8bc90e2a1642",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -717,7 +725,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+        "sameImageNativeSHA256": "72e4cf90a7770e6d40f9ee8a7994bec5656f8a82fd4a2c4714498924ed2cada0",
+        "sameImageExportSHA256": "b0822a0ce0e3d61268dec903528029fccd133efc02e94eef3cce63774d5badf5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -767,7 +783,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2bf5f66ae45f98a0f486388563432670b12e42694634a0494d062cacbfb4424f",
         "semanticContextSHA256": "2bf5f66ae45f98a0f486388563432670b12e42694634a0494d062cacbfb4424f",
@@ -1021,7 +1037,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentAfterSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "targetAfterSHA256": "2bf5f66ae45f98a0f486388563432670b12e42694634a0494d062cacbfb4424f",
       "contextAfterSHA256": "2bf5f66ae45f98a0f486388563432670b12e42694634a0494d062cacbfb4424f",
       "ownerApproved": true,
@@ -1046,7 +1062,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+        "sameImageNativeSHA256": "da6040f9c432100aa4a986745c5ab65c6d902e8e4316d180b62e8f0dec89cfba",
+        "sameImageExportSHA256": "6c6b467265f26d35fd12232065201070bc1475fad1045ebdd4c2e395c5963295",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -1065,7 +1089,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/photo-c03e62e0a477c13808af.jpg",
         "suora": true,
         "lahde": "Postdlf, Commons (CC BY-SA 3.0)",
-        "selite": "Pieni Anolis oculatus -lisko tarttuu punaiseen kukintoon vaalean kukkien ja vihreiden lehtien keskellä.",
+        "selite": "Anolis oculatus -lisko on kuvattu Roseaussa vuonna 2009.",
         "lyhyt": "Anolis-lisko kukinnon kyljellä Roseaussa.",
         "tiedosto": "Anolis oculatus at Roseau-a01.jpg",
         "vuosi": "2009"
@@ -1073,7 +1097,7 @@
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Postdlf, Commons (CC BY-SA 3.0)",
-        "selite": "Pieni Anolis oculatus -lisko tarttuu punaiseen kukintoon vaalean kukkien ja vihreiden lehtien keskellä.",
+        "selite": "Anolis oculatus -lisko on kuvattu Roseaussa vuonna 2009.",
         "lyhyt": "Anolis-lisko kukinnon kyljellä Roseaussa.",
         "tiedosto": "Anolis oculatus at Roseau-a01.jpg",
         "vuosi": "2009"
@@ -1082,7 +1106,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/photo-c03e62e0a477c13808af.jpg",
         "suora": true,
         "lahde": "Postdlf, Commons (CC BY-SA 3.0)",
-        "selite": "Pieni Anolis oculatus -lisko tarttuu punaiseen kukintoon vaalean kukkien ja vihreiden lehtien keskellä.",
+        "selite": "Anolis oculatus -lisko on kuvattu Roseaussa vuonna 2009.",
         "lyhyt": "Anolis-lisko kukinnon kyljellä Roseaussa.",
         "tiedosto": "Anolis oculatus at Roseau-a01.jpg",
         "vuosi": "2009"
@@ -1099,10 +1123,10 @@
         2286
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "4496881162363a56a75980ee965bbcc250018ff5f2b5f77993d5bed583957e9d",
-        "semanticContextSHA256": "4496881162363a56a75980ee965bbcc250018ff5f2b5f77993d5bed583957e9d",
+        "targetBeforeSHA256": "273433bf4f662f42fa47660cce22b6c54877313ecc5999f1d4b035cc59d8fec4",
+        "semanticContextSHA256": "273433bf4f662f42fa47660cce22b6c54877313ecc5999f1d4b035cc59d8fec4",
         "subjectTitle": "roseau — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1290,7 +1314,7 @@
       "priorMediaFields": {
         "tiedosto": "Anolis oculatus at Roseau-a01.jpg",
         "lyhyt": "Anolis-lisko kukinnon kyljellä Roseaussa.",
-        "selite": "Pieni Anolis oculatus -lisko tarttuu punaiseen kukintoon vaalean kukkien ja vihreiden lehtien keskellä.",
+        "selite": "Anolis oculatus -lisko on kuvattu Roseaussa vuonna 2009.",
         "lahde": "Postdlf, Commons (CC BY-SA 3.0)",
         "vuosi": "2009"
       },
@@ -1318,15 +1342,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Postdlf, Commons (CC BY-SA 3.0)",
-        "selite": "Pieni Anolis oculatus -lisko tarttuu punaiseen kukintoon vaalean kukkien ja vihreiden lehtien keskellä.",
+        "selite": "Anolis oculatus -lisko on kuvattu Roseaussa vuonna 2009.",
         "lyhyt": "Anolis-lisko kukinnon kyljellä Roseaussa.",
         "tiedosto": "Anolis oculatus at Roseau-a01.jpg",
         "vuosi": "2009"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
-      "targetAfterSHA256": "4496881162363a56a75980ee965bbcc250018ff5f2b5f77993d5bed583957e9d",
-      "contextAfterSHA256": "4496881162363a56a75980ee965bbcc250018ff5f2b5f77993d5bed583957e9d",
+      "sourceContentAfterSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+      "targetAfterSHA256": "273433bf4f662f42fa47660cce22b6c54877313ecc5999f1d4b035cc59d8fec4",
+      "contextAfterSHA256": "273433bf4f662f42fa47660cce22b6c54877313ecc5999f1d4b035cc59d8fec4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1349,7 +1373,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+        "sameImageNativeSHA256": "c03e62e0a477c13808afc7e14dbfc892549f1689386337a40d9fad711052eca1",
+        "sameImageExportSHA256": "c03e62e0a477c13808afc7e14dbfc892549f1689386337a40d9fad711052eca1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -1371,14 +1403,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/c1-dba01a29c09b585f890a.jpg",
         "suora": true,
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Laajaa nurmikenttää reunustavat puut ja pensaat; taustalla näkyy Roseaun rakennuksia.",
+        "selite": "Dominican kasvitieteellisen puutarhan nurmialue Roseaussa.",
         "lyhyt": "Dominican kasvitieteellisen puutarhan nurmikenttää.",
         "tiedosto": "Dominica Botanical Gardens (5).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Laajaa nurmikenttää reunustavat puut ja pensaat; taustalla näkyy Roseaun rakennuksia.",
+        "selite": "Dominican kasvitieteellisen puutarhan nurmialue Roseaussa.",
         "lyhyt": "Dominican kasvitieteellisen puutarhan nurmikenttää.",
         "tiedosto": "Dominica Botanical Gardens (5).jpg"
       },
@@ -1386,7 +1418,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/c1-dba01a29c09b585f890a.jpg",
         "suora": true,
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Laajaa nurmikenttää reunustavat puut ja pensaat; taustalla näkyy Roseaun rakennuksia.",
+        "selite": "Dominican kasvitieteellisen puutarhan nurmialue Roseaussa.",
         "lyhyt": "Dominican kasvitieteellisen puutarhan nurmikenttää.",
         "tiedosto": "Dominica Botanical Gardens (5).jpg"
       },
@@ -1402,10 +1434,10 @@
         2879
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a569c09bce22cb93c62df5f1bb30fea25bc1f44a8bcdea1b95bcd15c37c4d198",
-        "semanticContextSHA256": "a569c09bce22cb93c62df5f1bb30fea25bc1f44a8bcdea1b95bcd15c37c4d198",
+        "targetBeforeSHA256": "584758c6a1b25d47e4c2c2eafaa03b8308cb7732ceeb971ab77c8d485d399c48",
+        "semanticContextSHA256": "584758c6a1b25d47e4c2c2eafaa03b8308cb7732ceeb971ab77c8d485d399c48",
         "subjectTitle": "Roseau",
         "targetState": "existing-target"
       },
@@ -1647,7 +1679,7 @@
       "priorMediaFields": {
         "tiedosto": "Dominica Botanical Gardens (5).jpg",
         "lyhyt": "Dominican kasvitieteellisen puutarhan nurmikenttää.",
-        "selite": "Laajaa nurmikenttää reunustavat puut ja pensaat; taustalla näkyy Roseaun rakennuksia.",
+        "selite": "Dominican kasvitieteellisen puutarhan nurmialue Roseaussa.",
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -1674,14 +1706,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Laajaa nurmikenttää reunustavat puut ja pensaat; taustalla näkyy Roseaun rakennuksia.",
+        "selite": "Dominican kasvitieteellisen puutarhan nurmialue Roseaussa.",
         "lyhyt": "Dominican kasvitieteellisen puutarhan nurmikenttää.",
         "tiedosto": "Dominica Botanical Gardens (5).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
-      "targetAfterSHA256": "a569c09bce22cb93c62df5f1bb30fea25bc1f44a8bcdea1b95bcd15c37c4d198",
-      "contextAfterSHA256": "a569c09bce22cb93c62df5f1bb30fea25bc1f44a8bcdea1b95bcd15c37c4d198",
+      "sourceContentAfterSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+      "targetAfterSHA256": "584758c6a1b25d47e4c2c2eafaa03b8308cb7732ceeb971ab77c8d485d399c48",
+      "contextAfterSHA256": "584758c6a1b25d47e4c2c2eafaa03b8308cb7732ceeb971ab77c8d485d399c48",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1704,7 +1736,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+        "sameImageNativeSHA256": "dba01a29c09b585f890aaf161d9c0dd50e0e31065fcbb3bb38a09b072de86206",
+        "sameImageExportSHA256": "dba01a29c09b585f890aaf161d9c0dd50e0e31065fcbb3bb38a09b072de86206",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -1726,14 +1766,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/c2-040f360b0da1c9703e07.jpg",
         "suora": true,
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Suuri puu kohoaa nurmikentällä, jonka reunaa seuraa kulunut polku.",
+        "selite": "Dominican kasvitieteellisen puutarhan puustoa.",
         "lyhyt": "Puita ja polku Dominican kasvitieteellisessä puutarhassa.",
         "tiedosto": "Dominica Botanical Gardens (3).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Suuri puu kohoaa nurmikentällä, jonka reunaa seuraa kulunut polku.",
+        "selite": "Dominican kasvitieteellisen puutarhan puustoa.",
         "lyhyt": "Puita ja polku Dominican kasvitieteellisessä puutarhassa.",
         "tiedosto": "Dominica Botanical Gardens (3).jpg"
       },
@@ -1741,7 +1781,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/c2-040f360b0da1c9703e07.jpg",
         "suora": true,
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Suuri puu kohoaa nurmikentällä, jonka reunaa seuraa kulunut polku.",
+        "selite": "Dominican kasvitieteellisen puutarhan puustoa.",
         "lyhyt": "Puita ja polku Dominican kasvitieteellisessä puutarhassa.",
         "tiedosto": "Dominica Botanical Gardens (3).jpg"
       },
@@ -1757,10 +1797,10 @@
         3314
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "48ddd69d8fee468f249848b9df783e4902cdff212c99e9c703cf37e04bfc4299",
-        "semanticContextSHA256": "48ddd69d8fee468f249848b9df783e4902cdff212c99e9c703cf37e04bfc4299",
+        "targetBeforeSHA256": "bcd4ac5ab57c04699359e772ce09b77868e9da7086dcd8d632bfaf643e952189",
+        "semanticContextSHA256": "bcd4ac5ab57c04699359e772ce09b77868e9da7086dcd8d632bfaf643e952189",
         "subjectTitle": "Roseau",
         "targetState": "existing-target"
       },
@@ -2002,7 +2042,7 @@
       "priorMediaFields": {
         "tiedosto": "Dominica Botanical Gardens (3).jpg",
         "lyhyt": "Puita ja polku Dominican kasvitieteellisessä puutarhassa.",
-        "selite": "Suuri puu kohoaa nurmikentällä, jonka reunaa seuraa kulunut polku.",
+        "selite": "Dominican kasvitieteellisen puutarhan puustoa.",
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2029,14 +2069,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Suuri puu kohoaa nurmikentällä, jonka reunaa seuraa kulunut polku.",
+        "selite": "Dominican kasvitieteellisen puutarhan puustoa.",
         "lyhyt": "Puita ja polku Dominican kasvitieteellisessä puutarhassa.",
         "tiedosto": "Dominica Botanical Gardens (3).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
-      "targetAfterSHA256": "48ddd69d8fee468f249848b9df783e4902cdff212c99e9c703cf37e04bfc4299",
-      "contextAfterSHA256": "48ddd69d8fee468f249848b9df783e4902cdff212c99e9c703cf37e04bfc4299",
+      "sourceContentAfterSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+      "targetAfterSHA256": "bcd4ac5ab57c04699359e772ce09b77868e9da7086dcd8d632bfaf643e952189",
+      "contextAfterSHA256": "bcd4ac5ab57c04699359e772ce09b77868e9da7086dcd8d632bfaf643e952189",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2059,7 +2099,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+        "sameImageNativeSHA256": "040f360b0da1c9703e070e71baf8d8380fb52a8cbebf590f93e756b838b87528",
+        "sameImageExportSHA256": "040f360b0da1c9703e070e71baf8d8380fb52a8cbebf590f93e756b838b87528",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -2081,14 +2129,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/c3-ee6033084c5a548ba68e.jpg",
         "suora": true,
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Puiden latvukset levittäytyvät avoimen nurmikentän ylle Dominican kasvitieteellisessä puutarhassa.",
+        "selite": "Lehtipuita Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Suuria lehtipuita puutarhan nurmialueella.",
         "tiedosto": "Dominica Botanical Gardens (4).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Puiden latvukset levittäytyvät avoimen nurmikentän ylle Dominican kasvitieteellisessä puutarhassa.",
+        "selite": "Lehtipuita Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Suuria lehtipuita puutarhan nurmialueella.",
         "tiedosto": "Dominica Botanical Gardens (4).jpg"
       },
@@ -2096,7 +2144,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/c3-ee6033084c5a548ba68e.jpg",
         "suora": true,
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Puiden latvukset levittäytyvät avoimen nurmikentän ylle Dominican kasvitieteellisessä puutarhassa.",
+        "selite": "Lehtipuita Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Suuria lehtipuita puutarhan nurmialueella.",
         "tiedosto": "Dominica Botanical Gardens (4).jpg"
       },
@@ -2112,10 +2160,10 @@
         3242
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c6acc702632ca2a4fbeeb736c5914e51c860efddc7d5a6728dddebf503bdc330",
-        "semanticContextSHA256": "c6acc702632ca2a4fbeeb736c5914e51c860efddc7d5a6728dddebf503bdc330",
+        "targetBeforeSHA256": "1df744b1d47d89d38bd6c29164bebf12ea09ea6e9e88db702947bcc7a8f2e553",
+        "semanticContextSHA256": "1df744b1d47d89d38bd6c29164bebf12ea09ea6e9e88db702947bcc7a8f2e553",
         "subjectTitle": "Roseau",
         "targetState": "existing-target"
       },
@@ -2357,7 +2405,7 @@
       "priorMediaFields": {
         "tiedosto": "Dominica Botanical Gardens (4).jpg",
         "lyhyt": "Suuria lehtipuita puutarhan nurmialueella.",
-        "selite": "Puiden latvukset levittäytyvät avoimen nurmikentän ylle Dominican kasvitieteellisessä puutarhassa.",
+        "selite": "Lehtipuita Dominican kasvitieteellisessä puutarhassa.",
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2384,14 +2432,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Puiden latvukset levittäytyvät avoimen nurmikentän ylle Dominican kasvitieteellisessä puutarhassa.",
+        "selite": "Lehtipuita Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Suuria lehtipuita puutarhan nurmialueella.",
         "tiedosto": "Dominica Botanical Gardens (4).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
-      "targetAfterSHA256": "c6acc702632ca2a4fbeeb736c5914e51c860efddc7d5a6728dddebf503bdc330",
-      "contextAfterSHA256": "c6acc702632ca2a4fbeeb736c5914e51c860efddc7d5a6728dddebf503bdc330",
+      "sourceContentAfterSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+      "targetAfterSHA256": "1df744b1d47d89d38bd6c29164bebf12ea09ea6e9e88db702947bcc7a8f2e553",
+      "contextAfterSHA256": "1df744b1d47d89d38bd6c29164bebf12ea09ea6e9e88db702947bcc7a8f2e553",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2414,7 +2462,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+        "sameImageNativeSHA256": "ee6033084c5a548ba68eab928426ff01e8e36de6882b5aa93d429dc6e66ac6d6",
+        "sameImageExportSHA256": "ee6033084c5a548ba68eab928426ff01e8e36de6882b5aa93d429dc6e66ac6d6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -2436,14 +2492,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
         "suora": true,
         "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Keltaisen bussin ruostuneet jäänteet ovat suuren puun alla; muistopaikka liittyy hurrikaani Davidin tuhoon.",
+        "selite": "Hurrikaani Davidin kaataman puun murskaama tyhjä koulubussi säilytettiin puutarhassa.",
         "lyhyt": "Puun murskaaman koulubussin jäänteet Roseaun puutarhassa.",
         "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Keltaisen bussin ruostuneet jäänteet ovat suuren puun alla; muistopaikka liittyy hurrikaani Davidin tuhoon.",
+        "selite": "Hurrikaani Davidin kaataman puun murskaama tyhjä koulubussi säilytettiin puutarhassa.",
         "lyhyt": "Puun murskaaman koulubussin jäänteet Roseaun puutarhassa.",
         "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
       },
@@ -2451,7 +2507,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/traveler-a08dd906dab52152745f.jpg",
         "suora": true,
         "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Keltaisen bussin ruostuneet jäänteet ovat suuren puun alla; muistopaikka liittyy hurrikaani Davidin tuhoon.",
+        "selite": "Hurrikaani Davidin kaataman puun murskaama tyhjä koulubussi säilytettiin puutarhassa.",
         "lyhyt": "Puun murskaaman koulubussin jäänteet Roseaun puutarhassa.",
         "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
       },
@@ -2467,10 +2523,10 @@
         4080
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3c6dae9ad6fa2fd14ec27003a7e47725e123bd70e532cf710c68000c334a3590",
-        "semanticContextSHA256": "b4659cf0af1f36a5b58e0ea1b16bc29eb9be9b57c69434d0f3f36f34fc6319aa",
+        "targetBeforeSHA256": "31e551d48afa4c4ac752645f60a4670064b126fb213a2e6b2221d426f0cb96bd",
+        "semanticContextSHA256": "0e5c0c9f3a53c84afa18b1ae71c10d37f8ed4fd0294bd7366e3457c46dd3c340",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -2742,7 +2798,7 @@
       "priorMediaFields": {
         "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg",
         "lyhyt": "Puun murskaaman koulubussin jäänteet Roseaun puutarhassa.",
-        "selite": "Keltaisen bussin ruostuneet jäänteet ovat suuren puun alla; muistopaikka liittyy hurrikaani Davidin tuhoon.",
+        "selite": "Hurrikaani Davidin kaataman puun murskaama tyhjä koulubussi säilytettiin puutarhassa.",
         "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2769,14 +2825,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Keltaisen bussin ruostuneet jäänteet ovat suuren puun alla; muistopaikka liittyy hurrikaani Davidin tuhoon.",
+        "selite": "Hurrikaani Davidin kaataman puun murskaama tyhjä koulubussi säilytettiin puutarhassa.",
         "lyhyt": "Puun murskaaman koulubussin jäänteet Roseaun puutarhassa.",
         "tiedosto": "Dominica Botanic Gardens 02 2025 04.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
-      "targetAfterSHA256": "3c6dae9ad6fa2fd14ec27003a7e47725e123bd70e532cf710c68000c334a3590",
-      "contextAfterSHA256": "b4659cf0af1f36a5b58e0ea1b16bc29eb9be9b57c69434d0f3f36f34fc6319aa",
+      "sourceContentAfterSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+      "targetAfterSHA256": "31e551d48afa4c4ac752645f60a4670064b126fb213a2e6b2221d426f0cb96bd",
+      "contextAfterSHA256": "0e5c0c9f3a53c84afa18b1ae71c10d37f8ed4fd0294bd7366e3457c46dd3c340",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2799,7 +2855,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+        "sameImageNativeSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
+        "sameImageExportSHA256": "a08dd906dab52152745f816f692e892997b910bb67b11c2b70196473f8f703d8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -2824,14 +2888,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/o3-d70be8e7501b839dd048.jpg",
         "suora": true,
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dominican kasvitieteellisen puutarhan nurmialueella kasvaa palmuja ja lehtipuita rakennuksen ympärillä.",
+        "selite": "Puita ja rakennus Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Puiston puita ja pieni vihreä rakennus.",
         "tiedosto": "Dominica Botanical Gardens (6).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dominican kasvitieteellisen puutarhan nurmialueella kasvaa palmuja ja lehtipuita rakennuksen ympärillä.",
+        "selite": "Puita ja rakennus Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Puiston puita ja pieni vihreä rakennus.",
         "tiedosto": "Dominica Botanical Gardens (6).jpg"
       },
@@ -2839,7 +2903,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/o3-d70be8e7501b839dd048.jpg",
         "suora": true,
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dominican kasvitieteellisen puutarhan nurmialueella kasvaa palmuja ja lehtipuita rakennuksen ympärillä.",
+        "selite": "Puita ja rakennus Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Puiston puita ja pieni vihreä rakennus.",
         "tiedosto": "Dominica Botanical Gardens (6).jpg"
       },
@@ -2855,10 +2919,10 @@
         3729
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f4215b955f0960cc6c58d53976a5ad011d5cef7f848499803ea7b8cde339fe05",
-        "semanticContextSHA256": "785b37500a121d46907967898fc86edbb79297afd7df284bfcbc6cf8f3397b24",
+        "targetBeforeSHA256": "f03d3bd64d5194ee7919993993389fae2df9fafd059a1b97340fe838a37e0c2c",
+        "semanticContextSHA256": "5298d61628a29af3078509f6a4bbb9c12ae4fb292d4b9107f378bd20ee31c6d5",
         "subjectTitle": "Puutarhasta näkymäpaikalle",
         "targetState": "existing-target"
       },
@@ -3100,7 +3164,7 @@
       "priorMediaFields": {
         "tiedosto": "Dominica Botanical Gardens (6).jpg",
         "lyhyt": "Puiston puita ja pieni vihreä rakennus.",
-        "selite": "Dominican kasvitieteellisen puutarhan nurmialueella kasvaa palmuja ja lehtipuita rakennuksen ympärillä.",
+        "selite": "Puita ja rakennus Dominican kasvitieteellisessä puutarhassa.",
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3127,14 +3191,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Tournasol7, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Dominican kasvitieteellisen puutarhan nurmialueella kasvaa palmuja ja lehtipuita rakennuksen ympärillä.",
+        "selite": "Puita ja rakennus Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Puiston puita ja pieni vihreä rakennus.",
         "tiedosto": "Dominica Botanical Gardens (6).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
-      "targetAfterSHA256": "f4215b955f0960cc6c58d53976a5ad011d5cef7f848499803ea7b8cde339fe05",
-      "contextAfterSHA256": "785b37500a121d46907967898fc86edbb79297afd7df284bfcbc6cf8f3397b24",
+      "sourceContentAfterSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+      "targetAfterSHA256": "f03d3bd64d5194ee7919993993389fae2df9fafd059a1b97340fe838a37e0c2c",
+      "contextAfterSHA256": "5298d61628a29af3078509f6a4bbb9c12ae4fb292d4b9107f378bd20ee31c6d5",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3157,7 +3221,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+        "sameImageNativeSHA256": "d70be8e7501b839dd0485aa114de49e0e6cf2a924a839ea15f6a25ad572f1b90",
+        "sameImageExportSHA256": "d70be8e7501b839dd0485aa114de49e0e6cf2a924a839ea15f6a25ad572f1b90",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -3179,14 +3251,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
         "suora": true,
         "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vaaleanpunaiset kukinnot ja tummahkot lehdet täyttävät etualan; niiden takana kohoaa palmu.",
+        "selite": "Kasvillisuutta Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Kukkiva pensas ja palmu Dominican kasvitieteellisessä puutarhassa.",
         "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vaaleanpunaiset kukinnot ja tummahkot lehdet täyttävät etualan; niiden takana kohoaa palmu.",
+        "selite": "Kasvillisuutta Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Kukkiva pensas ja palmu Dominican kasvitieteellisessä puutarhassa.",
         "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
       },
@@ -3194,7 +3266,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg",
         "suora": true,
         "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vaaleanpunaiset kukinnot ja tummahkot lehdet täyttävät etualan; niiden takana kohoaa palmu.",
+        "selite": "Kasvillisuutta Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Kukkiva pensas ja palmu Dominican kasvitieteellisessä puutarhassa.",
         "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
       },
@@ -3210,10 +3282,10 @@
         4080
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/roseau/sisalto.json",
-      "sourceContentSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
+      "sourceContentSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d63d7c42e6ad23048897078d3a15856de4d339614d35ff005b6342999826accc",
-        "semanticContextSHA256": "99b0cf905a54481dafcd8bac5e16927f79466e2381160fe22fa7646966d17423",
+        "targetBeforeSHA256": "36eda717b5b0c9268bcd82b012b1d803e4575bf92304024d437fc7e6e8cad02c",
+        "semanticContextSHA256": "07dca2045f27eb03b25f9290d9b9e23ae205356baa48dcb9f43035218722256f",
         "subjectTitle": "Dominican kasvitieteellinen puutarha",
         "targetState": "existing-target"
       },
@@ -3419,7 +3491,7 @@
       "priorMediaFields": {
         "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg",
         "lyhyt": "Kukkiva pensas ja palmu Dominican kasvitieteellisessä puutarhassa.",
-        "selite": "Vaaleanpunaiset kukinnot ja tummahkot lehdet täyttävät etualan; niiden takana kohoaa palmu.",
+        "selite": "Kasvillisuutta Dominican kasvitieteellisessä puutarhassa.",
         "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3446,14 +3518,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Concord, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vaaleanpunaiset kukinnot ja tummahkot lehdet täyttävät etualan; niiden takana kohoaa palmu.",
+        "selite": "Kasvillisuutta Dominican kasvitieteellisessä puutarhassa.",
         "lyhyt": "Kukkiva pensas ja palmu Dominican kasvitieteellisessä puutarhassa.",
         "tiedosto": "Dominica Botanic Gardens 02 2025 08.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ad8e18b0a43319854d2959ef4f88bb7ee3b2902a217e716d59482c3b6c59d6bd",
-      "targetAfterSHA256": "d63d7c42e6ad23048897078d3a15856de4d339614d35ff005b6342999826accc",
-      "contextAfterSHA256": "99b0cf905a54481dafcd8bac5e16927f79466e2381160fe22fa7646966d17423",
+      "sourceContentAfterSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+      "targetAfterSHA256": "36eda717b5b0c9268bcd82b012b1d803e4575bf92304024d437fc7e6e8cad02c",
+      "contextAfterSHA256": "07dca2045f27eb03b25f9290d9b9e23ae205356baa48dcb9f43035218722256f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3476,7 +3548,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "33769daac1a47f9384fc4c3f556cd5f045721bc4079818d53deba82efbc6948d",
+        "sameImageNativeSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
+        "sameImageExportSHA256": "049ae1bde568949060aca7cf45814ae021718c337850c5d293926d056465ad0c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3488,6 +3568,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e12/roseau/08fc9f29bb54d3e585af27e4d481e99816f62174a07429212abbdc8206d662ce.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.376708+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e12/roseau/48d1e97f9e1cc768bcf3b6ca814c3dab5ac2d9c905e441d5db262d96bdd36967.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.376708+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:48.817189+00:00"
 }

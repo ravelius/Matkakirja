@@ -1,398 +1,392 @@
 {
- "$skeema": "matkakirja-paakaupunki/1",
- "id": "bridgetown",
- "maa": "BRB",
- "era": "e12",
- "kaupunki": {
+  "$skeema": "matkakirja-paakaupunki/1",
   "id": "bridgetown",
-  "name": "Bridgetown",
-  "wiki": "Bridgetown",
-  "ambience": "satama",
-  "pallo": {
-   "lat": 13.0975,
-   "lon": -59.6167
-  }
- },
- "artikkeli": {
-  "intro": "Bridgetown on Barbadosin pääkaupunki saaren lounaisrannikolla, mutta sen historiaa kannattaa etsiä myös katujen mutkista. **Vanha keskusta ei noudata ruutukaavaa**, vaan sen kujat muistuttavat englantilaisia kauppakaupunkeja. Kauppa ja merenkulku kokosivat kaupungin Careenagen ympärille. Nykyisin keskustan pienveneiden vesialue ja suuri rahtisatama ovat eri paikkoja.\n\nNidhe Israelin synagogan vaiheisiin kuuluvat hurrikaanituho, käyttötarkoituksen muutos ja palauttaminen synagogaksi. Sen yhteydestä löytyi myös vanha **mikveh eli juutalainen rituaalikylpy**. Keskustan eteläpuolella Garrisonin historiallinen sotilasalue sisältää laukkaradan ja entiseen sotilasvankilaan sijoitetun museon. Parlamenttirakennusten nykyinen kellotorni puolestaan korvasi toisella puolella seisseen, vajoamaan alkaneen tornin. Bridgetownin rakennukset ja satamapaikat kertovat näin kaupungista, jota on toistuvasti huollettu, muutettu ja otettu uuteen käyttöön.",
-  "teksti": "Bridgetownin englantilainen siirtomaakaupunki kasvoi 1600-luvulla sataman ympärille. Sen kapeat, mutkittelevat kadut poikkeavat Karibian espanjalaisten ja hollantilaisten siirtomaakaupunkien ruutukaavoista. Keskustaa ja läheistä Garrisonin aluetta tarkastellaan yhteisenä historiallisena kokonaisuutena.\n\nKaupungin merenkulun historiaan kuuluu myös laivojen korjaaminen. Careenagen nimi liittyy aluksen kallistamiseen pohjan huoltoa varten, ja Screw Dockissa laiva nostettiin vedestä ruuvimekanismin avulla. Satama oli sekä matkan pysähdyspaikka että työpaikka.\n\nIsoisän matkavuonna 1873 nykyisiä parlamenttirakennuksia rakennettiin vielä. Nidhe Israelin synagogan pitkä historia puolestaan sisältää hurrikaanituhon, uudelleenrakentamisen, myynnin ja kunnostuksen. Garrisonin vanhalla paraatialueella puolestaan järjestetään hevoskilpailuja, ja entisen sotilasvankilan rakennuksessa toimii Barbados Museum."
- },
- "kysymykset": [
-  {
-   "q": "Minkä maan pääkaupunki Bridgetown on?",
-   "options": [
-    "Barbadosin",
-    "Grenadan",
-    "Jamaikan",
-    "Dominican"
-   ],
-   "correct": 0,
-   "level": 1,
-   "hint": "Saari sijaitsee Pienten Antillien itälaidalla.",
-   "fact": "Bridgetown sijaitsee Barbadosin lounaisrannikolla.",
-   "source": "https://en.wikipedia.org/wiki/Bridgetown"
-  },
-  {
-   "q": "Mitä Nidhe Israelin yhteydestä löytynyt mikveh tarkoittaa?",
-   "options": [
-    "Rituaalikylpyä",
-    "Rukoushuonetta",
-    "Käsikirjoitusarkistoa",
-    "Vedenkeruuallasta"
-   ],
-   "correct": 0,
-   "level": 3,
-   "hint": "Paikka liittyy juutalaisen uskonnon puhdistautumiseen.",
-   "fact": "Mikveh on juutalainen rituaalikylpy, joka löydettiin synagogan yhteydessä tehdyissä kaivauksissa.",
-   "source": "https://en.wikipedia.org/wiki/Nidhe_Israel_Synagogue"
-  },
-  {
-   "q": "Mikä vanhan Bridgetownin katuverkossa on tunnusomaista?",
-   "options": [
-    "Mutkittelevat kujat",
-    "Säännöllinen ruutukaava",
-    "Ympyröiksi rakennetut kadut",
-    "Vain leveät rantakadut"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Kaupunki muistuttaa rakenteeltaan vanhoja englantilaisia kauppakaupunkeja.",
-   "fact": "Bridgetownin mutkitteleva katuverkko poikkeaa monien alueen espanjalaisten ja hollantilaisten siirtomaakaupunkien rakenteesta.",
-   "source": "https://en.wikipedia.org/wiki/Bridgetown"
-  },
-  {
-   "q": "Mikä Screw Dockin ruuvimekanismin tehtävä oli?",
-   "options": [
-    "Nostaa laiva vedestä",
-    "Siirtää lasti junaan",
-    "Kääntää laivan peräsintä",
-    "Avata jokisulku"
-   ],
-   "correct": 0,
-   "level": 3,
-   "hint": "Huollossa piti päästä käsiksi veden alla olevaan runkoon.",
-   "fact": "Historiallisessa telakassa alus nostettiin vedestä korjaamista varten.",
-   "source": "https://en.wikipedia.org/wiki/Bridgetown"
-  },
-  {
-   "q": "Minkä urheilun kilpailurata sijaitsee Garrison Savannahilla?",
-   "options": [
-    "Laukkakilpailujen",
-    "Moottorikilpailujen",
-    "Vinttikoirakilpailujen",
-    "Polkupyöräkilpailujen"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Kenttä oli aikaisemmin sotilaiden paraatialue.",
-   "fact": "Garrison Savannahin laukkarata sijaitsee historiallisella paraatialueella.",
-   "source": "https://en.wikipedia.org/wiki/Garrison_Historic_Area"
-  }
- ],
- "tiedot": [
-  "Barbados Museum toimii Garrisonin entisen sotilasvankilan rakennuksessa.",
-  "Bridgetownin parlamentin kellotorni rakennettiin uudelleen länsisiiven yhteyteen alkuperäisen itäpuolen tornin alettua vajota.",
-  "Careenagen pienveneiden vesialue ja Bridgetownin suuri rahtisatama ovat eri paikkoja."
- ],
- "valokuva": {
-  "tiedosto": "Bridgetown beach.jpg",
-  "lyhyt": "Bridgetownin hiekkarantaa ja purjevene.",
-  "selite": "Vaalealla rannalla on kävelijöitä ja uimareita; veden puolella näkyy purjeveneitä sekä laituri.",
-  "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)"
- },
- "kaupunkilehti": [
-  {
-   "id": "kaupunki",
-   "nimi": "Bridgetown",
-   "johdanto": "Mutkittelevat kadut, muuttuneet rakennukset ja vanhat satamatyöt tuovat Bridgetownin historian lähelle.",
-   "kansikuvat": [
-    {
-     "tiedosto": "Drill Hall Beach Barbados.jpg",
-     "lyhyt": "Drill Hall Beachin palmuranta Barbadosilla.",
-     "selite": "Palmut kasvavat vaalealla hiekkarannalla, jonka edustalla murtuu aaltoja.",
-     "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)"
-    },
-    {
-     "tiedosto": "Bridgetown, Barbados.jpg",
-     "lyhyt": "Bridgetownin kaupunkialuetta avaruusasemalta.",
-     "selite": "Katuverkko ja rakennukset levittäytyvät rannikolta sisämaahan; satama-allas ja hiekkarannat erottuvat veden äärellä.",
-     "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
-    },
-    {
-     "tiedosto": "Approaching Barbados - Bridgetown Harbour - panoramio.jpg",
-     "lyhyt": "Bridgetownin sataman edusta mereltä.",
-     "selite": "Veden takana näkyvät sataman nostureita ja rakennuksia, ja taivaalla on suuria pilviä.",
-     "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)"
+  "maa": "BRB",
+  "era": "e12",
+  "kaupunki": {
+    "id": "bridgetown",
+    "name": "Bridgetown",
+    "wiki": "Bridgetown",
+    "ambience": "satama",
+    "pallo": {
+      "lat": 13.0975,
+      "lon": -59.6167
     }
-   ],
-   "nostot": [
+  },
+  "artikkeli": {
+    "intro": "Bridgetown on Barbadosin pääkaupunki saaren lounaisrannikolla, mutta sen historiaa kannattaa etsiä myös katujen mutkista. **Vanha keskusta ei noudata ruutukaavaa**, vaan sen kujat muistuttavat englantilaisia kauppakaupunkeja. Kauppa ja merenkulku kokosivat kaupungin Careenagen ympärille. Nykyisin keskustan pienveneiden vesialue ja suuri rahtisatama ovat eri paikkoja.\n\nNidhe Israelin synagogan vaiheisiin kuuluvat hurrikaanituho, käyttötarkoituksen muutos ja palauttaminen synagogaksi. Sen yhteydestä löytyi myös vanha **mikveh eli juutalainen rituaalikylpy**. Keskustan eteläpuolella Garrisonin historiallinen sotilasalue sisältää laukkaradan ja entiseen sotilasvankilaan sijoitetun museon. Parlamenttirakennusten nykyinen kellotorni puolestaan korvasi toisella puolella seisseen, vajoamaan alkaneen tornin.",
+    "teksti": "Bridgetownin englantilainen siirtomaakaupunki kasvoi 1600-luvulla sataman ympärille. Sen kapeat, mutkittelevat kadut poikkeavat Karibian espanjalaisten ja hollantilaisten siirtomaakaupunkien ruutukaavoista. Keskustaa ja läheistä Garrisonin aluetta tarkastellaan yhteisenä historiallisena kokonaisuutena.\n\nKaupungin merenkulun historiaan kuuluu myös laivojen korjaaminen. Careenagen nimi liittyy aluksen kallistamiseen pohjan huoltoa varten, ja Screw Dockissa laiva nostettiin vedestä ruuvimekanismin avulla.\n\nNidhe Israelin synagogan pitkä historia puolestaan sisältää hurrikaanituhon, uudelleenrakentamisen, myynnin ja kunnostuksen. Garrisonin vanhalla paraatialueella puolestaan järjestetään hevoskilpailuja, ja entisen sotilasvankilan rakennuksessa toimii Barbados Museum."
+  },
+  "kysymykset": [
     {
-     "otsikko": "Kadut eivät tottele viivoitinta",
-     "teksti": "Bridgetownin vanhoja katuja ei vedetty ruutukaavaksi. Kapeat kadut ja kujat mutkittelevat tavalla, joka muistuttaa vanhoja englantilaisia kauppakaupunkeja. Tämä katuverkon rakenne poikkeaa alueen espanjalaisista ja hollantilaisista siirtomaakaupungeista. Sataman ympärille kasvoi kapeiden katujen kauppakaupunki. Sataman ympärille kasvanut keskusta kertoo erilaisesta rakentamisen tavasta kuin suoriin kortteleihin jaettu kaupunki, vaikka molemmat kuuluivat samaan Atlantin kauppamaailmaan.",
-     "wiki": "Bridgetown",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Kaupunki kahden sataman välissä",
-     "teksti": "Careenage ja suuri kauppasatama ovat eri paikkoja. Keskustan vesiväylässä liikkuu pienveneitä, kun taas risteily- ja rahtialukset käyttävät Deep Water Harbouria Carlisle Bayn toisella puolella. Nimet voivat hämätä: Constitution River liittyy Careenageen, ei suureen satama-altaaseen. Kaupungin veden äärellä näkyy näin kaksi mittakaavaa. Parlamentin edustalla kuljetaan siltojen yli, mutta suuret alukset tarvitsevat toisenlaiset laiturit. Kaikki Bridgetownin satamaelämä ei mahdu samaan vesinäkymään.",
-     "wiki": "Bridgetown",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Synagogan toinen elämä",
-     "teksti": "Nidhe Israelin historia ei kulje suorana viivana perustamisesta nykypäivään. Alkuperäinen synagoga tuhoutui hurrikaanissa, ja sen tilalle rakennettu talo joutui myöhemmin muuhun käyttöön. Naisten lehteri muutettiin kokonaiseksi kerrokseksi, ikkunoita ja lattiaa vaihdettiin ja hautausmaa rappeutui. Rakennus palautettiin lopulta synagogaksi. Sen yhteydessä toimiva museo avaa Barbadosin juutalaisten historiaa. Kunnostus palautti rakennukseen synagogan käytön pitkän välivaiheen jälkeen.",
-     "wiki": "Nidhe Israel Synagogue",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Paraateista hevoskilpailuihin",
-     "teksti": "Garrison Savannahin laukkarata sijaitsee vanhalla paraatialueella. Sen ympärillä on sotilasalueen historiallisia rakennuksia, joten kilpailurata kuuluu maisemaan yhdessä kasarmien kanssa. Hevoskilpailuja järjestivät jo siirtomaa-aikana sekä varakkaat saarelaiset että sotilasväki. Garrisonissa on myös museo, jonka rakennuksessa näkyy entisen sotilasvankilan historia. Alue ei siten kerro yhdestä käyttötarkoituksesta: sotilasharjoitusten, urheilun ja historian tutkimisen paikat ovat kerrostuneet samaan ympäristöön.",
-     "wiki": "Garrison Historic Area",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "matkailijalle": {
-    "kuva": {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    "kappale": "Bridgetownin keskustassa Careenage auttaa hahmottamaan kävelyreitin. Parlamenttirakennukset ja synagogan historiallinen kokonaisuus tarjoavat erilaiset näkökulmat kaupunkiin. Garrisonin alueelle kannattaa suunnata erikseen keskustan eteläpuolelle. Bussireitin lähtöpaikka riippuu siitä, mihin päin saarta olet menossa. Suuri risteilysatama ja keskustan pienveneiden vesialue ovat eri paikkoja.",
-    "artikkeli": {
-     "nimi": "Matkailijan Bridgetown",
-     "taitto": "opas",
-     "teksti": "Kävele veden ääreltä kujille ja jatka Garrisonin historialliselle alueelle.",
-     "nosto": "Careenage on hyvä lähtökohta keskustan kävelylle; Garrison ansaitsee oman retkensä.",
-     "jaksot": [
-      {
-       "otsikko": "Perille ja liikkeelle",
-       "teksti": "Lentomatka päättyy Grantley Adamsin kansainväliselle lentoasemalle kaupungin ulkopuolella. Bridgetown toimii saaren bussiliikenteen keskuksena, mutta kaikki linjat eivät lähde samasta terminaalista. Princess Alice palvelee pohjoiseen kulkevia reittejä, Fairchild Street itään ja etelään suuntautuvia. Tarkista siis lähtöpaikka ennen kuin etsit omaa bussia. Keskustan kävelyllä Careenage on selkeä maamerkki.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Veden ääreltä kujille",
-       "teksti": "Aloita Careenagen rannoilta ja jatka parlamenttirakennusten ympäristöön. Vanhan keskustan kadut mutkittelevat, joten reittiä ei kannata hahmottaa ruutukaavan avulla. Nidhe Israelin synagoga, museo ja mikveh muodostavat oman historiallisen kokonaisuutensa. Suuri risteilysatama on eri paikka kuin keskustan pienveneiden vesialue.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Garrison omana retkenään",
-       "teksti": "Garrisonin historiallinen alue sijaitsee keskustan eteläpuolella. Sen laukkarata, kasarmit ja entiseen sotilasvankilaan sijoitettu Barbados Museum kertovat paikan eri käyttötavoista. Alueella ovat sekä vanha laukkarata että Barbados Museum. Garrison Savannahin laukkarata on vanhalla paraatialueella.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Lounas vanhoissa varastoissa",
-       "teksti": "Careenagen rannoilla vanhoihin varastoihin ja laivatarvikkeiden myyntipaikkoihin on tullut ravintoloita, baareja ja kauppoja. Vesiväylän eteläranta on kävelyaluetta, joten lounastauon voi liittää rannalla kulkevaan reittiin. Broad Street ja Cheapsiden tori tarjoavat erilaisia ympäristöjä kaupunkikävelylle: keskusta ei rajoitu pelkästään nähtävyysrakennuksiin.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Bridgetownissa erotetaan kuiva ja sateinen kausi, mutta lämpötilojen vuosivaihtelu on verraten vähäistä. Sateiselle kaudelle suunnitellussa kaupunkipäivässä sisäkohteet, kuten synagogan museo ja Barbados Museum, ovat luontevia vaihtoehtoja ulkoilulle. Garrisonin entisessä sotilasvankilassa toimii Barbadosin museo.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      }
-     ],
-     "matkailu": {
-      "parasta": [
-       {
-        "mita": "Careenagen rannat",
-        "tahdet": 3,
-        "selite": "Keskustan vesiväylä yhdistää siltojen ja sataman historian."
-       },
-       {
-        "mita": "Nidhe Israel",
-        "tahdet": 3,
-        "selite": "Synagogan yhteydessä ovat museo ja arkeologinen rituaalikylpy."
-       },
-       {
-        "mita": "Parlamenttirakennukset",
-        "tahdet": 2,
-        "selite": "Uusgoottilainen rakennuskokonaisuus seisoo keskustassa."
-       },
-       {
-        "mita": "Garrisonin alue",
-        "tahdet": 3,
-        "selite": "Kasarmien, laukkaradan ja museon historia löytyy samalta alueelta."
-       },
-       {
-        "mita": "Cheapsiden tori",
-        "tahdet": 2,
-        "selite": "Kauppapaikka kuuluu keskustan arkiseen elämään."
-       }
+      "q": "Minkä maan pääkaupunki Bridgetown on?",
+      "options": [
+        "Barbadosin",
+        "Grenadan",
+        "Jamaikan",
+        "Dominican"
       ],
-      "hyvaTietaa": [
-       {
-        "otsikko": "Eri satamat",
-        "teksti": "Risteily- ja rahtialusten satama ei ole sama paikka kuin keskustan Careenage."
-       },
-       {
-        "otsikko": "Bussin lähtöpaikka",
-        "teksti": "Princess Alicen ja Fairchild Streetin terminaaleista lähdetään eri suuntiin."
-       },
-       {
-        "otsikko": "Tapahtumapäivä",
-        "teksti": "Tarkista ennen käyntiä Garrisonin hevoskilpailujen päivät ja museoiden vierailuajat."
-       },
-       {
-        "otsikko": "Sotilasalue",
-        "teksti": "Garrisonin St Ann’s Fort on sotilasaluetta, jonne ei ole vapaata pääsyä."
-       }
+      "correct": 0,
+      "level": 1,
+      "hint": "Saari sijaitsee Pienten Antillien itälaidalla.",
+      "fact": "Bridgetown sijaitsee Barbadosin lounaisrannikolla.",
+      "source": "https://en.wikipedia.org/wiki/Bridgetown"
+    },
+    {
+      "q": "Mitä Nidhe Israelin yhteydestä löytynyt mikveh tarkoittaa?",
+      "options": [
+        "Rituaalikylpyä",
+        "Rukoushuonetta",
+        "Käsikirjoitusarkistoa",
+        "Vedenkeruuallasta"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Löytö tehtiin synagogan yhteydessä tehdyissä kaivauksissa.",
+      "fact": "Mikveh on juutalainen rituaalikylpy, joka löydettiin synagogan yhteydessä tehdyissä kaivauksissa.",
+      "source": "https://en.wikipedia.org/wiki/Nidhe_Israel_Synagogue"
+    },
+    {
+      "q": "Mikä vanhan Bridgetownin katuverkossa on tunnusomaista?",
+      "options": [
+        "Mutkittelevat kujat",
+        "Säännöllinen ruutukaava",
+        "Säteittäiset bulevardit",
+        "Vain rantaa seuraavat kadut"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kaupunki muistuttaa rakenteeltaan vanhoja englantilaisia kauppakaupunkeja.",
+      "fact": "Bridgetownin mutkitteleva katuverkko poikkeaa monien alueen espanjalaisten ja hollantilaisten siirtomaakaupunkien rakenteesta.",
+      "source": "https://en.wikipedia.org/wiki/Bridgetown"
+    },
+    {
+      "q": "Mikä Screw Dockin ruuvimekanismin tehtävä oli?",
+      "options": [
+        "Nostaa laiva vedestä",
+        "Siirtää lasti laivaan",
+        "Avata telakan portti",
+        "Liikuttaa kääntösiltaa"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Telakka palveli laivojen huoltoa.",
+      "fact": "Historiallisessa telakassa alus nostettiin vedestä korjaamista varten.",
+      "source": "https://en.wikipedia.org/wiki/Bridgetown"
+    },
+    {
+      "q": "Minkä urheilun kilpailurata sijaitsee Garrison Savannahilla?",
+      "options": [
+        "Laukkakilpailujen",
+        "Moottorikilpailujen",
+        "Vinttikoirakilpailujen",
+        "Polkupyöräkilpailujen"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kenttä oli aikaisemmin sotilaiden paraatialue.",
+      "fact": "Garrison Savannahin laukkarata sijaitsee historiallisella paraatialueella.",
+      "source": "https://en.wikipedia.org/wiki/Garrison_Historic_Area"
+    }
+  ],
+  "tiedot": [
+    "Barbados Museum toimii Garrisonin entisen sotilasvankilan rakennuksessa.",
+    "Bridgetownin parlamentin kellotorni rakennettiin uudelleen länsisiiven yhteyteen alkuperäisen itäpuolen tornin alettua vajota.",
+    "Careenagen pienveneiden vesialue ja Bridgetownin suuri rahtisatama ovat eri paikkoja."
+  ],
+  "valokuva": {
+    "tiedosto": "Bridgetown beach.jpg",
+    "lyhyt": "Bridgetownin hiekkarantaa ja purjevene.",
+    "selite": "Bridgetownin rantaa ja purjeveneitä Barbadosilla.",
+    "lahde": "WalkingGeek from Westport, CT, USA, Commons (CC BY 2.0)"
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Bridgetown",
+      "johdanto": "Mutkittelevat kadut, muuttuneet rakennukset ja vanhat satamatyöt tuovat Bridgetownin historian lähelle.",
+      "kansikuvat": [
+        {
+          "tiedosto": "Drill Hall Beach Barbados.jpg",
+          "lyhyt": "Drill Hall Beachin palmuranta Barbadosilla.",
+          "selite": "Drill Hall Beach on Barbadosin ranta.",
+          "lahde": "Barry haynes, Wikimedia Commons (CC BY-SA 4.0)"
+        },
+        {
+          "tiedosto": "Bridgetown, Barbados.jpg",
+          "lyhyt": "Bridgetownin kaupunkialuetta avaruusasemalta.",
+          "selite": "Bridgetown avaruusasemalta kuvattuna.",
+          "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
+        },
+        {
+          "tiedosto": "Approaching Barbados - Bridgetown Harbour - panoramio.jpg",
+          "lyhyt": "Bridgetownin sataman edusta mereltä.",
+          "selite": "Bridgetownin sataman edusta mereltä katsottuna.",
+          "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)"
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Kadut eivät tottele viivoitinta",
+          "teksti": "Bridgetownin vanhoja katuja ei vedetty ruutukaavaksi. Kapeat kadut ja kujat mutkittelevat tavalla, joka muistuttaa vanhoja englantilaisia kauppakaupunkeja. Tämä katuverkon rakenne poikkeaa alueen espanjalaisista ja hollantilaisista siirtomaakaupungeista. Bay Street yhdistää vanhan kauppakaupungin keskustan St. Ann’s Garrisonin sotilasalueeseen. Historialliseen kokonaisuuteen kuuluvat molempien alueiden tieverkot.",
+          "wiki": "Bridgetown",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kaupunki kahden sataman välissä",
+          "teksti": "Careenage ja suuri kauppasatama ovat eri paikkoja. Keskustan vesiväylässä liikkuu pienveneitä, kun taas risteily- ja rahtialukset käyttävät Deep Water Harbouria Carlisle Bayn toisella puolella. Nimet voivat hämätä: Constitution River liittyy Careenageen, ei suureen satama-altaaseen. Parlamentin edustalla kuljetaan siltojen yli, mutta suuret alukset tarvitsevat toisenlaiset laiturit.",
+          "wiki": "Bridgetown",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Synagogan toinen elämä",
+          "teksti": "Nidhe Israelin historia ei kulje suorana viivana perustamisesta nykypäivään. Alkuperäinen synagoga tuhoutui hurrikaanissa, ja sen tilalle rakennettu talo joutui myöhemmin muuhun käyttöön. Naisten lehteri muutettiin kokonaiseksi kerrokseksi, ikkunoita ja lattiaa vaihdettiin ja hautausmaa rappeutui. Rakennus palautettiin lopulta synagogaksi. Sen yhteydessä toimiva museo avaa Barbadosin juutalaisten historiaa.",
+          "wiki": "Nidhe Israel Synagogue",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Paraateista hevoskilpailuihin",
+          "teksti": "Garrison Savannahin laukkarata sijaitsee vanhalla paraatialueella. Sen ympärillä on sotilasalueen historiallisia rakennuksia, joten kilpailurata kuuluu maisemaan yhdessä kasarmien kanssa. Hevoskilpailuja järjestivät jo siirtomaa-aikana sekä varakkaat saarelaiset että sotilasväki. Garrisonissa on myös museo, jonka rakennuksessa näkyy entisen sotilasvankilan historia.",
+          "wiki": "Garrison Historic Area",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Bridgetownin keskustassa Careenage auttaa hahmottamaan kävelyreitin. Parlamenttirakennukset ja synagogan historiallinen kokonaisuus tarjoavat erilaiset näkökulmat kaupunkiin. Garrisonin alueelle kannattaa suunnata erikseen keskustan eteläpuolelle. Bussireitin lähtöpaikka riippuu siitä, mihin päin saarta olet menossa.",
+        "artikkeli": {
+          "nimi": "Matkailijan Bridgetown",
+          "taitto": "opas",
+          "teksti": "Kävele veden ääreltä kujille ja jatka Garrisonin historialliselle alueelle.",
+          "nosto": "Careenage on hyvä lähtökohta keskustan kävelylle; Garrison ansaitsee oman retkensä.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Lentomatka päättyy Grantley Adamsin kansainväliselle lentoasemalle kaupungin ulkopuolella. Bridgetown toimii saaren bussiliikenteen keskuksena, mutta kaikki linjat eivät lähde samasta terminaalista. Princess Alice palvelee pohjoiseen kulkevia reittejä, Fairchild Street itään ja etelään suuntautuvia. Keskustan kävelyllä Careenage on selkeä maamerkki.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Veden ääreltä kujille",
+              "teksti": "Aloita Careenagen rannoilta ja jatka parlamenttirakennusten ympäristöön. Vanhan keskustan kadut mutkittelevat, joten reittiä ei kannata hahmottaa ruutukaavan avulla. Nidhe Israelin synagoga, museo ja mikveh muodostavat oman historiallisen kokonaisuutensa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Garrison omana retkenään",
+              "teksti": "Garrisonin historiallinen alue sijaitsee keskustan eteläpuolella. Sen laukkarata on vanhalla paraatialueella, ja Barbados Museum toimii entisessä sotilasvankilassa. Alueella on myös historiallisia kasarmeja.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Lounas vanhoissa varastoissa",
+              "teksti": "Careenagen rannoilla vanhoihin varastoihin ja laivatarvikkeiden myyntipaikkoihin on tullut ravintoloita, baareja ja kauppoja. Vesiväylän eteläranta on kävelyaluetta, joten lounastauon voi liittää rannalla kulkevaan reittiin.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Bridgetownissa erotetaan kuiva ja sateinen kausi, mutta lämpötilojen vuosivaihtelu on verraten vähäistä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Careenagen rannat",
+                "tahdet": 3,
+                "selite": "Keskustan vesiväylä yhdistää siltojen ja sataman historian."
+              },
+              {
+                "mita": "Nidhe Israel",
+                "tahdet": 3,
+                "selite": "Synagogan yhteydessä ovat museo ja arkeologinen rituaalikylpy."
+              },
+              {
+                "mita": "Parlamenttirakennukset",
+                "tahdet": 2,
+                "selite": "Uusgoottilainen rakennuskokonaisuus seisoo keskustassa."
+              },
+              {
+                "mita": "Garrisonin alue",
+                "tahdet": 3,
+                "selite": "Kasarmien, laukkaradan ja museon historia löytyy samalta alueelta."
+              },
+              {
+                "mita": "Cheapsiden tori",
+                "tahdet": 2,
+                "selite": "Kauppapaikka kuuluu keskustan arkiseen elämään."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Eri satamat",
+                "teksti": "Risteily- ja rahtialusten satama ei ole sama paikka kuin keskustan Careenage."
+              },
+              {
+                "otsikko": "Bussin lähtöpaikka",
+                "teksti": "Princess Alicen ja Fairchild Streetin terminaaleista lähdetään eri suuntiin."
+              },
+              {
+                "otsikko": "Museon rakennus",
+                "teksti": "Barbados Museum toimii entisessä sotilasvankilassa."
+              },
+              {
+                "otsikko": "Sotilasalue",
+                "teksti": "Garrisonin St Ann’s Fort on sotilasaluetta, jonne ei ole vapaata pääsyä."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Sataman koneet ja muuttuvat talot",
+      "johdanto": "Laivan huolto ja kaupungin liikenne vaativat sekä koneita että muutoksia rakennuksiin.",
+      "tehtava": {
+        "kysymys": "Miksi parlamentin alkuperäinen kellotorni purettiin?",
+        "vaihtoehdot": [
+          "Sen perustukset alkoivat vajota",
+          "Tulipalo tuhosi tornin kattorakenteet",
+          "Kellokoneisto painoi tornille liikaa",
+          "Tornin paikalle tehtiin uusi sisäänkäynti"
+        ],
+        "oikea": 0,
+        "fakta": "Vanha torni oli itäsiiven yhteydessä. Perustusten vajoamisen jälkeen se purettiin ja korvattiin länsisiiven tornilla."
+      },
+      "nostot": [
+        {
+          "otsikko": "Nimi muistaa laivan pohjan",
+          "teksti": "Careenage kuulostaa paikannimeltä, mutta se viittaa myös laivojen huoltoon. Aluksen kallistaminen kyljelleen toi veden alla olevan rungon esiin puhdistamista ja korjaamista varten. Keskustan suojaisa vesialue liittyy tähän sataman työhön. Nykyinen pienveneiden allas ei ole sama kuin rahtisatama, mutta nimi säilyttää muiston siitä, mitä rannan tuntumassa tehtiin.",
+          "wiki": "Chamberlain Bridge",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Telakka nosti koko laivan",
+          "teksti": "Blackwoods Screw Dockissa laivan runkoon päästiin käsiksi nostamalla alus vedestä. Telakan nostolavaa liikutettiin ruuvimekanismilla: huollettava alus ei vain kellunut laiturin vieressä, vaan nousi työskentelyä varten ylemmäs. Telakka sijaitsee keskustassa vanhojen varastotalojen ja sokerimakasiinien takana. Sen viereinen Historical Maritime Centre esittelee Barbadosin historiaa valokuvin ja näyttelyin.",
+          "wiki": "Bridgetown",
+          "tiedosto": "191223 Bridgetown Screw Dock.jpg",
+          "lyhyt": "Bridgetownin Screw Dockin ruuvit ja telakka-allas.",
+          "selite": "Bridgetownin historiallinen Blackwoods Screw Dock -telakka.",
+          "lahde": "Rennboot, Wikimedia Commons (CC BY-SA 4.0)"
+        },
+        {
+          "otsikko": "Silta väisti veneitä",
+          "teksti": "Chamberlain Bridgen historiaan kuuluu kääntösilta, jonka aukosta alukset pääsivät Careenagen sisäaltaaseen. Silta yhdisti kaupungin rantoja, mutta sen piti samalla päästää liikenne kulkemaan alitse. Ratkaisu oli liikuttaa siltaa. Myöhemmin sen tilalle tehtiin nostettava silta, joten nykyinen rakenne ei ole sama kuin vanhoissa satamakuvissa. Silta ylittää Constitution Riverin.",
+          "wiki": "Chamberlain Bridge",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kellotorni vaihtoi puolta",
+          "teksti": "Parlamenttirakennusten kellotorni ei ole aina seissyt nykyisessä paikassaan. Vanha torni oli itäsiiven yhteydessä, mutta sen perustukset alkoivat vajota. Torni purettiin, ja uusi rakennettiin länsisiiven viereen. Parlamentin uusgoottilainen ilme ja paikallinen korallikalkkikivi yhdistyvät taloissa, joiden rakentaminen ja muuttaminen jatkuivat eri aikoina.",
+          "wiki": "Parliament Buildings (Barbados)",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
       ]
-     },
-     "lahde": "Wikipedia"
     }
-   }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Parlamenttirakennusten ja Nidhe Israelin synagogan historiaan kuuluu rakentamista, vaurioita ja käyttötarkoitusten muutoksia.",
+    "rajat": {
+      "pohjoinen": 13.10244,
+      "etela": 13.09399,
+      "lansi": -59.61828,
+      "ita": -59.61092
+    },
+    "kohteet": [
+      {
+        "nimi": "Nidhe Israelin synagoga",
+        "lat": 13.09944,
+        "lon": -59.61528
+      },
+      {
+        "nimi": "Parlamenttirakennukset",
+        "lat": 13.09699,
+        "lon": -59.61392
+      }
+    ]
   },
-  {
-   "id": "historia",
-   "nimi": "Sataman koneet ja muuttuvat talot",
-   "johdanto": "Laivan huolto ja kaupungin liikenne vaativat sekä koneita että muutoksia rakennuksiin.",
-   "tehtava": {
-    "kysymys": "Mitä vanhassa Screw Dockissa nostettiin ruuvimekanismilla?",
-    "vaihtoehdot": [
-     "Laivoja",
-     "Sataman sulkuporttia",
-     "Kääntösillan kantta",
-     "Laiturin lastausnosturia"
-    ],
-    "oikea": 0,
-    "fakta": "Ruuvit nostivat telakan lavalla olevaa alusta niin, että sen vedenalaista runkoa voitiin huoltaa."
-   },
-   "nostot": [
-    {
-     "otsikko": "Nimi muistaa laivan pohjan",
-     "teksti": "Careenage kuulostaa paikannimeltä, mutta se viittaa myös laivojen huoltoon. Aluksen kallistaminen kyljelleen toi veden alla olevan rungon esiin puhdistamista ja korjaamista varten. Keskustan suojaisa vesialue liittyy tähän sataman työhön. Nykyinen pienveneiden allas ei ole sama kuin rahtisatama, mutta nimi säilyttää muiston siitä, mitä rannan tuntumassa tehtiin. Satamahistoriassa tarvittiin siis laiturien lisäksi paikkoja, joissa laivan tavallisesti näkymättömiin jäävä osa saatiin käsille.",
-     "wiki": "Chamberlain Bridge",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+  "nahtavyydet": {
+    "Nidhe Israelin synagoga": {
+      "aika": "1600-luvulta; nykyinen rakennus 1800-luvulta",
+      "teksti": "Nidhe Israel on Bridgetownin historiallinen synagoga Synagogue Lanella. Sen alkuperäinen rakennus valmistui 1600-luvulla, tuhoutui myöhemmin hurrikaanissa ja korvattiin uudella synagogalla. Synagogan ympäristöön kuuluvat myös hautausmaa, museo ja arkeologisissa kaivauksissa löydetty mikveh eli rituaalikylpy.\n\nRakennus myytiin myöhemmin, ja sitä muutettiin uutta käyttöä varten. Naisten lehterin kohdalle rakennettiin kokonainen toinen kerros, ikkunoiden kaaria ja lattiaa vaihdettiin ja hautausmaa rappeutui. Kunnostus palautti talon synagogaksi.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
     },
-    {
-     "otsikko": "Telakka nosti koko laivan",
-     "teksti": "Blackwoods Screw Dockissa laivan runkoon päästiin käsiksi nostamalla alus vedestä. Telakan nostolavaa liikutettiin ruuvimekanismilla: huollettava alus ei vain kellunut laiturin vieressä, vaan nousi työskentelyä varten ylemmäs. Bridgetownin satamassa tämä oli konkreettinen insinööriratkaisu merenkulun arkiseen pulmaan. Veden alla oleva runko piti saada kuiville. Historiallinen telakka kertoo sataman korjaustyöstä kauppaa ja matkustamista palvelleen liikenteen rinnalla.",
-     "wiki": "Bridgetown",
-     "tiedosto": "191223 Bridgetown Screw Dock.jpg",
-     "lyhyt": "Bridgetownin Screw Dockin ruuvit ja telakka-allas.",
-     "selite": "Pitkät ruuvit reunustavat vedellä täyttynyttä telakka-allasta, jonka suulla näkyy veneitä.",
-     "lahde": "Rennboot, Wikimedia Commons (CC BY-SA 4.0)"
-    },
-    {
-     "otsikko": "Silta väisti veneitä",
-     "teksti": "Chamberlain Bridgen historiaan kuuluu kääntösilta, jonka aukosta alukset pääsivät Careenagen sisäaltaaseen. Silta yhdisti kaupungin rantoja, mutta sen piti samalla päästää liikenne kulkemaan alitse. Ratkaisu oli liikuttaa siltaa. Myöhemmin sen tilalle tehtiin nostettava silta, joten nykyinen rakenne ei ole sama kuin vanhoissa satamakuvissa. Vesiväylän ylittäminen ja sen pitäminen avoimena laivoille olivat saman paikan kaksi tehtävää. Sillan historia on siksi myös pienoiskuva satamakaupungin liikenteestä.",
-     "wiki": "Chamberlain Bridge",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Kellotorni vaihtoi puolta",
-     "teksti": "Parlamenttirakennusten kellotorni ei ole aina seissyt nykyisessä paikassaan. Vanha torni oli itäsiiven yhteydessä, mutta sen perustukset alkoivat vajota. Torni purettiin, ja uusi rakennettiin länsisiiven viereen. Nykyistä kelloa katsoessa näkee siis rakennuskokonaisuuden myöhemmän vaiheen. Parlamentin uusgoottilainen ilme ja paikallinen korallikalkkikivi yhdistyvät taloissa, joiden rakentaminen ja muuttaminen jatkuivat eri aikoina. Rakennushistoriaa löytyy myös siitä, mikä on siirtynyt pois alkuperäiseltä paikaltaan.",
-     "wiki": "Parliament Buildings (Barbados)",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+    "Parlamenttirakennukset": {
+      "aika": "1800-luku",
+      "teksti": "Bridgetownin parlamenttirakennukset koostuvat itä- ja länsisiivestä keskustan vesialueen tuntumassa. Uusgoottilainen arkkitehtuuri liittyy Britannian viktoriaaniseen rakennusperinteeseen, mutta rakennusmateriaalina käytettiin paikallista korallikalkkikiveä. Parlamentin kokoussalit sijaitsevat itäsiivessä; länsisiivessä on ollut erilaisia julkisia toimistoja.\n\nKellotornin historiaan kuuluu paikkaa koskeva muutos. Alkuperäinen itäsiiven yhteydessä seissyt torni alkoi vajota huonojen maaperäolojen vuoksi ja purettiin. Uusi torni rakennettiin länsisiiven yhteyteen.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
     }
-   ]
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Grantley Adams International Airport (BGI)",
+    "huomiot": []
   }
- ],
- "kohdekartta": {
-  "numeroympyrat": true,
-  "esittely": "Parlamenttirakennusten ja Nidhe Israelin synagogan historiaan kuuluu rakentamista, vaurioita ja käyttötarkoitusten muutoksia.",
-  "rajat": {
-   "pohjoinen": 13.10244,
-   "etela": 13.09399,
-   "lansi": -59.61828,
-   "ita": -59.61092
-  },
-  "kohteet": [
-   {
-    "nimi": "Nidhe Israelin synagoga",
-    "lat": 13.09944,
-    "lon": -59.61528
-   },
-   {
-    "nimi": "Parlamenttirakennukset",
-    "lat": 13.09699,
-    "lon": -59.61392
-   }
-  ]
- },
- "nahtavyydet": {
-  "Nidhe Israelin synagoga": {
-   "aika": "1600-luvulta; nykyinen rakennus 1800-luvulta",
-   "teksti": "Nidhe Israel on Bridgetownin historiallinen synagoga Synagogue Lanella. Sen alkuperäinen rakennus valmistui 1600-luvulla, tuhoutui myöhemmin hurrikaanissa ja korvattiin uudella synagogalla. Synagogan historia oli alkanut jo kauan ennen isoisän matkavuotta 1873. Synagogan ympäristöön kuuluvat myös hautausmaa, museo ja arkeologisissa kaivauksissa löydetty mikveh eli rituaalikylpy.\n\nRakennus myytiin myöhemmin, ja sitä muutettiin uutta käyttöä varten. Naisten lehterin kohdalle rakennettiin kokonainen toinen kerros, ikkunoiden kaaria ja lattiaa vaihdettiin ja hautausmaa rappeutui. Kunnostus palautti talon synagogaksi. Paikan historia ei siksi pääty vanhan rakennuksen säilymiseen: siihen kuuluu myös pitkä jakso, jolloin rakennusta käytettiin muuhun, sekä työtä aikaisemman käytön palauttamiseksi.",
-   "kuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Parlamenttirakennukset": {
-   "aika": "1800-luku",
-   "teksti": "Bridgetownin parlamenttirakennukset koostuvat itä- ja länsisiivestä keskustan vesialueen tuntumassa. Uusgoottilainen arkkitehtuuri liittyy Britannian viktoriaaniseen rakennusperinteeseen, mutta rakennusmateriaalina käytettiin paikallista korallikalkkikiveä. Isoisän matkavuonna 1873 rakennuskokonaisuus oli vielä tekeillä. Parlamentin kokoussalit sijaitsevat itäsiivessä; länsisiivessä on ollut erilaisia julkisia toimistoja.\n\nKellotornin historiaan kuuluu paikkaa koskeva muutos. Alkuperäinen itäsiiven yhteydessä seissyt torni alkoi vajota huonojen maaperäolojen vuoksi ja purettiin. Uusi torni rakennettiin länsisiiven yhteyteen. Nykyinen kokonaisuus ei siten vastaa kaikkien vanhojen kuvien näkymää. Parlamentin kokoussalit ovat itäsiivessä, vaikka nykyinen kellotorni kohoaa länsisiiven vieressä.",
-   "kuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "lahde": "Wikipedia"
-  }
- },
- "saatiedot": null,
- "ehdotukset": {
-  "lentoasema": "Grantley Adams International Airport (BGI)",
-  "huomiot": [
-   "C-tekstiluonnos; rajattu A, B ja riippumattomat D/E/F avoinna.",
-   "Kuvat puuttuvat kaikista rooleista; neljä kuvakenttää ovat tyhjiä.",
-   "Kartta partial: kaksi kohdetta. Garrisonin WP-piste ristiriidassa sijaintitekstin kanssa; nykyisen Chamberlain Bridgen teosraja tarkistamatta.",
-   "Sääauditointi avoin: saatiedot null, ei muutoksia saa.jsoniin.",
-   "Kontekstin väestöluku koskee St. Michaelin seurakuntaa; kaupungin asukaslukua ei käytetty."
-  ]
- }
 }

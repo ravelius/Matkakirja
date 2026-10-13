@@ -1,401 +1,393 @@
 {
- "$skeema": "matkakirja-paakaupunki/1",
- "id": "stgeorges",
- "maa": "GRD",
- "era": "e12",
- "kaupunki": {
+  "$skeema": "matkakirja-paakaupunki/1",
   "id": "stgeorges",
-  "name": "St. George's",
-  "wiki": "St. George's",
-  "ambience": "satama",
-  "pallo": {
-   "lat": 12.0525,
-   "lon": -61.7531
-  }
- },
- "artikkeli": {
-  "intro": "St. George’s on Grenadan pääkaupunki, jossa luonnonsatama ja jyrkät kukkulat määräävät keskustan muodon. **Carenagen hevosenkengän muotoinen lahti** jää vanhan tulivuoren kraatteriin kuuluneiden rinteiden keskelle. Ranskalaiset rakensivat sataman ympärille siirtomaakaupungin, jonka paikkaa muutettiin alkuperäisen asutuksen kärsittyä tulvimisesta ja malariasta. Brittihallinnon aikana kaupunki sai nimensä pyhältä Yrjöltä.\n\nSataman yläpuolella oleva **Fort George** nimettiin kuitenkin kuningas Yrjö III:n mukaan. Linnake oli osa kaupunkia ympäröiville kukkuloille rakennettua puolustusverkostoa. Sendallin tunneli yhdistää kaupungin osia kulkemalla Fort Georgen kukkulan läpi. Kansallismuseon rakennukset puolestaan ovat palvelleet hotellien ja varaston käytössä ennen museotoimintaa. St. George’sin historiaa voi lukea niin nimistä kuin kulkureiteistä ja talojen käyttötarkoituksista.",
-  "teksti": "St. George’sin sataman ensimmäinen ranskalainen siirtomaa-asutus tunnettiin Saint Louisina ja myöhemmin Port Louisina. Tulvimisesta ja malariasta kärsineen paikan sijaan rakennettiin Ville de Fort Royal. Kaupungin nimi vaihtui brittihallinnon aikana, mutta Fort George ja St. George’s nimettiin eri Yrjöjen mukaan.\n\nKaupunkia ja luonnonsatamaa ympäröivät kukkulat saivat 1700-luvulla linnoitusten verkoston. Fort Georgen asema oli hyvä sataman hallitsemiseen, mutta sen yläpuolelle jäi korkeampaa maata. Isoisän matkavuonna 1873 linnake ja kukkuloiden puolustusjärjestelmä olivat jo osa kaupunkia.\n\nKansallismuseo muodostuu eri rakennuksista, joiden historiaan kuuluu hotellitoimintaa ja varastokäyttöä. Varsinainen vanha vankila sijaitsi museorakennusten takana. Kirkkojen ja muiden talojen myöhemmät korjaukset puolestaan kertovat kaupunkia vaurioittaneista hurrikaaneista. Historiallinen kaupunki sisältää myös jälleen rakennettuja osia."
- },
- "kysymykset": [
-  {
-   "q": "Minkä maan pääkaupunki St. George’s on?",
-   "options": [
-    "Grenadan",
-    "Barbadosin",
-    "Saint Lucian",
-    "Dominican"
-   ],
-   "correct": 0,
-   "level": 1,
-   "hint": "Saarivaltio tunnetaan myös maustesaarena.",
-   "fact": "St. George’s sijaitsee Grenadan länsirannikolla.",
-   "source": "https://en.wikipedia.org/wiki/St._George%27s,_Grenada"
-  },
-  {
-   "q": "Keneltä St. George’s sai nimensä brittihallinnon aikana?",
-   "options": [
-    "Pyhältä Yrjöltä",
-    "Kuningas Yrjö III:lta",
-    "Kuningas Yrjö VI:lta",
-    "Kuningas Yrjö I:ltä"
-   ],
-   "correct": 0,
-   "level": 3,
-   "hint": "Kaupungin nimi ja sen linnakkeen nimi viittaavat eri hahmoihin.",
-   "fact": "Kaupunki nimettiin Englannin suojeluspyhimyksen mukaan, Fort George puolestaan kuningas Yrjö III:n mukaan.",
-   "source": "https://en.wikipedia.org/wiki/St._George%27s,_Grenada"
-  },
-  {
-   "q": "Mitä muotoa Carenagen luonnonsatama muistuttaa?",
-   "options": [
-    "Hevosenkenkää",
-    "Suorakulmiota",
-    "Pitkää suoraa kanavaa",
-    "Täydellistä ympyrää"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Lahti kaartuu sisään rantojen väliin.",
-   "fact": "Carenage on St. George’sin hevosenkengän muotoinen historiallinen sisäsatama.",
-   "source": "https://en.wikipedia.org/wiki/St._George%27s,_Grenada"
-  },
-  {
-   "q": "Mihin maastoon St. George’sin vanha linnoitusverkosto sijoitettiin?",
-   "options": [
-    "Sataman ympäristön kukkuloille",
-    "Sataman rantatasangolle",
-    "Jokisuun matalille saarille",
-    "Sisämaan laakson pohjalle"
-   ],
-   "correct": 0,
-   "level": 3,
-   "hint": "Fort George, Fort Frederick ja Fort Matthew olivat osa kokonaisuutta.",
-   "fact": "Linnoitusjärjestelmä kehittyi kaupunkia ja luonnonsatamaa ympäröiville kukkuloille.",
-   "source": "https://en.wikipedia.org/wiki/Fort_George,_Grenada"
-  },
-  {
-   "q": "Mitä kansallismuseon rakennuksissa toimi ennen museota?",
-   "options": [
-    "Hotelleja ja varasto",
-    "Koulu ja kirjasto",
-    "Posti ja tullitoimisto",
-    "Kasarmi ja sairaala"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Museo koostuu useasta eri-ikäisestä rakennuksesta.",
-   "fact": "Museon rakennuskokonaisuus ehti palvella eri hotellien ja varaston käytössä.",
-   "source": "https://en.wikipedia.org/wiki/Grenada_National_Museum"
-  }
- ],
- "tiedot": [
-  "St. George’sin kaupungin nimi viittaa pyhään Yrjöön, Fort Georgen linnakkeen nimi kuningas Yrjö III:een.",
-  "Sendallin tunneli kulkee Fort Georgen kukkulan läpi; Young Street tarjoaa toisen reitin kaupungin osien välillä.",
-  "St. George’sin linnoitusjärjestelmä on Unescon maailmanperinnön alustavassa luettelossa, mikä ei vielä tarkoita maailmanperintöasemaa."
- ],
- "valokuva": {
-  "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
-  "lyhyt": "Aquarium Beachin rantaa Grenadalla.",
-  "selite": "Vaalea hiekkaranta kaartuu etualalla; veden takana näkyvät vihreät rinteet ja niiden asutus.",
-  "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
-  "vuosi": "2003"
- },
- "kaupunkilehti": [
-  {
-   "id": "kaupunki",
-   "nimi": "St. George's",
-   "johdanto": "Kaupungin nimet, tunneli ja vanhat hotellit avaavat satamakaupungin historiaa kukkuloiden keskellä.",
-   "kansikuvat": [
-    {
-     "tiedosto": "St. Georges from Fort George - panoramio.jpg",
-     "lyhyt": "Carenagen sisäsatama Fort Georgelta nähtynä.",
-     "selite": "Lahti kaartuu rakennusten väliin; talot jatkuvat veden ääreltä vihreille rinteille.",
-     "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)"
-    },
-    {
-     "tiedosto": "St. Georges The Logoon from Fort Georges - panoramio.jpg",
-     "lyhyt": "St. George’sin Lagoon Fort Georgelta nähtynä.",
-     "selite": "Venesataman mastot, satamalaiturin kontit ja rinteiden asutus näkyvät lahden ympärillä.",
-     "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)"
-    },
-    {
-     "tiedosto": "Grenada, Karibik - St. George's - North - panoramio.jpg",
-     "lyhyt": "St. George’sin pohjoisosan rantakortteleita.",
-     "selite": "Rantatie, rakennukset ja rinteiden talot erottuvat laajassa panoraamassa; veneitä näkyy veden puolella.",
-     "lahde": "giggel, Wikimedia Commons (CC BY 3.0)"
+  "maa": "GRD",
+  "era": "e12",
+  "kaupunki": {
+    "id": "stgeorges",
+    "name": "St. George's",
+    "wiki": "St. George's",
+    "ambience": "satama",
+    "pallo": {
+      "lat": 12.0525,
+      "lon": -61.7531
     }
-   ],
-   "nostot": [
+  },
+  "artikkeli": {
+    "intro": "St. George’s on Grenadan pääkaupunki, jossa luonnonsatama ja jyrkät kukkulat määräävät keskustan muodon. **Carenagen hevosenkengän muotoinen lahti** jää vanhan tulivuoren kraatteriin kuuluneiden rinteiden keskelle. Ranskalaiset rakensivat sataman ympärille siirtomaakaupungin, jonka paikkaa muutettiin alkuperäisen asutuksen kärsittyä tulvimisesta ja malariasta. Brittihallinnon aikana kaupunki sai nimensä pyhältä Yrjöltä.\n\nSataman yläpuolella oleva **Fort George** nimettiin kuitenkin kuningas Yrjö III:n mukaan. Linnake oli osa kaupunkia ympäröiville kukkuloille rakennettua puolustusverkostoa. Sendallin tunneli yhdistää kaupungin osia kulkemalla Fort Georgen kukkulan läpi. Kansallismuseon rakennukset puolestaan ovat palvelleet hotellien ja varaston käytössä ennen museotoimintaa.",
+    "teksti": "St. George’sin sataman ensimmäinen ranskalainen siirtomaa-asutus tunnettiin Saint Louisina ja myöhemmin Port Louisina. Tulvimisesta ja malariasta kärsineen paikan sijaan rakennettiin Ville de Fort Royal. Kaupungin nimi vaihtui brittihallinnon aikana, mutta Fort George ja St. George’s nimettiin eri Yrjöjen mukaan.\n\nKaupunkia ja luonnonsatamaa ympäröivät kukkulat saivat 1700-luvulla linnoitusten verkoston. Fort Georgen asema oli hyvä sataman hallitsemiseen, mutta sen yläpuolelle jäi korkeampaa maata.\n\nKansallismuseo muodostuu eri rakennuksista, joiden historiaan kuuluu hotellitoimintaa ja varastokäyttöä. Varsinainen vanha vankila sijaitsi museorakennusten takana. Kirkkojen ja muiden talojen myöhemmät korjaukset puolestaan kertovat kaupunkia vaurioittaneista hurrikaaneista. Historiallinen kaupunki sisältää myös jälleen rakennettuja osia."
+  },
+  "kysymykset": [
     {
-     "otsikko": "Kaupungilla ja linnakkeella on eri Yrjöt",
-     "teksti": "St. George’s ja Fort George kuulostavat saman nimen kahdelta versiolta, mutta nimet viittaavat eri hahmoihin. Kaupunki sai brittihallinnon aikana nimensä Englannin suojeluspyhimykseltä, pyhältä Yrjöltä. Sataman yläpuolella oleva linnake nimettiin puolestaan kuningas Yrjö III:n mukaan. Ranskalaisaikana kaupungin nimessä esiintyi Fort Royal, ja myös linnake tunnettiin kuninkaallisena linnoituksena. Samalla kävelyllä vastaan tulee siten sekä uskonnollinen että kuninkaallinen nimiperinne. Nimen samankaltaisuus ei takaa samaa esikuvaa.",
-     "wiki": "St. George's, Grenada",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Kaupungin paikka vaihtui",
-     "teksti": "Ranskalaisten alkuperäinen siirtomaa-asutus sijaitsi sataman itäreunalla. Sitä kutsuttiin Saint Louisiksi ja myöhemmin Port Louisiksi. Paikka kärsi tulvimisesta ja malariasta, joten sen sijaan rakennettiin uusi kaupunki, Ville de Fort Royal. Nimen lisäksi vaihtui asutuksen paikka: uusi kaupunki rakennettiin vanhan tulvaherkän alueen tilalle. Satama pysyi ympäristön keskeisenä kiintopisteenä. Sen eri rannoille sijoittuneet asuinpaikat kertovat siitä, ettei luonnonsataman vieressä jokainen tontti ollut yhtä sopiva kaupungille.",
-     "wiki": "St. George's, Grenada",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Museo hotellien jäljillä",
-     "teksti": "Grenadan kansallismuseo ei ole yksi rakennus, jolla olisi vain yksi aikaisempi käyttötapa. Sen kokonaisuuteen kuuluu eri-ikäisiä taloja, ja alueen historiaan kuuluu brittihallinnon poliisitoimintaa sekä viereinen vankila. Varsinainen vankila sijaitsi nykyisten museorakennusten takana. Paikalla toimi myöhemmin hotelleja ja jonkin aikaa myös varasto. Kansallismuseoksi kokonaisuus tuli vasta tämän pitkän käyttöhistorian jälkeen. Museossa tutkitaan siis menneisyyttä taloissa, joilla on oma monivaiheinen menneisyytensä.",
-     "wiki": "Grenada National Museum",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Kaupunki kukkulan läpi",
-     "teksti": "Sendallin tunneli kulkee Fort Georgen kukkulan alitse. Se yhdistää Carenagen suunnan Church Streetin vanhaan kaupunginosaan, joten kulkija voi kulkea mäen läpi sen sijaan, että kiertäisi saman esteen katuja pitkin. Tunneli ei ole pelkkä kävelykohde: siellä kulkee myös ajoneuvoja, eikä siinä ole erillistä jalkakäytävää. Young Street tarjoaa toisen reitin kaupungin osien välillä. St. George’sin pienessä keskustassa reitin valintaan kuuluu siis myös korkeusero. Lyhyeltä näyttävä matka voi kulkea mäen yli, ympäri tai läpi.",
-     "wiki": "St. George's, Grenada",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "matkailijalle": {
-    "kuva": {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    "kappale": "St. George’sin keskustaa voi tutkia kävellen, mutta jyrkät kadut vaikuttavat reittiin. Carenage ja Fort Georgen kukkula auttavat hahmottamaan kaupungin eri puolia. Sendallin tunnelissa liikkuu myös ajoneuvoja, eikä siellä ole erillistä jalkakäytävää. Young Street tarjoaa vaihtoehtoisen kulkureitin.",
-    "artikkeli": {
-     "nimi": "Matkailijan St. George's",
-     "taitto": "opas",
-     "teksti": "Tutki sisäsatamaa ja kukkuloiden väliin rakentunutta keskustaa.",
-     "nosto": "Rantakierros ja kukkuloiden rakennukset näyttävät eri puolet kaupungista.",
-     "jaksot": [
-      {
-       "otsikko": "Perille ja liikkeelle",
-       "teksti": "Maurice Bishopin kansainvälinen lentoasema sijaitsee kaupungin lounaispuolella. St. George’s on saaren liikenteen solmukohta, jossa pikkubussit ja taksit kokoavat yhteen eri suunnista tulevia matkustajia. Keskustan bussiterminaali on risteilyterminaalin pohjoispuolella. Keskusta sopii kävelyyn, mutta osa kaduista on jyrkkiä. Grand Ansen ranta- ja hotellialue on erillinen retkikohde keskustan eteläpuolella.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Carenagen rantakierros",
-       "teksti": "Carenage on kaupungin historiallinen sisäsatama. Suuremmat alukset käyttävät sen länsipuolella olevaa satama-aluetta, joten kaikkia veneitä ja laivoja ei löydä samalta rannalta. Fort Georgen kukkula auttaa hahmottamaan keskustaa. Sendallin tunneli kulkee kukkulan läpi, mutta ajoneuvot käyttävät sitä myös eikä siellä ole erillistä jalkakäytävää. Young Street on vaihtoehtoinen kävelyreitti.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Vanhojen rakennusten kaupungissa",
-       "teksti": "Kansallismuseon rakennuskokonaisuus sijaitsee Young Streetin ja Monckton Streetin kulmassa. Sen hotellien ja varaston historiaan voi tutustua museon omasta kuvauksesta, ja rakennusten käyttötavat ovat vaihtuneet. Church Streetin ympäristössä on anglikaaninen kirkko ja katolinen katedraali. Fort George sekä Richmond Hillin linnakkeet tarjoavat eri näkökulmat satamaa ympäröivään maastoon; satama näkyy kukkuloilta eri suunnista.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Mitä täällä syödään",
-       "teksti": "Carenagen rannalla on meren antimiin painottuvia ruokapaikkoja, ja muualla keskustassa tarjotaan myös paikallista kotiruokaa. Lounaan voi liittää sisäsataman rantakierrokseen tai jatkaa Lagoon Roadin suuntaan. Päivän ruokalista kannattaa lukea paikan päällä. Sataman lähelle suunniteltuun päivään sopii ruokatauko veden äärellä.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Milloin kannattaa tulla",
-       "teksti": "St. George’sissa on kostea trooppinen ilmasto, jossa erotetaan kuiva ja sateinen kausi. Jyrkkiä katuja ja kukkuloita sisältävään kävelypäivään kannattaa jättää tilaa tauoille. Sateiseen päivään voi suunnitella lyhyempiä rantakierroksia, ja Carenagen ruokapaikat tarjoavat taukopaikkoja. Risteilyaluksen saapuminen ja oman kuljetuksen lähtöaika kannattaa huomioida päivän reitissä.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      }
-     ],
-     "matkailu": {
-      "parasta": [
-       {
-        "mita": "Carenagen rantakierros",
-        "tahdet": 3,
-        "selite": "Historiallinen sisäsatama on keskustan kiintopiste."
-       },
-       {
-        "mita": "Fort Georgen ympäristö",
-        "tahdet": 3,
-        "selite": "Linnakkeen kukkula hahmottaa sataman ja kaupungin suhdetta."
-       },
-       {
-        "mita": "Kansallismuseon rakennukset",
-        "tahdet": 2,
-        "selite": "Vanhojen hotellien ja varaston historia löytyy samasta kokonaisuudesta."
-       },
-       {
-        "mita": "Church Street",
-        "tahdet": 2,
-        "selite": "Kirkot ja katedraali kuuluvat vanhaan kaupunginosaan."
-       },
-       {
-        "mita": "Richmond Hillin linnakkeet",
-        "tahdet": 3,
-        "selite": "Kukkuloilla näkyy kaupungin puolustusverkoston historia."
-       }
+      "q": "Minkä maan pääkaupunki St. George’s on?",
+      "options": [
+        "Grenadan",
+        "Barbadosin",
+        "Saint Lucian",
+        "Dominican"
       ],
-      "hyvaTietaa": [
-       {
-        "otsikko": "Mäkiä keskustassa",
-        "teksti": "Keskusta on kompakti, mutta osa kaduista on jyrkkiä."
-       },
-       {
-        "otsikko": "Tunneli",
-        "teksti": "Sendallin tunnelissa ei ole erillistä jalkakäytävää; Young Street on toinen reitti."
-       },
-       {
-        "otsikko": "Vierailun varmistus",
-        "teksti": "Tarkista museon ja linnakkeiden ajantasaiset käyntijärjestelyt kohteiden omilta sivuilta ennen käyntiä."
-       },
-       {
-        "otsikko": "Majoituksen sijainti",
-        "teksti": "Grand Anse kuuluu samaan seurakuntaan, mutta sen hotellit eivät ole St. George’sin vanhassa keskustassa."
-       }
+      "correct": 0,
+      "level": 1,
+      "hint": "Saarivaltio tunnetaan myös maustesaarena.",
+      "fact": "St. George’s sijaitsee Grenadan länsirannikolla.",
+      "source": "https://en.wikipedia.org/wiki/St._George%27s,_Grenada"
+    },
+    {
+      "q": "Keneltä St. George’s sai nimensä brittihallinnon aikana?",
+      "options": [
+        "Pyhältä Yrjöltä",
+        "Pyhältä Ludvigilta",
+        "Kuningas Yrjö III:lta",
+        "Kuningas Ludvig XIV:ltä"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Kaupungin nimi ja sen linnakkeen nimi viittaavat eri hahmoihin.",
+      "fact": "Kaupunki nimettiin Englannin suojeluspyhimyksen mukaan, Fort George puolestaan kuningas Yrjö III:n mukaan.",
+      "source": "https://en.wikipedia.org/wiki/St._George%27s,_Grenada"
+    },
+    {
+      "q": "Mitä muotoa Carenagen luonnonsatama muistuttaa?",
+      "options": [
+        "Hevosenkenkää",
+        "Suorakulmiota",
+        "Pitkää suoraa kanavaa",
+        "Täydellistä ympyrää"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Carenage on vanhan kaupungin historiallinen sisäsatama.",
+      "fact": "Carenage on St. George’sin hevosenkengän muotoinen historiallinen sisäsatama.",
+      "source": "https://en.wikipedia.org/wiki/St._George%27s,_Grenada"
+    },
+    {
+      "q": "Mihin maastoon St. George’sin vanha linnoitusverkosto sijoitettiin?",
+      "options": [
+        "Sataman ympäristön kukkuloille",
+        "Sataman rantatasangolle",
+        "Jokisuun matalille saarille",
+        "Sisämaan laakson pohjalle"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Fort George, Fort Frederick ja Fort Matthew olivat osa kokonaisuutta.",
+      "fact": "Linnoitusjärjestelmä kehittyi kaupunkia ja luonnonsatamaa ympäröiville kukkuloille.",
+      "source": "https://en.wikipedia.org/wiki/Fort_George,_Grenada"
+    },
+    {
+      "q": "Mitä kansallismuseon rakennuksissa toimi ennen museota?",
+      "options": [
+        "Hotelleja ja varasto",
+        "Koulu ja kirjasto",
+        "Posti ja tullitoimisto",
+        "Kasarmi ja sairaala"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Museo koostuu useasta eri-ikäisestä rakennuksesta.",
+      "fact": "Museon rakennuskokonaisuus ehti palvella eri hotellien ja varaston käytössä.",
+      "source": "https://en.wikipedia.org/wiki/Grenada_National_Museum"
+    }
+  ],
+  "tiedot": [
+    "St. George’sin kaupungin nimi viittaa pyhään Yrjöön, Fort Georgen linnakkeen nimi kuningas Yrjö III:een.",
+    "Sendallin tunneli kulkee Fort Georgen kukkulan läpi; Young Street tarjoaa toisen reitin kaupungin osien välillä.",
+    "St. George’sin linnoitusjärjestelmä on Unescon maailmanperinnön alustavassa luettelossa, mikä ei vielä tarkoita maailmanperintöasemaa."
+  ],
+  "valokuva": {
+    "tiedosto": "Grenada Aquarium Beach - panoramio - Stefan und Bille.jpg",
+    "lyhyt": "Aquarium Beachin rantaa Grenadalla.",
+    "selite": "Aquarium Beachin rantaa Grenadalla vuonna 2003.",
+    "lahde": "Stefan_und_Bille, Commons (CC BY-SA 3.0)",
+    "vuosi": "2003"
+  },
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "St. George's",
+      "johdanto": "Kaupungin nimet, tunneli ja vanhat hotellit avaavat satamakaupungin historiaa kukkuloiden keskellä.",
+      "kansikuvat": [
+        {
+          "tiedosto": "St. Georges from Fort George - panoramio.jpg",
+          "lyhyt": "Carenagen sisäsatama Fort Georgelta nähtynä.",
+          "selite": "Carenagen sisäsatama kuvattuna Fort Georgelta.",
+          "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)"
+        },
+        {
+          "tiedosto": "St. Georges The Logoon from Fort Georges - panoramio.jpg",
+          "lyhyt": "St. George’sin Lagoon Fort Georgelta nähtynä.",
+          "selite": "Lagoonin satama-alue Fort Georgelta katsottuna.",
+          "lahde": "Stefan_und_Bille, Wikimedia Commons (CC BY-SA 3.0)"
+        },
+        {
+          "tiedosto": "Grenada, Karibik - St. George's - North - panoramio.jpg",
+          "lyhyt": "St. George’sin pohjoisosan rantakortteleita.",
+          "selite": "Panoraamakuva St. George’sin pohjoisosan rannikosta.",
+          "lahde": "giggel, Wikimedia Commons (CC BY 3.0)"
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Kaupungilla ja linnakkeella on eri Yrjöt",
+          "teksti": "St. George’s ja Fort George kuulostavat saman nimen kahdelta versiolta, mutta nimet viittaavat eri hahmoihin. Kaupunki sai brittihallinnon aikana nimensä Englannin suojeluspyhimykseltä, pyhältä Yrjöltä. Sataman yläpuolella oleva linnake nimettiin puolestaan kuningas Yrjö III:n mukaan. Ranskalaisaikana kaupungin nimessä esiintyi Fort Royal, ja myös linnake tunnettiin kuninkaallisena linnoituksena.",
+          "wiki": "St. George's, Grenada",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kaupungin paikka vaihtui",
+          "teksti": "Ranskalaisten alkuperäinen siirtomaa-asutus sijaitsi sataman itäreunalla. Sitä kutsuttiin Saint Louisiksi ja myöhemmin Port Louisiksi. Paikka kärsi tulvimisesta ja malariasta, joten sen sijaan rakennettiin uusi kaupunki, Ville de Fort Royal. Satama pysyi ympäristön keskeisenä kiintopisteenä. Saint Louis -nimi kunnioitti Ranskan kuningas Ludvig IX:ää.",
+          "wiki": "St. George's, Grenada",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Museo hotellien jäljillä",
+          "teksti": "Grenadan kansallismuseo ei ole yksi rakennus, jolla olisi vain yksi aikaisempi käyttötapa. Sen kokonaisuuteen kuuluu eri-ikäisiä taloja, ja alueen historiaan kuuluu brittihallinnon poliisitoimintaa sekä viereinen vankila. Varsinainen vankila sijaitsi nykyisten museorakennusten takana. Paikalla toimi myöhemmin hotelleja ja jonkin aikaa myös varasto. Kansallismuseoksi kokonaisuus tuli vasta tämän pitkän käyttöhistorian jälkeen.",
+          "wiki": "Grenada National Museum",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kaupunki kukkulan läpi",
+          "teksti": "Sendallin tunneli kulkee Fort Georgen kukkulan alitse. Se yhdistää Carenagen suunnan Church Streetin vanhaan kaupunginosaan, joten kulkija voi kulkea mäen läpi sen sijaan, että kiertäisi saman esteen katuja pitkin. Tunneli ei ole pelkkä kävelykohde: siellä kulkee myös ajoneuvoja, eikä siinä ole erillistä jalkakäytävää. Young Street tarjoaa toisen reitin kaupungin osien välillä. St.",
+          "wiki": "St. George's, Grenada",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "St. George’sin keskustaa voi tutkia kävellen. Carenage ja Fort Georgen kukkula auttavat hahmottamaan kaupungin eri osia. Young Street yhdistää sisäsataman ja vanhan kaupunginosan.",
+        "artikkeli": {
+          "nimi": "Matkailijan St. George's",
+          "taitto": "opas",
+          "teksti": "Tutki sisäsatamaa ja kukkuloiden väliin rakentunutta keskustaa.",
+          "nosto": "Rantakierros ja kukkuloiden rakennukset näyttävät eri puolet kaupungista.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Maurice Bishopin kansainvälinen lentoasema sijaitsee kaupungin lounaispuolella. St. George’s on saaren liikenteen solmukohta, jossa pikkubussit ja taksit kokoavat yhteen eri suunnista tulevia matkustajia. Keskustan bussiterminaali on risteilyterminaalin pohjoispuolella. Keskusta sopii kävelyyn, mutta osa kaduista on jyrkkiä. Grand Ansen ranta- ja hotellialue on erillinen retkikohde keskustan eteläpuolella.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Carenagen rantakierros",
+              "teksti": "Carenage on kaupungin historiallinen sisäsatama. Suuremmat alukset käyttävät sen länsipuolella olevaa satama-aluetta. Sendallin tunneli kulkee Fort Georgen kukkulan läpi, ja Young Street on toinen reitti kaupungin osien välillä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Vanhojen rakennusten kaupungissa",
+              "teksti": "Kansallismuseon rakennuskokonaisuus sijaitsee Young Streetin ja Monckton Streetin kulmassa. Sen hotellien ja varaston historiaan voi tutustua museon omasta kuvauksesta, ja rakennusten käyttötavat ovat vaihtuneet. Church Streetin ympäristössä on anglikaaninen kirkko ja katolinen katedraali. Fort George sekä Richmond Hillin linnakkeet tarjoavat eri näkökulmat satamaa ympäröivään maastoon; satama näkyy kukkuloilta eri suunnista.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Carenagen rannalla on meren antimiin painottuvia ruokapaikkoja, ja muualla keskustassa tarjotaan paikallista kotiruokaa. Ruokapaikkoja on myös Lagoon Roadin suunnalla.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "St. George’sissa on kostea trooppinen ilmasto, jossa erotetaan kuiva ja sateinen kausi.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Carenagen rantakierros",
+                "tahdet": 3,
+                "selite": "Historiallinen sisäsatama on keskustan kiintopiste."
+              },
+              {
+                "mita": "Fort Georgen ympäristö",
+                "tahdet": 3,
+                "selite": "Linnakkeen kukkula hahmottaa sataman ja kaupungin suhdetta."
+              },
+              {
+                "mita": "Kansallismuseon rakennukset",
+                "tahdet": 2,
+                "selite": "Vanhojen hotellien ja varaston historia löytyy samasta kokonaisuudesta."
+              },
+              {
+                "mita": "Church Street",
+                "tahdet": 2,
+                "selite": "Kirkot ja katedraali kuuluvat vanhaan kaupunginosaan."
+              },
+              {
+                "mita": "Richmond Hillin linnakkeet",
+                "tahdet": 3,
+                "selite": "Kukkuloilla näkyy kaupungin puolustusverkoston historia."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Mäkiä keskustassa",
+                "teksti": "Keskusta on kompakti, mutta osa kaduista on jyrkkiä."
+              },
+              {
+                "otsikko": "Tunneli",
+                "teksti": "Sendallin tunnelin kautta kulkee ajoneuvoliikennettä."
+              },
+              {
+                "otsikko": "Sisäsatama",
+                "teksti": "Carenage on historiallinen sisäsatama; suuremmat alukset käyttävät länsipuolen satama-aluetta."
+              },
+              {
+                "otsikko": "Majoituksen sijainti",
+                "teksti": "Grand Anse kuuluu samaan seurakuntaan, mutta sen hotellit eivät ole St. George’sin vanhassa keskustassa."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "historia",
+      "nimi": "Kukkuloiden kaupungin kerrokset",
+      "johdanto": "Linnoitukset, kirkon korjaukset ja vanhan kraatterin maasto näkyvät samassa kaupungissa.",
+      "tehtava": {
+        "kysymys": "Mikä kuvaa anglikaanista kirkkoa sen ollessa vaurioitunut?",
+        "vaihtoehdot": [
+          "Rakennuksessa jatkui yhteisön toimintaa.",
+          "Toiminta siirrettiin satamavarastoon.",
+          "Rakennus otettiin museokäyttöön.",
+          "Tontille rakennettiin uusi koulutalo."
+        ],
+        "oikea": 0,
+        "fakta": "Kirkossa rukoiltiin ja opetettiin myös ennen rakennuksen korjaamista."
+      },
+      "nostot": [
+        {
+          "otsikko": "Satamaa vartioiva linnake",
+          "teksti": "Fort George seisoo sataman yläpuolella. Ranskalaiset rakensivat sen kiviset puolustusrakenteet 1700-luvun alussa, ja moniulmainen pohjamuoto sekä ulkonevat bastionit kuuluivat ajan linnoitustaitoon. Merelle katsova sijainti ei kuitenkaan tehnyt linnakkeesta suojattua joka suunnasta. Sen yläpuolella oli korkeampaa maata, ja ranskalaiset lähestyivät brittien hallitsemaa linnoitusta myöhemmin maalta käsin.",
+          "wiki": "Fort George, Grenada",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Linnoitus ei ollut yksin",
+          "teksti": "St. George’sin ympärille muodostui 1700-luvulla linnoitusten verkosto. Rakenteita sijoitettiin kaupunkia ja luonnonsatamaa ympäröivien kukkuloiden harjanteille. Ranskalaisen ja brittiläisen sotilasinsinöörityön ratkaisuja sovellettiin paikalliseen maastoon, ja järjestelmä kehittyi ajan rakennustekniikan mukana. Fort George, Fort Frederick ja Fort Matthew ovat säilyneitä osia tästä kokonaisuudesta. Kaikkien entisten puolustuspaikkojen rakennukset eivät enää ole jäljellä.",
+          "wiki": "Fort George, Grenada",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Kirkko jatkoi ilman ehjää taloa",
+          "teksti": "St. George’sin anglikaaninen kirkko vaurioitui pahoin 2000-luvun alun hurrikaanissa. Rakennus oli pitkään raunioitunut, mutta paikalliset käyttivät sitä silti epävirallisesti rukoukseen ja koulutunteihin. Myöhempi jälleenrakennus palautti kirkon sen varsinaiseen käyttöön. Kirkkoon myöhemmin lisätty kellokoneisto soittaa Westminsterin kellomelodiaa tasatunnin vaihtuessa.",
+          "wiki": "St. George's, Grenada",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Satama vanhan kraatterin sylissä",
+          "teksti": "St. George’sin keskustaa ympäröivät vanhan tulivuoren kraatteriin kuuluneet kukkulat. Carenagen hevosenkengän muotoinen luonnonsatama sijaitsee niiden keskellä saaren länsirannikolla. Kukkuloilta katsotaan alas satamaan, eikä kaupunki levittäydy tasaisena kenttänä veden vierelle. Sama maasto näkyy jyrkissä kaduissa ja harjanteille sijoitetuissa linnoituksissa.",
+          "wiki": "St. George's, Grenada",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
       ]
-     },
-     "lahde": "Wikipedia"
     }
-   }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Fort George kertoo sataman puolustamisesta, kansallismuseon rakennuskokonaisuus hotellien ja varaston historiasta.",
+    "rajat": {
+      "pohjoinen": 12.05358,
+      "etela": 12.0462,
+      "lansi": -61.75697,
+      "ita": -61.74959
+    },
+    "kohteet": [
+      {
+        "nimi": "Fort George",
+        "lat": 12.0492,
+        "lon": -61.7539
+      },
+      {
+        "nimi": "Grenadan kansallismuseo",
+        "lat": 12.05058,
+        "lon": -61.75266
+      }
+    ]
   },
-  {
-   "id": "historia",
-   "nimi": "Kukkuloiden kaupungin kerrokset",
-   "johdanto": "Linnoitukset, kirkon korjaukset ja vanhan kraatterin maasto näkyvät samassa kaupungissa.",
-   "tehtava": {
-    "kysymys": "Mikä kuvaa anglikaanista kirkkoa sen ollessa vaurioitunut?",
-    "vaihtoehdot": [
-     "Rakennuksessa jatkui yhteisön toimintaa.",
-     "Toiminta siirrettiin satamavarastoon.",
-     "Rakennus otettiin museokäyttöön.",
-     "Tontille rakennettiin uusi koulutalo."
-    ],
-    "oikea": 0,
-    "fakta": "Kirkossa rukoiltiin ja opetettiin myös ennen rakennuksen korjaamista."
-   },
-   "nostot": [
-    {
-     "otsikko": "Satamaa vartioiva linnake",
-     "teksti": "Fort George seisoo sataman yläpuolella. Ranskalaiset rakensivat sen kiviset puolustusrakenteet 1700-luvun alussa, ja moniulmainen pohjamuoto sekä ulkonevat bastionit kuuluivat ajan linnoitustaitoon. Merelle katsova sijainti ei kuitenkaan tehnyt linnakkeesta suojattua joka suunnasta. Sen yläpuolella oli korkeampaa maata, ja ranskalaiset lähestyivät brittien hallitsemaa linnoitusta myöhemmin maalta käsin. Sataman hallitseminen ja kukkuloiden hallitseminen olivat eri asioita. Kaupungin maasto näkyy siten myös linnakkeen historiassa.",
-     "wiki": "Fort George, Grenada",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+  "nahtavyydet": {
+    "Fort George": {
+      "aika": "1700-luvun alku",
+      "teksti": "Fort George on St. George’sin satamaa valvova historiallinen linnake. Ranskalaiset rakensivat sen 1700-luvun alussa ja kutsuivat sitä Fort Royaliksi. Brittihallinnon aikana se sai nimensä kuningas Yrjö III:n mukaan. Moniulmainen pohjamuoto ja ulkonevat bastionit kuuluvat aikakauden puolustusarkkitehtuuriin.\n\nLinnakkeen paikka kertoo sekä sen vahvuudesta että maaston aiheuttamasta ongelmasta. Se hallitsi satamaa, mutta sen yläpuolella sijaitsi korkeampaa maata. Ranskalaiset lähestyivät brittien hallitsemaa linnaketta myöhemmin maalta ja käyttivät korkeampia asemia. Kaupungin linnoitusten kokonaisuus kehittyi kukkuloiden harjanteille. Fort George on osa samaa linnoitusverkostoa kuin Fort Frederick ja Fort Matthew.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
     },
-    {
-     "otsikko": "Linnoitus ei ollut yksin",
-     "teksti": "St. George’sin ympärille muodostui 1700-luvulla linnoitusten verkosto. Rakenteita sijoitettiin kaupunkia ja luonnonsatamaa ympäröivien kukkuloiden harjanteille. Ranskalaisen ja brittiläisen sotilasinsinöörityön ratkaisuja sovellettiin paikalliseen maastoon, ja järjestelmä kehittyi ajan rakennustekniikan mukana. Fort George, Fort Frederick ja Fort Matthew ovat säilyneitä osia tästä kokonaisuudesta. Kaikkien entisten puolustuspaikkojen rakennukset eivät enää ole jäljellä. Yksittäinen linnake kertoo vain osan siitä, miten koko satamakaupunkia linnoitettiin.",
-     "wiki": "Fort George, Grenada",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Kirkko jatkoi ilman ehjää taloa",
-     "teksti": "St. George’sin anglikaaninen kirkko vaurioitui pahoin 2000-luvun alun hurrikaanissa. Rakennus oli pitkään raunioitunut, mutta paikalliset käyttivät sitä silti epävirallisesti rukoukseen ja koulutunteihin. Myöhempi jälleenrakennus palautti kirkon sen varsinaiseen käyttöön. Tapaus näyttää kaupungin rakennushistoriasta puolen, jota valmistumisvuosi ei kerro: talon kunto ja yhteisön toiminta eivät kulkeneet samaa tahtia. Kirkon historia jatkui myös silloin, kun sen rakennus ei ollut ehjä. Nykyinen kunnostettu talo kuuluu tähän samaan jatkumoon.",
-     "wiki": "St. George's, Grenada",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Satama vanhan kraatterin sylissä",
-     "teksti": "St. George’sin keskustaa ympäröivät vanhan tulivuoren kraatteriin kuuluneet kukkulat. Carenagen hevosenkengän muotoinen luonnonsatama sijaitsee niiden keskellä saaren länsirannikolla. Kukkuloilta katsotaan alas satamaan, eikä kaupunki levittäydy tasaisena kenttänä veden vierelle. Sama maasto näkyy jyrkissä kaduissa ja harjanteille sijoitetuissa linnoituksissa. Sataman muotoa voi lukea näin osana saaren tulivuoriperäistä maisemaa. Kaupungin tärkeä ympäristö on sekä merellinen että mäkinen, ja molemmat puolet tulevat vastaan keskustassa.",
-     "wiki": "St. George's, Grenada",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+    "Grenadan kansallismuseo": {
+      "aika": "rakennuksia 1700–1800-luvuilta; museo 1900-luvulta",
+      "teksti": "Grenadan kansallismuseon rakennuskokonaisuus sijaitsee Young Streetin ja Monckton Streetin kulmassa. Sen historia liittyy brittihallinnon poliisitoimintaan, viereiseen vankilaan, myöhempiin hotelleihin ja varastoon. Varsinaiset vankilarakennukset sijaitsivat nykyisten museotalojen takana.\n\nMuseotoiminta alkoi vasta 1900-luvulla, pitkän hotelli- ja varastohistorian jälkeen. Kokoelmien aiheisiin kuuluvat saaren alkuperäisasukkaat, eurooppalaisten saapuminen, orjuus, plantaasitalous sekä vanha teknologia ja valaanpyynti.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
     }
-   ]
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Maurice Bishop International Airport",
+    "huomiot": []
   }
- ],
- "kohdekartta": {
-  "numeroympyrat": true,
-  "esittely": "Fort George kertoo sataman puolustamisesta, kansallismuseon rakennuskokonaisuus hotellien ja varaston historiasta.",
-  "rajat": {
-   "pohjoinen": 12.05358,
-   "etela": 12.0462,
-   "lansi": -61.75697,
-   "ita": -61.74959
-  },
-  "kohteet": [
-   {
-    "nimi": "Fort George",
-    "lat": 12.0492,
-    "lon": -61.7539
-   },
-   {
-    "nimi": "Grenadan kansallismuseo",
-    "lat": 12.05058,
-    "lon": -61.75266
-   }
-  ]
- },
- "nahtavyydet": {
-  "Fort George": {
-   "aika": "1700-luvun alku",
-   "teksti": "Fort George on St. George’sin satamaa valvova historiallinen linnake. Ranskalaiset rakensivat sen 1700-luvun alussa ja kutsuivat sitä Fort Royaliksi. Brittihallinnon aikana se sai nimensä kuningas Yrjö III:n mukaan. Moniulmainen pohjamuoto ja ulkonevat bastionit kuuluvat aikakauden puolustusarkkitehtuuriin. Isoisän matkavuonna 1873 linnake oli jo osa satamakaupungin kukkuloille rakentunutta puolustusjärjestelmää.\n\nLinnakkeen paikka kertoo sekä sen vahvuudesta että maaston aiheuttamasta ongelmasta. Se hallitsi satamaa, mutta sen yläpuolella sijaitsi korkeampaa maata. Ranskalaiset lähestyivät brittien hallitsemaa linnaketta myöhemmin maalta ja käyttivät korkeampia asemia. Kaupungin linnoitusten kokonaisuus kehittyi kukkuloiden harjanteille. Fort George on osa samaa linnoitusverkostoa kuin Fort Frederick ja Fort Matthew.",
-   "kuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Grenadan kansallismuseo": {
-   "aika": "rakennuksia 1700–1800-luvuilta; museo 1900-luvulta",
-   "teksti": "Grenadan kansallismuseon rakennuskokonaisuus sijaitsee Young Streetin ja Monckton Streetin kulmassa. Sen historia liittyy brittihallinnon poliisitoimintaan, viereiseen vankilaan, myöhempiin hotelleihin ja varastoon. Varsinaiset vankilarakennukset sijaitsivat nykyisten museotalojen takana.\n\nIsoisän matkavuonna 1873 paikalla ei vielä ollut nykyistä kansallismuseota. Museotoiminta alkoi vasta 1900-luvulla, pitkän hotelli- ja varastohistorian jälkeen. Kokoelmien aiheisiin kuuluvat saaren alkuperäisasukkaat, eurooppalaisten saapuminen, orjuus, plantaasitalous sekä vanha teknologia ja valaanpyynti. Museon talot ovat näin itsekin osa sitä historiaa, jota kokoelmissa käsitellään.",
-   "kuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "lahde": "Wikipedia"
-  }
- },
- "saatiedot": null,
- "ehdotukset": {
-  "lentoasema": "Maurice Bishop International Airport",
-  "huomiot": [
-   "C-tekstiluonnos; rajattu A, B sekä riippumattomat D/E/F avoinna.",
-   "Kuvat puuttuvat kaikista rooleista; kaikki neljä kuvakenttää tyhjiä.",
-   "Kartta partial: kaksi kohteen omaa WP-pistettä; muut pisteet avoinna. Sendall Tunnel -WP-sivu palautti 404.",
-   "Sääauditointi avoin: saatiedot null, ei muutoksia saa.jsoniin.",
-   "Puregrenada-lähteiden yhteinen haku epäonnistui HTTP 307 -uudelleenohjaukseen. Niiden hakutuloskatkelmia ei käytetty tuotannon faktalähteinä.",
-   "Museon oma historiakuvaus erottaa varsinaisen vankilan museorakennuksista. Kaupungin WP-artikkelin väite museosta entisessä vankilassa jätettiin pois.",
-   "Museon/linnakkeiden tämänhetkiset sisäkäynnit tarkistamatta; lentoaseman IATA ei varmennettu tässä rajatussa haussa."
-  ]
- }
 }

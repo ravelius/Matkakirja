@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "portofspain",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+  "sourceContentAfterSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
   "assets": [
     {
       "era": "e12",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+      "sourceContentSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "921b884901694ef5e2b1ab3e7d744e4b738de45397e85d1b782badde0c54d0b0",
+        "semanticContextSHA256": "9e94eecde5053ea905f2d6cd0a6dc4ce20cefafaca1c718a0f58a42ff14afe20",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -561,9 +561,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+      "sourceContentAfterSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "921b884901694ef5e2b1ab3e7d744e4b738de45397e85d1b782badde0c54d0b0",
+      "contextAfterSHA256": "9e94eecde5053ea905f2d6cd0a6dc4ce20cefafaca1c718a0f58a42ff14afe20",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -586,7 +586,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+        "sameImageNativeSHA256": "a592319a794457f37468d57dfc7990494fbe68365f2f5f2a96068429bbae315d",
+        "sameImageExportSHA256": "d192fcd3f8aa1bbaf3fd5f2c65cf7874d443ecce141d88e03fc2fc7a1fd9e8ee",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -636,10 +644,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+      "sourceContentSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
-        "semanticContextSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
+        "targetBeforeSHA256": "920e18b71d76f5d9266b9ea1734f880f5ffa1bf23eb7246c8289f250cb8be831",
+        "semanticContextSHA256": "920e18b71d76f5d9266b9ea1734f880f5ffa1bf23eb7246c8289f250cb8be831",
         "subjectTitle": "Maa jatkoi merelle",
         "targetState": "existing-target"
       },
@@ -1082,9 +1090,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
-      "targetAfterSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
-      "contextAfterSHA256": "0f7545410f18a373168312d864f0707e49902a3eae44e74669dd0f49039aedc1",
+      "sourceContentAfterSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+      "targetAfterSHA256": "920e18b71d76f5d9266b9ea1734f880f5ffa1bf23eb7246c8289f250cb8be831",
+      "contextAfterSHA256": "920e18b71d76f5d9266b9ea1734f880f5ffa1bf23eb7246c8289f250cb8be831",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1107,7 +1115,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+        "sameImageNativeSHA256": "a5ade9116c2f6159411e55ef139a7617007c085d39a7adf0ba4a3d6a0e3cdb57",
+        "sameImageExportSHA256": "cb345c89d0bd308cd721214ff3bc63a9bbac964d3c98485cea67bb9c80c6e0db",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -1157,10 +1173,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+      "sourceContentSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56",
-        "semanticContextSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56",
+        "targetBeforeSHA256": "c73c3e00889e37b16cfa71eb61812c63215185566efb7bfa2b658c6fe6c04d80",
+        "semanticContextSHA256": "c73c3e00889e37b16cfa71eb61812c63215185566efb7bfa2b658c6fe6c04d80",
         "subjectTitle": "Tulipalo muutti rakennustapaa",
         "targetState": "existing-target"
       },
@@ -1548,9 +1564,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
-      "targetAfterSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56",
-      "contextAfterSHA256": "be4a276756130fa70a274cd7730161528852ac981bf403e68ddeecc26e9cfe56",
+      "sourceContentAfterSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+      "targetAfterSHA256": "c73c3e00889e37b16cfa71eb61812c63215185566efb7bfa2b658c6fe6c04d80",
+      "contextAfterSHA256": "c73c3e00889e37b16cfa71eb61812c63215185566efb7bfa2b658c6fe6c04d80",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1573,7 +1589,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+        "sameImageNativeSHA256": "22830aa74741c957625dab32cf99a8178ffd659b52ec805cc529271e00eadde5",
+        "sameImageExportSHA256": "981f5fd4d77d21b57c564bb57c1366fe229868cac175fbdf513e9b4eb803eb03",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -1623,10 +1647,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+      "sourceContentSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "81074035c07f0d5cfb40026051c54518aae0e5627f39a5690a6ca3477ec20801",
+        "semanticContextSHA256": "7b49965afc2b3753f57bf74a3c1b31d90cda31891cc6c5e1950e7098836b5fcc",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -2091,9 +2115,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+      "sourceContentAfterSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "81074035c07f0d5cfb40026051c54518aae0e5627f39a5690a6ca3477ec20801",
+      "contextAfterSHA256": "7b49965afc2b3753f57bf74a3c1b31d90cda31891cc6c5e1950e7098836b5fcc",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2116,7 +2140,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+        "sameImageNativeSHA256": "b74961146bbda2cfaa45640eabfa10510cad074aa6e445072240bbc0ca71c13a",
+        "sameImageExportSHA256": "9080743ab697d7d77dd6359fbb3fb8f437bf5ed998ed36745231055f4d68100d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -2135,14 +2167,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/photo-29a9bce9d099ae90164f.jpg",
         "suora": true,
         "lahde": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage, Commons (PD)",
-        "selite": "Kaupungin rakennusten takana avautuu Parianlahti; etualalla on korkeaa ruohoa ja puustoa.",
+        "selite": "Port of Spainin yleiskuva elokuulta 2006.",
         "lyhyt": "Yleiskuva Port of Spainista elokuussa 2006.",
         "tiedosto": "Overview of Port of Spain.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage, Commons (PD)",
-        "selite": "Kaupungin rakennusten takana avautuu Parianlahti; etualalla on korkeaa ruohoa ja puustoa.",
+        "selite": "Port of Spainin yleiskuva elokuulta 2006.",
         "lyhyt": "Yleiskuva Port of Spainista elokuussa 2006.",
         "tiedosto": "Overview of Port of Spain.jpg"
       },
@@ -2150,7 +2182,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/photo-29a9bce9d099ae90164f.jpg",
         "suora": true,
         "lahde": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage, Commons (PD)",
-        "selite": "Kaupungin rakennusten takana avautuu Parianlahti; etualalla on korkeaa ruohoa ja puustoa.",
+        "selite": "Port of Spainin yleiskuva elokuulta 2006.",
         "lyhyt": "Yleiskuva Port of Spainista elokuussa 2006.",
         "tiedosto": "Overview of Port of Spain.jpg"
       },
@@ -2166,10 +2198,10 @@
         663
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+      "sourceContentSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "15991d12267942235cf6f54ae1f2331204080f52b6762258183b4061a5755aa4",
-        "semanticContextSHA256": "15991d12267942235cf6f54ae1f2331204080f52b6762258183b4061a5755aa4",
+        "targetBeforeSHA256": "85ced94e089beb435019e08a61fb438d90b06c18a0d74f9382b53c5d85b89df5",
+        "semanticContextSHA256": "85ced94e089beb435019e08a61fb438d90b06c18a0d74f9382b53c5d85b89df5",
         "subjectTitle": "portofspain — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2371,7 +2403,7 @@
       "priorMediaFields": {
         "tiedosto": "Overview of Port of Spain.jpg",
         "lyhyt": "Yleiskuva Port of Spainista elokuussa 2006.",
-        "selite": "Kaupungin rakennusten takana avautuu Parianlahti; etualalla on korkeaa ruohoa ja puustoa.",
+        "selite": "Port of Spainin yleiskuva elokuulta 2006.",
         "lahde": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage, Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -2398,14 +2430,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Kevin Gabbert - User: (WT-shared) Kevin James at wts wikivoyage, Commons (PD)",
-        "selite": "Kaupungin rakennusten takana avautuu Parianlahti; etualalla on korkeaa ruohoa ja puustoa.",
+        "selite": "Port of Spainin yleiskuva elokuulta 2006.",
         "lyhyt": "Yleiskuva Port of Spainista elokuussa 2006.",
         "tiedosto": "Overview of Port of Spain.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
-      "targetAfterSHA256": "15991d12267942235cf6f54ae1f2331204080f52b6762258183b4061a5755aa4",
-      "contextAfterSHA256": "15991d12267942235cf6f54ae1f2331204080f52b6762258183b4061a5755aa4",
+      "sourceContentAfterSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+      "targetAfterSHA256": "85ced94e089beb435019e08a61fb438d90b06c18a0d74f9382b53c5d85b89df5",
+      "contextAfterSHA256": "85ced94e089beb435019e08a61fb438d90b06c18a0d74f9382b53c5d85b89df5",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2428,7 +2460,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+        "sameImageNativeSHA256": "29a9bce9d099ae90164fbe15c7bfb46262f5c994f74642a7eaa966d7e1a99eb7",
+        "sameImageExportSHA256": "29a9bce9d099ae90164fbe15c7bfb46262f5c994f74642a7eaa966d7e1a99eb7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -2450,14 +2490,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c1-824182c5668d3fcd38fa.jpg",
         "suora": true,
         "lahde": "en:User:Christianwelsh, Wikimedia Commons (PD)",
-        "selite": "Vuoden 2008 panoraamassa näkyvät rinteiden asutus, rantakorttelit, korkeat rakennukset ja Parianlahti.",
+        "selite": "Port of Spainin panoraama vuodelta 2008.",
         "lyhyt": "Port of Spainin länsiosa ja keskusta panoraamakuvassa.",
         "tiedosto": "PanoramaofPOSwest.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "en:User:Christianwelsh, Wikimedia Commons (PD)",
-        "selite": "Vuoden 2008 panoraamassa näkyvät rinteiden asutus, rantakorttelit, korkeat rakennukset ja Parianlahti.",
+        "selite": "Port of Spainin panoraama vuodelta 2008.",
         "lyhyt": "Port of Spainin länsiosa ja keskusta panoraamakuvassa.",
         "tiedosto": "PanoramaofPOSwest.jpg"
       },
@@ -2465,7 +2505,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c1-824182c5668d3fcd38fa.jpg",
         "suora": true,
         "lahde": "en:User:Christianwelsh, Wikimedia Commons (PD)",
-        "selite": "Vuoden 2008 panoraamassa näkyvät rinteiden asutus, rantakorttelit, korkeat rakennukset ja Parianlahti.",
+        "selite": "Port of Spainin panoraama vuodelta 2008.",
         "lyhyt": "Port of Spainin länsiosa ja keskusta panoraamakuvassa.",
         "tiedosto": "PanoramaofPOSwest.jpg"
       },
@@ -2481,10 +2521,10 @@
         1856
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+      "sourceContentSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1305b6bf7dd02679ab65abdd480add7a93ba76436a2bd0766dc5464ab74cf076",
-        "semanticContextSHA256": "1305b6bf7dd02679ab65abdd480add7a93ba76436a2bd0766dc5464ab74cf076",
+        "targetBeforeSHA256": "3209d7ac3838425c02cd2501a907e11c721bb5dab676687a4850ee05a7f8f7aa",
+        "semanticContextSHA256": "3209d7ac3838425c02cd2501a907e11c721bb5dab676687a4850ee05a7f8f7aa",
         "subjectTitle": "Port of Spain",
         "targetState": "existing-target"
       },
@@ -2706,7 +2746,7 @@
       "priorMediaFields": {
         "tiedosto": "PanoramaofPOSwest.jpg",
         "lyhyt": "Port of Spainin länsiosa ja keskusta panoraamakuvassa.",
-        "selite": "Vuoden 2008 panoraamassa näkyvät rinteiden asutus, rantakorttelit, korkeat rakennukset ja Parianlahti.",
+        "selite": "Port of Spainin panoraama vuodelta 2008.",
         "lahde": "en:User:Christianwelsh, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -2733,14 +2773,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "en:User:Christianwelsh, Wikimedia Commons (PD)",
-        "selite": "Vuoden 2008 panoraamassa näkyvät rinteiden asutus, rantakorttelit, korkeat rakennukset ja Parianlahti.",
+        "selite": "Port of Spainin panoraama vuodelta 2008.",
         "lyhyt": "Port of Spainin länsiosa ja keskusta panoraamakuvassa.",
         "tiedosto": "PanoramaofPOSwest.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
-      "targetAfterSHA256": "1305b6bf7dd02679ab65abdd480add7a93ba76436a2bd0766dc5464ab74cf076",
-      "contextAfterSHA256": "1305b6bf7dd02679ab65abdd480add7a93ba76436a2bd0766dc5464ab74cf076",
+      "sourceContentAfterSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+      "targetAfterSHA256": "3209d7ac3838425c02cd2501a907e11c721bb5dab676687a4850ee05a7f8f7aa",
+      "contextAfterSHA256": "3209d7ac3838425c02cd2501a907e11c721bb5dab676687a4850ee05a7f8f7aa",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2763,7 +2803,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+        "sameImageNativeSHA256": "824182c5668d3fcd38fa3819ae47f7e3ad828d59a9aa42058f841759f156deff",
+        "sameImageExportSHA256": "824182c5668d3fcd38fa3819ae47f7e3ad828d59a9aa42058f841759f156deff",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -2785,14 +2833,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c2-87b6e67c435cab7563cd.jpg",
         "suora": true,
         "lahde": "Grueslayer, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puut reunustavat laajaa nurmialuetta, jonka takana näkyy kukkuloita tammikuussa 2014 otetussa kuvassa.",
+        "selite": "Queen’s Park Savannah tammikuussa 2014.",
         "lyhyt": "Queen’s Park Savannahin avoin nurmikenttä.",
         "tiedosto": "TnT PoS Queen's Park Savannah.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Grueslayer, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puut reunustavat laajaa nurmialuetta, jonka takana näkyy kukkuloita tammikuussa 2014 otetussa kuvassa.",
+        "selite": "Queen’s Park Savannah tammikuussa 2014.",
         "lyhyt": "Queen’s Park Savannahin avoin nurmikenttä.",
         "tiedosto": "TnT PoS Queen's Park Savannah.jpg"
       },
@@ -2800,7 +2848,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/c2-87b6e67c435cab7563cd.jpg",
         "suora": true,
         "lahde": "Grueslayer, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puut reunustavat laajaa nurmialuetta, jonka takana näkyy kukkuloita tammikuussa 2014 otetussa kuvassa.",
+        "selite": "Queen’s Park Savannah tammikuussa 2014.",
         "lyhyt": "Queen’s Park Savannahin avoin nurmikenttä.",
         "tiedosto": "TnT PoS Queen's Park Savannah.jpg"
       },
@@ -2816,10 +2864,10 @@
         3240
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+      "sourceContentSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3b4067706c539427eb8de3868e57837ec6a911738fa6a4b601f87ca17c4e074c",
-        "semanticContextSHA256": "3b4067706c539427eb8de3868e57837ec6a911738fa6a4b601f87ca17c4e074c",
+        "targetBeforeSHA256": "333a2a653a9ec31be6396436e9aa6aa5a55222169fafb93b6aa3c97173d6e8ff",
+        "semanticContextSHA256": "333a2a653a9ec31be6396436e9aa6aa5a55222169fafb93b6aa3c97173d6e8ff",
         "subjectTitle": "Port of Spain",
         "targetState": "existing-target"
       },
@@ -3002,7 +3050,7 @@
       "priorMediaFields": {
         "tiedosto": "TnT PoS Queen's Park Savannah.jpg",
         "lyhyt": "Queen’s Park Savannahin avoin nurmikenttä.",
-        "selite": "Puut reunustavat laajaa nurmialuetta, jonka takana näkyy kukkuloita tammikuussa 2014 otetussa kuvassa.",
+        "selite": "Queen’s Park Savannah tammikuussa 2014.",
         "lahde": "Grueslayer, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3029,14 +3077,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Grueslayer, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Puut reunustavat laajaa nurmialuetta, jonka takana näkyy kukkuloita tammikuussa 2014 otetussa kuvassa.",
+        "selite": "Queen’s Park Savannah tammikuussa 2014.",
         "lyhyt": "Queen’s Park Savannahin avoin nurmikenttä.",
         "tiedosto": "TnT PoS Queen's Park Savannah.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
-      "targetAfterSHA256": "3b4067706c539427eb8de3868e57837ec6a911738fa6a4b601f87ca17c4e074c",
-      "contextAfterSHA256": "3b4067706c539427eb8de3868e57837ec6a911738fa6a4b601f87ca17c4e074c",
+      "sourceContentAfterSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+      "targetAfterSHA256": "333a2a653a9ec31be6396436e9aa6aa5a55222169fafb93b6aa3c97173d6e8ff",
+      "contextAfterSHA256": "333a2a653a9ec31be6396436e9aa6aa5a55222169fafb93b6aa3c97173d6e8ff",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3059,7 +3107,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+        "sameImageNativeSHA256": "87b6e67c435cab7563cd93c27378879d304f1884846e6035ba903d2763075aab",
+        "sameImageExportSHA256": "87b6e67c435cab7563cd93c27378879d304f1884846e6035ba903d2763075aab",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -3081,14 +3137,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/k1-ffc7f4b3aabd3ceed1e5.jpg",
         "suora": true,
         "lahde": "James Roberts (Jampp…, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Avoimen kentän reunan puut näkyvät etualalla, ja takana kohoavat vihreät kukkulat lokakuussa 2011.",
+        "selite": "Queen’s Park Savannahin puustoa lokakuussa 2011.",
         "lyhyt": "Puita Queen’s Park Savannahin laidalla.",
         "tiedosto": "Queen's Park Savannah - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "James Roberts (Jampp…, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Avoimen kentän reunan puut näkyvät etualalla, ja takana kohoavat vihreät kukkulat lokakuussa 2011.",
+        "selite": "Queen’s Park Savannahin puustoa lokakuussa 2011.",
         "lyhyt": "Puita Queen’s Park Savannahin laidalla.",
         "tiedosto": "Queen's Park Savannah - panoramio.jpg"
       },
@@ -3096,7 +3152,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/portofspain/k1-ffc7f4b3aabd3ceed1e5.jpg",
         "suora": true,
         "lahde": "James Roberts (Jampp…, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Avoimen kentän reunan puut näkyvät etualalla, ja takana kohoavat vihreät kukkulat lokakuussa 2011.",
+        "selite": "Queen’s Park Savannahin puustoa lokakuussa 2011.",
         "lyhyt": "Puita Queen’s Park Savannahin laidalla.",
         "tiedosto": "Queen's Park Savannah - panoramio.jpg"
       },
@@ -3112,10 +3168,10 @@
         2414
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/portofspain/sisalto.json",
-      "sourceContentSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
+      "sourceContentSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "88dc6170597285fb4fac972cf4c0b81bfbc6a7dcd622f6d02585a04b06404976",
-        "semanticContextSHA256": "88dc6170597285fb4fac972cf4c0b81bfbc6a7dcd622f6d02585a04b06404976",
+        "targetBeforeSHA256": "3e68a74b6e1c149b1325bb2a2602c4d97c6b146c0d1b0628c38d6d8aa372f92b",
+        "semanticContextSHA256": "3e68a74b6e1c149b1325bb2a2602c4d97c6b146c0d1b0628c38d6d8aa372f92b",
         "subjectTitle": "Puiston keskelle jäi suvun pala",
         "targetState": "existing-target"
       },
@@ -3290,7 +3346,7 @@
       "priorMediaFields": {
         "tiedosto": "Queen's Park Savannah - panoramio.jpg",
         "lyhyt": "Puita Queen’s Park Savannahin laidalla.",
-        "selite": "Avoimen kentän reunan puut näkyvät etualalla, ja takana kohoavat vihreät kukkulat lokakuussa 2011.",
+        "selite": "Queen’s Park Savannahin puustoa lokakuussa 2011.",
         "lahde": "James Roberts (Jampp…, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3317,14 +3373,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "James Roberts (Jampp…, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Avoimen kentän reunan puut näkyvät etualalla, ja takana kohoavat vihreät kukkulat lokakuussa 2011.",
+        "selite": "Queen’s Park Savannahin puustoa lokakuussa 2011.",
         "lyhyt": "Puita Queen’s Park Savannahin laidalla.",
         "tiedosto": "Queen's Park Savannah - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c66b2a1545944a71f07072c0385d9db2bdaa46fefb96fa2413c2bd486c85b9cb",
-      "targetAfterSHA256": "88dc6170597285fb4fac972cf4c0b81bfbc6a7dcd622f6d02585a04b06404976",
-      "contextAfterSHA256": "88dc6170597285fb4fac972cf4c0b81bfbc6a7dcd622f6d02585a04b06404976",
+      "sourceContentAfterSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+      "targetAfterSHA256": "3e68a74b6e1c149b1325bb2a2602c4d97c6b146c0d1b0628c38d6d8aa372f92b",
+      "contextAfterSHA256": "3e68a74b6e1c149b1325bb2a2602c4d97c6b146c0d1b0628c38d6d8aa372f92b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3347,7 +3403,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "c7a4c68a3c20d29e18cc56517f9007be3b13267e56691430f94a9578c3bb736f",
+        "sameImageNativeSHA256": "ffc7f4b3aabd3ceed1e5134da9392f2e452033055eeb81a72531765e2c356af8",
+        "sameImageExportSHA256": "ffc7f4b3aabd3ceed1e5134da9392f2e452033055eeb81a72531765e2c356af8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3359,6 +3423,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e12/portofspain/81002dd926808382b9487bc146a44fac7a165d8cfef207df83a1d7f7bb52d98c.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.348683+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e12/portofspain/05aa15509f521e971d896f9fcb89ad8f2964166de98d21953e54a4674ccd0518.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.348683+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:48.786333+00:00"
 }

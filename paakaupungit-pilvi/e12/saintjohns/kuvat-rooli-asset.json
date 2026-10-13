@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "saintjohns",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+  "sourceContentAfterSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
   "assets": [
     {
       "era": "e12",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "sourceContentSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "9f03f859e6a3cd56e816fffb17ff2baa4009397f857d852fac7f467d60e6546b",
@@ -307,7 +307,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "sourceContentAfterSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "9f03f859e6a3cd56e816fffb17ff2baa4009397f857d852fac7f467d60e6546b",
       "ownerApproved": true,
@@ -332,7 +332,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+        "sameImageNativeSHA256": "92d979e2804c73fcb1fcbc35bfa631c734cf63946d4d1ec64caac36ae6e9bba3",
+        "sameImageExportSHA256": "394cfb1e9c848c4fc8bd4f0bb8c654b166c85e3a723196079d130cec9315226e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -382,10 +390,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "sourceContentSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0d29de19dbdd0864286822aa86b46033cfabde9cddc30933f251afadca9b08bb",
-        "semanticContextSHA256": "0d29de19dbdd0864286822aa86b46033cfabde9cddc30933f251afadca9b08bb",
+        "targetBeforeSHA256": "2a543060ff5472a35a929098531bb629cc046991adb89a5e49bb8abecfc3bd15",
+        "semanticContextSHA256": "2a543060ff5472a35a929098531bb629cc046991adb89a5e49bb8abecfc3bd15",
         "subjectTitle": "Rakennus rakennuksen sisällä",
         "targetState": "existing-target"
       },
@@ -636,9 +644,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
-      "targetAfterSHA256": "0d29de19dbdd0864286822aa86b46033cfabde9cddc30933f251afadca9b08bb",
-      "contextAfterSHA256": "0d29de19dbdd0864286822aa86b46033cfabde9cddc30933f251afadca9b08bb",
+      "sourceContentAfterSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+      "targetAfterSHA256": "2a543060ff5472a35a929098531bb629cc046991adb89a5e49bb8abecfc3bd15",
+      "contextAfterSHA256": "2a543060ff5472a35a929098531bb629cc046991adb89a5e49bb8abecfc3bd15",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -661,7 +669,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+        "sameImageNativeSHA256": "ef31ca033f5aa40be50d9fed302add5dff6682e8cd42794da02f34a5db9bcf60",
+        "sameImageExportSHA256": "dc4e0c7674baf9a8d10793c4782f72bcb385d1320f8cbff3da5c93eb8e44d622",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -711,10 +727,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "sourceContentSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
-        "semanticContextSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
+        "targetBeforeSHA256": "3c2ecd2acecdd3062f01f991c430330e9e2c9e9fb52ba75c01af6295f065cd5e",
+        "semanticContextSHA256": "3c2ecd2acecdd3062f01f991c430330e9e2c9e9fb52ba75c01af6295f065cd5e",
         "subjectTitle": "Palosta seurasi määräys katolle",
         "targetState": "existing-target"
       },
@@ -965,9 +981,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
-      "targetAfterSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
-      "contextAfterSHA256": "8d148180847c1ecf50ffbbc0032c55a7915c490d081310d7d3535e1690c4891b",
+      "sourceContentAfterSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+      "targetAfterSHA256": "3c2ecd2acecdd3062f01f991c430330e9e2c9e9fb52ba75c01af6295f065cd5e",
+      "contextAfterSHA256": "3c2ecd2acecdd3062f01f991c430330e9e2c9e9fb52ba75c01af6295f065cd5e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -990,7 +1006,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+        "sameImageNativeSHA256": "0fc2b0aa4490f032c8d788e576e4bac5caaad4fa075ea8abbcfd53dc185f2f19",
+        "sameImageExportSHA256": "e4d7b066e1c33fcffcf6435a87902506f94883e07a06b96fa9d9dc5f6168b93a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -1040,10 +1064,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "sourceContentSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
-        "semanticContextSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
+        "targetBeforeSHA256": "a37cbb6c10ed57a27cfee249047a9cb5fd80afc6b864159a16bc7fd6cceaf68a",
+        "semanticContextSHA256": "a37cbb6c10ed57a27cfee249047a9cb5fd80afc6b864159a16bc7fd6cceaf68a",
         "subjectTitle": "Kaktuksista tuli veron aihe",
         "targetState": "existing-target"
       },
@@ -1296,9 +1320,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
-      "targetAfterSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
-      "contextAfterSHA256": "a1e341f7d2642d0f6b4656d6111e71bc050fd7915043e0b160aebbfc7347c112",
+      "sourceContentAfterSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+      "targetAfterSHA256": "a37cbb6c10ed57a27cfee249047a9cb5fd80afc6b864159a16bc7fd6cceaf68a",
+      "contextAfterSHA256": "a37cbb6c10ed57a27cfee249047a9cb5fd80afc6b864159a16bc7fd6cceaf68a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1321,7 +1345,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+        "sameImageNativeSHA256": "1e96a7cfb1c755577f65eea53ec1109ea93c0312c412bf291e0adaa9df3ac86a",
+        "sameImageExportSHA256": "02f0844ce8ec3719db1f47070f204f1b88d3d4a1426a4ecb29dfb1e971510c48",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -1371,10 +1403,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "sourceContentSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "857855ddb0bd674899f960399fc9fef63cdf817ba5541204ef1088b97a1128a5",
+        "semanticContextSHA256": "6157e18299a0380ac744760f6b8d191975bffa5b626e543e771a508c38b9cba3",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -1839,9 +1871,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "sourceContentAfterSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "857855ddb0bd674899f960399fc9fef63cdf817ba5541204ef1088b97a1128a5",
+      "contextAfterSHA256": "6157e18299a0380ac744760f6b8d191975bffa5b626e543e771a508c38b9cba3",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1864,7 +1896,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+        "sameImageNativeSHA256": "c2c1ed42d72c349ee9400308a3d3feb25c35e523dec158ab0ee27d7c30dcdc1c",
+        "sameImageExportSHA256": "fa31bd071d8e7b141fe31061aa62fa70b3e6a875824f923b91126d164630b202",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -1914,10 +1954,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "sourceContentSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
-        "semanticContextSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
+        "targetBeforeSHA256": "d68595766253849ba1a54898e8d4767ad539698537eb1d8dea393c98edc462e0",
+        "semanticContextSHA256": "d68595766253849ba1a54898e8d4767ad539698537eb1d8dea393c98edc462e0",
         "subjectTitle": "Sataman kauppa ja torin ruoka",
         "targetState": "existing-target"
       },
@@ -2178,9 +2218,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
-      "targetAfterSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
-      "contextAfterSHA256": "ac17ea2113816e46a984675930844cca9aef07cc579db5813ac56057c0bea9e3",
+      "sourceContentAfterSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+      "targetAfterSHA256": "d68595766253849ba1a54898e8d4767ad539698537eb1d8dea393c98edc462e0",
+      "contextAfterSHA256": "d68595766253849ba1a54898e8d4767ad539698537eb1d8dea393c98edc462e0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2203,7 +2243,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+        "sameImageNativeSHA256": "903ee2e075af7983ef0490c23f9c78539d5ff5af4cff8805cfdc870118f58182",
+        "sameImageExportSHA256": "c1055f76de273d5a64ee877e54ed9c409ee8070aa89c595fdbc38688dcc2a9b1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -2222,14 +2270,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/photo-72bf118a45bfbb2dc375.jpg",
         "suora": true,
         "lahde": "Balou46, Commons (CC BY-SA 4.0)",
-        "selite": "Veden takana näkyy sataman kontteja ja nosturi; linnakkeen jäänteet kohoavat vihreällä niemellä.",
+        "selite": "Saint John’sin satama ja sen suulla sijaitseva Fort James.",
         "lyhyt": "Saint John’sin satamaa ja Fort Jamesin suuntaa.",
         "tiedosto": "AG-Stjohns-fort-james.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Balou46, Commons (CC BY-SA 4.0)",
-        "selite": "Veden takana näkyy sataman kontteja ja nosturi; linnakkeen jäänteet kohoavat vihreällä niemellä.",
+        "selite": "Saint John’sin satama ja sen suulla sijaitseva Fort James.",
         "lyhyt": "Saint John’sin satamaa ja Fort Jamesin suuntaa.",
         "tiedosto": "AG-Stjohns-fort-james.jpg"
       },
@@ -2237,7 +2285,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/photo-72bf118a45bfbb2dc375.jpg",
         "suora": true,
         "lahde": "Balou46, Commons (CC BY-SA 4.0)",
-        "selite": "Veden takana näkyy sataman kontteja ja nosturi; linnakkeen jäänteet kohoavat vihreällä niemellä.",
+        "selite": "Saint John’sin satama ja sen suulla sijaitseva Fort James.",
         "lyhyt": "Saint John’sin satamaa ja Fort Jamesin suuntaa.",
         "tiedosto": "AG-Stjohns-fort-james.jpg"
       },
@@ -2253,10 +2301,10 @@
         3104
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "sourceContentSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8a2101368748b22e2ab9141a4a806ef5256715c783b1c77119795a8471dbfdd6",
-        "semanticContextSHA256": "8a2101368748b22e2ab9141a4a806ef5256715c783b1c77119795a8471dbfdd6",
+        "targetBeforeSHA256": "aada87b87f9a9ae16d893c109b9d813f377fb37a6f610c626c5b2e1f94866514",
+        "semanticContextSHA256": "aada87b87f9a9ae16d893c109b9d813f377fb37a6f610c626c5b2e1f94866514",
         "subjectTitle": "saintjohns — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2496,7 +2544,7 @@
       "priorMediaFields": {
         "tiedosto": "AG-Stjohns-fort-james.jpg",
         "lyhyt": "Saint John’sin satamaa ja Fort Jamesin suuntaa.",
-        "selite": "Veden takana näkyy sataman kontteja ja nosturi; linnakkeen jäänteet kohoavat vihreällä niemellä.",
+        "selite": "Saint John’sin satama ja sen suulla sijaitseva Fort James.",
         "lahde": "Balou46, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2523,14 +2571,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Balou46, Commons (CC BY-SA 4.0)",
-        "selite": "Veden takana näkyy sataman kontteja ja nosturi; linnakkeen jäänteet kohoavat vihreällä niemellä.",
+        "selite": "Saint John’sin satama ja sen suulla sijaitseva Fort James.",
         "lyhyt": "Saint John’sin satamaa ja Fort Jamesin suuntaa.",
         "tiedosto": "AG-Stjohns-fort-james.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
-      "targetAfterSHA256": "8a2101368748b22e2ab9141a4a806ef5256715c783b1c77119795a8471dbfdd6",
-      "contextAfterSHA256": "8a2101368748b22e2ab9141a4a806ef5256715c783b1c77119795a8471dbfdd6",
+      "sourceContentAfterSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+      "targetAfterSHA256": "aada87b87f9a9ae16d893c109b9d813f377fb37a6f610c626c5b2e1f94866514",
+      "contextAfterSHA256": "aada87b87f9a9ae16d893c109b9d813f377fb37a6f610c626c5b2e1f94866514",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2553,7 +2601,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+        "sameImageNativeSHA256": "72bf118a45bfbb2dc3752046695182cfa35a8445a8192e835c9de8c782662e50",
+        "sameImageExportSHA256": "72bf118a45bfbb2dc3752046695182cfa35a8445a8192e835c9de8c782662e50",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -2575,14 +2631,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/c1-49a90da2f9e5770a1992.jpg",
         "suora": true,
         "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Matala rakennuskanta levittäytyy satamasta rinteille; katedraalin kaksi tornia erottuvat taustalla.",
+        "selite": "Saint John’sin panoraama Antiguan saarella.",
         "lyhyt": "Saint John’sin keskustan panoraama.",
         "tiedosto": "AG-Stjohns-pano-01.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Matala rakennuskanta levittäytyy satamasta rinteille; katedraalin kaksi tornia erottuvat taustalla.",
+        "selite": "Saint John’sin panoraama Antiguan saarella.",
         "lyhyt": "Saint John’sin keskustan panoraama.",
         "tiedosto": "AG-Stjohns-pano-01.jpg"
       },
@@ -2590,7 +2646,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/saintjohns/c1-49a90da2f9e5770a1992.jpg",
         "suora": true,
         "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Matala rakennuskanta levittäytyy satamasta rinteille; katedraalin kaksi tornia erottuvat taustalla.",
+        "selite": "Saint John’sin panoraama Antiguan saarella.",
         "lyhyt": "Saint John’sin keskustan panoraama.",
         "tiedosto": "AG-Stjohns-pano-01.jpg"
       },
@@ -2606,10 +2662,10 @@
         2522
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/saintjohns/sisalto.json",
-      "sourceContentSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
+      "sourceContentSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "84b18f733665953d4da947a6d6f38c02c79b6347c99edc817a8db532015156e2",
-        "semanticContextSHA256": "84b18f733665953d4da947a6d6f38c02c79b6347c99edc817a8db532015156e2",
+        "targetBeforeSHA256": "a0e296b015d07933f2b402bf5838a0a26eabd8cc7e70beea843e54ad2b6be0b2",
+        "semanticContextSHA256": "a0e296b015d07933f2b402bf5838a0a26eabd8cc7e70beea843e54ad2b6be0b2",
         "subjectTitle": "Saint John's",
         "targetState": "existing-target"
       },
@@ -2851,7 +2907,7 @@
       "priorMediaFields": {
         "tiedosto": "AG-Stjohns-pano-01.jpg",
         "lyhyt": "Saint John’sin keskustan panoraama.",
-        "selite": "Matala rakennuskanta levittäytyy satamasta rinteille; katedraalin kaksi tornia erottuvat taustalla.",
+        "selite": "Saint John’sin panoraama Antiguan saarella.",
         "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2878,14 +2934,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Balou46, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Matala rakennuskanta levittäytyy satamasta rinteille; katedraalin kaksi tornia erottuvat taustalla.",
+        "selite": "Saint John’sin panoraama Antiguan saarella.",
         "lyhyt": "Saint John’sin keskustan panoraama.",
         "tiedosto": "AG-Stjohns-pano-01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "78f3cad311f86ec2da935449a89fae03b96a6b13a2ae5d2f0e7d529c249aefec",
-      "targetAfterSHA256": "84b18f733665953d4da947a6d6f38c02c79b6347c99edc817a8db532015156e2",
-      "contextAfterSHA256": "84b18f733665953d4da947a6d6f38c02c79b6347c99edc817a8db532015156e2",
+      "sourceContentAfterSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+      "targetAfterSHA256": "a0e296b015d07933f2b402bf5838a0a26eabd8cc7e70beea843e54ad2b6be0b2",
+      "contextAfterSHA256": "a0e296b015d07933f2b402bf5838a0a26eabd8cc7e70beea843e54ad2b6be0b2",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2908,7 +2964,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "34b00e18cb4b2ef9c321b455fa18720c204387a15f2c8cf904f4212f0b719c09",
+        "sameImageNativeSHA256": "49a90da2f9e5770a199249b41297a1ca5eee0124194125b40b26aed570dd224c",
+        "sameImageExportSHA256": "49a90da2f9e5770a199249b41297a1ca5eee0124194125b40b26aed570dd224c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2920,6 +2984,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e12/saintjohns/c1a823e97e2eea8a9ef95b362b988b47e53302d01567cd1e69fcf470b84e8d89.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.405004+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e12/saintjohns/62d3a9c31d438273b55ef23e3801e44d008072a74a66de4e50371f7e614c48e4.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.405004+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:48.845568+00:00"
 }

@@ -3,7 +3,7 @@
   "era": "e12",
   "city": "basseterre",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+  "sourceContentAfterSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
   "assets": [
     {
       "era": "e12",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "8f426c34c67f739abc0ebbcebc3793463cb2f6559112ea9c454fca7ebe9000ab",
+        "semanticContextSHA256": "08d69d764fa96c652e2e41be8a4c1de477279f59574e6d529e8c5a413e63d282",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -307,9 +307,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentAfterSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "8f426c34c67f739abc0ebbcebc3793463cb2f6559112ea9c454fca7ebe9000ab",
+      "contextAfterSHA256": "08d69d764fa96c652e2e41be8a4c1de477279f59574e6d529e8c5a413e63d282",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -332,7 +332,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+        "sameImageNativeSHA256": "31c641c3c53f17742b739ef42e733abe3e25cf53461cd2a403d65e70a7160d9c",
+        "sameImageExportSHA256": "542fc375759e7b145c0aacf60a99d27bc9ec90788552fadd12891cd566db60f6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -382,10 +390,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
-        "semanticContextSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
+        "targetBeforeSHA256": "c70b9995c9dcffe175b1dd6e615c8c9c02ac5595272d33f48d66b2b1aeee1367",
+        "semanticContextSHA256": "c70b9995c9dcffe175b1dd6e615c8c9c02ac5595272d33f48d66b2b1aeee1367",
         "subjectTitle": "Basseterresta lauluntekijäksi",
         "targetState": "existing-target"
       },
@@ -629,9 +637,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
-      "targetAfterSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
-      "contextAfterSHA256": "baf55651cd00d82bd8517f6e3ba60649dbe4d769f72d6d4a5446368a6f88f320",
+      "sourceContentAfterSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+      "targetAfterSHA256": "c70b9995c9dcffe175b1dd6e615c8c9c02ac5595272d33f48d66b2b1aeee1367",
+      "contextAfterSHA256": "c70b9995c9dcffe175b1dd6e615c8c9c02ac5595272d33f48d66b2b1aeee1367",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -654,7 +662,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+        "sameImageNativeSHA256": "253ba6043a78a3114a17ae42d30bd1cff13fcbc1d376c31fa2cc3b9de5d37050",
+        "sameImageExportSHA256": "2588397e952ac53310edf9625cd9a9d2735a61c27bb86db955c4be679e28b4b7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -704,10 +720,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b5a944039891b13c15bb3070ad6dcce096fccb4267b92dbe832e5189825c11fe",
-        "semanticContextSHA256": "b5a944039891b13c15bb3070ad6dcce096fccb4267b92dbe832e5189825c11fe",
+        "targetBeforeSHA256": "7d5beb5f29f47a5114db1638d800867ecc449419bbc63f6b196b1a8d5af71396",
+        "semanticContextSHA256": "7d5beb5f29f47a5114db1638d800867ecc449419bbc63f6b196b1a8d5af71396",
         "subjectTitle": "Pieni pääkaupunki, kansainvälinen kenttä",
         "targetState": "existing-target"
       },
@@ -958,9 +974,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
-      "targetAfterSHA256": "b5a944039891b13c15bb3070ad6dcce096fccb4267b92dbe832e5189825c11fe",
-      "contextAfterSHA256": "b5a944039891b13c15bb3070ad6dcce096fccb4267b92dbe832e5189825c11fe",
+      "sourceContentAfterSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+      "targetAfterSHA256": "7d5beb5f29f47a5114db1638d800867ecc449419bbc63f6b196b1a8d5af71396",
+      "contextAfterSHA256": "7d5beb5f29f47a5114db1638d800867ecc449419bbc63f6b196b1a8d5af71396",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -983,7 +999,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+        "sameImageNativeSHA256": "268ec2cdfbcea4e3620b5c0c7d913837924227d80e0b23e67e694cf7a5b43cac",
+        "sameImageExportSHA256": "4bff76274db2485c625e918a7d9fe34ccfcbe3ba020322803156a00e88625d4b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -1033,10 +1057,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303",
-        "semanticContextSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303",
+        "targetBeforeSHA256": "2b694cb1e449e88262f4378d19c366b51b5205904f544af1c5502128924dca6a",
+        "semanticContextSHA256": "2b694cb1e449e88262f4378d19c366b51b5205904f544af1c5502128924dca6a",
         "subjectTitle": "Sokeriruoko vaihtui matkustajiin",
         "targetState": "existing-target"
       },
@@ -1287,9 +1311,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
-      "targetAfterSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303",
-      "contextAfterSHA256": "447c3b49ba7bee7ce45bd416607865931db10b932b24b1ee2d048ec464720303",
+      "sourceContentAfterSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+      "targetAfterSHA256": "2b694cb1e449e88262f4378d19c366b51b5205904f544af1c5502128924dca6a",
+      "contextAfterSHA256": "2b694cb1e449e88262f4378d19c366b51b5205904f544af1c5502128924dca6a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1312,7 +1336,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+        "sameImageNativeSHA256": "e89afa3d012fb71ac34c67e864dc5ef7b7ef12d1af4feb1a4f213c521740e8d1",
+        "sameImageExportSHA256": "953a1b7a29621ad6163537aaa2926cb1b00a0cf8abfcf0d4e82a4f47d4a34ab2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -1362,10 +1394,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5490f91b0a55165a99e1b1c205b5d7f94377a48b96573e0fb06c253946d4e1c5",
-        "semanticContextSHA256": "5490f91b0a55165a99e1b1c205b5d7f94377a48b96573e0fb06c253946d4e1c5",
+        "targetBeforeSHA256": "c12b66f51ff1155008bb1c71a492f2769f16aa5a497b78018399695b097dae37",
+        "semanticContextSHA256": "c12b66f51ff1155008bb1c71a492f2769f16aa5a497b78018399695b097dae37",
         "subjectTitle": "Juhla kulkee puujaloilla",
         "targetState": "existing-target"
       },
@@ -1622,9 +1654,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
-      "targetAfterSHA256": "5490f91b0a55165a99e1b1c205b5d7f94377a48b96573e0fb06c253946d4e1c5",
-      "contextAfterSHA256": "5490f91b0a55165a99e1b1c205b5d7f94377a48b96573e0fb06c253946d4e1c5",
+      "sourceContentAfterSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+      "targetAfterSHA256": "c12b66f51ff1155008bb1c71a492f2769f16aa5a497b78018399695b097dae37",
+      "contextAfterSHA256": "c12b66f51ff1155008bb1c71a492f2769f16aa5a497b78018399695b097dae37",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1647,7 +1679,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+        "sameImageNativeSHA256": "9f255d4384d8f4097c2b9394150f67cca1c0d84ac5df8baf6f9924133f5a4f2e",
+        "sameImageExportSHA256": "b206b1da4d94d6331351412a41676f132bdcd6fd45ff6451f28f27fcd250fbbb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -1697,10 +1737,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "50d6034cc1d62dd5681fa47e147ce6cacc553db4a7985515650f750e685da6b1",
+        "semanticContextSHA256": "293e482012570426dc2cbe27a5fcd0b8f0351d9973d5a3c57cdaac9187e764ed",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -2165,9 +2205,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentAfterSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "50d6034cc1d62dd5681fa47e147ce6cacc553db4a7985515650f750e685da6b1",
+      "contextAfterSHA256": "293e482012570426dc2cbe27a5fcd0b8f0351d9973d5a3c57cdaac9187e764ed",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2190,7 +2230,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+        "sameImageNativeSHA256": "23db97efca244543aab57b58ac9a570ccc5da576a61d84ad07d278c6de718157",
+        "sameImageExportSHA256": "70264b934627446a9059a352fe9640f0e9ef0f695750b1f9978cc256399adc55",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e12",
@@ -2210,14 +2258,14 @@
         "suora": true,
         "lahde": "Gertjan R., Commons (CC BY-SA 4.0)",
         "selite": "Värikkäitä matalia rakennuksia ja rantatie näkyvät veden takana Basseterressa.",
-        "lyhyt": "Basseterreen rantataloja mereltä nähtynä.",
+        "lyhyt": "Basseterren rantataloja mereltä nähtynä.",
         "tiedosto": "Basseterre from sea.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Gertjan R., Commons (CC BY-SA 4.0)",
         "selite": "Värikkäitä matalia rakennuksia ja rantatie näkyvät veden takana Basseterressa.",
-        "lyhyt": "Basseterreen rantataloja mereltä nähtynä.",
+        "lyhyt": "Basseterren rantataloja mereltä nähtynä.",
         "tiedosto": "Basseterre from sea.JPG"
       },
       "runtimeMediaFieldPayload": {
@@ -2225,7 +2273,7 @@
         "suora": true,
         "lahde": "Gertjan R., Commons (CC BY-SA 4.0)",
         "selite": "Värikkäitä matalia rakennuksia ja rantatie näkyvät veden takana Basseterressa.",
-        "lyhyt": "Basseterreen rantataloja mereltä nähtynä.",
+        "lyhyt": "Basseterren rantataloja mereltä nähtynä.",
         "tiedosto": "Basseterre from sea.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2240,10 +2288,10 @@
         3240
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2d0894cc105c3080914b9295d83e24b3e21abe0813646355ac80d17ad3b32525",
-        "semanticContextSHA256": "2d0894cc105c3080914b9295d83e24b3e21abe0813646355ac80d17ad3b32525",
+        "targetBeforeSHA256": "0b71b396c40b6295db8e0111e01cd6d2e65535a02626b05b8a097cee6fca57c9",
+        "semanticContextSHA256": "0b71b396c40b6295db8e0111e01cd6d2e65535a02626b05b8a097cee6fca57c9",
         "subjectTitle": "basseterre — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2387,7 +2435,7 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Basseterre from sea.JPG",
-        "lyhyt": "Basseterreen rantataloja mereltä nähtynä.",
+        "lyhyt": "Basseterren rantataloja mereltä nähtynä.",
         "selite": "Värikkäitä matalia rakennuksia ja rantatie näkyvät veden takana Basseterressa.",
         "lahde": "Gertjan R., Commons (CC BY-SA 4.0)"
       },
@@ -2416,13 +2464,13 @@
       "CcommonsFieldPayload": {
         "lahde": "Gertjan R., Commons (CC BY-SA 4.0)",
         "selite": "Värikkäitä matalia rakennuksia ja rantatie näkyvät veden takana Basseterressa.",
-        "lyhyt": "Basseterreen rantataloja mereltä nähtynä.",
+        "lyhyt": "Basseterren rantataloja mereltä nähtynä.",
         "tiedosto": "Basseterre from sea.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
-      "targetAfterSHA256": "2d0894cc105c3080914b9295d83e24b3e21abe0813646355ac80d17ad3b32525",
-      "contextAfterSHA256": "2d0894cc105c3080914b9295d83e24b3e21abe0813646355ac80d17ad3b32525",
+      "sourceContentAfterSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+      "targetAfterSHA256": "0b71b396c40b6295db8e0111e01cd6d2e65535a02626b05b8a097cee6fca57c9",
+      "contextAfterSHA256": "0b71b396c40b6295db8e0111e01cd6d2e65535a02626b05b8a097cee6fca57c9",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2445,7 +2493,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+        "sameImageNativeSHA256": "dbbb17bcbf414111613fa9f9a677bd4f23c2c0af9f8974715e0afd287274e12a",
+        "sameImageExportSHA256": "dbbb17bcbf414111613fa9f9a677bd4f23c2c0af9f8974715e0afd287274e12a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -2468,14 +2524,14 @@
         "suora": true,
         "lahde": "Gertjan R., Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Mereltä otetussa kuvassa rannan rakennusten takana kohoaa vihreä kukkulajono, jonka huippuja peittää pilvi.",
-        "lyhyt": "Basseterreen rantaa ja taustalla kohoavia kukkuloita.",
+        "lyhyt": "Basseterren rantaa ja taustalla kohoavia kukkuloita.",
         "tiedosto": "Basseterre from sea 3.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Gertjan R., Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Mereltä otetussa kuvassa rannan rakennusten takana kohoaa vihreä kukkulajono, jonka huippuja peittää pilvi.",
-        "lyhyt": "Basseterreen rantaa ja taustalla kohoavia kukkuloita.",
+        "lyhyt": "Basseterren rantaa ja taustalla kohoavia kukkuloita.",
         "tiedosto": "Basseterre from sea 3.JPG"
       },
       "runtimeMediaFieldPayload": {
@@ -2483,7 +2539,7 @@
         "suora": true,
         "lahde": "Gertjan R., Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Mereltä otetussa kuvassa rannan rakennusten takana kohoaa vihreä kukkulajono, jonka huippuja peittää pilvi.",
-        "lyhyt": "Basseterreen rantaa ja taustalla kohoavia kukkuloita.",
+        "lyhyt": "Basseterren rantaa ja taustalla kohoavia kukkuloita.",
         "tiedosto": "Basseterre from sea 3.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2498,10 +2554,10 @@
         3240
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "320893654103c85c7c716069f6c0b4a4586170be76e8f4da01de3f7f892af3e9",
-        "semanticContextSHA256": "320893654103c85c7c716069f6c0b4a4586170be76e8f4da01de3f7f892af3e9",
+        "targetBeforeSHA256": "c4a7d180117b5c80eec2f339c2934aa6710c999bc341ed52a57be6eda537ff2d",
+        "semanticContextSHA256": "c4a7d180117b5c80eec2f339c2934aa6710c999bc341ed52a57be6eda537ff2d",
         "subjectTitle": "Basseterre",
         "targetState": "existing-target"
       },
@@ -2651,7 +2707,7 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Basseterre from sea 3.JPG",
-        "lyhyt": "Basseterreen rantaa ja taustalla kohoavia kukkuloita.",
+        "lyhyt": "Basseterren rantaa ja taustalla kohoavia kukkuloita.",
         "selite": "Mereltä otetussa kuvassa rannan rakennusten takana kohoaa vihreä kukkulajono, jonka huippuja peittää pilvi.",
         "lahde": "Gertjan R., Wikimedia Commons (CC BY-SA 4.0)"
       },
@@ -2680,13 +2736,13 @@
       "CcommonsFieldPayload": {
         "lahde": "Gertjan R., Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Mereltä otetussa kuvassa rannan rakennusten takana kohoaa vihreä kukkulajono, jonka huippuja peittää pilvi.",
-        "lyhyt": "Basseterreen rantaa ja taustalla kohoavia kukkuloita.",
+        "lyhyt": "Basseterren rantaa ja taustalla kohoavia kukkuloita.",
         "tiedosto": "Basseterre from sea 3.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
-      "targetAfterSHA256": "320893654103c85c7c716069f6c0b4a4586170be76e8f4da01de3f7f892af3e9",
-      "contextAfterSHA256": "320893654103c85c7c716069f6c0b4a4586170be76e8f4da01de3f7f892af3e9",
+      "sourceContentAfterSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+      "targetAfterSHA256": "c4a7d180117b5c80eec2f339c2934aa6710c999bc341ed52a57be6eda537ff2d",
+      "contextAfterSHA256": "c4a7d180117b5c80eec2f339c2934aa6710c999bc341ed52a57be6eda537ff2d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2709,7 +2765,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+        "sameImageNativeSHA256": "75657f547c509f6d042b0494fd94e7d16059fe0fb326fb2d3a1ac9c4e2583614",
+        "sameImageExportSHA256": "75657f547c509f6d042b0494fd94e7d16059fe0fb326fb2d3a1ac9c4e2583614",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e12",
@@ -2762,7 +2826,7 @@
         2348
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e12/paakaupungit-pilvi/e12/basseterre/sisalto.json",
-      "sourceContentSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c48b35050ef11001a06256139caca767b73e4fdaeb7a8283e3da64f9eaa53050",
         "semanticContextSHA256": "c48b35050ef11001a06256139caca767b73e4fdaeb7a8283e3da64f9eaa53050",
@@ -2936,7 +3000,7 @@
         "tiedosto": "Stkitts-pano.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3efa7e6663a9aa74f34965e01ec3caa915a13a32d91ab15b61b2f375d3f4b10",
+      "sourceContentAfterSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
       "targetAfterSHA256": "c48b35050ef11001a06256139caca767b73e4fdaeb7a8283e3da64f9eaa53050",
       "contextAfterSHA256": "c48b35050ef11001a06256139caca767b73e4fdaeb7a8283e3da64f9eaa53050",
       "ownerApproved": true,
@@ -2961,7 +3025,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "dbc8361ecafd7feb7db0ba5627bda32df8537ce02c84d76fcaf62edec269e527",
+        "sameImageNativeSHA256": "c2c591632921db4b47dc32e2a3866e8e16ca19780106acbab8567c3bdb66ca14",
+        "sameImageExportSHA256": "c2c591632921db4b47dc32e2a3866e8e16ca19780106acbab8567c3bdb66ca14",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2973,6 +3045,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e12/basseterre/6c017b624f9cffd9a2e0aa7cc5d89b07fe16eadda53d3112f2a39ceee2c93cb2.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.211367+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e12/basseterre/56fd37404df4bdb3c0c8c1a4f64ba159e15a1800abc450c1c43af891dde0c604.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.211367+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:48.639430+00:00"
 }
