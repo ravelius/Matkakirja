@@ -6273,7 +6273,7 @@ const KAUPUNGIT = {
     meri: true,
   },
   gaborone: {
-    rajat: { pohjoinen: -24.6539, etela: -24.7032, lansi: 25.8645, ita: 25.9482 },
+    rajat: { pohjoinen: -24.6495, etela: -24.7032, lansi: 25.8645, ita: 25.9482 },
   },
   harare: {
     rajat: { pohjoinen: -17.7949, etela: -17.8419, lansi: 31.0321, ita: 31.06 },
@@ -6285,7 +6285,7 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 0.3432, etela: 0.2923, lansi: 32.5439, ita: 32.5973 },
   },
   khartum: {
-    rajat: { pohjoinen: 15.6222, etela: 15.598, lansi: 32.5025, ita: 32.528 },
+    rajat: { pohjoinen: 15.6222, etela: 15.598, lansi: 32.5025, ita: 32.5307 },
   },
   kigali: {
     rajat: { pohjoinen: -1.8787, etela: -1.9721, lansi: 29.9954, ita: 30.15 },
@@ -6318,7 +6318,7 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 12.1265, etela: 12.0935, lansi: 15.0296, ita: 15.0597 },
   },
   niamey: {
-    rajat: { pohjoinen: 13.5201, etela: 13.4898, lansi: 2.0567, ita: 2.1083 },
+    rajat: { pohjoinen: 13.5247, etela: 13.4867, lansi: 2.0567, ita: 2.1213 },
   },
   nouakchott: {
     rajat: { pohjoinen: 18.1109, etela: 18.0681, lansi: -15.9892, ita: -15.9637 },
@@ -6355,7 +6355,7 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -22.5562, etela: -22.5785, lansi: 17.0776, ita: 17.0957 },
   },
   yaounde: {
-    rajat: { pohjoinen: 3.9169, etela: 3.8253, lansi: 11.4351, ita: 11.5135 },
+    rajat: { pohjoinen: 3.9169, etela: 3.8253, lansi: 11.4351, ita: 11.531 },
   },
   // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
   // VATIKAANI (PT 11.10.2026, juna 183): Euroopan viimeinen pääkaupunkipiste ilman karttaa.
@@ -6379,7 +6379,7 @@ const KAUPUNGIT = {
   },
   // PÄÄKAUPUNKI e04 (Codex, kohdekartat.mjs)
   monrovia: {
-    rajat: { pohjoinen: 6.3602, etela: 6.2973, lansi: -10.8091, ita: -10.7473 },
+    rajat: { pohjoinen: 6.3602, etela: 6.2973, lansi: -10.814, ita: -10.7473 },
     meri: true,
   },
   // PÄÄKAUPUNKI e05 (Codex, kohdekartat.mjs)
@@ -6389,22 +6389,22 @@ const KAUPUNGIT = {
   },
   // PÄÄKAUPUNKI e06 (Codex, kohdekartat.mjs)
   luanda: {
-    rajat: { pohjoinen: -8.7756, etela: -8.8203, lansi: 13.2179, ita: 13.25 },
+    rajat: { pohjoinen: -8.7756, etela: -8.8421, lansi: 13.2101, ita: 13.2578 },
     meri: true,
   },
   // PÄÄKAUPUNKI e06 (Codex, kohdekartat.mjs)
   saotome: {
-    rajat: { pohjoinen: 0.411, etela: 0.3428, lansi: 6.703, ita: 6.7514 },
+    rajat: { pohjoinen: 0.411, etela: 0.3319, lansi: 6.6992, ita: 6.7553 },
     meri: true,
   },
   // PÄÄKAUPUNKI e07 (Codex, kohdekartat.mjs)
   mogadishu: {
-    rajat: { pohjoinen: 2.0459, etela: 2.0289, lansi: 45.3386, ita: 45.3667 },
+    rajat: { pohjoinen: 2.0467, etela: 2.0282, lansi: 45.336, ita: 45.3667 },
     meri: true,
   },
   // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs)
   ottawa: {
-    rajat: { pohjoinen: 45.4442, etela: 45.388, lansi: -75.7288, ita: -75.6719 },
+    rajat: { pohjoinen: 45.4442, etela: 45.388, lansi: -75.7282, ita: -75.6714 },
   },
   // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs)
   washington: {
@@ -6418,13 +6418,13 @@ const KAUPUNGIT = {
   },
   // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs)
   nassau: {
-    rajat: { pohjoinen: 25.0828, etela: 25.0681, lansi: -77.3616, ita: -77.3347 },
+    rajat: { pohjoinen: 25.0829, etela: 25.0682, lansi: -77.3616, ita: -77.3347 },
     meri: true,
     meriHaku: 0.05,
   },
   // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs)
   saintjohns: {
-    rajat: { pohjoinen: 17.1341, etela: 17.1183, lansi: -61.8665, ita: -61.8391 },
+    rajat: { pohjoinen: 17.1335, etela: 17.1177, lansi: -61.8665, ita: -61.8391 },
     meri: true,
     meriHaku: 0.05,
   },
@@ -6440,7 +6440,7 @@ const KAUPUNGIT = {
   },
   // PÄÄKAUPUNKI e14 (Codex, kohdekartat.mjs)
   canberra: {
-    rajat: { pohjoinen: -35.2321, etela: -35.2754, lansi: 149.0963, ita: 149.1843 },
+    rajat: { pohjoinen: -35.2345, etela: -35.3023, lansi: 149.0963, ita: 149.1843 },
   },
 };
 
