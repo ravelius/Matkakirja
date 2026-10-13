@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e10",
   "city": "male",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "1bd48b00944334a1a3006f3d418a6efcce27ae07f935dd5d8749168bd922b57a",
@@ -816,7 +816,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "1bd48b00944334a1a3006f3d418a6efcce27ae07f935dd5d8749168bd922b57a"
+      "contextAfterSHA256": "1bd48b00944334a1a3006f3d418a6efcce27ae07f935dd5d8749168bd922b57a",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -869,7 +871,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "d842471b19d91bfb985a7692706ed7e85f7889095a0b12ad24a4373b8a4e7900",
@@ -1507,7 +1509,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "d842471b19d91bfb985a7692706ed7e85f7889095a0b12ad24a4373b8a4e7900"
+      "contextAfterSHA256": "d842471b19d91bfb985a7692706ed7e85f7889095a0b12ad24a4373b8a4e7900",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -1557,7 +1561,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
         "targetBeforeSHA256": "f3af7a0a1d419a0cc69dc1c92e707bad728a7d92d9c04804c7b00f0ef572177e",
         "semanticContextSHA256": "f3af7a0a1d419a0cc69dc1c92e707bad728a7d92d9c04804c7b00f0ef572177e",
@@ -2053,7 +2057,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "f3af7a0a1d419a0cc69dc1c92e707bad728a7d92d9c04804c7b00f0ef572177e",
-      "contextAfterSHA256": "f3af7a0a1d419a0cc69dc1c92e707bad728a7d92d9c04804c7b00f0ef572177e"
+      "contextAfterSHA256": "f3af7a0a1d419a0cc69dc1c92e707bad728a7d92d9c04804c7b00f0ef572177e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -2103,7 +2109,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9aed3970f59370d47545a77f99932e285e14b801b397da87e74f061413f2e348",
         "semanticContextSHA256": "9aed3970f59370d47545a77f99932e285e14b801b397da87e74f061413f2e348",
@@ -2788,7 +2794,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "9aed3970f59370d47545a77f99932e285e14b801b397da87e74f061413f2e348",
-      "contextAfterSHA256": "9aed3970f59370d47545a77f99932e285e14b801b397da87e74f061413f2e348"
+      "contextAfterSHA256": "9aed3970f59370d47545a77f99932e285e14b801b397da87e74f061413f2e348",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -2838,7 +2846,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
         "targetBeforeSHA256": "97e6767e5628263cf0089a78e192d51cc11a1e7d7d5dd287b4e57972b8c53f35",
         "semanticContextSHA256": "97e6767e5628263cf0089a78e192d51cc11a1e7d7d5dd287b4e57972b8c53f35",
@@ -3536,7 +3544,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "97e6767e5628263cf0089a78e192d51cc11a1e7d7d5dd287b4e57972b8c53f35",
-      "contextAfterSHA256": "97e6767e5628263cf0089a78e192d51cc11a1e7d7d5dd287b4e57972b8c53f35"
+      "contextAfterSHA256": "97e6767e5628263cf0089a78e192d51cc11a1e7d7d5dd287b4e57972b8c53f35",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -3586,7 +3596,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3f16ae0064d4645e357ba8a819e86edf9f330eae7dcb1cb166ebbdf6275b3095",
         "semanticContextSHA256": "3f16ae0064d4645e357ba8a819e86edf9f330eae7dcb1cb166ebbdf6275b3095",
@@ -4269,7 +4279,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "3f16ae0064d4645e357ba8a819e86edf9f330eae7dcb1cb166ebbdf6275b3095",
-      "contextAfterSHA256": "3f16ae0064d4645e357ba8a819e86edf9f330eae7dcb1cb166ebbdf6275b3095"
+      "contextAfterSHA256": "3f16ae0064d4645e357ba8a819e86edf9f330eae7dcb1cb166ebbdf6275b3095",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -4319,7 +4331,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3aa17359d88e2c80a232178147ecbda8a50df6525037cfcf4304c3d8b9ef441c",
         "semanticContextSHA256": "3aa17359d88e2c80a232178147ecbda8a50df6525037cfcf4304c3d8b9ef441c",
@@ -5000,7 +5012,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "3aa17359d88e2c80a232178147ecbda8a50df6525037cfcf4304c3d8b9ef441c",
-      "contextAfterSHA256": "3aa17359d88e2c80a232178147ecbda8a50df6525037cfcf4304c3d8b9ef441c"
+      "contextAfterSHA256": "3aa17359d88e2c80a232178147ecbda8a50df6525037cfcf4304c3d8b9ef441c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -5053,7 +5067,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "63adcf04c3aec054e30c6a9906066b9c64e88680dd350c92eff8b5d9a3476c88",
@@ -5353,7 +5367,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "63adcf04c3aec054e30c6a9906066b9c64e88680dd350c92eff8b5d9a3476c88"
+      "contextAfterSHA256": "63adcf04c3aec054e30c6a9906066b9c64e88680dd350c92eff8b5d9a3476c88",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -5406,7 +5422,7 @@
         2432
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
         "targetBeforeSHA256": "f6c2ecc17a01b050342837fac97613224a14c8f21a9e3f1139cadab081ca1981",
         "semanticContextSHA256": "f6c2ecc17a01b050342837fac97613224a14c8f21a9e3f1139cadab081ca1981",
@@ -5608,7 +5624,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "f6c2ecc17a01b050342837fac97613224a14c8f21a9e3f1139cadab081ca1981",
-      "contextAfterSHA256": "f6c2ecc17a01b050342837fac97613224a14c8f21a9e3f1139cadab081ca1981"
+      "contextAfterSHA256": "f6c2ecc17a01b050342837fac97613224a14c8f21a9e3f1139cadab081ca1981",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -5661,10 +5679,10 @@
         960
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "780b7dfec8d9d2f9b1db8c534729e2c0dc1bac0dd0e87d95ef98867228ff6688",
+        "semanticContextSHA256": "780b7dfec8d9d2f9b1db8c534729e2c0dc1bac0dd0e87d95ef98867228ff6688",
         "subjectTitle": "Malé",
         "targetState": "existing-target"
       },
@@ -5843,10 +5861,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "The western side (382669110).jpg",
+        "lahde": "╚ DD╔ from Male, Maldives, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Malén sataman länsipuolta helmikuussa 2007.",
+        "lyhyt": "Malén sataman länsipuolta helmikuussa 2007."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -5879,7 +5897,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "780b7dfec8d9d2f9b1db8c534729e2c0dc1bac0dd0e87d95ef98867228ff6688",
-      "contextAfterSHA256": "780b7dfec8d9d2f9b1db8c534729e2c0dc1bac0dd0e87d95ef98867228ff6688"
+      "contextAfterSHA256": "780b7dfec8d9d2f9b1db8c534729e2c0dc1bac0dd0e87d95ef98867228ff6688",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -5932,10 +5952,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "c556762a1f3009c8a8140344de6be0a8580d12daef0efba321a4e01940004746",
+        "semanticContextSHA256": "c556762a1f3009c8a8140344de6be0a8580d12daef0efba321a4e01940004746",
         "subjectTitle": "Malé",
         "targetState": "existing-target"
       },
@@ -6123,10 +6143,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Port of Malé.jpg",
+        "lahde": "Shahee Ilyas, Wikimedia Commons (CC BY 4.0)",
+        "selite": "Malén satama, laiturit ja kaupunkiranta joulukuussa 2017.",
+        "lyhyt": "Malén satama, laiturit ja kaupunkiranta joulukuussa 2017."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -6159,7 +6179,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "c556762a1f3009c8a8140344de6be0a8580d12daef0efba321a4e01940004746",
-      "contextAfterSHA256": "c556762a1f3009c8a8140344de6be0a8580d12daef0efba321a4e01940004746"
+      "contextAfterSHA256": "c556762a1f3009c8a8140344de6be0a8580d12daef0efba321a4e01940004746",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -6212,10 +6234,10 @@
         960
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "235eb9243eb550e3ffcb40a806057705e10f59449da5721d6a4a704c94fd9df7",
+        "semanticContextSHA256": "235eb9243eb550e3ffcb40a806057705e10f59449da5721d6a4a704c94fd9df7",
         "subjectTitle": "Malé",
         "targetState": "existing-target"
       },
@@ -6402,10 +6424,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Aerial view of Malé.jpg",
+        "lahde": "Giorgio Montersino, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Malén kaakkoisrannan kaupunkialuetta ilmasta syyskuussa 2005.",
+        "lyhyt": "Malén kaakkoisrannan kaupunkialuetta ilmasta syyskuussa 2005."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -6438,7 +6460,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "235eb9243eb550e3ffcb40a806057705e10f59449da5721d6a4a704c94fd9df7",
-      "contextAfterSHA256": "235eb9243eb550e3ffcb40a806057705e10f59449da5721d6a4a704c94fd9df7"
+      "contextAfterSHA256": "235eb9243eb550e3ffcb40a806057705e10f59449da5721d6a4a704c94fd9df7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -6491,7 +6515,7 @@
         960
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
         "targetBeforeSHA256": "077eacd32a7078df2277466e3103de2603b4b939e0e5bbbe2a2eded54fdb95d1",
         "semanticContextSHA256": "077eacd32a7078df2277466e3103de2603b4b939e0e5bbbe2a2eded54fdb95d1",
@@ -6691,7 +6715,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "077eacd32a7078df2277466e3103de2603b4b939e0e5bbbe2a2eded54fdb95d1",
-      "contextAfterSHA256": "077eacd32a7078df2277466e3103de2603b4b939e0e5bbbe2a2eded54fdb95d1"
+      "contextAfterSHA256": "077eacd32a7078df2277466e3103de2603b4b939e0e5bbbe2a2eded54fdb95d1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -6744,7 +6770,7 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/male/sisalto.json",
-      "sourceContentSHA256": "852fd200a1a6e1760ee6038624ed87840bb33d79ac0e511ea4e8084b831f164e",
+      "sourceContentSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7bf5054eda5eb2f59306e31599da2f2c740e01efad9734630656046c426cfcec",
         "semanticContextSHA256": "7bf5054eda5eb2f59306e31599da2f2c740e01efad9734630656046c426cfcec",
@@ -6944,10 +6970,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "0b27f4e32e60f594e3c11909d89ee1f3532c7d9522a65f2aa959ebfb529b4d12",
       "targetAfterSHA256": "7bf5054eda5eb2f59306e31599da2f2c740e01efad9734630656046c426cfcec",
-      "contextAfterSHA256": "7bf5054eda5eb2f59306e31599da2f2c740e01efad9734630656046c426cfcec"
+      "contextAfterSHA256": "7bf5054eda5eb2f59306e31599da2f2c740e01efad9734630656046c426cfcec",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

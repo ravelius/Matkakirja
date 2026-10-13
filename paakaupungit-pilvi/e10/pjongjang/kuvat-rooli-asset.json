@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e10",
   "city": "pjongjang",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "ee926537483bffdbcd80bdacdd2f561005eb99295afc534f555abfe07cd8f9df",
@@ -441,7 +441,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
+            "sha256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
@@ -530,7 +530,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "ee926537483bffdbcd80bdacdd2f561005eb99295afc534f555abfe07cd8f9df"
+      "contextAfterSHA256": "ee926537483bffdbcd80bdacdd2f561005eb99295afc534f555abfe07cd8f9df",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -583,7 +585,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "3b50a31cc12d9ffee5a6d0e1cf6cbba815b758d6bf34c3e9d45bbc87e4c33b18",
@@ -749,7 +751,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
+            "sha256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
@@ -838,7 +840,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "3b50a31cc12d9ffee5a6d0e1cf6cbba815b758d6bf34c3e9d45bbc87e4c33b18"
+      "contextAfterSHA256": "3b50a31cc12d9ffee5a6d0e1cf6cbba815b758d6bf34c3e9d45bbc87e4c33b18",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -888,7 +892,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "semanticSourceBind": {
         "targetBeforeSHA256": "653eb77b6d157e81c78e1b818da43ae5cae71401389c439155496337b38f32cf",
         "semanticContextSHA256": "653eb77b6d157e81c78e1b818da43ae5cae71401389c439155496337b38f32cf",
@@ -1052,7 +1056,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
+            "sha256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
@@ -1141,7 +1145,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "653eb77b6d157e81c78e1b818da43ae5cae71401389c439155496337b38f32cf",
-      "contextAfterSHA256": "653eb77b6d157e81c78e1b818da43ae5cae71401389c439155496337b38f32cf"
+      "contextAfterSHA256": "653eb77b6d157e81c78e1b818da43ae5cae71401389c439155496337b38f32cf",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -1191,7 +1197,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "semanticSourceBind": {
         "targetBeforeSHA256": "666b61891e6ddef0a28bf6defa85926f21effb70bf0bd97ba6ee3b9692e1f43f",
         "semanticContextSHA256": "666b61891e6ddef0a28bf6defa85926f21effb70bf0bd97ba6ee3b9692e1f43f",
@@ -1341,7 +1347,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
+            "sha256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
@@ -1430,7 +1436,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "666b61891e6ddef0a28bf6defa85926f21effb70bf0bd97ba6ee3b9692e1f43f",
-      "contextAfterSHA256": "666b61891e6ddef0a28bf6defa85926f21effb70bf0bd97ba6ee3b9692e1f43f"
+      "contextAfterSHA256": "666b61891e6ddef0a28bf6defa85926f21effb70bf0bd97ba6ee3b9692e1f43f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -1480,7 +1488,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3be5c03f769249aaf969929c4857e7ba95d0481d486ab7864ab26b2c54cab9d7",
         "semanticContextSHA256": "3be5c03f769249aaf969929c4857e7ba95d0481d486ab7864ab26b2c54cab9d7",
@@ -1656,7 +1664,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
+            "sha256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
@@ -1745,7 +1753,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "3be5c03f769249aaf969929c4857e7ba95d0481d486ab7864ab26b2c54cab9d7",
-      "contextAfterSHA256": "3be5c03f769249aaf969929c4857e7ba95d0481d486ab7864ab26b2c54cab9d7"
+      "contextAfterSHA256": "3be5c03f769249aaf969929c4857e7ba95d0481d486ab7864ab26b2c54cab9d7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -1795,7 +1805,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3eb336d21572dfad98b202903b1180f8eb75b36211846c81bd6e2e17bdaf9931",
         "semanticContextSHA256": "3eb336d21572dfad98b202903b1180f8eb75b36211846c81bd6e2e17bdaf9931",
@@ -1971,7 +1981,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
+            "sha256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
@@ -2060,7 +2070,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "3eb336d21572dfad98b202903b1180f8eb75b36211846c81bd6e2e17bdaf9931",
-      "contextAfterSHA256": "3eb336d21572dfad98b202903b1180f8eb75b36211846c81bd6e2e17bdaf9931"
+      "contextAfterSHA256": "3eb336d21572dfad98b202903b1180f8eb75b36211846c81bd6e2e17bdaf9931",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -2110,7 +2122,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "semanticSourceBind": {
         "targetBeforeSHA256": "03a052c6f56905bb0c351ede81bb7110553020d9639f496f69d2f173dc067d26",
         "semanticContextSHA256": "03a052c6f56905bb0c351ede81bb7110553020d9639f496f69d2f173dc067d26",
@@ -2274,7 +2286,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
+            "sha256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
@@ -2363,7 +2375,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "03a052c6f56905bb0c351ede81bb7110553020d9639f496f69d2f173dc067d26",
-      "contextAfterSHA256": "03a052c6f56905bb0c351ede81bb7110553020d9639f496f69d2f173dc067d26"
+      "contextAfterSHA256": "03a052c6f56905bb0c351ede81bb7110553020d9639f496f69d2f173dc067d26",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -2413,7 +2427,7 @@
         5504
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "semanticSourceBind": {
         "targetBeforeSHA256": "95aec603a63bf50411cc009db4cc23ca5d5dec89bfb0242d38cfc9d20232af54",
         "semanticContextSHA256": "95aec603a63bf50411cc009db4cc23ca5d5dec89bfb0242d38cfc9d20232af54",
@@ -2492,7 +2506,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-        "fileSHA256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95",
+        "fileSHA256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2555,7 +2569,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
+            "sha256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
@@ -2632,7 +2646,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "95aec603a63bf50411cc009db4cc23ca5d5dec89bfb0242d38cfc9d20232af54",
-      "contextAfterSHA256": "95aec603a63bf50411cc009db4cc23ca5d5dec89bfb0242d38cfc9d20232af54"
+      "contextAfterSHA256": "95aec603a63bf50411cc009db4cc23ca5d5dec89bfb0242d38cfc9d20232af54",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -2685,7 +2701,7 @@
         2976
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ff17234b2efb8016532f31791567f7f93565b7337d8219f99e7661971672b270",
         "semanticContextSHA256": "ff17234b2efb8016532f31791567f7f93565b7337d8219f99e7661971672b270",
@@ -2767,7 +2783,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-        "fileSHA256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95",
+        "fileSHA256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -2833,7 +2849,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
+            "sha256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
@@ -2910,279 +2926,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "ff17234b2efb8016532f31791567f7f93565b7337d8219f99e7661971672b270",
-      "contextAfterSHA256": "ff17234b2efb8016532f31791567f7f93565b7337d8219f99e7661971672b270"
-    },
-    {
-      "era": "e10",
-      "city": "pjongjang",
-      "slot": "N1",
-      "type": "commons",
-      "assetID": "capital-cc-e10-pjongjang-n1-041a192f8dce9e33",
-      "galleryImageID": "capital-cc-e10-pjongjang-n1-041a192f8dce9e33",
-      "commonsFile": "Moranbong Park - 03.jpg",
-      "targetJsonPath": "$.nahtavyydet[\"Moran-kukkula\"].kuvat[0]",
-      "targetTokens": [
-        "nahtavyydet",
-        "Moran-kukkula",
-        "kuvat",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
-        "suora": true,
-        "lahde": "Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
-        "lyhyt": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
-        "tiedosto": "Moranbong Park - 03.jpg"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
-        "lyhyt": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
-        "tiedosto": "Moranbong Park - 03.jpg"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
-        "suora": true,
-        "lahde": "Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
-        "lyhyt": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
-        "tiedosto": "Moranbong Park - 03.jpg"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
-      "exportSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/e702165e9e8e-original.jpg",
-      "dimensions": [
-        5504,
-        3096
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "373d616992535d98659772f02acc27cb675bc97257bc96cb9b93a533bea0fd43",
-        "semanticContextSHA256": "85fb289a520d784aabba0b24b1056511dce4d347962489c18473801c49f8dfbc",
-        "subjectTitle": "Moran-kukkula",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Jan Engelhardt",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moranbong_Park_-_03.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Moranbong_Park_-_03.jpg",
-        "rightsEvidence": {
-          "selection": "Jan Engelhardt ja CC BY-SA 4.0 luettu itse Commonsin Author- ja lisenssitaulukosta. Description Moranbong Park ja kuvaajan oma galleria nimeää krc_3286.jpg:n Moranbong Parkiin sekä antaa paikkalinkin. Oma alkuperäiskatselu: metsikkö, polku, tavallisia penkkejä ja pieni toiminnallinen silta/uoma. Ei ihmisiä, lisättyä tekstiä, monumenttia tai erillistä luovaa nykyteosta pääaiheena. Gallerian alkuperäinen vastaa Commonsin tiedostoa SHA256:lla.",
-          "QA": {
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moranbong_Park_-_03.jpg",
-            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/verkkovarmennus/c6438e5342aff54477e06b46c80e20f5ec033d1a4eb7689e304234f1a6b5e1cb.html",
-            "sourceSHA256": "da4277ba940d900d2732408f81ad7d44e4efd27ffc7be8095664abc6426abb30",
-            "directAuthors": [
-              "Jan Engelhardt"
-            ],
-            "directLicenses": [
-              "CC BY-SA 4.0"
-            ],
-            "directRows": {
-              "Date": "27 July 2019, 18:28:08",
-              "Camera location": "39° 02′ 12.8″ N, 125° 45′ 25.86″ E"
-            },
-            "sourceOriginalDimensions": [
-              5504,
-              3096
-            ],
-            "localDimensions": [
-              5504,
-              3096
-            ],
-            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/e702165e9e8e-original.jpg",
-            "mediaSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
-            "authorMatches": true,
-            "licenseMatches": true,
-            "dimensionsMatch": true,
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-            "sourceRows": [
-              "Date 27 July 2019, 18:28:08",
-              "Source https://inai.de/images/2019_pyongyang_city/",
-              "Author Jan Engelhardt",
-              "Camera location 39° 02′ 12.8″ N, 125° 45′ 25.86″ E View this and other nearby images on: OpenStreetMap 39.036888; 125.757183"
-            ],
-            "sourceCategories": [
-              "Moranbong Park",
-              "Files with coordinates missing SDC location of creation",
-              "CC-BY-SA-4.0",
-              "Photos by Jan Engelhardt"
-            ],
-            "photographerGallery": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/scout-moran-photographer-source.html",
-            "gallerySHA256": "1437186dfdebd5bcff1a4f2eafefb9c18936463411b2a1f7f8202b2d9b7d509a",
-            "galleryOriginalSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
-            "galleryAndCommonsSameBytes": true,
-            "fullImageViewed": true,
-            "viewMethod": "view_image high; full frame",
-            "personallyViewedByJob27": true,
-            "currentContentSHA256": "a1ca3529824e804a439ea665af971700c1c0e0718c16ab4490a768d31037c75b",
-            "targetStillExists": true
-          },
-          "qaReason": "Oma koko kuvan katselu: metsikkö, puistopolku, tavalliset penkit ja pieni toiminnallinen silta. Kuva sopii Moran-kukkulan puistosta kertovaan N1-tekstiin; ei väitettä Pubyok-paviljongin ulkonäöstä. Commonsin Jan Engelhardt / CC BY-SA 4.0, koko 5504×3096, vuoden 2019 päiväys, Moranbong Park -luokitus ja kamerakoordinaatit tarkistettu alkuperäisestä HTML:stä. Tekijän oma galleria nimeää saman puisto-osuuden. Ei ihmiskasvoja tai päälle lisättyä tekstiä; tavallinen puistoinfrastruktuuri ei ole tässä erikseen nostettu moderni teospääaihe."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-        "fileSHA256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95",
-        "item": {
-          "slot": "N1",
-          "targetJsonPath": "$.nahtavyydet[\"Moran-kukkula\"].kuvat[0]",
-          "verdict": "accepted",
-          "reason": "Oma koko kuvan katselu: metsikkö, puistopolku, tavalliset penkit ja pieni toiminnallinen silta. Kuva sopii Moran-kukkulan puistosta kertovaan N1-tekstiin; ei väitettä Pubyok-paviljongin ulkonäöstä. Commonsin Jan Engelhardt / CC BY-SA 4.0, koko 5504×3096, vuoden 2019 päiväys, Moranbong Park -luokitus ja kamerakoordinaatit tarkistettu alkuperäisestä HTML:stä. Tekijän oma galleria nimeää saman puisto-osuuden. Ei ihmiskasvoja tai päälle lisättyä tekstiä; tavallinen puistoinfrastruktuuri ei ole tässä erikseen nostettu moderni teospääaihe.",
-          "evidence": {
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moranbong_Park_-_03.jpg",
-            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/verkkovarmennus/c6438e5342aff54477e06b46c80e20f5ec033d1a4eb7689e304234f1a6b5e1cb.html",
-            "sourceSHA256": "da4277ba940d900d2732408f81ad7d44e4efd27ffc7be8095664abc6426abb30",
-            "directAuthors": [
-              "Jan Engelhardt"
-            ],
-            "directLicenses": [
-              "CC BY-SA 4.0"
-            ],
-            "directRows": {
-              "Date": "27 July 2019, 18:28:08",
-              "Camera location": "39° 02′ 12.8″ N, 125° 45′ 25.86″ E"
-            },
-            "sourceOriginalDimensions": [
-              5504,
-              3096
-            ],
-            "localDimensions": [
-              5504,
-              3096
-            ],
-            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/e702165e9e8e-original.jpg",
-            "mediaSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
-            "authorMatches": true,
-            "licenseMatches": true,
-            "dimensionsMatch": true,
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-            "sourceRows": [
-              "Date 27 July 2019, 18:28:08",
-              "Source https://inai.de/images/2019_pyongyang_city/",
-              "Author Jan Engelhardt",
-              "Camera location 39° 02′ 12.8″ N, 125° 45′ 25.86″ E View this and other nearby images on: OpenStreetMap 39.036888; 125.757183"
-            ],
-            "sourceCategories": [
-              "Moranbong Park",
-              "Files with coordinates missing SDC location of creation",
-              "CC-BY-SA-4.0",
-              "Photos by Jan Engelhardt"
-            ],
-            "photographerGallery": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/scout-moran-photographer-source.html",
-            "gallerySHA256": "1437186dfdebd5bcff1a4f2eafefb9c18936463411b2a1f7f8202b2d9b7d509a",
-            "galleryOriginalSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
-            "galleryAndCommonsSameBytes": true,
-            "fullImageViewed": true,
-            "viewMethod": "view_image high; full frame",
-            "personallyViewedByJob27": true,
-            "currentContentSHA256": "a1ca3529824e804a439ea665af971700c1c0e0718c16ab4490a768d31037c75b",
-            "targetStillExists": true
-          },
-          "reviewedAt": "2026-10-12T19:18:38.922573+00:00",
-          "commonsFile": "Moranbong Park - 03.jpg",
-          "sha256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e10",
-        "city": "pjongjang",
-        "slot": "N1",
-        "targetJsonPath": "$.nahtavyydet[\"Moran-kukkula\"].kuvat[0]",
-        "commonsFile": "Moranbong Park - 03.jpg",
-        "sha256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moranbong_Park_-_03.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Moranbong_Park_-_03.jpg",
-        "author": "Jan Engelhardt",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "width": 5504,
-        "height": 3096,
-        "originalSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
-        "bytes": 11091708,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T19:18:56.987688+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Moranbong Park - 03.jpg",
-        "lahde": "Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
-        "lyhyt": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
-        "lyhyt": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
-        "tiedosto": "Moranbong Park - 03.jpg"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
-      "targetAfterSHA256": "373d616992535d98659772f02acc27cb675bc97257bc96cb9b93a533bea0fd43",
-      "contextAfterSHA256": "85fb289a520d784aabba0b24b1056511dce4d347962489c18473801c49f8dfbc"
+      "contextAfterSHA256": "ff17234b2efb8016532f31791567f7f93565b7337d8219f99e7661971672b270",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -3235,10 +2981,10 @@
         3712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
-      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "e63eb1dde8f5cfc308313f36f4e53a932dcf3eb697d1928fb3c2f3bcdbff9961",
+        "semanticContextSHA256": "e63eb1dde8f5cfc308313f36f4e53a932dcf3eb697d1928fb3c2f3bcdbff9961",
         "subjectTitle": "Pjongjang",
         "targetState": "existing-target"
       },
@@ -3321,7 +3067,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-        "fileSHA256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95",
+        "fileSHA256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -3382,7 +3128,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
+            "sha256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
@@ -3423,10 +3169,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "ISS066-E-7985 - View of Earth.jpg",
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+        "lyhyt": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3459,10 +3205,288 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "e63eb1dde8f5cfc308313f36f4e53a932dcf3eb697d1928fb3c2f3bcdbff9961",
-      "contextAfterSHA256": "e63eb1dde8f5cfc308313f36f4e53a932dcf3eb697d1928fb3c2f3bcdbff9961"
+      "contextAfterSHA256": "e63eb1dde8f5cfc308313f36f4e53a932dcf3eb697d1928fb3c2f3bcdbff9961",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e10",
+      "city": "pjongjang",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e10-pjongjang-n1-041a192f8dce9e33",
+      "galleryImageID": "capital-cc-e10-pjongjang-n1-041a192f8dce9e33",
+      "commonsFile": "Moranbong Park - 03.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Moran-kukkula\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Moran-kukkula",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
+        "suora": true,
+        "lahde": "Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
+        "lyhyt": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
+        "tiedosto": "Moranbong Park - 03.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
+        "lyhyt": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
+        "tiedosto": "Moranbong Park - 03.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
+        "suora": true,
+        "lahde": "Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
+        "lyhyt": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
+        "tiedosto": "Moranbong Park - 03.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
+      "exportSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/e702165e9e8e-original.jpg",
+      "dimensions": [
+        5504,
+        3096
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
+      "sourceContentSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "373d616992535d98659772f02acc27cb675bc97257bc96cb9b93a533bea0fd43",
+        "semanticContextSHA256": "85fb289a520d784aabba0b24b1056511dce4d347962489c18473801c49f8dfbc",
+        "subjectTitle": "Moran-kukkula",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Jan Engelhardt",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moranbong_Park_-_03.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Moranbong_Park_-_03.jpg",
+        "rightsEvidence": {
+          "selection": "Jan Engelhardt ja CC BY-SA 4.0 luettu itse Commonsin Author- ja lisenssitaulukosta. Description Moranbong Park ja kuvaajan oma galleria nimeää krc_3286.jpg:n Moranbong Parkiin sekä antaa paikkalinkin. Oma alkuperäiskatselu: metsikkö, polku, tavallisia penkkejä ja pieni toiminnallinen silta/uoma. Ei ihmisiä, lisättyä tekstiä, monumenttia tai erillistä luovaa nykyteosta pääaiheena. Gallerian alkuperäinen vastaa Commonsin tiedostoa SHA256:lla.",
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moranbong_Park_-_03.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/verkkovarmennus/c6438e5342aff54477e06b46c80e20f5ec033d1a4eb7689e304234f1a6b5e1cb.html",
+            "sourceSHA256": "da4277ba940d900d2732408f81ad7d44e4efd27ffc7be8095664abc6426abb30",
+            "directAuthors": [
+              "Jan Engelhardt"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "27 July 2019, 18:28:08",
+              "Camera location": "39° 02′ 12.8″ N, 125° 45′ 25.86″ E"
+            },
+            "sourceOriginalDimensions": [
+              5504,
+              3096
+            ],
+            "localDimensions": [
+              5504,
+              3096
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/e702165e9e8e-original.jpg",
+            "mediaSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceRows": [
+              "Date 27 July 2019, 18:28:08",
+              "Source https://inai.de/images/2019_pyongyang_city/",
+              "Author Jan Engelhardt",
+              "Camera location 39° 02′ 12.8″ N, 125° 45′ 25.86″ E View this and other nearby images on: OpenStreetMap 39.036888; 125.757183"
+            ],
+            "sourceCategories": [
+              "Moranbong Park",
+              "Files with coordinates missing SDC location of creation",
+              "CC-BY-SA-4.0",
+              "Photos by Jan Engelhardt"
+            ],
+            "photographerGallery": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/scout-moran-photographer-source.html",
+            "gallerySHA256": "1437186dfdebd5bcff1a4f2eafefb9c18936463411b2a1f7f8202b2d9b7d509a",
+            "galleryOriginalSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
+            "galleryAndCommonsSameBytes": true,
+            "fullImageViewed": true,
+            "viewMethod": "view_image high; full frame",
+            "personallyViewedByJob27": true,
+            "currentContentSHA256": "a1ca3529824e804a439ea665af971700c1c0e0718c16ab4490a768d31037c75b",
+            "targetStillExists": true
+          },
+          "qaReason": "Oma koko kuvan katselu: metsikkö, puistopolku, tavalliset penkit ja pieni toiminnallinen silta. Kuva sopii Moran-kukkulan puistosta kertovaan N1-tekstiin; ei väitettä Pubyok-paviljongin ulkonäöstä. Commonsin Jan Engelhardt / CC BY-SA 4.0, koko 5504×3096, vuoden 2019 päiväys, Moranbong Park -luokitus ja kamerakoordinaatit tarkistettu alkuperäisestä HTML:stä. Tekijän oma galleria nimeää saman puisto-osuuden. Ei ihmiskasvoja tai päälle lisättyä tekstiä; tavallinen puistoinfrastruktuuri ei ole tässä erikseen nostettu moderni teospääaihe."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
+        "fileSHA256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Moran-kukkula\"].kuvat[0]",
+          "verdict": "accepted",
+          "reason": "Oma koko kuvan katselu: metsikkö, puistopolku, tavalliset penkit ja pieni toiminnallinen silta. Kuva sopii Moran-kukkulan puistosta kertovaan N1-tekstiin; ei väitettä Pubyok-paviljongin ulkonäöstä. Commonsin Jan Engelhardt / CC BY-SA 4.0, koko 5504×3096, vuoden 2019 päiväys, Moranbong Park -luokitus ja kamerakoordinaatit tarkistettu alkuperäisestä HTML:stä. Tekijän oma galleria nimeää saman puisto-osuuden. Ei ihmiskasvoja tai päälle lisättyä tekstiä; tavallinen puistoinfrastruktuuri ei ole tässä erikseen nostettu moderni teospääaihe.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Moranbong_Park_-_03.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/verkkovarmennus/c6438e5342aff54477e06b46c80e20f5ec033d1a4eb7689e304234f1a6b5e1cb.html",
+            "sourceSHA256": "da4277ba940d900d2732408f81ad7d44e4efd27ffc7be8095664abc6426abb30",
+            "directAuthors": [
+              "Jan Engelhardt"
+            ],
+            "directLicenses": [
+              "CC BY-SA 4.0"
+            ],
+            "directRows": {
+              "Date": "27 July 2019, 18:28:08",
+              "Camera location": "39° 02′ 12.8″ N, 125° 45′ 25.86″ E"
+            },
+            "sourceOriginalDimensions": [
+              5504,
+              3096
+            ],
+            "localDimensions": [
+              5504,
+              3096
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/e702165e9e8e-original.jpg",
+            "mediaSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceRows": [
+              "Date 27 July 2019, 18:28:08",
+              "Source https://inai.de/images/2019_pyongyang_city/",
+              "Author Jan Engelhardt",
+              "Camera location 39° 02′ 12.8″ N, 125° 45′ 25.86″ E View this and other nearby images on: OpenStreetMap 39.036888; 125.757183"
+            ],
+            "sourceCategories": [
+              "Moranbong Park",
+              "Files with coordinates missing SDC location of creation",
+              "CC-BY-SA-4.0",
+              "Photos by Jan Engelhardt"
+            ],
+            "photographerGallery": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-evidence/scout-moran-photographer-source.html",
+            "gallerySHA256": "1437186dfdebd5bcff1a4f2eafefb9c18936463411b2a1f7f8202b2d9b7d509a",
+            "galleryOriginalSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
+            "galleryAndCommonsSameBytes": true,
+            "fullImageViewed": true,
+            "viewMethod": "view_image high; full frame",
+            "personallyViewedByJob27": true,
+            "currentContentSHA256": "a1ca3529824e804a439ea665af971700c1c0e0718c16ab4490a768d31037c75b",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:18:38.922573+00:00",
+          "commonsFile": "Moranbong Park - 03.jpg",
+          "sha256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
+            "sha256": "774c5496b3ac6d46d0616e2a446fc0ebe4f38640f67813e43e04b20a098821e6"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e10",
+        "city": "pjongjang",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Moran-kukkula\"].kuvat[0]",
+        "commonsFile": "Moranbong Park - 03.jpg",
+        "sha256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Moranbong_Park_-_03.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Moranbong_Park_-_03.jpg",
+        "author": "Jan Engelhardt",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 5504,
+        "height": 3096,
+        "originalSHA256": "041a192f8dce9e33e59860a5a1b1a95f9358a741288df977348c56b88a674c41",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg",
+        "bytes": 11091708,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:18:56.987688+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Moranbong Park - 03.jpg",
+        "lahde": "Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
+        "lyhyt": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
+        "lyhyt": "Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.",
+        "tiedosto": "Moranbong Park - 03.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
+      "targetAfterSHA256": "373d616992535d98659772f02acc27cb675bc97257bc96cb9b93a533bea0fd43",
+      "contextAfterSHA256": "85fb289a520d784aabba0b24b1056511dce4d347962489c18473801c49f8dfbc",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

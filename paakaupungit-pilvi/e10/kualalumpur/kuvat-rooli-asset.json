@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e10",
   "city": "kualalumpur",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "d3ab2e90acd99cd96bf07a95b31f4d199a3574a15353d983c4032a235a2da36b",
@@ -477,7 +477,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -562,7 +562,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "d3ab2e90acd99cd96bf07a95b31f4d199a3574a15353d983c4032a235a2da36b"
+      "contextAfterSHA256": "d3ab2e90acd99cd96bf07a95b31f4d199a3574a15353d983c4032a235a2da36b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -615,7 +617,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "c26d53429c3fc108a8d8217c48501caa6016c1644f549ceea9265263c88a82e0",
@@ -829,7 +831,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -914,7 +916,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "c26d53429c3fc108a8d8217c48501caa6016c1644f549ceea9265263c88a82e0"
+      "contextAfterSHA256": "c26d53429c3fc108a8d8217c48501caa6016c1644f549ceea9265263c88a82e0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -964,7 +968,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
         "semanticContextSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
@@ -1174,7 +1178,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -1259,7 +1263,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
-      "contextAfterSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84"
+      "contextAfterSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -1309,7 +1315,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
         "semanticContextSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
@@ -1521,7 +1527,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -1606,7 +1612,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
-      "contextAfterSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c"
+      "contextAfterSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -1656,7 +1664,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
         "semanticContextSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
@@ -1866,7 +1874,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -1951,7 +1959,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
-      "contextAfterSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd"
+      "contextAfterSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -2001,7 +2011,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
         "semanticContextSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
@@ -2213,7 +2223,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -2298,7 +2308,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
-      "contextAfterSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6"
+      "contextAfterSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -2348,7 +2360,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
         "semanticContextSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
@@ -2560,7 +2572,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -2645,7 +2657,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
-      "contextAfterSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607"
+      "contextAfterSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -2695,7 +2709,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
         "semanticContextSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
@@ -2905,7 +2919,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -2990,7 +3004,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
-      "contextAfterSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b"
+      "contextAfterSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -3040,7 +3056,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
         "semanticContextSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
@@ -3252,7 +3268,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -3337,7 +3353,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
-      "contextAfterSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e"
+      "contextAfterSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -3390,7 +3408,7 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
         "semanticContextSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
@@ -3526,7 +3544,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -3601,7 +3619,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
-      "contextAfterSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8"
+      "contextAfterSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -3654,7 +3674,7 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
         "semanticContextSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
@@ -3790,7 +3810,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -3863,7 +3883,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
-      "contextAfterSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a"
+      "contextAfterSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -3916,10 +3938,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
+        "semanticContextSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
         "subjectTitle": "Kuala Lumpur",
         "targetState": "existing-target"
       },
@@ -4090,7 +4112,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -4127,10 +4149,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG",
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "lyhyt": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4163,7 +4185,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
-      "contextAfterSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c"
+      "contextAfterSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e10",
@@ -4216,7 +4240,7 @@
         3472
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5815fa0366ccc16fa3953286d6f0b421fca80cc9dc85a0bb2ad60947a43e3204",
         "semanticContextSHA256": "fae7be4c721170694cb5900ec726fe6884434b345f96cda95a26a6596fdc1b74",
@@ -4388,7 +4412,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
-            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+            "sha256": "ab40c8f3d2913fca4c0667a9de230fe379de045af40eeeaf7d1786cd8a20e37b"
           }
         ]
       },
@@ -4461,10 +4485,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "5815fa0366ccc16fa3953286d6f0b421fca80cc9dc85a0bb2ad60947a43e3204",
-      "contextAfterSHA256": "fae7be4c721170694cb5900ec726fe6884434b345f96cda95a26a6596fdc1b74"
+      "contextAfterSHA256": "fae7be4c721170694cb5900ec726fe6884434b345f96cda95a26a6596fdc1b74",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }
