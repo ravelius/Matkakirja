@@ -2,9 +2,497 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e07",
   "city": "mogadishu",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
   "assets": [
+    {
+      "era": "e07",
+      "city": "mogadishu",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e07-mogadishu-O3-v1-20261012",
+      "galleryImageID": "e07-mogadishu-O3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne.",
+        "lyhyt": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne.",
+        "lyhyt": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
+      "exportSHA256": "b189b1467847dee81b6fff479b564bcc27a335d4d98f406d8fd0005f1ef3f20f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
+      "sourceContentSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "265c1d036cc7941cb5553d1738a39a87c0beaf816d794082a0f8ee7c936b06b7",
+        "subjectTitle": "Radio ja museo",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/assets/e07-mogadishu-O3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kolmiaukkoinen metallikela ja ruskea nauhanpää kaarevana pöydällä. Ei rei'ityksiä, tekstiä, logoja tai henkilöitä; pinnat luontevia.",
+            "captionFi": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
+            "contentSha256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
+            "targetCurrentlyPresent": true,
+            "targetText": "Radioarkiston puhdistus ja digitointi säilyttävät vanhoja ääniä. Kansallismuseon historia yhdistää vanhan Garesan ja myöhemmän museotalon. Koko radioaineisto ei ole valmis verkkokokoelma. Arkiston ja museon historia eivät myöskään lupaa nykyistä julkista vierailua.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
+            "factSheetSha256": "5f2e1335a4f55a5b3f75286cbba6e828f026979bfc0cb9eae449d5de80280837",
+            "topicEvidence": "O3 kertoo radioaineiston puhdistuksesta ja digitoinnista.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
+                "contentSha256": "27fd59d3a65719f22650f26f90dc1a6458f28fa3b6bb6b4f735b8e5ac778959e",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Radioarkiston puhdistus ja digitointi säilyttävät vanhoja ääniä. Kansallismuseon historia yhdistää vanhan Garesan ja myöhemmän museotalon. Koko radioaineisto ei ole valmis verkkokokoelma. Arkiston ja museon historia eivät myöskään lupaa nykyistä julkista vierailua."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Magneettinauha sopii radioarkiston säilytysaiheeseen. Selite ei väitä todellista Radio Mogadishun tallennetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
+        "fileSHA256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e07-mogadishu-O3-v1-20261012",
+          "sha256": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
+          "verdict": "accepted",
+          "reason": "Magneettinauha sopii radioarkiston säilytysaiheeseen. Selite ei väitä todellista Radio Mogadishun tallennetta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/assets/e07-mogadishu-O3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kolmiaukkoinen metallikela ja ruskea nauhanpää kaarevana pöydällä. Ei rei'ityksiä, tekstiä, logoja tai henkilöitä; pinnat luontevia.",
+            "captionFi": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
+            "contentSha256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
+            "targetCurrentlyPresent": true,
+            "targetText": "Radioarkiston puhdistus ja digitointi säilyttävät vanhoja ääniä. Kansallismuseon historia yhdistää vanhan Garesan ja myöhemmän museotalon. Koko radioaineisto ei ole valmis verkkokokoelma. Arkiston ja museon historia eivät myöskään lupaa nykyistä julkista vierailua.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
+            "factSheetSha256": "5f2e1335a4f55a5b3f75286cbba6e828f026979bfc0cb9eae449d5de80280837",
+            "topicEvidence": "O3 kertoo radioaineiston puhdistuksesta ja digitoinnista.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
+                "contentSha256": "27fd59d3a65719f22650f26f90dc1a6458f28fa3b6bb6b4f735b8e5ac778959e",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Radioarkiston puhdistus ja digitointi säilyttävät vanhoja ääniä. Kansallismuseon historia yhdistää vanhan Garesan ja myöhemmän museotalon. Koko radioaineisto ei ole valmis verkkokokoelma. Arkiston ja museon historia eivät myöskään lupaa nykyistä julkista vierailua."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:08:09.778361+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/qa.json",
+            "sha256": "4977e5a9a2d181f9e5cb8af56bdb2064669df11fe05c2c7a6e40209e00b9e290"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
+            "sha256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png?t=b189b1467847dee8",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
+        "sha256": "b189b1467847dee81b6fff479b564bcc27a335d4d98f406d8fd0005f1ef3f20f",
+        "bytes": 2086152,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-mogadishu-O3-v1-20261012",
+        "nativeSHA256": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "mogadishu",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-13T06:08:28.714695+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
+        "sha256": "b189b1467847dee81b6fff479b564bcc27a335d4d98f406d8fd0005f1ef3f20f",
+        "bytes": 2086152,
+        "SHAReadAt": "2026-10-13T06:08:19.135626+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
+        "rgbPixelSHA256": "f30a69b7861dc3f7673cb0b1e24004fb8b11fb5a110908c2dd8c060d09a6cc1c",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "265c1d036cc7941cb5553d1738a39a87c0beaf816d794082a0f8ee7c936b06b7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e07",
+      "city": "mogadishu",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e07-mogadishu-O4-v1-20261012",
+      "galleryImageID": "e07-mogadishu-O4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva.",
+        "lyhyt": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva.",
+        "lyhyt": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
+      "exportSHA256": "ba15310f1b97ea11edef14e11e8dde4808590a861754046abc439aad071f11e6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
+      "sourceContentSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "1e5a5c0ecd3a8c7f33c61aff207c5b1692314954892cd11d14db9bb71653f3bd",
+        "subjectTitle": "Rannikko ja kalatalous",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/assets/e07-mogadishu-O4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi kalafileetä epäsäännöllisellä jäämurskalla metallialustalla. Luontevat lihassyyt ja jään muodot, ei toistuvia vesitolppia tai merkintöjä.",
+            "captionFi": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
+            "contentSha256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
+            "targetCurrentlyPresent": true,
+            "targetText": "Liido on Mogadishun rannikkopaikka ja kalatalouden ympäristöä. Kalatorin kehittämiseen kuuluu kalan käsittelyä, jäähdytystä ja vedenpoistoa. Matkustusrajoitus koskee myös kaupungin rannikkoa ja estää retken suosittelemisen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
+            "factSheetSha256": "5f2e1335a4f55a5b3f75286cbba6e828f026979bfc0cb9eae449d5de80280837",
+            "topicEvidence": "O4 nimeää kalan jäähdytyksen kalatorin kehittämisaiheeseen.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
+                "contentSha256": "27fd59d3a65719f22650f26f90dc1a6458f28fa3b6bb6b4f735b8e5ac778959e",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Liido on Mogadishun rannikkopaikka ja kalatalouden ympäristöä. Kalatorin kehittämiseen kuuluu kalan käsittelyä, jäähdytystä ja vedenpoistoa. Matkustusrajoitus koskee myös kaupungin rannikkoa ja estää retken suosittelemisen."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Fileet ja jää havainnollistavat kalan jäähdytystä. Selite ei väitä paikkavalokuvaa kalatorilta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
+        "fileSHA256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e07-mogadishu-O4-v1-20261012",
+          "sha256": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
+          "verdict": "accepted",
+          "reason": "Fileet ja jää havainnollistavat kalan jäähdytystä. Selite ei väitä paikkavalokuvaa kalatorilta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/assets/e07-mogadishu-O4-v1-20261012/kuva.png",
+            "nativeSha256Verified": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi kalafileetä epäsäännöllisellä jäämurskalla metallialustalla. Luontevat lihassyyt ja jään muodot, ei toistuvia vesitolppia tai merkintöjä.",
+            "captionFi": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
+            "contentSha256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
+            "targetCurrentlyPresent": true,
+            "targetText": "Liido on Mogadishun rannikkopaikka ja kalatalouden ympäristöä. Kalatorin kehittämiseen kuuluu kalan käsittelyä, jäähdytystä ja vedenpoistoa. Matkustusrajoitus koskee myös kaupungin rannikkoa ja estää retken suosittelemisen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
+            "factSheetSha256": "5f2e1335a4f55a5b3f75286cbba6e828f026979bfc0cb9eae449d5de80280837",
+            "topicEvidence": "O4 nimeää kalan jäähdytyksen kalatorin kehittämisaiheeseen.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
+                "contentSha256": "27fd59d3a65719f22650f26f90dc1a6458f28fa3b6bb6b4f735b8e5ac778959e",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Liido on Mogadishun rannikkopaikka ja kalatalouden ympäristöä. Kalatorin kehittämiseen kuuluu kalan käsittelyä, jäähdytystä ja vedenpoistoa. Matkustusrajoitus koskee myös kaupungin rannikkoa ja estää retken suosittelemisen."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:08:09.876887+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/qa.json",
+            "sha256": "4977e5a9a2d181f9e5cb8af56bdb2064669df11fe05c2c7a6e40209e00b9e290"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
+            "sha256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png?t=ba15310f1b97ea11",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
+        "sha256": "ba15310f1b97ea11edef14e11e8dde4808590a861754046abc439aad071f11e6",
+        "bytes": 2611577,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-mogadishu-O4-v1-20261012",
+        "nativeSHA256": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "mogadishu",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-13T06:08:29.880115+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
+        "sha256": "ba15310f1b97ea11edef14e11e8dde4808590a861754046abc439aad071f11e6",
+        "bytes": 2611577,
+        "SHAReadAt": "2026-10-13T06:08:19.349785+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
+        "rgbPixelSHA256": "62d18e73feab9bb76e7986b712afba6988ed9799ae953dd03aa86230db1c0839",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "1e5a5c0ecd3a8c7f33c61aff207c5b1692314954892cd11d14db9bb71653f3bd",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
     {
       "era": "e07",
       "city": "mogadishu",
@@ -220,7 +708,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-            "sha256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100"
+            "sha256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed"
           }
         ]
       },
@@ -305,7 +793,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
       "targetAfterSHA256": "a198b655e5eeb5160cffb54d926c054cb18ce4663954c4cddf009974640c1c94",
-      "contextAfterSHA256": "a198b655e5eeb5160cffb54d926c054cb18ce4663954c4cddf009974640c1c94"
+      "contextAfterSHA256": "a198b655e5eeb5160cffb54d926c054cb18ce4663954c4cddf009974640c1c94",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -528,7 +1018,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-            "sha256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100"
+            "sha256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed"
           }
         ]
       },
@@ -613,7 +1103,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
       "targetAfterSHA256": "528e016554633a66df8a7a4e09fdf563837ac6167c1da147d3497b5d36686b17",
-      "contextAfterSHA256": "528e016554633a66df8a7a4e09fdf563837ac6167c1da147d3497b5d36686b17"
+      "contextAfterSHA256": "528e016554633a66df8a7a4e09fdf563837ac6167c1da147d3497b5d36686b17",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -977,7 +1469,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-            "sha256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100"
+            "sha256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed"
           }
         ]
       },
@@ -1062,491 +1554,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
       "targetAfterSHA256": "6261da09de8d30e2814b993e70d801ce44711e99c2cf8433086cd348b812e902",
-      "contextAfterSHA256": "6261da09de8d30e2814b993e70d801ce44711e99c2cf8433086cd348b812e902"
-    },
-    {
-      "era": "e07",
-      "city": "mogadishu",
-      "slot": "O3",
-      "type": "illustration",
-      "assetID": "e07-mogadishu-O3-v1-20261012",
-      "galleryImageID": "e07-mogadishu-O3-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        2,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne.",
-        "lyhyt": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne.",
-        "lyhyt": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
-      "exportSHA256": "b189b1467847dee81b6fff479b564bcc27a335d4d98f406d8fd0005f1ef3f20f",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-      "sourceContentSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "265c1d036cc7941cb5553d1738a39a87c0beaf816d794082a0f8ee7c936b06b7",
-        "subjectTitle": "Radio ja museo",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": [
-            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
-          ],
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/assets/e07-mogadishu-O3-v1-20261012/kuva.png",
-            "nativeSha256Verified": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Personally viewed native NAS PNG with view_image: Kolmiaukkoinen metallikela ja ruskea nauhanpää kaarevana pöydällä. Ei rei'ityksiä, tekstiä, logoja tai henkilöitä; pinnat luontevia.",
-            "captionFi": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-            "contentSha256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
-            "targetCurrentlyPresent": true,
-            "targetText": "Radioarkiston puhdistus ja digitointi säilyttävät vanhoja ääniä. Kansallismuseon historia yhdistää vanhan Garesan ja myöhemmän museotalon. Koko radioaineisto ei ole valmis verkkokokoelma. Arkiston ja museon historia eivät myöskään lupaa nykyistä julkista vierailua.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
-            "factSheetSha256": "5f2e1335a4f55a5b3f75286cbba6e828f026979bfc0cb9eae449d5de80280837",
-            "topicEvidence": "O3 kertoo radioaineiston puhdistuksesta ja digitoinnista.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-                "contentSha256": "27fd59d3a65719f22650f26f90dc1a6458f28fa3b6bb6b4f735b8e5ac778959e",
-                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
-                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
-                "targetTextAtIssue": "Radioarkiston puhdistus ja digitointi säilyttävät vanhoja ääniä. Kansallismuseon historia yhdistää vanhan Garesan ja myöhemmän museotalon. Koko radioaineisto ei ole valmis verkkokokoelma. Arkiston ja museon historia eivät myöskään lupaa nykyistä julkista vierailua."
-              }
-            ],
-            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
-            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
-          },
-          "qaReason": "Magneettinauha sopii radioarkiston säilytysaiheeseen. Selite ei väitä todellista Radio Mogadishun tallennetta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-        "fileSHA256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100",
-        "item": {
-          "slot": "O3",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-          "assetID": "e07-mogadishu-O3-v1-20261012",
-          "sha256": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
-          "verdict": "accepted",
-          "reason": "Magneettinauha sopii radioarkiston säilytysaiheeseen. Selite ei väitä todellista Radio Mogadishun tallennetta.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/assets/e07-mogadishu-O3-v1-20261012/kuva.png",
-            "nativeSha256Verified": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Personally viewed native NAS PNG with view_image: Kolmiaukkoinen metallikela ja ruskea nauhanpää kaarevana pöydällä. Ei rei'ityksiä, tekstiä, logoja tai henkilöitä; pinnat luontevia.",
-            "captionFi": "Magneettisen ääninauhan havainnekuva; ei Radio Mogadishun arkiston todellinen tallenne.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-            "contentSha256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
-            "targetCurrentlyPresent": true,
-            "targetText": "Radioarkiston puhdistus ja digitointi säilyttävät vanhoja ääniä. Kansallismuseon historia yhdistää vanhan Garesan ja myöhemmän museotalon. Koko radioaineisto ei ole valmis verkkokokoelma. Arkiston ja museon historia eivät myöskään lupaa nykyistä julkista vierailua.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
-            "factSheetSha256": "5f2e1335a4f55a5b3f75286cbba6e828f026979bfc0cb9eae449d5de80280837",
-            "topicEvidence": "O3 kertoo radioaineiston puhdistuksesta ja digitoinnista.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-                "contentSha256": "27fd59d3a65719f22650f26f90dc1a6458f28fa3b6bb6b4f735b8e5ac778959e",
-                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
-                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
-                "targetTextAtIssue": "Radioarkiston puhdistus ja digitointi säilyttävät vanhoja ääniä. Kansallismuseon historia yhdistää vanhan Garesan ja myöhemmän museotalon. Koko radioaineisto ei ole valmis verkkokokoelma. Arkiston ja museon historia eivät myöskään lupaa nykyistä julkista vierailua."
-              }
-            ],
-            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
-            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
-          },
-          "reviewedAt": "2026-10-13T06:08:09.778361+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/qa.json",
-            "sha256": "4977e5a9a2d181f9e5cb8af56bdb2064669df11fe05c2c7a6e40209e00b9e290"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-            "sha256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png?t=b189b1467847dee8",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
-        "sha256": "b189b1467847dee81b6fff479b564bcc27a335d4d98f406d8fd0005f1ef3f20f",
-        "bytes": 2086152,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e07-mogadishu-O3-v1-20261012",
-        "nativeSHA256": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e07",
-        "city": "mogadishu",
-        "slot": "O3",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-        "verifiedAt": "2026-10-13T06:08:28.714695+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O3-v1-20261012-22e96e945abd.png",
-        "sha256": "b189b1467847dee81b6fff479b564bcc27a335d4d98f406d8fd0005f1ef3f20f",
-        "bytes": 2086152,
-        "SHAReadAt": "2026-10-13T06:08:19.135626+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "22e96e945abd014c0988bbcf4847fc5def0340018d297130d6e34782789b9483",
-        "rgbPixelSHA256": "f30a69b7861dc3f7673cb0b1e24004fb8b11fb5a110908c2dd8c060d09a6cc1c",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "265c1d036cc7941cb5553d1738a39a87c0beaf816d794082a0f8ee7c936b06b7"
-    },
-    {
-      "era": "e07",
-      "city": "mogadishu",
-      "slot": "O4",
-      "type": "illustration",
-      "assetID": "e07-mogadishu-O4-v1-20261012",
-      "galleryImageID": "e07-mogadishu-O4-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        3,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva.",
-        "lyhyt": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva.",
-        "lyhyt": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
-      "exportSHA256": "ba15310f1b97ea11edef14e11e8dde4808590a861754046abc439aad071f11e6",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-      "sourceContentSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "1e5a5c0ecd3a8c7f33c61aff207c5b1692314954892cd11d14db9bb71653f3bd",
-        "subjectTitle": "Rannikko ja kalatalous",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": [
-            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
-          ],
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/assets/e07-mogadishu-O4-v1-20261012/kuva.png",
-            "nativeSha256Verified": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi kalafileetä epäsäännöllisellä jäämurskalla metallialustalla. Luontevat lihassyyt ja jään muodot, ei toistuvia vesitolppia tai merkintöjä.",
-            "captionFi": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-            "contentSha256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
-            "targetCurrentlyPresent": true,
-            "targetText": "Liido on Mogadishun rannikkopaikka ja kalatalouden ympäristöä. Kalatorin kehittämiseen kuuluu kalan käsittelyä, jäähdytystä ja vedenpoistoa. Matkustusrajoitus koskee myös kaupungin rannikkoa ja estää retken suosittelemisen.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
-            "factSheetSha256": "5f2e1335a4f55a5b3f75286cbba6e828f026979bfc0cb9eae449d5de80280837",
-            "topicEvidence": "O4 nimeää kalan jäähdytyksen kalatorin kehittämisaiheeseen.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-                "contentSha256": "27fd59d3a65719f22650f26f90dc1a6458f28fa3b6bb6b4f735b8e5ac778959e",
-                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
-                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
-                "targetTextAtIssue": "Liido on Mogadishun rannikkopaikka ja kalatalouden ympäristöä. Kalatorin kehittämiseen kuuluu kalan käsittelyä, jäähdytystä ja vedenpoistoa. Matkustusrajoitus koskee myös kaupungin rannikkoa ja estää retken suosittelemisen."
-              }
-            ],
-            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
-            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
-          },
-          "qaReason": "Fileet ja jää havainnollistavat kalan jäähdytystä. Selite ei väitä paikkavalokuvaa kalatorilta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-        "fileSHA256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100",
-        "item": {
-          "slot": "O4",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-          "assetID": "e07-mogadishu-O4-v1-20261012",
-          "sha256": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
-          "verdict": "accepted",
-          "reason": "Fileet ja jää havainnollistavat kalan jäähdytystä. Selite ei väitä paikkavalokuvaa kalatorilta.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/assets/e07-mogadishu-O4-v1-20261012/kuva.png",
-            "nativeSha256Verified": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi kalafileetä epäsäännöllisellä jäämurskalla metallialustalla. Luontevat lihassyyt ja jään muodot, ei toistuvia vesitolppia tai merkintöjä.",
-            "captionFi": "Kalan jäähdytyksen havainnekuva; ei Mogadishun kalatorin valokuva.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-            "contentSha256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
-            "targetCurrentlyPresent": true,
-            "targetText": "Liido on Mogadishun rannikkopaikka ja kalatalouden ympäristöä. Kalatorin kehittämiseen kuuluu kalan käsittelyä, jäähdytystä ja vedenpoistoa. Matkustusrajoitus koskee myös kaupungin rannikkoa ja estää retken suosittelemisen.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
-            "factSheetSha256": "5f2e1335a4f55a5b3f75286cbba6e828f026979bfc0cb9eae449d5de80280837",
-            "topicEvidence": "O4 nimeää kalan jäähdytyksen kalatorin kehittämisaiheeseen.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/sisalto.json",
-                "contentSha256": "27fd59d3a65719f22650f26f90dc1a6458f28fa3b6bb6b4f735b8e5ac778959e",
-                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/mogadishu/faktapohja.md",
-                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
-                "targetTextAtIssue": "Liido on Mogadishun rannikkopaikka ja kalatalouden ympäristöä. Kalatorin kehittämiseen kuuluu kalan käsittelyä, jäähdytystä ja vedenpoistoa. Matkustusrajoitus koskee myös kaupungin rannikkoa ja estää retken suosittelemisen."
-              }
-            ],
-            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
-            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
-          },
-          "reviewedAt": "2026-10-13T06:08:09.876887+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/qa.json",
-            "sha256": "4977e5a9a2d181f9e5cb8af56bdb2064669df11fe05c2c7a6e40209e00b9e290"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-            "sha256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png?t=ba15310f1b97ea11",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
-        "sha256": "ba15310f1b97ea11edef14e11e8dde4808590a861754046abc439aad071f11e6",
-        "bytes": 2611577,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e07-mogadishu-O4-v1-20261012",
-        "nativeSHA256": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e07",
-        "city": "mogadishu",
-        "slot": "O4",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-        "verifiedAt": "2026-10-13T06:08:29.880115+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/mogadishu/e07-mogadishu-O4-v1-20261012-35459d45da69.png",
-        "sha256": "ba15310f1b97ea11edef14e11e8dde4808590a861754046abc439aad071f11e6",
-        "bytes": 2611577,
-        "SHAReadAt": "2026-10-13T06:08:19.349785+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "35459d45da69d61e4101762c0f2adea0324ce89a2415c277ad84561146758da6",
-        "rgbPixelSHA256": "62d18e73feab9bb76e7986b712afba6988ed9799ae953dd03aa86230db1c0839",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "1e5a5c0ecd3a8c7f33c61aff207c5b1692314954892cd11d14db9bb71653f3bd"
+      "contextAfterSHA256": "6261da09de8d30e2814b993e70d801ce44711e99c2cf8433086cd348b812e902",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1655,7 +1665,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-        "fileSHA256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100",
+        "fileSHA256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1700,7 +1710,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-            "sha256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100"
+            "sha256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed"
           }
         ]
       },
@@ -1785,7 +1795,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
       "targetAfterSHA256": "eec74a11947a2f736949d883ca437fb183e90471689ba3bd069ef4057720892e",
-      "contextAfterSHA256": "eec74a11947a2f736949d883ca437fb183e90471689ba3bd069ef4057720892e"
+      "contextAfterSHA256": "eec74a11947a2f736949d883ca437fb183e90471689ba3bd069ef4057720892e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1894,7 +1906,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-        "fileSHA256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100",
+        "fileSHA256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1939,7 +1951,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-            "sha256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100"
+            "sha256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed"
           }
         ]
       },
@@ -2024,7 +2036,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
       "targetAfterSHA256": "71a9227915a34e32d94436a5a5f6293ab002117f8291a1d0b13e4287c9d4a768",
-      "contextAfterSHA256": "71a9227915a34e32d94436a5a5f6293ab002117f8291a1d0b13e4287c9d4a768"
+      "contextAfterSHA256": "71a9227915a34e32d94436a5a5f6293ab002117f8291a1d0b13e4287c9d4a768",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -2197,7 +2211,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/mogadishu/illustration-qa-extra.json",
-            "sha256": "2038ed8150e7ff0c0c46e07cb5610e50b5153caab0b79b5f70911a13fb46a100"
+            "sha256": "b1dc95c98782836ec2e99a4b1f1bcf5b6bc825340d4a4601979d63dcc47c9fed"
           }
         ]
       },
@@ -2272,10 +2286,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "151a62ef74bfaceef55c260b9bc98f11eee29b68c2924d5ddbe3641474d1b81c",
       "targetAfterSHA256": "24307558eb21a0ac38f2b756c2ac84a200e6ee663dcac8e0a8f9a950ef00c20d",
-      "contextAfterSHA256": "24307558eb21a0ac38f2b756c2ac84a200e6ee663dcac8e0a8f9a950ef00c20d"
+      "contextAfterSHA256": "24307558eb21a0ac38f2b756c2ac84a200e6ee663dcac8e0a8f9a950ef00c20d",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

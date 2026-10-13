@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e07",
   "city": "lusaka",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
   "assets": [
     {
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "062fb62b46d813e9d3b08d5626453ffe0918e05ef7151dd427430af6986693b9",
@@ -245,7 +245,250 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "062fb62b46d813e9d3b08d5626453ffe0918e05ef7151dd427430af6986693b9"
+      "contextAfterSHA256": "062fb62b46d813e9d3b08d5626453ffe0918e05ef7151dd427430af6986693b9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e07-lusaka-K2-v1-20261012",
+      "galleryImageID": "e07-lusaka-K2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
+        "lyhyt": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
+        "lyhyt": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+      "exportSHA256": "b90f56bcf0abcbe5bad18db958a4b588f9e5ba257296d37e079d1e6cc4f2dd9c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
+        "semanticContextSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
+        "subjectTitle": "Hattutemppu kahdesti peräkkäin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Yksi nimetön mustavalkoinen pallo ruoholla, uskottavat saumat ja huopamainen nahkapinta. Ei ihmisiä, logoja tai tekstiä.",
+            "captionFi": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "K2 kertoo Barbra Bandan jalkapallourasta; selite erottaa kuvan henkilöstä ja tapahtumasta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Yleinen jalkapallo havainnollistaa urheilulajia ilman tekaistua Barbra Bandan muotokuvaa tai ottelutilannetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+        "fileSHA256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e07-lusaka-K2-v1-20261012",
+          "sha256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+          "verdict": "accepted",
+          "reason": "Yleinen jalkapallo havainnollistaa urheilulajia ilman tekaistua Barbra Bandan muotokuvaa tai ottelutilannetta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Yksi nimetön mustavalkoinen pallo ruoholla, uskottavat saumat ja huopamainen nahkapinta. Ei ihmisiä, logoja tai tekstiä.",
+            "captionFi": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "K2 kertoo Barbra Bandan jalkapallourasta; selite erottaa kuvan henkilöstä ja tapahtumasta.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:05:22.115406+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png?t=b90f56bcf0abcbe5",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "sha256": "b90f56bcf0abcbe5bad18db958a4b588f9e5ba257296d37e079d1e6cc4f2dd9c",
+        "bytes": 2460895,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lusaka-K2-v1-20261012",
+        "nativeSHA256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-13T06:06:24.427520+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
+        "sha256": "b90f56bcf0abcbe5bad18db958a4b588f9e5ba257296d37e079d1e6cc4f2dd9c",
+        "bytes": 2460895,
+        "SHAReadAt": "2026-10-13T06:05:23.289999+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
+        "rgbPixelSHA256": "c594d0418306920b8a017cf7b77bd39522b1d1cef442d1b76de5b184c2bc2d90",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
+      "targetAfterSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
+      "contextAfterSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -295,7 +538,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "semanticSourceBind": {
         "targetBeforeSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
         "semanticContextSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
@@ -485,7 +728,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
-      "contextAfterSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762"
+      "contextAfterSHA256": "dad21dfb179d09dc39a1d2449eb8bf9a9a457cf5bc59fc0659bca590739cb762",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -535,7 +780,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "semanticSourceBind": {
         "targetBeforeSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
         "semanticContextSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
@@ -725,7 +970,250 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
-      "contextAfterSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931"
+      "contextAfterSHA256": "54f9bbad5d5fab683e354fdec17e27f7f012ded3d469895e77533ba11ba02931",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e07",
+      "city": "lusaka",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e07-lusaka-L2-v1-20261012",
+      "galleryImageID": "e07-lusaka-L2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
+        "lyhyt": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
+        "lyhyt": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+      "exportSHA256": "e2ce78a1192c09867fd64b5b5128c428bb33e43d8f212221db9a6f01d079147a",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+      "sourceContentSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573",
+        "semanticContextSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573",
+        "subjectTitle": "Bussin kori päätyi kiskoille",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi teräspyörää yhdistävä akseli, alustarakenne ja kiskot. Luontevat metallipinnat ja sora; ei tunnuksia, tekstiä tai ihmisiä.",
+            "captionFi": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "L2 erottaa bussikorin ja kaivosvaunun alustan.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Raidekaluston alusta sopii kaluston osia käsittelevään nostoon. Selite ei rekonstruoi Njanji-vaunua tai liitä siihen keksittyä bussikoria."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+        "fileSHA256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e07-lusaka-L2-v1-20261012",
+          "sha256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+          "verdict": "accepted",
+          "reason": "Raidekaluston alusta sopii kaluston osia käsittelevään nostoon. Selite ei rekonstruoi Njanji-vaunua tai liitä siihen keksittyä bussikoria.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi teräspyörää yhdistävä akseli, alustarakenne ja kiskot. Luontevat metallipinnat ja sora; ei tunnuksia, tekstiä tai ihmisiä.",
+            "captionFi": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
+            "topicEvidence": "L2 erottaa bussikorin ja kaivosvaunun alustan.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
+                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
+                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
+                "targetTextAtIssue": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:07:22.931432+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
+            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
+            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png?t=e2ce78a1192c0986",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "sha256": "e2ce78a1192c09867fd64b5b5128c428bb33e43d8f212221db9a6f01d079147a",
+        "bytes": 2474831,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lusaka-L2-v1-20261012",
+        "nativeSHA256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lusaka",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-13T06:08:27.710062+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
+        "sha256": "e2ce78a1192c09867fd64b5b5128c428bb33e43d8f212221db9a6f01d079147a",
+        "bytes": 2474831,
+        "SHAReadAt": "2026-10-13T06:07:26.187700+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
+        "rgbPixelSHA256": "a5993a461885d83f6afd4fc8823e666275273e8f316862fe5674c2674d42c0f5",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
+      "targetAfterSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573",
+      "contextAfterSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -775,7 +1263,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "semanticSourceBind": {
         "targetBeforeSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
         "semanticContextSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
@@ -965,7 +1453,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
-      "contextAfterSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967"
+      "contextAfterSHA256": "321090eafa8ff8cbd7281f78d9a49919ba057476f401cf443851c86cd3d14967",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1015,7 +1505,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
         "semanticContextSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
@@ -1205,485 +1695,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
-      "contextAfterSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7"
-    },
-    {
-      "era": "e07",
-      "city": "lusaka",
-      "slot": "K2",
-      "type": "illustration",
-      "assetID": "e07-lusaka-K2-v1-20261012",
-      "galleryImageID": "e07-lusaka-K2-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        1
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
-        "lyhyt": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
-        "lyhyt": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
-      "exportSHA256": "b90f56bcf0abcbe5bad18db958a4b588f9e5ba257296d37e079d1e6cc4f2dd9c",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
-        "semanticContextSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
-        "subjectTitle": "Hattutemppu kahdesti peräkkäin",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": [
-            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
-          ],
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-K2-v1-20261012/kuva.png",
-            "nativeSha256Verified": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Personally viewed native NAS PNG with view_image: Yksi nimetön mustavalkoinen pallo ruoholla, uskottavat saumat ja huopamainen nahkapinta. Ei ihmisiä, logoja tai tekstiä.",
-            "captionFi": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
-            "targetCurrentlyPresent": true,
-            "targetText": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
-            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
-            "topicEvidence": "K2 kertoo Barbra Bandan jalkapallourasta; selite erottaa kuvan henkilöstä ja tapahtumasta.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
-                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
-                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
-                "targetTextAtIssue": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin."
-              }
-            ],
-            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
-            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
-          },
-          "qaReason": "Yleinen jalkapallo havainnollistaa urheilulajia ilman tekaistua Barbra Bandan muotokuvaa tai ottelutilannetta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-        "fileSHA256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df",
-        "item": {
-          "slot": "K2",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-          "assetID": "e07-lusaka-K2-v1-20261012",
-          "sha256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
-          "verdict": "accepted",
-          "reason": "Yleinen jalkapallo havainnollistaa urheilulajia ilman tekaistua Barbra Bandan muotokuvaa tai ottelutilannetta.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-K2-v1-20261012/kuva.png",
-            "nativeSha256Verified": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Personally viewed native NAS PNG with view_image: Yksi nimetön mustavalkoinen pallo ruoholla, uskottavat saumat ja huopamainen nahkapinta. Ei ihmisiä, logoja tai tekstiä.",
-            "captionFi": "Jalkapalloaiheen havainnekuva; ei Barbra Bandan muotokuva tai tietyn ottelun kuva.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
-            "targetCurrentlyPresent": true,
-            "targetText": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
-            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
-            "topicEvidence": "K2 kertoo Barbra Bandan jalkapallourasta; selite erottaa kuvan henkilöstä ja tapahtumasta.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
-                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
-                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
-                "targetTextAtIssue": "Lusakassa syntynyt Barbra Banda on Sambian jalkapallohyökkääjä. Lapsena hän pelasi myös poikien kanssa ja kilpaili myöhemmin nyrkkeilyssä ennen keskittymistä jalkapalloon. Tokion olympiaturnauksessa hän teki hattutempun Alankomaita vastaan ja toisen Kiinaa vastaan: kolme maalia kummassakin ottelussa. Uransa aikana hän on pelannut Espanjassa, Kiinassa ja Yhdysvalloissa. Lusakan kaupunkisidos näkyy näin urheilijan omassa toiminnassa, joka on jatkunut paikallisilta kentiltä kansainvälisiin turnauksiin."
-              }
-            ],
-            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
-            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
-          },
-          "reviewedAt": "2026-10-13T06:05:22.115406+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
-            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png?t=b90f56bcf0abcbe5",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
-        "sha256": "b90f56bcf0abcbe5bad18db958a4b588f9e5ba257296d37e079d1e6cc4f2dd9c",
-        "bytes": 2460895,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e07-lusaka-K2-v1-20261012",
-        "nativeSHA256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e07",
-        "city": "lusaka",
-        "slot": "K2",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-        "verifiedAt": "2026-10-13T06:06:24.427520+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-K2-v1-20261012-e8d20deda017.png",
-        "sha256": "b90f56bcf0abcbe5bad18db958a4b588f9e5ba257296d37e079d1e6cc4f2dd9c",
-        "bytes": 2460895,
-        "SHAReadAt": "2026-10-13T06:05:23.289999+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "e8d20deda0172ea80905ea42beef47ac1d51725aee8abe7b7df580849bd3e881",
-        "rgbPixelSHA256": "c594d0418306920b8a017cf7b77bd39522b1d1cef442d1b76de5b184c2bc2d90",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
-      "targetAfterSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2",
-      "contextAfterSHA256": "be93924af9bde6136dadf8a27c34ba551d0b2fffafc7d379c4f27861c750f1d2"
-    },
-    {
-      "era": "e07",
-      "city": "lusaka",
-      "slot": "L2",
-      "type": "illustration",
-      "assetID": "e07-lusaka-L2-v1-20261012",
-      "galleryImageID": "e07-lusaka-L2-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        1
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
-        "lyhyt": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
-        "lyhyt": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
-      "exportSHA256": "e2ce78a1192c09867fd64b5b5128c428bb33e43d8f212221db9a6f01d079147a",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573",
-        "semanticContextSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573",
-        "subjectTitle": "Bussin kori päätyi kiskoille",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": [
-            "New depiction of common functional shapes or natural materials; no identified artwork, brand design, person or building reproduced."
-          ],
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L2-v1-20261012/kuva.png",
-            "nativeSha256Verified": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi teräspyörää yhdistävä akseli, alustarakenne ja kiskot. Luontevat metallipinnat ja sora; ei tunnuksia, tekstiä tai ihmisiä.",
-            "captionFi": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
-            "targetCurrentlyPresent": true,
-            "targetText": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
-            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
-            "topicEvidence": "L2 erottaa bussikorin ja kaivosvaunun alustan.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
-                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
-                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
-                "targetTextAtIssue": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa."
-              }
-            ],
-            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
-            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
-          },
-          "qaReason": "Raidekaluston alusta sopii kaluston osia käsittelevään nostoon. Selite ei rekonstruoi Njanji-vaunua tai liitä siihen keksittyä bussikoria."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-        "fileSHA256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df",
-        "item": {
-          "slot": "L2",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
-          "assetID": "e07-lusaka-L2-v1-20261012",
-          "sha256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
-          "verdict": "accepted",
-          "reason": "Raidekaluston alusta sopii kaluston osia käsittelevään nostoon. Selite ei rekonstruoi Njanji-vaunua tai liitä siihen keksittyä bussikoria.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/assets/e07-lusaka-L2-v1-20261012/kuva.png",
-            "nativeSha256Verified": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Personally viewed native NAS PNG with view_image: Kaksi teräspyörää yhdistävä akseli, alustarakenne ja kiskot. Luontevat metallipinnat ja sora; ei tunnuksia, tekstiä tai ihmisiä.",
-            "captionFi": "Raidekaluston alustan havainnekuva; ei Njanji-kaluston rekonstruktio.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-            "contentSha256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
-            "targetCurrentlyPresent": true,
-            "targetText": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
-            "factSheetSha256": "ff5a2ba51da3755e09695f74f6045eda1212fe08ebbd4190ddca114d14508350",
-            "topicEvidence": "L2 erottaa bussikorin ja kaivosvaunun alustan.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-                "contentSha256": "21f4eb010c31afc76b8f137e649fce7dbcd77707d3a0418635f0cfd81ae84257",
-                "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/faktapohja.md",
-                "evidenceMode": "Common material/utility object for a source-backed textual subject; no claim about the real named place, item or event",
-                "targetTextAtIssue": "Lusakassa kokeiltiin 1990-luvulla Njanji-lähijunayhteyttä, jonka historiaan kuuluu myös Mulungushi Railway -nimi. Yhteys kulki Chilenjen suunnalta päärautatieaseman kautta George Townshipin ja teollisuusalueen suuntaan. Kalustoa tehtiin liittämällä Tata-bussien koreja kaivosvaunujen alustoihin. Kokonainen bussi ei siis vain kääntynyt tieltä radalle: kori ja sen alla oleva alusta olivat eri osia. Kokeilu päättyi saman vuosikymmenen lopulla, ja myöhemmät elvytyssuunnitelmat ovat erillinen vaihe sen historiassa."
-              }
-            ],
-            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
-            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
-          },
-          "reviewedAt": "2026-10-13T06:07:22.931432+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/qa.json",
-            "sha256": "54cac9b96ee47f661ad3c5febcd2a6edf22bee9fb9e171a7e654a479ccc8d6ce"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lusaka/illustration-qa-extra.json",
-            "sha256": "8c8a46b1b02dccc5b16fee155e18be8bd8eaaa3502774dbf1e1b9bc7c5f839df"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png?t=e2ce78a1192c0986",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
-        "sha256": "e2ce78a1192c09867fd64b5b5128c428bb33e43d8f212221db9a6f01d079147a",
-        "bytes": 2474831,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e07-lusaka-L2-v1-20261012",
-        "nativeSHA256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e07",
-        "city": "lusaka",
-        "slot": "L2",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
-        "verifiedAt": "2026-10-13T06:08:27.710062+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lusaka/e07-lusaka-L2-v1-20261012-ba0b57374400.png",
-        "sha256": "e2ce78a1192c09867fd64b5b5128c428bb33e43d8f212221db9a6f01d079147a",
-        "bytes": 2474831,
-        "SHAReadAt": "2026-10-13T06:07:26.187700+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "ba0b573744006ae6eb5ed90fc3c0a4f71871d696a2e544b8acde8a7a6a45d8f2",
-        "rgbPixelSHA256": "a5993a461885d83f6afd4fc8823e666275273e8f316862fe5674c2674d42c0f5",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
-      "targetAfterSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573",
-      "contextAfterSHA256": "b99a930eadb3600afb54f7645a2cc2a031f8f350028f10a3930ddaab9bc0d573"
+      "contextAfterSHA256": "2649ad0289b85d5955181172e35cf9c2400c313fff70ad9fa7b159682183a9d7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1733,7 +1747,7 @@
         2268
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "semanticSourceBind": {
         "targetBeforeSHA256": "36bd9afa9477fc13c8ff505c3822f88db2990cc2d390a45b6e3789677d46e380",
         "semanticContextSHA256": "36bd9afa9477fc13c8ff505c3822f88db2990cc2d390a45b6e3789677d46e380",
@@ -1944,7 +1958,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "36bd9afa9477fc13c8ff505c3822f88db2990cc2d390a45b6e3789677d46e380",
-      "contextAfterSHA256": "36bd9afa9477fc13c8ff505c3822f88db2990cc2d390a45b6e3789677d46e380"
+      "contextAfterSHA256": "36bd9afa9477fc13c8ff505c3822f88db2990cc2d390a45b6e3789677d46e380",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1997,7 +2013,7 @@
         6000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "semanticSourceBind": {
         "targetBeforeSHA256": "07f789dac06ff1ce84d28474073535b0958783d643d8a82e5ad1160261722be4",
         "semanticContextSHA256": "07f789dac06ff1ce84d28474073535b0958783d643d8a82e5ad1160261722be4",
@@ -2198,7 +2214,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "07f789dac06ff1ce84d28474073535b0958783d643d8a82e5ad1160261722be4",
-      "contextAfterSHA256": "07f789dac06ff1ce84d28474073535b0958783d643d8a82e5ad1160261722be4"
+      "contextAfterSHA256": "07f789dac06ff1ce84d28474073535b0958783d643d8a82e5ad1160261722be4",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -2251,10 +2269,10 @@
         1020
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lusaka/sisalto.json",
-      "sourceContentSHA256": "b1b740a6eb3da1781346a1286ae4f6fc14cbacf7fdcce07bb9db8ab8a4752ec7",
+      "sourceContentSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "295fcdd25ae1c98971c134f4ebc5b305ec368308cf73b07ea69a88f93640dea1",
+        "semanticContextSHA256": "295fcdd25ae1c98971c134f4ebc5b305ec368308cf73b07ea69a88f93640dea1",
         "subjectTitle": "Lusaka",
         "targetState": "existing-target"
       },
@@ -2506,10 +2524,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Lusaka, capital city of Zambia.jpg",
+        "lahde": "Alex Mukuka, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008.",
+        "lyhyt": "Lusakan kaupunkikeskustan laaja näkymä vuonna 2008."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2542,10 +2560,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "aefa89d9096207ae06b19d800b31df3fcf9ae2d15bdf8e8711d9533923d2d6af",
       "targetAfterSHA256": "295fcdd25ae1c98971c134f4ebc5b305ec368308cf73b07ea69a88f93640dea1",
-      "contextAfterSHA256": "295fcdd25ae1c98971c134f4ebc5b305ec368308cf73b07ea69a88f93640dea1"
+      "contextAfterSHA256": "295fcdd25ae1c98971c134f4ebc5b305ec368308cf73b07ea69a88f93640dea1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

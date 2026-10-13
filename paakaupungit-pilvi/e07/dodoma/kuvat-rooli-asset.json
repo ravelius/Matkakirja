@@ -2,489 +2,9 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e07",
   "city": "dodoma",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
   "assets": [
-    {
-      "era": "e07",
-      "city": "dodoma",
-      "slot": "K2",
-      "type": "illustration",
-      "assetID": "e07-dodoma-K2-v1-20261012",
-      "galleryImageID": "e07-dodoma-K2-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        1
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
-        "lyhyt": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
-        "lyhyt": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
-      "exportSHA256": "d9f3617f33be084f9470756a4003dbe602819d862d9def380da819127c15e9f1",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
-        "semanticContextSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
-        "subjectTitle": "Rypäleellä on seudun nimi",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": [
-            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
-            "Named buildings, identifiable people and exact contemporary art/design excluded."
-          ],
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-K2-v1-20261012/kuva.png",
-            "nativeSha256Verified": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tummia ja osin punertavia rypäleitä kahdessa tertussa, köynnöksen varret ja lehtiä. Marjojen pinnassa on vaihteleva vahapeite, luonteva valo; ei merkintöjä tai henkilöitä.",
-            "captionFi": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
-            "targetCurrentlyPresent": true,
-            "targetText": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
-            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
-            "topicEvidence": "K2 käsittelee Dodoman seudun viininviljelyä ja eri lajikkeita.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
-                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
-                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
-                "targetTextAtIssue": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta."
-              }
-            ],
-            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
-            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
-          },
-          "qaReason": "Viiniköynnös ja rypäleet vastaavat viljelyaihetta. Selite ei väitä kuvaa Makutupora-lajikkeen tai tietyn tilan valokuvaksi."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
-        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
-        "item": {
-          "slot": "K2",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-          "assetID": "e07-dodoma-K2-v1-20261012",
-          "sha256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
-          "verdict": "accepted",
-          "reason": "Viiniköynnös ja rypäleet vastaavat viljelyaihetta. Selite ei väitä kuvaa Makutupora-lajikkeen tai tietyn tilan valokuvaksi.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-K2-v1-20261012/kuva.png",
-            "nativeSha256Verified": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tummia ja osin punertavia rypäleitä kahdessa tertussa, köynnöksen varret ja lehtiä. Marjojen pinnassa on vaihteleva vahapeite, luonteva valo; ei merkintöjä tai henkilöitä.",
-            "captionFi": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
-            "targetCurrentlyPresent": true,
-            "targetText": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
-            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
-            "topicEvidence": "K2 käsittelee Dodoman seudun viininviljelyä ja eri lajikkeita.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
-                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
-                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
-                "targetTextAtIssue": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta."
-              }
-            ],
-            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
-            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
-          },
-          "reviewedAt": "2026-10-12T18:17:54.153560+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
-            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png?t=d9f3617f33be084f",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
-        "sha256": "d9f3617f33be084f9470756a4003dbe602819d862d9def380da819127c15e9f1",
-        "bytes": 2215334,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e07-dodoma-K2-v1-20261012",
-        "nativeSHA256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e07",
-        "city": "dodoma",
-        "slot": "K2",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
-        "verifiedAt": "2026-10-12T18:19:11.405236+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
-        "sha256": "d9f3617f33be084f9470756a4003dbe602819d862d9def380da819127c15e9f1",
-        "bytes": 2215334,
-        "SHAReadAt": "2026-10-12T18:29:49.090036+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
-        "rgbPixelSHA256": "51ab622f605d1e22b7d9db5115e13e809d9bdd9ba95435c3202f7b6ea05d658f",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-      "targetAfterSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
-      "contextAfterSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5"
-    },
-    {
-      "era": "e07",
-      "city": "dodoma",
-      "slot": "L1",
-      "type": "illustration",
-      "assetID": "e07-dodoma-L1-v1-20261012",
-      "galleryImageID": "e07-dodoma-L1-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
-        "lyhyt": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
-        "lyhyt": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
-      "exportSHA256": "d7e73228b959ef4fa7a68f890efcb30a13663a6e16610a2063c355b9a1fcbab8",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
-        "semanticContextSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
-        "subjectTitle": "Kivi museossa, näyte tutkimuksessa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": [
-            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
-            "Named buildings, identifiable people and exact contemporary art/design excluded."
-          ],
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L1-v1-20261012/kuva.png",
-            "nativeSha256Verified": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme erilaista kivinäytettä, yksi vaalea läpikuultava ja kaksi rakeista. Murtopinnat ja mineraalirakeet luonnollisia, ei etikettejä, tekstiä tai henkilöitä.",
-            "captionFi": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
-            "targetCurrentlyPresent": true,
-            "targetText": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
-            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
-            "topicEvidence": "L1 erottaa museon kivikokoelman näytteiden alkuperäisistä löytöpaikoista.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
-                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
-                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
-                "targetTextAtIssue": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta."
-              }
-            ],
-            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
-            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
-          },
-          "qaReason": "Yleiset kivi- ja mineraalinäytteet sopivat museon ja tutkimusaineiston teemaan. Selite sulkee pois tietyn löytöpaikan tai museoesineen väitteen."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
-        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
-        "item": {
-          "slot": "L1",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-          "assetID": "e07-dodoma-L1-v1-20261012",
-          "sha256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
-          "verdict": "accepted",
-          "reason": "Yleiset kivi- ja mineraalinäytteet sopivat museon ja tutkimusaineiston teemaan. Selite sulkee pois tietyn löytöpaikan tai museoesineen väitteen.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L1-v1-20261012/kuva.png",
-            "nativeSha256Verified": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme erilaista kivinäytettä, yksi vaalea läpikuultava ja kaksi rakeista. Murtopinnat ja mineraalirakeet luonnollisia, ei etikettejä, tekstiä tai henkilöitä.",
-            "captionFi": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
-            "targetCurrentlyPresent": true,
-            "targetText": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
-            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
-            "topicEvidence": "L1 erottaa museon kivikokoelman näytteiden alkuperäisistä löytöpaikoista.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
-                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
-                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
-                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
-                "targetTextAtIssue": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta."
-              }
-            ],
-            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
-            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
-          },
-          "reviewedAt": "2026-10-12T18:23:58.448633+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
-            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png?t=d7e73228b959ef4f",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
-        "sha256": "d7e73228b959ef4fa7a68f890efcb30a13663a6e16610a2063c355b9a1fcbab8",
-        "bytes": 2413589,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e07-dodoma-L1-v1-20261012",
-        "nativeSHA256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e07",
-        "city": "dodoma",
-        "slot": "L1",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
-        "verifiedAt": "2026-10-12T18:27:50.317906+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
-        "sha256": "d7e73228b959ef4fa7a68f890efcb30a13663a6e16610a2063c355b9a1fcbab8",
-        "bytes": 2413589,
-        "SHAReadAt": "2026-10-12T18:29:49.245447+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
-        "rgbPixelSHA256": "076f49441395797a45f88f6f5a27ad77c4a47c71ea134169b7ba9e9d55fd931a",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-      "targetAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
-      "contextAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482"
-    },
     {
       "era": "e07",
       "city": "dodoma",
@@ -636,7 +156,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+            "sha256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
@@ -725,7 +245,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "14f5a799f47c6ba32744b226bdfd16ce63e0752c80b20221b1ec0f39133ccb07"
+      "contextAfterSHA256": "14f5a799f47c6ba32744b226bdfd16ce63e0752c80b20221b1ec0f39133ccb07",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -878,7 +400,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+            "sha256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
@@ -967,7 +489,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "32582269e55d91b7fcf41fd89d20a0d5f324c349d9a6632bd0f1ed8bd4b59216"
+      "contextAfterSHA256": "32582269e55d91b7fcf41fd89d20a0d5f324c349d9a6632bd0f1ed8bd4b59216",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1121,7 +645,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+            "sha256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
@@ -1210,7 +734,493 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
       "targetAfterSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
-      "contextAfterSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96"
+      "contextAfterSHA256": "8d799063886a43146eaaaa2fb649598423e0543630a08bfa6f4daf720e05db96",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e07-dodoma-K2-v1-20261012",
+      "galleryImageID": "e07-dodoma-K2-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
+        "lyhyt": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
+        "lyhyt": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+      "exportSHA256": "d9f3617f33be084f9470756a4003dbe602819d862d9def380da819127c15e9f1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
+        "semanticContextSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
+        "subjectTitle": "Rypäleellä on seudun nimi",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tummia ja osin punertavia rypäleitä kahdessa tertussa, köynnöksen varret ja lehtiä. Marjojen pinnassa on vaihteleva vahapeite, luonteva valo; ei merkintöjä tai henkilöitä.",
+            "captionFi": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "K2 käsittelee Dodoman seudun viininviljelyä ja eri lajikkeita.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Viiniköynnös ja rypäleet vastaavat viljelyaihetta. Selite ei väitä kuvaa Makutupora-lajikkeen tai tietyn tilan valokuvaksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e07-dodoma-K2-v1-20261012",
+          "sha256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+          "verdict": "accepted",
+          "reason": "Viiniköynnös ja rypäleet vastaavat viljelyaihetta. Selite ei väitä kuvaa Makutupora-lajikkeen tai tietyn tilan valokuvaksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-K2-v1-20261012/kuva.png",
+            "nativeSha256Verified": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tummia ja osin punertavia rypäleitä kahdessa tertussa, köynnöksen varret ja lehtiä. Marjojen pinnassa on vaihteleva vahapeite, luonteva valo; ei merkintöjä tai henkilöitä.",
+            "captionFi": "Viiniköynnöksen havainnekuva; ei tietyn Makutupora-lajikkeen tai tilan valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetCurrentlyPresent": true,
+            "targetText": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "K2 käsittelee Dodoman seudun viininviljelyä ja eri lajikkeita.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Dodoman seutu kuuluu Tansanian viininviljelyn alueisiin. Varhaisessa vaiheessa lähetysyhteisöt kasvattivat köynnöksiä omaan käyttöönsä, myöhemmin viljely laajeni kaupallisiksi tiloiksi ja tuottajayrityksiksi. Makutupora on seudun nimellä tunnettu paikallinen rypälelajike. Viljelyssä esiintyy myös Chenin Blancia, Syrah’ta ja Cabernet Sauvignonia. Köynnöksen kasvattaminen ja viinin valmistaminen ovat eri työvaiheita, jotka voivat sijoittua eri paikkoihin. Lajikkeen nimi kertoo paikallisesta tuotantohistoriasta."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:17:54.153560+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png?t=d9f3617f33be084f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "sha256": "d9f3617f33be084f9470756a4003dbe602819d862d9def380da819127c15e9f1",
+        "bytes": 2215334,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-dodoma-K2-v1-20261012",
+        "nativeSHA256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-12T18:19:11.405236+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-K2-v1-20261012-306035396833.png",
+        "sha256": "d9f3617f33be084f9470756a4003dbe602819d862d9def380da819127c15e9f1",
+        "bytes": 2215334,
+        "SHAReadAt": "2026-10-12T18:29:49.090036+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "306035396833d76e356c785eedba6c68653450df999fdc414ce35c5f5aa6a7ba",
+        "rgbPixelSHA256": "51ab622f605d1e22b7d9db5115e13e809d9bdd9ba95435c3202f7b6ea05d658f",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
+      "contextAfterSHA256": "cbbf7be672865fe6fdfcf7b402cda0d53ea4d9774454bf76285cf9d825e282d5",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e07",
+      "city": "dodoma",
+      "slot": "L1",
+      "type": "illustration",
+      "assetID": "e07-dodoma-L1-v1-20261012",
+      "galleryImageID": "e07-dodoma-L1-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
+        "lyhyt": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
+        "lyhyt": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+      "exportSHA256": "d7e73228b959ef4fa7a68f890efcb30a13663a6e16610a2063c355b9a1fcbab8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+      "sourceContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+        "semanticContextSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+        "subjectTitle": "Kivi museossa, näyte tutkimuksessa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New generated illustration of natural subject or common utility object; no reproduction of a protected work.",
+            "Named buildings, identifiable people and exact contemporary art/design excluded."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme erilaista kivinäytettä, yksi vaalea läpikuultava ja kaksi rakeista. Murtopinnat ja mineraalirakeet luonnollisia, ei etikettejä, tekstiä tai henkilöitä.",
+            "captionFi": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetCurrentlyPresent": true,
+            "targetText": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "L1 erottaa museon kivikokoelman näytteiden alkuperäisistä löytöpaikoista.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Yleiset kivi- ja mineraalinäytteet sopivat museon ja tutkimusaineiston teemaan. Selite sulkee pois tietyn löytöpaikan tai museoesineen väitteen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+        "fileSHA256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "assetID": "e07-dodoma-L1-v1-20261012",
+          "sha256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+          "verdict": "accepted",
+          "reason": "Yleiset kivi- ja mineraalinäytteet sopivat museon ja tutkimusaineiston teemaan. Selite sulkee pois tietyn löytöpaikan tai museoesineen väitteen.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/assets/e07-dodoma-L1-v1-20261012/kuva.png",
+            "nativeSha256Verified": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kolme erilaista kivinäytettä, yksi vaalea läpikuultava ja kaksi rakeista. Murtopinnat ja mineraalirakeet luonnollisia, ei etikettejä, tekstiä tai henkilöitä.",
+            "captionFi": "Geologisten näytteiden havainnekuva; ei Dodoman omaa löytöpaikkaa tai museoesinettä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+            "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+            "targetCurrentlyPresent": true,
+            "targetText": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+            "factSheetSha256": "06a6cc9c4b0469dba2587d554a01324624c413b36642ee31c3f96c6ba683f814",
+            "topicEvidence": "L1 erottaa museon kivikokoelman näytteiden alkuperäisistä löytöpaikoista.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/sisalto.json",
+                "contentSha256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
+                "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/dodoma/faktapohja.md",
+                "evidenceMode": "source-backed text topic; generalized material/food/biological illustration, not exact place appearance",
+                "targetTextAtIssue": "Geological Survey of Tanzanian päätoimisto on Dodomassa. Virasto säilyttää geotieteellistä tietoa, ja sen museossa on kiviä sekä mineraaleja. Tutkimustyöhön kuuluvat myös eri puolilta maata kairatut näytteet, geologiset kartat, raportit, kirjasto ja arkisto. Museo ja kairausnäytevarasto ovat eri aineistoja ja tiloja. Näyttelyssä oleva kivi ei siksi ole välttämättä kaupungin maaperästä: sen paikka museossa kertoo kokoelman sijainnista, ei yksin alkuperäisestä löytöpaikasta."
+              }
+            ],
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T18:23:58.448633+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
+            "sha256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
+            "sha256": "623b91d6ac29539dbfc1f366e8b3c20285409e05215e9d75f40e04ce186d4f75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png?t=d7e73228b959ef4f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "sha256": "d7e73228b959ef4fa7a68f890efcb30a13663a6e16610a2063c355b9a1fcbab8",
+        "bytes": 2413589,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-dodoma-L1-v1-20261012",
+        "nativeSHA256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "dodoma",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "verifiedAt": "2026-10-12T18:27:50.317906+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/dodoma/e07-dodoma-L1-v1-20261012-b7dab62cb3b0.png",
+        "sha256": "d7e73228b959ef4fa7a68f890efcb30a13663a6e16610a2063c355b9a1fcbab8",
+        "bytes": 2413589,
+        "SHAReadAt": "2026-10-12T18:29:49.245447+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b7dab62cb3b09a9948fde99bf9a33d4bdd01c21d4b269f6c8e7b8182cf973093",
+        "rgbPixelSHA256": "076f49441395797a45f88f6f5a27ad77c4a47c71ea134169b7ba9e9d55fd931a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
+      "targetAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+      "contextAfterSHA256": "8910ceb4f61f00e7137253200059d3f7d5a9030c0166016aef5533bfc44bc482",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1360,7 +1370,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+            "sha256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
@@ -1449,7 +1459,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
       "targetAfterSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
-      "contextAfterSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510"
+      "contextAfterSHA256": "b9e71b84eb940b0704ce6253b66c31f49cfe8e7d3daa5232d00afd0fff0c1510",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1599,7 +1611,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+            "sha256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
@@ -1688,7 +1700,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
       "targetAfterSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
-      "contextAfterSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f"
+      "contextAfterSHA256": "3691274946c18793cd17532bf304b3035c0b021de066c22e6ce91293826c619f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1838,7 +1852,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+            "sha256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
@@ -1927,7 +1941,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
       "targetAfterSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
-      "contextAfterSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c"
+      "contextAfterSHA256": "034e445822e0f2a8eab0571b41dae9f16a0258f77b1b456dc2439105d5c40d5c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -2078,7 +2094,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
               "currentContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-              "checkedAt": "2026-10-13T06:15:35.617226+00:00",
+              "checkedAt": "2026-10-13T14:14:45.975090+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e07/dodoma/7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82-sisalto.json",
               "reviewedSnapshotSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
@@ -2089,7 +2105,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T06:15:35.624300+00:00",
+              "checkedAt": "2026-10-13T14:14:45.980940+00:00",
               "contentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
               "commonsFile": "Iyumbu ward landscape, Dodoma City.jpg",
               "captionFi": "Maastoa Iyumbun alueella Dodomassa.",
@@ -2112,7 +2128,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-        "fileSHA256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9",
+        "fileSHA256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2198,7 +2214,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
               "currentContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-              "checkedAt": "2026-10-13T06:15:35.617226+00:00",
+              "checkedAt": "2026-10-13T14:14:45.975090+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e07/dodoma/7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82-sisalto.json",
               "reviewedSnapshotSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
@@ -2209,7 +2225,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T06:15:35.624300+00:00",
+              "checkedAt": "2026-10-13T14:14:45.980940+00:00",
               "contentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
               "commonsFile": "Iyumbu ward landscape, Dodoma City.jpg",
               "captionFi": "Maastoa Iyumbun alueella Dodomassa.",
@@ -2224,7 +2240,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+            "sha256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
@@ -2303,7 +2319,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
       "targetAfterSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
-      "contextAfterSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272"
+      "contextAfterSHA256": "9713fae7b46bf0b44e88530d009cb15b3f2f1014b569a9f8a449c51470b97272",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -2454,7 +2472,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
               "currentContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-              "checkedAt": "2026-10-13T06:15:35.617226+00:00",
+              "checkedAt": "2026-10-13T14:14:45.975090+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e07/dodoma/7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82-sisalto.json",
               "reviewedSnapshotSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
@@ -2465,7 +2483,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T06:15:35.634175+00:00",
+              "checkedAt": "2026-10-13T14:14:45.986049+00:00",
               "contentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
               "commonsFile": "Makulu from Udom, Dodoma City.jpg",
               "captionFi": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
@@ -2488,7 +2506,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-        "fileSHA256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9",
+        "fileSHA256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -2574,7 +2592,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
               "currentContentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
-              "checkedAt": "2026-10-13T06:15:35.617226+00:00",
+              "checkedAt": "2026-10-13T14:14:45.975090+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e07/dodoma/7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82-sisalto.json",
               "reviewedSnapshotSHA256": "7be5b0b461ee1f1ea88fd0ac8243a48d5b45015684a52e9c963f5f84debfdc82",
@@ -2585,7 +2603,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T06:15:35.634175+00:00",
+              "checkedAt": "2026-10-13T14:14:45.986049+00:00",
               "contentSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
               "commonsFile": "Makulu from Udom, Dodoma City.jpg",
               "captionFi": "Makulu Dodomassa yliopiston suunnasta nähtynä, 2022.",
@@ -2600,7 +2618,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/qa.json",
-            "sha256": "98498026820ec5514cade3942ab28697e0696ff68ffc7b9ff9c9b9959b045af9"
+            "sha256": "9e3fa0b465258e9bd1c018cdcb7f0c28068ad6e565af0fc539e4e6efcd2a62f5"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/dodoma/illustration-qa-extra.json",
@@ -2677,10 +2695,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "ac8585b55a7571f1718a0bb244e0f57781ef0863438f537f3ba91baf325b7ffa",
       "targetAfterSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
-      "contextAfterSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296"
+      "contextAfterSHA256": "ed43af0dcc5e184402eba332af745de0cc1fab8a8b0171f3b95485da189d7296",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

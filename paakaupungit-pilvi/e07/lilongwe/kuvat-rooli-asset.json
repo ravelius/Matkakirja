@@ -2,9 +2,253 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e07",
   "city": "lilongwe",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
   "assets": [
+    {
+      "era": "e07",
+      "city": "lilongwe",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e07-lilongwe-O3-v1-20261012",
+      "galleryImageID": "e07-lilongwe-O3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
+        "lyhyt": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
+        "lyhyt": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
+      "exportSHA256": "89aef5fc26d9b20efb084f92801257faaaaa2f740c63987a86c234de58c6f357",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "f1e1290dd7334126013f8d47aa5731664403f1e485d1fd90fefec84f9c1d7da4",
+        "subjectTitle": "Nsima ja torikauppa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": [
+            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
+          ],
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-O3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Tiivis vaalea puuro, kypsiä papuja ja lehtivihanneksia. Luontevat ruokapinnat ja varjot, ei henkilöitä tai merkintöjä.",
+            "captionFi": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Nsima valmistetaan maissijauhosta, ja sen rinnalla voi olla lihaa, papuja tai vihanneksia. Perinne sisältää myös maissin käsittelyn ja yhteisen aterian. Lilongwen markkinoille tulee tuotteita ympäröivältä maatalousalueelta, mutta kuvauksesta ei voi päätellä tietyn kojun tämän päivän valikoimaa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "O3 kertoo nsiman maissijauhosta ja lisukkeista.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Nsima valmistetaan maissijauhosta, ja sen rinnalla voi olla lihaa, papuja tai vihanneksia. Perinne sisältää myös maissin käsittelyn ja yhteisen aterian. Lilongwen markkinoille tulee tuotteita ympäröivältä maatalousalueelta, mutta kuvauksesta ei voi päätellä tietyn kojun tämän päivän valikoimaa."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "qaReason": "Maissipuuro ja papu- sekä kasvislisukkeet vastaavat nsima-aihetta. Selite ei nimeä torin todellista myyjää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+        "fileSHA256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e07-lilongwe-O3-v1-20261012",
+          "sha256": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
+          "verdict": "accepted",
+          "reason": "Maissipuuro ja papu- sekä kasvislisukkeet vastaavat nsima-aihetta. Selite ei nimeä torin todellista myyjää.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-O3-v1-20261012/kuva.png",
+            "nativeSha256Verified": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Personally viewed native NAS PNG with view_image: Tiivis vaalea puuro, kypsiä papuja ja lehtivihanneksia. Luontevat ruokapinnat ja varjot, ei henkilöitä tai merkintöjä.",
+            "captionFi": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+            "contentSha256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+            "targetCurrentlyPresent": true,
+            "targetText": "Nsima valmistetaan maissijauhosta, ja sen rinnalla voi olla lihaa, papuja tai vihanneksia. Perinne sisältää myös maissin käsittelyn ja yhteisen aterian. Lilongwen markkinoille tulee tuotteita ympäröivältä maatalousalueelta, mutta kuvauksesta ei voi päätellä tietyn kojun tämän päivän valikoimaa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
+            "topicEvidence": "O3 kertoo nsiman maissijauhosta ja lisukkeista.",
+            "sourceEvidence": [
+              {
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
+                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
+                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
+                "targetTextAtIssue": "Nsima valmistetaan maissijauhosta, ja sen rinnalla voi olla lihaa, papuja tai vihanneksia. Perinne sisältää myös maissin käsittelyn ja yhteisen aterian. Lilongwen markkinoille tulee tuotteita ympäröivältä maatalousalueelta, mutta kuvauksesta ei voi päätellä tietyn kojun tämän päivän valikoimaa."
+              }
+            ],
+            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
+            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
+          },
+          "reviewedAt": "2026-10-13T06:14:43.491459+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
+            "sha256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
+            "sha256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png?t=89aef5fc26d9b20e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
+        "sha256": "89aef5fc26d9b20efb084f92801257faaaaa2f740c63987a86c234de58c6f357",
+        "bytes": 2370937,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e07-lilongwe-O3-v1-20261012",
+        "nativeSHA256": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e07",
+        "city": "lilongwe",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-13T06:15:49.528512+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
+        "sha256": "89aef5fc26d9b20efb084f92801257faaaaa2f740c63987a86c234de58c6f357",
+        "bytes": 2370937,
+        "SHAReadAt": "2026-10-13T06:14:47.491356+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
+        "rgbPixelSHA256": "7d697e0748bfc2b71eaa793063b4009660659f78806c6ad4f079670be6bf8f02",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "f1e1290dd7334126013f8d47aa5731664403f1e485d1fd90fefec84f9c1d7da4",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
     {
       "era": "e07",
       "city": "lilongwe",
@@ -113,7 +357,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-        "fileSHA256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072",
+        "fileSHA256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -158,7 +402,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-            "sha256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072"
+            "sha256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7"
           }
         ]
       },
@@ -243,7 +487,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
       "targetAfterSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
-      "contextAfterSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512"
+      "contextAfterSHA256": "bf02727a27b60ff3c29d0b43b8543a90ef313b27f5e20c50bd03c5b799593512",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -353,7 +599,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-        "fileSHA256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072",
+        "fileSHA256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -398,7 +644,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-            "sha256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072"
+            "sha256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7"
           }
         ]
       },
@@ -483,7 +729,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
       "targetAfterSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
-      "contextAfterSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f"
+      "contextAfterSHA256": "a33be3bcef7e786892fafbd3c5a5b352d1dcd17765e68f444c1a2a5e8d77635f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -601,7 +849,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-        "fileSHA256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072",
+        "fileSHA256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -654,7 +902,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-            "sha256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072"
+            "sha256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7"
           }
         ]
       },
@@ -739,7 +987,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
       "targetAfterSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
-      "contextAfterSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea"
+      "contextAfterSHA256": "a7097c3c9e1de6bce96636679d520d69755afc5d313b0217c32e4283becce6ea",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -849,7 +1099,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-        "fileSHA256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072",
+        "fileSHA256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -894,7 +1144,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-            "sha256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072"
+            "sha256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7"
           }
         ]
       },
@@ -979,7 +1229,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
       "targetAfterSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
-      "contextAfterSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764"
+      "contextAfterSHA256": "f666f9c4ff64a71edc6ed9ec3ac06371dcf353eb6756982fd23c7724baa9a764",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1089,7 +1341,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-        "fileSHA256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072",
+        "fileSHA256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1134,7 +1386,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-            "sha256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072"
+            "sha256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7"
           }
         ]
       },
@@ -1219,7 +1471,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
       "targetAfterSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
-      "contextAfterSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2"
+      "contextAfterSHA256": "84164f3a1bbcc38a75e6c6302fc1cac8f0dfb50ec3b7ce4fc04f5894630a70a2",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1329,7 +1583,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-        "fileSHA256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072",
+        "fileSHA256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1374,7 +1628,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-            "sha256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072"
+            "sha256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7"
           }
         ]
       },
@@ -1459,249 +1713,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
       "targetAfterSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
-      "contextAfterSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5"
-    },
-    {
-      "era": "e07",
-      "city": "lilongwe",
-      "slot": "O3",
-      "type": "illustration",
-      "assetID": "e07-lilongwe-O3-v1-20261012",
-      "galleryImageID": "e07-lilongwe-O3-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        2,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
-        "lyhyt": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
-        "lyhyt": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
-      "exportSHA256": "89aef5fc26d9b20efb084f92801257faaaaa2f740c63987a86c234de58c6f357",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-      "sourceContentSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "f1e1290dd7334126013f8d47aa5731664403f1e485d1fd90fefec84f9c1d7da4",
-        "subjectTitle": "Nsima ja torikauppa",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": [
-            "New image of ordinary functional material, natural plant or food; no identified person, artwork, branded design, building or collection object reproduced."
-          ],
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-O3-v1-20261012/kuva.png",
-            "nativeSha256Verified": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Personally viewed native NAS PNG with view_image: Tiivis vaalea puuro, kypsiä papuja ja lehtivihanneksia. Luontevat ruokapinnat ja varjot, ei henkilöitä tai merkintöjä.",
-            "captionFi": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-            "contentSha256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
-            "targetCurrentlyPresent": true,
-            "targetText": "Nsima valmistetaan maissijauhosta, ja sen rinnalla voi olla lihaa, papuja tai vihanneksia. Perinne sisältää myös maissin käsittelyn ja yhteisen aterian. Lilongwen markkinoille tulee tuotteita ympäröivältä maatalousalueelta, mutta kuvauksesta ei voi päätellä tietyn kojun tämän päivän valikoimaa.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
-            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
-            "topicEvidence": "O3 kertoo nsiman maissijauhosta ja lisukkeista.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
-                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
-                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
-                "targetTextAtIssue": "Nsima valmistetaan maissijauhosta, ja sen rinnalla voi olla lihaa, papuja tai vihanneksia. Perinne sisältää myös maissin käsittelyn ja yhteisen aterian. Lilongwen markkinoille tulee tuotteita ympäröivältä maatalousalueelta, mutta kuvauksesta ei voi päätellä tietyn kojun tämän päivän valikoimaa."
-              }
-            ],
-            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
-            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
-          },
-          "qaReason": "Maissipuuro ja papu- sekä kasvislisukkeet vastaavat nsima-aihetta. Selite ei nimeä torin todellista myyjää."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-        "fileSHA256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072",
-        "item": {
-          "slot": "O3",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-          "assetID": "e07-lilongwe-O3-v1-20261012",
-          "sha256": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
-          "verdict": "accepted",
-          "reason": "Maissipuuro ja papu- sekä kasvislisukkeet vastaavat nsima-aihetta. Selite ei nimeä torin todellista myyjää.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/assets/e07-lilongwe-O3-v1-20261012/kuva.png",
-            "nativeSha256Verified": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "visualInspection": "Personally viewed native NAS PNG with view_image: Tiivis vaalea puuro, kypsiä papuja ja lehtivihanneksia. Luontevat ruokapinnat ja varjot, ei henkilöitä tai merkintöjä.",
-            "captionFi": "Nsima-aterian havainnekuva; ei Lilongwen torin tietyn myyjän annos.",
-            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-            "contentSha256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
-            "targetCurrentlyPresent": true,
-            "targetText": "Nsima valmistetaan maissijauhosta, ja sen rinnalla voi olla lihaa, papuja tai vihanneksia. Perinne sisältää myös maissin käsittelyn ja yhteisen aterian. Lilongwen markkinoille tulee tuotteita ympäröivältä maatalousalueelta, mutta kuvauksesta ei voi päätellä tietyn kojun tämän päivän valikoimaa.",
-            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
-            "factSheetSha256": "c40e874b42fa1894f52b3bb7097affe84a0c8683d6a660c42c8b570148a41277",
-            "topicEvidence": "O3 kertoo nsiman maissijauhosta ja lisukkeista.",
-            "sourceEvidence": [
-              {
-                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/sisalto.json",
-                "contentSha256": "03c2c151cbaa5b969cbdf368d2589fbc1fbc11c0bebc9dfd3825b2ddadc3a063",
-                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e07/paakaupungit-pilvi/e07/lilongwe/faktapohja.md",
-                "evidenceMode": "Directly documented textual material or utility subject, generic representation only",
-                "targetTextAtIssue": "Nsima valmistetaan maissijauhosta, ja sen rinnalla voi olla lihaa, papuja tai vihanneksia. Perinne sisältää myös maissin käsittelyn ja yhteisen aterian. Lilongwen markkinoille tulee tuotteita ympäröivältä maatalousalueelta, mutta kuvauksesta ei voi päätellä tietyn kojun tämän päivän valikoimaa."
-              }
-            ],
-            "rightsAssessment": "Generalized subject; inspected faces, added text/logo/watermark/frame, named modern artwork and invented city panorama. No adverse observation except those explicitly in verdict.",
-            "scope": "Independent native-image QA only; delivery/R2/export/publication unverified."
-          },
-          "reviewedAt": "2026-10-13T06:14:43.491459+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/qa.json",
-            "sha256": "9ed200a517e9b2f6574a727418b5ec2ab63c507a36fb3a857f2eaf45fc35a58b"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-            "sha256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png?t=89aef5fc26d9b20e",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
-        "sha256": "89aef5fc26d9b20efb084f92801257faaaaa2f740c63987a86c234de58c6f357",
-        "bytes": 2370937,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e07-lilongwe-O3-v1-20261012",
-        "nativeSHA256": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e07",
-        "city": "lilongwe",
-        "slot": "O3",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
-        "verifiedAt": "2026-10-13T06:15:49.528512+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e07/lilongwe/e07-lilongwe-O3-v1-20261012-2129a082eefb.png",
-        "sha256": "89aef5fc26d9b20efb084f92801257faaaaa2f740c63987a86c234de58c6f357",
-        "bytes": 2370937,
-        "SHAReadAt": "2026-10-13T06:14:47.491356+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "2129a082eefbb6fa72ac5ee845447d4b09f7dc1ae9414cb171ff99f7b8b61538",
-        "rgbPixelSHA256": "7d697e0748bfc2b71eaa793063b4009660659f78806c6ad4f079670be6bf8f02",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "f1e1290dd7334126013f8d47aa5731664403f1e485d1fd90fefec84f9c1d7da4"
+      "contextAfterSHA256": "90c21171a94d82353738ab472e9dcbef755ce98f14c0efd2b3e284dd1cf168c5",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -1908,7 +1922,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-            "sha256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072"
+            "sha256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7"
           }
         ]
       },
@@ -1981,7 +1995,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
       "targetAfterSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
-      "contextAfterSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732"
+      "contextAfterSHA256": "28c77f2f7a7bf8488a1d13c732b0e3ef15a6543a8604323ff4deefafdd7e4732",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e07",
@@ -2201,7 +2217,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e07/lilongwe/illustration-qa-extra.json",
-            "sha256": "baef2989f776b5fa7fed9440bb29b30797fd8b2ef0f77af28be1d2c9802c8072"
+            "sha256": "9dda088a0adad02211628edca81e51cf4f15745131328f0f1eceb5b447d3a7b7"
           }
         ]
       },
@@ -2274,10 +2290,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "2f6d0e006b1b04cc9a459c316f6737355cbb7bf4d2de971ddb18a5c3aba4dd8a",
       "targetAfterSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
-      "contextAfterSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb"
+      "contextAfterSHA256": "5e225ba60080eb24970fc515d2989f3bb4fa78e240cdbd225ddbd779820ec8cb",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }
