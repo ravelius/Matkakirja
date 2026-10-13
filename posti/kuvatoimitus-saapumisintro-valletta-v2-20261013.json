@@ -1,0 +1,413 @@
+{
+  "cityName": "Valletta",
+  "gameCityId": "valletta",
+  "mediaSlug": "valletta",
+  "taskNumbers": [
+    103,
+    104,
+    105
+  ],
+  "updatedAt": "2026-10-13T13:30:42.786062+00:00",
+  "originalRequestedNewSlots": [
+    4,
+    7,
+    8
+  ],
+  "activeRequestedNewSlots": [
+    4,
+    7
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [
+    {
+      "slot": 7,
+      "title": "Valletta sinisellä hetkellä Birgun rannalta",
+      "sceneSpec": "\n\nmediaSlug `valletta`.\n\n**Alkuperäinen ohje:**\nMitä kuvataan: Vallettan siluetti Grand Harbourin yli sinisellä hetkellä noin 20 minuuttia auringonlaskun jälkeen, katsottuna Birgun (Vittoriosa) luoteisrannalta (katse luoteeseen, Valletta noin 1 km vastarannalla; Fort St. Angelo voi jäädä kuvan ulkopuolelle vasemmalle). Vallettan bastionit ja kalkkikivijulkisivut hehkuvat lämpimän kullanruskeina ikkunavaloissa ja kohdevaloissa, siluetissa kirkkojen kupoleita ja torneja (älä korosta yksittäistä rakennusta), tyyni vesi heijastaa valoja pitkinä juovina. Etualalla kivinen rantalaituri, kiviset kiinnityspollarit ja yksi lämmin rantalyhty; vedellä muutama pieni vene lämpimin lamppuin. Ei ihmisiä tai korkeintaan kaksi pientä hahmoa kaukana selin. Kulma: vaakakuva, silmänkorkeudelta rantakadulta, noin 35 mm, kolmasosa ylhäällä taivasta (syvän sininen hetki). Valo: sininen hetki, lämmin ja viileä kontrasti, luonnollinen, vaimeat värit, fotorealistinen havainnekuva. Ei saa näkyä: valoshowta tai värivaloilla valaistuja julkisivuja, mainos- tai neonvaloja, tekstiä, kylttejä, logoja, suuria risteilyaluksia tai jättiyachteja luettavin nimin, patsaita pääaiheena, tunnistettavia kasvoja.\n\n**UUSINTAKORJAUS:** Codexin QA: kupoli ja kaksi kellotornia korostuivat yhtenä kirkon kaltaisena keskittymänä. KORJAUS: siluetti hajautettu: vain bastionimuuri, matalat hunajanväriset talot ja satunnaisia pieniä ikkunavaloja; EI kupoleita eikä kellotorneja kuvassa (tai korkeintaan yksi pieni, kaukainen, pehmeä kupolin siluetti aivan kuvan reunassa); mikään yksittäinen rakennus ei saa korostua; älä yritä esittää tiettyä kirkkoa.\n\n",
+      "caption": "Valletta sinisellä hetkellä Birgun rannalta. Havainnekuva.",
+      "filename": "valletta-7-ilta-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/valletta/20261013-full-v2/valletta-7-ilta-intro-v2.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "taskNumber": 104,
+      "referencePath": null,
+      "version": 2,
+      "cityName": "Valletta",
+      "gameCityId": "valletta",
+      "mediaSlug": "valletta",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/native-7.png",
+      "nativeSHA256": "a65c79f6e30e6dae5f7d8bc0fefd2d9be2596f236d9bea016b526b6a2dcdae80",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/valletta-7-ilta-intro-v2.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uusinta6-20261013/valletta/valletta-7-ilta-intro-v2.png",
+      "sha256": "057fa9f9307db071133b652f723aaf284f93e60a114faeb2af62d96d88e4ffd3",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Valletta arrival intro slot 7, new version 2, present-day blue-hour color illustration.\nGenerate ONE completely new image from this description. Do not edit, recolor, inpaint or reuse an older image. Output exactly 1536 x 1024, landscape 3:2 opaque PNG.\nStrict defining composition: a HORIZONTALLY DISTRIBUTED LOW RESIDENTIAL SKYLINE above a broad old bastion wall, with no dominant individual building. ZERO church domes, ZERO bell towers, ZERO spires, ZERO identifiable churches, ZERO symmetric cathedral complexes. The roofline consists solely of an irregular quiet collection of modest flat-roofed honey-limestone houses, two to four floors, with occasional small ordinary windows lit. All buildings have similar restrained prominence; no central monument. This is a carefully framed section of the Valletta residential bastion waterfront.\nScene: calm Grand Harbour at blue hour, about twenty minutes after sunset, looking NORTHWEST FROM BIRGU'S NORTHWEST WATERFRONT across approximately one kilometre of water toward Valletta. The distant high honey-limestone bastion rampart runs across the opposite shoreline with the dispersed low houses behind it. Do not put Birgu or Fort St Angelo as the main opposite shore; Fort St Angelo stays completely outside the frame at the left.\nForeground: a simple worn stone Birgu waterside quay, irregular limestone paving, two old stone mooring bollards and ONE modest warm waterfront lantern. Few small anonymous local boats float on the calm water, with only very subtle warm lamps; no giant yachts, cruise ships or busy modern marina. No people.\nCamera: eye level from the ordinary waterfront, approximately 35mm perspective, landscape. Top third of the frame is quiet subdued deep blue sky, broad water midground. Ordinary weak warm window lights and restrained neutral-warm architectural spotlights on distant stone make softly elongated broken reflections on natural slight water ripples. Muted twilight colors and believable camera exposure, slight fine camera grain, no saturated blue/orange spectacle.\nTexture: real porous weathered stone with nonrepeating irregular blocks and mortar; understated warm limestone and natural water. No HDR, color exaggeration, dramatic cinematic grading, CGI gloss or idealized fantasy city.\nNo domes, church towers, spires, cathedrals or monumental palaces anywhere; the low skyline remains dispersed residential houses only. No text, letters, numbers, signs, logos, boat names, brand markings, advertising, neon, colored-facade lights, light shows, statues, watermarks, borders or identifiable faces.\n",
+      "sourceCommit": "efbc512cab1d414eea6dab7b07a5580fb1f96396",
+      "sourceBlob": "de12c45cd76efaa5a293b6bebd74ff4c0825d577",
+      "ownerAcceptanceVerified": true,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://heritagemalta.mt/mt/explore/fort-st-angelo/",
+          "title": "Fort St Angelo - Heritage Malta",
+          "authority": "National heritage agency",
+          "supports": [
+            "Fort St Angelo at the end of the Birgu peninsula",
+            "1530 remodelling and 1689 coastal fortifications predate 1873"
+          ],
+          "note": "Royal Navy command hub relocation to the fort is 1906, not evidence for a 1873 command hub."
+        },
+        {
+          "url": "https://www.transport.gov.mt/maritime/local-waters/ports-in-malta/port-of-valletta-118",
+          "title": "Port of Valletta - Transport Malta",
+          "authority": "National transport authority",
+          "supports": [
+            "Valletta on northwest Sciberras shore",
+            "Kalkara, Dockyard and French Creeks and Three Cities on southeast shore",
+            "Harbour mouth faces northeast"
+          ],
+          "note": "Topographic ordering matched to source coordinates; source camera-to-Fort bearing about 120 degrees."
+        },
+        {
+          "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-62630",
+          "title": "Ceremonial trowel used at completion of Somerset Dock, Malta, 1871",
+          "authority": "Royal Museums Greenwich / original inscribed object PLT0723",
+          "supports": [
+            "Somerset Dock opened as Dock 3 at French Creek in 1871",
+            "Last stone dated 16 February 1871"
+          ],
+          "note": "Dock location is French Creek; do not invent a dock between Birgu and Senglea."
+        },
+        {
+          "url": "https://ghrc.gov.mt/portfolio/the-upper-barrakka-lift/",
+          "title": "The Upper Barrakka Lift",
+          "authority": "Grand Harbour Regeneration Corporation",
+          "supports": [
+            "Original Upper Barrakka lift completed September 1905"
+          ],
+          "note": "Exclude all lift infrastructure from 1873."
+        },
+        {
+          "url": "https://www.transport.gov.mt/land/public-transport/other-public-transport/barrakka-lift-826",
+          "title": "Barrakka Lift - Transport Malta",
+          "authority": "National transport authority",
+          "supports": [
+            "Modern lift inaugurated 15 December 2012"
+          ],
+          "note": "Also excluded from modern slot 5 by the source framing instructions."
+        },
+        {
+          "url": "https://culture-malta.org/the-grand-harbour/",
+          "title": "The Grand Harbour - Culture Malta",
+          "authority": "Malta culture heritage source cited in commission",
+          "supports": [
+            "Breakwater commissioned in 1900; foundation stone laid 20 April 1903"
+          ],
+          "note": "Exclude breakwater from 1873."
+        },
+        {
+          "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-1151528",
+          "title": "Grand Harbour, French Creek and Senglea from Upper Barracca",
+          "authority": "Royal Museums Greenwich / original photographic collection P93054",
+          "supports": [
+            "Upper Barracca southern panorama includes French Creek, Senglea, Cospicua and Cottonera"
+          ],
+          "note": "Photo dated 1936, useful only for broad topographic relations; later lift/cranes/ships not evidence for 1873."
+        },
+        {
+          "url": "https://www.um.edu.mt/__data/assets/pdf_file/0011/493508/MTA-TouristGuide195x195mmEng2018.pdf",
+          "title": "Malta Tourism Authority tourist guide - Public Gardens",
+          "authority": "Malta Tourism Authority official guide hosted by University of Malta",
+          "supports": [
+            "Upper/Lower Barrakka panorama of Grand Harbour and Cottonera"
+          ],
+          "note": "Official broad topographic source, not a date-specific historical skyline reference."
+        },
+        {
+          "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-1151225",
+          "title": "Fort St. Angelo and Grand Harbour, Malta",
+          "authority": "Royal Museums Greenwich / original photograph P92966",
+          "supports": [
+            "East Upper Barracca camera looks southeast-by-east, with Kalkara Creek and Royal Naval Hospital left and Dockyard Creek right"
+          ],
+          "note": "Dated 1930-1939; broad geography only, not 1873 building/ship detail evidence."
+        }
+      ],
+      "ownerAcceptanceSource": {
+        "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-PERUUTUS-20261013.md",
+        "sourceCommit": "4c28fefc109563a81c023ab2c1ab2ba6288aa3b9",
+        "sourceBlob": "3a23d2a7dfc370980086678f73ac44a324adc567",
+        "sourceSHA256": "0646a16ea7bcbb2f52e95b5567358a78305bc8c441a098bb8113e452494616b7",
+        "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+        "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be"
+      },
+      "sourceOwnerAcceptanceVerified": true,
+      "independentQAPending": false,
+      "rootQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/root-qa.json",
+      "id": "valletta-7-ilta-intro-v2",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/valletta-7-ilta-intro-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-full-v2/valletta-7-ilta-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-full-v2/valletta-7-ilta-intro-v2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [
+        {
+          "url": "https://heritagemalta.mt/mt/explore/fort-st-angelo/",
+          "title": "Fort St Angelo - Heritage Malta",
+          "authority": "National heritage agency",
+          "supports": [
+            "Fort St Angelo at the end of the Birgu peninsula",
+            "1530 remodelling and 1689 coastal fortifications predate 1873"
+          ],
+          "note": "Royal Navy command hub relocation to the fort is 1906, not evidence for a 1873 command hub."
+        },
+        {
+          "url": "https://www.transport.gov.mt/maritime/local-waters/ports-in-malta/port-of-valletta-118",
+          "title": "Port of Valletta - Transport Malta",
+          "authority": "National transport authority",
+          "supports": [
+            "Valletta on northwest Sciberras shore",
+            "Kalkara, Dockyard and French Creeks and Three Cities on southeast shore",
+            "Harbour mouth faces northeast"
+          ],
+          "note": "Topographic ordering matched to source coordinates; source camera-to-Fort bearing about 120 degrees."
+        },
+        {
+          "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-62630",
+          "title": "Ceremonial trowel used at completion of Somerset Dock, Malta, 1871",
+          "authority": "Royal Museums Greenwich / original inscribed object PLT0723",
+          "supports": [
+            "Somerset Dock opened as Dock 3 at French Creek in 1871",
+            "Last stone dated 16 February 1871"
+          ],
+          "note": "Dock location is French Creek; do not invent a dock between Birgu and Senglea."
+        },
+        {
+          "url": "https://ghrc.gov.mt/portfolio/the-upper-barrakka-lift/",
+          "title": "The Upper Barrakka Lift",
+          "authority": "Grand Harbour Regeneration Corporation",
+          "supports": [
+            "Original Upper Barrakka lift completed September 1905"
+          ],
+          "note": "Exclude all lift infrastructure from 1873."
+        },
+        {
+          "url": "https://www.transport.gov.mt/land/public-transport/other-public-transport/barrakka-lift-826",
+          "title": "Barrakka Lift - Transport Malta",
+          "authority": "National transport authority",
+          "supports": [
+            "Modern lift inaugurated 15 December 2012"
+          ],
+          "note": "Also excluded from modern slot 5 by the source framing instructions."
+        },
+        {
+          "url": "https://culture-malta.org/the-grand-harbour/",
+          "title": "The Grand Harbour - Culture Malta",
+          "authority": "Malta culture heritage source cited in commission",
+          "supports": [
+            "Breakwater commissioned in 1900; foundation stone laid 20 April 1903"
+          ],
+          "note": "Exclude breakwater from 1873."
+        },
+        {
+          "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-1151528",
+          "title": "Grand Harbour, French Creek and Senglea from Upper Barracca",
+          "authority": "Royal Museums Greenwich / original photographic collection P93054",
+          "supports": [
+            "Upper Barracca southern panorama includes French Creek, Senglea, Cospicua and Cottonera"
+          ],
+          "note": "Photo dated 1936, useful only for broad topographic relations; later lift/cranes/ships not evidence for 1873."
+        },
+        {
+          "url": "https://www.um.edu.mt/__data/assets/pdf_file/0011/493508/MTA-TouristGuide195x195mmEng2018.pdf",
+          "title": "Malta Tourism Authority tourist guide - Public Gardens",
+          "authority": "Malta Tourism Authority official guide hosted by University of Malta",
+          "supports": [
+            "Upper/Lower Barrakka panorama of Grand Harbour and Cottonera"
+          ],
+          "note": "Official broad topographic source, not a date-specific historical skyline reference."
+        },
+        {
+          "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-1151225",
+          "title": "Fort St. Angelo and Grand Harbour, Malta",
+          "authority": "Royal Museums Greenwich / original photograph P92966",
+          "supports": [
+            "East Upper Barracca camera looks southeast-by-east, with Kalkara Creek and Royal Naval Hospital left and Dockyard Creek right"
+          ],
+          "note": "Dated 1930-1939; broad geography only, not 1873 building/ship detail evidence."
+        }
+      ],
+      "QA": {
+        "slot": 7,
+        "taskNumber": 104,
+        "verdict": "accepted",
+        "visualQAVerdict": "accepted",
+        "reason": "Matalat hajautetut talot ja bastionimuuri sinisellä hetkellä; ei hallitsevaa kupolia, kellotorneja, tekstiä, logoja tai värivaloja. Luonnollinen vesi ja kivipinnat.",
+        "nativeSHA256": "a65c79f6e30e6dae5f7d8bc0fefd2d9be2596f236d9bea016b526b6a2dcdae80",
+        "finalSHA256": "057fa9f9307db071133b652f723aaf284f93e60a114faeb2af62d96d88e4ffd3",
+        "rootWholeNativeVisualInspection": true,
+        "rootWholeFinalVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "pixelIdentityToNative": true,
+        "ownerDisposition": "accepted",
+        "ownerAcceptanceVerified": true,
+        "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+        "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be",
+        "independentPeerPath": null,
+        "sourceOverride": {
+          "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-PERUUTUS-20261013.md",
+          "sourceCommit": "4c28fefc109563a81c023ab2c1ab2ba6288aa3b9",
+          "sourceBlob": "3a23d2a7dfc370980086678f73ac44a324adc567",
+          "sourceSHA256": "0646a16ea7bcbb2f52e95b5567358a78305bc8c441a098bb8113e452494616b7",
+          "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+          "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be"
+        }
+      },
+      "R2Proof": {
+        "slot": 7,
+        "r2Key": "julisteet/saapumisintro/valletta/20261013-full-v2/valletta-7-ilta-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-full-v2/valletta-7-ilta-intro-v2.png",
+        "sha256": "057fa9f9307db071133b652f723aaf284f93e60a114faeb2af62d96d88e4ffd3",
+        "nativeSHA256": "a65c79f6e30e6dae5f7d8bc0fefd2d9be2596f236d9bea016b526b6a2dcdae80",
+        "bytes": 2374514,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "057fa9f9307db071133b652f723aaf284f93e60a114faeb2af62d96d88e4ffd3",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "057fa9f9307db071133b652f723aaf284f93e60a114faeb2af62d96d88e4ffd3",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T13:29:01.620368+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "slot": 4,
+      "taskNumber": 103,
+      "reason": "Hylätty QA:ssa: seinässä noin x768,y526 on erillinen harmaa suorakaiteinen ritilämäinen paneeli. Siinä ei havaita tekstiä eikä numeroa, mutta se katkaisee korjauksessa vaaditun sileän kalkkikiviseinän. Paneelin tekninen käyttötarkoitus on epävarma; arvio ei perustu keksittyyn yleiseen ilmanvaihtokieltoon.",
+      "stage": "independent-QA-rejection",
+      "ownerCancelled": false,
+      "allowedByUpdatedSource": true,
+      "additionalGenerationAllowed": false,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/native-4.png",
+      "nativeSHA256": "89ac30d799df85e6583bc9182115acc36408b64768e30c3f46b77ccad0d295de",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/valletta-4-arki-intro-v2.png",
+      "finalSHA256": "a7b3ee85e3b3ff81565ad101ccf0b671b959dbabe7770daff0a4930ec9435aac"
+    },
+    {
+      "slot": 8,
+      "taskNumber": 105,
+      "reason": "Omistaja hylkäsi ja perui kaikki 1800-luvun saapumisintrokuvat. Tekninen ja visuaalinen QA oli hyväksytty, mutta tätä kuvaa ei toimiteta eikä kytketä peliin.",
+      "stage": "owner-topic-cancellation",
+      "ownerCancelled": true,
+      "allowedByUpdatedSource": true,
+      "additionalGenerationAllowed": false,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/native-8.png",
+      "nativeSHA256": "3e988356d55eda7898ce7ee9f16def6660228dd8365ebbdbccb5aeed072e4c1c",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/valletta-8-1873-intro-v2.png",
+      "finalSHA256": "2331f901a5ad30f5ffcab61046c0381490835e62fc420d7b05b03478eab2c749"
+    }
+  ],
+  "ownerCancelledItems": [
+    {
+      "slot": 8,
+      "taskNumber": 105,
+      "reason": "Omistaja hylkäsi ja perui kaikki 1800-luvun saapumisintrokuvat. Tekninen ja visuaalinen QA oli hyväksytty, mutta tätä kuvaa ei toimiteta eikä kytketä peliin.",
+      "stage": "owner-topic-cancellation",
+      "ownerCancelled": true,
+      "allowedByUpdatedSource": true,
+      "additionalGenerationAllowed": false,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/native-8.png",
+      "nativeSHA256": "3e988356d55eda7898ce7ee9f16def6660228dd8365ebbdbccb5aeed072e4c1c",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/valletta-8-1873-intro-v2.png",
+      "finalSHA256": "2331f901a5ad30f5ffcab61046c0381490835e62fc420d7b05b03478eab2c749"
+    }
+  ],
+  "sourceAllowedQAOmissions": [
+    {
+      "slot": 4,
+      "taskNumber": 103,
+      "reason": "Hylätty QA:ssa: seinässä noin x768,y526 on erillinen harmaa suorakaiteinen ritilämäinen paneeli. Siinä ei havaita tekstiä eikä numeroa, mutta se katkaisee korjauksessa vaaditun sileän kalkkikiviseinän. Paneelin tekninen käyttötarkoitus on epävarma; arvio ei perustu keksittyyn yleiseen ilmanvaihtokieltoon.",
+      "stage": "independent-QA-rejection",
+      "ownerCancelled": false,
+      "allowedByUpdatedSource": true,
+      "additionalGenerationAllowed": false,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/native-4.png",
+      "nativeSHA256": "89ac30d799df85e6583bc9182115acc36408b64768e30c3f46b77ccad0d295de",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/valletta/valletta-4-arki-intro-v2.png",
+      "finalSHA256": "a7b3ee85e3b3ff81565ad101ccf0b671b959dbabe7770daff0a4930ec9435aac"
+    }
+  ],
+  "actualCallsBeforeCancellation": 3,
+  "actualCallsAfterCancellation": 0,
+  "originalMaximumGenerationCalls": 3,
+  "currentMaximumActiveCalls": 2,
+  "allRequestedSlotsHandled": true,
+  "allActiveRequestedSlotsDelivered": false,
+  "productionCompleteWithinUpdatedSourceLimit": true,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": false,
+  "ownerAcceptanceVerifiedForDeliverableImages": true,
+  "ownerAcceptanceVerified": true,
+  "gameIntegrationAllowed": true,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": true,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-6-20261013.md",
+  "sourceCommit": "efbc512cab1d414eea6dab7b07a5580fb1f96396",
+  "sourceBlob": "de12c45cd76efaa5a293b6bebd74ff4c0825d577",
+  "sourceOverride": {
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-PERUUTUS-20261013.md",
+    "sourceCommit": "4c28fefc109563a81c023ab2c1ab2ba6288aa3b9",
+    "sourceBlob": "3a23d2a7dfc370980086678f73ac44a324adc567",
+    "sourceSHA256": "0646a16ea7bcbb2f52e95b5567358a78305bc8c441a098bb8113e452494616b7",
+    "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+    "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be"
+  },
+  "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+  "priorImageFilesAndDeliveryHistoryPreserved": true,
+  "prior19V1ImageFilesPreserved": true,
+  "originalSourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+  "originalSeparateNewGenerationQuota": 6,
+  "currentActiveGlobalGenerationQuota": 4,
+  "cancelledTopicGenerationAllowed": false
+}
