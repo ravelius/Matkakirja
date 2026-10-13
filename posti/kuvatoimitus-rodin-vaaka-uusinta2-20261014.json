@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "order": "Rodin landscape second retry 20261014",
+  "taskNumbers": [
+    243
+  ],
+  "updatedAt": "2026-10-13T21:37:26.271133+00:00",
+  "sourcePath": "posti/fable-codex-rodin-vaaka-uusinta2-20261014.md",
+  "sourceCommit": "cf01b34c34226b16ed3ffdd2fe98c3cca689f8db",
+  "sourceBlob": "7abcba09195cf11ff8866f1bfc8b61777950f9d8",
+  "sourceReadInFull": true,
+  "inheritedSources": [
+    {
+      "path": "posti/fable-codex-rodin-lahestyminen-20261013.md",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/sources/fable-codex-rodin-lahestyminen-20261013.md",
+      "commit": "cf01b34c34226b16ed3ffdd2fe98c3cca689f8db",
+      "blob": "ab0a5fa334eb7c8071bd313c0368dbd019065c20",
+      "sha256": "7634a218f9d62949eeb54fc465dde532add6fc61e14ac4a69cb2d8e85a42f385",
+      "bytes": 3419,
+      "characters": 3308,
+      "finalLF": true,
+      "readInFull": true,
+      "reader": "/root/intro_owner_rejection_inventory",
+      "readByteSpans": [
+        [
+          0,
+          3419
+        ]
+      ],
+      "readCharacterSpans": [
+        [
+          0,
+          3308
+        ]
+      ],
+      "outputWasTruncated": false
+    },
+    {
+      "path": "posti/fable-codex-rodin-lahestyminen-uusinta-20261013.md",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/sources/fable-codex-rodin-lahestyminen-uusinta-20261013.md",
+      "commit": "cf01b34c34226b16ed3ffdd2fe98c3cca689f8db",
+      "blob": "0a77fc4265f671bacfc4d8c4af98673f17a83656",
+      "sha256": "798fe7170fd029f0e025025118c2235cf9da04580d4dac9781be04fc4edfc2bc",
+      "bytes": 1779,
+      "characters": 1721,
+      "finalLF": true,
+      "readInFull": true,
+      "reader": "/root/intro_owner_rejection_inventory",
+      "readByteSpans": [
+        [
+          0,
+          1779
+        ]
+      ],
+      "readCharacterSpans": [
+        [
+          0,
+          1721
+        ]
+      ],
+      "outputWasTruncated": false
+    },
+    {
+      "path": "posti/fable-codex-ranska-lahestyminen-20261013.md",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/sources/fable-codex-ranska-lahestyminen-20261013.md",
+      "commit": "cf01b34c34226b16ed3ffdd2fe98c3cca689f8db",
+      "blob": "63d0a8dfbbc11f37ad3ee992821fff094e481d41",
+      "sha256": "5c91a763fd0a4f096565b413e2fbed22a31d0f8b4bd14d4dc01330dad87d1445",
+      "bytes": 4738,
+      "characters": 4579,
+      "finalLF": true,
+      "readInFull": true,
+      "reader": "/root/intro_owner_rejection_inventory",
+      "readByteSpans": [
+        [
+          0,
+          4738
+        ]
+      ],
+      "readCharacterSpans": [
+        [
+          0,
+          4579
+        ]
+      ],
+      "outputWasTruncated": false
+    }
+  ],
+  "assets": [
+    {
+      "id": "rodin-vaaka-uusinta2",
+      "taskNumber": 243,
+      "orientation": "vaaka",
+      "width": 1536,
+      "height": 1024,
+      "filename": "rodin-lahestyminen-vaaka.png",
+      "caption": "Rodin-museon puutarha Pariisissa. Havainnekuva.",
+      "r2Key": "julisteet/taidemuseo/rodin/20261014/rodin-lahestyminen-vaaka.png",
+      "sourcePath": "posti/fable-codex-rodin-vaaka-uusinta2-20261014.md",
+      "sourceCommit": "cf01b34c34226b16ed3ffdd2fe98c3cca689f8db",
+      "sourceBlob": "7abcba09195cf11ff8866f1bfc8b61777950f9d8",
+      "sourceReadInFull": true,
+      "maxGenerationCalls": 1,
+      "ownerApprovalAuthority": "Päätoimittaja acting on behalf of owner",
+      "directDeliveryAuthorized": true,
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "oldVersionsPreserved": true,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/native.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a1356c-8a9f-7d51-ba2f-f5b912565cb6/exec-d88ef3f9-4fba-42b9-94d2-5cade6040af6.png",
+      "nativeSHA256": "6d34518f6039eb66afefd2e3da499776eaf0a477d003a99d0498a1d62ab2dc85",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/rodin-lahestyminen-vaaka.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/rodin-vaaka-uusinta2-20261014/rodin-lahestyminen-vaaka.png",
+      "sha256": "c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "opaque": true,
+      "sRGB": true,
+      "pixelIdentityToNative": true,
+      "pixelSHA256": "d43b918ee11110ca96a0fd0d976810c5551370093425fc174b51bc64c2e7250f",
+      "exportProcessing": "PNG text metadata and sRGB ICC profile only; RGB pixels unchanged, no resize/crop/retouch",
+      "actualGenerationCalls": 1,
+      "builtinGeneration": true,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: A completely new color camera-photograph-like illustration for the Matkakirja Musée Rodin arrival scene. Generate ONE original opaque RGB PNG at exactly 1536 x 1024 pixels, landscape 3:2. This is a fresh image from scratch, not an edit, crop or variation of a previous picture.\nScene and main subject: The pale warm-stone eighteenth-century Hôtel Biron in Paris seen from its rose garden. The WHOLE front façade, including the ENTIRE left and right side wings, outer corners and all roof ends, must be visible at once. Do not cut off either wing or any part of the façade. Position the camera farther back and almost square-on to the façade, with a broad garden view at ordinary human eye height. The entire mansion takes about two thirds of the image width, leaving obvious open margins on BOTH sides: trees, hedges or sky between the building's outermost left/right edges and the image borders. Keep the central pediment, slate roofs, pale stone and coherent classical windows plausible and recognizable. Preserve space above the roof for sky and below the building for the garden.\nGarden and distant statue: Natural varied late-summer rose beds, clipped green hedges and pale gravel paths in the foreground. The garden, roses and mansion belong to one coherent real setting with natural depth and perspective. The bronze Thinker is a tiny, distant seated side or rear silhouette on its pedestal in the garden, above the hedge line near a path end. Show its recognizable seated pose with chin resting on hand, but no close-up or body details. The seated figure itself must remain well below one tenth of the whole frame height; approximately 3–5 percent is enough. It is subordinate to the building and garden. No other sculptures needed. A small distant golden dome of Les Invalides can appear on the background skyline, as in the accepted scene, subordinate to the mansion.\nStyle and light: Real-camera appearance, bright soft late-summer daylight with gently slanting light, a natural ordinary sky, muted warm stone, believable green foliage and modest pink/white roses. Subtle realistic stone wear, individual irregular leaves, petals and fine gravel, without repeated stamped patterns. Natural photographic contrast, no HDR, oversaturation, artificial cinematic grading, CGI, painted surfaces, plastic foliage, miniature diorama or pasted collage.\nExclusions: No writing, letters, numerals, museum lettering, signs, logos, brands, banners, advertising, watermarks or borders anywhere. No recognizable people or faces, no queues, construction scaffolding, cranes or modern temporary art installations. No Google 3D/Earth/StreetView source imagery. Do not add invented props. Prioritize the complete full-width mansion with clear margins on both sides and the very small distant seated silhouette.\n",
+      "promptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/prompt.txt",
+      "promptSHA256": "99a2a1d166034b82e315691a49afaf232daa3a63e32c2997bea9c1beef6ffb0d",
+      "references": [
+        {
+          "role": "authorized task source and correction",
+          "path": "posti/fable-codex-rodin-vaaka-uusinta2-20261014.md",
+          "commit": "cf01b34c34226b16ed3ffdd2fe98c3cca689f8db",
+          "blob": "7abcba09195cf11ff8866f1bfc8b61777950f9d8",
+          "sha256": "6a924d319a92bb64d80b9313efca86209263990d753d0b8b24caef2450b4f7ca",
+          "readInFull": true
+        },
+        {
+          "role": "inherited source rules",
+          "path": "posti/fable-codex-rodin-lahestyminen-20261013.md",
+          "commit": "cf01b34c34226b16ed3ffdd2fe98c3cca689f8db",
+          "blob": "ab0a5fa334eb7c8071bd313c0368dbd019065c20",
+          "sha256": "7634a218f9d62949eeb54fc465dde532add6fc61e14ac4a69cb2d8e85a42f385",
+          "readInFull": true
+        },
+        {
+          "role": "inherited source rules",
+          "path": "posti/fable-codex-rodin-lahestyminen-uusinta-20261013.md",
+          "commit": "cf01b34c34226b16ed3ffdd2fe98c3cca689f8db",
+          "blob": "0a77fc4265f671bacfc4d8c4af98673f17a83656",
+          "sha256": "798fe7170fd029f0e025025118c2235cf9da04580d4dac9781be04fc4edfc2bc",
+          "readInFull": true
+        },
+        {
+          "role": "inherited source rules",
+          "path": "posti/fable-codex-ranska-lahestyminen-20261013.md",
+          "commit": "cf01b34c34226b16ed3ffdd2fe98c3cca689f8db",
+          "blob": "63d0a8dfbbc11f37ad3ee992821fff094e481d41",
+          "sha256": "5c91a763fd0a4f096565b413e2fbed22a31d0f8b4bd14d4dc01330dad87d1445",
+          "readInFull": true
+        },
+        {
+          "role": "previous owner-accepted #232 native viewed only for style and subject comparison, not an edit target or imagegen input",
+          "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-lahestyminen-uusinta-20261013/rodin-pysty/native.png",
+          "sha256": "63c2c421bfa37efdd57ca29c0edfedf96fe530706f8d680f4f5894d713b4193b",
+          "personallyViewedBeforePrompt": true,
+          "passedToImagegen": false
+        },
+        {
+          "role": "architectural world knowledge for a newly generated image",
+          "noExternalPhotographicInput": true,
+          "noGoogleData": true
+        }
+      ],
+      "referencesPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/references.json",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/qa.json",
+      "rootQARequired": true,
+      "rootQAApproved": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Caption": "Rodin-museon puutarha Pariisissa. Havainnekuva.",
+      "createdAt": "2026-10-13T21:29:32.620882+00:00",
+      "producerQAVerdict": "accepted",
+      "producerQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/qa.json",
+      "producerQASHA256": "744adebeb258be36e8de9f2e8838456e1e33e95448667c1b6e9f709356d99058",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/producer.json",
+      "url": "https://media.matkakirja.app/julisteet/taidemuseo/rodin/20261014/rodin-lahestyminen-vaaka.png?sha256=c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/taidemuseo/rodin/20261014/rodin-lahestyminen-vaaka.png?sha256=c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+      "baseUrl": "https://media.matkakirja.app/julisteet/taidemuseo/rodin/20261014/rodin-lahestyminen-vaaka.png",
+      "rootQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/root-qa.json",
+      "QA": {
+        "schemaVersion": 1,
+        "taskNumber": 243,
+        "id": "rodin-vaaka-uusinta2",
+        "assetID": "rodin-vaaka-uusinta2",
+        "reviewer": "root",
+        "reviewedAt": "2026-10-13T21:31:57.945583+00:00",
+        "sourcePath": "posti/fable-codex-rodin-vaaka-uusinta2-20261014.md",
+        "sourceCommit": "cf01b34c34226b16ed3ffdd2fe98c3cca689f8db",
+        "sourceBlob": "7abcba09195cf11ff8866f1bfc8b61777950f9d8",
+        "sourceReadInFull": true,
+        "sourceBytesPinnedToGit": true,
+        "inheritedSourcesReadInFull": true,
+        "verdict": "accepted",
+        "acceptedRecorded": true,
+        "reviewStage": "independent root personally viewed exact whole native and verified final pixels",
+        "wholeNativePersonallyViewed": true,
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/native.png",
+        "nativeSHA256": "6d34518f6039eb66afefd2e3da499776eaf0a477d003a99d0498a1d62ab2dc85",
+        "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/rodin-vaaka-uusinta2-20261014/rodin-lahestyminen-vaaka.png",
+        "finalSHA256": "c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalPassed": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technical": {
+          "passed": true,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "format": "PNG",
+          "mode": "RGB",
+          "opaque": true,
+          "sRGB": true,
+          "nativePixelsEqualFinalVerified": true,
+          "workspaceBytesEqualNAS": true,
+          "metadataExact": true
+        },
+        "inspection": {
+          "completeFacadeBothWingsVisible": true,
+          "clearMarginsOnBothSides": true,
+          "allRoofEndsVisible": true,
+          "fartherAndStraighterComposition": true,
+          "tinyDistantThinker": true,
+          "approximateFigureHeightFraction": 0.048,
+          "approximateFigurePlusPedestalHeightFraction": 0.091,
+          "rosesHedgesGravelCoherent": true,
+          "smallGoldenBackgroundDomePresent": true,
+          "naturalPhotographicLightAndTextures": true,
+          "noVisibleTextLogosOrRecognizablePeopleObserved": true
+        },
+        "reason": "Koko natiivi katsottu henkilökohtaisesti. Hôtel Bironin julkisivu, molemmat siivet ja katon päät näkyvät kokonaan, molemmilla sivuilla on selvä vapaa reuna. Ruusutarha, pensasaidat ja sorakäytävä muodostavat yhtenäisen näkymän; Ajattelija on pieni kaukainen istuva hahmo ja kultainen kupoli näkyy taustalla. Luonnollinen valo ja vaimeat valokuvamaiset värit, ei havaittua tekstiä, logoja, kasvoja tai toistuvaa leimakuviota. PNG-koon, RGB/sRGB:n, läpinäkymättömyyden ja metatietojen sekä natiivin ja toimitusversion kaikkien RGB-pikselien identtisyyden tarkistus läpi. Hyväksytty tekniseen toimitukseen Päätoimittajalle; omistajan puolesta annettu hyväksyntä, runtime ja julkaisu odottavat omia kuittejaan.",
+        "actualGenerationCalls": 1,
+        "maxGenerationCalls": 1,
+        "additionalGenerationsAllowed": false,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false,
+        "limitations": [
+          "Visual composition estimates are not an architectural survey."
+        ]
+      },
+      "rootQAFileSHA256": "9dc1b549ebd5f95e4c9d546f12df76c11f8c6485d4dc0da4ba988dfb24b2266f",
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "R2Proof": {
+        "taskNumber": 243,
+        "r2Key": "julisteet/taidemuseo/rodin/20261014/rodin-lahestyminen-vaaka.png",
+        "url": "https://media.matkakirja.app/julisteet/taidemuseo/rodin/20261014/rodin-lahestyminen-vaaka.png?sha256=c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+        "canonicalUrl": "https://media.matkakirja.app/julisteet/taidemuseo/rodin/20261014/rodin-lahestyminen-vaaka.png?sha256=c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+        "baseUrl": "https://media.matkakirja.app/julisteet/taidemuseo/rodin/20261014/rodin-lahestyminen-vaaka.png",
+        "baseUrlStateAfterPut": {
+          "url": "https://media.matkakirja.app/julisteet/taidemuseo/rodin/20261014/rodin-lahestyminen-vaaka.png",
+          "http": 404,
+          "sha256": "62c1c0b235e26952857139537b65f8272026cd1c385c1bf6dba20481ee8a6619",
+          "byteExact": false,
+          "mime": "text/html",
+          "cfCacheStatus": "HIT",
+          "cacheControl": "max-age=14400",
+          "cors": "https://matkakirja.app",
+          "checkedAt": "2026-10-13T21:37:24.657555+00:00",
+          "note": "Unversioned preflight 404 may remain negatively cached. Only the verified SHA-versioned canonical URL is delivered."
+        },
+        "sha256": "c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+        "nativeSHA256": "6d34518f6039eb66afefd2e3da499776eaf0a477d003a99d0498a1d62ab2dc85",
+        "bytes": 2867019,
+        "preflight": {
+          "HEAD": 404,
+          "GET": 404,
+          "cacheBusterGET": 404,
+          "existing200BytesCheckedBeforePut": true
+        },
+        "uploadedOnlyAfterAll404": true,
+        "immutableExistingObjectOverwritten": false,
+        "readbacks": [
+          {
+            "url": "https://media.matkakirja.app/julisteet/taidemuseo/rodin/20261014/rodin-lahestyminen-vaaka.png?sha256=c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+            "http": 200,
+            "bytes": 2867019,
+            "sha256": "c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+            "byteExact": true,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheControl": "public, max-age=31536000, immutable",
+            "cfCacheStatus": "MISS",
+            "originSent": "https://matkakirja.app",
+            "cacheBusted": false,
+            "pollHistory": [
+              {
+                "http": 200,
+                "sha256": "c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+                "byteExact": true,
+                "cfCacheStatus": "MISS",
+                "checkedAt": "2026-10-13T21:37:24.298684+00:00"
+              }
+            ],
+            "verifiedAt": "2026-10-13T21:37:24.299682+00:00"
+          },
+          {
+            "url": "https://media.matkakirja.app/julisteet/taidemuseo/rodin/20261014/rodin-lahestyminen-vaaka.png?sha256=c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0&verify=rodin-vaaka2-1791927443824973000",
+            "http": 200,
+            "bytes": 2867019,
+            "sha256": "c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+            "byteExact": true,
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheControl": "public, max-age=31536000, immutable",
+            "cfCacheStatus": "MISS",
+            "originSent": "https://matkakirja.app",
+            "cacheBusted": true,
+            "pollHistory": [
+              {
+                "http": 200,
+                "sha256": "c8c2b10baf9c69184ad2a2d55570cb2169749c3a35b6687810c624f18ee592c0",
+                "byteExact": true,
+                "cfCacheStatus": "MISS",
+                "checkedAt": "2026-10-13T21:37:24.601817+00:00"
+              }
+            ],
+            "verifiedAt": "2026-10-13T21:37:24.602896+00:00"
+          }
+        ],
+        "byteExactReadback": true,
+        "mimeVerified": true,
+        "corsVerified": true,
+        "verifiedAt": "2026-10-13T21:37:24.657577+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "imagesDelivered": 1,
+  "allowedFinalOmissions": 0,
+  "actualGenerationCalls": 1,
+  "maximumGenerationCalls": 1,
+  "generationCallsByTask": {
+    "243": 1
+  },
+  "additionalGenerationCalls": 0,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "rootQAFileSHA256": "9dc1b549ebd5f95e4c9d546f12df76c11f8c6485d4dc0da4ba988dfb24b2266f",
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews for owner under exact source authority; authority is separate from verified acceptance.",
+  "old125126And232233DeliveriesPreserved": true,
+  "oldDeliveryFileSHA256": {
+    "posti/kuvatoimitus-rodin-lahestyminen-20261013.json": "e90e38c8a53c74c7d2d84732afb8c1a51802140b1ba430be75c21d7ad0a469a3",
+    "posti/codex-fable-rodin-lahestyminen-20261013.md": "3c4d4d942388305e767bc8e16065ecca0a6855b4675b08efd54e57646979d11c",
+    "posti/kuvatoimitus-rodin-lahestyminen-uusinta-20261013.json": "131a5492c36b1dde985bbca892c444a3b3496c19f22be780c54ff8bbe870acf8",
+    "posti/codex-fable-rodin-lahestyminen-uusinta-20261013.md": "ae033978d40a618bc6bb727c2d96249c110eac10bf7a15cb8c20851c9f5e7c08"
+  },
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+}
