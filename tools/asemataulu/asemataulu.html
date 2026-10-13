@@ -602,11 +602,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
     // Uusin juna aina ensin (numeron mukaan) ja enintään kolme junaa tai TF:ää; käännössä oleva oranssina (omistaja 10.10. 16.3x).
     var junaNro = function (x) { var n = String(x.nimi || '').match(/(\d+)/); return n ? Number(n[1]) : 0; };
     junaRivi($('junat-valmiit'), $('tf-paneeli'), jr.slice().sort(function (a, b) { return junaNro(b) - junaNro(a); }).slice(0, 3));
-    // Päivitysaika näkyviin (omistaja 12.10. 21.4x: "pitää huolen että työlista ja asemataulu pysyy päivitettynä"):
-    // junien ja työlistan oma aikaleima, punaisena kun junat yli 2 h tai työlista yli 3 h vanha.
-    if (j && typeof j.ts === 'number') {
-      $('junat-valmiit').append(luo('span', 'juna-aika' + (Date.now() - j.ts > 2 * 3600000 ? ' toimia' : ''), 'päivitetty ' + kello(j.ts)));
-    }
+    // Junarivillä ei päivitysaikaa (omistaja 13.10. 08.3x: "tuo päivitetty teksti pitää ottaa pois"); julkaisuaika on TF:n
+    // Uutta-otsikon perässä suluissa, esim. "Uutta (13.10. klo 7.24):". Työlistan päivitysaika pysyy.
 
     $('tyolista-osio').hidden = !(t && t.rivit && t.rivit.length);
     var ky = t && t.kysymykset;
