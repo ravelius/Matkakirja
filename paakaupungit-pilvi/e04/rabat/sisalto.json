@@ -19,16 +19,16 @@
   },
   "kysymykset": [
     {
-      "q": "Minkä valtameren rannalla Rabat sijaitsee?",
+      "q": "Mikä näistä vesialueista on Rabatin edustalla?",
       "options": [
-        "Atlantin",
-        "Tyynenmeren",
-        "Intianmeren",
-        "Jäämeren"
+        "Atlantti",
+        "Välimeri",
+        "Punainenmeri",
+        "Intian valtameri"
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Katso Marokon rannikkoa Afrikan länsireunalla.",
+      "hint": "Rabat on Marokon pääkaupunki, ja Salé sijaitsee joen vastarannalla.",
       "fact": "Rabat sijaitsee Marokon Atlantin rannikolla, Bou Regreg -joen suulla.",
       "source": "https://en.wikipedia.org/wiki/Rabat"
     },
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Salé vanha, Salé uusi",
-          "teksti": "Bou Regreg erottaa nykyisin Rabatin ja Salén, mutta kaupunkien vanhat nimet kulkevat joen yli. 1600-luvulla etelärannan Rabat tunnettiin nimellä New Salé, Uusi Salé, ja pohjoisrannan kaupunki nimellä Old Salé, Vanha Salé. Espanjasta karkotettuja moriskoja ja andalusialaistaustaisia pakolaisia asettui Rabatin kasbahiin ja sen alapuolelle. Asutus kasvoi, ja sen rajaksi tuli Andalusialainen muuri. Vastarannan kaupunki ei siis ole vain maisema: nimissä säilyy yhteisen kaupunkihistorian kerros.",
+          "teksti": "Bou Regreg erottaa nykyisin Rabatin ja Salén, mutta kaupunkien vanhat nimet kulkevat joen yli. 1600-luvulla etelärannan Rabat tunnettiin nimellä New Salé, Uusi Salé, ja pohjoisrannan kaupunki nimellä Old Salé, Vanha Salé. Espanjasta karkotettuja moriskoja ja andalusialaistaustaisia pakolaisia asettui Rabatin kasbahiin ja sen alapuolelle. Asutus kasvoi, ja sen rajaksi tuli Andalusialainen muuri.",
           "tiedosto": "Salé from the Plateforme du Sémaphore (Kasbah des Oudais) (5509116076).jpg",
           "lyhyt": "Salé on Rabatin vastarannan historiallinen kaupunki.",
           "selite": "Bou Regregin pohjoisrannalla sijaitseva Salé tunnettiin Vanhan Salén nimellä, kun nykyisen Rabatin puolta kutsuttiin Uudeksi Saléksi.",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Raitiovaunu vie joen yli",
-          "teksti": "Rabat–Salén raitiovaunun nimessä on kaksi kaupunkia, ja reitti myös yhdistää ne. Nykyinen verkko kulkee Bou Regreg -joen yli sekä Rabat-Villen rautatieaseman läheltä. Nivelletyt Alstom Citadis -vaunut kuuluvat 2000-luvulla aloittaneeseen järjestelmään. Rabatissa oli raitioliikennettä jo 1900-luvun alkupuolella, mutta nykyinen verkko on myöhempi hanke. Joen vastaranta liittyy siten Rabatin arkeen myös matkareittinä: Salén puolelle voi jatkaa samalla kaupunkiliikenteen järjestelmällä.",
+          "teksti": "Rabat–Salén raitiovaunun nimessä on kaksi kaupunkia, ja reitti myös yhdistää ne. Nykyinen verkko kulkee Bou Regreg -joen yli sekä Rabat-Villen rautatieaseman läheltä. Nivelletyt Alstom Citadis -vaunut kuuluvat 2000-luvulla aloittaneeseen järjestelmään. Rabatissa oli raitioliikennettä jo 1900-luvun alkupuolella, mutta nykyinen verkko on myöhempi hanke.",
           "wiki": "Rabat–Salé tramway"
         }
       ],
@@ -205,7 +205,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Kesä on kuiva, kun taas sateet painottuvat myöhäissyksyyn ja talveen. Heinä–elokuussa päivän ylimpien lämpötilojen normaalit ovat noin 27–28 astetta ja yön alimpien noin 18 astetta. Tammikuussa vastaavat luvut ovat noin 17 ja 7 astetta. Päivän ja illan ero kannattaa huomioida vaatetuksessa. Talven sateet ja kuiva kesä näkyvät myös kasbahin puutarhan erilaisissa kävelyolosuhteissa."
+              "teksti": "Kesä on kuiva, kun taas sateet painottuvat myöhäissyksyyn ja talveen. Heinä–elokuussa päivän ylimpien lämpötilojen normaalit ovat noin 27–28 astetta ja yön alimpien noin 18 astetta. Tammikuussa vastaavat luvut ovat noin 17 ja 7 astetta."
             }
           ],
           "matkailu": {
@@ -238,20 +238,20 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Kotikuja on kotikuja",
-                "teksti": "Kasbahissa asutaan yhä, joten anna asukkaiden arjelle ja talojen oviaukoille tilaa."
+                "otsikko": "Asuttu kasbah",
+                "teksti": "Udayan kasbahin sinivalkoiset kujat ovat myös asukkaiden kotikatuja."
               },
               {
-                "otsikko": "Moskeijat ulkoa",
-                "teksti": "Ei-islamilaisten pääsyä moskeijoihin on rajoitettu; älä oleta voivasi käydä rukoustiloissa."
+                "otsikko": "Vierailu ja meressä uiminen",
+                "teksti": "Moskeijoihin pääsy on rajoitettua ei-muslimeille. Merivirrat ja aallot voivat olla vaarallisia, joten uimapaikan olosuhteet selvitetään paikallisesti."
               },
               {
-                "otsikko": "Asemat eri puolilla kaupunkia",
-                "teksti": "Rabat-Ville on lähellä historiallista ydintä; Rabat-Agdal palvelee toista osaa kaupungista. Tarkista, kumpi asema kuuluu omaan junayhteyteesi."
+                "otsikko": "Rautatieasemat",
+                "teksti": "Rabat-Ville on lähellä historiallista ydintä; Rabat-Agdal palvelee toista osaa kaupungista."
               },
               {
-                "otsikko": "Valitse merkitty uimaranta",
-                "teksti": "Merivirrat ja aallot voivat olla vaarallisia, joten uimiseen sopiva paikka tarkistetaan erikseen."
+                "otsikko": "Kasbahin eteläosa",
+                "teksti": "Moulay Ismailin paviljonki ja Andalusialainen puutarha ovat kasbahin eteläosassa."
               }
             ]
           },
@@ -365,7 +365,7 @@
   "nahtavyydet": {
     "Udayan kasbah": {
       "aika": "1100-luku, myöhemmät laajennukset",
-      "teksti": "Udayan kasbah on kukkulalle rakennettu linnoitettu kaupunginosa Bou Regreg -joen suulla. Almohadit rakensivat sitä 1100-luvulla aiempien tukikohtien paikalle. Rakennushankkeeseen kuuluivat palatsi, moskeija ja maanalainen vesikanava, joka toi vettä alueelle. Suuri Bab Oudaya -portti liittyy myöhempään almohadien rakennusvaiheeseen.\n\nKasbahin sisällä pohjoisen keskiaikainen ydin ja etelän myöhemmät lisäykset kuuluvat eri aikoihin. Moulay Ismailin paviljonki tuli eteläosaan vasta myöhemmin. Nykyiset sinivalkoiset talot ovat osa asuttua kaupunginosaa, ja Rue Jamaa johtaa suuren portin suunnasta kohti joelle avautuvaa näkymää. Medina on kasbahin vieressä, Salé joen toisella puolella.\n\nVuonna 1873 kasbah, sen vanha portti ja paviljonki olivat jo olemassa. Nykyistä Andalusialaista puutarhaa ja paviljongin museokäyttöä ei vielä ollut. Vanha linnoitus on siis säilynyt, mutta sen sisällä olevien paikkojen tehtävät ovat muuttuneet.",
+      "teksti": "Udayan kasbah on kukkulalle rakennettu linnoitettu kaupunginosa Bou Regreg -joen suulla. Almohadit rakensivat sitä 1100-luvulla aiempien tukikohtien paikalle. Rakennushankkeeseen kuuluivat palatsi, moskeija ja maanalainen vesikanava, joka toi vettä alueelle. Suuri Bab Oudaya -portti liittyy myöhempään almohadien rakennusvaiheeseen.\n\nKasbahin sisällä pohjoisen keskiaikainen ydin ja etelän myöhemmät lisäykset kuuluvat eri aikoihin. Moulay Ismailin paviljonki tuli eteläosaan vasta myöhemmin. Nykyiset sinivalkoiset talot ovat osa asuttua kaupunginosaa, ja Rue Jamaa johtaa suuren portin suunnasta kohti joelle avautuvaa näkymää. Medina on kasbahin vieressä, Salé joen toisella puolella.\n\nVuonna 1873 kasbah, sen vanha portti ja paviljonki olivat jo olemassa. Nykyistä Andalusialaista puutarhaa ja paviljongin museokäyttöä ei vielä ollut.",
       "kuvat": [
         {
           "tiedosto": "Kasbah des Oudaias P1060323.JPG",
@@ -378,7 +378,7 @@
     },
     "Bou Regreg -joen suisto": {
       "aika": "Luontokohde",
-      "teksti": "Bou Regreg saapuu Keski-Atlaksen suunnalta Atlantin valtamereen Rabatin ja Salén välissä. Rabat sijaitsee joen eteläpuolella, Salé pohjoispuolella. Suisto tunnetaan myös nimellä Wadi Sala. Joen suu on samalla kohta, jossa jokivesi ja vuoroveden kuljettama suolainen merivesi kohtaavat.\n\nUdayan kasbahista avautuu näkymä joelle, vastarannan Saléen ja Atlantille. Vesi erottaa kaupunkien historialliset ytimet, vaikka niillä on yhteistä historiaa ja nykyinen raitiovaunuyhteys. Myös muinaisen Salan paikka Chellahissa liittyi joen rantaan ja satamaan. Kaupungin vanhoja alueita hahmottaa siksi seuraamalla joen suhdetta kukkulaan ja vastarannan asutukseen.\n\nVuonna 1873 sekä joki että sen vastarantojen kaupungit olivat olemassa. Nykyinen raitiovaunuyhteys tuli myöhemmin. Kasbahin ja vastarannan välinen näkymä kertoo vanhojen kaupunkien sijainnista, kun taas nykyinen rantaympäristö sisältää joen käytön uudempia kerroksia.",
+      "teksti": "Bou Regreg saapuu Keski-Atlaksen suunnalta Atlantin valtamereen Rabatin ja Salén välissä. Rabat sijaitsee joen eteläpuolella, Salé pohjoispuolella. Suisto tunnetaan myös nimellä Wadi Sala. Joen suu on samalla kohta, jossa jokivesi ja vuoroveden kuljettama suolainen merivesi kohtaavat.\n\nUdayan kasbahista avautuu näkymä joelle, vastarannan Saléen ja Atlantille. Vesi erottaa kaupunkien historialliset ytimet, vaikka niillä on yhteistä historiaa ja nykyinen raitiovaunuyhteys. Myös muinaisen Salan paikka Chellahissa liittyi joen rantaan ja satamaan.",
       "kuvat": [
         {
           "tiedosto": "Boats in Bouregreg (2).jpg",
@@ -391,7 +391,7 @@
     },
     "Andalusialainen muuri": {
       "aika": "1600-luku",
-      "teksti": "Andalusialainen muuri rajaa Rabatin medinan eteläreunaa. Se rakennettiin 1600-luvun alkupuolella keskiaikaisen almohadikaupungin sisään. Ulomman kaupunginmuurin sisäpuolella oli ollut myös harvaan asuttuja ja avoimia alueita; myöhempi muuri rajasi tiiviimmän asutuksen oman kokonaisuutensa sisään.\n\nEspanjasta karkotettuja moriskoja asettui tälle alueelle. Muurin portit yhdistivät kaupunginosan eri suuntiin: Bab Mellah liittyi vanhaan juutalaiskortteliin, ja Bab Chellah sai monumentaalisen nykyasunsa 1800-luvun alun uudelleenrakennuksessa. Muurin jokipäässä on Borj Sidi Makhlouf -linnake. Kaikki nämä rakenteet eivät siis ole samasta rakennusvaiheesta.\n\nVuonna 1873 muuri ja Bab Chellahin uudelleenrakennettu asu olivat jo paikalla. Nykyisessä kaupungissa muuri auttaa edelleen tunnistamaan medinan reunan. Sen kohdalla näkyy hyvin, kuinka vanhemman kaupunkisuunnitelman sisään syntyi myöhempi kaupunginosa omine rajoineen.",
+      "teksti": "Andalusialainen muuri rajaa Rabatin medinan eteläreunaa. Se rakennettiin 1600-luvun alkupuolella keskiaikaisen almohadikaupungin sisään. Ulomman kaupunginmuurin sisäpuolella oli ollut myös harvaan asuttuja ja avoimia alueita; myöhempi muuri rajasi tiiviimmän asutuksen oman kokonaisuutensa sisään.\n\nEspanjasta karkotettuja moriskoja asettui tälle alueelle. Muurin portit yhdistivät kaupunginosan eri suuntiin: Bab Mellah liittyi vanhaan juutalaiskortteliin, ja Bab Chellah sai monumentaalisen nykyasunsa 1800-luvun alun uudelleenrakennuksessa. Muurin jokipäässä on Borj Sidi Makhlouf -linnake.",
       "kuvat": [
         {
           "tiedosto": "Muraille des Andalous 2 - Rabat.JPG",
@@ -404,7 +404,7 @@
     },
     "Moulay Slimanen moskeija": {
       "aika": "1800-luvun alku",
-      "teksti": "Moulay Slimanen moskeija sijaitsee Rabatin medinassa Andalusialaisen muurin pohjoispuolella. Sulttaani Moulay Slimane rakennutti sen 1800-luvun alussa, ja rakennus kantaa hänen nimeään. Paikka on Souika Streetin ja Sidi Fateh Streetin risteyksessä lähellä Bab Bouiba -porttia. Moskeija kuuluu siten vanhojen katujen ja porttien muodostamaan kaupunkiympäristöön.\n\nRakennuksen sisällä on perinteinen avoin piha, sahn, ja rukoussalin tilaa jakavat pylväät ja kaaret. Kokonaisuuteen kuuluu myös minareetti. Moskeija kuuluu 1800-luvun alun Rabatiin. Medina oli jo pitkään asuttu, mutta nykyinen uusi kaupunginosa rakennettiin vasta myöhemmin, 1900-luvulla.\n\nVuonna 1873 moskeija oli jo olemassa. Minareetti kohoaa medinan valkoisten talojen ja kapeiden katujen keskeltä. Se kuuluu vanhan keskustan siluettiin yhdessä naapurirakennusten kanssa.",
+      "teksti": "Moulay Slimanen moskeija sijaitsee Rabatin medinassa Andalusialaisen muurin pohjoispuolella. Sulttaani Moulay Slimane rakennutti sen 1800-luvun alussa, ja rakennus kantaa hänen nimeään. Paikka on Souika Streetin ja Sidi Fateh Streetin risteyksessä lähellä Bab Bouiba -porttia.\n\nRakennuksen sisällä on perinteinen avoin piha, sahn, ja rukoussalin tilaa jakavat pylväät ja kaaret. Kokonaisuuteen kuuluu myös minareetti. Moskeija kuuluu 1800-luvun alun Rabatiin. Medina oli jo pitkään asuttu, mutta nykyinen uusi kaupunginosa rakennettiin vasta myöhemmin, 1900-luvulla.",
       "kuvat": [
         {
           "tiedosto": "Moulay Slimane Mosque.jpg",
@@ -430,7 +430,7 @@
     },
     "Chellahin raunioalue": {
       "aika": "Antiikki ja keskiaika",
-      "teksti": "Chellah on muurein rajattu raunioalue, jossa eri aikakaudet sijaitsevat osittain päällekkäin. Roomalainen Sala Colonia rakennettiin aiempien mauretanialaisten rakenteiden päälle. Rinteeseen tehtiin keinotekoisia tasanteita, ja kaupungissa oli pääkatuja, forum, temppeleitä ja kylpylä. Kaikkien rauniorakennusten tulkinta ei ole yhtä varma.\n\nKeskiajan lopulla marinidien hallitsijasuku otti alueen dynastiansa hautausmaaksi. Uskonnolliseen kokonaisuuteen kuului moskeija, hautakammioita ja oppilaitos. Marinidien muurien rajaama alue on aiempaa roomalaista kaupunkia pienempi. Nykyisellä puutarhamaisella raunioalueella elää myös haikaroita, jotka pesivät puissa ja säilyneessä minareetissa.\n\nVuonna 1873 marinidien rauniot olivat jo paikalla. Roomalaiskorttelin nykyinen avoin näkymä syntyi vasta myöhemmistä arkeologisista kaivauksista. Kiveä katsellessa on siis erotettava toisistaan rakennuksen ikä ja se, milloin sen jäännökset saatiin uudelleen näkyviin.",
+      "teksti": "Chellah on muurein rajattu raunioalue, jossa eri aikakaudet sijaitsevat osittain päällekkäin. Roomalainen Sala Colonia rakennettiin aiempien mauretanialaisten rakenteiden päälle. Rinteeseen tehtiin keinotekoisia tasanteita, ja kaupungissa oli pääkatuja, forum, temppeleitä ja kylpylä. Kaikkien rauniorakennusten tulkinta ei ole yhtä varma.\n\nKeskiajan lopulla marinidien hallitsijasuku otti alueen dynastiansa hautausmaaksi. Uskonnolliseen kokonaisuuteen kuului moskeija, hautakammioita ja oppilaitos. Marinidien muurien rajaama alue on aiempaa roomalaista kaupunkia pienempi. Nykyisellä puutarhamaisella raunioalueella elää myös haikaroita, jotka pesivät puissa ja säilyneessä minareetissa.\n\nVuonna 1873 marinidien rauniot olivat jo paikalla. Roomalaiskorttelin nykyinen avoin näkymä syntyi vasta myöhemmistä arkeologisista kaivauksista.",
       "kuvat": [
         {
           "tiedosto": "Chellah interior hill.jpg",
@@ -443,7 +443,7 @@
     },
     "Borj Sidi Makhlouf -linnake": {
       "aika": "1600–1700-luvut",
-      "teksti": "Borj Sidi Makhlouf on Rabatin joenpuoleinen linnake medinan itäreunassa. Se liittyy Andalusialaisen muurin Bou Regregin puoleiseen päähän. Linnake rakennettiin suojaamaan läheistä satamaa, joten sen paikka kertoo joen merkityksestä vanhalle kaupungille. Pyöristetty rakennus erottuu pitkästä muurista omana puolustusrakenteenaan.\n\nLinnakkeen nimi viittaa paikalliseen Sidi Makhloufiin, jonka hauta on sen yhteydessä. Rakennuksen historia ulottuu 1600–1700-luvuille. Sen sijainti liittyy vanhaan kaupunginrajaan: tässä Andalusialainen muuri kohtaa joen suuntaan avautuvan puolustuslinnakkeen.\n\nVuonna 1873 linnake oli jo olemassa. Se kuului medinan joenpuoleiseen reunaan ja sataman puolustukseen. Nykyisin sen paikka auttaa seuraamaan Andalusialaisen muurin kulkua: muuri ja jokinäkymä kohtaavat linnakkeen ympärillä.",
+      "teksti": "Borj Sidi Makhlouf on Rabatin joenpuoleinen linnake medinan itäreunassa. Se liittyy Andalusialaisen muurin Bou Regregin puoleiseen päähän. Linnake rakennettiin suojaamaan läheistä satamaa, joten sen paikka kertoo joen merkityksestä vanhalle kaupungille. Pyöristetty rakennus erottuu pitkästä muurista omana puolustusrakenteenaan.\n\nLinnakkeen nimi viittaa paikalliseen Sidi Makhloufiin, jonka hauta on sen yhteydessä. Rakennuksen historia ulottuu 1600–1700-luvuille.",
       "kuvat": [
         {
           "tiedosto": "Sidi Makhlouf 1.jpg",
@@ -522,10 +522,6 @@
   },
   "ehdotukset": {
     "lentoasema": "Rabat–Salé Airport (RBA)",
-    "huomiot": [
-      "Ennen–nyt-paria ei ole: valokuva on Chellahin haikaroista vuodelta 2007.",
-      "Väkiluku on pyöristetty noin puoleksi miljoonaksi ja laajuus nimetty Rabatin prefektuuriksi (2024).",
-      "Hassan-tornin tarina jätetty pois kontekstin lähinoston vuoksi; Great Mosquen ja As-Sunnan modernit minareetit eivät ole kohteina."
-    ]
+    "huomiot": []
   }
 }

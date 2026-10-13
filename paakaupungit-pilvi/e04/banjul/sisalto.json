@@ -61,30 +61,30 @@
       "source": "https://en.wikipedia.org/wiki/Banjul"
     },
     {
-      "q": "Mitä Gambian kulttuuriperintöorganisaation arkistoon on tallennettu?",
+      "q": "Millä nimellä Banjul tunnettiin aiemmin?",
       "options": [
-        "Historiaa, laulua ja perinteitä",
-        "Sääennusteita ja satamakuulutuksia",
-        "Torimainoksia ja kuljetustilauksia",
-        "Urheiluselostuksia ja uutislähetyksiä"
+        "Bathurst",
+        "Victoria",
+        "Georgetown",
+        "Freetown"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Arkistoa ylläpitää sama kulttuuriperintöorganisaatio kuin kansallismuseota.",
-      "fact": "Arkistoon on kerätty haastatteluja, kertomuksia, laulua ja seremonioihin liittyvää tietoa.",
-      "source": "https://ncac.gm/oralarchieve/"
+      "hint": "Nykyinen saarikaupunki kasvoi brittiläisen kauppa- ja vartioaseman ympärille.",
+      "fact": "Banjulin aiempi nimi oli Bathurst.",
+      "source": "https://en.wikipedia.org/wiki/Banjul"
     },
     {
       "q": "Kehen Albertin torin nimi viittaa?",
       "options": [
         "Victorian puolisoon prinssi Albertiin",
-        "Kuningas Edvard VII:n kruunajaisiin",
-        "Albert-nimiseen jokihöyrylaivaan",
-        "Banjulin ensimmäiseen pormestariin"
+        "Saksin kuninkaaseen Albertiin",
+        "Itävallan arkkiherttua Albrechtiin",
+        "Preussin prinssiin Albrechtiin"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Nimen taustalla on siirtomaa-ajan yhteys Britannian hoviin.",
+      "hint": "Tori sai nimensä ennen kuin kaupungista tuli Banjul.",
       "fact": "Royal Albert Market nimettiin kuningatar Victorian puolison, prinssi Albertin mukaan.",
       "source": "https://en.wikipedia.org/wiki/Albert_Market"
     }
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Albertin nimi, paikallinen arki",
-          "teksti": "Albertin torin nimi kuljettaa Banjuliin palan Britannian kuninkaallista historiaa: Royal Albert Market nimettiin kuningatar Victorian puolison, prinssi Albertin mukaan. Torin alku ajoittuu 1800-luvun puoliväliin, joten kauppapaikka oli olemassa jo isoisän matkavuonna 1873. Liberation Avenuen torissa on tiheä kojujen ja käytävien verkosto. Prinssin mukaan nimetty kauppapaikka palvelee nykyistä paikallista arkea: käytäviltä hankitaan elintarvikkeita ja arjen tavaroita tiheän saarikaupungin asukkaille.",
+          "teksti": "Albertin torin nimi kuljettaa Banjuliin palan Britannian kuninkaallista historiaa: Royal Albert Market nimettiin kuningatar Victorian puolison, prinssi Albertin mukaan. Torin alku ajoittuu 1800-luvun puoliväliin, joten kauppapaikka oli olemassa jo isoisän matkavuonna 1873. Liberation Avenuen torissa on tiheä kojujen ja käytävien verkosto. Käytäviltä hankitaan elintarvikkeita ja arjen tavaroita saarikaupungin asukkaille.",
           "tiedosto": "Gambia03Banjul029 (5400734200).jpg",
           "lyhyt": "Albertin tori on Banjulin katukaupan paikka.",
           "selite": "Albertin torin irtotavara kuuluu Banjulin paikallisen kaupankäynnin arkeen.",
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Saarikaupunki ja mantereen Kanifing",
-          "teksti": "Banjulin sijainnin ymmärtää paremmin, kun erottaa toisistaan saarikaupungin ja sitä ympäröivän Suur-Banjulin. Varsinainen pääkaupunki on St Mary's -saarella Gambia-joen suulla. Laajempaan kaupunkialueeseen kuuluu myös Kanifingin kunta mantereella, ja monet matkailijoiden majoitusalueet sijaitsevat sillä puolella. Siltojen yli kuljettaessa vaihtuu siten myös kaupunkipaikka. Albertin tori ja pääkaupungin vanha ydin kuuluvat pieneen saarikaupunkiin, jonka nimi kulkee helposti koko rannikkoalueen mukana.",
+          "teksti": "Banjulin sijainnin ymmärtää paremmin, kun erottaa toisistaan saarikaupungin ja sitä ympäröivän Suur-Banjulin. Varsinainen pääkaupunki on St Mary's -saarella Gambia-joen suulla. Laajempaan kaupunkialueeseen kuuluu myös Kanifingin kunta mantereella, ja monet matkailijoiden majoitusalueet sijaitsevat sillä puolella. Albertin tori ja pääkaupungin vanha ydin kuuluvat pieneen saarikaupunkiin.",
           "tiedosto": "Banjul, The Gambia.JPG",
           "lyhyt": "Banjul on pieni saarikaupunki laajan Gambia-joen suun äärellä.",
           "selite": "Banjulin saarikaupunki sijaitsee Gambia-joen suun reunassa, vastarannalla olevasta Barrasta vesialueen erottamana.",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Muisti ei ole vain paperia",
-          "teksti": "Banjulissa kulttuuriperintöä kerätään myös kuuntelemalla. Gambian kulttuuriperintöorganisaation suullisen perinteen arkistoon on tallennettu haastatteluja, kertomuksia, laulua ja seremonioihin liittyvää tietoa. 1900-luvun loppupuolella alkanut työ ulottuu Gambian lisäksi laajempaan Senegambiaan. Tallenteissa säilyy perinteentaitajien oma ääni kirjallisten lähteiden rinnalla. Arkiston ja kansallismuseon työ täydentävät toisiaan: menneisyyttä voi lähestyä sekä esineen että kerrotun muiston kautta.",
+          "teksti": "Banjulissa kulttuuriperintöä kerätään myös kuuntelemalla. Gambian kulttuuriperintöorganisaation suullisen perinteen arkistoon on tallennettu haastatteluja, kertomuksia, laulua ja seremonioihin liittyvää tietoa. 1900-luvun loppupuolella alkanut työ ulottuu Gambian lisäksi laajempaan Senegambiaan. Tallenteissa säilyy perinteentaitajien oma ääni kirjallisten lähteiden rinnalla.",
           "tiedosto": "Uher Report Monitor 4000 (31591411977).jpg",
           "lyhyt": "Kelanauhuri on puheen tallentamiseen käytetty tekninen väline.",
           "selite": "Manchesterissa kuvattu kelanauhuri havainnollistaa puheen tallentamista.",
@@ -165,7 +165,7 @@
       ],
       "matkailijalle": {
         "kuva": {},
-        "kappale": "Banjulin torikaduille tullessa kannattaa erottaa saarikaupunki mantereen majoitusalueista. Albertin tori, kansallismuseo ja jokisuun näkymät muodostavat oman kaupunkiretken, jota voi täydentää sovitulla Tanbin luontokäynnillä. Banjul–Barra-lautta vie joen toiselle rannalle, mutta kulkujärjestelyt tarkistetaan ennen matkaa. Jokisuun ranta liittyy lauttaliikenteeseen ja kosteikon ympäristöön.",
+        "kappale": "Banjulin torikaduille tullessa kannattaa erottaa saarikaupunki mantereen majoitusalueista. Albertin tori, kansallismuseo ja jokisuun näkymät muodostavat oman kaupunkiretken, jota voi täydentää sovitulla Tanbin luontokäynnillä. Banjul–Barra-lautta kuljettaa matkustajia ja ajoneuvoja joen toiselle rannalle.",
         "artikkeli": {
           "nimi": "Matkailijan Banjul",
           "taitto": "opas",
@@ -174,7 +174,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Banjulin kansainvälinen lentoasema eli Yundum sijaitsee mantereella. Monet rannikkohotellit ovat myös Kanifingin suunnalla, eri alueella kuin vanha saarikaupunki. Sovi kuljetuksen lähtöpaikka majoituksesi osoitteen mukaan. Banjul–Barra-lautta kuljettaa matkustajia ja ajoneuvoja jokisuun toiselle puolelle.",
+              "teksti": "Banjulin kansainvälinen lentoasema eli Yundum sijaitsee mantereella. Monet rannikkohotellit ovat myös Kanifingin suunnalla, eri alueella kuin vanha saarikaupunki. Banjul–Barra-lautta kuljettaa matkustajia ja ajoneuvoja jokisuun toiselle puolelle.",
               "kuva": {
                 "tiedosto": "Banjul, The Gambia (CAPELLA C09 SP GEO HH 20241121154435 20241121154459).png",
                 "lyhyt": "Satelliitin tutkakuva näyttää Banjulin saarikaupungin vuonna 2024.",
@@ -208,7 +208,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Päivän ylimmät normaalilämpötilat pysyvät vuoden mittaan noin 32–34 asteessa. Alkuvuoden öiden alimmat ovat noin 18–20 astetta. Sateet painottuvat kesä–lokakuuhun, ja elokuussa niitä kertyy noin 350 millimetriä. Kuivempi vuodenaika sopii kävelypainotteisen matkan suunnitteluun, ja sateisena kautena reitteihin sekä kuljetuksiin kannattaa jättää joustoa."
+              "teksti": "Päivän ylimmät normaalilämpötilat pysyvät vuoden mittaan noin 32–34 asteessa. Alkuvuoden öiden alimmat ovat noin 18–20 astetta. Sateet painottuvat kesä–lokakuuhun, ja elokuussa niitä kertyy noin 350 millimetriä. Kuivempi vuodenaika sopii kävelypainotteisen matkan suunnitteluun."
             }
           ],
           "matkailu": {
@@ -241,20 +241,20 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Ennen matkapäätöstä",
-                "teksti": "Tarkista Gambian ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
+                "otsikko": "Matkan järjestelyt",
+                "teksti": "Jokisuun virrat voivat olla voimakkaita. Veneilyn, uimisen ja lauttakuljetusten olosuhteet selvitetään paikallisesti ennen lähtöä."
               },
               {
                 "otsikko": "Saaren ja mantereen ero",
                 "teksti": "Banjulin vanha ydin on saarella, Kanifingin alue ja Yundumin lentoasema mantereella."
               },
               {
-                "otsikko": "Ranta",
-                "teksti": "Jokisuun virrat voivat olla voimakkaita. Tarkista veneilyn ja uimisen olot paikallisesti."
+                "otsikko": "Kosteikon kanavat",
+                "teksti": "Tanbin vuorovesikanavia kutsutaan paikallisesti nimellä bolongs."
               },
               {
-                "otsikko": "Torit",
-                "teksti": "Pidä mukana vain tarpeellinen äläkä jätä tavaroita valvomatta."
+                "otsikko": "Osterien keruu",
+                "teksti": "Tanbin perinteiseen rannikkotyöhön kuuluu Jola-naisten harjoittama osterien keruu, paahtaminen ja myynti."
               }
             ]
           },
@@ -280,7 +280,7 @@
       "nostot": [
         {
           "otsikko": "Metsän välissä kulkee vettä",
-          "teksti": "Tanbissa metsä ja vesi lomittuvat toisiinsa. Mangrovekasvillisuuden välissä kiertävät vuorovesikanavat, joita kutsutaan paikallisesti nimellä bolongs. Kosteikko levittäytyy Banjulin länsi- ja lounaispuolen rannoille, ja siihen kuuluu myös laguuneja, suolamarskeja ja liejuisia pintoja. Kuivemmilla reunoilla kasvillisuus muuttuu toisenlaiseksi kuin veden vaikutuksen alaisella rannalla. Tanbi on siten monen ympäristön kokonaisuus: avoin vesi, puiden lomassa kulkevat väylät ja rannikon maa liittyvät samaan järjestelmään.",
+          "teksti": "Tanbissa metsä ja vesi lomittuvat toisiinsa. Mangrovekasvillisuuden välissä kiertävät vuorovesikanavat, joita kutsutaan paikallisesti nimellä bolongs. Kosteikko levittäytyy Banjulin länsi- ja lounaispuolen rannoille, ja siihen kuuluu myös laguuneja, suolamarskeja ja liejuisia pintoja. Kuivemmilla reunoilla kasvillisuus muuttuu toisenlaiseksi kuin veden vaikutuksen alaisella rannalla.",
           "tiedosto": "Magroves at lamin lodge gambia (32863863515).jpg",
           "lyhyt": "Laminin mangroverannan pienissä uomissa kulkee vettä puiden juurten välissä.",
           "selite": "Laminin seudun mangroverannalla veden täyttämät pienet uomat kulkevat juurten lomassa, Tanbin rannikkoluonnon ympäristössä.",
@@ -298,7 +298,7 @@
         },
         {
           "otsikko": "Osterit kuuluvat työpäivään",
-          "teksti": "Tanbin kosteikko on myös elinkeinojen paikka. Pienimuotoisen kalastuksen rinnalla kerätään ostereita. Alueen perinteisiin liittyy Jola-naisten työ, jossa osterit kulkevat keruusta paahtamiseen ja myyntiin. Kosteikon reunoilla harjoitetaan myös puutarhaviljelyä ja riisinviljelyä. Saman rannikkoympäristön käyttötavat ulottuvat näin vedestä kuiviin reunoihin: kalastus kuuluu veteen, osterin keruu mangroverantaan ja viljely reuna-alueille. Luonto ja paikallinen työ ovat saman kosteikon rinnakkaisia puolia.",
+          "teksti": "Tanbin kosteikko on myös elinkeinojen paikka. Pienimuotoisen kalastuksen rinnalla kerätään ostereita. Alueen perinteisiin liittyy Jola-naisten työ, jossa osterit kulkevat keruusta paahtamiseen ja myyntiin. Kosteikon reunoilla harjoitetaan myös puutarhaviljelyä ja riisinviljelyä. Ostereita kerätään mangroveista kuivana kautena, ja kypsentämiseen käytettävät polttopuut kootaan samalla.",
           "tiedosto": "Gambia (9383674042).jpg",
           "lyhyt": "Osterinkuoria Tanbin kosteikossa.",
           "selite": "Tanbissa kuvattu kasa tyhjiä osterinkuoria; keruu, paahtaminen ja myynti kuuluvat paikallisiin elinkeinoihin.",
@@ -307,7 +307,7 @@
         },
         {
           "otsikko": "Lintu ylittää vuodenaikojen rajan",
-          "teksti": "Tanbin linnustossa kohtaavat paikalliset pesijät ja kaukaa saapuvat muuttajat. Pohjoisen talven aikaan kosteikossa tavataan myös muuttolintuja, kuten sääksiä ja mustapyrstökuireja. Mangroverantojen, matalien vesien ja muun kosteikkoluonnon kokonaisuus palvelee monenlaista linnustoa. Sama maisema on siten sekä pysyvien asukkaiden että talvivieraiden ympäristö. Sääksi ja mustapyrstökuiri yhdistävät Banjulin rannikon kaukaisiin pesimäalueisiin: sama lintu käyttää eri seutujen kosteikkoja vuodenaikojen mukaan.",
+          "teksti": "Tanbin linnustossa kohtaavat paikalliset pesijät ja kaukaa saapuvat muuttajat. Pohjoisen talven aikaan kosteikossa tavataan myös muuttolintuja, kuten sääksiä ja mustapyrstökuireja. Mangroverantojen, matalien vesien ja muun kosteikkoluonnon kokonaisuus palvelee monenlaista linnustoa. Sääksi ja mustapyrstökuiri yhdistävät Banjulin rannikon kaukaisiin pesimäalueisiin: sama lintu käyttää eri seutujen kosteikkoja vuodenaikojen mukaan.",
           "tiedosto": "20260411 osprey wethersfield cove PD03910.jpg",
           "lyhyt": "Sääksi on yksi Tanbissa tavatuista muuttolinnuista; lajikuva Yhdysvalloista.",
           "selite": "Sääksi on Tanbissa tavattu muuttolintu, jota tämä Yhdysvalloissa vuonna 2026 otettu lajikuva havainnollistaa.",
@@ -350,13 +350,13 @@
   "nahtavyydet": {
     "Albertin tori": {
       "aika": "1800-luvun puoliväli",
-      "teksti": "Albertin tori kuuluu Banjulin vanhan saarikaupungin asiointipaikkoihin. Liberation Avenuella sijaitseva katutori tunnettiin aiemmin virallisella nimellä Royal Albert Market. Nykyinen tiheä kojujen ja käytävien ympäristö on kauppapaikka, jossa historiallinen nimi on osa tämän päivän katukuvaa.\n\nTorin alku ajoittuu 1800-luvun puoliväliin, ja nimi tulee kuningatar Victorian puolisosta prinssi Albertista. Isoisän matkavuonna 1873 tori oli siten jo olemassa.\n\nAlbertin tori sijaitsee varsinaisessa Banjulissa, St Mary's -saaren kaupungissa. Serrekundan markkinat sijaitsevat mantereella eri paikkakunnalla kuin Albertin tori. Saarikaupungin historia ja paikallinen kaupankäynti kohtaavat samalla torialueella.",
+      "teksti": "Albertin tori kuuluu Banjulin vanhan saarikaupungin asiointipaikkoihin. Liberation Avenuella sijaitseva katutori tunnettiin aiemmin virallisella nimellä Royal Albert Market. Nykyinen tori muodostuu tiheästä kojujen ja käytävien verkosta.\n\nTorin alku ajoittuu 1800-luvun puoliväliin, ja nimi tulee kuningatar Victorian puolisosta prinssi Albertista.\n\nAlbertin tori sijaitsee varsinaisessa Banjulissa, St Mary's -saaren kaupungissa. Serrekundan markkinat sijaitsevat mantereella eri paikkakunnalla kuin Albertin tori.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Gambia-joen suu": {
       "aika": "Luonnonpaikka",
-      "teksti": "Gambia-joki saavuttaa Atlantin Banjulin kohdalla. Pääkaupungin St Mary's -saari on jokisuun reunassa, ja vastarannalla on Barra. Rannikon lähellä joki levenee laajaksi estuaariksi, jossa meri ja joen alajuoksu liittyvät samaan vesialueeseen.\n\nBanjulin ja Barran lautta ylittää tätä suualuetta sekä matkustajien että ajoneuvojen kanssa. Barrasta yhteydet jatkuvat pohjoisrannan teitä pitkin Senegalin suuntaan. Ylitys on eri paikassa kuin yläjuoksun sillat; jokisuun kuva ei myöskään esitä joen lähdettä kaukana sisämaassa.\n\nIsoisän matkavuonna 1873 jokisuu ja Bathurst-niminen kaupunki olivat jo olemassa. Lauttaliikenteen ja rannikon rakennusten vaiheet ovat muuttaneet jokisuun käyttöä myöhempinä aikoina. Paikan jatkuva merkitys liittyy veden muodostamaan yhteyteen: samassa ympäristössä kulkevat pienveneet, laivaliikenne ja joen rannalta toiselle siirtyvät matkustajat.",
+      "teksti": "Gambia-joki saavuttaa Atlantin Banjulin kohdalla. Pääkaupungin St Mary's -saari on jokisuun reunassa, ja vastarannalla on Barra. Rannikon lähellä joki levenee laajaksi estuaariksi, jossa meri ja joen alajuoksu liittyvät samaan vesialueeseen.\n\nBanjulin ja Barran lautta ylittää tätä suualuetta sekä matkustajien että ajoneuvojen kanssa. Barrasta yhteydet jatkuvat pohjoisrannan teitä pitkin Senegalin suuntaan.",
       "kuvat": [
         {
           "tiedosto": "Banjul Ferry (5197916345).jpg",
@@ -369,7 +369,7 @@
     },
     "Tanbin kosteikko": {
       "aika": "Luonnonpaikka, myöhempi suojelualue",
-      "teksti": "Tanbi levittäytyy Banjulin länsi- ja lounaispuolen rannoille Gambia-joen suun tuntumaan. Mangrovekasvillisuus, vuorovesikanavat, laguunit ja liejuiset pinnat muodostavat yhtenäisen rannikkokosteikon. Kosteikon luontopaikat ulottuvat laajalle kaupungin vierellä ja rannikon suunnassa.\n\nKosteikolla on monta tehtävää samanaikaisesti. Se vastaanottaa vettä, osallistuu rannan vakauttamiseen ja sedimenttien liikkeeseen sekä toimii kaupungin hydrologisena puskurina. Linnuille ja muille kosteikkoeläimille se on elinympäristö, ja paikalliseen työhön kuuluvat kalastus, osterin keruu sekä viljely reuna-alueilla. Tanbi on myös Ramsar-kohde.\n\nNykyinen suojelustatus kuuluu myöhempään aikaan kuin isoisän matkavuosi 1873. Rannikkoluonnon merkitys näkyy yhä siinä, kuinka vesi, elinkeinot ja eläinten ympäristö kohtaavat kaupungin vierellä.",
+      "teksti": "Tanbi levittäytyy Banjulin länsi- ja lounaispuolen rannoille Gambia-joen suun tuntumaan. Mangrovekasvillisuus, vuorovesikanavat, laguunit ja liejuiset pinnat muodostavat yhtenäisen rannikkokosteikon.\n\nKosteikolla on monta tehtävää samanaikaisesti. Se vastaanottaa vettä, osallistuu rannan vakauttamiseen ja sedimenttien liikkeeseen sekä toimii kaupungin hydrologisena puskurina. Linnuille ja muille kosteikkoeläimille se on elinympäristö, ja paikalliseen työhön kuuluvat kalastus, osterin keruu sekä viljely reuna-alueilla. Tanbi on myös Ramsar-kohde.",
       "kuvat": [
         {
           "tiedosto": "Gambia (9383665170).jpg",
@@ -448,16 +448,6 @@
   },
   "ehdotukset": {
     "lentoasema": "Banjul International Airport (BJL)",
-    "huomiot": [
-      "C-luonnos: matkailijalle-pystykuva puuttuu; kuva-olio on tyhjä, ei keksittyä tiedostoa.",
-      "Albertin torin erillinen kohdekuva puuttuu; kuvat-lista on tyhjä ja alkuperäinen tarkistin raportoi siitä virheen, jota ei ole hyväksytty poikkeukseksi.",
-      "Kolmen karttakohteen poikkeus: pieni historiallinen saarikaupunki, tori sekä jokisuun ja Tanbin luonto; modernit suojatut teokset pois.",
-      "Kuvat vain B:n selected.json:n 17 valitusta; yleiset nauhuri-, sääksi- ja riisikuvat on erotettu paikallisista valokuvista.",
-      "UM Gambia 24.8.2026: Noudata erityistä varovaisuutta; luettu A-vaiheessa 11.10.2026.",
-      "Tanbin aluepiste ja Gambia-joen suun qualifier-piste eivät ole vierailuportteja; rajaus kattaa pisteet, ei koko kosteikon hallinnollista aluetta.",
-      "Opas 1:n SAR-kuva on vuoden 2024 maantieteellinen yleiskuva, ei nykyinen kulkuneuvokuva.",
-      "Ei ennen–nyt-paria; matkakirjan valokuva on Tanbin nykyajan luontokuva vuodelta 2013.",
-      "Tämä ei ole valmis C-vaihe tai toimitusvalmis kaupunki ennen puuttuvien kuvaporttien ja riippumattoman D-tarkistuksen ratkaisua."
-    ]
+    "huomiot": []
   }
 }

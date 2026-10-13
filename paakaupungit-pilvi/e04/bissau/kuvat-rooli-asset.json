@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "bissau",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+  "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
   "assets": [
     {
       "era": "e04",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
         "targetBeforeSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
         "semanticContextSHA256": "f74617b03a3a0ee6fa3c9f2eb9e3caa661101a1b79eb30db53d3087e9c3f89aa",
@@ -238,7 +238,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "targetAfterSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
       "contextAfterSHA256": "f74617b03a3a0ee6fa3c9f2eb9e3caa661101a1b79eb30db53d3087e9c3f89aa",
       "ownerApproved": true,
@@ -263,7 +263,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "e972f0f3831cf073872c6765b73d7231c75b2e03c053af40d3df1cd7f30e4987",
+        "sameImageExportSHA256": "c8b9efe0cc29c3db039d760354ff44baa94232b137a417ee728f9abb3621d272",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -313,10 +321,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2b7a250a254f3e42fa36fcb6cf2d265b6378a063d5f1e738f0040841a255c6e1",
-        "semanticContextSHA256": "2b7a250a254f3e42fa36fcb6cf2d265b6378a063d5f1e738f0040841a255c6e1",
+        "targetBeforeSHA256": "963db97f587ff1004d5dd902e7e83c12850b24fd19fd4a76b21a64b33398a3a6",
+        "semanticContextSHA256": "963db97f587ff1004d5dd902e7e83c12850b24fd19fd4a76b21a64b33398a3a6",
         "subjectTitle": "Bandimissa ostetaan arkea",
         "targetState": "existing-target"
       },
@@ -495,9 +503,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
-      "targetAfterSHA256": "2b7a250a254f3e42fa36fcb6cf2d265b6378a063d5f1e738f0040841a255c6e1",
-      "contextAfterSHA256": "2b7a250a254f3e42fa36fcb6cf2d265b6378a063d5f1e738f0040841a255c6e1",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+      "targetAfterSHA256": "963db97f587ff1004d5dd902e7e83c12850b24fd19fd4a76b21a64b33398a3a6",
+      "contextAfterSHA256": "963db97f587ff1004d5dd902e7e83c12850b24fd19fd4a76b21a64b33398a3a6",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -520,7 +528,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "563d1d678c805167bd6e489ddd7d966d1a002a044d7d131a0ba5d06c4b959c5d",
+        "sameImageExportSHA256": "2165eaeb2a22d4f5729cdd08db7400cc86ce5176591ddb24b8b672204668f21d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -573,7 +589,7 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
         "targetBeforeSHA256": "370b2462df35e91771c1b4e8e89d6c49d0657209f30b4386a65d9959481feba9",
         "semanticContextSHA256": "370b2462df35e91771c1b4e8e89d6c49d0657209f30b4386a65d9959481feba9",
@@ -792,7 +808,7 @@
         "tiedosto": "View of Bissau Velho, Bissau.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "targetAfterSHA256": "370b2462df35e91771c1b4e8e89d6c49d0657209f30b4386a65d9959481feba9",
       "contextAfterSHA256": "370b2462df35e91771c1b4e8e89d6c49d0657209f30b4386a65d9959481feba9",
       "ownerApproved": true,
@@ -817,7 +833,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "84eb5ebf09ad9e0a81e5c25ddd653cc90a48192681fdf49ef106c4e37ad96873",
+        "sameImageExportSHA256": "84eb5ebf09ad9e0a81e5c25ddd653cc90a48192681fdf49ef106c4e37ad96873",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -870,7 +894,7 @@
         2328
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
         "targetBeforeSHA256": "684d12a103b01532596e12e1c10fcf6976f79b626070c86a60275db2e2d105a1",
         "semanticContextSHA256": "684d12a103b01532596e12e1c10fcf6976f79b626070c86a60275db2e2d105a1",
@@ -1089,7 +1113,7 @@
         "tiedosto": "Porto de Bissau 03.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "targetAfterSHA256": "684d12a103b01532596e12e1c10fcf6976f79b626070c86a60275db2e2d105a1",
       "contextAfterSHA256": "684d12a103b01532596e12e1c10fcf6976f79b626070c86a60275db2e2d105a1",
       "ownerApproved": true,
@@ -1114,7 +1138,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "ba3ecd502b78ebc6b2fb6c9141a12f72625d66185e6cf5cfc23f137cd4d9f943",
+        "sameImageExportSHA256": "ba3ecd502b78ebc6b2fb6c9141a12f72625d66185e6cf5cfc23f137cd4d9f943",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1167,7 +1199,7 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
         "targetBeforeSHA256": "bb882c83dc88d785c8035f6eec1057e87ad0fa33e1526b5dc2960db5f6c41ee7",
         "semanticContextSHA256": "bb882c83dc88d785c8035f6eec1057e87ad0fa33e1526b5dc2960db5f6c41ee7",
@@ -1388,7 +1420,7 @@
         "tiedosto": "Vue du ciel de Bissau.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "targetAfterSHA256": "bb882c83dc88d785c8035f6eec1057e87ad0fa33e1526b5dc2960db5f6c41ee7",
       "contextAfterSHA256": "bb882c83dc88d785c8035f6eec1057e87ad0fa33e1526b5dc2960db5f6c41ee7",
       "ownerApproved": true,
@@ -1413,7 +1445,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "62286fdbd315a8260be758a9d95371b076a051f04c3fe9a530fd8306ede79e65",
+        "sameImageExportSHA256": "62286fdbd315a8260be758a9d95371b076a051f04c3fe9a530fd8306ede79e65",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1466,10 +1506,10 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b5d4ac1b9dc35fe545496251e7344c44536b754565e14c67f5283c37c33c5771",
-        "semanticContextSHA256": "b885dffd45e874ad3c76407329f812db51d5aae59fd2bc462d129812a26312dc",
+        "semanticContextSHA256": "511d7939b8af381e47acbdfd5056598f4500666d80c1e84b842a5263d8138989",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -1688,9 +1728,9 @@
         "tiedosto": "Bissau Velho- cidade de Bissau.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "targetAfterSHA256": "b5d4ac1b9dc35fe545496251e7344c44536b754565e14c67f5283c37c33c5771",
-      "contextAfterSHA256": "b885dffd45e874ad3c76407329f812db51d5aae59fd2bc462d129812a26312dc",
+      "contextAfterSHA256": "511d7939b8af381e47acbdfd5056598f4500666d80c1e84b842a5263d8138989",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1713,7 +1753,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "82f1b07300b4d92b8d63f1fa12bc634d3e60d874aedec36c86569923c87dfea2",
+        "sameImageExportSHA256": "82f1b07300b4d92b8d63f1fa12bc634d3e60d874aedec36c86569923c87dfea2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1769,10 +1817,10 @@
         2282
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9d165bdd9e6144c4ee7e44175321b58aeaa4445713146ede5b10b7d7c37df086",
-        "semanticContextSHA256": "8b2db55a5f408eea63432de87306c335ae497a5bf297a2204342a5df04430872",
+        "semanticContextSHA256": "cf3b301d166e0bb1b30d40c4262fc2422401984690202a8ce933cf6dbe835e48",
         "subjectTitle": "Torilta kokoelmien muistiin",
         "targetState": "existing-target"
       },
@@ -1988,9 +2036,9 @@
         "tiedosto": "Trust Flat Scan USB 19200.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "targetAfterSHA256": "9d165bdd9e6144c4ee7e44175321b58aeaa4445713146ede5b10b7d7c37df086",
-      "contextAfterSHA256": "8b2db55a5f408eea63432de87306c335ae497a5bf297a2204342a5df04430872",
+      "contextAfterSHA256": "cf3b301d166e0bb1b30d40c4262fc2422401984690202a8ce933cf6dbe835e48",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2013,7 +2061,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "b7a515bf6ff221f49f024d42eb0f18297b63125150c202b86a7d639dfc1a3b41",
+        "sameImageExportSHA256": "b7a515bf6ff221f49f024d42eb0f18297b63125150c202b86a7d639dfc1a3b41",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -2069,10 +2125,10 @@
         2268
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
         "targetBeforeSHA256": "cc40add1263b26d8e62b336d7b2d417f8cc1aa8288e14529c799dc16535b94eb",
-        "semanticContextSHA256": "70ebf52aec136aacecf7073796028f22ce79c5c9eb4c73b8ae3bd2d43be5f6ad",
+        "semanticContextSHA256": "65d340b1287bd012fbe3acf0d7f2d924a7530062ac8a52c886e8b25b586c17ca",
         "subjectTitle": "Kuiva alkuvuosi, sateinen loppukesä",
         "targetState": "existing-target"
       },
@@ -2288,9 +2344,9 @@
         "tiedosto": "Paysagem de Bissau.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "targetAfterSHA256": "cc40add1263b26d8e62b336d7b2d417f8cc1aa8288e14529c799dc16535b94eb",
-      "contextAfterSHA256": "70ebf52aec136aacecf7073796028f22ce79c5c9eb4c73b8ae3bd2d43be5f6ad",
+      "contextAfterSHA256": "65d340b1287bd012fbe3acf0d7f2d924a7530062ac8a52c886e8b25b586c17ca",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2313,7 +2369,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "0f5329cdff1b4b8381d270d49c6e5ad95b003c06e2702214ffc31b7789969b42",
+        "sameImageExportSHA256": "0f5329cdff1b4b8381d270d49c6e5ad95b003c06e2702214ffc31b7789969b42",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -2366,7 +2430,7 @@
         1280
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b55ecc5177446f92f20c402a51e5578e1e84f58fcd559a23f1a482775fd4ad68",
         "semanticContextSHA256": "b55ecc5177446f92f20c402a51e5578e1e84f58fcd559a23f1a482775fd4ad68",
@@ -2593,7 +2657,7 @@
         "tiedosto": "Bissau, Guinea-Bissau.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "targetAfterSHA256": "b55ecc5177446f92f20c402a51e5578e1e84f58fcd559a23f1a482775fd4ad68",
       "contextAfterSHA256": "b55ecc5177446f92f20c402a51e5578e1e84f58fcd559a23f1a482775fd4ad68",
       "ownerApproved": true,
@@ -2618,7 +2682,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "c49ce81e6614a3bff9df68e929eea4a532d20ecb4a94cf5b354b8f04e598e2ba",
+        "sameImageExportSHA256": "c49ce81e6614a3bff9df68e929eea4a532d20ecb4a94cf5b354b8f04e598e2ba",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -2671,10 +2743,10 @@
         1737
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a4bd51736f5e6d26c6b2ae444ef6c8ec5822f32733c56b0fb0909facd77d5455",
-        "semanticContextSHA256": "a4bd51736f5e6d26c6b2ae444ef6c8ec5822f32733c56b0fb0909facd77d5455",
+        "targetBeforeSHA256": "d9278ee82a48433555017345bfb07980ebd1452f58da67b3cabf707dd9a5b6c9",
+        "semanticContextSHA256": "d9278ee82a48433555017345bfb07980ebd1452f58da67b3cabf707dd9a5b6c9",
         "subjectTitle": "Pieni vedos säilytti suuren muistin",
         "targetState": "existing-target"
       },
@@ -2898,9 +2970,9 @@
         "tiedosto": "ScanerFromInside.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
-      "targetAfterSHA256": "a4bd51736f5e6d26c6b2ae444ef6c8ec5822f32733c56b0fb0909facd77d5455",
-      "contextAfterSHA256": "a4bd51736f5e6d26c6b2ae444ef6c8ec5822f32733c56b0fb0909facd77d5455",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+      "targetAfterSHA256": "d9278ee82a48433555017345bfb07980ebd1452f58da67b3cabf707dd9a5b6c9",
+      "contextAfterSHA256": "d9278ee82a48433555017345bfb07980ebd1452f58da67b3cabf707dd9a5b6c9",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2923,7 +2995,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "032bb056fc4b421d3b429bc127d9048656fb512899f040ad342b6247c0edeaea",
+        "sameImageExportSHA256": "032bb056fc4b421d3b429bc127d9048656fb512899f040ad342b6247c0edeaea",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -2976,10 +3056,10 @@
         4600
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8d48bf02468891658529741b7a65b1057e93a85e6b70544a89c9b2c1925e7880",
-        "semanticContextSHA256": "8d48bf02468891658529741b7a65b1057e93a85e6b70544a89c9b2c1925e7880",
+        "targetBeforeSHA256": "01267a36270c18580174e0fcb58dc71b35b683b0f5f9285bcbe399b4dd1f2d24",
+        "semanticContextSHA256": "01267a36270c18580174e0fcb58dc71b35b683b0f5f9285bcbe399b4dd1f2d24",
         "subjectTitle": "Kulma suojaa muurin sivua",
         "targetState": "existing-target"
       },
@@ -3202,9 +3282,9 @@
         "tiedosto": "Plan type bastion Vauban.svg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
-      "targetAfterSHA256": "8d48bf02468891658529741b7a65b1057e93a85e6b70544a89c9b2c1925e7880",
-      "contextAfterSHA256": "8d48bf02468891658529741b7a65b1057e93a85e6b70544a89c9b2c1925e7880",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+      "targetAfterSHA256": "01267a36270c18580174e0fcb58dc71b35b683b0f5f9285bcbe399b4dd1f2d24",
+      "contextAfterSHA256": "01267a36270c18580174e0fcb58dc71b35b683b0f5f9285bcbe399b4dd1f2d24",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3227,7 +3307,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "4b70bafa52e4b1cec0c8f23ade0f1467e5919b98e3a91015ecc6e6c2efae018a",
+        "sameImageExportSHA256": "4b70bafa52e4b1cec0c8f23ade0f1467e5919b98e3a91015ecc6e6c2efae018a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -3280,10 +3368,10 @@
         1704
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6465b1df22063ce2c150ed7f5e6177f6efe162bbdb1ae81edb269664b8f324c2",
-        "semanticContextSHA256": "6465b1df22063ce2c150ed7f5e6177f6efe162bbdb1ae81edb269664b8f324c2",
+        "targetBeforeSHA256": "142ed42d911375d07dd99b95a973a7f741b5b46ddd9b5210e8e2a5670f13bf3a",
+        "semanticContextSHA256": "142ed42d911375d07dd99b95a973a7f741b5b46ddd9b5210e8e2a5670f13bf3a",
         "subjectTitle": "Satama oli ennen nykyistä laituria",
         "targetState": "existing-target"
       },
@@ -3507,9 +3595,9 @@
         "tiedosto": "Pidjiguiti.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
-      "targetAfterSHA256": "6465b1df22063ce2c150ed7f5e6177f6efe162bbdb1ae81edb269664b8f324c2",
-      "contextAfterSHA256": "6465b1df22063ce2c150ed7f5e6177f6efe162bbdb1ae81edb269664b8f324c2",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+      "targetAfterSHA256": "142ed42d911375d07dd99b95a973a7f741b5b46ddd9b5210e8e2a5670f13bf3a",
+      "contextAfterSHA256": "142ed42d911375d07dd99b95a973a7f741b5b46ddd9b5210e8e2a5670f13bf3a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3532,7 +3620,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "5b7407f7ddd0e00c31528f023ad8285e17fe861019d614f87b7d2e2cdb36dfeb",
+        "sameImageExportSHA256": "5b7407f7ddd0e00c31528f023ad8285e17fe861019d614f87b7d2e2cdb36dfeb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -3585,10 +3681,10 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
-      "sourceContentSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
+      "sourceContentSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8967f5b3c54b5a55437b9ede1e49b182dbce0cb6d70ba6e7a91adc3d5bff6b64",
-        "semanticContextSHA256": "8967f5b3c54b5a55437b9ede1e49b182dbce0cb6d70ba6e7a91adc3d5bff6b64",
+        "targetBeforeSHA256": "d7436224608a275967bcfd6cae6a276e4f23a752cd4e05b099dc78eb689d99f7",
+        "semanticContextSHA256": "d7436224608a275967bcfd6cae6a276e4f23a752cd4e05b099dc78eb689d99f7",
         "subjectTitle": "Tulli jäi aukion nimeen",
         "targetState": "existing-target"
       },
@@ -3810,9 +3906,9 @@
         "tiedosto": "Porto de Bissau 06.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "b35c1ad1774daf1c28edf58059bf0ecfb0039c71596134e906e7c2c97f647c9b",
-      "targetAfterSHA256": "8967f5b3c54b5a55437b9ede1e49b182dbce0cb6d70ba6e7a91adc3d5bff6b64",
-      "contextAfterSHA256": "8967f5b3c54b5a55437b9ede1e49b182dbce0cb6d70ba6e7a91adc3d5bff6b64",
+      "sourceContentAfterSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+      "targetAfterSHA256": "d7436224608a275967bcfd6cae6a276e4f23a752cd4e05b099dc78eb689d99f7",
+      "contextAfterSHA256": "d7436224608a275967bcfd6cae6a276e4f23a752cd4e05b099dc78eb689d99f7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3835,7 +3931,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "d2628e8c82c8750a2d1a2d8ca25d38c6b0a84391f15dbb65ea2605f0e79c9965",
+        "sameImageNativeSHA256": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4",
+        "sameImageExportSHA256": "7213dccfd06facb4f71fcf711362c9f7c0e8ae5fed8702ccfec0d8a9181768b4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -4079,6 +4183,241 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e04/bissau/36ca01529a10b315a4a38129c3b25d0851e48a07e6679fb9e7e6011f3013e171.json",
-  "task118ReboundAt": "2026-10-13T16:33:23.953719+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/bissau/47b3c00c83376a50920572477160d1e9aca3e978c4081c22106bea7b72cd7a9c.json",
+  "task118ReboundAt": "2026-10-13T16:33:23.953719+00:00",
+  "task228ExcludedAssets": [
+    {
+      "era": "e04",
+      "city": "bissau",
+      "slot": "N2",
+      "type": "illustration",
+      "assetID": "bissau-n2-puu-muuraus-20261012-v1",
+      "galleryImageID": "bissau-n2-puu-muuraus-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.nahtavyydet[\"Pidjiguitin laituri\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Pidjiguitin laituri",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.",
+        "lyhyt": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.",
+        "lyhyt": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+      "exportSHA256": "71526161e3ec9a2fd00971a9e652843269f5be765da3086e829d35ac52e144c5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+      "sourceContentSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "semanticContextSHA256": "82b05ca3e0f01b2f31859e0d2850e6132da7422ed3aefd38138ee3e9575fca23",
+        "subjectTitle": "Pidjiguitin laituri",
+        "targetState": "fillable-empty-first-image-array"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäinen tavallisten materiaalinäytteiden havainne; ei tietyn laiturin arkkitehtuuri, historiallinen valokuva, taideteos, tunnistettava valmistaja tai koristeltu artefakti. Todellisen laiturikuvan paikkaportti jää erilliseksi.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/assets/bissau-n2-puu-muuraus-20261012-v1/image.png",
+            "nativeSHA256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Puulankkuja ja tavallisia kivisiä muurausmateriaaleja; syyt, murtumat ja kivet luontevat. Ei rakennelman/asettelun rekonstruktiota tai merkintöjä.",
+            "captionFi": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.",
+            "sourceAndTargetCheckFi": "Pidjiguitin laituri -objekti olemassa, kuvat:[] on täytettävä kuvat[0]-paikka. Teksti/faktapohja nimeävät puun/muurauksen. CaptionFi yleinen materiaalihavainne, ei laiturin näkymä/rakenne tai 1873-kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+                "facts": "Pidjiguitin jutun varhaista rakennetta kuvataan puun ja muurauksen yhdistelmänä; kuvitetaan vain materiaaliluokat."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/faktapohja.md",
+                "facts": "Historiallinen materiaalifakta erotettu nykyisestä laiturista, eikä vuotta1873 rekonstruoida."
+              }
+            ]
+          },
+          "qaReason": "Puun/muurauksen materiaalihavainne vastaa olemassa olevan N2:n materiaaleja."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+        "fileSHA256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa",
+        "item": {
+          "slot": "N2",
+          "targetJsonPath": "$.nahtavyydet[\"Pidjiguitin laituri\"].kuvat[0]",
+          "assetID": "bissau-n2-puu-muuraus-20261012-v1",
+          "sha256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+          "verdict": "accepted",
+          "reason": "Puun/muurauksen materiaalihavainne vastaa olemassa olevan N2:n materiaaleja.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/assets/bissau-n2-puu-muuraus-20261012-v1/image.png",
+            "nativeSHA256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Puulankkuja ja tavallisia kivisiä muurausmateriaaleja; syyt, murtumat ja kivet luontevat. Ei rakennelman/asettelun rekonstruktiota tai merkintöjä.",
+            "captionFi": "Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.",
+            "sourceAndTargetCheckFi": "Pidjiguitin laituri -objekti olemassa, kuvat:[] on täytettävä kuvat[0]-paikka. Teksti/faktapohja nimeävät puun/muurauksen. CaptionFi yleinen materiaalihavainne, ei laiturin näkymä/rakenne tai 1873-kuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/sisalto.json",
+                "facts": "Pidjiguitin jutun varhaista rakennetta kuvataan puun ja muurauksen yhdistelmänä; kuvitetaan vain materiaaliluokat."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/bissau/faktapohja.md",
+                "facts": "Historiallinen materiaalifakta erotettu nykyisestä laiturista, eikä vuotta1873 rekonstruoida."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:36:36.478561+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/qa.json",
+            "sha256": "1fcde7dda73c8602e6db03997a7d5a73217c086c6194a89be8880bd72817f8b1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/bissau/illustration-qa-extra.json",
+            "sha256": "50a93f231f9cf5abe5ece914be22849cd21786429f2b102c0f9e5549148204aa"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png?t=71526161e3ec9a2f",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "sha256": "71526161e3ec9a2fd00971a9e652843269f5be765da3086e829d35ac52e144c5",
+        "bytes": 3422315,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "bissau-n2-puu-muuraus-20261012-v1",
+        "nativeSHA256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "bissau",
+        "slot": "N2",
+        "targetJsonPath": "$.nahtavyydet[\"Pidjiguitin laituri\"].kuvat[0]",
+        "verifiedAt": "2026-10-12T20:37:16.845034+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png",
+        "sha256": "71526161e3ec9a2fd00971a9e652843269f5be765da3086e829d35ac52e144c5",
+        "bytes": 3422315,
+        "SHAReadAt": "2026-10-12T20:36:47.602571+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "8d2b7b039b7d264fb615a1ea605fff39494ec1cd3e4b6d46d52bd48b1c0c7362",
+        "rgbPixelSHA256": "fce267c119998e0cef080abd95daee5c8e1b0a8993fb82dd9a9bc7d9e988c57a",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {},
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "048d429b138863c1d51150d22d37d24fee0a387cf28b42adec4ddff5fc1e02c5",
+      "targetAfterSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contextAfterSHA256": "82b05ca3e0f01b2f31859e0d2850e6132da7422ed3aefd38138ee3e9575fca23",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "task118ExclusionReason": "target-no-longer-in-corrected-C",
+      "runtimeUseAllowed": false,
+      "originalBinaryPreserved": true
+    }
+  ],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:10:00.048521+00:00"
 }

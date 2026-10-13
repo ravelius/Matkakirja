@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "praia",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+  "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
   "assets": [
     {
       "era": "e04",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "9a44ef428470466f77089c40158ceaec862ff24c369df69f38b929d67f2e33f4",
+        "semanticContextSHA256": "5f2be9365b915e74c5937f5809c1a70a87bc6324ca6cdb43ace129025eba75d1",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -234,9 +234,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "9a44ef428470466f77089c40158ceaec862ff24c369df69f38b929d67f2e33f4",
+      "contextAfterSHA256": "5f2be9365b915e74c5937f5809c1a70a87bc6324ca6cdb43ace129025eba75d1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -259,7 +259,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+        "sameImageNativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+        "sameImageExportSHA256": "290024372612e3a3fab7dd64eeda5ab3565038a050f8dd059e2b857de517fbfc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -312,7 +320,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "a571be375edd4caa1d9197eb73799e285cb88a18f317d7ace15b54e36d20747f",
@@ -522,7 +530,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "a571be375edd4caa1d9197eb73799e285cb88a18f317d7ace15b54e36d20747f",
       "ownerApproved": true,
@@ -547,7 +555,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+        "sameImageNativeSHA256": "81a84f41b5b0dad95d145257cd50adea65ceb61f2d7bc0e0ae363037ccd9a40e",
+        "sameImageExportSHA256": "2c032205b74d06b704b24903ba849cbd21e43ccf604c4f834e599f73a1b00111",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -597,10 +613,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
-        "semanticContextSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
+        "targetBeforeSHA256": "73ca9bfde32c0731bb72c66e2e73ed18312f6db1b474825341d79b52747c9815",
+        "semanticContextSHA256": "73ca9bfde32c0731bb72c66e2e73ed18312f6db1b474825341d79b52747c9815",
         "subjectTitle": "Arjen esineistä tuli aineistoa",
         "targetState": "existing-target"
       },
@@ -803,9 +819,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
-      "targetAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
-      "contextAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
+      "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+      "targetAfterSHA256": "73ca9bfde32c0731bb72c66e2e73ed18312f6db1b474825341d79b52747c9815",
+      "contextAfterSHA256": "73ca9bfde32c0731bb72c66e2e73ed18312f6db1b474825341d79b52747c9815",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -828,7 +844,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+        "sameImageNativeSHA256": "f5bf9e0234b445a883b6c6d949fcca4ff2dddd4fc62cf91b4130ed1fdbc8c7f1",
+        "sameImageExportSHA256": "8abf9c017d33e8c8c0419779835bc2af494fdd66c60c61400699f3ba170bc51a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -878,10 +902,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
-        "semanticContextSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
+        "targetBeforeSHA256": "5ddcc10327a83b672f3d4d31379c40092204a7fe6356c306d94ce0c0f5543518",
+        "semanticContextSHA256": "5ddcc10327a83b672f3d4d31379c40092204a7fe6356c306d94ce0c0f5543518",
         "subjectTitle": "Laulu saa yhteisen vastauksen",
         "targetState": "existing-target"
       },
@@ -1059,9 +1083,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
-      "targetAfterSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
-      "contextAfterSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
+      "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+      "targetAfterSHA256": "5ddcc10327a83b672f3d4d31379c40092204a7fe6356c306d94ce0c0f5543518",
+      "contextAfterSHA256": "5ddcc10327a83b672f3d4d31379c40092204a7fe6356c306d94ce0c0f5543518",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1084,7 +1108,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+        "sameImageNativeSHA256": "0eca3154f395276b71fe5d7148809bb66b387515ed2bb22d493919b3d815f53d",
+        "sameImageExportSHA256": "9237120c17a1055729efbe77bdd6940b724d8ec844e4e6ea8d79ead8bcde9805",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1137,7 +1169,7 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "09f1ddf82005ea8bcc6239ea9eff24dbb485742e908085e606b0ecf97db07b6a",
         "semanticContextSHA256": "09f1ddf82005ea8bcc6239ea9eff24dbb485742e908085e606b0ecf97db07b6a",
@@ -1334,7 +1366,7 @@
         "vuosi": "2012"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "targetAfterSHA256": "09f1ddf82005ea8bcc6239ea9eff24dbb485742e908085e606b0ecf97db07b6a",
       "contextAfterSHA256": "09f1ddf82005ea8bcc6239ea9eff24dbb485742e908085e606b0ecf97db07b6a",
       "ownerApproved": true,
@@ -1359,7 +1391,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+        "sameImageNativeSHA256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f",
+        "sameImageExportSHA256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1412,7 +1452,7 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "57a10bac00908168478236b08614e305193579dd06d39420a735288c76c294bc",
         "semanticContextSHA256": "57a10bac00908168478236b08614e305193579dd06d39420a735288c76c294bc",
@@ -1607,7 +1647,7 @@
         "tiedosto": "Praia-Plage de Gamboa (6).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "targetAfterSHA256": "57a10bac00908168478236b08614e305193579dd06d39420a735288c76c294bc",
       "contextAfterSHA256": "57a10bac00908168478236b08614e305193579dd06d39420a735288c76c294bc",
       "ownerApproved": true,
@@ -1632,7 +1672,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+        "sameImageNativeSHA256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd",
+        "sameImageExportSHA256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1685,7 +1733,7 @@
         2036
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b331c499e535dab117da994153a7fbe758421e87a4b4e680ecb494a53f19c5da",
         "semanticContextSHA256": "b331c499e535dab117da994153a7fbe758421e87a4b4e680ecb494a53f19c5da",
@@ -1881,7 +1929,7 @@
         "tiedosto": "Praia coast Cape Verde.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "targetAfterSHA256": "b331c499e535dab117da994153a7fbe758421e87a4b4e680ecb494a53f19c5da",
       "contextAfterSHA256": "b331c499e535dab117da994153a7fbe758421e87a4b4e680ecb494a53f19c5da",
       "ownerApproved": true,
@@ -1906,7 +1954,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+        "sameImageNativeSHA256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+        "sameImageExportSHA256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1959,10 +2015,10 @@
         2119
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0c2edfdbb2aac37a8bd0b39049c736b46d9a95c47e7ed866d61b56ad05e39ea1",
-        "semanticContextSHA256": "0c2edfdbb2aac37a8bd0b39049c736b46d9a95c47e7ed866d61b56ad05e39ea1",
+        "targetBeforeSHA256": "da8a5389b35d66029a4f6beb34f1149ff7de32b44f137f3ccce06f67cc9c6bf6",
+        "semanticContextSHA256": "da8a5389b35d66029a4f6beb34f1149ff7de32b44f137f3ccce06f67cc9c6bf6",
         "subjectTitle": "Laiva tarvitsi vettä ja ruokaa",
         "targetState": "existing-target"
       },
@@ -2155,9 +2211,9 @@
         "tiedosto": "Praia coast Cape Verde 2011.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
-      "targetAfterSHA256": "0c2edfdbb2aac37a8bd0b39049c736b46d9a95c47e7ed866d61b56ad05e39ea1",
-      "contextAfterSHA256": "0c2edfdbb2aac37a8bd0b39049c736b46d9a95c47e7ed866d61b56ad05e39ea1",
+      "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+      "targetAfterSHA256": "da8a5389b35d66029a4f6beb34f1149ff7de32b44f137f3ccce06f67cc9c6bf6",
+      "contextAfterSHA256": "da8a5389b35d66029a4f6beb34f1149ff7de32b44f137f3ccce06f67cc9c6bf6",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2180,7 +2236,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+        "sameImageNativeSHA256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+        "sameImageExportSHA256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -2233,10 +2297,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ebee205e49b77f8c1b64b901e1359f7f1923695fc181d7c7d5e6d9a44d2b607d",
-        "semanticContextSHA256": "ebee205e49b77f8c1b64b901e1359f7f1923695fc181d7c7d5e6d9a44d2b607d",
+        "targetBeforeSHA256": "1a3b7721cb34e455a7ad1fe947da5901a35fe3bcbd9f4d800c1b35b11ca22e9a",
+        "semanticContextSHA256": "1a3b7721cb34e455a7ad1fe947da5901a35fe3bcbd9f4d800c1b35b11ca22e9a",
         "subjectTitle": "Luoto varastoi ja eristi",
         "targetState": "existing-target"
       },
@@ -2428,9 +2492,9 @@
         "tiedosto": "Praia-Ilhéu de Santa Maria (2).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
-      "targetAfterSHA256": "ebee205e49b77f8c1b64b901e1359f7f1923695fc181d7c7d5e6d9a44d2b607d",
-      "contextAfterSHA256": "ebee205e49b77f8c1b64b901e1359f7f1923695fc181d7c7d5e6d9a44d2b607d",
+      "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+      "targetAfterSHA256": "1a3b7721cb34e455a7ad1fe947da5901a35fe3bcbd9f4d800c1b35b11ca22e9a",
+      "contextAfterSHA256": "1a3b7721cb34e455a7ad1fe947da5901a35fe3bcbd9f4d800c1b35b11ca22e9a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2453,7 +2517,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+        "sameImageNativeSHA256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7",
+        "sameImageExportSHA256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -2506,7 +2578,7 @@
         2000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8c435a74225d86879ca12680ce10883e1e66d962735aeac2c878b2cb09ede041",
         "semanticContextSHA256": "8c435a74225d86879ca12680ce10883e1e66d962735aeac2c878b2cb09ede041",
@@ -2684,7 +2756,7 @@
         "tiedosto": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "targetAfterSHA256": "8c435a74225d86879ca12680ce10883e1e66d962735aeac2c878b2cb09ede041",
       "contextAfterSHA256": "8c435a74225d86879ca12680ce10883e1e66d962735aeac2c878b2cb09ede041",
       "ownerApproved": true,
@@ -2709,7 +2781,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+        "sameImageNativeSHA256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+        "sameImageExportSHA256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -2762,10 +2842,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "semanticSourceBind": {
         "targetBeforeSHA256": "11b0d596c6bf9d05880482bf8ee7d081ef4142317d445089bb36e8b41c37d244",
-        "semanticContextSHA256": "ad3ab97283d821e6bc10f452154b47e9a1933a5939e76f184877b484abacfb15",
+        "semanticContextSHA256": "6d7fc6bc056a9f7107eb218ee435cf4a34351e73d12ea4f431c27c2466ab0e0c",
         "subjectTitle": "Santa Marian luoto",
         "targetState": "existing-target"
       },
@@ -2958,9 +3038,9 @@
         "tiedosto": "Praia-Ilhéu de Santa Maria (3).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "sourceContentAfterSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
       "targetAfterSHA256": "11b0d596c6bf9d05880482bf8ee7d081ef4142317d445089bb36e8b41c37d244",
-      "contextAfterSHA256": "ad3ab97283d821e6bc10f452154b47e9a1933a5939e76f184877b484abacfb15",
+      "contextAfterSHA256": "6d7fc6bc056a9f7107eb218ee435cf4a34351e73d12ea4f431c27c2466ab0e0c",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2983,7 +3063,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "7c1d904920151356d3318bb6c189d3fb9e2466b4176c4cb4c705f9cfe7ffd6f2",
+        "sameImageNativeSHA256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+        "sameImageExportSHA256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2995,6 +3083,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e04/praia/61f554b80a7c60fbad27768b6127fc3a9e9604e9a3dbcec378a2eabc8b6f29f3.json",
-  "task118ReboundAt": "2026-10-13T16:33:24.048530+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/praia/6864a9fd88798c0fea0ce706045263a839230b5f6d5698224eac48f7a318a9e7.json",
+  "task118ReboundAt": "2026-10-13T16:33:24.048530+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:10:00.184392+00:00"
 }

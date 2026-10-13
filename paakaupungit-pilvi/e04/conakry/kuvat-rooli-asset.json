@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "conakry",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+  "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
   "assets": [
     {
       "era": "e04",
@@ -56,7 +56,7 @@
         3120
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e0d29f90d35681eab0a578ae9d23c17978eff7b81313201ef9de0bdaa4d373af",
         "semanticContextSHA256": "e0d29f90d35681eab0a578ae9d23c17978eff7b81313201ef9de0bdaa4d373af",
@@ -350,7 +350,7 @@
         "vuosi": "2021"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "targetAfterSHA256": "e0d29f90d35681eab0a578ae9d23c17978eff7b81313201ef9de0bdaa4d373af",
       "contextAfterSHA256": "e0d29f90d35681eab0a578ae9d23c17978eff7b81313201ef9de0bdaa4d373af",
       "ownerApproved": true,
@@ -375,7 +375,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "80060729c816f638e96ffffb9ccd3014510306185cbfd02786aa7da7ac186ca4",
+        "sameImageExportSHA256": "80060729c816f638e96ffffb9ccd3014510306185cbfd02786aa7da7ac186ca4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -428,7 +436,7 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
         "targetBeforeSHA256": "438e26c42b9d0f33411c4b9251ae5d8d25fdf0743cefd0030194fe37f458b0a5",
         "semanticContextSHA256": "438e26c42b9d0f33411c4b9251ae5d8d25fdf0743cefd0030194fe37f458b0a5",
@@ -704,7 +712,7 @@
         "tiedosto": "Guinean region of Conakry (ISS022-E-31358).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "targetAfterSHA256": "438e26c42b9d0f33411c4b9251ae5d8d25fdf0743cefd0030194fe37f458b0a5",
       "contextAfterSHA256": "438e26c42b9d0f33411c4b9251ae5d8d25fdf0743cefd0030194fe37f458b0a5",
       "ownerApproved": true,
@@ -729,7 +737,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "278c9ab08f3e1d1f2b3490ebe3543f1faa597a17c0069339560558a8e96b9021",
+        "sameImageExportSHA256": "278c9ab08f3e1d1f2b3490ebe3543f1faa597a17c0069339560558a8e96b9021",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -751,14 +767,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/c2-b378ac14d07b98d91950.jpg",
         "suora": true,
         "lahde": "Soman, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Conakryn vesiranta vuonna 2005 kuuluu kaupungin rannikkoympäristöön, jonka tarkkaa rantapaikkaa ei ole nimetty.",
+        "selite": "Conakryn rannassa näkyy pieniä veneitä, paljastunutta liejupintaa ja matalia rakennuksia. Kuva on vuodelta 2005.",
         "lyhyt": "Conakryn vesiranta vuonna 2005.",
         "tiedosto": "Conakry3.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Soman, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Conakryn vesiranta vuonna 2005 kuuluu kaupungin rannikkoympäristöön, jonka tarkkaa rantapaikkaa ei ole nimetty.",
+        "selite": "Conakryn rannassa näkyy pieniä veneitä, paljastunutta liejupintaa ja matalia rakennuksia. Kuva on vuodelta 2005.",
         "lyhyt": "Conakryn vesiranta vuonna 2005.",
         "tiedosto": "Conakry3.JPG"
       },
@@ -766,7 +782,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/c2-b378ac14d07b98d91950.jpg",
         "suora": true,
         "lahde": "Soman, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Conakryn vesiranta vuonna 2005 kuuluu kaupungin rannikkoympäristöön, jonka tarkkaa rantapaikkaa ei ole nimetty.",
+        "selite": "Conakryn rannassa näkyy pieniä veneitä, paljastunutta liejupintaa ja matalia rakennuksia. Kuva on vuodelta 2005.",
         "lyhyt": "Conakryn vesiranta vuonna 2005.",
         "tiedosto": "Conakry3.JPG"
       },
@@ -782,10 +798,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7cd60fe2eed1dd11209253314380573767a7bdac291dd9c83925f56eb1d2d610",
-        "semanticContextSHA256": "7cd60fe2eed1dd11209253314380573767a7bdac291dd9c83925f56eb1d2d610",
+        "targetBeforeSHA256": "6a58cd26b2900a24d8d0422223f1727f070fe7fbffd6eb5326c7abcb549144b4",
+        "semanticContextSHA256": "6a58cd26b2900a24d8d0422223f1727f070fe7fbffd6eb5326c7abcb549144b4",
         "subjectTitle": "Conakry",
         "targetState": "existing-target"
       },
@@ -1016,7 +1032,7 @@
       "priorMediaFields": {
         "tiedosto": "Conakry3.JPG",
         "lyhyt": "Conakryn vesiranta vuonna 2005.",
-        "selite": "Conakryn vesiranta vuonna 2005 kuuluu kaupungin rannikkoympäristöön, jonka tarkkaa rantapaikkaa ei ole nimetty.",
+        "selite": "Conakryn rannassa näkyy pieniä veneitä, paljastunutta liejupintaa ja matalia rakennuksia. Kuva on vuodelta 2005.",
         "lahde": "Soman, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -1043,14 +1059,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Soman, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Conakryn vesiranta vuonna 2005 kuuluu kaupungin rannikkoympäristöön, jonka tarkkaa rantapaikkaa ei ole nimetty.",
+        "selite": "Conakryn rannassa näkyy pieniä veneitä, paljastunutta liejupintaa ja matalia rakennuksia. Kuva on vuodelta 2005.",
         "lyhyt": "Conakryn vesiranta vuonna 2005.",
         "tiedosto": "Conakry3.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
-      "targetAfterSHA256": "7cd60fe2eed1dd11209253314380573767a7bdac291dd9c83925f56eb1d2d610",
-      "contextAfterSHA256": "7cd60fe2eed1dd11209253314380573767a7bdac291dd9c83925f56eb1d2d610",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+      "targetAfterSHA256": "6a58cd26b2900a24d8d0422223f1727f070fe7fbffd6eb5326c7abcb549144b4",
+      "contextAfterSHA256": "6a58cd26b2900a24d8d0422223f1727f070fe7fbffd6eb5326c7abcb549144b4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1073,7 +1089,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "b378ac14d07b98d91950a4685f919a7f24bf2ced2d6a4c381579ce2a8bc8cac7",
+        "sameImageExportSHA256": "b378ac14d07b98d91950a4685f919a7f24bf2ced2d6a4c381579ce2a8bc8cac7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e04",
@@ -1126,7 +1150,7 @@
         960
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c1e6713badafc50f10217e08fccea7fa1f1206ad27131d9ad95115d93d5d35d3",
         "semanticContextSHA256": "c1e6713badafc50f10217e08fccea7fa1f1206ad27131d9ad95115d93d5d35d3",
@@ -1404,7 +1428,7 @@
         "tiedosto": "Ile de Loose beaches.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "targetAfterSHA256": "c1e6713badafc50f10217e08fccea7fa1f1206ad27131d9ad95115d93d5d35d3",
       "contextAfterSHA256": "c1e6713badafc50f10217e08fccea7fa1f1206ad27131d9ad95115d93d5d35d3",
       "ownerApproved": true,
@@ -1429,7 +1453,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "3734fecd7af62828cced038a41ea1484d871a2546b0e619339b3c806e889b20a",
+        "sameImageExportSHA256": "3734fecd7af62828cced038a41ea1484d871a2546b0e619339b3c806e889b20a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1485,10 +1517,10 @@
         1440
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
         "targetBeforeSHA256": "caeb0d7b6b39336a7cf91cf1b9b72e3470508eb8b09b5b3f3c7b0d01187f3da9",
-        "semanticContextSHA256": "696ac884aa32ec449300433ddacbd55993d12b2cac6f98e51675967ccf9585a3",
+        "semanticContextSHA256": "428ec8abb0b0d4fe9a56a66932ef31b7f8b2f9b11d2c9cecce9e90500c65d638",
         "subjectTitle": "Meri ja edustan saaret",
         "targetState": "existing-target"
       },
@@ -1777,9 +1809,9 @@
         "tiedosto": "Conakrybak2.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "targetAfterSHA256": "caeb0d7b6b39336a7cf91cf1b9b72e3470508eb8b09b5b3f3c7b0d01187f3da9",
-      "contextAfterSHA256": "696ac884aa32ec449300433ddacbd55993d12b2cac6f98e51675967ccf9585a3",
+      "contextAfterSHA256": "428ec8abb0b0d4fe9a56a66932ef31b7f8b2f9b11d2c9cecce9e90500c65d638",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1802,7 +1834,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "6513f2355781c04f49693de86d39ef11aa4e02fcb80b3781e62ce6c4c42be7ff",
+        "sameImageExportSHA256": "6513f2355781c04f49693de86d39ef11aa4e02fcb80b3781e62ce6c4c42be7ff",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1858,7 +1898,7 @@
         4032
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e1154f31eac45f6dd7831c29e0e8b826d7d5f7d5e6c9bf5faa82ffc1277eaeb9",
         "semanticContextSHA256": "f4d1d2fcb9c7f3e79627d8ad0c19d29900a85640c006722781654e5729b3c986",
@@ -2156,7 +2196,7 @@
         "tiedosto": "Hibiscus Lemonade Drink.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "targetAfterSHA256": "e1154f31eac45f6dd7831c29e0e8b826d7d5f7d5e6c9bf5faa82ffc1277eaeb9",
       "contextAfterSHA256": "f4d1d2fcb9c7f3e79627d8ad0c19d29900a85640c006722781654e5729b3c986",
       "ownerApproved": true,
@@ -2181,7 +2221,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "049b8f424f8ed7b666b71de0c12c7f5d77eb5653e908d56a8b3d2da79fc77733",
+        "sameImageExportSHA256": "049b8f424f8ed7b666b71de0c12c7f5d77eb5653e908d56a8b3d2da79fc77733",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -2237,7 +2285,7 @@
         1440
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e4117c9f0d3204be084c268d47abc21e1aec7dd1b63a8b73f7f6efb58b20170d",
         "semanticContextSHA256": "fa098ed967d68b4bd8e1ebabd3d12db9fd967e5d962407bfbb57a10b7d89eece",
@@ -2529,7 +2577,7 @@
         "tiedosto": "Conakrybak.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "targetAfterSHA256": "e4117c9f0d3204be084c268d47abc21e1aec7dd1b63a8b73f7f6efb58b20170d",
       "contextAfterSHA256": "fa098ed967d68b4bd8e1ebabd3d12db9fd967e5d962407bfbb57a10b7d89eece",
       "ownerApproved": true,
@@ -2554,7 +2602,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "5424208ce4dd02733787b758d95ee78caa53559b90a5ec4b8b79131a184941c6",
+        "sameImageExportSHA256": "5424208ce4dd02733787b758d95ee78caa53559b90a5ec4b8b79131a184941c6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -2607,10 +2663,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7fe1d6de96d0409c95fa3935fb651887b68921f478afd9535d9286a017359895",
-        "semanticContextSHA256": "7fe1d6de96d0409c95fa3935fb651887b68921f478afd9535d9286a017359895",
+        "targetBeforeSHA256": "f99f2c6009f009231d6db6d27a72769b34c8a09906b102ff337dd8d3c18eaf96",
+        "semanticContextSHA256": "f99f2c6009f009231d6db6d27a72769b34c8a09906b102ff337dd8d3c18eaf96",
         "subjectTitle": "Saari jäi kaupungin sisään",
         "targetState": "existing-target"
       },
@@ -2879,9 +2935,9 @@
         "tiedosto": "Conakry.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
-      "targetAfterSHA256": "7fe1d6de96d0409c95fa3935fb651887b68921f478afd9535d9286a017359895",
-      "contextAfterSHA256": "7fe1d6de96d0409c95fa3935fb651887b68921f478afd9535d9286a017359895",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+      "targetAfterSHA256": "f99f2c6009f009231d6db6d27a72769b34c8a09906b102ff337dd8d3c18eaf96",
+      "contextAfterSHA256": "f99f2c6009f009231d6db6d27a72769b34c8a09906b102ff337dd8d3c18eaf96",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2904,7 +2960,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "fd1973f6b426117c9e3f02f66156bc67d613dc92ee988b95ce82659d4442dd13",
+        "sameImageExportSHA256": "fd1973f6b426117c9e3f02f66156bc67d613dc92ee988b95ce82659d4442dd13",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -2926,14 +2990,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/k2-caaffca7260843a79aa7.jpg",
         "suora": true,
         "lahde": "Aboubacarkhoraa, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Conakryn kaupallisen sataman rahtialus vuonna 2019 näyttää satamien vertailun kaupallisen puolen, kun Boulbinet on erillinen kalasatama.",
+        "selite": "Grande Brasile -rahtialus Conakryn satamassa vuonna 2019. Kuvassa erottuvat aluksen korkea vaalea kylki ja kannen oranssi pelastusvene.",
         "lyhyt": "Rahtialus Conakryn kaupallisessa satamassa vuonna 2019.",
         "tiedosto": "Bateau au port de Conakry.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Aboubacarkhoraa, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Conakryn kaupallisen sataman rahtialus vuonna 2019 näyttää satamien vertailun kaupallisen puolen, kun Boulbinet on erillinen kalasatama.",
+        "selite": "Grande Brasile -rahtialus Conakryn satamassa vuonna 2019. Kuvassa erottuvat aluksen korkea vaalea kylki ja kannen oranssi pelastusvene.",
         "lyhyt": "Rahtialus Conakryn kaupallisessa satamassa vuonna 2019.",
         "tiedosto": "Bateau au port de Conakry.jpg"
       },
@@ -2941,7 +3005,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/k2-caaffca7260843a79aa7.jpg",
         "suora": true,
         "lahde": "Aboubacarkhoraa, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Conakryn kaupallisen sataman rahtialus vuonna 2019 näyttää satamien vertailun kaupallisen puolen, kun Boulbinet on erillinen kalasatama.",
+        "selite": "Grande Brasile -rahtialus Conakryn satamassa vuonna 2019. Kuvassa erottuvat aluksen korkea vaalea kylki ja kannen oranssi pelastusvene.",
         "lyhyt": "Rahtialus Conakryn kaupallisessa satamassa vuonna 2019.",
         "tiedosto": "Bateau au port de Conakry.jpg"
       },
@@ -2957,10 +3021,10 @@
         1330
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e62796c920aa93933cf0165cf94e4206be1bce403e6a21cc06ce2d5212a4f3a5",
-        "semanticContextSHA256": "e62796c920aa93933cf0165cf94e4206be1bce403e6a21cc06ce2d5212a4f3a5",
+        "targetBeforeSHA256": "b2b11a5a97ff0c8a2f3dd4856861fe5d0742d2d6d77d6f5ef72216581a26e3d0",
+        "semanticContextSHA256": "b2b11a5a97ff0c8a2f3dd4856861fe5d0742d2d6d77d6f5ef72216581a26e3d0",
         "subjectTitle": "Kalasatama on oma kaupunginosansa",
         "targetState": "existing-target"
       },
@@ -3215,7 +3279,7 @@
       "priorMediaFields": {
         "tiedosto": "Bateau au port de Conakry.jpg",
         "lyhyt": "Rahtialus Conakryn kaupallisessa satamassa vuonna 2019.",
-        "selite": "Conakryn kaupallisen sataman rahtialus vuonna 2019 näyttää satamien vertailun kaupallisen puolen, kun Boulbinet on erillinen kalasatama.",
+        "selite": "Grande Brasile -rahtialus Conakryn satamassa vuonna 2019. Kuvassa erottuvat aluksen korkea vaalea kylki ja kannen oranssi pelastusvene.",
         "lahde": "Aboubacarkhoraa, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3242,14 +3306,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Aboubacarkhoraa, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Conakryn kaupallisen sataman rahtialus vuonna 2019 näyttää satamien vertailun kaupallisen puolen, kun Boulbinet on erillinen kalasatama.",
+        "selite": "Grande Brasile -rahtialus Conakryn satamassa vuonna 2019. Kuvassa erottuvat aluksen korkea vaalea kylki ja kannen oranssi pelastusvene.",
         "lyhyt": "Rahtialus Conakryn kaupallisessa satamassa vuonna 2019.",
         "tiedosto": "Bateau au port de Conakry.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
-      "targetAfterSHA256": "e62796c920aa93933cf0165cf94e4206be1bce403e6a21cc06ce2d5212a4f3a5",
-      "contextAfterSHA256": "e62796c920aa93933cf0165cf94e4206be1bce403e6a21cc06ce2d5212a4f3a5",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+      "targetAfterSHA256": "b2b11a5a97ff0c8a2f3dd4856861fe5d0742d2d6d77d6f5ef72216581a26e3d0",
+      "contextAfterSHA256": "b2b11a5a97ff0c8a2f3dd4856861fe5d0742d2d6d77d6f5ef72216581a26e3d0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3272,7 +3336,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "caaffca7260843a79aa77a75c273f1a50679ce9609eeb364802f713c3de38a1f",
+        "sameImageExportSHA256": "caaffca7260843a79aa77a75c273f1a50679ce9609eeb364802f713c3de38a1f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e04",
@@ -3325,10 +3397,10 @@
         2832
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1c2b478dcb0acdc92df494a2c39e760be754c3f673433beeebdf61d8843e658e",
-        "semanticContextSHA256": "1c2b478dcb0acdc92df494a2c39e760be754c3f673433beeebdf61d8843e658e",
+        "targetBeforeSHA256": "1bb4038bb83912bfb363ee14f96d1fee48728e4c623f4cdc72291de220607443",
+        "semanticContextSHA256": "1bb4038bb83912bfb363ee14f96d1fee48728e4c623f4cdc72291de220607443",
         "subjectTitle": "Satamassa lasti kulkee molempiin suuntiin",
         "targetState": "existing-target"
       },
@@ -3609,9 +3681,9 @@
         "tiedosto": "Port autonome de Conakry.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
-      "targetAfterSHA256": "1c2b478dcb0acdc92df494a2c39e760be754c3f673433beeebdf61d8843e658e",
-      "contextAfterSHA256": "1c2b478dcb0acdc92df494a2c39e760be754c3f673433beeebdf61d8843e658e",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+      "targetAfterSHA256": "1bb4038bb83912bfb363ee14f96d1fee48728e4c623f4cdc72291de220607443",
+      "contextAfterSHA256": "1bb4038bb83912bfb363ee14f96d1fee48728e4c623f4cdc72291de220607443",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3634,7 +3706,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "f7bbfab5b3c208516aeddbf740844d1f5ebe49864b6d6d483cbb52f267d0b29a",
+        "sameImageExportSHA256": "f7bbfab5b3c208516aeddbf740844d1f5ebe49864b6d6d483cbb52f267d0b29a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -3687,10 +3767,10 @@
         6000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "aeaf56b80c2a22d49b589c66190b94082ac0aed3c2f0f51a51d8a9b66a25f734",
-        "semanticContextSHA256": "aeaf56b80c2a22d49b589c66190b94082ac0aed3c2f0f51a51d8a9b66a25f734",
+        "targetBeforeSHA256": "2e41eae7751ddf2ca470dbe121b12be6226bb37f1275f29fad37d235e0552357",
+        "semanticContextSHA256": "2e41eae7751ddf2ca470dbe121b12be6226bb37f1275f29fad37d235e0552357",
         "subjectTitle": "Kapokkipuut keskellä kaupunkia",
         "targetState": "existing-target"
       },
@@ -3872,9 +3952,9 @@
         "tiedosto": "Ceiba pentandra in Cuba.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
-      "targetAfterSHA256": "aeaf56b80c2a22d49b589c66190b94082ac0aed3c2f0f51a51d8a9b66a25f734",
-      "contextAfterSHA256": "aeaf56b80c2a22d49b589c66190b94082ac0aed3c2f0f51a51d8a9b66a25f734",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+      "targetAfterSHA256": "2e41eae7751ddf2ca470dbe121b12be6226bb37f1275f29fad37d235e0552357",
+      "contextAfterSHA256": "2e41eae7751ddf2ca470dbe121b12be6226bb37f1275f29fad37d235e0552357",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3897,7 +3977,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "cd96e5279ce092805e09b230458f6f40666786003299b03a268d4f559fdc7c12",
+        "sameImageExportSHA256": "cd96e5279ce092805e09b230458f6f40666786003299b03a268d4f559fdc7c12",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -3950,10 +4038,10 @@
         2048
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b7086fcbe0949591fe598ce1725bcac1ca6b76008fc7a45d6d179207b70c561c",
-        "semanticContextSHA256": "b7086fcbe0949591fe598ce1725bcac1ca6b76008fc7a45d6d179207b70c561c",
+        "targetBeforeSHA256": "844441ac057d2750074481908fb801cbcfbe16602d9daa830cec289c6e61c039",
+        "semanticContextSHA256": "844441ac057d2750074481908fb801cbcfbe16602d9daa830cec289c6e61c039",
         "subjectTitle": "Kallio kaartuu saarten renkaaksi",
         "targetState": "existing-target"
       },
@@ -4246,9 +4334,9 @@
         "tiedosto": "Los Islands, Guinea.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
-      "targetAfterSHA256": "b7086fcbe0949591fe598ce1725bcac1ca6b76008fc7a45d6d179207b70c561c",
-      "contextAfterSHA256": "b7086fcbe0949591fe598ce1725bcac1ca6b76008fc7a45d6d179207b70c561c",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+      "targetAfterSHA256": "844441ac057d2750074481908fb801cbcfbe16602d9daa830cec289c6e61c039",
+      "contextAfterSHA256": "844441ac057d2750074481908fb801cbcfbe16602d9daa830cec289c6e61c039",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -4271,7 +4359,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "2ccb8542e7d2a2540c17b4bf521c2b7d780eb70746c1740e259d9d47c0c46d1a",
+        "sameImageExportSHA256": "2ccb8542e7d2a2540c17b4bf521c2b7d780eb70746c1740e259d9d47c0c46d1a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -4324,10 +4420,10 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3b4916b9af334570a036de78f75b110cd634eb472dbdb3f48ff30e1039822e1e",
-        "semanticContextSHA256": "3b4916b9af334570a036de78f75b110cd634eb472dbdb3f48ff30e1039822e1e",
+        "targetBeforeSHA256": "c9599898bf5ae8bac0c782ac7e93d5ab45dda96cc41fcf94460f0020c0bec9be",
+        "semanticContextSHA256": "c9599898bf5ae8bac0c782ac7e93d5ab45dda96cc41fcf94460f0020c0bec9be",
         "subjectTitle": "Kassan rantaa ja louhosjälkiä",
         "targetState": "existing-target"
       },
@@ -4622,9 +4718,9 @@
         "tiedosto": "K7890.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
-      "targetAfterSHA256": "3b4916b9af334570a036de78f75b110cd634eb472dbdb3f48ff30e1039822e1e",
-      "contextAfterSHA256": "3b4916b9af334570a036de78f75b110cd634eb472dbdb3f48ff30e1039822e1e",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+      "targetAfterSHA256": "c9599898bf5ae8bac0c782ac7e93d5ab45dda96cc41fcf94460f0020c0bec9be",
+      "contextAfterSHA256": "c9599898bf5ae8bac0c782ac7e93d5ab45dda96cc41fcf94460f0020c0bec9be",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -4647,7 +4743,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "3ad677d973c94721d54017f9a5dbcf4597e364f43a0f1671a37b5e33275ced78",
+        "sameImageExportSHA256": "3ad677d973c94721d54017f9a5dbcf4597e364f43a0f1671a37b5e33275ced78",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -4700,10 +4804,10 @@
         3206
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1bb692222c434432a6777b19f2636120478514d38201cb1b9c7bbb4764945ddd",
-        "semanticContextSHA256": "1bb692222c434432a6777b19f2636120478514d38201cb1b9c7bbb4764945ddd",
+        "targetBeforeSHA256": "f1010f52a90764779095496d520367e8cf7ef6cb0ea7e3a65ace8a769b9d396b",
+        "semanticContextSHA256": "f1010f52a90764779095496d520367e8cf7ef6cb0ea7e3a65ace8a769b9d396b",
         "subjectTitle": "Tamara piirtää ulkokaaren",
         "targetState": "existing-target"
       },
@@ -4992,9 +5096,9 @@
         "tiedosto": "Île de fotoba.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
-      "targetAfterSHA256": "1bb692222c434432a6777b19f2636120478514d38201cb1b9c7bbb4764945ddd",
-      "contextAfterSHA256": "1bb692222c434432a6777b19f2636120478514d38201cb1b9c7bbb4764945ddd",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+      "targetAfterSHA256": "f1010f52a90764779095496d520367e8cf7ef6cb0ea7e3a65ace8a769b9d396b",
+      "contextAfterSHA256": "f1010f52a90764779095496d520367e8cf7ef6cb0ea7e3a65ace8a769b9d396b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -5017,7 +5121,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "7e012387151f98071de300a041da8cd2cfeea512a9838f0301d2150fde28fc9a",
+        "sameImageExportSHA256": "7e012387151f98071de300a041da8cd2cfeea512a9838f0301d2150fde28fc9a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -5070,10 +5182,10 @@
         1694
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
         "targetBeforeSHA256": "08ed2fa2bf15e77cf86affef6e5b8359cce0abf07fc786680ccf619312709dd7",
-        "semanticContextSHA256": "66dd803a0c0f80cfd853debb98e173c07ab8c68832189762f9cde06f25f174b2",
+        "semanticContextSHA256": "be97c41fecd7a1caf2203da914c53d9fc63d84fe6eb4d6181812e290365e80e0",
         "subjectTitle": "Conakryn satama",
         "targetState": "existing-target"
       },
@@ -5368,9 +5480,9 @@
         "tiedosto": "Bateau au port Autonome de Conakry.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "targetAfterSHA256": "08ed2fa2bf15e77cf86affef6e5b8359cce0abf07fc786680ccf619312709dd7",
-      "contextAfterSHA256": "66dd803a0c0f80cfd853debb98e173c07ab8c68832189762f9cde06f25f174b2",
+      "contextAfterSHA256": "be97c41fecd7a1caf2203da914c53d9fc63d84fe6eb4d6181812e290365e80e0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -5393,7 +5505,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "70bd94ad7283bec055a762a6c1ea9f4295b32847d59bac914fa39311015be9a2",
+        "sameImageExportSHA256": "70bd94ad7283bec055a762a6c1ea9f4295b32847d59bac914fa39311015be9a2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -5446,10 +5566,10 @@
         1728
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d04b3560aadd5ebd39fb811880f6d0ec5996f9f9d949b0cc359ce9f459b27779",
-        "semanticContextSHA256": "2f8ef0719e62819ef0eb5733ee93499b8637847158058a5281b92218e134f3eb",
+        "semanticContextSHA256": "7665dcc63ca135db5ef66e6ecd36a7e284290b93328bdcb48c1432cd31fe8f64",
         "subjectTitle": "Kassan saari",
         "targetState": "existing-target"
       },
@@ -5738,9 +5858,9 @@
         "tiedosto": "Ille de kassa.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "targetAfterSHA256": "d04b3560aadd5ebd39fb811880f6d0ec5996f9f9d949b0cc359ce9f459b27779",
-      "contextAfterSHA256": "2f8ef0719e62819ef0eb5733ee93499b8637847158058a5281b92218e134f3eb",
+      "contextAfterSHA256": "7665dcc63ca135db5ef66e6ecd36a7e284290b93328bdcb48c1432cd31fe8f64",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -5763,7 +5883,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "6964d1d503837557d72b12b5586945b52ab6e1c7e0270df718f7d909968f7b1a",
+        "sameImageExportSHA256": "6964d1d503837557d72b12b5586945b52ab6e1c7e0270df718f7d909968f7b1a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -5816,10 +5944,10 @@
         2815
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
         "targetBeforeSHA256": "57844f6562cf78d06e7481f404b8e5ef006c935eb85cecedabb7315a30d59435",
-        "semanticContextSHA256": "e203d3483410f1ddb43a0023a911430c3b31973167f05bbff1b0d416cdd823de",
+        "semanticContextSHA256": "9b5c1a362d43135719235b252cacf1fbb8824fdc96e5d773ca43e9a3cdbb8ea8",
         "subjectTitle": "Roumen saari",
         "targetState": "existing-target"
       },
@@ -6108,9 +6236,9 @@
         "tiedosto": "Strand nach Süden auf Roume.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "targetAfterSHA256": "57844f6562cf78d06e7481f404b8e5ef006c935eb85cecedabb7315a30d59435",
-      "contextAfterSHA256": "e203d3483410f1ddb43a0023a911430c3b31973167f05bbff1b0d416cdd823de",
+      "contextAfterSHA256": "9b5c1a362d43135719235b252cacf1fbb8824fdc96e5d773ca43e9a3cdbb8ea8",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -6133,7 +6261,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "313518aed4fda03935b93ddaea45823e384d7f6bba32464205f1e5e6eb86bd87",
+        "sameImageExportSHA256": "313518aed4fda03935b93ddaea45823e384d7f6bba32464205f1e5e6eb86bd87",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -6186,10 +6322,10 @@
         3340
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0694d2a7c3a8aef284719595976384829f77b37f5ce1c15c570a1c2afe81d8bb",
-        "semanticContextSHA256": "5ecd9c8d1c466be09db5fdd6cd15279615ce09828f863cbdd053f28f11326cdd",
+        "semanticContextSHA256": "c41560f118ecacf19e3f115aa3e17d39cef7ebe446df5c77ea4af2c73d0079b9",
         "subjectTitle": "Tamaran saari",
         "targetState": "existing-target"
       },
@@ -6478,9 +6614,9 @@
         "tiedosto": "Île de fotoba 2.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "targetAfterSHA256": "0694d2a7c3a8aef284719595976384829f77b37f5ce1c15c570a1c2afe81d8bb",
-      "contextAfterSHA256": "5ecd9c8d1c466be09db5fdd6cd15279615ce09828f863cbdd053f28f11326cdd",
+      "contextAfterSHA256": "c41560f118ecacf19e3f115aa3e17d39cef7ebe446df5c77ea4af2c73d0079b9",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -6503,7 +6639,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "9d1b1617cbb29b11e7960d50a2031c1aa58797f3c2c2e919c76f621439f5ca3d",
+        "sameImageExportSHA256": "9d1b1617cbb29b11e7960d50a2031c1aa58797f3c2c2e919c76f621439f5ca3d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -6556,10 +6700,10 @@
         1500
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
-      "sourceContentSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3996477aeb2af466a67b23fc50f0191fbecc9a4f122efcf8bbf4d1bfd3d7f206",
-        "semanticContextSHA256": "b41ed42d468ee4b9f185df1b1b6cbae8e08ecc0221887dfa0cef66bf12653942",
+        "semanticContextSHA256": "d94ded16fc0260a54ff81c3af81a39d91e848ae687258e7519f8410ce1d683a4",
         "subjectTitle": "Tombon saari",
         "targetState": "existing-target"
       },
@@ -6848,9 +6992,9 @@
         "tiedosto": "Un aperçu de la ville de conakry.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ce702cb124ad37b72be424dd208bda6c405c021ebac3354b1e3e4635649a1c83",
+      "sourceContentAfterSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
       "targetAfterSHA256": "3996477aeb2af466a67b23fc50f0191fbecc9a4f122efcf8bbf4d1bfd3d7f206",
-      "contextAfterSHA256": "b41ed42d468ee4b9f185df1b1b6cbae8e08ecc0221887dfa0cef66bf12653942",
+      "contextAfterSHA256": "d94ded16fc0260a54ff81c3af81a39d91e848ae687258e7519f8410ce1d683a4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -6873,7 +7017,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ec847ce3aa61e41999bf26bc13e09597a730ce38009b32380fc127a9efaf4ced",
+        "sameImageNativeSHA256": "2995c4e5d0dbdc72277c28edcda5f6022f38ba4dc5dec7935ff9bbcb97f9ca3e",
+        "sameImageExportSHA256": "2995c4e5d0dbdc72277c28edcda5f6022f38ba4dc5dec7935ff9bbcb97f9ca3e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -7101,6 +7253,225 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e04/conakry/7f553aa731cc64604811424bd0723f847b6c17c0dc639291b84c46bbc6b1504b.json",
-  "task118ReboundAt": "2026-10-13T16:33:23.979227+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/conakry/1d3f0673ef3f7b748c5c1110ae6c38c05f08ee777f63c2aa4cd12a8f9dff87df.json",
+  "task118ReboundAt": "2026-10-13T16:33:23.979227+00:00",
+  "task228ExcludedAssets": [
+    {
+      "era": "e04",
+      "city": "conakry",
+      "slot": "N3",
+      "type": "illustration",
+      "assetID": "conakry-camayenne-havainne-v2",
+      "galleryImageID": "conakry-camayenne-havainne-v2",
+      "commonsFile": null,
+      "targetJsonPath": "$.nahtavyydet[\"Camayennen kasvitieteellinen puutarha\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Camayennen kasvitieteellinen puutarha",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/conakry-camayenne-havainne-v2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kapokkipuun tyvipönkät. Havainnekuva.",
+        "lyhyt": "Kapokkipuun tyvipönkät. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/conakry-camayenne-havainne-v2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Kapokkipuun tyvipönkät. Havainnekuva.",
+        "lyhyt": "Kapokkipuun tyvipönkät. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f38eb4774ce4866fb9e078a98ff00d0313aa7f7c247b1bc6d7951032dc43b96e",
+      "exportSHA256": "f38eb4774ce4866fb9e078a98ff00d0313aa7f7c247b1bc6d7951032dc43b96e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/conakry-camayenne-havainne-v2.png",
+      "r2Key": null,
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/production/conakry-camayenne-havainne-v2/production/conakry-camayenne-havainne-v2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/sisalto.json",
+      "sourceContentSHA256": "f6a4358d158cac7dac8d31c9ead8c93a0495b1d6d44eceb4f17e679ed55c8ffd",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "semanticContextSHA256": "37f9406f190d503bd67e8c0b519d77b91877ddc72dbf72e7e5d6c75f5ddbce4c",
+        "subjectTitle": "Camayennen kasvitieteellinen puutarha",
+        "targetState": "fillable-empty-first-image-array"
+      },
+      "attribution": {
+        "author": null,
+        "license": "CC BY-SA 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": null,
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/production/conakry-camayenne-havainne-v2/production/conakry-camayenne-havainne-v2.png",
+            "width": 1536,
+            "height": 1024,
+            "visualViewed": true,
+            "visualVerdict": "accepted-as-general-illustration",
+            "surfaceNotes": "Eri levyisiä tyvipönkkiä ja epäsäännöllistä kaarnaa; ei toistuvaa muovista kuorikuviota, kasvoja, logoja, kehystä tai kuvitteellista rakennusta. Ei puutarhan pohjapiirroksen todiste.",
+            "captionFi": "Kapokkipuun tyvipönkät. Havainnekuva.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "referenceCommonsPage": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/conakry/qa-evidence/generated-reference-commons.html",
+            "referenceAuthor": "Marco Schmidt",
+            "referenceLicense": "CC BY-SA 2.5",
+            "referenceSHA256": "559cffa3384a3424c18a985cd8f6394089f321d8450e42fdf3f9994586ee8866",
+            "attributionRequirement": "Säilytä viitekuvan Marco Schmidt / CC BY-SA 2.5 -credit ja jaa samalla lisenssillä rooliassetin ilmoituksen mukaan.",
+            "targetParentStillPresent": true,
+            "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/faktapohja.md",
+            "targetRuleCorrection": "kuvat:[] on suunniteltu ensimmäinen kuvapaikka, ei poistettu nähtävyys"
+          },
+          "qaReason": "1536×1024 ja SHA varmennettu, kapokkipuun epäsäännölliset tyvipönkät/kaarna ja kasvillisuus katsottu silmin. Käyttökelpoinen yleinen havainnekuva, ei Camayennen tarkan nykyulkoasun todistus. Marco Schmidt / CC BY-SA 2.5 -viiteketju säilytetään. Camayennen nimetty juttu on edelleen C:ssä, joten tyhjän kuvat-taulukon suunniteltu ensimmäinen kuva [0] hyväksytään target-tarkennuksen mukaisesti."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kapokkipuun tyvipönkät. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/conakry/qa.json",
+        "fileSHA256": "69522bac2b7515311c32b63570c696e2c5816ab5726949d8446dd11aba9a8f37",
+        "item": {
+          "slot": "N3",
+          "targetJsonPath": "$.nahtavyydet[\"Camayennen kasvitieteellinen puutarha\"].kuvat[0]",
+          "assetID": "conakry-camayenne-havainne-v2",
+          "sha256": "f38eb4774ce4866fb9e078a98ff00d0313aa7f7c247b1bc6d7951032dc43b96e",
+          "verdict": "accepted",
+          "reason": "1536×1024 ja SHA varmennettu, kapokkipuun epäsäännölliset tyvipönkät/kaarna ja kasvillisuus katsottu silmin. Käyttökelpoinen yleinen havainnekuva, ei Camayennen tarkan nykyulkoasun todistus. Marco Schmidt / CC BY-SA 2.5 -viiteketju säilytetään. Camayennen nimetty juttu on edelleen C:ssä, joten tyhjän kuvat-taulukon suunniteltu ensimmäinen kuva [0] hyväksytään target-tarkennuksen mukaisesti.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvaputki/production/conakry-camayenne-havainne-v2/production/conakry-camayenne-havainne-v2.png",
+            "width": 1536,
+            "height": 1024,
+            "visualViewed": true,
+            "visualVerdict": "accepted-as-general-illustration",
+            "surfaceNotes": "Eri levyisiä tyvipönkkiä ja epäsäännöllistä kaarnaa; ei toistuvaa muovista kuorikuviota, kasvoja, logoja, kehystä tai kuvitteellista rakennusta. Ei puutarhan pohjapiirroksen todiste.",
+            "captionFi": "Kapokkipuun tyvipönkät. Havainnekuva.",
+            "imageType": "illustration",
+            "realPlacePhotograph": false,
+            "referenceCommonsPage": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/conakry/qa-evidence/generated-reference-commons.html",
+            "referenceAuthor": "Marco Schmidt",
+            "referenceLicense": "CC BY-SA 2.5",
+            "referenceSHA256": "559cffa3384a3424c18a985cd8f6394089f321d8450e42fdf3f9994586ee8866",
+            "attributionRequirement": "Säilytä viitekuvan Marco Schmidt / CC BY-SA 2.5 -credit ja jaa samalla lisenssillä rooliassetin ilmoituksen mukaan.",
+            "targetParentStillPresent": true,
+            "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/conakry/faktapohja.md",
+            "targetRuleCorrection": "kuvat:[] on suunniteltu ensimmäinen kuvapaikka, ei poistettu nähtävyys"
+          },
+          "checkedAt": "2026-10-12T18:10:47.084368+00:00",
+          "contentSHA256": "a535ddac39f2744f502ac017ceac3eb95bd43958fdac482f3273760b98b7fca3",
+          "targetBinding": "planned-first-image-existing-target",
+          "corrections": [
+            {
+              "previousVerdict": "blocked",
+              "previousReason": "Kuva katsottu silmin ja pinta-/aihekohtainen QA hyväksyttävä yleisenä kapokkipuun havainnollistuksena. Nykyisessä C:ssä Camayennen juttu on edelleen olemassa mutta kuvat=[]: tarkka kuvat[0]-sidonta puuttuu, ja CC-status nimeää N3:n retired. Koordinaattorin on sovitettava roolisidonta; ei uuden kuvan tarvetta eikä vanhan assetin poistamista.",
+              "correctedAt": "2026-10-12T18:10:47.081219+00:00",
+              "basis": "Omistajan target-tarkennus: olemassa oleva kohde kuvat:[] ei ole retired, planned first image [0] sallittu"
+            }
+          ],
+          "targetParentSHA256": "37f9406f190d503bd67e8c0b519d77b91877ddc72dbf72e7e5d6c75f5ddbce4c"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/conakry/qa.json",
+            "sha256": "69522bac2b7515311c32b63570c696e2c5816ab5726949d8446dd11aba9a8f37"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "assetID": "conakry-camayenne-havainne-v2",
+        "nativeSHA256": "f38eb4774ce4866fb9e078a98ff00d0313aa7f7c247b1bc6d7951032dc43b96e",
+        "sha256": "f38eb4774ce4866fb9e078a98ff00d0313aa7f7c247b1bc6d7951032dc43b96e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/conakry-camayenne-havainne-v2.png",
+        "http": 200,
+        "bytes": 3371118,
+        "byteExactReadback": true,
+        "preservedExistingObject": true,
+        "era": "e04",
+        "city": "conakry",
+        "slot": "N3",
+        "targetJsonPath": "$.nahtavyydet[\"Camayennen kasvitieteellinen puutarha\"].kuvat[0]",
+        "verifiedAt": "2026-10-12T18:12:35.514927+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/conakry/conakry-camayenne-havainne-v2-f38eb4774ce4.png",
+        "sha256": "633bebc1fea7572105bf2fb89d76340b2fdf0c425d6ecac9a4ff4485893386c0",
+        "bytes": 3370670,
+        "SHAReadAt": "2026-10-12T18:29:41.236302+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f38eb4774ce4866fb9e078a98ff00d0313aa7f7c247b1bc6d7951032dc43b96e",
+        "rgbPixelSHA256": "36c7d1f469c1c7e1bc52aa0670d3bec315a2ba50364019447ac1488c2e9fe7f9",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {},
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "f6a4358d158cac7dac8d31c9ead8c93a0495b1d6d44eceb4f17e679ed55c8ffd",
+      "targetAfterSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contextAfterSHA256": "37f9406f190d503bd67e8c0b519d77b91877ddc72dbf72e7e5d6c75f5ddbce4c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "task118ExclusionReason": "target-no-longer-in-corrected-C",
+      "runtimeUseAllowed": false,
+      "originalBinaryPreserved": true
+    }
+  ],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:10:00.092016+00:00"
 }

@@ -15,20 +15,20 @@
   },
   "artikkeli": {
     "intro": "**Conakry** on Guinean pääkaupunki Atlantin rannalla, pitkän ja kapean Kaloumin niemimaan päässä. Vanha ydin kasvoi Tombon saarelle, ja kaupunki laajeni sieltä niemimaata pitkin koilliseen. Kaupallinen satama ja Boulbinetin kalasatama tuovat kaupungin rantaan erilaista liikennettä.\n\nConakryn nimi liittyy alueen vanhaan Susu-kylään. Ranskalainen siirtomaakaupunki muodostui 1800-luvun lopulla, joten isoisän matkavuonna **1873** nykyinen pääkaupunki oli vielä tulevaisuutta. Alueen asutushistoriaan kuuluivat jo Baga- ja Susu-yhteisöt.\n\nCamayennen kasvitieteellinen puutarha tunnetaan kapokeista, ja Sandervalia-museo kokoaa Guinean kulttuurien esineistöä. Kaupungin edustalla **Îles de Los** -saariston rannat ja metsäiset sisäosat vaihtavat kaupunkimaiseman toiseen mittakaavaan. Kassa ja Tamara kaartuvat saariston keskellä olevan Roumen ympärille.",
-    "teksti": "Tombon saari on Conakryn vanhan kaupungin paikka. Pengeryhteys liittää sen Kaloumin niemimaahan, jolle kaupunki jatkoi kasvuaan. Vanha ydin ja koko nykyinen kaupunkialue ovat näin eri kokoisia kokonaisuuksia, vaikka molemmista puhutaan Conakryna.\n\nSataman kautta liikkuu sekä tuonti- että vientitavaraa. Konttiliikenteen rinnalla satamassa käsitellään mineraalivientiä sekä elintarvikkeiden, teollisuustuotteiden ja energiatuotteiden tuontia. Historiallinen ratayhteys johti Conakrysta Kankaniin sisämaahan.\n\nEdustan saaristossa kaupungin historia jatkuu luonnonpaikoille. Kassalla oli kauppapaikka jo 1700-luvulla, ja myöhempi kaivostoiminta jätti saaren sisäosiin avolouhoksia. Roumen nimistä löytyvät Room ja Crawford Island, kun taas läntinen Tamara tunnetaan myös Fotobana. Saarten rannat ovat osa samaa merimaisemaa, jonka äärelle pääkaupunki kasvoi."
+    "teksti": "Tombon saari on Conakryn vanhan kaupungin paikka. Pengeryhteys liittää sen Kaloumin niemimaahan, jolle kaupunki jatkoi kasvuaan.\n\nSataman kautta liikkuu sekä tuonti- että vientitavaraa. Konttiliikenteen rinnalla satamassa käsitellään mineraalivientiä sekä elintarvikkeiden, teollisuustuotteiden ja energiatuotteiden tuontia. Historiallinen ratayhteys johti Conakrysta Kankaniin sisämaahan.\n\nEdustan saaristossa kaupungin historia jatkuu luonnonpaikoille. Kassalla oli kauppapaikka jo 1700-luvulla, ja myöhempi kaivostoiminta jätti saaren sisäosiin avolouhoksia. Roumen nimistä löytyvät Room ja Crawford Island, kun taas läntinen Tamara tunnetaan myös Fotobana."
   },
   "kysymykset": [
     {
-      "q": "Minkä valtameren rannalla Conakry sijaitsee?",
+      "q": "Mikä näistä vesialueista on Conakryn edustalla?",
       "options": [
-        "Atlantin",
-        "Tyynenmeren",
-        "Intian valtameren",
-        "Pohjoisen jäämeren"
+        "Atlantti",
+        "Välimeri",
+        "Punainenmeri",
+        "Intian valtameri"
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Guinean rannikko avautuu Afrikan länsipuolelle.",
+      "hint": "Conakry on Guinean pääkaupunki, ja lähin saaristo on nimeltään Los.",
       "fact": "Conakry on Guinean pääkaupunki ja satamakaupunki Atlantin rannalla.",
       "source": "https://en.wikipedia.org/wiki/Conakry"
     },
@@ -50,13 +50,13 @@
       "q": "Mistä puista Camayennen puutarha tunnetaan?",
       "options": [
         "Kapokeista",
-        "Oliivipuista",
-        "Eukalyptuksista",
-        "Seetreistä"
+        "Mangopuista",
+        "Apinanleipäpuista",
+        "Tamarindeista"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Kyse on puutarhan suurista trooppisista puista.",
+      "hint": "Puutarha perustettiin 1800-luvun lopulla.",
       "fact": "Camayennen kasvitieteellinen puutarha tunnetaan kapokkipuistaan.",
       "source": "https://en.wikipedia.org/wiki/Conakry_Botanical_Garden"
     },
@@ -116,7 +116,7 @@
         {
           "tiedosto": "Conakry3.JPG",
           "lyhyt": "Conakryn vesiranta vuonna 2005.",
-          "selite": "Conakryn vesiranta vuonna 2005 kuuluu kaupungin rannikkoympäristöön, jonka tarkkaa rantapaikkaa ei ole nimetty.",
+          "selite": "Conakryn rannassa näkyy pieniä veneitä, paljastunutta liejupintaa ja matalia rakennuksia. Kuva on vuodelta 2005.",
           "lahde": "Soman, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Saari jäi kaupungin sisään",
-          "teksti": "Conakryn vanha ydin kasvoi Tombon saarelle Kaloumin niemimaan kärkeen. Pengeryhteys liittää saaren nykyään niemimaahan, ja kaupunki laajeni sitä pitkin koilliseen. Kaupungin nimi liittyy paikalliseen Susu-kylään. Ranskalainen siirtomaakaupunki muodostui 1800-luvun lopulla jo asutulle rannikolle. Isoisän matkavuonna 1873 nykyinen pääkaupunki oli siis vielä tulevaisuutta. Tombon nimi säilyttää tiedon saaresta, vaikka sen ympärille kasvanut kaupunki on vanhaa ydintä paljon laajempi.",
+          "teksti": "Conakryn vanha ydin kasvoi Tombon saarelle Kaloumin niemimaan kärkeen. Pengeryhteys liittää saaren nykyään niemimaahan, ja kaupunki laajeni sitä pitkin koilliseen. Kaupungin nimi liittyy paikalliseen Susu-kylään. Ranskalainen siirtomaakaupunki muodostui 1800-luvun lopulla jo asutulle rannikolle. Alueella oli jo Baga- ja Susu-yhteisöjen asutusta ennen siirtomaakaupungin rakentamista.",
           "wiki": "Tombo Island",
           "tiedosto": "Conakry.jpg",
           "lyhyt": "Tombon vanha kaupunki ilmasta vuonna 2005.",
@@ -138,16 +138,16 @@
         },
         {
           "otsikko": "Kalasatama on oma kaupunginosansa",
-          "teksti": "Boulbinet on Kaloumin rannalla sijaitseva Conakryn kaupunginosa kalastussatamineen. Kalastusveneiden satama palvelee saaliin rantautumista ja kaupankäyntiä, kun taas konttialusten käyttämä kaupallinen satama on eri paikka. Boulbinetin ympäristössä kaupunki liittyy mereen pienempien veneiden kautta. Keskustan kalatorin suunnalta on kuljettu myös Los-saaristoon. Kaloumin rannalla on siten sekä kalastukseen että suurten rahtialusten lastiin liittyviä työympäristöjä.",
+          "teksti": "Boulbinet on Kaloumin rannalla sijaitseva Conakryn kaupunginosa kalastussatamineen. Kalastusveneiden satama palvelee saaliin rantautumista ja kaupankäyntiä, kun taas konttialusten käyttämä kaupallinen satama on eri paikka. Boulbinetin ympäristössä kaupunki liittyy mereen pienempien veneiden kautta. Keskustan kalatorin suunnalta on kuljettu myös Los-saaristoon.",
           "wiki": "Conakry",
           "tiedosto": "Bateau au port de Conakry.jpg",
           "lyhyt": "Rahtialus Conakryn kaupallisessa satamassa vuonna 2019.",
-          "selite": "Conakryn kaupallisen sataman rahtialus vuonna 2019 näyttää satamien vertailun kaupallisen puolen, kun Boulbinet on erillinen kalasatama.",
+          "selite": "Grande Brasile -rahtialus Conakryn satamassa vuonna 2019. Kuvassa erottuvat aluksen korkea vaalea kylki ja kannen oranssi pelastusvene.",
           "lahde": "Aboubacarkhoraa, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
           "otsikko": "Satamassa lasti kulkee molempiin suuntiin",
-          "teksti": "Conakryn kaupallinen satama sijaitsee Kaloumissa Atlantin rannalla. Se käsittelee kontteja ja yhdistää kaupungin tuonti- ja vientikauppaan. Tuontiin kuuluu elintarvikkeita, teollisuustuotteita ja energiatuotteita. Vientiin kuuluu erikseen bauksiittia ja alumiinioksidia. Historiallinen ratayhteys johti kaupungista Kankaniin sisämaahan. Kaupungin rannalla kohtaavat siten sekä mereltä saapuvan tavaran reitti että sisämaahan ulottuva kuljetushistoria.",
+          "teksti": "Conakryn kaupallinen satama sijaitsee Kaloumissa kaupungin vanhan keskustan alueella Atlantin rannalla. Se käsittelee kontteja ja yhdistää kaupungin tuonti- ja vientikauppaan. Tuontiin kuuluu elintarvikkeita, teollisuustuotteita ja energiatuotteita. Vientiin kuuluu erikseen bauksiittia ja alumiinioksidia. Historiallinen ratayhteys johti kaupungista Kankaniin sisämaahan.",
           "wiki": "Autonomous Port of Conakry",
           "tiedosto": "Port autonome de Conakry.jpg",
           "lyhyt": "Konttialus Conakryn kaupallisessa satamassa vuonna 2020.",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Kapokkipuut keskellä kaupunkia",
-          "teksti": "Camayennen kasvitieteellinen puutarha tunnetaan kapokkipuistaan. Se sijaitsee kaupunginosassa, jossa Ambroise Paré -sairaala jää puutarhan eteläpuolelle ja suuri moskeija pohjoispuolelle. Ranskalaiset perustivat puutarhan 1800-luvun lopulla, myöhemmin kuin isoisän matkavuonna 1873. Puutarhan historiaan kuuluu myös alueen pienentyminen kaupungin kasvun yhteydessä. Suurten puiden ympärillä jatkuu siis sairaaloiden, katujen ja muun kaupungin arki. Luontopaikka on osa laajenevaa pääkaupunkia.",
+          "teksti": "Camayennen kasvitieteellinen puutarha tunnetaan kapokkipuistaan. Se sijaitsee kaupunginosassa, jossa Ambroise Paré -sairaala jää puutarhan eteläpuolelle ja suuri moskeija pohjoispuolelle. Ranskalaiset perustivat puutarhan 1800-luvun lopulla, myöhemmin kuin isoisän matkavuonna 1873. Puutarhan historiaan kuuluu myös alueen pienentyminen kaupungin kasvun yhteydessä.",
           "wiki": "Conakry Botanical Garden",
           "tiedosto": "Ceiba pentandra in Cuba.jpg",
           "lyhyt": "Kapokkipuu Kuubassa vuonna 2019.",
@@ -175,7 +175,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Conakrya palvelee Ahmed Sékou Tourén kansainvälinen lentoasema (CKY), joka tunnetaan myös Gbessian lentoasemana. Pitkän ja kapean kaupungin vanha ydin on Tombolla Kaloumin kärjessä. Sovi kuljetus käyttämäsi lentoaseman ja majoituspaikan osoitteiden mukaan."
+              "teksti": "Conakrya palvelee Ahmed Sékou Tourén kansainvälinen lentoasema (CKY), joka tunnetaan myös Gbessian lentoasemana. Pitkän ja kapean kaupungin vanha ydin on Tombolla Kaloumin kärjessä."
             },
             {
               "otsikko": "Vanha ydin ja puutarha",
@@ -183,7 +183,7 @@
             },
             {
               "otsikko": "Meri ja edustan saaret",
-              "teksti": "Roume, Kassa ja Tamara ovat Los-saariston pääsaaria kaupungin edustalla. Kassalla on entisiä louhoksia, Roume on keskisaari ja Tamara muodostaa länsikaaren. Rantaretkelle tarvitaan erillinen merikuljetus; sovi lähtöpaikka ja paluu retken järjestäjän kanssa.",
+              "teksti": "Roume, Kassa ja Tamara ovat Los-saariston pääsaaria kaupungin edustalla. Kassalla on entisiä louhoksia, Roume on keskisaari ja Tamara muodostaa länsikaaren.",
               "kuva": {
                 "tiedosto": "Conakrybak2.jpg",
                 "lyhyt": "Ratoman meriranta Conakryssa vuonna 2021.",
@@ -232,7 +232,7 @@
               {
                 "mita": "Sandervalia-museo",
                 "tahdet": 2,
-                "selite": "Guinean kulttuuriesineistöön voi tutustua nykyisen vierailujärjestelyn varmistamisen jälkeen."
+                "selite": "Kokoelmissa on Guinean eri kulttuurien naamioita ja soittimia."
               },
               {
                 "mita": "Los-saariston rannat",
@@ -242,20 +242,20 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Ennen matkapäätöstä",
-                "teksti": "Tarkista Guinean ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
+                "otsikko": "Matkan järjestelyt",
+                "teksti": "Saaristokuljetusten lähtöpiste ja paluu sekä museokäynnin järjestelyt ja maahantuloasiakirjat selvitetään ennen lähtöä."
               },
               {
                 "otsikko": "Los-saaristo",
                 "teksti": "Kassa ja Tamara kaartuvat keskellä olevan Roumen ympärille."
               },
               {
-                "otsikko": "Satamien ero",
-                "teksti": "Boulbinetin kalastussatama ja kaupallinen konttisatama ovat eri paikkoja."
+                "otsikko": "Camayennen naapurit",
+                "teksti": "Ambroise Paré -sairaala on puutarhan eteläpuolella ja suuri moskeija pohjoispuolella."
               },
               {
-                "otsikko": "Retket ja asiakirjat",
-                "teksti": "Varmista saaristokuljetukset ja museokäynti sekä oman passisi maahantulovaatimukset ennen lähtöä."
+                "otsikko": "Saaren vanhat nimet",
+                "teksti": "Roume on tunnettu myös nimillä Room ja Crawford Island."
               }
             ]
           },
@@ -272,8 +272,8 @@
         "vaihtoehdot": [
           "Roume",
           "Tombo",
-          "Kassa",
-          "Tamara"
+          "Blanche",
+          "Corail"
         ],
         "oikea": 0,
         "fakta": "Roume sijaitsee saariston sisemmässä osassa, kun Kassa ja Tamara muodostavat sen ympärille kaaren."
@@ -281,7 +281,7 @@
       "nostot": [
         {
           "otsikko": "Kallio kaartuu saarten renkaaksi",
-          "teksti": "Los-saaristossa Roume jää Kassan ja Tamaran muodostaman kaaren sisään. Saariston kallioperään kuuluu syeniittiä, joka on magmakivi. Saarten syntyhistoria liitetään Atlantin avautumisen aikaiseen magmakivitoimintaan. Rengasmuodon on tulkittu liittyvän todennäköisesti kuluneen tulivuorirakenteen magmasäiliöön. Merestä kohoava kaari antaa kiviselle rakenteelle näkyvän muodon, mutta pelkkä saarten ääriviiva ei ratkaise niiden koko syntyhistoriaa. Kivet ja saarten järjestys kertovat maisemasta eri mittakaavoissa.",
+          "teksti": "Los-saaristossa Roume jää Kassan ja Tamaran muodostaman kaaren sisään. Saariston kallioperään kuuluu syeniittiä, joka on magmakivi. Saarten syntyhistoria liitetään Atlantin avautumisen aikaiseen magmakivitoimintaan. Rengasmuodon on tulkittu liittyvän todennäköisesti kuluneen tulivuorirakenteen magmasäiliöön. Saariston nefeliinisyeniittiä leikkaavat fonoliittijuonet.",
           "wiki": "Îles de Los",
           "tiedosto": "Los Islands, Guinea.jpg",
           "lyhyt": "Los-saariston kaari Conakryn edustalla vuonna 2017.",
@@ -290,7 +290,7 @@
         },
         {
           "otsikko": "Kassan rantaa ja louhosjälkiä",
-          "teksti": "Kassan saaren rannoilta maisema jatkuu sisämaan entisiin louhoksiin. Saarella louhittiin bauksiittia 1900-luvulla, ja keskiosiin jäi avolouhoksia. Pohjoisosasta otettiin myös rakennuskiveä Conakryn sataman suojapengertä varten. Kauppapaikan historia oli alkanut jo 1700-luvulla: siihen liittyivät laivojen korjaajat ja jokireittien luotsit. Kassa-nimen selitetään liittyvän portugalin sanaan casa, talo. Yhden saaren maisemaan mahtuu näin ranta, kauppapaikan muisti ja kaivostoiminnan jäljet.",
+          "teksti": "Kassan saaren rannoilta maisema jatkuu sisämaan entisiin louhoksiin. Saarella louhittiin bauksiittia 1900-luvulla, ja keskiosiin jäi avolouhoksia. Pohjoisosasta otettiin myös rakennuskiveä Conakryn sataman suojapengertä varten. Kauppapaikan historia oli alkanut jo 1700-luvulla: siihen liittyivät laivojen korjaajat ja jokireittien luotsit. Kassa-nimen selitetään liittyvän portugalin sanaan casa, talo.",
           "wiki": "Îles de Los",
           "tiedosto": "K7890.jpg",
           "lyhyt": "Kassan luonnonranta näyttää saaren merireunan.",
@@ -299,12 +299,12 @@
         },
         {
           "otsikko": "Roumen nimi vaihtoi kirjoitusasua",
-          "teksti": "Roume on asuttu saari Los-saariston keskellä. Sen vanhoihin nimiin kuuluvat Room ja Crawford Island. Room-muoto liittyy englanninkielisten asukkaiden käyttämään nimeen, kun taas Roume-kirjoitusasu yhdistyy ranskalaisen siirtomaahallinnon Ernest Roumeen. Nimien kerrostumat kertovat saaren eri aikakausista. Maantieteellinen paikka pysyy niiden alla: Kassa ja Tamara kaartuvat Roumen ympärille. Saaren Plage du Gouverneur -ranta puolestaan nimeää yhden paikan tämän keskisaareksi tunnistetun kokonaisuuden sisällä.",
+          "teksti": "Roume on asuttu saari Los-saariston keskellä. Sen vanhoihin nimiin kuuluvat Room ja Crawford Island. Room-muoto liittyy englanninkielisten asukkaiden käyttämään nimeen, kun taas Roume-kirjoitusasu yhdistyy ranskalaisen siirtomaahallinnon Ernest Roumeen. Kassa ja Tamara kaartuvat saaren ympärille. Yksi saaren rannoista tunnetaan nimellä Plage du Gouverneur.",
           "wiki": "Îles de Los"
         },
         {
           "otsikko": "Tamara piirtää ulkokaaren",
-          "teksti": "Tamara sijaitsee Los-saariston läntisellä laidalla ja muodostaa pitkän kaaren. Kassan kanssa se ympäröi keskellä olevaa Roumea. Saari tunnetaan myös Fotoba-nimellä; vanhoissa teksteissä esiintyy myös Fortoba-kirjoitusasu. Saariston rantojen takana on metsäisiä sisäosia, ja Tamarallakin harjoitettiin kaivostoimintaa 1900-luvulla. Saaren historiassa mainitaan myös merenkulun majakka. Luonnonpaikan pitkä kaari, metsä ja rannat ovat kuitenkin eri asioita kuin myöhemmin saarelle rakennetut merenkulun rakenteet.",
+          "teksti": "Tamara sijaitsee Los-saariston läntisellä laidalla ja muodostaa pitkän kaaren. Kassan kanssa se ympäröi keskellä olevaa Roumea. Saari tunnetaan myös Fotoba-nimellä; vanhoissa teksteissä esiintyy myös Fortoba-kirjoitusasu. Saariston rantojen takana on metsäisiä sisäosia, ja Tamarallakin harjoitettiin kaivostoimintaa 1900-luvulla. Saaren historiassa mainitaan myös merenkulun majakka.",
           "wiki": "Îles de Los",
           "tiedosto": "Île de fotoba.jpg",
           "lyhyt": "Tamaran eli Fotoban luonnonranta vuonna 2019.",
@@ -364,7 +364,7 @@
   "nahtavyydet": {
     "Tombon saari": {
       "aika": "Luonnonpaikka, kaupunkikehitys 1800-luvun lopulta",
-      "teksti": "Tombon saari sijaitsee Atlantilla Kaloumin niemimaan kärjessä. Nykyisen Conakryn vanha kaupunki kasvoi saarelle, joka on yhdistetty niemimaahan pengeryhteydellä. Kaupungin laajeneminen jatkui niemimaata pitkin koilliseen. Tombon nimi kertoo vanhan ytimen saarisijainnista laajenevan kaupunkialueen sisällä.\n\nAlueella oli Baga- ja Susu-yhteisöjen asutusta, ja Conakryn nimi liittyy Susu-kylään. Ranskalainen siirtomaakaupunki muodostui 1800-luvun lopulla. Siirtomaakaupungin syntyyn liittyivät ensin maa-alueen luovutus Tombolta ja myöhemmin uuden hallintokeskuksen kehittäminen.\n\nIsoisän matkavuonna 1873 nykyinen pääkaupunki oli vielä tulevaisuutta. Rannikolla asui jo paikallisia Baga- ja Susu-yhteisöjä. Tombon länsipuolella sijaitseva Los-saaristo on eri luonnonpaikka: Kassa, Roume ja Tamara eivät ole vanhan keskustan saaren vaihtoehtoisia nimiä. Tombolta avautuva kaupunkimaisema kuuluu kaupungin omaan vanhaan ytimeen.",
+      "teksti": "Tombon saari sijaitsee Atlantilla Kaloumin niemimaan kärjessä. Nykyisen Conakryn vanha kaupunki kasvoi saarelle, joka on yhdistetty niemimaahan pengeryhteydellä. Kaupungin laajeneminen jatkui niemimaata pitkin koilliseen.\n\nAlueella oli Baga- ja Susu-yhteisöjen asutusta, ja Conakryn nimi liittyy Susu-kylään. Ranskalainen siirtomaakaupunki muodostui 1800-luvun lopulla. Siirtomaakaupungin syntyyn liittyivät ensin maa-alueen luovutus Tombolta ja myöhemmin uuden hallintokeskuksen kehittäminen.",
       "kuvat": [
         {
           "tiedosto": "Un aperçu de la ville de conakry.jpg",
@@ -377,7 +377,7 @@
     },
     "Conakryn satama": {
       "aika": "Siirtomaakaudella kehittynyt satamaympäristö–nykyaika",
-      "teksti": "Conakryn kaupallinen satama sijaitsee Kaloumissa vanhan keskustan alueella. Atlantin rannalla toimivaan satamaan kuuluvat konttien käsittely sekä lastaus- ja varastointitoiminnot. Se on eri paikka kuin Boulbinetin kalasatama, vaikka molemmat kuuluvat kaupungin rannikkoympäristöön.\n\nSataman kautta tuodaan elintarvikkeita, teollisuustuotteita ja energiatuotteita sekä viedään mineraaleja. Vientituotteisiin kuuluvat erikseen bauksiitti ja alumiinioksidi. Historiallinen rata yhdisti Conakryn Kankaniin sisämaassa. Satamapaikka liittää näin merikuljetusten ja sisämaahan ulottuvien kuljetusten historian samaan kaupunkiin.\n\nSatamasta tunnetaan historiallisia näkymiä 1900-luvun alkupuolelta. Vuonna 1873 nykyistä siirtomaa-ajan satamakaupunkia ei vielä ollut. Kaupunki kehittyi nykyiseksi satamapääkaupungiksi vasta myöhemmin. Tämän päivän alukset ja lastinkäsittelyn rakenteet kuuluvat sataman myöhempiin vaiheisiin.",
+      "teksti": "Conakryn kaupallinen satama sijaitsee Kaloumissa vanhan keskustan alueella. Atlantin rannalla toimivaan satamaan kuuluvat konttien käsittely sekä lastaus- ja varastointitoiminnot.\n\nSataman kautta tuodaan elintarvikkeita, teollisuustuotteita ja energiatuotteita sekä viedään mineraaleja. Vientituotteisiin kuuluvat erikseen bauksiitti ja alumiinioksidi. Historiallinen rata yhdisti Conakryn Kankaniin sisämaassa.",
       "kuvat": [
         {
           "tiedosto": "Bateau au port Autonome de Conakry.jpg",
@@ -390,13 +390,13 @@
     },
     "Camayennen kasvitieteellinen puutarha": {
       "aika": "1800-luvun loppu",
-      "teksti": "Camayennen kasvitieteellinen puutarha sijaitsee Conakryn Camayennen kaupunginosassa. Puutarha tunnetaan kapokkipuista. Ambroise Paré -sairaala jää sen eteläpuolelle ja Conakryn suuri moskeija pohjoispuolelle. Sijainti asettaa puutarhan keskelle rakennettua ja käytettyä kaupunkia.\n\nRanskalaiset perustivat puutarhan 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä. Vuonna 1873 tätä puutarhaa ei vielä ollut. Suuret puut kertovat luontopaikasta, jonka ympärille pääkaupunki on jatkanut kasvuaan.\n\nPuutarhan alue on pienentynyt kaupungin kasvun yhteydessä. Puutarhan ja sitä ympäröivien katujen mittakaavat ovat näin muuttuneet rinnakkain.",
+      "teksti": "Camayennen kasvitieteellinen puutarha sijaitsee Conakryn Camayennen kaupunginosassa. Puutarha tunnetaan kapokkipuista. Ambroise Paré -sairaala jää sen eteläpuolelle ja Conakryn suuri moskeija pohjoispuolelle.\n\nRanskalaiset perustivat puutarhan 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä.\n\nPuutarhan alue on pienentynyt kaupungin kasvun yhteydessä. Puutarha tunnetaan myös nimellä Conakry Botanical Garden.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Kassan saari": {
       "aika": "Luonnon- ja asutuspaikka, kauppaa 1700-luvulla, kaivoksia 1900-luvulla",
-      "teksti": "Kassa kuuluu Conakryn edustan Los-saariston pääsaariin. Kassan ja Tamaran kaaret ympäröivät keskellä olevaa Roumea. Kassa-nimen selitetään liittyvän portugalin sanaan casa, talo. Saaren rantojen takana näkyy myös kaupan ja kaivostoiminnan historiaa.\n\nSaarella oli 1700-luvulla kauppapaikka, jonka toimintaan kuuluivat laivojen korjaajat ja jokireittien luotsit. 1900-luvulla Kassalla louhittiin bauksiittia, ja keskiosiin jäi avolouhoksia. Pohjoisosan kivilouhoksesta otettiin myös rakennuskiveä Conakryn sataman suojapengertä varten. Sataman ja saaren yhteys ulottui siis vesireitin lisäksi rakennusmateriaalin käyttöön.\n\nVuonna 1873 saaristo oli Britannian hallinnassa ja Kassan kauppapaikan historia oli jo alkanut. Myöhemmät bauksiittikaivokset eivät kuulu matkavuoden maisemaan. Kassan saari on myös eri laajuinen paikka kuin koko saaristoa kattava Kassa-kommuuni. Kassan rannoilta maisema jatkuu metsäisiin sisäosiin ja entisiin louhoksiin.",
+      "teksti": "Kassa kuuluu Conakryn edustan Los-saariston pääsaariin. Kassan ja Tamaran kaaret ympäröivät keskellä olevaa Roumea. Kassa-nimen selitetään liittyvän portugalin sanaan casa, talo.\n\nSaarella oli 1700-luvulla kauppapaikka, jonka toimintaan kuuluivat laivojen korjaajat ja jokireittien luotsit. 1900-luvulla Kassalla louhittiin bauksiittia, ja keskiosiin jäi avolouhoksia. Pohjoisosan kivilouhoksesta otettiin myös rakennuskiveä Conakryn sataman suojapengertä varten.\n\nVuonna 1873 saaristo oli Britannian hallinnassa ja Kassan kauppapaikan historia oli jo alkanut. Myöhemmät bauksiittikaivokset eivät kuulu matkavuoden maisemaan. Kassan saari on myös eri laajuinen paikka kuin koko saaristoa kattava Kassa-kommuuni. Kassan rannoilta maisema jatkuu metsäisiin sisäosiin ja entisiin louhoksiin.",
       "kuvat": [
         {
           "tiedosto": "Ille de kassa.jpg",
@@ -409,7 +409,7 @@
     },
     "Roumen saari": {
       "aika": "Vanha luonnon- ja asutuspaikka, nimikerrostumia 1800–1900-luvuilta",
-      "teksti": "Roume on asuttu saari Los-saariston keskellä. Kassa ja Tamara muodostavat sen ympärille lähes sulkeutuvan kaaren. Saaren rantoihin kuuluu Plage du Gouverneur, mutta Roume on koko saaren nimi. \n\nRoom ja Crawford Island ovat saaren vanhoja nimiä. Room-muoto liittyy englanninkielisten asukkaiden käyttämään nimeen, ja Roume-kirjoitusasu yhdistyy ranskalaisen siirtomaahallinnon Ernest Roumeen. Saarella kerrotaan olleen 1800-luvun alussa rakennettu brittiläinen linnake. Linnakkeen nykyinen säilyneisyys jää epävarmaksi.\n\nIsoisän matkavuonna 1873 Roume kuului Britannian hallitsemaan saaristoon. Room ja Crawford Island olivat tuon aikakauden saaresta käytettyjä nimiä. Nimikerrokset kertovat saaren historiasta, kun taas sen sijainti saariston keskellä on maantieteellinen lähtökohta. Kivinen ranta ja metsäiset saaristomaisemat kuuluvat luonnonpaikan nykyiseen kuvaan.",
+      "teksti": "Roume on asuttu saari Los-saariston keskellä. Kassa ja Tamara muodostavat sen ympärille lähes sulkeutuvan kaaren. Saaren rantoihin kuuluu Plage du Gouverneur, mutta Roume on koko saaren nimi. \n\nRoom ja Crawford Island ovat saaren vanhoja nimiä. Room-muoto liittyy englanninkielisten asukkaiden käyttämään nimeen, ja Roume-kirjoitusasu yhdistyy ranskalaisen siirtomaahallinnon Ernest Roumeen. Saarella kerrotaan olleen 1800-luvun alussa rakennettu brittiläinen linnake.\n\nIsoisän matkavuonna 1873 Roume kuului Britannian hallitsemaan saaristoon. Room ja Crawford Island olivat tuon aikakauden saaresta käytettyjä nimiä.",
       "kuvat": [
         {
           "tiedosto": "Strand nach Süden auf Roume.jpg",
@@ -422,7 +422,7 @@
     },
     "Tamaran saari": {
       "aika": "Vanha luonnon- ja asutuspaikka, kaivostoimintaa 1900-luvulla",
-      "teksti": "Tamara sijaitsee Los-saariston läntisellä laidalla. Pitkä kaareva saari muodostaa Kassan kanssa Roumea ympäröivän saaristokehän. Tamara tunnetaan myös nimellä Fotoba; nimen Fortoba-kirjoitusasu esiintyy osassa lähteitä. Kaareva muoto ja sijainti erottavat sen saariston keskellä olevasta Roumesta.\n\nSaariston luonnonmaisemaan kuuluvat rannat ja metsäiset sisäosat. Tamaran historiassa on myös 1900-luvun bauksiittikaivostoimintaa. Saareen liittyvät merenkulun majakka ja Fotoban entinen vankila ovat myöhempien rakennettujen paikkojen historiaa. \n\nVuonna 1873 Tamara kuului Britannian hallitsemaan saaristoon. Luonnonpaikkana saari on ollut olemassa ennen nykyistä Conakrya. Sen rannat ovat osa saaristokokonaisuutta, jonka ulkokaari avautuu kaupungin edustan merimaisemaan.",
+      "teksti": "Tamara sijaitsee Los-saariston läntisellä laidalla. Pitkä kaareva saari muodostaa Kassan kanssa Roumea ympäröivän saaristokehän. Tamara tunnetaan myös nimellä Fotoba; nimen Fortoba-kirjoitusasu esiintyy osassa lähteitä.\n\nSaariston luonnonmaisemaan kuuluvat rannat ja metsäiset sisäosat. Tamaran historiassa on myös 1900-luvun bauksiittikaivostoimintaa. Saareen liittyvät merenkulun majakka ja Fotoban entinen vankila ovat myöhempien rakennettujen paikkojen historiaa. ",
       "kuvat": [
         {
           "tiedosto": "Île de fotoba 2.jpg",
@@ -501,21 +501,6 @@
   },
   "ehdotukset": {
     "lentoasema": "Ahmed Sékou Touré International Airport (CKY)",
-    "huomiot": [
-      "C-luonnos, ei valmis C/F: Camayennen paikallinen karttakohdekuva puuttuu, kuvat-lista säilytetään tyhjänä. Kaikki muut 21 lopullista B-kuvaa käytetään kerran.",
-      "K4 vaihtuu A:n sallimaan Camayenne/kapokki-aiheeseen Sandervalia-noston sijasta. Ecuadorin puu on yleinen kapokkikuva, ei Camayennen yksilö tai sen tarkan lajin varmennus. Paikallinen Camayennen N3-kuva jää puuttumaan.",
-      "C1 on laajemman niemimaan ISS-kuva lentoaseman seudulta, ei Tombo. C2 on Conakryn yleinen vesiranta 2005, ei varmennettu Boulbinet. O3/O5/valokuva ovat Ratoman/Taouyan merirantoja 2021, eivät saaristopisteitä tai Camayenne.",
-      "O4 on Ghanassa kuvattu hibiscus-lemonade-juoma 2023, yleinen havainnollistus; ei Guineassa kuvattu bissap tai reseptin todiste. Matkailijalle-kuva on parvekkeen merinäkymä 2021, w/h 0,75; hotellia tai tarkkaa Tombon pistettä ei nimetä, D arvioi roolin ja rakennusosat.",
-      "Joelguinea-krediitti luettiin B:ssä explicit license Attribution -kentästä, Soman-krediitti Summary: Photo: Soman -tekstistä. Ei puuttuvasta Author-taulukosta arvattuja henkilöllisyyksiä. Sallittu verkkosovitus dokumentoi artistFieldSource-rajan.",
-      "Kassa/Roume/Tamara-nostoissa wiki-linkki on olemassa oleva en-artikkeli Îles de Los. Varsinaiset yksityiskohtaiset faktalähteet säilyvät A:n ranskankielisissä saariartikkeleissa; niille ei keksitä olemattomia fi/en-otsikoita.",
-      "Tombon ja kaupungin perustamis-/luovutusvuodet sekä siirtomaahallinnon eri pääkaupunkivuodet eroavat lähteissä; vuosisadan loppu korvaa tarkat vuodet. Kontekstin 1887-lause ei ole valittu yksiselitteiseksi perustamisvuodeksi.",
-      "Puutarhan lähteissä 1894/1897-ero: käytetään 1800-luvun loppua. Kassan kaivosten alkuvuosissa ristiriita: 1900-luku. Factory Island -nimiristiriitaa ei käytetä visassa tai päätekstissä.",
-      "UM:n Guinea-tiedotetta ei saatu ja Guinea puuttui A–Ö-listasta. Käytännön turvallisuus FCDO, luettu 11.10.2026, current samalle päivälle, updated 12.8.2026; ei keksittyä UM-luokitusta tai kokonaisvaltaista turvallisuuslupausta.",
-      "Väestöluku jätettiin pois. Kontekstin asukkaat tarkoittavat vuoden 2025 alustavaa laskentatulosta Conakryn erityisvyöhykkeelle, eivät Tomboa tai vanhaa viiden kommuunin kaupunkia.",
-      "Kartta ankkuroituu Tomboon ja laajenee meriyhteyden saariin. Sataman WD-tarkkuus on karkea; viisi desimaalia ei ole senttimetrivarmuus. Kassa/Roume-pisteiden rinnakkaiset aluekoordinaatit A:ssa; niitä ei keskiarvoisteta tai nimetä laitureiksi.",
-      "Luonnonpaikkojen koko laajuuden ja noin 300 m ulkoreunamarginaalin tarkistus kuuluu Mac-karttapiirtoon. Kaikki karttamerkit A:n WP/WD-pisteistä; ei pois jätettyjä piilokohteita.",
-      "Sää kopioitu alkuperäisestä saa.json:sta ilman tausta-kenttää. NOAA-normalit 1991–2020; kosteus/aurinko-lähdeviitteen 1961–1990-jaksoa ei vaihdeta lämpö-/sadetaulukon kaudeksi.",
-      "Ei ennen–nyt-paria tai historiallista PD-kuvaa; nykyinen matkakirjan valokuva 2021. Guinean art.27/45/95-erot ja vene-/parvekeosien oikeusrajat B:ssä, ei yleistä arkkitehtuurin PD-väitettä."
-    ]
+    "huomiot": []
   }
 }

@@ -64,28 +64,28 @@
       "q": "Mihin säilyneitä pieniä valokuvavedoksia käytettiin museotyössä?",
       "options": [
         "Kokoelmien historian kokoamiseen",
-        "Uusien näyttelyhuoneiden suunnitteluun",
-        "Museon kävijäluettelon täydentämiseen",
-        "Kaupungin tonttijaon mittaamiseen"
+        "Esineiden vakuutusarvon arviointiin",
+        "Museon kävijätilaston laatimiseen",
+        "Näyttelytilojen pohjapiirroksiin"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Kuvissa säilyi tietoa esineistä ja niiden käytöstä.",
+      "hint": "Vedokset digitoitiin, kun osa museon aineistosta oli menetetty.",
       "fact": "Digitoidut koevedokset auttoivat selvittämään museokokoelmien alkuperää ja esineiden käyttöyhteyksiä.",
       "source": "https://pt.wikipedia.org/wiki/Museu_Etnogr%C3%A1fico_Nacional_da_Guin%C3%A9-Bissau"
     },
     {
-      "q": "Mikä selittää Amuran linnoituksen nykyisten osien eri iät?",
+      "q": "Mitä linnoitustyyppiä Amura edustaa?",
       "options": [
-        "Useat rakentamisen vaiheet",
-        "Koko linnakkeen siirtäminen",
-        "Erillisten linnojen liittäminen",
-        "Yhden alkuperäisrakenteen säilyminen"
+        "Bastionilinnoitusta",
+        "Keskustornilinnaa",
+        "Roomalaista leirilinnoitusta",
+        "Kehämuurilinnaa"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Linnoitus sijaitsee Bissaun vanhassa satamaytimessä.",
-      "fact": "Ensimmäinen linnoitusvaihe ei säilynyt koko nykyisen rakennuksen perustana, ja Amuraa rakennettiin sekä korjattiin myöhemmin.",
+      "hint": "Linnoituksen sisällä oli komentotalo, kasarmeja ja varastoja.",
+      "fact": "Amuran kulmista ulkonevat bastionit mahdollistivat viereisten muuriosien puolustamisen sivulta.",
       "source": "https://en.wikipedia.org/wiki/Fortaleza_de_S%C3%A3o_Jos%C3%A9_da_Amura"
     }
   ],
@@ -123,7 +123,7 @@
       "nostot": [
         {
           "otsikko": "Vanha talo jatkaa työpäivää",
-          "teksti": "Bissau Velho on vanha keskusta, jonka siirtomaa-ajan taloissa toimii edelleen liikkeitä ja apteekkeja. Kaupunginosan nimi kertoo sen asemasta kaupungin historiassa, mutta talojen käyttö jatkuu nykyajassa. Linnoitus ja satama kuuluvat saman vanhan ytimen ympäristöön. Niiden takana kaupunki levittäytyy laajemmalle kuin vanhoihin kortteleihin. Vanhassa talossa voi siis käydä tämän päivän asioilla: historian kerrokset ovat osa tavallista työ- ja asiointiympäristöä.",
+          "teksti": "Bissau Velho on vanha keskusta, jonka siirtomaa-ajan taloissa toimii edelleen liikkeitä ja apteekkeja. Kaupunginosan nimi kertoo sen asemasta kaupungin historiassa, mutta talojen käyttö jatkuu nykyajassa. Linnoitus ja satama kuuluvat saman vanhan ytimen ympäristöön. Niiden takana kaupunki levittäytyy laajemmalle kuin vanhoihin kortteleihin. Vanha satama on Geba-joen suistoalueen pohjoisrannalla.",
           "wiki": "Bissau"
         },
         {
@@ -137,12 +137,12 @@
         },
         {
           "otsikko": "Bandimissa ostetaan arkea",
-          "teksti": "Bandimin torin kauppatavarat liittyvät Bissaun jokapäiväiseen elämään. Hedelmien, vihannesten ja viljan rinnalla myydään vaatteita ja jalkineita. Valikoimaan kuuluu myös käsinkudottuja tekstiilejä. Torin ja sataman kautta kulkevat tavarat kertovat kaupankäynnin eri mittakaavoista: Bandim palvelee paikallista asiointia, satama yhdistää kaupunkia vesireitteihin. Bandimissa ruoan raaka-aineet, kudotut tekstiilit ja käyttöesineet ovat osa samaa paikallista kauppaa.",
+          "teksti": "Bandimin torilla myydään ruokaa, vaatteita, jalkineita ja käsinkudottuja tekstiilejä. Kauppatavarat liittyvät Bissaun jokapäiväiseen elämään: hedelmiä, vihanneksia ja viljaa hankitaan kotien ruoanlaittoon.\n\nBissaun vähittäiskaupan tarjontaan kuuluvat myös kananmunat, liha, maito ja valmiit ruoat. Käsityötuotteiden rinnalla myydään elektroniikan tarvikkeita. Torikaupan ohella kaupungissa on supermarketteja ja muita virallisia kauppapaikkoja.",
           "wiki": "Bissau"
         },
         {
           "otsikko": "Pieni vedos säilytti suuren muistin",
-          "teksti": "Kansallisen etnografisen museon historiassa pieni valokuvan koevedos osoittautui arvokkaaksi. Esineitä ja valokuvia oli menetetty myöhäisen 1900-luvun kriiseissä, mutta pieniä vedoksia säilyi. Niitä digitoitiin kokoelmien historian kokoamiseksi. Näyttelyssä kuvien rinnalla kerrottiin esineiden kulttuurisesta taustasta. Säilyneet esineet, uudet hankinnat ja kuvallinen aineisto täydensivät toisiaan. Pienen paperikuvan sisältämä tieto ulottui sen omaa kokoa paljon pidemmälle.",
+          "teksti": "Kansallisen etnografisen museon historiassa pieni valokuvan koevedos osoittautui arvokkaaksi. Esineitä ja valokuvia oli menetetty myöhäisen 1900-luvun kriiseissä, mutta pieniä vedoksia säilyi. Niitä digitoitiin kokoelmien historian kokoamiseksi. Näyttelyssä kuvien rinnalla kerrottiin esineiden kulttuurisesta taustasta. Säilyneet esineet, uudet hankinnat ja kuvallinen aineisto täydensivät toisiaan.",
           "tiedosto": "ScanerFromInside.jpg",
           "lyhyt": "Avattu skanneri havainnollistaa digitoinnin välinettä.",
           "selite": "Yleinen tasoskannerin koneisto havainnollistaa kuvien digitointiin käytettävää välinettä vuoden 2007 valokuvassa.",
@@ -156,7 +156,7 @@
           "selite": "Bissau Velhon kujan päässä avautuva Geban vesi liittää vanhan keskustan satamamaisemaan elokuussa 2026.",
           "lahde": "Laércia Valeriana Insali, Wikimedia Commons (CC BY 4.0)"
         },
-        "kappale": "Bissaun vanhaan keskustaan tutustuminen alkaa tämän päivän asiointikaduista. Bandimissa kauppa liittyy ruokaan ja arkisiin tarvikkeisiin. Sataman ympäristössä vanhat ja uudemmat laituripaikat on hyvä erottaa toisistaan. Suunnittele kuljetukset huolellisesti ja varmista vierailukohteiden pääsy. Erityisesti linnoituksen historiaan tutustuminen ei merkitse lupaa mennä sen sisälle.",
+        "kappale": "Bissau Velhon siirtomaa-ajan taloissa toimii liikkeitä ja apteekkeja. Bandimissa kauppa liittyy ruokaan, vaatteisiin ja arkisiin tarvikkeisiin. Vanhan keskustan lähellä ovat Amuran linnoitus ja satama. Pidjiguitin vanha laituripaikka kuuluu sataman eri-ikäisiin rakennusvaiheisiin.",
         "artikkeli": {
           "nimi": "Matkailijan Bissau",
           "taitto": "opas",
@@ -165,15 +165,15 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Bissauta palvelee Osvaldo Vieiran kansainvälinen lentoasema (OXB). Kaupungissa käytetään muun muassa jaettuja takseja. Satamasta on vesiyhteyksiä saarille ja muualle; tarkista lähtöpaikka ja liikennöinti kuljetuksen järjestäjältä."
+              "teksti": "Bissauta palvelee Osvaldo Vieiran kansainvälinen lentoasema (OXB). Kaupungissa käytetään muun muassa jaettuja takseja. Satamasta on vesiyhteyksiä saarille ja muualle."
             },
             {
               "otsikko": "Vanhan keskustan käyttö jatkuu",
-              "teksti": "Bissau Velhon siirtomaa-ajan taloissa toimii liikkeitä ja apteekkeja. Katujen lähellä ovat Amuran linnoitus ja satama. Linnoituksen vaiheisiin kuuluu rakentamista, hylkäämistä ja myöhempää kunnostamista; sovi vierailusta ylläpitäjän kanssa."
+              "teksti": "Bissau Velhon siirtomaa-ajan taloissa toimii liikkeitä ja apteekkeja. Katujen lähellä ovat Amuran linnoitus ja satama. Linnoituksen vaiheisiin kuuluu rakentamista, hylkäämistä ja myöhempää kunnostamista."
             },
             {
               "otsikko": "Torilta kokoelmien muistiin",
-              "teksti": "Bandimin torilla myydään ruokaa, arkisia käyttötavaroita ja käsityötä. Sataman Pidjiguitin laituri ja myöhemmät satamarakenteet kertovat kaupankäynnin eri vaiheista. Etnografisen museon kokoelmien historiaa on selvitetty säilyneiden valokuvavedosten avulla. Museon tilat ovat vaihtuneet, joten varmista nykyinen osoite ja pääsy ennen käyntiä.",
+              "teksti": "Bandimin torilla myydään ruokaa, arkisia käyttötavaroita ja käsityötä. Sataman Pidjiguitin laituri ja myöhemmät satamarakenteet kertovat kaupankäynnin eri vaiheista. Etnografisen museon kokoelmien historiaa on selvitetty säilyneiden valokuvavedosten avulla.",
               "kuva": {
                 "tiedosto": "Trust Flat Scan USB 19200.jpg",
                 "lyhyt": "Tasoskanneri on yleinen digitoinnin havainnollistus.",
@@ -188,7 +188,7 @@
             },
             {
               "otsikko": "Kuiva alkuvuosi, sateinen loppukesä",
-              "teksti": "Alkuvuoden kuukaudet ovat hyvin kuivia, ja sateet painottuvat kesä–lokakuuhun. Elokuun sademäärä on noin 470 millimetriä, kun alkuvuoden kuukausien normaali jää nollaan. Keväällä päivän ylimmät lämpötilat ovat noin 35–36 astetta ja elokuussa noin 30 astetta. Alkuvuoden öiden alin normaali on noin 18–19 astetta. Sadekaudella kuljetuksiin kannattaa jättää joustoa, sillä rankkasateet voivat vaikeuttaa tieoloja.",
+              "teksti": "Alkuvuoden kuukaudet ovat hyvin kuivia, ja sateet painottuvat kesä–lokakuuhun. Elokuun sademäärä on noin 470 millimetriä, kun alkuvuoden kuukausien normaali jää nollaan. Keväällä päivän ylimmät lämpötilat ovat noin 35–36 astetta ja elokuussa noin 30 astetta. Alkuvuoden öiden alin normaali on noin 18–19 astetta.",
               "kuva": {
                 "tiedosto": "Paysagem de Bissau.jpg",
                 "lyhyt": "São Paulon kaupunginosan maisema Bissaussa vuonna 2025.",
@@ -217,7 +217,7 @@
               {
                 "mita": "Museon kokoelmien historia",
                 "tahdet": 1,
-                "selite": "Säilyneet kuvat avaavat esineiden käyttöyhteyksiä, kun nykyinen vierailupaikka on varmistettu."
+                "selite": "Digitoidut valokuvavedokset auttoivat kokoamaan tietoa kadonneista museoesineistä."
               },
               {
                 "mita": "Riisi ja paikallinen kastike",
@@ -227,20 +227,20 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Ennen matkapäätöstä",
-                "teksti": "Tarkista Guinea-Bissaun ajantasainen matkustustiedote Suomen ulkoministeriöstä ja noudata sen ohjeita."
+                "otsikko": "Vierailujen järjestelyt",
+                "teksti": "Museon käyntipaikka ja kuljetusten lähtöpisteet selvitetään paikallisesti. Linnoitukseen pääsyä ei oleteta; myös kuvaamisessa noudatetaan kohteen ohjeita."
               },
               {
-                "otsikko": "Varaa käteistä",
-                "teksti": "Maa toimii pääosin käteisellä, eikä korttien tai automaattien toimivuutta voi olettaa."
+                "otsikko": "Maksaminen",
+                "teksti": "Guinea-Bissaussa käytetään pääosin käteistä."
               },
               {
-                "otsikko": "Huomioi rajoitukset",
-                "teksti": "Noudata kulku- ja kuvausohjeita sekä vältä herkkiä sotilas- ja hallintokohteita."
+                "otsikko": "Bandimin tekstiilit",
+                "teksti": "Bandimin torilla myydään ruokatarvikkeiden lisäksi vaatteita, jalkineita ja käsinkudottuja tekstiilejä."
               },
               {
-                "otsikko": "Varmista vierailupaikka",
-                "teksti": "Tarkista museon nykyinen osoite ja pääsy sekä vesimatkan lähtöpaikka ennen lähtöä."
+                "otsikko": "Kaksi laiturivaihetta",
+                "teksti": "Pidjiguitin vanha julkinen laituri rakennettiin ennen sataman uudempia laiturirakenteita."
               }
             ]
           },
@@ -266,12 +266,12 @@
       "nostot": [
         {
           "otsikko": "Linnoitus rakentui uudelleen",
-          "teksti": "Amuran linnoituksen historia alkaa 1600-luvun lopun kauppa-asemavaiheesta. Varhainen linnake hylättiin ja tuhoutui; nykyinen kokonaisuus rakennettiin sen jälkeen uusissa vaiheissa. Nykyisen kokonaisuuden keskeisiä vaiheita rakennettiin 1700-luvulla. Linnoitusta korjattiin myös 1800-luvulla ja restauroitiin seuraavalla vuosisadalla. Vuonna 1873 paikalla oli jo linnoitus, mutta sen kaikki nykyiset osat eivät kuulu samaan aikaan. Yksi rakennusnimi kätkee näin useita rakentamisen ja korjaamisen vaiheita.",
+          "teksti": "Amuran linnoituksen historia alkaa 1600-luvun lopun kauppa-asemavaiheesta. Varhainen linnake hylättiin ja tuhoutui; nykyinen kokonaisuus rakennettiin sen jälkeen uusissa vaiheissa. Nykyisen kokonaisuuden keskeisiä vaiheita rakennettiin 1700-luvulla. Linnoitusta korjattiin myös 1800-luvulla ja restauroitiin seuraavalla vuosisadalla. Vuonna 1873 paikalla oli jo linnoitus, mutta sen kaikki nykyiset osat eivät kuulu samaan aikaan.",
           "wiki": "Fortaleza de São José da Amura"
         },
         {
           "otsikko": "Kulma suojaa muurin sivua",
-          "teksti": "Amura kuuluu bastionilinnoitusten tyyppiin: sen perusratkaisussa muurin kulmista ulkonevat bastionit. Yleisen bastionirakenteen tarkoituksena on mahdollistaa viereisten muuriosien puolustaminen sivusuunnasta. Kulma auttaa siis valvomaan myös muurin viereistä tilaa. Amuran suunnitelmaa on kuvattu Vauban-tyyliseksi. Linnoituksen sisällä oli komentotalo, kasarmeja ja varastoja. Muuri ympäröi kokonaista palveluympäristöä, jossa majoitus ja tavaroiden säilyttäminen kuuluivat paikan toimintaan.",
+          "teksti": "Amura kuuluu bastionilinnoitusten tyyppiin: sen perusratkaisussa muurin kulmista ulkonevat bastionit. Yleisen bastionirakenteen tarkoituksena on mahdollistaa viereisten muuriosien puolustaminen sivusuunnasta. Amuran suunnitelmaa on kuvattu Vauban-tyyliseksi. Linnoituksen sisällä oli komentotalo, kasarmeja ja varastoja. Toisin kuin pyöreässä tornissa, bastionin suorat sivut vähensivät muurin edustan katveita.",
           "wiki": "Bastion",
           "tiedosto": "Plan type bastion Vauban.svg",
           "lyhyt": "Yleinen bastionikaavio havainnollistaa linnoitustyyppiä.",
@@ -280,7 +280,7 @@
         },
         {
           "otsikko": "Satama oli ennen nykyistä laituria",
-          "teksti": "Bissaun satamakauppa on vanhempaa kuin sen nykyisin tunnetut laiturirakenteet. Yritykset käyttivät varhain puisia lastaus- ja maihinnousulaitureita. Pidjiguitin julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle, ja sen alkuvaiheessa yhdistettiin puuta ja muurattua rakennetta. Laituri tunnettiin nimellä Ponte-cais Correia e Lança. Myöhemmin sataman muualle rakennettiin uudempia laitureita. Satamapaikan historia ja yhden laiturin rakennushistoria ovat siksi eri pituisia kertomuksia.",
+          "teksti": "Bissaun satamakauppa on vanhempaa kuin sen nykyisin tunnetut laiturirakenteet. Yritykset käyttivät varhain puisia lastaus- ja maihinnousulaitureita. Pidjiguitin julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle, ja sen alkuvaiheessa yhdistettiin puuta ja muurattua rakennetta. Laituri tunnettiin nimellä Ponte-cais Correia e Lança. Myöhemmin sataman muualle rakennettiin uudempia laitureita.",
           "wiki": "Port of Bissau",
           "tiedosto": "Pidjiguiti.jpg",
           "lyhyt": "Pidjiguitin satamapaikka veneineen vuonna 2007.",
@@ -289,7 +289,7 @@
         },
         {
           "otsikko": "Tulliaukio yhdistää linnoituksen ja sataman",
-          "teksti": "Praça da Alfândega tarkoittaa Tulliaukiota, ja Bissaun aukion nimi viittaa paikalliseen tullitaloon. Aukio sijaitsee Amuran linnoituksen itäpuolella vanhan satamaytimen yhteydessä. Tullitalojen yleinen tehtävä on käsitellä maahan tulevia ja sieltä lähteviä tavaroita. Aukion nimi yhdistää siis kaupunkitilan sataman kautta kulkevaan kauppaan. Aukiolla on myös puutarhatilaa. Portugalinkielinen alfândega-sana tarkoittaa tullia, jonka toiminta kuuluu kauppasataman tavaraliikenteeseen.",
+          "teksti": "Praça da Alfândega tarkoittaa Tulliaukiota, ja sen nimi viittaa Bissaun tullitaloon. Aukio sijaitsee Amuran linnoituksen itäpuolella vanhan satamaytimen yhteydessä. Portugalinkielinen alfândega on tullia tarkoittava sana. Tullitalossa käsitellään maahan tulevia ja sieltä lähteviä tavaroita. Aukion puutarhatila on lähellä linnoituksen muureja ja Geba-joen suistoalueen satamaa.",
           "wiki": "Custom house",
           "tiedosto": "Porto de Bissau 06.jpg",
           "lyhyt": "Bissaun uudempi satama havainnollistaa satamakauppaa.",
@@ -330,19 +330,19 @@
   "nahtavyydet": {
     "Amuran linnoitus": {
       "aika": "Ensimmäinen vaihe 1600-luvun lopulla, nykyinen kokonaisuus myöhemmistä vaiheista",
-      "teksti": "Amuran linnoitus kuuluu Bissaun vanhaan satamaytimeen. Paikan ensimmäinen linnake rakennettiin 1600-luvun lopun kauppa-asemavaiheessa, mutta se hylättiin ja tuhoutui. Nykyisen kokonaisuuden tärkeät rakennusvaiheet ajoittuvat 1700-luvulle. Linnoituksen nimeen liittyy näin useampi rakennusvaihe kuin vanhimman linnakkeen ajoitus yksin kertoo.\n\nPerusratkaisua on luonnehdittu Vauban-tyyliseksi bastionilinnoitukseksi. Muurin kulmista ulkonevat bastionit mahdollistavat viereisten muuriosien puolustamisen sivusuunnasta. Sisällä oli komentotalo, kasarmeja ja varastorakennuksia, joten linnoitus oli myös majoituksen ja huollon ympäristö.\n\nIsoisän matkavuonna 1873 linnoitus oli jo olemassa. Sitä korjattiin 1800-luvulla ja restauroitiin vielä 1900-luvulla. Nykyinen linnoitus muodostuu näistä rakentamisen ja korjaamisen vaiheista. Linnoitus on myös palvelu- ja huoltotilojen kokonaisuus, jossa on ollut kasarmeja ja varastoja.",
+      "teksti": "Amuran linnoitus kuuluu Bissaun vanhaan satamaytimeen. Paikan ensimmäinen linnake rakennettiin 1600-luvun lopun kauppa-asemavaiheessa, mutta se hylättiin ja tuhoutui. Nykyisen kokonaisuuden tärkeät rakennusvaiheet ajoittuvat 1700-luvulle.\n\nPerusratkaisua on luonnehdittu Vauban-tyyliseksi bastionilinnoitukseksi. Muurin kulmista ulkonevat bastionit mahdollistavat viereisten muuriosien puolustamisen sivusuunnasta. Sisällä oli komentotalo, kasarmeja ja varastorakennuksia, joten linnoitus oli myös majoituksen ja huollon ympäristö.\n\nIsoisän matkavuonna 1873 linnoitus oli jo olemassa. Sitä korjattiin 1800-luvulla ja restauroitiin vielä 1900-luvulla.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Pidjiguitin laituri": {
       "aika": "1800-luvun loppupuoli ja myöhemmät muutokset",
-      "teksti": "Pidjiguiti on tunnistettu laituripaikka Bissaun satamassa. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança. Sataman ja laiturin tarinat alkavat kuitenkin eri kohdista.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Satamassa oli myös yritysten käyttämiä puisia lastaus- ja maihinnousulaitureita. Isoisän matkavuonna 1873 Bissau oli jo kauppapaikka, kun taas Pidjiguitin julkisen laiturin rakennusvaihe kuuluu myöhempään aikaan.\n\nMyöhemmin Bissaun sataman muualle rakennettiin uudempia laitureita. Ne kuuluvat saman sataman historiaan mutta ovat eri paikkoja kuin vanha Pidjiguiti. Laiturin nimi kohdistuu alusten ja tavaroiden maihin kytkeytyvään työympäristöön. Sen vaiheita voi seurata erottamalla vanhan satamapaikan, julkisen laiturin ja myöhemmän satamainfrastruktuurin toisistaan.",
+      "teksti": "Pidjiguiti on tunnistettu laituripaikka Bissaun satamassa. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Satamassa oli myös yritysten käyttämiä puisia lastaus- ja maihinnousulaitureita. Isoisän matkavuonna 1873 Bissau oli jo kauppapaikka, kun taas Pidjiguitin julkisen laiturin rakennusvaihe kuuluu myöhempään aikaan.\n\nMyöhemmin Bissaun sataman muualle rakennettiin uudempia laitureita.",
       "kuvat": [],
       "lahde": "Wikipedia"
     },
     "Tulliaukio": {
       "aika": "Vanhan satamaytimen aukio",
-      "teksti": "Praça da Alfândega, suomeksi Tulliaukio, sijaitsee Amuran linnoituksen itäpuolella Bissaun vanhassa satamaytimessä. Paikka on aukio ja myös puutarhatilaa. Sen nimi viittaa Bissaun tullitaloon: portugalin alfândega tarkoittaa tullia. Aukio ja nimessä mainittu rakennus ovat erillisiä paikkoja.\n\nTullitalojen yleinen tehtävä liittyy maahan tulevien ja sieltä lähtevien tavaroiden käsittelyyn. Nimi kytkee tämän kaupunkitilan sataman kautta kulkevaan kaupankäyntiin. Linnoitus, laiturit ja tulliin viittaava aukio kertovat saman vanhan ytimen eri tehtävistä.\n\nAukion yhteys tullitaloon ja satamaan säilyy nimessä. Linnoitus, laiturit ja tulliin liittyvä aukio edustavat lähekkäin kauppasataman eri toimintoja.",
+      "teksti": "Praça da Alfândega, suomeksi Tulliaukio, sijaitsee Amuran linnoituksen itäpuolella Bissaun vanhassa satamaytimessä. Aukiolla on myös puutarhatilaa. Nimi viittaa Bissaun tullitaloon: portugalin alfândega tarkoittaa tullia.\n\nTullitalossa käsitellään maahan tulevia ja sieltä lähteviä tavaroita. Sen lähellä ovat linnoitus ja sataman laiturit Geba-joen suistoalueen pohjoisrannalla. Nimi muistuttaa kauppasataman tullitoiminnasta.",
       "kuvat": [],
       "lahde": "Wikipedia"
     }
@@ -414,19 +414,6 @@
   },
   "ehdotukset": {
     "lentoasema": "Osvaldo Vieira International Airport (OXB)",
-    "huomiot": [
-      "C-luonnos, ei C- tai F-valmis: puuttuvat kohdekuvat säilytetään tyhjinä kuvalistoina.",
-      "Kolme paikkaa rajataan kompaktiin vanhaan satamaytimeen pääsession hyväksymällä poikkeamalla; Bissau ei kokonaisuutena ole pieni väestöalue. Määrää ei täytetä arvatuilla tori-, museo- tai saaripisteillä.",
-      "UM:n Guinea-Bissaun maakohtaista sisältöä ei saatu. Käytännön turvallisuus FCDO, luettu 11.10.2026, ajantasaiseksi merkitty samalle päivälle, päivitys 10.12.2025; ei keksittyä UM-luokkaa.",
-      "Kontekstin 1600-luvun Amura-ajoitus koskee ensimmäistä linnakevaihetta, ei koko nykyistä rakennusta. S1/S2:n tarkat myöhemmät vuodet eroavat, joten käytetään vuosisatoja.",
-      "Sää on alkuperäinen saa.json ilman tausta-kenttää. Taulukko on Osvaldo Vieiran lentoaseman 1991–2020 NOAA-normaaleista; tallennetut lat/lon ovat kaupungin työkalukoordinaatit, eivät erikseen varmennettu asemapiste.",
-      "Asukasluku jätettiin pois: kontekstin luku on Bissaun autonomisen sektorin vuodelle 2025 laadittu projektio, ei saman vuoden väestölaskenta.",
-      "Museon vanhaa Ajuda-pistettä, Bandim-kalalajiin ohjautuvaa otsikkoa tai Kap Verden saareen ohjautuvaa Ilhéu do Rei -otsikkoa ei käytetä kohdepaikkoina.",
-      "Lopullinen B-roolitus 16/19: H1=Amuran sisäpiha, H2=yleinen bastioniperiaatekaavio, H3=Pidjiguitin satamapaikka, H4=uudempi satama yleisen satamakaupan kuvana. H2 ei ole Amuran pohjapiirros; H4 ei ole Tulliaukion valokuva. N1/N2/N3 puuttuvat.",
-      "Kaikki 16 esikatselua avattiin C:ssä. Matkailijalle-pysty kuvattu 2026, w/h 0,75; O3/O4/O5 kuvattu 2023/2022/2025. O1/O2 kuvattomat. Kuvan aiheen raja ei muutu noston otsikon perusteella.",
-      "K4 ja O3 ovat yleisiä skannerikuvia; niitä ei nimetä museon laitteiksi. O4 on Nepalissa kuvattua riisiä, ei Bissaun paikallinen annos. O5 on Bissaun São Paulon paikallismaisema, ei São Paulo Brasiliassa eikä ilmastonormaalin todiste.",
-      "B:n kaupallisten kuvien oikeusperusteet ja sen lähderajat kuvat.md:ssä/provenance.json:ssa; C ei muuta niitä PD-väitteiksi. Itse linnoituksen ikä ei ajoita nykyisiä osia, ja kaavio on erikseen CC BY-SA 4.0 -lisensoitu moderni yleishavainnollistus.",
-      "Nykyinen valokuva 2015 ilman ennen–nyt-paria; hyväksyttyä vuoteen 1900 ulottuvaa historiallista paria ei löytynyt."
-    ]
+    "huomiot": []
   }
 }

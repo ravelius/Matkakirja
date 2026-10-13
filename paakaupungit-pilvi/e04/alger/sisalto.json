@@ -162,19 +162,19 @@
             "hyvaTietaa": [
               {
                 "otsikko": "Casbahin kujat",
-                "teksti": "Liiku Casbahissa päiväsaikaan paikallisen oppaan kanssa ja tarkista ennen matkaa Algerian ajantasainen matkustustiedote."
+                "teksti": "Casbahin vierailuun sovitaan paikallinen opastus päiväsaikaan; matkan turvallisuus- ja maahantulojärjestelyt selvitetään ennen lähtöä."
               },
               {
                 "otsikko": "Rinne ja portaat",
                 "teksti": "Casbahin vanhat kujat muodostavat kävelyreitin, jossa on portaita, holvikäytäviä ja umpikujia."
               },
               {
-                "otsikko": "Taksimatka",
-                "teksti": "Sovi taksimatkan hinta kuljettajan kanssa ennen lähtöä."
+                "otsikko": "Bourek-leivonnainen",
+                "teksti": "Bourek taitetaan ohueen dyoul-taikinalevyyn; täytteenä voi olla esimerkiksi perunaa, lihaa tai juustoa."
               },
               {
-                "otsikko": "Maahantulo",
-                "teksti": "Algerian viranomaiset vahvistavat matkalla tarvittavat viisumi- ja maahantuloasiakirjat."
+                "otsikko": "Museon nimi",
+                "teksti": "Dar Mustapha Pacha esittelee miniatyyrejä, käsikirjoitusten koristelua ja kalligrafiaa eli kaunokirjoitusta."
               }
             ]
           },
@@ -248,7 +248,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Meri erottaa Pohjois-Afrikan Etelä-Euroopasta.",
+      "hint": "Alger on Algerian pääkaupunki; sen rannikko jatkuu Marokon ja Tunisian väliin.",
       "fact": "Algerin satama on Algerian pohjoisrannikolla.",
       "source": "https://en.wikipedia.org/wiki/Algiers"
     },
@@ -377,7 +377,7 @@
     },
     "Ketchaoua-moskeija": {
       "aika": "1600-luku; nykyinen rakennus 1800-luvulta",
-      "teksti": "Ketchaoua sijaitsee Casbahin alareunassa. Paikan moskeijahistoria ulottuu 1600-luvulle. Ranskan siirtomaakauden alussa paikasta tehtiin Saint-Philippen katedraali. Vanhaa rakennusta purettiin ja tilalle rakennettiin katedraali 1800-luvun puolivaiheilla.\n\nVuonna 1873 rakennus oli siis katolisessa kirkkokäytössä. Nykyisin se toimii jälleen moskeijana. Sisäänkäyntiin noustaan portaita, ja sitä kehystävät minareetit. Sisäänkäynnin koristeellista portiikkia kannattavat marmoripylväät, ja rakennuksen koristelussa yhdistyvät maurilaiset ja bysanttilaiset piirteet. Julkisivun minareetit ja portaat kehystävät sisäänkäyntiä rakennukseen, jonka ulkoasu muotoutui katedraalin rakennusvaiheessa.",
+      "teksti": "Ketchaoua sijaitsee Casbahin alareunassa. Paikan moskeijahistoria ulottuu 1600-luvulle. Ranskan siirtomaakauden alussa paikasta tehtiin Saint-Philippen katedraali. Vanhaa rakennusta purettiin ja tilalle rakennettiin katedraali 1800-luvun puolivaiheilla.\n\nVuonna 1873 rakennus oli katolisessa kirkkokäytössä. Nykyisin se toimii jälleen moskeijana. Sisäänkäyntiin noustaan portaita, ja sitä kehystävät minareetit. Sisäänkäynnin koristeellista portiikkia kannattavat marmoripylväät, ja rakennuksen koristelussa yhdistyvät maurilaiset ja bysanttilaiset piirteet.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -390,7 +390,7 @@
     },
     "Dar Mustapha Pacha": {
       "aika": "1700-luvun loppu",
-      "teksti": "Dar Mustapha Pacha rakennettiin Casbahiin Mustapha Pachalle 1700-luvun lopulla. Palatsin suureen pääoveen on sovitettu pieni kulkuovi, ja ovessa on pronssiniittikoristelua. Sisäänkäyntihalleissa on holveja ja seinäsyvennyksiin tehtyjä penkkejä. Sisäpihaa ympäröivät marmoripylväiden kannattamat kaarikäytävät, joista avautuu suuria huoneita.\n\nKaakeliseinät, marmoriset ovenkehykset ja gallerioiden puupalkit ovat osa talon rakennuskulttuuria. Palatsi on muutettu miniatyyrien, käsikirjoitusten koristelun ja kalligrafian eli kaunokirjoituksen kansallismuseoksi. Museon rakennus itsessään esittelee osmanikauden asumista: eteishallit, kaarikäytävät ja pihan ympärille avautuvat huoneet ovat osa palatsin alkuperäistä tilajakoa.",
+      "teksti": "Dar Mustapha Pacha rakennettiin Casbahiin Mustapha Pachalle 1700-luvun lopulla. Palatsin suureen pääoveen on sovitettu pieni kulkuovi, ja ovessa on pronssiniittikoristelua. Sisäänkäyntihalleissa on holveja ja seinäsyvennyksiin tehtyjä penkkejä. Sisäpihaa ympäröivät marmoripylväiden kannattamat kaarikäytävät, joista avautuu suuria huoneita.\n\nKaakeliseinät, marmoriset ovenkehykset ja gallerioiden puupalkit ovat osa talon rakennuskulttuuria. Palatsi on muutettu miniatyyrien, käsikirjoitusten koristelun ja kalligrafian eli kaunokirjoituksen kansallismuseoksi.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -429,7 +429,7 @@
     },
     "Raïsien palatsi": {
       "aika": "1500–1700-luvut",
-      "teksti": "Raïsien palatsi eli Palais des Rais on merenrannan rakennuskokonaisuus, joka tunnetaan myös nimellä Bastion 23. Siihen kuuluu palatseja ja vanhoja kalastajien taloja. Alueen puolustusrakenteiden historia alkaa 1500-luvulta, kun taas palatsiosat ovat nuorempia. Kokonaisuus säilyttää alemman Casbahin merenrantaperintöä kaupungissa, jonka rantakortteleita järjestettiin siirtomaakaudella uudelleen.\n\nRakennuksia käytettiin eri aikoina asuntoina, konsulaattina ja kirjastona. Rakennuksia ja kalastajien taloja yhdisti sama merenrantakortteli. Restauroituna se toimii nykyisin taiteen ja kulttuurin keskuksena. Bastion-nimi ja rakennusten numerointi kuuluvat alueen Ranskan ajan kartoituksen historiaan.",
+      "teksti": "Raïsien palatsi eli Palais des Rais on merenrannan rakennuskokonaisuus, joka tunnetaan myös nimellä Bastion 23. Siihen kuuluu palatseja ja vanhoja kalastajien taloja. Alueen puolustusrakenteiden historia alkaa 1500-luvulta, kun taas palatsiosat ovat nuorempia. Kokonaisuus säilyttää alemman Casbahin merenrantaperintöä kaupungissa, jonka rantakortteleita järjestettiin siirtomaakaudella uudelleen.\n\nRakennuksia käytettiin eri aikoina asuntoina, konsulaattina ja kirjastona. Restauroituna se toimii nykyisin taiteen ja kulttuurin keskuksena. Bastion-nimi ja rakennusten numerointi kuuluvat alueen Ranskan ajan kartoituksen historiaan.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -456,13 +456,7 @@
   },
   "ehdotukset": {
     "lentoasema": "Houari Boumediene Airport (ALG)",
-    "huomiot": [
-      "Task118: kuuden kaupungin C-korjauskierroksen Alger on tarkistettu kokonaan; muutos- ja lähdeketju RAPORTTI-task118.md:ssä.",
-      "C:n nykyisessä JSONissa on 20 tyhjää kuvaroolia; rootin immutable batch0088/CC- ja AI-sidokset sekä uudelleenbindaus tarkistetaan erikseen, niitä ei muutettu tässä.",
-      "Säädata on null: hyväksyttyä 48 kuukausiarvon ja normaalikauden lähdeketjua ei lisätty eikä lukuja arvattu.",
-      "Kartassa on seitsemän lähdepistettä; koordinaatit säilytettiin. Origin/mainissa on myös Algerin keskustakartta, jonka yhdistäminen kuuluu rootille.",
-      "Riippumaton Sisältökirjurin uusintapistokoe, kuvaoikeusportit, pelikytkentä ja julkaisu jäävät erillisiksi."
-    ]
+    "huomiot": []
   },
   "$skeema": "matkakirja-paakaupunki/1",
   "id": "alger",

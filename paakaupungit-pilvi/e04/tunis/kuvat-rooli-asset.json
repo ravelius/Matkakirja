@@ -1043,7 +1043,7 @@
         "sameImageExportSHA256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -1535,7 +1535,7 @@
         "sameImageExportSHA256": "f2f3b4248b4acb2ddf870c08db524a791edb71e59aef0e03f07a136fa5416e18",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -2275,7 +2275,7 @@
         "sameImageExportSHA256": "df556cbe960c788d29d527de51b0504f17a52937ccd1244a0ccea2a383107838",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -2819,7 +2819,7 @@
         "sameImageExportSHA256": "fc731908e29900f350757bd94c6adee38dd1514d118d6977b837f635167555d1",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3065,7 +3065,7 @@
         "sameImageExportSHA256": "36230a0dab63641fdcb67af55201e14f2dd30fc5be62fde81da0db43366942b9",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3311,7 +3311,7 @@
         "sameImageExportSHA256": "111f7de60f0fb4f9f627b3ab65af43ea5dc9cd196b5ff599ced61857dff78d8f",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3557,7 +3557,7 @@
         "sameImageExportSHA256": "1fdba48d816acee49d95cd7030d8f1a07abf7d56b7d43d572533402d1ffef038",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4060,7 +4060,7 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/tunis/4dd4a203017ca4e8d2b4676c8fa6e073560f0a0f2ffadfd8ab3704c3760430da.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/tunis/6aae80d12cbea6bfa1e833ea4ba908136a14ebbd40595584f4012a6f7421b79c.json",
   "task118ReboundAt": "2026-10-13T16:33:24.096332+00:00",
   "task228ExcludedAssets": [
     {
@@ -4308,5 +4308,5 @@
     }
   ],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T17:52:01.700643+00:00"
+  "task228ReboundAt": "2026-10-13T18:10:00.259336+00:00"
 }

@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "monrovia",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+  "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
   "assets": [
     {
       "era": "e04",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "semanticSourceBind": {
         "targetBeforeSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-        "semanticContextSHA256": "0b0b85e24350b7451ede52c8e48a60d4b62a734c2b8094864484dacb848e254f",
+        "semanticContextSHA256": "1bc59e286bbac40c5ea39be5e0077d213018a33f4937ae0be81ba8b8c729acb4",
         "subjectTitle": "Perille ja liikkeelle",
         "targetState": "existing-target"
       },
@@ -339,9 +339,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "targetAfterSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-      "contextAfterSHA256": "0b0b85e24350b7451ede52c8e48a60d4b62a734c2b8094864484dacb848e254f",
+      "contextAfterSHA256": "1bc59e286bbac40c5ea39be5e0077d213018a33f4937ae0be81ba8b8c729acb4",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -364,7 +364,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sameImageNativeSHA256": "c60c51199f05af50758ac3dbf637b5461c19baaf006625ea65747feba8b273be",
+        "sameImageExportSHA256": "492551f2087ae1a5f6d6829058b5f01914ed455ef95763f26a3f004522aa1d90",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -417,7 +425,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "semanticSourceBind": {
         "targetBeforeSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
         "semanticContextSHA256": "e2c7216e547e25275874ec91712417c767a3a56d557feb6bc841c34a5588b4a5",
@@ -599,7 +607,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "targetAfterSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
       "contextAfterSHA256": "e2c7216e547e25275874ec91712417c767a3a56d557feb6bc841c34a5588b4a5",
       "ownerApproved": true,
@@ -624,7 +632,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sameImageNativeSHA256": "565b827ba317603f6ff4c5b0c6a766ff6c23b66dbc02519189a88c0cd2d0eec9",
+        "sameImageExportSHA256": "c5118e270f112f60f8ca1d2d9b5052f86b385195be40cece3288407753303c31",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -674,10 +690,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "semanticSourceBind": {
         "targetBeforeSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-        "semanticContextSHA256": "f69e1792e73df2156e3cce14068c44ce508230735a5045c259ef0e8eb097144e",
+        "semanticContextSHA256": "fe0b5446334dfe9140dbcb00495ad1385c12758a4ad5050a33cc46126e1652ae",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -816,9 +832,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "targetAfterSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-      "contextAfterSHA256": "f69e1792e73df2156e3cce14068c44ce508230735a5045c259ef0e8eb097144e",
+      "contextAfterSHA256": "fe0b5446334dfe9140dbcb00495ad1385c12758a4ad5050a33cc46126e1652ae",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -841,7 +857,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sameImageNativeSHA256": "a0710566edaae83dd0852dd8ae00a89e0fbf4715d4aa6f7f18622d3c8d286103",
+        "sameImageExportSHA256": "a0710566edaae83dd0852dd8ae00a89e0fbf4715d4aa6f7f18622d3c8d286103",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -891,10 +915,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "498efadd1160b4ed2cabd69652d9f90e964d09490bc825405f6c0d07178e4150",
-        "semanticContextSHA256": "498efadd1160b4ed2cabd69652d9f90e964d09490bc825405f6c0d07178e4150",
+        "targetBeforeSHA256": "852312f8ea6e39f3ac4f786dc3a9f3f88abfe0861740c78c7753fe3cddaf147b",
+        "semanticContextSHA256": "852312f8ea6e39f3ac4f786dc3a9f3f88abfe0861740c78c7753fe3cddaf147b",
         "subjectTitle": "Torikäytävä on keskustan toinen katu",
         "targetState": "existing-target"
       },
@@ -1033,9 +1057,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
-      "targetAfterSHA256": "498efadd1160b4ed2cabd69652d9f90e964d09490bc825405f6c0d07178e4150",
-      "contextAfterSHA256": "498efadd1160b4ed2cabd69652d9f90e964d09490bc825405f6c0d07178e4150",
+      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "targetAfterSHA256": "852312f8ea6e39f3ac4f786dc3a9f3f88abfe0861740c78c7753fe3cddaf147b",
+      "contextAfterSHA256": "852312f8ea6e39f3ac4f786dc3a9f3f88abfe0861740c78c7753fe3cddaf147b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1058,7 +1082,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sameImageNativeSHA256": "6efe90e45ddd2ffd52c9a168a18e08eea8f7933a312e821eade3aa551df9961d",
+        "sameImageExportSHA256": "6efe90e45ddd2ffd52c9a168a18e08eea8f7933a312e821eade3aa551df9961d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1108,10 +1140,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d8668f6112e073ced4213a899326f3a4cc842792a5cd424cd43f86d2871a1e92",
-        "semanticContextSHA256": "d8668f6112e073ced4213a899326f3a4cc842792a5cd424cd43f86d2871a1e92",
+        "targetBeforeSHA256": "ecea259872bf7187e814ab79a9ca465faae96d1e2225316c3ed3f9a8d18d1698",
+        "semanticContextSHA256": "ecea259872bf7187e814ab79a9ca465faae96d1e2225316c3ed3f9a8d18d1698",
         "subjectTitle": "Oikeustalosta tuli muistin talo",
         "targetState": "existing-target"
       },
@@ -1250,9 +1282,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
-      "targetAfterSHA256": "d8668f6112e073ced4213a899326f3a4cc842792a5cd424cd43f86d2871a1e92",
-      "contextAfterSHA256": "d8668f6112e073ced4213a899326f3a4cc842792a5cd424cd43f86d2871a1e92",
+      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+      "targetAfterSHA256": "ecea259872bf7187e814ab79a9ca465faae96d1e2225316c3ed3f9a8d18d1698",
+      "contextAfterSHA256": "ecea259872bf7187e814ab79a9ca465faae96d1e2225316c3ed3f9a8d18d1698",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1275,7 +1307,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sameImageNativeSHA256": "065997f3508ac5ec30118a990a4b0babe60bfce580be42d1933355b364aa9f57",
+        "sameImageExportSHA256": "065997f3508ac5ec30118a990a4b0babe60bfce580be42d1933355b364aa9f57",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1328,7 +1368,7 @@
         3264
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
         "semanticContextSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
@@ -1501,7 +1541,7 @@
         "vuosi": "2013"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "targetAfterSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
       "contextAfterSHA256": "ebf2a380e8f532069e36f802379e133029adaeefd4c1d8545c422be771f681f3",
       "ownerApproved": true,
@@ -1526,7 +1566,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sameImageNativeSHA256": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
+        "sameImageExportSHA256": "c151f0bf12330eec597f66ede1692163466ab99b052d42225e0441b25b27dcd4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1579,10 +1627,10 @@
         4358
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "semanticSourceBind": {
         "targetBeforeSHA256": "13e4888cdeb9513325e19d71b0ffe6b5a24e90293ad32270d98a321075d7887b",
-        "semanticContextSHA256": "f0f2a382c512cf24be8f66b2e07866699fe092187827bb7483a23b57dab0fb67",
+        "semanticContextSHA256": "a29818a238393b97e5d837f630a3d4aba577a8192b78db413b4d097be8e35bd3",
         "subjectTitle": "Mesuradon kosteikkoalue",
         "targetState": "existing-target"
       },
@@ -1763,9 +1811,9 @@
         "tiedosto": "ASC Leiden - F. van der Kraaij Collection - 05 - 021 - Providence Island in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "targetAfterSHA256": "13e4888cdeb9513325e19d71b0ffe6b5a24e90293ad32270d98a321075d7887b",
-      "contextAfterSHA256": "f0f2a382c512cf24be8f66b2e07866699fe092187827bb7483a23b57dab0fb67",
+      "contextAfterSHA256": "a29818a238393b97e5d837f630a3d4aba577a8192b78db413b4d097be8e35bd3",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1788,7 +1836,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sameImageNativeSHA256": "19150940222a598fe5696769f44a8bd20ad5a5acf6c07fe3d159fca7716e640f",
+        "sameImageExportSHA256": "589160cd108ec7cf85d01e5d2f3cd09968327e5712c1437f16dea0f715c77fa4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -1841,10 +1897,10 @@
         4358
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4628b60b4d52fbfc022b2fcbd77a8616f1bdaa51f31ee91a55bfde04efec75a5",
-        "semanticContextSHA256": "9adb93d0f161c49dff6e3410238c70dd12a25af181c3809504c75952bd358467",
+        "semanticContextSHA256": "d7cbec4978e2b68fb16baaf1be1ae2cb3ad6f696af624378ad02b5d26ce3475b",
         "subjectTitle": "Providence Island",
         "targetState": "existing-target"
       },
@@ -2025,9 +2081,9 @@
         "tiedosto": "ASC Leiden - F. van der Kraaij Collection - 05 - 022 - A close up of Providence Island in full, in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "targetAfterSHA256": "4628b60b4d52fbfc022b2fcbd77a8616f1bdaa51f31ee91a55bfde04efec75a5",
-      "contextAfterSHA256": "9adb93d0f161c49dff6e3410238c70dd12a25af181c3809504c75952bd358467",
+      "contextAfterSHA256": "d7cbec4978e2b68fb16baaf1be1ae2cb3ad6f696af624378ad02b5d26ce3475b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2050,7 +2106,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sameImageNativeSHA256": "7daa520de9c604487de2a402dd24cd49961c5493bbac0ad1c28360edc742d166",
+        "sameImageExportSHA256": "ff065f646d1eb2dc146ab66a324197082f4759c523ce9ff433c51309abfa6a6d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e04",
@@ -2103,10 +2167,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
-      "sourceContentSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b172da6a3a416a7c8c3b0cc1ebd8b3b6152693a93fd48c7958b0f805fda9ab35",
-        "semanticContextSHA256": "8c41c6ef587cb74c0f99cd7f9fb0aac96fb3b72b24ffa41338fe70ed3df3afa8",
+        "semanticContextSHA256": "23d7a16ceff1356bea4349e0938c7da55d4cb639bcb27ca7b03c312de8675ac1",
         "subjectTitle": "West Point",
         "targetState": "existing-target"
       },
@@ -2288,9 +2352,9 @@
         "tiedosto": "An aerial view of the West Point area of Monrovia.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "c0cc7bb6876eaf9af08fbf817e74b76ef41308e8502f6e76626f2d9623d324a1",
+      "sourceContentAfterSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
       "targetAfterSHA256": "b172da6a3a416a7c8c3b0cc1ebd8b3b6152693a93fd48c7958b0f805fda9ab35",
-      "contextAfterSHA256": "8c41c6ef587cb74c0f99cd7f9fb0aac96fb3b72b24ffa41338fe70ed3df3afa8",
+      "contextAfterSHA256": "23d7a16ceff1356bea4349e0938c7da55d4cb639bcb27ca7b03c312de8675ac1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2313,7 +2377,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "0525c9528f244e724188f309ed3b1ae0b7063d111eeec556db2574b26bfb4a20",
+        "sameImageNativeSHA256": "ca7af30b933106c217b2116f5b00759dc26278e0b8d66ed1f488eb93ecce6f10",
+        "sameImageExportSHA256": "ca7af30b933106c217b2116f5b00759dc26278e0b8d66ed1f488eb93ecce6f10",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3507,6 +3579,1191 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e04/monrovia/f1844038741987399ea1326b3a1df826fe75c24f2b7a8f44148ac256c1b91520.json",
-  "task118ReboundAt": "2026-10-13T16:33:24.003488+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e04/monrovia/c5ac85bfb1c10816a09d3d7abc1bfcc5d77f9cbb2b077a12af2f164c9c45f865.json",
+  "task118ReboundAt": "2026-10-13T16:33:24.003488+00:00",
+  "task228ExcludedAssets": [
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "slot": "N1",
+      "type": "illustration",
+      "assetID": "monrovia-n1-asiakirja-aineisto-20261012-v1",
+      "galleryImageID": "monrovia-n1-asiakirja-aineisto-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.nahtavyydet[\"Kansallismuseon vanha oikeustalo\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Kansallismuseon vanha oikeustalo",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.",
+        "lyhyt": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.",
+        "lyhyt": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+      "exportSHA256": "3610463c11678f3bfdc807e7d793f40a4ff478a461f274524bd08910f3d17e5e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+      "sourceContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "semanticContextSHA256": "4a50791a981c493afb0ce8ec7b1dc22461f9cf9575bad99ce6374d41209217d7",
+        "subjectTitle": "Kansallismuseon vanha oikeustalo",
+        "targetState": "fillable-empty-first-image-array"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Alkuperäiset tyhjät funktionaaliset arkistokansiot/paperit, ei todellisten asiakirjojen, karttojen, kuvien, kansien, rakennuksen tai museoesineiden jäljennös. Oikeustalon todellisen arkkitehtuurin kuva- ja teosportti säilyy erillisenä.",
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/assets/monrovia-n1-asiakirja-aineisto-20261012-v1/image.png",
+            "nativeSHA256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Alkuperäisessä 1536×1024 PNG:ssä näkyy tavallisia kartonkikansioita, nauhoja ja tyhjiä paperiarkkeja. Paperin, kartongin ja kankaan pinnat sekä taitokset ovat uskottavia. Ei kirjaimia, logoja, vesileimaa, kasvoja tai kehystä.",
+            "captionFi": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.",
+            "sourceAndTargetCheckFi": "Nykyisen Kansallismuseon vanha oikeustalo -kohteen teksti ja faktapohja mainitsevat asiakirjat osana kulttuuri- ja historia-aineiston säilyttämistä. Kohde on olemassa ja kuvat-lista on tyhjä: suunniteltu kuva-aukko, ei poistettu kohde. Yleiset tyhjät kansiot eivät esitä tiettyä asiakirjaa tai museoesinettä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+                "facts": "Kansallismuseon juttu mainitsee asiakirjat, kartat ja valokuvat aineistona; kuvitetaan vain yleinen asiakirjojen säilyttämisen materiaali."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/faktapohja.md",
+                "facts": "Museon tehtävä hankkia, säilyttää ja esitellä kulttuuri-/historia-aineistoa, ei väitetä tietyn paperin identiteettiä."
+              }
+            ]
+          },
+          "qaReason": "Hyväksytty yleiseksi asiakirjojen säilyttämisen havainnekuvaksi; kuvateksti rajaa sen erilleen kansallismuseon omista esineistä ja oikeustalon näkymästä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
+        "fileSHA256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Kansallismuseon vanha oikeustalo\"].kuvat[0]",
+          "assetID": "monrovia-n1-asiakirja-aineisto-20261012-v1",
+          "sha256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+          "verdict": "accepted",
+          "reason": "Hyväksytty yleiseksi asiakirjojen säilyttämisen havainnekuvaksi; kuvateksti rajaa sen erilleen kansallismuseon omista esineistä ja oikeustalon näkymästä.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/assets/monrovia-n1-asiakirja-aineisto-20261012-v1/image.png",
+            "nativeSHA256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "visualFindingsFi": "Alkuperäisessä 1536×1024 PNG:ssä näkyy tavallisia kartonkikansioita, nauhoja ja tyhjiä paperiarkkeja. Paperin, kartongin ja kankaan pinnat sekä taitokset ovat uskottavia. Ei kirjaimia, logoja, vesileimaa, kasvoja tai kehystä.",
+            "captionFi": "Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.",
+            "sourceAndTargetCheckFi": "Nykyisen Kansallismuseon vanha oikeustalo -kohteen teksti ja faktapohja mainitsevat asiakirjat osana kulttuuri- ja historia-aineiston säilyttämistä. Kohde on olemassa ja kuvat-lista on tyhjä: suunniteltu kuva-aukko, ei poistettu kohde. Yleiset tyhjät kansiot eivät esitä tiettyä asiakirjaa tai museoesinettä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "sourceEvidence": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+                "facts": "Kansallismuseon juttu mainitsee asiakirjat, kartat ja valokuvat aineistona; kuvitetaan vain yleinen asiakirjojen säilyttämisen materiaali."
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/faktapohja.md",
+                "facts": "Museon tehtävä hankkia, säilyttää ja esitellä kulttuuri-/historia-aineistoa, ei väitetä tietyn paperin identiteettiä."
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-12T20:49:35.031297+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png?t=3610463c11678f3b",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "sha256": "3610463c11678f3bfdc807e7d793f40a4ff478a461f274524bd08910f3d17e5e",
+        "bytes": 2048801,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "monrovia-n1-asiakirja-aineisto-20261012-v1",
+        "nativeSHA256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e04",
+        "city": "monrovia",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Kansallismuseon vanha oikeustalo\"].kuvat[0]",
+        "verifiedAt": "2026-10-13T05:53:34.953083+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png",
+        "sha256": "3610463c11678f3bfdc807e7d793f40a4ff478a461f274524bd08910f3d17e5e",
+        "bytes": 2048801,
+        "SHAReadAt": "2026-10-12T20:49:39.288320+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f2c299f19de2287542be3220bbf4640dde0b7b0fe4c6928f57655bde6469d545",
+        "rgbPixelSHA256": "3a3c022d86b67563b2552bc7c4641a65d4c8e97de8aa636113c58c10ed461cac",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {},
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "targetAfterSHA256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "contextAfterSHA256": "4a50791a981c493afb0ce8ec7b1dc22461f9cf9575bad99ce6374d41209217d7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "task118ExclusionReason": "target-no-longer-in-corrected-C",
+      "runtimeUseAllowed": false,
+      "originalBinaryPreserved": true
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "slot": "K1",
+      "type": "commons",
+      "assetID": "capital-cc-e04-monrovia-k1-f388ab4ffb004f84",
+      "galleryImageID": "capital-cc-e04-monrovia-k1-f388ab4ffb004f84",
+      "commonsFile": "Mangroves near Marshall, Liberia 2.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+        "suora": true,
+        "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)",
+        "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013.",
+        "tiedosto": "Mangroves near Marshall, Liberia 2.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)",
+        "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013.",
+        "tiedosto": "Mangroves near Marshall, Liberia 2.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+        "suora": true,
+        "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)",
+        "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013.",
+        "tiedosto": "Mangroves near Marshall, Liberia 2.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+      "exportSHA256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/monrovia/9aa9e8f3ffd64cc636c35ecfbe3707d9c8a4664ea159d7feed6e82431974a2e0.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        1536,
+        2048
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+      "sourceContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "cade47aab08eb4952fd66311e19af8a13a90072a351add24d75a5e6199ec58b9",
+        "semanticContextSHA256": "cade47aab08eb4952fd66311e19af8a13a90072a351add24d75a5e6199ec58b9",
+        "subjectTitle": "Rantametsä pitää maata paikallaan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "(c) B. Phalan, some rights reserved (CC BY)",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Mangroves_near_Marshall,_Liberia_2.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Mangroves_near_Marshall%2C_Liberia_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Mangroves_near_Marshall,_Liberia_2.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-34.html",
+            "sourceSHA256": "14fe58e5af338bd62a32d932d6cba3a159e240344f539bd0b8da67001f67ec90",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "(c) B. Phalan, some rights reserved (CC BY)"
+              }
+            ],
+            "license": "CC BY 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 1536,
+            "height": 2048,
+            "displayRatio": 0.75,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-34.jpg",
+            "previewSHA256": "6dfc3903bb7774f410ea5808440c76d284c4d537cfd34d53937788acd7e9617a",
+            "capturedDate": "3 January 2013",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json"
+          },
+          "qaReason": "Katsottu mangrovepuusto ja juuristo ilman henkilöitä/tekstiä/teoksia. Lähdesivu ja nykyinen kuvateksti nimeävät Marshallin Liberiassa, eivät Monroviaa. Hyväksytty yleiseksi kasvi-/rantaympäristökuvaksi; pystyformaatti sallittu K-roolissa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "commonsFile": "Mangroves near Marshall, Liberia 2.jpg",
+          "verdict": "accepted",
+          "reason": "Katsottu mangrovepuusto ja juuristo ilman henkilöitä/tekstiä/teoksia. Lähdesivu ja nykyinen kuvateksti nimeävät Marshallin Liberiassa, eivät Monroviaa. Hyväksytty yleiseksi kasvi-/rantaympäristökuvaksi; pystyformaatti sallittu K-roolissa.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Mangroves_near_Marshall,_Liberia_2.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-34.html",
+            "sourceSHA256": "14fe58e5af338bd62a32d932d6cba3a159e240344f539bd0b8da67001f67ec90",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "(c) B. Phalan, some rights reserved (CC BY)"
+              }
+            ],
+            "license": "CC BY 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by/4.0/deed.en",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 1536,
+            "height": 2048,
+            "displayRatio": 0.75,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-34.jpg",
+            "previewSHA256": "6dfc3903bb7774f410ea5808440c76d284c4d537cfd34d53937788acd7e9617a",
+            "capturedDate": "3 January 2013",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "monrovia",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "commonsFile": "Mangroves near Marshall, Liberia 2.jpg",
+        "sha256": "f388ab4ffb004f8494f7276e15979731ae1a672d822cc6c7bef51429bb9b1226",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Mangroves_near_Marshall,_Liberia_2.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Mangroves_near_Marshall%2C_Liberia_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "(c) B. Phalan, some rights reserved (CC BY)",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.en",
+        "width": 1536,
+        "height": 2048,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k1-f388ab4ffb004f8494f7.jpg",
+        "bytes": 1761079,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:32.487652+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Mangroves near Marshall, Liberia 2.jpg",
+        "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)",
+        "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "(c) B. Phalan, some rights reserved (CC BY), Wikimedia Commons (CC BY 4.0)",
+        "selite": "Liberian Marshallin mangrove vuoden 2013 kuvassa havainnollistaa yleistä rantakasvillisuutta.",
+        "lyhyt": "Marshallin mangrove Liberiassa on yleiskuva vuodelta 2013.",
+        "tiedosto": "Mangroves near Marshall, Liberia 2.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "targetAfterSHA256": "cade47aab08eb4952fd66311e19af8a13a90072a351add24d75a5e6199ec58b9",
+      "contextAfterSHA256": "cade47aab08eb4952fd66311e19af8a13a90072a351add24d75a5e6199ec58b9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "task118ExclusionReason": "old-CC-image-cleared-or-replaced-by-task118",
+      "runtimeUseAllowed": false,
+      "originalBinaryPreserved": true
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "slot": "K4",
+      "type": "commons",
+      "assetID": "capital-cc-e04-monrovia-k4-abb1fb3c29016552",
+      "galleryImageID": "capital-cc-e04-monrovia-k4-abb1fb3c29016552",
+      "commonsFile": "20240815 Falafel Plate Restaurant The Hummusapiens Berlin anagoria.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k4-abb1fb3c290165527c09.jpg",
+        "suora": true,
+        "lahde": "Anagoria, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Berliinissä vuonna 2024 kuvattu falafel-annos toimii yleisenä ruokaesimerkkinä kaupunkien kansainvälisen tarjonnan yhteydessä.",
+        "lyhyt": "Berliinissä kuvattu falafel-annos on yleiskuva vuodelta 2024.",
+        "tiedosto": "20240815 Falafel Plate Restaurant The Hummusapiens Berlin anagoria.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Anagoria, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Berliinissä vuonna 2024 kuvattu falafel-annos toimii yleisenä ruokaesimerkkinä kaupunkien kansainvälisen tarjonnan yhteydessä.",
+        "lyhyt": "Berliinissä kuvattu falafel-annos on yleiskuva vuodelta 2024.",
+        "tiedosto": "20240815 Falafel Plate Restaurant The Hummusapiens Berlin anagoria.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k4-abb1fb3c290165527c09.jpg",
+        "suora": true,
+        "lahde": "Anagoria, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Berliinissä vuonna 2024 kuvattu falafel-annos toimii yleisenä ruokaesimerkkinä kaupunkien kansainvälisen tarjonnan yhteydessä.",
+        "lyhyt": "Berliinissä kuvattu falafel-annos on yleiskuva vuodelta 2024.",
+        "tiedosto": "20240815 Falafel Plate Restaurant The Hummusapiens Berlin anagoria.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "abb1fb3c290165527c091871f3534f43e6b3e03fab39e4a6edd1c094da1beccb",
+      "exportSHA256": "abb1fb3c290165527c091871f3534f43e6b3e03fab39e4a6edd1c094da1beccb",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k4-abb1fb3c290165527c09.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k4-abb1fb3c290165527c09.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/monrovia/83ef8a78eb6ec5bcbbb2013e1b0dd7690a43d91e97c8fc6a8d4730426714cb46.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        12000,
+        8035
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+      "sourceContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "54d3d7cb0ca9a2b1311393e1a8b13e7a3828df150cabeb338d6b661422fdca18",
+        "semanticContextSHA256": "54d3d7cb0ca9a2b1311393e1a8b13e7a3828df150cabeb338d6b661422fdca18",
+        "subjectTitle": "Samassa kaupungissa on myös falafelia",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Anagoria",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:20240815_Falafel_Plate_Restaurant_The_Hummusapiens_Berlin_anagoria.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/20240815_Falafel_Plate_Restaurant_The_Hummusapiens_Berlin_anagoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:20240815_Falafel_Plate_Restaurant_The_Hummusapiens_Berlin_anagoria.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-48.html",
+            "sourceSHA256": "213aa71366212b0a752f847743ddb5d76c2a7277e37588e58c0ca3b3065c0704",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "Anagoria"
+              }
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.5/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/1.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 12000,
+            "height": 8035,
+            "displayRatio": 1.493466,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-48.jpg",
+            "previewSHA256": "f08c780271bd90a99318ce17ab9929346cba7dbee97cf97f089bb58cd863cfa8",
+            "capturedDate": "15 August 2024",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json"
+          },
+          "qaReason": "Katsottu falafel-annos, ei kasvoja, lisättyä tekstiä tai logoja. Kuvasivu, CC BY-SA 4.0 ja tekijä Anagoria täsmäävät. Kuvateksti sanoo Berlin/2024 ja yleinen ruokaesimerkki; kuvaa ei väitetä Monrovian ravintola-annokseksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Berliinissä vuonna 2024 kuvattu falafel-annos toimii yleisenä ruokaesimerkkinä kaupunkien kansainvälisen tarjonnan yhteydessä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "commonsFile": "20240815 Falafel Plate Restaurant The Hummusapiens Berlin anagoria.jpg",
+          "verdict": "accepted",
+          "reason": "Katsottu falafel-annos, ei kasvoja, lisättyä tekstiä tai logoja. Kuvasivu, CC BY-SA 4.0 ja tekijä Anagoria täsmäävät. Kuvateksti sanoo Berlin/2024 ja yleinen ruokaesimerkki; kuvaa ei väitetä Monrovian ravintola-annokseksi.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:20240815_Falafel_Plate_Restaurant_The_Hummusapiens_Berlin_anagoria.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-48.html",
+            "sourceSHA256": "213aa71366212b0a752f847743ddb5d76c2a7277e37588e58c0ca3b3065c0704",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "Anagoria"
+              }
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.5/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/1.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 12000,
+            "height": 8035,
+            "displayRatio": 1.493466,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-48.jpg",
+            "previewSHA256": "f08c780271bd90a99318ce17ab9929346cba7dbee97cf97f089bb58cd863cfa8",
+            "capturedDate": "15 August 2024",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "monrovia",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "commonsFile": "20240815 Falafel Plate Restaurant The Hummusapiens Berlin anagoria.jpg",
+        "sha256": "abb1fb3c290165527c091871f3534f43e6b3e03fab39e4a6edd1c094da1beccb",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:20240815_Falafel_Plate_Restaurant_The_Hummusapiens_Berlin_anagoria.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/20240815_Falafel_Plate_Restaurant_The_Hummusapiens_Berlin_anagoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Anagoria",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 12000,
+        "height": 8035,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k4-abb1fb3c290165527c09.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/k4-abb1fb3c290165527c09.jpg",
+        "bytes": 16728500,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:36.580324+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "20240815 Falafel Plate Restaurant The Hummusapiens Berlin anagoria.jpg",
+        "lahde": "Anagoria, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Berliinissä vuonna 2024 kuvattu falafel-annos toimii yleisenä ruokaesimerkkinä kaupunkien kansainvälisen tarjonnan yhteydessä.",
+        "lyhyt": "Berliinissä kuvattu falafel-annos on yleiskuva vuodelta 2024."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Anagoria, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Berliinissä vuonna 2024 kuvattu falafel-annos toimii yleisenä ruokaesimerkkinä kaupunkien kansainvälisen tarjonnan yhteydessä.",
+        "lyhyt": "Berliinissä kuvattu falafel-annos on yleiskuva vuodelta 2024.",
+        "tiedosto": "20240815 Falafel Plate Restaurant The Hummusapiens Berlin anagoria.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "targetAfterSHA256": "54d3d7cb0ca9a2b1311393e1a8b13e7a3828df150cabeb338d6b661422fdca18",
+      "contextAfterSHA256": "54d3d7cb0ca9a2b1311393e1a8b13e7a3828df150cabeb338d6b661422fdca18",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "task118ExclusionReason": "text-topic-changed-old-image-does-not-fit",
+      "runtimeUseAllowed": false,
+      "originalBinaryPreserved": true
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "slot": "L1",
+      "type": "commons",
+      "assetID": "capital-cc-e04-monrovia-l1-9b9deaeade579c30",
+      "galleryImageID": "capital-cc-e04-monrovia-l1-9b9deaeade579c30",
+      "commonsFile": "Colenso press.jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l1-9b9deaeade579c30aea1.jpg",
+        "suora": true,
+        "lahde": "Kaihsu Tai, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Paihian Haven of History -museorekonstruktiossa oleva painopuristin havainnollistaa painomenetelmää vuoden 2008 valokuvassa.",
+        "lyhyt": "Painopuristin Paihian museorekonstruktiossa vuonna 2008.",
+        "tiedosto": "Colenso press.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Kaihsu Tai, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Paihian Haven of History -museorekonstruktiossa oleva painopuristin havainnollistaa painomenetelmää vuoden 2008 valokuvassa.",
+        "lyhyt": "Painopuristin Paihian museorekonstruktiossa vuonna 2008.",
+        "tiedosto": "Colenso press.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l1-9b9deaeade579c30aea1.jpg",
+        "suora": true,
+        "lahde": "Kaihsu Tai, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Paihian Haven of History -museorekonstruktiossa oleva painopuristin havainnollistaa painomenetelmää vuoden 2008 valokuvassa.",
+        "lyhyt": "Painopuristin Paihian museorekonstruktiossa vuonna 2008.",
+        "tiedosto": "Colenso press.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9b9deaeade579c30aea1cd4a963da31855892e0b8b10e3ed56bc1118d3920f6e",
+      "exportSHA256": "9b9deaeade579c30aea1cd4a963da31855892e0b8b10e3ed56bc1118d3920f6e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l1-9b9deaeade579c30aea1.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l1-9b9deaeade579c30aea1.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/monrovia/9f9a250a277eab68c389927b1a0a918668c59a30f0669a47e416cf7f024d0804.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        2592,
+        1944
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+      "sourceContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "78515d99021ddfc0eb45ec0bc5337788c2cf0cd37d951444d699d3ed984f87af",
+        "semanticContextSHA256": "78515d99021ddfc0eb45ec0bc5337788c2cf0cd37d951444d699d3ed984f87af",
+        "subjectTitle": "Toimitusteksti päätyi museoon",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Kaihsu Tai",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Colenso_press.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Colenso_press.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Colenso_press.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-60.html",
+            "sourceSHA256": "e11bb8e44719a1bc23d786b5331a7e39588798db4c2d0b49e5eaf8eab94c2074",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "Kaihsu Tai"
+              }
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.5/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/1.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 2592,
+            "height": 1944,
+            "displayRatio": 1.333333,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-60.jpg",
+            "previewSHA256": "630e67a72080e2aeb506b04efeddd2098e8001ebc09e2e029de4dd6dea22bf7b",
+            "capturedDate": "2008",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json",
+            "nativeLocalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-D/original-60.jpg",
+            "nativeSHA256": "9b9deaeade579c30aea1cd4a963da31855892e0b8b10e3ed56bc1118d3920f6e"
+          },
+          "qaReason": "Katsottu esikatselu ja alkuperäinen painopuristinkuva. Tavallinen tekninen laite museorekonstruktiossa, ei Heraldin oma kone eikä Monrovian sisätila. Kuvateksti nimeää Paihian/2008 ja menetelmän yleishavainnollistuksen. Luonnolliset vanhan laitteen merkinnät eivät ole kuvaan lisätty vesileima; ei nykyisen suojatun taideteoksen pääaihetta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Paihian Haven of History -museorekonstruktiossa oleva painopuristin havainnollistaa painomenetelmää vuoden 2008 valokuvassa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
+        "item": {
+          "slot": "L1",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+          "commonsFile": "Colenso press.jpg",
+          "verdict": "accepted",
+          "reason": "Katsottu esikatselu ja alkuperäinen painopuristinkuva. Tavallinen tekninen laite museorekonstruktiossa, ei Heraldin oma kone eikä Monrovian sisätila. Kuvateksti nimeää Paihian/2008 ja menetelmän yleishavainnollistuksen. Luonnolliset vanhan laitteen merkinnät eivät ole kuvaan lisätty vesileima; ei nykyisen suojatun taideteoksen pääaihetta.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Colenso_press.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-60.html",
+            "sourceSHA256": "e11bb8e44719a1bc23d786b5331a7e39588798db4c2d0b49e5eaf8eab94c2074",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "Kaihsu Tai"
+              }
+            ],
+            "license": "CC BY-SA 4.0",
+            "licenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/3.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.5/deed.en",
+              "//creativecommons.org/licenses/by-sa/2.0/deed.en",
+              "//creativecommons.org/licenses/by-sa/1.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 2592,
+            "height": 1944,
+            "displayRatio": 1.333333,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-60.jpg",
+            "previewSHA256": "630e67a72080e2aeb506b04efeddd2098e8001ebc09e2e029de4dd6dea22bf7b",
+            "capturedDate": "2008",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json",
+            "nativeLocalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-D/original-60.jpg",
+            "nativeSHA256": "9b9deaeade579c30aea1cd4a963da31855892e0b8b10e3ed56bc1118d3920f6e"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "monrovia",
+        "slot": "L1",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
+        "commonsFile": "Colenso press.jpg",
+        "sha256": "9b9deaeade579c30aea1cd4a963da31855892e0b8b10e3ed56bc1118d3920f6e",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Colenso_press.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Colenso_press.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Kaihsu Tai",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+        "width": 2592,
+        "height": 1944,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l1-9b9deaeade579c30aea1.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l1-9b9deaeade579c30aea1.jpg",
+        "bytes": 2279716,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:38.509465+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Colenso press.jpg",
+        "lahde": "Kaihsu Tai, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Paihian Haven of History -museorekonstruktiossa oleva painopuristin havainnollistaa painomenetelmää vuoden 2008 valokuvassa.",
+        "lyhyt": "Painopuristin Paihian museorekonstruktiossa vuonna 2008."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Kaihsu Tai, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Paihian Haven of History -museorekonstruktiossa oleva painopuristin havainnollistaa painomenetelmää vuoden 2008 valokuvassa.",
+        "lyhyt": "Painopuristin Paihian museorekonstruktiossa vuonna 2008.",
+        "tiedosto": "Colenso press.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "targetAfterSHA256": "78515d99021ddfc0eb45ec0bc5337788c2cf0cd37d951444d699d3ed984f87af",
+      "contextAfterSHA256": "78515d99021ddfc0eb45ec0bc5337788c2cf0cd37d951444d699d3ed984f87af",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "task118ExclusionReason": "old-CC-image-cleared-or-replaced-by-task118",
+      "runtimeUseAllowed": false,
+      "originalBinaryPreserved": true
+    },
+    {
+      "era": "e04",
+      "city": "monrovia",
+      "slot": "L2",
+      "type": "commons",
+      "assetID": "capital-cc-e04-monrovia-l2-9e7b1433f300f6dc",
+      "galleryImageID": "capital-cc-e04-monrovia-l2-9e7b1433f300f6dc",
+      "commonsFile": "Susse Frères Daguerreotype camera 1839.jpg",
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l2-9e7b1433f300f6dc21d1.jpg",
+        "suora": true,
+        "lahde": "Liudmila & Nelson, Wikimedia Commons (PD)",
+        "selite": "Wienin Westlicht-museon Susse Frères -daguerreotyyppikamera vuoden 2010 valokuvassa toimii kuvausmenetelmän yleisenä havainnollistuksena.",
+        "lyhyt": "Wienin Susse Frères -kamera havainnollistaa daguerreotypiaa.",
+        "tiedosto": "Susse Frères Daguerreotype camera 1839.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Liudmila & Nelson, Wikimedia Commons (PD)",
+        "selite": "Wienin Westlicht-museon Susse Frères -daguerreotyyppikamera vuoden 2010 valokuvassa toimii kuvausmenetelmän yleisenä havainnollistuksena.",
+        "lyhyt": "Wienin Susse Frères -kamera havainnollistaa daguerreotypiaa.",
+        "tiedosto": "Susse Frères Daguerreotype camera 1839.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l2-9e7b1433f300f6dc21d1.jpg",
+        "suora": true,
+        "lahde": "Liudmila & Nelson, Wikimedia Commons (PD)",
+        "selite": "Wienin Westlicht-museon Susse Frères -daguerreotyyppikamera vuoden 2010 valokuvassa toimii kuvausmenetelmän yleisenä havainnollistuksena.",
+        "lyhyt": "Wienin Susse Frères -kamera havainnollistaa daguerreotypiaa.",
+        "tiedosto": "Susse Frères Daguerreotype camera 1839.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "9e7b1433f300f6dc21d101c8cb4fd22c438e04acf5c5897b3fa3e482a9e78f29",
+      "exportSHA256": "9e7b1433f300f6dc21d101c8cb4fd22c438e04acf5c5897b3fa3e482a9e78f29",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l2-9e7b1433f300f6dc21d1.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l2-9e7b1433f300f6dc21d1.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/commons-originals/e04/monrovia/7b928cb39568f9cbdbc5400df40ee153223cc28f8090574c5c7048fe4935168f.org&utm_campaign=index&utm_content=original",
+      "dimensions": [
+        1738,
+        1385
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+      "sourceContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "36f5f4240360261fd90ba41e36c26e3787ee174f349af62b1770b7c85af8745a",
+        "semanticContextSHA256": "36f5f4240360261fd90ba41e36c26e3787ee174f349af62b1770b7c85af8745a",
+        "subjectTitle": "Muotokuva rakensi kaupunkikuvaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Liudmila & Nelson",
+        "license": "PD",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Susse_Fr%C3%A8res_Daguerreotype_camera_1839.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Susse_Fr%C3%A8res_Daguerreotype_camera_1839.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Susse_Fr%C3%A8res_Daguerreotype_camera_1839.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "rightsEvidence": {
+          "selection": null,
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Susse_Fr%C3%A8res_Daguerreotype_camera_1839.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-38.html",
+            "sourceSHA256": "8ca8366cf98f07fcfca625b5e4a776efa0119ac0dc7b56b0b780fc4bcef44759",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "Liudmila & Nelson"
+              }
+            ],
+            "license": "PD",
+            "licenseLinks": [
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 1738,
+            "height": 1385,
+            "displayRatio": 1.254874,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-38.jpg",
+            "previewSHA256": "1816558fed2011a6b880de6dae41f5e9014ec24781b549b23bdf1f370a7119f6",
+            "capturedDate": "5 August 2010",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json",
+            "nativeLocalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-D/original-38.jpg",
+            "nativeSHA256": "9e7b1433f300f6dc21d101c8cb4fd22c438e04acf5c5897b3fa3e482a9e78f29"
+          },
+          "qaReason": "Alkuperäinen Susse Frères -kameran kuva katsottu. Historiallinen tekninen esine, ei Washingtonin todistettu oma kamera. Luonnollinen esinekilpi/linssin mallimerkintä sallittu; ei mainos-/pakkauskuva eikä päälle lisätty teksti. Public domain ja Liudmila & Nelson lähdesivulta, caption nimeää Wienin ja yleisen menetelmäkuvan."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Wienin Westlicht-museon Susse Frères -daguerreotyyppikamera vuoden 2010 valokuvassa toimii kuvausmenetelmän yleisenä havainnollistuksena.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+        "fileSHA256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "commonsFile": "Susse Frères Daguerreotype camera 1839.jpg",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen Susse Frères -kameran kuva katsottu. Historiallinen tekninen esine, ei Washingtonin todistettu oma kamera. Luonnollinen esinekilpi/linssin mallimerkintä sallittu; ei mainos-/pakkauskuva eikä päälle lisätty teksti. Public domain ja Liudmila & Nelson lähdesivulta, caption nimeää Wienin ja yleisen menetelmäkuvan.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Susse_Fr%C3%A8res_Daguerreotype_camera_1839.jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/candidate-38.html",
+            "sourceSHA256": "8ca8366cf98f07fcfca625b5e4a776efa0119ac0dc7b56b0b780fc4bcef44759",
+            "authorFromSource": [
+              {
+                "label": "Author",
+                "text": "Liudmila & Nelson"
+              }
+            ],
+            "license": "PD",
+            "licenseLinks": [
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "width": 1738,
+            "height": 1385,
+            "displayRatio": 1.254874,
+            "visuallyInspected": true,
+            "previewPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-B/preview-38.jpg",
+            "previewSHA256": "1816558fed2011a6b880de6dae41f5e9014ec24781b549b23bdf1f370a7119f6",
+            "capturedDate": "5 August 2010",
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/monrovia/sisalto.json",
+            "currentContentSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+            "ccLayoutRule": "Only TRAVELER has mandatory portrait 0.60–0.85; other CC formats allowed",
+            "rightsLayerReviewed": "Natural/functional subject or blocked separately for architecture/identity; photograph license checked independently",
+            "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa-evidence/existing-commons-source-checks.json",
+            "nativeLocalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/monrovia-D/original-38.jpg",
+            "nativeSHA256": "9e7b1433f300f6dc21d101c8cb4fd22c438e04acf5c5897b3fa3e482a9e78f29"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/qa.json",
+            "sha256": "b9baf40765fb88df7008cb1ed56e0a29aae5e6db724871da765b794398180909"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/monrovia/illustration-qa-extra.json",
+            "sha256": "ee33a2f61b2a36df70aa1d69fcc033048f3989c64d3b62e20fd21ba0b245074c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e04",
+        "city": "monrovia",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "commonsFile": "Susse Frères Daguerreotype camera 1839.jpg",
+        "sha256": "9e7b1433f300f6dc21d101c8cb4fd22c438e04acf5c5897b3fa3e482a9e78f29",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Susse_Fr%C3%A8res_Daguerreotype_camera_1839.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Susse_Fr%C3%A8res_Daguerreotype_camera_1839.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "author": "Liudmila & Nelson",
+        "license": "PD",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Susse_Fr%C3%A8res_Daguerreotype_camera_1839.jpg#Licensing",
+        "width": 1738,
+        "height": 1385,
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l2-9e7b1433f300f6dc21d1.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/l2-9e7b1433f300f6dc21d1.jpg",
+        "bytes": 985727,
+        "http": 200,
+        "mime": "image/jpeg",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T18:05:39.872815+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Susse Frères Daguerreotype camera 1839.jpg",
+        "lahde": "Liudmila & Nelson, Wikimedia Commons (PD)",
+        "selite": "Wienin Westlicht-museon Susse Frères -daguerreotyyppikamera vuoden 2010 valokuvassa toimii kuvausmenetelmän yleisenä havainnollistuksena.",
+        "lyhyt": "Wienin Susse Frères -kamera havainnollistaa daguerreotypiaa."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Liudmila & Nelson, Wikimedia Commons (PD)",
+        "selite": "Wienin Westlicht-museon Susse Frères -daguerreotyyppikamera vuoden 2010 valokuvassa toimii kuvausmenetelmän yleisenä havainnollistuksena.",
+        "lyhyt": "Wienin Susse Frères -kamera havainnollistaa daguerreotypiaa.",
+        "tiedosto": "Susse Frères Daguerreotype camera 1839.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "dee363cbca5a4cc7208c00e86338b155366a8dd02cb46241a521ce65a3ae2d31",
+      "targetAfterSHA256": "36f5f4240360261fd90ba41e36c26e3787ee174f349af62b1770b7c85af8745a",
+      "contextAfterSHA256": "36f5f4240360261fd90ba41e36c26e3787ee174f349af62b1770b7c85af8745a",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "task118ExclusionReason": "old-CC-image-cleared-or-replaced-by-task118",
+      "runtimeUseAllowed": false,
+      "originalBinaryPreserved": true
+    }
+  ],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:10:00.125620+00:00"
 }
