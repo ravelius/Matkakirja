@@ -3,7 +3,7 @@
   "era": "e10",
   "city": "kualalumpur",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+  "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
   "assets": [
     {
       "era": "e10",
@@ -270,7 +270,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -473,7 +473,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -560,7 +560,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "d3ab2e90acd99cd96bf07a95b31f4d199a3574a15353d983c4032a235a2da36b"
     },
@@ -727,7 +727,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -825,7 +825,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -912,7 +912,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "c26d53429c3fc108a8d8217c48501caa6016c1644f549ceea9265263c88a82e0"
     },
@@ -1074,7 +1074,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -1170,7 +1170,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -1257,7 +1257,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
       "contextAfterSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84"
     },
@@ -1420,7 +1420,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -1517,7 +1517,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -1604,7 +1604,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
       "contextAfterSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c"
     },
@@ -1766,7 +1766,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -1862,7 +1862,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -1949,7 +1949,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
       "contextAfterSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd"
     },
@@ -2112,7 +2112,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -2209,7 +2209,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -2296,7 +2296,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
       "contextAfterSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6"
     },
@@ -2459,7 +2459,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -2556,7 +2556,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -2643,7 +2643,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
       "contextAfterSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607"
     },
@@ -2765,7 +2765,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -2901,7 +2901,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -2988,7 +2988,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
       "contextAfterSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b"
     },
@@ -3151,7 +3151,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -3248,7 +3248,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -3335,7 +3335,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
       "contextAfterSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e"
     },
@@ -3463,7 +3463,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -3522,7 +3522,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -3599,7 +3599,7 @@
         "vuosi": "2024"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
       "contextAfterSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8"
     },
@@ -3727,7 +3727,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -3786,7 +3786,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -3861,9 +3861,309 @@
         "tiedosto": "2024-09 Kuala Lumpur station 01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
       "contextAfterSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a"
+    },
+    {
+      "era": "e10",
+      "city": "kualalumpur",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e10-kualalumpur-c2-36cd7b44ba0e6d5e",
+      "galleryImageID": "capital-cc-e10-kualalumpur-c2-36cd7b44ba0e6d5e",
+      "commonsFile": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c2-36cd7b44ba0e6d5efc4e.jpg",
+        "suora": true,
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "lyhyt": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "lyhyt": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c2-36cd7b44ba0e6d5efc4e.jpg",
+        "suora": true,
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "lyhyt": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
+      "exportSHA256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c2-36cd7b44ba0e6d5efc4e.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c2-36cd7b44ba0e6d5efc4e.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/cc-evidence/573ca817f5a2-original.jpg",
+      "dimensions": [
+        4288,
+        2848
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
+      "sourceContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Kuala Lumpur",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA Astronauts",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur,_Malaysia_Astronaut_Imagery.JPG#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur,_Malaysia_Astronaut_Imagery.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Kuala_Lumpur%2C_Malaysia_Astronaut_Imagery.JPG",
+        "rightsEvidence": {
+          "selection": "Commons Author NASA Astronauts, Licensing Public domain/PD-NASA, Source yksilöi ISS023-E-11355:n, Expedition23 ja27.3.2010. Nämä eksplisiittiset kentät luettu itse; PD ei päätelty vain NASA-domainista tai uploadaajasta. Oma alkuperäiskatselu: oikea laaja kaupunkialue, katuverkko, asutus ja metsäiset harjanteet; ei koko Malesian kartta, lisättyjä nimilappuja/nuolia, kehyksiä tai watermarkia. Kuvaus ei esittele yksittäisen nykyteoksen julkisivua tai ornamentiikkaa; rakennukset ovat suuren kaupunkikudoksen pieniä kattopisteitä. Kuvasivun Description nimeää Kuala Lumpurin. NASA:n nykyinen photo.pl alkuperäisviitteen haku vastasi SQL failed: tätä ei käytetä lisätodisteena; kuvaajakerros ja täsmäkuva varmistettu yllä olevasta julkaistusta lähdesivusta, ei väitetä primary-endpointia toimivaksi.",
+          "QA": {
+            "author": "NASA Astronauts",
+            "license": "Public domain",
+            "width": 4288,
+            "height": 2848,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/cc-evidence/573ca817f5a2-original.jpg",
+            "nativeSHA256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa-evidence/c496191f1f69943bc6522639b69bc605c900390c7d0afd9b52f516c5494a99fb.html",
+            "sourceSnapshotSHA256": "c496191f1f69943bc6522639b69bc605c900390c7d0afd9b52f516c5494a99fb",
+            "sourceRowsRead": {
+              "Description Kuala Lumpur, Malaysia Astronaut Imagery.JPG": "English: Astronaut Photo of Kuala Lumpur, Malaysia taken from the International Space Station (ISS) during Expedition 23 on March 27, 2010.",
+              "Date": "Taken on 27 March 2010",
+              "Source": "http://eol.jsc.nasa.gov/scripts/sseop/photo.pl?mission=ISS023&roll=E&frame=11355 and ftp://eol.jsc.nasa.gov/ESC_large_ISS023_ISS023-E-11355.JPG",
+              "Author": "NASA Astronauts"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "NASA Astronauts",
+                "rowAttributes": {}
+              }
+            ],
+            "licenseTemplatesRead": [
+              "Public domain"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,288",
+              "2,848"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/cc-evidence/573ca817f5a2-original.jpg\n  pixelWidth: 4288\n  pixelHeight: 2848\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              4288,
+              2848
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              4288,
+              2848
+            ],
+            "sourceDateRaw": "Taken on 27 March 2010",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: aito laaja Kuala Lumpurin kaupunkialueen, tieverkon ja ympäröivän metsäisen vuoristovyöhykkeen avaruusvalokuva. C2-kannen todellinen alueasettelu näkyy. Ei kasvoja, overlayta, vesileimaa, NASA-logoa tai yksittäisen suojatun rakennus-/taideteoksen luovan ilmaisun pääaihekuvaa. Description yksilöi Kuala Lumpur,Malaysia/ISS Expedition23/27.3.2010, Author NASA Astronauts ja juuri tämän tiedoston PD-USGov-NASA/solely created byNASA -teksti luettu itse; ei kolmannen osapuolen tekijämerkintää eikä kaikkienNASA-kuvien yleistä lupaa. Native4288×2848 ja SHA, kuvaus27.3.2010 mainitaan, ei nykyhetki-/NASA-tuotesuositusväitettä.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "fileSpecificLicenseModel": "PD-USGov-NASA",
+            "NASAcreditRequired": true,
+            "noEndorsementClaim": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur,_Malaysia_Astronaut_Imagery.JPG",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/cc-selection.json",
+            "currentContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+            "photoDate": "Taken on 27 March 2010",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Kuala_Lumpur%2C_Malaysia_Astronaut_Imagery.JPG",
+            "captionFi": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+            "checkedAt": "2026-10-12T20:27:32.787439+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "qaReason": "Oma natiivin silmätarkistus: aito laaja Kuala Lumpurin kaupunkialueen, tieverkon ja ympäröivän metsäisen vuoristovyöhykkeen avaruusvalokuva. C2-kannen todellinen alueasettelu näkyy. Ei kasvoja, overlayta, vesileimaa, NASA-logoa tai yksittäisen suojatun rakennus-/taideteoksen luovan ilmaisun pääaihekuvaa. Description yksilöi Kuala Lumpur,Malaysia/ISS Expedition23/27.3.2010, Author NASA Astronauts ja juuri tämän tiedoston PD-USGov-NASA/solely created byNASA -teksti luettu itse; ei kolmannen osapuolen tekijämerkintää eikä kaikkienNASA-kuvien yleistä lupaa. Native4288×2848 ja SHA, kuvaus27.3.2010 mainitaan, ei nykyhetki-/NASA-tuotesuositusväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "assetID": null,
+          "commonsFile": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG",
+          "sha256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
+          "verdict": "accepted",
+          "reason": "Oma natiivin silmätarkistus: aito laaja Kuala Lumpurin kaupunkialueen, tieverkon ja ympäröivän metsäisen vuoristovyöhykkeen avaruusvalokuva. C2-kannen todellinen alueasettelu näkyy. Ei kasvoja, overlayta, vesileimaa, NASA-logoa tai yksittäisen suojatun rakennus-/taideteoksen luovan ilmaisun pääaihekuvaa. Description yksilöi Kuala Lumpur,Malaysia/ISS Expedition23/27.3.2010, Author NASA Astronauts ja juuri tämän tiedoston PD-USGov-NASA/solely created byNASA -teksti luettu itse; ei kolmannen osapuolen tekijämerkintää eikä kaikkienNASA-kuvien yleistä lupaa. Native4288×2848 ja SHA, kuvaus27.3.2010 mainitaan, ei nykyhetki-/NASA-tuotesuositusväitettä.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "NASA Astronauts",
+            "license": "Public domain",
+            "width": 4288,
+            "height": 2848,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/cc-evidence/573ca817f5a2-original.jpg",
+            "nativeSHA256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa-evidence/c496191f1f69943bc6522639b69bc605c900390c7d0afd9b52f516c5494a99fb.html",
+            "sourceSnapshotSHA256": "c496191f1f69943bc6522639b69bc605c900390c7d0afd9b52f516c5494a99fb",
+            "sourceRowsRead": {
+              "Description Kuala Lumpur, Malaysia Astronaut Imagery.JPG": "English: Astronaut Photo of Kuala Lumpur, Malaysia taken from the International Space Station (ISS) during Expedition 23 on March 27, 2010.",
+              "Date": "Taken on 27 March 2010",
+              "Source": "http://eol.jsc.nasa.gov/scripts/sseop/photo.pl?mission=ISS023&roll=E&frame=11355 and ftp://eol.jsc.nasa.gov/ESC_large_ISS023_ISS023-E-11355.JPG",
+              "Author": "NASA Astronauts"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "NASA Astronauts",
+                "rowAttributes": {}
+              }
+            ],
+            "licenseTemplatesRead": [
+              "Public domain"
+            ],
+            "sourceOriginalFileDimensions": [
+              "4,288",
+              "2,848"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/cc-evidence/573ca817f5a2-original.jpg\n  pixelWidth: 4288\n  pixelHeight: 2848\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              4288,
+              2848
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              4288,
+              2848
+            ],
+            "sourceDateRaw": "Taken on 27 March 2010",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: aito laaja Kuala Lumpurin kaupunkialueen, tieverkon ja ympäröivän metsäisen vuoristovyöhykkeen avaruusvalokuva. C2-kannen todellinen alueasettelu näkyy. Ei kasvoja, overlayta, vesileimaa, NASA-logoa tai yksittäisen suojatun rakennus-/taideteoksen luovan ilmaisun pääaihekuvaa. Description yksilöi Kuala Lumpur,Malaysia/ISS Expedition23/27.3.2010, Author NASA Astronauts ja juuri tämän tiedoston PD-USGov-NASA/solely created byNASA -teksti luettu itse; ei kolmannen osapuolen tekijämerkintää eikä kaikkienNASA-kuvien yleistä lupaa. Native4288×2848 ja SHA, kuvaus27.3.2010 mainitaan, ei nykyhetki-/NASA-tuotesuositusväitettä.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "fileSpecificLicenseModel": "PD-USGov-NASA",
+            "NASAcreditRequired": true,
+            "noEndorsementClaim": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur,_Malaysia_Astronaut_Imagery.JPG",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/cc-selection.json",
+            "currentContentSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+            "photoDate": "Taken on 27 March 2010",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Kuala_Lumpur%2C_Malaysia_Astronaut_Imagery.JPG",
+            "captionFi": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+            "checkedAt": "2026-10-12T20:27:32.787439+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
+            "sha256": "500ea73ac4d1e5f673a7379423def723a778056392ae2432eea00d14bf4c2fee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e10",
+        "city": "kualalumpur",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG",
+        "sha256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur,_Malaysia_Astronaut_Imagery.JPG",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Kuala_Lumpur%2C_Malaysia_Astronaut_Imagery.JPG",
+        "author": "NASA Astronauts",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur,_Malaysia_Astronaut_Imagery.JPG#Licensing",
+        "width": 4288,
+        "height": 2848,
+        "originalSHA256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c2-36cd7b44ba0e6d5efc4e.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c2-36cd7b44ba0e6d5efc4e.jpg",
+        "bytes": 2096575,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:28:36.187203+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "selite": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "lyhyt": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "targetAfterSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
+      "contextAfterSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c"
     },
     {
       "era": "e10",
@@ -4007,7 +4307,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-        "fileSHA256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0",
+        "fileSHA256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726",
         "item": {
           "slot": "N1",
           "targetJsonPath": "$.nahtavyydet[\"Kuala Lumpurin historiallinen rautatieasema\"].kuvat[0]",
@@ -4084,7 +4384,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/qa.json",
-            "sha256": "380a7ca82fe76b5a549a9adb10384ee109bc292fd9c075913c33a174d3a60cb0"
+            "sha256": "cb5cd6d12fac7d4091cb46fc0a19dc66ca57f52314154d2a51c198a25c5f9726"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/kualalumpur/illustration-qa-extra.json",
@@ -4159,7 +4459,7 @@
         "tiedosto": "2024-09 Kuala Lumpur station 03.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "814996884e42946f4f3fb62d89a4cfd99aff2b701e62dbbd47def8bd951991bd",
+      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
       "targetAfterSHA256": "5815fa0366ccc16fa3953286d6f0b421fca80cc9dc85a0bb2ad60947a43e3204",
       "contextAfterSHA256": "fae7be4c721170694cb5900ec726fe6884434b345f96cda95a26a6596fdc1b74"
     }

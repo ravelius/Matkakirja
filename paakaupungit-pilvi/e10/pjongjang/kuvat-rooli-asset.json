@@ -3,7 +3,7 @@
   "era": "e10",
   "city": "pjongjang",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+  "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
   "assets": [
     {
       "era": "e10",
@@ -255,7 +255,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-        "fileSHA256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896",
+        "fileSHA256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -441,11 +441,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97"
+            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-            "sha256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896"
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
           }
         ]
       },
@@ -528,7 +528,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "ee926537483bffdbcd80bdacdd2f561005eb99295afc534f555abfe07cd8f9df"
     },
@@ -674,7 +674,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-        "fileSHA256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896",
+        "fileSHA256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -749,11 +749,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97"
+            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-            "sha256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896"
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
           }
         ]
       },
@@ -836,7 +836,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "3b50a31cc12d9ffee5a6d0e1cf6cbba815b758d6bf34c3e9d45bbc87e4c33b18"
     },
@@ -978,7 +978,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-        "fileSHA256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896",
+        "fileSHA256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -1052,11 +1052,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97"
+            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-            "sha256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896"
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
           }
         ]
       },
@@ -1139,7 +1139,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "653eb77b6d157e81c78e1b818da43ae5cae71401389c439155496337b38f32cf",
       "contextAfterSHA256": "653eb77b6d157e81c78e1b818da43ae5cae71401389c439155496337b38f32cf"
     },
@@ -1274,7 +1274,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-        "fileSHA256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896",
+        "fileSHA256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1341,11 +1341,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97"
+            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-            "sha256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896"
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
           }
         ]
       },
@@ -1428,7 +1428,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "666b61891e6ddef0a28bf6defa85926f21effb70bf0bd97ba6ee3b9692e1f43f",
       "contextAfterSHA256": "666b61891e6ddef0a28bf6defa85926f21effb70bf0bd97ba6ee3b9692e1f43f"
     },
@@ -1576,7 +1576,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-        "fileSHA256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896",
+        "fileSHA256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -1656,11 +1656,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97"
+            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-            "sha256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896"
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
           }
         ]
       },
@@ -1743,7 +1743,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "3be5c03f769249aaf969929c4857e7ba95d0481d486ab7864ab26b2c54cab9d7",
       "contextAfterSHA256": "3be5c03f769249aaf969929c4857e7ba95d0481d486ab7864ab26b2c54cab9d7"
     },
@@ -1891,7 +1891,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-        "fileSHA256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896",
+        "fileSHA256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1971,11 +1971,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97"
+            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-            "sha256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896"
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
           }
         ]
       },
@@ -2058,7 +2058,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "3eb336d21572dfad98b202903b1180f8eb75b36211846c81bd6e2e17bdaf9931",
       "contextAfterSHA256": "3eb336d21572dfad98b202903b1180f8eb75b36211846c81bd6e2e17bdaf9931"
     },
@@ -2200,7 +2200,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-        "fileSHA256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896",
+        "fileSHA256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -2274,11 +2274,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97"
+            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-            "sha256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896"
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
           }
         ]
       },
@@ -2361,7 +2361,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "03a052c6f56905bb0c351ede81bb7110553020d9639f496f69d2f173dc067d26",
       "contextAfterSHA256": "03a052c6f56905bb0c351ede81bb7110553020d9639f496f69d2f173dc067d26"
     },
@@ -2492,7 +2492,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-        "fileSHA256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97",
+        "fileSHA256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2555,11 +2555,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97"
+            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-            "sha256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896"
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
           }
         ]
       },
@@ -2630,7 +2630,7 @@
         "tiedosto": "Moranbong Park - 02.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "95aec603a63bf50411cc009db4cc23ca5d5dec89bfb0242d38cfc9d20232af54",
       "contextAfterSHA256": "95aec603a63bf50411cc009db4cc23ca5d5dec89bfb0242d38cfc9d20232af54"
     },
@@ -2767,7 +2767,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-        "fileSHA256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97",
+        "fileSHA256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -2833,11 +2833,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97"
+            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-            "sha256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896"
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
           }
         ]
       },
@@ -2908,7 +2908,7 @@
         "tiedosto": "De daken van Pyongyang Gezicht op de daken van eenvoudige, dicht op elkaar gebouwde huizen, Pyongyang, Noord-Korea, RP-F-2000-9-51.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "ff17234b2efb8016532f31791567f7f93565b7337d8219f99e7661971672b270",
       "contextAfterSHA256": "ff17234b2efb8016532f31791567f7f93565b7337d8219f99e7661971672b270"
     },
@@ -3042,7 +3042,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-        "fileSHA256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97",
+        "fileSHA256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95",
         "item": {
           "slot": "N1",
           "targetJsonPath": "$.nahtavyydet[\"Moran-kukkula\"].kuvat[0]",
@@ -3105,11 +3105,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
-            "sha256": "f118c8864e6fb0432927d3c03df437177fdff4744c6712ab7ea6702d48075b97"
+            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
-            "sha256": "253d17ab1ad61809042c4865798708ba86a58f49ba22f81b6c08b3b32ddcb896"
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
           }
         ]
       },
@@ -3180,9 +3180,286 @@
         "tiedosto": "Moranbong Park - 03.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
       "targetAfterSHA256": "373d616992535d98659772f02acc27cb675bc97257bc96cb9b93a533bea0fd43",
       "contextAfterSHA256": "85fb289a520d784aabba0b24b1056511dce4d347962489c18473801c49f8dfbc"
+    },
+    {
+      "era": "e10",
+      "city": "pjongjang",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e10-pjongjang-c2-e11a84194ce966bf",
+      "galleryImageID": "capital-cc-e10-pjongjang-c2-e11a84194ce966bf",
+      "commonsFile": "ISS066-E-7985 - View of Earth.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/c2-e11a84194ce966bf1937.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+        "lyhyt": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+        "tiedosto": "ISS066-E-7985 - View of Earth.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+        "lyhyt": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+        "tiedosto": "ISS066-E-7985 - View of Earth.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/c2-e11a84194ce966bf1937.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+        "lyhyt": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+        "tiedosto": "ISS066-E-7985 - View of Earth.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e11a84194ce966bf19376107d67a9c30debfc388592c16f945f7cde4cc4285b7",
+      "exportSHA256": "e11a84194ce966bf19376107d67a9c30debfc388592c16f945f7cde4cc4285b7",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/c2-e11a84194ce966bf1937.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/c2-e11a84194ce966bf1937.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-gap-search/original-03.jpg",
+      "dimensions": [
+        5568,
+        3712
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/pjongjang/sisalto.json",
+      "sourceContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Pjongjang",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS066-E-7985_-_View_of_Earth.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS066-E-7985_-_View_of_Earth.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/ISS066-E-7985_-_View_of_Earth.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+            "subject": "File-specific PD-USGov-NASA luettu: solely created by NASA, authorCredit Earth Science and Remote Sensing Unit, Lyndon B.Johnson SpaceCenter, actualISS066-E7985 22.10.2021. Lähdesivun Pyongyang-satelliittikategoria ja erillinen lähde Pyongyang,Taedongriver,-E22698.JPG sekä natiivien yhtenevät joen/saarten/siltojen muodot osoittavat paikan. Copyright-layer: vain katto-/katumassaa alueellisessa mittakaavassa, ei taideteoksen tai luovan fasadin yksityiskohtaisia piirteitä. Ei blanketFOP/70y-oletusta; NASAcatalogSQLfailed23bytes kirjattu avoimeksi lisälähdevirheeksi.",
+            "placeEvidence": [
+              "English: View of Earth taken during ISS Expedition 66.",
+              "This image or video was catalogued by Lyndon B. Johnson Space Center of the United States National Aeronautics and Space Administration (NASA) under Photo ID: ISS066-E-7985 ."
+            ],
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/97fd7be18e77489f7a540cd938f6f0c8f20cede202114f3c7c9021307784b158.html",
+            "noBlanketFopOrAgeAssumption": true
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS066-E-7985_-_View_of_Earth.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/97fd7be18e77489f7a540cd938f6f0c8f20cede202114f3c7c9021307784b158.html",
+            "sourceSHA256": "daff3946fb8b542f596ad2228c63560f0e4a5414023a3cbd3020593b34951193",
+            "directAuthors": [
+              "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center"
+            ],
+            "directLicenses": [
+              "Public domain"
+            ],
+            "directRows": {
+              "Date": "22 October 2021, 03:48:21",
+              "Camera location": "40° 06′ N, 125° 30′ E"
+            },
+            "sourceOriginalDimensions": [
+              5568,
+              3712
+            ],
+            "localDimensions": [
+              5568,
+              3712
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-gap-search/original-03.jpg",
+            "mediaSHA256": "e11a84194ce966bf19376107d67a9c30debfc388592c16f945f7cde4cc4285b7",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS066-E-7985_-_View_of_Earth.jpg#Licensing",
+            "nativeOriginalViewedByJob27": true,
+            "fullFrameInspected": true,
+            "fullFrameDisplay": "Original opened; C2 viewer scaled5568x3712 to1920x1280; K4 displayed1680x1104 at native dimensions.",
+            "captionFi": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+            "sourceProofPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa-evidence/source-C2-cc-gap-selection.json",
+            "sourceProofSHA256": "505a3475656a06108fea2d831b69ddd4b840cd6439f628da217b65fe8b64e10f",
+            "placeCrosscheck": {
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Pyongyang,_Taedong_river,_-E-22698.JPG",
+              "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d18a4dea49ab2520effa243bfe25586892321bdaf289797f48c5e3a4074e7469.html",
+              "sourceSHA256": "f84a5e2b4ce268414c1897dd725a24a3273efe2d2b34ce8c8b73f52f804685ce",
+              "referenceImage": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-gap-search/original-05.jpg",
+              "referenceSHA256": "7f729c6926b408d62ddf24abb0b63892e029b550d321a99c0f465acfcdcba935",
+              "referencePersonallyViewed": true,
+              "sharedVisibleFeatures": "Pitkä jokisaari, sen toisessa päässä suuri pyöreä stadion, pitkittäiset silta-akselit, alajuoksun toinen saari ja joenmutkat sekä tiheän kaupunkialueen sijoittuminen. Kuvauskulma ja vuosi eroavat.",
+              "referenceNotSelected": "2010-reference contains an added NASA image-ID footer; used only for place comparison and is not an accepted asset."
+            },
+            "primaryNASALocationVerified": false,
+            "currentContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+            "targetStillExists": true
+          },
+          "qaReason": "Todellinen laaja Pjongjangin kaupunkiasettelu ja Taedong-joen mutkat/saaret/sillasto ISS66-kuvassa22.10.2021. Commonsin Pyongyang-satelliittiluokka sekä oma vertailu erilliseen2010-kuvaan, jonka lähde nimeää Pjongjangin ja Taedongin, tukevat paikkaa. Natiivi5568x3712 katsottu, ei peittotekstiä/kasvoja tai nykytaideteoksen yksityiskohtaista pääesitystä. Tiedostokohtainen NASAn tekijä/ISS066-E7985/PD-NASA luettu. NASA-EOL:n SQL-virhe ei ole varmennettu sijaintulähde."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
+        "fileSHA256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "verdict": "accepted",
+          "reason": "Todellinen laaja Pjongjangin kaupunkiasettelu ja Taedong-joen mutkat/saaret/sillasto ISS66-kuvassa22.10.2021. Commonsin Pyongyang-satelliittiluokka sekä oma vertailu erilliseen2010-kuvaan, jonka lähde nimeää Pjongjangin ja Taedongin, tukevat paikkaa. Natiivi5568x3712 katsottu, ei peittotekstiä/kasvoja tai nykytaideteoksen yksityiskohtaista pääesitystä. Tiedostokohtainen NASAn tekijä/ISS066-E7985/PD-NASA luettu. NASA-EOL:n SQL-virhe ei ole varmennettu sijaintulähde.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS066-E-7985_-_View_of_Earth.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/97fd7be18e77489f7a540cd938f6f0c8f20cede202114f3c7c9021307784b158.html",
+            "sourceSHA256": "daff3946fb8b542f596ad2228c63560f0e4a5414023a3cbd3020593b34951193",
+            "directAuthors": [
+              "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center"
+            ],
+            "directLicenses": [
+              "Public domain"
+            ],
+            "directRows": {
+              "Date": "22 October 2021, 03:48:21",
+              "Camera location": "40° 06′ N, 125° 30′ E"
+            },
+            "sourceOriginalDimensions": [
+              5568,
+              3712
+            ],
+            "localDimensions": [
+              5568,
+              3712
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-gap-search/original-03.jpg",
+            "mediaSHA256": "e11a84194ce966bf19376107d67a9c30debfc388592c16f945f7cde4cc4285b7",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS066-E-7985_-_View_of_Earth.jpg#Licensing",
+            "nativeOriginalViewedByJob27": true,
+            "fullFrameInspected": true,
+            "fullFrameDisplay": "Original opened; C2 viewer scaled5568x3712 to1920x1280; K4 displayed1680x1104 at native dimensions.",
+            "captionFi": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+            "sourceProofPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa-evidence/source-C2-cc-gap-selection.json",
+            "sourceProofSHA256": "505a3475656a06108fea2d831b69ddd4b840cd6439f628da217b65fe8b64e10f",
+            "placeCrosscheck": {
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Pyongyang,_Taedong_river,_-E-22698.JPG",
+              "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d18a4dea49ab2520effa243bfe25586892321bdaf289797f48c5e3a4074e7469.html",
+              "sourceSHA256": "f84a5e2b4ce268414c1897dd725a24a3273efe2d2b34ce8c8b73f52f804685ce",
+              "referenceImage": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/cc-gap-search/original-05.jpg",
+              "referenceSHA256": "7f729c6926b408d62ddf24abb0b63892e029b550d321a99c0f465acfcdcba935",
+              "referencePersonallyViewed": true,
+              "sharedVisibleFeatures": "Pitkä jokisaari, sen toisessa päässä suuri pyöreä stadion, pitkittäiset silta-akselit, alajuoksun toinen saari ja joenmutkat sekä tiheän kaupunkialueen sijoittuminen. Kuvauskulma ja vuosi eroavat.",
+              "referenceNotSelected": "2010-reference contains an added NASA image-ID footer; used only for place comparison and is not an accepted asset."
+            },
+            "primaryNASALocationVerified": false,
+            "currentContentSHA256": "8dd1065efa4e36e6c9ff9e46e3585d71a0c2dd0ddc74967b3302db6a04a79f62",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-13T05:58:45.076575+00:00",
+          "commonsFile": "ISS066-E-7985 - View of Earth.jpg",
+          "sha256": "e11a84194ce966bf19376107d67a9c30debfc388592c16f945f7cde4cc4285b7"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/qa.json",
+            "sha256": "052bee5da18deded8d3c158dbfe567d3b294035dc6e46b12b8f6d4f64bcc8b95"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/pjongjang/illustration-qa-extra.json",
+            "sha256": "48b0f87aeee43c5fed0349bba27dc1f998272cd33b80e54520764a05276d9c3c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e10",
+        "city": "pjongjang",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "ISS066-E-7985 - View of Earth.jpg",
+        "sha256": "e11a84194ce966bf19376107d67a9c30debfc388592c16f945f7cde4cc4285b7",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS066-E-7985_-_View_of_Earth.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/ISS066-E-7985_-_View_of_Earth.jpg",
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:ISS066-E-7985_-_View_of_Earth.jpg#Licensing",
+        "width": 5568,
+        "height": 3712,
+        "originalSHA256": "e11a84194ce966bf19376107d67a9c30debfc388592c16f945f7cde4cc4285b7",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/c2-e11a84194ce966bf1937.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/c2-e11a84194ce966bf1937.jpg",
+        "bytes": 3788589,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-13T05:59:14.474330+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+        "lyhyt": "Pjongjang ja Taedong-joki ISS-avaruusasemalta 22. lokakuuta 2021.",
+        "tiedosto": "ISS066-E-7985 - View of Earth.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "088d5961bf3d04427d8f902495c915d4109ddfe16567ce17952d4aaafc934451",
+      "targetAfterSHA256": "e63eb1dde8f5cfc308313f36f4e53a932dcf3eb697d1928fb3c2f3bcdbff9961",
+      "contextAfterSHA256": "e63eb1dde8f5cfc308313f36f4e53a932dcf3eb697d1928fb3c2f3bcdbff9961"
     }
   ],
   "runtimeIntegrationPending": true,

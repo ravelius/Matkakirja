@@ -8,605 +8,6 @@
     {
       "era": "e10",
       "city": "vientiane",
-      "slot": "O4",
-      "type": "illustration",
-      "assetID": "e10-vientiane-O4-v1-20261012",
-      "galleryImageID": "e10-vientiane-O4-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "matkailijalle",
-        "artikkeli",
-        "jaksot",
-        3,
-        "kuva"
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
-        "lyhyt": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
-        "lyhyt": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
-      "exportSHA256": "fe4b9846cb1b93f88f58ff47b932e425e4f3c72224342565d70a26251f6fae43",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "f321a0e78aa37fdea8fcad08b851e56d33e58f5a6fc501e1d47e4a602425632b",
-        "subjectTitle": "Mitä täällä syödään",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-O4-v1-20261012/image.png",
-            "nativeSHA256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "pngChunks": [
-              "IHDR",
-              "caBX",
-              "IDAT",
-              "IEND"
-            ],
-            "manifestMatch": true,
-            "captionFi": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
-            "sourceEvidence": [
-              {
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
-                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
-              },
-              {
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-                "claim": "Mitä täällä syödään"
-              },
-              {
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/tarkistus.md",
-                "section": "Aiheen D-havainnot luettava ennen kutsua"
-              }
-            ],
-            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
-            "prompt": "A modest plain bowl of Lao tam mak hoong, a green-papaya salad. Thin irregular pale green papaya strips, small chili and tomato pieces, lightly dressed with savory seasoning. No noodles, shredded carrot mountain, mayonnaise or artificial flower garnish. Natural food photography on a muted table. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
-            "content": {
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-              "contentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
-              "targetObjectExists": true,
-              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
-              "targetText": {
-                "otsikko": "Mitä täällä syödään",
-                "teksti": "Khao niao on tahmeaa riisiä, laap yrteillä maustettua liha- tai kalaseosta ja tam mak hoong vihreästä papaijasta tehtävää salaattia. Mok pa höyrytetään banaaninlehden sisällä. Khao jee pâté on täytetty patonki. Kalatahnaa ja muita kalapohjaisia mausteita käytetään monissa ruoissa, joten annoksen sisältö kannattaa varmistaa, jos kala tai äyriäiset eivät sovi ruokavalioon.",
-                "kuva": {
-                  "tiedosto": "",
-                  "lahde": "",
-                  "lyhyt": "",
-                  "selite": ""
-                }
-              },
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
-              "factSheetExists": true
-            },
-            "otherReviewerVerdicts": [],
-            "visualInspection": {
-              "tool": "view_image",
-              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-O4-v1-20261012/image.png",
-              "detail": "original",
-              "observations": "Kulhossa ohuita vaaleita papaijasuikaleita, tomaattilohkoja, chiliä, vihreitä paloja ja pieniä pähkinä-/siemenpaloja kastikkeessa. Suikaleet ja leikatut kasvikset fyysisesti luontevia. Ei ihmisiä, tekstiä, logoja tai kehystä.",
-              "inspectedBy": "kuvitus-3"
-            },
-            "openConflict": false
-          },
-          "qaReason": "Vihreästä papaijasta tehty salaatti on O4-jaksossa ja faktapohjassa nimetty aihe. Havainnekuvateksti ei väitä tiettyä ravintolaa tai yhtä pakollista reseptiä. Native-SHA ja mitat täsmäävät."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-        "fileSHA256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5",
-        "item": {
-          "slot": "O4",
-          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-          "assetID": "e10-vientiane-O4-v1-20261012",
-          "sha256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
-          "verdict": "accepted",
-          "reason": "Vihreästä papaijasta tehty salaatti on O4-jaksossa ja faktapohjassa nimetty aihe. Havainnekuvateksti ei väitä tiettyä ravintolaa tai yhtä pakollista reseptiä. Native-SHA ja mitat täsmäävät.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-O4-v1-20261012/image.png",
-            "nativeSHA256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "pngChunks": [
-              "IHDR",
-              "caBX",
-              "IDAT",
-              "IEND"
-            ],
-            "manifestMatch": true,
-            "captionFi": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
-            "sourceEvidence": [
-              {
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
-                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
-              },
-              {
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-                "claim": "Mitä täällä syödään"
-              },
-              {
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/tarkistus.md",
-                "section": "Aiheen D-havainnot luettava ennen kutsua"
-              }
-            ],
-            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
-            "prompt": "A modest plain bowl of Lao tam mak hoong, a green-papaya salad. Thin irregular pale green papaya strips, small chili and tomato pieces, lightly dressed with savory seasoning. No noodles, shredded carrot mountain, mayonnaise or artificial flower garnish. Natural food photography on a muted table. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
-            "content": {
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-              "contentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
-              "targetObjectExists": true,
-              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
-              "targetText": {
-                "otsikko": "Mitä täällä syödään",
-                "teksti": "Khao niao on tahmeaa riisiä, laap yrteillä maustettua liha- tai kalaseosta ja tam mak hoong vihreästä papaijasta tehtävää salaattia. Mok pa höyrytetään banaaninlehden sisällä. Khao jee pâté on täytetty patonki. Kalatahnaa ja muita kalapohjaisia mausteita käytetään monissa ruoissa, joten annoksen sisältö kannattaa varmistaa, jos kala tai äyriäiset eivät sovi ruokavalioon.",
-                "kuva": {
-                  "tiedosto": "",
-                  "lahde": "",
-                  "lyhyt": "",
-                  "selite": ""
-                }
-              },
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
-              "factSheetExists": true
-            },
-            "otherReviewerVerdicts": [],
-            "visualInspection": {
-              "tool": "view_image",
-              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-O4-v1-20261012/image.png",
-              "detail": "original",
-              "observations": "Kulhossa ohuita vaaleita papaijasuikaleita, tomaattilohkoja, chiliä, vihreitä paloja ja pieniä pähkinä-/siemenpaloja kastikkeessa. Suikaleet ja leikatut kasvikset fyysisesti luontevia. Ei ihmisiä, tekstiä, logoja tai kehystä.",
-              "inspectedBy": "kuvitus-3"
-            },
-            "openConflict": false
-          },
-          "reviewedAt": "2026-10-12T18:33:20.158290+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png?t=fe4b9846cb1b93f8",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
-        "sha256": "fe4b9846cb1b93f88f58ff47b932e425e4f3c72224342565d70a26251f6fae43",
-        "bytes": 2390962,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e10-vientiane-O4-v1-20261012",
-        "nativeSHA256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e10",
-        "city": "vientiane",
-        "slot": "O4",
-        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
-        "verifiedAt": "2026-10-12T18:33:49.696328+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
-        "sha256": "fe4b9846cb1b93f88f58ff47b932e425e4f3c72224342565d70a26251f6fae43",
-        "bytes": 2390962,
-        "SHAReadAt": "2026-10-12T18:33:44.719342+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
-        "rgbPixelSHA256": "a55af95ad4e95494c4746ca22f80e2e19a040a8a2dec3c77a3202451437d10c0",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
-      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "f321a0e78aa37fdea8fcad08b851e56d33e58f5a6fc501e1d47e4a602425632b"
-    },
-    {
-      "era": "e10",
-      "city": "vientiane",
-      "slot": "L3",
-      "type": "illustration",
-      "assetID": "e10-vientiane-L3-v1-20261012",
-      "galleryImageID": "e10-vientiane-L3-v1-20261012",
-      "commonsFile": null,
-      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
-      "targetTokens": [
-        "kaupunkilehti",
-        1,
-        "nostot",
-        2
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
-        "lyhyt": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä."
-      },
-      "removeMediaKeys": [
-        "tiedosto"
-      ],
-      "CvalidatorCompatiblePayload": {},
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
-        "suora": true,
-        "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
-        "lyhyt": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä."
-      },
-      "runtimeRemoveMediaKeys": [
-        "tiedosto"
-      ],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
-      "exportSHA256": "f509b67999a0cdc2ef7365b14660702b7335ed0cca97f4550b932978057d0491",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
-      "dimensions": [
-        1536,
-        1024
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
-        "semanticContextSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
-        "subjectTitle": "Kala pakataan banaaninlehteen",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": null,
-        "license": null,
-        "licenseUrl": null,
-        "sourcePage": null,
-        "originalUrl": null,
-        "rightsEvidence": {
-          "production": "Yleistetty ruoka ja toiminnallinen lehtikääre; ei paikka-/rakennus-/nykyteosreplikaa tai henkilöä.",
-          "QA": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-L3-v1-20261012/image.png",
-            "nativeSHA256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "pngChunks": [
-              "IHDR",
-              "caBX",
-              "IDAT",
-              "IEND"
-            ],
-            "manifestMatch": true,
-            "captionFi": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
-            "sourceEvidence": [
-              {
-                "url": "https://en.wikipedia.org/wiki/Lao_cuisine",
-                "section": "Steamed dishes/Mok pa"
-              },
-              {
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
-                "section": "Ruokateema, kala banaaninlehdessä"
-              },
-              {
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
-                "claim": "Mok pa on banaaninlehteen kääritty ja höyrytetty kalaruoka. Paketti sidotaan bambunarulla. Mausteisiin voi kuulua sitruunaruohoa, makrutlimetin lehtiä, kevätsipulia, chiliä ja tuoretta tilliä sekä kalakastiketta tai katkaraputahnaa. Lehti kuuluu valmistustapaan yhtä olennaisesti kuin itse kala: ruokalaji löytyy laon keittiön höyrytetyistä ruoista. Myös kanaa höyrytetään banaaninlehdessä, jolloin annoksen nimi on mok gai. Pöydässä pieni lehtipaketti voi näin sisältää eri raaka-aineen, vaikka valmistustapa näyttää samalta."
-              }
-            ],
-            "rightsEvidence": "Yleistetty ruoka ja toiminnallinen lehtikääre; ei paikka-/rakennus-/nykyteosreplikaa tai henkilöä.",
-            "prompt": "Use case: photorealistic-natural. Landscape editorial food illustration of Lao mok pa, steamed fish in banana leaf. A single naturally folded olive-green steamed banana-leaf parcel has been opened on a plain ceramic plate, revealing moist boneless flaky fish mixed with finely chopped dill, a little lemongrass and small chili pieces. The leaf remains visibly the cooking wrapper, with a simple thin plant-fiber tie loosened beside it. Believable banana-leaf veins, folds and darkened steamed edges; natural fish and herb texture, no uniform perfect cubes. Soft window daylight, close realistic 50mm photography, simple unbranded table. Do not make a Thai coconut custard, an egg omelette, raw sushi or a rice packet. This is a generalized illustration of the Lao dish, not a photograph of a named Vientiane market stall or restaurant. No people, face, text, logos, labels, watermark, frame or collage. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
-            "content": {
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-              "contentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
-              "targetObjectExists": true,
-              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
-              "targetText": {
-                "otsikko": "Kala pakataan banaaninlehteen",
-                "teksti": "Mok pa on banaaninlehteen kääritty ja höyrytetty kalaruoka. Paketti sidotaan bambunarulla. Mausteisiin voi kuulua sitruunaruohoa, makrutlimetin lehtiä, kevätsipulia, chiliä ja tuoretta tilliä sekä kalakastiketta tai katkaraputahnaa. Lehti kuuluu valmistustapaan yhtä olennaisesti kuin itse kala: ruokalaji löytyy laon keittiön höyrytetyistä ruoista. Myös kanaa höyrytetään banaaninlehdessä, jolloin annoksen nimi on mok gai. Pöydässä pieni lehtipaketti voi näin sisältää eri raaka-aineen, vaikka valmistustapa näyttää samalta.",
-                "tiedosto": "",
-                "lahde": "",
-                "lyhyt": "",
-                "selite": "",
-                "wiki": "Lao cuisine"
-              },
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
-              "factSheetExists": true
-            },
-            "otherReviewerVerdicts": [],
-            "visualInspection": {
-              "tool": "view_image",
-              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-L3-v1-20261012/image.png",
-              "detail": "original",
-              "observations": "Avattu kypsennetty banaaninlehtipaketti sisältää vaaleita kalapaloja ja yrttejä, vieressä irrotettu kasvikuitusidos. Lehdessä pitkittäiset suonet ja luontevat taitokset; kalan kypsä rakenne ja astia uskottavia. Ei kasvoja, tekstiä tai tunnuksia.",
-              "inspectedBy": "kuvitus-3"
-            },
-            "openConflict": false
-          },
-          "qaReason": "Banaaninlehdessä oleva kala vastaa nykyisen L3-noston mok pa -aihetta. Kuvateksti ilmoittaa havainnollistuksen, ei nimettyä ravintolaa. Alkuperäisen PNG:n SHA ja mitat täsmäävät."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-        "fileSHA256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5",
-        "item": {
-          "slot": "L3",
-          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
-          "assetID": "e10-vientiane-L3-v1-20261012",
-          "sha256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
-          "verdict": "accepted",
-          "reason": "Banaaninlehdessä oleva kala vastaa nykyisen L3-noston mok pa -aihetta. Kuvateksti ilmoittaa havainnollistuksen, ei nimettyä ravintolaa. Alkuperäisen PNG:n SHA ja mitat täsmäävät.",
-          "evidence": {
-            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-L3-v1-20261012/image.png",
-            "nativeSHA256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
-            "nativeWidth": 1536,
-            "nativeHeight": 1024,
-            "format": "PNG",
-            "pngChunks": [
-              "IHDR",
-              "caBX",
-              "IDAT",
-              "IEND"
-            ],
-            "manifestMatch": true,
-            "captionFi": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
-            "sourceEvidence": [
-              {
-                "url": "https://en.wikipedia.org/wiki/Lao_cuisine",
-                "section": "Steamed dishes/Mok pa"
-              },
-              {
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
-                "section": "Ruokateema, kala banaaninlehdessä"
-              },
-              {
-                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
-                "claim": "Mok pa on banaaninlehteen kääritty ja höyrytetty kalaruoka. Paketti sidotaan bambunarulla. Mausteisiin voi kuulua sitruunaruohoa, makrutlimetin lehtiä, kevätsipulia, chiliä ja tuoretta tilliä sekä kalakastiketta tai katkaraputahnaa. Lehti kuuluu valmistustapaan yhtä olennaisesti kuin itse kala: ruokalaji löytyy laon keittiön höyrytetyistä ruoista. Myös kanaa höyrytetään banaaninlehdessä, jolloin annoksen nimi on mok gai. Pöydässä pieni lehtipaketti voi näin sisältää eri raaka-aineen, vaikka valmistustapa näyttää samalta."
-              }
-            ],
-            "rightsEvidence": "Yleistetty ruoka ja toiminnallinen lehtikääre; ei paikka-/rakennus-/nykyteosreplikaa tai henkilöä.",
-            "prompt": "Use case: photorealistic-natural. Landscape editorial food illustration of Lao mok pa, steamed fish in banana leaf. A single naturally folded olive-green steamed banana-leaf parcel has been opened on a plain ceramic plate, revealing moist boneless flaky fish mixed with finely chopped dill, a little lemongrass and small chili pieces. The leaf remains visibly the cooking wrapper, with a simple thin plant-fiber tie loosened beside it. Believable banana-leaf veins, folds and darkened steamed edges; natural fish and herb texture, no uniform perfect cubes. Soft window daylight, close realistic 50mm photography, simple unbranded table. Do not make a Thai coconut custard, an egg omelette, raw sushi or a rice packet. This is a generalized illustration of the Lao dish, not a photograph of a named Vientiane market stall or restaurant. No people, face, text, logos, labels, watermark, frame or collage. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
-            "content": {
-              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-              "contentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
-              "targetObjectExists": true,
-              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
-              "targetText": {
-                "otsikko": "Kala pakataan banaaninlehteen",
-                "teksti": "Mok pa on banaaninlehteen kääritty ja höyrytetty kalaruoka. Paketti sidotaan bambunarulla. Mausteisiin voi kuulua sitruunaruohoa, makrutlimetin lehtiä, kevätsipulia, chiliä ja tuoretta tilliä sekä kalakastiketta tai katkaraputahnaa. Lehti kuuluu valmistustapaan yhtä olennaisesti kuin itse kala: ruokalaji löytyy laon keittiön höyrytetyistä ruoista. Myös kanaa höyrytetään banaaninlehdessä, jolloin annoksen nimi on mok gai. Pöydässä pieni lehtipaketti voi näin sisältää eri raaka-aineen, vaikka valmistustapa näyttää samalta.",
-                "tiedosto": "",
-                "lahde": "",
-                "lyhyt": "",
-                "selite": "",
-                "wiki": "Lao cuisine"
-              },
-              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
-              "factSheetExists": true
-            },
-            "otherReviewerVerdicts": [],
-            "visualInspection": {
-              "tool": "view_image",
-              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-L3-v1-20261012/image.png",
-              "detail": "original",
-              "observations": "Avattu kypsennetty banaaninlehtipaketti sisältää vaaleita kalapaloja ja yrttejä, vieressä irrotettu kasvikuitusidos. Lehdessä pitkittäiset suonet ja luontevat taitokset; kalan kypsä rakenne ja astia uskottavia. Ei kasvoja, tekstiä tai tunnuksia.",
-              "inspectedBy": "kuvitus-3"
-            },
-            "openConflict": false
-          },
-          "reviewedAt": "2026-10-12T18:16:03.338611+00:00"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
-        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png?t=f509b67999a0cdc2",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
-        "sha256": "f509b67999a0cdc2ef7365b14660702b7335ed0cca97f4550b932978057d0491",
-        "bytes": 2514097,
-        "http": 200,
-        "mime": "image/png",
-        "cors": "https://matkakirja.app",
-        "cacheBustedPreflightHttp": 404,
-        "cacheBustedReadback": true,
-        "byteExactReadback": true,
-        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "assetID": "e10-vientiane-L3-v1-20261012",
-        "nativeSHA256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
-        "canonicalReadbackByteExact": true,
-        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "era": "e10",
-        "city": "vientiane",
-        "slot": "L3",
-        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
-        "verifiedAt": "2026-10-12T18:19:26.033168+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "galleryVisibleVerified": false
-      },
-      "producerExportProof": null,
-      "technicalExportProof": {
-        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
-        "sha256": "f509b67999a0cdc2ef7365b14660702b7335ed0cca97f4550b932978057d0491",
-        "bytes": 2514097,
-        "SHAReadAt": "2026-10-12T18:29:57.649247+00:00",
-        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
-        "width": 1536,
-        "height": 1024,
-        "pixelWidth": 1536,
-        "pixelHeight": 1024,
-        "exifOrientation": 1,
-        "dimensionsBasis": "EXIF-oriented-display",
-        "format": "PNG",
-        "largeOriginalHeaderOnlyRead": false,
-        "nativeSHA256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
-        "rgbPixelSHA256": "14c24476996efbbb91b55923b004d7fea52c904e43bf4448288543cddf8fb5a9",
-        "pixelIdenticalToQAAcceptedNative": true,
-        "sRGBProfileEmbedded": true,
-        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
-      },
-      "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": false,
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
-      "targetAfterSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
-      "contextAfterSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96"
-    },
-    {
-      "era": "e10",
-      "city": "vientiane",
       "slot": "TRAVELER",
       "type": "illustration",
       "assetID": "e10-vientiane-TRAVELER-v1-20261012",
@@ -852,7 +253,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-        "fileSHA256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5",
+        "fileSHA256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -1036,11 +437,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
           }
         ]
       },
@@ -1137,6 +538,662 @@
       "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "0fb8348709a915cd0ff56b8c57040aabe9b9adf8198e2deecfb401f27af08019"
+    },
+    {
+      "era": "e10",
+      "city": "vientiane",
+      "slot": "O4",
+      "type": "illustration",
+      "assetID": "e10-vientiane-O4-v1-20261012",
+      "galleryImageID": "e10-vientiane-O4-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        3,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
+        "lyhyt": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
+        "lyhyt": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
+      "exportSHA256": "fe4b9846cb1b93f88f58ff47b932e425e4f3c72224342565d70a26251f6fae43",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "f321a0e78aa37fdea8fcad08b851e56d33e58f5a6fc501e1d47e4a602425632b",
+        "subjectTitle": "Mitä täällä syödään",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-O4-v1-20261012/image.png",
+            "nativeSHA256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "claim": "Mitä täällä syödään"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/tarkistus.md",
+                "section": "Aiheen D-havainnot luettava ennen kutsua"
+              }
+            ],
+            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+            "prompt": "A modest plain bowl of Lao tam mak hoong, a green-papaya salad. Thin irregular pale green papaya strips, small chili and tomato pieces, lightly dressed with savory seasoning. No noodles, shredded carrot mountain, mayonnaise or artificial flower garnish. Natural food photography on a muted table. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+              "contentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Khao niao on tahmeaa riisiä, laap yrteillä maustettua liha- tai kalaseosta ja tam mak hoong vihreästä papaijasta tehtävää salaattia. Mok pa höyrytetään banaaninlehden sisällä. Khao jee pâté on täytetty patonki. Kalatahnaa ja muita kalapohjaisia mausteita käytetään monissa ruoissa, joten annoksen sisältö kannattaa varmistaa, jos kala tai äyriäiset eivät sovi ruokavalioon.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lahde": "",
+                  "lyhyt": "",
+                  "selite": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-O4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kulhossa ohuita vaaleita papaijasuikaleita, tomaattilohkoja, chiliä, vihreitä paloja ja pieniä pähkinä-/siemenpaloja kastikkeessa. Suikaleet ja leikatut kasvikset fyysisesti luontevia. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Vihreästä papaijasta tehty salaatti on O4-jaksossa ja faktapohjassa nimetty aihe. Havainnekuvateksti ei väitä tiettyä ravintolaa tai yhtä pakollista reseptiä. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
+        "fileSHA256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756",
+        "item": {
+          "slot": "O4",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+          "assetID": "e10-vientiane-O4-v1-20261012",
+          "sha256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
+          "verdict": "accepted",
+          "reason": "Vihreästä papaijasta tehty salaatti on O4-jaksossa ja faktapohjassa nimetty aihe. Havainnekuvateksti ei väitä tiettyä ravintolaa tai yhtä pakollista reseptiä. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-O4-v1-20261012/image.png",
+            "nativeSHA256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
+            "sourceEvidence": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+                "section": "Nimetty ruoka/materiaali/tekniikka, lähdeviitteet A-koosteessa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+                "claim": "Mitä täällä syödään"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/tarkistus.md",
+                "section": "Aiheen D-havainnot luettava ennen kutsua"
+              }
+            ],
+            "rightsEvidence": "Turvallinen yleinen ruoka, materiaali tai arkiesine. Ei nykyteoksen, todellisen rakennusasettelun, tunnistettavan henkilön tai nimetyn näyttelyesineen jäljennöstä.",
+            "prompt": "A modest plain bowl of Lao tam mak hoong, a green-papaya salad. Thin irregular pale green papaya strips, small chili and tomato pieces, lightly dressed with savory seasoning. No noodles, shredded carrot mountain, mayonnaise or artificial flower garnish. Natural food photography on a muted table. Use case: photorealistic-natural. Believable natural editorial photography with physically accurate materials and irregular everyday texture. No people or recognizable faces, no lettering, logos, watermarks, frames, collage or designed modern art. This is a generalized illustration of the text topic, not a documentary photograph of a named vendor, museum object, city layout, historical event or building. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+              "contentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3]",
+              "targetText": {
+                "otsikko": "Mitä täällä syödään",
+                "teksti": "Khao niao on tahmeaa riisiä, laap yrteillä maustettua liha- tai kalaseosta ja tam mak hoong vihreästä papaijasta tehtävää salaattia. Mok pa höyrytetään banaaninlehden sisällä. Khao jee pâté on täytetty patonki. Kalatahnaa ja muita kalapohjaisia mausteita käytetään monissa ruoissa, joten annoksen sisältö kannattaa varmistaa, jos kala tai äyriäiset eivät sovi ruokavalioon.",
+                "kuva": {
+                  "tiedosto": "",
+                  "lahde": "",
+                  "lyhyt": "",
+                  "selite": ""
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-O4-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Kulhossa ohuita vaaleita papaijasuikaleita, tomaattilohkoja, chiliä, vihreitä paloja ja pieniä pähkinä-/siemenpaloja kastikkeessa. Suikaleet ja leikatut kasvikset fyysisesti luontevia. Ei ihmisiä, tekstiä, logoja tai kehystä.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:33:20.158290+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png?t=fe4b9846cb1b93f8",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
+        "sha256": "fe4b9846cb1b93f88f58ff47b932e425e4f3c72224342565d70a26251f6fae43",
+        "bytes": 2390962,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-vientiane-O4-v1-20261012",
+        "nativeSHA256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "vientiane",
+        "slot": "O4",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
+        "verifiedAt": "2026-10-12T18:33:49.696328+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
+        "sha256": "fe4b9846cb1b93f88f58ff47b932e425e4f3c72224342565d70a26251f6fae43",
+        "bytes": 2390962,
+        "SHAReadAt": "2026-10-12T18:33:44.719342+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
+        "rgbPixelSHA256": "a55af95ad4e95494c4746ca22f80e2e19a040a8a2dec3c77a3202451437d10c0",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "f321a0e78aa37fdea8fcad08b851e56d33e58f5a6fc501e1d47e4a602425632b"
+    },
+    {
+      "era": "e10",
+      "city": "vientiane",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e10-vientiane-K3-v1-20261012",
+      "galleryImageID": "e10-vientiane-K3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva.",
+        "lyhyt": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva.",
+        "lyhyt": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "26a9bc370837e11eef2411c1ac7350615df0661fd13274027dd0949cb65684d9",
+      "exportSHA256": "c34985f667cd71dc201080f8d968a172943a52b058200495f9871f880d6f197c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b",
+        "semanticContextSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b",
+        "subjectTitle": "Temppeli muistaa poissaolevan patsaan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty palmunlehtisivujen materiaali ja toiminnallinen sidontarakenne; ei nimetty museoartefakti, käsikirjoituksen tekstin tai koristeen jäljennös, tunnistettava henkilö, temppeli tai patsas. Muodon rakenne perustuu lähdetekstiin ja silmin katsottuun museon lähdevalokuvaan. Viitevalokuvan kirjoitusta, helmiä, tupsuja, värikansia tai sommittelua ei kopioida; bitmap ei ole generointisyöte. Viitteen valokuvalisenssi CC BY-SA 3.0/tekijä Tropenmuseum dokumentoitu. Uusi kuva on ajoittamaton nykyinen materiaalihavainne, ei 1800-luvun tapahtumakuva tai vuoden1873 näkymä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-K3-v1-20261012/native.png",
+            "nativeSHA256": "26a9bc370837e11eef2411c1ac7350615df0661fd13274027dd0949cb65684d9",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Haw_Phra_Kaew",
+                "localSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/vientiane/source-evidence/K3/haw-phra-kaew.html",
+                "sha256": "186b300315879df286466ed1485398aeffc406256c6ddafec671d09e6ab70d70",
+                "claim": "The collection text explicitly lists palm-leaf manuscripts; establishes semantic relevance, not an exact object identity."
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/Palm-leaf_manuscript",
+                "localSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/vientiane/source-evidence/K3/palm-leaf-manuscript.html",
+                "sha256": "236375c369347b44e5c5ed67436ea7a7ef2bb23415a89d9d6a0ac36bb272b899",
+                "claim": "Rectangular cured palm-leaf sheets pierced for binding strings; no historical quantity, species, dimensions or date asserted."
+              },
+              {
+                "url": "https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Geschrift_op_lontarblad_TMnr_1534-8b.jpg",
+                "localSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/vientiane/source-evidence/K3/tropenmuseum-manuscript.html",
+                "sha256": "8a72bc1bc85d1adeae61322bb63fb9d6e62d28d6b422bc017b6fcdf283be9fe4",
+                "visualReferencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/vientiane/source-evidence/K3/tropenmuseum-structural-reference.jpg",
+                "visualReferenceSHA256": "3def463de82da8f22d846478ffe243c72d51072ab3fbb433bbccabd451e77283",
+                "author": "Tropenmuseum",
+                "attribution": "Collectie Wereldmuseum (v/h Tropenmuseum), part of the National Museum of World Cultures",
+                "license": "CC BY-SA 3.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "referenceUse": "Viewed for functional leaf/board/cord structure only; not supplied as an image-generation input and not reproduced as a collection object.",
+                "observations": "Source text: cured rectangular palm-leaf sheets are pierced for strings that bind the stack. Direct original museum reference seen: long narrow light tan sheets, visible layered edges, plain wooden boards, central cord passing through aligned openings. The museum photograph also contains script, colored boards, beads/tassels and extra edge perforations; none of those expressive details are copied. The new asset is an uninscribed general material/binding demonstration, not a replica."
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+                "sha256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "currentText": "Haw Phra Kaew rakennettiin kuninkaan palatsialueelle Smaragdibuddhaa varten. Se oli hallitsijan henkilökohtainen palvontapaikka, joten temppelissä ei asunut munkkeja. Patsas siirrettiin myöhemmin Bangkokiin, ja Vientianen rakennus tuhoutui sekä nousi uudelleen useita kertoja. Nykyinen rakennus on 1900-luvun jälleenrakennus ja toimii uskonnollisen taiteen museona. Kokoelmaan kuuluu puukaiverruksia, palmunlehtikäsikirjoituksia ja pronssinen sammakkorumpu. Temppelin nimi säilyttää muiston esineestä, joka sijaitsee nykyisin toisessa kaupungissa."
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+                "sha256": "56f03f297578c8915a2bf63f9c8b454b7491599db3d454928c28fac49a854288",
+                "section": "Haw Phra Kaew collection list; palm-leaf manuscripts"
+              }
+            ],
+            "rightsEvidence": "Yleistetty palmunlehtisivujen materiaali ja toiminnallinen sidontarakenne; ei nimetty museoartefakti, käsikirjoituksen tekstin tai koristeen jäljennös, tunnistettava henkilö, temppeli tai patsas. Muodon rakenne perustuu lähdetekstiin ja silmin katsottuun museon lähdevalokuvaan. Viitevalokuvan kirjoitusta, helmiä, tupsuja, värikansia tai sommittelua ei kopioida; bitmap ei ole generointisyöte. Viitteen valokuvalisenssi CC BY-SA 3.0/tekijä Tropenmuseum dokumentoitu. Uusi kuva on ajoittamaton nykyinen materiaalihavainne, ei 1800-luvun tapahtumakuva tai vuoden1873 näkymä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: an original camera-looking landscape editorial material illustration, native PNG preferably 1536x1024. Primary subject: the material and functional page structure of a palm-leaf manuscript, shown as a plain contemporary uninscribed demonstration on an ordinary wooden reading workbench in soft natural window light. A compact stack of very thin, long narrow rectangular cured palm-leaf strips lies between two simple undecorated light wooden boards. The strips are many times longer than they are wide, with pale straw-tan natural fiber, faint longitudinal veins and slightly irregular thin edges; they must read as flexible plant-leaf sheets, not rigid wooden slats, a wooden ruler or modern paper. A plain plant-fiber cord passes visibly through an aligned small hole near the middle of the leaf stack and boards, loosely securing them together. Turn the top plain wooden cover slightly aside around the binding point so that a completely blank top leaf, its binding hole and the layered side edges are clearly visible. The bundle rests physically on the bench, all parts connected and stable; no floating cord or cover. One gentle three-quarter close camera view, bundle diagonally composed across the image, with enough coherent workbench context to feel part of an everyday space. Restrained realistic color, diffuse daylight, believable wood grain and thin leaf fibers, no HDR or synthetic repeated texture. This is an undated contemporary functional material study, not a historical scene and not a picture or replica of any identified Haw Phra Kaew museum object. Do not reproduce the writing, decorations, colored covers, tassels, beads or image composition of a collection object. No script, glyphs, invented characters, printed or carved words, symbols, logos, numbers, labels, faces, hands, people, statues, temple buildings, flags, watermark, frame or collage.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+              "contentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Temppeli muistaa poissaolevan patsaan",
+                "teksti": "Haw Phra Kaew rakennettiin kuninkaan palatsialueelle Smaragdibuddhaa varten. Se oli hallitsijan henkilökohtainen palvontapaikka, joten temppelissä ei asunut munkkeja. Patsas siirrettiin myöhemmin Bangkokiin, ja Vientianen rakennus tuhoutui sekä nousi uudelleen useita kertoja. Nykyinen rakennus on 1900-luvun jälleenrakennus ja toimii uskonnollisen taiteen museona. Kokoelmaan kuuluu puukaiverruksia, palmunlehtikäsikirjoituksia ja pronssinen sammakkorumpu. Temppelin nimi säilyttää muiston esineestä, joka sijaitsee nykyisin toisessa kaupungissa.",
+                "tiedosto": "",
+                "lahde": "",
+                "lyhyt": "",
+                "selite": "",
+                "wiki": "Haw Phra Kaew"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-K3-v1-20261012/native.png",
+              "detail": "original",
+              "observations": "Pitkiä ohuita vaaleita lehtimäisiä arkkeja kahden puulevyn välissä, naru kulkee reikien kautta. Kuidut, kerrokset ja sidonta uskottavia. Arkit ovat tyhjiä; ei kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Palmunlehtikäsikirjoitusten materiaalin ja sidonnan yleishavainne liittyy K3:n kokoelma-aiheeseen. Kuvateksti ei väitä kuvaa museon tietystä esineestä. Native-SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
+        "fileSHA256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e10-vientiane-K3-v1-20261012",
+          "sha256": "26a9bc370837e11eef2411c1ac7350615df0661fd13274027dd0949cb65684d9",
+          "verdict": "accepted",
+          "reason": "Palmunlehtikäsikirjoitusten materiaalin ja sidonnan yleishavainne liittyy K3:n kokoelma-aiheeseen. Kuvateksti ei väitä kuvaa museon tietystä esineestä. Native-SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-K3-v1-20261012/native.png",
+            "nativeSHA256": "26a9bc370837e11eef2411c1ac7350615df0661fd13274027dd0949cb65684d9",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Haw_Phra_Kaew",
+                "localSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/vientiane/source-evidence/K3/haw-phra-kaew.html",
+                "sha256": "186b300315879df286466ed1485398aeffc406256c6ddafec671d09e6ab70d70",
+                "claim": "The collection text explicitly lists palm-leaf manuscripts; establishes semantic relevance, not an exact object identity."
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/Palm-leaf_manuscript",
+                "localSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/vientiane/source-evidence/K3/palm-leaf-manuscript.html",
+                "sha256": "236375c369347b44e5c5ed67436ea7a7ef2bb23415a89d9d6a0ac36bb272b899",
+                "claim": "Rectangular cured palm-leaf sheets pierced for binding strings; no historical quantity, species, dimensions or date asserted."
+              },
+              {
+                "url": "https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_Geschrift_op_lontarblad_TMnr_1534-8b.jpg",
+                "localSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/vientiane/source-evidence/K3/tropenmuseum-manuscript.html",
+                "sha256": "8a72bc1bc85d1adeae61322bb63fb9d6e62d28d6b422bc017b6fcdf283be9fe4",
+                "visualReferencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/vientiane/source-evidence/K3/tropenmuseum-structural-reference.jpg",
+                "visualReferenceSHA256": "3def463de82da8f22d846478ffe243c72d51072ab3fbb433bbccabd451e77283",
+                "author": "Tropenmuseum",
+                "attribution": "Collectie Wereldmuseum (v/h Tropenmuseum), part of the National Museum of World Cultures",
+                "license": "CC BY-SA 3.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+                "referenceUse": "Viewed for functional leaf/board/cord structure only; not supplied as an image-generation input and not reproduced as a collection object.",
+                "observations": "Source text: cured rectangular palm-leaf sheets are pierced for strings that bind the stack. Direct original museum reference seen: long narrow light tan sheets, visible layered edges, plain wooden boards, central cord passing through aligned openings. The museum photograph also contains script, colored boards, beads/tassels and extra edge perforations; none of those expressive details are copied. The new asset is an uninscribed general material/binding demonstration, not a replica."
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+                "sha256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "jsonPath": "$.kaupunkilehti[0].nostot[2]",
+                "currentText": "Haw Phra Kaew rakennettiin kuninkaan palatsialueelle Smaragdibuddhaa varten. Se oli hallitsijan henkilökohtainen palvontapaikka, joten temppelissä ei asunut munkkeja. Patsas siirrettiin myöhemmin Bangkokiin, ja Vientianen rakennus tuhoutui sekä nousi uudelleen useita kertoja. Nykyinen rakennus on 1900-luvun jälleenrakennus ja toimii uskonnollisen taiteen museona. Kokoelmaan kuuluu puukaiverruksia, palmunlehtikäsikirjoituksia ja pronssinen sammakkorumpu. Temppelin nimi säilyttää muiston esineestä, joka sijaitsee nykyisin toisessa kaupungissa."
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+                "sha256": "56f03f297578c8915a2bf63f9c8b454b7491599db3d454928c28fac49a854288",
+                "section": "Haw Phra Kaew collection list; palm-leaf manuscripts"
+              }
+            ],
+            "rightsEvidence": "Yleistetty palmunlehtisivujen materiaali ja toiminnallinen sidontarakenne; ei nimetty museoartefakti, käsikirjoituksen tekstin tai koristeen jäljennös, tunnistettava henkilö, temppeli tai patsas. Muodon rakenne perustuu lähdetekstiin ja silmin katsottuun museon lähdevalokuvaan. Viitevalokuvan kirjoitusta, helmiä, tupsuja, värikansia tai sommittelua ei kopioida; bitmap ei ole generointisyöte. Viitteen valokuvalisenssi CC BY-SA 3.0/tekijä Tropenmuseum dokumentoitu. Uusi kuva on ajoittamaton nykyinen materiaalihavainne, ei 1800-luvun tapahtumakuva tai vuoden1873 näkymä.",
+            "prompt": "Use case: photorealistic-natural. Asset type: an original camera-looking landscape editorial material illustration, native PNG preferably 1536x1024. Primary subject: the material and functional page structure of a palm-leaf manuscript, shown as a plain contemporary uninscribed demonstration on an ordinary wooden reading workbench in soft natural window light. A compact stack of very thin, long narrow rectangular cured palm-leaf strips lies between two simple undecorated light wooden boards. The strips are many times longer than they are wide, with pale straw-tan natural fiber, faint longitudinal veins and slightly irregular thin edges; they must read as flexible plant-leaf sheets, not rigid wooden slats, a wooden ruler or modern paper. A plain plant-fiber cord passes visibly through an aligned small hole near the middle of the leaf stack and boards, loosely securing them together. Turn the top plain wooden cover slightly aside around the binding point so that a completely blank top leaf, its binding hole and the layered side edges are clearly visible. The bundle rests physically on the bench, all parts connected and stable; no floating cord or cover. One gentle three-quarter close camera view, bundle diagonally composed across the image, with enough coherent workbench context to feel part of an everyday space. Restrained realistic color, diffuse daylight, believable wood grain and thin leaf fibers, no HDR or synthetic repeated texture. This is an undated contemporary functional material study, not a historical scene and not a picture or replica of any identified Haw Phra Kaew museum object. Do not reproduce the writing, decorations, colored covers, tassels, beads or image composition of a collection object. No script, glyphs, invented characters, printed or carved words, symbols, logos, numbers, labels, faces, hands, people, statues, temple buildings, flags, watermark, frame or collage.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+              "contentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].nostot[2]",
+              "targetText": {
+                "otsikko": "Temppeli muistaa poissaolevan patsaan",
+                "teksti": "Haw Phra Kaew rakennettiin kuninkaan palatsialueelle Smaragdibuddhaa varten. Se oli hallitsijan henkilökohtainen palvontapaikka, joten temppelissä ei asunut munkkeja. Patsas siirrettiin myöhemmin Bangkokiin, ja Vientianen rakennus tuhoutui sekä nousi uudelleen useita kertoja. Nykyinen rakennus on 1900-luvun jälleenrakennus ja toimii uskonnollisen taiteen museona. Kokoelmaan kuuluu puukaiverruksia, palmunlehtikäsikirjoituksia ja pronssinen sammakkorumpu. Temppelin nimi säilyttää muiston esineestä, joka sijaitsee nykyisin toisessa kaupungissa.",
+                "tiedosto": "",
+                "lahde": "",
+                "lyhyt": "",
+                "selite": "",
+                "wiki": "Haw Phra Kaew"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-K3-v1-20261012/native.png",
+              "detail": "original",
+              "observations": "Pitkiä ohuita vaaleita lehtimäisiä arkkeja kahden puulevyn välissä, naru kulkee reikien kautta. Kuidut, kerrokset ja sidonta uskottavia. Arkit ovat tyhjiä; ei kasvoja, tekstiä tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T20:40:51.569634+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png?t=c34985f667cd71dc",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png",
+        "sha256": "c34985f667cd71dc201080f8d968a172943a52b058200495f9871f880d6f197c",
+        "bytes": 2454536,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-vientiane-K3-v1-20261012",
+        "nativeSHA256": "26a9bc370837e11eef2411c1ac7350615df0661fd13274027dd0949cb65684d9",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "vientiane",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T20:42:03.386800+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": {
+        "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-K3-v1-20261012/native.png",
+        "nativeSHA256": "26a9bc370837e11eef2411c1ac7350615df0661fd13274027dd0949cb65684d9",
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-K3-v1-20261012/image.png",
+        "exportSHA256": "0da5354a3d42de2421d146082161010cf45f9ce2df6e7d5b3cf8a3b5da49c61a",
+        "RGBPixelsIdentical": true,
+        "rgbPixelSHA256": "8a448131b001a97d5bba8e6a9ed6e4eeaf4c6f4168c76a16272e7b68372195c9",
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png",
+        "sha256": "c34985f667cd71dc201080f8d968a172943a52b058200495f9871f880d6f197c",
+        "bytes": 2454536,
+        "SHAReadAt": "2026-10-12T20:40:56.937387+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "26a9bc370837e11eef2411c1ac7350615df0661fd13274027dd0949cb65684d9",
+        "rgbPixelSHA256": "8a448131b001a97d5bba8e6a9ed6e4eeaf4c6f4168c76a16272e7b68372195c9",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "targetAfterSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b",
+      "contextAfterSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b"
     },
     {
       "era": "e10",
@@ -1284,7 +1341,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-        "fileSHA256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5",
+        "fileSHA256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1366,11 +1423,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
           }
         ]
       },
@@ -1467,6 +1524,303 @@
       "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
       "targetAfterSHA256": "c507188e793ad72ac2e327a36f444532e9b56f938a1ce4609792563a1db9218a",
       "contextAfterSHA256": "c507188e793ad72ac2e327a36f444532e9b56f938a1ce4609792563a1db9218a"
+    },
+    {
+      "era": "e10",
+      "city": "vientiane",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e10-vientiane-L3-v1-20261012",
+      "galleryImageID": "e10-vientiane-L3-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
+        "lyhyt": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
+        "lyhyt": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
+      "exportSHA256": "f509b67999a0cdc2ef7365b14660702b7335ed0cca97f4550b932978057d0491",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
+        "semanticContextSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
+        "subjectTitle": "Kala pakataan banaaninlehteen",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Yleistetty ruoka ja toiminnallinen lehtikääre; ei paikka-/rakennus-/nykyteosreplikaa tai henkilöä.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-L3-v1-20261012/image.png",
+            "nativeSHA256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Lao_cuisine",
+                "section": "Steamed dishes/Mok pa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+                "section": "Ruokateema, kala banaaninlehdessä"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "claim": "Mok pa on banaaninlehteen kääritty ja höyrytetty kalaruoka. Paketti sidotaan bambunarulla. Mausteisiin voi kuulua sitruunaruohoa, makrutlimetin lehtiä, kevätsipulia, chiliä ja tuoretta tilliä sekä kalakastiketta tai katkaraputahnaa. Lehti kuuluu valmistustapaan yhtä olennaisesti kuin itse kala: ruokalaji löytyy laon keittiön höyrytetyistä ruoista. Myös kanaa höyrytetään banaaninlehdessä, jolloin annoksen nimi on mok gai. Pöydässä pieni lehtipaketti voi näin sisältää eri raaka-aineen, vaikka valmistustapa näyttää samalta."
+              }
+            ],
+            "rightsEvidence": "Yleistetty ruoka ja toiminnallinen lehtikääre; ei paikka-/rakennus-/nykyteosreplikaa tai henkilöä.",
+            "prompt": "Use case: photorealistic-natural. Landscape editorial food illustration of Lao mok pa, steamed fish in banana leaf. A single naturally folded olive-green steamed banana-leaf parcel has been opened on a plain ceramic plate, revealing moist boneless flaky fish mixed with finely chopped dill, a little lemongrass and small chili pieces. The leaf remains visibly the cooking wrapper, with a simple thin plant-fiber tie loosened beside it. Believable banana-leaf veins, folds and darkened steamed edges; natural fish and herb texture, no uniform perfect cubes. Soft window daylight, close realistic 50mm photography, simple unbranded table. Do not make a Thai coconut custard, an egg omelette, raw sushi or a rice packet. This is a generalized illustration of the Lao dish, not a photograph of a named Vientiane market stall or restaurant. No people, face, text, logos, labels, watermark, frame or collage. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+              "contentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Kala pakataan banaaninlehteen",
+                "teksti": "Mok pa on banaaninlehteen kääritty ja höyrytetty kalaruoka. Paketti sidotaan bambunarulla. Mausteisiin voi kuulua sitruunaruohoa, makrutlimetin lehtiä, kevätsipulia, chiliä ja tuoretta tilliä sekä kalakastiketta tai katkaraputahnaa. Lehti kuuluu valmistustapaan yhtä olennaisesti kuin itse kala: ruokalaji löytyy laon keittiön höyrytetyistä ruoista. Myös kanaa höyrytetään banaaninlehdessä, jolloin annoksen nimi on mok gai. Pöydässä pieni lehtipaketti voi näin sisältää eri raaka-aineen, vaikka valmistustapa näyttää samalta.",
+                "tiedosto": "",
+                "lahde": "",
+                "lyhyt": "",
+                "selite": "",
+                "wiki": "Lao cuisine"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-L3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Avattu kypsennetty banaaninlehtipaketti sisältää vaaleita kalapaloja ja yrttejä, vieressä irrotettu kasvikuitusidos. Lehdessä pitkittäiset suonet ja luontevat taitokset; kalan kypsä rakenne ja astia uskottavia. Ei kasvoja, tekstiä tai tunnuksia.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Banaaninlehdessä oleva kala vastaa nykyisen L3-noston mok pa -aihetta. Kuvateksti ilmoittaa havainnollistuksen, ei nimettyä ravintolaa. Alkuperäisen PNG:n SHA ja mitat täsmäävät."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
+        "fileSHA256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e10-vientiane-L3-v1-20261012",
+          "sha256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
+          "verdict": "accepted",
+          "reason": "Banaaninlehdessä oleva kala vastaa nykyisen L3-noston mok pa -aihetta. Kuvateksti ilmoittaa havainnollistuksen, ei nimettyä ravintolaa. Alkuperäisen PNG:n SHA ja mitat täsmäävät.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-L3-v1-20261012/image.png",
+            "nativeSHA256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Lao_cuisine",
+                "section": "Steamed dishes/Mok pa"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+                "section": "Ruokateema, kala banaaninlehdessä"
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+                "jsonPath": "$.kaupunkilehti[1].nostot[2]",
+                "claim": "Mok pa on banaaninlehteen kääritty ja höyrytetty kalaruoka. Paketti sidotaan bambunarulla. Mausteisiin voi kuulua sitruunaruohoa, makrutlimetin lehtiä, kevätsipulia, chiliä ja tuoretta tilliä sekä kalakastiketta tai katkaraputahnaa. Lehti kuuluu valmistustapaan yhtä olennaisesti kuin itse kala: ruokalaji löytyy laon keittiön höyrytetyistä ruoista. Myös kanaa höyrytetään banaaninlehdessä, jolloin annoksen nimi on mok gai. Pöydässä pieni lehtipaketti voi näin sisältää eri raaka-aineen, vaikka valmistustapa näyttää samalta."
+              }
+            ],
+            "rightsEvidence": "Yleistetty ruoka ja toiminnallinen lehtikääre; ei paikka-/rakennus-/nykyteosreplikaa tai henkilöä.",
+            "prompt": "Use case: photorealistic-natural. Landscape editorial food illustration of Lao mok pa, steamed fish in banana leaf. A single naturally folded olive-green steamed banana-leaf parcel has been opened on a plain ceramic plate, revealing moist boneless flaky fish mixed with finely chopped dill, a little lemongrass and small chili pieces. The leaf remains visibly the cooking wrapper, with a simple thin plant-fiber tie loosened beside it. Believable banana-leaf veins, folds and darkened steamed edges; natural fish and herb texture, no uniform perfect cubes. Soft window daylight, close realistic 50mm photography, simple unbranded table. Do not make a Thai coconut custard, an egg omelette, raw sushi or a rice packet. This is a generalized illustration of the Lao dish, not a photograph of a named Vientiane market stall or restaurant. No people, face, text, logos, labels, watermark, frame or collage. Prefer landscape PNG 1536x1024 sRGB, opaque background.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
+              "contentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[1].nostot[2]",
+              "targetText": {
+                "otsikko": "Kala pakataan banaaninlehteen",
+                "teksti": "Mok pa on banaaninlehteen kääritty ja höyrytetty kalaruoka. Paketti sidotaan bambunarulla. Mausteisiin voi kuulua sitruunaruohoa, makrutlimetin lehtiä, kevätsipulia, chiliä ja tuoretta tilliä sekä kalakastiketta tai katkaraputahnaa. Lehti kuuluu valmistustapaan yhtä olennaisesti kuin itse kala: ruokalaji löytyy laon keittiön höyrytetyistä ruoista. Myös kanaa höyrytetään banaaninlehdessä, jolloin annoksen nimi on mok gai. Pöydässä pieni lehtipaketti voi näin sisältää eri raaka-aineen, vaikka valmistustapa näyttää samalta.",
+                "tiedosto": "",
+                "lahde": "",
+                "lyhyt": "",
+                "selite": "",
+                "wiki": "Lao cuisine"
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/assets/e10-vientiane-L3-v1-20261012/image.png",
+              "detail": "original",
+              "observations": "Avattu kypsennetty banaaninlehtipaketti sisältää vaaleita kalapaloja ja yrttejä, vieressä irrotettu kasvikuitusidos. Lehdessä pitkittäiset suonet ja luontevat taitokset; kalan kypsä rakenne ja astia uskottavia. Ei kasvoja, tekstiä tai tunnuksia.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T18:16:03.338611+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png?t=f509b67999a0cdc2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
+        "sha256": "f509b67999a0cdc2ef7365b14660702b7335ed0cca97f4550b932978057d0491",
+        "bytes": 2514097,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-vientiane-L3-v1-20261012",
+        "nativeSHA256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "vientiane",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T18:19:26.033168+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
+        "sha256": "f509b67999a0cdc2ef7365b14660702b7335ed0cca97f4550b932978057d0491",
+        "bytes": 2514097,
+        "SHAReadAt": "2026-10-12T18:29:57.649247+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
+        "rgbPixelSHA256": "14c24476996efbbb91b55923b004d7fea52c904e43bf4448288543cddf8fb5a9",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "targetAfterSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
+      "contextAfterSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96"
     },
     {
       "era": "e10",
@@ -1614,7 +1968,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-        "fileSHA256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5",
+        "fileSHA256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1696,11 +2050,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
           }
         ]
       },
@@ -1915,12 +2269,21 @@
                 "248"
               ]
             ],
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "primarySubject": "natural river/functional promenade or ordinary food; no FOP assumption for a named modern work",
             "rightsSupportBoundary": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/aasia/rights-003.md",
             "scope": "independent QA only; not owner acceptance/integration/publication",
             "reviewedCandidateRecordSHA256": "b0b30bb82a8290c46d40e20bf1bc3718b64fa646fd6257224dac7258437be2dd",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275368+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275368+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046405+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Aito Mekongin valokuva katsottu. Veden/luonnonrannan päämotiivi, pieni veneen siluetti ilman kasvonpiirteitä, ei yksilöityä suojattua teosta. Kuvasivun Description ja camera location sitovat kuvauspaikan Vientianeen. Christophe95, CC BY-SA4.0, 4032×3024 ja2018 kuvauspäivä oikeat. PHOTOssa ei panoraama-, vaaka- tai tuoreuspakkoa."
         }
@@ -1936,7 +2299,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-        "fileSHA256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143",
+        "fileSHA256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1998,22 +2361,31 @@
                 "248"
               ]
             ],
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "primarySubject": "natural river/functional promenade or ordinary food; no FOP assumption for a named modern work",
             "rightsSupportBoundary": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/aasia/rights-003.md",
             "scope": "independent QA only; not owner acceptance/integration/publication",
             "reviewedCandidateRecordSHA256": "b0b30bb82a8290c46d40e20bf1bc3718b64fa646fd6257224dac7258437be2dd",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275368+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275368+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046405+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
           }
         ]
       },
@@ -2222,12 +2594,21 @@
                 "21:11, 14 July 2014"
               ]
             ],
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "primarySubject": "natural river/functional promenade or ordinary food; no FOP assumption for a named modern work",
             "rightsSupportBoundary": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/aasia/rights-003.md",
             "scope": "independent QA only; not owner acceptance/integration/publication",
             "reviewedCandidateRecordSHA256": "5ce29e53c9754048a166fcd3356b38a2dd0151cd352a2aca8e5dc4eeca5c2f19",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275386+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275386+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046417+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Katsottu laaja todellinen Mekong-rantakävelyalue ja kaupungin reuna. Katu/poles/veden maisema ja tavanomaiset kalusteet; ei yksittäistä veistosta tai tunnistettavaa nykyistä arkkitehtuuriteosta päämotiivina. Liput ovat vuoden2014 kuvaushetken ympäristöä, eivät uusi poliittinen nosto tai AI-logo. SourcePage nimeää Vientianen Riverfrontin, Stefan Fussan/CC BY-SA3.0/5140×3427 oikeat."
         }
@@ -2243,7 +2624,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-        "fileSHA256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143",
+        "fileSHA256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -2319,22 +2700,31 @@
                 "21:11, 14 July 2014"
               ]
             ],
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "primarySubject": "natural river/functional promenade or ordinary food; no FOP assumption for a named modern work",
             "rightsSupportBoundary": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/aasia/rights-003.md",
             "scope": "independent QA only; not owner acceptance/integration/publication",
             "reviewedCandidateRecordSHA256": "5ce29e53c9754048a166fcd3356b38a2dd0151cd352a2aca8e5dc4eeca5c2f19",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275386+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275386+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046417+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
           }
         ]
       },
@@ -2529,12 +2919,21 @@
                 "077"
               ]
             ],
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "primarySubject": "natural river/functional promenade or ordinary food; no FOP assumption for a named modern work",
             "rightsSupportBoundary": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/aasia/rights-003.md",
             "scope": "independent QA only; not owner acceptance/integration/publication",
             "reviewedCandidateRecordSHA256": "7a7208955a861f2a327f5b2a2f29be07b85a14dcd8c678f4922620d341a9076a",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275399+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275399+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046420+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Katsottu laaja Mekong-ranta vastakkaiseen suuntaan kuin PHOTO. Pääaihe vesi ja luonnonranta, kaukainen pieni rakennusmassa ei ole suojatun teoksen itsenäinen esittely. Vientiane paikkakuvauksesta/GPS:stä, Christophe95/CC BY-SA4.0/3941×2955 oikeat. Ei fiktiivistä city-asettelua tai vuoden2026 olosuhdeväitettä."
         }
@@ -2550,7 +2949,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-        "fileSHA256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143",
+        "fileSHA256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -2612,22 +3011,31 @@
                 "077"
               ]
             ],
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "primarySubject": "natural river/functional promenade or ordinary food; no FOP assumption for a named modern work",
             "rightsSupportBoundary": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/aasia/rights-003.md",
             "scope": "independent QA only; not owner acceptance/integration/publication",
             "reviewedCandidateRecordSHA256": "7a7208955a861f2a327f5b2a2f29be07b85a14dcd8c678f4922620d341a9076a",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275399+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275399+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046420+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
           }
         ]
       },
@@ -2815,13 +3223,22 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
             "scope": "independent QA only; no integration/publication/owner acceptance",
             "caseRightsSupport": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/aasia/rights-004.md",
             "reviewedCandidateRecordSHA256": "31d7ce0d812b408a7592cb446294357428d34c13bf2c33c73f5091757756e303",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275420+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275420+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046424+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Kokonainen laaja aito Vientianesta Mekongille avautuva rantamaisema katsottu; yksittäinen rakennusteos ei erotu pääaiheeksi, vastaranta on etäinen tumma siluetti. Ei kasvoja, päälle lisättyä tekstiä tai watermarkia. Todellinen Jakub Hałun -credit, CC BY-SA4.0, mitat4680×2199 ja paikka Vientiane/Mekong varmennettu. Auringonlaskun tumma etuala on luonnollinen valotilanne, kaupunkikannessa käytetään kokonaisuutta. Vuosi2017, ei tuore opaskuva eikä vastarannan taloja nimetä Vientianen kortteleiksi."
         }
@@ -2837,7 +3254,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-        "fileSHA256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143",
+        "fileSHA256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -2892,23 +3309,32 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": "rg exact/underscored/originalUrl/decoded URL in own era js: no hits",
             "scope": "independent QA only; no integration/publication/owner acceptance",
             "caseRightsSupport": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/aasia/rights-004.md",
             "reviewedCandidateRecordSHA256": "31d7ce0d812b408a7592cb446294357428d34c13bf2c33c73f5091757756e303",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275420+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275420+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046424+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
           }
         ]
       },
@@ -3091,7 +3517,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -3099,7 +3525,16 @@
             },
             "scope": "K1 etymology illustration; Swiss camera location, no Vientiane local-sky claim.",
             "reviewedCandidateRecordSHA256": "a55aff3647d3dc865a984153804e675383d255cc537242def66d507b11603ffe",
-            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/cc-selection.json"
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/cc-selection.json",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046425+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Aito kuukiekon valokuva katsottu: pinnan alueet ja kraatterit erottuvat mustaa taivasta vasten, ei tekstiä, watermarkia, kasvoja tai ihmisen tekemää teosta. Nykyinen K1 selittää Viangchan-nimen kuu/chandra-tulkinnan, joten kuva on rehellinen tämän sanamerkityksen yleishavainnollistus. Lähteen kamera sijaitsee Sveitsissä; kuvaa ei nimetty Vientianen paikkakuvaksi, säätilaksi tai paikalliseksi kuunvaihetodisteeksi. Nienetwiler/Own work, 3959×2516, 19.1.2011 ja CC BY 2.5 ch varmennettu. Sveitsin lisenssiportaus säilytetään tarkassa /by/2.5/ch/-linkissä."
         }
@@ -3115,7 +3550,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-        "fileSHA256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143",
+        "fileSHA256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -3165,7 +3600,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -3173,18 +3608,27 @@
             },
             "scope": "K1 etymology illustration; Swiss camera location, no Vientiane local-sky claim.",
             "reviewedCandidateRecordSHA256": "a55aff3647d3dc865a984153804e675383d255cc537242def66d507b11603ffe",
-            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/cc-selection.json"
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/cc-selection.json",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046425+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "reviewedAt": "2026-10-12T19:42:13.198776+00:00"
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
           }
         ]
       },
@@ -3379,7 +3823,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -3387,7 +3831,16 @@
             },
             "scope": "independent QA only; no integration/publication/owner acceptance",
             "reviewedCandidateRecordSHA256": "f0d068ffce9a986a84dcb747d1d49a51d13a1e00bbbd0db61d2f80d02ca86457",
-            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/cc-selection.json"
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/cc-selection.json",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046426+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Aito grillatun tahmean riisin munapäällysteinen ruokakuva katsottu. Riisinjyvät ja paistopinta erottuvat luonnollisina, kuva on riittävän terävä; tavalliset tikut ja työpinta, ei kasvoja, tekstiä, brändejä, watermarkia tai teoskerrosta. Description Laotian grilled sticky rice dipped in egg tukee ruokaperheen ja päällysteen nimeämistä. Nykyinen K4 kertoo Ban Anoun torin grillatusta tahmeasta riisistä, mutta kuvateksti on yleinen ruokalajikuva eikä väite juuri tämän torin/myyjän Vientiane-valokuvasta. Isan1985/Own work/CC BY-SA4.0,2187×2057 ja11.7.2019 varmennettu. Nostokuvassa ei pystyformaatti-, panoraama- tai tuoreuspakkoa."
         }
@@ -3403,7 +3856,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-        "fileSHA256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143",
+        "fileSHA256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -3465,7 +3918,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -3473,18 +3926,27 @@
             },
             "scope": "independent QA only; no integration/publication/owner acceptance",
             "reviewedCandidateRecordSHA256": "f0d068ffce9a986a84dcb747d1d49a51d13a1e00bbbd0db61d2f80d02ca86457",
-            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/cc-selection.json"
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/cc-selection.json",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046426+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "reviewedAt": "2026-10-12T19:48:25.595626+00:00"
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
           }
         ]
       },
@@ -3683,12 +4145,21 @@
                 "10"
               ]
             ],
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "primarySubject": "natural river/functional promenade or ordinary food; no FOP assumption for a named modern work",
             "rightsSupportBoundary": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/aasia/rights-003.md",
             "scope": "independent QA only; not owner acceptance/integration/publication",
             "reviewedCandidateRecordSHA256": "e397677e60617a9ae48db7ad74c985b91740f43f5a64a427265c7225eb6a397d",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275408+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275408+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046422+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Katsottu aito larb neua -annos, ei kasvoja, overlay-tekstiä, logoa tai suojattua teosta. Lähdesivu nimeää naudanlihaseoksen ja Dok Champa Restaurantin Vientianessa; Jpatokal/CC BY-SA4.0/3008×2000 täsmäävät. Ruokalajiperheen havainnollistus sopii nykyiseen Laap-nostoon. Kapea syväterävyys on normaali lähikuvan ominaisuus, annos tunnistuu; ei kaikkia aineksia päätelty pikseleistä. Lähteen Date March2008 ja EXIF2009 ero kirjataan, ei varmaa vuosilukua kuvatekstiin."
         }
@@ -3704,7 +4175,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-        "fileSHA256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143",
+        "fileSHA256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -3770,22 +4241,31 @@
                 "10"
               ]
             ],
-            "currentContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+            "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
             "primarySubject": "natural river/functional promenade or ordinary food; no FOP assumption for a named modern work",
             "rightsSupportBoundary": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/aasia/rights-003.md",
             "scope": "independent QA only; not owner acceptance/integration/publication",
             "reviewedCandidateRecordSHA256": "e397677e60617a9ae48db7ad74c985b91740f43f5a64a427265c7225eb6a397d",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275408+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.275408+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.046422+00:00",
+                "previousContentSHA256": "9e6711f8babb0fef9f814a2793e4fe59ec5763e7e5bd239d30544f328611fb50",
+                "currentContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa-evidence/content-revalidation-9e6711f8babb-904d688f440e.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/qa.json",
-            "sha256": "5b01f72b071c424507634aad63acc56878812635d1fccd4e0b25802083a74143"
+            "sha256": "8cf9b3d2c36cabb527452f5f2c5bf1ec7d06deb511cb6af4d1e292238e772707"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/vientiane/illustration-qa-extra.json",
-            "sha256": "55a431e4a9c2cc58160585d55d4ad5d1964a9475b61cb3cbbc15d872710410a5"
+            "sha256": "ce4ada84647da668a0bb7710cdc53c235262e113469ff6a5bd977423274e2756"
           }
         ]
       },

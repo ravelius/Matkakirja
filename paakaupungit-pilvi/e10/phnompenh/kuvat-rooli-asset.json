@@ -8,6 +8,673 @@
     {
       "era": "e10",
       "city": "phnompenh",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e10-phnompenh-TRAVELER-remorque-v1-20261012",
+      "galleryImageID": "e10-phnompenh-TRAVELER-remorque-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva.",
+        "lyhyt": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva.",
+        "lyhyt": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4e78af5c0b89875b925dc258ca667cd59bbbcfbeef600ee9447ae2dc8fe37e49",
+      "exportSHA256": "71cda3c7bca24c9afc99d82626ac8665f7ebdc84b254eff79676b8ad34695c40",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "91f97add268f7373d6945509212af954f07751ea73552288db0168d3ab78b749",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": "Generalized functional motorcycle/trailer transport, unbranded and undecorated. No protected art, architecture, distinctive branded vehicle design, identifiable person, source composition/livery/background, labels, license plate or actual place claim. The CC BY-SA source photo is only read for factual geometry; retained unchanged with author/license evidence and never used as generation input. New camera angle and plain generic form.",
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/native.png",
+            "nativeSHA256": "4e78af5c0b89875b925dc258ca667cd59bbbcfbeef600ee9447ae2dc8fe37e49",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Phnom_Penh",
+                "title": "Phnom Penh",
+                "section": "Get around / By tuk-tuk",
+                "localHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/phnom-penh-wikivoyage.html",
+                "htmlSHA256": "7d9f04c5d92d5b5c48e02c5953f9d29f826d9082e4f3ded976e4100b3097def6",
+                "localText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/phnom-penh-wikivoyage.txt",
+                "supportingTextLines": [
+                  657,
+                  673
+                ],
+                "supportedClaims": [
+                  "Phnom Penh uses remorque moto: a motorcycle with a passenger cabin hitched behind.",
+                  "Traditional Cambodian-style remorque remains among the listed local transport choices."
+                ],
+                "excludedClaims": [
+                  "No fares, fleet counts, app brands, current regulations or safety promises."
+                ],
+                "retrievedVia": "shared sallittu_haku.py; robots+redirect+1 request/sec+cache"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/Auto_rickshaw",
+                "title": "Auto rickshaw",
+                "section": "Regional variations / Southeast Asia / Cambodia",
+                "localHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/auto-rickshaw-wikipedia.html",
+                "htmlSHA256": "74793cb490e303006f17a3aec54ef81ad02872fa6d3c685afe1d6a92ba4a688b",
+                "localText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/auto-rickshaw-wikipedia.txt",
+                "supportingTextLines": [
+                  974,
+                  987
+                ],
+                "supportedClaims": [
+                  "Remorque vehicles are used in Phnom Penh.",
+                  "One Cambodian form has four wheels and consists of a motorcycle and separate trailer."
+                ],
+                "excludedClaims": [
+                  "No number of vehicles, popularity superlative, brand or claim that all Cambodian tuk-tuks share this form."
+                ],
+                "retrievedVia": "shared sallittu_haku.py; robots+redirect+1 request/sec+cache"
+              },
+              {
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Kambod%C5%BCa%C5%84ski_tuk-tuk_(02).jpg",
+                "commonsFile": "2016 Phnom Penh, Kambodżański tuk-tuk (02).jpg",
+                "originalURL": "https://upload.wikimedia.org/wikipedia/commons/7/72/2016_Phnom_Penh%2C_Kambod%C5%BCa%C5%84ski_tuk-tuk_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+                "author": "Marcin Konsek",
+                "license": "CC BY-SA 4.0",
+                "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "attribution": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
+                "dateTaken": "2016-02-16",
+                "sourcePageDescription": "Cambodian tuk-tuk. Phnom Penh, Cambodia.",
+                "cameraLocationFromPage": [
+                  11.558183,
+                  104.930463
+                ],
+                "sourcePageDescriptionLines": [
+                  107,
+                  122
+                ],
+                "sourcePageLicenseLines": [
+                  148,
+                  166
+                ],
+                "sourcePageHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/remorque-commons-file.html",
+                "sourcePageHTMLSHA256": "ef63d39e79806e0c91d54e6c1ed471bb3b775e2f8188fc6ce26831c5e61fdc6e",
+                "sourcePageText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/remorque-commons-file.txt",
+                "localReferencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/visual-reference-phnom-penh-remorque.jpg",
+                "rawReferenceSHA256": "a1f99031bc2059db18eb8530302b228ea43fbaea925e4609cd3109b80050a252",
+                "width": 4704,
+                "height": 2692,
+                "mode": "RGB",
+                "personallyViewed": true,
+                "viewedAt": "2026-10-12T20:05:54.965015+00:00",
+                "viewMethod": "view_image original; full visual inspection, displayed tool resized to4193x2400 from native4704x2692",
+                "geometryObservationsFi": [
+                  "Erillinen kaksipyöräinen moottoripyörä on vaunun edessä; vaunu ei ole samaan koriin rakennettu kolmipyöräinen auto-riksa.",
+                  "Matkustajavaunu on avoinsivuinen katettu rakenne, jossa on penkkimäiset istuimet ja metalliset katon kannatintolpat.",
+                  "Vaunun oma alusta ja takana poikittain sijoittuvat pyörät ovat erillään moottoripyörän etu- ja takapyörästä. Lähempi vaunun pyörä näkyy kokonaisena, kauemman pyörän rengas osittain vaunun alta.",
+                  "Moottoripyörän takaosan ja vaunun eturungon yhdysrakenne näkyy osin; lähikuvan kanisteri peittää osan kytkentäkohdasta. Tarkkaa mekaanista nivelratkaisua ei väitetä kokonaan nähdyksi.",
+                  "Kangasmainen kate, metallinen runko, rengas/fender ja tyhjät penkit ovat tavanomaisia käyttöesineen rakenteita. Lähteen kirkasta väritystä, koristeita, kylttejä, lippua ja paikkataustaa ei kopioida."
+                ],
+                "useScope": "Read-only factual visual reference; NOT a new CC slot selection or output asset. No source photo pixels, composition, livery, distinctive decorations or place background will be used as image input or reproduced. Source credit/license retained in evidence."
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+                "sha256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+                "jsonPaths": [
+                  "$.kaupunkilehti[0].matkailijalle.kappale",
+                  "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].teksti"
+                ],
+                "topicExcerpt": "Pidemmille kaupunkimatkoille voi ottaa taksin tai tuk-tukin. Keskustassa voi liikkua taksilla tai tuk-tukilla.",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva"
+              }
+            ],
+            "rightsEvidence": "Generalized functional motorcycle/trailer transport, unbranded and undecorated. No protected art, architecture, distinctive branded vehicle design, identifiable person, source composition/livery/background, labels, license plate or actual place claim. The CC BY-SA source photo is only read for factual geometry; retained unchanged with author/license evidence and never used as generation input. New camera angle and plain generic form.",
+            "prompt": "Use case: photorealistic-natural. Create ONE fully new original camera-looking NATIVE PORTRAIT image, preferably1024x1536, aspect2:3. An empty plain Cambodian remorque moto is parked naturally in an ordinary unidentifiable yard under gentle daylight shade. A small simple unbranded motorcycle with its own front and rear wheels is attached behind its seat/rear frame by a coherent functional towing connection to a separate covered two-wheel passenger carriage. The carriage has a simple fabric canopy on metal posts, open sides and two opposed simple empty bench seats with uncarved arms. Four wheels overall: two on the motorcycle and two across the carriage axle; no invented extra wheel or integrated three-wheel auto-rickshaw body. Show the complete connected vehicle from a NEW front three-quarter camera angle, the motorcycle closer and the carriage receding diagonally, with canopy, towing structure and visible wheeled assembly readable inside the portrait frame. Continuous ordinary ground, a softly blurred plain wall and natural vegetation share the same quiet shaded light, scale and contact shadows. Natural used metal, rubber and fabric textures; modest everyday transport, no studio/composite appearance. No people, faces, lettering, numbers, logos, brands, advertisements, flags, plates, watermarks, frame, decorative artwork or named city backdrop. This is a generalized functional transport illustration, not a documentary photograph of a particular Phnom Penh vehicle or place; do not copy any source photograph's composition or distinctive livery.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+              "contentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Aloita Phnom Penhin kävely Sisowath Quayn jokirannasta. Kansallismuseo ja palatsin alue tarjoavat kaksi erilaista tapaa tutustua khmerien kulttuuriin. Palatsivierailulle pukeudutaan hartiat ja polvet peittäen. Pidemmille kaupunkimatkoille voi ottaa taksin tai tuk-tukin. Aamulla kannattaa etsiä kuy teav -nuudeliannos ja kokeilla, miltä se maistuu liemi erikseen tarjottuna.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Phnom Penh",
+                  "taitto": "opas",
+                  "teksti": "Kulje jokirannasta museoon ja etsi aamiaiseksi kaupungin nimellä tunnettu nuudelikulho.",
+                  "nosto": "Joen suunta, katujen numerot ja erillinen liemikulho tarjoavat omat avaimensa Phnom Penhiin.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Phnom Penhin kansainväliset lennot käyttävät Techo-lentoasemaa kaupungin ulkopuolella. Varaa siirtymään aikaa ja tarkista kentän kuljetusvaihtoehdot ennen lähtöä. Keskustassa voi liikkua taksilla tai tuk-tukilla; kyytejä voi tilata myös sovelluksella. Näytä määränpään sijainti kartalla, sillä pelkkä katu- ja talonumero ei aina yksilöi paikkaa vaivatta.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Jokiranta avaa kaupungin",
+                      "teksti": "Sisowath Quayn rantakadun varrella on kävelyalueita, kahviloita ja ravintoloita. Ranta sopii jokien ja kaupungin suhteen hahmottamiseen ennen sisämaan kortteleita. Phnom Penhin kohdalla Tonlé Sap -joki liittyy Mekongiin ja Bassac erkanee etelään. Leveän vesialueen äärellä on hyvä erottaa nämä joet toisistaan; Tonlé Sap -järvi sijaitsee muualla.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Museo ja palatsin alue",
+                      "teksti": "Kansallismuseo tarjoaa näkymän khmerien esineistöön, kun taas Kuninkaanpalatsi on yhä kuninkaallinen asuinpaikka, jonka osiin pääsee tutustumaan. Palatsiin pukeudutaan hartiat ja polvet peittäen. Sisätilojen kuvausrajoitukset kannattaa tarkistaa paikan päällä. Wat Ounalom on rantaseudun buddhalainen luostari, jossa kävijä muistaa paikan olevan myös käytössä oleva uskonnollinen ympäristö.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Aamiainen nuudelikulhosta",
+                      "teksti": "Kuy teav on Phnom Penhin luonteva aamiaisruoka: riisinuudeleita, lihalientä ja lisukkeita. Phnom Penhin versioon voidaan lisätä monenlaisia lihoja ja mereneläviä. Kuivassa annoksessa liemi tuodaan erikseen, joten nimi ei tarkoita lientä vailla olevaa ateriaa. Ruokatoreilla on myös muita paikallisia ruokia; maistelukierrosta voi rakentaa oman ruokavalion mukaan.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Phnom Penhissä sää on kuuma ja kostea. Sadekaudella kuuroja voi tulla iltapäivisin, joten päivän ulkoilun ja sisäkohteiden järjestystä kannattaa sovittaa sääennusteeseen. Museovierailun ja jokirannan voi yhdistää samaan päivään ilman, että kaikkien kävelyosuuksien täytyy osua samaan hetkeen. Tarkista matkan ajankohtainen sää ennen lähtöä ja jätä tilaa myös tauoille.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Jokiranta",
+                        "tahdet": 3,
+                        "selite": "Tonlé Sapin, Mekongin ja Bassacin yhteys avautuu veden äärellä."
+                      },
+                      {
+                        "mita": "Kansallismuseo",
+                        "tahdet": 3,
+                        "selite": "Khmerien esineistö kertoo useista historiallisista aikakausista."
+                      },
+                      {
+                        "mita": "Kuninkaanpalatsi",
+                        "tahdet": 3,
+                        "selite": "Eri rakennusvaiheet kohtaavat kuninkaallisella alueella."
+                      },
+                      {
+                        "mita": "Kuy teav -aamiainen",
+                        "tahdet": 3,
+                        "selite": "Nuudelit voi maistaa myös erillisen liemen kanssa."
+                      },
+                      {
+                        "mita": "Wat Ounalom",
+                        "tahdet": 3,
+                        "selite": "Rannan luostari tuo uskonnollisen arjen osaksi kaupunkivierailua."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Osoite",
+                        "teksti": "Näytä kyydissä määränpään karttapiste; talonumerot voivat olla epäjärjestyksessä."
+                      },
+                      {
+                        "otsikko": "Pukeutuminen",
+                        "teksti": "Palatsiin mennään hartiat ja polvet peittävin vaattein."
+                      },
+                      {
+                        "otsikko": "Liikenne",
+                        "teksti": "Jalankulkijan on syytä varata aikaa vilkkaiden katujen ylityksiin."
+                      },
+                      {
+                        "otsikko": "Lentoasema",
+                        "teksti": "Techo sijaitsee keskustan ulkopuolella; tarkista kenttä ja kuljetus lentovarauksesta."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/native.png",
+              "detail": "original",
+              "observations": "Moottoripyörä ja katettu kaksipyöräinen matkustajavaunu neutraalissa pihassa. Pyörät, runko, istuimet ja materiaalit uskottavia. Ei ihmisiä, tekstiä, rekisterinumeroa tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "qaReason": "Moottoripyörä ja perässä oleva matkustajavaunu vastaavat oppaan remorque/tuk-tuk-aihetta. Kuvateksti on yleistetty havainne. Native pysty 1024×1536, suhde 0,667; SHA täsmää."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
+        "fileSHA256": "19b9f63934c948b7d1777c1768a6403df9278da9ef86233cd2ccbf3d223e4a71",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e10-phnompenh-TRAVELER-remorque-v1-20261012",
+          "sha256": "4e78af5c0b89875b925dc258ca667cd59bbbcfbeef600ee9447ae2dc8fe37e49",
+          "verdict": "accepted",
+          "reason": "Moottoripyörä ja perässä oleva matkustajavaunu vastaavat oppaan remorque/tuk-tuk-aihetta. Kuvateksti on yleistetty havainne. Native pysty 1024×1536, suhde 0,667; SHA täsmää.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/native.png",
+            "nativeSHA256": "4e78af5c0b89875b925dc258ca667cd59bbbcfbeef600ee9447ae2dc8fe37e49",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "format": "PNG",
+            "pngChunks": [
+              "IHDR",
+              "caBX",
+              "IDAT",
+              "IEND"
+            ],
+            "manifestMatch": true,
+            "captionFi": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Phnom_Penh",
+                "title": "Phnom Penh",
+                "section": "Get around / By tuk-tuk",
+                "localHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/phnom-penh-wikivoyage.html",
+                "htmlSHA256": "7d9f04c5d92d5b5c48e02c5953f9d29f826d9082e4f3ded976e4100b3097def6",
+                "localText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/phnom-penh-wikivoyage.txt",
+                "supportingTextLines": [
+                  657,
+                  673
+                ],
+                "supportedClaims": [
+                  "Phnom Penh uses remorque moto: a motorcycle with a passenger cabin hitched behind.",
+                  "Traditional Cambodian-style remorque remains among the listed local transport choices."
+                ],
+                "excludedClaims": [
+                  "No fares, fleet counts, app brands, current regulations or safety promises."
+                ],
+                "retrievedVia": "shared sallittu_haku.py; robots+redirect+1 request/sec+cache"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/Auto_rickshaw",
+                "title": "Auto rickshaw",
+                "section": "Regional variations / Southeast Asia / Cambodia",
+                "localHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/auto-rickshaw-wikipedia.html",
+                "htmlSHA256": "74793cb490e303006f17a3aec54ef81ad02872fa6d3c685afe1d6a92ba4a688b",
+                "localText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/auto-rickshaw-wikipedia.txt",
+                "supportingTextLines": [
+                  974,
+                  987
+                ],
+                "supportedClaims": [
+                  "Remorque vehicles are used in Phnom Penh.",
+                  "One Cambodian form has four wheels and consists of a motorcycle and separate trailer."
+                ],
+                "excludedClaims": [
+                  "No number of vehicles, popularity superlative, brand or claim that all Cambodian tuk-tuks share this form."
+                ],
+                "retrievedVia": "shared sallittu_haku.py; robots+redirect+1 request/sec+cache"
+              },
+              {
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:2016_Phnom_Penh,_Kambod%C5%BCa%C5%84ski_tuk-tuk_(02).jpg",
+                "commonsFile": "2016 Phnom Penh, Kambodżański tuk-tuk (02).jpg",
+                "originalURL": "https://upload.wikimedia.org/wikipedia/commons/7/72/2016_Phnom_Penh%2C_Kambod%C5%BCa%C5%84ski_tuk-tuk_%2802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+                "author": "Marcin Konsek",
+                "license": "CC BY-SA 4.0",
+                "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "attribution": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
+                "dateTaken": "2016-02-16",
+                "sourcePageDescription": "Cambodian tuk-tuk. Phnom Penh, Cambodia.",
+                "cameraLocationFromPage": [
+                  11.558183,
+                  104.930463
+                ],
+                "sourcePageDescriptionLines": [
+                  107,
+                  122
+                ],
+                "sourcePageLicenseLines": [
+                  148,
+                  166
+                ],
+                "sourcePageHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/remorque-commons-file.html",
+                "sourcePageHTMLSHA256": "ef63d39e79806e0c91d54e6c1ed471bb3b775e2f8188fc6ce26831c5e61fdc6e",
+                "sourcePageText": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/remorque-commons-file.txt",
+                "localReferencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/extra-production/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/sources/visual-reference-phnom-penh-remorque.jpg",
+                "rawReferenceSHA256": "a1f99031bc2059db18eb8530302b228ea43fbaea925e4609cd3109b80050a252",
+                "width": 4704,
+                "height": 2692,
+                "mode": "RGB",
+                "personallyViewed": true,
+                "viewedAt": "2026-10-12T20:05:54.965015+00:00",
+                "viewMethod": "view_image original; full visual inspection, displayed tool resized to4193x2400 from native4704x2692",
+                "geometryObservationsFi": [
+                  "Erillinen kaksipyöräinen moottoripyörä on vaunun edessä; vaunu ei ole samaan koriin rakennettu kolmipyöräinen auto-riksa.",
+                  "Matkustajavaunu on avoinsivuinen katettu rakenne, jossa on penkkimäiset istuimet ja metalliset katon kannatintolpat.",
+                  "Vaunun oma alusta ja takana poikittain sijoittuvat pyörät ovat erillään moottoripyörän etu- ja takapyörästä. Lähempi vaunun pyörä näkyy kokonaisena, kauemman pyörän rengas osittain vaunun alta.",
+                  "Moottoripyörän takaosan ja vaunun eturungon yhdysrakenne näkyy osin; lähikuvan kanisteri peittää osan kytkentäkohdasta. Tarkkaa mekaanista nivelratkaisua ei väitetä kokonaan nähdyksi.",
+                  "Kangasmainen kate, metallinen runko, rengas/fender ja tyhjät penkit ovat tavanomaisia käyttöesineen rakenteita. Lähteen kirkasta väritystä, koristeita, kylttejä, lippua ja paikkataustaa ei kopioida."
+                ],
+                "useScope": "Read-only factual visual reference; NOT a new CC slot selection or output asset. No source photo pixels, composition, livery, distinctive decorations or place background will be used as image input or reproduced. Source credit/license retained in evidence."
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+                "sha256": "9ecb09d5d3d9eb697da13948244f137f08a8b4c436f348079e498364cd24d0cb",
+                "jsonPaths": [
+                  "$.kaupunkilehti[0].matkailijalle.kappale",
+                  "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[0].teksti"
+                ],
+                "topicExcerpt": "Pidemmille kaupunkimatkoille voi ottaa taksin tai tuk-tukin. Keskustassa voi liikkua taksilla tai tuk-tukilla.",
+                "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva"
+              }
+            ],
+            "rightsEvidence": "Generalized functional motorcycle/trailer transport, unbranded and undecorated. No protected art, architecture, distinctive branded vehicle design, identifiable person, source composition/livery/background, labels, license plate or actual place claim. The CC BY-SA source photo is only read for factual geometry; retained unchanged with author/license evidence and never used as generation input. New camera angle and plain generic form.",
+            "prompt": "Use case: photorealistic-natural. Create ONE fully new original camera-looking NATIVE PORTRAIT image, preferably1024x1536, aspect2:3. An empty plain Cambodian remorque moto is parked naturally in an ordinary unidentifiable yard under gentle daylight shade. A small simple unbranded motorcycle with its own front and rear wheels is attached behind its seat/rear frame by a coherent functional towing connection to a separate covered two-wheel passenger carriage. The carriage has a simple fabric canopy on metal posts, open sides and two opposed simple empty bench seats with uncarved arms. Four wheels overall: two on the motorcycle and two across the carriage axle; no invented extra wheel or integrated three-wheel auto-rickshaw body. Show the complete connected vehicle from a NEW front three-quarter camera angle, the motorcycle closer and the carriage receding diagonally, with canopy, towing structure and visible wheeled assembly readable inside the portrait frame. Continuous ordinary ground, a softly blurred plain wall and natural vegetation share the same quiet shaded light, scale and contact shadows. Natural used metal, rubber and fabric textures; modest everyday transport, no studio/composite appearance. No people, faces, lettering, numbers, logos, brands, advertisements, flags, plates, watermarks, frame, decorative artwork or named city backdrop. This is a generalized functional transport illustration, not a documentary photograph of a particular Phnom Penh vehicle or place; do not copy any source photograph's composition or distinctive livery.",
+            "content": {
+              "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
+              "contentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+              "targetObjectExists": true,
+              "targetContainer": "$.kaupunkilehti[0].matkailijalle",
+              "targetText": {
+                "kuva": {
+                  "tiedosto": "",
+                  "lyhyt": "",
+                  "selite": "",
+                  "lahde": ""
+                },
+                "kappale": "Aloita Phnom Penhin kävely Sisowath Quayn jokirannasta. Kansallismuseo ja palatsin alue tarjoavat kaksi erilaista tapaa tutustua khmerien kulttuuriin. Palatsivierailulle pukeudutaan hartiat ja polvet peittäen. Pidemmille kaupunkimatkoille voi ottaa taksin tai tuk-tukin. Aamulla kannattaa etsiä kuy teav -nuudeliannos ja kokeilla, miltä se maistuu liemi erikseen tarjottuna.",
+                "artikkeli": {
+                  "nimi": "Matkailijan Phnom Penh",
+                  "taitto": "opas",
+                  "teksti": "Kulje jokirannasta museoon ja etsi aamiaiseksi kaupungin nimellä tunnettu nuudelikulho.",
+                  "nosto": "Joen suunta, katujen numerot ja erillinen liemikulho tarjoavat omat avaimensa Phnom Penhiin.",
+                  "jaksot": [
+                    {
+                      "otsikko": "Perille ja liikkeelle",
+                      "teksti": "Phnom Penhin kansainväliset lennot käyttävät Techo-lentoasemaa kaupungin ulkopuolella. Varaa siirtymään aikaa ja tarkista kentän kuljetusvaihtoehdot ennen lähtöä. Keskustassa voi liikkua taksilla tai tuk-tukilla; kyytejä voi tilata myös sovelluksella. Näytä määränpään sijainti kartalla, sillä pelkkä katu- ja talonumero ei aina yksilöi paikkaa vaivatta.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Jokiranta avaa kaupungin",
+                      "teksti": "Sisowath Quayn rantakadun varrella on kävelyalueita, kahviloita ja ravintoloita. Ranta sopii jokien ja kaupungin suhteen hahmottamiseen ennen sisämaan kortteleita. Phnom Penhin kohdalla Tonlé Sap -joki liittyy Mekongiin ja Bassac erkanee etelään. Leveän vesialueen äärellä on hyvä erottaa nämä joet toisistaan; Tonlé Sap -järvi sijaitsee muualla.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Museo ja palatsin alue",
+                      "teksti": "Kansallismuseo tarjoaa näkymän khmerien esineistöön, kun taas Kuninkaanpalatsi on yhä kuninkaallinen asuinpaikka, jonka osiin pääsee tutustumaan. Palatsiin pukeudutaan hartiat ja polvet peittäen. Sisätilojen kuvausrajoitukset kannattaa tarkistaa paikan päällä. Wat Ounalom on rantaseudun buddhalainen luostari, jossa kävijä muistaa paikan olevan myös käytössä oleva uskonnollinen ympäristö.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Aamiainen nuudelikulhosta",
+                      "teksti": "Kuy teav on Phnom Penhin luonteva aamiaisruoka: riisinuudeleita, lihalientä ja lisukkeita. Phnom Penhin versioon voidaan lisätä monenlaisia lihoja ja mereneläviä. Kuivassa annoksessa liemi tuodaan erikseen, joten nimi ei tarkoita lientä vailla olevaa ateriaa. Ruokatoreilla on myös muita paikallisia ruokia; maistelukierrosta voi rakentaa oman ruokavalion mukaan.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    },
+                    {
+                      "otsikko": "Milloin kannattaa tulla",
+                      "teksti": "Phnom Penhissä sää on kuuma ja kostea. Sadekaudella kuuroja voi tulla iltapäivisin, joten päivän ulkoilun ja sisäkohteiden järjestystä kannattaa sovittaa sääennusteeseen. Museovierailun ja jokirannan voi yhdistää samaan päivään ilman, että kaikkien kävelyosuuksien täytyy osua samaan hetkeen. Tarkista matkan ajankohtainen sää ennen lähtöä ja jätä tilaa myös tauoille.",
+                      "kuva": {
+                        "tiedosto": "",
+                        "lyhyt": "",
+                        "selite": "",
+                        "lahde": ""
+                      }
+                    }
+                  ],
+                  "matkailu": {
+                    "parasta": [
+                      {
+                        "mita": "Jokiranta",
+                        "tahdet": 3,
+                        "selite": "Tonlé Sapin, Mekongin ja Bassacin yhteys avautuu veden äärellä."
+                      },
+                      {
+                        "mita": "Kansallismuseo",
+                        "tahdet": 3,
+                        "selite": "Khmerien esineistö kertoo useista historiallisista aikakausista."
+                      },
+                      {
+                        "mita": "Kuninkaanpalatsi",
+                        "tahdet": 3,
+                        "selite": "Eri rakennusvaiheet kohtaavat kuninkaallisella alueella."
+                      },
+                      {
+                        "mita": "Kuy teav -aamiainen",
+                        "tahdet": 3,
+                        "selite": "Nuudelit voi maistaa myös erillisen liemen kanssa."
+                      },
+                      {
+                        "mita": "Wat Ounalom",
+                        "tahdet": 3,
+                        "selite": "Rannan luostari tuo uskonnollisen arjen osaksi kaupunkivierailua."
+                      }
+                    ],
+                    "hyvaTietaa": [
+                      {
+                        "otsikko": "Osoite",
+                        "teksti": "Näytä kyydissä määränpään karttapiste; talonumerot voivat olla epäjärjestyksessä."
+                      },
+                      {
+                        "otsikko": "Pukeutuminen",
+                        "teksti": "Palatsiin mennään hartiat ja polvet peittävin vaattein."
+                      },
+                      {
+                        "otsikko": "Liikenne",
+                        "teksti": "Jalankulkijan on syytä varata aikaa vilkkaiden katujen ylityksiin."
+                      },
+                      {
+                        "otsikko": "Lentoasema",
+                        "teksti": "Techo sijaitsee keskustan ulkopuolella; tarkista kenttä ja kuljetus lentovarauksesta."
+                      }
+                    ]
+                  },
+                  "lahde": "Wikipedia"
+                }
+              },
+              "factSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/faktapohja.md",
+              "factSheetExists": true
+            },
+            "otherReviewerVerdicts": [],
+            "visualInspection": {
+              "tool": "view_image",
+              "viewedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/assets/e10-phnompenh-TRAVELER-remorque-v1-20261012/native.png",
+              "detail": "original",
+              "observations": "Moottoripyörä ja katettu kaksipyöräinen matkustajavaunu neutraalissa pihassa. Pyörät, runko, istuimet ja materiaalit uskottavia. Ei ihmisiä, tekstiä, rekisterinumeroa tai logoja.",
+              "inspectedBy": "kuvitus-3"
+            },
+            "openConflict": false
+          },
+          "reviewedAt": "2026-10-12T20:34:37.119336+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/qa.json",
+            "sha256": "f0c594331149eddbce5558a90bcc1bf957de9f2baacf354dbaad3c5abcbab849"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
+            "sha256": "19b9f63934c948b7d1777c1768a6403df9278da9ef86233cd2ccbf3d223e4a71"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png?t=71cda3c7bca24c9a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png",
+        "sha256": "71cda3c7bca24c9afc99d82626ac8665f7ebdc84b254eff79676b8ad34695c40",
+        "bytes": 2608548,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e10-phnompenh-TRAVELER-remorque-v1-20261012",
+        "nativeSHA256": "4e78af5c0b89875b925dc258ca667cd59bbbcfbeef600ee9447ae2dc8fe37e49",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e10",
+        "city": "phnompenh",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-12T20:34:42.844371+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png",
+        "sha256": "71cda3c7bca24c9afc99d82626ac8665f7ebdc84b254eff79676b8ad34695c40",
+        "bytes": 2608548,
+        "SHAReadAt": "2026-10-12T20:34:38.639863+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4e78af5c0b89875b925dc258ca667cd59bbbcfbeef600ee9447ae2dc8fe37e49",
+        "rgbPixelSHA256": "22e21c7f9346d58c301aaccd9a9b98aee57027f5833945e811c59f1b511aca49",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "91f97add268f7373d6945509212af954f07751ea73552288db0168d3ab78b749"
+    },
+    {
+      "era": "e10",
+      "city": "phnompenh",
       "slot": "O4",
       "type": "illustration",
       "assetID": "e10-phnompenh-O4-extra-v1-20261012",
@@ -189,7 +856,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
-        "fileSHA256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4",
+        "fileSHA256": "19b9f63934c948b7d1777c1768a6403df9278da9ef86233cd2ccbf3d223e4a71",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -310,7 +977,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
-            "sha256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4"
+            "sha256": "19b9f63934c948b7d1777c1768a6403df9278da9ef86233cd2ccbf3d223e4a71"
           }
         ]
       },
@@ -532,7 +1199,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
-        "fileSHA256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4",
+        "fileSHA256": "19b9f63934c948b7d1777c1768a6403df9278da9ef86233cd2ccbf3d223e4a71",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -607,7 +1274,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
-            "sha256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4"
+            "sha256": "19b9f63934c948b7d1777c1768a6403df9278da9ef86233cd2ccbf3d223e4a71"
           }
         ]
       },
@@ -829,7 +1496,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
-        "fileSHA256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4",
+        "fileSHA256": "19b9f63934c948b7d1777c1768a6403df9278da9ef86233cd2ccbf3d223e4a71",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -904,7 +1571,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
-            "sha256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4"
+            "sha256": "19b9f63934c948b7d1777c1768a6403df9278da9ef86233cd2ccbf3d223e4a71"
           }
         ]
       },
@@ -1136,7 +1803,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
-            "sha256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4"
+            "sha256": "19b9f63934c948b7d1777c1768a6403df9278da9ef86233cd2ccbf3d223e4a71"
           }
         ]
       },
@@ -1341,7 +2008,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e10/phnompenh/illustration-qa-extra.json",
-            "sha256": "711178e0e8d4b6dd354a73515de9f474f462f4fafe0e986aa98cc172d865ced4"
+            "sha256": "19b9f63934c948b7d1777c1768a6403df9278da9ef86233cd2ccbf3d223e4a71"
           }
         ]
       },
