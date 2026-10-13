@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "cityName": "LISSABON",
+  "gameCityId": "lissabon",
+  "mediaSlug": "lisbon",
+  "taskNumbers": [
+    133,
+    134
+  ],
+  "updatedAt": "2026-10-13T17:38:34.914186+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [],
+  "omittedItems": [
+    {
+      "taskNumber": 133,
+      "slot": 6,
+      "reason": "Kuva on muuten laadukas, mutta vastarannan pystymäisen siluetin kohdalla ei voi luotettavasti varmentaa lähteen nimenomaista Cristo Rei -poissulkua. Lopullinen varovainen lähteen sallima poisjättö; kohdetta ei väitetä varmasti tunnistetuksi.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "d1de89162041344b45c28a108b928d315cc430b3a60fee03687118406abf56aa",
+      "finalSHA256": "3651607e9232b9e873d69b70816dcf50050e234193063ff32d61807611998f27"
+    },
+    {
+      "taskNumber": 134,
+      "slot": 8,
+      "reason": "Katedraalin kellossa näkyy lähteen kaikkien numeroiden kiellon vastaisia roomalaisia numeroita. Vaunu täyttää myös noin puolet kuvasta, vaikka lähde pyytää noin kolmannesta.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "83f78bf3428496e96146689ca4d6ba9a917ea69a02aa3391356d601da7f12a9f",
+      "finalSHA256": "7395706f5dc9ccfa9db1306ea5295da37c686ebecc47dd3042ca8f82b38a820c"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
