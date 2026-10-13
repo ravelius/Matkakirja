@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-16 QA/R2-varmennettua kuvaa toimitettu, 22 perusteltua lopullista poisjättöä. Käsitelty 38/48 tämän osan nimetyistä kuvista; 37 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+17 QA/R2-varmennettua kuvaa toimitettu, 23 perusteltua lopullista poisjättöä. Käsitelty 40/48 tämän osan nimetyistä kuvista; 39 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -94,6 +94,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-lapland-uudet-6-8-20261013.json`. T
 
 - #157, slot 6: Rovaniemen keskusta, Kemijoki ja Jätkänkynttilä Ounasvaaran näkötornista länteen kesäpäivänä. Havainnekuva.
 - Poisjättö #158, slot 8: Kaksikantinen terässilta ja vasemmalla oleva veturi ovat selkeät, mutta junan koko pitkän perän vaunumääräksi ei voi luotettavasti vahvistaa lähteen sallimaa4–6:tta. Kuvassa näyttää olevan seitsemän; lopullinen varovainen rakenne-QA-poisjättö, ei lisäyritystä.
+
+## TAMPERE
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-tampere-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #160, slot 8: Tampereen raitiovaunu Hämeenkadulla keskustassa syyspäivänä. Havainnekuva.
+- Poisjättö #159, slot 6: Näsinneula ja järvinäkymä toteutuvat, mutta oikean puolen kirkko näyttää pitkältä goottilaistyyppiseltä kirkolta eikä Tampereen tuomiokirkon tunnistettavuus varmennu. Lähteen maamerkki-identiteetti jää epävarmaksi.
 
 ## BERLIINI
 
