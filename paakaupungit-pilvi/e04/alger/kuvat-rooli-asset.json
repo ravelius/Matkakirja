@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "alger",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+  "sourceContentAfterSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
   "assets": [
     {
       "era": "e04",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "sourceContentSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6470869a793aadeae8559ca64d9b93c79153e1d39ee0a5365e80c2fe540214ca",
+        "semanticContextSHA256": "9ef5a17a69caed68a28d88603edbf459b860c77139af7981214d8416aaf01e34",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -254,9 +254,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -275,17 +275,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "sourceContentAfterSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6470869a793aadeae8559ca64d9b93c79153e1d39ee0a5365e80c2fe540214ca",
+      "contextAfterSHA256": "9ef5a17a69caed68a28d88603edbf459b860c77139af7981214d8416aaf01e34",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "6470869a793aadeae8559ca64d9b93c79153e1d39ee0a5365e80c2fe540214ca",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "6470869a793aadeae8559ca64d9b93c79153e1d39ee0a5365e80c2fe540214ca",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+        "sameImageNativeSHA256": "de5b2256ad0870448e5ddc0cc4605dc185e5002f40408b6ecfb7f383ae7af2f8",
+        "sameImageExportSHA256": "6a47059fd683c605379175e72444f69e3e8742b185dbdd6637ec250312014328",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -307,10 +328,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kalkkivalkoisesta rappauspinnasta.",
-        "lyhyt": "Havainnekuva kalkkivalkoisesta rappauspinnasta."
+        "selite": "Havainnekuva kalkkivalkoisesta rappauspinnasta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -318,10 +339,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k1-kalkkirappaus-20261012-v1-2bc5887f42ee.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kalkkivalkoisesta rappauspinnasta.",
-        "lyhyt": "Havainnekuva kalkkivalkoisesta rappauspinnasta."
+        "selite": "Havainnekuva kalkkivalkoisesta rappauspinnasta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -335,10 +356,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "sourceContentSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6",
-        "semanticContextSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6",
+        "targetBeforeSHA256": "5f90f0242bf394afb148fbe7c26a5fa145439dc31679c91181ea8b1385d96112",
+        "semanticContextSHA256": "5f90f0242bf394afb148fbe7c26a5fa145439dc31679c91181ea8b1385d96112",
         "subjectTitle": "Saaret jäivät nimeen",
         "targetState": "existing-target"
       },
@@ -491,9 +512,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -512,17 +533,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
-      "targetAfterSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6",
-      "contextAfterSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6",
+      "sourceContentAfterSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+      "targetAfterSHA256": "5f90f0242bf394afb148fbe7c26a5fa145439dc31679c91181ea8b1385d96112",
+      "contextAfterSHA256": "5f90f0242bf394afb148fbe7c26a5fa145439dc31679c91181ea8b1385d96112",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+        "targetAfterSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6",
+        "contextAfterSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6",
+          "semanticContextSHA256": "8c11570eb11c8e048c06a95253a28a5eba256a80ceb467b8cb967451df7f56d6",
+          "subjectTitle": "Saaret jäivät nimeen",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+        "sameImageNativeSHA256": "2bc5887f42ee87462be54e4d97b5b76390164a55019a7b42989836087d4e17bd",
+        "sameImageExportSHA256": "d56cecaed5f8123a06ea264c0055d8949a46879cced44de3ce0a09ccfc5e2045",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -544,10 +586,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti.",
-        "lyhyt": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti."
+        "selite": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -555,10 +597,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-k2-kuorma-aasi-20261012-v1-6025bab9fb78.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti.",
-        "lyhyt": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti."
+        "selite": "Havainnekuva kuormaa kantavasta aasista; ei Casbahin toimituksen dokumentti."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -572,10 +614,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "sourceContentSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393",
-        "semanticContextSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393",
+        "targetBeforeSHA256": "0aae26fde805ed343eff155ad6caa86268c091be071d3327f6398ae986249c36",
+        "semanticContextSHA256": "0aae26fde805ed343eff155ad6caa86268c091be071d3327f6398ae986249c36",
         "subjectTitle": "Kaupunki, joka nousee portaita",
         "targetState": "existing-target"
       },
@@ -776,9 +818,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -797,17 +839,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
-      "targetAfterSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393",
-      "contextAfterSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393",
+      "sourceContentAfterSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+      "targetAfterSHA256": "0aae26fde805ed343eff155ad6caa86268c091be071d3327f6398ae986249c36",
+      "contextAfterSHA256": "0aae26fde805ed343eff155ad6caa86268c091be071d3327f6398ae986249c36",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+        "targetAfterSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393",
+        "contextAfterSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393",
+          "semanticContextSHA256": "6711ce071cd1a3c6b2a07b8e5f5e930f4c00ca4c93fe5493d893805741f5d393",
+          "subjectTitle": "Kaupunki, joka nousee portaita",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+        "sameImageNativeSHA256": "6025bab9fb78c1550e0b36308358f6438ac9f9829a3cff3b2d9b1643af3f8d07",
+        "sameImageExportSHA256": "9c35970035ce83f2e7669b7e96324ddfc2002610f4c880e93fb84a35465060e5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -829,10 +892,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös.",
-        "lyhyt": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös."
+        "selite": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -840,10 +903,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/alger/alger-l1-kulkuovi-20261012-v1-4b19c4afbdcc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös.",
-        "lyhyt": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös."
+        "selite": "Havainnekuva suureen oveen sovitetusta kulkuovesta; ei palatsin oven jäljennös."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -857,10 +920,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "sourceContentSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd",
-        "semanticContextSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd",
+        "targetBeforeSHA256": "8fddcb1a60a7f6c262a168bd6287e16fa6a091f81c889bec3baa9a439f109001",
+        "semanticContextSHA256": "8fddcb1a60a7f6c262a168bd6287e16fa6a091f81c889bec3baa9a439f109001",
         "subjectTitle": "Isossa ovessa pieni ovi",
         "targetState": "existing-target"
       },
@@ -1059,9 +1122,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1080,17 +1143,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
-      "targetAfterSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd",
-      "contextAfterSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd",
+      "sourceContentAfterSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+      "targetAfterSHA256": "8fddcb1a60a7f6c262a168bd6287e16fa6a091f81c889bec3baa9a439f109001",
+      "contextAfterSHA256": "8fddcb1a60a7f6c262a168bd6287e16fa6a091f81c889bec3baa9a439f109001",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+        "targetAfterSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd",
+        "contextAfterSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd",
+          "semanticContextSHA256": "96c64e00c3c2d787758acd591b7c8ddec4bba3843ff97d399dc48b7361caedcd",
+          "subjectTitle": "Isossa ovessa pieni ovi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+        "sameImageNativeSHA256": "4b19c4afbdccbb327ac8b93ba873546fd8bb4f9642ef43f0d504d4b0864aa2b9",
+        "sameImageExportSHA256": "e02a2169d59181a99f7a115098256bf73d338a10980ca239fbd44e2abd0add9c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1140,10 +1224,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "sourceContentSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df",
-        "semanticContextSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df",
+        "targetBeforeSHA256": "7a3c74853b3df75cc99e51434fb706a246e431b932b47130e8852d03b83f3578",
+        "semanticContextSHA256": "7a3c74853b3df75cc99e51434fb706a246e431b932b47130e8852d03b83f3578",
         "subjectTitle": "Katto, kaivo ja kujan vesipiste",
         "targetState": "existing-target"
       },
@@ -1369,9 +1453,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1390,17 +1474,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
-      "targetAfterSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df",
-      "contextAfterSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df",
+      "sourceContentAfterSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+      "targetAfterSHA256": "7a3c74853b3df75cc99e51434fb706a246e431b932b47130e8852d03b83f3578",
+      "contextAfterSHA256": "7a3c74853b3df75cc99e51434fb706a246e431b932b47130e8852d03b83f3578",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+        "targetAfterSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df",
+        "contextAfterSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df",
+          "semanticContextSHA256": "64ea4755bdadae499d617f3c4988fa06d2cef6ca9c1060d3ef3652b9906587df",
+          "subjectTitle": "Katto, kaivo ja kujan vesipiste",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+        "sameImageNativeSHA256": "8451d8d057abe4a9672066528470c4b777e039b0a2e23ee411f2389807486521",
+        "sameImageExportSHA256": "29858b7889374ec98b81038b143911a59f6d84d8b8525b9436c6609a5b93fb40",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1419,16 +1524,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/photo-c2eb1d11378a520468fe.jpg",
         "suora": true,
         "lahde": "Red amine, Commons (CC BY-SA 3.0)",
-        "selite": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
-        "lyhyt": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "selite": "Tiheä kasvillisuus ja puusto reunustavat Hamman koepuutarhan lampea kesäkuussa 2014 otetussa valokuvassa.",
+        "lyhyt": "Hamman puutarhan lammen rantakasvillisuutta vuonna 2014.",
         "tiedosto": "Botanical garden in Algiers.jpg",
         "vuosi": "2014"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Red amine, Commons (CC BY-SA 3.0)",
-        "selite": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
-        "lyhyt": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "selite": "Tiheä kasvillisuus ja puusto reunustavat Hamman koepuutarhan lampea kesäkuussa 2014 otetussa valokuvassa.",
+        "lyhyt": "Hamman puutarhan lammen rantakasvillisuutta vuonna 2014.",
         "tiedosto": "Botanical garden in Algiers.jpg",
         "vuosi": "2014"
       },
@@ -1436,8 +1541,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/photo-c2eb1d11378a520468fe.jpg",
         "suora": true,
         "lahde": "Red amine, Commons (CC BY-SA 3.0)",
-        "selite": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
-        "lyhyt": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "selite": "Tiheä kasvillisuus ja puusto reunustavat Hamman koepuutarhan lampea kesäkuussa 2014 otetussa valokuvassa.",
+        "lyhyt": "Hamman puutarhan lammen rantakasvillisuutta vuonna 2014.",
         "tiedosto": "Botanical garden in Algiers.jpg",
         "vuosi": "2014"
       },
@@ -1453,10 +1558,10 @@
         2048
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "sourceContentSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae",
-        "semanticContextSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae",
+        "targetBeforeSHA256": "04edcc31dce2b2941236b6ee12ad774451ccfa809720483da363a72eb5a4dbf0",
+        "semanticContextSHA256": "04edcc31dce2b2941236b6ee12ad774451ccfa809720483da363a72eb5a4dbf0",
         "subjectTitle": "alger — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1691,9 +1796,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Botanical garden in Algiers.jpg",
+        "lyhyt": "Hamman puutarhan lammen rantakasvillisuutta vuonna 2014.",
+        "selite": "Tiheä kasvillisuus ja puusto reunustavat Hamman koepuutarhan lampea kesäkuussa 2014 otetussa valokuvassa.",
         "lahde": "Red amine, Commons (CC BY-SA 3.0)",
-        "selite": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
-        "lyhyt": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
         "vuosi": "2014"
       },
       "preservePreviousMediaObjects": true,
@@ -1713,24 +1818,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Red amine, Commons (CC BY-SA 3.0)",
-        "selite": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
-        "lyhyt": "Hamma-puutarha kuuluu Algerin kasvitieteellisiin käyntipaikkoihin.",
+        "selite": "Tiheä kasvillisuus ja puusto reunustavat Hamman koepuutarhan lampea kesäkuussa 2014 otetussa valokuvassa.",
+        "lyhyt": "Hamman puutarhan lammen rantakasvillisuutta vuonna 2014.",
         "tiedosto": "Botanical garden in Algiers.jpg",
         "vuosi": "2014"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
-      "targetAfterSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae",
-      "contextAfterSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae",
+      "sourceContentAfterSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+      "targetAfterSHA256": "04edcc31dce2b2941236b6ee12ad774451ccfa809720483da363a72eb5a4dbf0",
+      "contextAfterSHA256": "04edcc31dce2b2941236b6ee12ad774451ccfa809720483da363a72eb5a4dbf0",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+        "targetAfterSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae",
+        "contextAfterSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae",
+          "semanticContextSHA256": "48bd28ba2c3211b60c2b38740f1cf2a3916c3b4fef1a05d83808260559d5eaae",
+          "subjectTitle": "alger — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+        "sameImageNativeSHA256": "c2eb1d11378a520468fed3954f7f58a6db9ccb39651d55df5981279ae3f90fa9",
+        "sameImageExportSHA256": "c2eb1d11378a520468fed3954f7f58a6db9ccb39651d55df5981279ae3f90fa9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1752,23 +1878,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/c1-e2b365d26138f19ee857.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
-        "lyhyt": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "selite": "Algerin kaupunkialue kiertää lahden rantaa ISS-avaruusasemalta 25. lokakuuta 2020 otetussa valokuvassa.",
+        "lyhyt": "Algerin lahden rannikkoa avaruudesta vuonna 2020.",
         "tiedosto": "ISS064-E-411 - View of Earth.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
-        "lyhyt": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "selite": "Algerin kaupunkialue kiertää lahden rantaa ISS-avaruusasemalta 25. lokakuuta 2020 otetussa valokuvassa.",
+        "lyhyt": "Algerin lahden rannikkoa avaruudesta vuonna 2020.",
         "tiedosto": "ISS064-E-411 - View of Earth.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/c1-e2b365d26138f19ee857.jpg",
         "suora": true,
         "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
-        "lyhyt": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "selite": "Algerin kaupunkialue kiertää lahden rantaa ISS-avaruusasemalta 25. lokakuuta 2020 otetussa valokuvassa.",
+        "lyhyt": "Algerin lahden rannikkoa avaruudesta vuonna 2020.",
         "tiedosto": "ISS064-E-411 - View of Earth.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1783,10 +1909,10 @@
         3712
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "sourceContentSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65",
-        "semanticContextSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65",
+        "targetBeforeSHA256": "7e10074c5731c6acc8a347edf9dc3d4ebee2533f96ce34f6846e3abb42b1b25e",
+        "semanticContextSHA256": "7e10074c5731c6acc8a347edf9dc3d4ebee2533f96ce34f6846e3abb42b1b25e",
         "subjectTitle": "Alger",
         "targetState": "existing-target"
       },
@@ -2020,9 +2146,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "ISS064-E-411 - View of Earth.jpg",
-        "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
-        "lyhyt": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020."
+        "lyhyt": "Algerin lahden rannikkoa avaruudesta vuonna 2020.",
+        "selite": "Algerin kaupunkialue kiertää lahden rantaa ISS-avaruusasemalta 25. lokakuuta 2020 otetussa valokuvassa.",
+        "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2041,23 +2167,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
-        "lyhyt": "Algerin kaupunkialue ja lahden rannat avaruudesta kuvattuna vuonna 2020.",
+        "selite": "Algerin kaupunkialue kiertää lahden rantaa ISS-avaruusasemalta 25. lokakuuta 2020 otetussa valokuvassa.",
+        "lyhyt": "Algerin lahden rannikkoa avaruudesta vuonna 2020.",
         "tiedosto": "ISS064-E-411 - View of Earth.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
-      "targetAfterSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65",
-      "contextAfterSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65",
+      "sourceContentAfterSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+      "targetAfterSHA256": "7e10074c5731c6acc8a347edf9dc3d4ebee2533f96ce34f6846e3abb42b1b25e",
+      "contextAfterSHA256": "7e10074c5731c6acc8a347edf9dc3d4ebee2533f96ce34f6846e3abb42b1b25e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+        "targetAfterSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65",
+        "contextAfterSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65",
+          "semanticContextSHA256": "730bdc7ba1a0a02be4a8dce6d970c65d5a6a7c53b2e643063965bf042d40fd65",
+          "subjectTitle": "Alger",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+        "sameImageNativeSHA256": "e2b365d26138f19ee857e45d3dae16fcf508e966b743ce188f66e28b19003ab5",
+        "sameImageExportSHA256": "e2b365d26138f19ee857e45d3dae16fcf508e966b743ce188f66e28b19003ab5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2079,23 +2226,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/traveler-a05e4c410fb09e363606.jpg",
         "suora": true,
         "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
-        "lyhyt": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "selite": "Hamman puutarhan käytävä jatkuu puiden välissä, ja latvukset kaartuvat sen ylle toukokuussa 2023 kuvatussa näkymässä.",
+        "lyhyt": "Hamman puutarhan puukäytävä toukokuussa 2023.",
         "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
-        "lyhyt": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "selite": "Hamman puutarhan käytävä jatkuu puiden välissä, ja latvukset kaartuvat sen ylle toukokuussa 2023 kuvatussa näkymässä.",
+        "lyhyt": "Hamman puutarhan puukäytävä toukokuussa 2023.",
         "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/traveler-a05e4c410fb09e363606.jpg",
         "suora": true,
         "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
-        "lyhyt": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "selite": "Hamman puutarhan käytävä jatkuu puiden välissä, ja latvukset kaartuvat sen ylle toukokuussa 2023 kuvatussa näkymässä.",
+        "lyhyt": "Hamman puutarhan puukäytävä toukokuussa 2023.",
         "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2110,10 +2257,10 @@
         2048
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "sourceContentSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0c509a2f001fd819d7334e28587763cd42ec82d45d72306eeb92e3327e30c8e5",
-        "semanticContextSHA256": "2d4153470720a34258e02e0b48c219eb5f905ec2f19f1e2737551da2174aa468",
+        "targetBeforeSHA256": "a4d2fb07702b8d3c4bf42a25093db58bbf32675652fbb87e23dab4b1bf6c409c",
+        "semanticContextSHA256": "8f64abeaee94801a6d379594b64545005346891f93fc5db65d26740fe6b49ba0",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -2341,9 +2488,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg",
-        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
-        "lyhyt": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla."
+        "lyhyt": "Hamman puutarhan puukäytävä toukokuussa 2023.",
+        "selite": "Hamman puutarhan käytävä jatkuu puiden välissä, ja latvukset kaartuvat sen ylle toukokuussa 2023 kuvatussa näkymässä.",
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2362,23 +2509,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
-        "lyhyt": "Hamman kasvitieteellisessä puutarhassa kuljetaan puiden reunustamilla poluilla.",
+        "selite": "Hamman puutarhan käytävä jatkuu puiden välissä, ja latvukset kaartuvat sen ylle toukokuussa 2023 kuvatussa näkymässä.",
+        "lyhyt": "Hamman puutarhan puukäytävä toukokuussa 2023.",
         "tiedosto": "A path in the Hamma Botanical Garden (Garden in Algiers).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
-      "targetAfterSHA256": "0c509a2f001fd819d7334e28587763cd42ec82d45d72306eeb92e3327e30c8e5",
-      "contextAfterSHA256": "2d4153470720a34258e02e0b48c219eb5f905ec2f19f1e2737551da2174aa468",
+      "sourceContentAfterSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+      "targetAfterSHA256": "a4d2fb07702b8d3c4bf42a25093db58bbf32675652fbb87e23dab4b1bf6c409c",
+      "contextAfterSHA256": "8f64abeaee94801a6d379594b64545005346891f93fc5db65d26740fe6b49ba0",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+        "targetAfterSHA256": "0c509a2f001fd819d7334e28587763cd42ec82d45d72306eeb92e3327e30c8e5",
+        "contextAfterSHA256": "2d4153470720a34258e02e0b48c219eb5f905ec2f19f1e2737551da2174aa468",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0c509a2f001fd819d7334e28587763cd42ec82d45d72306eeb92e3327e30c8e5",
+          "semanticContextSHA256": "2d4153470720a34258e02e0b48c219eb5f905ec2f19f1e2737551da2174aa468",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+        "sameImageNativeSHA256": "a05e4c410fb09e36360676a4944c92a80f77d8491ab798c6a5dd99f1ab12e93f",
+        "sameImageExportSHA256": "a05e4c410fb09e36360676a4944c92a80f77d8491ab798c6a5dd99f1ab12e93f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2403,23 +2571,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/o3-239e39b54527a38dcb3d.jpg",
         "suora": true,
         "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
-        "lyhyt": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "selite": "Eri kokoiset lehdet ja varjoisat oksat täyttävät Hamman kasvitieteellisen puutarhan näkymän toukokuussa 2023.",
+        "lyhyt": "Tiheää kasvillisuutta Hamman puutarhassa toukokuussa 2023.",
         "tiedosto": "Algiers Hamma Botanical Garden plant.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
-        "lyhyt": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "selite": "Eri kokoiset lehdet ja varjoisat oksat täyttävät Hamman kasvitieteellisen puutarhan näkymän toukokuussa 2023.",
+        "lyhyt": "Tiheää kasvillisuutta Hamman puutarhassa toukokuussa 2023.",
         "tiedosto": "Algiers Hamma Botanical Garden plant.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/o3-239e39b54527a38dcb3d.jpg",
         "suora": true,
         "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
-        "lyhyt": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "selite": "Eri kokoiset lehdet ja varjoisat oksat täyttävät Hamman kasvitieteellisen puutarhan näkymän toukokuussa 2023.",
+        "lyhyt": "Tiheää kasvillisuutta Hamman puutarhassa toukokuussa 2023.",
         "tiedosto": "Algiers Hamma Botanical Garden plant.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2434,10 +2602,10 @@
         2048
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "sourceContentSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "761308b40875f125e34de09d548c4cd1cb7b8791a9c455ca096c9b6237b7b423",
-        "semanticContextSHA256": "57ad39cda86064e784836139505bbf90ec89d0420fb5abe50a3ba530238f6eee",
+        "targetBeforeSHA256": "5739ea83b6867b684f0b519ba11c002bfdd71280b9210ecc70896123f01aa1a6",
+        "semanticContextSHA256": "da5c53e5db66bfcc69d691dc961533af62cdc30af679f2b8413b348c8eea723e",
         "subjectTitle": "Rannalta Hammaan",
         "targetState": "existing-target"
       },
@@ -2674,9 +2842,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Algiers Hamma Botanical Garden plant.jpg",
-        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
-        "lyhyt": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön."
+        "lyhyt": "Tiheää kasvillisuutta Hamman puutarhassa toukokuussa 2023.",
+        "selite": "Eri kokoiset lehdet ja varjoisat oksat täyttävät Hamman kasvitieteellisen puutarhan näkymän toukokuussa 2023.",
+        "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2695,23 +2863,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Muhammed amine benloulou, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
-        "lyhyt": "Hamman kasvitieteellisen puutarhan kasvillisuus tarjoaa vihreän käyntiympäristön.",
+        "selite": "Eri kokoiset lehdet ja varjoisat oksat täyttävät Hamman kasvitieteellisen puutarhan näkymän toukokuussa 2023.",
+        "lyhyt": "Tiheää kasvillisuutta Hamman puutarhassa toukokuussa 2023.",
         "tiedosto": "Algiers Hamma Botanical Garden plant.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
-      "targetAfterSHA256": "761308b40875f125e34de09d548c4cd1cb7b8791a9c455ca096c9b6237b7b423",
-      "contextAfterSHA256": "57ad39cda86064e784836139505bbf90ec89d0420fb5abe50a3ba530238f6eee",
+      "sourceContentAfterSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+      "targetAfterSHA256": "5739ea83b6867b684f0b519ba11c002bfdd71280b9210ecc70896123f01aa1a6",
+      "contextAfterSHA256": "da5c53e5db66bfcc69d691dc961533af62cdc30af679f2b8413b348c8eea723e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+        "targetAfterSHA256": "761308b40875f125e34de09d548c4cd1cb7b8791a9c455ca096c9b6237b7b423",
+        "contextAfterSHA256": "57ad39cda86064e784836139505bbf90ec89d0420fb5abe50a3ba530238f6eee",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "761308b40875f125e34de09d548c4cd1cb7b8791a9c455ca096c9b6237b7b423",
+          "semanticContextSHA256": "57ad39cda86064e784836139505bbf90ec89d0420fb5abe50a3ba530238f6eee",
+          "subjectTitle": "Rannalta Hammaan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+        "sameImageNativeSHA256": "239e39b54527a38dcb3d9d1b144e847ad7483d0749761e7a82f4e91812b9c7a1",
+        "sameImageExportSHA256": "239e39b54527a38dcb3d9d1b144e847ad7483d0749761e7a82f4e91812b9c7a1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2733,23 +2922,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/k4-1209f2268a6b02f62b1f.jpg",
         "suora": true,
         "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
-        "lyhyt": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "selite": "Puiden leviävät oksat varjostavat Hamman puutarhan lampea elokuussa 2015 otetussa valokuvassa.",
+        "lyhyt": "Puustoa Hamman puutarhan lammen äärellä vuonna 2015.",
         "tiedosto": "Botanical Garden of Hamma.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
-        "lyhyt": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "selite": "Puiden leviävät oksat varjostavat Hamman puutarhan lampea elokuussa 2015 otetussa valokuvassa.",
+        "lyhyt": "Puustoa Hamman puutarhan lammen äärellä vuonna 2015.",
         "tiedosto": "Botanical Garden of Hamma.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/alger/k4-1209f2268a6b02f62b1f.jpg",
         "suora": true,
         "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
-        "lyhyt": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "selite": "Puiden leviävät oksat varjostavat Hamman puutarhan lampea elokuussa 2015 otetussa valokuvassa.",
+        "lyhyt": "Puustoa Hamman puutarhan lammen äärellä vuonna 2015.",
         "tiedosto": "Botanical Garden of Hamma.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2764,10 +2953,10 @@
         2000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/alger/sisalto.json",
-      "sourceContentSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+      "sourceContentSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176",
-        "semanticContextSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176",
+        "targetBeforeSHA256": "eb0eff5d14ee6380efdeea0db71847a4b5ca6dc7a67e17f443575389c821cba4",
+        "semanticContextSHA256": "eb0eff5d14ee6380efdeea0db71847a4b5ca6dc7a67e17f443575389c821cba4",
         "subjectTitle": "Puutarhan nimessä on koe",
         "targetState": "existing-target"
       },
@@ -2993,9 +3182,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Botanical Garden of Hamma.jpg",
-        "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
-        "lyhyt": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta."
+        "lyhyt": "Puustoa Hamman puutarhan lammen äärellä vuonna 2015.",
+        "selite": "Puiden leviävät oksat varjostavat Hamman puutarhan lampea elokuussa 2015 otetussa valokuvassa.",
+        "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3014,28 +3203,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "MariaArch, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
-        "lyhyt": "Hamman koepuutarha kehittyi viljelyn ja kasvikokeiden työpaikasta.",
+        "selite": "Puiden leviävät oksat varjostavat Hamman puutarhan lampea elokuussa 2015 otetussa valokuvassa.",
+        "lyhyt": "Puustoa Hamman puutarhan lammen äärellä vuonna 2015.",
         "tiedosto": "Botanical Garden of Hamma.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
-      "targetAfterSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176",
-      "contextAfterSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176",
+      "sourceContentAfterSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+      "targetAfterSHA256": "eb0eff5d14ee6380efdeea0db71847a4b5ca6dc7a67e17f443575389c821cba4",
+      "contextAfterSHA256": "eb0eff5d14ee6380efdeea0db71847a4b5ca6dc7a67e17f443575389c821cba4",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "af96b94dcec78632321a487582bdb607158302d62cb5758c68319df8db0107a7",
+        "targetAfterSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176",
+        "contextAfterSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176",
+          "semanticContextSHA256": "a8996be5fbb7347c86ca1cf37ad988c2bfde229fdb7c91e3633e03dde2def176",
+          "subjectTitle": "Puutarhan nimessä on koe",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ac8fe8d1ef41455b8f2499167cffd37e20313674764e133ed34f1e3b0ea3971a",
+        "sameImageNativeSHA256": "1209f2268a6b02f62b1f47f87ef9b62e47e6c8ef8630273941d3b57515592b90",
+        "sameImageExportSHA256": "1209f2268a6b02f62b1f47f87ef9b62e47e6c8ef8630273941d3b57515592b90",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e04/alger/fe59030d28529dbd605d08f023766509f0eec8dbaee079444dd94d826bd87b54.json",
+  "task118ReboundAt": "2026-10-13T16:33:23.904565+00:00"
 }

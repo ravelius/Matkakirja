@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "tunis",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+  "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
   "assets": [
     {
       "era": "e04",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/tunis/tunis-l2-varastointi-20261012-v1-be61bb27fa8a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tavaroiden varastoinnista; ei Dar Lasramin tiloista tai esineistä.",
-        "lyhyt": "Havainnekuva tavaroiden varastoinnista; ei Dar Lasramin tiloista tai esineistä."
+        "selite": "Havainnekuva tavaroiden varastoinnista; ei Dar Lasramin tiloista tai esineistä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/tunis/tunis-l2-varastointi-20261012-v1-be61bb27fa8a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tavaroiden varastoinnista; ei Dar Lasramin tiloista tai esineistä.",
-        "lyhyt": "Havainnekuva tavaroiden varastoinnista; ei Dar Lasramin tiloista tai esineistä."
+        "selite": "Havainnekuva tavaroiden varastoinnista; ei Dar Lasramin tiloista tai esineistä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,7 +53,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8ab6617058894157e4ea9bdda6bc33b5bda024bd12b73d45804819e82217bce3",
         "semanticContextSHA256": "8ab6617058894157e4ea9bdda6bc33b5bda024bd12b73d45804819e82217bce3",
@@ -207,9 +207,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -228,17 +228,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "targetAfterSHA256": "8ab6617058894157e4ea9bdda6bc33b5bda024bd12b73d45804819e82217bce3",
       "contextAfterSHA256": "8ab6617058894157e4ea9bdda6bc33b5bda024bd12b73d45804819e82217bce3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "8ab6617058894157e4ea9bdda6bc33b5bda024bd12b73d45804819e82217bce3",
+        "contextAfterSHA256": "8ab6617058894157e4ea9bdda6bc33b5bda024bd12b73d45804819e82217bce3",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8ab6617058894157e4ea9bdda6bc33b5bda024bd12b73d45804819e82217bce3",
+          "semanticContextSHA256": "8ab6617058894157e4ea9bdda6bc33b5bda024bd12b73d45804819e82217bce3",
+          "subjectTitle": "Perhe ja vieraat asuivat eri kerroksissa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "be61bb27fa8ac3b92d58e3c1e1ac32421428ebac6b22ba5dbce09fc6c9593e2a",
+        "sameImageExportSHA256": "d8a0d6f47dbd852b5660eebfcf829b62dd45e133dc3e500783f51aa0fe2c8190",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -260,10 +281,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/tunis/tunis-l3-kahvila-arki-20261012-v1-bfa3a91f9e72.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kahvila-arjen yleishavainnollistus. Havainnekuva, ei museoesine tai nimetty kahvila.",
-        "lyhyt": "Kahvila-arjen yleishavainnollistus. Havainnekuva, ei museoesine tai nimetty kahvila."
+        "selite": "Kahvila-arjen yleishavainnollistus. Havainnekuva, ei museoesine tai nimetty kahvila."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -271,10 +292,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/tunis/tunis-l3-kahvila-arki-20261012-v1-bfa3a91f9e72.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kahvila-arjen yleishavainnollistus. Havainnekuva, ei museoesine tai nimetty kahvila.",
-        "lyhyt": "Kahvila-arjen yleishavainnollistus. Havainnekuva, ei museoesine tai nimetty kahvila."
+        "selite": "Kahvila-arjen yleishavainnollistus. Havainnekuva, ei museoesine tai nimetty kahvila."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -288,10 +309,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6f8be4dda071ada347871530f3bf1cc34c937e252eb6b2ad51dacc9732f46ba7",
-        "semanticContextSHA256": "6f8be4dda071ada347871530f3bf1cc34c937e252eb6b2ad51dacc9732f46ba7",
+        "targetBeforeSHA256": "b4b2472116d7970ec4e5cb661def6eac41ed1323648ae8ea9be0b3ebb95e222b",
+        "semanticContextSHA256": "b4b2472116d7970ec4e5cb661def6eac41ed1323648ae8ea9be0b3ebb95e222b",
         "subjectTitle": "Asuintalon arjesta tuli museon aihe",
         "targetState": "existing-target"
       },
@@ -442,9 +463,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -463,17 +484,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "targetAfterSHA256": "6f8be4dda071ada347871530f3bf1cc34c937e252eb6b2ad51dacc9732f46ba7",
-      "contextAfterSHA256": "6f8be4dda071ada347871530f3bf1cc34c937e252eb6b2ad51dacc9732f46ba7",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+      "targetAfterSHA256": "b4b2472116d7970ec4e5cb661def6eac41ed1323648ae8ea9be0b3ebb95e222b",
+      "contextAfterSHA256": "b4b2472116d7970ec4e5cb661def6eac41ed1323648ae8ea9be0b3ebb95e222b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "6f8be4dda071ada347871530f3bf1cc34c937e252eb6b2ad51dacc9732f46ba7",
+        "contextAfterSHA256": "6f8be4dda071ada347871530f3bf1cc34c937e252eb6b2ad51dacc9732f46ba7",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "6f8be4dda071ada347871530f3bf1cc34c937e252eb6b2ad51dacc9732f46ba7",
+          "semanticContextSHA256": "6f8be4dda071ada347871530f3bf1cc34c937e252eb6b2ad51dacc9732f46ba7",
+          "subjectTitle": "Asuintalon arjesta tuli museon aihe",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "bfa3a91f9e72d6e8f34c3b5b9e6e0b6cc4612e8b8b5e8b0e613d6fd2fe496bbd",
+        "sameImageExportSHA256": "a56d98b047cae594897edab1f5b24591fb26042987cec2c407bc5affb5bf57b4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -498,10 +540,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
-        "lyhyt": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva."
+        "selite": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -509,10 +551,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/tunis-o3-havainne-v1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva.",
-        "lyhyt": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva."
+        "selite": "Sisäpihan mittakaava palatsitarinoiden yleiskuvituksena. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -526,10 +568,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "b7f32319e6d7b59f7255593796c29a93ae578d95028aca0e03933f73a4960b52",
+        "semanticContextSHA256": "7f931aca49f02c183e17d6d2fc12ba1833836076f12db0b3420bbbb4932ba840",
         "subjectTitle": "Pihapalatsien kaupungissa",
         "targetState": "existing-target"
       },
@@ -678,9 +720,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -699,17 +741,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "b7f32319e6d7b59f7255593796c29a93ae578d95028aca0e03933f73a4960b52",
+      "contextAfterSHA256": "7f931aca49f02c183e17d6d2fc12ba1833836076f12db0b3420bbbb4932ba840",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "b7f32319e6d7b59f7255593796c29a93ae578d95028aca0e03933f73a4960b52",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "b7f32319e6d7b59f7255593796c29a93ae578d95028aca0e03933f73a4960b52",
+          "subjectTitle": "Pihapalatsien kaupungissa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
+        "sameImageExportSHA256": "928405fcd6a0b8cc70315b8647c464b3d34358aaee8765cb3d8a50d208eca44b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -762,7 +825,7 @@
         3648
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
         "semanticContextSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
@@ -889,9 +952,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "View over the Medina of Tunis 02.jpg",
-        "lahde": "Kritzolina, Commons (CC BY-SA 4.0)",
-        "selite": "Tunisin medinan kattomaisema vuonna 2019 kuuluu historiallisten rakennusten, asuinkorttelien ja kauppakujien yhteiseen kaupunkirakenteeseen.",
         "lyhyt": "Tunisin medinan kattojen kokonaisuus vuonna 2019.",
+        "selite": "Tunisin medinan kattomaisema vuonna 2019 kuuluu historiallisten rakennusten, asuinkorttelien ja kauppakujien yhteiseen kaupunkirakenteeseen.",
+        "lahde": "Kritzolina, Commons (CC BY-SA 4.0)",
         "vuosi": "2019"
       },
       "preservePreviousMediaObjects": true,
@@ -911,7 +974,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -924,11 +987,32 @@
         "vuosi": "2019"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "targetAfterSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
       "contextAfterSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
+        "contextAfterSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
+          "semanticContextSHA256": "807c493c0b050c4312a05189c883b0673a552269ea74801073f9ab9986330d9c",
+          "subjectTitle": "tunis — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
+        "sameImageExportSHA256": "fc208a7a51424245a6c2047d4978cfb18b439637e701022388f88bc4fb0ab291",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -950,23 +1034,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c1-1633b039121424d01537.jpg",
         "suora": true,
         "lahde": "IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Tunisin medinassa asuinkorttelit, kauppakujat ja vanhat rakennuspaikat muodostavat yhtenäisen kaupunkikokonaisuuden.",
-        "lyhyt": "Tunisin medina on historiallinen kaupunkikokonaisuus.",
+        "selite": "Matalaa kattokaupunkia, pieniä torneja ja kattojen välistä jatkuva katu Tunisin medinassa vuonna 2017.",
+        "lyhyt": "Tunisin medinan kattoja ja kapea katulinja.",
         "tiedosto": "Medina old Town of Tunis.jpeg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Tunisin medinassa asuinkorttelit, kauppakujat ja vanhat rakennuspaikat muodostavat yhtenäisen kaupunkikokonaisuuden.",
-        "lyhyt": "Tunisin medina on historiallinen kaupunkikokonaisuus.",
+        "selite": "Matalaa kattokaupunkia, pieniä torneja ja kattojen välistä jatkuva katu Tunisin medinassa vuonna 2017.",
+        "lyhyt": "Tunisin medinan kattoja ja kapea katulinja.",
         "tiedosto": "Medina old Town of Tunis.jpeg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c1-1633b039121424d01537.jpg",
         "suora": true,
         "lahde": "IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Tunisin medinassa asuinkorttelit, kauppakujat ja vanhat rakennuspaikat muodostavat yhtenäisen kaupunkikokonaisuuden.",
-        "lyhyt": "Tunisin medina on historiallinen kaupunkikokonaisuus.",
+        "selite": "Matalaa kattokaupunkia, pieniä torneja ja kattojen välistä jatkuva katu Tunisin medinassa vuonna 2017.",
+        "lyhyt": "Tunisin medinan kattoja ja kapea katulinja.",
         "tiedosto": "Medina old Town of Tunis.jpeg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -981,10 +1065,10 @@
         5300
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "59cc394367d144d80d9d74644987994e89d767a2be94859d37051303aa0da45f",
-        "semanticContextSHA256": "59cc394367d144d80d9d74644987994e89d767a2be94859d37051303aa0da45f",
+        "targetBeforeSHA256": "2e2b7e857d8b0649c4b280686c042f041d592b0661cf8e7e0525d3c15d5557f7",
+        "semanticContextSHA256": "2e2b7e857d8b0649c4b280686c042f041d592b0661cf8e7e0525d3c15d5557f7",
         "subjectTitle": "Tunis",
         "targetState": "existing-target"
       },
@@ -1108,9 +1192,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Medina old Town of Tunis.jpeg",
-        "lahde": "IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Tunisin medinassa asuinkorttelit, kauppakujat ja vanhat rakennuspaikat muodostavat yhtenäisen kaupunkikokonaisuuden.",
-        "lyhyt": "Tunisin medina on historiallinen kaupunkikokonaisuus."
+        "lyhyt": "Tunisin medinan kattoja ja kapea katulinja.",
+        "selite": "Matalaa kattokaupunkia, pieniä torneja ja kattojen välistä jatkuva katu Tunisin medinassa vuonna 2017.",
+        "lahde": "IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1129,23 +1213,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Tunisin medinassa asuinkorttelit, kauppakujat ja vanhat rakennuspaikat muodostavat yhtenäisen kaupunkikokonaisuuden.",
-        "lyhyt": "Tunisin medina on historiallinen kaupunkikokonaisuus.",
+        "selite": "Matalaa kattokaupunkia, pieniä torneja ja kattojen välistä jatkuva katu Tunisin medinassa vuonna 2017.",
+        "lyhyt": "Tunisin medinan kattoja ja kapea katulinja.",
         "tiedosto": "Medina old Town of Tunis.jpeg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "targetAfterSHA256": "59cc394367d144d80d9d74644987994e89d767a2be94859d37051303aa0da45f",
-      "contextAfterSHA256": "59cc394367d144d80d9d74644987994e89d767a2be94859d37051303aa0da45f",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+      "targetAfterSHA256": "2e2b7e857d8b0649c4b280686c042f041d592b0661cf8e7e0525d3c15d5557f7",
+      "contextAfterSHA256": "2e2b7e857d8b0649c4b280686c042f041d592b0661cf8e7e0525d3c15d5557f7",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "59cc394367d144d80d9d74644987994e89d767a2be94859d37051303aa0da45f",
+        "contextAfterSHA256": "59cc394367d144d80d9d74644987994e89d767a2be94859d37051303aa0da45f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "59cc394367d144d80d9d74644987994e89d767a2be94859d37051303aa0da45f",
+          "semanticContextSHA256": "59cc394367d144d80d9d74644987994e89d767a2be94859d37051303aa0da45f",
+          "subjectTitle": "Tunis",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "1633b039121424d015379b1a9d26f2903808669f8816ef8d6b1b36f2abbb8e0d",
+        "sameImageExportSHA256": "1633b039121424d015379b1a9d26f2903808669f8816ef8d6b1b36f2abbb8e0d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1198,7 +1303,7 @@
         3937
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "018d87afe66b8189bbdcbe5345d106f9e76114cf21e5818f66bd923dad08b331",
         "semanticContextSHA256": "018d87afe66b8189bbdcbe5345d106f9e76114cf21e5818f66bd923dad08b331",
@@ -1325,9 +1430,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Tunisia-2024-1-4035.jpg",
-        "lahde": "Buiobuione, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Medinan kattomaisemaa Tunisissa vuonna 2024.",
         "selite": "Tunisin medinan kattomaisema vuonna 2024 kuuluu elävään vanhaan kaupunkiin, jonka kaupunkirakenne on osa maailmanperintökohdetta.",
-        "lyhyt": "Medinan kattomaisemaa Tunisissa vuonna 2024."
+        "lahde": "Buiobuione, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1346,7 +1451,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -1358,11 +1463,32 @@
         "tiedosto": "Tunisia-2024-1-4035.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "targetAfterSHA256": "018d87afe66b8189bbdcbe5345d106f9e76114cf21e5818f66bd923dad08b331",
       "contextAfterSHA256": "018d87afe66b8189bbdcbe5345d106f9e76114cf21e5818f66bd923dad08b331",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "018d87afe66b8189bbdcbe5345d106f9e76114cf21e5818f66bd923dad08b331",
+        "contextAfterSHA256": "018d87afe66b8189bbdcbe5345d106f9e76114cf21e5818f66bd923dad08b331",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "018d87afe66b8189bbdcbe5345d106f9e76114cf21e5818f66bd923dad08b331",
+          "semanticContextSHA256": "018d87afe66b8189bbdcbe5345d106f9e76114cf21e5818f66bd923dad08b331",
+          "subjectTitle": "Tunis",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "f2f3b4248b4acb2ddf870c08db524a791edb71e59aef0e03f07a136fa5416e18",
+        "sameImageExportSHA256": "f2f3b4248b4acb2ddf870c08db524a791edb71e59aef0e03f07a136fa5416e18",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1384,23 +1510,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
         "suora": true,
         "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "selite": "Tunisin keskustan kaupunkirakenne ja katuverkko laajassa ilmakuvassa vuodelta 2008.",
+        "lyhyt": "Tunisin keskustan ilmakuva.",
         "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "selite": "Tunisin keskustan kaupunkirakenne ja katuverkko laajassa ilmakuvassa vuodelta 2008.",
+        "lyhyt": "Tunisin keskustan ilmakuva.",
         "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/c3-6caecc2563f929b9551d.jpg",
         "suora": true,
         "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "selite": "Tunisin keskustan kaupunkirakenne ja katuverkko laajassa ilmakuvassa vuodelta 2008.",
+        "lyhyt": "Tunisin keskustan ilmakuva.",
         "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1415,10 +1541,10 @@
         2496
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
-        "semanticContextSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
+        "targetBeforeSHA256": "7c1e20ebb70d30332c33582a378dd1f54cf0ec08ce08dea9d304f1dc383c075d",
+        "semanticContextSHA256": "7c1e20ebb70d30332c33582a378dd1f54cf0ec08ce08dea9d304f1dc383c075d",
         "subjectTitle": "Tunis",
         "targetState": "existing-target"
       },
@@ -1544,9 +1670,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg",
-        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008."
+        "lyhyt": "Tunisin keskustan ilmakuva.",
+        "selite": "Tunisin keskustan kaupunkirakenne ja katuverkko laajassa ilmakuvassa vuodelta 2008.",
+        "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1565,23 +1691,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Citizen59 from Tunis, Tunisie, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
-        "lyhyt": "Tunisin keskustan ja katuverkon laaja ilmakuva vuodelta2008.",
+        "selite": "Tunisin keskustan kaupunkirakenne ja katuverkko laajassa ilmakuvassa vuodelta 2008.",
+        "lyhyt": "Tunisin keskustan ilmakuva.",
         "tiedosto": "Panoramique du centre de Tunis (3197369985) (cropped).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "targetAfterSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
-      "contextAfterSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+      "targetAfterSHA256": "7c1e20ebb70d30332c33582a378dd1f54cf0ec08ce08dea9d304f1dc383c075d",
+      "contextAfterSHA256": "7c1e20ebb70d30332c33582a378dd1f54cf0ec08ce08dea9d304f1dc383c075d",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
+        "contextAfterSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
+          "semanticContextSHA256": "b695f7c4ec9afeb86a608ffcd9dac86e5194efa3632694032a8f234654083b34",
+          "subjectTitle": "Tunis",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
+        "sameImageExportSHA256": "6caecc2563f929b9551d3177a238167b64eb0a5a12cd88205afc35e8dfe86a07",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1637,10 +1784,10 @@
         3918
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "166360aba610429ca264dc618eae31024f0a6570d29af7bdff0f776da6a2d445",
-        "semanticContextSHA256": "2015b3665501ca495d3b83ee5a99c84cc97650b488864244400940fb90196e69",
+        "semanticContextSHA256": "467f57b4498e47aeb08782482c002c9accb20825ab0dc14b601476f906433e47",
         "subjectTitle": "Kahvitauko medinassa",
         "targetState": "existing-target"
       },
@@ -1764,9 +1911,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg",
-        "lahde": "Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)",
+        "lyhyt": "Kahvi ja croissant Hibounissa Mahdian seudulla vuonna 2024.",
         "selite": "Hibounissa Mahdian seudulla vuonna 2024 kuvattu kahvi ja croissant havainnollistavat kahvitaukoa yleisesti, eivät Tunisissa kuvattua annosta.",
-        "lyhyt": "Kahvi ja croissant Hibounissa Mahdian seudulla vuonna 2024."
+        "lahde": "Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1785,7 +1932,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -1797,11 +1944,32 @@
         "tiedosto": "Hiboun, Mahdia Governorate, Tunisia Feb 2024 - Croissant and Coffee.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "targetAfterSHA256": "166360aba610429ca264dc618eae31024f0a6570d29af7bdff0f776da6a2d445",
-      "contextAfterSHA256": "2015b3665501ca495d3b83ee5a99c84cc97650b488864244400940fb90196e69",
+      "contextAfterSHA256": "467f57b4498e47aeb08782482c002c9accb20825ab0dc14b601476f906433e47",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "166360aba610429ca264dc618eae31024f0a6570d29af7bdff0f776da6a2d445",
+        "contextAfterSHA256": "2015b3665501ca495d3b83ee5a99c84cc97650b488864244400940fb90196e69",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "166360aba610429ca264dc618eae31024f0a6570d29af7bdff0f776da6a2d445",
+          "semanticContextSHA256": "2015b3665501ca495d3b83ee5a99c84cc97650b488864244400940fb90196e69",
+          "subjectTitle": "Kahvitauko medinassa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+        "sameImageExportSHA256": "84ad1a15512b344cd4282c048dbc1de94bd1c12ee444d97e047628e8a5674291",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1823,23 +1991,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/k1-73ec1830c043e5ea3a1e.jpg",
         "suora": true,
         "lahde": "Youssefbensaad, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tunisin medinan katuverkko ja asuinkorttelit kuuluvat suojeltuun kaupunkikokonaisuuteen yhdessä monumenttien kanssa.",
-        "lyhyt": "Medinan katuverkko on osa Tunisin maailmanperintöä.",
+        "selite": "Tunisin medinan katu jatkuu holvin läpi vanhojen seinien, ovien ja ikkunoiden välissä.",
+        "lyhyt": "Holvin läpi jatkuva medinan katu.",
         "tiedosto": "Rue Medina de Tunis.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Youssefbensaad, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tunisin medinan katuverkko ja asuinkorttelit kuuluvat suojeltuun kaupunkikokonaisuuteen yhdessä monumenttien kanssa.",
-        "lyhyt": "Medinan katuverkko on osa Tunisin maailmanperintöä.",
+        "selite": "Tunisin medinan katu jatkuu holvin läpi vanhojen seinien, ovien ja ikkunoiden välissä.",
+        "lyhyt": "Holvin läpi jatkuva medinan katu.",
         "tiedosto": "Rue Medina de Tunis.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/k1-73ec1830c043e5ea3a1e.jpg",
         "suora": true,
         "lahde": "Youssefbensaad, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tunisin medinan katuverkko ja asuinkorttelit kuuluvat suojeltuun kaupunkikokonaisuuteen yhdessä monumenttien kanssa.",
-        "lyhyt": "Medinan katuverkko on osa Tunisin maailmanperintöä.",
+        "selite": "Tunisin medinan katu jatkuu holvin läpi vanhojen seinien, ovien ja ikkunoiden välissä.",
+        "lyhyt": "Holvin läpi jatkuva medinan katu.",
         "tiedosto": "Rue Medina de Tunis.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1854,10 +2022,10 @@
         4128
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d495b81c5f15744a55cda9cc7cb2d7d5ce33a66eaba0a34f8b695a99c0ed7bed",
-        "semanticContextSHA256": "d495b81c5f15744a55cda9cc7cb2d7d5ce33a66eaba0a34f8b695a99c0ed7bed",
+        "targetBeforeSHA256": "eb9c2498822f087d191588348e314da38be1eb54233a91e1ed19273f2579d691",
+        "semanticContextSHA256": "eb9c2498822f087d191588348e314da38be1eb54233a91e1ed19273f2579d691",
         "subjectTitle": "Perintö jatkuu monumenttien välissä",
         "targetState": "existing-target"
       },
@@ -1981,9 +2149,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Rue Medina de Tunis.jpg",
-        "lahde": "Youssefbensaad, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tunisin medinan katuverkko ja asuinkorttelit kuuluvat suojeltuun kaupunkikokonaisuuteen yhdessä monumenttien kanssa.",
-        "lyhyt": "Medinan katuverkko on osa Tunisin maailmanperintöä."
+        "lyhyt": "Holvin läpi jatkuva medinan katu.",
+        "selite": "Tunisin medinan katu jatkuu holvin läpi vanhojen seinien, ovien ja ikkunoiden välissä.",
+        "lahde": "Youssefbensaad, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2002,23 +2170,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Youssefbensaad, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tunisin medinan katuverkko ja asuinkorttelit kuuluvat suojeltuun kaupunkikokonaisuuteen yhdessä monumenttien kanssa.",
-        "lyhyt": "Medinan katuverkko on osa Tunisin maailmanperintöä.",
+        "selite": "Tunisin medinan katu jatkuu holvin läpi vanhojen seinien, ovien ja ikkunoiden välissä.",
+        "lyhyt": "Holvin läpi jatkuva medinan katu.",
         "tiedosto": "Rue Medina de Tunis.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "targetAfterSHA256": "d495b81c5f15744a55cda9cc7cb2d7d5ce33a66eaba0a34f8b695a99c0ed7bed",
-      "contextAfterSHA256": "d495b81c5f15744a55cda9cc7cb2d7d5ce33a66eaba0a34f8b695a99c0ed7bed",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+      "targetAfterSHA256": "eb9c2498822f087d191588348e314da38be1eb54233a91e1ed19273f2579d691",
+      "contextAfterSHA256": "eb9c2498822f087d191588348e314da38be1eb54233a91e1ed19273f2579d691",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "d495b81c5f15744a55cda9cc7cb2d7d5ce33a66eaba0a34f8b695a99c0ed7bed",
+        "contextAfterSHA256": "d495b81c5f15744a55cda9cc7cb2d7d5ce33a66eaba0a34f8b695a99c0ed7bed",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d495b81c5f15744a55cda9cc7cb2d7d5ce33a66eaba0a34f8b695a99c0ed7bed",
+          "semanticContextSHA256": "d495b81c5f15744a55cda9cc7cb2d7d5ce33a66eaba0a34f8b695a99c0ed7bed",
+          "subjectTitle": "Perintö jatkuu monumenttien välissä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "73ec1830c043e5ea3a1eee00b7086fc93af9c37a2c266dfff595a3533c76dac4",
+        "sameImageExportSHA256": "73ec1830c043e5ea3a1eee00b7086fc93af9c37a2c266dfff595a3533c76dac4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2071,7 +2260,7 @@
         1944
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "dff9f9540c5a3253f07ee8f16f4dbe06d20bb757261922e55b72c4b0f7d1d31c",
         "semanticContextSHA256": "dff9f9540c5a3253f07ee8f16f4dbe06d20bb757261922e55b72c4b0f7d1d31c",
@@ -2198,9 +2387,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Bab Bhar2.JPG",
-        "lahde": "IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)",
+        "lyhyt": "Bab el Bhar on Tunisin medinan Merenportti.",
         "selite": "Bab el Bharin sakarareunainen yläosa kuuluu porttiin, joka erottaa Tunisin medinan uudemmasta kaupungista.",
-        "lyhyt": "Bab el Bhar on Tunisin medinan Merenportti."
+        "lahde": "IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2219,7 +2408,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2231,11 +2420,32 @@
         "tiedosto": "Bab Bhar2.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "targetAfterSHA256": "dff9f9540c5a3253f07ee8f16f4dbe06d20bb757261922e55b72c4b0f7d1d31c",
       "contextAfterSHA256": "dff9f9540c5a3253f07ee8f16f4dbe06d20bb757261922e55b72c4b0f7d1d31c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "dff9f9540c5a3253f07ee8f16f4dbe06d20bb757261922e55b72c4b0f7d1d31c",
+        "contextAfterSHA256": "dff9f9540c5a3253f07ee8f16f4dbe06d20bb757261922e55b72c4b0f7d1d31c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "dff9f9540c5a3253f07ee8f16f4dbe06d20bb757261922e55b72c4b0f7d1d31c",
+          "semanticContextSHA256": "dff9f9540c5a3253f07ee8f16f4dbe06d20bb757261922e55b72c4b0f7d1d31c",
+          "subjectTitle": "Merenportti on kaupungin kynnys",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "df556cbe960c788d29d527de51b0504f17a52937ccd1244a0ccea2a383107838",
+        "sameImageExportSHA256": "df556cbe960c788d29d527de51b0504f17a52937ccd1244a0ccea2a383107838",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2257,23 +2467,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/k3-a0f37cdb58d41fdb85a3.jpg",
         "suora": true,
         "lahde": "Ahmed BEN YAGHLENE, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Zitouna-moskeijan pihasta avautuu vanha uskonnollinen rakennuskokonaisuus, johon liittyi pitkään korkeamman oppimisen perinne.",
-        "lyhyt": "Zitouna on ollut sekä moskeija että oppimisen paikka.",
+        "selite": "Zitounan avoin sisäpiha ja sitä reunustava kaariarkadi Tunisin medinassa.",
+        "lyhyt": "Zitouna-moskeijan sisäpiha.",
         "tiedosto": "Mosquée Zitouna (cour) 04.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Ahmed BEN YAGHLENE, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Zitouna-moskeijan pihasta avautuu vanha uskonnollinen rakennuskokonaisuus, johon liittyi pitkään korkeamman oppimisen perinne.",
-        "lyhyt": "Zitouna on ollut sekä moskeija että oppimisen paikka.",
+        "selite": "Zitounan avoin sisäpiha ja sitä reunustava kaariarkadi Tunisin medinassa.",
+        "lyhyt": "Zitouna-moskeijan sisäpiha.",
         "tiedosto": "Mosquée Zitouna (cour) 04.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/k3-a0f37cdb58d41fdb85a3.jpg",
         "suora": true,
         "lahde": "Ahmed BEN YAGHLENE, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Zitouna-moskeijan pihasta avautuu vanha uskonnollinen rakennuskokonaisuus, johon liittyi pitkään korkeamman oppimisen perinne.",
-        "lyhyt": "Zitouna on ollut sekä moskeija että oppimisen paikka.",
+        "selite": "Zitounan avoin sisäpiha ja sitä reunustava kaariarkadi Tunisin medinassa.",
+        "lyhyt": "Zitouna-moskeijan sisäpiha.",
         "tiedosto": "Mosquée Zitouna (cour) 04.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2288,10 +2498,10 @@
         3240
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "203ce83580f297a00460c1feeb675951a2191191151f7e2e5dd89a50f04fcc09",
-        "semanticContextSHA256": "203ce83580f297a00460c1feeb675951a2191191151f7e2e5dd89a50f04fcc09",
+        "targetBeforeSHA256": "95ed0c289f028e2ffb0444cb378c091465aec5a7a43406fcd50e0f881407671d",
+        "semanticContextSHA256": "95ed0c289f028e2ffb0444cb378c091465aec5a7a43406fcd50e0f881407671d",
         "subjectTitle": "Moskeijassa opiskeltiin myös lääketiedettä",
         "targetState": "existing-target"
       },
@@ -2415,9 +2625,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Mosquée Zitouna (cour) 04.jpg",
-        "lahde": "Ahmed BEN YAGHLENE, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Zitouna-moskeijan pihasta avautuu vanha uskonnollinen rakennuskokonaisuus, johon liittyi pitkään korkeamman oppimisen perinne.",
-        "lyhyt": "Zitouna on ollut sekä moskeija että oppimisen paikka."
+        "lyhyt": "Zitouna-moskeijan sisäpiha.",
+        "selite": "Zitounan avoin sisäpiha ja sitä reunustava kaariarkadi Tunisin medinassa.",
+        "lahde": "Ahmed BEN YAGHLENE, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2436,23 +2646,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Ahmed BEN YAGHLENE, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Zitouna-moskeijan pihasta avautuu vanha uskonnollinen rakennuskokonaisuus, johon liittyi pitkään korkeamman oppimisen perinne.",
-        "lyhyt": "Zitouna on ollut sekä moskeija että oppimisen paikka.",
+        "selite": "Zitounan avoin sisäpiha ja sitä reunustava kaariarkadi Tunisin medinassa.",
+        "lyhyt": "Zitouna-moskeijan sisäpiha.",
         "tiedosto": "Mosquée Zitouna (cour) 04.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "targetAfterSHA256": "203ce83580f297a00460c1feeb675951a2191191151f7e2e5dd89a50f04fcc09",
-      "contextAfterSHA256": "203ce83580f297a00460c1feeb675951a2191191151f7e2e5dd89a50f04fcc09",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+      "targetAfterSHA256": "95ed0c289f028e2ffb0444cb378c091465aec5a7a43406fcd50e0f881407671d",
+      "contextAfterSHA256": "95ed0c289f028e2ffb0444cb378c091465aec5a7a43406fcd50e0f881407671d",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "203ce83580f297a00460c1feeb675951a2191191151f7e2e5dd89a50f04fcc09",
+        "contextAfterSHA256": "203ce83580f297a00460c1feeb675951a2191191151f7e2e5dd89a50f04fcc09",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "203ce83580f297a00460c1feeb675951a2191191151f7e2e5dd89a50f04fcc09",
+          "semanticContextSHA256": "203ce83580f297a00460c1feeb675951a2191191151f7e2e5dd89a50f04fcc09",
+          "subjectTitle": "Moskeijassa opiskeltiin myös lääketiedettä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "a0f37cdb58d41fdb85a3a976bc38ba3bd3c2662cafef6d1372a246025905c6d8",
+        "sameImageExportSHA256": "a0f37cdb58d41fdb85a3a976bc38ba3bd3c2662cafef6d1372a246025905c6d8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2474,14 +2705,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/k4-fc731908e29900f35075.jpg",
         "suora": true,
         "lahde": "Wildtunis, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Souk El Attarine on Tunisin medinan hajusteisiin ja kauneustuotteisiin erikoistunut kauppakuja, tässä ennen kauppojen avautumista vuonna 2017.",
+        "selite": "Tunisin medinan katettu Souk El Attarine -kauppakuja ennen kauppojen avautumista vuonna 2017.",
         "lyhyt": "Souk El Attarine on Tunisin medinan hajusteiden kauppakuja.",
         "tiedosto": "Souk El Attarine avant l'ouverture des boutiques.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Wildtunis, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Souk El Attarine on Tunisin medinan hajusteisiin ja kauneustuotteisiin erikoistunut kauppakuja, tässä ennen kauppojen avautumista vuonna 2017.",
+        "selite": "Tunisin medinan katettu Souk El Attarine -kauppakuja ennen kauppojen avautumista vuonna 2017.",
         "lyhyt": "Souk El Attarine on Tunisin medinan hajusteiden kauppakuja.",
         "tiedosto": "Souk El Attarine avant l'ouverture des boutiques.jpg"
       },
@@ -2489,7 +2720,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/k4-fc731908e29900f35075.jpg",
         "suora": true,
         "lahde": "Wildtunis, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Souk El Attarine on Tunisin medinan hajusteisiin ja kauneustuotteisiin erikoistunut kauppakuja, tässä ennen kauppojen avautumista vuonna 2017.",
+        "selite": "Tunisin medinan katettu Souk El Attarine -kauppakuja ennen kauppojen avautumista vuonna 2017.",
         "lyhyt": "Souk El Attarine on Tunisin medinan hajusteiden kauppakuja.",
         "tiedosto": "Souk El Attarine avant l'ouverture des boutiques.jpg"
       },
@@ -2505,10 +2736,10 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f5bcf73408ae65a7994d5337dcc080d33c429a609dbfefc01cd76edabdf071fe",
-        "semanticContextSHA256": "f5bcf73408ae65a7994d5337dcc080d33c429a609dbfefc01cd76edabdf071fe",
+        "targetBeforeSHA256": "12c04c030760045293d05ec76dd9c591234623a2e5646237533a5b9132af7183",
+        "semanticContextSHA256": "12c04c030760045293d05ec76dd9c591234623a2e5646237533a5b9132af7183",
         "subjectTitle": "Kauppakujalla on oma erikoisalansa",
         "targetState": "existing-target"
       },
@@ -2684,9 +2915,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Souk El Attarine avant l'ouverture des boutiques.jpg",
-        "lahde": "Wildtunis, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Souk El Attarine on Tunisin medinan hajusteisiin ja kauneustuotteisiin erikoistunut kauppakuja, tässä ennen kauppojen avautumista vuonna 2017.",
-        "lyhyt": "Souk El Attarine on Tunisin medinan hajusteiden kauppakuja."
+        "lyhyt": "Souk El Attarine on Tunisin medinan hajusteiden kauppakuja.",
+        "selite": "Tunisin medinan katettu Souk El Attarine -kauppakuja ennen kauppojen avautumista vuonna 2017.",
+        "lahde": "Wildtunis, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2705,23 +2936,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Wildtunis, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Souk El Attarine on Tunisin medinan hajusteisiin ja kauneustuotteisiin erikoistunut kauppakuja, tässä ennen kauppojen avautumista vuonna 2017.",
+        "selite": "Tunisin medinan katettu Souk El Attarine -kauppakuja ennen kauppojen avautumista vuonna 2017.",
         "lyhyt": "Souk El Attarine on Tunisin medinan hajusteiden kauppakuja.",
         "tiedosto": "Souk El Attarine avant l'ouverture des boutiques.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "targetAfterSHA256": "f5bcf73408ae65a7994d5337dcc080d33c429a609dbfefc01cd76edabdf071fe",
-      "contextAfterSHA256": "f5bcf73408ae65a7994d5337dcc080d33c429a609dbfefc01cd76edabdf071fe",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+      "targetAfterSHA256": "12c04c030760045293d05ec76dd9c591234623a2e5646237533a5b9132af7183",
+      "contextAfterSHA256": "12c04c030760045293d05ec76dd9c591234623a2e5646237533a5b9132af7183",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "f5bcf73408ae65a7994d5337dcc080d33c429a609dbfefc01cd76edabdf071fe",
+        "contextAfterSHA256": "f5bcf73408ae65a7994d5337dcc080d33c429a609dbfefc01cd76edabdf071fe",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "f5bcf73408ae65a7994d5337dcc080d33c429a609dbfefc01cd76edabdf071fe",
+          "semanticContextSHA256": "f5bcf73408ae65a7994d5337dcc080d33c429a609dbfefc01cd76edabdf071fe",
+          "subjectTitle": "Kauppakujalla on oma erikoisalansa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "fc731908e29900f350757bd94c6adee38dd1514d118d6977b837f635167555d1",
+        "sameImageExportSHA256": "fc731908e29900f350757bd94c6adee38dd1514d118d6977b837f635167555d1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2774,7 +3026,7 @@
         4000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "15a65042274a76604496cf2df2474a19e6fb24abae73baefffb56a0b24f5e490",
         "semanticContextSHA256": "15a65042274a76604496cf2df2474a19e6fb24abae73baefffb56a0b24f5e490",
@@ -2901,9 +3153,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Mosquée de la casba.jpg",
-        "lahde": "Ben guedria houcine, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Kasbah-moskeijan kiviminareetti kuuluu keskiaikaiseen moskeijaan.",
         "selite": "Kasbah-moskeijan kiviminareetti kuuluu keskiaikaiseen rakennukseen, joka palveli ensin Kasbahin hallitsijoita.",
-        "lyhyt": "Kasbah-moskeijan kiviminareetti kuuluu keskiaikaiseen moskeijaan."
+        "lahde": "Ben guedria houcine, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2922,7 +3174,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2934,11 +3186,32 @@
         "tiedosto": "Mosquée de la casba.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "targetAfterSHA256": "15a65042274a76604496cf2df2474a19e6fb24abae73baefffb56a0b24f5e490",
       "contextAfterSHA256": "15a65042274a76604496cf2df2474a19e6fb24abae73baefffb56a0b24f5e490",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "15a65042274a76604496cf2df2474a19e6fb24abae73baefffb56a0b24f5e490",
+        "contextAfterSHA256": "15a65042274a76604496cf2df2474a19e6fb24abae73baefffb56a0b24f5e490",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "15a65042274a76604496cf2df2474a19e6fb24abae73baefffb56a0b24f5e490",
+          "semanticContextSHA256": "15a65042274a76604496cf2df2474a19e6fb24abae73baefffb56a0b24f5e490",
+          "subjectTitle": "Hallitsijoiden moskeija avautui kaupungille",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "36230a0dab63641fdcb67af55201e14f2dd30fc5be62fde81da0db43366942b9",
+        "sameImageExportSHA256": "36230a0dab63641fdcb67af55201e14f2dd30fc5be62fde81da0db43366942b9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2991,7 +3264,7 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4a5ce49763864ea29162f41f011493cbf5793fce310e7662146c44b6b76b30fb",
         "semanticContextSHA256": "9f21474aa4b91c3a918421534df0f8f70db145b5ad6f5a8069baa714abf25b51",
@@ -3118,9 +3391,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Bab Bhar photo 2 باب البحر.jpg",
-        "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Bab el Bhar erottaa medinan uudemmasta Tunisista.",
         "selite": "Bab el Bhar eli Merenportti on Tunisin medinan itäpuolinen portti, joka tunnetaan myös nimellä Porte de France.",
-        "lyhyt": "Bab el Bhar erottaa medinan uudemmasta Tunisista."
+        "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3139,7 +3412,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3151,11 +3424,32 @@
         "tiedosto": "Bab Bhar photo 2 باب البحر.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "targetAfterSHA256": "4a5ce49763864ea29162f41f011493cbf5793fce310e7662146c44b6b76b30fb",
       "contextAfterSHA256": "9f21474aa4b91c3a918421534df0f8f70db145b5ad6f5a8069baa714abf25b51",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "4a5ce49763864ea29162f41f011493cbf5793fce310e7662146c44b6b76b30fb",
+        "contextAfterSHA256": "9f21474aa4b91c3a918421534df0f8f70db145b5ad6f5a8069baa714abf25b51",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "4a5ce49763864ea29162f41f011493cbf5793fce310e7662146c44b6b76b30fb",
+          "semanticContextSHA256": "9f21474aa4b91c3a918421534df0f8f70db145b5ad6f5a8069baa714abf25b51",
+          "subjectTitle": "Bab el Bhar – Merenportti",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "111f7de60f0fb4f9f627b3ab65af43ea5dc9cd196b5ff599ced61857dff78d8f",
+        "sameImageExportSHA256": "111f7de60f0fb4f9f627b3ab65af43ea5dc9cd196b5ff599ced61857dff78d8f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -3178,14 +3472,14 @@
         "suora": true,
         "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Dar Lasramin sisäänkäynti kuuluu 1800-luvun alkupuolen palatsiin, jonka rakennuttaja oli maanomistaja ja kirjuri Hamouda Lasram.",
-        "lyhyt": "Dar Lasramin palatsi rakennettiin 1800-luvun alkupuolella.",
+        "lyhyt": "Dar Lasramin palatsin sisäänkäynti.",
         "tiedosto": "Gate of Dar Lasrem - Porte du Dar Lasrem - باب دار الأصرم.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Dar Lasramin sisäänkäynti kuuluu 1800-luvun alkupuolen palatsiin, jonka rakennuttaja oli maanomistaja ja kirjuri Hamouda Lasram.",
-        "lyhyt": "Dar Lasramin palatsi rakennettiin 1800-luvun alkupuolella.",
+        "lyhyt": "Dar Lasramin palatsin sisäänkäynti.",
         "tiedosto": "Gate of Dar Lasrem - Porte du Dar Lasrem - باب دار الأصرم.jpg"
       },
       "runtimeMediaFieldPayload": {
@@ -3193,7 +3487,7 @@
         "suora": true,
         "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Dar Lasramin sisäänkäynti kuuluu 1800-luvun alkupuolen palatsiin, jonka rakennuttaja oli maanomistaja ja kirjuri Hamouda Lasram.",
-        "lyhyt": "Dar Lasramin palatsi rakennettiin 1800-luvun alkupuolella.",
+        "lyhyt": "Dar Lasramin palatsin sisäänkäynti.",
         "tiedosto": "Gate of Dar Lasrem - Porte du Dar Lasrem - باب دار الأصرم.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3208,10 +3502,10 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0cdc794de8b82847eb8d481d209a4189251012db74d64fd021725533889fbbd6",
-        "semanticContextSHA256": "b6aaa6cb6c9254865d5cb83be62ad84cccc67a180e3189142debea26b559f400",
+        "targetBeforeSHA256": "8d1b0479cb21a0ff139e18a63c534c23e6011e2156cf439d01b9814de82773ad",
+        "semanticContextSHA256": "2c5555ac3d547ac06307648693fbb696a622da84b3901e2bf65ae49df3e40b17",
         "subjectTitle": "Dar Lasram",
         "targetState": "existing-target"
       },
@@ -3335,9 +3629,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Gate of Dar Lasrem - Porte du Dar Lasrem - باب دار الأصرم.jpg",
-        "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Dar Lasramin palatsin sisäänkäynti.",
         "selite": "Dar Lasramin sisäänkäynti kuuluu 1800-luvun alkupuolen palatsiin, jonka rakennuttaja oli maanomistaja ja kirjuri Hamouda Lasram.",
-        "lyhyt": "Dar Lasramin palatsi rakennettiin 1800-luvun alkupuolella."
+        "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3356,7 +3650,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3364,15 +3658,36 @@
       "CcommonsFieldPayload": {
         "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
         "selite": "Dar Lasramin sisäänkäynti kuuluu 1800-luvun alkupuolen palatsiin, jonka rakennuttaja oli maanomistaja ja kirjuri Hamouda Lasram.",
-        "lyhyt": "Dar Lasramin palatsi rakennettiin 1800-luvun alkupuolella.",
+        "lyhyt": "Dar Lasramin palatsin sisäänkäynti.",
         "tiedosto": "Gate of Dar Lasrem - Porte du Dar Lasrem - باب دار الأصرم.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "targetAfterSHA256": "0cdc794de8b82847eb8d481d209a4189251012db74d64fd021725533889fbbd6",
-      "contextAfterSHA256": "b6aaa6cb6c9254865d5cb83be62ad84cccc67a180e3189142debea26b559f400",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+      "targetAfterSHA256": "8d1b0479cb21a0ff139e18a63c534c23e6011e2156cf439d01b9814de82773ad",
+      "contextAfterSHA256": "2c5555ac3d547ac06307648693fbb696a622da84b3901e2bf65ae49df3e40b17",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "0cdc794de8b82847eb8d481d209a4189251012db74d64fd021725533889fbbd6",
+        "contextAfterSHA256": "b6aaa6cb6c9254865d5cb83be62ad84cccc67a180e3189142debea26b559f400",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0cdc794de8b82847eb8d481d209a4189251012db74d64fd021725533889fbbd6",
+          "semanticContextSHA256": "b6aaa6cb6c9254865d5cb83be62ad84cccc67a180e3189142debea26b559f400",
+          "subjectTitle": "Dar Lasram",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "1fdba48d816acee49d95cd7030d8f1a07abf7d56b7d43d572533402d1ffef038",
+        "sameImageExportSHA256": "1fdba48d816acee49d95cd7030d8f1a07abf7d56b7d43d572533402d1ffef038",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -3394,23 +3709,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg",
         "suora": true,
         "lahde": "Rais67, Wikimedia Commons (PD)",
-        "selite": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
-        "lyhyt": "Kasbah-moskeija rakennettiin keskiajalla.",
+        "selite": "Kasbah-moskeijan kivinen torni vinoneliökoristeluineen kohoaa puuston takana Tunisissa.",
+        "lyhyt": "Kasbah-moskeijan kiviminareetti.",
         "tiedosto": "Tunis Mosqué Kasbah.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Rais67, Wikimedia Commons (PD)",
-        "selite": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
-        "lyhyt": "Kasbah-moskeija rakennettiin keskiajalla.",
+        "selite": "Kasbah-moskeijan kivinen torni vinoneliökoristeluineen kohoaa puuston takana Tunisissa.",
+        "lyhyt": "Kasbah-moskeijan kiviminareetti.",
         "tiedosto": "Tunis Mosqué Kasbah.JPG"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg",
         "suora": true,
         "lahde": "Rais67, Wikimedia Commons (PD)",
-        "selite": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
-        "lyhyt": "Kasbah-moskeija rakennettiin keskiajalla.",
+        "selite": "Kasbah-moskeijan kivinen torni vinoneliökoristeluineen kohoaa puuston takana Tunisissa.",
+        "lyhyt": "Kasbah-moskeijan kiviminareetti.",
         "tiedosto": "Tunis Mosqué Kasbah.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3425,10 +3740,10 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8e64d3bde842ea488bca183dc885954635af6b8915a3582b85d05fec5deced0b",
-        "semanticContextSHA256": "432c2070109e021918840560428137b6521efb4e73ed7a7d1491df727cf71f22",
+        "targetBeforeSHA256": "50e91b7f4392d14ce854f06091bb2c59405b1ee7f96acbe491a56f97196a5f1d",
+        "semanticContextSHA256": "4d90bb18ae5bb598af9fcfbe2c65cc385ad9849dd7520f2d48a4067336028f6c",
         "subjectTitle": "Kasbah-moskeija",
         "targetState": "existing-target"
       },
@@ -3550,9 +3865,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Tunis Mosqué Kasbah.JPG",
-        "lahde": "Rais67, Wikimedia Commons (PD)",
-        "selite": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
-        "lyhyt": "Kasbah-moskeija rakennettiin keskiajalla."
+        "lyhyt": "Kasbah-moskeijan kiviminareetti.",
+        "selite": "Kasbah-moskeijan kivinen torni vinoneliökoristeluineen kohoaa puuston takana Tunisissa.",
+        "lahde": "Rais67, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3571,23 +3886,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Rais67, Wikimedia Commons (PD)",
-        "selite": "Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.",
-        "lyhyt": "Kasbah-moskeija rakennettiin keskiajalla.",
+        "selite": "Kasbah-moskeijan kivinen torni vinoneliökoristeluineen kohoaa puuston takana Tunisissa.",
+        "lyhyt": "Kasbah-moskeijan kiviminareetti.",
         "tiedosto": "Tunis Mosqué Kasbah.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
-      "targetAfterSHA256": "8e64d3bde842ea488bca183dc885954635af6b8915a3582b85d05fec5deced0b",
-      "contextAfterSHA256": "432c2070109e021918840560428137b6521efb4e73ed7a7d1491df727cf71f22",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+      "targetAfterSHA256": "50e91b7f4392d14ce854f06091bb2c59405b1ee7f96acbe491a56f97196a5f1d",
+      "contextAfterSHA256": "4d90bb18ae5bb598af9fcfbe2c65cc385ad9849dd7520f2d48a4067336028f6c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "8e64d3bde842ea488bca183dc885954635af6b8915a3582b85d05fec5deced0b",
+        "contextAfterSHA256": "432c2070109e021918840560428137b6521efb4e73ed7a7d1491df727cf71f22",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8e64d3bde842ea488bca183dc885954635af6b8915a3582b85d05fec5deced0b",
+          "semanticContextSHA256": "432c2070109e021918840560428137b6521efb4e73ed7a7d1491df727cf71f22",
+          "subjectTitle": "Kasbah-moskeija",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+        "sameImageExportSHA256": "9a69b66f73db22cbd555cf1d323e888b7a274aab06bf7fa3d9c3eb35d9b013b7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -3640,10 +3976,10 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/tunis/sisalto.json",
-      "sourceContentSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e42ac317b95b1ef3e94110cab1b8746d86a53ba4e8bec04bbb21166856c18625",
-        "semanticContextSHA256": "33cf3c63e6e8852702857b1bedc6422568f96a024ee30d2328dbf651e41232f2",
+        "semanticContextSHA256": "3ecfc410893997dddf6570218e4f8e1b2e42a87d263e579d4067905e300fadb1",
         "subjectTitle": "Zitouna-moskeija",
         "targetState": "existing-target"
       },
@@ -3767,9 +4103,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Corridor of Al-Zaytuna Mosque.jpg",
-        "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Zitounan sisäpihaa reunustavat kaarigalleriat.",
         "selite": "Zitouna-moskeijan sisäpihaa reunustavat kaarigalleriat kuuluvat vanhaan rakennuskokonaisuuteen Tunisin medinan keskuksessa.",
-        "lyhyt": "Zitounan sisäpihaa reunustavat kaarigalleriat."
+        "lahde": "Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3788,7 +4124,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3800,16 +4136,43 @@
         "tiedosto": "Corridor of Al-Zaytuna Mosque.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+      "sourceContentAfterSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
       "targetAfterSHA256": "e42ac317b95b1ef3e94110cab1b8746d86a53ba4e8bec04bbb21166856c18625",
-      "contextAfterSHA256": "33cf3c63e6e8852702857b1bedc6422568f96a024ee30d2328dbf651e41232f2",
+      "contextAfterSHA256": "3ecfc410893997dddf6570218e4f8e1b2e42a87d263e579d4067905e300fadb1",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d3a9f1f168a2da7dafea0141de96cd5aebb379ed6f2a37be40101ca1767d7f4e",
+        "targetAfterSHA256": "e42ac317b95b1ef3e94110cab1b8746d86a53ba4e8bec04bbb21166856c18625",
+        "contextAfterSHA256": "33cf3c63e6e8852702857b1bedc6422568f96a024ee30d2328dbf651e41232f2",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e42ac317b95b1ef3e94110cab1b8746d86a53ba4e8bec04bbb21166856c18625",
+          "semanticContextSHA256": "33cf3c63e6e8852702857b1bedc6422568f96a024ee30d2328dbf651e41232f2",
+          "subjectTitle": "Zitouna-moskeija",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "bc4091031c23e8c7fdb6b529ae575936542283a921f1456635814a0a5013509d",
+        "sameImageNativeSHA256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+        "sameImageExportSHA256": "74df334f116edecb24e0583cdc39a5d569b7ae286f77c38c7485f6144114ba89",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e04/tunis/c996294491737f6edcdd065a6f8ad5d0dfb1b3b0e695402a6d9927386e932e7f.json",
+  "task118ReboundAt": "2026-10-13T16:33:24.096332+00:00"
 }

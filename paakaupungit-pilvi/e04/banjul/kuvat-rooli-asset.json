@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "banjul",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+  "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
   "assets": [
     {
       "era": "e04",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/banjul-traveler-havainne-v1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroveranta jokisuun ympäristön yleiskuvituksena. Havainnekuva.",
-        "lyhyt": "Mangroveranta jokisuun ympäristön yleiskuvituksena. Havainnekuva."
+        "selite": "Mangroveranta jokisuun ympäristön yleiskuvituksena. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/banjul-traveler-havainne-v1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Mangroveranta jokisuun ympäristön yleiskuvituksena. Havainnekuva.",
-        "lyhyt": "Mangroveranta jokisuun ympäristön yleiskuvituksena. Havainnekuva."
+        "selite": "Mangroveranta jokisuun ympäristön yleiskuvituksena. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-        "semanticContextSHA256": "3754437b5353d17f29662822bb8e8fd08ba2b08083aef2405afea97720fc4d8f",
+        "semanticContextSHA256": "b588005d9b9f01bdaa3e2e427c3ec24848306222fd572889b9d8d47e3ff3bcdf",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -184,17 +184,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "targetAfterSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
-      "contextAfterSHA256": "3754437b5353d17f29662822bb8e8fd08ba2b08083aef2405afea97720fc4d8f",
+      "contextAfterSHA256": "b588005d9b9f01bdaa3e2e427c3ec24848306222fd572889b9d8d47e3ff3bcdf",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "contextAfterSHA256": "3754437b5353d17f29662822bb8e8fd08ba2b08083aef2405afea97720fc4d8f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "semanticContextSHA256": "3754437b5353d17f29662822bb8e8fd08ba2b08083aef2405afea97720fc4d8f",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "690390ec20db00321276b7d87652da855380ee4ab7d114d0feee891b69bad9a0",
+        "sameImageExportSHA256": "690390ec20db00321276b7d87652da855380ee4ab7d114d0feee891b69bad9a0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -216,10 +237,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/banjul-k3-lautta.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Lautta yhdistää jokisuun rannat, yleishavainnollistus. Havainnekuva.",
-        "lyhyt": "Lautta yhdistää jokisuun rannat, yleishavainnollistus. Havainnekuva."
+        "selite": "Lautta yhdistää jokisuun rannat, yleishavainnollistus. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -227,10 +248,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/banjul-k3-lautta.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Lautta yhdistää jokisuun rannat, yleishavainnollistus. Havainnekuva.",
-        "lyhyt": "Lautta yhdistää jokisuun rannat, yleishavainnollistus. Havainnekuva."
+        "selite": "Lautta yhdistää jokisuun rannat, yleishavainnollistus. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -244,7 +265,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
         "semanticContextSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
@@ -359,9 +380,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -380,17 +401,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "targetAfterSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
       "contextAfterSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
+        "contextAfterSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
+          "semanticContextSHA256": "6af918ed0cf1bc4bcbf21aa3ee07f11e8ed2df1fd365c654f24d05271089dabd",
+          "subjectTitle": "Lautta vaihtaa joen rantaa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "c642c657fc731e669a12498a800f5f00eabb2533528fb5cc17ccc41d0fe2fe9d",
+        "sameImageExportSHA256": "c642c657fc731e669a12498a800f5f00eabb2533528fb5cc17ccc41d0fe2fe9d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -409,16 +451,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/photo-f2a793d1ec66e9601ddf.jpg",
         "suora": true,
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Commons (CC BY 2.0)",
-        "selite": "Tanbin mangrovejuuristossa vuonna 2013 kuvattu lintu kuuluu kosteikon luonnonympäristöön.",
-        "lyhyt": "Tanbin mangrovejuuristo tarjoaa elinympäristöä kosteikon linnuille.",
+        "selite": "Vuonna 2013 Tanbissa kuvattu lintu istuu mangroven juurten ja veden lomassa.",
+        "lyhyt": "Lintu Tanbin mangroven juuristossa.",
         "tiedosto": "Gambia (9383667592).jpg",
         "vuosi": "2013"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Commons (CC BY 2.0)",
-        "selite": "Tanbin mangrovejuuristossa vuonna 2013 kuvattu lintu kuuluu kosteikon luonnonympäristöön.",
-        "lyhyt": "Tanbin mangrovejuuristo tarjoaa elinympäristöä kosteikon linnuille.",
+        "selite": "Vuonna 2013 Tanbissa kuvattu lintu istuu mangroven juurten ja veden lomassa.",
+        "lyhyt": "Lintu Tanbin mangroven juuristossa.",
         "tiedosto": "Gambia (9383667592).jpg",
         "vuosi": "2013"
       },
@@ -426,8 +468,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/photo-f2a793d1ec66e9601ddf.jpg",
         "suora": true,
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Commons (CC BY 2.0)",
-        "selite": "Tanbin mangrovejuuristossa vuonna 2013 kuvattu lintu kuuluu kosteikon luonnonympäristöön.",
-        "lyhyt": "Tanbin mangrovejuuristo tarjoaa elinympäristöä kosteikon linnuille.",
+        "selite": "Vuonna 2013 Tanbissa kuvattu lintu istuu mangroven juurten ja veden lomassa.",
+        "lyhyt": "Lintu Tanbin mangroven juuristossa.",
         "tiedosto": "Gambia (9383667592).jpg",
         "vuosi": "2013"
       },
@@ -443,10 +485,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d7da4685b39656da619d42553ad69b18a10654f52f727db6ccf7efd7d7dbe442",
-        "semanticContextSHA256": "d7da4685b39656da619d42553ad69b18a10654f52f727db6ccf7efd7d7dbe442",
+        "targetBeforeSHA256": "ee24a039049f299e762e34fe64599796fe3f2fc95ab4817b36cd757b12137e6e",
+        "semanticContextSHA256": "ee24a039049f299e762e34fe64599796fe3f2fc95ab4817b36cd757b12137e6e",
         "subjectTitle": "banjul — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -670,9 +712,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Gambia (9383667592).jpg",
+        "lyhyt": "Lintu Tanbin mangroven juuristossa.",
+        "selite": "Vuonna 2013 Tanbissa kuvattu lintu istuu mangroven juurten ja veden lomassa.",
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Commons (CC BY 2.0)",
-        "selite": "Tanbin mangrovejuuristossa vuonna 2013 kuvattu lintu kuuluu kosteikon luonnonympäristöön.",
-        "lyhyt": "Tanbin mangrovejuuristo tarjoaa elinympäristöä kosteikon linnuille.",
         "vuosi": "2013"
       },
       "preservePreviousMediaObjects": true,
@@ -692,24 +734,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Commons (CC BY 2.0)",
-        "selite": "Tanbin mangrovejuuristossa vuonna 2013 kuvattu lintu kuuluu kosteikon luonnonympäristöön.",
-        "lyhyt": "Tanbin mangrovejuuristo tarjoaa elinympäristöä kosteikon linnuille.",
+        "selite": "Vuonna 2013 Tanbissa kuvattu lintu istuu mangroven juurten ja veden lomassa.",
+        "lyhyt": "Lintu Tanbin mangroven juuristossa.",
         "tiedosto": "Gambia (9383667592).jpg",
         "vuosi": "2013"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
-      "targetAfterSHA256": "d7da4685b39656da619d42553ad69b18a10654f52f727db6ccf7efd7d7dbe442",
-      "contextAfterSHA256": "d7da4685b39656da619d42553ad69b18a10654f52f727db6ccf7efd7d7dbe442",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+      "targetAfterSHA256": "ee24a039049f299e762e34fe64599796fe3f2fc95ab4817b36cd757b12137e6e",
+      "contextAfterSHA256": "ee24a039049f299e762e34fe64599796fe3f2fc95ab4817b36cd757b12137e6e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "d7da4685b39656da619d42553ad69b18a10654f52f727db6ccf7efd7d7dbe442",
+        "contextAfterSHA256": "d7da4685b39656da619d42553ad69b18a10654f52f727db6ccf7efd7d7dbe442",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d7da4685b39656da619d42553ad69b18a10654f52f727db6ccf7efd7d7dbe442",
+          "semanticContextSHA256": "d7da4685b39656da619d42553ad69b18a10654f52f727db6ccf7efd7d7dbe442",
+          "subjectTitle": "banjul — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "f2a793d1ec66e9601ddfe3fbc8efdf0d3342ac6a4cdb83ffe8ddeeb48c9d3300",
+        "sameImageExportSHA256": "f2a793d1ec66e9601ddfe3fbc8efdf0d3342ac6a4cdb83ffe8ddeeb48c9d3300",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -731,23 +794,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/c1-d171d042950cef00e9ce.jpg",
         "suora": true,
         "lahde": "NASA/METI/AIST/Japan Space Systems, and U.S./Japan ASTER Science Team, Wikimedia Commons (PD)",
-        "selite": "Banjul ja sen viereinen Tanbin kosteikko muodostavat jokisuun rannalle saarimaisen kaupunkipaikan, joka erottuu tässä satelliittinäkymässä.",
-        "lyhyt": "Banjul sijaitsee Gambia-joen suulla, mangrovekosteikon ja mantereen vieressä.",
+        "selite": "Banjulin saarikaupunki, mantereen kaupunkialue ja Tanbin kanaalit ASTER-satelliitin kuvassa joulukuussa 2009.",
+        "lyhyt": "Banjulin jokisuu ja Tanbin kosteikko satelliittikuvassa.",
         "tiedosto": "Banjul, The Gambia (ASTER).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA/METI/AIST/Japan Space Systems, and U.S./Japan ASTER Science Team, Wikimedia Commons (PD)",
-        "selite": "Banjul ja sen viereinen Tanbin kosteikko muodostavat jokisuun rannalle saarimaisen kaupunkipaikan, joka erottuu tässä satelliittinäkymässä.",
-        "lyhyt": "Banjul sijaitsee Gambia-joen suulla, mangrovekosteikon ja mantereen vieressä.",
+        "selite": "Banjulin saarikaupunki, mantereen kaupunkialue ja Tanbin kanaalit ASTER-satelliitin kuvassa joulukuussa 2009.",
+        "lyhyt": "Banjulin jokisuu ja Tanbin kosteikko satelliittikuvassa.",
         "tiedosto": "Banjul, The Gambia (ASTER).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/c1-d171d042950cef00e9ce.jpg",
         "suora": true,
         "lahde": "NASA/METI/AIST/Japan Space Systems, and U.S./Japan ASTER Science Team, Wikimedia Commons (PD)",
-        "selite": "Banjul ja sen viereinen Tanbin kosteikko muodostavat jokisuun rannalle saarimaisen kaupunkipaikan, joka erottuu tässä satelliittinäkymässä.",
-        "lyhyt": "Banjul sijaitsee Gambia-joen suulla, mangrovekosteikon ja mantereen vieressä.",
+        "selite": "Banjulin saarikaupunki, mantereen kaupunkialue ja Tanbin kanaalit ASTER-satelliitin kuvassa joulukuussa 2009.",
+        "lyhyt": "Banjulin jokisuu ja Tanbin kosteikko satelliittikuvassa.",
         "tiedosto": "Banjul, The Gambia (ASTER).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -762,10 +825,10 @@
         1656
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "4cd32d54356122f71d154f64139e27c5a1b93c8f8986965c097d039d7968b6e3",
-        "semanticContextSHA256": "4cd32d54356122f71d154f64139e27c5a1b93c8f8986965c097d039d7968b6e3",
+        "targetBeforeSHA256": "81f97aa31ab4c5ff9046e1a47347a82e85fc091465856299b4596b761cd3d810",
+        "semanticContextSHA256": "81f97aa31ab4c5ff9046e1a47347a82e85fc091465856299b4596b761cd3d810",
         "subjectTitle": "Banjul",
         "targetState": "existing-target"
       },
@@ -954,9 +1017,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Banjul, The Gambia (ASTER).jpg",
-        "lahde": "NASA/METI/AIST/Japan Space Systems, and U.S./Japan ASTER Science Team, Wikimedia Commons (PD)",
-        "selite": "Banjul ja sen viereinen Tanbin kosteikko muodostavat jokisuun rannalle saarimaisen kaupunkipaikan, joka erottuu tässä satelliittinäkymässä.",
-        "lyhyt": "Banjul sijaitsee Gambia-joen suulla, mangrovekosteikon ja mantereen vieressä."
+        "lyhyt": "Banjulin jokisuu ja Tanbin kosteikko satelliittikuvassa.",
+        "selite": "Banjulin saarikaupunki, mantereen kaupunkialue ja Tanbin kanaalit ASTER-satelliitin kuvassa joulukuussa 2009.",
+        "lahde": "NASA/METI/AIST/Japan Space Systems, and U.S./Japan ASTER Science Team, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -975,23 +1038,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA/METI/AIST/Japan Space Systems, and U.S./Japan ASTER Science Team, Wikimedia Commons (PD)",
-        "selite": "Banjul ja sen viereinen Tanbin kosteikko muodostavat jokisuun rannalle saarimaisen kaupunkipaikan, joka erottuu tässä satelliittinäkymässä.",
-        "lyhyt": "Banjul sijaitsee Gambia-joen suulla, mangrovekosteikon ja mantereen vieressä.",
+        "selite": "Banjulin saarikaupunki, mantereen kaupunkialue ja Tanbin kanaalit ASTER-satelliitin kuvassa joulukuussa 2009.",
+        "lyhyt": "Banjulin jokisuu ja Tanbin kosteikko satelliittikuvassa.",
         "tiedosto": "Banjul, The Gambia (ASTER).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
-      "targetAfterSHA256": "4cd32d54356122f71d154f64139e27c5a1b93c8f8986965c097d039d7968b6e3",
-      "contextAfterSHA256": "4cd32d54356122f71d154f64139e27c5a1b93c8f8986965c097d039d7968b6e3",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+      "targetAfterSHA256": "81f97aa31ab4c5ff9046e1a47347a82e85fc091465856299b4596b761cd3d810",
+      "contextAfterSHA256": "81f97aa31ab4c5ff9046e1a47347a82e85fc091465856299b4596b761cd3d810",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "4cd32d54356122f71d154f64139e27c5a1b93c8f8986965c097d039d7968b6e3",
+        "contextAfterSHA256": "4cd32d54356122f71d154f64139e27c5a1b93c8f8986965c097d039d7968b6e3",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "4cd32d54356122f71d154f64139e27c5a1b93c8f8986965c097d039d7968b6e3",
+          "semanticContextSHA256": "4cd32d54356122f71d154f64139e27c5a1b93c8f8986965c097d039d7968b6e3",
+          "subjectTitle": "Banjul",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "d171d042950cef00e9cef6ef60b4df07cef79be6e485c99b820aa2bccf882a52",
+        "sameImageExportSHA256": "d171d042950cef00e9cef6ef60b4df07cef79be6e485c99b820aa2bccf882a52",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1013,23 +1097,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/c2-8b48a389de105c96f1cc.jpg",
         "suora": true,
         "lahde": "dorothy.voorhees, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Banjulin ja Barran välisen lauttareitin rannikko kuuluu Gambia-joen suun merelliseen ympäristöön.",
-        "lyhyt": "Banjulin ja Barran lauttareitti kulkee Gambia-joen suulla.",
+        "selite": "Hiekkaranta, rantapuusto ja pieniä veneitä Banjulin ja Barran väliseltä lauttareitiltä nähtynä.",
+        "lyhyt": "Rantakaari ja pieniä veneitä Banjulin lauttareitin varrella.",
         "tiedosto": "Banjul Ferry (5197915925).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "dorothy.voorhees, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Banjulin ja Barran välisen lauttareitin rannikko kuuluu Gambia-joen suun merelliseen ympäristöön.",
-        "lyhyt": "Banjulin ja Barran lauttareitti kulkee Gambia-joen suulla.",
+        "selite": "Hiekkaranta, rantapuusto ja pieniä veneitä Banjulin ja Barran väliseltä lauttareitiltä nähtynä.",
+        "lyhyt": "Rantakaari ja pieniä veneitä Banjulin lauttareitin varrella.",
         "tiedosto": "Banjul Ferry (5197915925).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/c2-8b48a389de105c96f1cc.jpg",
         "suora": true,
         "lahde": "dorothy.voorhees, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Banjulin ja Barran välisen lauttareitin rannikko kuuluu Gambia-joen suun merelliseen ympäristöön.",
-        "lyhyt": "Banjulin ja Barran lauttareitti kulkee Gambia-joen suulla.",
+        "selite": "Hiekkaranta, rantapuusto ja pieniä veneitä Banjulin ja Barran väliseltä lauttareitiltä nähtynä.",
+        "lyhyt": "Rantakaari ja pieniä veneitä Banjulin lauttareitin varrella.",
         "tiedosto": "Banjul Ferry (5197915925).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1044,10 +1128,10 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "907456037fca8b0d8569688b8c1ab049e511da5e768e7983d3279b2f0ff631ff",
-        "semanticContextSHA256": "907456037fca8b0d8569688b8c1ab049e511da5e768e7983d3279b2f0ff631ff",
+        "targetBeforeSHA256": "fe91ba7b4a16119007de59078b77297635a986e42b40d67b0ead4d763d509590",
+        "semanticContextSHA256": "fe91ba7b4a16119007de59078b77297635a986e42b40d67b0ead4d763d509590",
         "subjectTitle": "Banjul",
         "targetState": "existing-target"
       },
@@ -1236,9 +1320,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Banjul Ferry (5197915925).jpg",
-        "lahde": "dorothy.voorhees, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Banjulin ja Barran välisen lauttareitin rannikko kuuluu Gambia-joen suun merelliseen ympäristöön.",
-        "lyhyt": "Banjulin ja Barran lauttareitti kulkee Gambia-joen suulla."
+        "lyhyt": "Rantakaari ja pieniä veneitä Banjulin lauttareitin varrella.",
+        "selite": "Hiekkaranta, rantapuusto ja pieniä veneitä Banjulin ja Barran väliseltä lauttareitiltä nähtynä.",
+        "lahde": "dorothy.voorhees, Wikimedia Commons (CC BY-SA 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1257,23 +1341,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "dorothy.voorhees, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Banjulin ja Barran välisen lauttareitin rannikko kuuluu Gambia-joen suun merelliseen ympäristöön.",
-        "lyhyt": "Banjulin ja Barran lauttareitti kulkee Gambia-joen suulla.",
+        "selite": "Hiekkaranta, rantapuusto ja pieniä veneitä Banjulin ja Barran väliseltä lauttareitiltä nähtynä.",
+        "lyhyt": "Rantakaari ja pieniä veneitä Banjulin lauttareitin varrella.",
         "tiedosto": "Banjul Ferry (5197915925).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
-      "targetAfterSHA256": "907456037fca8b0d8569688b8c1ab049e511da5e768e7983d3279b2f0ff631ff",
-      "contextAfterSHA256": "907456037fca8b0d8569688b8c1ab049e511da5e768e7983d3279b2f0ff631ff",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+      "targetAfterSHA256": "fe91ba7b4a16119007de59078b77297635a986e42b40d67b0ead4d763d509590",
+      "contextAfterSHA256": "fe91ba7b4a16119007de59078b77297635a986e42b40d67b0ead4d763d509590",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "907456037fca8b0d8569688b8c1ab049e511da5e768e7983d3279b2f0ff631ff",
+        "contextAfterSHA256": "907456037fca8b0d8569688b8c1ab049e511da5e768e7983d3279b2f0ff631ff",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "907456037fca8b0d8569688b8c1ab049e511da5e768e7983d3279b2f0ff631ff",
+          "semanticContextSHA256": "907456037fca8b0d8569688b8c1ab049e511da5e768e7983d3279b2f0ff631ff",
+          "subjectTitle": "Banjul",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "8b48a389de105c96f1cc407f69688ac132f1766e1afc86c2677fe4975766e839",
+        "sameImageExportSHA256": "8b48a389de105c96f1cc407f69688ac132f1766e1afc86c2677fe4975766e839",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1295,23 +1400,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/c3-d16a95f1fb6d50413980.jpg",
         "suora": true,
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Tanbin kosteikossa mangroverannat ja matalat vesialueet muodostavat yhtenäisen elinympäristön rantakosteikon linnuille.",
-        "lyhyt": "Tanbin matalat vesialueet ja mangrovet ovat kosteikkolintujen elinympäristöä.",
+        "selite": "Mangrovemetsän reuna, liejuisia rantoja ja pieniä lintuja Tanbin matalassa vedessä.",
+        "lyhyt": "Tanbin mangroveranta ja matala vesi.",
         "tiedosto": "Gambia (9383665686).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Tanbin kosteikossa mangroverannat ja matalat vesialueet muodostavat yhtenäisen elinympäristön rantakosteikon linnuille.",
-        "lyhyt": "Tanbin matalat vesialueet ja mangrovet ovat kosteikkolintujen elinympäristöä.",
+        "selite": "Mangrovemetsän reuna, liejuisia rantoja ja pieniä lintuja Tanbin matalassa vedessä.",
+        "lyhyt": "Tanbin mangroveranta ja matala vesi.",
         "tiedosto": "Gambia (9383665686).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/c3-d16a95f1fb6d50413980.jpg",
         "suora": true,
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Tanbin kosteikossa mangroverannat ja matalat vesialueet muodostavat yhtenäisen elinympäristön rantakosteikon linnuille.",
-        "lyhyt": "Tanbin matalat vesialueet ja mangrovet ovat kosteikkolintujen elinympäristöä.",
+        "selite": "Mangrovemetsän reuna, liejuisia rantoja ja pieniä lintuja Tanbin matalassa vedessä.",
+        "lyhyt": "Tanbin mangroveranta ja matala vesi.",
         "tiedosto": "Gambia (9383665686).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1326,10 +1431,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "15178ec33f77b7c666465ad3b10a161bd535458c6fd10dc8bdb4a0259b5ddca6",
-        "semanticContextSHA256": "15178ec33f77b7c666465ad3b10a161bd535458c6fd10dc8bdb4a0259b5ddca6",
+        "targetBeforeSHA256": "29f5f831646622d92b313b21ecb395b1169d48e94f37ed9134b67a18f7cfdf7d",
+        "semanticContextSHA256": "29f5f831646622d92b313b21ecb395b1169d48e94f37ed9134b67a18f7cfdf7d",
         "subjectTitle": "Banjul",
         "targetState": "existing-target"
       },
@@ -1518,9 +1623,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Gambia (9383665686).jpg",
-        "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Tanbin kosteikossa mangroverannat ja matalat vesialueet muodostavat yhtenäisen elinympäristön rantakosteikon linnuille.",
-        "lyhyt": "Tanbin matalat vesialueet ja mangrovet ovat kosteikkolintujen elinympäristöä."
+        "lyhyt": "Tanbin mangroveranta ja matala vesi.",
+        "selite": "Mangrovemetsän reuna, liejuisia rantoja ja pieniä lintuja Tanbin matalassa vedessä.",
+        "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1539,23 +1644,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Tanbin kosteikossa mangroverannat ja matalat vesialueet muodostavat yhtenäisen elinympäristön rantakosteikon linnuille.",
-        "lyhyt": "Tanbin matalat vesialueet ja mangrovet ovat kosteikkolintujen elinympäristöä.",
+        "selite": "Mangrovemetsän reuna, liejuisia rantoja ja pieniä lintuja Tanbin matalassa vedessä.",
+        "lyhyt": "Tanbin mangroveranta ja matala vesi.",
         "tiedosto": "Gambia (9383665686).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
-      "targetAfterSHA256": "15178ec33f77b7c666465ad3b10a161bd535458c6fd10dc8bdb4a0259b5ddca6",
-      "contextAfterSHA256": "15178ec33f77b7c666465ad3b10a161bd535458c6fd10dc8bdb4a0259b5ddca6",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+      "targetAfterSHA256": "29f5f831646622d92b313b21ecb395b1169d48e94f37ed9134b67a18f7cfdf7d",
+      "contextAfterSHA256": "29f5f831646622d92b313b21ecb395b1169d48e94f37ed9134b67a18f7cfdf7d",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "15178ec33f77b7c666465ad3b10a161bd535458c6fd10dc8bdb4a0259b5ddca6",
+        "contextAfterSHA256": "15178ec33f77b7c666465ad3b10a161bd535458c6fd10dc8bdb4a0259b5ddca6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "15178ec33f77b7c666465ad3b10a161bd535458c6fd10dc8bdb4a0259b5ddca6",
+          "semanticContextSHA256": "15178ec33f77b7c666465ad3b10a161bd535458c6fd10dc8bdb4a0259b5ddca6",
+          "subjectTitle": "Banjul",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "d16a95f1fb6d50413980c555eb729d85576474c889a83ce2257b69b8c6333405",
+        "sameImageExportSHA256": "d16a95f1fb6d50413980c555eb729d85576474c889a83ce2257b69b8c6333405",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1611,10 +1737,10 @@
         2263
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9adb7601d022fe21ad0fe668b3fe10789060ba6bbc085e62d7eeaceab210b314",
-        "semanticContextSHA256": "6178a25f9f627a848e5dbffd42eda4e7114ca58a295b03040687854015a35ec8",
+        "semanticContextSHA256": "7df92563acc33570f05a57441637128cab8e9176f3594a610cf3f3212be8d32e",
         "subjectTitle": "Perille ja liikkeelle",
         "targetState": "existing-target"
       },
@@ -1808,9 +1934,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Banjul, The Gambia (CAPELLA C09 SP GEO HH 20241121154435 20241121154459).png",
-        "lahde": "Capella Space, Wikimedia Commons (CC BY 4.0)",
+        "lyhyt": "Satelliitin tutkakuva näyttää Banjulin saarikaupungin vuonna 2024.",
         "selite": "Vuoden 2024 satelliitin tutkakuvassa Banjulin saarikaupungin sijainti avautuu suhteessa jokisuuhun ja länsipuolen kosteikkoon.",
-        "lyhyt": "Satelliitin tutkakuva näyttää Banjulin saarikaupungin vuonna 2024."
+        "lahde": "Capella Space, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1829,7 +1955,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -1841,11 +1967,32 @@
         "tiedosto": "Banjul, The Gambia (CAPELLA C09 SP GEO HH 20241121154435 20241121154459).png"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "targetAfterSHA256": "9adb7601d022fe21ad0fe668b3fe10789060ba6bbc085e62d7eeaceab210b314",
-      "contextAfterSHA256": "6178a25f9f627a848e5dbffd42eda4e7114ca58a295b03040687854015a35ec8",
+      "contextAfterSHA256": "7df92563acc33570f05a57441637128cab8e9176f3594a610cf3f3212be8d32e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "9adb7601d022fe21ad0fe668b3fe10789060ba6bbc085e62d7eeaceab210b314",
+        "contextAfterSHA256": "6178a25f9f627a848e5dbffd42eda4e7114ca58a295b03040687854015a35ec8",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "9adb7601d022fe21ad0fe668b3fe10789060ba6bbc085e62d7eeaceab210b314",
+          "semanticContextSHA256": "6178a25f9f627a848e5dbffd42eda4e7114ca58a295b03040687854015a35ec8",
+          "subjectTitle": "Perille ja liikkeelle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "8cde4d215495ef718db3df3a0de194be1b658f87a4ed8c1cb5fe2a13c98833d6",
+        "sameImageExportSHA256": "8cde4d215495ef718db3df3a0de194be1b658f87a4ed8c1cb5fe2a13c98833d6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1901,10 +2048,10 @@
         4149
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "662d2575aa1b4c8a60bfffcc9f5190b08e47313fdbba8f04c3e91ec3f33e430d",
-        "semanticContextSHA256": "4d8a8c1a6b0eaf2a60f7fdae17ad41bbddd28899db8b7e4d0f65f701de3f7034",
+        "semanticContextSHA256": "a25333a9073ce2140b7060d2aeacff9b02d67dcd6224908197cbc865d7922aca",
         "subjectTitle": "Museo ja rannan luonto",
         "targetState": "existing-target"
       },
@@ -2093,9 +2240,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Flying osprey (Pandion haliaetus), Waquoit Bay National Estuarine Research Reserve, Maine, US (PPL1-Corrected) julesvernex2.jpg",
-        "lahde": "Jules Verne Times Two, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Sääksen lajikuva on otettu Yhdysvalloissa vuonna 2022.",
         "selite": "Yhdysvalloissa vuonna 2022 kuvattu sääksi havainnollistaa Tanbissa tavattavaa lajia, ei paikallista retkihavaintoa.",
-        "lyhyt": "Sääksen lajikuva on otettu Yhdysvalloissa vuonna 2022."
+        "lahde": "Jules Verne Times Two, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2114,7 +2261,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2126,11 +2273,32 @@
         "tiedosto": "Flying osprey (Pandion haliaetus), Waquoit Bay National Estuarine Research Reserve, Maine, US (PPL1-Corrected) julesvernex2.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "targetAfterSHA256": "662d2575aa1b4c8a60bfffcc9f5190b08e47313fdbba8f04c3e91ec3f33e430d",
-      "contextAfterSHA256": "4d8a8c1a6b0eaf2a60f7fdae17ad41bbddd28899db8b7e4d0f65f701de3f7034",
+      "contextAfterSHA256": "a25333a9073ce2140b7060d2aeacff9b02d67dcd6224908197cbc865d7922aca",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "662d2575aa1b4c8a60bfffcc9f5190b08e47313fdbba8f04c3e91ec3f33e430d",
+        "contextAfterSHA256": "4d8a8c1a6b0eaf2a60f7fdae17ad41bbddd28899db8b7e4d0f65f701de3f7034",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "662d2575aa1b4c8a60bfffcc9f5190b08e47313fdbba8f04c3e91ec3f33e430d",
+          "semanticContextSHA256": "4d8a8c1a6b0eaf2a60f7fdae17ad41bbddd28899db8b7e4d0f65f701de3f7034",
+          "subjectTitle": "Museo ja rannan luonto",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "2d0e68ca638d28ef05bf53933f6bf68a54cfe7dc00fd13f74951af905b24bcc0",
+        "sameImageExportSHA256": "2d0e68ca638d28ef05bf53933f6bf68a54cfe7dc00fd13f74951af905b24bcc0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2186,10 +2354,10 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "70c5e0664ad6e846ccdc04672fa849c8e44285b8d4a5949547a924c45da1946f",
-        "semanticContextSHA256": "d4b7d9fcc9186ab86183ae0cdddb9152444dae55454f65ad7fd04c437a0992bc",
+        "semanticContextSHA256": "e2d583ed4745d639ef6eb3b0ceb4f438d9d4013aaadb54a96b34a794bd415a8d",
         "subjectTitle": "Kalaa ja riisiä",
         "targetState": "existing-target"
       },
@@ -2378,9 +2546,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "1723Cooked rice.jpg",
-        "lahde": "JFVelasquez Floro, Wikimedia Commons (CC0)",
+        "lyhyt": "Keitettyä riisiä Filippiineiltä otetussa yleisessä ruokakuvassa.",
         "selite": "Filippiineillä kuvattu keitetty riisi havainnollistaa riisiä ruoan aineksena, eikä kuva esitä benachinia tai muuta nimettyä gambialaista annosta.",
-        "lyhyt": "Keitettyä riisiä Filippiineiltä otetussa yleisessä ruokakuvassa."
+        "lahde": "JFVelasquez Floro, Wikimedia Commons (CC0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2399,7 +2567,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2411,11 +2579,32 @@
         "tiedosto": "1723Cooked rice.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "targetAfterSHA256": "70c5e0664ad6e846ccdc04672fa849c8e44285b8d4a5949547a924c45da1946f",
-      "contextAfterSHA256": "d4b7d9fcc9186ab86183ae0cdddb9152444dae55454f65ad7fd04c437a0992bc",
+      "contextAfterSHA256": "e2d583ed4745d639ef6eb3b0ceb4f438d9d4013aaadb54a96b34a794bd415a8d",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "70c5e0664ad6e846ccdc04672fa849c8e44285b8d4a5949547a924c45da1946f",
+        "contextAfterSHA256": "d4b7d9fcc9186ab86183ae0cdddb9152444dae55454f65ad7fd04c437a0992bc",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "70c5e0664ad6e846ccdc04672fa849c8e44285b8d4a5949547a924c45da1946f",
+          "semanticContextSHA256": "d4b7d9fcc9186ab86183ae0cdddb9152444dae55454f65ad7fd04c437a0992bc",
+          "subjectTitle": "Kalaa ja riisiä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "2b7edebdaf48173f2091d6a466a075beea8e0e2ff558a05a1ba4799b4743ec96",
+        "sameImageExportSHA256": "2b7edebdaf48173f2091d6a466a075beea8e0e2ff558a05a1ba4799b4743ec96",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2468,10 +2657,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "901597ebe274002aa67c2811c345990a3da07a58b0bd30c829d6dcc8d7a817ca",
-        "semanticContextSHA256": "901597ebe274002aa67c2811c345990a3da07a58b0bd30c829d6dcc8d7a817ca",
+        "targetBeforeSHA256": "41e12bbf179df9806bb5c48bff1dc5407b56d8edb1d48d5aaf821b7e7e0303d7",
+        "semanticContextSHA256": "41e12bbf179df9806bb5c48bff1dc5407b56d8edb1d48d5aaf821b7e7e0303d7",
         "subjectTitle": "Albertin nimi, paikallinen arki",
         "targetState": "existing-target"
       },
@@ -2660,9 +2849,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Gambia03Banjul029 (5400734200).jpg",
-        "lahde": "tjabeljan, Wikimedia Commons (CC BY 2.0)",
+        "lyhyt": "Albertin tori on Banjulin katukaupan paikka.",
         "selite": "Albertin torin irtotavara kuuluu Banjulin paikallisen kaupankäynnin arkeen.",
-        "lyhyt": "Albertin tori on Banjulin katukaupan paikka."
+        "lahde": "tjabeljan, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2681,7 +2870,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2693,11 +2882,32 @@
         "tiedosto": "Gambia03Banjul029 (5400734200).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
-      "targetAfterSHA256": "901597ebe274002aa67c2811c345990a3da07a58b0bd30c829d6dcc8d7a817ca",
-      "contextAfterSHA256": "901597ebe274002aa67c2811c345990a3da07a58b0bd30c829d6dcc8d7a817ca",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+      "targetAfterSHA256": "41e12bbf179df9806bb5c48bff1dc5407b56d8edb1d48d5aaf821b7e7e0303d7",
+      "contextAfterSHA256": "41e12bbf179df9806bb5c48bff1dc5407b56d8edb1d48d5aaf821b7e7e0303d7",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "901597ebe274002aa67c2811c345990a3da07a58b0bd30c829d6dcc8d7a817ca",
+        "contextAfterSHA256": "901597ebe274002aa67c2811c345990a3da07a58b0bd30c829d6dcc8d7a817ca",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "901597ebe274002aa67c2811c345990a3da07a58b0bd30c829d6dcc8d7a817ca",
+          "semanticContextSHA256": "901597ebe274002aa67c2811c345990a3da07a58b0bd30c829d6dcc8d7a817ca",
+          "subjectTitle": "Albertin nimi, paikallinen arki",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "f0195a09786f0f0241a5db6cff15b889193fcc6e811804eb8897cd86b8880fab",
+        "sameImageExportSHA256": "f0195a09786f0f0241a5db6cff15b889193fcc6e811804eb8897cd86b8880fab",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2750,10 +2960,10 @@
         2832
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8de360d46e2e0d47607fe22d2f0ec63a60f8573abdc48b4372494abbfd331d6e",
-        "semanticContextSHA256": "8de360d46e2e0d47607fe22d2f0ec63a60f8573abdc48b4372494abbfd331d6e",
+        "targetBeforeSHA256": "91fcdfb8587a9938017cf3ed62a2033d2493ec36abee5eb58a1799e12bfba44b",
+        "semanticContextSHA256": "91fcdfb8587a9938017cf3ed62a2033d2493ec36abee5eb58a1799e12bfba44b",
         "subjectTitle": "Pääkaupungin nimi leviää saaren yli",
         "targetState": "existing-target"
       },
@@ -2942,9 +3152,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Banjul, The Gambia.JPG",
-        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
+        "lyhyt": "Banjul on pieni saarikaupunki laajan Gambia-joen suun äärellä.",
         "selite": "Banjulin saarikaupunki sijaitsee Gambia-joen suun reunassa, vastarannalla olevasta Barrasta vesialueen erottamana.",
-        "lyhyt": "Banjul on pieni saarikaupunki laajan Gambia-joen suun äärellä."
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2963,7 +3173,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -2975,11 +3185,32 @@
         "tiedosto": "Banjul, The Gambia.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
-      "targetAfterSHA256": "8de360d46e2e0d47607fe22d2f0ec63a60f8573abdc48b4372494abbfd331d6e",
-      "contextAfterSHA256": "8de360d46e2e0d47607fe22d2f0ec63a60f8573abdc48b4372494abbfd331d6e",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+      "targetAfterSHA256": "91fcdfb8587a9938017cf3ed62a2033d2493ec36abee5eb58a1799e12bfba44b",
+      "contextAfterSHA256": "91fcdfb8587a9938017cf3ed62a2033d2493ec36abee5eb58a1799e12bfba44b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "8de360d46e2e0d47607fe22d2f0ec63a60f8573abdc48b4372494abbfd331d6e",
+        "contextAfterSHA256": "8de360d46e2e0d47607fe22d2f0ec63a60f8573abdc48b4372494abbfd331d6e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8de360d46e2e0d47607fe22d2f0ec63a60f8573abdc48b4372494abbfd331d6e",
+          "semanticContextSHA256": "8de360d46e2e0d47607fe22d2f0ec63a60f8573abdc48b4372494abbfd331d6e",
+          "subjectTitle": "Pääkaupungin nimi leviää saaren yli",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "ff81ce70a9c945a53746594758c4a0be6a89e5bac02ca7bfc61a0eacd783d6f7",
+        "sameImageExportSHA256": "ff81ce70a9c945a53746594758c4a0be6a89e5bac02ca7bfc61a0eacd783d6f7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -3032,10 +3263,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "921a99dfa64e30ce2fb25f6d48be8460e7e9c3c3bc4a5e34ae539e3799b0dcbf",
-        "semanticContextSHA256": "921a99dfa64e30ce2fb25f6d48be8460e7e9c3c3bc4a5e34ae539e3799b0dcbf",
+        "targetBeforeSHA256": "1149504c6518e3248b4dd90d2c2a524c6fe4429172f892172378e7c1848d54e8",
+        "semanticContextSHA256": "1149504c6518e3248b4dd90d2c2a524c6fe4429172f892172378e7c1848d54e8",
         "subjectTitle": "Muisti ei ole vain paperia",
         "targetState": "existing-target"
       },
@@ -3229,9 +3460,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Uher Report Monitor 4000 (31591411977).jpg",
-        "lahde": "Richard Ash, Wikimedia Commons (CC BY-SA 2.0)",
+        "lyhyt": "Kelanauhuri on puheen tallentamiseen käytetty tekninen väline.",
         "selite": "Manchesterissa kuvattu kelanauhuri havainnollistaa puheen tallentamista.",
-        "lyhyt": "Kelanauhuri on puheen tallentamiseen käytetty tekninen väline."
+        "lahde": "Richard Ash, Wikimedia Commons (CC BY-SA 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3250,7 +3481,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3262,11 +3493,32 @@
         "tiedosto": "Uher Report Monitor 4000 (31591411977).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
-      "targetAfterSHA256": "921a99dfa64e30ce2fb25f6d48be8460e7e9c3c3bc4a5e34ae539e3799b0dcbf",
-      "contextAfterSHA256": "921a99dfa64e30ce2fb25f6d48be8460e7e9c3c3bc4a5e34ae539e3799b0dcbf",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+      "targetAfterSHA256": "1149504c6518e3248b4dd90d2c2a524c6fe4429172f892172378e7c1848d54e8",
+      "contextAfterSHA256": "1149504c6518e3248b4dd90d2c2a524c6fe4429172f892172378e7c1848d54e8",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "921a99dfa64e30ce2fb25f6d48be8460e7e9c3c3bc4a5e34ae539e3799b0dcbf",
+        "contextAfterSHA256": "921a99dfa64e30ce2fb25f6d48be8460e7e9c3c3bc4a5e34ae539e3799b0dcbf",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "921a99dfa64e30ce2fb25f6d48be8460e7e9c3c3bc4a5e34ae539e3799b0dcbf",
+          "semanticContextSHA256": "921a99dfa64e30ce2fb25f6d48be8460e7e9c3c3bc4a5e34ae539e3799b0dcbf",
+          "subjectTitle": "Muisti ei ole vain paperia",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "3e483719d8b2f2126591e6a43f37503eedfc65832c430e17ca73fe9b1c082fe8",
+        "sameImageExportSHA256": "3e483719d8b2f2126591e6a43f37503eedfc65832c430e17ca73fe9b1c082fe8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -3319,7 +3571,7 @@
         2297
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c8b3dad83d5eafe0d1410d8f3f1f366c9b9d4abd5b96236fa55782f979781756",
         "semanticContextSHA256": "c8b3dad83d5eafe0d1410d8f3f1f366c9b9d4abd5b96236fa55782f979781756",
@@ -3511,9 +3763,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Magroves at lamin lodge gambia (32863863515).jpg",
-        "lahde": "Paul Walter, Wikimedia Commons (CC BY 2.0)",
+        "lyhyt": "Laminin mangroverannan pienissä uomissa kulkee vettä puiden juurten välissä.",
         "selite": "Laminin seudun mangroverannalla veden täyttämät pienet uomat kulkevat juurten lomassa, Tanbin rannikkoluonnon ympäristössä.",
-        "lyhyt": "Laminin mangroverannan pienissä uomissa kulkee vettä puiden juurten välissä."
+        "lahde": "Paul Walter, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3532,7 +3784,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3544,11 +3796,32 @@
         "tiedosto": "Magroves at lamin lodge gambia (32863863515).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "targetAfterSHA256": "c8b3dad83d5eafe0d1410d8f3f1f366c9b9d4abd5b96236fa55782f979781756",
       "contextAfterSHA256": "c8b3dad83d5eafe0d1410d8f3f1f366c9b9d4abd5b96236fa55782f979781756",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "c8b3dad83d5eafe0d1410d8f3f1f366c9b9d4abd5b96236fa55782f979781756",
+        "contextAfterSHA256": "c8b3dad83d5eafe0d1410d8f3f1f366c9b9d4abd5b96236fa55782f979781756",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c8b3dad83d5eafe0d1410d8f3f1f366c9b9d4abd5b96236fa55782f979781756",
+          "semanticContextSHA256": "c8b3dad83d5eafe0d1410d8f3f1f366c9b9d4abd5b96236fa55782f979781756",
+          "subjectTitle": "Metsän välissä kulkee vettä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "22f071969ec8f66501764844e8f811454826b6660ffc69bac9877fbf2de1af44",
+        "sameImageExportSHA256": "22f071969ec8f66501764844e8f811454826b6660ffc69bac9877fbf2de1af44",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -3601,10 +3874,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "d37caba0bc0cbe65fe05e397b1b6114c49a37a1c4516fdff57da826aae0a3b5e",
-        "semanticContextSHA256": "d37caba0bc0cbe65fe05e397b1b6114c49a37a1c4516fdff57da826aae0a3b5e",
+        "targetBeforeSHA256": "8300b65db6039377ff0f7d19b5c199cc5b37e13639c611ac84cdbfcef68f6c9a",
+        "semanticContextSHA256": "8300b65db6039377ff0f7d19b5c199cc5b37e13639c611ac84cdbfcef68f6c9a",
         "subjectTitle": "Rantametsä ottaa vettä vastaan",
         "targetState": "existing-target"
       },
@@ -3793,9 +4066,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Gambia (9383666900).jpg",
-        "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
+        "lyhyt": "Mangroven juuret ovat osa Tanbin vuorovesirannan kasvillisuutta.",
         "selite": "Tanbin mangrovejuuristo kiinnittyy liejuiseen rantaan, jonka luonnolliset veden ja sedimenttien liikkeet kuuluvat kosteikon toimintaan.",
-        "lyhyt": "Mangroven juuret ovat osa Tanbin vuorovesirannan kasvillisuutta."
+        "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3814,7 +4087,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -3826,11 +4099,32 @@
         "tiedosto": "Gambia (9383666900).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
-      "targetAfterSHA256": "d37caba0bc0cbe65fe05e397b1b6114c49a37a1c4516fdff57da826aae0a3b5e",
-      "contextAfterSHA256": "d37caba0bc0cbe65fe05e397b1b6114c49a37a1c4516fdff57da826aae0a3b5e",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+      "targetAfterSHA256": "8300b65db6039377ff0f7d19b5c199cc5b37e13639c611ac84cdbfcef68f6c9a",
+      "contextAfterSHA256": "8300b65db6039377ff0f7d19b5c199cc5b37e13639c611ac84cdbfcef68f6c9a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "d37caba0bc0cbe65fe05e397b1b6114c49a37a1c4516fdff57da826aae0a3b5e",
+        "contextAfterSHA256": "d37caba0bc0cbe65fe05e397b1b6114c49a37a1c4516fdff57da826aae0a3b5e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d37caba0bc0cbe65fe05e397b1b6114c49a37a1c4516fdff57da826aae0a3b5e",
+          "semanticContextSHA256": "d37caba0bc0cbe65fe05e397b1b6114c49a37a1c4516fdff57da826aae0a3b5e",
+          "subjectTitle": "Rantametsä ottaa vettä vastaan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "f356cf0a3fcc6785eb0e3603134b72489645fce4d9195db5d6a7d3105c5a8fbc",
+        "sameImageExportSHA256": "f356cf0a3fcc6785eb0e3603134b72489645fce4d9195db5d6a7d3105c5a8fbc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -3852,23 +4146,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/l3-48a71a6d4f43e81d62fc.jpg",
         "suora": true,
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Tanbissa kerätään ostereita, joiden kuoret kuuluvat alueen rannikon luonnonympäristöön.",
-        "lyhyt": "Osterin keruu on yksi Tanbin perinteisistä elinkeinoista.",
+        "selite": "Tanbissa kuvattu kasa tyhjiä osterinkuoria; keruu, paahtaminen ja myynti kuuluvat paikallisiin elinkeinoihin.",
+        "lyhyt": "Osterinkuoria Tanbin kosteikossa.",
         "tiedosto": "Gambia (9383674042).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Tanbissa kerätään ostereita, joiden kuoret kuuluvat alueen rannikon luonnonympäristöön.",
-        "lyhyt": "Osterin keruu on yksi Tanbin perinteisistä elinkeinoista.",
+        "selite": "Tanbissa kuvattu kasa tyhjiä osterinkuoria; keruu, paahtaminen ja myynti kuuluvat paikallisiin elinkeinoihin.",
+        "lyhyt": "Osterinkuoria Tanbin kosteikossa.",
         "tiedosto": "Gambia (9383674042).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/l3-48a71a6d4f43e81d62fc.jpg",
         "suora": true,
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Tanbissa kerätään ostereita, joiden kuoret kuuluvat alueen rannikon luonnonympäristöön.",
-        "lyhyt": "Osterin keruu on yksi Tanbin perinteisistä elinkeinoista.",
+        "selite": "Tanbissa kuvattu kasa tyhjiä osterinkuoria; keruu, paahtaminen ja myynti kuuluvat paikallisiin elinkeinoihin.",
+        "lyhyt": "Osterinkuoria Tanbin kosteikossa.",
         "tiedosto": "Gambia (9383674042).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3883,10 +4177,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "765ec59f269b7448c022ea0b223a270abcfe6877c71fce07b33d3cc413a275e3",
-        "semanticContextSHA256": "765ec59f269b7448c022ea0b223a270abcfe6877c71fce07b33d3cc413a275e3",
+        "targetBeforeSHA256": "05a07d76de5996e48a8692e137618e5a60dcfcb77ce878110f84569eb78fbc8e",
+        "semanticContextSHA256": "05a07d76de5996e48a8692e137618e5a60dcfcb77ce878110f84569eb78fbc8e",
         "subjectTitle": "Osterit kuuluvat työpäivään",
         "targetState": "existing-target"
       },
@@ -4075,9 +4369,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Gambia (9383674042).jpg",
-        "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Tanbissa kerätään ostereita, joiden kuoret kuuluvat alueen rannikon luonnonympäristöön.",
-        "lyhyt": "Osterin keruu on yksi Tanbin perinteisistä elinkeinoista."
+        "lyhyt": "Osterinkuoria Tanbin kosteikossa.",
+        "selite": "Tanbissa kuvattu kasa tyhjiä osterinkuoria; keruu, paahtaminen ja myynti kuuluvat paikallisiin elinkeinoihin.",
+        "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4096,23 +4390,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Tanbissa kerätään ostereita, joiden kuoret kuuluvat alueen rannikon luonnonympäristöön.",
-        "lyhyt": "Osterin keruu on yksi Tanbin perinteisistä elinkeinoista.",
+        "selite": "Tanbissa kuvattu kasa tyhjiä osterinkuoria; keruu, paahtaminen ja myynti kuuluvat paikallisiin elinkeinoihin.",
+        "lyhyt": "Osterinkuoria Tanbin kosteikossa.",
         "tiedosto": "Gambia (9383674042).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
-      "targetAfterSHA256": "765ec59f269b7448c022ea0b223a270abcfe6877c71fce07b33d3cc413a275e3",
-      "contextAfterSHA256": "765ec59f269b7448c022ea0b223a270abcfe6877c71fce07b33d3cc413a275e3",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+      "targetAfterSHA256": "05a07d76de5996e48a8692e137618e5a60dcfcb77ce878110f84569eb78fbc8e",
+      "contextAfterSHA256": "05a07d76de5996e48a8692e137618e5a60dcfcb77ce878110f84569eb78fbc8e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "765ec59f269b7448c022ea0b223a270abcfe6877c71fce07b33d3cc413a275e3",
+        "contextAfterSHA256": "765ec59f269b7448c022ea0b223a270abcfe6877c71fce07b33d3cc413a275e3",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "765ec59f269b7448c022ea0b223a270abcfe6877c71fce07b33d3cc413a275e3",
+          "semanticContextSHA256": "765ec59f269b7448c022ea0b223a270abcfe6877c71fce07b33d3cc413a275e3",
+          "subjectTitle": "Osterit kuuluvat työpäivään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "48a71a6d4f43e81d62fc2db1c303c9d8ce85cc2e747e973969ae0548a2a2f212",
+        "sameImageExportSHA256": "48a71a6d4f43e81d62fc2db1c303c9d8ce85cc2e747e973969ae0548a2a2f212",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -4165,10 +4480,10 @@
         3371
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f7919e8eb8571980b07d465f64acec35bc4906a835af6a20befb1d301491deef",
-        "semanticContextSHA256": "f7919e8eb8571980b07d465f64acec35bc4906a835af6a20befb1d301491deef",
+        "targetBeforeSHA256": "e50fd8b6918e6005ab1ba02b417aa3439d83f4f7ece46848c81c957a5d063d30",
+        "semanticContextSHA256": "e50fd8b6918e6005ab1ba02b417aa3439d83f4f7ece46848c81c957a5d063d30",
         "subjectTitle": "Lintu ylittää vuodenaikojen rajan",
         "targetState": "existing-target"
       },
@@ -4357,9 +4672,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "20260411 osprey wethersfield cove PD03910.jpg",
-        "lahde": "Paul Danese, Wikimedia Commons (CC BY-SA 4.0)",
+        "lyhyt": "Sääksi on yksi Tanbissa tavatuista muuttolinnuista; lajikuva Yhdysvalloista.",
         "selite": "Sääksi on Tanbissa tavattu muuttolintu, jota tämä Yhdysvalloissa vuonna 2026 otettu lajikuva havainnollistaa.",
-        "lyhyt": "Sääksi on yksi Tanbissa tavatuista muuttolinnuista; lajikuva Yhdysvalloista."
+        "lahde": "Paul Danese, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4378,7 +4693,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -4390,11 +4705,32 @@
         "tiedosto": "20260411 osprey wethersfield cove PD03910.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
-      "targetAfterSHA256": "f7919e8eb8571980b07d465f64acec35bc4906a835af6a20befb1d301491deef",
-      "contextAfterSHA256": "f7919e8eb8571980b07d465f64acec35bc4906a835af6a20befb1d301491deef",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+      "targetAfterSHA256": "e50fd8b6918e6005ab1ba02b417aa3439d83f4f7ece46848c81c957a5d063d30",
+      "contextAfterSHA256": "e50fd8b6918e6005ab1ba02b417aa3439d83f4f7ece46848c81c957a5d063d30",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "f7919e8eb8571980b07d465f64acec35bc4906a835af6a20befb1d301491deef",
+        "contextAfterSHA256": "f7919e8eb8571980b07d465f64acec35bc4906a835af6a20befb1d301491deef",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "f7919e8eb8571980b07d465f64acec35bc4906a835af6a20befb1d301491deef",
+          "semanticContextSHA256": "f7919e8eb8571980b07d465f64acec35bc4906a835af6a20befb1d301491deef",
+          "subjectTitle": "Lintu ylittää vuodenaikojen rajan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "15e9ae7d74b47e79f64d6e5f941644853a4e6f3b39c3e879a8918fd5da9c53a2",
+        "sameImageExportSHA256": "15e9ae7d74b47e79f64d6e5f941644853a4e6f3b39c3e879a8918fd5da9c53a2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -4447,10 +4783,10 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "24a88f7872411edbbf602a080defe1a733a764af997cb7211ebf79cc38ae5545",
-        "semanticContextSHA256": "c2e040e01d9a33f6b1e42a74e0c90be02822bd153abbad747f6079e7fd26026b",
+        "semanticContextSHA256": "93df8e807db9bda89d15a567ab806037126a468eb660f27f18fdf5fb930401a9",
         "subjectTitle": "Gambia-joen suu",
         "targetState": "existing-target"
       },
@@ -4639,9 +4975,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Banjul Ferry (5197916345).jpg",
-        "lahde": "dorothy.voorhees, Wikimedia Commons (CC BY-SA 2.0)",
+        "lyhyt": "Gambia-joen suun ylitys yhdistää Banjulin ja Barran.",
         "selite": "Banjulin ja Barran lauttareitti kulkee Gambia-joen suulla, missä käyttöveneet ja rannikon liikenne kohtaavat Atlantin vesialueen.",
-        "lyhyt": "Gambia-joen suun ylitys yhdistää Banjulin ja Barran."
+        "lahde": "dorothy.voorhees, Wikimedia Commons (CC BY-SA 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4660,7 +4996,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -4672,11 +5008,32 @@
         "tiedosto": "Banjul Ferry (5197916345).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "targetAfterSHA256": "24a88f7872411edbbf602a080defe1a733a764af997cb7211ebf79cc38ae5545",
-      "contextAfterSHA256": "c2e040e01d9a33f6b1e42a74e0c90be02822bd153abbad747f6079e7fd26026b",
+      "contextAfterSHA256": "93df8e807db9bda89d15a567ab806037126a468eb660f27f18fdf5fb930401a9",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "24a88f7872411edbbf602a080defe1a733a764af997cb7211ebf79cc38ae5545",
+        "contextAfterSHA256": "c2e040e01d9a33f6b1e42a74e0c90be02822bd153abbad747f6079e7fd26026b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "24a88f7872411edbbf602a080defe1a733a764af997cb7211ebf79cc38ae5545",
+          "semanticContextSHA256": "c2e040e01d9a33f6b1e42a74e0c90be02822bd153abbad747f6079e7fd26026b",
+          "subjectTitle": "Gambia-joen suu",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "822e470f7b7601a368ffe372ecf5c50b1443f3128a8d3e2c8151827fe3d42176",
+        "sameImageExportSHA256": "822e470f7b7601a368ffe372ecf5c50b1443f3128a8d3e2c8151827fe3d42176",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -4729,10 +5086,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/banjul/sisalto.json",
-      "sourceContentSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "dfd33c6baa04260000452026e76832c53ae0e75dfc88664b648efb24d4e6caa1",
-        "semanticContextSHA256": "61edfdc5f76c63934c0d844f5331dceaa21f89a4a00a0e8cf29473a3a56bb7dd",
+        "semanticContextSHA256": "cb990dbaa0286589f22f00a8a7ec5a5bc1d328ca8cad30697d88d4fed44d15dc",
         "subjectTitle": "Tanbin kosteikko",
         "targetState": "existing-target"
       },
@@ -4921,9 +5278,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Gambia (9383665170).jpg",
-        "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)",
+        "lyhyt": "Tanbin mangrovet kasvavat Gambia-joen suun vuorovesirannoilla.",
         "selite": "Tanbin mangrovejuuristo ja juuriin kiinnittyneet kuoret kuuluvat Gambia-joen suun vuorovesirannan luonnonympäristöön.",
-        "lyhyt": "Tanbin mangrovet kasvavat Gambia-joen suun vuorovesirannoilla."
+        "lahde": "Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4942,7 +5299,7 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
@@ -4954,16 +5311,43 @@
         "tiedosto": "Gambia (9383665170).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+      "sourceContentAfterSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
       "targetAfterSHA256": "dfd33c6baa04260000452026e76832c53ae0e75dfc88664b648efb24d4e6caa1",
-      "contextAfterSHA256": "61edfdc5f76c63934c0d844f5331dceaa21f89a4a00a0e8cf29473a3a56bb7dd",
+      "contextAfterSHA256": "cb990dbaa0286589f22f00a8a7ec5a5bc1d328ca8cad30697d88d4fed44d15dc",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cc82baca6b375d1a285a61c04821861c15b4c5bccbc25d30141e472faebd348",
+        "targetAfterSHA256": "dfd33c6baa04260000452026e76832c53ae0e75dfc88664b648efb24d4e6caa1",
+        "contextAfterSHA256": "61edfdc5f76c63934c0d844f5331dceaa21f89a4a00a0e8cf29473a3a56bb7dd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "dfd33c6baa04260000452026e76832c53ae0e75dfc88664b648efb24d4e6caa1",
+          "semanticContextSHA256": "61edfdc5f76c63934c0d844f5331dceaa21f89a4a00a0e8cf29473a3a56bb7dd",
+          "subjectTitle": "Tanbin kosteikko",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "75a54b170e0c5d3c96e0b1054699e54855cf3d62049c3e6df04aa04c3593d5ed",
+        "sameImageNativeSHA256": "ec170997ac73f36d15aa7e190d8e5bffe4506c571354205034f6a5bc6802b82e",
+        "sameImageExportSHA256": "ec170997ac73f36d15aa7e190d8e5bffe4506c571354205034f6a5bc6802b82e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e04/banjul/9397d205520569ecbda10065e77a4b6e2a47c0c8c5de597b2cd6170ed789ebef.json",
+  "task118ReboundAt": "2026-10-13T16:33:23.929108+00:00"
 }

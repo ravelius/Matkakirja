@@ -3,7 +3,7 @@
   "era": "e04",
   "city": "praia",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+  "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
   "assets": [
     {
       "era": "e04",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
-        "lyhyt": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva."
+        "selite": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-traveler-cachupa-20261012-v1-b69cda023176.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva.",
-        "lyhyt": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva."
+        "selite": "Cachupan yleinen pystyhavainne, ei nimetyn Praian ravintolan annos tai paikkavalokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6cb6a934ec6b10a486a54ceeb3fcd5211098aa33105f98dd8a0e6a320e596ce9",
+        "semanticContextSHA256": "9a44ef428470466f77089c40158ceaec862ff24c369df69f38b929d67f2e33f4",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -207,9 +207,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -228,17 +228,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6cb6a934ec6b10a486a54ceeb3fcd5211098aa33105f98dd8a0e6a320e596ce9",
+      "contextAfterSHA256": "9a44ef428470466f77089c40158ceaec862ff24c369df69f38b929d67f2e33f4",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "6cb6a934ec6b10a486a54ceeb3fcd5211098aa33105f98dd8a0e6a320e596ce9",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "6cb6a934ec6b10a486a54ceeb3fcd5211098aa33105f98dd8a0e6a320e596ce9",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+        "sameImageNativeSHA256": "b69cda02317624dd64fb670ee1c615019545e081a37e06fc02215de78f15e376",
+        "sameImageExportSHA256": "290024372612e3a3fab7dd64eeda5ab3565038a050f8dd059e2b857de517fbfc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -263,10 +284,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin.",
-        "lyhyt": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin."
+        "selite": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -274,10 +295,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-o4-cachupa-20261012-v1-81a84f41b5b0.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin.",
-        "lyhyt": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin."
+        "selite": "Havainnekuva cachupasta: maissi, pavut ja kala kuuluvat kapverdeläisen ruokaperinteen aineksiin."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -291,10 +312,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "f870baeb5ba16f6cf2da2c720d2a17df59cb15a5a2b3d2b1949936d3236d19a9",
+        "semanticContextSHA256": "a571be375edd4caa1d9197eb73799e285cb88a18f317d7ace15b54e36d20747f",
         "subjectTitle": "Maissi, pavut ja kala",
         "targetState": "existing-target"
       },
@@ -474,9 +495,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -495,17 +516,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "f870baeb5ba16f6cf2da2c720d2a17df59cb15a5a2b3d2b1949936d3236d19a9",
+      "contextAfterSHA256": "a571be375edd4caa1d9197eb73799e285cb88a18f317d7ace15b54e36d20747f",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "f870baeb5ba16f6cf2da2c720d2a17df59cb15a5a2b3d2b1949936d3236d19a9",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "f870baeb5ba16f6cf2da2c720d2a17df59cb15a5a2b3d2b1949936d3236d19a9",
+          "subjectTitle": "Maissi, pavut ja kala",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+        "sameImageNativeSHA256": "81a84f41b5b0dad95d145257cd50adea65ceb61f2d7bc0e0ae363037ccd9a40e",
+        "sameImageExportSHA256": "2c032205b74d06b704b24903ba849cbd21e43ccf604c4f834e599f73a1b00111",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -555,7 +597,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
         "semanticContextSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
@@ -734,9 +776,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -755,17 +797,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "targetAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
       "contextAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+        "targetAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
+        "contextAfterSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
+          "semanticContextSHA256": "06b0e9e6b119c459ca9146b4b26c1a1f681159556b219d544cb39506d1dcccdd",
+          "subjectTitle": "Arjen esineistä tuli aineistoa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+        "sameImageNativeSHA256": "f5bf9e0234b445a883b6c6d949fcca4ff2dddd4fc62cf91b4130ed1fdbc8c7f1",
+        "sameImageExportSHA256": "8abf9c017d33e8c8c0419779835bc2af494fdd66c60c61400699f3ba170bc51a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -787,10 +850,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva.",
-        "lyhyt": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva."
+        "selite": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -798,10 +861,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/praia/praia-k3-soitintyypit-20261012-v1-0eca3154f395.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva.",
-        "lyhyt": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva."
+        "selite": "Rummun ja kotilokuoren yleishavainne, ei Tabanka-esityksen tai museoesineiden kuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -815,7 +878,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
         "semanticContextSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
@@ -969,9 +1032,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -990,17 +1053,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "targetAfterSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
       "contextAfterSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+        "targetAfterSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
+        "contextAfterSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
+          "semanticContextSHA256": "1d3ba4523fc9b72a03e4e187011ebf32a87b29c02a337b8bf3db74cee1785e02",
+          "subjectTitle": "Laulu saa yhteisen vastauksen",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+        "sameImageNativeSHA256": "0eca3154f395276b71fe5d7148809bb66b387515ed2bb22d493919b3d815f53d",
+        "sameImageExportSHA256": "9237120c17a1055729efbe77bdd6940b724d8ec844e4e6ea8d79ead8bcde9805",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1019,16 +1103,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/photo-c25190feb67e04687598.jpg",
         "suora": true,
         "lahde": "Ji-Elle, Commons (CC BY-SA 3.0)",
-        "selite": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
-        "lyhyt": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "selite": "Gamboan ranta ja sen yläpuolella oleva Plateau-keskusta Praiassa vuonna 2012.",
+        "lyhyt": "Gamboan ranta Praiassa.",
         "tiedosto": "Praia-Plage de Gamboa (5).jpg",
         "vuosi": "2012"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Ji-Elle, Commons (CC BY-SA 3.0)",
-        "selite": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
-        "lyhyt": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "selite": "Gamboan ranta ja sen yläpuolella oleva Plateau-keskusta Praiassa vuonna 2012.",
+        "lyhyt": "Gamboan ranta Praiassa.",
         "tiedosto": "Praia-Plage de Gamboa (5).jpg",
         "vuosi": "2012"
       },
@@ -1036,8 +1120,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/photo-c25190feb67e04687598.jpg",
         "suora": true,
         "lahde": "Ji-Elle, Commons (CC BY-SA 3.0)",
-        "selite": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
-        "lyhyt": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "selite": "Gamboan ranta ja sen yläpuolella oleva Plateau-keskusta Praiassa vuonna 2012.",
+        "lyhyt": "Gamboan ranta Praiassa.",
         "tiedosto": "Praia-Plage de Gamboa (5).jpg",
         "vuosi": "2012"
       },
@@ -1053,10 +1137,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
-        "semanticContextSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
+        "targetBeforeSHA256": "09f1ddf82005ea8bcc6239ea9eff24dbb485742e908085e606b0ecf97db07b6a",
+        "semanticContextSHA256": "09f1ddf82005ea8bcc6239ea9eff24dbb485742e908085e606b0ecf97db07b6a",
         "subjectTitle": "praia — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1215,9 +1299,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Praia-Plage de Gamboa (5).jpg",
+        "lyhyt": "Gamboan ranta Praiassa.",
+        "selite": "Gamboan ranta ja sen yläpuolella oleva Plateau-keskusta Praiassa vuonna 2012.",
         "lahde": "Ji-Elle, Commons (CC BY-SA 3.0)",
-        "selite": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
-        "lyhyt": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
         "vuosi": "2012"
       },
       "preservePreviousMediaObjects": true,
@@ -1237,24 +1321,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Ji-Elle, Commons (CC BY-SA 3.0)",
-        "selite": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
-        "lyhyt": "Gamboan ranta ja Plateau Praiassa vuonna2012.",
+        "selite": "Gamboan ranta ja sen yläpuolella oleva Plateau-keskusta Praiassa vuonna 2012.",
+        "lyhyt": "Gamboan ranta Praiassa.",
         "tiedosto": "Praia-Plage de Gamboa (5).jpg",
         "vuosi": "2012"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
-      "targetAfterSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
-      "contextAfterSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
+      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "targetAfterSHA256": "09f1ddf82005ea8bcc6239ea9eff24dbb485742e908085e606b0ecf97db07b6a",
+      "contextAfterSHA256": "09f1ddf82005ea8bcc6239ea9eff24dbb485742e908085e606b0ecf97db07b6a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+        "targetAfterSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
+        "contextAfterSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
+          "semanticContextSHA256": "2ac0c5dbd82a98a4cad9e5022a4a0f21cf336102b06acc9b740e3aa44638baf9",
+          "subjectTitle": "praia — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+        "sameImageNativeSHA256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f",
+        "sameImageExportSHA256": "c25190feb67e04687598644a68706be01ced43396a2a5ae9bb40d948f856734f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1276,23 +1381,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c1-63588d9f67bbb79cef80.jpg",
         "suora": true,
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian Plateau ja Gamboan ranta vuonna2012.",
-        "lyhyt": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "selite": "Veneitä Gamboan hiekkarannalla ja taustalla kohoava Plateau-keskusta Praiassa vuonna 2012.",
+        "lyhyt": "Gamboan ranta ja Plateau-keskusta.",
         "tiedosto": "Praia-Plage de Gamboa (6).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian Plateau ja Gamboan ranta vuonna2012.",
-        "lyhyt": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "selite": "Veneitä Gamboan hiekkarannalla ja taustalla kohoava Plateau-keskusta Praiassa vuonna 2012.",
+        "lyhyt": "Gamboan ranta ja Plateau-keskusta.",
         "tiedosto": "Praia-Plage de Gamboa (6).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c1-63588d9f67bbb79cef80.jpg",
         "suora": true,
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian Plateau ja Gamboan ranta vuonna2012.",
-        "lyhyt": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "selite": "Veneitä Gamboan hiekkarannalla ja taustalla kohoava Plateau-keskusta Praiassa vuonna 2012.",
+        "lyhyt": "Gamboan ranta ja Plateau-keskusta.",
         "tiedosto": "Praia-Plage de Gamboa (6).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1307,10 +1412,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
-        "semanticContextSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
+        "targetBeforeSHA256": "57a10bac00908168478236b08614e305193579dd06d39420a735288c76c294bc",
+        "semanticContextSHA256": "57a10bac00908168478236b08614e305193579dd06d39420a735288c76c294bc",
         "subjectTitle": "Praia",
         "targetState": "existing-target"
       },
@@ -1469,9 +1574,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Praia-Plage de Gamboa (6).jpg",
-        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian Plateau ja Gamboan ranta vuonna2012.",
-        "lyhyt": "Praian Plateau ja Gamboan ranta vuonna2012."
+        "lyhyt": "Gamboan ranta ja Plateau-keskusta.",
+        "selite": "Veneitä Gamboan hiekkarannalla ja taustalla kohoava Plateau-keskusta Praiassa vuonna 2012.",
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1490,23 +1595,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian Plateau ja Gamboan ranta vuonna2012.",
-        "lyhyt": "Praian Plateau ja Gamboan ranta vuonna2012.",
+        "selite": "Veneitä Gamboan hiekkarannalla ja taustalla kohoava Plateau-keskusta Praiassa vuonna 2012.",
+        "lyhyt": "Gamboan ranta ja Plateau-keskusta.",
         "tiedosto": "Praia-Plage de Gamboa (6).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
-      "targetAfterSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
-      "contextAfterSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
+      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "targetAfterSHA256": "57a10bac00908168478236b08614e305193579dd06d39420a735288c76c294bc",
+      "contextAfterSHA256": "57a10bac00908168478236b08614e305193579dd06d39420a735288c76c294bc",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+        "targetAfterSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
+        "contextAfterSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
+          "semanticContextSHA256": "89052c2a24131816ce9ed54fa2f33026cfac34f03d784c453a67de76a95d4523",
+          "subjectTitle": "Praia",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+        "sameImageNativeSHA256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd",
+        "sameImageExportSHA256": "63588d9f67bbb79cef80dee3cf028b7047fb5ef435e3967cb417adf5f7c6cccd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1528,23 +1654,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c2-b3ab7f8f7d02d99756c2.jpg",
         "suora": true,
         "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
-        "lyhyt": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "selite": "Praian rantakaari ja Santa Marian luoto vuonna 2011.",
+        "lyhyt": "Praian rantakaari ja Santa Marian luoto.",
         "tiedosto": "Praia coast Cape Verde.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
-        "lyhyt": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "selite": "Praian rantakaari ja Santa Marian luoto vuonna 2011.",
+        "lyhyt": "Praian rantakaari ja Santa Marian luoto.",
         "tiedosto": "Praia coast Cape Verde.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/c2-b3ab7f8f7d02d99756c2.jpg",
         "suora": true,
         "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
-        "lyhyt": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "selite": "Praian rantakaari ja Santa Marian luoto vuonna 2011.",
+        "lyhyt": "Praian rantakaari ja Santa Marian luoto.",
         "tiedosto": "Praia coast Cape Verde.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1559,10 +1685,10 @@
         2036
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
-        "semanticContextSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
+        "targetBeforeSHA256": "b331c499e535dab117da994153a7fbe758421e87a4b4e680ecb494a53f19c5da",
+        "semanticContextSHA256": "b331c499e535dab117da994153a7fbe758421e87a4b4e680ecb494a53f19c5da",
         "subjectTitle": "Praia",
         "targetState": "existing-target"
       },
@@ -1722,9 +1848,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Praia coast Cape Verde.jpg",
-        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
-        "lyhyt": "Praian rantakaari ja Santa Marian luoto vuonna2011."
+        "lyhyt": "Praian rantakaari ja Santa Marian luoto.",
+        "selite": "Praian rantakaari ja Santa Marian luoto vuonna 2011.",
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1743,23 +1869,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
-        "lyhyt": "Praian rantakaari ja Santa Marian luoto vuonna2011.",
+        "selite": "Praian rantakaari ja Santa Marian luoto vuonna 2011.",
+        "lyhyt": "Praian rantakaari ja Santa Marian luoto.",
         "tiedosto": "Praia coast Cape Verde.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
-      "targetAfterSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
-      "contextAfterSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
+      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "targetAfterSHA256": "b331c499e535dab117da994153a7fbe758421e87a4b4e680ecb494a53f19c5da",
+      "contextAfterSHA256": "b331c499e535dab117da994153a7fbe758421e87a4b4e680ecb494a53f19c5da",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+        "targetAfterSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
+        "contextAfterSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
+          "semanticContextSHA256": "8d1b640c68a423f33aa596cee24ec7e87af140acab4c331bb79e964623993434",
+          "subjectTitle": "Praia",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+        "sameImageNativeSHA256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+        "sameImageExportSHA256": "b3ab7f8f7d02d99756c2683bf1a48fc4397b7c931afb89174141ddc8bcf21ebf",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -1781,23 +1928,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l1-19fb258fa2844e63cd06.jpg",
         "suora": true,
         "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
-        "lyhyt": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "selite": "Praian satamalahden rantaa vuonna 2011; nykyaikainen kuva historiallisesta paikasta.",
+        "lyhyt": "Praian satamalahden rantaa; nykyaikainen kuva historiallisesta paikasta.",
         "tiedosto": "Praia coast Cape Verde 2011.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
-        "lyhyt": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "selite": "Praian satamalahden rantaa vuonna 2011; nykyaikainen kuva historiallisesta paikasta.",
+        "lyhyt": "Praian satamalahden rantaa; nykyaikainen kuva historiallisesta paikasta.",
         "tiedosto": "Praia coast Cape Verde 2011.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l1-19fb258fa2844e63cd06.jpg",
         "suora": true,
         "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
-        "lyhyt": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "selite": "Praian satamalahden rantaa vuonna 2011; nykyaikainen kuva historiallisesta paikasta.",
+        "lyhyt": "Praian satamalahden rantaa; nykyaikainen kuva historiallisesta paikasta.",
         "tiedosto": "Praia coast Cape Verde 2011.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1812,10 +1959,10 @@
         2119
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
-        "semanticContextSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
+        "targetBeforeSHA256": "0c2edfdbb2aac37a8bd0b39049c736b46d9a95c47e7ed866d61b56ad05e39ea1",
+        "semanticContextSHA256": "0c2edfdbb2aac37a8bd0b39049c736b46d9a95c47e7ed866d61b56ad05e39ea1",
         "subjectTitle": "Laiva tarvitsi vettä ja ruokaa",
         "targetState": "existing-target"
       },
@@ -1975,9 +2122,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Praia coast Cape Verde 2011.jpg",
-        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
-        "lyhyt": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta."
+        "lyhyt": "Praian satamalahden rantaa; nykyaikainen kuva historiallisesta paikasta.",
+        "selite": "Praian satamalahden rantaa vuonna 2011; nykyaikainen kuva historiallisesta paikasta.",
+        "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1996,23 +2143,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
-        "lyhyt": "Praian satamalahden rantaa vuonna2011; nykyaikainen kuva historiallisesta paikasta.",
+        "selite": "Praian satamalahden rantaa vuonna 2011; nykyaikainen kuva historiallisesta paikasta.",
+        "lyhyt": "Praian satamalahden rantaa; nykyaikainen kuva historiallisesta paikasta.",
         "tiedosto": "Praia coast Cape Verde 2011.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
-      "targetAfterSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
-      "contextAfterSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
+      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "targetAfterSHA256": "0c2edfdbb2aac37a8bd0b39049c736b46d9a95c47e7ed866d61b56ad05e39ea1",
+      "contextAfterSHA256": "0c2edfdbb2aac37a8bd0b39049c736b46d9a95c47e7ed866d61b56ad05e39ea1",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+        "targetAfterSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
+        "contextAfterSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
+          "semanticContextSHA256": "59481e2335026ebc3360695f57bf82a43de2b21df6dfbd55f98f78ef511a5a87",
+          "subjectTitle": "Laiva tarvitsi vettä ja ruokaa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+        "sameImageNativeSHA256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+        "sameImageExportSHA256": "19fb258fa2844e63cd0607fc0a8eccfbe7c2fc68cfb58a48da6f07d37f45c316",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2034,23 +2202,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l2-d5b04ec5c7368a051824.jpg",
         "suora": true,
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Santa Marian luoto Gamboan rannalta vuonna2012.",
-        "lyhyt": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "selite": "Santa Marian luoto Gamboan rannalta vuonna 2012.",
+        "lyhyt": "Santa Marian luoto Gamboan rannalta.",
         "tiedosto": "Praia-Ilhéu de Santa Maria (2).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Santa Marian luoto Gamboan rannalta vuonna2012.",
-        "lyhyt": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "selite": "Santa Marian luoto Gamboan rannalta vuonna 2012.",
+        "lyhyt": "Santa Marian luoto Gamboan rannalta.",
         "tiedosto": "Praia-Ilhéu de Santa Maria (2).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l2-d5b04ec5c7368a051824.jpg",
         "suora": true,
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Santa Marian luoto Gamboan rannalta vuonna2012.",
-        "lyhyt": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "selite": "Santa Marian luoto Gamboan rannalta vuonna 2012.",
+        "lyhyt": "Santa Marian luoto Gamboan rannalta.",
         "tiedosto": "Praia-Ilhéu de Santa Maria (2).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2065,10 +2233,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
-        "semanticContextSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
+        "targetBeforeSHA256": "ebee205e49b77f8c1b64b901e1359f7f1923695fc181d7c7d5e6d9a44d2b607d",
+        "semanticContextSHA256": "ebee205e49b77f8c1b64b901e1359f7f1923695fc181d7c7d5e6d9a44d2b607d",
         "subjectTitle": "Luoto varastoi ja eristi",
         "targetState": "existing-target"
       },
@@ -2227,9 +2395,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Praia-Ilhéu de Santa Maria (2).jpg",
-        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Santa Marian luoto Gamboan rannalta vuonna2012.",
-        "lyhyt": "Santa Marian luoto Gamboan rannalta vuonna2012."
+        "lyhyt": "Santa Marian luoto Gamboan rannalta.",
+        "selite": "Santa Marian luoto Gamboan rannalta vuonna 2012.",
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2248,23 +2416,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Santa Marian luoto Gamboan rannalta vuonna2012.",
-        "lyhyt": "Santa Marian luoto Gamboan rannalta vuonna2012.",
+        "selite": "Santa Marian luoto Gamboan rannalta vuonna 2012.",
+        "lyhyt": "Santa Marian luoto Gamboan rannalta.",
         "tiedosto": "Praia-Ilhéu de Santa Maria (2).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
-      "targetAfterSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
-      "contextAfterSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
+      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "targetAfterSHA256": "ebee205e49b77f8c1b64b901e1359f7f1923695fc181d7c7d5e6d9a44d2b607d",
+      "contextAfterSHA256": "ebee205e49b77f8c1b64b901e1359f7f1923695fc181d7c7d5e6d9a44d2b607d",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+        "targetAfterSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
+        "contextAfterSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
+          "semanticContextSHA256": "4a537bb305fdeffdb9a4a412d510d072cb7790918cc7a3926d737f4960907a29",
+          "subjectTitle": "Luoto varastoi ja eristi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+        "sameImageNativeSHA256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7",
+        "sameImageExportSHA256": "d5b04ec5c7368a051824e775f6c11bd7a5b89d855dd1129365ee3d40db38eba7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2286,23 +2475,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l3-8d08589b293966079f1f.jpg",
         "suora": true,
         "lahde": "James St. John, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
-        "lyhyt": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "selite": "Floridan Cayo Costassa kuvattu coquina koostuu yhteen sitoutuneista kuorista; kuva havainnollistaa sedimenttikivityyppiä.",
+        "lyhyt": "Kuorista muodostunutta coquina-kiveä Floridassa.",
         "tiedosto": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "James St. John, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
-        "lyhyt": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "selite": "Floridan Cayo Costassa kuvattu coquina koostuu yhteen sitoutuneista kuorista; kuva havainnollistaa sedimenttikivityyppiä.",
+        "lyhyt": "Kuorista muodostunutta coquina-kiveä Floridassa.",
         "tiedosto": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/l3-8d08589b293966079f1f.jpg",
         "suora": true,
         "lahde": "James St. John, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
-        "lyhyt": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "selite": "Floridan Cayo Costassa kuvattu coquina koostuu yhteen sitoutuneista kuorista; kuva havainnollistaa sedimenttikivityyppiä.",
+        "lyhyt": "Kuorista muodostunutta coquina-kiveä Floridassa.",
         "tiedosto": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2317,10 +2506,10 @@
         2000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
-        "semanticContextSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
+        "targetBeforeSHA256": "8c435a74225d86879ca12680ce10883e1e66d962735aeac2c878b2cb09ede041",
+        "semanticContextSHA256": "8c435a74225d86879ca12680ce10883e1e66d962735aeac2c878b2cb09ede041",
         "subjectTitle": "Simpukankuori mustan kiven välissä",
         "targetState": "existing-target"
       },
@@ -2462,9 +2651,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg",
-        "lahde": "James St. John, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
-        "lyhyt": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva."
+        "lyhyt": "Kuorista muodostunutta coquina-kiveä Floridassa.",
+        "selite": "Floridan Cayo Costassa kuvattu coquina koostuu yhteen sitoutuneista kuorista; kuva havainnollistaa sedimenttikivityyppiä.",
+        "lahde": "James St. John, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2483,23 +2672,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "James St. John, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
-        "lyhyt": "Floridan Cayo Costan simpukkakivi eli coquina, materiaalin yleiskuva.",
+        "selite": "Floridan Cayo Costassa kuvattu coquina koostuu yhteen sitoutuneista kuorista; kuva havainnollistaa sedimenttikivityyppiä.",
+        "lyhyt": "Kuorista muodostunutta coquina-kiveä Floridassa.",
         "tiedosto": "Coquina (Anastasia Formation, Pleistocene or Holocene; Cayo Costa Island, Florida, USA) (26032505336).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
-      "targetAfterSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
-      "contextAfterSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
+      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "targetAfterSHA256": "8c435a74225d86879ca12680ce10883e1e66d962735aeac2c878b2cb09ede041",
+      "contextAfterSHA256": "8c435a74225d86879ca12680ce10883e1e66d962735aeac2c878b2cb09ede041",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+        "targetAfterSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
+        "contextAfterSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
+          "semanticContextSHA256": "076900cf10a36ca1000dfc0aca497b45291b9b36fc19f26b566aa6b1812f6720",
+          "subjectTitle": "Simpukankuori mustan kiven välissä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+        "sameImageNativeSHA256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+        "sameImageExportSHA256": "8d08589b293966079f1f662595c047a123bddc206d89afd3032ab46e3e760198",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e04",
@@ -2521,23 +2731,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/n5-796444495293c437310a.jpg",
         "suora": true,
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Santa Marian luoto Gamboan edustalla vuonna2012.",
-        "lyhyt": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "selite": "Santa Marian luoto Gamboan edustalla vuonna 2012.",
+        "lyhyt": "Santa Marian luoto Gamboan edustalla.",
         "tiedosto": "Praia-Ilhéu de Santa Maria (3).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Santa Marian luoto Gamboan edustalla vuonna2012.",
-        "lyhyt": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "selite": "Santa Marian luoto Gamboan edustalla vuonna 2012.",
+        "lyhyt": "Santa Marian luoto Gamboan edustalla.",
         "tiedosto": "Praia-Ilhéu de Santa Maria (3).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/n5-796444495293c437310a.jpg",
         "suora": true,
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Santa Marian luoto Gamboan edustalla vuonna2012.",
-        "lyhyt": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "selite": "Santa Marian luoto Gamboan edustalla vuonna 2012.",
+        "lyhyt": "Santa Marian luoto Gamboan edustalla.",
         "tiedosto": "Praia-Ilhéu de Santa Maria (3).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2552,10 +2762,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e04/paakaupungit-pilvi/e04/praia/sisalto.json",
-      "sourceContentSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+      "sourceContentSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "136a7037b1be20bd9fdce9c3d78e6dd283fd4c2f6f7e594de889d5b6c53a41e1",
-        "semanticContextSHA256": "011a13f16071363346e85de33e2a3dda229a2c3dca391a1e4b703663a435ef8a",
+        "targetBeforeSHA256": "11b0d596c6bf9d05880482bf8ee7d081ef4142317d445089bb36e8b41c37d244",
+        "semanticContextSHA256": "ad3ab97283d821e6bc10f452154b47e9a1933a5939e76f184877b484abacfb15",
         "subjectTitle": "Santa Marian luoto",
         "targetState": "existing-target"
       },
@@ -2715,9 +2925,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Praia-Ilhéu de Santa Maria (3).jpg",
-        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Santa Marian luoto Gamboan edustalla vuonna2012.",
-        "lyhyt": "Santa Marian luoto Gamboan edustalla vuonna2012."
+        "lyhyt": "Santa Marian luoto Gamboan edustalla.",
+        "selite": "Santa Marian luoto Gamboan edustalla vuonna 2012.",
+        "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2736,28 +2946,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Santa Marian luoto Gamboan edustalla vuonna2012.",
-        "lyhyt": "Santa Marian luoto Gamboan edustalla vuonna2012.",
+        "selite": "Santa Marian luoto Gamboan edustalla vuonna 2012.",
+        "lyhyt": "Santa Marian luoto Gamboan edustalla.",
         "tiedosto": "Praia-Ilhéu de Santa Maria (3).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
-      "targetAfterSHA256": "136a7037b1be20bd9fdce9c3d78e6dd283fd4c2f6f7e594de889d5b6c53a41e1",
-      "contextAfterSHA256": "011a13f16071363346e85de33e2a3dda229a2c3dca391a1e4b703663a435ef8a",
+      "sourceContentAfterSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+      "targetAfterSHA256": "11b0d596c6bf9d05880482bf8ee7d081ef4142317d445089bb36e8b41c37d244",
+      "contextAfterSHA256": "ad3ab97283d821e6bc10f452154b47e9a1933a5939e76f184877b484abacfb15",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "3be82f396feb437f6b25eb02a8f2e11d6acc7c77c14a9cf5c4e3225170146976",
+        "targetAfterSHA256": "136a7037b1be20bd9fdce9c3d78e6dd283fd4c2f6f7e594de889d5b6c53a41e1",
+        "contextAfterSHA256": "011a13f16071363346e85de33e2a3dda229a2c3dca391a1e4b703663a435ef8a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "136a7037b1be20bd9fdce9c3d78e6dd283fd4c2f6f7e594de889d5b6c53a41e1",
+          "semanticContextSHA256": "011a13f16071363346e85de33e2a3dda229a2c3dca391a1e4b703663a435ef8a",
+          "subjectTitle": "Santa Marian luoto",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0fcf3afcb35c384a6b22c8e02572a4090792bc2e7caf743ef7806b04b300355a",
+        "sameImageNativeSHA256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+        "sameImageExportSHA256": "796444495293c437310aed0eea15dc13956650cb79261328cccc9f3b26f3dc64",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e04/praia/61f554b80a7c60fbad27768b6127fc3a9e9604e9a3dbcec378a2eabc8b6f29f3.json",
+  "task118ReboundAt": "2026-10-13T16:33:24.048530+00:00"
 }
