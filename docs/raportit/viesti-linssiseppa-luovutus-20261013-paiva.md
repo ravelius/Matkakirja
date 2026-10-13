@@ -9,7 +9,7 @@ tiedostorajat-osio koski 13.10. aamun NUI-jakoa).
 Edellinen luovutus: viesti-linssiseppa-luovutus-20261013-aamu.md.
 
 ## 1. KÄYNNISSÄ (Julkaisijan jono linjalla 1/2, automaattinen)
-1) **alkulento187b** = linssiseppa/alkulento-187 **9de62c31e** (wt /Users/Shared/Claude/wt/proto-linssiseppa-alkulento187), iPad, sk-alkulento187-ipad.txt.
+1) **alkulento187b** AJETTU 11.54 OK (todistus-alkulento187b-ipad-20261013-1152; matala ohitus, kone näkyy, loiva kaarros) → KUITTAUSPYYNTÖ + kysymys kohdasta 1 lähetetty PT:lle 11.5x.
 2) **katso187** = linssiseppa/katso-kohteet-187 25e2bdf72 + pelikoodari/aarre-eurooppa-187 107cce88c (käännös 3504c7548 valmis), iPad, sk-katso187-ipad.txt.
 3) **kehys187b** = linssiseppa/museo-palaute-187 **ca49d720d** (käännös KÄÄNNÖS NYT linja 2), iPhone + iPad kehysvertailu (sk-kehys187-*.txt)
    + iPad museon nimi (sk-nimi187-ipad.txt). Lokit `lokit/todistus-<era>-<laite>-*`. Ilmoita SIMU VAPAA kun kaikki ajettu.
@@ -31,7 +31,7 @@ NUI teki rinnalla nimilistan/Valitse näyttely -sivun (MuseoTaulu aloitus/esikat
 Kaarros loiva (kääntö ≤ 15 °/s, säde ≥ 44 km, kallistus ≤ 22°), tulevan reitin katkoviiva pois, kynänjälki jää (220ff0075);
 QA-polun ("ui aloita") varavalintanäkymä, jotta ohitus ja kone osuvat kuvaan (9de62c31e; testi OhitusJaLoppuKuin182 ±10 %).
 **Kohta 1 (kipin visuaalit lennolle) EI tehty**: agentin perustelu – lento on pergamenttikartalla 200–1 800 km:stä päivällä, kipin
-elävä kaupunki/vesi/valot ovat Googlen 3D-näkymässä → ei näkyisi. → Vie PT:lle kysymyksenä alkulento187b-videon kanssa.
+elävä kaupunki/vesi/valot ovat Googlen 3D-näkymässä → ei näkyisi. → Kysytty PT:ltä 11.5x (odottaa vastausta).
 
 ## 4. KAUPUNGIT – linssiseppa/kippi-lontoo-praha-187, wt proto-linssiseppa-kippi187
 KUITATTU 187: cd0fbaac5 (Oslo, Bergen, Ljubljana) ja 2de4caf63 (Bryssel, Amsterdam, Krakova, Sevilla, Sofia, Bukarest, Tampere, Akershus).
