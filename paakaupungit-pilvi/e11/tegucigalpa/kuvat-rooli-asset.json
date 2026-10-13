@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e11",
   "city": "tegucigalpa",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "40aa5a99b566d1d255c1849160d9dc59188cfe2adf6bbc81b152a645f41f1508",
+      "sourceContentSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "ec43a7cd0f994173ad41dbc3ce61932ba5c8f9415c81199a3348fe77e5aafd69",
@@ -559,7 +559,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "ec43a7cd0f994173ad41dbc3ce61932ba5c8f9415c81199a3348fe77e5aafd69"
+      "contextAfterSHA256": "ec43a7cd0f994173ad41dbc3ce61932ba5c8f9415c81199a3348fe77e5aafd69",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -612,7 +614,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "40aa5a99b566d1d255c1849160d9dc59188cfe2adf6bbc81b152a645f41f1508",
+      "sourceContentSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "1119b2f3d8f0c4613811f5fdda6512538036880ffc1f6331392849f3948114eb",
@@ -908,7 +910,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "1119b2f3d8f0c4613811f5fdda6512538036880ffc1f6331392849f3948114eb"
+      "contextAfterSHA256": "1119b2f3d8f0c4613811f5fdda6512538036880ffc1f6331392849f3948114eb",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -958,7 +962,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "40aa5a99b566d1d255c1849160d9dc59188cfe2adf6bbc81b152a645f41f1508",
+      "sourceContentSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7aab6ac9f7b94754d9e4c91607cf42d80d9537add27d034f6cb13d9d74e27726",
         "semanticContextSHA256": "7aab6ac9f7b94754d9e4c91607cf42d80d9537add27d034f6cb13d9d74e27726",
@@ -1252,7 +1256,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "targetAfterSHA256": "7aab6ac9f7b94754d9e4c91607cf42d80d9537add27d034f6cb13d9d74e27726",
-      "contextAfterSHA256": "7aab6ac9f7b94754d9e4c91607cf42d80d9537add27d034f6cb13d9d74e27726"
+      "contextAfterSHA256": "7aab6ac9f7b94754d9e4c91607cf42d80d9537add27d034f6cb13d9d74e27726",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -1302,7 +1308,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "40aa5a99b566d1d255c1849160d9dc59188cfe2adf6bbc81b152a645f41f1508",
+      "sourceContentSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d00df193061a73d024958b62c2f78a147a4de9b667eb30c48ec5e1a934c652a3",
         "semanticContextSHA256": "d00df193061a73d024958b62c2f78a147a4de9b667eb30c48ec5e1a934c652a3",
@@ -1596,7 +1602,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "targetAfterSHA256": "d00df193061a73d024958b62c2f78a147a4de9b667eb30c48ec5e1a934c652a3",
-      "contextAfterSHA256": "d00df193061a73d024958b62c2f78a147a4de9b667eb30c48ec5e1a934c652a3"
+      "contextAfterSHA256": "d00df193061a73d024958b62c2f78a147a4de9b667eb30c48ec5e1a934c652a3",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -1646,7 +1654,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "40aa5a99b566d1d255c1849160d9dc59188cfe2adf6bbc81b152a645f41f1508",
+      "sourceContentSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "f1202ac65ff9cdb9ec843b8f36452cb272d00e5847731fd5f43aa10c4558f13e",
         "semanticContextSHA256": "f1202ac65ff9cdb9ec843b8f36452cb272d00e5847731fd5f43aa10c4558f13e",
@@ -2571,7 +2579,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "targetAfterSHA256": "f1202ac65ff9cdb9ec843b8f36452cb272d00e5847731fd5f43aa10c4558f13e",
-      "contextAfterSHA256": "f1202ac65ff9cdb9ec843b8f36452cb272d00e5847731fd5f43aa10c4558f13e"
+      "contextAfterSHA256": "f1202ac65ff9cdb9ec843b8f36452cb272d00e5847731fd5f43aa10c4558f13e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -2624,7 +2634,7 @@
         2856
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "40aa5a99b566d1d255c1849160d9dc59188cfe2adf6bbc81b152a645f41f1508",
+      "sourceContentSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "377701af71e64d4f9b386992b549b648cb775f7508e2707e5638f7673154f032",
         "semanticContextSHA256": "377701af71e64d4f9b386992b549b648cb775f7508e2707e5638f7673154f032",
@@ -2878,7 +2888,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "targetAfterSHA256": "377701af71e64d4f9b386992b549b648cb775f7508e2707e5638f7673154f032",
-      "contextAfterSHA256": "377701af71e64d4f9b386992b549b648cb775f7508e2707e5638f7673154f032"
+      "contextAfterSHA256": "377701af71e64d4f9b386992b549b648cb775f7508e2707e5638f7673154f032",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -2931,10 +2943,10 @@
         1850
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/tegucigalpa/sisalto.json",
-      "sourceContentSHA256": "40aa5a99b566d1d255c1849160d9dc59188cfe2adf6bbc81b152a645f41f1508",
+      "sourceContentSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "0478bf6269712d30759d55ae035f35bc99b327bb5508424abb977b955da1e307",
+        "semanticContextSHA256": "0478bf6269712d30759d55ae035f35bc99b327bb5508424abb977b955da1e307",
         "subjectTitle": "Tegucigalpa",
         "targetState": "existing-target"
       },
@@ -3145,10 +3157,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Tegucigalpa 1983.jpg",
+        "lahde": "SSGT Jose L. Hernandez, Wikimedia Commons (PD)",
+        "selite": "Tegucigalpan katuja ja kortteleita vuonna 1983.",
+        "lyhyt": "Tegucigalpan katuja ja kortteleita vuonna 1983."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3181,10 +3193,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "21213e682080b170e98192f5fb5ebefe92df42417fb4402c0881b3cbb2c7ea0b",
       "targetAfterSHA256": "0478bf6269712d30759d55ae035f35bc99b327bb5508424abb977b955da1e307",
-      "contextAfterSHA256": "0478bf6269712d30759d55ae035f35bc99b327bb5508424abb977b955da1e307"
+      "contextAfterSHA256": "0478bf6269712d30759d55ae035f35bc99b327bb5508424abb977b955da1e307",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e11",
   "city": "ottawa",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
   "assets": [
     {
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "2665217276531360d230f70d289603b81b8d2e79708d31f891ef8b4c8928ac76",
+        "semanticContextSHA256": "fdfdef0b0d91f6196b1ffa3f1e6e5eb976f185d0a6a37cb22e728dd774325f8b",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -733,7 +733,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "fdfdef0b0d91f6196b1ffa3f1e6e5eb976f185d0a6a37cb22e728dd774325f8b"
+      "contextAfterSHA256": "fdfdef0b0d91f6196b1ffa3f1e6e5eb976f185d0a6a37cb22e728dd774325f8b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -786,7 +788,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "373c33ee652358135b925347eadf7a76c1113b97371d87c55e81c300ea41c67f",
@@ -1209,7 +1211,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "373c33ee652358135b925347eadf7a76c1113b97371d87c55e81c300ea41c67f"
+      "contextAfterSHA256": "373c33ee652358135b925347eadf7a76c1113b97371d87c55e81c300ea41c67f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -1259,7 +1263,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
         "semanticContextSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
@@ -1678,7 +1682,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
-      "contextAfterSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b"
+      "contextAfterSHA256": "ca7f252b9a0dada70c1f3855e1584031065e34c293450690e39c1a7afcd0a66b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -1728,7 +1734,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
         "semanticContextSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
@@ -2147,7 +2153,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
-      "contextAfterSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b"
+      "contextAfterSHA256": "a67c886078008c5c505e418fc45f36b34e8059ddfe22e48d2e8e13f6f743ff6b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -2197,7 +2205,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
         "semanticContextSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
@@ -2616,7 +2624,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
-      "contextAfterSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b"
+      "contextAfterSHA256": "24f31526d78c010f5f03ceea907e4f4edd912af95ad0c81fc31ac38c22d0802b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -2666,7 +2676,7 @@
         2775
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
         "semanticContextSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
@@ -2896,7 +2906,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
-      "contextAfterSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296"
+      "contextAfterSHA256": "c4c47d9654899724b6cf7ec1af821298de2a67ca3ea289a2299daccc79985296",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -2949,7 +2961,7 @@
         3640
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
         "semanticContextSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
@@ -3205,7 +3217,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
-      "contextAfterSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1"
+      "contextAfterSHA256": "5a495a8f3e0ef6408b089348a5300a39f9b4fa0a683bd2a5bcc26d2627bdfed1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -3258,7 +3272,7 @@
         1515
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
         "semanticContextSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
@@ -3512,7 +3526,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
-      "contextAfterSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101"
+      "contextAfterSHA256": "66b3d02064f7d7553572572077f6676d14032694be10fe8debcd689ba92ca101",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -3565,7 +3581,7 @@
         2272
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
         "semanticContextSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
@@ -3805,7 +3821,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
-      "contextAfterSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c"
+      "contextAfterSHA256": "d4ca9998e1fe9b649dd21428a0e93c1c53988a59fe2cf667eae60f3ed9de9b7c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -3861,10 +3879,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "3e8776631a66c5e2702cbc41b94f8ee6329889f6764fc970bfe65c3699650d12",
+        "targetBeforeSHA256": "d3a5705ee6a0c3317e8caf1403ce7cb7e548b64d96a970e1da40449c1dd27782",
+        "semanticContextSHA256": "7d01add76703f34257c584da8dff8d86c981a68abb9b9c23628f8466315c5731",
         "subjectTitle": "Kauppakortteleista jokirantaan",
         "targetState": "existing-target"
       },
@@ -4054,10 +4072,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Rideau Falls 20250720 150134.jpg",
+        "lahde": "R Prazeres, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025.",
+        "lyhyt": "Rideau-putoukset ja Ottawa-joki heinäkuussa 2025."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4090,7 +4108,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "d3a5705ee6a0c3317e8caf1403ce7cb7e548b64d96a970e1da40449c1dd27782",
-      "contextAfterSHA256": "7d01add76703f34257c584da8dff8d86c981a68abb9b9c23628f8466315c5731"
+      "contextAfterSHA256": "7d01add76703f34257c584da8dff8d86c981a68abb9b9c23628f8466315c5731",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -4143,7 +4163,7 @@
         3746
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
         "semanticContextSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
@@ -4403,7 +4423,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
-      "contextAfterSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404"
+      "contextAfterSHA256": "5992d4e90f37d0897ad83ba3c9aa372182e7df468226596ee49034f7791b5404",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -4456,7 +4478,7 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ca08faaedfb6fe72e1c0c8e696e9c430cda3e7c663419a66adc1456f2cd42b30",
         "semanticContextSHA256": "c95cd993de32a19a18c28b41be33f7643f8032c5caf1f82cc213819e9ec9470f",
@@ -4670,7 +4692,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "ca08faaedfb6fe72e1c0c8e696e9c430cda3e7c663419a66adc1456f2cd42b30",
-      "contextAfterSHA256": "c95cd993de32a19a18c28b41be33f7643f8032c5caf1f82cc213819e9ec9470f"
+      "contextAfterSHA256": "c95cd993de32a19a18c28b41be33f7643f8032c5caf1f82cc213819e9ec9470f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -4723,10 +4747,10 @@
         2896
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "09277119a018f466bb6c8b90f34368da5a2d6824b80f4cc1955ae209fde6df2b",
+        "targetBeforeSHA256": "133170ef91601b01b85fc1153526a8aa990d91e26f4fe71e9570fc2eaf986bdc",
+        "semanticContextSHA256": "3d331890e00e5b94b865aabe7c956572c1e01a4c2dab1766a960d7b6a790ad19",
         "subjectTitle": "Dows Lake",
         "targetState": "existing-target"
       },
@@ -4916,10 +4940,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Dow’s Lake, off the Rideau Canal (48363469826).jpg",
+        "lahde": "Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)",
+        "selite": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.",
+        "lyhyt": "Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4952,7 +4976,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "133170ef91601b01b85fc1153526a8aa990d91e26f4fe71e9570fc2eaf986bdc",
-      "contextAfterSHA256": "3d331890e00e5b94b865aabe7c956572c1e01a4c2dab1766a960d7b6a790ad19"
+      "contextAfterSHA256": "3d331890e00e5b94b865aabe7c956572c1e01a4c2dab1766a960d7b6a790ad19",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -5005,10 +5031,10 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/ottawa/sisalto.json",
-      "sourceContentSHA256": "879b9abe6562d2e885b5f7ad3218635e7028e95e5aa20de8845ad9afd187ba1b",
+      "sourceContentSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "182ecf5b9097a0f348caf3ad7c97b5ff46fc72cd108bb0d95dcf95986148a1cb",
+        "targetBeforeSHA256": "8608b56e5f51d00d3e0c921443e2a1e4bbd9dde5af30fcc980a7e129bb9ebee1",
+        "semanticContextSHA256": "cc12b2ae707e994c521f12d00c78e3f67969b8be593e0893499e1262ca8b8a5d",
         "subjectTitle": "Rideau-putoukset",
         "targetState": "existing-target"
       },
@@ -5198,10 +5224,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Rideau Falls - 01.jpg",
+        "lahde": "Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Rideau-putousten vettä ja kallioita vuonna 2016.",
+        "lyhyt": "Rideau-putousten vettä ja kallioita vuonna 2016."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -5234,10 +5260,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "a59989d85042421a2c0cac223359909ff07e8de89567d27fe60e51aeeb8deb8f",
       "targetAfterSHA256": "8608b56e5f51d00d3e0c921443e2a1e4bbd9dde5af30fcc980a7e129bb9ebee1",
-      "contextAfterSHA256": "cc12b2ae707e994c521f12d00c78e3f67969b8be593e0893499e1262ca8b8a5d"
+      "contextAfterSHA256": "cc12b2ae707e994c521f12d00c78e3f67969b8be593e0893499e1262ca8b8a5d",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

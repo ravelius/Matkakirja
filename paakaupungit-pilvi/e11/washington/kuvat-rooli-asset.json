@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e11",
   "city": "washington",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
   "assets": [
     {
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "1a317bd17c10b87ae4db73542c669de622ec4db376c3b8c553ea67bf2be79b26",
@@ -101,7 +101,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -126,7 +126,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-        "fileSHA256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de",
+        "fileSHA256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -159,7 +159,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -174,7 +174,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -263,7 +263,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "1a317bd17c10b87ae4db73542c669de622ec4db376c3b8c553ea67bf2be79b26"
+      "contextAfterSHA256": "1a317bd17c10b87ae4db73542c669de622ec4db376c3b8c553ea67bf2be79b26",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -313,7 +315,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e37ec28c580bd4890db83f6a756d62c4cc7cbe97b41889fc0e07099c900668cb",
         "semanticContextSHA256": "e37ec28c580bd4890db83f6a756d62c4cc7cbe97b41889fc0e07099c900668cb",
@@ -468,7 +470,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -557,7 +559,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "e37ec28c580bd4890db83f6a756d62c4cc7cbe97b41889fc0e07099c900668cb",
-      "contextAfterSHA256": "e37ec28c580bd4890db83f6a756d62c4cc7cbe97b41889fc0e07099c900668cb"
+      "contextAfterSHA256": "e37ec28c580bd4890db83f6a756d62c4cc7cbe97b41889fc0e07099c900668cb",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -607,7 +611,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "22a944f6464c77bd030a045b38d41508dfabb724a108afd5acaf79fe28763624",
         "semanticContextSHA256": "22a944f6464c77bd030a045b38d41508dfabb724a108afd5acaf79fe28763624",
@@ -762,7 +766,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -851,7 +855,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "22a944f6464c77bd030a045b38d41508dfabb724a108afd5acaf79fe28763624",
-      "contextAfterSHA256": "22a944f6464c77bd030a045b38d41508dfabb724a108afd5acaf79fe28763624"
+      "contextAfterSHA256": "22a944f6464c77bd030a045b38d41508dfabb724a108afd5acaf79fe28763624",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -901,7 +907,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9e4d7df75403fd26daf576550bb948afb54ad643140cbbbdd6e5c31fd9c02fbb",
         "semanticContextSHA256": "9e4d7df75403fd26daf576550bb948afb54ad643140cbbbdd6e5c31fd9c02fbb",
@@ -1056,7 +1062,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -1145,7 +1151,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "9e4d7df75403fd26daf576550bb948afb54ad643140cbbbdd6e5c31fd9c02fbb",
-      "contextAfterSHA256": "9e4d7df75403fd26daf576550bb948afb54ad643140cbbbdd6e5c31fd9c02fbb"
+      "contextAfterSHA256": "9e4d7df75403fd26daf576550bb948afb54ad643140cbbbdd6e5c31fd9c02fbb",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -1195,7 +1203,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2dd71a21abac47e9a1dc8fb824c883f3127f143e91fd0aa805de9ab24042b54f",
         "semanticContextSHA256": "2dd71a21abac47e9a1dc8fb824c883f3127f143e91fd0aa805de9ab24042b54f",
@@ -1350,7 +1358,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -1439,7 +1447,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "2dd71a21abac47e9a1dc8fb824c883f3127f143e91fd0aa805de9ab24042b54f",
-      "contextAfterSHA256": "2dd71a21abac47e9a1dc8fb824c883f3127f143e91fd0aa805de9ab24042b54f"
+      "contextAfterSHA256": "2dd71a21abac47e9a1dc8fb824c883f3127f143e91fd0aa805de9ab24042b54f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -1489,7 +1499,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "77987039cd8372340ac1f18718c47cb802b30329562155fe0c59b5ba6681ed50",
         "semanticContextSHA256": "77987039cd8372340ac1f18718c47cb802b30329562155fe0c59b5ba6681ed50",
@@ -1644,7 +1654,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -1733,7 +1743,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "77987039cd8372340ac1f18718c47cb802b30329562155fe0c59b5ba6681ed50",
-      "contextAfterSHA256": "77987039cd8372340ac1f18718c47cb802b30329562155fe0c59b5ba6681ed50"
+      "contextAfterSHA256": "77987039cd8372340ac1f18718c47cb802b30329562155fe0c59b5ba6681ed50",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -1783,7 +1795,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "94bc40e6dd98db5e425fe58b0f91f71116923d4c7dcd157e6ac394857ebcc663",
         "semanticContextSHA256": "94bc40e6dd98db5e425fe58b0f91f71116923d4c7dcd157e6ac394857ebcc663",
@@ -1938,7 +1950,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -2027,7 +2039,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "94bc40e6dd98db5e425fe58b0f91f71116923d4c7dcd157e6ac394857ebcc663",
-      "contextAfterSHA256": "94bc40e6dd98db5e425fe58b0f91f71116923d4c7dcd157e6ac394857ebcc663"
+      "contextAfterSHA256": "94bc40e6dd98db5e425fe58b0f91f71116923d4c7dcd157e6ac394857ebcc663",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -2077,7 +2091,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0bdd92e96f4bb3ac61c41d51318ea32242dfa3ead28bd79a5c729a664f1a4f56",
         "semanticContextSHA256": "0bdd92e96f4bb3ac61c41d51318ea32242dfa3ead28bd79a5c729a664f1a4f56",
@@ -2232,7 +2246,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -2321,7 +2335,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "0bdd92e96f4bb3ac61c41d51318ea32242dfa3ead28bd79a5c729a664f1a4f56",
-      "contextAfterSHA256": "0bdd92e96f4bb3ac61c41d51318ea32242dfa3ead28bd79a5c729a664f1a4f56"
+      "contextAfterSHA256": "0bdd92e96f4bb3ac61c41d51318ea32242dfa3ead28bd79a5c729a664f1a4f56",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -2374,7 +2390,7 @@
         2581
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b19c1b7ea42f8629179ee29d6db784e1ed6ce25450171f235b1354c714307050",
         "semanticContextSHA256": "b19c1b7ea42f8629179ee29d6db784e1ed6ce25450171f235b1354c714307050",
@@ -2494,7 +2510,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -2505,7 +2521,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.542351+00:00",
+              "checkedAt": "2026-10-13T13:18:16.299033+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "C&O Canal - Georgetown.jpg",
               "captionFi": "C&O-kanavan Georgetown-osuus kuuluu Washingtonin vanhan satamakaupunginosan historiaan.",
@@ -2559,7 +2575,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-        "fileSHA256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de",
+        "fileSHA256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2654,7 +2670,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -2665,7 +2681,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.542351+00:00",
+              "checkedAt": "2026-10-13T13:18:16.299033+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "C&O Canal - Georgetown.jpg",
               "captionFi": "C&O-kanavan Georgetown-osuus kuuluu Washingtonin vanhan satamakaupunginosan historiaan.",
@@ -2711,7 +2727,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -2790,7 +2806,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "b19c1b7ea42f8629179ee29d6db784e1ed6ce25450171f235b1354c714307050",
-      "contextAfterSHA256": "b19c1b7ea42f8629179ee29d6db784e1ed6ce25450171f235b1354c714307050"
+      "contextAfterSHA256": "b19c1b7ea42f8629179ee29d6db784e1ed6ce25450171f235b1354c714307050",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -2843,7 +2861,7 @@
         2625
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0def0ba1fb78fcaaa087cc3a2d4874ad64c454054202aa748e723623f3d687f9",
         "semanticContextSHA256": "0def0ba1fb78fcaaa087cc3a2d4874ad64c454054202aa748e723623f3d687f9",
@@ -2961,7 +2979,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -2972,7 +2990,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.466380+00:00",
+              "checkedAt": "2026-10-13T13:18:16.235320+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "National Mall, Lincoln Memorial 04448v.jpg",
               "captionFi": "Washingtonin National Mall yhdistää kaupungin historiallisia muistomerkkejä ja puistoalueita.",
@@ -3026,7 +3044,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-        "fileSHA256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de",
+        "fileSHA256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -3119,7 +3137,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -3130,7 +3148,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.466380+00:00",
+              "checkedAt": "2026-10-13T13:18:16.235320+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "National Mall, Lincoln Memorial 04448v.jpg",
               "captionFi": "Washingtonin National Mall yhdistää kaupungin historiallisia muistomerkkejä ja puistoalueita.",
@@ -3176,7 +3194,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -3253,7 +3271,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "0def0ba1fb78fcaaa087cc3a2d4874ad64c454054202aa748e723623f3d687f9",
-      "contextAfterSHA256": "0def0ba1fb78fcaaa087cc3a2d4874ad64c454054202aa748e723623f3d687f9"
+      "contextAfterSHA256": "0def0ba1fb78fcaaa087cc3a2d4874ad64c454054202aa748e723623f3d687f9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -3306,7 +3326,7 @@
         3283
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "aef5bb0c857eaa2cde628b291b98d66b6255b8ef6da723a792683dbbbd0f80fc",
         "semanticContextSHA256": "aef5bb0c857eaa2cde628b291b98d66b6255b8ef6da723a792683dbbbd0f80fc",
@@ -3425,7 +3445,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -3436,7 +3456,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.477954+00:00",
+              "checkedAt": "2026-10-13T13:18:16.247038+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "C&O Canal in Georgetown in Spring 2019.jpg",
               "captionFi": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
@@ -3489,7 +3509,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-        "fileSHA256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de",
+        "fileSHA256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98",
         "item": {
           "slot": "C3",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
@@ -3583,7 +3603,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -3594,7 +3614,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.477954+00:00",
+              "checkedAt": "2026-10-13T13:18:16.247038+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "C&O Canal in Georgetown in Spring 2019.jpg",
               "captionFi": "Georgetownin C&O-kanava liittyy Washingtonin vanhan satamakaupunginosan historiaan.",
@@ -3639,7 +3659,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -3716,7 +3736,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "aef5bb0c857eaa2cde628b291b98d66b6255b8ef6da723a792683dbbbd0f80fc",
-      "contextAfterSHA256": "aef5bb0c857eaa2cde628b291b98d66b6255b8ef6da723a792683dbbbd0f80fc"
+      "contextAfterSHA256": "aef5bb0c857eaa2cde628b291b98d66b6255b8ef6da723a792683dbbbd0f80fc",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -3769,7 +3791,7 @@
         4032
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "344ecb3f40dffd7d7d9c1674b51a1303fcc65a434005de6eda90c48cfbe45dc0",
         "semanticContextSHA256": "ffbae66c039b517fa1067f7464a28ed175655d5e60f1897f8a1becaa88a72cf1",
@@ -4010,7 +4032,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -4021,7 +4043,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.483361+00:00",
+              "checkedAt": "2026-10-13T13:18:16.252924+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "Washington Monument 2022.jpg",
               "captionFi": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
@@ -4085,7 +4107,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-        "fileSHA256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de",
+        "fileSHA256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -4300,7 +4322,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -4311,7 +4333,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.483361+00:00",
+              "checkedAt": "2026-10-13T13:18:16.252924+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "Washington Monument 2022.jpg",
               "captionFi": "Washington-monumentti on kaupungin historiallinen luonnonkivinen obeliski.",
@@ -4367,7 +4389,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -4444,7 +4466,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "344ecb3f40dffd7d7d9c1674b51a1303fcc65a434005de6eda90c48cfbe45dc0",
-      "contextAfterSHA256": "ffbae66c039b517fa1067f7464a28ed175655d5e60f1897f8a1becaa88a72cf1"
+      "contextAfterSHA256": "ffbae66c039b517fa1067f7464a28ed175655d5e60f1897f8a1becaa88a72cf1",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -4497,10 +4521,10 @@
         1347
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "00f756b643f9f3efcda327ff2c552068efef05f37946f44cafeca669c5bfd437",
-        "semanticContextSHA256": "00f756b643f9f3efcda327ff2c552068efef05f37946f44cafeca669c5bfd437",
+        "targetBeforeSHA256": "c4304388254614fb3f927029579755f3092c6933197e7127d708087b3594b7e4",
+        "semanticContextSHA256": "c4304388254614fb3f927029579755f3092c6933197e7127d708087b3594b7e4",
         "subjectTitle": "Talo, jonka väärä tarina pelasti",
         "targetState": "existing-target"
       },
@@ -4637,7 +4661,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-        "fileSHA256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de",
+        "fileSHA256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98",
         "item": {
           "slot": "K2",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
@@ -4754,7 +4778,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -4795,10 +4819,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Old Stone House - Washington, D.C.jpg",
+        "lahde": "APK, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Georgetownin vanha kivitalo huhtikuussa 2022.",
+        "lyhyt": "Georgetownin vanha kivitalo huhtikuussa 2022."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4831,7 +4855,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "c4304388254614fb3f927029579755f3092c6933197e7127d708087b3594b7e4",
-      "contextAfterSHA256": "c4304388254614fb3f927029579755f3092c6933197e7127d708087b3594b7e4"
+      "contextAfterSHA256": "c4304388254614fb3f927029579755f3092c6933197e7127d708087b3594b7e4",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -4884,7 +4910,7 @@
         2736
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "981f083af2ca4a8f913396eb5041769fcc877f3be08fdfbca3c71f2229089b03",
         "semanticContextSHA256": "191a2a383707b2ac07b9d3ce52f53d1b0e66e1dd7decd208f4d483d81ac4e30c",
@@ -5001,7 +5027,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -5012,7 +5038,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.520528+00:00",
+              "checkedAt": "2026-10-13T13:18:16.291885+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "Old Stone House (Washington, D.C.) First Floor Rear Kitchen.jpg",
               "captionFi": "Georgetownin Old Stone House säilyttää historiallisen kotitalon ja työpaikan ympäristöä.",
@@ -5066,7 +5092,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-        "fileSHA256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de",
+        "fileSHA256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98",
         "item": {
           "slot": "N1",
           "targetJsonPath": "$.nahtavyydet[\"Georgetownin vanha kivitalo\"].kuvat[0]",
@@ -5158,7 +5184,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -5169,7 +5195,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.520528+00:00",
+              "checkedAt": "2026-10-13T13:18:16.291885+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "Old Stone House (Washington, D.C.) First Floor Rear Kitchen.jpg",
               "captionFi": "Georgetownin Old Stone House säilyttää historiallisen kotitalon ja työpaikan ympäristöä.",
@@ -5215,7 +5241,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -5292,7 +5318,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "981f083af2ca4a8f913396eb5041769fcc877f3be08fdfbca3c71f2229089b03",
-      "contextAfterSHA256": "191a2a383707b2ac07b9d3ce52f53d1b0e66e1dd7decd208f4d483d81ac4e30c"
+      "contextAfterSHA256": "191a2a383707b2ac07b9d3ce52f53d1b0e66e1dd7decd208f4d483d81ac4e30c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -5345,7 +5373,7 @@
         3594
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "465494bd22809aa5b14b9c15287fad14158c24997c28638273e6751518fab48f",
         "semanticContextSHA256": "1eebe0a534ca57d6331680e058924cc8a1cf6c8c1184fee162fbeb3d37406322",
@@ -5468,7 +5496,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -5479,7 +5507,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.513595+00:00",
+              "checkedAt": "2026-10-13T13:18:16.284949+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "Smithsonian Institution Building (53831938398).jpg",
               "captionFi": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
@@ -5532,7 +5560,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-        "fileSHA256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de",
+        "fileSHA256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98",
         "item": {
           "slot": "N2",
           "targetJsonPath": "$.nahtavyydet[\"Smithsonianin linna\"].kuvat[0]",
@@ -5630,7 +5658,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -5641,7 +5669,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.513595+00:00",
+              "checkedAt": "2026-10-13T13:18:16.284949+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "Smithsonian Institution Building (53831938398).jpg",
               "captionFi": "Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.",
@@ -5686,7 +5714,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -5763,7 +5791,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "465494bd22809aa5b14b9c15287fad14158c24997c28638273e6751518fab48f",
-      "contextAfterSHA256": "1eebe0a534ca57d6331680e058924cc8a1cf6c8c1184fee162fbeb3d37406322"
+      "contextAfterSHA256": "1eebe0a534ca57d6331680e058924cc8a1cf6c8c1184fee162fbeb3d37406322",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -5816,7 +5846,7 @@
         3872
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/washington/sisalto.json",
-      "sourceContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
+      "sourceContentSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "semanticSourceBind": {
         "targetBeforeSHA256": "58fa282c52ddb6d3fd90e23d05fb94e067e7b9d9791264e2555c1b965a8d3a9c",
         "semanticContextSHA256": "2ec48d61b92a23116690227edaf8a8e3dc66ffed21d148832b4f3940bf9e82a5",
@@ -5956,7 +5986,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -5967,7 +5997,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.553014+00:00",
+              "checkedAt": "2026-10-13T13:18:16.310118+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "Washington Monument 2011 earthquake damage 5.jpg",
               "captionFi": "Washington-monumentin marmoripinnan halkeama vuonna 2011.",
@@ -5990,7 +6020,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-        "fileSHA256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de",
+        "fileSHA256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98",
         "item": {
           "slot": "N3",
           "targetJsonPath": "$.nahtavyydet[\"Washington-monumentti\"].kuvat[0]",
@@ -6103,7 +6133,7 @@
             "currentContentVersionCheck": {
               "reviewedContentSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
               "currentContentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
-              "checkedAt": "2026-10-13T05:48:17.447935+00:00",
+              "checkedAt": "2026-10-13T13:18:16.219648+00:00",
               "personallyViewedAgain": false,
               "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e11/washington/6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a-sisalto.json",
               "reviewedSnapshotSHA256": "6c7a6db25c3a5cff60d90fa6f815a39dd91d9f08365e69ef1e6cc252f6e1cd2a",
@@ -6114,7 +6144,7 @@
               "imageFieldsExcludedOnlyAtInventoriedSlots": true
             },
             "currentBindingMetadataCheck": {
-              "checkedAt": "2026-10-13T05:48:17.553014+00:00",
+              "checkedAt": "2026-10-13T13:18:16.310118+00:00",
               "contentSHA256": "694327f8f2a92f6482801ede431650ac3b7bfb7a51998418ad38cfb78d37ac95",
               "commonsFile": "Washington Monument 2011 earthquake damage 5.jpg",
               "captionFi": "Washington-monumentin marmoripinnan halkeama vuonna 2011.",
@@ -6129,7 +6159,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/qa.json",
-            "sha256": "6bd213365d51e74b21b7acfe3c926c01764fa59ab05844f6b6ff03a60dd547de"
+            "sha256": "7c3c899c95896557f8b7f2e705d274f081c43c662e6ae237f988da4d59d97f98"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e11/washington/illustration-qa-extra.json",
@@ -6206,10 +6236,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "c96efe7bf79c8bdeb62e44f61ccfd4a6dbb08f75fb4170446b590d5e9d4a49e7",
       "targetAfterSHA256": "58fa282c52ddb6d3fd90e23d05fb94e067e7b9d9791264e2555c1b965a8d3a9c",
-      "contextAfterSHA256": "2ec48d61b92a23116690227edaf8a8e3dc66ffed21d148832b4f3940bf9e82a5"
+      "contextAfterSHA256": "2ec48d61b92a23116690227edaf8a8e3dc66ffed21d148832b4f3940bf9e82a5",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

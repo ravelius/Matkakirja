@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e11",
   "city": "sanjose",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "fdf59aed8c37c5090d91357eff239c1c31c5f3b7139cbfec13b1886cad37bab0",
@@ -501,7 +501,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "fdf59aed8c37c5090d91357eff239c1c31c5f3b7139cbfec13b1886cad37bab0"
+      "contextAfterSHA256": "fdf59aed8c37c5090d91357eff239c1c31c5f3b7139cbfec13b1886cad37bab0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -554,7 +556,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "525f467eafc77f8d78ed13812b3178d7928b3b37e41abfa845a5d02e0ec19f9a",
@@ -800,7 +802,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "525f467eafc77f8d78ed13812b3178d7928b3b37e41abfa845a5d02e0ec19f9a"
+      "contextAfterSHA256": "525f467eafc77f8d78ed13812b3178d7928b3b37e41abfa845a5d02e0ec19f9a",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -850,7 +854,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "semanticSourceBind": {
         "targetBeforeSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
         "semanticContextSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
@@ -1094,7 +1098,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
-      "contextAfterSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780"
+      "contextAfterSHA256": "424837d3e390f6b00b946136b490dc8c056022a4bd32fadff0294377df020780",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -1144,7 +1150,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "semanticSourceBind": {
         "targetBeforeSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
         "semanticContextSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
@@ -1388,7 +1394,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
-      "contextAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b"
+      "contextAfterSHA256": "cae49fa7172e86d7e2293dc071b6fa56b71cb0ca41254cda4faaf1f9974c487b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -1438,7 +1446,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
         "semanticContextSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
@@ -1690,7 +1698,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
-      "contextAfterSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a"
+      "contextAfterSHA256": "a176463555837728ff186bb4a691ced8eff12d29a4ee9284843d615104fe865a",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -1740,7 +1750,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "semanticSourceBind": {
         "targetBeforeSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
         "semanticContextSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
@@ -1984,7 +1994,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
-      "contextAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11"
+      "contextAfterSHA256": "018ad486123424b7d08043720cca829080dbe0ed4286c239ff7ad9c6b5d2bb11",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -2037,10 +2049,10 @@
         1200
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
+        "semanticContextSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
         "subjectTitle": "sanjose — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2202,10 +2214,11 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "King Swallowtail (Papilio thoas nealces) (9564832228).jpg",
+        "lahde": "Bernard DUPONT from FRANCE, Commons (CC BY-SA 2.0)",
+        "selite": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "lyhyt": "Perhonen Spirogyran perhospuutarhassa San Josén seudulla vuonna 2006.",
+        "vuosi": "2006"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2239,7 +2252,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
-      "contextAfterSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a"
+      "contextAfterSHA256": "6370bf51e967b07459d556ff5067496c47c5767aae5791fa36e03fb76ae7fd4a",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e11",
@@ -2292,7 +2307,7 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e11/paakaupungit-pilvi/e11/sanjose/sisalto.json",
-      "sourceContentSHA256": "4f9ddd81f3a3baeecd3358fd4577ab40d420ba676e22619bcfffb612d8217813",
+      "sourceContentSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "semanticSourceBind": {
         "targetBeforeSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
         "semanticContextSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
@@ -2491,10 +2506,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "f61775ade9593a3e794dd870aa8a0b05c256d99dccab6a17463a15020ab36733",
       "targetAfterSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
-      "contextAfterSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4"
+      "contextAfterSHA256": "de593d9a2f09cfa0e85b2f78d5ea4d44a74430a38aed021c93aed544266a1bc4",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }
