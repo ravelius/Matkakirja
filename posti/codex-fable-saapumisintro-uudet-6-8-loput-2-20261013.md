@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-19 QA/R2-varmennettua kuvaa toimitettu, 5 perusteltua lopullista poisjättöä. Käsitelty 24/47 tämän osan nimetyistä kuvista; 24 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+21 QA/R2-varmennettua kuvaa toimitettu, 5 perusteltua lopullista poisjättöä. Käsitelty 26/47 tämän osan nimetyistä kuvista; 26 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -31,6 +31,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-venice-uudet-6-8-20261013.json`. To
 
 - #187, slot 6: Venetsian San Marcon allas San Giorgio Maggioren kellotornista luoteeseen päivällä, San Marcon kellotorni ja Dogen palatsi kaukana. Havainnekuva.
 - Poisjättö #188, slot 8: Vesibussin vesirajan yläpuolinen alarunko on laajalti tumma vihreä-musta, kun ohje vaatii yksiväristä vaaleaa harmaa-valkoista runkoa. Tumma yhtenäinen rungon osa erottuu myös keulassa eikä ole vain yksittäinen varjo.
+
+## BUKAREST
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-bucharest-uudet-6-8-20261013.json`. Toimitettu 2/2; kutsuja 2.
+
+- #189, slot 6: Bukarestin kattomeri ja Kiseleff-bulevardi Riemukaaren yläterassilta etelä-kaakkoon päivällä. Havainnekuva.
+- #190, slot 8: Bukarestin raitiovaunu erillisellä raiteella puiden reunustamalla bulevardilla, vaaleita kerrostaloja taustalla. Havainnekuva.
 
 ## KRAKOVA
 

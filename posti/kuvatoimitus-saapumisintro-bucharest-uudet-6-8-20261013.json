@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "cityName": "BUKAREST",
+  "gameCityId": "bukarest",
+  "mediaSlug": "bucharest",
+  "taskNumbers": [
+    189,
+    190
+  ],
+  "updatedAt": "2026-10-13T19:55:23.013120+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 189,
+      "mediaSlug": "bucharest",
+      "slot": 6,
+      "filename": "bucharest-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Bukarestin kattomeri ja Kiseleff-bulevardi Riemukaaren yläterassilta etelä-kaakkoon päivällä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Bukarestin kattomeri ja Kiseleff-bulevardi Riemukaaren yläterassilta etelä-kaakkoon päivällä.** Tiedosto `bucharest-6-nakoala-intro-v1.png`.\nMitä kuvataan: Bukarestin vehreä kaupunkipanoraama päivänvalossa ylhäältä, noin 27 metrin korkeudelta Riemukaaren yläterassilta (nykyaikainen värikuva): etualalla vanhojen lehmusten ja vaahterien tiheitä latvoja; keskellä ja vasemmalla leveä puiden reunustama bulevardi (Kiseleff-tie), joka johtaa suoraan kohti kaukaista kaupungin keskustaa, muutama pieni auto merkittömänä; ympärillä kerros- ja rivitalojen vaaleita, harmaita ja terrakottaisia kattoja, puiston ja puiden vihreää sekä vanhoja 4-8-kerroksisia vaaleita kerrostaloja; kaukana horisontissa pehmeää kaupunkiutua ja matalia vaaleita kerrostalosiluetteja. Selkeä sininen taivas, vähän vaaleita pilviä. Värikuva, nykyaika, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Kulma: vaakakuva, korotettu näkökulma Riemukaaren yläterassilta, kamera suunnattu etelä-kaakkoon (keskisuunta noin 165 astetta; vaakasuuntainen näkökulma enintään noin 45 astetta, siis kuvassa suunnat noin 142-188 astetta): bulevardi kohti Voitonaukiota on suunnassa noin 159 astetta (1,7 km), kaupungin keskusta kauempana samassa suunnassa. Kameran takana luoteessa ja pohjoisessa (suunnat 313 ja 17 astetta) ovat Casa Presei Libere ja Herăstrăun puisto sekä kuvan vasemman reunan ulkopuolella idässä SkyTower (suunta noin 108 astetta); ne jäävät kuvan ulkopuolelle eikä niitä saa olla kuvassa. Valo: kirkas aamupäivä, pehmeä luonnollinen valo vasemmalta (idästä), luonnolliset värit, ei HDR:ää. Ei saa näkyä: Riemukaarta itseään, sen kivirakenteita, patsaita tai koristeita (kuvassa vain puiden latvoja etualalla), mitään tunnistettavaa julkista rakennusta lähietäisyydellä (ei Voitonaukion hallitusrakennusta, ei museoita Kiseleff-tien varrella, ei Ateneumia, ei kirkkoja tai kupoleita erottuvina), Parlamentin palatsia (sen näkyvyyttä ei ole varmistettu, ei pyydetä), pilvenpiirtäjiä tai korkeita toimistotorneja, sota- tai muistomerkkejä, lippuja (ei Romanian eikä muuta lippua), tekstiä, kylttejä, mainoksia, logoja, auton rekisterikilpiä, vesileimaa eikä kehystä, lähellä olevia ihmisiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Bukarestin kattomeri ja Kiseleff-bulevardi Riemukaaren yläterassilta etelä-kaakkoon päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "BUKAREST",
+      "gameID": "bukarest",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        22279,
+        24754
+      ],
+      "sourceByteSpan": [
+        23075,
+        25652
+      ],
+      "fullDeliveryRequirementSHA256": "80406da3a69b374c2357ae9538b0001733374870031062d2664389962e916a41",
+      "fullDirective": "Bukarestin vehreä kaupunkipanoraama päivänvalossa ylhäältä, noin 27 metrin korkeudelta Riemukaaren yläterassilta (nykyaikainen värikuva): etualalla vanhojen lehmusten ja vaahterien tiheitä latvoja; keskellä ja vasemmalla leveä puiden reunustama bulevardi (Kiseleff-tie), joka johtaa suoraan kohti kaukaista kaupungin keskustaa, muutama pieni auto merkittömänä; ympärillä kerros- ja rivitalojen vaaleita, harmaita ja terrakottaisia kattoja, puiston ja puiden vihreää sekä vanhoja 4-8-kerroksisia vaaleita kerrostaloja; kaukana horisontissa pehmeää kaupunkiutua ja matalia vaaleita kerrostalosiluetteja. Selkeä sininen taivas, vähän vaaleita pilviä. Värikuva, nykyaika, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Kulma: vaakakuva, korotettu näkökulma Riemukaaren yläterassilta, kamera suunnattu etelä-kaakkoon (keskisuunta noin 165 astetta; vaakasuuntainen näkökulma enintään noin 45 astetta, siis kuvassa suunnat noin 142-188 astetta): bulevardi kohti Voitonaukiota on suunnassa noin 159 astetta (1,7 km), kaupungin keskusta kauempana samassa suunnassa. Kameran takana luoteessa ja pohjoisessa (suunnat 313 ja 17 astetta) ovat Casa Presei Libere ja Herăstrăun puisto sekä kuvan vasemman reunan ulkopuolella idässä SkyTower (suunta noin 108 astetta); ne jäävät kuvan ulkopuolelle eikä niitä saa olla kuvassa. Valo: kirkas aamupäivä, pehmeä luonnollinen valo vasemmalta (idästä), luonnolliset värit, ei HDR:ää. Ei saa näkyä: Riemukaarta itseään, sen kivirakenteita, patsaita tai koristeita (kuvassa vain puiden latvoja etualalla), mitään tunnistettavaa julkista rakennusta lähietäisyydellä (ei Voitonaukion hallitusrakennusta, ei museoita Kiseleff-tien varrella, ei Ateneumia, ei kirkkoja tai kupoleita erottuvina), Parlamentin palatsia (sen näkyvyyttä ei ole varmistettu, ei pyydetä), pilvenpiirtäjiä tai korkeita toimistotorneja, sota- tai muistomerkkejä, lippuja (ei Romanian eikä muuta lippua), tekstiä, kylttejä, mainoksia, logoja, auton rekisterikilpiä, vesileimaa eikä kehystä, lähellä olevia ihmisiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Bukarestin kattomeri ja Kiseleff-bulevardi Riemukaaren yläterassilta etelä-kaakkoon päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/bucharest/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-bucharest-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/bucharest/20261013-uudet-6-8/bucharest-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "bucharest-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "BUKAREST",
+      "gameCityId": "bukarest",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/bucharest/native-6.png",
+      "nativeSHA256": "95b96a392cb3ae554abda2864361b55a7e4adf1ec45d673aaef5151bbbe908df",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/bucharest/bucharest-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/bucharest/bucharest-6-nakoala-intro-v1.png",
+      "sha256": "83fbc4a9cfba6a1e42cb23abad95e616cbb3f57d51bb52384527bd5276a6c7e6",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: koko kaupunki tunnetulta näköalapaikalta päivällä — Bukarestin kattomeri ja Kiseleff-bulevardi Riemukaaren yläterassilta etelä-kaakkoon päivällä.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nBukarestin vehreä kaupunkipanoraama päivänvalossa ylhäältä, noin 27 metrin korkeudelta Riemukaaren yläterassilta (nykyaikainen värikuva): etualalla vanhojen lehmusten ja vaahterien tiheitä latvoja; keskellä ja vasemmalla leveä puiden reunustama bulevardi (Kiseleff-tie), joka johtaa suoraan kohti kaukaista kaupungin keskustaa, muutama pieni auto merkittömänä; ympärillä kerros- ja rivitalojen vaaleita, harmaita ja terrakottaisia kattoja, puiston ja puiden vihreää sekä vanhoja 4-8-kerroksisia vaaleita kerrostaloja; kaukana horisontissa pehmeää kaupunkiutua ja matalia vaaleita kerrostalosiluetteja. Selkeä sininen taivas, vähän vaaleita pilviä. Värikuva, nykyaika, ei ihmisiä lähellä (ei lainkaan tai korkeintaan hädin näkyviä pisteitä kaukana). Kulma: vaakakuva, korotettu näkökulma Riemukaaren yläterassilta, kamera suunnattu etelä-kaakkoon (keskisuunta noin 165 astetta; vaakasuuntainen näkökulma enintään noin 45 astetta, siis kuvassa suunnat noin 142-188 astetta): bulevardi kohti Voitonaukiota on suunnassa noin 159 astetta (1,7 km), kaupungin keskusta kauempana samassa suunnassa. Kameran takana luoteessa ja pohjoisessa (suunnat 313 ja 17 astetta) ovat Casa Presei Libere ja Herăstrăun puisto sekä kuvan vasemman reunan ulkopuolella idässä SkyTower (suunta noin 108 astetta); ne jäävät kuvan ulkopuolelle eikä niitä saa olla kuvassa. Valo: kirkas aamupäivä, pehmeä luonnollinen valo vasemmalta (idästä), luonnolliset värit, ei HDR:ää. Ei saa näkyä: Riemukaarta itseään, sen kivirakenteita, patsaita tai koristeita (kuvassa vain puiden latvoja etualalla), mitään tunnistettavaa julkista rakennusta lähietäisyydellä (ei Voitonaukion hallitusrakennusta, ei museoita Kiseleff-tien varrella, ei Ateneumia, ei kirkkoja tai kupoleita erottuvina), Parlamentin palatsia (sen näkyvyyttä ei ole varmistettu, ei pyydetä), pilvenpiirtäjiä tai korkeita toimistotorneja, sota- tai muistomerkkejä, lippuja (ei Romanian eikä muuta lippua), tekstiä, kylttejä, mainoksia, logoja, auton rekisterikilpiä, vesileimaa eikä kehystä, lähellä olevia ihmisiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261013-uudet-6-8/bucharest-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261013-uudet-6-8/bucharest-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 189,
+        "assetID": "bucharest-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/bucharest/asset-6.json",
+        "nativeSHA256": "95b96a392cb3ae554abda2864361b55a7e4adf1ec45d673aaef5151bbbe908df",
+        "finalSHA256": "83fbc4a9cfba6a1e42cb23abad95e616cbb3f57d51bb52384527bd5276a6c7e6",
+        "verdict": "accepted",
+        "reason": "Vehreä Kiseleff-bulevardi vasemmalla ja vaalea kattomeri, puiden latvat etualalla. Ei Riemukaaren rakenteita, erottuvia julkisia rakennuksia, torneja, muistomerkkejä, lippuja tai tekstiä.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:55:15.238769+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/bucharest/20261013-uudet-6-8/bucharest-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261013-uudet-6-8/bucharest-6-nakoala-intro-v1.png",
+        "sha256": "83fbc4a9cfba6a1e42cb23abad95e616cbb3f57d51bb52384527bd5276a6c7e6",
+        "nativeSHA256": "95b96a392cb3ae554abda2864361b55a7e4adf1ec45d673aaef5151bbbe908df",
+        "bytes": 2902077,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "83fbc4a9cfba6a1e42cb23abad95e616cbb3f57d51bb52384527bd5276a6c7e6",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "83fbc4a9cfba6a1e42cb23abad95e616cbb3f57d51bb52384527bd5276a6c7e6",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:55:20.407955+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 190,
+      "mediaSlug": "bucharest",
+      "slot": 8,
+      "filename": "bucharest-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Bukarestin raitiovaunu erillisellä raiteella puiden reunustamalla bulevardilla, vaaleita kerrostaloja taustalla.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Bukarestin raitiovaunu erillisellä raiteella puiden reunustamalla bulevardilla, vaaleita kerrostaloja taustalla.** Tiedosto `bucharest-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: nykyaikainen pitkä nivelraitiovaunu (useita nivelosia, noin 36 metriä, matala ja nykyaikainen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä bulevardilla Bukarestin länsiosassa: vaunu kulkee liikenteestä erotetulla raiteella (sorapohjainen tai ruohoinen raideväli bulevardin keskellä), yläpuolella ajojohdot ja johdinpylväät. Tien molemmilla puolilla suuria vanhoja lehmuksia ja plataaneja, taustalla pitkiä vaaleita 8–10-kerroksisia sosialistiajan kerrostaloja parvekkeineen, osittain puiden peitossa. Ihmiset vain pieninä (muutama odottaja tai kävelijä kaukana laiturilla tai jalkakäytävällä, selin tai kaukaa, ei tunnistettavia kasvoja). Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5–2 metriä, kuvattuna raiteen sivusta kolmen neljänneksen kulmasta viistosti edestä vasemmalta, vaunu hieman liikkeessä (kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä). Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Parlamentin palatsia, Riemukaarta, Casa Presei Libereä tai mitään tunnistettavaa julkista rakennusta, ei muistomerkkejä eikä patsaita, ei pysäkkikylttejä, pysäkkien nimitauluja, ei tekstiä, kylttejä, katukylttejä, liikennekylttejä, mainoksia, logoja, auton rekisterikilpiä, vesileimaa eikä kehystä, ei lippuja (ei Romanian eikä muuta lippua), muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Bukarestin raitiovaunu erillisellä raiteella puiden reunustamalla bulevardilla, vaaleita kerrostaloja taustalla. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "BUKAREST",
+      "gameID": "bukarest",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        24754,
+        26852
+      ],
+      "sourceByteSpan": [
+        25652,
+        27833
+      ],
+      "fullDeliveryRequirementSHA256": "a93285552f632cba019cabaa50e14bf691ce460bfc24702e84aceb7e5723be78",
+      "fullDirective": "nykyaikainen pitkä nivelraitiovaunu (useita nivelosia, noin 36 metriä, matala ja nykyaikainen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä bulevardilla Bukarestin länsiosassa: vaunu kulkee liikenteestä erotetulla raiteella (sorapohjainen tai ruohoinen raideväli bulevardin keskellä), yläpuolella ajojohdot ja johdinpylväät. Tien molemmilla puolilla suuria vanhoja lehmuksia ja plataaneja, taustalla pitkiä vaaleita 8–10-kerroksisia sosialistiajan kerrostaloja parvekkeineen, osittain puiden peitossa. Ihmiset vain pieninä (muutama odottaja tai kävelijä kaukana laiturilla tai jalkakäytävällä, selin tai kaukaa, ei tunnistettavia kasvoja). Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5–2 metriä, kuvattuna raiteen sivusta kolmen neljänneksen kulmasta viistosti edestä vasemmalta, vaunu hieman liikkeessä (kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä). Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Parlamentin palatsia, Riemukaarta, Casa Presei Libereä tai mitään tunnistettavaa julkista rakennusta, ei muistomerkkejä eikä patsaita, ei pysäkkikylttejä, pysäkkien nimitauluja, ei tekstiä, kylttejä, katukylttejä, liikennekylttejä, mainoksia, logoja, auton rekisterikilpiä, vesileimaa eikä kehystä, ei lippuja (ei Romanian eikä muuta lippua), muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Bukarestin raitiovaunu erillisellä raiteella puiden reunustamalla bulevardilla, vaaleita kerrostaloja taustalla. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/bucharest/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-bucharest-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/bucharest/20261013-uudet-6-8/bucharest-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "bucharest-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "BUKAREST",
+      "gameCityId": "bukarest",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/bucharest/native-8.png",
+      "nativeSHA256": "9d1cf68159e3321ff2b35523c2f054ecedcb47ee0e9ab1da7e421a9a8fa76ba6",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/bucharest/bucharest-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/bucharest/bucharest-8-kulkuneuvo-intro-v1.png",
+      "sha256": "aab6f6fa22e42cd0c8070f665c1891db602feced32306c287306f60032a6e2b6",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: kaupungin oma kulkuneuvo liikkeessä — Bukarestin raitiovaunu erillisellä raiteella puiden reunustamalla bulevardilla, vaaleita kerrostaloja taustalla.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nnykyaikainen pitkä nivelraitiovaunu (useita nivelosia, noin 36 metriä, matala ja nykyaikainen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä bulevardilla Bukarestin länsiosassa: vaunu kulkee liikenteestä erotetulla raiteella (sorapohjainen tai ruohoinen raideväli bulevardin keskellä), yläpuolella ajojohdot ja johdinpylväät. Tien molemmilla puolilla suuria vanhoja lehmuksia ja plataaneja, taustalla pitkiä vaaleita 8–10-kerroksisia sosialistiajan kerrostaloja parvekkeineen, osittain puiden peitossa. Ihmiset vain pieninä (muutama odottaja tai kävelijä kaukana laiturilla tai jalkakäytävällä, selin tai kaukaa, ei tunnistettavia kasvoja). Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5–2 metriä, kuvattuna raiteen sivusta kolmen neljänneksen kulmasta viistosti edestä vasemmalta, vaunu hieman liikkeessä (kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä). Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Parlamentin palatsia, Riemukaarta, Casa Presei Libereä tai mitään tunnistettavaa julkista rakennusta, ei muistomerkkejä eikä patsaita, ei pysäkkikylttejä, pysäkkien nimitauluja, ei tekstiä, kylttejä, katukylttejä, liikennekylttejä, mainoksia, logoja, auton rekisterikilpiä, vesileimaa eikä kehystä, ei lippuja (ei Romanian eikä muuta lippua), muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n\nTransport composition reinforcement: \n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261013-uudet-6-8/bucharest-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261013-uudet-6-8/bucharest-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 190,
+        "assetID": "bucharest-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/bucharest/asset-8.json",
+        "nativeSHA256": "9d1cf68159e3321ff2b35523c2f054ecedcb47ee0e9ab1da7e421a9a8fa76ba6",
+        "finalSHA256": "aab6f6fa22e42cd0c8070f665c1891db602feced32306c287306f60032a6e2b6",
+        "verdict": "accepted",
+        "reason": "Pitkä neutraali nivelraitiovaunu erillisellä ruoho-/soraraiteella, ajojohto ja virroitin, lehtipuut ja 8–10-kerroksiset vaaleat asuintalot. Keula vasemmalla vastaa etuviiston kuvakulman ohjetta; lähde ei määrää vasemmalta oikealle liikesuuntaa, joten sitä ei lisätä vaatimukseksi.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:55:15.238769+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/bucharest/20261013-uudet-6-8/bucharest-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/bucharest/20261013-uudet-6-8/bucharest-8-kulkuneuvo-intro-v1.png",
+        "sha256": "aab6f6fa22e42cd0c8070f665c1891db602feced32306c287306f60032a6e2b6",
+        "nativeSHA256": "9d1cf68159e3321ff2b35523c2f054ecedcb47ee0e9ab1da7e421a9a8fa76ba6",
+        "bytes": 2926268,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "aab6f6fa22e42cd0c8070f665c1891db602feced32306c287306f60032a6e2b6",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "aab6f6fa22e42cd0c8070f665c1891db602feced32306c287306f60032a6e2b6",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:55:22.915380+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
