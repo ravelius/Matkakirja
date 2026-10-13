@@ -1,0 +1,625 @@
+{
+  "cityName": "Ljubljana",
+  "gameCityId": "ljubljana",
+  "mediaSlug": "ljubljana",
+  "taskNumber": 98,
+  "updatedAt": "2026-10-13T09:46:20.071845+00:00",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [
+    {
+      "slot": 4,
+      "title": "arki ja ihmiset — Krakovon asuinkatu ja kasvimaat (arki).",
+      "sceneSpec": "Mitä kuvataan: Krakovon kapea asuinkatu Ljubljanassa kesäaamupäivänä: matalat kaksikerroksiset 1700-1800-lukulaiset talot vaaleiksi rapattuine julkisivuineen, puiset ikkunaluukut, pihaportit ja niiden takaa näkyvät kasvimaarivit ja kukkivat pensaat, pyörä seinää vasten; kaksi tai kolme ihmistä vain pieninä ja selin (naapuri kastelee kasvimaata, pyöräilijä kaukana). Kulma: vaakakuva 3:2, silmänkorkeudelta kadun suuntaisesti, katu kaartuu loivasti, kohtuullinen syväterävyys. Valo: pehmeä aamupäivän valo. Nykyaikaa, värikuva. Ei saa näkyä: tekstiä, kylttejä, katunimiä, katutaidetta tai graffiteja, kasvoja, liikenteessä olevia autoja pääaiheena, joenrantoja, siltoja ja rantamuureja (Plečnikin töitä), lyhtypylväitä, korkeita uudisrakennuksia, brändejä.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Krakovon asuinkatu ja kasvimaat. Havainnekuva.\n\n",
+      "caption": "Krakovon asuinkatu ja kasvimaat. Havainnekuva.",
+      "filename": "ljubljana-4-arki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-4-arki-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Ljubljana",
+      "gameCityId": "ljubljana",
+      "mediaSlug": "ljubljana",
+      "taskNumber": 98,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/native-4.png",
+      "nativeSHA256": "682c888c1f7d174650f5cab658577c791df9dc28412340711dee2236931db527",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-4-arki-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-4-arki-intro-v1.png",
+      "sha256": "2d353147fb703105cc67553d62c34beaa0aa99a572a0b90daf064af15ec000fb",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival intro. Generate ONE completely new natural photographic illustrative scene, landscape PNG exactly 1536 by 1024 pixels, 3:2, opaque RGB. No frames, no writing anywhere, no signage, no logos, no watermarks. Never include the caption as picture text. Natural optical perspective, unretouched documentary camera appearance, soft real light, restrained lifelike color, credible exposure. No HDR, no cinematic grading, no painterly rendering, no CGI finish. Every organic surface irregular and real: uneven blades and leaves, heterogeneous foliage, mottled bark, ordinary wear and imperfect masonry. Small or distant people seen from behind except the single foreground adult specifically requested for slot 6. No recognizable real person.\n\nPrimary scene specification (Finnish; obey every constraint):\nMitä kuvataan: Krakovon kapea asuinkatu Ljubljanassa kesäaamupäivänä: matalat kaksikerroksiset 1700-1800-lukulaiset talot vaaleiksi rapattuine julkisivuineen, puiset ikkunaluukut, pihaportit ja niiden takaa näkyvät kasvimaarivit ja kukkivat pensaat, pyörä seinää vasten; kaksi tai kolme ihmistä vain pieninä ja selin (naapuri kastelee kasvimaata, pyöräilijä kaukana). Kulma: vaakakuva 3:2, silmänkorkeudelta kadun suuntaisesti, katu kaartuu loivasti, kohtuullinen syväterävyys. Valo: pehmeä aamupäivän valo. Nykyaikaa, värikuva. Ei saa näkyä: tekstiä, kylttejä, katunimiä, katutaidetta tai graffiteja, kasvoja, liikenteessä olevia autoja pääaiheena, joenrantoja, siltoja ja rantamuureja (Plečnikin töitä), lyhtypylväitä, korkeita uudisrakennuksia, brändejä.\n\nComposition and realism: Contemporary Krakovo residential lane, eye-level view along gently curving narrow paved/cobbled street, modest two-storey old eighteenth/nineteenth-century houses with aged pale plaster, wooden shutters, tiled roofs and open garden gates. Through the gates show working vegetable beds with irregular lettuces and other leaves, small planted rows, untidy flowering bushes. A distant back-facing neighbour waters a vegetable patch, two other tiny people including cyclist far away; one bicycle leans against a wall. Quiet soft summer morning. Grounded ordinary urban gardens, not fantasy cottages or luxury villas, naturally worn surfaces. Absolutely no lettering or street names on house walls, no graffiti, no traffic, no lamp posts, no modern highrises, no riverbank or bridge.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://www.visitljubljana.com/en/meetings/planning-an-event/incentive-programmes/exploring-ljubljana-by-bicycle",
+          "title": "Exploring Ljubljana by Bicycle - Visit Ljubljana",
+          "supports": "Krakovo urban gardens since Middle Ages",
+          "slots": [
+            4
+          ],
+          "verification": "Official tourism text read"
+        }
+      ],
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1348d-5abb-74a3-861e-05594dd0baea/exec-e1998406-3124-4395-8977-2158654c1329.png",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/qa-4.json",
+      "producerQAAccepted": true,
+      "independentQAPending": true,
+      "id": "ljubljana-4-arki-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-4-arki-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-4-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-4-arki-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 4,
+        "verdict": "accepted",
+        "reason": "Matala Krakovon asuinkatu, kasvimaat ja arkiset pienet selin hahmot; ei joenrantaa, Plečnikin siltoja, kylttejä tai nykyarkkitehtuuria.",
+        "nativeSHA256": "682c888c1f7d174650f5cab658577c791df9dc28412340711dee2236931db527",
+        "finalSHA256": "2d353147fb703105cc67553d62c34beaa0aa99a572a0b90daf064af15ec000fb",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 4,
+        "r2Key": "julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-4-arki-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-4-arki-intro-v1.png",
+        "sha256": "2d353147fb703105cc67553d62c34beaa0aa99a572a0b90daf064af15ec000fb",
+        "nativeSHA256": "682c888c1f7d174650f5cab658577c791df9dc28412340711dee2236931db527",
+        "bytes": 3224108,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "2d353147fb703105cc67553d62c34beaa0aa99a572a0b90daf064af15ec000fb",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "2d353147fb703105cc67553d62c34beaa0aa99a572a0b90daf064af15ec000fb",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:33.150908+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 5,
+      "title": "vesi tai luonto — Rožnikin rinteeltä näkymä kaupunkiin ja linnavuorelle (luonto).",
+      "sceneSpec": "Mitä kuvataan: Ljubljanan kaupunki ja linnavuori Rožnikin ja Šišenski hribin metsäisen rinteen reunalta: etualalla kukkaniitty, polku ja lehtipuita (pyökkejä, tammia), alhaalla matala kattomeri punaisine ja harmaine kattoineen, jonka yläpuolelle kohoavat tuomiokirkon vihreä kupoli ja linnan kukkula torneineen; kaukana taustalla sumuisia kukkuloita ja vaaleita vuoria. Mahdollisesti yksi pieni retkeilijä kaukana ja selin. Kulma: vaakakuva 3:2, silmänkorkeudelta rinteeltä kaakkoon (idän ja etelän välille) kohti keskustaa; kaupunki matalana vyöhykkeenä kuvan keskellä, tuomiokirkon kupoli ja linnavuori kuvan oikeassa kolmanneksessa; sama katselusuunta ja rajaus käytetään kuvassa 8. Kaukana kaupungin kattojen yläpuolella saa näkyä hennosti yksittäinen vaalea moderni tornitalo, mutta sitä ei korosteta; muita korkeita uudisrakennuksia ei. Valo: pehmeä iltapäivävalo takaa-sivulta, vaimeat värit. Nykyaikaa, värikuva. Ei saa näkyä: tekstiä, opasteita, kylttejä, kasvoja, kävelykatua pylväineen, köysirataa, rakennustelineitä, sähkölinjoja pääaiheena.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Rožnikin rinteeltä näkymä kaupunkiin ja linnavuorelle. Havainnekuva.\n\n",
+      "caption": "Rožnikin rinteeltä näkymä kaupunkiin ja linnavuorelle. Havainnekuva.",
+      "filename": "ljubljana-5-luonto-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-5-luonto-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Ljubljana",
+      "gameCityId": "ljubljana",
+      "mediaSlug": "ljubljana",
+      "taskNumber": 98,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/native-5.png",
+      "nativeSHA256": "afab8ec0af81e2d8972d9706b9a4d08cf0589b1bb08ae39a520bfe7a410708c4",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-5-luonto-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-5-luonto-intro-v1.png",
+      "sha256": "1d70dd8fe2bcace84840152f115dbdc641e92d911bba3e3dae54e45c077ae3bc",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival intro. Generate ONE completely new natural photographic illustrative scene, landscape PNG exactly 1536 by 1024 pixels, 3:2, opaque RGB. No frames, no writing anywhere, no signage, no logos, no watermarks. Never include the caption as picture text. Natural optical perspective, unretouched documentary camera appearance, soft real light, restrained lifelike color, credible exposure. No HDR, no cinematic grading, no painterly rendering, no CGI finish. Every organic surface irregular and real: uneven blades and leaves, heterogeneous foliage, mottled bark, ordinary wear and imperfect masonry. Small or distant people seen from behind except the single foreground adult specifically requested for slot 6. No recognizable real person.\n\nPrimary scene specification (Finnish; obey every constraint):\nMitä kuvataan: Ljubljanan kaupunki ja linnavuori Rožnikin ja Šišenski hribin metsäisen rinteen reunalta: etualalla kukkaniitty, polku ja lehtipuita (pyökkejä, tammia), alhaalla matala kattomeri punaisine ja harmaine kattoineen, jonka yläpuolelle kohoavat tuomiokirkon vihreä kupoli ja linnan kukkula torneineen; kaukana taustalla sumuisia kukkuloita ja vaaleita vuoria. Mahdollisesti yksi pieni retkeilijä kaukana ja selin. Kulma: vaakakuva 3:2, silmänkorkeudelta rinteeltä kaakkoon (idän ja etelän välille) kohti keskustaa; kaupunki matalana vyöhykkeenä kuvan keskellä, tuomiokirkon kupoli ja linnavuori kuvan oikeassa kolmanneksessa; sama katselusuunta ja rajaus käytetään kuvassa 8. Kaukana kaupungin kattojen yläpuolella saa näkyä hennosti yksittäinen vaalea moderni tornitalo, mutta sitä ei korosteta; muita korkeita uudisrakennuksia ei. Valo: pehmeä iltapäivävalo takaa-sivulta, vaimeat värit. Nykyaikaa, värikuva. Ei saa näkyä: tekstiä, opasteita, kylttejä, kasvoja, kävelykatua pylväineen, köysirataa, rakennustelineitä, sähkölinjoja pääaiheena.\n\nComposition and realism: Contemporary Ljubljana, believable eye-level 40mm panorama from the southeast-facing wooded edge of Roznik/Sisenski hrib. Meadow and narrow path foreground, beech/oak branches irregularly framing without blocking the broad low city band. Cathedral with GREEN copper dome and twin bell towers below and left of the castle hill; castle hill and low compact Ljubljana Castle with its squat stone viewing tower occupy the RIGHT third. Preserve authentic small skyline scale; no fantasy turret cluster, no giant cathedral or castle. Hazy modest hills and faint distant mountains, no snow peaks dominating. Natural soft afternoon light, restrained hues. A single tiny back-facing hiker on path. No river bridge or riverside arcade. This framing will later be reconstructed as a new 1873 image.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://www.visitljubljana.com/en/poi/roznik-hill",
+          "title": "Roznik hill - Visit Ljubljana",
+          "supports": "Wooded hill and paths, popular walkers destination since first half of nineteenth century",
+          "slots": [
+            5,
+            8
+          ],
+          "verification": "Official tourism text read"
+        },
+        {
+          "url": "https://www.visitljubljana.com/en/poi/the-cathedral-church-of-st-nicholas",
+          "title": "The Cathedral Church of St Nicholas - Visit Ljubljana",
+          "supports": "Baroque church built 1701-1706; dome built 1841",
+          "slots": [
+            5,
+            8
+          ],
+          "verification": "Official page lines 52-55 read"
+        },
+        {
+          "url": "https://ljubljanskigrad.si/en/experiences/viewing-tower-and-pipers-tower/",
+          "title": "Viewing Tower and Pipers Tower - Ljubljana Castle",
+          "supports": "Stone viewing tower built 1845-1848; raised 1.2 metres in 1982; defensive wall raised 2009",
+          "slots": [
+            5,
+            7,
+            8
+          ],
+          "verification": "Official page lines 34-39 read"
+        },
+        {
+          "url": "https://culture.gov.si/en/Ljubljana_Castle",
+          "title": "Ljubljana Castle - Ministry of Culture portal",
+          "supports": "Castle parts fifteenth to seventeenth centuries; modern steeper roof and higher watchtower must not be reproduced in 1873; funicular 2006",
+          "slots": [
+            5,
+            7,
+            8
+          ],
+          "verification": "Government page lines 50-63 read"
+        }
+      ],
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1348d-5abb-74a3-861e-05594dd0baea/exec-b300a178-6d58-469d-9893-fb99da0be2a2.png",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/qa-5.json",
+      "producerQAAccepted": true,
+      "independentQAPending": true,
+      "id": "ljubljana-5-luonto-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-5-luonto-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-5-luonto-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-5-luonto-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 5,
+        "verdict": "accepted",
+        "reason": "Rožnikin luonnonkehys, matala kaupunkinäkymä, kupoli ja linnavuori oikealla. Pinnan epäsäännöllisyys vastaa kamerakuvaa.",
+        "nativeSHA256": "afab8ec0af81e2d8972d9706b9a4d08cf0589b1bb08ae39a520bfe7a410708c4",
+        "finalSHA256": "1d70dd8fe2bcace84840152f115dbdc641e92d911bba3e3dae54e45c077ae3bc",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 5,
+        "r2Key": "julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-5-luonto-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-5-luonto-intro-v1.png",
+        "sha256": "1d70dd8fe2bcace84840152f115dbdc641e92d911bba3e3dae54e45c077ae3bc",
+        "nativeSHA256": "afab8ec0af81e2d8972d9706b9a4d08cf0589b1bb08ae39a520bfe7a410708c4",
+        "bytes": 3125583,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "1d70dd8fe2bcace84840152f115dbdc641e92d911bba3e3dae54e45c077ae3bc",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "1d70dd8fe2bcace84840152f115dbdc641e92d911bba3e3dae54e45c077ae3bc",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:35.969957+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 6,
+      "title": "elämän makuinen juhla (värikuva, yksi nuori etualalla) — Kesäpäivän katuteatterijuhla vanhankaupungin aukiolla (elämän makuinen juhla, päivä).",
+      "sceneSpec": "Mitä kuvataan: Elämän makuinen kesäpäivä Ljubljanan vanhankaupungin aukiolla (Stari trgin tai Levstikov trgin tyyppinen mukulakivinen aukio): kadun ja sirkuksen esiintyjä (esim. jonglööri tai isoja kuplia puhaltava esiintyjä, ilman tekstiä) kuvan keskitaustalla, iloinen väkijoukko puoliympyrässä hänen ympärillään, pastellisävyiset barokkijulkisivut reunustavat aukiota. Etualalla YKSI nuori ihminen (noin 20-vuotias, kaupungin väestön näköinen keksitty hahmo, Slovenian väestölle tyypillinen ulkonäkö, ei kenenkään todellisen henkilön näköinen), puolikuva, luonnollinen nauru kun katsoo esitystä olan yli; muodikkaat nykyvaatteet (väljä vaalea paita, farkut tai leveät housut, kangaskassi, valkoiset lenkkarit) ilman näkyviä merkkejä. Ympärillä paljon muita nuoria ja eri-ikäisiä ihmisiä, enimmäkseen pieninä tai selin, kädessä korkeintaan puhelin. Ei ruokaa eikä juomia pääaiheena, alkoholilla ei roolia. Kulma: vaakakuva 3:2, silmänkorkeudelta hieman sivusta, etualan henkilö vasemmassa kolmanneksessa, kevyt syväterävyyden pehmennys. Valo: kirkas mutta pehmeä kesäpäivän iltapäivävalo. Nykyaikaa, värikuva. Ei saa näkyä: tekstiä, banderolleja, kylttejä, logoja, brändejä, Robban suihkukaivoa tai patsaita pääaiheena, siltoja, tori-arkadeja ja kaiteita (Plečnikin töitä), väkivaltaa, tupakointia, alkoholipulloja.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Kesäpäivän katuteatterijuhla vanhankaupungin aukiolla. Havainnekuva.\n\n",
+      "caption": "Kesäpäivän katuteatterijuhla vanhankaupungin aukiolla. Havainnekuva.",
+      "filename": "ljubljana-6-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-6-juhla-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Ljubljana",
+      "gameCityId": "ljubljana",
+      "mediaSlug": "ljubljana",
+      "taskNumber": 98,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/native-6.png",
+      "nativeSHA256": "c300a52000bd38098ce626c236be56c5162057174ba7e449dfb530752f0630d5",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-6-juhla-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-6-juhla-intro-v1.png",
+      "sha256": "6ee4876d702f80aa165749cd237ffddedd795fcaf66d1f30d71cb9dd692c26ab",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival intro. Generate ONE completely new natural photographic illustrative scene, landscape PNG exactly 1536 by 1024 pixels, 3:2, opaque RGB. No frames, no writing anywhere, no signage, no logos, no watermarks. Never include the caption as picture text. Natural optical perspective, unretouched documentary camera appearance, soft real light, restrained lifelike color, credible exposure. No HDR, no cinematic grading, no painterly rendering, no CGI finish. Every organic surface irregular and real: uneven blades and leaves, heterogeneous foliage, mottled bark, ordinary wear and imperfect masonry. Small or distant people seen from behind except the single foreground adult specifically requested for slot 6. No recognizable real person.\n\nPrimary scene specification (Finnish; obey every constraint):\nMitä kuvataan: Elämän makuinen kesäpäivä Ljubljanan vanhankaupungin aukiolla (Stari trgin tai Levstikov trgin tyyppinen mukulakivinen aukio): kadun ja sirkuksen esiintyjä (esim. jonglööri tai isoja kuplia puhaltava esiintyjä, ilman tekstiä) kuvan keskitaustalla, iloinen väkijoukko puoliympyrässä hänen ympärillään, pastellisävyiset barokkijulkisivut reunustavat aukiota. Etualalla YKSI nuori ihminen (noin 20-vuotias, kaupungin väestön näköinen keksitty hahmo, Slovenian väestölle tyypillinen ulkonäkö, ei kenenkään todellisen henkilön näköinen), puolikuva, luonnollinen nauru kun katsoo esitystä olan yli; muodikkaat nykyvaatteet (väljä vaalea paita, farkut tai leveät housut, kangaskassi, valkoiset lenkkarit) ilman näkyviä merkkejä. Ympärillä paljon muita nuoria ja eri-ikäisiä ihmisiä, enimmäkseen pieninä tai selin, kädessä korkeintaan puhelin. Ei ruokaa eikä juomia pääaiheena, alkoholilla ei roolia. Kulma: vaakakuva 3:2, silmänkorkeudelta hieman sivusta, etualan henkilö vasemmassa kolmanneksessa, kevyt syväterävyyden pehmennys. Valo: kirkas mutta pehmeä kesäpäivän iltapäivävalo. Nykyaikaa, värikuva. Ei saa näkyä: tekstiä, banderolleja, kylttejä, logoja, brändejä, Robban suihkukaivoa tai patsaita pääaiheena, siltoja, tori-arkadeja ja kaiteita (Plečnikin töitä), väkivaltaa, tupakointia, alkoholipulloja.\n\nComposition and realism: Current Ljubljana summer afternoon street-theatre celebration on a modest cobbled Stari-trg/Levstikov-trg-like old-town square with believable weathered pastel Baroque residential facades. ONE fictional 21-year-old young man typical of local Slovenian population, waist-up in LEFT foreground, light skin with natural pores and slight uneven tone, short tousled dark-blond hair, naturally laughing looking over his shoulder to the performance. No real-person resemblance; no fashion-model polish. Loose pale unbranded shirt and trousers, plain canvas bag, normal anatomy and fingers. Mid-background one performer juggles plain colored balls, surrounded by a joyful semicircle of many young adults and some other ages, mostly small/back-facing; authentic casual gestures. Soft natural sun, subtle depth-of-field softness yet genuine people and materials. No text, signage, banners, brands, food or drinks in focus, alcohol, cigarette, river bridges, riverside railings, market arcades, fountain or statues.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://www.visitljubljana.com/en/visitors/sights-and-activities/explore-the-ljubljana-old-town",
+          "title": "Explore Ljubljana Old Town - Visit Ljubljana",
+          "supports": "Baroque palaces; Stari trg continues into Gornji trg at castle hill foot",
+          "slots": [
+            6,
+            7
+          ],
+          "verification": "Official tourism text read"
+        }
+      ],
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1348d-5abb-74a3-861e-05594dd0baea/exec-7eee41af-fbc6-4dd0-afa4-3447c31aebcc.png",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/qa-6.json",
+      "producerQAAccepted": true,
+      "independentQAPending": true,
+      "id": "ljubljana-6-juhla-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-6-juhla-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-6-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-6-juhla-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 6,
+        "verdict": "accepted",
+        "reason": "Keksitty nuori aikuinen etualalla ja jonglöörin ympärillä iloinen joukko; nykyajan kesäpäivä, ei patsasta tai ruokaa pääaiheena.",
+        "nativeSHA256": "c300a52000bd38098ce626c236be56c5162057174ba7e449dfb530752f0630d5",
+        "finalSHA256": "6ee4876d702f80aa165749cd237ffddedd795fcaf66d1f30d71cb9dd692c26ab",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-6-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-6-juhla-intro-v1.png",
+        "sha256": "6ee4876d702f80aa165749cd237ffddedd795fcaf66d1f30d71cb9dd692c26ab",
+        "nativeSHA256": "c300a52000bd38098ce626c236be56c5162057174ba7e449dfb530752f0630d5",
+        "bytes": 2200009,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "6ee4876d702f80aa165749cd237ffddedd795fcaf66d1f30d71cb9dd692c26ab",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "6ee4876d702f80aa165749cd237ffddedd795fcaf66d1f30d71cb9dd692c26ab",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:38.184507+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 7,
+      "title": "ilta ja kaupungin valot (sininen hetki) — Vanhankaupungin katu sinisellä hetkellä, linnavuori kadun päässä (ilta).",
+      "sceneSpec": "Mitä kuvataan: Ljubljanan vanhankaupungin (Stari trgin ja Gornji trgin tyyppinen) kapea mukulakivikatu sinisellä hetkellä: barokkijulkisivut, lämpimät ikkunavalot, muutama perinteisen näköinen seinälyhty (ei designlyhtypylväitä), kahvilan tyhjät ulkopöydät, talojen yläpuolella kohoaa linnavuori tummana siluettina syvänsinistä taivasta vasten; kaksi tai kolme pientä hahmoa kaukana ja selin. Kulma: vaakakuva 3:2, kadun suuntaisesti hieman ylämäkeen silmänkorkeudelta, linnavuori kehystyy kadun yläpuolelle; eri sommitelma kuin kuvassa 6 (ei aukiota). Valo: sininen hetki, taivas syvänsininen, lämmin ikkuna- ja lyhtyvalo, ei mainos- eikä kauppavaloja. Nykyaikaa, värikuva. Ei saa näkyä: tekstiä, kylttejä, ravintolan nimiä, funikulaarin rataa tai asemaa, kasvoja, siltoja, rantaportaita tai tori-arkadeja (Plečnikin töitä), linnan valaistuksen yksityiskohtia, valoshow'ta.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Vanhankaupungin katu sinisellä hetkellä, linnavuori kadun päässä. Havainnekuva.\n\n",
+      "caption": "Vanhankaupungin katu sinisellä hetkellä, linnavuori kadun päässä. Havainnekuva.",
+      "filename": "ljubljana-7-ilta-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-7-ilta-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Ljubljana",
+      "gameCityId": "ljubljana",
+      "mediaSlug": "ljubljana",
+      "taskNumber": 98,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/native-7.png",
+      "nativeSHA256": "04cef4caa60c3c83d49f34be1d6dc94e65126ac5e6754f9264537434b038ceb2",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-7-ilta-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-7-ilta-intro-v1.png",
+      "sha256": "aea4af713e335c8b287919f0b4951345dbe3c62c46911338558298db5aae375a",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: Matkakirja city arrival intro. Generate ONE completely new natural photographic illustrative scene, landscape PNG exactly 1536 by 1024 pixels, 3:2, opaque RGB. No frames, no writing anywhere, no signage, no logos, no watermarks. Never include the caption as picture text. Natural optical perspective, unretouched documentary camera appearance, soft real light, restrained lifelike color, credible exposure. No HDR, no cinematic grading, no painterly rendering, no CGI finish. Every organic surface irregular and real: uneven blades and leaves, heterogeneous foliage, mottled bark, ordinary wear and imperfect masonry. Small or distant people seen from behind except the single foreground adult specifically requested for slot 6. No recognizable real person.\n\nPrimary scene specification (Finnish; obey every constraint):\nMitä kuvataan: Ljubljanan vanhankaupungin (Stari trgin ja Gornji trgin tyyppinen) kapea mukulakivikatu sinisellä hetkellä: barokkijulkisivut, lämpimät ikkunavalot, muutama perinteisen näköinen seinälyhty (ei designlyhtypylväitä), kahvilan tyhjät ulkopöydät, talojen yläpuolella kohoaa linnavuori tummana siluettina syvänsinistä taivasta vasten; kaksi tai kolme pientä hahmoa kaukana ja selin. Kulma: vaakakuva 3:2, kadun suuntaisesti hieman ylämäkeen silmänkorkeudelta, linnavuori kehystyy kadun yläpuolelle; eri sommitelma kuin kuvassa 6 (ei aukiota). Valo: sininen hetki, taivas syvänsininen, lämmin ikkuna- ja lyhtyvalo, ei mainos- eikä kauppavaloja. Nykyaikaa, värikuva. Ei saa näkyä: tekstiä, kylttejä, ravintolan nimiä, funikulaarin rataa tai asemaa, kasvoja, siltoja, rantaportaita tai tori-arkadeja (Plečnikin töitä), linnan valaistuksen yksityiskohtia, valoshow'ta.\n\nComposition and realism: Contemporary Ljubljana old-town narrow cobbled uphill lane, Stari-trg/Gornji-trg-type Baroque houses on both sides, eye-level 40mm natural street perspective. Street recedes toward castle hill, compact real Ljubljana Castle with a squat rectangular stone watchtower silhouetted ABOVE rooflines at the end. A street rather than a square. Deep natural blue-hour sky, subtly differing warm apartment windows and a few traditional wall lanterns, controlled warm illumination, empty plain outdoor cafe tables discreetly near one wall. Two or three tiny back-facing people far away. No signs even on cafes, no shop advertisements, no bridges, arcades, waterfront, funicular track or station, no castle lightshow or detailed castle illumination.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://www.visitljubljana.com/en/visitors/sights-and-activities/explore-the-ljubljana-old-town",
+          "title": "Explore Ljubljana Old Town - Visit Ljubljana",
+          "supports": "Baroque palaces; Stari trg continues into Gornji trg at castle hill foot",
+          "slots": [
+            6,
+            7
+          ],
+          "verification": "Official tourism text read"
+        },
+        {
+          "url": "https://ljubljanskigrad.si/en/experiences/viewing-tower-and-pipers-tower/",
+          "title": "Viewing Tower and Pipers Tower - Ljubljana Castle",
+          "supports": "Stone viewing tower built 1845-1848; raised 1.2 metres in 1982; defensive wall raised 2009",
+          "slots": [
+            5,
+            7,
+            8
+          ],
+          "verification": "Official page lines 34-39 read"
+        },
+        {
+          "url": "https://culture.gov.si/en/Ljubljana_Castle",
+          "title": "Ljubljana Castle - Ministry of Culture portal",
+          "supports": "Castle parts fifteenth to seventeenth centuries; modern steeper roof and higher watchtower must not be reproduced in 1873; funicular 2006",
+          "slots": [
+            5,
+            7,
+            8
+          ],
+          "verification": "Government page lines 50-63 read"
+        }
+      ],
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1348d-5abb-74a3-861e-05594dd0baea/exec-08015ca8-97ae-4f75-893f-a0bf6dd7c6ee.png",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/qa-7.json",
+      "producerQAAccepted": true,
+      "independentQAPending": true,
+      "id": "ljubljana-7-ilta-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-7-ilta-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-7-ilta-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-7-ilta-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 7,
+        "verdict": "accepted",
+        "reason": "Kapean vanhankaupungin kadun yläpuolella linnavuoren siluetti, tavalliset seinälyhdyt, pienet selin kävelijät; ei funikulaaria, rantaa tai kylttejä.",
+        "nativeSHA256": "04cef4caa60c3c83d49f34be1d6dc94e65126ac5e6754f9264537434b038ceb2",
+        "finalSHA256": "aea4af713e335c8b287919f0b4951345dbe3c62c46911338558298db5aae375a",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 7,
+        "r2Key": "julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-7-ilta-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-7-ilta-intro-v1.png",
+        "sha256": "aea4af713e335c8b287919f0b4951345dbe3c62c46911338558298db5aae375a",
+        "nativeSHA256": "04cef4caa60c3c83d49f34be1d6dc94e65126ac5e6754f9264537434b038ceb2",
+        "bytes": 2492500,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "aea4af713e335c8b287919f0b4951345dbe3c62c46911338558298db5aae375a",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "aea4af713e335c8b287919f0b4951345dbe3c62c46911338558298db5aae375a",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:40.045192+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 8,
+      "title": "sama näkymä vuonna 1873, MUSTAVALKOINEN — Sama näkymä Rožnikin rinteeltä vuonna 1873, mustavalkoisena.",
+      "sceneSpec": "Mitä kuvataan: Sama näkymä ja rajaus kuin kuvassa 5 (Rožnikin rinteeltä kaakkoon kohti kaupunkia ja linnavuorta), mutta vuonna 1873 ja MUSTAVALKOISENA: etualalla niitty, harvoja lehtipuita ja kapea hiekkatie, jolla yksi tai kaksi pientä hahmoa kaukana ja selin 1800-luvun vaatteissa (hattu, pitkä takki, esiliina), mahdollisesti hevoskärryt kaukana; keskellä matala tiivis kaupunki tiilikattoineen ja savupiippuineen, sen yllä tuomiokirkon kupoli ja kaksoistornit sekä linnavuori linnan rakennuksineen ja näkötorneineen kuvan oikeassa kolmanneksessa; taustalla sumuisia kukkuloita ja vuoria. Rinne vaatimattoman puustoinen. Tyyli: aikakauden albumiinivedos tai kollodiumvedos, PUHDAS HARMAASÄVY (ei sepiaa, ei värisävyä), pehmeä kontrasti, hienoinen rakeisuus, kevyt reunojen tummuus. Valo: pehmeä päivänvalo. Kaikki ihmiset selin tai kaukana. Ei saa näkyä: mitään vuoden 1873 jälkeen rakennettua (pilvenpiirtäjiä tai muita korkeita moderneja rakennuksia, koristeellisia jugend-kerrostaloja, köysirataa, sähkö- ja puhelinpylväitä), autoja, nykyvaatteita, tekstiä, kylttejä, kasvoja.\n1873-tarkistus: on: linnavuori linnoineen ja näkötorni (1848; Wikipedia Ljubljana Castle + Structurae), tuomiokirkko kupoleineen (rakennettu 1701-1706, kupoli 1841; Wikipedia Ljubljana Cathedral + Visit Ljubljana), rautatie Wienistä 1849 (asema 1848, ei kuvassa), Tobacna-tupakkatehdas 1871 (ei kuvassa); ei ole: Nebotičnik (1933; Wikipedia Timeline of Ljubljana), köysirata (2006), secession-keskusta (rakennettu 1895 maanjäristyksen jälkeen; Wikipedia 1895 earthquake + RTV Slovenija), Plečnikin työt 1920-50-luvuilla (mm. Tromostovjen sivusillat; keskisilta Franzin silta oli jo 1842). Nebotičnik ym. nimet on poistettu kuvausohjeesta, ettei kuvageneraattori piirrä niitä. Linnavuoren puuston tiheys 1873 varmistamatta: rinne pidetään vaatimattoman puustoisena.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Sama näkymä Rožnikin rinteeltä vuonna 1873, mustavalkoisena. Havainnekuva.\n\n",
+      "caption": "Sama näkymä Rožnikin rinteeltä vuonna 1873, mustavalkoisena. Havainnekuva.",
+      "filename": "ljubljana-8-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-8-1873-intro-v1.png",
+      "historical": true,
+      "referenceSlot": 5,
+      "cityName": "Ljubljana",
+      "gameCityId": "ljubljana",
+      "mediaSlug": "ljubljana",
+      "taskNumber": 98,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/native-8.png",
+      "nativeSHA256": "9c26dbda3478ece41a0ab3f51eb05f019af50d14e19d630fd6e2024e28aeb417",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-8-1873-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-8-1873-intro-v1.png",
+      "sha256": "e65d92ac90704cfd8a8cd69045b4c43352ffdbc347cce4b048d52c97883d4e12",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": true,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": false,
+      "historicalGrayscaleEncodingNormalized": true,
+      "exportProcessing": "Neutral grayscale file encoding plus metadata/sRGB only; original preserved; no geometry/content/contrast changes",
+      "generationPrompt": "Use case: historical-scene. Asset: Matkakirja city arrival intro. Generate ONE completely new natural photographic illustrative scene, landscape PNG exactly 1536 by 1024 pixels, 3:2, opaque RGB. No frames, no writing anywhere, no signage, no logos, no watermarks. Never include the caption as picture text. Natural optical perspective, unretouched documentary camera appearance, soft real light, strict neutral grayscale, credible exposure. No HDR, no cinematic grading, no painterly rendering, no CGI finish. Every organic surface irregular and real: uneven blades and leaves, heterogeneous foliage, mottled bark, ordinary wear and imperfect masonry. Small or distant people seen from behind except the single foreground adult specifically requested for slot 6. No recognizable real person.\n\nPrimary scene specification (Finnish; obey every constraint):\nMitä kuvataan: Sama näkymä ja rajaus kuin kuvassa 5 (Rožnikin rinteeltä kaakkoon kohti kaupunkia ja linnavuorta), mutta vuonna 1873 ja MUSTAVALKOISENA: etualalla niitty, harvoja lehtipuita ja kapea hiekkatie, jolla yksi tai kaksi pientä hahmoa kaukana ja selin 1800-luvun vaatteissa (hattu, pitkä takki, esiliina), mahdollisesti hevoskärryt kaukana; keskellä matala tiivis kaupunki tiilikattoineen ja savupiippuineen, sen yllä tuomiokirkon kupoli ja kaksoistornit sekä linnavuori linnan rakennuksineen ja näkötorneineen kuvan oikeassa kolmanneksessa; taustalla sumuisia kukkuloita ja vuoria. Rinne vaatimattoman puustoinen. Tyyli: aikakauden albumiinivedos tai kollodiumvedos, PUHDAS HARMAASÄVY (ei sepiaa, ei värisävyä), pehmeä kontrasti, hienoinen rakeisuus, kevyt reunojen tummuus. Valo: pehmeä päivänvalo. Kaikki ihmiset selin tai kaukana. Ei saa näkyä: mitään vuoden 1873 jälkeen rakennettua (pilvenpiirtäjiä tai muita korkeita moderneja rakennuksia, koristeellisia jugend-kerrostaloja, köysirataa, sähkö- ja puhelinpylväitä), autoja, nykyvaatteita, tekstiä, kylttejä, kasvoja.\n1873-tarkistus: on: linnavuori linnoineen ja näkötorni (1848; Wikipedia Ljubljana Castle + Structurae), tuomiokirkko kupoleineen (rakennettu 1701-1706, kupoli 1841; Wikipedia Ljubljana Cathedral + Visit Ljubljana), rautatie Wienistä 1849 (asema 1848, ei kuvassa), Tobacna-tupakkatehdas 1871 (ei kuvassa); ei ole: Nebotičnik (1933; Wikipedia Timeline of Ljubljana), köysirata (2006), secession-keskusta (rakennettu 1895 maanjäristyksen jälkeen; Wikipedia 1895 earthquake + RTV Slovenija), Plečnikin työt 1920-50-luvuilla (mm. Tromostovjen sivusillat; keskisilta Franzin silta oli jo 1842). Nebotičnik ym. nimet on poistettu kuvausohjeesta, ettei kuvageneraattori piirrä niitä. Linnavuoren puuston tiheys 1873 varmistamatta: rinne pidetään vaatimattoman puustoisena.\n\nComposition and realism: Use case: historical-scene. Input image is ONLY location/camera/framing reference; create a wholly NEW complete photographic reconstruction in YEAR 1873, not a color-filtered modern image. Preserve SAME eye-level southeast-facing viewpoint and framing: wooded-meadow slope foreground, descending narrow dirt path in left quarter, left tree at edge and upper-left canopy, low city roof-band across centre, cathedral dome and twin bell towers near x0.64, castle hill and compact castle near x0.78 in RIGHT third, far hazy modest hills. Local slope has relatively sparse irregular trees; uncertain nineteenth-century tree density must not be falsely exact. Replace modern hiker with TWO tiny back-facing figures in 1870s clothing, hat and long coat, long skirt with apron. All city buildings must exist by1873: low plain pitched tiled roofs and little chimneys, modest Baroque housing, St Nicholas Cathedral completed1706 with its dome from1841, castle stone viewing tower from1848 in its ORIGINAL lower1848 form. No1982 extension or2009 raised parapet, no recent steeper renovated roofs. All twentieth-century towers and apartment blocks removed completely; absolutely NO tall modern rectangular skyline silhouettes. No funicular, motor vehicle, telephone/electric poles or modern clothes. Fine photographic grain and soft collodion/albumen-print tonal response, mild edge-darkening, natural irregular plant surfaces. Output STRICT achromatic BLACK AND WHITE native RGB, EVERY pixel RED=GREEN=BLUE, absolutely no sepia/brown/yellow/cyan color tint. This exact neutral grayscale is an absolute delivery requirement. No antique frame or fake scratches.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://www.visitljubljana.com/en/poi/roznik-hill",
+          "title": "Roznik hill - Visit Ljubljana",
+          "supports": "Wooded hill and paths, popular walkers destination since first half of nineteenth century",
+          "slots": [
+            5,
+            8
+          ],
+          "verification": "Official tourism text read"
+        },
+        {
+          "url": "https://www.visitljubljana.com/en/poi/the-cathedral-church-of-st-nicholas",
+          "title": "The Cathedral Church of St Nicholas - Visit Ljubljana",
+          "supports": "Baroque church built 1701-1706; dome built 1841",
+          "slots": [
+            5,
+            8
+          ],
+          "verification": "Official page lines 52-55 read"
+        },
+        {
+          "url": "https://ljubljanskigrad.si/en/experiences/viewing-tower-and-pipers-tower/",
+          "title": "Viewing Tower and Pipers Tower - Ljubljana Castle",
+          "supports": "Stone viewing tower built 1845-1848; raised 1.2 metres in 1982; defensive wall raised 2009",
+          "slots": [
+            5,
+            7,
+            8
+          ],
+          "verification": "Official page lines 34-39 read"
+        },
+        {
+          "url": "https://culture.gov.si/en/Ljubljana_Castle",
+          "title": "Ljubljana Castle - Ministry of Culture portal",
+          "supports": "Castle parts fifteenth to seventeenth centuries; modern steeper roof and higher watchtower must not be reproduced in 1873; funicular 2006",
+          "slots": [
+            5,
+            7,
+            8
+          ],
+          "verification": "Government page lines 50-63 read"
+        }
+      ],
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1348d-5abb-74a3-861e-05594dd0baea/exec-998513a9-225e-4888-9b73-10ea52e39331.png",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/qa-8.json",
+      "producerQAAccepted": true,
+      "independentQAPending": true,
+      "id": "ljubljana-8-1873-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/ljubljana/ljubljana-8-1873-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-8-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-8-1873-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 8,
+        "verdict": "accepted",
+        "reason": "Sama rinteen katselusuunta kuin5, pienempi 1800-luvun kaupunki ja vaatimattomampi linnarinteen puusto. Ei modernia tornitaloa tai funikulaaria.",
+        "nativeSHA256": "9c26dbda3478ece41a0ab3f51eb05f019af50d14e19d630fd6e2024e28aeb417",
+        "finalSHA256": "e65d92ac90704cfd8a8cd69045b4c43352ffdbc347cce4b048d52c97883d4e12",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": true,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-8-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/ljubljana/20261013-full/ljubljana-8-1873-intro-v1.png",
+        "sha256": "e65d92ac90704cfd8a8cd69045b4c43352ffdbc347cce4b048d52c97883d4e12",
+        "nativeSHA256": "9c26dbda3478ece41a0ab3f51eb05f019af50d14e19d630fd6e2024e28aeb417",
+        "bytes": 1666021,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "e65d92ac90704cfd8a8cd69045b4c43352ffdbc347cce4b048d52c97883d4e12",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "e65d92ac90704cfd8a8cd69045b4c43352ffdbc347cce4b048d52c97883d4e12",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:42.479653+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 5,
+  "maximumGenerationCalls": 5,
+  "allRequestedSlotsHandled": true,
+  "allRequestedSlotsDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationAllowedWithoutOwnerAcceptance": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": false,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-viimeiset-5-20261013.md",
+  "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+  "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+  "prior206ImageDeliveryPreserved": true
+}
