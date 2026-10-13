@@ -46,3 +46,10 @@ Linjaukset: Raamattu + muisti `karttaseppa-tila-20261010-ilta.md` (13.10. rivit 
 - LS2 Kööpenhamina-kippi: proto `linssiseppa2/koopenhamina-kippi` **53cd6393a** (kytkennät) ja **f32f9e5fb** (kehystestit).
 - Pelikoodari Kööpenhaminan 3D-pisteäänet **892797aa3**.
 - Web: PR #4560 **7c9474507** (pidätetty).
+
+## Lisäys 18.4x: vesi v2 -raportti valmistui ennen nollausta
+
+T7 `_tyo/karttaseppa/vesi-v2-raportti-20261013.md` (lähetetty LS1:lle). Oslo ja Islanti: 0 muutosta, joten LS1:n läiskällä on muu syy → SELVITÄ
+(katso LS1:n kuvat proto-3d/lokit/vesi187-pt/, vertaa vesi-<id>.json tasoja ja Googlen pintaa). Hyöty: Tampere, Košice, Sofia, Venetsia.
+EPÄILYTTÄVÄT, ei käyttöön ennen tarkistusta: Lissabon +59 m (164 kärkeä) ja Sevilla max +19 m. ESA on todennäköisesti perinyt väärän naapurin
+tason (lisää ehto: naapurijärven H ±5 m ESA:n GLO-mediaanista, muuten jokitaso).
