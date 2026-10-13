@@ -2,8 +2,8 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e14",
   "city": "palikir",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
+  "sourceContentAfterSHA256": "92460d9fa625ea7ebe37e1b2e77ce9b784035b1c7e090f82757dc84b6e4c7680",
   "assets": [
     {
       "era": "e14",
@@ -129,7 +129,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
-            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
+            "sha256": "de778588a1f65e25143e019b82f74cc0f4d12ffc5b3f2a1c39a12991b2e0688e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
@@ -216,9 +216,11 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "sourceContentAfterSHA256": "92460d9fa625ea7ebe37e1b2e77ce9b784035b1c7e090f82757dc84b6e4c7680",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "86d5f6b5ce3639041e3bae77a9ef4bbe24c31059b192fadf2a314de70355ad38"
+      "contextAfterSHA256": "86d5f6b5ce3639041e3bae77a9ef4bbe24c31059b192fadf2a314de70355ad38",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e14",
@@ -343,7 +345,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
-            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
+            "sha256": "de778588a1f65e25143e019b82f74cc0f4d12ffc5b3f2a1c39a12991b2e0688e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
@@ -430,9 +432,11 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "sourceContentAfterSHA256": "92460d9fa625ea7ebe37e1b2e77ce9b784035b1c7e090f82757dc84b6e4c7680",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "4a1b4ab917b04a25868aa3f3476f94248e1515cbf2e0dca663a44d209018b8aa"
+      "contextAfterSHA256": "4a1b4ab917b04a25868aa3f3476f94248e1515cbf2e0dca663a44d209018b8aa",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e14",
@@ -559,7 +563,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
-            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
+            "sha256": "de778588a1f65e25143e019b82f74cc0f4d12ffc5b3f2a1c39a12991b2e0688e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
@@ -646,9 +650,11 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "sourceContentAfterSHA256": "92460d9fa625ea7ebe37e1b2e77ce9b784035b1c7e090f82757dc84b6e4c7680",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "967793aaaaee9b4d4f6f369ae396d0a4c3938a34f518d97ab97cfb402b1e8296"
+      "contextAfterSHA256": "967793aaaaee9b4d4f6f369ae396d0a4c3938a34f518d97ab97cfb402b1e8296",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e14",
@@ -770,7 +776,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
-            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
+            "sha256": "de778588a1f65e25143e019b82f74cc0f4d12ffc5b3f2a1c39a12991b2e0688e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
@@ -857,9 +863,11 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "sourceContentAfterSHA256": "92460d9fa625ea7ebe37e1b2e77ce9b784035b1c7e090f82757dc84b6e4c7680",
       "targetAfterSHA256": "e2af26687a2e6fd321fd0c32393eea4cba0e58715c3bcfdb28b14ab7028963e6",
-      "contextAfterSHA256": "e2af26687a2e6fd321fd0c32393eea4cba0e58715c3bcfdb28b14ab7028963e6"
+      "contextAfterSHA256": "e2af26687a2e6fd321fd0c32393eea4cba0e58715c3bcfdb28b14ab7028963e6",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e14",
@@ -981,7 +989,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
-            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
+            "sha256": "de778588a1f65e25143e019b82f74cc0f4d12ffc5b3f2a1c39a12991b2e0688e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
@@ -1068,9 +1076,11 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "sourceContentAfterSHA256": "92460d9fa625ea7ebe37e1b2e77ce9b784035b1c7e090f82757dc84b6e4c7680",
       "targetAfterSHA256": "948c097f4ab6c65d3175280da866a627d18f2eec21dab3ad7acf2307db3621f8",
-      "contextAfterSHA256": "948c097f4ab6c65d3175280da866a627d18f2eec21dab3ad7acf2307db3621f8"
+      "contextAfterSHA256": "948c097f4ab6c65d3175280da866a627d18f2eec21dab3ad7acf2307db3621f8",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e14",
@@ -1198,7 +1208,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
-            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
+            "sha256": "de778588a1f65e25143e019b82f74cc0f4d12ffc5b3f2a1c39a12991b2e0688e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
@@ -1285,9 +1295,11 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "sourceContentAfterSHA256": "92460d9fa625ea7ebe37e1b2e77ce9b784035b1c7e090f82757dc84b6e4c7680",
       "targetAfterSHA256": "129d2790d4bb286b614880763c5b0e889a59dcd38a99552afb3b9048b365be46",
-      "contextAfterSHA256": "129d2790d4bb286b614880763c5b0e889a59dcd38a99552afb3b9048b365be46"
+      "contextAfterSHA256": "129d2790d4bb286b614880763c5b0e889a59dcd38a99552afb3b9048b365be46",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e14",
@@ -1411,7 +1423,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
-            "sha256": "021536a9e86eac7b7a6e5847d0370c78f265183a6a644e3ff3c512622c6356d3"
+            "sha256": "de778588a1f65e25143e019b82f74cc0f4d12ffc5b3f2a1c39a12991b2e0688e"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
@@ -1498,12 +1510,304 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "sourceContentAfterSHA256": "92460d9fa625ea7ebe37e1b2e77ce9b784035b1c7e090f82757dc84b6e4c7680",
       "targetAfterSHA256": "ced05e59b364784e11261f96f2a1a1ee525ac4eaa2bfb6c2cf478712066458ae",
-      "contextAfterSHA256": "ced05e59b364784e11261f96f2a1a1ee525ac4eaa2bfb6c2cf478712066458ae"
+      "contextAfterSHA256": "ced05e59b364784e11261f96f2a1a1ee525ac4eaa2bfb6c2cf478712066458ae",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e14",
+      "city": "palikir",
+      "slot": "PHOTO",
+      "type": "commons",
+      "assetID": "capital-cc-e14-palikir-photo-a40f241aff148ea6",
+      "galleryImageID": "capital-cc-e14-palikir-photo-a40f241aff148ea6",
+      "commonsFile": "Lithuanian and Micronesian flags in Palikir.jpg",
+      "targetJsonPath": "$.valokuva",
+      "targetTokens": [
+        "valokuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/palikir/photo-a40f241aff148ea62dfb.jpg",
+        "suora": true,
+        "lahde": "Zykasaa, Commons (CC BY-SA 4.0)",
+        "selite": "Liettuan ja Mikronesian liput Palikirissa helmikuussa 2025.",
+        "lyhyt": "Liettuan ja Mikronesian liput Palikirissa helmikuussa 2025.",
+        "tiedosto": "Lithuanian and Micronesian flags in Palikir.jpg",
+        "vuosi": "2025"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Zykasaa, Commons (CC BY-SA 4.0)",
+        "selite": "Liettuan ja Mikronesian liput Palikirissa helmikuussa 2025.",
+        "lyhyt": "Liettuan ja Mikronesian liput Palikirissa helmikuussa 2025.",
+        "tiedosto": "Lithuanian and Micronesian flags in Palikir.jpg",
+        "vuosi": "2025"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/palikir/photo-a40f241aff148ea62dfb.jpg",
+        "suora": true,
+        "lahde": "Zykasaa, Commons (CC BY-SA 4.0)",
+        "selite": "Liettuan ja Mikronesian liput Palikirissa helmikuussa 2025.",
+        "lyhyt": "Liettuan ja Mikronesian liput Palikirissa helmikuussa 2025.",
+        "tiedosto": "Lithuanian and Micronesian flags in Palikir.jpg",
+        "vuosi": "2025"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a40f241aff148ea62dfb3d3547b27535c5377e475dfafb67abe771451f7f80f2",
+      "exportSHA256": "a40f241aff148ea62dfb3d3547b27535c5377e475dfafb67abe771451f7f80f2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/palikir/photo-a40f241aff148ea62dfb.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/palikir/photo-a40f241aff148ea62dfb.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/cc-gap-work-22/flags.jpg",
+      "dimensions": [
+        2268,
+        4032
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
+      "sourceContentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "palikir — aito paikkavalokuva",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Zykasaa",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lithuanian_and_Micronesian_flags_in_Palikir.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Lithuanian_and_Micronesian_flags_in_Palikir.jpg",
+        "rightsEvidence": {
+          "selection": "Zykasaa/Own work/CC BY-SA4.0. Oma natiivikatselu: kansallislippujen yksinkertaiset värit ja tähdet, puutarha, tavalliset ajoneuvot; alareunan katto-, aurinkopaneeli- ja ikkunarakenteessa ei yksilöityä itsenäistä luovaa teosta. Oikeustuki028 erittelee tämän kuvan erilleen Government Buildings -kuvasta: tässä ei tunnistettu erillistä suojattua teosilmaisua; ei päätelmää yleisestä FOP:sta tai rakennusiän PD:stä. Oikeustuki: /Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/amerikat-oseania-rights-028.json",
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-13T13:32:32.864354+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/cc-gap-work-22/flags.jpg",
+            "nativeSHA256Verified": "a40f241aff148ea62dfb3d3547b27535c5377e475dfafb67abe771451f7f80f2",
+            "actualWidth": 2268,
+            "actualHeight": 4032,
+            "actualFormat": "JPEG",
+            "actualColorMode": "RGB",
+            "exifOrientation": 1,
+            "displayDimensions": [
+              2268,
+              4032
+            ],
+            "aspectRatio": 0.5625,
+            "formatRule": "PHOTO detail may be portrait; 0.60-0.85 ratio is only mandatory for TRAVELER. Width >=1200 met.",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lithuanian_and_Micronesian_flags_in_Palikir.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/cc-gap-work-22/flags.html",
+            "savedSourceSHA256": "72cce92e3408256936b65a4d72a22ec766d3b5456c9c5a7c83840dccdb430fbd",
+            "authorVerified": "Zykasaa",
+            "authorField": "Original Commons Author table independently read, not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "5 February 2025, 10:57:14",
+            "dateEvidenceDiscrepancy": "Candidate dateEvidence says seconds :12; actual saved Commons Date and native EXIF show :14. Approved caption only claims February 2025, which is correct.",
+            "placeVerified": "Commons Description explicitly Lithuanian and Micronesian flags in Palikir; Camera location 6.924239,158.159903. City place is directly documented, not inferred from country alone.",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
+            "sourceContentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+            "captionFi": "Liettuan ja Mikronesian liput Palikirissa helmikuussa 2025.",
+            "qaInputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/cc-gap-selection.json",
+            "candidateMetadataSHA256": "470e8c928f15e45d01f34c6a037d7b67e4e373d1d62bdc5fe5595724e97092b3",
+            "depictedWorkLayer": "Personally viewed the entire original. Lithuanian three color bands and Micronesian four simple white stars are the flag subjects. Garden plants and ordinary vehicles below; left edge has a partial functional tiled roof, solar panels, repeated rectangular windows and air conditioning units. No mural, sculpture, ornamental seal or individually recognizable creative architecture/work identified. Case-specific absence of a separately identified protected expression, not a general national FOP or government-ownership exemption. Natural Chevrolet badge/vehicle lettering is an ordinary physical object marking; image is not an advertisement/packaging photograph or added overlay.",
+            "primaryLaw": {
+              "url": "https://www.fsmlaw.org/fsm/code/title35/T35_Ch01.htm",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/fsm-copyright-primary.html",
+              "sha256": "b6e4423549b81524b2508377c6cfb47e23db13938d7d23b3f9dbc1a5c9b46d00",
+              "encodingRead": "latin-1",
+              "sectionsRead": [
+                "102(1)-(2)",
+                "105",
+                "111"
+              ],
+              "finding": "Read original expression/fixed work requirement and idea/process distinction. Government-work and ownership distinction not used as a blanket architectural clearance; no protected creative expression identified in this specific flag/detail photograph."
+            },
+            "rightsSupportRead": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/amerikat-oseania-rights-028.json",
+              "sha256": "f18ca1ead3c7935f1a9bda4ee193344bd7f9bd736f6a3bac580c624d0ead09ba",
+              "usedAsSupportingAnalysisOnly": true,
+              "personalVisualAndPrimarySourceCheckPerformed": true
+            },
+            "quality": "Flag detail is clear in a 2268px-wide original; large cloudy sky is intentional framing. Not accepted as a broad city cover.",
+            "faces": "No identifiable faces observed in the native photograph. Distant vehicles and window reflections do not resolve people.",
+            "overlays": "No added text, logo, watermark or frame.",
+            "duplicateInCity": false
+          },
+          "qaReason": "Oma alkuperäiskatselu: Liettuan ja Mikronesian liput, Palikiriin Commons-kuvauksella ja kuvauspaikkakoordinaatilla sidottu todellinen yksityiskohtavalokuva. Tekijä Zykasaa ja CC BY-SA 4.0 luettu itse. Helmikuun 2025 kuvateksti vastaa lähteen ja EXIFin päiväystä. Ei tunnistettavia kasvoja, lisättyä tekstiä/vesileimaa/kehystä tai yksilöityä erillistä suojattua teosilmaisua. Luonnollinen auton valmistajamerkintä ei tee kuvasta mainoskuvaa. PHOTO-pystyformaatti sallittu, alkuperäinen leveys2268px."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Liettuan ja Mikronesian liput Palikirissa helmikuussa 2025.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
+        "fileSHA256": "de778588a1f65e25143e019b82f74cc0f4d12ffc5b3f2a1c39a12991b2e0688e",
+        "item": {
+          "slot": "PHOTO",
+          "targetJsonPath": "$.valokuva",
+          "commonsFile": "Lithuanian and Micronesian flags in Palikir.jpg",
+          "sha256": "a40f241aff148ea62dfb3d3547b27535c5377e475dfafb67abe771451f7f80f2",
+          "verdict": "accepted",
+          "reason": "Oma alkuperäiskatselu: Liettuan ja Mikronesian liput, Palikiriin Commons-kuvauksella ja kuvauspaikkakoordinaatilla sidottu todellinen yksityiskohtavalokuva. Tekijä Zykasaa ja CC BY-SA 4.0 luettu itse. Helmikuun 2025 kuvateksti vastaa lähteen ja EXIFin päiväystä. Ei tunnistettavia kasvoja, lisättyä tekstiä/vesileimaa/kehystä tai yksilöityä erillistä suojattua teosilmaisua. Luonnollinen auton valmistajamerkintä ei tee kuvasta mainoskuvaa. PHOTO-pystyformaatti sallittu, alkuperäinen leveys2268px.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-13T13:32:32.864354+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/cc-gap-work-22/flags.jpg",
+            "nativeSHA256Verified": "a40f241aff148ea62dfb3d3547b27535c5377e475dfafb67abe771451f7f80f2",
+            "actualWidth": 2268,
+            "actualHeight": 4032,
+            "actualFormat": "JPEG",
+            "actualColorMode": "RGB",
+            "exifOrientation": 1,
+            "displayDimensions": [
+              2268,
+              4032
+            ],
+            "aspectRatio": 0.5625,
+            "formatRule": "PHOTO detail may be portrait; 0.60-0.85 ratio is only mandatory for TRAVELER. Width >=1200 met.",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Lithuanian_and_Micronesian_flags_in_Palikir.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/cc-gap-work-22/flags.html",
+            "savedSourceSHA256": "72cce92e3408256936b65a4d72a22ec766d3b5456c9c5a7c83840dccdb430fbd",
+            "authorVerified": "Zykasaa",
+            "authorField": "Original Commons Author table independently read, not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "5 February 2025, 10:57:14",
+            "dateEvidenceDiscrepancy": "Candidate dateEvidence says seconds :12; actual saved Commons Date and native EXIF show :14. Approved caption only claims February 2025, which is correct.",
+            "placeVerified": "Commons Description explicitly Lithuanian and Micronesian flags in Palikir; Camera location 6.924239,158.159903. City place is directly documented, not inferred from country alone.",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
+            "sourceContentSHA256": "2f97d7f986638e4fe4597b1a13b061f227787d344d99ac63a2487ace49f60df1",
+            "captionFi": "Liettuan ja Mikronesian liput Palikirissa helmikuussa 2025.",
+            "qaInputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/cc-gap-selection.json",
+            "candidateMetadataSHA256": "470e8c928f15e45d01f34c6a037d7b67e4e373d1d62bdc5fe5595724e97092b3",
+            "depictedWorkLayer": "Personally viewed the entire original. Lithuanian three color bands and Micronesian four simple white stars are the flag subjects. Garden plants and ordinary vehicles below; left edge has a partial functional tiled roof, solar panels, repeated rectangular windows and air conditioning units. No mural, sculpture, ornamental seal or individually recognizable creative architecture/work identified. Case-specific absence of a separately identified protected expression, not a general national FOP or government-ownership exemption. Natural Chevrolet badge/vehicle lettering is an ordinary physical object marking; image is not an advertisement/packaging photograph or added overlay.",
+            "primaryLaw": {
+              "url": "https://www.fsmlaw.org/fsm/code/title35/T35_Ch01.htm",
+              "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/sources/fsm-copyright-primary.html",
+              "sha256": "b6e4423549b81524b2508377c6cfb47e23db13938d7d23b3f9dbc1a5c9b46d00",
+              "encodingRead": "latin-1",
+              "sectionsRead": [
+                "102(1)-(2)",
+                "105",
+                "111"
+              ],
+              "finding": "Read original expression/fixed work requirement and idea/process distinction. Government-work and ownership distinction not used as a blanket architectural clearance; no protected creative expression identified in this specific flag/detail photograph."
+            },
+            "rightsSupportRead": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/rights-support/amerikat-oseania/amerikat-oseania-rights-028.json",
+              "sha256": "f18ca1ead3c7935f1a9bda4ee193344bd7f9bd736f6a3bac580c624d0ead09ba",
+              "usedAsSupportingAnalysisOnly": true,
+              "personalVisualAndPrimarySourceCheckPerformed": true
+            },
+            "quality": "Flag detail is clear in a 2268px-wide original; large cloudy sky is intentional framing. Not accepted as a broad city cover.",
+            "faces": "No identifiable faces observed in the native photograph. Distant vehicles and window reflections do not resolve people.",
+            "overlays": "No added text, logo, watermark or frame.",
+            "duplicateInCity": false
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/qa.json",
+            "sha256": "de778588a1f65e25143e019b82f74cc0f4d12ffc5b3f2a1c39a12991b2e0688e"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e14/palikir/illustration-qa-extra.json",
+            "sha256": "47b8db5c58ecf39f8e12e7b417a2e2812943d77ee84660a2b19e7d80096f0a75"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e14",
+        "city": "palikir",
+        "slot": "PHOTO",
+        "targetJsonPath": "$.valokuva",
+        "commonsFile": "Lithuanian and Micronesian flags in Palikir.jpg",
+        "sha256": "a40f241aff148ea62dfb3d3547b27535c5377e475dfafb67abe771451f7f80f2",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lithuanian_and_Micronesian_flags_in_Palikir.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Lithuanian_and_Micronesian_flags_in_Palikir.jpg",
+        "author": "Zykasaa",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 2268,
+        "height": 4032,
+        "originalSHA256": "a40f241aff148ea62dfb3d3547b27535c5377e475dfafb67abe771451f7f80f2",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/palikir/photo-a40f241aff148ea62dfb.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/palikir/photo-a40f241aff148ea62dfb.jpg",
+        "bytes": 2194587,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-13T13:33:34.098214+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Zykasaa, Commons (CC BY-SA 4.0)",
+        "selite": "Liettuan ja Mikronesian liput Palikirissa helmikuussa 2025.",
+        "lyhyt": "Liettuan ja Mikronesian liput Palikirissa helmikuussa 2025.",
+        "tiedosto": "Lithuanian and Micronesian flags in Palikir.jpg",
+        "vuosi": "2025"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "92460d9fa625ea7ebe37e1b2e77ce9b784035b1c7e090f82757dc84b6e4c7680",
+      "targetAfterSHA256": "1668c69c5ef50a58d94908fbf2ac8c985958146ed57375def3c2c609009e5dfb",
+      "contextAfterSHA256": "1668c69c5ef50a58d94908fbf2ac8c985958146ed57375def3c2c609009e5dfb",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }
