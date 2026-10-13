@@ -31,3 +31,8 @@ Yhteensä: OK 84, EPÄVARMA 8, HYLKÄÄ 1.
 - Commons C-slotit (satelliitti/ilmakuva, 158 kpl): 4/15 ongelmaa (kaupunki tuskin näkyy tai teksti kuvassa) → kuvatyypin laatuvaihtelu.
 - Tekoälyn käsityö-/esinekuvat (materiaali väärä: Apia punonta=bambu, Nuku'alofa kuorikangas=paperi): 2/12 — sama aitousriski kuin Conakryn kapokki.
 - Commons-valokuvissa luettavaa tekstiä/kylttiä 2/89 otoksessa (Asgabat, Kuala Lumpur).
+
+## Päivitys 13.10. ilta (omistajan päätös "Satelliitit läpi, esineet pois")
+- C-slotit (satelliitti-/ilmakuvat): 157 kuvaa läpi (146 uutta Sonnet-tarkastuksella + 11 pistokokeen OK): hyväksytty 111, hylätty 46 (21 HYLKÄÄ + 25 EPÄVARMA→hylätty; N'Djamena c2 hyväksytty). Syyt: kaupunki ei erotu, liian tumma/utuinen/kapea, luettava teksti.
+- Tekoälyn esineslotit (O2/O3/TRAVELER-illustraatiot): 106 kuvaa POISTETTU pelistä (omistaja), ei uusintoja.
+- Lopullinen lista: docs/raportit/paakaupunkikuvat-hyvaksytyt-20261013-v2.json — hyväksytty 861 (e04 128, e05 91, e06 86, e07 80, e08 98, e09 55, e10 62, e11 77, e12 55, e13 57, e14 72), poistettu esineet 106, hylätty 51.
