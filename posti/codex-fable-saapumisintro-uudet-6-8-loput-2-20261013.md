@@ -1,8 +1,15 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-12 QA/R2-varmennettua kuvaa toimitettu, 4 perusteltua lopullista poisjättöä. Käsitelty 16/47 tämän osan nimetyistä kuvista; 16 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+14 QA/R2-varmennettua kuvaa toimitettu, 4 perusteltua lopullista poisjättöä. Käsitelty 18/47 tämän osan nimetyistä kuvista; 18 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
+
+## ROOMA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-rome-uudet-6-8-20261013.json`. Toimitettu 2/2; kutsuja 2.
+
+- #181, slot 6: Rooman kattomeri ja Pietarinkirkon kupoli Gianicolo-kukkulalta pohjoiseen päivällä. Havainnekuva.
+- #182, slot 8: Rooman raitiovaunu Viale Aventinon puiden reunustamalla kadulla Aventinon kukkulan lähellä. Havainnekuva.
 
 ## KRAKOVA
 

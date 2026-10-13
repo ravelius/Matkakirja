@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "cityName": "ROOMA",
+  "gameCityId": "rooma",
+  "mediaSlug": "rome",
+  "taskNumbers": [
+    181,
+    182
+  ],
+  "updatedAt": "2026-10-13T18:59:57.614216+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 181,
+      "mediaSlug": "rome",
+      "slot": 6,
+      "filename": "rome-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Rooman kattomeri ja Pietarinkirkon kupoli Gianicolo-kukkulalta pohjoiseen päivällä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Rooman kattomeri ja Pietarinkirkon kupoli Gianicolo-kukkulalta pohjoiseen päivällä.** Tiedosto `rome-6-nakoala-intro-v1.png`.\nMitä kuvataan: Rooman Prati-kaupunginosan ja Vatikaanin suunnan kattomeri päivänvalossa Gianicolo-kukkulan Piazzale Garibaldin näköalapaikalta (nykyaikainen värikuva): terrakotan- ja okranvärisiä tiilikattoja ja rapattuja kerrostaloja, kupolien ja kellotornien siluetteja, yksittäisiä pinjamäntyjä ja viherkaistaleita; kuvan vasemmassa kolmanneksessa Pietarinkirkon suuri kupoli tunnistettavana, vaaleana ja kauniin pyöreänä, pienenä osana laajaa kattomaisemaa (kupolin lyhty ja ristillä päättyvä huippu näkyvät, mutta ei piazzaa eikä kolonnadia); keskellä kaukana Monte Marion vehreä, matala metsäharju hämyisenä; oikealla kattojen yli kaukaisuuteen avautuva kaupunki. Etualalla alareunassa vain kapea kaistale vaaleaa kivikaidetta ja pari pinjamännyn oksaa ylhäällä reunassa, ei ihmisiä lähellä (korkeintaan hädin näkyviä pisteitä kaukana kaduilla). Kulma: vaakakuva, Piazzale Garibaldin pohjoisreunalta Garibaldin muistomerkin takaa silmänkorkeudelta (muistomerkki jää kameran taakse, kehyksenä pinjamäntyjä), kamera suunnattu pohjoiseen-luoteeseen (suunta noin 345 astetta; vaakasuuntainen näkökulma enintään noin 50 astetta, siis kuvassa suunnat noin 320–10 astetta): Pietarinkirkon kupoli suunnassa noin 333 astetta eli vasemmassa kolmanneksessa, Monte Mario suunnassa noin 350 astetta keskellä. Castel Sant'Angelo (suunta noin 19 astetta), Pincio ja Villa Borghese (noin 35 astetta), Pantheon (noin 60 astetta), Vittoriano (noin 80 astetta) ja Colosseum (noin 94 astetta) jäävät oikealle kuvan ulkopuolelle, eli niiden ei pidä näkyä; Garibaldin ratsastajapatsas jää kameran taakse. Valo: kirkas päivä, pehmeä iltapäivän valo, ohut kaupunkiutu kaukana, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: Garibaldin patsasta tai muita patsaita ja muistomerkkejä, Pietarinkirkon aukiota, Castel Sant'Angeloa, Colosseumia, Pantheonia, Vittorianoa, antenneja tai tähtitornia Monte Marion huipulla, pilvenpiirtäjiä, nostureita, tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Rooman kattomeri ja Pietarinkirkon kupoli Gianicolo-kukkulalta pohjoiseen päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "ROOMA",
+      "gameID": "rooma",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        3202,
+        5614
+      ],
+      "sourceByteSpan": [
+        3304,
+        5811
+      ],
+      "fullDeliveryRequirementSHA256": "fbd5c7d9f95219d7b560e65f08926ebe162a0813b8f7458b7e714b265dd006a8",
+      "fullDirective": "Rooman Prati-kaupunginosan ja Vatikaanin suunnan kattomeri päivänvalossa Gianicolo-kukkulan Piazzale Garibaldin näköalapaikalta (nykyaikainen värikuva): terrakotan- ja okranvärisiä tiilikattoja ja rapattuja kerrostaloja, kupolien ja kellotornien siluetteja, yksittäisiä pinjamäntyjä ja viherkaistaleita; kuvan vasemmassa kolmanneksessa Pietarinkirkon suuri kupoli tunnistettavana, vaaleana ja kauniin pyöreänä, pienenä osana laajaa kattomaisemaa (kupolin lyhty ja ristillä päättyvä huippu näkyvät, mutta ei piazzaa eikä kolonnadia); keskellä kaukana Monte Marion vehreä, matala metsäharju hämyisenä; oikealla kattojen yli kaukaisuuteen avautuva kaupunki. Etualalla alareunassa vain kapea kaistale vaaleaa kivikaidetta ja pari pinjamännyn oksaa ylhäällä reunassa, ei ihmisiä lähellä (korkeintaan hädin näkyviä pisteitä kaukana kaduilla). Kulma: vaakakuva, Piazzale Garibaldin pohjoisreunalta Garibaldin muistomerkin takaa silmänkorkeudelta (muistomerkki jää kameran taakse, kehyksenä pinjamäntyjä), kamera suunnattu pohjoiseen-luoteeseen (suunta noin 345 astetta; vaakasuuntainen näkökulma enintään noin 50 astetta, siis kuvassa suunnat noin 320–10 astetta): Pietarinkirkon kupoli suunnassa noin 333 astetta eli vasemmassa kolmanneksessa, Monte Mario suunnassa noin 350 astetta keskellä. Castel Sant'Angelo (suunta noin 19 astetta), Pincio ja Villa Borghese (noin 35 astetta), Pantheon (noin 60 astetta), Vittoriano (noin 80 astetta) ja Colosseum (noin 94 astetta) jäävät oikealle kuvan ulkopuolelle, eli niiden ei pidä näkyä; Garibaldin ratsastajapatsas jää kameran taakse. Valo: kirkas päivä, pehmeä iltapäivän valo, ohut kaupunkiutu kaukana, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: Garibaldin patsasta tai muita patsaita ja muistomerkkejä, Pietarinkirkon aukiota, Castel Sant'Angeloa, Colosseumia, Pantheonia, Vittorianoa, antenneja tai tähtitornia Monte Marion huipulla, pilvenpiirtäjiä, nostureita, tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Rooman kattomeri ja Pietarinkirkon kupoli Gianicolo-kukkulalta pohjoiseen päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/rome/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-rome-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/rome/20261013-uudet-6-8/rome-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "rome-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "ROOMA",
+      "gameCityId": "rooma",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/rome/native-6.png",
+      "nativeSHA256": "febac7bddfb77125f8e067cc5d4897488479b4c605e0a28d9af6a7815a0c2887",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/rome/rome-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/rome/rome-6-nakoala-intro-v1.png",
+      "sha256": "3e19ba94f09d0053f5b1f47231be8e14ce1fc5c58934e34e726c1291eb572354",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: koko kaupunki tunnetulta näköalapaikalta päivällä — Rooman kattomeri ja Pietarinkirkon kupoli Gianicolo-kukkulalta pohjoiseen päivällä.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nRooman Prati-kaupunginosan ja Vatikaanin suunnan kattomeri päivänvalossa Gianicolo-kukkulan Piazzale Garibaldin näköalapaikalta (nykyaikainen värikuva): terrakotan- ja okranvärisiä tiilikattoja ja rapattuja kerrostaloja, kupolien ja kellotornien siluetteja, yksittäisiä pinjamäntyjä ja viherkaistaleita; kuvan vasemmassa kolmanneksessa Pietarinkirkon suuri kupoli tunnistettavana, vaaleana ja kauniin pyöreänä, pienenä osana laajaa kattomaisemaa (kupolin lyhty ja ristillä päättyvä huippu näkyvät, mutta ei piazzaa eikä kolonnadia); keskellä kaukana Monte Marion vehreä, matala metsäharju hämyisenä; oikealla kattojen yli kaukaisuuteen avautuva kaupunki. Etualalla alareunassa vain kapea kaistale vaaleaa kivikaidetta ja pari pinjamännyn oksaa ylhäällä reunassa, ei ihmisiä lähellä (korkeintaan hädin näkyviä pisteitä kaukana kaduilla). Kulma: vaakakuva, Piazzale Garibaldin pohjoisreunalta Garibaldin muistomerkin takaa silmänkorkeudelta (muistomerkki jää kameran taakse, kehyksenä pinjamäntyjä), kamera suunnattu pohjoiseen-luoteeseen (suunta noin 345 astetta; vaakasuuntainen näkökulma enintään noin 50 astetta, siis kuvassa suunnat noin 320–10 astetta): Pietarinkirkon kupoli suunnassa noin 333 astetta eli vasemmassa kolmanneksessa, Monte Mario suunnassa noin 350 astetta keskellä. Castel Sant'Angelo (suunta noin 19 astetta), Pincio ja Villa Borghese (noin 35 astetta), Pantheon (noin 60 astetta), Vittoriano (noin 80 astetta) ja Colosseum (noin 94 astetta) jäävät oikealle kuvan ulkopuolelle, eli niiden ei pidä näkyä; Garibaldin ratsastajapatsas jää kameran taakse. Valo: kirkas päivä, pehmeä iltapäivän valo, ohut kaupunkiutu kaukana, luonnolliset vaimeat värit, ei HDR:ää. Ei saa näkyä: Garibaldin patsasta tai muita patsaita ja muistomerkkejä, Pietarinkirkon aukiota, Castel Sant'Angeloa, Colosseumia, Pantheonia, Vittorianoa, antenneja tai tähtitornia Monte Marion huipulla, pilvenpiirtäjiä, nostureita, tekstiä, kylttejä, mainoksia, logoja, vesileimaa eikä kehystä, ei lähellä olevia ihmisiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261013-uudet-6-8/rome-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261013-uudet-6-8/rome-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 181,
+        "assetID": "rome-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/rome/asset-6.json",
+        "nativeSHA256": "febac7bddfb77125f8e067cc5d4897488479b4c605e0a28d9af6a7815a0c2887",
+        "finalSHA256": "3e19ba94f09d0053f5b1f47231be8e14ce1fc5c58934e34e726c1291eb572354",
+        "verdict": "accepted",
+        "reason": "Pietarinkirkon pyöreä kupoli vasemmalla, metsäinen Monte Mario keskellä ja laaja kattomeri näkyvät kameramaisina. Ei selvästi tunnistettavaa piazzaa, kolonnadia tai kuvan ulkopuolelle rajattuja Rooman maamerkkejä.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:59:36.137492+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/rome/20261013-uudet-6-8/rome-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261013-uudet-6-8/rome-6-nakoala-intro-v1.png",
+        "sha256": "3e19ba94f09d0053f5b1f47231be8e14ce1fc5c58934e34e726c1291eb572354",
+        "nativeSHA256": "febac7bddfb77125f8e067cc5d4897488479b4c605e0a28d9af6a7815a0c2887",
+        "bytes": 2726367,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "3e19ba94f09d0053f5b1f47231be8e14ce1fc5c58934e34e726c1291eb572354",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "3e19ba94f09d0053f5b1f47231be8e14ce1fc5c58934e34e726c1291eb572354",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T18:59:55.079367+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 182,
+      "mediaSlug": "rome",
+      "slot": 8,
+      "filename": "rome-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Rooman raitiovaunu Viale Aventinon puiden reunustamalla kadulla Aventinon kukkulan lähellä.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Rooman raitiovaunu Viale Aventinon puiden reunustamalla kadulla Aventinon kukkulan lähellä.** Tiedosto `rome-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: nykyaikainen matalalattiainen, nivelletty kaupunkiraitiovaunu (kolme nivelosaa, yleisilmeeltään tavallinen eurooppalainen raitiovaunu) liikkeessä leveällä, lehti- ja havupuiden reunustamalla roomalaiskadulla päivällä: raiteet kadun pinnassa kivetyksessä tai tiivistetyllä pinnalla, ajojohto vaunun yläpuolella, kadun toisella puolella nousee kukkulan rinne, jolla pinjamäntyjä, kiviaitoja ja okran- ja kermanvärisiä, vihreäluukkuisia taloja puiden lomassa; toisella puolella tiheälehtisiä puita ja matala rapattu kerrostalorivi. Ihmiset vain pieninä (muutama kävelijä ja pyöräilijä kauempana jalkakäytävällä, selin tai kaukaa, ei tunnistettavia kasvoja). Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei ikkunakalvoja tai kylkimainoksia; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5 m, raiteen sivusta viistosti etuvasemmalta (kolmen neljänneksen kuva), vaunu liikkuu hitaasti vasemmalta oikealle, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kaksi kolmasosaa kuvan leveydestä. Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, puiden pehmeät varjot, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Colosseumia, Circo Massimoa, Pyramidia, Porta San Paoloa, muinaisia raunioita, kirkkoja tai kupoleja erottuvina, patsaita ja muistomerkkejä, tekstiä, kylttejä, katukylttejä, liikennekylttejä, reittikylttejä, pysäkkitauluja, ostoautomaatteja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Rooman raitiovaunu Viale Aventinon puiden reunustamalla kadulla Aventinon kukkulan lähellä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "ROOMA",
+      "gameID": "rooma",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        5614,
+        7758
+      ],
+      "sourceByteSpan": [
+        5811,
+        8041
+      ],
+      "fullDeliveryRequirementSHA256": "7bbafe00d5f82369e7d361464156093f14a75932e6bc40a4192a18f13e1d8b35",
+      "fullDirective": "nykyaikainen matalalattiainen, nivelletty kaupunkiraitiovaunu (kolme nivelosaa, yleisilmeeltään tavallinen eurooppalainen raitiovaunu) liikkeessä leveällä, lehti- ja havupuiden reunustamalla roomalaiskadulla päivällä: raiteet kadun pinnassa kivetyksessä tai tiivistetyllä pinnalla, ajojohto vaunun yläpuolella, kadun toisella puolella nousee kukkulan rinne, jolla pinjamäntyjä, kiviaitoja ja okran- ja kermanvärisiä, vihreäluukkuisia taloja puiden lomassa; toisella puolella tiheälehtisiä puita ja matala rapattu kerrostalorivi. Ihmiset vain pieninä (muutama kävelijä ja pyöräilijä kauempana jalkakäytävällä, selin tai kaukaa, ei tunnistettavia kasvoja). Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei ikkunakalvoja tai kylkimainoksia; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5 m, raiteen sivusta viistosti etuvasemmalta (kolmen neljänneksen kuva), vaunu liikkuu hitaasti vasemmalta oikealle, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kaksi kolmasosaa kuvan leveydestä. Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, puiden pehmeät varjot, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Colosseumia, Circo Massimoa, Pyramidia, Porta San Paoloa, muinaisia raunioita, kirkkoja tai kupoleja erottuvina, patsaita ja muistomerkkejä, tekstiä, kylttejä, katukylttejä, liikennekylttejä, reittikylttejä, pysäkkitauluja, ostoautomaatteja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Rooman raitiovaunu Viale Aventinon puiden reunustamalla kadulla Aventinon kukkulan lähellä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/rome/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-rome-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/rome/20261013-uudet-6-8/rome-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "rome-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "ROOMA",
+      "gameCityId": "rooma",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/rome/native-8.png",
+      "nativeSHA256": "b49bc73103276ec5a957787ba71432b6ae1ee2afa0d12fee038c892f8aa36715",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/rome/rome-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/rome/rome-8-kulkuneuvo-intro-v1.png",
+      "sha256": "c1eeaaa9482a4cbc1ed6cb393656a572ba456ecee4d0e94e8d387f14cebd7433",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: kaupungin oma kulkuneuvo liikkeessä — Rooman raitiovaunu Viale Aventinon puiden reunustamalla kadulla Aventinon kukkulan lähellä.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nnykyaikainen matalalattiainen, nivelletty kaupunkiraitiovaunu (kolme nivelosaa, yleisilmeeltään tavallinen eurooppalainen raitiovaunu) liikkeessä leveällä, lehti- ja havupuiden reunustamalla roomalaiskadulla päivällä: raiteet kadun pinnassa kivetyksessä tai tiivistetyllä pinnalla, ajojohto vaunun yläpuolella, kadun toisella puolella nousee kukkulan rinne, jolla pinjamäntyjä, kiviaitoja ja okran- ja kermanvärisiä, vihreäluukkuisia taloja puiden lomassa; toisella puolella tiheälehtisiä puita ja matala rapattu kerrostalorivi. Ihmiset vain pieninä (muutama kävelijä ja pyöräilijä kauempana jalkakäytävällä, selin tai kaukaa, ei tunnistettavia kasvoja). Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei ikkunakalvoja tai kylkimainoksia; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5 m, raiteen sivusta viistosti etuvasemmalta (kolmen neljänneksen kuva), vaunu liikkuu hitaasti vasemmalta oikealle, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kaksi kolmasosaa kuvan leveydestä. Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, puiden pehmeät varjot, luonnolliset värit, ei HDR:ää. Ei saa näkyä: Colosseumia, Circo Massimoa, Pyramidia, Porta San Paoloa, muinaisia raunioita, kirkkoja tai kupoleja erottuvina, patsaita ja muistomerkkejä, tekstiä, kylttejä, katukylttejä, liikennekylttejä, reittikylttejä, pysäkkitauluja, ostoautomaatteja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n\nTransport composition reinforcement: The visual forward-travel direction is LEFT TO RIGHT: place the recognizable leading front/bow and any active front lamps toward the RIGHT, with the trailing rear/wake to the LEFT. Do not show a left-facing lit driving cab as the leading end. Respect the source's approximate subject size, TWO THIRDS of the full image WIDTH, not merely of a crop or small center area. \n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261013-uudet-6-8/rome-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261013-uudet-6-8/rome-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 182,
+        "assetID": "rome-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/rome/asset-8.json",
+        "nativeSHA256": "b49bc73103276ec5a957787ba71432b6ae1ee2afa0d12fee038c892f8aa36715",
+        "finalSHA256": "c1eeaaa9482a4cbc1ed6cb393656a572ba456ecee4d0e94e8d387f14cebd7433",
+        "verdict": "accepted",
+        "reason": "Kolmiosainen vaalea merkitön vaunu suuntautuu oikealle pinjamäntyjen ja vaaleiden rinteeseen rakennettujen talojen kadulla. Noin70%kuvaleveys on lähellä pyydettyä noin kahta kolmasosaa. Ei luettavaa tekstiä, reittinumeroa tai merkkiä.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:59:36.137492+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/rome/20261013-uudet-6-8/rome-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/rome/20261013-uudet-6-8/rome-8-kulkuneuvo-intro-v1.png",
+        "sha256": "c1eeaaa9482a4cbc1ed6cb393656a572ba456ecee4d0e94e8d387f14cebd7433",
+        "nativeSHA256": "b49bc73103276ec5a957787ba71432b6ae1ee2afa0d12fee038c892f8aa36715",
+        "bytes": 2814180,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "c1eeaaa9482a4cbc1ed6cb393656a572ba456ecee4d0e94e8d387f14cebd7433",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "c1eeaaa9482a4cbc1ed6cb393656a572ba456ecee4d0e94e8d387f14cebd7433",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T18:59:57.534049+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
