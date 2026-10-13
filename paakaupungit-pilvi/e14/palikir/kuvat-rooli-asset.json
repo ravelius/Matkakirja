@@ -3,7 +3,7 @@
   "era": "e14",
   "city": "palikir",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+  "sourceContentAfterSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
   "assets": [
     {
       "era": "e14",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
-      "sourceContentSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sourceContentSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "75efbfdd0bcc62c9aa40770704049ff554a333ba485495072019a0bfbdf65e5d",
+        "semanticContextSHA256": "f07ae408a748b2e1a5849104d25272bcf43bee42cf6fd36eac947c24bdd32828",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -216,9 +216,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sourceContentAfterSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "75efbfdd0bcc62c9aa40770704049ff554a333ba485495072019a0bfbdf65e5d",
+      "contextAfterSHA256": "f07ae408a748b2e1a5849104d25272bcf43bee42cf6fd36eac947c24bdd32828",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -241,7 +241,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+        "sameImageNativeSHA256": "602cd1375b18966b3a8848b36fbf0a04963e0efc48d0fb4184377a7cb093cd6f",
+        "sameImageExportSHA256": "770f85b20d871243dc54b213a81ef1c7dc0f2ab2b6f18b69f6e3858932a13bb6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -294,10 +302,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
-      "sourceContentSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sourceContentSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "5f8a999d79da07aabcb31f97c0d950310f1a0854eb9785f0ec0097f57b6e8401",
+        "semanticContextSHA256": "4842cc3d7ac167366cd01dec487e8fd461f1371f4b7eea02dd26da047d979909",
         "subjectTitle": "Kolonia ja metsän reuna",
         "targetState": "existing-target"
       },
@@ -453,9 +461,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sourceContentAfterSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "5f8a999d79da07aabcb31f97c0d950310f1a0854eb9785f0ec0097f57b6e8401",
+      "contextAfterSHA256": "4842cc3d7ac167366cd01dec487e8fd461f1371f4b7eea02dd26da047d979909",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -478,7 +486,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+        "sameImageNativeSHA256": "04876d289a58bb8eb59661495174cac6a6c378da1f5ac99c64b6564a7fd18cfd",
+        "sameImageExportSHA256": "9e6d316fb22c5e6b9d30b4b0a46b312e6669dc3f85d0313a6ba58a7da5cc24ce",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -531,7 +547,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
-      "sourceContentSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sourceContentSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "1a54172aeb16cb7028590ed87e1690b8b0ce2d2e9a2b1b9922271f52ee2c8afd",
@@ -692,7 +708,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sourceContentAfterSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "1a54172aeb16cb7028590ed87e1690b8b0ce2d2e9a2b1b9922271f52ee2c8afd",
       "ownerApproved": true,
@@ -717,7 +733,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+        "sameImageNativeSHA256": "f4366f9ede23f208c565d248cf6cdc68cb48b71f61d85afd33b6b90d6c4ba2ea",
+        "sameImageExportSHA256": "4f257dbea7e577efc7da97c1f503f331a31071fed35992873f41fa547c3a4b57",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -767,10 +791,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
-      "sourceContentSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sourceContentSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a2f016267cdd06dc1aecae43316cea2e11a77b909f27dc3a0e8c03f0fc518e25",
-        "semanticContextSHA256": "a2f016267cdd06dc1aecae43316cea2e11a77b909f27dc3a0e8c03f0fc518e25",
+        "targetBeforeSHA256": "3df084b9f623bed16e51b6aa32012ac17609b4bc005e3ee8fe5f3bd0d7245e65",
+        "semanticContextSHA256": "3df084b9f623bed16e51b6aa32012ac17609b4bc005e3ee8fe5f3bd0d7245e65",
         "subjectTitle": "Opiskelupaikka saarien välissä",
         "targetState": "existing-target"
       },
@@ -926,9 +950,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
-      "targetAfterSHA256": "a2f016267cdd06dc1aecae43316cea2e11a77b909f27dc3a0e8c03f0fc518e25",
-      "contextAfterSHA256": "a2f016267cdd06dc1aecae43316cea2e11a77b909f27dc3a0e8c03f0fc518e25",
+      "sourceContentAfterSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+      "targetAfterSHA256": "3df084b9f623bed16e51b6aa32012ac17609b4bc005e3ee8fe5f3bd0d7245e65",
+      "contextAfterSHA256": "3df084b9f623bed16e51b6aa32012ac17609b4bc005e3ee8fe5f3bd0d7245e65",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -951,7 +975,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+        "sameImageNativeSHA256": "e183220951761193aac8be144ef3b3b5cb11f5b0895a334d9bca41ef7e5eeaf6",
+        "sameImageExportSHA256": "deab5194aec17278c9acb5a40626af27166d19fcf80f82e7bd51ccf2b43c7f7b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1001,10 +1033,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
-      "sourceContentSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sourceContentSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9ec05179910bd67bade758249ca722135c26257e06c704564d64b31215ced3c4",
-        "semanticContextSHA256": "9ec05179910bd67bade758249ca722135c26257e06c704564d64b31215ced3c4",
+        "targetBeforeSHA256": "c907e5029ded48af77828e38ff7e4b8ffc44d282a82b15da43fd080567d9b499",
+        "semanticContextSHA256": "c907e5029ded48af77828e38ff7e4b8ffc44d282a82b15da43fd080567d9b499",
         "subjectTitle": "Saari, jolla on korkeutta",
         "targetState": "existing-target"
       },
@@ -1160,9 +1192,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
-      "targetAfterSHA256": "9ec05179910bd67bade758249ca722135c26257e06c704564d64b31215ced3c4",
-      "contextAfterSHA256": "9ec05179910bd67bade758249ca722135c26257e06c704564d64b31215ced3c4",
+      "sourceContentAfterSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+      "targetAfterSHA256": "c907e5029ded48af77828e38ff7e4b8ffc44d282a82b15da43fd080567d9b499",
+      "contextAfterSHA256": "c907e5029ded48af77828e38ff7e4b8ffc44d282a82b15da43fd080567d9b499",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1185,7 +1217,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+        "sameImageNativeSHA256": "16dea1cd93557d50fe3620f246e3453855de516a561e8f18749f7140cb818066",
+        "sameImageExportSHA256": "37b2b23f418a50499944317bdc4cfd55469392141258e32c697dd387467f9d3e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1235,10 +1275,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
-      "sourceContentSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sourceContentSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "25b811622e8eb986a849e1ec5accc3e31b37682a51a3a5535e0c568b9fca62e2",
-        "semanticContextSHA256": "25b811622e8eb986a849e1ec5accc3e31b37682a51a3a5535e0c568b9fca62e2",
+        "targetBeforeSHA256": "3d9b78a6bf43e8c7d5861ed0622bb09847a404542fc3064d793b720ffbd74eb9",
+        "semanticContextSHA256": "3d9b78a6bf43e8c7d5861ed0622bb09847a404542fc3064d793b720ffbd74eb9",
         "subjectTitle": "Linnut, joiden maailma on Pohnpei",
         "targetState": "existing-target"
       },
@@ -1400,9 +1440,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
-      "targetAfterSHA256": "25b811622e8eb986a849e1ec5accc3e31b37682a51a3a5535e0c568b9fca62e2",
-      "contextAfterSHA256": "25b811622e8eb986a849e1ec5accc3e31b37682a51a3a5535e0c568b9fca62e2",
+      "sourceContentAfterSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+      "targetAfterSHA256": "3d9b78a6bf43e8c7d5861ed0622bb09847a404542fc3064d793b720ffbd74eb9",
+      "contextAfterSHA256": "3d9b78a6bf43e8c7d5861ed0622bb09847a404542fc3064d793b720ffbd74eb9",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1425,7 +1465,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+        "sameImageNativeSHA256": "71e4cbf8df6007f11d86f15e8ca160483c9f95081c85e7069c5baaf49d406a44",
+        "sameImageExportSHA256": "0a7e1c5307866736eee612938e45f973a3bbf951819d3f22eb23a2918ff851e4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1475,10 +1523,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
-      "sourceContentSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sourceContentSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ec05a4d768b6c3b1b8aa5ea7d4d8578da2c21f46889b0d998e4edbc59c1a9a57",
-        "semanticContextSHA256": "ec05a4d768b6c3b1b8aa5ea7d4d8578da2c21f46889b0d998e4edbc59c1a9a57",
+        "targetBeforeSHA256": "7a556908c81f21ff70cdc5ca24d04ef6b2acf80405e88b778a18997995ed0848",
+        "semanticContextSHA256": "7a556908c81f21ff70cdc5ca24d04ef6b2acf80405e88b778a18997995ed0848",
         "subjectTitle": "Juuri, kuori ja sakau",
         "targetState": "existing-target"
       },
@@ -1636,9 +1684,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
-      "targetAfterSHA256": "ec05a4d768b6c3b1b8aa5ea7d4d8578da2c21f46889b0d998e4edbc59c1a9a57",
-      "contextAfterSHA256": "ec05a4d768b6c3b1b8aa5ea7d4d8578da2c21f46889b0d998e4edbc59c1a9a57",
+      "sourceContentAfterSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+      "targetAfterSHA256": "7a556908c81f21ff70cdc5ca24d04ef6b2acf80405e88b778a18997995ed0848",
+      "contextAfterSHA256": "7a556908c81f21ff70cdc5ca24d04ef6b2acf80405e88b778a18997995ed0848",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1661,7 +1709,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+        "sameImageNativeSHA256": "f0ee5e42ed39b738e8156ad4ea4cef737860c5502e0e8795065ac6ce6d59ff00",
+        "sameImageExportSHA256": "79b002ef2859b0a2ab37eed0b3ffc7e56a6b5685423cdabcd88cb873b8214514",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1680,7 +1736,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/palikir/photo-a40f241aff148ea62dfb.jpg",
         "suora": true,
         "lahde": "Zykasaa, Commons (CC BY-SA 4.0)",
-        "selite": "Liettuan lippu liehuu Mikronesian lipun yläpuolella; taustalla näkyy istutuksia ja matala rakennus helmikuussa 2025.",
+        "selite": "Liettuan ja Mikronesian lippuja esittävä valokuva on otettu Palikirissa helmikuussa 2025.",
         "lyhyt": "Liettuan ja Mikronesian liput Palikirissa.",
         "tiedosto": "Lithuanian and Micronesian flags in Palikir.jpg",
         "vuosi": "2025"
@@ -1688,7 +1744,7 @@
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Zykasaa, Commons (CC BY-SA 4.0)",
-        "selite": "Liettuan lippu liehuu Mikronesian lipun yläpuolella; taustalla näkyy istutuksia ja matala rakennus helmikuussa 2025.",
+        "selite": "Liettuan ja Mikronesian lippuja esittävä valokuva on otettu Palikirissa helmikuussa 2025.",
         "lyhyt": "Liettuan ja Mikronesian liput Palikirissa.",
         "tiedosto": "Lithuanian and Micronesian flags in Palikir.jpg",
         "vuosi": "2025"
@@ -1697,7 +1753,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/palikir/photo-a40f241aff148ea62dfb.jpg",
         "suora": true,
         "lahde": "Zykasaa, Commons (CC BY-SA 4.0)",
-        "selite": "Liettuan lippu liehuu Mikronesian lipun yläpuolella; taustalla näkyy istutuksia ja matala rakennus helmikuussa 2025.",
+        "selite": "Liettuan ja Mikronesian lippuja esittävä valokuva on otettu Palikirissa helmikuussa 2025.",
         "lyhyt": "Liettuan ja Mikronesian liput Palikirissa.",
         "tiedosto": "Lithuanian and Micronesian flags in Palikir.jpg",
         "vuosi": "2025"
@@ -1714,10 +1770,10 @@
         4032
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/palikir/sisalto.json",
-      "sourceContentSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
+      "sourceContentSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c57fac4cb7386d7578a0db279f1baf8ae0ecbdbcc4ff01d282c0b0985a28b0ca",
-        "semanticContextSHA256": "c57fac4cb7386d7578a0db279f1baf8ae0ecbdbcc4ff01d282c0b0985a28b0ca",
+        "targetBeforeSHA256": "5f0586265383c0055d4eacc8721274ea2ba5f378c5ca7e062bc8b605535a2562",
+        "semanticContextSHA256": "5f0586265383c0055d4eacc8721274ea2ba5f378c5ca7e062bc8b605535a2562",
         "subjectTitle": "palikir — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1912,7 +1968,7 @@
       "priorMediaFields": {
         "tiedosto": "Lithuanian and Micronesian flags in Palikir.jpg",
         "lyhyt": "Liettuan ja Mikronesian liput Palikirissa.",
-        "selite": "Liettuan lippu liehuu Mikronesian lipun yläpuolella; taustalla näkyy istutuksia ja matala rakennus helmikuussa 2025.",
+        "selite": "Liettuan ja Mikronesian lippuja esittävä valokuva on otettu Palikirissa helmikuussa 2025.",
         "lahde": "Zykasaa, Commons (CC BY-SA 4.0)",
         "vuosi": "2025"
       },
@@ -1940,15 +1996,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Zykasaa, Commons (CC BY-SA 4.0)",
-        "selite": "Liettuan lippu liehuu Mikronesian lipun yläpuolella; taustalla näkyy istutuksia ja matala rakennus helmikuussa 2025.",
+        "selite": "Liettuan ja Mikronesian lippuja esittävä valokuva on otettu Palikirissa helmikuussa 2025.",
         "lyhyt": "Liettuan ja Mikronesian liput Palikirissa.",
         "tiedosto": "Lithuanian and Micronesian flags in Palikir.jpg",
         "vuosi": "2025"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "fd0aba51549c674a69742625b68a7db9da9f1c19422adfacf6649671d2190921",
-      "targetAfterSHA256": "c57fac4cb7386d7578a0db279f1baf8ae0ecbdbcc4ff01d282c0b0985a28b0ca",
-      "contextAfterSHA256": "c57fac4cb7386d7578a0db279f1baf8ae0ecbdbcc4ff01d282c0b0985a28b0ca",
+      "sourceContentAfterSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+      "targetAfterSHA256": "5f0586265383c0055d4eacc8721274ea2ba5f378c5ca7e062bc8b605535a2562",
+      "contextAfterSHA256": "5f0586265383c0055d4eacc8721274ea2ba5f378c5ca7e062bc8b605535a2562",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1971,7 +2027,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "40e4ffc8a2ee732f3248cf3ffa038f23100dbdbbb7d7065c5d6d7f13835e25db",
+        "sameImageNativeSHA256": "a40f241aff148ea62dfb3d3547b27535c5377e475dfafb67abe771451f7f80f2",
+        "sameImageExportSHA256": "a40f241aff148ea62dfb3d3547b27535c5377e475dfafb67abe771451f7f80f2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -1983,6 +2047,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e14/palikir/bbeff1f0b21758f10f42dca231b35816242fc2b8f32c92ae59edc285de408e9c.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.795289+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e14/palikir/c0d1c1b92450931c4567eb3d595a2dbb694f61feb4cf0b477c34b219b9658ff2.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.795289+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:49.219981+00:00"
 }

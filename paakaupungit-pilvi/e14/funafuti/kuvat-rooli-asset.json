@@ -3,7 +3,7 @@
   "era": "e14",
   "city": "funafuti",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+  "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
   "assets": [
     {
       "era": "e14",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "d8cc34465c9b76ae33c3ac47c22971136d00a36732d16e535924dccf935d9fea",
+        "semanticContextSHA256": "b129f159cdba8d5dc1fbfb28be0b774a6f3a5e86ebd70bf7a9c793389dfb6886",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -218,9 +218,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "d8cc34465c9b76ae33c3ac47c22971136d00a36732d16e535924dccf935d9fea",
+      "contextAfterSHA256": "b129f159cdba8d5dc1fbfb28be0b774a6f3a5e86ebd70bf7a9c793389dfb6886",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -243,7 +243,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "ce8183319e8780e1ca56bd6ec37b99c320b13c93214710210cb9a57c67500c16",
+        "sameImageExportSHA256": "392f413eda0a1f02a01df623cfce2031473a12845e5de5a4f5fff91df82a825e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -296,10 +304,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e0e446deaf728f54340087792e7c106e13aadec6a4a1d15f7bf59b2eae587051",
+        "semanticContextSHA256": "1cf7cb73db67e1b23bb93c625fad921aa03fe4bfd4622640cb993073ffd50a8b",
         "subjectTitle": "Te Namo ja suojellut saaret",
         "targetState": "existing-target"
       },
@@ -455,9 +463,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "e0e446deaf728f54340087792e7c106e13aadec6a4a1d15f7bf59b2eae587051",
+      "contextAfterSHA256": "1cf7cb73db67e1b23bb93c625fad921aa03fe4bfd4622640cb993073ffd50a8b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -480,7 +488,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "0795ad3b63287b3c6df435fb062d64435612b23fa56b8db6351de022be4783ea",
+        "sameImageExportSHA256": "c52995401529e05adece34ed6a339221623abd1f6b9d006d4bae6b2dfdcde0f6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -533,7 +549,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "a7cd1f0d566fb905723b1c3ce4bcf1f4803b87db30d867553d1d4c7069de439e",
@@ -694,7 +710,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "a7cd1f0d566fb905723b1c3ce4bcf1f4803b87db30d867553d1d4c7069de439e",
       "ownerApproved": true,
@@ -719,7 +735,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "f546f13053d760ea0496bea487453dd5314ce5417743a7fe4eed9cfb98ad128f",
+        "sameImageExportSHA256": "6a40f926ce90a6bef0074fa856602f59380853362f9e9ba164b62e0748ca7526",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -772,10 +796,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "074fc9e276ff82d4b8c0eee79bf03873cc880a85feaa5894721a6f7f3045fc03",
+        "semanticContextSHA256": "c33adfcbfc0a9bc5e293eaba2554605a03379e09b1a49ccd81912c7a890c131c",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -933,9 +957,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "074fc9e276ff82d4b8c0eee79bf03873cc880a85feaa5894721a6f7f3045fc03",
+      "contextAfterSHA256": "c33adfcbfc0a9bc5e293eaba2554605a03379e09b1a49ccd81912c7a890c131c",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -958,7 +982,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "42636cd0667da9f1732a054c592279a04031724c8d2d6e63b954316fff73743d",
+        "sameImageExportSHA256": "e96684f0913b319b7a123a21a53238bc31eaf24f62f7230ee025caa260bfca67",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1008,10 +1040,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9e1b70098422342f7ff73758dd1667db93e09ce4200c31a3d9611815b4773e3f",
-        "semanticContextSHA256": "9e1b70098422342f7ff73758dd1667db93e09ce4200c31a3d9611815b4773e3f",
+        "targetBeforeSHA256": "1ef69ccb048e7fba029c58137fd04a0ea1763a182d2a775e9cca0e92cfb61a87",
+        "semanticContextSHA256": "1ef69ccb048e7fba029c58137fd04a0ea1763a182d2a775e9cca0e92cfb61a87",
         "subjectTitle": "Kirjat ja arkistot saman katon alla",
         "targetState": "existing-target"
       },
@@ -1173,9 +1205,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
-      "targetAfterSHA256": "9e1b70098422342f7ff73758dd1667db93e09ce4200c31a3d9611815b4773e3f",
-      "contextAfterSHA256": "9e1b70098422342f7ff73758dd1667db93e09ce4200c31a3d9611815b4773e3f",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+      "targetAfterSHA256": "1ef69ccb048e7fba029c58137fd04a0ea1763a182d2a775e9cca0e92cfb61a87",
+      "contextAfterSHA256": "1ef69ccb048e7fba029c58137fd04a0ea1763a182d2a775e9cca0e92cfb61a87",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1198,7 +1230,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "c411211eb2cb79e12c6791215e652cf722c4a76a04e2cd58200d69957582a6a0",
+        "sameImageExportSHA256": "9567b0b8adc33daea704112cab0a28298110b6db9b758ed9621b5d2333d2ece9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1248,10 +1288,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "954dbf43aaa47f81ef3732335db0de84d7d5df8762610acbbb6eb029cae48ef7",
-        "semanticContextSHA256": "954dbf43aaa47f81ef3732335db0de84d7d5df8762610acbbb6eb029cae48ef7",
+        "targetBeforeSHA256": "ffa359755f0c720030eb884de7ccaefd14f99f219f4ad62ef74ab347fca06c69",
+        "semanticContextSHA256": "ffa359755f0c720030eb884de7ccaefd14f99f219f4ad62ef74ab347fca06c69",
         "subjectTitle": "Postimerkki kulkee kokoelmaan",
         "targetState": "existing-target"
       },
@@ -1409,9 +1449,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
-      "targetAfterSHA256": "954dbf43aaa47f81ef3732335db0de84d7d5df8762610acbbb6eb029cae48ef7",
-      "contextAfterSHA256": "954dbf43aaa47f81ef3732335db0de84d7d5df8762610acbbb6eb029cae48ef7",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+      "targetAfterSHA256": "ffa359755f0c720030eb884de7ccaefd14f99f219f4ad62ef74ab347fca06c69",
+      "contextAfterSHA256": "ffa359755f0c720030eb884de7ccaefd14f99f219f4ad62ef74ab347fca06c69",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1434,7 +1474,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "b73b61445b8861fc26a042c8b0602b6c0e3d3c5e843053364b88f4c7fd76be9e",
+        "sameImageExportSHA256": "b02be076de77e721c53f005dea74e625d99bb4f45b0f90d28e90b8a2c7563c5a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1484,10 +1532,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "45a312e475674d3b0aec5b22a5c826ff43613ce445b4a4f26a7d3365bbae7983",
-        "semanticContextSHA256": "45a312e475674d3b0aec5b22a5c826ff43613ce445b4a4f26a7d3365bbae7983",
+        "targetBeforeSHA256": "5debafe37938e973da2ddb039a58aa9aad89f1c6aad900ed4850540804f32260",
+        "semanticContextSHA256": "5debafe37938e973da2ddb039a58aa9aad89f1c6aad900ed4850540804f32260",
         "subjectTitle": "Teoria vajonneesta saaresta",
         "targetState": "existing-target"
       },
@@ -1643,9 +1691,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
-      "targetAfterSHA256": "45a312e475674d3b0aec5b22a5c826ff43613ce445b4a4f26a7d3365bbae7983",
-      "contextAfterSHA256": "45a312e475674d3b0aec5b22a5c826ff43613ce445b4a4f26a7d3365bbae7983",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+      "targetAfterSHA256": "5debafe37938e973da2ddb039a58aa9aad89f1c6aad900ed4850540804f32260",
+      "contextAfterSHA256": "5debafe37938e973da2ddb039a58aa9aad89f1c6aad900ed4850540804f32260",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1668,7 +1716,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "952d324bea20d7a36f534943088e2a71f2c2f8bec71d205affe775fb3f6e3060",
+        "sameImageExportSHA256": "aa8307ff81ca171ff1822e6e4a2131b7dc41cb0bb2dda95ea378f2d217b963a4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1718,7 +1774,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
         "targetBeforeSHA256": "0b012ffda56722a98afd627f9372c8fb68866bfde1670cbac3a24396e0e20235",
         "semanticContextSHA256": "0b012ffda56722a98afd627f9372c8fb68866bfde1670cbac3a24396e0e20235",
@@ -1881,7 +1937,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "targetAfterSHA256": "0b012ffda56722a98afd627f9372c8fb68866bfde1670cbac3a24396e0e20235",
       "contextAfterSHA256": "0b012ffda56722a98afd627f9372c8fb68866bfde1670cbac3a24396e0e20235",
       "ownerApproved": true,
@@ -1906,7 +1962,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "40a2f1687318a2856bc5dce26a11d4864f2290599270704959a67fa76724b0af",
+        "sameImageExportSHA256": "865c293216eb9917b225bdf49a41b537b192b16c5eb44aa3d4a96ad2e8a2d436",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1956,10 +2020,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6c09189d2d8fac60fdf7180f3ef41d0fbf4db18925d70844986f89005bc3b6c8",
-        "semanticContextSHA256": "6c09189d2d8fac60fdf7180f3ef41d0fbf4db18925d70844986f89005bc3b6c8",
+        "targetBeforeSHA256": "f9925f528c473b33abfc089f2f0dc85a0409d438a6da3fa8b32250a391215ec6",
+        "semanticContextSHA256": "f9925f528c473b33abfc089f2f0dc85a0409d438a6da3fa8b32250a391215ec6",
         "subjectTitle": "Varaosa saarelta",
         "targetState": "existing-target"
       },
@@ -2117,9 +2181,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
-      "targetAfterSHA256": "6c09189d2d8fac60fdf7180f3ef41d0fbf4db18925d70844986f89005bc3b6c8",
-      "contextAfterSHA256": "6c09189d2d8fac60fdf7180f3ef41d0fbf4db18925d70844986f89005bc3b6c8",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+      "targetAfterSHA256": "f9925f528c473b33abfc089f2f0dc85a0409d438a6da3fa8b32250a391215ec6",
+      "contextAfterSHA256": "f9925f528c473b33abfc089f2f0dc85a0409d438a6da3fa8b32250a391215ec6",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2142,7 +2206,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "1112db38dcc39bf97073ed6bfa19239da27988bd9a0b76f06936ae849f176f96",
+        "sameImageExportSHA256": "640c5bc4c0458474f0a77392f9227703c0272de6d2f767025638ffa2f5bc85a9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -2192,10 +2264,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1031a55a13cd0d34c2361f38a817be58d603d57fb61dba17c3f77578a446b406",
-        "semanticContextSHA256": "1031a55a13cd0d34c2361f38a817be58d603d57fb61dba17c3f77578a446b406",
+        "targetBeforeSHA256": "a102f46d7c24c0dc6c315e816b61202407fdbe61d3e4b0a47eacb4120adf67a0",
+        "semanticContextSHA256": "a102f46d7c24c0dc6c315e816b61202407fdbe61d3e4b0a47eacb4120adf67a0",
         "subjectTitle": "Mereen kuuluu kuivaakin maata",
         "targetState": "existing-target"
       },
@@ -2353,9 +2425,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
-      "targetAfterSHA256": "1031a55a13cd0d34c2361f38a817be58d603d57fb61dba17c3f77578a446b406",
-      "contextAfterSHA256": "1031a55a13cd0d34c2361f38a817be58d603d57fb61dba17c3f77578a446b406",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+      "targetAfterSHA256": "a102f46d7c24c0dc6c315e816b61202407fdbe61d3e4b0a47eacb4120adf67a0",
+      "contextAfterSHA256": "a102f46d7c24c0dc6c315e816b61202407fdbe61d3e4b0a47eacb4120adf67a0",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2378,7 +2450,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "14863e469eb756d2de0c378a829e2eee5b7e8c28e8bb1d031e9cc16bedcbc68b",
+        "sameImageExportSHA256": "f3198fe6e7e6abea2fb123d4983274c3c5675eddbf79dbf3ebd8d62c204d75f6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -2397,14 +2477,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/photo-ba07af6b72eabfe50e96.jpg",
         "suora": true,
         "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)",
-        "selite": "Tie kulkee palmujen lomaan, ja sen molemmin puolin näkyy vettä sekä kivikkoista rantaa.",
+        "selite": "Rantatie Funafutin atollin pohjoisosassa.",
         "lyhyt": "Funafutin pohjoisosan kapea rantatie.",
         "tiedosto": "Northern Funafuti.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)",
-        "selite": "Tie kulkee palmujen lomaan, ja sen molemmin puolin näkyy vettä sekä kivikkoista rantaa.",
+        "selite": "Rantatie Funafutin atollin pohjoisosassa.",
         "lyhyt": "Funafutin pohjoisosan kapea rantatie.",
         "tiedosto": "Northern Funafuti.jpg"
       },
@@ -2412,7 +2492,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/photo-ba07af6b72eabfe50e96.jpg",
         "suora": true,
         "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)",
-        "selite": "Tie kulkee palmujen lomaan, ja sen molemmin puolin näkyy vettä sekä kivikkoista rantaa.",
+        "selite": "Rantatie Funafutin atollin pohjoisosassa.",
         "lyhyt": "Funafutin pohjoisosan kapea rantatie.",
         "tiedosto": "Northern Funafuti.jpg"
       },
@@ -2428,10 +2508,10 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0adb15588d222a3a9437d2b460af4e8dd3ede77ddba393aed2f9d9462a4f0669",
-        "semanticContextSHA256": "0adb15588d222a3a9437d2b460af4e8dd3ede77ddba393aed2f9d9462a4f0669",
+        "targetBeforeSHA256": "c72be487dc0428bd269367e51f333b91c78acd0b75288ba1fc5d9e04b42fdd56",
+        "semanticContextSHA256": "c72be487dc0428bd269367e51f333b91c78acd0b75288ba1fc5d9e04b42fdd56",
         "subjectTitle": "funafuti — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2618,7 +2698,7 @@
       "priorMediaFields": {
         "tiedosto": "Northern Funafuti.jpg",
         "lyhyt": "Funafutin pohjoisosan kapea rantatie.",
-        "selite": "Tie kulkee palmujen lomaan, ja sen molemmin puolin näkyy vettä sekä kivikkoista rantaa.",
+        "selite": "Rantatie Funafutin atollin pohjoisosassa.",
         "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2645,14 +2725,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Davidarfonjones, Commons (CC BY-SA 3.0)",
-        "selite": "Tie kulkee palmujen lomaan, ja sen molemmin puolin näkyy vettä sekä kivikkoista rantaa.",
+        "selite": "Rantatie Funafutin atollin pohjoisosassa.",
         "lyhyt": "Funafutin pohjoisosan kapea rantatie.",
         "tiedosto": "Northern Funafuti.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
-      "targetAfterSHA256": "0adb15588d222a3a9437d2b460af4e8dd3ede77ddba393aed2f9d9462a4f0669",
-      "contextAfterSHA256": "0adb15588d222a3a9437d2b460af4e8dd3ede77ddba393aed2f9d9462a4f0669",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+      "targetAfterSHA256": "c72be487dc0428bd269367e51f333b91c78acd0b75288ba1fc5d9e04b42fdd56",
+      "contextAfterSHA256": "c72be487dc0428bd269367e51f333b91c78acd0b75288ba1fc5d9e04b42fdd56",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2675,7 +2755,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "ba07af6b72eabfe50e96f91d670ffec2d0232c39b17714f0840b59b8fd667bac",
+        "sameImageExportSHA256": "ba07af6b72eabfe50e96f91d670ffec2d0232c39b17714f0840b59b8fd667bac",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e14",
@@ -2697,14 +2785,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c1-513721fbeabf7d597b0c.jpg",
         "suora": true,
         "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Aallot murtuvat kivikkoon; rantakasvillisuus kasvaa kuvan oikeassa reunassa.",
+        "selite": "Funafutin ulkomeren puoleinen ranta.",
         "lyhyt": "Funafutin merenpuoleinen kivikkoranta.",
         "tiedosto": "Ocean side Funafuti.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Aallot murtuvat kivikkoon; rantakasvillisuus kasvaa kuvan oikeassa reunassa.",
+        "selite": "Funafutin ulkomeren puoleinen ranta.",
         "lyhyt": "Funafutin merenpuoleinen kivikkoranta.",
         "tiedosto": "Ocean side Funafuti.jpg"
       },
@@ -2712,7 +2800,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c1-513721fbeabf7d597b0c.jpg",
         "suora": true,
         "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Aallot murtuvat kivikkoon; rantakasvillisuus kasvaa kuvan oikeassa reunassa.",
+        "selite": "Funafutin ulkomeren puoleinen ranta.",
         "lyhyt": "Funafutin merenpuoleinen kivikkoranta.",
         "tiedosto": "Ocean side Funafuti.jpg"
       },
@@ -2728,10 +2816,10 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "026330ba98e59d04003c310ba8314b71cb3d32f65f57bb6d7f859c69cf8e46e3",
-        "semanticContextSHA256": "026330ba98e59d04003c310ba8314b71cb3d32f65f57bb6d7f859c69cf8e46e3",
+        "targetBeforeSHA256": "20e79ba486207057c78111435daa93dfd484a4b995202e8e8be047fd0b8b1779",
+        "semanticContextSHA256": "20e79ba486207057c78111435daa93dfd484a4b995202e8e8be047fd0b8b1779",
         "subjectTitle": "Funafuti",
         "targetState": "existing-target"
       },
@@ -2910,7 +2998,7 @@
       "priorMediaFields": {
         "tiedosto": "Ocean side Funafuti.jpg",
         "lyhyt": "Funafutin merenpuoleinen kivikkoranta.",
-        "selite": "Aallot murtuvat kivikkoon; rantakasvillisuus kasvaa kuvan oikeassa reunassa.",
+        "selite": "Funafutin ulkomeren puoleinen ranta.",
         "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2937,14 +3025,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Davidarfonjones, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Aallot murtuvat kivikkoon; rantakasvillisuus kasvaa kuvan oikeassa reunassa.",
+        "selite": "Funafutin ulkomeren puoleinen ranta.",
         "lyhyt": "Funafutin merenpuoleinen kivikkoranta.",
         "tiedosto": "Ocean side Funafuti.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
-      "targetAfterSHA256": "026330ba98e59d04003c310ba8314b71cb3d32f65f57bb6d7f859c69cf8e46e3",
-      "contextAfterSHA256": "026330ba98e59d04003c310ba8314b71cb3d32f65f57bb6d7f859c69cf8e46e3",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+      "targetAfterSHA256": "20e79ba486207057c78111435daa93dfd484a4b995202e8e8be047fd0b8b1779",
+      "contextAfterSHA256": "20e79ba486207057c78111435daa93dfd484a4b995202e8e8be047fd0b8b1779",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2967,7 +3055,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "513721fbeabf7d597b0c72994ca4c74d4bae930edc10307d4b564b8a02fe6635",
+        "sameImageExportSHA256": "513721fbeabf7d597b0c72994ca4c74d4bae930edc10307d4b564b8a02fe6635",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e14",
@@ -2989,14 +3085,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c3-346e1c7a6284086cd480.jpg",
         "suora": true,
         "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Päällystetty tie ja palmut jatkuvat kapealla saarella, jonka molemmin puolin näkyy vettä.",
+        "selite": "Vuonna 2011 otettu kuva rantatiestä Funafutilla.",
         "lyhyt": "Rantatie Funafutilla vuonna 2011.",
         "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Päällystetty tie ja palmut jatkuvat kapealla saarella, jonka molemmin puolin näkyy vettä.",
+        "selite": "Vuonna 2011 otettu kuva rantatiestä Funafutilla.",
         "lyhyt": "Rantatie Funafutilla vuonna 2011.",
         "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg"
       },
@@ -3004,7 +3100,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/funafuti/c3-346e1c7a6284086cd480.jpg",
         "suora": true,
         "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Päällystetty tie ja palmut jatkuvat kapealla saarella, jonka molemmin puolin näkyy vettä.",
+        "selite": "Vuonna 2011 otettu kuva rantatiestä Funafutilla.",
         "lyhyt": "Rantatie Funafutilla vuonna 2011.",
         "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg"
       },
@@ -3020,10 +3116,10 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/funafuti/sisalto.json",
-      "sourceContentSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
+      "sourceContentSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b1cc7bf6409fce8fecd991b37ade722649017bea2cac6090b38637efd0be6948",
-        "semanticContextSHA256": "b1cc7bf6409fce8fecd991b37ade722649017bea2cac6090b38637efd0be6948",
+        "targetBeforeSHA256": "a4afcb817c69ee6d82c9d105d17a7690e614932bc31342552a69c64d3799ad89",
+        "semanticContextSHA256": "a4afcb817c69ee6d82c9d105d17a7690e614932bc31342552a69c64d3799ad89",
         "subjectTitle": "Funafuti",
         "targetState": "existing-target"
       },
@@ -3234,7 +3330,7 @@
       "priorMediaFields": {
         "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg",
         "lyhyt": "Rantatie Funafutilla vuonna 2011.",
-        "selite": "Päällystetty tie ja palmut jatkuvat kapealla saarella, jonka molemmin puolin näkyy vettä.",
+        "selite": "Vuonna 2011 otettu kuva rantatiestä Funafutilla.",
         "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3261,14 +3357,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Päällystetty tie ja palmut jatkuvat kapealla saarella, jonka molemmin puolin näkyy vettä.",
+        "selite": "Vuonna 2011 otettu kuva rantatiestä Funafutilla.",
         "lyhyt": "Rantatie Funafutilla vuonna 2011.",
         "tiedosto": "Landscape, Tuvalu, 2011. Photo- DFAT (12779525995).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ff073d5474ede844f07b7ed87adc0077d4319a61534f0da250680c56a2e810ac",
-      "targetAfterSHA256": "b1cc7bf6409fce8fecd991b37ade722649017bea2cac6090b38637efd0be6948",
-      "contextAfterSHA256": "b1cc7bf6409fce8fecd991b37ade722649017bea2cac6090b38637efd0be6948",
+      "sourceContentAfterSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+      "targetAfterSHA256": "a4afcb817c69ee6d82c9d105d17a7690e614932bc31342552a69c64d3799ad89",
+      "contextAfterSHA256": "a4afcb817c69ee6d82c9d105d17a7690e614932bc31342552a69c64d3799ad89",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3291,7 +3387,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "b48b84caf53a1484e37ea604083efad0354bcd48490271c5e573d61ec4ddba80",
+        "sameImageNativeSHA256": "346e1c7a6284086cd48052833639c25caf8a9a64181b70571724015daac23c7b",
+        "sameImageExportSHA256": "346e1c7a6284086cd48052833639c25caf8a9a64181b70571724015daac23c7b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3303,6 +3407,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e14/funafuti/eb05363baa2aa784ced25b8c986774cfc886168a4e0fe8f395d14360447f992e.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.680752+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e14/funafuti/02e5b20b67b152ed726a0dd0cfe7ce69bf09f4cfcd0c212520c948a2435abdaa.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.680752+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:49.106345+00:00"
 }

@@ -3,7 +3,7 @@
   "era": "e14",
   "city": "nukualofa",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+  "sourceContentAfterSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
   "assets": [
     {
       "era": "e14",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
-      "sourceContentSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "b5b5efd413f7a4a3d1e3fb179fc47b193072155aa6254dd00ad3c2444145c89f",
+        "semanticContextSHA256": "7c1ed189cfc7be5b84ad67e42a6b2520d010604dcd6115082d67f709d8db4807",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -312,9 +312,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentAfterSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "b5b5efd413f7a4a3d1e3fb179fc47b193072155aa6254dd00ad3c2444145c89f",
+      "contextAfterSHA256": "7c1ed189cfc7be5b84ad67e42a6b2520d010604dcd6115082d67f709d8db4807",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -337,7 +337,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+        "sameImageNativeSHA256": "80a44078b6cca044f5cc642819796cc20ef11555de3fb61123780a44ff1d69b7",
+        "sameImageExportSHA256": "0d1494f81a2a2e8d6be48f89a901066cd5c05c22a3f1388d8d61ef84b1a870bd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -390,10 +398,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
-      "sourceContentSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "d20a7dab5d406de9defd4ac4037a59d387fb9d0605319388d3e1759f132e3354",
+        "semanticContextSHA256": "1deb249780c348676d6dff42bee15bce8bf83cba05d39f0b0a19d7d917d2eac8",
         "subjectTitle": "Käsityön tekijän jäljille",
         "targetState": "existing-target"
       },
@@ -646,9 +654,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentAfterSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "d20a7dab5d406de9defd4ac4037a59d387fb9d0605319388d3e1759f132e3354",
+      "contextAfterSHA256": "1deb249780c348676d6dff42bee15bce8bf83cba05d39f0b0a19d7d917d2eac8",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -671,7 +679,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+        "sameImageNativeSHA256": "31cbc46da067cdfc9eb257022c5a3a679475a226f3967a72699a33df7f5a581c",
+        "sameImageExportSHA256": "2cc04986219e46c5b5ec86a12147179d036553e6365d5d1a2a364e172d9fa609",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -724,7 +740,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
-      "sourceContentSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "2396ded8e0eb62e66ddb529c21b2252a9c417258d5d104da5a01c076428588fc",
@@ -1009,7 +1025,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentAfterSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "2396ded8e0eb62e66ddb529c21b2252a9c417258d5d104da5a01c076428588fc",
       "ownerApproved": true,
@@ -1034,7 +1050,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+        "sameImageNativeSHA256": "e498ec6774121a44b2982d2d6062303bd203eceee6c3b54a4ac704ae44a57560",
+        "sameImageExportSHA256": "9ab5467d338b131fb756c9a278b95891a27e4d1e8974ed81a32636435cf0036a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1084,10 +1108,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
-      "sourceContentSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "49b39c5e53c323fd556c07b1c392ae69c8240ad12c02873b767a058038aef1bd",
-        "semanticContextSHA256": "49b39c5e53c323fd556c07b1c392ae69c8240ad12c02873b767a058038aef1bd",
+        "targetBeforeSHA256": "e205a683fcf0664d584b3467dff278c16be2b1659a7881af1736eb95d716e104",
+        "semanticContextSHA256": "e205a683fcf0664d584b3467dff278c16be2b1659a7881af1736eb95d716e104",
         "subjectTitle": "Puun kuoresta lahjaksi",
         "targetState": "existing-target"
       },
@@ -1369,9 +1393,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
-      "targetAfterSHA256": "49b39c5e53c323fd556c07b1c392ae69c8240ad12c02873b767a058038aef1bd",
-      "contextAfterSHA256": "49b39c5e53c323fd556c07b1c392ae69c8240ad12c02873b767a058038aef1bd",
+      "sourceContentAfterSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+      "targetAfterSHA256": "e205a683fcf0664d584b3467dff278c16be2b1659a7881af1736eb95d716e104",
+      "contextAfterSHA256": "e205a683fcf0664d584b3467dff278c16be2b1659a7881af1736eb95d716e104",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1394,7 +1418,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+        "sameImageNativeSHA256": "72f06347fc5e40cd2f34f3165b433826da3a2dc4253af55e3700746c56481f55",
+        "sameImageExportSHA256": "e3bd9a013049784d88ef2e116337a1e9f985f1a7bb0a081c2728cea778a59fe8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1444,10 +1476,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
-      "sourceContentSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2c240babbd8e796c2ceaa7edbc44402de69e1e22a252fbfb3ce045bad39d6389",
-        "semanticContextSHA256": "2c240babbd8e796c2ceaa7edbc44402de69e1e22a252fbfb3ce045bad39d6389",
+        "targetBeforeSHA256": "95e17c7a6e05870ddf23a8732d986d4d2c1ab206a7cd775ee51a3b7ee15f3422",
+        "semanticContextSHA256": "95e17c7a6e05870ddf23a8732d986d4d2c1ab206a7cd775ee51a3b7ee15f3422",
         "subjectTitle": "Matto kuuluu juhlapukuun",
         "targetState": "existing-target"
       },
@@ -1700,9 +1732,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
-      "targetAfterSHA256": "2c240babbd8e796c2ceaa7edbc44402de69e1e22a252fbfb3ce045bad39d6389",
-      "contextAfterSHA256": "2c240babbd8e796c2ceaa7edbc44402de69e1e22a252fbfb3ce045bad39d6389",
+      "sourceContentAfterSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+      "targetAfterSHA256": "95e17c7a6e05870ddf23a8732d986d4d2c1ab206a7cd775ee51a3b7ee15f3422",
+      "contextAfterSHA256": "95e17c7a6e05870ddf23a8732d986d4d2c1ab206a7cd775ee51a3b7ee15f3422",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1725,7 +1757,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+        "sameImageNativeSHA256": "534c47b8e6498f2cb5390ea5552e9f1f1a7a609e467d8a165370d8e899ddaf04",
+        "sameImageExportSHA256": "702fd77bfa49e7d9357d153bf4d6ad20de6f1eb31599c18bacc254b5b0e116c7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1775,10 +1815,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
-      "sourceContentSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "323a6b8c023e1bd8faf8dbba04cafc212b2ad6bfcfc90bb51430d648db917184",
-        "semanticContextSHA256": "323a6b8c023e1bd8faf8dbba04cafc212b2ad6bfcfc90bb51430d648db917184",
+        "targetBeforeSHA256": "4f099776182ad0aec51d6e6c6bd7a797b4e3b67fa5fbe58cb47197aa9d4dc3c7",
+        "semanticContextSHA256": "4f099776182ad0aec51d6e6c6bd7a797b4e3b67fa5fbe58cb47197aa9d4dc3c7",
         "subjectTitle": "Jauhosäkille uusi tehtävä",
         "targetState": "existing-target"
       },
@@ -2060,9 +2100,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
-      "targetAfterSHA256": "323a6b8c023e1bd8faf8dbba04cafc212b2ad6bfcfc90bb51430d648db917184",
-      "contextAfterSHA256": "323a6b8c023e1bd8faf8dbba04cafc212b2ad6bfcfc90bb51430d648db917184",
+      "sourceContentAfterSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+      "targetAfterSHA256": "4f099776182ad0aec51d6e6c6bd7a797b4e3b67fa5fbe58cb47197aa9d4dc3c7",
+      "contextAfterSHA256": "4f099776182ad0aec51d6e6c6bd7a797b4e3b67fa5fbe58cb47197aa9d4dc3c7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2085,7 +2125,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+        "sameImageNativeSHA256": "379d6e93bbac14c9b2cde5e021cb7d5b80559c261317b7cda94ac786d3341800",
+        "sameImageExportSHA256": "43baf44e84baac17588a5e0f1578ec37e2920ce2739e0a6eaf6ea8ff792d2e81",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -2104,14 +2152,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/photo-e39f269b83b88bbfc6be.jpg",
         "suora": true,
         "lahde": "David Broad, Commons (CC BY 3.0)",
-        "selite": "Purjeveneiden ja kalastusalusten takana näkyy satamalaituri sekä punainen työalus.",
+        "selite": "Nukuʻalofan satama on Tongatapun meriliikenteen keskus.",
         "lyhyt": "Veneitä ja laivoja Nukuʻalofan satamassa.",
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "David Broad, Commons (CC BY 3.0)",
-        "selite": "Purjeveneiden ja kalastusalusten takana näkyy satamalaituri sekä punainen työalus.",
+        "selite": "Nukuʻalofan satama on Tongatapun meriliikenteen keskus.",
         "lyhyt": "Veneitä ja laivoja Nukuʻalofan satamassa.",
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg"
       },
@@ -2119,7 +2167,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/photo-e39f269b83b88bbfc6be.jpg",
         "suora": true,
         "lahde": "David Broad, Commons (CC BY 3.0)",
-        "selite": "Purjeveneiden ja kalastusalusten takana näkyy satamalaituri sekä punainen työalus.",
+        "selite": "Nukuʻalofan satama on Tongatapun meriliikenteen keskus.",
         "lyhyt": "Veneitä ja laivoja Nukuʻalofan satamassa.",
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg"
       },
@@ -2135,10 +2183,10 @@
         1936
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
-      "sourceContentSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ef959aa8e4a4533ab20edd01583f3d797dc828959757ffab185907967fe99124",
-        "semanticContextSHA256": "ef959aa8e4a4533ab20edd01583f3d797dc828959757ffab185907967fe99124",
+        "targetBeforeSHA256": "8c352e48d3505722cd5fa390be91652dc373a89a9e477b20983d0fe02d55da8d",
+        "semanticContextSHA256": "8c352e48d3505722cd5fa390be91652dc373a89a9e477b20983d0fe02d55da8d",
         "subjectTitle": "nukualofa — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2291,7 +2339,7 @@
       "priorMediaFields": {
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg",
         "lyhyt": "Veneitä ja laivoja Nukuʻalofan satamassa.",
-        "selite": "Purjeveneiden ja kalastusalusten takana näkyy satamalaituri sekä punainen työalus.",
+        "selite": "Nukuʻalofan satama on Tongatapun meriliikenteen keskus.",
         "lahde": "David Broad, Commons (CC BY 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2318,14 +2366,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "David Broad, Commons (CC BY 3.0)",
-        "selite": "Purjeveneiden ja kalastusalusten takana näkyy satamalaituri sekä punainen työalus.",
+        "selite": "Nukuʻalofan satama on Tongatapun meriliikenteen keskus.",
         "lyhyt": "Veneitä ja laivoja Nukuʻalofan satamassa.",
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (3).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
-      "targetAfterSHA256": "ef959aa8e4a4533ab20edd01583f3d797dc828959757ffab185907967fe99124",
-      "contextAfterSHA256": "ef959aa8e4a4533ab20edd01583f3d797dc828959757ffab185907967fe99124",
+      "sourceContentAfterSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+      "targetAfterSHA256": "8c352e48d3505722cd5fa390be91652dc373a89a9e477b20983d0fe02d55da8d",
+      "contextAfterSHA256": "8c352e48d3505722cd5fa390be91652dc373a89a9e477b20983d0fe02d55da8d",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2348,7 +2396,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+        "sameImageNativeSHA256": "e39f269b83b88bbfc6beb437b0893059d7e632bef803ec644b4146d05cc46a4f",
+        "sameImageExportSHA256": "e39f269b83b88bbfc6beb437b0893059d7e632bef803ec644b4146d05cc46a4f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e14",
@@ -2370,14 +2426,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c1-05592e01aec6532a3e88.jpg",
         "suora": true,
         "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Laitureiden välissä näkyy purjeveneitä, venevajoja ja matalia satamarakennuksia.",
+        "selite": "Sataman laitureilta lähdetään Tongan muille saarille.",
         "lyhyt": "Nukuʻalofan satamalaitureita ja veneitä.",
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Laitureiden välissä näkyy purjeveneitä, venevajoja ja matalia satamarakennuksia.",
+        "selite": "Sataman laitureilta lähdetään Tongan muille saarille.",
         "lyhyt": "Nukuʻalofan satamalaitureita ja veneitä.",
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg"
       },
@@ -2385,7 +2441,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c1-05592e01aec6532a3e88.jpg",
         "suora": true,
         "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Laitureiden välissä näkyy purjeveneitä, venevajoja ja matalia satamarakennuksia.",
+        "selite": "Sataman laitureilta lähdetään Tongan muille saarille.",
         "lyhyt": "Nukuʻalofan satamalaitureita ja veneitä.",
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg"
       },
@@ -2401,10 +2457,10 @@
         1936
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
-      "sourceContentSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c1b779a650d13501a29cc657082f0686a39fad8c2429edff279933cc0252eea8",
-        "semanticContextSHA256": "c1b779a650d13501a29cc657082f0686a39fad8c2429edff279933cc0252eea8",
+        "targetBeforeSHA256": "bd42d2b672661a9a50443ca83269663119aebc90ff3aa9de03e3358095096978",
+        "semanticContextSHA256": "bd42d2b672661a9a50443ca83269663119aebc90ff3aa9de03e3358095096978",
         "subjectTitle": "Nukuʻalofa",
         "targetState": "existing-target"
       },
@@ -2557,7 +2613,7 @@
       "priorMediaFields": {
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg",
         "lyhyt": "Nukuʻalofan satamalaitureita ja veneitä.",
-        "selite": "Laitureiden välissä näkyy purjeveneitä, venevajoja ja matalia satamarakennuksia.",
+        "selite": "Sataman laitureilta lähdetään Tongan muille saarille.",
         "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2584,14 +2640,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "David Broad, Wikimedia Commons (CC BY 3.0)",
-        "selite": "Laitureiden välissä näkyy purjeveneitä, venevajoja ja matalia satamarakennuksia.",
+        "selite": "Sataman laitureilta lähdetään Tongan muille saarille.",
         "lyhyt": "Nukuʻalofan satamalaitureita ja veneitä.",
         "tiedosto": "Nuku'alofa harbor, north coast of Tongatapu island, Kingdom of Tonga - panoramio (1).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
-      "targetAfterSHA256": "c1b779a650d13501a29cc657082f0686a39fad8c2429edff279933cc0252eea8",
-      "contextAfterSHA256": "c1b779a650d13501a29cc657082f0686a39fad8c2429edff279933cc0252eea8",
+      "sourceContentAfterSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+      "targetAfterSHA256": "bd42d2b672661a9a50443ca83269663119aebc90ff3aa9de03e3358095096978",
+      "contextAfterSHA256": "bd42d2b672661a9a50443ca83269663119aebc90ff3aa9de03e3358095096978",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2614,7 +2670,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+        "sameImageNativeSHA256": "05592e01aec6532a3e88498be1d2cb42d7520bd346116811b0a1f1e336d758a9",
+        "sameImageExportSHA256": "05592e01aec6532a3e88498be1d2cb42d7520bd346116811b0a1f1e336d758a9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e14",
@@ -2636,14 +2700,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c3-9d625d0159095eb836ee.png",
         "suora": true,
         "lahde": "Landsat 8 and UGS (NASA) - derivative work: Skimel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rakennettu rannikko ja katuverkko erottuvat Tongatapun laguunin, pienten saarten ja pilvien vierellä.",
+        "selite": "Satelliittikuva Nukuʻalofasta Tongatapun pohjoisrannikolla.",
         "lyhyt": "Nukuʻalofan rannikkoa satelliittikuvassa.",
         "tiedosto": "Nuku'alofa satellite view.png"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Landsat 8 and UGS (NASA) - derivative work: Skimel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rakennettu rannikko ja katuverkko erottuvat Tongatapun laguunin, pienten saarten ja pilvien vierellä.",
+        "selite": "Satelliittikuva Nukuʻalofasta Tongatapun pohjoisrannikolla.",
         "lyhyt": "Nukuʻalofan rannikkoa satelliittikuvassa.",
         "tiedosto": "Nuku'alofa satellite view.png"
       },
@@ -2651,7 +2715,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/nukualofa/c3-9d625d0159095eb836ee.png",
         "suora": true,
         "lahde": "Landsat 8 and UGS (NASA) - derivative work: Skimel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rakennettu rannikko ja katuverkko erottuvat Tongatapun laguunin, pienten saarten ja pilvien vierellä.",
+        "selite": "Satelliittikuva Nukuʻalofasta Tongatapun pohjoisrannikolla.",
         "lyhyt": "Nukuʻalofan rannikkoa satelliittikuvassa.",
         "tiedosto": "Nuku'alofa satellite view.png"
       },
@@ -2667,10 +2731,10 @@
         3478
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/nukualofa/sisalto.json",
-      "sourceContentSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
+      "sourceContentSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e0d98dabf332af819cadba2c73c225d486c83470db6546542675038ec60d5deb",
-        "semanticContextSHA256": "e0d98dabf332af819cadba2c73c225d486c83470db6546542675038ec60d5deb",
+        "targetBeforeSHA256": "da887db2245679d4c8fab79151b6bffdd7ad9ed4fb62be3df4c625dcf5325c2b",
+        "semanticContextSHA256": "da887db2245679d4c8fab79151b6bffdd7ad9ed4fb62be3df4c625dcf5325c2b",
         "subjectTitle": "Nukuʻalofa",
         "targetState": "existing-target"
       },
@@ -2897,7 +2961,7 @@
       "priorMediaFields": {
         "tiedosto": "Nuku'alofa satellite view.png",
         "lyhyt": "Nukuʻalofan rannikkoa satelliittikuvassa.",
-        "selite": "Rakennettu rannikko ja katuverkko erottuvat Tongatapun laguunin, pienten saarten ja pilvien vierellä.",
+        "selite": "Satelliittikuva Nukuʻalofasta Tongatapun pohjoisrannikolla.",
         "lahde": "Landsat 8 and UGS (NASA) - derivative work: Skimel, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2924,14 +2988,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Landsat 8 and UGS (NASA) - derivative work: Skimel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Rakennettu rannikko ja katuverkko erottuvat Tongatapun laguunin, pienten saarten ja pilvien vierellä.",
+        "selite": "Satelliittikuva Nukuʻalofasta Tongatapun pohjoisrannikolla.",
         "lyhyt": "Nukuʻalofan rannikkoa satelliittikuvassa.",
         "tiedosto": "Nuku'alofa satellite view.png"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "2233601695187dffd2906f6dc2d9c6db9da360c8a1702865ded11753dc299e6b",
-      "targetAfterSHA256": "e0d98dabf332af819cadba2c73c225d486c83470db6546542675038ec60d5deb",
-      "contextAfterSHA256": "e0d98dabf332af819cadba2c73c225d486c83470db6546542675038ec60d5deb",
+      "sourceContentAfterSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+      "targetAfterSHA256": "da887db2245679d4c8fab79151b6bffdd7ad9ed4fb62be3df4c625dcf5325c2b",
+      "contextAfterSHA256": "da887db2245679d4c8fab79151b6bffdd7ad9ed4fb62be3df4c625dcf5325c2b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2954,7 +3018,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "63cb5f6d69224f34a76a8d14ea40d9d99afb15684433c48b9e5200171af2e908",
+        "sameImageNativeSHA256": "9d625d0159095eb836ee8ddf59af47cbd0c7038b037ae9945bac7bb3cbb4de2b",
+        "sameImageExportSHA256": "9d625d0159095eb836ee8ddf59af47cbd0c7038b037ae9945bac7bb3cbb4de2b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2966,6 +3038,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e14/nukualofa/e9a60a2d32c2b2a838035f9d0f93a4dcff2ec5bbcee2532401505cc0800a2b09.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.768357+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e14/nukualofa/071365ef57c5986e19d5191bd2de99cc5837dc80a6e22734ae1328002fb71230.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.768357+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:49.194928+00:00"
 }

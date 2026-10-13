@@ -3,7 +3,7 @@
   "era": "e14",
   "city": "apia",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+  "sourceContentAfterSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
   "assets": [
     {
       "era": "e14",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
-      "sourceContentSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "35b7c557446da092e64d3646c582de9df39d92064877c8bf442fc4761f80fe26",
+        "semanticContextSHA256": "295d949dff9091af1cb567420b5f2f0322b0d6774183060466f0743cab611d23",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -218,9 +218,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentAfterSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "35b7c557446da092e64d3646c582de9df39d92064877c8bf442fc4761f80fe26",
+      "contextAfterSHA256": "295d949dff9091af1cb567420b5f2f0322b0d6774183060466f0743cab611d23",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -243,7 +243,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+        "sameImageNativeSHA256": "2392d510a35f2a763648296f2c5502bb94dc84fbf02f9c92fa982071594a6cd7",
+        "sameImageExportSHA256": "f54dd5a09c176b6490cc48883d5a6a2d56c727b72ff5455b0e8b549fb39cec73",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -296,10 +304,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
-      "sourceContentSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "f967c9b9c0f9b6c8bf619c3673cca171e905c87cb8f019fd4da4f6f988283738",
+        "semanticContextSHA256": "56ae81ab62a5b6fcf4a5e67a3967a15d2e7cb6f3bfc9a83337fe23f3ee2b9006",
         "subjectTitle": "Satama ja torit",
         "targetState": "existing-target"
       },
@@ -457,9 +465,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentAfterSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "f967c9b9c0f9b6c8bf619c3673cca171e905c87cb8f019fd4da4f6f988283738",
+      "contextAfterSHA256": "56ae81ab62a5b6fcf4a5e67a3967a15d2e7cb6f3bfc9a83337fe23f3ee2b9006",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -482,7 +490,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+        "sameImageNativeSHA256": "9deb0967b4234ceed829ad751e4724893ad9e3063fba67f1c2bddaad01351b35",
+        "sameImageExportSHA256": "4b5ed0351fd8c22fc820bac7a9b5f48f9a9e279803315dfc4bcf3919eb1c23c2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -535,10 +551,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
-      "sourceContentSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "50115d463e019f05b202e8037a7e454b0d7668b5b0451b8b4307c9c597176dc0",
+        "semanticContextSHA256": "b6af806ec3fcf52871c5bb118737d262d3df08c2b9ec680c25f7e2752cb63eec",
         "subjectTitle": "Vailimasta Mount Vaealle",
         "targetState": "existing-target"
       },
@@ -696,9 +712,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentAfterSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "50115d463e019f05b202e8037a7e454b0d7668b5b0451b8b4307c9c597176dc0",
+      "contextAfterSHA256": "b6af806ec3fcf52871c5bb118737d262d3df08c2b9ec680c25f7e2752cb63eec",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -721,7 +737,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+        "sameImageNativeSHA256": "343a3397bf22c4c889125a8113de1bbf6fc311482aaaf7b667f15f3f61637fb6",
+        "sameImageExportSHA256": "ff193cf5fb733be2ae813abf4919f3e0362dd8d5b876e0568768b607f6c37374",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -774,10 +798,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
-      "sourceContentSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "5eac3eadeb5efa7f2719778fc73af3d47b9a9c83ea2f0473cbe371f4361b22ed",
+        "semanticContextSHA256": "3a1b1ae1d700cd432fc1aea59e20d043a67fdf68c8a9507ffbf7d2de4abda1af",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -935,9 +959,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentAfterSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "5eac3eadeb5efa7f2719778fc73af3d47b9a9c83ea2f0473cbe371f4361b22ed",
+      "contextAfterSHA256": "3a1b1ae1d700cd432fc1aea59e20d043a67fdf68c8a9507ffbf7d2de4abda1af",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -960,7 +984,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+        "sameImageNativeSHA256": "0a83a65f05623175e7f22c64bf482683ef7a585a68bf9b4ef92648b62e6a9442",
+        "sameImageExportSHA256": "962a68c518535a0e5c21718584232721239f59a6a13e8432b8c36681c1db8702",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1010,10 +1042,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
-      "sourceContentSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a97b544a6bcf5251493778bd3e18f7f1d26914f353ab23ce58cc72376d8a4fc1",
-        "semanticContextSHA256": "a97b544a6bcf5251493778bd3e18f7f1d26914f353ab23ce58cc72376d8a4fc1",
+        "targetBeforeSHA256": "380eb27a05988bc76594d4ac18cc0ca452a34fc15f7b66fa777449280e966676",
+        "semanticContextSHA256": "380eb27a05988bc76594d4ac18cc0ca452a34fc15f7b66fa777449280e966676",
         "subjectTitle": "Torilta oppii muutakin kuin ostamaan",
         "targetState": "existing-target"
       },
@@ -1171,9 +1203,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
-      "targetAfterSHA256": "a97b544a6bcf5251493778bd3e18f7f1d26914f353ab23ce58cc72376d8a4fc1",
-      "contextAfterSHA256": "a97b544a6bcf5251493778bd3e18f7f1d26914f353ab23ce58cc72376d8a4fc1",
+      "sourceContentAfterSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+      "targetAfterSHA256": "380eb27a05988bc76594d4ac18cc0ca452a34fc15f7b66fa777449280e966676",
+      "contextAfterSHA256": "380eb27a05988bc76594d4ac18cc0ca452a34fc15f7b66fa777449280e966676",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1196,7 +1228,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+        "sameImageNativeSHA256": "6d1554a1b9c54d6991097fd9d86187b345629223a1e000ba3cbb4dbb03f84c8a",
+        "sameImageExportSHA256": "4ac0f7388299b6974d686a1de2ecceaa11b1430035239f600525415eb89a9189",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1246,10 +1286,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
-      "sourceContentSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "116d8f9b3ae6c9519deda29aaebd5a99ee034e7483c15923e26782a689726c2d",
-        "semanticContextSHA256": "116d8f9b3ae6c9519deda29aaebd5a99ee034e7483c15923e26782a689726c2d",
+        "targetBeforeSHA256": "f5f9bc0851e0e370b434e70d11a72c7b94382b07f71c120717e6f0998c197408",
+        "semanticContextSHA256": "f5f9bc0851e0e370b434e70d11a72c7b94382b07f71c120717e6f0998c197408",
         "subjectTitle": "Aarresaari tuli ennen Samoa-vuosia",
         "targetState": "existing-target"
       },
@@ -1407,9 +1447,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
-      "targetAfterSHA256": "116d8f9b3ae6c9519deda29aaebd5a99ee034e7483c15923e26782a689726c2d",
-      "contextAfterSHA256": "116d8f9b3ae6c9519deda29aaebd5a99ee034e7483c15923e26782a689726c2d",
+      "sourceContentAfterSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+      "targetAfterSHA256": "f5f9bc0851e0e370b434e70d11a72c7b94382b07f71c120717e6f0998c197408",
+      "contextAfterSHA256": "f5f9bc0851e0e370b434e70d11a72c7b94382b07f71c120717e6f0998c197408",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1432,7 +1472,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+        "sameImageNativeSHA256": "e54cc227cd6f5878707d7577d2a12a6143af582a4b3f53ce6255ddf68d85bc82",
+        "sameImageExportSHA256": "321537d97c7a6954b3d86fe69c8e5677f3a9255586f2a777c86baaafadfed197",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1482,10 +1530,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
-      "sourceContentSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ebac2af87189818379d38b0f82cbf4550f1fc93aafcbaaac090f911f58878888",
-        "semanticContextSHA256": "ebac2af87189818379d38b0f82cbf4550f1fc93aafcbaaac090f911f58878888",
+        "targetBeforeSHA256": "3e038563459590aecaa2c0b16efccc8193f43a42eb592e6a4d84a66b92a759cc",
+        "semanticContextSHA256": "3e038563459590aecaa2c0b16efccc8193f43a42eb592e6a4d84a66b92a759cc",
         "subjectTitle": "Tusitala oli paikallinen nimi",
         "targetState": "existing-target"
       },
@@ -1643,9 +1691,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
-      "targetAfterSHA256": "ebac2af87189818379d38b0f82cbf4550f1fc93aafcbaaac090f911f58878888",
-      "contextAfterSHA256": "ebac2af87189818379d38b0f82cbf4550f1fc93aafcbaaac090f911f58878888",
+      "sourceContentAfterSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+      "targetAfterSHA256": "3e038563459590aecaa2c0b16efccc8193f43a42eb592e6a4d84a66b92a759cc",
+      "contextAfterSHA256": "3e038563459590aecaa2c0b16efccc8193f43a42eb592e6a4d84a66b92a759cc",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1668,7 +1716,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+        "sameImageNativeSHA256": "224e2a721a0a72e0e08199f674fd36e92fe9902964dca5fe454f4c077064daad",
+        "sameImageExportSHA256": "47e94d017f6f02315aded0ae1f355e3602a324b8b6f252fe74225f790d131c52",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1718,10 +1774,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
-      "sourceContentSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7ba6ac0bdccaaef626281b7055683f72fb37d73d866c68329567172ea1613539",
-        "semanticContextSHA256": "7ba6ac0bdccaaef626281b7055683f72fb37d73d866c68329567172ea1613539",
+        "targetBeforeSHA256": "c020c7654a3fdbf4b052b9db77e20c9516a76e57f909232ed16af0b6bf564e5c",
+        "semanticContextSHA256": "c020c7654a3fdbf4b052b9db77e20c9516a76e57f909232ed16af0b6bf564e5c",
         "subjectTitle": "Kutsu, joka jäi kirjeeseen",
         "targetState": "existing-target"
       },
@@ -1879,9 +1935,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
-      "targetAfterSHA256": "7ba6ac0bdccaaef626281b7055683f72fb37d73d866c68329567172ea1613539",
-      "contextAfterSHA256": "7ba6ac0bdccaaef626281b7055683f72fb37d73d866c68329567172ea1613539",
+      "sourceContentAfterSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+      "targetAfterSHA256": "c020c7654a3fdbf4b052b9db77e20c9516a76e57f909232ed16af0b6bf564e5c",
+      "contextAfterSHA256": "c020c7654a3fdbf4b052b9db77e20c9516a76e57f909232ed16af0b6bf564e5c",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1904,7 +1960,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+        "sameImageNativeSHA256": "f886dd1c3a160415f172f3cdc98d915718a0e3d9b9ec8c96320845d7432e3e85",
+        "sameImageExportSHA256": "d9c658f2427853796768f514fba00e5cfb6deef9355319572e9f98089d1e77a2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1923,23 +1987,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/photo-12e1b116153b908bf9db.jpg",
         "suora": true,
         "lahde": "Peter Gill / UK, Commons (CC BY 3.0)",
-        "selite": "Vesi virtaa kivisen padon aukosta altaan alapuolelle kasvillisuuden ympäröimänä.",
-        "lyhyt": "Vailiman metsäaltaan pato ja virtaava vesi.",
+        "selite": "Robert Louis Stevensonin rakentamaksi nimetty pato Apiassa; valokuva on vuodelta 2007.",
+        "lyhyt": "Robert Louis Stevensoniin liittyvä uimapaikan pato.",
         "tiedosto": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Peter Gill / UK, Commons (CC BY 3.0)",
-        "selite": "Vesi virtaa kivisen padon aukosta altaan alapuolelle kasvillisuuden ympäröimänä.",
-        "lyhyt": "Vailiman metsäaltaan pato ja virtaava vesi.",
+        "selite": "Robert Louis Stevensonin rakentamaksi nimetty pato Apiassa; valokuva on vuodelta 2007.",
+        "lyhyt": "Robert Louis Stevensoniin liittyvä uimapaikan pato.",
         "tiedosto": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/photo-12e1b116153b908bf9db.jpg",
         "suora": true,
         "lahde": "Peter Gill / UK, Commons (CC BY 3.0)",
-        "selite": "Vesi virtaa kivisen padon aukosta altaan alapuolelle kasvillisuuden ympäröimänä.",
-        "lyhyt": "Vailiman metsäaltaan pato ja virtaava vesi.",
+        "selite": "Robert Louis Stevensonin rakentamaksi nimetty pato Apiassa; valokuva on vuodelta 2007.",
+        "lyhyt": "Robert Louis Stevensoniin liittyvä uimapaikan pato.",
         "tiedosto": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1954,10 +2018,10 @@
         2816
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
-      "sourceContentSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3b1409cf62ef0952731cc63fac3668fff443702d877fbec6d9cddd005f0e3168",
-        "semanticContextSHA256": "3b1409cf62ef0952731cc63fac3668fff443702d877fbec6d9cddd005f0e3168",
+        "targetBeforeSHA256": "382b05d130b8e98dc86610cea375a542a00dc4427ff75d1483355d5f65ac9669",
+        "semanticContextSHA256": "382b05d130b8e98dc86610cea375a542a00dc4427ff75d1483355d5f65ac9669",
         "subjectTitle": "apia — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2164,8 +2228,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg",
-        "lyhyt": "Vailiman metsäaltaan pato ja virtaava vesi.",
-        "selite": "Vesi virtaa kivisen padon aukosta altaan alapuolelle kasvillisuuden ympäröimänä.",
+        "lyhyt": "Robert Louis Stevensoniin liittyvä uimapaikan pato.",
+        "selite": "Robert Louis Stevensonin rakentamaksi nimetty pato Apiassa; valokuva on vuodelta 2007.",
         "lahde": "Peter Gill / UK, Commons (CC BY 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2192,14 +2256,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Peter Gill / UK, Commons (CC BY 3.0)",
-        "selite": "Vesi virtaa kivisen padon aukosta altaan alapuolelle kasvillisuuden ympäröimänä.",
-        "lyhyt": "Vailiman metsäaltaan pato ja virtaava vesi.",
+        "selite": "Robert Louis Stevensonin rakentamaksi nimetty pato Apiassa; valokuva on vuodelta 2007.",
+        "lyhyt": "Robert Louis Stevensoniin liittyvä uimapaikan pato.",
         "tiedosto": "Bathing Pool dam created by Robert Louis Stevenson - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
-      "targetAfterSHA256": "3b1409cf62ef0952731cc63fac3668fff443702d877fbec6d9cddd005f0e3168",
-      "contextAfterSHA256": "3b1409cf62ef0952731cc63fac3668fff443702d877fbec6d9cddd005f0e3168",
+      "sourceContentAfterSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+      "targetAfterSHA256": "382b05d130b8e98dc86610cea375a542a00dc4427ff75d1483355d5f65ac9669",
+      "contextAfterSHA256": "382b05d130b8e98dc86610cea375a542a00dc4427ff75d1483355d5f65ac9669",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2222,7 +2286,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+        "sameImageNativeSHA256": "12e1b116153b908bf9db20d11be48602e03d770578f720005de7051fcd0b9cdd",
+        "sameImageExportSHA256": "12e1b116153b908bf9db20d11be48602e03d770578f720005de7051fcd0b9cdd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e14",
@@ -2244,14 +2316,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/c1-f2b3548738b0884d7d02.jpg",
         "suora": true,
         "lahde": "Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Rantaviiva kaartuu veden äärellä; palmujen takana näkyy kaupungin rakennuksia.",
+        "selite": "Black Beach on Apian tummahiekkainen ranta.",
         "lyhyt": "Apian tummahiekkainen ranta.",
         "tiedosto": "Apia's Black Beach (30299738875).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Rantaviiva kaartuu veden äärellä; palmujen takana näkyy kaupungin rakennuksia.",
+        "selite": "Black Beach on Apian tummahiekkainen ranta.",
         "lyhyt": "Apian tummahiekkainen ranta.",
         "tiedosto": "Apia's Black Beach (30299738875).jpg"
       },
@@ -2259,7 +2331,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/apia/c1-f2b3548738b0884d7d02.jpg",
         "suora": true,
         "lahde": "Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Rantaviiva kaartuu veden äärellä; palmujen takana näkyy kaupungin rakennuksia.",
+        "selite": "Black Beach on Apian tummahiekkainen ranta.",
         "lyhyt": "Apian tummahiekkainen ranta.",
         "tiedosto": "Apia's Black Beach (30299738875).jpg"
       },
@@ -2275,10 +2347,10 @@
         1103
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/apia/sisalto.json",
-      "sourceContentSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
+      "sourceContentSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8b0a4e0b28e0f62802425db8868a665eed986be25d882a848065a5781e41a49a",
-        "semanticContextSHA256": "8b0a4e0b28e0f62802425db8868a665eed986be25d882a848065a5781e41a49a",
+        "targetBeforeSHA256": "0bcf6d8d1eb919b4aa9302b48fea81d22affd00a45314db578320ad5fd4f32ed",
+        "semanticContextSHA256": "0bcf6d8d1eb919b4aa9302b48fea81d22affd00a45314db578320ad5fd4f32ed",
         "subjectTitle": "Apia",
         "targetState": "existing-target"
       },
@@ -2520,7 +2592,7 @@
       "priorMediaFields": {
         "tiedosto": "Apia's Black Beach (30299738875).jpg",
         "lyhyt": "Apian tummahiekkainen ranta.",
-        "selite": "Rantaviiva kaartuu veden äärellä; palmujen takana näkyy kaupungin rakennuksia.",
+        "selite": "Black Beach on Apian tummahiekkainen ranta.",
         "lahde": "Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2547,14 +2619,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Michael Coghlan from Adelaide, Australia, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Rantaviiva kaartuu veden äärellä; palmujen takana näkyy kaupungin rakennuksia.",
+        "selite": "Black Beach on Apian tummahiekkainen ranta.",
         "lyhyt": "Apian tummahiekkainen ranta.",
         "tiedosto": "Apia's Black Beach (30299738875).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "309388861926d27d4bffdf3a5b53bf0d5ec517a5c5e00d7e19e45f9ad8a7de40",
-      "targetAfterSHA256": "8b0a4e0b28e0f62802425db8868a665eed986be25d882a848065a5781e41a49a",
-      "contextAfterSHA256": "8b0a4e0b28e0f62802425db8868a665eed986be25d882a848065a5781e41a49a",
+      "sourceContentAfterSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+      "targetAfterSHA256": "0bcf6d8d1eb919b4aa9302b48fea81d22affd00a45314db578320ad5fd4f32ed",
+      "contextAfterSHA256": "0bcf6d8d1eb919b4aa9302b48fea81d22affd00a45314db578320ad5fd4f32ed",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2577,7 +2649,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "da08c44a9c20edae5e2610b4fa4125be31abee2067a12f3243181956ede8f211",
+        "sameImageNativeSHA256": "f2b3548738b0884d7d029da5cdaec12c6ff42d6ee5fb8ef856e9f108e0a30831",
+        "sameImageExportSHA256": "f2b3548738b0884d7d029da5cdaec12c6ff42d6ee5fb8ef856e9f108e0a30831",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2589,6 +2669,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e14/apia/da84a88ada94029f2f22e1b930815435abc5df834f17446d5f76ebb4ccbf8336.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.616053+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e14/apia/0daf5c14100420c9d3b35a17dc691284b7e6a576f3fb727be795f88938abd325.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.616053+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:49.048954+00:00"
 }

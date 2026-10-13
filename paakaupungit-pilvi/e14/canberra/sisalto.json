@@ -1,416 +1,409 @@
 {
- "$skeema": "matkakirja-paakaupunki/1",
- "id": "canberra",
- "maa": "AUS",
- "era": "e14",
- "kaupunki": {
+  "$skeema": "matkakirja-paakaupunki/1",
   "id": "canberra",
-  "name": "Canberra",
-  "wiki": "Canberra",
-  "ambience": "kaupunki",
-  "pallo": {
-   "lat": -35.2931,
-   "lon": 149.1269
-  }
- },
- "artikkeli": {
-  "intro": "Canberra on Australian pääkaupunki, jonka suunnitelmassa myös mäet saivat tehtävän. **Mount Ainslie ja Black Mountain** eivät ole vain kaukomaisemaa, vaan kaupungin linjojen kiintopisteitä. Kansainvälisessä suunnittelukilpailussa hahmoteltiin hallintokeskus, jonka kadut ja järvi sidottiin ympäröiviin mäkiin.\n\nIsoisän matkavuonna 1873 täällä ei ollut Australian pääkaupunkia, mutta seutu oli kaukana tyhjästä. Ngunnawal- ja Ngambri-kansojen kotiseudulle oli tullut eurooppalaisten maatiloja, kirkko ja koulu. Walter Burley Griffin ja **Marion Mahony Griffin** hahmottelivat uuden kaupungin vasta seuraavalla vuosisadalla. Molonglojoen laaksoon syntyi myöhemmin tekojärvi, jonka ympärillä ovat monet kansalliset laitokset. Canberraan tutustuessa kiinnostavin näkymä voikin olla ylhäältä: siellä katujen, veden ja mäkien yhteinen sommitelma erottuu.",
-  "teksti": "Canberran historia alkaa paljon ennen sen asemaa pääkaupunkina. Seudun alkuperäiskansojen yhteys maahan jatkuu nykyäänkin. Eurooppalainen asutus toi alueelle maatiloja 1800-luvulla; Blundells Cottage ja St Johnin kirkko ovat tämän pääkaupunkia edeltäneen vaiheen rakennuksia.\n\nUuden kaupungin kansainvälisen suunnittelukilpailun voitti Walter Burley Griffinin ehdotus. Marion Mahony Griffin osallistui työhön ja teki suunnitelman tunnetut esityspiirrokset. Geometrinen katuverkko ei ohittanut maastoa: sen akselit sidottiin mäkiin, ja jokilaaksoon suunniteltiin järvi.\n\nPiirros ei muuttunut valmiiksi kaupungiksi yhdellä kertaa. Lake Burley Griffin toteutui vasta paljon myöhemmin, ja sen rannoille nousi kirjastoja, museoita ja muita kansallisia laitoksia. Samalla kaupungin mäet säilyivät luonnonalueina. Hallintokeskuksen ja metsäpolun voi täällä löytää samasta kaupunkimaisemasta."
- },
- "kysymykset": [
-  {
-   "q": "Minkä valtion pääkaupunki Canberra on?",
-   "options": [
-    "Australian",
-    "Uuden-Seelannin",
-    "Kanadan",
-    "Etelä-Afrikan"
-   ],
-   "correct": 0,
-   "level": 1,
-   "hint": "Valtio kattaa kokonaisen mantereen.",
-   "fact": "Canberra on Australian liittovaltion hallinnon kotipaikka.",
-   "source": "https://en.wikipedia.org/wiki/Canberra"
-  },
-  {
-   "q": "Mikä joki padottiin Lake Burley Griffinin muodostamiseksi?",
-   "options": [
-    "Molonglojoki",
-    "Murrayjoki",
-    "Darlingjoki",
-    "Brisbanejoki"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Joki kulkee Canberran laakson läpi.",
-   "fact": "Tekojärvi muodostettiin patoamalla kaupungin halki virtaava Molonglojoki.",
-   "source": "https://en.wikipedia.org/wiki/Lake_Burley_Griffin"
-  },
-  {
-   "q": "Kuka teki Canberran kilpailusuunnitelman tunnetut esityspiirrokset?",
-   "options": [
-    "Marion Mahony Griffin",
-    "Louise Blanchard Bethune",
-    "Sophia Hayden Bennett",
-    "Julia Morgan"
-   ],
-   "correct": 0,
-   "level": 3,
-   "hint": "Hän osallistui suunnitteluun yhdessä arkkitehtipuolisonsa kanssa.",
-   "fact": "Marion Mahony Griffin oli arkkitehti, jonka piirrokset esittivät uuden kaupungin osana maisemaa.",
-   "source": "https://en.wikipedia.org/wiki/Marion_Mahony_Griffin"
-  },
-  {
-   "q": "Mikä Blundells Cottage oli ennen museokäyttöään?",
-   "options": [
-    "Maatilan työntekijöiden koti",
-    "Postin ja lennättimen talo",
-    "Rautatieaseman odotushuone",
-    "Sataman tavaravarasto"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Talo on pääkaupunkia vanhempi ja liittyy Duntroonin tilaan.",
-   "fact": "Mökki rakennettiin Duntroonin maatilan kyntäjän William Ginnin kodiksi. Blundellin perhe muutti sinne myöhemmin.",
-   "source": "https://en.wikipedia.org/wiki/Blundells_Cottage"
-  },
-  {
-   "q": "Mitä Canberran perustamispaikalla oli ennen pääkaupunkia?",
-   "options": [
-    "Alkuperäiskansojen kotiseutua ja maatiloja",
-    "Pääkaupunkiin kuuluva kaivosalue",
-    "Sotilastukikohta ja pääkaupunkipiiri",
-    "Itsenäinen kaupunkisiirtokunta"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Uusi hallintokeskus rakennettiin sisämaahan.",
-   "fact": "Seutu oli Ngunnawal- ja Ngambri-kansojen kotiseutua, jonne oli tullut eurooppalaisia maatiloja.",
-   "source": "https://en.wikipedia.org/wiki/Canberra"
-  }
- ],
- "tiedot": [
-  "Blundells Cottage on Canberran pääkaupunkia edeltäneen maatila-asutuksen koti; järvi sen vieressä syntyi myöhemmin.",
-  "Canberran asemakaavassa luonnonmäet toimivat katujen ja näkymälinjojen kiintopisteinä.",
-  "Lake Burley Griffinin täyttäminen viivästyi kuivuuden vuoksi, vaikka pato oli jo valmis."
- ],
- "valokuva": {
-  "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 001.jpg",
-  "lyhyt": "Lake Burley Griffinin vettä ja vastarannan rakennuksia.",
-  "selite": "Järven pinta täyttää etualan; vastarannalla näkyy puustoa ja rakennuksia pilvisen sinitaivaan alla.",
-  "lahde": "-wuppertaler, Commons (CC BY 4.0)"
- },
- "saatiedot": null,
- "kaupunkilehti": [
-  {
-   "id": "kaupunki",
-   "nimi": "Canberra",
-   "johdanto": "Canberran suunnitelma otti mäet työtovereiksi. Jokilaakson maatiloista kasvoi järven ympärille levittäytyvä pääkaupunki.",
-   "kansikuvat": [
-    {
-     "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 003.jpg",
-     "lyhyt": "Silta Lake Burley Griffinin yli.",
-     "selite": "Järven vastarannalla näkyvät puisto ja rakennuksia; matala silta yhdistää rantoja.",
-     "lahde": "-wuppertaler, Wikimedia Commons (CC BY 4.0)"
-    },
-    {
-     "tiedosto": "Aerial view of Canberra, Australia - December 2025.jpg",
-     "lyhyt": "Canberra lentokoneesta joulukuussa 2025.",
-     "selite": "Lentokoneen siiven alla näkyvät Canberran kaupunkialue, järvi ja ympäröivää kuivaa maastoa.",
-     "lahde": "Tej Bhat, Wikimedia Commons (CC BY 4.0)"
-    },
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+  "maa": "AUS",
+  "era": "e14",
+  "kaupunki": {
+    "id": "canberra",
+    "name": "Canberra",
+    "wiki": "Canberra",
+    "ambience": "kaupunki",
+    "pallo": {
+      "lat": -35.2931,
+      "lon": 149.1269
     }
-   ],
-   "nostot": [
+  },
+  "artikkeli": {
+    "intro": "Canberra on Australian pääkaupunki, jonka suunnitelmassa mäet toimivat katujen ja näkymälinjojen kiintopisteinä. **Mount Ainslie ja Black Mountain** ohjaavat kaupungin akselien suuntaa. Kansainvälisessä suunnittelukilpailussa hahmoteltiin hallintokeskus, jonka kadut ja järvi sidottiin ympäröiviin mäkiin.\n\nSeutu oli Ngunnawal- ja Ngambri-kansojen kotiseutua, jonne oli tullut eurooppalaisten maatiloja, kirkko ja koulu. Walter Burley Griffin ja **Marion Mahony Griffin** suunnittelivat uuden kaupungin 1900-luvun alussa. Molonglojoen laaksoon syntyi myöhemmin tekojärvi, jonka ympärillä ovat monet kansalliset laitokset.",
+    "teksti": "Canberran historia alkaa paljon ennen sen asemaa pääkaupunkina. Seudun alkuperäiskansojen yhteys maahan jatkuu nykyäänkin. Eurooppalainen asutus toi alueelle maatiloja 1800-luvulla; Blundells Cottage ja St Johnin kirkko ovat tämän pääkaupunkia edeltäneen vaiheen rakennuksia.\n\nUuden kaupungin kansainvälisen suunnittelukilpailun voitti Walter Burley Griffinin ehdotus. Marion Mahony Griffin osallistui työhön ja teki suunnitelman tunnetut esityspiirrokset. Geometrinen katuverkko ei ohittanut maastoa: sen akselit sidottiin mäkiin, ja jokilaaksoon suunniteltiin järvi.\n\nPiirros ei muuttunut valmiiksi kaupungiksi yhdellä kertaa. Lake Burley Griffin toteutui vasta paljon myöhemmin, ja sen rannoille nousi kirjastoja, museoita ja muita kansallisia laitoksia. Samalla kaupungin mäet säilyivät luonnonalueina."
+  },
+  "kysymykset": [
     {
-     "otsikko": "Kirkko ja koulu ennen pääkaupunkia",
-     "teksti": "St Johnin anglikaaninen kirkko seisoi Canberran seudulla jo ennen pääkaupunkia. Pienen englantilaisen kyläkirkon kaltainen rakennus jäi paikalleen uuden kaupungin kasvaessa sen ympärille. Kirkon vieressä toimi St Johnin koulu, jossa opetettiin seudun uudisasukkaiden lapsia, myös Blundellin perheen lapsia. Koulutalo toimii nykyään museona. Kirkko, koulu ja läheinen Blundells Cottage säilyttävät pääkaupunkia edeltäneen maatalousseudun rakennushistoriaa.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Canberra"
-    },
-    {
-     "otsikko": "Kaupunki tuli näkyviin paperilla",
-     "teksti": "Canberran voittanut suunnitelma tunnetaan Walter Burley Griffinin nimellä, mutta sen esityspiirrokset teki Marion Mahony Griffin. Hän oli itse arkkitehti, ei vain puolison työn viimeistelijä. Hänen vesivärinäkymissään rakennukset asettuivat maaston ja kasvillisuuden keskelle. Marionin vesiväripiirrokset olivat olennainen osa voittanutta kilpailuehdotusta. Suunnittelutyö oli yhteistä, ja Marionin kuvallinen taito oli olennainen osa kilpailuehdotusta. Canberran tekijöistä puhuttaessa tarvitaan molemmat nimet.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Marion Mahony Griffin"
-    },
-    {
-     "otsikko": "Järvi odotti säätä",
-     "teksti": "Lake Burley Griffin oli mukana uuden pääkaupungin suunnitelmassa kauan ennen kuin laaksossa oli järvi. Molonglojoen patoaminen toteutui vasta myöhemmin 1900-luvulla. Kun padon sulut oli suljettu, pitkittynyt kuivuus hidasti altaan täyttymistä: rakentajat olivat tehneet työnsä, mutta vettä puuttui. Sateiden palattua järvi saavutti suunnitellun tasonsa. Nykyinen soutu- ja purjehduspaikka on siten myös tarina siitä, miten piirustuksessa tarkasti määritelty maisema joutui odottamaan luonnon omaa aikataulua.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Lake Burley Griffin"
-    },
-    {
-     "otsikko": "Maatilan mökki keskellä pääkaupunkia",
-     "teksti": "Blundells Cottage on pieni kivitalo, joka jäi paikalleen Canberran kasvaessa sen ympärille. Se rakennettiin 1800-luvulla Duntroonin maatilan kyntäjän William Ginnin kodiksi. Talon nimi tulee siellä asuneesta Blundellin perheestä. Isoisän matkavuonna 1873 mökki oli jo olemassa, mutta sen nykyinen järvimaisema ei ollut: lähistöllä virtasi Molonglojoki. Rakennus kertoo pääkaupungin sijaan tilan arjesta. Kun ympäristö muuttui hallintokeskukseksi ja jokilaakso järveksi, vanha koti sai aivan uuden naapuruuden.",
-     "tiedosto": "Blundells Cottage overview.jpg",
-     "lyhyt": "Blundells Cottagen kivitalo ja piharakennus.",
-     "selite": "Matalan talon kiviseinät, tiilipiiput ja peltikatto näkyvät aidatun pihan takana; järvi avautuu taustalla.",
-     "lahde": "Shkuru Afshar, Wikimedia Commons (CC BY-SA 4.0)",
-     "wiki": "Blundells Cottage"
-    }
-   ],
-   "matkailijalle": {
-    "kuva": {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    "kappale": "Aloita Canberran katsominen järven ympäristöstä ja jatka yhdelle luonnonmäelle. Mount Ainslien näköala näyttää kaupungin suunnitelman laajana kokonaisuutena. Kansalliset laitokset tarjoavat museoita ja kokoelmia, Braddon puolestaan kahviloita ja ravintoloita. Keskustan bussit ja raitiovaunu auttavat eri puolille levittäytyvässä kaupungissa. Ulkoilupäivään kannattaa varata vaatteita myös viileää iltaa varten.",
-    "artikkeli": {
-     "nimi": "Matkailijan Canberra",
-     "taitto": "opas",
-     "teksti": "Katso kaupunkia vuoroin järven rannalta ja mäen huipulta.",
-     "nosto": "Canberran suunnitelma selviää näköalasta; sen arkeen tutustuu kaupunginosissa.",
-     "jaksot": [
-      {
-       "otsikko": "Perille ja liikkeelle",
-       "teksti": "Canberraan pääsee lentäen, ja kaupunkiin on myös juna- ja linja-autoyhteyksiä. Keskustan joukkoliikenteen solmukohtia ovat City Interchange ja Alinga Streetin raitiovaunupysäkki. Linja-autot ja raitiovaunu palvelevat eri puolille levittäytyvää kaupunkia; kaikkia kansallisia laitoksia ei löydy samalta kävelykadulta. Järven ympäristössä kuljetaan myös kävellen ja pyöräillen.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Kaupunki järven ympärillä",
-       "teksti": "Lake Burley Griffinin rannoilla ovat monet Canberran kansalliset laitokset, muun muassa kansalliskirjasto ja taidemuseo. Yhdistele vierailuja saman rannan mukaan: järvi kuuluu kaupungin rakenteeseen, mutta sen kiertäminen on eri retki kuin yhden museon katsominen. Rannat sopivat kävelyyn, ja järvellä harrastetaan soutua ja purjehdusta. Uimaan mennessä on tarkistettava paikalliset ohjeet, sillä veden laatu voi rajoittaa uintia.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Suunnitelma näkyy huipulta",
-       "teksti": "Mount Ainslien huipulta näkee Canberran keskeisen maa-akselin ja järven ympärille levittäytyvän keskustan. Mäelle johtaa kävelyreitti muistomerkkialueen takaa, ja huipulle pääsee myös tietä pitkin. Mount Majura tarjoaa toisenlaisen retken: sen huipputie palvelee tutka-asemaa eikä ole yleisön ajoreitti. Luontopolkujen retkelle kannattaa ottaa vettä ja valita matka oman kävelykunnon mukaan.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Mitä täällä syödään",
-       "teksti": "Braddonin Lonsdale Streetillä on kahviloita ja ravintoloita keskustan vieressä. Canberran ravintolat edustavat useita keittiöitä. Sunnuntaimarkkinoilla on myös ruokakojuja ja paikallisia tuotteita.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Canberran vuodenaikojen vaihtelu tuntuu: kesät ovat lämpimiä, ja talvella yöt voivat olla pakkasella. Kevään kukkatapahtuma Floriade tuo kaupungin puistoihin oman vierailusyynsä. Pakkaa vaatteita sekä ulkoiluun että museopäivään ja varaudu lämpötilan muuttumiseen päivän aikana. Järvireitti, metsäpolku ja sisätilojen kokoelmat tarjoavat eri vaihtoehtoja; retkipäivän sääennuste ratkaisee, mihin niistä kannattaa lähteä.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      }
-     ],
-     "matkailu": {
-      "parasta": [
-       {
-        "mita": "Mount Ainslien näkymä",
-        "tahdet": 3,
-        "selite": "Maa-akseli ja järvi asettuvat yhdellä katsomisella osaksi kaupungin rakennetta."
-       },
-       {
-        "mita": "Lake Burley Griffinin rannat",
-        "tahdet": 3,
-        "selite": "Kävelyn voi yhdistää rannan kansallisiin laitoksiin."
-       },
-       {
-        "mita": "Blundells Cottage",
-        "tahdet": 2,
-        "selite": "Maatilan työntekijöiden koti avaa pääkaupunkia edeltävää paikallishistoriaa."
-       },
-       {
-        "mita": "Braddonin kahvilat",
-        "tahdet": 2,
-        "selite": "Keskustan vieressä on ravintoloita ja kahviloita."
-       },
-       {
-        "mita": "Canberra Nature Park",
-        "tahdet": 3,
-        "selite": "Luonnonmäkien polut tarjoavat ulkoilua kaupungin keskellä."
-       }
+      "q": "Minkä valtion pääkaupunki Canberra on?",
+      "options": [
+        "Australian",
+        "Uuden-Seelannin",
+        "Kanadan",
+        "Etelä-Afrikan"
       ],
-      "hyvaTietaa": [
-       {
-        "otsikko": "Huipputiet eroavat",
-        "teksti": "Mount Ainslien huipulle pääsee tietä pitkin; Mount Majuran tutka-aseman tie ei ole avoin yleisölle."
-       },
-       {
-        "otsikko": "Järvi ei ole automaattinen uimapaikka",
-        "teksti": "Tarkista ennen retkeä kulkuyhteys sekä paikalliset uintiohjeet ja veden laadusta annetut ilmoitukset."
-       },
-       {
-        "otsikko": "Kohteet ovat hajallaan",
-        "teksti": "Keskustan, järven rantojen ja kaupunginosien välille kannattaa suunnitella kulkeminen."
-       }
+      "correct": 0,
+      "level": 1,
+      "hint": "Kaupunki sijaitsee sisämaassa.",
+      "fact": "Canberra on Australian liittovaltion hallinnon kotipaikka.",
+      "source": "https://en.wikipedia.org/wiki/Canberra"
+    },
+    {
+      "q": "Mikä joki padottiin Lake Burley Griffinin muodostamiseksi?",
+      "options": [
+        "Molonglojoki",
+        "Murrayjoki",
+        "Darlingjoki",
+        "Brisbanejoki"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Joki kulkee Canberran laakson läpi.",
+      "fact": "Tekojärvi muodostettiin patoamalla kaupungin halki virtaava Molonglojoki.",
+      "source": "https://en.wikipedia.org/wiki/Lake_Burley_Griffin"
+    },
+    {
+      "q": "Kuka teki Canberran kilpailusuunnitelman tunnetut esityspiirrokset?",
+      "options": [
+        "Marion Mahony Griffin",
+        "Louise Blanchard Bethune",
+        "Sophia Hayden Bennett",
+        "Julia Morgan"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Piirrokset esittivät rakennukset osana maastoa ja kasvillisuutta.",
+      "fact": "Marion Mahony Griffin oli arkkitehti, jonka piirrokset esittivät uuden kaupungin osana maisemaa.",
+      "source": "https://en.wikipedia.org/wiki/Marion_Mahony_Griffin"
+    },
+    {
+      "q": "Mikä Blundells Cottage oli ennen museokäyttöään?",
+      "options": [
+        "Maatilan työntekijöiden koti",
+        "Postin ja lennättimen talo",
+        "Majatalo",
+        "Koulun opettajan asunto"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Rakennus on pääkaupunkia vanhempi.",
+      "fact": "Mökki rakennettiin Duntroonin maatilan kyntäjän William Ginnin kodiksi. Blundellin perhe muutti sinne myöhemmin.",
+      "source": "https://en.wikipedia.org/wiki/Blundells_Cottage"
+    },
+    {
+      "q": "Mitä Canberran perustamispaikalla oli ennen pääkaupunkia?",
+      "options": [
+        "Alkuperäiskansojen kotiseutua ja maatiloja",
+        "Pääkaupunkiin kuuluva kaivosalue",
+        "Sotilastukikohta ja pääkaupunkipiiri",
+        "Itsenäinen kaupunkisiirtokunta"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Uusi hallintokeskus rakennettiin sisämaahan.",
+      "fact": "Seutu oli Ngunnawal- ja Ngambri-kansojen kotiseutua, jonne oli tullut eurooppalaisia maatiloja.",
+      "source": "https://en.wikipedia.org/wiki/Canberra"
+    }
+  ],
+  "tiedot": [
+    "Blundells Cottage on Canberran pääkaupunkia edeltäneen maatila-asutuksen koti; järvi sen vieressä syntyi myöhemmin.",
+    "Canberran asemakaavassa luonnonmäet toimivat katujen ja näkymälinjojen kiintopisteinä.",
+    "Lake Burley Griffinin täyttäminen viivästyi kuivuuden vuoksi, vaikka pato oli jo valmis."
+  ],
+  "valokuva": {
+    "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 001.jpg",
+    "lyhyt": "Lake Burley Griffinin vettä ja vastarannan rakennuksia.",
+    "selite": "Lake Burley Griffin on Canberran tekojärvi.",
+    "lahde": "-wuppertaler, Commons (CC BY 4.0)"
+  },
+  "saatiedot": null,
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Canberra",
+      "johdanto": "Canberran suunnitelma otti mäet työtovereiksi. Jokilaakson maatiloista kasvoi järven ympärille levittäytyvä pääkaupunki.",
+      "kansikuvat": [
+        {
+          "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 003.jpg",
+          "lyhyt": "Silta Lake Burley Griffinin yli.",
+          "selite": "Silta yhdistää Lake Burley Griffinin rannat Canberrassa.",
+          "lahde": "-wuppertaler, Wikimedia Commons (CC BY 4.0)"
+        },
+        {
+          "tiedosto": "Aerial view of Canberra, Australia - December 2025.jpg",
+          "lyhyt": "Canberra lentokoneesta joulukuussa 2025.",
+          "selite": "Ilmakuva Canberrasta on otettu joulukuussa 2025.",
+          "lahde": "Tej Bhat, Wikimedia Commons (CC BY 4.0)"
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Kirkko ja koulu ennen pääkaupunkia",
+          "teksti": "St Johnin anglikaaninen kirkko seisoi Canberran seudulla jo ennen pääkaupunkia. Pienen englantilaisen kyläkirkon kaltainen rakennus jäi paikalleen uuden kaupungin kasvaessa sen ympärille. Kirkon vieressä toimi St Johnin koulu, jossa opetettiin seudun uudisasukkaiden lapsia, myös Blundellin perheen lapsia. Koulutalo toimii nykyään museona. Kirkko, koulu ja läheinen Blundells Cottage säilyttävät pääkaupunkia edeltäneen maatalousseudun rakennushistoriaa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Canberra"
+        },
+        {
+          "otsikko": "Kaupunki tuli näkyviin paperilla",
+          "teksti": "Canberran voittanut suunnitelma tunnetaan Walter Burley Griffinin nimellä, mutta sen esityspiirrokset teki arkkitehti Marion Mahony Griffin. Hänen vesivärinäkymissään rakennukset asettuivat maaston ja kasvillisuuden keskelle. Hän opiskeli arkkitehtuuria Massachusettsin teknillisessä korkeakoulussa ja työskenteli Chicagossa Frank Lloyd Wrightin toimistossa. Rakennusten lisäksi hän suunnitteli huonekaluja ja lasimaalauksia.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Marion Mahony Griffin"
+        },
+        {
+          "otsikko": "Järvi odotti säätä",
+          "teksti": "Lake Burley Griffin oli mukana uuden pääkaupungin suunnitelmassa kauan ennen kuin laaksossa oli järvi. Molonglojoen patoaminen toteutui vasta myöhemmin 1900-luvulla. Kun padon sulut oli suljettu, pitkittynyt kuivuus hidasti altaan täyttymistä: rakentajat olivat tehneet työnsä, mutta vettä puuttui. Sateiden palattua järvi saavutti suunnitellun tasonsa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Lake Burley Griffin"
+        },
+        {
+          "otsikko": "Maatilan mökki keskellä pääkaupunkia",
+          "teksti": "Blundells Cottage on pieni kivitalo, joka jäi paikalleen Canberran kasvaessa sen ympärille. Se rakennettiin 1800-luvulla Duntroonin maatilan kyntäjän William Ginnin kodiksi. Talon nimi tulee siellä asuneesta Blundellin perheestä. Lähistöllä virtasi Molonglojoki ennen tekojärven rakentamista. Flora Blundell oli kätilö, ja George Blundell kuljetti maatilan kuormia härkien vetämillä vaunuilla.",
+          "tiedosto": "Blundells Cottage overview.jpg",
+          "lyhyt": "Blundells Cottagen kivitalo ja piharakennus.",
+          "selite": "Blundells Cottage on Canberran pääkaupunkia edeltäneen maatila-asutuksen rakennus.",
+          "lahde": "Shkuru Afshar, Wikimedia Commons (CC BY-SA 4.0)",
+          "wiki": "Blundells Cottage"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Aloita Canberran katsominen järven ympäristöstä ja jatka yhdelle luonnonmäelle. Mount Ainslien näköala näyttää kaupungin suunnitelman laajana kokonaisuutena. Kansalliset laitokset tarjoavat museoita ja kokoelmia, Braddon puolestaan kahviloita ja ravintoloita. Keskustan bussit ja raitiovaunu auttavat eri puolille levittäytyvässä kaupungissa.",
+        "artikkeli": {
+          "nimi": "Matkailijan Canberra",
+          "taitto": "opas",
+          "teksti": "Katso kaupunkia vuoroin järven rannalta ja mäen huipulta.",
+          "nosto": "Canberran suunnitelma selviää näköalasta; sen arkeen tutustuu kaupunginosissa.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Canberraan pääsee lentäen, ja kaupunkiin on myös juna- ja linja-autoyhteyksiä. Keskustan joukkoliikenteen solmukohtia ovat City Interchange ja Alinga Streetin raitiovaunupysäkki. Linja-autot ja raitiovaunu palvelevat eri puolille levittäytyvää kaupunkia; kaikkia kansallisia laitoksia ei löydy samalta kävelykadulta. Järven ympäristössä kuljetaan myös kävellen ja pyöräillen.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kaupunki järven ympärillä",
+              "teksti": "Lake Burley Griffinin rannoilla ovat monet Canberran kansalliset laitokset, muun muassa kansalliskirjasto ja taidemuseo. Rannat sopivat kävelyyn, ja järvellä harrastetaan soutua ja purjehdusta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Suunnitelma näkyy huipulta",
+              "teksti": "Mount Ainslien huipulta näkee Canberran keskeisen maa-akselin ja järven ympärille levittäytyvän keskustan. Mäelle johtaa kävelyreitti muistomerkkialueen takaa, ja huipulle pääsee myös tietä pitkin. Mount Majuran rinteillä kulkevat kävelypolut Hackettin ja Ainslien suunnalta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Braddonin Lonsdale Streetillä on kahviloita ja ravintoloita keskustan vieressä. Canberran ravintolat edustavat useita keittiöitä. Sunnuntaimarkkinoilla on myös ruokakojuja ja paikallisia tuotteita.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Canberran kesät ovat lämpimiä, ja talvella yöt voivat olla pakkasella. Kevään kukkatapahtuma Floriade tuo kaupungin puistoihin kukkaistutuksia.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Mount Ainslien näkymä",
+                "tahdet": 3,
+                "selite": "Maa-akseli ja järvi asettuvat yhdellä katsomisella osaksi kaupungin rakennetta."
+              },
+              {
+                "mita": "Lake Burley Griffinin rannat",
+                "tahdet": 3,
+                "selite": "Kävelyn voi yhdistää rannan kansallisiin laitoksiin."
+              },
+              {
+                "mita": "Blundells Cottage",
+                "tahdet": 2,
+                "selite": "Maatilan työntekijöiden koti avaa pääkaupunkia edeltävää paikallishistoriaa."
+              },
+              {
+                "mita": "Braddonin kahvilat",
+                "tahdet": 2,
+                "selite": "Keskustan vieressä on ravintoloita ja kahviloita."
+              },
+              {
+                "mita": "Canberra Nature Park",
+                "tahdet": 3,
+                "selite": "Luonnonmäkien polut tarjoavat ulkoilua kaupungin keskellä."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Järven rannat",
+                "teksti": "Lake Burley Griffinin rannoilla kuljetaan kävellen ja pyöräillen."
+              },
+              {
+                "otsikko": "Joukkoliikenteen keskukset",
+                "teksti": "City Interchange ja Alinga Street ovat keskustan joukkoliikenteen solmukohtia."
+              },
+              {
+                "otsikko": "Braddon",
+                "teksti": "Lonsdale Streetin varrella on kahviloita ja ravintoloita."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "luonto",
+      "nimi": "Mäet, joiden ympärille kaupunki piirrettiin",
+      "johdanto": "Canberran luonnonmäet ovat sekä kaupunkisuunnitelman kiintopisteitä että suojeltuja elinympäristöjä.",
+      "tehtava": {
+        "kysymys": "Mikä on Black Mountainin pääasiallinen kivilaji?",
+        "vaihtoehdot": [
+          "Vaalea kvartsihiekkakivi",
+          "Tumma basalttinen laava",
+          "Punertava graniitti",
+          "Musta vulkaaninen tuhka"
+        ],
+        "oikea": 0,
+        "fakta": "Vuoren nimi ja sen vaalea, sedimenttinen kallioperä muodostavat yllättävän parin."
+      },
+      "nostot": [
+        {
+          "otsikko": "Mäki, johon kaupunki tähtää",
+          "teksti": "Mount Ainslie muodostaa Canberran keskeisen maa-akselin pohjoisen päätepisteen. Linja kulkee muistomerkkialueen ja parlamenttitalojen kautta kaupungin halki. Huipulta näkyvät myös Black Mountain ja etelämpänä Red Hill. Sen rinteet kuuluvat Canberra Nature Parkiin, ja polkuverkoston varrella voi nähdä harmaita kenguruja ja kakaduja. Vuori on nimetty 1800-luvun uudisasukkaan James Ainslien mukaan.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Mount Ainslie"
+        },
+        {
+          "otsikko": "Musta vuori, vaalea kivi",
+          "teksti": "Black Mountainin nimi lupaa tummaa kalliota, mutta suuri osa mäestä koostuu vaaleasta kvartsihiekkakivestä. Kivi on peräisin siluurikaudelta, kauan ennen pääkaupungin rakentamista. Mäen rinteillä kasvaa alkuperäistä pensas- ja puukasvillisuutta, ja alue kuuluu Canberra Nature Parkiin. Galambary on myös paikallisten alkuperäiskansojen tärkeä paikka.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Black Mountain (Australian Capital Territory)"
+        },
+        {
+          "otsikko": "Huipulle kulkee tie, mutta ei sinun autollesi",
+          "teksti": "Mount Majuran huipulla on lentoasemaa palveleva tutka-asema. Sinne johtava tie on aseman käytössä eikä avoin yleisölle. Majuralle noustaan kävelypolkuja pitkin Hackettin ja Ainslien suunnalta. Eukalyptusten hallitsema rinne kätkee maassa kasvavia orkideoita ja muita herkkiä kasveja. Vuoren vapaaehtoinen puistonhoitoryhmä on nimeltään Friends of Mount Majura.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Mount Majura"
+        },
+        {
+          "otsikko": "Nimen takana on myös luonnonalue",
+          "teksti": "Red Hill tarkoittaa Canberrassa sekä asuinaluetta että sen länsipuolista mäkeä. Mäen selänne kuuluu Canberra Nature Parkiin ja erottaa Canberran keskuslaakson Woden Valleysta. Kaupunginosan kaduissa taas on laivojen ja tutkimusmatkailijoiden nimiä. Vanhan Red Hillin katujen ja puutarhojen ilme seuraa puutarhakaupunki-ihannetta. Mäeltä avautuvat näkymät kaupungin ja järven yli.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Red Hill, Australian Capital Territory"
+        }
       ]
-     },
-     "lahde": "Wikipedia"
     }
-   }
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Canberran luonnonmäet olivat paikallaan jo ennen pääkaupunkia. Niiden rinteillä yhdistyvät suojeltu luonto ja näkymät nykyiseen kaupunkiin.",
+    "rajat": {
+      "pohjoinen": -35.2345,
+      "etela": -35.273,
+      "lansi": 149.0963,
+      "ita": 149.18426
+    },
+    "kohteet": [
+      {
+        "nimi": "Mount Ainslie",
+        "tyyppi": "luonto",
+        "lat": -35.27,
+        "lon": 149.15833
+      },
+      {
+        "nimi": "Galambary – Black Mountain",
+        "tyyppi": "luonto",
+        "lat": -35.267,
+        "lon": 149.1
+      },
+      {
+        "nimi": "Mount Majura",
+        "tyyppi": "luonto",
+        "lat": -35.2375,
+        "lon": 149.18056
+      }
+    ]
   },
-  {
-   "id": "luonto",
-   "nimi": "Mäet, joiden ympärille kaupunki piirrettiin",
-   "johdanto": "Canberran luonnonmäet ovat sekä kaupunkisuunnitelman kiintopisteitä että suojeltuja elinympäristöjä.",
-   "tehtava": {
-    "kysymys": "Mikä on Black Mountainin pääasiallinen kivilaji?",
-    "vaihtoehdot": [
-     "Vaalea kvartsihiekkakivi",
-     "Tumma basalttinen laava",
-     "Punertava graniitti",
-     "Musta vulkaaninen tuhka"
-    ],
-    "oikea": 0,
-    "fakta": "Vuoren nimi ja sen vaalea, sedimenttinen kallioperä muodostavat yllättävän parin."
-   },
-   "nostot": [
-    {
-     "otsikko": "Mäki, johon kaupunki tähtää",
-     "teksti": "Mount Ainslie muodostaa Canberran keskeisen maa-akselin pohjoisen päätepisteen. Linja kulkee muistomerkkialueen ja parlamenttitalojen kautta kaupungin halki. Huipulta näkyvät myös Black Mountain ja etelämpänä Red Hill. Mount Ainslie on näin sekä näköalapaikka että kaupungin asemakaavan maa-akselin päätepiste. Sen rinteet kuuluvat Canberra Nature Parkiin, ja polkuverkoston varrella voi nähdä harmaita kenguruja ja kakaduja. Rinteiden poluilta noustaan maa-akselin päässä olevaan näköalapaikkaan.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Mount Ainslie"
+  "nahtavyydet": {
+    "Mount Ainslie": {
+      "aika": "Luonnonmäki; nykyinen pääkaupunkimaisema 1900-luvulta",
+      "teksti": "Mount Ainslie on Canberran koillisosassa sijaitseva luonnonmäki, jonka rinteet kuuluvat Canberra Nature Parkiin. Nykyinen englanninkielinen nimi muistuttaa Duntroonin tilan työnjohtajasta James Ainsliestä. Ngunnawal- ja Ngambri-kansoille mäki on pyhä paikka. Sen luontopolkujen varrella tavataan harmaita kenguruja ja kakaduja.\n\nCanberran suunnitelmassa mäestä tehtiin kaupungin keskeisen maa-akselin pohjoispää. Huipulta avautuu näkymä muistomerkkialueen ja parlamenttitalojen kautta keskustaan.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
     },
-    {
-     "otsikko": "Musta vuori, vaalea kivi",
-     "teksti": "Black Mountainin nimi lupaa tummaa kalliota, mutta suuri osa mäestä koostuu vaaleasta kvartsihiekkakivestä. Kivi on peräisin siluurikaudelta, kauan ennen pääkaupungin rakentamista. Mäen rinteillä kasvaa alkuperäistä pensas- ja puukasvillisuutta, ja alue kuuluu Canberra Nature Parkiin. Näkymässä on siten useita eri aikakerroksia: muinainen kallioperä, elävä kasvillisuus ja lähellä levittäytyvä pääkaupunki. Galambary on myös paikallisten alkuperäiskansojen tärkeä paikka.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Black Mountain (Australian Capital Territory)"
+    "Galambary – Black Mountain": {
+      "aika": "Luonnonmäki; kallioperä siluurikaudelta",
+      "teksti": "Galambary eli Black Mountain sijaitsee Canberran keskustan länsipuolella. Se on paikallisten alkuperäiskansojen tärkeä kohtaamis- ja seremoniapaikka, ja nykyään sen rinteet kuuluvat Canberra Nature Parkiin. Alkuperäinen pensas- ja puukasvillisuus tarjoaa elinympäristöjä kaupungin lähellä. Englanninkielinen nimi tunnettiin aiemmin muodossa Black Hill.\n\nNimestä huolimatta mäen pääasiallinen kivilaji on vaalea kvartsihiekkakivi. Kallioperä on peräisin siluurikaudelta, joten se kertoo aivan eri aikamittakaavasta kuin pääkaupungin rakennukset. Canberra kasvoi mäen itäpuolelle, ja yliopiston pääkampus sijaitsee sen lähellä. Luonnonalue rajaa keskustaa lännen suunnasta.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
     },
-    {
-     "otsikko": "Huipulle kulkee tie, mutta ei sinun autollesi",
-     "teksti": "Mount Majuran huipulla on lentoasemaa palveleva tutka-asema. Sinne johtava tie on tämän aseman käytössä eikä avoin yleisölle, vaikka viereiselle Mount Ainslielle pääsee myös autolla. Majuralle noustaan kävelypolkuja pitkin Hackettin ja Ainslien suunnalta. Eukalyptusten hallitsema rinne kätkee myös maassa kasvavia orkideoita ja muita herkkiä kasveja. Vuorella on oma vapaaehtoinen puistonhoitoryhmänsä. Huipun tutka-aseman alapuolella rinteillä kasvaa eukalyptuksia ja orkideoita.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Mount Majura"
-    },
-    {
-     "otsikko": "Nimen takana on myös luonnonalue",
-     "teksti": "Red Hill tarkoittaa Canberrassa sekä asuinaluetta että sen länsipuolista mäkeä. Mäen selänne kuuluu Canberra Nature Parkiin ja erottaa Canberran keskuslaakson Woden Valleysta. Kaupunginosan kaduissa taas on laivojen ja tutkimusmatkailijoiden nimiä. Vanhan Red Hillin katujen ja puutarhojen ilme seuraa puutarhakaupunki-ihannetta. Samalla nimellä voi siis löytää kaksi erilaista kävelyä: suunniteltujen asuinkatujen kierroksen tai luonnonsuojelualueen polun. Mäeltä avautuvat näkymät kaupungin ja järven yli.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Red Hill, Australian Capital Territory"
+    "Mount Majura": {
+      "aika": "Luonnonmäki; nykyinen pääkaupunki 1900-luvulta",
+      "teksti": "Mount Majura sijaitsee Canberran koillisreunalla, lähellä Mount Ainslieta. Se kuuluu Canberra Nature Parkiin. Rinteitä peittävät pääasiassa eukalyptukset, joiden joukossa kasvaa herkkiä kasvilajeja ja maassa kasvavia orkideoita. Alueella toimii Friends of Mount Majura -niminen vapaaehtoinen puistonhoitoryhmä.\n\nMäen huipulla on lentoaseman tutka-asema. Kävelypolut nousevat Hackettin ja Ainslien suunnalta.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
     }
-   ]
+  },
+  "ehdotukset": {
+    "lentoasema": "Canberra Airport (CBR)",
+    "huomiot": []
   }
- ],
- "kohdekartta": {
-  "numeroympyrat": true,
-  "esittely": "Canberran luonnonmäet olivat paikallaan jo ennen pääkaupunkia. Niiden rinteillä yhdistyvät suojeltu luonto ja näkymät nykyiseen kaupunkiin.",
-  "rajat": {
-   "pohjoinen": -35.2345,
-   "etela": -35.273,
-   "lansi": 149.0963,
-   "ita": 149.18426
-  },
-  "kohteet": [
-   {
-    "nimi": "Mount Ainslie",
-    "tyyppi": "luonto",
-    "lat": -35.27,
-    "lon": 149.15833
-   },
-   {
-    "nimi": "Galambary – Black Mountain",
-    "tyyppi": "luonto",
-    "lat": -35.267,
-    "lon": 149.1
-   },
-   {
-    "nimi": "Mount Majura",
-    "tyyppi": "luonto",
-    "lat": -35.2375,
-    "lon": 149.18056
-   }
-  ]
- },
- "nahtavyydet": {
-  "Mount Ainslie": {
-   "aika": "Luonnonmäki; nykyinen pääkaupunkimaisema 1900-luvulta",
-   "teksti": "Mount Ainslie on Canberran koillisosassa sijaitseva luonnonmäki, jonka rinteet kuuluvat Canberra Nature Parkiin. Nykyinen englanninkielinen nimi muistuttaa Duntroonin tilan työnjohtajasta James Ainsliestä. Paikan merkitys on nimeä vanhempi: Ngunnawal- ja Ngambri-kansoille mäki on pyhä paikka. Sen luontopolkujen varrella tavataan muun muassa harmaita kenguruja ja kakaduja.\n\nCanberran suunnitelmassa mäestä tehtiin kaupungin keskeisen maa-akselin pohjoispää. Huipulta avautuu näkymä muistomerkkialueen ja parlamenttitalojen kautta keskustaan. Isoisän matkavuonna 1873 tämä kaupunkisommitelma ei vielä ollut olemassa. Mäki oli paikallaan, mutta pääkaupungin rakennukset ja tekojärvi tulivat vasta seuraavalla vuosisadalla. Näköala näyttää siten sekä hyvin vanhan maaston että sen ympärille rakennetun nuoren kaupungin.",
-   "kuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Galambary – Black Mountain": {
-   "aika": "Luonnonmäki; kallioperä siluurikaudelta",
-   "teksti": "Galambary eli Black Mountain sijaitsee Canberran keskustan länsipuolella. Se on paikallisten alkuperäiskansojen tärkeä kohtaamis- ja seremoniapaikka, ja nykyään sen rinteet kuuluvat Canberra Nature Parkiin. Alkuperäinen pensas- ja puukasvillisuus tarjoaa elinympäristöjä kaupungin lähellä. Englanninkielinen nimi tunnettiin aiemmin muodossa Black Hill.\n\nNimestä huolimatta mäen pääasiallinen kivilaji on vaalea kvartsihiekkakivi. Kallioperä on peräisin siluurikaudelta, joten se kertoo aivan eri aikamittakaavasta kuin pääkaupungin rakennukset. Isoisän matkavuonna 1873 mäki oli jo luonnonmaiseman osa, mutta sen juurella ei ollut nykyistä tekojärveä eikä huipulla myöhemmin rakennettua tietoliikennetornia. Canberra kasvoi mäen itäpuolelle, ja yliopiston pääkampus sijaitsee sen lähellä. Luonnonalue rajaa keskustaa lännen suunnasta.",
-   "kuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "lahde": "Wikipedia"
-  },
-  "Mount Majura": {
-   "aika": "Luonnonmäki; nykyinen pääkaupunki 1900-luvulta",
-   "teksti": "Mount Majura sijaitsee Canberran koillisreunalla, lähellä Mount Ainslieta. Se kuuluu Canberra Nature Parkiin. Rinteitä peittävät pääasiassa eukalyptukset, joiden joukossa kasvaa herkkiä kasvilajeja ja maassa kasvavia orkideoita. Alueella toimii Friends of Mount Majura -niminen vapaaehtoinen puistonhoitoryhmä.\n\nMäen huipulla on lentoaseman tutka-asema, ja sinne johtava tie palvelee sen käyttöä. Yleisön retki huipulle tehdään kävelypolkuja pitkin Hackettin tai Ainslien suunnalta. Isoisän matkavuonna 1873 täällä ei ollut Australian pääkaupunkia eikä sen lentoaseman laitteita. Nykyinen mäki ulkoilureitteineen kuuluu koillisreunan asuinalueiden ympäristöön. Rinteiden eukalyptusmetsä ja orkideat tuovat kaupungin laidalle luonnon oman mittakaavan.",
-   "kuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "lahde": "Wikipedia"
-  }
- },
- "ehdotukset": {
-  "lentoasema": "Canberra Airport (CBR)",
-  "huomiot": [
-   "C-tekstiluonnos, ei valmis kaupungin toimitus. D/E/F ja pelikytkentä avoinna.",
-   "Kohdekartta partial: kolme varmennettua luonnonmäkeä; 6–8 kohteen portti avoin.",
-   "Red Hillin lähdeartikkeli koskee myös kaupunginosaa: sen koordinaattia ei lainata mäelle.",
-   "Kuvat odottavat erillistä kuvaputkea; kaikki kuvaroolien neljä kenttää tyhjiä.",
-   "Saatiedot null: sääaseman 48/48 primääriauditointi puuttuu; saa.json on jätetty koskematta.",
-   "Suojattuja rakennuksia, tutka-asemaa, Telstra Toweria tai Marionin piirroksia ei ole karttakohteina tai kuvina."
-  ]
- }
 }

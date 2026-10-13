@@ -1,351 +1,345 @@
 {
- "$skeema": "matkakirja-paakaupunki/1",
- "id": "southtarawa",
- "maa": "KIR",
- "era": "e14",
- "kaupunki": {
+  "$skeema": "matkakirja-paakaupunki/1",
   "id": "southtarawa",
-  "name": "South Tarawa",
-  "wiki": "South Tarawa",
-  "ambience": "meri",
-  "pallo": {
-   "lat": 1.3333,
-   "lon": 172.9667
-  }
- },
- "artikkeli": {
-  "intro": "South Tarawassa kaupunkia kannattaa ajatella pitkänä ketjuna: Kiribatin pääkaupunki levittäytyy Tarawan atollin eteläisille luodoille. **Laguuni ja Tyynimeri** reunustavat asutusta eri puolilta. Tie yhdistää luodot, mutta meri kuuluu edelleen kaupungin elinkeinoihin ja yhteyksiin. Betiossa muiden saarten kopra jalostuu öljyksi, ja kalastus tuo sekä ruokaa että myytävää.\n\nKorallimaan alla on toinen, vähemmän näkyvä kaupungin perusta: **makean veden linssi**. Sen suojeleminen kuuluu atollin arkeen yhtä lailla kuin rannikon hoitaminen. Maneaba eli yhteisön kokoontumistalo tuo puolestaan ihmiset yhteen, ja sana elää myös parlamentin nimessä. Isoisän matkavuonna 1873 Tarawa oli jo asuttu, mutta nykyinen hallintokeskus syntyi myöhemmin. South Tarawan historiaa kannattelevat siten sekä vanha saariyhteisö että kaupunki, joka on kasvanut sen paikalle.",
-  "teksti": "South Tarawan taloutta ei voi erottaa muusta saaristosta. Ulkosaarilla tuotettua kopraa, kuivattua kookospähkinän ydintä, käsitellään Betiossa. Öljyä viedään ulkomaille ja muita tuotteita myydään paikallisesti. Kalastus palvelee samalla kotitalouksia ja kaupankäyntiä.\n\nMaan vähyys näkyy veden hankinnassa. Bonrikin pohjavesialue on kaupungin tärkeä vesivaranto, ja samalla luodolla sijaitsee kansainvälinen lentoasema. Makeaa vettä varastoituu korallimaan alle; rannikon tulviminen ja suolaantuminen voivat uhata sitä.\n\nTarawan tarinat ulottuvat hallintokaupunkia kauemmas. Kiribatilaisessa luomiskertomuksessa Nareau erottaa taivaan, meren ja maan, ja Tarawa kuuluu tähän nimien maailmaan. Nykyinen tieverkko ja valtion virastot ovat paljon myöhempi kerros. Nareau-kertomuksessa Tarawa on maan nimi, Karawa taivaan ja Marawa meren."
- },
- "kysymykset": [
-  {
-   "q": "Minkä valtion pääkaupunki South Tarawa on?",
-   "options": [
-    "Kiribatin",
-    "Tuvalun",
-    "Palaun",
-    "Samoan"
-   ],
-   "correct": 0,
-   "level": 1,
-   "hint": "Valtio levittäytyy Tyynenmeren saariryhmille.",
-   "fact": "South Tarawa on Kiribatin pääkaupunki Tarawan atollilla.",
-   "source": "https://en.wikipedia.org/wiki/South_Tarawa"
-  },
-  {
-   "q": "Mitä ulkosaarilta tuotua raaka-ainetta jalostetaan Betiossa?",
-   "options": [
-    "Kopraa",
-    "Kaakaota",
-    "Puuvillaa",
-    "Kahvia"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Raaka-aine on kuivattua palmukasvin hedelmän ydintä.",
-   "fact": "Kopra on kuivattua kookospähkinän ydintä; Betiossa siitä valmistetaan öljyä.",
-   "source": "https://en.wikipedia.org/wiki/South_Tarawa"
-  },
-  {
-   "q": "Mikä on maneaba?",
-   "options": [
-    "Yhteisön kokoontumistalo",
-    "Perheen varastotalo",
-    "Kalastajien venevaja",
-    "Kauppiaiden myyntihalli"
-   ],
-   "correct": 0,
-   "level": 1,
-   "hint": "Sana liittyy ihmisten yhteisiin asioihin.",
-   "fact": "Maneaba on kiribatilaisen yhteisön kokoontumistalo.",
-   "source": "https://en.wikipedia.org/wiki/Maneaba"
-  },
-  {
-   "q": "Missä South Tarawan kansainvälinen lentoasema sijaitsee?",
-   "options": [
-    "Bonrikissa",
-    "Bairikissa",
-    "Ambossa",
-    "Betiossa"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Samalla luodolla on kaupungille tärkeä pohjavesivaranto.",
-   "fact": "Bonrikin lentoasema ja makean veden varanto sijaitsevat samalla luodolla.",
-   "source": "https://en.wikipedia.org/wiki/South_Tarawa"
-  },
-  {
-   "q": "Mitä makean veden linssi tarkoittaa Tarawan yhteydessä?",
-   "options": [
-    "Maanalaista vesikerrosta",
-    "Laguunin merivirtaa",
-    "Rannan suolakerrosta",
-    "Riutan hiekkaharjua"
-   ],
-   "correct": 0,
-   "level": 3,
-   "hint": "Atollin juomaveden hankinta riippuu tästä varannosta.",
-   "fact": "Atollin korallimaan alla on makeaa pohjavettä sisältävä linssi.",
-   "source": "https://en.wikipedia.org/wiki/South_Tarawa"
-  }
- ],
- "tiedot": [
-  "Betiossa jalostettava kopra on peräisin Kiribatin ulkosaarilta. Pääkaupungin elinkeinoissa näkyy koko saariston työ.",
-  "Maneaban rakentamiseen osallistuu yhteisö, ja rakennuksen osilla on käytännöllisten tehtävien lisäksi symbolisia merkityksiä.",
-  "Tarawan nimellä on sekä laguuniin johtavaan kulkuväylään liittyvä selitys että paikka kiribatilaisessa luomiskertomuksessa."
- ],
- "valokuva": {
-  "tiedosto": "",
-  "lyhyt": "",
-  "selite": "",
-  "lahde": ""
- },
- "kaupunkilehti": [
-  {
-   "id": "kaupunki",
-   "nimi": "South Tarawa",
-   "johdanto": "Korallimaan kaupunki elää merestä, kookoksesta ja maan alle varastoituvasta makeasta vedestä. Arjen yhteydet ulottuvat pitkälle pääkaupungin ulkopuolelle.",
-   "kansikuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+  "maa": "KIR",
+  "era": "e14",
+  "kaupunki": {
+    "id": "southtarawa",
+    "name": "South Tarawa",
+    "wiki": "South Tarawa",
+    "ambience": "meri",
+    "pallo": {
+      "lat": 1.3333,
+      "lon": 172.9667
     }
-   ],
-   "nostot": [
+  },
+  "artikkeli": {
+    "intro": "South Tarawassa kaupunkia kannattaa ajatella pitkänä ketjuna: Kiribatin pääkaupunki levittäytyy Tarawan atollin eteläisille luodoille. **Laguuni ja Tyynimeri** reunustavat asutusta eri puolilta. Tie yhdistää luodot, mutta meri kuuluu edelleen kaupungin elinkeinoihin ja yhteyksiin. Betiossa muiden saarten kopra jalostuu öljyksi, ja kalastus tuo sekä ruokaa että myytävää.\n\nKorallimaan alla on toinen, vähemmän näkyvä kaupungin perusta: **makean veden linssi**. Sen suojeleminen kuuluu atollin arkeen yhtä lailla kuin rannikon hoitaminen. Maneaba eli yhteisön kokoontumistalo tuo puolestaan ihmiset yhteen, ja sana elää myös parlamentin nimessä.",
+    "teksti": "South Tarawan taloutta ei voi erottaa muusta saaristosta. Ulkosaarilla tuotettua kopraa, kuivattua kookospähkinän ydintä, käsitellään Betiossa. Öljyä viedään ulkomaille ja muita tuotteita myydään paikallisesti. Kalastus palvelee samalla kotitalouksia ja kaupankäyntiä.\n\nMaan vähyys näkyy veden hankinnassa. Bonrikin pohjavesialue on kaupungin tärkeä vesivaranto, ja samalla luodolla sijaitsee kansainvälinen lentoasema. Makeaa vettä varastoituu korallimaan alle; rannikon tulviminen ja suolaantuminen voivat uhata sitä.\n\nKiribatilaisessa luomiskertomuksessa hämähäkkijumala Nareau erottaa Karawan eli taivaan, Marawan eli meren ja Tarawan eli maan."
+  },
+  "kysymykset": [
     {
-     "otsikko": "Makea vesi on maan alla",
-     "teksti": "Meren ympäröimällä atollilla makeaa vettä löytyy korallimaan sisältä. Bonrikin ja Buotan pohjavesilinssit kuuluvat South Tarawan vesihuollon varantoihin, mutta käytettävissä oleva vesi on rajallista. Pitkät kuivat jaksot, veden ottaminen ja saastuminen vaikeuttavat sen hankintaa. Bonrikin vesivaranto sijaitsee samalla luodolla kuin lentoasema. Kaupungin tärkeää infrastruktuuria on siis myös maan alla, paikassa, jota matkustaja ei näe lentokoneen ikkunasta.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "South Tarawa"
-    },
-    {
-     "otsikko": "Kookoksen merimatka",
-     "teksti": "Betion taloudessa pieni kookospähkinä yhdistää pääkaupungin Kiribatin ulkosaariin. Niiltä tuotetaan kopraa, kuivattua kookospähkinän ydintä, jota käsitellään Betiossa. Siitä valmistetaan kookosöljyä vientiin sekä paikallisesti myytäviä tuotteita. Saarten viljelytyö jatkuu näin pääkaupungin jalostuksessa ja satamassa. Kalastus puolestaan tuottaa sekä kotitalouksien ruokaa että myytävää. Kaupungin yhteys mereen on muutakin kuin sijainti rannalla: meri kuuluu sen ruokaan, tavaraan ja työhön.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "South Tarawa"
-    },
-    {
-     "otsikko": "Ranta tarvitsee juuria",
-     "teksti": "South Tarawan rannikon hoidossa käytetään myös eläviä kasveja. Mangroveja on istutettu valikoituihin paikkoihin rannikon eroosion torjumiseksi. Pelkkä merenpinnan nousu ei kuitenkaan selitä kaikkia rannan muutoksia: myös hiekan ja soran ottaminen sekä huonosti sopivat rantamuurit voivat vaikuttaa niihin. Eri vaikutusten osuutta ei ole kaikkialla helppo erottaa. Kapealla, tiheästi asutulla atollilla rantaviivan liike koskee suoraan koteja ja maata, eikä vetäytymiselle ole paljon tilaa.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "South Tarawa"
-    },
-    {
-     "otsikko": "Tie kokoaa saariston",
-     "teksti": "South Tarawan päätie yhdistää asutuksen luotoja Betiosta Bonrikin suuntaan. Se on samalla yhteys kaupungin sataman, lentoaseman ja niiden välisen asutuksen välillä. Tietä on kunnostettu kansainvälisen kehityshankkeen avulla, joten nykyinen maayhteys on pitkäaikaisen rakentamisen tulos. Betio on sataman luoto ja Bonriki lentoaseman luoto. Tie tuo saaret saman reitin varrelle, mutta sen rinnalla säilyvät saarten nimet ja eri paikkoihin sijoittuvat palvelut.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Tarawa"
-    }
-   ],
-   "matkailijalle": {
-    "kuva": {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    "kappale": "Saapuminen tapahtuu Bonrikin lentoasemalle South Tarawan itäosaan. Pääkaupunki jatkuu sieltä luotojen ketjuna Betion suuntaan. Matkaa suunnitellessa kannattaa erottaa South Tarawa ja pohjoisen Tarawan erilliset saaret. Kalastus, kookoksen jalostus ja kokoontumistalot avaavat kaupungin arkea. Majoitusta on eri puolilla eteläistä Tarawaa.",
-    "artikkeli": {
-     "nimi": "Matkailijan South Tarawa",
-     "taitto": "opas",
-     "teksti": "Tutustu atollikaupunkiin sen saarten, elinkeinojen ja yhteisöjen kautta.",
-     "nosto": "Saman päätien varrella on monta erilaista paikkaa: lentoaseman Bonriki, hallinnon Bairiki ja sataman Betio.",
-     "jaksot": [
-      {
-       "otsikko": "Perille ja liikkeelle",
-       "teksti": "Bonrikin kansainvälinen lentoasema sijaitsee South Tarawassa. Luotojen maayhteydet muodostavat pitkän reitin Betion ja Bonrikin välille. Maantie jatkuu Buotaan; muualla pohjoisella Tarawalla luodot ovat erillään tästä tieyhteydestä.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Yhteisöjen kokoontumistalot",
-       "teksti": "Maneaba on yhteisön kokoontumistalo ja perinteinen yhteisten asioiden paikka. Sen rakentamiseen osallistuu yhteisö, ja perinteisessä rakenteessa käytetään kookospuuta, kookoskuituisia sidoksia ja pandanuksen lehtiä. Betiossa on maneaba, ja sen rakennusperinne on osa saariyhteisöjen arkea. Vierailusta kannattaa sopia paikallisten kanssa.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Betion työn jäljillä",
-       "teksti": "Betiossa on South Tarawan satama. Ulkosaarilta tulevaa kopraa jalostetaan täällä öljyksi, ja kalastus liittyy sekä kotitalouksiin että kaupankäyntiin. Kaupungin elinkeinoja hahmottaa paremmin, kun ajattelee sataman takana koko Kiribatin saaristoa. Satama ja tuotantolaitokset ovat nykyisiä työpaikkoja.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Mitä täällä syödään",
-       "teksti": "Kalastus tuottaa ruokaa South Tarawan kotitalouksille ja kalaa myyntiin. Tarawan kasvillisuuteen kuuluvat kookospalmut ja pandanus sekä muun muassa leipäpuu, papaija ja banaani. Paikallisen kalan ja kasvien rinnalla elintarvikkeita tuodaan muualta. Päivän tarjontaa kannattaa kysyä ruokapaikasta.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Sää ja veden käyttö",
-       "teksti": "South Tarawa on lämmin ja kostea, mutta sateiden määrä voi vaihdella voimakkaasti. Atollilla esiintyy myös pitkiä kuivia jaksoja. Sään käytännön merkitys näkyy veden saatavuudessa: pohjavesivarannot ovat rajalliset. Kuivuus vaikuttaa kaupungin juomaveden saatavuuteen ja veden käyttöön.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      }
-     ],
-     "matkailu": {
-      "parasta": [
-       {
-        "mita": "Maneaban yhteisöelämä",
-        "tahdet": 3,
-        "selite": "Kokoontumistalo kertoo kiribatilaisen yhteisön tavasta hoitaa yhteisiä asioita."
-       },
-       {
-        "mita": "Betion elinkeinot",
-        "tahdet": 3,
-        "selite": "Kopran käsittely ja satama liittävät pääkaupungin ulkosaarten työhön."
-       },
-       {
-        "mita": "Atollin eri puolet",
-        "tahdet": 3,
-        "selite": "Laguuni ja valtameri reunustavat eteläisiä luotoja."
-       },
-       {
-        "mita": "Tarawan nimien maailma",
-        "tahdet": 2,
-        "selite": "Atollin nimi liittyy sekä kulkuväylään että luomiskertomukseen."
-       },
-       {
-        "mita": "Rannikon kasvillisuus",
-        "tahdet": 2,
-        "selite": "Mangroveistutukset kuuluvat rannikon eroosion torjuntaan."
-       }
+      "q": "Minkä valtion pääkaupunki South Tarawa on?",
+      "options": [
+        "Kiribatin",
+        "Tuvalun",
+        "Palaun",
+        "Samoan"
       ],
-      "hyvaTietaa": [
-       {
-        "otsikko": "Eteläinen ja pohjoinen Tarawa",
-        "teksti": "South Tarawa on eteläisen saariketjun asutuskeskus; pohjoisen Tarawan luodot ovat oma alueensa."
-       },
-       {
-        "otsikko": "Yhteydet varmistettava",
-        "teksti": "Tarkista ennen matkaa lentoreitti, saaristoyhteydet sekä majoituksen juomavesi ja veden käyttö."
-       },
-       {
-        "otsikko": "Vesi on rajallinen varanto",
-        "teksti": "Bonrikin pohjavesivaranto ja lentoasema ovat samalla luodolla."
-       }
-      ]
-     },
-     "lahde": "Wikipedia"
+      "correct": 0,
+      "level": 1,
+      "hint": "Pääkaupunki levittäytyy matalan koralliatollin luodoille.",
+      "fact": "South Tarawa on Kiribatin pääkaupunki Tarawan atollilla.",
+      "source": "https://en.wikipedia.org/wiki/South_Tarawa"
+    },
+    {
+      "q": "Mitä ulkosaarilta tuotua raaka-ainetta jalostetaan Betiossa?",
+      "options": [
+        "Kopraa",
+        "Kaakaota",
+        "Puuvillaa",
+        "Kahvia"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Puristuksesta saadaan öljyä; jäljelle jäävä rouhe sopii eläinrehuksi.",
+      "fact": "Kopra on kuivattua kookospähkinän ydintä; Betiossa siitä valmistetaan öljyä.",
+      "source": "https://en.wikipedia.org/wiki/South_Tarawa"
+    },
+    {
+      "q": "Mikä on maneaba?",
+      "options": [
+        "Yhteisön kokoontumistalo",
+        "Perheen varastotalo",
+        "Kalastajien venevaja",
+        "Kauppiaiden myyntihalli"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Sama sana esiintyy Kiribatin parlamentin nimessä.",
+      "fact": "Maneaba on kiribatilaisen yhteisön kokoontumistalo.",
+      "source": "https://en.wikipedia.org/wiki/Maneaba"
+    },
+    {
+      "q": "Missä South Tarawan kansainvälinen lentoasema sijaitsee?",
+      "options": [
+        "Bonrikissa",
+        "Bairikissa",
+        "Ambossa",
+        "Betiossa"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Samalla luodolla on kaupungille tärkeä pohjavesivaranto.",
+      "fact": "Bonrikin lentoasema ja makean veden varanto sijaitsevat samalla luodolla.",
+      "source": "https://en.wikipedia.org/wiki/South_Tarawa"
+    },
+    {
+      "q": "Mitä makean veden linssi tarkoittaa Tarawan yhteydessä?",
+      "options": [
+        "Maanalaista vesikerrosta",
+        "Laguunin makean veden aluetta",
+        "Sadeveden keruuallasta",
+        "Riutan väliin jäävää vesialuetta"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Varannon koko riippuu muun muassa sateista ja vedenotosta.",
+      "fact": "Atollin korallimaan alla on makeaa pohjavettä sisältävä linssi.",
+      "source": "https://en.wikipedia.org/wiki/South_Tarawa"
     }
-   }
+  ],
+  "tiedot": [
+    "Betiossa jalostettava kopra on peräisin Kiribatin ulkosaarilta. Pääkaupungin elinkeinoissa näkyy koko saariston työ.",
+    "Maneaban rakentamiseen osallistuu yhteisö, ja rakennuksen osilla on käytännöllisten tehtävien lisäksi symbolisia merkityksiä.",
+    "Tarawan nimellä on sekä laguuniin johtavaan kulkuväylään liittyvä selitys että paikka kiribatilaisessa luomiskertomuksessa."
+  ],
+  "valokuva": {
+    "tiedosto": "",
+    "lyhyt": "",
+    "selite": "",
+    "lahde": ""
   },
-  {
-   "id": "historia",
-   "nimi": "Nimet, yhteisö ja muisti",
-   "johdanto": "Tarawan historia alkaa kauan ennen pääkaupunkia. Nimet ja yhteisön kokoontumistalo avaavat atollin menneisyyttä eri suunnista.",
-   "tehtava": {
-    "kysymys": "Mitkä nimet Nareau erottaa Tarawasta luomiskertomuksessa?",
-    "vaihtoehdot": [
-     "Karawan ja Marawan",
-     "Bonrikin ja Bairikin",
-     "Betion ja Buotan",
-     "Ambon ja Eitan"
-    ],
-    "oikea": 0,
-    "fakta": "Kertomuksessa Karawa liittyy taivaaseen ja Marawa mereen; Tarawa on maa."
-   },
-   "nostot": [
+  "kaupunkilehti": [
     {
-     "otsikko": "Talo, jonka rakentaa yhteisö",
-     "teksti": "Maneaba on kiribatilaisen yhteisön kokoontumistalo ja perinteinen yhteisten asioiden keskus. Tyypillisessä rakenteessa korkea kookospuinen katto saa korallista tukea, sidokset tehdään kookoskuidusta ja katteena käytetään pandanuksen lehtiä. Rakentamiseen osallistuu koko yhteisö. Talon osilla on käytännöllisten tehtävien lisäksi symbolisia merkityksiä. Sana ei jää vanhoihin rakennuksiin: Kiribatin parlamentin nimi on Maneaba ni Maungatabu. Kokoontumisen ajatus kuuluu siis myös valtion sanastoon.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Maneaba"
+      "id": "kaupunki",
+      "nimi": "South Tarawa",
+      "johdanto": "Korallimaan kaupunki elää merestä, kookoksesta ja maan alle varastoituvasta makeasta vedestä. Arjen yhteydet ulottuvat pitkälle pääkaupungin ulkopuolelle.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Makea vesi on maan alla",
+          "teksti": "Meren ympäröimällä atollilla makeaa pohjavettä löytyy korallimaan sisältä. Bonrikin ja Buotan pohjavesilinssit kuuluvat South Tarawan vesihuollon varantoihin, mutta käytettävissä oleva vesi on rajallista. Pitkät kuivat jaksot, veden ottaminen ja saastuminen vaikeuttavat sen hankintaa. Vesihuoltohankkeen suunnitelmaan kuuluvat meriveden suolanpoistolaitos ja aurinkovoimala. Vesijohtoverkkoa on tarkoitus kunnostaa ja laajentaa, jotta vuotaminen vähenisi.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "South Tarawa"
+        },
+        {
+          "otsikko": "Kookoksen merimatka",
+          "teksti": "Betion taloudessa pieni kookospähkinä yhdistää pääkaupungin Kiribatin ulkosaariin. Niiltä tuotetaan kopraa, kuivattua kookospähkinän ydintä, jota käsitellään Betiossa. Siitä valmistetaan kookosöljyä vientiin sekä paikallisesti myytäviä tuotteita. Kalastus puolestaan tuottaa sekä kotitalouksien ruokaa että myytävää. Öljyn puristuksessa jää myös koprarouhetta, jota käytetään eläinrehuna.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "South Tarawa"
+        },
+        {
+          "otsikko": "Ranta tarvitsee juuria",
+          "teksti": "South Tarawan rannikon hoidossa käytetään myös eläviä kasveja. Mangroveja on istutettu valikoituihin paikkoihin rannikon eroosion torjumiseksi. Pelkkä merenpinnan nousu ei kuitenkaan selitä kaikkia rannan muutoksia: myös hiekan ja soran ottaminen sekä huonosti sopivat rantamuurit voivat vaikuttaa niihin. Eri vaikutusten osuutta ei ole kaikkialla helppo erottaa. Kapealla, tiheästi asutulla atollilla rantaviivan liike koskee suoraan koteja ja maata, eikä vetäytymiselle ole paljon tilaa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "South Tarawa"
+        },
+        {
+          "otsikko": "Luotojen välinen tie",
+          "teksti": "South Tarawan päätie yhdistää asutuksen luotoja Betiosta Bonrikin suuntaan. Sen varrella ovat myös Bairikin ja Bikenibeun asutuskeskukset. Luotojen välisiä aukkoja on yhdistetty pengertieosuuksilla, jotka seuraavat Tarawan laguunin eteläreunaa. Reitti yhdistää Betion sataman, Bonrikin lentoaseman ja niiden välisen asutuksen. Tietä on kunnostettu kansainvälisen kehityshankkeen avulla.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Tarawa"
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Saapuminen tapahtuu Bonrikin lentoasemalle South Tarawan itäosaan. Pääkaupunki jatkuu sieltä luotojen ketjuna Betion suuntaan. Matkaa suunnitellessa kannattaa erottaa South Tarawa ja pohjoisen Tarawan erilliset saaret. Kalastus, kookoksen jalostus ja kokoontumistalot avaavat kaupungin arkea. Majoitusta on eri puolilla eteläistä Tarawaa.",
+        "artikkeli": {
+          "nimi": "Matkailijan South Tarawa",
+          "taitto": "opas",
+          "teksti": "Tutustu atollikaupunkiin sen saarten, elinkeinojen ja yhteisöjen kautta.",
+          "nosto": "Saman päätien varrella on monta erilaista paikkaa: lentoaseman Bonriki, hallinnon Bairiki ja sataman Betio.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Bonrikin kansainvälinen lentoasema sijaitsee South Tarawassa. Luotojen maayhteydet muodostavat pitkän reitin Betion ja Bonrikin välille. Maantie jatkuu Buotaan; muualla pohjoisella Tarawalla luodot ovat erillään tästä tieyhteydestä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Yhteisöjen kokoontumistalot",
+              "teksti": "Maneaba on yhteisön kokoontumistalo ja perinteinen yhteisten asioiden paikka. Sen rakentamiseen osallistuu yhteisö, ja perinteisessä rakenteessa käytetään kookospuuta, kookoskuituisia sidoksia ja pandanuksen lehtiä. Betiossa on maneaba, ja sen rakennusperinne on osa saariyhteisöjen arkea. Vierailusta kannattaa sopia paikallisten kanssa.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Betion työn jäljillä",
+              "teksti": "Betiossa on South Tarawan satama. Ulkosaarilta tulevaa kopraa jalostetaan täällä öljyksi, ja kalastus liittyy sekä kotitalouksiin että kaupankäyntiin. Satama ja tuotantolaitokset ovat nykyisiä työpaikkoja.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Kalastus tuottaa ruokaa South Tarawan kotitalouksille ja kalaa myyntiin. Tarawan kasvillisuuteen kuuluvat kookospalmut ja pandanus sekä muun muassa leipäpuu, papaija ja banaani. Paikallisen kalan ja kasvien rinnalla elintarvikkeita tuodaan muualta.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Sää ja veden käyttö",
+              "teksti": "South Tarawa on lämmin ja kostea, mutta sateiden määrä voi vaihdella voimakkaasti. Atollilla esiintyy myös pitkiä kuivia jaksoja. Sään käytännön merkitys näkyy veden saatavuudessa: pohjavesivarannot ovat rajalliset.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Maneaban yhteisöelämä",
+                "tahdet": 3,
+                "selite": "Kokoontumistalo kertoo kiribatilaisen yhteisön tavasta hoitaa yhteisiä asioita."
+              },
+              {
+                "mita": "Betion elinkeinot",
+                "tahdet": 3,
+                "selite": "Kopran käsittely ja satama liittävät pääkaupungin ulkosaarten työhön."
+              },
+              {
+                "mita": "Atollin eri puolet",
+                "tahdet": 3,
+                "selite": "Laguuni ja valtameri reunustavat eteläisiä luotoja."
+              },
+              {
+                "mita": "Tarawan nimien maailma",
+                "tahdet": 2,
+                "selite": "Atollin nimi liittyy sekä kulkuväylään että luomiskertomukseen."
+              },
+              {
+                "mita": "Rannikon kasvillisuus",
+                "tahdet": 2,
+                "selite": "Mangroveistutukset kuuluvat rannikon eroosion torjuntaan."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Eteläinen ja pohjoinen Tarawa",
+                "teksti": "South Tarawa on eteläisen saariketjun asutuskeskus; pohjoisen Tarawan luodot ovat oma alueensa."
+              },
+              {
+                "otsikko": "Betion satama",
+                "teksti": "Betiossa on pääkaupungin satama ja kopran käsittelylaitoksia."
+              },
+              {
+                "otsikko": "Vesi on rajallinen varanto",
+                "teksti": "Bonrikin ja Buotan pohjavesivarannot ovat rajalliset."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
     },
     {
-     "otsikko": "Tarawa, taivas ja meri",
-     "teksti": "Tarawan nimelle on useampi selitys. Vanha gilbertinkielinen Te Rawa viittaa kulkuväylään, laguuniin johtavaan aukkoon riutassa. Kiribatilaisessa luomiskertomuksessa nimi saa toisen yhteyden: Nareau erottaa Karawan, taivaan, Marawan, meren, ja Tarawan, maan. Kiribatilainen luomiskertomus jäsentää maailman syntyä maan, meren ja taivaan erottamisena. Nimen ympärillä ovat rinnakkain merenkulun konkreettinen väylä ja paljon laajempi kertomus maan, meren ja taivaan suhteesta.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Tarawa"
-    },
-    {
-     "otsikko": "Ennen hallintokaupunkia",
-     "teksti": "Isoisän matkavuonna 1873 Tarawa oli jo asuttu atolli, jonka historia ulottui kauas eurooppalaisten hallintoa edeltävään aikaan. Brittiläinen protektoraatti ja siirtomaahallinnon keskuksen sijoittaminen Tarawaan tapahtuivat vasta myöhemmin 1800-luvulla. Hallinnon sijainti vaihtui sittemmin myös muille saarille ennen paluuta Tarawaan. Tarawan yhteisöt olivat olemassa ennen protektoraattia. Hallinnon keskuksen muutot koskivat siirtomaaviranomaisia, kun taas luotojen kylät ja yhteisöt jatkoivat omaa elämäänsä.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "South Tarawa"
-    },
-    {
-     "otsikko": "Betion toinen muisti",
-     "teksti": "Betio oli toisen maailmansodan aikana Tarawan taistelun paikka. Japanin miehitystä seurasi yhdysvaltalaisten maihinnousu, ja atollille rakennettiin sodan aikana sotilaallisia tukikohtia. Tarawalla on säilynyt puolustuslaitteiden jälkiä, jotka kuuluvat tämän aikakauden historiaan. Samassa Betiossa ovat nykyinen satama ja kopran käsittelylaitokset. Ulkosaarilta tuotua kookospähkinän ydintä jalostetaan öljyksi, joten Betion satama yhdistää kaupungin saarten nykyiseen tuotantoon.",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": "",
-     "wiki": "Tarawa"
+      "id": "historia",
+      "nimi": "Nimet, yhteisö ja muisti",
+      "johdanto": "Tarawan historia alkaa kauan ennen pääkaupunkia. Nimet ja yhteisön kokoontumistalo avaavat atollin menneisyyttä eri suunnista.",
+      "tehtava": {
+        "kysymys": "Mitkä nimet Nareau erottaa Tarawasta luomiskertomuksessa?",
+        "vaihtoehdot": [
+          "Karawan ja Marawan",
+          "Bonrikin ja Bairikin",
+          "Betion ja Buotan",
+          "Ambon ja Eitan"
+        ],
+        "oikea": 0,
+        "fakta": "Kertomuksessa Karawa liittyy taivaaseen ja Marawa mereen; Tarawa on maa."
+      },
+      "nostot": [
+        {
+          "otsikko": "Talo, jonka rakentaa yhteisö",
+          "teksti": "Maneaba on kiribatilaisen yhteisön kokoontumistalo ja perinteinen yhteisten asioiden keskus. Tyypillisessä rakenteessa korkea kookospuinen katto saa korallista tukea, sidokset tehdään kookoskuidusta ja katteena käytetään pandanuksen lehtiä. Rakentamiseen osallistuu koko yhteisö. Talon osilla on käytännöllisten tehtävien lisäksi symbolisia merkityksiä. Sana ei jää vanhoihin rakennuksiin: Kiribatin parlamentin nimi on Maneaba ni Maungatabu.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Maneaba"
+        },
+        {
+          "otsikko": "Tarawa, taivas ja meri",
+          "teksti": "Tarawan nimen maantieteellinen selitys liittyy suureen laivaväylään, joka avautuu riutan läpi laguuniin. Vanha gilbertinkielinen Te Rawa tarkoittaa kulkuväylää. Tarawan riutta ei sulje laguunia kokonaan: avomeri on laajan aukon kautta yhteydessä sen veteen. Kiribatilaisessa luomiskertomuksessa nimi saa toisen yhteyden: hämähäkkijumala Nareau erottaa Karawan eli taivaan, Marawan eli meren ja Tarawan eli maan.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Tarawa"
+        },
+        {
+          "otsikko": "Ennen hallintokaupunkia",
+          "teksti": "Tarawan asutus on vanhempi kuin eurooppalainen siirtomaahallinto. Brittiläinen protektoraatti ja siirtomaahallinnon keskuksen sijoittaminen Tarawaan tapahtuivat 1800-luvun lopulla. Hallinnon sijainti vaihtui sittemmin myös muille saarille ennen paluuta Tarawaan. Luotojen kylät ja yhteisöt jatkoivat omaa elämäänsä hallintokeskuksen sijainnin vaihtuessa.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "South Tarawa"
+        },
+        {
+          "otsikko": "Betion toinen muisti",
+          "teksti": "Betio oli toisen maailmansodan aikana Tarawan taistelun paikka. Japanin miehitystä seurasi yhdysvaltalaisten maihinnousu, ja atollille rakennettiin sodan aikana sotilaallisia tukikohtia. Tarawalla on säilynyt puolustuslaitteiden jälkiä, jotka kuuluvat tämän aikakauden historiaan. Samassa Betiossa ovat nykyinen kauppasatama ja kopran käsittelylaitokset.",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": "",
+          "wiki": "Tarawa"
+        }
+      ]
     }
-   ]
+  ],
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "South Tarawan paikkojen välillä kuljetaan pitkän saariketjun halki. Betion satama yhdistää pääkaupungin muun saariston elinkeinoihin.",
+    "rajat": {},
+    "kohteet": []
+  },
+  "nahtavyydet": {},
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Bonrikin kansainvälinen lentoasema (TRW)",
+    "huomiot": []
   }
- ],
- "kohdekartta": {
-  "numeroympyrat": true,
-  "esittely": "South Tarawan paikkojen välillä kuljetaan pitkän saariketjun halki. Betion satama yhdistää pääkaupungin muun saariston elinkeinoihin.",
-  "rajat": {},
-  "kohteet": []
- },
- "nahtavyydet": {},
- "saatiedot": null,
- "ehdotukset": {
-  "lentoasema": "Bonrikin kansainvälinen lentoasema (TRW)",
-  "huomiot": [
-   "C-tekstiluonnos; A rajattu lähdekooste. B/D/E/F, sääauditointi ja kohdekartta avoinna.",
-   "Kaikkien kuvaroolien tiedosto, lyhyt, selite ja lahde ovat tyhjiä: erillinen kuvaputki.",
-   "Karttakohteita ei lisätty: paikan omaa koordinaattia ja suojattujen teosten ehtoa ei vielä varmennettu. Kartan rajat jätetty tyhjiksi.",
-   "South Tarawa -artikkelin väkilukuotsikko 73 073 (2026) ja leipäteksti 63 439 (2020) poikkeavat toisistaan; konteksti hyväksyy vain jälkimmäisen. Väkilukuja ei käytetty.",
-   "Opastiedon reitit ja lentopäivät poikkeavat WP:n ja Wikivoyagen välillä; ei aikatauluja eikä lentoyhtiölupauksia."
-  ]
- }
 }

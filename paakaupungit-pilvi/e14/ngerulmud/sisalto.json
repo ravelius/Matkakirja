@@ -1,380 +1,372 @@
 {
- "$skeema": "matkakirja-paakaupunki/1",
- "id": "ngerulmud",
- "maa": "PLW",
- "era": "e14",
- "kaupunki": {
+  "$skeema": "matkakirja-paakaupunki/1",
   "id": "ngerulmud",
-  "name": "Ngerulmud",
-  "wiki": "Ngerulmud",
-  "ambience": "sademetsa",
-  "pallo": {
-   "lat": 7.5006,
-   "lon": 134.6242
-  }
- },
- "artikkeli": {
-  "intro": "**Ngerulmud on Palaun hallintokeskus Babeldaobilla**, Melekeokin osavaltiossa. Melekeok on myös lähistön kylän nimi. Pääkaupunki rakennettiin 2000-luvun alussa, ja hallinto siirtyi sinne Kororista. Kapitolialueella lainsäädännön, oikeuslaitoksen ja toimeenpanovallan rakennukset ympäröivät yhteistä aukiota.\n\nKoror on edelleen kauppojen, ravintoloiden ja majoituksen keskus, josta Babeldaobille pääsee siltaa pitkin. Ngerulmudin nimi viittaa hapatettuun kalaan ja kukkulan vanhaan kulttuuriseen merkitykseen. Läheisen **Ngardok-järven suojelualueeseen** kuuluvat järven lisäksi valuma-alue, purot ja makean veden suometsä. Melekeokin kylien ympärillä kasvatetaan taroa, leipäpuuta, banaania ja kookosta. Vuonna 1873 nykyistä hallintokompleksia ei ollut, mutta seudun kylien historia on pääkaupunkia vanhempi.",
-  "teksti": "Ngerulmud, Melekeok ja Koror muodostavat eri osoitteita. Ngerulmud on kansallinen hallintokeskus, Melekeok sekä osavaltion että kylän nimi, ja Koror Palaun palvelukeskittymä. Koror ja Babeldaob ovat yhteydessä toisiinsa sillan kautta.\n\nNgerulmud rakennettiin 2000-luvun alussa, ja hallintokompleksissa on erilliset lainsäädännön, oikeuslaitoksen ja toimeenpanovallan rakennukset yhteisen aukion ympärillä. Nykyinen rakennusryhmä on uusi, mutta paikan nimi kertoo sitä vanhemmasta kulttuurisesta merkityksestä.\n\nNgardokin suojelu liittyy Melekeokin vesihuoltoon ja veden laatuun. Järvi ja sitä ympäröivä metsä kuuluvat samaan valuma-alueeseen. Suojelualueella elää Palaun omia lintulajeja ja myös suistokrokotiileja (Crocodylus porosus). Babeldaobilla ovat myös kylien viljelmät sekä suojeltu järvi- ja metsäympäristö."
- },
- "kysymykset": [
-  {
-   "q": "Millä saarella Ngerulmud sijaitsee?",
-   "options": [
-    "Babeldaobilla",
-    "Peleliulla",
-    "Angaurilla",
-    "Kayangelilla"
-   ],
-   "correct": 0,
-   "level": 1,
-   "hint": "Palaun kansainvälinen lentoasema sijaitsee saman saaren eteläosassa.",
-   "fact": "Ngerulmud on Babeldaobin saarella Melekeokin osavaltiossa.",
-   "source": "https://en.wikipedia.org/wiki/Ngerulmud"
-  },
-  {
-   "q": "Mitä paikannimen loppuosa mud tarkoittaa palaun kielessä?",
-   "options": [
-    "Kalannimeä",
-    "Metsäpolkua",
-    "Hallintotaloa",
-    "Postimerkkiä"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Nimessä säilyy paikallinen ruokaperinne.",
-   "fact": "Mud viittaa Centropyge tibicen -kalaan; Ngerulmudin nimi liittyy hapatettuun kalaan.",
-   "source": "https://en.wikipedia.org/wiki/Ngerulmud"
-  },
-  {
-   "q": "Mikä on Ngerulmudin kapitolialueen oma postinumero?",
-   "options": [
-    "96939",
-    "96940",
-    "96938",
-    "96941"
-   ],
-   "correct": 0,
-   "level": 2,
-   "hint": "Se poikkeaa muualla Palaussa käytetystä numerosta yhdellä numerolla.",
-   "fact": "Kapitolialueelle käytetään postinumeroa 96939, kun Palaun yleinen postinumero on 96940.",
-   "source": "https://en.wikipedia.org/wiki/Ngerulmud"
-  },
-  {
-   "q": "Mitä Ngardokin suojelualue sisältää järven lisäksi?",
-   "options": [
-    "Valuma-aluetta ja suometsää",
-    "Laguunia ja koralliriuttaa",
-    "Merenrantaa ja mangrovea",
-    "Jokisuuta ja hiekkasärkkiä"
-   ],
-   "correct": 0,
-   "level": 1,
-   "hint": "Järvi, purot ja niitä ympäröivä maa kuuluvat samaan veden kiertoon.",
-   "fact": "Ngardokin suojelualue käsittää myös järven valuma-aluetta, puroja ja makean veden suometsää.",
-   "source": "https://en.wikipedia.org/wiki/Lake_Ngardok"
-  },
-  {
-   "q": "Missä osavaltiossa Ngerulmud sijaitsee?",
-   "options": [
-    "Melekeokissa",
-    "Ngarchelongissa",
-    "Ngeremlenguissa",
-    "Ngatpangissa"
-   ],
-   "correct": 0,
-   "level": 3,
-   "hint": "Sama nimi kuuluu myös pääkaupungin lähellä olevalle kylälle.",
-   "fact": "Ngerulmud sijaitsee Melekeokin osavaltiossa Babeldaobin saarella.",
-   "source": "https://en.wikipedia.org/wiki/Ngerulmud"
-  }
- ],
- "tiedot": [
-  "Ngerulmudin postinumero on 96939 ja muualla Palaussa käytetään 96940:tä. Oma postinumero säilyy osoitetietona, vaikka pääkaupungin lyhytaikainen postitoimisto suljettiin.",
-  "Paikannimen mud ei ole englannin sana muta, vaan palaun kalannimi. Ngerulmudin nimi liittyy Centropyge tibicen -kalaan ja paikalliseen hapatetun kalan perinteeseen.",
-  "Ngardok ei ole suojeltuna pelkkä järven vesipinta: suojelualueeseen kuuluvat myös valuma-alue, puroja ja makean veden suometsää."
- ],
- "kaupunkilehti": [
-  {
-   "id": "kaupunki",
-   "nimi": "Ngerulmud",
-   "johdanto": "Pääkaupungin rinnalla ovat Melekeokin kylät, rannikko ja Ngardokin valuma-alue. Hallinnon osoite on tarkka, mutta sen ympäristö on yhtä rakennusryhmää laajempi.",
-   "kansikuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+  "maa": "PLW",
+  "era": "e14",
+  "kaupunki": {
+    "id": "ngerulmud",
+    "name": "Ngerulmud",
+    "wiki": "Ngerulmud",
+    "ambience": "sademetsa",
+    "pallo": {
+      "lat": 7.5006,
+      "lon": 134.6242
     }
-   ],
-   "nostot": [
+  },
+  "artikkeli": {
+    "intro": "**Ngerulmud on Palaun hallintokeskus Babeldaobilla**, Melekeokin osavaltiossa. Melekeok on myös lähistön kylän nimi. Pääkaupunki rakennettiin 2000-luvun alussa, ja hallinto siirtyi sinne Kororista. Kapitolialueella lainsäädännön, oikeuslaitoksen ja toimeenpanovallan rakennukset ympäröivät yhteistä aukiota.\n\nKoror on edelleen kauppojen, ravintoloiden ja majoituksen keskus, josta Babeldaobille pääsee siltaa pitkin. Ngerulmudin nimi viittaa hapatettuun kalaan ja kukkulan vanhaan kulttuuriseen merkitykseen. Läheisen **Ngardok-järven suojelualueeseen** kuuluvat järven lisäksi valuma-alue, purot ja makean veden suometsä. Melekeokin kylien ympärillä kasvatetaan taroa, leipäpuuta, banaania ja kookosta.",
+    "teksti": "Ngerulmud, Melekeok ja Koror muodostavat eri osoitteita. Ngerulmud on kansallinen hallintokeskus, Melekeok sekä osavaltion että kylän nimi, ja Koror Palaun palvelukeskittymä. Koror ja Babeldaob ovat yhteydessä toisiinsa sillan kautta.\n\nNgerulmud rakennettiin 2000-luvun alussa, ja hallintokompleksissa on erilliset lainsäädännön, oikeuslaitoksen ja toimeenpanovallan rakennukset yhteisen aukion ympärillä. Nykyinen rakennusryhmä on uusi, mutta paikan nimi kertoo sitä vanhemmasta kulttuurisesta merkityksestä.\n\nNgardokin suojelu liittyy Melekeokin vesihuoltoon ja veden laatuun. Järvi ja sitä ympäröivä metsä kuuluvat samaan valuma-alueeseen. Suojelualueella elää Palaun omia lintulajeja ja myös suistokrokotiileja (Crocodylus porosus). Babeldaobilla ovat myös kylien viljelmät sekä suojeltu järvi- ja metsäympäristö."
+  },
+  "kysymykset": [
     {
-     "otsikko": "Kolme nimeä, eri tehtävät",
-     "teksti": "Ngerulmud on Palaun hallintokeskus Melekeokin osavaltiossa, Babeldaobin saarella. Melekeok on myös lähellä sijaitsevan kylän nimi. Entinen pääkaupunki Koror on edelleen kauppojen, ravintoloiden ja majoituksen keskittymä. Kansallisen hallinnon rakennukset ovat Ngerulmudissa, mutta saarelle saapuva matkailija voi käyttää Kororin palveluja. Koror–Babeldaob-silta yhdistää nämä kaksi saarta, ja Babeldaobin eteläosassa sijaitsee Palaun kansainvälinen lentoasema.",
-     "wiki": "Ngerulmud",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Nimessä ei ole mutaa",
-     "teksti": "Ngerulmudin nimi viittaa hapatettuun kalaan. Sen loppuosa mud on palaun kielen nimi Centropyge tibicen -kalalle, ei englannin mud eli muta. Paikallisessa perinteessä naiset kokoontuivat meren ylle kohoavalle kukkulalle tarjoamaan hapatettua kalaa jumalille. Nykyisen hallintokeskuksen paikannimi liittyy näin kukkulan vanhempaan kulttuuriseen merkitykseen. Kapitoli on uusi rakennusryhmä, mutta sen osoite kantaa muistoa käytännöstä, jonka pääosissa olivat saarelaiset, kala ja meri.",
-     "wiki": "Ngerulmud",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Postinumero jäi, postitoimisto lähti",
-     "teksti": "Ngerulmudin kapitolialue käyttää postinumeroa 96939, kun muualla Palaussa käytetään numeroa 96940. Hallintokeskukseen perustettiin myös postitoimisto, mutta se toimi vain lyhyen aikaa. Se suljettiin säästötoimena, kun menot olivat ylittäneet tuotot. Postinumero ja postitoimisto eivät siis ole sama asia: osoitteen numero voi erottaa paikan, vaikka siellä ei enää ole omaa palvelupistettä. Palaun postitoimisto sijaitsee Kororin pääkadulla. Pääkaupungin kartassa pienikin osoitetieto kertoo paikkojen työnjaosta.",
-     "wiki": "Ngerulmud",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Osavaltio jatkuu rantaan",
-     "teksti": "Melekeokin osavaltio ulottuu Babeldaobin itärannikon laguunilta saaren keskiseen Rael Kedamin vedenjakajaan. Rannikolla on hiekkarantoja, sisämaassa kumpuilevia kukkuloita ja hitaita vedenkulkuja reunustavia soita. Pienet harjanteet laskeutuvat kohti rantaa. Mangrovea on osavaltion rannikon pohjois- ja eteläosissa, mutta se ei peitä koko keskistä rannikkoa. Ngerulmud on yksi paikka tässä maastossa. Osavaltion nimeen sisältyy siten paljon muutakin kuin pääkaupungin hallintoaukio.",
-     "wiki": "Melekeok",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ],
-   "matkailijalle": {
-    "kuva": {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    "kappale": "Ngerulmudin käynti sopii Babeldaobin päiväretkeen. Lentoasema sijaitsee saaren eteläosassa, ja Kororilta tullaan sillan yli maanteitse. Kororissa on majoituksen ja ravintoloiden keskittymä. Melekeokin kylät ja hallintokeskus ovat eri käyntipaikkoja. Osavaltion vierailukäytännöt kannattaa selvittää ennakolta. Ngardok on suojelualue, jonka käynti ja sallitut alueet järjestetään paikallisen ohjauksen mukaan.",
-    "artikkeli": {
-     "nimi": "Matkailijan Ngerulmud",
-     "taitto": "opas",
-     "teksti": "Yhdistä hallintokeskuksen käynti Melekeokin paikalliseen ympäristöön.",
-     "nosto": "Babeldaobin retki alkaa usein Kororista tai lentoasemalta. Päivän järjestelyissä kannattaa erottaa hallintokeskus, kylät ja suojelualue toisistaan.",
-     "jaksot": [
-      {
-       "otsikko": "Perille ja liikkeelle",
-       "teksti": "Roman Tmetuchlin kansainvälinen lentoasema on Babeldaobin eteläosassa. Kororilta saarelle pääsee Koror–Babeldaob-siltaa pitkin autolla tai taksilla. Ngerulmudiin jatketaan maanteitse. Majoitus, ruokailu ja päivän kuljetus on järkevää suunnitella yhdessä, sillä pääkaupungin hallintokompleksi ei ole saaren palvelukeskittymä.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Kapitoli ja Melekeokin kylät",
-       "teksti": "Ngerulmudissa sijaitsevat kansallisen hallinnon rakennukset, Melekeokissa puolestaan on kylien omaa arkea. Melekeokin opastetussa kulttuuriretkessä yhdistyvät vanhat kivipolut, paikallinen ruokailu ja käsityön esittely. Hallintorakennukset ovat toimivia virastoja.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Ngardokin suojeltu valuma-alue",
-       "teksti": "Ngardok on makean veden järvi Melekeokissa. Suojelu koskee myös sen valuma-aluetta, puroja ja suometsää. Ramsar-kohteen käyttötarkoituksiin kuuluvat ympäristökasvatus ja tutkimus; vapaan retkeilyn pääsyä ei ole syytä olettaa. Järvellä on krokotiilien lisääntymisympäristöä. Käynti järjestetään paikallisen ohjauksen mukaan, eikä kohdetta esitellä uimapaikkana.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Mitä täällä syödään",
-       "teksti": "Kororissa on ravintoloiden keskittymä ja esimerkiksi japanilaistyylisiä bento-lounaita. Melekeokin opastettuun kulttuuriretkeen kuuluu paikallisten kokkien valmistama ateria, jonka sisältö selvitetään järjestäjältä. Osavaltion kylien viljelyyn kuuluvat taro, leipäpuu, banaani ja kookos.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      },
-      {
-       "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Palaussa on lämmin trooppinen ilmasto, ja sadetta voi tulla ympäri vuoden. Metsäiset rinteet ja suojelualueen kosteikot ovat eri kulkuympäristöjä. Kylien kivipolut ja metsäiset alueet ovat märkinä erilaisia kulkupaikkoja kuin kuiva tie. Ngardok on erillinen metsäinen retkikohde hallintokeskuksesta.",
-       "kuva": {
-        "tiedosto": "",
-        "lyhyt": "",
-        "selite": "",
-        "lahde": ""
-       }
-      }
-     ],
-     "matkailu": {
-      "parasta": [
-       {
-        "mita": "Ngerulmud",
-        "tahdet": 3,
-        "selite": "Kansallinen hallintokeskus erottuu osavaltion kylistä."
-       },
-       {
-        "mita": "Melekeokin kulttuuriretki",
-        "tahdet": 3,
-        "selite": "Opastettu retki yhdistää polkuja, paikallista ruokailua ja käsityötä."
-       },
-       {
-        "mita": "Ngardokin valuma-alue",
-        "tahdet": 3,
-        "selite": "Suojelu ulottuu järveltä puroihin ja suometsään."
-       },
-       {
-        "mita": "Melekeokin itärannikko",
-        "tahdet": 2,
-        "selite": "Osavaltion hiekkarannat ja sisämaa näyttävät Babeldaobin eri puolia."
-       },
-       {
-        "mita": "Babeldaobin kyläviljelmät",
-        "tahdet": 2,
-        "selite": "Hedelmäpuut ja taroviljely kuuluvat paikalliseen maankäyttöön."
-       }
+      "q": "Millä saarella Ngerulmud sijaitsee?",
+      "options": [
+        "Babeldaobilla",
+        "Peleliulla",
+        "Angaurilla",
+        "Kayangelilla"
       ],
-      "hyvaTietaa": [
-       {
-        "otsikko": "Palvelujen osoite",
-        "teksti": "Kororissa on majoituksen ja ravintoloiden keskittymä; päivän kuljetus suunnitellaan erikseen."
-       },
-       {
-        "otsikko": "Osavaltion käytännöt",
-        "teksti": "Tarkista ennen retkeä Melekeokin opastuksen saatavuus, hallintoalueen vierailukäytännöt, Ngardokin pääsy sekä sää ja reittien kunto."
-       },
-       {
-        "otsikko": "Suojelualueen pääsy",
-        "teksti": "Ngardokin käyttöä säädellään; järveä ei käsitellä vapaana uintikohteena."
-       }
+      "correct": 0,
+      "level": 1,
+      "hint": "Palaun kansainvälinen lentoasema sijaitsee saman saaren eteläosassa.",
+      "fact": "Ngerulmud on Babeldaobin saarella Melekeokin osavaltiossa.",
+      "source": "https://en.wikipedia.org/wiki/Ngerulmud"
+    },
+    {
+      "q": "Mitä paikannimen loppuosa mud tarkoittaa palaun kielessä?",
+      "options": [
+        "Kalannimeä",
+        "Kasvin nimeä",
+        "Kylän nimeä",
+        "Maastonmuodon nimeä"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Nimen tausta liittyy kukkulan vanhaan kulttuuriseen käyttöön.",
+      "fact": "Mud viittaa Centropyge tibicen -kalaan; Ngerulmudin nimi liittyy hapatettuun kalaan.",
+      "source": "https://en.wikipedia.org/wiki/Ngerulmud"
+    },
+    {
+      "q": "Mikä on Ngerulmudin kapitolialueen oma postinumero?",
+      "options": [
+        "96939",
+        "96940",
+        "96938",
+        "96941"
+      ],
+      "correct": 0,
+      "level": 2,
+      "hint": "Kapitolialueella on muusta maasta erottuva postinumero.",
+      "fact": "Kapitolialueelle käytetään postinumeroa 96939, kun Palaun yleinen postinumero on 96940.",
+      "source": "https://en.wikipedia.org/wiki/Ngerulmud"
+    },
+    {
+      "q": "Mitä Ngardokin suojelualue sisältää järven lisäksi?",
+      "options": [
+        "Valuma-aluetta ja suometsää",
+        "Laguunia ja koralliriuttaa",
+        "Merenrantaa ja mangrovea",
+        "Jokisuuta ja hiekkasärkkiä"
+      ],
+      "correct": 0,
+      "level": 1,
+      "hint": "Suojelu liittyy myös osavaltion vesihuoltoon.",
+      "fact": "Ngardokin suojelualue käsittää myös järven valuma-aluetta, puroja ja makean veden suometsää.",
+      "source": "https://en.wikipedia.org/wiki/Lake_Ngardok"
+    },
+    {
+      "q": "Missä osavaltiossa Ngerulmud sijaitsee?",
+      "options": [
+        "Melekeokissa",
+        "Ngarchelongissa",
+        "Ngeremlenguissa",
+        "Ngatpangissa"
+      ],
+      "correct": 0,
+      "level": 3,
+      "hint": "Sama nimi kuuluu myös pääkaupungin lähellä olevalle kylälle.",
+      "fact": "Ngerulmud sijaitsee Melekeokin osavaltiossa Babeldaobin saarella.",
+      "source": "https://en.wikipedia.org/wiki/Ngerulmud"
+    }
+  ],
+  "tiedot": [
+    "Ngerulmudin postinumero on 96939 ja muualla Palaussa käytetään 96940:tä. Oma postinumero säilyy osoitetietona, vaikka pääkaupungin lyhytaikainen postitoimisto suljettiin.",
+    "Paikannimen mud ei ole englannin sana muta, vaan palaun kalannimi. Ngerulmudin nimi liittyy Centropyge tibicen -kalaan ja paikalliseen hapatetun kalan perinteeseen.",
+    "Ngardok ei ole suojeltuna pelkkä järven vesipinta: suojelualueeseen kuuluvat myös valuma-alue, puroja ja makean veden suometsää."
+  ],
+  "kaupunkilehti": [
+    {
+      "id": "kaupunki",
+      "nimi": "Ngerulmud",
+      "johdanto": "Pääkaupungin rinnalla ovat Melekeokin kylät, rannikko ja Ngardokin valuma-alue. Hallinnon osoite on tarkka, mutta sen ympäristö on yhtä rakennusryhmää laajempi.",
+      "kansikuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "nostot": [
+        {
+          "otsikko": "Kolme nimeä, eri tehtävät",
+          "teksti": "Ngerulmud on Palaun hallintokeskus Melekeokin osavaltiossa, Babeldaobin saarella. Melekeok on myös lähellä sijaitsevan kylän nimi. Entinen pääkaupunki Koror on edelleen kauppojen, ravintoloiden ja majoituksen keskittymä. Kansallisen hallinnon rakennukset ovat Ngerulmudissa, mutta saarelle saapuva matkailija voi käyttää Kororin palveluja. Koror–Babeldaob-silta yhdistää nämä kaksi saarta, ja Babeldaobin eteläosassa sijaitsee Palaun kansainvälinen lentoasema.",
+          "wiki": "Ngerulmud",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Hapatettu kala paikannimessä",
+          "teksti": "Ngerulmudin nimi viittaa hapatettuun kalaan. Sen loppuosa mud on palaun kielen nimi Centropyge tibicen -kalalle, ei englannin mud eli muta. Paikallisessa perinteessä naiset kokoontuivat meren ylle kohoavalle kukkulalle tarjoamaan hapatettua kalaa jumalille. Palaun nykyinen hallintokukkula sijaitsee Babeldaobilla Melekeokin rannikkokylän luoteispuolella.",
+          "wiki": "Ngerulmud",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Postinumero jäi, postitoimisto lähti",
+          "teksti": "Ngerulmudin kapitolialue käyttää postinumeroa 96939, kun muualla Palaussa käytetään numeroa 96940. Hallintokeskukseen perustettiin myös postitoimisto, mutta se toimi vain lyhyen aikaa. Se suljettiin säästötoimena, kun menot olivat ylittäneet tuotot. Palaun postitoimisto sijaitsee Kororin pääkadulla. Yhdysvaltain postilaitos palvelee Palauta maiden vapaan assosiaation sopimuksen osana.",
+          "wiki": "Ngerulmud",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Osavaltio jatkuu rantaan",
+          "teksti": "Melekeokin osavaltio ulottuu Babeldaobin itärannikon laguunilta saaren keskiseen Rael Kedamin vedenjakajaan. Rannikolla on hiekkarantoja, sisämaassa kumpuilevia kukkuloita ja hitaita vedenkulkuja reunustavia soita. Pienet harjanteet laskeutuvat kohti rantaa. Mangrovea on osavaltion rannikon pohjois- ja eteläosissa, mutta se ei peitä koko keskistä rannikkoa.",
+          "wiki": "Melekeok",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "matkailijalle": {
+        "kuva": {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        "kappale": "Ngerulmud sijaitsee Babeldaobilla. Kororilta tullaan saarelle sillan yli maanteitse. Kororissa on majoituksen ja ravintoloiden keskittymä.",
+        "artikkeli": {
+          "nimi": "Matkailijan Ngerulmud",
+          "taitto": "opas",
+          "teksti": "Yhdistä hallintokeskuksen käynti Melekeokin paikalliseen ympäristöön.",
+          "nosto": "Koror–Babeldaob-silta yhdistää Palaun palvelukeskuksen saareen, jolla Ngerulmud sijaitsee.",
+          "jaksot": [
+            {
+              "otsikko": "Perille ja liikkeelle",
+              "teksti": "Roman Tmetuchlin kansainvälinen lentoasema on Babeldaobin eteläosassa. Kororilta saarelle pääsee Koror–Babeldaob-siltaa pitkin autolla tai taksilla. Ngerulmudiin jatketaan maanteitse.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Kapitoli ja Melekeokin kylät",
+              "teksti": "Ngerulmudissa sijaitsevat kansallisen hallinnon rakennukset, Melekeokissa puolestaan on kylien omaa arkea. Melekeokin opastetussa kulttuuriretkessä yhdistyvät vanhat kivipolut, paikallinen ruokailu ja käsityön esittely. Hallintorakennukset ovat toimivia virastoja.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Ngardokin suojeltu valuma-alue",
+              "teksti": "Ngardok on makean veden järvi Melekeokissa. Suojelu koskee sen valuma-aluetta, puroja ja suometsää. Ramsar-kohteen käyttötarkoituksiin kuuluvat ympäristökasvatus ja tutkimus. Järvellä on krokotiilien lisääntymisympäristöä.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Mitä täällä syödään",
+              "teksti": "Kororissa on ravintoloiden keskittymä ja japanilaistyylisiä bento-lounaita. Melekeokin opastettuun kulttuuriretkeen kuuluu paikallisten kokkien valmistama ateria. Osavaltion kylien viljelyyn kuuluvat taro, leipäpuu, banaani ja kookos.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            },
+            {
+              "otsikko": "Milloin kannattaa tulla",
+              "teksti": "Palaussa on lämmin trooppinen ilmasto, ja sadetta voi tulla ympäri vuoden.",
+              "kuva": {
+                "tiedosto": "",
+                "lyhyt": "",
+                "selite": "",
+                "lahde": ""
+              }
+            }
+          ],
+          "matkailu": {
+            "parasta": [
+              {
+                "mita": "Ngerulmud",
+                "tahdet": 3,
+                "selite": "Kansallinen hallintokeskus erottuu osavaltion kylistä."
+              },
+              {
+                "mita": "Melekeokin kulttuuriretki",
+                "tahdet": 3,
+                "selite": "Opastettu retki yhdistää polkuja, paikallista ruokailua ja käsityötä."
+              },
+              {
+                "mita": "Ngardokin valuma-alue",
+                "tahdet": 3,
+                "selite": "Suojelu ulottuu järveltä puroihin ja suometsään."
+              },
+              {
+                "mita": "Melekeokin itärannikko",
+                "tahdet": 2,
+                "selite": "Osavaltion hiekkarannat ja sisämaa näyttävät Babeldaobin eri puolia."
+              },
+              {
+                "mita": "Babeldaobin kyläviljelmät",
+                "tahdet": 2,
+                "selite": "Hedelmäpuut ja taroviljely kuuluvat paikalliseen maankäyttöön."
+              }
+            ],
+            "hyvaTietaa": [
+              {
+                "otsikko": "Palvelut Kororissa",
+                "teksti": "Kororissa on majoituksen ja ravintoloiden keskittymä."
+              },
+              {
+                "otsikko": "Suojelualue",
+                "teksti": "Ngardokin käynti järjestetään paikallisen ohjauksen mukaan."
+              },
+              {
+                "otsikko": "Valuma-alue",
+                "teksti": "Järven suojelu turvaa Melekeokin veden laatua."
+              }
+            ]
+          },
+          "lahde": "Wikipedia"
+        }
+      }
+    },
+    {
+      "id": "luonto",
+      "nimi": "Järvi, metsä ja kyläviljelmä",
+      "johdanto": "Ngardok yhdistää järven, valuma-alueen ja Palaun omien lajien elinpaikkoja. Melekeokin kylien viljelmät näyttävät toisen tavan käyttää samaa saarta.",
+      "tehtava": {
+        "kysymys": "Mitä viljelykasvia kasvatetaan Melekeokin kosteissa puutarhoissa?",
+        "vaihtoehdot": [
+          "Taroa",
+          "Leipäpuuta",
+          "Banaania",
+          "Betelpalmua"
+        ],
+        "oikea": 0,
+        "fakta": "Taro kuuluu Melekeokin viljelyyn, ja osavaltiosta tunnetaan myös kosteikkoihin sijoittuvia taropuutarhoja."
+      },
+      "nostot": [
+        {
+          "otsikko": "Järven suoja alkaa rannasta kauempaa",
+          "teksti": "Ngardokin suojelualue käsittää järven lisäksi sen valuma-alueen. Siihen kuuluu puroja, jokivarsien kosteikkoja ja makean veden suometsää. Suojelu liittyy Melekeokin vesihuoltoon, tulvien hallintaan ja veden laadun säilyttämiseen. Alueen käyttötarkoituksiin kuuluvat ympäristökasvatus ja tieteellinen tutkimus. Järvessä elää myös Palaun luonnonvaraisia kalalajeja.",
+          "wiki": "Lake Ngardok",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Krokotiilille reitti mereltä",
+          "teksti": "Ngardokin järvellä ja sitä ympäröivillä soilla elää suistokrokotiileja (Crocodylus porosus). Järvi on niille tärkeä lisääntymispaikka, vaikka laji tunnetaan monilla kielillä suolaisen veden krokotiilina. Ngerdorch-joki yhdistää järven mereen, ja krokotiilit voivat kulkea tätä vesireittiä pitkin. Suojelualueella järvi, purot ja makean veden suometsä kuuluvat samaan valuma-alueeseen. Ngardokin suojelu turvaa samalla krokotiilien elinympäristöä ja Melekeokin veden laatua.",
+          "wiki": "Lake Ngardok",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Biib ja metsän muut linnut",
+          "teksti": "Ngardokin suojelualueella elää Palaun omia lintulajeja. Niihin kuuluu palaunhedelmäkyyhky (Ptilinopus pelewensis), jonka paikallinen nimi on biib. Tämä lintu tunnetaan myös Palaun kansallislintuna. Suojelualueella esiintyy myös palaunviuhko (Rhipidura lepida). Lintujen elinalue on pääkaupungin hallintokortteleita laajempi: Babeldaobin keskisellä metsäisellä harjanteella on myös tärkeäksi tunnistettu lintualue.",
+          "wiki": "Lake Ngardok",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        },
+        {
+          "otsikko": "Puutarha ei pääty yhteen kasviin",
+          "teksti": "Melekeokin kylien ympärillä on puutarhoja ja viljelyä. Niiden lomassa kasvaa kookosta, betelpalmua, leipäpuuta, mantelipuita ja banaania. Osavaltiossa on myös kosteisiin paikkoihin sijoittuvia taropuutarhoja, joista osaa hoidetaan epäsäännöllisesti. Viljely keskittyy muun muassa Ngerubesangin, Ngerang Ngeramesin, Ngermelechin ja Ngeruliangin nykyisten kylien ympärille.",
+          "wiki": "Melekeok",
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
       ]
-     },
-     "lahde": "Wikipedia"
     }
-   }
+  ],
+  "valokuva": {
+    "tiedosto": "Ngerulmud 06.jpg",
+    "lyhyt": "Näkymä Ngerulmudista merelle.",
+    "selite": "Ngerulmudista merelle avautuva näkymä on kuvattu vuonna 2026.",
+    "lahde": "Zykasaa, Commons (CC BY 4.0)",
+    "vuosi": "2026"
   },
-  {
-   "id": "luonto",
-   "nimi": "Järvi, metsä ja kyläviljelmä",
-   "johdanto": "Ngardok yhdistää järven, valuma-alueen ja Palaun omien lajien elinpaikkoja. Melekeokin kylien viljelmät näyttävät toisen tavan käyttää samaa saarta.",
-   "tehtava": {
-    "kysymys": "Mitä viljelykasvia kasvatetaan Melekeokin kosteissa puutarhoissa?",
-    "vaihtoehdot": [
-     "Taroa",
-     "Leipäpuuta",
-     "Banaania",
-     "Betelpalmua"
-    ],
-    "oikea": 0,
-    "fakta": "Taro kuuluu Melekeokin viljelyyn, ja osavaltiosta tunnetaan myös kosteikkoihin sijoittuvia taropuutarhoja."
-   },
-   "nostot": [
-    {
-     "otsikko": "Järven suoja alkaa rannasta kauempaa",
-     "teksti": "Ngardokin suojelualue käsittää järven lisäksi sen valuma-alueen. Siihen kuuluu puroja, jokivarsien kosteikkoja ja makean veden suometsää. Suojelu liittyy myös Melekeokin vesihuoltoon, tulvien hallintaan ja veden laadun säilyttämiseen. Suojelualueen raja ulottuu järven rantaa kauemmas metsään ja purojen varsille. Järvi ja sitä ympäröivä maa kuuluvat samaan kokonaisuuteen. Alueen käyttötarkoituksiin kuuluvat ympäristökasvatus ja tieteellinen tutkimus; järven suojelu turvaa myös veden laatua ja Melekeokin vesihuoltoa.",
-     "wiki": "Lake Ngardok",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+  "kohdekartta": {
+    "numeroympyrat": true,
+    "esittely": "Ngardok on Melekeokin makean veden järvi, jota ympäröivät suojellut kosteikot ja metsä.",
+    "rajat": {
+      "pohjoinen": 7.5155,
+      "etela": 7.5095,
+      "lansi": 134.60061,
+      "ita": 134.60661
     },
-    {
-     "otsikko": "Krokotiilille reitti mereltä",
-     "teksti": "Ngardokin järvellä ja sitä ympäröivillä soilla elää suistokrokotiileja (Crocodylus porosus). Järvi on niille tärkeä lisääntymispaikka, vaikka laji tunnetaan monilla kielillä suolaisen veden krokotiilina. Ngerdorch-joki yhdistää järven mereen, ja krokotiilit voivat kulkea tätä vesireittiä pitkin. Suojelualueella järvi, purot ja makean veden suometsä kuuluvat samaan valuma-alueeseen. Ngardokin suojelu turvaa samalla krokotiilien elinympäristöä ja Melekeokin veden laatua.",
-     "wiki": "Lake Ngardok",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Biib ja metsän muut linnut",
-     "teksti": "Ngardokin suojelualueella elää Palaun omia lintulajeja. Niihin kuuluu palaunhedelmäkyyhky (Ptilinopus pelewensis), jonka paikallinen nimi on biib. Tämä lintu tunnetaan myös Palaun kansallislintuna. Suojelualueella esiintyy myös palaunviuhko (Rhipidura lepida). Lintujen elinalue on pääkaupungin hallintokortteleita laajempi: Babeldaobin keskisellä metsäisellä harjanteella on myös tärkeäksi tunnistettu lintualue. Pääkaupungin ympäristöön tutustuminen voi siten alkaa nimistä, jotka saarelaisilla on linnuille.",
-     "wiki": "Lake Ngardok",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    },
-    {
-     "otsikko": "Puutarha ei pääty yhteen kasviin",
-     "teksti": "Melekeokin nykyisten kylien ympärillä on puutarhoja ja viljelyä. Niiden lomassa kasvaa kookosta, betelpalmua, leipäpuuta, mantelipuita ja banaania. Osavaltiossa on myös kosteisiin paikkoihin sijoittuvia taropuutarhoja, joista osaa hoidetaan epäsäännöllisesti. Taropuutarhat ja puuvartiset viljelykasvit ovat kyläympäristön eri osia. Sen eri kasvit kuuluvat samassa kyläympäristössä elävään maankäyttöön. Ngerulmud on kansallisen hallinnon rakennusalue, ja Melekeokin kylissä jatkuu paikallinen viljely.",
-     "wiki": "Melekeok",
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
-    }
-   ]
-  }
- ],
- "valokuva": {
-  "tiedosto": "Ngerulmud 06.jpg",
-  "lyhyt": "Näkymä Ngerulmudista merelle.",
-  "selite": "Etualalla on palmuja, istutuksia ja nurmea; metsän takana avautuu meri pilvisen taivaan alla.",
-  "lahde": "Zykasaa, Commons (CC BY 4.0)",
-  "vuosi": "2026"
- },
- "kohdekartta": {
-  "numeroympyrat": true,
-  "esittely": "Ngardok on Melekeokin makean veden järvi, jota ympäröivät suojellut kosteikot ja metsä. Järven käynti järjestetään suojelualueen käytäntöjen mukaan.",
-  "rajat": {
-   "pohjoinen": 7.5155,
-   "etela": 7.5095,
-   "lansi": 134.60061,
-   "ita": 134.60661
+    "kohteet": [
+      {
+        "nimi": "Ngardok-järvi",
+        "tyyppi": "luonto",
+        "lat": 7.5125,
+        "lon": 134.60361
+      }
+    ]
   },
-  "kohteet": [
-   {
-    "nimi": "Ngardok-järvi",
-    "tyyppi": "luonto",
-    "lat": 7.5125,
-    "lon": 134.60361
-   }
-  ]
- },
- "nahtavyydet": {
-  "Ngardok-järvi": {
-   "aika": "Luonnonmuodostuma",
-   "teksti": "Ngardok on makean veden järvi Babeldaobin saarella Melekeokin osavaltiossa. Ramsar-kohteeseen kuuluu myös järven valuma-alue, puroja, jokivarsien kosteikkoja ja makean veden suometsää. Kokonaisuuden suojelu liittyy veden laadun säilyttämiseen ja Melekeokin vesihuoltoon.\n\nJärvi ja suot ovat suistokrokotiilien (Crocodylus porosus) lisääntymisympäristöä. Ngerdorch-joki yhdistää ne merelle. Alueella tavataan myös Palaun omia lintuja, kuten palaunhedelmäkyyhkyä (Ptilinopus pelewensis), paikalliselta nimeltään biib. Käynti järjestetään suojelualueen sääntöjen ja paikallisen ohjauksen mukaan; järveä ei esitellä uimapaikkana.",
-   "kuvat": [
-    {
-     "tiedosto": "",
-     "lyhyt": "",
-     "selite": "",
-     "lahde": ""
+  "nahtavyydet": {
+    "Ngardok-järvi": {
+      "aika": "Luonnonmuodostuma",
+      "teksti": "Ngardok on makean veden järvi Babeldaobin saarella Melekeokin osavaltiossa. Ramsar-kohteeseen kuuluu myös järven valuma-alue, puroja, jokivarsien kosteikkoja ja makean veden suometsää. Kokonaisuuden suojelu liittyy veden laadun säilyttämiseen ja Melekeokin vesihuoltoon.\n\nJärvi ja suot ovat suistokrokotiilien (Crocodylus porosus) lisääntymisympäristöä. Ngerdorch-joki yhdistää ne merelle. Alueella tavataan myös Palaun omia lintuja, kuten palaunhedelmäkyyhkyä (Ptilinopus pelewensis), paikalliselta nimeltään biib.",
+      "kuvat": [
+        {
+          "tiedosto": "",
+          "lyhyt": "",
+          "selite": "",
+          "lahde": ""
+        }
+      ],
+      "lahde": "Wikipedia"
     }
-   ],
-   "lahde": "Wikipedia"
+  },
+  "saatiedot": null,
+  "ehdotukset": {
+    "lentoasema": "Roman Tmetuchl International Airport (ROR)",
+    "huomiot": []
   }
- },
- "saatiedot": null,
- "ehdotukset": {
-  "lentoasema": "Roman Tmetuchl International Airport (ROR)",
-  "huomiot": [
-   "C-tekstiluonnos; 19 kuvaroolia tyhjinä. Modernien hallintorakennusten teossuoja varmentamatta, ei kuvia/karttakohteita niistä.",
-   "Kartta partial, vain Ngardok-järven oma WP-piste. Ei lainattu osavaltion, pääkaupungin tai Ramsar-suojelualueen pistettä järvelle.",
-   "Sää null, primäärivarmennus avoin. Ei ilmastolukuja eikä saa.json-muutoksia.",
-   "Melekeokin osavaltion väestöä ei esitetä Ngerulmudin väestönä. Ei tarkkaa nollan asukkaan väitettä eikä pienin-superlatiivia.",
-   "Ngardokin WP-järvipinta-alat ja Melekeokin artikkelin järven/suojelualueen alat ristiriitaisia: kaikki pinta-alat ja suurin-superlatiivit pois. Ramsar-tietueen eri kohdissa koordinaattiero, kartalla vain järven oma WP-piste.",
-   "Postinumerot 96939/96940 vahvistettu kahdesta riippumattomasta lähteestä (WP ja Palau Visitors Authority). Pääkaupungin tarkka käyttöönottovuosi yleistetty 2000-luvun aluksi.",
-   "Kororin palvelut erikseen, Melekeokin osavaltio/kylä erikseen. Rock Islands -maankansiaihetta ei toisteta. Suojelualueen nykyinen pääsy ja Melekeokin retken saatavuus varmistettava."
-  ]
- }
 }

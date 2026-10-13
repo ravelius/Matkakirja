@@ -3,7 +3,7 @@
   "era": "e14",
   "city": "canberra",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+  "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
   "assets": [
     {
       "era": "e14",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6e0dc401cd96a338cba9087de1744ea8c5d8ed266cea6847466af9f3483d8f0d",
+        "semanticContextSHA256": "762e80bad73b34af9b8ddde110903637033df5d90ff21d9f9fdc50d9b6e902d1",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -214,9 +214,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6e0dc401cd96a338cba9087de1744ea8c5d8ed266cea6847466af9f3483d8f0d",
+      "contextAfterSHA256": "762e80bad73b34af9b8ddde110903637033df5d90ff21d9f9fdc50d9b6e902d1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -239,7 +239,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "4938c21260482609f8f38f34f94881e5b630c12c5dd732a7b9494324780fbcf1",
+        "sameImageExportSHA256": "594f8a569de8d2d0f27cab316ac9a199b072e9238bc0819657f0410b7c2a5894",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -292,10 +300,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "355c9765abad132908a77f859ad70d4d4bb34615a9884a0948de97448bc3ee6f",
+        "semanticContextSHA256": "5c18cefb22eda2c08f146788d4f9af60ccb749450d08cf82e33dae33afaf891f",
         "subjectTitle": "Kaupunki järven ympärillä",
         "targetState": "existing-target"
       },
@@ -447,9 +455,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "355c9765abad132908a77f859ad70d4d4bb34615a9884a0948de97448bc3ee6f",
+      "contextAfterSHA256": "5c18cefb22eda2c08f146788d4f9af60ccb749450d08cf82e33dae33afaf891f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -472,7 +480,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "4003b4cb2623d59b4e34ad97e9180761b94b6b2cc38809d1574398cbc860b090",
+        "sameImageExportSHA256": "9d155a7f1f74555e6249f9370be7acee8b80d0a119aab4ef13124c61dbc57e4e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -525,10 +541,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "4ee30ed001515f70a96ae9d89eed1ab9ce9afbbce6bf65e9b4c8cfcbdeab4f57",
+        "semanticContextSHA256": "4fc9dba7ecb99b047094093a6d39f5bed4d4e6fda09b8c5b28a0cae4fe4dd773",
         "subjectTitle": "Suunnitelma näkyy huipulta",
         "targetState": "existing-target"
       },
@@ -680,9 +696,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "4ee30ed001515f70a96ae9d89eed1ab9ce9afbbce6bf65e9b4c8cfcbdeab4f57",
+      "contextAfterSHA256": "4fc9dba7ecb99b047094093a6d39f5bed4d4e6fda09b8c5b28a0cae4fe4dd773",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -705,7 +721,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "abfb72a6cc04a8c98b028e09e02ea103c2e010c5e04649cdbf019ea3593047af",
+        "sameImageExportSHA256": "2e9af3a9309cabe12b349589f174fa3c08e28f522e7280c898c04d41edd7dece",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -758,7 +782,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "9cf3f02845853e1f96479ef7df6ce710d9d5bd37427c656f9cec9222c1ac2771",
@@ -931,7 +955,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "9cf3f02845853e1f96479ef7df6ce710d9d5bd37427c656f9cec9222c1ac2771",
       "ownerApproved": true,
@@ -956,7 +980,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "27da84c19966b764e53688efefd8c8ef150009c26ada3a73356a7e5cc9109b25",
+        "sameImageExportSHA256": "ecb16fc7a814425b1775ba5a0992169fc5b810f64c4467fca313c872f4b261bc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1006,10 +1038,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c82f2b243391abf3de7b37cc357014312ebbcaa39518cc9bb9e1e351ff6ab086",
-        "semanticContextSHA256": "c82f2b243391abf3de7b37cc357014312ebbcaa39518cc9bb9e1e351ff6ab086",
+        "targetBeforeSHA256": "e1fcffba77e6c34f6e20f831804106d9304881e171dd33d7c8a5ff4788cda639",
+        "semanticContextSHA256": "e1fcffba77e6c34f6e20f831804106d9304881e171dd33d7c8a5ff4788cda639",
         "subjectTitle": "Kaupunki tuli näkyviin paperilla",
         "targetState": "existing-target"
       },
@@ -1161,9 +1193,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
-      "targetAfterSHA256": "c82f2b243391abf3de7b37cc357014312ebbcaa39518cc9bb9e1e351ff6ab086",
-      "contextAfterSHA256": "c82f2b243391abf3de7b37cc357014312ebbcaa39518cc9bb9e1e351ff6ab086",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+      "targetAfterSHA256": "e1fcffba77e6c34f6e20f831804106d9304881e171dd33d7c8a5ff4788cda639",
+      "contextAfterSHA256": "e1fcffba77e6c34f6e20f831804106d9304881e171dd33d7c8a5ff4788cda639",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1186,7 +1218,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "449958207aa3f9d69410b5e2b64f65517634e5d169ab621be50a0163498abc7c",
+        "sameImageExportSHA256": "c981eb51807cecbedd182b7ff233a859f0da23dd77a606f34f9719605ed59d57",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1236,10 +1276,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "14a0df5da298ebefc09aebc68cacb3744b991abb38d2701bf5d9362b6afeb7ee",
-        "semanticContextSHA256": "14a0df5da298ebefc09aebc68cacb3744b991abb38d2701bf5d9362b6afeb7ee",
+        "targetBeforeSHA256": "8f2cff4c76237c3b65af1529f987b0b8868e2cd3b0893df279924291ec0de438",
+        "semanticContextSHA256": "8f2cff4c76237c3b65af1529f987b0b8868e2cd3b0893df279924291ec0de438",
         "subjectTitle": "Mäki, johon kaupunki tähtää",
         "targetState": "existing-target"
       },
@@ -1397,9 +1437,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
-      "targetAfterSHA256": "14a0df5da298ebefc09aebc68cacb3744b991abb38d2701bf5d9362b6afeb7ee",
-      "contextAfterSHA256": "14a0df5da298ebefc09aebc68cacb3744b991abb38d2701bf5d9362b6afeb7ee",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+      "targetAfterSHA256": "8f2cff4c76237c3b65af1529f987b0b8868e2cd3b0893df279924291ec0de438",
+      "contextAfterSHA256": "8f2cff4c76237c3b65af1529f987b0b8868e2cd3b0893df279924291ec0de438",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1422,7 +1462,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "07f86a192ad54d47ae3115f67f2e36ec109fd8594365f439bfc76c79b2295bc0",
+        "sameImageExportSHA256": "3abf5da0c16817fe12226013b59dcbd840993dc5c5fd2afc5cb050ebba088d44",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1472,10 +1520,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "846cb4970119bc84d661093328d42d801c23314d08ac33819390b1724a75db12",
-        "semanticContextSHA256": "846cb4970119bc84d661093328d42d801c23314d08ac33819390b1724a75db12",
+        "targetBeforeSHA256": "d26856883e554905a4f53ffdc82b71d1d0658e7f397223449009ab93738298df",
+        "semanticContextSHA256": "d26856883e554905a4f53ffdc82b71d1d0658e7f397223449009ab93738298df",
         "subjectTitle": "Musta vuori, vaalea kivi",
         "targetState": "existing-target"
       },
@@ -1647,9 +1695,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
-      "targetAfterSHA256": "846cb4970119bc84d661093328d42d801c23314d08ac33819390b1724a75db12",
-      "contextAfterSHA256": "846cb4970119bc84d661093328d42d801c23314d08ac33819390b1724a75db12",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+      "targetAfterSHA256": "d26856883e554905a4f53ffdc82b71d1d0658e7f397223449009ab93738298df",
+      "contextAfterSHA256": "d26856883e554905a4f53ffdc82b71d1d0658e7f397223449009ab93738298df",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1672,7 +1720,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "a1a9d047b75a61324c6d0ed2ba117e5d651d9504f5beda4de82c0d57b98fb45f",
+        "sameImageExportSHA256": "14648d2b0f36639426789bc532f5fef478ae01b8684a90f1cdeabbbe64d1ad0b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1722,10 +1778,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "61e809e4a28f972c58a3460202efd7002c3ed6e3e96a4a1c576ae9756d96ab33",
-        "semanticContextSHA256": "61e809e4a28f972c58a3460202efd7002c3ed6e3e96a4a1c576ae9756d96ab33",
+        "targetBeforeSHA256": "e15f642a15ed2cdceb9758b7ffac08a4485432577073d9aee44b443b03b4dcdf",
+        "semanticContextSHA256": "e15f642a15ed2cdceb9758b7ffac08a4485432577073d9aee44b443b03b4dcdf",
         "subjectTitle": "Huipulle kulkee tie, mutta ei sinun autollesi",
         "targetState": "existing-target"
       },
@@ -1897,9 +1953,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
-      "targetAfterSHA256": "61e809e4a28f972c58a3460202efd7002c3ed6e3e96a4a1c576ae9756d96ab33",
-      "contextAfterSHA256": "61e809e4a28f972c58a3460202efd7002c3ed6e3e96a4a1c576ae9756d96ab33",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+      "targetAfterSHA256": "e15f642a15ed2cdceb9758b7ffac08a4485432577073d9aee44b443b03b4dcdf",
+      "contextAfterSHA256": "e15f642a15ed2cdceb9758b7ffac08a4485432577073d9aee44b443b03b4dcdf",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1922,7 +1978,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "16cb10f70d038238aef94d37a713248e6c49e572bd941818a25cec65c8b209f9",
+        "sameImageExportSHA256": "f88ace975cbe366e98ef209d59b220a24b75f7d8de505d09e7b2eacfdf4c4a8a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1972,10 +2036,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "7bbbdf8f8bec70e158394cb30a6073018efe8da94f006217d894f8ccc36b9743",
+        "semanticContextSHA256": "fced35f386735b78823d3c66610f1a849d8c8028ebb8f968a7417ee171a1f5ef",
         "subjectTitle": "Galambary – Black Mountain",
         "targetState": "existing-target"
       },
@@ -2137,9 +2201,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "7bbbdf8f8bec70e158394cb30a6073018efe8da94f006217d894f8ccc36b9743",
+      "contextAfterSHA256": "fced35f386735b78823d3c66610f1a849d8c8028ebb8f968a7417ee171a1f5ef",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2162,7 +2226,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "859f0d7705921fd885564891144730a06464e249cacf2cd9a0e7b2b460a6f924",
+        "sameImageExportSHA256": "9ed161f6a29c72a6557e4d5638c5d2441250ee32667010d42a35bf206ed472f2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -2212,10 +2284,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "f7804fcfdba51df38b7a2d62536e7ac889c383386d61a9b3f6cfce65dcba56b5",
+        "semanticContextSHA256": "3cb1d44f537be60611e47100db3fa690838ee51a9577d491a94d66fd337fb758",
         "subjectTitle": "Mount Ainslie",
         "targetState": "existing-target"
       },
@@ -2377,9 +2449,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "f7804fcfdba51df38b7a2d62536e7ac889c383386d61a9b3f6cfce65dcba56b5",
+      "contextAfterSHA256": "3cb1d44f537be60611e47100db3fa690838ee51a9577d491a94d66fd337fb758",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2402,7 +2474,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "7ad0ff1a1a954136ff33cdc0f310de2dff5ce2447c6b5a6b2c3bf031f299f7e2",
+        "sameImageExportSHA256": "6721d3b1e55295000e8f92340c0f33b29e6a4d03d1930041e70736e62f3183c9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -2452,10 +2532,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6b5920407ddcfe67f07a8bfce883ee5189279a927e1df936e34c6ac2fb19d6b7",
+        "semanticContextSHA256": "71e0b15d97b2b1dee64a53effaa5c39630dcefa23a1cf48c444c43be25bc5116",
         "subjectTitle": "Mount Majura",
         "targetState": "existing-target"
       },
@@ -2617,9 +2697,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6b5920407ddcfe67f07a8bfce883ee5189279a927e1df936e34c6ac2fb19d6b7",
+      "contextAfterSHA256": "71e0b15d97b2b1dee64a53effaa5c39630dcefa23a1cf48c444c43be25bc5116",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2642,7 +2722,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "2fc0f1607f663917f32cd9e3eaf7426d746fa2c18efe644f5df12c81eeea254e",
+        "sameImageExportSHA256": "76cf02fd03a77e6a1785cb570753babd785f55d911a2cb6f09afd4bc2f2e9fc5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -2661,14 +2749,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/canberra/photo-e1bf429bd125e3f4db80.jpg",
         "suora": true,
         "lahde": "-wuppertaler, Commons (CC BY 4.0)",
-        "selite": "Järven pinta täyttää etualan; vastarannalla näkyy puustoa ja rakennuksia pilvisen sinitaivaan alla.",
+        "selite": "Lake Burley Griffin on Canberran tekojärvi.",
         "lyhyt": "Lake Burley Griffinin vettä ja vastarannan rakennuksia.",
         "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 001.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "-wuppertaler, Commons (CC BY 4.0)",
-        "selite": "Järven pinta täyttää etualan; vastarannalla näkyy puustoa ja rakennuksia pilvisen sinitaivaan alla.",
+        "selite": "Lake Burley Griffin on Canberran tekojärvi.",
         "lyhyt": "Lake Burley Griffinin vettä ja vastarannan rakennuksia.",
         "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 001.jpg"
       },
@@ -2676,7 +2764,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/canberra/photo-e1bf429bd125e3f4db80.jpg",
         "suora": true,
         "lahde": "-wuppertaler, Commons (CC BY 4.0)",
-        "selite": "Järven pinta täyttää etualan; vastarannalla näkyy puustoa ja rakennuksia pilvisen sinitaivaan alla.",
+        "selite": "Lake Burley Griffin on Canberran tekojärvi.",
         "lyhyt": "Lake Burley Griffinin vettä ja vastarannan rakennuksia.",
         "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 001.jpg"
       },
@@ -2692,10 +2780,10 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "140317951fd54d6af1daeabc2c1419e2aa2d93f3e0be509d441308ad05ee6b55",
-        "semanticContextSHA256": "140317951fd54d6af1daeabc2c1419e2aa2d93f3e0be509d441308ad05ee6b55",
+        "targetBeforeSHA256": "9633f45c9e76b8fe101158d44a1b66ac50d436e68d58b52236ea5568c9f5f99b",
+        "semanticContextSHA256": "9633f45c9e76b8fe101158d44a1b66ac50d436e68d58b52236ea5568c9f5f99b",
         "subjectTitle": "canberra — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2863,7 +2951,7 @@
       "priorMediaFields": {
         "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 001.jpg",
         "lyhyt": "Lake Burley Griffinin vettä ja vastarannan rakennuksia.",
-        "selite": "Järven pinta täyttää etualan; vastarannalla näkyy puustoa ja rakennuksia pilvisen sinitaivaan alla.",
+        "selite": "Lake Burley Griffin on Canberran tekojärvi.",
         "lahde": "-wuppertaler, Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2890,14 +2978,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "-wuppertaler, Commons (CC BY 4.0)",
-        "selite": "Järven pinta täyttää etualan; vastarannalla näkyy puustoa ja rakennuksia pilvisen sinitaivaan alla.",
+        "selite": "Lake Burley Griffin on Canberran tekojärvi.",
         "lyhyt": "Lake Burley Griffinin vettä ja vastarannan rakennuksia.",
         "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 001.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
-      "targetAfterSHA256": "140317951fd54d6af1daeabc2c1419e2aa2d93f3e0be509d441308ad05ee6b55",
-      "contextAfterSHA256": "140317951fd54d6af1daeabc2c1419e2aa2d93f3e0be509d441308ad05ee6b55",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+      "targetAfterSHA256": "9633f45c9e76b8fe101158d44a1b66ac50d436e68d58b52236ea5568c9f5f99b",
+      "contextAfterSHA256": "9633f45c9e76b8fe101158d44a1b66ac50d436e68d58b52236ea5568c9f5f99b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2920,7 +3008,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "e1bf429bd125e3f4db803e94dcd84bae4576bcc0d4a4d1f5ce73bfba8df047b1",
+        "sameImageExportSHA256": "e1bf429bd125e3f4db803e94dcd84bae4576bcc0d4a4d1f5ce73bfba8df047b1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e14",
@@ -2942,14 +3038,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/canberra/c1-ae5b39d51ef079b792b3.jpg",
         "suora": true,
         "lahde": "-wuppertaler, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Järven vastarannalla näkyvät puisto ja rakennuksia; matala silta yhdistää rantoja.",
+        "selite": "Silta yhdistää Lake Burley Griffinin rannat Canberrassa.",
         "lyhyt": "Silta Lake Burley Griffinin yli.",
         "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 003.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "-wuppertaler, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Järven vastarannalla näkyvät puisto ja rakennuksia; matala silta yhdistää rantoja.",
+        "selite": "Silta yhdistää Lake Burley Griffinin rannat Canberrassa.",
         "lyhyt": "Silta Lake Burley Griffinin yli.",
         "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 003.jpg"
       },
@@ -2957,7 +3053,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/canberra/c1-ae5b39d51ef079b792b3.jpg",
         "suora": true,
         "lahde": "-wuppertaler, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Järven vastarannalla näkyvät puisto ja rakennuksia; matala silta yhdistää rantoja.",
+        "selite": "Silta yhdistää Lake Burley Griffinin rannat Canberrassa.",
         "lyhyt": "Silta Lake Burley Griffinin yli.",
         "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 003.jpg"
       },
@@ -2973,10 +3069,10 @@
         2134
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0afd0d63149add0540aa1c141ebd7dcef131a3a40c7bb59ebc175a068207ce9a",
-        "semanticContextSHA256": "0afd0d63149add0540aa1c141ebd7dcef131a3a40c7bb59ebc175a068207ce9a",
+        "targetBeforeSHA256": "fc0c879b28a19d4558ae90fc56752881abe05e6b683d4dea67d823ce38c7d64c",
+        "semanticContextSHA256": "fc0c879b28a19d4558ae90fc56752881abe05e6b683d4dea67d823ce38c7d64c",
         "subjectTitle": "Canberra",
         "targetState": "existing-target"
       },
@@ -3144,7 +3240,7 @@
       "priorMediaFields": {
         "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 003.jpg",
         "lyhyt": "Silta Lake Burley Griffinin yli.",
-        "selite": "Järven vastarannalla näkyvät puisto ja rakennuksia; matala silta yhdistää rantoja.",
+        "selite": "Silta yhdistää Lake Burley Griffinin rannat Canberrassa.",
         "lahde": "-wuppertaler, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3171,14 +3267,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "-wuppertaler, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Järven vastarannalla näkyvät puisto ja rakennuksia; matala silta yhdistää rantoja.",
+        "selite": "Silta yhdistää Lake Burley Griffinin rannat Canberrassa.",
         "lyhyt": "Silta Lake Burley Griffinin yli.",
         "tiedosto": "AUS Canberra, Central, Lake Burley Griffin 003.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
-      "targetAfterSHA256": "0afd0d63149add0540aa1c141ebd7dcef131a3a40c7bb59ebc175a068207ce9a",
-      "contextAfterSHA256": "0afd0d63149add0540aa1c141ebd7dcef131a3a40c7bb59ebc175a068207ce9a",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+      "targetAfterSHA256": "fc0c879b28a19d4558ae90fc56752881abe05e6b683d4dea67d823ce38c7d64c",
+      "contextAfterSHA256": "fc0c879b28a19d4558ae90fc56752881abe05e6b683d4dea67d823ce38c7d64c",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3201,7 +3297,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "ae5b39d51ef079b792b3236f55d29e670dd367e359e79dc9b8baaff729756d73",
+        "sameImageExportSHA256": "ae5b39d51ef079b792b3236f55d29e670dd367e359e79dc9b8baaff729756d73",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e14",
@@ -3223,14 +3327,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/canberra/c2-5c8dbad1df03582e7499.jpg",
         "suora": true,
         "lahde": "Tej Bhat, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Lentokoneen siiven alla näkyvät Canberran kaupunkialue, järvi ja ympäröivää kuivaa maastoa.",
+        "selite": "Ilmakuva Canberrasta on otettu joulukuussa 2025.",
         "lyhyt": "Canberra lentokoneesta joulukuussa 2025.",
         "tiedosto": "Aerial view of Canberra, Australia - December 2025.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Tej Bhat, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Lentokoneen siiven alla näkyvät Canberran kaupunkialue, järvi ja ympäröivää kuivaa maastoa.",
+        "selite": "Ilmakuva Canberrasta on otettu joulukuussa 2025.",
         "lyhyt": "Canberra lentokoneesta joulukuussa 2025.",
         "tiedosto": "Aerial view of Canberra, Australia - December 2025.jpg"
       },
@@ -3238,7 +3342,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/canberra/c2-5c8dbad1df03582e7499.jpg",
         "suora": true,
         "lahde": "Tej Bhat, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Lentokoneen siiven alla näkyvät Canberran kaupunkialue, järvi ja ympäröivää kuivaa maastoa.",
+        "selite": "Ilmakuva Canberrasta on otettu joulukuussa 2025.",
         "lyhyt": "Canberra lentokoneesta joulukuussa 2025.",
         "tiedosto": "Aerial view of Canberra, Australia - December 2025.jpg"
       },
@@ -3254,10 +3358,10 @@
         4080
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "85f0c1527bd05ea78565a7e1dc4b028cb5d399ca9652d619af17eab99c86f41c",
-        "semanticContextSHA256": "85f0c1527bd05ea78565a7e1dc4b028cb5d399ca9652d619af17eab99c86f41c",
+        "targetBeforeSHA256": "c88e20edd5b754cdd16c5971cbdcac41c0c97dee7b45c042f857f7fa6b884215",
+        "semanticContextSHA256": "c88e20edd5b754cdd16c5971cbdcac41c0c97dee7b45c042f857f7fa6b884215",
         "subjectTitle": "Canberra",
         "targetState": "existing-target"
       },
@@ -3425,7 +3529,7 @@
       "priorMediaFields": {
         "tiedosto": "Aerial view of Canberra, Australia - December 2025.jpg",
         "lyhyt": "Canberra lentokoneesta joulukuussa 2025.",
-        "selite": "Lentokoneen siiven alla näkyvät Canberran kaupunkialue, järvi ja ympäröivää kuivaa maastoa.",
+        "selite": "Ilmakuva Canberrasta on otettu joulukuussa 2025.",
         "lahde": "Tej Bhat, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3452,14 +3556,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Tej Bhat, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Lentokoneen siiven alla näkyvät Canberran kaupunkialue, järvi ja ympäröivää kuivaa maastoa.",
+        "selite": "Ilmakuva Canberrasta on otettu joulukuussa 2025.",
         "lyhyt": "Canberra lentokoneesta joulukuussa 2025.",
         "tiedosto": "Aerial view of Canberra, Australia - December 2025.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
-      "targetAfterSHA256": "85f0c1527bd05ea78565a7e1dc4b028cb5d399ca9652d619af17eab99c86f41c",
-      "contextAfterSHA256": "85f0c1527bd05ea78565a7e1dc4b028cb5d399ca9652d619af17eab99c86f41c",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+      "targetAfterSHA256": "c88e20edd5b754cdd16c5971cbdcac41c0c97dee7b45c042f857f7fa6b884215",
+      "contextAfterSHA256": "c88e20edd5b754cdd16c5971cbdcac41c0c97dee7b45c042f857f7fa6b884215",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3482,7 +3586,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "5c8dbad1df03582e74999affabaa39c761b6d8269a8ffde7f12c42674052b120",
+        "sameImageExportSHA256": "5c8dbad1df03582e74999affabaa39c761b6d8269a8ffde7f12c42674052b120",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e14",
@@ -3504,14 +3616,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/canberra/k4-951ce65998f2c46b2be4.jpg",
         "suora": true,
         "lahde": "Shkuru Afshar, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Matalan talon kiviseinät, tiilipiiput ja peltikatto näkyvät aidatun pihan takana; järvi avautuu taustalla.",
+        "selite": "Blundells Cottage on Canberran pääkaupunkia edeltäneen maatila-asutuksen rakennus.",
         "lyhyt": "Blundells Cottagen kivitalo ja piharakennus.",
         "tiedosto": "Blundells Cottage overview.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Shkuru Afshar, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Matalan talon kiviseinät, tiilipiiput ja peltikatto näkyvät aidatun pihan takana; järvi avautuu taustalla.",
+        "selite": "Blundells Cottage on Canberran pääkaupunkia edeltäneen maatila-asutuksen rakennus.",
         "lyhyt": "Blundells Cottagen kivitalo ja piharakennus.",
         "tiedosto": "Blundells Cottage overview.jpg"
       },
@@ -3519,7 +3631,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/canberra/k4-951ce65998f2c46b2be4.jpg",
         "suora": true,
         "lahde": "Shkuru Afshar, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Matalan talon kiviseinät, tiilipiiput ja peltikatto näkyvät aidatun pihan takana; järvi avautuu taustalla.",
+        "selite": "Blundells Cottage on Canberran pääkaupunkia edeltäneen maatila-asutuksen rakennus.",
         "lyhyt": "Blundells Cottagen kivitalo ja piharakennus.",
         "tiedosto": "Blundells Cottage overview.jpg"
       },
@@ -3535,10 +3647,10 @@
         2252
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/canberra/sisalto.json",
-      "sourceContentSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
+      "sourceContentSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8071bc156a05fd8bef4be76189680b2a87235446f22611c2405e81c772272931",
-        "semanticContextSHA256": "8071bc156a05fd8bef4be76189680b2a87235446f22611c2405e81c772272931",
+        "targetBeforeSHA256": "218e9fd897a03f0808cb4598b1bb5cf7713a5870b01f6deb61eaee29085649d8",
+        "semanticContextSHA256": "218e9fd897a03f0808cb4598b1bb5cf7713a5870b01f6deb61eaee29085649d8",
         "subjectTitle": "Maatilan mökki keskellä pääkaupunkia",
         "targetState": "existing-target"
       },
@@ -3708,7 +3820,7 @@
       "priorMediaFields": {
         "tiedosto": "Blundells Cottage overview.jpg",
         "lyhyt": "Blundells Cottagen kivitalo ja piharakennus.",
-        "selite": "Matalan talon kiviseinät, tiilipiiput ja peltikatto näkyvät aidatun pihan takana; järvi avautuu taustalla.",
+        "selite": "Blundells Cottage on Canberran pääkaupunkia edeltäneen maatila-asutuksen rakennus.",
         "lahde": "Shkuru Afshar, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3735,14 +3847,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Shkuru Afshar, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Matalan talon kiviseinät, tiilipiiput ja peltikatto näkyvät aidatun pihan takana; järvi avautuu taustalla.",
+        "selite": "Blundells Cottage on Canberran pääkaupunkia edeltäneen maatila-asutuksen rakennus.",
         "lyhyt": "Blundells Cottagen kivitalo ja piharakennus.",
         "tiedosto": "Blundells Cottage overview.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "0e8b6e7164cc877985bed3cbfb2c44459111da52ec8038318ca5b3c4cc5e831e",
-      "targetAfterSHA256": "8071bc156a05fd8bef4be76189680b2a87235446f22611c2405e81c772272931",
-      "contextAfterSHA256": "8071bc156a05fd8bef4be76189680b2a87235446f22611c2405e81c772272931",
+      "sourceContentAfterSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+      "targetAfterSHA256": "218e9fd897a03f0808cb4598b1bb5cf7713a5870b01f6deb61eaee29085649d8",
+      "contextAfterSHA256": "218e9fd897a03f0808cb4598b1bb5cf7713a5870b01f6deb61eaee29085649d8",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3765,7 +3877,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "bb17f75e62a51b7bf8d9dc978314f1a9c80d905ff0e20de4f12af224a62e1939",
+        "sameImageNativeSHA256": "951ce65998f2c46b2be4ecc5f8d22fff3f12396fed035a2c224cc96141c48d95",
+        "sameImageExportSHA256": "951ce65998f2c46b2be4ecc5f8d22fff3f12396fed035a2c224cc96141c48d95",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -3777,6 +3897,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e14/canberra/c11f50ef6ed39a3d82bb47c74fddc1cf54c31be22aa4067c918cc1488f40bdab.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.646312+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e14/canberra/3c8c7d59237cfb6856c381c7347adec5aa847d0f55e1db74247771e3154e081e.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.646312+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:49.078135+00:00"
 }

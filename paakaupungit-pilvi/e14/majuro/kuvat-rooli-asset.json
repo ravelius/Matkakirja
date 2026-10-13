@@ -3,7 +3,7 @@
   "era": "e14",
   "city": "majuro",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+  "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
   "assets": [
     {
       "era": "e14",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "9d9d441b03fafe8582259f47cb7bc04c75193bcdf5af9f6c0e90dcf9c2671834",
+        "semanticContextSHA256": "eb88c2e1b58bfc1fe40e9bcfdd6b5c294eac0c5f40c5a0416991c83cb8b93184",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -268,9 +268,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "9d9d441b03fafe8582259f47cb7bc04c75193bcdf5af9f6c0e90dcf9c2671834",
+      "contextAfterSHA256": "eb88c2e1b58bfc1fe40e9bcfdd6b5c294eac0c5f40c5a0416991c83cb8b93184",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -293,7 +293,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "538c92ba9c9f3e195e07a2461a0211d97e12ed97de6eb871a0473bf05c843eda",
+        "sameImageExportSHA256": "29f56b2f7f9c330f6e7add18c048e6fa85b964ecc5eb8359b82ec2db13b8d9f8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -346,10 +354,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "1153152b6fac1db533cec71bd68a4b7719eaa71172b7d507b150c68a0b623ed9",
+        "semanticContextSHA256": "a44a8e7b714e4d06febac3dc93ac3ee0b7a4416f85c873faebd116acb80fdee7",
         "subjectTitle": "Alele ja elävä venetaito",
         "targetState": "existing-target"
       },
@@ -555,9 +563,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "1153152b6fac1db533cec71bd68a4b7719eaa71172b7d507b150c68a0b623ed9",
+      "contextAfterSHA256": "a44a8e7b714e4d06febac3dc93ac3ee0b7a4416f85c873faebd116acb80fdee7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -580,7 +588,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "50aebc632f20eeac77e4e9e218b4a789aa56944c74b1fde00fc66fbdeea17020",
+        "sameImageExportSHA256": "3999ab2bbfd8278c9f18b142886f210bcd260b52cb1530484d10acae8bf5b25a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -633,10 +649,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "764afa26a2af842ac0f8f24a7606ad9fc1eb962b3d5791de0389d884218d40e7",
+        "semanticContextSHA256": "6f81115ac99a1c5aac41d717771245d7b9345bcba8ee32325f19875fcb708989",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -844,9 +860,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "764afa26a2af842ac0f8f24a7606ad9fc1eb962b3d5791de0389d884218d40e7",
+      "contextAfterSHA256": "6f81115ac99a1c5aac41d717771245d7b9345bcba8ee32325f19875fcb708989",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -869,7 +885,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "602827cc93779f66d446f6c30014db4b70324622e9d59084b1586b391dc93e6a",
+        "sameImageExportSHA256": "304bb50affa4b2f25f2fe7c7c98508afcd4982c8278feefae1eaf7621408f53b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -919,10 +943,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ce4dae8a88ace058f4cfa65a6e57b27f94253ed275b6c3f4e152879c3bafd7ab",
-        "semanticContextSHA256": "ce4dae8a88ace058f4cfa65a6e57b27f94253ed275b6c3f4e152879c3bafd7ab",
+        "targetBeforeSHA256": "d5363ecae87945715f907c9ceeb505a6c74c68028cfc5b45a4d9ecca6700ec2e",
+        "semanticContextSHA256": "d5363ecae87945715f907c9ceeb505a6c74c68028cfc5b45a4d9ecca6700ec2e",
         "subjectTitle": "Lentoasema kerää vettä",
         "targetState": "existing-target"
       },
@@ -1132,9 +1156,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
-      "targetAfterSHA256": "ce4dae8a88ace058f4cfa65a6e57b27f94253ed275b6c3f4e152879c3bafd7ab",
-      "contextAfterSHA256": "ce4dae8a88ace058f4cfa65a6e57b27f94253ed275b6c3f4e152879c3bafd7ab",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+      "targetAfterSHA256": "d5363ecae87945715f907c9ceeb505a6c74c68028cfc5b45a4d9ecca6700ec2e",
+      "contextAfterSHA256": "d5363ecae87945715f907c9ceeb505a6c74c68028cfc5b45a4d9ecca6700ec2e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1157,7 +1181,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "54dfbc860f9227225c8decd0e2672faaa5bceb2544210701c3abc0a96178f1dc",
+        "sameImageExportSHA256": "d1c216d0bc48871e1e5eb94776f1a98712543a72bc510e24e9232a65dd9ceab5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1207,10 +1239,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "dae09cabbfef4ef6da406deeae1ec44d2fb1fd2c7b2345177f6d7a9ec528de69",
-        "semanticContextSHA256": "dae09cabbfef4ef6da406deeae1ec44d2fb1fd2c7b2345177f6d7a9ec528de69",
+        "targetBeforeSHA256": "733032751a86b3fce6b0d5d3888088f334ba43cafc340e1baa67acdfa70571f5",
+        "semanticContextSHA256": "733032751a86b3fce6b0d5d3888088f334ba43cafc340e1baa67acdfa70571f5",
         "subjectTitle": "Tonnikalan vaihtopaikka",
         "targetState": "existing-target"
       },
@@ -1418,9 +1450,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
-      "targetAfterSHA256": "dae09cabbfef4ef6da406deeae1ec44d2fb1fd2c7b2345177f6d7a9ec528de69",
-      "contextAfterSHA256": "dae09cabbfef4ef6da406deeae1ec44d2fb1fd2c7b2345177f6d7a9ec528de69",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+      "targetAfterSHA256": "733032751a86b3fce6b0d5d3888088f334ba43cafc340e1baa67acdfa70571f5",
+      "contextAfterSHA256": "733032751a86b3fce6b0d5d3888088f334ba43cafc340e1baa67acdfa70571f5",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1443,7 +1475,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "51afdc9567fb40147101226acde790e73e32e668d7f873bf806014fcc7f38bb8",
+        "sameImageExportSHA256": "408804dd219ba0b9731693ea51deba00227ef62c9fd6eb6246fe0b32c8545585",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1493,10 +1533,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ef82487f2b9a2d5155076d0765e25f0b6b5703eb94b365fba268f34430d4cc27",
-        "semanticContextSHA256": "ef82487f2b9a2d5155076d0765e25f0b6b5703eb94b365fba268f34430d4cc27",
+        "targetBeforeSHA256": "9dc05037baa3e8338418c7ca9d16c8e059c9346f7b9a1526af5e23571ba4178b",
+        "semanticContextSHA256": "9dc05037baa3e8338418c7ca9d16c8e059c9346f7b9a1526af5e23571ba4178b",
         "subjectTitle": "Dieselin kookoskokeilu",
         "targetState": "existing-target"
       },
@@ -1704,9 +1744,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
-      "targetAfterSHA256": "ef82487f2b9a2d5155076d0765e25f0b6b5703eb94b365fba268f34430d4cc27",
-      "contextAfterSHA256": "ef82487f2b9a2d5155076d0765e25f0b6b5703eb94b365fba268f34430d4cc27",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+      "targetAfterSHA256": "9dc05037baa3e8338418c7ca9d16c8e059c9346f7b9a1526af5e23571ba4178b",
+      "contextAfterSHA256": "9dc05037baa3e8338418c7ca9d16c8e059c9346f7b9a1526af5e23571ba4178b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1729,7 +1769,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "967b8de274bc850a5b8d26d217eb5693c89c2f37220fac29b4d8a2d344de99f3",
+        "sameImageExportSHA256": "c385c7ba1fa21a5d18d5fb9fd2ae2c717534eeea7d85b208dcf06948141ab781",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -1779,10 +1827,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a894312ede01a8d9608698e6a89e9b497cb5cb67cb63ff093e4a415a4a1e8911",
-        "semanticContextSHA256": "a894312ede01a8d9608698e6a89e9b497cb5cb67cb63ff093e4a415a4a1e8911",
+        "targetBeforeSHA256": "a1fe37f0fcc2460e0716cda13b2a87b8b0897af488d4da382206983ab1d2a4b7",
+        "semanticContextSHA256": "a1fe37f0fcc2460e0716cda13b2a87b8b0897af488d4da382206983ab1d2a4b7",
         "subjectTitle": "Aarreastia ja radioaallot",
         "targetState": "existing-target"
       },
@@ -1988,9 +2036,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
-      "targetAfterSHA256": "a894312ede01a8d9608698e6a89e9b497cb5cb67cb63ff093e4a415a4a1e8911",
-      "contextAfterSHA256": "a894312ede01a8d9608698e6a89e9b497cb5cb67cb63ff093e4a415a4a1e8911",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+      "targetAfterSHA256": "a1fe37f0fcc2460e0716cda13b2a87b8b0897af488d4da382206983ab1d2a4b7",
+      "contextAfterSHA256": "a1fe37f0fcc2460e0716cda13b2a87b8b0897af488d4da382206983ab1d2a4b7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2013,7 +2061,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "15c30584499166090ee8a49848d9f001afc2d7233f0ed6b3dc38ac50ea545e8d",
+        "sameImageExportSHA256": "07013082b7b2489440b34d3cdc3b78b003539a178f71232a817dd50f457f8931",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -2063,7 +2119,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b806d83d98ad0b0d4ca890d6ab97d9ee6506384489014814efb0ad482dea3243",
         "semanticContextSHA256": "b806d83d98ad0b0d4ca890d6ab97d9ee6506384489014814efb0ad482dea3243",
@@ -2274,7 +2330,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "targetAfterSHA256": "b806d83d98ad0b0d4ca890d6ab97d9ee6506384489014814efb0ad482dea3243",
       "contextAfterSHA256": "b806d83d98ad0b0d4ca890d6ab97d9ee6506384489014814efb0ad482dea3243",
       "ownerApproved": true,
@@ -2299,7 +2355,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "e4ec48bb2ff0a03cd0e1ec80c29e6eb61620f87cceba803ec2d64bf1ea725da7",
+        "sameImageExportSHA256": "4b7c26512e7523412880f896098bab78b89a499339cc1a856d4fa5bce1768654",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -2349,10 +2413,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "65d3f5217dba43be7b22edae8baa345c6bb72a5f5c9b3400833dcf56a1dd8c0d",
-        "semanticContextSHA256": "65d3f5217dba43be7b22edae8baa345c6bb72a5f5c9b3400833dcf56a1dd8c0d",
+        "targetBeforeSHA256": "5ff87a29ea456617dd97c027dba8dbc6522f9026a457b2fdb3bddf74784a7f2e",
+        "semanticContextSHA256": "5ff87a29ea456617dd97c027dba8dbc6522f9026a457b2fdb3bddf74784a7f2e",
         "subjectTitle": "Saari tuntuu veneen liikkeessä",
         "targetState": "existing-target"
       },
@@ -2560,9 +2624,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
-      "targetAfterSHA256": "65d3f5217dba43be7b22edae8baa345c6bb72a5f5c9b3400833dcf56a1dd8c0d",
-      "contextAfterSHA256": "65d3f5217dba43be7b22edae8baa345c6bb72a5f5c9b3400833dcf56a1dd8c0d",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+      "targetAfterSHA256": "5ff87a29ea456617dd97c027dba8dbc6522f9026a457b2fdb3bddf74784a7f2e",
+      "contextAfterSHA256": "5ff87a29ea456617dd97c027dba8dbc6522f9026a457b2fdb3bddf74784a7f2e",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2585,7 +2649,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "cc6364b513251fac6770d4363905490cd76b99b17a73fe19c752fc76f4192026",
+        "sameImageExportSHA256": "a9b08a2652ffd84defd08d80cfbfa99924e871b2a9971ebe136d5705467deb3c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -2635,10 +2707,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2cee925c0814ad753b343b8ee9d5d0dc42a3d77e5dc48c3ebd941694d00143e4",
-        "semanticContextSHA256": "2cee925c0814ad753b343b8ee9d5d0dc42a3d77e5dc48c3ebd941694d00143e4",
+        "targetBeforeSHA256": "ba45e32b86b47c3b9419dbe907ac75459fd101041734b20fb37794bb2cc91812",
+        "semanticContextSHA256": "ba45e32b86b47c3b9419dbe907ac75459fd101041734b20fb37794bb2cc91812",
         "subjectTitle": "Veneestä osaamista nuorille",
         "targetState": "existing-target"
       },
@@ -2844,9 +2916,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
-      "targetAfterSHA256": "2cee925c0814ad753b343b8ee9d5d0dc42a3d77e5dc48c3ebd941694d00143e4",
-      "contextAfterSHA256": "2cee925c0814ad753b343b8ee9d5d0dc42a3d77e5dc48c3ebd941694d00143e4",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+      "targetAfterSHA256": "ba45e32b86b47c3b9419dbe907ac75459fd101041734b20fb37794bb2cc91812",
+      "contextAfterSHA256": "ba45e32b86b47c3b9419dbe907ac75459fd101041734b20fb37794bb2cc91812",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2869,7 +2941,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "1a03e7622f8ed0ddd76106566fd2abf52f0d857213bac1f4afc432853c8bddd6",
+        "sameImageExportSHA256": "9b510380355b7146c07199651fee20893390565ff757feebe369279d0d5f0849",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -2919,10 +2999,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "fe851bf6927c941a218da4810b84641c9930c4ff70f438bef9b905b7a527f014",
-        "semanticContextSHA256": "fe851bf6927c941a218da4810b84641c9930c4ff70f438bef9b905b7a527f014",
+        "targetBeforeSHA256": "3921b164f2004b1e35d30a09ae7c25637294f6b0372319c5db120950be759080",
+        "semanticContextSHA256": "3921b164f2004b1e35d30a09ae7c25637294f6b0372319c5db120950be759080",
         "subjectTitle": "Veden eri tehtävät",
         "targetState": "existing-target"
       },
@@ -3128,9 +3208,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
-      "targetAfterSHA256": "fe851bf6927c941a218da4810b84641c9930c4ff70f438bef9b905b7a527f014",
-      "contextAfterSHA256": "fe851bf6927c941a218da4810b84641c9930c4ff70f438bef9b905b7a527f014",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+      "targetAfterSHA256": "3921b164f2004b1e35d30a09ae7c25637294f6b0372319c5db120950be759080",
+      "contextAfterSHA256": "3921b164f2004b1e35d30a09ae7c25637294f6b0372319c5db120950be759080",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3153,7 +3233,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "2a1a8834f03fd985387be1876fe4f7ad77baed8bb3e15a28de46c197913cd3fd",
+        "sameImageExportSHA256": "e81e583ba71d6651f9a36f6824715eace8fc53f443697a9af67abd0401b42458",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e14",
@@ -3172,14 +3260,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/majuro/photo-4e5ad2943f7b683f08df.jpg",
         "suora": true,
         "lahde": "Cliff Hansen, Commons (CC BY-SA 4.0)",
-        "selite": "360 asteen panoraamassa näkyy matalaa vettä ja palmujen peittämää saareketta; kuva esittää Majuron atollin Enekoa.",
+        "selite": "Panoraamakuva Eneko-saarekkeesta Majuron atollilla.",
         "lyhyt": "Eneko-saareke Majuron atollilla panoraamakuvassa.",
         "tiedosto": "Eneko Islet 01.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Cliff Hansen, Commons (CC BY-SA 4.0)",
-        "selite": "360 asteen panoraamassa näkyy matalaa vettä ja palmujen peittämää saareketta; kuva esittää Majuron atollin Enekoa.",
+        "selite": "Panoraamakuva Eneko-saarekkeesta Majuron atollilla.",
         "lyhyt": "Eneko-saareke Majuron atollilla panoraamakuvassa.",
         "tiedosto": "Eneko Islet 01.jpg"
       },
@@ -3187,7 +3275,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/majuro/photo-4e5ad2943f7b683f08df.jpg",
         "suora": true,
         "lahde": "Cliff Hansen, Commons (CC BY-SA 4.0)",
-        "selite": "360 asteen panoraamassa näkyy matalaa vettä ja palmujen peittämää saareketta; kuva esittää Majuron atollin Enekoa.",
+        "selite": "Panoraamakuva Eneko-saarekkeesta Majuron atollilla.",
         "lyhyt": "Eneko-saareke Majuron atollilla panoraamakuvassa.",
         "tiedosto": "Eneko Islet 01.jpg"
       },
@@ -3203,10 +3291,10 @@
         1900
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "7596ba3d581971d4027896c4079c7c4b96015b11159c71f4fb2daf4f8a53bfce",
-        "semanticContextSHA256": "7596ba3d581971d4027896c4079c7c4b96015b11159c71f4fb2daf4f8a53bfce",
+        "targetBeforeSHA256": "6d4fa0711c3ffb15f9bba520f3c4b18906586218ff503d36c047a0f9511113d9",
+        "semanticContextSHA256": "6d4fa0711c3ffb15f9bba520f3c4b18906586218ff503d36c047a0f9511113d9",
         "subjectTitle": "majuro — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -3392,7 +3480,7 @@
       "priorMediaFields": {
         "tiedosto": "Eneko Islet 01.jpg",
         "lyhyt": "Eneko-saareke Majuron atollilla panoraamakuvassa.",
-        "selite": "360 asteen panoraamassa näkyy matalaa vettä ja palmujen peittämää saareketta; kuva esittää Majuron atollin Enekoa.",
+        "selite": "Panoraamakuva Eneko-saarekkeesta Majuron atollilla.",
         "lahde": "Cliff Hansen, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3419,14 +3507,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Cliff Hansen, Commons (CC BY-SA 4.0)",
-        "selite": "360 asteen panoraamassa näkyy matalaa vettä ja palmujen peittämää saareketta; kuva esittää Majuron atollin Enekoa.",
+        "selite": "Panoraamakuva Eneko-saarekkeesta Majuron atollilla.",
         "lyhyt": "Eneko-saareke Majuron atollilla panoraamakuvassa.",
         "tiedosto": "Eneko Islet 01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
-      "targetAfterSHA256": "7596ba3d581971d4027896c4079c7c4b96015b11159c71f4fb2daf4f8a53bfce",
-      "contextAfterSHA256": "7596ba3d581971d4027896c4079c7c4b96015b11159c71f4fb2daf4f8a53bfce",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+      "targetAfterSHA256": "6d4fa0711c3ffb15f9bba520f3c4b18906586218ff503d36c047a0f9511113d9",
+      "contextAfterSHA256": "6d4fa0711c3ffb15f9bba520f3c4b18906586218ff503d36c047a0f9511113d9",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3449,7 +3537,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "4e5ad2943f7b683f08dfa7f71975e38a7915aa799751bf5a1aebb0d17efb0b41",
+        "sameImageExportSHA256": "4e5ad2943f7b683f08dfa7f71975e38a7915aa799751bf5a1aebb0d17efb0b41",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e14",
@@ -3471,14 +3567,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/majuro/c1-d9fd7eb82d90858994aa.jpg",
         "suora": true,
         "lahde": "總統府, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Lentokoneen siiven takana näkyy kapea, rakennettu saarikaistale ja sen ympäröimää laguunivettä.",
+        "selite": "Ilmakuva Majuron atollista on otettu marraskuussa 2017.",
         "lyhyt": "Majuron atollia lentokoneesta marraskuussa 2017.",
         "tiedosto": "11.01 馬紹爾共和國馬久羅島鳥瞰 (38041559416).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "總統府, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Lentokoneen siiven takana näkyy kapea, rakennettu saarikaistale ja sen ympäröimää laguunivettä.",
+        "selite": "Ilmakuva Majuron atollista on otettu marraskuussa 2017.",
         "lyhyt": "Majuron atollia lentokoneesta marraskuussa 2017.",
         "tiedosto": "11.01 馬紹爾共和國馬久羅島鳥瞰 (38041559416).jpg"
       },
@@ -3486,7 +3582,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/majuro/c1-d9fd7eb82d90858994aa.jpg",
         "suora": true,
         "lahde": "總統府, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Lentokoneen siiven takana näkyy kapea, rakennettu saarikaistale ja sen ympäröimää laguunivettä.",
+        "selite": "Ilmakuva Majuron atollista on otettu marraskuussa 2017.",
         "lyhyt": "Majuron atollia lentokoneesta marraskuussa 2017.",
         "tiedosto": "11.01 馬紹爾共和國馬久羅島鳥瞰 (38041559416).jpg"
       },
@@ -3502,10 +3598,10 @@
         1365
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "603d58e3c6c709901bc3d0da44b1398fb1504d7799e1c739bb18fbb3b960bc6c",
-        "semanticContextSHA256": "603d58e3c6c709901bc3d0da44b1398fb1504d7799e1c739bb18fbb3b960bc6c",
+        "targetBeforeSHA256": "60cb92334cb7b0c21d2b8eb65fc63296cea3cc7c0a5d804711d82e2a54305413",
+        "semanticContextSHA256": "60cb92334cb7b0c21d2b8eb65fc63296cea3cc7c0a5d804711d82e2a54305413",
         "subjectTitle": "Majuro",
         "targetState": "existing-target"
       },
@@ -3695,7 +3791,7 @@
       "priorMediaFields": {
         "tiedosto": "11.01 馬紹爾共和國馬久羅島鳥瞰 (38041559416).jpg",
         "lyhyt": "Majuron atollia lentokoneesta marraskuussa 2017.",
-        "selite": "Lentokoneen siiven takana näkyy kapea, rakennettu saarikaistale ja sen ympäröimää laguunivettä.",
+        "selite": "Ilmakuva Majuron atollista on otettu marraskuussa 2017.",
         "lahde": "總統府, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -3722,14 +3818,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "總統府, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Lentokoneen siiven takana näkyy kapea, rakennettu saarikaistale ja sen ympäröimää laguunivettä.",
+        "selite": "Ilmakuva Majuron atollista on otettu marraskuussa 2017.",
         "lyhyt": "Majuron atollia lentokoneesta marraskuussa 2017.",
         "tiedosto": "11.01 馬紹爾共和國馬久羅島鳥瞰 (38041559416).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
-      "targetAfterSHA256": "603d58e3c6c709901bc3d0da44b1398fb1504d7799e1c739bb18fbb3b960bc6c",
-      "contextAfterSHA256": "603d58e3c6c709901bc3d0da44b1398fb1504d7799e1c739bb18fbb3b960bc6c",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+      "targetAfterSHA256": "60cb92334cb7b0c21d2b8eb65fc63296cea3cc7c0a5d804711d82e2a54305413",
+      "contextAfterSHA256": "60cb92334cb7b0c21d2b8eb65fc63296cea3cc7c0a5d804711d82e2a54305413",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3752,7 +3848,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "d9fd7eb82d90858994aa30610c33ebb8d0ddff3f25116f3fbc7fb20451397e57",
+        "sameImageExportSHA256": "d9fd7eb82d90858994aa30610c33ebb8d0ddff3f25116f3fbc7fb20451397e57",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e14",
@@ -3774,14 +3878,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/majuro/c2-271a500d4e1974ae2f31.jpg",
         "suora": true,
         "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Etualan palmun takana on pieniä ja suuria aluksia laguunissa helmikuussa 2012 otetussa kuvassa.",
+        "selite": "Majuron laguunin ranta helmikuussa 2012.",
         "lyhyt": "Palmu ja veneitä Majuron laguunin rannalla.",
         "tiedosto": "Landscape, Majuro, Marshall Islands, February 2012. Photo- Erin Magee - DFAT (12426188673).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Etualan palmun takana on pieniä ja suuria aluksia laguunissa helmikuussa 2012 otetussa kuvassa.",
+        "selite": "Majuron laguunin ranta helmikuussa 2012.",
         "lyhyt": "Palmu ja veneitä Majuron laguunin rannalla.",
         "tiedosto": "Landscape, Majuro, Marshall Islands, February 2012. Photo- Erin Magee - DFAT (12426188673).jpg"
       },
@@ -3789,7 +3893,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/majuro/c2-271a500d4e1974ae2f31.jpg",
         "suora": true,
         "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Etualan palmun takana on pieniä ja suuria aluksia laguunissa helmikuussa 2012 otetussa kuvassa.",
+        "selite": "Majuron laguunin ranta helmikuussa 2012.",
         "lyhyt": "Palmu ja veneitä Majuron laguunin rannalla.",
         "tiedosto": "Landscape, Majuro, Marshall Islands, February 2012. Photo- Erin Magee - DFAT (12426188673).jpg"
       },
@@ -3805,10 +3909,10 @@
         2128
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "077716806d1261990bd425c382af7bd8ad0433f56e67569b0a3eb754cf07762f",
-        "semanticContextSHA256": "077716806d1261990bd425c382af7bd8ad0433f56e67569b0a3eb754cf07762f",
+        "targetBeforeSHA256": "a13a3009369c5ac582fcaa6133673b7ee151fab18a023f673d512b459e7cea56",
+        "semanticContextSHA256": "a13a3009369c5ac582fcaa6133673b7ee151fab18a023f673d512b459e7cea56",
         "subjectTitle": "Majuro",
         "targetState": "existing-target"
       },
@@ -4016,7 +4120,7 @@
       "priorMediaFields": {
         "tiedosto": "Landscape, Majuro, Marshall Islands, February 2012. Photo- Erin Magee - DFAT (12426188673).jpg",
         "lyhyt": "Palmu ja veneitä Majuron laguunin rannalla.",
-        "selite": "Etualan palmun takana on pieniä ja suuria aluksia laguunissa helmikuussa 2012 otetussa kuvassa.",
+        "selite": "Majuron laguunin ranta helmikuussa 2012.",
         "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -4043,14 +4147,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)",
-        "selite": "Etualan palmun takana on pieniä ja suuria aluksia laguunissa helmikuussa 2012 otetussa kuvassa.",
+        "selite": "Majuron laguunin ranta helmikuussa 2012.",
         "lyhyt": "Palmu ja veneitä Majuron laguunin rannalla.",
         "tiedosto": "Landscape, Majuro, Marshall Islands, February 2012. Photo- Erin Magee - DFAT (12426188673).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
-      "targetAfterSHA256": "077716806d1261990bd425c382af7bd8ad0433f56e67569b0a3eb754cf07762f",
-      "contextAfterSHA256": "077716806d1261990bd425c382af7bd8ad0433f56e67569b0a3eb754cf07762f",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+      "targetAfterSHA256": "a13a3009369c5ac582fcaa6133673b7ee151fab18a023f673d512b459e7cea56",
+      "contextAfterSHA256": "a13a3009369c5ac582fcaa6133673b7ee151fab18a023f673d512b459e7cea56",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -4073,7 +4177,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "271a500d4e1974ae2f313c60c3bd38bf94f477fe231af4080c9db345b8f917bc",
+        "sameImageExportSHA256": "271a500d4e1974ae2f313c60c3bd38bf94f477fe231af4080c9db345b8f917bc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e14",
@@ -4095,14 +4207,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/majuro/c3-75515251fcd064d6e839.jpg",
         "suora": true,
         "lahde": "Mark Uriona, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Asutus ja tie kulkevat laguunin ja valtameren välissä; laguunissa näkyy useita veneitä ja laivoja.",
+        "selite": "Ilmakuva Majuron saarikaistaleesta Marshallinsaarilla.",
         "lyhyt": "Majuron kapea saarikaistale ilmasta.",
         "tiedosto": "Majuro - Main Atoll of the RMI.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Mark Uriona, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Asutus ja tie kulkevat laguunin ja valtameren välissä; laguunissa näkyy useita veneitä ja laivoja.",
+        "selite": "Ilmakuva Majuron saarikaistaleesta Marshallinsaarilla.",
         "lyhyt": "Majuron kapea saarikaistale ilmasta.",
         "tiedosto": "Majuro - Main Atoll of the RMI.jpg"
       },
@@ -4110,7 +4222,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e14/majuro/c3-75515251fcd064d6e839.jpg",
         "suora": true,
         "lahde": "Mark Uriona, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Asutus ja tie kulkevat laguunin ja valtameren välissä; laguunissa näkyy useita veneitä ja laivoja.",
+        "selite": "Ilmakuva Majuron saarikaistaleesta Marshallinsaarilla.",
         "lyhyt": "Majuron kapea saarikaistale ilmasta.",
         "tiedosto": "Majuro - Main Atoll of the RMI.jpg"
       },
@@ -4126,10 +4238,10 @@
         2160
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e14/paakaupungit-pilvi/e14/majuro/sisalto.json",
-      "sourceContentSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
+      "sourceContentSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2a256c8c716d78155d9a53c2ce3f893b4937498e6dd8ab8b0a1edf67af435852",
-        "semanticContextSHA256": "2a256c8c716d78155d9a53c2ce3f893b4937498e6dd8ab8b0a1edf67af435852",
+        "targetBeforeSHA256": "421b7a5be0f1a08b34334fba418ea08f57932cfb2d98e7c9c8b2a6baa0ee92a1",
+        "semanticContextSHA256": "421b7a5be0f1a08b34334fba418ea08f57932cfb2d98e7c9c8b2a6baa0ee92a1",
         "subjectTitle": "Majuro",
         "targetState": "existing-target"
       },
@@ -4325,7 +4437,7 @@
       "priorMediaFields": {
         "tiedosto": "Majuro - Main Atoll of the RMI.jpg",
         "lyhyt": "Majuron kapea saarikaistale ilmasta.",
-        "selite": "Asutus ja tie kulkevat laguunin ja valtameren välissä; laguunissa näkyy useita veneitä ja laivoja.",
+        "selite": "Ilmakuva Majuron saarikaistaleesta Marshallinsaarilla.",
         "lahde": "Mark Uriona, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -4352,14 +4464,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Mark Uriona, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Asutus ja tie kulkevat laguunin ja valtameren välissä; laguunissa näkyy useita veneitä ja laivoja.",
+        "selite": "Ilmakuva Majuron saarikaistaleesta Marshallinsaarilla.",
         "lyhyt": "Majuron kapea saarikaistale ilmasta.",
         "tiedosto": "Majuro - Main Atoll of the RMI.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ed5d9cd5e95948ab11f4f32c8e324ac9d39d74ec3af033dd09b90cbcf53b81e9",
-      "targetAfterSHA256": "2a256c8c716d78155d9a53c2ce3f893b4937498e6dd8ab8b0a1edf67af435852",
-      "contextAfterSHA256": "2a256c8c716d78155d9a53c2ce3f893b4937498e6dd8ab8b0a1edf67af435852",
+      "sourceContentAfterSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+      "targetAfterSHA256": "421b7a5be0f1a08b34334fba418ea08f57932cfb2d98e7c9c8b2a6baa0ee92a1",
+      "contextAfterSHA256": "421b7a5be0f1a08b34334fba418ea08f57932cfb2d98e7c9c8b2a6baa0ee92a1",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -4382,7 +4494,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "f150ff399439f9da3c420372d1a9c9183cd1744ec6426f8eb5ece98c5e72031e",
+        "sameImageNativeSHA256": "75515251fcd064d6e839ada26d94f8d5998d72fce5d21c59f3fce7586b60cc3b",
+        "sameImageExportSHA256": "75515251fcd064d6e839ada26d94f8d5998d72fce5d21c59f3fce7586b60cc3b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -4394,6 +4514,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e14/majuro/e837bbe51b26fb25c355466e29757eb6e180a77ebd0662696d08a8bda6e2b87c.json",
-  "task118ReboundAt": "2026-10-13T16:31:26.712628+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e14/majuro/25bc60d022e458051cf6593bbb1b261e1c37f5dd764341f734f10d9b6b004735.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.712628+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T19:32:49.137013+00:00"
 }
