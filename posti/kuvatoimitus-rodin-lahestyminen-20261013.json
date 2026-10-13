@@ -1,0 +1,145 @@
+{
+  "taskNumbers": [
+    125,
+    126
+  ],
+  "sourcePath": "posti/fable-codex-rodin-lahestyminen-20261013.md",
+  "sourceCommit": "af76c6132b602fa28481b4673ca56ff43fc8852d",
+  "sourceBlob": "ab0a5fa334eb7c8071bd313c0368dbd019065c20",
+  "sourceReadInFull": true,
+  "referencedFranceSourceReadInFull": true,
+  "assets": [],
+  "omittedItems": [
+    {
+      "id": "rodin-pysty",
+      "taskNumber": 125,
+      "reason": "Ainoa lähteen sallima builtin-generointikutsu ei palauttanut kuvaa: palvelu hylkäsi output-vaiheen tuloksen HTTP 400 moderation_blocked -virheellä (sexual). Tiedostoa ei ole, joten natiivia, PNG-vientiä tai kuvien SHA-tunnisteita ei voida tarkistaa. Yhden kutsun raja täyttyi; lähteen mukaan kuva jätetään pois eikä uutta yritystä tehdä.",
+      "generationError": {
+        "httpStatus": 400,
+        "code": "moderation_blocked",
+        "type": "image_generation_user_error",
+        "moderationStage": "output",
+        "categories": [
+          "sexual"
+        ],
+        "requestId": "78f5189e-391b-416b-9313-095ec4daeffd",
+        "imageReturned": false
+      },
+      "sourceAllowedOmission": true,
+      "additionalGenerationAllowed": false,
+      "imageReturned": false,
+      "visualQAPerformed": false,
+      "nativeSHA256": null,
+      "finalSHA256": null,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: a travel game's museum-approach illustrative photograph for a portrait iPhone screen.\nPrimary request: Auguste Rodin's large dark BRONZE SCULPTURE THE THINKER on its high pale STONE PEDESTAL in the Musée Rodin garden in Paris, surrounded by rose beds, clipped box hedges and pale gravel paths, with the real eighteenth-century Hôtel Biron mansion behind. One completely new contemporary color camera-like image. Exact opaque sRGB PNG 1024 x 1536 pixels, portrait 2:3.\nThe Thinker must be immediately recognizable as the classic bronze artwork, never a living human: a powerful seated male sculpture on its integral rocky seat, leaning forward in contemplation, chin resting on the BACK OF HIS RIGHT HAND, RIGHT ELBOW crossing the body to rest on the LEFT THIGH / knee. The left arm extends downward over the opposite knee and its hand relaxes near the knee. Two bent legs and both feet sit naturally on the bronze rock base. Show a clear three-quarter side silhouette from a slight rear-right angle, including the curved back, inclined head, bent supporting arm and seated legs. Keep the sculpture's cast bronze uniformly dark brown-black with subdued olive patina and small physical highlights; no flesh colors, clothing, living-human eyes, exaggerated muscles or newly invented pose. Preserve the classical sculpture's coherent anatomy and recognizable compact forward-folded silhouette.\nPortrait framing and crop safety: viewpoint at ordinary visitor eye level on a garden path, with enough distance to see the ENTIRE statue and its ENTIRE tall stone pedestal. Place the statue and pedestal together near the middle, and the Hôtel Biron's selected central façade and complete roofline behind, all entirely within the central band y384-y1152. Aim for the top of the sculpture around y620, its bronze feet around y865 and the complete pedestal's bottom around y1080. The mansion roofline and chimneys should also sit comfortably below y540 and above y1040. A hypothetical central 1024x768 landscape crop MUST retain the full sculpture, full pedestal and the selected complete mansion façade and roof. These are invisible layout targets, not lines or labels. Leave ample quiet pale sky across the upper portion and natural gravel garden foreground across the lower portion. No cut-off head, feet, pedestal base, rooftop or chimney. Rose plants flank the pedestal without covering its bottom.\nBackground architecture: Hôtel Biron is a restrained French rococo stone mansion by Jean Aubert, completed in 1732, with warm pale limestone, tall regular sash windows, a slightly projecting ornamented central bay, shallow stone steps, a gray slate mansard roof and chimneys. Show the actual modest two-storey eighteenth-century mansion, not Versailles, the Louvre, a modern hotel, a large multi-wing palace or a newly invented castle. Leafy mature trees surround it. Keep the mansion behind the sculpture at a believable garden distance, with natural photographic depth.\nLight, materials and mood: bright but softly diffused late-summer daylight from one side, muted natural greens and cream stone, scattered subdued pink and red roses. Real irregular leaf shapes, uneven rose growth, small natural gravel stones, coherent cast-bronze surface and modest old stone weathering. Honest real-camera exposure and optics, gentle shadows, no HDR, cinematic saturation, exaggerated contrast, CGI sheen, patterned AI texture or pasted-on objects. Quiet, expectant museum approach.\nNo other visitors are needed; omit people to keep the classical bronze figure unambiguous. No readable text, letters, engraved names, signature, labels, plaque or museum sign on the pedestal or buildings; the stone pedestal is plain. No logo, flag, banner, advertising, watermark, border, crowd, queue, railing barrier, scaffolding, crane or contemporary temporary artwork. No unrelated sculptures, garden art or exhibition installation. No Eiffel Tower or separate landmark necessary. No Google 3D tiles, Street View, copied photograph or image edits. This is an original full-image generation; do not reuse any previous conversation image. NO photographic input image accompanies this request.\n",
+      "references": [
+        {
+          "url": "https://www.musee-rodin.fr/en/museum/musee-rodin/sculpture-garden",
+          "title": "The Sculpture Garden — Musée Rodin",
+          "role": "official museum text facts only",
+          "supports": "The Thinker stands on a pillar among clipped box trees; rose gardens frame Hôtel Biron.",
+          "visualImageUsed": false,
+          "checkedAt": "2026-10-13T16:15:32.660Z"
+        },
+        {
+          "url": "https://www.musee-rodin.fr/en/museum/musee-rodin/hotel-biron",
+          "title": "Hôtel Biron — Musée Rodin",
+          "role": "official museum text facts only",
+          "supports": "Eighteenth-century rococo mansion designed by Jean Aubert and built in 1732.",
+          "visualImageUsed": false,
+          "checkedAt": "2026-10-13T16:15:32.660Z"
+        },
+        {
+          "url": "https://www.meudon.musee-rodin.fr/en/musee/collections/oeuvres/penseur-meudon",
+          "title": "The Thinker — Musée Rodin Meudon",
+          "role": "official museum text facts only",
+          "supports": "Seated figure leaning forward; colossal bronze enlarged in 1904, including cast in the Paris museum garden.",
+          "visualImageUsed": false,
+          "checkedAt": "2026-10-13T16:15:32.660Z"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:Le_Penseur_in_the_Jardin_du_Mus%C3%A9e_Rodin,_Paris_25_June_2008.jpg",
+          "title": "Le Penseur in the Jardin du Musée Rodin, Paris 25 June 2008",
+          "author": "Jean-Pierre Dalbéra",
+          "license": "CC BY 2.0",
+          "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+          "role": "open photograph metadata/licensing checked; actual photograph not viewed or used as image input",
+          "visualImageUsed": false,
+          "imageGenInput": false,
+          "downloadStatus": "single original-file request returned HTTP429; no image downloaded; no retry",
+          "attribution": "Jean-Pierre Dalbéra, Le Penseur in the Jardin du Musée Rodin, Paris 25 June 2008, CC BY 2.0. Metadata reference only; generated image is new and no photographic pixels are reused.",
+          "checkedAt": "2026-10-13T16:15:32.660Z"
+        },
+        {
+          "role": "own sculpture and architectural knowledge plus exact authorized source",
+          "sourcePath": "posti/fable-codex-rodin-lahestyminen-20261013.md",
+          "sourceCommit": "af76c6132b602fa28481b4673ca56ff43fc8852d",
+          "sourceBlob": "ab0a5fa334eb7c8071bd313c0368dbd019065c20",
+          "sourceReadInFull": true,
+          "referencedFranceSourceReadInFull": true,
+          "visualImageUsed": false,
+          "google3DUsed": false,
+          "streetViewUsed": false,
+          "museumCopyrightImagesUsed": false,
+          "commonsCCBYSAUsed": false
+        }
+      ]
+    },
+    {
+      "id": "rodin-vaaka",
+      "taskNumber": 126,
+      "reason": "Ainoa sallittu generointi epäonnistui kuvapalvelun output-moderoinnissa (HTTP 400 moderation_blocked, sexual). Klassista pronssista Ajattelija-veistosta pyytävästä kutsusta ei palautettu kuvaa. Lähteen mukaan epäonnistunut kuva jätetään pois; ei lisäyritystä.",
+      "generationError": {
+        "httpStatus": 400,
+        "code": "moderation_blocked",
+        "moderationStage": "output",
+        "categories": [
+          "sexual"
+        ],
+        "requestID": "8d5d8efd-216d-46ba-adba-49fa068b62ea",
+        "message": "Your request was rejected by the safety system.",
+        "tool": "built-in image_gen__imagegen",
+        "imageReturned": false
+      },
+      "sourceAllowedOmission": true,
+      "additionalGenerationAllowed": false,
+      "imageReturned": false,
+      "visualQAPerformed": false,
+      "nativeSHA256": null,
+      "finalSHA256": null,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: ONE new landscape approach image of the MUSÉE RODIN garden, Paris. Exact native PNG dimensions 1536 x 1024, 3:2 landscape, opaque and natural COLOR. Real camera photographic appearance, an original complete scene.\nMain subject: AUGUSTE RODIN'S actual celebrated bronze sculpture THE THINKER (Le Penseur) standing on its HIGH PLAIN STONE PEDESTAL in the museum rose garden, with the pale eighteenth-century HÔTEL BIRON mansion in the background. This is museum photography of a classic bronze artwork, NOT a living person posing. The bronze statue has the recognizable monumental seated crouched-forward muscular silhouette, a lowered contemplative head and a hand supporting the chin. Crucial accurate pose: the CHIN rests on the BACK OF THE RIGHT HAND, that RIGHT ELBOW crosses toward and rests on the LEFT knee; the other arm hangs downward naturally; both feet and the rock-like original sculptural seat remain coherent with Rodin's actual statue. Do not substitute a generic seated philosopher, human model, modern artwork or a mirrored incorrect pose. Bronze-only sculptural anatomy and solid dark metal material.\nComposition: A slightly side/rear three-quarter view of the statue, so its curved back, bent legs and chin-on-hand silhouette are clearly recognizable, with no frontal human face portrait. Eye-level camera on a garden gravel path, looking gently upward to the monument. Put the ENTIRE statue, both feet, rock seat and ENTIRE tall rectangular stone pedestal inside frame, centered in the garden. Behind it at an appropriate distance, show the full central pale limestone Hôtel Biron facade, its low symmetrical eighteenth-century French mansion wings, tall sash/French windows, understated rococo stone moldings, hipped slate/mansard roof with modest dormers and chimneys. Keep the highest roof point fully in frame and give clear sky above it; do not crop the mansion center or the statue. Give foreground garden/path space below the pedestal. Wide photograph with normal perspective, not a fisheye, drone or miniature.\nGarden: Rose beds with irregularly spaced natural blooms, varied flower sizes and ages, a mix of subdued pink and cream blooms with some faded petals and buds, natural uneven leaf shapes, clipped low box hedges, pale gravel paths and leafy trees at the sides. A realistic French museum garden, not a perfectly repeating decorative pattern or artificial flower carpet. No nearby visitor, empty garden is preferred.\nMaterial and light: Bright but SOFT late-summer daylight, gently slanting natural morning/afternoon light. The statue is true dark weathered BRONZE with uneven old charcoal-brown and muted green patina, small irregular oxidation streaks and rough modeled sculpture surface, restrained highlights on raised metal edges. Never flesh-colored skin, smooth black plastic or a polished toy. The pedestal is worn pale natural stone with small stains, varied pores and subtle uneven coloration. Mansion limestone is naturally aged and slightly imperfect, with honest grain and masonry joints. Muted greens, neutral stone, subdued roses, pale blue softly clouded sky. Naturally photographic detail, realistic exposure and shadow softness, no HDR, cinematic saturation, oversharpening, CGI or glossy AI materials.\nStrict exclusions everywhere: NO readable text, signature, letters, numerals, inscription, pseudo-writing, museum label, sign, plaque, logo, branding, advertisement, banner, flag or watermark. The pedestal front and sides must be plain weathered stone WITHOUT any plaque or inscription. The statue has NO readable cast signature. No contemporary installation, unrelated sculpture, exhibition object, queue, crowd, identifiable real-human face, scaffolding or crane. No modern glass structure, no flags or sign-bearing buildings. Omit the distant Invalides dome entirely rather than invent its position. No overlay, UI, frame, caption or disclosure inside pixels. One whole new photographic-looking illustration, not a copy or edit of any photograph.\n",
+      "references": [
+        {
+          "url": "https://www.musee-rodin.fr/en/musee/collections/oeuvres/thinker",
+          "title": "The Thinker — Musée Rodin",
+          "kind": "primary-text-fact-source",
+          "use": "Museum confirms the monumental bronze version and the cast in the Musée Rodin garden. Text-only; museum copyright photographs not used as visual reference."
+        },
+        {
+          "url": "https://www.nga.gov/artworks/1005-thinker-le-penseur",
+          "title": "The Thinker (Le Penseur) — National Gallery of Art",
+          "kind": "primary-text-pose-source",
+          "use": "Sculpture description confirms chin on the back of the right hand with that elbow resting on the left knee. Text-only, no photographic reference."
+        },
+        {
+          "url": "https://www.musee-rodin.fr/en/museum/musee-rodin/hotel-biron",
+          "title": "Hôtel Biron — Musée Rodin",
+          "kind": "primary-text-architecture-source",
+          "use": "Museum identifies the eighteenth-century Jean Aubert rococo mansion in a French-style garden. Text-only factual reference."
+        }
+      ]
+    }
+  ],
+  "maximumGenerationCalls": 2,
+  "generationCallsIssued": 2,
+  "returnedCandidates": 0,
+  "imagesDelivered": 0,
+  "R2ImagesUploaded": 0,
+  "allRequestedImagesHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false
+}
