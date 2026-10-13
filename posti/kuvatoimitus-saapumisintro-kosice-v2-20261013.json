@@ -1,0 +1,247 @@
+{
+  "cityName": "Košice",
+  "gameCityId": "kosice",
+  "mediaSlug": "kosice",
+  "taskNumbers": [
+    106
+  ],
+  "updatedAt": "2026-10-13T13:34:04.267523+00:00",
+  "originalRequestedNewSlots": [
+    7
+  ],
+  "activeRequestedNewSlots": [
+    7
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [
+    {
+      "slot": 7,
+      "title": "Urbanin torni ja tuomiokirkko sinisellä hetkellä",
+      "sceneSpec": "\n\nmediaSlug `kosice`.\n\n**Alkuperäinen ohje:**\nMitä kuvataan: Hlavná-pääkadun vanhin ydin sinisellä hetkellä heti auringonlaskun jälkeen: vasemmalla etualalla Urbanin torni (kapea, kivinen kellotorni, jonka juurella on matala arkadikäytävä), sen takana oikealla Pyhän Elisabetin tuomiokirkon korkea pohjoistorni ja tumma, pitkä kattorakenne syvän sinistä iltataivasta vasten. Tornin ja kirkon alaosia valaisee pehmeästi neutraali lämmin valo; lähitalojen ikkunoissa lämmin keltainen valo; katu kostea ja heijastava, pari vanhan mallista katulyhtyä lämpimin valoin. Kadulla muutama ihminen kaukana tai selin, yksi pyöräilijä. Kulma: vaakakuva, Hlavná-kadun länsilaidalta katse itään; tiukka rajaus tornin ja kirkon ympärille. Suihkulähde ja teatteri jäävät kuvan ulkopuolelle: älä näytä niitä äläkä vesisuihkuja. Valo: sininen hetki, taivas syvä sininen, ei valoshow'ta, ei värivaloja eikä projisointeja. Ei saa näkyä: tekstiä, kylttejä, mainos- ja kauppavaloja, brändejä, kasvoja, laulavaa suihkulähdettä, teatterirakennusta, autoja liikkeessä, valoilmiöitä.\n\n**UUSINTAKORJAUS:** Codexin QA: kahvilan markiisissa kirjaimen kaltaisia merkkejä. KORJAUS: ei markiiseja, ei auringonsuojia, ei kahvila- tai ravintolaterasseja, ei pöytiä eikä kauppojen sisäänkäyntejä näkyviin; vasen etualan talo on pelkkä sileä julkisivu ikkunoineen; ei kylttejä, ei tekstiä, ei kauppojen valoja.\n",
+      "caption": "Urbanin torni ja tuomiokirkko sinisellä hetkellä. Havainnekuva.",
+      "filename": "kosice-7-ilta-intro-v2.png",
+      "r2Key": "julisteet/saapumisintro/kosice/20261013-full-v2/kosice-7-ilta-intro-v2.png",
+      "historical": false,
+      "referenceSlot": 7,
+      "taskNumber": 106,
+      "referencePath": null,
+      "version": 2,
+      "cityName": "Košice",
+      "gameCityId": "kosice",
+      "mediaSlug": "kosice",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/kosice/native-7.png",
+      "nativeSHA256": "d267c29e7f36881d1b813547c8d5420d91f54b03f7162622fcf1885daf31f71c",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/kosice/kosice-7-ilta-intro-v2.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uusinta6-20261013/kosice/kosice-7-ilta-intro-v2.png",
+      "sha256": "7119b7a5a681fbf66c1d6e18b98ce81a9291fd7d17be96a57c8e5bbdc6eb00d8",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja arrival intro, completely NEW whole image, no editing or inpainting. Output ONE opaque RGB landscape PNG exactly 1536x1024 pixels, 3:2. Natural documentary camera photograph look, credible optical geometry, quiet restrained color, uneven real material texture, ordinary imperfections; no HDR, no painterly surfaces, no cinematic oversaturation, no glossy CGI finish. All people are fictional, small and distant and seen from behind, no recognizable real face. Absolutely NO text anywhere, no numbers, letters, signage, logos, labels, plates, advertising, watermark or border. Any caption belongs only to later PNG metadata and must never appear inside image.\n\nPrimary scene: CURRENT Košice Hlavna historic core at natural blue hour just after sunset. View from the WEST side looking east, tight scene around two real separate adjacent landmarks. Urban Tower stands left foreground: compact square stone Renaissance bell tower, plain stone faces and narrow openings, old roof and low arcade at its foot. Behind it on the RIGHT stands St Elizabeth Cathedral: its taller northern/Sigismund tower topped by the authentic rococo-Baroque helmet, and the long dark steep Gothic church roof with its present-day architecture. Do not turn the two landmarks into twin symmetric cathedral towers. Architecture factual broad silhouette, not fantasy pinnacles. Soft neutral warm light on tower/church lower walls, sparse warm apartment windows, wet worn cobbled pavement with modest irregular reflections, a couple of traditional street lanterns. Three or four tiny back-facing pedestrians and one tiny back-facing cyclist in middle distance, current plain unbranded clothing. Blue sky, natural restrained color and credible exposure, no excessive golden glare.\nMandatory source revision: LEFT edge foreground residential building is ONLY a plain smooth weathered plaster facade with ordinary windows, wall continues uninterrupted down to pavement. Absolutely NO awnings, canopies, sun shades, umbrellas, cafe terrace, restaurant terrace, outdoor tables, chairs, street menus, shops, storefronts or shop entrances anywhere in frame. No boards, banners, advertisements, illuminated shop lights, names, writing, number plaques or commemorative inscriptions. Choose landmark stone faces without a clock dial or readable plaques. NO fountain, water jets, theatre building, moving cars, colored architectural lights, projection or lightshow. Street atmosphere is quiet historic architecture and warm apartment windows, no commerce.\n",
+      "sourceCommit": "efbc512cab1d414eea6dab7b07a5580fb1f96396",
+      "sourceBlob": "de12c45cd76efaa5a293b6bebd74ff4c0825d577",
+      "ownerAcceptanceVerified": true,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://domsvalzbety.sk/historia/",
+          "title": "Farnosť svätej Alžbety: História",
+          "kind": "cathedral owner official history",
+          "verifiedClaims": [
+            "Northern tower received rococo-baroque helmet after 1775 fire",
+            "1877–1896 reconstruction added neo-Gothic sculpture, gargoyles and turrets",
+            "Urban Tower is a 45 m Renaissance tower whose present Renaissance form dates to 1628",
+            "Shopping stalls stood around Urban Tower in 19th century; arcade dates to 1912"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://visitkosice.org/en/vidiet-a-zazit/urban-tower",
+          "title": "Visit Košice: Urbanova tower",
+          "kind": "official destination tourism",
+          "verifiedClaims": [
+            "Urban Tower stands beside Cathedral and served as its bell tower"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.kosice.sk/varos/a-kozpont-terkepe",
+          "title": "Košice city: historical centre map",
+          "kind": "city authority",
+          "verifiedClaims": [
+            "Urban Tower, Cathedral and State Theatre identified as separate historical centre landmarks"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        }
+      ],
+      "sourcesPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/kosice/sources-kosice.json",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/kosice/qa-7.json",
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1348d-5abb-74a3-861e-05594dd0baea/exec-477acd91-abd3-45a2-ae89-23149db551c2.png",
+      "producerQAAccepted": true,
+      "sourceOwnerAcceptanceVerified": true,
+      "independentQAPending": false,
+      "ownerAcceptanceSource": {
+        "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-PERUUTUS-20261013.md",
+        "sourceCommit": "4c28fefc109563a81c023ab2c1ab2ba6288aa3b9",
+        "sourceBlob": "3a23d2a7dfc370980086678f73ac44a324adc567",
+        "sourceSHA256": "0646a16ea7bcbb2f52e95b5567358a78305bc8c441a098bb8113e452494616b7",
+        "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+        "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be"
+      },
+      "rootQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/kosice/root-qa.json",
+      "id": "kosice-7-ilta-intro-v2",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uusinta6-20261013/kosice/kosice-7-ilta-intro-v2.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full-v2/kosice-7-ilta-intro-v2.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full-v2/kosice-7-ilta-intro-v2.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [
+        {
+          "url": "https://domsvalzbety.sk/historia/",
+          "title": "Farnosť svätej Alžbety: História",
+          "kind": "cathedral owner official history",
+          "verifiedClaims": [
+            "Northern tower received rococo-baroque helmet after 1775 fire",
+            "1877–1896 reconstruction added neo-Gothic sculpture, gargoyles and turrets",
+            "Urban Tower is a 45 m Renaissance tower whose present Renaissance form dates to 1628",
+            "Shopping stalls stood around Urban Tower in 19th century; arcade dates to 1912"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://visitkosice.org/en/vidiet-a-zazit/urban-tower",
+          "title": "Visit Košice: Urbanova tower",
+          "kind": "official destination tourism",
+          "verifiedClaims": [
+            "Urban Tower stands beside Cathedral and served as its bell tower"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.kosice.sk/varos/a-kozpont-terkepe",
+          "title": "Košice city: historical centre map",
+          "kind": "city authority",
+          "verifiedClaims": [
+            "Urban Tower, Cathedral and State Theatre identified as separate historical centre landmarks"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        }
+      ],
+      "QA": {
+        "slot": 7,
+        "taskNumber": 106,
+        "verdict": "accepted",
+        "visualQAVerdict": "accepted",
+        "reason": "Urbanin torni vasemmalla, tuomiokirkko takana oikealla; sileä etualan seinä ikkunoineen. Ei markiiseja, kauppoja, terassia, kylttejä, tekstiä, suihkulähdettä tai värivaloja.",
+        "nativeSHA256": "d267c29e7f36881d1b813547c8d5420d91f54b03f7162622fcf1885daf31f71c",
+        "finalSHA256": "7119b7a5a681fbf66c1d6e18b98ce81a9291fd7d17be96a57c8e5bbdc6eb00d8",
+        "rootWholeNativeVisualInspection": true,
+        "rootWholeFinalVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "pixelIdentityToNative": true,
+        "ownerDisposition": "accepted",
+        "ownerAcceptanceVerified": true,
+        "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+        "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be",
+        "independentPeerPath": null,
+        "sourceOverride": {
+          "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-PERUUTUS-20261013.md",
+          "sourceCommit": "4c28fefc109563a81c023ab2c1ab2ba6288aa3b9",
+          "sourceBlob": "3a23d2a7dfc370980086678f73ac44a324adc567",
+          "sourceSHA256": "0646a16ea7bcbb2f52e95b5567358a78305bc8c441a098bb8113e452494616b7",
+          "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+          "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be"
+        }
+      },
+      "R2Proof": {
+        "slot": 7,
+        "r2Key": "julisteet/saapumisintro/kosice/20261013-full-v2/kosice-7-ilta-intro-v2.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full-v2/kosice-7-ilta-intro-v2.png",
+        "sha256": "7119b7a5a681fbf66c1d6e18b98ce81a9291fd7d17be96a57c8e5bbdc6eb00d8",
+        "nativeSHA256": "d267c29e7f36881d1b813547c8d5420d91f54b03f7162622fcf1885daf31f71c",
+        "bytes": 2554242,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "7119b7a5a681fbf66c1d6e18b98ce81a9291fd7d17be96a57c8e5bbdc6eb00d8",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "7119b7a5a681fbf66c1d6e18b98ce81a9291fd7d17be96a57c8e5bbdc6eb00d8",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T13:29:01.455673+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "ownerCancelledItems": [],
+  "sourceAllowedQAOmissions": [],
+  "actualCallsBeforeCancellation": 1,
+  "actualCallsAfterCancellation": 0,
+  "originalMaximumGenerationCalls": 1,
+  "currentMaximumActiveCalls": 1,
+  "allRequestedSlotsHandled": true,
+  "allActiveRequestedSlotsDelivered": true,
+  "productionCompleteWithinUpdatedSourceLimit": true,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": false,
+  "ownerAcceptanceVerifiedForDeliverableImages": true,
+  "ownerAcceptanceVerified": true,
+  "gameIntegrationAllowed": true,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": true,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-6-20261013.md",
+  "sourceCommit": "efbc512cab1d414eea6dab7b07a5580fb1f96396",
+  "sourceBlob": "de12c45cd76efaa5a293b6bebd74ff4c0825d577",
+  "sourceOverride": {
+    "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uusinta-PERUUTUS-20261013.md",
+    "sourceCommit": "4c28fefc109563a81c023ab2c1ab2ba6288aa3b9",
+    "sourceBlob": "3a23d2a7dfc370980086678f73ac44a324adc567",
+    "sourceSHA256": "0646a16ea7bcbb2f52e95b5567358a78305bc8c441a098bb8113e452494616b7",
+    "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+    "ownerPolicySHA256": "0db248b979b474cdf180147e037b112d64e35b346e5f23eb99a944bbe0ea56be"
+  },
+  "ownerPolicyPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/intro-owner-topic-rejection-20261013/owner-policy.json",
+  "priorImageFilesAndDeliveryHistoryPreserved": true,
+  "prior19V1ImageFilesPreserved": true,
+  "originalSourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+  "originalSeparateNewGenerationQuota": 6,
+  "currentActiveGlobalGenerationQuota": 4,
+  "cancelledTopicGenerationAllowed": false
+}
