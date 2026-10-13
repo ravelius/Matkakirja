@@ -148,3 +148,12 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
   kuittauksella: botti 17/17 cbad45ba9 + v49a (olavinlinna-auto-1013-0554) ja LS2:n holvikuva (todistus-kh2-20261013-0553). NS ja Julkaisija tietävät.
 - Seuraavaksi LR:n erä 3 (linnantupa, Kuninkaansali; uudet lattiaesineet tarvitsevat glb-extras tormays/koko) → kiinnitys + botti.
 - Odottajapohja: lokit/siirtoseppa-botti-nakyma/odota-v49a.sh (vaihda SHA:t sedillä, tarkista `zsh -n`).
+
+## PÄIVITYS 13.10. 16.3x — LINNA TAUOLLE (omistaja 13.10. 09.2x)
+
+- **Viisi tilaa junaan 187:** BOTTI 17/17 LS2:n appilla lokit/linssiseppa2-app-oletus3 (f11de1c12) = linnahaara cbad45ba9 + v49a 0429ee8b2 +
+  LS2:n keittio-koehuone dd7fbb2cc (keittiö, porttikäytävä, pikkupiha ajo11b, linnantupa, voudin sali ämpäristä). Tunnus NS:lle 16.3x, PT tietää.
+  (12.25 a666aa2d1 oli 15/17: E 102 -käytävä leivottu pimeäksi → LR/LS2 ajo11b.)
+- Olavinlinna on nyt TAUOLLA: ei uusia eriä eikä ajoja ilman PT:n/omistajan erillistä päätöstä. Avoimena jää: vartija2:n MH-kuva (K3 + agentti),
+  LR:n laajennuserä 3 (linnantupa/Kuninkaansali, uudet lattiaesineet tarvitsevat glb-extras tormays/koko), porttikäytävän äänimaisema (LS2).
+- Odottajat: ei käynnissä. Pohjat lokit/siirtoseppa-botti-nakyma/odota-*.sh, skenaariot proto-3d/tyokalut/siirtoseppa-ajot/skenaariot/.
