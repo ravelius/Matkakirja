@@ -38,3 +38,35 @@ B-kuvat 20 roolia. A/kartta partial 2/6: vähintään neljä muuta kelpoista oma
 ## SHA ja todisteet
 
 Vain kolme omaa tuotantotiedostoa tässä kaupungissa: faktapohja.md, sisalto.json, tämä muistio. Lopullinen SHA256SUMS.txt, mittaus.json, lähde- ja robots-todisteet sekä alkuperäisen tarkistimen tulos omassa NAS-väliaineistossa. SHA ei ole commitin tunnus.
+
+
+## Task118 korjaus 13.10.2026
+Korjauslistan tekstilöydökset käsitelty lähdepohjan ja tallennettujen sivujen avulla. Pjongjang: Mugil cephalus on virallisessa EU-komission suomenkielisessä kalanimistössä juovakeltti, ei korjauslistan ehdottama harmaakefaali: https://fish-commercial-names.ec.europa.eu/fish-names/species/mugil-cephalus_fi . Malé: UNESCO5812 vahvistaa tongue/groove/pins; selkeä termi pontti-uraliitos, https://whc.unesco.org/en/tentativelists/5812/ . Pjongjangin talvinuudelifakta oli jo maalehdessä ja korvattiin juhla-/pitkän elämän perinteen käsittelyllä. Poliittisesti herkän kaupungin rajaukset säilytetty. ISS066-E-7985 paikkaristiriita jää mediaomistajan NASA-auditointiin; teksti ei nimeä jokea. Kuva-, kartta- ja sääportit erillisiä.
+```text
+VIRHE kualalumpur: kansikuva 3: tiedosto puuttuu
+VIRHE kualalumpur: kansi nosto 1: tiedosto puuttuu
+VIRHE kualalumpur: kansi nosto 2: tiedosto puuttuu
+VIRHE kualalumpur: kansi nosto 3: tiedosto puuttuu
+VIRHE kualalumpur: kansi nosto 4: tiedosto puuttuu
+VIRHE kualalumpur: matkailijalle.kuva: tiedosto puuttuu
+VIRHE kualalumpur: opas jakso 1: tiedosto puuttuu
+VIRHE kualalumpur: opas jakso 2: tiedosto puuttuu
+VIRHE kualalumpur: opas jakso 3: tiedosto puuttuu
+VIRHE kualalumpur: opas jakso 4: tiedosto puuttuu
+VIRHE kualalumpur: opas jakso 5: tiedosto puuttuu
+VIRHE kualalumpur: teemasivu ruoka nosto 1: tiedosto puuttuu
+VIRHE kualalumpur: teemasivu ruoka nosto 2: tiedosto puuttuu
+VIRHE kualalumpur: teemasivu ruoka nosto 3: tiedosto puuttuu
+VIRHE kualalumpur: teemasivu ruoka nosto 4: tiedosto puuttuu
+VIRHE kualalumpur: juttu Bukit Nanas kuva 1: tiedosto puuttuu
+== kualalumpur: 16 virhettä, 2 varoitusta, 4 kuvaa
+YHTEENSÄ 1 kaupunkia: 16 virhettä, 2 varoitusta
+```
+SHA256 6c8c867e4986d40f00951c715d7cdb48400639765fb0533c7d2f4fd1a89eb262
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS kualalumpur: kohteita 2 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS kualalumpur: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

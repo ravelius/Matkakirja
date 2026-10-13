@@ -23,3 +23,39 @@ Todisteet: `valiaikainen/nopea-e10-bandarseribegawan/tarkistus-lyhyt.txt`, `tark
 Kuvaputki: kaikki 20 roolia. Kartta: 2 paikkakohtaista Wikipedia-pistettä; 6–8 kohteen vähimmäistaso ei täyty. Tekijänoikeudeltaan tarkistamattomat nykyiset moskeijat, palatsi, museorakennukset, patsaat ja muistomerkit eivät ole kohteina eikä niille ole kirjoitettu kohdejuttuja. Sää: saatiedot null, olemassa olevan saa.json:n 48/48 primääriauditointi avoinna. D/E/F ja toimituksellinen arvio tekemättä.
 
 Päätoimittajalle: kontekstin väite vesikylän ”kymmenistä tuhansista” asukkaista eroaa W2:n vuoden 2016 luvusta. W1/W2 myös käyttävät eri lukuja/aikaleimoja. C ei julkaise uutta asukaslukua. Tarkat nimenvaihdos-, rakennus- ja muut vuosiluvut poistettu tai ilmaistu vuosisadalla. Vuoden 1873 kehys on lähdeperusteinen eikä kerro isoisän tekemisistä. Matkaopas ei sisällä hintoja, aukioloaikoja eikä ilmastolukuja.
+
+
+## Task118 korjaus 13.10.2026
+Kaikki pelaajatekstikentät luettu ja sovellettu otoksen yleissäännöt. Lähdepohja, C-muistio sekä nykyiset Commons-lähdetiedot tarkistettu. Meta- ja täytelauseita korvattu kaupungin omilla faktoilla; vihjeet ja houkuttimet täsmennetty. Nykyiset kuvat, pisteet ja sää säilytetty; niiden puutteet ovat erillisiä portteja. Tuore mainin js/data-haku tehty ennen kirjoittamista. Ei Git, kuvia, pelikytkentää tai julkaisua.
+
+
+```text
+VIRHE bandarseribegawan: kansikuva 2: tiedosto puuttuu
+VIRHE bandarseribegawan: kansikuva 3: tiedosto puuttuu
+VIRHE bandarseribegawan: kansi nosto 1: tiedosto puuttuu
+VIRHE bandarseribegawan: kansi nosto 2: tiedosto puuttuu
+VIRHE bandarseribegawan: kansi nosto 3: tiedosto puuttuu
+VIRHE bandarseribegawan: kansi nosto 4: tiedosto puuttuu
+VIRHE bandarseribegawan: matkailijalle.kuva: tiedosto puuttuu
+VIRHE bandarseribegawan: opas jakso 1: tiedosto puuttuu
+VIRHE bandarseribegawan: opas jakso 2: tiedosto puuttuu
+VIRHE bandarseribegawan: opas jakso 3: tiedosto puuttuu
+VIRHE bandarseribegawan: opas jakso 4: tiedosto puuttuu
+VIRHE bandarseribegawan: opas jakso 5: tiedosto puuttuu
+VIRHE bandarseribegawan: teemasivu historia nosto 1: tiedosto puuttuu
+VIRHE bandarseribegawan: teemasivu historia nosto 2: tiedosto puuttuu
+VIRHE bandarseribegawan: teemasivu historia nosto 3: tiedosto puuttuu
+VIRHE bandarseribegawan: teemasivu historia nosto 4: tiedosto puuttuu
+VIRHE bandarseribegawan: juttu Kampong Ayer kuva 1: tiedosto puuttuu
+VIRHE bandarseribegawan: juttu Tasek Lama kuva 1: tiedosto puuttuu
+== bandarseribegawan: 18 virhettä, 2 varoitusta, 2 kuvaa
+YHTEENSÄ 1 kaupunkia: 18 virhettä, 2 varoitusta
+```
+SHA256 9e0c8f7975de0bbfad13f86d2279570655fba4416346ae1014354586a042e33d
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 9880da3931ff68f11885c17c992c70b8948d499b2de6920f1f7943edae6e8b1e. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS bandarseribegawan: kohteita 2 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS bandarseribegawan: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

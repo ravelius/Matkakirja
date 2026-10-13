@@ -3,7 +3,7 @@
   "era": "e10",
   "city": "phnompenh",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+  "sourceContentAfterSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
   "assets": [
     {
       "era": "e10",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva.",
-        "lyhyt": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva."
+        "selite": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-TRAVELER-remorque-v1-20261012-4e78af5c0b89.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva.",
-        "lyhyt": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva."
+        "selite": "Yleistetty remorque-kuva havainnollistaa oppaan tuk-tuk-kyytiä. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "sourceContentSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "91f97add268f7373d6945509212af954f07751ea73552288db0168d3ab78b749",
@@ -641,9 +641,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -662,17 +662,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "sourceContentAfterSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "91f97add268f7373d6945509212af954f07751ea73552288db0168d3ab78b749",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "91f97add268f7373d6945509212af954f07751ea73552288db0168d3ab78b749",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "91f97add268f7373d6945509212af954f07751ea73552288db0168d3ab78b749",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
+        "sameImageNativeSHA256": "4e78af5c0b89875b925dc258ca667cd59bbbcfbeef600ee9447ae2dc8fe37e49",
+        "sameImageExportSHA256": "71cda3c7bca24c9afc99d82626ac8665f7ebdc84b254eff79676b8ad34695c40",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -697,10 +718,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva.",
-        "lyhyt": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva."
+        "selite": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -708,10 +729,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-O4-extra-v1-20261012-e0db2c9bb0ce.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva.",
-        "lyhyt": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva."
+        "selite": "Kuy teav -aamiaiseen kuuluvat riisinuudelit ja lihaliemi. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -725,7 +746,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "sourceContentSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "85508f3ef33eade1d4c0986d926008b748a536b0321d53b186cb70bc45e0bd33",
@@ -1035,9 +1056,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1056,17 +1077,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "sourceContentAfterSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "85508f3ef33eade1d4c0986d926008b748a536b0321d53b186cb70bc45e0bd33",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "85508f3ef33eade1d4c0986d926008b748a536b0321d53b186cb70bc45e0bd33",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "85508f3ef33eade1d4c0986d926008b748a536b0321d53b186cb70bc45e0bd33",
+          "subjectTitle": "Aamiainen nuudelikulhosta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
+        "sameImageNativeSHA256": "e0db2c9bb0cee86192de09ab254877f3b11350184a8ecd903e78b652b19ee286",
+        "sameImageExportSHA256": "a221355fa547ba909bc24cd2850674ba3f17758e7ded7410a59b00d42a0727b4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1088,10 +1130,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa.",
-        "lyhyt": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa."
+        "selite": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1099,10 +1141,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K3-v1-20261012-b5d05d2feb51.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa.",
-        "lyhyt": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa."
+        "selite": "Havainnekuva: kuivan kuy teav -annoksen liemi tarjotaan erillisessä kulhossa."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1116,7 +1158,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "sourceContentSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
       "semanticSourceBind": {
         "targetBeforeSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57",
         "semanticContextSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57",
@@ -1334,9 +1376,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1355,17 +1397,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "sourceContentAfterSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
       "targetAfterSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57",
       "contextAfterSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+        "targetAfterSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57",
+        "contextAfterSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57",
+          "semanticContextSHA256": "589ab8a73fff40371ba78f2e0022b034e8b33d97499347eef2aa470150fe0e57",
+          "subjectTitle": "Liemi saa oman kulhonsa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
+        "sameImageNativeSHA256": "b5d05d2feb519c6b1735f27b082463ebfd4b91d8e106c9107cf3ec6a62ef0136",
+        "sameImageExportSHA256": "1552ac6ef0cf9c7e8b3091948baf3fa9cf0a125630c794261a9b67f2bcf305b7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1387,10 +1450,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto.",
-        "lyhyt": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto."
+        "selite": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1398,10 +1461,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/phnompenh/e10-phnompenh-K4-v1-20261012-93ea351eac13.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto.",
-        "lyhyt": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto."
+        "selite": "Yleistetty havainnekuva vesiverkon hävikistä, ei Phnom Penhin todellinen putkisto."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1415,7 +1478,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "sourceContentSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0",
         "semanticContextSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0",
@@ -1633,9 +1696,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1654,17 +1717,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "sourceContentAfterSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
       "targetAfterSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0",
       "contextAfterSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+        "targetAfterSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0",
+        "contextAfterSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0",
+          "semanticContextSHA256": "4cfc151476a6779fca27511db81a420ca0523fe72790533a6ef12744f65100d0",
+          "subjectTitle": "Vesilaitos löysi hukkaan valuvan veden",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
+        "sameImageNativeSHA256": "93ea351eac13af3f01ac329f8c450f8eb83349ced37e4b11743d412f77dd2146",
+        "sameImageExportSHA256": "bf9d14c236df748411d6abefd1478032b9620fed8e46fcd43805385288ba8c33",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1683,23 +1767,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/photo-1b7c8438b7ec333b74ba.jpg",
         "suora": true,
         "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)",
-        "selite": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
-        "lyhyt": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "selite": "Keskustan jokirannan kävelyalue Phnom Penhissä vuonna 2016 otetussa kuvassa.",
+        "lyhyt": "Phnom Penhin rantapromenadi.",
         "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)",
-        "selite": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
-        "lyhyt": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "selite": "Keskustan jokirannan kävelyalue Phnom Penhissä vuonna 2016 otetussa kuvassa.",
+        "lyhyt": "Phnom Penhin rantapromenadi.",
         "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/photo-1b7c8438b7ec333b74ba.jpg",
         "suora": true,
         "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)",
-        "selite": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
-        "lyhyt": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "selite": "Keskustan jokirannan kävelyalue Phnom Penhissä vuonna 2016 otetussa kuvassa.",
+        "lyhyt": "Phnom Penhin rantapromenadi.",
         "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1714,10 +1798,10 @@
         4907
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "sourceContentSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f",
-        "semanticContextSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f",
+        "targetBeforeSHA256": "c2b4dd175d910eabae2ce365f8795f96df2ff91208dc43b8a4f862c76def6897",
+        "semanticContextSHA256": "c2b4dd175d910eabae2ce365f8795f96df2ff91208dc43b8a4f862c76def6897",
         "subjectTitle": "phnompenh — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1849,9 +1933,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg",
-        "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)",
-        "selite": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
-        "lyhyt": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön."
+        "lyhyt": "Phnom Penhin rantapromenadi.",
+        "selite": "Keskustan jokirannan kävelyalue Phnom Penhissä vuonna 2016 otetussa kuvassa.",
+        "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1870,23 +1954,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)",
-        "selite": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
-        "lyhyt": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+        "selite": "Keskustan jokirannan kävelyalue Phnom Penhissä vuonna 2016 otetussa kuvassa.",
+        "lyhyt": "Phnom Penhin rantapromenadi.",
         "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
-      "targetAfterSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f",
-      "contextAfterSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f",
+      "sourceContentAfterSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
+      "targetAfterSHA256": "c2b4dd175d910eabae2ce365f8795f96df2ff91208dc43b8a4f862c76def6897",
+      "contextAfterSHA256": "c2b4dd175d910eabae2ce365f8795f96df2ff91208dc43b8a4f862c76def6897",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+        "targetAfterSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f",
+        "contextAfterSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f",
+          "semanticContextSHA256": "214d16423a47f24e64e4f484da110d15888e55ea9257149c3f7774c3f556c24f",
+          "subjectTitle": "phnompenh — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
+        "sameImageNativeSHA256": "1b7c8438b7ec333b74ba24c9fbb1281305299069a1055fb27f7e57f68d702466",
+        "sameImageExportSHA256": "1b7c8438b7ec333b74ba24c9fbb1281305299069a1055fb27f7e57f68d702466",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1908,23 +2013,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/c1-d02fd8997df314a73cb8.jpg",
         "suora": true,
         "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
-        "lyhyt": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "selite": "Phnom Penhin keskustan jokimaisemaa vuonna 2016 otetussa kuvassa.",
+        "lyhyt": "Joki Phnom Penhin keskustassa.",
         "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
-        "lyhyt": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "selite": "Phnom Penhin keskustan jokimaisemaa vuonna 2016 otetussa kuvassa.",
+        "lyhyt": "Joki Phnom Penhin keskustassa.",
         "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/phnompenh/c1-d02fd8997df314a73cb8.jpg",
         "suora": true,
         "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
-        "lyhyt": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "selite": "Phnom Penhin keskustan jokimaisemaa vuonna 2016 otetussa kuvassa.",
+        "lyhyt": "Joki Phnom Penhin keskustassa.",
         "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1939,10 +2044,10 @@
         2929
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/phnompenh/sisalto.json",
-      "sourceContentSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+      "sourceContentSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e",
-        "semanticContextSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e",
+        "targetBeforeSHA256": "2850de2f269c3d1ede23c138b71dd54446c0f772679ffd5900e03109f0dcaf28",
+        "semanticContextSHA256": "2850de2f269c3d1ede23c138b71dd54446c0f772679ffd5900e03109f0dcaf28",
         "subjectTitle": "Phnom Penh",
         "targetState": "existing-target"
       },
@@ -2056,9 +2161,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg",
-        "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
-        "lyhyt": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen."
+        "lyhyt": "Joki Phnom Penhin keskustassa.",
+        "selite": "Phnom Penhin keskustan jokimaisemaa vuonna 2016 otetussa kuvassa.",
+        "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2077,28 +2182,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
-        "lyhyt": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+        "selite": "Phnom Penhin keskustan jokimaisemaa vuonna 2016 otetussa kuvassa.",
+        "lyhyt": "Joki Phnom Penhin keskustassa.",
         "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
-      "targetAfterSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e",
-      "contextAfterSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e",
+      "sourceContentAfterSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
+      "targetAfterSHA256": "2850de2f269c3d1ede23c138b71dd54446c0f772679ffd5900e03109f0dcaf28",
+      "contextAfterSHA256": "2850de2f269c3d1ede23c138b71dd54446c0f772679ffd5900e03109f0dcaf28",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d46531ba7dd07230562e30f0543c5db1fdc117a9164d029b9d83714e659141a7",
+        "targetAfterSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e",
+        "contextAfterSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e",
+          "semanticContextSHA256": "2820adde17363252c7e4173360c25cd107908ad91a6c301da9da42212cef9f5e",
+          "subjectTitle": "Phnom Penh",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "197d94dcf0ee3ee1786bc36d29a4e1c3f48567fe86adf78fa2f48a8873a1cc65",
+        "sameImageNativeSHA256": "d02fd8997df314a73cb8999a87b10a5886c8d5e82ef8cadecb2b44d9f5c2289b",
+        "sameImageExportSHA256": "d02fd8997df314a73cb8999a87b10a5886c8d5e82ef8cadecb2b44d9f5c2289b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e10/phnompenh/6df0bbf2efdabe0193fe00192bc60f37c4fadbf67e2c2573530679ddd3176a17.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.870925+00:00"
 }

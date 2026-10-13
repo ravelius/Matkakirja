@@ -32,3 +32,34 @@ Pubyokilta puuttuu oma varmennettu WP/WD-piste; kukkulan pistettä ei lainata pa
 - B, riippumaton D, korjaukset E, pääsession F, hyväksyntä, pelikytkentä ja julkaisu avoinna. Ei Git-operaatioita eikä pelimuutoksia.
 
 Tiedostojen ja lähteiden SHA-manifesti: `valiaikainen/nopea-e10-pjongjang/sha-ja-tarkistus.json`.
+
+
+## Task118 korjaus 13.10.2026
+Korjauslistan tekstilöydökset käsitelty lähdepohjan ja tallennettujen sivujen avulla. Pjongjang: Mugil cephalus on virallisessa EU-komission suomenkielisessä kalanimistössä juovakeltti, ei korjauslistan ehdottama harmaakefaali: https://fish-commercial-names.ec.europa.eu/fish-names/species/mugil-cephalus_fi . Malé: UNESCO5812 vahvistaa tongue/groove/pins; selkeä termi pontti-uraliitos, https://whc.unesco.org/en/tentativelists/5812/ . Pjongjangin talvinuudelifakta oli jo maalehdessä ja korvattiin juhla-/pitkän elämän perinteen käsittelyllä. Poliittisesti herkän kaupungin rajaukset säilytetty. ISS066-E-7985 paikkaristiriita jää mediaomistajan NASA-auditointiin; teksti ei nimeä jokea. Kuva-, kartta- ja sääportit erillisiä.
+```text
+VIRHE pjongjang: kansikuva 3: tiedosto puuttuu
+VIRHE pjongjang: kansi nosto 1: tiedosto puuttuu
+VIRHE pjongjang: kansi nosto 2: tiedosto puuttuu
+VIRHE pjongjang: kansi nosto 3: tiedosto puuttuu
+VIRHE pjongjang: kansi nosto 4: tiedosto puuttuu
+VIRHE pjongjang: matkailijalle.kuva: tiedosto puuttuu
+VIRHE pjongjang: opas jakso 1: tiedosto puuttuu
+VIRHE pjongjang: opas jakso 2: tiedosto puuttuu
+VIRHE pjongjang: opas jakso 3: tiedosto puuttuu
+VIRHE pjongjang: opas jakso 4: tiedosto puuttuu
+VIRHE pjongjang: opas jakso 5: tiedosto puuttuu
+VIRHE pjongjang: teemasivu ruoka nosto 1: tiedosto puuttuu
+VIRHE pjongjang: teemasivu ruoka nosto 2: tiedosto puuttuu
+VIRHE pjongjang: teemasivu ruoka nosto 3: tiedosto puuttuu
+VIRHE pjongjang: teemasivu ruoka nosto 4: tiedosto puuttuu
+== pjongjang: 15 virhettä, 3 varoitusta, 4 kuvaa
+YHTEENSÄ 1 kaupunkia: 15 virhettä, 3 varoitusta
+```
+SHA256 e358bfaf5179e07ccf006579dcbc21bb89ef5bdf07bad7275e1073fb4a596811
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 9bcc937be30819365f0d55c1eec1204cb56c4ea880a7849d9229b994ee9f49fe. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS pjongjang: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS pjongjang: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

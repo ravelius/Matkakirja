@@ -3,7 +3,7 @@
   "era": "e10",
   "city": "vientiane",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+  "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
   "assets": [
     {
       "era": "e10",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-TRAVELER-v1-20261012-222eb5604bc3.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tahmeaa riisiä bambuisessa tarjoilukorissa. Havainnekuva.",
-        "lyhyt": "Tahmeaa riisiä bambuisessa tarjoilukorissa. Havainnekuva."
+        "selite": "Tahmeaa riisiä bambuisessa tarjoilukorissa. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-TRAVELER-v1-20261012-222eb5604bc3.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tahmeaa riisiä bambuisessa tarjoilukorissa. Havainnekuva.",
-        "lyhyt": "Tahmeaa riisiä bambuisessa tarjoilukorissa. Havainnekuva."
+        "selite": "Tahmeaa riisiä bambuisessa tarjoilukorissa. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "0fb8348709a915cd0ff56b8c57040aabe9b9adf8198e2deecfb401f27af08019",
+        "semanticContextSHA256": "df8dc96e7f47fb200f4203c77c31c747fccccbe5eeed5a5a3296df1f01fa4373",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -509,8 +509,8 @@
       "priorMediaFields": {
         "tiedosto": "",
         "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "lyhyt": "",
+        "selite": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -529,17 +529,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "0fb8348709a915cd0ff56b8c57040aabe9b9adf8198e2deecfb401f27af08019",
+      "contextAfterSHA256": "df8dc96e7f47fb200f4203c77c31c747fccccbe5eeed5a5a3296df1f01fa4373",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "0fb8348709a915cd0ff56b8c57040aabe9b9adf8198e2deecfb401f27af08019",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "0fb8348709a915cd0ff56b8c57040aabe9b9adf8198e2deecfb401f27af08019",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "222eb5604bc3f8a947de70c1aa4c0d4d2f270a1aa7326b48a17cd05a3938ed60",
+        "sameImageExportSHA256": "87762e0351cc462c4861ff915c4af22258230d8f740ce327f1c1115d037b5402",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -564,10 +585,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
-        "lyhyt": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista."
+        "selite": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -575,10 +596,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-O4-v1-20261012-59a192c11008.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista.",
-        "lyhyt": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista."
+        "selite": "Havainnekuva vihreästä papaijasta valmistettavasta tam mak hoong -salaatista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -592,7 +613,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "f321a0e78aa37fdea8fcad08b851e56d33e58f5a6fc501e1d47e4a602425632b",
@@ -813,8 +834,8 @@
       "priorMediaFields": {
         "tiedosto": "",
         "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "lyhyt": "",
+        "selite": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -833,17 +854,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "f321a0e78aa37fdea8fcad08b851e56d33e58f5a6fc501e1d47e4a602425632b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "f321a0e78aa37fdea8fcad08b851e56d33e58f5a6fc501e1d47e4a602425632b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "f321a0e78aa37fdea8fcad08b851e56d33e58f5a6fc501e1d47e4a602425632b",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "59a192c1100889a426ac1c6f712ef574c35c88543948eccc2c82bb4a508f9a0d",
+        "sameImageExportSHA256": "fe4b9846cb1b93f88f58ff47b932e425e4f3c72224342565d70a26251f6fae43",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -865,10 +907,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva.",
-        "lyhyt": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva."
+        "selite": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -876,10 +918,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-K3-v1-20261012-26a9bc370837.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva.",
-        "lyhyt": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva."
+        "selite": "Palmunlehtikäsikirjoitusten materiaalin ja sivusidonnan yleishavainnollistus. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -893,7 +935,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b",
         "semanticContextSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b",
@@ -1169,8 +1211,8 @@
       "priorMediaFields": {
         "tiedosto": "",
         "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "lyhyt": "",
+        "selite": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1189,17 +1231,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "targetAfterSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b",
       "contextAfterSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b",
+        "contextAfterSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b",
+          "semanticContextSHA256": "b63861bb9bd160705e3f6a9e42cd6914fe8fdf0b03d3e123b168d36203e1280b",
+          "subjectTitle": "Temppeli muistaa poissaolevan patsaan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "26a9bc370837e11eef2411c1ac7350615df0661fd13274027dd0949cb65684d9",
+        "sameImageExportSHA256": "c34985f667cd71dc201080f8d968a172943a52b058200495f9871f880d6f197c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1221,10 +1284,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L1-v1-20261012-d1dd9d0776fe.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Bambukorissa höyrytetty tahmea riisi tuodaan pöytään erillisessä tarjoilukorissa. Havainnekuva.",
-        "lyhyt": "Bambukorissa höyrytetty tahmea riisi tuodaan pöytään erillisessä tarjoilukorissa. Havainnekuva."
+        "selite": "Bambukorissa höyrytetty tahmea riisi tuodaan pöytään erillisessä tarjoilukorissa. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1232,10 +1295,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L1-v1-20261012-d1dd9d0776fe.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Bambukorissa höyrytetty tahmea riisi tuodaan pöytään erillisessä tarjoilukorissa. Havainnekuva.",
-        "lyhyt": "Bambukorissa höyrytetty tahmea riisi tuodaan pöytään erillisessä tarjoilukorissa. Havainnekuva."
+        "selite": "Bambukorissa höyrytetty tahmea riisi tuodaan pöytään erillisessä tarjoilukorissa. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1249,7 +1312,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c507188e793ad72ac2e327a36f444532e9b56f938a1ce4609792563a1db9218a",
         "semanticContextSHA256": "c507188e793ad72ac2e327a36f444532e9b56f938a1ce4609792563a1db9218a",
@@ -1501,8 +1564,8 @@
       "priorMediaFields": {
         "tiedosto": "",
         "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "lyhyt": "",
+        "selite": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1521,17 +1584,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "targetAfterSHA256": "c507188e793ad72ac2e327a36f444532e9b56f938a1ce4609792563a1db9218a",
       "contextAfterSHA256": "c507188e793ad72ac2e327a36f444532e9b56f938a1ce4609792563a1db9218a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "c507188e793ad72ac2e327a36f444532e9b56f938a1ce4609792563a1db9218a",
+        "contextAfterSHA256": "c507188e793ad72ac2e327a36f444532e9b56f938a1ce4609792563a1db9218a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c507188e793ad72ac2e327a36f444532e9b56f938a1ce4609792563a1db9218a",
+          "semanticContextSHA256": "c507188e793ad72ac2e327a36f444532e9b56f938a1ce4609792563a1db9218a",
+          "subjectTitle": "Riisiä höyryssä ja yhteisessä korissa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "d1dd9d0776feec1266dff35d1a6d86c5164e0800b98c0645aa361f06624cb35b",
+        "sameImageExportSHA256": "46f0ebf2dfd6eb3320f5c0b9a170426ebc63427fb5b55eb2997c62b94a5563eb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1553,10 +1637,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
-        "lyhyt": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä."
+        "selite": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1564,10 +1648,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L3-v1-20261012-f41802678b01.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä.",
-        "lyhyt": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä."
+        "selite": "Havainnekuva: mok pa höyrytetään banaaninlehden sisällä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1581,7 +1665,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
         "semanticContextSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
@@ -1800,8 +1884,8 @@
       "priorMediaFields": {
         "tiedosto": "",
         "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "lyhyt": "",
+        "selite": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1820,17 +1904,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "targetAfterSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
       "contextAfterSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
+        "contextAfterSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
+          "semanticContextSHA256": "66c5a2f3e19e4f2c8c29f94076250a5f5c4ca8c0b8d8a937f0f9b759a28fdf96",
+          "subjectTitle": "Kala pakataan banaaninlehteen",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "f41802678b0121c5dce9f065543d292fe80d5803a61bc2daa151d2f108428825",
+        "sameImageExportSHA256": "f509b67999a0cdc2ef7365b14660702b7335ed0cca97f4550b932978057d0491",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1852,10 +1957,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L4-v1-20261012-bd305414ffa3.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Khao jee pâté on pâtélla ja mausteilla täytetty patonki. Havainnekuva.",
-        "lyhyt": "Khao jee pâté on pâtélla ja mausteilla täytetty patonki. Havainnekuva."
+        "selite": "Khao jee pâté on pâtélla ja mausteilla täytetty patonki. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1863,10 +1968,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/vientiane/e10-vientiane-L4-v1-20261012-bd305414ffa3.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Khao jee pâté on pâtélla ja mausteilla täytetty patonki. Havainnekuva.",
-        "lyhyt": "Khao jee pâté on pâtélla ja mausteilla täytetty patonki. Havainnekuva."
+        "selite": "Khao jee pâté on pâtélla ja mausteilla täytetty patonki. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1880,7 +1985,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5742415c3e720a6085de9fea608f1a2c06c2e4f882b7a7f2860ea1ba2dea9509",
         "semanticContextSHA256": "5742415c3e720a6085de9fea608f1a2c06c2e4f882b7a7f2860ea1ba2dea9509",
@@ -2132,8 +2237,8 @@
       "priorMediaFields": {
         "tiedosto": "",
         "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "lyhyt": "",
+        "selite": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2152,17 +2257,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "targetAfterSHA256": "5742415c3e720a6085de9fea608f1a2c06c2e4f882b7a7f2860ea1ba2dea9509",
       "contextAfterSHA256": "5742415c3e720a6085de9fea608f1a2c06c2e4f882b7a7f2860ea1ba2dea9509",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "5742415c3e720a6085de9fea608f1a2c06c2e4f882b7a7f2860ea1ba2dea9509",
+        "contextAfterSHA256": "5742415c3e720a6085de9fea608f1a2c06c2e4f882b7a7f2860ea1ba2dea9509",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "5742415c3e720a6085de9fea608f1a2c06c2e4f882b7a7f2860ea1ba2dea9509",
+          "semanticContextSHA256": "5742415c3e720a6085de9fea608f1a2c06c2e4f882b7a7f2860ea1ba2dea9509",
+          "subjectTitle": "Patonki puhuu paikallista kieltä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "bd305414ffa374843c2d7c0c9a3e2899191fcb181b996c15594450658553cc0d",
+        "sameImageExportSHA256": "dfac49f7527f83dd81c8794e4227892e2e7a0843d4e4eb3787a60898e543901e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -2181,23 +2307,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/photo-39579ab3932313097974.jpg",
         "suora": true,
         "lahde": "Christophe95, Commons (CC BY-SA 4.0)",
-        "selite": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.",
-        "lyhyt": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.",
+        "selite": "Vientianen jokiranta ja Mekong kuvattuna Laosin pääkaupungissa.",
+        "lyhyt": "Mekongin rantaa Vientianessa.",
         "tiedosto": "Mekong in Vientiane 2.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Christophe95, Commons (CC BY-SA 4.0)",
-        "selite": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.",
-        "lyhyt": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.",
+        "selite": "Vientianen jokiranta ja Mekong kuvattuna Laosin pääkaupungissa.",
+        "lyhyt": "Mekongin rantaa Vientianessa.",
         "tiedosto": "Mekong in Vientiane 2.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/photo-39579ab3932313097974.jpg",
         "suora": true,
         "lahde": "Christophe95, Commons (CC BY-SA 4.0)",
-        "selite": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.",
-        "lyhyt": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.",
+        "selite": "Vientianen jokiranta ja Mekong kuvattuna Laosin pääkaupungissa.",
+        "lyhyt": "Mekongin rantaa Vientianessa.",
         "tiedosto": "Mekong in Vientiane 2.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2212,10 +2338,10 @@
         3024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c5e9752e3b03aceb4aabf5f5135b29da00761aaceca749d280f04ad1f0ad6615",
-        "semanticContextSHA256": "c5e9752e3b03aceb4aabf5f5135b29da00761aaceca749d280f04ad1f0ad6615",
+        "targetBeforeSHA256": "68fc8f1f0583ce58ddc5839e8405ed5d5b767d3b42350e00d8e7c6cdb349e063",
+        "semanticContextSHA256": "68fc8f1f0583ce58ddc5839e8405ed5d5b767d3b42350e00d8e7c6cdb349e063",
         "subjectTitle": "vientiane — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2436,8 +2562,8 @@
       "priorMediaFields": {
         "tiedosto": "Mekong in Vientiane 2.jpg",
         "lahde": "Christophe95, Commons (CC BY-SA 4.0)",
-        "selite": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.",
-        "lyhyt": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön."
+        "lyhyt": "Mekongin rantaa Vientianessa.",
+        "selite": "Vientianen jokiranta ja Mekong kuvattuna Laosin pääkaupungissa."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2456,23 +2582,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Christophe95, Commons (CC BY-SA 4.0)",
-        "selite": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.",
-        "lyhyt": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.",
+        "selite": "Vientianen jokiranta ja Mekong kuvattuna Laosin pääkaupungissa.",
+        "lyhyt": "Mekongin rantaa Vientianessa.",
         "tiedosto": "Mekong in Vientiane 2.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
-      "targetAfterSHA256": "c5e9752e3b03aceb4aabf5f5135b29da00761aaceca749d280f04ad1f0ad6615",
-      "contextAfterSHA256": "c5e9752e3b03aceb4aabf5f5135b29da00761aaceca749d280f04ad1f0ad6615",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+      "targetAfterSHA256": "68fc8f1f0583ce58ddc5839e8405ed5d5b767d3b42350e00d8e7c6cdb349e063",
+      "contextAfterSHA256": "68fc8f1f0583ce58ddc5839e8405ed5d5b767d3b42350e00d8e7c6cdb349e063",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "c5e9752e3b03aceb4aabf5f5135b29da00761aaceca749d280f04ad1f0ad6615",
+        "contextAfterSHA256": "c5e9752e3b03aceb4aabf5f5135b29da00761aaceca749d280f04ad1f0ad6615",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c5e9752e3b03aceb4aabf5f5135b29da00761aaceca749d280f04ad1f0ad6615",
+          "semanticContextSHA256": "c5e9752e3b03aceb4aabf5f5135b29da00761aaceca749d280f04ad1f0ad6615",
+          "subjectTitle": "vientiane — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "39579ab3932313097974903adce8d26adf0a7c119c092c9094139d5f41f0d8d5",
+        "sameImageExportSHA256": "39579ab3932313097974903adce8d26adf0a7c119c092c9094139d5f41f0d8d5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -2494,23 +2641,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/c1-2f7cab6275b0440a1e37.jpg",
         "suora": true,
         "lahde": "Stefan Fussan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle.",
-        "lyhyt": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle.",
+        "selite": "Mekongin äärellä kulkeva rantakävelyalue Vientianessa.",
+        "lyhyt": "Vientianen Mekong-rantakävelyä.",
         "tiedosto": "Vientiane - Mekong Riverfront - 0002.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Stefan Fussan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle.",
-        "lyhyt": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle.",
+        "selite": "Mekongin äärellä kulkeva rantakävelyalue Vientianessa.",
+        "lyhyt": "Vientianen Mekong-rantakävelyä.",
         "tiedosto": "Vientiane - Mekong Riverfront - 0002.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/c1-2f7cab6275b0440a1e37.jpg",
         "suora": true,
         "lahde": "Stefan Fussan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle.",
-        "lyhyt": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle.",
+        "selite": "Mekongin äärellä kulkeva rantakävelyalue Vientianessa.",
+        "lyhyt": "Vientianen Mekong-rantakävelyä.",
         "tiedosto": "Vientiane - Mekong Riverfront - 0002.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2525,10 +2672,10 @@
         3427
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3d544286c43bb388148480a5fb35041eb1e3f9401647834393c77380f4e8f7f2",
-        "semanticContextSHA256": "3d544286c43bb388148480a5fb35041eb1e3f9401647834393c77380f4e8f7f2",
+        "targetBeforeSHA256": "c19ecd7024fdafb289760f74d28fba56fdd802969a74d275e3562e57a27f3e49",
+        "semanticContextSHA256": "c19ecd7024fdafb289760f74d28fba56fdd802969a74d275e3562e57a27f3e49",
         "subjectTitle": "Vientiane",
         "targetState": "existing-target"
       },
@@ -2777,8 +2924,8 @@
       "priorMediaFields": {
         "tiedosto": "Vientiane - Mekong Riverfront - 0002.jpg",
         "lahde": "Stefan Fussan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle.",
-        "lyhyt": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle."
+        "lyhyt": "Vientianen Mekong-rantakävelyä.",
+        "selite": "Mekongin äärellä kulkeva rantakävelyalue Vientianessa."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2797,23 +2944,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Stefan Fussan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle.",
-        "lyhyt": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle.",
+        "selite": "Mekongin äärellä kulkeva rantakävelyalue Vientianessa.",
+        "lyhyt": "Vientianen Mekong-rantakävelyä.",
         "tiedosto": "Vientiane - Mekong Riverfront - 0002.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
-      "targetAfterSHA256": "3d544286c43bb388148480a5fb35041eb1e3f9401647834393c77380f4e8f7f2",
-      "contextAfterSHA256": "3d544286c43bb388148480a5fb35041eb1e3f9401647834393c77380f4e8f7f2",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+      "targetAfterSHA256": "c19ecd7024fdafb289760f74d28fba56fdd802969a74d275e3562e57a27f3e49",
+      "contextAfterSHA256": "c19ecd7024fdafb289760f74d28fba56fdd802969a74d275e3562e57a27f3e49",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "3d544286c43bb388148480a5fb35041eb1e3f9401647834393c77380f4e8f7f2",
+        "contextAfterSHA256": "3d544286c43bb388148480a5fb35041eb1e3f9401647834393c77380f4e8f7f2",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "3d544286c43bb388148480a5fb35041eb1e3f9401647834393c77380f4e8f7f2",
+          "semanticContextSHA256": "3d544286c43bb388148480a5fb35041eb1e3f9401647834393c77380f4e8f7f2",
+          "subjectTitle": "Vientiane",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "2f7cab6275b0440a1e37d6d3521dd08fd1d98be558f571d6b21625ef7b1858bb",
+        "sameImageExportSHA256": "2f7cab6275b0440a1e37d6d3521dd08fd1d98be558f571d6b21625ef7b1858bb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -2835,23 +3003,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/c2-25b47d6fa8cf19bb0df9.jpg",
         "suora": true,
         "lahde": "Christophe95, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman.",
-        "lyhyt": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman.",
+        "selite": "Leveä Mekong ja Vientianen jokirannan maisema.",
+        "lyhyt": "Mekong Vientianen rannalla.",
         "tiedosto": "Mekong in Vientiane 1.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Christophe95, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman.",
-        "lyhyt": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman.",
+        "selite": "Leveä Mekong ja Vientianen jokirannan maisema.",
+        "lyhyt": "Mekong Vientianen rannalla.",
         "tiedosto": "Mekong in Vientiane 1.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/c2-25b47d6fa8cf19bb0df9.jpg",
         "suora": true,
         "lahde": "Christophe95, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman.",
-        "lyhyt": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman.",
+        "selite": "Leveä Mekong ja Vientianen jokirannan maisema.",
+        "lyhyt": "Mekong Vientianen rannalla.",
         "tiedosto": "Mekong in Vientiane 1.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2866,10 +3034,10 @@
         2955
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1d514ee4a9bd02756068b3a23421da50d6ec5e12b72ce1d30c5d88bce99e9417",
-        "semanticContextSHA256": "1d514ee4a9bd02756068b3a23421da50d6ec5e12b72ce1d30c5d88bce99e9417",
+        "targetBeforeSHA256": "107768ad56cddc19774d09a7b0dd39a245ea6d564543181e63bf36d0f589e8a6",
+        "semanticContextSHA256": "107768ad56cddc19774d09a7b0dd39a245ea6d564543181e63bf36d0f589e8a6",
         "subjectTitle": "Vientiane",
         "targetState": "existing-target"
       },
@@ -3090,8 +3258,8 @@
       "priorMediaFields": {
         "tiedosto": "Mekong in Vientiane 1.jpg",
         "lahde": "Christophe95, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman.",
-        "lyhyt": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman."
+        "lyhyt": "Mekong Vientianen rannalla.",
+        "selite": "Leveä Mekong ja Vientianen jokirannan maisema."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3110,23 +3278,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Christophe95, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman.",
-        "lyhyt": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman.",
+        "selite": "Leveä Mekong ja Vientianen jokirannan maisema.",
+        "lyhyt": "Mekong Vientianen rannalla.",
         "tiedosto": "Mekong in Vientiane 1.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
-      "targetAfterSHA256": "1d514ee4a9bd02756068b3a23421da50d6ec5e12b72ce1d30c5d88bce99e9417",
-      "contextAfterSHA256": "1d514ee4a9bd02756068b3a23421da50d6ec5e12b72ce1d30c5d88bce99e9417",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+      "targetAfterSHA256": "107768ad56cddc19774d09a7b0dd39a245ea6d564543181e63bf36d0f589e8a6",
+      "contextAfterSHA256": "107768ad56cddc19774d09a7b0dd39a245ea6d564543181e63bf36d0f589e8a6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "1d514ee4a9bd02756068b3a23421da50d6ec5e12b72ce1d30c5d88bce99e9417",
+        "contextAfterSHA256": "1d514ee4a9bd02756068b3a23421da50d6ec5e12b72ce1d30c5d88bce99e9417",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "1d514ee4a9bd02756068b3a23421da50d6ec5e12b72ce1d30c5d88bce99e9417",
+          "semanticContextSHA256": "1d514ee4a9bd02756068b3a23421da50d6ec5e12b72ce1d30c5d88bce99e9417",
+          "subjectTitle": "Vientiane",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "25b47d6fa8cf19bb0df96f41cbf854675f6d2164264d2bde27b308e50022e2fc",
+        "sameImageExportSHA256": "25b47d6fa8cf19bb0df96f41cbf854675f6d2164264d2bde27b308e50022e2fc",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -3148,23 +3337,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/c3-bf9382de00edf2f56604.jpg",
         "suora": true,
         "lahde": "Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan.",
-        "lyhyt": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan.",
+        "selite": "Mekongin auringonlasku Vientianesta nähtynä 18. marraskuuta 2017.",
+        "lyhyt": "Auringonlasku Mekongilla.",
         "tiedosto": "20171118 Sunset over Mekong Vientiane 3375 DxO.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan.",
-        "lyhyt": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan.",
+        "selite": "Mekongin auringonlasku Vientianesta nähtynä 18. marraskuuta 2017.",
+        "lyhyt": "Auringonlasku Mekongilla.",
         "tiedosto": "20171118 Sunset over Mekong Vientiane 3375 DxO.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/c3-bf9382de00edf2f56604.jpg",
         "suora": true,
         "lahde": "Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan.",
-        "lyhyt": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan.",
+        "selite": "Mekongin auringonlasku Vientianesta nähtynä 18. marraskuuta 2017.",
+        "lyhyt": "Auringonlasku Mekongilla.",
         "tiedosto": "20171118 Sunset over Mekong Vientiane 3375 DxO.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3179,10 +3368,10 @@
         2199
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "de04ba57918ce87c37b008a8129222150ee72f6449ee2d7cec79ada6c5eed173",
-        "semanticContextSHA256": "de04ba57918ce87c37b008a8129222150ee72f6449ee2d7cec79ada6c5eed173",
+        "targetBeforeSHA256": "0c3a86de11c9762416ff6487f5c08830b4fcff4ea40ed706e5e5fc4bff790701",
+        "semanticContextSHA256": "0c3a86de11c9762416ff6487f5c08830b4fcff4ea40ed706e5e5fc4bff790701",
         "subjectTitle": "Vientiane",
         "targetState": "existing-target"
       },
@@ -3391,8 +3580,8 @@
       "priorMediaFields": {
         "tiedosto": "20171118 Sunset over Mekong Vientiane 3375 DxO.jpg",
         "lahde": "Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan.",
-        "lyhyt": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan."
+        "lyhyt": "Auringonlasku Mekongilla.",
+        "selite": "Mekongin auringonlasku Vientianesta nähtynä 18. marraskuuta 2017."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3411,23 +3600,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan.",
-        "lyhyt": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan.",
+        "selite": "Mekongin auringonlasku Vientianesta nähtynä 18. marraskuuta 2017.",
+        "lyhyt": "Auringonlasku Mekongilla.",
         "tiedosto": "20171118 Sunset over Mekong Vientiane 3375 DxO.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
-      "targetAfterSHA256": "de04ba57918ce87c37b008a8129222150ee72f6449ee2d7cec79ada6c5eed173",
-      "contextAfterSHA256": "de04ba57918ce87c37b008a8129222150ee72f6449ee2d7cec79ada6c5eed173",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+      "targetAfterSHA256": "0c3a86de11c9762416ff6487f5c08830b4fcff4ea40ed706e5e5fc4bff790701",
+      "contextAfterSHA256": "0c3a86de11c9762416ff6487f5c08830b4fcff4ea40ed706e5e5fc4bff790701",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "de04ba57918ce87c37b008a8129222150ee72f6449ee2d7cec79ada6c5eed173",
+        "contextAfterSHA256": "de04ba57918ce87c37b008a8129222150ee72f6449ee2d7cec79ada6c5eed173",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "de04ba57918ce87c37b008a8129222150ee72f6449ee2d7cec79ada6c5eed173",
+          "semanticContextSHA256": "de04ba57918ce87c37b008a8129222150ee72f6449ee2d7cec79ada6c5eed173",
+          "subjectTitle": "Vientiane",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "bf9382de00edf2f566040d4a7922f9d1e31f8d4b769ada3e3e3e7404628caa90",
+        "sameImageExportSHA256": "bf9382de00edf2f566040d4a7922f9d1e31f8d4b769ada3e3e3e7404628caa90",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -3449,23 +3659,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/k1-4df3aafe6a7a6b82f94b.jpg",
         "suora": true,
         "lahde": "Nienetwiler, Wikimedia Commons (CC BY 2.5 ch)",
-        "selite": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista.",
-        "lyhyt": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista.",
+        "selite": "Kuun valokuva tammikuulta 2011. Viangchan-nimen yksi tulkinta viittaa kuuhun.",
+        "lyhyt": "Kuu yötaivaalla.",
         "tiedosto": "20110119 moon.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Nienetwiler, Wikimedia Commons (CC BY 2.5 ch)",
-        "selite": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista.",
-        "lyhyt": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista.",
+        "selite": "Kuun valokuva tammikuulta 2011. Viangchan-nimen yksi tulkinta viittaa kuuhun.",
+        "lyhyt": "Kuu yötaivaalla.",
         "tiedosto": "20110119 moon.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/k1-4df3aafe6a7a6b82f94b.jpg",
         "suora": true,
         "lahde": "Nienetwiler, Wikimedia Commons (CC BY 2.5 ch)",
-        "selite": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista.",
-        "lyhyt": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista.",
+        "selite": "Kuun valokuva tammikuulta 2011. Viangchan-nimen yksi tulkinta viittaa kuuhun.",
+        "lyhyt": "Kuu yötaivaalla.",
         "tiedosto": "20110119 moon.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3480,10 +3690,10 @@
         2516
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a172fb285c93147e307031100bcb37d40425ee301de12f028c129a2c11198eb4",
-        "semanticContextSHA256": "a172fb285c93147e307031100bcb37d40425ee301de12f028c129a2c11198eb4",
+        "targetBeforeSHA256": "fa65cddb939a6fc9e2454acb78a9e1dc3639f5ba7d1adce4a5a90e2b12e834e2",
+        "semanticContextSHA256": "fa65cddb939a6fc9e2454acb78a9e1dc3639f5ba7d1adce4a5a90e2b12e834e2",
         "subjectTitle": "Kaupunki, jonka nimessä on kaksi tulkintaa",
         "targetState": "existing-target"
       },
@@ -3687,8 +3897,8 @@
       "priorMediaFields": {
         "tiedosto": "20110119 moon.jpg",
         "lahde": "Nienetwiler, Wikimedia Commons (CC BY 2.5 ch)",
-        "selite": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista.",
-        "lyhyt": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista."
+        "lyhyt": "Kuu yötaivaalla.",
+        "selite": "Kuun valokuva tammikuulta 2011. Viangchan-nimen yksi tulkinta viittaa kuuhun."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3707,23 +3917,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Nienetwiler, Wikimedia Commons (CC BY 2.5 ch)",
-        "selite": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista.",
-        "lyhyt": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista.",
+        "selite": "Kuun valokuva tammikuulta 2011. Viangchan-nimen yksi tulkinta viittaa kuuhun.",
+        "lyhyt": "Kuu yötaivaalla.",
         "tiedosto": "20110119 moon.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
-      "targetAfterSHA256": "a172fb285c93147e307031100bcb37d40425ee301de12f028c129a2c11198eb4",
-      "contextAfterSHA256": "a172fb285c93147e307031100bcb37d40425ee301de12f028c129a2c11198eb4",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+      "targetAfterSHA256": "fa65cddb939a6fc9e2454acb78a9e1dc3639f5ba7d1adce4a5a90e2b12e834e2",
+      "contextAfterSHA256": "fa65cddb939a6fc9e2454acb78a9e1dc3639f5ba7d1adce4a5a90e2b12e834e2",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "a172fb285c93147e307031100bcb37d40425ee301de12f028c129a2c11198eb4",
+        "contextAfterSHA256": "a172fb285c93147e307031100bcb37d40425ee301de12f028c129a2c11198eb4",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a172fb285c93147e307031100bcb37d40425ee301de12f028c129a2c11198eb4",
+          "semanticContextSHA256": "a172fb285c93147e307031100bcb37d40425ee301de12f028c129a2c11198eb4",
+          "subjectTitle": "Kaupunki, jonka nimessä on kaksi tulkintaa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "4df3aafe6a7a6b82f94b365d6110af792fdaa3a0449828f91054249b67fc307b",
+        "sameImageExportSHA256": "4df3aafe6a7a6b82f94b365d6110af792fdaa3a0449828f91054249b67fc307b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -3745,23 +3976,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/k4-b5d7e922b8dfa6d8cf21.jpg",
         "suora": true,
         "lahde": "Isan1985, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Grillattua tahmeaa riisiä munapäällysteellä.",
-        "lyhyt": "Grillattua tahmeaa riisiä munapäällysteellä.",
+        "selite": "Tahmeasta riisistä tehtyjä grillattuja annoksia munapäällysteellä; kuva esittelee laolaisen ruokalajin.",
+        "lyhyt": "Grillattua tahmeaa riisiä.",
         "tiedosto": "Lao grilled stickyrice joom kai.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Isan1985, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Grillattua tahmeaa riisiä munapäällysteellä.",
-        "lyhyt": "Grillattua tahmeaa riisiä munapäällysteellä.",
+        "selite": "Tahmeasta riisistä tehtyjä grillattuja annoksia munapäällysteellä; kuva esittelee laolaisen ruokalajin.",
+        "lyhyt": "Grillattua tahmeaa riisiä.",
         "tiedosto": "Lao grilled stickyrice joom kai.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/k4-b5d7e922b8dfa6d8cf21.jpg",
         "suora": true,
         "lahde": "Isan1985, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Grillattua tahmeaa riisiä munapäällysteellä.",
-        "lyhyt": "Grillattua tahmeaa riisiä munapäällysteellä.",
+        "selite": "Tahmeasta riisistä tehtyjä grillattuja annoksia munapäällysteellä; kuva esittelee laolaisen ruokalajin.",
+        "lyhyt": "Grillattua tahmeaa riisiä.",
         "tiedosto": "Lao grilled stickyrice joom kai.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3776,10 +4007,10 @@
         2057
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8ee0682696a01336c580c02038dac4c5cb68f499b7ee734f313105421f281da5",
-        "semanticContextSHA256": "8ee0682696a01336c580c02038dac4c5cb68f499b7ee734f313105421f281da5",
+        "targetBeforeSHA256": "13c38489e0dddfbbd491a4f6026d45310ddc3bfa770972f763e57331bbd47817",
+        "semanticContextSHA256": "13c38489e0dddfbbd491a4f6026d45310ddc3bfa770972f763e57331bbd47817",
         "subjectTitle": "Iltatori tarjoaa pieniä paketteja",
         "targetState": "existing-target"
       },
@@ -4007,8 +4238,8 @@
       "priorMediaFields": {
         "tiedosto": "Lao grilled stickyrice joom kai.jpg",
         "lahde": "Isan1985, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Grillattua tahmeaa riisiä munapäällysteellä.",
-        "lyhyt": "Grillattua tahmeaa riisiä munapäällysteellä."
+        "lyhyt": "Grillattua tahmeaa riisiä.",
+        "selite": "Tahmeasta riisistä tehtyjä grillattuja annoksia munapäällysteellä; kuva esittelee laolaisen ruokalajin."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4027,23 +4258,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Isan1985, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Grillattua tahmeaa riisiä munapäällysteellä.",
-        "lyhyt": "Grillattua tahmeaa riisiä munapäällysteellä.",
+        "selite": "Tahmeasta riisistä tehtyjä grillattuja annoksia munapäällysteellä; kuva esittelee laolaisen ruokalajin.",
+        "lyhyt": "Grillattua tahmeaa riisiä.",
         "tiedosto": "Lao grilled stickyrice joom kai.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
-      "targetAfterSHA256": "8ee0682696a01336c580c02038dac4c5cb68f499b7ee734f313105421f281da5",
-      "contextAfterSHA256": "8ee0682696a01336c580c02038dac4c5cb68f499b7ee734f313105421f281da5",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+      "targetAfterSHA256": "13c38489e0dddfbbd491a4f6026d45310ddc3bfa770972f763e57331bbd47817",
+      "contextAfterSHA256": "13c38489e0dddfbbd491a4f6026d45310ddc3bfa770972f763e57331bbd47817",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "8ee0682696a01336c580c02038dac4c5cb68f499b7ee734f313105421f281da5",
+        "contextAfterSHA256": "8ee0682696a01336c580c02038dac4c5cb68f499b7ee734f313105421f281da5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8ee0682696a01336c580c02038dac4c5cb68f499b7ee734f313105421f281da5",
+          "semanticContextSHA256": "8ee0682696a01336c580c02038dac4c5cb68f499b7ee734f313105421f281da5",
+          "subjectTitle": "Iltatori tarjoaa pieniä paketteja",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "b5d7e922b8dfa6d8cf21eb3e2a6f7dcc2a0fd5552daf8d48d2b857ace5d8bf90",
+        "sameImageExportSHA256": "b5d7e922b8dfa6d8cf21eb3e2a6f7dcc2a0fd5552daf8d48d2b857ace5d8bf90",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -4065,23 +4317,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/l2-dc56288cf6060665d764.jpg",
         "suora": true,
         "lahde": "Jpatokal, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita.",
-        "lyhyt": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita.",
+        "selite": "Yrteillä maustettu naudanlihasta valmistettu laap-annos tässä laolaisen ruoan kuvassa.",
+        "lyhyt": "Naudanlihasta tehtyä laapia.",
         "tiedosto": "LaoFood LarbNeua.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Jpatokal, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita.",
-        "lyhyt": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita.",
+        "selite": "Yrteillä maustettu naudanlihasta valmistettu laap-annos tässä laolaisen ruoan kuvassa.",
+        "lyhyt": "Naudanlihasta tehtyä laapia.",
         "tiedosto": "LaoFood LarbNeua.JPG"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/vientiane/l2-dc56288cf6060665d764.jpg",
         "suora": true,
         "lahde": "Jpatokal, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita.",
-        "lyhyt": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita.",
+        "selite": "Yrteillä maustettu naudanlihasta valmistettu laap-annos tässä laolaisen ruoan kuvassa.",
+        "lyhyt": "Naudanlihasta tehtyä laapia.",
         "tiedosto": "LaoFood LarbNeua.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -4096,10 +4348,10 @@
         2000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/vientiane/sisalto.json",
-      "sourceContentSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+      "sourceContentSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "78bc57c5ad12d93d27396f862033239629e8c41beec0a5af26ba9371858debe5",
-        "semanticContextSHA256": "78bc57c5ad12d93d27396f862033239629e8c41beec0a5af26ba9371858debe5",
+        "targetBeforeSHA256": "c6dd345558dc42f1bca3cb7711d93cb90955960a6ed98fc4d6b7c93e336c481e",
+        "semanticContextSHA256": "c6dd345558dc42f1bca3cb7711d93cb90955960a6ed98fc4d6b7c93e336c481e",
         "subjectTitle": "Laap ei ole yhden lihan nimi",
         "targetState": "existing-target"
       },
@@ -4328,8 +4580,8 @@
       "priorMediaFields": {
         "tiedosto": "LaoFood LarbNeua.JPG",
         "lahde": "Jpatokal, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita.",
-        "lyhyt": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita."
+        "lyhyt": "Naudanlihasta tehtyä laapia.",
+        "selite": "Yrteillä maustettu naudanlihasta valmistettu laap-annos tässä laolaisen ruoan kuvassa."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4348,28 +4600,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Jpatokal, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita.",
-        "lyhyt": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita.",
+        "selite": "Yrteillä maustettu naudanlihasta valmistettu laap-annos tässä laolaisen ruoan kuvassa.",
+        "lyhyt": "Naudanlihasta tehtyä laapia.",
         "tiedosto": "LaoFood LarbNeua.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
-      "targetAfterSHA256": "78bc57c5ad12d93d27396f862033239629e8c41beec0a5af26ba9371858debe5",
-      "contextAfterSHA256": "78bc57c5ad12d93d27396f862033239629e8c41beec0a5af26ba9371858debe5",
+      "sourceContentAfterSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+      "targetAfterSHA256": "c6dd345558dc42f1bca3cb7711d93cb90955960a6ed98fc4d6b7c93e336c481e",
+      "contextAfterSHA256": "c6dd345558dc42f1bca3cb7711d93cb90955960a6ed98fc4d6b7c93e336c481e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "904d688f440ea479ed9eae94f9cf4a8b54203d1227955fe5555c74c226dc67ce",
+        "targetAfterSHA256": "78bc57c5ad12d93d27396f862033239629e8c41beec0a5af26ba9371858debe5",
+        "contextAfterSHA256": "78bc57c5ad12d93d27396f862033239629e8c41beec0a5af26ba9371858debe5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "78bc57c5ad12d93d27396f862033239629e8c41beec0a5af26ba9371858debe5",
+          "semanticContextSHA256": "78bc57c5ad12d93d27396f862033239629e8c41beec0a5af26ba9371858debe5",
+          "subjectTitle": "Laap ei ole yhden lihan nimi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed",
+        "sameImageNativeSHA256": "dc56288cf6060665d7641ab3ce2244dc406c4a546668da945e1ddbb5be9c6a1f",
+        "sameImageExportSHA256": "dc56288cf6060665d7641ab3ce2244dc406c4a546668da945e1ddbb5be9c6a1f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e10/vientiane/6083a12cb66967677c70462222ea582678a2ea93eada984b0cb321f5f3bd5f18.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.927254+00:00"
 }

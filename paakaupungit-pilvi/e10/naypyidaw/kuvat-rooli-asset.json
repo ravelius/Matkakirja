@@ -3,7 +3,7 @@
   "era": "e10",
   "city": "naypyidaw",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+  "sourceContentAfterSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
   "assets": [
     {
       "era": "e10",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte.",
-        "lyhyt": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte."
+        "selite": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-TRAVELER-v1-20261012-c5951029c08c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte.",
-        "lyhyt": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte."
+        "selite": "Havainnekuva kivettyneestä puusta; ei kansallismuseon nimetty näyte."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
-      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "ab6cb460dc48b19ccbe803133c2c90cf53704503604ccc3fe126c56f76d9877f",
+        "semanticContextSHA256": "83553e5930c4a8828db49c47baedd30055db75f21e6b5bca55040e137fa3f2fd",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -489,9 +489,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -510,17 +510,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentAfterSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "ab6cb460dc48b19ccbe803133c2c90cf53704503604ccc3fe126c56f76d9877f",
+      "contextAfterSHA256": "83553e5930c4a8828db49c47baedd30055db75f21e6b5bca55040e137fa3f2fd",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "ab6cb460dc48b19ccbe803133c2c90cf53704503604ccc3fe126c56f76d9877f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "ab6cb460dc48b19ccbe803133c2c90cf53704503604ccc3fe126c56f76d9877f",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+        "sameImageNativeSHA256": "c5951029c08c85402754f52ce45c13c8a764e193d0b504ac97f0260002b9698d",
+        "sameImageExportSHA256": "554a418fcd3467b74d939d9b6af568d9dc371e6fd90a687df4229dafa3791c68",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -545,10 +566,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu.",
-        "lyhyt": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu."
+        "selite": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -556,10 +577,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-O3-v1-20261012-665123fe5c73.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu.",
-        "lyhyt": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu."
+        "selite": "Havainnekuva hoidettavasta elävästä kasvista; ei puiston tietty laji tai asettelu."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -573,10 +594,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
-      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "0e42ca8728fbe448989183809b455d83210f5c6751ec61d764c96ec0e518dd13",
+        "semanticContextSHA256": "7194d43155898215dd7c25cea88c5c2643c1c86496e4a8833998fbf9977bf52e",
         "subjectTitle": "Museon pitkä aika ja puiston kasvit",
         "targetState": "existing-target"
       },
@@ -799,9 +820,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -820,17 +841,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentAfterSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "0e42ca8728fbe448989183809b455d83210f5c6751ec61d764c96ec0e518dd13",
+      "contextAfterSHA256": "7194d43155898215dd7c25cea88c5c2643c1c86496e4a8833998fbf9977bf52e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "0e42ca8728fbe448989183809b455d83210f5c6751ec61d764c96ec0e518dd13",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "0e42ca8728fbe448989183809b455d83210f5c6751ec61d764c96ec0e518dd13",
+          "subjectTitle": "Museon pitkä aika ja puiston kasvit",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+        "sameImageNativeSHA256": "665123fe5c73b7e8f871d4325c13e3b5b6d5bc0f6d3ecbb09e7ec7a527b78e1d",
+        "sameImageExportSHA256": "a5ef13d670497c4970e4ebef211437c2132238411f09840db03673ba3bce3604",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -852,10 +894,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata.",
-        "lyhyt": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata."
+        "selite": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -863,10 +905,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-K4-v1-20261012-ec0f73c93cc1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata.",
-        "lyhyt": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata."
+        "selite": "Havainnekuva rautatien rakenteesta; ei Naypyidawin asema tai tietty rata."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -880,7 +922,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
-      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5",
         "semanticContextSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5",
@@ -1104,9 +1146,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1125,17 +1167,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentAfterSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "targetAfterSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5",
       "contextAfterSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+        "targetAfterSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5",
+        "contextAfterSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5",
+          "semanticContextSHA256": "bcf664f5d3bfec82c2a57afeffee97c68eaf36efe3d6b49bf249abd775834ba5",
+          "subjectTitle": "Rata oli olemassa ennen uutta asemaa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+        "sameImageNativeSHA256": "ec0f73c93cc11d751d62943dcfdbfcf1aef86d8b51377e14cc50f02b790073c8",
+        "sameImageExportSHA256": "9998e74eba792acc4baa01879e19f0d82a6409f9235c1df74521eb7ab224a4f1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1157,10 +1220,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä.",
-        "lyhyt": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä."
+        "selite": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1168,10 +1231,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L1-v1-20261012-d4b4dc29e6ff.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä.",
-        "lyhyt": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä."
+        "selite": "Havainnekuva elävien kasvien säilyttämisestä; ei National Herbal Parkin nimetty kasvi tai näkymä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1185,7 +1248,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
-      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f",
         "semanticContextSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f",
@@ -1409,9 +1472,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1430,17 +1493,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentAfterSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "targetAfterSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f",
       "contextAfterSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+        "targetAfterSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f",
+        "contextAfterSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f",
+          "semanticContextSHA256": "7a18ddc5ac9d65dcae4b65992890bec229ea7c30930e788eb61ba63c3d22d73f",
+          "subjectTitle": "Kasvikokoelma kasvaa saman taivaan alla",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+        "sameImageNativeSHA256": "d4b4dc29e6ff18e7ede0efa69634304e446e93b9b302d12087489ca736e0162e",
+        "sameImageExportSHA256": "718ade5bbf3bdd2d46eb13657737e9693853b7da171822a5a6489d1d6c5b637a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1462,10 +1546,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka.",
-        "lyhyt": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka."
+        "selite": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1473,10 +1557,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L2-v1-20261012-7155f83f0fbc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka.",
-        "lyhyt": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka."
+        "selite": "Havainnekuva kivettyneestä puusta; ei nimetty museoesine tai löytöpaikka."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1490,7 +1574,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
-      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e",
         "semanticContextSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e",
@@ -1700,9 +1784,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1721,17 +1805,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentAfterSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "targetAfterSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e",
       "contextAfterSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+        "targetAfterSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e",
+        "contextAfterSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e",
+          "semanticContextSHA256": "95c86050fe7efdb65ecce9ef0f87d1f7ccd1b719e877595529ac736823fb3e5e",
+          "subjectTitle": "Museon vanhimmat asukkaat ovat fossiileja",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+        "sameImageNativeSHA256": "7155f83f0fbcd9a7ddf6d32f9b15557da116a945e49d3496dfb8bb0debc94a3b",
+        "sameImageExportSHA256": "dc327263007a0805f4bcaa768104d2aa5c8dadc18f3d44615a6e9f1411906ee0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1753,10 +1858,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä.",
-        "lyhyt": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä."
+        "selite": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1764,10 +1869,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L3-v1-20261012-5f0c65f2ecfe.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä.",
-        "lyhyt": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä."
+        "selite": "Havainnekuva kivestä, pronssista ja raudasta; ei museon työkaluja tai esinejäljennöksiä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1781,7 +1886,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
-      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41",
         "semanticContextSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41",
@@ -2005,9 +2110,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2026,17 +2131,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentAfterSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "targetAfterSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41",
       "contextAfterSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+        "targetAfterSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41",
+        "contextAfterSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41",
+          "semanticContextSHA256": "d4abc32da8923a9fe8c59d307e73ada9e6f26869532aa3c6e92d9b531b2e4b41",
+          "subjectTitle": "Työkalu tekee aikakauden näkyväksi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+        "sameImageNativeSHA256": "5f0c65f2ecfe1869a13b9b03edaff4c3ca206eba50694771fb77cfe7ce2e7f68",
+        "sameImageExportSHA256": "b5d95b2b3ba111c573ffeb3d7fac04ae6eacbae1fbb179fb333e13e92ef97de2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -2058,10 +2184,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli.",
-        "lyhyt": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli."
+        "selite": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2069,10 +2195,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/naypyidaw/e10-naypyidaw-L4-v1-20261012-117c1471862a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli.",
-        "lyhyt": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli."
+        "selite": "Havainnekuva tiilirakentamisen materiaalista; ei Pyu-kaupungin rakenne tai museon pienoismalli."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2086,7 +2212,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
-      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276",
         "semanticContextSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276",
@@ -2310,9 +2436,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2331,17 +2457,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentAfterSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "targetAfterSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276",
       "contextAfterSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+        "targetAfterSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276",
+        "contextAfterSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276",
+          "semanticContextSHA256": "e22262132610556e138ffef25e19bcfabc94bb13408eaba219ba2f71cab0a276",
+          "subjectTitle": "Muinaiskaupungit mahtuvat museoon",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+        "sameImageNativeSHA256": "117c1471862aa025c1807c5718b506833a544f3b3f27e6422efb7ad807f3bdc6",
+        "sameImageExportSHA256": "612f11de473bb3ea1e4901f81e0966b4a4b8a8e6b9cf0b63b89e5274c609bad2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -2360,23 +2507,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/photo-e2e84afe03bee395b9d3.jpg",
         "suora": true,
         "lahde": "Myrmux, Commons (CC BY-SA 4.0)",
-        "selite": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
-        "lyhyt": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "selite": "Papayapuu (Carica papaya) Naypyidawin kasvipuistossa tammikuussa 2018 otetussa kuvassa.",
+        "lyhyt": "Nuori papayapuu National Herbal Parkissa.",
         "tiedosto": "Junger Papayabaum (Carica papaya).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Myrmux, Commons (CC BY-SA 4.0)",
-        "selite": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
-        "lyhyt": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "selite": "Papayapuu (Carica papaya) Naypyidawin kasvipuistossa tammikuussa 2018 otetussa kuvassa.",
+        "lyhyt": "Nuori papayapuu National Herbal Parkissa.",
         "tiedosto": "Junger Papayabaum (Carica papaya).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/photo-e2e84afe03bee395b9d3.jpg",
         "suora": true,
         "lahde": "Myrmux, Commons (CC BY-SA 4.0)",
-        "selite": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
-        "lyhyt": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "selite": "Papayapuu (Carica papaya) Naypyidawin kasvipuistossa tammikuussa 2018 otetussa kuvassa.",
+        "lyhyt": "Nuori papayapuu National Herbal Parkissa.",
         "tiedosto": "Junger Papayabaum (Carica papaya).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2391,10 +2538,10 @@
         4608
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
-      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0",
-        "semanticContextSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0",
+        "targetBeforeSHA256": "5a2e9504c4fb58dceed9653bd9430526be77eec97129c8438058b186153c5a0e",
+        "semanticContextSHA256": "5a2e9504c4fb58dceed9653bd9430526be77eec97129c8438058b186153c5a0e",
         "subjectTitle": "naypyidaw — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2580,9 +2727,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Junger Papayabaum (Carica papaya).jpg",
-        "lahde": "Myrmux, Commons (CC BY-SA 4.0)",
-        "selite": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
-        "lyhyt": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018."
+        "lyhyt": "Nuori papayapuu National Herbal Parkissa.",
+        "selite": "Papayapuu (Carica papaya) Naypyidawin kasvipuistossa tammikuussa 2018 otetussa kuvassa.",
+        "lahde": "Myrmux, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2601,23 +2748,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Myrmux, Commons (CC BY-SA 4.0)",
-        "selite": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
-        "lyhyt": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+        "selite": "Papayapuu (Carica papaya) Naypyidawin kasvipuistossa tammikuussa 2018 otetussa kuvassa.",
+        "lyhyt": "Nuori papayapuu National Herbal Parkissa.",
         "tiedosto": "Junger Papayabaum (Carica papaya).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
-      "targetAfterSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0",
-      "contextAfterSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0",
+      "sourceContentAfterSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+      "targetAfterSHA256": "5a2e9504c4fb58dceed9653bd9430526be77eec97129c8438058b186153c5a0e",
+      "contextAfterSHA256": "5a2e9504c4fb58dceed9653bd9430526be77eec97129c8438058b186153c5a0e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+        "targetAfterSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0",
+        "contextAfterSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0",
+          "semanticContextSHA256": "2aecfbf572e21560f32d8639a217504fd5124eec737c915f2c60d726c0dc88d0",
+          "subjectTitle": "naypyidaw — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+        "sameImageNativeSHA256": "e2e84afe03bee395b9d3864f50e8f62418733049fd8ba8336c7bea681ed20c82",
+        "sameImageExportSHA256": "e2e84afe03bee395b9d3864f50e8f62418733049fd8ba8336c7bea681ed20c82",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -2639,23 +2807,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/c1-a0a1310e5bab80b7b071.jpg",
         "suora": true,
         "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Naypyidawin leveää bulevardia joulukuussa 2011.",
-        "lyhyt": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "selite": "Naypyidawin bulevardi joulukuussa 2011 otetussa kuvassa.",
+        "lyhyt": "Naypyidawin leveä bulevardi.",
         "tiedosto": "Naypyidaw -- Wide Boulevard.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Naypyidawin leveää bulevardia joulukuussa 2011.",
-        "lyhyt": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "selite": "Naypyidawin bulevardi joulukuussa 2011 otetussa kuvassa.",
+        "lyhyt": "Naypyidawin leveä bulevardi.",
         "tiedosto": "Naypyidaw -- Wide Boulevard.JPG"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/c1-a0a1310e5bab80b7b071.jpg",
         "suora": true,
         "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Naypyidawin leveää bulevardia joulukuussa 2011.",
-        "lyhyt": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "selite": "Naypyidawin bulevardi joulukuussa 2011 otetussa kuvassa.",
+        "lyhyt": "Naypyidawin leveä bulevardi.",
         "tiedosto": "Naypyidaw -- Wide Boulevard.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2670,10 +2838,10 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
-      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5",
-        "semanticContextSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5",
+        "targetBeforeSHA256": "8a9e139794517eaa051b18ed0bb12d0ab95dfe0fd89117868d75ecc1d1e1f299",
+        "semanticContextSHA256": "8a9e139794517eaa051b18ed0bb12d0ab95dfe0fd89117868d75ecc1d1e1f299",
         "subjectTitle": "Naypyidaw",
         "targetState": "existing-target"
       },
@@ -2859,9 +3027,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Naypyidaw -- Wide Boulevard.JPG",
-        "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Naypyidawin leveää bulevardia joulukuussa 2011.",
-        "lyhyt": "Naypyidawin leveää bulevardia joulukuussa 2011."
+        "lyhyt": "Naypyidawin leveä bulevardi.",
+        "selite": "Naypyidawin bulevardi joulukuussa 2011 otetussa kuvassa.",
+        "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2880,23 +3048,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Naypyidawin leveää bulevardia joulukuussa 2011.",
-        "lyhyt": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+        "selite": "Naypyidawin bulevardi joulukuussa 2011 otetussa kuvassa.",
+        "lyhyt": "Naypyidawin leveä bulevardi.",
         "tiedosto": "Naypyidaw -- Wide Boulevard.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
-      "targetAfterSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5",
-      "contextAfterSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5",
+      "sourceContentAfterSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+      "targetAfterSHA256": "8a9e139794517eaa051b18ed0bb12d0ab95dfe0fd89117868d75ecc1d1e1f299",
+      "contextAfterSHA256": "8a9e139794517eaa051b18ed0bb12d0ab95dfe0fd89117868d75ecc1d1e1f299",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+        "targetAfterSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5",
+        "contextAfterSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5",
+          "semanticContextSHA256": "96fdb89522ed08fe5415696f2a518de63fae139e06656d29f2437a3214ffa6f5",
+          "subjectTitle": "Naypyidaw",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+        "sameImageNativeSHA256": "a0a1310e5bab80b7b0712b15289ea71ee57ec8b4b6387388e3369c4afdc34a92",
+        "sameImageExportSHA256": "a0a1310e5bab80b7b0712b15289ea71ee57ec8b4b6387388e3369c4afdc34a92",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -2918,23 +3107,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/k1-e3a08f5d09888e605c18.jpg",
         "suora": true,
         "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
-        "lyhyt": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "selite": "Ulkoilureitti Naypyidawissa marraskuussa 2015 otetussa kuvassa.",
+        "lyhyt": "Naypyidawin ulkoilureitti.",
         "tiedosto": "Jogging trails - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
-        "lyhyt": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "selite": "Ulkoilureitti Naypyidawissa marraskuussa 2015 otetussa kuvassa.",
+        "lyhyt": "Naypyidawin ulkoilureitti.",
         "tiedosto": "Jogging trails - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/naypyidaw/k1-e3a08f5d09888e605c18.jpg",
         "suora": true,
         "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
-        "lyhyt": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "selite": "Ulkoilureitti Naypyidawissa marraskuussa 2015 otetussa kuvassa.",
+        "lyhyt": "Naypyidawin ulkoilureitti.",
         "tiedosto": "Jogging trails - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2949,10 +3138,10 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/naypyidaw/sisalto.json",
-      "sourceContentSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+      "sourceContentSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004",
-        "semanticContextSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004",
+        "targetBeforeSHA256": "91c14fedd8df2da7dc18c2c0cc590df0fb21e2265ae8da7fcacd4ce27aa01c8c",
+        "semanticContextSHA256": "91c14fedd8df2da7dc18c2c0cc590df0fb21e2265ae8da7fcacd4ce27aa01c8c",
         "subjectTitle": "Kaupunki on jaettu käyttötarkoituksiin",
         "targetState": "existing-target"
       },
@@ -3154,9 +3343,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Jogging trails - panoramio.jpg",
-        "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
-        "lyhyt": "Ulkoilureittiä Naypyidawissa marraskuussa 2015."
+        "lyhyt": "Naypyidawin ulkoilureitti.",
+        "selite": "Ulkoilureitti Naypyidawissa marraskuussa 2015 otetussa kuvassa.",
+        "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3175,28 +3364,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
-        "lyhyt": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+        "selite": "Ulkoilureitti Naypyidawissa marraskuussa 2015 otetussa kuvassa.",
+        "lyhyt": "Naypyidawin ulkoilureitti.",
         "tiedosto": "Jogging trails - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
-      "targetAfterSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004",
-      "contextAfterSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004",
+      "sourceContentAfterSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+      "targetAfterSHA256": "91c14fedd8df2da7dc18c2c0cc590df0fb21e2265ae8da7fcacd4ce27aa01c8c",
+      "contextAfterSHA256": "91c14fedd8df2da7dc18c2c0cc590df0fb21e2265ae8da7fcacd4ce27aa01c8c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "787887ff4046c0376929fdc73d10bf7218f256fad90212e2b8ac0f336cdba275",
+        "targetAfterSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004",
+        "contextAfterSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004",
+          "semanticContextSHA256": "bd29164ff40ed2807a735979ee49aa380fd30d92d3b72b5ec046756f8c145004",
+          "subjectTitle": "Kaupunki on jaettu käyttötarkoituksiin",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f",
+        "sameImageNativeSHA256": "e3a08f5d09888e605c18364efc97b34c121d10aac3d56d59acfa682dc5ad5640",
+        "sameImageExportSHA256": "e3a08f5d09888e605c18364efc97b34c121d10aac3d56d59acfa682dc5ad5640",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e10/naypyidaw/a3c673de470f205cebb0f1cc728fc2fcf50908e11915ace871fcd8cde700a38d.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.846313+00:00"
 }

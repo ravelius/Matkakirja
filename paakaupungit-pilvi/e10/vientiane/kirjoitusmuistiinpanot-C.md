@@ -13,3 +13,33 @@ Robots: tourismlaos.org kielsi molemmille agenteille haun. Sivua ei noudettu eik
 Suojaraja: mukana vain historiallinen Wat Si Saket yleiskohteena; pienten kuvien teoskohtaista ikää ei arvata. Haw Phra Kaewin nykyrekonstruktio, That Damin ajoittamaton stupa, Patuxai, Buddha Park ja nykyveistokset eivät kartta-/kuvavalintoja. Haw Phra Kaewista sallittu tekstihistoria; mahdollinen historiallinen PD-kuva vaatii erillisen valinnan ja tarkistuksen. That Damin naga-perinne vain selvästi merkittynä perimätietona kysymyksessä. Ei isoisän toimintaa tai tarkkaa 1873-ulkoasua. Ei Git-operaatioita, pelimuutoksia, kuvahakuja, generointia tai uusia agentteja/sessioita.
 
 Todisteet: `valiaikainen/nopea-e10-vientiane/tarkistus-lyhyt.txt`, `tarkistus-kaikki.txt`, `tarkistus-ajot.json`, `mitat.json`, `rakennetodiste.json`, `sha256.json`, `lahdehaku-omat.jsonl`; lähde-HTML ja tekstipoiminnat samassa kansiossa.
+
+
+## Task118 korjaus 13.10.2026
+Kaikki pelaajatekstikentät luettu ja sovellettu otoksen yleissäännöt. Lähdepohja, C-muistio sekä nykyiset Commons-lähdetiedot tarkistettu. Meta- ja täytelauseita korvattu kaupungin omilla faktoilla; vihjeet ja houkuttimet täsmennetty. Nykyiset kuvat, pisteet ja sää säilytetty; niiden puutteet ovat erillisiä portteja. Tuore mainin js/data-haku tehty ennen kirjoittamista. Ei Git, kuvia, pelikytkentää tai julkaisua.
+
+
+```text
+VIRHE vientiane: kansi nosto 2: tiedosto puuttuu
+VIRHE vientiane: kansi nosto 3: tiedosto puuttuu
+VIRHE vientiane: matkailijalle.kuva: tiedosto puuttuu
+VIRHE vientiane: opas jakso 1: tiedosto puuttuu
+VIRHE vientiane: opas jakso 2: tiedosto puuttuu
+VIRHE vientiane: opas jakso 3: tiedosto puuttuu
+VIRHE vientiane: opas jakso 4: tiedosto puuttuu
+VIRHE vientiane: opas jakso 5: tiedosto puuttuu
+VIRHE vientiane: teemasivu ruoka nosto 1: tiedosto puuttuu
+VIRHE vientiane: teemasivu ruoka nosto 3: tiedosto puuttuu
+VIRHE vientiane: teemasivu ruoka nosto 4: tiedosto puuttuu
+VIRHE vientiane: juttu Wat Si Saket kuva 1: tiedosto puuttuu
+== vientiane: 12 virhettä, 2 varoitusta, 7 kuvaa
+YHTEENSÄ 1 kaupunkia: 12 virhettä, 2 varoitusta
+```
+SHA256 04857b5a00c4fb85166e53ebca552afb1162b66a04a0ab6e77c877431e2c29ac
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash ea0d9dac107a58c9ce0c4b4374c2a3427202c2c630354226258d73a5e55e75ed. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS vientiane: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS vientiane: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

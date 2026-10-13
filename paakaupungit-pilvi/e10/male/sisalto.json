@@ -14,8 +14,8 @@
     }
   },
   "artikkeli": {
-    "intro": "**Malé** on Malediivien pääkaupunki ja saariston kaupallinen solmukohta Intian valtamerellä. Sen kalatorille tuodaan saalista, ja viereisissä kojuissa myydään atolleilta saapuneita hedelmiä sekä kuivattua kalaa. Pienellä pääsaarella satama, asuintalot ja hallinnon rakennukset ovat lähekkäin. Velanan lentoasema sijaitsee naapurisaari Hulhulélla, jonne pääsee myös maanteitse.\n\nMalé oli aikoinaan sulttaanien linnoitettu palatsikaupunki. Kuninkaallinen palatsi ja vanhat varustukset ovat kadonneet, mutta **Hukuru Miskiy**, vanha perjantaimoskeija, säilyttää korallikivestä rakentamisen perinnettä. Sen lohkot on sovitettu toisiinsa puusepän liitoksia muistuttavalla tekniikalla. Meri näkyy myös ruokapöydässä: tonnikala ja kookos kohtaavat aamiaisessa, välipaloissa ja curryissa. Pääkaupungin omaleimaisuus löytyy sataman, käsityön ja ruokapaikkojen yhteydestä.",
-    "teksti": "Malén vanhaan kaupunkiin kuuluivat sulttaanin palatsi, muurit ja portit. Keskiaikainen Ibn Battutan matkakuvaus kertoo kuningattaren asuinpaikasta, puisista moskeijoista ja palatsissa varastoiduista kaurikotilon kuorista. Saari oli osa merikaupan verkostoa jo kauan ennen lentoliikennettä.\n\nHukuru Miskiy rakennettiin 1600-luvulla korallikivestä. Märkänä leikattavat lohkot kuivattiin ja sovitettiin toisiinsa ponttien ja tappien avulla. Puukatot, kaiverrukset ja lakatut sisäosat täydentävät rakennusta, jossa kiventyö ja puusepäntaito liittyvät yhteen.\n\nNykyisen Malén satama on saariston tavaraliikenteen keskus. Kalatorin naapurissa myydään atollien kasviksia, hedelmiä ja säilöttyä kalaa. Kahviloiden hedhika-välipalat sekä tonnikalasta ja kookoksesta tehtävät ruoat tuovat sataman tuotteet kaupunkilaisten pöytään."
+    "intro": "**Malé** on Malediivien pääkaupunki ja saariston kaupallinen solmukohta Intian valtamerellä. Sen kalatorille tuodaan saalista, ja viereisissä kojuissa myydään atolleilta saapuneita hedelmiä sekä kuivattua kalaa. Pienellä pääsaarella satama, asuintalot ja hallinnon rakennukset ovat lähekkäin. Velanan lentoasema sijaitsee naapurisaarella Hulhulélla, jonne pääsee myös maanteitse.\n\nMalé oli aikoinaan sulttaanien linnoitettu palatsikaupunki. Kuninkaallinen palatsi ja vanhat varustukset ovat kadonneet, mutta **Hukuru Miskiy**, vanha perjantaimoskeija, säilyttää korallikivestä rakentamisen perinnettä. Sen lohkot on sovitettu toisiinsa puusepän liitoksia muistuttavalla tekniikalla. Meri näkyy myös ruokapöydässä: tonnikala ja kookos kohtaavat aamiaisessa, välipaloissa ja curryissa. Pääkaupungin omaleimaisuus löytyy sataman, käsityön ja ruokapaikkojen yhteydestä.",
+    "teksti": "Malén vanhaan kaupunkiin kuuluivat sulttaanin palatsi, muurit ja portit. Keskiaikainen Ibn Battutan matkakuvaus kertoo kuningattaren asuinpaikasta, puisista moskeijoista ja palatsissa varastoiduista kaurikotilon kuorista. Saari oli osa merikaupan verkostoa jo kauan ennen lentoliikennettä.\n\nHukuru Miskiy rakennettiin 1600-luvulla korallikivestä. Märkänä leikattavat lohkot kuivattiin ja sovitettiin toisiinsa pontti-uraliitoksilla. Puukatot, kaiverrukset ja lakatut sisäosat täydentävät rakennusta, jossa kiventyö ja puusepäntaito liittyvät yhteen.\n\nNykyisen Malén satama on saariston tavaraliikenteen keskus. Kalatorin naapurissa myydään atollien kasviksia, hedelmiä ja säilöttyä kalaa. Kahviloiden hedhika-välipalat sekä tonnikalasta ja kookoksesta tehtävät ruoat tuovat sataman tuotteet kaupunkilaisten pöytään."
   },
   "kysymykset": [
     {
@@ -28,7 +28,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Etsi vastausta Intian eteläpuolisen valtameren saaristosta.",
+      "hint": "Etsi vastausta Intian valtameren saaristosta.",
       "fact": "Malé on Malediivien pääkaupunki.",
       "source": "https://en.wikipedia.org/wiki/Mal%C3%A9"
     },
@@ -61,7 +61,7 @@
       "source": "https://en.wikipedia.org/wiki/Mal%C3%A9"
     },
     {
-      "q": "Mitä Ibn Battuta kertoi varastoidun Malén palatsialueen kuoppiin?",
+      "q": "Mitä Ibn Battutan mukaan Malén palatsialueen kuoppiin oli varastoitu kaupattavaksi?",
       "options": [
         "Kotilonkuoria",
         "Teelaatuja",
@@ -77,28 +77,28 @@
     {
       "q": "Miten vanhan perjantaimoskeijan korallilohkot sovitettiin yhteen?",
       "options": [
-        "Ponteilla ja tapeilla",
-        "Teräksisillä niiteillä",
-        "Betonisilla saumoilla",
-        "Köysillä ja solmuilla"
+        "Pontti-uraliitoksilla",
+        "Laastilla muuraten",
+        "Metallisilla kiinnikkeillä",
+        "Kivien painon varassa"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Tekniikka tuo mieleen puusepän liitokset.",
-      "fact": "Korallikivien liitoksissa käytettiin puutyötä muistuttavaa pontti- ja tappitekniikkaa.",
-      "source": "https://en.wikipedia.org/wiki/Mal%C3%A9_Friday_Mosque"
+      "hint": "Lohkot muotoiltiin tarkasti ennen seinän kokoamista.",
+      "fact": "Korallikivilohkot sovitettiin yhteen pontti-uraliitoksilla, jotka muistuttavat puusepän työtä.",
+      "source": "https://whc.unesco.org/en/tentativelists/5812/"
     }
   ],
   "tiedot": [
-    "Hukuru Miskiyn korallikivissä käytettiin pontti- ja tappiliitoksia, jotka muistuttavat puusepän työtä.",
+    "Hukuru Miskiyn korallikivissä käytettiin pontti-uraliitoksia, jotka muistuttavat puusepän työtä.",
     "Ibn Battutan keskiaikainen matkakuvaus kertoo Malén palatsiin varastoiduista kaurikotilon kuorista.",
     "Hunigondi on kookoksen raastamiseen tarkoitettu matala istuin, jonka päässä on sahalaitainen terä."
   ],
   "valokuva": {
     "tiedosto": "Sunset Male Harbor (5949065012).jpg",
     "lahde": "╚ DD╔ from Male, Maldives, Commons (CC BY-SA 2.0)",
-    "lyhyt": "Malén satama palvelee Malediivien pääkaupungin meriliikennettä.",
-    "selite": "Malén satama palvelee Malediivien pääkaupungin meriliikennettä.",
+    "lyhyt": "Veneitä Malén satamassa auringonlaskun aikaan.",
+    "selite": "Malén sataman veneitä iltavalossa 15. heinäkuuta 2011 otetussa kuvassa.",
     "vuosi": "2011"
   },
   "kaupunkilehti": [
@@ -110,20 +110,20 @@
         {
           "tiedosto": "The western side (382669110).jpg",
           "lahde": "╚ DD╔ from Male, Maldives, Wikimedia Commons (CC BY-SA 2.0)",
-          "lyhyt": "Malén sataman länsipuolta helmikuussa 2007.",
-          "selite": "Malén sataman länsipuolta helmikuussa 2007."
+          "lyhyt": "Aluksia Malén sataman länsipuolella.",
+          "selite": "Lauttoja, öljytankkeri ja jahteja Malén satamassa helmikuussa 2007 otetussa kuvassa."
         },
         {
           "tiedosto": "Port of Malé.jpg",
           "lahde": "Shahee Ilyas, Wikimedia Commons (CC BY 4.0)",
-          "lyhyt": "Malén satama, laiturit ja kaupunkiranta joulukuussa 2017.",
-          "selite": "Malén satama, laiturit ja kaupunkiranta joulukuussa 2017."
+          "lyhyt": "Malén satama ja kaupunkiranta.",
+          "selite": "Sataman laitureita ja pääkaupungin rantaa joulukuussa 2017 otetussa kuvassa."
         },
         {
           "tiedosto": "Aerial view of Malé.jpg",
           "lahde": "Giorgio Montersino, Wikimedia Commons (CC BY-SA 2.0)",
-          "lyhyt": "Malén kaakkoisrannan kaupunkialuetta ilmasta syyskuussa 2005.",
-          "selite": "Malén kaakkoisrannan kaupunkialuetta ilmasta syyskuussa 2005."
+          "lyhyt": "Malén kaupunkialue ilmasta nähtynä.",
+          "selite": "Malén tiivistä kaupunkialuetta ja sitä ympäröivää merta 9. syyskuuta 2005 otetussa ilmakuvassa."
         }
       ],
       "nostot": [
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Muurarin työkalulla vai puusepän liitoksella?",
-          "teksti": "Hukuru Miskiyn seinät tehtiin merestä nostetusta Porites-korallista. Märkänä materiaalia pystyi leikkaamaan; kuivuttuaan siitä saatiin kestäviä rakennuskiviä. Erikoista on liitos: lohkot muotoiltiin sopimaan toisiinsa ponttien ja tappien avulla. Menetelmä muistuttaa puusepän työtä, vaikka käsissä oli korallikiveä. Seinien kaiverrukset sekä puuosien lakkaus ja veistotyö tekevät moskeijasta käsityöläisten taidonnäytteen. Sen rakennusperinne yhdistää paikalliset materiaalit Intian valtameren kulttuuriyhteyksiin.",
+          "teksti": "Hukuru Miskiyn seinät tehtiin merestä nostetusta Porites-korallista. Märkänä materiaalia pystyi leikkaamaan; kuivuttuaan siitä saatiin kestäviä rakennuskiviä. Erikoista on liitos: lohkot muotoiltiin sopimaan toisiinsa pontti-uraliitoksilla. Menetelmä muistuttaa puusepän työtä, vaikka käsissä oli korallikiveä. Seinien kaiverrukset sekä puuosien lakkaus ja veistotyö tekevät moskeijasta käsityöläisten taidonnäytteen. Kiviseinät ja puinen katto vaativat siis eri materiaalien työstämistä saman rakennuksen osiksi.",
           "tiedosto": "",
           "lahde": "",
           "lyhyt": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Kotilonkuoret odottivat kauppaa",
-          "teksti": "Keskiaikainen matkailija Ibn Battuta kuvasi Maléssa kuningattaren asuinpaikkaa ja palatsialueen kuoppia, joihin oli varastoitu kaurikotilon kuoria kaupattaviksi. Saari kuului siis pitkän matkan kaupan verkostoon jo paljon ennen lentoasemaa ja lomahotelleja. Hänen kuvauksessaan kaupungissa oli myös puisia moskeijoita. Kertomus antaa vanhalle Malélle aivan oman mittakaavan: palatsi, uskonnolliset rakennukset ja kauppaan odottava kuorivarasto mahtuivat samalle pienelle saarelle. Nykyiset satamalaiturit jatkavat saaren merellistä historiaa.",
+          "teksti": "Keskiaikainen matkailija Ibn Battuta kuvasi Maléssa kuningattaren asuinpaikkaa ja palatsialueen kuoppia, joihin oli varastoitu kaurikotilon kuoria kaupattaviksi. Saari kuului siis pitkän matkan kaupan verkostoon jo paljon ennen lentoasemaa ja lomahotelleja. Hänen kuvauksessaan kaupungissa oli myös puisia moskeijoita. Kertomus antaa vanhalle Malélle aivan oman mittakaavan: palatsi, uskonnolliset rakennukset ja kauppaan odottava kuorivarasto mahtuivat samalle pienelle saarelle. Kaurikotiloiden kuoret olivat palatsissa kauppatavaraa, eivät rakennusmateriaalia tai ruokavarasto.",
           "tiedosto": "",
           "lahde": "",
           "lyhyt": "",
@@ -171,7 +171,7 @@
           "lyhyt": "",
           "selite": ""
         },
-        "kappale": "Malén pääsaari sopii kävelyyn sataman ja vanhan moskeijan välillä. Pohjoisrannan toreilla pääsee saariston raaka-aineiden äärelle. Kahviloissa voi jatkaa kierrosta teen ja hedhika-välipalojen parissa. Naapurisaarille siirrytään lautalla tai maantieyhteyksillä. Ramadan vaikuttaa ruokapaikkojen päiväpalveluun.",
+        "kappale": "Malén pääsaari sopii kävelyyn sataman ja vanhan moskeijan välillä. Pohjoisrannan toreilla pääsee saariston raaka-aineiden äärelle. Kahviloissa voi jatkaa kierrosta teen ja hedhika-välipalojen parissa. Naapurisaarille siirrytään lautalla tai maantieyhteyksillä. Malén pääsaari, Hulhulé ja Villimalé ovat eri saaria omine siirtymineen.",
         "artikkeli": {
           "nimi": "Matkailijan Malé",
           "taitto": "opas",
@@ -220,7 +220,7 @@
             },
             {
               "otsikko": "Milloin ja millä rytmillä",
-              "teksti": "Malén ilmasto on trooppinen monsuuni-ilmasto, ja lämpö pysyy korkeana ympäri vuoden. Sateet voivat hidastaa liikkumista ja täyttää bussit. Kävelykierrokseen kannattaa yhdistää kahvilataukoja. Ramadanin aikana monet ruokapaikat palvelevat vasta auringonlaskun jälkeen, joten päivän ruokailu on hyvä suunnitella etukäteen. Ajankohtaiset yhteydet ja palvelut tarkistetaan ennen matkaa.",
+              "teksti": "Malén trooppisessa monsuuni-ilmastossa on lämmintä ympäri vuoden. Kävelykierros kulkee sataman, torien ja vanhan moskeijan välillä; kahviloiden tee ja hedhika-välipalat sopivat kierroksen lomaan. Naapurisaarille siirrytään lautalla tai maantieyhteyksillä, joten saaren nimi auttaa valitsemaan oikean laiturin tai bussin. Ramadanin aikana monet ruokapaikat palvelevat vasta auringonlaskun jälkeen.",
               "kuva": {
                 "tiedosto": "",
                 "lahde": "",
@@ -267,8 +267,8 @@
                 "teksti": "Kuivattua tonnikalaa voidaan käyttää leivonnaisiin ja kasviscurryihin."
               },
               {
-                "otsikko": "Ramadan muuttaa ruokailun rytmiä",
-                "teksti": "Monet kahvilat ja ravintolat palvelevat vasta auringonlaskun jälkeen."
+                "otsikko": "Pääsaari ja naapurisaaren nimi",
+                "teksti": "Malé, Hulhumalé ja Villimalé ovat eri saaria. Tarkista määränpään saari ennen kyydin valintaa."
               }
             ]
           },
@@ -284,9 +284,9 @@
         "kysymys": "Mitä rihaakurulle tapahtuu, kun sitä kuumennetaan miedolla lämmöllä?",
         "vaihtoehdot": [
           "Se tiivistyy paksuksi kastikkeeksi",
-          "Se kohoaa ilmavaksi leiväksi",
-          "Se muuttuu kookosmaidoksi",
-          "Se kuivuu kokonaiseksi kalaksi"
+          "Se laimennetaan kirkkaaksi liemeksi",
+          "Se suodatetaan ohuiksi hiutaleiksi",
+          "Se jäähdytetään hyytelöksi"
         ],
         "oikea": 0,
         "fakta": "Rihaakurun valmistuksessa nesteen haihtuminen jättää jäljelle vahvan kalapohjaisen seoksen."
@@ -294,11 +294,11 @@
       "nostot": [
         {
           "otsikko": "Tonnikalaa aamupalaksi",
-          "teksti": "Mas huni on malediivilainen aamiaisruoka, jossa kala sekoitetaan raastettuun kookokseen, sipuliin ja chiliin. Sen rinnalla syödään roshi-leipää. Malén teepaikoissa ja kahviloissa vastaan tuleva kalainen keittiö jatkuu näin jo aamulla, ennen varsinaista kala-ateriaa. Mas huni kertoo myös kookoksen yhdestä käyttötavasta: se syödään raasteena. Samasta hedelmästä puristetaan toisiin ruokiin maitoa, ja sen öljyä käytetään paistamiseen. Aamiaislautanen yhdistää kalan ja kookoksen ilman pitkään haudutettua kastiketta.",
+          "teksti": "Mas huni on malediivilainen aamiaisruoka, jossa kala sekoitetaan raastettuun kookokseen, sipuliin ja chiliin. Sen rinnalla syödään roshi-leipää. Malén teepaikoissa ja kahviloissa vastaan tuleva kalainen keittiö jatkuu näin jo aamulla, ennen varsinaista kala-ateriaa. Mas huni kertoo myös kookoksen yhdestä käyttötavasta: se syödään raasteena. Samasta hedelmästä saadaan myös maitoa: raaste liotetaan vedessä ja neste puristetaan talteen. Aamiaislautanen yhdistää kalan ja kookoksen ilman pitkään haudutettua kastiketta.",
           "tiedosto": "Mashuni (382668832).jpg",
           "lahde": "╚ DD╔ from Male, Maldives, Wikimedia Commons (CC BY-SA 2.0)",
-          "lyhyt": "Mas huni on tonnikalasta, kookosraasteesta, sipulista ja chilistä tehtävä aamiaisruoka.",
-          "selite": "Mas huni on tonnikalasta, kookosraasteesta, sipulista ja chilistä tehtävä aamiaisruoka.",
+          "lyhyt": "Mas huni -aamiaisruokaa.",
+          "selite": "Kala, raastettu kookos, sipuli ja chili yhdistyvät mas hunissa, jota syödään roshi-leivän kanssa.",
           "wiki": "Maldivian cuisine"
         },
         {
@@ -315,8 +315,8 @@
           "teksti": "Garudhiya on kirkas kalaliemi, joka tehdään tavallisesti tonnikalasta. Rihaakuru taas on paksu, ruskea kastike, jota syntyy kalan käsittelyn yhteydessä liemen tiivistyessä. Niiden nimet kannattaa erottaa: sama tärkeä raaka-aine voi päätyä sekä juoksevaksi liemeksi että vahvaksi tahnaksi. Rihaakurua kuumennetaan miedolla lämmöllä, kunnes haihtuminen jättää jäljelle paksun seoksen. Malén toreilla myytävän kalan tarina jatkuu näin keittiössä eri muotoihin, eikä koko ateriaa voi päätellä pelkän sanan ”tonnikala” perusteella.",
           "tiedosto": "Garudiya.jpg",
           "lahde": "LittleT889, Wikimedia Commons (CC BY 4.0)",
-          "lyhyt": "Garudhiya on tonnikalasta tehtävä kirkas kalaliemi.",
-          "selite": "Garudhiya on tonnikalasta tehtävä kirkas kalaliemi.",
+          "lyhyt": "Garudhiya-kalalientä.",
+          "selite": "Garudhiya on tonnikalasta keitettyä kirkasta lientä; kuvassa on valmis kalaliemi.",
           "wiki": "Maldivian cuisine"
         },
         {
@@ -351,7 +351,7 @@
   "nahtavyydet": {
     "Hukuru Miskiy, vanha perjantaimoskeija": {
       "aika": "1600-luku",
-      "teksti": "Hukuru Miskiy rakennettiin Malén keskustaan 1600-luvulla vanhemman moskeijan paikalle. Se oli käytössä jo isoisän matkavuonna 1873, mutta sen katemateriaaleja ja rakenteita on muutettu myöhemmissä korjauksissa. Nykyistä rakennusta ei siksi pidä kuvitella sellaisenaan tuon ajan kaupunkimaisemaan.\n\nSeinien Porites-koralli nostettiin merestä, leikattiin kosteana ja kuivattiin rakennuskiviksi. Lohkojen liittäminen ponttien ja tappien avulla muistuttaa puusepäntyötä. Rakennuksen puuosissa on kaiverruksia ja lakattuja koristeita; taitavat paikalliset käsityöläiset tekivät sekä katon että sisäosien työt.\n\nMoskeijakompleksiin kuuluu minareetti ja hautausmaa korallikivisine hautamuistomerkkeineen. Kohde on edelleen uskonnollisessa käytössä. Sen arvo syntyy kokonaisesta rakennusperinteestä: kiven muotoilusta, puutyöstä ja saariston materiaaleista, jotka liittyvät Intian valtameren kulttuuriyhteyksiin.",
+      "teksti": "Hukuru Miskiy rakennettiin Malén keskustaan 1600-luvulla vanhemman moskeijan paikalle. Se oli käytössä jo isoisän matkavuonna 1873, mutta sen katemateriaaleja ja rakenteita on muutettu myöhemmissä korjauksissa. Nykyistä rakennusta ei siksi pidä kuvitella sellaisenaan tuon ajan kaupunkimaisemaan.\n\nSeinien Porites-koralli nostettiin merestä, leikattiin kosteana ja kuivattiin rakennuskiviksi. Lohkojen liittäminen pontti-uraliitoksilla muistuttaa puusepäntyötä. Rakennuksen puuosissa on kaiverruksia ja lakattuja koristeita; taitavat paikalliset käsityöläiset tekivät sekä katon että sisäosien työt.\n\nMoskeijakompleksiin kuuluu minareetti ja hautausmaa korallikivisine hautamuistomerkkeineen. Kohde on edelleen uskonnollisessa käytössä. Korallikiveä työstettiin märkäleikkauksesta lähtien: pehmeä lohko sai muotonsa ennen kuivumistaan, ja seinässä sen ura liittyi viereisen lohkon ponttiin.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -367,7 +367,7 @@
   "ehdotukset": {
     "lentoasema": "Velana International Airport (MLE)",
     "huomiot": [
-      "C-tekstiluonnos, rajattu A-lähdekooste; riippumaton D/E/F avoin.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 6 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Kuvaputki erillinen: 19 kuvaroolin tiedosto, lahde, lyhyt ja selite tyhjiä.",
       "Kartta partial: vain Hukuru Miskiyn oma WP-piste varmennettu; 6–8 kohteen portti avoin.",
       "Sääauditointi 48/48 puuttuu: saatiedot null, olemassa olevaa saa.json-tiedostoa ei muutettu.",

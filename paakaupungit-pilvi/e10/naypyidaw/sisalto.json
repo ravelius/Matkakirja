@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "Naypyidaw on Myanmarin hallinnollinen pääkaupunki maan keskiosassa. Se rakennettiin **suunniteltuna kaupunkina** 2000-luvulla, joten sen historia on aivan eri mittainen kuin maan vanhojen kuninkaallisten keskusten. Lähellä sijaitseva Pyinmana on kuitenkin uutta pääkaupunkia vanhempi asutus. Naypyidawin nimi puolestaan tarkoittaa kuninkaallista asuinpaikkaa tai pääkaupunkia, ja sama sana kuului jo vanhempien hallitsijakaupunkien nimiin. Uusi kaupunki sai siis vanhaan historiaan viittaavan nimen.\n\nKaupunki sijaitsee Bago Yoman ja Shan Yoman vuoristojen välisellä alueella, ja sen toimintoja on jaettu eri vyöhykkeisiin. **Kansallismuseon** kokoelmat ulottuvat fossiileista esihistorian työkaluihin ja vanhoihin kaupunkikulttuureihin. National Herbal Park kokoaa puolestaan perinteiseen lääkekasvien käyttöön liittyviä kasveja maan eri alueilta. Isoisän matkavuonna 1873 nykyistä Naypyidawia ei ollut: sen vanhaa menneisyyttä etsivä katse suuntautuu naapuriasutukseen ja muualta tuotuihin museokokoelmiin.",
-    "teksti": "Naypyidaw tunnetaan myös kirjoitusasulla Nay Pyi Taw. Nimi liittyy kuninkaalliseen asuinpaikkaan, vaikka nykyinen kaupunki on rakennettu vasta 2000-luvulla. Vanhan sanan käyttö yhdistää nimen maan aiempiin hallitsijakaupunkeihin.\n\nKaupunki sijaitsee Naypyidawin liittoalueella. Tilastoissa koko liittoalueen asukkaat eivät tarkoita vain suunnitellun kaupungin väestöä: alueeseen kuuluu myös vanhempia paikkoja, kuten Pyinmana ja Lewe. Hallinnollinen nimi voi siten kattaa laajemman ympäristön kuin matkailijan näkemä uusi keskusta.\n\nKansallismuseossa pääkaupungin nuori ikä ja kokoelmien pitkä aikajänne kohtaavat. Pondaungin fossiilit, esihistorian välineet ja Pyu-kaupunkien rakennusosat kertovat eri puolilta Myanmaria saadusta aineistosta. Lääkekasvipuistossa alueellinen kirjo näkyy kasvavina kasveina. Uusi pääkaupunki kokoaa siis myös itseään vanhempaa tietoa."
+    "teksti": "Naypyidaw tunnetaan myös kirjoitusasulla Nay Pyi Taw. Nimi liittyy kuninkaalliseen asuinpaikkaan, vaikka nykyinen kaupunki on rakennettu vasta 2000-luvulla. Vanhan sanan käyttö yhdistää nimen maan aiempiin hallitsijakaupunkeihin.\n\nKaupunki sijaitsee Naypyidawin liittoalueella. Liittoalueeseen kuuluu suunnitellun kaupungin lisäksi vanhempia paikkoja, kuten Pyinmana ja Lewe. Uuden pääkaupungin vyöhykkeet ja vanhat asutukset sijaitsevat saman hallintoalueen sisällä.\n\nKansallismuseossa pääkaupungin nuori ikä ja kokoelmien pitkä aikajänne kohtaavat. Pondaungin fossiilit, esihistorian välineet ja Pyu-kaupunkien rakennusosat kertovat eri puolilta Myanmaria saadusta aineistosta. Lääkekasvipuistossa alueellinen kirjo näkyy kasvavina kasveina. Uusi pääkaupunki kokoaa siis myös itseään vanhempaa tietoa."
   },
   "kysymykset": [
     {
@@ -42,7 +42,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Sana kuului jo maan vanhempien hallitsijakaupunkien nimiin.",
+      "hint": "Sama sana esiintyi jo ennen nykyisen kaupungin rakentamista.",
       "fact": "Naypyidaw tarkoittaa kuninkaallista asuinpaikkaa tai pääkaupunkia.",
       "source": "https://en.wikipedia.org/wiki/Naypyidaw"
     },
@@ -61,16 +61,16 @@
       "source": "https://en.wikipedia.org/wiki/Naypyidaw"
     },
     {
-      "q": "Mitä National Herbal Parkin kokoelmaan kuuluu?",
+      "q": "Mitä kasveja National Herbal Parkin kokoelmaan on valittu?",
       "options": [
         "Perinteisiä lääkekasveja",
-        "Perinteisiä soitinkokoelmia",
-        "Vanhimpia höyryvetureita",
-        "Vanhoja merikarttoja"
+        "Hedelmäviljelyn lajikkeita",
+        "Teollisuuden kuitukasveja",
+        "Tuotuja koristekasveja"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Kokoelma kasvaa maassa ja liittyy kasvien vanhoihin käyttötapoihin.",
+      "hint": "Kasvit on tuotu Myanmarin eri alueilta.",
       "fact": "Puistoon on koottu perinteisessä lääkekasvien käytössä tunnettuja kasveja Myanmarin eri alueilta.",
       "source": "https://en.wikipedia.org/wiki/National_Herbal_Park"
     },
@@ -78,9 +78,9 @@
       "q": "Minkä alueen fossiileja esitellään Naypyidawin kansallismuseossa?",
       "options": [
         "Pondaungin",
-        "Gobin autiomaan",
-        "Alppien rinteiden",
-        "Etelämantereen"
+        "Shanin ylängön",
+        "Rakhinen rannikon",
+        "Kachinin vuoriston"
       ],
       "correct": 0,
       "level": 3,
@@ -91,13 +91,13 @@
   ],
   "tiedot": [
     "Naypyidaw on uusi kaupunki, mutta sen nimeen kuuluva kuninkaalliseen pääkaupunkiin viittaava sana on paljon vanhempi.",
-    "Naypyidawin liittoalueen väkilukua ei voi lukea suoraan suunnitellun kaupungin asukasluvuksi, sillä alueeseen kuuluu myös vanhempaa asutusta.",
+    "Naypyidawin liittoalueeseen kuuluvat uuden pääkaupungin lisäksi vanhemmat Pyinmanan ja Lewen asutukset.",
     "National Herbal Parkissa on kasveja Myanmarin eri alueilta; niiden perinteiset käyttötavat kuuluvat kokoelman aiheeseen."
   ],
   "valokuva": {
     "tiedosto": "Junger Papayabaum (Carica papaya).jpg",
-    "lyhyt": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
-    "selite": "Papayapuu Naypyidawin National Herbal Parkissa tammikuussa 2018.",
+    "lyhyt": "Nuori papayapuu National Herbal Parkissa.",
+    "selite": "Papayapuu (Carica papaya) Naypyidawin kasvipuistossa tammikuussa 2018 otetussa kuvassa.",
     "lahde": "Myrmux, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
@@ -108,8 +108,8 @@
       "kansikuvat": [
         {
           "tiedosto": "Naypyidaw -- Wide Boulevard.JPG",
-          "lyhyt": "Naypyidawin leveää bulevardia joulukuussa 2011.",
-          "selite": "Naypyidawin leveää bulevardia joulukuussa 2011.",
+          "lyhyt": "Naypyidawin leveä bulevardi.",
+          "selite": "Naypyidawin bulevardi joulukuussa 2011 otetussa kuvassa.",
           "lahde": "Hybernator, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
@@ -131,8 +131,8 @@
           "teksti": "Naypyidawin kaupunginosia on järjestetty eri toimintojen vyöhykkeiksi. Asuinalueiden ja hotellialueen sijoittuminen on osa suunnitellun kaupungin rakennetta, ja kohteiden välillä on pitkiä etäisyyksiä. Kaupunkia ei siksi voi hahmottaa vain etsimällä yhtä torin ympärille kasvanutta keskustaa. Hotellin osoite kertoo myös siitä, missä osassa tätä kokonaisuutta ollaan. Kaupungin lukemiseen tarvitaan alueiden välisten yhteyksien ymmärtämistä: majoituspaikka, museo ja kasvipuisto eivät välttämättä kuulu samaan kävelyretkeen.",
           "wiki": "Naypyidaw",
           "tiedosto": "Jogging trails - panoramio.jpg",
-          "lyhyt": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
-          "selite": "Ulkoilureittiä Naypyidawissa marraskuussa 2015.",
+          "lyhyt": "Naypyidawin ulkoilureitti.",
+          "selite": "Ulkoilureitti Naypyidawissa marraskuussa 2015 otetussa kuvassa.",
           "lahde": "mohigan, Wikimedia Commons (CC BY-SA 3.0)"
         },
         {
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Pyinmana oli paikalla ennen pääkaupunkia",
-          "teksti": "Uuden pääkaupungin rakentaminen ei tarkoita, että koko ympäröivä seutu olisi ollut ennen sitä vailla asutusta. Naypyidaw nousi Pyinmanan lähelle, ja Pyinmana kuuluu alueen vanhempiin paikkoihin. Myös Naypyidawin liittoalueeseen sisältyy vanhoja asutuksia uuden kaupungin vyöhykkeiden rinnalla. Siksi alueen nimi ja väkiluku eivät kuvaa yksinomaan uutta keskustaa. Isoisän matkavuonna 1873 nykyistä Naypyidawia ei ollut, mutta seudun historia ei ala pääkaupungin rakennustyöstä. Vanhan ja uuden raja kulkee samalla hallintoalueella.",
+          "teksti": "Uuden pääkaupungin rakentaminen ei tarkoita, että koko ympäröivä seutu olisi ollut ennen sitä vailla asutusta. Naypyidaw nousi Pyinmanan lähelle, ja Pyinmana kuuluu alueen vanhempiin paikkoihin. Myös Naypyidawin liittoalueeseen sisältyy vanhoja asutuksia uuden kaupungin vyöhykkeiden rinnalla. Pyinmana ja Lewe kuuluvat saman liittoalueen vanhempiin asutuksiin. Isoisän matkavuonna 1873 nykyistä Naypyidawia ei ollut, mutta seudun historia ei ala pääkaupungin rakennustyöstä. Vanhan ja uuden raja kulkee samalla hallintoalueella.",
           "wiki": "Naypyidaw",
           "tiedosto": "",
           "lyhyt": "",
@@ -170,16 +170,16 @@
           "selite": "",
           "lahde": ""
         },
-        "kappale": "Matkailu Myanmariin ei ole tällä hetkellä turvallista, joten siirrä vapaa-ajan matka myöhemmäksi. Naypyidawissa välimatkat ovat pitkiä ja kuljetus pitää suunnitella kohteiden mukaan. Kaupungin kansallismuseo ja lääkekasvipuisto kertovat sen kokoelmista eri tavoin. Museon vierailutiedot ja liikenteen toimivuus on tarkistettava ajantasaisesti. Vanha matka-aika tai aikataulu ei takaa nykyistä yhteyttä.",
+        "kappale": "Naypyidawissa majoitus, liikenteen asemat ja museot voivat sijaita kaukana toisistaan. Kansallismuseo kokoaa fossiileja, esihistoriaa ja Pyu-kaupunkien aineistoa. National Herbal Parkissa Myanmarin eri alueilta tuodut kasvit kasvavat samassa puistossa. Pyinmana ja Lewe näyttävät liittoalueen uuden pääkaupungin rakennustyötä vanhempaa asutusta. Kaupungin kierros rakentuu erillisten kohteiden ja niiden välisten kuljetusten varaan.",
         "artikkeli": {
           "nimi": "Matkailijan Naypyidaw",
           "taitto": "opas",
           "teksti": "Tutustu Naypyidawin alueisiin ja kokoelmiin kaupungin kartan kautta.",
-          "nosto": "Kaupunki on hajallaan, ja sen kohteet vaativat kuljetussuunnitelman. Matkailu Myanmariin ei ole tällä hetkellä turvallista.",
+          "nosto": "Naypyidawin vyöhykkeet, kansallismuseo ja kasvipuisto ovat erillisiä käyntipaikkoja pitkine siirtymineen.",
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Naypyidawilla on lentoasema, rautatieasema ja bussiyhteyksien infrastruktuuria. Palvelujen tämänhetkinen toiminta pitää tarkistaa erikseen. Asema, majoitus ja nähtäväksi ajateltu kohde voivat sijaita kaukana toisistaan, joten suunnittele koko siirtymäketju. Matkailu Myanmariin ei ole tällä hetkellä turvallista, ja vapaa-ajan matka kannattaa siirtää myöhemmäksi.",
+              "teksti": "Naypyidawilla on lentoasema, rautatieasema ja bussiliikenteen solmukohtia. Yangon–Mandalay-rata on uutta pääkaupunkia vanhempi, ja Pyinmana kuului pääradan asemaverkkoon jo ennen uuden keskusaseman valmistumista. Asema, majoitus ja museot voivat sijaita kaukana toisistaan. Suunnittele kuljetus varsinaiseen määränpäähän kaupungin nimen lisäksi.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Museon pitkä aika ja puiston kasvit",
-              "teksti": "Kansallismuseon näyttelyaiheisiin kuuluvat fossiilit, esihistoria ja vanhat kaupunkikulttuurit. National Herbal Park puolestaan kokoaa perinteiseen lääkekasvien käyttöön liittyviä kasveja eri puolilta maata. Museossa on tehty maanjäristyskorjauksia ja saleja on avattu uudelleen, mutta vierailutiedot täytyy tarkistaa ennen käyntiä. Puiston kokoelmaa katsotaan kasvien ja kulttuurihistorian näkökulmasta.",
+              "teksti": "Kansallismuseon näyttelyaiheisiin kuuluvat Pondaungin fossiilit, esihistoria ja Pyu-kaupunkien rakennusosat. National Herbal Park kokoaa eri puolilta maata kasveja, joilla on perinteisiä käyttötapoja. Museon fossiilit on siirretty löytöpaikoilta kokoelmaan; puiston kasvit kasvavat uudessa ympäristössä. Kummassakin paikassa nuori pääkaupunki säilyttää itseään vanhempaa aineistoa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Kaupungin ostoskeskuksissa on ravintoloita, ja myös hotellien yhteydessä on ruokailupalveluja. Pitkien välimatkojen vuoksi ruokailupaikka kannattaa sovittaa muun asioinnin yhteyteen. Tarkista majoituksesta, mitä lähellä on tällä hetkellä tarjolla.",
+              "teksti": "Kaupungin ostoskeskuksissa ja hotellien yhteydessä on ravintoloita. Suunniteltu hotellialue on oma kaupunginosansa, joten ruokapaikan osoite vaikuttaa myös siirtymään. Pitkien välimatkojen vuoksi aterian voi yhdistää samalla alueella tehtävään käyntiin. Museon, kasvipuiston ja majapaikan välille ei muodostu yhtä tiivistä ruokakorttelia.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Naypyidawin trooppisessa ilmastossa on märkä ja kuiva jakso. Kuivan jakson loppupuolella iltapäivät voivat olla hyvin kuumia, ja sateisena aikana kosteus lisää kuumuuden tuntua. Ulkona liikkumiseen tarvitaan varjoa, juomavettä ja säätilaan sopiva suunnitelma. Turvallisuustilanne ratkaisee matkan ajankohdan ennen ilmastomieltymyksiä; vapaa-ajan matka on nyt syytä siirtää.",
+              "teksti": "Naypyidawin trooppisessa ilmastossa on märkä ja kuiva jakso. Kuivan jakson loppupuolella iltapäivät voivat olla hyvin kuumia, sateisena aikana kosteutta on enemmän. National Herbal Park on ulkokohde, kansallismuseon näyttelyt pääosin sisätiloissa. Kaupungin vyöhykkeiden väliset pitkät siirtymät erottavat retkipäivän tiiviin historiallisen keskustan kävelystä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -258,8 +258,8 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Matkan turvallisuus",
-                "teksti": "Matkailu Myanmariin ei ole tällä hetkellä turvallista; siirrä vapaa-ajan matka myöhemmäksi."
+                "otsikko": "Matkan valmistelu",
+                "teksti": "Tarkista Ulkoministeriön ajantasainen matkustustiedote ja maahantulon ehdot ennen matkaa."
               },
               {
                 "otsikko": "Välimatkat",
@@ -271,7 +271,7 @@
               },
               {
                 "otsikko": "Museovierailu",
-                "teksti": "Korjausten jälkeinen ajantasainen vierailutilanne on tarkistettava erikseen."
+                "teksti": "Tarkista kansallismuseon ajantasaiset vierailutiedot ennen käyntiä."
               }
             ]
           },
@@ -287,9 +287,9 @@
         "kysymys": "Mitkä materiaalit jäsentävät kansallismuseon esihistorian työkalunäyttelyä?",
         "vaihtoehdot": [
           "Kivi, pronssi ja rauta",
-          "Lasi, kumi ja muovi",
-          "Paperi, nahka ja silkki",
-          "Posliini, betoni ja alumiini"
+          "Puu, savi ja posliini",
+          "Nahka, luu ja lasi",
+          "Kupari, tina ja hopea"
         ],
         "oikea": 0,
         "fakta": "Esihistorian näyttely etenee kivikauden välineistä pronssi- ja rautakauden esineisiin, joten materiaalit auttavat erottamaan aikakausia."
@@ -355,7 +355,7 @@
   "nahtavyydet": {
     "National Herbal Park": {
       "aika": "2000-luvun kasvipuisto",
-      "teksti": "National Herbal Park on Naypyidaw–Taungnyo-tien lähellä sijaitseva kasvipuisto. Sinne on koottu Myanmarin eri alueilta kasveja, jotka tunnetaan perinteisistä lääkekasvien käyttötavoista. Kokoelman tarkoitukseen kuuluu kasvien säilyttäminen ja perinteisen kasviosaamisen ylläpitäminen. Puiston nimi kertoo siis sen kokoelmasta, ei vain siitä, että paikalla on vehreää.\n\nPuisto kuuluu 2000-luvulla rakennetun pääkaupungin aikaan. Isoisän matkavuonna 1873 tätä nykyistä kasvipuistoa ei ollut, vaikka sen esittelemät käyttötavat ovat kaupunkia vanhempaa perinnettä. Eri alueiden kasvit on tuotu samaan paikkaan, ja elävä kokoelma vaatii hoitoa. Vierailija voi tarkastella sitä kasvien ja kulttuurihistorian kautta.",
+      "teksti": "National Herbal Park on Naypyidaw–Taungnyo-tien lähellä sijaitseva kasvipuisto. Sinne on koottu Myanmarin eri alueilta kasveja, jotka tunnetaan perinteisistä lääkekasvien käyttötavoista. Kokoelman tarkoitukseen kuuluu kasvien säilyttäminen ja perinteisen kasviosaamisen ylläpitäminen. Kasvien alkuperä ja käyttötavat kuuluvat kokoelman aiheeseen.\n\nPuisto kuuluu 2000-luvulla rakennetun pääkaupungin aikaan. Isoisän matkavuonna 1873 tätä nykyistä kasvipuistoa ei ollut, vaikka sen esittelemät käyttötavat ovat kaupunkia vanhempaa perinnettä. Eri alueiden kasvit on tuotu samaan paikkaan, ja elävä kokoelma vaatii hoitoa. Vierailija voi tarkastella sitä kasvien ja kulttuurihistorian kautta.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -371,7 +371,7 @@
   "ehdotukset": {
     "lentoasema": "Nay Pyi Taw International Airport (NYT)",
     "huomiot": [
-      "C kirjoitettu vasta kaikkien viiden tavallisen e10-kaupungin sisältö- ja C-muistiotiedostojen sekä tekstiosioiden varmistamisen jälkeen; jarjestysportti.json tallennettu omaan NAS-väliaineistoon.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 3 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Kaikki kuvaroolit tyhjiä, B-kuvavalinta ja oikeusportti avoin. Modernit pagodit, patsaat, museorakennukset, asemarakennukset ja valoesitys eivät ole kuva- tai karttakohteita.",
       "Kartta partial: vain National Herbal Parkin oma Wikipedia-koordinaatti; 6–8 kohteen portti avoin. Museon pienoismalleja ja replikoita ei käytetä kohteina.",
       "saatiedot:null; sääauditointi 48/48 avoin, sääluvut muuttamatta.",

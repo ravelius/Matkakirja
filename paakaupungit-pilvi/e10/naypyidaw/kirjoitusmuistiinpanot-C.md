@@ -38,3 +38,37 @@ Museon fossiilit ja Pyu-kaupunkien aineisto on erotettu pääkaupungin paikallis
 - D/E/F ja toimituksellinen hyväksyntä. Ajantasaiset liikenne- ja vierailupalvelut.
 
 Lähdepoikkeamat: väärä UM-osoite 404 → oikea sallittu osoite onnistui; myanmar.gov.mm:n robots SSL-varmennevirhe → ei sivuhakua eikä käyttöä; museon lyhyt WP-osoite palautti kanonisen artikkelin, nimi kirjattu lähdekoosteeseen. Ei robotseja tai varmenteita ohitettu. Ei Git-operaatioita eikä pelitiedostojen muutoksia.
+
+
+## Task118 korjaus 13.10.2026
+Kaikki pelaajatekstikentät luettu ja sovellettu otoksen yleissäännöt. Lähdepohja, C-muistio sekä nykyiset Commons-lähdetiedot tarkistettu. Meta- ja täytelauseita korvattu kaupungin omilla faktoilla; vihjeet ja houkuttimet täsmennetty. Nykyiset kuvat, pisteet ja sää säilytetty; niiden puutteet ovat erillisiä portteja. Tuore mainin js/data-haku tehty ennen kirjoittamista. Ei Git, kuvia, pelikytkentää tai julkaisua.
+
+
+```text
+VIRHE naypyidaw: kansikuva 2: tiedosto puuttuu
+VIRHE naypyidaw: kansikuva 3: tiedosto puuttuu
+VIRHE naypyidaw: kansi nosto 2: tiedosto puuttuu
+VIRHE naypyidaw: kansi nosto 3: tiedosto puuttuu
+VIRHE naypyidaw: kansi nosto 4: tiedosto puuttuu
+VIRHE naypyidaw: matkailijalle.kuva: tiedosto puuttuu
+VIRHE naypyidaw: opas jakso 1: tiedosto puuttuu
+VIRHE naypyidaw: opas jakso 2: tiedosto puuttuu
+VIRHE naypyidaw: opas jakso 3: tiedosto puuttuu
+VIRHE naypyidaw: opas jakso 4: tiedosto puuttuu
+VIRHE naypyidaw: opas jakso 5: tiedosto puuttuu
+VIRHE naypyidaw: teemasivu tiede nosto 1: tiedosto puuttuu
+VIRHE naypyidaw: teemasivu tiede nosto 2: tiedosto puuttuu
+VIRHE naypyidaw: teemasivu tiede nosto 3: tiedosto puuttuu
+VIRHE naypyidaw: teemasivu tiede nosto 4: tiedosto puuttuu
+VIRHE naypyidaw: juttu National Herbal Park kuva 1: tiedosto puuttuu
+== naypyidaw: 16 virhettä, 2 varoitusta, 3 kuvaa
+YHTEENSÄ 1 kaupunkia: 16 virhettä, 2 varoitusta
+```
+SHA256 8ed706527d140d7fc71bb48a88034f3c3b2d28933f5502baa7a52e6b326e0d70
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash a059f2eb68bb70c2baa07177e943a009e084bd0a3c92062b7787a226dc669d8f. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS naypyidaw: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS naypyidaw: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

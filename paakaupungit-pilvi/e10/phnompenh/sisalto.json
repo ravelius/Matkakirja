@@ -50,13 +50,13 @@
       "q": "Mitä kuivassa kuy teav -annoksessa tehdään liemelle?",
       "options": [
         "Tuodaan erikseen",
-        "Haihdutetaan pois",
-        "Korvataan mehulla",
-        "Jäädytetään lisukkeeksi"
+        "Lisätään nuudeleihin pannulla",
+        "Tarjotaan kylmänä kastikkeena",
+        "Keitetään paksuksi tahnaksi"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Nuudelien astia ei ole aterian ainoa astia.",
+      "hint": "Kuy teav tunnetaan myös aamiaisruokana.",
       "fact": "Kuivan kuy teavin liemi tarjotaan omassa kulhossaan.",
       "source": "https://en.wikipedia.org/wiki/Kuyteav"
     },
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "2016 Phnom Penh, Promenada przy rzece w centrum miasta.jpg",
-    "lyhyt": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
-    "selite": "Phnom Penhin jokiranta kuuluu kaupungin käveltävään julkiseen ympäristöön.",
+    "lyhyt": "Phnom Penhin rantapromenadi.",
+    "selite": "Keskustan jokirannan kävelyalue Phnom Penhissä vuonna 2016 otetussa kuvassa.",
     "lahde": "Marcin Konsek, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
@@ -108,8 +108,8 @@
       "kansikuvat": [
         {
           "tiedosto": "2016 Phnom Penh, Rzeka w centrum miasta.jpg",
-          "lyhyt": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
-          "selite": "Phnom Penhin jokiranta liittää kaupungin jokiliikenteeseen.",
+          "lyhyt": "Joki Phnom Penhin keskustassa.",
+          "selite": "Phnom Penhin keskustan jokimaisemaa vuonna 2016 otetussa kuvassa.",
           "lahde": "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Joki peruuttaa järveen",
-          "teksti": "Tonlé Sap -joen virtaussuunta ei ole pysyvä. Sateiden nostama Mekong voi työntää vettä jokea pitkin kohti Tonlé Sap -järveä, joka laajenee tulvakaudella. Kun Mekongin pinta laskee, järvi alkaa purkautua takaisin samaa reittiä. Phnom Penh on tämän järjestelmän eteläisessä liitoskohdassa. Virtaussuuntaa ohjaa Mekongin ja järven vedenpintojen vaihtelu, ei kaupungin oma rytmi. Rannalla näkyvä vesi kuuluu paljon kaupunkia suurempaan kiertoon.",
+          "teksti": "Tonlé Sap -joen virtaussuunta ei ole pysyvä. Sateiden nostama Mekong voi työntää vettä jokea pitkin kohti Tonlé Sap -järveä, joka laajenee tulvakaudella. Kun Mekongin pinta laskee, järvi alkaa purkautua takaisin samaa reittiä. Phnom Penh on tämän järjestelmän eteläisessä liitoskohdassa. Virtaussuuntaa ohjaa Mekongin ja järven vedenpintojen vaihtelu. Rannalla näkyvä vesi kuuluu paljon kaupunkia suurempaan kiertoon.",
           "wiki": "Tonlé Sap",
           "tiedosto": "",
           "lyhyt": "",
@@ -315,7 +315,7 @@
         },
         {
           "otsikko": "Khmerkatto museon yllä",
-          "teksti": "Kambodžan kansallismuseon rakennus on saanut vaikutteita khmerarkkitehtuurista, mutta sitä ei siirretty paikalle vanhasta temppelistä. Suunnittelija George Groslier sovitti paikallisia muotoja museorakennuksen tehtävään. Museolla on sisäpiha, ja kokoelmissa on veistoksia, keramiikkaa ja muita khmerkulttuurin esineitä. Rakennus valmistui 1900-luvun alkupuolella. Se on nuorempi kuin monet esittelemänsä teokset: museon oma kuori ja sen sisällä oleva historia kulkevat eri aikajanoilla.",
+          "teksti": "Kambodžan kansallismuseon rakennus on saanut vaikutteita khmerarkkitehtuurista, ja on suunniteltu museokäyttöön. Suunnittelija George Groslier sovitti paikallisia muotoja museorakennuksen tehtävään. Museolla on sisäpiha, ja kokoelmissa on veistoksia, keramiikkaa ja muita khmerkulttuurin esineitä. Rakennus valmistui 1900-luvun alkupuolella. Se on nuorempi kuin monet esittelemänsä teokset: museon oma kuori ja sen sisällä oleva historia kulkevat eri aikajanoilla.",
           "wiki": "National Museum of Cambodia",
           "tiedosto": "",
           "lyhyt": "",
@@ -354,7 +354,7 @@
   "nahtavyydet": {
     "Kambodžan kansallismuseo": {
       "aika": "1900-luvun alkupuoli",
-      "teksti": "Kambodžan kansallismuseo sijaitsee Kuninkaanpalatsin pohjoispuolella Phnom Penhin keskustassa. Sen rakennus ei ole vanha temppeli, vaikka suunnittelussa on käytetty khmerien temppeliarkkitehtuurin muotoja. George Groslier sovitti nämä esikuvat museon suurempiin tilatarpeisiin. Näyttelyrakennukset ja sisäpiha muodostavat kokonaisuuden, jossa arkkitehtuuri ja esineistö edustavat eri ikäisiä kerrostumia.\n\nKokoelmissa on veistoksia, keramiikkaa, pronssiesineitä ja kansatieteellistä aineistoa. Museo sekä esittelee että säilyttää kambodžalaista kulttuuriperintöä. Nykyinen museorakennus syntyi vasta 1900-luvun alkupuolella: isoisän matkavuonna 1873 sitä ei ollut. Sen esittelemiä taideperinteitä oli silti ollut olemassa kauan ennen museota. Rakennuksen ikää ei siis pidä päätellä pelkästään kattomuodoista tai kokoelman vanhoista esineistä.",
+      "teksti": "Kambodžan kansallismuseo sijaitsee Kuninkaanpalatsin pohjoispuolella Phnom Penhin keskustassa. Sen rakennus ei ole vanha temppeli, vaikka suunnittelussa on käytetty khmerien temppeliarkkitehtuurin muotoja. George Groslier sovitti nämä esikuvat museon suurempiin tilatarpeisiin. Näyttelyrakennukset ja sisäpiha muodostavat kokonaisuuden, jossa arkkitehtuuri ja esineistö edustavat eri ikäisiä kerrostumia.\n\nKokoelmissa on veistoksia, keramiikkaa, pronssiesineitä ja kansatieteellistä aineistoa. Museo sekä esittelee että säilyttää kambodžalaista kulttuuriperintöä. Nykyinen museorakennus syntyi vasta 1900-luvun alkupuolella: isoisän matkavuonna 1873 sitä ei ollut. Sen esittelemiä taideperinteitä oli silti ollut olemassa kauan ennen museota. Khmerarkkitehtuurin kattomuodot sovitettiin uudelle museolle, jonka kokoelmat sisältävät paljon vanhempaa esineistöä.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -370,7 +370,7 @@
   "ehdotukset": {
     "lentoasema": "Techo International Airport (KTI)",
     "huomiot": [
-      "C-tekstiluonnos; B-kuvat sekä kartan sijainti- ja tekijänoikeusportti avoinna.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 2 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Saatiedot null: yhteistä 48/48 primäärisääauditointia ei ole hyväksytty.",
       "Lentoasema päivitetty: vanha Phnom Penh International Airport ei ole oppaan kansainvälinen saapumiskenttä."
     ]

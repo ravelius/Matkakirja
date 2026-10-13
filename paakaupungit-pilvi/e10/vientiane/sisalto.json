@@ -50,13 +50,13 @@
       "q": "Mitä materiaaleja Wat Si Saketin pienissä Buddha-kuvissa käytetään?",
       "options": [
         "Keramiikkaa ja hopeaa",
-        "Lasia ja alumiinia",
-        "Meripihkaa ja tinaa",
-        "Muovia ja terästä"
+        "Puuta ja pronssia",
+        "Kiveä ja kultaa",
+        "Norsunluuta ja kuparia"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Ajattele perinteistä savityötä ja arvokasta metallia.",
+      "hint": "Kuvat on sijoitettu käytäväseinien pieniin syvennyksiin.",
       "fact": "Temppelin käytäväseinissä on keraamisia ja hopeisia Buddha-kuvia.",
       "source": "https://en.wikipedia.org/wiki/Wat_Si_Saket"
     },
@@ -64,13 +64,13 @@
       "q": "Mitä patsasta varten Haw Phra Kaew rakennettiin?",
       "options": [
         "Smaragdibuddhaa",
-        "Jadeleijonaa",
-        "Hopeanagaa",
-        "Kultaista norsua"
+        "Kultaista Buddhaa",
+        "Kristallibuddhaa",
+        "Hopeista Buddhaa"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Temppelin nimikkopatsas liittyy buddhalaisuuteen.",
+      "hint": "Temppeli rakennettiin kuninkaan palatsialueelle.",
       "fact": "Haw Phra Kaew rakennettiin Smaragdibuddhaa varten; patsas sijaitsee nykyisin Bangkokissa.",
       "source": "https://en.wikipedia.org/wiki/Haw_Phra_Kaew"
     },
@@ -84,8 +84,8 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Perimätiedon suojelijalla on käärmemäinen olemus.",
-      "fact": "That Damiin liittyvä perimätieto kertoo nagasta kaupungin suojelijana; tarina ei ole todiste eläimen olemassaolosta.",
+      "hint": "That Dam on historiallinen stupa kaupungin keskustassa.",
+      "fact": "That Damiin liittyvä perimätieto kertoo naga-käärmeestä kaupungin suojelijana.",
       "source": "https://en.wikipedia.org/wiki/That_Dam"
     }
   ],
@@ -97,8 +97,8 @@
   "valokuva": {
     "tiedosto": "Mekong in Vientiane 2.jpg",
     "lahde": "Christophe95, Commons (CC BY-SA 4.0)",
-    "lyhyt": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön.",
-    "selite": "Mekongin rantamaisema kuuluu Vientianen kaupunkiympäristöön."
+    "lyhyt": "Mekongin rantaa Vientianessa.",
+    "selite": "Vientianen jokiranta ja Mekong kuvattuna Laosin pääkaupungissa."
   },
   "kaupunkilehti": [
     {
@@ -109,20 +109,20 @@
         {
           "tiedosto": "Vientiane - Mekong Riverfront - 0002.jpg",
           "lahde": "Stefan Fussan, Wikimedia Commons (CC BY-SA 3.0)",
-          "lyhyt": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle.",
-          "selite": "Mekongin rantakävelyalue avaa Vientianesta laajan näkymän joelle."
+          "lyhyt": "Vientianen Mekong-rantakävelyä.",
+          "selite": "Mekongin äärellä kulkeva rantakävelyalue Vientianessa."
         },
         {
           "tiedosto": "Mekong in Vientiane 1.jpg",
           "lahde": "Christophe95, Wikimedia Commons (CC BY-SA 4.0)",
-          "lyhyt": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman.",
-          "selite": "Vientianen Mekong-rannalla kaupunki kohtaa leveän jokimaiseman."
+          "lyhyt": "Mekong Vientianen rannalla.",
+          "selite": "Leveä Mekong ja Vientianen jokirannan maisema."
         },
         {
           "tiedosto": "20171118 Sunset over Mekong Vientiane 3375 DxO.jpg",
           "lahde": "Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)",
-          "lyhyt": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan.",
-          "selite": "Vientianesta avautuu Mekongille laaja näkymä vastarannan suuntaan."
+          "lyhyt": "Auringonlasku Mekongilla.",
+          "selite": "Mekongin auringonlasku Vientianesta nähtynä 18. marraskuuta 2017."
         }
       ],
       "nostot": [
@@ -131,8 +131,8 @@
           "teksti": "Vientiane on ranskalainen kirjoitusasu laon nimestä Viangchan. Sen alkuosa viang tarkoittaa muurien ympäröimää kaupunkia. Loppuosalle annetaan kaksi tulkintaa: santelipuu ja kuu. Taustalla ovat sanskritin eri sanat, santelipuuta tarkoittava candana ja kuuta tarkoittava chandra; laon kirjoituksessa merkityksiä on aiemmin erotettu toisistaan. Nimi voidaan siksi kääntää sekä santelipuun että kuun kaupungiksi. Myös Viangchan ja Wiangchan esiintyvät nimen latinalaisina kirjoitusasuina. Kuusta ja santelipuusta kertovat käännökset johtavat samaan kaupunkiin.",
           "tiedosto": "20110119 moon.jpg",
           "lahde": "Nienetwiler, Wikimedia Commons (CC BY 2.5 ch)",
-          "lyhyt": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista.",
-          "selite": "Kuu liittyy yhteen Viangchan-nimen tulkinnoista.",
+          "lyhyt": "Kuu yötaivaalla.",
+          "selite": "Kuun valokuva tammikuulta 2011. Viangchan-nimen yksi tulkinta viittaa kuuhun.",
           "wiki": "Vientiane"
         },
         {
@@ -158,8 +158,8 @@
           "teksti": "Ban Anoun ruokatori alkaa kokoontua auringonlaskun aikaan. Valikoimaan kuuluu vartaita, grillattua tahmeaa riisiä ja salaattiin käärittyjä miang-suupaloja, joissa on maapähkinätäyte. Pieniin riisitaikinaleivonnaisiin taas laitetaan porsaanjauhelihaa ja pavunituja. Kaupungin ruokaan voi tutustua annos kerrallaan: lehtikääre, paistettu taikina ja grillattu riisi ovat eri tapoja tuoda täyte tai lisuke pöytään. Torikierros täydentää temppelipäivää aivan omilla yksityiskohdillaan.",
           "tiedosto": "Lao grilled stickyrice joom kai.jpg",
           "lahde": "Isan1985, Wikimedia Commons (CC BY-SA 4.0)",
-          "lyhyt": "Grillattua tahmeaa riisiä munapäällysteellä.",
-          "selite": "Grillattua tahmeaa riisiä munapäällysteellä.",
+          "lyhyt": "Grillattua tahmeaa riisiä.",
+          "selite": "Tahmeasta riisistä tehtyjä grillattuja annoksia munapäällysteellä; kuva esittelee laolaisen ruokalajin.",
           "wiki": "Vientiane"
         }
       ],
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Päiväkierros ja iltaruoka",
-              "teksti": "Temppelit ja museot sopivat päivän kierrokseen, jonka voi jakaa kahviloissa pidettäviin taukoihin. Ban Anoun ruokatori alkaa kokoontua auringonlaskun aikaan; siellä voi kokeilla riisileivonnaisia, vartaita ja pieniä salaattikääröjä. Myyjät ja tarjonta vaihtelevat. Tarkista matkasi ajankohtaiset palvelut sekä lento- tai junayhteydet etukäteen ja varaa aikaa siirtymiseen oikealle asemalle.",
+              "teksti": "Temppelit ja museot sopivat päivän kierrokseen, jonka voi jakaa kahviloissa pidettäviin taukoihin. Ban Anoun ruokatori alkaa kokoontua auringonlaskun aikaan; siellä voi kokeilla riisileivonnaisia, vartaita ja pieniä salaattikääröjä. Päivän temppelikierros ja auringonlaskun ruokatori kuuluvat kaupungin eri rytmeihin: iltatorilla voi syödä useita pieniä annoksia yhden pääruoan sijaan.",
               "kuva": {
                 "tiedosto": "",
                 "lahde": "",
@@ -305,8 +305,8 @@
           "teksti": "Laap, myös laab tai larb, on maustettu liha- tai kalaseos, jossa käytetään yrttejä ja kalapohjaisia mausteita. Ruoka voidaan tehdä esimerkiksi ankasta, kanasta, sianlihasta, naudanlihasta tai kalasta; siitä valmistetaan myös sieniversioita. Laon keittiössä käytetään padaek-kalatahnaa, ja laapissa voi olla hapatettua kalaa. Ruokalistan tuttu nimi ei siis vielä kerro annoksen proteiinia tai kaikkia mausteita. Kalaa välttävän kannattaa kysyä myös maustamisesta, vaikka annoksen pääraaka-aine olisi liha tai sieni.",
           "tiedosto": "LaoFood LarbNeua.JPG",
           "lahde": "Jpatokal, Wikimedia Commons (CC BY-SA 4.0)",
-          "lyhyt": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita.",
-          "selite": "Laapissa liha tai kala maustetaan yrteillä; annoksesta on monia versioita.",
+          "lyhyt": "Naudanlihasta tehtyä laapia.",
+          "selite": "Yrteillä maustettu naudanlihasta valmistettu laap-annos tässä laolaisen ruoan kuvassa.",
           "wiki": "Lao cuisine"
         },
         {
@@ -366,7 +366,7 @@
   "ehdotukset": {
     "lentoasema": "Wattay International Airport (VTE)",
     "huomiot": [
-      "Rajattu A-lähdekooste ja C-tekstiluonnos; riippumaton D/E/F avoin.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 7 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Tourismlaos.org robots kielsi sivun: sisältöä ei noudettu tai käytetty. Primäärivarmennus avoin.",
       "19 kuvaroolin tiedosto, lahde, lyhyt ja selite tyhjiä; kuvaputki erillinen.",
       "Kartta partial 1/6–8: vain Wat Si Saketin oma WP-koordinaatti varmennettu ja mukana.",

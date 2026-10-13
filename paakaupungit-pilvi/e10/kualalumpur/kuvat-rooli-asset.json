@@ -3,7 +3,7 @@
   "era": "e10",
   "city": "kualalumpur",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+  "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
   "assets": [
     {
       "era": "e10",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-TRAVELER-v1-20261012-b93dc2da31ad.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: roti canai tarjoillaan esimerkiksi dalin kanssa.",
-        "lyhyt": "Havainnekuva: roti canai tarjoillaan esimerkiksi dalin kanssa."
+        "selite": "Havainnekuva: roti canai tarjoillaan esimerkiksi dalin kanssa."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-TRAVELER-v1-20261012-b93dc2da31ad.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: roti canai tarjoillaan esimerkiksi dalin kanssa.",
-        "lyhyt": "Havainnekuva: roti canai tarjoillaan esimerkiksi dalin kanssa."
+        "selite": "Havainnekuva: roti canai tarjoillaan esimerkiksi dalin kanssa."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1448
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "d3ab2e90acd99cd96bf07a95b31f4d199a3574a15353d983c4032a235a2da36b",
+        "semanticContextSHA256": "08a93df8c68afac4c130bb5d7c74752aacf6974c5218ef165376e534fb19b491",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -533,9 +533,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -554,17 +554,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "d3ab2e90acd99cd96bf07a95b31f4d199a3574a15353d983c4032a235a2da36b",
+      "contextAfterSHA256": "08a93df8c68afac4c130bb5d7c74752aacf6974c5218ef165376e534fb19b491",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "d3ab2e90acd99cd96bf07a95b31f4d199a3574a15353d983c4032a235a2da36b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "d3ab2e90acd99cd96bf07a95b31f4d199a3574a15353d983c4032a235a2da36b",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "b93dc2da31ad0f4ca8d714e5255a19a13c263fd342174ced9c8eaa763bdd334e",
+        "sameImageExportSHA256": "ba99c128e62d840978a6da0a441397aa2b81da91ff0769e4b301a40e2da310ef",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -589,10 +610,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-O4-v1-20261012-d2f797dbe8cc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kaupungin ruokateemojen raaka-aineista; ei yhden ruokalajin valmis annos.",
-        "lyhyt": "Havainnekuva kaupungin ruokateemojen raaka-aineista; ei yhden ruokalajin valmis annos."
+        "selite": "Havainnekuva kaupungin ruokateemojen raaka-aineista; ei yhden ruokalajin valmis annos."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -600,10 +621,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-O4-v1-20261012-d2f797dbe8cc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kaupungin ruokateemojen raaka-aineista; ei yhden ruokalajin valmis annos.",
-        "lyhyt": "Havainnekuva kaupungin ruokateemojen raaka-aineista; ei yhden ruokalajin valmis annos."
+        "selite": "Havainnekuva kaupungin ruokateemojen raaka-aineista; ei yhden ruokalajin valmis annos."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -617,7 +638,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "c26d53429c3fc108a8d8217c48501caa6016c1644f549ceea9265263c88a82e0",
@@ -887,9 +908,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -908,17 +929,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "c26d53429c3fc108a8d8217c48501caa6016c1644f549ceea9265263c88a82e0",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "c26d53429c3fc108a8d8217c48501caa6016c1644f549ceea9265263c88a82e0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "c26d53429c3fc108a8d8217c48501caa6016c1644f549ceea9265263c88a82e0",
+          "subjectTitle": "Kortteli löytyy myös ruokalistalta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "d2f797dbe8cc93d655b5dd4b862ea43037f928c33643b5e9d144e855f5fce0b8",
+        "sameImageExportSHA256": "90c648b3c8c98a3b406b4de7d75335772cdf68c53c8611bb94ad9a5c3894c365",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -940,10 +982,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-K1-v1-20261012-39b8fb508843.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva ananaksesta: Bukit Nanasin nimi tarkoittaa ananaskukkulaa.",
-        "lyhyt": "Havainnekuva ananaksesta: Bukit Nanasin nimi tarkoittaa ananaskukkulaa."
+        "selite": "Havainnekuva ananaksesta: Bukit Nanasin nimi tarkoittaa ananaskukkulaa."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -951,10 +993,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-K1-v1-20261012-39b8fb508843.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva ananaksesta: Bukit Nanasin nimi tarkoittaa ananaskukkulaa.",
-        "lyhyt": "Havainnekuva ananaksesta: Bukit Nanasin nimi tarkoittaa ananaskukkulaa."
+        "selite": "Havainnekuva ananaksesta: Bukit Nanasin nimi tarkoittaa ananaskukkulaa."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -968,7 +1010,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
         "semanticContextSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
@@ -1234,9 +1276,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1255,17 +1297,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "targetAfterSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
       "contextAfterSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
+        "contextAfterSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
+          "semanticContextSHA256": "7f486cc48f9f85291e7368be7eb12b2c520a20efd2eec58d638c26c392bfac84",
+          "subjectTitle": "Metsä jäi talojen keskelle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "39b8fb508843bfe0aba83b91feb5b9ddb67268665857e5288f7f4ae13dee4992",
+        "sameImageExportSHA256": "90c9270db2f501255ffcbe39f90dc54c66b6476a73f850bce9e6dd046dc6ca01",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1287,10 +1350,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-K2-v1-20261012-d824543024c9.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tiilestä, johon Brickfieldsin nimi ja rakennushistoria liittyvät.",
-        "lyhyt": "Havainnekuva tiilestä, johon Brickfieldsin nimi ja rakennushistoria liittyvät."
+        "selite": "Havainnekuva tiilestä, johon Brickfieldsin nimi ja rakennushistoria liittyvät."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1298,10 +1361,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-K2-v1-20261012-d824543024c9.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tiilestä, johon Brickfieldsin nimi ja rakennushistoria liittyvät.",
-        "lyhyt": "Havainnekuva tiilestä, johon Brickfieldsin nimi ja rakennushistoria liittyvät."
+        "selite": "Havainnekuva tiilestä, johon Brickfieldsin nimi ja rakennushistoria liittyvät."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1315,10 +1378,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
-        "semanticContextSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
+        "targetBeforeSHA256": "2a15299f20d218cf0f6ca8050f259725052d47ff7cbef4cf8f53d3a17c310669",
+        "semanticContextSHA256": "2a15299f20d218cf0f6ca8050f259725052d47ff7cbef4cf8f53d3a17c310669",
         "subjectTitle": "Tiili jäi korttelin nimeen",
         "targetState": "existing-target"
       },
@@ -1583,9 +1646,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1604,17 +1667,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
-      "targetAfterSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
-      "contextAfterSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+      "targetAfterSHA256": "2a15299f20d218cf0f6ca8050f259725052d47ff7cbef4cf8f53d3a17c310669",
+      "contextAfterSHA256": "2a15299f20d218cf0f6ca8050f259725052d47ff7cbef4cf8f53d3a17c310669",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
+        "contextAfterSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
+          "semanticContextSHA256": "0141dd30dc335c5edce3104dfadfaf459b988d48d2eb92c4f81b876e08ec9a8c",
+          "subjectTitle": "Tiili jäi korttelin nimeen",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "d824543024c9695fe8696045b5d705e0977ef7d430d895530469b46d87b014d8",
+        "sameImageExportSHA256": "ebfdd9966172d822b7841555d7e2e729e7bfac1b60176da24945d459f86169c3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1636,10 +1720,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-K4-v1-20261012-cccfb3486396.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tavallisista rautatiekiskoista; ei tietty Kuala Lumpurin rata tai monorail-rakenne.",
-        "lyhyt": "Havainnekuva tavallisista rautatiekiskoista; ei tietty Kuala Lumpurin rata tai monorail-rakenne."
+        "selite": "Havainnekuva tavallisista rautatiekiskoista; ei tietty Kuala Lumpurin rata tai monorail-rakenne."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1647,10 +1731,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-K4-v1-20261012-cccfb3486396.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva tavallisista rautatiekiskoista; ei tietty Kuala Lumpurin rata tai monorail-rakenne.",
-        "lyhyt": "Havainnekuva tavallisista rautatiekiskoista; ei tietty Kuala Lumpurin rata tai monorail-rakenne."
+        "selite": "Havainnekuva tavallisista rautatiekiskoista; ei tietty Kuala Lumpurin rata tai monorail-rakenne."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1664,10 +1748,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
-        "semanticContextSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
+        "targetBeforeSHA256": "06bc53ec50a124a2d9270ebc2e5801b9dea21070a8b076543e58bd85b71df24b",
+        "semanticContextSHA256": "06bc53ec50a124a2d9270ebc2e5801b9dea21070a8b076543e58bd85b71df24b",
         "subjectTitle": "Kaupunki kulkee eri kiskoilla",
         "targetState": "existing-target"
       },
@@ -1930,9 +2014,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1951,17 +2035,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
-      "targetAfterSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
-      "contextAfterSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+      "targetAfterSHA256": "06bc53ec50a124a2d9270ebc2e5801b9dea21070a8b076543e58bd85b71df24b",
+      "contextAfterSHA256": "06bc53ec50a124a2d9270ebc2e5801b9dea21070a8b076543e58bd85b71df24b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
+        "contextAfterSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
+          "semanticContextSHA256": "092f86a1b71643dfed277662393d25b3aca281abb2e080e68e0c7188938025cd",
+          "subjectTitle": "Kaupunki kulkee eri kiskoilla",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "cccfb3486396ec8eb086d4b52f68a16b822ff4fa5855f0cec2a6ca0d255160f8",
+        "sameImageExportSHA256": "939284ee977aef56b05224aa2d0a3055aaed25946fa86298fb7d5e99bf309f27",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -1983,10 +2088,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-L1-v1-20261012-ca3b1b9a7446.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Kuala Lumpurin Hokkien meen paksut nuudelit ovat tumman kastikkeen peittämiä.",
-        "lyhyt": "Havainnekuva: Kuala Lumpurin Hokkien meen paksut nuudelit ovat tumman kastikkeen peittämiä."
+        "selite": "Havainnekuva: Kuala Lumpurin Hokkien meen paksut nuudelit ovat tumman kastikkeen peittämiä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1994,10 +2099,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-L1-v1-20261012-ca3b1b9a7446.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: Kuala Lumpurin Hokkien meen paksut nuudelit ovat tumman kastikkeen peittämiä.",
-        "lyhyt": "Havainnekuva: Kuala Lumpurin Hokkien meen paksut nuudelit ovat tumman kastikkeen peittämiä."
+        "selite": "Havainnekuva: Kuala Lumpurin Hokkien meen paksut nuudelit ovat tumman kastikkeen peittämiä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2011,7 +2116,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
         "semanticContextSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
@@ -2279,9 +2384,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2300,17 +2405,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "targetAfterSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
       "contextAfterSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
+        "contextAfterSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
+          "semanticContextSHA256": "4be538087be296a82fc0582d166d8e1218d9f440aa0b84ebe6c0dd2a82f30df6",
+          "subjectTitle": "Tumma soija värittää nuudelit",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "ca3b1b9a744637761f68e812794e275a8b7eb436e9ba149affc2ba2740678fba",
+        "sameImageExportSHA256": "665836311477063f4d345e76ab26a9d0bd03b6e768f7bb8921d40596ff919718",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -2332,10 +2458,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-L2-v1-20261012-e26647d89b66.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: yong tau foon täyte voi olla tofun tai vihanneksen sisällä.",
-        "lyhyt": "Havainnekuva: yong tau foon täyte voi olla tofun tai vihanneksen sisällä."
+        "selite": "Havainnekuva: yong tau foon täyte voi olla tofun tai vihanneksen sisällä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2343,10 +2469,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-L2-v1-20261012-e26647d89b66.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: yong tau foon täyte voi olla tofun tai vihanneksen sisällä.",
-        "lyhyt": "Havainnekuva: yong tau foon täyte voi olla tofun tai vihanneksen sisällä."
+        "selite": "Havainnekuva: yong tau foon täyte voi olla tofun tai vihanneksen sisällä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2360,10 +2486,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
-        "semanticContextSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
+        "targetBeforeSHA256": "86e675c162b93c4ec2850ea233dac98ba477efd58a42302dd47a1140fea4d03c",
+        "semanticContextSHA256": "86e675c162b93c4ec2850ea233dac98ba477efd58a42302dd47a1140fea4d03c",
         "subjectTitle": "Täyte kulkee tofuun",
         "targetState": "existing-target"
       },
@@ -2628,9 +2754,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2649,17 +2775,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
-      "targetAfterSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
-      "contextAfterSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+      "targetAfterSHA256": "86e675c162b93c4ec2850ea233dac98ba477efd58a42302dd47a1140fea4d03c",
+      "contextAfterSHA256": "86e675c162b93c4ec2850ea233dac98ba477efd58a42302dd47a1140fea4d03c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
+        "contextAfterSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
+          "semanticContextSHA256": "dd99b3912eaa10cb10c9f76de5c81d6b064bb47b55f286893afb4d912a0f3607",
+          "subjectTitle": "Täyte kulkee tofuun",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "e26647d89b66932ec41bee8abc55abbeb30c79251e8d18ec2de456721d5e8c44",
+        "sameImageExportSHA256": "163042ee7da10e84a7da104120d7537f26b9064e4a2266319f77bf927d857066",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -2681,10 +2828,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-L3-v1-20261012-b0e2186ff396.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: roti canain taitellut kerrokset ja dal-kastike.",
-        "lyhyt": "Havainnekuva: roti canain taitellut kerrokset ja dal-kastike."
+        "selite": "Havainnekuva: roti canain taitellut kerrokset ja dal-kastike."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2692,10 +2839,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-L3-v1-20261012-b0e2186ff396.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: roti canain taitellut kerrokset ja dal-kastike.",
-        "lyhyt": "Havainnekuva: roti canain taitellut kerrokset ja dal-kastike."
+        "selite": "Havainnekuva: roti canain taitellut kerrokset ja dal-kastike."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2709,10 +2856,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
-        "semanticContextSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
+        "targetBeforeSHA256": "391e46f7fa5643549dfc6994c4d9b27170f9ddbfb5537f9ab40b611dd0947d53",
+        "semanticContextSHA256": "391e46f7fa5643549dfc6994c4d9b27170f9ddbfb5537f9ab40b611dd0947d53",
         "subjectTitle": "Taikina taitetaan kerroksiksi",
         "targetState": "existing-target"
       },
@@ -2975,9 +3122,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2996,17 +3143,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
-      "targetAfterSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
-      "contextAfterSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+      "targetAfterSHA256": "391e46f7fa5643549dfc6994c4d9b27170f9ddbfb5537f9ab40b611dd0947d53",
+      "contextAfterSHA256": "391e46f7fa5643549dfc6994c4d9b27170f9ddbfb5537f9ab40b611dd0947d53",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
+        "contextAfterSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
+          "semanticContextSHA256": "886f7ec8d20950214e2abc5f51c5ea845071ca891ebfbde5c783b1401959098b",
+          "subjectTitle": "Taikina taitetaan kerroksiksi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "b0e2186ff396af008e91ca4062a30a268f719fc2f62353d5bda0e5a36c9d6705",
+        "sameImageExportSHA256": "8d05a633d4a014ae88ea8281ee4596d5f9ec5f910a242149a89472f86b3672f4",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -3028,10 +3196,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-L4-v1-20261012-d29f8926254d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: banaaninlehti toimii riisiaterian tarjoilualustana.",
-        "lyhyt": "Havainnekuva: banaaninlehti toimii riisiaterian tarjoilualustana."
+        "selite": "Havainnekuva: banaaninlehti toimii riisiaterian tarjoilualustana."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -3039,10 +3207,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e10/kualalumpur/e10-kualalumpur-L4-v1-20261012-d29f8926254d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva: banaaninlehti toimii riisiaterian tarjoilualustana.",
-        "lyhyt": "Havainnekuva: banaaninlehti toimii riisiaterian tarjoilualustana."
+        "selite": "Havainnekuva: banaaninlehti toimii riisiaterian tarjoilualustana."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -3056,10 +3224,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
-        "semanticContextSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
+        "targetBeforeSHA256": "a96a19ac49f4c8b46eccadf850cedd4d501c01eb5661c853b0fad866cd29c18a",
+        "semanticContextSHA256": "a96a19ac49f4c8b46eccadf850cedd4d501c01eb5661c853b0fad866cd29c18a",
         "subjectTitle": "Aterian alusta kasvaa puussa",
         "targetState": "existing-target"
       },
@@ -3324,9 +3492,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3345,17 +3513,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
-      "targetAfterSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
-      "contextAfterSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+      "targetAfterSHA256": "a96a19ac49f4c8b46eccadf850cedd4d501c01eb5661c853b0fad866cd29c18a",
+      "contextAfterSHA256": "a96a19ac49f4c8b46eccadf850cedd4d501c01eb5661c853b0fad866cd29c18a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
+        "contextAfterSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
+          "semanticContextSHA256": "b92bd514be5acd6e33abae5fef347636e22275384625f4ced433fd249574a96e",
+          "subjectTitle": "Aterian alusta kasvaa puussa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "d29f8926254d0c8f92e881d28e716699c69ce57ee0c1c90e30e82d759f126b87",
+        "sameImageExportSHA256": "a80a3331155e900e153c2bb22b33c87bf464d69469b58ce1fdd7063f52e47458",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -3374,16 +3563,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/photo-26ca0e84bba3e74997fb.jpg",
         "suora": true,
         "lahde": "Ariyanto, Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.",
-        "lyhyt": "Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.",
+        "selite": "Vanhan rautatieaseman rakennus Kuala Lumpurissa syyskuussa 2024 otetussa kuvassa.",
+        "lyhyt": "Kuala Lumpurin historiallinen rautatieasema.",
         "tiedosto": "2024-09 Kuala Lumpur station 00.jpg",
         "vuosi": "2024"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Ariyanto, Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.",
-        "lyhyt": "Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.",
+        "selite": "Vanhan rautatieaseman rakennus Kuala Lumpurissa syyskuussa 2024 otetussa kuvassa.",
+        "lyhyt": "Kuala Lumpurin historiallinen rautatieasema.",
         "tiedosto": "2024-09 Kuala Lumpur station 00.jpg",
         "vuosi": "2024"
       },
@@ -3391,8 +3580,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/photo-26ca0e84bba3e74997fb.jpg",
         "suora": true,
         "lahde": "Ariyanto, Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.",
-        "lyhyt": "Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.",
+        "selite": "Vanhan rautatieaseman rakennus Kuala Lumpurissa syyskuussa 2024 otetussa kuvassa.",
+        "lyhyt": "Kuala Lumpurin historiallinen rautatieasema.",
         "tiedosto": "2024-09 Kuala Lumpur station 00.jpg",
         "vuosi": "2024"
       },
@@ -3408,10 +3597,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
-        "semanticContextSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
+        "targetBeforeSHA256": "06c9f25c1a1b61b8b3e409fb073914884f48f0cf28ceb62a8ab9caed8e6bf86e",
+        "semanticContextSHA256": "06c9f25c1a1b61b8b3e409fb073914884f48f0cf28ceb62a8ab9caed8e6bf86e",
         "subjectTitle": "kualalumpur — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -3582,9 +3771,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "2024-09 Kuala Lumpur station 00.jpg",
+        "lyhyt": "Kuala Lumpurin historiallinen rautatieasema.",
+        "selite": "Vanhan rautatieaseman rakennus Kuala Lumpurissa syyskuussa 2024 otetussa kuvassa.",
         "lahde": "Ariyanto, Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.",
-        "lyhyt": "Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.",
         "vuosi": "2024"
       },
       "preservePreviousMediaObjects": true,
@@ -3604,24 +3793,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Ariyanto, Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.",
-        "lyhyt": "Kuala Lumpurin historiallinen rautatieasema kuuluu kaupungin vanhaan raideliikenteeseen.",
+        "selite": "Vanhan rautatieaseman rakennus Kuala Lumpurissa syyskuussa 2024 otetussa kuvassa.",
+        "lyhyt": "Kuala Lumpurin historiallinen rautatieasema.",
         "tiedosto": "2024-09 Kuala Lumpur station 00.jpg",
         "vuosi": "2024"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
-      "targetAfterSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
-      "contextAfterSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+      "targetAfterSHA256": "06c9f25c1a1b61b8b3e409fb073914884f48f0cf28ceb62a8ab9caed8e6bf86e",
+      "contextAfterSHA256": "06c9f25c1a1b61b8b3e409fb073914884f48f0cf28ceb62a8ab9caed8e6bf86e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
+        "contextAfterSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
+          "semanticContextSHA256": "c828dea49a556a0a3d19c3ade18d44f2d46d36ec6aaa02a92c4e7ba74595a2b8",
+          "subjectTitle": "kualalumpur — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "26ca0e84bba3e74997fb3801b73f2bf80aaec06af4c5d8e81261d9eaa087adce",
+        "sameImageExportSHA256": "26ca0e84bba3e74997fb3801b73f2bf80aaec06af4c5d8e81261d9eaa087adce",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -3643,23 +3853,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c1-8e70e4f55c7a3e969426.jpg",
         "suora": true,
         "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin vanha rautatieasema avautuu katumaisemaan vaaleine kaarineen.",
-        "lyhyt": "Kuala Lumpurin vanha rautatieasema avautuu katumaisemaan vaaleine kaarineen.",
+        "selite": "Historiallinen rautatieasema kuvattuna Kuala Lumpurissa 6. syyskuuta 2024.",
+        "lyhyt": "Kuala Lumpurin vanha rautatieasema.",
         "tiedosto": "2024-09 Kuala Lumpur station 01.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin vanha rautatieasema avautuu katumaisemaan vaaleine kaarineen.",
-        "lyhyt": "Kuala Lumpurin vanha rautatieasema avautuu katumaisemaan vaaleine kaarineen.",
+        "selite": "Historiallinen rautatieasema kuvattuna Kuala Lumpurissa 6. syyskuuta 2024.",
+        "lyhyt": "Kuala Lumpurin vanha rautatieasema.",
         "tiedosto": "2024-09 Kuala Lumpur station 01.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c1-8e70e4f55c7a3e969426.jpg",
         "suora": true,
         "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin vanha rautatieasema avautuu katumaisemaan vaaleine kaarineen.",
-        "lyhyt": "Kuala Lumpurin vanha rautatieasema avautuu katumaisemaan vaaleine kaarineen.",
+        "selite": "Historiallinen rautatieasema kuvattuna Kuala Lumpurissa 6. syyskuuta 2024.",
+        "lyhyt": "Kuala Lumpurin vanha rautatieasema.",
         "tiedosto": "2024-09 Kuala Lumpur station 01.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3674,10 +3884,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
-        "semanticContextSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
+        "targetBeforeSHA256": "54c869aadff44406a26cfd63da973e433c4d926699150ff209eacd26db903b46",
+        "semanticContextSHA256": "54c869aadff44406a26cfd63da973e433c4d926699150ff209eacd26db903b46",
         "subjectTitle": "Kuala Lumpur",
         "targetState": "existing-target"
       },
@@ -3848,9 +4058,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "2024-09 Kuala Lumpur station 01.jpg",
-        "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin vanha rautatieasema avautuu katumaisemaan vaaleine kaarineen.",
-        "lyhyt": "Kuala Lumpurin vanha rautatieasema avautuu katumaisemaan vaaleine kaarineen."
+        "lyhyt": "Kuala Lumpurin vanha rautatieasema.",
+        "selite": "Historiallinen rautatieasema kuvattuna Kuala Lumpurissa 6. syyskuuta 2024.",
+        "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3869,23 +4079,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin vanha rautatieasema avautuu katumaisemaan vaaleine kaarineen.",
-        "lyhyt": "Kuala Lumpurin vanha rautatieasema avautuu katumaisemaan vaaleine kaarineen.",
+        "selite": "Historiallinen rautatieasema kuvattuna Kuala Lumpurissa 6. syyskuuta 2024.",
+        "lyhyt": "Kuala Lumpurin vanha rautatieasema.",
         "tiedosto": "2024-09 Kuala Lumpur station 01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
-      "targetAfterSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
-      "contextAfterSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+      "targetAfterSHA256": "54c869aadff44406a26cfd63da973e433c4d926699150ff209eacd26db903b46",
+      "contextAfterSHA256": "54c869aadff44406a26cfd63da973e433c4d926699150ff209eacd26db903b46",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
+        "contextAfterSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
+          "semanticContextSHA256": "9457c9fc802260efff8382166a5ca4b7b412e251c2126669962ddb8723f0759a",
+          "subjectTitle": "Kuala Lumpur",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "8e70e4f55c7a3e9694261c0e55a7e061c2e6ecafcfcb4c2eb3026b2be9f1cc00",
+        "sameImageExportSHA256": "8e70e4f55c7a3e9694261c0e55a7e061c2e6ecafcfcb4c2eb3026b2be9f1cc00",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -3907,23 +4138,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c2-36cd7b44ba0e6d5efc4e.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
-        "lyhyt": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "selite": "Kuala Lumpurin kaupunkialue ja sitä ympäröivä maasto ISS-avaruusasemalta 27. maaliskuuta 2010.",
+        "lyhyt": "Kuala Lumpurin kaupunkialue avaruudesta nähtynä.",
         "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
-        "lyhyt": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "selite": "Kuala Lumpurin kaupunkialue ja sitä ympäröivä maasto ISS-avaruusasemalta 27. maaliskuuta 2010.",
+        "lyhyt": "Kuala Lumpurin kaupunkialue avaruudesta nähtynä.",
         "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/c2-36cd7b44ba0e6d5efc4e.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
-        "lyhyt": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "selite": "Kuala Lumpurin kaupunkialue ja sitä ympäröivä maasto ISS-avaruusasemalta 27. maaliskuuta 2010.",
+        "lyhyt": "Kuala Lumpurin kaupunkialue avaruudesta nähtynä.",
         "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3938,10 +4169,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
-        "semanticContextSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
+        "targetBeforeSHA256": "8ac32cc03c5d0c7956eb6f2878a457c19159b9d9803fd1069ebfbbe06a8d75f3",
+        "semanticContextSHA256": "8ac32cc03c5d0c7956eb6f2878a457c19159b9d9803fd1069ebfbbe06a8d75f3",
         "subjectTitle": "Kuala Lumpur",
         "targetState": "existing-target"
       },
@@ -4150,9 +4381,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG",
-        "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
-        "lyhyt": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010."
+        "lyhyt": "Kuala Lumpurin kaupunkialue avaruudesta nähtynä.",
+        "selite": "Kuala Lumpurin kaupunkialue ja sitä ympäröivä maasto ISS-avaruusasemalta 27. maaliskuuta 2010.",
+        "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4171,23 +4402,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
-        "lyhyt": "Kuala Lumpurin kaupunkialuetta ISS-avaruusasemalta maaliskuussa 2010.",
+        "selite": "Kuala Lumpurin kaupunkialue ja sitä ympäröivä maasto ISS-avaruusasemalta 27. maaliskuuta 2010.",
+        "lyhyt": "Kuala Lumpurin kaupunkialue avaruudesta nähtynä.",
         "tiedosto": "Kuala Lumpur, Malaysia Astronaut Imagery.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
-      "targetAfterSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
-      "contextAfterSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+      "targetAfterSHA256": "8ac32cc03c5d0c7956eb6f2878a457c19159b9d9803fd1069ebfbbe06a8d75f3",
+      "contextAfterSHA256": "8ac32cc03c5d0c7956eb6f2878a457c19159b9d9803fd1069ebfbbe06a8d75f3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
+        "contextAfterSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
+          "semanticContextSHA256": "c521e462eb1ef0bf23ed6a2c779aac5f6e4f1eb65d96e35ce78a7a84f87bbf9c",
+          "subjectTitle": "Kuala Lumpur",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
+        "sameImageExportSHA256": "36cd7b44ba0e6d5efc4e0659fef1a1d54ebe13a1289fc5d0a2b46f6ce325e3c3",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e10",
@@ -4209,23 +4461,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/n1-819b4c7b1af87ad392bb.jpg",
         "suora": true,
         "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.",
-        "lyhyt": "Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.",
+        "selite": "Kuala Lumpurin historiallisen rautatieaseman laituri kuvattuna 5. syyskuuta 2024.",
+        "lyhyt": "Vanhan rautatieaseman laiturialuetta.",
         "tiedosto": "2024-09 Kuala Lumpur station 03.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.",
-        "lyhyt": "Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.",
+        "selite": "Kuala Lumpurin historiallisen rautatieaseman laituri kuvattuna 5. syyskuuta 2024.",
+        "lyhyt": "Vanhan rautatieaseman laiturialuetta.",
         "tiedosto": "2024-09 Kuala Lumpur station 03.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/n1-819b4c7b1af87ad392bb.jpg",
         "suora": true,
         "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.",
-        "lyhyt": "Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.",
+        "selite": "Kuala Lumpurin historiallisen rautatieaseman laituri kuvattuna 5. syyskuuta 2024.",
+        "lyhyt": "Vanhan rautatieaseman laiturialuetta.",
         "tiedosto": "2024-09 Kuala Lumpur station 03.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -4240,10 +4492,10 @@
         3472
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e10/paakaupungit-pilvi/e10/kualalumpur/sisalto.json",
-      "sourceContentSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+      "sourceContentSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "5815fa0366ccc16fa3953286d6f0b421fca80cc9dc85a0bb2ad60947a43e3204",
-        "semanticContextSHA256": "fae7be4c721170694cb5900ec726fe6884434b345f96cda95a26a6596fdc1b74",
+        "targetBeforeSHA256": "7abbdd0be0c9020d98ea55605ab7ab3c4c15d0672424f4e3fd8f44b9ec5518b8",
+        "semanticContextSHA256": "2792ee16b064dfbd9f46765297b85bbb5445a3acb4a9e0e9febdd0feed133a57",
         "subjectTitle": "Kuala Lumpurin historiallinen rautatieasema",
         "targetState": "existing-target"
       },
@@ -4450,9 +4702,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "2024-09 Kuala Lumpur station 03.jpg",
-        "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.",
-        "lyhyt": "Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024."
+        "lyhyt": "Vanhan rautatieaseman laiturialuetta.",
+        "selite": "Kuala Lumpurin historiallisen rautatieaseman laituri kuvattuna 5. syyskuuta 2024.",
+        "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -4471,28 +4723,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Ariyanto, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.",
-        "lyhyt": "Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.",
+        "selite": "Kuala Lumpurin historiallisen rautatieaseman laituri kuvattuna 5. syyskuuta 2024.",
+        "lyhyt": "Vanhan rautatieaseman laiturialuetta.",
         "tiedosto": "2024-09 Kuala Lumpur station 03.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
-      "targetAfterSHA256": "5815fa0366ccc16fa3953286d6f0b421fca80cc9dc85a0bb2ad60947a43e3204",
-      "contextAfterSHA256": "fae7be4c721170694cb5900ec726fe6884434b345f96cda95a26a6596fdc1b74",
+      "sourceContentAfterSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+      "targetAfterSHA256": "7abbdd0be0c9020d98ea55605ab7ab3c4c15d0672424f4e3fd8f44b9ec5518b8",
+      "contextAfterSHA256": "2792ee16b064dfbd9f46765297b85bbb5445a3acb4a9e0e9febdd0feed133a57",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "5cd9f876493dfd70c1085d7c044efcf1850f9f1e41e4d0559b1d6ca1347c3477",
+        "targetAfterSHA256": "5815fa0366ccc16fa3953286d6f0b421fca80cc9dc85a0bb2ad60947a43e3204",
+        "contextAfterSHA256": "fae7be4c721170694cb5900ec726fe6884434b345f96cda95a26a6596fdc1b74",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "5815fa0366ccc16fa3953286d6f0b421fca80cc9dc85a0bb2ad60947a43e3204",
+          "semanticContextSHA256": "fae7be4c721170694cb5900ec726fe6884434b345f96cda95a26a6596fdc1b74",
+          "subjectTitle": "Kuala Lumpurin historiallinen rautatieasema",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "cf5602189c012de590acbd54d2a8319f49a24655f6648dba2858a4f5dbe5f9bb",
+        "sameImageNativeSHA256": "819b4c7b1af87ad392bb37ebdffda6386afc58a9b19e2023bb5145d46451c457",
+        "sameImageExportSHA256": "819b4c7b1af87ad392bb37ebdffda6386afc58a9b19e2023bb5145d46451c457",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e10/kualalumpur/18a776cc68c0b3b1dc388f6216f071723d17a7708d52387980945b46ea7497fa.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.790820+00:00"
 }
