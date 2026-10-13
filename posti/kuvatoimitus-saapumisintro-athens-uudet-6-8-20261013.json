@@ -1,0 +1,187 @@
+{
+  "cityName": "Ateena",
+  "gameCityId": "ateena",
+  "mediaSlug": "athens",
+  "taskNumbers": [
+    112,
+    113
+  ],
+  "updatedAt": "2026-10-13T14:00:01.004540+00:00",
+  "requestedNewSlots": [
+    6,
+    8
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [
+    {
+      "slot": 8,
+      "taskNumber": 113,
+      "title": "Kulkuneuvo liikkeessä",
+      "sceneSpec": "**8 / kaupungin oma kulkuneuvo liikkeessä — Ateenan raitiovaunu rannikkolinjalla Glyfadan ja Voulan välillä, Saroninlahti vieressä.** Tiedosto `athens-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: nykyaikainen matalalattiainen raitiovaunu (kaksi tai kolme nivelosaa, yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä rannikkotiellä Saroninlahden rannalla Glyfadan ja Voulan välisellä osuudella: ruohoraiteella tai tiivistetyllä raiteella kulkeva vaunu, ajojohdot, palmuja ja tamariskipuita tien reunassa, vierellä kevyen liikenteen väylä ja vaalea hiekka- tai kivirantaviiva, meri ja pieniä purjeveneitä kaukana, matalia valkoisia rantakiinteistöjä yksittäin. Ihmiset vain pieninä (muutama kävelijä tai pyöräilijä kaukana rantapolulla, selin tai kaukaa, ei tunnistettavia kasvoja). Värikuva, nykyaika. Kulkuneuvon värit: yksivärinen vaalea harmaa-valkoinen runko, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja, ei ikkunakalvoja tai kylkimainoksia; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu / tyhjät). Kulma: vaakakuva, kameran korkeus noin 1,5–2 m, raiteen sivusta viistosti etuvasemmalta, vaunu hieman liikkeessä (kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä); meri vaunun toisella puolella. Valo: aurinkoinen aamupäivä tai iltapäivä, kirkas sininen taivas, luonnolliset värit, ei HDR:ää. Ei saa näkyä: mitään Kreikan muistomerkkiä tai tunnistettavaa julkista rakennusta (ei Akropolista, stadioneja, satamarakennuksia, marinaa, kirkkoja, hotelleja, nykyarkkitehtuurin maamerkkejä, ei Pireuksen telakoita, ei Faliron suuria rakennuksia), ei tekstiä, kylttejä, katukylttejä, liikennekylttejä, reittikylttejä, pysäkkien nimitauluja, mainoksia, logoja, auton rekisterikilpiä tai merkkejä, vesileimaa eikä kehystä; muu ajoneuvoliikenne vain kaukana ja merkittömänä; taustalla ei vuoria, joissa erottuu rakennuksia tai antennimastoja\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Ateenan raitiovaunu rannikkolinjalla Glyfadan ja Voulan välillä, Saroninlahti vieressä. Havainnekuva.\n",
+      "caption": "Ateenan raitiovaunu rannikkolinjalla Glyfadan ja Voulan välillä, Saroninlahti vieressä. Havainnekuva.",
+      "filename": "athens-8-kulkuneuvo-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/athens/20261013-uudet-6-8/athens-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "newTopic": true,
+      "topic": "local-transport-in-motion",
+      "version": 1,
+      "sourceOwnerAcceptanceRequiredBeforeGameIntegration": true,
+      "cityName": "Ateena",
+      "gameCityId": "ateena",
+      "mediaSlug": "athens",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/athens/native-8.png",
+      "nativeSHA256": "e58f41f55fb5ff8ca607b516e5dd70a5b102b05f7c51de07129496964a71dc8a",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/athens/athens-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-pilotti-20261013/athens/athens-8-kulkuneuvo-intro-v1.png",
+      "sha256": "5648546148f00ce62862df347ab2699bd66627ba14388e142e624ce0f3416ed0",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja Athens arrival intro, contemporary color photographic illustration.\nOutput: one new opaque RGB sRGB PNG, exactly1536x1024 landscape3:2. Real-camera travel/documentary photograph, naturally uneven materials, believable optical perspective and restrained lifelike color. No HDR, no dramatic movie grading, no oversaturation, no illustration, no CGI, no collage. Never render caption or any other writing. No text, letters, numbers, signs, labels, logos, trademarks, watermark or frame anywhere. This is present-day Athens in COLOR; no historical clothing or old-time treatment, no celebration crowd. No identifiable faces.\nPrimary request: ONE GENERIC MODERN LOW-FLOOR ELECTRIC TRAM IN MOTION ON THE ATHENS COASTAL LINE BETWEEN GLYFADA AND VOULA. Three articulated sections, with two coherent flexible accordion joints; a continuous plausible pair of steel rails beneath the vehicle and overhead contact wire with a pantograph making credible contact. The entire outer body is a SINGLE neutral pale grey-white color, unbranded and plain. Dark ordinary reflective windows, no advertising wraps, no painted stripes or motifs. Both the front destination panel and any side route-display panel are switched OFF, completely blank black rectangles with no glyphs. No fleet number or emblem, no writing on doors, windows, lamps, windshield or roof. No legible ticket or warning stickers.\nComposition and geography: landscape view from beside the landward side of the tram track, camera height1.7metres, looking obliquely at the moving tram from its FRONT LEFT; show the front cabin and left side with all three articulated portions readable. Vehicle itself is sharply focused, with subtle natural motion softness around wheel rims and distant ground. On the OPPOSITE side of the tram from the photographer are the seaside pedestrian/cycle path, a pale stony/sandy natural shoreline and the calm blue-green Saronic Gulf. The track has compacted gravel or sparse grass between/along rails; normal overhead-wire support poles recede with correct perspective. A few irregular coastal tamarisk trees and simple palms are spaced asymmetrically beyond the track, with thin real fronds and uneven leaves. Two tiny distant back-facing walkers/cyclists on the coast path, their faces unresolved. At most one or two very small plain white residential properties far away and tiny unmarked sailboats near the distant sea horizon; open seascape dominates behind the vehicle.\nLighting: natural bright sunny afternoon, soft realistic Mediterranean colors, blue sky, subtle water reflections, moderate optical depth; avoid showroom or product-render appearance. Authentic ordinary transport photograph, slightly imperfect pavement/metal/water and individual foliage, not pristine toy textures.\nAbsolute exclusions: NO Greek monument or recognizable public building even in background; no Acropolis, temple, stadium, church, hotel, marina, harbour building, famous contemporary architecture, Piraeus dockyard or large Faliro structure. No prominent mountainous backdrop and no summit antennas or buildings. NO tram stop or shelter, stop-name board, station sign, street sign, traffic sign, route number, logo, text, flags, advertising, car badge or license plate. Keep other vehicles out or so distant and unmarked that no identifiable brand or plates are visible. No people near the camera or tram windows with recognizable faces. Do not turn the shoreline into a marina. All visible surfaces remain entirely free of letters, numbers and logos.\n",
+      "sourceCommit": "f71ff6871eb83ee7d461079680a64facf5fa70cc",
+      "sourceBlob": "3424c5088a5f1a210d7d2a5331ed8ae5eb696921",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "id": "athens-8-kulkuneuvo-intro-v1",
+      "refs": [
+        {
+          "id": "stasy-tram-coastal-stops",
+          "url": "https://www.stasy.gr/en/timetables/tram/",
+          "publisher": "STASY official urban rail operator",
+          "checkedAt": "2026-10-13T13:48:17.824619+00:00",
+          "factsUsed": [
+            "Tram station sequence includes Paralia Glyfadas, Paleo Dimarhio, Platia Katraki, Angelou Metaxa, Platia Esperidon, Kolymvitirio and Asklipiio Voulas.",
+            "Confirms tram service in the requested Glyfada–Voula coastal corridor."
+          ],
+          "scopeLimit": "Generic unbranded2–3-section tram in the source brief is an illustrative vehicle, not claimed to be a named exact STASY fleet model."
+        }
+      ],
+      "sources": [],
+      "sourceIDs": [
+        "stasy-tram-coastal-stops"
+      ],
+      "sourcesFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/athens/sources-athens.json",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/athens/qa-8.json",
+      "producerQAAccepted": true,
+      "QA": {
+        "slot": 8,
+        "taskNumber": 113,
+        "verdict": "accepted",
+        "reason": "Kolmiosainen vaalea merkitsemätön raitiovaunu, kaksi niveltä, tyhjät otsanäytöt, uskottava virroitin ja raiteet. Meri vastakkaisella puolella, palmut/tamariskit ja pienet selin kulkijat. Ei havaittua Kreikan muistomerkkiä tai tunnistettavaa julkista rakennusta, marinaa, kylttejä, numeroita tai logoja.",
+        "nativeSHA256": "e58f41f55fb5ff8ca607b516e5dd70a5b102b05f7c51de07129496964a71dc8a",
+        "finalSHA256": "5648546148f00ce62862df347ab2699bd66627ba14388e142e624ce0f3416ed0",
+        "rootWholeNativeVisualInspection": true,
+        "rootWholeFinalVisualInspection": true,
+        "nativeAndFinalPixelIdentityVerified": true,
+        "exactExportFormatVerified": true,
+        "currentDayColorVerified": true,
+        "sourceOwnerAcceptanceRequiredBeforeRuntime": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false,
+        "producerQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/athens/qa-8.json",
+        "sourceBlob": "3424c5088a5f1a210d7d2a5331ed8ae5eb696921"
+      },
+      "originalReturnedPath": "/Users/samireivinen/.codex/generated_images/01a1356c-8a9f-7d51-ba2f-f5b912565cb6/exec-36c54f01-48bb-4f60-a246-220182ed242f.png",
+      "generationMode": "builtin image_gen__imagegen",
+      "generationCalls": 1,
+      "actualGenerationCalls": 1,
+      "independentRootQAPending": true,
+      "R2Uploaded": false,
+      "mailboxDelivered": false,
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/athens/athens-8-kulkuneuvo-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261013-uudet-6-8/athens-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261013-uudet-6-8/athens-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/athens/20261013-uudet-6-8/athens-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/athens/20261013-uudet-6-8/athens-8-kulkuneuvo-intro-v1.png",
+        "sha256": "5648546148f00ce62862df347ab2699bd66627ba14388e142e624ce0f3416ed0",
+        "nativeSHA256": "e58f41f55fb5ff8ca607b516e5dd70a5b102b05f7c51de07129496964a71dc8a",
+        "bytes": 2533059,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "5648546148f00ce62862df347ab2699bd66627ba14388e142e624ce0f3416ed0",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "5648546148f00ce62862df347ab2699bd66627ba14388e142e624ce0f3416ed0",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T13:56:44.028872+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "slot": 6,
+      "taskNumber": 112,
+      "id": "athens-6-nakoala-intro-v1",
+      "reason": "Hylätty tuotanto-QA:ssa: kattomerestä kohoaa kaksi selvästi korkeampaa, suorakulmaista tornimaista rakennusta vasemmalla keskialueella (noin native x550–615,y285–330). Ohje kieltää korkeat toimistotornit sekä tunnistettavat yksittäiset rakennukset. Rakennusten henkilöllisyyttä ei väitetä varmistetuksi; niiden tornimainen muoto estää varman ohjeenmukaisen hyväksynnän. Yksi sallittu generointi käytetty, ei uusintaa.",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/athens/qa-6.json",
+      "candidateAssetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-pilotti-20261013/athens/asset-6.json",
+      "nativeSHA256": "c033e531af6a88341e49ba65d2a8379a2ce63d05c08c09d02bc3dd4476ec1b0d",
+      "finalSHA256": "743aa695b967dc3553555427063bc655c17118220b02379006039b8cca61468c",
+      "actualGenerationCalls": 1,
+      "allowedSourceOmission": true,
+      "retryAuthorized": false
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedSlotsHandled": true,
+  "allRequestedSlotsDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationAllowedWithoutOwnerAcceptance": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": false,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uudet-6-8-pilotti-20261013.md",
+  "sourceCommit": "f71ff6871eb83ee7d461079680a64facf5fa70cc",
+  "sourceBlob": "3424c5088a5f1a210d7d2a5331ed8ae5eb696921",
+  "oldRejectedTopicsRemainWithdrawn": true,
+  "pilotOnly": true,
+  "remaining88ImagesNotAuthorized": true,
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
