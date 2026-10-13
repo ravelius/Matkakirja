@@ -10,7 +10,7 @@ Edellinen luovutus: viesti-linssiseppa-luovutus-20261013-aamu.md.
 
 ## 1. KÄYNNISSÄ (Julkaisijan jono linjalla 1/2, automaattinen)
 1) **alkulento187b** AJETTU 11.54 OK (todistus-alkulento187b-ipad-20261013-1152; matala ohitus, kone näkyy, loiva kaarros) → PT KUITTASI 9de62c31e (SHA NS:lle).
-2) **katso187** = linssiseppa/katso-kohteet-187 25e2bdf72 + pelikoodari/aarre-eurooppa-187 107cce88c (käännös 3504c7548 valmis), iPad, sk-katso187-ipad.txt.
+2) **katso187** AJETTU 12.03: 6/6 löytyi (todistus-katso187-ipad-20261013-1154; TODISTUS.md puuttuu raporttityökalun Unicode-virheen takia) → tulos PK:lle (Lontoon aloituspaikalta Shard peittää Tower Bridgen → PK:n moottorin asia).
 3) **kehys187b** = linssiseppa/museo-palaute-187 **ca49d720d** (käännös KÄÄNNÖS NYT linja 2), iPhone + iPad kehysvertailu (sk-kehys187-*.txt)
    + iPad museon nimi (sk-nimi187-ipad.txt). Lokit `lokit/todistus-<era>-<laite>-*`. Ilmoita SIMU VAPAA kun kaikki ajettu.
 
@@ -45,7 +45,7 @@ Skenaariopohja: sk-kaupungit187e-ipad.txt.
 
 ## 5. KATSO JA LÖYDÄ (Pelikoodari) – linssiseppa/katso-kohteet-187 25e2bdf72 (wt proto-linssiseppa-katso187)
 34 uutta kohdetta (33 + kreeta) TehtavaKohteet.Kaikki; koordinaattikorjaukset PK vei eurooppa.json:iin (107cce88c). Simu katso187
-(6 kaupunkia: osoita → napauta kohde → "katso: löytyi"). → Kuvat ja tulos Pelikoodarille + SHA; PK kokoaa PT:n kuvat.
+(6 kaupunkia) 6/6 löytyi, lähetetty PK:lle 12.0x; PK kokoaa PT:n kuvat.
 
 ## 6. MUUTA
 - Appikopiot lokit/linssiseppa-app/ siivottu (PT levy): pidä 3 uusinta + käytössä olevat.
