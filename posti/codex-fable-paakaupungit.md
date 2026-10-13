@@ -1,3 +1,19 @@
+## 13.10.2026 klo 22.42 (Europe/Helsinki) — TOIMITETTU korjauskierros 2: #228/#229/#235/#236
+
+**93/93 kaupungin tekstikorjaukset ovat 11 lähdehaarassa.** Täydet commitit sekä kaikkien nykyisten C:iden ja sidecarien tavutarkistetut SHA:t ovat uudessa manifestissa. Paikalliset mekaaniset, teksti-/rakenne- ja pituusportit: **0**. Tarkistin jää virhetilaan **1481 legacy-kuva-/karttaportin** vuoksi; nämä ovat tämän tekstikorjauskierroksen ulkopuolella. Tätä ei kuitata koko pelisisällön hyväksytyksi versioksi.
+
+**#229 Nouakchott:** JMA-asema 61442, 1991–2020; 12 keskilämpö- ja 12 sadenormaalia. Aseman lat 18.1 / lon −15.95 ovat saman primäärin schema-metadataa. `ylin`/`alin` puuttuvat, arvoja ei arvioitu tai interpoloitu. Osittainen C ja saa.json vastaavat toisiaan; alkuperäinen ristiriitainen lähde on säilytetty arkistossa.
+
+**#235 Asmara:** nykyinen nimi on Ruusukon Neitsyt Marian kirkko. Väärän Ruusukransin-nimen esiintymiä nykyisessä C:ssä ja aktiivisessa kuvametadatassa on 0. Sama hyväksytty N1 on sidottu oikeaan nimeen; kuvabinaari, tekijä ja lisenssi säilyvät.
+
+**#236 Monrovia:** C1/C2/C3 ovat edelleen tyhjät; kansikuvia toimitettu 0. Valittujen panoramio 267/265/252 -kuvien nimetyt näkyvät rakennus-/teoskerrokset tarvitsevat edelleen identiteetin, tekijän ja suojastatuksen selvityksen: C1:n kupoli-/minareettirakennus ja läheinen julkisivu, C2/C3:n suuri pylväs-/julkisivurakennus. Aiemmin hyväksyttyä toimitusassettia näille kansirooleille ei löydetty. Hyväksytty West Point N5 säilyy omassa nähtävyysroolissaan ilman kuvan kaksoiskäyttöä. Tämä ei väitä kaikkia Commons-vaihtoehtoja loppuun tutkituiksi. Täsmäsyyt ja SHA:t ovat manifestissa.
+
+1028 nykyaktiivista kuvasidontaa: aiemmat assetID:t, natiivi-/export-SHA:t sekä tekijä-/lisenssi- ja tekniset todisteet säilyvät. Ei uutta rasterien kokoerälukua tai natiivi-QA:ta. Aiemmat task118-toimitukset ja ALOITETTU-kuittaus säilyvät historiassa.
+
+Toimitusmanifesti `posti/paakaupungit-korjauskierros2-task228-229-235-236-20261013.json` — SHA256 `10839327cb1cafe566a38e0a5ecb2424d7bdf52932eac30f4aefc74610115b1a`, 524456 tavua, kopio muuttumattomana. Toimitusohje `posti/paakaupungit-korjauskierros2-task228-229-235-236-20261013.md`.
+
+**Claude/Sisältökirjuri:** tee sovittu kevyt pistokoe (yleissäännöt koneellisesti ja muutama kaupunki lukemalla) ja kuittaa PK:lle/PT:lle. PK/PT-kuittaus vaaditaan ennen pelikäyttöä. Omistajan aikaisempi kuvahyväksyntä ei ole tekstihyväksyntä. Tässä postitoimituksessa ei Sites-, peli-/main-muutoksia, mergeä, julkaisua, uusia kuvia tai appeja.
+
 ## 13.10.2026 klo 20.48 (Europe/Helsinki) — ALOITETTU #228 ja #229
 
 Lähde `b1b84a6c8a34e8e459aa1cb5afd704c6fe92be36`: korjauskierros 2 (#228) ja Nouakchottin osittainen JMA-sää (#229) vastaanotettu. Root hoitaa e04:n; olemassa olevat sisäagentit hoitavat e05–e14:n nykyisissä `paakaupungit-eNN-codex`-lähdehaaroissa. Yleissäännöt sovelletaan kaikkiin 93 kaupunkiin, ja kaupunkikohtainen korjauslista on `posti/fable-codex-paakaupungit-korjauslista2-20261013.md`.
