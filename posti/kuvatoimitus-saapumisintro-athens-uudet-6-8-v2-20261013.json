@@ -1,0 +1,62 @@
+{
+  "cityName": "Ateena",
+  "gameCityId": "ateena",
+  "mediaSlug": "athens",
+  "taskNumbers": [
+    116
+  ],
+  "updatedAt": "2026-10-13T14:27:33.447365+00:00",
+  "requestedNewSlots": [
+    6
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [],
+  "omittedItems": [
+    {
+      "slot": 6,
+      "taskNumber": 116,
+      "reason": "Aiempi tornipari poistui, mutta oikean kaupunkitaustan rakennuksissa näkyy suuria vaaleita kaarimaisia kattokohoumia ja oikean vuoren huipussa pieni suora pystypiikki. Uusintaohje vaatii vain tasaisen matalan tasakattokaupungin ja kieltää kupolit, stadionimuodot sekä antennit/huippumastot. Rakennusten tai piikin tarkkaa henkilöllisyyttä ei väitetä varmistetuksi. Näkyvät muodot eivät läpäise rajattua korjausohjetta; lähteen sallima lopullinen poisjättö, ei uutta yritystä.",
+      "stage": "independent-QA-rejection",
+      "sourceAllowsOmission": true,
+      "additionalGenerationAllowed": false,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/athens/native-6.png",
+      "nativeSHA256": "a44f3fe8cf6dffad4eb9716a559baee48d013acb0cac019eaa653a83c2448c87",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-uusinta-20261013/athens/athens-6-nakoala-intro-v2.png",
+      "finalSHA256": "0d176ce1f799eb430c913d55823e2f8947c2d60b087269edce86df6c05e8e566"
+    }
+  ],
+  "actualCalls": 1,
+  "maximumGenerationCalls": 1,
+  "allRequestedSlotsHandled": true,
+  "allRequestedSlotsDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationAllowedWithoutOwnerAcceptance": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": false,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-uudet-6-8-uusinta-20261013.md",
+  "sourceCommit": "960f74c86bc6391e5ea5283eb848b0a54b5480d6",
+  "sourceBlob": "dd4b5e6f63e3e3cca64137471d14fe4d34a7d983",
+  "oldRejectedTopicsRemainWithdrawn": true,
+  "pilotOnly": true,
+  "remaining88ImagesNotAuthorized": true,
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
