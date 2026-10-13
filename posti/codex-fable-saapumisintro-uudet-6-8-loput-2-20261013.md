@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-27 QA/R2-varmennettua kuvaa toimitettu, 9 perusteltua lopullista poisjättöä. Käsitelty 36/47 tämän osan nimetyistä kuvista; 35 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+28 QA/R2-varmennettua kuvaa toimitettu, 10 perusteltua lopullista poisjättöä. Käsitelty 38/47 tämän osan nimetyistä kuvista; 36 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -129,6 +129,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-vienna-uudet-6-8-20261013.json`. To
 
 - #215, slot 6: Wien Kahlenbergin näköalaterassilta kaakkoon päivällä: Tonava, Tonavatorni ja Tuomiokirkon torni kaukana. Havainnekuva.
 - #216, slot 8: Wienin raitiovaunu Ringstrassella Valtionoopperan kohdalla päivällä. Havainnekuva.
+
+## BRYSSEL
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-brussels-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 1.
+
+- #217, slot 6: Bryssel Place Poelaertin näköalatasanteelta pohjoiseen päivällä: Marollesin katot, kaupungintalon torni ja Koekelbergin basilika kaukana. Havainnekuva.
+- Poisjättö #218, slot 8: Ohje edellyttää noin14m yksiosaista1950–60-luvun PCC-vaunua edelleen tavallisessa linjaliikenteessä. STIBin21.9.2026 tiedote vahvistaa PCC:n käytön linjoilla39/44 mutta ei tätä yksiosaista tyyppiä; arkistolähteet taas kuvaavat vanhojen7000-vaunujen poistamista. Pyydetyn vaunutyypin nykykäyttöä ei saatu luotettavasti varmistettua. Sitä ei vaihdeta hiljaisesti nivelvaunuksi eikä museovaunua esitetä nykyliikenteenä: lähteen sallima0-kutsun poisjättö.
 
 Kuvat toimitetaan suoraan lähteen mukaisesti Päätoimittajan arvioitaviksi omistajan valtuutuksella. Todellista PT/omistajahyväksyntää, Fable-vastaanottokuittausta, runtime-kytkentää tai pelijulkaisua ei väitetä varmennetuiksi. Jokaisen toimitetun kuvan natiivi on rootin tarkastama, ja R2 on luettu takaisin kahdesti (kanoninen ja välimuistin ohittava URL), tavut, PNG-MIME ja CORS varmennettu. PNG 1536×1024, sRGB, läpinäkymätön; vain ICC/metadata lisätty, pikselit säilytetty. Promptit, viitteet sekä natiivi- ja vienti-SHA ovat manifesteissa.
 
