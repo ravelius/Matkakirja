@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-12 QA/R2-varmennettua kuvaa toimitettu, 16 perusteltua lopullista poisjättöä. Käsitelty 28/48 tämän osan nimetyistä kuvista; 27 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+13 QA/R2-varmennettua kuvaa toimitettu, 17 perusteltua lopullista poisjättöä. Käsitelty 30/48 tämän osan nimetyistä kuvista; 29 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -59,6 +59,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-copenhagen-uudet-6-8-20261013.json`
 
 - Poisjättö #147, slot 6: Lähde pyytää nykyajan näköalaan ehjää Børsenin lohikäärmetornia ilman työmaata. VisitDenmarkin ja Børsenin omistajan nykyinen aineisto kuvaa vuoden2024 tulipalon jälkeistä jälleenrakennusta. Tällaista nykytilan kuvaa ei voi luotettavasti toteuttaa tämän briefin mukaan; lähteen sallima0-kutsun poisjättö.
 - Poisjättö #148, slot 8: Pieni satamabussi ja oikealle kulku ovat muuten selkeät, mutta vene täyttää noin51%leveydestä pyydetyn noin kolmanneksen sijasta. Myös taustan kirkontorni korostuu. Sommittelu poikkeaa olennaisesti ohjeesta; lopullinen lähteen sallima poisjättö.
+
+## LONTOO
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-london-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #149, slot 6: Sky Gardenin ulkoterassi: Thames, Tower Bridge ja Tower of London päivällä kaakkoon. Havainnekuva.
+- Poisjättö #150, slot 8: Parlamentin katolla näkyy pieni lipputangossa oleva kangaslippu lähteen nimenomaisen kaikkien lippujen kiellon vastaisesti. Tätä ei retusoida; lähteen sallima lopullinen poisjättö.
 
 ## BERLIINI
 

@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "cityName": "LONTOO",
+  "gameCityId": "lontoo",
+  "mediaSlug": "london",
+  "taskNumbers": [
+    149,
+    150
+  ],
+  "updatedAt": "2026-10-13T18:28:26.931806+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 149,
+      "mediaSlug": "london",
+      "slot": 6,
+      "filename": "london-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Sky Gardenin ulkoterassi: Thames, Tower Bridge ja Tower of London päivällä kaakkoon.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Sky Gardenin ulkoterassi: Thames, Tower Bridge ja Tower of London päivällä kaakkoon.** Tiedosto `london-6-nakoala-intro-v1.png`.\nMitä kuvataan: Lontoon itäinen keskusta päivällä Sky Gardenin ulkoterassin tasolta, 20 Fenchurch Streetin pilvenpiirtäjän ylimmistä kerroksista (nykyaikainen värikuva), korkealta ja kaukaa katsottuna. Kuvan keskioikealla Tower Bridge: kaksi neogoottista tornia ja niiden välinen yläsilta sekä sinivalkoiset riippuketjut, silta nähtynä viistosti luoteesta ja pienenä osana laajaa kokonaisuutta. Sen vasemmalla puolella lähempänä katsojaa Tower of Londonin vaalea White Tower pienenä matalien muurien ja nurmialueen keskellä. Thames-joen ruskeanharmaa vesi tulee kuvan oikealta etualalta, kulkee Tower Bridgen alta ja jatkaa vasemmalle kohti itää; joella muutama pieni vene kaukana. Alhaalla Cityn tiheät katot: vanhoja tiilitaloja sekä matalia ja keskikorkeita lasi- ja betonirakennuksia vaaleissa ja harmaissa sävyissä. Maamerkit ovat pieniä osia laajaa kokonaisuutta; pääaihe on joen ja kaupungin panoraama. Ihmisiä ei näy tai vain pieniä pisteitä kaukana. Kulma: vaakakuva, katse kaakkoon (kompassisuunta noin 133 astetta), vaakasuuntainen kuvakulma noin 40 astetta (suunnat noin 113–153 astetta): Tower of London vasemmassa kolmanneksessa (noin 125 astetta) ja Tower Bridge keskeltä oikealle (noin 139 astetta); kamera ulkoterassin korkeudella hieman alaspäin, kuvassa ei näy terassin lasiseinää, kaidetta, heijastuksia eikä puutarhan kasveja. The Shard (noin 195 astetta) ja Canary Wharf (noin 99 astetta) jäävät kuvan ulkopuolelle. Valo: kirkas mutta pehmeä päivävalo oikealta (aurinko etelässä), hieman utua kaukana, vaimeat luonnolliset värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, logoja, mainoksia, kasvoja, ihmisiä lähellä, The Shardia, Gherkin-tornia, Canary Wharfin pilvenpiirtäjiä, London Eyetä, HMS Belfast -alusta, patsaita ja veistoksia, lippuja, nostureita, valaistuksia, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Sky Gardenin ulkoterassi: Thames, Tower Bridge ja Tower of London päivällä kaakkoon. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "LONTOO",
+      "gameID": "lontoo",
+      "part": 1,
+      "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceCharacterSpan": [
+        34297,
+        36497
+      ],
+      "sourceByteSpan": [
+        35529,
+        37805
+      ],
+      "fullDeliveryRequirementSHA256": "83c46290e9ecf843e2f8e8e6dc48ca7bb736a71a8ca0dd14508f5413661fdf99",
+      "fullDirective": "Lontoon itäinen keskusta päivällä Sky Gardenin ulkoterassin tasolta, 20 Fenchurch Streetin pilvenpiirtäjän ylimmistä kerroksista (nykyaikainen värikuva), korkealta ja kaukaa katsottuna. Kuvan keskioikealla Tower Bridge: kaksi neogoottista tornia ja niiden välinen yläsilta sekä sinivalkoiset riippuketjut, silta nähtynä viistosti luoteesta ja pienenä osana laajaa kokonaisuutta. Sen vasemmalla puolella lähempänä katsojaa Tower of Londonin vaalea White Tower pienenä matalien muurien ja nurmialueen keskellä. Thames-joen ruskeanharmaa vesi tulee kuvan oikealta etualalta, kulkee Tower Bridgen alta ja jatkaa vasemmalle kohti itää; joella muutama pieni vene kaukana. Alhaalla Cityn tiheät katot: vanhoja tiilitaloja sekä matalia ja keskikorkeita lasi- ja betonirakennuksia vaaleissa ja harmaissa sävyissä. Maamerkit ovat pieniä osia laajaa kokonaisuutta; pääaihe on joen ja kaupungin panoraama. Ihmisiä ei näy tai vain pieniä pisteitä kaukana. Kulma: vaakakuva, katse kaakkoon (kompassisuunta noin 133 astetta), vaakasuuntainen kuvakulma noin 40 astetta (suunnat noin 113–153 astetta): Tower of London vasemmassa kolmanneksessa (noin 125 astetta) ja Tower Bridge keskeltä oikealle (noin 139 astetta); kamera ulkoterassin korkeudella hieman alaspäin, kuvassa ei näy terassin lasiseinää, kaidetta, heijastuksia eikä puutarhan kasveja. The Shard (noin 195 astetta) ja Canary Wharf (noin 99 astetta) jäävät kuvan ulkopuolelle. Valo: kirkas mutta pehmeä päivävalo oikealta (aurinko etelässä), hieman utua kaukana, vaimeat luonnolliset värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, logoja, mainoksia, kasvoja, ihmisiä lähellä, The Shardia, Gherkin-tornia, Canary Wharfin pilvenpiirtäjiä, London Eyetä, HMS Belfast -alusta, patsaita ja veistoksia, lippuja, nostureita, valaistuksia, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Sky Gardenin ulkoterassi: Thames, Tower Bridge ja Tower of London päivällä kaakkoon. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/london/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-london-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/london/20261013-uudet-6-8/london-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "london-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "LONTOO",
+      "gameCityId": "lontoo",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/london/native-6.png",
+      "nativeSHA256": "07c50434078f8e04c04ccbac8ed659ec957d2c65aae9a929883f5878876775ac",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/london/london-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/london/london-6-nakoala-intro-v1.png",
+      "sha256": "774331a24fcc57804aa1f16636232d6eb974fde162c1dcba1901af850ba5b6be",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: a travel game city-arrival illustrative image.\nGenerate one complete, brand-new, current-day COLOR photograph-like image. Exact PNG output 1536 x 1024 pixels, landscape 3:2, opaque sRGB. No image editing or reuse of another conversation image. Follow the authorized Finnish scene specification below literally: city, viewpoint, compass direction, field of view, relative landmark positions, season, time of day, movement direction, subject size, materials and exclusions are all important. Caption and filename are metadata only and must never appear in the pixels.\nReal-camera documentary appearance, natural subdued color and exposure, irregular genuine-looking stone, foliage, water and surfaces; coherent architecture, geography and perspective. No HDR, oversaturation, cinematic grading, CGI gloss, artificial repeating texture, collaged or pasted-on objects. Preserve each city's specified setting and weather; do not make the series mechanically identical.\nNo readable text, numbers, logos, signage, brand liveries, advertisements, flags, watermarks or decorative frame anywhere. Any transport is wholly unbranded, with exactly the source-prescribed neutral colors and blank/switch-off route displays. People are tiny and distant, turned away or silhouettes, never identifiable faces. Only show a landmark if this exact scene specification explicitly permits it, at the small source-prescribed scale; do not add other city landmarks. This is neither a historical 1873 view nor a youth-celebration scene. No Google 3D or Street View inputs.\n\nNUMBERS: any background clock or decorative circle must be distant enough that no numeral, letter or inscription is readable. Do not insert a clearly numbered clock face.\n\nAUTHORIZED SCENE SPECIFICATION:\nMitä kuvataan: Lontoon itäinen keskusta päivällä Sky Gardenin ulkoterassin tasolta, 20 Fenchurch Streetin pilvenpiirtäjän ylimmistä kerroksista (nykyaikainen värikuva), korkealta ja kaukaa katsottuna. Kuvan keskioikealla Tower Bridge: kaksi neogoottista tornia ja niiden välinen yläsilta sekä sinivalkoiset riippuketjut, silta nähtynä viistosti luoteesta ja pienenä osana laajaa kokonaisuutta. Sen vasemmalla puolella lähempänä katsojaa Tower of Londonin vaalea White Tower pienenä matalien muurien ja nurmialueen keskellä. Thames-joen ruskeanharmaa vesi tulee kuvan oikealta etualalta, kulkee Tower Bridgen alta ja jatkaa vasemmalle kohti itää; joella muutama pieni vene kaukana. Alhaalla Cityn tiheät katot: vanhoja tiilitaloja sekä matalia ja keskikorkeita lasi- ja betonirakennuksia vaaleissa ja harmaissa sävyissä. Maamerkit ovat pieniä osia laajaa kokonaisuutta; pääaihe on joen ja kaupungin panoraama. Ihmisiä ei näy tai vain pieniä pisteitä kaukana. Kulma: vaakakuva, katse kaakkoon (kompassisuunta noin 133 astetta), vaakasuuntainen kuvakulma noin 40 astetta (suunnat noin 113–153 astetta): Tower of London vasemmassa kolmanneksessa (noin 125 astetta) ja Tower Bridge keskeltä oikealle (noin 139 astetta); kamera ulkoterassin korkeudella hieman alaspäin, kuvassa ei näy terassin lasiseinää, kaidetta, heijastuksia eikä puutarhan kasveja. The Shard (noin 195 astetta) ja Canary Wharf (noin 99 astetta) jäävät kuvan ulkopuolelle. Valo: kirkas mutta pehmeä päivävalo oikealta (aurinko etelässä), hieman utua kaukana, vaimeat luonnolliset värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, logoja, mainoksia, kasvoja, ihmisiä lähellä, The Shardia, Gherkin-tornia, Canary Wharfin pilvenpiirtäjiä, London Eyetä, HMS Belfast -alusta, patsaita ja veistoksia, lippuja, nostureita, valaistuksia, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "role": "exact authorized source instruction and viewpoint",
+          "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "sourceTaskNumber": 149,
+          "sourceTaskCardSHA256": "83c46290e9ecf843e2f8e8e6dc48ca7bb736a71a8ca0dd14508f5413661fdf99",
+          "sourceCharacterSpan": [
+            34297,
+            36497
+          ],
+          "sourceByteSpan": [
+            35529,
+            37805
+          ],
+          "assignedCardReadInFullByWorker": true,
+          "fullOrdersReadInFullByTeamVerified": true,
+          "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+          "sourceReadActualReader": "/root/intro_owner_rejection_inventory",
+          "imageInput": false
+        },
+        {
+          "role": "own knowledge and fully provided source geometry; not a pixel-photo reference",
+          "visualImageInputsUsed": false,
+          "google3DUsed": false,
+          "streetViewUsed": false,
+          "museumCopyrightImageInputsUsed": false,
+          "commonsCCBYSAUsed": false,
+          "additionalExternalFactsAsserted": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/london/qa-6.json",
+      "producerQAVerdict": "accepted",
+      "producerQAPassed": true,
+      "independentRootQARequired": true,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261013-uudet-6-8/london-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261013-uudet-6-8/london-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 149,
+        "assetID": "london-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/london/asset-6.json",
+        "nativeSHA256": "07c50434078f8e04c04ccbac8ed659ec957d2c65aae9a929883f5878876775ac",
+        "finalSHA256": "774331a24fcc57804aa1f16636232d6eb974fde162c1dcba1901af850ba5b6be",
+        "verdict": "accepted",
+        "reason": "Tower of London vasemmalla, Tower Bridge keskioikealla sekä Thames ja laaja kaupunki näkyvät kameramaisina. Ei tunnistettavaa Shardia, Belfast-alusta, Gherkiniä tai Canary Wharfin korkeaa ryhmää.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:28:14.056083+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/london/20261013-uudet-6-8/london-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/london/20261013-uudet-6-8/london-6-nakoala-intro-v1.png",
+        "sha256": "774331a24fcc57804aa1f16636232d6eb974fde162c1dcba1901af850ba5b6be",
+        "nativeSHA256": "07c50434078f8e04c04ccbac8ed659ec957d2c65aae9a929883f5878876775ac",
+        "bytes": 2789377,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "774331a24fcc57804aa1f16636232d6eb974fde162c1dcba1901af850ba5b6be",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "774331a24fcc57804aa1f16636232d6eb974fde162c1dcba1901af850ba5b6be",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T18:28:26.852474+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "taskNumber": 150,
+      "slot": 8,
+      "reason": "Parlamentin katolla näkyy pieni lipputangossa oleva kangaslippu lähteen nimenomaisen kaikkien lippujen kiellon vastaisesti. Tätä ei retusoida; lähteen sallima lopullinen poisjättö.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "6068cfaa646724a8a73faeb93d36824794ccd88c6b9af8604aab2c7437f4f11f",
+      "finalSHA256": "ed18efe8a6ac6722304d4e4248af11466d3b85b17cd1468ee6f4e57355f7eee8"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
