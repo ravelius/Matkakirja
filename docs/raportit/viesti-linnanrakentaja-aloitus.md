@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 13.10.2026 19.4x)
+# Linnanrakentajan aloitusviesti (päivitetty 13.10.2026 21.3x, tilinvaihto)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,7 +8,8 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (13.10. 19.4x, nollaus):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261013-ilta.md` KOKONAAN. OLAVINLINNA TAUOLLA, PEKING CODEXILLA. Seuraava erä: Rodinin veistosmallit (kohta 2; tarkista ensin päällekkäisyys LS1/LS2).
+1. **NYT (13.10. 21.3x, tilinvaihto):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261013-myohaisilta.md` KOKONAAN. Ranskan museo v2d toimitettu (puutarha, Mona Lisa, Kolme haamua syvennyksessä); odota LS1/LS2:n huomioita tai PT:n erää. OLAVINLINNA TAUOLLA, PEKING CODEXILLA.
+1z. **(vanha) 13.10. 19.4x, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261013-ilta.md` KOKONAAN. OLAVINLINNA TAUOLLA, PEKING CODEXILLA. Seuraava erä: Rodinin veistosmallit (kohta 2; tarkista ensin päällekkäisyys LS1/LS2).
 1a. **(vanha) 13.10. 11.4x, OLAVINLINNA TAUOLLA:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261013-paiva.md` KOKONAAN. Älä aloita uusia tiloja; odota PÄÄTOIMITTAJAN uutta erää. Viiden tilan vientipaketti: luovutuksen kohta 4.3; leivontaliput kohta 6 (AINA --kuori).
 1v. **(vanha)NYT (12.10. 23.0x):** lue luovutuksen loppu "JATKO 21.5x–23.0x" ensin (v48t viety, v48u viennissä, v48v asut agentilla, #4417 kohdat 4–10). **(19.3x, tilinvaihto):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261012-ilta.md` KOKONAAN: pysyvät säännöt
    (Asemataulu VAATII TOIMIA, kuvat omistajalle täysikokoisina pelikuvina, agenttien komentosäännöt), Olavinlinna v48m–s tunnuksineen
