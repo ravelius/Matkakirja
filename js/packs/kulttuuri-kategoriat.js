@@ -67587,6 +67587,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 4 (13.10.2026, Codex viimeiset 5 kaupunkia, uusinta v2,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/brussels/20261013-full-v2/brussels-4-arki-intro-v2.png',
+          lyhyt: 'Marollen Place du Jeu de Balle on ollut Brysselin kirpputorin paikka vuodesta 1873.',
+          selite: 'Kaupunki siirsi vanhan tavaran torin Place Anneessensilta Place du Jeu de Balle '
+            + '-aukiolle 1873. Kirpputori toimii aukiolla edelleen.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 5 (13.10.2026, Codex viimeiset 5 kaupunkia,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -69037,6 +69049,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Sajó-jokeen.',
           lahde: 'Matkakirjan havainnekuva',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia, uusinta v2,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/kosice/20261013-full-v2/kosice-7-ilta-intro-v2.png',
+          lyhyt: 'Urbanin torni on Hlavná-kadun varrella tuomiokirkon vieressä seisova vanha '
+            + 'kellotorni.',
+          selite: 'Urbanin tornin Urban-kello valettiin 1557. Kello rikkoutui tornin palossa 1966, ja '
+            + 'siitä on tehty kopio.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
       ],
       ennenNyt: [
         {
@@ -70109,6 +70134,20 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Puutarha perustettiin 1661 Italian kielikunnan ritarien yksityiseksi puutarhaksi. '
             + 'Kolme kaupunkia ovat Grand Harbourin vastarannalla sijaitsevat Birgu, Senglea ja '
             + 'Cospicua.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia, uusinta v2,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/valletta/20261013-full-v2/valletta-7-ilta-intro-v2.png',
+          lyhyt: 'Valletta perustettiin 1566 Suuren piirityksen jälkeen ja nimettiin suurmestari Jean '
+            + 'de Valetten mukaan.',
+          selite: 'Ritarikunta asettui Birguun 1530, ja Valletta rakennettiin Grand Harbourin '
+            + 'vastarannalle Birgua vastapäätä. Unesco merkitsi Vallettan maailmanperintökohteeksi '
+            + '1980.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
