@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e09",
   "city": "asgabat",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
   "assets": [
     {
@@ -121,7 +121,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-        "fileSHA256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e",
+        "fileSHA256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -165,11 +165,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-            "sha256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d"
+            "sha256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-            "sha256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e"
+            "sha256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e"
           }
         ]
       },
@@ -254,7 +254,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "58b38af27d495b426e7e994b8931f60d1ee0e6aad6980c2dc774e0559897f1a2"
+      "contextAfterSHA256": "58b38af27d495b426e7e994b8931f60d1ee0e6aad6980c2dc774e0559897f1a2",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -364,7 +366,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-        "fileSHA256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e",
+        "fileSHA256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -403,11 +405,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-            "sha256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d"
+            "sha256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-            "sha256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e"
+            "sha256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e"
           }
         ]
       },
@@ -492,7 +494,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
       "targetAfterSHA256": "cf921aa35245f83c674797281b9099c430c012815c9f572355eedb17ae4d373c",
-      "contextAfterSHA256": "cf921aa35245f83c674797281b9099c430c012815c9f572355eedb17ae4d373c"
+      "contextAfterSHA256": "cf921aa35245f83c674797281b9099c430c012815c9f572355eedb17ae4d373c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -601,7 +605,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-        "fileSHA256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d",
+        "fileSHA256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -638,11 +642,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-            "sha256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d"
+            "sha256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-            "sha256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e"
+            "sha256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e"
           }
         ]
       },
@@ -727,7 +731,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
       "targetAfterSHA256": "fe54b4f605016ead059cefed7eb46fafd0f32ba7f7ed66da256d735ad366ba2b",
-      "contextAfterSHA256": "fe54b4f605016ead059cefed7eb46fafd0f32ba7f7ed66da256d735ad366ba2b"
+      "contextAfterSHA256": "fe54b4f605016ead059cefed7eb46fafd0f32ba7f7ed66da256d735ad366ba2b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -870,7 +876,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-        "fileSHA256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e",
+        "fileSHA256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -943,11 +949,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-            "sha256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d"
+            "sha256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-            "sha256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e"
+            "sha256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e"
           }
         ]
       },
@@ -1032,7 +1038,264 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
       "targetAfterSHA256": "cad9997e25d6fe46197b637e97331ef05faca741dff83e32ec9f62ef5bd69888",
-      "contextAfterSHA256": "cad9997e25d6fe46197b637e97331ef05faca741dff83e32ec9f62ef5bd69888"
+      "contextAfterSHA256": "cad9997e25d6fe46197b637e97331ef05faca741dff83e32ec9f62ef5bd69888",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e09",
+      "city": "asgabat",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e09-asgabat-traveler-20261013-v1",
+      "galleryImageID": "e09-asgabat-traveler-20261013-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-traveler-20261013-v1-d877556bd151.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Ašgabatin oppaassa mainituista šašlik-lihavartaista.",
+        "lyhyt": "Havainnekuva Ašgabatin oppaassa mainituista šašlik-lihavartaista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-traveler-20261013-v1-d877556bd151.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Ašgabatin oppaassa mainituista šašlik-lihavartaista.",
+        "lyhyt": "Havainnekuva Ašgabatin oppaassa mainituista šašlik-lihavartaista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d877556bd15150242e4acf301b1abcc78d54857289b731cb5c1036af704be993",
+      "exportSHA256": "3c6c475658cc28bead0a3d531611a82629715c9a7dce966a3d02b069a7ded7a1",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-traveler-20261013-v1-d877556bd151.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-traveler-20261013-v1-d877556bd151.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-traveler-20261013-v1-d877556bd151.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+      "sourceContentSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "a69f7f85f93d904f0bd2a0de4b0cd5ad73f574a8310e3ab2e6e23ab62cb295f7",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/assets/e09-asgabat-traveler-20261013-v1/original.png",
+            "nativeSha256Verified": "d877556bd15150242e4acf301b1abcc78d54857289b731cb5c1036af704be993",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeRatio": 0.6666666666666666,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened this native NAS PNG with view_image. Kolme metallivarrasta kulkee epäsäännöllisten kypsien lihapalojen läpi tavallisella vaalealla lautasella. Vartaiden kärjet, reitit ja kosketus annokseen ovat johdonmukaiset; paistopinnat ja pöytä luonnollisia. Tausta on neutraali, ei järvimaisemaa, nimettyä ravintolaa, tekstiä, logoja, kasvoja tai kehystä.",
+            "captionFi": "Havainnekuva Ašgabatin oppaassa mainituista šašlik-lihavartaista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "contentSha256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+            "targetCurrentlyPresent": true,
+            "targetText": "Ašgabatiin saavutaan usein lentäen, ja kaupungissa voi liikkua busseilla tai virallisella taksilla. Mattomuseo ja kansallismuseo tarjoavat kaksi erilaista reittiä seudun kulttuuriin. Nisan rauniot ovat erillinen retkikohde kaupungin länsipuolella. Gülistanin basaarissa myydään arkisia ostoksia hedelmistä vaatteisiin. Maahantuloasiakirjat ja paikalliset kuvaussäännöt on selvitettävä etukäteen.",
+            "relatedGuideFoodText": [
+              "Kaupungin ravintoloissa on tarjolla turkmeeniruokaa, kuten šašlikia eli grillattuja lihavartaita, sekä kansainvälisiä annoksia. Joissakin ruokapaikoissa voi valita pöydän tai perinteistä istumistapaa mukailevan paikan. Gülistanin basaarissa myydään hedelmiä ja vihanneksia muiden arkisten ostosten rinnalla. Ruokapaikka ja tori näyttävät kaupunkia eri tavoilla: toisessa annos valmistetaan, toisessa ostetaan sen aineksia."
+            ],
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/faktapohja.md",
+            "factSheetSha256": "204fc3ace598a224e9d7d7b8054c00cc19815d839edbe81aac739809e71be40b",
+            "topicEvidence": "Nykyisen Ašgabatin oppaan ruokajakso nimeää šašlikin grillatuiksi lihavartaiksi. Wikivoyagen paikallinen Eat-kohta mainitsee shashlikin. Selite kuvaa oppaan ruoka-aihetta ilman ravintola- tai lihalajiväitettä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Ashgabat",
+                "section": "Eat: authentic Turkmen food includes shashlik; actual guide food section defines grilled meat skewers",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/voyage.txt",
+                "sha256": "8e1c9b0471b5dda652aaab7b0c5de62da1171c5a862aa3243228391803a1b53d",
+                "sha256Verified": "8e1c9b0471b5dda652aaab7b0c5de62da1171c5a862aa3243228391803a1b53d"
+              }
+            ],
+            "rightsAssessment": "General source-backed food illustration. Personally checked natural shapes/materials, no identifiable close faces, generated writing/logos/frames, named venue geometry or protected modern artwork. Caption assessed as illustration, not documentary place proof.",
+            "colorProfileNote": "Missing native sRGB metadata alone is not a visual rejection; later pixel-identical export is a separate gate.",
+            "scope": "Only new e09 exact-native illustration QA; no CC/C/Git/R2/Sites changes or integration/publication certification.",
+            "producerCorrection": "Tuottajan pelkkään 1024 pikselin natiivileveyteen perustuva hylkäys käyttää CC-kuvien 1200-porttia virheellisesti. Tämän toimeksiannon gen-natiivin pakollinen pystyportti on toteutunut suhde 0,60–0,85; 1024 × 1536 täyttää sen. Hyväksyttyä täsmäversiota ei tarvitse uusia pelkän leveyden vuoksi. Tuottajan manifestiin en koske; korjatkaa tekninen status tämän exact-SHA-QA:n perusteella ennen toimitusgatea."
+          },
+          "qaReason": "Grillatut lihavartaat vastaavat oppaan šašlik-aihetta. Luonteva annoskuva on rehellisesti merkitty havainnollistukseksi. Natiivi 1024 × 1536, suhde 0,667, täyttää TRAVELER-vaatimuksen; CC-leveyden 1200-portti ei koske tätä generoitua natiivia."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Ašgabatin oppaassa mainituista šašlik-lihavartaista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+        "fileSHA256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e09-asgabat-traveler-20261013-v1",
+          "sha256": "d877556bd15150242e4acf301b1abcc78d54857289b731cb5c1036af704be993",
+          "verdict": "accepted",
+          "reason": "Grillatut lihavartaat vastaavat oppaan šašlik-aihetta. Luonteva annoskuva on rehellisesti merkitty havainnollistukseksi. Natiivi 1024 × 1536, suhde 0,667, täyttää TRAVELER-vaatimuksen; CC-leveyden 1200-portti ei koske tätä generoitua natiivia.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/assets/e09-asgabat-traveler-20261013-v1/original.png",
+            "nativeSha256Verified": "d877556bd15150242e4acf301b1abcc78d54857289b731cb5c1036af704be993",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeRatio": 0.6666666666666666,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened this native NAS PNG with view_image. Kolme metallivarrasta kulkee epäsäännöllisten kypsien lihapalojen läpi tavallisella vaalealla lautasella. Vartaiden kärjet, reitit ja kosketus annokseen ovat johdonmukaiset; paistopinnat ja pöytä luonnollisia. Tausta on neutraali, ei järvimaisemaa, nimettyä ravintolaa, tekstiä, logoja, kasvoja tai kehystä.",
+            "captionFi": "Havainnekuva Ašgabatin oppaassa mainituista šašlik-lihavartaista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
+            "contentSha256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+            "targetCurrentlyPresent": true,
+            "targetText": "Ašgabatiin saavutaan usein lentäen, ja kaupungissa voi liikkua busseilla tai virallisella taksilla. Mattomuseo ja kansallismuseo tarjoavat kaksi erilaista reittiä seudun kulttuuriin. Nisan rauniot ovat erillinen retkikohde kaupungin länsipuolella. Gülistanin basaarissa myydään arkisia ostoksia hedelmistä vaatteisiin. Maahantuloasiakirjat ja paikalliset kuvaussäännöt on selvitettävä etukäteen.",
+            "relatedGuideFoodText": [
+              "Kaupungin ravintoloissa on tarjolla turkmeeniruokaa, kuten šašlikia eli grillattuja lihavartaita, sekä kansainvälisiä annoksia. Joissakin ruokapaikoissa voi valita pöydän tai perinteistä istumistapaa mukailevan paikan. Gülistanin basaarissa myydään hedelmiä ja vihanneksia muiden arkisten ostosten rinnalla. Ruokapaikka ja tori näyttävät kaupunkia eri tavoilla: toisessa annos valmistetaan, toisessa ostetaan sen aineksia."
+            ],
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/faktapohja.md",
+            "factSheetSha256": "204fc3ace598a224e9d7d7b8054c00cc19815d839edbe81aac739809e71be40b",
+            "topicEvidence": "Nykyisen Ašgabatin oppaan ruokajakso nimeää šašlikin grillatuiksi lihavartaiksi. Wikivoyagen paikallinen Eat-kohta mainitsee shashlikin. Selite kuvaa oppaan ruoka-aihetta ilman ravintola- tai lihalajiväitettä.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Ashgabat",
+                "section": "Eat: authentic Turkmen food includes shashlik; actual guide food section defines grilled meat skewers",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-asgabat/voyage.txt",
+                "sha256": "8e1c9b0471b5dda652aaab7b0c5de62da1171c5a862aa3243228391803a1b53d",
+                "sha256Verified": "8e1c9b0471b5dda652aaab7b0c5de62da1171c5a862aa3243228391803a1b53d"
+              }
+            ],
+            "rightsAssessment": "General source-backed food illustration. Personally checked natural shapes/materials, no identifiable close faces, generated writing/logos/frames, named venue geometry or protected modern artwork. Caption assessed as illustration, not documentary place proof.",
+            "colorProfileNote": "Missing native sRGB metadata alone is not a visual rejection; later pixel-identical export is a separate gate.",
+            "scope": "Only new e09 exact-native illustration QA; no CC/C/Git/R2/Sites changes or integration/publication certification.",
+            "producerCorrection": "Tuottajan pelkkään 1024 pikselin natiivileveyteen perustuva hylkäys käyttää CC-kuvien 1200-porttia virheellisesti. Tämän toimeksiannon gen-natiivin pakollinen pystyportti on toteutunut suhde 0,60–0,85; 1024 × 1536 täyttää sen. Hyväksyttyä täsmäversiota ei tarvitse uusia pelkän leveyden vuoksi. Tuottajan manifestiin en koske; korjatkaa tekninen status tämän exact-SHA-QA:n perusteella ennen toimitusgatea."
+          },
+          "reviewedAt": "2026-10-13T13:37:50.611423+00:00",
+          "reviewer": "qa-era-e09"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
+            "sha256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
+            "sha256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-traveler-20261013-v1-d877556bd151.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-traveler-20261013-v1-d877556bd151.png?t=3c6c475658cc28be",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/asgabat/e09-asgabat-traveler-20261013-v1-d877556bd151.png",
+        "sha256": "3c6c475658cc28bead0a3d531611a82629715c9a7dce966a3d02b069a7ded7a1",
+        "bytes": 2426253,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-asgabat-traveler-20261013-v1",
+        "nativeSHA256": "d877556bd15150242e4acf301b1abcc78d54857289b731cb5c1036af704be993",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-traveler-20261013-v1-d877556bd151.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "asgabat",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-13T13:38:40.635563+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/asgabat/e09-asgabat-traveler-20261013-v1-d877556bd151.png",
+        "sha256": "3c6c475658cc28bead0a3d531611a82629715c9a7dce966a3d02b069a7ded7a1",
+        "bytes": 2426253,
+        "SHAReadAt": "2026-10-13T13:38:33.491687+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "d877556bd15150242e4acf301b1abcc78d54857289b731cb5c1036af704be993",
+        "rgbPixelSHA256": "339cf2501280c438b34ac8c47287f5205a84e1a4fc43ea849b37708bad5fbb66",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "a69f7f85f93d904f0bd2a0de4b0cd5ad73f574a8310e3ab2e6e23ab62cb295f7",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -1149,7 +1412,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-        "fileSHA256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d",
+        "fileSHA256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1196,11 +1459,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-            "sha256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d"
+            "sha256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-            "sha256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e"
+            "sha256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e"
           }
         ]
       },
@@ -1275,7 +1538,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
       "targetAfterSHA256": "b1223275d1b07b0f90fbb8850cb559cb2b3bd2166df4758e04a18b6b6ad99538",
-      "contextAfterSHA256": "b1223275d1b07b0f90fbb8850cb559cb2b3bd2166df4758e04a18b6b6ad99538"
+      "contextAfterSHA256": "b1223275d1b07b0f90fbb8850cb559cb2b3bd2166df4758e04a18b6b6ad99538",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -1408,7 +1673,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-        "fileSHA256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d",
+        "fileSHA256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1459,11 +1724,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-            "sha256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d"
+            "sha256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-            "sha256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e"
+            "sha256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e"
           }
         ]
       },
@@ -1536,7 +1801,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
       "targetAfterSHA256": "9732e7426643d510c97ac6ac31e9cf3209626caf6b931497e9e855722565f88d",
-      "contextAfterSHA256": "9732e7426643d510c97ac6ac31e9cf3209626caf6b931497e9e855722565f88d"
+      "contextAfterSHA256": "9732e7426643d510c97ac6ac31e9cf3209626caf6b931497e9e855722565f88d",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -1666,7 +1933,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-        "fileSHA256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d",
+        "fileSHA256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -1715,11 +1982,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-            "sha256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d"
+            "sha256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-            "sha256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e"
+            "sha256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e"
           }
         ]
       },
@@ -1792,7 +2059,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
       "targetAfterSHA256": "af5f0c49cd40ff94ea05af45e2df2a40163d59ecfe1feeca18a0896560788eb0",
-      "contextAfterSHA256": "af5f0c49cd40ff94ea05af45e2df2a40163d59ecfe1feeca18a0896560788eb0"
+      "contextAfterSHA256": "af5f0c49cd40ff94ea05af45e2df2a40163d59ecfe1feeca18a0896560788eb0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -1917,7 +2186,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-        "fileSHA256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d",
+        "fileSHA256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489",
         "item": {
           "slot": "O3",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
@@ -1969,11 +2238,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-            "sha256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d"
+            "sha256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-            "sha256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e"
+            "sha256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e"
           }
         ]
       },
@@ -2046,7 +2315,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
       "targetAfterSHA256": "46b92edc6382bb59a182d998a26ff6131559a48da098d04ccebdeb0c1d1917a2",
-      "contextAfterSHA256": "f68cdd4f1927ee1bff8444e51584fb3dbfc51ad5825ca4b4a5ba8d5a7777a825"
+      "contextAfterSHA256": "f68cdd4f1927ee1bff8444e51584fb3dbfc51ad5825ca4b4a5ba8d5a7777a825",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -2167,7 +2438,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-        "fileSHA256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d",
+        "fileSHA256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489",
         "item": {
           "slot": "N1",
           "targetJsonPath": "$.nahtavyydet[\"Nisa\"].kuvat[0]",
@@ -2218,11 +2489,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/qa.json",
-            "sha256": "7d0d74a5e88c15e689390e416bb3a3c2d7ff85dcc4302125f9dc19ceacbe658d"
+            "sha256": "1593fc5b2b6a5635d4cd919afb4e55c0393f440a648ce7b14b9c442b37a0e489"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/asgabat/illustration-qa-extra.json",
-            "sha256": "aeb0085e5fab4c9da9af96cef9ff02e67459fab78abb54d35f667a0faa7bf06e"
+            "sha256": "46f2cec7e780b85499a484686c62e75bc0115235a8074e03aec4a6d1ea22881e"
           }
         ]
       },
@@ -2295,10 +2566,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "1a990e9c549a9321ed4a388672bc820c2d0e8243460eb2793a81bd375a7a8cfb",
       "targetAfterSHA256": "823f6f5146e39bf3c5ac484cee674d55724ee57f76b13d42a403071de4215612",
-      "contextAfterSHA256": "9516a96ac5284bb90a8328288f167e9826e0e45a5078d881b8923ef135fa6fa9"
+      "contextAfterSHA256": "9516a96ac5284bb90a8328288f167e9826e0e45a5078d881b8923ef135fa6fa9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

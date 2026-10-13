@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e09",
   "city": "biskek",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
   "assets": [
     {
@@ -116,7 +116,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
-        "fileSHA256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9",
+        "fileSHA256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317",
         "item": {
           "slot": "O3",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
@@ -159,7 +159,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
-            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+            "sha256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317"
           }
         ]
       },
@@ -244,7 +244,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "5f78651961a5fc1a08ee30231d0adb29d7188bd37adb6b872ef3e830994901c6"
+      "contextAfterSHA256": "5f78651961a5fc1a08ee30231d0adb29d7188bd37adb6b872ef3e830994901c6",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -357,7 +359,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
-        "fileSHA256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9",
+        "fileSHA256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -400,7 +402,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
-            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+            "sha256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317"
           }
         ]
       },
@@ -485,7 +487,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "04c83462df323c42ae85878416e40181e9986614d25f2e7635e9cd539a874477"
+      "contextAfterSHA256": "04c83462df323c42ae85878416e40181e9986614d25f2e7635e9cd539a874477",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -595,7 +599,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
-        "fileSHA256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9",
+        "fileSHA256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -638,7 +642,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
-            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+            "sha256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317"
           }
         ]
       },
@@ -723,7 +727,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
       "targetAfterSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
-      "contextAfterSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f"
+      "contextAfterSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -873,7 +879,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
-            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+            "sha256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317"
           }
         ]
       },
@@ -958,7 +964,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
       "targetAfterSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
-      "contextAfterSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12"
+      "contextAfterSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -1068,7 +1076,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
-        "fileSHA256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9",
+        "fileSHA256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1111,7 +1119,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
-            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+            "sha256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317"
           }
         ]
       },
@@ -1196,7 +1204,264 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
       "targetAfterSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
-      "contextAfterSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e"
+      "contextAfterSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e09",
+      "city": "biskek",
+      "slot": "TRAVELER",
+      "type": "illustration",
+      "assetID": "e09-biskek-traveler-20261013-v1",
+      "galleryImageID": "e09-biskek-traveler-20261013-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista.",
+        "lyhyt": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista.",
+        "lyhyt": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "7e83419575ad4c84cc763cd718c8b431831ca9e17082e5054303f21bcce67a34",
+      "exportSHA256": "1186351d98d5f59152a3a6e7450ec5eab5050af4c27c288217385fd6a3878ba8",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "6540ce072ab74fc99428c2877f31b21d37de4acab93c5b9d808acb83cc87bccb",
+        "subjectTitle": "Matkailijalle",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-traveler-20261013-v1/original.png",
+            "nativeSha256Verified": "7e83419575ad4c84cc763cd718c8b431831ca9e17082e5054303f21bcce67a34",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeRatio": 0.6666666666666666,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened this native NAS PNG with view_image. Vaaleassa kulhossa paksuja pitkiä nuudeleita, pieniä mauste- ja vihreitä yrttihiukkasia. Nuudelien mutkat ja limittyminen ovat uskottavia, pinnat vaihtelevia ja kulhon muoto ehjä. Taustalla tavallinen kuppi ja neutraali kangas. Ei liha-/täytelajiväitettä, henkilöitä, kirjoitusta, brändiä, kehystä tai nimettyä paikkaa.",
+            "captionFi": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+            "contentSha256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+            "targetCurrentlyPresent": true,
+            "targetText": "Aloita Biškekiin tutustuminen keskustan kävelyllä. Erkindik-bulevardi yhdistää rautatieaseman suunnan museoalueeseen. Osh-tori sopii ruokaan ja arkisiin ostoksiin, Dordoi laajempaan kaupan tutkimiseen. Ruokalistalla voi kokeilla samsaa, lagmania tai paikallista gamburgeria. Jätä vuoristoretki omaksi ohjelmakseen ja selvitä sen kuljetus erikseen.",
+            "relatedGuideFoodText": [
+              "Ruokalistalta voi etsiä bešbarmakia, plov-riisiruokaa, šašlik-vartaita tai samsa-leivonnaisia. Kaupungissa tarjotaan myös uiguurilaista ruokaa, kuten lagman-nuudeleita, ja venäläisiä ruokia. Paikallinen gamburger on oma katuruokansa: sämpylän välissä on tavallisesti dönerin tapaan leikattua lihaa ja lisukkeita. Ruoan nimi ei aina kerro koko sisältöä, joten kysy täytteistä ja lihasta, jos jokin aines ei sovi sinulle."
+            ],
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/faktapohja.md",
+            "factSheetSha256": "ab6c151047a3ce9e95b8be62af1488140603ba9b136bca63d93cdbf8c2acd45f",
+            "topicEvidence": "Nykyinen Biškekin opas mainitsee uiguurilaisen lagman-ruoan ja nuudelit. Paikallisen Bishkek-Wikivoyagen Eat-kohta mainitsee laghman (noodles). Selite rajaa havainteen nuudeleihin, eikä kuvaa väitetä lagmanin ainoaksi reseptiksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Bishkek",
+                "section": "Eat: laghman (noodles); actual guide food section names Uyghur-style lagman noodles",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Bishkek-voyage.txt",
+                "sha256": "e1e2dd91b82f53fb39068659dab565da1a3f8fcceea18a8f353ae3510fb622ec",
+                "sha256Verified": "e1e2dd91b82f53fb39068659dab565da1a3f8fcceea18a8f353ae3510fb622ec"
+              }
+            ],
+            "rightsAssessment": "General source-backed food illustration. Personally checked natural shapes/materials, no identifiable close faces, generated writing/logos/frames, named venue geometry or protected modern artwork. Caption assessed as illustration, not documentary place proof.",
+            "colorProfileNote": "Missing native sRGB metadata alone is not a visual rejection; later pixel-identical export is a separate gate.",
+            "scope": "Only new e09 exact-native illustration QA; no CC/C/Git/R2/Sites changes or integration/publication certification.",
+            "producerCorrection": "Tuottajan pelkkään 1024 pikselin natiivileveyteen perustuva hylkäys käyttää CC-kuvien 1200-porttia virheellisesti. Tämän toimeksiannon gen-natiivin pakollinen pystyportti on toteutunut suhde 0,60–0,85; 1024 × 1536 täyttää sen. Hyväksyttyä täsmäversiota ei tarvitse uusia pelkän leveyden vuoksi. Tuottajan manifestiin en koske; korjatkaa tekninen status tämän exact-SHA-QA:n perusteella ennen toimitusgatea."
+          },
+          "qaReason": "Paksujen nuudelien lähikuva havainnollistaa oppaan lagman-nuudeliaihetta. Selite ei esitä täydellistä reseptiä tai tietyn ravintolan annosta. Natiivi 1024 × 1536, suhde 0,667, täyttää TRAVELER-vaatimuksen; CC:n 1200-leveysportti ei koske tätä gen-natiivia."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+        "fileSHA256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317",
+        "item": {
+          "slot": "TRAVELER",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+          "assetID": "e09-biskek-traveler-20261013-v1",
+          "sha256": "7e83419575ad4c84cc763cd718c8b431831ca9e17082e5054303f21bcce67a34",
+          "verdict": "accepted",
+          "reason": "Paksujen nuudelien lähikuva havainnollistaa oppaan lagman-nuudeliaihetta. Selite ei esitä täydellistä reseptiä tai tietyn ravintolan annosta. Natiivi 1024 × 1536, suhde 0,667, täyttää TRAVELER-vaatimuksen; CC:n 1200-leveysportti ei koske tätä gen-natiivia.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/assets/e09-biskek-traveler-20261013-v1/original.png",
+            "nativeSha256Verified": "7e83419575ad4c84cc763cd718c8b431831ca9e17082e5054303f21bcce67a34",
+            "nativeWidth": 1024,
+            "nativeHeight": 1536,
+            "nativeRatio": 0.6666666666666666,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened this native NAS PNG with view_image. Vaaleassa kulhossa paksuja pitkiä nuudeleita, pieniä mauste- ja vihreitä yrttihiukkasia. Nuudelien mutkat ja limittyminen ovat uskottavia, pinnat vaihtelevia ja kulhon muoto ehjä. Taustalla tavallinen kuppi ja neutraali kangas. Ei liha-/täytelajiväitettä, henkilöitä, kirjoitusta, brändiä, kehystä tai nimettyä paikkaa.",
+            "captionFi": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
+            "contentSha256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+            "targetCurrentlyPresent": true,
+            "targetText": "Aloita Biškekiin tutustuminen keskustan kävelyllä. Erkindik-bulevardi yhdistää rautatieaseman suunnan museoalueeseen. Osh-tori sopii ruokaan ja arkisiin ostoksiin, Dordoi laajempaan kaupan tutkimiseen. Ruokalistalla voi kokeilla samsaa, lagmania tai paikallista gamburgeria. Jätä vuoristoretki omaksi ohjelmakseen ja selvitä sen kuljetus erikseen.",
+            "relatedGuideFoodText": [
+              "Ruokalistalta voi etsiä bešbarmakia, plov-riisiruokaa, šašlik-vartaita tai samsa-leivonnaisia. Kaupungissa tarjotaan myös uiguurilaista ruokaa, kuten lagman-nuudeleita, ja venäläisiä ruokia. Paikallinen gamburger on oma katuruokansa: sämpylän välissä on tavallisesti dönerin tapaan leikattua lihaa ja lisukkeita. Ruoan nimi ei aina kerro koko sisältöä, joten kysy täytteistä ja lihasta, jos jokin aines ei sovi sinulle."
+            ],
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/faktapohja.md",
+            "factSheetSha256": "ab6c151047a3ce9e95b8be62af1488140603ba9b136bca63d93cdbf8c2acd45f",
+            "topicEvidence": "Nykyinen Biškekin opas mainitsee uiguurilaisen lagman-ruoan ja nuudelit. Paikallisen Bishkek-Wikivoyagen Eat-kohta mainitsee laghman (noodles). Selite rajaa havainteen nuudeleihin, eikä kuvaa väitetä lagmanin ainoaksi reseptiksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikivoyage.org/wiki/Bishkek",
+                "section": "Eat: laghman (noodles); actual guide food section names Uyghur-style lagman noodles",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-biskek/Bishkek-voyage.txt",
+                "sha256": "e1e2dd91b82f53fb39068659dab565da1a3f8fcceea18a8f353ae3510fb622ec",
+                "sha256Verified": "e1e2dd91b82f53fb39068659dab565da1a3f8fcceea18a8f353ae3510fb622ec"
+              }
+            ],
+            "rightsAssessment": "General source-backed food illustration. Personally checked natural shapes/materials, no identifiable close faces, generated writing/logos/frames, named venue geometry or protected modern artwork. Caption assessed as illustration, not documentary place proof.",
+            "colorProfileNote": "Missing native sRGB metadata alone is not a visual rejection; later pixel-identical export is a separate gate.",
+            "scope": "Only new e09 exact-native illustration QA; no CC/C/Git/R2/Sites changes or integration/publication certification.",
+            "producerCorrection": "Tuottajan pelkkään 1024 pikselin natiivileveyteen perustuva hylkäys käyttää CC-kuvien 1200-porttia virheellisesti. Tämän toimeksiannon gen-natiivin pakollinen pystyportti on toteutunut suhde 0,60–0,85; 1024 × 1536 täyttää sen. Hyväksyttyä täsmäversiota ei tarvitse uusia pelkän leveyden vuoksi. Tuottajan manifestiin en koske; korjatkaa tekninen status tämän exact-SHA-QA:n perusteella ennen toimitusgatea."
+          },
+          "reviewedAt": "2026-10-13T13:37:50.651262+00:00",
+          "reviewer": "qa-era-e09"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/qa.json",
+            "sha256": "986e2ef70a087e5885e6d048ea9eb0441f169370a09119f09d60003bee61214d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
+            "sha256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png?t=1186351d98d5f591",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png",
+        "sha256": "1186351d98d5f59152a3a6e7450ec5eab5050af4c27c288217385fd6a3878ba8",
+        "bytes": 2368436,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-biskek-traveler-20261013-v1",
+        "nativeSHA256": "7e83419575ad4c84cc763cd718c8b431831ca9e17082e5054303f21bcce67a34",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "biskek",
+        "slot": "TRAVELER",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
+        "verifiedAt": "2026-10-13T13:38:42.479423+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png",
+        "sha256": "1186351d98d5f59152a3a6e7450ec5eab5050af4c27c288217385fd6a3878ba8",
+        "bytes": 2368436,
+        "SHAReadAt": "2026-10-13T13:38:33.699366+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1024,
+        "height": 1536,
+        "pixelWidth": 1024,
+        "pixelHeight": 1536,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "7e83419575ad4c84cc763cd718c8b431831ca9e17082e5054303f21bcce67a34",
+        "rgbPixelSHA256": "3541b8a5752184b784feeb30b90264b99662921ce54dbaba6cb58c43c339f239",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "6540ce072ab74fc99428c2877f31b21d37de4acab93c5b9d808acb83cc87bccb",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -1325,7 +1590,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
-            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+            "sha256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317"
           }
         ]
       },
@@ -1398,7 +1663,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
       "targetAfterSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
-      "contextAfterSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f"
+      "contextAfterSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e09",
@@ -1575,7 +1842,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/biskek/illustration-qa-extra.json",
-            "sha256": "4623a4fdccf7f8337293b11cf0e0263352777c0aaca3ed67cadf160ad49530d9"
+            "sha256": "61b1583f3172615e1814898de6e027a75fd740aebfb860fdd0fde15ed4f7f317"
           }
         ]
       },
@@ -1648,10 +1915,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
       "targetAfterSHA256": "e41c0a9e871e3bca50280658e7a9527cc9d497d90277ebb539532e6628e64bc6",
-      "contextAfterSHA256": "99378ed7bd519c7e2b52878cceec85c650c2387cb7d46f053e2ba489cefdfa31"
+      "contextAfterSHA256": "99378ed7bd519c7e2b52878cceec85c650c2387cb7d46f053e2ba489cefdfa31",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }
