@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "cityName": "KÖÖPENHAMINA",
+  "gameCityId": "kobenhavn",
+  "mediaSlug": "copenhagen",
+  "taskNumbers": [
+    147,
+    148
+  ],
+  "updatedAt": "2026-10-13T18:28:15.175508+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [],
+  "omittedItems": [
+    {
+      "taskNumber": 147,
+      "slot": 6,
+      "stage": "source-preflight-no-call",
+      "actualGenerationCalls": 0,
+      "reason": "Lähde pyytää nykyajan näköalaan ehjää Børsenin lohikäärmetornia ilman työmaata. VisitDenmarkin ja Børsenin omistajan nykyinen aineisto kuvaa vuoden2024 tulipalon jälkeistä jälleenrakennusta. Tällaista nykytilan kuvaa ei voi luotettavasti toteuttaa tämän briefin mukaan; lähteen sallima0-kutsun poisjättö.",
+      "evidenceURLs": [
+        "https://www.visitdenmark.com/denmark/plan-your-trip/the-old-stock-exchange-borsen-gdk412232",
+        "https://www.sammenomborsen.dk/besog-borsen/"
+      ],
+      "additionalGenerationAllowed": false
+    },
+    {
+      "taskNumber": 148,
+      "slot": 8,
+      "reason": "Pieni satamabussi ja oikealle kulku ovat muuten selkeät, mutta vene täyttää noin51%leveydestä pyydetyn noin kolmanneksen sijasta. Myös taustan kirkontorni korostuu. Sommittelu poikkeaa olennaisesti ohjeesta; lopullinen lähteen sallima poisjättö.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "8ea3efe74af03917374cab3a84aaede116d4fc2c3968419af0199c51efa3b3cb",
+      "finalSHA256": "bbbcbb4ba9d0a1c2d000958f98cbb65789706af5f1fc593365ff7345f1478b05"
+    }
+  ],
+  "actualCalls": 1,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}

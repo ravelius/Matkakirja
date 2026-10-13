@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-12 QA/R2-varmennettua kuvaa toimitettu, 12 perusteltua lopullista poisjättöä. Käsitelty 24/48 tämän osan nimetyistä kuvista; 24 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+12 QA/R2-varmennettua kuvaa toimitettu, 14 perusteltua lopullista poisjättöä. Käsitelty 26/48 tämän osan nimetyistä kuvista; 25 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -52,6 +52,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-helsinki-uudet-6-8-20261013.json`. 
 
 - Poisjättö #145, slot 6: Tuomiokirkko ja Töölönlahti näkyvät, mutta vasemmalla oleva punatiilinen tornirakennus ei vastaa tunnistettavasti Uspenskin lähteen vaatimia kultaisia sipulikupoleita. Pyydetty kahden maamerkin yhteinen tunnistettavuus ei varmistu.
 - Poisjättö #146, slot 8: Kauppahallin punatiilisen kattopäädyn kirjainrivi on luettavaa julkisivutekstiä lähteen kiellon vastaisesti. Tätä ei peitetä tai retusoida, eikä uutta kutsua tehdä.
+
+## KÖÖPENHAMINA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-copenhagen-uudet-6-8-20261013.json`. Toimitettu 0/2; kutsuja 1.
+
+- Poisjättö #147, slot 6: Lähde pyytää nykyajan näköalaan ehjää Børsenin lohikäärmetornia ilman työmaata. VisitDenmarkin ja Børsenin omistajan nykyinen aineisto kuvaa vuoden2024 tulipalon jälkeistä jälleenrakennusta. Tällaista nykytilan kuvaa ei voi luotettavasti toteuttaa tämän briefin mukaan; lähteen sallima0-kutsun poisjättö.
+- Poisjättö #148, slot 8: Pieni satamabussi ja oikealle kulku ovat muuten selkeät, mutta vene täyttää noin51%leveydestä pyydetyn noin kolmanneksen sijasta. Myös taustan kirkontorni korostuu. Sommittelu poikkeaa olennaisesti ohjeesta; lopullinen lähteen sallima poisjättö.
 
 ## BERLIINI
 
