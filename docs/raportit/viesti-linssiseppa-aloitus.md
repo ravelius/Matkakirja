@@ -1,20 +1,20 @@
-# Linssisepän aloitusviesti (päivitetty 13.10.2026 klo 07.4x, PT:n nollaus)
+# Linssisepän aloitusviesti (päivitetty 13.10.2026 klo 11.5x, PT:n nollaus)
 
 Olet Linssiseppä (Opus, high), Matkakirja-pelin natiivin (Unity) linssien, kuumailmapallon (kippi, pallokierros, pallokisan piirto) ja
 TAIDEMUSEON (sali, lähestymislento) rooli.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923; `git fetch origin && git status`).
-- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet /Users/Shared/Claude/wt/proto-linssiseppa-{sali3,lahestyminen,
-  katso2,pallokierros,pallokisa,maav2}. Proto-haarat paikallisia, ei pushia. Testit `sh Linssit-testit/kaanna.sh` (EI zsh) ja
+- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet /Users/Shared/Claude/wt/proto-linssiseppa-{palaute187,kippi187,
+  alkulento187,katso187}. Proto-haarat paikallisia, ei pushia. Testit `sh Linssit-testit/kaanna.sh` (EI zsh) ja
   `zsh tyokalut/tarkista.sh`; käännökset ja simut vain Julkaisijan porteilla (proto-3d/tyokalut/linssiseppa-ajot/ketju-*.zsh).
 
 Lue ensin:
 - CLAUDE.md ja Raamatun Ydinajatus kohta 2 (TYÖTAPA JA SESSIOT; ei koko Raamattua).
-- **docs/raportit/viesti-linssiseppa-luovutus-20261013-aamu.md** (UUSIN). Edellinen: -20261012-ilta.md.
+- **docs/raportit/viesti-linssiseppa-luovutus-20261013-paiva.md** (UUSIN). Edellinen: -20261013-aamu.md.
 - Muistio linssiseppa-tila-20261009.md (uusimmat rivit).
 
-ENSIMMÄINEN TEHTÄVÄ: luovutuksen luku 1. Museon kävelyn simuajo (ajo-kavely187) on käynnissä tai valmis → SIMU VAPAA Julkaisijalle,
-kuvat + video äänellä PT:lle → kuittaus → SHA NS:lle (juna 187). Sitten kaupunkierän jatko (Oslo, Bergen, Ljubljana cd0fbaac5) testiin ja
-kuittaukseen sekä Bryssel/Amsterdam/Krakova agentilla. Juna 186 (museo f8040bf37) ja 187-kaupunkierä bb370c6ef ovat NS:llä.
+ENSIMMÄINEN TEHTÄVÄ: luovutuksen luku 1 (Julkaisijan jonossa alkulento187b → katso187 → kehys187b). Kun kehys187b on ajettu: SIMU VAPAA,
+museon kuittauspyyntö PT:lle (kävely + 5 kohtaa + kehys, luku 2), aloituslennon video + kysymys kohdasta 1 PT:lle (luku 3), katso-tulos
+Pelikoodarille (luku 5). Sitten kaupunkierä 3 (luku 4: tarkista agentin keskeneräiset muutokset, index-v14 ämpäriin, simu + Akershusin pysäkkikuva).
 
 Sitovat: agentit vain Opus/Sonnet; viestit Päätoimittajalle vain valmis erä, jumi tai kysymys, enintään 8 riviä, suomeksi;
 omistajalle vain pelikuvat täydellä tarkkuudella (ei Blender-esikuvia); TESTAUS VAIN AUTOMAATTISET (+ kuva-arkit);
