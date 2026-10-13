@@ -152,14 +152,14 @@
       "a": {
         "laji": "katso",
         "palkkio": 25,
-        "vihjelause": "Itään täältä, kosken varrella, vanha konepaja on muuttunut museoksi, jossa esitellään pelejä ja jääkiekkoa. Etsi se.",
+        "vihjelause": "Pohjoiseen täältä, kosken varrella, vanha konepaja on muuttunut museoksi, jossa esitellään pelejä ja jääkiekkoa. Etsi se.",
         "kohde": {
           "nimi": "Museokeskus Vapriikki",
-          "lat": 61.5022,
-          "lon": 23.7657,
-          "etaisyys_saapumispisteesta_m": 412
+          "lat": 61.50306,
+          "lon": 23.76028,
+          "etaisyys_saapumispisteesta_m": 268
         },
-        "vihje_vaarin": "Ei se. Kävele koskea pitkin itään Tampellan alueelle: vanhassa konepajassa on pelimuseo, luonnontieteellinen museo ja jääkiekkomuseo.",
+        "vihje_vaarin": "Ei se. Kävele koskea pitkin pohjoiseen Tampellan alueelle: vanhassa konepajassa on pelimuseo, luonnontieteellinen museo ja jääkiekkomuseo.",
         "tiesitko": "Vapriikin nimi tulee ruotsin sanasta fabrik, tehdas. Museokeskus avattiin yleisölle 1996 Tampellan vanhan konepajan tiloissa.",
         "muistomerkki": false
       },

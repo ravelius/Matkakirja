@@ -7,7 +7,7 @@ Suunnitelman (`aarretehtavat-eurooppa-suunnitelma-20261012.md`) mukainen erä 2;
 | **Dublin** · Sillanvartija Molly | Patrickin katedraali (940 m, 25 £) | Salakirjoitus (50 £): KUKKARO |
 | **Oslo** · Maisemakuvaaja Liv | Kuninkaanlinna (1172 m, 25 £) | Valinta (Kuuntele) (30 £) |
 | **Bergen** · Kalakauppias Solveig (Torgetin kalamyyjä) | Pyhän Yrjänän kirkko (571 m, 25 £) | Valinta (Kuuntele) (30 £) |
-| **Tampere** · Kutoja Siiri (Finlaysonin kutomon työntekijä) | Museokeskus Vapriikki (412 m, 25 £) | Aikajana (30 £): 1779 → 1882 → 1971 |
+| **Tampere** · Kutoja Siiri (Finlaysonin kutomon työntekijä) | Museokeskus Vapriikki (268 m, 25 £) | Aikajana (30 £): 1779 → 1882 → 1971 |
 | **Krakova** · Tornintorvensoittaja Stanisław | Barbakaani (459 m, 25 £) | Salakirjoitus (50 £): HEJNAL |
 | **Sofia** · Lähteenvartija Nadia | Sofian katedraali (827 m, 25 £) | Kartta (Vanha kartta) (35 £) |
 | **Bukarest** · Kellonsoittaja Ana, paimenen kirkon kellon soittaja | Vanha ruhtinaanhovi (950 m, 25 £) | Arvio (40 £) (41) |
