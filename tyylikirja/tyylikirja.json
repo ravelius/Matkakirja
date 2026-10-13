@@ -539,6 +539,7 @@
   },
   "typografia": {
     "_selite": "Seitsemän porrasta (pt). LEVEÄ- ja KESKI-luokassa portaat leipa…arkki +2 (leveaLisa). Kirjasin = natiivin Kirjasin-enum ja webin fonttipino.",
+    "_optinenKeskitys": "NAPIN TEKSTIN OPTINEN KESKITYS (omistaja 13.10.2026 klo 22.2x \"Kyllä, keskelle\", Päätoimittajan kortti): napin teksti siirretään pystysuunnassa niin, että versaalikorkeuden ja peruslinjan väli on rivilaatikon keskellä. Arvo on kirjasinkohtainen ja lasketaan kirjasimen omista mitoista: siirto (pt, + = alas) = (versaalikorkeus − yläreuna − alareuna) / 2 × koko / em (ascent, descent ja cap height kirjasimesta). Rivilaatikon ylä- ja alatila eivät ole symmetriset, joten pelkkä asettelu jätti tekstin 1–2 pt ylös tai alas (natiivin KESKITYS-testi 13.10.). Natiivi: Kirjasimet.KeskitaOptisesti, kytketty kaikkiin Kosketusnappeihin (pohja, ei nappikohtaisia arvoja). Kuvakkeet keskitetään piirtoalueestaan (Päätoimittaja 13.10.2026).",
     "kapiteeli": { "koko": 12, "kirjasin": "Kone", "harvennus": 0.12 },
     "apuri": { "koko": 14, "kirjasin": "LukuKursiivi" },
     "leipa": { "koko": 16, "kirjasin": "Luku" },
