@@ -122,6 +122,7 @@ export const LISAMODUULIT = [
   m('js/fokuskohteet.js', ['KOHDE_MAAT'], 'johdettu'),
   m('js/linssit/astronaut-kysymykset.js', ['ASTRONAUTIN_KYSYMYKSET'], 'linssi'),
   m('js/linssit/astro-kysymykset.js', ['ASTRO_KYSYMYKSET'], 'linssi'),
+  m('js/linssit/museo-kysymykset.js', ['MUSEO_KYSYMYKSET'], 'linssi'),
   m('js/linssit/ihmisen-matka-data.js', ['IHMISEN_MATKA', 'IHMISEN_MATKA_LISANOSTOT', 'IHMISEN_MATKA_KYSYMYKSET',
     // Natiivi-UI 23.9.2026: aloituskortin ja kaistan tekstit.
     'IHMISEN_MATKA_ESITTELY', 'IHMISEN_MATKA_ALOITUS', 'IHMISEN_MATKA_KAISTASELITE', 'IHMISEN_MATKA_LOPPU'], 'linssi'),
