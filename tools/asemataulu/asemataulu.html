@@ -255,8 +255,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
 .toimia { color: var(--punainen); font-weight: 700; }
 .rooli.tila-toimia { background: var(--punainen); color: var(--paperi); }
 .rooli.tila-toimia .r-teksti, .rooli.tila-toimia .r-effort { color: var(--paperi); }
-/* Kulutus (omistaja 13.10.): roolien nimet ovat pitkiä, joten kortit ovat leveämpiä kuin Laitteet-korteissa; muuten nimi, palkit ja prosentti eivät mahdu riville. */
-#kulutus { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+/* Kulutus (omistaja 13.10.): roolien ja projektien nimet ovat pitkiä, joten kortit ovat leveämpiä kuin Laitteet-korteissa; muuten nimi, palkit ja prosentti eivät mahdu riville. */
+#kulutus, #kulutus-projektit { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
 </style>
 
 <main class="wrap">
@@ -295,6 +295,9 @@ section:not(.kiinni) .yhteenveto { display: none; }
   </section>
   <section class="kortti" id="kulutus-osio" hidden>
     <h2><button type="button" class="otsikkonappi taitto" data-osio="kulutus-osio" aria-expanded="true">Kulutus</button> <span class="kysymykset yhteenveto" id="kulutus-yhteenveto"></span> <span class="kysymykset" id="kulutus-tieto"></span></h2>
+    <div class="ryhma-otsikko" id="kulutus-projektit-otsikko" hidden>Projektit</div>
+    <div class="roolit" id="kulutus-projektit" hidden></div>
+    <div class="ryhma-otsikko" id="kulutus-roolit-otsikko" hidden>Roolit</div>
     <div class="roolit" id="kulutus"></div>
   </section>
   <section class="kortti" id="huom-osio" hidden>
@@ -313,6 +316,31 @@ section:not(.kiinni) .yhteenveto { display: none; }
     if (luokka) e.className = luokka;
     if (teksti != null) e.textContent = String(teksti);
     return e;
+  }
+  // Kulutus-kortti (Laitteet-pohja): nimi, viisi palkkia suhteessa suurimpaan (kMax) ja osuus viikon kulutuksesta prosentteina.
+  // Roolilla malli-piste sekä tokenit- ja agentit-rivi; projektilla (omistaja 13.10. 11.3x) ei pistettä, vaan rivi eniten kuluttaneista
+  // rooleista, koska projekti ei ole malli.
+  function kulutusKortti(x, kMax, projekti) {
+    var osuus = Math.max(0, Math.min(100, Number(x.viikko) || 0));
+    var pr = Math.round(osuus);
+    var kortti = luo('div', 'rooli tila-lepo');
+    var paa = luo('div', 'r-paa');
+    if (!projekti) paa.append(luo('span', 'piste' + (String(x.malli || '').toLowerCase() === 'sonnet' ? ' sonnet' : '')));
+    paa.append(luo('span', '', x.nimi || ''));
+    var ed = luo('span', 'edistys laite-cpu');
+    ed.title = 'osuus viikon kulutuksesta ' + pr + ' %';
+    ed.setAttribute('aria-label', 'osuus viikon kulutuksesta ' + pr + ' %');
+    var n = osuus > 0 && kMax > 0 ? Math.min(5, Math.max(1, Math.round(5 * osuus / kMax))) : 0;
+    for (var q = 1; q <= 5; q++) ed.append(luo('i', q <= n ? 'on' : ''));
+    // Kiinteä väli, jotta prosentti ei rivity luvun ja merkin väliltä, kun pitkä nimi vie tilaa.
+    ed.append(luo('span', 'laite-cpu-arvo', pr + '\u00a0%'));
+    paa.append(ed);
+    kortti.append(paa);
+    var yksiDesim = String(Math.round((Number(x.kiintio) || 0) * 10) / 10).replace('.', ',');
+    kortti.append(luo('div', 'r-teksti', '≈ ' + yksiDesim + ' %-yks. viikosta · 5 h: ' + Math.round(Number(x.viisi_h) || 0) + ' %'));
+    if (!projekti) kortti.append(luo('div', 'r-teksti', 'agentit ' + Math.round(Number(x.agentit) || 0) + ' % · ' + (Math.round(Number(x.tokenit_m)) || 0) + ' M tokenia'));
+    else if (Array.isArray(x.roolit) && x.roolit.length) kortti.append(luo('div', 'r-teksti', 'eniten: ' + x.roolit.join(', ')));
+    return kortti;
   }
   function siruLuokka(t) {
     t = String(t || '').toLowerCase();
@@ -753,35 +781,26 @@ section:not(.kiinni) .yhteenveto { display: none; }
     });
     ro.append(ruudukko);
 
-    // Kulutus (omistaja 13.10. 10.5x): roolien osuus token-kulutuksesta, arvio Clauden lokeista (kulutus.py → dokumentti talo/kulutus).
-    // Kortti kuten Laitteet: viisi palkkia = suurimman kuluttajan osuus (palkit erottelevat roolit toisistaan), perässä osuus viikon
-    // kulutuksesta prosentteina; osio piilossa ilman dokumenttia.
+    // Kulutus (omistaja 13.10. 10.5x, 11.3x): projektien ja roolien osuus token-kulutuksesta, arvio Clauden lokeista (kulutus.py →
+    // dokumentti talo/kulutus). Kortit kuten Laitteet: viisi palkkia = osuus suhteessa suurimpaan kuluttajaan (palkit erottelevat
+    // toisistaan; rooleissa suurin rooli, projekteissa suurin nimetty projekti), perässä osuus viikon kulutuksesta prosentteina;
+    // osio piilossa ilman dokumenttia. Projektit (viisi suurinta + Muu työ + Muut projektit) omana väliotsikkonaan roolien yläpuolella.
     var kd = tila.kulutus;
     var kr = (kd && Array.isArray(kd.rivit)) ? kd.rivit : [];
+    var kp = (kd && Array.isArray(kd.projektit)) ? kd.projektit : [];
     var kMax = kr.reduce(function (m, x) { return Math.max(m, Number(x.viikko) || 0); }, 0);
+    var jaannos = function (x) { return x.nimi === 'Muu työ' || x.nimi === 'Muut projektit'; };
+    var kpMax = kp.reduce(function (m, x) { return jaannos(x) ? m : Math.max(m, Number(x.viikko) || 0); }, 0);
     $('kulutus-osio').hidden = kr.length === 0;
+    $('kulutus-projektit-otsikko').hidden = $('kulutus-projektit').hidden = $('kulutus-roolit-otsikko').hidden = kp.length === 0;
+    var kpSailio = $('kulutus-projektit');
+    kpSailio.replaceChildren();
+    kp.forEach(function (x) { kpSailio.append(kulutusKortti(x, kpMax, true)); });
     var ku = $('kulutus');
     ku.replaceChildren();
-    var yksiDesim = function (x) { return String(Math.round((Number(x) || 0) * 10) / 10).replace('.', ','); };
-    kr.forEach(function (x) {
-      var osuus = Math.max(0, Math.min(100, Number(x.viikko) || 0));
-      var pr = Math.round(osuus);
-      var kortti = luo('div', 'rooli tila-lepo');
-      var paa = luo('div', 'r-paa');
-      paa.append(luo('span', 'piste' + (String(x.malli || '').toLowerCase() === 'sonnet' ? ' sonnet' : '')), luo('span', '', x.nimi || ''));
-      var ed = luo('span', 'edistys laite-cpu');
-      ed.title = 'osuus viikon kulutuksesta ' + pr + ' %';
-      ed.setAttribute('aria-label', 'osuus viikon kulutuksesta ' + pr + ' %');
-      var n = osuus > 0 && kMax > 0 ? Math.max(1, Math.round(5 * osuus / kMax)) : 0;
-      for (var q = 1; q <= 5; q++) ed.append(luo('i', q <= n ? 'on' : ''));
-      ed.append(luo('span', 'laite-cpu-arvo', pr + ' %'));
-      paa.append(ed);
-      kortti.append(paa);
-      kortti.append(luo('div', 'r-teksti', '≈ ' + yksiDesim(x.kiintio) + ' %-yks. viikosta · 5 h: ' + Math.round(Number(x.viisi_h) || 0) + ' %'));
-      kortti.append(luo('div', 'r-teksti', 'agentit ' + Math.round(Number(x.agentit) || 0) + ' % · ' + (Math.round(Number(x.tokenit_m)) || 0) + ' M tokenia'));
-      ku.append(kortti);
-    });
-    var kEnin = kr.filter(function (x) { return x.nimi !== 'Muut'; }).sort(function (a, b) { return (Number(b.viikko) || 0) - (Number(a.viikko) || 0); })[0];
+    kr.forEach(function (x) { ku.append(kulutusKortti(x, kMax, false)); });
+    var kEnin = (kp.length ? kp.filter(function (x) { return !jaannos(x); }) : kr.filter(function (x) { return x.nimi !== 'Muut'; }))
+      .sort(function (a, b) { return (Number(b.viikko) || 0) - (Number(a.viikko) || 0); })[0];
     $('kulutus-yhteenveto').textContent = kEnin ? '(eniten: ' + kEnin.nimi + ' ' + Math.round(Number(kEnin.viikko) || 0) + ' %)' : '';
     $('kulutus-tieto').textContent = kr.length ? '(arvio' + (typeof kd.viikko_pros === 'number' ? ', viikko ' + Math.round(kd.viikko_pros) + ' %' : '') + ')' : '';
 
