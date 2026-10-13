@@ -3,7 +3,7 @@
   "era": "e09",
   "city": "dusanbe",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "9c58b45998ae57a21498a95b36e09f1567d0f77e85f04331831eb263b6121ec2",
+  "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
   "assets": [
     {
       "era": "e09",
@@ -127,7 +127,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
-        "fileSHA256": "1d12e3eddbde8c5195c6c3b4c5026e154496454788ed9000cea4f068c3670694",
+        "fileSHA256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -221,7 +221,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
-            "sha256": "1d12e3eddbde8c5195c6c3b4c5026e154496454788ed9000cea4f068c3670694"
+            "sha256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/illustration-qa-extra.json",
@@ -308,7 +308,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9c58b45998ae57a21498a95b36e09f1567d0f77e85f04331831eb263b6121ec2",
+      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "78d4b426ab42505731cdb1b9a49458ef59cd7a296d1c288fab862160a4f34a1b"
     },
@@ -449,7 +449,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
-        "fileSHA256": "1d12e3eddbde8c5195c6c3b4c5026e154496454788ed9000cea4f068c3670694",
+        "fileSHA256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -519,7 +519,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
-            "sha256": "1d12e3eddbde8c5195c6c3b4c5026e154496454788ed9000cea4f068c3670694"
+            "sha256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/illustration-qa-extra.json",
@@ -606,7 +606,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9c58b45998ae57a21498a95b36e09f1567d0f77e85f04331831eb263b6121ec2",
+      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
       "targetAfterSHA256": "cc4d41cc94e52c9908e8111fe178e38123ff5825b790f7d07bfb89a439c16e42",
       "contextAfterSHA256": "cc4d41cc94e52c9908e8111fe178e38123ff5825b790f7d07bfb89a439c16e42"
     },
@@ -765,7 +765,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
-        "fileSHA256": "1d12e3eddbde8c5195c6c3b4c5026e154496454788ed9000cea4f068c3670694",
+        "fileSHA256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -962,7 +962,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
-            "sha256": "1d12e3eddbde8c5195c6c3b4c5026e154496454788ed9000cea4f068c3670694"
+            "sha256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/illustration-qa-extra.json",
@@ -1049,7 +1049,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9c58b45998ae57a21498a95b36e09f1567d0f77e85f04331831eb263b6121ec2",
+      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
       "targetAfterSHA256": "88ba99576307708adabf68e78f715a5780b06e0646dc4395d089c64614467d64",
       "contextAfterSHA256": "88ba99576307708adabf68e78f715a5780b06e0646dc4395d089c64614467d64"
     },
@@ -1185,7 +1185,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
-        "fileSHA256": "1d12e3eddbde8c5195c6c3b4c5026e154496454788ed9000cea4f068c3670694",
+        "fileSHA256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1250,7 +1250,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
-            "sha256": "1d12e3eddbde8c5195c6c3b4c5026e154496454788ed9000cea4f068c3670694"
+            "sha256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/illustration-qa-extra.json",
@@ -1337,7 +1337,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9c58b45998ae57a21498a95b36e09f1567d0f77e85f04331831eb263b6121ec2",
+      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
       "targetAfterSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
       "contextAfterSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad"
     },
@@ -1479,7 +1479,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
-        "fileSHA256": "1d12e3eddbde8c5195c6c3b4c5026e154496454788ed9000cea4f068c3670694",
+        "fileSHA256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1552,7 +1552,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
-            "sha256": "1d12e3eddbde8c5195c6c3b4c5026e154496454788ed9000cea4f068c3670694"
+            "sha256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/illustration-qa-extra.json",
@@ -1629,9 +1629,317 @@
         "vuosi": "2026"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "9c58b45998ae57a21498a95b36e09f1567d0f77e85f04331831eb263b6121ec2",
+      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
       "targetAfterSHA256": "4057fc209973a996baee201f352b58fd31365fcb9d43a7f528380377519b99da",
       "contextAfterSHA256": "4057fc209973a996baee201f352b58fd31365fcb9d43a7f528380377519b99da"
+    },
+    {
+      "era": "e09",
+      "city": "dusanbe",
+      "slot": "K2",
+      "type": "commons",
+      "assetID": "capital-cc-e09-dusanbe-k2-39eed49981ba4190",
+      "galleryImageID": "capital-cc-e09-dusanbe-k2-39eed49981ba4190",
+      "commonsFile": "Ravine of Varzob River - panoramio.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/k2-39eed49981ba41902fdd.jpg",
+        "suora": true,
+        "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "lyhyt": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "tiedosto": "Ravine of Varzob River - panoramio.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "lyhyt": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "tiedosto": "Ravine of Varzob River - panoramio.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/k2-39eed49981ba41902fdd.jpg",
+        "suora": true,
+        "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "lyhyt": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "tiedosto": "Ravine of Varzob River - panoramio.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "39eed49981ba41902fddbce6ec7744e0e589d7f9327b6766b7e596a4199d0071",
+      "exportSHA256": "39eed49981ba41902fddbce6ec7744e0e589d7f9327b6766b7e596a4199d0071",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/k2-39eed49981ba41902fdd.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/k2-39eed49981ba41902fdd.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/cc-gap-search/original-02.jpg",
+      "dimensions": [
+        6607,
+        3345
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
+      "sourceContentSHA256": "9c58b45998ae57a21498a95b36e09f1567d0f77e85f04331831eb263b6121ec2",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "bfbb0c8d3528fa6c3e920bb0e927c1d2adf9cc46ee03917e20de3fb47dfaf3ea",
+        "semanticContextSHA256": "bfbb0c8d3528fa6c3e920bb0e927c1d2adf9cc46ee03917e20de3fb47dfaf3ea",
+        "subjectTitle": "Kaupunki ylitti oman jokensa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Michael Karavanov",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ravine_of_Varzob_River_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Ravine_of_Varzob_River_-_panoramio.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+            "subject": "Luonnollinen jokilaakso pääaiheena. Tie ja pieni paljas tunnelinsuu ovat toiminnallista sivuinfrastruktuuria ilman yksilöityä luovaa rakennusmuotoa. Paikkakuvaus Varzob, kamerakoordinaatti38°58′41.62″N vahvistaa pohjoisen laaksoalueen; tätä ei nimetä Dušanben keskustaksi tai kaupungin sillaksi. K2:n ajantasainen teksti kertoo laakson vuoristo-osasta. Ei FOP/70v-oletusta.",
+            "placeEvidence": [
+              "Ravine of Varzob River"
+            ],
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/0d4c863f696235d96370c85b0f3b0e1b08d74a0b794333196c9870b2bd1e2894.html",
+            "noBlanketFopOrAgeAssumption": true
+          },
+          "QA": {
+            "author": "Michael Karavanov",
+            "license": "CC BY-SA 3.0",
+            "width": 6607,
+            "height": 3345,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/cc-gap-search/original-02.jpg",
+            "nativeSHA256": "39eed49981ba41902fddbce6ec7744e0e589d7f9327b6766b7e596a4199d0071",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa-evidence/48235744673b010c74fdd75ec8b9c305efb5c51e3d3943eebf9daf2458ede398.html",
+            "sourceSnapshotSHA256": "48235744673b010c74fdd75ec8b9c305efb5c51e3d3943eebf9daf2458ede398",
+            "sourceRowsRead": {
+              "Description Ravine of Varzob River - panoramio.jpg": "Ravine of Varzob River",
+              "Date": "Taken on 26 November 2008",
+              "Source": "https://web.archive.org/web/20161012225019/http://www.panoramio.com/photo/16488593",
+              "Author": "Michael Karavanov",
+              "Camera location": "38° 58′ 41.62″ N, 68° 45′ 46.49″ E"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "Michael Karavanov",
+                "rowAttributes": {}
+              }
+            ],
+            "licenseTemplatesRead": [
+              "CC BY-SA 3.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "6,607",
+              "3,345"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/cc-gap-search/original-02.jpg\n  pixelWidth: 6607\n  pixelHeight: 3345\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              6607,
+              3345
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              6607,
+              3345
+            ],
+            "sourceDateRaw": "Taken on 26 November 2008",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: Varzobin luonnollinen kallioinen jokilaakso, jokiuoma ja vesi sekä kasvillisuus. Sivulla tavallinen tie ja pieni paljas tunnelinsuu, ei yksilöityä luovaa rakennus-/taideteospääaihetta. Ei kasvoja, mainospääaihetta, overlayta tai vesileimaa. Source Description nimeää Varzob River -laakson ja Camera location38°58′41.62″N tukee kaupungin pohjoispuolista vuoristolaaksoa. NykyinenK2 teksti mainitsee kaupungista vuoristoon jatkuvan saman laakson; kuvaa ei esitetä keskustassa tai Dušanben sillalla otettuna. Michael Karavanov/CC BY-SA3.0 Author/licensetpl luettu itse. Native6607×3345 ja SHA, kuvaus26.11.2008, ei nykyhetkiväitettä tai FOP-/ikäoletusta.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "currentTargetTopic": "Varzob ja kaupungista kohti vuoristoa jatkuva laakso",
+            "sourceCoordinatesUsedOnlyAsRegionalSupport": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Ravine_of_Varzob_River_-_panoramio.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/cc-gap-selection.json",
+            "currentContentSHA256": "9c58b45998ae57a21498a95b36e09f1567d0f77e85f04331831eb263b6121ec2",
+            "photoDate": "Taken on 26 November 2008",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Ravine_of_Varzob_River_-_panoramio.jpg",
+            "captionFi": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+            "checkedAt": "2026-10-12T20:20:10.942662+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          },
+          "qaReason": "Oma natiivin silmätarkistus: Varzobin luonnollinen kallioinen jokilaakso, jokiuoma ja vesi sekä kasvillisuus. Sivulla tavallinen tie ja pieni paljas tunnelinsuu, ei yksilöityä luovaa rakennus-/taideteospääaihetta. Ei kasvoja, mainospääaihetta, overlayta tai vesileimaa. Source Description nimeää Varzob River -laakson ja Camera location38°58′41.62″N tukee kaupungin pohjoispuolista vuoristolaaksoa. NykyinenK2 teksti mainitsee kaupungista vuoristoon jatkuvan saman laakson; kuvaa ei esitetä keskustassa tai Dušanben sillalla otettuna. Michael Karavanov/CC BY-SA3.0 Author/licensetpl luettu itse. Native6607×3345 ja SHA, kuvaus26.11.2008, ei nykyhetkiväitettä tai FOP-/ikäoletusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
+        "fileSHA256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": null,
+          "commonsFile": "Ravine of Varzob River - panoramio.jpg",
+          "sha256": "39eed49981ba41902fddbce6ec7744e0e589d7f9327b6766b7e596a4199d0071",
+          "verdict": "accepted",
+          "reason": "Oma natiivin silmätarkistus: Varzobin luonnollinen kallioinen jokilaakso, jokiuoma ja vesi sekä kasvillisuus. Sivulla tavallinen tie ja pieni paljas tunnelinsuu, ei yksilöityä luovaa rakennus-/taideteospääaihetta. Ei kasvoja, mainospääaihetta, overlayta tai vesileimaa. Source Description nimeää Varzob River -laakson ja Camera location38°58′41.62″N tukee kaupungin pohjoispuolista vuoristolaaksoa. NykyinenK2 teksti mainitsee kaupungista vuoristoon jatkuvan saman laakson; kuvaa ei esitetä keskustassa tai Dušanben sillalla otettuna. Michael Karavanov/CC BY-SA3.0 Author/licensetpl luettu itse. Native6607×3345 ja SHA, kuvaus26.11.2008, ei nykyhetkiväitettä tai FOP-/ikäoletusta.",
+          "required": true,
+          "status": "reviewed",
+          "evidence": {
+            "author": "Michael Karavanov",
+            "license": "CC BY-SA 3.0",
+            "width": 6607,
+            "height": 3345,
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/cc-gap-search/original-02.jpg",
+            "nativeSHA256": "39eed49981ba41902fddbce6ec7744e0e589d7f9327b6766b7e596a4199d0071",
+            "sourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa-evidence/48235744673b010c74fdd75ec8b9c305efb5c51e3d3943eebf9daf2458ede398.html",
+            "sourceSnapshotSHA256": "48235744673b010c74fdd75ec8b9c305efb5c51e3d3943eebf9daf2458ede398",
+            "sourceRowsRead": {
+              "Description Ravine of Varzob River - panoramio.jpg": "Ravine of Varzob River",
+              "Date": "Taken on 26 November 2008",
+              "Source": "https://web.archive.org/web/20161012225019/http://www.panoramio.com/photo/16488593",
+              "Author": "Michael Karavanov",
+              "Camera location": "38° 58′ 41.62″ N, 68° 45′ 46.49″ E"
+            },
+            "authorRowsIncludingExif": [
+              {
+                "label": "Author",
+                "value": "Michael Karavanov",
+                "rowAttributes": {}
+              }
+            ],
+            "licenseTemplatesRead": [
+              "CC BY-SA 3.0"
+            ],
+            "sourceOriginalFileDimensions": [
+              "6,607",
+              "3,345"
+            ],
+            "nativeDimensionsOutput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/cc-gap-search/original-02.jpg\n  pixelWidth: 6607\n  pixelHeight: 3345\n  format: jpeg\n  profile: sRGB IEC61966-2.1\n",
+            "nativeEncodedDimensions": [
+              6607,
+              3345
+            ],
+            "exifOrientation": 1,
+            "orientationAppliedDimensions": [
+              6607,
+              3345
+            ],
+            "sourceDateRaw": "Taken on 26 November 2008",
+            "gameReuseIndependentlyChecked": true,
+            "gameReuseSearchRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/js/packs",
+            "gameReuseFilesRead": 373,
+            "gameReuseMatches": [],
+            "duplicateCitySlots": [],
+            "visualReview": "Oma natiivin silmätarkistus: Varzobin luonnollinen kallioinen jokilaakso, jokiuoma ja vesi sekä kasvillisuus. Sivulla tavallinen tie ja pieni paljas tunnelinsuu, ei yksilöityä luovaa rakennus-/taideteospääaihetta. Ei kasvoja, mainospääaihetta, overlayta tai vesileimaa. Source Description nimeää Varzob River -laakson ja Camera location38°58′41.62″N tukee kaupungin pohjoispuolista vuoristolaaksoa. NykyinenK2 teksti mainitsee kaupungista vuoristoon jatkuvan saman laakson; kuvaa ei esitetä keskustassa tai Dušanben sillalla otettuna. Michael Karavanov/CC BY-SA3.0 Author/licensetpl luettu itse. Native6607×3345 ja SHA, kuvaus26.11.2008, ei nykyhetkiväitettä tai FOP-/ikäoletusta.",
+            "depictedWorkLayerIndependentlyReviewed": true,
+            "currentTargetTopic": "Varzob ja kaupungista kohti vuoristoa jatkuva laakso",
+            "sourceCoordinatesUsedOnlyAsRegionalSupport": true,
+            "visuallyReviewed": true,
+            "originalPixelsViewed": true,
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Ravine_of_Varzob_River_-_panoramio.jpg",
+            "sourceManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/cc-gap-selection.json",
+            "currentContentSHA256": "9c58b45998ae57a21498a95b36e09f1567d0f77e85f04331831eb263b6121ec2",
+            "photoDate": "Taken on 26 November 2008",
+            "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Ravine_of_Varzob_River_-_panoramio.jpg",
+            "captionFi": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+            "checkedAt": "2026-10-12T20:20:10.942662+00:00",
+            "published": false,
+            "gameIntegrated": false,
+            "ownerAcceptance": false
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/qa.json",
+            "sha256": "3c5e363098eed86b6ed2f9772f1185bf00b648721391c6bbb31437d2a33ca842"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dusanbe/illustration-qa-extra.json",
+            "sha256": "f9949316e6f0e98dbc888fdd78457e82acfd1b51bba63a7cbccc645afabae9ee"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "dusanbe",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "commonsFile": "Ravine of Varzob River - panoramio.jpg",
+        "sha256": "39eed49981ba41902fddbce6ec7744e0e589d7f9327b6766b7e596a4199d0071",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ravine_of_Varzob_River_-_panoramio.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Ravine_of_Varzob_River_-_panoramio.jpg",
+        "author": "Michael Karavanov",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 6607,
+        "height": 3345,
+        "originalSHA256": "39eed49981ba41902fddbce6ec7744e0e589d7f9327b6766b7e596a4199d0071",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/k2-39eed49981ba41902fdd.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/k2-39eed49981ba41902fdd.jpg",
+        "bytes": 4323927,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:20:17.007713+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
+        "selite": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "lyhyt": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "tiedosto": "Ravine of Varzob River - panoramio.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+      "targetAfterSHA256": "22038b8d65c62b4c1f8e16ad3320450062f6069c1ee4337eaa8bfc03f86b7053",
+      "contextAfterSHA256": "22038b8d65c62b4c1f8e16ad3320450062f6069c1ee4337eaa8bfc03f86b7053"
     }
   ],
   "runtimeIntegrationPending": true,

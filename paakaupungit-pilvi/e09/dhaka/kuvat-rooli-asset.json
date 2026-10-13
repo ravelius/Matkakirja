@@ -3,7 +3,7 @@
   "era": "e09",
   "city": "dhaka",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+  "sourceContentAfterSHA256": "4071a672d11ff58f8bc05861daeb0c9e9f1626c1a52d27edf4d8597f78e35689",
   "assets": [
     {
       "era": "e09",
@@ -116,7 +116,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
-        "fileSHA256": "180db07b9c35d655346dd249991cc9e21eeda5a18d5c961e310e0976757ae98e",
+        "fileSHA256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -155,11 +155,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-            "sha256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1"
+            "sha256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
-            "sha256": "180db07b9c35d655346dd249991cc9e21eeda5a18d5c961e310e0976757ae98e"
+            "sha256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c"
           }
         ]
       },
@@ -242,7 +242,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+      "sourceContentAfterSHA256": "4071a672d11ff58f8bc05861daeb0c9e9f1626c1a52d27edf4d8597f78e35689",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "4899b6d636f47050b3a861899be79228e2fc0654564e1fd606b5735e2af5f9fb"
     },
@@ -382,7 +382,20 @@
               1024
             ],
             "pngBitDepth": 8,
-            "pngColorType": 2
+            "pngColorType": 2,
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "checkedAt": "2026-10-13T05:58:38.306127+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e09/dhaka/2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c-sisalto.json",
+              "reviewedSnapshotSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "currentNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            }
           },
           "qaReason": "Ajantasaisen noston mukainen yleinen kacchi biryani -havainnollistus: riisi, liha ja peruna. Ei nimetyn ravintolan tai tarkkarajaisen reseptin dokumenttikuva."
         }
@@ -398,7 +411,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-        "fileSHA256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1",
+        "fileSHA256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -473,7 +486,20 @@
               1024
             ],
             "pngBitDepth": 8,
-            "pngColorType": 2
+            "pngColorType": 2,
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "checkedAt": "2026-10-13T05:58:38.306127+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e09/dhaka/2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c-sisalto.json",
+              "reviewedSnapshotSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "currentNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            }
           },
           "reviewedAt": "2026-10-12T18:14:39.126391+00:00",
           "sha256": "dbdbf197050c647f5bf59faa0fc57ba6d112d979b2bd6d6032c77315bb7dfc6f"
@@ -481,11 +507,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-            "sha256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1"
+            "sha256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
-            "sha256": "180db07b9c35d655346dd249991cc9e21eeda5a18d5c961e310e0976757ae98e"
+            "sha256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c"
           }
         ]
       },
@@ -568,7 +594,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+      "sourceContentAfterSHA256": "4071a672d11ff58f8bc05861daeb0c9e9f1626c1a52d27edf4d8597f78e35689",
       "targetAfterSHA256": "fa0303a728af614d1a8c365d541a64d16c35014d87e297cb8633fef8f036b3db",
       "contextAfterSHA256": "fa0303a728af614d1a8c365d541a64d16c35014d87e297cb8633fef8f036b3db"
     },
@@ -680,7 +706,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
-        "fileSHA256": "180db07b9c35d655346dd249991cc9e21eeda5a18d5c961e310e0976757ae98e",
+        "fileSHA256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -719,11 +745,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-            "sha256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1"
+            "sha256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
-            "sha256": "180db07b9c35d655346dd249991cc9e21eeda5a18d5c961e310e0976757ae98e"
+            "sha256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c"
           }
         ]
       },
@@ -806,7 +832,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+      "sourceContentAfterSHA256": "4071a672d11ff58f8bc05861daeb0c9e9f1626c1a52d27edf4d8597f78e35689",
       "targetAfterSHA256": "4e3a265e20c6789b79ed07a6acfa165fa4b4d4e58708857e4db61f489920b71c",
       "contextAfterSHA256": "4e3a265e20c6789b79ed07a6acfa165fa4b4d4e58708857e4db61f489920b71c"
     },
@@ -946,7 +972,20 @@
               1024
             ],
             "pngBitDepth": 8,
-            "pngColorType": 2
+            "pngColorType": 2,
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "checkedAt": "2026-10-13T05:58:38.306127+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e09/dhaka/2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c-sisalto.json",
+              "reviewedSnapshotSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "currentNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            }
           },
           "qaReason": "Yleinen hienon puuvillamusliinin materiaalikuva vastaa keveyden ja läpikuultavuuden aihetta. Ei väitetä historialliseksi museoesineeksi."
         }
@@ -962,7 +1001,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-        "fileSHA256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1",
+        "fileSHA256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1037,7 +1076,20 @@
               1024
             ],
             "pngBitDepth": 8,
-            "pngColorType": 2
+            "pngColorType": 2,
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "checkedAt": "2026-10-13T05:58:38.306127+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e09/dhaka/2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c-sisalto.json",
+              "reviewedSnapshotSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "currentNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            }
           },
           "reviewedAt": "2026-10-12T18:14:39.200441+00:00",
           "sha256": "45b528df026401e3c873bf972904dbefa5b48c4b3b88d52c492ccf59fa36ab52"
@@ -1045,11 +1097,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-            "sha256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1"
+            "sha256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
-            "sha256": "180db07b9c35d655346dd249991cc9e21eeda5a18d5c961e310e0976757ae98e"
+            "sha256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c"
           }
         ]
       },
@@ -1132,7 +1184,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+      "sourceContentAfterSHA256": "4071a672d11ff58f8bc05861daeb0c9e9f1626c1a52d27edf4d8597f78e35689",
       "targetAfterSHA256": "0fbe41ea75ab86efeb50360d5afaed019fbe69d13501f90b16682986b5af9143",
       "contextAfterSHA256": "0fbe41ea75ab86efeb50360d5afaed019fbe69d13501f90b16682986b5af9143"
     },
@@ -1272,7 +1324,20 @@
               1024
             ],
             "pngBitDepth": 8,
-            "pngColorType": 2
+            "pngColorType": 2,
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "checkedAt": "2026-10-13T05:58:38.306127+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e09/dhaka/2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c-sisalto.json",
+              "reviewedSnapshotSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "currentNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            }
           },
           "qaReason": "Yleistetty simpukankuoristen rannerenkaiden materiaalia havainnollistava kuva vastaa nostoa. Koristelemattomat renkaat eivät jäljennä tiettyä korun suunnittelijaa."
         }
@@ -1288,7 +1353,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-        "fileSHA256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1",
+        "fileSHA256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -1363,7 +1428,20 @@
               1024
             ],
             "pngBitDepth": 8,
-            "pngColorType": 2
+            "pngColorType": 2,
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "checkedAt": "2026-10-13T05:58:38.306127+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e09/dhaka/2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c-sisalto.json",
+              "reviewedSnapshotSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "currentNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            }
           },
           "reviewedAt": "2026-10-12T18:14:39.246943+00:00",
           "sha256": "71dbd36dad94ddaf1bb6c3821a78444dde7cbe7d8d75abfa65d6cdf401f462be"
@@ -1371,11 +1449,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-            "sha256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1"
+            "sha256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
-            "sha256": "180db07b9c35d655346dd249991cc9e21eeda5a18d5c961e310e0976757ae98e"
+            "sha256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c"
           }
         ]
       },
@@ -1458,7 +1536,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+      "sourceContentAfterSHA256": "4071a672d11ff58f8bc05861daeb0c9e9f1626c1a52d27edf4d8597f78e35689",
       "targetAfterSHA256": "d4d449055abbe2bb64e0ddb0d0ba7e8c6ccedf7fd935eea58404cbabb542c010",
       "contextAfterSHA256": "d4d449055abbe2bb64e0ddb0d0ba7e8c6ccedf7fd935eea58404cbabb542c010"
     },
@@ -1614,7 +1692,20 @@
               1024
             ],
             "pngBitDepth": 8,
-            "pngColorType": 2
+            "pngColorType": 2,
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "checkedAt": "2026-10-13T05:58:38.306127+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e09/dhaka/2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c-sisalto.json",
+              "reviewedSnapshotSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "currentNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            }
           },
           "qaReason": "Uusi matala, kuiva ja kerrostettu leipä havainnollistaa tekstin keksimäistä Dhakan bakarkhania. Ei historiallinen valokuva tai nimetyn leipomon tuote."
         }
@@ -1630,7 +1721,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-        "fileSHA256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1",
+        "fileSHA256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1721,7 +1812,20 @@
               1024
             ],
             "pngBitDepth": 8,
-            "pngColorType": 2
+            "pngColorType": 2,
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "checkedAt": "2026-10-13T05:58:38.306127+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e09/dhaka/2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c-sisalto.json",
+              "reviewedSnapshotSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "currentNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            }
           },
           "reviewedAt": "2026-10-12T18:14:39.340775+00:00",
           "sha256": "2b16125090f25725bbcb849a80d47d18673ce5f8abb84db93b48d86092861bb9"
@@ -1729,11 +1833,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-            "sha256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1"
+            "sha256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
-            "sha256": "180db07b9c35d655346dd249991cc9e21eeda5a18d5c961e310e0976757ae98e"
+            "sha256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c"
           }
         ]
       },
@@ -1816,9 +1920,266 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+      "sourceContentAfterSHA256": "4071a672d11ff58f8bc05861daeb0c9e9f1626c1a52d27edf4d8597f78e35689",
       "targetAfterSHA256": "009e285f35d3da7d6a878c7f2216abefb62e065e896bcc410217a985ea174baf",
       "contextAfterSHA256": "009e285f35d3da7d6a878c7f2216abefb62e065e896bcc410217a985ea174baf"
+    },
+    {
+      "era": "e09",
+      "city": "dhaka",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e09-dhaka-l3-20261012-v1",
+      "galleryImageID": "e09-dhaka-l3-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dhaka/e09-dhaka-l3-20261012-v1-88c051ae59da.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva juuttikuiduista ja nahasta kauppamateriaaleina.",
+        "lyhyt": "Havainnekuva juuttikuiduista ja nahasta kauppamateriaaleina."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dhaka/e09-dhaka-l3-20261012-v1-88c051ae59da.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva juuttikuiduista ja nahasta kauppamateriaaleina.",
+        "lyhyt": "Havainnekuva juuttikuiduista ja nahasta kauppamateriaaleina."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "88c051ae59da4be1bb9a331eca574da70b03acf8d6b929e988a5126e96d99ab0",
+      "exportSHA256": "c115986461bacfb276911f6fe988f6df9a035865cba05d7c0786fbe7550baca5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dhaka/e09-dhaka-l3-20261012-v1-88c051ae59da.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dhaka/e09-dhaka-l3-20261012-v1-88c051ae59da.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/dhaka/e09-dhaka-l3-20261012-v1-88c051ae59da.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/sisalto.json",
+      "sourceContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "c1483eb9ea2f32d1086ab94535cece05262f7d36a32c7466fb606468b07f292f",
+        "semanticContextSHA256": "c1483eb9ea2f32d1086ab94535cece05262f7d36a32c7466fb606468b07f292f",
+        "subjectTitle": "Kirkko kauppiaiden jäljillä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/assets/e09-dhaka-l3-20261012-v1/original.png",
+            "nativeSha256Verified": "88c051ae59da4be1bb9a331eca574da70b03acf8d6b929e988a5126e96d99ab0",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally viewed this exact native NAS PNG with view_image earlier in this chat; SHA readback still matches. Kaksi löyhää pitkien kullanvaaleiden kuitujen vyyhtiä ja ruskeita nahkapaloja puupinnalla. Kuitujen suunnat, nahan syyt ja leikkausreunat ovat luontevia. Ei tekstiä, brändiä, ihmisiä, veristä vuotaa tai jäljennettyä taideteosta.",
+            "captionFi": "Havainnekuva juuttikuiduista ja nahasta kauppamateriaaleina.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/sisalto.json",
+            "contentSha256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+            "targetCurrentlyPresent": true,
+            "targetText": "Armanitolan armenialainen kirkko rakennettiin 1700-luvulla paikalle, jota oli jo käytetty hautausmaana. Hautakivet säilyttävät alueen armenialaisten elämäntarinoita. Yhteisön kauppiaat osallistuivat Dhakan tekstiili-, juutti- ja nahkakauppaan, ja kaupunginosan nimi kantaa heidän nimeään edelleen. Kirkko ei kerro vain uskonnosta, vaan myös kaupan mukana syntyneestä asutuksesta. Rakennus ja sen hautausmaa ovat konkreettinen jälki ihmisistä, joiden yhteydet ulottuivat Bengalista paljon kaupungin rajojen ulkopuolelle.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/faktapohja.md",
+            "factSheetSha256": "e71b3feed05361bdef59701771e499bae803719b35e62cd1c6411a3dfd9baf28",
+            "topicEvidence": "L3 nimeää armenialaisten kauppiaiden juutti- ja nahkakaupan. Paikallisen Armenian Church, Dhaka -lähteen History-kohta vahvistaa molemmat materiaalit. Selite ilmoittaa kuvan havainnollistukseksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Armenian_Church,_Dhaka",
+                "section": "History: Armenian merchants in Dhaka traded jute and leather",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-dhaka/Armenian_church.txt",
+                "sha256": "0395369b5d6483a06f2ad4c85647ffaa9fdc9e8df9815f7089843f525e33d923"
+              }
+            ],
+            "sourceHashesVerified": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-dhaka/Armenian_church.txt",
+                "sha256Verified": "0395369b5d6483a06f2ad4c85647ffaa9fdc9e8df9815f7089843f525e33d923"
+              }
+            ],
+            "rightsAssessment": "Common functional object or natural material/food/plant; no readable faces, generated logo/text/frame, named modern artwork or invented building geometry. Location honesty assessed in reason.",
+            "colorProfileNote": "Missing native sRGB metadata is not a visual rejection; later pixel-identical export belongs to delivery.",
+            "handoffMarker": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/qa-handoff-kuvitus-2.json",
+            "handoffSha256": "ed66cab6caff912881ff7838d0fa3c18d95a28ca12284f385e206a58353c2e54",
+            "scope": "Only exact-native illustration QA for e09; no CC/baseline/export/R2/integration/publication certification."
+          },
+          "qaReason": "Pitkät vaaleat juuttikuidut ja tavalliset nahkapalat vastaavat noston kauppamateriaaleja. Havainne ei esitä kirkkoa, historiallista tapahtumaa tai tietyn kauppiaan tuotteita."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva juuttikuiduista ja nahasta kauppamateriaaleina.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
+        "fileSHA256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e09-dhaka-l3-20261012-v1",
+          "sha256": "88c051ae59da4be1bb9a331eca574da70b03acf8d6b929e988a5126e96d99ab0",
+          "verdict": "accepted",
+          "reason": "Pitkät vaaleat juuttikuidut ja tavalliset nahkapalat vastaavat noston kauppamateriaaleja. Havainne ei esitä kirkkoa, historiallista tapahtumaa tai tietyn kauppiaan tuotteita.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/assets/e09-dhaka-l3-20261012-v1/original.png",
+            "nativeSha256Verified": "88c051ae59da4be1bb9a331eca574da70b03acf8d6b929e988a5126e96d99ab0",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally viewed this exact native NAS PNG with view_image earlier in this chat; SHA readback still matches. Kaksi löyhää pitkien kullanvaaleiden kuitujen vyyhtiä ja ruskeita nahkapaloja puupinnalla. Kuitujen suunnat, nahan syyt ja leikkausreunat ovat luontevia. Ei tekstiä, brändiä, ihmisiä, veristä vuotaa tai jäljennettyä taideteosta.",
+            "captionFi": "Havainnekuva juuttikuiduista ja nahasta kauppamateriaaleina.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/sisalto.json",
+            "contentSha256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+            "targetCurrentlyPresent": true,
+            "targetText": "Armanitolan armenialainen kirkko rakennettiin 1700-luvulla paikalle, jota oli jo käytetty hautausmaana. Hautakivet säilyttävät alueen armenialaisten elämäntarinoita. Yhteisön kauppiaat osallistuivat Dhakan tekstiili-, juutti- ja nahkakauppaan, ja kaupunginosan nimi kantaa heidän nimeään edelleen. Kirkko ei kerro vain uskonnosta, vaan myös kaupan mukana syntyneestä asutuksesta. Rakennus ja sen hautausmaa ovat konkreettinen jälki ihmisistä, joiden yhteydet ulottuivat Bengalista paljon kaupungin rajojen ulkopuolelle.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/faktapohja.md",
+            "factSheetSha256": "e71b3feed05361bdef59701771e499bae803719b35e62cd1c6411a3dfd9baf28",
+            "topicEvidence": "L3 nimeää armenialaisten kauppiaiden juutti- ja nahkakaupan. Paikallisen Armenian Church, Dhaka -lähteen History-kohta vahvistaa molemmat materiaalit. Selite ilmoittaa kuvan havainnollistukseksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Armenian_Church,_Dhaka",
+                "section": "History: Armenian merchants in Dhaka traded jute and leather",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-dhaka/Armenian_church.txt",
+                "sha256": "0395369b5d6483a06f2ad4c85647ffaa9fdc9e8df9815f7089843f525e33d923"
+              }
+            ],
+            "sourceHashesVerified": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-dhaka/Armenian_church.txt",
+                "sha256Verified": "0395369b5d6483a06f2ad4c85647ffaa9fdc9e8df9815f7089843f525e33d923"
+              }
+            ],
+            "rightsAssessment": "Common functional object or natural material/food/plant; no readable faces, generated logo/text/frame, named modern artwork or invented building geometry. Location honesty assessed in reason.",
+            "colorProfileNote": "Missing native sRGB metadata is not a visual rejection; later pixel-identical export belongs to delivery.",
+            "handoffMarker": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/qa-handoff-kuvitus-2.json",
+            "handoffSha256": "ed66cab6caff912881ff7838d0fa3c18d95a28ca12284f385e206a58353c2e54",
+            "scope": "Only exact-native illustration QA for e09; no CC/baseline/export/R2/integration/publication certification."
+          },
+          "reviewedAt": "2026-10-13T05:57:54.179873+00:00",
+          "reviewer": "qa-era-e09"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
+            "sha256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
+            "sha256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dhaka/e09-dhaka-l3-20261012-v1-88c051ae59da.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dhaka/e09-dhaka-l3-20261012-v1-88c051ae59da.png?t=c115986461bacfb2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dhaka/e09-dhaka-l3-20261012-v1-88c051ae59da.png",
+        "sha256": "c115986461bacfb276911f6fe988f6df9a035865cba05d7c0786fbe7550baca5",
+        "bytes": 2656158,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-dhaka-l3-20261012-v1",
+        "nativeSHA256": "88c051ae59da4be1bb9a331eca574da70b03acf8d6b929e988a5126e96d99ab0",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/dhaka/e09-dhaka-l3-20261012-v1-88c051ae59da.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "dhaka",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-13T05:59:00.976668+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/dhaka/e09-dhaka-l3-20261012-v1-88c051ae59da.png",
+        "sha256": "c115986461bacfb276911f6fe988f6df9a035865cba05d7c0786fbe7550baca5",
+        "bytes": 2656158,
+        "SHAReadAt": "2026-10-13T05:58:02.349134+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "88c051ae59da4be1bb9a331eca574da70b03acf8d6b929e988a5126e96d99ab0",
+        "rgbPixelSHA256": "e8c54b1f1a3ae29b4e56c4d064cdfa51d76c563ca96d4e61bbee6c0fa8cc7e81",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4071a672d11ff58f8bc05861daeb0c9e9f1626c1a52d27edf4d8597f78e35689",
+      "targetAfterSHA256": "c1483eb9ea2f32d1086ab94535cece05262f7d36a32c7466fb606468b07f292f",
+      "contextAfterSHA256": "c1483eb9ea2f32d1086ab94535cece05262f7d36a32c7466fb606468b07f292f"
     },
     {
       "era": "e09",
@@ -1977,7 +2338,29 @@
               4000,
               3000
             ],
-            "packReuseCheck": []
+            "packReuseCheck": [],
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "checkedAt": "2026-10-13T05:58:38.306127+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e09/dhaka/2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c-sisalto.json",
+              "reviewedSnapshotSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "currentNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:58:38.346214+00:00",
+              "contentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "commonsFile": "Chandrima Uddayan Trees.jpg",
+              "captionFi": "Puita Dhakan Chandrima Uddayan -puistossa.",
+              "credit": "Hopeoflight, Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "qaReason": "Hopeoflightin CC BY-SA 4.0 -valokuva näyttää lähteen nimenomaisesti Dhakaan sitoman Chandrima Uddayanin puustoa. PHOTO-luontoaihe kelpaa; ei puulajin tai puiston teosten oikeusvapauden väitettä. Alkuperäinen SHA ja 4000×3000 mitat varmistettu."
         }
@@ -1993,7 +2376,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-        "fileSHA256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1",
+        "fileSHA256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2094,7 +2477,29 @@
               4000,
               3000
             ],
-            "packReuseCheck": []
+            "packReuseCheck": [],
+            "currentContentVersionCheck": {
+              "reviewedContentSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "checkedAt": "2026-10-13T05:58:38.306127+00:00",
+              "personallyViewedAgain": false,
+              "reviewedSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/c-integration/history/e09/dhaka/2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c-sisalto.json",
+              "reviewedSnapshotSHA256": "2790c59553b9b201e520a0c13a8ae98c1c4851601a3346bdf82ff5068a2d990c",
+              "matches": true,
+              "method": "exact archived content SHA and full nonmedia comparison",
+              "reviewedNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "currentNonmediaSHA256": "32440713ea1babc2107855684089ec9c53e84c65c8896f78b36126c1368ea25f",
+              "imageFieldsExcludedOnlyAtInventoriedSlots": true
+            },
+            "currentBindingMetadataCheck": {
+              "checkedAt": "2026-10-13T05:58:38.346214+00:00",
+              "contentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "commonsFile": "Chandrima Uddayan Trees.jpg",
+              "captionFi": "Puita Dhakan Chandrima Uddayan -puistossa.",
+              "credit": "Hopeoflight, Commons (CC BY-SA 4.0)",
+              "captionMatchesReviewed": true,
+              "personallyViewedAgain": false
+            }
           },
           "reviewedAt": "2026-10-12T18:32:02.425291+00:00",
           "sha256": "af36001cd5945354a9f0d9c3025762a46ba04c13ff856963e338e65aa9f21b7c"
@@ -2102,11 +2507,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
-            "sha256": "f9e5225d798f7816d66e99851bd7bc27ea73e4f5594815be7420617ddeedcfe1"
+            "sha256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
-            "sha256": "180db07b9c35d655346dd249991cc9e21eeda5a18d5c961e310e0976757ae98e"
+            "sha256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c"
           }
         ]
       },
@@ -2177,9 +2582,833 @@
         "tiedosto": "Chandrima Uddayan Trees.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+      "sourceContentAfterSHA256": "4071a672d11ff58f8bc05861daeb0c9e9f1626c1a52d27edf4d8597f78e35689",
       "targetAfterSHA256": "c54f08f5ccc959c68db736b50bf1483df2e05938f952c310d4c2acb63cef14e0",
       "contextAfterSHA256": "c54f08f5ccc959c68db736b50bf1483df2e05938f952c310d4c2acb63cef14e0"
+    },
+    {
+      "era": "e09",
+      "city": "dhaka",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e09-dhaka-c1-d35b76b439325a47",
+      "galleryImageID": "capital-cc-e09-dhaka-c1-d35b76b439325a47",
+      "commonsFile": "Dhaka oli 202279 lrg.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/c1-d35b76b439325a47dea7.jpg",
+        "suora": true,
+        "lahde": "Landsat, Wikimedia Commons (PD)",
+        "selite": "Dhakan suurkaupunkialue jokien keskellä Landsat-satelliittikuvassa.",
+        "lyhyt": "Dhakan suurkaupunkialue jokien keskellä Landsat-satelliittikuvassa.",
+        "tiedosto": "Dhaka oli 202279 lrg.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Landsat, Wikimedia Commons (PD)",
+        "selite": "Dhakan suurkaupunkialue jokien keskellä Landsat-satelliittikuvassa.",
+        "lyhyt": "Dhakan suurkaupunkialue jokien keskellä Landsat-satelliittikuvassa.",
+        "tiedosto": "Dhaka oli 202279 lrg.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/c1-d35b76b439325a47dea7.jpg",
+        "suora": true,
+        "lahde": "Landsat, Wikimedia Commons (PD)",
+        "selite": "Dhakan suurkaupunkialue jokien keskellä Landsat-satelliittikuvassa.",
+        "lyhyt": "Dhakan suurkaupunkialue jokien keskellä Landsat-satelliittikuvassa.",
+        "tiedosto": "Dhaka oli 202279 lrg.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "d35b76b439325a47dea7fdfecda1e47933ff31b171f0f2fabaa6b6a648204200",
+      "exportSHA256": "d35b76b439325a47dea7fdfecda1e47933ff31b171f0f2fabaa6b6a648204200",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/c1-d35b76b439325a47dea7.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/c1-d35b76b439325a47dea7.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-01.jpg",
+      "dimensions": [
+        1817,
+        1747
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/sisalto.json",
+      "sourceContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Dhaka",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Landsat",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Dhaka_oli_202279_lrg.jpg#Licensing",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dhaka_oli_202279_lrg.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Dhaka_oli_202279_lrg.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+            "subject": "Tiedostokohtainen Commons PD-USGov-NASA ja Author Landsat luettu. Todellinen kaupunki-/jokigeografia, ei erotettavaa yksittäisen veistoksen tai luovan julkisivun ilmaisua, ei FOP/70v-oletusta. Lähde Description nimeää Greater Dhaka Urban agglomeration. Lähteen Date1January2023 on kirjattu sellaisenaan; tarkkaa sensorin kuvauspäivää ei väitetä, koska NASA-primaryroute pysähtyi TLS hostname-mismatchiin, eikä TLS-varmistusta alennettu.",
+            "placeEvidence": [
+              "English: Satellite image of Greater Dhaka Urban agglomeration"
+            ],
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/9b9177adc17cf01a50d4292aad511f5b0767062c0617d606a56984fb1df92ed7.html",
+            "noBlanketFopOrAgeAssumption": true
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-selection.json",
+            "candidateSnapshot": {
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "commonsFile": "Dhaka oli 202279 lrg.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Dhaka_oli_202279_lrg.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Dhaka_oli_202279_lrg.jpg",
+              "author": "Landsat",
+              "authorFieldSource": "Author table",
+              "license": "Public domain",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:Dhaka_oli_202279_lrg.jpg#Licensing",
+              "width": 1817,
+              "height": 1747,
+              "captionFi": "Dhakan suurkaupunkialue jokien keskellä Landsat-satelliittikuvassa.",
+              "rightsEvidence": {
+                "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+                "subject": "Tiedostokohtainen Commons PD-USGov-NASA ja Author Landsat luettu. Todellinen kaupunki-/jokigeografia, ei erotettavaa yksittäisen veistoksen tai luovan julkisivun ilmaisua, ei FOP/70v-oletusta. Lähde Description nimeää Greater Dhaka Urban agglomeration. Lähteen Date1January2023 on kirjattu sellaisenaan; tarkkaa sensorin kuvauspäivää ei väitetä, koska NASA-primaryroute pysähtyi TLS hostname-mismatchiin, eikä TLS-varmistusta alennettu.",
+                "placeEvidence": [
+                  "English: Satellite image of Greater Dhaka Urban agglomeration"
+                ],
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/9b9177adc17cf01a50d4292aad511f5b0767062c0617d606a56984fb1df92ed7.html",
+                "noBlanketFopOrAgeAssumption": true
+              },
+              "sourceContentSha256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "sourceDateText": "1 January 2023",
+              "exifDateTimeOriginal": null,
+              "sourceFactsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/candidate-01-source-facts.json",
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/candidate-01.json",
+              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-01.jpg",
+              "sha256": "d35b76b439325a47dea7fdfecda1e47933ff31b171f0f2fabaa6b6a648204200",
+              "encodedWidth": 1817,
+              "encodedHeight": 1747,
+              "exifOrientation": 1,
+              "pixelEditingPerformed": false,
+              "producerVisualReview": {
+                "checked": true,
+                "observations": "Itse katsottu alkuperäinen: yhtenäinen suuri kaupunkiasettelu, kortteliverkko ja joet luonnollisessa satelliittinäkymässä. Dhakan suurkaupunkialue on keskeinen, ei pikkukaupunki laajan maakuvan kulmassa. Ei lisättyjä paikkatekstejä, logoja tai kasvoja.",
+                "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-01.jpg",
+                "checkedAt": "2026-10-12T20:33:35.932805+00:00"
+              },
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e09/dhaka/C1/owner.json",
+              "reviewState": "candidate",
+              "candidateAt": "2026-10-12T20:33:35.932805+00:00"
+            },
+            "candidateFingerprintSHA256": "b84fe7046759b4128decb0ebc5130b3e9c4b7ac2969a8d294cec6b32dd8afde9",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/sisalto.json",
+            "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen 1817×1747. Suuri yhtenäinen kaupungin katu-/kortteliverkko, joet ja ympäröivät maa-alueet muodostavat todellisen laajan kaupunkiasettelun. Ei yksittäisiä kasvoja, rakennusjulkisivun/veistoksen yksityiskohtia, päälle lisättyä paikannimitekstiä, logoa, vesileimaa tai kehystä. Aito satelliittipaikkakuva, ei AI-panoraama.",
+            "reviewedAt": "2026-10-12T20:45:06.255231+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-01.jpg",
+            "pixelSHA256": "d35b76b439325a47dea7fdfecda1e47933ff31b171f0f2fabaa6b6a648204200",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/9b9177adc17cf01a50d4292aad511f5b0767062c0617d606a56984fb1df92ed7.html",
+            "sourceMetadata": {
+              "author": [
+                "Landsat"
+              ],
+              "licenses": [
+                "Public domain"
+              ],
+              "dimensions": [
+                1817,
+                1747
+              ],
+              "sourceSHA256": "e5f0dac76766d5658a988c044a866d548fcb40b6375e0dd503996bd59f100618"
+            },
+            "sourceLicenseLinks": [
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M128275121\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"bc1343e6-47b0-454b-9ad9-0d2e2ce58b16\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Dhaka_oli_202279_lrg.jpg\",\"wgTitle\":\"Dhaka oli 202279 lrg.jpg\",\"wgCurRevisionId\":1203768857,\"wgRevisionId\":1203768857,\"wgArticleId\":128275121,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"PD NASA\",\"Dhaka\",\"Satellite pictures of Bangladesh\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Dhaka_oli_202279_lrg.jpg\",\"wgRelevantArticleId\":128275121,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionEdit\":[],\"wgRestrictionMove\":[],\"wgRestrictionUpload\":[],\"wgNoticeProject\":\"commons\",\"wgConfirmEditCaptchaNe",
+            "sourceAuthorExcerpt": "Author Landsat Licensing [ edit ] Public domain Public domain false false This file is in the public domain in the United States because it was solely created by NASA . NASA copyright policy states that \"NASA material is not protected by copyright unless noted \". (See Template:PD-USGov , NASA copyright policy page or JPL Image Use Policy .) Warnings: Use of NASA logos , insignia and emblems is restricted per U.S. law 14 CFR 1221 . The NASA website hosts a large number of images from the Soviet / Russian space agency , and other non-American space agencies. These are not necessarily in the public domain. Materials based on Hubble Space Telescope data may be copyrighted if they are not explicitly produced by the STScI . [1] See also {{PD-Hubble}} and {{Cc-Hubble}} . The SOHO (ESA & NASA) joint project implies that all materials created by its probe are copyrighted and require permission for commercial non-educational use. [2] Images featured on the Astronomy Picture of the Day (APOD) web",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis Toggle the table of contents File : Dhaka oli 202279 lrg.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 923 pixels . Other resolutions: 250 × 240 pixels | 500 × 481 pixels | 1,280 × 1,231 pixels | 1,817 × 1,747 pixels . Original file (1,817 × 1,747 pixels, file size: 3.98 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Satellite image of Greater Dhaka Urban agglomeration Summary [ edit ] Description Dhaka oli 202279 lrg.jpg English: Satellite image of Greater Dhaka Urban agglomeration Date 1 January 2023 Source https:/",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              1817,
+              1747
+            ],
+            "sourceDescriptionExact": "Satellite image of Greater Dhaka Urban agglomeration",
+            "sourceAuthorCredit": "Landsat; exact program credit from Commons Author row, not a guessed individual photographer or uploader.",
+            "sourceDateText": "1 January 2023",
+            "sensorCaptureDateVerified": false,
+            "primaryPublisherURL": "https://landsat.visibleearth.nasa.gov/view.php?id=150274",
+            "primaryPublisherBoundary": "Producer reported TLS hostname mismatch. No certificate bypass performed; exact sensor capture day not claimed. Original Commons file-specific Author/licensing and NASA source link personally checked.",
+            "sourcePublicDomainEvidence": "File-specific PD-USGov-NASA template; NASA material public-domain basis, not the page footer licence.",
+            "depictedWorkAssessment": "Geographic urban/river layout without separate protected work details; no blanket FOP/age claim.",
+            "manifestFragment": "cc-gap-selection.json"
+          },
+          "qaReason": "Aito laaja Dhakan suurkaupunkialueen ja jokiverkon Landsat-kuva sopii C1-kanteen. Alkuperäinen Commons Description nimeää Greater Dhaka Urban agglomeration; Author-krediitti Landsat ja tiedostokohtainen PD-NASA-perusta todettu. Natiivit 1817×1747 ja SHA täsmäävät. Kuvateksti ei väitä tarkkaa sensorin kuvauspäivää: Commons Date 1.1.2023 on lähdemerkintä, ei tässä varmistettu sensoripäivä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Dhakan suurkaupunkialue jokien keskellä Landsat-satelliittikuvassa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
+        "fileSHA256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "Dhaka oli 202279 lrg.jpg",
+          "verdict": "accepted",
+          "reason": "Aito laaja Dhakan suurkaupunkialueen ja jokiverkon Landsat-kuva sopii C1-kanteen. Alkuperäinen Commons Description nimeää Greater Dhaka Urban agglomeration; Author-krediitti Landsat ja tiedostokohtainen PD-NASA-perusta todettu. Natiivit 1817×1747 ja SHA täsmäävät. Kuvateksti ei väitä tarkkaa sensorin kuvauspäivää: Commons Date 1.1.2023 on lähdemerkintä, ei tässä varmistettu sensoripäivä.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-selection.json",
+            "candidateSnapshot": {
+              "slot": "C1",
+              "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+              "type": "commons",
+              "commonsFile": "Dhaka oli 202279 lrg.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Dhaka_oli_202279_lrg.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Dhaka_oli_202279_lrg.jpg",
+              "author": "Landsat",
+              "authorFieldSource": "Author table",
+              "license": "Public domain",
+              "licenseUrl": "https://commons.wikimedia.org/wiki/File:Dhaka_oli_202279_lrg.jpg#Licensing",
+              "width": 1817,
+              "height": 1747,
+              "captionFi": "Dhakan suurkaupunkialue jokien keskellä Landsat-satelliittikuvassa.",
+              "rightsEvidence": {
+                "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+                "subject": "Tiedostokohtainen Commons PD-USGov-NASA ja Author Landsat luettu. Todellinen kaupunki-/jokigeografia, ei erotettavaa yksittäisen veistoksen tai luovan julkisivun ilmaisua, ei FOP/70v-oletusta. Lähde Description nimeää Greater Dhaka Urban agglomeration. Lähteen Date1January2023 on kirjattu sellaisenaan; tarkkaa sensorin kuvauspäivää ei väitetä, koska NASA-primaryroute pysähtyi TLS hostname-mismatchiin, eikä TLS-varmistusta alennettu.",
+                "placeEvidence": [
+                  "English: Satellite image of Greater Dhaka Urban agglomeration"
+                ],
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/9b9177adc17cf01a50d4292aad511f5b0767062c0617d606a56984fb1df92ed7.html",
+                "noBlanketFopOrAgeAssumption": true
+              },
+              "sourceContentSha256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "sourceDateText": "1 January 2023",
+              "exifDateTimeOriginal": null,
+              "sourceFactsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/candidate-01-source-facts.json",
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/candidate-01.json",
+              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-01.jpg",
+              "sha256": "d35b76b439325a47dea7fdfecda1e47933ff31b171f0f2fabaa6b6a648204200",
+              "encodedWidth": 1817,
+              "encodedHeight": 1747,
+              "exifOrientation": 1,
+              "pixelEditingPerformed": false,
+              "producerVisualReview": {
+                "checked": true,
+                "observations": "Itse katsottu alkuperäinen: yhtenäinen suuri kaupunkiasettelu, kortteliverkko ja joet luonnollisessa satelliittinäkymässä. Dhakan suurkaupunkialue on keskeinen, ei pikkukaupunki laajan maakuvan kulmassa. Ei lisättyjä paikkatekstejä, logoja tai kasvoja.",
+                "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-01.jpg",
+                "checkedAt": "2026-10-12T20:33:35.932805+00:00"
+              },
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e09/dhaka/C1/owner.json",
+              "reviewState": "candidate",
+              "candidateAt": "2026-10-12T20:33:35.932805+00:00"
+            },
+            "candidateFingerprintSHA256": "b84fe7046759b4128decb0ebc5130b3e9c4b7ac2969a8d294cec6b32dd8afde9",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/sisalto.json",
+            "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+            "targetExists": true,
+            "currentTargetContent": {
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": ""
+            },
+            "visualObservation": "Katsoin paikallisen alkuperäisen 1817×1747. Suuri yhtenäinen kaupungin katu-/kortteliverkko, joet ja ympäröivät maa-alueet muodostavat todellisen laajan kaupunkiasettelun. Ei yksittäisiä kasvoja, rakennusjulkisivun/veistoksen yksityiskohtia, päälle lisättyä paikannimitekstiä, logoa, vesileimaa tai kehystä. Aito satelliittipaikkakuva, ei AI-panoraama.",
+            "reviewedAt": "2026-10-12T20:45:06.255231+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-01.jpg",
+            "pixelSHA256": "d35b76b439325a47dea7fdfecda1e47933ff31b171f0f2fabaa6b6a648204200",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/9b9177adc17cf01a50d4292aad511f5b0767062c0617d606a56984fb1df92ed7.html",
+            "sourceMetadata": {
+              "author": [
+                "Landsat"
+              ],
+              "licenses": [
+                "Public domain"
+              ],
+              "dimensions": [
+                1817,
+                1747
+              ],
+              "sourceSHA256": "e5f0dac76766d5658a988c044a866d548fcb40b6375e0dd503996bd59f100618"
+            },
+            "sourceLicenseLinks": [
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "Descriptions\":{\"search\":true,\"watchlist\":true,\"tagline\":true,\"nearby\":true},\"wgWMESchemaEditAttemptStepOversample\":false,\"wgWMEPageLength\":400,\"wbUserPreferredContentLanguages\":[\"en\"],\"wbUserSpecifiedLanguages\":[\"en\"],\"wbCopyright\":{\"version\":\"wikibase-1\",\"messageHtml\":\"By clicking \\\"publish\\\", you agree to the \\u003Ca href=\\\"/wiki/Commons:Copyrights\\\" class=\\\"mw-redirect\\\" title=\\\"Commons:Copyrights\\\"\\u003Eterms of use\\u003C/a\\u003E, and you irrevocably agree to release your contribution under the \\u003Ca rel=\\\"nofollow\\\" class=\\\"external text\\\" href=\\\"https://creativecommons.org/publicdomain/zero/1.0/\\\"\\u003ECreative Commons CC0 License\\u003C/a\\u003E.\"},\"wbBadgeItems\":[],\"wbMultiLingualStringLimit\":250,\"wbTaintedReferencesEnabled\":false,\"wbEntityId\":\"M128275121\",\"wgEditSubmitButtonLabelPublish\":true,\"wgTestKitchenUserExperiments\":{\"overrides\":[],\"enrolled\":[],\"assigned\":[],\"subject_ids\":[]},\"upwizPropertyTitles\":{\"P180\":\"Main subjects visible in this work\"},\"upwizPropertyPlaceholders",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"bc1343e6-47b0-454b-9ad9-0d2e2ce58b16\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:Dhaka_oli_202279_lrg.jpg\",\"wgTitle\":\"Dhaka oli 202279 lrg.jpg\",\"wgCurRevisionId\":1203768857,\"wgRevisionId\":1203768857,\"wgArticleId\":128275121,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"PD NASA\",\"Dhaka\",\"Satellite pictures of Bangladesh\"],\"wgPageViewLanguage\":\"en\",\"wgPageContentLanguage\":\"en\",\"wgPageContentModel\":\"wikitext\",\"wgRelevantPageName\":\"File:Dhaka_oli_202279_lrg.jpg\",\"wgRelevantArticleId\":128275121,\"wgTempUserName\":null,\"wgIsProbablyEditable\":true,\"wgRelevantPageIsProbablyEditable\":true,\"wgRestrictionEdit\":[],\"wgRestrictionMove\":[],\"wgRestrictionUpload\":[],\"wgNoticeProject\":\"commons\",\"wgConfirmEditCaptchaNe",
+            "sourceAuthorExcerpt": "Author Landsat Licensing [ edit ] Public domain Public domain false false This file is in the public domain in the United States because it was solely created by NASA . NASA copyright policy states that \"NASA material is not protected by copyright unless noted \". (See Template:PD-USGov , NASA copyright policy page or JPL Image Use Policy .) Warnings: Use of NASA logos , insignia and emblems is restricted per U.S. law 14 CFR 1221 . The NASA website hosts a large number of images from the Soviet / Russian space agency , and other non-American space agencies. These are not necessarily in the public domain. Materials based on Hubble Space Telescope data may be copyrighted if they are not explicitly produced by the STScI . [1] See also {{PD-Hubble}} and {{Cc-Hubble}} . The SOHO (ESA & NASA) joint project implies that all materials created by its probe are copyrighted and require permission for commercial non-educational use. [2] Images featured on the Astronomy Picture of the Day (APOD) web",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 File usage on other wikis Toggle the table of contents File : Dhaka oli 202279 lrg.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 923 pixels . Other resolutions: 250 × 240 pixels | 500 × 481 pixels | 1,280 × 1,231 pixels | 1,817 × 1,747 pixels . Original file (1,817 × 1,747 pixels, file size: 3.98 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Satellite image of Greater Dhaka Urban agglomeration Summary [ edit ] Description Dhaka oli 202279 lrg.jpg English: Satellite image of Greater Dhaka Urban agglomeration Date 1 January 2023 Source https:/",
+            "sourceCameralocationExcerpt": null,
+            "actualDimensions": [
+              1817,
+              1747
+            ],
+            "sourceDescriptionExact": "Satellite image of Greater Dhaka Urban agglomeration",
+            "sourceAuthorCredit": "Landsat; exact program credit from Commons Author row, not a guessed individual photographer or uploader.",
+            "sourceDateText": "1 January 2023",
+            "sensorCaptureDateVerified": false,
+            "primaryPublisherURL": "https://landsat.visibleearth.nasa.gov/view.php?id=150274",
+            "primaryPublisherBoundary": "Producer reported TLS hostname mismatch. No certificate bypass performed; exact sensor capture day not claimed. Original Commons file-specific Author/licensing and NASA source link personally checked.",
+            "sourcePublicDomainEvidence": "File-specific PD-USGov-NASA template; NASA material public-domain basis, not the page footer licence.",
+            "depictedWorkAssessment": "Geographic urban/river layout without separate protected work details; no blanket FOP/age claim.",
+            "manifestFragment": "cc-gap-selection.json"
+          },
+          "reviewedAt": "2026-10-12T20:45:06.314089+00:00",
+          "sha256": "d35b76b439325a47dea7fdfecda1e47933ff31b171f0f2fabaa6b6a648204200"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
+            "sha256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
+            "sha256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "dhaka",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "Dhaka oli 202279 lrg.jpg",
+        "sha256": "d35b76b439325a47dea7fdfecda1e47933ff31b171f0f2fabaa6b6a648204200",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Dhaka_oli_202279_lrg.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Dhaka_oli_202279_lrg.jpg",
+        "author": "Landsat",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:Dhaka_oli_202279_lrg.jpg#Licensing",
+        "width": 1817,
+        "height": 1747,
+        "originalSHA256": "d35b76b439325a47dea7fdfecda1e47933ff31b171f0f2fabaa6b6a648204200",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/c1-d35b76b439325a47dea7.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/c1-d35b76b439325a47dea7.jpg",
+        "bytes": 4174946,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:45:43.211950+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Landsat, Wikimedia Commons (PD)",
+        "selite": "Dhakan suurkaupunkialue jokien keskellä Landsat-satelliittikuvassa.",
+        "lyhyt": "Dhakan suurkaupunkialue jokien keskellä Landsat-satelliittikuvassa.",
+        "tiedosto": "Dhaka oli 202279 lrg.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4071a672d11ff58f8bc05861daeb0c9e9f1626c1a52d27edf4d8597f78e35689",
+      "targetAfterSHA256": "d855b3439766c2c8cd07f82d94e8b6d1d8641ad0c662dee0ee1be9ac1b25158d",
+      "contextAfterSHA256": "d855b3439766c2c8cd07f82d94e8b6d1d8641ad0c662dee0ee1be9ac1b25158d"
+    },
+    {
+      "era": "e09",
+      "city": "dhaka",
+      "slot": "K1",
+      "type": "commons",
+      "assetID": "capital-cc-e09-dhaka-k1-b0c6a8ce2b3151e7",
+      "galleryImageID": "capital-cc-e09-dhaka-k1-b0c6a8ce2b3151e7",
+      "commonsFile": "River Port from Above.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/k1-b0c6a8ce2b3151e7c1b8.jpg",
+        "suora": true,
+        "lahde": "Amdadphoto, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Jokisataman veneitä Dhakan Burigangalla maaliskuussa 2023.",
+        "lyhyt": "Jokisataman veneitä Dhakan Burigangalla maaliskuussa 2023.",
+        "tiedosto": "River Port from Above.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Amdadphoto, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Jokisataman veneitä Dhakan Burigangalla maaliskuussa 2023.",
+        "lyhyt": "Jokisataman veneitä Dhakan Burigangalla maaliskuussa 2023.",
+        "tiedosto": "River Port from Above.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/k1-b0c6a8ce2b3151e7c1b8.jpg",
+        "suora": true,
+        "lahde": "Amdadphoto, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Jokisataman veneitä Dhakan Burigangalla maaliskuussa 2023.",
+        "lyhyt": "Jokisataman veneitä Dhakan Burigangalla maaliskuussa 2023.",
+        "tiedosto": "River Port from Above.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b0c6a8ce2b3151e7c1b8d8cb5219fb6b996573d1a179a421a040233bbb6027ed",
+      "exportSHA256": "b0c6a8ce2b3151e7c1b8d8cb5219fb6b996573d1a179a421a040233bbb6027ed",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/k1-b0c6a8ce2b3151e7c1b8.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/k1-b0c6a8ce2b3151e7c1b8.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-03.jpg",
+      "dimensions": [
+        4000,
+        3000
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/sisalto.json",
+      "sourceContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "18f3b0f0eee4d100dcae1739757d3d450f9decaf491577f4698f27d79a22c2e3",
+        "semanticContextSHA256": "18f3b0f0eee4d100dcae1739757d3d450f9decaf491577f4698f27d79a22c2e3",
+        "subjectTitle": "Joki on liikenneväylä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Amdadphoto",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:River_Port_from_Above.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/River_Port_from_Above.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+            "subject": "Lähde nimeää Burigangan, antaa tarkan camera location 23°42′25.99″N 90°24′23.88″E Dhakan Sadarghatin jokisatamassa sekä explicit Author Amdadphoto/CC BY-SA4.0. Pääsisältö toiminnallinen jokiliikenne, veneet ja laituri, ei suojattua yksittäistä arkkitehtuuria/taidetta. Päiväys 26.3.2023, ei 2026 upload-kampanjan sekoittamista kuvauspäivään; kaupallinen valokuvalupa varmennettu.",
+            "placeEvidence": [
+              "বাংলা: বুড়িগঙ্গা নদী This is a photo of a natural heritage site in Bangladesh identified by the ID: BDPA-ECA-C-13-9",
+              "বাংলা: বুড়িগঙ্গা নদী",
+              "This is a photo of a natural heritage site in Bangladesh identified by the ID:",
+              "I, the copyright holder of this work, hereby publish it under the following license:",
+              "This image was uploaded as part of Wiki Loves Earth 2026 ."
+            ],
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/987d5c70d4778c069ba97d8b808b706391aba7c62feaf5bb49f0ef625b578b65.html",
+            "noBlanketFopOrAgeAssumption": true
+          },
+          "QA": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-selection.json",
+            "candidateSnapshot": {
+              "slot": "K1",
+              "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+              "type": "commons",
+              "commonsFile": "River Port from Above.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:River_Port_from_Above.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/River_Port_from_Above.jpg",
+              "author": "Amdadphoto",
+              "authorFieldSource": "Author table",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "width": 4000,
+              "height": 3000,
+              "captionFi": "Jokisataman veneitä Dhakan Burigangalla maaliskuussa 2023.",
+              "rightsEvidence": {
+                "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+                "subject": "Lähde nimeää Burigangan, antaa tarkan camera location 23°42′25.99″N 90°24′23.88″E Dhakan Sadarghatin jokisatamassa sekä explicit Author Amdadphoto/CC BY-SA4.0. Pääsisältö toiminnallinen jokiliikenne, veneet ja laituri, ei suojattua yksittäistä arkkitehtuuria/taidetta. Päiväys 26.3.2023, ei 2026 upload-kampanjan sekoittamista kuvauspäivään; kaupallinen valokuvalupa varmennettu.",
+                "placeEvidence": [
+                  "বাংলা: বুড়িগঙ্গা নদী This is a photo of a natural heritage site in Bangladesh identified by the ID: BDPA-ECA-C-13-9",
+                  "বাংলা: বুড়িগঙ্গা নদী",
+                  "This is a photo of a natural heritage site in Bangladesh identified by the ID:",
+                  "I, the copyright holder of this work, hereby publish it under the following license:",
+                  "This image was uploaded as part of Wiki Loves Earth 2026 ."
+                ],
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/987d5c70d4778c069ba97d8b808b706391aba7c62feaf5bb49f0ef625b578b65.html",
+                "noBlanketFopOrAgeAssumption": true
+              },
+              "sourceContentSha256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "sourceDateText": "26 March 2023, 14:30:33",
+              "exifDateTimeOriginal": null,
+              "sourceFactsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/candidate-03-source-facts.json",
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/candidate-03.json",
+              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-03.jpg",
+              "sha256": "b0c6a8ce2b3151e7c1b8d8cb5219fb6b996573d1a179a421a040233bbb6027ed",
+              "encodedWidth": 4000,
+              "encodedHeight": 3000,
+              "exifOrientation": 1,
+              "pixelEditingPerformed": false,
+              "producerVisualReview": {
+                "checked": true,
+                "observations": "Katsoin muuttamattoman 4000x3000 natiivin: ylhäältä kuvattu veneliikenne ja satamalaituri Burigangalla. Ihmiset ovat pieniä ylhäältä kuvattuja hahmoja, kasvot eivät tunnistu. Tavallisia puisia veneitä ja kuormia; ei taideteosta, lisättyä tekstiä, vesileimaa tai mainospääaihetta. Ei laajaa kaupungin coveria eikä tuoreusväitettä; oikea rooli K1 jokiliikenne.",
+                "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-03.jpg",
+                "checkedAt": "2026-10-12T20:41:50.714508+00:00"
+              },
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e09/dhaka/K1/owner.json",
+              "reviewState": "candidate",
+              "candidateAt": "2026-10-12T20:41:50.714508+00:00"
+            },
+            "candidateFingerprintSHA256": "ed9164bdd0086efd8827bee403ac8cb2dd0989421841d81862911541b28011b2",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/sisalto.json",
+            "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+            "targetExists": true,
+            "currentTargetContent": {
+              "otsikko": "Joki on liikenneväylä",
+              "teksti": "Sadarghatin satamassa Buriganga kuuluu Dhakan arjen liikenteeseen. Sieltä kuljetetaan sekä matkustajia että tavaraa muualle Bangladeshin jokialueille. Alukset yhdistävät pääkaupungin paikkoihin, joihin vesireitti on luonteva yhteys. Jokiranta ei siis ole vain paikka, josta kaupunkia katsotaan, vaan paikka, josta lähdetään. Dhaka on kasvanut jokien keskellä, ja sen satama jatkaa vanhaa kauppakaupungin tehtävää. Suurkaupungin reitit eivät lopu kadun reunaan: osa matkasta alkaa laiturilta.",
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": "",
+              "wiki": "Dhaka"
+            },
+            "visualObservation": "Katsoin 4000×3000 alkuperäiskuvan sekä kaksi muuttamattomassa pikselikoossa tehtyä tarkistusrajausta matkustaja- ja soutuveneiden ihmisistä. Ihmiset näkyvät jyrkästi ylhäältä, päälakina tai pieninä pehmeinä sivuprofiileina; yksilöllisiä kasvonpiirteitä ei voi lukea. Tavalliset veneet, katokset, satamalaituri ja tavarakuormat ovat toiminnallista satamaympäristöä. Ei itsenäistä taideteosta pääaiheena, lisättyä vesileimaa tai kehystä. Satamarakenteiden pienet luonnolliset merkinnät eivät tee tästä mainoskuvaa.",
+            "reviewedAt": "2026-10-12T20:59:40.966749+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-03.jpg",
+            "pixelSHA256": "b0c6a8ce2b3151e7c1b8d8cb5219fb6b996573d1a179a421a040233bbb6027ed",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/987d5c70d4778c069ba97d8b808b706391aba7c62feaf5bb49f0ef625b578b65.html",
+            "sourceMetadata": {
+              "author": [
+                "Amdadphoto"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                4000,
+                3000
+              ],
+              "sourceSHA256": "175efa675ddf2e8f0c5528932b8b2601d1aab54af83fc9ff27180c8ce032265c"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "বাংলা: বুড়িগঙ্গা নদী; Date 26 March 2023, 14:30:33; Source Own work; Author Amdadphoto; Camera location 23°42′25.99″N, 90°24′23.88″E (23.707219, 90.406634).",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"4c81a80f-5bda-4153-b6a0-770039bc8f52\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:River_Port_from_Above.jpg\",\"wgTitle\":\"River Port from Above.jpg\",\"wgCurRevisionId\":1275926274,\"wgRevisionId\":1275926274,\"wgArticleId\":196307732,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Natural heritage sites in Bangladesh with known IDs\",\"Images from Wiki Loves Earth 2026 Human Rights and Environment Special Nomination\",\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Images from Wiki Loves Earth 2026\",\"Images from Wiki Loves Earth 2026 in Bangladesh\",\"Images from Wiki Loves Earth missing SDC source of file\",\"Images from Wiki Loves Earth missing SDC depicts\",\"Images ",
+            "sourceAuthorExcerpt": "Author Amdadphoto Camera location 23° 42′ 25.99″ N, 90° 24′ 23.88″ E View this and other nearby images on: OpenStreetMap 23.707219; 90.406634 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true This image was uploaded a",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : River Port from Above.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 720 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 960 pixels | 3,840 × 2,880 pixels . Original file (4,000 × 3,000 pixels, file size: 3.38 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description River Port from Above.jpg বাংলা: বুড়িগঙ্গা নদী This is a photo of a natural heritage site in Bangladesh identified by the ID: BDPA-ECA-C-13-9 Date 26 Marc",
+            "sourceCameralocationExcerpt": "Camera location 23° 42′ 25.99″ N, 90° 24′ 23.88″ E View this and other nearby images on: OpenStreetMap 23.707219; 90.406634 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true This image was uploaded as part of Wiki Lov",
+            "actualDimensions": [
+              4000,
+              3000
+            ],
+            "exifOrientation": 1,
+            "nativeFaceChecks": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa-evidence/k1-native-boats-lower.png",
+                "sha256": "b9415a60b020aad52b25dc9ffa8b4fca4cee86fc041f9927fb6e24dd46e08508",
+                "nativeBox": [
+                  300,
+                  1800,
+                  1150,
+                  2850
+                ],
+                "scaled": false,
+                "inspectionOnly": true
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa-evidence/k1-native-boats-center.png",
+                "sha256": "1f611ba3bf20a7a8f98699fa3f502e35d04ac0110e5d27ad3380877a60f199d7",
+                "nativeBox": [
+                  1150,
+                  500,
+                  1900,
+                  1200
+                ],
+                "scaled": false,
+                "inspectionOnly": true
+              }
+            ],
+            "placeCheck": {
+              "sourceNamesBuriganga": true,
+              "sourceCoordinates": [
+                23.707219,
+                90.406634
+              ],
+              "targetSubject": "Sadarghatin jokisataman matkustaja- ja tavaraliikenne",
+              "noUploadCampaignDateSubstitution": true
+            }
+          },
+          "qaReason": "Aito Burigangan jokisataman valokuva vastaa K1:n Sadarghatin matkustaja- ja tavaraliikenneaihetta. Lähteen Author Amdadphoto, CC BY-SA 4.0, kuvauspäivä 26.3.2023 ja Sadarghatin koordinaatit tarkistettu. Natiivi 4000×3000 ja SHA varmistettu; kasvot eivät erotu luettavasti alkuperäisistä rajauksista."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Jokisataman veneitä Dhakan Burigangalla maaliskuussa 2023.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
+        "fileSHA256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "commonsFile": "River Port from Above.jpg",
+          "verdict": "accepted",
+          "reason": "Aito Burigangan jokisataman valokuva vastaa K1:n Sadarghatin matkustaja- ja tavaraliikenneaihetta. Lähteen Author Amdadphoto, CC BY-SA 4.0, kuvauspäivä 26.3.2023 ja Sadarghatin koordinaatit tarkistettu. Natiivi 4000×3000 ja SHA varmistettu; kasvot eivät erotu luettavasti alkuperäisistä rajauksista.",
+          "evidence": {
+            "manifestPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-selection.json",
+            "candidateSnapshot": {
+              "slot": "K1",
+              "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+              "type": "commons",
+              "commonsFile": "River Port from Above.jpg",
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:River_Port_from_Above.jpg",
+              "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/River_Port_from_Above.jpg",
+              "author": "Amdadphoto",
+              "authorFieldSource": "Author table",
+              "license": "CC BY-SA 4.0",
+              "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+              "width": 4000,
+              "height": 3000,
+              "captionFi": "Jokisataman veneitä Dhakan Burigangalla maaliskuussa 2023.",
+              "rightsEvidence": {
+                "photoLicense": "Original source license and credit read, permitting commercial reuse.",
+                "subject": "Lähde nimeää Burigangan, antaa tarkan camera location 23°42′25.99″N 90°24′23.88″E Dhakan Sadarghatin jokisatamassa sekä explicit Author Amdadphoto/CC BY-SA4.0. Pääsisältö toiminnallinen jokiliikenne, veneet ja laituri, ei suojattua yksittäistä arkkitehtuuria/taidetta. Päiväys 26.3.2023, ei 2026 upload-kampanjan sekoittamista kuvauspäivään; kaupallinen valokuvalupa varmennettu.",
+                "placeEvidence": [
+                  "বাংলা: বুড়িগঙ্গা নদী This is a photo of a natural heritage site in Bangladesh identified by the ID: BDPA-ECA-C-13-9",
+                  "বাংলা: বুড়িগঙ্গা নদী",
+                  "This is a photo of a natural heritage site in Bangladesh identified by the ID:",
+                  "I, the copyright holder of this work, hereby publish it under the following license:",
+                  "This image was uploaded as part of Wiki Loves Earth 2026 ."
+                ],
+                "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/987d5c70d4778c069ba97d8b808b706391aba7c62feaf5bb49f0ef625b578b65.html",
+                "noBlanketFopOrAgeAssumption": true
+              },
+              "sourceContentSha256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+              "sourceDateText": "26 March 2023, 14:30:33",
+              "exifDateTimeOriginal": null,
+              "sourceFactsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/candidate-03-source-facts.json",
+              "metadataPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/candidate-03.json",
+              "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-03.jpg",
+              "sha256": "b0c6a8ce2b3151e7c1b8d8cb5219fb6b996573d1a179a421a040233bbb6027ed",
+              "encodedWidth": 4000,
+              "encodedHeight": 3000,
+              "exifOrientation": 1,
+              "pixelEditingPerformed": false,
+              "producerVisualReview": {
+                "checked": true,
+                "observations": "Katsoin muuttamattoman 4000x3000 natiivin: ylhäältä kuvattu veneliikenne ja satamalaituri Burigangalla. Ihmiset ovat pieniä ylhäältä kuvattuja hahmoja, kasvot eivät tunnistu. Tavallisia puisia veneitä ja kuormia; ei taideteosta, lisättyä tekstiä, vesileimaa tai mainospääaihetta. Ei laajaa kaupungin coveria eikä tuoreusväitettä; oikea rooli K1 jokiliikenne.",
+                "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-03.jpg",
+                "checkedAt": "2026-10-12T20:41:50.714508+00:00"
+              },
+              "claimRecord": "/Volumes/T7 4TB/ChatGPT-Codex-active/coordination/paakaupungit-claims/08391cff28146b17/e09/dhaka/K1/owner.json",
+              "reviewState": "candidate",
+              "candidateAt": "2026-10-12T20:41:50.714508+00:00"
+            },
+            "candidateFingerprintSHA256": "ed9164bdd0086efd8827bee403ac8cb2dd0989421841d81862911541b28011b2",
+            "currentContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dhaka/sisalto.json",
+            "currentContentSHA256": "5856567d3927cb6a363325ed5a554fb8a6047f5e700a3a15c03769ac3ad087ab",
+            "targetExists": true,
+            "currentTargetContent": {
+              "otsikko": "Joki on liikenneväylä",
+              "teksti": "Sadarghatin satamassa Buriganga kuuluu Dhakan arjen liikenteeseen. Sieltä kuljetetaan sekä matkustajia että tavaraa muualle Bangladeshin jokialueille. Alukset yhdistävät pääkaupungin paikkoihin, joihin vesireitti on luonteva yhteys. Jokiranta ei siis ole vain paikka, josta kaupunkia katsotaan, vaan paikka, josta lähdetään. Dhaka on kasvanut jokien keskellä, ja sen satama jatkaa vanhaa kauppakaupungin tehtävää. Suurkaupungin reitit eivät lopu kadun reunaan: osa matkasta alkaa laiturilta.",
+              "tiedosto": "",
+              "lyhyt": "",
+              "selite": "",
+              "lahde": "",
+              "wiki": "Dhaka"
+            },
+            "visualObservation": "Katsoin 4000×3000 alkuperäiskuvan sekä kaksi muuttamattomassa pikselikoossa tehtyä tarkistusrajausta matkustaja- ja soutuveneiden ihmisistä. Ihmiset näkyvät jyrkästi ylhäältä, päälakina tai pieninä pehmeinä sivuprofiileina; yksilöllisiä kasvonpiirteitä ei voi lukea. Tavalliset veneet, katokset, satamalaituri ja tavarakuormat ovat toiminnallista satamaympäristöä. Ei itsenäistä taideteosta pääaiheena, lisättyä vesileimaa tai kehystä. Satamarakenteiden pienet luonnolliset merkinnät eivät tee tästä mainoskuvaa.",
+            "reviewedAt": "2026-10-12T20:59:40.966749+00:00",
+            "pixelsViewed": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/cc-gap-search/original-03.jpg",
+            "pixelSHA256": "b0c6a8ce2b3151e7c1b8d8cb5219fb6b996573d1a179a421a040233bbb6027ed",
+            "sourceEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/987d5c70d4778c069ba97d8b808b706391aba7c62feaf5bb49f0ef625b578b65.html",
+            "sourceMetadata": {
+              "author": [
+                "Amdadphoto"
+              ],
+              "licenses": [
+                "CC BY-SA 4.0"
+              ],
+              "dimensions": [
+                4000,
+                3000
+              ],
+              "sourceSHA256": "175efa675ddf2e8f0c5528932b8b2601d1aab54af83fc9ff27180c8ce032265c"
+            },
+            "sourceLicenseLinks": [
+              "//creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "https://creativecommons.org/share-your-work/licensing-considerations/compatible-licenses",
+              "https://creativecommons.org/publicdomain/zero/1.0/",
+              "https://creativecommons.org/licenses/by-sa/4.0/"
+            ],
+            "sourceDescriptionExcerpt": "বাংলা: বুড়িগঙ্গা নদী; Date 26 March 2023, 14:30:33; Source Own work; Author Amdadphoto; Camera location 23°42′25.99″N, 90°24′23.88″E (23.707219, 90.406634).",
+            "sourceDateExcerpt": "DateFormat\":\"dmy\",\"wgMonthNames\":[\"\",\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"wgRequestId\":\"4c81a80f-5bda-4153-b6a0-770039bc8f52\",\"wgCanonicalNamespace\":\"File\",\"wgCanonicalSpecialPageName\":false,\"wgNamespaceNumber\":6,\"wgPageName\":\"File:River_Port_from_Above.jpg\",\"wgTitle\":\"River Port from Above.jpg\",\"wgCurRevisionId\":1275926274,\"wgRevisionId\":1275926274,\"wgArticleId\":196307732,\"wgIsArticle\":true,\"wgIsRedirect\":false,\"wgAction\":\"view\",\"wgUserName\":null,\"wgUserGroups\":[\"*\"],\"wgCategories\":[\"Natural heritage sites in Bangladesh with known IDs\",\"Images from Wiki Loves Earth 2026 Human Rights and Environment Special Nomination\",\"Files with coordinates missing SDC location of creation\",\"CC-BY-SA-4.0\",\"Self-published work\",\"Images from Wiki Loves Earth 2026\",\"Images from Wiki Loves Earth 2026 in Bangladesh\",\"Images from Wiki Loves Earth missing SDC source of file\",\"Images from Wiki Loves Earth missing SDC depicts\",\"Images ",
+            "sourceAuthorExcerpt": "Author Amdadphoto Camera location 23° 42′ 25.99″ N, 90° 24′ 23.88″ E View this and other nearby images on: OpenStreetMap 23.707219; 90.406634 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true This image was uploaded a",
+            "sourceLicensingExcerpt": "Licensing 4 File history 5 File usage on Commons 6 Metadata Toggle the table of contents File : River Port from Above.jpg File Discussion English Read Edit View history Tools Tools move to sidebar hide Actions Read Edit View history General What links here Related changes Permanent link Page information Cite this page Get shortened URL Concept URI Print/export Download as PDF Printable version In other projects Appearance move to sidebar hide From Wikimedia Commons, the free media repository Size of this preview: 960 × 720 pixels . Other resolutions: 330 × 248 pixels | 1,280 × 960 pixels | 3,840 × 2,880 pixels . Original file (4,000 × 3,000 pixels, file size: 3.38 MB, MIME type: image/jpeg ) File information Structured data Captions Captions English Add a one-line explanation of what this file represents Summary [ edit ] Description River Port from Above.jpg বাংলা: বুড়িগঙ্গা নদী This is a photo of a natural heritage site in Bangladesh identified by the ID: BDPA-ECA-C-13-9 Date 26 Marc",
+            "sourceCameralocationExcerpt": "Camera location 23° 42′ 25.99″ N, 90° 24′ 23.88″ E View this and other nearby images on: OpenStreetMap 23.707219; 90.406634 Licensing [ edit ] I, the copyright holder of this work, hereby publish it under the following license: This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. You are free: to share – to copy, distribute and transmit the work to remix – to adapt the work Under the following conditions: attribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. share alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original. https://creativecommons.org/licenses/by-sa/4.0 CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 true true This image was uploaded as part of Wiki Lov",
+            "actualDimensions": [
+              4000,
+              3000
+            ],
+            "exifOrientation": 1,
+            "nativeFaceChecks": [
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa-evidence/k1-native-boats-lower.png",
+                "sha256": "b9415a60b020aad52b25dc9ffa8b4fca4cee86fc041f9927fb6e24dd46e08508",
+                "nativeBox": [
+                  300,
+                  1800,
+                  1150,
+                  2850
+                ],
+                "scaled": false,
+                "inspectionOnly": true
+              },
+              {
+                "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa-evidence/k1-native-boats-center.png",
+                "sha256": "1f611ba3bf20a7a8f98699fa3f502e35d04ac0110e5d27ad3380877a60f199d7",
+                "nativeBox": [
+                  1150,
+                  500,
+                  1900,
+                  1200
+                ],
+                "scaled": false,
+                "inspectionOnly": true
+              }
+            ],
+            "placeCheck": {
+              "sourceNamesBuriganga": true,
+              "sourceCoordinates": [
+                23.707219,
+                90.406634
+              ],
+              "targetSubject": "Sadarghatin jokisataman matkustaja- ja tavaraliikenne",
+              "noUploadCampaignDateSubstitution": true
+            }
+          },
+          "reviewedAt": "2026-10-12T20:59:40.987923+00:00",
+          "sha256": "b0c6a8ce2b3151e7c1b8d8cb5219fb6b996573d1a179a421a040233bbb6027ed"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/qa.json",
+            "sha256": "b852dbbbdac8bd40ce17f0d7139aa5b67c204dd2ee5fc09bad90c7a09e0096e1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/dhaka/illustration-qa-extra.json",
+            "sha256": "c54373f366cfc712b51ad3fcee8176f3f410d69c3b9784489ca705fa3106263c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "dhaka",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "commonsFile": "River Port from Above.jpg",
+        "sha256": "b0c6a8ce2b3151e7c1b8d8cb5219fb6b996573d1a179a421a040233bbb6027ed",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:River_Port_from_Above.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/River_Port_from_Above.jpg",
+        "author": "Amdadphoto",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 4000,
+        "height": 3000,
+        "originalSHA256": "b0c6a8ce2b3151e7c1b8d8cb5219fb6b996573d1a179a421a040233bbb6027ed",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/k1-b0c6a8ce2b3151e7c1b8.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dhaka/k1-b0c6a8ce2b3151e7c1b8.jpg",
+        "bytes": 3541368,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-13T05:53:51.437610+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Amdadphoto, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Jokisataman veneitä Dhakan Burigangalla maaliskuussa 2023.",
+        "lyhyt": "Jokisataman veneitä Dhakan Burigangalla maaliskuussa 2023.",
+        "tiedosto": "River Port from Above.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "4071a672d11ff58f8bc05861daeb0c9e9f1626c1a52d27edf4d8597f78e35689",
+      "targetAfterSHA256": "fa85a3b289623c7f9cad185f2eff758a59e5788dbdad6f1a514e6f2e721a1787",
+      "contextAfterSHA256": "fa85a3b289623c7f9cad185f2eff758a59e5788dbdad6f1a514e6f2e721a1787"
     }
   ],
   "runtimeIntegrationPending": true,

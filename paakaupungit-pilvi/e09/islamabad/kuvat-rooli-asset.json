@@ -158,7 +158,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
-            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+            "sha256": "9383dcdccffba7bf26dda41888987a0a0f0a0123ce8b9bfef9903d81934f5fe8"
           }
         ]
       },
@@ -353,7 +353,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
-        "fileSHA256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f",
+        "fileSHA256": "9383dcdccffba7bf26dda41888987a0a0f0a0123ce8b9bfef9903d81934f5fe8",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -396,7 +396,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
-            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+            "sha256": "9383dcdccffba7bf26dda41888987a0a0f0a0123ce8b9bfef9903d81934f5fe8"
           }
         ]
       },
@@ -635,7 +635,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
-            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+            "sha256": "9383dcdccffba7bf26dda41888987a0a0f0a0123ce8b9bfef9903d81934f5fe8"
           }
         ]
       },
@@ -874,7 +874,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
-            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+            "sha256": "9383dcdccffba7bf26dda41888987a0a0f0a0123ce8b9bfef9903d81934f5fe8"
           }
         ]
       },
@@ -960,6 +960,616 @@
       "sourceContentAfterSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
       "targetAfterSHA256": "0d0578aa18517c175282f6d1a37dd0f209f006ab50f39806b2eaeedceeed30a9",
       "contextAfterSHA256": "0d0578aa18517c175282f6d1a37dd0f209f006ab50f39806b2eaeedceeed30a9"
+    },
+    {
+      "era": "e09",
+      "city": "islamabad",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e09-islamabad-k3-20261012-v1",
+      "galleryImageID": "e09-islamabad-k3-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k3-20261012-v1-a796d24b6553.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kirjonnan välineistä ja yksinkertaisista pistoista.",
+        "lyhyt": "Havainnekuva kirjonnan välineistä ja yksinkertaisista pistoista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k3-20261012-v1-a796d24b6553.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kirjonnan välineistä ja yksinkertaisista pistoista.",
+        "lyhyt": "Havainnekuva kirjonnan välineistä ja yksinkertaisista pistoista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a796d24b65530febc78a9c6ac41316d7650bb2ff6d580d7ccd45ed44c6df5d59",
+      "exportSHA256": "7a3b8a7f50f67467fb8650fa1436385c11ae67065a9e9e6f0d417a954671cf15",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k3-20261012-v1-a796d24b6553.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k3-20261012-v1-a796d24b6553.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-k3-20261012-v1-a796d24b6553.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+      "sourceContentSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "fcfe3602f0fdeb8056a0b5f6727fc65e19a533ae2a687546b853f18d40d26bc4",
+        "semanticContextSHA256": "fcfe3602f0fdeb8056a0b5f6727fc65e19a533ae2a687546b853f18d40d26bc4",
+        "subjectTitle": "Museo esittelee eläviä taitoja",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-k3-20261012-v1/original.png",
+            "nativeSha256Verified": "a796d24b65530febc78a9c6ac41316d7650bb2ff6d580d7ccd45ed44c6df5d59",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally viewed this exact native NAS PNG with view_image earlier in this chat; SHA readback still matches. Vaalealla kudotulla kankaalla on punaisia peruspistoja sekä metallineula. Lanka kulkee näkyvän neulansilmän kautta; rakenne ja lankareitti ovat johdonmukaiset. Poimut, kuidut ja kosketusvarjot ovat luonnollisia. Ei nimettyä kirjontakuviota, tekstiä, logoja, kasvoja tai kehystä.",
+            "captionFi": "Havainnekuva kirjonnan välineistä ja yksinkertaisista pistoista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+            "contentSha256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lok Virsan perinnemuseossa Pakistanin yhteisöjen kulttuuri näkyy kirjotuissa vaatteissa, koruissa, puutöissä ja käyttöesineissä. Näyttelyt käsittelevät myös musiikkia, perinteisiä elämäntapoja ja juhlia. Kyse on elävästä kansanperinteestä, jota harjoitetaan ja siirretään eteenpäin, ei vain vanhoista löytöesineistä. Museon kansainväliset näyttely-yhteydet kertovat kulttuurien kohtaamisesta. Vaatteen tai esineen rinnalle tulee sen käyttö: ihmisten tavat tehdä, juhlia ja elää yhdessä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/faktapohja.md",
+            "factSheetSha256": "40517099355b35e841ca63a75f79bd9fb9d1c807997e3ea241507bcc345b7b96",
+            "topicEvidence": "K3 nimeää kirjotut vaatteet ja käsityöt museon aiheiksi. Paikallisen Lok Virsa Museum -lähteen Ethnology-kohta mainitsee embroidered costumes. Selite rajaa kuvan kirjonnan välineiden ja pistojen havainnollistukseksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Lok_Virsa_Museum",
+                "section": "Heritage museum displays embroidered costumes and crafts",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/heritage.txt",
+                "sha256": "ebda2a7b7f166adf0bb9b072767595f32256004266112cb1b269b18ec4944778"
+              }
+            ],
+            "sourceHashesVerified": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/heritage.txt",
+                "sha256Verified": "ebda2a7b7f166adf0bb9b072767595f32256004266112cb1b269b18ec4944778"
+              }
+            ],
+            "rightsAssessment": "Common functional object or natural material/food/plant; no readable faces, generated logo/text/frame, named modern artwork or invented building geometry. Location honesty assessed in reason.",
+            "colorProfileNote": "Missing native sRGB metadata is not a visual rejection; later pixel-identical export belongs to delivery.",
+            "handoffMarker": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/qa-handoff-kuvitus-2.json",
+            "handoffSha256": "ed66cab6caff912881ff7838d0fa3c18d95a28ca12284f385e206a58353c2e54",
+            "scope": "Only exact-native illustration QA for e09; no CC/baseline/export/R2/integration/publication certification."
+          },
+          "qaReason": "Neula, punainen lanka ja yksinkertaiset pistot sopivat Lok Virsan käsityöperinnettä käsittelevään nostoon. Havainne ei jäljennä nimettyä museovaatetta tai suojattua kuviota."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kirjonnan välineistä ja yksinkertaisista pistoista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
+        "fileSHA256": "9383dcdccffba7bf26dda41888987a0a0f0a0123ce8b9bfef9903d81934f5fe8",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e09-islamabad-k3-20261012-v1",
+          "sha256": "a796d24b65530febc78a9c6ac41316d7650bb2ff6d580d7ccd45ed44c6df5d59",
+          "verdict": "accepted",
+          "reason": "Neula, punainen lanka ja yksinkertaiset pistot sopivat Lok Virsan käsityöperinnettä käsittelevään nostoon. Havainne ei jäljennä nimettyä museovaatetta tai suojattua kuviota.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-k3-20261012-v1/original.png",
+            "nativeSha256Verified": "a796d24b65530febc78a9c6ac41316d7650bb2ff6d580d7ccd45ed44c6df5d59",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally viewed this exact native NAS PNG with view_image earlier in this chat; SHA readback still matches. Vaalealla kudotulla kankaalla on punaisia peruspistoja sekä metallineula. Lanka kulkee näkyvän neulansilmän kautta; rakenne ja lankareitti ovat johdonmukaiset. Poimut, kuidut ja kosketusvarjot ovat luonnollisia. Ei nimettyä kirjontakuviota, tekstiä, logoja, kasvoja tai kehystä.",
+            "captionFi": "Havainnekuva kirjonnan välineistä ja yksinkertaisista pistoista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+            "contentSha256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+            "targetCurrentlyPresent": true,
+            "targetText": "Lok Virsan perinnemuseossa Pakistanin yhteisöjen kulttuuri näkyy kirjotuissa vaatteissa, koruissa, puutöissä ja käyttöesineissä. Näyttelyt käsittelevät myös musiikkia, perinteisiä elämäntapoja ja juhlia. Kyse on elävästä kansanperinteestä, jota harjoitetaan ja siirretään eteenpäin, ei vain vanhoista löytöesineistä. Museon kansainväliset näyttely-yhteydet kertovat kulttuurien kohtaamisesta. Vaatteen tai esineen rinnalle tulee sen käyttö: ihmisten tavat tehdä, juhlia ja elää yhdessä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/faktapohja.md",
+            "factSheetSha256": "40517099355b35e841ca63a75f79bd9fb9d1c807997e3ea241507bcc345b7b96",
+            "topicEvidence": "K3 nimeää kirjotut vaatteet ja käsityöt museon aiheiksi. Paikallisen Lok Virsa Museum -lähteen Ethnology-kohta mainitsee embroidered costumes. Selite rajaa kuvan kirjonnan välineiden ja pistojen havainnollistukseksi.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Lok_Virsa_Museum",
+                "section": "Heritage museum displays embroidered costumes and crafts",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/heritage.txt",
+                "sha256": "ebda2a7b7f166adf0bb9b072767595f32256004266112cb1b269b18ec4944778"
+              }
+            ],
+            "sourceHashesVerified": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/heritage.txt",
+                "sha256Verified": "ebda2a7b7f166adf0bb9b072767595f32256004266112cb1b269b18ec4944778"
+              }
+            ],
+            "rightsAssessment": "Common functional object or natural material/food/plant; no readable faces, generated logo/text/frame, named modern artwork or invented building geometry. Location honesty assessed in reason.",
+            "colorProfileNote": "Missing native sRGB metadata is not a visual rejection; later pixel-identical export belongs to delivery.",
+            "handoffMarker": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/qa-handoff-kuvitus-2.json",
+            "handoffSha256": "ed66cab6caff912881ff7838d0fa3c18d95a28ca12284f385e206a58353c2e54",
+            "scope": "Only exact-native illustration QA for e09; no CC/baseline/export/R2/integration/publication certification."
+          },
+          "reviewedAt": "2026-10-13T05:57:54.279400+00:00",
+          "reviewer": "qa-era-e09"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+            "sha256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
+            "sha256": "9383dcdccffba7bf26dda41888987a0a0f0a0123ce8b9bfef9903d81934f5fe8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k3-20261012-v1-a796d24b6553.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k3-20261012-v1-a796d24b6553.png?t=7a3b8a7f50f67467",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-k3-20261012-v1-a796d24b6553.png",
+        "sha256": "7a3b8a7f50f67467fb8650fa1436385c11ae67065a9e9e6f0d417a954671cf15",
+        "bytes": 2446108,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-islamabad-k3-20261012-v1",
+        "nativeSHA256": "a796d24b65530febc78a9c6ac41316d7650bb2ff6d580d7ccd45ed44c6df5d59",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-k3-20261012-v1-a796d24b6553.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "islamabad",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-13T05:59:03.337409+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-k3-20261012-v1-a796d24b6553.png",
+        "sha256": "7a3b8a7f50f67467fb8650fa1436385c11ae67065a9e9e6f0d417a954671cf15",
+        "bytes": 2446108,
+        "SHAReadAt": "2026-10-13T05:58:02.578515+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "a796d24b65530febc78a9c6ac41316d7650bb2ff6d580d7ccd45ed44c6df5d59",
+        "rgbPixelSHA256": "66db55a7d82567ece59f68038c8b0d7b6f1203be36949da9b56a322e11d8be48",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "targetAfterSHA256": "fcfe3602f0fdeb8056a0b5f6727fc65e19a533ae2a687546b853f18d40d26bc4",
+      "contextAfterSHA256": "fcfe3602f0fdeb8056a0b5f6727fc65e19a533ae2a687546b853f18d40d26bc4"
+    },
+    {
+      "era": "e09",
+      "city": "islamabad",
+      "slot": "L4",
+      "type": "illustration",
+      "assetID": "e09-islamabad-l4-20261012-v1",
+      "galleryImageID": "e09-islamabad-l4-20261012-v1",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l4-20261012-v1-5c27c4ec4369.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva chir-männyn ja villioliivin oksista.",
+        "lyhyt": "Havainnekuva chir-männyn ja villioliivin oksista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l4-20261012-v1-5c27c4ec4369.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva chir-männyn ja villioliivin oksista.",
+        "lyhyt": "Havainnekuva chir-männyn ja villioliivin oksista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "5c27c4ec4369e47e2120f61f3b9114ef8925d013e1c788db7fbe29c6d3dac02a",
+      "exportSHA256": "66a6046acc53b3b2ae575ece416820d6425bc71f0785ca28291d7089bd590a12",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l4-20261012-v1-5c27c4ec4369.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l4-20261012-v1-5c27c4ec4369.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-l4-20261012-v1-5c27c4ec4369.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+      "sourceContentSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "5286f8a9c5452a76c82e46f222f7ccce568ae0f7a6755ec3fb0bf84822e3ceb5",
+        "semanticContextSHA256": "5286f8a9c5452a76c82e46f222f7ccce568ae0f7a6755ec3fb0bf84822e3ceb5",
+        "subjectTitle": "Mänty saa seurakseen oliivipuun",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "subjectLayer": "Natural animal/plant/food/material or anonymous traditional functional form; no identified modern protected work or architecture reproduced",
+            "locationClaim": "Generalized illustrative subject; not documentary proof of this named city or venue",
+            "photoLayer": "Built-in imagegen new generation, not a Commons photograph",
+            "faces": "No identifiable faces"
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-l4-20261012-v1/original.png",
+            "nativeSha256Verified": "5c27c4ec4369e47e2120f61f3b9114ef8925d013e1c788db7fbe29c6d3dac02a",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally viewed this exact native NAS PNG with view_image earlier in this chat; SHA readback still matches. Kaksi erillistä oksaa neutraalilla kivipinnalla. Männyn pitkät neulaset lähtevät ruskeista tupista, ja kolmen neulasen ryhmiä näkyy; osa limittyy. Oliivin ehytlaitaiset suippokärkiset lehdet ovat vastakkaiset ja vaaleampia alapintoja näkyy. Oksien rakenne, pinnat ja kosketusvarjot ovat uskottavia. Ei sekapuuksi vartettua rakennetta, tekstiä, kasvoja tai keksittyä puistomaisemaa.",
+            "captionFi": "Havainnekuva chir-männyn ja villioliivin oksista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+            "contentSha256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+            "targetCurrentlyPresent": true,
+            "targetText": "Margallan kansallispuiston puulajeihin kuuluu chir-mänty, mutta kasvillisuus ei ole pelkkää havumetsää. Lajistossa on myös villioliivi, phulai-puu ja paikallinen päärynäpuu sekä kukkivia puita ja pensaita. Puiston istutuksiin valitaan alueen omaan kasvistoon kuuluvia lajeja. Maisemaan kuuluvat siten sekä havupuut että lehtipuut, kukat ja pensaikko. Kävelijän tuntema mänty on vain yksi osa kokonaisuutta; oliivipuu ei tässä lajiluettelossa tarkoita Välimeren viljelymaisemaa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/faktapohja.md",
+            "factSheetSha256": "40517099355b35e841ca63a75f79bd9fb9d1c807997e3ea241507bcc345b7b96",
+            "topicEvidence": "L4 nimeää chir-männyn ja villioliivin. Margalla-lähde sisältää Pinus roxburghii- ja Olea ferruginea -nimet. Gymnosperm Database -kuvaus tukee pitkiä neulasia kolmen ryhmissä, villioliivin paikallinen kuvaus vastakkaisia ehytlaitaisia suippolehtiä. Molemmat lähdekuvat katsottiin itse. Havainne ei ole mittakaavallinen määritysavain tai autenttinen Margallan näyte.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Margalla_Hills_National_Park",
+                "section": "Park flora list names Pinus roxburghii and Olea ferruginea; species references personally read and viewed",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/margalla.txt",
+                "sha256": "05661df2b4a1b1fe8c04226bb27aab1abe111acfd63d50a324ded28947b915be"
+              },
+              {
+                "url": "https://conifers.org/pi/Pinus_roxburghii.php",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/pine-primary-conifers.html",
+                "sha256": "349e0c40b345c39863cd4a6311e607784021f4113805e9ba4bd21b7acf3e5ea5",
+                "section": "Description",
+                "supports": "3 leaves per bundle, slender 20-30 cm needles, persistent sheath",
+                "visualFiles": [
+                  {
+                    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Pinrox00.jpg",
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/pine-branch-reference.jpg",
+                    "sha256": "396a3700952cb5b3181c9e9e79649688b54e661d383410050382d86c3ca5d1ca"
+                  }
+                ]
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/Olea_ferruginea",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/ref-Olea_ferruginea.html",
+                "sha256": "c3d191b59bec5eb4fac607f279066eb254e142a91e20e150351a499357d9b98c",
+                "supports": "Source page resolves to wild-olive cuspidata complex: opposite entire narrow leaves, acute tip, grey-green upper and pale scaled lower surfaces. Margalla source name ferruginea retained; reference specimen is not claimed as a Margalla specimen.",
+                "visualFiles": [
+                  {
+                    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Starr_070111-3139_Olea_europaea_subsp._cuspidata.jpg",
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/olive-branch-reference.jpg",
+                    "sha256": "be84b3d0f1ced288b1e8267156fca372c4f555315e04bff2057c2d623c7529a9"
+                  }
+                ],
+                "referenceLimits": "eFloras TLS verification failure and NZPCN DNS failure recorded; no bypass. Leaf photograph and existing scientific-description source were personally inspected."
+              }
+            ],
+            "sourceHashesVerified": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/margalla.txt",
+                "sha256Verified": "05661df2b4a1b1fe8c04226bb27aab1abe111acfd63d50a324ded28947b915be"
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/pine-primary-conifers.html",
+                "sha256Verified": "349e0c40b345c39863cd4a6311e607784021f4113805e9ba4bd21b7acf3e5ea5"
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/ref-Olea_ferruginea.html",
+                "sha256Verified": "c3d191b59bec5eb4fac607f279066eb254e142a91e20e150351a499357d9b98c"
+              }
+            ],
+            "rightsAssessment": "Common functional object or natural material/food/plant; no readable faces, generated logo/text/frame, named modern artwork or invented building geometry. Location honesty assessed in reason.",
+            "colorProfileNote": "Missing native sRGB metadata is not a visual rejection; later pixel-identical export belongs to delivery.",
+            "handoffMarker": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/qa-handoff-kuvitus-2.json",
+            "handoffSha256": "ed66cab6caff912881ff7838d0fa3c18d95a28ca12284f385e206a58353c2e54",
+            "scope": "Only exact-native illustration QA for e09; no CC/baseline/export/R2/integration/publication certification.",
+            "visualReferencesPersonallyViewed": [
+              {
+                "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Pinrox00.jpg",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/pine-branch-reference.jpg",
+                "sha256": "396a3700952cb5b3181c9e9e79649688b54e661d383410050382d86c3ca5d1ca"
+              },
+              {
+                "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Starr_070111-3139_Olea_europaea_subsp._cuspidata.jpg",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/olive-branch-reference.jpg",
+                "sha256": "be84b3d0f1ced288b1e8267156fca372c4f555315e04bff2057c2d623c7529a9"
+              }
+            ]
+          },
+          "qaReason": "Pitkät ohuet männynneulaset tuppiryhmineen ja erillisen villioliivin vastakkaiset kapeat lehdet sopivat noston kasviaiheeseen. Selite on havainnollistus, eikä oksia väitetä puistosta kerätyiksi näytteiksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva chir-männyn ja villioliivin oksista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
+        "fileSHA256": "9383dcdccffba7bf26dda41888987a0a0f0a0123ce8b9bfef9903d81934f5fe8",
+        "item": {
+          "slot": "L4",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+          "assetID": "e09-islamabad-l4-20261012-v1",
+          "sha256": "5c27c4ec4369e47e2120f61f3b9114ef8925d013e1c788db7fbe29c6d3dac02a",
+          "verdict": "accepted",
+          "reason": "Pitkät ohuet männynneulaset tuppiryhmineen ja erillisen villioliivin vastakkaiset kapeat lehdet sopivat noston kasviaiheeseen. Selite on havainnollistus, eikä oksia väitetä puistosta kerätyiksi näytteiksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/assets/e09-islamabad-l4-20261012-v1/original.png",
+            "nativeSha256Verified": "5c27c4ec4369e47e2120f61f3b9114ef8925d013e1c788db7fbe29c6d3dac02a",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally viewed this exact native NAS PNG with view_image earlier in this chat; SHA readback still matches. Kaksi erillistä oksaa neutraalilla kivipinnalla. Männyn pitkät neulaset lähtevät ruskeista tupista, ja kolmen neulasen ryhmiä näkyy; osa limittyy. Oliivin ehytlaitaiset suippokärkiset lehdet ovat vastakkaiset ja vaaleampia alapintoja näkyy. Oksien rakenne, pinnat ja kosketusvarjot ovat uskottavia. Ei sekapuuksi vartettua rakennetta, tekstiä, kasvoja tai keksittyä puistomaisemaa.",
+            "captionFi": "Havainnekuva chir-männyn ja villioliivin oksista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
+            "contentSha256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+            "targetCurrentlyPresent": true,
+            "targetText": "Margallan kansallispuiston puulajeihin kuuluu chir-mänty, mutta kasvillisuus ei ole pelkkää havumetsää. Lajistossa on myös villioliivi, phulai-puu ja paikallinen päärynäpuu sekä kukkivia puita ja pensaita. Puiston istutuksiin valitaan alueen omaan kasvistoon kuuluvia lajeja. Maisemaan kuuluvat siten sekä havupuut että lehtipuut, kukat ja pensaikko. Kävelijän tuntema mänty on vain yksi osa kokonaisuutta; oliivipuu ei tässä lajiluettelossa tarkoita Välimeren viljelymaisemaa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/faktapohja.md",
+            "factSheetSha256": "40517099355b35e841ca63a75f79bd9fb9d1c807997e3ea241507bcc345b7b96",
+            "topicEvidence": "L4 nimeää chir-männyn ja villioliivin. Margalla-lähde sisältää Pinus roxburghii- ja Olea ferruginea -nimet. Gymnosperm Database -kuvaus tukee pitkiä neulasia kolmen ryhmissä, villioliivin paikallinen kuvaus vastakkaisia ehytlaitaisia suippolehtiä. Molemmat lähdekuvat katsottiin itse. Havainne ei ole mittakaavallinen määritysavain tai autenttinen Margallan näyte.",
+            "sourceEvidence": [
+              {
+                "url": "https://en.wikipedia.org/wiki/Margalla_Hills_National_Park",
+                "section": "Park flora list names Pinus roxburghii and Olea ferruginea; species references personally read and viewed",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/margalla.txt",
+                "sha256": "05661df2b4a1b1fe8c04226bb27aab1abe111acfd63d50a324ded28947b915be"
+              },
+              {
+                "url": "https://conifers.org/pi/Pinus_roxburghii.php",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/pine-primary-conifers.html",
+                "sha256": "349e0c40b345c39863cd4a6311e607784021f4113805e9ba4bd21b7acf3e5ea5",
+                "section": "Description",
+                "supports": "3 leaves per bundle, slender 20-30 cm needles, persistent sheath",
+                "visualFiles": [
+                  {
+                    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Pinrox00.jpg",
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/pine-branch-reference.jpg",
+                    "sha256": "396a3700952cb5b3181c9e9e79649688b54e661d383410050382d86c3ca5d1ca"
+                  }
+                ]
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/Olea_ferruginea",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/ref-Olea_ferruginea.html",
+                "sha256": "c3d191b59bec5eb4fac607f279066eb254e142a91e20e150351a499357d9b98c",
+                "supports": "Source page resolves to wild-olive cuspidata complex: opposite entire narrow leaves, acute tip, grey-green upper and pale scaled lower surfaces. Margalla source name ferruginea retained; reference specimen is not claimed as a Margalla specimen.",
+                "visualFiles": [
+                  {
+                    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Starr_070111-3139_Olea_europaea_subsp._cuspidata.jpg",
+                    "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/olive-branch-reference.jpg",
+                    "sha256": "be84b3d0f1ced288b1e8267156fca372c4f555315e04bff2057c2d623c7529a9"
+                  }
+                ],
+                "referenceLimits": "eFloras TLS verification failure and NZPCN DNS failure recorded; no bypass. Leaf photograph and existing scientific-description source were personally inspected."
+              }
+            ],
+            "sourceHashesVerified": [
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/nopea-e09-islamabad/margalla.txt",
+                "sha256Verified": "05661df2b4a1b1fe8c04226bb27aab1abe111acfd63d50a324ded28947b915be"
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/pine-primary-conifers.html",
+                "sha256Verified": "349e0c40b345c39863cd4a6311e607784021f4113805e9ba4bd21b7acf3e5ea5"
+              },
+              {
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/ref-Olea_ferruginea.html",
+                "sha256Verified": "c3d191b59bec5eb4fac607f279066eb254e142a91e20e150351a499357d9b98c"
+              }
+            ],
+            "rightsAssessment": "Common functional object or natural material/food/plant; no readable faces, generated logo/text/frame, named modern artwork or invented building geometry. Location honesty assessed in reason.",
+            "colorProfileNote": "Missing native sRGB metadata is not a visual rejection; later pixel-identical export belongs to delivery.",
+            "handoffMarker": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/qa-handoff-kuvitus-2.json",
+            "handoffSha256": "ed66cab6caff912881ff7838d0fa3c18d95a28ca12284f385e206a58353c2e54",
+            "scope": "Only exact-native illustration QA for e09; no CC/baseline/export/R2/integration/publication certification.",
+            "visualReferencesPersonallyViewed": [
+              {
+                "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Pinrox00.jpg",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/pine-branch-reference.jpg",
+                "sha256": "396a3700952cb5b3181c9e9e79649688b54e661d383410050382d86c3ca5d1ca"
+              },
+              {
+                "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Starr_070111-3139_Olea_europaea_subsp._cuspidata.jpg",
+                "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/source-review/olive-branch-reference.jpg",
+                "sha256": "be84b3d0f1ced288b1e8267156fca372c4f555315e04bff2057c2d623c7529a9"
+              }
+            ]
+          },
+          "reviewedAt": "2026-10-13T05:57:54.327703+00:00",
+          "reviewer": "qa-era-e09"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/qa.json",
+            "sha256": "07291823100a8b5540c4d0fce04a7add28b0bb2f30d02bfcb12b4115baac0890"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
+            "sha256": "9383dcdccffba7bf26dda41888987a0a0f0a0123ce8b9bfef9903d81934f5fe8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l4-20261012-v1-5c27c4ec4369.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l4-20261012-v1-5c27c4ec4369.png?t=66a6046acc53b3b2",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/islamabad/e09-islamabad-l4-20261012-v1-5c27c4ec4369.png",
+        "sha256": "66a6046acc53b3b2ae575ece416820d6425bc71f0785ca28291d7089bd590a12",
+        "bytes": 2888995,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e09-islamabad-l4-20261012-v1",
+        "nativeSHA256": "5c27c4ec4369e47e2120f61f3b9114ef8925d013e1c788db7fbe29c6d3dac02a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-l4-20261012-v1-5c27c4ec4369.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e09",
+        "city": "islamabad",
+        "slot": "L4",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
+        "verifiedAt": "2026-10-13T05:59:04.712571+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e09/islamabad/e09-islamabad-l4-20261012-v1-5c27c4ec4369.png",
+        "sha256": "66a6046acc53b3b2ae575ece416820d6425bc71f0785ca28291d7089bd590a12",
+        "bytes": 2888995,
+        "SHAReadAt": "2026-10-13T05:58:02.782960+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "5c27c4ec4369e47e2120f61f3b9114ef8925d013e1c788db7fbe29c6d3dac02a",
+        "rgbPixelSHA256": "875679eb7a70933ccbb6b5e53b03a3684b9c37d8122313e98a9676e47c376347",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9a02d1e1f8d4e94eb7985bdee8660402cc465d6548b093babf16333a5adcd4e8",
+      "targetAfterSHA256": "5286f8a9c5452a76c82e46f222f7ccce568ae0f7a6755ec3fb0bf84822e3ceb5",
+      "contextAfterSHA256": "5286f8a9c5452a76c82e46f222f7ccce568ae0f7a6755ec3fb0bf84822e3ceb5"
     },
     {
       "era": "e09",
@@ -1130,7 +1740,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
-            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+            "sha256": "9383dcdccffba7bf26dda41888987a0a0f0a0123ce8b9bfef9903d81934f5fe8"
           }
         ]
       },
@@ -1415,7 +2025,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/islamabad/illustration-qa-extra.json",
-            "sha256": "18190af2a6850ceb7379083da13230f7e3707f04129d3601b4a8a9b4f426f52f"
+            "sha256": "9383dcdccffba7bf26dda41888987a0a0f0a0123ce8b9bfef9903d81934f5fe8"
           }
         ]
       },

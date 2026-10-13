@@ -3,7 +3,7 @@
   "era": "e09",
   "city": "taskent",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+  "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
   "assets": [
     {
       "era": "e09",
@@ -155,7 +155,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+            "sha256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
@@ -242,7 +242,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "81f7ab1e6e55ad9e22bdb1bba0147d3734862f511985c2b98affa5a10ece914f"
     },
@@ -396,7 +396,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+            "sha256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
@@ -483,7 +483,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "579fe6d26bf8496d4890529d7cc7860c88f53664030283251bb7089607b9a1d8"
     },
@@ -634,7 +634,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+            "sha256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
@@ -721,7 +721,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
       "targetAfterSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
       "contextAfterSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269"
     },
@@ -872,7 +872,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+            "sha256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
@@ -959,7 +959,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
       "targetAfterSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
       "contextAfterSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07"
     },
@@ -1110,7 +1110,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+            "sha256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
@@ -1197,7 +1197,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
       "targetAfterSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
       "contextAfterSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c"
     },
@@ -1276,7 +1276,7 @@
             "visuallyInspected": true,
             "captionFi": "Havainnekuva savitiilistä rakennusmateriaalina.",
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
             "sourceEvidence": [
               {
                 "url": "https://en.wikipedia.org/wiki/Kukeldash_Madrasah_(Tashkent)",
@@ -1292,7 +1292,16 @@
               "faces": "No identifiable faces"
             },
             "sourceClaimChecked": "Kukeldash built of yellow brick; bricks reused for Beklarbegi Madrasah",
-            "scope": "independent QA only; no owner acceptance, integration or publication"
+            "scope": "independent QA only; no owner acceptance, integration or publication",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.013790+00:00",
+                "previousContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+                "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/content-revalidation-6e9077b456f8-8afbd810d301.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Katsottu valmis PNG alkuperäisenä. Kellertävät/ruskeat savitiilet, epäsäännölliset huokoset, lohkeamat ja laastijäljet näyttävät luonnollisilta. Ei tekstiä, logoja, henkilöitä tai rekonstruoitua medresaa. Sopii tiilien uudelleenkäytön materiaalihavainnollistukseksi; ei väite Kukeldashin omista esinenäytteistä."
         }
@@ -1308,7 +1317,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-        "fileSHA256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266",
+        "fileSHA256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1",
         "item": {
           "slot": "L1",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[0]",
@@ -1323,7 +1332,7 @@
             "visuallyInspected": true,
             "captionFi": "Havainnekuva savitiilistä rakennusmateriaalina.",
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
             "sourceEvidence": [
               {
                 "url": "https://en.wikipedia.org/wiki/Kukeldash_Madrasah_(Tashkent)",
@@ -1339,13 +1348,22 @@
               "faces": "No identifiable faces"
             },
             "sourceClaimChecked": "Kukeldash built of yellow brick; bricks reused for Beklarbegi Madrasah",
-            "scope": "independent QA only; no owner acceptance, integration or publication"
+            "scope": "independent QA only; no owner acceptance, integration or publication",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.013790+00:00",
+                "previousContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+                "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/content-revalidation-6e9077b456f8-8afbd810d301.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+            "sha256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
@@ -1432,7 +1450,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
       "targetAfterSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
       "contextAfterSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288"
     },
@@ -1583,7 +1601,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+            "sha256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
@@ -1670,7 +1688,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
       "targetAfterSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
       "contextAfterSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc"
     },
@@ -1821,7 +1839,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+            "sha256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
@@ -1908,7 +1926,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
       "targetAfterSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
       "contextAfterSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111"
     },
@@ -1990,12 +2008,21 @@
             "height": 3060,
             "captureDate": "30 April 2024, 13:25:31",
             "locationEvidence": "Original description: Ant in Tashkent",
-            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
             "sameFileOtherSlot": false,
             "gameUseHits": [],
             "scope": "independent QA only",
             "reviewedCandidateRecordSHA256": "ccf4a4822f82c68c6d8748ed3c9d218b68f13a61e4b309c0c3ba149dda6d368d",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.262178+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.262178+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.013804+00:00",
+                "previousContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+                "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/content-revalidation-6e9077b456f8-8afbd810d301.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Katsottu aito lähivalokuva muurahaisesta lehden pinnalla. Muurahainen on riittävän selvä, ei tunnistettavaa ihmistä, lisättyä tekstiä, logoa tai kehystä. Kuvasivun Description sanoo Ant in Tashkent; Author Tahrirchiqiz, Own work, CC BY4.0, 4080×3060 ja kuvauspäivä30.4.2024 varmennettu itse lähdesivusta. PHOTO voi olla paikkasidonnainen luontoyksityiskohta, ei panoraamapakkoa. Kasvi-/muurahaislajia ei arvata. Ei pelipakettien käyttöosumia."
         }
@@ -2011,7 +2038,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-        "fileSHA256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266",
+        "fileSHA256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -2031,18 +2058,27 @@
             "height": 3060,
             "captureDate": "30 April 2024, 13:25:31",
             "locationEvidence": "Original description: Ant in Tashkent",
-            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
             "sameFileOtherSlot": false,
             "gameUseHits": [],
             "scope": "independent QA only",
             "reviewedCandidateRecordSHA256": "ccf4a4822f82c68c6d8748ed3c9d218b68f13a61e4b309c0c3ba149dda6d368d",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.262178+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.262178+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.013804+00:00",
+                "previousContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+                "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/content-revalidation-6e9077b456f8-8afbd810d301.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+            "sha256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
@@ -2119,9 +2155,313 @@
         "vuosi": "2024"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
       "targetAfterSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
       "contextAfterSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec"
+    },
+    {
+      "era": "e09",
+      "city": "taskent",
+      "slot": "C1",
+      "type": "commons",
+      "assetID": "capital-cc-e09-taskent-c1-253b42a558f98ca5",
+      "galleryImageID": "capital-cc-e09-taskent-c1-253b42a558f98ca5",
+      "commonsFile": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/c1-253b42a558f98ca5edec.jpg",
+        "suora": true,
+        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "lyhyt": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "tiedosto": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "lyhyt": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "tiedosto": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/c1-253b42a558f98ca5edec.jpg",
+        "suora": true,
+        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "lyhyt": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "tiedosto": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "253b42a558f98ca5edec09bb6c849c302035e87d34f2b92460c4af6832b46a3c",
+      "exportSHA256": "253b42a558f98ca5edec09bb6c849c302035e87d34f2b92460c4af6832b46a3c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/c1-253b42a558f98ca5edec.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/c1-253b42a558f98ca5edec.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-search/original-15.jpg",
+      "dimensions": [
+        8256,
+        5504
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+      "sourceContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Taškent",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:The_city_lights_of_Tashkent,_Uzbekistan%27s_capital_and_most_populous_city_(iss072e445581).jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:The_city_lights_of_Tashkent,_Uzbekistan%27s_capital_and_most_populous_city_(iss072e445581).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/The_city_lights_of_Tashkent%2C_Uzbekistan%27s_capital_and_most_populous_city_%28iss072e445581%29.jpg",
+        "rightsEvidence": {
+          "selection": "Author: NASA Johnson Space Center, luettu alkuperäisen Commons-sivun Author-taulukosta. Erillinen Licensing-osio ja PD-NASA-laatikko ilmoittavat tämän tiedoston yksinomaan NASA:n luomaksi public domain -aineistoksi. Photo-ID-tagi yksin ei ole oikeusperuste; varsinaisen tämän tiedoston PD-laatikon väite ja tekijäkenttä tarkistettu erikseen. Alkuperäinen NASA-viite https://images.nasa.gov/details/iss072e445581, ei NASA-nimen perusteella tehty yleisoletus. Kuvan sisältö on todellinen yöllinen kaupunkialue ja katuverkon valojälki avaruudesta: yksittäisten rakennusten julkisivut, veistokset, omaperäiset koristeet tai itsenäiset nykytaideteokset eivät ole erotettavissa. Fyysinen kaupungin sijoittuminen ja tieverkko eivät ole kuvaan lisätty karttapiirros. Ei suojatun teoksen jäljennöstä erillisenä aiheena eikä NASA-logoa/insigniaa.",
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-search/original-15.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              8256,
+              5504
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:The_city_lights_of_Tashkent,_Uzbekistan%27s_capital_and_most_populous_city_(iss072e445581).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d9a940301982616a9555cd20ef5b7851fad95534b6e56a061a8d5b148f9b255e.html",
+            "sourceSHA256": "ac82d19d1bd22ccbe538a868267abc658ab8ebe76ceab3affca1cbba0e1ee312",
+            "authorsFromSource": [
+              "NASA Johnson Space Center"
+            ],
+            "license": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:The_city_lights_of_Tashkent,_Uzbekistan%27s_capital_and_most_populous_city_(iss072e445581).jpg",
+            "sourceFields": [
+              [
+                "Description The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg",
+                "English: iss072e445581 (Dec. 28, 2024) --- The city lights of Tashkent, Uzbekistan's capital and most populous city with a population of about 3.1 million residents, are pictured at approximately 1:36 a.m. local time from the International Space Station as it orbited 259 miles above Central Asia."
+              ],
+              [
+                "Date",
+                "Taken on 28 December 2024"
+              ],
+              [
+                "Author",
+                "NASA Johnson Space Center"
+              ],
+              [
+                "Date and time of data generation",
+                "20:36, 28 December 2024"
+              ],
+              [
+                "Date and time of digitizing",
+                "20:36, 28 December 2024"
+              ],
+              [
+                "DateTime subseconds",
+                "15"
+              ],
+              [
+                "DateTimeOriginal subseconds",
+                "15"
+              ],
+              [
+                "DateTimeDigitized subseconds",
+                "15"
+              ],
+              [
+                "Date metadata was last modified",
+                "04:32, 9 January 2025"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "copyrightScope": "Explicit Author and file-specific PD-NASA licensing notice independently read; Photo-ID tag alone would be insufficient.",
+            "viewType": "Authentic crew Earth observation from ISS, no diagram/AI city-layout claim.",
+            "reviewedCandidateRecordSHA256": "3d22981c969eed83c10ca45a117f818a94c6429ad2d9f4c2adf47b220d276723",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-selection.json"
+          },
+          "qaReason": "Aito ISS:n yövalokuva Taškentin laajasta kaupunkialueesta katsottu. Katuakselit, valaistut korttelit ja todellinen kaupungin sijoittuminen erottuvat; yön tumma ympäristö on luonnollinen kuvaustilanne. Ei karttapiirroksen nimilappuja/viivoja, logoa, watermarkia, kehystä, kasvoja tai rakennusten/nykytaideteosten luovien yksityiskohtien jäljennöspääaihetta. Description yksilöi Tashkent ja ISS072e445581 sekä28.12.2024, eikä kuvateksti arvaa asukaslukua tai paikallista tapahtumaa. Author NASA Johnson Space Center luettu; erillisen Licensing-laatikon juuri tämän tiedoston sole creation byNASA / Public domain -väite luettu itsenäisesti. Pelkkä Photo-ID tai NASA-sivustolla esiintyminen ei ollut oikeusperuste; logo-/muiden avaruusjärjestöjen poikkeuksia ei sovelleta tähän logo-/teosvapaaseen kuvaan.8256×5504 ja sourceDate28.12.2024 varmennettu. C1 näyttää todellisen laajan kaupunkiasettelun, ei generoitua panoraamaa; hyväksytty tähän avaruudesta kuvattuun yövalonäkymään."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+        "fileSHA256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1",
+        "item": {
+          "slot": "C1",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+          "commonsFile": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg",
+          "sha256": "253b42a558f98ca5edec09bb6c849c302035e87d34f2b92460c4af6832b46a3c",
+          "verdict": "accepted",
+          "reason": "Aito ISS:n yövalokuva Taškentin laajasta kaupunkialueesta katsottu. Katuakselit, valaistut korttelit ja todellinen kaupungin sijoittuminen erottuvat; yön tumma ympäristö on luonnollinen kuvaustilanne. Ei karttapiirroksen nimilappuja/viivoja, logoa, watermarkia, kehystä, kasvoja tai rakennusten/nykytaideteosten luovien yksityiskohtien jäljennöspääaihetta. Description yksilöi Tashkent ja ISS072e445581 sekä28.12.2024, eikä kuvateksti arvaa asukaslukua tai paikallista tapahtumaa. Author NASA Johnson Space Center luettu; erillisen Licensing-laatikon juuri tämän tiedoston sole creation byNASA / Public domain -väite luettu itsenäisesti. Pelkkä Photo-ID tai NASA-sivustolla esiintyminen ei ollut oikeusperuste; logo-/muiden avaruusjärjestöjen poikkeuksia ei sovelleta tähän logo-/teosvapaaseen kuvaan.8256×5504 ja sourceDate28.12.2024 varmennettu. C1 näyttää todellisen laajan kaupunkiasettelun, ei generoitua panoraamaa; hyväksytty tähän avaruudesta kuvattuun yövalonäkymään.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-search/original-15.jpg",
+            "visuallyInspected": true,
+            "nativeDimensions": [
+              8256,
+              5504
+            ],
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:The_city_lights_of_Tashkent,_Uzbekistan%27s_capital_and_most_populous_city_(iss072e445581).jpg",
+            "sourceLocal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/d9a940301982616a9555cd20ef5b7851fad95534b6e56a061a8d5b148f9b255e.html",
+            "sourceSHA256": "ac82d19d1bd22ccbe538a868267abc658ab8ebe76ceab3affca1cbba0e1ee312",
+            "authorsFromSource": [
+              "NASA Johnson Space Center"
+            ],
+            "license": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/File:The_city_lights_of_Tashkent,_Uzbekistan%27s_capital_and_most_populous_city_(iss072e445581).jpg",
+            "sourceFields": [
+              [
+                "Description The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg",
+                "English: iss072e445581 (Dec. 28, 2024) --- The city lights of Tashkent, Uzbekistan's capital and most populous city with a population of about 3.1 million residents, are pictured at approximately 1:36 a.m. local time from the International Space Station as it orbited 259 miles above Central Asia."
+              ],
+              [
+                "Date",
+                "Taken on 28 December 2024"
+              ],
+              [
+                "Author",
+                "NASA Johnson Space Center"
+              ],
+              [
+                "Date and time of data generation",
+                "20:36, 28 December 2024"
+              ],
+              [
+                "Date and time of digitizing",
+                "20:36, 28 December 2024"
+              ],
+              [
+                "DateTime subseconds",
+                "15"
+              ],
+              [
+                "DateTimeOriginal subseconds",
+                "15"
+              ],
+              [
+                "DateTimeDigitized subseconds",
+                "15"
+              ],
+              [
+                "Date metadata was last modified",
+                "04:32, 9 January 2025"
+              ]
+            ],
+            "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
+            "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+            "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/current-commons-source-checks.json",
+            "usedInGameCheck": {
+              "status": "no hits",
+              "output": ""
+            },
+            "scope": "independent QA only; no integration/publication/owner acceptance",
+            "copyrightScope": "Explicit Author and file-specific PD-NASA licensing notice independently read; Photo-ID tag alone would be insufficient.",
+            "viewType": "Authentic crew Earth observation from ISS, no diagram/AI city-layout claim.",
+            "reviewedCandidateRecordSHA256": "3d22981c969eed83c10ca45a117f818a94c6429ad2d9f4c2adf47b220d276723",
+            "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-selection.json"
+          },
+          "reviewedAt": "2026-10-12T20:30:17.704519+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
+            "sha256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
+            "sha256": "257e0d1990bb825bc5ca8b21c97952885467e5fa1894d5eb0b83c9cdcd32c264"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e09",
+        "city": "taskent",
+        "slot": "C1",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
+        "commonsFile": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg",
+        "sha256": "253b42a558f98ca5edec09bb6c849c302035e87d34f2b92460c4af6832b46a3c",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:The_city_lights_of_Tashkent,_Uzbekistan%27s_capital_and_most_populous_city_(iss072e445581).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/The_city_lights_of_Tashkent%2C_Uzbekistan%27s_capital_and_most_populous_city_%28iss072e445581%29.jpg",
+        "author": "NASA Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/File:The_city_lights_of_Tashkent,_Uzbekistan%27s_capital_and_most_populous_city_(iss072e445581).jpg",
+        "width": 8256,
+        "height": 5504,
+        "originalSHA256": "253b42a558f98ca5edec09bb6c849c302035e87d34f2b92460c4af6832b46a3c",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/c1-253b42a558f98ca5edec.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/c1-253b42a558f98ca5edec.jpg",
+        "bytes": 11619403,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:31:21.436208+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "lyhyt": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "tiedosto": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "targetAfterSHA256": "0eab5a879bf3fb498074af9209cf0417a03164b0974502718feb59644172b6dd",
+      "contextAfterSHA256": "0eab5a879bf3fb498074af9209cf0417a03164b0974502718feb59644172b6dd"
     },
     {
       "era": "e09",
@@ -2249,7 +2589,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -2269,7 +2609,16 @@
             "placeBoundary": "Tashkent street vegetation only; no botanical-garden identification or specific tree species assertion.",
             "reviewedCandidateRecordSHA256": "68a0ebb9bf6112cbcfe527c244fc4ec4e55ca44dbbba120acd1d0f02480213b6",
             "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-gap-selection.json",
-            "orientationProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/chestnut-native-orientation.json"
+            "orientationProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/chestnut-native-orientation.json",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.013806+00:00",
+                "previousContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+                "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/content-revalidation-6e9077b456f8-8afbd810d301.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Alkuperäinen aito Taškentissa kuvattu lehtevä katupuu katsottu. Selkeä luonnonvalo, yksi puu pääaiheena, tavallinen katu ja kasvillisuus; ei suojatun rakennuksen/taideteoksen pääaihetta, lisättyjä merkintöjä tai watermarkia. Etäiset kävelijät ovat pieniä eikä kasvonpiirteitä erota. Source Description nimeää puun Taškentissa, mutta ei kasvitieteellistä puutarhaa; kuvateksti pysyy kaupungin katujen vehreydessä. Sopii oppaan puusto-/kävelyaiheeseen ja kevääseen. Tahrirchiqiz/Own work/CC BY4.0 ja30.4.2024 varmennettu; lähde ja selite säilyttävät kuvausajankohdan, eikä kuvasta päätellä nykyisiä palveluita, reittiä tai säätilaa. Tuoreahko vuoden2024 luonnon-/katuaihe täyttää ajankohtaisen opasaiheen ilman keksittyä vuotta tai mielivaltaista ikärajaa. EXIF6:n jälkeen natiivi näyttö3060×4080, w/h0.75; encoded4080×3060 ei ole maisemakuvan rajaus eikä pixel-editointi."
         }
@@ -2285,7 +2634,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-        "fileSHA256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266",
+        "fileSHA256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -2347,7 +2696,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-            "currentContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+            "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -2367,14 +2716,23 @@
             "placeBoundary": "Tashkent street vegetation only; no botanical-garden identification or specific tree species assertion.",
             "reviewedCandidateRecordSHA256": "68a0ebb9bf6112cbcfe527c244fc4ec4e55ca44dbbba120acd1d0f02480213b6",
             "selectionFragment": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/cc-gap-selection.json",
-            "orientationProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/chestnut-native-orientation.json"
+            "orientationProof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/chestnut-native-orientation.json",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:10.013806+00:00",
+                "previousContentSHA256": "6e9077b456f8f4ba139f73bd08dc943da9091f6e32672fb034cd918f23412d2a",
+                "currentContentSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa-evidence/content-revalidation-6e9077b456f8-8afbd810d301.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "reviewedAt": "2026-10-12T19:48:25.079241+00:00"
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/qa.json",
-            "sha256": "d88ce03e0297d53dc9120b1889e51133031fcd365be8de906273498069ed0266"
+            "sha256": "8e6f833656504ae0a397a12fc696f296a55db8af7443a76f161be4e6c89a5cf1"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e09/taskent/illustration-qa-extra.json",
@@ -2449,7 +2807,7 @@
         "tiedosto": "Chestnut tree in Tashkent.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8afbd810d3018656483661203223e1e3fc869acce15e6efb2e2f5ddf85ec9eec",
+      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
       "targetAfterSHA256": "664f308ee8ab9d73b36f0f1fbd82daec8d535a44c252ece8d5e6666b20ab1b9e",
       "contextAfterSHA256": "228501249400f0ff85f92a7885b57e0c71ee241e6f7290ccab22ecd2374090dd"
     }
