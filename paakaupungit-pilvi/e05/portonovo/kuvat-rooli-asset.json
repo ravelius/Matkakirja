@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "portonovo",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+  "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
   "assets": [
     {
       "era": "e05",
@@ -109,7 +109,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
-        "fileSHA256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543",
+        "fileSHA256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -145,11 +145,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
-            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+            "sha256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
-            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+            "sha256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904"
           }
         ]
       },
@@ -232,9 +232,288 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "77745ab5884f624c4fa4e0e80db7193247aa17e182e2647023e40c2a2029432c"
+    },
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e05-portonovo-o3-v1-20261012T200240Z",
+      "galleryImageID": "e05-portonovo-o3-v1-20261012T200240Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: suuren puun juurenniska.",
+        "lyhyt": "Havainnekuva: suuren puun juurenniska."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: suuren puun juurenniska.",
+        "lyhyt": "Havainnekuva: suuren puun juurenniska."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b8fd9c2ef1256587f7fd0784b8cc16c1e0424643bb039687bc7248959d3ffd77",
+      "exportSHA256": "2f023e9042df9a1101b3ba4ae49b2bf5391b9752d2fa48df24c7cd575b94eda5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "02b29909b868cf9a5315b97ec513bc3d58a6a5b9c12c62c539a78bd1029675b2",
+        "subjectTitle": "Vanhojen puiden luona",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-safe-material-plant-or-produce",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/assets/e05-portonovo-o3-v1-20261012T200240Z/image.png",
+            "nativeSHA256": "b8fd9c2ef1256587f7fd0784b8cc16c1e0424643bb039687bc7248959d3ffd77",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewDetail": "original",
+            "visualFindingsFi": "Suuren puun tyvestä maahan leviävät paksut juuret, epäsäännöllistä kaarnaa, sammallaikkuja ja lehtikariketta. Juuret liittyvät runkoon ja maahan fyysisesti uskottavasti. Ei kaiverrusta, fâ-esinettä, tekstiä, logoa, ihmisiä tai nimetyn puutarhan asettelua.",
+            "captionFi": "Havainnekuva: suuren puun juurenniska.",
+            "sourceAndTargetCheckFi": "Nykyinen O3 kertoo Jardin des plantes et de la naturen suurista vanhoista puista. Luettu faktapohjan rivit 37 ja 71 ja J-lähde (Jardin des plantes et de la nature). CaptionFi nimeää vain suuren puun juurenniskan; ei väitä puuyksilöä, kasvilajia, puutarhan geometriaa tai historiallista näkymää. TRAVELER:n erillinen pysty tyvikuva ja O3:n vaakasuuntainen lähikuva ovat eri natiivitiedostoja eri taittoroolissa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+            "currentContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+            "currentTextExcerpt": "Jardin des plantes et de la nature säilyttää kaupungissa suuria vanhoja puita. Paikka oli aiemmin pyhä metsä ja myöhemmin koekasvipuutarha. Laguunin kulku- ja venereittejä ei voi päätellä pelkästä kaupungin sijainnista.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+            "factSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+              "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+              "sourceFactSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+              "contentExcerpt": "Jardin des plantes et de la nature säilyttää kaupungissa suuria vanhoja puita. Paikka oli aiemmin pyhä metsä ja myöhemmin koekasvipuutarha. Laguunin kulku- ja venereittejä ei voi päätellä pelkästä kaupungin sijainnista.",
+              "factSheetExcerpt": [
+                "37: **K1 Vanha metsä on kaupungin puutarha**, wiki Jardin des plantes et de la nature: aiempi Hogbonun pyhä metsä; perinteinen paikallinen auktoriteetti; sittemmin koekasvipuutarha; vanhoja isoja puita; kasvien säilytys/opetus; myöhemmät kunnostukset; kaupungin hallintokortteleiden vihreä paikka. J/johdanto, Histoire. Ei uhri-/kuolemankertomuksia, pinta-alaa tai puiden täsmäikää.",
+                "71: **Jardin des Plantes et de la Nature**, luonto, **6.47389, 2.61500** (J/6°28′26″N, 2°36′54″E). Aika aiempi pyhä metsä, myöhempi puutarha; tarkkaa syntyvuotta ei vahvistettu. Faktat: Porto-Novon viheralue; Hogbonun vanha pyhä metsä; perinteinen kuningaskunnan auktoriteetti; myöhempi koekasvipuutarha; kasvien säilytys/opetus; isoja vanhoja puita; iroko/Milicia excelsa ja Ceiba pentandra lähteen nimettyjä puita; lintu-/apina-/sammakkoeläinhavaintoja; kaupungin hallinto-/sairaalakortteleiden välissä. J/Histoire, Patrimoine végétal/faunistique. Kuvan aihe luonnonpuusto, ei fâ-aiheinen puuveistos tai perinneteos. 1873:n tarkkaa ulkoasua ei keksitä. Yhden pisteen rajaus ei ole täysi karttarajaus."
+              ],
+              "supportsFi": "Ajantasainen teksti ja faktapohja nimeävät materiaalin tai aiheen. Kuva on yleishavainne ilman paikallisen yksilön, lajikkeen, kojun tai tarkan paikan väitettä.",
+              "directSubjectInCurrentText": true
+            },
+            "ownershipHandoff": {
+              "ready": true,
+              "cededEras": [
+                "e05",
+                "e06"
+              ],
+              "retainedEra": "e04",
+              "updatedAt": "2026-10-12T20:44:14.910964+00:00"
+            },
+            "colorProfileHandlingFi": "Untagged native RGB ei ole visuaalinen hylkäysperuste. Toimitus todistaa sRGB/provenance-viennin muuttamatta pikseleitä ja säilyttää native-SHA:n.",
+            "reviewScopeFi": "Yleishavainne tähän mixed-paikkaan; ei julkaisun tai koko kuvatilauksen valmistumiskuittaus."
+          },
+          "qaReason": "Tekstiaiheeseen perustuva rehellisesti nimetty yleishavainne; katsottu natiivi, SHA, mitat sekä pinnat ja rakenne hyväksytty."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: suuren puun juurenniska.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+        "fileSHA256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e05-portonovo-o3-v1-20261012T200240Z",
+          "sha256": "b8fd9c2ef1256587f7fd0784b8cc16c1e0424643bb039687bc7248959d3ffd77",
+          "verdict": "accepted",
+          "reason": "Tekstiaiheeseen perustuva rehellisesti nimetty yleishavainne; katsottu natiivi, SHA, mitat sekä pinnat ja rakenne hyväksytty.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/assets/e05-portonovo-o3-v1-20261012T200240Z/image.png",
+            "nativeSHA256": "b8fd9c2ef1256587f7fd0784b8cc16c1e0424643bb039687bc7248959d3ffd77",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewDetail": "original",
+            "visualFindingsFi": "Suuren puun tyvestä maahan leviävät paksut juuret, epäsäännöllistä kaarnaa, sammallaikkuja ja lehtikariketta. Juuret liittyvät runkoon ja maahan fyysisesti uskottavasti. Ei kaiverrusta, fâ-esinettä, tekstiä, logoa, ihmisiä tai nimetyn puutarhan asettelua.",
+            "captionFi": "Havainnekuva: suuren puun juurenniska.",
+            "sourceAndTargetCheckFi": "Nykyinen O3 kertoo Jardin des plantes et de la naturen suurista vanhoista puista. Luettu faktapohjan rivit 37 ja 71 ja J-lähde (Jardin des plantes et de la nature). CaptionFi nimeää vain suuren puun juurenniskan; ei väitä puuyksilöä, kasvilajia, puutarhan geometriaa tai historiallista näkymää. TRAVELER:n erillinen pysty tyvikuva ja O3:n vaakasuuntainen lähikuva ovat eri natiivitiedostoja eri taittoroolissa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+            "currentContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+            "currentTextExcerpt": "Jardin des plantes et de la nature säilyttää kaupungissa suuria vanhoja puita. Paikka oli aiemmin pyhä metsä ja myöhemmin koekasvipuutarha. Laguunin kulku- ja venereittejä ei voi päätellä pelkästä kaupungin sijainnista.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+            "factSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+              "sourceContentSHA256": "b1232d9fbc364fd959c3a161ae9a4aab70e7b72f4bdeb9890a5aea08511ec4c0",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/faktapohja.md",
+              "sourceFactSheetSHA256": "edd8405f0d67fcc6b44b93f3bdfdf7e8cdc7cffa35e252e659e9daf4e3dd140b",
+              "contentExcerpt": "Jardin des plantes et de la nature säilyttää kaupungissa suuria vanhoja puita. Paikka oli aiemmin pyhä metsä ja myöhemmin koekasvipuutarha. Laguunin kulku- ja venereittejä ei voi päätellä pelkästä kaupungin sijainnista.",
+              "factSheetExcerpt": [
+                "37: **K1 Vanha metsä on kaupungin puutarha**, wiki Jardin des plantes et de la nature: aiempi Hogbonun pyhä metsä; perinteinen paikallinen auktoriteetti; sittemmin koekasvipuutarha; vanhoja isoja puita; kasvien säilytys/opetus; myöhemmät kunnostukset; kaupungin hallintokortteleiden vihreä paikka. J/johdanto, Histoire. Ei uhri-/kuolemankertomuksia, pinta-alaa tai puiden täsmäikää.",
+                "71: **Jardin des Plantes et de la Nature**, luonto, **6.47389, 2.61500** (J/6°28′26″N, 2°36′54″E). Aika aiempi pyhä metsä, myöhempi puutarha; tarkkaa syntyvuotta ei vahvistettu. Faktat: Porto-Novon viheralue; Hogbonun vanha pyhä metsä; perinteinen kuningaskunnan auktoriteetti; myöhempi koekasvipuutarha; kasvien säilytys/opetus; isoja vanhoja puita; iroko/Milicia excelsa ja Ceiba pentandra lähteen nimettyjä puita; lintu-/apina-/sammakkoeläinhavaintoja; kaupungin hallinto-/sairaalakortteleiden välissä. J/Histoire, Patrimoine végétal/faunistique. Kuvan aihe luonnonpuusto, ei fâ-aiheinen puuveistos tai perinneteos. 1873:n tarkkaa ulkoasua ei keksitä. Yhden pisteen rajaus ei ole täysi karttarajaus."
+              ],
+              "supportsFi": "Ajantasainen teksti ja faktapohja nimeävät materiaalin tai aiheen. Kuva on yleishavainne ilman paikallisen yksilön, lajikkeen, kojun tai tarkan paikan väitettä.",
+              "directSubjectInCurrentText": true
+            },
+            "ownershipHandoff": {
+              "ready": true,
+              "cededEras": [
+                "e05",
+                "e06"
+              ],
+              "retainedEra": "e04",
+              "updatedAt": "2026-10-12T20:44:14.910964+00:00"
+            },
+            "colorProfileHandlingFi": "Untagged native RGB ei ole visuaalinen hylkäysperuste. Toimitus todistaa sRGB/provenance-viennin muuttamatta pikseleitä ja säilyttää native-SHA:n.",
+            "reviewScopeFi": "Yleishavainne tähän mixed-paikkaan; ei julkaisun tai koko kuvatilauksen valmistumiskuittaus."
+          },
+          "reviewedAt": "2026-10-12T20:45:03.312032+00:00",
+          "reviewerThreadID": "01a131d7-120e-7ca3-8e8e-0fccce142ee9"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+            "sha256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+            "sha256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png?t=2f023e9042df9a11",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png",
+        "sha256": "2f023e9042df9a1101b3ba4ae49b2bf5391b9752d2fa48df24c7cd575b94eda5",
+        "bytes": 3495196,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-portonovo-o3-v1-20261012T200240Z",
+        "nativeSHA256": "b8fd9c2ef1256587f7fd0784b8cc16c1e0424643bb039687bc7248959d3ffd77",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "portonovo",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-12T20:45:23.699135+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/portonovo/e05-portonovo-o3-v1-20261012T200240Z-b8fd9c2ef125.png",
+        "sha256": "2f023e9042df9a1101b3ba4ae49b2bf5391b9752d2fa48df24c7cd575b94eda5",
+        "bytes": 3495196,
+        "SHAReadAt": "2026-10-12T20:45:10.778694+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b8fd9c2ef1256587f7fd0784b8cc16c1e0424643bb039687bc7248959d3ffd77",
+        "rgbPixelSHA256": "8296c08c5d0dc0d918f78e9119d27dba2db7a2a8f72f817d741b631d75d635cc",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "02b29909b868cf9a5315b97ec513bc3d58a6a5b9c12c62c539a78bd1029675b2"
     },
     {
       "era": "e05",
@@ -339,7 +618,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
-        "fileSHA256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543",
+        "fileSHA256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904",
         "item": {
           "slot": "K1",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
@@ -374,11 +653,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
-            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+            "sha256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
-            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+            "sha256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904"
           }
         ]
       },
@@ -461,7 +740,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
       "contextAfterSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3"
     },
@@ -569,7 +848,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
-        "fileSHA256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4",
+        "fileSHA256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -604,11 +883,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
-            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+            "sha256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
-            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+            "sha256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904"
           }
         ]
       },
@@ -691,7 +970,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
       "contextAfterSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769"
     },
@@ -805,7 +1084,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
-        "fileSHA256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543",
+        "fileSHA256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -847,11 +1126,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
-            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+            "sha256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
-            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+            "sha256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904"
           }
         ]
       },
@@ -934,7 +1213,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
       "contextAfterSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0"
     },
@@ -1051,7 +1330,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
-        "fileSHA256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4",
+        "fileSHA256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1090,11 +1369,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
-            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+            "sha256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
-            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+            "sha256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904"
           }
         ]
       },
@@ -1165,7 +1444,7 @@
         "tiedosto": "IROKO au CAEB.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
       "contextAfterSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6"
     },
@@ -1284,7 +1563,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
-        "fileSHA256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4",
+        "fileSHA256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1322,11 +1601,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
-            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+            "sha256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
-            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+            "sha256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904"
           }
         ]
       },
@@ -1397,7 +1676,7 @@
         "tiedosto": "Photo lagune de Porto-Novo.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
       "contextAfterSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f"
     },
@@ -1516,7 +1795,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
-        "fileSHA256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4",
+        "fileSHA256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c",
         "item": {
           "slot": "C2",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
@@ -1554,11 +1833,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
-            "sha256": "3bb7b4ff275c0e79df3fa54dd6ab6a43cfa4b5ab4b27d0e750edf5f0ef11eec4"
+            "sha256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
-            "sha256": "54a62bb215ca8cab2a3856c77c30dd97ef74bc89e4585c347afc2eb2f9887543"
+            "sha256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904"
           }
         ]
       },
@@ -1629,9 +1908,479 @@
         "tiedosto": "Vue de Porto Novo (Bénin).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
       "contextAfterSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c"
+    },
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e05-portonovo-c3-140542f8dffaf17f",
+      "galleryImageID": "capital-cc-e05-portonovo-c3-140542f8dffaf17f",
+      "commonsFile": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c3-140542f8dffaf17fe014.jpg",
+        "suora": true,
+        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "tiedosto": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "tiedosto": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c3-140542f8dffaf17fe014.jpg",
+        "suora": true,
+        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "tiedosto": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "140542f8dffaf17fe0149c5b70507bfab742727cdd23bb6e65869e738ec682c6",
+      "exportSHA256": "140542f8dffaf17fe0149c5b70507bfab742727cdd23bb6e65869e738ec682c6",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c3-140542f8dffaf17fe014.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c3-140542f8dffaf17fe014.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/cc-gap/b116d4ac0198f7696772ee6612f8d89f1c60e59bc211e394b0c52ddebacf0d91-original.jpg",
+      "dimensions": [
+        8256,
+        5504
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "Porto-Novo",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "NASA Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss072e069105_(Oct_15,_2024)_---_Porto-Novo,_the_capital_of_Benin_with_a_population_of_over_260,000,_is_situated_on_the_Yewa_River_next_to_the_coast_of_the_Gulf_of_Guinea_in_this_photograph_from_the_International_Spac.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Iss072e069105_%28Oct_15%2C_2024%29_---_Porto-Novo%2C_the_capital_of_Benin_with_a_population_of_over_260%2C000%2C_is_situated_on_the_Yewa_River_next_to_the_coast_of_the_Gulf_of_Guinea_in_this_photograph_from_the_International_Spac.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "kind": "NASA-real-regional-city-view",
+            "licenseModelVerified": "PD-USGov-NASA",
+            "photoLicenseVerifiedFromSource": true,
+            "publicDomainGround": "Tiedostokohtainen PD-USGov-NASA-malli: solely created by NASA; ei pelkkä NASA-kuvan luettelotunnus.",
+            "primaryMediaPolicyURL": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+            "primaryMediaPolicyPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-gap/nasa-media-policy.html",
+            "placeEvidence": "Alkuperäinen Description yksilöi Porto-Novon, päiväyksen15.10.2024 ja ISS-kuvauksen; tiedostokohtaiset Porto-Novo/Photos of Benin from ISS -kategoriat. Captioniin ei poimita väestölukua, jokinimeä, korkeutta tai kuvassa näkyvien yksittäisten rakennusten nimiä.",
+            "depictedWorksAssessmentFi": "Kaupunki, rannikko ja vesistö näkyvät laajoina maaston/asutuksen rakenteina. Yksilöidyn suojatun rakennus- tai taideteoksen omaa ilmaisua ei eroteta pääaiheeksi; ei NASA-logoa, henkilöitä tai kolmannen osapuolen tekijämerkintää. Ei yleistä FOP- tai rakennusikään perustuvaa päätelmää."
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-5459a1ebbdc35e77/original-140542f8dffaf17fe0149c5b70507bfab742727cdd23bb6e65869e738ec682c6.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-5459a1ebbdc35e77/source-eb4b17a0ff28effc98ad29e49eb3a6df79752d2d6c522c0dcbf76c6437d7b8a9.html",
+            "sourceHTMLSHA256": "eb4b17a0ff28effc98ad29e49eb3a6df79752d2d6c522c0dcbf76c6437d7b8a9",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss072e069105_(Oct_15,_2024)_---_Porto-Novo,_the_capital_of_Benin_with_a_population_of_over_260,000,_is_situated_on_the_Yewa_River_next_to_the_coast_of_the_Gulf_of_Guinea_in_this_photograph_from_the_International_Spac.jpg",
+            "sourceDescription": "English: iss072e069105 (Oct. 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Space Station as it orbited 260 miles above.",
+            "sourceDate": "Taken on 15 October 2024",
+            "author": "NASA Johnson Space Center",
+            "license": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "width": 8256,
+            "height": 5504,
+            "rightsEvidence": {
+              "kind": "NASA-real-regional-city-view",
+              "licenseModelVerified": "PD-USGov-NASA",
+              "photoLicenseVerifiedFromSource": true,
+              "publicDomainGround": "Tiedostokohtainen PD-USGov-NASA-malli: solely created by NASA; ei pelkkä NASA-kuvan luettelotunnus.",
+              "primaryMediaPolicyURL": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+              "primaryMediaPolicyPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-gap/nasa-media-policy.html",
+              "placeEvidence": "Alkuperäinen Description yksilöi Porto-Novon, päiväyksen15.10.2024 ja ISS-kuvauksen; tiedostokohtaiset Porto-Novo/Photos of Benin from ISS -kategoriat. Captioniin ei poimita väestölukua, jokinimeä, korkeutta tai kuvassa näkyvien yksittäisten rakennusten nimiä.",
+              "depictedWorksAssessmentFi": "Kaupunki, rannikko ja vesistö näkyvät laajoina maaston/asutuksen rakenteina. Yksilöidyn suojatun rakennus- tai taideteoksen omaa ilmaisua ei eroteta pääaiheeksi; ei NASA-logoa, henkilöitä tai kolmannen osapuolen tekijämerkintää. Ei yleistä FOP- tai rakennusikään perustuvaa päätelmää."
+            },
+            "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+            "reviewedAt": "2026-10-12T20:26:51.247516+00:00",
+            "inputFragment": "cc-gap-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/cc-gap-selection.json",
+            "selectionSHA256": "5152d698c5056014332162088fe1edca21f1c56b952ca20c9444abd85d3c3390",
+            "sourcePhotoID": "ISS072E069105",
+            "sourcePDBasis": "Original file Licensing states solely created by NASA, public domain in the United States.",
+            "captionBoundary": "City area/water landscape2024 only; no population, river-name or orbital-altitude assertion."
+          },
+          "qaReason": "Alkuperäinen8256×5504 katsottu itse: aito laaja Porto-Novon kaupunkialueen, rannikko-/vesistörakenteen ja kasvillisuuden ISS-valokuva. NASA-kuvauksen Description yksilöi Porto-Novon,15.10.2024 ja ISS072E069105; tiedostosivun varsinaiset Porto-Novo/Photos of Benin from ISS -kategoriat luettu itse. Kuvateksti pidetään kaupunkialueessa/vesimaisemassa2024, eikä siitä tehdä lähdeotsikon väestö-, jokinimi- tai korkeusväitteitä. Ei kasvoja, lisättyä tekstiä/merkintöjä/vesileimaa/kehystä tai yksilöidyn nykyteoksen omaa ilmaisua päämotiivina. Author NASA Johnson Space Center luettu suoraan, Licensing nimenomaisesti solely created by NASA / public domain; NASA-ID tai uploader OptimusPrimeBot ei yksin ollut oikeusperuste. NativeSHA varmistettu; todellinen city-asettelu ja minileveys täyttyvät. Eri tiedosto kaupungin muista kuvista, ei AI-panoraama."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+        "fileSHA256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg",
+          "sha256": "140542f8dffaf17fe0149c5b70507bfab742727cdd23bb6e65869e738ec682c6",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen8256×5504 katsottu itse: aito laaja Porto-Novon kaupunkialueen, rannikko-/vesistörakenteen ja kasvillisuuden ISS-valokuva. NASA-kuvauksen Description yksilöi Porto-Novon,15.10.2024 ja ISS072E069105; tiedostosivun varsinaiset Porto-Novo/Photos of Benin from ISS -kategoriat luettu itse. Kuvateksti pidetään kaupunkialueessa/vesimaisemassa2024, eikä siitä tehdä lähdeotsikon väestö-, jokinimi- tai korkeusväitteitä. Ei kasvoja, lisättyä tekstiä/merkintöjä/vesileimaa/kehystä tai yksilöidyn nykyteoksen omaa ilmaisua päämotiivina. Author NASA Johnson Space Center luettu suoraan, Licensing nimenomaisesti solely created by NASA / public domain; NASA-ID tai uploader OptimusPrimeBot ei yksin ollut oikeusperuste. NativeSHA varmistettu; todellinen city-asettelu ja minileveys täyttyvät. Eri tiedosto kaupungin muista kuvista, ei AI-panoraama.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-5459a1ebbdc35e77/original-140542f8dffaf17fe0149c5b70507bfab742727cdd23bb6e65869e738ec682c6.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-5459a1ebbdc35e77/source-eb4b17a0ff28effc98ad29e49eb3a6df79752d2d6c522c0dcbf76c6437d7b8a9.html",
+            "sourceHTMLSHA256": "eb4b17a0ff28effc98ad29e49eb3a6df79752d2d6c522c0dcbf76c6437d7b8a9",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss072e069105_(Oct_15,_2024)_---_Porto-Novo,_the_capital_of_Benin_with_a_population_of_over_260,000,_is_situated_on_the_Yewa_River_next_to_the_coast_of_the_Gulf_of_Guinea_in_this_photograph_from_the_International_Spac.jpg",
+            "sourceDescription": "English: iss072e069105 (Oct. 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Space Station as it orbited 260 miles above.",
+            "sourceDate": "Taken on 15 October 2024",
+            "author": "NASA Johnson Space Center",
+            "license": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "width": 8256,
+            "height": 5504,
+            "rightsEvidence": {
+              "kind": "NASA-real-regional-city-view",
+              "licenseModelVerified": "PD-USGov-NASA",
+              "photoLicenseVerifiedFromSource": true,
+              "publicDomainGround": "Tiedostokohtainen PD-USGov-NASA-malli: solely created by NASA; ei pelkkä NASA-kuvan luettelotunnus.",
+              "primaryMediaPolicyURL": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+              "primaryMediaPolicyPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e04/alger/cc-gap/nasa-media-policy.html",
+              "placeEvidence": "Alkuperäinen Description yksilöi Porto-Novon, päiväyksen15.10.2024 ja ISS-kuvauksen; tiedostokohtaiset Porto-Novo/Photos of Benin from ISS -kategoriat. Captioniin ei poimita väestölukua, jokinimeä, korkeutta tai kuvassa näkyvien yksittäisten rakennusten nimiä.",
+              "depictedWorksAssessmentFi": "Kaupunki, rannikko ja vesistö näkyvät laajoina maaston/asutuksen rakenteina. Yksilöidyn suojatun rakennus- tai taideteoksen omaa ilmaisua ei eroteta pääaiheeksi; ei NASA-logoa, henkilöitä tai kolmannen osapuolen tekijämerkintää. Ei yleistä FOP- tai rakennusikään perustuvaa päätelmää."
+            },
+            "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+            "reviewedAt": "2026-10-12T20:26:51.247516+00:00",
+            "inputFragment": "cc-gap-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/cc-gap-selection.json",
+            "selectionSHA256": "5152d698c5056014332162088fe1edca21f1c56b952ca20c9444abd85d3c3390",
+            "sourcePhotoID": "ISS072E069105",
+            "sourcePDBasis": "Original file Licensing states solely created by NASA, public domain in the United States.",
+            "captionBoundary": "City area/water landscape2024 only; no population, river-name or orbital-altitude assertion."
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+            "sha256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+            "sha256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "portonovo",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg",
+        "sha256": "140542f8dffaf17fe0149c5b70507bfab742727cdd23bb6e65869e738ec682c6",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Iss072e069105_(Oct_15,_2024)_---_Porto-Novo,_the_capital_of_Benin_with_a_population_of_over_260,000,_is_situated_on_the_Yewa_River_next_to_the_coast_of_the_Gulf_of_Guinea_in_this_photograph_from_the_International_Spac.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Iss072e069105_%28Oct_15%2C_2024%29_---_Porto-Novo%2C_the_capital_of_Benin_with_a_population_of_over_260%2C000%2C_is_situated_on_the_Yewa_River_next_to_the_coast_of_the_Gulf_of_Guinea_in_this_photograph_from_the_International_Spac.jpg",
+        "author": "NASA Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "width": 8256,
+        "height": 5504,
+        "originalSHA256": "140542f8dffaf17fe0149c5b70507bfab742727cdd23bb6e65869e738ec682c6",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c3-140542f8dffaf17fe014.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/c3-140542f8dffaf17fe014.jpg",
+        "bytes": 11818950,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:27:29.661639+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "tiedosto": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "targetAfterSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
+      "contextAfterSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315"
+    },
+    {
+      "era": "e05",
+      "city": "portonovo",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e05-portonovo-n1-1fce9ad67678da7d",
+      "galleryImageID": "capital-cc-e05-portonovo-n1-1fce9ad67678da7d",
+      "commonsFile": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Jardin des plantes et de la nature\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Jardin des plantes et de la nature",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/n1-1fce9ad67678da7d8a7b.jpg",
+        "suora": true,
+        "lahde": "Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "tiedosto": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "tiedosto": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/n1-1fce9ad67678da7d8a7b.jpg",
+        "suora": true,
+        "lahde": "Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "tiedosto": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1fce9ad67678da7d8a7b98d5c92ad4189cb4eecd9ec4b1dbe12b1ce93a2308d3",
+      "exportSHA256": "1fce9ad67678da7d8a7b98d5c92ad4189cb4eecd9ec4b1dbe12b1ce93a2308d3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/n1-1fce9ad67678da7d8a7b.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/n1-1fce9ad67678da7d8a7b.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/cc-gap/b17a162864316d834d61597c1d58b0555565f150cb0376264bae133d54188cc8-original.jpg",
+      "dimensions": [
+        2448,
+        3264
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
+      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "3b1e71b6a8ccfd1a9cb7185b704b578af550a20251100ae78bd5e549667b2dd0",
+        "subjectTitle": "Jardin des plantes et de la nature",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Rachad sanoussi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Arbre_g%C3%A9ant_au_jardin_des_plantes_et_de_la_nature_de_Porto-Novo.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Arbre_g%C3%A9ant_au_jardin_des_plantes_et_de_la_nature_de_Porto-Novo.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "kind": "real-named-garden-natural-tree",
+            "photoLicenseVerifiedFromSource": true,
+            "placeEvidence": "Alkuperäinen Description nimeää Jardin des plantes et de la nature de Porto-Novon; sama nimetty puutarha tiedostokohtaisena kategoriana.",
+            "depictedWorksAssessmentFi": "Pääaihe on luonnollinen suuri puu ja kasvillisuus. Ei taide-, rituaali-, rakennus- tai museoesinettä. Kasvilajia, puun tarkkaa ikää, pyhää käyttöä tai yksilön nimeä ei päätellä näkyvästä rungosta tai otsikon giant-sanasta."
+          },
+          "QA": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-25ff463465aae8f0/original-1fce9ad67678da7d8a7b98d5c92ad4189cb4eecd9ec4b1dbe12b1ce93a2308d3.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-25ff463465aae8f0/source-8942821c9d41742201e9d94aa8e7dbebdfa6817d0cac5f7a6b4d7ea0204c1c86.html",
+            "sourceHTMLSHA256": "8942821c9d41742201e9d94aa8e7dbebdfa6817d0cac5f7a6b4d7ea0204c1c86",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Arbre_g%C3%A9ant_au_jardin_des_plantes_et_de_la_nature_de_Porto-Novo.jpg",
+            "sourceDescription": "Français : arbre géant au jardin des plantes et de la nature de Porto-Novo",
+            "sourceDate": "22 June 2019, 17:22:41",
+            "author": "Rachad sanoussi",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 2448,
+            "height": 3264,
+            "rightsEvidence": {
+              "kind": "real-named-garden-natural-tree",
+              "photoLicenseVerifiedFromSource": true,
+              "placeEvidence": "Alkuperäinen Description nimeää Jardin des plantes et de la nature de Porto-Novon; sama nimetty puutarha tiedostokohtaisena kategoriana.",
+              "depictedWorksAssessmentFi": "Pääaihe on luonnollinen suuri puu ja kasvillisuus. Ei taide-, rituaali-, rakennus- tai museoesinettä. Kasvilajia, puun tarkkaa ikää, pyhää käyttöä tai yksilön nimeä ei päätellä näkyvästä rungosta tai otsikon giant-sanasta."
+            },
+            "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+            "reviewedAt": "2026-10-12T20:49:34.763176+00:00",
+            "inputFragment": "cc-gap-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/cc-gap-selection.json",
+            "selectionSHA256": "73613f412785f2900ae19c85a92ec42000fb225336bbe40639897ffd75340231"
+          },
+          "qaReason": "Alkuperäinen2448×3264 katsottu itse: aito suuren puun runko ja luonnollinen kasvillisuus, ei kasvoja/lisättyä tekstiä/vesileimaa/kehystä tai erillistä teosta pääaiheena. Lähteen Description/tiedostonimi nimeävät Jardin des plantes et de la nature de Porto-Novon, täsmälleen N1:n nimetyn puutarhan. Teksti kertoo alueen suurista puista; caption puustoa kyseisessä puutarhassa2019 vastaa kuvaa. Puulajia, tarkkaa ikää, yksilön nimeä tai pyhää käyttöä ei päätellä rungosta/giant-sanasta. Kuva22.6.2019, ei1873-rekonstruktio tai nykyopas-palveluväite. Rachad sanoussi/CC BY-SA4.0 nimenomaisista Author/Licensing-kentistä ja nativeSHA varmistettu. Pysty sallittu N1:ssa; eri tiedosto ja paikka kuin PHOTO IROKO au CAEB.jpg."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+        "fileSHA256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Jardin des plantes et de la nature\"].kuvat[0]",
+          "commonsFile": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg",
+          "sha256": "1fce9ad67678da7d8a7b98d5c92ad4189cb4eecd9ec4b1dbe12b1ce93a2308d3",
+          "verdict": "accepted",
+          "reason": "Alkuperäinen2448×3264 katsottu itse: aito suuren puun runko ja luonnollinen kasvillisuus, ei kasvoja/lisättyä tekstiä/vesileimaa/kehystä tai erillistä teosta pääaiheena. Lähteen Description/tiedostonimi nimeävät Jardin des plantes et de la nature de Porto-Novon, täsmälleen N1:n nimetyn puutarhan. Teksti kertoo alueen suurista puista; caption puustoa kyseisessä puutarhassa2019 vastaa kuvaa. Puulajia, tarkkaa ikää, yksilön nimeä tai pyhää käyttöä ei päätellä rungosta/giant-sanasta. Kuva22.6.2019, ei1873-rekonstruktio tai nykyopas-palveluväite. Rachad sanoussi/CC BY-SA4.0 nimenomaisista Author/Licensing-kentistä ja nativeSHA varmistettu. Pysty sallittu N1:ssa; eri tiedosto ja paikka kuin PHOTO IROKO au CAEB.jpg.",
+          "evidence": {
+            "visualViewed": true,
+            "viewedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-25ff463465aae8f0/original-1fce9ad67678da7d8a7b98d5c92ad4189cb4eecd9ec4b1dbe12b1ce93a2308d3.jpg",
+            "sourceHTML": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa-evidence/cc-25ff463465aae8f0/source-8942821c9d41742201e9d94aa8e7dbebdfa6817d0cac5f7a6b4d7ea0204c1c86.html",
+            "sourceHTMLSHA256": "8942821c9d41742201e9d94aa8e7dbebdfa6817d0cac5f7a6b4d7ea0204c1c86",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Arbre_g%C3%A9ant_au_jardin_des_plantes_et_de_la_nature_de_Porto-Novo.jpg",
+            "sourceDescription": "Français : arbre géant au jardin des plantes et de la nature de Porto-Novo",
+            "sourceDate": "22 June 2019, 17:22:41",
+            "author": "Rachad sanoussi",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "width": 2448,
+            "height": 3264,
+            "rightsEvidence": {
+              "kind": "real-named-garden-natural-tree",
+              "photoLicenseVerifiedFromSource": true,
+              "placeEvidence": "Alkuperäinen Description nimeää Jardin des plantes et de la nature de Porto-Novon; sama nimetty puutarha tiedostokohtaisena kategoriana.",
+              "depictedWorksAssessmentFi": "Pääaihe on luonnollinen suuri puu ja kasvillisuus. Ei taide-, rituaali-, rakennus- tai museoesinettä. Kasvilajia, puun tarkkaa ikää, pyhää käyttöä tai yksilön nimeä ei päätellä näkyvästä rungosta tai otsikon giant-sanasta."
+            },
+            "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+            "reviewedAt": "2026-10-12T20:49:34.763176+00:00",
+            "inputFragment": "cc-gap-selection.json",
+            "selectionPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/cc-gap-selection.json",
+            "selectionSHA256": "73613f412785f2900ae19c85a92ec42000fb225336bbe40639897ffd75340231"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/qa.json",
+            "sha256": "fc9a2859708ec226967c2b4e296ef95e8132a901b566b10bfb6abcbdd0c3599c"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/portonovo/illustration-qa-extra.json",
+            "sha256": "9a79cee5a23dc5a2aaeb06b17ddd246d73bffd89f43f4a5333f333970d73e904"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "portonovo",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Jardin des plantes et de la nature\"].kuvat[0]",
+        "commonsFile": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg",
+        "sha256": "1fce9ad67678da7d8a7b98d5c92ad4189cb4eecd9ec4b1dbe12b1ce93a2308d3",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Arbre_g%C3%A9ant_au_jardin_des_plantes_et_de_la_nature_de_Porto-Novo.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Arbre_g%C3%A9ant_au_jardin_des_plantes_et_de_la_nature_de_Porto-Novo.jpg",
+        "author": "Rachad sanoussi",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 2448,
+        "height": 3264,
+        "originalSHA256": "1fce9ad67678da7d8a7b98d5c92ad4189cb4eecd9ec4b1dbe12b1ce93a2308d3",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/n1-1fce9ad67678da7d8a7b.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/n1-1fce9ad67678da7d8a7b.jpg",
+        "bytes": 4564200,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:49:49.171251+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "tiedosto": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
+      "targetAfterSHA256": "7c5fcfd36ae1f5372464e1f3a1534294800e49125f426bb46df952d54712a16d",
+      "contextAfterSHA256": "3b6ff3dac0a06f4ac10253e188dcfd28bb03db5d9ec9a8b463311c6c5e4ed1cc"
     }
   ],
   "runtimeIntegrationPending": true,

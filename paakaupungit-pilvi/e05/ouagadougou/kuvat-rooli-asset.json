@@ -2873,262 +2873,6 @@
     {
       "era": "e05",
       "city": "ouagadougou",
-      "slot": "N1",
-      "type": "commons",
-      "assetID": "capital-cc-e05-ouagadougou-n1-de14e7d74a573a5e",
-      "galleryImageID": "capital-cc-e05-ouagadougou-n1-de14e7d74a573a5e",
-      "commonsFile": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg",
-      "targetJsonPath": "$.nahtavyydet[\"Bangr Weogon kaupunkimetsä\"].kuvat[0]",
-      "targetTokens": [
-        "nahtavyydet",
-        "Bangr Weogon kaupunkimetsä",
-        "kuvat",
-        0
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
-        "suora": true,
-        "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-        "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-        "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-        "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-        "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
-        "suora": true,
-        "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-        "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-        "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
-      "exportSHA256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/cc-evidence/candidate-9a697fa815e189.jpg",
-      "dimensions": [
-        3024,
-        4032
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-      "sourceContentSHA256": "903625184721ffc7df35956f062609ce8f60229be2c583388976c841f6348537",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "2d1b4fca343622b417418ca202448684070df8e5a7125746c7156af23eff0023",
-        "semanticContextSHA256": "ca179d627cba6d4766833361b1ebc5b06de7cd98cf89b986780f03c9cb5aca22",
-        "subjectTitle": "Bangr Weogon kaupunkimetsä",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "Arzantiga",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
-        "rightsEvidence": {
-          "selection": {
-            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
-            "artistFieldSource": "Author table",
-            "explicitCreditFromSource": "Arzantiga",
-            "licenseSourceSha256": "f217015523eb80a061b51b6574913d394fe9610209fc7c7c488854f807b71531",
-            "depictedWorkLayer": "Luonnollinen lampi ja kasvillisuus ovat pääaihe; ei arkkitehtuuri- tai taideteosta. Arzantiga ja CC BY-SA 4.0 alkuperäissivulta. Ei lajimääritystä tai palvelu-/uimaturvallisuus-/nykykunnossapitoväitettä. Valokuva- ja kohdeoikeuskerros sama omaan luonnonympäristöön rajautuva evidenssi; roolin QA erillinen.",
-            "sourcePlaceDescription": "English: Crocodiles lake at parc urbain Bangr Weogo",
-            "sourcePlaceGeo": [],
-            "noFopOrBuildingAgeAssumption": true
-          },
-          "QA": {
-            "reviewer": "job-25 independent-image-QA",
-            "reviewedAt": "2026-10-12T19:41:05.539503+00:00",
-            "visualTool": "view_image",
-            "visualDetail": "original",
-            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/cc-evidence/candidate-9a697fa815e189.jpg",
-            "actualWidth": 3024,
-            "actualHeight": 4032,
-            "actualFormat": "JPEG",
-            "nativePixelWidth": 4032,
-            "nativePixelHeight": 3024,
-            "exifOrientation": 6,
-            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
-            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/cde0127c35fc05e6d5997e7ea5ca4e349d229b44c51d6d24e464d2719b8b3858.html",
-            "savedSourceSHA256": "f217015523eb80a061b51b6574913d394fe9610209fc7c7c488854f807b71531",
-            "authorVerified": "Arzantiga",
-            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
-            "licenseVerified": "CC BY-SA 4.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-            "captureDate": "12 November 2022",
-            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-            "sourceContentSHA256": "d0950091b70a8c83d852b9386f4fb5c29be424bab3826ca2741c453e71b81d67",
-            "captionFi": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-            "depictedWorkLayer": "Arzantiga ja CC BY-SA4.0 varmennettu itse alkuperäisestä Author-/Licensing-osiosta. Pääaihe luonnollinen lampi ja kasvillisuus; ei erillistä kuvattua suojattua nykyteosta. Kaikille kasveille ei keksitä lajimääritystä eikä järven vedestä anneta turvallisuusväitettä.",
-            "duplicateInCity": false,
-            "sourceSHA256Verified": "f217015523eb80a061b51b6574913d394fe9610209fc7c7c488854f807b71531",
-            "captureDateAsStated": "12 November2022",
-            "placeEvidence": "Crocodiles lake at parc urbain Bangr Weogo; nykyinen Bangr Weogon kaupunkimetsä -objekti ja samanniminen karttapiste olemassa.",
-            "targetCurrentlyPresent": true,
-            "targetImageArrayCurrentlyEmpty": true,
-            "previousRoleVerdict": {
-              "slot": "C3",
-              "verdict": "rejected",
-              "scope": "No broad city layout; not a global image rejection"
-            },
-            "activeCandidateUsesOfFile": 1
-          },
-          "qaReason": "Sama muuttamaton lammen ja kasvillisuuden kuva on katsottu henkilökohtaisesti alkuperäisenä. Se vastaa nyt olemassa olevaa Bangr Weogon kaupunkimetsä -kohdejuttua ja samannimistä karttakohdetta12.39528,-1.49083. Kohteen kuvat-lista on tyhjä[], mutta kohdeobjekti ja karttapiste ovat olemassa: N1 ei ole retired, vaan kuva täyttää suunnitellun ensimmäisen lehden. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Description yksilöi puiston lammen, vuodesta2022 ei tehdä nykyisten puistopalvelujen tai kunnossapidon väitettä. C3:n hylkäys koski vain puuttuvaa kaupunkiasettelua; N1:n kohdekuva on eri rooli. Tuottaja on arkistoinut saman tiedoston C3-valinnan, joten tiedosto on kerran kaupungin aktiivisissa valinnoissa."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/qa.json",
-        "fileSHA256": "b7f2cb4e1528578361b895d88f39c207d0e0ae4e01821878a8112042d5cf1202",
-        "item": {
-          "slot": "N1",
-          "targetJsonPath": "$.nahtavyydet[\"Bangr Weogon kaupunkimetsä\"].kuvat[0]",
-          "commonsFile": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg",
-          "sha256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
-          "verdict": "accepted",
-          "reason": "Sama muuttamaton lammen ja kasvillisuuden kuva on katsottu henkilökohtaisesti alkuperäisenä. Se vastaa nyt olemassa olevaa Bangr Weogon kaupunkimetsä -kohdejuttua ja samannimistä karttakohdetta12.39528,-1.49083. Kohteen kuvat-lista on tyhjä[], mutta kohdeobjekti ja karttapiste ovat olemassa: N1 ei ole retired, vaan kuva täyttää suunnitellun ensimmäisen lehden. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Description yksilöi puiston lammen, vuodesta2022 ei tehdä nykyisten puistopalvelujen tai kunnossapidon väitettä. C3:n hylkäys koski vain puuttuvaa kaupunkiasettelua; N1:n kohdekuva on eri rooli. Tuottaja on arkistoinut saman tiedoston C3-valinnan, joten tiedosto on kerran kaupungin aktiivisissa valinnoissa.",
-          "evidence": {
-            "reviewer": "job-25 independent-image-QA",
-            "reviewedAt": "2026-10-12T19:41:05.539503+00:00",
-            "visualTool": "view_image",
-            "visualDetail": "original",
-            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/cc-evidence/candidate-9a697fa815e189.jpg",
-            "actualWidth": 3024,
-            "actualHeight": 4032,
-            "actualFormat": "JPEG",
-            "nativePixelWidth": 4032,
-            "nativePixelHeight": 3024,
-            "exifOrientation": 6,
-            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
-            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/cde0127c35fc05e6d5997e7ea5ca4e349d229b44c51d6d24e464d2719b8b3858.html",
-            "savedSourceSHA256": "f217015523eb80a061b51b6574913d394fe9610209fc7c7c488854f807b71531",
-            "authorVerified": "Arzantiga",
-            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
-            "licenseVerified": "CC BY-SA 4.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-            "captureDate": "12 November 2022",
-            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
-            "sourceContentSHA256": "d0950091b70a8c83d852b9386f4fb5c29be424bab3826ca2741c453e71b81d67",
-            "captionFi": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-            "depictedWorkLayer": "Arzantiga ja CC BY-SA4.0 varmennettu itse alkuperäisestä Author-/Licensing-osiosta. Pääaihe luonnollinen lampi ja kasvillisuus; ei erillistä kuvattua suojattua nykyteosta. Kaikille kasveille ei keksitä lajimääritystä eikä järven vedestä anneta turvallisuusväitettä.",
-            "duplicateInCity": false,
-            "sourceSHA256Verified": "f217015523eb80a061b51b6574913d394fe9610209fc7c7c488854f807b71531",
-            "captureDateAsStated": "12 November2022",
-            "placeEvidence": "Crocodiles lake at parc urbain Bangr Weogo; nykyinen Bangr Weogon kaupunkimetsä -objekti ja samanniminen karttapiste olemassa.",
-            "targetCurrentlyPresent": true,
-            "targetImageArrayCurrentlyEmpty": true,
-            "previousRoleVerdict": {
-              "slot": "C3",
-              "verdict": "rejected",
-              "scope": "No broad city layout; not a global image rejection"
-            },
-            "activeCandidateUsesOfFile": 1
-          }
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/qa.json",
-            "sha256": "b7f2cb4e1528578361b895d88f39c207d0e0ae4e01821878a8112042d5cf1202"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/illustration-qa-extra.json",
-            "sha256": "1116d1f039878fce1aaa5d8e2c86886a298c6fc841dde740e3ea9eab3fdb7e85"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e05",
-        "city": "ouagadougou",
-        "slot": "N1",
-        "targetJsonPath": "$.nahtavyydet[\"Bangr Weogon kaupunkimetsä\"].kuvat[0]",
-        "commonsFile": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg",
-        "sha256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
-        "author": "Arzantiga",
-        "license": "CC BY-SA 4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "width": 3024,
-        "height": 4032,
-        "originalSHA256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
-        "bytes": 5026123,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T19:41:33.129125+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg",
-        "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-        "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-        "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
-        "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "903625184721ffc7df35956f062609ce8f60229be2c583388976c841f6348537",
-      "targetAfterSHA256": "2d1b4fca343622b417418ca202448684070df8e5a7125746c7156af23eff0023",
-      "contextAfterSHA256": "ca179d627cba6d4766833361b1ebc5b06de7cd98cf89b986780f03c9cb5aca22"
-    },
-    {
-      "era": "e05",
-      "city": "ouagadougou",
       "slot": "L2",
       "type": "commons",
       "assetID": "capital-cc-e05-ouagadougou-l2-24c3cbb06ffab3cb",
@@ -3387,6 +3131,262 @@
       "sourceContentAfterSHA256": "903625184721ffc7df35956f062609ce8f60229be2c583388976c841f6348537",
       "targetAfterSHA256": "c126051a5b50825377582555ddaa3826c61de12bd03be3901bc8eb72e8216df7",
       "contextAfterSHA256": "c126051a5b50825377582555ddaa3826c61de12bd03be3901bc8eb72e8216df7"
+    },
+    {
+      "era": "e05",
+      "city": "ouagadougou",
+      "slot": "N1",
+      "type": "commons",
+      "assetID": "capital-cc-e05-ouagadougou-n1-de14e7d74a573a5e",
+      "galleryImageID": "capital-cc-e05-ouagadougou-n1-de14e7d74a573a5e",
+      "commonsFile": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg",
+      "targetJsonPath": "$.nahtavyydet[\"Bangr Weogon kaupunkimetsä\"].kuvat[0]",
+      "targetTokens": [
+        "nahtavyydet",
+        "Bangr Weogon kaupunkimetsä",
+        "kuvat",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
+        "suora": true,
+        "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+        "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+        "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+        "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+        "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
+        "suora": true,
+        "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+        "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+        "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
+      "exportSHA256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/cc-evidence/candidate-9a697fa815e189.jpg",
+      "dimensions": [
+        3024,
+        4032
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
+      "sourceContentSHA256": "903625184721ffc7df35956f062609ce8f60229be2c583388976c841f6348537",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2d1b4fca343622b417418ca202448684070df8e5a7125746c7156af23eff0023",
+        "semanticContextSHA256": "ca179d627cba6d4766833361b1ebc5b06de7cd98cf89b986780f03c9cb5aca22",
+        "subjectTitle": "Bangr Weogon kaupunkimetsä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Arzantiga",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Arzantiga",
+            "licenseSourceSha256": "f217015523eb80a061b51b6574913d394fe9610209fc7c7c488854f807b71531",
+            "depictedWorkLayer": "Luonnollinen lampi ja kasvillisuus ovat pääaihe; ei arkkitehtuuri- tai taideteosta. Arzantiga ja CC BY-SA 4.0 alkuperäissivulta. Ei lajimääritystä tai palvelu-/uimaturvallisuus-/nykykunnossapitoväitettä. Valokuva- ja kohdeoikeuskerros sama omaan luonnonympäristöön rajautuva evidenssi; roolin QA erillinen.",
+            "sourcePlaceDescription": "English: Crocodiles lake at parc urbain Bangr Weogo",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:41:05.539503+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/cc-evidence/candidate-9a697fa815e189.jpg",
+            "actualWidth": 3024,
+            "actualHeight": 4032,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4032,
+            "nativePixelHeight": 3024,
+            "exifOrientation": 6,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/cde0127c35fc05e6d5997e7ea5ca4e349d229b44c51d6d24e464d2719b8b3858.html",
+            "savedSourceSHA256": "f217015523eb80a061b51b6574913d394fe9610209fc7c7c488854f807b71531",
+            "authorVerified": "Arzantiga",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "12 November 2022",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
+            "sourceContentSHA256": "d0950091b70a8c83d852b9386f4fb5c29be424bab3826ca2741c453e71b81d67",
+            "captionFi": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+            "depictedWorkLayer": "Arzantiga ja CC BY-SA4.0 varmennettu itse alkuperäisestä Author-/Licensing-osiosta. Pääaihe luonnollinen lampi ja kasvillisuus; ei erillistä kuvattua suojattua nykyteosta. Kaikille kasveille ei keksitä lajimääritystä eikä järven vedestä anneta turvallisuusväitettä.",
+            "duplicateInCity": false,
+            "sourceSHA256Verified": "f217015523eb80a061b51b6574913d394fe9610209fc7c7c488854f807b71531",
+            "captureDateAsStated": "12 November2022",
+            "placeEvidence": "Crocodiles lake at parc urbain Bangr Weogo; nykyinen Bangr Weogon kaupunkimetsä -objekti ja samanniminen karttapiste olemassa.",
+            "targetCurrentlyPresent": true,
+            "targetImageArrayCurrentlyEmpty": true,
+            "previousRoleVerdict": {
+              "slot": "C3",
+              "verdict": "rejected",
+              "scope": "No broad city layout; not a global image rejection"
+            },
+            "activeCandidateUsesOfFile": 1
+          },
+          "qaReason": "Sama muuttamaton lammen ja kasvillisuuden kuva on katsottu henkilökohtaisesti alkuperäisenä. Se vastaa nyt olemassa olevaa Bangr Weogon kaupunkimetsä -kohdejuttua ja samannimistä karttakohdetta12.39528,-1.49083. Kohteen kuvat-lista on tyhjä[], mutta kohdeobjekti ja karttapiste ovat olemassa: N1 ei ole retired, vaan kuva täyttää suunnitellun ensimmäisen lehden. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Description yksilöi puiston lammen, vuodesta2022 ei tehdä nykyisten puistopalvelujen tai kunnossapidon väitettä. C3:n hylkäys koski vain puuttuvaa kaupunkiasettelua; N1:n kohdekuva on eri rooli. Tuottaja on arkistoinut saman tiedoston C3-valinnan, joten tiedosto on kerran kaupungin aktiivisissa valinnoissa."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/qa.json",
+        "fileSHA256": "b7f2cb4e1528578361b895d88f39c207d0e0ae4e01821878a8112042d5cf1202",
+        "item": {
+          "slot": "N1",
+          "targetJsonPath": "$.nahtavyydet[\"Bangr Weogon kaupunkimetsä\"].kuvat[0]",
+          "commonsFile": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg",
+          "sha256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
+          "verdict": "accepted",
+          "reason": "Sama muuttamaton lammen ja kasvillisuuden kuva on katsottu henkilökohtaisesti alkuperäisenä. Se vastaa nyt olemassa olevaa Bangr Weogon kaupunkimetsä -kohdejuttua ja samannimistä karttakohdetta12.39528,-1.49083. Kohteen kuvat-lista on tyhjä[], mutta kohdeobjekti ja karttapiste ovat olemassa: N1 ei ole retired, vaan kuva täyttää suunnitellun ensimmäisen lehden. Ei kasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Description yksilöi puiston lammen, vuodesta2022 ei tehdä nykyisten puistopalvelujen tai kunnossapidon väitettä. C3:n hylkäys koski vain puuttuvaa kaupunkiasettelua; N1:n kohdekuva on eri rooli. Tuottaja on arkistoinut saman tiedoston C3-valinnan, joten tiedosto on kerran kaupungin aktiivisissa valinnoissa.",
+          "evidence": {
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T19:41:05.539503+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/cc-evidence/candidate-9a697fa815e189.jpg",
+            "actualWidth": 3024,
+            "actualHeight": 4032,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4032,
+            "nativePixelHeight": 3024,
+            "exifOrientation": 6,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/cde0127c35fc05e6d5997e7ea5ca4e349d229b44c51d6d24e464d2719b8b3858.html",
+            "savedSourceSHA256": "f217015523eb80a061b51b6574913d394fe9610209fc7c7c488854f807b71531",
+            "authorVerified": "Arzantiga",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "captureDate": "12 November 2022",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ouagadougou/sisalto.json",
+            "sourceContentSHA256": "d0950091b70a8c83d852b9386f4fb5c29be424bab3826ca2741c453e71b81d67",
+            "captionFi": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+            "depictedWorkLayer": "Arzantiga ja CC BY-SA4.0 varmennettu itse alkuperäisestä Author-/Licensing-osiosta. Pääaihe luonnollinen lampi ja kasvillisuus; ei erillistä kuvattua suojattua nykyteosta. Kaikille kasveille ei keksitä lajimääritystä eikä järven vedestä anneta turvallisuusväitettä.",
+            "duplicateInCity": false,
+            "sourceSHA256Verified": "f217015523eb80a061b51b6574913d394fe9610209fc7c7c488854f807b71531",
+            "captureDateAsStated": "12 November2022",
+            "placeEvidence": "Crocodiles lake at parc urbain Bangr Weogo; nykyinen Bangr Weogon kaupunkimetsä -objekti ja samanniminen karttapiste olemassa.",
+            "targetCurrentlyPresent": true,
+            "targetImageArrayCurrentlyEmpty": true,
+            "previousRoleVerdict": {
+              "slot": "C3",
+              "verdict": "rejected",
+              "scope": "No broad city layout; not a global image rejection"
+            },
+            "activeCandidateUsesOfFile": 1
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/qa.json",
+            "sha256": "b7f2cb4e1528578361b895d88f39c207d0e0ae4e01821878a8112042d5cf1202"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ouagadougou/illustration-qa-extra.json",
+            "sha256": "1116d1f039878fce1aaa5d8e2c86886a298c6fc841dde740e3ea9eab3fdb7e85"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "ouagadougou",
+        "slot": "N1",
+        "targetJsonPath": "$.nahtavyydet[\"Bangr Weogon kaupunkimetsä\"].kuvat[0]",
+        "commonsFile": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg",
+        "sha256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Crocodile_lake_at_Parc_Urbain_Bangr-Weoogo.jpg",
+        "author": "Arzantiga",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 3024,
+        "height": 4032,
+        "originalSHA256": "de14e7d74a573a5e44967cc9a55cc8e77068ed490c97915a7b92ed9ba601fc9e",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg",
+        "bytes": 5026123,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:41:33.129125+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg",
+        "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+        "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Arzantiga, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+        "lyhyt": "Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.",
+        "tiedosto": "Crocodile lake at Parc Urbain Bangr-Weoogo.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "903625184721ffc7df35956f062609ce8f60229be2c583388976c841f6348537",
+      "targetAfterSHA256": "2d1b4fca343622b417418ca202448684070df8e5a7125746c7156af23eff0023",
+      "contextAfterSHA256": "ca179d627cba6d4766833361b1ebc5b06de7cd98cf89b986780f03c9cb5aca22"
     }
   ],
   "runtimeIntegrationPending": true,

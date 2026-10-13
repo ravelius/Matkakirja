@@ -3,7 +3,7 @@
   "era": "e05",
   "city": "ndjamena",
   "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-  "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+  "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
   "assets": [
     {
       "era": "e05",
@@ -113,7 +113,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
-        "fileSHA256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002",
+        "fileSHA256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -149,7 +149,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
-            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+            "sha256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
@@ -236,7 +236,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "e2ba910b1fbbac2dc63d1587f3861237cff559e1aa7e90fb6cea8c71e54a02ae"
     },
@@ -378,7 +378,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
-            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+            "sha256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
@@ -465,7 +465,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
       "contextAfterSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924"
     },
@@ -611,7 +611,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
-            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+            "sha256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
@@ -698,7 +698,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "d5dc0b4034c3b605a4ea3f445b90ec3847bcdbcd918108771a217b3b4496c587",
       "contextAfterSHA256": "d5dc0b4034c3b605a4ea3f445b90ec3847bcdbcd918108771a217b3b4496c587"
     },
@@ -841,7 +841,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
-        "fileSHA256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002",
+        "fileSHA256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -900,7 +900,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
-            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+            "sha256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
@@ -977,7 +977,7 @@
         "vuosi": "2009"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "e23e82d3be569403038810e3e2bf48cc83e2731420ab3d945098e5ce733fa09b",
       "contextAfterSHA256": "e23e82d3be569403038810e3e2bf48cc83e2731420ab3d945098e5ce733fa09b"
     },
@@ -1105,7 +1105,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
-        "fileSHA256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002",
+        "fileSHA256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1152,7 +1152,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
-            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+            "sha256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
@@ -1227,9 +1227,613 @@
         "tiedosto": "NDjamena, Chad.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "77ed8f799a88855eae2854f2cad20add6007bf301e9143d827592ca220f3840f",
       "contextAfterSHA256": "77ed8f799a88855eae2854f2cad20add6007bf301e9143d827592ca220f3840f"
+    },
+    {
+      "era": "e05",
+      "city": "ndjamena",
+      "slot": "C2",
+      "type": "commons",
+      "assetID": "capital-cc-e05-ndjamena-c2-68440302e1738473",
+      "galleryImageID": "capital-cc-e05-ndjamena-c2-68440302e1738473",
+      "commonsFile": "ISS021-E-26415 - View of Chad.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c2-68440302e17384735230.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "tiedosto": "ISS021-E-26415 - View of Chad.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "tiedosto": "ISS021-E-26415 - View of Chad.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c2-68440302e17384735230.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "tiedosto": "ISS021-E-26415 - View of Chad.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "68440302e17384735230368db5c2525c6f79416f8ed487efdb99e493b48c6a77",
+      "exportSHA256": "68440302e17384735230368db5c2525c6f79416f8ed487efdb99e493b48c6a77",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c2-68440302e17384735230.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c2-68440302e17384735230.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-e5d8cabfde4137.jpg",
+      "dimensions": [
+        4288,
+        2848
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "N'Djamena",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26415_-_View_of_Chad.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/ISS021-E-26415_-_View_of_Chad.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:ISS021-E-26415_-_View_of_Chad.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+            "licenseSourceSha256": "70c26293ff4b8ca03ecd4b15d0240deb2a91fe28eb7bb9924f0f5dc26dcfae17",
+            "depictedWorkLayer": "Alkuperäissivun Author sanatarkasti Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Source JSC Gateway to Astronaut Photography of Earth ja erillinen PD-USGov-NASA / Public domain -lisenssi tarkistettu. NASA-katalogitagia ei yksin pidetä lisenssinä. Tarkka kuvakohteen koordinaatti ja alkuperäissivun N’Djamena-kategoria sitovat paikan; metadata/koko ja oma silmätarkistus vaaditaan myös NASA-kuvalta. Pääaihe koko kaupunkialueen asettelu ja luonnolliset jokivarret; yksittäisen rakennus-/taideteoksen toisinto ei pääaiheena. Ei FOP/ikäoletusta.",
+            "sourcePlaceDescription": "English: View of Chad taken during ISS Expedition 21.",
+            "sourcePlaceGeo": [
+              " 12.100000;   15.100000",
+              " 12.600000;   15.200000"
+            ],
+            "noFopOrBuildingAgeAssumption": true,
+            "agencyFieldsEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/space-agency-fields-e5d8cabfde4137.json",
+            "explicitLicenseTemplate": "PD-USGov-NASA / Public domain",
+            "catalogAndLicenseCheckedSeparately": true
+          },
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:31:34.585716+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-e5d8cabfde4137.jpg",
+            "actualWidth": 4288,
+            "actualHeight": 2848,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4288,
+            "nativePixelHeight": 2848,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26415_-_View_of_Chad.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/6a8c52dc50193f63ad1f0c4d9b80bf3f7100fd9101451022a7a60470c4d7b227.html",
+            "savedSourceSHA256": "70c26293ff4b8ca03ecd4b15d0240deb2a91fe28eb7bb9924f0f5dc26dcfae17",
+            "authorVerified": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "captureDate": "14 November 2009, 13:02:24",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+            "captionFi": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+            "depictedWorkLayer": "Valokuvakerros: alkuperäisen Author-taulukon Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center sekä SourceJSC Gateway ja tiedostokohtainenPD-USGov-NASA-lisenssiosa luettu itse. NASA-katalogi-ID ISS021-E-26415 ei yksin ole lisenssi. Kuvaaja on Expedition21:n astronauttikuva, yksittäistä nimeä ei lähteessä anneta; AskeBot/Askeuhd ovat tiedostohistorian lataajia. Nykyinen lähdeversio on2022lossless-rajaus NASA-ID:n sisältäneestä valkoisesta reunapalkista; QA ei muuttanut pikseleitä. Erillinen teoskerros: laaja kaupungin maantieteellinen asettelu ja pienet kattotasot, ei yksilöityä julkisivu-/taideteosta toisintona. Ei maakohtaista yleistä panoraamaoikeus- tai rakennusikäoletusta.",
+            "duplicateInCity": false,
+            "photoIdentifier": "ISS021-E-26415",
+            "sourceRevision": 829112912,
+            "placeEvidence": {
+              "objectLocation": [
+                12.1,
+                15.1
+              ],
+              "cameraLocation": [
+                12.6,
+                15.2
+              ],
+              "cameraNotObject": true,
+              "features": "NDJAMENA, ROADS, CANAL, FLOODED AREAS"
+            },
+            "nativePixelViewport": {
+              "bounds": [
+                250,
+                1450,
+                1150,
+                2350
+              ],
+              "observation": "Road and block layouts readable; pale haze and soft roof detail acknowledged",
+              "originalBytesChanged": false
+            },
+            "creditForPublication": "NASA Johnson Space Center / Earth Science and Remote Sensing Unit, ISS021-E-26415"
+          },
+          "qaReason": "Todellinen N’Djamenan laaja katu- ja kortteliverkko14.11.2009. Alkuperäisen tiedostosivun Features NDJAMENA, ROADS, CANAL, FLOODED AREAS sekä Object location12.1N/15.1E ja N’Djamena-kategoria varmistavat kaupungin; Chad-otsikko ei yksin riitä. Natiivialueelta katsottuna vaalea huntu ja pehmeät pienimmät katot säilyvät, mutta pääkadut, kortteliruudukko ja rakentuneen alueen laajuus erottuvat. Ei kasvoja, lisättyjä merkintöjä, vesileimaa tai kehystä. Eri NASA-otos kuinPHOTO/C1; marraskuu2009 on oikein selitteessä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+        "fileSHA256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d",
+        "item": {
+          "slot": "C2",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+          "commonsFile": "ISS021-E-26415 - View of Chad.jpg",
+          "sha256": "68440302e17384735230368db5c2525c6f79416f8ed487efdb99e493b48c6a77",
+          "verdict": "accepted",
+          "reason": "Todellinen N’Djamenan laaja katu- ja kortteliverkko14.11.2009. Alkuperäisen tiedostosivun Features NDJAMENA, ROADS, CANAL, FLOODED AREAS sekä Object location12.1N/15.1E ja N’Djamena-kategoria varmistavat kaupungin; Chad-otsikko ei yksin riitä. Natiivialueelta katsottuna vaalea huntu ja pehmeät pienimmät katot säilyvät, mutta pääkadut, kortteliruudukko ja rakentuneen alueen laajuus erottuvat. Ei kasvoja, lisättyjä merkintöjä, vesileimaa tai kehystä. Eri NASA-otos kuinPHOTO/C1; marraskuu2009 on oikein selitteessä.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:31:34.585716+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-e5d8cabfde4137.jpg",
+            "actualWidth": 4288,
+            "actualHeight": 2848,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4288,
+            "nativePixelHeight": 2848,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26415_-_View_of_Chad.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/6a8c52dc50193f63ad1f0c4d9b80bf3f7100fd9101451022a7a60470c4d7b227.html",
+            "savedSourceSHA256": "70c26293ff4b8ca03ecd4b15d0240deb2a91fe28eb7bb9924f0f5dc26dcfae17",
+            "authorVerified": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "captureDate": "14 November 2009, 13:02:24",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+            "captionFi": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+            "depictedWorkLayer": "Valokuvakerros: alkuperäisen Author-taulukon Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center sekä SourceJSC Gateway ja tiedostokohtainenPD-USGov-NASA-lisenssiosa luettu itse. NASA-katalogi-ID ISS021-E-26415 ei yksin ole lisenssi. Kuvaaja on Expedition21:n astronauttikuva, yksittäistä nimeä ei lähteessä anneta; AskeBot/Askeuhd ovat tiedostohistorian lataajia. Nykyinen lähdeversio on2022lossless-rajaus NASA-ID:n sisältäneestä valkoisesta reunapalkista; QA ei muuttanut pikseleitä. Erillinen teoskerros: laaja kaupungin maantieteellinen asettelu ja pienet kattotasot, ei yksilöityä julkisivu-/taideteosta toisintona. Ei maakohtaista yleistä panoraamaoikeus- tai rakennusikäoletusta.",
+            "duplicateInCity": false,
+            "photoIdentifier": "ISS021-E-26415",
+            "sourceRevision": 829112912,
+            "placeEvidence": {
+              "objectLocation": [
+                12.1,
+                15.1
+              ],
+              "cameraLocation": [
+                12.6,
+                15.2
+              ],
+              "cameraNotObject": true,
+              "features": "NDJAMENA, ROADS, CANAL, FLOODED AREAS"
+            },
+            "nativePixelViewport": {
+              "bounds": [
+                250,
+                1450,
+                1150,
+                2350
+              ],
+              "observation": "Road and block layouts readable; pale haze and soft roof detail acknowledged",
+              "originalBytesChanged": false
+            },
+            "creditForPublication": "NASA Johnson Space Center / Earth Science and Remote Sensing Unit, ISS021-E-26415"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+            "sha256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
+            "sha256": "cf32b49be9f586aedff44457e90fa8434d8c35731a5fe79fd37ef08d51ce2cf8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "ndjamena",
+        "slot": "C2",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[1]",
+        "commonsFile": "ISS021-E-26415 - View of Chad.jpg",
+        "sha256": "68440302e17384735230368db5c2525c6f79416f8ed487efdb99e493b48c6a77",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26415_-_View_of_Chad.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/ISS021-E-26415_-_View_of_Chad.jpg",
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "width": 4288,
+        "height": 2848,
+        "originalSHA256": "68440302e17384735230368db5c2525c6f79416f8ed487efdb99e493b48c6a77",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c2-68440302e17384735230.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c2-68440302e17384735230.jpg",
+        "bytes": 1201924,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:32:43.181916+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "tiedosto": "ISS021-E-26415 - View of Chad.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
+      "targetAfterSHA256": "e54b73a05587809dd77d509faa5df810f31ed3ca52e273ce0cb3b5550e01b176",
+      "contextAfterSHA256": "e54b73a05587809dd77d509faa5df810f31ed3ca52e273ce0cb3b5550e01b176"
+    },
+    {
+      "era": "e05",
+      "city": "ndjamena",
+      "slot": "C3",
+      "type": "commons",
+      "assetID": "capital-cc-e05-ndjamena-c3-f046d5869c57c0f8",
+      "galleryImageID": "capital-cc-e05-ndjamena-c3-f046d5869c57c0f8",
+      "commonsFile": "ISS021-E-26419 - View of Chad.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "kansikuvat",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c3-f046d5869c57c0f8d681.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "tiedosto": "ISS021-E-26419 - View of Chad.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "tiedosto": "ISS021-E-26419 - View of Chad.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c3-f046d5869c57c0f8d681.jpg",
+        "suora": true,
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "tiedosto": "ISS021-E-26419 - View of Chad.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "f046d5869c57c0f8d681106e1249bf2b22c4cff1923afa44958e9bf9c7c46e45",
+      "exportSHA256": "f046d5869c57c0f8d681106e1249bf2b22c4cff1923afa44958e9bf9c7c46e45",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c3-f046d5869c57c0f8d681.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c3-f046d5869c57c0f8d681.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-e03cd6c4315736.jpg",
+      "dimensions": [
+        4288,
+        2848
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "subjectTitle": "N'Djamena",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26419_-_View_of_Chad.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/ISS021-E-26419_-_View_of_Chad.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:ISS021-E-26419_-_View_of_Chad.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+            "licenseSourceSha256": "9d317fd583034ca30dbaf9cfb44762713f0154b4233a3ee50b7f0d65fdd24662",
+            "depictedWorkLayer": "Alkuperäissivun Author sanatarkasti Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Source JSC Gateway to Astronaut Photography of Earth ja erillinen PD-USGov-NASA / Public domain -lisenssi tarkistettu. NASA-katalogitagia ei yksin pidetä lisenssinä. Tarkka kuvakohteen koordinaatti ja alkuperäissivun N’Djamena-kategoria sitovat paikan; metadata/koko ja oma silmätarkistus vaaditaan myös NASA-kuvalta. Pääaihe koko kaupunkialueen asettelu ja luonnolliset jokivarret; yksittäisen rakennus-/taideteoksen toisinto ei pääaiheena. Ei FOP/ikäoletusta.",
+            "sourcePlaceDescription": "English: View of Chad taken during ISS Expedition 21.",
+            "sourcePlaceGeo": [
+              " 12.100000;   15.100000",
+              " 12.900000;   15.400000"
+            ],
+            "noFopOrBuildingAgeAssumption": true,
+            "agencyFieldsEvidence": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/space-agency-fields-e03cd6c4315736.json",
+            "explicitLicenseTemplate": "PD-USGov-NASA / Public domain",
+            "catalogAndLicenseCheckedSeparately": true
+          },
+          "QA": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:31:35.119033+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-e03cd6c4315736.jpg",
+            "actualWidth": 4288,
+            "actualHeight": 2848,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4288,
+            "nativePixelHeight": 2848,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26419_-_View_of_Chad.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/478353afb9e4a95e9ae9fc0ecadf7a5dbbdea8af66f841feabde5512dcb61255.html",
+            "savedSourceSHA256": "9d317fd583034ca30dbaf9cfb44762713f0154b4233a3ee50b7f0d65fdd24662",
+            "authorVerified": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "captureDate": "14 November 2009, 13:02:28",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+            "captionFi": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+            "depictedWorkLayer": "Valokuvakerros: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center alkuperäisestä Author-taulukosta; JSC-lähde ja varsinainenPD-USGov-NASA-malli luettu itse, ei NASA-ID-tagista päätelty vapautus. ISS021-E-26419/Expedition21, nimettyä yksittäistä astronauttia ei ilmoiteta. Nykyisen lähteen valkoinen NASA-ID-reunapalkki on rajattu AskeBotin2022lossless-versiossa; QA ei muokannut tiedostoa. Erillinen teoskerros: jokien luontomuodot ja koko kaupungin maantieteellinen asettelu pienine kattotasoineen; näkyvä liikennesilta on toiminnallinen osa, ei eristetty nykytaiteen toisinto. Ei koko maan panoraamaoikeus-/ikäoletusta. Selite ei nimeä kuvasta yksittäistä karttakohdetta tai lupaa vuoden2026tilannetta.",
+            "duplicateInCity": false,
+            "photoIdentifier": "ISS021-E-26419",
+            "sourceRevision": 844655447,
+            "placeEvidence": {
+              "objectLocation": [
+                12.1,
+                15.1
+              ],
+              "cameraLocation": [
+                12.9,
+                15.4
+              ],
+              "cameraNotObject": true,
+              "features": "NDJAMENA, CHARI R., ROADS, BRIDGES"
+            },
+            "nativePixelViewports": [
+              {
+                "bounds": [
+                  250,
+                  1450,
+                  1150,
+                  2350
+                ],
+                "observation": "Riverbank settlement and fields, lower geographic context"
+              },
+              {
+                "bounds": [
+                  1800,
+                  0,
+                  3000,
+                  650
+                ],
+                "observation": "Main city blocks and road network visible in upper part; haze/soft detail acknowledged"
+              }
+            ],
+            "creditForPublication": "NASA Johnson Space Center / Earth Science and Remote Sensing Unit, ISS021-E-26419"
+          },
+          "qaReason": "Todellinen laaja jokilaakson ja N’Djamenan kaupunkialueen näkymä14.11.2009. Kaupunkikorttelit näkyvät etenkin kuvan yläosassa ja jokivarsilla; alempana on myös jokilaakson viljely-/maastoalueita. Täsmäpaikan todistaa alkuperäisen Commons-sivun Features NDJAMENA, CHARI R., ROADS, BRIDGES, Object location12.1N/15.1E ja N’Djamena-kategoria. Katsottu myös natiivikorttelialue: huntu ja pehmeys kirjataan, mutta kaupunkirakenne ja sen suhde jokiin erottuvat. Ei kasvoja, lisättyjä merkintöjä, vesileimaa tai kehystä. Kuva on eri otos/rajaus kuinPHOTO/C1/C2 eikä saman tiedoston kierrätys."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+        "fileSHA256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d",
+        "item": {
+          "slot": "C3",
+          "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+          "commonsFile": "ISS021-E-26419 - View of Chad.jpg",
+          "sha256": "f046d5869c57c0f8d681106e1249bf2b22c4cff1923afa44958e9bf9c7c46e45",
+          "verdict": "accepted",
+          "reason": "Todellinen laaja jokilaakson ja N’Djamenan kaupunkialueen näkymä14.11.2009. Kaupunkikorttelit näkyvät etenkin kuvan yläosassa ja jokivarsilla; alempana on myös jokilaakson viljely-/maastoalueita. Täsmäpaikan todistaa alkuperäisen Commons-sivun Features NDJAMENA, CHARI R., ROADS, BRIDGES, Object location12.1N/15.1E ja N’Djamena-kategoria. Katsottu myös natiivikorttelialue: huntu ja pehmeys kirjataan, mutta kaupunkirakenne ja sen suhde jokiin erottuvat. Ei kasvoja, lisättyjä merkintöjä, vesileimaa tai kehystä. Kuva on eri otos/rajaus kuinPHOTO/C1/C2 eikä saman tiedoston kierrätys.",
+          "evidence": {
+            "inputManifest": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-selection.json",
+            "reviewer": "job-25 independent-image-QA",
+            "reviewedAt": "2026-10-12T20:31:35.119033+00:00",
+            "visualTool": "view_image",
+            "visualDetail": "original",
+            "localOriginal": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/cc-evidence/candidate-e03cd6c4315736.jpg",
+            "actualWidth": 4288,
+            "actualHeight": 2848,
+            "actualFormat": "JPEG",
+            "nativePixelWidth": 4288,
+            "nativePixelHeight": 2848,
+            "exifOrientation": 1,
+            "dimensionsConvention": "actualWidth/Height are correctly oriented display dimensions; native stored pixel dimensions are separately recorded",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26419_-_View_of_Chad.jpg",
+            "savedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/478353afb9e4a95e9ae9fc0ecadf7a5dbbdea8af66f841feabde5512dcb61255.html",
+            "savedSourceSHA256": "9d317fd583034ca30dbaf9cfb44762713f0154b4233a3ee50b7f0d65fdd24662",
+            "authorVerified": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+            "authorField": "Original Commons Author table, independently read; not inferred from uploader",
+            "licenseVerified": "Public domain",
+            "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+            "captureDate": "14 November 2009, 13:02:28",
+            "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
+            "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+            "captionFi": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+            "depictedWorkLayer": "Valokuvakerros: Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center alkuperäisestä Author-taulukosta; JSC-lähde ja varsinainenPD-USGov-NASA-malli luettu itse, ei NASA-ID-tagista päätelty vapautus. ISS021-E-26419/Expedition21, nimettyä yksittäistä astronauttia ei ilmoiteta. Nykyisen lähteen valkoinen NASA-ID-reunapalkki on rajattu AskeBotin2022lossless-versiossa; QA ei muokannut tiedostoa. Erillinen teoskerros: jokien luontomuodot ja koko kaupungin maantieteellinen asettelu pienine kattotasoineen; näkyvä liikennesilta on toiminnallinen osa, ei eristetty nykytaiteen toisinto. Ei koko maan panoraamaoikeus-/ikäoletusta. Selite ei nimeä kuvasta yksittäistä karttakohdetta tai lupaa vuoden2026tilannetta.",
+            "duplicateInCity": false,
+            "photoIdentifier": "ISS021-E-26419",
+            "sourceRevision": 844655447,
+            "placeEvidence": {
+              "objectLocation": [
+                12.1,
+                15.1
+              ],
+              "cameraLocation": [
+                12.9,
+                15.4
+              ],
+              "cameraNotObject": true,
+              "features": "NDJAMENA, CHARI R., ROADS, BRIDGES"
+            },
+            "nativePixelViewports": [
+              {
+                "bounds": [
+                  250,
+                  1450,
+                  1150,
+                  2350
+                ],
+                "observation": "Riverbank settlement and fields, lower geographic context"
+              },
+              {
+                "bounds": [
+                  1800,
+                  0,
+                  3000,
+                  650
+                ],
+                "observation": "Main city blocks and road network visible in upper part; haze/soft detail acknowledged"
+              }
+            ],
+            "creditForPublication": "NASA Johnson Space Center / Earth Science and Remote Sensing Unit, ISS021-E-26419"
+          }
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
+            "sha256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
+            "sha256": "cf32b49be9f586aedff44457e90fa8434d8c35731a5fe79fd37ef08d51ce2cf8"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "ndjamena",
+        "slot": "C3",
+        "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[2]",
+        "commonsFile": "ISS021-E-26419 - View of Chad.jpg",
+        "sha256": "f046d5869c57c0f8d681106e1249bf2b22c4cff1923afa44958e9bf9c7c46e45",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:ISS021-E-26419_-_View_of_Chad.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/ISS021-E-26419_-_View_of_Chad.jpg",
+        "author": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center",
+        "license": "Public domain",
+        "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "width": 4288,
+        "height": 2848,
+        "originalSHA256": "f046d5869c57c0f8d681106e1249bf2b22c4cff1923afa44958e9bf9c7c46e45",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c3-f046d5869c57c0f8d681.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ndjamena/c3-f046d5869c57c0f8d681.jpg",
+        "bytes": 956888,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T20:32:44.404928+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "tiedosto": "ISS021-E-26419 - View of Chad.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
+      "targetAfterSHA256": "9c96ec315256683ad516b0066c9c7bf46f89e078db1f29d1c9e027b46267e331",
+      "contextAfterSHA256": "9c96ec315256683ad516b0066c9c7bf46f89e078db1f29d1c9e027b46267e331"
     },
     {
       "era": "e05",
@@ -1350,7 +1954,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
-        "fileSHA256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002",
+        "fileSHA256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -1392,7 +1996,7 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/qa.json",
-            "sha256": "d0b979191abf32671281d3d4220e620bbfcf531a6687a09e410e6cd13533b002"
+            "sha256": "f09ebd4c8c865ef78fa9b541a20e32ae00eae4ac5cc459bb2d72797417924b0d"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/ndjamena/illustration-qa-extra.json",
@@ -1467,7 +2071,7 @@
         "tiedosto": "La verdure autour du fleuve Chari de N'Djamena.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "d431bdea397390928bf678f86bb7a40b56158b8a95f52edc0ec263839ac77cbb",
       "contextAfterSHA256": "beabc746c6c6933d2e10a12ff3f3419697b3cfa8d7340360ed65576248831420"
     }

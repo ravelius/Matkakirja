@@ -109,7 +109,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-        "fileSHA256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445",
+        "fileSHA256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -145,11 +145,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
-            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+            "sha256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+            "sha256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c"
           }
         ]
       },
@@ -235,6 +235,287 @@
       "sourceContentAfterSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "70507ecae26512bf198150a28dcd26026522628edb2da2f4e8d389a19550af9f"
+    },
+    {
+      "era": "e05",
+      "city": "lome",
+      "slot": "O2",
+      "type": "illustration",
+      "assetID": "e05-lome-o2-v1-20261012T195645Z",
+      "galleryImageID": "e05-lome-o2-v1-20261012T195645Z",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o2-v1-20261012T195645Z-ffdbe30cc6d4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: irtomausteet.",
+        "lyhyt": "Havainnekuva: irtomausteet."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o2-v1-20261012T195645Z-ffdbe30cc6d4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva: irtomausteet.",
+        "lyhyt": "Havainnekuva: irtomausteet."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "ffdbe30cc6d4a8dbf55ac8914c32dafcdb72f5f7ca266533e7e74b5c4e946ee8",
+      "exportSHA256": "d320c6cb188b0ba7f7dc12c735f8d949b1e514a09efc70eaf99ec79351bd4ad2",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o2-v1-20261012T195645Z-ffdbe30cc6d4.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o2-v1-20261012T195645Z-ffdbe30cc6d4.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-o2-v1-20261012T195645Z-ffdbe30cc6d4.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+      "sourceContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "37c1a0c8bf2347dccd37f62b42eff91d8b0d26e02c1780828e374eb1913e44dc",
+        "subjectTitle": "Markkinat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "kind": "generated-generalized-safe-food-plant-or-animal",
+            "noProtectedWorkDepicted": true,
+            "namedPlaceAppearanceClaimed": false
+          },
+          "QA": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-o2-v1-20261012T195645Z/image.png",
+            "nativeSHA256": "ffdbe30cc6d4a8dbf55ac8914c32dafcdb72f5f7ca266533e7e74b5c4e946ee8",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewDetail": "original",
+            "visualFindingsFi": "Kuusi tavallista kulhoa, eriväristä jauhettua maustetta, pippurimaisia rakeita sekä kuivattuja kokonaisia mausteita. Jauheen murut, maustekuoret, keraamiset reunat ja varjot vaihtelevat luontevasti. Ei tekstiä, logoja, ihmisiä, kehyksiä tai nimettyä toria.",
+            "captionFi": "Havainnekuva: irtomausteet.",
+            "sourceAndTargetCheckFi": "Nykyinen O2 Markkinat nimeää mausteet. Luettu faktapohjan rivi 61 ja lähdetaulun M/L (Lomé Grand Market/Lomé). Havainnekuva: irtomausteet ei väitä tiettyä paikallista reseptiä, raaka-aineluetteloa tai Grand Marchén todellista kojua.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+            "currentTextExcerpt": "Grand Marché on keskustan kaupankäynnin paikka. Nana Benz -kauppiaiden tekstiilihistorian rinnalla torilta löytyy mausteita ja arkisia käyttöesineitä. Uskonnollisten ja perinteisten esineiden merkitystä tulee kunnioittaa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+            "factSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Grand Marché on keskustan kaupankäynnin paikka. Nana Benz -kauppiaiden tekstiilihistorian rinnalla torilta löytyy mausteita ja arkisia käyttöesineitä. Uskonnollisten ja perinteisten esineiden merkitystä tulee kunnioittaa.",
+              "factSheetExcerpt": [
+                "61: **K3 Torilla on arjen valikoima**, wiki Lomé Grand Market: keskustassa; katedraalin lähellä; koko korttelin markkinapaikka; Atipoji/Asigame/Assivito-nimisiä osia; mausteita; limeä/kuivattua kalaa L:n mukaan; arjen käyttöesineitä; naiskauppiaat näkyvä toimijaryhmä. M/johdanto; L/Architecture. Uusi kauppahalli ei ole vapaa karttakohde.",
+                "101: **Grand Marché**, rakennus, **6.12563, 1.22542** (M). M/L: keskustassa; katedraalin naapuri; korttelin laajuinen; Atipoji-, Asigame- ja Assivito-markkinaosat; mausteita; arkisia käyttöesineitä; naiskauppiaita; uudistettu/uusi rakennushanke. **Hylätty:** nykyinen uusi kauppahalli suojattu/epävarma teos, vanha nimi ei tee uudesta rakennuksesta vapaata.",
+                "111: Kansi 3: laaja meriranta/kaupunki; katu/markkinaympäristön yleiskuva; kasvi-/laguunimaisema vasta tarkassa paikantamisessa. K1–K4: vanha kauppakatumaisema; arkiset kankaan myynnin työvälineet ilman suojattua printtiä; tavallinen mauste-/käyttötavarakoju; arkinen kulkuväline. L1–L4: kaupunkia rajaava vesi; hiekka/meri; puutarhan kasvit; vihannesviljely. Matkailijalle 1 tuore maltillinen pysty 0.60–0.85 rantakasveista. Opas 3–5: kulkuväline, toritarvikkeet, luonto, valmis ruoka; enintään kaksi kuvatonta jaksoa. Kartalle kuvat vasta oikeus-/määräesteen ratkettua. Valokuva 1 vapaa yleismaisema, ennen–nyt vain jos oikeusvapaa ≤1900 kuva löytyy. B/C/D tarkistavat ≥1200px, tekijän, tiedostolisenssin, perinne-/teosoikeuden ja näkyvän aiheen. Mitään kuvaa ei haettu/katsottu/hyväksytty."
+              ],
+              "supportsFi": "Ajantasainen teksti ja faktapohja nimeävät aiheen. Yleishavainne ei väitä lajiketta, paikallista alkuperää tai todellista paikan ulkonäköä.",
+              "directSubjectInCurrentText": true
+            },
+            "ownershipHandoff": {
+              "ready": true,
+              "cededEras": [
+                "e05",
+                "e06"
+              ],
+              "retainedEra": "e04",
+              "updatedAt": "2026-10-12T20:44:14.910964+00:00"
+            },
+            "colorProfileHandlingFi": "Untagged native RGB ei ole visuaalinen hylkäysperuste. Toimitus todistaa sRGB/provenance-viennin muuttamatta pikseleitä ja säilyttää native-SHA:n.",
+            "reviewScopeFi": "Yleishavainne tähän mixed-paikkaan; ei julkaisun tai koko kuvatilauksen valmistumiskuittaus."
+          },
+          "qaReason": "Tekstiaiheeseen perustuva rehellisesti nimetty yleishavainne; katsottu natiivi, SHA, mitat sekä pinnat ja rakenne hyväksytty."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva: irtomausteet.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+        "fileSHA256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c",
+        "item": {
+          "slot": "O2",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+          "assetID": "e05-lome-o2-v1-20261012T195645Z",
+          "sha256": "ffdbe30cc6d4a8dbf55ac8914c32dafcdb72f5f7ca266533e7e74b5c4e946ee8",
+          "verdict": "accepted",
+          "reason": "Tekstiaiheeseen perustuva rehellisesti nimetty yleishavainne; katsottu natiivi, SHA, mitat sekä pinnat ja rakenne hyväksytty.",
+          "evidence": {
+            "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/assets/e05-lome-o2-v1-20261012T195645Z/image.png",
+            "nativeSHA256": "ffdbe30cc6d4a8dbf55ac8914c32dafcdb72f5f7ca266533e7e74b5c4e946ee8",
+            "nativeDimensions": [
+              1536,
+              1024
+            ],
+            "nativeRatio": 1.5,
+            "manifestHashMatches": true,
+            "personallyViewed": true,
+            "viewTool": "view_image",
+            "viewDetail": "original",
+            "visualFindingsFi": "Kuusi tavallista kulhoa, eriväristä jauhettua maustetta, pippurimaisia rakeita sekä kuivattuja kokonaisia mausteita. Jauheen murut, maustekuoret, keraamiset reunat ja varjot vaihtelevat luontevasti. Ei tekstiä, logoja, ihmisiä, kehyksiä tai nimettyä toria.",
+            "captionFi": "Havainnekuva: irtomausteet.",
+            "sourceAndTargetCheckFi": "Nykyinen O2 Markkinat nimeää mausteet. Luettu faktapohjan rivi 61 ja lähdetaulun M/L (Lomé Grand Market/Lomé). Havainnekuva: irtomausteet ei väitä tiettyä paikallista reseptiä, raaka-aineluetteloa tai Grand Marchén todellista kojua.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+            "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+            "currentTextExcerpt": "Grand Marché on keskustan kaupankäynnin paikka. Nana Benz -kauppiaiden tekstiilihistorian rinnalla torilta löytyy mausteita ja arkisia käyttöesineitä. Uskonnollisten ja perinteisten esineiden merkitystä tulee kunnioittaa.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+            "factSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
+              "sourceContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/faktapohja.md",
+              "sourceFactSheetSHA256": "aeb99dc4522349c31111aee35cc644f0c83ad7cf160de02811daf7452aeb59bd",
+              "contentExcerpt": "Grand Marché on keskustan kaupankäynnin paikka. Nana Benz -kauppiaiden tekstiilihistorian rinnalla torilta löytyy mausteita ja arkisia käyttöesineitä. Uskonnollisten ja perinteisten esineiden merkitystä tulee kunnioittaa.",
+              "factSheetExcerpt": [
+                "61: **K3 Torilla on arjen valikoima**, wiki Lomé Grand Market: keskustassa; katedraalin lähellä; koko korttelin markkinapaikka; Atipoji/Asigame/Assivito-nimisiä osia; mausteita; limeä/kuivattua kalaa L:n mukaan; arjen käyttöesineitä; naiskauppiaat näkyvä toimijaryhmä. M/johdanto; L/Architecture. Uusi kauppahalli ei ole vapaa karttakohde.",
+                "101: **Grand Marché**, rakennus, **6.12563, 1.22542** (M). M/L: keskustassa; katedraalin naapuri; korttelin laajuinen; Atipoji-, Asigame- ja Assivito-markkinaosat; mausteita; arkisia käyttöesineitä; naiskauppiaita; uudistettu/uusi rakennushanke. **Hylätty:** nykyinen uusi kauppahalli suojattu/epävarma teos, vanha nimi ei tee uudesta rakennuksesta vapaata.",
+                "111: Kansi 3: laaja meriranta/kaupunki; katu/markkinaympäristön yleiskuva; kasvi-/laguunimaisema vasta tarkassa paikantamisessa. K1–K4: vanha kauppakatumaisema; arkiset kankaan myynnin työvälineet ilman suojattua printtiä; tavallinen mauste-/käyttötavarakoju; arkinen kulkuväline. L1–L4: kaupunkia rajaava vesi; hiekka/meri; puutarhan kasvit; vihannesviljely. Matkailijalle 1 tuore maltillinen pysty 0.60–0.85 rantakasveista. Opas 3–5: kulkuväline, toritarvikkeet, luonto, valmis ruoka; enintään kaksi kuvatonta jaksoa. Kartalle kuvat vasta oikeus-/määräesteen ratkettua. Valokuva 1 vapaa yleismaisema, ennen–nyt vain jos oikeusvapaa ≤1900 kuva löytyy. B/C/D tarkistavat ≥1200px, tekijän, tiedostolisenssin, perinne-/teosoikeuden ja näkyvän aiheen. Mitään kuvaa ei haettu/katsottu/hyväksytty."
+              ],
+              "supportsFi": "Ajantasainen teksti ja faktapohja nimeävät aiheen. Yleishavainne ei väitä lajiketta, paikallista alkuperää tai todellista paikan ulkonäköä.",
+              "directSubjectInCurrentText": true
+            },
+            "ownershipHandoff": {
+              "ready": true,
+              "cededEras": [
+                "e05",
+                "e06"
+              ],
+              "retainedEra": "e04",
+              "updatedAt": "2026-10-12T20:44:14.910964+00:00"
+            },
+            "colorProfileHandlingFi": "Untagged native RGB ei ole visuaalinen hylkäysperuste. Toimitus todistaa sRGB/provenance-viennin muuttamatta pikseleitä ja säilyttää native-SHA:n.",
+            "reviewScopeFi": "Yleishavainne tähän mixed-paikkaan; ei julkaisun tai koko kuvatilauksen valmistumiskuittaus."
+          },
+          "reviewedAt": "2026-10-12T20:45:03.074461+00:00",
+          "reviewerThreadID": "01a131d7-120e-7ca3-8e8e-0fccce142ee9"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
+            "sha256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
+            "sha256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o2-v1-20261012T195645Z-ffdbe30cc6d4.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o2-v1-20261012T195645Z-ffdbe30cc6d4.png?t=d320c6cb188b0ba7",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e05/lome/e05-lome-o2-v1-20261012T195645Z-ffdbe30cc6d4.png",
+        "sha256": "d320c6cb188b0ba7f7dc12c735f8d949b1e514a09efc70eaf99ec79351bd4ad2",
+        "bytes": 2685423,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e05-lome-o2-v1-20261012T195645Z",
+        "nativeSHA256": "ffdbe30cc6d4a8dbf55ac8914c32dafcdb72f5f7ca266533e7e74b5c4e946ee8",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-o2-v1-20261012T195645Z-ffdbe30cc6d4.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e05",
+        "city": "lome",
+        "slot": "O2",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+        "verifiedAt": "2026-10-12T20:45:19.140951+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e05/lome/e05-lome-o2-v1-20261012T195645Z-ffdbe30cc6d4.png",
+        "sha256": "d320c6cb188b0ba7f7dc12c735f8d949b1e514a09efc70eaf99ec79351bd4ad2",
+        "bytes": 2685423,
+        "SHAReadAt": "2026-10-12T20:45:09.929162+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "ffdbe30cc6d4a8dbf55ac8914c32dafcdb72f5f7ca266533e7e74b5c4e946ee8",
+        "rgbPixelSHA256": "5f6553ba9ec487564bbb70662aa0e308c53db35b3a17d246363966e4acd65a4e",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "37c1a0c8bf2347dccd37f62b42eff91d8b0d26e02c1780828e374eb1913e44dc"
     },
     {
       "era": "e05",
@@ -342,9 +623,18 @@
               "namedPlaceAppearanceClaimed": false
             },
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
             "colorProfile": "Native RGB PNG; embedded ICC/sRGB not independently verified, no profile claim",
-            "scope": "independent image QA; no owner acceptance/integration/publication"
+            "scope": "independent image QA; no owner acceptance/integration/publication",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:09.863807+00:00",
+                "previousContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+                "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/content-revalidation-bcfbbe7fac5b-9c0e80ce8e6a.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Katsottu koko valmis PNG: limet, halkaistut hedelmät ja nimetön jauhettu mauste näyttävät luontevilta. Hedelmien rakenne, kuoripinta, astiat ja päivänvalo uskottavia; ei kasvoja, tekstiä, logoa tai nimettyä markkinapaikkaa. Yleinen ruoka-aiheen havainne vastaa nykyisen O4-tekstin lime/mauste-mainintaa."
         }
@@ -360,7 +650,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
-        "fileSHA256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97",
+        "fileSHA256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -404,19 +694,28 @@
               "namedPlaceAppearanceClaimed": false
             },
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
             "colorProfile": "Native RGB PNG; embedded ICC/sRGB not independently verified, no profile claim",
-            "scope": "independent image QA; no owner acceptance/integration/publication"
+            "scope": "independent image QA; no owner acceptance/integration/publication",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:09.863807+00:00",
+                "previousContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+                "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/content-revalidation-bcfbbe7fac5b-9c0e80ce8e6a.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
-            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+            "sha256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+            "sha256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c"
           }
         ]
       },
@@ -606,7 +905,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-        "fileSHA256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445",
+        "fileSHA256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c",
         "item": {
           "slot": "K3",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
@@ -641,11 +940,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
-            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+            "sha256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+            "sha256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c"
           }
         ]
       },
@@ -835,7 +1134,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-        "fileSHA256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445",
+        "fileSHA256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c",
         "item": {
           "slot": "L2",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
@@ -870,11 +1169,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
-            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+            "sha256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+            "sha256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c"
           }
         ]
       },
@@ -1066,7 +1365,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-        "fileSHA256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445",
+        "fileSHA256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c",
         "item": {
           "slot": "L3",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
@@ -1103,11 +1402,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
-            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+            "sha256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+            "sha256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c"
           }
         ]
       },
@@ -1297,7 +1596,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-        "fileSHA256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445",
+        "fileSHA256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -1332,11 +1631,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
-            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+            "sha256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+            "sha256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c"
           }
         ]
       },
@@ -1537,7 +1836,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -1546,7 +1845,16 @@
             "scope": "independent QA only; no integration/publication/owner acceptance",
             "placeSourceCategory": "Category:Lomé",
             "reviewedCandidateRecordSHA256": "1a60ed2fc8adb1f27e6bad1efc0b2bcc1f102b3240dfc71e164f048b44122459",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.217539+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.217539+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:09.864007+00:00",
+                "previousContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+                "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/content-revalidation-bcfbbe7fac5b-9c0e80ce8e6a.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Aito mangrove-/kosteikkovalokuva katsottu. Juuret, puut ja mutapinta erottuvat; etäiset puut vaaleassa luonnonvalossa, ei luettavia kasvoja, lisättyä tekstiä tai watermarkia. Taustan tavallinen pieni talo ei ole arkkitehtuuriteoksen päämotiivi. Commonsin täsmällinen Lomé-luokka sitoo kuvauspaikan kaupunkiin; Descriptionin yleinen Mangrove ei yksin olisi paikkatodiste. Kuvateksti rajautuu mangrovekasvillisuuteen, eikä arvaa laguunia/puutarhaa tai lajia. Aboukey, oma valokuva, CC BY-SA4.0,4608×3456 ja2.2.2022 varmennettu. PHOTOssa ei panoraama- tai tuoreuspakkoa."
         }
@@ -1562,7 +1870,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
-        "fileSHA256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97",
+        "fileSHA256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -1612,7 +1920,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -1621,17 +1929,26 @@
             "scope": "independent QA only; no integration/publication/owner acceptance",
             "placeSourceCategory": "Category:Lomé",
             "reviewedCandidateRecordSHA256": "1a60ed2fc8adb1f27e6bad1efc0b2bcc1f102b3240dfc71e164f048b44122459",
-            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.217539+00:00"
+            "candidateTrackingBaselineAt": "2026-10-12T19:10:14.217539+00:00",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:09.864007+00:00",
+                "previousContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+                "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/content-revalidation-bcfbbe7fac5b-9c0e80ce8e6a.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           }
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
-            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+            "sha256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+            "sha256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c"
           }
         ]
       },
@@ -1845,7 +2162,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -1853,7 +2170,16 @@
             },
             "scope": "independent QA only; no integration/publication/owner acceptance",
             "layoutScope": "Full broad lakeside composition; no isolated building crop approved.",
-            "reviewedCandidateRecordSHA256": "ace647b9b28ebb2cbc5e2845e81811d2eaeff1951c213c27676087a329154baa"
+            "reviewedCandidateRecordSHA256": "ace647b9b28ebb2cbc5e2845e81811d2eaeff1951c213c27676087a329154baa",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:09.864011+00:00",
+                "previousContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+                "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/content-revalidation-bcfbbe7fac5b-9c0e80ce8e6a.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "qaReason": "Kokonainen laaja Lac Ouestin ja rantakortteleiden oikea panoraama katsottu. Päämotiivi kasvillisuuden peittämä järvialue ja rantavyöhyke; kaukaiset rakennukset/luonnolliset kyltit muodostavat pienen horisonttikaistan, eivät yksilöidyn teoksen jäljennöspääaihetta. Ei etualan ihmiskasvoja, lisättyä tekstiä, vesileimaa tai kehystä. Description Lac Ouest de Lomé ja koordinaatit6.139254/1.209198 sitovat paikkaan. Edison McCullen/Own work/CC BY4.0,9654×2484 ja23.1.2025 varmennettu suoraan lähteestä. Säilytä laaja sommittelu; yhden vastarannan rakennuksen eristävä suurennus vaatii uuden teosarvion. Panoraaman kuvasuhde sallittu C1:ssä, eikä kasveista arvata lajia."
         }
@@ -1869,7 +2195,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
-        "fileSHA256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97",
+        "fileSHA256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118",
         "item": {
           "slot": "C1",
           "targetJsonPath": "$.kaupunkilehti[0].kansikuvat[0]",
@@ -1939,7 +2265,7 @@
               ]
             ],
             "currentContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/lome/sisalto.json",
-            "currentContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+            "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
             "sourceChecks": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/current-commons-source-checks.json",
             "usedInGameCheck": {
               "status": "no hits",
@@ -1947,18 +2273,27 @@
             },
             "scope": "independent QA only; no integration/publication/owner acceptance",
             "layoutScope": "Full broad lakeside composition; no isolated building crop approved.",
-            "reviewedCandidateRecordSHA256": "ace647b9b28ebb2cbc5e2845e81811d2eaeff1951c213c27676087a329154baa"
+            "reviewedCandidateRecordSHA256": "ace647b9b28ebb2cbc5e2845e81811d2eaeff1951c213c27676087a329154baa",
+            "contentRevalidations": [
+              {
+                "checkedAt": "2026-10-12T20:39:09.864011+00:00",
+                "previousContentSHA256": "bcfbbe7fac5bf443e08b21e58165e86636f3ca995fabf4defd409526384416ce",
+                "currentContentSHA256": "9c0e80ce8e6ad87999cc112bc0e4715327958fb72648de5a51fe188c1057fe8d",
+                "proof": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa-evidence/content-revalidation-bcfbbe7fac5b-9c0e80ce8e6a.json",
+                "result": "Only planned image fields and image year/credit/caption metadata changed; all topic text, names, objects, questions, map and weather data unchanged."
+              }
+            ]
           },
           "reviewedAt": "2026-10-12T19:14:53.682412+00:00"
         },
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/qa.json",
-            "sha256": "73d5f1ebb24e14f678a6b69d09a809856a857f0c8126c5e0692c50cc58956c97"
+            "sha256": "8667fa855c0b8f8e0c21857dbbe9f66ffbf9bb236836a83af34f92c49032e118"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/lome/illustration-qa-extra.json",
-            "sha256": "b71d3b0807584419ecc08fc2510535265687aa00dccf8c0aaed2cb93b5477445"
+            "sha256": "90b3c42c4bb71eb8256e4be93f43a2910a15eb3b3c9c19141448d2d0b1923c3c"
           }
         ]
       },
