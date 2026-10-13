@@ -3,7 +3,7 @@
   "era": "e09",
   "city": "asgabat",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+  "sourceContentAfterSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
   "assets": [
     {
       "era": "e09",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
-      "sourceContentSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "58b38af27d495b426e7e994b8931f60d1ee0e6aad6980c2dc774e0559897f1a2",
+        "semanticContextSHA256": "727acbb92f14ba8a0fd6ba70b8ef1846e5ac2965901b4f9b3606e0e4629cb5bd",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -252,9 +252,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentAfterSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "58b38af27d495b426e7e994b8931f60d1ee0e6aad6980c2dc774e0559897f1a2",
+      "contextAfterSHA256": "727acbb92f14ba8a0fd6ba70b8ef1846e5ac2965901b4f9b3606e0e4629cb5bd",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -277,7 +277,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+        "sameImageNativeSHA256": "9b1c131f81a6bf855e3c666419fb2f0aed5396d66065ddd895d8e3263fc0f482",
+        "sameImageExportSHA256": "f922eafcfa592515ac1147fd394d2be910b41692913b63398f7d316b037d401e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -327,10 +335,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
-      "sourceContentSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ec8f47774b06ab5d0ae18a11ad6a74bac468fa49e7633cf878053308699cbc35",
-        "semanticContextSHA256": "ec8f47774b06ab5d0ae18a11ad6a74bac468fa49e7633cf878053308699cbc35",
+        "targetBeforeSHA256": "802d229c891ccd6391187501d7652dcef095ac64f3890b31c522660fae318d8b",
+        "semanticContextSHA256": "802d229c891ccd6391187501d7652dcef095ac64f3890b31c522660fae318d8b",
         "subjectTitle": "Puutarha kokeilee kasvien kotiutumista",
         "targetState": "existing-target"
       },
@@ -513,9 +521,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
-      "targetAfterSHA256": "ec8f47774b06ab5d0ae18a11ad6a74bac468fa49e7633cf878053308699cbc35",
-      "contextAfterSHA256": "ec8f47774b06ab5d0ae18a11ad6a74bac468fa49e7633cf878053308699cbc35",
+      "sourceContentAfterSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+      "targetAfterSHA256": "802d229c891ccd6391187501d7652dcef095ac64f3890b31c522660fae318d8b",
+      "contextAfterSHA256": "802d229c891ccd6391187501d7652dcef095ac64f3890b31c522660fae318d8b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -538,7 +546,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+        "sameImageNativeSHA256": "bb1eebf9ed122158059220d15cf7f002abe499d98306940d30e19d7634d4add4",
+        "sameImageExportSHA256": "5189e3daaf6cedcc40c793a6e811cce925bd74d4dcd011a4e3e9dba38dd0ecd6",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -588,10 +604,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
-      "sourceContentSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "fe54b4f605016ead059cefed7eb46fafd0f32ba7f7ed66da256d735ad366ba2b",
-        "semanticContextSHA256": "fe54b4f605016ead059cefed7eb46fafd0f32ba7f7ed66da256d735ad366ba2b",
+        "targetBeforeSHA256": "c016d6ad68892ae11134de318b224110de93cb2a4724421e16c3ab7e01ddf8d2",
+        "semanticContextSHA256": "c016d6ad68892ae11134de318b224110de93cb2a4724421e16c3ab7e01ddf8d2",
         "subjectTitle": "Kaikuosa ja kaula kasvavat eri puissa",
         "targetState": "existing-target"
       },
@@ -771,9 +787,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
-      "targetAfterSHA256": "fe54b4f605016ead059cefed7eb46fafd0f32ba7f7ed66da256d735ad366ba2b",
-      "contextAfterSHA256": "fe54b4f605016ead059cefed7eb46fafd0f32ba7f7ed66da256d735ad366ba2b",
+      "sourceContentAfterSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+      "targetAfterSHA256": "c016d6ad68892ae11134de318b224110de93cb2a4724421e16c3ab7e01ddf8d2",
+      "contextAfterSHA256": "c016d6ad68892ae11134de318b224110de93cb2a4724421e16c3ab7e01ddf8d2",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -796,7 +812,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+        "sameImageNativeSHA256": "2303de5aa1ef95cea7194150181f96f3124d1dabfc2d8fa1e6bd74a63aee1756",
+        "sameImageExportSHA256": "515e6fdcbf75f176d2b7bb67451013cf6a0dfdca6bee5fc18f7fc8388b4c4b0e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -846,10 +870,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
-      "sourceContentSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "cad9997e25d6fe46197b637e97331ef05faca741dff83e32ec9f62ef5bd69888",
-        "semanticContextSHA256": "cad9997e25d6fe46197b637e97331ef05faca741dff83e32ec9f62ef5bd69888",
+        "targetBeforeSHA256": "8a7ef4a2a60f25c5a00e9e6ac16f9067e8573864b9edf0d74a62177290252c64",
+        "semanticContextSHA256": "8a7ef4a2a60f25c5a00e9e6ac16f9067e8573864b9edf0d74a62177290252c64",
         "subjectTitle": "Kertoja vaihtaa puheesta lauluun",
         "targetState": "existing-target"
       },
@@ -1099,9 +1123,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
-      "targetAfterSHA256": "cad9997e25d6fe46197b637e97331ef05faca741dff83e32ec9f62ef5bd69888",
-      "contextAfterSHA256": "cad9997e25d6fe46197b637e97331ef05faca741dff83e32ec9f62ef5bd69888",
+      "sourceContentAfterSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+      "targetAfterSHA256": "8a7ef4a2a60f25c5a00e9e6ac16f9067e8573864b9edf0d74a62177290252c64",
+      "contextAfterSHA256": "8a7ef4a2a60f25c5a00e9e6ac16f9067e8573864b9edf0d74a62177290252c64",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1124,7 +1148,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+        "sameImageNativeSHA256": "f879acab62ffd2f3f9148a263c9f49f4ff77ed7df7f9891b5cf7ec227d59a0b6",
+        "sameImageExportSHA256": "5d21cb8055f00792a77d254ae697e6718288ccea685ccffb030d5dc9683afd5a",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -1174,10 +1206,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
-      "sourceContentSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "957cd727c2d767a8b476a7eaf9fbc321f06fb1445285bebfaf93dc79af4695bb",
+        "semanticContextSHA256": "dfe10aafeda7e7443a461c44365dc3f19217c9d9dcb6c681bc571c31d1433f59",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -1375,9 +1407,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentAfterSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "957cd727c2d767a8b476a7eaf9fbc321f06fb1445285bebfaf93dc79af4695bb",
+      "contextAfterSHA256": "dfe10aafeda7e7443a461c44365dc3f19217c9d9dcb6c681bc571c31d1433f59",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1400,7 +1432,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+        "sameImageNativeSHA256": "d877556bd15150242e4acf301b1abcc78d54857289b731cb5c1036af704be993",
+        "sameImageExportSHA256": "3c6c475658cc28bead0a3d531611a82629715c9a7dce966a3d02b069a7ded7a1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -1453,7 +1493,7 @@
         2026
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
-      "sourceContentSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "82e5bda46da9cf2e8d7770522b90a65177c96b3eb0d177009c8690b16c3e6418",
         "semanticContextSHA256": "82e5bda46da9cf2e8d7770522b90a65177c96b3eb0d177009c8690b16c3e6418",
@@ -1641,7 +1681,7 @@
         "vuosi": "2023"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentAfterSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "targetAfterSHA256": "82e5bda46da9cf2e8d7770522b90a65177c96b3eb0d177009c8690b16c3e6418",
       "contextAfterSHA256": "82e5bda46da9cf2e8d7770522b90a65177c96b3eb0d177009c8690b16c3e6418",
       "ownerApproved": true,
@@ -1666,7 +1706,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+        "sameImageNativeSHA256": "8ba740b4146510b6d41f37e4abf715d56012caa4b36fab2220d423fc3a417a0f",
+        "sameImageExportSHA256": "8ba740b4146510b6d41f37e4abf715d56012caa4b36fab2220d423fc3a417a0f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -1719,7 +1767,7 @@
         3669
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
-      "sourceContentSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3d5528ea55a10d96bb42aec6d8127ba9e3257e361ea085f4a9051a5958547a16",
         "semanticContextSHA256": "3d5528ea55a10d96bb42aec6d8127ba9e3257e361ea085f4a9051a5958547a16",
@@ -1925,7 +1973,7 @@
         "tiedosto": "Iss071e672006 lrg Ashgabat at night 20240916.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentAfterSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "targetAfterSHA256": "3d5528ea55a10d96bb42aec6d8127ba9e3257e361ea085f4a9051a5958547a16",
       "contextAfterSHA256": "3d5528ea55a10d96bb42aec6d8127ba9e3257e361ea085f4a9051a5958547a16",
       "ownerApproved": true,
@@ -1950,7 +1998,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+        "sameImageNativeSHA256": "63ac95725373a8563e60a83a63975913bb644ece2400ec47caba0e357496dfb7",
+        "sameImageExportSHA256": "63ac95725373a8563e60a83a63975913bb644ece2400ec47caba0e357496dfb7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -1972,14 +2028,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c2-d82d5308a00c42f2ba10.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kansainväliseltä avaruusasemalta kuvattu Ašgabat ja sitä ympäröivä maasto 14. helmikuuta 2010.",
+        "selite": "Kansainväliseltä avaruusasemalta kuvattu Ašgabat 14. helmikuuta 2010.",
         "lyhyt": "Ašgabatin kaupunkialue avaruudesta nähtynä.",
         "tiedosto": "Ashgabat, Turkmenistan Astronaut Imagery.JPG"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kansainväliseltä avaruusasemalta kuvattu Ašgabat ja sitä ympäröivä maasto 14. helmikuuta 2010.",
+        "selite": "Kansainväliseltä avaruusasemalta kuvattu Ašgabat 14. helmikuuta 2010.",
         "lyhyt": "Ašgabatin kaupunkialue avaruudesta nähtynä.",
         "tiedosto": "Ashgabat, Turkmenistan Astronaut Imagery.JPG"
       },
@@ -1987,7 +2043,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/c2-d82d5308a00c42f2ba10.jpg",
         "suora": true,
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kansainväliseltä avaruusasemalta kuvattu Ašgabat ja sitä ympäröivä maasto 14. helmikuuta 2010.",
+        "selite": "Kansainväliseltä avaruusasemalta kuvattu Ašgabat 14. helmikuuta 2010.",
         "lyhyt": "Ašgabatin kaupunkialue avaruudesta nähtynä.",
         "tiedosto": "Ashgabat, Turkmenistan Astronaut Imagery.JPG"
       },
@@ -2003,10 +2059,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
-      "sourceContentSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "39b4ac53de0b2d37f0ebf85ac6960b59dc4f770204baa2906c42a77255de9a5d",
-        "semanticContextSHA256": "39b4ac53de0b2d37f0ebf85ac6960b59dc4f770204baa2906c42a77255de9a5d",
+        "targetBeforeSHA256": "df5b42a5b1b39e8d01bab26530c395373b4bf4aee3f0a92a040a557df904efb9",
+        "semanticContextSHA256": "df5b42a5b1b39e8d01bab26530c395373b4bf4aee3f0a92a040a557df904efb9",
         "subjectTitle": "Ašgabat",
         "targetState": "existing-target"
       },
@@ -2172,7 +2228,7 @@
       "priorMediaFields": {
         "tiedosto": "Ashgabat, Turkmenistan Astronaut Imagery.JPG",
         "lyhyt": "Ašgabatin kaupunkialue avaruudesta nähtynä.",
-        "selite": "Kansainväliseltä avaruusasemalta kuvattu Ašgabat ja sitä ympäröivä maasto 14. helmikuuta 2010.",
+        "selite": "Kansainväliseltä avaruusasemalta kuvattu Ašgabat 14. helmikuuta 2010.",
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
@@ -2199,14 +2255,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA Astronauts, Wikimedia Commons (PD)",
-        "selite": "Kansainväliseltä avaruusasemalta kuvattu Ašgabat ja sitä ympäröivä maasto 14. helmikuuta 2010.",
+        "selite": "Kansainväliseltä avaruusasemalta kuvattu Ašgabat 14. helmikuuta 2010.",
         "lyhyt": "Ašgabatin kaupunkialue avaruudesta nähtynä.",
         "tiedosto": "Ashgabat, Turkmenistan Astronaut Imagery.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
-      "targetAfterSHA256": "39b4ac53de0b2d37f0ebf85ac6960b59dc4f770204baa2906c42a77255de9a5d",
-      "contextAfterSHA256": "39b4ac53de0b2d37f0ebf85ac6960b59dc4f770204baa2906c42a77255de9a5d",
+      "sourceContentAfterSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+      "targetAfterSHA256": "df5b42a5b1b39e8d01bab26530c395373b4bf4aee3f0a92a040a557df904efb9",
+      "contextAfterSHA256": "df5b42a5b1b39e8d01bab26530c395373b4bf4aee3f0a92a040a557df904efb9",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2229,7 +2285,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+        "sameImageNativeSHA256": "d82d5308a00c42f2ba10985349ede3e46d217b40585ead7d80ce4d8a73155023",
+        "sameImageExportSHA256": "d82d5308a00c42f2ba10985349ede3e46d217b40585ead7d80ce4d8a73155023",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e09",
@@ -2285,10 +2349,10 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
-      "sourceContentSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8feec181ae165a75d9930334545cd13db1cd44b296febca6712a91860e3f1add",
-        "semanticContextSHA256": "33dce1437b63637f4866d8d6ae9965f36877cc054fde796483ef83c8a1ccddca",
+        "semanticContextSHA256": "38755cd8cb0f4015cb900a4cead79f8293ceb63c9884d7e1cd3f8ffe75eff5b5",
         "subjectTitle": "Nisa ja museon löydöt",
         "targetState": "existing-target"
       },
@@ -2481,9 +2545,9 @@
         "tiedosto": "Fresco fragments from the old Parthian settlement of Nisa, 2nd cent. BCE; National Museum of History, Ashgabat, Turkmenistan (1).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentAfterSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "targetAfterSHA256": "8feec181ae165a75d9930334545cd13db1cd44b296febca6712a91860e3f1add",
-      "contextAfterSHA256": "33dce1437b63637f4866d8d6ae9965f36877cc054fde796483ef83c8a1ccddca",
+      "contextAfterSHA256": "38755cd8cb0f4015cb900a4cead79f8293ceb63c9884d7e1cd3f8ffe75eff5b5",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2506,7 +2570,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+        "sameImageNativeSHA256": "10b722ac1730a814e5ad2376e3a4b7ed0d845d23f739c79d8aaed968a9f31a7b",
+        "sameImageExportSHA256": "10b722ac1730a814e5ad2376e3a4b7ed0d845d23f739c79d8aaed968a9f31a7b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -2528,14 +2600,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/n1-71d9ec11b75cd9a4bd3f.jpg",
         "suora": true,
         "lahde": "Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Nisan linnoitusmuurien jäänteitä Ašgabatin lähellä lokakuussa 2018 otetussa kuvassa.",
+        "selite": "Nisan linnoitusmuurien jäänteitä Ašgabatin lähellä lokakuussa 2018.",
         "lyhyt": "Nisan linnoitusmuurien jäänteitä.",
         "tiedosto": "Nisa fortress walls close to Ashgabat (44675736824).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Nisan linnoitusmuurien jäänteitä Ašgabatin lähellä lokakuussa 2018 otetussa kuvassa.",
+        "selite": "Nisan linnoitusmuurien jäänteitä Ašgabatin lähellä lokakuussa 2018.",
         "lyhyt": "Nisan linnoitusmuurien jäänteitä.",
         "tiedosto": "Nisa fortress walls close to Ashgabat (44675736824).jpg"
       },
@@ -2543,7 +2615,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/n1-71d9ec11b75cd9a4bd3f.jpg",
         "suora": true,
         "lahde": "Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Nisan linnoitusmuurien jäänteitä Ašgabatin lähellä lokakuussa 2018 otetussa kuvassa.",
+        "selite": "Nisan linnoitusmuurien jäänteitä Ašgabatin lähellä lokakuussa 2018.",
         "lyhyt": "Nisan linnoitusmuurien jäänteitä.",
         "tiedosto": "Nisa fortress walls close to Ashgabat (44675736824).jpg"
       },
@@ -2559,10 +2631,10 @@
         2503
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/asgabat/sisalto.json",
-      "sourceContentSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
+      "sourceContentSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "cc81f1f4bf69559cde53edd89b76b0ece3afffc491444c51fc21c6e5eed8ed4e",
-        "semanticContextSHA256": "97783858c0c13ab1464d5dc724a5daabe19775e84cb159818144042d5990910e",
+        "targetBeforeSHA256": "4b83262bdfccae838b9551328247e88383ee10ab277b4eaff9eb380e6a1e1074",
+        "semanticContextSHA256": "c3fb4c04383560f228c5289316336885d12c45c4b413f092844b32ad7eb71420",
         "subjectTitle": "Nisa",
         "targetState": "existing-target"
       },
@@ -2721,7 +2793,7 @@
       "priorMediaFields": {
         "tiedosto": "Nisa fortress walls close to Ashgabat (44675736824).jpg",
         "lyhyt": "Nisan linnoitusmuurien jäänteitä.",
-        "selite": "Nisan linnoitusmuurien jäänteitä Ašgabatin lähellä lokakuussa 2018 otetussa kuvassa.",
+        "selite": "Nisan linnoitusmuurien jäänteitä Ašgabatin lähellä lokakuussa 2018.",
         "lahde": "Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2748,14 +2820,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)",
-        "selite": "Nisan linnoitusmuurien jäänteitä Ašgabatin lähellä lokakuussa 2018 otetussa kuvassa.",
+        "selite": "Nisan linnoitusmuurien jäänteitä Ašgabatin lähellä lokakuussa 2018.",
         "lyhyt": "Nisan linnoitusmuurien jäänteitä.",
         "tiedosto": "Nisa fortress walls close to Ashgabat (44675736824).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c",
-      "targetAfterSHA256": "cc81f1f4bf69559cde53edd89b76b0ece3afffc491444c51fc21c6e5eed8ed4e",
-      "contextAfterSHA256": "97783858c0c13ab1464d5dc724a5daabe19775e84cb159818144042d5990910e",
+      "sourceContentAfterSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+      "targetAfterSHA256": "4b83262bdfccae838b9551328247e88383ee10ab277b4eaff9eb380e6a1e1074",
+      "contextAfterSHA256": "c3fb4c04383560f228c5289316336885d12c45c4b413f092844b32ad7eb71420",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2778,7 +2850,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "8ba8c13d6d7bf68e21fd161a2b2de707bd7c3be5e70a880a0430653e7b3d551f",
+        "sameImageNativeSHA256": "71d9ec11b75cd9a4bd3fd0bc0d04cd3df58ae05211977b615d72e714188dc690",
+        "sameImageExportSHA256": "71d9ec11b75cd9a4bd3fd0bc0d04cd3df58ae05211977b615d72e714188dc690",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2790,6 +2870,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e09/asgabat/9ec61b3b4f5fccc18187dc280b0ce2477e7940afc9f7b8a11f8918007a80059f.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.568361+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e09/asgabat/a2ad0d82ed1e2cc8236c9e52d380fa4c0b67ee28020d641f451948324e248297.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.568361+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:01:14.515388+00:00"
 }

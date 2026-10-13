@@ -3,7 +3,7 @@
   "era": "e09",
   "city": "dusanbe",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+  "sourceContentAfterSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
   "assets": [
     {
       "era": "e09",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "sourceContentSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "78d4b426ab42505731cdb1b9a49458ef59cd7a296d1c288fab862160a4f34a1b",
+        "semanticContextSHA256": "7811533ce0af8160ba95afc015175eba4fbcfc7f1b8f0dbeaa01e518e6e9eff6",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -308,9 +308,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "sourceContentAfterSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "78d4b426ab42505731cdb1b9a49458ef59cd7a296d1c288fab862160a4f34a1b",
+      "contextAfterSHA256": "7811533ce0af8160ba95afc015175eba4fbcfc7f1b8f0dbeaa01e518e6e9eff6",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -333,7 +333,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+        "sameImageNativeSHA256": "b345732c1bfa4c48e8c7287db98047643f08c389b72976cc7c6bcae7377bf021",
+        "sameImageExportSHA256": "1a4df3558fc821a98ebc929cc42baac76fcb20ca9956335465a81445945cbd4e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -383,10 +391,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "sourceContentSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "94042b9e9604b87354727bd14895ba85485dc186df4d16f63ef8f9de16a00419",
-        "semanticContextSHA256": "94042b9e9604b87354727bd14895ba85485dc186df4d16f63ef8f9de16a00419",
+        "targetBeforeSHA256": "d65a619c8483a308a761afeec5514a280604bdc72f30cb9ba92364ca6c2b0f24",
+        "semanticContextSHA256": "d65a619c8483a308a761afeec5514a280604bdc72f30cb9ba92364ca6c2b0f24",
         "subjectTitle": "Vihreyskin on rakennettua",
         "targetState": "existing-target"
       },
@@ -629,9 +637,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
-      "targetAfterSHA256": "94042b9e9604b87354727bd14895ba85485dc186df4d16f63ef8f9de16a00419",
-      "contextAfterSHA256": "94042b9e9604b87354727bd14895ba85485dc186df4d16f63ef8f9de16a00419",
+      "sourceContentAfterSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+      "targetAfterSHA256": "d65a619c8483a308a761afeec5514a280604bdc72f30cb9ba92364ca6c2b0f24",
+      "contextAfterSHA256": "d65a619c8483a308a761afeec5514a280604bdc72f30cb9ba92364ca6c2b0f24",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -654,7 +662,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+        "sameImageNativeSHA256": "adf535160c8f767d043fd41599dd9dac4db0710325e71c5c41757d1527c158a4",
+        "sameImageExportSHA256": "04fe0aaed468f27c8e7d9b05be246e90be6dc128ef1c57aaa94c66a9937d6374",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -704,10 +720,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "sourceContentSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "720b272b3e8d764efbef57ad9085ee36c7bc0b2018f12d4547bdaf126c508cb9",
-        "semanticContextSHA256": "720b272b3e8d764efbef57ad9085ee36c7bc0b2018f12d4547bdaf126c508cb9",
+        "targetBeforeSHA256": "34042f3c1a45aeb5ded4737bb2585c23c338ed6511fba27ad36f55e3412dabac",
+        "semanticContextSHA256": "34042f3c1a45aeb5ded4737bb2585c23c338ed6511fba27ad36f55e3412dabac",
         "subjectTitle": "Siilit eivät tarvitse katuosoitetta",
         "targetState": "existing-target"
       },
@@ -1095,9 +1111,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
-      "targetAfterSHA256": "720b272b3e8d764efbef57ad9085ee36c7bc0b2018f12d4547bdaf126c508cb9",
-      "contextAfterSHA256": "720b272b3e8d764efbef57ad9085ee36c7bc0b2018f12d4547bdaf126c508cb9",
+      "sourceContentAfterSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+      "targetAfterSHA256": "34042f3c1a45aeb5ded4737bb2585c23c338ed6511fba27ad36f55e3412dabac",
+      "contextAfterSHA256": "34042f3c1a45aeb5ded4737bb2585c23c338ed6511fba27ad36f55e3412dabac",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1120,7 +1136,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+        "sameImageNativeSHA256": "9d005099a9385583b1f4b678da28ceaadb190d96469c7be10279e9e17b53b025",
+        "sameImageExportSHA256": "6c4cbdf200893d49d57d69726bc091fdfd46db65cf37ec1474e7bdebf8700e36",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -1170,10 +1194,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "sourceContentSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
-        "semanticContextSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
+        "targetBeforeSHA256": "04b3071960d8aee4f46727c1bdb3f6120493292a72be9542cc1c4fdc73ab2d54",
+        "semanticContextSHA256": "04b3071960d8aee4f46727c1bdb3f6120493292a72be9542cc1c4fdc73ab2d54",
         "subjectTitle": "Baletti tuli koulutuksen mukana",
         "targetState": "existing-target"
       },
@@ -1406,9 +1430,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
-      "targetAfterSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
-      "contextAfterSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
+      "sourceContentAfterSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+      "targetAfterSHA256": "04b3071960d8aee4f46727c1bdb3f6120493292a72be9542cc1c4fdc73ab2d54",
+      "contextAfterSHA256": "04b3071960d8aee4f46727c1bdb3f6120493292a72be9542cc1c4fdc73ab2d54",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1431,7 +1455,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+        "sameImageNativeSHA256": "abc3b8767747ddf0c1f7a275344bb88fc270b1781b806936784289a39b1a43be",
+        "sameImageExportSHA256": "eade069218b365261214ee9ea90752966ad4541ec140d9f56cbb027349d0eff9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -1481,10 +1513,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "sourceContentSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "1d74b8527b8853fecc452ce2dab520ecd95a6659bcb2c762cc9b7872ba55b8c1",
+        "semanticContextSHA256": "539d3772e7f93298df2be6d180ccc026b54a4883e52e2ea05715fbb2411bf56a",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -1682,9 +1714,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "sourceContentAfterSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "1d74b8527b8853fecc452ce2dab520ecd95a6659bcb2c762cc9b7872ba55b8c1",
+      "contextAfterSHA256": "539d3772e7f93298df2be6d180ccc026b54a4883e52e2ea05715fbb2411bf56a",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1707,7 +1739,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+        "sameImageNativeSHA256": "f61a48b471ef388a9bf3f7b58f98e295b98a582f60a915228a11a87081021099",
+        "sameImageExportSHA256": "15092613df1730137b89b2a1c71c84c277129abe8a6b9d794a2c6d17b72d74ba",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      }
     },
     {
       "era": "e09",
@@ -1726,7 +1766,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/photo-c17fd8d06802c1ff465d.jpg",
         "suora": true,
         "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
-        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa otetussa kuvassa.",
+        "selite": "Tulppaaneja Dušanbessa huhtikuussa 2026.",
         "lyhyt": "Tulppaaneja Dušanbessa.",
         "tiedosto": "Tulip of Dushanbe.jpg",
         "vuosi": "2026"
@@ -1734,7 +1774,7 @@
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
-        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa otetussa kuvassa.",
+        "selite": "Tulppaaneja Dušanbessa huhtikuussa 2026.",
         "lyhyt": "Tulppaaneja Dušanbessa.",
         "tiedosto": "Tulip of Dushanbe.jpg",
         "vuosi": "2026"
@@ -1743,7 +1783,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/photo-c17fd8d06802c1ff465d.jpg",
         "suora": true,
         "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
-        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa otetussa kuvassa.",
+        "selite": "Tulppaaneja Dušanbessa huhtikuussa 2026.",
         "lyhyt": "Tulppaaneja Dušanbessa.",
         "tiedosto": "Tulip of Dushanbe.jpg",
         "vuosi": "2026"
@@ -1760,10 +1800,10 @@
         1800
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "sourceContentSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "b44d50d0fc962eb4958cd2f8e56c918218f8de693d086124b2a37d5155e175f0",
-        "semanticContextSHA256": "b44d50d0fc962eb4958cd2f8e56c918218f8de693d086124b2a37d5155e175f0",
+        "targetBeforeSHA256": "774f7a7934c9c8f0b35259436479a79c87fbae22dda2e4d6dcaba653694d36f7",
+        "semanticContextSHA256": "774f7a7934c9c8f0b35259436479a79c87fbae22dda2e4d6dcaba653694d36f7",
         "subjectTitle": "dusanbe — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1963,7 +2003,7 @@
       "priorMediaFields": {
         "tiedosto": "Tulip of Dushanbe.jpg",
         "lyhyt": "Tulppaaneja Dušanbessa.",
-        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa otetussa kuvassa.",
+        "selite": "Tulppaaneja Dušanbessa huhtikuussa 2026.",
         "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
         "vuosi": "2026"
       },
@@ -1991,15 +2031,15 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
-        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa otetussa kuvassa.",
+        "selite": "Tulppaaneja Dušanbessa huhtikuussa 2026.",
         "lyhyt": "Tulppaaneja Dušanbessa.",
         "tiedosto": "Tulip of Dushanbe.jpg",
         "vuosi": "2026"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
-      "targetAfterSHA256": "b44d50d0fc962eb4958cd2f8e56c918218f8de693d086124b2a37d5155e175f0",
-      "contextAfterSHA256": "b44d50d0fc962eb4958cd2f8e56c918218f8de693d086124b2a37d5155e175f0",
+      "sourceContentAfterSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+      "targetAfterSHA256": "774f7a7934c9c8f0b35259436479a79c87fbae22dda2e4d6dcaba653694d36f7",
+      "contextAfterSHA256": "774f7a7934c9c8f0b35259436479a79c87fbae22dda2e4d6dcaba653694d36f7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2022,7 +2062,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+        "sameImageNativeSHA256": "c17fd8d06802c1ff465d0215df39a725ddcf6cb910fd225c401daa39bae6d67b",
+        "sameImageExportSHA256": "c17fd8d06802c1ff465d0215df39a725ddcf6cb910fd225c401daa39bae6d67b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     },
     {
       "era": "e09",
@@ -2044,14 +2092,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/k2-39eed49981ba41902fdd.jpg",
         "suora": true,
         "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008 otetussa kuvassa.",
+        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008.",
         "lyhyt": "Varzobin jokilaaksoa.",
         "tiedosto": "Ravine of Varzob River - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008 otetussa kuvassa.",
+        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008.",
         "lyhyt": "Varzobin jokilaaksoa.",
         "tiedosto": "Ravine of Varzob River - panoramio.jpg"
       },
@@ -2059,7 +2107,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/k2-39eed49981ba41902fdd.jpg",
         "suora": true,
         "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008 otetussa kuvassa.",
+        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008.",
         "lyhyt": "Varzobin jokilaaksoa.",
         "tiedosto": "Ravine of Varzob River - panoramio.jpg"
       },
@@ -2075,10 +2123,10 @@
         3345
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "sourceContentSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6284d0bb9b7f662a08761a5fc706eeaa1a323e2e83dabda8ca6646490329009c",
-        "semanticContextSHA256": "6284d0bb9b7f662a08761a5fc706eeaa1a323e2e83dabda8ca6646490329009c",
+        "targetBeforeSHA256": "2cd229b7a8bbd7558de6604886c21e64bb7d69781f3f4ad4ac786bdce23715e3",
+        "semanticContextSHA256": "2cd229b7a8bbd7558de6604886c21e64bb7d69781f3f4ad4ac786bdce23715e3",
         "subjectTitle": "Kaupunki ylitti oman jokensa",
         "targetState": "existing-target"
       },
@@ -2296,7 +2344,7 @@
       "priorMediaFields": {
         "tiedosto": "Ravine of Varzob River - panoramio.jpg",
         "lyhyt": "Varzobin jokilaaksoa.",
-        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008 otetussa kuvassa.",
+        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008.",
         "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2323,14 +2371,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008 otetussa kuvassa.",
+        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008.",
         "lyhyt": "Varzobin jokilaaksoa.",
         "tiedosto": "Ravine of Varzob River - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
-      "targetAfterSHA256": "6284d0bb9b7f662a08761a5fc706eeaa1a323e2e83dabda8ca6646490329009c",
-      "contextAfterSHA256": "6284d0bb9b7f662a08761a5fc706eeaa1a323e2e83dabda8ca6646490329009c",
+      "sourceContentAfterSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+      "targetAfterSHA256": "2cd229b7a8bbd7558de6604886c21e64bb7d69781f3f4ad4ac786bdce23715e3",
+      "contextAfterSHA256": "2cd229b7a8bbd7558de6604886c21e64bb7d69781f3f4ad4ac786bdce23715e3",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2353,7 +2401,15 @@
         "captionChanged": false
       },
       "runtimeUseAllowed": true,
-      "textAcceptanceVerified": false
+      "textAcceptanceVerified": false,
+      "task228CorrectedCBinding": {
+        "sourceSHA256": "ef3fcaeecfc128fbdd0d1f278b9731d24f05d1a0f99193856c7f4a7c4eb4c12a",
+        "sameImageNativeSHA256": "39eed49981ba41902fddbce6ec7744e0e589d7f9327b6766b7e596a4199d0071",
+        "sameImageExportSHA256": "39eed49981ba41902fddbce6ec7744e0e589d7f9327b6766b7e596a4199d0071",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": true
+      }
     }
   ],
   "runtimeIntegrationPending": true,
@@ -2365,6 +2421,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e09/dusanbe/21fb9303d48441800167d06f7c96313b9bfb831f76f72ca33d1847e73da83009.json",
-  "task118ReboundAt": "2026-10-13T16:31:25.648488+00:00"
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e09/dusanbe/38e92ae89ee8895cfaa77aa8215bcff6cd2ed237ca35eef448c42793e3d1bb74.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.648488+00:00",
+  "task228ExcludedAssets": [],
+  "task228TextRevision": true,
+  "task228ReboundAt": "2026-10-13T18:01:14.635813+00:00"
 }

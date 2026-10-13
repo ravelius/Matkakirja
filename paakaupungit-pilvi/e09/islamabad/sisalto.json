@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "Islamabadin osoitteesta voi lukea karttaa: kirjain ja numero kertovat sektorin, ja vinoviivan jälkeinen tunnus sen pienemmän osan. **Suunniteltu pääkaupunki** nousi Margalla-kukkuloiden juurelle viime vuosisadan jälkipuolella. Yleiskaavan laati kreikkalaisen arkkitehdin Constantinos Doxiadisin johtama toimisto. Isoisän matkavuonna 1873 tätä kaupunkia ei vielä ollut, vaikka seudulla oli paljon vanhempaa asutusta. Arjen yhteydet kulkevat myös Rawalpindiin, ja Metrobus liikkuu renkailla omalla väylällään.\n\nMuseot avaavat pääkaupungista toisen puolen. Lok Virsa esittelee eri yhteisöjen elävää kulttuuria vaatteista ja käsitöistä juhliin. Luonnonhistoriallisessa museossa voi kohdata **sinivalaan luurangon** kaukana merenrannasta. Kaupungin vieressä luonto ei lopu puistokäytävään: Margallan eläimistöön kuuluvat leopardit ja muntjakit, ja Rawal-järvi on samalla vedenhankinnan allas ja vesilintujen talvipaikka.",
-    "teksti": "Islamabadin yleiskaava jakoi pääkaupungin eri käyttötarkoituksiin: asumiseen, hallintoon, opetukseen, kaupankäyntiin ja viheralueisiin. Ruudukko näkyy sektorien kirjain- ja numerotunnuksissa. Kaikki kaupungin osat eivät silti ole samanlaista ruutua, sillä pääkaupunkialueeseen kuuluu myös kukkuloita, järvi ja maaseutua.\n\nKaupunki rakennettiin viime vuosisadalla, mutta seudun historia ei alkanut suunnittelupöydältä. Moderni Islamabad syntyi vanhemman asutuksen ympäristöön, ja sen naapurina jatkaa Rawalpindi. Lok Virsan näyttelyissä ihmiset esiintyvät käsityön, musiikin ja tapojen harjoittajina: kulttuuri ei kuulu vain kaukaiseen menneisyyteen.\n\nMargallan kansallispuisto yhdistää erilaisia ympäristöjä kukkuloista Rawal-järveen. Puiston kasvistoon kuuluu mäntyjen lisäksi oliivi- ja päärynäpuita, ja eläimistössä on niin pieniä nisäkkäitä kuin leopardeja. Luonnonhistoriallinen museo puolestaan esittelee eläimiä, kasveja ja kiviä sekä niiden tutkimusta. Ulkona koettu luonto ja museon kokoelmat täydentävät toisiaan."
+    "teksti": "Islamabadin yleiskaava jakoi pääkaupungin eri käyttötarkoituksiin: asumiseen, hallintoon, opetukseen, kaupankäyntiin ja viheralueisiin. Ruudukko näkyy sektorien kirjain- ja numerotunnuksissa. Kaikki kaupungin osat eivät silti ole samanlaista ruutua, sillä pääkaupunkialueeseen kuuluu myös kukkuloita, järvi ja maaseutua.\n\nKaupunki rakennettiin viime vuosisadalla, mutta seudun historia ei alkanut suunnittelupöydältä. Moderni Islamabad syntyi vanhemman asutuksen ympäristöön, ja sen naapurina jatkaa Rawalpindi. Lok Virsan näyttelyissä ihmiset esiintyvät käsityön, musiikin ja tapojen harjoittajina: kulttuuri ei kuulu vain kaukaiseen menneisyyteen.\n\nMargallan kansallispuisto yhdistää erilaisia ympäristöjä kukkuloista Rawal-järveen. Puiston kasvistoon kuuluu mäntyjen lisäksi oliivi- ja päärynäpuita, ja eläimistössä on niin pieniä nisäkkäitä kuin leopardeja. Luonnonhistoriallinen museo puolestaan esittelee eläimiä, kasveja ja kiviä sekä niiden tutkimusta."
   },
   "kysymykset": [
     {
@@ -28,7 +28,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Maa sijaitsee Intian läntisenä naapurina.",
+      "hint": "Pääkaupungin naapurina on Rawalpindi.",
       "fact": "Islamabad on Pakistanin pääkaupunki.",
       "source": "https://en.wikipedia.org/wiki/Islamabad"
     },
@@ -42,7 +42,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Maa tunnetaan myös antiikin kaupunkien historiasta.",
+      "hint": "Arkkitehdin toimisto suunnitteli kaupungin sektorit ja niiden käyttötarkoitukset.",
       "fact": "Constantinos Doxiadis oli kreikkalainen arkkitehti, jonka toimisto laati kaupungin yleiskaavan.",
       "source": "https://en.wikipedia.org/wiki/Islamabad"
     },
@@ -64,9 +64,9 @@
       "q": "Mitä luonnonhistoriallisen museon paleontologiagalleria esittelee?",
       "options": [
         "Fossiileja",
-        "Eläinten nahkoja",
-        "Kasvien siemeniä",
-        "Hiottuja jalokiviä"
+        "Täytettyjä eläimiä",
+        "Kivimineraaleja",
+        "Säilöttyjä kasveja"
       ],
       "correct": 0,
       "level": 2,
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Flowers red one - Islamabad spring blooms.jpg",
-    "lyhyt": "Punaisia kukkia Islamabadissa.",
-    "selite": "Islamabadin keväisiä punaisia kukkia tässä kaupungissa otetussa valokuvassa.",
+    "lyhyt": "Kukkia Islamabadissa.",
+    "selite": "Punaisia kukkia Islamabadissa.",
     "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Osoite toimii pienenä karttana",
-          "teksti": "Islamabadin sektorilla on kirjaimesta ja numerosta muodostuva tunnus. Sektorit jakautuvat edelleen pienempiin osiin, jotka erotetaan toisistaan vinoviivan jälkeen tulevalla numerolla. Osoitteen lyhyt merkkijono kertoo siis enemmän kuin pelkän nimen. Kaupungin yleiskaavassa erotettiin asuminen, opetus, hallinto ja kaupankäynti, mutta koko pääkaupunkialue ei ole samaa ruudukkoa: siihen kuuluu myös kukkuloita, järven ympäristöä ja maaseutua. Suunnitelma näkyy osoitteessa, maisema sen ympärillä.",
+          "teksti": "Islamabadin sektorilla on kirjaimesta ja numerosta muodostuva tunnus. Sektorit jakautuvat edelleen pienempiin osiin, jotka erotetaan toisistaan vinoviivan jälkeen tulevalla numerolla. Kaupungin yleiskaavassa erotettiin asuminen, opetus, hallinto ja kaupankäynti, mutta koko pääkaupunkialue ei ole samaa ruudukkoa: siihen kuuluu myös kukkuloita, järven ympäristöä ja maaseutua.",
           "wiki": "Islamabad",
           "tiedosto": "",
           "lyhyt": "",
@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Metro kulkee renkailla",
-          "teksti": "Islamabadin Metrobus ei ole maanalainen juna vaan nopea bussiyhteys. Osa linjoista kulkee omalla väylällään, ja yksi keskeinen yhteys jatkuu naapuriin Rawalpindiin. Lentoaseman suuntaan on oma yhteytensä. Kaikki Metrobus-nimellä tai värillä erotetut linjat eivät kuitenkaan toimi samalla tavalla: osa liikkuu muun liikenteen seassa, ja lipun käytännöt voivat erota. Kaupunkien välinen matka on näin arkinen bussimatka, vaikka järjestelmän nimi tuo ensin mieleen raiteet.",
+          "teksti": "Islamabadin Metrobus ei ole maanalainen juna vaan nopea bussiyhteys. Osa linjoista kulkee omalla väylällään, ja yksi keskeinen yhteys jatkuu naapuriin Rawalpindiin. Lentoaseman suuntaan on oma yhteytensä.",
           "wiki": "Rawalpindi-Islamabad Metrobus",
           "tiedosto": "",
           "lyhyt": "",
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Museo esittelee eläviä taitoja",
-          "teksti": "Lok Virsan perinnemuseossa Pakistanin yhteisöjen kulttuuri näkyy kirjotuissa vaatteissa, koruissa, puutöissä ja käyttöesineissä. Näyttelyt käsittelevät myös musiikkia, perinteisiä elämäntapoja ja juhlia. Kyse on elävästä kansanperinteestä, jota harjoitetaan ja siirretään eteenpäin, ei vain vanhoista löytöesineistä. Museon kansainväliset näyttely-yhteydet kertovat kulttuurien kohtaamisesta. Vaatteen tai esineen rinnalle tulee sen käyttö: ihmisten tavat tehdä, juhlia ja elää yhdessä.",
+          "teksti": "Lok Virsan perinnemuseossa Pakistanin yhteisöjen kulttuuri näkyy kirjotuissa vaatteissa, koruissa, puutöissä ja käyttöesineissä. Näyttelyt käsittelevät myös musiikkia, perinteisiä elämäntapoja ja juhlia. Kyse on elävästä kansanperinteestä, jota harjoitetaan ja siirretään eteenpäin, ei vain vanhoista löytöesineistä. Museon kansainväliset näyttely-yhteydet kertovat kulttuurien kohtaamisesta.",
           "wiki": "Lok Virsa Museum",
           "tiedosto": "",
           "lyhyt": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Sinivalas saapui sisämaahan",
-          "teksti": "Pakistanin luonnonhistoriallisen museon ulkona on sinivalaan luuranko. Mereneläimeen voi siis tutustua pääkaupungissa kaukana rannikosta. Museon näyttelyissä on myös kasveja ja eläimiä niiden elinympäristöissä, fossiileja sekä raakakiviä ja hiottuja jalokiviä. Ekologiset kierrot ja ympäristön ongelmat kuuluvat opetukseen yhtä lailla kuin yksittäiset näytteet. Museo toimii lisäksi tutkimuskeskuksena. Suuri luuranko on katseenvangitsija, mutta sen ympärillä luonnosta kysytään monenlaisia kysymyksiä.",
+          "teksti": "Pakistanin luonnonhistoriallisen museon ulkona on sinivalaan luuranko. Museon näyttelyissä on myös kasveja ja eläimiä niiden elinympäristöissä, fossiileja sekä raakakiviä ja hiottuja jalokiviä. Ekologiset kierrot ja ympäristön ongelmat kuuluvat opetukseen yhtä lailla kuin yksittäiset näytteet. Museo toimii lisäksi tutkimuskeskuksena.",
           "wiki": "Pakistan Museum of Natural History",
           "tiedosto": "",
           "lyhyt": "",
@@ -189,7 +189,7 @@
             },
             {
               "otsikko": "Kulttuuri jatkaa elämää",
-              "teksti": "Lok Virsan perinnemuseossa näyttelyt kuvaavat eri yhteisöjen käsitöitä, musiikkia ja perinteisiä elämäntapoja. Kirjottu vaate, puuesine tai koru kertoo myös tekijöistä ja käytöstä. Luonnonhistoriallisessa museossa näkökulma vaihtuu eläimiin, kasveihin, fossiileihin ja kiviin; ulkona on sinivalaan luuranko. Sinivalaan luuranko on museon ulkotiloissa; fossiilit ja kivikokoelmat kuuluvat sen gallerioihin.",
+              "teksti": "Lok Virsan perinnemuseossa näyttelyt kuvaavat eri yhteisöjen käsitöitä, musiikkia ja perinteisiä elämäntapoja. Kirjottu vaate, puuesine tai koru kertoo myös tekijöistä ja käytöstä. Luonnonhistoriallisessa museossa näkökulma vaihtuu eläimiin, kasveihin, fossiileihin ja kiviin; ulkona on sinivalaan luuranko.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -199,7 +199,7 @@
             },
             {
               "otsikko": "Kukkuloille ja veden äärelle",
-              "teksti": "Margalla-kukkuloilla on kävelyreittejä, joiden nousut voivat olla jyrkkiä. Valitse reitti vointisi ja päivän sään mukaan ja ota vettä sekä kunnolliset jalkineet mukaan. Rawal-järven rannoilla on erillisiä virkistysalueita ja veneilyä; järvellä on myös raportoitu jätevesiongelmia. Kansallispuiston alueella elää luonnonvaraisia eläimiä, joita katsellaan etäältä.",
+              "teksti": "Margalla-kukkuloilla on kävelyreittejä, joiden nousut voivat olla jyrkkiä. Rawal-järven rannoilla on erillisiä virkistysalueita ja veneilyä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Kesä on Islamabadissa kuuma, ja monsuuni tuo kesään sateita. Talvi on viileämpi; kevät ja syksy ovat usein mukavampaa aikaa kaupungilla ja kukkuloilla liikkumiseen. Kesäpäivän retkelle kannattaa lähteä varhain, sillä nousut tuntuvat kuumassa raskailta. Tarkista päivän sää ennen polulle lähtöä: puiston purot voivat voimistua sateiden aikana.",
+              "teksti": "Kesä on Islamabadissa kuuma, ja monsuuni tuo kesään sateita. Talvi on viileämpi; kevät ja syksy ovat usein mukavampaa aikaa kaupungilla ja kukkuloilla liikkumiseen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -258,20 +258,16 @@
             ],
             "hyvaTietaa": [
               {
-                "otsikko": "Matkan valmistelu",
-                "teksti": "Tarkista Ulkoministeriön ajantasainen matkustustiedote ja maahantulon ehdot ennen matkaa."
-              },
-              {
-                "otsikko": "Reitti kukkuloilla",
-                "teksti": "Valitse kävelyreitti päivän sään ja oman voinnin mukaan, ja selvitä ajantasainen pääsy ennen lähtöä."
-              },
-              {
                 "otsikko": "Osoitteen tunnus",
                 "teksti": "Sektorin kirjain, numero ja mahdollinen alasektorin tunnus kuuluvat osoitteeseen."
               },
               {
-                "otsikko": "Museoiden käyntiajat",
-                "teksti": "Varmista museoiden nykyiset käyntiajat erikseen."
+                "otsikko": "Metrobus",
+                "teksti": "Punainen Metrobus-linja yhdistää Islamabadin Rawalpindiin."
+              },
+              {
+                "otsikko": "Museot",
+                "teksti": "Lok Virsa esittelee kulttuuriperintöä, luonnonhistoriallinen museo eläimiä, kasveja ja kiviä."
               }
             ]
           },
@@ -297,7 +293,7 @@
       "nostot": [
         {
           "otsikko": "Retkijärvi hoitaa vesihuoltoa",
-          "teksti": "Rawal-järvi on keinotekoinen vesiallas, joka rakennettiin palvelemaan Rawalpindin ja Islamabadin vedenhankintaa. Vettä kerääntyy Korang-joesta ja muista puroista, eikä valuma-alue rajoitu kaupungin rajaan: siihen kuuluu myös Murreen seutua. Rannoilla on puutarhoja, piknikpaikkoja ja veneilyä, mutta järven alkuperäinen tehtävä on käytännöllinen. Sama vesialue palvelee veden käyttöä, virkistystä ja eläinten elinympäristöä. Kaupunkiretkellä nähtävä järvi on osa ympäröivän seudun vesijärjestelmää.",
+          "teksti": "Rawal-järvi on keinotekoinen vesiallas, joka rakennettiin palvelemaan Rawalpindin ja Islamabadin vedenhankintaa. Vettä kerääntyy Korang-joesta ja muista puroista, eikä valuma-alue rajoitu kaupungin rajaan: siihen kuuluu myös Murreen seutua. Rannoilla on puutarhoja, piknikpaikkoja ja veneilyä, mutta järven alkuperäinen tehtävä on käytännöllinen.",
           "wiki": "Rawal Lake",
           "tiedosto": "",
           "lyhyt": "",
@@ -306,7 +302,7 @@
         },
         {
           "otsikko": "Vesilinnut tulevat talveksi",
-          "teksti": "Rawal-järvi on tärkeä vesilintujen talvehtimispaikka, ja siellä esiintyy esimerkiksi sinisorsia. Vesialtaassa ja sen tulopuroissa elää myös kaloja, kuten karppeja ja tilapioita. Järvi kuuluu Margallan kansallispuiston kokonaisuuteen, vaikka vesimaisema näyttää aivan toiselta kuin kukkuloiden metsä. Luonnon tarkkailija voi seurata lintujen liikkumista rannan tuntumassa samalla alueella, jossa muut käyvät piknikillä tai veneilemässä. Vedenhankintaan tehty allas on saanut myös eläinten käyttäjiä.",
+          "teksti": "Rawal-järvi on tärkeä vesilintujen talvehtimispaikka, ja siellä esiintyy esimerkiksi sinisorsia. Vesialtaassa ja sen tulopuroissa elää myös kaloja, kuten karppeja ja tilapioita. Järvi kuuluu Margallan kansallispuiston kokonaisuuteen, vaikka vesimaisema näyttää aivan toiselta kuin kukkuloiden metsä.",
           "wiki": "Rawal Lake",
           "tiedosto": "",
           "lyhyt": "",
@@ -315,7 +311,7 @@
         },
         {
           "otsikko": "Leopardi kuuluu pääkaupungin naapureihin",
-          "teksti": "Margallan kansallispuiston eläimistöön kuuluvat leopardit, mutta myös muntjakit, goralit, reesusmakakit ja piikkisiat. Kukkuloiden metsä on oikea elinympäristö, vaikka kaupunki on aivan sen vieressä. Puistossa elää myös petolintuja ja käärmeitä, ja monsuunin aikaan rinteiden purot voimistuvat. Pienet kasvinsyöjät, makakit ja pedot elävät samassa metsäympäristössä. Kukkuloiden ja vesistöjen vaihtelu tarjoaa niille erilaisia elinpaikkoja.",
+          "teksti": "Margallan kansallispuiston eläimistöön kuuluvat leopardit, mutta myös muntjakit, goralit, reesusmakakit ja piikkisiat. Puistossa elää myös petolintuja ja käärmeitä, ja monsuunin aikaan rinteiden purot voimistuvat.",
           "wiki": "Margalla Hills National Park",
           "tiedosto": "",
           "lyhyt": "",
@@ -324,7 +320,7 @@
         },
         {
           "otsikko": "Mänty saa seurakseen oliivipuun",
-          "teksti": "Margallan kansallispuiston puulajeihin kuuluu Pinus roxburghii -mänty, mutta kasvillisuus ei ole pelkkää havumetsää. Lajistossa on myös villioliivi, phulai-puu ja paikallinen päärynäpuu sekä kukkivia puita ja pensaita. Puiston istutuksiin valitaan alueen omaan kasvistoon kuuluvia lajeja. Maisemaan kuuluvat siten sekä havupuut että lehtipuut, kukat ja pensaikko. Villioliivi ja päärynäpuut kuuluvat paikalliseen kasvillisuuteen havupuuston rinnalla.",
+          "teksti": "Margallan kansallispuiston puulajeihin kuuluu Pinus roxburghii -mänty, mutta kasvillisuus ei ole pelkkää havumetsää. Lajistossa on myös villioliivi, phulai-puu ja paikallinen päärynäpuu sekä kukkivia puita ja pensaita. Puiston istutuksiin valitaan alueen omaan kasvistoon kuuluvia lajeja.",
           "wiki": "Margalla Hills National Park",
           "tiedosto": "",
           "lyhyt": "",
@@ -361,7 +357,7 @@
   "nahtavyydet": {
     "Margallan kansallispuisto": {
       "aika": "Kukkulat luonnonmaisemaa; kansallispuisto 1900-luvulta",
-      "teksti": "Margallan kansallispuiston kokonaisuuteen kuuluvat kukkulat, Shakarparianin alue ja Rawal-järvi. Himalajan esivuoriston rinteet alkavat aivan pääkaupungin vierestä. Puiston kasvistossa on Pinus roxburghii -mäntyä, villioliivia, paikallisia päärynäpuita sekä monia kukkivia puita ja pensaita. Eläimistöön kuuluvat leopardit, muntjakit ja goralit; lisäksi alueella elää makakkeja, piikkisikoja, lintuja ja käärmeitä.\n\nKukkuloilla on kävelyreittejä, mutta nousut voivat olla jyrkkiä. Luonnonlähteet ja monsuunin aikaan voimistuvat purot ovat osa maisemaa. Isoisän matkavuonna 1873 nykyistä Islamabadia tai sen kansallispuistoa ei vielä ollut: kukkulat ovat paljon vanhempaa luonnonmaisemaa, ja suojelualue perustettiin vasta viime vuosisadalla. Reittien nykyiset palvelut ja rakennelmat kuuluvat myöhempiin aikoihin.",
+      "teksti": "Margallan kansallispuiston kokonaisuuteen kuuluvat kukkulat, Shakarparianin alue ja Rawal-järvi. Himalajan esivuoriston rinteet alkavat aivan pääkaupungin vierestä. Puiston kasvistossa on Pinus roxburghii -mäntyä, villioliivia, paikallisia päärynäpuita sekä monia kukkivia puita ja pensaita. Eläimistöön kuuluvat leopardit, muntjakit ja goralit; lisäksi alueella elää makakkeja, piikkisikoja, lintuja ja käärmeitä.\n\nKukkuloilla on kävelyreittejä, mutta nousut voivat olla jyrkkiä. Luonnonlähteet ja monsuunin aikaan voimistuvat purot ovat osa maisemaa.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -374,12 +370,12 @@
     },
     "Rawal-järvi": {
       "aika": "Tekoallas 1900-luvulta",
-      "teksti": "Rawal-järvi on Korang-joen ja pienempien purojen vettä keräävä tekoallas. Se rakennettiin palvelemaan pääkaupunkiseudun vedenhankintaa, ja sen valuma-alue ulottuu myös Murreen seudulle. Järvi kuuluu Margallan kansallispuiston kokonaisuuteen. Rannoilla on puutarhoja ja virkistysalueita, mutta vesiallas on myös sinisorsien kaltaisten vesilintujen talvehtimispaikka ja kalojen elinympäristö.\n\nIsoisän matkavuonna 1873 nykyistä tekoallasta ei ollut; se syntyi vasta viime vuosisadalla. Järven nykykäytössä yhdistyvät vedenhankinta, luonnon elinympäristö ja retkeily. Rannoilla käydään piknikillä ja veneilemässä, ja altaassa sekä sen tulopuroissa elää esimerkiksi karppeja ja tilapioita. Järvellä on myös raportoitu jätevesiongelmia: virkistysmaisema ei poista vedenlaadun merkitystä.",
+      "teksti": "Rawal-järvi on Korang-joen ja pienempien purojen vettä keräävä tekoallas. Se rakennettiin palvelemaan pääkaupunkiseudun vedenhankintaa, ja sen valuma-alue ulottuu myös Murreen seudulle. Järvi kuuluu Margallan kansallispuiston kokonaisuuteen. Rannoilla on puutarhoja ja virkistysalueita, mutta vesiallas on myös sinisorsien kaltaisten vesilintujen talvehtimispaikka ja kalojen elinympäristö.\n\n Järven nykykäytössä yhdistyvät vedenhankinta, luonnon elinympäristö ja retkeily. Rannoilla käydään piknikillä ja veneilemässä, ja altaassa sekä sen tulopuroissa elää esimerkiksi karppeja ja tilapioita.",
       "kuvat": [
         {
           "tiedosto": "Rawal Lake Eastern Bank.jpg",
           "lyhyt": "Rawal-järven itärantaa.",
-          "selite": "Rawal-järven itäinen ranta ja taustalla Margallan kukkuloita vuonna 2012 otetussa kuvassa.",
+          "selite": "Rawal-järven itäinen ranta ja taustalla Margallan kukkuloita vuonna 2012.",
           "lahde": "ZILL NIAZI, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
@@ -389,13 +385,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Islamabadin kansainvälinen lentoasema (ISB)",
-    "huomiot": [
-      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 2 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
-      "Kartta partial: kaksi aidosti luontoa kuvaavaa oman WP-sivun pistettä, ei kuuden kohteen keskustakartta.",
-      "Faisal-moskeija, Pakistanin muistomerkki ja modernit museorakennukset jätetty kartta-/kuvakohteista suojattujen teosten rajoituksen vuoksi.",
-      "saatiedot:null; primääriauditointi avoinna, olemassa olevaa saa.json-tiedostoa ei muutettu.",
-      "Kontekstin väkiluku koskee pääkaupunkialuetta, ei pelkkää kaupunkia; väkiluku jätetty luonnoksen teksteistä pois.",
-      "D/E/F-tarkistus, jatkolinkkien verkkovarmennus, pelikytkentä ja julkaisu tekemättä."
-    ]
+    "huomiot": []
   }
 }

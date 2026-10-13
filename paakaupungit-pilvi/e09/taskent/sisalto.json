@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "Taškentissa voi kulkea basaariin, vanhaan medresaan ja leveälle pääkadulle saman kaupunkipäivän aikana. Uzbekistanin pääkaupunki on kasvanut kaupan ja jokiveden äärellä Keski-Aasian keitaalla. **Chorsun kauppapaikka** kuuluu vanhan kaupungin ytimeen, ja sen lähellä on Kukeldashin medresa. Kaupungin vanhoihin nimiin kuuluvat Chach ja Shash; Taškentin nimen tavallinen tulkinta on ”kivikaupunki”.\n\nTaškentin vanhoilla kaupunginosilla oli omat nimensä jo ennen Venäjän vallan aikaa. Uusi venäläinen asutus kasvoi 1800-luvulla Ankhor-kanavan toiselle puolelle, vanhan kaupungin rinnalle. Kukeldashin rakennus taas ehti toimia karavaanien majapaikkana, linnoituksena ja museona ennen paluutaan opetuskäyttöön. **Kaupungin kerrokset näkyvät myös kielissä**: uzbekin rinnalla puhutaan venäjää, ja kylteissä käytetään latinalaisia sekä kyrillisiä kirjaimia. Nykyinen Taškent on laaja kaupunki, jossa metro ja bussit yhdistävät eri alueita, mutta basaarin ja vanhojen korttelien ympäristöön tutustuu myös jalan.",
-    "teksti": "Taškent on Uzbekistanin pääkaupunki Chirchiq-joen ja sen sivuvesien tuntumassa. Kaupunki oli kauppapaikka jo kauan ennen nykyaikaisia pääkatujaan. Chorsun ympäristö kuuluu vanhan kaupungin ytimeen, ja osa sen historiallisista rakennuksista säilyttää opetuksen, asumisen ja kaupankäynnin kerroksia.\n\nEnnen Venäjän vallan aikaa kaupunginosiin kuuluivat Beshyoghoch, Kukcha, Shaykhontokhur ja Sebzor. Myöhemmin vanhan kaupungin rinnalle kasvoi uutta asutusta Ankhor-kanavan toiselle puolelle. Beshyoghoch, Kukcha, Shaykhontokhur ja Sebzor tunnettiin daha-kaupunginosina; niillä oli omat hallitsijansa ennen kaupungin yhdistymistä.\n\nKukeldashin medresa on esimerkki rakennuksesta, jonka tehtävä on muuttunut useasti. Opetuksen lisäksi siellä on ollut karavaanien majapaikka ja museo. Soveltavan taiteen museon historiaan taas kuuluu vanha asuintalo, joka on palvellut myös orpokotina ja käsityöopetuksen paikkana. Taškentin arjessa uzbekki ja venäjä sekä erilaiset kirjoitusasut kulkevat rinnakkain."
+    "teksti": "Taškent on Uzbekistanin pääkaupunki Chirchiq-joen ja sen sivuvesien tuntumassa. Kaupunki oli kauppapaikka jo kauan ennen nykyaikaisia pääkatujaan. Chorsun ympäristö kuuluu vanhan kaupungin ytimeen, ja osa sen historiallisista rakennuksista säilyttää opetuksen, asumisen ja kaupankäynnin kerroksia.\n\n Myöhemmin vanhan kaupungin rinnalle kasvoi uutta asutusta Ankhor-kanavan toiselle puolelle. Beshyoghoch, Kukcha, Shaykhontokhur ja Sebzor tunnettiin daha-kaupunginosina; niillä oli omat hallitsijansa ennen kaupungin yhdistymistä.\n\nKukeldashin medresa on esimerkki rakennuksesta, jonka tehtävä on muuttunut useasti. Opetuksen lisäksi siellä on ollut karavaanien majapaikka ja museo. Soveltavan taiteen museon historiaan taas kuuluu vanha asuintalo, joka on palvellut myös orpokotina ja käsityöopetuksen paikkana. Taškentin arjessa uzbekki ja venäjä sekä erilaiset kirjoitusasut kulkevat rinnakkain."
   },
   "kysymykset": [
     {
@@ -23,12 +23,12 @@
       "options": [
         "Uzbekistanin",
         "Kazakstanin",
-        "Kirgistanin",
+        "Kirgisian",
         "Tadžikistanin"
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Maan historiallisia kaupunkeja ovat Samarkand ja Buhara.",
+      "hint": "Kaupunki tunnettiin aiemmin myös nimillä Chach ja Shash.",
       "fact": "Taškent on Uzbekistanin pääkaupunki.",
       "source": "https://en.wikipedia.org/wiki/Tashkent"
     },
@@ -129,7 +129,7 @@
       "nostot": [
         {
           "otsikko": "Kivikaupungin nimessä on monta kerrosta",
-          "teksti": "Taškentin nimi tulkitaan tavallisesti ”kivikaupungiksi”: sen osat liitetään kiveä ja kaupunkia tarkoittaviin sanoihin. Vanhempi Chach tunnettiin arabian kielessä nimellä Shash, ja myös Binkath kuuluu kaupungin nimihistoriaan. Chach-nimen alkuperästä on useita tulkintoja. Nimet kulkivat kauppareiteillä eri kielten kautta jo ennen nykyistä pääkaupunkia. Vielä nykyäänkin paikallinen Toshkent ja suomen Taškent näyttävät erilaisilta, vaikka tarkoittavat samaa paikkaa. Kivikaupunki on siis nykyisen nimen tulkinta, ei kaupungin ainoa historiallinen nimi.",
+          "teksti": "Taškentin nimi tulkitaan tavallisesti ”kivikaupungiksi”: sen osat liitetään kiveä ja kaupunkia tarkoittaviin sanoihin. Vanhempi Chach tunnettiin arabian kielessä nimellä Shash, ja myös Binkath kuuluu kaupungin nimihistoriaan. Chach-nimen alkuperästä on useita tulkintoja. Nimet kulkivat kauppareiteillä eri kielten kautta jo ennen nykyistä pääkaupunkia. Vielä nykyäänkin paikallinen Toshkent ja suomen Taškent näyttävät erilaisilta, vaikka tarkoittavat samaa paikkaa.",
           "wiki": "Tashkent",
           "tiedosto": "",
           "lyhyt": "",
@@ -138,7 +138,7 @@
         },
         {
           "otsikko": "Basaari on samalla kaupungin osoite",
-          "teksti": "Chorsu on Taškentin vanhan kaupungin kauppapaikka, ja Kukeldashin medresa sijaitsee sen lähellä. Kaupungin historiallista ydintä voi siis lähestyä myös ostosten kautta. Basaarin tarjontaan kuuluvat hedelmät, vihannekset ja mausteet sekä käsityöpajojen tuotteet. Alueella on myös ruokailupaikkoja. Chorsu ei ole vain matkailijoille nimetty nähtävyys: sen kaupankäynti liittyy siihen vanhaan kaupunginosaan, jossa markkinapaikka, opinnot ja asuminen olivat lähellä toisiaan.",
+          "teksti": "Chorsu on Taškentin vanhan kaupungin kauppapaikka, ja Kukeldashin medresa sijaitsee sen lähellä. Basaarin tarjontaan kuuluvat hedelmät, vihannekset ja mausteet sekä käsityöpajojen tuotteet. Alueella on myös ruokailupaikkoja.",
           "wiki": "Tashkent",
           "tiedosto": "",
           "lyhyt": "",
@@ -147,7 +147,7 @@
         },
         {
           "otsikko": "Kanavan toiselle puolelle kasvoi uusi kaupunki",
-          "teksti": "Ankhor-kanava kuuluu Taškentin 1800-luvun kaupunkihistoriaan. Venäjän vallan alettua uusi asutus ja varuskunta sijoitettiin kanavan toiselle puolelle vanhaan kaupunkiin nähden. Paikalle tuli venäläisiä asukkaita ja kauppiaita, kun Taškentista tehtiin Venäjän Turkestanin hallinnollinen keskus. Vanhan kaupungin rinnalle muodostui siten uusi alue, eikä kaikki myöhempi kaupunkikuva kasvanut saman basaarin ympärille. Vesiyhteys auttaa paikantamaan myös hallinnon ja asutuksen muutosta.",
+          "teksti": "Ankhor-kanava kuuluu Taškentin 1800-luvun kaupunkihistoriaan. Venäjän vallan alettua uusi asutus ja varuskunta sijoitettiin kanavan toiselle puolelle vanhaan kaupunkiin nähden. Paikalle tuli venäläisiä asukkaita ja kauppiaita, kun Taškentista tehtiin Venäjän Turkestanin hallinnollinen keskus.",
           "wiki": "Tashkent",
           "tiedosto": "",
           "lyhyt": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Kaupungin voi lukea kahdella aakkostolla",
-          "teksti": "Taškentissa uzbekki on keskeinen puhuttu kieli, mutta venäjä toimii myös yhteisenä asiointikielenä. Kaupungin kylteissä esiintyy sekä latinalaisia että kyrillisiä kirjaimia. Kaupungin paikallinen nimi on Toshkent, kun suomeksi kirjoitetaan Taškent; sama paikka ei siis aina näytä paperilla samalta. Kyrillisten kirjainten tunteminen auttaa lukemaan myös liikkeiden kylttejä ja ruokalistoja. Kaupungin kielimaisema näkyy arkisessa ostoksessa yhtä hyvin kuin sen nimessä.",
+          "teksti": "Taškentissa uzbekki on keskeinen puhuttu kieli, mutta venäjä toimii myös yhteisenä asiointikielenä. Kaupungin kylteissä esiintyy sekä latinalaisia että kyrillisiä kirjaimia. Kaupungin paikallinen nimi on Toshkent, kun suomeksi kirjoitetaan Taškent. Kyrillisten kirjainten tunteminen auttaa lukemaan myös liikkeiden kylttejä ja ruokalistoja.",
           "wiki": "Tashkent",
           "tiedosto": "",
           "lyhyt": "",
@@ -168,10 +168,10 @@
         "kuva": {
           "tiedosto": "Chestnut tree in Tashkent.jpg",
           "lyhyt": "Kastanjapuu Taškentissa.",
-          "selite": "Taškentissa kasvava kastanjapuu huhtikuussa 2024 otetussa kuvassa.",
+          "selite": "Taškentissa kasvava kastanjapuu huhtikuussa 2024.",
           "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)"
         },
-        "kappale": "Taškent on laaja kaupunki, jossa eri alueiden välillä kannattaa käyttää julkista liikennettä tai taksia. Chorsun ympäristöön voi tutustua jalan. Kukeldashin medresa sijaitsee basaarin lähellä ja on palannut historiansa aikana opetuskäyttöön. Puiden keskelle voi suunnata kasvitieteelliseen puutarhaan. Junalla jatkavan on tärkeää tarkistaa lipusta oikea asema.",
+        "kappale": "Taškent on laaja kaupunki, jossa eri alueiden välillä kannattaa käyttää julkista liikennettä tai taksia. Chorsun ympäristöön voi tutustua jalan. Kukeldashin medresa sijaitsee basaarin lähellä ja on palannut historiansa aikana opetuskäyttöön. Puiden keskelle voi suunnata kasvitieteelliseen puutarhaan.",
         "artikkeli": {
           "nimi": "Matkailijan Taškent",
           "taitto": "opas",
@@ -180,7 +180,7 @@
           "jaksot": [
             {
               "otsikko": "Perille ja liikkeelle",
-              "teksti": "Taškentiin saavutaan kansainvälisen lentoaseman tai rautatieasemien kautta. Junia kulkee esimerkiksi Samarkandin ja Buharan suuntaan. Tarkista lipusta lähtöasema, sillä kaupungissa on sekä keskusasema että eteläinen asema. Junalippuja voi ostaa rautatieyhtiön verkkopalvelusta, ja liput kannattaa varata etukäteen. Kaupungin sisällä metro, bussit ja taksit täydentävät kävelyä.",
+              "teksti": "Taškentiin saavutaan kansainvälisen lentoaseman tai rautatieasemien kautta. Junia kulkee esimerkiksi Samarkandin ja Buharan suuntaan. Kaupungin sisällä metro, bussit ja taksit täydentävät kävelyä.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -200,7 +200,7 @@
             },
             {
               "otsikko": "Puiden keskelle",
-              "teksti": "Taškentin kasvitieteellinen puutarha tarjoaa puustoisen kävelyretken. Se sijaitsee erillään Chorsun vanhan kaupungin ympäristöstä, joten puutarhakäynti on oma etappinsa. Basaarissa kuljetaan kauppakojujen keskellä, puutarhassa puiden lomassa: nämä ovat kaksi erilaista tapaa viettää ulkopäivä Taškentissa.",
+              "teksti": "Taškentin kasvitieteellinen puutarha tarjoaa puustoisen kävelyretken. Se sijaitsee erillään Chorsun vanhan kaupungin ympäristöstä, joten puutarhakäynti on oma etappinsa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -210,7 +210,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Chorsun ympäristössä on kauppakojujen lisäksi ruokailupaikkoja. Basaari on hyvä paikka nähdä hedelmien, vihannesten ja mausteiden tarjontaa ennen ateriaa. Taškentin ravintoloissa saa paikallista uzbekkiruokaa, mutta tarjolla on myös muuta keskiaasialaista sekä kiinalaista ja eurooppalaista ruokaa. Paikallinen kahvila voi puolestaan yhdistää ruokailun kahviin ja leivonnaisiin.",
+              "teksti": "Chorsun ympäristössä on kauppakojujen lisäksi ruokailupaikkoja. Basaari on hyvä paikka nähdä hedelmien, vihannesten ja mausteiden tarjontaa ennen ateriaa. Taškentin ravintoloissa saa paikallista uzbekkiruokaa, mutta tarjolla on myös muuta keskiaasialaista sekä kiinalaista ja eurooppalaista ruokaa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -220,7 +220,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Taškentin kesä on kuuma ja talvi kylmä. Kevät ja syksy ovat miellyttäviä aikoja tutustua kaupunkiin jalan. Kesäpäivänä pidempiä kävelyitä kannattaa sovittaa aamun tai illan puolelle. Kaupungin laajuus puoltaa joka tapauksessa julkisen liikenteen käyttämistä eri alueiden välillä; kaikkea ei tarvitse kiertää yhden pitkän kävelyn aikana.",
+              "teksti": "Taškentin kesä on kuuma ja talvi kylmä. Kevät ja syksy ovat miellyttäviä aikoja tutustua kaupunkiin jalan.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -263,16 +263,12 @@
                 "teksti": "Kaupungissa on keskusasema ja eteläinen asema; tarkista lähtöasema lipusta."
               },
               {
-                "otsikko": "Ennakkoon ostettu lippu",
-                "teksti": "Junapaikan varaaminen etukäteen helpottaa jatkomatkaa."
-              },
-              {
                 "otsikko": "Kaksi aakkostoa",
                 "teksti": "Liikkeiden nimet ja ruokalistat voivat olla latinalaisin tai kyrillisin kirjaimin."
               },
               {
                 "otsikko": "Medresan käyttöhistoria",
-                "teksti": "Kukeldash palautettiin 1900-luvun lopulla opetuskäyttöön. Tarkista vierailukäytäntö ennen käyntiä."
+                "teksti": "Kukeldash palautettiin 1900-luvun lopulla opetuskäyttöön."
               }
             ]
           },
@@ -298,7 +294,7 @@
       "nostot": [
         {
           "otsikko": "Medresan tiilet päätyivät toiseen kouluun",
-          "teksti": "Kukeldashin medresa on vanha oppilaitosrakennus Chorsun lähellä. Sen käyttö ei kuitenkaan ole ollut yhtäjaksoisesti opetusta: rakennus palveli myös karavaanien majapaikkana, linnoituksena ja museona. Vielä konkreettisempi muutos tapahtui 1800-luvulla, kun osa rakennuksesta purettiin ja tiiliä käytettiin läheisen Beklarbegi-medresan rakentamiseen. Kukeldash korjattiin myöhemmin ja palautui viime vuosisadan lopulla opetuskäyttöön. Vanhan koulun historiaa voi siis seurata sekä käyttötarkoitusten että tiilien matkasta.",
+          "teksti": "Kukeldashin medresa on vanha oppilaitosrakennus Chorsun lähellä. Sen käyttö ei kuitenkaan ole ollut yhtäjaksoisesti opetusta: rakennus palveli myös karavaanien majapaikkana, linnoituksena ja museona. Vielä konkreettisempi muutos tapahtui 1800-luvulla, kun osa rakennuksesta purettiin ja tiiliä käytettiin läheisen Beklarbegi-medresan rakentamiseen. Kukeldash korjattiin myöhemmin ja palautui viime vuosisadan lopulla opetuskäyttöön.",
           "wiki": "Kukeldash Madrasah (Tashkent)",
           "tiedosto": "",
           "lyhyt": "",
@@ -307,7 +303,7 @@
         },
         {
           "otsikko": "Kaupunginosat edelsivät yhteistä kaupunkivaltiota",
-          "teksti": "Beshyoghoch, Kukcha, Shaykhontokhur ja Sebzor ovat Taškentin vanhojen daha-kaupunginosien nimiä. Ne kuuluivat kaupungin järjestykseen ennen Venäjän valtakunnan vallan aikaa. Shaykhontokhurin alueen hallitsija Yunus Khoja yhdisti kaupungin alaisuuteensa 1700-luvun lopulla, ja Taškentista tuli itsenäinen kaupunkivaltio. Se päätyi myöhemmin Kokandin kaanikunnan valtaan. Nykyinen pääkaupunki on siten ollut myös itseään hallinnut kaupunki, ja vanhat alueiden nimet kantavat tätä varhaisempaa kerrosta.",
+          "teksti": "Beshyoghoch, Kukcha, Shaykhontokhur ja Sebzor ovat Taškentin vanhojen daha-kaupunginosien nimiä. Ne kuuluivat kaupungin järjestykseen ennen Venäjän valtakunnan vallan aikaa. Shaykhontokhurin alueen hallitsija Yunus Khoja yhdisti kaupungin alaisuuteensa 1700-luvun lopulla, ja Taškentista tuli itsenäinen kaupunkivaltio. Se päätyi myöhemmin Kokandin kaanikunnan valtaan.",
           "wiki": "Tashkent",
           "tiedosto": "",
           "lyhyt": "",
@@ -316,7 +312,7 @@
         },
         {
           "otsikko": "Koti, orpokoti ja käsityömuseo",
-          "teksti": "Polovtsevin taloksi kutsuttu rakennus kuuluu Taškentin soveltavan taiteen museon historiaan. Se rakennettiin asuintaloksi tsaarikauden lopulla, ja myöhemmin sen sisustusta muokkasivat paikalliset käsityömestarit. Talossa toimi myös orpokoti, minkä jälkeen siellä järjestettiin muun muassa kipsikoristeiden ja metallin työstämisen opetusta sekä kirjontatyötä. Viime vuosisadalla rakennuksesta tuli käsityömuseo. Saman talon historiaan mahtuu siis asumista, lasten hoitoa ja käsityötaitojen opettamista.",
+          "teksti": "Polovtsevin taloksi kutsuttu rakennus kuuluu Taškentin soveltavan taiteen museon historiaan. Se rakennettiin asuintaloksi tsaarikauden lopulla, ja myöhemmin sen sisustusta muokkasivat paikalliset käsityömestarit. Talossa toimi myös orpokoti, minkä jälkeen siellä järjestettiin muun muassa kipsikoristeiden ja metallin työstämisen opetusta sekä kirjontatyötä. Viime vuosisadalla rakennuksesta tuli käsityömuseo.",
           "wiki": "State Museum of Applied Arts of Uzbekistan",
           "tiedosto": "",
           "lyhyt": "",
@@ -325,7 +321,7 @@
         },
         {
           "otsikko": "Kivikaupungin puolustusmuuri oli savinen",
-          "teksti": "Savimuuri ja vallihauta kuuluivat Taškentin puolustukseen Kokandin kaanikunnan vallan aikana. Muuriin rakennettiin portteja, ja kaupunki kävi vilkasta kauppaa Venäjän kanssa. Taškentin linnoitettu historia oli kuitenkin tätä vanhempi. Varhaisemman Shashin kuvauksissa erotettiin linnoitus, varsinainen kaupunki ja esikaupunkialueet. Linnoituksen sisällä olivat hallitsijan palatsi ja vankila. Yksi kaupungin raja ei siis kertonut koko sen rakennetta: keskuksella, asutuksella ja ulommilla alueilla oli omat tehtävänsä.",
+          "teksti": "Savimuuri ja vallihauta kuuluivat Taškentin puolustukseen Kokandin kaanikunnan vallan aikana. Muuriin rakennettiin portteja, ja kaupunki kävi vilkasta kauppaa Venäjän kanssa. Taškentin linnoitettu historia oli kuitenkin tätä vanhempi. Varhaisemman Shashin kuvauksissa erotettiin linnoitus, varsinainen kaupunki ja esikaupunkialueet. Linnoituksen sisällä olivat hallitsijan palatsi ja vankila.",
           "wiki": "Tashkent",
           "tiedosto": "",
           "lyhyt": "",
@@ -355,7 +351,7 @@
   "nahtavyydet": {
     "Kukeldashin medresa": {
       "aika": "1500-luku",
-      "teksti": "Kukeldashin medresa sijaitsee Taškentin vanhan kaupungin alueella Chorsun basaarin lähellä. Se on 1500-luvulla rakennettu islamilainen oppilaitosrakennus. Keltaisesta tiilestä tehdyn rakennuksen perusmuotoon kuuluvat sisäänkäyntiportaali ja sisäpiha, jota reunustavat opiskelijoiden huoneet. Medresa oli olemassa jo ennen isoisän matkavuotta 1873, mutta sen rakenteita on korjattu useaan otteeseen.\n\nRakennus toimi 1700-luvulla myös karavaanien majapaikkana ja myöhemmin linnoituksena. Seuraavalla vuosisadalla osa siitä purettiin ja tiiliä käytettiin läheisen Beklarbegi-medresan rakentamiseen. Kukeldash kunnostettiin myöhemmin. Viime vuosisadalla rakennus oli museona, muun muassa kansanmusiikin esittelypaikkana, ja vuosisadan loppupuolella se palautettiin medresaksi. Nykyinen opetuskäyttö on näin yksi vaihe samassa rakennuksessa, jonka sisäpiha on palvellut eri tarkoituksia.",
+      "teksti": "Kukeldashin medresa sijaitsee Taškentin vanhan kaupungin alueella Chorsun basaarin lähellä. Se on 1500-luvulla rakennettu islamilainen oppilaitosrakennus. Keltaisesta tiilestä tehdyn rakennuksen perusmuotoon kuuluvat sisäänkäyntiportaali ja sisäpiha, jota reunustavat opiskelijoiden huoneet. Rakennuksen rakenteita on korjattu useaan otteeseen.\n\nRakennus toimi 1700-luvulla myös karavaanien majapaikkana ja myöhemmin linnoituksena. Seuraavalla vuosisadalla osa siitä purettiin ja tiiliä käytettiin läheisen Beklarbegi-medresan rakentamiseen. Kukeldash kunnostettiin myöhemmin. Viime vuosisadalla rakennus oli museona, muun muassa kansanmusiikin esittelypaikkana, ja vuosisadan loppupuolella se palautettiin medresaksi.",
       "kuvat": [
         {
           "tiedosto": "",
@@ -370,14 +366,6 @@
   "saatiedot": null,
   "ehdotukset": {
     "lentoasema": "Taškentin kansainvälinen lentoasema (TAS)",
-    "huomiot": [
-      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 3 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
-      "Kaikki kuvaroolien neljä kenttää tyhjiksi: kuvat tulevat erillisestä putkesta.",
-      "Sääpoiminnan 48/48 primäärivarmennus avoin; saatiedot:null, saa.json ei muutettu.",
-      "Yunus Khanin mausoleumi jätetty kartalta: oma lähdehaku 404, hautatiedot ristiriitaisia.",
-      "Chorsun nykyinen kupolirakennus, metro, nykyiset muistomerkit ja museon mahdollisesti suojatut sisustusteokset eivät ole karttakohteita tai kuva-aiheita.",
-      "Televisioaihe poistettu epävarman näytön vuoksi; ei ensimmäisyys- tai tekniikkaväitteitä.",
-      "Polovtsevin talon nykyinen museokäyttö ristiriitainen lähteissä ja virallinen sivu TLS-virheessä; vain historiallinen nosto, ei kohdekarttaa tai nykymatkaoppaan suositusta."
-    ]
+    "huomiot": []
   }
 }
