@@ -257,6 +257,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
 .rooli.tila-toimia .r-teksti, .rooli.tila-toimia .r-effort { color: var(--paperi); }
 /* Kulutus (omistaja 13.10.): roolien ja projektien nimet ovat pitkiä, joten kortit ovat leveämpiä kuin Laitteet-korteissa; muuten nimi, palkit ja prosentti eivät mahdu riville. */
 #kulutus, #kulutus-projektit { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+/* Kulutuksen Projektit- ja Roolit-väliotsikot väkäsellä (omistaja 13.10. 16.2x): nappi perii väliotsikon versaalit ja välistyksen. */
+.ryhma-otsikko .tf-nappi { text-transform: inherit; letter-spacing: inherit; }
 </style>
 
 <main class="wrap">
@@ -295,9 +297,9 @@ section:not(.kiinni) .yhteenveto { display: none; }
   </section>
   <section class="kortti" id="kulutus-osio" hidden>
     <h2><button type="button" class="otsikkonappi taitto" data-osio="kulutus-osio" aria-expanded="true">Kulutus</button> <span class="kysymykset yhteenveto" id="kulutus-yhteenveto"></span> <span class="kysymykset" id="kulutus-tieto"></span></h2>
-    <div class="ryhma-otsikko" id="kulutus-projektit-otsikko" hidden>Projektit</div>
+    <div class="ryhma-otsikko" id="kulutus-projektit-otsikko" hidden><button type="button" class="tf-nappi" id="kulutus-projektit-nappi" aria-expanded="true"><span class="vakanen" aria-hidden="true">›</span>Projektit</button></div>
     <div class="roolit" id="kulutus-projektit" hidden></div>
-    <div class="ryhma-otsikko" id="kulutus-roolit-otsikko" hidden>Roolit</div>
+    <div class="ryhma-otsikko" id="kulutus-roolit-otsikko" hidden><button type="button" class="tf-nappi" id="kulutus-roolit-nappi" aria-expanded="true"><span class="vakanen" aria-hidden="true">›</span>Roolit</button></div>
     <div class="roolit" id="kulutus"></div>
   </section>
   <section class="kortti" id="huom-osio" hidden>
@@ -446,6 +448,12 @@ section:not(.kiinni) .yhteenveto { display: none; }
   // Odottaa-väliotsikon auki/kiinni muistetaan samoin (omistaja 13.10. 10.5x); oletuksena kiinni.
   var odottaaAuki = false;
   try { odottaaAuki = localStorage.getItem('odottaa-auki') === '1'; } catch (e) { odottaaAuki = false; }
+  // Kulutuksen Projektit- ja Roolit-väliotsikot väkäsellä piilotettavia (omistaja 13.10. 16.2x); oletuksena auki, tila muistetaan
+  // katsojan selaimessa kuten Odottaa-väliotsikossa. Väkänen on TF-paneelin pohja (.tf-nappi + .vakanen).
+  var kulutusAuki = { projektit: true, roolit: true };
+  ['projektit', 'roolit'].forEach(function (k) {
+    try { kulutusAuki[k] = localStorage.getItem('kulutus-' + k + '-auki') !== '0'; } catch (e) { kulutusAuki[k] = true; }
+  });
   // Osio-otsikot (omistaja 12.10. 14.5x: "valmiina ja työn alla saa olla boldattuna ja laita työn alla ylimmäiseksi ja lisää yksi
   // tyhjä rivi ennen valmiina riviä"): rivin alun Työn alla / Valmiina / Korjatut / Uutta / Junassa N lihavoituna, Työn alla -osio
   // ensimmäisenä ja osioiden väliin tyhjä rivi. Kirjoittajat jatkavat entisellä muodolla; järjestys tehdään vain näytöllä.
@@ -792,7 +800,12 @@ section:not(.kiinni) .yhteenveto { display: none; }
     var jaannos = function (x) { return x.nimi === 'Muu työ' || x.nimi === 'Muut projektit'; };
     var kpMax = kp.reduce(function (m, x) { return jaannos(x) ? m : Math.max(m, Number(x.viikko) || 0); }, 0);
     $('kulutus-osio').hidden = kr.length === 0;
-    $('kulutus-projektit-otsikko').hidden = $('kulutus-projektit').hidden = $('kulutus-roolit-otsikko').hidden = kp.length === 0;
+    $('kulutus-projektit-otsikko').hidden = $('kulutus-roolit-otsikko').hidden = kp.length === 0;
+    // Ilman projekteja Roolit-väliotsikkoa ei näytetä, joten roolit näkyvät aina.
+    $('kulutus-projektit').hidden = kp.length === 0 || !kulutusAuki.projektit;
+    $('kulutus').hidden = kp.length > 0 && !kulutusAuki.roolit;
+    $('kulutus-projektit-nappi').setAttribute('aria-expanded', kulutusAuki.projektit ? 'true' : 'false');
+    $('kulutus-roolit-nappi').setAttribute('aria-expanded', kulutusAuki.roolit ? 'true' : 'false');
     var kpSailio = $('kulutus-projektit');
     kpSailio.replaceChildren();
     kp.forEach(function (x) { kpSailio.append(kulutusKortti(x, kpMax, true)); });
@@ -839,6 +852,13 @@ section:not(.kiinni) .yhteenveto { display: none; }
     odottaaAuki = !odottaaAuki;
     try { localStorage.setItem('odottaa-auki', odottaaAuki ? '1' : '0'); } catch (e) { /* ei tallennusta */ }
     piirra();
+  });
+  ['projektit', 'roolit'].forEach(function (k) {
+    $('kulutus-' + k + '-nappi').addEventListener('click', function () {
+      kulutusAuki[k] = !kulutusAuki[k];
+      try { localStorage.setItem('kulutus-' + k + '-auki', kulutusAuki[k] ? '1' : '0'); } catch (e) { /* ei tallennusta */ }
+      piirra();
+    });
   });
   $('viestit-nappi').addEventListener('click', function () {
     viestitAuki = !viestitAuki;
