@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-19 QA/R2-varmennettua kuvaa toimitettu, 25 perusteltua lopullista poisjättöä. Käsitelty 44/48 tämän osan nimetyistä kuvista; 43 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+21 QA/R2-varmennettua kuvaa toimitettu, 25 perusteltua lopullista poisjättöä. Käsitelty 46/48 tämän osan nimetyistä kuvista; 45 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -101,6 +101,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-tampere-uudet-6-8-20261013.json`. T
 
 - #160, slot 8: Tampereen raitiovaunu Hämeenkadulla keskustassa syyspäivänä. Havainnekuva.
 - Poisjättö #159, slot 6: Näsinneula ja järvinäkymä toteutuvat, mutta oikean puolen kirkko näyttää pitkältä goottilaistyyppiseltä kirkolta eikä Tampereen tuomiokirkon tunnistettavuus varmennu. Lähteen maamerkki-identiteetti jää epävarmaksi.
+
+## TROMSSA
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-tromso-uudet-6-8-20261013.json`. Toimitettu 2/2; kutsuja 2.
+
+- #161, slot 6: Tromssan saari, Tromsøbrua ja Arktinen katedraali Storsteinenin näköalatasanteelta päivällä. Havainnekuva.
+- #162, slot 8: Hurtigruten-rannikkolaiva Tromssansundissa Tromssan saaren edustalla talvipäivänä. Havainnekuva.
 
 ## BERLIINI
 
