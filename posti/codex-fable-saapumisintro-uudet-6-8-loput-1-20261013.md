@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-1 QA/R2-varmennettua kuvaa toimitettu, 3 perusteltua lopullista poisjättöä. Käsitelty 4/48 tämän osan nimetyistä kuvista; 4 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+2 QA/R2-varmennettua kuvaa toimitettu, 4 perusteltua lopullista poisjättöä. Käsitelty 6/48 tämän osan nimetyistä kuvista; 6 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -10,6 +10,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-lisbon-uudet-6-8-20261013.json`. To
 
 - Poisjättö #133, slot 6: Kuva on muuten laadukas, mutta vastarannan pystymäisen siluetin kohdalla ei voi luotettavasti varmentaa lähteen nimenomaista Cristo Rei -poissulkua. Lopullinen varovainen lähteen sallima poisjättö; kohdetta ei väitetä varmasti tunnistetuksi.
 - Poisjättö #134, slot 8: Katedraalin kellossa näkyy lähteen kaikkien numeroiden kiellon vastaisia roomalaisia numeroita. Vaunu täyttää myös noin puolet kuvasta, vaikka lähde pyytää noin kolmannesta.
+
+## AMSTERDAM
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-amsterdam-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #135, slot 6: A'DAM Lookout, Amsterdam Noordin näkötaso: IJ, Centraal Station ja kanavavyöhykkeen katot päivällä. Havainnekuva.
+- Poisjättö #136, slot 8: Kanavasillan seinässä näkyy valkoisia graffititageja lähteen katutaiteen kiellon vastaisesti. Näkyvä johtava ohjaamo on myös vasemmalla, vaikka lähde pyytää oikealle liikettä.
 
 ## BERLIINI
 
