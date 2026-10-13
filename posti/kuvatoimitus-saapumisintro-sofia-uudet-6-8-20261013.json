@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "cityName": "SOFIA",
+  "gameCityId": "sofia",
+  "mediaSlug": "sofia",
+  "taskNumbers": [
+    209,
+    210
+  ],
+  "updatedAt": "2026-10-13T18:10:30.615650+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 209,
+      "mediaSlug": "sofia",
+      "slot": 6,
+      "filename": "sofia-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Sofia Kopitoton näköalapaikalta Vitosha-vuorelta pohjoiseen päivällä: koko kaupunki laaksossa, Aleksanteri Nevskin kupoli kaukana.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Sofia Kopitoton näköalapaikalta Vitosha-vuorelta pohjoiseen päivällä: koko kaupunki laaksossa, Aleksanteri Nevskin kupoli kaukana.** Tiedosto `sofia-6-nakoala-intro-v1.png`.\nMitä kuvataan: Sofian panoraama Vitosha-vuoren rinteen Kopitoton näköalapaikalta kirkkaana päivänä (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kivistä ja kuivahtanutta ruohoa kasvava kallioreuna sekä muutama mänty tai kuusi, ei rakenteita eikä ihmisiä lähellä. Alhaalla laajalla tasangolla kaupunki: tiheitä vaaleiden, harmaiden ja punakattoisten kerrostalojen ja pientalojen alueita, puistojen vihreitä laikkuja, leveitä katuja pieninä viivoina; kaupungin yllä kevyt ohut kaupunkiutu. Kuvan keskellä kaukana kattojen yläpuolella pienenä pisteenä Aleksanteri Nevskin katedraalin kultainen keskikupoli, joka erottuu auringossa mutta ei ole pääaihe ja häipyy utuun. Horisontissa kaukana vaalean sinisenä siluettina Balkanvuorten matala harju, taivas selkeä sininen, muutama ohut pilvi. Kulma: vaakakuva, katse pohjoiseen-koilliseen (suunta noin 25 astetta, näkökenttä noin 60 astetta, eli kuvassa on suuntia noin 355–55 astetta), kamera kallioreunan takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, lippuja, Kopitoton televisiotornia tai muita lähirakennuksia, ravintolaa, kaapelihissiä, vuoristomökkejä, pilvenpiirtäjiä erottuvina, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Sofia Kopitoton näköalapaikalta Vitosha-vuorelta pohjoiseen päivällä: koko kaupunki laaksossa, Aleksanteri Nevskin kupoli kaukana. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "SOFIA",
+      "gameID": "sofia",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        65762,
+        67580
+      ],
+      "sourceByteSpan": [
+        68258,
+        70148
+      ],
+      "fullDeliveryRequirementSHA256": "797bb6819985d9b19fa49bfc4ea1090b0c0998263653b0d142e03de8b801d45f",
+      "fullDirective": "Sofian panoraama Vitosha-vuoren rinteen Kopitoton näköalapaikalta kirkkaana päivänä (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kivistä ja kuivahtanutta ruohoa kasvava kallioreuna sekä muutama mänty tai kuusi, ei rakenteita eikä ihmisiä lähellä. Alhaalla laajalla tasangolla kaupunki: tiheitä vaaleiden, harmaiden ja punakattoisten kerrostalojen ja pientalojen alueita, puistojen vihreitä laikkuja, leveitä katuja pieninä viivoina; kaupungin yllä kevyt ohut kaupunkiutu. Kuvan keskellä kaukana kattojen yläpuolella pienenä pisteenä Aleksanteri Nevskin katedraalin kultainen keskikupoli, joka erottuu auringossa mutta ei ole pääaihe ja häipyy utuun. Horisontissa kaukana vaalean sinisenä siluettina Balkanvuorten matala harju, taivas selkeä sininen, muutama ohut pilvi. Kulma: vaakakuva, katse pohjoiseen-koilliseen (suunta noin 25 astetta, näkökenttä noin 60 astetta, eli kuvassa on suuntia noin 355–55 astetta), kamera kallioreunan takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, lippuja, Kopitoton televisiotornia tai muita lähirakennuksia, ravintolaa, kaapelihissiä, vuoristomökkejä, pilvenpiirtäjiä erottuvina, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Sofia Kopitoton näköalapaikalta Vitosha-vuorelta pohjoiseen päivällä: koko kaupunki laaksossa, Aleksanteri Nevskin kupoli kaukana. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/sofia/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-sofia-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/sofia/20261013-uudet-6-8/sofia-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "sofia-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "SOFIA",
+      "gameCityId": "sofia",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sofia/native-6.png",
+      "nativeSHA256": "c86a7c3663b39a57a8f820345d38c9b1c409e49e43e0e1cb1160b376f5ac69c5",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sofia/sofia-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/sofia/sofia-6-nakoala-intro-v1.png",
+      "sha256": "2124b317b1df44e2c3767e1d93630ccb1e6dfb6842b74d9ae4e269f7d4c4c6b7",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nSofian panoraama Vitosha-vuoren rinteen Kopitoton näköalapaikalta kirkkaana päivänä (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kivistä ja kuivahtanutta ruohoa kasvava kallioreuna sekä muutama mänty tai kuusi, ei rakenteita eikä ihmisiä lähellä. Alhaalla laajalla tasangolla kaupunki: tiheitä vaaleiden, harmaiden ja punakattoisten kerrostalojen ja pientalojen alueita, puistojen vihreitä laikkuja, leveitä katuja pieninä viivoina; kaupungin yllä kevyt ohut kaupunkiutu. Kuvan keskellä kaukana kattojen yläpuolella pienenä pisteenä Aleksanteri Nevskin katedraalin kultainen keskikupoli, joka erottuu auringossa mutta ei ole pääaihe ja häipyy utuun. Horisontissa kaukana vaalean sinisenä siluettina Balkanvuorten matala harju, taivas selkeä sininen, muutama ohut pilvi. Kulma: vaakakuva, katse pohjoiseen-koilliseen (suunta noin 25 astetta, näkökenttä noin 60 astetta, eli kuvassa on suuntia noin 355–55 astetta), kamera kallioreunan takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, lippuja, Kopitoton televisiotornia tai muita lähirakennuksia, ravintolaa, kaapelihissiä, vuoristomökkejä, pilvenpiirtäjiä erottuvina, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nFraming priority: wide city-over-plain panorama from Kopitoto/Vitosha mountainside looking north-northeast25 degrees, field60degrees355–55. Bottom foreground only a THIN rocky dry-grass ledge with pine/spruce, no structures/masts/hotel/restaurant/hut/lift. Dense ordinary low pale grey/red-roof city covers most lower-middle image; Alexander Nevsky gold dome a TINY FAR-AWAY glint in city CENTER, not a nearby huge cathedral. Low pale blue distant Balkan ridge on horizon; restrained city haze. Do not show any clearly distinguishable high-rise or Kopitoto TV tower, no flags/signs/nearby people.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            68258,
+            70148
+          ],
+          "fullRequirementSHA256": "797bb6819985d9b19fa49bfc4ea1090b0c0998263653b0d142e03de8b801d45f",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sofia/qa-6.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sofia/producer-6.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261013-uudet-6-8/sofia-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261013-uudet-6-8/sofia-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 209,
+        "assetID": "sofia-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sofia/asset-6.json",
+        "nativeSHA256": "c86a7c3663b39a57a8f820345d38c9b1c409e49e43e0e1cb1160b376f5ac69c5",
+        "finalSHA256": "2124b317b1df44e2c3767e1d93630ccb1e6dfb6842b74d9ae4e269f7d4c4c6b7",
+        "verdict": "accepted",
+        "reason": "Laaja matala kaupunki tasangolla, pieni kaukainen kultakupoli ja pohjoisen utuinen vuoriharju näkyvät. Eturinne on luonnollinen, eikä TV-tornia, lähirakenteita tai erottuvia pilvenpiirtäjiä havaita.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:10:08.748084+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/sofia/20261013-uudet-6-8/sofia-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261013-uudet-6-8/sofia-6-nakoala-intro-v1.png",
+        "sha256": "2124b317b1df44e2c3767e1d93630ccb1e6dfb6842b74d9ae4e269f7d4c4c6b7",
+        "nativeSHA256": "c86a7c3663b39a57a8f820345d38c9b1c409e49e43e0e1cb1160b376f5ac69c5",
+        "bytes": 2800905,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "2124b317b1df44e2c3767e1d93630ccb1e6dfb6842b74d9ae4e269f7d4c4c6b7",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "2124b317b1df44e2c3767e1d93630ccb1e6dfb6842b74d9ae4e269f7d4c4c6b7",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T18:10:27.765864+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 210,
+      "mediaSlug": "sofia",
+      "slot": 8,
+      "filename": "sofia-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Sofian raitiovaunu keskustan kadulla Graf Ignatievin kadun tapaan päivällä.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Sofian raitiovaunu keskustan kadulla Graf Ignatievin kadun tapaan päivällä.** Tiedosto `sofia-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: nykyaikainen matalalattiainen nivelraitiovaunu (kaksi tai kolme osaa, yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä Sofian keskustan kapeahkolla kadulla päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Raiteet kulkevat kadun pinnassa, ajojohdot vaunun yläpuolella; kadun molemmin puolin 1800-luvun lopun ja 1900-luvun alun kolme- ja nelikerroksisia taloja pehmeillä, vaaleilla pastellisävyillä (kerma, vaaleankeltainen, harmaanbeige), koristeellisia ikkunankehyksiä, kivijalassa liiketilat joiden ikkunoissa ja ovissa ei ole kylttejä, katua reunustavia lehtipuita. Ihmiset vain pieninä (muutama kävelijä jalkakäytävällä kaukana tai selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, raiteen sivusta viistosti etuvasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä (myös kyrillistä), kylttejä, katukylttejä, pysäkkien nimitauluja, mainoksia, logoja, numeroita, lippuja, tunnistettavia yksittäisiä maamerkkirakennuksia, kirkkoja erottuvina, patsaita, auton rekisterikilpiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Sofian raitiovaunu keskustan kadulla Graf Ignatievin kadun tapaan päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "SOFIA",
+      "gameID": "sofia",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        67580,
+        69446
+      ],
+      "sourceByteSpan": [
+        70148,
+        72085
+      ],
+      "fullDeliveryRequirementSHA256": "fa92567fbe3a289bf618881346e4804b99bb184a31aa11b9e7325b1fab96c960",
+      "fullDirective": "nykyaikainen matalalattiainen nivelraitiovaunu (kaksi tai kolme osaa, yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä Sofian keskustan kapeahkolla kadulla päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Raiteet kulkevat kadun pinnassa, ajojohdot vaunun yläpuolella; kadun molemmin puolin 1800-luvun lopun ja 1900-luvun alun kolme- ja nelikerroksisia taloja pehmeillä, vaaleilla pastellisävyillä (kerma, vaaleankeltainen, harmaanbeige), koristeellisia ikkunankehyksiä, kivijalassa liiketilat joiden ikkunoissa ja ovissa ei ole kylttejä, katua reunustavia lehtipuita. Ihmiset vain pieninä (muutama kävelijä jalkakäytävällä kaukana tai selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, raiteen sivusta viistosti etuvasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä (myös kyrillistä), kylttejä, katukylttejä, pysäkkien nimitauluja, mainoksia, logoja, numeroita, lippuja, tunnistettavia yksittäisiä maamerkkirakennuksia, kirkkoja erottuvina, patsaita, auton rekisterikilpiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Sofian raitiovaunu keskustan kadulla Graf Ignatievin kadun tapaan päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/sofia/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-sofia-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/sofia/20261013-uudet-6-8/sofia-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "sofia-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "SOFIA",
+      "gameCityId": "sofia",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sofia/native-8.png",
+      "nativeSHA256": "7f71228248baf7cf7daca19bdcf0fcf9e0173e548066824eefb249598feb072b",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sofia/sofia-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/sofia/sofia-8-kulkuneuvo-intro-v1.png",
+      "sha256": "91363f0899c51e0cc35fe39289729be3a3094adebbaf1bdbed96a57b468a153f",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nnykyaikainen matalalattiainen nivelraitiovaunu (kaksi tai kolme osaa, yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä Sofian keskustan kapeahkolla kadulla päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Raiteet kulkevat kadun pinnassa, ajojohdot vaunun yläpuolella; kadun molemmin puolin 1800-luvun lopun ja 1900-luvun alun kolme- ja nelikerroksisia taloja pehmeillä, vaaleilla pastellisävyillä (kerma, vaaleankeltainen, harmaanbeige), koristeellisia ikkunankehyksiä, kivijalassa liiketilat joiden ikkunoissa ja ovissa ei ole kylttejä, katua reunustavia lehtipuita. Ihmiset vain pieninä (muutama kävelijä jalkakäytävällä kaukana tai selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, raiteen sivusta viistosti etuvasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä (myös kyrillistä), kylttejä, katukylttejä, pysäkkien nimitauluja, mainoksia, logoja, numeroita, lippuja, tunnistettavia yksittäisiä maamerkkirakennuksia, kirkkoja erottuvina, patsaita, auton rekisterikilpiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nDirection and framing priority: the tram LEADING NOSE/headlights are on the RIGHT, rear trails LEFT; it visibly moves RIGHT and toward camera. Modest two/three-section tram roughly ONE THIRD of image width (~500px) within a wide environmental frame. Camera front-left at1.5–2m; pale cream/yellow/grey3–4-storey anonymous Sofia street blocks, trees, rails and overhead wires. Absolutely EMPTY storefronts/displays/signposts: no sign boards at all, no Cyrillic or any other letters, no symbols/route numbers/logos/flags/plates. Only a few TINY background pedestrians beyond30m, no cropped foreground person, no close passenger face. Other road traffic absent. No church, landmark building, statue or monument.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            70148,
+            72085
+          ],
+          "fullRequirementSHA256": "fa92567fbe3a289bf618881346e4804b99bb184a31aa11b9e7325b1fab96c960",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sofia/qa-8.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sofia/producer-8.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261013-uudet-6-8/sofia-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261013-uudet-6-8/sofia-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 210,
+        "assetID": "sofia-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sofia/asset-8.json",
+        "nativeSHA256": "7f71228248baf7cf7daca19bdcf0fcf9e0173e548066824eefb249598feb072b",
+        "finalSHA256": "91363f0899c51e0cc35fe39289729be3a3094adebbaf1bdbed96a57b468a153f",
+        "verdict": "accepted",
+        "reason": "Oikealle suuntautuva merkitön kolmiosainen vaunu ja vaaleat lehtipuiden reunustamat korttelit ovat yhtenäinen kameramainen näkymä. Ei havaittavaa kylttiä, tekstiä tai logoa. Vaunu on noin44% leveydestä likimääräisen kolmanneksen sijasta; ympäristö säilyy laajana ja poikkeama kirjataan PT:n arvioon.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:10:08.748084+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/sofia/20261013-uudet-6-8/sofia-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/sofia/20261013-uudet-6-8/sofia-8-kulkuneuvo-intro-v1.png",
+        "sha256": "91363f0899c51e0cc35fe39289729be3a3094adebbaf1bdbed96a57b468a153f",
+        "nativeSHA256": "7f71228248baf7cf7daca19bdcf0fcf9e0173e548066824eefb249598feb072b",
+        "bytes": 2646473,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "91363f0899c51e0cc35fe39289729be3a3094adebbaf1bdbed96a57b468a153f",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "91363f0899c51e0cc35fe39289729be3a3094adebbaf1bdbed96a57b468a153f",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T18:10:30.538434+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
