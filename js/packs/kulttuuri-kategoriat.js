@@ -4075,6 +4075,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/berlin/20261013-uudet-6-8/berlin-6-nakoala-intro-v1.png',
+          lyhyt: 'Siegessäulen tasanteelta näkyy Tiergarten ja Straße des 17. Juni portille asti.',
+          selite: 'Siegessäulen näköalataso on noin 51 metrin korkeudessa, 285 askelman kierreportaiden '
+            + 'päässä. Sieltä näkyy Tiergartenin yli itään Brandenburgin portille.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -5921,6 +5933,31 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunkiseudulla 1,6 miljoonaa.',
           lahde: 'Magnus Johansson, Wikimedia Commons (CC BY-SA 2.0)',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/stockholm/20261013-uudet-6-8/stockholm-6-nakoala-intro-v1.png',
+          lyhyt: 'Fjällgatanin näköalakadulta Södermalmilla näkyvät Gamla stan, Saltsjön ja '
+            + 'Djurgården.',
+          selite: 'Fjällgatan kulkee Södermalmin kallion reunalla noin 30 metrin korkeudessa Saltsjönin '
+            + 'yläpuolella. Kadun varrella on 1700-luvun puutaloja.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/stockholm/20261013-uudet-6-8/stockholm-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Djurgårdsfärjan eli SL:n linja 82 kuljettaa matkustajia Slussenista Djurgårdeniin.',
+          selite: 'Linjan 82 lautat kulkevat Slussenista Djurgårdeniin ja pysähtyvät tarvittaessa '
+            + 'Skeppsholmenilla. Ne kuljettavat yli kaksi miljoonaa matkustajaa vuodessa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
       ],
       ennenNyt: [
         {
@@ -6187,6 +6224,32 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Sacré-Cœurin basilikaa rakennettiin Montmartren '
             + 'kukkulalle 1875–1914, ja sen travertiinikivi valkaisee '
             + 'itsensä sateessa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/paris/20261013-uudet-6-8-v2/paris-6-nakoala-intro-v2.png',
+          lyhyt: 'Triumfikaaren aukiolta lähtee tähtenä kaksitoista avenuea, ja yksi niistä on '
+            + 'Champs-Élysées.',
+          selite: 'Triumfikaari vihittiin käyttöön 1836, kolmekymmentä vuotta rakennustöiden alun '
+            + 'jälkeen. Terassille noustaan 284 askelmaa, ja ylhäältä aukeaa näkymä kaupungin '
+            + 'katoille.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/paris/20261013-uudet-6-8-v2/paris-8-kulkuneuvo-intro-v2.png',
+          lyhyt: 'Seinen vesibussilinja, josta tuli Batobus, alkoi Pariisissa vuonna 1989.',
+          selite: 'Säännöllinen vesibussilinja Seinellä alkoi toukokuussa 1989 Ranskan vallankumouksen '
+            + '200-vuotisjuhlien aikaan. Linja oli alun perin tarkoitettu matkailijoille.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -7732,6 +7795,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunkina erillisen virkamiehen hoitamaan hellejaksoja.',
           lahde: 'George E. Koronaios, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/athens/20261013-uudet-6-8/athens-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Ateenan raitiovaunu kulkee Saroninlahden rannikkoa Faliron ja Voulan välillä.',
+          selite: 'Ateenan vanha raitiotie suljettiin 1960, ja nykyinen avattiin 19.7.2004, muutama '
+            + 'viikko ennen olympiakisoja. Nykyisen linjan rantaosuus kulkee rannikolla Faliron ja '
+            + 'Voulan välillä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
       ],
       ennenNyt: [
         {
@@ -8430,6 +8506,19 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Pierre Cuypersin suunnittelema Rijksmuseum avattiin '
             + '1885, ja sen holvikäytävän läpi kulkee yhä pyörätie '
             + 'suoraan rakennuksen ali.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/amsterdam/20261013-uudet-6-8/amsterdam-6-nakoala-intro-v1.png',
+          lyhyt: 'A\'DAM-tornin näköalatasolta näkyvät IJ, Centraal Station ja kanavavyöhykkeen katot.',
+          selite: 'A\'DAM Lookout on Amsterdam Noordissa, IJ-joen toisella puolella Centraal Stationia, '
+            + 'ja sieltä näkyvät vanha keskusta, satama ja kanavavyöhyke. Asema avattiin '
+            + '15.10.1889.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -9802,6 +9891,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kelvottomana paikkana.',
           lahde: 'Giuseppe Milo, Wikimedia Commons (CC BY 2.0)',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/dublin/20261013-uudet-6-8/dublin-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'DART-sähköjunat ajavat Dublin Bayn rantaa pitkin vuodesta 1984.',
+          selite: 'DART-sähköjunat aloittivat liikenteen heinäkuussa 1984 Howthin ja Brayn välillä. '
+            + 'Rata seuraa Dublin Bayn rannikkoa, ja junasta näkee lahden yli.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
       ],
       ennenNyt: [
         {
@@ -10380,6 +10481,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/edinburgh/20261013-uudet-6-8/edinburgh-6-nakoala-intro-v1.png',
+          lyhyt: 'Calton Hillin rinteeltä näkyvät Edinburghin linna, Old Town ja Princes Street.',
+          selite: 'Calton Hill on 103 metriä korkea kukkula Princes Streetin itäpäässä, ja sen päältä '
+            + 'näkee sekä Edinburghin linnan että Arthur\'s Seatin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -10414,6 +10527,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yksitoista myllyä.',
           lahde: 'Gary Campbell-Hall from Edinburgh, UK, '
             + 'Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/edinburgh/20261013-uudet-6-8/edinburgh-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Edinburghin raitiovaunut ajavat Princes Streetillä taas vuodesta 2014.',
+          selite: 'Edinburghin nykyinen raitiotie avattiin 31. toukokuuta 2014, ja ensimmäiset vaunut '
+            + 'ajoivat Princes Streetille. Kaupungin vanha raitiovaunuverkko oli päättynyt 16. '
+            + 'marraskuuta 1956.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -12756,6 +12882,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'puutarhansa.',
           lahde: 'Matkakirjan havainnekuva',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/granada/20261013-uudet-6-8/granada-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Albaicínin kapeilla kaduilla kulkevat pienet minibussit C31 ja C32.',
+          selite: 'Granadan Albaicínin ja Alhambran minibussilinjat palvelevat alueita, joille isot '
+            + 'bussit eivät pääse. Linja C31 lähtee Plaza Nuevalta Albaicínille, ja C32 yhdistää '
+            + 'Alhambran ja Albaicínin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
       ],
       ennenNyt: [
         {
@@ -13379,6 +13518,18 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Gellértvuori kohoaa Tonavan länsirannalla Budassa.',
           selite: 'Vuori on noin 235 metriä merenpinnan yläpuolella, ja se on nimetty vuoden '
             + '1046 pakanakapinassa surmatun piispa Gellértin mukaan.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/budapest/20261013-uudet-6-8/budapest-6-nakoala-intro-v1.png',
+          lyhyt: 'Citadellan muurilta näkyvät Tonava, sillat, Parlamentti ja Budan linna.',
+          selite: 'Gellért-vuoren Citadella rakennettiin 1850-luvulla Tonavan yläpuolelle. Ylhäältä '
+            + 'näkyy joen yli Ketjusillalle, Parlamentille ja Budan linnalle.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -14714,6 +14865,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vanhankaupungin eteläpuolella, ja sen juurella on '
             + 'lohikäärmetarun luola.',
           lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/krakow/20261013-uudet-6-8/krakow-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Krakovan raitiotie on kulkenut kaupungissa vuodesta 1882.',
+          selite: 'Krakovan ensimmäinen raitiolinja avattiin vuonna 1882 hevosvetoisena, ja '
+            + 'sähkövetoinen linja seurasi vuonna 1901. Nykyään raitiovaunuja ajaa MPK Kraków.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -18767,6 +18930,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/moscow/20261013-uudet-6-8/moscow-6-nakoala-intro-v1.png',
+          lyhyt: 'Varpuskukkulan näköalatasanne on noin 85 metriä Moskva-joen yläpuolella.',
+          selite: 'Varpuskukkulan (Vorobjovy Gory) näköalatasanne on joen jyrkällä oikealla rannalla, '
+            + 'ja sinne on vapaa pääsy. Ylhäältä näkee laajalti Moskovan keskustaa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -18799,6 +18974,19 @@ export const KULTTUURI_KATEGORIAT = {
             + '1992, ja siellä on nykyään Euroopan suurin määrä '
             + 'pilvenpiirtäjiä.',
           lahde: 'Igor Gorshkov, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/moscow/20261013-uudet-6-8/moscow-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Moskovan metro ylittää Moskva-joen Lužnikin metrosillalla.',
+          selite: 'Lužnikin metrosilta on kaksikerroksinen kaarisilta: päällä ajotie, alla metrolinja. '
+            + 'Sillalla on Vorobjovy Gory -asema, ainoa Moskovan metron asema veden päällä, ja se '
+            + 'avattiin uudelleen 2002.',
+          lahde: 'Matkakirjan havainnekuva',
         },
       ],
       ennenNyt: [
@@ -21132,6 +21320,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/odessa/20261013-uudet-6-8/odessa-6-nakoala-intro-v1.png',
+          lyhyt: 'Primorskin bulevardi on rinteen reunan kävelykatu, jolta näkee Odessan sataman.',
+          selite: 'Potemkinin portaat rakennettiin 1837–1841 yhdistämään bulevardi satamaan, ja niissä '
+            + 'on nykyään 192 askelmaa. Ylhäältä avautuu näkymä satamaan ja merelle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -21150,6 +21350,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Francesco Boffon ja Gregorio Toricellin uusklassisena '
             + 'suunnitelmana Primorskin bulevardin päähän, ja Franz Morandi '
             + 'rakensi sen uudelleen 1871–1873.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/odessa/20261013-uudet-6-8/odessa-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Odessan raitiotie on ollut sähköllä vuodesta 1910 ja kulkee edelleen.',
+          selite: 'Odessan ensimmäinen sähköinen raitiolinja avattiin 1910, ja raitiotie on yhä '
+            + 'käytössä. Kaupunki on viime vuosina saanut uusia matalalattiaisia '
+            + 'Tatra-Yug-raitiovaunuja.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -27244,6 +27457,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/crete/20261013-uudet-6-8/crete-6-nakoala-intro-v1.png',
+          lyhyt: 'Valkoiset vuoret (Lefka Ori) kohoavat Chanian kaupungin eteläpuolella.',
+          selite: 'Chania on Kreetan luoteisrannikolla, ja sen eteläpuolella kohoavat Valkoiset vuoret. '
+            + 'Kaupungin itäpuolella Akrotirin niemimaan kukkulalta aukeaa näkymä koko kaupunkiin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -27253,6 +27478,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'asuinaluetta.',
           selite: 'Topanas sijaitsee Hanian vanhankaupungin länsiosassa, ja siellä asuivat '
             + 'kaupungin kristityt ottomaanien hallinnon aikana.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/crete/20261013-uudet-6-8/crete-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Chanian kaupunkibussit palvelevat keskustaa, satamaa ja lähirantoja.',
+          selite: 'Chanian kaupunkibussilinjat yhdistävät keskustan muun muassa Soudan lauttasatamaan '
+            + 'ja lähirantoihin. Linja 21 kulkee Kalamakin ja Agioi Apostoloin rantojen kautta.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -28472,6 +28709,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/alps/20261013-uudet-6-8/alps-6-nakoala-intro-v1.png',
+          lyhyt: 'Furtschellasin rinteeltä näkyvät Silsjärvi, Sils Maria ja Piz da la Margna.',
+          selite: 'Sils Marian gondoli nousee Furtschellasin keskiasemalle 2312 metrin korkeuteen. '
+            + 'Asemalta on näkymä Silsin kyliin ja järville.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -28480,6 +28729,19 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Filosofi Friedrich Nietzsche vietti Silsissä kesiä 1880-luvulla.',
           selite: 'Silsissä on Nietzsche-talo, jossa filosofi vietti kesiä 1880-luvulla ja '
             + 'josta tuli museo vuonna 1960.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/alps/20261013-uudet-6-8/alps-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Silsistä kulkee hevosomnibussi suurelta osin autottomaan Fexin laaksoon.',
+          selite: 'Sils Mariasta Fexin laaksoon kulkee kesäisin aikataulun mukainen hevosomnibussi. '
+            + 'Laaksossa asuu noin sata ihmistä, ja matka pysäkeille kestää hevosvaunulla noin '
+            + '15-50 minuuttia.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -30634,6 +30896,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/oslo/20261013-uudet-6-8/oslo-6-nakoala-intro-v1.png',
+          lyhyt: 'Ekebergin rinteeltä näkyvät Oslon keskusta, Oopperatalo ja Oslovuonon pohjukka.',
+          selite: 'Ekebergin rinteeltä avautuu näkymä Oslon keskustan ja Oslovuonon ylle. Edvard '
+            + 'Munchin Huuto-maalauksen maisemakin on tältä rinteeltä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -31041,6 +31315,19 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Cascinen puisto sijaitsee Arnon pohjoisrannalla Firenzessä.',
           selite: 'Cascine oli Medicien maatila- ja metsästysmaa, ennen kuin Napoleonin sisar '
             + 'Elisa Baciocchi teki siitä julkisen puiston 1800-luvun alussa.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/florence/20261013-uudet-6-8/florence-6-nakoala-intro-v1.png',
+          lyhyt: 'Piazzale Michelangelolta näkyvät Duomon kupoli, Palazzo Vecchio ja Ponte Vecchio.',
+          selite: 'Piazzale Michelangelo on Giuseppe Poggin suunnittelema, vuonna 1869 rakennettu aukio '
+            + 'Arnon eteläpuolisella kukkulalla. Sieltä aukeaa panoraama Duomon, Palazzo Vecchion '
+            + 'ja Ponte Vecchion yli.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
@@ -70087,6 +70374,19 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Nordnes on niemi Bergenin keskustassa Vågenin ja Puddefjordenin välissä.',
           selite: 'Nordnesin niemen kärjessä on puisto ja Bergenin akvaario, ja sieltä '
             + 'avautuu näkymä kaupungin vuonolle.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/bergen/20261013-uudet-6-8/bergen-6-nakoala-intro-v1.png',
+          lyhyt: 'Fløyenin näköalatasolta näkyvät Vågen, Bryggen ja Bergenin keskusta.',
+          selite: 'Fløyenin ylä-asema on 320 metrin korkeudessa, ja sinne pääsee '
+            + 'Fløibanen-funikulaarilla keskustasta. Ylhäältä näkyvät Vågenin satama ja Bryggen, '
+            + 'joka kuuluu Unescon maailmanperintöön.',
           lahde: 'Matkakirjan havainnekuva',
         },
         {
