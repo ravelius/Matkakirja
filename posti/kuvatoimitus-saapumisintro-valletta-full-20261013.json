@@ -1,0 +1,230 @@
+{
+  "cityName": "Valletta",
+  "gameCityId": "valletta",
+  "mediaSlug": "valletta",
+  "taskNumber": 99,
+  "updatedAt": "2026-10-13T09:46:23.995643+00:00",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [
+    {
+      "slot": 5,
+      "title": "vesi tai luonto — Grand Harbour Upper Barrakka Gardensin terassilta.",
+      "sceneSpec": "Mitä kuvataan: näkymä Upper Barrakka Gardensin terassilta Grand Harbourin yli kohti Birgua ja Fort St. Angeloa: tyyni, sinivihreä satamavesi, vastarannalla Kolmen kaupungin (Birgu, Senglea, Cospicua) vaaleat kalkkikivitalot ja linnoitusmuurit; vedellä perinteinen värikäs maltalainen soutuvene (dgħajsa, soutaja seisoo) ja yksi pieni purjevene, kaukana pieniä aluksia. Etualalla vaalea kalkkikivikaide ja terassin reunalla muutama puu ja matalia pensaita (vihreä luonto kehyksenä). Ihmisiä ei tai korkeintaan yksi pieni hahmo selin kaiteen luona. Katselusuunta: kamera Upper Barrakka Gardensin terassilla (35.8947 N, 14.5122 E), katse itä-kaakkoon (noin 120 astetta) Grand Harbourin yli. Fort St. Angelo (35.8919 N, 14.5183 E) on keskellä Birgun niemen kärjessä; Birgun talot ovat sen takana hieman oikealla; Senglea (35.8878 N, 14.5169 E) on oikealla, lähimpänä niemenä (Gardjola-torni kärjessä); Dockyard Creek (telakkalahti) on Birgun ja Senglean välissä; Cospicua on Senglean takana oikealla; Kalkara ja Kalkara Creek ovat vasemmalla, Birgun takana. Valletta ja sen bastionit ovat katsojan takana ja sivuilla, eivät kuvassa. Katselusuunta sama kuin kuvassa 8. Kulma: vaakakuva, silmänkorkeudelta kaiteen takaa, hieman korotettu, laaja mutta ei ylileveä. Valo: kirkas mutta pehmeä aamuvalo, kevyt kosteussumu horisontissa, vaimeat värit, fotorealistinen havainnekuva. Ei saa näkyä: Barrakka-hissin tornia (rajaa kuvan ulkopuolelle), patsaita ja rintakuvia (Churchill, Les Gavroches, Maitland), Siege Bell -muistomerkkiä, suuria risteilyaluksia, tekstiä, kylttejä, logoja, tunnistettavia kasvoja.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Grand Harbour Upper Barrakka Gardensin terassilta. Havainnekuva.\n\n",
+      "caption": "Grand Harbour Upper Barrakka Gardensin terassilta. Havainnekuva.",
+      "filename": "valletta-5-luonto-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/valletta/20261013-full/valletta-5-luonto-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Valletta",
+      "gameCityId": "valletta",
+      "mediaSlug": "valletta",
+      "taskNumber": 99,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/valletta/native-5.png",
+      "nativeSHA256": "9db824d2373eb2ad702f9e5ad76fe8cd8cf4ddf9fb537b8ae69d2a3ade5ae510",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/valletta/valletta-5-luonto-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/valletta/valletta-5-luonto-intro-v1.png",
+      "sha256": "d55e51a34556c9b3c583c6f6e08032af739849d76f02a455f11e413992abcb7b",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja Valletta arrival intro slot 5, present day color illustration.\nGenerate one completely new camera-photorealistic image, exactly 1536 x 1024 pixels, landscape 3:2 PNG, opaque.\nScene: an elevated eye-level view from behind the pale weathered limestone balustrade of Upper Barrakka Gardens terrace in Valletta, Malta (35.8947 N, 14.5122 E). The camera looks EAST-SOUTHEAST, bearing about 120 degrees, across the calm blue-green Grand Harbour toward Fort St Angelo and the Three Cities. Keep the geography correct rather than inventing a symmetrical waterfront.\nComposition and geography: Fort St Angelo, the broad low bastioned limestone fortress at the tip of Birgu peninsula (35.8919 N, 14.5183 E), is centered. Birgu's dense low limestone houses extend behind the fort and a little to its right. Kalkara and Kalkara Creek are LEFT of Birgu in the left background. Senglea peninsula with the small Gardjola watchtower at its tip enters on the RIGHT; Dockyard Creek separates Senglea and Birgu; Cospicua recedes behind to the right. The two peninsulas must remain separated by water. Valletta and its bastions are behind the camera and off-frame at the sides: NEVER place Valletta's city skyline on the opposite shore. Do not add a central cathedral dome or a fantasy palace to the fortress.\nWide but restrained landscape framing, natural approximately 35mm perspective, not an ultrawide panoramic distortion. The limestone terrace balustrade crosses the low foreground; a few trees only at the outer edges and low green shrubs frame the harbor naturally. Broad open water between foreground and opposite shores. One small traditional colorful Maltese dghajsa rowboat, with its tiny standing oarsman, and one small sailboat on the harbor. A few tiny vessels far away. No people on the terrace.\nBright but soft morning light, mild humid haze along the horizon, restrained limestone hues and subdued sea blue-green. Camera-like exposure with real irregular porous stone, slightly worn balustrade, delicate imperfect leaves and natural water ripples. No HDR, no heightened saturation, no dramatic cinematic grading, no glossy CGI or patterned textures.\nOmit the Barrakka lift tower entirely by framing; no cruise ships, giant yachts, Siege Bell memorial, busts, statues or art monuments. No text, signage, logos, watermark or frame. No recognizable faces.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "id": "valletta-5-luonto-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/valletta/valletta-5-luonto-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-full/valletta-5-luonto-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-full/valletta-5-luonto-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 5,
+        "verdict": "accepted",
+        "reason": "Upper Barrakkan katselusuunta: Fort St. Angelo keskellä, Birgu sen takana ja Senglea oikealla. Kaide, satamavesi ja pienet veneet; ei hissiä tai muistomerkkejä.",
+        "nativeSHA256": "9db824d2373eb2ad702f9e5ad76fe8cd8cf4ddf9fb537b8ae69d2a3ade5ae510",
+        "finalSHA256": "d55e51a34556c9b3c583c6f6e08032af739849d76f02a455f11e413992abcb7b",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 5,
+        "r2Key": "julisteet/saapumisintro/valletta/20261013-full/valletta-5-luonto-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-full/valletta-5-luonto-intro-v1.png",
+        "sha256": "d55e51a34556c9b3c583c6f6e08032af739849d76f02a455f11e413992abcb7b",
+        "nativeSHA256": "9db824d2373eb2ad702f9e5ad76fe8cd8cf4ddf9fb537b8ae69d2a3ade5ae510",
+        "bytes": 2755894,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "d55e51a34556c9b3c583c6f6e08032af739849d76f02a455f11e413992abcb7b",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "d55e51a34556c9b3c583c6f6e08032af739849d76f02a455f11e413992abcb7b",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:33.833426+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 6,
+      "title": "elämän makuinen juhla (värikuva, yksi nuori etualalla) — Kesäilta Strait Streetillä: nuoria ja musiikkia.",
+      "sceneSpec": "Mitä kuvataan: kesäilta noin klo 21 Strait Streetillä (Triq Stretta), kapealla kalkkikivikadulla Vallettan keskustassa. Seinillä hunajanvärisiä julkisivuja ja puuparvekkeita (gallariji), kadun yllä lämpimiä valoköynnöksiä, kalkkikiviportaita ja pieniä ulkopöytiä. Kymmeniä nuoria (noin 18–28-vuotiaita) seisoo ja istuu portailla ja kadulla kuuntelemassa pientä akustista yhtyettä (kitara ja kontrabasso, soittajat pieninä taustalla), nauraa ja puhuu keskenään; käsissä vain vettä, limsaa tai kahvia, juomat eivät ole pääaihe eikä alkoholia näy. ETUALALLA YKSI KEKSITTY NUORI (puolikuva, luonnollinen naurava ilme, katse hieman sivuun kamerasta), maltalaisen väestön näköinen: tummanruskeat hiukset, oliivin sävyinen iho, Välimeren seudun ulkonäkö; yllä muodikkaat nykyvaatteet, esim. väljä pellavapaita, leveälahkeiset housut, valkoiset lenkkarit ja pieni olkalaukku, ilman painatuksia tai logoja. Hän ei muistuta ketään todellista henkilöä. Kulma: vaakakuva, silmänkorkeudelta, noin 35 mm, etualan hahmo terävä, tausta lempeän pehmeä. Valo: sininen hetki ja lämmin valoköynnösten hehku, luonnollinen, vaimeat värit, fotorealistinen havainnekuva. Ei saa näkyä: tekstiä, kylttejä, ruokalistoja, logoja, vaatteiden painatuksia, tunnistettavia merkkipulloja, punaisia lamppuja tai ledikylttejä, tappelua, humalaa, tupakointia, patsaita, katutaidetta.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Kesäilta Strait Streetillä: nuoria ja musiikkia. Havainnekuva.\n\n",
+      "caption": "Kesäilta Strait Streetillä: nuoria ja musiikkia. Havainnekuva.",
+      "filename": "valletta-6-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/valletta/20261013-full/valletta-6-juhla-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 5,
+      "cityName": "Valletta",
+      "gameCityId": "valletta",
+      "mediaSlug": "valletta",
+      "taskNumber": 99,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/valletta/native-6.png",
+      "nativeSHA256": "595a717ea0cf7c2f1d0c50d5037e7c57233594c5734a69e6672ca2787fca4c91",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/valletta/valletta-6-juhla-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/valletta/valletta-6-juhla-intro-v1.png",
+      "sha256": "bec35c445f879f51a086f7f9da0bb2461fccf7cca1dbff613ad6173ac9215dd0",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja Valletta arrival intro slot 6, present day color illustration.\nGenerate one completely new natural camera-photorealistic image, exactly 1536 x 1024 pixels, landscape 3:2 opaque PNG.\nScene: a warm summer evening about 21:00 on Strait Street in central Valletta, Malta. A narrow limestone street with honey-colored weathered facades and timber gallarija balconies. Some limestone steps and modest outdoor tables; warm small string bulbs overhead under a blue-hour sky.\nSubject: exactly ONE invented 20-year-old young adult in the foreground, a half-length candid portrait, dark brown hair, olive-toned Mediterranean appearance typical of Malta. Natural laughing smile while looking slightly away from camera toward friends. Loose unprinted linen shirt, contemporary wide-leg trousers if visible, plain small shoulder bag, fashionable simple clothes without logos. This face must be newly invented and not resemble any real person. Foreground subject clearly in focus and ordinary, naturally imperfect skin texture.\nAround and behind them a cheerful crowd of several dozen invented young adults around 18-28 years old, Mediterranean/Maltese appearance with some natural diversity, standing, chatting, laughing or sitting on steps. The background people are small and softly out of focus. A small acoustic group in the far background with a guitar and upright double bass; music supports the social scene. Cups may contain water, soda or coffee only, subtle and secondary. No alcohol, branded bottles, smoking, intoxication or fighting.\nComposition: eye-level 35mm photograph, horizontal, foreground person a little off center, background gently soft but street and happy crowd still evident. Natural blue hour with restrained warm string-light glow, balanced realistic exposure, muted stone and clothing hues, slight camera grain. Porous limestone irregular and worn, timber with real paint wear, no repeated textures. No HDR, neon-like saturation, cinematic grading, glamour-retouching, CGI or painterly look.\nNo words, numbers, text, signs, street-name plaques, menus, brand names, logos, clothing prints, recognizable bottle labels, red lamps, LED signs, art sculptures, graffiti, watermark or border. No real-person likeness.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "id": "valletta-6-juhla-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/valletta/valletta-6-juhla-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-full/valletta-6-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-full/valletta-6-juhla-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 6,
+        "verdict": "accepted",
+        "reason": "Kapea kalkkikivikatu ja gallarijat, yksi keksitty nuori aikuinen ja iloinen joukko, akustiset soittajat ja tavalliset lämpimät valot; ei pääaiheena ruokaa/alkoholia.",
+        "nativeSHA256": "595a717ea0cf7c2f1d0c50d5037e7c57233594c5734a69e6672ca2787fca4c91",
+        "finalSHA256": "bec35c445f879f51a086f7f9da0bb2461fccf7cca1dbff613ad6173ac9215dd0",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/valletta/20261013-full/valletta-6-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-full/valletta-6-juhla-intro-v1.png",
+        "sha256": "bec35c445f879f51a086f7f9da0bb2461fccf7cca1dbff613ad6173ac9215dd0",
+        "nativeSHA256": "595a717ea0cf7c2f1d0c50d5037e7c57233594c5734a69e6672ca2787fca4c91",
+        "bytes": 2075124,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "bec35c445f879f51a086f7f9da0bb2461fccf7cca1dbff613ad6173ac9215dd0",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "bec35c445f879f51a086f7f9da0bb2461fccf7cca1dbff613ad6173ac9215dd0",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:36.322186+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "slot": 4,
+      "reason": "Hylätty: vasemman julkisivun pienessä valkeassa laatassa näkyy numerotekstin kaltainen merkki (noin x=495, y=360); lähde kieltää talonumerot, kyltit ja tekstin.",
+      "nativeSHA256": "22623a840da8579dc335b82a131de87ac301b40acbe65bec82973d5d88e30757",
+      "finalSHA256": "978e6392760da8ba1216ecb20867d7bbac22ae71507552f77354d0d9f10bbaba",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/valletta/qa-4.json"
+    },
+    {
+      "slot": 7,
+      "reason": "Hylätty: suurikupolinen, kahden kellotornin ympäröimä kirkon kaltainen rakennuskeskittymä korostuu siluetissa yksittäisenä aiheena, vaikka lähde pyytää hajautettua kaupunkisiluettia eikä yksittäisen rakennuksen korostamista. Sen vastaavuutta todelliseen Birgu–Valletta-satamasiluettiin ei saatu varmistettua.",
+      "nativeSHA256": "b50b80824c23d2b42fb02f6508a34837414a791f8cedf053465a952f3f75231c",
+      "finalSHA256": "cad954eeedbc2627fa441caa3c6c71b232dc197a26322679048e40c996225471",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/valletta/qa-7.json"
+    },
+    {
+      "slot": 8,
+      "reason": "Hylätty: kaksi etualahahmoa ovat noin puolet kuvan korkeudesta ja vievät huomattavan osan etualasta; lähde pyytää kaksi tai kolme pientä selin olevaa hahmoa. Vienti täyttää puhtaan harmaasävyn ehdon mutta ei korjaa tätä sisältöpoikkeamaa.",
+      "nativeSHA256": "edccd74531936bc0e7b8a1510fd6f4c2c3cf64dc8dbd2dcaefa0c001fa1dfe27",
+      "finalSHA256": "cc2122de21fc29e377123d6e3a753a83c09caed5ee4adf79961ff4b08f283406",
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/valletta/qa-8.json"
+    }
+  ],
+  "actualCalls": 5,
+  "maximumGenerationCalls": 5,
+  "allRequestedSlotsHandled": true,
+  "allRequestedSlotsDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationAllowedWithoutOwnerAcceptance": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": false,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-viimeiset-5-20261013.md",
+  "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+  "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+  "prior206ImageDeliveryPreserved": true
+}
