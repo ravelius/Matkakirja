@@ -52,3 +52,10 @@ b6fd6de62 (v2b), 427bd1a04 (v2c ev100). LR:n paketit v2/v2b/v2d ämpärissä (v2
 ## 5. MUUTA
 - Worktreet: proto-linssiseppa-{palaute188, museo188, vesi187 (haara vesi-v19-189)} + vanhat.
 - tools/gpu-vapaa.sh checkoutissa seuraamaton (ei minun, älä committaa).
+
+## 6. PT 21.5x (museopalaute)
+- iPad hyväksytty; KUITTAUS junaan 188, kun uuden tilin PT on katsonut iPhone-kuvat (palaute188b) → lähetä iPhone-arkki PT:lle.
+- Kertoja: EI koodiratkaisua; puuttuville teoksille tilataan äänitteet (SK tekstit → PT → Äänittäjä).
+- USS-laajennukset .mk-ohjausnappi__kirjain ja .mk-museo-astu HYVÄKSYTTY omistajan palautteen toteutuksena.
+- PT:n huomio "Omakuva" Vermeerin otsikon yläpuolella: se on TAIDEHALLIN edellinen-rivi (kohta 3, 12.10.: teoksen nimen ylä- ja alapuolella
+  edellinen ja seuraava pienellä; yv-näyttelyssä Omakuva = mauritshuis-840 ennen Tyttöä helmikorvakorulla), ei virhe → kerro PT:lle, jos kysyy uudelleen.
