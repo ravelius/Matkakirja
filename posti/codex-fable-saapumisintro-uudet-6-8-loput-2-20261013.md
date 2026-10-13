@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-32 QA/R2-varmennettua kuvaa toimitettu, 12 perusteltua lopullista poisjättöä. Käsitelty 44/47 tämän osan nimetyistä kuvista; 42 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+32 QA/R2-varmennettua kuvaa toimitettu, 14 perusteltua lopullista poisjättöä. Käsitelty 46/47 tämän osan nimetyistä kuvista; 44 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -157,6 +157,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-valletta-uudet-6-8-20261013.json`. 
 
 - #223, slot 6: Vallettan siluetti Sliemen Tignén rantakaiteelta Marsamxettin sataman yli kaakkoon päivällä. Havainnekuva.
 - #224, slot 8: Perinteinen dgħajsa-satamavene Grand Harbourin vedellä Vallettan muurien edessä päivällä. Havainnekuva.
+
+## KOŠICE
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-kosice-uudet-6-8-20261013.json`. Toimitettu 0/2; kutsuja 2.
+
+- Poisjättö #225, slot 6: Teatterin edessä Hlavná-kadun keskikaistalla näkyy erottuva suihkulähteen allas ja keskeltä nouseva vesisuihku. Kuvakortti kieltää erottuvat suihkulähteet; täysnatiivi ja diagnostinen rajaus katsottu.
+- Poisjättö #226, slot 8: Vaunun ylemmässä kylkipaneelissa on vaaleita kirjainmaisia muotoja (noin420–460,486–498). Diagnostiikasta ei voi vahvistaa niitä pelkäksi vastapäisten ikkunoiden heijastukseksi; en väitä lukeneeni tiettyä sanaa tai brändiä. Lähteen täysin tekstittömän kyljen QA ei näin läpäise.
 
 Kuvat toimitetaan suoraan lähteen mukaisesti Päätoimittajan arvioitaviksi omistajan valtuutuksella. Todellista PT/omistajahyväksyntää, Fable-vastaanottokuittausta, runtime-kytkentää tai pelijulkaisua ei väitetä varmennetuiksi. Jokaisen toimitetun kuvan natiivi on rootin tarkastama, ja R2 on luettu takaisin kahdesti (kanoninen ja välimuistin ohittava URL), tavut, PNG-MIME ja CORS varmennettu. PNG 1536×1024, sRGB, läpinäkymätön; vain ICC/metadata lisätty, pikselit säilytetty. Promptit, viitteet sekä natiivi- ja vienti-SHA ovat manifesteissa.
 

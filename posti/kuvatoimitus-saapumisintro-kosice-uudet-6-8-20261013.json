@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "cityName": "KOŠICE",
+  "gameCityId": "kosice",
+  "mediaSlug": "kosice",
+  "taskNumbers": [
+    225,
+    226
+  ],
+  "updatedAt": "2026-10-13T19:59:23.721755+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [],
+  "omittedItems": [
+    {
+      "taskNumber": 225,
+      "slot": 6,
+      "reason": "Teatterin edessä Hlavná-kadun keskikaistalla näkyy erottuva suihkulähteen allas ja keskeltä nouseva vesisuihku. Kuvakortti kieltää erottuvat suihkulähteet; täysnatiivi ja diagnostinen rajaus katsottu.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "1916829d0baebd611b68dde380c821142a8db77c658b4ab718f594e70c40b667",
+      "finalSHA256": "14324f7cdbced9b4ecd6238e5163f1d07b8a8e3a65df1a528b00c22ffd31987a"
+    },
+    {
+      "taskNumber": 226,
+      "slot": 8,
+      "reason": "Vaunun ylemmässä kylkipaneelissa on vaaleita kirjainmaisia muotoja (noin420–460,486–498). Diagnostiikasta ei voi vahvistaa niitä pelkäksi vastapäisten ikkunoiden heijastukseksi; en väitä lukeneeni tiettyä sanaa tai brändiä. Lähteen täysin tekstittömän kyljen QA ei näin läpäise.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "fc4ead98aebd919f532009309aa4bcc6771ff76838aec631a2e6c08f7758eed2",
+      "finalSHA256": "23b360c76922a771cc0aba85d2146874b4d3c89935483e5c6896d467d60f8a63"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
