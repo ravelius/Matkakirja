@@ -112,7 +112,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
-        "fileSHA256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf",
+        "fileSHA256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -156,7 +156,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
-            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
           }
         ]
       },
@@ -359,7 +359,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
-        "fileSHA256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf",
+        "fileSHA256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -409,7 +409,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
-            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
           }
         ]
       },
@@ -495,6 +495,244 @@
       "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "3a74a54dbdd9ba59c941d81d39d98859b63f4f92d565a2b89a22f2ce3a49cf8e"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e08-moroni-K3-illustration-v1-20261012",
+      "galleryImageID": "e08-moroni-K3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K3-illustration-v1-20261012-308bd989e21c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vaniljasta vientituotteena, ei Moronin sataman valokuva.",
+        "lyhyt": "Havainnekuva vaniljasta vientituotteena, ei Moronin sataman valokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K3-illustration-v1-20261012-308bd989e21c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vaniljasta vientituotteena, ei Moronin sataman valokuva.",
+        "lyhyt": "Havainnekuva vaniljasta vientituotteena, ei Moronin sataman valokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "308bd989e21cb691a460086ff966308349b232c1851d3c537f8ff56d8bb77488",
+      "exportSHA256": "6c644cfbf409870c140a908361479f342b5490b9605c4b9b1c65f706ce32fe5b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K3-illustration-v1-20261012-308bd989e21c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K3-illustration-v1-20261012-308bd989e21c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-K3-illustration-v1-20261012-308bd989e21c.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "2db2e9db4b327c18123a488b15a44e811dbf0b9ce0f49c3bd3ce0c1d127b3030",
+        "semanticContextSHA256": "2db2e9db4b327c18123a488b15a44e811dbf0b9ce0f49c3bd3ce0c1d127b3030",
+        "subjectTitle": "Satama vie muutakin kuin tuoksuja",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common sourced natural/agricultural material or unbranded functional object only; no named protected artwork, city plan, institutional interior or real-site claim.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-K3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "308bd989e21cb691a460086ff966308349b232c1851d3c537f8ff56d8bb77488",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tummia kuivattuja vaniljatankoja lähikuvassa. Vaihtelevat ryppyiset pinnat ja taipuvat päät luonnollisia, ei pakkauksia, merkintöjä tai henkilöitä.",
+            "captionFi": "Havainnekuva vaniljasta vientituotteena, ei Moronin sataman valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+            "targetCurrentlyPresent": true,
+            "targetText": "Moronin satama liittyy saaren pitkään Intian valtameren kauppahistoriaan. Nykyisten vientituotteiden joukossa on vaniljan ja eteeristen öljyjen lisäksi puu- ja metallituotteita sekä käsiteltyä pozzolaania, sementtiin liittyvää tuotetta. Sataman käyttöön vaikuttaa myös sen luonnollinen ympäristö: koralliriutat vaikeuttavat suurten alusten pääsyä sisään. Rannasta katsoessa voi seurata kaupan ja meren kohtaamista. Samasta kaupungista lähtee sekä tuoksuvia maataloustuotteita että rakentamisen materiaaleja.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "K3 nimeää vaniljan vientituotteeksi.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+              "sourceContentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+              "targetText": "Moronin satama liittyy saaren pitkään Intian valtameren kauppahistoriaan. Nykyisten vientituotteiden joukossa on vaniljan ja eteeristen öljyjen lisäksi puu- ja metallituotteita sekä käsiteltyä pozzolaania, sementtiin liittyvää tuotetta. Sataman käyttöön vaikuttaa myös sen luonnollinen ympäristö: koralliriutat vaikeuttavat suurten alusten pääsyä sisään. Rannasta katsoessa voi seurata kaupan ja meren kohtaamista. Samasta kaupungista lähtee sekä tuoksuvia maataloustuotteita että rakentamisen materiaaleja.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+              "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+              "wiki": "Moroni, Comoros",
+              "subjectBasis": "A close agricultural still life of naturally wrinkled dark vanilla pods on a neutral plain surface. Real organic fibres and subtle variation, no brand, packaging, port, shipping map, people or exact origin claim."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Vaniljatangot vastaavat vientituoteaihetta. Selite erottaa kuvan sataman todellisesta valokuvasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva vaniljasta vientituotteena, ei Moronin sataman valokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+        "fileSHA256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e08-moroni-K3-illustration-v1-20261012",
+          "sha256": "308bd989e21cb691a460086ff966308349b232c1851d3c537f8ff56d8bb77488",
+          "verdict": "accepted",
+          "reason": "Vaniljatangot vastaavat vientituoteaihetta. Selite erottaa kuvan sataman todellisesta valokuvasta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-K3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "308bd989e21cb691a460086ff966308349b232c1851d3c537f8ff56d8bb77488",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tummia kuivattuja vaniljatankoja lähikuvassa. Vaihtelevat ryppyiset pinnat ja taipuvat päät luonnollisia, ei pakkauksia, merkintöjä tai henkilöitä.",
+            "captionFi": "Havainnekuva vaniljasta vientituotteena, ei Moronin sataman valokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+            "targetCurrentlyPresent": true,
+            "targetText": "Moronin satama liittyy saaren pitkään Intian valtameren kauppahistoriaan. Nykyisten vientituotteiden joukossa on vaniljan ja eteeristen öljyjen lisäksi puu- ja metallituotteita sekä käsiteltyä pozzolaania, sementtiin liittyvää tuotetta. Sataman käyttöön vaikuttaa myös sen luonnollinen ympäristö: koralliriutat vaikeuttavat suurten alusten pääsyä sisään. Rannasta katsoessa voi seurata kaupan ja meren kohtaamista. Samasta kaupungista lähtee sekä tuoksuvia maataloustuotteita että rakentamisen materiaaleja.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "K3 nimeää vaniljan vientituotteeksi.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+              "sourceContentSha256": "f59a9de54103d6c971bba1859573167b02f421ef276d82df46af4a5bab8087c1",
+              "targetText": "Moronin satama liittyy saaren pitkään Intian valtameren kauppahistoriaan. Nykyisten vientituotteiden joukossa on vaniljan ja eteeristen öljyjen lisäksi puu- ja metallituotteita sekä käsiteltyä pozzolaania, sementtiin liittyvää tuotetta. Sataman käyttöön vaikuttaa myös sen luonnollinen ympäristö: koralliriutat vaikeuttavat suurten alusten pääsyä sisään. Rannasta katsoessa voi seurata kaupan ja meren kohtaamista. Samasta kaupungista lähtee sekä tuoksuvia maataloustuotteita että rakentamisen materiaaleja.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+              "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+              "wiki": "Moroni, Comoros",
+              "subjectBasis": "A close agricultural still life of naturally wrinkled dark vanilla pods on a neutral plain surface. Real organic fibres and subtle variation, no brand, packaging, port, shipping map, people or exact origin claim."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T20:37:56.136521+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K3-illustration-v1-20261012-308bd989e21c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K3-illustration-v1-20261012-308bd989e21c.png?t=6c644cfbf409870c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K3-illustration-v1-20261012-308bd989e21c.png",
+        "sha256": "6c644cfbf409870c140a908361479f342b5490b9605c4b9b1c65f706ce32fe5b",
+        "bytes": 2526694,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-moroni-K3-illustration-v1-20261012",
+        "nativeSHA256": "308bd989e21cb691a460086ff966308349b232c1851d3c537f8ff56d8bb77488",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-K3-illustration-v1-20261012-308bd989e21c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "moroni",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T20:38:44.802614+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-K3-illustration-v1-20261012-308bd989e21c.png",
+        "sha256": "6c644cfbf409870c140a908361479f342b5490b9605c4b9b1c65f706ce32fe5b",
+        "bytes": 2526694,
+        "SHAReadAt": "2026-10-12T20:38:37.340681+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "308bd989e21cb691a460086ff966308349b232c1851d3c537f8ff56d8bb77488",
+        "rgbPixelSHA256": "3c7c4a80fc8edd38d563425c95e9d86776e7edc4af14a741d6338c4a94fe77fb",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "2db2e9db4b327c18123a488b15a44e811dbf0b9ce0f49c3bd3ce0c1d127b3030",
+      "contextAfterSHA256": "2db2e9db4b327c18123a488b15a44e811dbf0b9ce0f49c3bd3ce0c1d127b3030"
     },
     {
       "era": "e08",
@@ -609,7 +847,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
-        "fileSHA256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf",
+        "fileSHA256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -659,7 +897,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
-            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
           }
         ]
       },
@@ -745,6 +983,901 @@
       "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
       "targetAfterSHA256": "0dfb6915d2a493c46ca043b07907a7054e8574b0c4ccc6d70bdf43511f18b1eb",
       "contextAfterSHA256": "0dfb6915d2a493c46ca043b07907a7054e8574b0c4ccc6d70bdf43511f18b1eb"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "O3",
+      "type": "illustration",
+      "assetID": "e08-moroni-O3-illustration-v1-20261012",
+      "galleryImageID": "e08-moroni-O3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        2,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O3-illustration-v1-20261012-1ec1e2dcdf60.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vulkaanisen kiven pinnasta.",
+        "lyhyt": "Havainnekuva vulkaanisen kiven pinnasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O3-illustration-v1-20261012-1ec1e2dcdf60.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vulkaanisen kiven pinnasta.",
+        "lyhyt": "Havainnekuva vulkaanisen kiven pinnasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "1ec1e2dcdf604adb3847191b5948bccb41b8e0263cef9eabd8ffa6e797570f96",
+      "exportSHA256": "eededb83e278c78c48ba08eb70258019446d6fd26de841546f482f3e7ba86429",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O3-illustration-v1-20261012-1ec1e2dcdf60.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O3-illustration-v1-20261012-1ec1e2dcdf60.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-O3-illustration-v1-20261012-1ec1e2dcdf60.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "020f1cfbe5441f7feca1fd930ec32d7c71918dfa0031178bd9612fad9898e270",
+        "subjectTitle": "Museosta vuoren maisemaan",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-O3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "1ec1e2dcdf604adb3847191b5948bccb41b8e0263cef9eabd8ffa6e797570f96",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Tummaa huokoista kiveä ja sekalaisia rakeita lähikuvassa. Huokoset, lohkeamat ja kivien muodot vaihtelevat luontevasti; ei siluettia tai merkintöjä.",
+            "captionFi": "Havainnekuva vulkaanisen kiven pinnasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+            "targetCurrentlyPresent": true,
+            "targetText": "Kansallismuseon aiheisiin kuuluvat myös valtameri, geologia ja tulivuoret. Ne antavat taustaa Karthalan erilliselle retkelle. Vuorella kasvillisuus vaihtuu kosteista metsistä ylempien rinteiden matalampiin puihin ja kanervikkoon. Karthala on aktiivinen tulivuori, joten retken toteutuminen riippuu ajankohtaisesta tilanteesta. Sovi suunnitelma paikallisen oppaan kanssa ja tarkista olosuhteet ennen lähtöä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "Faktapohja M3 Mount Karthala ja §5 museo/vuoriretki.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Huokoinen vulkaaninen kivi vastaa Karthalan geologia-aihetta, ilman vuoren pinnan tai retkireitin todistusväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva vulkaanisen kiven pinnasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+        "fileSHA256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771",
+        "item": {
+          "slot": "O3",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+          "assetID": "e08-moroni-O3-illustration-v1-20261012",
+          "sha256": "1ec1e2dcdf604adb3847191b5948bccb41b8e0263cef9eabd8ffa6e797570f96",
+          "verdict": "accepted",
+          "reason": "Huokoinen vulkaaninen kivi vastaa Karthalan geologia-aihetta, ilman vuoren pinnan tai retkireitin todistusväitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-O3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "1ec1e2dcdf604adb3847191b5948bccb41b8e0263cef9eabd8ffa6e797570f96",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Tummaa huokoista kiveä ja sekalaisia rakeita lähikuvassa. Huokoset, lohkeamat ja kivien muodot vaihtelevat luontevasti; ei siluettia tai merkintöjä.",
+            "captionFi": "Havainnekuva vulkaanisen kiven pinnasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+            "targetCurrentlyPresent": true,
+            "targetText": "Kansallismuseon aiheisiin kuuluvat myös valtameri, geologia ja tulivuoret. Ne antavat taustaa Karthalan erilliselle retkelle. Vuorella kasvillisuus vaihtuu kosteista metsistä ylempien rinteiden matalampiin puihin ja kanervikkoon. Karthala on aktiivinen tulivuori, joten retken toteutuminen riippuu ajankohtaisesta tilanteesta. Sovi suunnitelma paikallisen oppaan kanssa ja tarkista olosuhteet ennen lähtöä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "Faktapohja M3 Mount Karthala ja §5 museo/vuoriretki.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:47.852702+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O3-illustration-v1-20261012-1ec1e2dcdf60.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O3-illustration-v1-20261012-1ec1e2dcdf60.png?t=eededb83e278c78c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-O3-illustration-v1-20261012-1ec1e2dcdf60.png",
+        "sha256": "eededb83e278c78c48ba08eb70258019446d6fd26de841546f482f3e7ba86429",
+        "bytes": 3461203,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-moroni-O3-illustration-v1-20261012",
+        "nativeSHA256": "1ec1e2dcdf604adb3847191b5948bccb41b8e0263cef9eabd8ffa6e797570f96",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-O3-illustration-v1-20261012-1ec1e2dcdf60.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "moroni",
+        "slot": "O3",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[2].kuva",
+        "verifiedAt": "2026-10-13T05:58:25.486723+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-O3-illustration-v1-20261012-1ec1e2dcdf60.png",
+        "sha256": "eededb83e278c78c48ba08eb70258019446d6fd26de841546f482f3e7ba86429",
+        "bytes": 3461203,
+        "SHAReadAt": "2026-10-13T05:57:59.329237+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "1ec1e2dcdf604adb3847191b5948bccb41b8e0263cef9eabd8ffa6e797570f96",
+        "rgbPixelSHA256": "721995cdb6dde21c448f4792a52d3b67c7f0d13e814ffea5043d4ec5d4c74400",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "020f1cfbe5441f7feca1fd930ec32d7c71918dfa0031178bd9612fad9898e270"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "K2",
+      "type": "illustration",
+      "assetID": "e08-moroni-K2-illustration-v1-20261012",
+      "galleryImageID": "e08-moroni-K2-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K2-illustration-v1-20261012-e4e25ddfa1f4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva riisi- ja liha-ateriasta.",
+        "lyhyt": "Havainnekuva riisi- ja liha-ateriasta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K2-illustration-v1-20261012-e4e25ddfa1f4.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva riisi- ja liha-ateriasta.",
+        "lyhyt": "Havainnekuva riisi- ja liha-ateriasta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "e4e25ddfa1f47f0d189fba2d7bfa9b9da751f96c6f4e1502ac24ef8d1d9a3770",
+      "exportSHA256": "6cdf3a447b39cfc45562f9ca841050bb289a570c01724eb012e41b4d26f0018c",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K2-illustration-v1-20261012-e4e25ddfa1f4.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K2-illustration-v1-20261012-e4e25ddfa1f4.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-K2-illustration-v1-20261012-e4e25ddfa1f4.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "8f569487ae24d36c41e70427b551e9d12d170b5dc539aa9692dce26fb1991472",
+        "semanticContextSHA256": "8f569487ae24d36c41e70427b551e9d12d170b5dc539aa9692dce26fb1991472",
+        "subjectTitle": "Tori ruokkii kaupunkia kahdesti",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-K2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "e4e25ddfa1f47f0d189fba2d7bfa9b9da751f96c6f4e1502ac24ef8d1d9a3770",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kulhossa riisinjyviä ja ruskistettuja lihanpaloja, hiukan vihreää koristetta, taustalla salaattia. Ruoan ja astioiden pinnat luontevia; ei pakkauksia tai merkintöjä.",
+            "captionFi": "Havainnekuva riisi- ja liha-ateriasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+            "targetCurrentlyPresent": true,
+            "targetText": "Volo Volo on Moronin arjen kauppapaikka kaupungin pohjoisosassa. Sieltä hankitaan hedelmiä ja vihanneksia, ja torin yhteydessä toimii myös pieniä ruokapaikkoja. Päivällä myytävä raaka-aine ja valmis ateria ovat siten lähellä toisiaan. Ruokapöytään voi tulla esimerkiksi paistettua kalaa banaanien kanssa tai riisiä ja lihaa. Illalla torin ympärillä valmistetaan myös grilliruokaa. Tori on kaupunkilaisille sekä ostospaikka että paikka syödä, eikä sen merkitys rajoitu matkamuistojen myyntiin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "Faktapohja §3 Volo Volo ja §5 Ruoka, M2 Eat.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Riisi ja liha vastaavat Volo Volo -tekstin ateriatyyppiä. Ei nimetyn ravintolan tai reseptin aitousväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva riisi- ja liha-ateriasta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+        "fileSHA256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771",
+        "item": {
+          "slot": "K2",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+          "assetID": "e08-moroni-K2-illustration-v1-20261012",
+          "sha256": "e4e25ddfa1f47f0d189fba2d7bfa9b9da751f96c6f4e1502ac24ef8d1d9a3770",
+          "verdict": "accepted",
+          "reason": "Riisi ja liha vastaavat Volo Volo -tekstin ateriatyyppiä. Ei nimetyn ravintolan tai reseptin aitousväitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-K2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "e4e25ddfa1f47f0d189fba2d7bfa9b9da751f96c6f4e1502ac24ef8d1d9a3770",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kulhossa riisinjyviä ja ruskistettuja lihanpaloja, hiukan vihreää koristetta, taustalla salaattia. Ruoan ja astioiden pinnat luontevia; ei pakkauksia tai merkintöjä.",
+            "captionFi": "Havainnekuva riisi- ja liha-ateriasta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+            "targetCurrentlyPresent": true,
+            "targetText": "Volo Volo on Moronin arjen kauppapaikka kaupungin pohjoisosassa. Sieltä hankitaan hedelmiä ja vihanneksia, ja torin yhteydessä toimii myös pieniä ruokapaikkoja. Päivällä myytävä raaka-aine ja valmis ateria ovat siten lähellä toisiaan. Ruokapöytään voi tulla esimerkiksi paistettua kalaa banaanien kanssa tai riisiä ja lihaa. Illalla torin ympärillä valmistetaan myös grilliruokaa. Tori on kaupunkilaisille sekä ostospaikka että paikka syödä, eikä sen merkitys rajoitu matkamuistojen myyntiin.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "Faktapohja §3 Volo Volo ja §5 Ruoka, M2 Eat.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:47.740590+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K2-illustration-v1-20261012-e4e25ddfa1f4.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K2-illustration-v1-20261012-e4e25ddfa1f4.png?t=6cdf3a447b39cfc4",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K2-illustration-v1-20261012-e4e25ddfa1f4.png",
+        "sha256": "6cdf3a447b39cfc45562f9ca841050bb289a570c01724eb012e41b4d26f0018c",
+        "bytes": 2566524,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-moroni-K2-illustration-v1-20261012",
+        "nativeSHA256": "e4e25ddfa1f47f0d189fba2d7bfa9b9da751f96c6f4e1502ac24ef8d1d9a3770",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-K2-illustration-v1-20261012-e4e25ddfa1f4.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "moroni",
+        "slot": "K2",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[1]",
+        "verifiedAt": "2026-10-13T05:58:27.125993+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-K2-illustration-v1-20261012-e4e25ddfa1f4.png",
+        "sha256": "6cdf3a447b39cfc45562f9ca841050bb289a570c01724eb012e41b4d26f0018c",
+        "bytes": 2566524,
+        "SHAReadAt": "2026-10-13T05:57:58.906034+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "e4e25ddfa1f47f0d189fba2d7bfa9b9da751f96c6f4e1502ac24ef8d1d9a3770",
+        "rgbPixelSHA256": "8709450b0a3fe3201261b1971dabbc640b6a29f7f62ccaa6ca777b452375feb6",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "8f569487ae24d36c41e70427b551e9d12d170b5dc539aa9692dce26fb1991472",
+      "contextAfterSHA256": "8f569487ae24d36c41e70427b551e9d12d170b5dc539aa9692dce26fb1991472"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e08-moroni-K4-illustration-v1-20261012",
+      "galleryImageID": "e08-moroni-K4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K4-illustration-v1-20261012-a6468780cc00.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vulkaanisesta kivestä.",
+        "lyhyt": "Havainnekuva vulkaanisesta kivestä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K4-illustration-v1-20261012-a6468780cc00.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vulkaanisesta kivestä.",
+        "lyhyt": "Havainnekuva vulkaanisesta kivestä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "a6468780cc000d899cd4b981a9d5081eb187247b33884c24a6fec03e38eb700a",
+      "exportSHA256": "c3ea54481751dbcbc34f76073a80f5e8668821bbf99cd797c03127ebca59379b",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K4-illustration-v1-20261012-a6468780cc00.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K4-illustration-v1-20261012-a6468780cc00.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-K4-illustration-v1-20261012-a6468780cc00.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "69dbc4b65e1bc36881711eeda1e0bb66a9f28892ac32faa5115dece02ee578ab",
+        "semanticContextSHA256": "69dbc4b65e1bc36881711eeda1e0bb66a9f28892ac32faa5115dece02ee578ab",
+        "subjectTitle": "Tulivuori mahtuu myös museoon",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-K4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "a6468780cc000d899cd4b981a9d5081eb187247b33884c24a6fec03e38eb700a",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Yksi tumma huokoinen kivenpala neutraalilla alustalla. Huokosten koko ja pinnan karheus vaihtelevat; uskottava varjo, ei merkintöjä.",
+            "captionFi": "Havainnekuva vulkaanisesta kivestä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+            "targetCurrentlyPresent": true,
+            "targetText": "Komorien kansallismuseo Moronissa yhdistää eri tieteenaloja. Sen näyttelyaiheisiin kuuluvat historia, arkeologia, taide ja uskonto, ihmisten kulttuurit, valtameri ja luonnontieteet sekä tulivuoret ja maapallon geologia. Sama kaupunki sopii näiden aiheiden kohtaamispaikaksi: medina kertoo pitkästä kaupunkihistoriasta, ja merellinen ympäristö sekä Karthala näkyvät kaupungin maisemassa. Museokäynti auttaa liittämään rakennukset, asukkaiden elämän ja luonnon samaan saariston kokonaisuuteen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "Faktapohja §3 kansallismuseo, M2 See: tulivuoret ja geologia.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Vulkaaninen kivi vastaa museon geologia-aihetta, ilman tietyn museonäytteen väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva vulkaanisesta kivestä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+        "fileSHA256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e08-moroni-K4-illustration-v1-20261012",
+          "sha256": "a6468780cc000d899cd4b981a9d5081eb187247b33884c24a6fec03e38eb700a",
+          "verdict": "accepted",
+          "reason": "Vulkaaninen kivi vastaa museon geologia-aihetta, ilman tietyn museonäytteen väitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-K4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "a6468780cc000d899cd4b981a9d5081eb187247b33884c24a6fec03e38eb700a",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Yksi tumma huokoinen kivenpala neutraalilla alustalla. Huokosten koko ja pinnan karheus vaihtelevat; uskottava varjo, ei merkintöjä.",
+            "captionFi": "Havainnekuva vulkaanisesta kivestä.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+            "targetCurrentlyPresent": true,
+            "targetText": "Komorien kansallismuseo Moronissa yhdistää eri tieteenaloja. Sen näyttelyaiheisiin kuuluvat historia, arkeologia, taide ja uskonto, ihmisten kulttuurit, valtameri ja luonnontieteet sekä tulivuoret ja maapallon geologia. Sama kaupunki sopii näiden aiheiden kohtaamispaikaksi: medina kertoo pitkästä kaupunkihistoriasta, ja merellinen ympäristö sekä Karthala näkyvät kaupungin maisemassa. Museokäynti auttaa liittämään rakennukset, asukkaiden elämän ja luonnon samaan saariston kokonaisuuteen.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "Faktapohja §3 kansallismuseo, M2 See: tulivuoret ja geologia.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:47.795748+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K4-illustration-v1-20261012-a6468780cc00.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K4-illustration-v1-20261012-a6468780cc00.png?t=c3ea54481751dbcb",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-K4-illustration-v1-20261012-a6468780cc00.png",
+        "sha256": "c3ea54481751dbcbc34f76073a80f5e8668821bbf99cd797c03127ebca59379b",
+        "bytes": 2412724,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-moroni-K4-illustration-v1-20261012",
+        "nativeSHA256": "a6468780cc000d899cd4b981a9d5081eb187247b33884c24a6fec03e38eb700a",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-K4-illustration-v1-20261012-a6468780cc00.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "moroni",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-13T05:58:36.061793+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-K4-illustration-v1-20261012-a6468780cc00.png",
+        "sha256": "c3ea54481751dbcbc34f76073a80f5e8668821bbf99cd797c03127ebca59379b",
+        "bytes": 2412724,
+        "SHAReadAt": "2026-10-13T05:57:59.111224+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "a6468780cc000d899cd4b981a9d5081eb187247b33884c24a6fec03e38eb700a",
+        "rgbPixelSHA256": "87dfec8182a578e5d5d16a1e9e21defea242cf91ba8a55b9d7683ea35e471afc",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "69dbc4b65e1bc36881711eeda1e0bb66a9f28892ac32faa5115dece02ee578ab",
+      "contextAfterSHA256": "69dbc4b65e1bc36881711eeda1e0bb66a9f28892ac32faa5115dece02ee578ab"
+    },
+    {
+      "era": "e08",
+      "city": "moroni",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e08-moroni-L3-illustration-v1-20261012",
+      "galleryImageID": "e08-moroni-L3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L3-illustration-v1-20261012-10a3a884120c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kanervakasvillisuudesta.",
+        "lyhyt": "Havainnekuva kanervakasvillisuudesta."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L3-illustration-v1-20261012-10a3a884120c.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva kanervakasvillisuudesta.",
+        "lyhyt": "Havainnekuva kanervakasvillisuudesta."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "10a3a884120c1a5ccb3475dd24f577c71ada753bff3ce2056dab6c705c669623",
+      "exportSHA256": "48ba614ddb93be1c86ebef1d62e0310f9780d0952edf7607fecd783c80630180",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L3-illustration-v1-20261012-10a3a884120c.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L3-illustration-v1-20261012-10a3a884120c.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-L3-illustration-v1-20261012-10a3a884120c.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+      "sourceContentSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e3416e34473dc0721be627231f1914cad5d1f470ec99b57b7ce96deecf55a0d9",
+        "semanticContextSHA256": "e3416e34473dc0721be627231f1914cad5d1f470ec99b57b7ce96deecf55a0d9",
+        "subjectTitle": "Metsä vaihtuu kanervikkoon",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-L3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "10a3a884120c1a5ccb3475dd24f577c71ada753bff3ce2056dab6c705c669623",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Puuvartisia haarautuvia versoja, kapeita lehtiä ja vaaleanpunaisia pieniä kellomaisia kukkia. Oksien ja kukkien asennot vaihtelevat; ei mekaanista tekstuuria tai merkintöjä.",
+            "captionFi": "Havainnekuva kanervakasvillisuudesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+            "targetCurrentlyPresent": true,
+            "targetText": "Karthalan rinteillä kasvaa kosteaa ainavihantaa metsää. Ylempänä puut jäävät matalammiksi ja kasvillisuus vaihtuu kanervikoksi, jossa kasvaa myös Erica comorensis -kanervaa. Vuoren eri korkeuksilla ei siis katsota samaa kasvillisuutta vähän ylempää, vaan erilaisia elinympäristöjä. Karthala on myös tärkeä lintujen alue: sen rinteillä elää saaristolle ominaisia lajeja, kuten Karthala white-eye -niminen rillilintu. Vuoren luontoa voi tutkia yhtä hyvin kasvien ja lintujen kuin kraatterin kautta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "Faktapohja §4 M3 Flora and fauna: kanervikko ylemmillä rinteillä.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Yleinen kanervakasvillisuus vastaa kasvillisuusvyöhykkeen aihetta. Ei Erica comorensis -lajin tarkka tunnistuskuva tai Karthalan paikkakuva."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva kanervakasvillisuudesta.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+        "fileSHA256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e08-moroni-L3-illustration-v1-20261012",
+          "sha256": "10a3a884120c1a5ccb3475dd24f577c71ada753bff3ce2056dab6c705c669623",
+          "verdict": "accepted",
+          "reason": "Yleinen kanervakasvillisuus vastaa kasvillisuusvyöhykkeen aihetta. Ei Erica comorensis -lajin tarkka tunnistuskuva tai Karthalan paikkakuva.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/assets/e08-moroni-L3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "10a3a884120c1a5ccb3475dd24f577c71ada753bff3ce2056dab6c705c669623",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Puuvartisia haarautuvia versoja, kapeita lehtiä ja vaaleanpunaisia pieniä kellomaisia kukkia. Oksien ja kukkien asennot vaihtelevat; ei mekaanista tekstuuria tai merkintöjä.",
+            "captionFi": "Havainnekuva kanervakasvillisuudesta.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/sisalto.json",
+            "contentSha256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+            "targetCurrentlyPresent": true,
+            "targetText": "Karthalan rinteillä kasvaa kosteaa ainavihantaa metsää. Ylempänä puut jäävät matalammiksi ja kasvillisuus vaihtuu kanervikoksi, jossa kasvaa myös Erica comorensis -kanervaa. Vuoren eri korkeuksilla ei siis katsota samaa kasvillisuutta vähän ylempää, vaan erilaisia elinympäristöjä. Karthala on myös tärkeä lintujen alue: sen rinteillä elää saaristolle ominaisia lajeja, kuten Karthala white-eye -niminen rillilintu. Vuoren luontoa voi tutkia yhtä hyvin kasvien ja lintujen kuin kraatterin kautta.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/moroni/faktapohja.md",
+            "factSheetSha256": "25dcbd27f0d874d319b8a72aa1da7b7ea8d02bb14d54f4bc8d776a6511542ad7",
+            "topicEvidence": "Faktapohja §4 M3 Flora and fauna: kanervikko ylemmillä rinteillä.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:47.927530+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/qa.json",
+            "sha256": "8a88ce1d6f82a761fb504e85980e12f68dd33259da3b685261a5b022e4537f32"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L3-illustration-v1-20261012-10a3a884120c.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L3-illustration-v1-20261012-10a3a884120c.png?t=48ba614ddb93be1c",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/moroni/e08-moroni-L3-illustration-v1-20261012-10a3a884120c.png",
+        "sha256": "48ba614ddb93be1c86ebef1d62e0310f9780d0952edf7607fecd783c80630180",
+        "bytes": 2533890,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-moroni-L3-illustration-v1-20261012",
+        "nativeSHA256": "10a3a884120c1a5ccb3475dd24f577c71ada753bff3ce2056dab6c705c669623",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-L3-illustration-v1-20261012-10a3a884120c.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "moroni",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-13T05:58:38.273548+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/moroni/e08-moroni-L3-illustration-v1-20261012-10a3a884120c.png",
+        "sha256": "48ba614ddb93be1c86ebef1d62e0310f9780d0952edf7607fecd783c80630180",
+        "bytes": 2533890,
+        "SHAReadAt": "2026-10-13T05:57:59.544128+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "10a3a884120c1a5ccb3475dd24f577c71ada753bff3ce2056dab6c705c669623",
+        "rgbPixelSHA256": "48a25cd14fb5a8a29f59c0bb1f8910148c233747a2a40bef37f484547c05f3d7",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "3c17e503946f852fc5abf328d9b48ac40d17addbd0b5c440ec88ef8342358e04",
+      "targetAfterSHA256": "e3416e34473dc0721be627231f1914cad5d1f470ec99b57b7ce96deecf55a0d9",
+      "contextAfterSHA256": "e3416e34473dc0721be627231f1914cad5d1f470ec99b57b7ce96deecf55a0d9"
     },
     {
       "era": "e08",
@@ -948,7 +2081,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
-            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
           }
         ]
       },
@@ -1228,7 +2361,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
-            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
           }
         ]
       },
@@ -1524,7 +2657,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
-            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
           }
         ]
       },
@@ -1808,7 +2941,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
-            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
           }
         ]
       },
@@ -2096,7 +3229,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/moroni/illustration-qa-extra.json",
-            "sha256": "c5ad4271318bb784242abb84f4e82b0221fcce48bfc462acd743006817e995bf"
+            "sha256": "af770a7644320b987e2b90b6254aae75df5e72517ef33121e335bab1597b1771"
           }
         ]
       },

@@ -142,7 +142,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
-        "fileSHA256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9",
+        "fileSHA256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -255,11 +255,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
-            "sha256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9"
+            "sha256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
-            "sha256": "51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4"
+            "sha256": "523fcee66a8ae6170d5ba0244e2599abdf6942a747a753164a1669ffb60d5e74"
           }
         ]
       },
@@ -482,7 +482,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
-        "fileSHA256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9",
+        "fileSHA256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -637,11 +637,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
-            "sha256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9"
+            "sha256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
-            "sha256": "51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4"
+            "sha256": "523fcee66a8ae6170d5ba0244e2599abdf6942a747a753164a1669ffb60d5e74"
           }
         ]
       },
@@ -727,6 +727,1134 @@
       "sourceContentAfterSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "2de052d67fa7b9d794adc383620c5b24fd77245486a1156df8853ee20b0cba1f"
+    },
+    {
+      "era": "e08",
+      "city": "maputo",
+      "slot": "K1",
+      "type": "illustration",
+      "assetID": "e08-maputo-K1-illustration-v1-20261012",
+      "galleryImageID": "e08-maputo-K1-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        0
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K1-illustration-v1-20261012-b1eace9a9093.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva sataman viljalastista, ei todellinen Maputon terminaali.",
+        "lyhyt": "Havainnekuva sataman viljalastista, ei todellinen Maputon terminaali."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K1-illustration-v1-20261012-b1eace9a9093.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva sataman viljalastista, ei todellinen Maputon terminaali.",
+        "lyhyt": "Havainnekuva sataman viljalastista, ei todellinen Maputon terminaali."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+      "exportSHA256": "ca77f31ce2a1beb128dec41ccfb643b90c7a0845cf8be05911a77d38cd45dea5",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K1-illustration-v1-20261012-b1eace9a9093.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K1-illustration-v1-20261012-b1eace9a9093.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-K1-illustration-v1-20261012-b1eace9a9093.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+      "sourceContentSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "202f3722066d580ad56a5eb1d94860e79d2a5d9e869cfbf6964e844d3bb0ce37",
+        "semanticContextSHA256": "202f3722066d580ad56a5eb1d94860e79d2a5d9e869cfbf6964e844d3bb0ce37",
+        "subjectTitle": "Satama, jolla on sisämaa",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common sourced natural/agricultural material or unbranded functional object only; no named protected artwork, city plan, institutional interior or real-site claim.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-K1-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/8bcc7184490e-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-K1-illustration-v1-20261012",
+              "nativeSHA256": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+              "verdict": "accepted",
+              "reason": "Viljasäkit sopivat sataman lastityyppiin. Selite erottaa havainnollistuksen Maputon todellisesta terminaalista.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-K1-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Viljaa avoimessa säkissä, suljettuja säkkejä ja puisia laatikoita. Luontevat kuidut, jyvät ja varjot; ei tekstiä tai henkilöitä.",
+                "captionFi": "Havainnekuva sataman viljalastista, ei todellinen Maputon terminaali.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+                "targetCurrentlyPresent": true,
+                "targetText": "Maputon sataman takana on muutakin kuin kaupunki. Raideyhteyksiä on rakennettu eteläisen Afrikan sisämaahan, muun muassa Etelä-Afrikan, Eswatinin ja Zimbabwen suuntiin. Laitureilla lasti jakautuu omiin terminaaleihinsa: satamassa käsitellään esimerkiksi viljaa, sokeria, autoja ja kontteja. Valtameren rannalla näkyy näin maantiede, joka jatkuu kauas horisontin taakse. Satama on rannikon ja sisämaan liitoskohta, ja kaupungin kauppaan perustuva talous kytkeytyy tähän kuljetusten verkkoon.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "K1 nimeää viljan sataman käsittelemiin lasteihin.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Maputon sataman takana on muutakin kuin kaupunki. Raideyhteyksiä on rakennettu eteläisen Afrikan sisämaahan, muun muassa Etelä-Afrikan, Eswatinin ja Zimbabwen suuntiin. Laitureilla lasti jakautuu omiin terminaaleihinsa: satamassa käsitellään esimerkiksi viljaa, sokeria, autoja ja kontteja. Valtameren rannalla näkyy näin maantiede, joka jatkuu kauas horisontin taakse. Satama on rannikon ja sisämaan liitoskohta, ja kaupungin kauppaan perustuva talous kytkeytyy tähän kuljetusten verkkoon.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "wiki": "Maputo",
+                  "subjectBasis": "Plain unmarked sacks of cereal grain and ordinary wooden freight crates in an anonymous cargo-handling corner. Close crop, no port layout, ship, railway route, printed markings, logos or actual shipment claim."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "61dad35e1e9fbbd74cbe1f04677472604a9643e3c2b56a07d7b623d2d81d6e7b",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/extra-review-snapshots/65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva sataman viljalastista, ei todellinen Maputon terminaali.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Viljasäkit sopivat sataman lastityyppiin. Selite erottaa havainnollistuksen Maputon todellisesta terminaalista."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva sataman viljalastista, ei todellinen Maputon terminaali.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+        "fileSHA256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb",
+        "item": {
+          "slot": "K1",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+          "assetID": "e08-maputo-K1-illustration-v1-20261012",
+          "sha256": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Viljasäkit sopivat sataman lastityyppiin. Selite erottaa havainnollistuksen Maputon todellisesta terminaalista.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-K1-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/8bcc7184490e-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-K1-illustration-v1-20261012",
+              "nativeSHA256": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+              "verdict": "accepted",
+              "reason": "Viljasäkit sopivat sataman lastityyppiin. Selite erottaa havainnollistuksen Maputon todellisesta terminaalista.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-K1-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Viljaa avoimessa säkissä, suljettuja säkkejä ja puisia laatikoita. Luontevat kuidut, jyvät ja varjot; ei tekstiä tai henkilöitä.",
+                "captionFi": "Havainnekuva sataman viljalastista, ei todellinen Maputon terminaali.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+                "targetCurrentlyPresent": true,
+                "targetText": "Maputon sataman takana on muutakin kuin kaupunki. Raideyhteyksiä on rakennettu eteläisen Afrikan sisämaahan, muun muassa Etelä-Afrikan, Eswatinin ja Zimbabwen suuntiin. Laitureilla lasti jakautuu omiin terminaaleihinsa: satamassa käsitellään esimerkiksi viljaa, sokeria, autoja ja kontteja. Valtameren rannalla näkyy näin maantiede, joka jatkuu kauas horisontin taakse. Satama on rannikon ja sisämaan liitoskohta, ja kaupungin kauppaan perustuva talous kytkeytyy tähän kuljetusten verkkoon.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "K1 nimeää viljan sataman käsittelemiin lasteihin.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Maputon sataman takana on muutakin kuin kaupunki. Raideyhteyksiä on rakennettu eteläisen Afrikan sisämaahan, muun muassa Etelä-Afrikan, Eswatinin ja Zimbabwen suuntiin. Laitureilla lasti jakautuu omiin terminaaleihinsa: satamassa käsitellään esimerkiksi viljaa, sokeria, autoja ja kontteja. Valtameren rannalla näkyy näin maantiede, joka jatkuu kauas horisontin taakse. Satama on rannikon ja sisämaan liitoskohta, ja kaupungin kauppaan perustuva talous kytkeytyy tähän kuljetusten verkkoon.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "wiki": "Maputo",
+                  "subjectBasis": "Plain unmarked sacks of cereal grain and ordinary wooden freight crates in an anonymous cargo-handling corner. Close crop, no port layout, ship, railway route, printed markings, logos or actual shipment claim."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "61dad35e1e9fbbd74cbe1f04677472604a9643e3c2b56a07d7b623d2d81d6e7b",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/extra-review-snapshots/65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva sataman viljalastista, ei todellinen Maputon terminaali.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-K1-illustration-v1-20261012",
+              "nativeSHA256": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+              "verdict": "accepted",
+              "reason": "Viljasäkit sopivat sataman lastityyppiin. Selite erottaa havainnollistuksen Maputon todellisesta terminaalista.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-K1-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Viljaa avoimessa säkissä, suljettuja säkkejä ja puisia laatikoita. Luontevat kuidut, jyvät ja varjot; ei tekstiä tai henkilöitä.",
+                "captionFi": "Havainnekuva sataman viljalastista, ei todellinen Maputon terminaali.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+                "targetCurrentlyPresent": true,
+                "targetText": "Maputon sataman takana on muutakin kuin kaupunki. Raideyhteyksiä on rakennettu eteläisen Afrikan sisämaahan, muun muassa Etelä-Afrikan, Eswatinin ja Zimbabwen suuntiin. Laitureilla lasti jakautuu omiin terminaaleihinsa: satamassa käsitellään esimerkiksi viljaa, sokeria, autoja ja kontteja. Valtameren rannalla näkyy näin maantiede, joka jatkuu kauas horisontin taakse. Satama on rannikon ja sisämaan liitoskohta, ja kaupungin kauppaan perustuva talous kytkeytyy tähän kuljetusten verkkoon.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "K1 nimeää viljan sataman käsittelemiin lasteihin.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Maputon sataman takana on muutakin kuin kaupunki. Raideyhteyksiä on rakennettu eteläisen Afrikan sisämaahan, muun muassa Etelä-Afrikan, Eswatinin ja Zimbabwen suuntiin. Laitureilla lasti jakautuu omiin terminaaleihinsa: satamassa käsitellään esimerkiksi viljaa, sokeria, autoja ja kontteja. Valtameren rannalla näkyy näin maantiede, joka jatkuu kauas horisontin taakse. Satama on rannikon ja sisämaan liitoskohta, ja kaupungin kauppaan perustuva talous kytkeytyy tähän kuljetusten verkkoon.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "wiki": "Maputo",
+                  "subjectBasis": "Plain unmarked sacks of cereal grain and ordinary wooden freight crates in an anonymous cargo-handling corner. Close crop, no port layout, ship, railway route, printed markings, logos or actual shipment claim."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "61dad35e1e9fbbd74cbe1f04677472604a9643e3c2b56a07d7b623d2d81d6e7b",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/extra-review-snapshots/65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T20:28:03.878804+00:00",
+          "contentSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+          "targetSHA256": "202f3722066d580ad56a5eb1d94860e79d2a5d9e869cfbf6964e844d3bb0ce37"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+            "sha256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+            "sha256": "523fcee66a8ae6170d5ba0244e2599abdf6942a747a753164a1669ffb60d5e74"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K1-illustration-v1-20261012-b1eace9a9093.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K1-illustration-v1-20261012-b1eace9a9093.png?t=ca77f31ce2a1beb1",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K1-illustration-v1-20261012-b1eace9a9093.png",
+        "sha256": "ca77f31ce2a1beb128dec41ccfb643b90c7a0845cf8be05911a77d38cd45dea5",
+        "bytes": 2945183,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maputo-K1-illustration-v1-20261012",
+        "nativeSHA256": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-K1-illustration-v1-20261012-b1eace9a9093.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maputo",
+        "slot": "K1",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[0]",
+        "verifiedAt": "2026-10-12T20:22:12.473604+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-K1-illustration-v1-20261012-b1eace9a9093.png",
+        "sha256": "ca77f31ce2a1beb128dec41ccfb643b90c7a0845cf8be05911a77d38cd45dea5",
+        "bytes": 2945183,
+        "SHAReadAt": "2026-10-12T20:21:16.297012+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "b1eace9a90935c9c0eddeb0c202920ea53b874cb4874ba987d05f2215bf2f770",
+        "rgbPixelSHA256": "779059722f0eefc1ff3d2213eb1177021d13df392401483961391c5f007f32a7",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "targetAfterSHA256": "202f3722066d580ad56a5eb1d94860e79d2a5d9e869cfbf6964e844d3bb0ce37",
+      "contextAfterSHA256": "202f3722066d580ad56a5eb1d94860e79d2a5d9e869cfbf6964e844d3bb0ce37"
+    },
+    {
+      "era": "e08",
+      "city": "maputo",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e08-maputo-L3-illustration-v1-20261012",
+      "galleryImageID": "e08-maputo-L3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L3-illustration-v1-20261012-499b85f724ab.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva tenniksen arkisesta välineestä, ei Tundurun todellinen kenttä.",
+        "lyhyt": "Havainnekuva tenniksen arkisesta välineestä, ei Tundurun todellinen kenttä."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L3-illustration-v1-20261012-499b85f724ab.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva tenniksen arkisesta välineestä, ei Tundurun todellinen kenttä.",
+        "lyhyt": "Havainnekuva tenniksen arkisesta välineestä, ei Tundurun todellinen kenttä."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+      "exportSHA256": "3e9beb2efca9700afe036a25592d49ca9ef97a188430df276b60a9051a705461",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L3-illustration-v1-20261012-499b85f724ab.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L3-illustration-v1-20261012-499b85f724ab.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-L3-illustration-v1-20261012-499b85f724ab.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+      "sourceContentSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "88a0271cf4b8bc6b1e6c1603bf43ec0a14bba4a2bd5bebde00ff4c1b8c73775c",
+        "semanticContextSHA256": "88a0271cf4b8bc6b1e6c1603bf43ec0a14bba4a2bd5bebde00ff4c1b8c73775c",
+        "subjectTitle": "Puutarhassa on myös tenniskentät",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common sourced natural/agricultural material or unbranded functional object only; no named protected artwork, city plan, institutional interior or real-site claim.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-L3-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/e0973f9d308f-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-L3-illustration-v1-20261012",
+              "nativeSHA256": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+              "verdict": "accepted",
+              "reason": "Tennispallo ja verkko sopivat puiston urheiluaiheeseen. Selite rajaa pois Tundurun todellisen kentän väitteen.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-L3-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi nimetön tennispallo verkon äärellä. Luonteva huopapinta, sauma ja verkon solmut; ei brändejä tai henkilöitä.",
+                "captionFi": "Havainnekuva tenniksen arkisesta välineestä, ei Tundurun todellinen kenttä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+                "targetCurrentlyPresent": true,
+                "targetText": "Tunduru on julkinen puutarha keskellä Maputoa. Brittiläinen puutarhuri Thomas Honney suunnitteli sen 1800-luvun lopulla, ja se tunnettiin aiemmin nimellä Jardim Vasco da Gama. Sisäänkäynnin uusmanueliininen muotoilu liittää puiston kaupungin historialliseen arkkitehtuuriin. Puutarhassa on myös Mosambikin tennisliiton kenttiä. Vanha puisto ei siis palvele vain rauhallista kävelyä: samalla keskustan paikalla kohtaavat puutarhan historia ja urheilukäyttö, jota pelkkä kasvitieteelliseen puutarhaan viittaava nimi ei kerro.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "L3 mainitsee puutarhan tenniskentät.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Tunduru on julkinen puutarha keskellä Maputoa. Brittiläinen puutarhuri Thomas Honney suunnitteli sen 1800-luvun lopulla, ja se tunnettiin aiemmin nimellä Jardim Vasco da Gama. Sisäänkäynnin uusmanueliininen muotoilu liittää puiston kaupungin historialliseen arkkitehtuuriin. Puutarhassa on myös Mosambikin tennisliiton kenttiä. Vanha puisto ei siis palvele vain rauhallista kävelyä: samalla keskustan paikalla kohtaavat puutarhan historia ja urheilukäyttö, jota pelkkä kasvitieteelliseen puutarhaan viittaava nimi ei kerro.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "wiki": "Tunduru_Gardens",
+                  "subjectBasis": "One plain tennis ball without writing beside a generic tennis net edge, quiet green plant blur behind. Real felt and net fibres; no garden landmark, buildings, court plan, brands or people."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "badd6ae55acd7ea502a561d31ab8e45a17471ff4376526d5cbeec3e56f709f10",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/extra-review-snapshots/65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva tenniksen arkisesta välineestä, ei Tundurun todellinen kenttä.",
+            "realPlacePhotograph": false
+          },
+          "qaReason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Tennispallo ja verkko sopivat puiston urheiluaiheeseen. Selite rajaa pois Tundurun todellisen kentän väitteen."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva tenniksen arkisesta välineestä, ei Tundurun todellinen kenttä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+        "fileSHA256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e08-maputo-L3-illustration-v1-20261012",
+          "sha256": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+          "verdict": "accepted",
+          "reason": "Lisätarkistajan kuvitus-2 dokumentoitu arvio täsmälleen samasta assetID/nativeSHA-versiosta: Tennispallo ja verkko sopivat puiston urheiluaiheeseen. Selite rajaa pois Tundurun todellisen kentän väitteen.",
+          "evidence": {
+            "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-L3-illustration-v1-20261012/image.png",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+            "nativeGeometry": {
+              "rawWidth": 1536,
+              "rawHeight": 1024,
+              "exifOrientation": 1,
+              "width": 1536,
+              "height": 1024
+            },
+            "auditEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/e0973f9d308f-technical-source.json",
+            "visualViewedByThisSession": false,
+            "visualReviewSource": "independent extra reviewer; not personally viewed here",
+            "independentReview": {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-L3-illustration-v1-20261012",
+              "nativeSHA256": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+              "verdict": "accepted",
+              "reason": "Tennispallo ja verkko sopivat puiston urheiluaiheeseen. Selite rajaa pois Tundurun todellisen kentän väitteen.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-L3-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi nimetön tennispallo verkon äärellä. Luonteva huopapinta, sauma ja verkon solmut; ei brändejä tai henkilöitä.",
+                "captionFi": "Havainnekuva tenniksen arkisesta välineestä, ei Tundurun todellinen kenttä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+                "targetCurrentlyPresent": true,
+                "targetText": "Tunduru on julkinen puutarha keskellä Maputoa. Brittiläinen puutarhuri Thomas Honney suunnitteli sen 1800-luvun lopulla, ja se tunnettiin aiemmin nimellä Jardim Vasco da Gama. Sisäänkäynnin uusmanueliininen muotoilu liittää puiston kaupungin historialliseen arkkitehtuuriin. Puutarhassa on myös Mosambikin tennisliiton kenttiä. Vanha puisto ei siis palvele vain rauhallista kävelyä: samalla keskustan paikalla kohtaavat puutarhan historia ja urheilukäyttö, jota pelkkä kasvitieteelliseen puutarhaan viittaava nimi ei kerro.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "L3 mainitsee puutarhan tenniskentät.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Tunduru on julkinen puutarha keskellä Maputoa. Brittiläinen puutarhuri Thomas Honney suunnitteli sen 1800-luvun lopulla, ja se tunnettiin aiemmin nimellä Jardim Vasco da Gama. Sisäänkäynnin uusmanueliininen muotoilu liittää puiston kaupungin historialliseen arkkitehtuuriin. Puutarhassa on myös Mosambikin tennisliiton kenttiä. Vanha puisto ei siis palvele vain rauhallista kävelyä: samalla keskustan paikalla kohtaavat puutarhan historia ja urheilukäyttö, jota pelkkä kasvitieteelliseen puutarhaan viittaava nimi ei kerro.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "wiki": "Tunduru_Gardens",
+                  "subjectBasis": "One plain tennis ball without writing beside a generic tennis net edge, quiet green plant blur behind. Real felt and net fibres; no garden landmark, buildings, court plan, brands or people."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "badd6ae55acd7ea502a561d31ab8e45a17471ff4376526d5cbeec3e56f709f10",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/extra-review-snapshots/65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962.json"
+            },
+            "imageType": "illustration",
+            "captionFi": "Havainnekuva tenniksen arkisesta välineestä, ei Tundurun todellinen kenttä.",
+            "realPlacePhotograph": false
+          },
+          "importedIndependentReview": true,
+          "independentReviews": [
+            {
+              "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+              "sha256": "65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962",
+              "reviewerGroup": "kuvitus-2",
+              "assetID": "e08-maputo-L3-illustration-v1-20261012",
+              "nativeSHA256": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+              "verdict": "accepted",
+              "reason": "Tennispallo ja verkko sopivat puiston urheiluaiheeseen. Selite rajaa pois Tundurun todellisen kentän väitteen.",
+              "evidence": {
+                "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-L3-illustration-v1-20261012/image.png",
+                "nativeSha256Verified": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+                "nativeWidth": 1536,
+                "nativeHeight": 1024,
+                "format": "PNG",
+                "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Yksi nimetön tennispallo verkon äärellä. Luonteva huopapinta, sauma ja verkon solmut; ei brändejä tai henkilöitä.",
+                "captionFi": "Havainnekuva tenniksen arkisesta välineestä, ei Tundurun todellinen kenttä.",
+                "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                "contentSha256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+                "targetCurrentlyPresent": true,
+                "targetText": "Tunduru on julkinen puutarha keskellä Maputoa. Brittiläinen puutarhuri Thomas Honney suunnitteli sen 1800-luvun lopulla, ja se tunnettiin aiemmin nimellä Jardim Vasco da Gama. Sisäänkäynnin uusmanueliininen muotoilu liittää puiston kaupungin historialliseen arkkitehtuuriin. Puutarhassa on myös Mosambikin tennisliiton kenttiä. Vanha puisto ei siis palvele vain rauhallista kävelyä: samalla keskustan paikalla kohtaavat puutarhan historia ja urheilukäyttö, jota pelkkä kasvitieteelliseen puutarhaan viittaava nimi ei kerro.",
+                "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                "topicEvidence": "L3 mainitsee puutarhan tenniskentät.",
+                "sourceEvidence": {
+                  "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+                  "sourceContentSha256": "479f68cbb38f43dae61bbf4edc33a938e42808669b08bbd17be2a50c689816d4",
+                  "targetText": "Tunduru on julkinen puutarha keskellä Maputoa. Brittiläinen puutarhuri Thomas Honney suunnitteli sen 1800-luvun lopulla, ja se tunnettiin aiemmin nimellä Jardim Vasco da Gama. Sisäänkäynnin uusmanueliininen muotoilu liittää puiston kaupungin historialliseen arkkitehtuuriin. Puutarhassa on myös Mosambikin tennisliiton kenttiä. Vanha puisto ei siis palvele vain rauhallista kävelyä: samalla keskustan paikalla kohtaavat puutarhan historia ja urheilukäyttö, jota pelkkä kasvitieteelliseen puutarhaan viittaava nimi ei kerro.",
+                  "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+                  "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+                  "wiki": "Tunduru_Gardens",
+                  "subjectBasis": "One plain tennis ball without writing beside a generic tennis net edge, quiet green plant blur behind. Real felt and net fibres; no garden landmark, buildings, court plan, brands or people."
+                },
+                "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+                "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+              },
+              "opinionSHA256": "badd6ae55acd7ea502a561d31ab8e45a17471ff4376526d5cbeec3e56f709f10",
+              "capturedSourceSnapshot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa-evidence/extra-review-snapshots/65a7d3fcaf025724cf7cb993b3a00479c0e2a1908df6a3a2504466a4334a7962.json"
+            }
+          ],
+          "checkedAt": "2026-10-12T20:28:03.878956+00:00",
+          "contentSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+          "targetSHA256": "88a0271cf4b8bc6b1e6c1603bf43ec0a14bba4a2bd5bebde00ff4c1b8c73775c"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+            "sha256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+            "sha256": "523fcee66a8ae6170d5ba0244e2599abdf6942a747a753164a1669ffb60d5e74"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L3-illustration-v1-20261012-499b85f724ab.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L3-illustration-v1-20261012-499b85f724ab.png?t=3e9beb2efca9700a",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L3-illustration-v1-20261012-499b85f724ab.png",
+        "sha256": "3e9beb2efca9700afe036a25592d49ca9ef97a188430df276b60a9051a705461",
+        "bytes": 2136558,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maputo-L3-illustration-v1-20261012",
+        "nativeSHA256": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-L3-illustration-v1-20261012-499b85f724ab.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maputo",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T20:23:13.985862+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-L3-illustration-v1-20261012-499b85f724ab.png",
+        "sha256": "3e9beb2efca9700afe036a25592d49ca9ef97a188430df276b60a9051a705461",
+        "bytes": 2136558,
+        "SHAReadAt": "2026-10-12T20:23:00.313698+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "499b85f724ab92755e0963b0233b7cc79e3bb3f87666e72177580f2f15264fea",
+        "rgbPixelSHA256": "f1bd3b33d9bd210b9f9fc1d1ebdb2c4ac60d7cd12ccb627efbfd730490cf2b30",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "targetAfterSHA256": "88a0271cf4b8bc6b1e6c1603bf43ec0a14bba4a2bd5bebde00ff4c1b8c73775c",
+      "contextAfterSHA256": "88a0271cf4b8bc6b1e6c1603bf43ec0a14bba4a2bd5bebde00ff4c1b8c73775c"
+    },
+    {
+      "era": "e08",
+      "city": "maputo",
+      "slot": "K4",
+      "type": "illustration",
+      "assetID": "e08-maputo-K4-illustration-v1-20261012",
+      "galleryImageID": "e08-maputo-K4-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        3
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K4-illustration-v1-20261012-57ec5ea222dc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva jakarandan kukista.",
+        "lyhyt": "Havainnekuva jakarandan kukista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K4-illustration-v1-20261012-57ec5ea222dc.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva jakarandan kukista.",
+        "lyhyt": "Havainnekuva jakarandan kukista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "57ec5ea222dc824c1726d08cbaa4e4cbd33f7e788ef7db9f1c665d78f5d73167",
+      "exportSHA256": "e55390503fa1258d32e30889024ca550494fbbc4f1b1a31becf98e989a845ac3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K4-illustration-v1-20261012-57ec5ea222dc.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K4-illustration-v1-20261012-57ec5ea222dc.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-K4-illustration-v1-20261012-57ec5ea222dc.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+      "sourceContentSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "292911ba9c8602f6e21a66278ec926bd72c518da880d3c2a1d8cff9e39e78dd2",
+        "semanticContextSHA256": "292911ba9c8602f6e21a66278ec926bd72c518da880d3c2a1d8cff9e39e78dd2",
+        "subjectTitle": "Leveiden katujen kaupunki",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-K4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "57ec5ea222dc824c1726d08cbaa4e4cbd33f7e788ef7db9f1c665d78f5d73167",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Violetit putkimaiset kukat löyhissä haarautuvissa kukinnoissa ja hennot kahdesti parilehdykkäiset lehdet. Eri avautumisvaiheet, luonnollinen valo; ei merkintöjä.",
+            "captionFi": "Havainnekuva jakarandan kukista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+            "contentSha256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+            "targetCurrentlyPresent": true,
+            "targetText": "Maputon keskusta rakennettiin suunnitelluiksi ruutukortteleiksi ja leveiksi kaduiksi. Jakarandat ja akaasiat kuuluvat kaupungin katumaisemaan, mutta rakennukset eivät noudata yhtä tyyliä. Uusklassisia julkisivuja seuraavat art deco ja modernismi; eri aikojen ratkaisut ovat jääneet vierekkäin. Historiallinen Baixa on hyvä paikka hahmottaa tätä kerroksellisuutta. Kaupunkia voi lukea myös katsomalla korttelin mittakaavaa: suuret kadut, niiden varren puut ja erilaiset julkisivut ovat saman keskustan osia.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+            "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+            "topicEvidence": "Faktapohja §2 Leveiden katujen kaupunki, M1: jakarandat.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Jakarandan lähikuva vastaa katujen puuaihetta, ilman Maputon korttelien tai kadun asetteluväitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva jakarandan kukista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+        "fileSHA256": "523fcee66a8ae6170d5ba0244e2599abdf6942a747a753164a1669ffb60d5e74",
+        "item": {
+          "slot": "K4",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+          "assetID": "e08-maputo-K4-illustration-v1-20261012",
+          "sha256": "57ec5ea222dc824c1726d08cbaa4e4cbd33f7e788ef7db9f1c665d78f5d73167",
+          "verdict": "accepted",
+          "reason": "Jakarandan lähikuva vastaa katujen puuaihetta, ilman Maputon korttelien tai kadun asetteluväitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-K4-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "57ec5ea222dc824c1726d08cbaa4e4cbd33f7e788ef7db9f1c665d78f5d73167",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Violetit putkimaiset kukat löyhissä haarautuvissa kukinnoissa ja hennot kahdesti parilehdykkäiset lehdet. Eri avautumisvaiheet, luonnollinen valo; ei merkintöjä.",
+            "captionFi": "Havainnekuva jakarandan kukista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+            "contentSha256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+            "targetCurrentlyPresent": true,
+            "targetText": "Maputon keskusta rakennettiin suunnitelluiksi ruutukortteleiksi ja leveiksi kaduiksi. Jakarandat ja akaasiat kuuluvat kaupungin katumaisemaan, mutta rakennukset eivät noudata yhtä tyyliä. Uusklassisia julkisivuja seuraavat art deco ja modernismi; eri aikojen ratkaisut ovat jääneet vierekkäin. Historiallinen Baixa on hyvä paikka hahmottaa tätä kerroksellisuutta. Kaupunkia voi lukea myös katsomalla korttelin mittakaavaa: suuret kadut, niiden varren puut ja erilaiset julkisivut ovat saman keskustan osia.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+            "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+            "topicEvidence": "Faktapohja §2 Leveiden katujen kaupunki, M1: jakarandat.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:47.313464+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+            "sha256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+            "sha256": "523fcee66a8ae6170d5ba0244e2599abdf6942a747a753164a1669ffb60d5e74"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K4-illustration-v1-20261012-57ec5ea222dc.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K4-illustration-v1-20261012-57ec5ea222dc.png?t=e55390503fa1258d",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-K4-illustration-v1-20261012-57ec5ea222dc.png",
+        "sha256": "e55390503fa1258d32e30889024ca550494fbbc4f1b1a31becf98e989a845ac3",
+        "bytes": 2731977,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maputo-K4-illustration-v1-20261012",
+        "nativeSHA256": "57ec5ea222dc824c1726d08cbaa4e4cbd33f7e788ef7db9f1c665d78f5d73167",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-K4-illustration-v1-20261012-57ec5ea222dc.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maputo",
+        "slot": "K4",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
+        "verifiedAt": "2026-10-13T05:58:17.816106+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-K4-illustration-v1-20261012-57ec5ea222dc.png",
+        "sha256": "e55390503fa1258d32e30889024ca550494fbbc4f1b1a31becf98e989a845ac3",
+        "bytes": 2731977,
+        "SHAReadAt": "2026-10-13T05:57:57.599508+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "57ec5ea222dc824c1726d08cbaa4e4cbd33f7e788ef7db9f1c665d78f5d73167",
+        "rgbPixelSHA256": "0d84a64f0ce87bb2de2407d1bf89cdbb6cbd7574a259c4805402772f4ecc1229",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "targetAfterSHA256": "292911ba9c8602f6e21a66278ec926bd72c518da880d3c2a1d8cff9e39e78dd2",
+      "contextAfterSHA256": "292911ba9c8602f6e21a66278ec926bd72c518da880d3c2a1d8cff9e39e78dd2"
+    },
+    {
+      "era": "e08",
+      "city": "maputo",
+      "slot": "L2",
+      "type": "illustration",
+      "assetID": "e08-maputo-L2-illustration-v1-20261012",
+      "galleryImageID": "e08-maputo-L2-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        1
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L2-illustration-v1-20261012-4c0f4adb5afb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva torin ruokaraaka-aineista.",
+        "lyhyt": "Havainnekuva torin ruokaraaka-aineista."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L2-illustration-v1-20261012-4c0f4adb5afb.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva torin ruokaraaka-aineista.",
+        "lyhyt": "Havainnekuva torin ruokaraaka-aineista."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4c0f4adb5afb2df1663b0d7664c8eb0dd5f4114018cd0fff5e56c81b3220c45f",
+      "exportSHA256": "3701861fbe4ad8698821c6ec6f765c574fe22adc262d655700a84de3192cf97f",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L2-illustration-v1-20261012-4c0f4adb5afb.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L2-illustration-v1-20261012-4c0f4adb5afb.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-L2-illustration-v1-20261012-4c0f4adb5afb.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+      "sourceContentSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0a2976ee5e9c7eeb3c8c6faff512c8dc7cf752d0c0a9365e4a2faaa57206bb9b",
+        "semanticContextSHA256": "0a2976ee5e9c7eeb3c8c6faff512c8dc7cf752d0c0a9365e4a2faaa57206bb9b",
+        "subjectTitle": "Torihalli päätti jäädä",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-L2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "4c0f4adb5afb2df1663b0d7664c8eb0dd5f4114018cd0fff5e56c81b3220c45f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Laatikoissa ja korissa sitruunoita, omenia, vihanneksia, simpukoita, ostereita ja katkarapuja. Kuoret ja kasvisten muodot vaihtelevat luontevasti; ei hintakylttejä tai pakkauksia.",
+            "captionFi": "Havainnekuva torin ruokaraaka-aineista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+            "contentSha256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mercado Centralin katettu halli rakennettiin 1900-luvun alussa sataman lähelle. Carlos Mendes suunnitteli sisäänkäynnin pienen tornin alle ja myyntipaikkoja kaarien yhteyteen. Myöhemmin keskustan kasvu sai kyseenalaistamaan sekä torin sijainnin että rakennuksen ulkonäön, ja hallin ajateltiin häviävän. Se kuitenkin säilyi, ja kunnostus alkoi 2000-luvulla. Vanhassa kauppapaikassa myydään kalaa, äyriäisiä, hedelmiä ja vihanneksia: rakennus ei ole vain muisto entisestä torista, vaan edelleen torikäytössä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+            "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+            "topicEvidence": "Faktapohja §3 Torihalli päätti jäädä, M2 See: kala, äyriäiset, hedelmät ja vihannekset.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Kasvikset, hedelmät ja äyriäiset vastaavat torin tuoteryhmiä. Ei Mercado Centralin todellisen myyntipisteen väitettä."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva torin ruokaraaka-aineista.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+        "fileSHA256": "523fcee66a8ae6170d5ba0244e2599abdf6942a747a753164a1669ffb60d5e74",
+        "item": {
+          "slot": "L2",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+          "assetID": "e08-maputo-L2-illustration-v1-20261012",
+          "sha256": "4c0f4adb5afb2df1663b0d7664c8eb0dd5f4114018cd0fff5e56c81b3220c45f",
+          "verdict": "accepted",
+          "reason": "Kasvikset, hedelmät ja äyriäiset vastaavat torin tuoteryhmiä. Ei Mercado Centralin todellisen myyntipisteen väitettä.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/assets/e08-maputo-L2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "4c0f4adb5afb2df1663b0d7664c8eb0dd5f4114018cd0fff5e56c81b3220c45f",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Laatikoissa ja korissa sitruunoita, omenia, vihanneksia, simpukoita, ostereita ja katkarapuja. Kuoret ja kasvisten muodot vaihtelevat luontevasti; ei hintakylttejä tai pakkauksia.",
+            "captionFi": "Havainnekuva torin ruokaraaka-aineista.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/sisalto.json",
+            "contentSha256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+            "targetCurrentlyPresent": true,
+            "targetText": "Mercado Centralin katettu halli rakennettiin 1900-luvun alussa sataman lähelle. Carlos Mendes suunnitteli sisäänkäynnin pienen tornin alle ja myyntipaikkoja kaarien yhteyteen. Myöhemmin keskustan kasvu sai kyseenalaistamaan sekä torin sijainnin että rakennuksen ulkonäön, ja hallin ajateltiin häviävän. Se kuitenkin säilyi, ja kunnostus alkoi 2000-luvulla. Vanhassa kauppapaikassa myydään kalaa, äyriäisiä, hedelmiä ja vihanneksia: rakennus ei ole vain muisto entisestä torista, vaan edelleen torikäytössä.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maputo/faktapohja.md",
+            "factSheetSha256": "7532815e744c6e022b6041ba26f08369a1e46fcc557995b3e54e98dc8af1f03c",
+            "topicEvidence": "Faktapohja §3 Torihalli päätti jäädä, M2 See: kala, äyriäiset, hedelmät ja vihannekset.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:47.371665+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
+            "sha256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
+            "sha256": "523fcee66a8ae6170d5ba0244e2599abdf6942a747a753164a1669ffb60d5e74"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L2-illustration-v1-20261012-4c0f4adb5afb.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L2-illustration-v1-20261012-4c0f4adb5afb.png?t=3701861fbe4ad869",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maputo/e08-maputo-L2-illustration-v1-20261012-4c0f4adb5afb.png",
+        "sha256": "3701861fbe4ad8698821c6ec6f765c574fe22adc262d655700a84de3192cf97f",
+        "bytes": 2832506,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maputo-L2-illustration-v1-20261012",
+        "nativeSHA256": "4c0f4adb5afb2df1663b0d7664c8eb0dd5f4114018cd0fff5e56c81b3220c45f",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-L2-illustration-v1-20261012-4c0f4adb5afb.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maputo",
+        "slot": "L2",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[1]",
+        "verifiedAt": "2026-10-13T05:58:19.043606+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maputo/e08-maputo-L2-illustration-v1-20261012-4c0f4adb5afb.png",
+        "sha256": "3701861fbe4ad8698821c6ec6f765c574fe22adc262d655700a84de3192cf97f",
+        "bytes": 2832506,
+        "SHAReadAt": "2026-10-13T05:57:57.806882+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4c0f4adb5afb2df1663b0d7664c8eb0dd5f4114018cd0fff5e56c81b3220c45f",
+        "rgbPixelSHA256": "ac277780410b6981032cc828bc0064873c0338cd38dcd6723b9ca84bebacde48",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "565ce84325db1182c914ee33cf89f6047038ecdafdd2464250b58d75dc4d4e58",
+      "targetAfterSHA256": "0a2976ee5e9c7eeb3c8c6faff512c8dc7cf752d0c0a9365e4a2faaa57206bb9b",
+      "contextAfterSHA256": "0a2976ee5e9c7eeb3c8c6faff512c8dc7cf752d0c0a9365e4a2faaa57206bb9b"
     },
     {
       "era": "e08",
@@ -845,7 +1973,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
-        "fileSHA256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9",
+        "fileSHA256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb",
         "item": {
           "slot": "PHOTO",
           "targetJsonPath": "$.valokuva",
@@ -893,11 +2021,11 @@
         "allSources": [
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/qa.json",
-            "sha256": "f7e7c9bbec86b0a7248cee089a53626d3f19ae6f9a31f57cdb452085e18616d9"
+            "sha256": "d8063ae4a28ea8cc337c506ac79be7f9e821490a7e3cf5779990086bda3b8adb"
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maputo/illustration-qa-extra.json",
-            "sha256": "51f52ccf86850de1109cbe98a96d92a310faf4d2ccfe2c01318a1d78b5be16a4"
+            "sha256": "523fcee66a8ae6170d5ba0244e2599abdf6942a747a753164a1669ffb60d5e74"
           }
         ]
       },

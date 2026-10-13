@@ -112,7 +112,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-        "fileSHA256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880",
+        "fileSHA256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5",
         "item": {
           "slot": "TRAVELER",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.kuva",
@@ -156,7 +156,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+            "sha256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5"
           }
         ]
       },
@@ -361,7 +361,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-        "fileSHA256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880",
+        "fileSHA256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5",
         "item": {
           "slot": "O4",
           "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[3].kuva",
@@ -413,7 +413,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+            "sha256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5"
           }
         ]
       },
@@ -499,6 +499,244 @@
       "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "13645d2e247118f083841ed51cac0ba8717fca90efe0c39fa2e382a724732efb"
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "slot": "K3",
+      "type": "illustration",
+      "assetID": "e08-maseru-K3-illustration-v1-20261012",
+      "galleryImageID": "e08-maseru-K3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K3-illustration-v1-20261012-0412530a2a87.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vaatteiden valmistuksesta, ei Thetsanen tehdas.",
+        "lyhyt": "Havainnekuva vaatteiden valmistuksesta, ei Thetsanen tehdas."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K3-illustration-v1-20261012-0412530a2a87.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva vaatteiden valmistuksesta, ei Thetsanen tehdas.",
+        "lyhyt": "Havainnekuva vaatteiden valmistuksesta, ei Thetsanen tehdas."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "0412530a2a8779521707d34e62a7be68ce97b283593228d7019302bd0c353c45",
+      "exportSHA256": "2c99a57aff1b0540d1d87fe67a066a0f5f3fe36d62999de0c4c9a5ddac1ad4d3",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K3-illustration-v1-20261012-0412530a2a87.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K3-illustration-v1-20261012-0412530a2a87.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-K3-illustration-v1-20261012-0412530a2a87.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sourceContentSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "f7bbee34daac97dad259f59bb395cfdd4e5f77af79dede483e220588b25161d5",
+        "semanticContextSHA256": "f7bbee34daac97dad259f59bb395cfdd4e5f77af79dede483e220588b25161d5",
+        "subjectTitle": "T-paidan kaupunki",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common sourced natural/agricultural material or unbranded functional object only; no named protected artwork, city plan, institutional interior or real-site claim.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-K3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "0412530a2a8779521707d34e62a7be68ce97b283593228d7019302bd0c353c45",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tekstitön T-paita, lankarullia ja kangasta sekä puuvillan kaltaista kuitua. Luontevat saumat ja laskokset, ei brändiä tai henkilöitä.",
+            "captionFi": "Havainnekuva vaatteiden valmistuksesta, ei Thetsanen tehdas.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+            "targetCurrentlyPresent": true,
+            "targetText": "Thetsanen alueella Maserun eteläosassa toimii tekstiili- ja jalkineteollisuutta. Vuoristomaan pääkaupungin arkeen kuuluvat siis myös tehtaat ja vaatteiden valmistus. Kaupungin teollisuus ei kuitenkaan ole pelkkää ompelua: Moshoeshoe Roadin suunnalla on myllyjä ja muita yrityksiä. Palvelut ja valmistava teollisuus ovat molemmat osa Maserun taloutta. Matkailija voi tulla Lesothoon vuorten vuoksi, mutta pääkaupungin työelämästä löytyy toisenlainen näkymä samaan maahan.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "K3 käsittelee tekstiiliteollisuutta ja vaatteiden valmistusta.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Thetsanen alueella Maserun eteläosassa toimii tekstiili- ja jalkineteollisuutta. Vuoristomaan pääkaupungin arkeen kuuluvat siis myös tehtaat ja vaatteiden valmistus. Kaupungin teollisuus ei kuitenkaan ole pelkkää ompelua: Moshoeshoe Roadin suunnalla on myllyjä ja muita yrityksiä. Palvelut ja valmistava teollisuus ovat molemmat osa Maserun taloutta. Matkailija voi tulla Lesothoon vuorten vuoksi, mutta pääkaupungin työelämästä löytyy toisenlainen näkymä samaan maahan.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "wiki": "Maseru",
+              "subjectBasis": "A plain unfinished cotton T-shirt with a visible simple seam and a few plain thread spools on a worktable. No logo, print, tags, machine dials, measuring tools, people or actual factory interior."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "T-paita ja tekstiilimateriaali sopivat vaatteiden valmistuksen aiheeseen. Selite erottaa kuvan Thetsanen tehtaasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva vaatteiden valmistuksesta, ei Thetsanen tehdas.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+        "fileSHA256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "assetID": "e08-maseru-K3-illustration-v1-20261012",
+          "sha256": "0412530a2a8779521707d34e62a7be68ce97b283593228d7019302bd0c353c45",
+          "verdict": "accepted",
+          "reason": "T-paita ja tekstiilimateriaali sopivat vaatteiden valmistuksen aiheeseen. Selite erottaa kuvan Thetsanen tehtaasta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-K3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "0412530a2a8779521707d34e62a7be68ce97b283593228d7019302bd0c353c45",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Tekstitön T-paita, lankarullia ja kangasta sekä puuvillan kaltaista kuitua. Luontevat saumat ja laskokset, ei brändiä tai henkilöitä.",
+            "captionFi": "Havainnekuva vaatteiden valmistuksesta, ei Thetsanen tehdas.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+            "targetCurrentlyPresent": true,
+            "targetText": "Thetsanen alueella Maserun eteläosassa toimii tekstiili- ja jalkineteollisuutta. Vuoristomaan pääkaupungin arkeen kuuluvat siis myös tehtaat ja vaatteiden valmistus. Kaupungin teollisuus ei kuitenkaan ole pelkkää ompelua: Moshoeshoe Roadin suunnalla on myllyjä ja muita yrityksiä. Palvelut ja valmistava teollisuus ovat molemmat osa Maserun taloutta. Matkailija voi tulla Lesothoon vuorten vuoksi, mutta pääkaupungin työelämästä löytyy toisenlainen näkymä samaan maahan.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "K3 käsittelee tekstiiliteollisuutta ja vaatteiden valmistusta.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Thetsanen alueella Maserun eteläosassa toimii tekstiili- ja jalkineteollisuutta. Vuoristomaan pääkaupungin arkeen kuuluvat siis myös tehtaat ja vaatteiden valmistus. Kaupungin teollisuus ei kuitenkaan ole pelkkää ompelua: Moshoeshoe Roadin suunnalla on myllyjä ja muita yrityksiä. Palvelut ja valmistava teollisuus ovat molemmat osa Maserun taloutta. Matkailija voi tulla Lesothoon vuorten vuoksi, mutta pääkaupungin työelämästä löytyy toisenlainen näkymä samaan maahan.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "wiki": "Maseru",
+              "subjectBasis": "A plain unfinished cotton T-shirt with a visible simple seam and a few plain thread spools on a worktable. No logo, print, tags, machine dials, measuring tools, people or actual factory interior."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T20:26:45.467018+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+            "sha256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+            "sha256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K3-illustration-v1-20261012-0412530a2a87.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K3-illustration-v1-20261012-0412530a2a87.png?t=2c99a57aff1b0540",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-K3-illustration-v1-20261012-0412530a2a87.png",
+        "sha256": "2c99a57aff1b0540d1d87fe67a066a0f5f3fe36d62999de0c4c9a5ddac1ad4d3",
+        "bytes": 2520678,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maseru-K3-illustration-v1-20261012",
+        "nativeSHA256": "0412530a2a8779521707d34e62a7be68ce97b283593228d7019302bd0c353c45",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-K3-illustration-v1-20261012-0412530a2a87.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maseru",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "verifiedAt": "2026-10-12T20:27:19.156852+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-K3-illustration-v1-20261012-0412530a2a87.png",
+        "sha256": "2c99a57aff1b0540d1d87fe67a066a0f5f3fe36d62999de0c4c9a5ddac1ad4d3",
+        "bytes": 2520678,
+        "SHAReadAt": "2026-10-12T20:27:01.875451+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "0412530a2a8779521707d34e62a7be68ce97b283593228d7019302bd0c353c45",
+        "rgbPixelSHA256": "7bd621378ed483f4176f838aefb521e229f3414a854d1e30ee058271f4d3989c",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "targetAfterSHA256": "f7bbee34daac97dad259f59bb395cfdd4e5f77af79dede483e220588b25161d5",
+      "contextAfterSHA256": "f7bbee34daac97dad259f59bb395cfdd4e5f77af79dede483e220588b25161d5"
     },
     {
       "era": "e08",
@@ -614,7 +852,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-        "fileSHA256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880",
+        "fileSHA256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5",
         "item": {
           "slot": "K4",
           "targetJsonPath": "$.kaupunkilehti[0].nostot[3]",
@@ -665,7 +903,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+            "sha256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5"
           }
         ]
       },
@@ -751,6 +989,244 @@
       "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
       "targetAfterSHA256": "6440087cef49d31e2eeb4d9868c09aafaf58f1666559a7c46db3d667342e0163",
       "contextAfterSHA256": "6440087cef49d31e2eeb4d9868c09aafaf58f1666559a7c46db3d667342e0163"
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "slot": "L3",
+      "type": "illustration",
+      "assetID": "e08-maseru-L3-illustration-v1-20261012",
+      "galleryImageID": "e08-maseru-L3-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        1,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L3-illustration-v1-20261012-c82f1722e03e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rautatiekiskosta, ei Maserun aseman paikkavalokuva.",
+        "lyhyt": "Havainnekuva rautatiekiskosta, ei Maserun aseman paikkavalokuva."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L3-illustration-v1-20261012-c82f1722e03e.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Havainnekuva rautatiekiskosta, ei Maserun aseman paikkavalokuva.",
+        "lyhyt": "Havainnekuva rautatiekiskosta, ei Maserun aseman paikkavalokuva."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "c82f1722e03e53443fd59b8d4d5b2f254b7252298aea555337fa25550ec5226c",
+      "exportSHA256": "17fae16d8fe0e3db5ccf14088fb2ea40dc32e38908846a91852a009da77ce036",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L3-illustration-v1-20261012-c82f1722e03e.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L3-illustration-v1-20261012-c82f1722e03e.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-L3-illustration-v1-20261012-c82f1722e03e.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sourceContentSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "73925ffc767da17105f42a4cf610f46f0f802ba3ce226d51dc35709b0fe9a697",
+        "semanticContextSHA256": "73925ffc767da17105f42a4cf610f46f0f802ba3ce226d51dc35709b0fe9a697",
+        "subjectTitle": "Kiskot tulivat myöhemmin",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common sourced natural/agricultural material or unbranded functional object only; no named protected artwork, city plan, institutional interior or real-site claim.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-L3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "c82f1722e03e53443fd59b8d4d5b2f254b7252298aea555337fa25550ec5226c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kisko, pulttikiinnike, puinen ratapölkky ja sora. Luonteva metalli ja puunsyy, ei tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva rautatiekiskosta, ei Maserun aseman paikkavalokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+            "targetCurrentlyPresent": true,
+            "targetText": "Maserun rautatieasemalla rata päättyy. Se liittyy Mohokaren ylittävän sillan kautta Etelä-Afrikan rataverkkoon, ja Lesothon puoleinen osuus on lyhyt. Yhteys rakennettiin 1900-luvun alussa, joten isoisän matkavuonna 1873 sitä ei vielä ollut. Kaupungin raideliikenne palvelee tavaraa eikä matkustajia. Lesothon vuoristoon ei siis lähdetä Maserusta junalla. Aseman merkitys on toisenlainen: se tuo pääkaupungin osaksi rajan yli jatkuvaa kuljetusverkkoa, vaikka maan oma rata on pieni.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "L3 käsittelee Lesothon lyhyttä raideyhteyttä; kuva ei väitä asemaa, raideleveyttä tai vuoden 1873 näkymää.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Maserun rautatieasemalla rata päättyy. Se liittyy Mohokaren ylittävän sillan kautta Etelä-Afrikan rataverkkoon, ja Lesothon puoleinen osuus on lyhyt. Yhteys rakennettiin 1900-luvun alussa, joten isoisän matkavuonna 1873 sitä ei vielä ollut. Kaupungin raideliikenne palvelee tavaraa eikä matkustajia. Lesothon vuoristoon ei siis lähdetä Maserusta junalla. Aseman merkitys on toisenlainen: se tuo pääkaupungin osaksi rajan yli jatkuvaa kuljetusverkkoa, vaikka maan oma rata on pieni.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "wiki": "Rail_transport_in_Lesotho",
+              "subjectBasis": "Close material study of one ordinary steel railway rail fastened to a wooden sleeper with simple functional hardware and ballast. No train, station, bridge, rail map, labels or historical setting."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "qaReason": "Kiskon lähikuva sopii rautatieaiheeseen. Selite erottaa havainnollistuksen Maserun aseman todellisesta kuvasta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Havainnekuva rautatiekiskosta, ei Maserun aseman paikkavalokuva.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+        "fileSHA256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5",
+        "item": {
+          "slot": "L3",
+          "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+          "assetID": "e08-maseru-L3-illustration-v1-20261012",
+          "sha256": "c82f1722e03e53443fd59b8d4d5b2f254b7252298aea555337fa25550ec5226c",
+          "verdict": "accepted",
+          "reason": "Kiskon lähikuva sopii rautatieaiheeseen. Selite erottaa havainnollistuksen Maserun aseman todellisesta kuvasta.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-L3-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "c82f1722e03e53443fd59b8d4d5b2f254b7252298aea555337fa25550ec5226c",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "visualInspection": "Reviewer personally opened native NAS PNG with view_image; observation: Kisko, pulttikiinnike, puinen ratapölkky ja sora. Luonteva metalli ja puunsyy, ei tekstiä tai henkilöitä.",
+            "captionFi": "Havainnekuva rautatiekiskosta, ei Maserun aseman paikkavalokuva.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+            "targetCurrentlyPresent": true,
+            "targetText": "Maserun rautatieasemalla rata päättyy. Se liittyy Mohokaren ylittävän sillan kautta Etelä-Afrikan rataverkkoon, ja Lesothon puoleinen osuus on lyhyt. Yhteys rakennettiin 1900-luvun alussa, joten isoisän matkavuonna 1873 sitä ei vielä ollut. Kaupungin raideliikenne palvelee tavaraa eikä matkustajia. Lesothon vuoristoon ei siis lähdetä Maserusta junalla. Aseman merkitys on toisenlainen: se tuo pääkaupungin osaksi rajan yli jatkuvaa kuljetusverkkoa, vaikka maan oma rata on pieni.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "L3 käsittelee Lesothon lyhyttä raideyhteyttä; kuva ei väitä asemaa, raideleveyttä tai vuoden 1873 näkymää.",
+            "sourceEvidence": {
+              "sourceContent": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+              "sourceContentSha256": "db7423e2329d79b252ac2a6a2abb174c8f8083f5afd6ceaf5d349eaea62d1fdd",
+              "targetText": "Maserun rautatieasemalla rata päättyy. Se liittyy Mohokaren ylittävän sillan kautta Etelä-Afrikan rataverkkoon, ja Lesothon puoleinen osuus on lyhyt. Yhteys rakennettiin 1900-luvun alussa, joten isoisän matkavuonna 1873 sitä ei vielä ollut. Kaupungin raideliikenne palvelee tavaraa eikä matkustajia. Lesothon vuoristoon ei siis lähdetä Maserusta junalla. Aseman merkitys on toisenlainen: se tuo pääkaupungin osaksi rajan yli jatkuvaa kuljetusverkkoa, vaikka maan oma rata on pieni.",
+              "sourceFactSheet": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+              "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+              "wiki": "Rail_transport_in_Lesotho",
+              "subjectBasis": "Close material study of one ordinary steel railway rail fastened to a wooden sleeper with simple functional hardware and ballast. No train, station, bridge, rail map, labels or historical setting."
+            },
+            "rightsAssessment": "Generalized natural subject or common functional object; no identifiable faces, modern named protected work, invented city panorama, overlay text/logo/watermark/frame observed.",
+            "scope": "Extra independent native-image QA only; R2 export, delivery and publication unverified."
+          },
+          "reviewedAt": "2026-10-12T20:34:17.787028+00:00"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+            "sha256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+            "sha256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L3-illustration-v1-20261012-c82f1722e03e.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L3-illustration-v1-20261012-c82f1722e03e.png?t=17fae16d8fe0e3db",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-L3-illustration-v1-20261012-c82f1722e03e.png",
+        "sha256": "17fae16d8fe0e3db5ccf14088fb2ea40dc32e38908846a91852a009da77ce036",
+        "bytes": 2913515,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maseru-L3-illustration-v1-20261012",
+        "nativeSHA256": "c82f1722e03e53443fd59b8d4d5b2f254b7252298aea555337fa25550ec5226c",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-L3-illustration-v1-20261012-c82f1722e03e.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maseru",
+        "slot": "L3",
+        "targetJsonPath": "$.kaupunkilehti[1].nostot[2]",
+        "verifiedAt": "2026-10-12T20:34:44.336888+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-L3-illustration-v1-20261012-c82f1722e03e.png",
+        "sha256": "17fae16d8fe0e3db5ccf14088fb2ea40dc32e38908846a91852a009da77ce036",
+        "bytes": 2913515,
+        "SHAReadAt": "2026-10-12T20:34:27.853927+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "c82f1722e03e53443fd59b8d4d5b2f254b7252298aea555337fa25550ec5226c",
+        "rgbPixelSHA256": "a7cfe481916a953665b642beb875fc6c6ce98ccf0cfb56d5464072fedb1525e6",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "targetAfterSHA256": "73925ffc767da17105f42a4cf610f46f0f802ba3ce226d51dc35709b0fe9a697",
+      "contextAfterSHA256": "73925ffc767da17105f42a4cf610f46f0f802ba3ce226d51dc35709b0fe9a697"
     },
     {
       "era": "e08",
@@ -866,7 +1342,7 @@
       },
       "qaEvidence": {
         "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-        "fileSHA256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880",
+        "fileSHA256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5",
         "item": {
           "slot": "L4",
           "targetJsonPath": "$.kaupunkilehti[1].nostot[3]",
@@ -917,7 +1393,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+            "sha256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5"
           }
         ]
       },
@@ -1003,6 +1479,232 @@
       "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
       "targetAfterSHA256": "63c0b53a774e9dcf4af57150438bca0584428053e9f449f0f1bbe23cc40c03f8",
       "contextAfterSHA256": "63c0b53a774e9dcf4af57150438bca0584428053e9f449f0f1bbe23cc40c03f8"
+    },
+    {
+      "era": "e08",
+      "city": "maseru",
+      "slot": "O2",
+      "type": "illustration",
+      "assetID": "e08-maseru-O2-illustration-v1-20261012",
+      "galleryImageID": "e08-maseru-O2-illustration-v1-20261012",
+      "commonsFile": null,
+      "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "matkailijalle",
+        "artikkeli",
+        "jaksot",
+        1,
+        "kuva"
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O2-illustration-v1-20261012-4abd29bb3819.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mokorotlon ja peitteen havainnekuva; tausta ei esitä yksilöityä paikkaa.",
+        "lyhyt": "Mokorotlon ja peitteen havainnekuva; tausta ei esitä yksilöityä paikkaa."
+      },
+      "removeMediaKeys": [
+        "tiedosto"
+      ],
+      "CvalidatorCompatiblePayload": {},
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O2-illustration-v1-20261012-4abd29bb3819.png",
+        "suora": true,
+        "lahde": "Tekoälyllä tuotettu havainnekuva.",
+        "selite": "Mokorotlon ja peitteen havainnekuva; tausta ei esitä yksilöityä paikkaa.",
+        "lyhyt": "Mokorotlon ja peitteen havainnekuva; tausta ei esitä yksilöityä paikkaa."
+      },
+      "runtimeRemoveMediaKeys": [
+        "tiedosto"
+      ],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "4abd29bb38195a39109caffc81982e4c12196e67e8fde14e90401338ba078660",
+      "exportSHA256": "906d7f2b4542d66e8db046fe136b8ad01d518be04937bb444cae9c71f885eb05",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O2-illustration-v1-20261012-4abd29bb3819.png",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O2-illustration-v1-20261012-4abd29bb3819.png",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-O2-illustration-v1-20261012-4abd29bb3819.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+      "sourceContentSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "semanticContextSHA256": "44e47e35b218299caeeca6347ce122f488aaf73d3db4bb15215f63a4162e1a12",
+        "subjectTitle": "Kingsway ja käsityöt",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": null,
+        "license": null,
+        "licenseUrl": null,
+        "sourcePage": null,
+        "originalUrl": null,
+        "rightsEvidence": {
+          "production": {
+            "scope": "Common natural material, plant, animal, food or unbranded functional object. No named protected artwork or real architecture/collection reconstruction.",
+            "notLocationProof": true
+          },
+          "QA": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-O2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "4abd29bb38195a39109caffc81982e4c12196e67e8fde14e90401338ba078660",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kartiomainen punottu olkihattu, ylälenkki ja yksinkertainen tumma reunakuvio, vieressä taiteltu vaalea peite. Punos, villakudos ja laskokset luontevia; anonyymi vuoritausta ilman paikkaväitettä.",
+            "captionFi": "Mokorotlon ja peitteen havainnekuva; tausta ei esitä yksilöityä paikkaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+            "targetCurrentlyPresent": true,
+            "targetText": "Keskustan kauppa-alueet ovat kehittyneet Kingswayn ympärille. Suuret toimistot ja pankit painottuvat läntiseen liikekeskukseen, pienet yritykset, torit ja katukauppa itäiseen. Basotho Hat -kauppa tarjoaa paikallisia käsitöitä samannimisessä, hatun muotoa lainaavassa rakennuksessa. Mokorotlo ja basothojen peitteet auttavat tunnistamaan paikallista vaatetusperinnettä, mutta kysy tuotteiden materiaaleista ja tekijöistä: perinne ei tarkoita, että kaikki myytävä olisi samanlaista.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "Faktapohja §2 M6 mokorotlo, §3 M8/M4 peite, opas2.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "qaReason": "Mokorotlon kartiomuoto ja peite vastaavat käsityöaihetta. Selite merkitsee taustan yleiseksi."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Mokorotlon ja peitteen havainnekuva; tausta ei esitä yksilöityä paikkaa.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+        "fileSHA256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5",
+        "item": {
+          "slot": "O2",
+          "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+          "assetID": "e08-maseru-O2-illustration-v1-20261012",
+          "sha256": "4abd29bb38195a39109caffc81982e4c12196e67e8fde14e90401338ba078660",
+          "verdict": "accepted",
+          "reason": "Mokorotlon kartiomuoto ja peite vastaavat käsityöaihetta. Selite merkitsee taustan yleiseksi.",
+          "evidence": {
+            "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/assets/e08-maseru-O2-illustration-v1-20261012/image.png",
+            "nativeSha256Verified": "4abd29bb38195a39109caffc81982e4c12196e67e8fde14e90401338ba078660",
+            "nativeWidth": 1536,
+            "nativeHeight": 1024,
+            "format": "PNG",
+            "nativeMode": "RGB",
+            "visualInspection": "Tarkistaja katsoi itse natiivin NAS-tiedoston view_image-työkalulla original-tarkkuudessa tässä sessiossa: Kartiomainen punottu olkihattu, ylälenkki ja yksinkertainen tumma reunakuvio, vieressä taiteltu vaalea peite. Punos, villakudos ja laskokset luontevia; anonyymi vuoritausta ilman paikkaväitettä.",
+            "captionFi": "Mokorotlon ja peitteen havainnekuva; tausta ei esitä yksilöityä paikkaa.",
+            "contentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/sisalto.json",
+            "contentSha256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+            "targetCurrentlyPresent": true,
+            "targetText": "Keskustan kauppa-alueet ovat kehittyneet Kingswayn ympärille. Suuret toimistot ja pankit painottuvat läntiseen liikekeskukseen, pienet yritykset, torit ja katukauppa itäiseen. Basotho Hat -kauppa tarjoaa paikallisia käsitöitä samannimisessä, hatun muotoa lainaavassa rakennuksessa. Mokorotlo ja basothojen peitteet auttavat tunnistamaan paikallista vaatetusperinnettä, mutta kysy tuotteiden materiaaleista ja tekijöistä: perinne ei tarkoita, että kaikki myytävä olisi samanlaista.",
+            "factSheetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e08/paakaupungit-pilvi/e08/maseru/faktapohja.md",
+            "factSheetSha256": "b4b0644cbd0429ed7009876b95af303f57183aa0021ce9b0e9b9e076dbebb4cb",
+            "topicEvidence": "Faktapohja §2 M6 mokorotlo, §3 M8/M4 peite, opas2.",
+            "rightsAssessment": "Yleinen luonnon-, materiaali-, ruoka- tai arkiesineaihe; ei nimettyä nykytaideteosta. Aiheen ja paikkarehellisyyden arvio verdictissä ja omassa silmähavainnossa.",
+            "scope": "Vain riippumaton natiivikuvituksen QA; R2-toimitus, integrointi ja julkaisu eivät ole kuitattuja."
+          },
+          "reviewedAt": "2026-10-13T05:57:47.494981+00:00",
+          "reviewerSession": "e08-extra-01a131d7-1d58-7eb0-a959-c0073288e011"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/qa.json",
+            "sha256": "3230eda7ff0420a242f5fc68069cb73e2d73c28e9d78bf3f7aefd5a75e1475c2"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
+            "sha256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O2-illustration-v1-20261012-4abd29bb3819.png",
+        "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O2-illustration-v1-20261012-4abd29bb3819.png?t=906d7f2b4542d66e",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e08/maseru/e08-maseru-O2-illustration-v1-20261012-4abd29bb3819.png",
+        "sha256": "906d7f2b4542d66e8db046fe136b8ad01d518be04937bb444cae9c71f885eb05",
+        "bytes": 2590759,
+        "http": 200,
+        "mime": "image/png",
+        "cors": "https://matkakirja.app",
+        "cacheBustedPreflightHttp": 404,
+        "cacheBustedReadback": true,
+        "byteExactReadback": true,
+        "uploadTransport": "Existing R2 S3 credentials; SigV4 conditional PUT",
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "assetID": "e08-maseru-O2-illustration-v1-20261012",
+        "nativeSHA256": "4abd29bb38195a39109caffc81982e4c12196e67e8fde14e90401338ba078660",
+        "canonicalReadbackByteExact": true,
+        "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-O2-illustration-v1-20261012-4abd29bb3819.png",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "era": "e08",
+        "city": "maseru",
+        "slot": "O2",
+        "targetJsonPath": "$.kaupunkilehti[0].matkailijalle.artikkeli.jaksot[1].kuva",
+        "verifiedAt": "2026-10-13T05:58:20.299723+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "galleryVisibleVerified": false
+      },
+      "producerExportProof": null,
+      "technicalExportProof": {
+        "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/delivery/exports/e08/maseru/e08-maseru-O2-illustration-v1-20261012-4abd29bb3819.png",
+        "sha256": "906d7f2b4542d66e8db046fe136b8ad01d518be04937bb444cae9c71f885eb05",
+        "bytes": 2590759,
+        "SHAReadAt": "2026-10-13T05:57:58.041069+00:00",
+        "verificationMode": "previous-pixel-proof-both-files-stat-unchanged",
+        "width": 1536,
+        "height": 1024,
+        "pixelWidth": 1536,
+        "pixelHeight": 1024,
+        "exifOrientation": 1,
+        "dimensionsBasis": "EXIF-oriented-display",
+        "format": "PNG",
+        "largeOriginalHeaderOnlyRead": false,
+        "nativeSHA256": "4abd29bb38195a39109caffc81982e4c12196e67e8fde14e90401338ba078660",
+        "rgbPixelSHA256": "e9223d359d9fe6e30dfce3e1448d068b0e13eec7c935c29cddd82fe6aa8748fc",
+        "pixelIdenticalToQAAcceptedNative": true,
+        "sRGBProfileEmbedded": true,
+        "provenanceLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "priorMediaFields": {
+        "tiedosto": "",
+        "lahde": "",
+        "selite": "",
+        "lyhyt": ""
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": false,
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "6d3cf7cbdaaf6240531b655c8eebeb36e0030daf997197f32a7f9bec6cfa9f58",
+      "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+      "contextAfterSHA256": "44e47e35b218299caeeca6347ce122f488aaf73d3db4bb15215f63a4162e1a12"
     },
     {
       "era": "e08",
@@ -1164,7 +1866,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+            "sha256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5"
           }
         ]
       },
@@ -1427,7 +2129,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+            "sha256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5"
           }
         ]
       },
@@ -1690,7 +2392,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+            "sha256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5"
           }
         ]
       },
@@ -1937,7 +2639,7 @@
           },
           {
             "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e08/maseru/illustration-qa-extra.json",
-            "sha256": "074ddc6236358eecf186633ab376263f3e6c20e617bb3c7c104ea81aa5d6a880"
+            "sha256": "42927909c0cf4ed6a988e2cd5534d427b570f2d16af93d5741e9dcaa0e26f1d5"
           }
         ]
       },
