@@ -63,6 +63,16 @@ VANHA OHJE: lue VIKA KESKITYS -rivit (grep "KESKITYS\|keskitys " kaannospalvelu/
 muste 56×30 = ohjausnappi--iso, "⟨Linssit⟩" 3×5) ja lähetä PT:lle löydöslista ennen korjauksia. Korjaukset tyylikirjan arvoilla
 (UI-POHJAT: puuttuva pohja → PT). Tavoite: testi läpi ja pysyvä osa ui-asettelutesti.sh:ta.
 
+## PÄIVITYS 22.00 (uusi tili)
+- Siluetti 56de0538a KUITATTU (PT) → SHA lähetetty Natiivisepälle junaan 188. ERÄ 1 VALMIS.
+- Keskitys: A/B-yhteenveto PT:lle 21.5x (odottaa kuittausta ennen A-korjauksia). B-mittausviat testiin 659a27065: kuvat, taustakuvat,
+  oma piirto ja väritetyt lehdet (radion valo, palkki) mitataan laatikostaan; SvgIkonin reuna 0,25 × huippu (ohut viiva); monen osan
+  rivi ilman keskitystä ei ole keskitetty (Untuvikko); tekstin muste < 60 % leveydestä tai < 40 % koosta = "?? peitossa", ei vikaa
+  (mylly vaaka); vika- ja peittokuvat (sisällön kanssa | ilman | erotus) tulokset/asettelukuvat/keskitys → kopioidaan
+  lokit/natiivi-ui-keskitys188c-kuvat. ui-asettelutesti.sh ilman osaa: keskitys pallo kahtena varauksena (iphone, ipad).
+- Ajo 3 linjalla 2 (Julkaisijan LUKKO NYT 22.00): `keskitys188c.sh` → keskitys188c-<osa>-<koko>.log; lopuksi LUKKO VAPAA Julkaisijalle.
+  SEURAAVAKSI: lue VIKA- ja ??-rivit, katso kuvat, sitten PT:n kuittauksen jälkeen A-korjaukset luokittain.
+
 ## Opetukset
 - Taulu sijoittuu PulunTauluNakyma.PulunLaatikko → Pulu.TaulunAnkkuri; liikkuva Pulu siirsi taulua.
 - Simulaattorin iPad-video tallentuu pystyyn; kuvaruudut (c1–c3) ovat oikein päin.
