@@ -97,7 +97,7 @@
   "valokuva": {
     "tiedosto": "Flowers red one - Islamabad spring blooms.jpg",
     "lyhyt": "Kukkia Islamabadissa.",
-    "selite": "Punaisia kukkia Islamabadissa.",
+    "selite": "Islamabadin kukintaa marraskuussa 2016.",
     "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Metro kulkee renkailla",
-          "teksti": "Islamabadin Metrobus ei ole maanalainen juna vaan nopea bussiyhteys. Osa linjoista kulkee omalla väylällään, ja yksi keskeinen yhteys jatkuu naapuriin Rawalpindiin. Lentoaseman suuntaan on oma yhteytensä.",
+          "teksti": "Islamabadin Metrobus ei ole maanalainen juna vaan nopea bussiyhteys. Osa linjoista kulkee omalla väylällään, ja yksi keskeinen yhteys jatkuu naapuriin Rawalpindiin. Lentoaseman suuntaan on oma yhteytensä. Punainen linja ulottuu Islamabadin Pak Secretariatista Rawalpindin Saddariin. Lentoasemayhteys lähtee Peshawar Morrin liittymästä. Järjestelmässä käytetään sähköisiä lippuja.",
           "wiki": "Rawalpindi-Islamabad Metrobus",
           "tiedosto": "",
           "lyhyt": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Sinivalas saapui sisämaahan",
-          "teksti": "Pakistanin luonnonhistoriallisen museon ulkona on sinivalaan luuranko. Museon näyttelyissä on myös kasveja ja eläimiä niiden elinympäristöissä, fossiileja sekä raakakiviä ja hiottuja jalokiviä. Ekologiset kierrot ja ympäristön ongelmat kuuluvat opetukseen yhtä lailla kuin yksittäiset näytteet. Museo toimii lisäksi tutkimuskeskuksena.",
+          "teksti": "Pakistanin luonnonhistoriallisen museon ulkona on sinivalaan luuranko. Museon näyttelyissä on myös kasveja ja eläimiä niiden elinympäristöissä, fossiileja sekä raakakiviä ja hiottuja jalokiviä. Ekologiset kierrot ja ympäristön ongelmat kuuluvat opetukseen yhtä lailla kuin yksittäiset näytteet. Museo toimii lisäksi tutkimuskeskuksena. Tutkimus kuuluu museon työhön.",
           "wiki": "Pakistan Museum of Natural History",
           "tiedosto": "",
           "lyhyt": "",
@@ -293,7 +293,7 @@
       "nostot": [
         {
           "otsikko": "Retkijärvi hoitaa vesihuoltoa",
-          "teksti": "Rawal-järvi on keinotekoinen vesiallas, joka rakennettiin palvelemaan Rawalpindin ja Islamabadin vedenhankintaa. Vettä kerääntyy Korang-joesta ja muista puroista, eikä valuma-alue rajoitu kaupungin rajaan: siihen kuuluu myös Murreen seutua. Rannoilla on puutarhoja, piknikpaikkoja ja veneilyä, mutta järven alkuperäinen tehtävä on käytännöllinen.",
+          "teksti": "Rawal-järvi on keinotekoinen vesiallas, joka rakennettiin palvelemaan Rawalpindin ja Islamabadin vedenhankintaa. Vettä kerääntyy Korang-joesta ja muista puroista, eikä valuma-alue rajoitu kaupungin rajaan: siihen kuuluu myös Murreen seutua. Rannoilla on puutarhoja, piknikpaikkoja ja veneilyä, mutta järven alkuperäinen tehtävä on käytännöllinen. Allasta ylläpitää Punjabin kasteluhallinto.",
           "wiki": "Rawal Lake",
           "tiedosto": "",
           "lyhyt": "",
@@ -302,7 +302,7 @@
         },
         {
           "otsikko": "Vesilinnut tulevat talveksi",
-          "teksti": "Rawal-järvi on tärkeä vesilintujen talvehtimispaikka, ja siellä esiintyy esimerkiksi sinisorsia. Vesialtaassa ja sen tulopuroissa elää myös kaloja, kuten karppeja ja tilapioita. Järvi kuuluu Margallan kansallispuiston kokonaisuuteen, vaikka vesimaisema näyttää aivan toiselta kuin kukkuloiden metsä.",
+          "teksti": "Rawal-järvi on tärkeä vesilintujen talvehtimispaikka, ja siellä esiintyy esimerkiksi sinisorsia. Vesialtaassa ja sen tulopuroissa elää myös kaloja, kuten karppeja ja tilapioita. Järvi kuuluu Margallan kansallispuiston kokonaisuuteen, vaikka vesimaisema näyttää aivan toiselta kuin kukkuloiden metsä. Rantojen puutarhoihin on istutettu kukkivia puita. Rannoilla on myös terassipuutarha.",
           "wiki": "Rawal Lake",
           "tiedosto": "",
           "lyhyt": "",
@@ -311,7 +311,7 @@
         },
         {
           "otsikko": "Leopardi kuuluu pääkaupungin naapureihin",
-          "teksti": "Margallan kansallispuiston eläimistöön kuuluvat leopardit, mutta myös muntjakit, goralit, reesusmakakit ja piikkisiat. Puistossa elää myös petolintuja ja käärmeitä, ja monsuunin aikaan rinteiden purot voimistuvat.",
+          "teksti": "Margallan kansallispuiston eläimistöön kuuluvat leopardit, mutta myös muntjakit, goralit, reesusmakakit ja piikkisiat. Puistossa elää myös petolintuja ja käärmeitä, ja monsuunin aikaan rinteiden purot voimistuvat. Puistossa tavataan myös mangusteja, villisikoja ja hedelmälepakoita. Vuorten rinteillä on luonnonlähteitä ja monsuunin aikana voimistuvia puroja.",
           "wiki": "Margalla Hills National Park",
           "tiedosto": "",
           "lyhyt": "",
@@ -320,7 +320,7 @@
         },
         {
           "otsikko": "Mänty saa seurakseen oliivipuun",
-          "teksti": "Margallan kansallispuiston puulajeihin kuuluu Pinus roxburghii -mänty, mutta kasvillisuus ei ole pelkkää havumetsää. Lajistossa on myös villioliivi, phulai-puu ja paikallinen päärynäpuu sekä kukkivia puita ja pensaita. Puiston istutuksiin valitaan alueen omaan kasvistoon kuuluvia lajeja.",
+          "teksti": "Margallan kansallispuiston puulajeihin kuuluu Pinus roxburghii -mänty, mutta kasvillisuus ei ole pelkkää havumetsää. Lajistossa on myös villioliivi, phulai-puu ja paikallinen päärynäpuu sekä kukkivia puita ja pensaita. Puiston istutuksiin valitaan alueen omaan kasvistoon kuuluvia lajeja. Kansallispuistoon kuuluu kukkuloiden lisäksi Shakarparianin alue.",
           "wiki": "Margalla Hills National Park",
           "tiedosto": "",
           "lyhyt": "",
@@ -370,7 +370,7 @@
     },
     "Rawal-järvi": {
       "aika": "Tekoallas 1900-luvulta",
-      "teksti": "Rawal-järvi on Korang-joen ja pienempien purojen vettä keräävä tekoallas. Se rakennettiin palvelemaan pääkaupunkiseudun vedenhankintaa, ja sen valuma-alue ulottuu myös Murreen seudulle. Järvi kuuluu Margallan kansallispuiston kokonaisuuteen. Rannoilla on puutarhoja ja virkistysalueita, mutta vesiallas on myös sinisorsien kaltaisten vesilintujen talvehtimispaikka ja kalojen elinympäristö.\n\n Järven nykykäytössä yhdistyvät vedenhankinta, luonnon elinympäristö ja retkeily. Rannoilla käydään piknikillä ja veneilemässä, ja altaassa sekä sen tulopuroissa elää esimerkiksi karppeja ja tilapioita.",
+      "teksti": "Rawal-järvi on Korang-joen ja pienempien purojen vettä keräävä tekoallas. Se rakennettiin palvelemaan pääkaupunkiseudun vedenhankintaa, ja sen valuma-alue ulottuu myös Murreen seudulle. Järvi kuuluu Margallan kansallispuiston kokonaisuuteen. Rannoilla on puutarhoja ja virkistysalueita, mutta vesiallas on myös sinisorsien kaltaisten vesilintujen talvehtimispaikka ja kalojen elinympäristö.\n\nJärven nykykäytössä yhdistyvät vedenhankinta, luonnon elinympäristö ja retkeily. Rannoilla käydään piknikillä ja veneilemässä, ja altaassa sekä sen tulopuroissa elää esimerkiksi karppeja ja tilapioita.",
       "kuvat": [
         {
           "tiedosto": "Rawal Lake Eastern Bank.jpg",

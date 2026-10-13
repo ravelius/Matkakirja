@@ -15,7 +15,7 @@
   },
   "artikkeli": {
     "intro": "Thimphussa pääkaupungin liikennettä voi ohjata poliisin käsi. **Wang Chhun laaksoon** kasvanut Bhutanin pääkaupunki levittäytyy joen vartta pitkin ja nousee ympäröiville rinteille. Nykyisen keskustan taustalla on joukko kyliä, joista monet elävät edelleen kaupunginosien nimissä. Isoisän matkavuonna 1873 laaksossa oli jo asutusta ja luostareita, mutta nykyinen pääkaupunki syntyi vasta myöhemmin.\n\nThimphusta tuli maan pääkaupunki 1900-luvun puolivälissä, ja vanha Punakha väistyi hallinnon keskuksena. Kaupungissa voi siirtyä vilkkaalta kauppakadulta kansalliskirjaston vanhojen käsikirjoitusten ääreen. **Käsityö on täällä myös opiskelua ja työtä**: tekstiilejä kudotaan, paperia valmistetaan ja perinteisiä taitoja opetetaan. Changlimithangin jousiammunnassa osumaa seuraa laulu ja tanssi.",
-    "teksti": "Thimphun kasvussa näkyy laakson muoto. Wang Chhu kulkee kaupungin läpi, ja asutus jatkuu pohjoisesta etelään sekä rinteille. Motithangin, Changangkhan ja Taban kaltaiset nimet ovat peräisin laakson aiemmista kylistä. Pääkaupungin historia on siksi nuorempi kuin sen paikkojen historia.\n\nSimtokhan dzong rakennettiin 1600-luvulla kaupungin eteläpuolen harjanteelle. Se kuuluu Bhutanin linnoitusluostareihin, joissa uskonnollinen elämä ja hallinto ovat liittyneet toisiinsa. \n\nKansalliskirjastossa säilytetään käsintehdylle paperille kirjoitettuja tekstejä, ja tekstiilimuseo esittelee kudonnan menetelmiä. Samat taidot jatkuvat kaupungin oppilaitoksissa ja työpajoissa."
+    "teksti": "Thimphun kasvussa näkyy laakson muoto. Wang Chhu kulkee kaupungin läpi, ja asutus jatkuu pohjoisesta etelään sekä rinteille. Motithangin, Changangkhan ja Taban kaltaiset nimet ovat peräisin laakson aiemmista kylistä. Pääkaupungin historia on siksi nuorempi kuin sen paikkojen historia.\n\nSimtokhan dzong rakennettiin 1600-luvulla kaupungin eteläpuolen harjanteelle. Se kuuluu Bhutanin linnoitusluostareihin, joissa uskonnollinen elämä ja hallinto ovat liittyneet toisiinsa.\n\nKansalliskirjastossa säilytetään käsintehdylle paperille kirjoitettuja tekstejä, ja tekstiilimuseo esittelee kudonnan menetelmiä. Samat taidot jatkuvat kaupungin oppilaitoksissa ja työpajoissa."
   },
   "kysymykset": [
     {
@@ -90,14 +90,14 @@
     }
   ],
   "tiedot": [
-    "Thimphun risteyksessä liikenteen rytmi tulee poliisin käsistä: kuljettajat seuraavat käsimerkkejä liikennevalojen sijasta.",
+    "Norzin Lam on Thimphun pääkatu; lam merkitsee tietä tai katua.",
     "Motithangin takinit eivät lähteneet metsään, kun pieni eläintarha suljettiin. Kaupungin tuntumassa pysyneille eläimille järjestettiin oma alue.",
     "Thimphun kansalliskirjaston perinteisiä kirjoja säilytetään käsintehdyllä paperilla puulevyjen välissä, yhteen sidottuina."
   ],
   "valokuva": {
     "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg",
-    "lyhyt": "Momo-nyyttejä Thimphun lounaalla.",
-    "selite": "Momoja Thimphussa 2. syyskuuta 2025 kuvatulla lounaslautasella.",
+    "lyhyt": "Momoja lounaaksi.",
+    "selite": "Momo-lounas syyskuussa 2025.",
     "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Pääkaupunki kylien päälle",
-          "teksti": "Motithang, Changangkha ja Taba olivat laakson kyliä ennen kuin niistä tuli Thimphun kaupunginosia. Vielä 1900-luvun puolivälissä nykyisen kaupungin paikalla oli hajallaan olevia asutuksia. Hallinnon siirtyminen Punakhasta Thimphuun teki laaksosta pääkaupungin, joka kasvoi joen vartta ja rinteitä pitkin. Vanhat nimet eivät kadonneet kasvun mukana.",
+          "teksti": "Motithang, Changangkha ja Taba olivat laakson kyliä ennen kuin niistä tuli Thimphun kaupunginosia. Vielä 1900-luvun puolivälissä nykyisen kaupungin paikalla oli hajallaan olevia asutuksia. Hallinnon siirtyminen Punakhasta Thimphuun teki laaksosta pääkaupungin, joka kasvoi joen vartta ja rinteitä pitkin. Vanhat nimet eivät kadonneet kasvun mukana. Laakson kyliin kuului myös Langchupakha.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -136,8 +136,8 @@
           "wiki": "Thimphu"
         },
         {
-          "otsikko": "Risteyksen kapellimestari",
-          "teksti": "Thimphun liikenteestä tunnettu yksityiskohta on käsimerkein ohjaava poliisi. Kaupungin liikennevaloista luovuttiin, ja liikennettä ohjataan risteyksessä käsien ja käsivarsien liikkeillä. Liikkeiden rytmiä on verrattu tanssiin, mutta tehtävä on arkinen: autoilijoiden on tiedettävä, kuka saa edetä ja kenen pitää odottaa.",
+          "otsikko": "Joki määrää katujen suunnan",
+          "teksti": "Thimphun pääkadut kulkevat enimmäkseen pohjoisesta etelään Wang Chhun suuntaisesti. Tärkeä keskustan katu on Norzin Lam; lam merkitsee tietä tai katua. Sivukadut kiemurtelevat rinteille asuinalueiden joukkoon. Kävelyreitit yhdistävät kaupallisia alueita ja joen vartta. Norzin Lam erottaa Chubachun Motithangista, ja sen varrella on kauppoja, ravintoloita, tekstiilimuseo sekä kansalliskirjasto.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -146,7 +146,7 @@
         },
         {
           "otsikko": "Eläimet jäivät kaupunkiin",
-          "teksti": "Motithangin takinalueen tarina alkoi pienestä eläintarhasta. Kun se suljettiin ja eläimet vapautettiin ympäröivään metsään, takinit eivät lähteneetkään kauas: niitä tavattiin kaupungin kaduilla etsimässä syötävää. Niille järjestettiin oma suojelualue.",
+          "teksti": "Motithangin takinalueen tarina alkoi pienestä eläintarhasta. Kun se suljettiin ja eläimet vapautettiin ympäröivään metsään, takinit eivät lähteneetkään kauas: niitä tavattiin kaupungin kaduilla etsimässä syötävää. Niille järjestettiin oma suojelualue. Vapautus seurasi kuninkaan päätöstä sulkea eläintarha uskonnollisista ja ympäristöön liittyvistä syistä. Takin on Bhutanin kansalliseläin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Osuma tarvitsee tanssin",
-          "teksti": "Changlimithangissa jousiammunta kuuluu Thimphun urheiluelämään. Kentällä käytetään sekä perinteisiä bambujousia että nykyaikaisia taljajousia, eikä kilpailu rajoitu nuolen lentoon. Joukkueita kannustetaan, vastustajia kiusoitellaan ja onnistumisia juhlistetaan laulaen ja tanssien.",
+          "teksti": "Changlimithangissa jousiammunta kuuluu Thimphun urheiluelämään. Kentällä käytetään sekä perinteisiä bambujousia että nykyaikaisia taljajousia, eikä kilpailu rajoitu nuolen lentoon. Joukkueita kannustetaan, vastustajia kiusoitellaan ja onnistumisia juhlistetaan laulaen ja tanssien. Changlimithangissa pelataan myös jalkapalloa ja krikettiä. Nykyinen stadion rakennettiin 1900-luvulla.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -293,7 +293,7 @@
       "nostot": [
         {
           "otsikko": "Paperi alkaa pensaasta",
-          "teksti": "Bhutanilainen käsintehty paperi valmistetaan daphne-pensaan kuoresta. Thimphussa perinnettä voi seurata paperityöpajoissa, joissa kasviraaka-aineesta syntyy kirjoittamiseen sopiva arkki. Kaupungin kansalliskirjastossa säilytetään myös vanhoja käsintehdylle paperille valmistettuja tekstejä.",
+          "teksti": "Bhutanilainen käsintehty paperi valmistetaan daphne-pensaan kuoresta. Thimphussa perinnettä voi seurata paperityöpajoissa, joissa kasviraaka-aineesta syntyy kirjoittamiseen sopiva arkki. Kaupungin kansalliskirjastossa säilytetään myös vanhoja käsintehdylle paperille valmistettuja tekstejä. Paperinvalmistus kuuluu Zorig Chusum -oppilaitoksen perinteisiin käsityöaloihin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -302,7 +302,7 @@
         },
         {
           "otsikko": "Kangas kertoo tekijästään",
-          "teksti": "Thimphun tekstiilimuseo käsittelee Bhutanin kudontaa sekä taitona että kulttuuriperintönä. Näyttelyissä esitellään loimi- ja kudekuviointia, uskonnollisia tekstiilejä ja kansallispukuja. Naisten kira ja miesten gho kuuluvat kokoelmiin, samoin kuninkaalliset vaatteet. Museon rinnalla perinne jatkuu kutojien työssä ja opetuksessa.",
+          "teksti": "Thimphun tekstiilimuseo käsittelee Bhutanin kudontaa sekä taitona että kulttuuriperintönä. Näyttelyissä esitellään loimi- ja kudekuviointia, uskonnollisia tekstiilejä ja kansallispukuja. Naisten kira ja miesten gho kuuluvat kokoelmiin, samoin kuninkaalliset vaatteet. Museon rinnalla perinne jatkuu kutojien työssä ja opetuksessa. Museossa näytetään myös kehruuta ja kuitujen värjäämistä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -320,7 +320,7 @@
         },
         {
           "otsikko": "Postimerkillä on oma museo",
-          "teksti": "Thimphun pääpostitoimistossa toimii postimuseo, joka kertoo viestien kulusta Bhutanissa. Sen aiheita ovat varhaiset postinkuljettajat, postipalvelun kehittyminen ja postimerkit. Merkit ovat olleet maalle myös tapa kertoa kulttuuristaan maailmalle: niissä esiintyvät perinteet, luonto ja tärkeät tapahtumat.",
+          "teksti": "Thimphun pääpostitoimistossa toimii postimuseo, joka kertoo viestien kulusta Bhutanissa. Sen aiheita ovat varhaiset postinkuljettajat, postipalvelun kehittyminen ja postimerkit. Merkit ovat olleet maalle myös tapa kertoa kulttuuristaan maailmalle: niissä esiintyvät perinteet, luonto ja tärkeät tapahtumat. Näyttelyssä on valokuvia ja harvinaisia esineitä postipalvelun vaiheista.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -350,7 +350,7 @@
   "nahtavyydet": {
     "Simtokhan dzong": {
       "aika": "1600-luku",
-      "teksti": "Simtokhan dzong kohoaa Thimphun eteläpuolisella harjanteella. Sen sijainti liittyy laaksoon sekä kulkureitteihin, jotka johtavat Paron ja itäisen Bhutanin suuntiin. Dzong tarkoittaa linnoitusluostaria: samassa kokonaisuudessa on ollut sekä uskonnollisia että hallinnollisia tehtäviä. Simtokhan rakennutti 1600-luvulla Zhabdrung Ngawang Namgyal, joka yhdisti Bhutania.\n\nSisällä ja ulkoseinillä on kappeleita, maalauksia, rukouspyöriä ja liuskekivireliefejä. Ne kertovat rakennuksen uskonnollisesta käytöstä; linnoituksen historia ei näy vain muurien paksuudessa. Kokonaisuutta on korjattu ja laajennettu useaan otteeseen, joten nykyistä ulkoasua ei voi sellaisenaan siirtää menneisyyteen.\n\n Rakennukseen on myöhemmin liittynyt myös dzongkhan kielen opetusta.",
+      "teksti": "Simtokhan dzong kohoaa Thimphun eteläpuolisella harjanteella. Sen sijainti liittyy laaksoon sekä kulkureitteihin, jotka johtavat Paron ja itäisen Bhutanin suuntiin. Dzong tarkoittaa linnoitusluostaria: samassa kokonaisuudessa on ollut sekä uskonnollisia että hallinnollisia tehtäviä. Simtokhan rakennutti 1600-luvulla Zhabdrung Ngawang Namgyal, joka yhdisti Bhutania.\n\nSisällä ja ulkoseinillä on kappeleita, maalauksia, rukouspyöriä ja liuskekivireliefejä. Ne kertovat rakennuksen uskonnollisesta käytöstä; linnoituksen historia ei näy vain muurien paksuudessa. Kokonaisuutta on korjattu ja laajennettu useaan otteeseen, joten nykyistä ulkoasua ei voi sellaisenaan siirtää menneisyyteen.\n\nRakennukseen on myöhemmin liittynyt myös dzongkhan kielen opetusta.",
       "kuvat": [
         {
           "tiedosto": "",

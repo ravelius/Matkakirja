@@ -108,8 +108,8 @@
       "kansikuvat": [
         {
           "tiedosto": "Dhaka oli 202279 lrg.jpg",
-          "lyhyt": "Dhakan kaupunkialue Landsat-satelliitista.",
-          "selite": "Satelliittikuva näyttää Dhakan kaupunkialueen ja sitä ympäröivät jokiuomat.",
+          "lyhyt": "Suur-Dhaka satelliittikuvassa.",
+          "selite": "Dhakan laaja taajama-alue satelliitista nähtynä.",
           "lahde": "Landsat, Wikimedia Commons (PD)"
         },
         {
@@ -128,10 +128,10 @@
       "nostot": [
         {
           "otsikko": "Joki on liikenneväylä",
-          "teksti": "Sadarghatin satamassa Buriganga kuuluu Dhakan arjen liikenteeseen. Sieltä kuljetetaan sekä matkustajia että tavaraa muualle Bangladeshin jokialueille. Alukset yhdistävät pääkaupungin paikkoihin, joihin vesireitti on luonteva yhteys. Dhaka on kasvanut jokien keskellä, ja sen satama jatkaa vanhaa kauppakaupungin tehtävää.",
+          "teksti": "Sadarghatin satamassa Buriganga kuuluu Dhakan arjen liikenteeseen. Sieltä kuljetetaan sekä matkustajia että tavaraa muualle Bangladeshin jokialueille. Alukset yhdistävät pääkaupungin paikkoihin, joihin vesireitti on luonteva yhteys. Dhaka on kasvanut jokien keskellä, ja sen satama jatkaa vanhaa kauppakaupungin tehtävää. Kaupunki sijaitsee Gangesin suiston alavalla tasangolla.",
           "tiedosto": "River Port from Above.jpg",
-          "lyhyt": "Veneitä Dhakan Buriganga-joen satamassa.",
-          "selite": "Ylhäältä kuvattu Burigangan sataman alusten ryhmä Dhakassa maaliskuussa 2023.",
+          "lyhyt": "Buriganga-joki.",
+          "selite": "Burigangan jokinäkymä maaliskuussa 2023.",
           "lahde": "Amdadphoto, Wikimedia Commons (CC BY-SA 4.0)",
           "wiki": "Dhaka"
         },
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Linnoituksen lämmin vesi",
-          "teksti": "Lalbaghin linnakkeen kuvernöörin asuintiloihin liittyi hammam, kylpylä. Sen alla olevassa huoneessa lämmitettiin vettä, ja sitä johdettiin kylpylään terrakottaputkilla. Arkeologit ovat löytäneet järjestelmän jäänteitä sekä tulen käytöstä kertovia mustia jälkiä.",
+          "teksti": "Lalbaghin linnakkeen kuvernöörin asuintiloihin liittyi hammam, kylpylä. Sen alla olevassa huoneessa lämmitettiin vettä, ja sitä johdettiin kylpylään terrakottaputkilla. Arkeologit ovat löytäneet järjestelmän jäänteitä sekä tulen käytöstä kertovia mustia jälkiä. Putkia pitkin toimitettiin kylpylään sekä lämmintä että viileää vettä. Kylpylän vieressä oli myös käymälä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -302,7 +302,7 @@
         },
         {
           "otsikko": "Kotilosta rannerenkaaksi",
-          "teksti": "Shankhari Bazaarin nimi liittyy kotilonkuoria työstävien käsityöläisten yhteisöön. Kuoresta leikattu ja koristeltu shankha-rannerengas kuuluu bengalilaiseen hinduperinteeseen ja kertoo naisen olevan naimisissa. Vanhan kaupungin kapean kadun myymälöissä rannekorut ovat osa uskonnolliseen ja perhe-elämään liittyvää kauppaa.",
+          "teksti": "Shankhari Bazaarin nimi liittyy kotilonkuoria työstävien käsityöläisten yhteisöön. Kuoresta leikattu ja koristeltu shankha-rannerengas kuuluu bengalilaiseen hinduperinteeseen ja kertoo naisen olevan naimisissa. Vanhan kaupungin kapean kadun myymälöissä rannekorut ovat osa uskonnolliseen ja perhe-elämään liittyvää kauppaa. Kapeaa katua reunustavat moguli- ja siirtomaakaudella rakennetut koristellut tiilitalot.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -311,7 +311,7 @@
         },
         {
           "otsikko": "Kirkko kauppiaiden jäljillä",
-          "teksti": "Armanitolan armenialainen kirkko rakennettiin 1700-luvulla paikalle, jota oli jo käytetty hautausmaana. Hautakivet säilyttävät alueen armenialaisten elämäntarinoita. Yhteisön kauppiaat osallistuivat Dhakan tekstiili-, juutti- ja nahkakauppaan, ja kaupunginosan nimi kantaa heidän nimeään edelleen.",
+          "teksti": "Armanitolan armenialainen kirkko rakennettiin 1700-luvulla paikalle, jota oli jo käytetty hautausmaana. Hautakivet säilyttävät alueen armenialaisten elämäntarinoita. Yhteisön kauppiaat osallistuivat Dhakan tekstiili-, juutti- ja nahkakauppaan, ja kaupunginosan nimi kantaa heidän nimeään edelleen. Kellotorni rakennettiin kirkon länsipuolelle ja tuhoutui myöhemmin maanjäristyksessä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -355,7 +355,7 @@
   "nahtavyydet": {
     "Lalbaghin linnake": {
       "aika": "1600-luku",
-      "teksti": "Lalbaghin linnake rakennettiin Dhakan vanhaan kaupunkiin mogulikauden Bengalin kuvernöörin asuinpaikaksi. Työt aloitti 1600-luvulla prinssi Muhammad Azam Shah, keisari Aurangzebin poika. Prinssin lähdettyä Shaista Khan jatkoi hanketta, mutta kokonaisuus jäi keskeneräiseksi: rakennustyö pysähtyi Pari Bibin kuoleman jälkeen. Paikalla on kuvernöörin asuintiloja, moskeija ja Pari Bibin hautarakennus.\n\nKuvernöörin asuintiloihin liittyy hammam, jonka veden lämmitys- ja jakelujärjestelmän osia on löydetty arkeologisissa tutkimuksissa. Vesikanavat ja suihkulähteet kuuluvat myös kompleksin puutarhoihin. \n\n Sen alkuperäisen sijainnin ymmärtämistä vaikeuttaa myös joen muutos: Buriganga kulki aiemmin linnakkeen vierellä, mutta on sittemmin siirtynyt kauemmas.",
+      "teksti": "Lalbaghin linnake rakennettiin Dhakan vanhaan kaupunkiin mogulikauden Bengalin kuvernöörin asuinpaikaksi. Työt aloitti 1600-luvulla prinssi Muhammad Azam Shah, keisari Aurangzebin poika. Prinssin lähdettyä Shaista Khan jatkoi hanketta, mutta kokonaisuus jäi keskeneräiseksi: rakennustyö pysähtyi Pari Bibin kuoleman jälkeen. Paikalla on kuvernöörin asuintiloja, moskeija ja Pari Bibin hautarakennus.\n\nKuvernöörin asuintiloihin liittyy hammam, jonka veden lämmitys- ja jakelujärjestelmän osia on löydetty arkeologisissa tutkimuksissa. Vesikanavat ja suihkulähteet kuuluvat myös kompleksin puutarhoihin.\n\nSen alkuperäisen sijainnin ymmärtämistä vaikeuttaa myös joen muutos: Buriganga kulki aiemmin linnakkeen vierellä, mutta on sittemmin siirtynyt kauemmas.",
       "kuvat": [
         {
           "tiedosto": "",

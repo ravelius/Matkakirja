@@ -137,7 +137,7 @@
         },
         {
           "otsikko": "Rautatie tekee mutkan",
-          "teksti": "Biškekin rautatie ei kulje suoraan vuoriston läpi etelään. Kaupunki liittyy sivurataa pitkin Turkestanin ja Siperian väliseen rataverkkoon, ja kaukojunat käyttävät Kazakstanin kautta kulkevia yhteyksiä. Keskustan eteläpuolella sijaitseva Biškek II on kaupungin rautatieasemia, ja sen luota alkaa pohjoiseen kulkeva Erkindik-bulevardi.",
+          "teksti": "Biškekin rautatie ei kulje suoraan vuoriston läpi etelään. Kaupunki liittyy sivurataa pitkin Turkestanin ja Siperian väliseen rataverkkoon, ja kaukojunat käyttävät Kazakstanin kautta kulkevia yhteyksiä. Keskustan eteläpuolella sijaitseva Biškek II on kaupungin rautatieasemia, ja sen luota alkaa pohjoiseen kulkeva Erkindik-bulevardi. Sivurata jatkuu pohjoisen suuntaan Kazakstaniin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Sanomalehti dungaaniksi",
-          "teksti": "Biškekissä ilmestyvä Huimin Bao on dungaaninkielinen sanomalehti. Samassa kaupungissa toimivat kansalliskirjasto, paikallisia museoita ja useita yliopistoja.",
+          "teksti": "Biškekissä ilmestyvä Huimin Bao on dungaaninkielinen sanomalehti. Samassa kaupungissa toimivat kansalliskirjasto, paikallisia museoita ja useita yliopistoja. Kaupungissa ilmestyvät myös venäjänkielinen Vecherniy Bishkek ja englanninkielinen Bishkek Observer. Kansallinen yleisradio KTRK toimii Biškekissä. Venäjä on kaupungissa yleisesti käytetty kieli.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -298,7 +298,7 @@
         },
         {
           "otsikko": "Talo talon sisällä",
-          "teksti": "Frunzen kotimuseossa pieni vanha asuintalo on säilytetty myöhemmän museorakennuksen sisällä. Museo kertoo Biškekissä syntyneestä Mihail Frunzesta ja kaupungin varhaisesta neuvostokaudesta. Frunzen sukunimi oli pitkään myös kaupungin nimi.",
+          "teksti": "Frunzen kotimuseossa pieni vanha asuintalo on säilytetty myöhemmän museorakennuksen sisällä. Museo kertoo Biškekissä syntyneestä Mihail Frunzesta ja kaupungin varhaisesta neuvostokaudesta. Frunzen sukunimi oli pitkään myös kaupungin nimi. Kotitalo on museon alimmassa kerroksessa. Ylemmissä kerroksissa näyttelyt käsittelevät Frunzen sotilasuraa ja varhaista neuvostokautta.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -307,7 +307,7 @@
         },
         {
           "otsikko": "Katu muistaa vanhan nimensä",
-          "teksti": "Biškekissä osoite voi kuulua yhtä aikaa nykyiseen karttaan ja vanhaan puheeseen. Sovietskaja-kadun keskiosan virallinen nimi on Jusup Abdrahmanov, mutta vanha nimi on edelleen käytössä. Keskustan poikittainen Tšui-katu oli neuvostoaikana Lenin-katu. Myös nykyinen Erkindik-bulevardi kantoi aiemmin Dzeržinskin nimeä; Erkindik tarkoittaa vapautta.",
+          "teksti": "Biškekissä osoite voi kuulua yhtä aikaa nykyiseen karttaan ja vanhaan puheeseen. Sovietskaja-kadun keskiosan virallinen nimi on Jusup Abdrahmanov, mutta vanha nimi on edelleen käytössä. Keskustan poikittainen Tšui-katu oli neuvostoaikana Lenin-katu. Myös nykyinen Erkindik-bulevardi kantoi aiemmin Dzeržinskin nimeä; Erkindik tarkoittaa vapautta. Tšui on poikittainen pääkatu.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -347,7 +347,7 @@
   "nahtavyydet": {
     "Osh-tori": {
       "aika": "1900-luku",
-      "teksti": "Osh-tori sijaitsee Biškekin länsipuolella.  Tällä torilla myydään elintarvikkeita, vaatteita, kodin tavaroita ja matkamuistoja, mutta tarjontaan kuuluvat myös soittimet. \n\nKansallistuotteiden osasto tunnetaan nimellä Kyyal, joka merkitsee unelmaa tai mielikuvitusta. Sieltä löytyy kirgisialaisia vaatteita, puisia säilytysarkkuja, vuodevaatteita ja kehtoja. Vaatteita voi myös tilata myyjiltä toivotussa koossa tai värissä.",
+      "teksti": "Osh-tori sijaitsee Biškekin länsipuolella. Tällä torilla myydään elintarvikkeita, vaatteita, kodin tavaroita ja matkamuistoja, mutta tarjontaan kuuluvat myös soittimet.\n\nKansallistuotteiden osasto tunnetaan nimellä Kyyal, joka merkitsee unelmaa tai mielikuvitusta. Sieltä löytyy kirgisialaisia vaatteita, puisia säilytysarkkuja, vuodevaatteita ja kehtoja. Vaatteita voi myös tilata myyjiltä toivotussa koossa tai värissä.",
       "kuvat": [
         {
           "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg",

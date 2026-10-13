@@ -3,7 +3,7 @@
   "era": "e09",
   "city": "islamabad",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+  "sourceContentAfterSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
   "assets": [
     {
       "era": "e09",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
-      "sourceContentSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+      "sourceContentSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "a86d2471041b5f4972d8f5705b880ffd3900c958f1c4dfaf3faa496ba95b944b",
@@ -241,7 +241,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+      "sourceContentAfterSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "a86d2471041b5f4972d8f5705b880ffd3900c958f1c4dfaf3faa496ba95b944b",
       "ownerApproved": true,
@@ -268,7 +268,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+        "sourceSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
         "sameImageNativeSHA256": "f62e2b4b8837bc43c96c01fc21b9c98bf009332f2232e0be86e0b39180e662fb",
         "sameImageExportSHA256": "6b185c9cc2d92053ba67983e088e304309df3c24fa0e84e014ba10abb67c9353",
         "independentNativeQAEvidencePreserved": true,
@@ -324,7 +324,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
-      "sourceContentSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+      "sourceContentSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8d12ca009a90e62864cc541cc7260b21187a2cd045ba03ca943417e93c7bf138",
         "semanticContextSHA256": "8d12ca009a90e62864cc541cc7260b21187a2cd045ba03ca943417e93c7bf138",
@@ -529,7 +529,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+      "sourceContentAfterSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
       "targetAfterSHA256": "8d12ca009a90e62864cc541cc7260b21187a2cd045ba03ca943417e93c7bf138",
       "contextAfterSHA256": "8d12ca009a90e62864cc541cc7260b21187a2cd045ba03ca943417e93c7bf138",
       "ownerApproved": true,
@@ -556,7 +556,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+        "sourceSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
         "sameImageNativeSHA256": "a796d24b65530febc78a9c6ac41316d7650bb2ff6d580d7ccd45ed44c6df5d59",
         "sameImageExportSHA256": "7a3b8a7f50f67467fb8650fa1436385c11ae67065a9e9e6f0d417a954671cf15",
         "independentNativeQAEvidencePreserved": true,
@@ -612,10 +612,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
-      "sourceContentSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+      "sourceContentSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f2cf716a42b77bfd6eed5753d019ba7506b3a2d293b52fa8ac19421978e42f5d",
-        "semanticContextSHA256": "f2cf716a42b77bfd6eed5753d019ba7506b3a2d293b52fa8ac19421978e42f5d",
+        "targetBeforeSHA256": "df178a225ae3dfc1dd1d653c7dca39319c7ee9dec57b90aeb265afdb1c60e457",
+        "semanticContextSHA256": "df178a225ae3dfc1dd1d653c7dca39319c7ee9dec57b90aeb265afdb1c60e457",
         "subjectTitle": "Sinivalas saapui sisämaahan",
         "targetState": "existing-target"
       },
@@ -798,9 +798,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
-      "targetAfterSHA256": "f2cf716a42b77bfd6eed5753d019ba7506b3a2d293b52fa8ac19421978e42f5d",
-      "contextAfterSHA256": "f2cf716a42b77bfd6eed5753d019ba7506b3a2d293b52fa8ac19421978e42f5d",
+      "sourceContentAfterSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
+      "targetAfterSHA256": "df178a225ae3dfc1dd1d653c7dca39319c7ee9dec57b90aeb265afdb1c60e457",
+      "contextAfterSHA256": "df178a225ae3dfc1dd1d653c7dca39319c7ee9dec57b90aeb265afdb1c60e457",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -825,7 +825,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+        "sourceSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
         "sameImageNativeSHA256": "afd1c00d4c958611a91298330563578eab3184e04b446194553dbf233181eae2",
         "sameImageExportSHA256": "b64216e17d2a3f77350b37db7131e665da7b2f3de688e61b194a5ee028df2678",
         "independentNativeQAEvidencePreserved": true,
@@ -881,10 +881,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
-      "sourceContentSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+      "sourceContentSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "93b9729148b734d30390637c2f66231f0f54b72c2700ac5fbb030d05202c2a56",
-        "semanticContextSHA256": "93b9729148b734d30390637c2f66231f0f54b72c2700ac5fbb030d05202c2a56",
+        "targetBeforeSHA256": "9c5e854cc9fcf581d5ee4ee1ecb79723efc7681eaf078d6cbbacae19f2ccec87",
+        "semanticContextSHA256": "9c5e854cc9fcf581d5ee4ee1ecb79723efc7681eaf078d6cbbacae19f2ccec87",
         "subjectTitle": "Vesilinnut tulevat talveksi",
         "targetState": "existing-target"
       },
@@ -1068,9 +1068,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
-      "targetAfterSHA256": "93b9729148b734d30390637c2f66231f0f54b72c2700ac5fbb030d05202c2a56",
-      "contextAfterSHA256": "93b9729148b734d30390637c2f66231f0f54b72c2700ac5fbb030d05202c2a56",
+      "sourceContentAfterSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
+      "targetAfterSHA256": "9c5e854cc9fcf581d5ee4ee1ecb79723efc7681eaf078d6cbbacae19f2ccec87",
+      "contextAfterSHA256": "9c5e854cc9fcf581d5ee4ee1ecb79723efc7681eaf078d6cbbacae19f2ccec87",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1095,7 +1095,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+        "sourceSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
         "sameImageNativeSHA256": "b4d8e89df0755def0f66e84fc998ce94c0f065374449aaaed8750237a9010831",
         "sameImageExportSHA256": "3b1efa2768bac913a5e146999580f8fb77924d394c0a58184c2e605ca505306c",
         "independentNativeQAEvidencePreserved": true,
@@ -1151,10 +1151,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
-      "sourceContentSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+      "sourceContentSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8159bc43b140e54cc030198c15c8ab4a62e2ec975cca338159ad0d32988f4009",
-        "semanticContextSHA256": "8159bc43b140e54cc030198c15c8ab4a62e2ec975cca338159ad0d32988f4009",
+        "targetBeforeSHA256": "4bddafa26167c6dd116c1635727e8a598f6ddd5ae7dcae12f9a1b3efdaad1339",
+        "semanticContextSHA256": "4bddafa26167c6dd116c1635727e8a598f6ddd5ae7dcae12f9a1b3efdaad1339",
         "subjectTitle": "Leopardi kuuluu pääkaupungin naapureihin",
         "targetState": "existing-target"
       },
@@ -1338,9 +1338,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
-      "targetAfterSHA256": "8159bc43b140e54cc030198c15c8ab4a62e2ec975cca338159ad0d32988f4009",
-      "contextAfterSHA256": "8159bc43b140e54cc030198c15c8ab4a62e2ec975cca338159ad0d32988f4009",
+      "sourceContentAfterSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
+      "targetAfterSHA256": "4bddafa26167c6dd116c1635727e8a598f6ddd5ae7dcae12f9a1b3efdaad1339",
+      "contextAfterSHA256": "4bddafa26167c6dd116c1635727e8a598f6ddd5ae7dcae12f9a1b3efdaad1339",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1365,7 +1365,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+        "sourceSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
         "sameImageNativeSHA256": "da66dc89f277151322f07503ad4f6655879cafc1df29f726d5e5b3f02dd44eb2",
         "sameImageExportSHA256": "946f5c9210776c66429e233588a3e5cab63e0a540cd017ea366ea45ed9b9bb5b",
         "independentNativeQAEvidencePreserved": true,
@@ -1421,10 +1421,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
-      "sourceContentSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+      "sourceContentSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e1f909d3cf8f7327cf9b66d4bcb950eb73931aee893c3071f0f40117cb30415a",
-        "semanticContextSHA256": "e1f909d3cf8f7327cf9b66d4bcb950eb73931aee893c3071f0f40117cb30415a",
+        "targetBeforeSHA256": "af7ba15db48b06b509da8d2ff8172a5310800214784864c9c07cd49638adc69b",
+        "semanticContextSHA256": "af7ba15db48b06b509da8d2ff8172a5310800214784864c9c07cd49638adc69b",
         "subjectTitle": "Mänty saa seurakseen oliivipuun",
         "targetState": "existing-target"
       },
@@ -1722,9 +1722,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
-      "targetAfterSHA256": "e1f909d3cf8f7327cf9b66d4bcb950eb73931aee893c3071f0f40117cb30415a",
-      "contextAfterSHA256": "e1f909d3cf8f7327cf9b66d4bcb950eb73931aee893c3071f0f40117cb30415a",
+      "sourceContentAfterSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
+      "targetAfterSHA256": "af7ba15db48b06b509da8d2ff8172a5310800214784864c9c07cd49638adc69b",
+      "contextAfterSHA256": "af7ba15db48b06b509da8d2ff8172a5310800214784864c9c07cd49638adc69b",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1749,7 +1749,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+        "sourceSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
         "sameImageNativeSHA256": "5c27c4ec4369e47e2120f61f3b9114ef8925d013e1c788db7fbe29c6d3dac02a",
         "sameImageExportSHA256": "66a6046acc53b3b2ae575ece416820d6425bc71f0785ca28291d7089bd590a12",
         "independentNativeQAEvidencePreserved": true,
@@ -1774,14 +1774,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/photo-ea2db55d3b564bb157bd.jpg",
         "suora": true,
         "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)",
-        "selite": "Punaisia kukkia Islamabadissa.",
+        "selite": "Islamabadin kukintaa marraskuussa 2016.",
         "lyhyt": "Kukkia Islamabadissa.",
         "tiedosto": "Flowers red one - Islamabad spring blooms.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)",
-        "selite": "Punaisia kukkia Islamabadissa.",
+        "selite": "Islamabadin kukintaa marraskuussa 2016.",
         "lyhyt": "Kukkia Islamabadissa.",
         "tiedosto": "Flowers red one - Islamabad spring blooms.jpg"
       },
@@ -1789,7 +1789,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/photo-ea2db55d3b564bb157bd.jpg",
         "suora": true,
         "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)",
-        "selite": "Punaisia kukkia Islamabadissa.",
+        "selite": "Islamabadin kukintaa marraskuussa 2016.",
         "lyhyt": "Kukkia Islamabadissa.",
         "tiedosto": "Flowers red one - Islamabad spring blooms.jpg"
       },
@@ -1805,10 +1805,10 @@
         3456
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
-      "sourceContentSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+      "sourceContentSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "42f9de1dad1b3e2f267ac22384cceff916dbe9622edf7629ee48f5f971958634",
-        "semanticContextSHA256": "42f9de1dad1b3e2f267ac22384cceff916dbe9622edf7629ee48f5f971958634",
+        "targetBeforeSHA256": "d40362afe3c0d4123cb6af3f027675ebaeed752fe24898c7b08d7390d1df148f",
+        "semanticContextSHA256": "d40362afe3c0d4123cb6af3f027675ebaeed752fe24898c7b08d7390d1df148f",
         "subjectTitle": "islamabad — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1965,7 +1965,7 @@
       "priorMediaFields": {
         "tiedosto": "Flowers red one - Islamabad spring blooms.jpg",
         "lyhyt": "Kukkia Islamabadissa.",
-        "selite": "Punaisia kukkia Islamabadissa.",
+        "selite": "Islamabadin kukintaa marraskuussa 2016.",
         "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -1992,14 +1992,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Mubashirkhan111, Commons (CC BY-SA 4.0)",
-        "selite": "Punaisia kukkia Islamabadissa.",
+        "selite": "Islamabadin kukintaa marraskuussa 2016.",
         "lyhyt": "Kukkia Islamabadissa.",
         "tiedosto": "Flowers red one - Islamabad spring blooms.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
-      "targetAfterSHA256": "42f9de1dad1b3e2f267ac22384cceff916dbe9622edf7629ee48f5f971958634",
-      "contextAfterSHA256": "42f9de1dad1b3e2f267ac22384cceff916dbe9622edf7629ee48f5f971958634",
+      "sourceContentAfterSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
+      "targetAfterSHA256": "d40362afe3c0d4123cb6af3f027675ebaeed752fe24898c7b08d7390d1df148f",
+      "contextAfterSHA256": "d40362afe3c0d4123cb6af3f027675ebaeed752fe24898c7b08d7390d1df148f",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2024,7 +2024,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+        "sourceSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
         "sameImageNativeSHA256": "ea2db55d3b564bb157bd6df991ab66bbec14a9c150684b2d506f68fe4cf0f076",
         "sameImageExportSHA256": "ea2db55d3b564bb157bd6df991ab66bbec14a9c150684b2d506f68fe4cf0f076",
         "independentNativeQAEvidencePreserved": true,
@@ -2083,10 +2083,10 @@
         2412
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/islamabad/sisalto.json",
-      "sourceContentSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+      "sourceContentSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d08e5365022d48a3d30af5051cba144189a6b09fc5b694539cb11268e533752b",
-        "semanticContextSHA256": "755bdb52449513527e438669a86ad46b92508ffc7ce3e58371866715efedd8b6",
+        "semanticContextSHA256": "0d794444356c27f4e2175f2a694d5336367c4ba38c23b31353af42b0eb5aaf93",
         "subjectTitle": "Rawal-järvi",
         "targetState": "existing-target"
       },
@@ -2313,9 +2313,9 @@
         "tiedosto": "Rawal Lake Eastern Bank.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+      "sourceContentAfterSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
       "targetAfterSHA256": "d08e5365022d48a3d30af5051cba144189a6b09fc5b694539cb11268e533752b",
-      "contextAfterSHA256": "755bdb52449513527e438669a86ad46b92508ffc7ce3e58371866715efedd8b6",
+      "contextAfterSHA256": "0d794444356c27f4e2175f2a694d5336367c4ba38c23b31353af42b0eb5aaf93",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2340,12 +2340,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "92b16735d65a95da357d9632910e726a37b7c2ac7001ab8ad7e155727c8b901a",
+        "sourceSHA256": "cc2154cae05d65bd88c419a173de1ebde256af0fe9683f7388943305f8339c9c",
         "sameImageNativeSHA256": "fa9d3352939ec06e5de5158a900c1d0efe5d973606e33f923376e8e40b22ab2a",
         "sameImageExportSHA256": "fa9d3352939ec06e5de5158a900c1d0efe5d973606e33f923376e8e40b22ab2a",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     }
   ],
@@ -2358,9 +2358,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e09/islamabad/6002ca7e8d632bc78b0c6b83581c04857ad647509ffdf69d6dfc58eb2cab720e.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e09/islamabad/729752cf3cc53981997a071658fee81191715f3771532577f143cdf160eaef30.json",
   "task118ReboundAt": "2026-10-13T16:31:25.678113+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:01:14.673802+00:00"
+  "task228ReboundAt": "2026-10-13T18:32:06.301670+00:00"
 }

@@ -3,7 +3,7 @@
   "era": "e09",
   "city": "thimphu",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+  "sourceContentAfterSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
   "assets": [
     {
       "era": "e09",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
-      "sourceContentSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "3d2dfb90752e562b9a09fa622da455c6b8f7e265c23e019d2ed175a6d7b76f59",
@@ -261,7 +261,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentAfterSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "3d2dfb90752e562b9a09fa622da455c6b8f7e265c23e019d2ed175a6d7b76f59",
       "ownerApproved": true,
@@ -288,7 +288,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+        "sourceSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
         "sameImageNativeSHA256": "58690d81a81f236bb2a16f2ebe56146051922a9e21703eae392cb0740ac582b5",
         "sameImageExportSHA256": "7ae1e4367e5a3b29d4f8c91f0debf386af6dd6cdbfc8b070e19be4abfe7eab7a",
         "independentNativeQAEvidencePreserved": true,
@@ -347,7 +347,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
-      "sourceContentSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "57adb44d6c15d4b4e389d385e835fe13413ee0b40fa32624593872d949479868",
@@ -517,7 +517,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentAfterSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "57adb44d6c15d4b4e389d385e835fe13413ee0b40fa32624593872d949479868",
       "ownerApproved": true,
@@ -544,7 +544,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+        "sourceSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
         "sameImageNativeSHA256": "66f152b03aad5531b84312e04369bdc40fc9094c67a7d096e06cbbf4ada7b58e",
         "sameImageExportSHA256": "8b10bdf68fef92ce54e70be5aa56ea564c035e58c355a8c9d81e533efb1dfbab",
         "independentNativeQAEvidencePreserved": true,
@@ -600,10 +600,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
-      "sourceContentSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "f1344a70613b1e611ae8d93eb950911039a2b41da4d343cac2feffe0b4322d85",
-        "semanticContextSHA256": "f1344a70613b1e611ae8d93eb950911039a2b41da4d343cac2feffe0b4322d85",
+        "targetBeforeSHA256": "1a9a79ff9d45393fa27e92df3212a60f19c83cdc1f2212deb0c600c2a0764653",
+        "semanticContextSHA256": "1a9a79ff9d45393fa27e92df3212a60f19c83cdc1f2212deb0c600c2a0764653",
         "subjectTitle": "Eläimet jäivät kaupunkiin",
         "targetState": "existing-target"
       },
@@ -770,9 +770,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
-      "targetAfterSHA256": "f1344a70613b1e611ae8d93eb950911039a2b41da4d343cac2feffe0b4322d85",
-      "contextAfterSHA256": "f1344a70613b1e611ae8d93eb950911039a2b41da4d343cac2feffe0b4322d85",
+      "sourceContentAfterSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
+      "targetAfterSHA256": "1a9a79ff9d45393fa27e92df3212a60f19c83cdc1f2212deb0c600c2a0764653",
+      "contextAfterSHA256": "1a9a79ff9d45393fa27e92df3212a60f19c83cdc1f2212deb0c600c2a0764653",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -797,7 +797,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+        "sourceSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
         "sameImageNativeSHA256": "c1ee4a378d275d606352175daa4cab6ebcb88d2af0b052bfabf0b0b55bbde4fb",
         "sameImageExportSHA256": "7d1f9e583dd65dcc7fd50a77e29060dba167cea25ed01fac251083b3b80399cf",
         "independentNativeQAEvidencePreserved": true,
@@ -853,10 +853,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
-      "sourceContentSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "1bcb2555536a5b2ee59324e86a63937afffccdba5370852faebca56f5ab9aa74",
-        "semanticContextSHA256": "1bcb2555536a5b2ee59324e86a63937afffccdba5370852faebca56f5ab9aa74",
+        "targetBeforeSHA256": "10424273ffe8db96eea723f476bb5d8e19a4a1d0c3111710e460463e82ba2fb7",
+        "semanticContextSHA256": "10424273ffe8db96eea723f476bb5d8e19a4a1d0c3111710e460463e82ba2fb7",
         "subjectTitle": "Osuma tarvitsee tanssin",
         "targetState": "existing-target"
       },
@@ -1039,9 +1039,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
-      "targetAfterSHA256": "1bcb2555536a5b2ee59324e86a63937afffccdba5370852faebca56f5ab9aa74",
-      "contextAfterSHA256": "1bcb2555536a5b2ee59324e86a63937afffccdba5370852faebca56f5ab9aa74",
+      "sourceContentAfterSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
+      "targetAfterSHA256": "10424273ffe8db96eea723f476bb5d8e19a4a1d0c3111710e460463e82ba2fb7",
+      "contextAfterSHA256": "10424273ffe8db96eea723f476bb5d8e19a4a1d0c3111710e460463e82ba2fb7",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1066,7 +1066,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+        "sourceSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
         "sameImageNativeSHA256": "4cf6091b1d47c236577d30a1c96c4b5919d2ddb0cccc2d00569aad7a82d87b24",
         "sameImageExportSHA256": "95fc3083284d7d43eaff995bd16183d79f7ac76c1262139093aa3f436471f562",
         "independentNativeQAEvidencePreserved": true,
@@ -1122,10 +1122,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
-      "sourceContentSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a7de42695fd2f1bd55f0b610e666104bbdd03383219b665ba42d264a8d26fa07",
-        "semanticContextSHA256": "a7de42695fd2f1bd55f0b610e666104bbdd03383219b665ba42d264a8d26fa07",
+        "targetBeforeSHA256": "6f411fbc0492c9df0b940fcea6187fb1879f420ab03ee2ad86855f163afe0d44",
+        "semanticContextSHA256": "6f411fbc0492c9df0b940fcea6187fb1879f420ab03ee2ad86855f163afe0d44",
         "subjectTitle": "Paperi alkaa pensaasta",
         "targetState": "existing-target"
       },
@@ -1292,9 +1292,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
-      "targetAfterSHA256": "a7de42695fd2f1bd55f0b610e666104bbdd03383219b665ba42d264a8d26fa07",
-      "contextAfterSHA256": "a7de42695fd2f1bd55f0b610e666104bbdd03383219b665ba42d264a8d26fa07",
+      "sourceContentAfterSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
+      "targetAfterSHA256": "6f411fbc0492c9df0b940fcea6187fb1879f420ab03ee2ad86855f163afe0d44",
+      "contextAfterSHA256": "6f411fbc0492c9df0b940fcea6187fb1879f420ab03ee2ad86855f163afe0d44",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1319,7 +1319,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+        "sourceSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
         "sameImageNativeSHA256": "385ff1e98cda958459bfef65c8bcdef1f19964922d828e7483124789c0c9f5b2",
         "sameImageExportSHA256": "23c6b9f9084440748e70b8f51a7d21875c69393bd37b468875764d82387ed10f",
         "independentNativeQAEvidencePreserved": true,
@@ -1375,10 +1375,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
-      "sourceContentSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "46a879bd0da8ad982dcb7c1e4a7d4959d8b01f71e0262954da2bdfc5f5e486ab",
-        "semanticContextSHA256": "46a879bd0da8ad982dcb7c1e4a7d4959d8b01f71e0262954da2bdfc5f5e486ab",
+        "targetBeforeSHA256": "d714a8acb8e8274849fc27228a493a973d794feb66a3be625d3f2c7616da96c3",
+        "semanticContextSHA256": "d714a8acb8e8274849fc27228a493a973d794feb66a3be625d3f2c7616da96c3",
         "subjectTitle": "Kangas kertoo tekijästään",
         "targetState": "existing-target"
       },
@@ -1561,9 +1561,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
-      "targetAfterSHA256": "46a879bd0da8ad982dcb7c1e4a7d4959d8b01f71e0262954da2bdfc5f5e486ab",
-      "contextAfterSHA256": "46a879bd0da8ad982dcb7c1e4a7d4959d8b01f71e0262954da2bdfc5f5e486ab",
+      "sourceContentAfterSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
+      "targetAfterSHA256": "d714a8acb8e8274849fc27228a493a973d794feb66a3be625d3f2c7616da96c3",
+      "contextAfterSHA256": "d714a8acb8e8274849fc27228a493a973d794feb66a3be625d3f2c7616da96c3",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -1588,7 +1588,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+        "sourceSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
         "sameImageNativeSHA256": "fed18b8502b65343c3f5233ae24dedc92e676619cd080204a595f49cf6e0ec86",
         "sameImageExportSHA256": "315a46ec4a0fcac07c99707b68e086473cddb074deb032748ee802112b667520",
         "independentNativeQAEvidencePreserved": true,
@@ -1644,7 +1644,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
-      "sourceContentSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "semanticSourceBind": {
         "targetBeforeSHA256": "492dd9f1182b832d976583026727fd5776155c14e97d07657f0415df489d52cf",
         "semanticContextSHA256": "492dd9f1182b832d976583026727fd5776155c14e97d07657f0415df489d52cf",
@@ -1814,7 +1814,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentAfterSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "targetAfterSHA256": "492dd9f1182b832d976583026727fd5776155c14e97d07657f0415df489d52cf",
       "contextAfterSHA256": "492dd9f1182b832d976583026727fd5776155c14e97d07657f0415df489d52cf",
       "ownerApproved": true,
@@ -1841,7 +1841,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+        "sourceSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
         "sameImageNativeSHA256": "ef60658464e545fb1f9bd95549e91dc4478f118a492ff295d98383932720226b",
         "sameImageExportSHA256": "28cb8c2587c7adc1cdab1d85be0d3db5feda90aee89c7fa011d945162550b48b",
         "independentNativeQAEvidencePreserved": true,
@@ -1897,7 +1897,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
-      "sourceContentSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "3b669aa28b0886ecbbcf7b2c7f78fed2738e62fd092e14fb49cd4fa9794a6fdc",
@@ -2100,7 +2100,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentAfterSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "3b669aa28b0886ecbbcf7b2c7f78fed2738e62fd092e14fb49cd4fa9794a6fdc",
       "ownerApproved": true,
@@ -2127,7 +2127,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+        "sourceSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
         "sameImageNativeSHA256": "a8638d5b2ec486b6e52b25d1a930aed2977f10bdcad48a0c201803b242995913",
         "sameImageExportSHA256": "ade8ffd7554fbb4524bc2f4f0c7994eb3e10bc660f1c6f44405918939408e3ea",
         "independentNativeQAEvidencePreserved": true,
@@ -2152,23 +2152,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/thimphu/photo-c00dd0108bebf5b724cb.jpg",
         "suora": true,
         "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)",
-        "selite": "Momoja Thimphussa 2. syyskuuta 2025 kuvatulla lounaslautasella.",
-        "lyhyt": "Momo-nyyttejä Thimphun lounaalla.",
+        "selite": "Momo-lounas syyskuussa 2025.",
+        "lyhyt": "Momoja lounaaksi.",
         "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)",
-        "selite": "Momoja Thimphussa 2. syyskuuta 2025 kuvatulla lounaslautasella.",
-        "lyhyt": "Momo-nyyttejä Thimphun lounaalla.",
+        "selite": "Momo-lounas syyskuussa 2025.",
+        "lyhyt": "Momoja lounaaksi.",
         "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/thimphu/photo-c00dd0108bebf5b724cb.jpg",
         "suora": true,
         "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)",
-        "selite": "Momoja Thimphussa 2. syyskuuta 2025 kuvatulla lounaslautasella.",
-        "lyhyt": "Momo-nyyttejä Thimphun lounaalla.",
+        "selite": "Momo-lounas syyskuussa 2025.",
+        "lyhyt": "Momoja lounaaksi.",
         "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2183,10 +2183,10 @@
         1868
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
-      "sourceContentSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "c5198aa2a15d172a19525ffb987631cbb761ed886507ebc91740e7c2c4192f58",
-        "semanticContextSHA256": "c5198aa2a15d172a19525ffb987631cbb761ed886507ebc91740e7c2c4192f58",
+        "targetBeforeSHA256": "6ddb1d763c5b7dca7c9607ec98481193afaf7a8958e09fac7001fed4bd7d8944",
+        "semanticContextSHA256": "6ddb1d763c5b7dca7c9607ec98481193afaf7a8958e09fac7001fed4bd7d8944",
         "subjectTitle": "thimphu — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2353,8 +2353,8 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg",
-        "lyhyt": "Momo-nyyttejä Thimphun lounaalla.",
-        "selite": "Momoja Thimphussa 2. syyskuuta 2025 kuvatulla lounaslautasella.",
+        "lyhyt": "Momoja lounaaksi.",
+        "selite": "Momo-lounas syyskuussa 2025.",
         "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
@@ -2381,14 +2381,14 @@
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)",
-        "selite": "Momoja Thimphussa 2. syyskuuta 2025 kuvatulla lounaslautasella.",
-        "lyhyt": "Momo-nyyttejä Thimphun lounaalla.",
+        "selite": "Momo-lounas syyskuussa 2025.",
+        "lyhyt": "Momoja lounaaksi.",
         "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
-      "targetAfterSHA256": "c5198aa2a15d172a19525ffb987631cbb761ed886507ebc91740e7c2c4192f58",
-      "contextAfterSHA256": "c5198aa2a15d172a19525ffb987631cbb761ed886507ebc91740e7c2c4192f58",
+      "sourceContentAfterSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
+      "targetAfterSHA256": "6ddb1d763c5b7dca7c9607ec98481193afaf7a8958e09fac7001fed4bd7d8944",
+      "contextAfterSHA256": "6ddb1d763c5b7dca7c9607ec98481193afaf7a8958e09fac7001fed4bd7d8944",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -2413,12 +2413,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+        "sourceSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
         "sameImageNativeSHA256": "c00dd0108bebf5b724cb1dd5f4feb6350a2670cb35f12a70ebb0bf5dadf1d996",
         "sameImageExportSHA256": "c00dd0108bebf5b724cb1dd5f4feb6350a2670cb35f12a70ebb0bf5dadf1d996",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": false
+        "captionChanged": true
       }
     },
     {
@@ -2472,7 +2472,7 @@
         5504
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/thimphu/sisalto.json",
-      "sourceContentSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "semanticSourceBind": {
         "targetBeforeSHA256": "029fa27aca8155fc11858a1ab2357bf3a317ea4b1a9a91d4096f08df533c41e9",
         "semanticContextSHA256": "029fa27aca8155fc11858a1ab2357bf3a317ea4b1a9a91d4096f08df533c41e9",
@@ -2707,7 +2707,7 @@
         "tiedosto": "A view of Thimphu looking N from Talakha Gonpa -1.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+      "sourceContentAfterSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
       "targetAfterSHA256": "029fa27aca8155fc11858a1ab2357bf3a317ea4b1a9a91d4096f08df533c41e9",
       "contextAfterSHA256": "029fa27aca8155fc11858a1ab2357bf3a317ea4b1a9a91d4096f08df533c41e9",
       "ownerApproved": true,
@@ -2734,7 +2734,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "a1e55ab36a0c389166af23280fc774657ad5b0cfcc4c542a8e36f1660d2cd8e8",
+        "sourceSHA256": "78825d8134600457a2c5aba9c44dfc863c67b15706f611d61706f68dfc1d0f83",
         "sameImageNativeSHA256": "84cb91737b7b4f9804df0bba74d4b85a886aee2f688885112278c657b761ed46",
         "sameImageExportSHA256": "84cb91737b7b4f9804df0bba74d4b85a886aee2f688885112278c657b761ed46",
         "independentNativeQAEvidencePreserved": true,
@@ -2752,9 +2752,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e09/thimphu/02a3def013c4e73dd8836425b3cc4491697157ff39a962a856219678205cfe0e.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e09/thimphu/b7768ccbcca8b15d0e690c5a2295a4f15277a31537e7ee3a4796d8c8582d55f6.json",
   "task118ReboundAt": "2026-10-13T16:31:25.735506+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:01:14.744266+00:00"
+  "task228ReboundAt": "2026-10-13T18:32:06.390444+00:00"
 }
