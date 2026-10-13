@@ -141,3 +141,10 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
 - Piste 86 korjaantui (LR: v48t–x leivottu ilman fotogrammetriakuorta). Kappelin kuvat lokit/siirtoseppa-v48tu-kuvat/v48z-*.
 - Seuraavaksi: LR:n laajennuserä 3 (linnantupa, Kuninkaansali) LR:n ja LS2:n tahdissa; vartija2-MH-kuva yhä auki (K3 + agentti/malli);
   porttikäytävän äänimaisema LS2:lla (omistaja ei vielä kuunnellut).
+
+## PÄIVITYS 13.10. 06.2x
+
+- **Juna 186: paketti v49a** (siirtoseppa/v49a 0429ee8b2, pala b8b9489b12ee5576, esittely 7264551e1a39e864) korvaa v48z:n PT:n ehdollisella
+  kuittauksella: botti 17/17 cbad45ba9 + v49a (olavinlinna-auto-1013-0554) ja LS2:n holvikuva (todistus-kh2-20261013-0553). NS ja Julkaisija tietävät.
+- Seuraavaksi LR:n erä 3 (linnantupa, Kuninkaansali; uudet lattiaesineet tarvitsevat glb-extras tormays/koko) → kiinnitys + botti.
+- Odottajapohja: lokit/siirtoseppa-botti-nakyma/odota-v49a.sh (vaihda SHA:t sedillä, tarkista `zsh -n`).
