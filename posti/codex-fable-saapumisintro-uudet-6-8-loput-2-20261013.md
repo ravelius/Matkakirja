@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 2/2, 13.10.2026
 
-24 QA/R2-varmennettua kuvaa toimitettu, 6 perusteltua lopullista poisjättöä. Käsitelty 30/47 tämän osan nimetyistä kuvista; 30 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+25 QA/R2-varmennettua kuvaa toimitettu, 7 perusteltua lopullista poisjättöä. Käsitelty 32/47 tämän osan nimetyistä kuvista; 32 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -52,6 +52,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-kyiv-uudet-6-8-20261013.json`. Toim
 
 - #193, slot 6: Kiovan Dnipr-joki, vasen ranta ja Trukhanivin saari Volodymyrin kukkulalta itä-kaakkoon päivällä. Havainnekuva.
 - Poisjättö #194, slot 8: Raiteet laskevat kuvan vasemmasta yläosasta oikealle alas. Siksi ylöspäin kulku olisi oikealta vasemmalle; se ei täytä lähteen nimenomaista vasemmalta oikealle ylöspäin -ohjetta. Kuvaa ei peilata eikä korjata uudella generoinnilla.
+
+## ISTANBUL
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-istanbul-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #195, slot 6: Istanbulin vanha kaupunki Galatan tornin näköalatasanteelta etelä-kaakkoon päivällä, taustalla Hagia Sofia ja Sininen moskeija. Havainnekuva.
+- Poisjättö #196, slot 8: Lautassa näkyy kaksi suljettua ikkunallista matkustajatasoa sekä niiden yläpuolella kolmas avoin matkustajakansi. Kaikilla kolmella on matkustajia, joten kyse ei ole vain komentosillasta tai huoltotasosta. Lähde vaatii kaksikantisen vapurin avoimine yläkansineen.
 
 ## KRAKOVA
 
