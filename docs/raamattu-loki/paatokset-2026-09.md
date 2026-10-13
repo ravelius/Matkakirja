@@ -14006,3 +14006,7 @@ Omistaja 13.10.2026 klo 18.1x (kortti "Ranska (Suositus)"): toinen maittainen ta
 ## POIKKEUS: LOUVREN LASIPYRAMIDI HAVAINNEKUVAN PÄÄAIHEENA (13.10.2026 klo 18.17)
 
 Omistaja 13.10.2026 klo 18.2x ("louvrehan näkyy nyt jo googlen kuvissa. käytä havainnekuvaa", "siis siitä lasipyramidista"; kortti "Pyramidi pääaiheena"): Ranskan taidemuseon lähestymisen havainnekuvassa I. M. Pein lasipyramidi saa olla pääaiheena, vaikka teos on suojattu vuoteen 2089 eikä Ranskassa ole kaupallista panoraamavapautta (poikkeus panoraamavapaussääntöön #4431). Omistaja hyväksyi riskin; jos oikeudenomistaja huomauttaa, kuva vaihdetaan. Pyramidia ei mallinneta omana 3D-mallina.
+
+## LINSSIT EIVÄT KUULU EUROOPPA-RAJAUKSEEN (TOISTETTU 13.10.2026) (13.10.2026 klo 23.54)
+
+Omistaja 13.10.2026 klo 23.5x ISS-kupolin kertojasta (kortti, sanatarkasti): "Kyllä mutta usko jo että linsseissä ei ole mitään Eurooppa rajoitusta. Miksi tätä ei vieläkään ole kirjattu tarpeeksi selkeästi raamattuun?" PT oli ehdottanut ISS:n aikasiirron kertojaa laajemmaksi vain Euroopan päällä. Korjaus: VAIN EUROOPPA -linjauksen otsikkoon ja CLAUDE.md:hen 'EI KOSKE LINSSEJÄ' — linssit ja niiden uusi sisältö kattavat aina koko maailman; linssejä ei rajata eikä siitä kysytä.
