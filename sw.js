@@ -429,6 +429,7 @@ const SHELL = [
   './js/linssit/satelliitti-data.js',
   './js/linssit/astronaut-kysymykset.js',
   './js/linssit/astro-kysymykset.js',
+  './js/linssit/museo-kysymykset.js',
   './js/linssit/satelliitti-aani.js',
   './js/linssit/astro-sumu.js',
   './js/tiivistys.js',
