@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "cityName": "WIEN",
+  "gameCityId": "wien",
+  "mediaSlug": "vienna",
+  "taskNumbers": [
+    215,
+    216
+  ],
+  "updatedAt": "2026-10-13T19:57:48.590893+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 215,
+      "mediaSlug": "vienna",
+      "slot": 6,
+      "filename": "vienna-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Wien Kahlenbergin näköalaterassilta kaakkoon päivällä: Tonava, Tonavatorni ja Tuomiokirkon torni kaukana.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Wien Kahlenbergin näköalaterassilta kaakkoon päivällä: Tonava, Tonavatorni ja Tuomiokirkon torni kaukana.** Tiedosto `vienna-6-nakoala-intro-v1.png`.\nMitä kuvataan: Wienin panoraama kirkkaana päivänä (nykyaikainen värivalokuva) Kahlenbergin kukkulan näköalaterassilta, noin 480 metrin korkeudelta. Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta ja rinteen lehtipuiden latvoja, ei ihmisiä lähellä. Alhaalla ensin rinne puistomaisine puineen, sen alla Heiligenstadtin ja Döblingin matalat punakattoiset asuinkorttelit ja kauempana kaupungin tiivis kattomeri, joka leviää tasaisena kaukaisuuteen. Kuvan vasemmassa kolmanneksessa Tonava leveänä vihertävänä nauhana ja sen toisella puolella uusia, matalahkoja kerrostaloja; vasemmalla keskimatkalla kaukana hoikka betonitorni, jonka yläosassa on pyöreä korkeampi osa (Tonavatorni), pienenä mutta tunnistettavana; sen vieressä kaukana pieninä ja utuisina Donau Cityn pilvenpiirtäjät. Kuvan keskioikealla kaukana kattojen yläpuolella pienenä Stephansdomin korkea, hoikka, kapeneva kivitorni ja sen vieressä kirjava laattakatto. Taustalla vaalea utuinen tasanko ja kaukaa horisontissa matalia sinertäviä kukkuloita. Kulma: vaakakuva, katse kaakkoon (suunta noin 145 astetta, näkökenttä noin 55 astetta), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän valo, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, ravintolan rakennusta tai pöytiä, lippuja, Josefskirche-kappelia, Donau Cityn pilvenpiirtäjiä lähikuvana, Riesenradia pääaiheena, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Wien Kahlenbergin näköalaterassilta kaakkoon päivällä: Tonava, Tonavatorni ja Tuomiokirkon torni kaukana. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "WIEN",
+      "gameID": "wien",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        77187,
+        79145
+      ],
+      "sourceByteSpan": [
+        80139,
+        82171
+      ],
+      "fullDeliveryRequirementSHA256": "e3d1cd4391fe2be281e88a56a156dbc89bc21f0df88df7117869fc6b32eb7afc",
+      "fullDirective": "Wienin panoraama kirkkaana päivänä (nykyaikainen värivalokuva) Kahlenbergin kukkulan näköalaterassilta, noin 480 metrin korkeudelta. Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta ja rinteen lehtipuiden latvoja, ei ihmisiä lähellä. Alhaalla ensin rinne puistomaisine puineen, sen alla Heiligenstadtin ja Döblingin matalat punakattoiset asuinkorttelit ja kauempana kaupungin tiivis kattomeri, joka leviää tasaisena kaukaisuuteen. Kuvan vasemmassa kolmanneksessa Tonava leveänä vihertävänä nauhana ja sen toisella puolella uusia, matalahkoja kerrostaloja; vasemmalla keskimatkalla kaukana hoikka betonitorni, jonka yläosassa on pyöreä korkeampi osa (Tonavatorni), pienenä mutta tunnistettavana; sen vieressä kaukana pieninä ja utuisina Donau Cityn pilvenpiirtäjät. Kuvan keskioikealla kaukana kattojen yläpuolella pienenä Stephansdomin korkea, hoikka, kapeneva kivitorni ja sen vieressä kirjava laattakatto. Taustalla vaalea utuinen tasanko ja kaukaa horisontissa matalia sinertäviä kukkuloita. Kulma: vaakakuva, katse kaakkoon (suunta noin 145 astetta, näkökenttä noin 55 astetta), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän valo, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, ravintolan rakennusta tai pöytiä, lippuja, Josefskirche-kappelia, Donau Cityn pilvenpiirtäjiä lähikuvana, Riesenradia pääaiheena, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Wien Kahlenbergin näköalaterassilta kaakkoon päivällä: Tonava, Tonavatorni ja Tuomiokirkon torni kaukana. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/vienna/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-vienna-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/vienna/20261013-uudet-6-8/vienna-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "vienna-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "WIEN",
+      "gameCityId": "wien",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/vienna/native-6.png",
+      "nativeSHA256": "f480e3eb0cb10a1ff00312311ac188bdbfa1984f39b34f07fb49786991eca9f8",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/vienna/vienna-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/vienna/vienna-6-nakoala-intro-v1.png",
+      "sha256": "09411957e2e0b4f21717ed5c1a4bf147688d708e3fb08ec0d0c724e9535115f0",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nWienin panoraama kirkkaana päivänä (nykyaikainen värivalokuva) Kahlenbergin kukkulan näköalaterassilta, noin 480 metrin korkeudelta. Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kivikaidetta ja rinteen lehtipuiden latvoja, ei ihmisiä lähellä. Alhaalla ensin rinne puistomaisine puineen, sen alla Heiligenstadtin ja Döblingin matalat punakattoiset asuinkorttelit ja kauempana kaupungin tiivis kattomeri, joka leviää tasaisena kaukaisuuteen. Kuvan vasemmassa kolmanneksessa Tonava leveänä vihertävänä nauhana ja sen toisella puolella uusia, matalahkoja kerrostaloja; vasemmalla keskimatkalla kaukana hoikka betonitorni, jonka yläosassa on pyöreä korkeampi osa (Tonavatorni), pienenä mutta tunnistettavana; sen vieressä kaukana pieninä ja utuisina Donau Cityn pilvenpiirtäjät. Kuvan keskioikealla kaukana kattojen yläpuolella pienenä Stephansdomin korkea, hoikka, kapeneva kivitorni ja sen vieressä kirjava laattakatto. Taustalla vaalea utuinen tasanko ja kaukaa horisontissa matalia sinertäviä kukkuloita. Kulma: vaakakuva, katse kaakkoon (suunta noin 145 astetta, näkökenttä noin 55 astetta), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä aamupäivän valo, ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, ravintolan rakennusta tai pöytiä, lippuja, Josefskirche-kappelia, Donau Cityn pilvenpiirtäjiä lähikuvana, Riesenradia pääaiheena, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nComposition priority: broad realistic elevated Vienna panorama from480m Kahlenberg terrace, southeast145 degrees /55-degree horizontal field, slight downward eye-level view. Thin pale stone rail/tree canopy only at bottom; no terrace furniture, restaurant or hill chapel. Low red-roof Heiligenstadt/Dobling foreground city, broad distant roofscape extending onto hazy plain. Greenish Danube LEFT, small slender concrete Donauturm with round upper section LEFT-middle distance, Donau City towers VERY SMALL/hazy behind. Tiny Stephansdom narrow spire and coloured roof CENTER-RIGHT in far city. No close landmark collage, no main Riesenrad, no flags/signage/nearby people or HDR.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            80139,
+            82171
+          ],
+          "fullRequirementSHA256": "e3d1cd4391fe2be281e88a56a156dbc89bc21f0df88df7117869fc6b32eb7afc",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/vienna/qa-6.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/vienna/producer-6.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261013-uudet-6-8/vienna-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261013-uudet-6-8/vienna-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 215,
+        "assetID": "vienna-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/vienna/asset-6.json",
+        "nativeSHA256": "f480e3eb0cb10a1ff00312311ac188bdbfa1984f39b34f07fb49786991eca9f8",
+        "finalSHA256": "09411957e2e0b4f21717ed5c1a4bf147688d708e3fb08ec0d0c724e9535115f0",
+        "verdict": "accepted",
+        "reason": "Tonava ja Tonavatorni vasemmalla, etäiset Donau Cityn tornit ja pieni Stephansdomin torni/laattakatto oikealla, kattomeri ja puiden latvat. Ei kiellettyä etualan ravintolaa/kappelia/tekstiä/lippua.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:57:23.157139+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/vienna/20261013-uudet-6-8/vienna-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261013-uudet-6-8/vienna-6-nakoala-intro-v1.png",
+        "sha256": "09411957e2e0b4f21717ed5c1a4bf147688d708e3fb08ec0d0c724e9535115f0",
+        "nativeSHA256": "f480e3eb0cb10a1ff00312311ac188bdbfa1984f39b34f07fb49786991eca9f8",
+        "bytes": 2665252,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "09411957e2e0b4f21717ed5c1a4bf147688d708e3fb08ec0d0c724e9535115f0",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "09411957e2e0b4f21717ed5c1a4bf147688d708e3fb08ec0d0c724e9535115f0",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:57:46.249931+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 216,
+      "mediaSlug": "vienna",
+      "slot": 8,
+      "filename": "vienna-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Wienin raitiovaunu Ringstrassella Valtionoopperan kohdalla päivällä.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Wienin raitiovaunu Ringstrassella Valtionoopperan kohdalla päivällä.** Tiedosto `vienna-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: nykyaikainen matalalattiainen pitkä nivelraitiovaunu (viisi tai useampia osia, yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä Ringstrasse-kadulla Wienissä päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Taustalla pehmeästi epätarkkana vaalea kivinen uusrenessanssityylinen oopperatalo, jonka julkisivussa on kaarisarjoja (ei tarvitse olla tarkka, ei tekstiä, ei julisteita eikä bannereita), kadun reunalla lehtipuita ja puiden latvoja; raiteet kadun pinnassa leveällä kaupunkikadulla. Ihmiset vain pieninä (muutama kävelijä jalkakäytävällä kaukana tai selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, kolmen neljänneksen kuva edestä vasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, katukylttejä, pysäkkikylttejä, mainoksia, logoja, numeroita, lippuja, julisteita tai bannereita oopperan seinillä, patsaita tai suihkulähteitä erottuvina, hevosvaunuja, auton rekisterikilpiä, punaista ja valkoista maalausta vaunussa. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Wienin raitiovaunu Ringstrassella Valtionoopperan kohdalla päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "WIEN",
+      "gameID": "wien",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        79145,
+        80967
+      ],
+      "sourceByteSpan": [
+        82171,
+        84070
+      ],
+      "fullDeliveryRequirementSHA256": "19ee4693d0767e6ed4349b96ddf085b93783bf09f13cb228917d289f847058de",
+      "fullDirective": "nykyaikainen matalalattiainen pitkä nivelraitiovaunu (viisi tai useampia osia, yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä Ringstrasse-kadulla Wienissä päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Taustalla pehmeästi epätarkkana vaalea kivinen uusrenessanssityylinen oopperatalo, jonka julkisivussa on kaarisarjoja (ei tarvitse olla tarkka, ei tekstiä, ei julisteita eikä bannereita), kadun reunalla lehtipuita ja puiden latvoja; raiteet kadun pinnassa leveällä kaupunkikadulla. Ihmiset vain pieninä (muutama kävelijä jalkakäytävällä kaukana tai selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, kolmen neljänneksen kuva edestä vasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, katukylttejä, pysäkkikylttejä, mainoksia, logoja, numeroita, lippuja, julisteita tai bannereita oopperan seinillä, patsaita tai suihkulähteitä erottuvina, hevosvaunuja, auton rekisterikilpiä, punaista ja valkoista maalausta vaunussa. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Wienin raitiovaunu Ringstrassella Valtionoopperan kohdalla päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/vienna/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-vienna-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/vienna/20261013-uudet-6-8/vienna-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "vienna-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "WIEN",
+      "gameCityId": "wien",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/vienna/native-8.png",
+      "nativeSHA256": "41455eb3c26e665f1561ff7a45c92dfd6e30f6310b9ba30328991766757baf2f",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/vienna/vienna-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/vienna/vienna-8-kulkuneuvo-intro-v1.png",
+      "sha256": "e60e95833e7247eb6073b4a9abd85f437a112d606aa6e1deac3397bedb9c0876",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nnykyaikainen matalalattiainen pitkä nivelraitiovaunu (viisi tai useampia osia, yleisilmeeltään tavallinen eurooppalainen kaupunkiraitiovaunu) liikkeessä leveällä Ringstrasse-kadulla Wienissä päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Taustalla pehmeästi epätarkkana vaalea kivinen uusrenessanssityylinen oopperatalo, jonka julkisivussa on kaarisarjoja (ei tarvitse olla tarkka, ei tekstiä, ei julisteita eikä bannereita), kadun reunalla lehtipuita ja puiden latvoja; raiteet kadun pinnassa leveällä kaupunkikadulla. Ihmiset vain pieninä (muutama kävelijä jalkakäytävällä kaukana tai selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, kolmen neljänneksen kuva edestä vasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, katukylttejä, pysäkkikylttejä, mainoksia, logoja, numeroita, lippuja, julisteita tai bannereita oopperan seinillä, patsaita tai suihkulähteitä erottuvina, hevosvaunuja, auton rekisterikilpiä, punaista ja valkoista maalausta vaunussa. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nScale priority: place the WHOLE long5-or-more-section plain LIGHT GREY tram farther away in the middle distance, about ONE THIRD image width, surrounded by about TWO TIMES its width of visible street/building context. Not a close vehicle product portrait. Leading cab RIGHT and rear LEFT, moving RIGHT and toward camera, front-left three-quarter eye-level1.5–2m. Vienna Ringstrasse, anonymous street trees, distant softly defocused pale Renaissance State Opera with arcades as architecture context ONLY. No readable Opera lettering, posters/banners, flags, statue/fountain/horse coach or signage anywhere. No red-white vehicle paint/branding/numbers/displaytext/plate. People only tiny and far away, none in foreground.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            82171,
+            84070
+          ],
+          "fullRequirementSHA256": "19ee4693d0767e6ed4349b96ddf085b93783bf09f13cb228917d289f847058de",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/vienna/qa-8.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/vienna/producer-8.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261013-uudet-6-8/vienna-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261013-uudet-6-8/vienna-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 216,
+        "assetID": "vienna-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/vienna/asset-8.json",
+        "nativeSHA256": "41455eb3c26e665f1561ff7a45c92dfd6e30f6310b9ba30328991766757baf2f",
+        "finalSHA256": "e60e95833e7247eb6073b4a9abd85f437a112d606aa6e1deac3397bedb9c0876",
+        "verdict": "accepted",
+        "reason": "Vähintään5nivelosaa, vaalea neutraali vaunu oikealle, raiteet ja virroitin sekä pehmeästi taustalla kaarisarjoinen oopperatalo. Katon epäselvät koristeet eivät erotu tunnistettavina patsaina eikä julisteita/lippuja havaita. Vaunu noin49%vs lähteen noin kolmannes: ympäristö säilyy selvästi, sommittelupoikkeama kirjataan kokonaisarvion hyväksynnässä.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:57:23.157139+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/vienna/20261013-uudet-6-8/vienna-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/vienna/20261013-uudet-6-8/vienna-8-kulkuneuvo-intro-v1.png",
+        "sha256": "e60e95833e7247eb6073b4a9abd85f437a112d606aa6e1deac3397bedb9c0876",
+        "nativeSHA256": "41455eb3c26e665f1561ff7a45c92dfd6e30f6310b9ba30328991766757baf2f",
+        "bytes": 2178188,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "e60e95833e7247eb6073b4a9abd85f437a112d606aa6e1deac3397bedb9c0876",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "e60e95833e7247eb6073b4a9abd85f437a112d606aa6e1deac3397bedb9c0876",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:57:48.297308+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
