@@ -1,0 +1,21 @@
+## 2026-10-13 18.xx UTC — SISÄLTÖKIRJURI → CODEX: Ranskan taidemuseon lähestymiskuvat (Louvre + Orsay, pysty + vaaka)
+
+Omistaja 13.10.2026 (PT:n välittämänä): Ranskan taidemuseon lähestymiskuvat havainnekuvina kuten Rijksmuseumissa (`posti/fable-codex-rijksmuseo-lahestyminen-20261012.md`; samat säännöt, sama toimitus- ja QA-malli, sama merkintä). **Omistaja hyväksyy kuvat Codexissa; toimita suoraan.** Yksi generointi per kuva, ei vertailuottoja; jos ei onnistu, jätä tekemättä ja kerro syy. Neljä kuvaa: 2 museota × (pysty 1024 × 1536 PNG + vaaka 1536 × 1024 PNG). Omistajan linjaus: "Louvrehan näkyy jo Googlen kuvissa, käytä havainnekuvaa" — **ei Googlen 3D-laattoja eikä Street View -kuvia viitteiksi**; viitteeksi vain omaa tietoa ja avoimia valokuvia (Commons CC0/PD/CC BY), oma kuva alusta.
+
+### 1. Louvre, Pariisi (Wikidata Q19675)
+**Pääaihe: vanha palatsi.** Joko (a) Cour Napoléon (Napoléonin piha) kohti Pavillon Richelieun ja Sullyn siipien kivijulkisivuja tai (b) Cour Carrée (Neliöpiha; Lescot-siipi, Pavillon de l'Horloge) — valitse kumpi tuottaa kauniimman, tunnistettavan Louvren. **Lasipyramidi (I. M. Pei, k. 2019, suojattu) EI saa olla pääaihe: enintään pieni sivuosa kuvan reunassa tai kokonaan pois** (Ranskan oikeuskäytäntö sallii suojatun teoksen vain sivuosana: Cour de cassation 2005, Place des Terreaux). Cour Carrée -vaihtoehdossa pyramidia ei näy lainkaan. Kuvaa vanhaa rakennusta: vaalea kalkkikivi, mansardikatot ja savupiiput (Lescot k. 1578, Lemercier k. 1654, Visconti k. 1853, Lefuel k. 1880 — kaikki vapaita), pylväät, veistokseltaan koristellut ikkunavälit; ei nykyaikaisia lisärakenteita eikä jonoja. Valo: kirkas pehmeä päivä, aamun tai iltapäivän vino valo; ihmisiä vain pieninä, kaukana tai selin, ei tunnistettavia kasvoja.
+Tiedostot: `louvre-lahestyminen-pysty.png`, `louvre-lahestyminen-vaaka.png`. Kuvateksti: "Louvre Pariisissa. Havainnekuva."
+
+### 2. Musée d'Orsay, Pariisi (Wikidata Q23402)
+**Pääaihe: entinen Gare d'Orsay Seinen puolelta: pitkä kivinen julkisivu ja iso kello.** Arkkitehti Victor Laloux (k. 1937, yli 70 v → vapaa); rautatieasema ja hotelli 1900. Näytä leveä beige-harmaa kalkkikivijulkisivu, tynnyriholvin kaarevat suuret ikkunat ja suuri pyöreä kello (asema-ajan tyyli), Seine ja kaide edessä, lehväpuita; kirkas pehmeä päivä. **Ei luettavaa tekstiä** (ei "MUSÉE D'ORSAY" -kylttiä eikä banderolleja, ei näyttelymainoksia), ei lippuja, ei jonoja, ei rakennustelineitä eikä nostureita. Rakennuksen omia koristeveistoksia ei tarvitse esittää luettavasti. Ihmiset vain pieninä/kaukana/selin.
+Tiedostot: `orsay-lahestyminen-pysty.png`, `orsay-lahestyminen-vaaka.png`. Kuvateksti: "Musée d'Orsay Pariisissa. Havainnekuva."
+
+### Kuvasuhteet ja säännöt (kuten Rijksmuseum)
+- **Pysty (iPhone)** 1024 × 1536 (2:3): rakennuksen keskiosa pystyyn, runsaasti taivasta ylhäällä (yläkaistalle tulee peli-UI), etualaa alhaalla; vaakaleikkaus (4:3) keskeltä säilyttää aiheen.
+- **Vaaka (iPad)** 1536 × 1024 (3:2): koko julkisivu tai sen keskiosa kokonaan kuvassa, taivaalle ja etualalle tilaa.
+- FOTOREALISTINEN havainnekuva (luonnollinen valo, vaimeat värit, ei HDR:ää eikä ylikylläisyyttä); ei tekstiä, logoja, kylttejä, vesileimaa, kehystä; ei elävien tai < 70 v sitten kuolleiden tekijöiden töitä (ei Peiin pyramidia pääaiheena, ei Burenin pylväitä (Palais-Royal), ei Orsayn tai Louvren näyttelyinstallaatioita); ihmiset pieninä/kaukana/selin; 13+.
+- Merkintä: PNG `Description`/`Source` "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."; kuvateksti päättyy sanaan "Havainnekuva."; sRGB, läpinäkymätön.
+- Toimitus: R2 `julisteet/taidemuseo/<museo>/<pvm>/`; manifesti `posti/kuvatoimitus-ranska-lahestyminen-<pvm>.json` (url, r2Key, sha256, mitat, generationPrompt, viitteet), kuittaus `posti/codex-fable-ranska-lahestyminen-<pvm>.md`. Ei main-mergeä, versionnostoa eikä pelijulkaisua Codexilta.
+
+### Tarkistetut faktat (kuvatekstejä ja QA:ta varten)
+Louvre: keskiaikainen linnoitus (n. 1190, Filip II), muutettu kuninkaanpalatsiksi; nykyinen Cour Carrée -rakennus alkoi Pierre Lescotin siivestä 1546 (Frans I); museo perustettu 1793. Orsay: Laloux suunnitteli aseman ja hotellin, avattu 14.7.1900; museona 1986. (Lähteet: museoiden omat historiasivut + fr/en-Wikipedia; tarkista tarvittaessa.)
