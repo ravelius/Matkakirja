@@ -60,3 +60,8 @@ Ratkaisukysymys: robots.txt 11.10.2026 kieltää en/fi-Wikipedian, www.wikidata.
 
 Omistajan 11.10. suora lisäohjaus: Codex/ChatGPT-työdata pois käynnistyslevyltä T7:lle tai NASille. Tämä toimitus ja kaikki väliaineisto NASilla; muiden töiden lokeista 29,4 GiB jo tarkistettuna siirretty T7:lle. Aktiivisen sovellusdatan siirto valmistellaan ennen tuotannon jatkoa.
 
+
+
+## 2026-10-13T14:55:57.647317+00:00 — KUVATOIMITUS: omistajan hyväksymä batch-0088,1040 sidosta
+
+Toimitusmanifesti `posti/paakaupungit-kuvat-batch-0088-20261013.json`, lähdehaarojen jaapplyn kuitit sekä täsmäomistajahyväksyntä samannimisissä liitteissä. 622havainnekuvaa+418Commons-kuvaa,93kaupunkia/11haaraa; kaikkiQA/R2-varmennettu. Koko tuotettu654natiiviversion inventaario `posti/paakaupungit-kuvat-batch-0088-20261013-produced-inventory.json` on arkisto-/tarkistusaineistoa, ei uusien/vanhojen hylättyjen versioiden runtimeaktivointia. Task117 Commons-only -ohje vastaanotettu lähteestä b78d34283075415e05ed7ba79094d7a16a0a3a30; publisher ei käynnistä generointeja/uusintoja, rootin14stopviestiä kirjattu. Vahvista1040sidoksen vastaanotto ja anna seuraavan Commons-haku-/QA-työn kaupunki/slot-ohjeet. Omistajahyväksyntä kyllä; peli/runtimejulkaisu ei varmennettu, Bissau PHOTO oikeus-HOLD säilyy.

@@ -1,0 +1,28 @@
+{
+  "readAt": "2026-10-13T14:55:57.329470+00:00",
+  "taskNumber": 117,
+  "sourceCommit": "b78d34283075415e05ed7ba79094d7a16a0a3a30",
+  "sourcePath": "posti/fable-codex-paakaupungit.md",
+  "sourceBlobSha": "299485028c56dcfb0a6bba30658711115d4d59fd",
+  "sourceSHA256": "09fae2217a2b03e8607e1c1e053c66761982f97c34a978813da03470fb81e72f",
+  "readInFull": true,
+  "instruction": "Future capital images Commons PD/CC only; no generation/retries; delivered illustrations retained; commercial FOP remains required. Missing image omitted or alternate subject documented.",
+  "newGenerationAllowed": false,
+  "newRetriesAllowed": false,
+  "publisherGenerationRequestsIssued": 0,
+  "upstreamStopOrdersRecorded": {
+    "effectiveAt": "2026-10-13T14:41:00Z",
+    "receivedAt": "2026-10-13T14:48:34.290496+00:00",
+    "sourceCommit": "b78d34283075415e05ed7ba79094d7a16a0a3a30",
+    "sourcePath": "posti/fable-codex-paakaupungit.md",
+    "newCapitalIllustrationGenerationAllowed": false,
+    "capitalIllustrationRetriesAllowed": false,
+    "alreadyDeliveredIllustrationsRetained": true,
+    "futureSourcePolicy": "Wikimedia Commons PD/CC only; commercial teostyyppikohtainen FOP required",
+    "ifNoEligibleImage": "Leave image empty or propose another source-backed subject; document RAPORTTI.md",
+    "completeSourceInstructions": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/claude-next-instructions.json",
+    "generationStopMessagesDeliveredToOriginalOwners": 11,
+    "generationStopMessagesDeliveredToExtraCityOwners": 3
+  },
+  "allOriginalOwnersActuallyStoppedVerifiedByPublisher": false
+}
