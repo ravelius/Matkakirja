@@ -7,7 +7,7 @@
  *
  * KAKSI OSAA:
  *   1. Aina päällä, ilman verkkoa: jokainen osoite on muotoa
- *      karttanostot/<8 numeroa>/<tiedosto>.jpg|webp|png eikä samaa
+ *      karttanostot/<8 numeroa>/[<alikansio>/]<tiedosto>.jpg|webp|png eikä samaa
  *      tiedostonimeä ole kirjattu kahteen eri päivämäärään.
  *   2. Verkko, vain kun NOSTOKUVAT_VERKKO=1 (verkko ei ole deterministinen,
  *      ks. amparin-aukot.yml): HEAD jokaiselle osoitteelle, odotus 200.
@@ -42,14 +42,15 @@ const OSOITTEET = osoitteet();
 
 test('nostokuvien osoitteet ovat oikeaa muotoa', () => {
   assert.ok(OSOITTEET.length > 1000, `osoitteita vain ${OSOITTEET.length}`);
-  const vaarat = OSOITTEET.filter((u) => !/\/karttanostot\/\d{8}\/[^/]+\.(?:jpg|webp|png)$/.test(u));
+  // Alikansio päivämäärän alla on sallittu (pääkaupunkien kuvaerät e04–e14: <pvm>/<erä>/<kaupunki>/<tiedosto>).
+  const vaarat = OSOITTEET.filter((u) => !/\/karttanostot\/\d{8}\/(?:[A-Za-z0-9_.-]+\/)*[^/]+\.(?:jpg|webp|png)$/.test(u));
   assert.deepEqual(vaarat, [], 'väärän muotoisia nostokuvaosoitteita');
 });
 
 test('sama kuva ei ole kirjattu kahdelle päivämäärälle', () => {
   const nimet = new Map();
   for (const u of OSOITTEET) {
-    const [, pvm, nimi] = u.match(/\/karttanostot\/(\d{8})\/([^/]+)$/);
+    const [, pvm, nimi] = u.match(/\/karttanostot\/(\d{8})\/(.+)$/);
     if (nimet.has(nimi) && nimet.get(nimi) !== pvm) assert.fail(`${nimi}: ${nimet.get(nimi)} ja ${pvm}`);
     nimet.set(nimi, pvm);
   }

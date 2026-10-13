@@ -2,6 +2,7 @@
 // Käyttö: node kytke.mjs <repo> <data-kansio>   (data-kansio = paakaupungit-pilvi)
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 const [repo, data] = process.argv.slice(2);
 const JS_ID = /^[A-Za-z_$][A-Za-z0-9_$]*$/;
 function js(v, sisennys) {
@@ -54,7 +55,40 @@ lisaa('europe-artikkelit.js', 'export const EUROPE_ARTIKKELIT = {', kaupungit.ma
 // Pisteen id → artikkeliavain (maakortin pääkaupunkirivin esittely, js/fokusmitat.js); taulu on tiedoston lopussa.
 lisaa('europe-artikkelit.js', 'export const PAAKAUPUNKIEN_ARTIKKELIAVAIMET = {', kaupungit.map((k) => r(k.id, k.kaupunki.wiki)),
   kom('Artikkeliavaimet'));
-lisaa('maakartat.js', 'export const KAUPUNKIKARTAT = {', kaupungit.filter((k) => k.kohdekartta).map((k) => r(k.id,
-  { polku: `assets/kartat/${k.id}-keskusta.png`, lahde: '© OpenStreetMap-tekijät (ODbL)', ...k.kohdekartta })), kom('Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs)'));
+// Kohdekartat (Pelikoodari 13.10.2026): rivi syntyy vain piirretylle kuvalle. Karttasepän kohdekartat.mjs kirjoittaa
+// <erä>/kohdekartat-mac.json:n; PIIRRÄ-kaupunki saa sen rajat (kuva piirretty niillä). Vanha kartta (Afrikan 42) säilyttää
+// kuvansa ja rajansa: jos Codexin kohteet mahtuvat siihen (sama ehto kuin kohdekartat.mjs), kohteet ja esittely vaihtuvat,
+// muuten vanha rivi jää ennalleen. Kaupunki ilman piirrettyä kuvaa (alle 3 kohdetta, ei vanhaa) ei saa riviä. Korvattava
+// vanha rivi poistetaan, ettei tauluun synny samannimistä avainta (myöhempi voittaisi).
+const { KAUPUNKIKARTAT: VANHAT } = await import(pathToFileURL(join(repo, 'js/packs/maakartat.js')).href);
+const REUNA = 150, mLat = 110574, mLon = (lat) => 111320 * Math.cos((lat * Math.PI) / 180);
+const sopii = (r, kohteet) => kohteet.every((k) => (r.pohjoinen - k.lat) * mLat >= REUNA && (k.lat - r.etela) * mLat >= REUNA
+  && (r.ita - k.lon) * mLon((r.pohjoinen + r.etela) / 2) >= REUNA && (k.lon - r.lansi) * mLon((r.pohjoinen + r.etela) / 2) >= REUNA);
+const mac = (e) => (existsSync(join(data, e, 'kohdekartat-mac.json')) ? JSON.parse(readFileSync(join(data, e, 'kohdekartat-mac.json'), 'utf8')) : {});
+const kartat = [], korvattavat = [];
+for (const k of kaupungit) {
+  const kk = k.kohdekartta, vanha = VANHAT[k.id], t = mac(k.era)[k.id];
+  if (!kk?.kohteet?.length) continue;
+  let rivi = null;
+  if (t?.paatos === 'PIIRRÄ') rivi = { polku: t.polku, lahde: '© OpenStreetMap-tekijät (ODbL)', ...kk, rajat: t.rajat };
+  else if (vanha && sopii(vanha.rajat, kk.kohteet)) rivi = { ...vanha, ...(kk.esittely ? { esittely: kk.esittely } : {}), kohteet: kk.kohteet };
+  if (!rivi) continue;
+  if (vanha) korvattavat.push(k.id);
+  kartat.push(r(k.id, rivi));
+}
+if (korvattavat.length) {
+  const polku = join(repo, 'js/packs/maakartat.js');
+  let s = readFileSync(polku, 'utf8');
+  const a = s.indexOf('export const KAUPUNKIKARTAT = {');
+  for (const id of korvattavat) {
+    const taulunLoppu = s.indexOf('\n};', a), alku = s.indexOf(`\n  ${id}: {\n`, a), loppu = s.indexOf('\n  },\n', alku);
+    const toinen = s.indexOf(`\n  ${id}: {\n`, alku + 1);
+    if (alku < 0 || alku > taulunLoppu || loppu > taulunLoppu || (toinen > 0 && toinen < taulunLoppu)) throw new Error(`maakartat.js: ${id} ei löydy yksiselitteisesti`);
+    s = s.slice(0, alku) + s.slice(loppu + 5);
+  }
+  writeFileSync(polku, s);
+}
+lisaa('maakartat.js', 'export const KAUPUNKIKARTAT = {', kartat, kom('Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs, rajat kohdekartat.mjs)'));
+console.log(`kohdekartat: ${kartat.length} riviä, joista ${korvattavat.length} korvaa vanhan`);
 writeFileSync(join(repo, '.pk-rajat.json'), JSON.stringify(Object.fromEntries(kaupungit.filter((k) => k.kohdekartta).map((k) => [k.id, k.kohdekartta.rajat])), null, 1));
 console.log(kaupungit.map((k) => `${k.era}/${k.id}`).join(' '));
