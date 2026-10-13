@@ -75,17 +75,17 @@
       "source": "https://fr.wikipedia.org/wiki/Lac_Ma_Vall%C3%A9e"
     },
     {
-      "q": "Missä kuntoutettuja bonoboja palautetaan luontoon?",
+      "q": "Mikä on Ekolo ya Bonobon suojelumuoto?",
       "options": [
-        "Ekolo ya Bonobon yhteisöreservaatissa",
-        "Kinshasan kasvitieteellisessä puutarhassa",
-        "Lukayan putousten retkialueella",
-        "Gomben kaupunkipuistossa"
+        "Yhteisöreservaatti",
+        "Kansallispuisto",
+        "Kasvitieteellinen puutarha",
+        "Kaupunkieläintarha"
       ],
       "correct": 0,
       "level": 3,
       "hint": "Alue sijaitsee Equateurin maakunnassa.",
-      "fact": "Lola ya Bonobossa kuntoutettuja eläimiä palautetaan luontoon Ekolo ya Bonobon yhteisöreservaatissa.",
+      "fact": "Ekolo ya Bonobo on yhteisöreservaatti Equateurin maakunnassa. Les Amis des Bonobos hoitaa sitä yhdessä paikallisten yhteisöjen kanssa, ja sinne palautetaan kuntoutettuja bonoboja.",
       "source": "https://en.wikipedia.org/wiki/Lola_ya_Bonobo"
     }
   ],
@@ -350,7 +350,7 @@
   "nahtavyydet": {
     "Ngalieman lahti": {
       "aika": "Luonnonlahti; satamahistoria 1800-luvun lopulta",
-      "teksti": "Ngalieman lahti sijaitsee Kongojoen vasemmalla rannalla Kintambon alueella, lähellä joen koskijaksoa. Varhainen Léopoldvillen kauppa-asema syntyi sen läheisyyteen 1800-luvun lopulla, ja lahtea käytettiin aseman satamapaikkana.\n\nLahti on saanut nimensä paikalliselta päälliköltä Ngaliemalta. Joenrannan Nshasan ja Ntamon kalastus- ja kauppapaikat edelsivät siirtomaa-asemaa. Lahtea käytettiin kaupungin varhaisena satamapaikkana.",
+      "teksti": "Ngalieman lahti sijaitsee Kongojoen vasemmalla rannalla Kintambon alueella, lähellä joen koskijaksoa. Varhainen Léopoldvillen kauppa-asema syntyi sen läheisyyteen 1800-luvun lopulla, ja lahtea käytettiin aseman satamapaikkana.\n\nLahti on saanut nimensä paikalliselta päälliköltä Ngaliemalta. Joenrannan Nshasan ja Ntamon kalastus- ja kauppapaikat edelsivät siirtomaa-asemaa. Lahti oli myös Henry Morton Stanleyn 1800-luvun lopun tutkimusretken paikka.",
       "kuvat": [
         {
           "tiedosto": "",

@@ -75,23 +75,23 @@
       "source": "https://en.wikipedia.org/wiki/Bangui"
     },
     {
-      "q": "Mikä rajoittaa suurten alusten kulkua Banguin yläpuolella?",
+      "q": "Mikä on Banguin koulujen pääasiallinen opetuskieli?",
       "options": [
-        "Joen kosket",
-        "Matalat hiekkasärkät",
-        "Kapea jokiuoma",
-        "Vedenpinnan vuodenaikainen lasku"
+        "Ranska",
+        "Sango",
+        "Englanti",
+        "Portugali"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Este liittyy veden virtaukseen ja joen maastoon.",
-      "fact": "Banguin yläpuoliset kosket rajoittavat suurten alusten etenemistä.",
+      "hint": "Sangoa edistetään kouluissa tämän opetuskielen rinnalla.",
+      "fact": "Banguin kouluissa opetuskieli on ranska, vaikka myös sangon asemaa edistetään opetuksessa.",
       "source": "https://en.wikipedia.org/wiki/Bangui"
     }
   ],
   "tiedot": [
     "Nykyinen Bangui syntyi vuoden 1873 jälkeen, mutta ympäristössä oli paljon vanhempaa raudanvalmistusta.",
-    "Ubangi erottaa Banguin kohdalla kahden valtion rannat toisistaan.",
+    "Banguin yliopiston yleinen kirjasto on toiminut erillisessä rakennuksessa 1900-luvun jälkipuoliskolta alkaen.",
     "Banguin vanhan keskustan leveät bulevardit liittyvät keskusmarkkinapaikkaan."
   ],
   "valokuva": {
@@ -136,13 +136,13 @@
           "wiki": "Bangui"
         },
         {
-          "otsikko": "Suuri laiva kohtaa kosket",
-          "teksti": "Bangui sijaitsee Ubangin pohjoisrannalla, ja kaupungin yläpuoliset kosket rajoittavat suurten alusten etenemistä. Alavirtaan Ubangi liittyy Kongo-jokeen, ja vesireitti yhdistää kaupungin Brazzavillen suuntaan. Sama joki on myös valtioiden raja: vastarannan Zongo kuuluu Kongon demokraattiseen tasavaltaan. Ranskalainen asema perustettiin tänne 1800-luvun lopulla juuri kohtaan, johon Brazzavillestä nouseva laivaliikenne päättyi.",
+          "otsikko": "Lääketieteellä on oma kirjasto",
+          "teksti": "Banguin yliopiston kirjasto kokoaa tieteen, kirjallisuuden ja oikeustieteen aineistoa. Lääketieteen opetuksella on lisäksi oma kirjastonsa. Julkinen yliopisto aloitti toimintansa 1900-luvun jälkipuoliskolla. Kaupungissa toimivat myös kansallinen taidekoulu ja maatalouden keskuskoulu. Opetuksessa noudatetaan ranskalaista koulujärjestelmää: opetuskieli on ranska, mutta myös sangon asemaa edistetään kouluissa.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
           "lahde": "",
-          "wiki": "Ubangi River"
+          "wiki": "University of Bangui"
         },
         {
           "otsikko": "Bulevardien päässä on kauppa",

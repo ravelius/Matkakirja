@@ -14,7 +14,7 @@
     }
   },
   "artikkeli": {
-    "intro": "Brazzaville on **Kongon tasavallan pääkaupunki** Kongojoen rannalla. Se kasvoi Tio- eli Téké-valtakunnan vanhojen kauppapaikkojen, Mfwan ja Mpilan, ympärille. Brazzaville-nimi ja siirtomaakaupunki tulivat 1880-luvulla. Vuonna 1873 paikalliset kauppayhteisöt olivat jo olemassa.\n\nCongo–Ocean-rautatie yhdistää jokikaupungin Atlantin satamaan Pointe-Noireen. Radan rakentamiseen käytettiin pakkotyötä, ja tuhannet työntekijät kuolivat. Kaupunginosien toreilla myydään hedelmiä, vihanneksia ja tekstiilejä.\n\n**Musiikki kuuluu myös kaduille** ja kansainvälisiin yhteyksiin. Kaupunki on UNESCOn luovien kaupunkien verkoston musiikkikaupunki. Musiikin jakamiselle ja esittämiselle on tiloja myös kaduilla.",
+    "intro": "Brazzaville on **Kongon tasavallan pääkaupunki** Kongojoen rannalla. Se kasvoi Tio- eli Téké-valtakunnan vanhojen kauppapaikkojen, Mfwan ja Mpilan, ympärille. Brazzaville-nimi ja siirtomaakaupunki tulivat 1880-luvulla. Vuonna 1873 paikalliset kauppayhteisöt olivat jo olemassa.\n\nCongo–Ocean-rautatie yhdistää jokikaupungin Atlantin satamaan Pointe-Noireen. Radan rakentamiseen käytettiin pakkotyötä, ja tuhannet työntekijät kuolivat. Kaupunginosien toreilla myydään hedelmiä, vihanneksia ja tekstiilejä.\n\n**Musiikki kuuluu myös kaduille** ja kansainvälisiin yhteyksiin. Kaupunki on UNESCOn luovien kaupunkien verkoston musiikkikaupunki.",
     "teksti": "Ennen Brazzaville-nimeä alueella olivat Mfwan ja Mpilan kauppapaikat. Ne kuuluivat Tio- eli Téké-valtakuntaan. Nykyinen siirtomaanimi tuli Pierre Savorgnan de Brazzan mukaan 1880-luvulla.\n\nCongo–Ocean-rautatie rakennettiin 1900-luvun alkupuolella Brazzavillestä Pointe-Noireen. Rakentamisessa käytettiin pakkotyötä ja tuhansia ihmisiä kuoli. Rata yhdisti jokisataman Atlantin rannikkoon.\n\nBacongon Total Marketissa on kiinteät, näkyviin merkityt hinnat. Kaupungin katukaupassa myydään maniokkia, beignet-munkkeja ja lihavartaita. Kongojoen rantaa seuraava Corniche on kävelyalue, jolta avautuu näkymä vastarannan Kinshasaan."
   },
   "kysymykset": [
@@ -56,7 +56,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Kysymys koskee Bacongon kaupunginosan kauppapaikkaa.",
+      "hint": "Hinta ei muutu myyjän ja asiakkaan neuvottelussa.",
       "fact": "Total Marketissa on kiinteät, näkyviin merkityt hinnat.",
       "source": "https://en.wikivoyage.org/wiki/Brazzaville"
     },
@@ -128,7 +128,7 @@
       "nostot": [
         {
           "otsikko": "Mfwa oli paikalla ennen nimeä",
-          "teksti": "Ennen Brazzaville-nimistä siirtomaakaupunkia samalla alueella olivat Mfwan ja Mpilan kauppapaikat. Ne kuuluivat Tio- eli Téké-valtakunnan ympäristöön,. Nykyinen kaupunki sai 1880-luvulla nimen Pierre Savorgnan de Brazzan mukaan. Brazza-sukunimi puolestaan viittaa Brazzaccon kylään Italiassa, Moruzzon kunnassa. Tékénkielisissä paikannimissä esiintyvät myös muodot M’fa, Mfa ja Mfoa.",
+          "teksti": "Ennen Brazzaville-nimistä siirtomaakaupunkia samalla alueella olivat Mfwan ja Mpilan kauppapaikat. Ne olivat Tio- eli Téké-valtakunnan kauppapaikkoja. Nykyinen kaupunki sai 1880-luvulla nimen Pierre Savorgnan de Brazzan mukaan. Brazza-sukunimi puolestaan viittaa Brazzaccon kylään Italiassa, Moruzzon kunnassa. Tékénkielisissä paikannimissä esiintyvät myös muodot M’fa, Mfa ja Mfoa.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",

@@ -2026,7 +2026,7 @@
         "sameImageExportSHA256": "1ce5c211f5cae94bc5aaf61ebe43cc617016d33271267a130a526b765eda7910",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -3415,7 +3415,7 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e06/luanda/8103dd05cec85fc3000ebcd3264fba40ce0a17f8693ad03f30e9339479fdaad1.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e06/luanda/fc5bc170417b6b97b61c175e5a59f94234d5f21686f64ebf924c5dd95ef9b224.json",
   "task118ReboundAt": "2026-10-13T16:31:24.997450+00:00",
   "task228ExcludedAssets": [
     {
@@ -3689,5 +3689,5 @@
     }
   ],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:31:09.992139+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:47.181047+00:00"
 }

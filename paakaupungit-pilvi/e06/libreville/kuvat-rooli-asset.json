@@ -3,7 +3,7 @@
   "era": "e06",
   "city": "libreville",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+  "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
   "assets": [
     {
       "era": "e06",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "1012961169e2f1fcae93e7e70adc170d558bb77e414a92baeb2ebffe350e890f",
@@ -351,7 +351,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "1012961169e2f1fcae93e7e70adc170d558bb77e414a92baeb2ebffe350e890f",
       "ownerApproved": true,
@@ -378,7 +378,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "1459743d0dfc71a84d4597c812f7cb74783ea7c20e16a819596b4df1eeff4e5c",
         "sameImageExportSHA256": "b5267afe7e14d6a739a461710b54872ff40e8733061843b800bb37ed24f2bc3e",
         "independentNativeQAEvidencePreserved": true,
@@ -437,7 +437,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "708941c637570fb9a56f7c188fdf9dd0de867cff1f820674784893a7c9a8e821",
@@ -732,7 +732,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "708941c637570fb9a56f7c188fdf9dd0de867cff1f820674784893a7c9a8e821",
       "ownerApproved": true,
@@ -759,7 +759,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "7cdc329c0f7da1696c329f6161ce580f867fcaa3bae00dc1420c733d894d1557",
         "sameImageExportSHA256": "fe60d8265061b44da0e8a8e5d6b7ba566fd6eea63c311c89f9a0ebf395a964d5",
         "independentNativeQAEvidencePreserved": true,
@@ -815,7 +815,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "293d2571cfd4a52b528b104e341199867540c64b54678ba6b600dbeaba579d73",
         "semanticContextSHA256": "293d2571cfd4a52b528b104e341199867540c64b54678ba6b600dbeaba579d73",
@@ -1145,7 +1145,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "293d2571cfd4a52b528b104e341199867540c64b54678ba6b600dbeaba579d73",
       "contextAfterSHA256": "293d2571cfd4a52b528b104e341199867540c64b54678ba6b600dbeaba579d73",
       "ownerApproved": true,
@@ -1172,7 +1172,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "e8a8e376956c5aaa4e47b4f3606535dc33617cf42aaaaeadc18ef4066f953283",
         "sameImageExportSHA256": "c58f91ea08a8d9db5b8bfb92c10b9e2c5fdc5eff2ecde3666719c3bc7edb8272",
         "independentNativeQAEvidencePreserved": true,
@@ -1228,7 +1228,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ff722972f6a0c5d58e0117844574fc8cbe90e7ea571a5294424fb6e3cba3b766",
         "semanticContextSHA256": "ff722972f6a0c5d58e0117844574fc8cbe90e7ea571a5294424fb6e3cba3b766",
@@ -1523,7 +1523,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "ff722972f6a0c5d58e0117844574fc8cbe90e7ea571a5294424fb6e3cba3b766",
       "contextAfterSHA256": "ff722972f6a0c5d58e0117844574fc8cbe90e7ea571a5294424fb6e3cba3b766",
       "ownerApproved": true,
@@ -1550,7 +1550,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "c64b7cc0838ce43abb22ffa4b09ca8eb33c5942295b76616c637941b00d91f67",
         "sameImageExportSHA256": "eb661a5616c631012028842e8f420c34ae9fd9578897015ab814e7aae17bd0dc",
         "independentNativeQAEvidencePreserved": true,
@@ -1606,7 +1606,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "02fd7046d9f7aa4d0e38551f302c6b2af4142c067a3efd2513aa630aea22da7a",
         "semanticContextSHA256": "02fd7046d9f7aa4d0e38551f302c6b2af4142c067a3efd2513aa630aea22da7a",
@@ -1961,7 +1961,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "02fd7046d9f7aa4d0e38551f302c6b2af4142c067a3efd2513aa630aea22da7a",
       "contextAfterSHA256": "02fd7046d9f7aa4d0e38551f302c6b2af4142c067a3efd2513aa630aea22da7a",
       "ownerApproved": true,
@@ -1988,7 +1988,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "60a4051172602e1bac0a802f7a4d76fb2c0bae160fac7dfad10d29684b0247e5",
         "sameImageExportSHA256": "9c0316fe4e775eb91d8dc4e3fb6ca73b978bed7fbf53b0d609c43de9fe9d45fb",
         "independentNativeQAEvidencePreserved": true,
@@ -2044,7 +2044,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "cfec95da505172c8282bd264e700798f08103a50dd2e6cc06de4d080084cf881",
         "semanticContextSHA256": "cfec95da505172c8282bd264e700798f08103a50dd2e6cc06de4d080084cf881",
@@ -2363,7 +2363,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "cfec95da505172c8282bd264e700798f08103a50dd2e6cc06de4d080084cf881",
       "contextAfterSHA256": "cfec95da505172c8282bd264e700798f08103a50dd2e6cc06de4d080084cf881",
       "ownerApproved": true,
@@ -2390,7 +2390,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "0e45812b49dc5cacbc5d77941edb7d385916701a4a762880b63a744910a8e44e",
         "sameImageExportSHA256": "0d8059e76b72beb74f74516da0f61cf507582c8fda0adc6d8ab5afbcdb265436",
         "independentNativeQAEvidencePreserved": true,
@@ -2446,7 +2446,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "a4f338ae3199a405e56513401db2a43adefe43d47b56505625e96ee2cc96d412",
         "semanticContextSHA256": "a4f338ae3199a405e56513401db2a43adefe43d47b56505625e96ee2cc96d412",
@@ -2741,7 +2741,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "a4f338ae3199a405e56513401db2a43adefe43d47b56505625e96ee2cc96d412",
       "contextAfterSHA256": "a4f338ae3199a405e56513401db2a43adefe43d47b56505625e96ee2cc96d412",
       "ownerApproved": true,
@@ -2768,7 +2768,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "4482ebd1bcb5bf3b1ae519266c543878e6fe48cfe05656387053b43f4136fb8a",
         "sameImageExportSHA256": "d86f1d99250a040a89895788252515d87862445e4526f722012a9b536b6a0c4c",
         "independentNativeQAEvidencePreserved": true,
@@ -2824,7 +2824,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3da275e0f885bae2d25d90ec4a0a8c0f09f8d7c30ac4f266bca51944846f6ec5",
         "semanticContextSHA256": "3da275e0f885bae2d25d90ec4a0a8c0f09f8d7c30ac4f266bca51944846f6ec5",
@@ -3119,7 +3119,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "3da275e0f885bae2d25d90ec4a0a8c0f09f8d7c30ac4f266bca51944846f6ec5",
       "contextAfterSHA256": "3da275e0f885bae2d25d90ec4a0a8c0f09f8d7c30ac4f266bca51944846f6ec5",
       "ownerApproved": true,
@@ -3146,7 +3146,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "7fee5dd2ec2d6e228256f17e60b42667d991574390f47d5681801bad1b0aee17",
         "sameImageExportSHA256": "1842993d4d3b1855e5a7a8dde645a9531122d97a3b55f6dfcfb4d90f43c1adc2",
         "independentNativeQAEvidencePreserved": true,
@@ -3202,7 +3202,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "b8af8fa4e0301ad5fbfc7eb4f0bb74f6288db034e37d4dcacd92321ac7e4d0a4",
@@ -3497,7 +3497,7 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "b8af8fa4e0301ad5fbfc7eb4f0bb74f6288db034e37d4dcacd92321ac7e4d0a4",
       "ownerApproved": true,
@@ -3524,7 +3524,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "ce0daa3a535356cd4adc12ad3a2dab9791212937adf4215f9764414b01c12585",
         "sameImageExportSHA256": "bbf50737f3caa52e5c0bb3175256e45681f880d8d75febe7dfe5149186e60eeb",
         "independentNativeQAEvidencePreserved": true,
@@ -3580,10 +3580,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "8ce8e05e761c5534bc55cc9f9c5dfea128cabe809a7d0e07576f0c0b18648e16",
+        "semanticContextSHA256": "22745ccd45409454c13743016750fb40cf84de1b3a49914218e612f1e5d5e7ea",
         "subjectTitle": "Sibangin arboretum",
         "targetState": "existing-target"
       },
@@ -3875,9 +3875,9 @@
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "8ce8e05e761c5534bc55cc9f9c5dfea128cabe809a7d0e07576f0c0b18648e16",
+      "contextAfterSHA256": "22745ccd45409454c13743016750fb40cf84de1b3a49914218e612f1e5d5e7ea",
       "ownerApproved": true,
       "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
       "priorSourceBindBeforeTask118": {
@@ -3902,7 +3902,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "26980766cef36965c132aafcda1edea85c02cf4aa0f51d5b8f2a42d51757ac22",
         "sameImageExportSHA256": "70a97e89ffdb9771b5f37e5af5d2e2f814e8b23382d2187b06cbf9f1cf1e2ca8",
         "independentNativeQAEvidencePreserved": true,
@@ -3958,7 +3958,7 @@
         1800
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9844dd6a566b124093ce01bfc392917a2794f49b220ac31552a5da996a0102b0",
         "semanticContextSHA256": "9844dd6a566b124093ce01bfc392917a2794f49b220ac31552a5da996a0102b0",
@@ -4141,7 +4141,7 @@
         "tiedosto": "Les cocos de Libreville.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "9844dd6a566b124093ce01bfc392917a2794f49b220ac31552a5da996a0102b0",
       "contextAfterSHA256": "9844dd6a566b124093ce01bfc392917a2794f49b220ac31552a5da996a0102b0",
       "ownerApproved": true,
@@ -4168,12 +4168,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "10875faa34f31b149bbc0cedd885d928cbb4ff0e88f8d7516a2015f27ec7e861",
         "sameImageExportSHA256": "10875faa34f31b149bbc0cedd885d928cbb4ff0e88f8d7516a2015f27ec7e861",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4227,7 +4227,7 @@
         2000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5168a9f44685abc49dc0f4223e2a6d11f1a5ebbf199785b2004d2177e4a8d024",
         "semanticContextSHA256": "5168a9f44685abc49dc0f4223e2a6d11f1a5ebbf199785b2004d2177e4a8d024",
@@ -4410,7 +4410,7 @@
         "tiedosto": "Libreville, Gabon.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "5168a9f44685abc49dc0f4223e2a6d11f1a5ebbf199785b2004d2177e4a8d024",
       "contextAfterSHA256": "5168a9f44685abc49dc0f4223e2a6d11f1a5ebbf199785b2004d2177e4a8d024",
       "ownerApproved": true,
@@ -4437,7 +4437,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "8aac6089223b39eeb327f533e6295560a0da8572091873ab96317e3931b554cd",
         "sameImageExportSHA256": "8aac6089223b39eeb327f533e6295560a0da8572091873ab96317e3931b554cd",
         "independentNativeQAEvidencePreserved": true,
@@ -4496,7 +4496,7 @@
         1800
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ceeb1537651b12293b6edc597d4b38a2f659860f08b1ab9b175e12b57189ab58",
         "semanticContextSHA256": "9fb651bb3f0a9cc67a302e3fedfbdc18d7703ad3bacda4904c68f530a8d1450c",
@@ -4700,7 +4700,7 @@
         "tiedosto": "À la plage de Libreville.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "ceeb1537651b12293b6edc597d4b38a2f659860f08b1ab9b175e12b57189ab58",
       "contextAfterSHA256": "9fb651bb3f0a9cc67a302e3fedfbdc18d7703ad3bacda4904c68f530a8d1450c",
       "ownerApproved": true,
@@ -4727,12 +4727,12 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "d073e4b8571d67c9a9b993a8a5ef0140cf1974f410ed87f84f19a3bd249069ec",
         "sameImageExportSHA256": "d073e4b8571d67c9a9b993a8a5ef0140cf1974f410ed87f84f19a3bd249069ec",
         "independentNativeQAEvidencePreserved": true,
         "independentTextResamplePending": true,
-        "captionChanged": true
+        "captionChanged": false
       }
     },
     {
@@ -4786,7 +4786,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e06/paakaupungit-pilvi/e06/libreville/sisalto.json",
-      "sourceContentSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "semanticSourceBind": {
         "targetBeforeSHA256": "93363accdc7442f3494d9233682f086138933e47e2d159112bc018943831666a",
         "semanticContextSHA256": "93363accdc7442f3494d9233682f086138933e47e2d159112bc018943831666a",
@@ -4969,7 +4969,7 @@
         "tiedosto": "Le Komo 1.JPG"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+      "sourceContentAfterSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
       "targetAfterSHA256": "93363accdc7442f3494d9233682f086138933e47e2d159112bc018943831666a",
       "contextAfterSHA256": "93363accdc7442f3494d9233682f086138933e47e2d159112bc018943831666a",
       "ownerApproved": true,
@@ -4996,7 +4996,7 @@
       "runtimeUseAllowed": true,
       "textAcceptanceVerified": false,
       "task228CorrectedCBinding": {
-        "sourceSHA256": "1c59553497962b44f9eea06bee1a4c1400d1ac11a9b6d84711c4b5781fb2fad7",
+        "sourceSHA256": "ebdf1bc3fe27cda444e320e7899f5336c60f3c0e8a7617aa909a92a6f1a57439",
         "sameImageNativeSHA256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
         "sameImageExportSHA256": "dff7864de15c41995ef2c345425ea087d056f8d42a39906f31b9be7bc56e13a2",
         "independentNativeQAEvidencePreserved": true,
@@ -5014,9 +5014,9 @@
   "task118TextRevision": true,
   "independentTextResamplePending": true,
   "textAcceptanceVerified": false,
-  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e06/libreville/c34ef11866ed8199771126f476fafeeb6dd9c3b99f98367ecf4bf147fe8c43e7.json",
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task228/immutable-media-history/e06/libreville/79f778e8c563bc4cb60fa771a1f7ebe660c8abee9b7fdca87911f35f2074fe2c.json",
   "task118ReboundAt": "2026-10-13T16:31:24.972885+00:00",
   "task228ExcludedAssets": [],
   "task228TextRevision": true,
-  "task228ReboundAt": "2026-10-13T18:31:09.962380+00:00"
+  "task228ReboundAt": "2026-10-13T19:32:47.153860+00:00"
 }
