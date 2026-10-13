@@ -1,0 +1,258 @@
+{
+  "taskNumber": 95,
+  "icons": 3,
+  "sizes": [
+    48,
+    24,
+    20,
+    22,
+    28
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "allPassed": true,
+  "checks": [
+    {
+      "name": "kolikko",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 1108,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 314,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 246,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 280,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 446,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 845,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 261,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 202,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 236,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 351,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "light",
+      "size": 48,
+      "nonzeroAlphaPixels": 744,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "light",
+      "size": 24,
+      "nonzeroAlphaPixels": 226,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "light",
+      "size": 20,
+      "nonzeroAlphaPixels": 186,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "light",
+      "size": 22,
+      "nonzeroAlphaPixels": 210,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "light",
+      "size": 28,
+      "nonzeroAlphaPixels": 310,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 1108,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 314,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 246,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 280,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "kolikko",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 446,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 845,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 261,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 202,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 236,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "juliste",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 351,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "dark",
+      "size": 48,
+      "nonzeroAlphaPixels": 744,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "dark",
+      "size": 24,
+      "nonzeroAlphaPixels": 226,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "dark",
+      "size": 20,
+      "nonzeroAlphaPixels": 186,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "dark",
+      "size": 22,
+      "nonzeroAlphaPixels": 210,
+      "edgePixels": 0,
+      "passed": true
+    },
+    {
+      "name": "matkamuisto",
+      "theme": "dark",
+      "size": 28,
+      "nonzeroAlphaPixels": 310,
+      "edgePixels": 0,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "taskNumber": 95,
+  "allPassed": true,
+  "SVGCount": 3,
+  "checks": [
+    {
+      "name": "kolikko",
+      "sha256": "9471d9147a34966b9cb62a52dd9cd99a062ecef7cc1f6df9901f51ef3872712d",
+      "bodySha256": "6bde1a82bb6d9e356b676e34dd3444e6f24ee058a17e8c1163c4be777e97702a",
+      "originalTask92SHA256": "cc31c9d7a818ece5c9ee32f948f5074ae45e768cc7c18bf9063aae861935f6c8",
+      "structurePassed": true,
+      "CSharpBodyRoundTripPassed": true,
+      "replacedGeometry": true
+    },
+    {
+      "name": "juliste",
+      "sha256": "ae15ade9da91ef3a0933d0f268b821ad8c8ed8d74a227ac4cf3bd4235466af49",
+      "bodySha256": "7a0c0ee9989526d63e7ffe4c81a3ebe2747adf5f29503881c999fe670a641ca9",
+      "originalTask92SHA256": "83c9f911dc9e7793069f1ad29e68b060625925bb4fa6f3de2d06c88236d0356c",
+      "structurePassed": true,
+      "CSharpBodyRoundTripPassed": true,
+      "replacedGeometry": true
+    },
+    {
+      "name": "matkamuisto",
+      "sha256": "289bbd33689a2331451ff61aea3bdeb565081207a136ed2674817c9dd7abe725",
+      "bodySha256": "08bf8b75ce9c6c7d9525e44e9b9c91d512cc064efc7ea072eb7fe8a367f98ced",
+      "originalTask92SHA256": "0b2a12f70da654336c188a19d2891b9a6fd48b08de9d9da3c6d309eb505b4ae8",
+      "structurePassed": true,
+      "CSharpBodyRoundTripPassed": true,
+      "replacedGeometry": true
+    }
+  ],
+  "originalDeliveryPreserved": true,
+  "imageGenerationCalls": 0
+}

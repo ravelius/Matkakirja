@@ -1,0 +1,27 @@
+{
+  "taskNumber": 95,
+  "createdAt": "2026-10-13T08:18:11.841Z",
+  "method": "Original coordinate geometry drawn for this order. No icon library, logo or protected landmark tracing.",
+  "sourceCommit": "ed9b409765b85579c3a531841ae8bb241a449dbc",
+  "sourceBlob": "bd6c761ba7b999ea11169e214f7b5182d9c691f0",
+  "imageGenerationCalls": 0,
+  "subjects": {
+    "kolikko": "Circular face-on coin, rim and generic embossed crown",
+    "juliste": "Picture poster with two mountain peaks and sun, no text rows",
+    "matkamuisto": "Snow globe with snowflake and pedestal, no protected landmark"
+  },
+  "geometry": {
+    "kolikko": {
+      "sha256": "9471d9147a34966b9cb62a52dd9cd99a062ecef7cc1f6df9901f51ef3872712d",
+      "bodySha256": "6bde1a82bb6d9e356b676e34dd3444e6f24ee058a17e8c1163c4be777e97702a"
+    },
+    "juliste": {
+      "sha256": "ae15ade9da91ef3a0933d0f268b821ad8c8ed8d74a227ac4cf3bd4235466af49",
+      "bodySha256": "7a0c0ee9989526d63e7ffe4c81a3ebe2747adf5f29503881c999fe670a641ca9"
+    },
+    "matkamuisto": {
+      "sha256": "289bbd33689a2331451ff61aea3bdeb565081207a136ed2674817c9dd7abe725",
+      "bodySha256": "08bf8b75ce9c6c7d9525e44e9b9c91d512cc064efc7ea072eb7fe8a367f98ced"
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "taskNumber": 95,
+  "reviewType": "Riippumaton kolmen korjatun SVG-kuvakkeen lähde-, rakenne- ja natiivikokoinen visuaalinen QA",
+  "checkedAt": "2026-10-13T08:21:52.080226+00:00",
+  "verdict": "accepted",
+  "approvedIconCount": 3,
+  "expectedIconCount": 3,
+  "approvedNames": [
+    "kolikko",
+    "juliste",
+    "matkamuisto"
+  ],
+  "reason": "Kaikki kolme toteuttavat korjaustilauksen aiheet ja erottuvat 20/22/24/28 pt koossa vaalealla sekä tummalla taustalla. Ilmavuus, pyöreät päät/liitokset ja viivanpaino vastaavat tyyliviitettä. Rakenne täyttää erityisesti uuden täyttökiellon.",
+  "sourceFilesReadInFull": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/viivakuvakkeet-korjaus-20261013/sources/fable-codex-kuvakkeet-korjaus-20261013.md",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/viivakuvakkeet-korjaus-20261013/sources/fable-codex-kuvakkeet-20261012.md",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/viivakuvakkeet-korjaus-20261013/sources/fable-codex-kaikki-kuvakkeet-20261012.md"
+  ],
+  "sourceInterpretation": {
+    "correctionOrderTakesPriority": true,
+    "noFill": "13.10 korjaus kieltää kaiken täytön ja class=taytto käytön; aiemman tilauksen pieniä täyttöjä koskevaa poikkeusta ei sovelleta.",
+    "subjects": "Kolikon kruunu, julisteen vuoret/aurinko ja matkamuiston lumisadepallo ovat nimenomaisesti sallittuja kuva-aiheita.",
+    "optionalSouvenirVariant": "Vaihtoehto-b vaaditaan vain epäselvyyden tapauksessa; tämä lumisadepallon siluetti on tunnistettava.",
+    "additionalConditionsApplied": false
+  },
+  "icons": {
+    "kolikko": {
+      "verdict": "accepted",
+      "SVG_SHA256": "9471d9147a34966b9cb62a52dd9cd99a062ecef7cc1f6df9901f51ef3872712d",
+      "sha256": "9471d9147a34966b9cb62a52dd9cd99a062ecef7cc1f6df9901f51ef3872712d",
+      "bodySHA256": "6bde1a82bb6d9e356b676e34dd3444e6f24ee058a17e8c1163c4be777e97702a",
+      "bodyHashEncoding": "UTF-8 of the exact one-line body string, no newline",
+      "elementCount": 3,
+      "structuralPassed": true,
+      "provenanceHashesMatch": true,
+      "subject": "Suoraan edestä nähty pyöreä kolikko: ulko- ja sisärengas sekä yleinen kruunun kohokuvio.",
+      "recognition": "Täysin pyöreät kaksoisrenkaat erottuvat 20/22/24/28 pt koossa; keskellä säilyy yksinkertainen kruunun muoto. Kuvake ei näytä kulholta, sivuperspektiiviltä tai pinolta.",
+      "spacing": "Renkaiden säteiden ero 2.4 yksikköä antaa näkyvän reunarenkaan. Kruunu jää irti sisärenkaasta; viivanpaino vastaa sarjaa.",
+      "recognitionPassedSizes": [
+        20,
+        22,
+        24,
+        28
+      ],
+      "themesPassed": [
+        "light",
+        "dark"
+      ]
+    },
+    "juliste": {
+      "verdict": "accepted",
+      "SVG_SHA256": "ae15ade9da91ef3a0933d0f268b821ad8c8ed8d74a227ac4cf3bd4235466af49",
+      "sha256": "ae15ade9da91ef3a0933d0f268b821ad8c8ed8d74a227ac4cf3bd4235466af49",
+      "bodySHA256": "7a0c0ee9989526d63e7ffe4c81a3ebe2747adf5f29503881c999fe670a641ca9",
+      "bodyHashEncoding": "UTF-8 of the exact one-line body string, no newline",
+      "elementCount": 3,
+      "structuralPassed": true,
+      "provenanceHashesMatch": true,
+      "subject": "Pysty suorakaidekehys, kaksi vuorenhuippua ja aurinko.",
+      "recognition": "Kuva-aihe näkyy kaikissa 20/22/24/28 pt tarkistuskoissa. Kehys, kaksi huippua ja aurinko erottavat julisteen viivakaaviosta. Tekstirivejä ei ole.",
+      "spacing": "Kuva-aiheen ja kehyksen välissä on tilaa; pyöreä aurinko ei koske kehykseen tai vuoriin. Viivanpaino ja ilmavuus vastaavat tyyliviitettä.",
+      "recognitionPassedSizes": [
+        20,
+        22,
+        24,
+        28
+      ],
+      "themesPassed": [
+        "light",
+        "dark"
+      ]
+    },
+    "matkamuisto": {
+      "verdict": "accepted",
+      "SVG_SHA256": "289bbd33689a2331451ff61aea3bdeb565081207a136ed2674817c9dd7abe725",
+      "sha256": "289bbd33689a2331451ff61aea3bdeb565081207a136ed2674817c9dd7abe725",
+      "bodySHA256": "08bf8b75ce9c6c7d9525e44e9b9c91d512cc064efc7ea072eb7fe8a367f98ced",
+      "bodyHashEncoding": "UTF-8 of the exact one-line body string, no newline",
+      "elementCount": 3,
+      "structuralPassed": true,
+      "provenanceHashesMatch": true,
+      "subject": "Lumisadepallo: pyöreä kupu, jalusta ja kuusisakarainen hiutale.",
+      "recognition": "Kupuun ja jalustaan perustuva esinesiluetti pysyy tunnistettavana 20/22/24/28 pt koossa. Hiutale näkyy keskellä; kyseessä on esine, ei kaavio. Toista vaihtoehtoa ei tarvita tämän natiivikokoisen tarkastelun perusteella.",
+      "spacing": "Kuvun ja hiutaleen välissä on ilmavuutta. Jalusta erottuu kupuosasta, ja sarjan 1.75 viivanpaino säilyy molemmilla taustoilla.",
+      "recognitionPassedSizes": [
+        20,
+        22,
+        24,
+        28
+      ],
+      "themesPassed": [
+        "light",
+        "dark"
+      ]
+    }
+  },
+  "structuralChecks": {
+    "viewBox": "0 0 24 24",
+    "stroke": "currentColor",
+    "strokeWidth": 1.75,
+    "linecap": "round",
+    "linejoin": "round",
+    "fill": "none",
+    "noClassTaytto": true,
+    "allowedElementsOnly": true,
+    "noTextOrNumbers": true,
+    "noTransformsDasharrayMasksClipsGradientsFilters": true,
+    "oneLineBodiesWithoutWrapper": true,
+    "bodiesMatchSVGContentsExactly": true,
+    "oneColour": true
+  },
+  "visualInspection": {
+    "styleReference": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/viivakuvakkeet-korjaus-20261013/sources/ikonit-viiva-tyyliviite.png",
+    "preview": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/viivakuvakkeet-korjaus-20261013/toimitus/preview-all.png",
+    "inspectedWith": "view_image original",
+    "sizes": [
+      48,
+      24,
+      20,
+      22,
+      28
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "styleConsistencyPassed": true,
+    "airinessAndWeightPassed": true,
+    "smallSizeRecognitionPassed": true
+  },
+  "independentRasterChecks": {
+    "method": "Sharp render of actual SVG contents to in-memory RGBA buffers only; no saved render files.",
+    "bufferRenderCount": 30,
+    "sizes": [
+      48,
+      24,
+      20,
+      22,
+      28
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "nonzeroVisiblePixelsForEveryIconSizeTheme": true,
+    "edgeAlphaPixels": 0,
+    "clippingFound": false,
+    "allPassed": true
+  },
+  "originalityObservation": {
+    "provenanceMethod": "Original coordinate geometry drawn for this order. No icon library, logo or protected landmark tracing.",
+    "imageGenerationCallsInProvenance": 0,
+    "recognizableLogoOrProtectedLandmarkSeen": false,
+    "note": "Generic crown, mountain poster and snow globe subjects fit the source. Provenance declares original coordinate drawing; no external icon artwork was used during this independent review."
+  },
+  "artifactHashes": {
+    "bodiesJsonSHA256": "5c105c88f1b34e3d9f776b93ee2b16871227a165d3bb798d2466e3d0e1dbccc0",
+    "previewAllSHA256": "c0ca5b1f1038a27bf5f80ae86cdb0f1bacec1620794682393661bd31e443dc3d",
+    "styleReferenceSHA256": "9e39b982bc6957ca007b4a7c9672b907b69460c50b14b8b4502041d9b1bf41a6"
+  },
+  "writeScope": [
+    "independent-qa.json"
+  ],
+  "SVGsModified": false,
+  "bodiesModified": false,
+  "previewModified": false,
+  "imageGenerationCallsByReviewer": 0,
+  "gitWritten": false,
+  "posted": false,
+  "appMessagesSent": false
+}
