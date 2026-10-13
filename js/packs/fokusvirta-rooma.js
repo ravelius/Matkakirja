@@ -1064,6 +1064,7 @@ export const FOKUSVIRTA_ROOMA = {
     },
     {
       id: 'aqua-virgo',
+      wiki: 'Rooman akveduktit',
       nimio: 'Aqua Virgo',
       otsikko: 'Vesi kulkee yhä',
       symboli: 'tekniikka',
@@ -1138,6 +1139,7 @@ export const FOKUSVIRTA_ROOMA = {
        */
       galleria: [
         {
+          otsikko: 'Vanha nasone Pantheonin vieressä',
           tiedosto: 'Pigna-S Eustachio-Colonna - Nasone alla Rotonda.JPG',
           selite: 'Vanhimpia yhä toimivia nasoneja seisoo Pantheonin vieressä '
             + 'Piazza della Rotondalla.',

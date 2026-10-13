@@ -5431,6 +5431,7 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/budapest-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
+    piirtoRajat: { pohjoinen: 47.5215, etela: 47.4735, lansi: 19.001, ita: 19.097 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     /*
      * Kainalokartta Sankarien aukiosta. Se on lehden kansikuva mutta
      * 3 km koilliseen, ja päärajaukseen ottaminen olisi työntänyt
@@ -5440,7 +5441,7 @@ export const KAUPUNKIKARTAT = {
      */
     kainalot: [
       { rajat: { pohjoinen: 47.5215, etela: 47.5095, lansi: 19.07, ita: 19.092 },
-        x: 70, y: 3, leveys: 28, korkeus: 30.56 },
+        x: 62.5, y: 20.625, leveys: 17.5, korkeus: 19.1 },
     ],
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
     // esittely kertoo kohteet, ei kartan viivastoja.
@@ -7021,9 +7022,10 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/bukarest-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 44.4445, etela: 44.4235, lansi: 26.08, ita: 26.109 },
+    piirtoRajat: { pohjoinen: 44.4508, etela: 44.4172, lansi: 26.0713, ita: 26.1177 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kainalot: [
       { rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
-        x: 3, y: 9, leveys: 26, korkeus: 24.86 },
+        x: 20.625, y: 24.375, leveys: 16.25, korkeus: 15.54 },
     ],
     /*
      * TEKSTIREMONTTI 20.8.2026, ERÄ E6 (Raamattu, "TEKSTIEN
@@ -19755,7 +19757,64 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  sisilia: {
+    /*
+     * Palermo, pelin kaupunki "Sisilia" (Karttaseppä 12.10.2026, PT: aarretehtävien erä 3 tarvitsee
+     * kohdekartan). Kohteet: tehtävän paikat (Teatro Massimo, Quattro Canti, Piazza Marina) ja
+     * vanhankaupungin päänähtävyydet. Wiki-otsikot englanniksi, koska suomenkielisiä artikkeleita ei ole (js/wiki.js kokeilee fi:n ensin); tekstit ja nostot täydentää Sisältökirjuri.
+     */
+    polku: 'assets/kartat/sisilia-keskusta.png',
+    varikartta: 'assets/kartat/sisilia-varikartta.png',
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 38.1255, etela: 38.1075, lansi: 13.3495, ita: 13.3755 },
+    piirtoRajat: { pohjoinen: 38.1309, etela: 38.1021, lansi: 13.3417, ita: 13.3833 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    esittely: 'Kartan alue on Palermon vanhakaupunki Sisilian pohjoisrannalla. '
+      + 'Keskellä kaksi pääkatua, Corso Vittorio Emanuele ja Via Maqueda, '
+      + 'risteävät Quattro Cantin aukiolla. Lännessä ovat katedraali ja '
+      + 'Normannien palatsi, pohjoisessa Teatro Massimo ja idässä meren '
+      + 'rannalla Piazza Marina. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Teatro Massimo', lat: 38.12028, lon: 13.35722, wiki: 'Teatro Massimo' },
+      { nimi: 'Quattro Canti', tyyppi: 'aukio', lat: 38.11556, lon: 13.36139, wiki: 'Quattro Canti' },
+      { nimi: 'Palermon katedraali', lat: 38.11417, lon: 13.35611, wiki: 'Palermo Cathedral' },
+      { nimi: 'Normannien palatsi', lat: 38.11083, lon: 13.35306, wiki: 'Palazzo dei Normanni' },
+      { nimi: 'Piazza Marina', tyyppi: 'aukio', lat: 38.1176, lon: 13.3708, wiki: 'Piazza Marina' },
+    ],
+  },
+  lappi: {
+    /*
+     * Rovaniemi, pelin kaupunki "Lappi" (Karttaseppä 12.10.2026, PT: aarretehtävien erä 4 tarvitsee
+     * kohdekartan). Koordinaatit OSM:stä (nimi-haku 12.10.2026). Tekstit ja nostot täydentää Sisältökirjuri.
+     */
+    polku: 'assets/kartat/lappi-keskusta.png',
+    varikartta: 'assets/kartat/lappi-varikartta.png',
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 66.512, etela: 66.490, lansi: 25.705, ita: 25.760 },
+    piirtoRajat: { pohjoinen: 66.5186, etela: 66.4834, lansi: 25.6885, ita: 25.7765 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    esittely: 'Kartan alue on Rovaniemen keskusta Kemijoen ja Ounasjoen '
+      + 'yhtymäkohdassa. Pohjoisessa Ounasjoen rannalla on Arktikum, idässä '
+      + 'Jätkänkynttilä-silta ylittää Kemijoen ja etelässä ovat Alvar Aallon '
+      + 'suunnittelemat kaupungintalo ja Lappia-talo sekä kaupungin kirkko. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Arktikum', lat: 66.50754, lon: 25.72598, wiki: 'Arktikum' },
+      { nimi: 'Lordin aukio', tyyppi: 'aukio', lat: 66.50252, lon: 25.7305, wiki: 'Lordin aukio' },
+      { nimi: 'Jätkänkynttilä', lat: 66.5029, lon: 25.74227, wiki: 'Jätkänkynttilä (silta)' },
+      { nimi: 'Rovaniemen kaupungintalo', lat: 66.49642, lon: 25.72501, wiki: 'Rovaniemen kaupungintalo' },
+      { nimi: 'Lappia-talo', lat: 66.49701, lon: 25.72043, wiki: 'Lappia-talo' },
+      { nimi: 'Rovaniemen kirkko', lat: 66.49462, lon: 25.72879, wiki: 'Rovaniemen kirkko' },
+    ],
+  },
 };
+
+/*
+ * PELIN KAUPUNKI "ISLANTI" = REYKJAVIKIN KARTTA (Karttaseppä 12.10.2026, PT + SK #4523). Laudalla
+ * Islanti on maan niminen kaupunki (js/packs/europe.js id 'islanti'), mutta kohdekartta tehtiin
+ * avaimella reykjavik, jota peli ei käytä: kartta ei näkynyt. Aarretehtävien erä 3 tarvitsee sen.
+ */
+KAUPUNKIKARTAT.islanti = KAUPUNKIKARTAT.reykjavik;
 
 /*
  * Lambertin tasapinta-azimutaalinen projektio (LAEA).

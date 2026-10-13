@@ -856,6 +856,9 @@ const MODULES = [
   'js/sivunkaanto.js',
   // Lehden osiohakemisto (lehti.js tuo sen).
   'js/lehtiosiot.js',
+  // Kartalle siirtyneet jutut kaupunkilehden sivuille (lehti.js tuo sen;
+  // se tuo fokusvirrat ja Saksan fokuskohteet, jotka ovat jo yllä).
+  'js/lehtinostot.js',
   // M5a: lehden sivukoneisto (tuo nähtävyydet ja lukijan).
   'js/lehti.js',
   /*

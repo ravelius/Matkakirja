@@ -13972,3 +13972,13 @@ Omistaja kortilla: tilin samireivinen@gmail.com (koodaustili, Max; viikko nollau
 ## JUNA 184 JULKAISTAAN HETI, KUN KIPIN PALLOKISA TOIMII JA PULUN RAKETTI ON MUKANA (omistaja 12.10.2026 klo 19.4x) (12.10.2026 klo 19.43)
 
 Omistaja sanatarkasti: "184 voi julkaista heti kun kipin kilpailu on toiminnassa". Heti perään sanatarkasti: "Tai pulun raketti täytyy saada mukaan myös". Tämä on junan 184 julkaisupyyntö ehdolla: kun kipin pallokisa toimii JA Pulun raketin 184-työt ovat mukana (kumpikin Laitetestaajan ajo läpi ja Päätoimittajan kuittaus), Natiiviseppä lukitsee junan 184 → muistiportti → BUILD → TF, ja Julkaisija tekee junan web-merget; mikä ei silloin ole kuitattu, jää junaan 185. Pallokisan ja raketin erät (Pelikoodari, Natiivi-UI, Linssiseppä, Linssiseppä 2) nostettiin käännös- ja simujonon kärkeen. PT välitti ehdon sanatarkasti Natiivisepälle ja Julkaisijalle 19.4x.
+
+## ASEMATAULU: AJAN TASALLA KAIKISSA TILANTEISSA (omistaja 12.10.2026 klo 21.4x) (12.10.2026 klo 21.41)
+
+Omistaja kuvakaappauksella työlistasta: "onko tämä ajantasalla?" (työlista oli iltapäivän tilassa, koska edellinen Päätoimittaja ei päivittänyt sitä kiireen keskellä, ja jonokierroksen ajastus ei laukea, kun sessio on koko ajan työssä) → sanatarkasti: "tee korjaus joka pitää huolen että työlista ja asemataulu pysyy päivitettynä kaikissa tilanteissa".
+
+Korjaus kolmessa osassa: 1) totuus tiedostoissa data/talo/*.json ja Postivahti vie muuttuneet tauluun joka kierroksella (tools/asemataulu/synkka.py) sekä ilmoittaa "ASEMATAULU VANHA" Päätoimittajalle, 2) Päätoimittajan hook (tools/hooks/pt-taulu-muistutus.py) muistuttaa kuittauksen ja omistajan viestin jälkeen, 3) taulu näyttää junien ja työlistan päivitysajan punaisena, kun ne vanhenevat (junat 2 h, työlista 3 h). Toimii myös nollauksen ja tilinvaihdon yli, koska tiedostot ja hook ovat Macilla.
+
+## KUVAOIKEUDET UUSISSA KAUPUNGEISSA: PELI EI OLE KAUPALLISTA KUVAAMISTA (omistaja 13.10.2026) (13.10.2026 klo 07.02)
+
+Omistaja 13.10.2026 klo 06.57 PT:n kortissa (kysymys: Italian ja Slovenian kulttuuriperintölait vaativat luvan/maksun kulttuurikohteiden kaupalliseen kuvaamiseen, Espanja ja Portugali epäselviä, Kreikka koskee nykyistä Ateenaa) sanatarkasti: "Ei tämä ole kaupallista kuvaamista". Linjaus: kulttuuriperintölakien kuvauslupa- ja maksurajoitukset eivät estä pelin omia kohdemalleja eivätkä kameran suuntausta (Rooma, Barcelona, Lissabon, Madrid, Ljubljana ym. etenevät). Tekijänoikeussääntö ennallaan: suojattuja teoksia ja rakennuksia (tekijä kuollut alle 70 v sitten, Espanjassa 80) ei tehdä omina 3D-malleina edes sivuaiheina; ne näkyvät vain Googlen laatoissa. Karttasepän maakohtainen oikeustarkistus: proto-3d/_tyo/karttaseppa/oikeustarkistus-20261013.md.

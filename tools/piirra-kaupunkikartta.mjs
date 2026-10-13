@@ -281,10 +281,11 @@ const KAUPUNGIT = {
     // kohteita. Kainalo ottaa mukaan myös Városligetin ja Széchenyin
     // kylpylän, eli lehden kolmas koillinen kohde näkyy sekin.
     rajat: { pohjoinen: 47.5125, etela: 47.4825, lansi: 19.019, ita: 19.079 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, erä 184); kainalo siirretty ydinalaan
     kainalot: [
       {
         rajat: { pohjoinen: 47.5215, etela: 47.5095, lansi: 19.07, ita: 19.092 },
-        x: 70, y: 3, leveys: 28, suunta: '3 km koilliseen',
+        x: 62.5, y: 20.625, leveys: 17.5, suunta: '3 km koilliseen',
       },
     ],
   },
@@ -725,6 +726,26 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 50.851, etela: 50.8335, lansi: 4.342, ita: 4.376 },
     laajennus: 1.6,
   },
+  sisilia: {
+    /*
+     * Palermon vanhakaupunki (Karttaseppä 12.10.2026, PT: aarretehtävien erä 3, pelin kaupunki "Sisilia").
+     * Quattro Canti keskellä, katedraali ja Normannien palatsi lännessä, Teatro Massimo pohjoisessa,
+     * Piazza Marina ja La Kalsa idässä meren rannalla. 2,3 × 2,0 km; meri (Palermonlahti) itälaidalla.
+     */
+    rajat: { pohjoinen: 38.1255, etela: 38.1075, lansi: 13.3495, ita: 13.3755 },
+    laajennus: 1.6,
+    meri: true,
+    meriHaku: 0.05,
+  },
+  lappi: {
+    /*
+     * Rovaniemi, pelin kaupunki "Lappi" (Karttaseppä 12.10.2026, PT: aarretehtävien erä 4).
+     * Kemijoen ja Ounasjoen yhtymäkohta: keskusta niemellä, Arktikum pohjoisessa, Jätkänkynttilä-silta
+     * idässä Kemijoen yli, Aallon keskus (kaupungintalo, Lappia-talo) ja kirkko etelässä. 2,4 × 2,4 km.
+     */
+    rajat: { pohjoinen: 66.512, etela: 66.490, lansi: 25.705, ita: 25.760 },
+    laajennus: 1.6,
+  },
   valletta: {
     /*
      * Vallettan koko ydinniemi (21.9.2026; omistajan päätös
@@ -955,10 +976,11 @@ const KAUPUNGIT = {
     // Unirii-bulevardin suihkulähdealtaat natural=water-monikulmioina —
     // juuri ne tekevät bulevardista kuvassa katkoviivamaisen ketjun.
     rajat: { pohjoinen: 44.4445, etela: 44.4235, lansi: 26.08, ita: 26.109 },
+    laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, erä 184); kainalo siirretty ydinalaan
     kainalot: [
       {
         rajat: { pohjoinen: 44.4565, etela: 44.4475, lansi: 26.081, ita: 26.094 },
-        x: 3, y: 9, leveys: 26, suunta: '1 km pohjoiseen',
+        x: 20.625, y: 24.375, leveys: 16.25, suunta: '1 km pohjoiseen',
       },
     ],
   },

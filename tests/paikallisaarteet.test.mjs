@@ -35,6 +35,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { PAIKALLISAARTEET, paikallisaarre } from '../js/packs/paikallisaarteet.js';
 import { EUROPE_CITY_COUNTRY } from '../js/packs/europe-countries.js';
 import { PACKS } from '../js/pack.js';
+import { PAAKAUPUNKIPISTEET } from '../js/packs/paakaupungit.js';
 import { kaksoisavaimet } from '../tools/tarkista-kaksoisavaimet.mjs';
 
 const LAHDE = 'js/packs/paikallisaarteet.js';
@@ -58,6 +59,9 @@ const PELIN_MAAT = new Set();
 for (const pack of PACKS) {
   for (const iso of Object.values(pack.map?.cityCountry ?? {})) PELIN_MAAT.add(iso);
 }
+// Pääkaupunkipisteet (pallolla, js/pallolauta/paakaupunkipisteet.js) ovat myös
+// pelin maita: niiden pari ja aarrevihje kuuluvat maalle (12.10.2026).
+for (const p of PAAKAUPUNKIPISTEET) PELIN_MAAT.add(p.maa);
 
 /** Aarteet, jotka ovat tarua — teksti ei saa esittää niitä löytönä. */
 const TARUT = {
@@ -74,6 +78,8 @@ const TARUT = {
   CHE: 'Wilhelm Tellin varsijousi',
   HUN: 'Attilan hauta-aarre',
   UKR: 'Hetmani Polubotokin kultakätkö',
+  MDA: 'Alkuhärän pään hopeagrosi',
+  MCO: 'Pyhän Devotan pyhäinjäännökset',
 };
 const TARUSANAT = ['taru', 'tarina', 'saaga', 'legend', 'myytti', 'runo'];
 
@@ -119,6 +125,7 @@ test('jokaisella maalla on molemmat aarteet nimineen ja faktoineen', () => {
  * huomaamatta: uusi kuvaton pari on lisättävä tähän tietoisesti.
  */
 const KUVAA_ODOTTAVAT = new Set(['FIN', 'BEL', 'SVN', 'SVK', 'CYP', 'LUX', 'MLT']);
+// 12.10.2026: kymmenen pääkaupunkimaata sai Commons-valokuvat (LAHTEET: js/lahteet.js).
 
 test('kuva on maan oma ja olemassa — tai sitä ei ole vielä lainkaan', () => {
   for (const [iso, pari] of Object.entries(PAIKALLISAARTEET)) {

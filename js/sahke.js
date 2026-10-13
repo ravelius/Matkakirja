@@ -156,7 +156,7 @@ const SAHKE_KOODIN_PITUUS = 6;
  * ääneen sanottu koodi menee muuten väärin. Sitova: worker arpoo
  * koodin täsmälleen näistä merkeistä.
  */
-const SAHKE_KOODIN_MERKIT = 'ABCDEFGHJKLMNPQRTUVWXYZ23467889';
+const SAHKE_KOODIN_MERKIT = 'ABCDEFGHJKLMNPQRTUVWXYZ2346789';
 
 /** Suodattaa syötteen koodiaakkostoon — mitään muuta ei jää jäljelle. */
 function sahkeSiistiKoodi(teksti) {

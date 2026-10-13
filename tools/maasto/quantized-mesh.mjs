@@ -82,8 +82,10 @@ export function oktaKoodi([x, y, z]) {
  * @param {Array<[number, number, number]>} p.pisteet [u 0…1, v 0…1 (0 = etelä), korkeus m]
  * @param {Array<[number, number, number]>} p.kolmiot pisteindeksit, vastapäivään ylhäältä
  * @param {boolean} [p.normaalit] laajennus 1
+ * @param {Array<[number, number, number]>} [p.pisteNormaalit] ECEF-yksikkönormaali jokaiselle pisteelle (pisteet-järjestyksessä);
+ *   ilman sitä normaali lasketaan laatan omista kolmioista (laattarajalle jää varjostussauma).
  */
-export function koodaaLaatta({ alue, pisteet, kolmiot, normaalit = true }) {
+export function koodaaLaatta({ alue, pisteet, kolmiot, normaalit = true, pisteNormaalit = null }) {
   // PISTEET ENSIESIINTYMISJÄRJESTYKSEEN (high water mark vaatii sen).
   const uusi = new Int32Array(pisteet.length).fill(-1);
   const jarjestys = [];
@@ -136,8 +138,8 @@ export function koodaaLaatta({ alue, pisteet, kolmiot, normaalit = true }) {
   reuna((k) => k[1] === 32767);
 
   if (normaalit) {
-    const nn = xyz.map(() => [0, 0, 0]);
-    for (const [a, c, e] of kolmiotUusi) {
+    const nn = pisteNormaalit ? jarjestys.map((i) => [...pisteNormaalit[i]]) : xyz.map(() => [0, 0, 0]);
+    if (!pisteNormaalit) for (const [a, c, e] of kolmiotUusi) {
       const A = xyz[a]; const B = xyz[c]; const C = xyz[e];
       const ux = B[0] - A[0]; const uy = B[1] - A[1]; const uz = B[2] - A[2];
       const vx = C[0] - A[0]; const vy = C[1] - A[1]; const vz = C[2] - A[2];
@@ -195,4 +197,35 @@ export function puraLaatta(b) {
     pisteet: akselit[0].map((u, i) => [u, akselit[1][i], akselit[2][i]]),
     kolmiot, reunat, laajennukset, loppu: o,
   };
+}
+
+/**
+ * KOROSTUSVARA (Karttaseppä 13.10.2026, LS2:n vuoristopilotti, Geirangerin "porras"): natiivi korostaa maaston
+ * varjostimessa (KorkeusKerroin, p' = p + n·max(h, 0)·(k − 1), oletus 2), mutta cesium-native karsii ja valitsee
+ * laatat otsakkeen min/max-korkeudesta tehdyllä BoundingRegionilla, joka ei tiedä korostuksesta. Kameran edessä
+ * olevan harjanteen laatat jäivät korostamattomina näkökentän alapuolelle ja karsittiin. Tämä kirjoittaa
+ * otsakkeen maxHeightiksi K × max(h) (kun max(h) > 0) ja kvantisoi korkeudet uudelle välille; muu laatta (u, v,
+ * kolmiot, reunat, laajennukset) säilyy tavulleen. Tarkkuus: (K·max − min) / 32767, esim. 3 000 m → 0,09 m.
+ * @param {Buffer} raaka purettu (ei gzip) laatta
+ * @param {number} K korostusvara (≥ 1)
+ * @returns {Buffer} uusi laatta (sama pituus)
+ */
+export function korostusvara(raaka, K) {
+  const b = Buffer.from(raaka);
+  const hMin = b.readFloatLE(24); const hMax = b.readFloatLE(28);
+  const uusi = hMax > 0 ? Math.max(hMax, K * hMax) : hMax;
+  if (!(uusi > hMax)) return b;
+  const n = b.readUInt32LE(88);
+  const alku = 92 + 4 * n;
+  let q = 0; let ed = 0;
+  for (let i = 0; i < n; i += 1) {
+    const z = b.readUInt16LE(alku + 2 * i);
+    q += (z >> 1) ^ (-(z & 1));
+    const h = hMin + (q / 32767) * (hMax - hMin);
+    const q2 = Math.max(0, Math.min(32767, Math.round(((h - hMin) / (uusi - hMin)) * 32767)));
+    b.writeUInt16LE(zigzag(q2 - ed), alku + 2 * i);
+    ed = q2;
+  }
+  b.writeFloatLE(uusi, 28);
+  return b;
 }

@@ -3346,7 +3346,10 @@ export const SKANDAALIT = {
       nimio: 'Koirapäiväkuningas',
       vuosi: '1809',
       paikka: 'Stjórnarráðshúsið (hallituksen talo), Reykjavík',
-      lat: 64.1475, lon: -21.933,
+      // Ei omaa karttapistettä (SK 12.10.2026, PT:n sääntö: kartalle vain kahdella lähteellä; Stjórnarráðshúsiä
+      // ei mainita lähteissä) → piste = Islannin laudan oma piste (maailmankartta-pallopisteet.js), joten nosto ankkuroituu
+      // kaupungin laattaan ja jää lehteen eikä mene kohdekartalle.
+      lat: 64.15, lon: -21.82,
       kortti: 'Mies astui maihin kauppalaivasta, pidätti kuvernöörin ja julisti '
         + 'saarivaltion itsenäiseksi — kaikki tämä yhden kesän aikana. Kahden '
         + 'kuukauden päästä kuningaskunta oli ohi ja kuningas vankina laivassa. '

@@ -92,6 +92,7 @@ const SHELL = [
   './js/kohtaamiskuvat.js',
   './js/opas.js',
   './js/lehti.js',
+  './js/lehtinostot.js',
   // Sivunkääntö (5.9.2026): teatteri kuuluu SHELLiin; itse kirjasto
   // (page-flip) tulee ämpärin vendor/-polusta ja säilyy VENDORCACHEssa.
   './js/sivunkaanto.js',
@@ -428,6 +429,7 @@ const SHELL = [
   './js/linssit/satelliitti-data.js',
   './js/linssit/astronaut-kysymykset.js',
   './js/linssit/astro-kysymykset.js',
+  './js/linssit/museo-kysymykset.js',
   './js/linssit/satelliitti-aani.js',
   './js/linssit/astro-sumu.js',
   './js/tiivistys.js',
@@ -1842,6 +1844,10 @@ const SHELL = [
   './assets/kartat/ljubljana-varikartta.png',
   './assets/kartat/kosice-keskusta.png',
   './assets/kartat/kosice-varikartta.png',
+  './assets/kartat/sisilia-keskusta.png',
+  './assets/kartat/sisilia-varikartta.png',
+  './assets/kartat/lappi-keskusta.png',
+  './assets/kartat/lappi-varikartta.png',
   './assets/kartat/valletta-keskusta.png',
   './assets/kartat/valletta-varikartta.png',
   './assets/kartat/tampere-varikartta.png',

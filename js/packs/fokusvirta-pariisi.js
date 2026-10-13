@@ -1220,6 +1220,7 @@ export const FOKUSVIRTA_PARIISI = {
        * näissä kolmessa kortissa ei olisi.
        */
       id: 'pariisi-soi',
+      wiki: ['Édith Piaf', 'Django Reinhardt'],
       nimio: 'Pariisi soi',
       otsikko: 'Pariisi soi — kadulta ja asuntovaunuleiriltä maineeseen',
       symboli: 'kulttuuri',

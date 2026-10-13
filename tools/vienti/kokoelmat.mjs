@@ -264,7 +264,8 @@ function sisaltoKokoelmat(hae, kaupunkiIdt) {
         data: k,
       }))),
     tarinakaari: avaimittain(`${P}tarinakaari.js#TARINAKAARI`, hae(`${P}tarinakaari.js`).TARINAKAARI,
-      'Tarinakaaren kohteet (luennalliset). Koko 69 kohteen lähde: js/tyohuone-kehitys-data.js#KAARI_PAKETIT raakakerroksessa.',
+      'Tarinakaaren kohteet (luennalliset). Koko 69 kohteen lähde: js/tyohuone-kehitys-data.js#KAARI_PAKETIT raakakerroksessa. '
+        + 'aanet = { kohtaaminen, aarre }: { url, kesto } tallenne tai null (mykistetty / ei generoitu; skeema 1.65).',
       'kaupunki'),
     saapumispuheet: avaimittain(`${P}saapumispuheet.js#SAAPUMISPUHEET`, hae(`${P}saapumispuheet.js`).SAAPUMISPUHEET,
       'Saapumispuheet kaupungeittain; url = valmis ääni ämpärissä.', 'kaupunki'),
@@ -960,9 +961,16 @@ function linssiluennat(hae) {
   return tulos;
 }
 
-function rikastaNippu4(kokoelmat, ns) {
+function rikastaNippu4(kokoelmat, ns, hae) {
   for (const a of kokoelmat.kohtaamiset.alkiot) a.muotokuva = a.kaupunki ? muotokuva(kohtaamiskuvaTavalliselleKohtaamiselle(a.kaupunki)) : null;
   for (const a of kokoelmat.tarinakaari.alkiot) a.muotokuva = a.kaupunki ? muotokuva(kohtaamiskuvaKohteelle(a.kaupunki)) : null;
+  // Skeema 1.65 (PT 12.10.2026, juna 184): kaaren kohtaamis- ja aarreluennan tallenteet natiiville (js/packs/tarinakaari.js
+  // kaariAanite: vain generoidut ja mykistämättömät osat, -v2 korjatuille). null = osaa ei soiteta tallenteena.
+  const { kaariAanite } = hae('js/packs/tarinakaari.js');
+  const aaneksi = (x) => (x ? { url: aaniUrl(x.polku), kesto: x.kesto } : null);
+  for (const a of kokoelmat.tarinakaari.alkiot) {
+    a.aanet = { kohtaaminen: aaneksi(kaariAanite(a.data, 'kohtaaminen')), aarre: aaneksi(kaariAanite(a.data, 'aarre')) };
+  }
   const tokens = ns.MAAILMANKARTTA.tokens;
   const [laatta] = kokoelmat.laatat.alkiot;
   laatta.kuvat = Object.fromEntries(Object.entries(tokens.types).filter(([t]) => t !== 'robber').map(([t, v]) => [t, mediaOsoite(v.kuva)]));
@@ -1089,7 +1097,7 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   piilotaKaksoisnimet(kokoelmat.karttavalot.alkiot);
   // Skeema 1.45 (Elävä kartta): kokoluokka ja maakunta valoille, salaisuus maakunnille (tools/vienti/elava-kartta.mjs).
   rikastaElavaKartta(kokoelmat, taulukko);
-  rikastaNippu4(kokoelmat, ns);
+  rikastaNippu4(kokoelmat, ns, hae);
   // Skeema 1.15: lehdet natiiville (tools/vienti/lehdet.mjs).
   const R = rikastaLehdet(kokoelmat, ns, hae, { media, taulukko });
   // Skeema 1.26 (2.0-polku): loput natiivin raakakentät päätasolle (tools/vienti/tyypitys.mjs).

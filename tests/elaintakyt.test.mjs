@@ -370,3 +370,25 @@ test('karusellin tyylit ovat kortin omassa tiedostossa, liike 250 ms ja hiljenne
   assert.ok(hiljainen, 'karusellia ei hiljennetä reduced motionilla');
   assert.match(hiljainen, /\.elaintaky-karuselli-teksti\.vaihtui \{ animation: none; \}/);
 });
+
+/*
+ * VAIN KARTAN MAAN ELÄINTÄKY (omistaja 12.10.2026 21.5x; natiivin
+ * NostoSaannot.ElaintakyKartalla, pariteetti): maakartalla näkyy vain sen
+ * maan täky, jossa pelaaja on — ei naapurimaiden (löydös 125 kumottu).
+ */
+test('pallolauta: vain kartan maan eläintäky (muiden maiden täyt pois)', async () => {
+  const { elaintakyKartalla } = await import('../js/elaintaky-rivit.js');
+  const maat = Object.keys(ELAINTAKYT);
+  assert.ok(maat.length > 5, 'eläintäkyjä useassa maassa');
+  for (const kartta of maat) {
+    const nakyvat = maat.filter((iso) => elaintakyKartalla(iso, kartta));
+    assert.deepEqual(nakyvat, [kartta], `${kartta}: vain oman maan täky`);
+  }
+  assert.equal(elaintakyKartalla('fin', 'FIN'), true, 'kirjainkoko ei ratkaise');
+  assert.equal(elaintakyKartalla('FIN', null), false, 'ei kartan maata: ei täkyä');
+  assert.equal(elaintakyKartalla(undefined, 'FIN'), false);
+  assert.equal(elaintakyKartalla('FIN', 'SWE'), false, 'Ruotsin kartalla ei Saimaannorppaa');
+  // Pallolaudan nostokerros käyttää sääntöä täkyjen silmukassa.
+  const lahde = readFileSync(new URL('../js/pallolauta/nostot.js', import.meta.url), 'utf8');
+  assert.match(lahde, /for \(const t of elaintakyLaudalla\(ui\)\) \{\s*if \(!elaintakyKartalla\(t\.iso, iso\)\) continue;/);
+});

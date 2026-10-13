@@ -1,0 +1,168 @@
+{
+  "versio": 1,
+  "laatija": "Sisältökirjuri 12.10.2026",
+  "huomio": "Pulun vastausrepliikit (omistajan generointilupa PT:n välittämänä 12.10.): oikea 10, väärä 10, aarteen jälki 3. Yksi lause, ≤ 40 merkkiä (~3 s puhetta), ei vihjeitä oikeasta vastauksesta, ei kaupunkiviittauksia. Äänittäjä/Pelikoodari generoi (eleven_v4_turbo) ja kytkee.",
+  "lauseet": [
+    {
+      "tunniste": "pulu-vastaus-oikea-01",
+      "ryhma": "oikea",
+      "teksti": "Osuit napakymppiin, siivet suorina!",
+      "merkkeja": 35,
+      "kesto_arvio_s": 2.5
+    },
+    {
+      "tunniste": "pulu-vastaus-oikea-02",
+      "ryhma": "oikea",
+      "teksti": "Oikein! Sinulla on hyvä vainu.",
+      "merkkeja": 30,
+      "kesto_arvio_s": 2.1
+    },
+    {
+      "tunniste": "pulu-vastaus-oikea-03",
+      "ryhma": "oikea",
+      "teksti": "Juuri niin, sinä tiesit sen!",
+      "merkkeja": 28,
+      "kesto_arvio_s": 2
+    },
+    {
+      "tunniste": "pulu-vastaus-oikea-04",
+      "ryhma": "oikea",
+      "teksti": "Kääk, oikea vastaus!",
+      "merkkeja": 20,
+      "kesto_arvio_s": 1.4
+    },
+    {
+      "tunniste": "pulu-vastaus-oikea-05",
+      "ryhma": "oikea",
+      "teksti": "Hyvä, sinä olet ihan kartalla!",
+      "merkkeja": 30,
+      "kesto_arvio_s": 2.1
+    },
+    {
+      "tunniste": "pulu-vastaus-oikea-06",
+      "ryhma": "oikea",
+      "teksti": "Täysosuma, pöyhistelen jo vähän!",
+      "merkkeja": 32,
+      "kesto_arvio_s": 2.3
+    },
+    {
+      "tunniste": "pulu-vastaus-oikea-07",
+      "ryhma": "oikea",
+      "teksti": "Aivan oikein, tästä tulee hyvä päivä!",
+      "merkkeja": 37,
+      "kesto_arvio_s": 2.6
+    },
+    {
+      "tunniste": "pulu-vastaus-oikea-08",
+      "ryhma": "oikea",
+      "teksti": "Mahtavaa, sinä tunnet tämän!",
+      "merkkeja": 28,
+      "kesto_arvio_s": 2
+    },
+    {
+      "tunniste": "pulu-vastaus-oikea-09",
+      "ryhma": "oikea",
+      "teksti": "Oikein meni, sulat ovat pystyssä!",
+      "merkkeja": 33,
+      "kesto_arvio_s": 2.4
+    },
+    {
+      "tunniste": "pulu-vastaus-oikea-10",
+      "ryhma": "oikea",
+      "teksti": "Niin se on, hienosti ratkaistu!",
+      "merkkeja": 31,
+      "kesto_arvio_s": 2.2
+    },
+    {
+      "tunniste": "pulu-vastaus-vaara-01",
+      "ryhma": "vaara",
+      "teksti": "Ei osunut, mutta ei se mitään!",
+      "merkkeja": 30,
+      "kesto_arvio_s": 2.1
+    },
+    {
+      "tunniste": "pulu-vastaus-vaara-02",
+      "ryhma": "vaara",
+      "teksti": "Hups, tämä oli vähän hankala.",
+      "merkkeja": 29,
+      "kesto_arvio_s": 2.1
+    },
+    {
+      "tunniste": "pulu-vastaus-vaara-03",
+      "ryhma": "vaara",
+      "teksti": "Ei hätää, jokainen eksyy joskus.",
+      "merkkeja": 32,
+      "kesto_arvio_s": 2.3
+    },
+    {
+      "tunniste": "pulu-vastaus-vaara-04",
+      "ryhma": "vaara",
+      "teksti": "Eipä ihan, mutta ajatus oli hyvä!",
+      "merkkeja": 33,
+      "kesto_arvio_s": 2.4
+    },
+    {
+      "tunniste": "pulu-vastaus-vaara-05",
+      "ryhma": "vaara",
+      "teksti": "Ei tällä kertaa, mutta sinä jaksat!",
+      "merkkeja": 35,
+      "kesto_arvio_s": 2.5
+    },
+    {
+      "tunniste": "pulu-vastaus-vaara-06",
+      "ryhma": "vaara",
+      "teksti": "Siipi vinossa, mutta mennään eteenpäin!",
+      "merkkeja": 39,
+      "kesto_arvio_s": 2.8
+    },
+    {
+      "tunniste": "pulu-vastaus-vaara-07",
+      "ryhma": "vaara",
+      "teksti": "Ei se mitään, tämä oli tosi vaikea.",
+      "merkkeja": 35,
+      "kesto_arvio_s": 2.5
+    },
+    {
+      "tunniste": "pulu-vastaus-vaara-08",
+      "ryhma": "vaara",
+      "teksti": "Hups! Ei tämäkään ollut helppo.",
+      "merkkeja": 31,
+      "kesto_arvio_s": 2.2
+    },
+    {
+      "tunniste": "pulu-vastaus-vaara-09",
+      "ryhma": "vaara",
+      "teksti": "Ei osunut, mutta kyllä sinä opit.",
+      "merkkeja": 33,
+      "kesto_arvio_s": 2.4
+    },
+    {
+      "tunniste": "pulu-vastaus-vaara-10",
+      "ryhma": "vaara",
+      "teksti": "No voi, ei hätää, jatketaan silti!",
+      "merkkeja": 34,
+      "kesto_arvio_s": 2.4
+    },
+    {
+      "tunniste": "pulu-vastaus-jalki-01",
+      "ryhma": "jalki",
+      "teksti": "Katso kartalle, sinne syttyi piste!",
+      "merkkeja": 35,
+      "kesto_arvio_s": 2.5
+    },
+    {
+      "tunniste": "pulu-vastaus-jalki-02",
+      "ryhma": "jalki",
+      "teksti": "Kääk, kartalle syttyi uusi piste!",
+      "merkkeja": 33,
+      "kesto_arvio_s": 2.4
+    },
+    {
+      "tunniste": "pulu-vastaus-jalki-03",
+      "ryhma": "jalki",
+      "teksti": "Kartalla välähti, siellä on jotain!",
+      "merkkeja": 35,
+      "kesto_arvio_s": 2.5
+    }
+  ]
+}

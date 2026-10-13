@@ -244,6 +244,10 @@ section.kiinni > :not(:first-child) { display: none !important; }
 section:not(.kiinni) .yhteenveto { display: none; }
 .otsikkonappi.taitto[aria-expanded] { text-decoration: none; }
 .otsikkonappi.taitto[aria-expanded="false"] { color: var(--himmea); }
+/* Sinulle ja Valmistuneet kiinni harmaina kuten muut otsikot (omistaja 12.10. 20.5x). */
+.otsikkonappi[aria-expanded="false"] { color: var(--himmea); }
+/* Avatussa otsikossa ei alleviivausta (omistaja 12.10. 20.5x). */
+.otsikkonappi[aria-expanded="true"] { text-decoration: none; }
 /* Vaatii toimia (omistaja 12.10. 10.3x, Raamattu ASEMATAULU: VAATII TOIMIA): rooli, jolla on omistajalle kysymys tai pyyntö,
    joka vaatii hänen toimiaan. Yhteenvedossa punaisella ja lihavoituna vain silloin, kun niitä on; roolikortti punaisella taustalla. */
 .toimia { color: var(--punainen); font-weight: 700; }
@@ -269,7 +273,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
     <ul class="linkit" id="viestit" hidden></ul>
   </section>
   <section class="kortti" id="tyolista-osio" hidden>
-    <h2><button type="button" class="otsikkonappi taitto" data-osio="tyolista-osio" aria-expanded="true">Työlista</button> <span class="kysymykset yhteenveto" id="tyolista-yhteenveto"></span> <button type="button" class="kysymykset kysymysnappi" id="kysymykset" aria-expanded="false" hidden></button></h2>
+    <h2><button type="button" class="otsikkonappi taitto" data-osio="tyolista-osio" aria-expanded="true">Työlista</button> <span class="kysymykset yhteenveto" id="tyolista-yhteenveto"></span> <span class="kysymykset" id="tyolista-aika"></span> <button type="button" class="kysymykset kysymysnappi" id="kysymykset" aria-expanded="false" hidden></button></h2>
     <ul class="kysymyslista" id="kysymyslista" hidden></ul>
     <div class="rivit" id="tyolista"></div>
     <h2 id="valmistuneet-otsikko" hidden><button type="button" class="otsikkonappi" id="valmistuneet-nappi" aria-expanded="false">Valmistuneet</button> <span class="kysymykset" id="valmistuneet-maara"></span></h2>
@@ -314,6 +318,10 @@ section:not(.kiinni) .yhteenveto { display: none; }
     if (min < 60) return min + ' min';
     var h = Math.floor(min / 60);
     return h + ' h ' + (min % 60) + ' min';
+  }
+  function kello(ts) {
+    var d = new Date(ts);
+    return d.getHours() + '.' + String(d.getMinutes()).padStart(2, '0');
   }
   function riviLista(sailio, rivit, otsikkoKentta) {
     sailio.replaceChildren();
@@ -594,6 +602,11 @@ section:not(.kiinni) .yhteenveto { display: none; }
     // Uusin juna aina ensin (numeron mukaan) ja enintään kolme junaa tai TF:ää; käännössä oleva oranssina (omistaja 10.10. 16.3x).
     var junaNro = function (x) { var n = String(x.nimi || '').match(/(\d+)/); return n ? Number(n[1]) : 0; };
     junaRivi($('junat-valmiit'), $('tf-paneeli'), jr.slice().sort(function (a, b) { return junaNro(b) - junaNro(a); }).slice(0, 3));
+    // Päivitysaika näkyviin (omistaja 12.10. 21.4x: "pitää huolen että työlista ja asemataulu pysyy päivitettynä"):
+    // junien ja työlistan oma aikaleima, punaisena kun junat yli 2 h tai työlista yli 3 h vanha.
+    if (j && typeof j.ts === 'number') {
+      $('junat-valmiit').append(luo('span', 'juna-aika' + (Date.now() - j.ts > 2 * 3600000 ? ' toimia' : ''), 'päivitetty ' + kello(j.ts)));
+    }
 
     $('tyolista-osio').hidden = !(t && t.rivit && t.rivit.length);
     var ky = t && t.kysymykset;
@@ -721,6 +734,9 @@ section:not(.kiinni) .yhteenveto { display: none; }
     // Pienennetyn osion yhteenveto otsikkorivillä (omistaja 11.10. 19.3x).
     var tyonAlla = tlRivit.filter(function (x) { return !onValmis(x) && /työn alla|odottaa|kokoamassa/i.test(String(x.tila || '')); }).length;
     $('tyolista-yhteenveto').textContent = '(työn alla ' + tyonAlla + ')';
+    var tAika = $('tyolista-aika');
+    tAika.textContent = (t && typeof t.ts === 'number') ? '(päivitetty ' + kello(t.ts) + ')' : '';
+    tAika.classList.toggle('toimia', !!(t && typeof t.ts === 'number' && Date.now() - t.ts > 3 * 3600000));
     // Laitteiden käyttö prosentteina (omistaja 12.10. 10.3x): nimi ja prosessorin käyttö, kun Postivahti on mitannut sen.
     var kaytossaP = lr.filter(function (x) { return x.tila === 'käytössä'; }).map(function (x) {
       return x.nimi + (typeof x.prosessori === 'number' ? ' ' + Math.max(0, Math.min(100, Math.round(x.prosessori))) + ' %' : '');
