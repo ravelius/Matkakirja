@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "cityName": "LUXEMBURG",
+  "gameCityId": "luxemburg",
+  "mediaSlug": "luxembourg",
+  "taskNumbers": [
+    219,
+    220
+  ],
+  "updatedAt": "2026-10-13T19:58:03.215653+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 220,
+      "mediaSlug": "luxembourg",
+      "slot": 8,
+      "filename": "luxembourg-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Luxemburgin Luxtram-raitiovaunu Kirchbergin kadulla päivällä.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Luxemburgin Luxtram-raitiovaunu Kirchbergin kadulla päivällä.** Tiedosto `luxembourg-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: pitkä (noin 45 metriä) nykyaikainen matalalattiainen nivelraitiovaunu liikkeessä Kirchbergin liikealueen leveällä kadulla Luxemburgissa päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Raiteet kulkevat kadun pinnassa nurmikaistalla tai kiveyksessä; kadun molemmilla puolilla riviä nuoria puita, matalahkoja lasi- ja kivijulkisivuisia toimistotaloja pehmeästi epätarkkana taustalla; selkeä sininen taivas. Ihmiset vain pieninä (muutama kävelijä tai pyöräilijä kaukana jalkakäytävällä, selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, kolmen neljänneksen kuva edestä vasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, katukylttejä, pysäkkien nimitauluja, mainoksia, logoja, numeroita, lippuja, tunnistettavia yksittäisiä rakennuksia (ei Philharmoniea, ei Mudamia, ei Fort Thüngeniä), patsaita tai muistomerkkejä, auton rekisterikilpiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Luxemburgin Luxtram-raitiovaunu Kirchbergin kadulla päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "LUXEMBURG",
+      "gameID": "luxemburg",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        86964,
+        88645
+      ],
+      "sourceByteSpan": [
+        90289,
+        92047
+      ],
+      "fullDeliveryRequirementSHA256": "6c543b2559c75e52570cb4095734a817907aff170dcfcc11de11f7e19f70fa1d",
+      "fullDirective": "pitkä (noin 45 metriä) nykyaikainen matalalattiainen nivelraitiovaunu liikkeessä Kirchbergin liikealueen leveällä kadulla Luxemburgissa päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Raiteet kulkevat kadun pinnassa nurmikaistalla tai kiveyksessä; kadun molemmilla puolilla riviä nuoria puita, matalahkoja lasi- ja kivijulkisivuisia toimistotaloja pehmeästi epätarkkana taustalla; selkeä sininen taivas. Ihmiset vain pieninä (muutama kävelijä tai pyöräilijä kaukana jalkakäytävällä, selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, kolmen neljänneksen kuva edestä vasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, katukylttejä, pysäkkien nimitauluja, mainoksia, logoja, numeroita, lippuja, tunnistettavia yksittäisiä rakennuksia (ei Philharmoniea, ei Mudamia, ei Fort Thüngeniä), patsaita tai muistomerkkejä, auton rekisterikilpiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Luxemburgin Luxtram-raitiovaunu Kirchbergin kadulla päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/luxembourg/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-luxembourg-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/luxembourg/20261013-uudet-6-8/luxembourg-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "luxembourg-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "LUXEMBURG",
+      "gameCityId": "luxemburg",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/luxembourg/native-8.png",
+      "nativeSHA256": "4fadab254dc4a1c767be143373ad3861794ede8e467463ed3ac084e9d2bd12c9",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/luxembourg/luxembourg-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/luxembourg/luxembourg-8-kulkuneuvo-intro-v1.png",
+      "sha256": "d75de3f2cb0e4fde711f65beffeff5650cb7dcb3a55a517cca7cb690479a2b6c",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Wide ENVIRONMENTAL photograph of Kirchberg boulevard, with a SMALL MID-DISTANCE moving tram only one third of frame width. Most of the image is surrounding street/young trees/anonymous office blocks.\nCreate exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\npitkä (noin 45 metriä) nykyaikainen matalalattiainen nivelraitiovaunu liikkeessä Kirchbergin liikealueen leveällä kadulla Luxemburgissa päivällä. Vaunun runko on yksivärinen vaalea harmaa-valkoinen, ei raitoja, ei brändimaalauksia, ei mainoksia, ei logoja; vaunun otsassa ja kyljessä ei numeroita, reittinäyttöjä, kylttejä eikä mitään tekstiä (otsanäytöt sammutettu, ikkunoissa ei tarroja). Raiteet kulkevat kadun pinnassa nurmikaistalla tai kiveyksessä; kadun molemmilla puolilla riviä nuoria puita, matalahkoja lasi- ja kivijulkisivuisia toimistotaloja pehmeästi epätarkkana taustalla; selkeä sininen taivas. Ihmiset vain pieninä (muutama kävelijä tai pyöräilijä kaukana jalkakäytävällä, selin, ei tunnistettavia kasvoja). Muu liikenne vain kaukana ja merkittömänä. Kulma: vaakakuva, kameran korkeus noin 1,5-2 m, kolmen neljänneksen kuva edestä vasemmalta, vaunu kulkee kuvassa oikealle ja hieman kohti kameraa, kevyt liikesumennus pyörissä ja taustassa, vaunu itse terävä; vaunu täyttää noin kolmanneksen kuvan leveydestä. Valo: pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, katukylttejä, pysäkkien nimitauluja, mainoksia, logoja, numeroita, lippuja, tunnistettavia yksittäisiä rakennuksia (ei Philharmoniea, ei Mudamia, ei Fort Thüngeniä), patsaita tai muistomerkkejä, auton rekisterikilpiä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nCritical screen direction: leading cab RIGHT, rear LEFT, moving RIGHT toward camera. Whole45m modern articulated light grey Luxtram, no coloured bands/badge/number/sign/flag/letter anywhere. Camera1.5–2m front-left three-quarter, vehicle farther away in MIDDLE DISTANCE, do not make it foreground-dominant. Modest low anonymous glass/stone offices, grassy/cobblestone track zone and rows of young trees. No recognizable Philharmonie/Mudam/FortThungen or artwork/monument. All signs/boards/stop poles absent, display blank. Only tiny distant pedestrians, none near camera.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            90289,
+            92047
+          ],
+          "fullRequirementSHA256": "6c543b2559c75e52570cb4095734a817907aff170dcfcc11de11f7e19f70fa1d",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/luxembourg/qa-8.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/luxembourg/producer-8.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-uudet-6-8/luxembourg-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-uudet-6-8/luxembourg-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 220,
+        "assetID": "luxembourg-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/luxembourg/asset-8.json",
+        "nativeSHA256": "4fadab254dc4a1c767be143373ad3861794ede8e467463ed3ac084e9d2bd12c9",
+        "finalSHA256": "d75de3f2cb0e4fde711f65beffeff5650cb7dcb3a55a517cca7cb690479a2b6c",
+        "verdict": "accepted",
+        "reason": "Neutraali pitkä matalalattiainen nivelraitiovaunu Kirchbergin puu-/toimistokadulla, keula oikealla, ajojohto ja nurmiraide. Ei kiellettyjä maamerkkejä tai kulkuneuvon tekstiä. Vaunu noin45%vs ohjeen noin kolmannes, poikkeama kirjataan mutta ympäristö jää laajasti näkyväksi.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:57:23.157139+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/luxembourg/20261013-uudet-6-8/luxembourg-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/luxembourg/20261013-uudet-6-8/luxembourg-8-kulkuneuvo-intro-v1.png",
+        "sha256": "d75de3f2cb0e4fde711f65beffeff5650cb7dcb3a55a517cca7cb690479a2b6c",
+        "nativeSHA256": "4fadab254dc4a1c767be143373ad3861794ede8e467463ed3ac084e9d2bd12c9",
+        "bytes": 2283986,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "d75de3f2cb0e4fde711f65beffeff5650cb7dcb3a55a517cca7cb690479a2b6c",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "d75de3f2cb0e4fde711f65beffeff5650cb7dcb3a55a517cca7cb690479a2b6c",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:58:03.135497+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "taskNumber": 219,
+      "slot": 6,
+      "reason": "Notre-Damen kaksi korkeaa tornia ovat kuvassa vierekkäin vasemmalla ja kolmas matalampi oikealla. Ohje edellyttää kahta korkeampaa tornia, joiden VÄLISSÄ on matalampi keskitorni. Pyydetty maamerkin tunnistettava kolmen tornin järjestys ei täyty.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "9ca1ae85d00dd6a5ab30452e897949226a542c7c34da1a5a33993e5d7ca691d4",
+      "finalSHA256": "5b7190fff5b4438d36edf026d8161ccdf45a62e79569933967ba3b9e759527f4"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
