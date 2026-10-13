@@ -83,7 +83,7 @@ Teksti: Georg Carstensen oli entinen kuninkaan henkivartioston luutnantti ja leh
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
 | Carstensen oli luutnantti (kuninkaan henkijääkärit/Royal Guards) ja lehtimies (Portefeuillen, Figaro) | https://biografiskleksikon.lex.dk/Georg_Carstensen | https://en.wikipedia.org/wiki/Georg_Carstensen |
-| Viiden vuoden kuninkaallinen lupa (DBL: huhtikuu 1842; Wikipedia: Christian VIII; tekstissä ei vuotta eikä kuninkaan nimeä) | https://biografiskleksikon.lex.dk/Georg_Carstensen | https://en.wikipedia.org/wiki/Tivoli_Gardens |
+| Viiden vuoden kuninkaallinen lupa (DBL: huhtikuu 1842; Wikipedia: Kristian VIII; tekstissä ei vuotta eikä kuninkaan nimeä) | https://biografiskleksikon.lex.dk/Georg_Carstensen | https://en.wikipedia.org/wiki/Tivoli_Gardens |
 | Tivoli avattiin 1843 (päivä 14. vai 15.8. ristiriitainen, tekstissä vain elokuu; DBL ja Wikipedia: 15.8.) | https://biografiskleksikon.lex.dk/Georg_Carstensen | https://en.wikipedia.org/wiki/Tivoli_Gardens ; https://lex.dk/Tivoli (vuosi 1843) |
 | Sijainti: vanhaa linnoitusmaata aivan Länsiportin (Vesterport) ulkopuolella | https://lex.dk/Tivoli | https://en.wikipedia.org/wiki/Tivoli_Gardens ; https://biografiskleksikon.lex.dk/Georg_Carstensen |
 | Lupaa ei uusittu; Carstensen ei enää johtanut puistoa (DBL: lupa päättyi 1847; Wikipedia: ei jatkanut lupaa; vuosi vain DBL, tekstissä ei vuotta) | https://biografiskleksikon.lex.dk/Georg_Carstensen | https://en.wikipedia.org/wiki/Georg_Carstensen |

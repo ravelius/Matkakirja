@@ -9,10 +9,10 @@ Kierros: 8 pysähdystä, noin 5,2 km, arviolta 6 min. Kertoja kuten Pariisissa, 
 ## 1. Mitä katsojan pitää muistaa
 
 1. **Kööpenhamina on veden ehdoilla rakennettu kauppasatama: Själlannin ja Amagerin välissä kulkee sisäsatama, kanavat ja vanhat vallihaudat kuuluvat kaupunkiin, ja nimikin tarkoittaa kauppiaiden satamaa.**
-2. **Kööpenhamina on kuninkaiden kaupunki: Christian neljäs rakensi Rosenborgin ja Rundetårnin ja aloitti Christianshavnin, Frederik viides Frederiksstadenin kaupunginosan, ja vallan keskus Christiansborg seisoo yhä saarella, jolle piispa Absalon rakensi linnansa vuonna 1167.**
+2. **Kööpenhamina on kuninkaiden kaupunki: Kristian neljäs rakensi Rosenborgin ja Rundetårnin ja aloitti Christianshavnin, Fredrik viides Frederiksstadenin kaupunginosan, ja vallan keskus Christiansborg seisoo yhä saarella, jolle piispa Absalon rakensi linnansa vuonna 1167.**
 3. **Kööpenhaminassa sadut ovat paikoissa: Gefjonin taru kertoo Själlannin synnyn, Andersen asui Nyhavnissa ja sai Tivolista aiheen satuunsa, ja Tivoli avattiin jo vuonna 1843.**
 
-Kierroksen tehtävä on jättää kaupungista muistikuva, ei luetella kohteita: sisäsatama näkyy avauksessa ja jokaisessa yläkuvassa (Christianshavn, Nyhavn, Slotsholmen), kuninkaiden kaupunki kulkee läpi (Christian IV: Christianshavn, Rosenborg, Rundetårn; Frederik V: Amalienborg), ja sadut sulkevat kierroksen Tivolissa, jossa isoisän merkintä on.
+Kierroksen tehtävä on jättää kaupungista muistikuva, ei luetella kohteita: sisäsatama näkyy avauksessa ja jokaisessa yläkuvassa (Christianshavn, Nyhavn, Slotsholmen), kuninkaiden kaupunki kulkee läpi (Kristian IV: Christianshavn, Rosenborg, Rundetårn; Fredrik V: Amalienborg), ja sadut sulkevat kierroksen Tivolissa, jossa isoisän merkintä on.
 
 ## 2. Reitti ja metrokartta (8 asemaa)
 
@@ -70,22 +70,22 @@ Kierroksen kesto arviolta 6,6 min: kerronta 350 s + avaus 25 s + loppu 20 s, len
 **Avaus** (3 virkettä): Tervetuloa Kööpenhaminaan. Ylhäältä kaupunki on matala kattojen ja tornien kenttä Själlannin saaren itärannalla, ja sisäsatama erottaa sen keskustan Amagerin saaren Christianshavnista. Kierros alkaa Christianshavnin kirkontornista, josta avautuu näkymä sataman, kanavien ja koko vanhan kaupungin yli.
 
 **Pysäkki 1: Vapahtajan kirkko ja Christianshavn** (72 sanaa)
-Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Christian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Själlannin ja Amagerin väliin. Kaupunginosa suunniteltiin hollantilaisten kanavakaupunkien mallin mukaan, ja kanavat hallitsevat sitä yhä, vaikka sisäsatama erottaa sen muusta keskustasta. Tornin huipun suunnitteli Lauritz de Thurah, se valmistui vuonna 1752, ja kierteen esikuvana oli Rooman Sant'Ivon kirkon lyhty. Torni on 90 metriä korkea, ja sen huipulle johtaa noin 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolella.
+Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Kristian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Själlannin ja Amagerin väliin. Kaupunginosa suunniteltiin hollantilaisten kanavakaupunkien mallin mukaan, ja kanavat hallitsevat sitä yhä, vaikka sisäsatama erottaa sen muusta keskustasta. Tornin huipun suunnitteli Lauritz de Thurah, se valmistui vuonna 1752, ja kierteen esikuvana oli Rooman Sant'Ivon kirkon lyhty. Torni on 90 metriä korkea, ja sen huipulle johtaa noin 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolella.
 
 **Pysäkki 2: Nyhavn** (64 sanaa)
-Nyhavn on kapea satamakanava, jonka kuningas Christian viides kaivatti 1670-luvulla Kongens Nytorvilta satamaan, jotta laivat pääsivät purkamaan lastinsa keskelle kaupunkia. Vanhin yhä seisova talo, numero 9, on vuodelta 1681. Pitkään kanavan varsi oli merimiesten, oluen ja huonomaineisen yöelämän aluetta. Hans Christian Andersen asui talossa numero 20 vuodesta 1834 vuoteen 1838, ja hänen ensimmäiset satunsa ilmestyivät sinä aikana. Kaikkiaan hän asui kolmessa kanavan varren talossa.
+Nyhavn on kapea satamakanava, jonka kuningas Kristian viides kaivatti 1670-luvulla Kongens Nytorvilta satamaan, jotta laivat pääsivät purkamaan lastinsa keskelle kaupunkia. Vanhin yhä seisova talo, numero 9, on vuodelta 1681. Pitkään kanavan varsi oli merimiesten, oluen ja huonomaineisen yöelämän aluetta. Hans Christian Andersen asui talossa numero 20 vuodesta 1834 vuoteen 1838, ja hänen ensimmäiset satunsa ilmestyivät sinä aikana. Kaikkiaan hän asui kolmessa kanavan varren talossa.
 
 **Pysäkki 3: Amalienborg ja Marmorikirkko** (65 sanaa)
-Amalienborg näkyy ylhäältä neljänä samanlaisena palatsina, jotka ympäröivät kahdeksankulmaista aukiota. Palatsit rakennettiin 1700-luvun puolivälissä neljälle aatelissuvulle, ja kuninkaallinen perhe asettui sinne vuonna 1794, kun Christiansborg paloi. Aukion keskellä seisoo kuningas Frederik viidennen ratsastajapatsas, ja aukion akseli osoittaa länteen Marmorikirkolle, jonka kupolin halkaisija on 31 metriä. Kirkon peruskivi laskettiin vuonna 1749, mutta rakennus seisoi yli sata vuotta keskeneräisenä rauniona, ja se vihittiin käyttöön vasta vuonna 1894.
+Amalienborg näkyy ylhäältä neljänä samanlaisena palatsina, jotka ympäröivät kahdeksankulmaista aukiota. Palatsit rakennettiin 1700-luvun puolivälissä neljälle aatelissuvulle, ja kuninkaallinen perhe asettui sinne vuonna 1794, kun Christiansborg paloi. Aukion keskellä seisoo kuningas Fredrik viidennen ratsastajapatsas, ja aukion akseli osoittaa länteen Marmorikirkolle, jonka kupolin halkaisija on 31 metriä. Kirkon peruskivi laskettiin vuonna 1749, mutta rakennus seisoi yli sata vuotta keskeneräisenä rauniona, ja se vihittiin käyttöön vasta vuonna 1894.
 
 **Pysäkki 4: Kastellet ja Gefion-suihkulähde** (70 sanaa)
-Kastellet näkyy ylhäältä viisikulmaisena tähtenä, jonka kulmissa ovat bastionit ja jota kiertävät vesihaudat. Linnoitus rakennettiin 1660-luvulla kuningas Frederik kolmannen aikana, ja hollantilainen insinööri Henrik Rüse oli mukana sen suunnittelussa. Se on yhä sotilasaluetta, mutta samalla yleinen puisto. Aivan vieressä on Gefion-suihkulähde, jossa jumalatar Gefjon ajaa neljää härkää, jotka ovat hänen poikiaan. Tarun mukaan hän kynti niillä yhdessä yössä Ruotsista irti Själlannin saaren, jolla Kööpenhamina sijaitsee, ja suihkulähde paljastettiin vuonna 1908.
+Kastellet näkyy ylhäältä viisikulmaisena tähtenä, jonka kulmissa ovat bastionit ja jota kiertävät vesihaudat. Linnoitus rakennettiin 1660-luvulla kuningas Fredrik kolmannen aikana, ja hollantilainen insinööri Henrik Rüse oli mukana sen suunnittelussa. Se on yhä sotilasaluetta, mutta samalla yleinen puisto. Aivan vieressä on Gefion-suihkulähde, jossa jumalatar Gefjon ajaa neljää härkää, jotka ovat hänen poikiaan. Tarun mukaan hän kynti niillä yhdessä yössä Ruotsista irti Själlannin saaren, jolla Kööpenhamina sijaitsee, ja suihkulähde paljastettiin vuonna 1908.
 
 **Pysäkki 5: Rosenborgin linna** (45 sanaa)
-Rosenborgin linna on kuningas Christian neljännen punatiilinen hollantilaistyylinen renessanssilinna, jonka rakentaminen alkoi vuonna 1606 puutarhan huvilana. Linnaa ympäröivä Kuninkaan puutarha on kaupungin vanhimpia puistoja. Linnan alla olevassa aarrekammiossa säilytetään Tanskan kruununjalokiviä ja kruununinsignioita. Christian neljäs kuoli linnassa vuonna 1648. Linnan vieressä on kuninkaallisen henkivartiokaartin kasarmi.
+Rosenborgin linna on kuningas Kristian neljännen punatiilinen hollantilaistyylinen renessanssilinna, jonka rakentaminen alkoi vuonna 1606 puutarhan huvilana. Linnaa ympäröivä Kuninkaan puutarha on kaupungin vanhimpia puistoja. Linnan alla olevassa aarrekammiossa säilytetään Tanskan kruununjalokiviä ja kruununinsignioita. Kristian neljäs kuoli linnassa vuonna 1648. Linnan vieressä on kuninkaallisen henkivartiokaartin kasarmi.
 
 **Pysäkki 6: Rundetårn** (64 sanaa)
-Rundetårn eli Pyöreä torni kohoaa vanhassa keskustassa, ja kuningas Christian neljäs rakennutti sen vuodesta 1637 vuoteen 1642. Se kuului Trinitatis-kokonaisuuteen, johon tuli opiskelijoiden kirkko, yliopiston kirjasto ja tähtitorni. Huipulle ei johda portaita vaan yli seitsemän kierroksen ramppi, jota pitkin hevoset ja vaunut saattoivat kuljettaa kirjoja ja raskaita mittalaitteita. Rampin kerrotaan palvelleen tsaari Pietari Suurta, joka ratsasti sen ylös hevosella vuonna 1716.
+Rundetårn eli Pyöreä torni kohoaa vanhassa keskustassa, ja kuningas Kristian neljäs rakennutti sen vuodesta 1637 vuoteen 1642. Se kuului Trinitatis-kokonaisuuteen, johon tuli opiskelijoiden kirkko, yliopiston kirjasto ja tähtitorni. Huipulle ei johda portaita vaan yli seitsemän kierroksen ramppi, jota pitkin hevoset ja vaunut saattoivat kuljettaa kirjoja ja raskaita mittalaitteita. Rampin kerrotaan palvelleen tsaari Pietari Suurta, joka ratsasti sen ylös hevosella vuonna 1716.
 
 **Pysäkki 7: Christiansborgin linna** (56 sanaa)
 Christiansborgin linna hallitsee Slotsholmenin saarta, jota sisäsatama ja kanavat kiertävät. Saarelle piispa Absalon rakensi linnan vuonna 1167, ja sen rauniot ovat nykyisen palatsin alla. Kaksi aiempaa Christiansborgia tuhoutui tulipalossa vuosina 1794 ja 1884, ja nykyinen, kolmas, valmistui vuonna 1928 Thorvald Jørgensenin suunnitelmien mukaan. Palatsissa kokoontuu Tanskan parlamentti, ja siellä toimivat myös korkein oikeus ja pääministerin virasto.
@@ -105,7 +105,7 @@ PT:n sääntö (13.10.2026): kohde pois, jos suunnittelija tai taiteilija on elo
 | 2 Nyhavn | kanava 1670-luvulta, talot 1600–1700-luvuilta, ei yksittäistä tekijää; Muistoankkuri (1951) ja Inderhavnsbroen (2016) jätetty kuvan ulkopuolelle | vapaa (pääaihe) |
 | 3 Amalienborg ja Marmorikirkko | palatsit Nicolai Eigtved (k. 1754), ratsastajapatsas J.-F.-J. Saly (k. 1776), kolonnadi C. F. Harsdorff (k. 1799), Marmorikirkko Meldahl (k. 1908), Jardin (k. 1799) (Karttasepän suojatarkastus 13.10.); Amaliehaven (1983, Pomodoro) ja Opera jätetty kuvan ulkopuolelle | vapaa |
 | 4 Kastellet ja Gefion-suihkulähde | linnoitus 1660-luku (Rüse); Gefion Anders Bundgaard (1864–1937, Lex), paljastettu 1908; PIENI MERENNEITO ei mukana | vapaa (Bundgaardin suoja päättyi 2007) |
-| 5 Rosenborgin linna | Christian IV:n linna, Hans van Steenwinckel nuorempi ja Bertel Lange (1600-luku) | vapaa |
+| 5 Rosenborgin linna | Kristian IV:n linna, Hans van Steenwinckel nuorempi ja Bertel Lange (1600-luku) | vapaa |
 | 6 Rundetårn | Hans van Steenwinckel nuorempi (kuoli ennen valmistumista 1642) | vapaa |
 | 7 Christiansborgin linna | Thorvald Jørgensen (1867–1946), valmistunut 1928; Absalonin linna 1167 | vapaa (suoja päättyi 2016) |
 | 8 Tivoli | puisto 1843 (Georg Carstensen k. 1857); Pantomiiniteatteri (1874, Vilhelm Dahlerup k. 1907) ei kappaleessa; ei suojattuja teoksia pääaiheena | vapaa |
@@ -128,7 +128,7 @@ PT:n sääntö (13.10.2026): kohde pois, jos suunnittelija tai taiteilija on elo
 
 ## 6. Kuvat
 
-Tarinakuvia ja lisäkuvia ei ole tässä erässä valittu. Tarvitaan erillinen Commons-kierros (vain PD / CC0 / CC BY, tarkistus API:lla ja silmin). Varoitukset kuvanvalitsijalle: Tanskan FoP kattaa vain rakennukset, joten veistos (Gefion, Frederik V, Pieni merenneito) ei saa olla kuvan pääaihe ennen kuin tekijän suoja on tarkistettu (Gefion ja Saly vapaita); älä käytä merenneitokuvia; Tivolin kuvissa ei suihkulähteitä tai moderneja installaatioita.
+Tarinakuvia ja lisäkuvia ei ole tässä erässä valittu. Tarvitaan erillinen Commons-kierros (vain PD / CC0 / CC BY, tarkistus API:lla ja silmin). Varoitukset kuvanvalitsijalle: Tanskan FoP kattaa vain rakennukset, joten veistos (Gefion, Fredrik V, Pieni merenneito) ei saa olla kuvan pääaihe ennen kuin tekijän suoja on tarkistettu (Gefion ja Saly vapaita); älä käytä merenneitokuvia; Tivolin kuvissa ei suihkulähteitä tai moderneja installaatioita.
 
 ## 7. Faktat ja laatu
 

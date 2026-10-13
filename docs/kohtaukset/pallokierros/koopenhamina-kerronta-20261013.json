@@ -5,7 +5,7 @@
   "huomio": "Kööpenhaminan pallokierros esittely-v2 (PT 13.10.2026; kippi Lontoon ja Prahan mallilla). Pieni merenneito (Eriksen k. 1959) ja kaikki elävien tai vuonna 1956 tai myöhemmin kuolleiden tekijöiden kohteet pois. Ääni vasta omistajan luvalla; katse/silmä/suunta määrittää Karttaseppä; kuvat (tarinakuvat/lisakuvat) puuttuvat, tehdään erillisellä Commons-kierroksella. Isoisäviittaus vain pysäkillä 8.",
   "muistettavat": [
     "Kööpenhamina on veden ehdoilla rakennettu kauppasatama: Själlannin ja Amagerin välissä kulkee sisäsatama, kanavat ja vanhat vallihaudat kuuluvat kaupunkiin, ja nimikin tarkoittaa kauppiaiden satamaa.",
-    "Kööpenhamina on kuninkaiden kaupunki: Christian neljäs rakensi Rosenborgin ja Rundetårnin ja aloitti Christianshavnin, Frederik viides Frederiksstadenin kaupunginosan, ja vallan keskus Christiansborg seisoo yhä saarella, jolle piispa Absalon rakensi linnansa vuonna 1167.",
+    "Kööpenhamina on kuninkaiden kaupunki: Kristian neljäs rakensi Rosenborgin ja Rundetårnin ja aloitti Christianshavnin, Fredrik viides Frederiksstadenin kaupunginosan, ja vallan keskus Christiansborg seisoo yhä saarella, jolle piispa Absalon rakensi linnansa vuonna 1167.",
     "Kööpenhaminassa sadut ovat paikoissa: Gefjonin taru kertoo Själlannin synnyn, Andersen asui Nyhavnissa ja sai Tivolista aiheen satuunsa, ja Tivoli avattiin jo vuonna 1843."
   ],
   "avaus": {
@@ -43,7 +43,7 @@
     {
       "nro": 5,
       "nimi": "Rosenborgin linna",
-      "selite": "Rosenborgin linna on kuningas Christian neljännen punatiilinen hollantilaistyylinen renessanssilinna"
+      "selite": "Rosenborgin linna on kuningas Kristian neljännen punatiilinen hollantilaistyylinen renessanssilinna"
     },
     {
       "nro": 6,
@@ -118,9 +118,9 @@
         "https://en.wikipedia.org/wiki/Church_of_Our_Saviour,_Copenhagen",
         "https://lex.dk/Vor_Frelsers_Kirke"
       ],
-      "kerronta": "Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Christian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Själlannin ja Amagerin väliin. Kaupunginosa suunniteltiin hollantilaisten kanavakaupunkien mallin mukaan, ja kanavat hallitsevat sitä yhä, vaikka sisäsatama erottaa sen muusta keskustasta. Tornin huipun suunnitteli Lauritz de Thurah, se valmistui vuonna 1752, ja kierteen esikuvana oli Rooman Sant'Ivon kirkon lyhty. Torni on 90 metriä korkea, ja sen huipulle johtaa noin 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolella.",
+      "kerronta": "Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Kristian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Själlannin ja Amagerin väliin. Kaupunginosa suunniteltiin hollantilaisten kanavakaupunkien mallin mukaan, ja kanavat hallitsevat sitä yhä, vaikka sisäsatama erottaa sen muusta keskustasta. Tornin huipun suunnitteli Lauritz de Thurah, se valmistui vuonna 1752, ja kierteen esikuvana oli Rooman Sant'Ivon kirkon lyhty. Torni on 90 metriä korkea, ja sen huipulle johtaa noin 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolella.",
       "virkkeet": [
-        "Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Christian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Själlannin ja Amagerin väliin.",
+        "Vapahtajan kirkon kierretorni kohoaa Christianshavnin yllä, kaupunginosassa, jonka Kristian neljäs alkoi rakentaa 1600-luvun alussa tekosaarille Själlannin ja Amagerin väliin.",
         "Kaupunginosa suunniteltiin hollantilaisten kanavakaupunkien mallin mukaan, ja kanavat hallitsevat sitä yhä, vaikka sisäsatama erottaa sen muusta keskustasta.",
         "Tornin huipun suunnitteli Lauritz de Thurah, se valmistui vuonna 1752, ja kierteen esikuvana oli Rooman Sant'Ivon kirkon lyhty.",
         "Torni on 90 metriä korkea, ja sen huipulle johtaa noin 400 porrasta, joista viimeiset 150 kiertävät tornia ulkopuolella."
@@ -137,7 +137,7 @@
           "lahde2": "https://en.wikipedia.org/wiki/Christianshavn"
         },
         {
-          "vaite": "Christian IV perusti kaupunginosan 1600-luvun alussa (rakennus alkoi 1617–1618) hollantilaisten kanavakaupunkien mallin mukaan; tarkka perustamisvuosi vaihtelee (1617/1618/1639), tekstissä vain 1600-luvun alku",
+          "vaite": "Kristian IV perusti kaupunginosan 1600-luvun alussa (rakennus alkoi 1617–1618) hollantilaisten kanavakaupunkien mallin mukaan; tarkka perustamisvuosi vaihtelee (1617/1618/1639), tekstissä vain 1600-luvun alku",
           "lahde1": "https://lex.dk/Christianshavn",
           "lahde2": "https://en.wikipedia.org/wiki/Christianshavn"
         },
@@ -197,9 +197,9 @@
       "lon": 12.59,
       "H_m": null,
       "H_lahteet": [],
-      "kerronta": "Nyhavn on kapea satamakanava, jonka kuningas Christian viides kaivatti 1670-luvulla Kongens Nytorvilta satamaan, jotta laivat pääsivät purkamaan lastinsa keskelle kaupunkia. Vanhin yhä seisova talo, numero 9, on vuodelta 1681. Pitkään kanavan varsi oli merimiesten, oluen ja huonomaineisen yöelämän aluetta. Hans Christian Andersen asui talossa numero 20 vuodesta 1834 vuoteen 1838, ja hänen ensimmäiset satunsa ilmestyivät sinä aikana. Kaikkiaan hän asui kolmessa kanavan varren talossa.",
+      "kerronta": "Nyhavn on kapea satamakanava, jonka kuningas Kristian viides kaivatti 1670-luvulla Kongens Nytorvilta satamaan, jotta laivat pääsivät purkamaan lastinsa keskelle kaupunkia. Vanhin yhä seisova talo, numero 9, on vuodelta 1681. Pitkään kanavan varsi oli merimiesten, oluen ja huonomaineisen yöelämän aluetta. Hans Christian Andersen asui talossa numero 20 vuodesta 1834 vuoteen 1838, ja hänen ensimmäiset satunsa ilmestyivät sinä aikana. Kaikkiaan hän asui kolmessa kanavan varren talossa.",
       "virkkeet": [
-        "Nyhavn on kapea satamakanava, jonka kuningas Christian viides kaivatti 1670-luvulla Kongens Nytorvilta satamaan, jotta laivat pääsivät purkamaan lastinsa keskelle kaupunkia.",
+        "Nyhavn on kapea satamakanava, jonka kuningas Kristian viides kaivatti 1670-luvulla Kongens Nytorvilta satamaan, jotta laivat pääsivät purkamaan lastinsa keskelle kaupunkia.",
         "Vanhin yhä seisova talo, numero 9, on vuodelta 1681.",
         "Pitkään kanavan varsi oli merimiesten, oluen ja huonomaineisen yöelämän aluetta.",
         "Hans Christian Andersen asui talossa numero 20 vuodesta 1834 vuoteen 1838, ja hänen ensimmäiset satunsa ilmestyivät sinä aikana.",
@@ -207,7 +207,7 @@
       ],
       "faktat": [
         {
-          "vaite": "Nyhavnin kanava kaivettiin 1670-luvulla kuningas Christian V:n aikana (Wikipedia 1670–1675, Lex 1671–73, Storyhunt 1670–1673)",
+          "vaite": "Nyhavnin kanava kaivettiin 1670-luvulla kuningas Kristian V:n aikana (Wikipedia 1670–1675, Lex 1671–73, Storyhunt 1670–1673)",
           "lahde1": "https://en.wikipedia.org/wiki/Nyhavn",
           "lahde2": "https://www.storyhunt.io/articles/nyhavn"
         },
@@ -251,7 +251,7 @@
       "lisakuvat": [],
       "havainnekuva_tarpeet": [],
       "huomiot": [
-        "Kanavan valmistumisvuosi vaihtelee (1673 / 1675): teksti sanoo vain 1670-luvulla. Kuningas Christian V: Wikipedia, Storyhunt, Scandification; Lex ei nimeä kuningasta.",
+        "Kanavan valmistumisvuosi vaihtelee (1673 / 1675): teksti sanoo vain 1670-luvulla. Kuningas Kristian V: Wikipedia, Storyhunt, Scandification; Lex ei nimeä kuningasta.",
         "Andersenin asuinvuodet muissa taloissa (67, 18) vaihtelevat lähteissä: ei tekstissä. Sadut: Nyhavn 20 -sivu mainitsee 1835-vihkosen (Tulukset, Prinsessa herneen päällä), mutta teksti sanoo vain 'ensimmäiset satunsa ilmestyivät sinä aikana'.",
         "Muistoankkuri (1951, tekijä selvittämättä) ja Inderhavnsbroen pois kuvista.",
         "Numero 20 -väite: Wikipedia (Nyhavn 20) ja matkasivusto routesnorth; kaksi riippumatonta kirjallista lähdettä puuttuu."
@@ -267,11 +267,11 @@
       "lon": 12.5934,
       "H_m": null,
       "H_lahteet": [],
-      "kerronta": "Amalienborg näkyy ylhäältä neljänä samanlaisena palatsina, jotka ympäröivät kahdeksankulmaista aukiota. Palatsit rakennettiin 1700-luvun puolivälissä neljälle aatelissuvulle, ja kuninkaallinen perhe asettui sinne vuonna 1794, kun Christiansborg paloi. Aukion keskellä seisoo kuningas Frederik viidennen ratsastajapatsas, ja aukion akseli osoittaa länteen Marmorikirkolle, jonka kupolin halkaisija on 31 metriä. Kirkon peruskivi laskettiin vuonna 1749, mutta rakennus seisoi yli sata vuotta keskeneräisenä rauniona, ja se vihittiin käyttöön vasta vuonna 1894.",
+      "kerronta": "Amalienborg näkyy ylhäältä neljänä samanlaisena palatsina, jotka ympäröivät kahdeksankulmaista aukiota. Palatsit rakennettiin 1700-luvun puolivälissä neljälle aatelissuvulle, ja kuninkaallinen perhe asettui sinne vuonna 1794, kun Christiansborg paloi. Aukion keskellä seisoo kuningas Fredrik viidennen ratsastajapatsas, ja aukion akseli osoittaa länteen Marmorikirkolle, jonka kupolin halkaisija on 31 metriä. Kirkon peruskivi laskettiin vuonna 1749, mutta rakennus seisoi yli sata vuotta keskeneräisenä rauniona, ja se vihittiin käyttöön vasta vuonna 1894.",
       "virkkeet": [
         "Amalienborg näkyy ylhäältä neljänä samanlaisena palatsina, jotka ympäröivät kahdeksankulmaista aukiota.",
         "Palatsit rakennettiin 1700-luvun puolivälissä neljälle aatelissuvulle, ja kuninkaallinen perhe asettui sinne vuonna 1794, kun Christiansborg paloi.",
-        "Aukion keskellä seisoo kuningas Frederik viidennen ratsastajapatsas, ja aukion akseli osoittaa länteen Marmorikirkolle, jonka kupolin halkaisija on 31 metriä.",
+        "Aukion keskellä seisoo kuningas Fredrik viidennen ratsastajapatsas, ja aukion akseli osoittaa länteen Marmorikirkolle, jonka kupolin halkaisija on 31 metriä.",
         "Kirkon peruskivi laskettiin vuonna 1749, mutta rakennus seisoi yli sata vuotta keskeneräisenä rauniona, ja se vihittiin käyttöön vasta vuonna 1894."
       ],
       "faktat": [
@@ -291,7 +291,7 @@
           "lahde2": "https://www.kongehuset.dk/en/palaces-and-the-royal-yacht/amalienborg/"
         },
         {
-          "vaite": "Aukion keskellä on Frederik V:n ratsastajapatsas (patsaan pystytysvuosi ristiriitainen 1768/1771, ei tekstissä)",
+          "vaite": "Aukion keskellä on Fredrik V:n ratsastajapatsas (patsaan pystytysvuosi ristiriitainen 1768/1771, ei tekstissä)",
           "lahde1": "https://en.wikipedia.org/wiki/Amalienborg",
           "lahde2": "https://denkongeligesamling.dk/en/amalienborg/palacesquare"
         },
@@ -301,7 +301,7 @@
           "lahde2": "https://denkongeligesamling.dk/en/amalienborg/palacesquare"
         },
         {
-          "vaite": "Marmorikirkon peruskivi laskettiin 1749 (Frederik V)",
+          "vaite": "Marmorikirkon peruskivi laskettiin 1749 (Fredrik V)",
           "lahde1": "https://en.wikipedia.org/wiki/Frederik%27s_Church",
           "lahde2": "https://www.marmorkirken.dk/history"
         },
@@ -366,10 +366,10 @@
       "lon": 12.5938,
       "H_m": null,
       "H_lahteet": [],
-      "kerronta": "Kastellet näkyy ylhäältä viisikulmaisena tähtenä, jonka kulmissa ovat bastionit ja jota kiertävät vesihaudat. Linnoitus rakennettiin 1660-luvulla kuningas Frederik kolmannen aikana, ja hollantilainen insinööri Henrik Rüse oli mukana sen suunnittelussa. Se on yhä sotilasaluetta, mutta samalla yleinen puisto. Aivan vieressä on Gefion-suihkulähde, jossa jumalatar Gefjon ajaa neljää härkää, jotka ovat hänen poikiaan. Tarun mukaan hän kynti niillä yhdessä yössä Ruotsista irti Själlannin saaren, jolla Kööpenhamina sijaitsee, ja suihkulähde paljastettiin vuonna 1908.",
+      "kerronta": "Kastellet näkyy ylhäältä viisikulmaisena tähtenä, jonka kulmissa ovat bastionit ja jota kiertävät vesihaudat. Linnoitus rakennettiin 1660-luvulla kuningas Fredrik kolmannen aikana, ja hollantilainen insinööri Henrik Rüse oli mukana sen suunnittelussa. Se on yhä sotilasaluetta, mutta samalla yleinen puisto. Aivan vieressä on Gefion-suihkulähde, jossa jumalatar Gefjon ajaa neljää härkää, jotka ovat hänen poikiaan. Tarun mukaan hän kynti niillä yhdessä yössä Ruotsista irti Själlannin saaren, jolla Kööpenhamina sijaitsee, ja suihkulähde paljastettiin vuonna 1908.",
       "virkkeet": [
         "Kastellet näkyy ylhäältä viisikulmaisena tähtenä, jonka kulmissa ovat bastionit ja jota kiertävät vesihaudat.",
-        "Linnoitus rakennettiin 1660-luvulla kuningas Frederik kolmannen aikana, ja hollantilainen insinööri Henrik Rüse oli mukana sen suunnittelussa.",
+        "Linnoitus rakennettiin 1660-luvulla kuningas Fredrik kolmannen aikana, ja hollantilainen insinööri Henrik Rüse oli mukana sen suunnittelussa.",
         "Se on yhä sotilasaluetta, mutta samalla yleinen puisto.",
         "Aivan vieressä on Gefion-suihkulähde, jossa jumalatar Gefjon ajaa neljää härkää, jotka ovat hänen poikiaan.",
         "Tarun mukaan hän kynti niillä yhdessä yössä Ruotsista irti Själlannin saaren, jolla Kööpenhamina sijaitsee, ja suihkulähde paljastettiin vuonna 1908."
@@ -381,7 +381,7 @@
           "lahde2": "https://lex.dk/Kastellet"
         },
         {
-          "vaite": "Nykyinen linnoitus rakennettiin 1660-luvulla kuningas Frederik III:n aikana (Lex 1662, Wikipedia 1663–64, History Hit 1663)",
+          "vaite": "Nykyinen linnoitus rakennettiin 1660-luvulla kuningas Fredrik III:n aikana (Lex 1662, Wikipedia 1663–64, History Hit 1663)",
           "lahde1": "https://lex.dk/Kastellet",
           "lahde2": "https://www.historyhit.com/locations/kastellet/"
         },
@@ -436,17 +436,17 @@
       "lon": 12.5773,
       "H_m": null,
       "H_lahteet": [],
-      "kerronta": "Rosenborgin linna on kuningas Christian neljännen punatiilinen hollantilaistyylinen renessanssilinna, jonka rakentaminen alkoi vuonna 1606 puutarhan huvilana. Linnaa ympäröivä Kuninkaan puutarha on kaupungin vanhimpia puistoja. Linnan alla olevassa aarrekammiossa säilytetään Tanskan kruununjalokiviä ja kruununinsignioita. Christian neljäs kuoli linnassa vuonna 1648. Linnan vieressä on kuninkaallisen henkivartiokaartin kasarmi.",
+      "kerronta": "Rosenborgin linna on kuningas Kristian neljännen punatiilinen hollantilaistyylinen renessanssilinna, jonka rakentaminen alkoi vuonna 1606 puutarhan huvilana. Linnaa ympäröivä Kuninkaan puutarha on kaupungin vanhimpia puistoja. Linnan alla olevassa aarrekammiossa säilytetään Tanskan kruununjalokiviä ja kruununinsignioita. Kristian neljäs kuoli linnassa vuonna 1648. Linnan vieressä on kuninkaallisen henkivartiokaartin kasarmi.",
       "virkkeet": [
-        "Rosenborgin linna on kuningas Christian neljännen punatiilinen hollantilaistyylinen renessanssilinna, jonka rakentaminen alkoi vuonna 1606 puutarhan huvilana.",
+        "Rosenborgin linna on kuningas Kristian neljännen punatiilinen hollantilaistyylinen renessanssilinna, jonka rakentaminen alkoi vuonna 1606 puutarhan huvilana.",
         "Linnaa ympäröivä Kuninkaan puutarha on kaupungin vanhimpia puistoja.",
         "Linnan alla olevassa aarrekammiossa säilytetään Tanskan kruununjalokiviä ja kruununinsignioita.",
-        "Christian neljäs kuoli linnassa vuonna 1648.",
+        "Kristian neljäs kuoli linnassa vuonna 1648.",
         "Linnan vieressä on kuninkaallisen henkivartiokaartin kasarmi."
       ],
       "faktat": [
         {
-          "vaite": "Rosenborg on Christian IV:n rakennuttama; rakentaminen alkoi vuonna 1606 puutarhan huvilana (Lex: 1606–1634; Wikipedia: nykyinen muoto 1624 mennessä; denkongeligesamling: valmis 1624) - tekstissä vain alkuvuosi 1606",
+          "vaite": "Rosenborg on Kristian IV:n rakennuttama; rakentaminen alkoi vuonna 1606 puutarhan huvilana (Lex: 1606–1634; Wikipedia: nykyinen muoto 1624 mennessä; denkongeligesamling: valmis 1624) - tekstissä vain alkuvuosi 1606",
           "lahde1": "https://en.wikipedia.org/wiki/Rosenborg_Castle",
           "lahde2": "https://lex.dk/Rosenborg_Slot"
         },
@@ -466,7 +466,7 @@
           "lahde2": "https://www.stromma.com/en-dk/copenhagen/sights/attractions/rosenborg-castle/"
         },
         {
-          "vaite": "Christian IV kuoli Rosenborgissa helmikuussa 1648",
+          "vaite": "Kristian IV kuoli Rosenborgissa helmikuussa 1648",
           "lahde1": "https://lex.dk/Rosenborg_Slot",
           "lahde2": "https://denkongeligesamling.dk/en/rosenborg/"
         },
@@ -498,16 +498,16 @@
         "https://en.wikipedia.org/wiki/Rundetaarn",
         "https://lex.dk/Rundetårn"
       ],
-      "kerronta": "Rundetårn eli Pyöreä torni kohoaa vanhassa keskustassa, ja kuningas Christian neljäs rakennutti sen vuodesta 1637 vuoteen 1642. Se kuului Trinitatis-kokonaisuuteen, johon tuli opiskelijoiden kirkko, yliopiston kirjasto ja tähtitorni. Huipulle ei johda portaita vaan yli seitsemän kierroksen ramppi, jota pitkin hevoset ja vaunut saattoivat kuljettaa kirjoja ja raskaita mittalaitteita. Rampin kerrotaan palvelleen tsaari Pietari Suurta, joka ratsasti sen ylös hevosella vuonna 1716.",
+      "kerronta": "Rundetårn eli Pyöreä torni kohoaa vanhassa keskustassa, ja kuningas Kristian neljäs rakennutti sen vuodesta 1637 vuoteen 1642. Se kuului Trinitatis-kokonaisuuteen, johon tuli opiskelijoiden kirkko, yliopiston kirjasto ja tähtitorni. Huipulle ei johda portaita vaan yli seitsemän kierroksen ramppi, jota pitkin hevoset ja vaunut saattoivat kuljettaa kirjoja ja raskaita mittalaitteita. Rampin kerrotaan palvelleen tsaari Pietari Suurta, joka ratsasti sen ylös hevosella vuonna 1716.",
       "virkkeet": [
-        "Rundetårn eli Pyöreä torni kohoaa vanhassa keskustassa, ja kuningas Christian neljäs rakennutti sen vuodesta 1637 vuoteen 1642.",
+        "Rundetårn eli Pyöreä torni kohoaa vanhassa keskustassa, ja kuningas Kristian neljäs rakennutti sen vuodesta 1637 vuoteen 1642.",
         "Se kuului Trinitatis-kokonaisuuteen, johon tuli opiskelijoiden kirkko, yliopiston kirjasto ja tähtitorni.",
         "Huipulle ei johda portaita vaan yli seitsemän kierroksen ramppi, jota pitkin hevoset ja vaunut saattoivat kuljettaa kirjoja ja raskaita mittalaitteita.",
         "Rampin kerrotaan palvelleen tsaari Pietari Suurta, joka ratsasti sen ylös hevosella vuonna 1716."
       ],
       "faktat": [
         {
-          "vaite": "Rundetårn rakennettiin kuningas Christian IV:n käskystä vuosina 1637–1642",
+          "vaite": "Rundetårn rakennettiin kuningas Kristian IV:n käskystä vuosina 1637–1642",
           "lahde1": "https://en.wikipedia.org/wiki/Rundetaarn",
           "lahde2": "https://lex.dk/Rundetårn"
         },
@@ -649,7 +649,7 @@
           "lahde2": "https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens"
         },
         {
-          "vaite": "Kerrotaan (legenda), että Carstensen sai kuningas Christian VIII:n luvan sanomalla, ettei huvittelevaa kansaa kiinnosta politiikka [(esittää tarinan legendana)]",
+          "vaite": "Kerrotaan (legenda), että Carstensen sai kuningas Kristian VIII:n luvan sanomalla, ettei huvittelevaa kansaa kiinnosta politiikka [(esittää tarinan legendana)]",
           "lahde1": "https://en.wikipedia.org/wiki/Tivoli_Gardens",
           "lahde2": "https://csmonitor.com/1993/0602/02131.html"
         },

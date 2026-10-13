@@ -24,7 +24,7 @@ Korkeus H (kameralle): 90.0 (ks. huomiot)
 |---|---|---|
 | Christianshavn on rakennettu keinotekoisille saarille Sjællandin ja Amagerin väliin, ja sisäsatama erottaa sen muusta keskustasta | https://en.wikipedia.org/wiki/Christianshavn | https://www.storyhunt.io/en/articles/christianshavn-neighborhood-guide |
 | Christianshavn sijaitsee Amagerin luoteisosassa (Lex: 'ligger på det nordvestlige Amager') | https://lex.dk/Christianshavn | https://en.wikipedia.org/wiki/Christianshavn |
-| Christian IV perusti kaupunginosan 1600-luvun alussa (rakennus alkoi 1617–1618) hollantilaisten kanavakaupunkien mallin mukaan; tarkka perustamisvuosi vaihtelee (1617/1618/1639), tekstissä vain 1600-luvun alku | https://lex.dk/Christianshavn | https://en.wikipedia.org/wiki/Christianshavn |
+| Kristian IV perusti kaupunginosan 1600-luvun alussa (rakennus alkoi 1617–1618) hollantilaisten kanavakaupunkien mallin mukaan; tarkka perustamisvuosi vaihtelee (1617/1618/1639), tekstissä vain 1600-luvun alku | https://lex.dk/Christianshavn | https://en.wikipedia.org/wiki/Christianshavn |
 | Kanavat hallitsevat kaupunginosaa (Wikipedia: 'Dominated by canals'; Lex: Christianshavns Kanal jakaa kaupunginosan kahtia) | https://en.wikipedia.org/wiki/Christianshavn | https://lex.dk/Christianshavn |
 | Christianshavn liitettiin Kööpenhaminaan vuonna 1674 | https://lex.dk/Christianshavn | https://en.wikipedia.org/wiki/Christianshavn |
 | Vapahtajan kirkon huipun suunnitteli Lauritz de Thurah ja se valmistui vuonna 1752 | https://en.wikipedia.org/wiki/Church_of_Our_Saviour,_Copenhagen | https://lex.dk/Vor_Frelsers_Kirke |
@@ -41,7 +41,7 @@ Korkeus H (kameralle): ei määritelty
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
-| Nyhavnin kanava kaivettiin 1670-luvulla kuningas Christian V:n aikana (Wikipedia 1670–1675, Lex 1671–73, Storyhunt 1670–1673) | https://en.wikipedia.org/wiki/Nyhavn | https://www.storyhunt.io/articles/nyhavn |
+| Nyhavnin kanava kaivettiin 1670-luvulla kuningas Kristian V:n aikana (Wikipedia 1670–1675, Lex 1671–73, Storyhunt 1670–1673) | https://en.wikipedia.org/wiki/Nyhavn | https://www.storyhunt.io/articles/nyhavn |
 | Kanava oli väylä merestä vanhan keskustan Kongens Nytorville, jossa laivat purkivat lastinsa | https://en.wikipedia.org/wiki/Nyhavn | https://www.storyhunt.io/articles/nyhavn |
 | Kanava kaivettiin Kongens Nytorvilta satamaan (Lex: 'gravet 1671-73 fra havnen til Kongens Nytorv') | https://lex.dk/Nyhavn | https://en.wikipedia.org/wiki/Nyhavn |
 | Vanhin talo on numero 9 vuodelta 1681 | https://en.wikipedia.org/wiki/Nyhavn | https://scandification.com/the-charms-of-nyhavn-copenhagen/ |
@@ -50,7 +50,7 @@ Korkeus H (kameralle): ei määritelty
 | Nyhavn 20:ssä kirjoitettiin muun muassa Tulukset ja Prinsessa herneen päällä (Wikipedia: 1835-vihkonen sisälsi molemmat; routesnorth: klassikot kirjoitettiin talon toisessa kerroksessa) | https://en.wikipedia.org/wiki/Nyhavn_20 | https://www.routesnorth.com/denmark/copenhagen/hans-christian-andersen-sights-in-copenhagen/ |
 | Andersen asui kolmessa Nyhavnin talossa (numerot 20, 67 ja 18) | https://visitcopenhagen.com/copenhagen/planning/nyhavn-gdk474735 | https://en.wikipedia.org/wiki/Nyhavn |
 
-Huomiot: Kanavan valmistumisvuosi vaihtelee (1673 / 1675): teksti sanoo vain 1670-luvulla. Kuningas Christian V: Wikipedia, Storyhunt, Scandification; Lex ei nimeä kuningasta. · Andersenin asuinvuodet muissa taloissa (67, 18) vaihtelevat lähteissä: ei tekstissä. Sadut: Nyhavn 20 -sivu mainitsee 1835-vihkosen (Tulukset, Prinsessa herneen päällä), mutta teksti sanoo vain 'ensimmäiset satunsa ilmestyivät sinä aikana'. · Muistoankkuri (1951, tekijä selvittämättä) ja Inderhavnsbroen pois kuvista. · Numero 20 -väite: Wikipedia (Nyhavn 20) ja matkasivusto routesnorth; kaksi riippumatonta kirjallista lähdettä puuttuu.
+Huomiot: Kanavan valmistumisvuosi vaihtelee (1673 / 1675): teksti sanoo vain 1670-luvulla. Kuningas Kristian V: Wikipedia, Storyhunt, Scandification; Lex ei nimeä kuningasta. · Andersenin asuinvuodet muissa taloissa (67, 18) vaihtelevat lähteissä: ei tekstissä. Sadut: Nyhavn 20 -sivu mainitsee 1835-vihkosen (Tulukset, Prinsessa herneen päällä), mutta teksti sanoo vain 'ensimmäiset satunsa ilmestyivät sinä aikana'. · Muistoankkuri (1951, tekijä selvittämättä) ja Inderhavnsbroen pois kuvista. · Numero 20 -väite: Wikipedia (Nyhavn 20) ja matkasivusto routesnorth; kaksi riippumatonta kirjallista lähdettä puuttuu.
 
 ## 3. Amalienborg ja Marmorikirkko
 
@@ -61,9 +61,9 @@ Korkeus H (kameralle): ei määritelty
 | Amalienborgissa on neljä samanlaista palatsia, jotka ympäröivät kahdeksankulmaista pihaa | https://en.wikipedia.org/wiki/Amalienborg | https://www.kongehuset.dk/en/palaces-and-the-royal-yacht/amalienborg/ |
 | Palatsit rakennettiin alun perin neljälle aatelissuvulle Frederiksstadenin osana (1700-luvun puoliväli); arkkitehti Nicolai Eigtved (k. 1754) | https://en.wikipedia.org/wiki/Amalienborg | https://denkongeligesamling.dk/en/amalienborg/palacesquare |
 | Kuninkaallinen perhe muutti Amalienborgiin, kun Christiansborg paloi 1794 | https://en.wikipedia.org/wiki/Amalienborg | https://www.kongehuset.dk/en/palaces-and-the-royal-yacht/amalienborg/ |
-| Aukion keskellä on Frederik V:n ratsastajapatsas (patsaan pystytysvuosi ristiriitainen 1768/1771, ei tekstissä) | https://en.wikipedia.org/wiki/Amalienborg | https://denkongeligesamling.dk/en/amalienborg/palacesquare |
+| Aukion keskellä on Fredrik V:n ratsastajapatsas (patsaan pystytysvuosi ristiriitainen 1768/1771, ei tekstissä) | https://en.wikipedia.org/wiki/Amalienborg | https://denkongeligesamling.dk/en/amalienborg/palacesquare |
 | Frederikin kirkko (Marmorikirkko) on Amalienborgin lyhyen akselin päässä | https://en.wikipedia.org/wiki/Amalienborg | https://denkongeligesamling.dk/en/amalienborg/palacesquare (Marmorikirkon valmistuminen 1894 viimeistelee Frederiksstadenin) |
-| Marmorikirkon peruskivi laskettiin 1749 (Frederik V) | https://en.wikipedia.org/wiki/Frederik%27s_Church | https://www.marmorkirken.dk/history |
+| Marmorikirkon peruskivi laskettiin 1749 (Fredrik V) | https://en.wikipedia.org/wiki/Frederik%27s_Church | https://www.marmorkirken.dk/history |
 | Rakentaminen keskeytyi 1770 (Struensee keskeytti kalliin marmorin vuoksi), ja rakennus seisoi rauniona yli sata vuotta (Wikipedia lähes 150 vuotta, kirkko 'yli vuosisata') | https://en.wikipedia.org/wiki/Frederik%27s_Church | https://www.marmorkirken.dk/history |
 | Kirkko saatiin valmiiksi Carl Frederik Tietgenin rahoituksella arkkitehti Ferdinand Meldahlin (k. 1908) johdolla | https://en.wikipedia.org/wiki/Frederik%27s_Church | https://www.marmorkirken.dk/history |
 | Kirkko vihittiin 19. elokuuta 1894 | https://en.wikipedia.org/wiki/Frederik%27s_Church | https://www.marmorkirken.dk/history |
@@ -82,7 +82,7 @@ Korkeus H (kameralle): ei määritelty
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
 | Kastellet on viisikulmainen tähtilinnoitus, jossa on viisi bastionia ja vesihaude | https://en.wikipedia.org/wiki/Kastellet,_Copenhagen | https://lex.dk/Kastellet |
-| Nykyinen linnoitus rakennettiin 1660-luvulla kuningas Frederik III:n aikana (Lex 1662, Wikipedia 1663–64, History Hit 1663) | https://lex.dk/Kastellet | https://www.historyhit.com/locations/kastellet/ |
+| Nykyinen linnoitus rakennettiin 1660-luvulla kuningas Fredrik III:n aikana (Lex 1662, Wikipedia 1663–64, History Hit 1663) | https://lex.dk/Kastellet | https://www.historyhit.com/locations/kastellet/ |
 | Hollantilainen insinööri Henrik Rüse oli suunnittelussa mukana | https://lex.dk/Kastellet | https://en.wikipedia.org/wiki/Kastellet,_Copenhagen |
 | Kastellet on yhä sotilasaluetta (puolustusministeriö) ja samalla yleinen puisto | https://en.wikipedia.org/wiki/Kastellet,_Copenhagen | https://www.historyhit.com/locations/kastellet/ |
 | Gefion-suihkulähde esittää jumalatar Gefjonia, joka kyntää neljällä härällä Själlannin irti Ruotsista; härät ovat hänen neljä poikaansa | https://en.wikipedia.org/wiki/Gefion_Fountain | https://www.visitcopenhagen.com/copenhagen/gefion-fountain-gdk410604 |
@@ -98,11 +98,11 @@ Korkeus H (kameralle): ei määritelty
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
-| Rosenborg on Christian IV:n rakennuttama; rakentaminen alkoi vuonna 1606 puutarhan huvilana (Lex: 1606–1634; Wikipedia: nykyinen muoto 1624 mennessä; denkongeligesamling: valmis 1624) - tekstissä vain alkuvuosi 1606 | https://en.wikipedia.org/wiki/Rosenborg_Castle | https://lex.dk/Rosenborg_Slot |
+| Rosenborg on Kristian IV:n rakennuttama; rakentaminen alkoi vuonna 1606 puutarhan huvilana (Lex: 1606–1634; Wikipedia: nykyinen muoto 1624 mennessä; denkongeligesamling: valmis 1624) - tekstissä vain alkuvuosi 1606 | https://en.wikipedia.org/wiki/Rosenborg_Castle | https://lex.dk/Rosenborg_Slot |
 | Linna on hollantilaistyylistä renessanssia punatiilestä ja hiekkakivivöistä (Lex); Wikipedia: Dutch Renaissance | https://lex.dk/Rosenborg_Slot | https://en.wikipedia.org/wiki/Rosenborg_Castle |
 | Kruununjalokivet ja kruununinsignia ovat linnan alla olevassa aarrekammiossa (Lex: kellarissa 1975 alkaen) | https://lex.dk/Rosenborg_Slot | https://denkongeligesamling.dk/en/rosenborg/ |
 | Kuninkaan puutarha Kongens Have on kaupungin vanhimpia puistoja (Wikipedia: maan vanhin kuninkaallinen puutarha; Stromma: kaupungin vanhin puisto; Lex: puutarha laadittu 1606) | https://en.wikipedia.org/wiki/Rosenborg_Castle | https://www.stromma.com/en-dk/copenhagen/sights/attractions/rosenborg-castle/ |
-| Christian IV kuoli Rosenborgissa helmikuussa 1648 | https://lex.dk/Rosenborg_Slot | https://denkongeligesamling.dk/en/rosenborg/ |
+| Kristian IV kuoli Rosenborgissa helmikuussa 1648 | https://lex.dk/Rosenborg_Slot | https://denkongeligesamling.dk/en/rosenborg/ |
 | Linnan vieressä on kuninkaallisen henkivartiokaartin kasarmi | https://en.wikipedia.org/wiki/Rosenborg_Castle | https://lex.dk/Rosenborg_Slot (+ kbhmuseer.dk) |
 
 Huomiot: Rakennusajat ristiriitaiset (Lex 1606–1634, nimi Rosenborg 1624; Wikipedia ja Kuninkaallinen kokoelma 'valmis 1624'): teksti sanoo vain aloitusvuoden 1606. · Puutarhan 'vanhin' -väite: Wikipedia 'maan vanhin kuninkaallinen puutarha', Stromma 'kaupungin vanhin puisto': teksti 'kaupungin vanhimpia puistoja'. Lex kertoo puutarhan laadituksi 1606. · Aarrekammio linnan alla (Lex: kellarissa vuodesta 1975). Linnaa ei näytetä sisältä (sisätilat eivät ole mukana).
@@ -113,7 +113,7 @@ Korkeus H (kameralle): 34.8 (ks. huomiot)
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
-| Rundetårn rakennettiin kuningas Christian IV:n käskystä vuosina 1637–1642 | https://en.wikipedia.org/wiki/Rundetaarn | https://lex.dk/Rundetårn |
+| Rundetårn rakennettiin kuningas Kristian IV:n käskystä vuosina 1637–1642 | https://en.wikipedia.org/wiki/Rundetaarn | https://lex.dk/Rundetårn |
 | Torni kuului Trinitatis-kokonaisuuteen, johon tuli opiskelijakirkko, yliopiston kirjasto ja tähtitorni | https://en.wikipedia.org/wiki/Rundetaarn | https://lex.dk/Rundetårn |
 | Tornin huipulle johtaa portaiden sijaan ramppi, jota pitkin hevoset ja vaunut voivat viedä kirjoja ja raskaita mittalaitteita; noin 7,5 kierrosta (Lex 7,3) | https://en.wikipedia.org/wiki/Rundetaarn | https://www.visitcopenhagen.com/copenhagen/planning/round-tower-gdk410741 |
 | Tsaari Pietari Suuri ratsasti rampin ylös vuonna 1716; tsaaritar Katariinan kerrotaan seuranneen vaunuissa (perimätieto) | https://en.wikipedia.org/wiki/Rundetaarn | https://www.storyhunt.io/en/articles/round-tower-copenhagen |
@@ -148,7 +148,7 @@ Korkeus H (kameralle): ei määritelty
 | Tivoli avattiin 15. elokuuta 1843; perustaja Georg Carstensen (1812–1857) | https://en.wikipedia.org/wiki/Tivoli_Gardens | https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens |
 | Puisto oli avattaessa kaupungin linnoitusten ulkopuolella (Vesterportin edustan glasis-alue) | https://en.wikipedia.org/wiki/Tivoli_Gardens | https://csmonitor.com/1993/0602/02131.html |
 | Puiston järvi on jäänne kaupungin vanhasta vallihaudasta | https://en.wikipedia.org/wiki/Tivoli_Gardens | https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens |
-| Kerrotaan (legenda), että Carstensen sai kuningas Christian VIII:n luvan sanomalla, ettei huvittelevaa kansaa kiinnosta politiikka | https://en.wikipedia.org/wiki/Tivoli_Gardens | https://csmonitor.com/1993/0602/02131.html (esittää tarinan legendana) |
+| Kerrotaan (legenda), että Carstensen sai kuningas Kristian VIII:n luvan sanomalla, ettei huvittelevaa kansaa kiinnosta politiikka | https://en.wikipedia.org/wiki/Tivoli_Gardens | https://csmonitor.com/1993/0602/02131.html (esittää tarinan legendana) |
 | Hans Christian Andersen vieraili Tivolissa 1843 ja sai siitä aiheen satuun Satakieli (Nattergalen); päiväkirjamerkintä 'was in Tivoli today ... started my Chinese fairy tale' | https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens | https://csmonitor.com/1993/0602/02131.html |
 | Rutschebanen (puinen vuoristorata) on vuodelta 1914 ja yksi maailman vanhimmista yhä toimivista puuvuoristoradoista | https://en.wikipedia.org/wiki/Tivoli_Gardens | https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens |
 | Isoisän merkintä: Kööpenhamina, kesäkuu 1873, Tivolin teatterissa palvelija piilotti paistin isännältään, sanaakaan ei lausuttu, tanskalainen poika nauroi samoissa kohdissa (kaanon, omistajan teksti 9.9.2026) | js/packs/fokusvirta-kobenhavn.js (kaanon: isoisän päiväkirja) | docs/raportit/horatio-livia-hyvaksytyt-20260914-r2.json (sama teksti) |
