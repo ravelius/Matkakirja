@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "cityName": "ALPIT",
+  "gameCityId": "alpit",
+  "mediaSlug": "alps",
+  "taskNumbers": [
+    173,
+    174
+  ],
+  "updatedAt": "2026-10-13T17:57:46.808713+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 173,
+      "mediaSlug": "alps",
+      "slot": 6,
+      "filename": "alps-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Furtschellas (noin 2300 m): Silsjärvi, Sils Maria ja Piz da la Margna länteen päivällä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Furtschellas (noin 2300 m): Silsjärvi, Sils Maria ja Piz da la Margna länteen päivällä.** Tiedosto `alps-6-nakoala-intro-v1.png`.\nMitä kuvataan: Sils im Engadinin laakso Silsjärvineen Furtschellasin keskiaseman ylänköalpilta (noin 2300 m) kirkkaana kesäpäivänä (nykyaikainen värikuva). Etualalla kuvan alareunassa kapea kaistale alppiniityn kiviä, matalaa heinää ja alppiruusupensaita sekä yksi lehtikuusi kuvan reunassa, ei ihmisiä eikä rakennuksia. Alhaalla oikealla (noin 300 astetta) Sils Marian ja Sils Baselgian vaaleat kivitalot ja kivilaattakatot pieninä ja kaukana, niiden välissä Chastén metsäinen niemi (noin 295 astetta) ulottuu järveen. Keskellä pitkä, sinivihreä Silsjärvi kapenee länteen kohti Malojan solaa; rannoilla lehtikuusi- ja kuusimetsää. Vasemmalla (noin 238 astetta) järven eteläpuolella Piz da la Margnan kalliohuippu, harmaa ja pyramidimainen, jonka rinteillä on vain pieniä lumi- ja jäälaikkuja; se on tunnistettava, mutta pieni osa laajaa kokonaisuutta. Oikealla Sils Marian takana (noin 303 astetta) metsäisiä rinteitä ja kaukana kalliohuippuja. Järven ja laakson yllä kirkas taivas ja muutama matala pilvi. Kulma: vaakakuva, katse länteen (noin 270 astetta, kuva kattaa noin 230-305 astetta), kamera kiviniityllä silmänkorkeudelta, hieman alaspäin, laaja panoraama; järvi ja laakso täyttävät yli puolet kuvasta. Valo: kirkas mutta pehmeä aamupäivän valo kameran takaa vasemmalta, ohut ilmasumu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä, kasvoja, tekstiä, kylttejä, mainoksia, logoja, gondoleita, köysiratapylväitä, vuoristoravintolaa ja muita rakennuksia lähellä, vaellusopasteita, lippuja, ilmapalloja, paraglidereita, drooneja, lunta alppiniityllä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Furtschellas: Silsjärvi, Sils Maria ja Piz da la Margna länteen päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "ALPIT",
+      "gameID": "alpit",
+      "part": 1,
+      "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceCharacterSpan": [
+        85591,
+        87543
+      ],
+      "sourceByteSpan": [
+        88769,
+        90803
+      ],
+      "fullDeliveryRequirementSHA256": "00b597bbfe430ab9634278c650b4f2ede451f7698b0ca3a6ed23d37c0cd32796",
+      "fullDirective": "Sils im Engadinin laakso Silsjärvineen Furtschellasin keskiaseman ylänköalpilta (noin 2300 m) kirkkaana kesäpäivänä (nykyaikainen värikuva). Etualalla kuvan alareunassa kapea kaistale alppiniityn kiviä, matalaa heinää ja alppiruusupensaita sekä yksi lehtikuusi kuvan reunassa, ei ihmisiä eikä rakennuksia. Alhaalla oikealla (noin 300 astetta) Sils Marian ja Sils Baselgian vaaleat kivitalot ja kivilaattakatot pieninä ja kaukana, niiden välissä Chastén metsäinen niemi (noin 295 astetta) ulottuu järveen. Keskellä pitkä, sinivihreä Silsjärvi kapenee länteen kohti Malojan solaa; rannoilla lehtikuusi- ja kuusimetsää. Vasemmalla (noin 238 astetta) järven eteläpuolella Piz da la Margnan kalliohuippu, harmaa ja pyramidimainen, jonka rinteillä on vain pieniä lumi- ja jäälaikkuja; se on tunnistettava, mutta pieni osa laajaa kokonaisuutta. Oikealla Sils Marian takana (noin 303 astetta) metsäisiä rinteitä ja kaukana kalliohuippuja. Järven ja laakson yllä kirkas taivas ja muutama matala pilvi. Kulma: vaakakuva, katse länteen (noin 270 astetta, kuva kattaa noin 230-305 astetta), kamera kiviniityllä silmänkorkeudelta, hieman alaspäin, laaja panoraama; järvi ja laakso täyttävät yli puolet kuvasta. Valo: kirkas mutta pehmeä aamupäivän valo kameran takaa vasemmalta, ohut ilmasumu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä, kasvoja, tekstiä, kylttejä, mainoksia, logoja, gondoleita, köysiratapylväitä, vuoristoravintolaa ja muita rakennuksia lähellä, vaellusopasteita, lippuja, ilmapalloja, paraglidereita, drooneja, lunta alppiniityllä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Furtschellas: Silsjärvi, Sils Maria ja Piz da la Margna länteen päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/alps/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-alps-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/alps/20261013-uudet-6-8/alps-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "alps-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "ALPIT",
+      "gameCityId": "alpit",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/alps/native-6.png",
+      "nativeSHA256": "05cd96b9b3484ce89fc812625da1d46ed432746b69be0828018ddd1e6b19a141",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/alps/alps-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/alps/alps-6-nakoala-intro-v1.png",
+      "sha256": "b76dfd1df52a1fae5b6fcbbce9856868c39e8fbeaf9027fc696f2ee5d67401cd",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: koko kaupunki tunnetulta näköalapaikalta päivällä — Furtschellas (noin 2300 m): Silsjärvi, Sils Maria ja Piz da la Margna länteen päivällä.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nSils im Engadinin laakso Silsjärvineen Furtschellasin keskiaseman ylänköalpilta (noin 2300 m) kirkkaana kesäpäivänä (nykyaikainen värikuva). Etualalla kuvan alareunassa kapea kaistale alppiniityn kiviä, matalaa heinää ja alppiruusupensaita sekä yksi lehtikuusi kuvan reunassa, ei ihmisiä eikä rakennuksia. Alhaalla oikealla (noin 300 astetta) Sils Marian ja Sils Baselgian vaaleat kivitalot ja kivilaattakatot pieninä ja kaukana, niiden välissä Chastén metsäinen niemi (noin 295 astetta) ulottuu järveen. Keskellä pitkä, sinivihreä Silsjärvi kapenee länteen kohti Malojan solaa; rannoilla lehtikuusi- ja kuusimetsää. Vasemmalla (noin 238 astetta) järven eteläpuolella Piz da la Margnan kalliohuippu, harmaa ja pyramidimainen, jonka rinteillä on vain pieniä lumi- ja jäälaikkuja; se on tunnistettava, mutta pieni osa laajaa kokonaisuutta. Oikealla Sils Marian takana (noin 303 astetta) metsäisiä rinteitä ja kaukana kalliohuippuja. Järven ja laakson yllä kirkas taivas ja muutama matala pilvi. Kulma: vaakakuva, katse länteen (noin 270 astetta, kuva kattaa noin 230-305 astetta), kamera kiviniityllä silmänkorkeudelta, hieman alaspäin, laaja panoraama; järvi ja laakso täyttävät yli puolet kuvasta. Valo: kirkas mutta pehmeä aamupäivän valo kameran takaa vasemmalta, ohut ilmasumu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä, kasvoja, tekstiä, kylttejä, mainoksia, logoja, gondoleita, köysiratapylväitä, vuoristoravintolaa ja muita rakennuksia lähellä, vaellusopasteita, lippuja, ilmapalloja, paraglidereita, drooneja, lunta alppiniityllä. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261013-uudet-6-8/alps-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261013-uudet-6-8/alps-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 173,
+        "assetID": "alps-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/alps/asset-6.json",
+        "nativeSHA256": "05cd96b9b3484ce89fc812625da1d46ed432746b69be0828018ddd1e6b19a141",
+        "finalSHA256": "b76dfd1df52a1fae5b6fcbbce9856868c39e8fbeaf9027fc696f2ee5d67401cd",
+        "verdict": "accepted",
+        "reason": "Laaja sinivihreä järvi ja alppilaakso, pyramidimainen vuori vasemmalla, pieni kylä oikealla sekä luonnollinen alppiniitty näkyvät. Ei köysirataa, lähiopasteita, ihmisiä tai tekstuurileimakuvioita.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T17:57:18.232871+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/alps/20261013-uudet-6-8/alps-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261013-uudet-6-8/alps-6-nakoala-intro-v1.png",
+        "sha256": "b76dfd1df52a1fae5b6fcbbce9856868c39e8fbeaf9027fc696f2ee5d67401cd",
+        "nativeSHA256": "05cd96b9b3484ce89fc812625da1d46ed432746b69be0828018ddd1e6b19a141",
+        "bytes": 2692468,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b76dfd1df52a1fae5b6fcbbce9856868c39e8fbeaf9027fc696f2ee5d67401cd",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b76dfd1df52a1fae5b6fcbbce9856868c39e8fbeaf9027fc696f2ee5d67401cd",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T17:57:43.991439+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 174,
+      "mediaSlug": "alps",
+      "slot": 8,
+      "filename": "alps-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Fexin laakson hevosomnibussi (Pferdeomnibus) liikkeessä Sils Marian eteläpuolella.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Fexin laakson hevosomnibussi (Pferdeomnibus) liikkeessä Sils Marian eteläpuolella.** Tiedosto `alps-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: Fexin laakson hevosomnibussi (hevosvetoinen matkustajavaunu penkkiriveineen ja kevyine kattoineen) liikkeessä leveällä sorapohjaisella laaksotiellä Sils Marian eteläpuolella kesäpäivänä (nykyaikainen värikuva): vaunu sivuprofiilissa kuvan keskellä, runko yksivärinen tummanvihreä tai musta, ei kirjaimia, ei logoja, ei numeroita, ei mainoksia, ei koristemaalauksia. Edessä neljä tummanruskeaa hevosta valjaissa pareina, ajaja penkillä pienenä ja selin; matkustajat vain pieninä hahmoina penkeillä, vaaleat ulkoilutakit ja lierihatut, ei tunnistettavia kasvoja. Tien reunoilla lehtikuusia, kuusia ja kukkivaa alppiniittyä, rinteen alapuolella ohut metsä; taustalla itärinne sinisessä utussa ja laakson päässä kaukana kalliohuippuja, joissa vähän lunta. Kulma: vaakakuva, matala silmänkorkeus tien länsireunalta kohti itää, vaunu kulkee vasemmalta oikealle (kohti etelää, laakson pohjukkaa) ja täyttää noin puolet kuvan leveydestä, kapea syvyysterävyys, tausta pehmeästi epätarkka. Valo: kirkas mutta pehmeä aamupäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä (myös kylttejä ja reittitauluja), numeroita, logoja, mainoksia, tunnistettavia kasvoja lähikuvassa, moottoriajoneuvoja, pyöräilijöitä ja kävelijöitä lähietualalla, rakennuksia (Hotel Fex), gondoleita ja köysiratoja, lippuja, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Fexin laakson hevosomnibussi liikkeessä Sils Marian eteläpuolella. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "ALPIT",
+      "gameID": "alpit",
+      "part": 1,
+      "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceCharacterSpan": [
+        87543,
+        89226
+      ],
+      "sourceByteSpan": [
+        90803,
+        92557
+      ],
+      "fullDeliveryRequirementSHA256": "0ed843110ac4ca64cc6fa38116298e9073c74571d1bbd45b8b752d78c5a075fa",
+      "fullDirective": "Fexin laakson hevosomnibussi (hevosvetoinen matkustajavaunu penkkiriveineen ja kevyine kattoineen) liikkeessä leveällä sorapohjaisella laaksotiellä Sils Marian eteläpuolella kesäpäivänä (nykyaikainen värikuva): vaunu sivuprofiilissa kuvan keskellä, runko yksivärinen tummanvihreä tai musta, ei kirjaimia, ei logoja, ei numeroita, ei mainoksia, ei koristemaalauksia. Edessä neljä tummanruskeaa hevosta valjaissa pareina, ajaja penkillä pienenä ja selin; matkustajat vain pieninä hahmoina penkeillä, vaaleat ulkoilutakit ja lierihatut, ei tunnistettavia kasvoja. Tien reunoilla lehtikuusia, kuusia ja kukkivaa alppiniittyä, rinteen alapuolella ohut metsä; taustalla itärinne sinisessä utussa ja laakson päässä kaukana kalliohuippuja, joissa vähän lunta. Kulma: vaakakuva, matala silmänkorkeus tien länsireunalta kohti itää, vaunu kulkee vasemmalta oikealle (kohti etelää, laakson pohjukkaa) ja täyttää noin puolet kuvan leveydestä, kapea syvyysterävyys, tausta pehmeästi epätarkka. Valo: kirkas mutta pehmeä aamupäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä (myös kylttejä ja reittitauluja), numeroita, logoja, mainoksia, tunnistettavia kasvoja lähikuvassa, moottoriajoneuvoja, pyöräilijöitä ja kävelijöitä lähietualalla, rakennuksia (Hotel Fex), gondoleita ja köysiratoja, lippuja, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Fexin laakson hevosomnibussi liikkeessä Sils Marian eteläpuolella. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/alps/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-alps-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/alps/20261013-uudet-6-8/alps-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "alps-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "ALPIT",
+      "gameCityId": "alpit",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/alps/native-8.png",
+      "nativeSHA256": "921ef88b2e6a9469b1e96b649f257716faf4873c6df077ab478b413e8ec7136e",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/alps/alps-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/alps/alps-8-kulkuneuvo-intro-v1.png",
+      "sha256": "c54876e34061d8aaebde48f59819ca49d589f748899ad6257912b3183bbea4c9",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: kaupungin oma kulkuneuvo liikkeessä — Fexin laakson hevosomnibussi (Pferdeomnibus) liikkeessä Sils Marian eteläpuolella.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nFexin laakson hevosomnibussi (hevosvetoinen matkustajavaunu penkkiriveineen ja kevyine kattoineen) liikkeessä leveällä sorapohjaisella laaksotiellä Sils Marian eteläpuolella kesäpäivänä (nykyaikainen värikuva): vaunu sivuprofiilissa kuvan keskellä, runko yksivärinen tummanvihreä tai musta, ei kirjaimia, ei logoja, ei numeroita, ei mainoksia, ei koristemaalauksia. Edessä neljä tummanruskeaa hevosta valjaissa pareina, ajaja penkillä pienenä ja selin; matkustajat vain pieninä hahmoina penkeillä, vaaleat ulkoilutakit ja lierihatut, ei tunnistettavia kasvoja. Tien reunoilla lehtikuusia, kuusia ja kukkivaa alppiniittyä, rinteen alapuolella ohut metsä; taustalla itärinne sinisessä utussa ja laakson päässä kaukana kalliohuippuja, joissa vähän lunta. Kulma: vaakakuva, matala silmänkorkeus tien länsireunalta kohti itää, vaunu kulkee vasemmalta oikealle (kohti etelää, laakson pohjukkaa) ja täyttää noin puolet kuvan leveydestä, kapea syvyysterävyys, tausta pehmeästi epätarkka. Valo: kirkas mutta pehmeä aamupäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä (myös kylttejä ja reittitauluja), numeroita, logoja, mainoksia, tunnistettavia kasvoja lähikuvassa, moottoriajoneuvoja, pyöräilijöitä ja kävelijöitä lähietualalla, rakennuksia (Hotel Fex), gondoleita ja köysiratoja, lippuja, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n\nTransport composition reinforcement: The visual forward-travel direction is LEFT TO RIGHT: place the recognizable leading front/bow and any active front lamps toward the RIGHT, with the trailing rear/wake to the LEFT. Do not show a left-facing lit driving cab as the leading end. Respect the source's approximate subject size, one HALF of the full image WIDTH, not merely of a crop or small center area. Show EXACTLY FOUR brown horses, arranged as TWO PAIRS, drawing the actual passenger wagon; realistic limbs and harnesses. \n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261013-uudet-6-8/alps-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261013-uudet-6-8/alps-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 174,
+        "assetID": "alps-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/alps/asset-8.json",
+        "nativeSHA256": "921ef88b2e6a9469b1e96b649f257716faf4873c6df077ab478b413e8ec7136e",
+        "finalSHA256": "c54876e34061d8aaebde48f59819ca49d589f748899ad6257912b3183bbea4c9",
+        "verdict": "accepted",
+        "reason": "Neljä hevosta kahdessa parissa ja tumma kokonainen hevosomnibussi kulkevat oikealle. Valjaat, jalat, pyörät ja penkkirivit ovat yhtenäiset; ihmiset pieninä ja selin. Vaunun oma leveys noin44% on lähellä lähteen noin puolta. Taustan sinisen utukaistaleen tarkkaa karttasijaintia ei ole mitattu, eikä kuvasta esitetä tarkkaa maantieteellistä mittaustodistusta.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T17:57:18.232871+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/alps/20261013-uudet-6-8/alps-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/alps/20261013-uudet-6-8/alps-8-kulkuneuvo-intro-v1.png",
+        "sha256": "c54876e34061d8aaebde48f59819ca49d589f748899ad6257912b3183bbea4c9",
+        "nativeSHA256": "921ef88b2e6a9469b1e96b649f257716faf4873c6df077ab478b413e8ec7136e",
+        "bytes": 2611444,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "c54876e34061d8aaebde48f59819ca49d589f748899ad6257912b3183bbea4c9",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "c54876e34061d8aaebde48f59819ca49d589f748899ad6257912b3183bbea4c9",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T17:57:46.719439+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
