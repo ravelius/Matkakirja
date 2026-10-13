@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e05",
   "city": "portonovo",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "77745ab5884f624c4fa4e0e80db7193247aa17e182e2647023e40c2a2029432c",
@@ -234,7 +234,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "77745ab5884f624c4fa4e0e80db7193247aa17e182e2647023e40c2a2029432c"
+      "contextAfterSHA256": "77745ab5884f624c4fa4e0e80db7193247aa17e182e2647023e40c2a2029432c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -287,7 +289,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "02b29909b868cf9a5315b97ec513bc3d58a6a5b9c12c62c539a78bd1029675b2",
@@ -513,7 +515,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "02b29909b868cf9a5315b97ec513bc3d58a6a5b9c12c62c539a78bd1029675b2"
+      "contextAfterSHA256": "02b29909b868cf9a5315b97ec513bc3d58a6a5b9c12c62c539a78bd1029675b2",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -563,7 +567,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
         "semanticContextSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
@@ -742,7 +746,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
-      "contextAfterSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3"
+      "contextAfterSHA256": "8aa0efb5b1783ae9292e572f394c49a1dd2e05edca771153a5f915f1004df7e3",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -792,7 +798,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "semanticSourceBind": {
         "targetBeforeSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
         "semanticContextSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
@@ -972,7 +978,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
-      "contextAfterSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769"
+      "contextAfterSHA256": "143dcc251ae94090a563766dd460aa60e3f0f9134e22dc5f1d1927feade4b769",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1022,7 +1030,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "semanticSourceBind": {
         "targetBeforeSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
         "semanticContextSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
@@ -1215,7 +1223,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
-      "contextAfterSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0"
+      "contextAfterSHA256": "b4f0d1cc8988d6b6420de84f01b4154e1f00de574ea41542531b9dd53c9cfbd0",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1265,7 +1275,7 @@
         2592
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "semanticSourceBind": {
         "targetBeforeSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
         "semanticContextSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
@@ -1446,7 +1456,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
-      "contextAfterSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6"
+      "contextAfterSHA256": "15332a61fb621cd99d1cf066a9055b0cf460e9310f58207cd4a27a8bc56d89d6",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1499,7 +1511,7 @@
         3120
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "semanticSourceBind": {
         "targetBeforeSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
         "semanticContextSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
@@ -1678,7 +1690,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
-      "contextAfterSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f"
+      "contextAfterSHA256": "eed5a0c0ba78f9b0ac1617c41b11541e9ddfad370358a68483645696361e4f0f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1731,7 +1745,7 @@
         960
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
         "semanticContextSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
@@ -1910,7 +1924,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
-      "contextAfterSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c"
+      "contextAfterSHA256": "e0231bb74928abadbf05aba7bfe783b628e08ab1173d003944f316aefbbd422c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1963,10 +1979,10 @@
         5504
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
+        "semanticContextSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
         "subjectTitle": "Porto-Novo",
         "targetState": "existing-target"
       },
@@ -2118,10 +2134,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Iss072e069105 (Oct 15, 2024) --- Porto-Novo, the capital of Benin with a population of over 260,000, is situated on the Yewa River next to the coast of the Gulf of Guinea in this photograph from the International Spac.jpg",
+        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024.",
+        "lyhyt": "Porto-Novon kaupunkialue ja vesimaisema avaruudesta vuonna 2024."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2154,7 +2170,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
-      "contextAfterSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315"
+      "contextAfterSHA256": "88b82db754a69100b4694d0c87bb9b955ee49e2f109cf4159b9f7d589ff59315",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -2207,10 +2225,10 @@
         3264
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/portonovo/sisalto.json",
-      "sourceContentSHA256": "7c8ebcf3e8dedb0142bf601c13a837b2b55f4f04fe1675ab34b3fabdad7a0071",
+      "sourceContentSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "3b1e71b6a8ccfd1a9cb7185b704b578af550a20251100ae78bd5e549667b2dd0",
+        "targetBeforeSHA256": "7c5fcfd36ae1f5372464e1f3a1534294800e49125f426bb46df952d54712a16d",
+        "semanticContextSHA256": "3b6ff3dac0a06f4ac10253e188dcfd28bb03db5d9ec9a8b463311c6c5e4ed1cc",
         "subjectTitle": "Jardin des plantes et de la nature",
         "targetState": "existing-target"
       },
@@ -2344,10 +2362,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg",
+        "lahde": "Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)",
+        "selite": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.",
+        "lyhyt": "Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2380,10 +2398,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "605ab8b1e7d6449eba12eaacf72ae553132588efa84c474df92b9baf7b85ed39",
       "targetAfterSHA256": "7c5fcfd36ae1f5372464e1f3a1534294800e49125f426bb46df952d54712a16d",
-      "contextAfterSHA256": "3b6ff3dac0a06f4ac10253e188dcfd28bb03db5d9ec9a8b463311c6c5e4ed1cc"
+      "contextAfterSHA256": "3b6ff3dac0a06f4ac10253e188dcfd28bb03db5d9ec9a8b463311c6c5e4ed1cc",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

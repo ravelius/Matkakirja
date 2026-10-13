@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e05",
   "city": "ndjamena",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
   "assets": [
     {
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "e2ba910b1fbbac2dc63d1587f3861237cff559e1aa7e90fb6cea8c71e54a02ae",
@@ -238,7 +238,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "e2ba910b1fbbac2dc63d1587f3861237cff559e1aa7e90fb6cea8c71e54a02ae"
+      "contextAfterSHA256": "e2ba910b1fbbac2dc63d1587f3861237cff559e1aa7e90fb6cea8c71e54a02ae",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -288,7 +290,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "semanticSourceBind": {
         "targetBeforeSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
         "semanticContextSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
@@ -467,7 +469,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
-      "contextAfterSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924"
+      "contextAfterSHA256": "50b2940b1cf4867c663cbfea32f0e3aa6f0e8774ff0397c0d77ce6151886c924",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -517,7 +521,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d5dc0b4034c3b605a4ea3f445b90ec3847bcdbcd918108771a217b3b4496c587",
         "semanticContextSHA256": "d5dc0b4034c3b605a4ea3f445b90ec3847bcdbcd918108771a217b3b4496c587",
@@ -700,7 +704,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "d5dc0b4034c3b605a4ea3f445b90ec3847bcdbcd918108771a217b3b4496c587",
-      "contextAfterSHA256": "d5dc0b4034c3b605a4ea3f445b90ec3847bcdbcd918108771a217b3b4496c587"
+      "contextAfterSHA256": "d5dc0b4034c3b605a4ea3f445b90ec3847bcdbcd918108771a217b3b4496c587",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -753,7 +759,7 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e23e82d3be569403038810e3e2bf48cc83e2731420ab3d945098e5ce733fa09b",
         "semanticContextSHA256": "e23e82d3be569403038810e3e2bf48cc83e2731420ab3d945098e5ce733fa09b",
@@ -979,7 +985,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "e23e82d3be569403038810e3e2bf48cc83e2731420ab3d945098e5ce733fa09b",
-      "contextAfterSHA256": "e23e82d3be569403038810e3e2bf48cc83e2731420ab3d945098e5ce733fa09b"
+      "contextAfterSHA256": "e23e82d3be569403038810e3e2bf48cc83e2731420ab3d945098e5ce733fa09b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1032,7 +1040,7 @@
         2832
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "semanticSourceBind": {
         "targetBeforeSHA256": "77ed8f799a88855eae2854f2cad20add6007bf301e9143d827592ca220f3840f",
         "semanticContextSHA256": "77ed8f799a88855eae2854f2cad20add6007bf301e9143d827592ca220f3840f",
@@ -1229,7 +1237,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "77ed8f799a88855eae2854f2cad20add6007bf301e9143d827592ca220f3840f",
-      "contextAfterSHA256": "77ed8f799a88855eae2854f2cad20add6007bf301e9143d827592ca220f3840f"
+      "contextAfterSHA256": "77ed8f799a88855eae2854f2cad20add6007bf301e9143d827592ca220f3840f",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1282,10 +1292,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "e54b73a05587809dd77d509faa5df810f31ed3ca52e273ce0cb3b5550e01b176",
+        "semanticContextSHA256": "e54b73a05587809dd77d509faa5df810f31ed3ca52e273ce0cb3b5550e01b176",
         "subjectTitle": "N'Djamena",
         "targetState": "existing-target"
       },
@@ -1485,10 +1495,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "ISS021-E-26415 - View of Chad.jpg",
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "N’Djamenan kaupunkialuetta avaruudesta marraskuussa 2009."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1521,7 +1531,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "e54b73a05587809dd77d509faa5df810f31ed3ca52e273ce0cb3b5550e01b176",
-      "contextAfterSHA256": "e54b73a05587809dd77d509faa5df810f31ed3ca52e273ce0cb3b5550e01b176"
+      "contextAfterSHA256": "e54b73a05587809dd77d509faa5df810f31ed3ca52e273ce0cb3b5550e01b176",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1574,10 +1586,10 @@
         2848
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "9c96ec315256683ad516b0066c9c7bf46f89e078db1f29d1c9e027b46267e331",
+        "semanticContextSHA256": "9c96ec315256683ad516b0066c9c7bf46f89e078db1f29d1c9e027b46267e331",
         "subjectTitle": "N'Djamena",
         "targetState": "existing-target"
       },
@@ -1797,10 +1809,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "ISS021-E-26419 - View of Chad.jpg",
+        "lahde": "Earth Science and Remote Sensing Unit , Lyndon B. Johnson Space Center, Wikimedia Commons (PD)",
+        "selite": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009.",
+        "lyhyt": "N’Djamenan jokivarsia ja kaupunkialuetta avaruudesta marraskuussa 2009."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1833,7 +1845,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "9c96ec315256683ad516b0066c9c7bf46f89e078db1f29d1c9e027b46267e331",
-      "contextAfterSHA256": "9c96ec315256683ad516b0066c9c7bf46f89e078db1f29d1c9e027b46267e331"
+      "contextAfterSHA256": "9c96ec315256683ad516b0066c9c7bf46f89e078db1f29d1c9e027b46267e331",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1886,7 +1900,7 @@
         4064
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/ndjamena/sisalto.json",
-      "sourceContentSHA256": "ae054dfba0b7e55ef0b2e8a1247bcac40b96c52df4620ac14769b6b2a3e73c02",
+      "sourceContentSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d431bdea397390928bf678f86bb7a40b56158b8a95f52edc0ec263839ac77cbb",
         "semanticContextSHA256": "beabc746c6c6933d2e10a12ff3f3419697b3cfa8d7340360ed65576248831420",
@@ -2073,10 +2087,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "42634b7d2834ca08c69804330438db5dcafe7a1993b14221db2eb4e124857961",
       "targetAfterSHA256": "d431bdea397390928bf678f86bb7a40b56158b8a95f52edc0ec263839ac77cbb",
-      "contextAfterSHA256": "beabc746c6c6933d2e10a12ff3f3419697b3cfa8d7340360ed65576248831420"
+      "contextAfterSHA256": "beabc746c6c6933d2e10a12ff3f3419697b3cfa8d7340360ed65576248831420",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e05",
   "city": "yamoussoukro",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
   "assets": [
     {
@@ -53,7 +53,7 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "c82cb340fc11180c905d16cc0bcb7988cd5fbe333ce28cc269fa82490800d8e9",
@@ -234,7 +234,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "c82cb340fc11180c905d16cc0bcb7988cd5fbe333ce28cc269fa82490800d8e9"
+      "contextAfterSHA256": "c82cb340fc11180c905d16cc0bcb7988cd5fbe333ce28cc269fa82490800d8e9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -287,7 +289,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "8c8cead08ed686405cb7b82720cc5b4bd2f073d81b874259247e3e389d80f20c",
@@ -496,7 +498,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "8c8cead08ed686405cb7b82720cc5b4bd2f073d81b874259247e3e389d80f20c"
+      "contextAfterSHA256": "8c8cead08ed686405cb7b82720cc5b4bd2f073d81b874259247e3e389d80f20c",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -546,7 +550,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "semanticSourceBind": {
         "targetBeforeSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
         "semanticContextSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
@@ -770,7 +774,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "targetAfterSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
-      "contextAfterSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea"
+      "contextAfterSHA256": "681b18084408b18b9032eac3dd4213580fa460d60b2d4361d2a8f14c437ec1ea",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -820,7 +826,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
         "semanticContextSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
@@ -1003,7 +1009,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "targetAfterSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
-      "contextAfterSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63"
+      "contextAfterSHA256": "8b638e308d4e694e840332f8a1344db0e14169d0f8427d226439de3fe2052d63",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1053,7 +1061,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
         "semanticContextSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
@@ -1232,7 +1240,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "targetAfterSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
-      "contextAfterSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4"
+      "contextAfterSHA256": "ff0b78abedfc69d47ce9c8d0f6983e8e03ae733c1a345841fd6c12c1d8cbb2d4",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1282,7 +1292,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "semanticSourceBind": {
         "targetBeforeSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
         "semanticContextSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
@@ -1461,7 +1471,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "targetAfterSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
-      "contextAfterSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec"
+      "contextAfterSHA256": "10da48efa16e29670cc62a93f7736dfcfb729c655137f42bd1c72c9ca85b62ec",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1511,7 +1523,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "semanticSourceBind": {
         "targetBeforeSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
         "semanticContextSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
@@ -1747,7 +1759,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "targetAfterSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
-      "contextAfterSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417"
+      "contextAfterSHA256": "de55ba52292d35b7a410f9c1ef0966f80dd08c47ca58a3375cb4a5059cb76417",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1797,7 +1811,7 @@
         3888
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "semanticSourceBind": {
         "targetBeforeSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
         "semanticContextSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
@@ -2005,7 +2019,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "targetAfterSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
-      "contextAfterSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20"
+      "contextAfterSHA256": "db8847bacbf1bb11824cea21f719b84aff23a13fe4d702915e3b64a34b9dad20",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -2058,7 +2074,7 @@
         3000
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "semanticSourceBind": {
         "targetBeforeSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
         "semanticContextSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
@@ -2266,7 +2282,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "targetAfterSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
-      "contextAfterSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5"
+      "contextAfterSHA256": "3452667c1ada7a8b2b5b49fc12f2efd6f0602116d4a00cb8bad1d0141a78f4f5",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -2319,7 +2337,7 @@
         2048
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "semanticSourceBind": {
         "targetBeforeSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
         "semanticContextSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
@@ -2523,256 +2541,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "targetAfterSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
-      "contextAfterSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e"
-    },
-    {
-      "era": "e05",
-      "city": "yamoussoukro",
-      "slot": "K3",
-      "type": "commons",
-      "assetID": "capital-cc-e05-yamoussoukro-k3-6e1ff96202ac698d",
-      "galleryImageID": "capital-cc-e05-yamoussoukro-k3-6e1ff96202ac698d",
-      "commonsFile": "Biology microscope.jpg",
-      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-      "targetTokens": [
-        "kaupunkilehti",
-        0,
-        "nostot",
-        2
-      ],
-      "operation": "merge-media-fields-preserve-other-content",
-      "CmediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
-        "suora": true,
-        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
-        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
-        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
-        "tiedosto": "Biology microscope.jpg"
-      },
-      "removeMediaKeys": [],
-      "CvalidatorCompatiblePayload": {
-        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
-        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
-        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
-        "tiedosto": "Biology microscope.jpg"
-      },
-      "runtimeMediaFieldPayload": {
-        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
-        "suora": true,
-        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
-        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
-        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
-        "tiedosto": "Biology microscope.jpg"
-      },
-      "runtimeRemoveMediaKeys": [],
-      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
-      "nativeSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
-      "exportSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
-      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
-      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
-      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-eaeca3898f43da.jpg",
-      "dimensions": [
-        5712,
-        4284
-      ],
-      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
-      "semanticSourceBind": {
-        "targetBeforeSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
-        "semanticContextSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
-        "subjectTitle": "Korkeakoulu yhdistää ammattialat",
-        "targetState": "existing-target"
-      },
-      "attribution": {
-        "author": "J.Doniyorovich",
-        "license": "CC0",
-        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Biology_microscope.jpg",
-        "rightsEvidence": {
-          "selection": {
-            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
-            "artistFieldSource": "Author table",
-            "explicitCreditFromSource": "J.Doniyorovich",
-            "licenseSourceSha256": "f65f8f62c56487bfb4698699b65509b2ea5d039ebac175bc85681b1c1495d4a0",
-            "depictedWorkLayer": "CC0-vapautus ja valokuvan kuvaaja J.Doniyorovich alkuperäisestä Author-taulukosta. Pääaihe tavanomainen toiminnallinen optinen käyttölaite ilman itsenäistä figuratiivista koristelua/taideteospintaa; ei museorakennusta tai nimetyn oppilaitoksen arkkitehtuuria. Taustan käyttöpullot ja pöytä eivät teospääaiheita. Ei FOP- tai teoksen iästä tehtyä oletusta.",
-            "sourcePlaceDescription": "Oʻzbekcha / ўзбекча: Mikroskop, zarrabin – mikrozarralarni, koʻzga koʻrinmaydigan juda mayda narsalarni kattalashtirib ko'rsatadigan optik asbob",
-            "sourcePlaceGeo": [],
-            "noFopOrBuildingAgeAssumption": true
-          },
-          "QA": {
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
-            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/355715b7648abf53d7a8d7dff30929b2fbd2720d86c5722d234890d670380987.html",
-            "sourceSHA256": "f65f8f62c56487bfb4698699b65509b2ea5d039ebac175bc85681b1c1495d4a0",
-            "directAuthors": [
-              "J.Doniyorovich"
-            ],
-            "directLicenses": [
-              "CC0"
-            ],
-            "directRows": {
-              "Date": "29 May 2024, 16:53:00"
-            },
-            "sourceOriginalDimensions": [
-              5712,
-              4284
-            ],
-            "localDimensions": [
-              5712,
-              4284
-            ],
-            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-eaeca3898f43da.jpg",
-            "mediaSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
-            "authorMatches": true,
-            "licenseMatches": true,
-            "dimensionsMatch": true,
-            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-            "fullImageViewed": true,
-            "personallyViewedByJob27": true,
-            "viewMethod": "view_image high; whole native 5712x4284 displayed at 1824x1368",
-            "claimScope": "Generic research equipment; no city or named institute appearance claim",
-            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
-            "targetStillExists": true
-          },
-          "qaReason": "Koko alkuperäistiedostosta avattu kuva itse katsottu: tavanomainen toiminnallinen optinen mikroskooppi laboratoriopöydällä, taustalla arkisia käyttöastioita ja pöytiä. Kuva havainnollistaa K3:n agronomian/tekniikan/tutkimustyön aihetta yleisesti, ei INP-HB:n todellista laboratoriota tai Yamoussoukron kuvauspaikkaa; selite rajaa aiheen valomikroskoopin käyttöön. J.Doniyorovich ja CC0-luovutus tarkistettu alkuperäisen tiedostosivun tekijä-/lisenssikentästä, alkuperäinen 5712×4284 ja 29.5.2024 Date-rivi sekä paikallinen SHA varmennettu. Ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä tai mainospakkausta. Tavanomaisen laitteen toiminnalliset osat eivät ole erikseen esitetty luova taideteos, eikä kuvaan ole nimetty suojattua rakennusta."
-        }
-      },
-      "luentaMetadata": {
-        "existingImageLuenta": null,
-        "captionReadingText": "Valomikroskooppi laboratoriotyön välineenä.",
-        "existingArticleAndSectionLuentaPreserved": true,
-        "audioGenerated": false,
-        "audioURL": null,
-        "imageSpecificAudioProvided": false,
-        "reuseAudioAllowedByThisPacket": false
-      },
-      "qaEvidence": {
-        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
-        "fileSHA256": "040466cde2155077b00b37e6467ce157f030c40555ff103a433d1030e1a0786b",
-        "item": {
-          "slot": "K3",
-          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-          "verdict": "accepted",
-          "reason": "Koko alkuperäistiedostosta avattu kuva itse katsottu: tavanomainen toiminnallinen optinen mikroskooppi laboratoriopöydällä, taustalla arkisia käyttöastioita ja pöytiä. Kuva havainnollistaa K3:n agronomian/tekniikan/tutkimustyön aihetta yleisesti, ei INP-HB:n todellista laboratoriota tai Yamoussoukron kuvauspaikkaa; selite rajaa aiheen valomikroskoopin käyttöön. J.Doniyorovich ja CC0-luovutus tarkistettu alkuperäisen tiedostosivun tekijä-/lisenssikentästä, alkuperäinen 5712×4284 ja 29.5.2024 Date-rivi sekä paikallinen SHA varmennettu. Ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä tai mainospakkausta. Tavanomaisen laitteen toiminnalliset osat eivät ole erikseen esitetty luova taideteos, eikä kuvaan ole nimetty suojattua rakennusta.",
-          "evidence": {
-            "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
-            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/355715b7648abf53d7a8d7dff30929b2fbd2720d86c5722d234890d670380987.html",
-            "sourceSHA256": "f65f8f62c56487bfb4698699b65509b2ea5d039ebac175bc85681b1c1495d4a0",
-            "directAuthors": [
-              "J.Doniyorovich"
-            ],
-            "directLicenses": [
-              "CC0"
-            ],
-            "directRows": {
-              "Date": "29 May 2024, 16:53:00"
-            },
-            "sourceOriginalDimensions": [
-              5712,
-              4284
-            ],
-            "localDimensions": [
-              5712,
-              4284
-            ],
-            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-eaeca3898f43da.jpg",
-            "mediaSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
-            "authorMatches": true,
-            "licenseMatches": true,
-            "dimensionsMatch": true,
-            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-            "fullImageViewed": true,
-            "personallyViewedByJob27": true,
-            "viewMethod": "view_image high; whole native 5712x4284 displayed at 1824x1368",
-            "claimScope": "Generic research equipment; no city or named institute appearance claim",
-            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
-            "targetStillExists": true
-          },
-          "reviewedAt": "2026-10-12T19:50:21.143473+00:00",
-          "commonsFile": "Biology microscope.jpg",
-          "sha256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022"
-        },
-        "allSources": [
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
-            "sha256": "040466cde2155077b00b37e6467ce157f030c40555ff103a433d1030e1a0786b"
-          },
-          {
-            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
-            "sha256": "50bc14cf07014c17f94c3211d70c6b6a7dce8d3a9d04f99be8f735b269b0b258"
-          }
-        ]
-      },
-      "R2ByteVerification": {
-        "era": "e05",
-        "city": "yamoussoukro",
-        "slot": "K3",
-        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
-        "commonsFile": "Biology microscope.jpg",
-        "sha256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
-        "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
-        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Biology_microscope.jpg",
-        "author": "J.Doniyorovich",
-        "license": "CC0",
-        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "width": 5712,
-        "height": 4284,
-        "originalSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
-        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
-        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
-        "bytes": 3046635,
-        "http": 200,
-        "mime": "image/jpeg",
-        "cors": "https://matkakirja.app",
-        "byteExactReadback": true,
-        "canonicalReadbackByteExact": true,
-        "conditionalIfNoneMatch": "*",
-        "s3PutHttp": 200,
-        "verifiedAt": "2026-10-12T19:50:43.500761+00:00",
-        "ownerAcceptanceVerified": false,
-        "gameIntegrated": false,
-        "attributionSource": "current-exact-QA-and-source-manifest"
-      },
-      "producerExportProof": null,
-      "technicalExportProof": null,
-      "priorMediaFields": {
-        "tiedosto": "Biology microscope.jpg",
-        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
-        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
-        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä."
-      },
-      "preservePreviousMediaObjects": true,
-      "authorization": {
-        "status": "waived-owner-review",
-        "authorizedByOwner": true,
-        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
-        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
-        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
-        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
-        "ownerAcceptanceImplied": false,
-        "QARequired": true,
-        "R2ByteVerificationRequired": true,
-        "galleryBeforeGameRequired": false,
-        "verifiedHumanMessageSource": {
-          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
-          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
-        }
-      },
-      "ownerAcceptanceVerified": false,
-      "gameIntegrated": false,
-      "gamePublicationVerified": false,
-      "inMemoryMergeVerified": true,
-      "CcommonsMetadataBound": true,
-      "CcommonsFieldPayload": {
-        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
-        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
-        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
-        "tiedosto": "Biology microscope.jpg"
-      },
-      "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
-      "targetAfterSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
-      "contextAfterSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b"
+      "contextAfterSHA256": "8826e7481e5b50ebdace25d2ae2e4c43b7a19ebd6bf60a3f92124c4848fbe21e",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -2825,10 +2596,10 @@
         4223
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
-      "sourceContentSHA256": "c1ea751728055ee2e7558fdd83b721fddb2f10bddb7da4609c96108ad06d8ead",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "targetBeforeSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
+        "semanticContextSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
         "subjectTitle": "Yamoussoukro",
         "targetState": "existing-target"
       },
@@ -3047,10 +2818,10 @@
       "producerExportProof": null,
       "technicalExportProof": null,
       "priorMediaFields": {
-        "tiedosto": "",
-        "lahde": "",
-        "selite": "",
-        "lyhyt": ""
+        "tiedosto": "Earth from Space- Côte d'Ivoire ESA25482285.jpg",
+        "lahde": "European Space Agency, Wikimedia Commons (CC BY-SA 3.0 igo)",
+        "selite": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa.",
+        "lyhyt": "Yamoussoukro kuvan alareunassa ja Kossoun järvi joulukuun 2023 satelliittikuvassa."
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3083,10 +2854,265 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
       "targetAfterSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
-      "contextAfterSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd"
+      "contextAfterSHA256": "af01e0b44a6b91ec502412536d017bcf75b21ad5ef044f7085b2a415bb3102fd",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+    },
+    {
+      "era": "e05",
+      "city": "yamoussoukro",
+      "slot": "K3",
+      "type": "commons",
+      "assetID": "capital-cc-e05-yamoussoukro-k3-6e1ff96202ac698d",
+      "galleryImageID": "capital-cc-e05-yamoussoukro-k3-6e1ff96202ac698d",
+      "commonsFile": "Biology microscope.jpg",
+      "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+      "targetTokens": [
+        "kaupunkilehti",
+        0,
+        "nostot",
+        2
+      ],
+      "operation": "merge-media-fields-preserve-other-content",
+      "CmediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+        "suora": true,
+        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
+        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "tiedosto": "Biology microscope.jpg"
+      },
+      "removeMediaKeys": [],
+      "CvalidatorCompatiblePayload": {
+        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
+        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "tiedosto": "Biology microscope.jpg"
+      },
+      "runtimeMediaFieldPayload": {
+        "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+        "suora": true,
+        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
+        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "tiedosto": "Biology microscope.jpg"
+      },
+      "runtimeRemoveMediaKeys": [],
+      "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
+      "nativeSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+      "exportSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+      "url": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+      "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+      "nasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-eaeca3898f43da.jpg",
+      "dimensions": [
+        5712,
+        4284
+      ],
+      "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e05/paakaupungit-pilvi/e05/yamoussoukro/sisalto.json",
+      "sourceContentSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "semanticSourceBind": {
+        "targetBeforeSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+        "semanticContextSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+        "subjectTitle": "Korkeakoulu yhdistää ammattialat",
+        "targetState": "existing-target"
+      },
+      "attribution": {
+        "author": "J.Doniyorovich",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Biology_microscope.jpg",
+        "rightsEvidence": {
+          "selection": {
+            "photoLicenseSource": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
+            "artistFieldSource": "Author table",
+            "explicitCreditFromSource": "J.Doniyorovich",
+            "licenseSourceSha256": "f65f8f62c56487bfb4698699b65509b2ea5d039ebac175bc85681b1c1495d4a0",
+            "depictedWorkLayer": "CC0-vapautus ja valokuvan kuvaaja J.Doniyorovich alkuperäisestä Author-taulukosta. Pääaihe tavanomainen toiminnallinen optinen käyttölaite ilman itsenäistä figuratiivista koristelua/taideteospintaa; ei museorakennusta tai nimetyn oppilaitoksen arkkitehtuuria. Taustan käyttöpullot ja pöytä eivät teospääaiheita. Ei FOP- tai teoksen iästä tehtyä oletusta.",
+            "sourcePlaceDescription": "Oʻzbekcha / ўзбекча: Mikroskop, zarrabin – mikrozarralarni, koʻzga koʻrinmaydigan juda mayda narsalarni kattalashtirib ko'rsatadigan optik asbob",
+            "sourcePlaceGeo": [],
+            "noFopOrBuildingAgeAssumption": true
+          },
+          "QA": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/355715b7648abf53d7a8d7dff30929b2fbd2720d86c5722d234890d670380987.html",
+            "sourceSHA256": "f65f8f62c56487bfb4698699b65509b2ea5d039ebac175bc85681b1c1495d4a0",
+            "directAuthors": [
+              "J.Doniyorovich"
+            ],
+            "directLicenses": [
+              "CC0"
+            ],
+            "directRows": {
+              "Date": "29 May 2024, 16:53:00"
+            },
+            "sourceOriginalDimensions": [
+              5712,
+              4284
+            ],
+            "localDimensions": [
+              5712,
+              4284
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-eaeca3898f43da.jpg",
+            "mediaSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "fullImageViewed": true,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image high; whole native 5712x4284 displayed at 1824x1368",
+            "claimScope": "Generic research equipment; no city or named institute appearance claim",
+            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+            "targetStillExists": true
+          },
+          "qaReason": "Koko alkuperäistiedostosta avattu kuva itse katsottu: tavanomainen toiminnallinen optinen mikroskooppi laboratoriopöydällä, taustalla arkisia käyttöastioita ja pöytiä. Kuva havainnollistaa K3:n agronomian/tekniikan/tutkimustyön aihetta yleisesti, ei INP-HB:n todellista laboratoriota tai Yamoussoukron kuvauspaikkaa; selite rajaa aiheen valomikroskoopin käyttöön. J.Doniyorovich ja CC0-luovutus tarkistettu alkuperäisen tiedostosivun tekijä-/lisenssikentästä, alkuperäinen 5712×4284 ja 29.5.2024 Date-rivi sekä paikallinen SHA varmennettu. Ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä tai mainospakkausta. Tavanomaisen laitteen toiminnalliset osat eivät ole erikseen esitetty luova taideteos, eikä kuvaan ole nimetty suojattua rakennusta."
+        }
+      },
+      "luentaMetadata": {
+        "existingImageLuenta": null,
+        "captionReadingText": "Valomikroskooppi laboratoriotyön välineenä.",
+        "existingArticleAndSectionLuentaPreserved": true,
+        "audioGenerated": false,
+        "audioURL": null,
+        "imageSpecificAudioProvided": false,
+        "reuseAudioAllowedByThisPacket": false
+      },
+      "qaEvidence": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+        "fileSHA256": "040466cde2155077b00b37e6467ce157f030c40555ff103a433d1030e1a0786b",
+        "item": {
+          "slot": "K3",
+          "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+          "verdict": "accepted",
+          "reason": "Koko alkuperäistiedostosta avattu kuva itse katsottu: tavanomainen toiminnallinen optinen mikroskooppi laboratoriopöydällä, taustalla arkisia käyttöastioita ja pöytiä. Kuva havainnollistaa K3:n agronomian/tekniikan/tutkimustyön aihetta yleisesti, ei INP-HB:n todellista laboratoriota tai Yamoussoukron kuvauspaikkaa; selite rajaa aiheen valomikroskoopin käyttöön. J.Doniyorovich ja CC0-luovutus tarkistettu alkuperäisen tiedostosivun tekijä-/lisenssikentästä, alkuperäinen 5712×4284 ja 29.5.2024 Date-rivi sekä paikallinen SHA varmennettu. Ei ihmisiä, lisättyä tekstiä/vesileimaa/kehystä tai mainospakkausta. Tavanomaisen laitteen toiminnalliset osat eivät ole erikseen esitetty luova taideteos, eikä kuvaan ole nimetty suojattua rakennusta.",
+          "evidence": {
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
+            "savedSource": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/valiaikainen/verkkovarmennus/355715b7648abf53d7a8d7dff30929b2fbd2720d86c5722d234890d670380987.html",
+            "sourceSHA256": "f65f8f62c56487bfb4698699b65509b2ea5d039ebac175bc85681b1c1495d4a0",
+            "directAuthors": [
+              "J.Doniyorovich"
+            ],
+            "directLicenses": [
+              "CC0"
+            ],
+            "directRows": {
+              "Date": "29 May 2024, 16:53:00"
+            },
+            "sourceOriginalDimensions": [
+              5712,
+              4284
+            ],
+            "localDimensions": [
+              5712,
+              4284
+            ],
+            "mediaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/cc-evidence/candidate-eaeca3898f43da.jpg",
+            "mediaSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+            "authorMatches": true,
+            "licenseMatches": true,
+            "dimensionsMatch": true,
+            "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "fullImageViewed": true,
+            "personallyViewedByJob27": true,
+            "viewMethod": "view_image high; whole native 5712x4284 displayed at 1824x1368",
+            "claimScope": "Generic research equipment; no city or named institute appearance claim",
+            "currentContentSHA256": "74bd26dc8dfe8e4ce9970ac84ed879afad9228d2a1876222b82804a4eea04b9a",
+            "targetStillExists": true
+          },
+          "reviewedAt": "2026-10-12T19:50:21.143473+00:00",
+          "commonsFile": "Biology microscope.jpg",
+          "sha256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022"
+        },
+        "allSources": [
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/qa.json",
+            "sha256": "040466cde2155077b00b37e6467ce157f030c40555ff103a433d1030e1a0786b"
+          },
+          {
+            "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/city/e05/yamoussoukro/illustration-qa-extra.json",
+            "sha256": "50bc14cf07014c17f94c3211d70c6b6a7dce8d3a9d04f99be8f735b269b0b258"
+          }
+        ]
+      },
+      "R2ByteVerification": {
+        "era": "e05",
+        "city": "yamoussoukro",
+        "slot": "K3",
+        "targetJsonPath": "$.kaupunkilehti[0].nostot[2]",
+        "commonsFile": "Biology microscope.jpg",
+        "sha256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Biology_microscope.jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Biology_microscope.jpg",
+        "author": "J.Doniyorovich",
+        "license": "CC0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "width": 5712,
+        "height": 4284,
+        "originalSHA256": "6e1ff96202ac698db4ebb8bd0dd1a01111c4b708a7fb8007f086d327ae180022",
+        "r2Key": "karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+        "canonicalUrl": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/yamoussoukro/k3-6e1ff96202ac698db4eb.jpg",
+        "bytes": 3046635,
+        "http": 200,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "byteExactReadback": true,
+        "canonicalReadbackByteExact": true,
+        "conditionalIfNoneMatch": "*",
+        "s3PutHttp": 200,
+        "verifiedAt": "2026-10-12T19:50:43.500761+00:00",
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "attributionSource": "current-exact-QA-and-source-manifest"
+      },
+      "producerExportProof": null,
+      "technicalExportProof": null,
+      "priorMediaFields": {
+        "tiedosto": "Biology microscope.jpg",
+        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
+        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä."
+      },
+      "preservePreviousMediaObjects": true,
+      "authorization": {
+        "status": "waived-owner-review",
+        "authorizedByOwner": true,
+        "ownerInstruction": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+        "receivedAt": "2026-10-12T20:00:14.684809+00:00",
+        "gatePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/katselmointi-portti.json",
+        "gateSHA256": "b67f313647d84c5cb411334171d41cff19b943b173d72b5314c468f846d96f19",
+        "ownerAcceptanceImplied": false,
+        "QARequired": true,
+        "R2ByteVerificationRequired": true,
+        "galleryBeforeGameRequired": false,
+        "verifiedHumanMessageSource": {
+          "threadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+          "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
+        }
+      },
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "gamePublicationVerified": false,
+      "inMemoryMergeVerified": true,
+      "CcommonsMetadataBound": true,
+      "CcommonsFieldPayload": {
+        "lahde": "J.Doniyorovich, Wikimedia Commons (CC0)",
+        "selite": "Valomikroskooppi laboratoriotyön välineenä.",
+        "lyhyt": "Valomikroskooppi laboratoriotyön välineenä.",
+        "tiedosto": "Biology microscope.jpg"
+      },
+      "roleManifestBound": true,
+      "sourceContentAfterSHA256": "8fc5a71a3d1671e50c10b4d8240ef4cc17aa7ead48fd6c3c9028273b888b3d37",
+      "targetAfterSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+      "contextAfterSHA256": "0b71ef2c7bc942fab313e3279f223174516576fb2316ab73232188b57446571b",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }

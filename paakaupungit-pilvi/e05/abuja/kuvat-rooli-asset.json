@@ -2,7 +2,7 @@
   "schemaVersion": "capital-city-role-assets/v1",
   "era": "e05",
   "city": "abuja",
-  "authorization": "Menen nukkumaan. Voit viedä kaikki kuvat peliin ilman hyväksyntääni. Pyydän myöhemmin korjauksia tarvittaessa",
+  "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
   "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
   "assets": [
     {
@@ -284,7 +284,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "dec7ad380a200c86f04c80f0a8fa6d2cb668ffbd43b5d50cdb38eb15ef6c0f73"
+      "contextAfterSHA256": "dec7ad380a200c86f04c80f0a8fa6d2cb668ffbd43b5d50cdb38eb15ef6c0f73",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -626,7 +628,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "d51fa92efe5e1c73a377d5344adbba6e1b9d280e01917abc5a972b48980c17bc"
+      "contextAfterSHA256": "d51fa92efe5e1c73a377d5344adbba6e1b9d280e01917abc5a972b48980c17bc",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -905,7 +909,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
       "targetAfterSHA256": "3084f01820df1a477efd247553977bdd00b9fe2c6c8de28bcf56fe9c87254100",
-      "contextAfterSHA256": "3084f01820df1a477efd247553977bdd00b9fe2c6c8de28bcf56fe9c87254100"
+      "contextAfterSHA256": "3084f01820df1a477efd247553977bdd00b9fe2c6c8de28bcf56fe9c87254100",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1188,7 +1194,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
       "targetAfterSHA256": "197c7d0530cef2aa4775e1f5badd21c67cb1e2d3a18b742892d846596a0303bd",
-      "contextAfterSHA256": "197c7d0530cef2aa4775e1f5badd21c67cb1e2d3a18b742892d846596a0303bd"
+      "contextAfterSHA256": "197c7d0530cef2aa4775e1f5badd21c67cb1e2d3a18b742892d846596a0303bd",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1467,7 +1475,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
       "targetAfterSHA256": "00fff1089956772815157d17acb3715cbae719d9e32939c1b570a83be68e19dd",
-      "contextAfterSHA256": "00fff1089956772815157d17acb3715cbae719d9e32939c1b570a83be68e19dd"
+      "contextAfterSHA256": "00fff1089956772815157d17acb3715cbae719d9e32939c1b570a83be68e19dd",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -1807,7 +1817,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
       "targetAfterSHA256": "a3e225ce680c9bb125185da9fbeb5c7e2a74994b393902350c4c14a7889d4895",
-      "contextAfterSHA256": "a3e225ce680c9bb125185da9fbeb5c7e2a74994b393902350c4c14a7889d4895"
+      "contextAfterSHA256": "a3e225ce680c9bb125185da9fbeb5c7e2a74994b393902350c4c14a7889d4895",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -2108,7 +2120,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
       "targetAfterSHA256": "6f0532720f3ab79bf851d480781c15b378a0a76921fb48164be1293a573e1263",
-      "contextAfterSHA256": "6f0532720f3ab79bf851d480781c15b378a0a76921fb48164be1293a573e1263"
+      "contextAfterSHA256": "6f0532720f3ab79bf851d480781c15b378a0a76921fb48164be1293a573e1263",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -2371,7 +2385,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
       "targetAfterSHA256": "84161b8f889fca8318bde794f39ab66e87cad42ae7a1da93efd8c7ab759bbe35",
-      "contextAfterSHA256": "84161b8f889fca8318bde794f39ab66e87cad42ae7a1da93efd8c7ab759bbe35"
+      "contextAfterSHA256": "84161b8f889fca8318bde794f39ab66e87cad42ae7a1da93efd8c7ab759bbe35",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -2634,7 +2650,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
       "targetAfterSHA256": "c57a6000b79845790f5e0fb28f2074982efdb2951f0dc3e76ab4f9babf4eb755",
-      "contextAfterSHA256": "c57a6000b79845790f5e0fb28f2074982efdb2951f0dc3e76ab4f9babf4eb755"
+      "contextAfterSHA256": "c57a6000b79845790f5e0fb28f2074982efdb2951f0dc3e76ab4f9babf4eb755",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -2939,7 +2957,9 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
       "targetAfterSHA256": "d8ae3a41a394ac999fd230d099069a4e91ad28136d6ce25ed28c4c8872c771e9",
-      "contextAfterSHA256": "d8ae3a41a394ac999fd230d099069a4e91ad28136d6ce25ed28c4c8872c771e9"
+      "contextAfterSHA256": "d8ae3a41a394ac999fd230d099069a4e91ad28136d6ce25ed28c4c8872c771e9",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     },
     {
       "era": "e05",
@@ -3234,10 +3254,14 @@
       "roleManifestBound": true,
       "sourceContentAfterSHA256": "574cada0c6dccb39dbd57a32f57a295730bd6f13a89aefa9ec26e41019f12ff9",
       "targetAfterSHA256": "640fe07916874592b78698016760655de8079520529311fbf17c34aabb07f15d",
-      "contextAfterSHA256": "c4322eb217060a01f03062674d80ab60619ab82689a382ddf33162b2ee84e544"
+      "contextAfterSHA256": "c4322eb217060a01f03062674d80ab60619ab82689a382ddf33162b2ee84e544",
+      "ownerApproved": true,
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
     }
   ],
   "runtimeIntegrationPending": true,
-  "ownerAcceptedNotImpliedByAuthorization": true,
-  "gameIntegrated": false
+  "ownerAcceptedNotImpliedByAuthorization": false,
+  "gameIntegrated": false,
+  "allAssetsExplicitlyOwnerApproved": true,
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
 }
