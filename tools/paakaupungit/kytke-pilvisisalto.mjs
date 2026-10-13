@@ -25,6 +25,18 @@ for (const era of readdirSync(data).filter((x) => /^e\d+[a-z]?$/.test(x)).sort()
     const p = join(data, era, id, 'sisalto.json');
     if (existsSync(p)) kaupungit.push(JSON.parse(readFileSync(p, 'utf8')));
   }
+// Codexin visoissa oikea on aina indeksi 0, ja kaupunkilehden minitehtävä piirtyy datajärjestyksessä (js/fokustehtavat.js,
+// tests/visajakauma.test.mjs). Oikea vaihdetaan kysymystekstin tiivisteen osoittamaan paikkaan: sama data → sama järjestys.
+const paikka = (teksti, n) => { let h = 2166136261; for (const c of teksti) h = Math.imul(h ^ c.codePointAt(0), 16777619); return (h >>> 0) % n; };
+function sekoita(visa, vaihtoehdot, oikea, teksti) {
+  const v = visa[vaihtoehdot], i = visa[oikea], j = paikka(visa[teksti], v.length);
+  if (!Number.isInteger(i) || i === j) return;
+  [v[i], v[j]] = [v[j], v[i]]; visa[oikea] = j;
+}
+for (const k of kaupungit) {
+  for (const q of k.kysymykset ?? []) sekoita(q, 'options', 'correct', 'q');
+  for (const s of k.kaupunkilehti ?? []) if (s.tehtava?.vaihtoehdot) sekoita(s.tehtava, 'vaihtoehdot', 'oikea', 'kysymys');
+}
 // Lisää taulun loppuun (ennen sulkevaa "};") rivit; taulu tunnistetaan otsikkorivistä.
 function lisaa(tiedosto, otsikko, rivit, kommentti) {
   if (!rivit.length) return; // ei tyhjää kommenttilohkoa (esim. erä ilman säärivejä)
