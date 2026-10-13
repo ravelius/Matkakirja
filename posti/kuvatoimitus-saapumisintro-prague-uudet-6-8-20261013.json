@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "cityName": "PRAHA",
+  "gameCityId": "praha",
+  "mediaSlug": "prague",
+  "taskNumbers": [
+    179,
+    180
+  ],
+  "updatedAt": "2026-10-13T18:59:47.621968+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 179,
+      "mediaSlug": "prague",
+      "slot": 6,
+      "filename": "prague-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Letnán puiston näköalapaikka: Vltavan sillat, Vanhakaupunki ja Prahan linna päivällä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Letnán puiston näköalapaikka: Vltavan sillat, Vanhakaupunki ja Prahan linna päivällä.** Tiedosto `prague-6-nakoala-intro-v1.png`.\nMitä kuvataan: Prahan panoraama Letnán puiston rinnenäköalapaikalta (puinen laituri kaiteineen Hanavský-paviljongin tuntumassa) kirkkaana päivänä (nykyaikainen värikuva). Etualalla kuvan alareunassa kapea puinen kaide ja sen alla jyrkkä, puiden peittämä rantatörmä, ei ihmisiä lähellä. Keskellä alhaalla Vltavan leveä, vihertävä joki ja siinä useita kivi- ja teräskaarisiltoja peräkkäin, vasemmassa kolmanneksessa kaukana Kaarlensilta (Karlův most) matalana kivikaarisiltana torneineen, pienenä ja tunnistettavana. Vasemmalla joen takana Vanhankaupungin punaisten tiilikattojen meri ja muutama kirkon torni. Keskellä ja oikealla Malá Stranan punaiset kattomeret, Pyhän Nikolauksen kirkon vihreä kupoli pienenä ja niiden takana Petřínin vehreä rinne, jonka laella Petřínin näkötorni pienenä ohuena teräsrakenteena. Oikeassa reunassa kaukana Hradčanyn kukkulalla Prahan linna: linnan pitkä siipi ja Pyhän Vituksen katedraalin tummat tornit pieninä ja utuisina. Joella korkeintaan muutama pieni matkustajavene kaukana. Kulma: laaja vaakapanoraama (noin 90 asteen vaakakulma, ei kalansilmäkuvaa), katse lounaaseen (keskisuunta noin 215 astetta, kuvassa suunnat noin 170-260 astetta): Kaarlensilta suunnassa noin 186 astetta kuvan vasemmassa kolmanneksessa, Pyhän Nikolauksen kirkko (225 astetta) ja Petřínin torni (227 astetta) keskellä, Prahan linna (250 astetta) oikeassa reunassa; kamera kaiteen takana silmänkorkeudelta, hieman alaspäin; kaupunki ja joki täyttävät vähintään puolet kuvasta. Valo: kirkas mutta pehmeä myöhäisaamupäivän valo takaa vasemmalta (idästä ja kaakosta), jolloin sillat, katot ja linna ovat valaistuja eikä kuvassa ole vastavaloa; ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, Letnán metronomia ja entisen Stalin-patsaan jalustaa, graffiteja, rullalautailijoita, Hanavský-paviljonkia, patsaita ja Kaarlensillan patsaiden yksityiskohtia, Žižkovin televisiotornia, lippuja, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Letnán puiston näköalapaikka: Vltavan sillat, Vanhakaupunki ja Prahan linna päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "PRAHA",
+      "gameID": "praha",
+      "part": 1,
+      "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceCharacterSpan": [
+        97308,
+        99727
+      ],
+      "sourceByteSpan": [
+        100925,
+        103444
+      ],
+      "fullDeliveryRequirementSHA256": "3211cc67bbcb1e1f193904710b6d68b28af1609a635fc4d28c9a9615023c5e94",
+      "fullDirective": "Prahan panoraama Letnán puiston rinnenäköalapaikalta (puinen laituri kaiteineen Hanavský-paviljongin tuntumassa) kirkkaana päivänä (nykyaikainen värikuva). Etualalla kuvan alareunassa kapea puinen kaide ja sen alla jyrkkä, puiden peittämä rantatörmä, ei ihmisiä lähellä. Keskellä alhaalla Vltavan leveä, vihertävä joki ja siinä useita kivi- ja teräskaarisiltoja peräkkäin, vasemmassa kolmanneksessa kaukana Kaarlensilta (Karlův most) matalana kivikaarisiltana torneineen, pienenä ja tunnistettavana. Vasemmalla joen takana Vanhankaupungin punaisten tiilikattojen meri ja muutama kirkon torni. Keskellä ja oikealla Malá Stranan punaiset kattomeret, Pyhän Nikolauksen kirkon vihreä kupoli pienenä ja niiden takana Petřínin vehreä rinne, jonka laella Petřínin näkötorni pienenä ohuena teräsrakenteena. Oikeassa reunassa kaukana Hradčanyn kukkulalla Prahan linna: linnan pitkä siipi ja Pyhän Vituksen katedraalin tummat tornit pieninä ja utuisina. Joella korkeintaan muutama pieni matkustajavene kaukana. Kulma: laaja vaakapanoraama (noin 90 asteen vaakakulma, ei kalansilmäkuvaa), katse lounaaseen (keskisuunta noin 215 astetta, kuvassa suunnat noin 170-260 astetta): Kaarlensilta suunnassa noin 186 astetta kuvan vasemmassa kolmanneksessa, Pyhän Nikolauksen kirkko (225 astetta) ja Petřínin torni (227 astetta) keskellä, Prahan linna (250 astetta) oikeassa reunassa; kamera kaiteen takana silmänkorkeudelta, hieman alaspäin; kaupunki ja joki täyttävät vähintään puolet kuvasta. Valo: kirkas mutta pehmeä myöhäisaamupäivän valo takaa vasemmalta (idästä ja kaakosta), jolloin sillat, katot ja linna ovat valaistuja eikä kuvassa ole vastavaloa; ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, Letnán metronomia ja entisen Stalin-patsaan jalustaa, graffiteja, rullalautailijoita, Hanavský-paviljonkia, patsaita ja Kaarlensillan patsaiden yksityiskohtia, Žižkovin televisiotornia, lippuja, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Letnán puiston näköalapaikka: Vltavan sillat, Vanhakaupunki ja Prahan linna päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/prague/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-prague-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/prague/20261013-uudet-6-8/prague-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "prague-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "PRAHA",
+      "gameCityId": "praha",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/prague/native-6.png",
+      "nativeSHA256": "a8d710fdcd9da520348c6e83a6d4b44547c3580a916cf27638b46d1d44df3acc",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/prague/prague-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/prague/prague-6-nakoala-intro-v1.png",
+      "sha256": "4a37db56caa82a45d7cb8b5b2547db3f97b221723c48b405913484efa0e569dd",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: koko kaupunki tunnetulta näköalapaikalta päivällä — Letnán puiston näköalapaikka: Vltavan sillat, Vanhakaupunki ja Prahan linna päivällä.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nPrahan panoraama Letnán puiston rinnenäköalapaikalta (puinen laituri kaiteineen Hanavský-paviljongin tuntumassa) kirkkaana päivänä (nykyaikainen värikuva). Etualalla kuvan alareunassa kapea puinen kaide ja sen alla jyrkkä, puiden peittämä rantatörmä, ei ihmisiä lähellä. Keskellä alhaalla Vltavan leveä, vihertävä joki ja siinä useita kivi- ja teräskaarisiltoja peräkkäin, vasemmassa kolmanneksessa kaukana Kaarlensilta (Karlův most) matalana kivikaarisiltana torneineen, pienenä ja tunnistettavana. Vasemmalla joen takana Vanhankaupungin punaisten tiilikattojen meri ja muutama kirkon torni. Keskellä ja oikealla Malá Stranan punaiset kattomeret, Pyhän Nikolauksen kirkon vihreä kupoli pienenä ja niiden takana Petřínin vehreä rinne, jonka laella Petřínin näkötorni pienenä ohuena teräsrakenteena. Oikeassa reunassa kaukana Hradčanyn kukkulalla Prahan linna: linnan pitkä siipi ja Pyhän Vituksen katedraalin tummat tornit pieninä ja utuisina. Joella korkeintaan muutama pieni matkustajavene kaukana. Kulma: laaja vaakapanoraama (noin 90 asteen vaakakulma, ei kalansilmäkuvaa), katse lounaaseen (keskisuunta noin 215 astetta, kuvassa suunnat noin 170-260 astetta): Kaarlensilta suunnassa noin 186 astetta kuvan vasemmassa kolmanneksessa, Pyhän Nikolauksen kirkko (225 astetta) ja Petřínin torni (227 astetta) keskellä, Prahan linna (250 astetta) oikeassa reunassa; kamera kaiteen takana silmänkorkeudelta, hieman alaspäin; kaupunki ja joki täyttävät vähintään puolet kuvasta. Valo: kirkas mutta pehmeä myöhäisaamupäivän valo takaa vasemmalta (idästä ja kaakosta), jolloin sillat, katot ja linna ovat valaistuja eikä kuvassa ole vastavaloa; ohut kaupunkiutu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, Letnán metronomia ja entisen Stalin-patsaan jalustaa, graffiteja, rullalautailijoita, Hanavský-paviljonkia, patsaita ja Kaarlensillan patsaiden yksityiskohtia, Žižkovin televisiotornia, lippuja, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261013-uudet-6-8/prague-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261013-uudet-6-8/prague-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 179,
+        "assetID": "prague-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/prague/asset-6.json",
+        "nativeSHA256": "a8d710fdcd9da520348c6e83a6d4b44547c3580a916cf27638b46d1d44df3acc",
+        "finalSHA256": "4a37db56caa82a45d7cb8b5b2547db3f97b221723c48b405913484efa0e569dd",
+        "verdict": "accepted",
+        "reason": "Letnán laaja näkymä, joen peräkkäiset sillat, Kaarlensilta vasemmalla, Petřín keskellä ja linnakukkula oikealla toteutuvat. Ei metronomia, lähirakenteita tai lippua. Kaarlensillan kaukaiset yksityiskohdat eivät nouse pääaiheeksi.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:59:36.137492+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/prague/20261013-uudet-6-8/prague-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/prague/20261013-uudet-6-8/prague-6-nakoala-intro-v1.png",
+        "sha256": "4a37db56caa82a45d7cb8b5b2547db3f97b221723c48b405913484efa0e569dd",
+        "nativeSHA256": "a8d710fdcd9da520348c6e83a6d4b44547c3580a916cf27638b46d1d44df3acc",
+        "bytes": 2902403,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "4a37db56caa82a45d7cb8b5b2547db3f97b221723c48b405913484efa0e569dd",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "4a37db56caa82a45d7cb8b5b2547db3f97b221723c48b405913484efa0e569dd",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T18:59:47.516927+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "taskNumber": 180,
+      "slot": 8,
+      "reason": "Oikeassa reunassa näkyy selvä sininen numerokyltti ja katolla veistoshahmoja. Lähde kieltää numerot, kyltit ja patsaat. Muuten neutraali yksiosainen Tatra ja kulkusuunta ovat oikein.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "56338ccd3caf2212ffedbf4ae0b5b9380fec2a609f888fc898eebd12a5f74ead",
+      "finalSHA256": "c923e89b0ac547183fecfa08e251891f52ffc45a04cfdcca3aa15fb2913c51eb"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
