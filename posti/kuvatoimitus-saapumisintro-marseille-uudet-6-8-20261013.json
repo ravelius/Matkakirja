@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "cityName": "MARSEILLE",
+  "gameCityId": "marseille",
+  "mediaSlug": "marseille",
+  "taskNumbers": [
+    177,
+    178
+  ],
+  "updatedAt": "2026-10-13T18:59:40.229241+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 177,
+      "mediaSlug": "marseille",
+      "slot": 6,
+      "filename": "marseille-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Notre-Dame de la Garde -kukkulan terassi: Vieux-Port, Fort Saint-Jean ja kattomeri päivällä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Notre-Dame de la Garde -kukkulan terassi: Vieux-Port, Fort Saint-Jean ja kattomeri päivällä.** Tiedosto `marseille-6-nakoala-intro-v1.png`.\nMitä kuvataan: Marseillen keskustan panoraama Notre-Dame de la Garden kukkulan terassilta kirkkaana päivänä (nykyaikainen värikuva). Etualalla kuvan alareunassa kapea vaalea kivikaide ja sen takana jyrkkä, matala rinne, jolla kuivaa pensastoa; ei ihmisiä lähellä. Alhaalla ensimmäisenä Vauban-kaupunginosan tiheä kattomeri: oranssin ja okran sävyisiä Provencen savitiilikattoja ja vaaleita ja kellertäviä kerrostaloja. Keskellä ja oikealla hieman kauempana Vieux-Portin pitkä, suorakulmainen satama-allas täynnä pieniä purjeveneitä ja laitureita, sataman suulla vasemmalla Fort Saint-Nicolas ja sen takana Fort Saint-Jean pieninä kivisinä linnakkeina; Fort Saint-Jeanin vieressä Mucemin harmaa ristikkopintainen kuutio pienenä. Keskellä sataman takana kaukana Le Panierin vanha kukkulakortteli ja Marseillen katedraalin (La Major) vaaleat ja vihertävät raidalliset kupolit pieninä. Vasemmalla kaukana avoin, tyyni Välimeri ja horisontti. Kulma: vaakakuva, katse pohjois-luoteeseen (noin 342 astetta, vaakakulma noin 50 astetta eli noin 317-7 astetta): vasemmalla Fort Saint-Jean (328) ja Mucem (329), keskellä La Major (341) ja Le Panier (347), oikealla Vieux-Portin altaan itäosa (noin 360-12), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin; kaupungin kattomeri täyttää vähintään puolet kuvasta. Notre-Dame de la Garde itse on kameran takana, eikä se näy. Valo: kirkas mutta pehmeä aamupäivän valo, ohut ilmakehän utu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, kirkon tornia ja kultaista patsasta, patsaita, Vieux-Portin peilikatosta (Ombrière), CMA CGM -tornia ja muita lasisia toimistotorneja, Stade Vélodromea, nostureita ja rakennustyömaita, lippuja, valokylttejä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Notre-Dame de la Garde -kukkulan terassi: Vieux-Port, Fort Saint-Jean ja kattomeri päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "MARSEILLE",
+      "gameID": "marseille",
+      "part": 1,
+      "sourceBlob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "sourceCharacterSpan": [
+        93187,
+        95394
+      ],
+      "sourceByteSpan": [
+        96664,
+        98946
+      ],
+      "fullDeliveryRequirementSHA256": "c7da86dd905532177e88efd9b6edd6e9ca0e2992b95a0fb61eebaf70426ea9a1",
+      "fullDirective": "Marseillen keskustan panoraama Notre-Dame de la Garden kukkulan terassilta kirkkaana päivänä (nykyaikainen värikuva). Etualalla kuvan alareunassa kapea vaalea kivikaide ja sen takana jyrkkä, matala rinne, jolla kuivaa pensastoa; ei ihmisiä lähellä. Alhaalla ensimmäisenä Vauban-kaupunginosan tiheä kattomeri: oranssin ja okran sävyisiä Provencen savitiilikattoja ja vaaleita ja kellertäviä kerrostaloja. Keskellä ja oikealla hieman kauempana Vieux-Portin pitkä, suorakulmainen satama-allas täynnä pieniä purjeveneitä ja laitureita, sataman suulla vasemmalla Fort Saint-Nicolas ja sen takana Fort Saint-Jean pieninä kivisinä linnakkeina; Fort Saint-Jeanin vieressä Mucemin harmaa ristikkopintainen kuutio pienenä. Keskellä sataman takana kaukana Le Panierin vanha kukkulakortteli ja Marseillen katedraalin (La Major) vaaleat ja vihertävät raidalliset kupolit pieninä. Vasemmalla kaukana avoin, tyyni Välimeri ja horisontti. Kulma: vaakakuva, katse pohjois-luoteeseen (noin 342 astetta, vaakakulma noin 50 astetta eli noin 317-7 astetta): vasemmalla Fort Saint-Jean (328) ja Mucem (329), keskellä La Major (341) ja Le Panier (347), oikealla Vieux-Portin altaan itäosa (noin 360-12), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin; kaupungin kattomeri täyttää vähintään puolet kuvasta. Notre-Dame de la Garde itse on kameran takana, eikä se näy. Valo: kirkas mutta pehmeä aamupäivän valo, ohut ilmakehän utu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, kirkon tornia ja kultaista patsasta, patsaita, Vieux-Portin peilikatosta (Ombrière), CMA CGM -tornia ja muita lasisia toimistotorneja, Stade Vélodromea, nostureita ja rakennustyömaita, lippuja, valokylttejä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Notre-Dame de la Garde -kukkulan terassi: Vieux-Port, Fort Saint-Jean ja kattomeri päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/marseille/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-marseille-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-1-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/marseille/20261013-uudet-6-8/marseille-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "marseille-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "MARSEILLE",
+      "gameCityId": "marseille",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/marseille/native-6.png",
+      "nativeSHA256": "d0e2630232a9ed3cd14e27716d7713cb4051989aa6eb7930fa753b80fd3b29ff",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/marseille/marseille-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/marseille/marseille-6-nakoala-intro-v1.png",
+      "sha256": "b4026d51455fbd94e408ea11435c351876aeb4f84f29612ef1c1a91dd9314153",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one NEW current-day full-color camera-photograph-like European city arrival image, exactly 1536 x 1024 pixels, landscape 3:2, opaque PNG. One image only, no collage or contact sheet.\nSubject: koko kaupunki tunnetulta näköalapaikalta päivällä — Notre-Dame de la Garde -kukkulan terassi: Vieux-Port, Fort Saint-Jean ja kattomeri päivällä.\n\nEXACT SCENE, VIEWPOINT, GEOMETRY, LIGHT AND EXCLUSIONS (the following Finnish source description is the controlling composition brief; follow every detail including bearing/FOV, relative left/right position, travel direction, scale, and exclusions):\nMarseillen keskustan panoraama Notre-Dame de la Garden kukkulan terassilta kirkkaana päivänä (nykyaikainen värikuva). Etualalla kuvan alareunassa kapea vaalea kivikaide ja sen takana jyrkkä, matala rinne, jolla kuivaa pensastoa; ei ihmisiä lähellä. Alhaalla ensimmäisenä Vauban-kaupunginosan tiheä kattomeri: oranssin ja okran sävyisiä Provencen savitiilikattoja ja vaaleita ja kellertäviä kerrostaloja. Keskellä ja oikealla hieman kauempana Vieux-Portin pitkä, suorakulmainen satama-allas täynnä pieniä purjeveneitä ja laitureita, sataman suulla vasemmalla Fort Saint-Nicolas ja sen takana Fort Saint-Jean pieninä kivisinä linnakkeina; Fort Saint-Jeanin vieressä Mucemin harmaa ristikkopintainen kuutio pienenä. Keskellä sataman takana kaukana Le Panierin vanha kukkulakortteli ja Marseillen katedraalin (La Major) vaaleat ja vihertävät raidalliset kupolit pieninä. Vasemmalla kaukana avoin, tyyni Välimeri ja horisontti. Kulma: vaakakuva, katse pohjois-luoteeseen (noin 342 astetta, vaakakulma noin 50 astetta eli noin 317-7 astetta): vasemmalla Fort Saint-Jean (328) ja Mucem (329), keskellä La Major (341) ja Le Panier (347), oikealla Vieux-Portin altaan itäosa (noin 360-12), kamera kaiteen takana silmänkorkeudelta, hieman alaspäin; kaupungin kattomeri täyttää vähintään puolet kuvasta. Notre-Dame de la Garde itse on kameran takana, eikä se näy. Valo: kirkas mutta pehmeä aamupäivän valo, ohut ilmakehän utu kaukana, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, kirkon tornia ja kultaista patsasta, patsaita, Vieux-Portin peilikatosta (Ombrière), CMA CGM -tornia ja muita lasisia toimistotorneja, Stade Vélodromea, nostureita ja rakennustyömaita, lippuja, valokylttejä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nFinal photographic requirements: Natural real-camera appearance with restrained ordinary exposure, soft realistic light and subdued COLOR; this is PRESENT DAY, not a historical reconstruction and not a youth party. Respect the exact stated transport form and uniformly neutral unmarked paint. Do not restore brand colors, stripes, vehicle identifiers, flags, signs, letters, numbers, logos, advertisements or clothing trademarks. Faces remain tiny anonymous silhouettes or back-facing at a distance as specified. No extra landmarks, sculpture, architecture, vehicles or geographic features beyond those the controlling description allows. Correct real-looking structural geometry and coherent physics. Irregular leaves, non-repeating water ripples, naturally varying worn stone/plaster, realistic glass and metal; no plastic AI surfaces, pattern stamping, HDR, cinematic oversaturation or CGI look. Any locomotive or boat motion is shown only as described, never with added drawn motion graphics. Frame native 1536 x 1024 from the start; do not create any in-image caption, disclaimer, filename, overlay, UI, frame or watermark.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "authorized-scene-commission",
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-1-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "1f499828d63779dfd3af7c99a4db2c4fa186e034",
+          "use": "Exact assigned source card read in full. Camera direction, FOV, landmark positions, transport geometry and exclusions are preserved; this is commission evidence, not a separate visual photograph reference."
+        }
+      ],
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261013-uudet-6-8/marseille-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261013-uudet-6-8/marseille-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 177,
+        "assetID": "marseille-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/marseille/asset-6.json",
+        "nativeSHA256": "d0e2630232a9ed3cd14e27716d7713cb4051989aa6eb7930fa753b80fd3b29ff",
+        "finalSHA256": "b4026d51455fbd94e408ea11435c351876aeb4f84f29612ef1c1a91dd9314153",
+        "verdict": "accepted",
+        "reason": "Tiheä Vaubanin kattomeri, Vieux-Port, pienet linnakkeet ja La Major sekä avoin meri näkyvät luonnollisina. Ei havaittavaa kirkon omaa patsasta, peilikatosta, toimistotornia tai lippua.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T18:59:36.137492+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/marseille/20261013-uudet-6-8/marseille-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/marseille/20261013-uudet-6-8/marseille-6-nakoala-intro-v1.png",
+        "sha256": "b4026d51455fbd94e408ea11435c351876aeb4f84f29612ef1c1a91dd9314153",
+        "nativeSHA256": "d0e2630232a9ed3cd14e27716d7713cb4051989aa6eb7930fa753b80fd3b29ff",
+        "bytes": 2815894,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b4026d51455fbd94e408ea11435c351876aeb4f84f29612ef1c1a91dd9314153",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "b4026d51455fbd94e408ea11435c351876aeb4f84f29612ef1c1a91dd9314153",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T18:59:40.126358+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "taskNumber": 178,
+      "slot": 8,
+      "reason": "Lautta on matala ja merkitön sekä suuntautuu oikealle, mutta se täyttää noin53%leveydestä pyydetyn noin kolmanneksen sijasta. Myös matkustajahahmot korostuvat. Sommittelu on lähteen tavoitetta selvästi läheisempi.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "d336192877d784f5488d459c96f7402bcb350cd997e671b52467d0f2282400fc",
+      "finalSHA256": "259a8e905d786487ddfbe9c0b5663707617d9687771f074dde16ca3bdcb64ec3"
+    }
+  ],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}

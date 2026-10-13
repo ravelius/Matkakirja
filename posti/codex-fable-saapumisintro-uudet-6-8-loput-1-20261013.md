@@ -1,6 +1,6 @@
 # Euroopan uudet saapumisintroaiheet — osa 1/2, 13.10.2026
 
-17 QA/R2-varmennettua kuvaa toimitettu, 23 perusteltua lopullista poisjättöä. Käsitelty 40/48 tämän osan nimetyistä kuvista; 39 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
+18 QA/R2-varmennettua kuvaa toimitettu, 24 perusteltua lopullista poisjättöä. Käsitelty 42/48 tämän osan nimetyistä kuvista; 41 generointikutsua. Tilaus on kesken, kun kaikki nimetyt kohteet eivät vielä ole käsitelty.
 
 Koko laajennus käsittää 95 nimettyä kuvaa (#133–227): osa 1 sisältää 48 ja osa 2 47 kuvaa. Aiempi 88+1 arvio ei korvaa lähteiden nimettyä inventaariota. Yksi uusi sisäänrakennettu generointi per kuva; ei uusintoja, vertailuottoja, inpaintingia tai rajauksia.
 
@@ -143,6 +143,13 @@ Manifesti: `posti/kuvatoimitus-saapumisintro-madrid-uudet-6-8-20261013.json`. To
 
 - Poisjättö #175, slot 6: Metrópolis-talon pienen kupolin huipulla erottuu siipimäinen hahmosiluetti. Lähde kieltää patsaat, ja tämän yksityiskohdan vuoksi poissulkua ei pysty luotettavasti varmentamaan. Kohteen tarkkaa identiteettiä ei väitetä varmasti tunnistetuksi.
 - Poisjättö #176, slot 8: Koko junassa näkyy neljä selkeää paljeliitosta eli viisi vaunurunkoa. Lähde vaatii kuusi vaunua, eikä kuudes jää kuvan ulkopuolelle; myös87%leveys on selvästi pyydettyä noin kahta kolmasosaa suurempi.
+
+## MARSEILLE
+
+Manifesti: `posti/kuvatoimitus-saapumisintro-marseille-uudet-6-8-20261013.json`. Toimitettu 1/2; kutsuja 2.
+
+- #177, slot 6: Notre-Dame de la Garde -kukkulan terassi: Vieux-Port, Fort Saint-Jean ja kattomeri päivällä. Havainnekuva.
+- Poisjättö #178, slot 8: Lautta on matala ja merkitön sekä suuntautuu oikealle, mutta se täyttää noin53%leveydestä pyydetyn noin kolmanneksen sijasta. Myös matkustajahahmot korostuvat. Sommittelu on lähteen tavoitetta selvästi läheisempi.
 
 Kuvat toimitetaan suoraan lähteen mukaisesti Päätoimittajan arvioitaviksi omistajan valtuutuksella. Todellista PT/omistajahyväksyntää, Fable-vastaanottokuittausta, runtime-kytkentää tai pelijulkaisua ei väitetä varmennetuiksi. Jokaisen toimitetun kuvan natiivi on rootin tarkastama, ja R2 on luettu takaisin kahdesti (kanoninen ja välimuistin ohittava URL), tavut, PNG-MIME ja CORS varmennettu. PNG 1536×1024, sRGB, läpinäkymätön; vain ICC/metadata lisätty, pikselit säilytetty. Promptit, viitteet sekä natiivi- ja vienti-SHA ovat manifesteissa.
 
