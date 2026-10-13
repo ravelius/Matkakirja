@@ -3,7 +3,7 @@
   "era": "e13",
   "city": "lapaz",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+  "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
   "assets": [
     {
       "era": "e13",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Api morado valmistetaan violetista maissista. Havainnekuva.",
-        "lyhyt": "Api morado valmistetaan violetista maissista. Havainnekuva."
+        "selite": "Api morado valmistetaan violetista maissista. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-traveler-api-morado-v1-07d83a4ec28d.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Api morado valmistetaan violetista maissista. Havainnekuva.",
-        "lyhyt": "Api morado valmistetaan violetista maissista. Havainnekuva."
+        "selite": "Api morado valmistetaan violetista maissista. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "9c27b7801c0589f946f03b5806c1bb676657bff9ffba6b84d858c4ba3ad110a9",
+        "semanticContextSHA256": "96a61a60a7d4038b2dec22a2119883817794a7ecebcf7ec3d326270f35d9c15c",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -205,9 +205,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -226,17 +226,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "9c27b7801c0589f946f03b5806c1bb676657bff9ffba6b84d858c4ba3ad110a9",
+      "contextAfterSHA256": "96a61a60a7d4038b2dec22a2119883817794a7ecebcf7ec3d326270f35d9c15c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "9c27b7801c0589f946f03b5806c1bb676657bff9ffba6b84d858c4ba3ad110a9",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "9c27b7801c0589f946f03b5806c1bb676657bff9ffba6b84d858c4ba3ad110a9",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+        "sameImageNativeSHA256": "07d83a4ec28d6241225bd1a9cd85226bb4f6fa815cc2bf6aeefe442dfc6c57cf",
+        "sameImageExportSHA256": "e1ae3c23b36c393e531a93a2511044333a7c1242f9acc995690f0b593e3eb229",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -261,10 +282,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Avokadovoileipä kuuluu La Pazissa kuvattuun katuruokaan. Havainnekuva.",
-        "lyhyt": "Avokadovoileipä kuuluu La Pazissa kuvattuun katuruokaan. Havainnekuva."
+        "selite": "Avokadovoileipä kuuluu La Pazissa kuvattuun katuruokaan. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -272,10 +293,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-o4-avokadovoileipa-v1-9fd20ff1ad6e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Avokadovoileipä kuuluu La Pazissa kuvattuun katuruokaan. Havainnekuva.",
-        "lyhyt": "Avokadovoileipä kuuluu La Pazissa kuvattuun katuruokaan. Havainnekuva."
+        "selite": "Avokadovoileipä kuuluu La Pazissa kuvattuun katuruokaan. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -289,7 +310,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "4e23f02110d0ae23dd601968e6a1c9b36edf7c954f2bddb91b12878bb6e79caa",
@@ -427,9 +448,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -448,17 +469,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "4e23f02110d0ae23dd601968e6a1c9b36edf7c954f2bddb91b12878bb6e79caa",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "4e23f02110d0ae23dd601968e6a1c9b36edf7c954f2bddb91b12878bb6e79caa",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "4e23f02110d0ae23dd601968e6a1c9b36edf7c954f2bddb91b12878bb6e79caa",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+        "sameImageNativeSHA256": "9fd20ff1ad6e1c1ef364510791133ab0745b904c39fc042d8ef2e98667e8be0f",
+        "sameImageExportSHA256": "f726a6983810e690f62951f517471b2ab743db0610098e5adc1878f5c4f837f9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -480,10 +522,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Paksu lumikerros voi kuormittaa rakennuksia. Havainnekuva.",
-        "lyhyt": "Paksu lumikerros voi kuormittaa rakennuksia. Havainnekuva."
+        "selite": "Paksu lumikerros voi kuormittaa rakennuksia. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -491,10 +533,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k3-lumikerros-v1-11c4452309a2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Paksu lumikerros voi kuormittaa rakennuksia. Havainnekuva.",
-        "lyhyt": "Paksu lumikerros voi kuormittaa rakennuksia. Havainnekuva."
+        "selite": "Paksu lumikerros voi kuormittaa rakennuksia. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -508,7 +550,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
         "semanticContextSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
@@ -650,9 +692,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -671,17 +713,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "targetAfterSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
       "contextAfterSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+        "targetAfterSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
+        "contextAfterSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
+          "semanticContextSHA256": "ff05a92e8a9708a58f6d0d4bd5c32f05be497f317f3133902bc4f26c4968c973",
+          "subjectTitle": "Lumi kaatoi edellisen kirkon",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+        "sameImageNativeSHA256": "11c4452309a2090aab78d6a33fc99ada5b775a9db84573b064a0f2be75911c2d",
+        "sameImageExportSHA256": "5442ad7ccbef6200aba51e4408f3c63b2fa74879ae4d09ce7a86fc55c1aa9c52",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -703,10 +766,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kulta ja hopea ovat metallityön materiaaleja. Havainnekuva.",
-        "lyhyt": "Kulta ja hopea ovat metallityön materiaaleja. Havainnekuva."
+        "selite": "Kulta ja hopea ovat metallityön materiaaleja. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -714,10 +777,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-k4-metallimateriaalit-v1-3f2be199838a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kulta ja hopea ovat metallityön materiaaleja. Havainnekuva.",
-        "lyhyt": "Kulta ja hopea ovat metallityön materiaaleja. Havainnekuva."
+        "selite": "Kulta ja hopea ovat metallityön materiaaleja. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -731,10 +794,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
-        "semanticContextSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
+        "targetBeforeSHA256": "9e4bb7707cf4e8fa9ff947bcd8ac0216091c76312587249a3895d13978719e54",
+        "semanticContextSHA256": "9e4bb7707cf4e8fa9ff947bcd8ac0216091c76312587249a3895d13978719e54",
         "subjectTitle": "Vanha katu, monta aikakautta",
         "targetState": "existing-target"
       },
@@ -871,9 +934,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -892,17 +955,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
-      "targetAfterSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
-      "contextAfterSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
+      "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+      "targetAfterSHA256": "9e4bb7707cf4e8fa9ff947bcd8ac0216091c76312587249a3895d13978719e54",
+      "contextAfterSHA256": "9e4bb7707cf4e8fa9ff947bcd8ac0216091c76312587249a3895d13978719e54",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+        "targetAfterSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
+        "contextAfterSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
+          "semanticContextSHA256": "6147ecd59563a04238cbd99e162063063093e03885435196bb040de4515dd2fa",
+          "subjectTitle": "Vanha katu, monta aikakautta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+        "sameImageNativeSHA256": "3f2be199838af0162b9b55863a68eeff80d1369cf35f7d3eea948441af426bf1",
+        "sameImageExportSHA256": "b90fd0010581f4209f8d6f0ee70427aee305f996aa1b09e0bb497f78b52e5781",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -924,10 +1008,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Pienoistalo voi kuvata toivetta omasta kodista. Havainnekuva.",
-        "lyhyt": "Pienoistalo voi kuvata toivetta omasta kodista. Havainnekuva."
+        "selite": "Pienoistalo voi kuvata toivetta omasta kodista. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -935,10 +1019,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l1-pienoistalo-v1-f8d6da881aa2.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Pienoistalo voi kuvata toivetta omasta kodista. Havainnekuva.",
-        "lyhyt": "Pienoistalo voi kuvata toivetta omasta kodista. Havainnekuva."
+        "selite": "Pienoistalo voi kuvata toivetta omasta kodista. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -952,7 +1036,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "semanticSourceBind": {
         "targetBeforeSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
         "semanticContextSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
@@ -1094,9 +1178,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1115,17 +1199,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "targetAfterSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
       "contextAfterSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+        "targetAfterSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
+        "contextAfterSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
+          "semanticContextSHA256": "d52c00e257f38b94d86b3aed159b145ec360cf0ad503c825602c3e9592bc5111",
+          "subjectTitle": "Toive, joka mahtuu kämmenelle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+        "sameImageNativeSHA256": "f8d6da881aa2f86b284db90802a048e7ccea785ba83ebbc7e14c4955549078d9",
+        "sameImageExportSHA256": "be477c76f242770de972a6528906b63300cac4558a519291edf26a9a11142ce7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -1147,10 +1252,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kirjontalangat kuuluvat juhlapukujen valmisteluun. Havainnekuva.",
-        "lyhyt": "Kirjontalangat kuuluvat juhlapukujen valmisteluun. Havainnekuva."
+        "selite": "Kirjontalangat kuuluvat juhlapukujen valmisteluun. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1158,10 +1263,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l2-kirjontalangat-v1-61bfdbcaf4ec.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kirjontalangat kuuluvat juhlapukujen valmisteluun. Havainnekuva.",
-        "lyhyt": "Kirjontalangat kuuluvat juhlapukujen valmisteluun. Havainnekuva."
+        "selite": "Kirjontalangat kuuluvat juhlapukujen valmisteluun. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1175,7 +1280,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "semanticSourceBind": {
         "targetBeforeSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
         "semanticContextSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
@@ -1317,9 +1422,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1338,17 +1443,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "targetAfterSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
       "contextAfterSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+        "targetAfterSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
+        "contextAfterSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
+          "semanticContextSHA256": "45f496875a36b24b9036101cd4794ac980001f5b411e8f52b5fe11b6236856a5",
+          "subjectTitle": "Juhla alkaa kauan ennen kulkuetta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+        "sameImageNativeSHA256": "61bfdbcaf4ecc5f72d3bbc39ff1f0df2b9646f17831eb135253ae46e555c0ea0",
+        "sameImageExportSHA256": "496c60e86c0b0ba42317d225474cadc7e1f3c147263f717ec5c8f90afb2c204d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -1370,10 +1496,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kuivattuja yrttejä myydään torien tavaroiden joukossa. Havainnekuva.",
-        "lyhyt": "Kuivattuja yrttejä myydään torien tavaroiden joukossa. Havainnekuva."
+        "selite": "Kuivattuja yrttejä myydään torien tavaroiden joukossa. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1381,10 +1507,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/lapaz/e13-lapaz-l3-yrtit-v1-5f32119e2aa1.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Kuivattuja yrttejä myydään torien tavaroiden joukossa. Havainnekuva.",
-        "lyhyt": "Kuivattuja yrttejä myydään torien tavaroiden joukossa. Havainnekuva."
+        "selite": "Kuivattuja yrttejä myydään torien tavaroiden joukossa. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1398,7 +1524,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "semanticSourceBind": {
         "targetBeforeSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
         "semanticContextSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
@@ -1540,9 +1666,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1561,17 +1687,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "targetAfterSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
       "contextAfterSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+        "targetAfterSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
+        "contextAfterSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
+          "semanticContextSHA256": "47c9423451c1cd1d6ebee36d4d2cb7f96e24b32459da391bde4d791ad1cbe697",
+          "subjectTitle": "Torin nimi kertoo vain osan",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+        "sameImageNativeSHA256": "5f32119e2aa14188457efe1bcb7dca874552684217eb1aa668ed618ee41d06e4",
+        "sameImageExportSHA256": "f3c6ebfe06549395a4b7a37bd21352f3e60939dcc0e0e11eed912df329e0c3c2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -1590,16 +1737,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/photo-ef7b9c0e6a028321d01c.jpg",
         "suora": true,
         "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
-        "selite": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
-        "lyhyt": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "selite": "Tiheä rakennuskanta täyttää laaksoa ja nousee rinteille; aurinko valaisee osaa panoraamasta.",
+        "lyhyt": "La Paz Killi Killin näköalapaikalta.",
         "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
         "vuosi": "2015"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
-        "selite": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
-        "lyhyt": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "selite": "Tiheä rakennuskanta täyttää laaksoa ja nousee rinteille; aurinko valaisee osaa panoraamasta.",
+        "lyhyt": "La Paz Killi Killin näköalapaikalta.",
         "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
         "vuosi": "2015"
       },
@@ -1607,8 +1754,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/photo-ef7b9c0e6a028321d01c.jpg",
         "suora": true,
         "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
-        "selite": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
-        "lyhyt": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "selite": "Tiheä rakennuskanta täyttää laaksoa ja nousee rinteille; aurinko valaisee osaa panoraamasta.",
+        "lyhyt": "La Paz Killi Killin näköalapaikalta.",
         "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
         "vuosi": "2015"
       },
@@ -1624,10 +1771,10 @@
         1782
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
-        "semanticContextSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
+        "targetBeforeSHA256": "63692d9e272f3f47df9121bd6fed5ae39e662fe2b1aa4bffe8bb4dabe0cbc8b3",
+        "semanticContextSHA256": "63692d9e272f3f47df9121bd6fed5ae39e662fe2b1aa4bffe8bb4dabe0cbc8b3",
         "subjectTitle": "lapaz — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1900,9 +2047,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
+        "lyhyt": "La Paz Killi Killin näköalapaikalta.",
+        "selite": "Tiheä rakennuskanta täyttää laaksoa ja nousee rinteille; aurinko valaisee osaa panoraamasta.",
         "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
-        "selite": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
-        "lyhyt": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
         "vuosi": "2015"
       },
       "preservePreviousMediaObjects": true,
@@ -1922,24 +2069,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
-        "selite": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
-        "lyhyt": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
+        "selite": "Tiheä rakennuskanta täyttää laaksoa ja nousee rinteille; aurinko valaisee osaa panoraamasta.",
+        "lyhyt": "La Paz Killi Killin näköalapaikalta.",
         "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
         "vuosi": "2015"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
-      "targetAfterSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
-      "contextAfterSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
+      "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+      "targetAfterSHA256": "63692d9e272f3f47df9121bd6fed5ae39e662fe2b1aa4bffe8bb4dabe0cbc8b3",
+      "contextAfterSHA256": "63692d9e272f3f47df9121bd6fed5ae39e662fe2b1aa4bffe8bb4dabe0cbc8b3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+        "targetAfterSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
+        "contextAfterSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
+          "semanticContextSHA256": "81e0ab7e854d99f528b0213eae7c4165ead9831651aa32f8ae0e1d4faea4b340",
+          "subjectTitle": "lapaz — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+        "sameImageNativeSHA256": "ef7b9c0e6a028321d01ca01d4ef6ee42a2db44534ca43f2815994e01220bb015",
+        "sameImageExportSHA256": "ef7b9c0e6a028321d01ca01d4ef6ee42a2db44534ca43f2815994e01220bb015",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -1961,23 +2129,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c2-3e6e68abbd5841da6fb8.jpg",
         "suora": true,
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
-        "lyhyt": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "selite": "Etualalla näkyy puustoa, sen takana korkeita kerrostaloja ja kauempana tiheästi rakennettuja rinteitä.",
+        "lyhyt": "La Pazin korkeita taloja ja rinteiden asutusta.",
         "tiedosto": "City of La Paz, Bolivia2.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
-        "lyhyt": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "selite": "Etualalla näkyy puustoa, sen takana korkeita kerrostaloja ja kauempana tiheästi rakennettuja rinteitä.",
+        "lyhyt": "La Pazin korkeita taloja ja rinteiden asutusta.",
         "tiedosto": "City of La Paz, Bolivia2.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c2-3e6e68abbd5841da6fb8.jpg",
         "suora": true,
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
-        "lyhyt": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "selite": "Etualalla näkyy puustoa, sen takana korkeita kerrostaloja ja kauempana tiheästi rakennettuja rinteitä.",
+        "lyhyt": "La Pazin korkeita taloja ja rinteiden asutusta.",
         "tiedosto": "City of La Paz, Bolivia2.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1992,10 +2160,10 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
-        "semanticContextSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
+        "targetBeforeSHA256": "394ba733fbc68f1767bc5fe6c0c4ba094dd603ac1be133500c5565162b3405c9",
+        "semanticContextSHA256": "394ba733fbc68f1767bc5fe6c0c4ba094dd603ac1be133500c5565162b3405c9",
         "subjectTitle": "La Paz",
         "targetState": "existing-target"
       },
@@ -2268,9 +2436,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "City of La Paz, Bolivia2.jpg",
-        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
-        "lyhyt": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille."
+        "lyhyt": "La Pazin korkeita taloja ja rinteiden asutusta.",
+        "selite": "Etualalla näkyy puustoa, sen takana korkeita kerrostaloja ja kauempana tiheästi rakennettuja rinteitä.",
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2289,23 +2457,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
-        "lyhyt": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
+        "selite": "Etualalla näkyy puustoa, sen takana korkeita kerrostaloja ja kauempana tiheästi rakennettuja rinteitä.",
+        "lyhyt": "La Pazin korkeita taloja ja rinteiden asutusta.",
         "tiedosto": "City of La Paz, Bolivia2.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
-      "targetAfterSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
-      "contextAfterSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
+      "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+      "targetAfterSHA256": "394ba733fbc68f1767bc5fe6c0c4ba094dd603ac1be133500c5565162b3405c9",
+      "contextAfterSHA256": "394ba733fbc68f1767bc5fe6c0c4ba094dd603ac1be133500c5565162b3405c9",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+        "targetAfterSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
+        "contextAfterSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
+          "semanticContextSHA256": "8552d7d591a4a5904d2be646d7acecd61057536c9d693300862a657dd5405fc5",
+          "subjectTitle": "La Paz",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+        "sameImageNativeSHA256": "3e6e68abbd5841da6fb80c1b3fed270be210722a7bbf0188d7ef8776e042dfd5",
+        "sameImageExportSHA256": "3e6e68abbd5841da6fb80c1b3fed270be210722a7bbf0188d7ef8776e042dfd5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -2327,23 +2516,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c3-98db7bfbaa507e22a022.jpg",
         "suora": true,
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
-        "lyhyt": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "selite": "Rakennukset levittäytyvät laaksoon punertavan taivaan alla; lumihuippuinen Illimani kohoaa kauempana.",
+        "lyhyt": "La Pazin kaupunkialue ja Illimani hämärässä.",
         "tiedosto": "Vista Lejana de La Paz.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
-        "lyhyt": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "selite": "Rakennukset levittäytyvät laaksoon punertavan taivaan alla; lumihuippuinen Illimani kohoaa kauempana.",
+        "lyhyt": "La Pazin kaupunkialue ja Illimani hämärässä.",
         "tiedosto": "Vista Lejana de La Paz.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/c3-98db7bfbaa507e22a022.jpg",
         "suora": true,
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
-        "lyhyt": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "selite": "Rakennukset levittäytyvät laaksoon punertavan taivaan alla; lumihuippuinen Illimani kohoaa kauempana.",
+        "lyhyt": "La Pazin kaupunkialue ja Illimani hämärässä.",
         "tiedosto": "Vista Lejana de La Paz.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2358,10 +2547,10 @@
         2304
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
-        "semanticContextSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
+        "targetBeforeSHA256": "f4ad36abf95a0d76fc9b0d02be391894d0b6ea09fb827ef3e5ead48a6cb33349",
+        "semanticContextSHA256": "f4ad36abf95a0d76fc9b0d02be391894d0b6ea09fb827ef3e5ead48a6cb33349",
         "subjectTitle": "La Paz",
         "targetState": "existing-target"
       },
@@ -2529,9 +2718,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Vista Lejana de La Paz.jpg",
-        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
-        "lyhyt": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille."
+        "lyhyt": "La Pazin kaupunkialue ja Illimani hämärässä.",
+        "selite": "Rakennukset levittäytyvät laaksoon punertavan taivaan alla; lumihuippuinen Illimani kohoaa kauempana.",
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2550,23 +2739,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
-        "lyhyt": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
+        "selite": "Rakennukset levittäytyvät laaksoon punertavan taivaan alla; lumihuippuinen Illimani kohoaa kauempana.",
+        "lyhyt": "La Pazin kaupunkialue ja Illimani hämärässä.",
         "tiedosto": "Vista Lejana de La Paz.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
-      "targetAfterSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
-      "contextAfterSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
+      "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+      "targetAfterSHA256": "f4ad36abf95a0d76fc9b0d02be391894d0b6ea09fb827ef3e5ead48a6cb33349",
+      "contextAfterSHA256": "f4ad36abf95a0d76fc9b0d02be391894d0b6ea09fb827ef3e5ead48a6cb33349",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+        "targetAfterSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
+        "contextAfterSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
+          "semanticContextSHA256": "ceabc5390303a4058a358cd8e55b35b002f7d293898c73727a70d411578ff4fc",
+          "subjectTitle": "La Paz",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+        "sameImageNativeSHA256": "98db7bfbaa507e22a0220a22dbc8e98bf2e859475f5f43f90181aa5faac193b5",
+        "sameImageExportSHA256": "98db7bfbaa507e22a0220a22dbc8e98bf2e859475f5f43f90181aa5faac193b5",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -2588,23 +2798,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/k2-741a1daf1aa309561a49.jpg",
         "suora": true,
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
-        "lyhyt": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "selite": "Köysiradan riippuvat vaunut kulkevat kerrostalojen ja alla olevan kadun yläpuolella.",
+        "lyhyt": "Mi Teleféricon vaunuja La Pazin rakennusten välissä.",
         "tiedosto": "Teleferico de La Paz.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
-        "lyhyt": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "selite": "Köysiradan riippuvat vaunut kulkevat kerrostalojen ja alla olevan kadun yläpuolella.",
+        "lyhyt": "Mi Teleféricon vaunuja La Pazin rakennusten välissä.",
         "tiedosto": "Teleferico de La Paz.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/lapaz/k2-741a1daf1aa309561a49.jpg",
         "suora": true,
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
-        "lyhyt": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "selite": "Köysiradan riippuvat vaunut kulkevat kerrostalojen ja alla olevan kadun yläpuolella.",
+        "lyhyt": "Mi Teleféricon vaunuja La Pazin rakennusten välissä.",
         "tiedosto": "Teleferico de La Paz.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2619,10 +2829,10 @@
         2303
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/lapaz/sisalto.json",
-      "sourceContentSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+      "sourceContentSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
-        "semanticContextSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
+        "targetBeforeSHA256": "3583c143808e8d5d0fda856a80a53cf155a1e84815f5f333a06e116a36d6b636",
+        "semanticContextSHA256": "3583c143808e8d5d0fda856a80a53cf155a1e84815f5f333a06e116a36d6b636",
         "subjectTitle": "Työmatka kattojen yläpuolella",
         "targetState": "existing-target"
       },
@@ -2794,9 +3004,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Teleferico de La Paz.jpg",
-        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
-        "lyhyt": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025."
+        "lyhyt": "Mi Teleféricon vaunuja La Pazin rakennusten välissä.",
+        "selite": "Köysiradan riippuvat vaunut kulkevat kerrostalojen ja alla olevan kadun yläpuolella.",
+        "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2815,28 +3025,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
-        "lyhyt": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
+        "selite": "Köysiradan riippuvat vaunut kulkevat kerrostalojen ja alla olevan kadun yläpuolella.",
+        "lyhyt": "Mi Teleféricon vaunuja La Pazin rakennusten välissä.",
         "tiedosto": "Teleferico de La Paz.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
-      "targetAfterSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
-      "contextAfterSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
+      "sourceContentAfterSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+      "targetAfterSHA256": "3583c143808e8d5d0fda856a80a53cf155a1e84815f5f333a06e116a36d6b636",
+      "contextAfterSHA256": "3583c143808e8d5d0fda856a80a53cf155a1e84815f5f333a06e116a36d6b636",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf4b47b346d0ce6ab1a1dfdc239292fcb5640199bfa698f232eee8f36d2d6016",
+        "targetAfterSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
+        "contextAfterSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
+          "semanticContextSHA256": "82e53aafb4c26685b8411125bc0950722869f89b21f576a3bfbff9d8ab9ef020",
+          "subjectTitle": "Työmatka kattojen yläpuolella",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "c0291d6ce562eb6e78c098a7146377b17bbcc93ae65b83710007782aa14f83d9",
+        "sameImageNativeSHA256": "741a1daf1aa309561a49eebff0920a6789d64509bb81fc8f1ee7ce5aafe89453",
+        "sameImageExportSHA256": "741a1daf1aa309561a49eebff0920a6789d64509bb81fc8f1ee7ce5aafe89453",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e13/lapaz/a6dd9e89a84dd8a8c588cf95b1483ad013f0c0ecb0ce118417dbb9f601c623ce.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.525905+00:00"
 }

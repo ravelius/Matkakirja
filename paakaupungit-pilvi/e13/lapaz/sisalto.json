@@ -1,395 +1,395 @@
 {
-  "$skeema": "matkakirja-paakaupunki/1",
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "lapaz",
+ "maa": "BOL",
+ "era": "e13",
+ "kaupunki": {
   "id": "lapaz",
-  "maa": "BOL",
-  "era": "e13",
-  "kaupunki": {
-    "id": "lapaz",
-    "name": "La Paz",
-    "wiki": "La Paz",
-    "ambience": "kaupunki",
-    "pallo": {
-      "lat": -16.4958,
-      "lon": -68.1333
-    }
-  },
-  "artikkeli": {
-    "intro": "La Pazissa kaupunki alkaa ylätasangon reunalta ja jatkuu alas Choqueyapu-joen laaksoon. **Bolivian hallinnon paikka** levittäytyy rinteille, kun naapurikaupunki El Alto sijaitsee niiden yläpuolella Altiplanolla. Lumihuippuinen Illimani kohoaa kaupunkimaiseman takana. Sucre on silti maan perustuslain mukainen pääkaupunki, joten Boliviaa ei voi selittää yhdellä pääkaupunkipisteellä. Espanjalainen La Paz perustettiin 1500-luvulla alueelle, joka tunnettiin aimarankielisellä nimellä Chuquiago.\n\nVanhassa keskustassa siirtomaa-ajan kirkot ja Calle Jaénin talot ovat säilyneet osana kasvavaa kaupunkia. Isoisän matkavuonna 1873 La Paz oli jo vanha kaupunki, mutta nykyinen hallinnon asema vakiintui vasta vuosisadan lopulla. Nykyään **Mi Teleféricon köysiradat** kuljettavat asukkaita kaupunginosasta toiseen ja El Altoon. Alasita-juhlassa tulevaisuuden toiveille taas annetaan pienoismallin koko: talo tai auto voidaan ostaa ensin käteen mahtuvana.",
-    "teksti": "La Pazin nimi merkitsee espanjaksi rauhaa, mutta kaupunki ei syntynyt tyhjälle paikalle. Espanjalainen perustaminen tapahtui 1500-luvulla ensin Lajassa, mistä kaupunki siirrettiin Chuquiagon laaksoon. Aimara on edelleen näkyvä osa kaupunkia: esimerkiksi köysiradan asemilla on espanjan- ja aimarankieliset nimet.\n\nChoqueyapu-joki on muovannut laakson, jonka rinteille La Paz on kasvanut. Joki kulkee nykyään suurelta osin rakennettujen alueiden alla. Sen suuntaa seurailevan pääväylän keskustajakso tunnetaan Pradona. Ylhäällä El Altossa sijaitsee myös lentoasema, joten lentomatka La Paziin alkaa naapurikaupungista.\n\nSan Franciscon kirkko ja Calle Jaénin vanhat talot tuovat keskustaan siirtomaa-ajan kerroksen. Plaza Murillon ympärillä ovat katedraali ja hallintorakennuksia. La Paz on hallinnon kotipaikka, mutta Sucren pääkaupunkiasema säilyy: Bolivian kaksi keskusta tekevät eri tehtäviä."
-  },
-  "kysymykset": [
-    {
-      "q": "Mikä on La Pazin asema Boliviassa?",
-      "options": [
-        "Hallinnon kotipaikka",
-        "Merenrantainen satama",
-        "Itsenäinen kaupunkivaltio",
-        "Maan entinen kaivosleiri"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Maan perustuslain mukainen pääkaupunki sijaitsee muualla.",
-      "fact": "La Pazissa on maan hallinto, mutta Sucre on perustuslain mukainen pääkaupunki.",
-      "source": "https://en.wikipedia.org/wiki/La_Paz"
-    },
-    {
-      "q": "Minkä joen laaksoon La Paz on rakentunut?",
-      "options": [
-        "Choqueyapu",
-        "Amazonas",
-        "Paraná",
-        "Orinoco"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Kaupungin pääväylä seurailee osin saman paikallisen joen suuntaa.",
-      "fact": "La Paz sijaitsee Choqueyapu-joen muovaamassa laaksossa.",
-      "source": "https://en.wikipedia.org/wiki/La_Paz"
-    },
-    {
-      "q": "Miten Mi Teleférico kuljettaa matkustajia?",
-      "options": [
-        "Köysiradan vaunuissa",
-        "Maanalaisen junan vaunuissa",
-        "Joella liikkuvissa veneissä",
-        "Rinteen portailla kulkevissa hisseissä"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Katot jäävät matkan aikana alapuolelle.",
-      "fact": "Mi Teleférico on La Pazin ja El Alton kaupunkiseudun köysirataverkosto.",
-      "source": "https://en.wikipedia.org/wiki/Mi_Telef%C3%A9rico"
-    },
-    {
-      "q": "Mikä aiheutti San Franciscon varhaisemman kirkon sortumisen?",
-      "options": [
-        "Runsas lumisade",
-        "Voimakas jokitulva",
-        "Rakennuksen tulipalo",
-        "Läheisen louhoksen räjäytys"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Tapahtumaan liittyi vuoristokaupungin sää.",
-      "fact": "Varhaisempi San Franciscon kirkko sortui 1600-luvun alussa runsaan lumisateen seurauksena.",
-      "source": "https://en.wikipedia.org/wiki/Basilica_of_San_Francisco,_La_Paz"
-    },
-    {
-      "q": "Mitä tarkoittaa La Pazin lentoaseman sijainti El Altossa?",
-      "options": [
-        "Se on naapurikaupungissa",
-        "Se on maanalaisessa terminaalissa",
-        "Se on erillisellä jokisaarella",
-        "Se on lähellä merenrantaa"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "La Pazin rinteiden yläpuolella levittäytyy toinen kaupunki.",
-      "fact": "El Alto on La Pazin naapurikaupunki Altiplanon ylätasangolla, ja lentoasema sijaitsee siellä.",
-      "source": "https://en.wikipedia.org/wiki/La_Paz"
-    }
-  ],
-  "tiedot": [
-    "Mi Teleféricon asemilla on sekä espanjan- että aimarankieliset nimet.",
-    "La Pazin lentoasema sijaitsee El Altossa, kaupungin rinteiden yläpuolisella ylätasangolla.",
-    "Calle Jaénin soitinmuseossa on esillä Ernesto Cavourin monirunkoisia kitaroita."
-  ],
-  "valokuva": {
-    "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
-    "lyhyt": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
-    "selite": "La Paz levittäytyy Choqueyapu-joen laaksoon ja sen rinteille.",
-    "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
-    "vuosi": "2015"
-  },
-  "kaupunkilehti": [
-    {
-      "id": "kaupunki",
-      "nimi": "La Paz",
-      "johdanto": "La Pazin rinteillä vanha keskusta ja kattojen yläpuolella kulkeva joukkoliikenne kohtaavat. Kaupunki avautuu sekä kävellen että vaunun ikkunasta.",
-      "kansikuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "tiedosto": "City of La Paz, Bolivia2.jpg",
-          "lyhyt": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
-          "selite": "La Pazin kaupunkirakenne jatkuu keskustasta ympäröiville rinteille.",
-          "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)"
-        },
-        {
-          "tiedosto": "Vista Lejana de La Paz.jpg",
-          "lyhyt": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
-          "selite": "La Pazin asutus levittäytyy laaksoon ja vuorenrinteille.",
-          "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)"
-        }
-      ],
-      "nostot": [
-        {
-          "otsikko": "Kaupunki kulhon sisällä",
-          "teksti": "La Pazin keskustasta katsottuna kaupunki jatkuu ylöspäin lähes joka suunnassa. Choqueyapu-joen laakso muodostaa suuren painanteen, jonka rinteille kaupunginosat ovat kasvaneet. Naapurikaupunki El Alto levittäytyy sen yläpuolella Altiplanon ylätasangolle. Siksi La Paz ja El Alto näyttävät eri kaupunkikerroksilta: toisessa kadut kulkevat laaksossa ja rinteillä, toisessa asutus jatkuu tasangolla. Luminen Illimani kuuluu näkymään, mutta se on kaupungin taustalla kohoava vuori, ei rakennusten keskeltä nouseva kukkula.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "La Paz"
-        },
-        {
-          "otsikko": "Työmatka kattojen yläpuolella",
-          "teksti": "Mi Teleférico tarkoittaa espanjaksi minun köysirataani. La Pazissa nimi kuuluu joukkoliikenteelle: riippuvat vaunut kuljettavat asukkaita kaupunginosien välillä sekä La Pazin ja El Alton jyrkän korkeuseron yli. Linjat erotetaan väreillä, ja asemilla on sekä espanjan- että aimarankieliset nimet. Köysirata tuli käyttöön 2000-luvulla, kauan isoisän matkan jälkeen. Matkailija näkee vaunusta talojen katot ja laakson muodon, mutta samalla reitillä joku toinen on aivan tavallisella työ- tai asiointimatkallaan.",
-          "tiedosto": "Teleferico de La Paz.jpg",
-          "lyhyt": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
-          "selite": "Mi Teleféricon vaunut La Pazin katujen yllä. Kuvasivun Exif-päiväys 18.9.2025.",
-          "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
-          "wiki": "Mi Teleférico"
-        },
-        {
-          "otsikko": "Lumi kaatoi edellisen kirkon",
-          "teksti": "San Franciscon varhaisempi kirkko sortui 1600-luvun alussa runsaan lumisateen seurauksena. Nykyinen kirkko rakennettiin 1700-luvulla Andien barokkityyliin, ja se on omistettu Franciscus Assisilaiselle. Rakennus sijaitsee samannimisellä aukiolla La Pazin keskustassa. Isoisän matkavuonna 1873 kirkko oli jo olemassa, mutta sen torni on myöhempi, 1800-luvun lopun lisäys. Kirkon eri osat eivät siis ole samanikäisiä. Saman kompleksin luostari ja museo avaavat nykyään rakennuksen historiaa myös kirkkosalin ulkopuolelta.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Basilica of San Francisco, La Paz"
-        },
-        {
-          "otsikko": "Vanha katu, monta aikakautta",
-          "teksti": "Calle Jaén on La Pazin säilynyttä siirtomaa-ajan keskustaa. Vanhoissa taloissa toimii museoita, joten kadulla voi siirtyä rakennushistoriasta kaupungin tapoihin ja esikolumbiaanisiin metallitöihin. Soitinmuseo puolestaan esittelee Bolivian ja muiden maiden soittimia. Kadun talot eivät tee kaikista näyttelyistä siirtomaa-aikaisia: esimerkiksi kultaa ja hopeaa esittelevän museon esineistö kertoo ajasta ennen espanjalaisten tuloa. Sama lyhyt katu kokoaa siten huomattavasti pidemmän ajallisen matkan kuin kävelymatka antaisi odottaa.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "La Paz"
-        }
-      ],
-      "matkailijalle": {
-        "kuva": {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        "kappale": "La Paziin saapuva laskeutuu ensin El Alton ylätasangolle. Kaupungin keskustaan jatketaan alas laaksoon. San Francisco ja Calle Jaén sopivat vanhan keskustan kävelyn kiintopisteiksi. Mi Teleférico näyttää rinteet ylhäältä ja kuljettaa myös paikallisten arkisia matkoja. Museoiden, torien ja ruokataukojen lomaan kannattaa jättää aikaa, sillä reitti sisältää korkeuseroja.",
-        "artikkeli": {
-          "nimi": "Matkailijan La Paz",
-          "taitto": "opas",
-          "teksti": "Katsele La Pazin rinteitä sekä kadulta että köysiradan vaunusta.",
-          "nosto": "El Alto on ylhäällä, La Paz laaksossa: maaston hahmottaminen auttaa valitsemaan päivän reitin.",
-          "jaksot": [
-            {
-              "otsikko": "Perille ja liikkeelle",
-              "teksti": "La Pazin lentoasema on El Altossa, kaupungin yläpuolella sijaitsevalla ylätasangolla. Keskustaan pääsee maanteitse, ja kaupunkien välillä kulkee myös Mi Teleféricon köysiratoja. La Pazin sisällä liikennöivät bussit, minibussit ja kiinteillä reiteillä kulkevat trufi-taksit. Suunnittele kävely reitin korkeuserojen mukaan: keskustan kartalla lähekkäiset kadut voivat olla jyrkässä rinteessä. Köysirata on samalla tilaisuus hahmottaa kaupungin eri osien sijaintia.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Kirkko ja vanhan keskustan kadut",
-              "teksti": "San Franciscon kirkon ympäristöstä voi jatkaa vanhaan keskustaan ja Calle Jaénille. Kirkon yhteydessä on museo, kun taas Jaénin taloissa toimivat erilliset kokoelmat käsittelevät muun muassa soittimia ja esikolumbiaanisia jalometallitöitä. Plaza Murillo kokoaa aukion ympärille katedraalin ja hallintorakennuksia. Valitse museot niiden sisällön mukaan: kadun vanha talo ja sen nykyinen näyttely eivät aina kerro samasta ajasta.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Kaupunki vaunun ikkunasta",
-              "teksti": "Mi Teleféricon linjat erotetaan väreillä, ja asemien nimet ovat espanjaksi ja aimaraksi. La Pazin ja El Alton välillä vaunuista hahmottuu erityisen hyvin laakson ja ylätasangon ero. Köysirata on asukkaiden joukkoliikennettä, joten vaunuun noustaan samalla tavoin asiointimatkalle kuin näkymiä katsomaan. Alasitan ja Gran Poderin kaltaiset juhlat tarjoavat toisen näkökulman kaupungin käyttöön: kadut ovat myös käsityön, rituaalien, tanssin ja musiikin paikkoja.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Mitä täällä syödään",
-              "teksti": "Keskustan toreilla ja pienissä lounaskeittiöissä on tarjolla kokonaisia aterioita sekä välipaloja. Almuerzo tarkoittaa lounasta; lounaspaikan päivän menu on eri asia kuin yksittäinen katukeittiön välipala. La Pazin katuruoassa on myös avokadovoileipiä, ja makea lämmin api-juoma valmistetaan maissista. Ruokatauko sopii Pradon kävelyn lomaan tai torikäynnin yhteyteen. Monet keskustan ravintolat sijaitsevat Pradon eteläpuolella Plaza Isabel la Católican ja Plaza Avaroan ympäristössä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "La Pazissa sateisempi kesä ja kuivempi talvi sijoittuvat eteläisen pallonpuoliskon vuodenaikoihin. Korkea sijainti kuuluu matkan suunnitteluun ympäri vuoden; ensipäivään sopii rauhallinen kävely keskustassa. Jos tavoite on Alasita tai Gran Poder, tarkista juuri kyseisen vuoden juhlapäivät ennen matkaa. Gran Poder liittyy kirkolliseen kalenteriin, joten ajankohta ei pysy samana päivämääränä. Museoihin ja vanhaan keskustaan voi tutustua ilman juhlaakin.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            }
-          ],
-          "matkailu": {
-            "parasta": [
-              {
-                "mita": "San Francisco",
-                "tahdet": 3,
-                "selite": "Andien barokkikirkko ja sen yhteydessä toimiva museo."
-              },
-              {
-                "mita": "Calle Jaén",
-                "tahdet": 3,
-                "selite": "Vanhojen talojen kadulla toimii erillisiä museoita."
-              },
-              {
-                "mita": "Mi Teleférico",
-                "tahdet": 3,
-                "selite": "Köysirata näyttää laakson ja ylätasangon suhteen."
-              },
-              {
-                "mita": "Plaza Murillo",
-                "tahdet": 2,
-                "selite": "Vanhan keskustan aukio katedraalin ja hallinnon ympäröimänä."
-              },
-              {
-                "mita": "Soitinmuseo",
-                "tahdet": 2,
-                "selite": "Kokoelmaan kuuluu myös Ernesto Cavourin kokeilevia soittimia."
-              }
-            ],
-            "hyvaTietaa": [
-              {
-                "otsikko": "Lentoasema on El Altossa",
-                "teksti": "Saapuminen alkaa naapurikaupungista ylätasangolta."
-              },
-              {
-                "otsikko": "Reitti voi nousta jyrkästi",
-                "teksti": "Keskustan etäisyyksien lisäksi kannattaa arvioida rinteet."
-              },
-              {
-                "otsikko": "Juhlapäivät vaihtelevat",
-                "teksti": "Gran Poderin ajankohta seuraa kirkollista kalenteria."
-              }
-            ]
-          },
-          "lahde": "Wikipedia"
-        }
-      }
-    },
-    {
-      "id": "historia",
-      "nimi": "Käsityöt ja elävät perinteet",
-      "johdanto": "Toive, juhla ja soitinkeksintö saavat La Pazissa käsin tehdyn muodon. Kaupungin perinteillä on tekijänsä myös nykyään.",
-      "tehtava": {
-        "kysymys": "Mihin pienoisesineet liittyvät Alasita-juhlassa?",
-        "vaihtoehdot": [
-          "Tulevaisuuden toiveisiin",
-          "Kaupungin liikennesääntöihin",
-          "Vuorten korkeuden mittaukseen",
-          "Vanhojen kolikoiden vaihtoon"
-        ],
-        "oikea": 0,
-        "fakta": "Alasitassa pienoismalli voi edustaa asiaa, jota sen hankkija tavoittelee omassa elämässään."
-      },
-      "nostot": [
-        {
-          "otsikko": "Toive, joka mahtuu kämmenelle",
-          "teksti": "Alasita-juhlassa La Pazin asukkaat hankkivat pienoisesineitä, jotka edustavat heidän toiveitaan. Pieni talo tai auto liittyy vaurauden aimaralaiseen jumaluuteen Ekekoon. Esineet eivät ole pelkkiä matkamuistoja: niitä siunataan perinteisissä rituaaleissa ja katolisissa toimituksissa. Tavoiteltu asia voi olla aineellinen, mutta pienoisesineen kautta toiveesta tulee myös yhteisesti jaettava. Käsityöläiset valmistavat esineitä, ja perinne siirtyy perheissä lasten kulkiessa vanhempiensa mukana. Tulevaisuus saa täällä ensin pienen, käsin tehdyn muodon.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Alasitas"
-        },
-        {
-          "otsikko": "Juhla alkaa kauan ennen kulkuetta",
-          "teksti": "Gran Poderin juhla täyttää La Pazin katuja tanssilla ja musiikilla. Pyhään Kolminaisuuteen liittyvässä juhlassa katolinen perinne kohtaa Andien kulttuuriset käytännöt. Näkyvän kulkueen takana on pitkä valmistautuminen: ryhmät valmistelevat musiikkiohjelmistoaan, ja käsityöläiset kirjovat asuja sekä valmistavat koruja. Perinnettä ylläpitävät tanssiryhmät ja niiden jäsenet, eikä kyse ole vain ulkopuolisille järjestetystä esityksestä. Juhla muuttaa kaupungin katuja yhteiseksi näyttämöksi, mutta sen tekeminen kuuluu myös arkeen kulkuepäivien välissä.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Fiesta del Gran Poder"
-        },
-        {
-          "otsikko": "Torin nimi kertoo vain osan",
-          "teksti": "Mercado de Brujas levittäytyy La Pazin keskustassa Linares-kadulle ja sen lähikaduille. Kojuilta löytyy yrttejä, rohdoksia ja aimaralaisiin rituaaleihin liittyviä aineksia. Monet myyjistä ovat aimaranaisia, joita kutsutaan chifreras-nimellä. Torilla toimii myös yatiri-rituaaliasiantuntijoita. Uskonnollisiin käytäntöihin kuuluu lahjojen osoittaminen Pachamamalle, maan jumaluudelle. Noitatori on samalla matkailijoiden käyntikohde, mutta tavaroilla on paikallisille käyttäjille oma perinteinen merkityksensä. Tori tuo nämä käytännöt keskelle nykyistä kaupunkia.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "The Witches' Market"
-        },
-        {
-          "otsikko": "Kitara, jolla on monta runkoa",
-          "teksti": "Calle Jaénin soitinmuseon perusti charangonsoittaja ja keksijä Ernesto Cavour. Kokoelmassa on ääntä tuottavia välineitä Boliviasta ja muualta, ja osaa niistä saa itse kokeilla. Cavourin omiin keksintöihin kuuluu monirunkoisia kitaroita: tuttu soitinmuoto saa rinnalleen uusia runkoja sen sijaan, että esillä olisi vain yksi tavallinen kitara. Museo kertoo näin myös kokeilemisesta, ei pelkästään vanhojen soittimien säilyttämisestä. Vierailulla kannattaa erottaa perinteinen soitin keksijän omasta versiosta, sillä samaan kokoelmaan mahtuvat molemmat.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "La Paz"
-        }
-      ]
-    }
-  ],
-  "kohdekartta": {
-    "numeroympyrat": true,
-    "esittely": "La Pazin vanhan keskustan kirkko ja aukio kertovat kaupungin siirtomaa-ajan rakenteesta. Nykyinen kaupunki jatkuu niiden ympäriltä laakson rinteille.",
-    "rajat": {
-      "pohjoinen": -16.4928,
-      "etela": -16.4995,
-      "lansi": -68.1404,
-      "ita": -68.1305
-    },
-    "kohteet": [
-      {
-        "nimi": "San Franciscon basilika",
-        "lat": -16.4965,
-        "lon": -68.1373
-      },
-      {
-        "nimi": "Plaza Murillo",
-        "tyyppi": "aukio",
-        "lat": -16.4958,
-        "lon": -68.1336
-      }
-    ]
-  },
-  "nahtavyydet": {
-    "San Franciscon basilika": {
-      "aika": "1700-luku; torni 1800-luvun lopulta",
-      "teksti": "San Franciscon basilika on Franciscus Assisilaiselle omistettu katolinen kirkko La Pazin keskustassa. Se seisoo Plaza San Franciscon laidalla ja edustaa Andien barokkia. Kirkon ja luostarin historia ulottuu kaupungin espanjalaisen perustamisen aikoihin, mutta nykyinen kirkkorakennus on 1700-luvulta. Sitä edeltänyt kirkko sortui runsaan lumisateen jälkeen 1600-luvun alussa.\n\nIsoisän matkavuonna 1873 nykyinen kirkko oli jo olemassa. Sen torni kuuluu kuitenkin 1800-luvun lopun rakennusvaiheeseen, joten nykyistä kokonaisuutta ei voi siirtää sellaisenaan tuohon vuoteen. Kirkon historia ei pääty julkisivuun: saman kompleksin luostarissa toimii museo, joka esittelee rakennuksen menneisyyttä. Aukio, kirkko ja luostari ovat eri osia samasta keskustan historiallisesta ympäristöstä.",
-      "kuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "lahde": "Wikipedia"
-    },
-    "Plaza Murillo": {
-      "aika": "Siirtomaa-ajan aukio; nykyinen nimi myöhemmältä ajalta",
-      "teksti": "Plaza Murillo sijaitsee La Pazin vanhassa keskustassa eli Casco Viejossa. Aukion ympärillä ovat katedraali sekä hallintorakennuksia, ja sen rajoina kulkevat keskustan kadut. Se muodostui osaksi espanjalaisen kaupungin ruutukaavaa. Siirtomaa-aikana aukion laidalle sijoitettiin kaupunginhallinto, kirkollisia rakennuksia ja kruunun rahasto.\n\nAukio oli olemassa isoisän matkavuonna 1873, mutta nimet ovat vaihtuneet sen historian aikana. Se tunnettiin ensin Plaza Mayorina ja myös Plaza de Armasina. Nykyinen nimi viittaa itsenäisyyshistorian Pedro Domingo Murilloon. Aukion sivuja rajaavat muun muassa Socabaya-, Ayacucho- ja Comercio-kadut. Sen paikalla kohtaavat kaupungin ruutukaava, hallintohistoria ja uskonnollinen rakennusperintö. Aukion ympäristö auttaa hahmottamaan, miten vanhan keskustan hallinnollinen ydin on säilynyt kaupungin kasvaessa.",
-      "kuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "lahde": "Wikipedia"
-    }
-  },
-  "saatiedot": null,
-  "ehdotukset": {
-    "lentoasema": "El Alton kansainvälinen lentoasema (LPB)",
-    "huomiot": [
-      "C-tekstiluonnos; A rajattu lähdekooste, B/D/E/F avoinna.",
-      "Kuvat tyhjät: erillinen kuvaputki.",
-      "Kartta partial: vain kaksi omalla paikkapisteellä varmennettua historiallista kohdetta; 6–8 kohteen portti avoin.",
-      "Saatiedot null: 48/48 primääriauditointi puuttuu. Väestöluku jätetty pois."
-    ]
+  "name": "La Paz",
+  "wiki": "La Paz",
+  "ambience": "kaupunki",
+  "pallo": {
+   "lat": -16.4958,
+   "lon": -68.1333
   }
+ },
+ "artikkeli": {
+  "intro": "La Pazissa kaupunki alkaa ylätasangon reunalta ja jatkuu alas Choqueyapu-joen laaksoon. **Bolivian hallinnon paikka** levittäytyy rinteille, kun naapurikaupunki El Alto sijaitsee niiden yläpuolella Altiplanolla. Lumihuippuinen Illimani kohoaa kaupunkimaiseman takana. Sucre on silti maan perustuslain mukainen pääkaupunki, joten maan hallinto ja perustuslaillinen pääkaupunki ovat eri kaupungeissa. Espanjalainen La Paz perustettiin 1500-luvulla alueelle, joka tunnettiin aimarankielisellä nimellä Chuquiago.\n\nVanhassa keskustassa siirtomaa-ajan kirkot ja Calle Jaénin talot ovat säilyneet osana kasvavaa kaupunkia. Isoisän matkavuonna 1873 La Paz oli jo vanha kaupunki, mutta nykyinen hallinnon asema vakiintui vasta vuosisadan lopulla. Nykyään **Mi Teleféricon köysiradat** kuljettavat asukkaita kaupunginosasta toiseen ja El Altoon. Alasita-juhlassa tulevaisuuden toiveille taas annetaan pienoismallin koko: talo tai auto voidaan ostaa ensin käteen mahtuvana.",
+  "teksti": "La Pazin nimi merkitsee espanjaksi rauhaa, mutta kaupunki ei syntynyt tyhjälle paikalle. Espanjalainen perustaminen tapahtui 1500-luvulla ensin Lajassa, mistä kaupunki siirrettiin Chuquiagon laaksoon. Aimara on edelleen näkyvä osa kaupunkia: esimerkiksi köysiradan asemilla on espanjan- ja aimarankieliset nimet.\n\nChoqueyapu-joki on muovannut laakson, jonka rinteille La Paz on kasvanut. Joki kulkee nykyään suurelta osin rakennettujen alueiden alla. Sen suuntaa seurailevan pääväylän keskustajakso tunnetaan Pradona. Ylhäällä El Altossa sijaitsee myös lentoasema, joten lentomatka La Paziin alkaa naapurikaupungista.\n\nSan Franciscon kirkko ja Calle Jaénin vanhat talot tuovat keskustaan siirtomaa-ajan kerroksen. Plaza Murillon ympärillä ovat katedraali ja hallintorakennuksia. La Paz on hallinnon kotipaikka, mutta Sucren pääkaupunkiasema säilyy: Bolivian kaksi keskusta tekevät eri tehtäviä."
+ },
+ "kysymykset": [
+  {
+   "q": "Mikä on La Pazin asema Boliviassa?",
+   "options": [
+    "Hallinnon kotipaikka",
+    "Perustuslaillinen pääkaupunki",
+    "Korkeimman oikeuden kotipaikka",
+    "Entinen perustuslaillinen pääkaupunki"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Maan perustuslain mukainen pääkaupunki sijaitsee muualla.",
+   "fact": "La Pazissa on maan hallinto, mutta Sucre on perustuslain mukainen pääkaupunki.",
+   "source": "https://en.wikipedia.org/wiki/La_Paz"
+  },
+  {
+   "q": "Minkä joen laaksoon La Paz on rakentunut?",
+   "options": [
+    "Choqueyapu",
+    "Amazonas",
+    "Paraná",
+    "Orinoco"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Kaupungin pääväylä seurailee osin saman paikallisen joen suuntaa.",
+   "fact": "La Paz sijaitsee Choqueyapu-joen muovaamassa laaksossa.",
+   "source": "https://en.wikipedia.org/wiki/La_Paz"
+  },
+  {
+   "q": "Miten Mi Teleférico kuljettaa matkustajia?",
+   "options": [
+    "Köysiradan vaunuissa",
+    "Maanalaisen junan vaunuissa",
+    "Joella liikkuvissa veneissä",
+    "Rinteen portailla kulkevissa hisseissä"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Katot jäävät matkan aikana alapuolelle.",
+   "fact": "Mi Teleférico on La Pazin ja El Alton kaupunkiseudun köysirataverkosto.",
+   "source": "https://en.wikipedia.org/wiki/Mi_Telef%C3%A9rico"
+  },
+  {
+   "q": "Mikä aiheutti San Franciscon varhaisemman kirkon sortumisen?",
+   "options": [
+    "Runsas lumisade",
+    "Voimakas jokitulva",
+    "Rakennuksen tulipalo",
+    "Läheisen louhoksen räjäytys"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Tapahtumaan liittyi vuoristokaupungin sää.",
+   "fact": "Varhaisempi San Franciscon kirkko sortui 1600-luvun alussa runsaan lumisateen seurauksena.",
+   "source": "https://en.wikipedia.org/wiki/Basilica_of_San_Francisco,_La_Paz"
+  },
+  {
+   "q": "Mitä tarkoittaa La Pazin lentoaseman sijainti El Altossa?",
+   "options": [
+    "Se on naapurikaupungissa",
+    "Se on La Pazin keskustassa",
+    "Se on Sucren kaupunkialueella",
+    "Se on Choqueyapun laaksossa"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Kenttä sijaitsee Altiplanon ylätasangolla.",
+   "fact": "El Alto on La Pazin naapurikaupunki Altiplanon ylätasangolla, ja lentoasema sijaitsee siellä.",
+   "source": "https://en.wikipedia.org/wiki/La_Paz"
+  }
+ ],
+ "tiedot": [
+  "Mi Teleféricon asemilla on sekä espanjan- että aimarankieliset nimet.",
+  "La Pazin lentoasema sijaitsee El Altossa, kaupungin rinteiden yläpuolisella ylätasangolla.",
+  "Calle Jaénin soitinmuseossa on esillä Ernesto Cavourin monirunkoisia kitaroita."
+ ],
+ "valokuva": {
+  "tiedosto": "La Paz Panoramic View from Killi Killi Lookout.jpg",
+  "lyhyt": "La Paz Killi Killin näköalapaikalta.",
+  "selite": "Tiheä rakennuskanta täyttää laaksoa ja nousee rinteille; aurinko valaisee osaa panoraamasta.",
+  "lahde": "Edgar Claure, Commons (CC BY-SA 4.0)",
+  "vuosi": "2015"
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "La Paz",
+   "johdanto": "La Pazin rinteillä vanha keskusta ja kattojen yläpuolella kulkeva joukkoliikenne kohtaavat. Kaupunki avautuu sekä kävellen että vaunun ikkunasta.",
+   "kansikuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "City of La Paz, Bolivia2.jpg",
+     "lyhyt": "La Pazin korkeita taloja ja rinteiden asutusta.",
+     "selite": "Etualalla näkyy puustoa, sen takana korkeita kerrostaloja ja kauempana tiheästi rakennettuja rinteitä.",
+     "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Vista Lejana de La Paz.jpg",
+     "lyhyt": "La Pazin kaupunkialue ja Illimani hämärässä.",
+     "selite": "Rakennukset levittäytyvät laaksoon punertavan taivaan alla; lumihuippuinen Illimani kohoaa kauempana.",
+     "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kaupunki kulhon sisällä",
+     "teksti": "La Pazin keskustasta katsottuna kaupunki jatkuu ylöspäin lähes joka suunnassa. Choqueyapu-joen laakso muodostaa suuren painanteen, jonka rinteille kaupunginosat ovat kasvaneet. Naapurikaupunki El Alto levittäytyy sen yläpuolella Altiplanon ylätasangolle. Siksi La Paz ja El Alto näyttävät eri kaupunkikerroksilta: toisessa kadut kulkevat laaksossa ja rinteillä, toisessa asutus jatkuu tasangolla. Luminen Illimani kuuluu näkymään, kohoaa kaupungin taustalla.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "La Paz"
+    },
+    {
+     "otsikko": "Työmatka kattojen yläpuolella",
+     "teksti": "Mi Teleférico tarkoittaa espanjaksi minun köysirataani. La Pazissa nimi kuuluu joukkoliikenteelle: riippuvat vaunut kuljettavat asukkaita kaupunginosien välillä sekä La Pazin ja El Alton jyrkän korkeuseron yli. Linjat erotetaan väreillä, ja asemilla on sekä espanjan- että aimarankieliset nimet. Köysirata tuli käyttöön 2000-luvulla, kauan isoisän matkan jälkeen. Matkailija näkee vaunusta talojen katot ja laakson muodon, mutta samalla reitillä joku toinen on aivan tavallisella työ- tai asiointimatkallaan.",
+     "tiedosto": "Teleferico de La Paz.jpg",
+     "lyhyt": "Mi Teleféricon vaunuja La Pazin rakennusten välissä.",
+     "selite": "Köysiradan riippuvat vaunut kulkevat kerrostalojen ja alla olevan kadun yläpuolella.",
+     "lahde": "Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Mi Teleférico"
+    },
+    {
+     "otsikko": "Lumi kaatoi edellisen kirkon",
+     "teksti": "San Franciscon varhaisempi kirkko sortui 1600-luvun alussa runsaan lumisateen seurauksena. Nykyinen kirkko rakennettiin 1700-luvulla Andien barokkityyliin, ja se on omistettu Franciscus Assisilaiselle. Rakennus sijaitsee samannimisellä aukiolla La Pazin keskustassa. Isoisän matkavuonna 1873 kirkko oli jo olemassa, mutta sen torni on myöhempi, 1800-luvun lopun lisäys. Kirkon eri osat eivät siis ole samanikäisiä. Saman kompleksin luostari ja museo avaavat nykyään rakennuksen historiaa myös kirkkosalin ulkopuolelta.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Basilica of San Francisco, La Paz"
+    },
+    {
+     "otsikko": "Vanha katu, monta aikakautta",
+     "teksti": "Calle Jaén on La Pazin säilynyttä siirtomaa-ajan keskustaa. Vanhoissa taloissa toimii museoita, joten kadulla voi siirtyä rakennushistoriasta kaupungin tapoihin ja esikolumbiaanisiin metallitöihin. Soitinmuseo puolestaan esittelee Bolivian ja muiden maiden soittimia. Vanhoissa taloissa on myös paljon niitä vanhempia esineitä: esimerkiksi kultaa ja hopeaa esittelevän museon esineistö kertoo ajasta ennen espanjalaisten tuloa. Sama lyhyt katu kokoaa siten huomattavasti pidemmän ajallisen matkan kuin kävelymatka antaisi odottaa.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "La Paz"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "La Paziin saapuva laskeutuu ensin El Alton ylätasangolle. Kaupungin keskustaan jatketaan alas laaksoon. San Francisco ja Calle Jaén sopivat vanhan keskustan kävelyn kiintopisteiksi. Mi Teleférico näyttää rinteet ylhäältä ja kuljettaa myös paikallisten arkisia matkoja. Museoiden, torien ja ruokataukojen lomaan kannattaa jättää aikaa, sillä reitti sisältää korkeuseroja.",
+    "artikkeli": {
+     "nimi": "Matkailijan La Paz",
+     "taitto": "opas",
+     "teksti": "Katsele La Pazin rinteitä sekä kadulta että köysiradan vaunusta.",
+     "nosto": "El Alto on ylhäällä, La Paz laaksossa: maaston hahmottaminen auttaa valitsemaan päivän reitin.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "La Pazin lentoasema on El Altossa, kaupungin yläpuolella sijaitsevalla ylätasangolla. Keskustaan pääsee maanteitse, ja kaupunkien välillä kulkee myös Mi Teleféricon köysiratoja. La Pazin sisällä liikennöivät bussit, minibussit ja kiinteillä reiteillä kulkevat trufi-taksit. Suunnittele kävely reitin korkeuserojen mukaan: keskustan kartalla lähekkäiset kadut voivat olla jyrkässä rinteessä. Köysirata on samalla tilaisuus hahmottaa kaupungin eri osien sijaintia.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Kirkko ja vanhan keskustan kadut",
+       "teksti": "San Franciscon kirkon ympäristöstä voi jatkaa vanhaan keskustaan ja Calle Jaénille. Kirkon yhteydessä on museo, kun taas Jaénin taloissa toimivat erilliset kokoelmat käsittelevät muun muassa soittimia ja esikolumbiaanisia jalometallitöitä. Plaza Murillo kokoaa aukion ympärille katedraalin ja hallintorakennuksia. Calle Jaénin soitinmuseo ja jalometallikokoelmat ovat erillisiä käyntikohteita.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Kaupunki vaunun ikkunasta",
+       "teksti": "Mi Teleféricon linjat erotetaan väreillä, ja asemien nimet ovat espanjaksi ja aimaraksi. La Pazin ja El Alton välillä vaunuista hahmottuu erityisen hyvin laakson ja ylätasangon ero. Köysirata on asukkaiden joukkoliikennettä, joten vaunuun noustaan samalla tavoin asiointimatkalle kuin näkymiä katsomaan. Alasitan ja Gran Poderin kaltaiset juhlat tarjoavat toisen näkökulman kaupungin käyttöön: kadut ovat myös käsityön, rituaalien, tanssin ja musiikin paikkoja.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Keskustan toreilla ja pienissä lounaskeittiöissä on tarjolla kokonaisia aterioita sekä välipaloja. Almuerzo tarkoittaa lounasta; lounaspaikan päivän menu on eri asia kuin yksittäinen katukeittiön välipala. La Pazin katuruoassa on myös avokadovoileipiä, ja makea lämmin api-juoma valmistetaan maissista. Ruokatauko sopii Pradon kävelyn lomaan tai torikäynnin yhteyteen. Monet keskustan ravintolat sijaitsevat Pradon eteläpuolella Plaza Isabel la Católican ja Plaza Avaroan ympäristössä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "La Pazissa sateisempi kesä ja kuivempi talvi sijoittuvat eteläisen pallonpuoliskon vuodenaikoihin. Korkea sijainti kuuluu matkan suunnitteluun ympäri vuoden; ensipäivään sopii rauhallinen kävely keskustassa. Jos tavoite on Alasita tai Gran Poder, tarkista juuri kyseisen vuoden juhlapäivät ennen matkaa. Gran Poder liittyy kirkolliseen kalenteriin, joten ajankohta ei pysy samana päivämääränä. Museoihin ja vanhaan keskustaan voi tutustua ilman juhlaakin.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "San Francisco",
+        "tahdet": 3,
+        "selite": "Andien barokkikirkko ja sen yhteydessä toimiva museo."
+       },
+       {
+        "mita": "Calle Jaén",
+        "tahdet": 3,
+        "selite": "Vanhojen talojen kadulla toimii erillisiä museoita."
+       },
+       {
+        "mita": "Mi Teleférico",
+        "tahdet": 3,
+        "selite": "Köysirata näyttää laakson ja ylätasangon suhteen."
+       },
+       {
+        "mita": "Plaza Murillo",
+        "tahdet": 2,
+        "selite": "Vanhan keskustan aukio katedraalin ja hallinnon ympäröimänä."
+       },
+       {
+        "mita": "Soitinmuseo",
+        "tahdet": 2,
+        "selite": "Kokoelmaan kuuluu myös Ernesto Cavourin kokeilevia soittimia."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Lentoasema on El Altossa",
+        "teksti": "Saapuminen alkaa naapurikaupungista ylätasangolta."
+       },
+       {
+        "otsikko": "Reitti voi nousta jyrkästi",
+        "teksti": "Keskustan etäisyyksien lisäksi kannattaa arvioida rinteet."
+       },
+       {
+        "otsikko": "Juhlapäivät vaihtelevat",
+        "teksti": "Gran Poderin ajankohta seuraa kirkollista kalenteria."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "historia",
+   "nimi": "Käsityöt ja elävät perinteet",
+   "johdanto": "Toive, juhla ja soitinkeksintö saavat La Pazissa käsin tehdyn muodon. Kaupungin perinteillä on tekijänsä myös nykyään.",
+   "tehtava": {
+    "kysymys": "Mihin pienoisesineet liittyvät Alasita-juhlassa?",
+    "vaihtoehdot": [
+     "Tulevaisuuden toiveisiin",
+     "Perheen esi-isien muistoihin",
+     "Menneen vuoden saavutuksiin",
+     "Ammattikuntien tunnuksiin"
+    ],
+    "oikea": 0,
+    "fakta": "Alasitassa pienoismalli voi edustaa asiaa, jota sen hankkija tavoittelee omassa elämässään."
+   },
+   "nostot": [
+    {
+     "otsikko": "Toive, joka mahtuu kämmenelle",
+     "teksti": "Alasita-juhlassa La Pazin asukkaat hankkivat pienoisesineitä, jotka edustavat heidän toiveitaan. Pieni talo tai auto liittyy vaurauden aimaralaiseen jumaluuteen Ekekoon. Esineet eivät ole pelkkiä matkamuistoja: niitä siunataan perinteisissä rituaaleissa ja katolisissa toimituksissa. Tavoiteltu asia voi olla aineellinen, mutta pienoisesineen kautta toiveesta tulee myös yhteisesti jaettava. Käsityöläiset valmistavat esineitä, ja perinne siirtyy perheissä lasten kulkiessa vanhempiensa mukana. Tulevaisuus saa täällä ensin pienen, käsin tehdyn muodon.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Alasitas"
+    },
+    {
+     "otsikko": "Juhla alkaa kauan ennen kulkuetta",
+     "teksti": "Gran Poderin juhla täyttää La Pazin katuja tanssilla ja musiikilla. Pyhään Kolminaisuuteen liittyvässä juhlassa katolinen perinne kohtaa Andien kulttuuriset käytännöt. Näkyvän kulkueen takana on pitkä valmistautuminen: ryhmät valmistelevat musiikkiohjelmistoaan, ja käsityöläiset kirjovat asuja sekä valmistavat koruja. Perinnettä ylläpitävät tanssiryhmät ja niiden jäsenet, eikä kyse ole vain ulkopuolisille järjestetystä esityksestä. Juhla muuttaa kaupungin katuja yhteiseksi näyttämöksi, mutta sen tekeminen kuuluu myös arkeen kulkuepäivien välissä.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Fiesta del Gran Poder"
+    },
+    {
+     "otsikko": "Torin nimi kertoo vain osan",
+     "teksti": "Mercado de Brujas levittäytyy La Pazin keskustassa Linares-kadulle ja sen lähikaduille. Kojuilta löytyy yrttejä, rohdoksia ja aimaralaisiin rituaaleihin liittyviä aineksia. Monet myyjistä ovat aimaranaisia, joita kutsutaan chifreras-nimellä. Torilla toimii myös yatiri-rituaaliasiantuntijoita. Uskonnollisiin käytäntöihin kuuluu lahjojen osoittaminen Pachamamalle, maan jumaluudelle. Noitatori on samalla matkailijoiden käyntikohde, mutta tavaroilla on paikallisille käyttäjille oma perinteinen merkityksensä. Tori tuo nämä käytännöt keskelle nykyistä kaupunkia.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "The Witches' Market"
+    },
+    {
+     "otsikko": "Kitara, jolla on monta runkoa",
+     "teksti": "Calle Jaénin soitinmuseon perusti charangonsoittaja ja keksijä Ernesto Cavour. Kokoelmassa on ääntä tuottavia välineitä Boliviasta ja muualta, ja osaa niistä saa itse kokeilla. Cavourin omiin keksintöihin kuuluu monirunkoisia kitaroita: tuttu soitinmuoto saa rinnalleen uusia runkoja sen sijaan, että esillä olisi vain yksi tavallinen kitara. Museo kertoo näin myös kokeilemisesta, ei pelkästään vanhojen soittimien säilyttämisestä. Museossa on sekä perinteisiä soittimia että Cavourin omia keksintöjä.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "La Paz"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "La Pazin vanhan keskustan kirkko ja aukio kertovat kaupungin siirtomaa-ajan rakenteesta. Nykyinen kaupunki jatkuu niiden ympäriltä laakson rinteille.",
+  "rajat": {
+   "pohjoinen": -16.4928,
+   "etela": -16.4995,
+   "lansi": -68.1404,
+   "ita": -68.1305
+  },
+  "kohteet": [
+   {
+    "nimi": "San Franciscon basilika",
+    "lat": -16.4965,
+    "lon": -68.1373
+   },
+   {
+    "nimi": "Plaza Murillo",
+    "tyyppi": "aukio",
+    "lat": -16.4958,
+    "lon": -68.1336
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "San Franciscon basilika": {
+   "aika": "1700-luku; torni 1800-luvun lopulta",
+   "teksti": "San Franciscon basilika on Franciscus Assisilaiselle omistettu katolinen kirkko La Pazin keskustassa. Se seisoo Plaza San Franciscon laidalla ja edustaa Andien barokkia. Kirkon ja luostarin historia ulottuu kaupungin espanjalaisen perustamisen aikoihin, mutta nykyinen kirkkorakennus on 1700-luvulta. Sitä edeltänyt kirkko sortui runsaan lumisateen jälkeen 1600-luvun alussa.\n\nIsoisän matkavuonna 1873 nykyinen kirkko oli jo olemassa. Sen torni kuuluu kuitenkin 1800-luvun lopun rakennusvaiheeseen, joten nykyistä kokonaisuutta ei voi siirtää sellaisenaan tuohon vuoteen. Kirkon historia ei pääty julkisivuun: saman kompleksin luostarissa toimii museo, joka esittelee rakennuksen menneisyyttä. Aukio, kirkko ja luostari ovat eri osia samasta keskustan historiallisesta ympäristöstä.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Plaza Murillo": {
+   "aika": "Siirtomaa-ajan aukio; nykyinen nimi myöhemmältä ajalta",
+   "teksti": "Plaza Murillo sijaitsee La Pazin vanhassa keskustassa eli Casco Viejossa. Aukion ympärillä ovat katedraali sekä hallintorakennuksia, ja sen rajoina kulkevat keskustan kadut. Se muodostui osaksi espanjalaisen kaupungin ruutukaavaa. Siirtomaa-aikana aukion laidalle sijoitettiin kaupunginhallinto, kirkollisia rakennuksia ja kruunun rahasto.\n\nAukio oli olemassa isoisän matkavuonna 1873, mutta nimet ovat vaihtuneet sen historian aikana. Se tunnettiin ensin Plaza Mayorina ja myös Plaza de Armasina. Nykyinen nimi viittaa itsenäisyyshistorian Pedro Domingo Murilloon. Aukion sivuja rajaavat muun muassa Socabaya-, Ayacucho- ja Comercio-kadut. Sen paikalla kohtaavat kaupungin ruutukaava, hallintohistoria ja uskonnollinen rakennusperintö. Aukion ympäristö auttaa hahmottamaan, miten vanhan keskustan hallinnollinen ydin on säilynyt kaupungin kasvaessa.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "El Alton kansainvälinen lentoasema (LPB)",
+  "huomiot": [
+   "C-tekstiluonnos; A rajattu lähdekooste, B/D/E/F avoinna.",
+   "Kuvat tyhjät: erillinen kuvaputki.",
+   "Kartta partial: vain kaksi omalla paikkapisteellä varmennettua historiallista kohdetta; 6–8 kohteen portti avoin.",
+   "Saatiedot null: 48/48 primääriauditointi puuttuu. Väestöluku jätetty pois."
+  ]
+ }
 }

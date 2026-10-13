@@ -3,7 +3,7 @@
   "era": "e13",
   "city": "paramaribo",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+  "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
   "assets": [
     {
       "era": "e13",
@@ -25,10 +25,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-traveler-boyo-pysty-v1-7af98ab31318.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Boyo on kookosta ja maniokkia yhdistävä kakku. Havainnekuva.",
-        "lyhyt": "Boyo on kookosta ja maniokkia yhdistävä kakku. Havainnekuva."
+        "selite": "Boyo on kookosta ja maniokkia yhdistävä kakku. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -36,10 +36,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-traveler-boyo-pysty-v1-7af98ab31318.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Boyo on kookosta ja maniokkia yhdistävä kakku. Havainnekuva.",
-        "lyhyt": "Boyo on kookosta ja maniokkia yhdistävä kakku. Havainnekuva."
+        "selite": "Boyo on kookosta ja maniokkia yhdistävä kakku. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -53,10 +53,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "ddef89710432260ea593aeac6e8568cbe91899af384f3b85aae19e839559c503",
+        "semanticContextSHA256": "73d1d096aa06b5caf525d52526310b3a13e309a97e2a428c2d82229f67834817",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -199,9 +199,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -220,17 +220,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "ddef89710432260ea593aeac6e8568cbe91899af384f3b85aae19e839559c503",
+      "contextAfterSHA256": "73d1d096aa06b5caf525d52526310b3a13e309a97e2a428c2d82229f67834817",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "ddef89710432260ea593aeac6e8568cbe91899af384f3b85aae19e839559c503",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "ddef89710432260ea593aeac6e8568cbe91899af384f3b85aae19e839559c503",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "7af98ab313180abe8601baeda02a8537d8c564490afb53b5735385235747c580",
+        "sameImageExportSHA256": "05d77539792c6e81f3f640f47806c2160ba61960131836337de4faca0690e1f1",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -255,10 +276,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-o3-tuoreet-hedelmat-v1-4510a7631e76.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tuoreet hedelmät ovat torin ruokatavaroita. Havainnekuva.",
-        "lyhyt": "Tuoreet hedelmät ovat torin ruokatavaroita. Havainnekuva."
+        "selite": "Tuoreet hedelmät ovat torin ruokatavaroita. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -266,10 +287,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-o3-tuoreet-hedelmat-v1-4510a7631e76.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Tuoreet hedelmät ovat torin ruokatavaroita. Havainnekuva.",
-        "lyhyt": "Tuoreet hedelmät ovat torin ruokatavaroita. Havainnekuva."
+        "selite": "Tuoreet hedelmät ovat torin ruokatavaroita. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -283,10 +304,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "4b1e16d5a1fc5c8deaf28f6cf22d060eae97f50bd5c0e1ef6a1e6bdc8f0419be",
+        "semanticContextSHA256": "9a0d2a2c684df47ab248889a2eb43687f9b7a39e4c60b600a1f5e2e2c0e9ec44",
         "subjectTitle": "Torilta Blauwgrondiin",
         "targetState": "existing-target"
       },
@@ -423,9 +444,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -444,17 +465,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "4b1e16d5a1fc5c8deaf28f6cf22d060eae97f50bd5c0e1ef6a1e6bdc8f0419be",
+      "contextAfterSHA256": "9a0d2a2c684df47ab248889a2eb43687f9b7a39e4c60b600a1f5e2e2c0e9ec44",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "4b1e16d5a1fc5c8deaf28f6cf22d060eae97f50bd5c0e1ef6a1e6bdc8f0419be",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "4b1e16d5a1fc5c8deaf28f6cf22d060eae97f50bd5c0e1ef6a1e6bdc8f0419be",
+          "subjectTitle": "Torilta Blauwgrondiin",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "4510a7631e762760da0eda82c89c42d58e5970d067e455c0b42ab0b22671e699",
+        "sameImageExportSHA256": "57351ce5a833aef2fd61adde6a3b64cdf784e68ec99929459fafcc6b060d37fb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -479,10 +521,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-o4-paistettu-riisi-v1-e270886b6349.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Paistettua riisiä tarjotaan jaavalaisessa ruokaperinteessä. Havainnekuva.",
-        "lyhyt": "Paistettua riisiä tarjotaan jaavalaisessa ruokaperinteessä. Havainnekuva."
+        "selite": "Paistettua riisiä tarjotaan jaavalaisessa ruokaperinteessä. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -490,10 +532,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-o4-paistettu-riisi-v1-e270886b6349.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Paistettua riisiä tarjotaan jaavalaisessa ruokaperinteessä. Havainnekuva.",
-        "lyhyt": "Paistettua riisiä tarjotaan jaavalaisessa ruokaperinteessä. Havainnekuva."
+        "selite": "Paistettua riisiä tarjotaan jaavalaisessa ruokaperinteessä. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -507,10 +549,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "c1adbd23050cdbd00addbb9ecda6ef8316c25f02627e81e2bfbb3e5031e8281f",
+        "semanticContextSHA256": "5fd06aef97c68c987ea3109ef4b3a5ab2936dda8371100091b120b5e4ec42083",
         "subjectTitle": "Mitä täällä syödään",
         "targetState": "existing-target"
       },
@@ -647,9 +689,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -668,17 +710,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "c1adbd23050cdbd00addbb9ecda6ef8316c25f02627e81e2bfbb3e5031e8281f",
+      "contextAfterSHA256": "5fd06aef97c68c987ea3109ef4b3a5ab2936dda8371100091b120b5e4ec42083",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "c1adbd23050cdbd00addbb9ecda6ef8316c25f02627e81e2bfbb3e5031e8281f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "c1adbd23050cdbd00addbb9ecda6ef8316c25f02627e81e2bfbb3e5031e8281f",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "e270886b63495ff568606a0f25134755e3f802f1b0f9668a6c121a47f3035265",
+        "sameImageExportSHA256": "0a9b74867bec0afde41a055cf3712d73c048c56b79ad7fc33d008165c553d745",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -700,10 +763,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-k1-simpukankuoret-v1-cd198308fb1c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Simpukankuorien kappaleita voi kertyä maa-ainekseen. Havainnekuva.",
-        "lyhyt": "Simpukankuorien kappaleita voi kertyä maa-ainekseen. Havainnekuva."
+        "selite": "Simpukankuorien kappaleita voi kertyä maa-ainekseen. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -711,10 +774,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-k1-simpukankuoret-v1-cd198308fb1c.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Simpukankuorien kappaleita voi kertyä maa-ainekseen. Havainnekuva.",
-        "lyhyt": "Simpukankuorien kappaleita voi kertyä maa-ainekseen. Havainnekuva."
+        "selite": "Simpukankuorien kappaleita voi kertyä maa-ainekseen. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -728,10 +791,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "19344505cf60faf787dbc8448f9675863c23b039e4c592c688df61aa29bc2f45",
-        "semanticContextSHA256": "19344505cf60faf787dbc8448f9675863c23b039e4c592c688df61aa29bc2f45",
+        "targetBeforeSHA256": "15a56e4a6cf40f3d3f8c9657dae4b91985123a4341d8cabdd4066f8c77615401",
+        "semanticContextSHA256": "15a56e4a6cf40f3d3f8c9657dae4b91985123a4341d8cabdd4066f8c77615401",
         "subjectTitle": "Kadun alla on simpukoita",
         "targetState": "existing-target"
       },
@@ -870,9 +933,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -891,17 +954,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
-      "targetAfterSHA256": "19344505cf60faf787dbc8448f9675863c23b039e4c592c688df61aa29bc2f45",
-      "contextAfterSHA256": "19344505cf60faf787dbc8448f9675863c23b039e4c592c688df61aa29bc2f45",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+      "targetAfterSHA256": "15a56e4a6cf40f3d3f8c9657dae4b91985123a4341d8cabdd4066f8c77615401",
+      "contextAfterSHA256": "15a56e4a6cf40f3d3f8c9657dae4b91985123a4341d8cabdd4066f8c77615401",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "19344505cf60faf787dbc8448f9675863c23b039e4c592c688df61aa29bc2f45",
+        "contextAfterSHA256": "19344505cf60faf787dbc8448f9675863c23b039e4c592c688df61aa29bc2f45",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "19344505cf60faf787dbc8448f9675863c23b039e4c592c688df61aa29bc2f45",
+          "semanticContextSHA256": "19344505cf60faf787dbc8448f9675863c23b039e4c592c688df61aa29bc2f45",
+          "subjectTitle": "Kadun alla on simpukoita",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "cd198308fb1c254164008739269f36f74ba834d7ee36beded6c30dafe01c901d",
+        "sameImageExportSHA256": "519bf97ead5163dea64581dd73c7e17c6cb5df97a3738417ffe995062828284d",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -923,10 +1007,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-k3-puumateriaali-v1-8bc9dd599be3.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Puuta voidaan käyttää rakennusten materiaalina. Havainnekuva.",
-        "lyhyt": "Puuta voidaan käyttää rakennusten materiaalina. Havainnekuva."
+        "selite": "Puuta voidaan käyttää rakennusten materiaalina. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -934,10 +1018,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-k3-puumateriaali-v1-8bc9dd599be3.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Puuta voidaan käyttää rakennusten materiaalina. Havainnekuva.",
-        "lyhyt": "Puuta voidaan käyttää rakennusten materiaalina. Havainnekuva."
+        "selite": "Puuta voidaan käyttää rakennusten materiaalina. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -951,7 +1035,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2c639d7727cc7f4ce384caed616098b3c82fd2a6791d330ff5226b84839dcdd9",
         "semanticContextSHA256": "2c639d7727cc7f4ce384caed616098b3c82fd2a6791d330ff5226b84839dcdd9",
@@ -1093,9 +1177,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1114,17 +1198,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "targetAfterSHA256": "2c639d7727cc7f4ce384caed616098b3c82fd2a6791d330ff5226b84839dcdd9",
       "contextAfterSHA256": "2c639d7727cc7f4ce384caed616098b3c82fd2a6791d330ff5226b84839dcdd9",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "2c639d7727cc7f4ce384caed616098b3c82fd2a6791d330ff5226b84839dcdd9",
+        "contextAfterSHA256": "2c639d7727cc7f4ce384caed616098b3c82fd2a6791d330ff5226b84839dcdd9",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "2c639d7727cc7f4ce384caed616098b3c82fd2a6791d330ff5226b84839dcdd9",
+          "semanticContextSHA256": "2c639d7727cc7f4ce384caed616098b3c82fd2a6791d330ff5226b84839dcdd9",
+          "subjectTitle": "Hollantilainen muoto, paikallinen puu",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "8bc9dd599be3f5e1c96215e1736c0a3b5822b2d57b04ae3a1051cce519a6be33",
+        "sameImageExportSHA256": "27bcb02d60910f688ab4024d5a9ecb54776c173ab97c0f24cc116971eaefddb7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -1146,10 +1251,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-k4-keittiotarvikkeet-v1-313aee4c7ea4.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Torilla myydään myös tavallisia keittiötarvikkeita. Havainnekuva.",
-        "lyhyt": "Torilla myydään myös tavallisia keittiötarvikkeita. Havainnekuva."
+        "selite": "Torilla myydään myös tavallisia keittiötarvikkeita. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1157,10 +1262,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-k4-keittiotarvikkeet-v1-313aee4c7ea4.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Torilla myydään myös tavallisia keittiötarvikkeita. Havainnekuva.",
-        "lyhyt": "Torilla myydään myös tavallisia keittiötarvikkeita. Havainnekuva."
+        "selite": "Torilla myydään myös tavallisia keittiötarvikkeita. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1174,10 +1279,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "12478cc3634344a6e32436641ff3fbc1a337edb9eaf30585174c194b217edff6",
-        "semanticContextSHA256": "12478cc3634344a6e32436641ff3fbc1a337edb9eaf30585174c194b217edff6",
+        "targetBeforeSHA256": "95c889807c0960b05a25840c17b71cff03b06cd9d9466c8713493445c2b299ed",
+        "semanticContextSHA256": "95c889807c0960b05a25840c17b71cff03b06cd9d9466c8713493445c2b299ed",
         "subjectTitle": "Ostokset vaihtavat kerrosta",
         "targetState": "existing-target"
       },
@@ -1314,9 +1419,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1335,17 +1440,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
-      "targetAfterSHA256": "12478cc3634344a6e32436641ff3fbc1a337edb9eaf30585174c194b217edff6",
-      "contextAfterSHA256": "12478cc3634344a6e32436641ff3fbc1a337edb9eaf30585174c194b217edff6",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+      "targetAfterSHA256": "95c889807c0960b05a25840c17b71cff03b06cd9d9466c8713493445c2b299ed",
+      "contextAfterSHA256": "95c889807c0960b05a25840c17b71cff03b06cd9d9466c8713493445c2b299ed",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "12478cc3634344a6e32436641ff3fbc1a337edb9eaf30585174c194b217edff6",
+        "contextAfterSHA256": "12478cc3634344a6e32436641ff3fbc1a337edb9eaf30585174c194b217edff6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "12478cc3634344a6e32436641ff3fbc1a337edb9eaf30585174c194b217edff6",
+          "semanticContextSHA256": "12478cc3634344a6e32436641ff3fbc1a337edb9eaf30585174c194b217edff6",
+          "subjectTitle": "Ostokset vaihtavat kerrosta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "313aee4c7ea439228b0f487b4186643f2d64ed054b0047afd6353d65c2e16df7",
+        "sameImageExportSHA256": "603869671ec037db156503cbb4cfb9b973f61ad422d7a4b87f198ba129a704e7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -1367,10 +1493,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-l1-pom-v1-7a5e55cb247e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Surinamelainen pom on kanaa ja pomtajer-raastetta yhdistävä uuniruoka. Havainnekuva.",
-        "lyhyt": "Surinamelainen pom on kanaa ja pomtajer-raastetta yhdistävä uuniruoka. Havainnekuva."
+        "selite": "Surinamelainen pom on kanaa ja pomtajer-raastetta yhdistävä uuniruoka. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1378,10 +1504,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-l1-pom-v1-7a5e55cb247e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Surinamelainen pom on kanaa ja pomtajer-raastetta yhdistävä uuniruoka. Havainnekuva.",
-        "lyhyt": "Surinamelainen pom on kanaa ja pomtajer-raastetta yhdistävä uuniruoka. Havainnekuva."
+        "selite": "Surinamelainen pom on kanaa ja pomtajer-raastetta yhdistävä uuniruoka. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1395,7 +1521,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
         "targetBeforeSHA256": "2a392bec57dd9077d9b4607fd66cb7b57f32dab10cce1e23d637cce69d5eb414",
         "semanticContextSHA256": "2a392bec57dd9077d9b4607fd66cb7b57f32dab10cce1e23d637cce69d5eb414",
@@ -1537,9 +1663,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1558,17 +1684,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "targetAfterSHA256": "2a392bec57dd9077d9b4607fd66cb7b57f32dab10cce1e23d637cce69d5eb414",
       "contextAfterSHA256": "2a392bec57dd9077d9b4607fd66cb7b57f32dab10cce1e23d637cce69d5eb414",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "2a392bec57dd9077d9b4607fd66cb7b57f32dab10cce1e23d637cce69d5eb414",
+        "contextAfterSHA256": "2a392bec57dd9077d9b4607fd66cb7b57f32dab10cce1e23d637cce69d5eb414",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "2a392bec57dd9077d9b4607fd66cb7b57f32dab10cce1e23d637cce69d5eb414",
+          "semanticContextSHA256": "2a392bec57dd9077d9b4607fd66cb7b57f32dab10cce1e23d637cce69d5eb414",
+          "subjectTitle": "Uunivuoassa on maavarsi",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "7a5e55cb247ee2aa6f61e97efe8bd06f2e750c8e6bba9b030806f9826ab7a6b0",
+        "sameImageExportSHA256": "71a9c98bc18e2e7e5ecbba816b6133b60a44d0a7c98d938bed8d08125076fac2",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -1590,10 +1737,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-l2-rotiateria-v1-99d9ae5a6554.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Rotiateria voi yhdistää leivän currykanan, perunan ja vihannesten kanssa. Havainnekuva.",
-        "lyhyt": "Rotiateria voi yhdistää leivän currykanan, perunan ja vihannesten kanssa. Havainnekuva."
+        "selite": "Rotiateria voi yhdistää leivän currykanan, perunan ja vihannesten kanssa. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1601,10 +1748,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-l2-rotiateria-v1-99d9ae5a6554.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Rotiateria voi yhdistää leivän currykanan, perunan ja vihannesten kanssa. Havainnekuva.",
-        "lyhyt": "Rotiateria voi yhdistää leivän currykanan, perunan ja vihannesten kanssa. Havainnekuva."
+        "selite": "Rotiateria voi yhdistää leivän currykanan, perunan ja vihannesten kanssa. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1618,10 +1765,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "3d459ef56bca8943faef91c74ba28adb18743c3405e4a7573b05bcd210731416",
-        "semanticContextSHA256": "3d459ef56bca8943faef91c74ba28adb18743c3405e4a7573b05bcd210731416",
+        "targetBeforeSHA256": "24d55355263daa75120184fcbe331de37aa1e282bfb088b37cc4f8b8e76377bd",
+        "semanticContextSHA256": "24d55355263daa75120184fcbe331de37aa1e282bfb088b37cc4f8b8e76377bd",
         "subjectTitle": "Roti kokoaa juhlaväkeä",
         "targetState": "existing-target"
       },
@@ -1760,9 +1907,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1781,17 +1928,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
-      "targetAfterSHA256": "3d459ef56bca8943faef91c74ba28adb18743c3405e4a7573b05bcd210731416",
-      "contextAfterSHA256": "3d459ef56bca8943faef91c74ba28adb18743c3405e4a7573b05bcd210731416",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+      "targetAfterSHA256": "24d55355263daa75120184fcbe331de37aa1e282bfb088b37cc4f8b8e76377bd",
+      "contextAfterSHA256": "24d55355263daa75120184fcbe331de37aa1e282bfb088b37cc4f8b8e76377bd",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "3d459ef56bca8943faef91c74ba28adb18743c3405e4a7573b05bcd210731416",
+        "contextAfterSHA256": "3d459ef56bca8943faef91c74ba28adb18743c3405e4a7573b05bcd210731416",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "3d459ef56bca8943faef91c74ba28adb18743c3405e4a7573b05bcd210731416",
+          "semanticContextSHA256": "3d459ef56bca8943faef91c74ba28adb18743c3405e4a7573b05bcd210731416",
+          "subjectTitle": "Roti kokoaa juhlaväkeä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "99d9ae5a6554e6e95450d84547b0cfd0f14c54a6f3efd8c9435ab1b74ec6939e",
+        "sameImageExportSHA256": "5baa9fa9d2d6701af12f889b18cf576ee5f1aebe1b0c1b6799f7834571c80fab",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -1813,10 +1981,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-l3-paistetut-nuudelit-v1-e2592effec7f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Paistetut nuudelit kuuluvat jaavalaiseen ruokaperinteeseen. Havainnekuva.",
-        "lyhyt": "Paistetut nuudelit kuuluvat jaavalaiseen ruokaperinteeseen. Havainnekuva."
+        "selite": "Paistetut nuudelit kuuluvat jaavalaiseen ruokaperinteeseen. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1824,10 +1992,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-l3-paistetut-nuudelit-v1-e2592effec7f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Paistetut nuudelit kuuluvat jaavalaiseen ruokaperinteeseen. Havainnekuva.",
-        "lyhyt": "Paistetut nuudelit kuuluvat jaavalaiseen ruokaperinteeseen. Havainnekuva."
+        "selite": "Paistetut nuudelit kuuluvat jaavalaiseen ruokaperinteeseen. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1841,7 +2009,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
         "targetBeforeSHA256": "aaf4f2a14824d7fc103e07ee2ee05548db880e455e6e69187a55ee959f052436",
         "semanticContextSHA256": "aaf4f2a14824d7fc103e07ee2ee05548db880e455e6e69187a55ee959f052436",
@@ -1983,9 +2151,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2004,17 +2172,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "targetAfterSHA256": "aaf4f2a14824d7fc103e07ee2ee05548db880e455e6e69187a55ee959f052436",
       "contextAfterSHA256": "aaf4f2a14824d7fc103e07ee2ee05548db880e455e6e69187a55ee959f052436",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "aaf4f2a14824d7fc103e07ee2ee05548db880e455e6e69187a55ee959f052436",
+        "contextAfterSHA256": "aaf4f2a14824d7fc103e07ee2ee05548db880e455e6e69187a55ee959f052436",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "aaf4f2a14824d7fc103e07ee2ee05548db880e455e6e69187a55ee959f052436",
+          "semanticContextSHA256": "aaf4f2a14824d7fc103e07ee2ee05548db880e455e6e69187a55ee959f052436",
+          "subjectTitle": "Warung on kaupunginosan ruokapaikka",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "e2592effec7f35d5e12c35b039628501f38b1d7016b0dd0e52bfd0ac56145174",
+        "sameImageExportSHA256": "6f8cbde83419272393843aa835a14b37f20880d3e508b7e1467c4848765656b0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -2036,10 +2225,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-l4-boyo-v1-2ef038200c88.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Boyo-kakkuun käytetään kookosta ja maniokkia. Havainnekuva.",
-        "lyhyt": "Boyo-kakkuun käytetään kookosta ja maniokkia. Havainnekuva."
+        "selite": "Boyo-kakkuun käytetään kookosta ja maniokkia. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2047,10 +2236,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-l4-boyo-v1-2ef038200c88.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Boyo-kakkuun käytetään kookosta ja maniokkia. Havainnekuva.",
-        "lyhyt": "Boyo-kakkuun käytetään kookosta ja maniokkia. Havainnekuva."
+        "selite": "Boyo-kakkuun käytetään kookosta ja maniokkia. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2064,10 +2253,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "cca4d9ca979bef2c2b5147854d0a5ff9007525e25a1eb86f8a0f8b64d3bc4d8e",
-        "semanticContextSHA256": "cca4d9ca979bef2c2b5147854d0a5ff9007525e25a1eb86f8a0f8b64d3bc4d8e",
+        "targetBeforeSHA256": "fb37f521fa5fa3e79c304c5a01b0e95cae16b73032171888be74f0ab125f9cca",
+        "semanticContextSHA256": "fb37f521fa5fa3e79c304c5a01b0e95cae16b73032171888be74f0ab125f9cca",
         "subjectTitle": "Maniokki päätyy myös kakkuun",
         "targetState": "existing-target"
       },
@@ -2206,9 +2395,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2227,17 +2416,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
-      "targetAfterSHA256": "cca4d9ca979bef2c2b5147854d0a5ff9007525e25a1eb86f8a0f8b64d3bc4d8e",
-      "contextAfterSHA256": "cca4d9ca979bef2c2b5147854d0a5ff9007525e25a1eb86f8a0f8b64d3bc4d8e",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+      "targetAfterSHA256": "fb37f521fa5fa3e79c304c5a01b0e95cae16b73032171888be74f0ab125f9cca",
+      "contextAfterSHA256": "fb37f521fa5fa3e79c304c5a01b0e95cae16b73032171888be74f0ab125f9cca",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "cca4d9ca979bef2c2b5147854d0a5ff9007525e25a1eb86f8a0f8b64d3bc4d8e",
+        "contextAfterSHA256": "cca4d9ca979bef2c2b5147854d0a5ff9007525e25a1eb86f8a0f8b64d3bc4d8e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "cca4d9ca979bef2c2b5147854d0a5ff9007525e25a1eb86f8a0f8b64d3bc4d8e",
+          "semanticContextSHA256": "cca4d9ca979bef2c2b5147854d0a5ff9007525e25a1eb86f8a0f8b64d3bc4d8e",
+          "subjectTitle": "Maniokki päätyy myös kakkuun",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "2ef038200c88f9ddf6e654753991446e5fe61e34227385617fec87bf7b5781f4",
+        "sameImageExportSHA256": "024fc583a65f70acf56047021cd7955bd3959299b1d3e415c7d1911a378f356f",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -2259,10 +2469,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-n2-palmut-v1-fbb9192ae09b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Palmujen yleishavainnollistus. Havainnekuva.",
-        "lyhyt": "Palmujen yleishavainnollistus. Havainnekuva."
+        "selite": "Palmujen yleishavainnollistus. Havainnekuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -2270,10 +2480,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-n2-palmut-v1-fbb9192ae09b.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Palmujen yleishavainnollistus. Havainnekuva.",
-        "lyhyt": "Palmujen yleishavainnollistus. Havainnekuva."
+        "selite": "Palmujen yleishavainnollistus. Havainnekuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -2287,10 +2497,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "f8427aa51992cdebe3f9fcb9d8f296600b80b25c2972580db8ce03e0549b1982",
+        "semanticContextSHA256": "217b4e8cdb9327f779fdb4a12987b46f1f3d2168dcbf7d32268a3cc1d900c88e",
         "subjectTitle": "Palmupuisto",
         "targetState": "existing-target"
       },
@@ -2431,9 +2641,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2452,17 +2662,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "f8427aa51992cdebe3f9fcb9d8f296600b80b25c2972580db8ce03e0549b1982",
+      "contextAfterSHA256": "217b4e8cdb9327f779fdb4a12987b46f1f3d2168dcbf7d32268a3cc1d900c88e",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "f8427aa51992cdebe3f9fcb9d8f296600b80b25c2972580db8ce03e0549b1982",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "f8427aa51992cdebe3f9fcb9d8f296600b80b25c2972580db8ce03e0549b1982",
+          "subjectTitle": "Palmupuisto",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "fbb9192ae09b45c2a20d7bb11996f279a53387042aff6d1760df9279f4c237f8",
+        "sameImageExportSHA256": "0cb9e8b78ab0a1f9876f71364c027c86d3f408df0a2051d8cc6d307183c1d76c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -2481,23 +2712,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/photo-db713574036433a12c06.jpg",
         "suora": true,
         "lahde": "NullAspect, Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.",
-        "lyhyt": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.",
+        "selite": "Paramaribon vuoden 2025 ilmakuvassa leveä tie ja liikenneympyrä kulkevat matalan asutuksen lomassa.",
+        "lyhyt": "Abrabrokin asuinalue ja ’t Hogerhuysstraat ilmasta.",
         "tiedosto": "Luchtfoto van ’t Hogerhuysstraat Paramaribo Suriname.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NullAspect, Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.",
-        "lyhyt": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.",
+        "selite": "Paramaribon vuoden 2025 ilmakuvassa leveä tie ja liikenneympyrä kulkevat matalan asutuksen lomassa.",
+        "lyhyt": "Abrabrokin asuinalue ja ’t Hogerhuysstraat ilmasta.",
         "tiedosto": "Luchtfoto van ’t Hogerhuysstraat Paramaribo Suriname.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/photo-db713574036433a12c06.jpg",
         "suora": true,
         "lahde": "NullAspect, Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.",
-        "lyhyt": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.",
+        "selite": "Paramaribon vuoden 2025 ilmakuvassa leveä tie ja liikenneympyrä kulkevat matalan asutuksen lomassa.",
+        "lyhyt": "Abrabrokin asuinalue ja ’t Hogerhuysstraat ilmasta.",
         "tiedosto": "Luchtfoto van ’t Hogerhuysstraat Paramaribo Suriname.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2512,10 +2743,10 @@
         2936
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "edbb9297b4757c864d8c6fd58c29871dbcae54a275aa2c648a75c430db273566",
-        "semanticContextSHA256": "edbb9297b4757c864d8c6fd58c29871dbcae54a275aa2c648a75c430db273566",
+        "targetBeforeSHA256": "d9f5a899186e93212c9e290ce5c212f19fdfa4f574e0bccf1a02ee528e35a026",
+        "semanticContextSHA256": "d9f5a899186e93212c9e290ce5c212f19fdfa4f574e0bccf1a02ee528e35a026",
         "subjectTitle": "paramaribo — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2629,9 +2860,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Luchtfoto van ’t Hogerhuysstraat Paramaribo Suriname.jpg",
-        "lahde": "NullAspect, Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.",
-        "lyhyt": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus."
+        "lyhyt": "Abrabrokin asuinalue ja ’t Hogerhuysstraat ilmasta.",
+        "selite": "Paramaribon vuoden 2025 ilmakuvassa leveä tie ja liikenneympyrä kulkevat matalan asutuksen lomassa.",
+        "lahde": "NullAspect, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2650,23 +2881,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NullAspect, Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.",
-        "lyhyt": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.",
+        "selite": "Paramaribon vuoden 2025 ilmakuvassa leveä tie ja liikenneympyrä kulkevat matalan asutuksen lomassa.",
+        "lyhyt": "Abrabrokin asuinalue ja ’t Hogerhuysstraat ilmasta.",
         "tiedosto": "Luchtfoto van ’t Hogerhuysstraat Paramaribo Suriname.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
-      "targetAfterSHA256": "edbb9297b4757c864d8c6fd58c29871dbcae54a275aa2c648a75c430db273566",
-      "contextAfterSHA256": "edbb9297b4757c864d8c6fd58c29871dbcae54a275aa2c648a75c430db273566",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+      "targetAfterSHA256": "d9f5a899186e93212c9e290ce5c212f19fdfa4f574e0bccf1a02ee528e35a026",
+      "contextAfterSHA256": "d9f5a899186e93212c9e290ce5c212f19fdfa4f574e0bccf1a02ee528e35a026",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "edbb9297b4757c864d8c6fd58c29871dbcae54a275aa2c648a75c430db273566",
+        "contextAfterSHA256": "edbb9297b4757c864d8c6fd58c29871dbcae54a275aa2c648a75c430db273566",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "edbb9297b4757c864d8c6fd58c29871dbcae54a275aa2c648a75c430db273566",
+          "semanticContextSHA256": "edbb9297b4757c864d8c6fd58c29871dbcae54a275aa2c648a75c430db273566",
+          "subjectTitle": "paramaribo — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "db713574036433a12c063be4cdd55f5898526a6a43ace5cd708c871017a1c66b",
+        "sameImageExportSHA256": "db713574036433a12c063be4cdd55f5898526a6a43ace5cd708c871017a1c66b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -2688,23 +2940,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/c1-00ebaf15eda6080ac5cd.jpg",
         "suora": true,
         "lahde": "Rafaeljantz, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan.",
-        "lyhyt": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan.",
+        "selite": "Joen takana näkyy rivi historiallisia taloja, niiden korkeita kattoja ja puustoa.",
+        "lyhyt": "Waterkantin rakennuksia Surinamejoen rannalla.",
         "tiedosto": "Waterkant Paramaribo with the Unesco Heritage Buildings.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Rafaeljantz, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan.",
-        "lyhyt": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan.",
+        "selite": "Joen takana näkyy rivi historiallisia taloja, niiden korkeita kattoja ja puustoa.",
+        "lyhyt": "Waterkantin rakennuksia Surinamejoen rannalla.",
         "tiedosto": "Waterkant Paramaribo with the Unesco Heritage Buildings.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/c1-00ebaf15eda6080ac5cd.jpg",
         "suora": true,
         "lahde": "Rafaeljantz, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan.",
-        "lyhyt": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan.",
+        "selite": "Joen takana näkyy rivi historiallisia taloja, niiden korkeita kattoja ja puustoa.",
+        "lyhyt": "Waterkantin rakennuksia Surinamejoen rannalla.",
         "tiedosto": "Waterkant Paramaribo with the Unesco Heritage Buildings.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2719,10 +2971,10 @@
         1570
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6de00e51465394b6485efe7d049c02923cabad9136ce1b3d6220f08aaf2cd6c1",
-        "semanticContextSHA256": "6de00e51465394b6485efe7d049c02923cabad9136ce1b3d6220f08aaf2cd6c1",
+        "targetBeforeSHA256": "8645782b61f8f6d01a3974c700a8d69c642050d5d167cbc4a1fd585c92d8dafb",
+        "semanticContextSHA256": "8645782b61f8f6d01a3974c700a8d69c642050d5d167cbc4a1fd585c92d8dafb",
         "subjectTitle": "Paramaribo",
         "targetState": "existing-target"
       },
@@ -2836,9 +3088,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Waterkant Paramaribo with the Unesco Heritage Buildings.jpg",
-        "lahde": "Rafaeljantz, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan.",
-        "lyhyt": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan."
+        "lyhyt": "Waterkantin rakennuksia Surinamejoen rannalla.",
+        "selite": "Joen takana näkyy rivi historiallisia taloja, niiden korkeita kattoja ja puustoa.",
+        "lahde": "Rafaeljantz, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2857,23 +3109,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Rafaeljantz, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan.",
-        "lyhyt": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan.",
+        "selite": "Joen takana näkyy rivi historiallisia taloja, niiden korkeita kattoja ja puustoa.",
+        "lyhyt": "Waterkantin rakennuksia Surinamejoen rannalla.",
         "tiedosto": "Waterkant Paramaribo with the Unesco Heritage Buildings.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
-      "targetAfterSHA256": "6de00e51465394b6485efe7d049c02923cabad9136ce1b3d6220f08aaf2cd6c1",
-      "contextAfterSHA256": "6de00e51465394b6485efe7d049c02923cabad9136ce1b3d6220f08aaf2cd6c1",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+      "targetAfterSHA256": "8645782b61f8f6d01a3974c700a8d69c642050d5d167cbc4a1fd585c92d8dafb",
+      "contextAfterSHA256": "8645782b61f8f6d01a3974c700a8d69c642050d5d167cbc4a1fd585c92d8dafb",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "6de00e51465394b6485efe7d049c02923cabad9136ce1b3d6220f08aaf2cd6c1",
+        "contextAfterSHA256": "6de00e51465394b6485efe7d049c02923cabad9136ce1b3d6220f08aaf2cd6c1",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "6de00e51465394b6485efe7d049c02923cabad9136ce1b3d6220f08aaf2cd6c1",
+          "semanticContextSHA256": "6de00e51465394b6485efe7d049c02923cabad9136ce1b3d6220f08aaf2cd6c1",
+          "subjectTitle": "Paramaribo",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "00ebaf15eda6080ac5cdfc55c4e6354623b2ca4873a27bb235bb49c0cf513f78",
+        "sameImageExportSHA256": "00ebaf15eda6080ac5cdfc55c4e6354623b2ca4873a27bb235bb49c0cf513f78",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -2895,23 +3168,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/c2-c8a86f2ebaf96290bfce.jpg",
         "suora": true,
         "lahde": "Willem van de Poll, Wikimedia Commons (CC0)",
-        "selite": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955.",
-        "lyhyt": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955.",
+        "selite": "Vanhassa valokuvassa satamalaiturin alus ja joenrannan rakennukset näkyvät ms Nestorilta katsottuna.",
+        "lyhyt": "Paramaribon rantaa Surinamejoelta vuonna 1955.",
         "tiedosto": "Paramaribo aan de Surinamerivier, gezien vanaf de ms Nestor, Bestanddeelnr 252-2143.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Willem van de Poll, Wikimedia Commons (CC0)",
-        "selite": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955.",
-        "lyhyt": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955.",
+        "selite": "Vanhassa valokuvassa satamalaiturin alus ja joenrannan rakennukset näkyvät ms Nestorilta katsottuna.",
+        "lyhyt": "Paramaribon rantaa Surinamejoelta vuonna 1955.",
         "tiedosto": "Paramaribo aan de Surinamerivier, gezien vanaf de ms Nestor, Bestanddeelnr 252-2143.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/c2-c8a86f2ebaf96290bfce.jpg",
         "suora": true,
         "lahde": "Willem van de Poll, Wikimedia Commons (CC0)",
-        "selite": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955.",
-        "lyhyt": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955.",
+        "selite": "Vanhassa valokuvassa satamalaiturin alus ja joenrannan rakennukset näkyvät ms Nestorilta katsottuna.",
+        "lyhyt": "Paramaribon rantaa Surinamejoelta vuonna 1955.",
         "tiedosto": "Paramaribo aan de Surinamerivier, gezien vanaf de ms Nestor, Bestanddeelnr 252-2143.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2926,10 +3199,10 @@
         2575
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "8247e4fd0f669dfe65f10280c1ecee82c6231a8bd9219befa311e2674bfe4f74",
-        "semanticContextSHA256": "8247e4fd0f669dfe65f10280c1ecee82c6231a8bd9219befa311e2674bfe4f74",
+        "targetBeforeSHA256": "c8e9d3c04b7d3ab516f82d281a1c9eb97b71fa4322d78e25670d4fd943b212a2",
+        "semanticContextSHA256": "c8e9d3c04b7d3ab516f82d281a1c9eb97b71fa4322d78e25670d4fd943b212a2",
         "subjectTitle": "Paramaribo",
         "targetState": "existing-target"
       },
@@ -3049,9 +3322,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Paramaribo aan de Surinamerivier, gezien vanaf de ms Nestor, Bestanddeelnr 252-2143.jpg",
-        "lahde": "Willem van de Poll, Wikimedia Commons (CC0)",
-        "selite": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955.",
-        "lyhyt": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955."
+        "lyhyt": "Paramaribon rantaa Surinamejoelta vuonna 1955.",
+        "selite": "Vanhassa valokuvassa satamalaiturin alus ja joenrannan rakennukset näkyvät ms Nestorilta katsottuna.",
+        "lahde": "Willem van de Poll, Wikimedia Commons (CC0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3070,23 +3343,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Willem van de Poll, Wikimedia Commons (CC0)",
-        "selite": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955.",
-        "lyhyt": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955.",
+        "selite": "Vanhassa valokuvassa satamalaiturin alus ja joenrannan rakennukset näkyvät ms Nestorilta katsottuna.",
+        "lyhyt": "Paramaribon rantaa Surinamejoelta vuonna 1955.",
         "tiedosto": "Paramaribo aan de Surinamerivier, gezien vanaf de ms Nestor, Bestanddeelnr 252-2143.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
-      "targetAfterSHA256": "8247e4fd0f669dfe65f10280c1ecee82c6231a8bd9219befa311e2674bfe4f74",
-      "contextAfterSHA256": "8247e4fd0f669dfe65f10280c1ecee82c6231a8bd9219befa311e2674bfe4f74",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+      "targetAfterSHA256": "c8e9d3c04b7d3ab516f82d281a1c9eb97b71fa4322d78e25670d4fd943b212a2",
+      "contextAfterSHA256": "c8e9d3c04b7d3ab516f82d281a1c9eb97b71fa4322d78e25670d4fd943b212a2",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "8247e4fd0f669dfe65f10280c1ecee82c6231a8bd9219befa311e2674bfe4f74",
+        "contextAfterSHA256": "8247e4fd0f669dfe65f10280c1ecee82c6231a8bd9219befa311e2674bfe4f74",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "8247e4fd0f669dfe65f10280c1ecee82c6231a8bd9219befa311e2674bfe4f74",
+          "semanticContextSHA256": "8247e4fd0f669dfe65f10280c1ecee82c6231a8bd9219befa311e2674bfe4f74",
+          "subjectTitle": "Paramaribo",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "c8a86f2ebaf96290bfceb8fa5649741a86a7517458d29b86711f83b1f2826885",
+        "sameImageExportSHA256": "c8a86f2ebaf96290bfceb8fa5649741a86a7517458d29b86711f83b1f2826885",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -3108,23 +3402,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/c3-c51944a2ace800be9e70.jpg",
         "suora": true,
         "lahde": "Loek Tangel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribon laaja ilmakuva syyskuulta 1997.",
-        "lyhyt": "Paramaribon laaja ilmakuva syyskuulta 1997.",
+        "selite": "Laajassa ilmakuvassa katujen ja matalien talojen lomassa erottuu suuri hautausmaa.",
+        "lyhyt": "Paramaribon asutusta ja hautausmaa ilmasta.",
         "tiedosto": "Overzicht van uit de lucht van Paramaribo - Paramaribo - 20417679 - RCE.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Loek Tangel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribon laaja ilmakuva syyskuulta 1997.",
-        "lyhyt": "Paramaribon laaja ilmakuva syyskuulta 1997.",
+        "selite": "Laajassa ilmakuvassa katujen ja matalien talojen lomassa erottuu suuri hautausmaa.",
+        "lyhyt": "Paramaribon asutusta ja hautausmaa ilmasta.",
         "tiedosto": "Overzicht van uit de lucht van Paramaribo - Paramaribo - 20417679 - RCE.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/c3-c51944a2ace800be9e70.jpg",
         "suora": true,
         "lahde": "Loek Tangel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribon laaja ilmakuva syyskuulta 1997.",
-        "lyhyt": "Paramaribon laaja ilmakuva syyskuulta 1997.",
+        "selite": "Laajassa ilmakuvassa katujen ja matalien talojen lomassa erottuu suuri hautausmaa.",
+        "lyhyt": "Paramaribon asutusta ja hautausmaa ilmasta.",
         "tiedosto": "Overzicht van uit de lucht van Paramaribo - Paramaribo - 20417679 - RCE.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3139,10 +3433,10 @@
         2264
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "26ca46f56d1d9eeb03191b070eec708ee8f1c9ec7d0370676bac451e784e97a0",
-        "semanticContextSHA256": "26ca46f56d1d9eeb03191b070eec708ee8f1c9ec7d0370676bac451e784e97a0",
+        "targetBeforeSHA256": "e50abe3889c9923c10c046cb8de7548e54cbf4b5445e75fe31c84ede4df9406b",
+        "semanticContextSHA256": "e50abe3889c9923c10c046cb8de7548e54cbf4b5445e75fe31c84ede4df9406b",
         "subjectTitle": "Paramaribo",
         "targetState": "existing-target"
       },
@@ -3264,9 +3558,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Overzicht van uit de lucht van Paramaribo - Paramaribo - 20417679 - RCE.jpg",
-        "lahde": "Loek Tangel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribon laaja ilmakuva syyskuulta 1997.",
-        "lyhyt": "Paramaribon laaja ilmakuva syyskuulta 1997."
+        "lyhyt": "Paramaribon asutusta ja hautausmaa ilmasta.",
+        "selite": "Laajassa ilmakuvassa katujen ja matalien talojen lomassa erottuu suuri hautausmaa.",
+        "lahde": "Loek Tangel, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3285,23 +3579,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Loek Tangel, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribon laaja ilmakuva syyskuulta 1997.",
-        "lyhyt": "Paramaribon laaja ilmakuva syyskuulta 1997.",
+        "selite": "Laajassa ilmakuvassa katujen ja matalien talojen lomassa erottuu suuri hautausmaa.",
+        "lyhyt": "Paramaribon asutusta ja hautausmaa ilmasta.",
         "tiedosto": "Overzicht van uit de lucht van Paramaribo - Paramaribo - 20417679 - RCE.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
-      "targetAfterSHA256": "26ca46f56d1d9eeb03191b070eec708ee8f1c9ec7d0370676bac451e784e97a0",
-      "contextAfterSHA256": "26ca46f56d1d9eeb03191b070eec708ee8f1c9ec7d0370676bac451e784e97a0",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+      "targetAfterSHA256": "e50abe3889c9923c10c046cb8de7548e54cbf4b5445e75fe31c84ede4df9406b",
+      "contextAfterSHA256": "e50abe3889c9923c10c046cb8de7548e54cbf4b5445e75fe31c84ede4df9406b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "26ca46f56d1d9eeb03191b070eec708ee8f1c9ec7d0370676bac451e784e97a0",
+        "contextAfterSHA256": "26ca46f56d1d9eeb03191b070eec708ee8f1c9ec7d0370676bac451e784e97a0",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "26ca46f56d1d9eeb03191b070eec708ee8f1c9ec7d0370676bac451e784e97a0",
+          "semanticContextSHA256": "26ca46f56d1d9eeb03191b070eec708ee8f1c9ec7d0370676bac451e784e97a0",
+          "subjectTitle": "Paramaribo",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "c51944a2ace800be9e70b5bb8676dc0343ac7281d817563cd64ece34982abf7b",
+        "sameImageExportSHA256": "c51944a2ace800be9e70b5bb8676dc0343ac7281d817563cd64ece34982abf7b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -3323,23 +3638,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/k2-c57919ca412d5bbef098.jpg",
         "suora": true,
         "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribon aluetta ilmasta 11.7.2018.",
-        "lyhyt": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "selite": "Matala rakennuskanta levittäytyy katuverkon lomaan, ja taustalla näkyy jokivettä.",
+        "lyhyt": "Paramaribon piirikunnan kortteleita ilmasta.",
         "tiedosto": "Paramaribo District 01.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribon aluetta ilmasta 11.7.2018.",
-        "lyhyt": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "selite": "Matala rakennuskanta levittäytyy katuverkon lomaan, ja taustalla näkyy jokivettä.",
+        "lyhyt": "Paramaribon piirikunnan kortteleita ilmasta.",
         "tiedosto": "Paramaribo District 01.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/k2-c57919ca412d5bbef098.jpg",
         "suora": true,
         "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribon aluetta ilmasta 11.7.2018.",
-        "lyhyt": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "selite": "Matala rakennuskanta levittäytyy katuverkon lomaan, ja taustalla näkyy jokivettä.",
+        "lyhyt": "Paramaribon piirikunnan kortteleita ilmasta.",
         "tiedosto": "Paramaribo District 01.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3354,10 +3669,10 @@
         2160
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "a0babde4dc35262517b99f9f72e54ec774fc90e5272f0857e336667a81d725bd",
-        "semanticContextSHA256": "a0babde4dc35262517b99f9f72e54ec774fc90e5272f0857e336667a81d725bd",
+        "targetBeforeSHA256": "9733b60823eec6e56ba45bb69bfa73c5ce1f4bd1769a6acb6d6b368656dc7ba9",
+        "semanticContextSHA256": "9733b60823eec6e56ba45bb69bfa73c5ce1f4bd1769a6acb6d6b368656dc7ba9",
         "subjectTitle": "Uusi nimi ei tarttunut",
         "targetState": "existing-target"
       },
@@ -3477,9 +3792,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Paramaribo District 01.jpg",
-        "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribon aluetta ilmasta 11.7.2018.",
-        "lyhyt": "Paramaribon aluetta ilmasta 11.7.2018."
+        "lyhyt": "Paramaribon piirikunnan kortteleita ilmasta.",
+        "selite": "Matala rakennuskanta levittäytyy katuverkon lomaan, ja taustalla näkyy jokivettä.",
+        "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3498,23 +3813,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Paramaribon aluetta ilmasta 11.7.2018.",
-        "lyhyt": "Paramaribon aluetta ilmasta 11.7.2018.",
+        "selite": "Matala rakennuskanta levittäytyy katuverkon lomaan, ja taustalla näkyy jokivettä.",
+        "lyhyt": "Paramaribon piirikunnan kortteleita ilmasta.",
         "tiedosto": "Paramaribo District 01.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
-      "targetAfterSHA256": "a0babde4dc35262517b99f9f72e54ec774fc90e5272f0857e336667a81d725bd",
-      "contextAfterSHA256": "a0babde4dc35262517b99f9f72e54ec774fc90e5272f0857e336667a81d725bd",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+      "targetAfterSHA256": "9733b60823eec6e56ba45bb69bfa73c5ce1f4bd1769a6acb6d6b368656dc7ba9",
+      "contextAfterSHA256": "9733b60823eec6e56ba45bb69bfa73c5ce1f4bd1769a6acb6d6b368656dc7ba9",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "a0babde4dc35262517b99f9f72e54ec774fc90e5272f0857e336667a81d725bd",
+        "contextAfterSHA256": "a0babde4dc35262517b99f9f72e54ec774fc90e5272f0857e336667a81d725bd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "a0babde4dc35262517b99f9f72e54ec774fc90e5272f0857e336667a81d725bd",
+          "semanticContextSHA256": "a0babde4dc35262517b99f9f72e54ec774fc90e5272f0857e336667a81d725bd",
+          "subjectTitle": "Uusi nimi ei tarttunut",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "c57919ca412d5bbef098c02fedbaa7797ae87665132064ad5bc9cd87eda622c8",
+        "sameImageExportSHA256": "c57919ca412d5bbef098c02fedbaa7797ae87665132064ad5bc9cd87eda622c8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e13",
@@ -3536,23 +3872,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
         "suora": true,
         "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "selite": "Linnoituksen tummat muurit ja tiilirakennusten punaiset katot näkyvät puiden vieressä.",
+        "lyhyt": "Fort Zeelandian tiilirakennuksia ja muuria.",
         "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "selite": "Linnoituksen tummat muurit ja tiilirakennusten punaiset katot näkyvät puiden vieressä.",
+        "lyhyt": "Fort Zeelandian tiilirakennuksia ja muuria.",
         "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg",
         "suora": true,
         "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "selite": "Linnoituksen tummat muurit ja tiilirakennusten punaiset katot näkyvät puiden vieressä.",
+        "lyhyt": "Fort Zeelandian tiilirakennuksia ja muuria.",
         "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -3567,10 +3903,10 @@
         899
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e13/paakaupungit-pilvi/e13/paramaribo/sisalto.json",
-      "sourceContentSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+      "sourceContentSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "275b563c646c5ed6a010df465122096d1091f9a4d916987e96be1ac8ae9429e7",
-        "semanticContextSHA256": "511f70b41d1760c479230dd36f04a926b5e23f9abd843217a523f85cdfcfb097",
+        "targetBeforeSHA256": "36e0c88532450689341be0b47a48af7fe5a690bf9fe4b81fedcd67c9b52739a2",
+        "semanticContextSHA256": "df2f59c67e58a4ee29c18abe9ce6bdaa57c3e654697adea3e44e3e85a5ec6919",
         "subjectTitle": "Fort Zeelandia",
         "targetState": "existing-target"
       },
@@ -3684,9 +4020,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg",
-        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin."
+        "lyhyt": "Fort Zeelandian tiilirakennuksia ja muuria.",
+        "selite": "Linnoituksen tummat muurit ja tiilirakennusten punaiset katot näkyvät puiden vieressä.",
+        "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -3705,28 +4041,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-        "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
+        "selite": "Linnoituksen tummat muurit ja tiilirakennusten punaiset katot näkyvät puiden vieressä.",
+        "lyhyt": "Fort Zeelandian tiilirakennuksia ja muuria.",
         "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
-      "targetAfterSHA256": "275b563c646c5ed6a010df465122096d1091f9a4d916987e96be1ac8ae9429e7",
-      "contextAfterSHA256": "511f70b41d1760c479230dd36f04a926b5e23f9abd843217a523f85cdfcfb097",
+      "sourceContentAfterSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+      "targetAfterSHA256": "36e0c88532450689341be0b47a48af7fe5a690bf9fe4b81fedcd67c9b52739a2",
+      "contextAfterSHA256": "df2f59c67e58a4ee29c18abe9ce6bdaa57c3e654697adea3e44e3e85a5ec6919",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "8c6d2aeb487b8d17890fc2c36fa8a43d949757d10669c1af21127807617a8d34",
+        "targetAfterSHA256": "275b563c646c5ed6a010df465122096d1091f9a4d916987e96be1ac8ae9429e7",
+        "contextAfterSHA256": "511f70b41d1760c479230dd36f04a926b5e23f9abd843217a523f85cdfcfb097",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "275b563c646c5ed6a010df465122096d1091f9a4d916987e96be1ac8ae9429e7",
+          "semanticContextSHA256": "511f70b41d1760c479230dd36f04a926b5e23f9abd843217a523f85cdfcfb097",
+          "subjectTitle": "Fort Zeelandia",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "3e558910b8b374265c316a1b062cacd6ebd8d0ae5be564e5a9d95a87fa6acf92",
+        "sameImageNativeSHA256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
+        "sameImageExportSHA256": "90d2c2a88566c6ba26021e11818c761612ee6cf6a23a66ff685307e934a36b64",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e13/paramaribo/6cfe7acf1fa31dff1925526384765fa95141e9863ab74d746a6520f8c0f579bf.json",
+  "task118ReboundAt": "2026-10-13T16:31:26.559708+00:00"
 }

@@ -1,415 +1,415 @@
 {
-  "$skeema": "matkakirja-paakaupunki/1",
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "georgetown",
+ "maa": "GUY",
+ "era": "e13",
+ "kaupunki": {
   "id": "georgetown",
-  "maa": "GUY",
-  "era": "e13",
-  "kaupunki": {
-    "id": "georgetown",
-    "name": "Georgetown",
-    "wiki": "Georgetown",
-    "ambience": "satama",
-    "pallo": {
-      "lat": 6.8058,
-      "lon": -58.1508
-    }
-  },
-  "artikkeli": {
-    "intro": "Georgetown sijaitsee Guyanan Atlantin-rannikolla Demerara-joen suulla. Se on pääkaupunki sekä maan hallinnon, kaupan ja rahoituspalvelujen keskus. Kaupunki kasvoi 1700-luvun lopulla paikassa, jossa eurooppalainen siirtomaahallinto vaihtui useasti. Nimet Longchamps ja Stabroek edelsivät brittiläistä Georgetownia. Stabroek elää edelleen kaupunginosan ja vilkkaan torin nimessä.\n\n**Meri ja sadevesi kulkevat eri reittejä.** Merivalli suojaa matalaa rannikkoa, ja kanavat sulkuineen auttavat ylimääräistä vettä pois kaupungista. Katujen suoran ruudukon rinnalla näkyy siksi vesiverkko. Puinen St. George's Cathedral ja Stabroekin rautainen kauppahalli edustavat kaupungin myöhempiä rakennuskerroksia. Kasvitieteellisessä puutarhassa puolestaan kasvaa trooppisia kasveja ja elää manaatteja, joille on oma lampensa.",
-    "teksti": "Georgetownin varhaisessa historiassa ranskalainen Longchamps vaihtui hollantilaiseen Stabroekiin. Britannian aikana nimeksi tuli Georgetown kuningas Yrjö III:n mukaan. Kaupunginosissa ja torissa säilynyt Stabroek muistuttaa, ettei uusi nimi pyyhkinyt kaikkia vanhoja nimiä pois.\n\nVuonna 1873 Georgetownin majakka ja St. Andrew's Kirk olivat jo käytössä. Nykyinen Stabroek Marketin halli sekä puinen St. George's Cathedral tulivat kaupunkiin myöhemmin, joten kaikkia sen tunnettuja maamerkkejä ei voi sijoittaa samaan vanhaan näkymään.\n\nDemeraran suun tasainen rannikko tarvitsee merivallia sekä kanavien ja sulkujen vedenpoistoa. Kaupungin puutarhat taas antavat sille toisenlaisen vesiaiheen: kasvitieteellisen puutarhan manaattilampi on osa julkista viheraluetta. Satama, torin kuljetukset ja puutarhat asettuvat samaan rannikkokaupunkiin."
-  },
-  "kysymykset": [
-    {
-      "q": "Minkä joen suulla Georgetown sijaitsee?",
-      "options": [
-        "Demeraran",
-        "Essequibon",
-        "Orinocon",
-        "Amazonin"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Joki kulkee kaupungin länsipuolella Atlantille.",
-      "fact": "Georgetown sijaitsee Demerara-joen suulla Guyanan Atlantin-rannikolla.",
-      "source": "https://en.wikipedia.org/wiki/Georgetown,_Guyana"
-    },
-    {
-      "q": "Mitä eläimiä Guyana Botanical Gardensin lammessa elää?",
-      "options": [
-        "Manaatteja",
-        "Delfiinejä",
-        "Merileijonia",
-        "Hylkeitä"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Kyse on vedessä elävistä nisäkkäistä.",
-      "fact": "Kasvitieteellisessä puutarhassa on manaattilampi eläintarhan lähellä mutta sen ulkopuolella.",
-      "source": "https://en.wikipedia.org/wiki/Guyana_Botanical_Gardens"
-    },
-    {
-      "q": "Mitä materiaalia St. George's Cathedralin rakennus edustaa?",
-      "options": [
-        "Puuta",
-        "Marmoria",
-        "Betonia",
-        "Terästä"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Katedraalin tyyli on uusgotiikkaa, mutta materiaali on paikallisiin taloihin sopiva.",
-      "fact": "St. George's Cathedral on puurakenteinen anglikaaninen katedraali.",
-      "source": "https://en.wikipedia.org/wiki/St._George%27s_Cathedral,_Georgetown"
-    },
-    {
-      "q": "Mitä kokers-portit auttavat tekemään Georgetownissa?",
-      "options": [
-        "Poistamaan vettä",
-        "Ohjaamaan tieliikennettä",
-        "Purkamaan laivoja",
-        "Mittaamaan tuulta"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Ne kuuluvat kanavien järjestelmään.",
-      "fact": "Kokers-sulut ovat osa Georgetownin kanavien vedenpoistoa.",
-      "source": "https://en.wikipedia.org/wiki/Georgetown,_Guyana"
-    },
-    {
-      "q": "Mikä kaupungin vanha nimi säilyy tunnetun torin nimessä?",
-      "options": [
-        "Stabroek",
-        "Longchamps",
-        "New Amsterdam",
-        "Fort Zealandia"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Nimikerros liittyy kaupungin hollantilaiseen historiaan.",
-      "fact": "Georgetown oli aiemmin Stabroek; nimi on edelleen käytössä Stabroek Marketissa ja kaupunginosassa.",
-      "source": "https://en.wikipedia.org/wiki/Georgetown,_Guyana"
-    }
-  ],
-  "tiedot": [
-    "Georgetownin katujen ruudukon läpi kulkee myös kanavien verkko, jonka sulkuja kutsutaan kokers-porteiksi.",
-    "Stabroek Marketin seutu yhdistää torikaupan taksi-, pikkubussi- ja jokilauttaliikenteeseen.",
-    "Georgetownin kasvitieteellisen puutarhan manaatit elävät lammessa eläintarhan lähellä mutta sen ulkopuolella."
-  ],
-  "valokuva": {
-    "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg",
-    "lyhyt": "Georgetownin puistoissa pidetään manaatteja.",
-    "selite": "Georgetownin puistoissa pidetään manaatteja.",
-    "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)"
-  },
-  "kaupunkilehti": [
-    {
-      "id": "kaupunki",
-      "nimi": "Georgetown",
-      "johdanto": "Demeraran suulla tori on myös kuljetusten risteys. Puutaloille, rautaiselle hallille ja puutarhoille on tilaa samalla matalalla rannikolla.",
-      "kansikuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "nostot": [
-        {
-          "otsikko": "Torilla vaihtuvat tavara ja kyyti",
-          "teksti": "Stabroek Marketin kellotorni on Georgetownin tuttu maamerkki, mutta torialue tekee paljon muutakin kuin näyttää ajan. Kojut myyvät koruja, vaatteita ja elintarvikkeita. Samalla alue toimii taksien ja pikkubussien solmuna sekä liittyy Demerara-joen lauttaliikenteeseen, jossa kulkee ihmisiä ja tavaraa. Rautainen halli ja sitä ympäröivä liikenne tekevät torista kaupungin arjen risteyksen. Kaupungin entinen nimi Stabroek säilyy tässä käytössä silloinkin, kun Georgetownin nimi lukee matkalipussa.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Stabroek Market"
-        },
-        {
-          "otsikko": "Puutarhan lammessa on manaatteja",
-          "teksti": "Guyana Botanical Gardensin lammessa elää manaatteja eläintarhan lähellä mutta sen ulkopuolella. Eläimet eivät ole puutarhan uusi lisä: ensimmäisiä manaatteja tuotiin sinne jo 1800-luvun loppupuolella. Samassa kaupungissa niitä on myös National Parkissa. Kasvitieteellinen puutarha perustettiin hylätyn Plantation Vlissengenin sokeritilan maalle, silloisen kaupungin itälaidalle. Nyt puutarhan ympärillä on asuinalueita, ja sen naapurissa ovat Guyanan eläintarha sekä Castellani House. Kasvien kokoelmaan liittyy siis myös vesieläinten pitkä historia.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Guyana Botanical Gardens"
-        },
-        {
-          "otsikko": "Goottilainen kirkko on puuta",
-          "teksti": "St. George's Cathedralin korkea kirkkorakennus on uusgotiikkaa, mutta rakennusaine on puu. Kirkon suunnitteli brittiläinen arkkitehti Arthur Blomfield, ja se rakennettiin 1800-luvun lopulla. Nykyinen katedraali ei siten kuulunut vuoden 1873 kaupunkikuvaan. Church Streetillä sijaitseva rakennus on kansallinen muistomerkki ja Guyanan anglikaanisen piispan istuin. Sen kohdalla kirkon tyylinimi ja rakennusmateriaali eivät ole sama asia: goottilainen muotokieli sai Georgetownissa puisen toteutuksen.",
-          "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg",
-          "lyhyt": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
-          "selite": "St. George’s Cathedral on Georgetownin puurakenteinen uusgoottilainen katedraali.",
-          "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)",
-          "wiki": "St. George's Cathedral, Georgetown"
-        },
-        {
-          "otsikko": "Lentoasemien vanhat nimet kulkevat mukana",
-          "teksti": "Georgetownin lentomatkalla vastaan voi tulla sekä nykyisiä että vanhoja lentoasemanimiä. Cheddi Jagan International Airport tunnettiin aiemmin Timehrin lentoasemana. Se sijaitsee kaupungin eteläpuolella Demeraran varrella. Lähempänä kaupunkia oleva Eugene F. Correia International Airport oli puolestaan Ogle Airport. Kentät palvelevat eri yhteyksiä, ja Correian kentältä liikennöi myös helikoptereita merellä toimivan öljy- ja kaasutuotannon tueksi. Vanha nimi voi siis tarkoittaa samaa kenttää, ei uutta paikkaa kartalla.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Georgetown, Guyana"
-        }
-      ],
-      "matkailijalle": {
-        "kuva": {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        "kappale": "Georgetownin tutustumiskävely yhdistää torialueen, Church Streetin puukatedraalin ja keskustan puutarhat. Guyana Botanical Gardens sijaitsee erillään pienemmästä Promenade Gardensista. Taksit ja pikkubussit kuuluvat kaupungin liikkumiseen. Tarkista, kummalle lentoasemalle saavut, ja sovi jatkokuljetus. Käy torilla ja liiku kävellen päiväsaikaan sekä suunnittele paluu etukäteen.",
-        "artikkeli": {
-          "nimi": "Matkailijan Georgetown",
-          "taitto": "opas",
-          "teksti": "Tutustu jokisataman kaupunkiin torin, puukatedraalin ja puutarhojen kautta.",
-          "nosto": "Stabroek Market kokoaa samaan seutuun myyjät, asiakkaat ja jatkokuljetukset; puutarhoissa kaupungin vesi saa toisen tehtävän.",
-          "jaksot": [
-            {
-              "otsikko": "Perille ja liikkeelle",
-              "teksti": "Tarkista lentolipusta, kummalle kentälle saavut: Cheddi Jaganin kansainvälinen lentoasema on kaupungin eteläpuolella, Eugene F. Correian lentoasema lähempänä kaupunkia. Vanhoissa nimissä Timehri viittaa edelliseen ja Ogle jälkimmäiseen. Keskustassa käytetään takseja ja pikkubusseja; Stabroek Marketin ympäristö on liikenteen solmu. Sovi kuljetus ja hinta etukäteen. Jos saavut illalla, järjestä myös matkan viimeinen osuus majoitukselle jo ennen lähtöä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Kauppahalli ja puukatedraali",
-              "teksti": "Stabroek Marketin seudulla tavara ja matkustajat kulkevat ristiin. Käy alueella päiväsaikaan ja pidä tavarat lähelläsi; torikäyntiä ei tarvitse venyttää pimeään. St. George's Cathedral on Church Streetillä, ja sen puurakenne on kaupungin tunnusmerkkejä. Katedraali on edelleen uskonnollinen tila, joten tarkista käyntikäytännöt ja huomioi meneillään olevat toimitukset. Älä odota kummankaan rakennuksen vastaavan vuoden 1873 maisemaa: nykyiset rakennukset ovat myöhempiä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Puutarhat ovat eri paikkoja",
-              "teksti": "Guyana Botanical Gardens on keskustan itäpuolinen puutarha eläintarhan ja Castellani Housen lähellä. Sen lammessa voi nähdä manaatteja, ja puutarhassa kasvaa trooppisia kasveja. Keskustan Promenade Gardens on pienempi puutarha Middle Streetin tuntumassa. Sen eteläpuolella oleva Parade Ground on jälleen erillinen paikka, jonka kadun ylitys erottaa puutarhasta. Näiden nimien erottaminen auttaa myös suunnittelemaan kävelyn: kaikki eivät tarkoita samaa puistoaluetta.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Mitä täällä syödään",
-              "teksti": "Stabroek Marketin ruokakojut tarjoavat paikallista ruokaa, ja kaupungin ravintoloissa on esimerkiksi curryruokia, rotia ja dhalpuria. Kasvis- ja lihavaihtoehtoja on rinnakkain. Kysy myyjältä, mitä annos sisältää ja kuinka tulisena se valmistetaan; ruoan nimi yksin ei kerro kaikkia aineksia. Päivän torikäynnin voi yhdistää lounaaseen, kun taas iltaruokailun ja paluukuljetuksen kannattaa muodostaa oma suunnitelmansa. Georgetownin ruokaa ei tarvitse rajata yhteen kansalliseen klassikkoon.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Georgetownissa on trooppinen, ympäri vuoden kostea ilmasto. Sateisemmat ja vähemmän sateiset jaksot erottuvat, mutta täysin kuivan kauden varaan ei kannata rakentaa matkaa. Varaa ulkokävelyihin joustoa ja suojaa tavarat kuuroilta. Kaupungin kanavat ja merivalli muistuttavat siitä, että vesi kuuluu sen arkeen. Suunnittele liikkuminen päiväsaikaan, sovi paluut ja tarkista ajantasaiset matkustusohjeet ennen lähtöä.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            }
-          ],
-          "matkailu": {
-            "parasta": [
-              {
-                "mita": "Stabroek Market",
-                "tahdet": 3,
-                "selite": "Rautainen kauppahalli ja sen ympäristö ovat kaupungin kaupan ja kuljetusten solmu."
-              },
-              {
-                "mita": "St. George's Cathedral",
-                "tahdet": 3,
-                "selite": "Uusgoottilainen anglikaaninen katedraali on puurakenteinen."
-              },
-              {
-                "mita": "Guyana Botanical Gardens",
-                "tahdet": 3,
-                "selite": "Kasvitieteellisen puutarhan lammessa elää manaatteja."
-              },
-              {
-                "mita": "Georgetownin majakka",
-                "tahdet": 2,
-                "selite": "Water Streetin historiallinen merimerkki seisoo puupaalujen varassa."
-              },
-              {
-                "mita": "Promenade Gardens",
-                "tahdet": 2,
-                "selite": "Keskustan pienempi puutarha on Middle Streetin tuntumassa."
-              }
-            ],
-            "hyvaTietaa": [
-              {
-                "otsikko": "Kaksi kenttää",
-                "teksti": "Timehri ja Ogle ovat lentoasemien vanhoja nimiä."
-              },
-              {
-                "otsikko": "Paluukuljetus",
-                "teksti": "Sovi kuljetukset etukäteen ja ajoita torikäynti päiväsaikaan."
-              },
-              {
-                "otsikko": "Puutarhat",
-                "teksti": "Promenade Gardens ja Guyana Botanical Gardens ovat eri paikkoja."
-              }
-            ]
-          },
-          "lahde": "Wikipedia"
-        }
-      }
-    },
-    {
-      "id": "historia",
-      "nimi": "Nimet, vesi ja rakentajat",
-      "johdanto": "Kaupungin nimet vaihtuivat, mutta vanhoja kerroksia jäi näkyviin. Merivalli, majakka ja kirkkorakennus kertovat erilaisista rakentamisen tarpeista.",
-      "tehtava": {
-        "kysymys": "Millainen yhteisö vei St. Andrew's Kirkin kesken jääneen rakentamisen loppuun?",
-        "vaihtoehdot": [
-          "Skotlantilaiset presbyteerit",
-          "Ranskalaiset dominikaanit",
-          "Englantilaiset kveekarit",
-          "Hollantilaiset luterilaiset"
-        ],
-        "oikea": 0,
-        "fakta": "Hankkeen aloittanut reformoitu seurakunta joutui luopumaan rakentamisesta, ja skotlantilainen seurakunta avasi kirkon."
-      },
-      "nostot": [
-        {
-          "otsikko": "Kaupunki ehti olla Longchamps ja Stabroek",
-          "teksti": "Georgetownin varhaiset nimet kertovat vaihtuneista siirtomaahallinnoista. Kaupunki perustettiin 1700-luvun lopulla ranskalaisten miehittäessä lyhyesti hollantilaista Demeraran siirtomaata, ja sitä kutsuttiin Longchampsiksi. Hollantilaishallinnon aikana nimeksi tuli Stabroek. Britannian aikana kaupunki nimettiin kuningas Yrjö III:n mukaan Georgetowniksi. Stabroek ei silti kadonnut kokonaan: se säilyy kaupunginosan ja torin nimessä. Sama paikka voi kantaa usean aikakauden nimiä yhtä aikaa.",
-          "tiedosto": "Georgetown from the air (23284743859).jpg",
-          "lyhyt": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
-          "selite": "Georgetownin katuverkkoa ja Atlantin rannikkoa ilmasta 5.12.2015.",
-          "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)",
-          "wiki": "Georgetown, Guyana"
-        },
-        {
-          "otsikko": "Kokers-portit hoitavat vedenpoistoa",
-          "teksti": "Georgetownin tasainen rannikko ei ole yksinkertainen paikka kaupungille. Osa maanpinnasta on nousuveden korkeutta alempana, joten merivalli suojaa kaupunkia Atlantin vedeltä. Sadeveden poistoon tarvitaan puolestaan kanavia ja kokers-portteja, eli sulkuja. Hollantilaiset rakensivat kanavaverkkoa, jota britit myöhemmin jatkoivat. Katujen ruudukon läpi kulkee siis toinenkin verkko, veden reitti. Merivallin ja kanavien tehtävät täydentävät toisiaan: toinen rajoittaa meren pääsyä sisään, toinen auttaa ylimääräistä vettä pois.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Georgetown, Guyana"
-        },
-        {
-          "otsikko": "Majakan alla on puupaaluja",
-          "teksti": "Georgetownin majakka seisoo Water Streetillä. Sen kivinen torni perustuu greenheart-puusta tehtyihin paaluihin, joten maan päällä ja alla on eri rakennusaine. Ensimmäinen majakka rakennettiin hollantilaiskaudella, ja se korvattiin uudella jo 1800-luvun alkupuolella. Nykyinen torni oli siten olemassa vuoden 1873 kaupungissa. Ylöspäin kapenevassa tornissa on parveke ja lyhty, ja sen ulkopintaa merkitsevät punaiset ja valkoiset pystysuorat raidat. Satamakaupungin merimerkki kertoo myös siitä, miten rannikon maahan perustetaan rakennus.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "Georgetown Lighthouse, Guyana"
-        },
-        {
-          "otsikko": "Yksi kirkko, kaksi rakennuttajayhteisöä",
-          "teksti": "St. Andrew's Kirkin rakentamisen aloitti hollantilainen reformoitu seurakunta 1800-luvun alussa. Rahavaikeudet keskeyttivät hankkeen, ja kirkon avasivat lopulta skotlantilaiset presbyteerit. Rakennukseen liittyy siis kahden kirkkoyhteisön historia. Se sijaitsee Brickdamin koilliskulmalla lähellä parlamenttirakennusta. Kirkko perusti myöhemmin koulun ja isännöi julkisia konsertteja sekä resitaaleja. Jumalanpalvelusten rinnalle tuli opetusta ja musiikkia, ja kirkko oli käytössä jo ennen vuotta 1873.",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": "",
-          "wiki": "St. Andrew's Kirk, Georgetown"
-        }
-      ]
-    }
-  ],
-  "kohdekartta": {
-    "numeroympyrat": true,
-    "esittely": "Water Streetin majakka ja kaupungin puutarhat kertovat rannikon rakentamisesta ja yhteisistä tiloista. Pienempi Promenade Gardens ja kasvitieteellinen puutarha ovat eri puolilla keskustaa.",
-    "rajat": {
-      "pohjoinen": 6.827,
-      "etela": 6.802,
-      "lansi": -58.1697,
-      "ita": -58.1427
-    },
-    "kohteet": [
-      {
-        "nimi": "Georgetownin majakka",
-        "lat": 6.8237,
-        "lon": -58.16436
-      },
-      {
-        "nimi": "Promenade Gardens",
-        "tyyppi": "luonto",
-        "lat": 6.81661,
-        "lon": -58.16626
-      },
-      {
-        "nimi": "Guyana Botanical Gardens",
-        "tyyppi": "luonto",
-        "lat": 6.80547,
-        "lon": -58.14602
-      }
-    ]
-  },
-  "nahtavyydet": {
-    "Georgetownin majakka": {
-      "aika": "1800-luvun alkupuoli",
-      "teksti": "Georgetownin majakka sijaitsee Water Streetillä. Ensimmäinen majakka rakennettiin hollantilaiskaudella ja korvattiin uudella 1800-luvun alkupuolella. Nykyinen torni oli siten olemassa jo vuonna 1873. Ylöspäin kapenevassa kivisessä tornissa on parveke ja lyhty, ja sen ulkopintaa merkitsevät punaiset ja valkoiset pystysuorat raidat. Majakka kuuluu Guyanan National Trustin ylläpitämiin kohteisiin.\n\nTornin perustus on greenheart-puusta tehtyjen paalujen varassa. Kivirakenne ja puinen perustus ovat siis saman rakennuksen eri osia. Sen valo näyttää punaista tai valkoista katselusuunnan mukaan, joten kyse ei ole pelkästä yöllä erottuvasta tornista vaan merenkulun merkkijärjestelmästä. Majakka liittyy Georgetownin paikkaan jokisuun satamakaupunkina. Mahdollinen nousu torniin ja muut vierailukäytännöt pitää tarkistaa erikseen.",
-      "kuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "lahde": "Wikipedia"
-    },
-    "Promenade Gardens": {
-      "aika": "",
-      "teksti": "Promenade Gardens on Georgetownin keskustan julkinen puutarha Middle Streetin tuntumassa. Siellä kasvaa trooppisia kasveja, ja se on pienempi kuin idempänä sijaitseva Guyana Botanical Gardens. Keskustan merkittävät rakennukset, kuten National Library ja St. George's Cathedral, sijoittuvat puutarhan ja Independence Squaren ympärille.\n\nMiddle Street erottaa puutarhan eteläpuolisesta Independence Parkista, jota kutsutaan myös Parade Groundiksi. Tämä naapuripaikka liittyy siirtomaa-ajan historiaan: siellä teloitettiin orjuutettuja ihmisiä, jotka osallistuivat kapinaan 1800-luvun alussa. Puutarha ja paraatikenttä ovat eri kohteita.",
-      "kuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "lahde": "Wikipedia"
-    },
-    "Guyana Botanical Gardens": {
-      "aika": "1800-luvun loppupuoli",
-      "teksti": "Guyana Botanical Gardens perustettiin hylätyn Plantation Vlissengenin sokeritilan maalle 1800-luvun loppupuolella. Paikka oli silloisen kaupungin itälaidalla, mutta nykyisin ympärillä on asuinalueita. Puutarha sijaitsee Guyanan eläintarhan ja Castellani Housen lähellä. Sen varhaisiin hoitajiin kuului kasvitieteilijä George Samuel Jenman.\n\nPuutarhan manaatit elävät lammessa eläintarhan lähellä mutta sen ulkopuolella. Niitä tuotiin alueelle jo 1800-luvun loppupuolella, ja manaatteja pidetään myös kaupungin National Parkissa. Puutarhassa kasvaa trooppisia kasveja, palmuja ja suuria lumpeita.",
-      "kuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "lahde": "Wikipedia"
-    }
-  },
-  "saatiedot": null,
-  "ehdotukset": {
-    "lentoasema": "Cheddi Jagan International Airport; lisäksi Eugene F. Correia International Airport",
-    "huomiot": [
-      "C-tekstiluonnos, A rajattu. Kuvat erillisessä putkessa: kaikkien neljä kenttää tyhjiä.",
-      "Sääauditointi 48/48 avoin; saatiedot:null eikä säänumeroita.",
-      "Kartta partial 3/6; vain paikkojen omat WP-pisteet, ei Wikivoyage- tai kaupunkipisteen lainaamista.",
-      "St. George's Cathedralin vuosiluvut ristiriitaisia WP-artikkelin sisällä; käytetään 1800-luvun loppua.",
-      "Promenade Gardensin ja Botanical Gardensin tarkka perustamisen 1873-suhde tarvitsee lisävarmennuksen; ei fiktiivistä isoisän havaintoa.",
-      "D/E/F, nykyinen matkustusturvallisuuden varmennus, hyväksyntä, pelikytkentä ja julkaisu avoimia."
-    ]
+  "name": "Georgetown",
+  "wiki": "Georgetown",
+  "ambience": "satama",
+  "pallo": {
+   "lat": 6.8058,
+   "lon": -58.1508
   }
+ },
+ "artikkeli": {
+  "intro": "Georgetown sijaitsee Guyanan Atlantin-rannikolla Demerara-joen suulla. Se on pääkaupunki sekä maan hallinnon, kaupan ja rahoituspalvelujen keskus. Kaupunki kasvoi 1700-luvun lopulla paikassa, jossa eurooppalainen siirtomaahallinto vaihtui useasti. Nimet Longchamps ja Stabroek edelsivät brittiläistä Georgetownia. Stabroek elää edelleen kaupunginosan ja vilkkaan torin nimessä.\n\n**Meri ja sadevesi kulkevat eri reittejä.** Merivalli suojaa matalaa rannikkoa, ja kanavat sulkuineen auttavat ylimääräistä vettä pois kaupungista. Katujen suoran ruudukon rinnalla näkyy siksi vesiverkko. Puinen St. George's Cathedral ja Stabroekin rautainen kauppahalli edustavat kaupungin myöhempiä rakennuskerroksia. Kasvitieteellisessä puutarhassa puolestaan kasvaa trooppisia kasveja ja elää manaatteja, joille on oma lampensa.",
+  "teksti": "Georgetownin varhaisessa historiassa ranskalainen Longchamps vaihtui hollantilaiseen Stabroekiin. Britannian aikana nimeksi tuli Georgetown kuningas Yrjö III:n mukaan. Kaupunginosissa ja torissa säilynyt Stabroek muistuttaa, ettei uusi nimi pyyhkinyt kaikkia vanhoja nimiä pois.\n\nVuonna 1873 Georgetownin majakka ja St. Andrew's Kirk olivat jo käytössä. Nykyinen Stabroek Marketin halli sekä puinen St. George's Cathedral tulivat kaupunkiin myöhemmin, ja ne kuuluvat 1800-luvun lopun rakentamiseen.\n\nDemeraran suun tasainen rannikko tarvitsee merivallia sekä kanavien ja sulkujen vedenpoistoa. Kaupungin puutarhat taas antavat sille toisenlaisen vesiaiheen: kasvitieteellisen puutarhan manaattilampi on osa julkista viheraluetta. Satama, torin kuljetukset ja puutarhat asettuvat samaan rannikkokaupunkiin."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä joen suulla Georgetown sijaitsee?",
+   "options": [
+    "Demeraran",
+    "Essequibon",
+    "Orinocon",
+    "Amazonin"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Joki kulkee kaupungin länsipuolella Atlantille.",
+   "fact": "Georgetown sijaitsee Demerara-joen suulla Guyanan Atlantin-rannikolla.",
+   "source": "https://en.wikipedia.org/wiki/Georgetown,_Guyana"
+  },
+  {
+   "q": "Mitä eläimiä Guyana Botanical Gardensin lammessa elää?",
+   "options": [
+    "Manaatteja",
+    "Delfiinejä",
+    "Merileijonia",
+    "Hylkeitä"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Kyse on vedessä elävistä nisäkkäistä.",
+   "fact": "Kasvitieteellisessä puutarhassa on manaattilampi eläintarhan lähellä mutta sen ulkopuolella.",
+   "source": "https://en.wikipedia.org/wiki/Guyana_Botanical_Gardens"
+  },
+  {
+   "q": "Mistä materiaalista St. George's Cathedral on rakennettu?",
+   "options": [
+    "Puuta",
+    "Marmoria",
+    "Betonia",
+    "Terästä"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Katedraalin tyyli on uusgotiikkaa, mutta materiaali on paikallisiin taloihin sopiva.",
+   "fact": "St. George's Cathedral on puurakenteinen anglikaaninen katedraali.",
+   "source": "https://en.wikipedia.org/wiki/St._George%27s_Cathedral,_Georgetown"
+  },
+  {
+   "q": "Mihin Georgetownin kanavien kokers-sulkuja käytetään?",
+   "options": [
+    "Poistamaan ylimääräistä vettä",
+    "Säätämään jokilaivojen syväystä",
+    "Ohjaamaan kasteluvettä pelloille",
+    "Tuottamaan sähköä kaupungille"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Ne kuuluvat kanavien järjestelmään.",
+   "fact": "Kokers ovat kanavien vedenpoistoluukkuja, joiden kautta ylimääräinen vesi johdetaan pois kaupungista.",
+   "source": "https://en.wikipedia.org/wiki/Georgetown,_Guyana"
+  },
+  {
+   "q": "Mikä oli Georgetownin nimi hollantilaishallinnon aikana?",
+   "options": [
+    "Stabroek",
+    "Longchamps",
+    "New Amsterdam",
+    "Fort Zealandia"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Nimikerros liittyy kaupungin hollantilaiseen historiaan.",
+   "fact": "Georgetown oli aiemmin Stabroek; nimi on edelleen käytössä Stabroek Marketissa ja kaupunginosassa.",
+   "source": "https://en.wikipedia.org/wiki/Georgetown,_Guyana"
+  }
+ ],
+ "tiedot": [
+  "Georgetownin katujen ruudukon läpi kulkee myös kanavien verkko, jonka sulkuja kutsutaan kokers-porteiksi.",
+  "Stabroek Marketin seutu yhdistää torikaupan taksi-, pikkubussi- ja jokilauttaliikenteeseen.",
+  "Georgetownin kasvitieteellisen puutarhan manaatit elävät lammessa eläintarhan lähellä mutta sen ulkopuolella."
+ ],
+ "valokuva": {
+  "tiedosto": "Manatees - Guyana Botanical Gardens (23024335793).jpg",
+  "lyhyt": "Manaatti Guyana Botanical Gardensin lammessa.",
+  "selite": "Manaatin pää näkyy veden pinnassa Georgetownin kasvitieteellisen puutarhan lammessa.",
+  "lahde": "Dan Sloan, Commons (CC BY-SA 2.0)"
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Georgetown",
+   "johdanto": "Demeraran suulla tori on myös kuljetusten risteys. Puutaloille, rautaiselle hallille ja puutarhoille on tilaa samalla matalalla rannikolla.",
+   "kansikuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Torilla vaihtuvat tavara ja kyyti",
+     "teksti": "Stabroek Marketin kellotorni on Georgetownin tuttu maamerkki, mutta torialue tekee paljon muutakin kuin näyttää ajan. Kojut myyvät koruja, vaatteita ja elintarvikkeita. Samalla alue toimii taksien ja pikkubussien solmuna sekä liittyy Demerara-joen lauttaliikenteeseen, jossa kulkee ihmisiä ja tavaraa. Rautainen halli ja sitä ympäröivä liikenne tekevät torista kaupungin arjen risteyksen. Torialueen Stabroek-nimi on peräisin Georgetownin hollantilaiskaudelta.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Stabroek Market"
+    },
+    {
+     "otsikko": "Puutarhan lammessa on manaatteja",
+     "teksti": "Guyana Botanical Gardensin lammessa elää manaatteja eläintarhan lähellä mutta sen ulkopuolella. Eläimet eivät ole puutarhan uusi lisä: ensimmäisiä manaatteja tuotiin sinne jo 1800-luvun loppupuolella. Samassa kaupungissa niitä on myös National Parkissa. Kasvitieteellinen puutarha perustettiin hylätyn Plantation Vlissengenin sokeritilan maalle, silloisen kaupungin itälaidalle. Nyt puutarhan ympärillä on asuinalueita, ja sen naapurissa ovat Guyanan eläintarha sekä Castellani House. Kasvien kokoelmaan liittyy siis myös vesieläinten pitkä historia.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Guyana Botanical Gardens"
+    },
+    {
+     "otsikko": "Goottilainen kirkko on puuta",
+     "teksti": "St. George's Cathedralin korkea kirkkorakennus on uusgotiikkaa, mutta rakennusaine on puu. Kirkon suunnitteli brittiläinen arkkitehti Arthur Blomfield, ja se rakennettiin 1800-luvun lopulla. Nykyinen katedraali ei siten kuulunut vuoden 1873 kaupunkikuvaan. Church Streetillä sijaitseva rakennus on kansallinen muistomerkki ja Guyanan anglikaanisen piispan istuin. Suippokaari-ikkunat ja korkea torni kuuluvat puisen kirkon uusgoottilaiseen muotokieleen.",
+     "tiedosto": "20191121 Guyana 0048 Georgetown sRGB (49295795336).jpg",
+     "lyhyt": "St. George’s Cathedralin valkoinen puurakennus.",
+     "selite": "Katedraalin korkeat suippokaari-ikkunat ja torni erottuvat katutasolta vuonna 2019 otetussa kuvassa.",
+     "lahde": "Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)",
+     "wiki": "St. George's Cathedral, Georgetown"
+    },
+    {
+     "otsikko": "Lentoasemien vanhat nimet kulkevat mukana",
+     "teksti": "Georgetownin lentomatkalla vastaan voi tulla sekä nykyisiä että vanhoja lentoasemanimiä. Cheddi Jagan International Airport tunnettiin aiemmin Timehrin lentoasemana. Se sijaitsee kaupungin eteläpuolella Demeraran varrella. Lähempänä kaupunkia oleva Eugene F. Correia International Airport oli puolestaan Ogle Airport. Kentät palvelevat eri yhteyksiä, ja Correian kentältä liikennöi myös helikoptereita merellä toimivan öljy- ja kaasutuotannon tueksi. Vanha nimi voi siis tarkoittaa samaa kenttää, ei uutta paikkaa kartalla.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Georgetown, Guyana"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Georgetownin tutustumiskävely yhdistää torialueen, Church Streetin puukatedraalin ja keskustan puutarhat. Guyana Botanical Gardens sijaitsee erillään pienemmästä Promenade Gardensista. Taksit ja pikkubussit kuuluvat kaupungin liikkumiseen. Tarkista, kummalle lentoasemalle saavut, ja sovi jatkokuljetus.",
+    "artikkeli": {
+     "nimi": "Matkailijan Georgetown",
+     "taitto": "opas",
+     "teksti": "Tutustu jokisataman kaupunkiin torin, puukatedraalin ja puutarhojen kautta.",
+     "nosto": "Stabroek Market kokoaa samaan seutuun myyjät, asiakkaat ja jatkokuljetukset; puutarhoissa kaupungin vesi saa toisen tehtävän.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Tarkista lentolipusta, kummalle kentälle saavut: Cheddi Jaganin kansainvälinen lentoasema on kaupungin eteläpuolella, Eugene F. Correian lentoasema lähempänä kaupunkia. Vanhoissa nimissä Timehri viittaa edelliseen ja Ogle jälkimmäiseen. Keskustassa käytetään takseja ja pikkubusseja; Stabroek Marketin ympäristö on liikenteen solmu. Sovi kuljetus ja hinta etukäteen. Jos saavut illalla, järjestä myös matkan viimeinen osuus majoitukselle jo ennen lähtöä.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Kauppahalli ja puukatedraali",
+       "teksti": "Stabroek Marketin seudulla tavara ja matkustajat kulkevat ristiin. St. George's Cathedral on Church Streetillä, ja sen puurakenne on kaupungin tunnusmerkkejä. Katedraali on edelleen uskonnollinen tila, joten tarkista käyntikäytännöt ja huomioi meneillään olevat toimitukset.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Puutarhat ovat eri paikkoja",
+       "teksti": "Guyana Botanical Gardens on keskustan itäpuolinen puutarha eläintarhan ja Castellani Housen lähellä. Sen lammessa voi nähdä manaatteja, ja puutarhassa kasvaa trooppisia kasveja. Keskustan Promenade Gardens on pienempi puutarha Middle Streetin tuntumassa. Sen eteläpuolella oleva Parade Ground on jälleen erillinen paikka, jonka kadun ylitys erottaa puutarhasta. Näiden nimien erottaminen auttaa myös suunnittelemaan kävelyn: kaikki eivät tarkoita samaa puistoaluetta.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Stabroek Marketin ruokakojut tarjoavat paikallista ruokaa, ja kaupungin ravintoloissa on esimerkiksi curryruokia, rotia ja dhalpuria. Kasvis- ja lihavaihtoehtoja on rinnakkain. Kysy myyjältä, mitä annos sisältää ja kuinka tulisena se valmistetaan; ruoan nimi yksin ei kerro kaikkia aineksia. Päivän torikäynnin voi yhdistää lounaaseen, kun taas iltaruokailun ja paluukuljetuksen kannattaa muodostaa oma suunnitelmansa.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Georgetownissa on trooppinen, ympäri vuoden kostea ilmasto. Sateisemmat ja vähemmän sateiset jaksot erottuvat, mutta täysin kuivan kauden varaan ei kannata rakentaa matkaa. Varaa ulkokävelyihin joustoa ja suojaa tavarat kuuroilta. Kaupungin kanavat ja merivalli muistuttavat siitä, että vesi kuuluu sen arkeen.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Stabroek Market",
+        "tahdet": 3,
+        "selite": "Rautainen kauppahalli ja sen ympäristö ovat kaupungin kaupan ja kuljetusten solmu."
+       },
+       {
+        "mita": "St. George's Cathedral",
+        "tahdet": 3,
+        "selite": "Uusgoottilainen anglikaaninen katedraali on puurakenteinen."
+       },
+       {
+        "mita": "Guyana Botanical Gardens",
+        "tahdet": 3,
+        "selite": "Kasvitieteellisen puutarhan lammessa elää manaatteja."
+       },
+       {
+        "mita": "Georgetownin majakka",
+        "tahdet": 2,
+        "selite": "Water Streetin historiallinen merimerkki seisoo puupaalujen varassa."
+       },
+       {
+        "mita": "Promenade Gardens",
+        "tahdet": 2,
+        "selite": "Keskustan pienempi puutarha on Middle Streetin tuntumassa."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Kaksi kenttää",
+        "teksti": "Timehri ja Ogle ovat lentoasemien vanhoja nimiä."
+       },
+       {
+        "otsikko": "Paluukuljetus",
+        "teksti": "Tarkista Guyanan ajantasainen matkustustiedote ulkoministeriöltä ennen matkaa ja suunnittele kaupunkisiirtymät sen perusteella."
+       },
+       {
+        "otsikko": "Puutarhat",
+        "teksti": "Promenade Gardens ja Guyana Botanical Gardens ovat eri paikkoja."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "historia",
+   "nimi": "Nimet, vesi ja rakentajat",
+   "johdanto": "Kaupungin nimet vaihtuivat, mutta vanhoja kerroksia jäi näkyviin. Merivalli, majakka ja kirkkorakennus kertovat erilaisista rakentamisen tarpeista.",
+   "tehtava": {
+    "kysymys": "Millainen yhteisö vei St. Andrew's Kirkin kesken jääneen rakentamisen loppuun?",
+    "vaihtoehdot": [
+     "Skotlantilaiset presbyteerit",
+     "Ranskalaiset dominikaanit",
+     "Englantilaiset kveekarit",
+     "Hollantilaiset luterilaiset"
+    ],
+    "oikea": 0,
+    "fakta": "Hankkeen aloittanut reformoitu seurakunta joutui luopumaan rakentamisesta, ja skotlantilainen seurakunta avasi kirkon."
+   },
+   "nostot": [
+    {
+     "otsikko": "Kaupunki ehti olla Longchamps ja Stabroek",
+     "teksti": "Georgetownin varhaiset nimet kertovat vaihtuneista siirtomaahallinnoista. Kaupunki perustettiin 1700-luvun lopulla ranskalaisten miehittäessä lyhyesti hollantilaista Demeraran siirtomaata, ja sitä kutsuttiin Longchampsiksi. Hollantilaishallinnon aikana nimeksi tuli Stabroek. Britannian aikana kaupunki nimettiin kuningas Yrjö III:n mukaan Georgetowniksi. Stabroek ei silti kadonnut kokonaan: se säilyy kaupunginosan ja torin nimessä. Sama paikka voi kantaa usean aikakauden nimiä yhtä aikaa.",
+     "tiedosto": "Georgetown from the air (23284743859).jpg",
+     "lyhyt": "Georgetownin rantakortteleita ilmasta vuonna 2015.",
+     "selite": "Suorat kadut ja matalat rakennukset näkyvät Atlantin rannikon edessä; vettä ja rantatasankoa erottuu taustalla.",
+     "lahde": "Dan Sloan, Wikimedia Commons (CC BY-SA 2.0)",
+     "wiki": "Georgetown, Guyana"
+    },
+    {
+     "otsikko": "Kokers-portit hoitavat vedenpoistoa",
+     "teksti": "Georgetownin tasainen rannikko ei ole yksinkertainen paikka kaupungille. Osa maanpinnasta on nousuveden korkeutta alempana, joten merivalli suojaa kaupunkia Atlantin vedeltä. Sadeveden poistoon tarvitaan puolestaan kanavia ja kokers-sulkuja eli kanavien vedenpoistoluukkuja. Hollantilaiset rakensivat kanavaverkkoa, jota britit myöhemmin jatkoivat. Katujen ruudukon läpi kulkee siis toinenkin verkko, veden reitti. Merivallin ja kanavien tehtävät täydentävät toisiaan: toinen rajoittaa meren pääsyä sisään, toinen auttaa ylimääräistä vettä pois.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Georgetown, Guyana"
+    },
+    {
+     "otsikko": "Majakan alla on puupaaluja",
+     "teksti": "Georgetownin majakka seisoo Water Streetillä. Sen kivinen torni perustuu greenheart-puusta tehtyihin paaluihin, joten maan päällä ja alla on eri rakennusaine. Ensimmäinen majakka rakennettiin 1800-luvun alkupuolella, ja se korvattiin uudella jo 1800-luvun alkupuolella. Nykyinen torni oli siten olemassa vuoden 1873 kaupungissa. Ylöspäin kapenevassa tornissa on parveke ja lyhty, ja sen ulkopintaa merkitsevät punaiset ja valkoiset pystysuorat raidat. Satamakaupungin merimerkki kertoo myös siitä, miten rannikon maahan perustetaan rakennus.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "Georgetown Lighthouse, Guyana"
+    },
+    {
+     "otsikko": "Yksi kirkko, kaksi rakennuttajayhteisöä",
+     "teksti": "St. Andrew's Kirkin rakentamisen aloitti hollantilainen reformoitu seurakunta 1800-luvun alussa. Rahavaikeudet keskeyttivät hankkeen, ja kirkon avasivat lopulta skotlantilaiset presbyteerit. Rakennukseen liittyy siis kahden kirkkoyhteisön historia. Se sijaitsee Brickdam-kadun varrella lähellä parlamenttirakennusta. Kirkko perusti myöhemmin koulun ja isännöi julkisia konsertteja sekä resitaaleja. Jumalanpalvelusten rinnalle tuli opetusta ja musiikkia, ja kirkko oli käytössä jo ennen vuotta 1873.",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": "",
+     "wiki": "St. Andrew's Kirk, Georgetown"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Water Streetin majakka ja kaupungin puutarhat kertovat rannikon rakentamisesta ja yhteisistä tiloista. Pienempi Promenade Gardens ja kasvitieteellinen puutarha ovat eri puolilla keskustaa.",
+  "rajat": {
+   "pohjoinen": 6.827,
+   "etela": 6.802,
+   "lansi": -58.1697,
+   "ita": -58.1427
+  },
+  "kohteet": [
+   {
+    "nimi": "Georgetownin majakka",
+    "lat": 6.8237,
+    "lon": -58.16436
+   },
+   {
+    "nimi": "Promenade Gardens",
+    "tyyppi": "luonto",
+    "lat": 6.81661,
+    "lon": -58.16626
+   },
+   {
+    "nimi": "Guyana Botanical Gardens",
+    "tyyppi": "luonto",
+    "lat": 6.80547,
+    "lon": -58.14602
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Georgetownin majakka": {
+   "aika": "1800-luvun alkupuoli",
+   "teksti": "Georgetownin majakka sijaitsee Water Streetillä. Ensimmäinen majakka rakennettiin 1800-luvun alkupuolella ja korvattiin uudella 1800-luvun alkupuolella. Nykyinen torni oli siten olemassa jo vuonna 1873. Ylöspäin kapenevassa kivisessä tornissa on parveke ja lyhty, ja sen ulkopintaa merkitsevät punaiset ja valkoiset pystysuorat raidat. Majakka kuuluu Guyanan National Trustin ylläpitämiin kohteisiin.\n\nTornin perustus on greenheart-puusta tehtyjen paalujen varassa. Kivirakenne ja puinen perustus ovat siis saman rakennuksen eri osia. Sen valo näyttää punaista tai valkoista katselusuunnan mukaan, joten kyse ei ole pelkästä yöllä erottuvasta tornista vaan merenkulun merkkijärjestelmästä. Majakka liittyy Georgetownin paikkaan jokisuun satamakaupunkina. Mahdollinen nousu torniin ja muut vierailukäytännöt pitää tarkistaa erikseen.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Promenade Gardens": {
+   "aika": "",
+   "teksti": "Promenade Gardens on Georgetownin keskustan julkinen puutarha Middle Streetin tuntumassa. Siellä kasvaa trooppisia kasveja, ja se on pienempi kuin idempänä sijaitseva Guyana Botanical Gardens. Keskustan merkittävät rakennukset, kuten National Library ja St. George's Cathedral, sijoittuvat puutarhan ja Independence Squaren ympärille.\n\nMiddle Street erottaa puutarhan eteläpuolisesta Independence Parkista, jota kutsutaan myös Parade Groundiksi. Tämä naapuripaikka liittyy siirtomaa-ajan historiaan: siellä teloitettiin orjuutettuja ihmisiä, jotka osallistuivat kapinaan 1800-luvun alussa. Puutarha ja paraatikenttä ovat eri kohteita.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Guyana Botanical Gardens": {
+   "aika": "1800-luvun loppupuoli",
+   "teksti": "Guyana Botanical Gardens perustettiin hylätyn Plantation Vlissengenin sokeritilan maalle 1800-luvun loppupuolella. Paikka oli silloisen kaupungin itälaidalla, mutta nykyisin ympärillä on asuinalueita. Puutarha sijaitsee Guyanan eläintarhan ja Castellani Housen lähellä. Sen varhaisiin hoitajiin kuului kasvitieteilijä George Samuel Jenman.\n\nPuutarhan manaatit elävät lammessa eläintarhan lähellä mutta sen ulkopuolella. Niitä tuotiin alueelle jo 1800-luvun loppupuolella, ja manaatteja pidetään myös kaupungin National Parkissa. Puutarhassa kasvaa trooppisia kasveja, palmuja ja suuria lumpeita.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "https://en.wikipedia.org/wiki/Guyana_Botanical_Gardens ; https://en.wikivoyage.org/wiki/Georgetown_(Guyana)"
+  }
+ },
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Cheddi Jagan International Airport; lisäksi Eugene F. Correia International Airport",
+  "huomiot": [
+   "C-tekstiluonnos, A rajattu. Kuvat erillisessä putkessa: kaikkien neljä kenttää tyhjiä.",
+   "Sääauditointi 48/48 avoin; saatiedot:null eikä säänumeroita.",
+   "Kartta partial 3/6; vain paikkojen omat WP-pisteet, ei Wikivoyage- tai kaupunkipisteen lainaamista.",
+   "St. George's Cathedralin vuosiluvut ristiriitaisia WP-artikkelin sisällä; käytetään 1800-luvun loppua.",
+   "Promenade Gardensin ja Botanical Gardensin tarkka perustamisen 1873-suhde tarvitsee lisävarmennuksen; ei fiktiivistä isoisän havaintoa.",
+   "D/E/F, nykyinen matkustusturvallisuuden varmennus, hyväksyntä, pelikytkentä ja julkaisu avoimia."
+  ]
+ }
 }

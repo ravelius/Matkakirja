@@ -1,398 +1,398 @@
 {
-  "$skeema": "matkakirja-paakaupunki/1",
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "paramaribo",
+ "maa": "SUR",
+ "era": "e13",
+ "kaupunki": {
   "id": "paramaribo",
-  "maa": "SUR",
-  "era": "e13",
-  "kaupunki": {
-    "id": "paramaribo",
-    "name": "Paramaribo",
-    "wiki": "Paramaribo",
-    "ambience": "satama",
-    "pallo": {
-      "lat": 5.852,
-      "lon": -55.203
-    }
-  },
-  "artikkeli": {
-    "intro": "Paramaribo on Surinamen pääkaupunki **Surinamejoen rannalla**, Atlantin tuntumassa. Sen historiallisessa keskustassa eurooppalaiset rakennusmuodot on toteutettu paikallisesta puusta ja paikallisin käsityötaidoin. Kadutkin seuraavat osittain simpukankuorista muodostuneita maaharjanteita, jotka tarjosivat ympäröivää suota kuivemman rakennuspaikan. Maailmanperintöä on täällä kokonainen kaupunkiympäristö, ei vain yksittäinen juhlarakennus.\n\nParamaribon siirtomaa-ajan kaupunki kasvoi vanhan alkuperäiskansan kylän paikalle. Isoisän matkavuonna 1873 täällä oli jo linnoitus, puutaloja ja Alankomaiden hallinnon keskus. Kaupungin taustaan kuuluu myös plantaasitalous ja orjuus, joiden jälkeen monet entiset orjuutetut muuttivat pääkaupunkiin. Nykyinen Paramaribo kokoaa Surinamen kauppaa, palveluja ja opiskelua. Sen monien yhteisöjen historia näkyy rakennusten lisäksi ruokapöydässä: **roti, pom ja jaavalaiset ruuat** kuuluvat samaan kaupunkiin.",
-    "teksti": "Paramaribon historiallinen ydin on Surinamejoen vasemmalla rannalla. Sen puutalot yhdistävät eurooppalaisia rakennusmuotoja paikallisiin materiaaleihin ja käsityötaitoihin. Säilynyt katuverkko kuuluu kaupungin maailmanperintöarvoihin siinä missä rakennuksetkin.\n\nLinnoituksen ympärille kasvanut kaupunki oli olemassa kauan ennen vuotta 1873. Hallintorakennukset, joenranta ja palmupuisto kuuluivat sen maisemaan, mutta nykyinen puukatedraali rakennettiin vasta myöhemmin. Menneisyys ei siten näy kaikissa nykykohteissa saman ikäisenä.\n\nKaupunki on myös Surinamen kaupan ja rahoituksen keskus. Joella kulkee pieniä matkustajalauttoja, ja keskustan ulkopuolella Zorg en Hoopin lentokenttä palvelee paikallisia lentoja. Pääkaupungin historiaa voi seurata talosta toiseen, mutta sen yhteydet jatkuvat jokiväylille ja maan sisäosiin."
-  },
-  "valokuva": {
-    "tiedosto": "Luchtfoto van ’t Hogerhuysstraat Paramaribo Suriname.jpg",
-    "lyhyt": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.",
-    "selite": "Paramaribo on Surinamen pääkaupunki ja maan kaupan keskus.",
-    "lahde": "NullAspect, Commons (CC BY-SA 4.0)"
-  },
-  "kaupunkilehti": [
-    {
-      "id": "kaupunki",
-      "nimi": "Paramaribo",
-      "johdanto": "Simpukkaharjanteille rakennettu puukaupunki elää Surinamejoen varrella. Sen talot, torit ja ruokapaikat kertovat paikallisista taidoista ja monista yhteyksistä.",
-      "kansikuvat": [
-        {
-          "tiedosto": "Waterkant Paramaribo with the Unesco Heritage Buildings.jpg",
-          "lyhyt": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan.",
-          "selite": "Waterkant kuuluu Paramaribon historialliseen jokirannan puukeskustaan.",
-          "lahde": "Rafaeljantz, Wikimedia Commons (CC BY-SA 4.0)"
-        },
-        {
-          "tiedosto": "Paramaribo aan de Surinamerivier, gezien vanaf de ms Nestor, Bestanddeelnr 252-2143.jpg",
-          "lyhyt": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955.",
-          "selite": "Paramaribon rantakaupunkia Suriname-joelta nähtynä 1. lokakuuta 1955.",
-          "lahde": "Willem van de Poll, Wikimedia Commons (CC0)"
-        },
-        {
-          "tiedosto": "Overzicht van uit de lucht van Paramaribo - Paramaribo - 20417679 - RCE.jpg",
-          "lyhyt": "Paramaribon laaja ilmakuva syyskuulta 1997.",
-          "selite": "Paramaribon laaja ilmakuva syyskuulta 1997.",
-          "lahde": "Loek Tangel, Wikimedia Commons (CC BY-SA 4.0)"
-        }
-      ],
-      "nostot": [
-        {
-          "otsikko": "Kadun alla on simpukoita",
-          "teksti": "Paramaribon vanhan keskustan pääkaduilla on maantieteellinen selitys: ne seuraavat simpukankuorista muodostuneita harjanteita. Ympäröivä maa oli kosteaa, mutta harjanteet tarjosivat rakentamiselle luonnostaan kuivemman pohjan. Fort Zeelandian ympäriltä lähtenyt katuverkko järjestettiin ruutukaavaksi, ja myöhemmin kaupunkia laajennettiin myös suomaalle. Historiallisen keskustan arvo ei siis ole vain puutaloissa. Myös katujen suunnat kertovat, miten kaupunki sovitettiin jokivarren maahan.",
-          "wiki": "Paramaribo",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Uusi nimi ei tarttunut",
-          "teksti": "Kun hollantilaiset saivat Paramaribon haltuunsa 1600-luvulla, kaupungille annettiin nimeksi New Middelburg. Asukkaat eivät kuitenkaan omaksuneet sitä, ja vanha nimi jäi käyttöön. Linnoituksen uusi nimi Fort Zeelandia sen sijaan säilyi: se viittasi laivaston rahoittaneeseen Alankomaiden maakuntaan. Kaupungin ja linnoituksen nimissä saman vallanvaihdoksen jälki on siten erilainen. Paramaribon nimi palautuu paikalla olleeseen alkuperäiskansan kylään, joten se kantaa siirtomaakaupunkia vanhempaa muistia.",
-          "wiki": "Paramaribo",
-          "tiedosto": "Paramaribo District 01.jpg",
-          "lyhyt": "Paramaribon aluetta ilmasta 11.7.2018.",
-          "selite": "Paramaribon aluetta ilmasta 11.7.2018.",
-          "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)"
-        },
-        {
-          "otsikko": "Hollantilainen muoto, paikallinen puu",
-          "teksti": "Paramaribon historialliset talot eivät ole suoria kopioita Alankomaiden kaupungeista. Eurooppalaiset rakennusmuodot kohtasivat täällä paikalliset materiaalit ja rakentajien taidot. Kaupunkikuvaan tuli pääosin puusta tehtyjä, selkeitä ja symmetrisiä rakennuksia, joissa näkyy myös kreolikulttuurin vaikutus. Säilyttämisessä materiaali ratkaisee: puutaloja täytyy korjata, ja tuli uhkaa niitä. Maailmanperintöalueella suojelun kohteena on tämä rakentamisen yhteinen kieli katuineen ja avoimine tiloineen.",
-          "wiki": "Paramaribo",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Ostokset vaihtavat kerrosta",
-          "teksti": "Waterkantin varrella toimiva Keskustori jakaa tavarat kerroksiin. Alhaalla myydään kalaa, lihaa, vihanneksia ja hedelmiä; ylempänä vastaan tulevat vaatteet, kengät ja keittiötarvikkeet. Sama rakennus palvelee siis sekä ruokapöytää että kodin muita tarpeita. Joenrannan torilta saa myös välipaloja, joten markkinakierros voi jatkua maisteluna. Kauppiaita ei pidä käsitellä matkamuistokuvan rekvisiittana: osa suhtautuu valokuvaamiseen kielteisesti, ja lupa täytyy kysyä ennen kameran nostamista.",
-          "wiki": "Paramaribo",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "matkailijalle": {
-        "kuva": {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        "kappale": "Paramaribon vanha keskusta avautuu kävellen. Joenrannasta pääsee puutalokaduille, linnoitukselle ja palmupuistoon. Keskustori tarjoaa sekä tuoretta ruokaa että arkisia tavaroita. Jaavalaisia ruokapaikkoja etsivän kannattaa suunnata myös Blauwgrondiin. Kansainvälinen päälentoasema sijaitsee kaupungin ulkopuolella, joten kuljetus keskustaan täytyy järjestää erikseen.",
-        "artikkeli": {
-          "nimi": "Matkailijan Paramaribo",
-          "taitto": "opas",
-          "teksti": "Seuraa jokea, poikkea torille ja jatka puutalokatuja palmujen luo.",
-          "nosto": "Historiallinen keskusta sopii kävelykierrokseen. Blauwgrondin jaavalaiset ruokapaikat näyttävät kaupungista toisen puolen.",
-          "jaksot": [
-            {
-              "otsikko": "Perille ja liikkeelle",
-              "teksti": "Kansainvälinen päälentoasema on Johan Adolf Pengel International Airport Zanderijin luona, kaupungin ulkopuolella. Zorg en Hoop on eri kenttä lähempänä keskustaa, ja se palvelee muun muassa paikallisia lentoja. Keskustan vanhaa ydintä voi kiertää jalan. Kauempana toimivat taksit ja yksityiset bussit; varmista reitti ja lähtötapa paikalla, sillä bussi voi lähteä vasta täytyttyään. Surinamessa liikenne kulkee vasemmalla.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Puutalojen ja joen reitti",
-              "teksti": "Waterkantin takana ovat vanhan keskustan kadut. Fort Zeelandia, vanhat upseeritalot, palmupuisto ja tori muodostavat kävelyllä saavutettavan kokonaisuuden. Pysähdy talojen lisäksi katsomaan katujen linjoja: myös katuverkko kuuluu maailmanperintöön. Joella kulkee venetakseja vastarannan Meerzorgiin, mutta lauttamatka on oma retkensä, ei pelkkä jatko jalkakäytävälle.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Torilta Blauwgrondiin",
-              "teksti": "Keskustorin alakerta kuuluu tuoreelle ruualle ja yläkerta muille tavaroille. Kierroksen voi aloittaa hedelmistä ja jatkaa joenrannan pieniin ruokapaikkoihin. Jaavalaisia makuja etsivälle Blauwgrond on oma etappinsa: kaupunginosassa toimii pieniä warung-ravintoloita. Nimi tarkoittaa jaavaksi pientä ruokapaikkaa tai kauppaa. Se tarjoaa täsmällisemmän suunnan kuin yleinen pyyntö löytää jotakin paikallista.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Mitä täällä syödään",
-              "teksti": "Roti tarjotaan usein currykanan, perunan ja vihannesten kanssa. Pomissa uuniruokaan yhdistyvät kana ja tayer-kasvin raastettu maavarsi. Pieni leipä voi saada täytteekseen myös pomia tai bakkeljauw-suolakalaa. Jaavalaisiin vaihtoehtoihin kuuluvat paistetut riisi- ja nuudeliruuat. Madame Jeanette -chili antaa monille annoksille tulisuutta, joten maustamisesta kannattaa sopia tilatessa.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            },
-            {
-              "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Paramaribo on lämmin ja kostea kaupunki, jossa on sateisempia ja vähemmän sateisia jaksoja. Kävelypäivään sopivat kevyt sadevaruste ja mahdollisuus pitää tauko varjossa. Palmupuisto ja katetun torin kierros tuovat ulkona liikkumiseen erilaisia taukopaikkoja. Retkien olosuhteet kannattaa tarkistaa lähempänä lähtöä; kaupungissa liikkuminen ja sisämaan jokimatka vaativat eri suunnitelman.",
-              "kuva": {
-                "tiedosto": "",
-                "lyhyt": "",
-                "selite": "",
-                "lahde": ""
-              }
-            }
-          ],
-          "matkailu": {
-            "parasta": [
-              {
-                "mita": "Puutalokadut",
-                "tahdet": 3,
-                "selite": "Talot ja säilynyt katuverkko muodostavat yhteisen maailmanperintökohteen."
-              },
-              {
-                "mita": "Fort Zeelandia",
-                "tahdet": 3,
-                "selite": "Jokirannan vanhassa linnoituksessa toimii Suriname Museum."
-              },
-              {
-                "mita": "Keskustori",
-                "tahdet": 3,
-                "selite": "Tuoreruoka ja kodin tavarat täyttävät eri kerrokset."
-              },
-              {
-                "mita": "Blauwgrondin warungit",
-                "tahdet": 2,
-                "selite": "Pienet ruokapaikat tekevät kaupungin jaavalaisia makuja tutuksi."
-              },
-              {
-                "mita": "Palmupuisto",
-                "tahdet": 2,
-                "selite": "Palmentuin sijaitsee historiallisen keskustan laidalla palatsin takana."
-              }
-            ],
-            "hyvaTietaa": [
-              {
-                "otsikko": "Kaksi lentokenttää",
-                "teksti": "Johan Adolf Pengel ja Zorg en Hoop ovat eri paikkoja; varmista oikea kenttä matkasuunnitelmasta."
-              },
-              {
-                "otsikko": "Kysy ennen kuvaamista",
-                "teksti": "Torilla osa myyjistä ei halua tulla valokuvatuiksi."
-              },
-              {
-                "otsikko": "Vasen liikenne",
-                "teksti": "Tarkista liikenteen tulosuunta kadulle astuessa."
-              },
-              {
-                "otsikko": "Kieliä rinnakkain",
-                "teksti": "Hollannin lisäksi kaupungissa puhutaan muun muassa sranan tongoa, sarnami hindustania ja jaavaa."
-              }
-            ]
-          },
-          "lahde": "Wikipedia"
-        }
-      }
-    },
-    {
-      "id": "ruoka",
-      "nimi": "Sama kaupunki, monta keittiötä",
-      "johdanto": "Paramaribon ruokapaikoissa yhteisöjen historia jatkuu leivissä, uuniruuissa ja nuudeleissa. Myös makea kakku voi alkaa tutusta peruskasvista.",
-      "tehtava": {
-        "kysymys": "Mikä kasvi kuuluu kookoksen rinnalla boyo-kakun aineksiin?",
-        "vaihtoehdot": [
-          "Maniokki",
-          "Vehnä",
-          "Tattari",
-          "Ruis"
-        ],
-        "oikea": 0,
-        "fakta": "Boyo yhdistää kookoksen sellaiseen kasviin, jota käytetään Surinamessa myös perusruokana: maniokkiin."
-      },
-      "nostot": [
-        {
-          "otsikko": "Uunivuoassa on maavarsi",
-          "teksti": "Pomin pohjaksi raastetaan pomtajeriksi kutsutun tayer-kasvin maanalainen varsi. Sen väliin ladotaan paistettuja kananpaloja, ja seokseen kuuluu sitrusmehua sekä sipulista, tomaatista ja mausteista tehtyä kastiketta. Ruoka paistuu uunissa kullanruskeaksi. Pom kuuluu Surinamen juhlapöytiin, mutta sen voi löytää myös leivän välistä nimellä broodje pom. Samalla ruualla on siis sekä suuren yhteisen aterian että pienen välipalan muoto. Sen taustaan liitetään sekä kreolinen että juutalainen ruokaperinne.",
-          "wiki": "Pom (dish)",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Roti kokoaa juhlaväkeä",
-          "teksti": "Surinamelainen rotiateria yhdistää leivän usein currykanan, perunan ja vihannesten kanssa. Sitä tarjotaan myös juhlissa, joissa on paljon vieraita. Eteläaasialainen ruokaperinne kuuluu Paramariboon yhtä luontevasti kuin jaavalaiset nuudelit ja kreoliset uuniruuat. Keittiössä yhteisöjen vaikutukset ovat kulkeneet molempiin suuntiin: tuttu ruoka voi saada rinnalleen toisen perinteen aineksia. Rotia etsiessä kannattaa katsoa koko annosta, sillä nimi kertoo leivästä mutta ateriaan kuuluu paljon muutakin.",
-          "wiki": "Culture of Suriname",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Warung on kaupunginosan ruokapaikka",
-          "teksti": "Paramaribon pohjoispuolella Blauwgrondin kaupunginosassa toimii jaavalaisia warung-ruokapaikkoja. Jaavan sana tarkoittaa pientä ravintolaa tai kauppaa. Monet paikoista ovat ulkoasultaan vaatimattomia, ja ruokaa nautitaan myös ulkopöydissä. Surinamen jaavalaisiin makuihin kuuluvat nasi goreng eli paistettu riisi ja mie goreng eli paistetut nuudelit. Blauwgrond antaa niille paikallisen osoitteen: kyse ei ole vain ruokalistan lainasanoista, vaan kaupungissa elävästä yhteisöstä ja sen ruokapaikoista.",
-          "wiki": "Paramaribo",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        },
-        {
-          "otsikko": "Maniokki päätyy myös kakkuun",
-          "teksti": "Boyo on makea kakku, johon käytetään kookosta ja maniokkia. Surinamen keittiössä maniokki kuuluu perusaineksiin riisin, tayerin ja rotin rinnalla, joten sama kasvi kulkee myös arkiruuan puolella. Jälkiruokavalikoimaan kuuluu lisäksi fiadu, jossa on rusinoita, manteleita ja sokeroitua hedelmää, sekä vaniljalla maustettuja maissitärkkelyskeksejä. Paramaribon ruokakulttuurin monet juuret näkyvät näin myös aterian lopussa. Kaikki paikalliset maut eivät tule chilistä: osa löytyy kakkupalasta.",
-          "wiki": "Culture of Suriname",
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ]
-    }
-  ],
-  "kysymykset": [
-    {
-      "q": "Minkä maan pääkaupunki Paramaribo on?",
-      "options": [
-        "Suriname",
-        "Guyana",
-        "Uruguay",
-        "Paraguay"
-      ],
-      "correct": 0,
-      "level": 1,
-      "hint": "Maan virallinen kieli on hollanti.",
-      "fact": "Paramaribo sijaitsee Surinamessa Surinamejoen rannalla.",
-      "source": "https://en.wikipedia.org/wiki/Paramaribo"
-    },
-    {
-      "q": "Miksi vanhan keskustan pääkadut seuraavat simpukkaharjanteita?",
-      "options": [
-        "Ne tarjosivat kuivemman rakennuspohjan",
-        "Ne rajasivat vanhat kaivosalueet",
-        "Ne toimivat jokisataman aallonmurtajina",
-        "Ne osoittivat vanhojen peltolohkojen rajat"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Vertaa harjanteen maata ympäröivään suohon.",
-      "fact": "Simpukkaharjanteet tarjosivat luonnostaan hyvin kuivuvan pohjan katujen ja rakennusten sijoittamiselle.",
-      "source": "https://whc.unesco.org/en/list/940/"
-    },
-    {
-      "q": "Millä nimellä Fort Zeelandia tunnettiin brittiläiskaudella?",
-      "options": [
-        "Fort Willoughby",
-        "Fort Wellington",
-        "Fort Victoria",
-        "Fort Edward"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Nimi tuli Surinamen brittiläisen siirtokunnan perustamisen taustalla olleelta kuvernööriltä.",
-      "fact": "Hollantilaiset nimesivät Fort Willoughbyn uudelleen Fort Zeelandiaksi.",
-      "source": "https://en.wikipedia.org/wiki/Fort_Zeelandia_(Paramaribo)"
-    },
-    {
-      "q": "Mikä raastettu aines kuuluu pom-uuniruokaan?",
-      "options": [
-        "Tayer-kasvin maavarsi",
-        "Bataatin nuoret lehdet",
-        "Maissin kuivat jyvät",
-        "Banaanin kukan terälehdet"
-      ],
-      "correct": 0,
-      "level": 3,
-      "hint": "Kasvin paikallinen nimi tässä ruuassa on pomtajer.",
-      "fact": "Pomissa käytetään tayer-kasvin maanalaista vartta kanan ja sitrusmehun rinnalla.",
-      "source": "https://en.wikipedia.org/wiki/Pom_(dish)"
-    },
-    {
-      "q": "Minkä ruokaperinteen warungeja löytyy Blauwgrondista?",
-      "options": [
-        "Jaavalaisen",
-        "Tiibetiläisen",
-        "Islantilaisen",
-        "Etiopialaisen"
-      ],
-      "correct": 0,
-      "level": 2,
-      "hint": "Sana warung tulee Indonesiassa puhuttavasta kielestä.",
-      "fact": "Blauwgrondissa on jaavalaisia pieniä ravintoloita ja ruokapaikkoja.",
-      "source": "https://en.wikivoyage.org/wiki/Paramaribo"
-    }
-  ],
-  "tiedot": [
-    "Paramaribon uudeksi nimeksi ehdotettu New Middelburg ei jäänyt asukkaiden käyttöön, mutta linnoituksen nimi Fort Zeelandia säilyi.",
-    "Keskustorin alakerrassa myydään tuoretta ruokaa, yläkerrassa muun muassa vaatteita ja keittiötarvikkeita.",
-    "Pom kuuluu juhlapöytään, mutta Paramaribossa sitä tarjotaan myös leivän täytteenä."
-  ],
-  "saatiedot": null,
-  "ehdotukset": {
-    "lentoasema": "Johan Adolf Pengel International Airport (PBM)",
-    "huomiot": [
-      "C-tekstiluonnos; kuva-, kartta- ja sääportit avoinna.",
-      "Väestölukua ei käytetä lukijateksteissä. Kontekstin 240 924 (2012) koskee Paramaribon piiriä.",
-      "Sääauditointi avoin: saa.json säilytetty muuttamatta; saatiedot null.",
-      "Nykyinen matkustusturvallisuus ja oppaan palvelut tarkistettava riippumattomassa D-vaiheessa."
-    ]
-  },
-  "kohdekartta": {
-    "numeroympyrat": true,
-    "esittely": "Vanha linnoitus ja palatsin takainen palmupuisto kuuluvat Paramaribon historialliseen ytimeen. Niissä siirtomaa-ajan kaupunki kohtaa museon ja julkisen viheralueen.",
-    "rajat": {
-      "pohjoinen": 5.831,
-      "etela": 5.8224,
-      "lansi": -55.153,
-      "ita": -55.1471
-    },
-    "kohteet": [
-      {
-        "nimi": "Fort Zeelandia",
-        "lat": 5.8252,
-        "lon": -55.14987
-      },
-      {
-        "nimi": "Palmupuisto",
-        "tyyppi": "luonto",
-        "lat": 5.8282,
-        "lon": -55.1502
-      }
-    ]
-  },
-  "nahtavyydet": {
-    "Fort Zeelandia": {
-      "aika": "1600-luku",
-      "teksti": "Fort Zeelandia seisoo Paramaribon historiallisessa keskustassa Surinamejoen äärellä. Paikalla olleesta ranskalaisesta puulinnoituksesta kehittyi brittiläiskaudella Fort Willoughby. Hollantilaisten haltuun siirryttyään se sai nykyisen nimensä. Linnoitus oli siten olemassa jo kauan ennen isoisän matkavuotta 1873, vaikka sen käyttö ja rakennukset ovat muuttuneet ajan mukana.\n\nNykyisin linnoituksessa toimii Suriname Museum. Sen kokoelmissa on arkeologista aineistoa, tekstiilejä, historiallisia valokuvia ja siirtomaa-ajan huonekaluja. Vierailu kertoo siten myös asukkaiden elämästä, ei vain puolustusvarustuksista. Linnoituksen lähellä säilyneet upseeritalot kuuluvat samaan historialliseen ympäristöön, ja entisessä komentajan talossa toimii taidekoulu.",
-      "kuvat": [
-        {
-          "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg",
-          "lyhyt": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-          "selite": "Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.",
-          "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)"
-        }
-      ],
-      "lahde": "Wikipedia"
-    },
-    "Palmupuisto": {
-      "aika": "1600-luvulta",
-      "teksti": "Palmentuin eli Palmupuisto sijaitsee Paramaribon historiallisen keskustan pohjoislaidalla presidentinpalatsin takana. Kuningaspalmut istutettiin kuvernööri Cornelis van Aerssen van Sommelsdijckin määräyksestä siirtomaakaudella, ja puutarha avattiin yleisölle jo 1600-luvulla. Alue suljettiin myöhemmin pitkäksi aikaa ja avattiin uudelleen vasta 1900-luvun alussa. Isoisän matkavuonna 1873 palmupuutarha siis oli olemassa, mutta se ei ollut nykyisen kaltainen avoin julkinen puisto.\n\nPalmupuisto mainitaan kaupungin maailmanperintöarvoihin kuuluvana maiseman osana. Palmujen lisäksi siellä on leikkipaikka, ja juhlapäivinä alueelle tulee myyntikojuja. Puustossa elää trooppisia lintuja, ja puutarhan historia liittyy suoraan sitä ympäröivään hallintokaupunkiin. Kävijälle vanha istutusalue toimii nykyisin kävely- ja levähdyspaikkana keskellä kaupunkia.",
-      "kuvat": [
-        {
-          "tiedosto": "",
-          "lyhyt": "",
-          "selite": "",
-          "lahde": ""
-        }
-      ],
-      "lahde": "Wikipedia"
-    }
+  "name": "Paramaribo",
+  "wiki": "Paramaribo",
+  "ambience": "satama",
+  "pallo": {
+   "lat": 5.852,
+   "lon": -55.203
   }
+ },
+ "artikkeli": {
+  "intro": "Paramaribo on Surinamen pääkaupunki **Surinamejoen rannalla**, Atlantin tuntumassa. Sen historiallisessa keskustassa eurooppalaiset rakennusmuodot on toteutettu paikallisesta puusta ja paikallisin käsityötaidoin. Kadutkin seuraavat osittain simpukankuorista muodostuneita maaharjanteita, jotka tarjosivat ympäröivää suota kuivemman rakennuspaikan. Historiallinen keskusta kuuluu Unescon maailmanperintöön kokonaisena kaupunkiympäristönä.\n\nParamaribon siirtomaa-ajan kaupunki kasvoi vanhan alkuperäiskansan kylän paikalle. Isoisän matkavuonna 1873 täällä oli jo linnoitus, puutaloja ja Alankomaiden hallinnon keskus. Kaupungin taustaan kuuluu myös plantaasitalous ja orjuus, joiden jälkeen monet entiset orjuutetut muuttivat pääkaupunkiin. Nykyinen Paramaribo kokoaa Surinamen kauppaa, palveluja ja opiskelua. Sen monien yhteisöjen historia näkyy rakennusten lisäksi ruokapöydässä: **roti, pom ja jaavalaiset ruuat** kuuluvat samaan kaupunkiin.",
+  "teksti": "Paramaribon historiallinen ydin on Surinamejoen vasemmalla rannalla. Sen puutalot yhdistävät eurooppalaisia rakennusmuotoja paikallisiin materiaaleihin ja käsityötaitoihin. Säilynyt katuverkko kuuluu kaupungin maailmanperintöarvoihin siinä missä rakennuksetkin.\n\nLinnoituksen ympärille kasvanut kaupunki oli olemassa kauan ennen vuotta 1873. Hallintorakennukset, joenranta ja palmupuisto kuuluivat sen maisemaan, mutta nykyinen puukatedraali rakennettiin vasta myöhemmin. Menneisyys ei siten näy kaikissa nykykohteissa saman ikäisenä.\n\nKaupunki on myös Surinamen kaupan ja rahoituksen keskus. Joella kulkee pieniä matkustajalauttoja, ja keskustan ulkopuolella Zorg en Hoopin lentokenttä palvelee paikallisia lentoja. Pääkaupungin historiaa voi seurata talosta toiseen, mutta sen yhteydet jatkuvat jokiväylille ja maan sisäosiin."
+ },
+ "valokuva": {
+  "tiedosto": "Luchtfoto van ’t Hogerhuysstraat Paramaribo Suriname.jpg",
+  "lyhyt": "Abrabrokin asuinalue ja ’t Hogerhuysstraat ilmasta.",
+  "selite": "Paramaribon vuoden 2025 ilmakuvassa leveä tie ja liikenneympyrä kulkevat matalan asutuksen lomassa.",
+  "lahde": "NullAspect, Commons (CC BY-SA 4.0)"
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Paramaribo",
+   "johdanto": "Simpukkaharjanteille rakennettu puukaupunki elää Surinamejoen varrella. Sen talot, torit ja ruokapaikat kertovat paikallisista taidoista ja monista yhteyksistä.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Waterkant Paramaribo with the Unesco Heritage Buildings.jpg",
+     "lyhyt": "Waterkantin rakennuksia Surinamejoen rannalla.",
+     "selite": "Joen takana näkyy rivi historiallisia taloja, niiden korkeita kattoja ja puustoa.",
+     "lahde": "Rafaeljantz, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Paramaribo aan de Surinamerivier, gezien vanaf de ms Nestor, Bestanddeelnr 252-2143.jpg",
+     "lyhyt": "Paramaribon rantaa Surinamejoelta vuonna 1955.",
+     "selite": "Vanhassa valokuvassa satamalaiturin alus ja joenrannan rakennukset näkyvät ms Nestorilta katsottuna.",
+     "lahde": "Willem van de Poll, Wikimedia Commons (CC0)"
+    },
+    {
+     "tiedosto": "Overzicht van uit de lucht van Paramaribo - Paramaribo - 20417679 - RCE.jpg",
+     "lyhyt": "Paramaribon asutusta ja hautausmaa ilmasta.",
+     "selite": "Laajassa ilmakuvassa katujen ja matalien talojen lomassa erottuu suuri hautausmaa.",
+     "lahde": "Loek Tangel, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kadun alla on simpukoita",
+     "teksti": "Paramaribon vanhan keskustan pääkaduilla on maantieteellinen selitys: ne seuraavat simpukankuorista muodostuneita harjanteita. Ympäröivä maa oli kosteaa, mutta harjanteet tarjosivat rakentamiselle luonnostaan kuivemman pohjan. Fort Zeelandian ympäriltä lähtenyt katuverkko järjestettiin ruutukaavaksi, ja myöhemmin kaupunkia laajennettiin myös suomaalle. Katujen suunnat seuraavat kuoriaineksesta muodostuneita maaston harjanteita. Myös katujen suunnat kertovat, miten kaupunki sovitettiin jokivarren maahan.",
+     "wiki": "Paramaribo",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Uusi nimi ei tarttunut",
+     "teksti": "Kun hollantilaiset saivat Paramaribon haltuunsa 1600-luvulla, kaupungille annettiin nimeksi New Middelburg. Asukkaat eivät kuitenkaan omaksuneet sitä, ja vanha nimi jäi käyttöön. Linnoituksen uusi nimi Fort Zeelandia sen sijaan säilyi: se viittasi laivaston rahoittaneeseen Alankomaiden maakuntaan. Kaupungin ja linnoituksen nimissä saman vallanvaihdoksen jälki on siten erilainen. Paramaribon nimi palautuu todennäköisesti paikalla olleen alkuperäiskansan kylän nimeen Parmurbo.",
+     "wiki": "Paramaribo",
+     "tiedosto": "Paramaribo District 01.jpg",
+     "lyhyt": "Paramaribon piirikunnan kortteleita ilmasta.",
+     "selite": "Matala rakennuskanta levittäytyy katuverkon lomaan, ja taustalla näkyy jokivettä.",
+     "lahde": "Sn.fernandez, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "otsikko": "Hollantilainen muoto, paikallinen puu",
+     "teksti": "Paramaribon historialliset talot eivät ole suoria kopioita Alankomaiden kaupungeista. Eurooppalaiset rakennusmuodot kohtasivat täällä paikalliset materiaalit ja rakentajien taidot. Kaupunkikuvaan tuli pääosin puusta tehtyjä, selkeitä ja symmetrisiä rakennuksia, joissa näkyy myös kreolikulttuurin vaikutus. Säilyttämisessä materiaali ratkaisee: puutaloja täytyy korjata, ja tuli uhkaa niitä. Maailmanperintöalueella suojelun kohteena on tämä rakentamisen yhteinen kieli katuineen ja avoimine tiloineen.",
+     "wiki": "Paramaribo",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Ostokset vaihtavat kerrosta",
+     "teksti": "Waterkantin varrella toimiva Keskustori jakaa tavarat kerroksiin. Alhaalla myydään kalaa, lihaa, vihanneksia ja hedelmiä; ylempänä vastaan tulevat vaatteet, kengät ja keittiötarvikkeet. Sama rakennus palvelee siis sekä ruokapöytää että kodin muita tarpeita. Joenrannan torilta saa myös välipaloja, joten markkinakierros voi jatkua maisteluna. Torilla myydään myös välipaloja, joten ruokaostoksiin voi yhdistää aterian.",
+     "wiki": "Paramaribo",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    "kappale": "Paramaribon vanha keskusta avautuu kävellen. Joenrannasta pääsee puutalokaduille, linnoitukselle ja palmupuistoon. Keskustori tarjoaa sekä tuoretta ruokaa että arkisia tavaroita. Jaavalaisia ruokapaikkoja etsivän kannattaa suunnata myös Blauwgrondiin. Kansainvälinen päälentoasema sijaitsee kaupungin ulkopuolella, joten kuljetus keskustaan täytyy järjestää erikseen.",
+    "artikkeli": {
+     "nimi": "Matkailijan Paramaribo",
+     "taitto": "opas",
+     "teksti": "Seuraa jokea, poikkea torille ja jatka puutalokatuja palmujen luo.",
+     "nosto": "Historiallinen keskusta sopii kävelykierrokseen. Blauwgrondin jaavalaiset ruokapaikat näyttävät kaupungista toisen puolen.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Kansainvälinen päälentoasema on Johan Adolf Pengel International Airport Zanderijin luona, kaupungin ulkopuolella. Zorg en Hoop on eri kenttä lähempänä keskustaa, ja se palvelee muun muassa paikallisia lentoja. Keskustan vanhaa ydintä voi kiertää jalan. Kauempana toimivat taksit ja yksityiset bussit; varmista reitti ja lähtötapa paikalla, sillä bussi voi lähteä vasta täytyttyään. Surinamessa liikenne kulkee vasemmalla.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Puutalojen ja joen reitti",
+       "teksti": "Waterkantin takana ovat vanhan keskustan kadut. Fort Zeelandia, vanhat upseeritalot, palmupuisto ja tori muodostavat kävelyllä saavutettavan kokonaisuuden. Pysähdy talojen lisäksi katsomaan katujen linjoja: myös katuverkko kuuluu maailmanperintöön. Joella kulkee venetakseja vastarannan Meerzorgiin, mutta lauttamatka on oma retkensä, ei pelkkä jatko jalkakäytävälle.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Torilta Blauwgrondiin",
+       "teksti": "Keskustorin alakerta kuuluu tuoreelle ruualle ja yläkerta muille tavaroille. Kierroksen voi aloittaa hedelmistä ja jatkaa joenrannan pieniin ruokapaikkoihin. Jaavalaisia makuja etsivälle Blauwgrond on oma etappinsa: kaupunginosassa toimii pieniä warung-ravintoloita. Sana warung tarkoittaa jaavan kielessä pientä ruokapaikkaa tai kauppaa.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Roti tarjotaan usein currykanan, perunan ja vihannesten kanssa. Pomissa uuniruokaan yhdistyvät kana ja tayer-kasvin raastettu maavarsi. Pom-uuniruokaa tarjotaan myös leivän välissä. Jaavalaisiin vaihtoehtoihin kuuluvat paistetut riisi- ja nuudeliruuat.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Paramaribo on lämmin ja kostea kaupunki, jossa on sateisempia ja vähemmän sateisia jaksoja. Kävelypäivään sopivat kevyt sadevaruste ja mahdollisuus pitää tauko varjossa. Palmupuisto ja katetun torin kierros tuovat ulkona liikkumiseen erilaisia taukopaikkoja. Retkien olosuhteet kannattaa tarkistaa lähempänä lähtöä; kaupungissa liikkuminen ja sisämaan jokimatka vaativat eri suunnitelman.",
+       "kuva": {
+        "tiedosto": "",
+        "lyhyt": "",
+        "selite": "",
+        "lahde": ""
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Puutalokadut",
+        "tahdet": 3,
+        "selite": "Talot ja säilynyt katuverkko muodostavat yhteisen maailmanperintökohteen."
+       },
+       {
+        "mita": "Fort Zeelandia",
+        "tahdet": 3,
+        "selite": "Jokirannan vanhassa linnoituksessa toimii Surinaams Museum eli Surinamen museo."
+       },
+       {
+        "mita": "Keskustori",
+        "tahdet": 3,
+        "selite": "Tuoreruoka ja kodin tavarat täyttävät eri kerrokset."
+       },
+       {
+        "mita": "Blauwgrondin warungit",
+        "tahdet": 2,
+        "selite": "Pienet ruokapaikat tekevät kaupungin jaavalaisia makuja tutuksi."
+       },
+       {
+        "mita": "Palmupuisto",
+        "tahdet": 2,
+        "selite": "Palmentuin sijaitsee historiallisen keskustan laidalla palatsin takana."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Kaksi lentokenttää",
+        "teksti": "Johan Adolf Pengel ja Zorg en Hoop ovat eri paikkoja; varmista oikea kenttä matkasuunnitelmasta."
+       },
+       {
+        "otsikko": "Kysy ennen kuvaamista",
+        "teksti": "Torilla osa myyjistä ei halua tulla valokuvatuiksi."
+       },
+       {
+        "otsikko": "Vasen liikenne",
+        "teksti": "Tarkista liikenteen tulosuunta kadulle astuessa."
+       },
+       {
+        "otsikko": "Kieliä rinnakkain",
+        "teksti": "Hollannin lisäksi kaupungissa puhutaan muun muassa sranan tongoa, sarnami hindustania ja jaavaa."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Sama kaupunki, monta keittiötä",
+   "johdanto": "Paramaribon ruokapaikoissa yhteisöjen historia jatkuu leivissä, uuniruuissa ja nuudeleissa. Myös makea kakku voi alkaa tutusta peruskasvista.",
+   "tehtava": {
+    "kysymys": "Mikä kasvi kuuluu kookoksen rinnalla boyo-kakun aineksiin?",
+    "vaihtoehdot": [
+     "Maniokki",
+     "Vehnä",
+     "Tattari",
+     "Ruis"
+    ],
+    "oikea": 0,
+    "fakta": "Boyossa käytetään kookosta ja maniokkia. Maniokki kuuluu myös Surinamen arkisiin ravintokasveihin."
+   },
+   "nostot": [
+    {
+     "otsikko": "Uunivuoassa on maavarsi",
+     "teksti": "Pomin pohjaksi raastetaan pomtajeriksi kutsutun tayer-kasvin maanalainen varsi. Sen väliin ladotaan paistettuja kananpaloja, ja seokseen kuuluu sitrusmehua sekä sipulista, tomaatista ja mausteista tehtyä kastiketta. Ruoka paistuu uunissa kullanruskeaksi. Pom kuuluu Surinamen juhlapöytiin, mutta sen voi löytää myös leivän välistä nimellä broodje pom. Samalla ruualla on siis sekä suuren yhteisen aterian että pienen välipalan muoto. Sen taustaan liitetään sekä kreolinen että juutalainen ruokaperinne.",
+     "wiki": "Pom (dish)",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Roti kokoaa juhlaväkeä",
+     "teksti": "Surinamilainen rotiateria yhdistää leivän usein currykanan, perunan ja vihannesten kanssa. Sitä tarjotaan myös juhlissa, joissa on paljon vieraita. Eteläaasialainen ruokaperinne kuuluu Paramariboon yhtä luontevasti kuin jaavalaiset nuudelit ja kreoliset uuniruuat. Surinamen keittiössä eri yhteisöjen ruokaperinteet sekoittuvat. Rotia etsiessä kannattaa katsoa koko annosta, sillä nimi kertoo leivästä mutta ateriaan kuuluu paljon muutakin.",
+     "wiki": "Culture of Suriname",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Warung on kaupunginosan ruokapaikka",
+     "teksti": "Paramaribon pohjoispuolella Blauwgrondin kaupunginosassa toimii jaavalaisia warung-ruokapaikkoja. Jaavan sana tarkoittaa pientä ravintolaa tai kauppaa. Monet paikoista ovat ulkoasultaan vaatimattomia, ja ruokaa nautitaan myös ulkopöydissä. Surinamen jaavalaisiin makuihin kuuluvat nasi goreng eli paistettu riisi ja mie goreng eli paistetut nuudelit. Blauwgrond antaa niille paikallisen osoitteen: kyse ei ole vain ruokalistan lainasanoista, vaan kaupungissa elävästä yhteisöstä ja sen ruokapaikoista.",
+     "wiki": "Paramaribo",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    },
+    {
+     "otsikko": "Maniokki päätyy myös kakkuun",
+     "teksti": "Boyo on makea kakku, johon käytetään kookosta ja maniokkia. Surinamen keittiössä maniokki kuuluu perusaineksiin riisin ja tayerin rinnalla, joten sama kasvi kulkee myös arkiruuan puolella. Jälkiruokavalikoimaan kuuluu lisäksi fiadu, jossa on rusinoita, manteleita ja sokeroitua hedelmää, sekä vaniljalla maustettuja maissitärkkelyskeksejä. Paramaribon ruokakulttuurin monet juuret näkyvät näin myös aterian lopussa. Kaikki paikalliset maut eivät tule chilistä: osa löytyy kakkupalasta.",
+     "wiki": "Culture of Suriname",
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ]
+  }
+ ],
+ "kysymykset": [
+  {
+   "q": "Minkä maan pääkaupunki Paramaribo on?",
+   "options": [
+    "Suriname",
+    "Guyana",
+    "Uruguay",
+    "Paraguay"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Maan virallinen kieli on hollanti.",
+   "fact": "Paramaribo sijaitsee Surinamessa Surinamejoen rannalla.",
+   "source": "https://en.wikipedia.org/wiki/Paramaribo"
+  },
+  {
+   "q": "Miksi vanhan keskustan pääkadut seuraavat simpukkaharjanteita?",
+   "options": [
+    "Ne tarjosivat kuivemman rakennuspohjan",
+    "Ne rajasivat vanhat kaivosalueet",
+    "Ne toimivat jokisataman aallonmurtajina",
+    "Ne osoittivat vanhojen peltolohkojen rajat"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Vertaa harjanteen maata ympäröivään suohon.",
+   "fact": "Simpukkaharjanteet tarjosivat luonnostaan hyvin kuivuvan pohjan katujen ja rakennusten sijoittamiselle.",
+   "source": "https://whc.unesco.org/en/list/940/"
+  },
+  {
+   "q": "Millä nimellä Fort Zeelandia tunnettiin englantilaiskaudella?",
+   "options": [
+    "Fort Willoughby",
+    "Fort Wellington",
+    "Fort Victoria",
+    "Fort Edward"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Nimi tuli Surinamen englantilaisen siirtokunnan perustamisen taustalla olleelta kuvernööriltä.",
+   "fact": "Hollantilaiset nimesivät Fort Willoughbyn uudelleen Fort Zeelandiaksi.",
+   "source": "https://en.wikipedia.org/wiki/Fort_Zeelandia_(Paramaribo)"
+  },
+  {
+   "q": "Mikä raastettu aines kuuluu pom-uuniruokaan?",
+   "options": [
+    "Tayer-kasvin maavarsi",
+    "Bataatin juurimukula",
+    "Perunan varsimukula",
+    "Maniokin juurimukula"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Raaste muodostaa uunissa kypsyvän ruoan kasvispohjan.",
+   "fact": "Pomissa käytetään tayer-kasvin maanalaista vartta kanan ja sitrusmehun rinnalla.",
+   "source": "https://en.wikipedia.org/wiki/Pom_(dish)"
+  },
+  {
+   "q": "Minkä ruokaperinteen warungeja löytyy Blauwgrondista?",
+   "options": [
+    "Jaavalaisen",
+    "Kiinalaisen",
+    "Intialaisen",
+    "Kreolisen"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Blauwgrondin pienissä ruokapaikoissa tarjotaan esimerkiksi nasi gorengia.",
+   "fact": "Blauwgrondissa on jaavalaisia pieniä ravintoloita ja ruokapaikkoja.",
+   "source": "https://en.wikivoyage.org/wiki/Paramaribo"
+  }
+ ],
+ "tiedot": [
+  "Paramaribon uudeksi nimeksi ehdotettu New Middelburg ei jäänyt asukkaiden käyttöön, mutta linnoituksen nimi Fort Zeelandia säilyi.",
+  "Keskustorin alakerrassa myydään tuoretta ruokaa, yläkerrassa muun muassa vaatteita ja keittiötarvikkeita.",
+  "Pom kuuluu juhlapöytään, mutta Paramaribossa sitä tarjotaan myös leivän täytteenä."
+ ],
+ "saatiedot": null,
+ "ehdotukset": {
+  "lentoasema": "Johan Adolf Pengel International Airport (PBM)",
+  "huomiot": [
+   "C-tekstiluonnos; kuva-, kartta- ja sääportit avoinna.",
+   "Väestölukua ei käytetä lukijateksteissä. Kontekstin 240 924 (2012) koskee Paramaribon piiriä.",
+   "Sääauditointi avoin: saa.json säilytetty muuttamatta; saatiedot null.",
+   "Nykyinen matkustusturvallisuus ja oppaan palvelut tarkistettava riippumattomassa D-vaiheessa."
+  ]
+ },
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Vanha linnoitus ja palatsin takainen palmupuisto kuuluvat Paramaribon historialliseen ytimeen. Niissä siirtomaa-ajan kaupunki kohtaa museon ja julkisen viheralueen.",
+  "rajat": {
+   "pohjoinen": 5.831,
+   "etela": 5.8224,
+   "lansi": -55.153,
+   "ita": -55.1471
+  },
+  "kohteet": [
+   {
+    "nimi": "Fort Zeelandia",
+    "lat": 5.8252,
+    "lon": -55.14987
+   },
+   {
+    "nimi": "Palmupuisto",
+    "tyyppi": "luonto",
+    "lat": 5.8282,
+    "lon": -55.1502
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Fort Zeelandia": {
+   "aika": "1600-luku",
+   "teksti": "Fort Zeelandia seisoo Paramaribon historiallisessa keskustassa Surinamejoen äärellä. Paikalla olleesta ranskalaisesta puulinnoituksesta kehittyi englantilaiskaudella Fort Willoughby. Hollantilaisten haltuun siirryttyään se sai nykyisen nimensä. Linnoitus oli siten olemassa jo kauan ennen isoisän matkavuotta 1873, vaikka sen käyttö ja rakennukset ovat muuttuneet ajan mukana.\n\nNykyisin linnoituksessa toimii Surinaams Museum eli Surinamen museo. Sen kokoelmissa on arkeologista aineistoa, tekstiilejä, historiallisia valokuvia ja siirtomaa-ajan huonekaluja. Vierailu kertoo siten myös asukkaiden elämästä, ei vain puolustusvarustuksista. Linnoituksen lähellä säilyneet upseeritalot kuuluvat samaan historialliseen ympäristöön, ja entisessä komentajan talossa toimii taidekoulu.",
+   "kuvat": [
+    {
+     "tiedosto": "Fort Zeelandia, Paramaribo, Suriname.jpg",
+     "lyhyt": "Fort Zeelandian tiilirakennuksia ja muuria.",
+     "selite": "Linnoituksen tummat muurit ja tiilirakennusten punaiset katot näkyvät puiden vieressä.",
+     "lahde": "Medimir, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Palmupuisto": {
+   "aika": "1600-luvulta",
+   "teksti": "Palmentuin eli Palmupuisto sijaitsee Paramaribon historiallisessa keskustassa presidentinpalatsin takana. Kuningaspalmut istutettiin kuvernööri Cornelis van Aerssen van Sommelsdijckin määräyksestä siirtomaakaudella, ja puutarha avattiin yleisölle jo 1600-luvulla. Alue suljettiin myöhemmin pitkäksi aikaa ja avattiin uudelleen vasta 1900-luvun alussa. Isoisän matkavuonna 1873 palmupuutarha siis oli olemassa, mutta se ei ollut nykyisen kaltainen avoin julkinen puisto.\n\nPalmupuisto mainitaan kaupungin maailmanperintöarvoihin kuuluvana maiseman osana. Palmujen lisäksi siellä on leikkipaikka, ja juhlapäivinä alueelle tulee myyntikojuja. Puustossa elää trooppisia lintuja, ja puutarhan historia liittyy suoraan sitä ympäröivään hallintokaupunkiin. Kävijälle vanha istutusalue toimii nykyisin kävely- ja levähdyspaikkana keskellä kaupunkia.",
+   "kuvat": [
+    {
+     "tiedosto": "",
+     "lyhyt": "",
+     "selite": "",
+     "lahde": ""
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ }
 }
