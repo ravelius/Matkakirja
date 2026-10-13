@@ -6,7 +6,7 @@ Tilaus: PT (omistajan museopalaute, juna 188): kertoja ei jatka Yövartion salis
 
 Salissa `yv` on 5 teospaikkaa (sali.json teospaikat): yv-yovartio SK-C-5, yv-v1 mauritshuis-146, yv-v2 mauritshuis-840, yv-o1 mauritshuis-92, yv-o2 mauritshuis-670. Kierros (kierros.json, 33 pysähdystä) päättyy SK-C-5:een; äänite (taidemuseo-kertoja-v2/paasali) on vain SK-C-5:llä. **Ilman kertojatekstiä ja äänitettä: 4 teosta, kaikki Mauritshuis-lainoja** (mauritshuis-146, -840, -92, -670). Lähteet: LS1:n worktree proto-linssiseppa-museo188 (a29af6561) ja proto-3d/_valmiit/taidemuseo-kertoja-v2-vienti-20261011.
 
-## Tekstit (kertoja William, sama tyyli kuin pääsalin 20: koukku, "Katso …", 54–62 sanaa, luvut tee.py muuttaa sanoiksi)
+## Tekstit (kertoja William, sama tyyli kuin pääsalin 20: koukku, "Katso …", 54–64 sanaa, luvut tee.py muuttaa sanoiksi)
 
 ### Tohtori Nicolaes Tulpin anatomian oppitunti (mauritshuis-146, yv-v1, 54 sanaa, ~23 s)
 
