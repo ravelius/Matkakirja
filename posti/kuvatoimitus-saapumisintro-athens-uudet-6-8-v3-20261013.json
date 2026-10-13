@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "cityName": "ATEENA (paikka 6, uusi näköalapaikka)",
+  "gameCityId": "ateena",
+  "mediaSlug": "athens",
+  "taskNumbers": [
+    227
+  ],
+  "updatedAt": "2026-10-13T19:59:28.183747+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [],
+  "omittedItems": [
+    {
+      "taskNumber": 227,
+      "slot": 6,
+      "reason": "Kattomeren etualan talojen litteiden kattopintojen yläpuolella näkyy pieniä pystysuoria katto-/putkirakenteita ja kohonneita kattohuoneita. Uusi v3-ohje rajaa pois savupiiput ja muut pystysuorat rakennelmat ja vaatii kaikkien kattopintojen olevan suoria/litteitä. Tyypillistä yksittäistä muistomerkkiä ei ole tunnistettu; poisjättö perustuu tähän tiukkaan v3-rakennemuotovaatimukseen, ei vanhaan idänvuorten suuntaohjeeseen.",
+      "stage": "independent-QA",
+      "additionalGenerationAllowed": false,
+      "nativeSHA256": "acc804c2fe3fa54102871016bf0de8492ac84044e8167ed70c146fae4b9ab5d9",
+      "finalSHA256": "826dadd53e36169c1b13ffd28ce713e0d6acd25fa3ad9cb1228e39bb27af2626"
+    }
+  ],
+  "actualCalls": 1,
+  "maximumGenerationCalls": 1,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
