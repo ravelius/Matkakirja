@@ -157,3 +157,14 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
 - Olavinlinna on nyt TAUOLLA: ei uusia eriä eikä ajoja ilman PT:n/omistajan erillistä päätöstä. Avoimena jää: vartija2:n MH-kuva (K3 + agentti),
   LR:n laajennuserä 3 (linnantupa/Kuninkaansali, uudet lattiaesineet tarvitsevat glb-extras tormays/koko), porttikäytävän äänimaisema (LS2).
 - Odottajat: ei käynnissä. Pohjat lokit/siirtoseppa-botti-nakyma/odota-*.sh, skenaariot proto-3d/tyokalut/siirtoseppa-ajot/skenaariot/.
+
+## PÄIVITYS 14.10. 02.0x — MUSEON PINNAT (linna yhä tauolla)
+
+- Rijksmuseum-karttanappi: LS1 teki ja PT kuittasi (linssiseppa/museo-kartta-189 8e9480624); minulta ei tarvittu.
+- **Museon kehysten pinnat + rae** (omistaja 14.10. 00.4x PT:n kautta): proto-haara **siirtoseppa/museo-pinnat-189 82b899a05**
+  (worktree /Users/Shared/Claude/wt/proto-siirtoseppa-pinnat; juna-189 + LS1 museo-maa-188). MuseoValaistu _Pinta (kehys: syy pituussuuntaan,
+  taso: paspartuu) + _Rae (teokset 0), MuseoRakennus.AsetaPinnat (Rae 0,3), QA "museo pinnat 0|1 [rae]". Tekstuurit Resources/Museo/pinnat (ambientCG CC0).
+  Käännös 08802f92e, arkit lokit/siirtoseppa-museo-pinnat/pinnat-{ipad,iphone}.jpg → PT:llä kuittausta varten; kuittauksen jälkeen tunnus NS:lle (juna 189).
+- Ajot: tyokalut/siirtoseppa-ajot/ajo-museo-pinnat.zsh (kaannos-pinnat.nyt / simu-pinnat.nyt), skenaariot museo-pinnat-{ipad,iphone}.txt, museo-rae-ipad.txt;
+  arkit pinnat-arkki2.py. iPhonella näyttely valitaan "Grafiikka- ja valokuvakabinetti" (Kunniagalleria ei ruudulla pystyssä).
+- Avoin: kuorma oikealla iPadilla mittaamatta (ehdotettu junan 189 iPad-ajoon "museo pinnat 0/1").
