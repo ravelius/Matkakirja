@@ -28,3 +28,46 @@ Rudaki Park -polku palauttaa kaupungin artikkelin, eikä sillä ole puiston omaa
 Kuvaputken roolit avoinna: 3 laajaa yleiskuvaa, matkakirjan valokuva, matkailijan pysty, Varzobin ympäristö, puistokävely, hyväksyttävä kaupunkiluonnon aihe, soitin-/musiikkiaiheet ja opas 5 jaksoa. Teehuoneen modernit käsityöpinnat, patsaat, Ayni-teatterin tarkistamaton julkisivu, yksittäinen balettiteos ja Gurminjin mahdollisesti suojatut esineet eivät ole hyväksyttyjä kuvamotiiveja. Ei kuvatekstiä ennen todellista valintaa ja katselua.
 
 Avoimet portit: täysi A:n kohde-/tekijäketju- ja nykytila-auditointi, B, sää, riippumaton D, E/F, omistajan hyväksyntä, pelikytkentä ja julkaisu. Tiedosto- ja lähde-SHA:t sekä mitat NASin omassa väliaineistossa.
+
+
+## Task118 korjaus 13.10.2026
+Kaikki pelaajatekstikentät luettu ja sovellettu otoksen yleissäännöt. Lähdepohja, C-muistio sekä nykyiset Commons-lähdetiedot tarkistettu. Meta- ja täytelauseita korvattu kaupungin omilla faktoilla; vihjeet ja houkuttimet täsmennetty. Nykyiset kuvat, pisteet ja sää säilytetty; niiden puutteet ovat erillisiä portteja. Tuore mainin js/data-haku tehty ennen kirjoittamista. Ei Git, kuvia, pelikytkentää tai julkaisua.
+
+
+```text
+VIRHE dusanbe: kansikuva 1: tiedosto puuttuu
+VIRHE dusanbe: kansikuva 2: tiedosto puuttuu
+VIRHE dusanbe: kansikuva 3: tiedosto puuttuu
+VIRHE dusanbe: kansi nosto 1: tiedosto puuttuu
+VIRHE dusanbe: kansi nosto 3: tiedosto puuttuu
+VIRHE dusanbe: kansi nosto 4: tiedosto puuttuu
+VIRHE dusanbe: matkailijalle.kuva: tiedosto puuttuu
+VIRHE dusanbe: opas jakso 1: tiedosto puuttuu
+VIRHE dusanbe: opas jakso 2: tiedosto puuttuu
+VIRHE dusanbe: opas jakso 3: tiedosto puuttuu
+VIRHE dusanbe: opas jakso 4: tiedosto puuttuu
+VIRHE dusanbe: opas jakso 5: tiedosto puuttuu
+VIRHE dusanbe: teemasivu musiikki nosto 1: tiedosto puuttuu
+VIRHE dusanbe: teemasivu musiikki nosto 2: tiedosto puuttuu
+VIRHE dusanbe: teemasivu musiikki nosto 3: tiedosto puuttuu
+VIRHE dusanbe: teemasivu musiikki nosto 4: tiedosto puuttuu
+VIRHE dusanbe: kohdekartta.rajat { pohjoinen > etela, ita > lansi }
+VIRHE dusanbe: kohteita 0 (1–15)
+== dusanbe: 18 virhettä, 2 varoitusta, 2 kuvaa
+YHTEENSÄ 1 kaupunkia: 18 virhettä, 2 varoitusta
+```
+SHA256 b59a47832cda8b72ac8a25ceaec7e78b755023e9f2c70f0af79b3a29ce83b429
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS dusanbe: kysymys 5: source ei ole Wikipedia-artikkeli
+VAROITUS dusanbe: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS dusanbe: kysymys 5: source ei ole Wikipedia-artikkeli
+VAROITUS dusanbe: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

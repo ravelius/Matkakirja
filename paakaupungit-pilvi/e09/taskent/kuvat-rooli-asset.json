@@ -3,7 +3,7 @@
   "era": "e09",
   "city": "taskent",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+  "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
   "assets": [
     {
       "era": "e09",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puiden lehvästöstä.",
-        "lyhyt": "Havainnekuva puiden lehvästöstä."
+        "selite": "Havainnekuva puiden lehvästöstä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o3-20261012-v1-0a5a01a1f418.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puiden lehvästöstä.",
-        "lyhyt": "Havainnekuva puiden lehvästöstä."
+        "selite": "Havainnekuva puiden lehvästöstä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,10 +56,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-      "sourceContentSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "81f7ab1e6e55ad9e22bdb1bba0147d3734862f511985c2b98affa5a10ece914f",
+        "semanticContextSHA256": "0d85b0c834778226c947665b7240825bc837b60293b8ba261897d9ba84272db3",
         "subjectTitle": "Puiden keskelle",
         "targetState": "existing-target"
       },
@@ -215,9 +215,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -236,17 +236,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "81f7ab1e6e55ad9e22bdb1bba0147d3734862f511985c2b98affa5a10ece914f",
+      "contextAfterSHA256": "0d85b0c834778226c947665b7240825bc837b60293b8ba261897d9ba84272db3",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "81f7ab1e6e55ad9e22bdb1bba0147d3734862f511985c2b98affa5a10ece914f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "81f7ab1e6e55ad9e22bdb1bba0147d3734862f511985c2b98affa5a10ece914f",
+          "subjectTitle": "Puiden keskelle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+        "sameImageNativeSHA256": "0a5a01a1f418359d3c498fd0b08d0d5e708c4b3c60647c1a1eb4977edd67853c",
+        "sameImageExportSHA256": "32621b93d93f572a750d6a67a9aeb56bf0f1803219b0f23b90a3c23c1e996474",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -271,10 +292,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kahvilan leivonnaisesta ja kahvista.",
-        "lyhyt": "Havainnekuva kahvilan leivonnaisesta ja kahvista."
+        "selite": "Havainnekuva kahvilan leivonnaisesta ja kahvista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -282,10 +303,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-o4-20261012-v1-5e003a356e90.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kahvilan leivonnaisesta ja kahvista.",
-        "lyhyt": "Havainnekuva kahvilan leivonnaisesta ja kahvista."
+        "selite": "Havainnekuva kahvilan leivonnaisesta ja kahvista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -299,7 +320,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-      "sourceContentSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "579fe6d26bf8496d4890529d7cc7860c88f53664030283251bb7089607b9a1d8",
@@ -458,9 +479,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -479,17 +500,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "579fe6d26bf8496d4890529d7cc7860c88f53664030283251bb7089607b9a1d8",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "579fe6d26bf8496d4890529d7cc7860c88f53664030283251bb7089607b9a1d8",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "579fe6d26bf8496d4890529d7cc7860c88f53664030283251bb7089607b9a1d8",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+        "sameImageNativeSHA256": "5e003a356e907b285dce667fb007247684ed24c94b86e858c8271b82fdec7299",
+        "sameImageExportSHA256": "b5b3bcb4c173f35da5f4e08fef2e96a555fb7bbc343264699f824a2f86a12e2e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -511,10 +553,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä.",
-        "lyhyt": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä."
+        "selite": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -522,10 +564,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k1-20261012-v1-03bf95f47c96.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä.",
-        "lyhyt": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä."
+        "selite": "Havainnekuva luonnonkivistä kaupungin nimenselityksen yhteydessä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -539,10 +581,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-      "sourceContentSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
-        "semanticContextSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
+        "targetBeforeSHA256": "f030177b5d525ffe411835322baf5075153d67bd5f936fd46ff79d7fc66a3151",
+        "semanticContextSHA256": "f030177b5d525ffe411835322baf5075153d67bd5f936fd46ff79d7fc66a3151",
         "subjectTitle": "Kivikaupungin nimessä on monta kerrosta",
         "targetState": "existing-target"
       },
@@ -698,9 +740,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -719,17 +761,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
-      "targetAfterSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
-      "contextAfterSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
+      "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+      "targetAfterSHA256": "f030177b5d525ffe411835322baf5075153d67bd5f936fd46ff79d7fc66a3151",
+      "contextAfterSHA256": "f030177b5d525ffe411835322baf5075153d67bd5f936fd46ff79d7fc66a3151",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+        "targetAfterSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
+        "contextAfterSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
+          "semanticContextSHA256": "fb857ab3f401ce533ed530747ccf261ba1ae308b5220e012d4bc8c2ffbb91269",
+          "subjectTitle": "Kivikaupungin nimessä on monta kerrosta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+        "sameImageNativeSHA256": "03bf95f47c965e97e8823771c9700f4737aaf04f8d80473ddb431945e7d0a822",
+        "sameImageExportSHA256": "b35f02b01b329ffe27e83042836c6721d97d621f71ce17f2bf9ba38befb9deeb",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -751,10 +814,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta.",
-        "lyhyt": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta."
+        "selite": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -762,10 +825,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k2-20261012-v1-5a37a0a1c407.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta.",
-        "lyhyt": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta."
+        "selite": "Havainnekuva basaarin vihannes- ja hedelmätarjonnasta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -779,7 +842,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-      "sourceContentSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
         "semanticContextSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
@@ -938,9 +1001,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -959,17 +1022,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "targetAfterSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
       "contextAfterSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+        "targetAfterSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
+        "contextAfterSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
+          "semanticContextSHA256": "9cf5f57fe25f5de45b4e9aeb4dae3dfb9f4337887950d6ca32b0f5dedccd0c07",
+          "subjectTitle": "Basaari on samalla kaupungin osoite",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+        "sameImageNativeSHA256": "5a37a0a1c4070ef5c686619d46b6a115ac8b98aa914430d41947341fee6df47b",
+        "sameImageExportSHA256": "1308206d60fb891d193c85a52e31d34409b0ee239ea1d365da6d11930f4dd666",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -991,10 +1075,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva.",
-        "lyhyt": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva."
+        "selite": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1002,10 +1086,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-k3-20261012-v1-72f633016661.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva.",
-        "lyhyt": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva."
+        "selite": "Havainnekuva vesiuoman pinnasta; ei Ankhor-kanavan paikkavalokuva."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1019,7 +1103,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-      "sourceContentSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
         "semanticContextSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
@@ -1178,9 +1262,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1199,17 +1283,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "targetAfterSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
       "contextAfterSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+        "targetAfterSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
+        "contextAfterSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
+          "semanticContextSHA256": "4ee40ac5a6d7ae8dacf32a6388cec6716e398e70f348fbcc0b4fa04e20836c1c",
+          "subjectTitle": "Kanavan toiselle puolelle kasvoi uusi kaupunki",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+        "sameImageNativeSHA256": "72f633016661fe75b1b79cc1b7bc5a186cc1fe5564cdefa863f83eb36887a068",
+        "sameImageExportSHA256": "764244b85b809b6c1b634c48f7db0f212b52927291875222908319761b875144",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -1231,10 +1336,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva savitiilistä rakennusmateriaalina.",
-        "lyhyt": "Havainnekuva savitiilistä rakennusmateriaalina."
+        "selite": "Havainnekuva savitiilistä rakennusmateriaalina."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1242,10 +1347,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l1-20261012-v1-70dc4c9d3576.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva savitiilistä rakennusmateriaalina.",
-        "lyhyt": "Havainnekuva savitiilistä rakennusmateriaalina."
+        "selite": "Havainnekuva savitiilistä rakennusmateriaalina."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1259,7 +1364,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-      "sourceContentSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
         "semanticContextSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
@@ -1433,9 +1538,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1454,17 +1559,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "targetAfterSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
       "contextAfterSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+        "targetAfterSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
+        "contextAfterSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
+          "semanticContextSHA256": "cc59cf4415ddaa4fdfadada4d23c23dd0a209c7790a40f5c14e7d5f865fd3288",
+          "subjectTitle": "Medresan tiilet päätyivät toiseen kouluun",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+        "sameImageNativeSHA256": "70dc4c9d35763f5ccb18d2ff2dc71d978561f4e0c2396dd98c18798a0514ff72",
+        "sameImageExportSHA256": "b612944f981755520a9ee7729eaf59ad619becff945b4f4a958141d11d96d7b7",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -1486,10 +1612,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kirjontatyön välineistä.",
-        "lyhyt": "Havainnekuva kirjontatyön välineistä."
+        "selite": "Havainnekuva kirjontatyön välineistä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1497,10 +1623,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l3-20261012-v1-3773216a8238.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kirjontatyön välineistä.",
-        "lyhyt": "Havainnekuva kirjontatyön välineistä."
+        "selite": "Havainnekuva kirjontatyön välineistä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1514,7 +1640,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-      "sourceContentSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
         "semanticContextSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
@@ -1673,9 +1799,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1694,17 +1820,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "targetAfterSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
       "contextAfterSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+        "targetAfterSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
+        "contextAfterSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
+          "semanticContextSHA256": "c7f827ea5c7c05633040407632376531832f58fde4cbdade878dba61c0ccdcdc",
+          "subjectTitle": "Koti, orpokoti ja käsityömuseo",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+        "sameImageNativeSHA256": "3773216a823885f91b9c51be3aa333a12b39f1966802b035c8c9666bf587bf3f",
+        "sameImageExportSHA256": "f9463667d9369c4d0f516d0503c99459fb9ac3e2c2918230084520cdd3b04b59",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -1726,10 +1873,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva savesta rakennusmateriaalina.",
-        "lyhyt": "Havainnekuva savesta rakennusmateriaalina."
+        "selite": "Havainnekuva savesta rakennusmateriaalina."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1737,10 +1884,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/taskent/e09-taskent-l4-20261012-v1-cee011717550.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva savesta rakennusmateriaalina.",
-        "lyhyt": "Havainnekuva savesta rakennusmateriaalina."
+        "selite": "Havainnekuva savesta rakennusmateriaalina."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1754,7 +1901,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-      "sourceContentSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "semanticSourceBind": {
         "targetBeforeSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
         "semanticContextSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
@@ -1913,9 +2060,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1934,17 +2081,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "targetAfterSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
       "contextAfterSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+        "targetAfterSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
+        "contextAfterSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
+          "semanticContextSHA256": "5e0b143004ff342ef0d69a02211289646cb6ce16ba67ec8e8a4ef07013600111",
+          "subjectTitle": "Kivikaupungin puolustusmuuri oli savinen",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+        "sameImageNativeSHA256": "cee0117175503b876690b78815b5255a45afff24076bcd7bae1e271f4631a890",
+        "sameImageExportSHA256": "3c48fbe41e52a074a9bcb5903a175fd77b4e8ce66965eecc9a846ae4fa531b27",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -1963,7 +2131,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/photo-86de1f2ce880698aa8ef.jpg",
         "suora": true,
         "lahde": "Tahrirchiqiz, Commons (CC BY 4.0)",
-        "selite": "Muurahainen kasvin lehdellä Taškentissa.",
+        "selite": "Kasvin lehdellä liikkuva muurahainen on kuvattu Taškentissa huhtikuussa 2024.",
         "lyhyt": "Muurahainen kasvin lehdellä Taškentissa.",
         "tiedosto": "Ant on a leaf.jpg",
         "vuosi": "2024"
@@ -1971,7 +2139,7 @@
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Tahrirchiqiz, Commons (CC BY 4.0)",
-        "selite": "Muurahainen kasvin lehdellä Taškentissa.",
+        "selite": "Kasvin lehdellä liikkuva muurahainen on kuvattu Taškentissa huhtikuussa 2024.",
         "lyhyt": "Muurahainen kasvin lehdellä Taškentissa.",
         "tiedosto": "Ant on a leaf.jpg",
         "vuosi": "2024"
@@ -1980,7 +2148,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/photo-86de1f2ce880698aa8ef.jpg",
         "suora": true,
         "lahde": "Tahrirchiqiz, Commons (CC BY 4.0)",
-        "selite": "Muurahainen kasvin lehdellä Taškentissa.",
+        "selite": "Kasvin lehdellä liikkuva muurahainen on kuvattu Taškentissa huhtikuussa 2024.",
         "lyhyt": "Muurahainen kasvin lehdellä Taškentissa.",
         "tiedosto": "Ant on a leaf.jpg",
         "vuosi": "2024"
@@ -1997,10 +2165,10 @@
         3060
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-      "sourceContentSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
-        "semanticContextSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
+        "targetBeforeSHA256": "70b4e38314137cb27355b05de6dd40da2816ce2f3fe475f7b0bf6e9012b6bd92",
+        "semanticContextSHA256": "70b4e38314137cb27355b05de6dd40da2816ce2f3fe475f7b0bf6e9012b6bd92",
         "subjectTitle": "taskent — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -2136,9 +2304,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Ant on a leaf.jpg",
-        "lahde": "Tahrirchiqiz, Commons (CC BY 4.0)",
-        "selite": "Muurahainen kasvin lehdellä Taškentissa.",
         "lyhyt": "Muurahainen kasvin lehdellä Taškentissa.",
+        "selite": "Kasvin lehdellä liikkuva muurahainen on kuvattu Taškentissa huhtikuussa 2024.",
+        "lahde": "Tahrirchiqiz, Commons (CC BY 4.0)",
         "vuosi": "2024"
       },
       "preservePreviousMediaObjects": true,
@@ -2158,24 +2326,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Tahrirchiqiz, Commons (CC BY 4.0)",
-        "selite": "Muurahainen kasvin lehdellä Taškentissa.",
+        "selite": "Kasvin lehdellä liikkuva muurahainen on kuvattu Taškentissa huhtikuussa 2024.",
         "lyhyt": "Muurahainen kasvin lehdellä Taškentissa.",
         "tiedosto": "Ant on a leaf.jpg",
         "vuosi": "2024"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
-      "targetAfterSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
-      "contextAfterSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
+      "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+      "targetAfterSHA256": "70b4e38314137cb27355b05de6dd40da2816ce2f3fe475f7b0bf6e9012b6bd92",
+      "contextAfterSHA256": "70b4e38314137cb27355b05de6dd40da2816ce2f3fe475f7b0bf6e9012b6bd92",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+        "targetAfterSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
+        "contextAfterSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
+          "semanticContextSHA256": "6b8e54a25cb1098a7b743102268149ef6d9a0488a0a529048dd5387bf4be7dec",
+          "subjectTitle": "taskent — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+        "sameImageNativeSHA256": "86de1f2ce880698aa8ef2c3cd5969f9280fbae562869c7b46958cb7b1e94434c",
+        "sameImageExportSHA256": "86de1f2ce880698aa8ef2c3cd5969f9280fbae562869c7b46958cb7b1e94434c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -2197,23 +2386,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/c1-253b42a558f98ca5edec.jpg",
         "suora": true,
         "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
-        "lyhyt": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "selite": "Kansainväliseltä avaruusasemalta 28. joulukuuta 2024 kuvattu katujen ja korttelien valoverkko.",
+        "lyhyt": "Taškentin yövalot avaruudesta nähtynä.",
         "tiedosto": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
-        "lyhyt": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "selite": "Kansainväliseltä avaruusasemalta 28. joulukuuta 2024 kuvattu katujen ja korttelien valoverkko.",
+        "lyhyt": "Taškentin yövalot avaruudesta nähtynä.",
         "tiedosto": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/c1-253b42a558f98ca5edec.jpg",
         "suora": true,
         "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
-        "lyhyt": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "selite": "Kansainväliseltä avaruusasemalta 28. joulukuuta 2024 kuvattu katujen ja korttelien valoverkko.",
+        "lyhyt": "Taškentin yövalot avaruudesta nähtynä.",
         "tiedosto": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2228,10 +2417,10 @@
         5504
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-      "sourceContentSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "0eab5a879bf3fb498074af9209cf0417a03164b0974502718feb59644172b6dd",
-        "semanticContextSHA256": "0eab5a879bf3fb498074af9209cf0417a03164b0974502718feb59644172b6dd",
+        "targetBeforeSHA256": "ac4bbf5b5c523092c0155410e1a822912770af99517a3e5149d2ed535af41c46",
+        "semanticContextSHA256": "ac4bbf5b5c523092c0155410e1a822912770af99517a3e5149d2ed535af41c46",
         "subjectTitle": "Taškent",
         "targetState": "existing-target"
       },
@@ -2444,9 +2633,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg",
-        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
-        "lyhyt": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024."
+        "lyhyt": "Taškentin yövalot avaruudesta nähtynä.",
+        "selite": "Kansainväliseltä avaruusasemalta 28. joulukuuta 2024 kuvattu katujen ja korttelien valoverkko.",
+        "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2465,23 +2654,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "NASA Johnson Space Center, Wikimedia Commons (PD)",
-        "selite": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
-        "lyhyt": "Taškentin yövalot kansainväliseltä avaruusasemalta 28. joulukuuta 2024.",
+        "selite": "Kansainväliseltä avaruusasemalta 28. joulukuuta 2024 kuvattu katujen ja korttelien valoverkko.",
+        "lyhyt": "Taškentin yövalot avaruudesta nähtynä.",
         "tiedosto": "The city lights of Tashkent, Uzbekistan's capital and most populous city (iss072e445581).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
-      "targetAfterSHA256": "0eab5a879bf3fb498074af9209cf0417a03164b0974502718feb59644172b6dd",
-      "contextAfterSHA256": "0eab5a879bf3fb498074af9209cf0417a03164b0974502718feb59644172b6dd",
+      "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+      "targetAfterSHA256": "ac4bbf5b5c523092c0155410e1a822912770af99517a3e5149d2ed535af41c46",
+      "contextAfterSHA256": "ac4bbf5b5c523092c0155410e1a822912770af99517a3e5149d2ed535af41c46",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+        "targetAfterSHA256": "0eab5a879bf3fb498074af9209cf0417a03164b0974502718feb59644172b6dd",
+        "contextAfterSHA256": "0eab5a879bf3fb498074af9209cf0417a03164b0974502718feb59644172b6dd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "0eab5a879bf3fb498074af9209cf0417a03164b0974502718feb59644172b6dd",
+          "semanticContextSHA256": "0eab5a879bf3fb498074af9209cf0417a03164b0974502718feb59644172b6dd",
+          "subjectTitle": "Taškent",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+        "sameImageNativeSHA256": "253b42a558f98ca5edec09bb6c849c302035e87d34f2b92460c4af6832b46a3c",
+        "sameImageExportSHA256": "253b42a558f98ca5edec09bb6c849c302035e87d34f2b92460c4af6832b46a3c",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -2503,23 +2713,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/traveler-d9fa9a514dc876a06ce3.jpg",
         "suora": true,
         "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Taškentin katujen vehreyttä huhtikuussa 2024.",
-        "lyhyt": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "selite": "Taškentissa kasvava kastanjapuu huhtikuussa 2024 otetussa kuvassa.",
+        "lyhyt": "Kastanjapuu Taškentissa.",
         "tiedosto": "Chestnut tree in Tashkent.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Taškentin katujen vehreyttä huhtikuussa 2024.",
-        "lyhyt": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "selite": "Taškentissa kasvava kastanjapuu huhtikuussa 2024 otetussa kuvassa.",
+        "lyhyt": "Kastanjapuu Taškentissa.",
         "tiedosto": "Chestnut tree in Tashkent.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/taskent/traveler-d9fa9a514dc876a06ce3.jpg",
         "suora": true,
         "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Taškentin katujen vehreyttä huhtikuussa 2024.",
-        "lyhyt": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "selite": "Taškentissa kasvava kastanjapuu huhtikuussa 2024 otetussa kuvassa.",
+        "lyhyt": "Kastanjapuu Taškentissa.",
         "tiedosto": "Chestnut tree in Tashkent.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -2534,10 +2744,10 @@
         4080
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/taskent/sisalto.json",
-      "sourceContentSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+      "sourceContentSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "664f308ee8ab9d73b36f0f1fbd82daec8d535a44c252ece8d5e6666b20ab1b9e",
-        "semanticContextSHA256": "228501249400f0ff85f92a7885b57e0c71ee241e6f7290ccab22ecd2374090dd",
+        "targetBeforeSHA256": "f775115e848f9388b1eb3c276844769d79efbe99a4a9be9ec9339668b7c04177",
+        "semanticContextSHA256": "9c109a25f43b50abc6cca7359492e553d529e23438d2441bc39cdacf8b95e27c",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -2794,9 +3004,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Chestnut tree in Tashkent.jpg",
-        "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Taškentin katujen vehreyttä huhtikuussa 2024.",
-        "lyhyt": "Taškentin katujen vehreyttä huhtikuussa 2024."
+        "lyhyt": "Kastanjapuu Taškentissa.",
+        "selite": "Taškentissa kasvava kastanjapuu huhtikuussa 2024 otetussa kuvassa.",
+        "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2815,28 +3025,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Tahrirchiqiz, Wikimedia Commons (CC BY 4.0)",
-        "selite": "Taškentin katujen vehreyttä huhtikuussa 2024.",
-        "lyhyt": "Taškentin katujen vehreyttä huhtikuussa 2024.",
+        "selite": "Taškentissa kasvava kastanjapuu huhtikuussa 2024 otetussa kuvassa.",
+        "lyhyt": "Kastanjapuu Taškentissa.",
         "tiedosto": "Chestnut tree in Tashkent.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
-      "targetAfterSHA256": "664f308ee8ab9d73b36f0f1fbd82daec8d535a44c252ece8d5e6666b20ab1b9e",
-      "contextAfterSHA256": "228501249400f0ff85f92a7885b57e0c71ee241e6f7290ccab22ecd2374090dd",
+      "sourceContentAfterSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+      "targetAfterSHA256": "f775115e848f9388b1eb3c276844769d79efbe99a4a9be9ec9339668b7c04177",
+      "contextAfterSHA256": "9c109a25f43b50abc6cca7359492e553d529e23438d2441bc39cdacf8b95e27c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "bf7ec61f6ced18e8b99b04b48bbc8f37181256a2ad16364b749f6814e2f2f302",
+        "targetAfterSHA256": "664f308ee8ab9d73b36f0f1fbd82daec8d535a44c252ece8d5e6666b20ab1b9e",
+        "contextAfterSHA256": "228501249400f0ff85f92a7885b57e0c71ee241e6f7290ccab22ecd2374090dd",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "664f308ee8ab9d73b36f0f1fbd82daec8d535a44c252ece8d5e6666b20ab1b9e",
+          "semanticContextSHA256": "228501249400f0ff85f92a7885b57e0c71ee241e6f7290ccab22ecd2374090dd",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b",
+        "sameImageNativeSHA256": "d9fa9a514dc876a06ce3ce1e092d316f993033912d6a780438ee0f0422126386",
+        "sameImageExportSHA256": "d9fa9a514dc876a06ce3ce1e092d316f993033912d6a780438ee0f0422126386",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e09/taskent/d5ca214ed85b7dacbe42d6b57e9c38d2061705a4dda20db4684ce9fdb8431a1b.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.707810+00:00"
 }

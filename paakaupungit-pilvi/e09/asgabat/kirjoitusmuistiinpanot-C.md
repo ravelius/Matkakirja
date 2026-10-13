@@ -35,3 +35,42 @@ Kone ei ilmoita teksti-/pituus-/skeema-/kysymysvirheitä. Tämä ei ole riippuma
 - Tarkat vuodet, määrät ja ennätykset yleistetty tai poistettu; 1873 on tehtävän aikakehys, ei keksitty tapahtuma.
 
 Tiedostojen SHA-256 tallennetaan oman väliaineiston `SHA256.txt`-tiedostoon.
+
+
+## Task118 korjaus 13.10.2026
+Nimetyt löydökset käsitelty; lähdepohja ja tallennetut /wiki/-lähteet tarkistettu. Visojen vastauslähteet, vaihtoehdot, vihjeet, nimi-/termiasut, kuvatekstit sekä tuotantometalauseet korjattu. Dhakan rikshamaalaus korvattu paikannimien kauppayhteisöhistorialla (Dhaka, Mughal period; tuore mainin BGD.Dhaka sisältää jo rikshamaalauksen). Kuva-/kartta-/sääomistus säilytetty; näiden portit edelleen avoimet.
+```text
+VIRHE asgabat: kansikuva 3: tiedosto puuttuu
+VIRHE asgabat: kansi nosto 1: tiedosto puuttuu
+VIRHE asgabat: kansi nosto 2: tiedosto puuttuu
+VIRHE asgabat: kansi nosto 3: tiedosto puuttuu
+VIRHE asgabat: kansi nosto 4: tiedosto puuttuu
+VIRHE asgabat: matkailijalle.kuva: tiedosto puuttuu
+VIRHE asgabat: opas jakso 1: tiedosto puuttuu
+VIRHE asgabat: opas jakso 2: tiedosto puuttuu
+VIRHE asgabat: opas jakso 4: tiedosto puuttuu
+VIRHE asgabat: opas jakso 5: tiedosto puuttuu
+VIRHE asgabat: teemasivu musiikki nosto 1: tiedosto puuttuu
+VIRHE asgabat: teemasivu musiikki nosto 2: tiedosto puuttuu
+VIRHE asgabat: teemasivu musiikki nosto 3: tiedosto puuttuu
+VIRHE asgabat: teemasivu musiikki nosto 4: tiedosto puuttuu
+== asgabat: 14 virhettä, 3 varoitusta, 5 kuvaa
+YHTEENSÄ 1 kaupunkia: 14 virhettä, 3 varoitusta
+```
+SHA256 94a666fb0046e17297a1451b7dac801764b2f9d98c7cc94a1e08ef4d5eb9c404
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS asgabat: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS asgabat: kohde Nisa: 17 km kaupunkipisteestä
+VAROITUS asgabat: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 3455f6150af2ce50fbc9130e4f21c40a37b351cff0a1903e4c5fc64b977fca2c. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS asgabat: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS asgabat: kohde Nisa: 17 km kaupunkipisteestä
+VAROITUS asgabat: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

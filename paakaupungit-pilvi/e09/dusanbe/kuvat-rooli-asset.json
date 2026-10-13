@@ -3,7 +3,7 @@
   "era": "e09",
   "city": "dusanbe",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+  "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
   "assets": [
     {
       "era": "e09",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dusanbe/e09-dusanbe-o4-20261012-v1-b345732c1bfa.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva plov-riisiruoasta.",
-        "lyhyt": "Havainnekuva plov-riisiruoasta."
+        "selite": "Havainnekuva plov-riisiruoasta."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dusanbe/e09-dusanbe-o4-20261012-v1-b345732c1bfa.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva plov-riisiruoasta.",
-        "lyhyt": "Havainnekuva plov-riisiruoasta."
+        "selite": "Havainnekuva plov-riisiruoasta."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "78d4b426ab42505731cdb1b9a49458ef59cd7a296d1c288fab862160a4f34a1b",
@@ -281,9 +281,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -302,17 +302,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "78d4b426ab42505731cdb1b9a49458ef59cd7a296d1c288fab862160a4f34a1b",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "78d4b426ab42505731cdb1b9a49458ef59cd7a296d1c288fab862160a4f34a1b",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "78d4b426ab42505731cdb1b9a49458ef59cd7a296d1c288fab862160a4f34a1b",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+        "sameImageNativeSHA256": "b345732c1bfa4c48e8c7287db98047643f08c389b72976cc7c6bcae7377bf021",
+        "sameImageExportSHA256": "1a4df3558fc821a98ebc929cc42baac76fcb20ca9956335465a81445945cbd4e",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -334,10 +355,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dusanbe/e09-dusanbe-k3-20261012-v2-adf535160c8f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puiden taimista istutusta varten.",
-        "lyhyt": "Havainnekuva puiden taimista istutusta varten."
+        "selite": "Havainnekuva puiden taimista istutusta varten."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -345,10 +366,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dusanbe/e09-dusanbe-k3-20261012-v2-adf535160c8f.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva puiden taimista istutusta varten.",
-        "lyhyt": "Havainnekuva puiden taimista istutusta varten."
+        "selite": "Havainnekuva puiden taimista istutusta varten."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -362,10 +383,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "cc4d41cc94e52c9908e8111fe178e38123ff5825b790f7d07bfb89a439c16e42",
-        "semanticContextSHA256": "cc4d41cc94e52c9908e8111fe178e38123ff5825b790f7d07bfb89a439c16e42",
+        "targetBeforeSHA256": "94042b9e9604b87354727bd14895ba85485dc186df4d16f63ef8f9de16a00419",
+        "semanticContextSHA256": "94042b9e9604b87354727bd14895ba85485dc186df4d16f63ef8f9de16a00419",
         "subjectTitle": "Vihreyskin on rakennettua",
         "targetState": "existing-target"
       },
@@ -581,9 +602,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -602,17 +623,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
-      "targetAfterSHA256": "cc4d41cc94e52c9908e8111fe178e38123ff5825b790f7d07bfb89a439c16e42",
-      "contextAfterSHA256": "cc4d41cc94e52c9908e8111fe178e38123ff5825b790f7d07bfb89a439c16e42",
+      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "targetAfterSHA256": "94042b9e9604b87354727bd14895ba85485dc186df4d16f63ef8f9de16a00419",
+      "contextAfterSHA256": "94042b9e9604b87354727bd14895ba85485dc186df4d16f63ef8f9de16a00419",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+        "targetAfterSHA256": "cc4d41cc94e52c9908e8111fe178e38123ff5825b790f7d07bfb89a439c16e42",
+        "contextAfterSHA256": "cc4d41cc94e52c9908e8111fe178e38123ff5825b790f7d07bfb89a439c16e42",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "cc4d41cc94e52c9908e8111fe178e38123ff5825b790f7d07bfb89a439c16e42",
+          "semanticContextSHA256": "cc4d41cc94e52c9908e8111fe178e38123ff5825b790f7d07bfb89a439c16e42",
+          "subjectTitle": "Vihreyskin on rakennettua",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+        "sameImageNativeSHA256": "adf535160c8f767d043fd41599dd9dac4db0710325e71c5c41757d1527c158a4",
+        "sameImageExportSHA256": "04fe0aaed468f27c8e7d9b05be246e90be6dc128ef1c57aaa94c66a9937d6374",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -634,10 +676,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dusanbe/e09-dusanbe-k4-20261012-v2-9d005099a938.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva pitkäkorvaisesta siilistä.",
-        "lyhyt": "Havainnekuva pitkäkorvaisesta siilistä."
+        "selite": "Havainnekuva pitkäkorvaisesta siilistä."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -645,10 +687,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dusanbe/e09-dusanbe-k4-20261012-v2-9d005099a938.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva pitkäkorvaisesta siilistä.",
-        "lyhyt": "Havainnekuva pitkäkorvaisesta siilistä."
+        "selite": "Havainnekuva pitkäkorvaisesta siilistä."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -662,10 +704,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "88ba99576307708adabf68e78f715a5780b06e0646dc4395d089c64614467d64",
-        "semanticContextSHA256": "88ba99576307708adabf68e78f715a5780b06e0646dc4395d089c64614467d64",
+        "targetBeforeSHA256": "720b272b3e8d764efbef57ad9085ee36c7bc0b2018f12d4547bdaf126c508cb9",
+        "semanticContextSHA256": "720b272b3e8d764efbef57ad9085ee36c7bc0b2018f12d4547bdaf126c508cb9",
         "subjectTitle": "Siilit eivät tarvitse katuosoitetta",
         "targetState": "existing-target"
       },
@@ -1026,9 +1068,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1047,17 +1089,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
-      "targetAfterSHA256": "88ba99576307708adabf68e78f715a5780b06e0646dc4395d089c64614467d64",
-      "contextAfterSHA256": "88ba99576307708adabf68e78f715a5780b06e0646dc4395d089c64614467d64",
+      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "targetAfterSHA256": "720b272b3e8d764efbef57ad9085ee36c7bc0b2018f12d4547bdaf126c508cb9",
+      "contextAfterSHA256": "720b272b3e8d764efbef57ad9085ee36c7bc0b2018f12d4547bdaf126c508cb9",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+        "targetAfterSHA256": "88ba99576307708adabf68e78f715a5780b06e0646dc4395d089c64614467d64",
+        "contextAfterSHA256": "88ba99576307708adabf68e78f715a5780b06e0646dc4395d089c64614467d64",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "88ba99576307708adabf68e78f715a5780b06e0646dc4395d089c64614467d64",
+          "semanticContextSHA256": "88ba99576307708adabf68e78f715a5780b06e0646dc4395d089c64614467d64",
+          "subjectTitle": "Siilit eivät tarvitse katuosoitetta",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+        "sameImageNativeSHA256": "9d005099a9385583b1f4b678da28ceaadb190d96469c7be10279e9e17b53b025",
+        "sameImageExportSHA256": "6c4cbdf200893d49d57d69726bc091fdfd46db65cf37ec1474e7bdebf8700e36",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -1079,10 +1142,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dusanbe/e09-dusanbe-l4-20261012-v1-abc3b8767747.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva baletin kärkitossuista.",
-        "lyhyt": "Havainnekuva baletin kärkitossuista."
+        "selite": "Havainnekuva baletin kärkitossuista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1090,10 +1153,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dusanbe/e09-dusanbe-l4-20261012-v1-abc3b8767747.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva baletin kärkitossuista.",
-        "lyhyt": "Havainnekuva baletin kärkitossuista."
+        "selite": "Havainnekuva baletin kärkitossuista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1107,7 +1170,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
         "semanticContextSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
@@ -1316,9 +1379,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1337,17 +1400,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
       "targetAfterSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
       "contextAfterSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+        "targetAfterSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
+        "contextAfterSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
+          "semanticContextSHA256": "e5958eefcfc248c6e669056edf18b79274783164b7e2d7891d4cfe16aa1ac6ad",
+          "subjectTitle": "Baletti tuli koulutuksen mukana",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+        "sameImageNativeSHA256": "abc3b8767747ddf0c1f7a275344bb88fc270b1781b806936784289a39b1a43be",
+        "sameImageExportSHA256": "eade069218b365261214ee9ea90752966ad4541ec140d9f56cbb027349d0eff9",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -1369,10 +1453,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dusanbe/e09-dusanbe-traveler-20261013-v1-f61a48b471ef.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Dušanben oppaassa mainituista samsa-leivonnaisista.",
-        "lyhyt": "Havainnekuva Dušanben oppaassa mainituista samsa-leivonnaisista."
+        "selite": "Havainnekuva Dušanben oppaassa mainituista samsa-leivonnaisista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1380,10 +1464,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/dusanbe/e09-dusanbe-traveler-20261013-v1-f61a48b471ef.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Dušanben oppaassa mainituista samsa-leivonnaisista.",
-        "lyhyt": "Havainnekuva Dušanben oppaassa mainituista samsa-leivonnaisista."
+        "selite": "Havainnekuva Dušanben oppaassa mainituista samsa-leivonnaisista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1397,10 +1481,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "cff94644ee7273133bd3680fab36aabc69c66fa9b69a8227c7b03126a377b7eb",
+        "semanticContextSHA256": "1d74b8527b8853fecc452ce2dab520ecd95a6659bcb2c762cc9b7872ba55b8c1",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -1571,9 +1655,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1592,17 +1676,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "cff94644ee7273133bd3680fab36aabc69c66fa9b69a8227c7b03126a377b7eb",
+      "contextAfterSHA256": "1d74b8527b8853fecc452ce2dab520ecd95a6659bcb2c762cc9b7872ba55b8c1",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "cff94644ee7273133bd3680fab36aabc69c66fa9b69a8227c7b03126a377b7eb",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "cff94644ee7273133bd3680fab36aabc69c66fa9b69a8227c7b03126a377b7eb",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+        "sameImageNativeSHA256": "f61a48b471ef388a9bf3f7b58f98e295b98a582f60a915228a11a87081021099",
+        "sameImageExportSHA256": "15092613df1730137b89b2a1c71c84c277129abe8a6b9d794a2c6d17b72d74ba",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -1621,16 +1726,16 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/photo-c17fd8d06802c1ff465d.jpg",
         "suora": true,
         "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
-        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
-        "lyhyt": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
+        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa otetussa kuvassa.",
+        "lyhyt": "Tulppaaneja Dušanbessa.",
         "tiedosto": "Tulip of Dushanbe.jpg",
         "vuosi": "2026"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
-        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
-        "lyhyt": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
+        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa otetussa kuvassa.",
+        "lyhyt": "Tulppaaneja Dušanbessa.",
         "tiedosto": "Tulip of Dushanbe.jpg",
         "vuosi": "2026"
       },
@@ -1638,8 +1743,8 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/photo-c17fd8d06802c1ff465d.jpg",
         "suora": true,
         "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
-        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
-        "lyhyt": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
+        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa otetussa kuvassa.",
+        "lyhyt": "Tulppaaneja Dušanbessa.",
         "tiedosto": "Tulip of Dushanbe.jpg",
         "vuosi": "2026"
       },
@@ -1655,10 +1760,10 @@
         1800
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "4057fc209973a996baee201f352b58fd31365fcb9d43a7f528380377519b99da",
-        "semanticContextSHA256": "4057fc209973a996baee201f352b58fd31365fcb9d43a7f528380377519b99da",
+        "targetBeforeSHA256": "b44d50d0fc962eb4958cd2f8e56c918218f8de693d086124b2a37d5155e175f0",
+        "semanticContextSHA256": "b44d50d0fc962eb4958cd2f8e56c918218f8de693d086124b2a37d5155e175f0",
         "subjectTitle": "dusanbe — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1857,9 +1962,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Tulip of Dushanbe.jpg",
+        "lyhyt": "Tulppaaneja Dušanbessa.",
+        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa otetussa kuvassa.",
         "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
-        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
-        "lyhyt": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
         "vuosi": "2026"
       },
       "preservePreviousMediaObjects": true,
@@ -1879,24 +1984,45 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
-        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
-        "lyhyt": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
+        "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa otetussa kuvassa.",
+        "lyhyt": "Tulppaaneja Dušanbessa.",
         "tiedosto": "Tulip of Dushanbe.jpg",
         "vuosi": "2026"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
-      "targetAfterSHA256": "4057fc209973a996baee201f352b58fd31365fcb9d43a7f528380377519b99da",
-      "contextAfterSHA256": "4057fc209973a996baee201f352b58fd31365fcb9d43a7f528380377519b99da",
+      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "targetAfterSHA256": "b44d50d0fc962eb4958cd2f8e56c918218f8de693d086124b2a37d5155e175f0",
+      "contextAfterSHA256": "b44d50d0fc962eb4958cd2f8e56c918218f8de693d086124b2a37d5155e175f0",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+        "targetAfterSHA256": "4057fc209973a996baee201f352b58fd31365fcb9d43a7f528380377519b99da",
+        "contextAfterSHA256": "4057fc209973a996baee201f352b58fd31365fcb9d43a7f528380377519b99da",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "4057fc209973a996baee201f352b58fd31365fcb9d43a7f528380377519b99da",
+          "semanticContextSHA256": "4057fc209973a996baee201f352b58fd31365fcb9d43a7f528380377519b99da",
+          "subjectTitle": "dusanbe — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+        "sameImageNativeSHA256": "c17fd8d06802c1ff465d0215df39a725ddcf6cb910fd225c401daa39bae6d67b",
+        "sameImageExportSHA256": "c17fd8d06802c1ff465d0215df39a725ddcf6cb910fd225c401daa39bae6d67b",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -1918,23 +2044,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/k2-39eed49981ba41902fdd.jpg",
         "suora": true,
         "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
-        "lyhyt": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008 otetussa kuvassa.",
+        "lyhyt": "Varzobin jokilaaksoa.",
         "tiedosto": "Ravine of Varzob River - panoramio.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
-        "lyhyt": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008 otetussa kuvassa.",
+        "lyhyt": "Varzobin jokilaaksoa.",
         "tiedosto": "Ravine of Varzob River - panoramio.jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/dusanbe/k2-39eed49981ba41902fdd.jpg",
         "suora": true,
         "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
-        "lyhyt": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008 otetussa kuvassa.",
+        "lyhyt": "Varzobin jokilaaksoa.",
         "tiedosto": "Ravine of Varzob River - panoramio.jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1949,10 +2075,10 @@
         3345
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/dusanbe/sisalto.json",
-      "sourceContentSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+      "sourceContentSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "22038b8d65c62b4c1f8e16ad3320450062f6069c1ee4337eaa8bfc03f86b7053",
-        "semanticContextSHA256": "22038b8d65c62b4c1f8e16ad3320450062f6069c1ee4337eaa8bfc03f86b7053",
+        "targetBeforeSHA256": "6284d0bb9b7f662a08761a5fc706eeaa1a323e2e83dabda8ca6646490329009c",
+        "semanticContextSHA256": "6284d0bb9b7f662a08761a5fc706eeaa1a323e2e83dabda8ca6646490329009c",
         "subjectTitle": "Kaupunki ylitti oman jokensa",
         "targetState": "existing-target"
       },
@@ -2169,9 +2295,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Ravine of Varzob River - panoramio.jpg",
-        "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
-        "lyhyt": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008."
+        "lyhyt": "Varzobin jokilaaksoa.",
+        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008 otetussa kuvassa.",
+        "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -2190,28 +2316,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
-        "selite": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
-        "lyhyt": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+        "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008 otetussa kuvassa.",
+        "lyhyt": "Varzobin jokilaaksoa.",
         "tiedosto": "Ravine of Varzob River - panoramio.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
-      "targetAfterSHA256": "22038b8d65c62b4c1f8e16ad3320450062f6069c1ee4337eaa8bfc03f86b7053",
-      "contextAfterSHA256": "22038b8d65c62b4c1f8e16ad3320450062f6069c1ee4337eaa8bfc03f86b7053",
+      "sourceContentAfterSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+      "targetAfterSHA256": "6284d0bb9b7f662a08761a5fc706eeaa1a323e2e83dabda8ca6646490329009c",
+      "contextAfterSHA256": "6284d0bb9b7f662a08761a5fc706eeaa1a323e2e83dabda8ca6646490329009c",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "ddba9f9674be2d581b2f24710d84b226ef0372d3b487c20d2827cb1e44992db2",
+        "targetAfterSHA256": "22038b8d65c62b4c1f8e16ad3320450062f6069c1ee4337eaa8bfc03f86b7053",
+        "contextAfterSHA256": "22038b8d65c62b4c1f8e16ad3320450062f6069c1ee4337eaa8bfc03f86b7053",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "22038b8d65c62b4c1f8e16ad3320450062f6069c1ee4337eaa8bfc03f86b7053",
+          "semanticContextSHA256": "22038b8d65c62b4c1f8e16ad3320450062f6069c1ee4337eaa8bfc03f86b7053",
+          "subjectTitle": "Kaupunki ylitti oman jokensa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "18dce38e942113d135101226db7160b1a3a7ed3d8694d6749fd52eb63beeb869",
+        "sameImageNativeSHA256": "39eed49981ba41902fddbce6ec7744e0e589d7f9327b6766b7e596a4199d0071",
+        "sameImageExportSHA256": "39eed49981ba41902fddbce6ec7744e0e589d7f9327b6766b7e596a4199d0071",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e09/dusanbe/21fb9303d48441800167d06f7c96313b9bfb831f76f72ca33d1847e73da83009.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.648488+00:00"
 }

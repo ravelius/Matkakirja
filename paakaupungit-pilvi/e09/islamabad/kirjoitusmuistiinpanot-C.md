@@ -35,3 +35,46 @@ Ensimmäinen tarkistus ilmoitti lisäksi `kysymykset[3].source[0]: lähde- tai a
 Luettu nykyinen UM:n matkustustiedote: tarpeettoman matkustamisen välttäminen mainitaan oppaassa lyhyesti ilman nykykonfliktien tai osapuolten sisältöä. Väkiluku jätetty pois kaupungin/pääkaupunkialueen laajuuksien sekoittumisen estämiseksi. Taxila ja Pakistan-maalehden aiheet rajattu pois.
 
 Tiedostojen täydet SHA-256 tallennetaan oman väliaineiston `SHA256.txt`-tiedostoon.
+
+
+## Task118 korjaus 13.10.2026
+Kaikki pelaajatekstikentät luettu ja sovellettu otoksen yleissäännöt. Lähdepohja, C-muistio sekä nykyiset Commons-lähdetiedot tarkistettu. Meta- ja täytelauseita korvattu kaupungin omilla faktoilla; vihjeet ja houkuttimet täsmennetty. Nykyiset kuvat, pisteet ja sää säilytetty; niiden puutteet ovat erillisiä portteja. Tuore mainin js/data-haku tehty ennen kirjoittamista. Ei Git, kuvia, pelikytkentää tai julkaisua.
+
+
+```text
+VIRHE islamabad: kansikuva 1: tiedosto puuttuu
+VIRHE islamabad: kansikuva 2: tiedosto puuttuu
+VIRHE islamabad: kansikuva 3: tiedosto puuttuu
+VIRHE islamabad: kansi nosto 1: tiedosto puuttuu
+VIRHE islamabad: kansi nosto 2: tiedosto puuttuu
+VIRHE islamabad: kansi nosto 3: tiedosto puuttuu
+VIRHE islamabad: kansi nosto 4: tiedosto puuttuu
+VIRHE islamabad: matkailijalle.kuva: tiedosto puuttuu
+VIRHE islamabad: opas jakso 1: tiedosto puuttuu
+VIRHE islamabad: opas jakso 2: tiedosto puuttuu
+VIRHE islamabad: opas jakso 3: tiedosto puuttuu
+VIRHE islamabad: opas jakso 4: tiedosto puuttuu
+VIRHE islamabad: opas jakso 5: tiedosto puuttuu
+VIRHE islamabad: teemasivu luonto nosto 1: tiedosto puuttuu
+VIRHE islamabad: teemasivu luonto nosto 2: tiedosto puuttuu
+VIRHE islamabad: teemasivu luonto nosto 3: tiedosto puuttuu
+VIRHE islamabad: teemasivu luonto nosto 4: tiedosto puuttuu
+VIRHE islamabad: juttu Margallan kansallispuisto kuva 1: tiedosto puuttuu
+== islamabad: 18 virhettä, 2 varoitusta, 2 kuvaa
+YHTEENSÄ 1 kaupunkia: 18 virhettä, 2 varoitusta
+```
+SHA256 9613efb6c1a0bfc7913dec12ad70f6e9641c8bb534e39ab09ff227c41e692e58
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 1752eb29341ed1d11b13b9a3c234ecbe6eb229e32fe8eb8e3d6c720adff9b8e4. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS islamabad: kohteita 2 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS islamabad: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 1752eb29341ed1d11b13b9a3c234ecbe6eb229e32fe8eb8e3d6c720adff9b8e4. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS islamabad: kohteita 2 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS islamabad: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

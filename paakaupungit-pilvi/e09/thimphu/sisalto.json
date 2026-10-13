@@ -56,7 +56,7 @@
       ],
       "correct": 0,
       "level": 1,
-      "hint": "Kilpailija lähettää välineensä pitkän matkan päähän kohti taulua.",
+      "hint": "Changlimithang on Thimphun urheilupaikka.",
       "fact": "Jousiammunta on Bhutanin kansallislaji, ja Thimphussa kilpailuihin liittyy laulua ja tanssia.",
       "source": "https://en.wikipedia.org/wiki/Thimphu"
     },
@@ -64,13 +64,13 @@
       "q": "Mistä Thimphun kaupunginosien nimet Motithang ja Taba muistuttavat?",
       "options": [
         "Laakson aiemmista kylistä",
-        "Vanhasta rautatieverkosta",
-        "Jokisatamien laitureista",
-        "Keskiajan yliopistoista"
+        "Laakson vanhoista luostareista",
+        "Paikallisista käsityöaloista",
+        "Joen historiallisista silloista"
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Nykyinen kaupunki on kasvanut usean aiemman asutuksen paikalle.",
+      "hint": "Nimet säilyivät, kun laaksoon rakennettiin pääkaupunki.",
       "fact": "Ennen pääkaupungin kasvua Thimphun laaksossa oli hajallaan olevia kyliä.",
       "source": "https://en.wikipedia.org/wiki/Thimphu"
     },
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Kyseessä on Bhutanin kansalliseläin, joka pysytteli vapauttamisen jälkeen kaupungin lähellä.",
+      "hint": "Alue perustettiin aiemman pienen eläintarhan vaiheiden jälkeen.",
       "fact": "Motithangissa on takinien alue; eläimet eivät aikoinaan lähteneet vapautettuina ympäröivään metsään.",
       "source": "https://en.wikipedia.org/wiki/Thimphu"
     }
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Momo at lunch - Dzonkha Wikipedia Edit-a-thon-September 02, 2025 01.jpg",
-    "lyhyt": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
-    "selite": "Momo-nyyttejä Thimphussa kuvatulla lounaslautasella.",
+    "lyhyt": "Momo-nyyttejä Thimphun lounaalla.",
+    "selite": "Momoja Thimphussa 2. syyskuuta 2025 kuvatulla lounaslautasella.",
     "lahde": "Nabin K. Sapkota, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
@@ -108,8 +108,8 @@
       "kansikuvat": [
         {
           "tiedosto": "A view of Thimphu looking N from Talakha Gonpa -1.jpg",
-          "lyhyt": "Thimphun laaksoa pohjoiseen Talakha Gonpalta toukokuussa 2021.",
-          "selite": "Thimphun laaksoa pohjoiseen Talakha Gonpalta toukokuussa 2021.",
+          "lyhyt": "Thimphun laakso Talakha Gonpalta nähtynä.",
+          "selite": "Pohjoiseen avautuva näkymä Thimphun laaksoon Talakha Gonpalta toukokuussa 2021.",
           "lahde": "Christopher J Fynn, Wikimedia Commons (CC BY-SA 4.0)"
         },
         {
@@ -209,7 +209,7 @@
             },
             {
               "otsikko": "Mitä täällä syödään",
-              "teksti": "Thimphun ravintoloissa ja ruokakojuissa tarjotaan momoja, höyrytettyjä liha- tai kasvistäytteisiä nyyttejä. Toinen kaupungin ruokapaikoissa tavattava ruoka on thukpa, paikallinen nuudeliruoka. Norzin Lamin ympäristö on hyvä lähtökohta ruokapaikkojen etsimiseen. Momojen täyte kannattaa kysyä erikseen: saman näköinen nyytti voi sisältää lihaa tai kasviksia. Ruokailuun voi yhdistää kävelyn keskustassa ilman, että jokaisesta ateriasta tarvitsee tehdä oman retkensä.",
+              "teksti": "Thimphun ravintoloissa ja ruokakojuissa tarjotaan momoja, höyrytettyjä liha- tai kasvistäytteisiä nyyttejä. Toinen kaupungin ruokapaikoissa tavattava ruoka on thukpa, paikallinen nuudeliruoka. Norzin Lamin ympäristö on hyvä lähtökohta ruokapaikkojen etsimiseen. Momojen täyte kannattaa kysyä erikseen: saman näköinen nyytti voi sisältää lihaa tai kasviksia. Momoissa ratkaisee täyte, thukpassa nuudelit ja liemi: molempia tavataan kaupungin ruokapaikoissa.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Milloin kannattaa tulla",
-              "teksti": "Kevät ja syksy sopivat Thimphun vierailuun. Kesä on monsuunin sateista aikaa, talvi puolestaan kylmä ja kuivempi. Myös tien kunto vaikuttaa vuoristossa matkan toteutumiseen: sateet voivat katkaista yhteyksiä maanvyöryillä. Jos haluat nähdä jousiammuntaa tai juhlan, varmista sen ajankohta erikseen. Kaupungin ja luostarien tapahtumat eivät seuraa yhtä yksinkertaista vuodenkiertoa kuin sää.",
+              "teksti": "Kevät ja syksy sopivat Thimphun vierailuun. Kesä on monsuunin sateista aikaa, talvi puolestaan kylmä ja kuivempi. Myös tien kunto vaikuttaa vuoristossa matkan toteutumiseen: sateet voivat katkaista yhteyksiä maanvyöryillä. Jos haluat nähdä jousiammuntaa tai juhlan, varmista sen ajankohta erikseen. Changlimithangin jousiammunta ja luostarien juhlat ovat eri tilaisuuksia omine ohjelmineen.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -283,9 +283,9 @@
         "kysymys": "Mistä raaka-aineesta perinteinen bhutanilainen paperi valmistetaan?",
         "vaihtoehdot": [
           "Daphne-pensaan kuoresta",
-          "Lampaan keritystä villasta",
-          "Riisin kuorituista jyvistä",
-          "Havupuun sulatetusta pihkasta"
+          "Bambun varren kuiduista",
+          "Puuvillan siemenkuiduista",
+          "Riisin varren oljista"
         ],
         "oikea": 0,
         "fakta": "Paperin raaka-aineena käytetään daphnen kuorta, josta käsityöprosessissa valmistetaan arkkeja."
@@ -311,7 +311,7 @@
         },
         {
           "otsikko": "Kirja puulevyjen välissä",
-          "teksti": "Kansalliskirjastossa kirja voi näyttää erilaiselta kuin kotona hyllyssä. Perinteisiä käsikirjoituksia säilytetään puulevyjen välissä, yhteen sidottuina. Tekstit ovat käsintehdyllä paperilla, ja kokoelmissa on dzongkhan- ja tiibetinkielistä aineistoa. Kirjastossa esitellään myös vanhaa painamista: vanhaa painolaitetta käytettiin kirjojen ja rukouslippujen valmistukseen. Kirjan muoto kertoo siis sen valmistustavasta. Sidonta pitää lehdet koossa, mutta puisten kansien sisällä säilyy samalla uskonnollista ja kirjallista perintöä.",
+          "teksti": "Kansalliskirjastossa kirja voi näyttää erilaiselta kuin kotona hyllyssä. Perinteisiä käsikirjoituksia säilytetään puulevyjen välissä, yhteen sidottuina. Tekstit ovat käsintehdyllä paperilla, ja kokoelmissa on dzongkhan- ja tiibetinkielistä aineistoa. Kirjastossa esitellään myös perinteistä painamista: painolaitetta käytettiin kirjojen ja rukouslippujen valmistukseen. Kirjan muoto kertoo siis sen valmistustavasta. Sidonta pitää lehdet koossa, mutta puisten kansien sisällä säilyy samalla uskonnollista ja kirjallista perintöä.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -366,7 +366,7 @@
   "ehdotukset": {
     "lentoasema": "Paron lentoasema (PBH)",
     "huomiot": [
-      "C-tekstiluonnos; B ja riippumattomat D/E/F ovat avoinna.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 2 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Kaikki 19 kuvaroolia ovat neljältä kentältään tyhjiä; erillinen kuvaputki täydentää.",
       "Kartta partial: yksi oma WP-koordinaatti varmennettu, 6–8 kohteen portti avoin.",
       "Sääauditointi avoin; saatiedot:null eikä ilmastolukuja käytetä.",

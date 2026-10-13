@@ -3,7 +3,7 @@
   "era": "e09",
   "city": "biskek",
   "authorization": "hyväksyn kaikki tekemäsi kuvat. toimita ne claudelle. claudelta saat uusia ohjeita jatkoa varten",
-  "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+  "sourceContentAfterSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
   "assets": [
     {
       "era": "e09",
@@ -28,10 +28,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva ruokatorin tuoreista elintarvikkeista.",
-        "lyhyt": "Havainnekuva ruokatorin tuoreista elintarvikkeista."
+        "selite": "Havainnekuva ruokatorin tuoreista elintarvikkeista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -39,10 +39,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o3-20261012-v1-2bf807623421.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva ruokatorin tuoreista elintarvikkeista.",
-        "lyhyt": "Havainnekuva ruokatorin tuoreista elintarvikkeista."
+        "selite": "Havainnekuva ruokatorin tuoreista elintarvikkeista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -56,7 +56,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
-      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "5f78651961a5fc1a08ee30231d0adb29d7188bd37adb6b872ef3e830994901c6",
@@ -215,9 +215,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -236,17 +236,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentAfterSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "5f78651961a5fc1a08ee30231d0adb29d7188bd37adb6b872ef3e830994901c6",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "5f78651961a5fc1a08ee30231d0adb29d7188bd37adb6b872ef3e830994901c6",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "5f78651961a5fc1a08ee30231d0adb29d7188bd37adb6b872ef3e830994901c6",
+          "subjectTitle": "Torille tai konttikujille",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+        "sameImageNativeSHA256": "2bf8076234215440cc80629b667daf3091d5abe8db28fd5a92d472fc6506ae6b",
+        "sameImageExportSHA256": "3ffbc1ee76dac08b36409991b7d2688d42cef980f1c9e1790a10ce1ade913041",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -271,10 +292,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva lagman-nuudeleista.",
-        "lyhyt": "Havainnekuva lagman-nuudeleista."
+        "selite": "Havainnekuva lagman-nuudeleista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -282,10 +303,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-o4-20261012-v1-7c4d12107020.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva lagman-nuudeleista.",
-        "lyhyt": "Havainnekuva lagman-nuudeleista."
+        "selite": "Havainnekuva lagman-nuudeleista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -299,7 +320,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
-      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
         "semanticContextSHA256": "04c83462df323c42ae85878416e40181e9986614d25f2e7635e9cd539a874477",
@@ -458,9 +479,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -479,17 +500,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentAfterSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
       "contextAfterSHA256": "04c83462df323c42ae85878416e40181e9986614d25f2e7635e9cd539a874477",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "04c83462df323c42ae85878416e40181e9986614d25f2e7635e9cd539a874477",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "04c83462df323c42ae85878416e40181e9986614d25f2e7635e9cd539a874477",
+          "subjectTitle": "Mitä täällä syödään",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+        "sameImageNativeSHA256": "7c4d121070204c5534fa30ca564ce2951d377bb530a90c53fb082dd4d2d47a80",
+        "sameImageExportSHA256": "3ff42922b3edfeb1c58412e3ab3d4739bd74627c3a6ca559573ebcb0af3aa000",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -511,10 +553,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kahteen kerrokseen pinotuista konteista.",
-        "lyhyt": "Havainnekuva kahteen kerrokseen pinotuista konteista."
+        "selite": "Havainnekuva kahteen kerrokseen pinotuista konteista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -522,10 +564,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k1-20261012-v1-f3078244db8e.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva kahteen kerrokseen pinotuista konteista.",
-        "lyhyt": "Havainnekuva kahteen kerrokseen pinotuista konteista."
+        "selite": "Havainnekuva kahteen kerrokseen pinotuista konteista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -539,7 +581,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
-      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "semanticSourceBind": {
         "targetBeforeSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
         "semanticContextSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
@@ -698,9 +740,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -719,17 +761,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentAfterSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "targetAfterSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
       "contextAfterSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+        "targetAfterSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
+        "contextAfterSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
+          "semanticContextSHA256": "7f25717476e0294a470b49f7d77a1be7e6b50cf8e337a42466247c65332bf31f",
+          "subjectTitle": "Kontti kahdessa kerroksessa",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+        "sameImageNativeSHA256": "f3078244db8ee37d3469889e6e4908a82575755b35c4c3d13fea043158d3fe90",
+        "sameImageExportSHA256": "56ed3f46369f7aa97c9d7e5c18c10bfa07b451537424ed9c755fc9cdfa33dfba",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -751,10 +814,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa.",
-        "lyhyt": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa."
+        "selite": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -762,10 +825,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-k3-20261012-v1-0126754ed8fc.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa.",
-        "lyhyt": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa."
+        "selite": "Havainnekuva gamburgerista, jonka täytteenä on dönerin tapaan leikattua lihaa."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -779,7 +842,7 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
-      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "semanticSourceBind": {
         "targetBeforeSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
         "semanticContextSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
@@ -935,9 +998,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -956,17 +1019,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentAfterSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "targetAfterSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
       "contextAfterSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+        "targetAfterSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
+        "contextAfterSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
+          "semanticContextSHA256": "ac2f5749dc574d243046eacd867197068d83cd9886e0a3f7289b3a2fd261da12",
+          "subjectTitle": "Hampurilainen lainausmerkeissä",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+        "sameImageNativeSHA256": "0126754ed8fc7343c0736b6711dad685c01a817a2fafd1ecc70233aeac966c2a",
+        "sameImageExportSHA256": "146ee0cb4875de590778cd1deb7fb1f1448175b67e0459ccaca0b550cf574564",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -988,10 +1072,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva savesta rakennusmateriaalina.",
-        "lyhyt": "Havainnekuva savesta rakennusmateriaalina."
+        "selite": "Havainnekuva savesta rakennusmateriaalina."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -999,10 +1083,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-l1-20261012-v1-0a3cd7d2ac5a.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva savesta rakennusmateriaalina.",
-        "lyhyt": "Havainnekuva savesta rakennusmateriaalina."
+        "selite": "Havainnekuva savesta rakennusmateriaalina."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1016,10 +1100,10 @@
         1024
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
-      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
-        "semanticContextSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
+        "targetBeforeSHA256": "7886eb97203c4626415df2201bf01703db35474eb95b9727d5a554f74b98f282",
+        "semanticContextSHA256": "7886eb97203c4626415df2201bf01703db35474eb95b9727d5a554f74b98f282",
         "subjectTitle": "Ensin oli Pišpek",
         "targetState": "existing-target"
       },
@@ -1175,9 +1259,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1196,17 +1280,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
-      "targetAfterSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
-      "contextAfterSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
+      "sourceContentAfterSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+      "targetAfterSHA256": "7886eb97203c4626415df2201bf01703db35474eb95b9727d5a554f74b98f282",
+      "contextAfterSHA256": "7886eb97203c4626415df2201bf01703db35474eb95b9727d5a554f74b98f282",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+        "targetAfterSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
+        "contextAfterSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
+          "semanticContextSHA256": "cb747a01ed520d2313e1ebe3eb1cf68f2d70e7f7dac3f41f588b793ea3f3b82e",
+          "subjectTitle": "Ensin oli Pišpek",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+        "sameImageNativeSHA256": "0a3cd7d2ac5a48f3b56e4fb43831ebdac8d15c0240ae84e5c6a831b321b5463b",
+        "sameImageExportSHA256": "62b4a8a953ee6ad72a672410a1c2f3a80d1c286b6b66867504bb19267b2b41fd",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -1228,10 +1333,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista.",
-        "lyhyt": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista."
+        "selite": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista."
       },
       "removeMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CvalidatorCompatiblePayload": {},
@@ -1239,10 +1344,10 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e09/biskek/e09-biskek-traveler-20261013-v1-7e83419575ad.png",
         "suora": true,
         "lahde": "Tekoälyllä tuotettu havainnekuva.",
-        "selite": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista.",
-        "lyhyt": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista."
+        "selite": "Havainnekuva Biškekin oppaassa mainituista lagman-nuudeleista."
       },
       "runtimeRemoveMediaKeys": [
+        "lyhyt",
         "tiedosto"
       ],
       "CapplicationMode": "Commons-fields-to-C; complete-AI-and-CC-payload-to-runtime-sidecar",
@@ -1256,10 +1361,10 @@
         1536
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
-      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "semanticSourceBind": {
         "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-        "semanticContextSHA256": "6540ce072ab74fc99428c2877f31b21d37de4acab93c5b9d808acb83cc87bccb",
+        "semanticContextSHA256": "862b50b5968457f9b643b01ed44d5a50189c116a8f3bd2c475b69c9052af9283",
         "subjectTitle": "Matkailijalle",
         "targetState": "existing-target"
       },
@@ -1430,9 +1535,9 @@
       },
       "priorMediaFields": {
         "tiedosto": "",
-        "lahde": "",
+        "lyhyt": "",
         "selite": "",
-        "lyhyt": ""
+        "lahde": ""
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1451,17 +1556,38 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": false,
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentAfterSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
-      "contextAfterSHA256": "6540ce072ab74fc99428c2877f31b21d37de4acab93c5b9d808acb83cc87bccb",
+      "contextAfterSHA256": "862b50b5968457f9b643b01ed44d5a50189c116a8f3bd2c475b69c9052af9283",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+        "targetAfterSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+        "contextAfterSHA256": "6540ce072ab74fc99428c2877f31b21d37de4acab93c5b9d808acb83cc87bccb",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e762ab6603f950db4eb8a2d6d2f6b688612447c9b33768be445784d396be9dab",
+          "semanticContextSHA256": "6540ce072ab74fc99428c2877f31b21d37de4acab93c5b9d808acb83cc87bccb",
+          "subjectTitle": "Matkailijalle",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+        "sameImageNativeSHA256": "7e83419575ad4c84cc763cd718c8b431831ca9e17082e5054303f21bcce67a34",
+        "sameImageExportSHA256": "1186351d98d5f59152a3a6e7450ec5eab5050af4c27c288217385fd6a3878ba8",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -1480,14 +1606,14 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/photo-2035e8ad840c5be7b889.jpg",
         "suora": true,
         "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)",
-        "selite": "Nokkosia Biškekin Karagach-lehdossa.",
+        "selite": "Karagach-lehdon kasvillisuuteen kuuluvia nokkosia Biškekissä.",
         "lyhyt": "Nokkosia Biškekin Karagach-lehdossa.",
         "tiedosto": "Бишкек, Карагачевая роща, крапива.jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)",
-        "selite": "Nokkosia Biškekin Karagach-lehdossa.",
+        "selite": "Karagach-lehdon kasvillisuuteen kuuluvia nokkosia Biškekissä.",
         "lyhyt": "Nokkosia Biškekin Karagach-lehdossa.",
         "tiedosto": "Бишкек, Карагачевая роща, крапива.jpg"
       },
@@ -1495,7 +1621,7 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/photo-2035e8ad840c5be7b889.jpg",
         "suora": true,
         "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)",
-        "selite": "Nokkosia Biškekin Karagach-lehdossa.",
+        "selite": "Karagach-lehdon kasvillisuuteen kuuluvia nokkosia Biškekissä.",
         "lyhyt": "Nokkosia Biškekin Karagach-lehdossa.",
         "tiedosto": "Бишкек, Карагачевая роща, крапива.jpg"
       },
@@ -1511,10 +1637,10 @@
         3672
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
-      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
-        "semanticContextSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
+        "targetBeforeSHA256": "53ae978ed9cd837e7a4409651c4c3078e66ae47412b58230791357e4c6afd014",
+        "semanticContextSHA256": "53ae978ed9cd837e7a4409651c4c3078e66ae47412b58230791357e4c6afd014",
         "subjectTitle": "biskek — aito paikkavalokuva",
         "targetState": "existing-target"
       },
@@ -1628,9 +1754,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Бишкек, Карагачевая роща, крапива.jpg",
-        "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)",
-        "selite": "Nokkosia Biškekin Karagach-lehdossa.",
-        "lyhyt": "Nokkosia Biškekin Karagach-lehdossa."
+        "lyhyt": "Nokkosia Biškekin Karagach-lehdossa.",
+        "selite": "Karagach-lehdon kasvillisuuteen kuuluvia nokkosia Biškekissä.",
+        "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1649,23 +1775,44 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)",
-        "selite": "Nokkosia Biškekin Karagach-lehdossa.",
+        "selite": "Karagach-lehdon kasvillisuuteen kuuluvia nokkosia Biškekissä.",
         "lyhyt": "Nokkosia Biškekin Karagach-lehdossa.",
         "tiedosto": "Бишкек, Карагачевая роща, крапива.jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
-      "targetAfterSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
-      "contextAfterSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
+      "sourceContentAfterSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+      "targetAfterSHA256": "53ae978ed9cd837e7a4409651c4c3078e66ae47412b58230791357e4c6afd014",
+      "contextAfterSHA256": "53ae978ed9cd837e7a4409651c4c3078e66ae47412b58230791357e4c6afd014",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+        "targetAfterSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
+        "contextAfterSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
+          "semanticContextSHA256": "ece7f5aad162cf93afe5a71238a361cb4c2d2b38df46534c637d93aaeeefb20f",
+          "subjectTitle": "biskek — aito paikkavalokuva",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+        "sameImageNativeSHA256": "2035e8ad840c5be7b889ddb920ea21ca3d39bef75ff57c405e6e511a958931a0",
+        "sameImageExportSHA256": "2035e8ad840c5be7b889ddb920ea21ca3d39bef75ff57c405e6e511a958931a0",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     },
     {
       "era": "e09",
@@ -1687,23 +1834,23 @@
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/n1-605a07c3f1fc2238ba20.jpg",
         "suora": true,
         "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
-        "lyhyt": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "selite": "Biškekin Osh-torin leipiä huhtikuussa 2025 otetussa kuvassa.",
+        "lyhyt": "Tandoorileipiä Osh-torilla.",
         "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg"
       },
       "removeMediaKeys": [],
       "CvalidatorCompatiblePayload": {
         "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
-        "lyhyt": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "selite": "Biškekin Osh-torin leipiä huhtikuussa 2025 otetussa kuvassa.",
+        "lyhyt": "Tandoorileipiä Osh-torilla.",
         "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg"
       },
       "runtimeMediaFieldPayload": {
         "osoite": "https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/n1-605a07c3f1fc2238ba20.jpg",
         "suora": true,
         "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
-        "lyhyt": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "selite": "Biškekin Osh-torin leipiä huhtikuussa 2025 otetussa kuvassa.",
+        "lyhyt": "Tandoorileipiä Osh-torilla.",
         "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg"
       },
       "runtimeRemoveMediaKeys": [],
@@ -1718,10 +1865,10 @@
         3581
       ],
       "sourceContentPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/e09/paakaupungit-pilvi/e09/biskek/sisalto.json",
-      "sourceContentSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+      "sourceContentSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
       "semanticSourceBind": {
-        "targetBeforeSHA256": "e41c0a9e871e3bca50280658e7a9527cc9d497d90277ebb539532e6628e64bc6",
-        "semanticContextSHA256": "99378ed7bd519c7e2b52878cceec85c650c2387cb7d46f053e2ba489cefdfa31",
+        "targetBeforeSHA256": "3e9e6bc1ddcae14e49d915443e62055641494aa781b8aa46c11ef6cedf34b733",
+        "semanticContextSHA256": "a42ed704e81be40bf296f879dc5e1268041400dbb93780092ecce6d7add1b84a",
         "subjectTitle": "Osh-tori",
         "targetState": "existing-target"
       },
@@ -1880,9 +2027,9 @@
       "technicalExportProof": null,
       "priorMediaFields": {
         "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg",
-        "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
-        "lyhyt": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025."
+        "lyhyt": "Tandoorileipiä Osh-torilla.",
+        "selite": "Biškekin Osh-torin leipiä huhtikuussa 2025 otetussa kuvassa.",
+        "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)"
       },
       "preservePreviousMediaObjects": true,
       "authorization": {
@@ -1901,28 +2048,55 @@
           "userMessageID": "01a131b2-b64f-7c70-9a3d-52287e2e6de6"
         }
       },
-      "ownerAcceptanceVerified": false,
+      "ownerAcceptanceVerified": true,
       "gameIntegrated": false,
       "gamePublicationVerified": false,
       "inMemoryMergeVerified": true,
       "CcommonsMetadataBound": true,
       "CcommonsFieldPayload": {
         "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)",
-        "selite": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
-        "lyhyt": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+        "selite": "Biškekin Osh-torin leipiä huhtikuussa 2025 otetussa kuvassa.",
+        "lyhyt": "Tandoorileipiä Osh-torilla.",
         "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg"
       },
       "roleManifestBound": true,
-      "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
-      "targetAfterSHA256": "e41c0a9e871e3bca50280658e7a9527cc9d497d90277ebb539532e6628e64bc6",
-      "contextAfterSHA256": "99378ed7bd519c7e2b52878cceec85c650c2387cb7d46f053e2ba489cefdfa31",
+      "sourceContentAfterSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+      "targetAfterSHA256": "3e9e6bc1ddcae14e49d915443e62055641494aa781b8aa46c11ef6cedf34b733",
+      "contextAfterSHA256": "a42ed704e81be40bf296f879dc5e1268041400dbb93780092ecce6d7add1b84a",
       "ownerApproved": true,
-      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+      "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+      "priorSourceBindBeforeTask118": {
+        "sourceContentAfterSHA256": "d76bbde71468c8d6143426f8e686bd599178e4b87d212513051adb4fd4293e71",
+        "targetAfterSHA256": "e41c0a9e871e3bca50280658e7a9527cc9d497d90277ebb539532e6628e64bc6",
+        "contextAfterSHA256": "99378ed7bd519c7e2b52878cceec85c650c2387cb7d46f053e2ba489cefdfa31",
+        "semanticSourceBind": {
+          "targetBeforeSHA256": "e41c0a9e871e3bca50280658e7a9527cc9d497d90277ebb539532e6628e64bc6",
+          "semanticContextSHA256": "99378ed7bd519c7e2b52878cceec85c650c2387cb7d46f053e2ba489cefdfa31",
+          "subjectTitle": "Osh-tori",
+          "targetState": "existing-target"
+        }
+      },
+      "task118CorrectedCBinding": {
+        "sourceSHA256": "22440a8ac34bdbff5316af1a1830c4924f56c174b94d39e8d27d0b4270d6cd82",
+        "sameImageNativeSHA256": "605a07c3f1fc2238ba20bacb727d97549b81638abc42aaeb427f5f8e31364d00",
+        "sameImageExportSHA256": "605a07c3f1fc2238ba20bacb727d97549b81638abc42aaeb427f5f8e31364d00",
+        "independentNativeQAEvidencePreserved": true,
+        "independentTextResamplePending": true,
+        "captionChanged": false
+      },
+      "runtimeUseAllowed": true,
+      "textAcceptanceVerified": false
     }
   ],
   "runtimeIntegrationPending": true,
   "ownerAcceptedNotImpliedByAuthorization": false,
   "gameIntegrated": false,
   "allAssetsExplicitlyOwnerApproved": true,
-  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json"
+  "ownerApprovalEvidencePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/owner-approval/owner-approved-capitals-20261013.json",
+  "task118ExcludedAssets": [],
+  "task118TextRevision": true,
+  "independentTextResamplePending": true,
+  "textAcceptanceVerified": false,
+  "priorSnapshotPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/paakaupungit-codex/sessio-72-20261011/kuvat-nopeasti/root-game-routing/task118/immutable-media-history/e09/biskek/504c5a0896a49e97f52fc426fbdd226723904ca71064d123afb84fdee33428fd.json",
+  "task118ReboundAt": "2026-10-13T16:31:25.592800+00:00"
 }

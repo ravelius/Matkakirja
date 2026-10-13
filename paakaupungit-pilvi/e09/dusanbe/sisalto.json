@@ -42,7 +42,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Rubab, tanbur ja dutor kuuluvat tähän ryhmään.",
+      "hint": "Kokoelma painottuu Pamirin ja Badakhšanin musiikkiperinteeseen.",
       "fact": "Gurminjin museon kokoelmassa painottuvat kielisoittimet, mutta mukana on myös rumpuja.",
       "source": "https://en.wikipedia.org/wiki/Gurminj_Museum_of_Musical_Instruments"
     },
@@ -50,13 +50,13 @@
       "q": "Minkä rakennuksen Dušanbe lahjoitti Boulderiin?",
       "options": [
         "Teehuoneen",
-        "Rautatieaseman",
-        "Oopperatalon",
-        "Tähtitornin"
+        "Kirjastopaviljongin",
+        "Soitinmuseon",
+        "Käsityöateljeen"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Rakennuksessa yhdistyvät käsityötaito ja yhdessä istuminen.",
+      "hint": "Tadžikkilaiset käsityöläiset valmistivat rakennuksen osat kotimaassaan.",
       "fact": "Dušanbe lahjoitti ystävyyskaupunki Boulderille tadžikkilaisen teehuoneen.",
       "source": "https://en.wikipedia.org/wiki/Dushanbe"
     },
@@ -84,7 +84,7 @@
       ],
       "correct": 0,
       "level": 3,
-      "hint": "Perinteessä kuulon ja käytännön esityksen kautta oppimisella on suuri tehtävä.",
+      "hint": "Shashmaqomissa on sekä laulua että soittoa.",
       "fact": "Shashmaqomin nuotinnos tallentaa vain osan esityksestä, joten suullinen opetus säilyttää myös tulkinnan tietoa.",
       "source": "https://ich.unesco.org/en/RL/shashmaqom-music-00089"
     }
@@ -96,8 +96,8 @@
   ],
   "valokuva": {
     "tiedosto": "Tulip of Dushanbe.jpg",
-    "lyhyt": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
-    "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa.",
+    "lyhyt": "Tulppaaneja Dušanbessa.",
+    "selite": "Valkoisia ja oransseja tulppaaneja Dušanbessa otetussa kuvassa.",
     "lahde": "Zolfeqar Fatihzadeh, Commons (CC BY-SA 4.0)",
     "vuosi": "2026"
   },
@@ -140,14 +140,14 @@
           "otsikko": "Kaupunki ylitti oman jokensa",
           "teksti": "Varzob virtaa Dušanben halki pohjoisesta etelään. Kaupunki kasvoi pitkään pääasiassa joen vasemmalla rannalla, kunnes rakentaminen laajeni myös vastakkaiselle puolelle. Joen sijainti auttaa ymmärtämään kaupungin rakennetta paremmin kuin yksittäinen monumentti. Dušanbe sijaitsee Hisorin laakson vuorten välisessä altaassa, mutta asutus ei ole jäänyt vanhan kylän mittaan. Varzobin laakso jatkuu kaupungista kohti vuoristoa, jossa joen varrella on retki- ja vapaa-ajan paikkoja. Sama vesi liittyy sekä pääkaupungin karttaan että lähiseudun retkiin.",
           "tiedosto": "Ravine of Varzob River - panoramio.jpg",
-          "lyhyt": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
-          "selite": "Varzobin jokilaaksoa Dušanben pohjoispuolella marraskuussa 2008.",
+          "lyhyt": "Varzobin jokilaaksoa.",
+          "selite": "Dušanben pohjoispuolinen Varzobin laakso marraskuussa 2008 otetussa kuvassa.",
           "lahde": "Michael Karavanov, Wikimedia Commons (CC BY-SA 3.0)",
           "wiki": "Dushanbe"
         },
         {
           "otsikko": "Vihreyskin on rakennettua",
-          "teksti": "Dušanben nykyinen puusto ei ole pelkkä jäänne maisemasta ennen kaupunkia. Pääkaupungin rakentaminen poisti vanhaa kasvillisuutta, ja viheralueiden sekä kasvitieteellisen puutarhan istutukset toivat tilalle uusia kasveja. Tiedakatemian puutarha perustettiin 1900-luvulla, ja sen varhaisia istutuksia on säilynyt. Rudaki-kadun varrella kasvaa suuria plataaneja. Kun kävelijä löytää niiden alta varjon, hän liikkuu samalla kaupungin rakentamisen historiassa: viheralueet ovat osa sitä, kuinka laakson asutuksesta tehtiin pääkaupunki.",
+          "teksti": "Dušanben nykyinen puusto ei ole pelkkä jäänne maisemasta ennen kaupunkia. Pääkaupungin rakentaminen poisti vanhaa kasvillisuutta, ja viheralueiden sekä kasvitieteellisen puutarhan istutukset toivat tilalle uusia kasveja. Tiedeakatemian puutarha perustettiin 1900-luvulla, ja sen varhaisia istutuksia on säilynyt. Rudaki-kadun varrella kasvaa suuria plataaneja. Kun kävelijä löytää niiden alta varjon, hän liikkuu samalla kaupungin rakentamisen historiassa: viheralueet ovat osa sitä, kuinka laakson asutuksesta tehtiin pääkaupunki.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -156,7 +156,7 @@
         },
         {
           "otsikko": "Siilit eivät tarvitse katuosoitetta",
-          "teksti": "Dušanben eläimistöön on kirjattu kettuja, pitkäkorvaisia siilejä ja lepakoita. Lintuihin kuuluu kyyhkyjä ja muuttavia lajeja, ja kaupungin vesissä elää myös kaloja. Gekot ja liskot kuuluvat matelijoihin; puhtaammissa vesissä tavataan sammakoita ja rupikonnia. Kaupunkikartta näyttää kadut ja korttelit, mutta eläimille samoissa paikoissa on toisenlaisia elinympäristöjä. Tämä lajisto ei tarkoita, että kaikki eläimet näkyisivät tavallisella puistokävelyllä. Se kertoo, että vuorten väliin rakennettu pääkaupunki on myös muiden lajien asuinalue.",
+          "teksti": "Dušanben eläimistöön on kirjattu kettuja, pitkäkorvaisia siilejä ja lepakoita. Lintuihin kuuluu kyyhkyjä ja muuttavia lajeja, ja kaupungin vesissä elää myös kaloja. Gekot ja liskot kuuluvat matelijoihin; puhtaammissa vesissä tavataan sammakoita ja rupikonnia. Kaupunkikartta näyttää kadut ja korttelit, mutta eläimille samoissa paikoissa on toisenlaisia elinympäristöjä. Nisäkkäät, linnut ja veden äärellä elävät sammakkoeläimet käyttävät kaupungin puustoa, viheralueita ja vesistöjä eri tavoin.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -190,7 +190,7 @@
             },
             {
               "otsikko": "Valitse museosta yksi maailma",
-              "teksti": "Gurminjin soitinmuseossa voi tutustua Pamirin ja Badakhšanin soittimiin. Tarkista etukäteen, järjestetäänkö vierailun aikaan musiikkitapahtumaa. Kansallismuseo ja kansallinen muinaismuseo ovat eri laitoksia, joten varmista juuri haluamasi museon nimi ja osoite. Nimen perusteella ei kannata päätellä, että kaikki arkeologiset kokoelmat olisivat samassa rakennuksessa. Museoiden väliin voi jättää kävelyä keskustan puistojen kautta.",
+              "teksti": "Gurminjin soitinmuseossa voi tutustua Pamirin ja Badakhšanin soittimiin. Tarkista etukäteen, järjestetäänkö vierailun aikaan musiikkitapahtumaa. Kansallismuseo ja kansallinen muinaismuseo ovat eri laitoksia, joten varmista juuri haluamasi museon nimi ja osoite. Gurminjin kokoelmassa painottuvat rubabin, tanburin ja dutorin kaltaiset kielisoittimet sekä rummut. Museoiden väliin voi jättää kävelyä keskustan puistojen kautta.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -342,7 +342,7 @@
   "ehdotukset": {
     "lentoasema": null,
     "huomiot": [
-      "C-tekstiluonnos; kuvat ja D/E/F odottavat. Kaikkien kuvaroolien tiedosto/lyhyt/selite/lahde tyhjiä.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 2 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Kartta partial, 0 kohdetta: Rudaki Park -polku palauttaa kaupungin sivun. Gurminjin rakennuksen tekijäketju avoin; eläintarhan siirtosuunnitelman nykytila tarkistamatta.",
       "Saatiedot:null, 48/48 primääriauditointi avoin. Ei ilmastolukuja eikä muutoksia saa.jsoniin.",
       "Kontekstin Hisorin linnoitus on kaupunkikeskustan ulkopuolella, eikä sitä lisätty karttatavoitteen täytteeksi.",

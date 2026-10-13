@@ -25,3 +25,47 @@ Kontekstin alkuperäisten vesioja- ja maisemateemojen päälle kirjoitettiin uud
 Kuvaputken roolit: laaja kaupunkinäkymä / puistokatu / torikokonaisuus (kansi), Dordoin konttikäytävä, rautatieyhteyttä kuvaava hyväksyttävä ympäristö, gamburger, dungaanilehden kulttuurinen aihe, Pišpekin historiaan sopiva vanha vapaa aineisto, Frunzen vanha kotitalo vain tekijäketjun jälkeen, katuosoite, asuinkorttelin piha, matkailijan pysty, viisi oppaan roolia, Osh-tori, matkakirjan valokuva. Ei suojattuja patsaita tai moderneja museojulkisivuja. Tämä lista ei ole kuva-/lisenssivalinta.
 
 Avoimet portit: A:n ensikäden ja kartta-aineiston täydennys, B, sääauditointi, riippumaton D, E/F, omistajan hyväksyntä, pelikytkentä, julkaisu. Lähde- ja tiedosto-SHA:t sekä mitat NASin omassa väliaineistossa.
+
+
+## Task118 korjaus 13.10.2026
+Kaikki pelaajatekstikentät luettu ja sovellettu otoksen yleissäännöt. Lähdepohja, C-muistio sekä nykyiset Commons-lähdetiedot tarkistettu. Meta- ja täytelauseita korvattu kaupungin omilla faktoilla; vihjeet ja houkuttimet täsmennetty. Nykyiset kuvat, pisteet ja sää säilytetty; niiden puutteet ovat erillisiä portteja. Tuore mainin js/data-haku tehty ennen kirjoittamista. Ei Git, kuvia, pelikytkentää tai julkaisua.
+
+
+```text
+VIRHE biskek: kansikuva 1: tiedosto puuttuu
+VIRHE biskek: kansikuva 2: tiedosto puuttuu
+VIRHE biskek: kansikuva 3: tiedosto puuttuu
+VIRHE biskek: kansi nosto 1: tiedosto puuttuu
+VIRHE biskek: kansi nosto 2: tiedosto puuttuu
+VIRHE biskek: kansi nosto 3: tiedosto puuttuu
+VIRHE biskek: kansi nosto 4: tiedosto puuttuu
+VIRHE biskek: matkailijalle.kuva: tiedosto puuttuu
+VIRHE biskek: opas jakso 1: tiedosto puuttuu
+VIRHE biskek: opas jakso 2: tiedosto puuttuu
+VIRHE biskek: opas jakso 3: tiedosto puuttuu
+VIRHE biskek: opas jakso 4: tiedosto puuttuu
+VIRHE biskek: opas jakso 5: tiedosto puuttuu
+VIRHE biskek: teemasivu historia nosto 1: tiedosto puuttuu
+VIRHE biskek: teemasivu historia nosto 2: tiedosto puuttuu
+VIRHE biskek: teemasivu historia nosto 3: tiedosto puuttuu
+VIRHE biskek: teemasivu historia nosto 4: tiedosto puuttuu
+== biskek: 17 virhettä, 3 varoitusta, 2 kuvaa
+YHTEENSÄ 1 kaupunkia: 17 virhettä, 3 varoitusta
+```
+SHA256 a660456d6150b7378b6c2ece33c380dab66211485775b775d4387313a1f25d7f
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 190cb0e64bfda64ba4e71557b61b9b8e83103c459f9783465e966fa4259bb3e8. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS biskek: kysymys 4: source ei ole Wikipedia-artikkeli
+VAROITUS biskek: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS biskek: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 190cb0e64bfda64ba4e71557b61b9b8e83103c459f9783465e966fa4259bb3e8. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS biskek: kysymys 4: source ei ole Wikipedia-artikkeli
+VAROITUS biskek: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS biskek: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

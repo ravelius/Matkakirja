@@ -28,3 +28,42 @@ Kuvaputkelle avoinna 19 roolia: valokuva, kolme eri yleiskansikuvaa, kahdeksan n
 Kartta 1/6–8, muiden kohteiden pisteet ja paikkafaktat avoinna. Sääauditointi, muuttuvat opastiedot, riippumaton D/E/F, toimituksen hyväksyntä, pelikytkentä ja julkaisu avoinna. Ei Git-operaatioita, peli- tai toisten kaupunkien muutoksia.
 
 Lähteet, epäonnistuneiden hakujen todisteet, robots-lokit, mitat ja SHA256:t ovat `sessio-72-20261011/valiaikainen/nopea-e09-taskent/`. Tuotantotiedostojen ja lähteiden SHA:t ovat `SHA256SUMS.txt`:ssä. Commit-SHA:ta ei synny tässä työssä.
+
+
+## Task118 korjaus 13.10.2026
+Nimetyt löydökset käsitelty; lähdepohja ja tallennetut /wiki/-lähteet tarkistettu. Visojen vastauslähteet, vaihtoehdot, vihjeet, nimi-/termiasut, kuvatekstit sekä tuotantometalauseet korjattu. Dhakan rikshamaalaus korvattu paikannimien kauppayhteisöhistorialla (Dhaka, Mughal period; tuore mainin BGD.Dhaka sisältää jo rikshamaalauksen). Kuva-/kartta-/sääomistus säilytetty; näiden portit edelleen avoimet.
+```text
+VIRHE taskent: kansikuva 2: tiedosto puuttuu
+VIRHE taskent: kansikuva 3: tiedosto puuttuu
+VIRHE taskent: kansi nosto 1: tiedosto puuttuu
+VIRHE taskent: kansi nosto 2: tiedosto puuttuu
+VIRHE taskent: kansi nosto 3: tiedosto puuttuu
+VIRHE taskent: kansi nosto 4: tiedosto puuttuu
+VIRHE taskent: opas jakso 1: tiedosto puuttuu
+VIRHE taskent: opas jakso 2: tiedosto puuttuu
+VIRHE taskent: opas jakso 3: tiedosto puuttuu
+VIRHE taskent: opas jakso 4: tiedosto puuttuu
+VIRHE taskent: opas jakso 5: tiedosto puuttuu
+VIRHE taskent: teemasivu historia nosto 1: tiedosto puuttuu
+VIRHE taskent: teemasivu historia nosto 2: tiedosto puuttuu
+VIRHE taskent: teemasivu historia nosto 3: tiedosto puuttuu
+VIRHE taskent: teemasivu historia nosto 4: tiedosto puuttuu
+VIRHE taskent: juttu Kukeldashin medresa kuva 1: tiedosto puuttuu
+== taskent: 16 virhettä, 2 varoitusta, 3 kuvaa
+YHTEENSÄ 1 kaupunkia: 16 virhettä, 2 varoitusta
+```
+SHA256 6d4e0173d19d1e0fcc598fd817a0ccdb64123db9f7686a6a434d83ad6afb98ee
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS taskent: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS taskent: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```
+
+Lopullinen Task118-tarkistus: kuvatiedostot/creditit, koordinaatit, rajat, sää ja vastausindeksit täsmälleen baselinen mukaiset. Tiedostohash 0825a8c2f7cf4f5774bcfa48d00606c643aa79a202d59b685cdcfd160e0b812b. Muuttuvat ohjeet keskitetty, kuvatekstitoisto ja merkistövirheet tarkistettu.
+
+```text
+VAROITUS taskent: kohteita 1 (pohjataso 6; perustele RAPORTTI.md:ssä)
+VAROITUS taskent: saatiedot puuttuu (kirjaa syy RAPORTTI.md:hen)
+```

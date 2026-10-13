@@ -37,12 +37,12 @@
       "options": [
         "Laivakonteista",
         "Rautatievaunuista",
-        "Kivisistä holveista",
-        "Puisista veneistä"
+        "Siirrettävistä kioskeista",
+        "Tavaralavojen puusta"
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Rakennusosa on kuljettanut tavaroita ennen uutta tehtäväänsä.",
+      "hint": "Basaarissa myyntitila ja varasto ovat usein päällekkäin.",
       "fact": "Dordoin basaarissa pinotut laivakontit toimivat myymälöinä ja varastoina.",
       "source": "https://en.wikipedia.org/wiki/Dordoy_Bazaar"
     },
@@ -61,7 +61,7 @@
       "source": "https://en.wikipedia.org/wiki/Bishkek"
     },
     {
-      "q": "Mikä liha kuuluu tyypilliseen Biškekin gamburgeriin?",
+      "q": "Miten Biškekin gamburgerin liha tavallisesti valmistellaan?",
       "options": [
         "Dönerin tapaan leikattu",
         "Paksuksi pihviksi paistettu",
@@ -70,7 +70,7 @@
       ],
       "correct": 0,
       "level": 2,
-      "hint": "Sämpylä muistuttaa tutulta, mutta täyte seuraa toista katuruokaa.",
+      "hint": "Sämpylä näyttää tutulta, mutta täyte seuraa toista katuruokaa.",
       "fact": "Paikallisessa gamburgerissa on yleensä dönerin tapaan leikattua lihaa ja useita lisukkeita.",
       "source": "https://en.wikivoyage.org/wiki/Bishkek"
     },
@@ -78,9 +78,9 @@
       "q": "Mihin rataverkkoon Biškek liittyy sivuradan kautta?",
       "options": [
         "Turkestanin–Siperian",
+        "Trans-Kaspian",
         "Baikalin–Amurin",
-        "Kiinan–Tiibetin",
-        "Intian–Nepalin"
+        "Trans-Siperian"
       ],
       "correct": 0,
       "level": 3,
@@ -97,7 +97,7 @@
   "valokuva": {
     "tiedosto": "Бишкек, Карагачевая роща, крапива.jpg",
     "lyhyt": "Nokkosia Biškekin Karagach-lehdossa.",
-    "selite": "Nokkosia Biškekin Karagach-lehdossa.",
+    "selite": "Karagach-lehdon kasvillisuuteen kuuluvia nokkosia Biškekissä.",
     "lahde": "Екатерина Борисова, Commons (CC BY-SA 4.0)"
   },
   "kaupunkilehti": [
@@ -155,7 +155,7 @@
         },
         {
           "otsikko": "Sanomalehti dungaaniksi",
-          "teksti": "Biškekissä ilmestyvä Huimin Bao on dungaaninkielinen sanomalehti. Se tuo kaupungin julkiseen elämään kielen, jota harva suomalainen tunnistaa edes nimeltä. Kirgiisi ja venäjä eivät siis kata kaikkea pääkaupungin kielikirjoa. Samassa kaupungissa toimivat kansalliskirjasto, paikallisia museoita ja useita yliopistoja. Lehtikioskin nimi voi avata erilaisen näkymän kaupunkiin kuin monumentti: täällä tuotetaan uutisia ja tekstejä myös pienemmän kieliyhteisön omalla kielellä. Huimin Bao kuuluu Biškekin kulttuurielämään omana julkaisunaan.",
+          "teksti": "Biškekissä ilmestyvä Huimin Bao on dungaaninkielinen sanomalehti. Dungaaninkielinen julkaisu tuo oman kieliyhteisönsä tekstit kaupungin sanomalehtiin. Kirgiisi ja venäjä eivät siis kata kaikkea pääkaupungin kielikirjoa. Samassa kaupungissa toimivat kansalliskirjasto, paikallisia museoita ja useita yliopistoja. Lehtikioskin nimi voi avata erilaisen näkymän kaupunkiin kuin monumentti: täällä tuotetaan uutisia ja tekstejä myös pienemmän kieliyhteisön omalla kielellä. Huimin Bao kuuluu Biškekin kulttuurielämään omana julkaisunaan.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -219,7 +219,7 @@
             },
             {
               "otsikko": "Kaupungista vuorille",
-              "teksti": "Ala-Archan kansallispuisto ja Alamedinin laakso kuuluvat Biškekin lähiseudun retkikohteisiin. Vuoristoretki on eri ohjelma kuin keskustan museo- ja torikävely: selvitä kuljetus, reitti ja päivän sää erikseen. Puistoa ei kannata ajatella keskustan seuraavana korttelina, vaikka vuoret näkyvät kaupungista. Varaa kaupunkiin oma päivä ennen retkeä, jotta Biškek ei jää pelkäksi varusteiden hankintapaikaksi.",
+              "teksti": "Ala-Archan kansallispuisto ja Alamedinin laakso kuuluvat Biškekin lähiseudun retkikohteisiin. Vuoristoretki on eri ohjelma kuin keskustan museo- ja torikävely: selvitä kuljetus, reitti ja päivän sää erikseen. Ala-Archan puisto sijaitsee Ala-Too-vuoriston maastossa, Alamedin on jokilaakson retkialue. Osh-tori, museot ja Erkindik-bulevardi ovat kaupunkipäivän kohteita.",
               "kuva": {
                 "tiedosto": "",
                 "lyhyt": "",
@@ -293,7 +293,7 @@
       "nostot": [
         {
           "otsikko": "Ensin oli Pišpek",
-          "teksti": "Biškekin paikalla oli karavaanireittejä palvellut Pišpekin linnoitus ennen nykyistä pääkaupunkia. Kokandin kaanikunta rakennutti savilinnoituksen 1800-luvulla, ja myöhemmin alue siirtyi Venäjän vallan alle. Linnoitus tuhoutui ja asutus kasvoi uudelleen. Isoisän matkavuosi 1873 osuu tähän Pišpekin vaiheeseen. Nykyisen ruutukaavan, museoiden ja kerrostalojen kaupunkia ei pidä siirtää sellaisenaan hänen aikaansa. Paikalla oli jo asutusta, mutta pääkaupunkiasema tuli vasta neuvostokaudella seuraavalla vuosisadalla.",
+          "teksti": "Biškekin paikalla oli karavaanireittejä palvellut Pišpekin linnoitus ennen nykyistä pääkaupunkia. Kokandin kaanikunta rakennutti savilinnoituksen 1800-luvulla, ja myöhemmin alue siirtyi Venäjän vallan alle. Linnoitus tuhoutui ja asutus kasvoi uudelleen. Isoisän matkavuosi 1873 osuu tähän Pišpekin vaiheeseen. Leveiden bulevardien ja kerrostalokorttelien kaupunki kasvoi myöhemmin tästä asutuksesta. Paikalla oli jo asutusta, mutta pääkaupunkiasema tuli vasta neuvostokaudella seuraavalla vuosisadalla.",
           "tiedosto": "",
           "lyhyt": "",
           "selite": "",
@@ -355,8 +355,8 @@
       "kuvat": [
         {
           "tiedosto": "Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg",
-          "lyhyt": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
-          "selite": "Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.",
+          "lyhyt": "Tandoorileipiä Osh-torilla.",
+          "selite": "Biškekin Osh-torin leipiä huhtikuussa 2025 otetussa kuvassa.",
           "lahde": "ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)"
         }
       ],
@@ -367,7 +367,7 @@
   "ehdotukset": {
     "lentoasema": null,
     "huomiot": [
-      "C-tekstiluonnos; B-kuvat ja D/E/F puuttuvat. Kaikki kuvaroolien tiedosto/lyhyt/selite/lahde tyhjiä.",
+      "Task118 C-tekstikorjaus valmis 13.10.2026. Nykyisessä C:ssä 2 täytettyä kuvaroolia; erilliset B/media-, kartta-, sää-, D/E/F- ja pelikytkentäportit eivät ole tämän tekstikorjauksen hyväksyntä.",
       "Kartta partial: oma WP/WD-piste sekä suojattujen rakennusten tekijäketju tarkistetaan ennen kohteen lisäämistä.",
       "Sääauditointi avoin: saatiedot null, ei ilmastolukuja eikä muutoksia saa.json-numeroihin.",
       "Manasin lentoaseman nykyinen IATA-koodi jätetty avoimeksi; vanhaa FRU-koodia ei kopioitu."
