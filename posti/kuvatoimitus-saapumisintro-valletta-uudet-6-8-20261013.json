@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "cityName": "VALLETTA",
+  "gameCityId": "valletta",
+  "mediaSlug": "valletta",
+  "taskNumbers": [
+    223,
+    224
+  ],
+  "updatedAt": "2026-10-13T19:59:18.724349+00:00",
+  "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+  "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+  "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+  "sourceReadInFull": true,
+  "sourceReadBy": "/root/intro_owner_rejection_inventory",
+  "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+  "assets": [
+    {
+      "taskNumber": 223,
+      "mediaSlug": "valletta",
+      "slot": 6,
+      "filename": "valletta-6-nakoala-intro-v1.png",
+      "title": "koko kaupunki tunnetulta näköalapaikalta päivällä — Vallettan siluetti Sliemen Tignén rantakaiteelta Marsamxettin sataman yli kaakkoon päivällä.",
+      "fullDeliveryRequirement": "**6 / koko kaupunki tunnetulta näköalapaikalta päivällä — Vallettan siluetti Sliemen Tignén rantakaiteelta Marsamxettin sataman yli kaakkoon päivällä.** Tiedosto `valletta-6-nakoala-intro-v1.png`.\nMitä kuvataan: Vallettan kaupunki Marsamxettin sataman toiselta puolelta, Sliemen Tignén rantakaiteelta, kirkkaana päivänä (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kalkkikivikaidetta ja rantakiveä, ei ihmisiä lähellä. Keskellä tyyni sinivihreä satamavesi, jolla muutama pieni vene tai purjevene kaukana (ei nimiä tai kirjaimia). Vastarannalla Vallettan hunajankeltainen kalkkikivinen siluetti jyrkän kaupunginmuurin päällä: muurit ja bastionit, niiden yläpuolella tiheä rivi kapeita kerrostaloja puuparvekkeineen, kuvan keskellä Karmeliittakirkon iso, tumma-harmaa, soikea kupoli ja sen vieressä Pyhän Paavalin anglikaanisen pro-katedraalin hoikka kivitorni; kuvan vasemmassa laidassa kaukana niemen kärjessä Fort St. Elmon matala linnoitus; oikealla kaukana muurit jatkuvat kohti Floriana-aluetta. Taivas kirkas sininen, muutama ohut pilvi. Autot ja kävelijät vain pieninä pisteinä. Kulma: vaakakuva, katse kaakkoon (suunta noin 125-140 astetta, näkökenttä noin 60 astetta), kamera rantakaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, lippuja, risteilyaluksia, suuria laivoja, Fort Tignén rakennusta (jää kameran taakse), Sliemen korkeita moderneja kerrostaloja, Barrakka-hissiä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Vallettan siluetti Sliemen Tignén rantakaiteelta Marsamxettin sataman yli kaakkoon päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "VALLETTA",
+      "gameID": "valletta",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        92060,
+        93890
+      ],
+      "sourceByteSpan": [
+        95602,
+        97498
+      ],
+      "fullDeliveryRequirementSHA256": "380ec608b71b47a47c3d62cdc6fba23cf0f2e308a53968d0167dd4e0892387aa",
+      "fullDirective": "Vallettan kaupunki Marsamxettin sataman toiselta puolelta, Sliemen Tignén rantakaiteelta, kirkkaana päivänä (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kalkkikivikaidetta ja rantakiveä, ei ihmisiä lähellä. Keskellä tyyni sinivihreä satamavesi, jolla muutama pieni vene tai purjevene kaukana (ei nimiä tai kirjaimia). Vastarannalla Vallettan hunajankeltainen kalkkikivinen siluetti jyrkän kaupunginmuurin päällä: muurit ja bastionit, niiden yläpuolella tiheä rivi kapeita kerrostaloja puuparvekkeineen, kuvan keskellä Karmeliittakirkon iso, tumma-harmaa, soikea kupoli ja sen vieressä Pyhän Paavalin anglikaanisen pro-katedraalin hoikka kivitorni; kuvan vasemmassa laidassa kaukana niemen kärjessä Fort St. Elmon matala linnoitus; oikealla kaukana muurit jatkuvat kohti Floriana-aluetta. Taivas kirkas sininen, muutama ohut pilvi. Autot ja kävelijät vain pieninä pisteinä. Kulma: vaakakuva, katse kaakkoon (suunta noin 125-140 astetta, näkökenttä noin 60 astetta), kamera rantakaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, lippuja, risteilyaluksia, suuria laivoja, Fort Tignén rakennusta (jää kameran taakse), Sliemen korkeita moderneja kerrostaloja, Barrakka-hissiä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Vallettan siluetti Sliemen Tignén rantakaiteelta Marsamxettin sataman yli kaakkoon päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/valletta/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-valletta-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/valletta/20261013-uudet-6-8/valletta-6-nakoala-intro-v1.png",
+      "historical": false,
+      "id": "valletta-6-nakoala-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "VALLETTA",
+      "gameCityId": "valletta",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/valletta/native-6.png",
+      "nativeSHA256": "a66e0543fb8c59c550d45b21a5b647c47a3dd5b1daac91c9cb63f4df2d9b7558",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/valletta/valletta-6-nakoala-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/valletta/valletta-6-nakoala-intro-v1.png",
+      "sha256": "6cb0ca4c3e79096ecb459504993af014a19c3ed08e5d2b2c191ba6ef17aff1d3",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Create exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nVallettan kaupunki Marsamxettin sataman toiselta puolelta, Sliemen Tignén rantakaiteelta, kirkkaana päivänä (nykyaikainen värivalokuva). Etualalla kuvan alareunassa vain kapea kaistale vaaleaa kalkkikivikaidetta ja rantakiveä, ei ihmisiä lähellä. Keskellä tyyni sinivihreä satamavesi, jolla muutama pieni vene tai purjevene kaukana (ei nimiä tai kirjaimia). Vastarannalla Vallettan hunajankeltainen kalkkikivinen siluetti jyrkän kaupunginmuurin päällä: muurit ja bastionit, niiden yläpuolella tiheä rivi kapeita kerrostaloja puuparvekkeineen, kuvan keskellä Karmeliittakirkon iso, tumma-harmaa, soikea kupoli ja sen vieressä Pyhän Paavalin anglikaanisen pro-katedraalin hoikka kivitorni; kuvan vasemmassa laidassa kaukana niemen kärjessä Fort St. Elmon matala linnoitus; oikealla kaukana muurit jatkuvat kohti Floriana-aluetta. Taivas kirkas sininen, muutama ohut pilvi. Autot ja kävelijät vain pieninä pisteinä. Kulma: vaakakuva, katse kaakkoon (suunta noin 125-140 astetta, näkökenttä noin 60 astetta), kamera rantakaiteen takana silmänkorkeudelta, hieman alaspäin. Valo: kirkas mutta pehmeä iltapäivän valo, vaimeat värit, ei HDR:ää. Ei saa näkyä: ihmisiä lähellä tai tunnistettavia kasvoja, tekstiä, kylttejä, mainoksia, logoja, lippuja, risteilyaluksia, suuria laivoja, Fort Tignén rakennusta (jää kameran taakse), Sliemen korkeita moderneja kerrostaloja, Barrakka-hissiä, ilotulitusta, drooneja. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nComposition priority: eye-level view across calm blue-green Marsamxett water from Sliema Tigne shore, southeast125–140 degrees /60-degree field. Thin pale LIMESTONE rail/shore rocks at bottom only. Coherent broad honey-limestone Valletta bastion silhouette across harbour, dense narrow apartment rows/wooden balconies. Large dark-grey oval Carmelite dome at CENTER with slim stone SaintPaul pro-cathedral spire nearby, low FortSaintElmo on far LEFT tip, walls trailing right toward Floriana. Few very tiny blank boats, preferably no sail/flag. Absolutely no cruise ship/large vessel/flag/pole/banner/sign/logo/name/writing, BarrakkaLift, FortTigne or modern Sliema high-rises. No nearby people. Natural soft bright muted daytime, irregular realistic calm water.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            95602,
+            97498
+          ],
+          "fullRequirementSHA256": "380ec608b71b47a47c3d62cdc6fba23cf0f2e308a53968d0167dd4e0892387aa",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/valletta/qa-6.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/valletta/producer-6.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-uudet-6-8/valletta-6-nakoala-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-uudet-6-8/valletta-6-nakoala-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 6,
+        "taskNumber": 223,
+        "assetID": "valletta-6-nakoala-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/valletta/asset-6.json",
+        "nativeSHA256": "a66e0543fb8c59c550d45b21a5b647c47a3dd5b1daac91c9cb63f4df2d9b7558",
+        "finalSHA256": "6cb0ca4c3e79096ecb459504993af014a19c3ed08e5d2b2c191ba6ef17aff1d3",
+        "verdict": "accepted",
+        "reason": "Vaalea kalkkikivinen Vallettan siluetti ja bastionit, suuri kupoli keskellä ja viereinen hoikka kivitorni, Fort St.Elmo vasemmalla. Satamavesi ja pienet kaukaiset veneet, ei lippuja/tekstiä/risteilyaluksia/kiellettyjä etualan rakennuksia. Kupolin sävy lämpenee päivänvalossa, tummat kyljet säilyvät luonnollisina.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:59:12.500524+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/valletta/20261013-uudet-6-8/valletta-6-nakoala-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-uudet-6-8/valletta-6-nakoala-intro-v1.png",
+        "sha256": "6cb0ca4c3e79096ecb459504993af014a19c3ed08e5d2b2c191ba6ef17aff1d3",
+        "nativeSHA256": "a66e0543fb8c59c550d45b21a5b647c47a3dd5b1daac91c9cb63f4df2d9b7558",
+        "bytes": 2470430,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "6cb0ca4c3e79096ecb459504993af014a19c3ed08e5d2b2c191ba6ef17aff1d3",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "6cb0ca4c3e79096ecb459504993af014a19c3ed08e5d2b2c191ba6ef17aff1d3",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:59:16.600117+00:00"
+      },
+      "FableReceiptVerified": false
+    },
+    {
+      "taskNumber": 224,
+      "mediaSlug": "valletta",
+      "slot": 8,
+      "filename": "valletta-8-kulkuneuvo-intro-v1.png",
+      "title": "kaupungin oma kulkuneuvo liikkeessä — Perinteinen dgħajsa-satamavene Grand Harbourin vedellä Vallettan muurien edessä päivällä.",
+      "fullDeliveryRequirement": "**8 / kaupungin oma kulkuneuvo liikkeessä — Perinteinen dgħajsa-satamavene Grand Harbourin vedellä Vallettan muurien edessä päivällä.** Tiedosto `valletta-8-kulkuneuvo-intro-v1.png`.\nMitä kuvataan: perinteinen maltalainen dgħajsa-satamavene (kapea, kevyt puuvene, jonka keula ja perä nousevat korkeina, kaarevina pylväinä) liikkeessä tyynellä Grand Harbourin vedellä päivällä. Vene on yksivärinen vaalea hiekan- tai kermanvärinen, ilman maalattuja silmiä, kuvioita, raitoja, kukkia, nimiä, numeroita, kirjaimia tai tekstiä. Veneessä seisoo yksi soutaja selin tai kaukaa katsottuna, kasvoja ei näy, ja hän työntää kahta pitkää airoa eteenpäin; veneessä istuu kaksi tai kolme matkustajaa vain pieninä hahmoina, ei tunnistettavia kasvoja. Veneen keula kevyesti nostaa vettä, perässä pehmeä pieni vana. Taustalla Vallettan hunajankeltainen kalkkikivinen kaupunginmuuri ja bastionit nousevat jyrkästi veden yläpuolelle (muurin yläpuolella vain matalia rivitaloja, ei pilvenpiirtäjiä), muurin juurella kapea kivilaituri. Kulma: vaakakuva, kamera hyvin matalalla lähes veden tasolta, kolmen neljänneksen kuva sivulta, vene kulkee kuvassa vasemmalta oikealle ja täyttää noin kolmanneksen kuvan leveydestä; kevyt liikesumennus aallokossa, vene itse terävä. Valo: pehmeä aamupäivän tai iltapäivän valo, vedessä pehmeitä heijastuksia, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, mainoksia, logoja, nimiä, numeroita, lippuja, tunnistettavia kasvoja, risteilyaluksia tai suuria aluksia, muita veneitä lähellä (kaukana enintään yksi), Barrakka-hissiä, Upper Barrakka -puutarhan kaarta tunnistettavana, kalastajaveneen Osiriksen tai Horuksen silmää. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Perinteinen dgħajsa-satamavene Grand Harbourin vedellä Vallettan muurien edessä päivällä. Havainnekuva.\n\n",
+      "sourceVersions": [
+        {
+          "path": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "readInFull": true
+        }
+      ],
+      "ownerThreadId": "01a06e21-9b03-73e1-8856-44c9ffffb635",
+      "hostId": "local",
+      "generationCap": 1,
+      "status": "QA-R2-delivered-for-PT-review",
+      "productionStarted": false,
+      "delivered": true,
+      "city": "VALLETTA",
+      "gameID": "valletta",
+      "part": 2,
+      "sourceBlob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+      "sourceCommit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+      "sourcePath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceNasPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "sourceCharacterSpan": [
+        93890,
+        95753
+      ],
+      "sourceByteSpan": [
+        97498,
+        99444
+      ],
+      "fullDeliveryRequirementSHA256": "4065aca51b2b67321abe07c55849f2c288fa5b92f919674b9aa9122b308db4f3",
+      "fullDirective": "perinteinen maltalainen dgħajsa-satamavene (kapea, kevyt puuvene, jonka keula ja perä nousevat korkeina, kaarevina pylväinä) liikkeessä tyynellä Grand Harbourin vedellä päivällä. Vene on yksivärinen vaalea hiekan- tai kermanvärinen, ilman maalattuja silmiä, kuvioita, raitoja, kukkia, nimiä, numeroita, kirjaimia tai tekstiä. Veneessä seisoo yksi soutaja selin tai kaukaa katsottuna, kasvoja ei näy, ja hän työntää kahta pitkää airoa eteenpäin; veneessä istuu kaksi tai kolme matkustajaa vain pieninä hahmoina, ei tunnistettavia kasvoja. Veneen keula kevyesti nostaa vettä, perässä pehmeä pieni vana. Taustalla Vallettan hunajankeltainen kalkkikivinen kaupunginmuuri ja bastionit nousevat jyrkästi veden yläpuolelle (muurin yläpuolella vain matalia rivitaloja, ei pilvenpiirtäjiä), muurin juurella kapea kivilaituri. Kulma: vaakakuva, kamera hyvin matalalla lähes veden tasolta, kolmen neljänneksen kuva sivulta, vene kulkee kuvassa vasemmalta oikealle ja täyttää noin kolmanneksen kuvan leveydestä; kevyt liikesumennus aallokossa, vene itse terävä. Valo: pehmeä aamupäivän tai iltapäivän valo, vedessä pehmeitä heijastuksia, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, mainoksia, logoja, nimiä, numeroita, lippuja, tunnistettavia kasvoja, risteilyaluksia tai suuria aluksia, muita veneitä lähellä (kaukana enintään yksi), Barrakka-hissiä, Upper Barrakka -puutarhan kaarta tunnistettavana, kalastajaveneen Osiriksen tai Horuksen silmää. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.",
+      "caption": "Perinteinen dgħajsa-satamavene Grand Harbourin vedellä Vallettan muurien edessä päivällä. Havainnekuva.",
+      "sourceReadInFullVerified": true,
+      "mappingBlockExactSourceMatch": true,
+      "r2Prefix": "julisteet/saapumisintro/valletta/20261013-uudet-6-8/",
+      "deliveryManifestPath": "posti/kuvatoimitus-saapumisintro-valletta-uudet-6-8-20261013.json",
+      "partDeliveryReportPath": "posti/codex-fable-saapumisintro-uudet-6-8-loput-2-20261013.md",
+      "generationCallsRecorded": 0,
+      "qaAcceptedVerified": true,
+      "r2BytesVerified": true,
+      "mailboxDeliveryVerified": false,
+      "ownerAcceptanceVerified": false,
+      "acceptanceRoute": "PT acts for owner; source authorizes direct delivery. Actual PT acceptance remains evidence-dependent.",
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/saapumisintro/valletta/20261013-uudet-6-8/valletta-8-kulkuneuvo-intro-v1.png",
+      "historical": false,
+      "id": "valletta-8-kulkuneuvo-intro-v1",
+      "sourceReadInFull": true,
+      "cityName": "VALLETTA",
+      "gameCityId": "valletta",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/valletta/native-8.png",
+      "nativeSHA256": "2c98e1ad81b17f4a190bacb1f742533d915871b508b9b82bd185350af349076c",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/valletta/valletta-8-kulkuneuvo-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-uudet68-loput-20261013/valletta/valletta-8-kulkuneuvo-intro-v1.png",
+      "sha256": "07eeb740f12c28bc2b496f9fc4280d5bd46ca8e9d37a483578daf2f90d9d8d38",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Wide environmental photograph from almost WATER LEVEL of one SMALL Maltese dghajsa rowed harbour boat moving right, only around ONE THIRD of frame width; vast natural water and old stone walls surround it.\nCreate exactly one original, contemporary COLOR photographic-looking illustrative image. Output a single landscape PNG at exactly 1536x1024, opaque RGB, natural camera perspective. No collage, borders or text overlays. The scene must follow ALL of the following exact Finnish scene instructions, including direction, geometry, exclusions, scale, vehicle movement and materials:\n\nperinteinen maltalainen dgħajsa-satamavene (kapea, kevyt puuvene, jonka keula ja perä nousevat korkeina, kaarevina pylväinä) liikkeessä tyynellä Grand Harbourin vedellä päivällä. Vene on yksivärinen vaalea hiekan- tai kermanvärinen, ilman maalattuja silmiä, kuvioita, raitoja, kukkia, nimiä, numeroita, kirjaimia tai tekstiä. Veneessä seisoo yksi soutaja selin tai kaukaa katsottuna, kasvoja ei näy, ja hän työntää kahta pitkää airoa eteenpäin; veneessä istuu kaksi tai kolme matkustajaa vain pieninä hahmoina, ei tunnistettavia kasvoja. Veneen keula kevyesti nostaa vettä, perässä pehmeä pieni vana. Taustalla Vallettan hunajankeltainen kalkkikivinen kaupunginmuuri ja bastionit nousevat jyrkästi veden yläpuolelle (muurin yläpuolella vain matalia rivitaloja, ei pilvenpiirtäjiä), muurin juurella kapea kivilaituri. Kulma: vaakakuva, kamera hyvin matalalla lähes veden tasolta, kolmen neljänneksen kuva sivulta, vene kulkee kuvassa vasemmalta oikealle ja täyttää noin kolmanneksen kuvan leveydestä; kevyt liikesumennus aallokossa, vene itse terävä. Valo: pehmeä aamupäivän tai iltapäivän valo, vedessä pehmeitä heijastuksia, vaimeat värit, ei HDR:ää. Ei saa näkyä: tekstiä, kylttejä, mainoksia, logoja, nimiä, numeroita, lippuja, tunnistettavia kasvoja, risteilyaluksia tai suuria aluksia, muita veneitä lähellä (kaukana enintään yksi), Barrakka-hissiä, Upper Barrakka -puutarhan kaarta tunnistettavana, kalastajaveneen Osiriksen tai Horuksen silmää. Fotorealistinen havainnekuva, vaimeat värit, 1536 x 1024.\n\nThis is present-day life, not a historical reconstruction. Use restrained realistic natural light and subtle natural colour, genuine irregular surfaces and vegetation, no CGI/render/painting/HDR look. Do not invent extra landmarks or recognizable buildings outside the requested view; prohibited background features are equally prohibited. No legible text or numbers anywhere, no vehicle emblems/branding/flags, advertisements or identifiable close faces. Keep the whole requested scene in one coherent physical camera frame. Do not write the caption inside the image. No additional variants or edits.\n\nShape/motion priority: narrow slender traditional wooden hull, HIGH CURVING pointed posts at BOTH bow and stern. Plain uniformly pale sand/cream paint, NO eyes, pattern, flower, stripe, symbol, lettering or decorative badge. Bow at RIGHT moving RIGHT with small soft wake behind at LEFT. One standing rower with BACK TO CAMERA, using exactly TWO long oars; two or three tiny passengers, no identifiable face. Physically coherent hands/oars/water/body, no extra limbs. Natural soft water reflections and slight real ripples, no pasted-on isolated boat. Background steep honey limestone bastions/walls and low houses only, no BarrakkaLift/recognizableUpperBarrakkaarch/cruise ship/flag/signboard or other nearby vessel.\n",
+      "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/source-read-receipt.json",
+      "references": [
+        {
+          "kind": "exact-production-brief",
+          "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/sources/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "gitPath": "posti/fable-codex-saapumisintro-uudet-6-8-loput-2-20261013.md",
+          "commit": "dbdaff9a39fa0e5052f176c890c85836e1a69a1f",
+          "blob": "2e5adc4cb04a23fcb4cd8fdd75426ac78afdcc9d",
+          "sourceByteSpan": [
+            97498,
+            99444
+          ],
+          "fullRequirementSHA256": "4065aca51b2b67321abe07c55849f2c288fa5b92f919674b9aa9122b308db4f3",
+          "use": "Text scene constraint, not a copyright photograph or image passed to generator."
+        },
+        {
+          "kind": "own-architectural-geographic-knowledge",
+          "use": "New image from scratch; no external visual reference supplied, no Google data used.",
+          "independentSurveyClaim": false
+        }
+      ],
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/valletta/qa-8.json",
+      "producerPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/valletta/producer-8.json",
+      "producerQAAccepted": true,
+      "producerQAVerdict": "accepted",
+      "actualGenerationCalls": 1,
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-uudet-6-8/valletta-8-kulkuneuvo-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-uudet-6-8/valletta-8-kulkuneuvo-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "QA": {
+        "slot": 8,
+        "taskNumber": 224,
+        "assetID": "valletta-8-kulkuneuvo-intro-v1",
+        "targetJsonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-uudet68-loput-20261013/valletta/asset-8.json",
+        "nativeSHA256": "2c98e1ad81b17f4a190bacb1f742533d915871b508b9b82bd185350af349076c",
+        "finalSHA256": "07eeb740f12c28bc2b496f9fc4280d5bd46ca8e9d37a483578daf2f90d9d8d38",
+        "verdict": "accepted",
+        "reason": "Kapea vaalea dgħajsa korkeilla kaarevilla päätypylväillä, selin seisova soutaja ja kaksi selin istuvaa matkustajaa, kaksi airoa ja pieni vana. Noin37%leveys vastaa noin kolmannesta. Ohut luonnollinen puinen reunalista on rakenteellinen osa, ei maalattu kuvio- tai brändiraita; ei maalattuja silmiä, tekstiä tai kasvoja.",
+        "reviewer": "/root",
+        "reviewedAt": "2026-10-13T19:59:12.500524+00:00",
+        "nativeViewedInFull": true,
+        "assignedSourceCardReadInFull": true,
+        "nativePixelsEqualFinalVerified": true,
+        "technicalPassed": true,
+        "ownerAcceptanceVerified": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/valletta/20261013-uudet-6-8/valletta-8-kulkuneuvo-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/valletta/20261013-uudet-6-8/valletta-8-kulkuneuvo-intro-v1.png",
+        "sha256": "07eeb740f12c28bc2b496f9fc4280d5bd46ca8e9d37a483578daf2f90d9d8d38",
+        "nativeSHA256": "2c98e1ad81b17f4a190bacb1f742533d915871b508b9b82bd185350af349076c",
+        "bytes": 2226553,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "07eeb740f12c28bc2b496f9fc4280d5bd46ca8e9d37a483578daf2f90d9d8d38",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "07eeb740f12c28bc2b496f9fc4280d5bd46ca8e9d37a483578daf2f90d9d8d38",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T19:59:18.600799+00:00"
+      },
+      "FableReceiptVerified": false
+    }
+  ],
+  "omittedItems": [],
+  "actualCalls": 2,
+  "maximumGenerationCalls": 2,
+  "allRequestedItemsHandled": true,
+  "allRequestedImagesDelivered": true,
+  "productionCompleteWithinSourceLimit": true,
+  "directMailboxDeliveryAuthorized": true,
+  "acceptanceRoute": "Päätoimittaja reviews on the owner authority in the exact source. This authorization is not yet an actual acceptance receipt.",
+  "ownerAcceptanceVerified": false,
+  "FableReceiptVerified": false,
+  "gameIntegrated": false,
+  "published": false,
+  "oldFiveApprovedPilotImagesPreserved": true,
+  "oldCelebrationAnd1873TopicsRemainWithdrawn": true,
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "newTopics": {
+    "6": "daytime-city-panorama",
+    "8": "local-transport-in-motion"
+  }
+}
