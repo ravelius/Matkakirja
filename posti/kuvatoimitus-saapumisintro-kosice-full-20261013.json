@@ -1,0 +1,524 @@
+{
+  "cityName": "Košice",
+  "gameCityId": "kosice",
+  "mediaSlug": "kosice",
+  "taskNumber": 100,
+  "updatedAt": "2026-10-13T09:46:27.726303+00:00",
+  "requestedNewSlots": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "existingHeroSlotsPreserved": [
+    1,
+    2,
+    3
+  ],
+  "assets": [
+    {
+      "slot": 4,
+      "title": "arki ja ihmiset — Hrnčiarska-kuja, käsityöläiskatu.",
+      "sceneSpec": "Mitä kuvataan: Košicen vanhankaupungin kapea Hrnčiarska-kuja (Savenvalajankatu) aamupäivän valossa. Kivetty kuja, matalia yksi- ja kaksikerroksisia porvarintaloja eri sävyisin rapatuin julkisivuin, työpajojen avoimia puuovia, ulkona puinen penkki jolla savi- ja keramiikka-astioita ja ruukkuja (ei hintalappuja), ikkunalaudoilla kukkia. Kujalla kaksi tai kolme ihmistä kaukana tai selin (pariskunta kävelee poispäin, yksi pyöräilijä kaukana). Kulma: vaakakuva, silmänkorkeudelta kujan suuntaisesti, kuja kaartuu loivasti kohti kuvan taustaa. Valo: pehmeä, lämmin aamupäivä. Ei saa näkyä: tekstiä, kylttejä, työpajojen nimiä, hintalappuja, logoja, tunnistettavia kasvoja, kalvinistisen kirkon korkeaa tornia, Pyövelin bastionia, museorakennuksia, autoja, esillä olevaa ruokaa tai juomaa.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Hrnčiarska-kuja, käsityöläiskatu. Havainnekuva.\n\n",
+      "caption": "Hrnčiarska-kuja, käsityöläiskatu. Havainnekuva.",
+      "filename": "kosice-4-arki-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/kosice/20261013-full/kosice-4-arki-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 7,
+      "cityName": "Košice",
+      "gameCityId": "kosice",
+      "mediaSlug": "kosice",
+      "taskNumber": 100,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/native-4.png",
+      "nativeSHA256": "f2af92e526e217128b8ca6d2db861b889af2b0f694ed24acefd96d1443a7a747",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/kosice-4-arki-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/kosice/kosice-4-arki-intro-v1.png",
+      "sha256": "a2d8c277bbeb2d7a8ed728671abacfcbf43756b688289aaeea18e7d836171123",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja arrival introduction illustrative image.\nOutput requirement: one new complete PNG image, exactly 1536 x 1024 pixels, landscape 3:2, fully opaque. Natural camera photorealism: believable optical perspective, modest natural colors and dynamic range, realistic subtly imperfect walls, individually irregular leaves and branches, varied natural stone and weathered surfaces. No render or CGI appearance, no HDR, no painterly stylization, no cinematic oversaturation or dramatic grading. No text anywhere in image, no signs, lettering, brands, logos, watermark, captions or border. Buildings should have their correct distinctive basic shape and proportions. Caption provided in source is metadata only: NEVER draw it. All depicted people are invented, adults, no real-person likeness. Except slot6 people are tiny, distant or back-facing with no identifiable face.\nLow intimate Hrnčiarska crafts alley, ceramic pots are handmade and imperfect, scattered on plain wooden bench, not mass-produced geometric shapes. Buildings modest and low, no tall church or museum landmark.\nFollow this complete source scene specification (do not render the caption):\nMitä kuvataan: Košicen vanhankaupungin kapea Hrnčiarska-kuja (Savenvalajankatu) aamupäivän valossa. Kivetty kuja, matalia yksi- ja kaksikerroksisia porvarintaloja eri sävyisin rapatuin julkisivuin, työpajojen avoimia puuovia, ulkona puinen penkki jolla savi- ja keramiikka-astioita ja ruukkuja (ei hintalappuja), ikkunalaudoilla kukkia. Kujalla kaksi tai kolme ihmistä kaukana tai selin (pariskunta kävelee poispäin, yksi pyöräilijä kaukana). Kulma: vaakakuva, silmänkorkeudelta kujan suuntaisesti, kuja kaartuu loivasti kohti kuvan taustaa. Valo: pehmeä, lämmin aamupäivä. Ei saa näkyä: tekstiä, kylttejä, työpajojen nimiä, hintalappuja, logoja, tunnistettavia kasvoja, kalvinistisen kirkon korkeaa tornia, Pyövelin bastionia, museorakennuksia, autoja, esillä olevaa ruokaa tai juomaa.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Hrnčiarska-kuja, käsityöläiskatu. Havainnekuva.\n\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://domsvalzbety.sk/historia/",
+          "title": "Farnosť svätej Alžbety: História",
+          "kind": "cathedral owner official history",
+          "verifiedClaims": [
+            "Northern tower received rococo-baroque helmet after 1775 fire",
+            "1877–1896 reconstruction added neo-Gothic sculpture, gargoyles and turrets",
+            "Urban Tower is a 45 m Renaissance tower whose present Renaissance form dates to 1628",
+            "Shopping stalls stood around Urban Tower in 19th century; arcade dates to 1912"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://visitkosice.org/en/vidiet-a-zazit/urban-tower",
+          "title": "Visit Košice: Urbanova tower",
+          "kind": "official destination tourism",
+          "verifiedClaims": [
+            "Urban Tower stands beside Cathedral and served as its bell tower"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.kosice.sk/varos/a-kozpont-terkepe",
+          "title": "Košice city: historical centre map",
+          "kind": "city authority",
+          "verifiedClaims": [
+            "Urban Tower, Cathedral and State Theatre identified as separate historical centre landmarks"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        }
+      ],
+      "producerQAAccepted": true,
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/qa-4.json",
+      "id": "kosice-4-arki-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/kosice-4-arki-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-4-arki-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-4-arki-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 4,
+        "verdict": "accepted",
+        "reason": "Käsityöläiskujan avoin työpaja, yleisiä keramiikka-astioita ja pienet selin hahmot. Ei nimikylttejä, hintalappuja tai ruokaa.",
+        "nativeSHA256": "f2af92e526e217128b8ca6d2db861b889af2b0f694ed24acefd96d1443a7a747",
+        "finalSHA256": "a2d8c277bbeb2d7a8ed728671abacfcbf43756b688289aaeea18e7d836171123",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 4,
+        "r2Key": "julisteet/saapumisintro/kosice/20261013-full/kosice-4-arki-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-4-arki-intro-v1.png",
+        "sha256": "a2d8c277bbeb2d7a8ed728671abacfcbf43756b688289aaeea18e7d836171123",
+        "nativeSHA256": "f2af92e526e217128b8ca6d2db861b889af2b0f694ed24acefd96d1443a7a747",
+        "bytes": 2771787,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "a2d8c277bbeb2d7a8ed728671abacfcbf43756b688289aaeea18e7d836171123",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "a2d8c277bbeb2d7a8ed728671abacfcbf43756b688289aaeea18e7d836171123",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:33.582575+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 5,
+      "title": "vesi tai luonto — Hornád-joki syysaamuna.",
+      "sceneSpec": "Mitä kuvataan: Hornád-joen leveä, rauhallinen virta Košicen lähistöllä syysaamuna. Sorainen ja ruohoinen penger, pajuja ja poppeleita keltaisin syyslehdin, joen yllä kevyt aamusumu, kaukana taustalla matalat metsäiset kukkulat. Penkereellä hiekkatie tai pyörätie, ei rakennuksia lähikuvassa. Yksi tai kaksi kaukaista kävelijää tai pyöräilijää selin, pieninä. Kulma: vaakakuva, joenrannalta veden pinnan tasolta, katse hieman virran suuntaan viistoon. Valo: matala aamuaurinko, pehmeä, vaimeat värit. Ei saa näkyä: siltoja, teollisuutta, kerrostaloja, tekstiä, kylttejä, kasvoja, veneitä, kalastajia lähikuvassa, vesilintujen ruokintaa.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Hornád-joki syysaamuna. Havainnekuva.\n\n",
+      "caption": "Hornád-joki syysaamuna. Havainnekuva.",
+      "filename": "kosice-5-luonto-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/kosice/20261013-full/kosice-5-luonto-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 7,
+      "cityName": "Košice",
+      "gameCityId": "kosice",
+      "mediaSlug": "kosice",
+      "taskNumber": 100,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/native-5.png",
+      "nativeSHA256": "cd044ddd53d2c08c1fc85593c7eb199d0f81baf0f2fb3fa3735c660ba29a969c",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/kosice-5-luonto-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/kosice/kosice-5-luonto-intro-v1.png",
+      "sha256": "c623863e60a9ae779722dc9d0cd98f66860bfaa3641e31fa53882a4b07376d34",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja arrival introduction illustrative image.\nOutput requirement: one new complete PNG image, exactly 1536 x 1024 pixels, landscape 3:2, fully opaque. Natural camera photorealism: believable optical perspective, modest natural colors and dynamic range, realistic subtly imperfect walls, individually irregular leaves and branches, varied natural stone and weathered surfaces. No render or CGI appearance, no HDR, no painterly stylization, no cinematic oversaturation or dramatic grading. No text anywhere in image, no signs, lettering, brands, logos, watermark, captions or border. Buildings should have their correct distinctive basic shape and proportions. Caption provided in source is metadata only: NEVER draw it. All depicted people are invented, adults, no real-person likeness. Except slot6 people are tiny, distant or back-facing with no identifiable face.\nBroad gently flowing Hornád near Košice, low wooded hills. Natural autumn willows and poplars with irregular individual yellowing leaves and leaning trunks, light mist over water. Gravel and grass banks, plain distant cycle path with tiny back-facing people. No bridge, no urban skyline or industrial structures.\nFollow this complete source scene specification (do not render the caption):\nMitä kuvataan: Hornád-joen leveä, rauhallinen virta Košicen lähistöllä syysaamuna. Sorainen ja ruohoinen penger, pajuja ja poppeleita keltaisin syyslehdin, joen yllä kevyt aamusumu, kaukana taustalla matalat metsäiset kukkulat. Penkereellä hiekkatie tai pyörätie, ei rakennuksia lähikuvassa. Yksi tai kaksi kaukaista kävelijää tai pyöräilijää selin, pieninä. Kulma: vaakakuva, joenrannalta veden pinnan tasolta, katse hieman virran suuntaan viistoon. Valo: matala aamuaurinko, pehmeä, vaimeat värit. Ei saa näkyä: siltoja, teollisuutta, kerrostaloja, tekstiä, kylttejä, kasvoja, veneitä, kalastajia lähikuvassa, vesilintujen ruokintaa.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Hornád-joki syysaamuna. Havainnekuva.\n\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://domsvalzbety.sk/historia/",
+          "title": "Farnosť svätej Alžbety: História",
+          "kind": "cathedral owner official history",
+          "verifiedClaims": [
+            "Northern tower received rococo-baroque helmet after 1775 fire",
+            "1877–1896 reconstruction added neo-Gothic sculpture, gargoyles and turrets",
+            "Urban Tower is a 45 m Renaissance tower whose present Renaissance form dates to 1628",
+            "Shopping stalls stood around Urban Tower in 19th century; arcade dates to 1912"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://visitkosice.org/en/vidiet-a-zazit/urban-tower",
+          "title": "Visit Košice: Urbanova tower",
+          "kind": "official destination tourism",
+          "verifiedClaims": [
+            "Urban Tower stands beside Cathedral and served as its bell tower"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.kosice.sk/varos/a-kozpont-terkepe",
+          "title": "Košice city: historical centre map",
+          "kind": "city authority",
+          "verifiedClaims": [
+            "Urban Tower, Cathedral and State Theatre identified as separate historical centre landmarks"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        }
+      ],
+      "producerQAAccepted": true,
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/qa-5.json",
+      "id": "kosice-5-luonto-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/kosice-5-luonto-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-5-luonto-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-5-luonto-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 5,
+        "verdict": "accepted",
+        "reason": "Hornádin syysaamun joki, luonnolliset rantakivet ja puusto, pienet selin kävelijä/pyöräilijä; ei siltaa, teollisuutta tai kylttejä.",
+        "nativeSHA256": "cd044ddd53d2c08c1fc85593c7eb199d0f81baf0f2fb3fa3735c660ba29a969c",
+        "finalSHA256": "c623863e60a9ae779722dc9d0cd98f66860bfaa3641e31fa53882a4b07376d34",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 5,
+        "r2Key": "julisteet/saapumisintro/kosice/20261013-full/kosice-5-luonto-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-5-luonto-intro-v1.png",
+        "sha256": "c623863e60a9ae779722dc9d0cd98f66860bfaa3641e31fa53882a4b07376d34",
+        "nativeSHA256": "cd044ddd53d2c08c1fc85593c7eb199d0f81baf0f2fb3fa3735c660ba29a969c",
+        "bytes": 2932523,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "c623863e60a9ae779722dc9d0cd98f66860bfaa3641e31fa53882a4b07376d34",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "c623863e60a9ae779722dc9d0cd98f66860bfaa3641e31fa53882a4b07376d34",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:36.924226+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 6,
+      "title": "elämän makuinen juhla (värikuva, yksi nuori etualalla) — Rauhanmaratonin päivä vanhankaupungin kadulla.",
+      "sceneSpec": "Mitä kuvataan: Aurinkoinen lokakuun sunnuntaipäivä Košicen vanhankaupungin leveällä pääkadulla, iloinen katujuoksutapahtuma. Kadulla kymmeniä värikkäissä urheiluvaatteissa juoksevia ja kadun varrella katsojia, jotka hurraavat ja taputtavat; tunnelma iloinen, paljon ihmisiä. ETUALALLA YKSI NUORI IHMINEN (noin 20-vuotias nuori nainen tai nuori mies, paikallisen väestön näköinen, keksitty hahmo, ei kenenkään todellisen näköinen): muodikkaat nykyvaatteet (esim. oversize-takki tai pitkä neule, tummat farkut, valkoiset lenkkarit, pipo tai kevyt huivi), nojaa kadun reunan kaiteeseen, nauraa ja taputtaa tai kuvaa juoksijoita puhelimella; luonnollinen ilme, puolikuva tai kolmasosakuva. Taustalla matalia 1700-1800-lukujen talojen julkisivuja ja syysvärisiä puita; kauempana pehmeästi sumennettuna goottilaisen kirkon torni. Kulma: vaakakuva, silmänkorkeudelta hieman sivusta, jotta etualan nuori ja juoksijoiden virta näkyvät yhdessä. Valo: kirkas mutta pehmeä syysaamupäivän valo. Ei saa näkyä: tekstiä, numerolappuja luettavina, banderolleja, lähtö- tai maalikaaria, sponsorilogoja, kylttejä, brändejä, vaatteiden logoja, ruokaa pääaiheena, alkoholia, laulavaa suihkulähdettä, teatterirakennusta, kenenkään tunnistettavaa julkkis- tai todellisen henkilön näköä. 13+.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Rauhanmaratonin päivä vanhankaupungin kadulla. Havainnekuva.\n\n",
+      "caption": "Rauhanmaratonin päivä vanhankaupungin kadulla. Havainnekuva.",
+      "filename": "kosice-6-juhla-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/kosice/20261013-full/kosice-6-juhla-intro-v1.png",
+      "historical": false,
+      "referenceSlot": 7,
+      "cityName": "Košice",
+      "gameCityId": "kosice",
+      "mediaSlug": "kosice",
+      "taskNumber": 100,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/native-6.png",
+      "nativeSHA256": "f78ea1ebbad462bcd1f90c98930cb349545af6e7931c71e4ded95bb256c8d08e",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/kosice-6-juhla-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/kosice/kosice-6-juhla-intro-v1.png",
+      "sha256": "1d30874ca98ade2358a667f0a1da65761a3b36e84bb13a0f00233bc0ed68180f",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": false,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": true,
+      "historicalGrayscaleEncodingNormalized": false,
+      "exportProcessing": "Metadata/sRGB only; pixels unchanged",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja arrival introduction illustrative image.\nOutput requirement: one new complete PNG image, exactly 1536 x 1024 pixels, landscape 3:2, fully opaque. Natural camera photorealism: believable optical perspective, modest natural colors and dynamic range, realistic subtly imperfect walls, individually irregular leaves and branches, varied natural stone and weathered surfaces. No render or CGI appearance, no HDR, no painterly stylization, no cinematic oversaturation or dramatic grading. No text anywhere in image, no signs, lettering, brands, logos, watermark, captions or border. Buildings should have their correct distinctive basic shape and proportions. Caption provided in source is metadata only: NEVER draw it. All depicted people are invented, adults, no real-person likeness. Except slot6 people are tiny, distant or back-facing with no identifiable face.\nExactly ONE prominent invented adult aged 22, half-length in the foreground, laughing and applauding beside a plain street railing, fashionable oversized neutral jacket. Many distant runners and happy spectators, October sunshine. No race bibs, no printed numerals at all, no sponsor banners, logo marks or inflatable finish arches. One distant softly defocused Gothic church tower, no theatre or fountain.\nFollow this complete source scene specification (do not render the caption):\nMitä kuvataan: Aurinkoinen lokakuun sunnuntaipäivä Košicen vanhankaupungin leveällä pääkadulla, iloinen katujuoksutapahtuma. Kadulla kymmeniä värikkäissä urheiluvaatteissa juoksevia ja kadun varrella katsojia, jotka hurraavat ja taputtavat; tunnelma iloinen, paljon ihmisiä. ETUALALLA YKSI NUORI IHMINEN (noin 20-vuotias nuori nainen tai nuori mies, paikallisen väestön näköinen, keksitty hahmo, ei kenenkään todellisen näköinen): muodikkaat nykyvaatteet (esim. oversize-takki tai pitkä neule, tummat farkut, valkoiset lenkkarit, pipo tai kevyt huivi), nojaa kadun reunan kaiteeseen, nauraa ja taputtaa tai kuvaa juoksijoita puhelimella; luonnollinen ilme, puolikuva tai kolmasosakuva. Taustalla matalia 1700-1800-lukujen talojen julkisivuja ja syysvärisiä puita; kauempana pehmeästi sumennettuna goottilaisen kirkon torni. Kulma: vaakakuva, silmänkorkeudelta hieman sivusta, jotta etualan nuori ja juoksijoiden virta näkyvät yhdessä. Valo: kirkas mutta pehmeä syysaamupäivän valo. Ei saa näkyä: tekstiä, numerolappuja luettavina, banderolleja, lähtö- tai maalikaaria, sponsorilogoja, kylttejä, brändejä, vaatteiden logoja, ruokaa pääaiheena, alkoholia, laulavaa suihkulähdettä, teatterirakennusta, kenenkään tunnistettavaa julkkis- tai todellisen henkilön näköä. 13+.\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Rauhanmaratonin päivä vanhankaupungin kadulla. Havainnekuva.\n\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://domsvalzbety.sk/historia/",
+          "title": "Farnosť svätej Alžbety: História",
+          "kind": "cathedral owner official history",
+          "verifiedClaims": [
+            "Northern tower received rococo-baroque helmet after 1775 fire",
+            "1877–1896 reconstruction added neo-Gothic sculpture, gargoyles and turrets",
+            "Urban Tower is a 45 m Renaissance tower whose present Renaissance form dates to 1628",
+            "Shopping stalls stood around Urban Tower in 19th century; arcade dates to 1912"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://visitkosice.org/en/vidiet-a-zazit/urban-tower",
+          "title": "Visit Košice: Urbanova tower",
+          "kind": "official destination tourism",
+          "verifiedClaims": [
+            "Urban Tower stands beside Cathedral and served as its bell tower"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.kosice.sk/varos/a-kozpont-terkepe",
+          "title": "Košice city: historical centre map",
+          "kind": "city authority",
+          "verifiedClaims": [
+            "Urban Tower, Cathedral and State Theatre identified as separate historical centre landmarks"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        }
+      ],
+      "producerQAAccepted": true,
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/qa-6.json",
+      "id": "kosice-6-juhla-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/kosice-6-juhla-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-6-juhla-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-6-juhla-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 6,
+        "verdict": "accepted",
+        "reason": "Keksitty nuori aikuinen taputtaa juoksutapahtumassa, iloista syysjoukkoa ja nykyvaatteita. Ei luettavia kilpailunumeroita tai sponsorilogoja.",
+        "nativeSHA256": "f78ea1ebbad462bcd1f90c98930cb349545af6e7931c71e4ded95bb256c8d08e",
+        "finalSHA256": "1d30874ca98ade2358a667f0a1da65761a3b36e84bb13a0f00233bc0ed68180f",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": false,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 6,
+        "r2Key": "julisteet/saapumisintro/kosice/20261013-full/kosice-6-juhla-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-6-juhla-intro-v1.png",
+        "sha256": "1d30874ca98ade2358a667f0a1da65761a3b36e84bb13a0f00233bc0ed68180f",
+        "nativeSHA256": "f78ea1ebbad462bcd1f90c98930cb349545af6e7931c71e4ded95bb256c8d08e",
+        "bytes": 2523914,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "1d30874ca98ade2358a667f0a1da65761a3b36e84bb13a0f00233bc0ed68180f",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "1d30874ca98ade2358a667f0a1da65761a3b36e84bb13a0f00233bc0ed68180f",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:38.799577+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    },
+    {
+      "slot": 8,
+      "title": "sama näkymä vuonna 1873, MUSTAVALKOINEN — Sama näkymä vuonna 1873 (Kassa), mustavalkoinen.",
+      "sceneSpec": "Mitä kuvataan: SAMA KATSELUSUUNTA KUIN KUVASSA 7, mutta vuonna 1873, päivänvalossa ja PUHDAS MUSTAVALKO (neutraali harmaasävy, ei sepiaa eikä värisävyä; albumiinivedoksen pehmeä kontrasti, hienoinen rakeisuus, kevyt reunojen tummuus). Vasemmalla etualalla Urbanin torni: kapea kivitorni, jonka juurella pieniä matalia kauppatiloja (ei arkadikäytävää), tornin huipulla yksinkertainen vanha katto ja rautaristi; sen takana oikealla Pyhän Elisabetin tuomiokirkko korjaamattomana: korkea pohjoistorni karkeampi ja tummempi kuin nykyään, eteläinen torni matala ja keskeneräinen yksinkertaisin katoin, ei uusgoottilaisia huippupylväitä, ei uusgoottilaista kattotorniosaa, kirkon korkea kattorakenne peitetty tavallisella tiilikatolla. Katu on epätasaista kivettyä tai tamppuajaa maata, ilman puistoa, suihkulähdettä, istutuksia, vesiuomaa ja katuvaloja; kadulla hevoskärryjä ja muutama ajan vaatteisiin (pitkät takit, silinterit, hameet) pukeutunut ihminen kaukana ja selin. Tiukka rajaus tornien ympärille, jotta myöhemmät rakennukset jäävät kuvan ulkopuolelle. Valo: pehmeä päivänvalo, hieman utuinen ilma. Ei saa näkyä: tekstiä, kylttejä, kasvoja, teatterirakennusta (1899), laulavaa suihkulähdettä, Urbanin tornin arkadia (1912), autoja, raitiovaunua, sähkövaloja, nykyisiä katulyhtyjä, kirkon restauroinnin (1877-1896) tuomia uusgoottilaisia osia, nykyaikaisia vaatteita tai esineitä, väriä.\n1873-tarkistus: on: Pyhän Elisabetin tuomiokirkko (keskiaikainen runko; suuri restaurointi 1877-1896 alkoi vasta 1877, ja 1875 myrsky oli vielä edessä), Urbanin torni pienine kauppoineen tornin juurella (kauppatilat 1800-luvun alusta), kaupunki oli Kassa (Unkarin kuningaskunta, Itävalta-Unkari), rautatie Kassaan oli kulkenut 1860 alkaen; ei ole: Urbanin tornin arkadi (1911-1912 / 1912), valtionteatteri (rakennettu 1897-1899), laulava suihkulähde (1986), keinotekoinen Čermeľský potôčik -puro (1995-1996), tuomiokirkon restauroinnin neogoottiset lisäykset (flèche, uudet huippupylväät ja kattotiilet 1877-1896), autot, raitiovaunut, sähkövalo. Lähteet: Wikipedia Cathedral of St. Elizabeth + Hungaricana (Kenyeres 1998, s. 235) + hunektar.sk; kosice.sk + hunektar.sk (arkadi 1912); Wikipedia Košice (Kassa 1863-1913, rautatie 1860); sk.wikipedia Hlavná ulica (puro 1995-96).\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Sama näkymä vuonna 1873, mustavalkoinen. Havainnekuva.\n\n---\n\nToimitus: kuittaus ja manifestit kaupunkikohtaisesti kuten edellisissä saapumisintro-erissä. Omistaja hyväksyy kuvat Codexissa; hyväksymättömiä ei kytketä peliin.\n",
+      "caption": "Sama näkymä vuonna 1873, mustavalkoinen. Havainnekuva.",
+      "filename": "kosice-8-1873-intro-v1.png",
+      "r2Key": "julisteet/saapumisintro/kosice/20261013-full/kosice-8-1873-intro-v1.png",
+      "historical": true,
+      "referenceSlot": 7,
+      "cityName": "Košice",
+      "gameCityId": "kosice",
+      "mediaSlug": "kosice",
+      "taskNumber": 100,
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/native-8.png",
+      "nativeSHA256": "29dd6f0b24767ee2139ccdeadc8f53f4716f21a2ef1bd64c8eb184bf94d0ffbc",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/kosice-8-1873-intro-v1.png",
+      "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/eurooppa-introt-viimeiset5-20261013/kosice/kosice-8-1873-intro-v1.png",
+      "sha256": "bd5ee5a3ef3a9ea3fc00bbfd0e9fd8a7e6433c5fc16ad56eece69805ebef1ce9",
+      "width": 1536,
+      "height": 1024,
+      "opaque": true,
+      "sRGB": true,
+      "neutralGrayscale": true,
+      "pixelIdentityAfterMetadataExport": true,
+      "pixelIdentityToNative": false,
+      "historicalGrayscaleEncodingNormalized": true,
+      "exportProcessing": "Neutral grayscale file encoding plus metadata/sRGB only; original preserved; no geometry/content/contrast changes",
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja historical arrival illustrative image.\nOne NEW PNG image exactly 1536 x 1024, landscape 3:2, opaque. PURE NEUTRAL GRAYSCALE BLACK AND WHITE, absolutely no colored pixels: every pixel has identical red, green and blue channels (R=G=B). No sepia, brown, blue or other toning. Soft plate-camera photographic contrast, subtle fine grain, gentle corner falloff with no border. Strong actual-camera natural photorealism, realistic irregular stone, wood, vegetation and optical proportions. No HDR, CGI, painting or cinematic grading. No writing, readable inscriptions, logos, signs, captions, watermarks or frame. Fictional tiny distant adults with backs toward camera, no recognizable faces.\nInput image is a camera location and left/right landmark alignment reference ONLY. Generate a completely NEW reconstruction of YEAR 1873, not a grayscale conversion or cosmetic edit. Same camera west side of Hlavná looking east, Urban Tower at left foreground, Saint Elizabeth Cathedral behind and to its right. Omit every shopfront/awning and nearby street edge building if needed to exclude text and unverified later buildings. Urban Tower keeps its real broad square Renaissance prismatic masonry body, round belfry openings and plain old pitched/pyramidal roof with iron cross, BUT ground floor has small plain timber shop stalls with CLOSED unlettered wooden shutters; no colonnade or arches or covered arcade of any kind, as the arcade dates to 1912. Cathedral is the pre-1877 restoration building: retained medieval basic mass and high northern tower with 1775 rococo-baroque onion helmet; plain unfinished lower southern tower with simple roof; dark irregular weathered masonry, simple plain clay-tile tall roof, no restored patterned glazing or ornamental roof tiles, no neo-Gothic roof turret/flèche, no ornamental ridge or added spiky pinnacles. Medieval Gothic pointed windows are allowed but avoid new ornate restoration sculptures. Rough uneven cobbles/packed earth, one small plain horse-drawn cart, two or three tiny distant back-facing adults in long 1870s coats, hats and long skirts. NO trees or gardens, benches, street lamps, fountain, artificial stream, theatre, railings, bicycles, trams, cars, wires, modern paving or objects. Historical structural change is essential: replace arcade with humble enclosed stalls and strip cathedral of all later neogothic roof/gable ornament while preserving the geographic viewpoint.\nComplete source scene and chronology constraints (caption is metadata only, NEVER draw it):\nMitä kuvataan: SAMA KATSELUSUUNTA KUIN KUVASSA 7, mutta vuonna 1873, päivänvalossa ja PUHDAS MUSTAVALKO (neutraali harmaasävy, ei sepiaa eikä värisävyä; albumiinivedoksen pehmeä kontrasti, hienoinen rakeisuus, kevyt reunojen tummuus). Vasemmalla etualalla Urbanin torni: kapea kivitorni, jonka juurella pieniä matalia kauppatiloja (ei arkadikäytävää), tornin huipulla yksinkertainen vanha katto ja rautaristi; sen takana oikealla Pyhän Elisabetin tuomiokirkko korjaamattomana: korkea pohjoistorni karkeampi ja tummempi kuin nykyään, eteläinen torni matala ja keskeneräinen yksinkertaisin katoin, ei uusgoottilaisia huippupylväitä, ei uusgoottilaista kattotorniosaa, kirkon korkea kattorakenne peitetty tavallisella tiilikatolla. Katu on epätasaista kivettyä tai tamppuajaa maata, ilman puistoa, suihkulähdettä, istutuksia, vesiuomaa ja katuvaloja; kadulla hevoskärryjä ja muutama ajan vaatteisiin (pitkät takit, silinterit, hameet) pukeutunut ihminen kaukana ja selin. Tiukka rajaus tornien ympärille, jotta myöhemmät rakennukset jäävät kuvan ulkopuolelle. Valo: pehmeä päivänvalo, hieman utuinen ilma. Ei saa näkyä: tekstiä, kylttejä, kasvoja, teatterirakennusta (1899), laulavaa suihkulähdettä, Urbanin tornin arkadia (1912), autoja, raitiovaunua, sähkövaloja, nykyisiä katulyhtyjä, kirkon restauroinnin (1877-1896) tuomia uusgoottilaisia osia, nykyaikaisia vaatteita tai esineitä, väriä.\n1873-tarkistus: on: Pyhän Elisabetin tuomiokirkko (keskiaikainen runko; suuri restaurointi 1877-1896 alkoi vasta 1877, ja 1875 myrsky oli vielä edessä), Urbanin torni pienine kauppoineen tornin juurella (kauppatilat 1800-luvun alusta), kaupunki oli Kassa (Unkarin kuningaskunta, Itävalta-Unkari), rautatie Kassaan oli kulkenut 1860 alkaen; ei ole: Urbanin tornin arkadi (1911-1912 / 1912), valtionteatteri (rakennettu 1897-1899), laulava suihkulähde (1986), keinotekoinen Čermeľský potôčik -puro (1995-1996), tuomiokirkon restauroinnin neogoottiset lisäykset (flèche, uudet huippupylväät ja kattotiilet 1877-1896), autot, raitiovaunut, sähkövalo. Lähteet: Wikipedia Cathedral of St. Elizabeth + Hungaricana (Kenyeres 1998, s. 235) + hunektar.sk; kosice.sk + hunektar.sk (arkadi 1912); Wikipedia Košice (Kassa 1863-1913, rautatie 1860); sk.wikipedia Hlavná ulica (puro 1995-96).\nKuvateksti-ehdotus (loppuu sanaan Havainnekuva.): Sama näkymä vuonna 1873, mustavalkoinen. Havainnekuva.\n\n---\n\nToimitus: kuittaus ja manifestit kaupunkikohtaisesti kuten edellisissä saapumisintro-erissä. Omistaja hyväksyy kuvat Codexissa; hyväksymättömiä ei kytketä peliin.\n",
+      "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+      "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+      "ownerAcceptanceVerified": false,
+      "gameIntegrated": false,
+      "published": false,
+      "refs": [
+        {
+          "url": "https://domsvalzbety.sk/historia/",
+          "title": "Farnosť svätej Alžbety: História",
+          "kind": "cathedral owner official history",
+          "verifiedClaims": [
+            "Northern tower received rococo-baroque helmet after 1775 fire",
+            "1877–1896 reconstruction added neo-Gothic sculpture, gargoyles and turrets",
+            "Urban Tower is a 45 m Renaissance tower whose present Renaissance form dates to 1628",
+            "Shopping stalls stood around Urban Tower in 19th century; arcade dates to 1912"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://visitkosice.org/en/vidiet-a-zazit/urban-tower",
+          "title": "Visit Košice: Urbanova tower",
+          "kind": "official destination tourism",
+          "verifiedClaims": [
+            "Urban Tower stands beside Cathedral and served as its bell tower"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        },
+        {
+          "url": "https://www.kosice.sk/varos/a-kozpont-terkepe",
+          "title": "Košice city: historical centre map",
+          "kind": "city authority",
+          "verifiedClaims": [
+            "Urban Tower, Cathedral and State Theatre identified as separate historical centre landmarks"
+          ],
+          "accessedAt": "2026-10-13T09:20:34.568474+00:00"
+        }
+      ],
+      "producerQAAccepted": true,
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/qa-8.json",
+      "id": "kosice-8-1873-intro-v1",
+      "finalPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/kosice-8-1873-intro-v1.png",
+      "url": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-8-1873-intro-v1.png",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-8-1873-intro-v1.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [],
+      "QA": {
+        "slot": 8,
+        "verdict": "accepted",
+        "reason": "Sama kuvapaikka kuin7. Urbanin tornin juurella suljetut vanhat puukojut ilman1912arkadia; kirkon kattorakenne pelkistetty ilman myöhempiä neogoottilaisia huippuja, hevoskärryt ja ajan vaatteet.",
+        "nativeSHA256": "29dd6f0b24767ee2139ccdeadc8f53f4716f21a2ef1bd64c8eb184bf94d0ffbc",
+        "finalSHA256": "bd5ee5a3ef3a9ea3fc00bbfd0e9fd8a7e6433c5fc16ad56eece69805ebef1ce9",
+        "rootWholeNativeVisualInspection": true,
+        "exactExportFormatVerified": true,
+        "historicalGrayscaleEncodingNormalized": true,
+        "ownerAcceptanceVerified": false
+      },
+      "R2Proof": {
+        "slot": 8,
+        "r2Key": "julisteet/saapumisintro/kosice/20261013-full/kosice-8-1873-intro-v1.png",
+        "url": "https://media.matkakirja.app/julisteet/saapumisintro/kosice/20261013-full/kosice-8-1873-intro-v1.png",
+        "sha256": "bd5ee5a3ef3a9ea3fc00bbfd0e9fd8a7e6433c5fc16ad56eece69805ebef1ce9",
+        "nativeSHA256": "29dd6f0b24767ee2139ccdeadc8f53f4716f21a2ef1bd64c8eb184bf94d0ffbc",
+        "bytes": 1324255,
+        "readbacks": [
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "bd5ee5a3ef3a9ea3fc00bbfd0e9fd8a7e6433c5fc16ad56eece69805ebef1ce9",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": false
+          },
+          {
+            "http": 200,
+            "byteExact": true,
+            "sha256": "bd5ee5a3ef3a9ea3fc00bbfd0e9fd8a7e6433c5fc16ad56eece69805ebef1ce9",
+            "mime": "image/png",
+            "cors": "https://matkakirja.app",
+            "cacheBusted": true
+          }
+        ],
+        "byteExactReadback": true,
+        "verifiedAt": "2026-10-13T09:43:40.447964+00:00"
+      },
+      "gameIntegrationVerified": false,
+      "publicationVerified": false
+    }
+  ],
+  "omittedItems": [
+    {
+      "slot": 7,
+      "reason": "Rejected: visible text-like café lettering on the awning at lower-left violates the source prohibition on all text and signs. No retry was issued.",
+      "nativeSHA256": "663edb980ad77a0a3080f8f81373607122ef4379e9d22fc0d5bad462733f997c",
+      "finalSHA256": "d87e5605bdbe5e739cbf14f93e2c62b8f2d50c984fc5080c9a6e3d7744730e02",
+      "generationCalls": 1,
+      "qaPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/eurooppa-introt-viimeiset5-20261013/kosice/qa-7.json"
+    }
+  ],
+  "actualCalls": 5,
+  "maximumGenerationCalls": 5,
+  "allRequestedSlotsHandled": true,
+  "allRequestedSlotsDelivered": false,
+  "productionCompleteWithinSourceLimit": true,
+  "ownerAcceptanceRequired": true,
+  "ownerAcceptanceVerified": false,
+  "gameIntegrationAllowedWithoutOwnerAcceptance": false,
+  "gameIntegrationVerified": false,
+  "publicationVerified": false,
+  "stages": {
+    "local": true,
+    "QA": true,
+    "R2": true,
+    "mailbox": "prepared",
+    "FableReceipt": false,
+    "ownerAcceptance": false,
+    "runtimeIntegration": false,
+    "publication": false
+  },
+  "sourcePath": "posti/sisaltokirjuri-codex-saapumisintro-viimeiset-5-20261013.md",
+  "sourceCommit": "a856b50cc25c2f56064e9f18cc6f7e81f40ccf4e",
+  "sourceBlob": "e28e6de50d39383574954e2ce1db358959bc270f",
+  "prior206ImageDeliveryPreserved": true
+}
