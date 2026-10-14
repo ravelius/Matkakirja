@@ -14135,3 +14135,15 @@ Kuvat ovat tässä kansiossa: `iss-palaute-1225-1-maasto-tarkkuus-raja.webp`, `-
 Kiitos omistajalta: "iss animaatio oli nyt jo hurjan paljon parempi" ja "esittelyteksti on todella hyvä".
 
 PT 12.4x jako: Natiivi-UI kohdat 2 (tekstilaatikot läpinäkyviksi pohjiin, Raamattu UI-POHJAT), 4 (alapaneeli pois, SpaceX-tyyliset luvut + aikajana), 5, 6b (pienoismaapallo); Pelikoodari 7–9 ja aikajanan data; Valoseppä 1, 3, 6a (Kuu), 6c (nimet pallon pinnalle, data KS); Sisältökirjuri ja Äänittäjä kertojan loppurepliikit ja äänitasot; valas myöhemmin omana eränä (Linnanrakentaja + Valoseppä).
+
+## PT:N ILMOITUKSET OMISTAJALLE VAIN PAKOLLISET (14.10.2026 klo 13.52)
+
+Omistaja 14.10.2026 klo 13.52 (Keskustelukanavan välittämä, sanatarkasti): "Päätoimittajalta ei tarvitse tulla minulle ilmoituksia ellei ole aivan pakko". PT lähettää omistajalle tarkoitetun viestin Keskustelukanavalle vain, kun tarvitaan omistajan toimea tai päätöstä (KYSYMYS, TOIMI TARVITAAN). Valmistumiset, korjaukset ja TF-julkaisut kirjataan vain Asemataululle. Raamattu: KYSYMYKSET-SESSIO → KESKUSTELUKANAVA -kappale päivitetty.
+
+## TARKENNUS: EI PUSH-ILMOITUKSIA, PT:N VIESTIT KESKUSTELUKANAVALLE KUTEN ENNEN (14.10.2026 klo 13.57)
+
+Omistaja 14.10.2026 klo 13.5x (Keskustelukanavan välittämä, sanatarkasti; korvaa saman päivän 13.52-kirjauksen): "Sinä voit kyllä välittää minulle päätoimittajan viestejä, jos ne ovat sinusta oleellisia. Lähinnä nyt on tullut minulle puhelimeen push-viestejä, joihin minun ei kuitenkaan ole ollut tarpeen reagoida, niin ne on hyvä ottaa pois päältä." PT:n viestit Keskustelukanavalle jatkuvat kuten ennen, ja Keskustelukanava päättää, mitkä niistä ovat omistajalle oleellisia. Mikään sessio ei lähetä PushNotificationia. Odottajavahdin push-vaihe on poistettu jonokierroksen tekstistä.
+
+## TEKSTILAATIKOT: PITKISSÄ POHJA (14.10.2026 klo 14.1x) (14.10.2026 klo 14.15)
+
+Omistaja 14.10.2026 klo 14.1x (Keskustelukanavan kortti, sanatarkasti): "Pitkissä pohja (Suositus)". Tarkentaa 12.25-päätöstä läpinäkyvistä tekstilaatikoista kaikkiin pohjiin: pitkät luettavat paneelit (lehti, kortit, sähkeet, paljastus) pitävät pohjan; kaikki muu muuttuu läpinäkyväksi: kartan laput, nostot, linssit, ISS, pelit, Pulun puhekupla, chat, oppaan ja ISS:n kohdevalikko sekä lautapelin paneeli. Toteutus Natiivi-UI erinä NYKYINEN | UUSI -arkeilla, PT kuittaa.
