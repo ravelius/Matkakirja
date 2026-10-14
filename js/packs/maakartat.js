@@ -17675,6 +17675,15 @@ export const KAUPUNKIKARTAT = {
       lansi: 7.4833,
       ita: 7.5249,
     },
+    esittely: 'Kartan alue on Abujan reuna, jossa pääkaupunki kohtaa graniittisen maaston. Nigeria '
+      + 'siirsi pääkaupunkinsa Lagosista Abujaan, ja Abuja julistettiin pääkaupungiksi 12. '
+      + 'joulukuuta 1991.\n\n'
+      + 'Itäpuolella kohoaa Aso-kallio, graniittinen yksittäiskallio, joka nousee noin 400 '
+      + 'metriä ympäristöään korkeammaksi; suurin osa kaupungista levittäytyy sen '
+      + 'eteläpuolelle. Länsipuolella on Jabin järvi, patoamalla syntynyt tekojärvi, joka '
+      + 'suunniteltiin alun perin noin 100 000 asukkaan vesilähteeksi. Kun suurempi Lower '
+      + 'Usuman pato valmistui, järvestä tuli kalastus- ja matkailukohde. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Abujan kansallismoskeija',
@@ -17726,6 +17735,14 @@ export const KAUPUNKIKARTAT = {
       lansi: -8.0154,
       ita: -7.9832,
     },
+    esittely: 'Kartan alue on Bamakon keskusta Niger-joen rannalla Malin lounaisosassa, koskialueen '
+      + 'kohdalla, joka erottaa joen ylä- ja keskijuoksun. Nimen selitetään bambara-kielestä '
+      + 'krokotiilijoeksi. Ranskalaiset rakensivat paikalle linnakkeen 1. helmikuuta 1883 '
+      + 'saadakseen haltuunsa Nigerin strategisen kohdan.\n\n'
+      + 'Kaupunki oli Ranskan Sudanin siirtomaahallinnon keskus ja kasvoi nopeasti '
+      + 'rautateiden myötä: rata Kaysiin valmistui 1904 ja Dakariin 1923. Malin '
+      + 'kansallismuseo avattiin kaupungissa 14. helmikuuta 1953 Soudanin museona, ja Malin '
+      + 'itsenäistyessä 1960 Bamakossa asui noin 160 000 ihmistä.',
     kohteet: [
       {
         nimi: 'Bamakon suurmoskeija',
@@ -17775,6 +17792,14 @@ export const KAUPUNKIKARTAT = {
       lansi: 18.5527,
       ita: 18.5826,
     },
+    esittely: 'Kartan alue on Bangui, Keski-Afrikan tasavallan pääkaupunki Ubangi-joen '
+      + 'pohjoisrannalla. Ranskalaiset perustivat sinne tukikohdan vuonna 1889 paikkaan, '
+      + 'jossa kosket päättivät joen purjehduskelpoisen osuuden; kaupungin nimi tulee näiden '
+      + 'koskien paikallisesta nimestä.\n\n'
+      + 'Joen vastarannalla on Kongon demokraattisen tasavallan alue. Bangui kehittyi '
+      + 'Ubangi-Shari-siirtomaan keskukseksi, ja se jäi pääkaupungiksi, kun maa itsenäistyi '
+      + 'vuonna 1960. Kaupungin tunnetuimpia rakennuksia ovat Notre-Damen katedraali, '
+      + 'Boganda-museo ja keskustori.',
     kohteet: [
       {
         nimi: 'Notre-Damen katedraali',
@@ -17812,6 +17837,14 @@ export const KAUPUNKIKARTAT = {
       lansi: 15.2395,
       ita: 15.2981,
     },
+    esittely: 'Kartan alue on Brazzavillen länsiosa Kongo-joen pohjoisrannalla, Malebo-lammen '
+      + 'alapuolella ja Kinshasaa vastapäätä. Pierre Savorgnan de Brazza perusti kaupungin '
+      + 'vuonna 1880, ja toisen maailmansodan aikana se oli Vapaan Ranskan pääkaupunki.\n\n'
+      + 'Djoué-joen suu on kartan kohde. Djoué on Kongon oikeanpuoleinen sivujoki, joka '
+      + 'laskee pääjokeen kohdassa, jossa Kongo lähtee Malebo-lammesta ja alkaa Kongon '
+      + 'koskialue. Ympäröivä kosteikko, Congo-Djouén koskialue, otettiin Ramsar-sopimuksen '
+      + 'kansainvälisesti tärkeiden kosteikkojen luetteloon 3. huhtikuuta 2009; sen pinta-ala '
+      + 'on 2 500 hehtaaria. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Sainte-Anne-du-Congon basilika',
@@ -17849,6 +17882,14 @@ export const KAUPUNKIKARTAT = {
       lansi: 43.136,
       ita: 43.1545,
     },
+    esittely: 'Kartan alue on Djiboutin vanha keskusta niemimaalla Tadjourahinlahden rannalla. '
+      + 'Ranskalaiset perustivat kaupungin vuonna 1888 maalle, jonka he vuokrasivat '
+      + 'paikallisilta somali- ja afar-sulttaaneilta, ja 1890-luvulla siirtomaan hallinto '
+      + 'siirtyi sinne Obokista.\n\n'
+      + 'Kaupungin tehtävä on ollut satama: Etiopia alkoi käyttää Djiboutin satamaa '
+      + 'merireittinään vuonna 1897, ja Addis Abebaan johtava standardiraiteinen rautatie '
+      + 'otettiin käyttöön 2017. Vuonna 1977 Djiboutista tuli itsenäisen tasavallan '
+      + 'pääkaupunki.',
     kohteet: [
       {
         nimi: 'Hamoudin moskeija',
@@ -17935,6 +17976,13 @@ export const KAUPUNKIKARTAT = {
       lansi: 31.0321,
       ita: 31.06,
     },
+    esittely: 'Kartan alue on Hararen keskusta Mashonalandin ylängöllä Zimbabwen koillisosassa. '
+      + 'Brittiläinen Pioneer Column perusti kaupungin vuonna 1890 linnoitukseksi, ja se '
+      + 'tunnettiin Salisburyna, kunnes se nimettiin Harareksi 18. huhtikuuta 1982.\n\n'
+      + 'Africa Unity Square ja Harare Gardens ovat keskustan avoimia tiloja, ja Kopje on '
+      + 'graniittikukkula, jolta näkee yli kaupungin. Mbare Musika on Zimbabwen tärkeä '
+      + 'hedelmä- ja vihannestori sekä maaseutubussien päätepysäkki, jonne tuottajat tuovat '
+      + 'satoaan kaukaakin.',
     kohteet: [
       {
         nimi: 'Pyhän Marian ja Kaikkien Pyhien katedraali',
@@ -17985,6 +18033,15 @@ export const KAUPUNKIKARTAT = {
       lansi: 31.5779,
       ita: 31.6227,
     },
+    esittely: 'Kartan alue on Juba, Etelä-Sudanin pääkaupunki Valkoisen Niilin länsirannalla. '
+      + 'Paikalla oli alun perin pieni baari-kansan kylä, jonka asukkaat siirrettiin '
+      + '1920-luvulla, kun englantilais-egyptiläinen hallinto rakensi sinne Mongallan '
+      + 'provinssin hallintokaupungin. Yksi syy paikan valintaan oli yhteys Niilin '
+      + 'jokiliikenteeseen.\n\n'
+      + 'Kreikkalaisia kauppiaita asettui kaupunkiin samoin 1920-luvulla, ja he rakensivat '
+      + 'keskustaan monia rakennuksia. Vuonna 1947 Jubassa pidettiin konferenssi, jossa '
+      + 'sovittiin Pohjois- ja Etelä-Sudanin pysymisestä yhtenä valtiona. Juba tuli '
+      + 'itsenäisen Etelä-Sudanin pääkaupungiksi 9. heinäkuuta 2011.',
     kohteet: [
       {
         nimi: 'Nyakuron kulttuurikeskus',
@@ -18022,6 +18079,15 @@ export const KAUPUNKIKARTAT = {
       lansi: 15.2724,
       ita: 15.3229,
     },
+    esittely: 'Kartan alue on Kinshasan länsiosa Kongo-joen vasemmalla rannalla, jossa kaupunki sai '
+      + 'alkunsa. Henry Morton Stanley perusti 1800-luvun lopulla Ngalieman lahden rannalle '
+      + 'kauppa-aseman, josta kasvoi Léopoldville, ja lahti on saanut nimensä paikalliselta '
+      + 'päälliköltä Ngaliemalta.\n\n'
+      + 'Gomben kaupunginosassa on Kinshasan kasvitieteellinen puutarha, jonka '
+      + 'siirtomaahallinto perusti vuonna 1933 Parc de Bock -nimiseksi puistoksi. Se '
+      + 'sijaitsee Kasa-Vubu-kadun varrella eläintarhaa vastapäätä, ja sitä hoitaa Kongon '
+      + 'luonnonsuojeluinstituutti ICCN. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       {
         nimi: 'Kinshasan keskustori',
@@ -18072,6 +18138,14 @@ export const KAUPUNKIKARTAT = {
       lansi: 9.4389,
       ita: 9.4559,
     },
+    esittely: 'Kartan alue on Libreville, Gabonin pääkaupunki Komo-joen suistossa Guineanlahden '
+      + 'rannalla. Kaupungin perustivat vuonna 1848 ranskalaisten orjalaivalta vapauttamat '
+      + 'ihmiset, ja nimi, "vapaa kaupunki", otettiin Sierra Leonen Freetownista.\n\n'
+      + 'Mont-Bouët\'n tori on laaja markkina-alue Librevillessä: sadat kojut jakautuvat '
+      + 'usealle korttelille, ja myytävänä on muun muassa kankaita ja vaatteita. Sibangin '
+      + 'arboretum on 1930-luvulla perustettu koemetsä, jonka koealoille on istutettu '
+      + 'tropiikin hyötypuita; sen rajat merkittiin päätöksellä 31. maaliskuuta 1934. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Palais du bord de mer',
@@ -18110,6 +18184,14 @@ export const KAUPUNKIKARTAT = {
       lansi: 1.2089,
       ita: 1.2306,
     },
+    esittely: 'Kartan alue on Lomén meriranta Guineanlahden hiekkarannikolla Togon lounaiskulmassa. '
+      + 'Kaupunki on aivan Ghanan rajan tuntumassa. Sen nimi tulee ewen kielen muodosta '
+      + 'Alomé, joka tarkoittaa suunnilleen alopuiden keskellä, ja Lomésta tuli Saksan '
+      + 'Togolandin pääkaupunki vuonna 1897.\n\n'
+      + 'Lomén keskustan meriranta on kaupungin eteläreuna, jossa kalastajat vetävät '
+      + 'verkkojaan aamun valjetessa ja ihmiset kävelevät rantaa iltaisin. Togo itsenäistyi '
+      + 'vuonna 1960, ja Lomessa on yhä maan iso satama. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Itsenäisyysmonumentti',
@@ -18148,6 +18230,14 @@ export const KAUPUNKIKARTAT = {
       lansi: 28.2743,
       ita: 28.3226,
     },
+    esittely: 'Kartan alue on Lusaka, Sambian pääkaupunki. Kaupunki syntyi vuonna 1905 '
+      + 'vesipysäkkinä rautatielinjan varrelle, ja nimi tulee lenje-kansan päällikkö '
+      + 'Lusaakasta. Seudulla asuivat lenje- ja soli-kansat.\n\n'
+      + 'Siirtomaahallinto valitsi Lusakan Pohjois-Rhodesian pääkaupungiksi Livingstonen '
+      + 'tilalle, ja siirto toteutui virallisesti vuonna 1935. Kaupungin pääkatu Cairo Road '
+      + 'sai nimensä Cecil Rhodesin kaavailemasta Kapkaupungista Kairoon -tiestä ja on '
+      + 'keskustan liike-elämän pääväylä. Pohjois-Rhodesia itsenäistyi Sambiana vuonna 1964, '
+      + 'ja Lusakasta tuli sen pääkaupunki.',
     kohteet: [
       {
         nimi: 'Cairo Road',
@@ -18205,6 +18295,13 @@ export const KAUPUNKIKARTAT = {
       lansi: 32.5498,
       ita: 32.5975,
     },
+    esittely: 'Kartan alue on Maputon vanha keskusta Maputo-lahden länsirannalla Mosambikin '
+      + 'eteläosassa. Portugalilaiset rakensivat paikalle linnoituksen 1700-luvun lopulla, ja '
+      + 'kaupunki kasvoi sen ympärille nimellä Lourenço Marques. Se sai kaupunkioikeudet '
+      + 'vuonna 1887 ja tuli Portugalin Mosambikin pääkaupungiksi vuonna 1898.\n\n'
+      + 'Sataman ja Baixan vanhan keskustan läheisyydessä ovat linnoitus, torihalli ja '
+      + 'rautatieasema. Ne kertovat kaupungin eri rakennusvaiheista. Itsenäistymisen jälkeen '
+      + 'kaupunki sai vuonna 1976 nimen Maputo samannimisen joen mukaan.',
     kohteet: [
       {
         nimi: 'Maputon katedraali',
@@ -18260,6 +18357,13 @@ export const KAUPUNKIKARTAT = {
       lansi: 27.4734,
       ita: 27.5064,
     },
+    esittely: 'Kartan alue on Maserun keskusta Lesothon länsirajalla, Caledon-joen eli Mohokaren '
+      + 'rannalla, jonka toisella puolella on Etelä-Afrikka. Britit perustivat paikalle '
+      + 'pienen poliisileirin vuonna 1869 Free Staten ja basothojen sotien jälkeen. Maseru '
+      + 'pysyi pääkaupunkina, kun Lesotho itsenäistyi vuonna 1966.\n\n'
+      + 'Kingsway on kaupungin keskeinen katu. Thaba Bosiu on retkikohde noin 24 kilometrin '
+      + 'päässä idässä: kuningas Moshoeshoe I asettui tälle tasangolle heinäkuussa 1824, kun '
+      + 'hän oli paennut Butha-Buthesta alueen sotia, ja tasangosta tuli hänen linnakkeensa.',
     kohteet: [
       {
         nimi: 'Our Lady of Victories -katedraali',
@@ -18303,6 +18407,16 @@ export const KAUPUNKIKARTAT = {
       lansi: -15.9892,
       ita: -15.9637,
     },
+    esittely: 'Kartan alue on Nouakchott, Mauritanian pääkaupunki Atlantin rannikolla. Paikalla oli '
+      + 'pieni kalastajakylä ja linnoitettu ksar, kunnes 1950-luvun lopulla alettiin rakentaa '
+      + 'uutta pääkaupunkia. Kaupunki oli pääosin valmis, kun maa itsenäistyi marraskuussa '
+      + '1960.\n\n'
+      + 'Kalastajarannalla pienveneet tuovat saaliin kalatorille. Etelämpänä on Friendship '
+      + 'Port, kiinalaisyhtiön rakentama syväsatama, joka avattiin vuonna 1986; luontaista '
+      + 'satamalahtea ei ollut, joten laivoja suojaa betonilohkoista tehty aallonmurtaja. '
+      + 'Keskustassa ovat Marché Capitale ja Mauritanian kansallismuseo, jonka toiminta alkoi '
+      + '1972. Nouakchottin olympiastadion on pohjoisempana. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Mauritanian kansallismuseo',
@@ -18354,6 +18468,14 @@ export const KAUPUNKIKARTAT = {
       lansi: -1.5324,
       ita: -1.5136,
     },
+    esittely: 'Kartan alue on Ouagadougoun keskusta. Mossi-kansan Wagadugu-kuningaskunta syntyi '
+      + '1400-luvulla, ja Burkina Fason pääkaupunki on sen perua, joten kaupungin ympäristöt '
+      + 'ovat paljon vanhempia kuin siirtomaa-ajan katuverkko.\n\n'
+      + 'Bangr Weogon kaupunkimetsä oli ennen siirtomaa-aikaa mossipäälliköiden pyhänä pitämä '
+      + 'metsä. Ranskalaiset muuttivat sen puistoksi 1930-luvulla, ja tammikuussa 2001 se sai '
+      + 'nykyisen nimensä, joka tarkoittaa tiedon metsää. Toinen kohde on Kansakunnan aukion '
+      + 'vanha markkinapaikka kaupungin keskustassa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       {
         nimi: 'Ouagadougoun katedraali',
@@ -18544,13 +18666,27 @@ export const KAUPUNKIKARTAT = {
         lon: 3.05956,
       },
     ],
-    esittely: 'Casbah yhdistää linnoituksen, moskeijat, palatsit ja asuinkorttelit. Sen historiallinen ydin ulottuu rinteestä merenrantaan.',
+    esittely: 'Kartan alue on Algerin Casbah, vanhakaupunki, joka nousee rinteenä Välimeren '
+      + 'rannalta ylös kohti linnoitusta. Casbah sai Unescon maailmanperintömerkinnän vuonna '
+      + '1992.\n\n'
+      + 'Rannan tuntumassa ovat Raïsien palatsi, jonka linnake rakennettiin vuonna 1576, ja '
+      + 'Sidi Abderrahmanen mausoleumi. Keskemmällä ovat Djamaa el Kebir, jonka almoravidit '
+      + 'rakensivat 1000-luvun lopulla, Ketchaoua-moskeija sekä Djamaa el Djedid noin '
+      + 'vuodelta 1660. Dar Mustapha Pacha valmistui 1700-luvun lopulla, ja Casbahin '
+      + 'linnoitus valvoo kaupunkia korkealta. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
   },
   banjul: {
     polku: 'assets/kartat/banjul-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Banjulin torikadut liittyvät Gambia-joen suun yhteyksiin. Saaren länsi- ja etelärannan Tanbi näyttää, miten kaupunki ja vuorovesikosteikko ovat toistensa naapureita.',
+    esittely: 'Kartan alue on Banjul, Gambian pääkaupunki, joka sijaitsee St Mary\'s -saarella '
+      + 'siinä, missä Gambia-joki laskee Atlantin mereen. Britit perustivat kaupungin vuonna '
+      + '1816 Bathurstin nimellä, ja nykyisen nimensä se sai vuonna 1973.\n\n'
+      + 'Albertin tori on saaren vilkas katutori. Gambia-joen suu avautuu saaren ympärillä '
+      + 'leveäksi suistoksi. Saaren länsi- ja lounaispuolella on Tanbin kosteikko, '
+      + 'mangrovemetsän ja vuorovesikanavien vyöhyke, joka erottaa Banjulin Serekundan ja '
+      + 'Bakaun kaupunkialueista. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 13.4694,
       etela: 13.414,
@@ -18606,13 +18742,29 @@ export const KAUPUNKIKARTAT = {
         lon: -15.57723,
       },
     ],
-    esittely: 'Linnoitus, laiturit ja tulliin viittaava aukio kertovat Bissaun vanhan satamaytimen eri tehtävistä. Paikat ovat lähekkäin, mutta niiden rakennusvaiheet eivät ole samanikäisiä.',
+    esittely: 'Kartan alue on Bissaun vanha satamakaupunginosa Geba-joen suistossa lähellä Atlantin '
+      + 'rannikkoa. Portugalilaiset perustivat paikalle kauppa-aseman vuonna 1687, ja siitä '
+      + 'kasvoi Guinea-Bissaun pääkaupunki.\n\n'
+      + 'Amuran linnoitus on 1700-luvulta periytyvä nelikulmainen Vauban-tyylinen linnake, '
+      + 'jonka kulmissa on viisikulmaiset bastionit ja jossa on Amílcar Cabralin mausoleumi. '
+      + 'Pidjiguitin laiturilla satamatyöläiset lakkoilivat 3. elokuuta 1959, ja viranomaiset '
+      + 'tukahduttivat lakon väkivalloin. Tulliaukion nimi viittaa tulliin. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
   },
   conakry: {
     polku: 'assets/kartat/conakry-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Tombon vanhan kaupungin rannalla satama yhdistää Conakryn Atlanttiin. Camayennen puutarha sekä edustan Kassa, Roume ja Tamara tuovat kaupunkimaisemaan suuret puut, saarten kaaren ja kiviset rannat.',
+    esittely: 'Kartan alue on Conakryn vanha keskusta Kaloumin niemimaan kärjessä Guinean '
+      + 'Atlantin-rannikolla. Kaupunki kasvoi Tombon saarelle, jonka Britannia luovutti '
+      + 'Ranskalle vuonna 1887; saari yhdistettiin myöhemmin niemimaahan, ja kaupunki levisi '
+      + 'sitä pitkin koilliseen.\n\n'
+      + 'Kaupungin talous nojaa pitkälti Conakryn satamaan. Camayennen kasvitieteellisessä '
+      + 'puutarhassa kasvaa kapokkipuita. Edustan Los-saaristoon kuuluvat Tamaran, Kassan ja '
+      + 'Roumen saaret: Kassa ja Tamara muodostavat lähes umpeen kiertyvän kaaren keskellä '
+      + 'olevan Roumen ympärille. Saariston nimi tulee portugalin sanoista, jotka '
+      + 'tarkoittavat epäjumalten saaria. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     rajat: {
       pohjoinen: 9.5364,
       etela: 9.4386,
@@ -18661,7 +18813,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/monrovia-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Vanhan oikeustalon ja historiallisen pyhäkön ympärillä Monrovia jatkuu saariin, jokiveteen ja rantakosteikkoon. Rakennusten käytöt ja veden erottamat luonnonpaikat kertovat kaupungin eri aikakerroksista.',
+    esittely: 'Kartan alue on Monrovian vanha ydin Cape Mesurado -niemellä, jota Atlantti ja '
+      + 'Mesurado-joki rajaavat. Amerikan siirtomaaseura perusti kaupungin vuonna 1822 '
+      + 'vapautetuille mustille amerikkalaisille, ja nimi tulee presidentti James Monroesta.\n\n'
+      + 'Niemellä ovat Providence Baptist Church, jossa Liberian itsenäisyysjulistus '
+      + 'hyväksyttiin vuonna 1847, ja Kansallismuseon vanha oikeustalo, jossa museo on '
+      + 'toiminut vuodesta 1987. Joen suulla on Providence Island, jonne uudisasukkaat '
+      + 'laskeutuivat ensin. Pohjoispuolella ovat Bushrod Island ja jokien väliselle '
+      + 'niemekkeelle kasvanut West Point, ja Mesuradon kosteikkoalueella kasvaa mangrovea. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 6.3602,
       etela: 6.2973,
@@ -18742,7 +18902,14 @@ export const KAUPUNKIKARTAT = {
         tyyppi: 'luonto',
       },
     ],
-    esittely: 'Praian vanha keskusta nousee lahden yläpuolelle. Aukio ja vanhat talot liittyvät tasanteeseen, luoto ja majakkaniemi sataman reunaan.',
+    esittely: 'Kartan alue on Praian historiallinen keskus Plateau Santiago-saarella. Kaupunki '
+      + 'kasvoi sataman yläpuolella olevalle tasanteelle, jonka korkea sijainti suojasi '
+      + 'merirosvoilta, ja 1800-luvulla alue rakennettiin uudelleen ruutukaavan mukaan.\n\n'
+      + 'Plateaulla ovat Praça Alexandre Albuquerque -aukio, Jaime Motan entinen kasarmi ja '
+      + 'Praian etnografinen museo, joka avattiin vuonna 1997 1800-luvun talossa. Sataman '
+      + 'suulla on Santa Marian luoto, ja Ponta Temerosa -niemellä seisoo Maria Pian majakka, '
+      + 'joka on toiminut vuodesta 1881. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
   },
   rabat: {
     polku: 'assets/kartat/rabat-keskusta.png',
@@ -18792,7 +18959,16 @@ export const KAUPUNKIKARTAT = {
         lon: -6.82621,
       },
     ],
-    esittely: 'Rabatin vanha ydin ulottuu kasbahista medinan muureille ja joen suistoon. Chellahissa antiikin kaupunki ja keskiaikainen hautausmaa ovat saman aitauksen sisällä.',
+    esittely: 'Kartan alue on Rabatin vanha ydin joen suulla Atlantin rannalla, vastapäätä Saléa. '
+      + 'Almohadit rakensivat paikalle 1100-luvulla linnoitetun kaupungin, ja Rabat sai '
+      + 'Unescon maailmanperintönimen vuonna 2012.\n\n'
+      + 'Udayan kasbah kohoaa kukkulalla Bou Regreg -joen suiston reunalla; almohadit '
+      + 'rakensivat sen noin 1150. Medinan eteläreunaa rajaa yli 1,4 kilometrin '
+      + 'Andalusialainen muuri, joka rakennettiin 1600-luvun alussa Espanjasta karkotettujen '
+      + 'moriscojen aikaan; sen itäpäässä on Borj Sidi Makhlouf -linnake. Bab er-Rouah '
+      + '-portti valmistui 1197 ja Moulay Slimanen moskeija 1812. Chellahin raunioalueella on '
+      + 'roomalaisen Sala Colonian jäänteitä. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
   },
   tunis: {
     polku: 'assets/kartat/tunis-keskusta.png',
@@ -18836,13 +19012,30 @@ export const KAUPUNKIKARTAT = {
         lon: 10.17057,
       },
     ],
-    esittely: 'Bab el Bharin portilta medinan kauppakujat jatkuvat moskeijoiden ja palatsien lomitse. Dar Lasramin kerrosjako ja Dar Othmanin eteinen kertovat pihatalojen tilaratkaisuista.',
+    esittely: 'Kartan alue on Tunisin medina, vanha kaupunki, jonka UNESCO otti '
+      + 'maailmanperintölistalle vuonna 1979. UNESCOn mukaan Tunis oli almohadien ja '
+      + 'hafsidien aikana, 1100–1500-luvuilla, yksi islamilaisen maailman suurista ja '
+      + 'rikkaista kaupungeista.\n\n'
+      + 'Medinan keskellä on Zitouna-moskeija, jonka aghlabidit rakensivat uudelleen vuosina '
+      + '864–865; nykyinen minareetti on vuodelta 1894. Kasbah-moskeijan rakennutti '
+      + 'hafsidihallitsija Abu Zakariya Yahya 1230-luvulla ja Dar Othmanin Othman dey noin '
+      + 'vuonna 1595. Dar Hussein on Bab Menaran kaupunginosassa, Dar Lasram pohjoisessa, ja '
+      + 'Bab el Bhar – Merenportti rajaa medinan idässä. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
   },
   accra: {
     polku: 'assets/kartat/accra-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Accran vanha rannikkoydin kasvoi Ga-yhteisöjen asutuksista ja eurooppalaisten kauppapaikkojen ympäriltä. Linnoitusten rinnalla siihen kuuluvat Korlen laguunin historia ja myöhempi kirkkoarkkitehtuuri. Labadissa sama rannikko jatkuu meren ja vapaa-ajan ympäristönä.',
+    esittely: 'Kartan alue on Accran vanha rannikkoydin Guineanlahden rannalla. Se kasvoi '
+      + 'eurooppalaisten kauppalinnoitusten ympärille, ja vuonna 1877 Accra korvasi Cape '
+      + 'Coastin Kultarannikon pääkaupunkina.\n\n'
+      + 'Jamesin linnoituksen rakensi brittiläinen Royal African Company vuonna 1673, ja '
+      + 'hollantilaiset rakensivat Ussherin linnoituksen eli Fort Crèvecœurin vuonna 1649. '
+      + 'Osun linna eli Christiansborg on tanskalaisten rakentama, ja se kuuluu Ghanan '
+      + 'linnoitusten UNESCO-listaukseen vuodesta 1979. Korlen laguuni on keskustan '
+      + 'länsipuolella, ja Holy Trinity -katedraali on High Streetillä. Labadin ranta on Osun '
+      + 'ja Teshien välissä. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 5.5739,
       etela: 5.5222,
@@ -18902,13 +19095,28 @@ export const KAUPUNKIKARTAT = {
         tyyppi: 'luonto',
       },
     ],
-    esittely: 'Logone päättyy Chariin kahden maan kaupunkien luona. Yhtymäkohta kuuluu sekä jokien että N’Djamenan sijainnin maantieteeseen.',
+    esittely: 'Kartan alue on Logonen ja Charin yhtymäkohta, jonka rannalle Tšadin pääkaupunki '
+      + 'N\'Djamena on rakentunut. Ranskalaiset perustivat paikalle vuonna 1900 '
+      + 'sotilasaseman, Fort-Lamyn, joka sai nimensä Kamerunin puolella taistelussa kaatuneen '
+      + 'upseerin Amédée-François Lamyn mukaan. Nykyisen nimensä se sai vuonna 1973.\n\n'
+      + 'Logone laskee N\'Djamenan kohdalla Chariin, joka kuljettaa vetensä Tšadjärveen. '
+      + 'Yhtymäkohta on kaupungin sijainnin perusta, ja Chari-joen toisella rannalla on '
+      + 'Kamerunin Kousséri. Joet ovat kaupungille sekä kulkureitti että valtioiden välinen '
+      + 'raja-alue. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
   },
   niamey: {
     polku: 'assets/kartat/niamey-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Nigerjoen saari, kausittaisen uoman suu ja lateriittikukkulat kuuluvat Niameyn maisemaan. Saari on myös asukkaiden koti.',
+    esittely: 'Kartan alue on Niamey, Nigerin pääkaupunki Nigerjoen vasemmalla rannalla. '
+      + 'Ranskalaiset tekivät paikasta hallintokeskuksen 1900-luvun alussa, ja pääkaupungiksi '
+      + 'Niamey vahvistettiin 28. joulukuuta 1926, kun hallinto palasi Zinderistä.\n\n'
+      + 'Kartan kolme kohdetta ovat luonnonpaikkoja. Nigerjoen saarijono ulottuu Niameysta '
+      + 'ylävirtaan, ja Néini Goungoun saari kuuluu sen suurimpiin; maouri-kansan kertomuksen '
+      + 'mukaan he asuivat saarella ennen kuin asettuivat joen vasemmalle rannalle. Gounti '
+      + 'Yénan suu on vanhan asutuksen kohdalla olevan uoman pää. Trois Sœursin kukkulat '
+      + 'kuuluvat seudun kovettuneiden pintakerrosten maisemaan. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 13.5247,
       etela: 13.4867,
@@ -18954,13 +19162,29 @@ export const KAUPUNKIKARTAT = {
         tyyppi: 'luonto',
       },
     ],
-    esittely: 'Kasvipuutarhan vanhat puut kuuluvat Porto-Novon historiaan. Vihreä paikka on ollut sekä pyhä metsä että kasvien tutkimisen ympäristö.',
+    esittely: 'Kartan alue on Porto-Novon keskusta. Kaupunki on Beninin virallinen pääkaupunki, '
+      + 'vaikka Cotonou on maan taloudellinen keskus. Portugalilainen Eucaristo de Campos '
+      + 'antoi kaupungille vuonna 1730 nimen Porto-Novo, "uusi satama"; paikalliset kutsuivat '
+      + 'sitä Hogbonuksi.\n\n'
+      + 'Jardin des plantes et de la nature on entisen pyhän metsän jäänne. Metsä kuului '
+      + 'Hogbonoun kuningaskunnan oikeusasioista vastanneelle virkamiehelle, ja siellä kasvaa '
+      + 'yhä vanhoja iroko-puita. Ranskalaiset tekivät osasta metsää koepuutarhan vuonna '
+      + '1895, ja nykyisen nimensä puutarha sai avajaisissa 22. tammikuuta 1999. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
   },
   yaounde: {
     polku: 'assets/kartat/yaounde-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Kukkulat edeltävät kaupunkia, järvi ja puisto kuuluvat sen myöhempään historiaan. Yaoundén luontopaikoilla on erilaiset synty- ja käyttövaiheet.',
+    esittely: 'Kartan alue on Yaoundé, Kamerunin pääkaupunki, joka on rakentunut keskisen ylängön '
+      + 'kukkuloiden ympärille. Kartalla kukkulat kohoavat pohjoisessa ja lounaassa, ja '
+      + 'kaupungin keskiosissa ovat tekojärvi ja eläintarha.\n\n'
+      + 'Pohjoisessa on Mont Fébé, noin tuhannen metrin kukkula, jonka ympäristössä on '
+      + 'benediktiiniluostari, hotelli ja golfkenttä. Lounaassa Mont Eloundem nousee '
+      + 'lähteiden mukaan yli 1 100 metriin. Yaoundén kunnallinen järvi kaivettiin vuosina '
+      + '1951–1952 kreikkalaissyntyisen kauppiaan Georges Kyriakidèsin aloitteesta, ja '
+      + 'Mvog-Betsin zoo-botaaninen puisto perustettiin vuonna 1951. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 3.9169,
       etela: 3.8253,
@@ -18998,7 +19222,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kigali-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Kigali- ja Jali-kukkulat kertovat kaupungin maastosta. Nyabugogon jokisuu ja Nyandungun kosteikko näyttävät laaksojen vesiverkon eri osia.',
+    esittely: 'Kartan alue on Kigali, Ruandan pääkaupunki, joka levittyy harjanteille ja laaksoihin '
+      + 'maan keskiosassa. Saksalainen Richard Kandt valitsi Nyarugengen kukkulan '
+      + 'hallintokeskukseksi 1900-luvun alussa, ja pääkaupungiksi Kigali tuli '
+      + 'itsenäistymisessä vuonna 1962, jolloin asukkaita oli noin 6 000.\n\n'
+      + 'Kigali-kukkula ja Jali-kukkula kuuluvat kaupunkia ympäröiviin korkeampiin '
+      + 'maastomuotoihin. Nyabugogo saa alkunsa Muhazi-järveltä ja laskee Nyabarongoon, ja '
+      + 'Nyabugogon jokisuu kokoaa laaksojen vedet. Nyandungun kosteikko oli heikentynyt, '
+      + 'mutta se kunnostettiin ja avattiin yleisölle ekopuistona heinäkuussa 2022; alue on '
+      + 'noin 121 hehtaaria. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: -1.8787,
       etela: -1.9721,
@@ -19036,7 +19268,16 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/luanda-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Luandan vanha rannikkoydin yhdistää sataman lähellä olevan Baixan ja ylempänä sijaitsevan Cidade Altan. Kirkonpaikat edustavat eri rakennusvaiheita, ja Ilha de Luandan hiekkaniemi kuuluu samaan rannikkoympäristöön.',
+    esittely: 'Kartan alue on Luandan vanha rannikkoydin. Paulo Dias de Novais perusti kaupungin '
+      + 'vuonna 1576 Luandan lahden rannalle, jota Ilha de Luandan hiekkaniemi suojaa '
+      + 'Atlantin aallokolta. Alakaupunki Baixa kasvoi sataman lähelle ja ylempi Cidade Alta '
+      + 'oli hallinnon keskus.\n\n'
+      + 'Cidade Altassa ovat Nossa Senhora dos Remédiosin katedraali ja Jesuiittojen '
+      + 'Jesus-kirkon historiallinen paikka; jesuiittakollegio perustettiin siellä 1600-luvun '
+      + 'alussa. Carmon kirkon ja luostarin rakensivat karmeliitit 1600-luvun '
+      + 'jälkipuoliskolla. Nazarén kirkko on lahden rannalla, ja Nossa Senhora do Cabon '
+      + 'kirkko rakennettiin uudelleen vuonna 1669. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     rajat: {
       pohjoinen: -8.7756,
       etela: -8.8421,
@@ -19081,7 +19322,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/saotome-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Ana Chavesin rannalla vanha linnake liittyy kaupungin satamahistoriaan. Pohjoisen merimaisemaan kuuluu Ilhéu das Cabras.',
+    esittely: 'Kartan alue on São Tomén pääkaupungin rantavyöhyke saaren koillisosassa '
+      + 'Guineanlahden rannalla. Matala Ana Chavesin lahti ulottuu pohjoisessa Ponta Oque del '
+      + 'Rei -niemeltä etelässä Ponta São Sebastiãoon, ja kaupunki satamineen on asettunut '
+      + 'sen rannalle.\n\n'
+      + 'Ponta São Sebastiãon kärjessä on São Sebastiãon linnake, jonka portugalilaiset '
+      + 'rakensivat vuonna 1566 sataman puolustukseksi; nykyään siellä toimii kansallismuseo. '
+      + 'Noin kahden kilometrin päässä rannikon edustalla on Ilhéu das Cabras, asumaton '
+      + 'saari, jonka majakka rakennettiin vuonna 1890. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     rajat: {
       pohjoinen: 0.411,
       etela: 0.3319,
@@ -19125,7 +19374,14 @@ export const KAUPUNKIKARTAT = {
         lon: 38.93789,
       },
     ],
-    esittely: 'Ruusukon Neitsyt Marian kirkko liittyy keskustan historiallisten rakennusten ja lähetyskokonaisuuden vaiheisiin.',
+    esittely: 'Kartan alue on Asmaran keskusta Eritrean ylängöllä, yli 2 000 metrin korkeudessa. '
+      + 'Italia miehitti kaupungin vuonna 1889, ja 1890-luvulta alkaen siitä kasvoi '
+      + 'siirtomaan keskus. UNESCO merkitsi sen maailmanperintökohteeksi vuonna 2017 nimellä '
+      + 'Asmara: A Modernist African City.\n\n'
+      + 'Ruusukon Neitsyt Marian kirkko seisoo keskustassa. Oreste Scanavini suunnitteli sen '
+      + 'uusromaaniseen tyyliin, ja se valmistui vuonna 1923. Suurin osa keskustan '
+      + 'modernistisista rakennuksista valmistui vasta vuosina 1935–1941. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
   },
   kampala: {
     polku: 'assets/kartat/kampala-keskusta.png',
@@ -19181,13 +19437,29 @@ export const KAUPUNKIKARTAT = {
         lon: 32.57,
       },
     ],
-    esittely: 'Kampalan kukkulat jäsentävät kaupungin maastoa. Niiden rinteille on eri aikoina sijoittunut asumista, kauppaa, opetusta ja hoitoa.',
+    esittely: 'Kartan alue on Ugandan pääkaupungin Kampalan vanhat kukkulat. Nimen kerrotaan '
+      + 'tulevan impala-antilooppien kukkulasta, joka oli Bugandan kabakan metsästysmaata. '
+      + 'Frederick Lugard rakensi Vanhan Kampalan kukkulalle linnakkeen vuonna 1890, ja '
+      + 'kaupunki alkoi kasvaa sen ympärille.\n\n'
+      + 'Nakasero-kukkulalle tuli myöhemmin toinen linnake. Namiremben kukkulalla on '
+      + 'anglikaaninen katedraali, jonka nykyinen rakennus vihittiin käyttöön vuonna 1919, ja '
+      + 'Lubagan kukkulalla katolinen katedraali. Kibulin kukkula liittyy prinssi Nuhu Mbogon '
+      + 'muslimiyhteisöön. Nsambyan kukkula on yksi alkuperäisistä, ja Makereren kukkulalla '
+      + 'yliopisto aloitti vuonna 1922. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
   },
   khartum: {
     polku: 'assets/kartat/khartum-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Tutin saari, kasvitieteellinen puutarha ja Souq al Arabi kertovat viljelystä, kasvikokoelmista ja kaupankäynnistä.',
+    esittely: 'Kartan alue on Khartumin keskusta kohdassa, jossa Valkoinen ja Sininen Niili yhtyvät '
+      + 'yhdeksi Niiliksi. Paikkaa kutsutaan nimellä al-Mogran, ja Khartum muodostaa '
+      + 'Omdurmanin ja Bahrin kanssa kolmen kaupungin kokonaisuuden.\n\n'
+      + 'Tutin saari on jokien yhtymäkohdan lähellä oleva viljelysaari, jonka kylä '
+      + 'perustettiin 1400-luvun lopulla ja jonne rakennettiin vuonna 2008 valmistunut '
+      + 'riippusilta. Kansallinen kasvitieteellinen puutarha on Mogranin kaupunginosassa. '
+      + 'Souq al Arabi on keskustan ulkoilmamarkkina Suuren moskeijan tuntumassa, ja siellä '
+      + 'on kultakauppaan keskittynyt osa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     rajat: {
       pohjoinen: 15.6222,
       etela: 15.598,
@@ -19233,13 +19505,28 @@ export const KAUPUNKIKARTAT = {
         tyyppi: 'luonto',
       },
     ],
-    esittely: 'Lilongwe Wildlife Centren julkinen metsä sijaitsee vanhan ja uuden keskustan välissä. Lingadzi-joki ja puusto muodostavat sen luonnonympäristön.',
+    esittely: 'Kartan alue on Lilongwe, Malawin pääkaupunki, joka on saanut nimensä '
+      + 'Lilongwe-joesta. Pääkaupungiksi se tuli vuonna 1975, kun hallinto siirtyi Zombasta. '
+      + 'Kaupunki suunniteltiin kahtena osana: Old Town on kaupankäynnin keskus ja City '
+      + 'Centre ministeriöiden ja suurlähetystöjen alue.\n\n'
+      + 'Lilongwe Wildlife Centren metsäalue on kahden kaupunginosan välissä Kenyatta Driven '
+      + 'varrella. Keskuksen perustivat vuonna 2007 Lilongwe Wildlife Trust ja Born Free '
+      + '-säätiö. Eläinten kuntoutusalue on suljettu yleisöltä, mutta noin 70 hehtaarin '
+      + 'luonnonsuojelualueella kulkee polkuja Lingadzi-joen varrella. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
   },
   mogadishu: {
     polku: 'assets/kartat/mogadishu-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Arba’a Rukunin moskeija, katedraalin rauniot ja Liidon ranta kuuluvat Mogadishun rannikkokaupungin eri rakennus- ja käyttövaiheisiin.',
+    esittely: 'Kartan alue on Mogadishun vanha rantakaupunki Intian valtameren rannalla, '
+      + 'satamakaupunki, jonka kerrokset ulottuvat keskiajalta Italian siirtomaa-aikaan.\n\n'
+      + 'Shanganin kaupunginosassa on Arba\'a Rukun -moskeija, jonka rukoussyvennyksen '
+      + 'kirjoitus ajoittaa vuosiin 1268–1269. Lähellä ovat Mogadishun katedraalin rauniot: '
+      + 'kirkko rakennettiin 1920-luvulla Antonio Vandonen suunnitelman mukaan Cefalùn '
+      + 'katedraalin esikuvasta, ja se vihittiin 1928. Itäisempi Liidon ranta on nimetty '
+      + 'italian sanasta lido, ja se kehitettiin 1930-luvulla italialaisille siirtolaisille. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 2.0467,
       etela: 2.0282,
@@ -19283,13 +19570,30 @@ export const KAUPUNKIKARTAT = {
         lon: 47.5216,
       },
     ],
-    esittely: 'Anosy on ihmisen rakentama järvi kaupungin keskustan eteläpuolella. Sen historia liittyy 1800-luvun käsityöteollisuuteen.',
+    esittely: 'Kartan alue on Antananarivon keskusta Madagaskarin keskiylängöllä. Kuningas '
+      + 'Andrianjaka perusti kaupungin Analamanga-kukkulalle noin vuonna 1610 ja rakensi '
+      + 'huipulle kuninkaallisen linnakkeen, Rovan, josta Merina-kuninkaat hallitsivat '
+      + 'vuosisatoja.\n\n'
+      + 'Anosy-järvi on kaupungin keskustan eteläpuolella oleva tekojärvi, joka tehtiin '
+      + 'entiselle suolle kuningas Radama I:n aikana 1800-luvun alussa; työhön osallistui '
+      + 'skotlantilainen lähetyssaarnaaja James Cameron. Järven keskellä olevalla saarella on '
+      + 'ensimmäisessä maailmansodassa kaatuneiden madagaskarilaisten sotilaiden muistomerkki '
+      + 'vuodelta 1927. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
   },
   gaborone: {
     polku: 'assets/kartat/gaborone-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Kgale Hill tarjoaa kaupunkinäkymän, Gaboronen pato palvelee vesihuoltoa ja kasvitieteellinen puutarha esittelee maan omaa kasvistoa.',
+    esittely: 'Kartan alue on Gaboronen kaupunki Notwane-joen varrella Botswanan kaakkoiskulmassa. '
+      + 'Kaupunki rakennettiin 1960-luvulla uudeksi pääkaupungiksi ennen maan itsenäistymistä '
+      + 'vuonna 1966.\n\n'
+      + 'Kgale Hill on 1 287 metriä korkea kukkula kaupungin reunalla, ja sitä kutsutaan '
+      + 'Nukkuvaksi jättiläiseksi; huipulle johtaa kolme reittiä, ja nousu kestää noin '
+      + 'tunnin. Gaboronen pato rakennettiin Notwane-joelle vuosina 1963–1964, ja se palvelee '
+      + 'Gaboronea ja Lobatsea. Padon seinää korotettiin 1981–1985 kuivuuden vuoksi. '
+      + 'Kansallinen kasvitieteellinen puutarha avattiin 2. marraskuuta 2007, ja sen kuusi '
+      + 'osastoa esittelevät Botswanan ekologisia alueita. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
     rajat: {
       pohjoinen: -24.6495,
       etela: -24.7032,
@@ -19338,7 +19642,15 @@ export const KAUPUNKIKARTAT = {
         lon: 57.51009,
       },
     ],
-    esittely: 'Aapravasi Ghat kertoo sopimustyöläisten saapumisesta, ja Champ de Mars kentän muuttumisesta hevosurheilun paikaksi.',
+    esittely: 'Kartan alue on Port Louisin satama-alue, Mauritiuksen pääkaupungin vanha ydin. '
+      + 'Hollantilaiset käyttivät lahtea vuodesta 1606, ja ranskalaiset kehittivät sataman '
+      + '1730-luvulla kuvernööri Mahé de La Bourdonnaisin johdolla. Britit valtasivat saaren '
+      + 'vuonna 1810.\n\n'
+      + 'Aapravasi Ghat on Trou Fanfaronin lahden rannalla. Sopimustyöläisten '
+      + 'vastaanottoasema rakennettiin vuonna 1849, ja sen kautta kulki lähes puoli miljoonaa '
+      + 'työläistä, enimmäkseen Intiasta. UNESCO merkitsi paikan maailmanperintökohteeksi '
+      + 'vuonna 2006. Mauritius Turf Club avasi Champ de Marsin laukkaradan 25. kesäkuuta '
+      + '1812. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
   },
   victoria: {
     polku: 'assets/kartat/victoria-keskusta.png',
@@ -19358,7 +19670,14 @@ export const KAUPUNKIKARTAT = {
         lon: 55.45299,
       },
     ],
-    esittely: 'Mont Fleurin puutarha yhdistää kasvikokoelman, maataloushistorian ja yleisen puiston.',
+    esittely: 'Kartan alue on Victoria, Seychellien pääkaupunki Mahén saarella. Ranskalaiset '
+      + 'perustivat paikalle asutuksen vuonna 1778 nimellä L\'Établissement, ja britit '
+      + 'antoivat sille nykyisen nimensä kuningatar Viktorian mukaan vuonna 1841.\n\n'
+      + 'Kartan ainoa kohde, Mont Fleurin kasvitieteellinen puutarha, on keskustan '
+      + 'eteläpuolella. Se perustettiin vuonna 1901 maatalouden koeasemaksi, ja '
+      + 'mauritiuslainen Paul Dupont johti sen alkuvaiheita. Noin kuuden hehtaarin '
+      + 'puutarhassa kasvaa coco de mer -palmuja, ja siellä pidetään Aldabran '
+      + 'jättiläiskilpikonnia. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
   },
   windhoek: {
     polku: 'assets/kartat/windhoek-keskusta.png',
@@ -19382,13 +19701,28 @@ export const KAUPUNKIKARTAT = {
         lon: 17.0883,
       },
     ],
-    esittely: 'Christuskirche ja Alte Feste kuuluvat Windhoekin historialliseen keskustaan. Niiden rakennusvaiheet kertovat kaupungin siirtomaakaudesta.',
+    esittely: 'Kartan alue on Windhoekin historiallinen keskusta, Namibian pääkaupungin vanha ydin, '
+      + 'jossa Saksan siirtomaa-aika näkyy yhä rakennuksissa. Saksalaiset joukot asettuivat '
+      + 'sinne vuonna 1890.\n\n'
+      + 'Alte Feste eli Vanha linnake aloitettiin samana vuonna Curt von Françoisin johdolla '
+      + 'Schutztruppen päämajaksi; vuonna 1915 Etelä-Afrikan joukot ottivat Windhoekin, ja '
+      + 'linnake siirtyi niiden käyttöön. Sen lähellä Robert Mugabe Avenuella on '
+      + 'Christuskirche. Gottlieb Redecker suunnitteli kirkon, sen peruskivi muurattiin '
+      + 'vuonna 1907 ja se vihittiin käyttöön lokakuussa 1910. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
   },
   ottawa: {
     polku: 'assets/kartat/ottawa-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Rideau-joen putoukset, kanavajärvi ja puiden tutkimuskokoelma näyttävät Ottawan vesimaiseman eri kerroksia.',
+    esittely: 'Kartan alue on Ottawan keskustan vesimaisema, jossa Rideau-joki laskee Ottawa-jokeen '
+      + 'ja Rideau-kanava kulkee kaupungin halki. Kanava valmistui vuonna 1832, ja sen '
+      + 'rakentamista johti insinööri John By.\n\n'
+      + 'Pohjoisessa Rideau-putoukset jakautuvat Green Islandin ympärillä kahdeksi '
+      + 'putoukseksi, ja ranskalaiset nimesivät ne verhon (rideau) mukaan. Etelässä Dows Lake '
+      + 'syntyi, kun kanavan reitillä oleva suo padottiin; sitä ennen paikka tunnettiin '
+      + 'nimellä Dow\'s Great Swamp. Sen länsipuolella Dominion Arboretumin puuistutukset '
+      + 'alkoivat vuonna 1889. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 45.4442,
       etela: 45.388,
@@ -19420,7 +19754,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/washington-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Washingtonin historia näkyy sekä suurissa kokoelmataloissa että pienessä kanavanvartijan kodissa. Georgetownin vanha kivitalo vie pääkaupunkia edeltävään aikaan, ja National Mallin ympäristö näyttää, miten tietoa ja muistia varten rakennettiin.',
+    esittely: 'Kartan alue ulottuu Georgetownin vanhalta kauppakadulta National Mallille, pitkälle '
+      + 'puistovyöhykkeelle Kapitolin ja Lincoln-muistomerkin välillä, jonka ympärille '
+      + 'Washingtonin museot ja muistomerkit ovat kertyneet.\n\n'
+      + 'Georgetownin vanha kivitalo on M Streetillä ja peräisin vuodelta 1765. Smithsonianin '
+      + 'linna valmistui 1855 punaisesta hiekkakivestä James Renwickin suunnitelmin, ja '
+      + 'Washington-monumentin kivirunko 1884. Thomas Jefferson -kirjastotalo avattiin vuonna '
+      + '1897, ja National Building Museum toimii eläkeviraston talossa, joka valmistui 1887. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 38.9122,
       etela: 38.8821,
@@ -19464,7 +19805,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/castries-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Castriesin tori, puistoaukio ja Morne Fortunen kukkula kertovat kaupasta, kulttuurista ja vanhasta sotilasalueesta. Satamakaupunki avautuu eri tavoin keskustan tasolta ja kukkulalta.',
+    esittely: 'Kartan alue on Castriesin keskusta ja sen eteläpuolinen kukkula. Saint Lucian '
+      + 'pääkaupunki sijaitsee suojaisan sataman äärellä, ja ranskalaiset ja britit '
+      + 'kiistelivät kukkulasta 1790-luvulla.\n\n'
+      + 'Keskustassa on Castriesin tori, jonka liverpoolilainen Bruce & Still rakensi 1891 ja '
+      + 'joka avattiin 2. heinäkuuta 1894. Lähellä on Derek Walcottin aukio, joka tunnettiin '
+      + 'aiemmin nimillä Place d\'Armes ja Columbus Square ja sai nykyisen nimensä nobelisti '
+      + 'Walcottin mukaan vuonna 1993; sen reunalla ovat katedraali ja keskuskirjasto. '
+      + 'Etelässä kohoaa Morne Fortune, jonka huipulla on ranskalaisten Citadelle, '
+      + 'valmistunut 1784. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 14.0148,
       etela: 13.9859,
@@ -19495,7 +19844,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/nassau-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Nassaun linnakkeet ja kalkkikiveen louhittu kulkureitti kertovat satamakaupungin historiasta. Portaat ja Fincastle kuuluvat samaan kokonaisuuteen, Charlotte sijaitsee lännessä.',
+    esittely: 'Kartan alue on Nassaun vanha keskusta New Providencen saarella Bahamalla. '
+      + 'Siirtomaakaudella kuvernöörinä toimi vuosina 1787–1796 lordi Dunmore, joka '
+      + 'rakennutti kaupungin kaksi linnaketta, Fort Fincastlen ja Fort Charlotten.\n\n'
+      + 'Fort Fincastle seisoo Bennet\'s Hill -kukkulalla keskustan yläpuolella, ja sen muoto '
+      + 'muistuttaa siipirataslaivaa. Kuningattaren portaat, 1793–1794 kiinteään kalkkikiveen '
+      + 'louhittu portaikko, yhdistää linnakkeen keskustaan; työn teki noin 600 orjuutettua '
+      + 'ihmistä. Portaita näkyy 65, vaikka niitä sanotaan 66:ksi. Fort Charlotte on '
+      + 'kukkulalla sataman länsipuolella. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     rajat: {
       pohjoinen: 25.0829,
       etela: 25.0682,
@@ -19524,7 +19881,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/saintjohns-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Katedraali ja entinen oikeustalo kertovat keskustan rakentamisesta. Fort James vie satamansuun puolustus- ja merkinantohistoriaan.',
+    esittely: 'Kartan alue on Saint John\'s, Antiguan suurin kaupunki ja Antiguan ja Barbudan '
+      + 'hallintokeskus. Kaupunki kasvoi satamalahden ympärille, ja risteilylaivat '
+      + 'kiinnittyvät Heritage Quayn laiturille. Siirtomaa-ajan kauppa ja puolustus ovat '
+      + 'jättäneet kaupunkiin kirkon, museon ja linnakkeen.\n\n'
+      + 'Saint John’sin katedraalin kaksi barokkitornia hallitsevat keskustan siluettia. '
+      + 'Nykyisen kirkon suunnitteli englantilainen Thomas Fuller, ja katedraali vihittiin '
+      + 'käyttöön 25. heinäkuuta 1848. Antiguan ja Barbudan museo toimii vanhassa '
+      + 'oikeustalossa, ja Fort James vartioi niemeltä sataman suuta. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 17.1335,
       etela: 17.1177,
@@ -19553,7 +19918,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/georgetown-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Water Streetin majakka ja kaupungin puutarhat kertovat rannikon rakentamisesta ja yhteisistä tiloista. Pienempi Promenade Gardens ja kasvitieteellinen puutarha ovat eri puolilla keskustaa.',
+    esittely: 'Kartan alue on Georgetown, Guyanan pääkaupunki Demerara-joen suistossa Atlantin '
+      + 'rannalla. Hollantilaisten aikana asutus kantoi nimeä Stabroek, ja britit nimesivät '
+      + 'sen Georgetowniksi vuonna 1812 kuningas Yrjö III:n mukaan.\n\n'
+      + 'Georgetownin majakka seisoo Water Streetillä; nykyinen torni otettiin käyttöön '
+      + 'vuonna 1830 hollantilaisten vuonna 1817 rakentaman puisen majakan tilalle. Promenade '
+      + 'Gardens on keskustan pieni puisto. Guyana Botanical Gardens on kaupungin itäpuolella '
+      + 'entisen Vlissengenin sokeritilan maalla, ja se perustettiin 1800-luvun lopulla. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 6.827,
       etela: 6.802,
@@ -19584,7 +19956,15 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/santiagodechile-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Santiagon keskusta kasvoi Plaza de Armasin ympärille. Rahapaja, kauppahalli ja puistoksi muutettu kukkula kertovat paikkojen muuttuneista tehtävistä.',
+    esittely: 'Kartan alue on Santiagon keskusta Andien ja rannikkovuoriston välisessä laaksossa. '
+      + 'Pedro de Valdivia perusti kaupungin 12. helmikuuta 1541, ja ruutukaavan keskelle '
+      + 'varattiin Plaza de Armas.\n\n'
+      + 'Aukion laidalla ovat katedraali, keskusposti ja Museo Histórico Nacional. La Moneda, '
+      + 'Joaquín Toescan suunnittelema uusklassinen rakennus, aloitettiin 1780-luvulla '
+      + 'rahapajaksi, ja se palveli hallituksen kotina 1840-luvulta; palatsia pommitettiin '
+      + '11. syyskuuta 1973. Mercado Centralin valurautarunko valmistettiin Glasgow\'ssa, ja '
+      + 'kauppahalli valmistui 1872. Santa Lucían kukkula on 629 metriä merenpinnan '
+      + 'yläpuolella. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: -33.4307,
       etela: -33.446,
@@ -19620,7 +20000,14 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/canberra-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Canberran luonnonmäet olivat paikallaan jo ennen pääkaupunkia. Niiden rinteillä yhdistyvät suojeltu luonto ja näkymät nykyiseen kaupunkiin.',
+    esittely: 'Kartan alue on Canberran pohjoispuoli, jossa kolme kukkulaa kohoaa kaupungin '
+      + 'yläpuolelle. Ne kuuluvat Canberra Nature Parkiin, ja Ainslie ja Black Mountain ovat '
+      + 'luonnonsuojelualueita, joilla kasvaa uudelleen metsää ja lintuja on paljon.\n\n'
+      + 'Mount Ainslie on 843 metriä korkea ja Walter Burley Griffinin suunnitteleman '
+      + 'maa-akselin pohjoispää: akseli yhdistää kukkulat Parlamenttitaloon asti. Black '
+      + 'Mountain, 812 metriä, on ngunnawal-kansan pyhä kokoontumispaikka nimeltä Galambary. '
+      + 'Mount Majura on 890 metriä korkea ja Canberran kaupunkialueen korkein kohta. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: -35.2345,
       etela: -35.3023,
