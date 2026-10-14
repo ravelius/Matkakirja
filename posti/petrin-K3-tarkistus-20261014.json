@@ -1,0 +1,870 @@
+{
+  "taskNumber": 262,
+  "version": "K3-v1",
+  "scope": "Petřín only: K2 exact-version PT acceptance recorded; K3 one image, new mask, analytical camera and QA delivered for review then pause",
+  "sourcePath": "posti/fable-codex-petrin-K2-hyvaksytty-20261014.md",
+  "sourceCommit": "b4515ed04dad8e0bd7763bfef1c7b76f6c15dde7",
+  "sourceBlob": "c78d3c500a83aaa35e67f5417857f87841985933",
+  "sourceReadInFull": true,
+  "sourceSnapshotSHA256": "5b799f028ff364305f9182070ddbe049f5287045368f16de01007c37848560dc",
+  "imageFile": "posti/petrin-K3.png",
+  "maskFile": "posti/petrin-K3-maski.png",
+  "cameraFile": "posti/petrin-K3-kamera-20261014.json",
+  "imageSHA256": "f73e5fa19f14d4db1f8753d5c2f2c09d9e471b2b68d73d81deadc514cdd5d813",
+  "maskSHA256": "541a1135f8ba8376dce24223d8cc8b6685e66fd0910a22c446f2d144ab22b55d",
+  "cameraSHA256": "71331fa09d9502e6096a15bde55ae193448d409f321e88b37d040a7dd223fb1e",
+  "nativeSHA256": "bd4c746499d0b9322a479207b86cebdf0cd57f471c5e1bd376eaa0572ce01a55",
+  "nativeAndDeliveredDimensions": [
+    1536,
+    1024
+  ],
+  "requestedDimensions": [
+    2400,
+    1600
+  ],
+  "requestedNativeLongEdgeNotReturned": true,
+  "upscaled": false,
+  "RGBPixelsEqualNative": true,
+  "generationMode": "builtin imagegen complete whole-new photographic image with local references; no old-photo partial editing or outpaint",
+  "generationPrompt": "Create ONE ENTIRELY NEW photorealistic architectural photograph-like image of the real Petřín lookout tower, K3 WEST profile. Generate every photographic pixel anew. All attached images are references only, no partial photo editing, no outpainting and no retained old-photo pixels.\nReference1 is a NEW2D LANDSCAPE composition guide. Use a3:2 wide canvas, whole tower centered with antenna and feet fully within the frame. Reference2 is Giorgio Galeotti's CC BY4.0 west-side real photograph, for WEST-facing structure only: do not copy its trees obscuring the lower tower, its background, weather or crop. Reference3 is VANOCE2022's CC0 entrance photograph for accurate cream octagonal hall, lanterns and steel-arch details only. Reference4 is the approved K2 illustration for natural photographic materials and green summer-park style only, not its south-facing entrance perspective or wrong gallery heights.\n\nK3 camera: a person standing WEST of the tower on the Strahov park side, camera azimuth270degrees from tower center to camera, horizontal distance110m, human eye height1.7m above tower-base ground, looking EAST directly toward the tower. Pitch approximately+15.7degrees upward, roll0, vertical FOV45degrees. A real medium-wide lens, natural slight upward perspective. This is not aerial or elevated, not frontal southern entrance view, not isometric or orthographic. Western side of the cream octagonal base hall is presented to us with windows and ornament; the southern entrance sits around the RIGHT side of the hall rather than a central doorway squarely facing the camera. The west side profile must be distinct from K2. All eight-sided structure remains physically plausible.\n\nPlace the antenna tip around14percent from the top and ground feet around86percent. Entire tower height about72percent of the image height, not nearly touching top/bottom. Native wide3:2 LANDSCAPE orientation, with broad soft park/sky margins on both sides. Tower is completely visible, unobscured: no trees/foreground branches over the tower, gallery, hall or feet. Small leafy trees may frame only far outer sides. Complete slender antenna mast, upper lantern, lattice body, lower balcony, octagonal cream hall, roof and every visible support contact in frame. Do not crop the foot hall as in the real west reference.\n\nGeometry and architecture: original1891 octagonal/eight-sided riveted steel Petřín lookout tower, multiple slender splayed perimeter legs, a narrow central octagonal core and twin spiral stairs. Never four huge square Eiffel legs. Pale cool blue-gray steel and cream hall, octagonal glazed upper lantern and shallow gray roof. Correct physical levels are steel body top58.7m, upper observation FLOOR51m, lower observation FLOOR20m; slender mast is about12m more to about71m total (estimated). Discard old60m/55m values. Lower balcony remains low at20m physically, not halfway up the steel body. Lower octagonal gallery has delicate lattice railing and a glazed ring above. Upper lantern is glazed with white-gray lower wall panels, not a huge extra platform. Gray shallow octagonal roof above the22m-wide cream hall, delicate pierced metal arch ornament and small green lanterns; any dark-red panels must be entirely BLANK. No extra balconies, modern cladding or invented buildings.\n\nNatural soft daytime lighting and gentle shadows, green spring/summer broadleaf park and real irregular grass/gravel paths, softly clouded light-blue sky. Believable rivets, structural steel, plaster and foliage photographed with a good real camera. No plastic CGI surfaces, painted texture, watercolor, collage, uncanny repeated leaves, excessive sharpening or dramatic sunset. Neutral NEW background, no identifiable nearby buildings, statues, protected artwork, museums, Prague skyline, ads, brands or logos. Absolutely no people or vehicles. Only exact small legible 'havainnekuva' in a lower corner; no other letters or signage. Largest native3:2 LANDSCAPE image supported, preferably2400x1600; no upscale. One image only.",
+  "actualGenerationRequest": {
+    "taskNumber": 262,
+    "scope": "Only K3/v1 whole-new photo, new mask and analytical camera; pause for K3 feedback",
+    "sourcePath": "posti/fable-codex-petrin-K2-hyvaksytty-20261014.md",
+    "sourceCommit": "b4515ed04dad8e0bd7763bfef1c7b76f6c15dde7",
+    "sourceBlob": "c78d3c500a83aaa35e67f5417857f87841985933",
+    "sourceReadInFull": true,
+    "sourceSnapshotSHA256": "5b799f028ff364305f9182070ddbe049f5287045368f16de01007c37848560dc",
+    "generationMode": "builtin imagegen complete new image with references",
+    "arguments": {
+      "prompt": "Create ONE ENTIRELY NEW photorealistic architectural photograph-like image of the real Petřín lookout tower, K3 WEST profile. Generate every photographic pixel anew. All attached images are references only, no partial photo editing, no outpainting and no retained old-photo pixels.\nReference1 is a NEW2D LANDSCAPE composition guide. Use a3:2 wide canvas, whole tower centered with antenna and feet fully within the frame. Reference2 is Giorgio Galeotti's CC BY4.0 west-side real photograph, for WEST-facing structure only: do not copy its trees obscuring the lower tower, its background, weather or crop. Reference3 is VANOCE2022's CC0 entrance photograph for accurate cream octagonal hall, lanterns and steel-arch details only. Reference4 is the approved K2 illustration for natural photographic materials and green summer-park style only, not its south-facing entrance perspective or wrong gallery heights.\n\nK3 camera: a person standing WEST of the tower on the Strahov park side, camera azimuth270degrees from tower center to camera, horizontal distance110m, human eye height1.7m above tower-base ground, looking EAST directly toward the tower. Pitch approximately+15.7degrees upward, roll0, vertical FOV45degrees. A real medium-wide lens, natural slight upward perspective. This is not aerial or elevated, not frontal southern entrance view, not isometric or orthographic. Western side of the cream octagonal base hall is presented to us with windows and ornament; the southern entrance sits around the RIGHT side of the hall rather than a central doorway squarely facing the camera. The west side profile must be distinct from K2. All eight-sided structure remains physically plausible.\n\nPlace the antenna tip around14percent from the top and ground feet around86percent. Entire tower height about72percent of the image height, not nearly touching top/bottom. Native wide3:2 LANDSCAPE orientation, with broad soft park/sky margins on both sides. Tower is completely visible, unobscured: no trees/foreground branches over the tower, gallery, hall or feet. Small leafy trees may frame only far outer sides. Complete slender antenna mast, upper lantern, lattice body, lower balcony, octagonal cream hall, roof and every visible support contact in frame. Do not crop the foot hall as in the real west reference.\n\nGeometry and architecture: original1891 octagonal/eight-sided riveted steel Petřín lookout tower, multiple slender splayed perimeter legs, a narrow central octagonal core and twin spiral stairs. Never four huge square Eiffel legs. Pale cool blue-gray steel and cream hall, octagonal glazed upper lantern and shallow gray roof. Correct physical levels are steel body top58.7m, upper observation FLOOR51m, lower observation FLOOR20m; slender mast is about12m more to about71m total (estimated). Discard old60m/55m values. Lower balcony remains low at20m physically, not halfway up the steel body. Lower octagonal gallery has delicate lattice railing and a glazed ring above. Upper lantern is glazed with white-gray lower wall panels, not a huge extra platform. Gray shallow octagonal roof above the22m-wide cream hall, delicate pierced metal arch ornament and small green lanterns; any dark-red panels must be entirely BLANK. No extra balconies, modern cladding or invented buildings.\n\nNatural soft daytime lighting and gentle shadows, green spring/summer broadleaf park and real irregular grass/gravel paths, softly clouded light-blue sky. Believable rivets, structural steel, plaster and foliage photographed with a good real camera. No plastic CGI surfaces, painted texture, watercolor, collage, uncanny repeated leaves, excessive sharpening or dramatic sunset. Neutral NEW background, no identifiable nearby buildings, statues, protected artwork, museums, Prague skyline, ads, brands or logos. Absolutely no people or vehicles. Only exact small legible 'havainnekuva' in a lower corner; no other letters or signage. Largest native3:2 LANDSCAPE image supported, preferably2400x1600; no upscale. One image only.",
+      "referenced_image_paths": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/K3/v1/composition-guide.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-3-lansi.jpg",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-1-sisaankaynti.jpg",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/K2/v1/native.png"
+      ],
+      "transparent_background": false
+    },
+    "K3CallsIssued": 1,
+    "totalPetrinCallsIssued": 5,
+    "K4toK5Calls": 0,
+    "oldPhotoPartialEditUsed": false,
+    "outpaintUsed": false,
+    "createdAt": "2026-10-14T20:12:31.417232+00:00"
+  },
+  "sourceReferenceRoles": [
+    "new landscape composition guide only",
+    "Giorgio Galeotti CC BY4.0 west photograph: west structure only, no crop/background/occluding trees transferred",
+    "VANOCE2022 CC0 entrance photograph: hall/arches/material details only",
+    "approved K2: photographic materials only, no south-facing entrance viewpoint or wrong gallery heights transferred"
+  ],
+  "sourceLicenses": [
+    {
+      "filename": "petrin-1-sisaankaynti.jpg",
+      "author": "VANOCE2022",
+      "license": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Petrinska_rozhledna_a_nejblizsi_okoli_20250427_121942.jpg",
+      "role": "tower geometry and color only"
+    },
+    {
+      "filename": "petrin-2-etela.jpg",
+      "author": "Ivan Korostelev",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADnsk%C3%A1_rozhledna,_Prague.jpg",
+      "role": "tower geometry and color only"
+    },
+    {
+      "filename": "petrin-3-lansi.jpg",
+      "author": "Giorgio Galeotti",
+      "license": "CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADn_Lookout_Tower_-_Prague,_Czech_Republic_-_May_17,_2019.jpg",
+      "role": "tower geometry and color only"
+    },
+    {
+      "filename": "petrin-4-muurin-takaa.jpg",
+      "author": "Edgar El",
+      "license": "CC BY 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Prag_%E2%80%93_Aussichtsturm_Pet%C5%99%C3%ADn_-_Pet%C5%99%C3%ADnsk%C3%A1_rozhledna_-_panoramio_(1).jpg",
+      "role": "structure only, conflicting camera GPS and winter setting are not transferred"
+    },
+    {
+      "filename": "petrin-5-ylhaalta.jpg",
+      "author": "VANOCE2022",
+      "license": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Petrinska_rozhledna_a_nejblizsi_okoli_20250427_130633.jpg",
+      "role": "hall roof and metal structure only; viewpoint is downward from tower platform, not aerial"
+    }
+  ],
+  "generationCallsForK3": 1,
+  "totalPetrinGenerationCalls": 5,
+  "K4toK5Calls": 0,
+  "oldPhotoPartialEditUsed": false,
+  "outpaintUsed": false,
+  "priorK1K2MailboxFilesProtected": 18,
+  "K2ExactVersionPTAcceptance": {
+    "taskNumber": 262,
+    "sourcePath": "posti/fable-codex-petrin-K2-hyvaksytty-20261014.md",
+    "sourceCommit": "b4515ed04dad8e0bd7763bfef1c7b76f6c15dde7",
+    "sourceBlob": "c78d3c500a83aaa35e67f5417857f87841985933",
+    "sourceReadInFull": true,
+    "acceptedDeliveryCommit": "49916de6c96280b92d77550a07ab5cc6b6183204",
+    "exactAcceptedFiles": {
+      "posti/petrin-K2.png": {
+        "sha256": "c869913a3b4c86cc0f191f02c61fd38c45761d9a7396f3376afe3501bd2c4f52",
+        "bytes": 2846731
+      },
+      "posti/petrin-K2-maski.png": {
+        "sha256": "1bdedddab334e16b1570af9ef41fb870384f47693422e22c771d7c2dafb5d981",
+        "bytes": 7451
+      },
+      "posti/petrin-K2-kamera-20261014.json": {
+        "sha256": "934673b5ac7bf875a96a80796a7a086829d09bf5bb39f4a3adf0d1d813a67c17",
+        "bytes": 4792
+      },
+      "posti/petrin-K1-v3-kamera-20261014.json": {
+        "sha256": "7ccc7c695764eeb668980b8ddf28431e481e406e96f6ade0428cee596e874f54",
+        "bytes": 4867
+      },
+      "posti/codex-fable-petrin-K2-20261014.md": {
+        "sha256": "c376354d594ea55588349c42caedb0e539a578d02b4f663ba0191f1347557f6f",
+        "bytes": 5445
+      },
+      "posti/petrin-K2-tarkistus-20261014.json": {
+        "sha256": "a6c896085b22d932d94501b8c55b48d57deae66df7645a290c805446785d9367",
+        "bytes": 34452
+      }
+    },
+    "PTImageAccepted": true,
+    "PTMaskQualifiedForIoU": true,
+    "PTNativeSizeAccepted": true,
+    "nativeSize": [
+      1024,
+      1536
+    ],
+    "PTStartingCameraAccepted": true,
+    "camera": {
+      "azimuthDegrees": 190,
+      "distanceM": 55,
+      "heightM": 1.7,
+      "verticalFOVDegrees": 60.964,
+      "pitchDegrees": 23.179
+    },
+    "independentPixelExactCertification": false,
+    "fullModelSilhouetteFitVerified": false,
+    "modelSilhouetteIoU": null,
+    "heightErrorMetric": null,
+    "deltaE": null,
+    "K2IoUThreshold": 0.9,
+    "K1RevisedCameraRecordedByPT": true,
+    "K1V3OriginalCameraHistoricalQAFailurePreserved": true,
+    "physicalDimensionsRemainTask253": {
+      "bodyHeightM": 58.7,
+      "lowerPlatformM": 20,
+      "upperPlatformM": 51
+    },
+    "generatorPlatformPositionsMustNotTransferToModel": true,
+    "K3OnlyCurrentScope": true,
+    "K4toK5AwaitK3Feedback": true,
+    "modelProductionAuthorized": false,
+    "acceptedAtEvidenceRecorded": "2026-10-14T20:12:31.417232+00:00"
+  },
+  "earlierK1K2QAAndAllVersionsPreserved": true,
+  "physicalDimensionsFromTask253": {
+    "bodyHeightM": 58.7,
+    "upperPlatformM": 51,
+    "lowerPlatformM": 20,
+    "mastHeightApproxM": 12,
+    "totalHeightApproxM": 71,
+    "totalHeightUncertain": true,
+    "hallWidthApproxM": 22.5,
+    "hallWidthUncertain": true,
+    "hallHeightApproxM": 7,
+    "hallHeightUncertain": true
+  },
+  "analyticalCamera": {
+    "cameraID": "K3",
+    "sourceTaskNumber": 262,
+    "imageSHA256": "f73e5fa19f14d4db1f8753d5c2f2c09d9e471b2b68d73d81deadc514cdd5d813",
+    "maskSHA256": "541a1135f8ba8376dce24223d8cc8b6685e66fd0910a22c446f2d144ab22b55d",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "fittingMethod": "analytical vertical-axis two-anchor pinhole fit; distance and eye height held as source priors; pitch and vertical FOV solved from mast tip and estimated base contact",
+    "fitIsNotUniqueRecoveredCamera": true,
+    "noMeshModelOrRenderCreated": true,
+    "cameraAzimuthConvention": "from tower center to camera clockwise from north; x east y north z up",
+    "cameraAzimuthDegrees": 270,
+    "distanceM": 110,
+    "heightM": 1.7,
+    "distanceHeightAndAbsoluteAzimuthNotPhotographicallyVerified": true,
+    "pitchDegrees": 15.45418201934394,
+    "rollDegrees": 0,
+    "verticalFOVDegrees": 37.35778029193747,
+    "horizontalFOVDegrees": 53.779687619156306,
+    "positionRelativeTowerCenterM": [
+      -110.0,
+      -2.0206672185931328e-14,
+      1.7
+    ],
+    "opticalHorizontalAzimuthDegrees": 90,
+    "principalPointNativePx": [
+      768,
+      512.0
+    ],
+    "focalLengthNativePixels": 1514.475984692328,
+    "projectionEquationY": "native_y = H * (0.5 - tan(atan2(z-camera_height, horizontal_distance)-pitch)/(2*tan(vfov/2)))",
+    "projectionAssumptions": [
+      "tower vertical axis at fixed distance",
+      "square pixels, zero roll and no lens distortion",
+      "horizontal principal point from manual tower-axis observation",
+      "gallery front edge points do not all lie on center axis",
+      "physical geometry remains Task253"
+    ],
+    "fixedPhysicalDimensions": {
+      "bodyHeightM": 58.7,
+      "lowerPlatformM": 20,
+      "upperPlatformM": 51,
+      "totalHeightApproxM": 71,
+      "totalHeightUncertain": true,
+      "hallHeightApproxM": 7,
+      "hallWidthApproxM": 22.5,
+      "hallEstimatesUncertain": true
+    },
+    "landmarks": {
+      "mastTop": {
+        "nativeY": 56,
+        "uncertaintyPixels": 3
+      },
+      "groundContactAxisEstimate": {
+        "nativeY": 956,
+        "uncertaintyPixels": 5,
+        "note": "axis/base estimate from several visible support contacts roughly953–961 due ground-plane depth"
+      },
+      "bodyRoofTop": {
+        "nativeY": 178,
+        "uncertaintyPixels": 4
+      },
+      "upperPlatformFloorApprox": {
+        "nativeY": 222,
+        "uncertaintyPixels": 4
+      },
+      "lowerPlatformFloorApprox": {
+        "nativeY": 574,
+        "uncertaintyPixels": 8,
+        "note": "front visible gallery floor band, not necessarily tower-axis point"
+      },
+      "axisXNative": 768
+    },
+    "modelPhysicalLevelAxisProjection": {
+      "ground": {
+        "heightM": 0,
+        "normalizedY": 0.93359375,
+        "nativeY": 956.0
+      },
+      "hallRoofApprox": {
+        "heightM": 7,
+        "normalizedY": 0.8331860212748304,
+        "nativeY": 853.1824857854264
+      },
+      "lowerPlatform": {
+        "heightM": 20,
+        "normalizedY": 0.655675570530273,
+        "nativeY": 671.4117842229996
+      },
+      "upperPlatform": {
+        "heightM": 51,
+        "normalizedY": 0.2740309565476911,
+        "nativeY": 280.6076995048357
+      },
+      "bodyTop": {
+        "heightM": 58.7,
+        "normalizedY": 0.18730027667788185,
+        "nativeY": 191.795483318151
+      },
+      "mastTopApprox": {
+        "heightM": 71,
+        "normalizedY": 0.0546875,
+        "nativeY": 56.0
+      }
+    },
+    "platformAndRoofResiduals": {
+      "bodyRoofTop": {
+        "observedNativeY": 178,
+        "modelAxisProjectionNativeY": 191.795483318151,
+        "observedMinusProjectionPixels": -13.795483318151014,
+        "observationUncertaintyPixels": 4,
+        "modelHeightM": 58.7,
+        "isNotInstructionToChangeModelHeight": true
+      },
+      "upperPlatformFloorApprox": {
+        "observedNativeY": 222,
+        "modelAxisProjectionNativeY": 280.6076995048357,
+        "observedMinusProjectionPixels": -58.60769950483569,
+        "observationUncertaintyPixels": 4,
+        "modelHeightM": 51,
+        "isNotInstructionToChangeModelHeight": true
+      },
+      "lowerPlatformFloorApprox": {
+        "observedNativeY": 574,
+        "modelAxisProjectionNativeY": 671.4117842229996,
+        "observedMinusProjectionPixels": -97.41178422299959,
+        "observationUncertaintyPixels": 8,
+        "modelHeightM": 20,
+        "isNotInstructionToChangeModelHeight": true
+      }
+    },
+    "mastBaseAnchorResidualPixels": {
+      "mast": 0.0,
+      "base": 0.0
+    },
+    "generatorGeometryMismatchMustNotBeCopiedIntoModel": true,
+    "fullSilhouetteFitVerified": false,
+    "modelSilhouetteIoU": null,
+    "heightErrorMetric": null,
+    "deltaE": null,
+    "IoUThreshold": 0.9,
+    "K1OnlyThreshold": 0.85,
+    "heightAndDeltaEThresholdsUnchanged": true,
+    "PTStartingCameraAccepted": false,
+    "modelLoopAuthorized": false,
+    "createdAt": "2026-10-14T20:16:09.703091+00:00"
+  },
+  "cameraFitIsNotFullVerifiedModelSilhouetteFit": true,
+  "rootQA": {
+    "taskNumber": 262,
+    "version": "K3-v1",
+    "reviewer": "root",
+    "wholeExactNativePersonallyViewed": true,
+    "nativeSHA256": "bd4c746499d0b9322a479207b86cebdf0cd57f471c5e1bd376eaa0572ce01a55",
+    "finalImageSHA256": "f73e5fa19f14d4db1f8753d5c2f2c09d9e471b2b68d73d81deadc514cdd5d813",
+    "maskSHA256": "541a1135f8ba8376dce24223d8cc8b6685e66fd0910a22c446f2d144ab22b55d",
+    "nativeAndDeliveredDimensions": [
+      1536,
+      1024
+    ],
+    "pixelsEqualNative": true,
+    "upscaled": false,
+    "oldPhotoPartialEditUsed": false,
+    "outpaintUsed": false,
+    "generationCallsForK3": 1,
+    "totalPetrinCalls": 5,
+    "K4toK5Calls": 0,
+    "photographicStylePassed": true,
+    "groundLevelUpwardProfileViewPlausible": true,
+    "absoluteWestAzimuthNotVerifiedFromImage": true,
+    "windowSideOfHallVisibleInsteadOfCentralSouthernEntrance": true,
+    "wholeTowerMastHallFeetVisible": true,
+    "foregroundTowerOcclusionObserved": false,
+    "noPeopleLogosOrReadableSignsObserved": true,
+    "legibleHavainnekuvaLabel": true,
+    "nativeRequestedLongEdge2400Returned": false,
+    "nativeLongEdge": 1536,
+    "nativeSizeNeedsPTAcceptanceForK3": true,
+    "landmarks": {
+      "mastTop": {
+        "nativeY": 56,
+        "uncertaintyPixels": 3
+      },
+      "groundContactAxisEstimate": {
+        "nativeY": 956,
+        "uncertaintyPixels": 5,
+        "note": "axis/base estimate from several visible support contacts roughly953–961 due ground-plane depth"
+      },
+      "bodyRoofTop": {
+        "nativeY": 178,
+        "uncertaintyPixels": 4
+      },
+      "upperPlatformFloorApprox": {
+        "nativeY": 222,
+        "uncertaintyPixels": 4
+      },
+      "lowerPlatformFloorApprox": {
+        "nativeY": 574,
+        "uncertaintyPixels": 8,
+        "note": "front visible gallery floor band, not necessarily tower-axis point"
+      },
+      "axisXNative": 768
+    },
+    "observedTowerHeightFraction": 0.87890625,
+    "originalExpectedTowerHeightFraction": 0.717331,
+    "originalSourceCameraPreserved": true,
+    "originalCameraFramingPassed": false,
+    "cameraAdaptationAuthorized": true,
+    "analyticalTwoAnchorCameraComputed": true,
+    "cameraFitFileSHA256": "71331fa09d9502e6096a15bde55ae193448d409f321e88b37d040a7dd223fb1e",
+    "modelFullSilhouetteFitVerified": false,
+    "modelSilhouetteIoU": null,
+    "heightErrorMetric": null,
+    "deltaE": null,
+    "K3IoUThreshold": 0.9,
+    "K1OnlyIoUThreshold": 0.85,
+    "physicalLevelResiduals": {
+      "bodyRoofTop": {
+        "observedNativeY": 178,
+        "modelAxisProjectionNativeY": 191.795483318151,
+        "observedMinusProjectionPixels": -13.795483318151014,
+        "observationUncertaintyPixels": 4,
+        "modelHeightM": 58.7,
+        "isNotInstructionToChangeModelHeight": true
+      },
+      "upperPlatformFloorApprox": {
+        "observedNativeY": 222,
+        "modelAxisProjectionNativeY": 280.6076995048357,
+        "observedMinusProjectionPixels": -58.60769950483569,
+        "observationUncertaintyPixels": 4,
+        "modelHeightM": 51,
+        "isNotInstructionToChangeModelHeight": true
+      },
+      "lowerPlatformFloorApprox": {
+        "observedNativeY": 574,
+        "modelAxisProjectionNativeY": 671.4117842229996,
+        "observedMinusProjectionPixels": -97.41178422299959,
+        "observationUncertaintyPixels": 8,
+        "modelHeightM": 20,
+        "isNotInstructionToChangeModelHeight": true
+      }
+    },
+    "generatorPlatformPositionsMustNotTransferToModel": true,
+    "maskSameCanvas": true,
+    "maskBinary0And255": true,
+    "maskSoftEdgePixels": 0,
+    "maskFilledExterior": true,
+    "maskProvisional": true,
+    "maskIndependentPixelExactCertification": false,
+    "maskOverlayPersonallyViewed": true,
+    "PTMaskAcceptanceVerified": false,
+    "verdict": "credible-whole-tower-west-profile-review-candidate-under-adapted-camera-policy; PT approval pending; physical-level residuals disclosed",
+    "PTTargetAcceptanceVerified": false,
+    "PTStartingCameraAcceptanceVerified": false,
+    "acceptedK3TargetImages": 0,
+    "acceptedK3IoUMasks": 0,
+    "overallAcceptedTargetsBeforeK3Review": 2,
+    "allFivePTAccepted": false,
+    "modelLoopAuthorized": false,
+    "gameIntegrated": false,
+    "published": false,
+    "reviewedAt": "2026-10-14T20:16:09.703091+00:00",
+    "maskOverlayViewedAt": "2026-10-14T20:18:15.551751+00:00"
+  },
+  "rootQAFileSHA256": "5be81e0bf598230c6c5e9685862f7035cd4c0f2d262557134c1b3cb74dc252e6",
+  "maskAnnotation": {
+    "version": "K3-v1",
+    "imageSHA256": "f73e5fa19f14d4db1f8753d5c2f2c09d9e471b2b68d73d81deadc514cdd5d813",
+    "maskSHA256": "541a1135f8ba8376dce24223d8cc8b6685e66fd0910a22c446f2d144ab22b55d",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "L",
+    "values": [
+      0,
+      255
+    ],
+    "softEdgePixels": 0,
+    "method": "new manually traced filled exterior silhouette in K3 native coordinates",
+    "exteriorOutlineNativePixels": [
+      [
+        766,
+        56
+      ],
+      [
+        767,
+        70
+      ],
+      [
+        775,
+        76
+      ],
+      [
+        779,
+        82
+      ],
+      [
+        782,
+        84
+      ],
+      [
+        783,
+        92
+      ],
+      [
+        789,
+        97
+      ],
+      [
+        786,
+        103
+      ],
+      [
+        786,
+        119
+      ],
+      [
+        791,
+        128
+      ],
+      [
+        786,
+        134
+      ],
+      [
+        790,
+        146
+      ],
+      [
+        785,
+        153
+      ],
+      [
+        785,
+        171
+      ],
+      [
+        791,
+        175
+      ],
+      [
+        791,
+        178
+      ],
+      [
+        815,
+        202
+      ],
+      [
+        815,
+        244
+      ],
+      [
+        814,
+        262
+      ],
+      [
+        799,
+        273
+      ],
+      [
+        796,
+        281
+      ],
+      [
+        802,
+        339
+      ],
+      [
+        810,
+        402
+      ],
+      [
+        819,
+        476
+      ],
+      [
+        830,
+        519
+      ],
+      [
+        835,
+        529
+      ],
+      [
+        831,
+        535
+      ],
+      [
+        845,
+        542
+      ],
+      [
+        846,
+        558
+      ],
+      [
+        865,
+        571
+      ],
+      [
+        866,
+        595
+      ],
+      [
+        861,
+        615
+      ],
+      [
+        844,
+        624
+      ],
+      [
+        846,
+        636
+      ],
+      [
+        868,
+        710
+      ],
+      [
+        887,
+        770
+      ],
+      [
+        913,
+        843
+      ],
+      [
+        929,
+        850
+      ],
+      [
+        930,
+        857
+      ],
+      [
+        916,
+        859
+      ],
+      [
+        941,
+        916
+      ],
+      [
+        962,
+        953
+      ],
+      [
+        962,
+        958
+      ],
+      [
+        954,
+        960
+      ],
+      [
+        907,
+        955
+      ],
+      [
+        865,
+        959
+      ],
+      [
+        850,
+        961
+      ],
+      [
+        762,
+        957
+      ],
+      [
+        701,
+        961
+      ],
+      [
+        684,
+        958
+      ],
+      [
+        621,
+        955
+      ],
+      [
+        589,
+        959
+      ],
+      [
+        575,
+        958
+      ],
+      [
+        576,
+        953
+      ],
+      [
+        603,
+        912
+      ],
+      [
+        627,
+        859
+      ],
+      [
+        609,
+        856
+      ],
+      [
+        610,
+        849
+      ],
+      [
+        617,
+        841
+      ],
+      [
+        638,
+        790
+      ],
+      [
+        664,
+        711
+      ],
+      [
+        688,
+        632
+      ],
+      [
+        688,
+        622
+      ],
+      [
+        672,
+        611
+      ],
+      [
+        668,
+        594
+      ],
+      [
+        669,
+        569
+      ],
+      [
+        688,
+        557
+      ],
+      [
+        688,
+        539
+      ],
+      [
+        695,
+        532
+      ],
+      [
+        696,
+        528
+      ],
+      [
+        698,
+        521
+      ],
+      [
+        705,
+        519
+      ],
+      [
+        713,
+        493
+      ],
+      [
+        724,
+        420
+      ],
+      [
+        731,
+        350
+      ],
+      [
+        737,
+        278
+      ],
+      [
+        734,
+        270
+      ],
+      [
+        720,
+        261
+      ],
+      [
+        718,
+        240
+      ],
+      [
+        718,
+        203
+      ],
+      [
+        741,
+        182
+      ],
+      [
+        742,
+        178
+      ],
+      [
+        738,
+        174
+      ],
+      [
+        746,
+        168
+      ],
+      [
+        747,
+        153
+      ],
+      [
+        746,
+        135
+      ],
+      [
+        744,
+        124
+      ],
+      [
+        748,
+        117
+      ],
+      [
+        746,
+        105
+      ],
+      [
+        746,
+        89
+      ],
+      [
+        752,
+        83
+      ],
+      [
+        763,
+        74
+      ],
+      [
+        764,
+        60
+      ]
+    ],
+    "interiorLatticeHolesFilled": true,
+    "visibleSteelSegmentation": false,
+    "priorMaskReused": false,
+    "includesWholeTowerMastHallAndFeet": true,
+    "maskProvisional": true,
+    "independentPixelExactCertification": false,
+    "PTQualificationPending": true,
+    "createdAt": "2026-10-14T20:16:09.703091+00:00"
+  },
+  "maskAnnotationFileSHA256": "c78312c05e14b755f06fc18994b3a009af371ee2ff4b8370dad493994d9aefee",
+  "K3IoUThreshold": 0.9,
+  "K1OnlyIoUThreshold": 0.85,
+  "heightAndDeltaEThresholdsUnchanged": true,
+  "modelSilhouetteIoU": null,
+  "heightErrorMetric": null,
+  "deltaE": null,
+  "K3PTTargetAcceptanceVerified": false,
+  "K3PTMaskAcceptanceVerified": false,
+  "K3PTNativeSizeAcceptanceVerified": false,
+  "K3PTStartingCameraAcceptanceVerified": false,
+  "K3IndependentPixelExactCertification": false,
+  "overallAcceptedTargetsBeforeK3Review": 2,
+  "allFivePTAccepted": false,
+  "modelLoopAuthorized": false,
+  "gameIntegrated": false,
+  "published": false,
+  "R2NotUsed": true,
+  "PekingWorkNotModified": true,
+  "createdAt": "2026-10-14T20:18:15.551751+00:00"
+}
