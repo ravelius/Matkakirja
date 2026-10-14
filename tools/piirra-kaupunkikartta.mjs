@@ -6547,10 +6547,13 @@ const KAUPUNGIT = {
     meriHaku: 0.05,
   },
   // PÄÄKAUPUNKI e08 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  // Grande Comore on rajausta isompi saari: 0,05°:n haulla rantaviiva ei sulkeutunut ja täyttö maalasi Karthalan rinteet
+  // mereksi (PT 14.10.: "lähes pelkkää merta"). 0,4° kattaa koko saaren (Karttaseppä 14.10.).
   moroni: {
     rajat: { pohjoinen: -11.6931, etela: -11.7772, lansi: 43.2438, ita: 43.3606 },
     meri: true,
-    meriHaku: 0.05,
+    meriHaku: 0.4,
+    meriMax: 0.97,   // täyttö lasketaan hakulaatikossa, jossa saari on vain ~6 %
   },
   // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
   taskent: {
