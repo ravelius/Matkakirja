@@ -27,9 +27,7 @@ export const FOKUSVIRTA_VADUZ = {
     kommentti: [
       'Se linna, jota isoisäsi katseli rinteeltä, on ruhtinassuvun '
           + 'vakituinen koti vuodesta 1938. Siksi sinne ei pääse sisään.',
-      'Kirkko, jonka isoisäsi näki juuri vihittynä, on nykyään '
-          + 'katedraali: arkkihiippakunta perustettiin vasta 1997. Armeijaa '
-          + 'ei ole edelleenkään.',
+      'Kirkko, jonka isoisäsi näki juuri vihittynä, on nykyään katedraali. Armeijaa ei ole edelleenkään.',
     ],
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     kuva: {

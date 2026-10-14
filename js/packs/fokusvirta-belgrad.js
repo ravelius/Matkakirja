@@ -28,12 +28,8 @@ export const FOKUSVIRTA_BELGRAD = {
 
   pollo: {
     kommentti: [
-      'Linnoituksen muureilla ei enää seiso vartijoita vaan '
-          + 'kävelijöitä, ja Kalemegdanin entisestä harjoituskentästä on '
-          + 'tullut puisto.',
-      'Isoisäsi näki, kuinka mutkat suoristuivat. Tasavallan aukiolla '
-          + 'seisoo nykyään ratsastajapatsas ruhtinaasta, jonka aikana '
-          + 'turkkilaiset lähtivät.',
+      'Linnoituksen muureilla kävelee nykyään vartijoiden sijaan turisteja, ja harjoituskentästä on tullut Kalemegdanin puisto.',
+      'Isoisäsi näki mutkien suoristuvan. Tasavallan aukiolla seisoo nykyään ruhtinas Mihailon ratsastajapatsas.',
     ],
     tunne: { tunne: 'miettiva', voimakkuus: 0.5 },
     kuva: {

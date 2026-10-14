@@ -26,12 +26,8 @@ export const FOKUSVIRTA_TIRANA = {
 
   pollo: {
     kommentti: [
-      'Moskeijan ja kellotornin viereen on noussut aukio, joka voitti '
-          + 'eurooppalaisen kaupunkitilan palkinnon 2018. Isoisäsi aikaan '
-          + 'siinä oli basaari, ei jalankulkijoiden paratiisi.',
-      'Pyramidin kylkeä pitkin pääsee nykyään kävelemään huipulle. '
-          + 'Rakennus, jonka piti olla diktaattorin museo, on nyt nuorten '
-          + 'teknologiakeskus.',
+      'Moskeijan ja kellotornin viereen on noussut jalankulkijoiden aukio. Isoisäsi aikaan siinä oli basaari.',
+      'Pyramidin kylkeä pitkin pääsee kävelemään huipulle. Diktaattorin museoksi tarkoitettu rakennus on nuorten teknologiakeskus.',
     ],
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     kuva: {

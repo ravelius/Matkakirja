@@ -26,12 +26,8 @@ export const FOKUSVIRTA_SKOPJE = {
 
   pollo: {
     kommentti: [
-      'Kivisilta kantaa yhä, ja se on kaupungin vaakunassa. Sen '
-          + 'ympärillä kaupunki on nykyään uusi, sillä vuoden 1963 '
-          + 'maanjäristys tuhosi valtaosan rakennuksista.',
-      'Üsküb on nykyään Skopje, Pohjois-Makedonian pääkaupunki. '
-          + 'Isoisäsi kuuli basaarissa kauppiaita, nykyään siellä kuulee '
-          + 'lähinnä kahvilat ja ravintolat.',
+      'Kivisilta kantaa yhä. Sen ympärillä kaupunki on uusi, sillä vuoden 1963 maanjäristys tuhosi valtaosan rakennuksista.',
+      'Üsküb on nykyään Skopje, Pohjois-Makedonian pääkaupunki. Basaarin kauppiaiden tilalla ovat kahvilat.',
     ],
     tunne: { tunne: 'miettiva', voimakkuus: 0.5 },
     kuva: {

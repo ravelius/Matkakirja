@@ -27,12 +27,8 @@ export const FOKUSVIRTA_ZAGREB = {
 
   pollo: {
     kommentti: [
-      'Maalaus on yhä Kivisen portin holvin alla. Kardinaali julisti '
-          + 'sen kaupungin suojelijaksi vasta 1991, mutta kynttilät ovat '
-          + 'palaneet siellä jo kauan.',
-      'Lotrščakin tornista ammutaan nykyään tykki joka päivä '
-          + 'keskipäivällä. Isoisäsi aikaan sitä ei vielä ollut, joten hän '
-          + 'kuuli tunnin vain kirkonkelloista.',
+      'Maalaus on yhä Kivisen portin holvin alla. Suojelijaksi se julistettiin vasta 1991, mutta kynttilät ovat palaneet jo kauan.',
+      'Lotrščakin tornista ammutaan nykyään tykki joka päivä keskipäivällä. Isoisäsi aikaan tunnit kuuli vain kelloista.',
     ],
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     kuva: {

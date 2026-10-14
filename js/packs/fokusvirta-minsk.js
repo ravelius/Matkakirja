@@ -26,12 +26,8 @@ export const FOKUSVIRTA_MINSK = {
 
   pollo: {
     kommentti: [
-      'Isoisäsi puuasema on vaihtunut kiveen ja sitten uudelleen, ja '
-          + 'nykyinen rakennus valmistui 2002. Radat risteävät silti yhä '
-          + 'samassa kohdassa.',
-      'Sodan jälkeen suuri osa keskustasta rakennettiin uusiksi, '
-          + 'joten Pyhän Hengen katedraali on yksi harvoista paikoista, '
-          + 'jotka isoisäsi vielä tunnistaisi.',
+      'Isoisäsi puuasema on korvattu kahdesti, ja nykyinen rakennus valmistui 2002. Radat risteävät silti samassa kohdassa.',
+      'Sodan jälkeen keskusta rakennettiin uusiksi. Pyhän Hengen katedraalin isoisäsi vielä tunnistaisi.',
     ],
     tunne: { tunne: 'vakava', voimakkuus: 0.4 },
     kuva: {

@@ -26,9 +26,7 @@ export const FOKUSVIRTA_CHISINAU = {
 
   pollo: {
     kommentti: [
-      'Isoisäsi kirjoitti nimen venäläisittäin, Kišinjov. Nykyään se '
-          + 'on Moldovan pääkaupunki ja kirjoitetaan Chișinău, ja '
-          + 'kaupungissa asuu yli 700 000 ihmistä.',
+      'Isoisäsi kirjoitti nimen venäläisittäin, Kišinjov. Nykyään kaupunki on Moldovan pääkaupunki ja kirjoitetaan Chișinău.',
       'Riemukaari seisoo yhä paikallaan, vaikka toinen maailmansota '
           + 'ja maanjäristykset veivät paljon muuta.',
     ],
