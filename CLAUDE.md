@@ -80,6 +80,10 @@ LATAUS ON SAMA KAIKILLA VERKOILLA.
   tekniset jatkeet (laudan hyväksyminen, etukäteispuskuri) CONTRIBUTING.md:ssä.
 - docs/moduulit/kaupunkilehti.md, docs/moduulit/maalehti.md ja
   docs/tyolista-opukselle.md — lehtimalli ja lehtityön ohjeet.
+- **docs/tilinvaihto.md** — TILINVAIHTO uudelle Claude-tilille: järjestys
+  (tili ja omistajan toimet ensin), roolitaulukko, aloitusviestit
+  (docs/aloitusviestit/), Macin vain-paikallisten ohjeiden peili
+  (tools/tyotavat/) ja VOIMASSA OLEVA ARVO -taulu ristiriitoihin.
 
 ## Työtilat (omistaja 23.9.2026, sitova)
 
