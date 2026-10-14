@@ -49,7 +49,7 @@ test('paketti läpäisee skeemat', () => {
 });
 
 test('kaupungeilla on 3D-proton pakolliset kentät ja jokaiselle maalle ISO2', () => {
-  assert.equal(kaupungit.alkiot.length, 266);
+  assert.equal(kaupungit.alkiot.length, 274); // 266 → 274: juna 193, 8 pääkaupunkia pysäkeiksi
   for (const k of kaupungit.alkiot) {
     assert.ok(k.id && k.nimi, k.id);
     assert.ok(Number.isFinite(k.lat) && Number.isFinite(k.lon), `${k.id}: lat/lon`);
@@ -398,7 +398,7 @@ test('skeema 1.8: äänitaulut ja musiikkiketju vastaavat peliä', async () => {
   assert.deepEqual(id.get('tehoste:dice').naytte, REAL_SAMPLES.dice);
   const { musiikkiketju } = await import('../js/musiikkivalitsin.js');
   assert.deepEqual(id.get('musiikkiketju:rooma').ketju, musiikkiketju('rooma', 'ITA'));
-  assert.equal(rivit.filter((r) => r.laji === 'musiikkiketju').length, 266);
+  assert.equal(rivit.filter((r) => r.laji === 'musiikkiketju').length, 274);
   assert.deepEqual(['jalan', 'laiva', 'lento'].filter((l) => !id.has(`siirtyma:${l}`)), []);
 });
 
@@ -684,7 +684,7 @@ test('skeema 1.22: muutosrivi osoittimeen ja muutosloki-natiivi', async () => {
   assert.equal(muutosRivi({ kaupunkilehdet: 5 }, { kaupunkilehdet: 5 }, '2026-09-28T00:00:00Z', ed, ed).teksti, 'Sisältöä päivitettiin.');
   const j = kokoaJulkaisu({ tiedostot, edellinen: null, suurin: 0, commit: 'abcdef1', julkaistu: '2026-09-23T20:00:00.000Z' });
   assert.deepEqual(j.virheet, []);
-  assert.equal(j.osoitin.kokoelmaLkm.kaupungit, 266);
+  assert.equal(j.osoitin.kokoelmaLkm.kaupungit, 274);
   assert.match(j.osoitin.kokoelmaSha.kaupungit, /^[0-9a-f]{12}$/);
   assert.match(j.osoitin.kokoelmaSha.offline, /^[0-9a-f]{12}$/);
   assert.ok(Array.isArray(JSON.parse(tiedostot.get('kokoelmat/muutosloki-natiivi.json')).alkiot));

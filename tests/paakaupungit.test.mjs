@@ -47,7 +47,8 @@ test('perustiedot vain laudan maille, esittely 3–5 lausetta', () => {
 test('Euroopan minivaltiot ja niiden pääkaupungit ovat mukana (omistaja 10.10.2026)', () => {
   for (const iso of ['AND', 'LIE', 'MCO', 'SMR', 'VAT']) {
     assert.ok(maat[iso]?.renkaat?.length, `${iso}: rajat puuttuvat`);
-    assert.ok(PAAKAUPUNKIPISTEET.some((p) => p.maa === iso), `${iso}: pääkaupunki puuttuu`);
+    // Vaduz ja Monaco ovat 14.10.2026 alkaen laudan pysäkkejä (juna 193): pääkaupunki on PAAKAUPUNGIT-taulussa.
+    assert.ok(PAAKAUPUNKIPISTEET.some((p) => p.maa === iso) || PAAKAUPUNGIT[iso], `${iso}: pääkaupunki puuttuu`);
     assert.ok(MAIDEN_PERUSTIEDOT[iso], `${iso}: perustiedot puuttuvat`);
   }
 });

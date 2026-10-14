@@ -41,7 +41,7 @@ if (pack.id !== 'maailmankartta') throw new Error('maailmankartta puuttuu');
 if ((pack.events ?? []).length) throw new Error('maailmankartalla on tapahtumia: rajaus ei enää päde');
 
 // Koelauta: 266 laattaa kuten maailmankartalla, mutta 20 pääaarretta.
-const KOE_MAARAT = { star: 20, mannerAarre: 7, isoAarre: 82, pieniAarre: 157 };
+const KOE_MAARAT = { star: 20, mannerAarre: 7, isoAarre: 82, pieniAarre: 165 };   // 274 kaupunkia (juna 193: + 8 pääkaupunkia)
 const koepaketti = { ...pack, tokens: { ...pack.tokens, counts: KOE_MAARAT } };
 const KUVAT = pack.cities.filter((_, i) => i % 4 === 0).map((c) => c.id);
 
