@@ -36,6 +36,9 @@ NS local_bf20055b, LS1 local_45a869de, LR local_08e82dfc, PK local_97810d35, Sii
 5. LS1 teki puuohituksen omien mallien leikkausalueille (linssiseppa/puut-omat-191 a239512e3) – PT: ei tarvita, kun Eiffelin aukio poistui.
 6. Edelliseltä: Kuun TELE-erä (junan jälkeen), 160 pt -lipun väistö (NUI:n lippu-vaisto-191 fb5354b4d korjaa), Prahan vesi v3 -kuva KS:lle.
 
+## Linjaus (PT 22.5x)
+- Välivaiheiden kuva-arkit Sonnet-apuagentille, itse vain lopullinen pari PT:lle. Konteksti: luovutus viimeistään 35 %:ssa.
+
 ## Työtilat
 - wt/proto-linssiseppa2-andoyakauko (andoya-kauko-190, roiske), wt/proto-linssiseppa2-leikkausala (leikkaus-ala-191), wt/proto-linssiseppa2-lontoo
   (PK:lle luovutettu, ei enää minun), wt/proto-linssiseppa2-yovalot190 (lippu-varjo-190, junassa). Kaikki commitoitu.
