@@ -28,3 +28,9 @@ Posti 8e3bf535b: Peking 6/6 tavoitekuvaa hyväksytty → mallikierrokset käynni
 - Ääni: kuittaa vain pelin omasta ääniraidasta, ei jälkimiksauksesta.
 - Omistajan äänisivun valinnat ensin `node scratchpad/aanisivu-valinnat.mjs --nyt`, ennen kuin sanot "odottaa omistajaa".
 - Agentit: Opus/Sonnet; pitkät Raamattu-työt agentille, Raamatun 450 kt raja vaatii tiivistystä.
+
+## 7. LISÄYS 20.5x (luovutuksen jälkeen)
+- PK museo-aanet-190 97fbe1638 (parketti + salikaiku, 5 selloa, askelten taso nostettu): video pelin ääniraidalla ~21.05 → kuittaa → NS lukitsee junan 190.
+- Omistaja 20.53 (sanatarkasti): "Tuon juna 189 pitäisi olla jo nimetty TF koska se on perillä. TF:n alle voi laittaa junan saapumis ajan" → tehty: rivi "TF 189", tila "TestFlightissa (saapui 14.10. klo 10.28)". Kirjaa työtapana Raamattuun yhdessä TF-arvion kanssa: perillä oleva juna = "TF N" + saapumisaika; lähestyvä juna = "Juna N" + arvio kun sisältö lukittu.
+- settings.local.json (KK 20.53): seurattua tiedostoa EI päivitetä gitissä (leviäisi kaikkiin checkouteihin); kopio peiliin tools/tyotavat/ + palautusohje docs/tilinvaihto.md:hen. Peilaa myös KK:n /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/aloitus.md (päivitetty 20.5x). Lisää molemmat tools/tyotavat/peili.sh:hon.
+- KYSYMYS CLAUDE.MD omistajalla kortilla; KK ajaa kylmäkäynnistystestin 2 (b7df2ae9d).
