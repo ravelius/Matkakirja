@@ -45,6 +45,8 @@ vetotesti ok). Diagnostiikka `ui kosketusdiag 1` vain haarassa natiivi-ui/museo-
   sama pohja). Korjaus 92aef1dd0: alareuna ohjaamopaneelin yläpuolelle (IssKyytiNakyma.OhjaamoLaatikko kuten Pulun taulu).
   KESKEN: asettelutesti kohdevalikko-kuvat.sh 4 (jonossa issaudon perässä) → tarkista iPad pysty (ei ohjaamon päällä) → arkki PT:lle
   → SHA PK:lle yhdistettäväksi (PK kuvaa uuden videon). AVOIN KYSYMYS PT:llä: tarvitaanko näkyvä vieritysmerkki (ei missään pohjassa).
+- PT 11.5x: POHJA HYVÄKSYTTY (sama kuin oppaan Aika ja sää); vierityspalkkia EI tarvita (puolikas rivi riittää). 92aef1dd0 kuitataan
+  asettelutestin kuvista: iPad VAAKA, paneeli ei saa peittää ohjaamoa → arkki PT:lle. Valikko junaan yhdessä PK:n kohdekorjauksen kanssa.
 - Asettelutestin KESKITYS-varoitus "Ilta  ✓" +0,8 pt = ✓-merkin pohjan oma (sama oppaan ☾-listassa), ei korjattavaa.
 ### 3. Cupolan latausruudun luettavuus
 - Cupolan musta avaus (AstronautinNakyma cupolaMusta: ISS · lentokorkeus · nopeus · aika) oli ajattelijapohjan 26/14 pt → LCD-asteikko
