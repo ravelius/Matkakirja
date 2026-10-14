@@ -14163,3 +14163,7 @@ Omistaja 14.10.2026 klo 18.2x (sanatarkasti): "Max q hetkeen voisi tuoda vielä 
 ## EI MUISTIAJOA KUN OMISTAJA SANOO ILMAN TESTEJÄ (14.10.2026 klo 20.1x) (14.10.2026 klo 20.06)
 
 Omistaja 14.10.2026 klo 20.1x (sanatarkasti): "älä tee muistiajoa". Poikkeus Raamatun MUISTIAJO ENNEN TESTFLIGHTIÄ -sääntöön omistajan päätöksellä: junalle 190 ei tehdä muistiajoa eikä testejä, vaan juna lukitaan, käännetään ja viedään TF:ään heti, kun ehdot täyttyvät. Jatkossa, kun omistaja sanoo "ilman testejä", myös muistiajo jätetään pois.
+
+## TYHJÄKÄYNTIVAHTI: CLAUDE JA CODEX EIVÄT JÄÄ ODOTTAMAAN (14.10.2026 klo 20.2x) (14.10.2026 klo 20.07)
+
+Omistaja 14.10.2026 klo 20.2x (sanatarkasti): "kuka pitää huolen että codex ja claude eivät jää vahigossa tyhjäkäynnille?" Vastuu: Päätoimittaja. Kun rooli ilmoittaa JONO TYHJÄ ja työtä on auki, PT antaa seuraavan työn samassa vuorossa; PT tarkistaa Codexin postilaatikon (uudet codex-fable-*) jokaisella jonokierroksella ja vastaa samalla kierroksella. Varmistus: Postivahdin Tyhjäkäyntivahti (Matkakirja-posti/KIERROS.md, codex-odottaa.py) hälyttää PT:lle, jos rooli on levossa yli 20 min avoimen työn aikana tai Codex odottaa yli 30 min; jatkuessa myös Keskustelukanavalle.
