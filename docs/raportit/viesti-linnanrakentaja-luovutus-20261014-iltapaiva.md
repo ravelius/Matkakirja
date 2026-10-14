@@ -13,7 +13,7 @@ Nollaukset Postivahdin kautta (luovutus + push → "LUOVUTUS VALMIS <sha>"). OLA
 | Ryhävalas: valas.glb (jäykkä) + valas-hyppy.glb (luusto, animaatio "hyppy" 7 s, huipulla koko vartalo vedestä) + roiske.glb (kruunu/pylväs/vaahto, anim. "roiske") | valas-v1/ | roiske kytketty (7647324c6); luustoanimaatio odottaa natiivin skinningiä |
 | Roiskeen yksikkömallit kruunu/vaahtolevy | valas-roiske-v1/ | varalla |
 | Tukholman kaupungintalo v3b (torni, lyhty, neulat, loggia, värit) | stadshuset-v1/ (vertailu-v3/EHDOTUS-v3.md, arkki) | PT kuittasi v3, v3b Valosepällä Google-pariin |
-| Eiffel v2b (maa + häivytysvyöhyke 80 m) | eiffel-v1/ (LAHTEET v2b, esikatselu/v2b/) | Valosepällä Google-pariin |
+| Eiffel v2b (hiekkakiveys + käytävät, häivytysvyöhyke 80 m; sha lod0 dbe8dd2425c3ca5a) | eiffel-v1/ (LAHTEET v2b, esikatselu/v2b/) | Valosepällä Google-pariin |
 | Levy: v45k-worktree pois, 4 kansiota T7:lle symlinkein | T7 Matkakirja-linnanrakentaja/_valmiit | ~25 Gt vapautui |
 
 ## Jono
