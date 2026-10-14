@@ -7,16 +7,6 @@
       "Bash(source:*)",
       "Read(//Users/Shared/Claude/wt-julkaisija-tyotilat/**)",
       "Bash(python3 -)"
-    ],
-    "deny": [
-      "Workflow",
-      "SuggestPluginInstall",
-      "SuggestSkills",
-      "SearchPlugins",
-      "ReportFindings",
-      "SendUserFile",
-      "AskUserQuestion",
-      "Artifact"
     ]
   }
 }
