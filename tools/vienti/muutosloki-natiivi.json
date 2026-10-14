@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (191)",
+   "paiva": "2026-10-14",
+   "teksti": "Cupolassa on nyt kohdelista ja Palaa maanpinnalle -nappi, paikannimet pysyvät pystyssä ja pienoispallo seisoo telineessä. Lontoossa on uusi pallokierros Greenwichiin, ja Prahan ja Ateenan kierrokset uudistuivat. Kartan tekstit ovat luettavampia ja raketti erottuu vastavalossa."
+  },
+  {
    "versio": "1.1 (190)",
    "paiva": "2026-10-14",
    "teksti": "ISS-lento uudistui: raketti näkyy koko matkan, Max Q jysähtää, Andøyan meressä hyppää valas ja Cupolasta näkyvät yövalot ja Kuu. Taidemuseoon tuli Auto Zoom, lipuilla on varjot ja isoisä kertoo Kolmesta veljeksestä. Uusi peli alkaa puhtaalta pöydältä."
