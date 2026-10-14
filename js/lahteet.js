@@ -129,6 +129,46 @@ export const LAHTEET = [
           + 'Flight Center, tutkija Miguel Román, kuvankäsittely Joshua Stevens (SSAI)',
         lisenssi: 'Public domain (NASA), lähteen maininta ehtona',
       },
+      {
+        nimi: 'IGN LiDAR HD — Pariisin maanpinta ja pintamalli natiivipelissä',
+        tekija: '© IGN (Institut national de l’information géographique et forestière)',
+        lisenssi: 'Licence Ouverte / Open Licence Etalab 2.0',
+        huom: 'Kirjattu 14.10.2026 korkeustiedostojen krediiteistä (kartta/korkeus/v1/maa-pariisi.json, korkeus-pariisi.json).',
+      },
+      {
+        nimi: 'Lantmäteriet Markhöjdmodell — Tukholman maanpinta natiivipelissä',
+        tekija: '© Lantmäteriet',
+        lisenssi: 'CC BY 4.0',
+        huom: 'Kirjattu 14.10.2026 (kartta/korkeus/v1/maa-tukholma-v3.json).',
+      },
+      {
+        nimi: 'Danmarks Højdemodel (Terræn ja Overflade) — Kööpenhaminan maanpinta ja pintamalli natiivipelissä',
+        tekija: '© Klimadatastyrelsen',
+        lisenssi: 'CC BY 4.0',
+        huom: 'Kirjattu 14.10.2026 (maa-koopenhamina.json Mapterhornin kautta, korkeus-koopenhamina-v3.json Dataforsyningenin WCS:stä).',
+      },
+      {
+        nimi: 'Environment Agency LIDAR Composite DTM ja First Return DSM 1 m — Lontoon maanpinta ja pintamalli natiivipelissä',
+        tekija: '© Environment Agency copyright and/or database right 2022. All rights reserved.',
+        lisenssi: 'Open Government Licence v3.0',
+        huom: 'Kirjattu 14.10.2026 (maa-lontoo.json Mapterhornin kautta, korkeus-lontoo-v2.json EA:n WCS:stä).',
+      },
+      {
+        nimi: 'ČÚZK DMR 4G ja DMP 1G — Prahan maanpinta ja pintamalli natiivipelissä',
+        tekija: '© ČÚZK (Český úřad zeměměřický a katastrální)',
+        lisenssi: 'CC BY 4.0',
+        huom: 'Kirjattu 14.10.2026 (maa-praha.json Mapterhornin kautta, korkeus-praha-v2.json ČÚZK:n ImageServeristä). ČÚZK:n avoimet tiedot 1.7.2023 alkaen.',
+      },
+      {
+        nimi: 'Mapterhorn — muiden kaupunkien maanpinta (DTM) natiivipelissä',
+        tekija: 'mapterhorn.com; lähteinä kansalliset korkeusmallit, kaupunkikohtainen tekijä tiedostossa kartta/korkeus/v1/maa-<kaupunki>.json',
+        lisenssi: 'Lähdekohtainen avoin lisenssi (esim. CC BY 4.0, OGL v3.0, CC0), kirjattu kunkin kaupungin tiedostoon',
+      },
+      {
+        nimi: 'ESA WorldCover 2021 — kaupunkien vesialueet natiivipelissä',
+        tekija: '© ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium',
+        lisenssi: 'CC BY 4.0',
+      },
     ],
   },
   {
@@ -239,6 +279,22 @@ export const LAHTEET = [
           + 'Encyclopaedia Britannica; Wikipedia',
         lisenssi: 'Koordinaatit ja vuosiluvut ovat tosiasioita; selitetekstit '
           + 'kirjoitettu itse. Rajaviivat ovat tulkintoja, eivät mittauksia.',
+      },
+      {
+        nimi: 'AERONET Version 3, Level 2.0 — kaupunkien ilman utu (aerosoli) natiivipelissä',
+        tekija: 'NASA Goddard Space Flight Center, AERONET-verkosto; asemien vastuututkijat kirjattu kaupungin ilmakeha.json-tiedostoon',
+        lisenssi: 'Vapaa käyttö lähteen ja aseman vastuututkijan maininnalla (AERONET data use policy)',
+        huom: 'Kirjattu 14.10.2026 vientipakettien LAHTEET.md-tiedostoista (ilmakeha/aerosoli-v1).',
+      },
+      {
+        nimi: 'METAR-havainnot, IEM ASOS -arkisto — kaupunkien pilvi-ilmasto natiivipelissä',
+        tekija: 'Iowa Environmental Mesonet, Iowa State University',
+        lisenssi: 'Vapaasti käytettävissä lähteen maininnalla; tilastot laskettu havainnoista',
+      },
+      {
+        nimi: 'Copernicus Sentinel-2 L2A (Earth Search, AWS Open Data) — kaupunkien veden väri natiivipelissä',
+        tekija: 'Contains modified Copernicus Sentinel data 2019–2025 (ESA); Element 84 Earth Search -STAC',
+        lisenssi: 'Copernicus-avoin data (vapaa käyttö lähdemaininnalla)',
       },
     ],
   },
