@@ -32,3 +32,15 @@ laatta näkyy 12 → 10 km), 2325092dc (laatan sumu 6 km:stä). Reunahäivytys k
 Todisteet: lokit/todistus-savu14-ipad-20261014-0453 (kuva-arkki, raketti-savu14-ipad-aani.mp4), todistus-savu14-iphone-20261014-0457.
 Avoin kysymys PT:lle: ISS:n karttamerkki näkyy lennon aikana maaston päällä – piiloon vai tarkoituksellinen?
 Seuraavaksi: PT:n kuittaus → NS:lle SHA junaan 189; telakointi ISS:ään erillisenä eränä PK:n kanssa (PT hyväksyi).
+
+## PÄIVITYS 05.4x
+- Raketti-paketti KUITATTU junaan 189 (PT); NS:lle ed26d18b1 (+ ISS-merkki piiloon). Erikseen f3b8c7160 (Avaruus: ilmakehän kuoret maan
+  keskelle joka kehys → Cupolan ilmakehän reuna; todiste lokit/todistus-savu16-ipad-20261014-0514), NS:lle ilmoitettu.
+- KEVYT PALLO (PT: PK:n suunnitelma V2): haara `linssiseppa2/kevyt-pallo-190` **98d4de0f3** (pohja PK iss-kupoli-190): Yokuori piirtää
+  kelauksessa / ≥ 1000×:ssä BMNG-kuukausi Z3 2048² + pilvet, yö/valot päälle; pito 1 s + häivytys 1,2 s; yökuori keskitetään joka kehys;
+  `astro kyyti kevyt 0|1|auto`. Todiste lokit/todistus-kevyt1-ipad-20261014-0534 (Rooman kelaus). PK yhdistää 190:een.
+- TELAKOINTI (PT: LS2 + PK): rajapinta `linssiseppa2/telakointi-190` **ff1f8e43b** (pohja raketti-savu-189): Iss.Telakointi (liuku 60 m →
+  kosketus 8 s, KestoS 10, Kamera(iss, s) seurannasta 1,6 s:n sekoituksella), RakettiMalli.AsetaTelakointi/TelakointiPois, NousunVaihe.Telakointi,
+  testit TelakointiTestit. PK kytkee RakettiLaukaisuun (vaihe, repliikki erillisenä klippinä, Cupolan portti, ohitus); pyydetty origo ISS:lle
+  telakoinnin ajaksi (float-värinä). Seuraavaksi: PK:n SHA → yhteinen simu, kuva-arkki PT:lle.
+- Löydös PK:lle: Cupolassa valkoisia laattaneliöitä Tyynen valtameren yllä (kevyt1 k00).
