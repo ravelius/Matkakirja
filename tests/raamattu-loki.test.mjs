@@ -17,7 +17,7 @@ import { existsSync, mkdtempSync, mkdirSync, readFileSync, statSync, writeFileSy
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { RAAMATTU } from '../js/tyohuone-raamattu.js';
-import { LOKI, kirjaa, lokikohta, suomenAika } from '../tools/raamattu-kirjaa.mjs';
+import { kirjaa, lokikohta, lokipolku, rivita, suomenAika } from '../tools/raamattu-kirjaa.mjs';
 
 const JUURI = new URL('../', import.meta.url);
 const LOKIKANSIO = new URL('docs/raamattu-loki/', JUURI);
@@ -79,10 +79,25 @@ test('raamattu-kirjaa kirjoittaa kohdan sovitussa muodossa lokin loppuun', () =>
   assert.throws(() => lokikohta('', 'teksti'));
   const juuri = mkdtempSync(join(tmpdir(), 'raamattu-loki-'));
   mkdirSync(join(juuri, 'docs/raamattu-loki'), { recursive: true });
+  const LOKI = lokipolku(new Date('2026-09-20T15:05:00Z'));
+  assert.equal(LOKI, 'docs/raamattu-loki/paatokset-2026-09.md');
   writeFileSync(join(juuri, LOKI), 'Alkurivi.\n');
   const rivi = kirjaa('KOE 2', 'toinen', { juuri, nyt: new Date('2026-09-20T15:05:00Z') });
   assert.equal(rivi, '## KOE 2 (20.9.2026 klo 18.05)');
   assert.equal(readFileSync(join(juuri, LOKI), 'utf8'), 'Alkurivi.\n\n## KOE 2 (20.9.2026 klo 18.05)\n\ntoinen\n');
+});
+
+test('raamattu-kirjaa luo puuttuvan kuukausitiedoston ja rivittää pitkän tekstin', () => {
+  assert.equal(lokipolku(new Date('2026-10-31T23:30:00Z')), 'docs/raamattu-loki/paatokset-2026-11.md');
+  const juuri = mkdtempSync(join(tmpdir(), 'raamattu-loki-'));
+  const pitka = Array.from({ length: 400 }, (_, i) => `sana${i}`).join(' ');
+  kirjaa('PITKA', pitka, { juuri, nyt: new Date('2026-10-15T10:00:00Z') });
+  const sisalto = readFileSync(join(juuri, 'docs/raamattu-loki/paatokset-2026-10.md'), 'utf8');
+  const rivit = sisalto.split('\n');
+  assert.ok(rivit.filter((l) => l.startsWith('## ')).length === 1, 'yksi kirjaus');
+  assert.ok(Math.max(...rivit.map((l) => l.length)) <= 200, 'rivit enintään 200 merkkiä');
+  assert.equal(rivit.filter((l) => l.startsWith('sana')).join(' '), pitka, 'sisältö säilyy');
+  assert.equal(rivita('lyhyt teksti'), 'lyhyt teksti');
 });
 
 test('Raamattu pysyy linjauksena, ei lokina (koko)', () => {
