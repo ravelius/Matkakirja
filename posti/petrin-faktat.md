@@ -1,5 +1,12 @@
 # Petřínská rozhledna (Petřínin näkötorni, Praha) — faktat tavoiteluuppia varten
 
+> **PÄIVITYS 14.10.2026 (SK:n lähdetarkistus, PT hyväksyi; sitova mallille):** RUNKO 58,7 m ilman antennia maasta (Prahan kaupunginmuseon
+> uudelleenmittaus 2021, prague.eu / Prague City Tourism; stavbaweb.cz 58,9 m); 60 m = vuoden 1891 pyöristys; 63,5 m = teräsrakenne +
+> osa 1953-antennia; 65,5 m = antenni mukana. Masto ~12 m → mastoineen ~71 m (epävarma). YLÄTASANNE 51 m (50,8; vanhoissa 53/55 m),
+> ALATASANNE 20 m, 8 jalkaa / kahdeksankulmio, 299 askelmaa. Lähde: proto-3d/_tyo/sisaltokirjuri/petrin-tavoite-20261014/mitat.md.
+> Alla olevat 55 m- ja 60 m -luvut ovat vanhoja (säilytetty lähdehistoriana).
+
+
 Tila: LUONNOS 14.10.2026 (Valoseppä). Merkinnät: **[L]** = lähteessä, **[A]** = arvio (valokuvasta tai OSM-geometriasta johdettu, ei lähdettä).
 
 ## 0. Tunniste (korjaus tilaukseen)
@@ -18,7 +25,7 @@ Tila: LUONNOS 14.10.2026 (Valoseppä). Merkinnät: **[L]** = lähteessä, **[A]*
 | 66 m | pelin nykyinen `korkeus_m` | `Linssit/Resources/Elava/muodot-praha.json` (Q12256); TehtavaKohteet.cs käyttää 64 m (kommentti "torni 63,5 m") |
 | ~71 m | koko korkeus **mastoineen** | **[A]** mitattu valokuvasta (kuvat/petrin-4: lyhdyn katto ~59-60 m, mastoa vielä ~12 m ylöspäin) |
 
-Tulkinta (työolettamus): ristikkorunko + lasitettu lyhty päättyy ~58,7-60 m; 63,5 / 65,5 m lienee lyhdyn katto + alkuperäinen Wenceslas-kruunu/lippusalko tai lyhyempi antenniosa; nykyinen TV/FM-antennimasto nousee valokuvan mukaan selvästi tätä ylemmäs (~70 m). Mallia varten: **runko 60 m, mastoineen ~71 m [A]**. Ero kannattaa tarkistaa laser/mittakuvasta ennen lukitusta.
+Tulkinta (työolettamus): ristikkorunko + lasitettu lyhty päättyy ~58,7-60 m; 63,5 / 65,5 m lienee lyhdyn katto + alkuperäinen Wenceslas-kruunu/lippusalko tai lyhyempi antenniosa; nykyinen TV/FM-antennimasto nousee valokuvan mukaan selvästi tätä ylemmäs (~70 m). Mallia varten (VANHA, ks. päivitys alussa): runko 60 m, mastoineen ~71 m [A]. Ero kannattaa tarkistaa laser/mittakuvasta ennen lukitusta.
 
 Alkuperäinen huippu: "lasitettu lyhty ja Pyhän Venceslauksen kruunu rautaisine lippusalkoineen, joka toimi samalla ukkosenjohdattimena" (cs.wikipedia https://cs.wikipedia.org/wiki/Petřínská_rozhledna; pl.wikipedia). 1953 kruunun tilalle TV-antenni (cs.wikipedia); ru.wikipedia väittää antennin lisänneen noin 20 m (ei vahvistettu muualla).
 

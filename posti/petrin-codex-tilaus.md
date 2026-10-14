@@ -1,6 +1,6 @@
 # Codex-tilaus (LUONNOS): Petřínin näkötornin havainnekuvat
 
-Tila: HYVÄKSYTTY ja lähetetty 14.10.2026 (Päätoimittaja). Liitteet tässä postissa nimillä petrin-*. Tavoiteluupin ohje: ks. posti codex-peking-tavoiteluuppi-20261014.md kohta 2 (havainnekuvat sisäisiä, PT hyväksyy ennen mallikierroksia). Lähettäjä: Valoseppä -> Päätoimittaja (PT) hyväksyy ja vie Codex-postilaatikkoon (haara claude/postilaatikko).
+Tila: PÄIVITETTY 14.10.2026 (SK:n lähdetarkistus: runko 58,7 m, ylätasanne 51 m; PT hyväksyi korjauksen). Lähettäjä: Valoseppä -> Päätoimittaja (PT) hyväksyy ja vie Codex-postilaatikkoon (haara claude/postilaatikko).
 
 ## Tehtävä
 
@@ -8,11 +8,11 @@ Tuota **5 fotorealistista havainnekuvaa** Prahan Petřínin näkötornista (Pet�
 
 ## Tornin kuvaus (lyhyesti, tarkat luvut faktat.md)
 
-- Kahdeksankulmainen niitattu teräsristikkotorni 1891 (Eiffel-tornin pienempi, vapaa mukaelma, ei neliö- vaan kahdeksankulmapohja, ei neljää suurta jalkaa). Runko ~60 m, mastoineen ~71 m (arvio).
+- Kahdeksankulmainen niitattu teräsristikkotorni 1891 (Eiffel-tornin pienempi, vapaa mukaelma, ei neliö- vaan kahdeksankulmapohja, ei neljää suurta jalkaa). Runko 58,7 m ilman mastoa (Prahan kaupunginmuseon mittaus 2021), päällä ristikkoantennimasto ~12 m → mastoineen ~71 m.
 - Juurella kahdeksankulmainen kermanvalkoinen sisäänkäyntihalli (punaiset infotaulut, vihreät lyhdyt, koristeelliset teräskaaret), hallin harmaa kattopinta jonka läpi jalat nousevat.
-- Alagalleria ~20 m: avoin kahdeksankulmainen parveke lattiaristikkokaiteineen, yllä lasitettu rengas. Ylätasanne 55 m: lasitettu kahdeksankulmainen lyhty harmaalla katolla, päällä ristikkoantennimasto.
+- Alagalleria ~20 m: avoin kahdeksankulmainen parveke lattiaristikkokaiteineen, yllä lasitettu rengas. Ylätasanne 51 m: lasitettu kahdeksankulmainen lyhty harmaalla katolla, päällä ristikkoantennimasto.
 - Väri: vaalea sinertävänharmaa teräs; ei kultausta tai kirkkaita värejä; keskellä kapea kahdeksankulmainen tuubi ja kaksi kierreporrasta.
-- Mittakaava: torni ~60 m, halli ~22 m leveä (litteiden kylkien väli).
+- Mittakaava: runko 58,7 m (mastoineen ~71 m), halli ~22 m leveä (litteiden kylkien väli).
 
 ## Kuvakulmat (kulmat.json)
 
@@ -46,7 +46,7 @@ Kuvasuhde 3:2 vaaka (K1, K3, K4, K5), K2 mielellään 2:3 pysty. Torni näkyy KO
 
 ## Tarkistus (vastaanottaja)
 
-- Tornin korkeus/leveys-suhde: kokonaiskorkeus ~71 m, halli 22 m leveä (suhde ~3,2:1); alagalleria ~20 m (28 % tornin korkeudesta), ylätasanne 55 m (77 %).
+- Tornin korkeus/leveys-suhde: kokonaiskorkeus ~71 m, halli 22 m leveä (suhde ~3,2:1); alatasanne 20 m (28 % kokonaiskorkeudesta, 34 % rungosta), ylätasanne 51 m (72 % kokonaiskorkeudesta, 87 % rungosta), rungon kärki 58,7 m (83 %).
 - Palauta PNG/JPG nimillä `petrin-K1.png` ... `petrin-K5.png`, vähintään 2400 px pitkä sivu, sekä lyhyt kuittaus kustakin kuvasta, mikä sai poiketa kulmasta.
 
 ## Lähteet
