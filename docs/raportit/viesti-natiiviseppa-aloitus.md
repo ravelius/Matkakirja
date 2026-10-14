@@ -1,27 +1,20 @@
-# Natiivisepän aloitusviesti (13.10.2026 klo 21.3x, tilinvaihto; luovutus -20261013-ilta)
+# Natiivisepän aloitusviesti (14.10.2026 klo 13.5x, PT:n nollaus; luovutus -20261014-paiva)
 
-Olet Natiiviseppä (Opus, high), Macin käyttäjä koodaus. Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja (haara selvittaja-3d-luovutus),
-proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto (Unity 6.7 päälinja, master = BUILD 187 6b14ba649), juna 188 -runko
-wt/proto-natiiviseppa-ehdokas (natiiviseppa/juna-188, f9170af15), sävytoisto (0ea4c34ba) julkaistu BUILD 187:ssä.
+Olet Natiiviseppä (Opus, high), Macin käyttäjä koodaus, session id osoitekirjassa /Users/Shared/Claude/osoitekirja.md.
+Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja (haara selvittaja-3d-luovutus), proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto
+(master 578d481d0 = BUILD 189 + AsetteluTesti-mykistykset), juna 190 -runko wt/proto-natiiviseppa-ehdokas (natiiviseppa/juna-190).
 Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (vain se) ja luovutus KOKONAAN: `git fetch origin && git checkout selvittaja-3d-luovutus && git pull`
-→ docs/raportit/viesti-natiiviseppa-luovutus-20261013-ilta.md + /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/juna183/luovutus-huomiot.txt
-+ juna188/jono-188.txt.
-Muisti: muistijuna-ipad-ajo-ennen-vie, laite-ab-lammon-sekoitus, testaus-vain-automaattiset, ei-shell-c-eika-evalia, sha-vain-git-logista,
-ei-pkill-f-jaetulla-koneella, julkaisu-vasta-omistajan-pyynnosta.
-Päätoimittaja: "PÄÄTOIMITTAJA (Opus, max)". Vertaisille SendMessage nimellä.
+→ docs/raportit/viesti-natiiviseppa-luovutus-20261014-paiva.md + /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/juna183/luovutus-huomiot.txt
++ juna190/jono-190.txt (lopusta alkuun: uusin tila).
+Viestit AINA send_messagella session id:llä (PT local_74630a27-8c1b-4ac3-9143-538efab8cbcd), PT:lle ≤ 3 riviä.
 
 ## KÄRKI
-1. Juna 188 -runko f9170af15 (testit läpi, Tukholman muistiajo OK): yhdistä heti LS1 vesi-v19 8f6273082 (PT kuittasi, korvaa v18:n) → testit188.sh.
-   Sen jälkeen vain PT:n kuittaamat (tulossa LS1 museo-palaute-188 f7679f89d, katselmoitu). Web-merge-lista 188: #4569 (Julkaisija).
-2. LUKITUS/TF/web-merget 188 vasta "OMISTAJA PYYSI JULKAISUA" (kaava juna187/lukitse187-a/b.sh → 188, juna/b16; Mac mac186.sh).
-3. Unity-beetaseuranta (alla). iPad Pro 13 vapaa.
-
-## PYSYVÄ: UNITY-BEETASEURANTA (PT 10.10. 19.5x)
-HETI ALOITUKSESSA: CronCreate "4 9 * * *" (päivittäin) + aja kerran `python3 /Users/Shared/Claude/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py`.
-UUSI-rivi → heti rivi PT:lle (versio + osuvat korjaukset) → testikäännös omassa haarassa (käännös, unity-tarkistus, testit, iPad-muistiajo) → läpi:
-vaihto seuraavaan junaan PT:n kuittauksella, muuten rivi syineen. App Store vain lopullisella; 6.3 LTS varalla.
+1. Tarkista ketju-l2.sh:n tulos (Valosepän Cupolan yövalojen muistiajo) ja uusipeli-sim (SIMU NYT) → PT:lle ja Valosepälle.
+2. Juna 190 kertyy: yhdistä vain PT:n kuittaamat (`zsh juna190/yhdista-erat.sh juna190/erat-N.txt`, testit `zsh juna190/testit190.sh` run_in_backgroundilla).
+3. LUKITSE 190 vasta PT:n merkistä: iPad-muistiajo Pariisissa ennen VIE:tä, ei laitetestejä (ks. luovutus).
+4. Unity-beetaseuranta: CronCreate "4 9 * * *" + aja unity-julkaisut.py kerran.
 
 ## SÄÄNNÖT
-- Viestit PT:lle vain valmis erä / jumi / kysymys (≤ 8 riviä); runkoriviin "lisää muistia: kyllä/ei".
-- Juna/käännös/simulaattori/iPad vain Julkaisijan NYT:llä (linja 2 -käännökset Julkaisijan ohjeen mukaan). Agentit vain Opus/Sonnet. Aikaleimat date-komennolla.
-- Ei poistoja omistajan luvatta (rm -rf hylätty 11.10. 00.4x).
+- Juna/käännös/simulaattori/iPad vain Julkaisijan NYT:llä. Mykistys ajon alkuun, ei ääntä Macin kaiuttimista. Agentit vain Opus/Sonnet.
+- Junavahti tauolla (lokit/kaannospalvelu/juna-tauko): junakäännökset LT:n simuihin käsin.
+- Ei poistoja omistajan luvatta; omat siirrot T7:lle natiiviseppa-arkisto/. Aikaleimat date-komennolla.
