@@ -28,7 +28,7 @@ Viestit AINA session id:llä osoitekirjasta /Users/Shared/Claude/osoitekirja.md 
    `kupoli190.sh 44a598b42 8a61f1f09` = Valosepän Cupolan yövalojen muistiajo (B yövalot vs A runko, Pariisi → pallo → raketti → Cupola-yö,
    kupoli-muisti-ipad.sh, mykistetty). Tulos (KUPOLI … fp huippu / vapaa min / varoitukset) → PT:lle ja Valosepälle; se on yövalojen KUITTAUSEHTO.
    Ilmoita Julkaisijalle LUKKO VAPAA (kolmannen käännöksen jälkeen) ja LAITE VAPAA.
-2. `juna190/uusipeli-sim.sh bbcebf1c9` ajetaan OHITA_KAANNOS=1:llä, kun Julkaisija antaa SIMU NYT (natiiviseppa-iPad13 jonossa LT:n jälkeen):
+2. TEHTY 14.03 (PT kuittasi): `juna190/uusipeli-sim.sh bbcebf1c9` ajettiin OHITA_KAANNOS=1:llä, kun Julkaisija antaa SIMU NYT (natiiviseppa-iPad13 jonossa LT:n jälkeen):
    PK:n ajo-uusipeli.sh + napautukset → kuva 3-valinta.png (uusi peli → aloitusvalinta ILMAN huntua ja korostettua Britanniaa) → PT:lle polku.
 
 ## ODOTTAA PT:N KUITTAUSTA (ei runkoon ennen sitä)
@@ -50,6 +50,7 @@ mac190.sh <runko> (Mac L2 + TF heti; Julkaisijan TF NYT). Puuttuu: muutosloki-19
 
 - Keittiön alareunan valkoinen usva (Olavinlinna, näkyy 8-bit ja HDR, PT: ei estä).
 - iPhonen musta yläpalkin pilleri (näkyi myös HDR-simukuvissa).
+- Aloitusvalinnassa pelinappula peittää Pariisi-nimen alun ("riisi"; PT 14.10., ei lukituksen ehto) → PK/NUI:lle.
 - Unity-beetaseuranta: CronCreate "4 9 * * *" (istuntokohtainen → luo uudelleen) + unity-julkaisut.py; viesti PT:lle id:llä.
 
 ## OPITUT 14.10. (sitovia)
