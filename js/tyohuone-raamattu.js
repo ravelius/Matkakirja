@@ -516,9 +516,8 @@ export const RAAMATTU = {
           + 'aamun viestiin, ja roolille annetaan oletus, kunnes omistaja vastaa (ks. KYSYMYKSET-SESSIO). '
           + 'C) VIESTINTÄ FABLELLE (tärkein tokenisäästö): viesti VAIN '
           + 'kun a) erä on valmis ja pushattu, b) sessio on jumissa tai tarvitsee päätöksen, '
-          + 'c) Fable kysyy. Ei kuittauksia, ei väliraportteja. Valmistumisviesti enintään 8 '
-          + 'riviä: haara + commit, mitä muuttui (1-3 riviä), testit pass/fail, savuke x/y, '
-          + 'avoimet asiat. Pitkä raportti tiedostoon docs/raportit/ ja viestiin vain polku. '
+          + 'c) Fable kysyy. Ei kuittauksia, ei väliraportteja. Valmistumisviesti enintään 3 (omistaja 14.10.2026 klo 10.4x; ennen 8) '
+          + 'riviä: mitä (haara + commit, testit), sha, kuvien polku; muu (savuke, avoimet asiat) tiedostoon. Pitkä raportti tiedostoon docs/raportit/ ja viestiin vain polku. '
           + 'Sessiot puhuvat keskenään suoraan, kun asia ei vaadi päätöstä (Karttaseppä <-> '
           + 'Julkaisija polttovuorot ja luettelot, Laitetestaaja <-> Karttaseppä fps, '
           + 'Pelikoodari -> Julkaisija CI-korjaukset). Kaikki, mikä muuttaa sääntöä tai '
@@ -840,11 +839,11 @@ export const RAAMATTU = {
           + 'ROOLIEN KANSIOT JA MALLIT (kaikki /Users/Shared/Claude/ alla; haara = rooli-checkoutin työhaara, '
           + 'aloitusviesti docs/raportit/viesti-<rooli>-aloitus.md roolin uusimmassa origin-haarassa): '
           + 'Julkaisija Matkakirja-julkaisija (Opus); Natiiviseppä Matkakirja-3d-selvittaja, haara selvittaja-3d-luovutus (Opus); '
-          + 'Pelikoodari Matkakirja-pelikoodari (Opus); Natiivi-UI Matkakirja-natiivi-ui (Opus); Linssiseppä Matkakirja-linssiseppa (Opus); '
+          + 'Pelikoodari Matkakirja-pelikoodari (Opus); Natiivi-UI Matkakirja-natiivi-ui (Opus); Linssiseppä Matkakirja-linssiseppa (Opus; museot ja opas); VALOSEPPÄ (ent. Linssiseppä 2, nimi omistaja 14.10.2026 klo 10.4x) Matkakirja-linssiseppa-2 (Opus; valo, ilmakehä, materiaalit, avaruuskohtaukset); '
           + 'Siirtoseppä Matkakirja-siirtoseppa (Opus); Karttaseppä Matkakirja-karttaseppa (Opus); Sisältökirjuri Matkakirja-sisaltokirjuri (Sonnet); '
           + 'Laitetestaaja Matkakirja-laitetestaaja (Sonnet); Äänittäjä Matkakirja-aanittaja, haara aanittaja-tyo-20261011 (Sonnet); '
           + 'Postivahti Matkakirja-posti, haara postivahti (Sonnet); Asemataulu Matkakirja-asemataulu, haara asemataulu/tyo (Sonnet); '
-          + 'Päätoimittaja Matkakirja-fable (malli vaihtelee; vanha nimi Fable). Proto-git '
+          + 'Päätoimittaja Matkakirja-fable (malli vaihtelee; vanha nimi Fable); Keskustelukanava Matkakirja-fable (Opus, max). OSOITEKIRJA (omistaja 14.10.2026 klo 10.4x): /Users/Shared/Claude/osoitekirja.md (rooli → session id, kansio, malli; Päätoimittaja päivittää jokaisessa muutoksessa); roolit lähettävät viestit send_messagella session id:llä osoitekirjasta, eivät nimellä. VASTUUKARTTA: docs/vastuukartta.md (aineisto tai koodialue → omistava rooli). NOLLAUKSET POSTIVAHDILLE (omistaja 14.10.2026 klo 10.4x): Päätoimittaja päättää vain nollaustarpeen (roolin konteksti 50 %); rooli tekee luovutuksen ja lähettää Postivahdille LUOVUTUS VALMIS <sha>, ja Postivahti hoitaa loput (RC pois, clear-käsky tyhjällä jonolla, list_events 0, vakioaloitusviesti, RC päälle, rivi Päätoimittajalle); ohje Matkakirja-posti/NOLLAUS.md. Proto-git '
           + '/Users/Shared/Claude/proto-3d/Matkakirja-proto, erä-worktreet '
           + '/Users/Shared/Claude/wt/<rooli>-<aihe>. Loki: docs/raamattu-loki/paatokset-2026-09.md #KARSINTA '
           + '11.10.2026: TYÖTAPA JA SESSIOT (11.10.2026 klo 15.44).',
@@ -3972,6 +3971,7 @@ export const RAAMATTU = {
           + '(vain Fable kirjoittaa).',
         'docs/roolitus.md — työnjako, viestintä, julkaisusäännöt, '
           + 'pistokokeet.',
+        'docs/vastuukartta.md — aineisto ja koodialue → omistava rooli (omistaja 14.10.2026; session id:t /Users/Shared/Claude/osoitekirja.md).',
         'docs/kuvatuotanto-kohtaamiset.md — kohtaamiskuvien julkinen '
           + 'tuotantoloki, hyväksytty kuvalinja ja toimitustilat.',
         'docs/moduulit/linssit.md · docs/moduulit/kaupunkilehti.md · '
