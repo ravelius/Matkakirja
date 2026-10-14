@@ -171,7 +171,9 @@ details.juna .runko-tl .teksti { flex: 1 1 220px; min-width: 0; }
 .tf-paneeli .teksti { white-space: pre-line; }
 .osio-otsikko { font-weight: 700; color: var(--muste); }
 /* Työlista (omistaja 12.10. 15.1x): leipäteksti samankokoisena kuin junassa, otsikot vain vähän leipätekstiä isompina. */
-#tyolista .runko .teksti, #tyolista .runko .tilanne, #valmistuneet .runko .teksti, #valmistuneet .runko .tilanne { font-size: 0.85rem; }
+/* Odottaa-rivit (omistaja 13.10.): samat säännöt kuin työlistan riveillä, vain valitsin #odottaa lisätty (ei uusia ominaisuuksia). */
+#tyolista .runko .teksti, #tyolista .runko .tilanne, #valmistuneet .runko .teksti, #valmistuneet .runko .tilanne,
+#odottaa .runko .teksti, #odottaa .runko .tilanne { font-size: 0.85rem; }
 #tyolista details.juna.iso .otsikko { font-size: 0.95rem; }
 .rooli, .rooli.sonnet { background: var(--t-lepo); }
 .rooli.tila-tyo { background: var(--t-tyo); }
@@ -211,17 +213,17 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 .palkki .paa { flex-wrap: nowrap; white-space: nowrap; }
 .palkki .paa .nimi { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 /* Työlistan kohteet ja väkäsen sisältö sisennettyinä (omistaja 10.10. 15.4x) */
-#tyolista details.juna { margin-left: 0.8em; }
-#tyolista details.juna .runko { padding-left: 2.1em; }
+#tyolista details.juna, #odottaa details.juna { margin-left: 0.8em; }
+#tyolista details.juna .runko, #odottaa details.juna .runko { padding-left: 2.1em; }
 /* Rivitys (omistaja 12.10. 12.3x: "tee paremmin toimiva rivitys"): väkänen pysyy vasemmalla, pitkä otsikko rivittyy omassa
    sarakkeessaan ja edistyspalkki pysyy ensimmäisen rivin oikeassa reunassa; mikään osa ei putoa omalle rivilleen. */
-#tyolista details.juna > summary { flex-wrap: nowrap; align-items: flex-start; }
-#tyolista details.juna > summary::before { flex: none; line-height: 1.35; }
-#tyolista details.juna > summary .otsikko { flex: 1 1 auto; min-width: 0; line-height: 1.35; overflow-wrap: anywhere; }
-#tyolista details.juna > summary .symboli { flex: none; line-height: 1.35; }
-#tyolista details.juna > summary .edistys { flex: none; align-self: flex-start; margin-top: 0.22em; }
+#tyolista details.juna > summary, #odottaa details.juna > summary { flex-wrap: nowrap; align-items: flex-start; }
+#tyolista details.juna > summary::before, #odottaa details.juna > summary::before { flex: none; line-height: 1.35; }
+#tyolista details.juna > summary .otsikko, #odottaa details.juna > summary .otsikko { flex: 1 1 auto; min-width: 0; line-height: 1.35; overflow-wrap: anywhere; }
+#tyolista details.juna > summary .symboli, #odottaa details.juna > summary .symboli { flex: none; line-height: 1.35; }
+#tyolista details.juna > summary .edistys, #odottaa details.juna > summary .edistys { flex: none; align-self: flex-start; margin-top: 0.22em; }
 /* Rivinvaihdot säilyvät (Bugikorjaukset-paketin vika per rivi, omistaja 10.10. 17.0x) */
-#tyolista .runko .teksti, #tyolista .runko .tilanne, #valmistuneet .runko .teksti { white-space: pre-line; }
+#tyolista .runko .teksti, #tyolista .runko .tilanne, #valmistuneet .runko .teksti, #odottaa .runko .teksti, #odottaa .runko .tilanne { white-space: pre-line; }
 /* Valmistuneet työlistan alla (omistaja 10.10. 16.3x) */
 .otsikkonappi { background: none; border: none; padding: 0; font: inherit; color: inherit; letter-spacing: inherit; cursor: pointer; }
 .otsikkonappi[aria-expanded="true"] { text-decoration: underline; text-underline-offset: 4px; }
@@ -253,6 +255,10 @@ section:not(.kiinni) .yhteenveto { display: none; }
 .toimia { color: var(--punainen); font-weight: 700; }
 .rooli.tila-toimia { background: var(--punainen); color: var(--paperi); }
 .rooli.tila-toimia .r-teksti, .rooli.tila-toimia .r-effort { color: var(--paperi); }
+/* Kulutus (omistaja 13.10.): roolien ja projektien nimet ovat pitkiä, joten kortit ovat leveämpiä kuin Laitteet-korteissa; muuten nimi, palkit ja prosentti eivät mahdu riville. */
+#kulutus, #kulutus-projektit { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+/* Kulutuksen Projektit- ja Roolit-väliotsikot väkäsellä (omistaja 13.10. 16.2x): nappi perii väliotsikon versaalit ja välistyksen. */
+.ryhma-otsikko .tf-nappi { text-transform: inherit; letter-spacing: inherit; }
 </style>
 
 <main class="wrap">
@@ -276,6 +282,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
     <h2><button type="button" class="otsikkonappi taitto" data-osio="tyolista-osio" aria-expanded="true">Työlista</button> <span class="kysymykset yhteenveto" id="tyolista-yhteenveto"></span> <span class="kysymykset" id="tyolista-aika"></span> <button type="button" class="kysymykset kysymysnappi" id="kysymykset" aria-expanded="false" hidden></button></h2>
     <ul class="kysymyslista" id="kysymyslista" hidden></ul>
     <div class="rivit" id="tyolista"></div>
+    <h2 id="odottaa-otsikko" hidden><button type="button" class="otsikkonappi" id="odottaa-nappi" aria-expanded="false">Odottaa</button> <span class="kysymykset" id="odottaa-maara"></span></h2>
+    <div class="rivit" id="odottaa" hidden></div>
     <h2 id="valmistuneet-otsikko" hidden><button type="button" class="otsikkonappi" id="valmistuneet-nappi" aria-expanded="false">Valmistuneet</button> <span class="kysymykset" id="valmistuneet-maara"></span></h2>
     <div class="rivit" id="valmistuneet" hidden></div>
   </section>
@@ -286,6 +294,13 @@ section:not(.kiinni) .yhteenveto { display: none; }
   <section class="kortti" id="roolit-osio" hidden>
     <h2><button type="button" class="otsikkonappi taitto" data-osio="roolit-osio" aria-expanded="true">Roolit</button> <span class="kysymykset" id="roolimaara"></span></h2>
     <div id="roolit"></div>
+  </section>
+  <section class="kortti" id="kulutus-osio" hidden>
+    <h2><button type="button" class="otsikkonappi taitto" data-osio="kulutus-osio" aria-expanded="true">Kulutus</button> <span class="kysymykset yhteenveto" id="kulutus-yhteenveto"></span> <span class="kysymykset" id="kulutus-tieto"></span></h2>
+    <div class="ryhma-otsikko" id="kulutus-projektit-otsikko" hidden><button type="button" class="tf-nappi" id="kulutus-projektit-nappi" aria-expanded="true"><span class="vakanen" aria-hidden="true">›</span>Projektit</button></div>
+    <div class="roolit" id="kulutus-projektit" hidden></div>
+    <div class="ryhma-otsikko" id="kulutus-roolit-otsikko" hidden><button type="button" class="tf-nappi" id="kulutus-roolit-nappi" aria-expanded="true"><span class="vakanen" aria-hidden="true">›</span>Roolit</button></div>
+    <div class="roolit" id="kulutus"></div>
   </section>
   <section class="kortti" id="huom-osio" hidden>
     <h2>Huomiot</h2>
@@ -303,6 +318,31 @@ section:not(.kiinni) .yhteenveto { display: none; }
     if (luokka) e.className = luokka;
     if (teksti != null) e.textContent = String(teksti);
     return e;
+  }
+  // Kulutus-kortti (Laitteet-pohja): nimi, viisi palkkia suhteessa suurimpaan (kMax) ja osuus viikon kulutuksesta prosentteina.
+  // Roolilla malli-piste sekä tokenit- ja agentit-rivi; projektilla (omistaja 13.10. 11.3x) ei pistettä, vaan rivi eniten kuluttaneista
+  // rooleista, koska projekti ei ole malli.
+  function kulutusKortti(x, kMax, projekti) {
+    var osuus = Math.max(0, Math.min(100, Number(x.viikko) || 0));
+    var pr = Math.round(osuus);
+    var kortti = luo('div', 'rooli tila-lepo');
+    var paa = luo('div', 'r-paa');
+    if (!projekti) paa.append(luo('span', 'piste' + (String(x.malli || '').toLowerCase() === 'sonnet' ? ' sonnet' : '')));
+    paa.append(luo('span', '', x.nimi || ''));
+    var ed = luo('span', 'edistys laite-cpu');
+    ed.title = 'osuus viikon kulutuksesta ' + pr + ' %';
+    ed.setAttribute('aria-label', 'osuus viikon kulutuksesta ' + pr + ' %');
+    var n = osuus > 0 && kMax > 0 ? Math.min(5, Math.max(1, Math.round(5 * osuus / kMax))) : 0;
+    for (var q = 1; q <= 5; q++) ed.append(luo('i', q <= n ? 'on' : ''));
+    // Kiinteä väli, jotta prosentti ei rivity luvun ja merkin väliltä, kun pitkä nimi vie tilaa.
+    ed.append(luo('span', 'laite-cpu-arvo', pr + '\u00a0%'));
+    paa.append(ed);
+    kortti.append(paa);
+    var yksiDesim = String(Math.round((Number(x.kiintio) || 0) * 10) / 10).replace('.', ',');
+    kortti.append(luo('div', 'r-teksti', '≈ ' + yksiDesim + ' %-yks. viikosta · 5 h: ' + Math.round(Number(x.viisi_h) || 0) + ' %'));
+    if (!projekti) kortti.append(luo('div', 'r-teksti', 'agentit ' + Math.round(Number(x.agentit) || 0) + ' % · ' + (Math.round(Number(x.tokenit_m)) || 0) + ' M tokenia'));
+    else if (Array.isArray(x.roolit) && x.roolit.length) kortti.append(luo('div', 'r-teksti', 'eniten: ' + x.roolit.join(', ')));
+    return kortti;
   }
   function siruLuokka(t) {
     t = String(t || '').toLowerCase();
@@ -405,6 +445,15 @@ section:not(.kiinni) .yhteenveto { display: none; }
   // Sinulle-osion auki/kiinni muistetaan katsojan selaimessa (vain mukavuus; ilman tallennusta kiinni).
   var viestitAuki = false;
   try { viestitAuki = localStorage.getItem('sinulle-auki') === '1'; } catch (e) { viestitAuki = false; }
+  // Odottaa-väliotsikon auki/kiinni muistetaan samoin (omistaja 13.10. 10.5x); oletuksena kiinni.
+  var odottaaAuki = false;
+  try { odottaaAuki = localStorage.getItem('odottaa-auki') === '1'; } catch (e) { odottaaAuki = false; }
+  // Kulutuksen Projektit- ja Roolit-väliotsikot väkäsellä piilotettavia (omistaja 13.10. 16.2x); oletuksena auki, tila muistetaan
+  // katsojan selaimessa kuten Odottaa-väliotsikossa. Väkänen on TF-paneelin pohja (.tf-nappi + .vakanen).
+  var kulutusAuki = { projektit: true, roolit: true };
+  ['projektit', 'roolit'].forEach(function (k) {
+    try { kulutusAuki[k] = localStorage.getItem('kulutus-' + k + '-auki') !== '0'; } catch (e) { kulutusAuki[k] = true; }
+  });
   // Osio-otsikot (omistaja 12.10. 14.5x: "valmiina ja työn alla saa olla boldattuna ja laita työn alla ylimmäiseksi ja lisää yksi
   // tyhjä rivi ennen valmiina riviä"): rivin alun Työn alla / Valmiina / Korjatut / Uutta / Junassa N lihavoituna, Työn alla -osio
   // ensimmäisenä ja osioiden väliin tyhjä rivi. Kirjoittajat jatkavat entisellä muodolla; järjestys tehdään vain näytöllä.
@@ -619,7 +668,19 @@ section:not(.kiinni) .yhteenveto { display: none; }
     // Valmistuneet erikseen työlistan alle; otsikon napautus näyttää ne (omistaja 10.10. 16.3x).
     var tlRivit = (t && t.rivit) || [];
     var onValmis = function (r) { return /^valmis/i.test(String(r.tila || '')) || vainValmiita(r); };
-    taittuvat($('tyolista'), tlRivit.filter(function (r) { return !onValmis(r); }), 'otsikko', function (r) { return /työn alla|odottaa|kokoamassa/i.test(String(r.tila || '')); });
+    // Odottavat omaan väliotsikkoonsa (omistaja 13.10. 10.5x): keskeneräiset rivit, joiden tila on odottaa, jonossa, myöhemmin tai pidossa
+    // (ei jos tila on myös työn alla), siirtyvät pääluettelosta Odottaa (N) -väliotsikon alle, joka on oletuksena kiinni kuten Valmistuneet.
+    var onOdottaa = function (r) {
+      var tl = String(r.tila || '');
+      return !onValmis(r) && /odottaa|jonossa|myöhemmin|pidossa/i.test(tl) && !/työn alla|kokoamassa/i.test(tl);
+    };
+    taittuvat($('tyolista'), tlRivit.filter(function (r) { return !onValmis(r) && !onOdottaa(r); }), 'otsikko', function (r) { return /työn alla|odottaa|kokoamassa/i.test(String(r.tila || '')); });
+    var odottavat = tlRivit.filter(onOdottaa);
+    taittuvat($('odottaa'), odottavat, 'otsikko', function () { return false; });
+    $('odottaa-otsikko').hidden = odottavat.length === 0;
+    $('odottaa-maara').textContent = odottavat.length ? '(' + odottavat.length + ')' : '';
+    $('odottaa-nappi').setAttribute('aria-expanded', odottaaAuki ? 'true' : 'false');
+    $('odottaa').hidden = !(odottaaAuki && odottavat.length);
     var valmiitTl = tlRivit.filter(onValmis);
     $('valmistuneet-otsikko').hidden = valmiitTl.length === 0;
     $('valmistuneet-maara').textContent = valmiitTl.length ? '(' + valmiitTl.length + ')' : '';
@@ -728,8 +789,36 @@ section:not(.kiinni) .yhteenveto { display: none; }
     });
     ro.append(ruudukko);
 
+    // Kulutus (omistaja 13.10. 10.5x, 11.3x): projektien ja roolien osuus token-kulutuksesta, arvio Clauden lokeista (kulutus.py →
+    // dokumentti talo/kulutus). Kortit kuten Laitteet: viisi palkkia = osuus suhteessa suurimpaan kuluttajaan (palkit erottelevat
+    // toisistaan; rooleissa suurin rooli, projekteissa suurin nimetty projekti), perässä osuus viikon kulutuksesta prosentteina;
+    // osio piilossa ilman dokumenttia. Projektit (viisi suurinta + Muu työ + Muut projektit) omana väliotsikkonaan roolien yläpuolella.
+    var kd = tila.kulutus;
+    var kr = (kd && Array.isArray(kd.rivit)) ? kd.rivit : [];
+    var kp = (kd && Array.isArray(kd.projektit)) ? kd.projektit : [];
+    var kMax = kr.reduce(function (m, x) { return Math.max(m, Number(x.viikko) || 0); }, 0);
+    var jaannos = function (x) { return x.nimi === 'Muu työ' || x.nimi === 'Muut projektit'; };
+    var kpMax = kp.reduce(function (m, x) { return jaannos(x) ? m : Math.max(m, Number(x.viikko) || 0); }, 0);
+    $('kulutus-osio').hidden = kr.length === 0;
+    $('kulutus-projektit-otsikko').hidden = $('kulutus-roolit-otsikko').hidden = kp.length === 0;
+    // Ilman projekteja Roolit-väliotsikkoa ei näytetä, joten roolit näkyvät aina.
+    $('kulutus-projektit').hidden = kp.length === 0 || !kulutusAuki.projektit;
+    $('kulutus').hidden = kp.length > 0 && !kulutusAuki.roolit;
+    $('kulutus-projektit-nappi').setAttribute('aria-expanded', kulutusAuki.projektit ? 'true' : 'false');
+    $('kulutus-roolit-nappi').setAttribute('aria-expanded', kulutusAuki.roolit ? 'true' : 'false');
+    var kpSailio = $('kulutus-projektit');
+    kpSailio.replaceChildren();
+    kp.forEach(function (x) { kpSailio.append(kulutusKortti(x, kpMax, true)); });
+    var ku = $('kulutus');
+    ku.replaceChildren();
+    kr.forEach(function (x) { ku.append(kulutusKortti(x, kMax, false)); });
+    var kEnin = (kp.length ? kp.filter(function (x) { return !jaannos(x); }) : kr.filter(function (x) { return x.nimi !== 'Muut'; }))
+      .sort(function (a, b) { return (Number(b.viikko) || 0) - (Number(a.viikko) || 0); })[0];
+    $('kulutus-yhteenveto').textContent = kEnin ? '(eniten: ' + kEnin.nimi + ' ' + Math.round(Number(kEnin.viikko) || 0) + ' %)' : '';
+    $('kulutus-tieto').textContent = kr.length ? '(arvio' + (typeof kd.viikko_pros === 'number' ? ', viikko ' + Math.round(kd.viikko_pros) + ' %' : '') + ')' : '';
+
     // Pienennetyn osion yhteenveto otsikkorivillä (omistaja 11.10. 19.3x).
-    var tyonAlla = tlRivit.filter(function (x) { return !onValmis(x) && /työn alla|odottaa|kokoamassa/i.test(String(x.tila || '')); }).length;
+    var tyonAlla = tlRivit.filter(function (x) { return !onValmis(x) && !onOdottaa(x) && /työn alla|odottaa|kokoamassa/i.test(String(x.tila || '')); }).length;
     $('tyolista-yhteenveto').textContent = '(työn alla ' + tyonAlla + ')';
     var tAika = $('tyolista-aika');
     tAika.textContent = (t && typeof t.ts === 'number') ? '(päivitetty ' + kello(t.ts) + ')' : '';
@@ -759,6 +848,18 @@ section:not(.kiinni) .yhteenveto { display: none; }
 
   $('kysymykset').addEventListener('click', function () { kysymysAuki = !kysymysAuki; piirra(); });
   $('valmistuneet-nappi').addEventListener('click', function () { valmistuneetAuki = !valmistuneetAuki; piirra(); });
+  $('odottaa-nappi').addEventListener('click', function () {
+    odottaaAuki = !odottaaAuki;
+    try { localStorage.setItem('odottaa-auki', odottaaAuki ? '1' : '0'); } catch (e) { /* ei tallennusta */ }
+    piirra();
+  });
+  ['projektit', 'roolit'].forEach(function (k) {
+    $('kulutus-' + k + '-nappi').addEventListener('click', function () {
+      kulutusAuki[k] = !kulutusAuki[k];
+      try { localStorage.setItem('kulutus-' + k + '-auki', kulutusAuki[k] ? '1' : '0'); } catch (e) { /* ei tallennusta */ }
+      piirra();
+    });
+  });
   $('viestit-nappi').addEventListener('click', function () {
     viestitAuki = !viestitAuki;
     try { localStorage.setItem('sinulle-auki', viestitAuki ? '1' : '0'); } catch (e) { /* ei tallennusta */ }
