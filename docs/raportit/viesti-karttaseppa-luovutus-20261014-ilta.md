@@ -11,11 +11,9 @@ kaanna-ateena.sh = LS1:n kaanna.sh ilman git-polkua; viive.py; venv tifffile+ope
 - Haara `karttaseppa-paakaupungit-kohdekartat-loput-2` (wt `/Users/Shared/Claude/wt/karttaseppa-paakaupungit-kohdekartat-loput`),
   kärki 11ed3001f: f1819fb61 (44 karttaa + KAUPUNGIT-rivit + Funafuti Vaiakuun) → PK 4c4c4d636 (maakartat.js 44 riviä, SK:n
   esittelyt) → 11ed3001f Moroni (meriHaku 0,4, meriMax 0,97: täyttö maalasi Grande Comoren mereksi). npm test 5531/0. PR valmis.
-- KESKEN luovutushetkellä: PK:n iPhone-rikkeet paramaribo (Fort Zeelandia, kokoruutuvihje) ja santodomingo (Ozama, reuna 1 px).
-  Malli (korjaa --vain) sanoi ok → ajossa `tarkista-kohdekarttavarat.mjs iphone paramaribo santodomingo --json` + `korjaa
-  --mitattu … --piirra --mac <pilvi>` (scratchpad mitattu-ps.json). Tarkista `git status` wt:ssä: jos rajat muuttuivat → commit,
-  push, `tarkista … iphone|ipad paramaribo santodomingo` 0 rikettä, rivi PK:lle + PT:lle.
-- Moronin keskipiste: suositus PT:lle pitää (ainoa kohde Karthala 11 km idässä; kaupunki rannalla). PT:n vastaus auki.
+- VALMIS: Paramaribo + Santo Domingo iPhone-reunavara mitatuilla siirtymillä 99fd8b936 (tarkista iphone+ipad 0 rikettä,
+  npm test 5531/0). PR kärki 99fd8b936, PT kuittasi, merge Julkaisija → juna 190.
+- Moronin keskipiste pysyy (PT hyväksyi perustelun: ainoa kohde Karthala 11 km idässä; jatkokorjaus peruttu).
 - HUOM: 14.10. iltapäivällä keskeytetty korjaa-ajo (7 Afrikan karttaa) palautettu: T7 mac.json -rajat abuja, lome, brazzaville,
   kinshasa, libreville = mainin arvot. Vika oli PK:n kytkentäskriptissä, ei kartoissa.
 - Funafuti: SK korjasi lähteen (pallo −8,5211 / 179,1966). PK ei kytke Oseaniaa peliin ilman omistajaa (data riittää).
