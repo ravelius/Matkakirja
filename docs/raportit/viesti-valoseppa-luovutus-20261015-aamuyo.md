@@ -37,8 +37,9 @@ LR local_08e82dfc, PK local_97810d35, Postivahti local_e6d70b5a. Käännös- ja 
   1815/1815, tarkista 0). Ei vielä simussa. Mittarit: kamera-askel täysi lento ≤ 2,55 %/kehys (raja 3 %), lyhyt ≤ 9 % (raja 10 %, koko
   lähestyminen 4,4 s); asema 2 % (vaaka) / 6 % (pysty) → telakointi; lähtö: huippukiihtyvyys täysi 1 500 → 4,3 m/s², nykäys 90 000 → 0,9 m/s³.
   Agentin oikaisu: 90 pt ISS-malli (AstronauttiKerros) ei näkynyt laukaisussa lainkaan – asema puuttui kokonaan ennen telakointia.
-  KÄÄNNÖS L2 käynnissä 01.28 (Julkaisijan KÄÄNNÖS NYT), PROTO_APP_KOPIO=proto-3d/_tyo/linssiseppa2/iss192/app, loki
-  lokit/kaannospalvelu/20261015-012814-5b864834e-l2.log → ilmoita Julkaisijalle "käännös valmis, L2 VAPAA".
+  KÄÄNNÖS VALMIS 01.37: 5b864834e → 54d943861, app proto-3d/_tyo/linssiseppa2/iss192/app/Matkakirja3D.app (L2 vapautettu Julkaisijalle).
+  Simuajo: zsh proto-3d/_tyo/linssiseppa2/iss192/aja-iss192.zsh 5b864834e (vasta SIMULAATTORI NYT -viestin jälkeen), sitten
+  python3 proto-3d/_tyo/linssiseppa2/iss192/analysoi-iss192.py <tuloskansio> (ilman -I).
   SIMU jonossa 3 Julkaisijalla (odota "SIMULAATTORI NYT"). Sonnet-agentti valmisteli kansioon proto-3d/_tyo/linssiseppa2/iss192/:
   sk-iss192-ipad.txt, aja-iss192.zsh <sha> (todistusajo, UDID A26BC7D0, video täysi + lyhyt), analysoi-iss192.py <tuloskansio>
   (ruutujen siirtymä videolta, lokin kamera-askel, lähtökiihtyvyys, arkki + liikekäyrä, YHTEENVETO.md). Tarkista että tiedostot ovat
