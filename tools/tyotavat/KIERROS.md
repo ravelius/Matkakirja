@@ -50,4 +50,4 @@ Korvattu 14.10.: Postivahti lähettää kaikkien roolien aloitusviestit ja RC:n 
 `syke.py` lukee `lista/talo/katsoja.json`-kopiota. Aja `ArtifactData list` (collection talo, out_dir lista) AINA ennen `syke.py`:tä, muuten kopio vanhenee ja syke näyttää VANHA vaikka sivu on auki (vika 12.32–14.41: vienti jäi väliin). Aseta myös roolit.json:n ts ennen vientiä.
 
 ## Uusi rooli 11.10. 18.30: Äänittäjä (Sonnet 5.5, high)
-Session local_0275bc7a-a851-4f44-91d7-718735f6525b, checkout /Users/Shared/Claude/Matkakirja-aanittaja (musiikki ja äänet). Kierroksella: get_usage(id) roolina 13, roolit.json-riviksi malli Sonnet, hälytysrajat kuten muilla. Rooleja nyt 13 (PT + 12 muuta).
+Session local_846757a4-5dce-40d7-b43b-12bfa7008396, checkout /Users/Shared/Claude/Matkakirja-aanittaja (musiikki ja äänet). Kierroksella: get_usage(id) roolina 13, roolit.json-riviksi malli Sonnet, hälytysrajat kuten muilla. Rooleja nyt 13 (PT + 12 muuta).

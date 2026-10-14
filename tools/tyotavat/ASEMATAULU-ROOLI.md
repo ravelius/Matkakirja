@@ -36,7 +36,7 @@ Tavoite: omistajan ei tarvitse koskaan tarkistaa taulua itse.
 2. tyolista.json: käy läpi jokaisen keskeneräisen rivin "Työn alla" -kohdat. Kohta, joka on jo junassa tai TF:ssä,
    siirretään osioon "Junassa N:". Viittaus vanhaan junaan, esimerkiksi "TF 184:llä", kun uusin on 186, päivitetään.
    Uusi omistajan pyyntö, josta PT on viestinyt, lisätään omaksi rivikseen tai Työn alla -kohdaksi. Jos et ole varma,
-   kysy PT:ltä yhdellä rivillä (SendMessage "PÄÄTOIMITTAJA (Opus, max)"). Älä arvaa.
+   kysy PT:ltä yhdellä rivillä (SendMessage "PÄÄTOIMITTAJA (Opus, medium) local_74630a27"). Älä arvaa.
 3. tehtavat.json: kirjoita jokaiselle roolille lyhyt tehtävä, enintään 8 sanaa, sen viimeisten viestien perusteella.
 4. Muokkaa tiedostoja aina väliaikaisen tiedoston ja os.replace-kutsun kautta, ja vie muutokset heti tauluun.
 
