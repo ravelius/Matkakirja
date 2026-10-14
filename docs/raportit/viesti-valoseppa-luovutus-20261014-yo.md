@@ -29,6 +29,9 @@ NS local_bf20055b, LS1 local_45a869de, LR local_08e82dfc, PK local_97810d35, Sii
    7a6c392c3, tai valmis appi omat191/app-ala3 = 7e95b0782) ja SIMU NYT: `APP=…/app-ala3/Matkakirja3D.app AJOT=uusi:v6k18-<nimi>:eif1:pariisi
    LISA=-<nimi> zsh _tyo/linssiseppa2/omat191/kuvat.zsh` (mykistys ja "kaupunki google 1" skriptissä; simctl vain simusarja.sh:n kautta).
    NYK = lokit/valoseppa-omat191-pariisi-nyk. Parit omat191/parit/ + HAVAINNOT.md.
+   UUSIN: LR:n v2e (lod0 711a7fe5, kaukonäkymä PT:n f1-palautteen mukaan) paketti VALMIS omat191/v6k18-eif2e (portti 0, leikkaus_ala_m 1,5)
+   → seuraavaksi SIMU NYT Julkaisijalta: `APP=…/omat191/app-ala3/Matkakirja3D.app AJOT=uusi:v6k18-eif2e:eif1:pariisi LISA=-eif2e zsh kuvat.zsh`
+   ja parit f0/f1/f2 PT:lle (+ LR).
 3. KAUPUNGINTALO v3b: PT hylkäsi (tasavärit, lyhty, vino tanko, katot) → LR: "KT jäihin", ei uutta versiota. Paketti v6k18-sh3 tallessa.
 4. TOWER BRIDGEN KUMMUT (PT 22.0x, 191, ei kiire): siltapilarien alla joessa telttamaiset kummut – Lontoon 10 km vesi (index-v23,
    lontoo2-8m) seuraa pintamallia pilareissa. Kuvat proto-3d/lokit/pk-lontoo-191-20261014/towerbridge-kummut-*.jpg. Veden tuotantoketju
