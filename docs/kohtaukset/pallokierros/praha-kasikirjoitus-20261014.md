@@ -1,6 +1,6 @@
 # Praha: pallokierroksen käsikirjoitus (14.10.2026)
 
-Kertoja William, yksi otto per teksti. Sisältökirjuri; PT hyväksyi listan ja tyylin 14.10. Ääni vasta kun PT on hyväksynyt käsikirjoituksen. Merkkejä yhteensä (puhuttu teksti): 8038.
+Kertoja William, yksi otto per teksti. Sisältökirjuri; PT hyväksyi listan ja tyylin 14.10. Ääni vasta kun PT on hyväksynyt käsikirjoituksen. Merkkejä yhteensä (puhuttu teksti): 8103.
 
 Tunnukset: avaus, pysäkki-N, historia (tunnus), loppu. Soittojärjestys ja ajoitus (LS1/LS2): avaus → pysäkki 1 → [historiaosio lennolle] → pysäkki 2 → … → pysäkki 8 → loppu.
 
@@ -42,11 +42,11 @@ Vyšehrad kohoaa Vltavan yläpuolella kallioisella kukkulalla, jonka linnoitusmu
 
 ## praha-historia-kaarle-iv
 
-Vuonna 1344 Prahan piispanistuin nousi arkkipiispan istuimeksi, ja samana vuonna laskettiin Pyhän Vituksen katedraalin peruskivi. Kaarle IV perusti vuonna 1348 Uudenkaupungin. Vuoden 1342 tulva vahingoitti pahoin Juditin siltaa, ja uuden Kaarlensillan rakennus alkoi vuonna 1357 ja päättyi vasta vuonna 1402.
+Vuonna 1344 Prahan hiippakunta korotettiin arkkihiippakunnaksi, ja samana vuonna laskettiin Pyhän Vituksen katedraalin peruskivi. Kaarle IV perusti vuonna 1348 Prahan Uudenkaupungin. Vuoden 1342 tulva vaurioitti pahoin Juditin siltaa, ja sen tilalle rakennettiin Kaarlensilta. Työ alkoi vuonna 1357 ja valmistui vasta vuonna 1402.
 
 ## praha-historia-kaarlensilta
 
-Kaarlensilta oli Prahassa Vltavan ainoa ylityspaikka vuoteen 1841, jolloin valmistui keisari Frans I:n ketjusilta. Nepomukin Johanneksen pronssipatsas pystytettiin sillalle vuonna 1683, ja useimmat muut patsaat tulivat paikalleen vuosina 1683–1714. Useimmat nykyiset patsaat ovat kopioita, sillä alkuperäisiä alettiin vaihtaa 1960-luvulla. Alkuperäiset ovat nyt museossa ja Vyšehradin kasemateissa.
+Kaarlensilta oli Prahassa Vltavan ainoa ylityspaikka vuoteen 1841, jolloin valmistui keisari Frans I:n ketjusilta. Johannes Nepomukilaisen pronssipatsas pystytettiin sillalle vuonna 1683, ja useimmat muut patsaat tulivat paikalleen vuoteen 1714 mennessä. Monet patsaista ovat kopioita, sillä vaurioituneita alkuperäisiä on vaihdettu jo 1900-luvun alusta lähtien. Alkuperäisiä säilytetään museossa ja Vyšehradin kasemateissa.
 
 ## praha-historia-heittoikkuna
 
@@ -58,15 +58,15 @@ Keisari Rudolf II siirsi hovinsa Prahaan vuonna 1583. Tycho Brahe tuli sinne kei
 
 ## praha-historia-josefov
 
-Josefov oli Prahan juutalaisten getto. Kortteli sai nimensä keisari Joosef II:n mukaan vuonna 1850, ja hänen uudistuksensa 1780-luvun alussa olivat parantaneet juutalaisten asemaa. Vuonna 1893 hyväksytty saneerauslaki johti siihen, että suurin osa korttelista purettiin. Jäljelle jäivät vanha hautausmaa ja kuusi synagogaa, muun muassa 1270-luvulla rakennettu Vanha-uusi synagoga.
+Josefov oli Prahan juutalaisten getto. Kortteli sai nimensä keisari Joosef II:n mukaan vuonna 1850, ja hänen uudistuksensa 1780-luvun alussa olivat parantaneet juutalaisten asemaa. Vuonna 1893 hyväksytty saneerauslaki johti siihen, että suurin osa korttelista purettiin. Jäljelle jäivät vanha hautausmaa ja kuusi synagogaa, muun muassa 1270-luvulla rakennettu Vanhauusi synagoga.
 
 ## praha-historia-kansallisteatteri
 
-Kansallisteatteri rakennettiin lähes kokonaan kansalaisten keräämillä lahjoituksilla. Teatteri avattiin 11. kesäkuuta 1881 kruununprinssi Rudolfin vierailun kunniaksi, ja avajaisissa kantaesitettiin Smetanan Libuše. Tulipalo tuhosi 12. elokuuta 1881 kupolin, katsomon ja näyttämön. Uusi keräys tuotti alle kahdessa kuukaudessa miljoona kultarahaa, ja Josef Schulzin johtama uudelleenrakennus avattiin 18. marraskuuta 1883.
+Kansallisteatteri rakennettiin kansalaisten keräämillä lahjoituksilla. Teatteri avattiin 11. kesäkuuta 1881 kruununprinssi Rudolfin vierailun kunniaksi, ja avajaisissa kantaesitettiin Smetanan Libuše. Tulipalo tuhosi 12. elokuuta 1881 kupolin, katsomon ja näyttämön. Uusi keräys tuotti alle kahdessa kuukaudessa miljoona guldenia, ja Josef Schulzin johtaman uudelleenrakennuksen jälkeen teatteri avattiin uudelleen 18. marraskuuta 1883.
 
 ## praha-historia-venceslauksen-aukio
 
-Elokuun 20.–21. yönä 1968 Varsovan liiton joukot hyökkäsivät Tšekkoslovakiaan, ja aamulla neuvostopanssarit olivat Venceslauksen aukiolla ihmisjoukkojen ympäröiminä. Tammikuun 16. päivänä 1969 opiskelija Jan Palach sytytti itsensä tuleen vastalauseena miehitykselle ja kuoli kolme päivää myöhemmin. Marraskuun 17. päivänä 1989 poliisi hajotti opiskelijamarssin Národní třída -kadulla, ja 24. päivänä Havel ja Dubček ilmestyivät aukion Melantrichin talon parvekkeelle.
+Elokuun 20.–21. yönä 1968 Varsovan liiton joukot hyökkäsivät Tšekkoslovakiaan, ja aamulla neuvostopanssarit olivat Venceslauksen aukiolla ihmisjoukkojen ympäröiminä. Tammikuun 16. päivänä 1969 opiskelija Jan Palach sytytti itsensä tuleen vastalauseena miehitykselle ja kuoli kolme päivää myöhemmin. Marraskuun 17. päivänä 1989 poliisi hajotti opiskelijamarssin Národní třída -kadulla, ja saman kuun 24. päivänä Havel ja Dubček ilmestyivät Melantrichin talon parvekkeelle.
 
 ## praha-historia-vituksen-katedraali
 

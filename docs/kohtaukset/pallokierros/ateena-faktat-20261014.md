@@ -6,18 +6,18 @@ Kirjoittajat: Sonnet-agentit (Sisältökirjuri 14.10.2026). Kaksi lähdettä per
 
 | tunnus | otsikko | sanaa | kesto (arvio) |
 |---|---|---|---|
-| ateena-historia-persialaiset | Persialaiset ja Salamis | 41 | 28.7 s |
-| ateena-historia-parthenon | Parthenonin rakentaminen | 40 | 28.0 s |
-| ateena-historia-demokratia | Demokratian synty | 39 | 27.3 s |
-| ateena-historia-sokrates | Sokrateen oikeudenkäynti | 46 | 32.2 s |
-| ateena-historia-olympieion | Hadrianuksen Olympieion | 50 | 35.0 s |
-| ateena-historia-parthenon1687 | Parthenonin räjähdys | 41 | 28.7 s |
-| ateena-historia-paakaupunki1834 | Ateena pääkaupungiksi | 40 | 28.0 s |
-| ateena-historia-olympia1896 | Ensimmäiset nykyajan kisat | 44 | 30.8 s |
+| ateena-historia-persialaiset | Persialaiset ja Salamis | 46 | 32.2 s |
+| ateena-historia-parthenon | Parthenonin rakentaminen | 43 | 30.1 s |
+| ateena-historia-demokratia | Demokratian synty | 43 | 30.1 s |
+| ateena-historia-sokrates | Sokrateen oikeudenkäynti | 47 | 32.9 s |
+| ateena-historia-olympieion | Hadrianuksen Olympieion | 54 | 37.8 s |
+| ateena-historia-parthenon1687 | Parthenonin räjähdys | 39 | 27.3 s |
+| ateena-historia-paakaupunki1834 | Ateena pääkaupungiksi | 39 | 27.3 s |
+| ateena-historia-olympia1896 | Ensimmäiset nykyajan kisat | 43 | 30.1 s |
 
 ## Persialaiset ja Salamis (`ateena-historia-persialaiset`)
 
-Teksti: Syyskuussa 480 eaa. persialaiset valtasivat Ateenan, jonka asukkaita oli jo viety Salamiin saarelle. Akropoliksella puolustautuneet kukistettiin, ja persialaiset polttivat kukkulan temppelit, myös vanhemman Parthenonin. Pian tämän jälkeen kreikkalaiset voittivat persialaisten laivaston Salamiin salmessa, saaren ja mantereen välissä; voitosta kiitetään ateenalaista Themistoklesta.
+Teksti: Syyskuussa 480 eaa. persialaiset valtasivat Ateenan, jonka asukkaista suuri osa oli jo viety pois, muun muassa Salamiin saarelle. Akropoliksella puolustautuneet kukistettiin, ja persialaiset polttivat kukkulan temppelit, myös vanhemman Parthenonin. Pian tämän jälkeen kreikkalaiset voittivat persialaisten laivaston Salamiin salmessa, saaren ja mantereen välissä; voitosta kiitetään ateenalaista Themistoklesta.
 
 Kuva: File:Kaulbach, Wilhelm von - Die Seeschlacht bei Salamis - 1868.JPG (Wilhelm von Kaulbach (1805–1874); Public domain; 5032×2840 px)
 
@@ -25,7 +25,7 @@ Lähteet: https://en.wikipedia.org/wiki/Achaemenid_destruction_of_Athens; https:
 
 ## Parthenonin rakentaminen (`ateena-historia-parthenon`)
 
-Teksti: Perikles käynnisti Parthenonin rakentamisen vuonna 447 eaa., kolmisenkymmentä vuotta persialaisten tuhon jälkeen. Arkkitehteina työskentelivät Iktinos ja Kallikrates, ja kuvanveistäjä Feidias valvoi veistoskoristelua. Temppeli Athenalle tehtiin Pentelikon-vuoren marmorista, ja rahat tulivat Deloksen liiton kassasta. Rakennus oli pääosin valmis vuonna 432 eaa.
+Teksti: Perikles käynnisti Parthenonin rakentamisen vuonna 447 eaa., yli kolmekymmentä vuotta persialaisten tuhon jälkeen. Arkkitehteina työskentelivät Iktinos ja Kallikrates, ja kuvanveistäjä Feidias valvoi veistoskoristelua. Athenalle omistettu temppeli rakennettiin Pentelikon-vuoren marmorista. Temppeli oli pääosin valmis vuonna 438 eaa., ja koristelu valmistui vuoteen 432 eaa. mennessä.
 
 Kuva: File:Akropolis by Leo von Klenze.jpg (Leo von Klenze (1784–1864), Neue Pinakothek, München; Public domain; 1486×1018 px)
 
@@ -33,7 +33,7 @@ Lähteet: https://en.wikipedia.org/wiki/Parthenon; https://www.worldhistory.org/
 
 ## Demokratian synty (`ateena-historia-demokratia`)
 
-Teksti: Tyranni Hippias karkotettiin Ateenasta noin vuonna 510 eaa., ja noin vuonna 508 eaa. Kleisthenes uudisti kaupungin järjestyksen. Kansalaiset jaettiin asuinpaikan mukaan kymmeneen heimoon, ja neuvostossa oli 500 jäsentä. Kansankokous kokoontui Pnyx-kukkulalla, neuvosto Agoralla, kaupan ja hallinnon keskuksessa Akropoliksen juurella.
+Teksti: Tyranni Hippias karkotettiin Ateenasta noin vuonna 510 eaa., ja pian sen jälkeen, noin vuonna 508 eaa., Kleisthenes uudisti kaupungin hallinnon. Kansalaiset jaettiin asuinpaikan mukaan kymmeneen heimoon, ja neuvostossa oli 500 jäsentä. Kansankokous kokoontui aikanaan Pnyx-kukkulalla, neuvosto Agoralla, kaupan ja hallinnon keskuksessa Akropoliksen luoteispuolella.
 
 Kuva: File:Muller Rudolph - View of the Acropolis from the Pnyx - Google Art Project.jpg (Rudolf Müller (1802–1885), skannaus Google Art Project / Benaki-museo; Public domain; 3388×2350 px)
 
@@ -41,7 +41,7 @@ Lähteet: https://en.wikipedia.org/wiki/Cleisthenes; https://www.worldhistory.or
 
 ## Sokrateen oikeudenkäynti (`ateena-historia-sokrates`)
 
-Teksti: Vuonna 399 eaa. ateenalainen valamiehistö tuomitsi filosofi Sokrateen, joka oli 70-vuotias. Syytteen nosti Meletos, ja Anytos ja Lykon liittyivät häneen: Sokrates ei syytteen mukaan tunnustanut kaupungin jumalia ja johti nuoria harhaan. Valamiehistö julisti hänet syylliseksi ja langetti kuolemantuomion. Sokrates joi myrkkymaljan. Tapahtumista kertovat Platon ja Xenofon.
+Teksti: Vuonna 399 eaa. ateenalaiseen oikeuteen haastettiin filosofi Sokrates, joka oli 70-vuotias. Syytteen nosti Meletos, ja mukaan liittyivät Anytos ja Lykon: Sokrates ei syytteen mukaan tunnustanut kaupungin jumalia ja johti nuoria harhaan. Valamiehistö julisti hänet syylliseksi ja langetti kuolemantuomion, ja Sokrates joi myrkkymaljan. Tapahtumista kertovat Platon ja Ksenofon.
 
 Kuva: File:David - The Death of Socrates.jpg (Jacques-Louis David (1748–1825), The Metropolitan Museum of Art; Public domain; 3896×2559 px)
 
@@ -49,7 +49,7 @@ Lähteet: https://en.wikipedia.org/wiki/Trial_of_Socrates; https://www.worldhist
 
 ## Hadrianuksen Olympieion (`ateena-historia-olympieion`)
 
-Teksti: Olympieionin rakennus alkoi 500-luvulla eaa. Peisistratoksen suvun aikana, mutta työ pysähtyi vuoden 510 eaa. tienoilla tyrannien vallan päätyttyä. Kuningas Antiokhos IV jatkoi sitä vuonna 174 eaa., ja valmiiksi temppeli tuli vasta keisari Hadrianuksen aikana: hän vihki sen käyttöön vuosina 131–132 jaa. Pylväitä oli 104, ja niistä 15 seisoo yhä pystyssä.
+Teksti: Olympieionin rakentaminen alkoi 500-luvulla eaa. Peisistratoksen suvun aikana, mutta työ pysähtyi vuoden 510 eaa. tienoilla tyrannien vallan päätyttyä. Seleukidien kuningas Antiokhos IV jatkoi sitä vuonna 174 eaa., ja valmiiksi temppeli tuli vasta keisari Hadrianuksen aikana: se vihittiin käyttöön vuosina 131–132 jaa. Pylväitä oli 104; vuonna 1852 myrsky kaatoi yhden, ja 15 on yhä pystyssä.
 
 Kuva: File:Athenes Temple de Jupiter Olympien - Blouet Guillaume-abel - 1831.jpg (Guillaume-Abel Blouet (1795–1853), Expédition scientifique de Morée: Architecture, Pariisi, Firmin Didot, 1831–1838; kaivertaja Lemaitre (taulun merkintä); Public domain; 1500×1152 px)
 
@@ -57,7 +57,7 @@ Lähteet: https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens; https:/
 
 ## Parthenonin räjähdys (`ateena-historia-parthenon1687`)
 
-Teksti: Vuonna 1687 venetsialaiset Francesco Morosinin johdolla piirittivät Ateenan Akropoliksen Morean sodassa. Ottomaanit olivat varastoineet ruutia Parthenoniin, ja 26. syyskuuta venetsialainen kranaatti osui siihen. Räjähdys tuhosi suuren osan temppelin seinistä ja katosta, ja noin 300 ihmistä kuoli. Venetsialaiset poistuivat Ateenasta seuraavana vuonna.
+Teksti: Vuonna 1687 venetsialaiset Francesco Morosinin johdolla piirittivät Ateenan Akropolista Morean sodassa. Ottomaanit olivat linnoittautuneet Akropolikselle ja varastoineet ruutia Parthenoniin, ja 26. syyskuuta venetsialainen kranaatti osui siihen. Räjähdys tuhosi suuren osan temppelin seinistä ja katosta. Venetsialaiset poistuivat Ateenasta seuraavana vuonna.
 
 Kuva: File:Venetian siege of Acropolis.jpg (Tenente Colonnello Lazara (kaiverruksen laatija), painanut Girolamo Albrizzi, Venetsia; 1680-luvun loppu; Public domain; 1875×1289 px)
 
@@ -65,7 +65,7 @@ Lähteet: https://en.wikipedia.org/wiki/Parthenon; https://en.wikipedia.org/wiki
 
 ## Ateena pääkaupungiksi (`ateena-historia-paakaupunki1834`)
 
-Teksti: Baijerilainen prinssi Otto saapui vuonna 1833 Nafplioon, joka oli silloin Kreikan väliaikainen pääkaupunki, ja hänestä tuli maan ensimmäinen kuningas. Vuonna 1834 pääkaupunki siirrettiin Ateenaan. Arkkitehdit Stamatios Kleanthis ja Eduard Schaubert olivat laatineet Ateenalle uuden asemakaavan jo vuonna 1832, ennen siirtoa.
+Teksti: Baijerilainen prinssi Otto, Kreikan ensimmäinen kuningas, saapui laivalla vuonna 1833 Nafplioon, joka oli silloin maan väliaikainen pääkaupunki. Vuonna 1834 pääkaupunki siirrettiin Nafplionista Ateenaan. Arkkitehdit Stamatios Kleanthis ja Eduard Schaubert olivat laatineet Ateenalle uuden asemakaavan jo vuonna 1832, ennen siirtoa.
 
 Kuva: File:Peter v Hess Empfang König Otto (1).jpg (Peter von Hess (1792–1871), öljy kankaalle 1839, Neue Pinakothek, München; valokuvaaja Hajotthu; Public domain; 3435×2112 px)
 
@@ -73,7 +73,7 @@ Lähteet: https://www.rmg.co.uk/collections/objects/rmgc-object-12641; https://w
 
 ## Ensimmäiset nykyajan kisat (`ateena-historia-olympia1896`)
 
-Teksti: Ensimmäiset nykyaikaiset olympialaiset pidettiin Ateenassa 6.–15. huhtikuuta 1896. Pierre de Coubertin oli ollut järjestämässä vuoden 1894 Sorbonnen kongressia, joka päätti elvyttää kisat. Avaus- ja päätösjuhla pidettiin Kallimarmaron stadionilla, joka rakennettiin marmorista antiikin stadionin paikalle vuosina 1895–96 Georgios Averoffin rahoituksella. Maratonin voitti kreikkalainen Spyridon Louis.
+Teksti: Ensimmäiset nykyaikaiset olympialaiset pidettiin Ateenassa 6.–15. huhtikuuta 1896. Pierre de Coubertin järjesti vuoden 1894 Sorbonnen kongressin, joka päätti elvyttää kisat. Avaus- ja päätösjuhla pidettiin Kallimarmaron stadionilla, joka rakennettiin uudelleen marmorista antiikin stadionin paikalle vuosina 1895–96 Georgios Averoffin rahoituksella. Maratonin voitti kreikkalainen Spyridon Louis.
 
 Kuva: File:Athens 1896-The crowd in front and inside the Pan-Athenian stadium.jpg (Tuntematon valokuvaaja, 1896 (lähde: olympic.org Athens 1896 -kuvat; Commonsiin SportsOlympic 2020); Public domain; 2070×1600 px)
 
@@ -186,7 +186,7 @@ Lähteet: https://en.wikipedia.org/wiki/1896_Summer_Olympics; https://en.wikiped
 
 ### 1. Kallimarmaro / Panathinaikon stadion (Q208811, H = 204.0 m)
 
-Kerronta: Kallimarmaro on noin 204 metriä pitkä hevosenkengän muotoinen stadion, jonka valkoiset istuinrivit nousevat Pangratin kaupunginosassa kahden kukkulan väliseen painanteeseen. Nimi tarkoittaa kaunista marmoria: rakennus on pentelikonmarmoria, samaa kiveä kuin Akropolis. Se rakennettiin 1890-luvulla uudelleen antiikin stadionin mallin mukaan Georgios Averoffin lahjoituksella, ja sen marmoriasu valmistui vasta vuonna 1906. Stadionin sisäänkäynnillä seisoo Averoffin marmoripatsas.
+Kerronta: Kallimarmaro on noin 204 metriä pitkä hevosenkengän muotoinen stadion, jonka valkoiset istuinrivit nousevat Pangratin kaupunginosassa kahden kukkulan välisen painanteen rinteille. Nimi tarkoittaa kaunista marmoria: rakennus on pentelikonmarmoria, samaa marmoria kuin Parthenon. Se rakennettiin 1890-luvulla uudelleen antiikin stadionin mallin mukaan Georgios Averoffin lahjoituksella, ja sen marmoriasu valmistui vasta vuonna 1906. Stadionin sisäänkäynnillä seisoo Averoffin marmoripatsas.
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
@@ -214,7 +214,7 @@ Huomiot:
 
 ### 2. Olympoksen Zeuksen temppeli (Q1123019, H = 17.25 m)
 
-Kerronta: Olympoksen Zeuksen temppelistä on jäljellä viisitoista valtavaa korinttilaista pylvästä, jotka kohoavat pentelikonmarmorista noin 17 metrin korkeuteen ja ovat yli puolitoista metriä paksut. Pylväitä oli alun perin 104, joten kokonaisuudesta on jäljellä alle viidesosa. Yksi pylväs kaatui myrskyssä vuonna 1852, ja se makaa siinä, mihin se putosi. Temppeli on noin 500 metrin päässä Akropolikselta kaakkoon, ja sen luoteiskulmassa seisoo Hadrianuksen portti.
+Kerronta: Olympoksen Zeuksen temppelissä on pystyssä viisitoista valtavaa korinttilaista pylvästä, jotka kohoavat pentelikonmarmorista noin 17 metrin korkeuteen ja ovat yli puolitoista metriä paksut. Pylväitä oli alun perin 104, joten kokonaisuudesta on jäljellä alle viidesosa. Yksi pylväs kaatui myrskyssä vuonna 1852, ja se makaa siinä, mihin se putosi. Temppeli on Akropoliksen kaakkoispuolella, ja sen luoteispuolella seisoo Hadrianuksen portti.
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
@@ -240,7 +240,7 @@ Huomiot:
 
 ### 3. Tuulten torni (Q372717, H = 12.0 m)
 
-Kerronta: Tuulten torni on noin kaksitoista metriä korkea kahdeksankulmainen marmoritorni Ateenan roomalaisella torilla, ja sen jokaisen sivun yläosassa on tuulijumalan reliefi. Kahdeksan jumalaa vastaavat kahdeksaa ilmansuuntaa, ja tornin ulkoseinillä on lisäksi aurinkokelloja, jotka näyttivät aikaa päivän valossa. Tornin tekijäksi mainitaan tähtitieteilijä Andronikos Kyrrhestes, ja se valmistui 1. vuosisadan eaa. alkupuoliskolla, vaikka ajoitus on epävarma. Sisällä oli vesikello, joka näytti aikaa silloinkin, kun aurinko ei paistanut.
+Kerronta: Tuulten torni on noin kaksitoista metriä korkea kahdeksankulmainen marmoritorni Ateenan roomalaisella torilla, ja sen jokaisen sivun yläosassa on tuulijumalan reliefi. Kahdeksan jumalaa vastaavat kahdeksaa ilmansuuntaa, ja tornin ulkoseinillä on lisäksi aurinkokelloja, jotka näyttivät aikaa päivän valossa. Tornin tekijäksi mainitaan tähtitieteilijä Andronikos Kyrrhestes, ja torni valmistui viimeistään noin vuonna 50 eaa., vaikka tarkka ajoitus on epävarma. Sisällä oli vesikello, joka näytti aikaa silloinkin, kun aurinko ei paistanut.
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
@@ -266,7 +266,7 @@ Huomiot:
 
 ### 4. Antiikin agora (Q395367, H = 115.0 m)
 
-Kerronta: Antiikin agoran raunioalueella erottuu kaksi kokonaisena seisovaa rakennusta: kukkulalla kohoava Hefaistoksen temppeli ja pitkä kaksikerroksinen Attaloksen stoa. Temppeli on 400-luvulta eaa., ja siitä tehtiin myöhemmin kirkko. Stoa on noin 115 metriä pitkä pylväikkö, jonka Pergamonin kuningas Attalos II rakennutti noin vuonna 150 eaa. Se on jälleenrakennus: Amerikkalainen Klassisten tutkimusten koulu rakensi sen alkuperäisille perustuksille 1950-luvulla, ja sen sisällä toimii Agora-museo.
+Kerronta: Antiikin agoran raunioalueella erottuvat kukkulalla kohoava Hefaistoksen temppeli ja pitkä kaksikerroksinen Attaloksen stoa. Temppeli on 400-luvulta eaa. Stoa on noin 115 metriä pitkä pylväikkö, jonka Pergamonin kuningas Attalos II rakennutti noin vuonna 150 eaa. Se on jälleenrakennus: Amerikkalainen klassisten opintojen koulu rakensi sen alkuperäisille perustuksille 1950-luvulla, ja sen sisällä toimii Agora-museo.
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
@@ -292,7 +292,7 @@ Huomiot:
 
 ### 5. Hefaistoksen temppeli (Q756824, H = 10.0 m)
 
-Kerronta: Hefaistoksen temppeli seisoo kukkulalla Ateenan agoran laidalla, ja sen 34 doorilaista pylvästä ovat yhä paikoillaan. Temppeli on rakennettu Penteli-vuoren marmorista, samasta kivestä kuin Parthenon, ja työ alkoi vuonna 449 eaa. Luultavasti 600-luvulla se muutettiin Pyhän Yrjön kirkoksi, joka toimi 1830-luvulle asti. Kirkkokäyttö suojasi rakennuksen kivenotolta, joka tuhosi monta muuta agoran rakennusta, ja siksi temppeli on yksi parhaiten säilyneistä antiikin temppeleistä.
+Kerronta: Hefaistoksen temppeli seisoo kukkulalla Ateenan agoran laidalla, ja sen 34 doorilaista pylvästä ovat yhä paikoillaan. Temppeli on rakennettu Penteli-vuoren marmorista, samasta kivestä kuin Parthenon, ja työ alkoi noin vuonna 449 eaa. Luultavasti 600-luvulla se muutettiin Pyhän Yrjön kirkoksi, joka toimi 1830-luvulle asti. Kirkkokäyttö suojasi rakennuksen kivenotolta, joka tuhosi monta muuta agoran rakennusta, ja siksi temppeli on yksi parhaiten säilyneistä antiikin temppeleistä.
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
@@ -315,7 +315,7 @@ Huomiot:
 
 ### 6. Akropolis ja Propylaia (Q131013, H = 12.0 m)
 
-Kerronta: Akropolis kohoaa Ateenan keskustan yllä kalliokukkulana, jonka länsipäässä seisoo marmorinen porttirakennus Propylaia. Sen julkisivussa on kuusi doorilaista pylvästä, ja sisällä kulkutietä reunustavat ionilaiset pylväät. Viidestä ovesta keskimmäinen on muita leveämpi. Arkkitehti Mnesikles aloitti portin rakentamisen vuonna 437 eaa. osana Perikleen rakennusohjelmaa, ja Peloponnesoksen sota keskeytti työn, vaikka suunnitelman pääosat ehtivät valmistua. Sisään tullessa oikealle jää Niken temppeli, ja portin takana kallion laella ovat Erekhtheion ja Parthenon.
+Kerronta: Akropolis kohoaa Ateenan keskustan yllä kalliokukkulana, jonka länsipäässä seisoo marmorinen porttirakennus Propylaia. Sen julkisivussa on kuusi doorilaista pylvästä, ja sisällä kulkutietä reunustavat ionilaiset pylväät. Viidestä ovesta keskimmäinen on muita leveämpi. Arkkitehti Mnesikles aloitti portin rakentamisen Perikleen rakennusohjelman osana vuonna 437 eaa. Peloponnesoksen sota keskeytti työn, mutta suunnitelman pääosat ehtivät valmistua. Sisään tullessa oikealle jää Niken temppeli, ja portin takana kallion laella ovat Erekhtheion ja Parthenon.
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
@@ -341,7 +341,7 @@ Huomiot:
 
 ### 7. Erekhtheion (Q242741, H = 9.3 m)
 
-Kerronta: Erekhtheion seisoo Akropoliksen pohjoislaidalla, ja sen eteläkuistin kattoa kantaa kuusi naispatsasta, jotka seisovat matalan muurin päällä. Kuistin patsaat ovat kopioita, ja alkuperäiset on viety suojaan ilmansaasteilta. Ionilainen temppeli rakennettiin vuosina 421–406 eaa. kallion epätasaiselle pinnalle, ja sen länsiosan lattia on noin kolme metriä itäosaa alempana. Pohjoisen kuistin kuusi ionilaista pylvästä ovat yli seitsemän metriä korkeita, itäpäädyn pylväät noin 6,6 metriä.
+Kerronta: Erekhtheion seisoo Akropoliksen pohjoislaidalla, ja sen eteläkuistin kattoa kantaa kuusi naispatsasta, jotka seisovat matalan muurin päällä. Patsaat ovat kopioita: viisi alkuperäistä on viety suojaan ilmansaasteilta, ja kuudes on Lontoossa. Ionilainen temppeli rakennettiin kallion epätasaiselle pinnalle vuosina 421–406 eaa., ja sen länsiosan lattia on noin kolme metriä itäosaa alempana. Pohjoisen kuistin pylväät ovat yli seitsemän metriä korkeita, itäpäädyn pylväät noin 6,6 metriä.
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|
@@ -365,7 +365,7 @@ Huomiot:
 
 ### 8. Parthenon (Q10288, H = 13.72 m)
 
-Kerronta: Parthenon täyttää Akropoliksen laen: pitkä doorilainen marmoritemppeli, jonka päädyissä on kahdeksan ja pitkillä sivuilla seitsemäntoista pylvästä. Se oli Athenan temppeli, ja sen sisällä seisoi kullasta ja norsunluusta tehty jumalattaren patsas. Myöhemmin rakennus toimi kirkkona ja moskeijana. Vuonna 1687 venetsialaisten kranaatti osui turkkilaisten ruutivarastoon temppelin sisällä, ja räjähdys tuhosi sen keskiosan. Monet veistokset on viety pois 1800-luvun alussa, mutta ulkopylväistä osa seisoo yhä.
+Kerronta: Parthenon täyttää Akropoliksen laen: pitkä doorilainen marmoritemppeli, jonka päädyissä on kahdeksan ja pitkillä sivuilla seitsemäntoista pylvästä. Se oli Athenan temppeli, ja sen sisällä seisoi kullasta ja norsunluusta tehty jumalattaren patsas. Myöhemmin rakennus toimi kirkkona ja moskeijana. Vuonna 1687 venetsialaisten kranaatti osui turkkilaisten ruutivarastoon temppelin sisällä, ja räjähdys tuhosi sen keskiosan. Monet veistokset vietiin pois 1800-luvun alussa. Ulkopylväistä osa seisoo yhä.
 
 | Väite | Lähde 1 | Lähde 2 |
 |---|---|---|

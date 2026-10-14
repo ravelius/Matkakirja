@@ -6,8 +6,8 @@
   {
    "tunnus": "ateena-historia-persialaiset",
    "otsikko": "Persialaiset ja Salamis",
-   "teksti": "Syyskuussa 480 eaa. persialaiset valtasivat Ateenan, jonka asukkaita oli jo viety Salamiin saarelle. Akropoliksella puolustautuneet kukistettiin, ja persialaiset polttivat kukkulan temppelit, myös vanhemman Parthenonin. Pian tämän jälkeen kreikkalaiset voittivat persialaisten laivaston Salamiin salmessa, saaren ja mantereen välissä; voitosta kiitetään ateenalaista Themistoklesta.",
-   "kesto_s": 28.7,
+   "teksti": "Syyskuussa 480 eaa. persialaiset valtasivat Ateenan, jonka asukkaista suuri osa oli jo viety pois, muun muassa Salamiin saarelle. Akropoliksella puolustautuneet kukistettiin, ja persialaiset polttivat kukkulan temppelit, myös vanhemman Parthenonin. Pian tämän jälkeen kreikkalaiset voittivat persialaisten laivaston Salamiin salmessa, saaren ja mantereen välissä; voitosta kiitetään ateenalaista Themistoklesta.",
+   "kesto_s": 32.2,
    "lahteet": [
     "https://en.wikipedia.org/wiki/Achaemenid_destruction_of_Athens",
     "https://www.thecollector.com/persian-destruction-of-athens/",
@@ -29,8 +29,8 @@
   {
    "tunnus": "ateena-historia-parthenon",
    "otsikko": "Parthenonin rakentaminen",
-   "teksti": "Perikles käynnisti Parthenonin rakentamisen vuonna 447 eaa., kolmisenkymmentä vuotta persialaisten tuhon jälkeen. Arkkitehteina työskentelivät Iktinos ja Kallikrates, ja kuvanveistäjä Feidias valvoi veistoskoristelua. Temppeli Athenalle tehtiin Pentelikon-vuoren marmorista, ja rahat tulivat Deloksen liiton kassasta. Rakennus oli pääosin valmis vuonna 432 eaa.",
-   "kesto_s": 28.0,
+   "teksti": "Perikles käynnisti Parthenonin rakentamisen vuonna 447 eaa., yli kolmekymmentä vuotta persialaisten tuhon jälkeen. Arkkitehteina työskentelivät Iktinos ja Kallikrates, ja kuvanveistäjä Feidias valvoi veistoskoristelua. Athenalle omistettu temppeli rakennettiin Pentelikon-vuoren marmorista. Temppeli oli pääosin valmis vuonna 438 eaa., ja koristelu valmistui vuoteen 432 eaa. mennessä.",
+   "kesto_s": 30.1,
    "lahteet": [
     "https://en.wikipedia.org/wiki/Parthenon",
     "https://www.worldhistory.org/Parthenon/",
@@ -50,8 +50,8 @@
   {
    "tunnus": "ateena-historia-demokratia",
    "otsikko": "Demokratian synty",
-   "teksti": "Tyranni Hippias karkotettiin Ateenasta noin vuonna 510 eaa., ja noin vuonna 508 eaa. Kleisthenes uudisti kaupungin järjestyksen. Kansalaiset jaettiin asuinpaikan mukaan kymmeneen heimoon, ja neuvostossa oli 500 jäsentä. Kansankokous kokoontui Pnyx-kukkulalla, neuvosto Agoralla, kaupan ja hallinnon keskuksessa Akropoliksen juurella.",
-   "kesto_s": 27.3,
+   "teksti": "Tyranni Hippias karkotettiin Ateenasta noin vuonna 510 eaa., ja pian sen jälkeen, noin vuonna 508 eaa., Kleisthenes uudisti kaupungin hallinnon. Kansalaiset jaettiin asuinpaikan mukaan kymmeneen heimoon, ja neuvostossa oli 500 jäsentä. Kansankokous kokoontui aikanaan Pnyx-kukkulalla, neuvosto Agoralla, kaupan ja hallinnon keskuksessa Akropoliksen luoteispuolella.",
+   "kesto_s": 30.1,
    "lahteet": [
     "https://en.wikipedia.org/wiki/Cleisthenes",
     "https://www.worldhistory.org/Cleisthenes/",
@@ -74,8 +74,8 @@
   {
    "tunnus": "ateena-historia-sokrates",
    "otsikko": "Sokrateen oikeudenkäynti",
-   "teksti": "Vuonna 399 eaa. ateenalainen valamiehistö tuomitsi filosofi Sokrateen, joka oli 70-vuotias. Syytteen nosti Meletos, ja Anytos ja Lykon liittyivät häneen: Sokrates ei syytteen mukaan tunnustanut kaupungin jumalia ja johti nuoria harhaan. Valamiehistö julisti hänet syylliseksi ja langetti kuolemantuomion. Sokrates joi myrkkymaljan. Tapahtumista kertovat Platon ja Xenofon.",
-   "kesto_s": 32.2,
+   "teksti": "Vuonna 399 eaa. ateenalaiseen oikeuteen haastettiin filosofi Sokrates, joka oli 70-vuotias. Syytteen nosti Meletos, ja mukaan liittyivät Anytos ja Lykon: Sokrates ei syytteen mukaan tunnustanut kaupungin jumalia ja johti nuoria harhaan. Valamiehistö julisti hänet syylliseksi ja langetti kuolemantuomion, ja Sokrates joi myrkkymaljan. Tapahtumista kertovat Platon ja Ksenofon.",
+   "kesto_s": 32.9,
    "lahteet": [
     "https://en.wikipedia.org/wiki/Trial_of_Socrates",
     "https://www.worldhistory.org/Socrates/",
@@ -95,8 +95,8 @@
   {
    "tunnus": "ateena-historia-olympieion",
    "otsikko": "Hadrianuksen Olympieion",
-   "teksti": "Olympieionin rakennus alkoi 500-luvulla eaa. Peisistratoksen suvun aikana, mutta työ pysähtyi vuoden 510 eaa. tienoilla tyrannien vallan päätyttyä. Kuningas Antiokhos IV jatkoi sitä vuonna 174 eaa., ja valmiiksi temppeli tuli vasta keisari Hadrianuksen aikana: hän vihki sen käyttöön vuosina 131–132 jaa. Pylväitä oli 104, ja niistä 15 seisoo yhä pystyssä.",
-   "kesto_s": 35.0,
+   "teksti": "Olympieionin rakentaminen alkoi 500-luvulla eaa. Peisistratoksen suvun aikana, mutta työ pysähtyi vuoden 510 eaa. tienoilla tyrannien vallan päätyttyä. Seleukidien kuningas Antiokhos IV jatkoi sitä vuonna 174 eaa., ja valmiiksi temppeli tuli vasta keisari Hadrianuksen aikana: se vihittiin käyttöön vuosina 131–132 jaa. Pylväitä oli 104; vuonna 1852 myrsky kaatoi yhden, ja 15 on yhä pystyssä.",
+   "kesto_s": 37.8,
    "lahteet": [
     "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
     "https://penelope.uchicago.edu/encyclopaedia_romana/greece/olympieion/olympianzeus.html",
@@ -116,8 +116,8 @@
   {
    "tunnus": "ateena-historia-parthenon1687",
    "otsikko": "Parthenonin räjähdys",
-   "teksti": "Vuonna 1687 venetsialaiset Francesco Morosinin johdolla piirittivät Ateenan Akropoliksen Morean sodassa. Ottomaanit olivat varastoineet ruutia Parthenoniin, ja 26. syyskuuta venetsialainen kranaatti osui siihen. Räjähdys tuhosi suuren osan temppelin seinistä ja katosta, ja noin 300 ihmistä kuoli. Venetsialaiset poistuivat Ateenasta seuraavana vuonna.",
-   "kesto_s": 28.7,
+   "teksti": "Vuonna 1687 venetsialaiset Francesco Morosinin johdolla piirittivät Ateenan Akropolista Morean sodassa. Ottomaanit olivat linnoittautuneet Akropolikselle ja varastoineet ruutia Parthenoniin, ja 26. syyskuuta venetsialainen kranaatti osui siihen. Räjähdys tuhosi suuren osan temppelin seinistä ja katosta. Venetsialaiset poistuivat Ateenasta seuraavana vuonna.",
+   "kesto_s": 27.3,
    "lahteet": [
     "https://en.wikipedia.org/wiki/Parthenon",
     "https://en.wikipedia.org/wiki/Francesco_Morosini",
@@ -137,8 +137,8 @@
   {
    "tunnus": "ateena-historia-paakaupunki1834",
    "otsikko": "Ateena pääkaupungiksi",
-   "teksti": "Baijerilainen prinssi Otto saapui vuonna 1833 Nafplioon, joka oli silloin Kreikan väliaikainen pääkaupunki, ja hänestä tuli maan ensimmäinen kuningas. Vuonna 1834 pääkaupunki siirrettiin Ateenaan. Arkkitehdit Stamatios Kleanthis ja Eduard Schaubert olivat laatineet Ateenalle uuden asemakaavan jo vuonna 1832, ennen siirtoa.",
-   "kesto_s": 28.0,
+   "teksti": "Baijerilainen prinssi Otto, Kreikan ensimmäinen kuningas, saapui laivalla vuonna 1833 Nafplioon, joka oli silloin maan väliaikainen pääkaupunki. Vuonna 1834 pääkaupunki siirrettiin Nafplionista Ateenaan. Arkkitehdit Stamatios Kleanthis ja Eduard Schaubert olivat laatineet Ateenalle uuden asemakaavan jo vuonna 1832, ennen siirtoa.",
+   "kesto_s": 27.3,
    "lahteet": [
     "https://www.rmg.co.uk/collections/objects/rmgc-object-12641",
     "https://www.greecetravel.com/nafplio/history.html",
@@ -160,8 +160,8 @@
   {
    "tunnus": "ateena-historia-olympia1896",
    "otsikko": "Ensimmäiset nykyajan kisat",
-   "teksti": "Ensimmäiset nykyaikaiset olympialaiset pidettiin Ateenassa 6.–15. huhtikuuta 1896. Pierre de Coubertin oli ollut järjestämässä vuoden 1894 Sorbonnen kongressia, joka päätti elvyttää kisat. Avaus- ja päätösjuhla pidettiin Kallimarmaron stadionilla, joka rakennettiin marmorista antiikin stadionin paikalle vuosina 1895–96 Georgios Averoffin rahoituksella. Maratonin voitti kreikkalainen Spyridon Louis.",
-   "kesto_s": 30.8,
+   "teksti": "Ensimmäiset nykyaikaiset olympialaiset pidettiin Ateenassa 6.–15. huhtikuuta 1896. Pierre de Coubertin järjesti vuoden 1894 Sorbonnen kongressin, joka päätti elvyttää kisat. Avaus- ja päätösjuhla pidettiin Kallimarmaron stadionilla, joka rakennettiin uudelleen marmorista antiikin stadionin paikalle vuosina 1895–96 Georgios Averoffin rahoituksella. Maratonin voitti kreikkalainen Spyridon Louis.",
+   "kesto_s": 30.1,
    "lahteet": [
     "https://en.wikipedia.org/wiki/1896_Summer_Olympics",
     "https://en.wikipedia.org/wiki/Panathenaic_Stadium",

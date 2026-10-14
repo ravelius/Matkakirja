@@ -6,8 +6,8 @@
   {
    "tunnus": "praha-historia-kaarle-iv",
    "otsikko": "Kaarle IV:n Praha",
-   "teksti": "Vuonna 1344 Prahan piispanistuin nousi arkkipiispan istuimeksi, ja samana vuonna laskettiin Pyhän Vituksen katedraalin peruskivi. Kaarle IV perusti vuonna 1348 Uudenkaupungin. Vuoden 1342 tulva vahingoitti pahoin Juditin siltaa, ja uuden Kaarlensillan rakennus alkoi vuonna 1357 ja päättyi vasta vuonna 1402.",
-   "kesto_s": 28.0,
+   "teksti": "Vuonna 1344 Prahan hiippakunta korotettiin arkkihiippakunnaksi, ja samana vuonna laskettiin Pyhän Vituksen katedraalin peruskivi. Kaarle IV perusti vuonna 1348 Prahan Uudenkaupungin. Vuoden 1342 tulva vaurioitti pahoin Juditin siltaa, ja sen tilalle rakennettiin Kaarlensilta. Työ alkoi vuonna 1357 ja valmistui vasta vuonna 1402.",
+   "kesto_s": 29.4,
    "lahteet": [
     "https://www.lovecpokladu.cz/en/home/21-11-1344-the-foundation-stone-of-st-vitus-cathedral-was-laid-8303",
     "https://en.wikipedia.org/wiki/Prague_Cathedral",
@@ -31,8 +31,8 @@
   {
    "tunnus": "praha-historia-kaarlensilta",
    "otsikko": "Ainoa silta",
-   "teksti": "Kaarlensilta oli Prahassa Vltavan ainoa ylityspaikka vuoteen 1841, jolloin valmistui keisari Frans I:n ketjusilta. Nepomukin Johanneksen pronssipatsas pystytettiin sillalle vuonna 1683, ja useimmat muut patsaat tulivat paikalleen vuosina 1683–1714. Useimmat nykyiset patsaat ovat kopioita, sillä alkuperäisiä alettiin vaihtaa 1960-luvulla. Alkuperäiset ovat nyt museossa ja Vyšehradin kasemateissa.",
-   "kesto_s": 32.2,
+   "teksti": "Kaarlensilta oli Prahassa Vltavan ainoa ylityspaikka vuoteen 1841, jolloin valmistui keisari Frans I:n ketjusilta. Johannes Nepomukilaisen pronssipatsas pystytettiin sillalle vuonna 1683, ja useimmat muut patsaat tulivat paikalleen vuoteen 1714 mennessä. Monet patsaista ovat kopioita, sillä vaurioituneita alkuperäisiä on vaihdettu jo 1900-luvun alusta lähtien. Alkuperäisiä säilytetään museossa ja Vyšehradin kasemateissa.",
+   "kesto_s": 34.3,
    "lahteet": [
     "https://www.archiweb.cz/en/n/home/pred-170-lety-mela-praha-jen-jeden-most-pres-vltavu",
     "https://www.visitczechia.com/en-us/news/2025/07/n-charles-bridge-660-years",
@@ -98,7 +98,7 @@
   {
    "tunnus": "praha-historia-josefov",
    "otsikko": "Josefov",
-   "teksti": "Josefov oli Prahan juutalaisten getto. Kortteli sai nimensä keisari Joosef II:n mukaan vuonna 1850, ja hänen uudistuksensa 1780-luvun alussa olivat parantaneet juutalaisten asemaa. Vuonna 1893 hyväksytty saneerauslaki johti siihen, että suurin osa korttelista purettiin. Jäljelle jäivät vanha hautausmaa ja kuusi synagogaa, muun muassa 1270-luvulla rakennettu Vanha-uusi synagoga.",
+   "teksti": "Josefov oli Prahan juutalaisten getto. Kortteli sai nimensä keisari Joosef II:n mukaan vuonna 1850, ja hänen uudistuksensa 1780-luvun alussa olivat parantaneet juutalaisten asemaa. Vuonna 1893 hyväksytty saneerauslaki johti siihen, että suurin osa korttelista purettiin. Jäljelle jäivät vanha hautausmaa ja kuusi synagogaa, muun muassa 1270-luvulla rakennettu Vanhauusi synagoga.",
    "kesto_s": 32.9,
    "lahteet": [
     "https://en.wikipedia.org/wiki/Josefov,_Prague",
@@ -120,8 +120,8 @@
   {
    "tunnus": "praha-historia-kansallisteatteri",
    "otsikko": "Teatteri, joka nousi tuhkasta",
-   "teksti": "Kansallisteatteri rakennettiin lähes kokonaan kansalaisten keräämillä lahjoituksilla. Teatteri avattiin 11. kesäkuuta 1881 kruununprinssi Rudolfin vierailun kunniaksi, ja avajaisissa kantaesitettiin Smetanan Libuše. Tulipalo tuhosi 12. elokuuta 1881 kupolin, katsomon ja näyttämön. Uusi keräys tuotti alle kahdessa kuukaudessa miljoona kultarahaa, ja Josef Schulzin johtama uudelleenrakennus avattiin 18. marraskuuta 1883.",
-   "kesto_s": 32.9,
+   "teksti": "Kansallisteatteri rakennettiin kansalaisten keräämillä lahjoituksilla. Teatteri avattiin 11. kesäkuuta 1881 kruununprinssi Rudolfin vierailun kunniaksi, ja avajaisissa kantaesitettiin Smetanan Libuše. Tulipalo tuhosi 12. elokuuta 1881 kupolin, katsomon ja näyttämön. Uusi keräys tuotti alle kahdessa kuukaudessa miljoona guldenia, ja Josef Schulzin johtaman uudelleenrakennuksen jälkeen teatteri avattiin uudelleen 18. marraskuuta 1883.",
+   "kesto_s": 33.6,
    "lahteet": [
     "https://en.wikipedia.org/wiki/National_Theatre_(Prague)",
     "http://prague.eu/en/object/places/490/national-theatre",
@@ -142,8 +142,8 @@
   {
    "tunnus": "praha-historia-venceslauksen-aukio",
    "otsikko": "Aukio, jolla historia kääntyi",
-   "teksti": "Elokuun 20.–21. yönä 1968 Varsovan liiton joukot hyökkäsivät Tšekkoslovakiaan, ja aamulla neuvostopanssarit olivat Venceslauksen aukiolla ihmisjoukkojen ympäröiminä. Tammikuun 16. päivänä 1969 opiskelija Jan Palach sytytti itsensä tuleen vastalauseena miehitykselle ja kuoli kolme päivää myöhemmin. Marraskuun 17. päivänä 1989 poliisi hajotti opiskelijamarssin Národní třída -kadulla, ja 24. päivänä Havel ja Dubček ilmestyivät aukion Melantrichin talon parvekkeelle.",
-   "kesto_s": 38.5,
+   "teksti": "Elokuun 20.–21. yönä 1968 Varsovan liiton joukot hyökkäsivät Tšekkoslovakiaan, ja aamulla neuvostopanssarit olivat Venceslauksen aukiolla ihmisjoukkojen ympäröiminä. Tammikuun 16. päivänä 1969 opiskelija Jan Palach sytytti itsensä tuleen vastalauseena miehitykselle ja kuoli kolme päivää myöhemmin. Marraskuun 17. päivänä 1989 poliisi hajotti opiskelijamarssin Národní třída -kadulla, ja saman kuun 24. päivänä Havel ja Dubček ilmestyivät Melantrichin talon parvekkeelle.",
+   "kesto_s": 39.2,
    "lahteet": [
     "https://www.helloprague.net/wenceslas-square-prague/",
     "https://www.visitczechia.com/en-us/news/2025/11/n-places-velvet-revolution-prague-1989",

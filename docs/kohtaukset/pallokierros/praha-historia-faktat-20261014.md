@@ -6,18 +6,18 @@ Kirjoittajat: Sonnet-agentit (Sisältökirjuri 14.10.2026). Kaksi lähdettä per
 
 | tunnus | otsikko | sanaa | kesto (arvio) |
 |---|---|---|---|
-| praha-historia-kaarle-iv | Kaarle IV:n Praha | 40 | 28.0 s |
-| praha-historia-kaarlensilta | Ainoa silta | 46 | 32.2 s |
+| praha-historia-kaarle-iv | Kaarle IV:n Praha | 42 | 29.4 s |
+| praha-historia-kaarlensilta | Ainoa silta | 49 | 34.3 s |
 | praha-historia-heittoikkuna | Heittoikkuna 1618 | 43 | 30.1 s |
 | praha-historia-rudolf2 | Rudolf II:n tähtitieteilijät | 43 | 30.1 s |
 | praha-historia-josefov | Josefov | 47 | 32.9 s |
-| praha-historia-kansallisteatteri | Teatteri, joka nousi tuhkasta | 47 | 32.9 s |
-| praha-historia-venceslauksen-aukio | Aukio, jolla historia kääntyi | 55 | 38.5 s |
+| praha-historia-kansallisteatteri | Teatteri, joka nousi tuhkasta | 48 | 33.6 s |
+| praha-historia-venceslauksen-aukio | Aukio, jolla historia kääntyi | 56 | 39.2 s |
 | praha-historia-vituksen-katedraali | Katedraali, joka valmistui vasta 1929 | 40 | 28.0 s |
 
 ## Kaarle IV:n Praha (`praha-historia-kaarle-iv`)
 
-Teksti: Vuonna 1344 Prahan piispanistuin nousi arkkipiispan istuimeksi, ja samana vuonna laskettiin Pyhän Vituksen katedraalin peruskivi. Kaarle IV perusti vuonna 1348 Uudenkaupungin. Vuoden 1342 tulva vahingoitti pahoin Juditin siltaa, ja uuden Kaarlensillan rakennus alkoi vuonna 1357 ja päättyi vasta vuonna 1402.
+Teksti: Vuonna 1344 Prahan hiippakunta korotettiin arkkihiippakunnaksi, ja samana vuonna laskettiin Pyhän Vituksen katedraalin peruskivi. Kaarle IV perusti vuonna 1348 Prahan Uudenkaupungin. Vuoden 1342 tulva vaurioitti pahoin Juditin siltaa, ja sen tilalle rakennettiin Kaarlensilta. Työ alkoi vuonna 1357 ja valmistui vasta vuonna 1402.
 
 Kuva: File:Wenceslas Hollar - Prague (State 1) 2.jpg (Wenceslaus Hollar (1607-1677), skannaus University of Toronto Wenceslaus Hollar Digital Collection; Public domain; 3760×1714 px)
 
@@ -25,7 +25,7 @@ Lähteet: https://www.lovecpokladu.cz/en/home/21-11-1344-the-foundation-stone-of
 
 ## Ainoa silta (`praha-historia-kaarlensilta`)
 
-Teksti: Kaarlensilta oli Prahassa Vltavan ainoa ylityspaikka vuoteen 1841, jolloin valmistui keisari Frans I:n ketjusilta. Nepomukin Johanneksen pronssipatsas pystytettiin sillalle vuonna 1683, ja useimmat muut patsaat tulivat paikalleen vuosina 1683–1714. Useimmat nykyiset patsaat ovat kopioita, sillä alkuperäisiä alettiin vaihtaa 1960-luvulla. Alkuperäiset ovat nyt museossa ja Vyšehradin kasemateissa.
+Teksti: Kaarlensilta oli Prahassa Vltavan ainoa ylityspaikka vuoteen 1841, jolloin valmistui keisari Frans I:n ketjusilta. Johannes Nepomukilaisen pronssipatsas pystytettiin sillalle vuonna 1683, ja useimmat muut patsaat tulivat paikalleen vuoteen 1714 mennessä. Monet patsaista ovat kopioita, sillä vaurioituneita alkuperäisiä on vaihdettu jo 1900-luvun alusta lähtien. Alkuperäisiä säilytetään museossa ja Vyšehradin kasemateissa.
 
 Kuva: File:Alois von Saar - Ansicht von Prag mit der Moldaubrücke (Karlsbrücke) - 3573 - Kunsthistorisches Museum.jpg (Alois von Saar (1779-1840 tai myöhemmin), öljymaalaus 1831; kuvalähde Belvedere (digital.belvedere.at); Public domain; 3508×2278 px)
 
@@ -49,7 +49,7 @@ Lähteet: https://english.radio.cz/1583-rudolf-ii-moves-seat-habsburg-monarchy-v
 
 ## Josefov (`praha-historia-josefov`)
 
-Teksti: Josefov oli Prahan juutalaisten getto. Kortteli sai nimensä keisari Joosef II:n mukaan vuonna 1850, ja hänen uudistuksensa 1780-luvun alussa olivat parantaneet juutalaisten asemaa. Vuonna 1893 hyväksytty saneerauslaki johti siihen, että suurin osa korttelista purettiin. Jäljelle jäivät vanha hautausmaa ja kuusi synagogaa, muun muassa 1270-luvulla rakennettu Vanha-uusi synagoga.
+Teksti: Josefov oli Prahan juutalaisten getto. Kortteli sai nimensä keisari Joosef II:n mukaan vuonna 1850, ja hänen uudistuksensa 1780-luvun alussa olivat parantaneet juutalaisten asemaa. Vuonna 1893 hyväksytty saneerauslaki johti siihen, että suurin osa korttelista purettiin. Jäljelle jäivät vanha hautausmaa ja kuusi synagogaa, muun muassa 1270-luvulla rakennettu Vanhauusi synagoga.
 
 Kuva: File:Prager Josefstadt - Durchhaus genannt Beim Sisling.jpg (Zikmund Reach (1859-1935), valokuva ennen vuotta 1919; kuvalähde Archiv Corps Austria; Public domain; 1011×1634 px)
 
@@ -57,7 +57,7 @@ Lähteet: https://en.wikipedia.org/wiki/Josefov,_Prague; https://expats.cz/czech
 
 ## Teatteri, joka nousi tuhkasta (`praha-historia-kansallisteatteri`)
 
-Teksti: Kansallisteatteri rakennettiin lähes kokonaan kansalaisten keräämillä lahjoituksilla. Teatteri avattiin 11. kesäkuuta 1881 kruununprinssi Rudolfin vierailun kunniaksi, ja avajaisissa kantaesitettiin Smetanan Libuše. Tulipalo tuhosi 12. elokuuta 1881 kupolin, katsomon ja näyttämön. Uusi keräys tuotti alle kahdessa kuukaudessa miljoona kultarahaa, ja Josef Schulzin johtama uudelleenrakennus avattiin 18. marraskuuta 1883.
+Teksti: Kansallisteatteri rakennettiin kansalaisten keräämillä lahjoituksilla. Teatteri avattiin 11. kesäkuuta 1881 kruununprinssi Rudolfin vierailun kunniaksi, ja avajaisissa kantaesitettiin Smetanan Libuše. Tulipalo tuhosi 12. elokuuta 1881 kupolin, katsomon ja näyttämön. Uusi keräys tuotti alle kahdessa kuukaudessa miljoona guldenia, ja Josef Schulzin johtaman uudelleenrakennuksen jälkeen teatteri avattiin uudelleen 18. marraskuuta 1883.
 
 Kuva: File:National Theatre before fire west view.png (Tuntematon (Architektonický obzor, Praha 1914, s. 135); Public domain; 2642×1849 px)
 
@@ -65,7 +65,7 @@ Lähteet: https://en.wikipedia.org/wiki/National_Theatre_(Prague); http://prague
 
 ## Aukio, jolla historia kääntyi (`praha-historia-venceslauksen-aukio`)
 
-Teksti: Elokuun 20.–21. yönä 1968 Varsovan liiton joukot hyökkäsivät Tšekkoslovakiaan, ja aamulla neuvostopanssarit olivat Venceslauksen aukiolla ihmisjoukkojen ympäröiminä. Tammikuun 16. päivänä 1969 opiskelija Jan Palach sytytti itsensä tuleen vastalauseena miehitykselle ja kuoli kolme päivää myöhemmin. Marraskuun 17. päivänä 1989 poliisi hajotti opiskelijamarssin Národní třída -kadulla, ja 24. päivänä Havel ja Dubček ilmestyivät aukion Melantrichin talon parvekkeelle.
+Teksti: Elokuun 20.–21. yönä 1968 Varsovan liiton joukot hyökkäsivät Tšekkoslovakiaan, ja aamulla neuvostopanssarit olivat Venceslauksen aukiolla ihmisjoukkojen ympäröiminä. Tammikuun 16. päivänä 1969 opiskelija Jan Palach sytytti itsensä tuleen vastalauseena miehitykselle ja kuoli kolme päivää myöhemmin. Marraskuun 17. päivänä 1989 poliisi hajotti opiskelijamarssin Národní třída -kadulla, ja saman kuun 24. päivänä Havel ja Dubček ilmestyivät Melantrichin talon parvekkeelle.
 
 Kuva: File:1989 November Prague Velvet Revolution Wenceslas Square night time protest.jpg (RobbieIanMorrison (own work); CC BY 4.0; 6307×4134 px)
 
