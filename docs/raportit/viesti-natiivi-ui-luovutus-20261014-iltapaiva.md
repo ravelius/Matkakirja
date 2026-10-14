@@ -57,3 +57,11 @@ mykistetty, nollaus Postivahdin kautta). Ajoskriptit: /Users/Shared/Claude/proto
 - AsetteluTesti.cs (Editor) ei käänny tarkista.sh:ssa: apuri Myohemmin ei ole masterissa → schedule.Execute(...).StartingIn.
 - Irrotetut ajot katkeavat session nollauksessa, ellei niitä käynnistetä perl setsid -kääreellä (issauto/kohdevalikko v4 kuolivat 11.4x).
 - Levy: worktreet wt/proto-natiivi-ui-{issauto,kohdevalikko,kertomuskuvat} voi poistaa, kun NS/PK on ottanut SHA:t (git worktree remove).
+
+## PT:n palaute 13.0x (luovutuksen jälkeen) iss-palaute-190 0390f5786: EI vielä kuittausta
+- iPhone pysty OK (lukemat, aikajana, napit, pienoispallo).
+- 1) Faktalaatikko editorissa valkoinen → todista simulla läpinäkyvyys (myös latausruutu): SIMU NYT Julkaisijalta.
+- 2) iPad VAAKA: lukemat pieniä ja levinneet koko alareunalle → 2 × 2 -rypäs (kuten iPhonella) VASEMPAAN ALAKULMAAN, koko iPhonen
+  suhteessa ruutuun (RakettiNakyma.Sovita: KapeaLeveys-ehto pois, lukemat-elementin leveys rajattava ja align vasemmalle; mittakaava
+  ruudun lyhyemmästä sivusta); aikajana saa jäädä leveäksi.
+- Simuarkki iPhone + iPad vaaka → PT.
