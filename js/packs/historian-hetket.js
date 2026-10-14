@@ -5151,6 +5151,8 @@ export const HISTORIAN_HETKET = [
     paikka: "Belgradin linnoitus (Kalemegdan)",
     iso: "SRB",
     lat: 44.8233, lon: 20.4503,
+    // Belgrad liittyi laudan kaupungiksi 14.10.2026 (juna 193): Kalemegdan on kaupungin laatan kohdalla.
+    kattoVapaa: true,
     kuvaversio: 4,
     teksti: "Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemmin, haavoittuu taistelussa ja joutuu perääntymään joukkoineen. Piiritykseen tuotu raskas tykistö ja suuri osa osmanien leirivarusteista jäävät kristittyjen haltuun, kun leiri vallataan yllätyshyökkäyksen jälkeen. Belgrad pysyy kristityn Euroopan käsissä vielä seuraavat seitsemänkymmentä vuotta, ja voitosta kerrotaan tulleen katolisen kirkon keskipäivän kellonsoiton perinteen taustalle useissa maissa.",
     kuvat: [
@@ -5450,6 +5452,8 @@ export const HISTORIAN_HETKET = [
     paikka: "Sfatul Țării -palatsi, Chișinău",
     iso: "MDA",
     lat: 47.0222, lon: 28.8172,
+    // Chișinău liittyi laudan kaupungiksi 14.10.2026 (juna 193): paikka on kaupungin laatan kohdalla.
+    kattoVapaa: true,
     kuvaversio: 4,
     teksti: "\"Kahdeksankymmentäkuusi puolesta.\" Ääni, joka lukee ääneskirjaimet Sfatul Țăriin istuntosalissa, ei korota sävyään, mutta sali hiljenee silti kokonaan. On 27. maaliskuuta 1918 vanhaa kalenteria (9. huhtikuuta uutta), ja Bessarabian kansanedustuslaitos äänestää liittymisestä Romaniaan: 86 ääntä puolesta, kolme vastaan, kolmekymmentäkuusi tyhjää. Vuosi aiemmin Bessarabia oli julistautunut itsenäiseksi Moldovan kansantasavallaksi Venäjän vallankumouksen kaaoksessa, mutta saksalais-itävaltalaisten joukkojen läsnäolo ja bolševikkien uhka ovat ajaneet edustajat etsimään turvaa naapurista. Puheenjohtaja Ion Inculeț allekirjoittaa päätöksen ehdollisena — se vaatii maareformia, paikallista itsehallintoa ja perusoikeuksien kunnioittamista, ehtoja joita ei koskaan täysin lunastettu. Kolme edustajaa äänestää vastaan avoimesti kädet pystyssä, peläten liiton hukuttavan Bessarabian oman kielen ja hallinnon suurempaan naapuriin. Sali, jossa ääni juuri kaikui, on rakennettu vain kolmetoista vuotta aiemmin lukioksi; siitä tulee hetkeksi paikka, jossa uusi raja Euroopan kartalle piirretään ilman yhtään laukausta.",
     kuvat: [
