@@ -27,6 +27,8 @@ katoaa, koska raportteja ei lueta vanhoina.
   aloitusviestissä (LUE ALUSSA enintään 5 kohtaa, ÄLÄ LUE: koko Raamattu, muiden
   luovutukset, kokonaiset lokit) ja roolitaulukossa docs/vastuukartta.md.
   Luovutus nimeää osiot otsikoittain, ei kopioi niitä.
+- **Peruttua työtä ei siirretä eteenpäin** (omistaja 14.10.2026 klo 23.59): ennen perutun tai tauotetun
+  työn uudelleenaloitusta tarkistetaan loki (grep docs/raamattu-loki/).
 - Tavoite: roolin aloitus nollauksen jälkeen enintään 8 % kontekstista.
   Nollausrajat (liukumat) ja nollauksen kulku: Raamattu, TYÖTAPA JA SESSIOT, kohta I.
 

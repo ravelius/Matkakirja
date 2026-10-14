@@ -36,7 +36,7 @@ sitten muille). Tavoite: aloitus enintään 8 % kontekstista.
 **Asemataululle kirjoittavat vain PT, Asemataulu, Julkaisija ja Natiiviseppä** (talo/eteneminen: Natiiviseppä vaiheet 1–4,
 Julkaisija vaihe 5); Postivahdilla on Artifact-työkalu taulun vientiin ja talo/boost-dokumentin lukuun (omistaja 14.10. klo 23.39). Muilta rooleilta Artifact- ja ArtifactData-työkalut on estetty (KK:n työkalukevennys 14.10.2026 klo 23.14,
 33,3 k → 23,8 k tokenia / kutsu); niiden VAATII TOIMIA -asiat menevät PT:lle rivinä, ja PT kirjoittaa toimi-<rooli>-dokumentin.
-Keskustelukanava saa vain avata taulun (Artifact open). Avoin: Äänittäjälle mahdollisesti Artifact äänisivua varten (PT päättää).
+Keskustelukanava saa vain avata taulun (Artifact open). Äänittäjällä on Artifact vain äänisivun (Matkakirjan äänet) julkaisuun; se ei kirjoita Asemataululle (PT 14.10.).
 
 | Rooli | Lukulista (Raamattu + oma pääohje) | Tarvittavat työkalut (muut pois) |
 |---|---|---|
@@ -53,6 +53,6 @@ Keskustelukanava saa vain avata taulun (Artifact open). Avoin: Äänittäjälle 
 | Siirtoseppä | HISTORIALLISET KOHTEET SEIKKAILUINA, NATIIVI PELI ETUSIJALLE; viesti-siirtoseppa-aloitus.md | Bash, iOS-simu, send_message, Agent |
 | Sisältökirjuri | osiot Tarina ja hahmot, Kirjoittajan säännöt, Tekstien vetovoima, Kaupungit, Maalehdet ja lukeminen, Kuvat ja lähteet; viesti-sisaltokirjuri-aloitus.md | Bash, WebFetch, send_message, Agent; ei simu- eikä tietokonetyökaluja |
 | Laitetestaaja | TYÖTAPA JA SESSIOT osat B (simulaattorit) ja C (testaus); viesti-laitetestaaja-aloitus.md | Bash, iOS-simu; ei selain- eikä tietokonetyökaluja |
-| Äänittäjä | osio Äänet ja luennat, UUSIA ÄÄNIÄ EI GENEROIDA; docs/aloitusviestit/aanittaja.md | Bash, send_message; ei simu-, selain- eikä tietokonetyökaluja; Artifact äänisivua varten avoin (PT päättää) |
+| Äänittäjä | osio Äänet ja luennat, UUSIA ÄÄNIÄ EI GENEROIDA; docs/aloitusviestit/aanittaja.md | Bash, send_message; ei simu-, selain- eikä tietokonetyökaluja; Artifact vain äänisivun (Matkakirjan äänet) julkaisuun, ei Asemataululle (PT 14.10.) |
 | Postivahti | TYÖTAPA JA SESSIOT osat I ja J; KIERROS.md ja NOLLAUS.md | session_mgmt, ScheduleWakeup, Bash, Artifact ja ArtifactData (taulun vienti, talo/boost); ei simu-, selain- eikä tietokonetyökaluja |
 | Asemataulu | TYÖTAPA JA SESSIOT osa J; ASEMATAULU-ROOLI.md, docs/moduulit/asemataulu.md | Artifact, ArtifactData, Cron, Bash, send_message; ei simu-, selain- eikä tietokonetyökaluja |

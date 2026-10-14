@@ -89,7 +89,9 @@ samoista tiedostoista, ja PT tyhjentää etenemisen, kun juna on TF:ssä.
   "TestFlightissa (saapui pp.kk. klo HH.MM)"; lähestyvä on "Juna N", ja kun sisältö on lukittu ja jäljellä
   olevien töiden kesto arvioitu, tila "TestFlightissa arviolta noin klo HH.MM" (PT päivittää arvion).
 - TF-junan teksti alkaa "Uutta (pvm klo aika):", jossa aika on hetki, jolloin TF tuli sisäisille testaajille.
-- RANSKALAISET VIIVAT: junatekstit muodossa "Valmiina:" / "Työn alla:" ja TF:t "Korjattu:" / "Uutta:",
+- JUNAKORTTI (omistaja 14.10.2026 klo 23.59): valmiin junan (TF N) kortissa vain yksi "Uutta:"-lista (pyydetyt
+  muutokset ja muut uudistukset), ei Valmiina- eikä erillistä Korjattu-osiota; kertyvän junan kortissa ennallaan.
+- RANSKALAISET VIIVAT: kertyvän junan tekstit muodossa "Valmiina:" / "Työn alla:" ja TF:t "Uutta:",
   kohdat ranskalaisin viivoin, rivinvaihdot säilyvät.
 - BUGIKORJAUKSET: työlistan ensimmäinen kohde; tilannekappaleessa yksi vika per rivi tilan kanssa;
   edistys lasketaan "Korjatut:"- ja "Työn alla" -luetteloiden viivoista (5 × korjatut / kaikki). PT siirtää
@@ -120,7 +122,7 @@ valmiiksi). Kun juna on TF:ssä, PT muuttaa junarivin TF-riviksi ja tyhjentää 
   Postivahti lukee sen kierroksellaan (enintään 20 min) ja herättää Asemataulun; Boost sammuu itsestään
   tunnin kuluttua, ja muulloin kierros A ja viennit ovat tauolla. Junien vaiheet ja VAATII TOIMIA heti;
   sisällön tarkistus tunnin välein; Raati ja Testaajat klo 08 ja kun uusi juna saapuu TF:ään.
-  Boost-napin toteutus sivulle on erillinen erä (Asemataulu/PT, tools/asemataulu/).
+  Boost-napin rakentaa Asemataulu-sessio sivulle asemataulu-julkaisu.html (erillinen erä, PT 14.10.).
 - PÄIVITYSNAPPI (omistaja 10.10.2026): oikean yläkulman nappi näyttää mittareiden iän (nyt, 5 min, 1 h 5 min;
   punainen yli 15 min). Napautus lähettää PT:n sessiolle kommentin "Päivitä Asemataulu" (sivun capabilities
   db + comments, PT:n artefaktivahti); PT ajaa `paivita.py`, vie tiedot ArtifactData-batchilla (if_version)

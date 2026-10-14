@@ -14401,3 +14401,19 @@ Omistaja 14.10.2026 klo 23.24: "tällaiset kortit ei kannata olla täysin läpin
 ## OMISTAJAN PÄÄTÖS: ASEMATAULUN BOOST-NAPPI (14.10.2026 klo 23.41)
 
 Omistaja 14.10.2026 klo 23.39 (kortti "Kyllä"): Asemataululle BOOST-nappi. Mittarit (kulutus, muisti, kone) päivittyvät vain Boostin aikana 5 minuutin välein; Boost sammuu itsestään 1 tunnin kuluttua; muulloin Asemataulun kierros A ja viennit ovat tauolla (korvaa sykkeen sekä 22.34/22.40:n "5 min päivällä / 1 h yöllä" -säännön mittarien osalta). Junien vaiheet ja Vaatii toimia -nostot päivittyvät edelleen heti. Painallus kirjoittaa talo/boost; Postivahti lukee sen kierroksellaan (enintään 20 min) ja herättää Asemataulun. Postivahdille sallitaan Artifact-työkalu (taulun vienti). Raamattuun TYÖTAPA JA SESSIOT, J) PÄIVITYSRYTMI ja KIRJOITTAJAT; vastuukartta päivitetty.
+
+## PT:N PÄÄTÖS: ÄÄNITTÄJÄLLE ARTIFACT ÄÄNISIVUA VARTEN, BOOST-NAPPI ASEMATAULULLE (14.10.2026 klo 23.49)
+
+PT 14.10.2026: Äänittäjälle sallitaan Artifact-työkalu äänisivun (Matkakirjan äänet) julkaisuun; Äänittäjä ei kirjoita Asemataululle (VAATII TOIMIA rivinä PT:lle). Boost-napin rakentaa Asemataulu-sessio sivulle asemataulu-julkaisu.html. Hyväksytty myös tulkinnat: VAATII TOIMIA -nostot PT:n kautta rooleille ilman Artifactia, KK:lla Artifact vain taulun avaukseen, sisällön tarkistus tunnin välein sekä Raati ja Testaajat klo 08 ja TF:n saapuessa jatkuvat Boostin ulkopuolella.
+
+## OMISTAJAN PÄÄTÖS: ALOITUSLENNON KAMERA (14.10.2026 klo 23.57)
+
+Omistaja 14.10.2026 klo 23.54 (kortti "Kyllä"): ALOITUSLENNON KAMERA: kone lähtee heti; kamera liukuu 2 sekunnissa pehmeästi pelaajan nykyisestä näkymästä (zoom ja paikka napautushetkellä) aloituslennon 2 sekunnin kohtaan ja seuraa liikkuvaa kohtaa koko liukuman ajan (ei pumppausta); kaukaa reitiltä liukuma pitenee hieman; jos palloon ei ole koskettu, aloituslento on ennallaan. Tarkentaa 7.10.2026 klo 14.5x:n linjaa "jos lähtöpaikka vaatii kartan siirtoa, kartta pyörii pehmeästi oikeaan kohtaan". Raamattuun NATIIVI PELI ETUSIJALLE, alkulennon kohta.
+
+## OMISTAJAN PÄÄTÖS: EIFFELIN OMA MALLI LOPETETAAN, PERUTUT TYÖT LOKISTA (15.10.2026 klo 00.07)
+
+Omistaja 14.10.2026 klo 23.59 (kortti): Eiffel-tornin oma malli lopetetaan, ja Googlen torni jää (vahvistaa 10.10.2026 klo 12.3x:n päätöksen "EIFFEL v2 PERUTTU, Googlen torni jää"). OPPI: perutut työt tarkistetaan lokista (grep docs/raamattu-loki/) ennen uudelleenaloitusta; koskee PT:tä ja kaikkia rooleja; luovutuksissa ei siirretä peruttua työtä eteenpäin. Raamattuun OMAT 3D-MALLIT (Eiffel) ja TYÖTAPA JA SESSIOT, D) LUKEMINEN (oppi); siirtoraportti.md:hen.
+
+## OMISTAJAN PÄÄTÖS: JUNAKORTTI YHDELLÄ UUTTA-LISTALLA (15.10.2026 klo 00.07)
+
+Omistaja 14.10.2026 klo 23.59 (kortti): valmiin junan (TF N) kortissa on vain YKSI Uutta-lista (pyydetyt muutokset ja muut uudistukset), ei Valmiina-osiota. Kertyvän junan kortissa Valmiina ja Työn alla ennallaan. Raamattuun TYÖTAPA JA SESSIOT, J) ASEMATAULU; docs/moduulit/asemataulu.md päivitetty (TF:n Korjattu/Uutta-jako yhdeksi Uutta-listaksi).
