@@ -87,3 +87,7 @@ PK:n MaanKehys.Siirto(g, rakennus) (b28d792b8, iss-kupoli-190) korjaa sen – ta
 2. **TAVOITELUUPPI-pilotti** (omistaja 11.09; ohje /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/tavoiteluuppi-20261014.md):
    kohde **Petřínin näkötorni** (Praha). Järjestys: tavoitepaketti (pohjakartta, leikkaus/korkeudet 63,5 m, 3–5 Commons-kuvaa, 4–6 kulmaa)
    → Codex-tilaus PT:n kautta → PT hyväksyy → Blender-kierrokset vertailuskriptillä → tuore Sonnet-arvioija → vahti peliin.
+3. **Praha vesi v3** (KS 11.3x): T7 _tyo/karttaseppa/kadut-yovalot-lontoo-praha-20261013/vesi-v3/ → testaa paikallisena nimellä praha3
+   kuten lp3 (kopioi vesi-v3:n vesi-praha.json/.bytes → _tyo/linssiseppa2/lontoo-praha/vesi-testi/praha3-8m.*, index-v21.json:ssa praha
+   tiedosto "praha3"; ketju-lp3.zsh:n VESI-TESTI-lohko). Kuva Kaarlensilta yöllä + Šítkovin yläpuoli (tarvitaanko lisänostoa) → KS:lle;
+   KS vie ämpäriin index-v23 + praha3 → lisää "index-v23.json" Nimet-kärkeen (+ VesiVerkkoTestit kuten 7ab71527b).
