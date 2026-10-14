@@ -14147,3 +14147,11 @@ Omistaja 14.10.2026 klo 13.5x (Keskustelukanavan välittämä, sanatarkasti; kor
 ## TEKSTILAATIKOT: PITKISSÄ POHJA (14.10.2026 klo 14.1x) (14.10.2026 klo 14.15)
 
 Omistaja 14.10.2026 klo 14.1x (Keskustelukanavan kortti, sanatarkasti): "Pitkissä pohja (Suositus)". Tarkentaa 12.25-päätöstä läpinäkyvistä tekstilaatikoista kaikkiin pohjiin: pitkät luettavat paneelit (lehti, kortit, sähkeet, paljastus) pitävät pohjan; kaikki muu muuttuu läpinäkyväksi: kartan laput, nostot, linssit, ISS, pelit, Pulun puhekupla, chat, oppaan ja ISS:n kohdevalikko sekä lautapelin paneeli. Toteutus Natiivi-UI erinä NYKYINEN | UUSI -arkeilla, PT kuittaa.
+
+## TEKSTILAATIKOT 2: KUPLA, PELIPANEELIT JA AIKAJANAN VALIKKO POHJALLE (14.10.2026 klo 16.0x) (14.10.2026 klo 16.06)
+
+Omistaja 14.10.2026 klo 16.0x (Keskustelukanavan kortti, sanatarkasti): "Nämä pohjalle (Suositus)". Tarkentaa 14.1x-päätöstä: Natiivi-UI:n NYKYINEN | UUSI -arkeilla (laatikot-era2/3-nyk-uusi.png) Pulun puhekupla, lautapelien paneelit (mylly, tavli, shakki) ja aikajanan valikko olivat läpinäkyvinä lukukelvottomia, joten ne pitävät pohjan pitkien paneelien (lehti, kortit, sähkeet, paljastus) lisäksi. Kaikki muu muuttuu läpinäkyväksi: kartan laput ja nostot, linssien selitteet, maakyltti, ISS ja ISS:n kohdevalikko.
+
+## LIPUN VARJO: OMA SILUETTIVARJO, POIKKEUS UI-POHJAT-SÄÄNTÖÖN (14.10.2026 klo 16.2x) (14.10.2026 klo 16.20)
+
+Omistaja 14.10.2026 klo 15.5x (sanatarkasti): "Peruskartalla maanlipusta saisi tulla muuten varjo, niin näyttäisi vielä uskottavammalta." Kartan ainoa valmis varjotyyli on symbolimallien pyöreä maakontaktilevy, joka jäisi tangon juurelle läiskäksi. Omistajan kortti 16.2x (sanatarkasti): "Lipun oma varjo (Suositus)": maan lipulle uusi varjomuoto vanhalla tyylillä – tangon ja kankaan litistetty siluetti kartan pinnalle kaakkoon, maakontaktin sävy, alfa, pehmeä reuna ja valosuunta (luoteesta). Omistajan hyväksymä poikkeus UI-POHJAT-sääntöön; ei avaa muita uusia muotoja. Junan 190 ehto (Valoseppä).
