@@ -23,3 +23,12 @@ käännös 93a003a0e. Sisältää PK:n `pelikoodari/raketti-laukaisu-189` e66747
 3. Pikkuhavainnot: iPhonen yöavauksen 0,5 s:n kuvassa meri harmaan utuinen (pallon oma sumu kaukaa); savu8:n iPhone-ajosta puuttuivat
    kuvakaappaukset (kuorma 22), savu9:ssä kunnossa.
 Ketjut: _tyo/linssiseppa2/raketti-savu/ketju-savu{4..9}.zsh + sk-savu{4..9}-*.txt (savu9: kertoja päällä, aani-alku 112).
+
+## PÄIVITYS 05.0x – yhteinen paketti PT:n kuittaukseen (savu14)
+Haara `linssiseppa2/raketti-savu-189` **2325092dc** (käännös 0fecdf73e) = PK `pelikoodari/raketti-laukaisu-189` 674cdbf2f + 46035083b +
+8693f92fe (maapallo, liioittelu 1 laukaisun ajan, valintakamera lähikuvaan) + NUI `natiivi-ui/raketti-lcd-189` 0cad3a15a + omat:
+77b7f9d94 (Pohjois-Norjassa, havaintopisteet piiloon), 324e06bb2 (RCS), 43e6d7208 (ei avaruussumua lennossa), e8fb55e1a (avaus 9 km:stä,
+laatta näkyy 12 → 10 km), 2325092dc (laatan sumu 6 km:stä). Reunahäivytys kokeiltu ja poistettu (adf82e72d).
+Todisteet: lokit/todistus-savu14-ipad-20261014-0453 (kuva-arkki, raketti-savu14-ipad-aani.mp4), todistus-savu14-iphone-20261014-0457.
+Avoin kysymys PT:lle: ISS:n karttamerkki näkyy lennon aikana maaston päällä – piiloon vai tarkoituksellinen?
+Seuraavaksi: PT:n kuittaus → NS:lle SHA junaan 189; telakointi ISS:ään erillisenä eränä PK:n kanssa (PT hyväksyi).
