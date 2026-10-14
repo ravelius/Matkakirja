@@ -14047,6 +14047,6 @@ Omistaja hyväksyi Keskustelukanavan kortilla klo 10.4x kaikki neljä parannusta
 
 Omistaja (Keskustelukanavan kautta), sanatarkasti: "taustalla kuuluu kokoajan joku kahvilan tai vastaavan äänimaailma. tiedätkö mistä se tulee ja saako noita ääniä pois jos liittyvät testaukseen". Simulaattorin ääni menee omistajan kaiuttimiin (coreaudiod: iOSSimulatorAudioDevice → Scarlett Solo USB). Sitova kaikille rooleille: jokainen simu- ja Mac-ajo alkaa pelin mykistyskomennolla (aani mykistys, kuten todistusajoissa), eikä kaiuttimista soiteta mitään; äänellinen tallenne kootaan pelin klipeistä tiedostoon (PK:n kokoa-aani.py-kaava). PT 10.5x: käynnissä olleet kaksi simua (todistus-lp3, PK kupoli poistu4) olivat mykistettyjä; lähde selvitetään roolikyselyllä.
 
-## KAHVILAÄÄNEN LÄHDE: SELAINPANEELIIN JÄÄNYT PELISIVU (14.10.2026 klo 11.0x) (14.10.2026 klo 10.47)
+## KAHVILAÄÄNEN LÄHDE: SELAINPANEELIIN JÄÄNYT PELISIVU (14.10.2026 klo 10.47)
 
 Keskustelukanava löysi lähteen: Pelikoodarin selainpaneelin pelisivu (pk-esittelyt, localhost:8797). Palvelin pysäytettiin klo 09.31, mutta sivu jäi auki ja soitti ääntä 09.31 alkaen (pmset: Claude "Playing audio" 1 h 15 min, renderöijä pid 64385); simut eivät soittaneet Scarlettiin. PK sulkee välilehden, KK varmistaa pmsetillä. Lisäys sääntöön AJOT AINA MYKISTETTYINÄ: preview_stop ei sulje sivua, joten esikatselun jälkeen välilehti suljetaan aina (tabs_close). Laitetestaaja: yön Amsterdam-ajot 00.3x–02.2x ilman aani mykistys -komentoa, jatkossa mykistys ensimmäisenä.
