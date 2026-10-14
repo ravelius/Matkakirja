@@ -168,3 +168,13 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
 - Ajot: tyokalut/siirtoseppa-ajot/ajo-museo-pinnat.zsh (kaannos-pinnat.nyt / simu-pinnat.nyt), skenaariot museo-pinnat-{ipad,iphone}.txt, museo-rae-ipad.txt;
   arkit pinnat-arkki2.py. iPhonella näyttely valitaan "Grafiikka- ja valokuvakabinetti" (Kunniagalleria ei ruudulla pystyssä).
 - Avoin: kuorma oikealla iPadilla mittaamatta (ehdotettu junan 189 iPad-ajoon "museo pinnat 0/1").
+
+## PÄIVITYS 14.10. 20.5x — RAKETIN VASTAVALO (juna 191)
+
+- Museon pinnat junassa 189 (NS 0201428dd: rae leikataan 1:een HDR-polulla, kalibrointi pätee).
+- **Raketin irtoamisen siluetti** (PT, ent. Valosepän kohta 4): proto-haara **siirtoseppa/raketti-valo-191 e823b3bf2** (juna-190 pohja, worktree
+  wt/proto-siirtoseppa-raketti): RakettiMalli.Valaistus → heitin-kanavaan VastavaloTaytto 0,35 kun aurinko–kamera 100°→150°, aurinko näkyy, ilma ohut;
+  QA "linssi raketti vastavalo <x>". Käännös 7c79a469b. NYK|UUSI lokit/siirtoseppa-raketti-valo/raketti-nyk-uusi.jpg → PT:llä kuittausta varten; sitten tunnus NS:lle.
+- Ajo tyokalut/siirtoseppa-ajot/ajo-raketti-valo.zsh (OHITA_KAANNOS=1, LENNOT="0 0.35"; yksi lento per käynnistys — Cupolan latausruutu ei lue komentoja
+  lennon jälkeen; mykistys peli-komento.txt:hen ennen käynnistystä; kello siirretään 14.10. 13.52 UTC:hen).
+- Viestit session id:llä /Users/Shared/Claude/osoitekirja.md; PT local_74630a27…; simu vain Julkaisijan SIMU NYT -lipulla (ei uusintaa samalla vuorolla ilman lupaa).
