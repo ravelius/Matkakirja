@@ -37,6 +37,9 @@ Rooli Pelikoodari (Opus, high), checkout /Users/Shared/Claude/Matkakirja-pelikoo
    käyttää rajapintaani). Pyysin NUI:lta (local_33ba1387…) ui-testikomennon valikon nappeihin; kun se tulee: yhdistä NUI:n haara
    iss-kupoli-190:een, käännä, aja: Cupola → `linssi napauta x y` → valikko → Pariisi talvi yö → perillä → Bergen kesä päivä → LIVE →
    Oma sijainti; arkki + äänellinen video PT:lle. Junaa varten tee valikosta oma haara juna-190:n päälle ilman 98d4de0f3:ää.
+   NUI 11.3x: testikomento valmis natiivi-ui/iss-kohdevalikko-190 @ ba9ad7608 (yhdistyy 505651fa9:n kanssa ilman ristiriitoja):
+   `ui linssi kohdevalikko auki | kiinni | kausi <0–3> | vrk <0–3> | live | kohde <tunnus tai nimi> | oma | tila` (ui-komento.txt;
+   painaa samaa riviä kuin pelaaja; loki "MATKAKIRJA iss: kohdevalikko …"). NUI:n asettelutesti odottaa vielä PT:n kuittausta.
    Huom: astronautin kohteissa ei ole Helsinkiä/Tukholmaa/Oslota (PT: ei lisätä, Oma sijainti -rivi riittää); pohjoisin valikossa Bergen 60,4°.
 3. **Pulun kysymykset ISS:ssä** (PT:n jono, ei vielä aloitettu): kysy PT:ltä tarkennus ennen aloitusta.
 4. **KS:n 44 pääkaupungin esittelyt**: KS piirtää haarassa karttaseppa-paakaupungit-kohdekartat-loput (30 Codexin kohteilla, 14:ltä
