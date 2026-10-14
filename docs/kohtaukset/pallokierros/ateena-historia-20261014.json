@@ -1,0 +1,186 @@
+{
+ "kaupunki": "ateena",
+ "versio": 1,
+ "kuvaus": "Ateenan historiaosiot pallokierroksen lentojen ajaksi (Sisältökirjuri 14.10.2026; kaksi lähdettä per väite, faktaliite ateena-faktat-20261014.md). Kertoja William. kesto_s on arvio (sanamäärä x 0,70 s). Kaikki sisältö kuuluu Kreikan App Storen piilotuslistaan (kreikka-piilotuslista-20261012.json).",
+ "osiot": [
+  {
+   "tunnus": "ateena-historia-persialaiset",
+   "otsikko": "Persialaiset ja Salamis",
+   "teksti": "Syyskuussa 480 eaa. persialaiset valtasivat Ateenan, jonka asukkaista suuri osa oli jo viety pois, muun muassa Salamiin saarelle. Akropoliksella puolustautuneet kukistettiin, ja persialaiset polttivat kukkulan temppelit, myös vanhemman Parthenonin. Pian tämän jälkeen kreikkalaiset voittivat persialaisten laivaston Salamiin salmessa, saaren ja mantereen välissä; voitosta kiitetään ateenalaista Themistoklesta.",
+   "kesto_s": 32.2,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Achaemenid_destruction_of_Athens",
+    "https://www.thecollector.com/persian-destruction-of-athens/",
+    "https://en.wikipedia.org/wiki/Acropolis_of_Athens",
+    "https://en.wikipedia.org/wiki/Parthenon",
+    "https://en.wikipedia.org/wiki/Battle_of_Salamis",
+    "https://www.worldhistory.org/Battle_of_Salamis/"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Kaulbach, Wilhelm von - Die Seeschlacht bei Salamis - 1868.JPG",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Kaulbach,_Wilhelm_von_-_Die_Seeschlacht_bei_Salamis_-_1868.JPG",
+    "tekija": "Wilhelm von Kaulbach (1805–1874)",
+    "lisenssi": "Public domain",
+    "leveys_px": 5032,
+    "korkeus_px": 2840,
+    "kuvaus": "Wilhelm von Kaulbachin öljymaalaus Salamiin meritaistelusta (1868, Maximilianeum). Kuva esittää taistelua, ei Akropoliksen polttoa; osion toinen puoli (Salamis) tulee kuvasta. Commonsin tiedot: Public domain, Copyrighted False."
+   }
+  },
+  {
+   "tunnus": "ateena-historia-parthenon",
+   "otsikko": "Parthenonin rakentaminen",
+   "teksti": "Perikles käynnisti Parthenonin rakentamisen vuonna 447 eaa., yli kolmekymmentä vuotta persialaisten tuhon jälkeen. Arkkitehteina työskentelivät Iktinos ja Kallikrates, ja kuvanveistäjä Feidias valvoi veistoskoristelua. Athenalle omistettu temppeli rakennettiin Pentelikon-vuoren marmorista. Temppeli oli pääosin valmis vuonna 438 eaa., ja koristelu valmistui vuoteen 432 eaa. mennessä.",
+   "kesto_s": 30.1,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Parthenon",
+    "https://www.worldhistory.org/Parthenon/",
+    "https://www.khanacademy.org/humanities/ancient-art-civilizations/greek-art/high-classical/a/the-parthenon",
+    "https://en.wikipedia.org/wiki/Acropolis_of_Athens"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Akropolis by Leo von Klenze.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Akropolis_by_Leo_von_Klenze.jpg",
+    "tekija": "Leo von Klenze (1784–1864), Neue Pinakothek, München",
+    "lisenssi": "Public domain",
+    "leveys_px": 1486,
+    "korkeus_px": 1018,
+    "kuvaus": "Leo von Klenzen maalaus 'Ideale Ansicht der Akropolis und des Areopag in Athen' (1846): 1800-luvun taiteilijan kuvitelma valmiista antiikin Akropoliksesta ja Parthenonista. Pitkä sivu 1486 px (hieman alle 1500); isompaa versiota Commonsista ei löytynyt. Vaihtoehdot: File:Leo von Klenze - The Acropolis at Athens - WGA12199.jpg (1217 x 850). Kuvatekstissä mainittava, että kyseessä on 1800-luvun rekonstruktiomaalaus."
+   }
+  },
+  {
+   "tunnus": "ateena-historia-demokratia",
+   "otsikko": "Demokratian synty",
+   "teksti": "Tyranni Hippias karkotettiin Ateenasta noin vuonna 510 eaa., ja pian sen jälkeen, noin vuonna 508 eaa., Kleisthenes uudisti kaupungin hallinnon. Kansalaiset jaettiin asuinpaikan mukaan kymmeneen heimoon, ja neuvostossa oli 500 jäsentä. Kansankokous kokoontui aikanaan Pnyx-kukkulalla, neuvosto Agoralla, kaupan ja hallinnon keskuksessa Akropoliksen luoteispuolella.",
+   "kesto_s": 30.1,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Cleisthenes",
+    "https://www.worldhistory.org/Cleisthenes/",
+    "https://www.livius.org/articles/person/cleisthenes/",
+    "https://en.wikipedia.org/wiki/Pnyx",
+    "https://www.worldhistory.org/Athenian_Democracy/",
+    "https://en.wikipedia.org/wiki/Ancient_Agora_of_Athens",
+    "https://www.thecollector.com/monuments-agora-of-athens/"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Muller Rudolph - View of the Acropolis from the Pnyx - Google Art Project.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Muller_Rudolph_-_View_of_the_Acropolis_from_the_Pnyx_-_Google_Art_Project.jpg",
+    "tekija": "Rudolf Müller (1802–1885), skannaus Google Art Project / Benaki-museo",
+    "lisenssi": "Public domain",
+    "leveys_px": 3388,
+    "korkeus_px": 2350,
+    "kuvaus": "Rudolf Müllerin akvarelli 'Näkymä Akropolikselle Pnyxiltä' (1863): etualalla kallioon hakattuja portaita Pnyx-kukkulalla, taustalla Akropolis. Maalaus esittää 1800-luvun raunioita, ei antiikin kokousta. Vaihtoehto: File:Athènes Le Pnyx, l'Aréopage, l'Acropole et l'Hymette - Aligny Claude François Théodore Caruelle D' - 1845.jpg (Aligny 1845, 1500 x 1117, PD, selkeämpi puhujakorokkeen piirros)."
+   }
+  },
+  {
+   "tunnus": "ateena-historia-sokrates",
+   "otsikko": "Sokrateen oikeudenkäynti",
+   "teksti": "Vuonna 399 eaa. ateenalaiseen oikeuteen haastettiin filosofi Sokrates, joka oli 70-vuotias. Syytteen nosti Meletos, ja mukaan liittyivät Anytos ja Lykon: Sokrates ei syytteen mukaan tunnustanut kaupungin jumalia ja johti nuoria harhaan. Valamiehistö julisti hänet syylliseksi ja langetti kuolemantuomion, ja Sokrates joi myrkkymaljan. Tapahtumista kertovat Platon ja Ksenofon.",
+   "kesto_s": 32.9,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Trial_of_Socrates",
+    "https://www.worldhistory.org/Socrates/",
+    "https://plato.stanford.edu/entries/socrates/",
+    "https://iep.utm.edu/socrates/"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:David - The Death of Socrates.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:David_-_The_Death_of_Socrates.jpg",
+    "tekija": "Jacques-Louis David (1748–1825), The Metropolitan Museum of Art",
+    "lisenssi": "Public domain",
+    "leveys_px": 3896,
+    "korkeus_px": 2559,
+    "kuvaus": "Jacques-Louis Davidin maalaus 'Sokrateen kuolema' (1787): Sokrates ottaa myrkkymaljan oppilaidensa keskellä. Kuva esittää kuoleman hetkeä, ei oikeudenkäyntiä. Vaihtoehto samasta maalauksesta: File:The Death of Socrates MET DP-13139-001.jpg (4000 x 2663, CC0)."
+   }
+  },
+  {
+   "tunnus": "ateena-historia-olympieion",
+   "otsikko": "Hadrianuksen Olympieion",
+   "teksti": "Olympieionin rakentaminen alkoi 500-luvulla eaa. Peisistratoksen suvun aikana, mutta työ pysähtyi vuoden 510 eaa. tienoilla tyrannien vallan päätyttyä. Seleukidien kuningas Antiokhos IV jatkoi sitä vuonna 174 eaa., ja valmiiksi temppeli tuli vasta keisari Hadrianuksen aikana: se vihittiin käyttöön vuosina 131–132 jaa. Pylväitä oli 104; vuonna 1852 myrsky kaatoi yhden, ja 15 on yhä pystyssä.",
+   "kesto_s": 37.8,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Temple_of_Olympian_Zeus,_Athens",
+    "https://penelope.uchicago.edu/encyclopaedia_romana/greece/olympieion/olympianzeus.html",
+    "https://www.visitgreece.gr/en/experiences/culture/archaeological-sites-monuments/the-olympieion-and-the-arch-of-hadrian",
+    "https://ancientathens3d.com/olympieion-arch-of-hadrian/"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Athenes Temple de Jupiter Olympien - Blouet Guillaume-abel - 1831.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Athenes_Temple_de_Jupiter_Olympien_-_Blouet_Guillaume-abel_-_1831.jpg",
+    "tekija": "Guillaume-Abel Blouet (1795–1853), Expédition scientifique de Morée: Architecture, Pariisi, Firmin Didot, 1831–1838; kaivertaja Lemaitre (taulun merkintä)",
+    "lisenssi": "Public domain",
+    "leveys_px": 1500,
+    "korkeus_px": 1152,
+    "kuvaus": "Blouetin kuparikaiverrus vuodelta 1831: Olympieionin pylväät ja arkkitraavi etualalla, vasemmalla kolme erillään seisovaa pylvästä ja taustalla Akropolis. Kuvassa on 1830-luvun tila ennen vuoden 1852 myrskyä. Varakuva: File:Colonnes du temple de Zeus olympien, 1839.jpg (PD, 1752 x 1275, kaiverrus Jolyn daguerrotypiasta 1839; Commonsin sivulla St Andrewsin yliopisto ilmoittaa digiskannaukselle NC-ehdot, siksi ei ensisijainen)."
+   }
+  },
+  {
+   "tunnus": "ateena-historia-parthenon1687",
+   "otsikko": "Parthenonin räjähdys",
+   "teksti": "Vuonna 1687 venetsialaiset Francesco Morosinin johdolla piirittivät Ateenan Akropolista Morean sodassa. Ottomaanit olivat linnoittautuneet Akropolikselle ja varastoineet ruutia Parthenoniin, ja 26. syyskuuta venetsialainen kranaatti osui siihen. Räjähdys tuhosi suuren osan temppelin seinistä ja katosta. Venetsialaiset poistuivat Ateenasta seuraavana vuonna.",
+   "kesto_s": 27.3,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Parthenon",
+    "https://en.wikipedia.org/wiki/Francesco_Morosini",
+    "https://Ancient-Greece.org/history/acropolis-ottoman.html",
+    "https://greekcitytimes.com/2024/09/26/venetians-parthenon/amp/?p=369692"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Venetian siege of Acropolis.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Venetian_siege_of_Acropolis.jpg",
+    "tekija": "Tenente Colonnello Lazara (kaiverruksen laatija), painanut Girolamo Albrizzi, Venetsia; 1680-luvun loppu",
+    "lisenssi": "Public domain",
+    "leveys_px": 1875,
+    "korkeus_px": 1289,
+    "kuvaus": "Venetsialainen kaiverrus 'Prospetto del Castello e Citta d'Athene', Akropolis ja kaupunki venetsialaisten piirityksessä 1687: ylhäällä linnoitettu Akropolis Parthenoneineen, edessä piiritysleiri, tykit ja laivat. Kuvateksti Commonsissa: piiritys tuhosi suuren osan Parthenonia, jota turkkilaiset käyttivät ruutivarastona. Varakuva: File:Siege of Athens by the Venetians, 1687.jpg (PD, 1710 x 1317, Thelot, 1701) ja Fanellin 1695 (1500 x 632)."
+   }
+  },
+  {
+   "tunnus": "ateena-historia-paakaupunki1834",
+   "otsikko": "Ateena pääkaupungiksi",
+   "teksti": "Baijerilainen prinssi Otto, Kreikan ensimmäinen kuningas, saapui laivalla vuonna 1833 Nafplioon, joka oli silloin maan väliaikainen pääkaupunki. Vuonna 1834 pääkaupunki siirrettiin Nafplionista Ateenaan. Arkkitehdit Stamatios Kleanthis ja Eduard Schaubert olivat laatineet Ateenalle uuden asemakaavan jo vuonna 1832, ennen siirtoa.",
+   "kesto_s": 27.3,
+   "lahteet": [
+    "https://www.rmg.co.uk/collections/objects/rmgc-object-12641",
+    "https://www.greecetravel.com/nafplio/history.html",
+    "https://nhmuseum.gr/en/permanent-exhibition/item/17187-foundation-of-the-modern-greek-state-room-10",
+    "https://archaeologia.eie.gr/archaeologia/en/chapter_more_9.html",
+    "https://en.wikipedia.org/wiki/Nafplio",
+    "https://en.wikipedia.org/wiki/Stamatios_Kleanthis"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Peter v Hess Empfang König Otto (1).jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Peter_v_Hess_Empfang_K%C3%B6nig_Otto_(1).jpg",
+    "tekija": "Peter von Hess (1792–1871), öljy kankaalle 1839, Neue Pinakothek, München; valokuvaaja Hajotthu",
+    "lisenssi": "Public domain",
+    "leveys_px": 3435,
+    "korkeus_px": 2112,
+    "kuvaus": "Peter von Hessin maalaus 'Kuningas Otton vastaanotto Ateenassa' (1839): väkijoukko ja papisto antiikin temppelin edessä, taustalla Akropolis. Maalaus on myöhempi, idealisoitu kuvaus; Commonsin mukaan ostettu Neue Pinakothekiin 1878 Otton jäämistöstä."
+   }
+  },
+  {
+   "tunnus": "ateena-historia-olympia1896",
+   "otsikko": "Ensimmäiset nykyajan kisat",
+   "teksti": "Ensimmäiset nykyaikaiset olympialaiset pidettiin Ateenassa 6.–15. huhtikuuta 1896. Pierre de Coubertin järjesti vuoden 1894 Sorbonnen kongressin, joka päätti elvyttää kisat. Avaus- ja päätösjuhla pidettiin Kallimarmaron stadionilla, joka rakennettiin uudelleen marmorista antiikin stadionin paikalle vuosina 1895–96 Georgios Averoffin rahoituksella. Maratonin voitti kreikkalainen Spyridon Louis.",
+   "kesto_s": 30.1,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/1896_Summer_Olympics",
+    "https://en.wikipedia.org/wiki/Panathenaic_Stadium",
+    "https://en.wikipedia.org/wiki/Pierre_de_Coubertin",
+    "https://www.olympedia.org/editions/1",
+    "https://olympic.ca/games/1896-athens",
+    "https://www.panathenaicstadium.gr/?p=581",
+    "https://whyathens.com/the-panathenaic-stadium/",
+    "https://www.sundaytimes.lk/210725/sports/at-the-venue-of-the-first-modern-olympics-games-449965.html"
+   ],
+   "kuva": {
+    "commons_tiedosto": "File:Athens 1896-The crowd in front and inside the Pan-Athenian stadium.jpg",
+    "lahde_url": "https://commons.wikimedia.org/wiki/File:Athens_1896-The_crowd_in_front_and_inside_the_Pan-Athenian_stadium.jpg",
+    "tekija": "Tuntematon valokuvaaja, 1896 (lähde: olympic.org Athens 1896 -kuvat; Commonsiin SportsOlympic 2020)",
+    "lisenssi": "Public domain",
+    "leveys_px": 2070,
+    "korkeus_px": 1600,
+    "kuvaus": "Valokuva 1896: väkijoukko Kallimarmaron stadionin edessä ja täysi stadion taustalla, marmoriset sisäänkäyntiportaat molemmin puolin. Tekijä tuntematon; Commons perustelee PD:n vuoden 1896 julkaisulla (ennen 1931) ja tekijän elinaikaan sidottuihin määräaikoihin. Varakuva: File:Panathenaic Stadium 1896 oppening.jpg (PD, 1266 x 456)."
+   }
+  }
+ ]
+}
