@@ -44,6 +44,8 @@ export const PAAKAUPUNGIT = {
   IND: 'delhi',
   IRL: 'dublin',
   IRN: 'teheran',
+  // Islanti-pysäkki on Reykjavík (tools/vanha-maailma.mjs TARKAT_PAIKAT; PT 15.10.2026, juna 193).
+  ISL: 'islanti',
   IRQ: 'bagdad',
   ITA: 'rooma',
   JPN: 'tokio',
