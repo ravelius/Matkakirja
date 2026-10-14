@@ -30,7 +30,11 @@ Rooli Pelikoodari (Opus, high), checkout /Users/Shared/Claude/Matkakirja-pelikoo
 
 ## Kesken — tee nämä ensin
 1. **Telakointi PT:n kuittaukseen** (lähetetty 11.1x): video telakointi8/telakointi-aanella.mp4 + kuva-arkki-46-66s.png (1858f8f53:
-   asema ja kapseli valaistuina, raita jatkuu Cupolan valmistuttua). Kun PT kuittaa: telakointi junaan omana haarana juna-190:n päälle.
+   asema ja kapseli valaistuina, raita jatkuu Cupolan valmistuttua). PT KUITTASI 11.2x, NS yhdistää.
+   PT:n tarkistus: arkin rivi 3 (~62–64 s) kaksi lähes mustaa ruutua pienellä "ISS"-tekstillä = Cupolan musta avaus (NUI:n
+   AstronautinNakyma.CupolaAvaus: "ISS · lentokorkeus · nopeus · aika" mustalla, häivytys kun näkymä valmis, telakointi8:ssa 2,4 s).
+   Tarkoituksellinen latausruutu; teksti on pieni 320 px:n arkissa. Kysy NUI:lta (local_33ba1387…), näkyykö teksti laitteella
+   kunnolla; jos ei, NUI suurentaa, ja musta voi lyhentyä vain jos laatat ovat valmiina (cupolan esihaku).
 2. **ISS-kohdevalikko yhteiseen arkkiin NUI:n kanssa** (PT): NUI:n UI natiivi-ui/iss-kohdevalikko-190 @ d600ff002 (IssKohdevalikko.cs,
    käyttää rajapintaani). Pyysin NUI:lta (local_33ba1387…) ui-testikomennon valikon nappeihin; kun se tulee: yhdistä NUI:n haara
    iss-kupoli-190:een, käännä, aja: Cupola → `linssi napauta x y` → valikko → Pariisi talvi yö → perillä → Bergen kesä päivä → LIVE →
