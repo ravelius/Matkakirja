@@ -161,10 +161,19 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // mahdu kaupungin omaan kohdekarttarajaukseen ilman uutta
   // piirrosta, joten luokka on `rajauksen ulkopuolella` (sallittujen
   // listalla). Muiden lajien luku ei saa yhä kasvaa.
+  //
+  // 54 → 60 (14.10.2026, juna 193): kahdeksan pääkaupunkia liittyi laudan
+  // pysäkeiksi (Karttaseppä, PT), ja niiden lähellä olleet nostot osuvat nyt
+  // kaupungin kohdalle sallituilla syillä: hetket Belgradin piiritys 1456 ja
+  // Bessarabian liittyminen 1918 (kattoVapaa), "rajauksen ulkopuolella"
+  // Milestii Mici ja Cricova (Chișinău) sekä Matkan kanjoni (Skopje), ja
+  // "kartan oma kohde" Belgradin linnoitus ja Zagreb (fokuskortti; Zagrebin
+  // laatta on 23 km itään siirretty, ks. js/packs/europe.js). Muiden
+  // kaupunkien luku ei kasva.
   const kesken = keskenKaikki.filter((r) => r.kaupunginKohdalla !== 'lähizoomi');
-  assert.ok(kesken.length <= 54,
+  assert.ok(kesken.length <= 60,
     `kaupungin kohdalla on pääkartalla ${kesken.length} nostoa (säde `
-    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 54 sallittu — uusi nosto kuuluu kohdekartalle`);
+    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 60 sallittu — uusi nosto kuuluu kohdekartalle`);
   // 48 → 49 (19.9.2026): Bryssel liittyi pelikaupungiksi (omistajan
   // päätös, Belgian pilotti), ja Tervurenin museonosto
   // (hahmotelma-tervuren) osuu nyt kaupungin kohdalle syyllä
@@ -183,8 +192,10 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // 50 → 52 (27.9.2026): Radio Luxembourg (Junglinster) ja Caravaggion
   // pako (Birgu) — molemmat syyllä "rajauksen ulkopuolella", selitetty
   // yllä. Katto nousee vain näiden kahden verran.
+  // 52 → 56 (14.10.2026, juna 193): Milestii Mici, Cricova, Matkan kanjoni,
+  // Belgradin linnoitus ja Zagreb (selitetty yllä).
   const muutKuinHetket = kesken.filter((r) => r.kaupunginKohdalla !== 'hetki');
-  assert.ok(muutKuinHetket.length <= 52,
+  assert.ok(muutKuinHetket.length <= 56,
     `muita kuin hetkiä on kaupungin kohdalla ${muutKuinHetket.length} — luku saa vain laskea`);
 });
 

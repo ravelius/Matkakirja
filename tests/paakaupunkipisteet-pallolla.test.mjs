@@ -28,7 +28,7 @@ test('jokainen pääkaupunki saa pisteen etuliitteellä ja pienimmällä tärkey
     assert.equal(k.n, k.nimi);
     assert.ok(MAAILMANKARTTA.map.countryShapes[k.maa], `${k.id}: maalehden maa ${k.maa} puuttuu`);
   }
-  assert.ok(!onPaakaupunkipiste('belgrad') && onPaakaupunkipiste('pk:belgrad'));
+  assert.ok(!onPaakaupunkipiste('podgorica') && onPaakaupunkipiste('pk:podgorica'));
 });
 
 test('laudan x/y osuu takaisin pääkaupungin asteisiin', () => {
@@ -42,8 +42,8 @@ test('laudan x/y osuu takaisin pääkaupungin asteisiin', () => {
 });
 
 test('laudan pysäkki ei saa toista pistettä', () => {
-  const ohi = paakaupunkipisteet('maailmankartta', new Set(['belgrad']));
-  assert.ok(!ohi.some((k) => k.id === `${PK_ETULIITE}belgrad`));
+  const ohi = paakaupunkipisteet('maailmankartta', new Set(['podgorica']));
+  assert.ok(!ohi.some((k) => k.id === `${PK_ETULIITE}podgorica`));
   assert.equal(ohi.length, pisteet.length - 1);
 });
 
@@ -61,7 +61,9 @@ test('pallolauta kytkee pisteet nimiin, rajaukseen ja maakorttiin', () => {
 test('maat ilman laudan kaupunkia: pääkaupunki on ainoa tie maahan', () => {
   const laudanMaat = new Set(Object.values(MAAILMANKARTTA.map.cityCountry));
   const aina = pisteet.filter((k) => !laudanMaat.has(k.maa)).map((k) => k.maa).sort();
-  for (const iso of ['ALB', 'BLR', 'MDA', 'MKD', 'MNE', 'SRB']) assert.ok(aina.includes(iso), iso);
+  // ALB, BLR, MDA, MKD ja SRB saivat laudan pysäkin 14.10.2026 (juna 193); Montenegro, Andorra ja San Marino jäivät pisteiksi.
+  for (const iso of ['AND', 'MNE', 'SMR']) assert.ok(aina.includes(iso), iso);
+  for (const iso of ['ALB', 'BLR', 'MDA', 'MKD', 'SRB']) assert.ok(!aina.includes(iso), iso);
   assert.ok(!aina.includes('SVK') && !aina.includes('HRV'), 'pysäkkimaa noudattaa kohdemaan sääntöä');
 });
 

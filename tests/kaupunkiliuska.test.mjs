@@ -80,7 +80,7 @@ test('maan niminen kaupunki tunnistetaan laudan datasta (kaupunki → maa → ma
     .filter((c) => onMaanNiminenKaupunki(c, kartta)).map((c) => c.id).sort();
   assert.deepEqual(maanNimiset, [
     'angola', 'guatemala', 'hongkong', 'islanti', 'kamerun', 'kongo', 'kuwait',
-    'luxemburg', 'madagaskar', 'mosambik', 'panama', 'sierraleone', 'singapore',
+    'luxemburg', 'madagaskar', 'monaco', 'mosambik', 'panama', 'sierraleone', 'singapore',
   ]);
   // Tavallinen kaupunki ja alue-"kaupungit" eivät ole maan nimisiä.
   for (const id of ['pariisi', 'kreeta', 'sisilia', 'alpit', 'lappi']) {
