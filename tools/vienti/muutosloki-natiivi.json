@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (189)",
+   "paiva": "2026-10-14",
+   "teksti": "Raketti Andøyan oikealta alustalta: uusi lento, savu, valo ja avaruusasema; ISS-kupoli: oikea paikka, kertoja ja ylilennot. Ranskan taidemuseo kertojineen, teokset oikean värisinä; museoon tauko, nuolet ja uusi valikko. Rijksmuseum kartalla, ja Tavlin ja Myllyn tavoite ääneen."
+  },
+  {
    "versio": "1.1 (188)",
    "paiva": "2026-10-13",
    "teksti": "Uutta:\n– saapumiseen kaupunkien näköalat ja kulkuneuvot\n– museo: napautus aloittaa kerronnan, i-merkki kehyksellä, saliin ovelta, Vermeer ei ylivalotu\n– ISS:n Pulu siluettina, napautus tuo ikkunaan\n– vesi ilman laikkuja 6 kaupungissa\n– Tukholman maasto tarkempi"
