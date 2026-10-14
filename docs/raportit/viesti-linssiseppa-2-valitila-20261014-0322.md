@@ -44,3 +44,12 @@ Seuraavaksi: PT:n kuittaus → NS:lle SHA junaan 189; telakointi ISS:ään erill
   testit TelakointiTestit. PK kytkee RakettiLaukaisuun (vaihe, repliikki erillisenä klippinä, Cupolan portti, ohitus); pyydetty origo ISS:lle
   telakoinnin ajaksi (float-värinä). Seuraavaksi: PK:n SHA → yhteinen simu, kuva-arkki PT:lle.
 - Löydös PK:lle: Cupolassa valkoisia laattaneliöitä Tyynen valtameren yllä (kevyt1 k00).
+
+## PÄIVITYS 06.3x
+- TELAKOINTI: PK kytki (pelikoodari/telakointi-190 8c74ab8e8 → 8f8af1e82); LS2 haara `linssiseppa2/telakointi-190` **a6b65f315**
+  (kamera (26, 7, 30), valonheittimet maan varjossa RakettiMalli.TelakoinninYovalo 0,5, Telakointi.KentanKerroin = kuva-ala 1 → 0,5
+  sekoituksen mukana – PK kytkee LateUpdateen, koska pallonäkymä pitää kameran ≥ 100 m:ssä). Simut telakointi1–3 (lokit/todistus-telakointi*):
+  10 s:n telakointi toimii päivällä ja yöllä; PK:lle: sininen kehys ~1 s ennen Cupolaa yhä (telakointi3 56–57 s), telakointiklippi Äänittäjällä.
+- VALKOISET LAATAT Cupolassa (kevyt1 k00, Tyyni valtameri, 7–8 rasteritonta laattaa 100 %:lla): ei toistunut valk1-diagnoosissa
+  (Kazakstan, 0) eikä telakointi3:ssa; diagnoosihaara `linssiseppa2/valkoiset-laatat-diag` 9aa02540f (lokittaa nimen ja lat/lon) – ajetaan
+  uudelleen avomeren yllä. Ei junaan.
