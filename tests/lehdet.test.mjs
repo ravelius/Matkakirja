@@ -374,6 +374,9 @@ test('jokainen kohdekartta on avaimistettu laudan kaupunki-id:llä', async () =>
   const idt = new Set(PACKS.flatMap((p) => (p.cities ?? []).map((c) => c.id)));
   // Pääkaupunkipisteen kartta avaimistetaan pisteen id:llä (PT 11.10.2026); se ei ole pysäkki.
   for (const p of PAAKAUPUNKIPISTEET) idt.add(p.id);
+  // Juna 193 (KS cfb95e0b8): Reykjavíkin kevyt piste poistui, koska laudan islanti ON Reykjavík; piirtäjän avain reykjavik on
+  // saman kartan alias (KAUPUNKIKARTAT.islanti = KAUPUNKIKARTAT.reykjavik), joten se renderöityy laudan islannille.
+  for (const [avain, kartta] of Object.entries(KAUPUNKIKARTAT)) if ([...idt].some((id) => KAUPUNKIKARTAT[id] === kartta)) idt.add(avain);
   for (const avain of Object.keys(KAUPUNKIKARTAT)) {
     assert.ok(idt.has(avain),
       `kohdekartta "${avain}" ei vastaa yhdenkään laudan kaupunki-id:tä — `
