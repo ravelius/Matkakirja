@@ -14139,3 +14139,7 @@ PT 12.4x jako: Natiivi-UI kohdat 2 (tekstilaatikot läpinäkyviksi pohjiin, Raam
 ## PT:N ILMOITUKSET OMISTAJALLE VAIN PAKOLLISET (14.10.2026 klo 13.52)
 
 Omistaja 14.10.2026 klo 13.52 (Keskustelukanavan välittämä, sanatarkasti): "Päätoimittajalta ei tarvitse tulla minulle ilmoituksia ellei ole aivan pakko". PT lähettää omistajalle tarkoitetun viestin Keskustelukanavalle vain, kun tarvitaan omistajan toimea tai päätöstä (KYSYMYS, TOIMI TARVITAAN). Valmistumiset, korjaukset ja TF-julkaisut kirjataan vain Asemataululle. Raamattu: KYSYMYKSET-SESSIO → KESKUSTELUKANAVA -kappale päivitetty.
+
+## TARKENNUS: EI PUSH-ILMOITUKSIA, PT:N VIESTIT KESKUSTELUKANAVALLE KUTEN ENNEN (14.10.2026 klo 13.57)
+
+Omistaja 14.10.2026 klo 13.5x (Keskustelukanavan välittämä, sanatarkasti; korvaa saman päivän 13.52-kirjauksen): "Sinä voit kyllä välittää minulle päätoimittajan viestejä, jos ne ovat sinusta oleellisia. Lähinnä nyt on tullut minulle puhelimeen push-viestejä, joihin minun ei kuitenkaan ole ollut tarpeen reagoida, niin ne on hyvä ottaa pois päältä." PT:n viestit Keskustelukanavalle jatkuvat kuten ennen, ja Keskustelukanava päättää, mitkä niistä ovat omistajalle oleellisia. Mikään sessio ei lähetä PushNotificationia. Odottajavahdin push-vaihe on poistettu jonokierroksen tekstistä.
