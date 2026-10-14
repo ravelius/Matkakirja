@@ -65505,6 +65505,1893 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e04, e05, e06, e07, e08, e09, e10, e11, e12, e13, e14, 93 kaupunkia):
+   * Kohdekartan nähtävyysjutut. Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e04-pilvi, paakaupungit-e05-pilvi, paakaupungit-e06-pilvi, paakaupungit-e07-pilvi, paakaupungit-e08-pilvi, paakaupungit-e09-pilvi, paakaupungit-e10-pilvi, paakaupungit-e11-pilvi, paakaupungit-e12-pilvi, paakaupungit-e13-pilvi, paakaupungit-e14-pilvi.
+   */
+  alger: {
+    'Casbahin linnoitus': {
+      aika: '1500-luku',
+      teksti: 'Casbahin linnoitus sijaitsee vanhankaupungin korkealla puolella. Se antoi nimensä kaupunginosalle, joka levittäytyy rinnettä alas kohti merta. Osmanikauden kokonaisuuteen kuului hallitsijan palatsin lisäksi moskeijoita, kylpytiloja, puutarhoja ja puolustusrakennuksia. Palatsin huoneet, keittiöt ja hammamit liittyivät sisäpihan ympärille rakentuvaan kokonaisuuteen.\n\nDeyt siirsivät hallintonsa ja asuinpaikkansa tänne 1800-luvun alkupuolella. Rakennusten koristelussa käytettiin keramiikkaa, ja arkkitehtuurissa yhdistyvät maurilaiset, osmaniset ja eurooppalaiset piirteet. Linnoitus oli olemassa vuonna 1873, mutta Alger oli jo Ranskan siirtomaavallan alainen. Siirtomaakaudella tie halkaisi vanhaa linnoituskokonaisuutta.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Palace_of_the_Dey',
+    },
+    'Ketchaoua-moskeija': {
+      aika: '1600-luku; nykyinen rakennus 1800-luvulta',
+      teksti: 'Ketchaoua sijaitsee Casbahin alareunassa. Paikan moskeijahistoria ulottuu 1600-luvulle. Ranskan siirtomaakauden alussa paikasta tehtiin Saint-Philippen katedraali. Vanhaa rakennusta purettiin ja tilalle rakennettiin katedraali 1800-luvun puolivaiheilla.\n\nVuonna 1873 rakennus oli katolisessa kirkkokäytössä. Nykyisin se toimii jälleen moskeijana. Sisäänkäyntiin noustaan portaita, ja sitä kehystävät minareetit. Sisäänkäynnin koristeellista portiikkia kannattavat marmoripylväät, ja rakennuksen koristelussa yhdistyvät maurilaiset ja bysanttilaiset piirteet.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Ketchaoua_Mosque',
+    },
+    'Dar Mustapha Pacha': {
+      aika: '1700-luvun loppu',
+      teksti: 'Dar Mustapha Pacha rakennettiin Casbahiin Mustapha Pachalle 1700-luvun lopulla. Palatsin suureen pääoveen on sovitettu pieni kulkuovi, ja ovessa on pronssiniittikoristelua. Sisäänkäyntihalleissa on holveja ja seinäsyvennyksiin tehtyjä penkkejä. Sisäpihaa ympäröivät marmoripylväiden kannattamat kaarikäytävät, joista avautuu suuria huoneita.\n\nKaakeliseinät, marmoriset ovenkehykset ja gallerioiden puupalkit ovat osa talon rakennuskulttuuria. Palatsi on muutettu miniatyyrien, käsikirjoitusten koristelun ja kalligrafian eli kaunokirjoituksen kansallismuseoksi.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Dar_Mustapha_Pacha',
+    },
+    'Djamaa el Djedid': {
+      aika: '1600-luku',
+      teksti: 'Djamaa el Djedid tarkoittaa Uutta moskeijaa, vaikka rakennus on peräisin osmanikauden 1600-luvulta. Se sijaitsee Place des Martyrs -aukion merenpuoleisella laidalla ja tunnettiin myös kalastajien moskeijana. Suuren keskuskupolin ympärillä on pienempiä kupoleita ja holvattuja osia. Kupolien osmaniset piirteet yhdistyvät nelikulmaiseen pohjoisafrikkalaiseen minareettiin.\n\nSisätiloissa eri rakennusperinteet kohtaavat edelleen: rukoussyvennyksessä on andalusialaisia piirteitä ja saarnatuolissa italialaista marmoria. Ulkoseinät ja kupolit on kalkittu valkoisiksi. Minareetin kello tuotiin vanhasta Djenina-palatsista. Kalastajien moskeija -nimitys puolestaan liittyi läheiseen satamaan ja sen käyttäjiin.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Djamaa_el_Djedid',
+    },
+    'Djamaa el Kebir': {
+      aika: '1000-luku; myöhempiä lisäyksiä',
+      teksti: 'Djamaa el Kebir on Casbahin historiallinen moskeija sataman lähellä. Sen alkuperäinen rakennus kuuluu almoravidikaudelle, 1000-luvun loppuun. Myöhemmät rakentajat täydensivät ja uudistivat kokonaisuutta: minareetti on alkuperäistä rakennusta nuorempi keskiaikainen lisäys. Rukoussalissa valkoiset pilarit ja hevosenkenkäkaaret jakavat tilan pitkittäisiin käytäviin.\n\nRanskan siirtomaakauden alkupuolella ulkopuolelle lisättiin kaarikäytävä, jossa käytettiin puretun al-Sa’ida-moskeijan marmoripylväitä. Kaarikäytävä täydensi keskiaikaista moskeijaa. Vanha puinen minbar eli saarnatuoli kulki pyörillä lattiaan upotettuja kiskoja pitkin. Saarnatuoli on nykyään museossa, mutta kiskot ovat jääneet moskeijaan.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Djamaa_el_Kebir',
+    },
+    'Raïsien palatsi': {
+      aika: '1500–1700-luvut',
+      teksti: 'Raïsien palatsi eli Palais des Rais on merenrannan rakennuskokonaisuus, joka tunnetaan myös nimellä Bastion 23. Siihen kuuluu palatseja ja vanhoja kalastajien taloja. Alueen puolustusrakenteiden historia alkaa 1500-luvulta, kun taas palatsiosat ovat nuorempia. Kokonaisuus säilyttää alemman Casbahin merenrantaperintöä kaupungissa, jonka rantakortteleita järjestettiin siirtomaakaudella uudelleen.\n\nRakennuksia käytettiin eri aikoina asuntoina, konsulaattina ja kirjastona. Restauroituna se toimii nykyisin taiteen ja kulttuurin keskuksena. Bastion-nimi ja rakennusten numerointi kuuluvat alueen Ranskan ajan kartoituksen historiaan.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Palais_des_Rais',
+    },
+    'Sidi Abderrahmanen mausoleumi': {
+      aika: '1400-luvun hautapaikka; mausoleumi 1600-luvulta',
+      teksti: 'Mausoleumi liittyy oppineeseen Sidi Abd al-Rahman al-Tha’alibiin, jota Algerissa pidetään kaupungin suojeluspyhimyksenä. Hautapaikan ja uskonnollisen yhteisön juuret ovat 1400-luvulla; historiallisen mausoleumin arkkitehtuuri kuuluu myöhempään 1600-luvun vaiheeseen. Zawiya-kokonaisuuteen kuuluu hautarakennuksen lisäksi moskeija ja hautausmaata.\n\nMausoleumin sisustuksessa on kalligrafisia tekstiaiheita, ja siihen liittyvässä moskeijassa kupoleita sekä koristeltu minareetti. Hautausmaalle on haudattu myös muita Algerin historian henkilöitä. Vieressä sijaitseva Thaâlibiyya-madrassa rakennettiin 1900-luvun alussa. Madrassa oli oppilaitos; hautarakennus, moskeija ja hautausmaa muodostavat sitä vanhemman uskonnollisen kokonaisuuden.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Zawiya_Thaalibia_(Algiers)',
+    },
+  },
+  banjul: {
+    'Albertin tori': {
+      aika: '1800-luvun puoliväli',
+      teksti: 'Albertin tori kuuluu Banjulin vanhan saarikaupungin asiointipaikkoihin. Liberation Avenuella sijaitseva katutori tunnettiin aiemmin virallisella nimellä Royal Albert Market. Nykyinen tori muodostuu tiheästä kojujen ja käytävien verkosta.\n\nTorin alku ajoittuu 1800-luvun puoliväliin, ja nimi tulee kuningatar Victorian puolisosta prinssi Albertista.\n\nAlbertin tori sijaitsee varsinaisessa Banjulissa, St Mary\'s -saaren kaupungissa. Serrekundan markkinat sijaitsevat mantereella eri paikkakunnalla kuin Albertin tori.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Gambia-joen suu': {
+      aika: 'Luonnonpaikka',
+      teksti: 'Gambia-joki saavuttaa Atlantin Banjulin kohdalla. Pääkaupungin St Mary\'s -saari on jokisuun reunassa, ja vastarannalla on Barra. Rannikon lähellä joki levenee laajaksi estuaariksi, jossa meri ja joen alajuoksu liittyvät samaan vesialueeseen.\n\nBanjulin ja Barran lautta ylittää tätä suualuetta sekä matkustajien että ajoneuvojen kanssa. Barrasta yhteydet jatkuvat pohjoisrannan teitä pitkin Senegalin suuntaan.',
+      kuvat: [
+        {
+          tiedosto: 'Banjul Ferry (5197916345).jpg',
+          lyhyt: 'Gambia-joen suun ylitys yhdistää Banjulin ja Barran.',
+          selite: 'Banjulin ja Barran lauttareitti kulkee Gambia-joen suulla, missä käyttöveneet ja rannikon liikenne kohtaavat Atlantin vesialueen.',
+          lahde: 'dorothy.voorhees, Wikimedia Commons (CC BY-SA 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/n2-822e470f7b7601a368ff.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tanbin kosteikko': {
+      aika: 'Luonnonpaikka, myöhempi suojelualue',
+      teksti: 'Tanbi levittäytyy Banjulin länsi- ja lounaispuolen rannoille Gambia-joen suun tuntumaan. Mangrovekasvillisuus, vuorovesikanavat, laguunit ja liejuiset pinnat muodostavat yhtenäisen rannikkokosteikon.\n\nKosteikolla on monta tehtävää samanaikaisesti. Se vastaanottaa vettä, osallistuu rannan vakauttamiseen ja sedimenttien liikkeeseen sekä toimii kaupungin hydrologisena puskurina. Linnuille ja muille kosteikkoeläimille se on elinympäristö, ja paikalliseen työhön kuuluvat kalastus, osterin keruu sekä viljely reuna-alueilla. Tanbi on myös Ramsar-kohde.',
+      kuvat: [
+        {
+          tiedosto: 'Gambia (9383665170).jpg',
+          lyhyt: 'Tanbin mangrovet kasvavat Gambia-joen suun vuorovesirannoilla.',
+          selite: 'Tanbin mangrovejuuristo ja juuriin kiinnittyneet kuoret kuuluvat Gambia-joen suun vuorovesirannan luonnonympäristöön.',
+          lahde: 'Wolfgang Weigelt from Berlin, Germany, Wikimedia Commons (CC BY 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/banjul/n3-ec170997ac73f36d15aa.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  bissau: {
+    'Amuran linnoitus': {
+      aika: 'Ensimmäinen vaihe 1600-luvun lopulla, nykyinen kokonaisuus myöhemmistä vaiheista',
+      teksti: 'Amuran linnoitus kuuluu Bissaun vanhaan satamaytimeen. Paikan ensimmäinen linnake rakennettiin 1600-luvun lopun kauppa-asemavaiheessa, mutta se hylättiin ja tuhoutui. Nykyisen kokonaisuuden tärkeät rakennusvaiheet ajoittuvat 1700-luvulle.\n\nPerusratkaisua on luonnehdittu Vauban-tyyliseksi bastionilinnoitukseksi. Muurin kulmista ulkonevat bastionit mahdollistavat viereisten muuriosien puolustamisen sivusuunnasta. Sisällä oli komentotalo, kasarmeja ja varastorakennuksia, joten linnoitus oli myös majoituksen ja huollon ympäristö.\n\nIsoisän matkavuonna 1873 linnoitus oli jo olemassa. Sitä korjattiin 1800-luvulla ja restauroitiin vielä 1900-luvulla.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Pidjiguitin laituri': {
+      aika: '1800-luvun loppupuoli ja myöhemmät muutokset',
+      teksti: 'Pidjiguiti on Bissaun sataman vanha laituripaikka. Sen julkinen laiturivaihe kuuluu 1800-luvun loppupuolelle. Varhaisessa rakenteessa yhdistettiin puuta ja muurausta, ja paikka tunnettiin nimellä Ponte-cais Correia e Lança.\n\nBissaussa käytiin satamakauppaa jo ennen tätä julkista laituria. Satamassa oli myös yritysten käyttämiä puisia lastaus- ja maihinnousulaitureita. Isoisän matkavuonna 1873 Bissau oli jo kauppapaikka, kun taas Pidjiguitin julkisen laiturin rakennusvaihe kuuluu myöhempään aikaan.\n\nMyöhemmin sataman muihin osiin rakennettiin uusia laitureita.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/bissau/bissau-n2-puu-muuraus-20261012-v1-8d2b7b039b7d.png',
+          suora: true,
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          selite: 'Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.',
+          lyhyt: 'Puun ja muurauksen yleinen materiaalihavainne, ei Pidjiguitin laiturin näkymä tai rakenne.',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tulliaukio: {
+      aika: 'Vanhan satamaytimen aukio',
+      teksti: 'Praça da Alfândega, suomeksi Tulliaukio, sijaitsee Amuran linnoituksen itäpuolella Bissaun vanhassa satamaytimessä. Aukiolla on myös puutarhatilaa. Nimi viittaa Bissaun tullitaloon: portugalin alfândega tarkoittaa tullia.\n\nTullitalossa käsitellään maahan tulevia ja sieltä lähteviä tavaroita. Sen lähellä ovat linnoitus ja sataman laiturit Geba-joen suistoalueen pohjoisrannalla. Nimi muistuttaa kauppasataman tullitoiminnasta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  conakry: {
+    'Tombon saari': {
+      aika: 'Luonnonpaikka, kaupunkikehitys 1800-luvun lopulta',
+      teksti: 'Tombon saari sijaitsee Atlantilla Kaloumin niemimaan kärjessä. Nykyisen Conakryn vanha kaupunki kasvoi saarelle, joka on yhdistetty niemimaahan pengeryhteydellä. Kaupungin laajeneminen jatkui niemimaata pitkin koilliseen.\n\nAlueella oli Baga- ja Susu-yhteisöjen asutusta, ja Conakryn nimi liittyy Susu-kylään. Ranskalainen siirtomaakaupunki muodostui 1800-luvun lopulla. Siirtomaakaupungin syntyyn liittyivät ensin maa-alueen luovutus Tombolta ja myöhemmin uuden hallintokeskuksen kehittäminen.',
+      kuvat: [
+        {
+          tiedosto: 'Un aperçu de la ville de conakry.jpg',
+          lyhyt: 'Tombon ja Kaloumin vanha ydin Conakryssa.',
+          selite: 'Tombon ja Kaloumin vanhan kaupunkiytimen näkymä liittää Conakryn korttelit ympäröivään mereen.',
+          lahde: 'Alpha hmd, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/n1-2995c4e5d0dbdc72277c.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Conakryn satama': {
+      aika: 'Siirtomaakaudella kehittynyt satamaympäristö–nykyaika',
+      teksti: 'Conakryn kaupallinen satama sijaitsee Kaloumissa vanhan keskustan alueella. Atlantin rannalla toimivaan satamaan kuuluvat konttien käsittely sekä lastaus- ja varastointitoiminnot.\n\nSataman kautta tuodaan elintarvikkeita, teollisuustuotteita ja energiatuotteita sekä viedään mineraaleja. Vientituotteisiin kuuluvat erikseen bauksiitti ja alumiinioksidi. Historiallinen rata yhdisti Conakryn Kankaniin sisämaassa.',
+      kuvat: [
+        {
+          tiedosto: 'Bateau au port Autonome de Conakry.jpg',
+          lyhyt: 'Rahtialus Conakryn kaupallisessa satamassa vuonna 2019.',
+          selite: 'Rahtialus ja konttien lastinkäsittely Conakryn satamassa vuonna 2019 kuuluvat kaupungin merikaupan ympäristöön.',
+          lahde: 'Aboubacarkhoraa, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/n2-70bd94ad7283bec055a7.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Camayennen kasvitieteellinen puutarha': {
+      aika: '1800-luvun loppu',
+      teksti: 'Camayennen kasvitieteellinen puutarha sijaitsee Conakryn Camayennen kaupunginosassa. Puutarha tunnetaan kapokkipuista. Ambroise Paré -sairaala jää sen eteläpuolelle ja Conakryn suuri moskeija pohjoispuolelle.\n\nRanskalaiset perustivat puutarhan 1800-luvun lopulla uuden kaupungin rakentamisen yhteydessä.\n\nKaupunkirakentaminen on vähentänyt puutarhan pinta-alaa: 2000-luvun alussa jäljellä oli vain osa alkuperäisestä istutusalueesta.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-e04-e14/conakry-camayenne-havainne-v2.png',
+          suora: true,
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          selite: 'Kapokkipuun tyvipönkät. Havainnekuva.',
+          lyhyt: 'Kapokkipuun tyvipönkät. Havainnekuva.',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kassan saari': {
+      aika: 'Luonnon- ja asutuspaikka, kauppaa 1700-luvulla, kaivoksia 1900-luvulla',
+      teksti: 'Kassa kuuluu Conakryn edustan Los-saariston pääsaariin. Kassan ja Tamaran kaaret ympäröivät keskellä olevaa Roumea. Kassa-nimen selitetään liittyvän portugalin sanaan casa, talo.\n\nSaarella oli 1700-luvulla kauppapaikka, jonka toimintaan kuuluivat laivojen korjaajat ja jokireittien luotsit. 1900-luvulla Kassalla louhittiin bauksiittia, ja keskiosiin jäi avolouhoksia. Pohjoisosan kivilouhoksesta otettiin myös rakennuskiveä Conakryn sataman suojapengertä varten.\n\nVuonna 1873 saaristo oli Britannian hallinnassa ja Kassan kauppapaikan historia oli jo alkanut. Myöhemmät bauksiittikaivokset eivät kuulu matkavuoden maisemaan. Kassan saari on myös eri laajuinen paikka kuin koko saaristoa kattava Kassa-kommuuni. Kassan rannoilta maisema jatkuu metsäisiin sisäosiin ja entisiin louhoksiin.',
+      kuvat: [
+        {
+          tiedosto: 'Ille de kassa.jpg',
+          lyhyt: 'Kassan saaren luonnonranta vuonna 2017.',
+          selite: 'Kassan saaren luonnonranta vuonna 2017 on osa Conakryn edustan Los-saaristoa.',
+          lahde: 'Ourysow92, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/n4-6964d1d503837557d72b.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Roumen saari': {
+      aika: 'Vanha luonnon- ja asutuspaikka, nimikerrostumia 1800–1900-luvuilta',
+      teksti: 'Roume on asuttu saari Los-saariston keskellä. Kassa ja Tamara muodostavat sen ympärille lähes sulkeutuvan kaaren. Saaren rantoihin kuuluu Plage du Gouverneur, mutta Roume on koko saaren nimi. \n\nRoom ja Crawford Island ovat saaren vanhoja nimiä. Room-muoto liittyy englanninkielisten asukkaiden käyttämään nimeen, ja Roume-kirjoitusasu yhdistyy ranskalaisen siirtomaahallinnon Ernest Roumeen. Saarella kerrotaan olleen 1800-luvun alussa rakennettu brittiläinen linnake.\n\nIsoisän matkavuonna 1873 Roume kuului Britannian hallitsemaan saaristoon. Room ja Crawford Island olivat tuon aikakauden saaresta käytettyjä nimiä.',
+      kuvat: [
+        {
+          tiedosto: 'Strand nach Süden auf Roume.jpg',
+          lyhyt: 'Roumen kivinen eteläranta vuonna 2020.',
+          selite: 'Roumen kivinen eteläranta vuoden 2020 kuvassa kuuluu saariston keskellä olevan saaren merimaisemaan.',
+          lahde: 'Flucco, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/n5-313518aed4fda03935b9.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tamaran saari': {
+      aika: 'Vanha luonnon- ja asutuspaikka, kaivostoimintaa 1900-luvulla',
+      teksti: 'Tamara sijaitsee Los-saariston läntisellä laidalla. Pitkä kaareva saari muodostaa Kassan kanssa Roumea ympäröivän saaristokehän. Tamara tunnetaan myös nimellä Fotoba; nimestä käytetään myös kirjoitusasua Fortoba.\n\nSaariston luonnonmaisemaan kuuluvat rannat ja metsäiset sisäosat. Tamaran historiassa on myös 1900-luvun bauksiittikaivostoimintaa. Saaren rakennushistoriaan kuuluvat myös merenkulun majakka ja Fotoban entinen vankila. ',
+      kuvat: [
+        {
+          tiedosto: 'Île de fotoba 2.jpg',
+          lyhyt: 'Tamaran eli Fotoban vesireuna vuonna 2019.',
+          selite: 'Tamaran eli Fotoban rantakivet ja kasvillisuus vuoden 2019 kuvassa kuuluvat saaren luonnonympäristöön.',
+          lahde: 'Kalissa Mamayimbé kir, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/conakry/n6-9d1b1617cbb29b11e796.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  monrovia: {
+    'Kansallismuseon vanha oikeustalo': {
+      aika: '1800-luvun oikeustalo, myöhempi museokäyttö',
+      teksti: 'Liberian kansallismuseo toimii Monroviassa vanhassa Supreme Court -oikeustalossa. Rakennuksen historiallinen käyttö ajoittuu 1800-luvulle. Museo laitoksena syntyi myöhemmin, joten talon ja kokoelman historiat alkavat eri aikoina.\n\nMuseon tehtävänä on hankkia, säilyttää ja esitellä Liberian kulttuurista ja historiasta kertovaa aineistoa. Asiakirjat, kartat ja valokuvat ovat osa tätä muistia. Huonekalut ja arkiset käyttöesineet täydentävät kirjallista aineistoa. Museo on aiemmin sijainnut muualla, myös Providence Islandilla.\n\nIsoisän matkavuonna 1873 vanha oikeustalo kuului kaupungin rakennuksiin, mutta kansallismuseokäyttö oli vielä tulevaisuutta. Museon kokoelmien joukossa on vanhoja toimitustekstejä ja valokuvia Monroviasta.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e04/monrovia/monrovia-n1-asiakirja-aineisto-20261012-v1-f2c299f19de2.png',
+          suora: true,
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          selite: 'Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.',
+          lyhyt: 'Asiakirja-aineiston yleishavainne, ei kansallismuseon esineiden tai oikeustalon kuva.',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Providence Baptist Church, historiallinen pyhäkkö': {
+      aika: '1800-luvun historiallinen pyhäkkö',
+      teksti: 'Providence Baptistin kirkkopaikka sijaitsee Monroviassa Broad-, Center- ja Ashmun-katujen ympäristössä. Seurakunta sai alkunsa 1800-luvun alun uudisasutusvaiheessa, ja sen historiallinen pyhäkkö rakennettiin saman vuosisadan aikana. Pieni vanha rakennus on säilynyt seurakunnan käytössä.\n\nPyhäkössä hyväksyttiin Liberian itsenäisyysjulistukseen ja perustuslakiin liittyneet historialliset asiakirjat. Hilary Teage osallistui julistuksen kirjoittamiseen ja oli seurakunnan pastori.\n\nSeurakunnan kasvu johti paljon suuremman viereisen pyhäkön rakentamiseen 1900-luvun jälkipuolella. Modernistinen naapuri kuuluu eri aikakauteen, vaikka molemmat rakennukset ovat samalla kirkkopaikalla.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Providence Island': {
+      aika: 'Vanha jokisaari, myöhempiä paikkakäytön kerroksia',
+      teksti: 'Providence Island on Monroviassa Mesuradojoen vesialueella oleva saari. Sen sijainti liittyy myös Stockton Creekiin, joka yhdistää kaupungin jokivesiä. Vesireitit erottavat saaren Cape Mesuradon niemimaalla sijaitsevasta keskustasta.\n\nSaaren kaakkoisosassa kasvaa mangrovea. Saarella on vanha kaivo ja rantautumislaiturin jälkiä. Saarella on myös puustoa, ja myöhemmin rakennettuja majoja on sovitettu perinteisiä rakennustapoja jäljitteleviksi.',
+      kuvat: [
+        {
+          tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 05 - 022 - A close up of Providence Island in full, in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif',
+          lyhyt: 'Providence Island Mesuradojoessa vuonna 1975.',
+          selite: 'Providence Island Mesuradojoessa vuoden 1975 kuvassa näyttää Monrovian jokisaaren historiallisen maisemakerroksen.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/n3-ff065f646d1eb2dc146a.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bushrod Island': {
+      aika: 'Vanha luonnon- ja käyttöpaikka, myöhempiä kaupunkivaiheita',
+      teksti: 'Bushrod Island on Monrovian keskustan niemimaan pohjoispuolella sijaitseva saari. Sitä ympäröivät Atlantti, Saint Paul -joki, Mesuradojoki ja Stockton Creek. Stockton Creek yhdistää jokien vesialueita vuorovesikanavana.\n\nDei-yhteisöt käyttivät saarta ennen 1800-luvun uudisasutusvaihetta. Saaren nimi liittyy Bushrod Washingtoniin. Asuinalueisiin kuuluvat muun muassa Vai Town, New Kru Town, Logan Town ja Clara Town. Nykyinen Freeport of Monrovia ja muuta kaupallista toimintaa sijaitsee saarella.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'West Point': {
+      aika: 'Nykyinen asuinalue 1900-luvulta',
+      teksti: 'West Point on Monrovian asuinalue Atlanttiin työntyvällä niemekkeellä. Se sijaitsee Watersiden luoteispuolella Mesurado- ja Saint Paul -jokien välisessä rannikkoympäristössä. Meren ja jokivesien ympäröimälle niemekkeelle on kasvanut tiivis asutus.\n\nKalastajien asettuminen liittyy West Pointin 1900-luvun syntyyn. Kalastus, pienkauppa ja palvelutyö yhdistävät aluetta keskustan kauppa-arkeen. Rantaeroosio on syönyt niemen reunaa ja muuttanut rantaviivan paikkaa.\n\nIsoisän matkavuonna 1873 nykyistä West Pointin asuinaluetta ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'An aerial view of the West Point area of Monrovia.jpg',
+          lyhyt: 'West Pointin niemeke ja rannikko vuonna 2014.',
+          selite: 'West Pointin niemeke, asuinalue ja rantaviiva vuoden 2014 kuvassa kuuluvat Monrovian paikalliseen kaupunkimaisemaan.',
+          lahde: 'Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/n5-ca7af30b933106c217b2.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mesuradon kosteikkoalue': {
+      aika: 'Luonnonpaikka, nykyinen suojeluvaihe myöhempi',
+      teksti: 'Mesuradon kosteikkoalue sijaitsee Monrovian ja Montserradon alueella. Sen keskeistä kasvillisuutta on mangrove. Rantakasvillisuus vakauttaa rantaviivaa ja kosteikko pidättää sedimenttiä, joten puusto, veden liike ja maan kertyminen liittyvät toisiinsa.\n\nLinnut käyttävät kosteikkoa ravinnonhakuun. Kalastus ja äyriäiset yhdistävät ympäristön myös kaupunkilaisten ruokaan ja elinkeinoihin. Kosteikon historiasta on dokumentoitu polttopuun ja hiilen keruuta sekä teollista kuormitusta luontoympäristön paineina.',
+      kuvat: [
+        {
+          tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 05 - 021 - Providence Island in the Mesurado river - Monrovia, Mamba Point, Montserrado, Liberia, 1975.tif',
+          lyhyt: 'Mesuradojoen ja taustan kosteikon maisema vuonna 1975.',
+          selite: 'Mesuradojoki ja taustan kosteikkokasvillisuus vuoden 1975 kuvassa kertovat Monrovian historiallisesta vesimaisemasta.',
+          lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/monrovia/n6-589160cd108ec7cf85d0.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Mesurado Wetlands, Ramsar RSIS 1631: https://rsis.ramsar.org/ris/1631',
+    },
+  },
+  nouakchott: {
+    Kalastajaranta: {
+      aika: 'nykykaupunki',
+      teksti: 'Nouakchottin kalastajaranta sijaitsee kaupungin länsipuolella Atlantin äärellä. Puuveneitä vedetään hiekalle ja saalista tuodaan myyntiin. Rannan työalueella toimivat kalastajien lisäksi jälleenmyyjät ja kalanperkaajat.\n\nPienveneiden mukana tullut kala jatkaa rannasta useita reittejä. Osa kuljetetaan kaupungin myyntipaikkoihin, osa käsitellään ja pakataan vientiin. Saaliin purkaminen, kauppa ja jatkokäsittely tuovat rannan ympärille monenlaisia ammatteja.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Mauritanian kansallismuseo': {
+      aika: '1900-luvun museolaitos',
+      teksti: 'Mauritanian kansallismuseo sijaitsee Nouakchottissa. Sen kokoelmissa on arkeologista ja etnografista aineistoa: esihistoriallisia kivityökaluja, keramiikansirpaleita, nuolenkärkiä sekä paikalliseen pukeutumiseen liittyviä esineitä. Kokoelmat kertovat Mauritanian eri yhteisöjen elämästä.\n\nMuseossa säilytetään löytöjä vanhoista mauritanialaisista kaupungeista, kuten Koumbi Salehista, Aoudaghostista, Tichitistä ja Ouadanesta. Samassa rakennuksessa toimivat myös kansalliskirjasto sekä tutkimukseen ja käsikirjoitusten säilyttämiseen liittyvät laitokset. Muinaiset esineet ovat nykyistä pääkaupunkia vanhempia: museolaitosta ei ollut isoisän matkavuonna 1873.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/National_Museum_of_Mauritania',
+    },
+    'Friendship Port': {
+      aika: '1980-luvulta alkanut satamatoiminta',
+      teksti: 'Friendship Port eli Port de l’Amitié on Nouakchottin keinotekoinen syväsatama. Se rakennettiin 1980-luvulla avoimelle Atlantin rannikolle, jolla ei ollut luonnostaan suojaista satamalahtea. Betonilohkoista tehdyt aallonmurtajat suojaavat laivojen lastauspaikkaa merenkäynniltä.\n\nSatama avattiin vuonna 1986. Sen kautta pääkaupungin tavaroita voitiin tuoda suoraan meritse sen sijaan, että kuljetus olisi kulkenut ensin Dakarista maanteitse. Laitureita on myöhemmin laajennettu.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/Friendship_Port_of_Nouakchott',
+    },
+    'Marché Capitale': {
+      aika: 'Nykyisen pääkaupungin markkinapaikka',
+      teksti: 'Marché Capitale on Nouakchottin keskustan markkinapaikka Ould Abas -moskeijan luoteispuolella. Kauppaa käydään rakennuksissa ja niiden ympärillä. Torilla myydään ruokatavaroita, kankaita, koruja ja kodin käyttöesineitä.\n\nTorin yhteydessä toimii myös ompelijoita ja muita käsityöläisiä. Vaatteiden joukossa tunnetaan Mauritanian miesten väljä derra’a-asu. Ompelimot ja muut käsityöläisten tilat sijaitsevat markkinarakennusten yläkerrassa.',
+      kuvat: [],
+      lahde: 'https://en.wikipedia.org/wiki/March%C3%A9_Capitale ; https://de.wikipedia.org/wiki/Nouakchott',
+    },
+    'Nouakchottin olympiastadion': {
+      aika: '1980-luvulla avattu urheilupaikka',
+      teksti: 'Nouakchottin olympiastadion on jalkapallopaikka, jonka kenttää ympäröi yleisurheilurata. Se sijaitsee keskustan pohjoispuolisella lähetystöalueella Route des Ambassadesin suunnassa. Kentällä on käytetty tekonurmea.\n\nStadion avattiin vuonna 1983, ja sitä on myöhemmin kunnostettu. Siellä on järjestetty myös konsertteja. Stadionilla ovat esiintyneet mauritanialaiset laulajat Dimi Mint Abba ja Malouma.',
+      kuvat: [],
+      lahde: 'https://fr.wikipedia.org/wiki/Stade_olympique_de_Nouakchott ; https://de.wikipedia.org/wiki/Nouakchott',
+    },
+  },
+  praia: {
+    'Praça Alexandre Albuquerque -aukio': {
+      aika: 'vanha aukio, 1800-luvun kehitys',
+      teksti: 'Praça Alexandre Albuquerque on Praian historiallisen keskustan aukio Plateaun lounaisosassa. Sen keskellä on puistomainen julkinen tila, ja reunoilla eri-ikäisiä kaupunkitaloja sekä julkisia rakennuksia. Aukio liittyy Rua Serpa Pinton ja muiden keskustakatujen verkkoon. Se kuuluu tasanteen ruutukaavan keskeisiin paikkoihin.\n\nVuonna 1873 aukio oli olemassa, mutta tunnettiin vanhemmalla nimellä Praça do Pelourinho. Nykyinen nimi kuuluu myöhempään 1800-luvun nimenvaihtoon ja liittyy siirtomaakuvernöörin nimeen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Jaime Motan entinen kasarmi': {
+      aika: '1800-luku, useita vaiheita',
+      teksti: 'Jaime Motan entinen kasarmi sijaitsee Plateaun eteläpäässä, Avenida Andrade Corvon eteläpään yhteydessä. Sen ensimmäinen rakennusvaihe on 1800-luvun alkupuolelta. Kasarmi kuuluu vanhan keskustan hallinto- ja rakennushistoriaan; presidentinpalatsi on sen lähellä sijaitseva erillinen talo.\n\nKokonaisuutta muutettiin 1800-luvun lopulla ja 1900-luvun alussa, ja siihen kuuluu uusmanueliinisen tyylin piirteitä. Ensimmäinen kasarmivaihe oli olemassa vuonna 1873, mutta nykyinen nimi ja kaikki julkisivun osat eivät kuulu tuohon aikaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Praian etnografinen museo': {
+      aika: '1800-luvun talo, myöhempi museo',
+      teksti: 'Praian etnografinen museo sijaitsee vanhassa Plateau-keskustassa Rua 5 de Julholla. Se toimii 1800-luvun rakennuksessa, mutta museon synty liittyy myöhäisen 1900-luvun kulttuuriperintöhankkeisiin. Kokoelmia kerättiin eri Kap Verden saarilta: Praia kokoaa samassa museossa koko saariston esineperintöä.\n\nAineisto kertoo arjen taidoista ja elinkeinoista, kuten kalastuksesta, maataloudesta, kudonnasta, korinpunonnasta ja keramiikasta. Mukana on myös kertomuksia, arvoituksia ja muuta suullista perinnettä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Maria Pian majakka': {
+      aika: '1800-luvun loppu',
+      teksti: 'Maria Pian majakka on Ponta Temerosa -niemellä, missä se kuuluu Praian lahden sisääntulon merenkulun maamerkkeihin. Niemi on osa Santiagon eteläistä rannikkoa. Muurattu torni on valkoinen ja kahdeksankulmainen; siihen liittyy majakanvartijan matalampi rakennus sekä valohuoneen ja parvekkeen rakenteita.\n\nMajakka rakennettiin 1800-luvun loppupuolella ja nimettiin Portugalin kuningattaren Maria Pian mukaan. Majakkaa ei vielä ollut vuonna 1873.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Santa Marian luoto': {
+      aika: 'tuliperäinen luoto, 1800-luvun käyttö',
+      teksti: 'Santa Marian luoto on Santiagon rannan edustalla, Praian lahden suulla Gamboan rantaa vastapäätä. Tuliperäinen luoto tunnetaan myös vanhalla englanninkielisellä nimellä Quail Island.\n\nLuodolle rakennettiin 1800-luvun puolivälissä tullitalo ja varastoja. Rakennuksia käytettiin karanteeniin, joka siirtyi myöhemmin Ponta Temerosaan. Luoto ja varhaiset rakennukset olivat olemassa vuonna 1873; karanteenin toiminta vaihtui myöhemmin toiseen paikkaan.',
+      kuvat: [
+        {
+          tiedosto: 'Praia-Ilhéu de Santa Maria (3).jpg',
+          lyhyt: 'Santa Marian luoto Gamboan edustalla vuonna2012.',
+          selite: 'Santa Marian luoto Gamboan edustalla vuonna2012.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/praia/n5-796444495293c437310a.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  rabat: {
+    'Udayan kasbah': {
+      aika: '1100-luku, myöhemmät laajennukset',
+      teksti: 'Udayan kasbah on kukkulalle rakennettu linnoitettu kaupunginosa Bou Regreg -joen suulla. Almohadit rakensivat sitä 1100-luvulla aiempien tukikohtien paikalle. Rakennushankkeeseen kuuluivat palatsi, moskeija ja maanalainen vesikanava, joka toi vettä alueelle. Suuri Bab Oudaya -portti liittyy myöhempään almohadien rakennusvaiheeseen.\n\nKasbahin sisällä pohjoisen keskiaikainen ydin ja etelän myöhemmät lisäykset kuuluvat eri aikoihin. Moulay Ismailin paviljonki tuli eteläosaan vasta myöhemmin. Nykyiset sinivalkoiset talot ovat osa asuttua kaupunginosaa, ja Rue Jamaa johtaa suuren portin suunnasta kohti joelle avautuvaa näkymää. Medina on kasbahin vieressä, Salé joen toisella puolella.\n\nVuonna 1873 kasbah, sen vanha portti ja paviljonki olivat jo olemassa. Nykyistä Andalusialaista puutarhaa ja paviljongin museokäyttöä ei vielä ollut.',
+      kuvat: [
+        {
+          tiedosto: 'Kasbah des Oudaias P1060323.JPG',
+          lyhyt: 'Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.',
+          selite: 'Udayan kasbah Bou Regregin jokisuun taustalla vuonna2009.',
+          lahde: 'Pline, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n1-5b76fc42301d3b9908a6.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Kasbah_of_the_Udayas',
+    },
+    'Bou Regreg -joen suisto': {
+      aika: 'Luontokohde',
+      teksti: 'Bou Regreg saapuu Keski-Atlaksen suunnalta Atlantin valtamereen Rabatin ja Salén välissä. Rabat sijaitsee joen eteläpuolella, Salé pohjoispuolella. Suisto tunnetaan myös nimellä Wadi Sala. Joen suu on samalla kohta, jossa jokivesi ja vuoroveden kuljettama suolainen merivesi kohtaavat.\n\nUdayan kasbahista avautuu näkymä joelle, vastarannan Saléen ja Atlantille. Vesi erottaa kaupunkien historialliset ytimet, vaikka niillä on yhteistä historiaa ja nykyinen raitiovaunuyhteys. Myös muinaisen Salan paikka Chellahissa liittyi joen rantaan ja satamaan.',
+      kuvat: [
+        {
+          tiedosto: 'Boats in Bouregreg (2).jpg',
+          lyhyt: 'Bou Regreg laskee mereen Rabatin ja Salén välissä.',
+          selite: 'Bou Regregin suisto on Rabatin ja Salén välinen jokialue, jossa vuorovesi tuo Atlantin suolaista vettä joen suulle.',
+          lahde: 'MarwanAndrew, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n2-1e534244a1db91b816ce.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Bou_Regreg',
+    },
+    'Andalusialainen muuri': {
+      aika: '1600-luku',
+      teksti: 'Andalusialainen muuri rajaa Rabatin medinan eteläreunaa. Se rakennettiin 1600-luvun alkupuolella keskiaikaisen almohadikaupungin sisään. Ulomman kaupunginmuurin sisäpuolella oli ollut myös harvaan asuttuja ja avoimia alueita; myöhempi muuri rajasi tiiviimmän asutuksen oman kokonaisuutensa sisään.\n\nEspanjasta karkotettuja moriskoja asettui tälle alueelle. Muurin portit yhdistivät kaupunginosan eri suuntiin: Bab Mellah liittyi vanhaan juutalaiskortteliin, ja Bab Chellah sai monumentaalisen nykyasunsa 1800-luvun alun uudelleenrakennuksessa. Muurin jokipäässä on Borj Sidi Makhlouf -linnake.',
+      kuvat: [
+        {
+          tiedosto: 'Muraille des Andalous 2 - Rabat.JPG',
+          lyhyt: 'Andalusialainen muuri Rabatin medinan reunalla vuonna2013.',
+          selite: 'Andalusialainen muuri Rabatin medinan reunalla vuonna2013.',
+          lahde: 'Omar-toons, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n3-baaac7f30b68e5c6563a.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Andalusian_wall_of_Rabat',
+    },
+    'Moulay Slimanen moskeija': {
+      aika: '1800-luvun alku',
+      teksti: 'Moulay Slimanen moskeija sijaitsee Rabatin medinassa Andalusialaisen muurin pohjoispuolella. Sulttaani Moulay Slimane rakennutti sen 1800-luvun alussa, ja rakennus kantaa hänen nimeään. Paikka on Souika Streetin ja Sidi Fateh Streetin risteyksessä lähellä Bab Bouiba -porttia.\n\nRakennuksen sisällä on perinteinen avoin piha, sahn, ja rukoussalin tilaa jakavat pylväät ja kaaret. Kokonaisuuteen kuuluu myös minareetti. Moskeija kuuluu 1800-luvun alun Rabatiin. Medina oli jo pitkään asuttu, mutta nykyinen uusi kaupunginosa rakennettiin vasta myöhemmin, 1900-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'Moulay Slimane Mosque.jpg',
+          lyhyt: 'Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.',
+          selite: 'Moulay Slimanen moskeijan minareetti Rabatin medinassa vuonna2024.',
+          lahde: 'Rachidourkia, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n4-9d598a35fe3f75e4c980.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Moulay_Slimane_Mosque',
+    },
+    'Bab er-Rouah -portti': {
+      aika: '1100-luvun loppu',
+      teksti: 'Bab er-Rouah on almohadien kaupunginmuurin monumentaalinen portti. Se rakennettiin 1100-luvun lopulla osaksi Ya’qub al-Mansurin kaupunkihanketta. Nimi tarkoittaa Tuulten porttia. Ulompaa julkisivua reunustavat puolustustornit, ja kiveen veistetyt kaaret, kasviaiheet sekä suorakulmainen kehys kuuluvat sen vanhaan koristeluun.\n\nPortti sisältää enemmän kuin ulkoa näkyvän oviaukon. Vanha sisäänkäynti kulkee peräkkäisten kammioiden läpi ja tekee suorakulmaisia mutkia; suoraa käytävää kaupungin ulkopuolelta sisään ei ole. Ulompi ja sisempi julkisivu ovat saman kulkureitin eri päät. Alkuperäistä sisäänkäyntikaarta pienennettiin myöhemmin kivimuurauksella 1700-luvulla.\n\nVuonna 1873 portti ja sen muutettu kulkuaukko olivat jo olemassa. Portin vanhoihin sisätiloihin on sovitettu taidegalleria. Puolustuskäytöstä säilyneet kammiot muodostavat rakennuksen sisällä mutkittelevan kulkureitin.',
+      kuvat: [
+        {
+          tiedosto: 'Bab Rouah inner facade edit.jpg',
+          lyhyt: 'Bab er-Rouahin sisäsivu päättää vanhan porttireitin.',
+          selite: 'Bab er-Rouahin sisempi julkisivu kuuluu almohadien porttiin, jonka vanha sisäänkäyntireitti mutkittelee kammioiden kautta.',
+          lahde: 'Robert Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n5-51a9dd0e4256f4cbd16a.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Bab_er-Rouah',
+    },
+    'Chellahin raunioalue': {
+      aika: 'Antiikki ja keskiaika',
+      teksti: 'Chellah on muurein rajattu raunioalue, jossa eri aikakaudet sijaitsevat osittain päällekkäin. Roomalainen Sala Colonia rakennettiin aiempien mauretanialaisten rakenteiden päälle. Rinteeseen tehtiin keinotekoisia tasanteita, ja kaupungissa oli pääkatuja, forum, temppeleitä ja kylpylä. Kaikkien rauniorakennusten tulkinta ei ole yhtä varma.\n\nKeskiajan lopulla marinidien hallitsijasuku otti alueen dynastiansa hautausmaaksi. Uskonnolliseen kokonaisuuteen kuului moskeija, hautakammioita ja oppilaitos. Marinidien muurien rajaama alue on aiempaa roomalaista kaupunkia pienempi. Nykyisellä puutarhamaisella raunioalueella elää myös haikaroita, jotka pesivät puissa ja säilyneessä minareetissa.\n\nVuonna 1873 marinidien rauniot olivat jo paikalla. Roomalaiskorttelin nykyinen avoin näkymä syntyi vasta myöhemmistä arkeologisista kaivauksista.',
+      kuvat: [
+        {
+          tiedosto: 'Chellah interior hill.jpg',
+          lyhyt: 'Chellah yhdistää antiikin ja keskiajan rakennusjäännökset.',
+          selite: 'Chellahin raunioalueella muinaisen Salan jäännökset ja marinidien keskiaikainen aitaus kuuluvat saman paikan pitkään historiaan.',
+          lahde: 'Shazbot from San Francisco, California, Wikimedia Commons (CC BY 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n6-24091cc6837de1b2ad17.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Chellah',
+    },
+    'Borj Sidi Makhlouf -linnake': {
+      aika: '1600–1700-luvut',
+      teksti: 'Borj Sidi Makhlouf on Rabatin joenpuoleinen linnake medinan itäreunassa. Se liittyy Andalusialaisen muurin Bou Regregin puoleiseen päähän. Linnake rakennettiin suojaamaan läheistä satamaa, joten sen paikka kertoo joen merkityksestä vanhalle kaupungille. Pyöristetty rakennus erottuu pitkästä muurista omana puolustusrakenteenaan.\n\nLinnakkeen nimi viittaa paikalliseen Sidi Makhloufiin, jonka hauta on sen yhteydessä. Rakennuksen historia ulottuu 1600–1700-luvuille.',
+      kuvat: [
+        {
+          tiedosto: 'Sidi Makhlouf 1.jpg',
+          lyhyt: 'Borj Sidi Makhlouf rakennettiin sataman suojaksi.',
+          selite: 'Borj Sidi Makhlouf on Andalusialaisen muurin jokipään linnake, jonka historiallinen tehtävä oli suojata läheistä satamaa.',
+          lahde: 'Omar-toons, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/rabat/n7-d2117c6c38e7e5e9e66d.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Borj_Sidi_Makhlouf',
+    },
+  },
+  tunis: {
+    'Bab el Bhar – Merenportti': {
+      aika: 'Vanha kaupunginportti, eri aikojen muutoksia',
+      teksti: 'Bab el Bhar on Tunisin medinan itäpuolinen portti. Sen nimi tarkoittaa Merenporttia, ja toinen tunnettu nimi on Porte de France. Portti erottaa vanhan kaupungin uudemmasta Tunisista, vaikka se ei seiso nykyisellä merenrantaviivalla. Merenportti-nimi liittyy reittiin, joka yhdisti medinan Tunisinjärven satamaan ja Tunisinlahdelle.\n\nSuuren kaaren yläpuolella on sakarareunainen osa. Sen kautta päästiin funduq-rakennuksiin, joissa asui kristittyjä kauppiaita.',
+      kuvat: [
+        {
+          tiedosto: 'Bab Bhar photo 2 باب البحر.jpg',
+          lyhyt: 'Bab el Bhar erottaa medinan uudemmasta Tunisista.',
+          selite: 'Bab el Bhar eli Merenportti on Tunisin medinan itäpuolinen portti, joka tunnetaan myös nimellä Porte de France.',
+          lahde: 'Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n1-111f7de60f0fb4f9f627.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Zitouna-moskeija': {
+      aika: 'Varhaiskeskiaikainen perusta ja myöhempiä rakennusvaiheita',
+      teksti: 'Zitouna eli Oliivimoskeija sijaitsee Tunisin medinan keskuksessa. Sen perustamisen tarkasta ajasta on erilaisia historiallisia tulkintoja. Nykyisen kokonaisuuden keskeinen rakennusvaihe on 800-luvun uudelleenrakennus.\n\nSisäpihaa reunustavat kaarigalleriat, ja rukoussalia jäsentävät pylväsrivit sekä hevosenkenkäkaaret. Moskeijaan liittyi pitkään korkeamman oppimisen perinne. Uskonnollisten aineiden ohella opetettiin esimerkiksi arabian kielioppia, historiaa ja lääketiedettä.\n\nVuoden 1873 moskeijalla oli eri torni: nykyinen minareetti on 1800-luvun lopun jälleenrakennus ja ottaa tyylivaikutteita Kasbah-moskeijan tornista.',
+      kuvat: [
+        {
+          tiedosto: 'Corridor of Al-Zaytuna Mosque.jpg',
+          lyhyt: 'Zitounan sisäpihaa reunustavat kaarigalleriat.',
+          selite: 'Zitouna-moskeijan sisäpihaa reunustavat kaarigalleriat kuuluvat vanhaan rakennuskokonaisuuteen Tunisin medinan keskuksessa.',
+          lahde: 'Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n2-74df334f116edecb24e0.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kasbah-moskeija': {
+      aika: 'Keskiaika, hafsidivaihe',
+      teksti: 'Kasbah-moskeija sijaitsee Tunisin medinan Kasbah-kaupunginosassa. Se rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta. Moskeija kuului Kasbahin linnoitus- ja hallintoympäristöön. Aluksi sen käyttäjiä olivat siellä asuneet hallitsijat.\n\nMyöhemmin moskeijasta tuli julkinen perjantaimoskeija. Rukoussalin hevosenkenkäkaaria tukevat marmoripylväät, ja rukoussuuntaa osoittavan mihrabin edessä on muqarnas-koristeltu eli porrastettuihin koristeholveihin jäsennetty kupoli. Minareetin rakenne ja ornamentiikka ovat kiveä. Sen julkisivuissa sebka-koristelu muodostaa vinoneliömäisen verkon. Myöhemmät Tunisin minareetit ottivat tornista tyylivaikutteita.',
+      kuvat: [
+        {
+          tiedosto: 'Tunis Mosqué Kasbah.JPG',
+          lyhyt: 'Kasbah-moskeija rakennettiin keskiajalla.',
+          selite: 'Kasbah-moskeija rakennettiin keskiajalla hafsidihallitsija Abu Zakariya Yahyan toimeksiannosta Tunisin Kasbah-ympäristöön.',
+          lahde: 'Rais67, Wikimedia Commons (PD)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n3-9a69b66f73db22cbd555.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dar Lasram': {
+      aika: '1800-luvun alkupuoli',
+      teksti: 'Dar Lasram sijaitsee Tunisin medinassa Tribunal-kadulla. Palatsin rakennuttaja Hamouda Lasram oli varakas maanomistaja ja hallinnollinen kirjuri. Rakennuspaikka koottiin hankkimalla ja purkamalla viereisiä rakennuksia. Uusi palatsi syntyi 1800-luvun alkupuolella vanhan kaupungin sisään.\n\nTalon tilat jaettiin eri tehtäviin kerroksittain. Pohjakerros palveli varastoja ja palvelutyötä, perheellä oli omat tilansa ja vieraille varattiin ylempi kerros. Sisäpihan kaaret ja pylväät jäsentävät rakennusta. Palatsin arkkitehtuuriin kuuluvat myös stukkokoristelu ja maalatut katot. Myöhemmin talossa ovat toimineet medinan suojeluyhdistys ja Tahar Haddad -klubi.',
+      kuvat: [
+        {
+          tiedosto: 'Gate of Dar Lasrem - Porte du Dar Lasrem - باب دار الأصرم.jpg',
+          lyhyt: 'Dar Lasramin palatsi rakennettiin 1800-luvun alkupuolella.',
+          selite: 'Dar Lasramin sisäänkäynti kuuluu 1800-luvun alkupuolen palatsiin, jonka rakennuttaja oli maanomistaja ja kirjuri Hamouda Lasram.',
+          lahde: 'Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e04/tunis/n4-1fdba48d816acee49d95.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dar Othman': {
+      aika: '1500- ja 1600-luvun taite, myöhempiä käyttövaiheita',
+      teksti: 'Dar Othman on palatsi Tunisin medinan eteläosassa El Mebazaâ -kadulla. Sen rakennuttaja oli Othman Dey, ja rakentaminen ajoittuu 1500- ja 1600-luvun taitteen tienoille. Julkisivuun kuuluu hevosenkenkäkaari, pylväitä ja puisia rakenteita.\n\nOven jälkeen tulee driba eli eteistila, jota reunustavat kivipenkit. Eteisestä kuljetaan pihaan. Pihan yhteydessä on T-muotoisia huoneita ja alkoveja.\n\n1800-luvun alkupuolella palatsi muutettiin sotilaiden tarvikkeiden säilytyspaikaksi. Tähän käyttöön liittyy toinen nimi Dar al-Oula, tarvikkeiden talo. Myöhempi käyttö on liittynyt medinan kulttuuriperinnön suojeluun. ',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Dar Hussein': {
+      aika: 'Vanha palatsi, kerrostumia ennen 1800-lukua ja sen aikana',
+      teksti: 'Dar Hussein sijaitsee Tunisin medinassa Bab Menaran kaupunginosassa, Place du Château -osoitteessa. Palatsia on laajennettu ja koristeltu eri omistajien aikana. Sen nimi liittyy kenraali Husseiniin, yhteen rakennuksen entisistä omistajista.\n\nPalatsin pihaan kuuluu valkoista marmoria, pylväitä ja uuskorinttilaisia kapiteeleja. Koristelussa esiintyvät Qallaline-kaakelit, stukko ja maalattu puu. Youssef Saheb Ettabaâ liittyy 1800-luvun koristeluvaiheeseen.\n\n1800-luvun puolivälissä rakennuksessa toimi kunnallinen neuvosto. Myöhempi instituutiokäyttö on liittynyt kansallisen kulttuuriperinnön hallintaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  abuja: {
+    'Aso-kallio': {
+      aika: 'Luonnonmuodostuma',
+      teksti: 'Aso-kallio on suuri graniittinen monoliitti Abujan reunassa. Kaupunki levittäytyy pääosin sen eteläpuolelle, ja kallio toimii tunnistettavana luonnonmaamerkkinä. Alueeseen liittyy myös Asokoro-paikannimi. Läheiset valtion rakennukset kuuluvat rakennettuun ympäristöön; kallio ja Aso Villa -palatsi ovat eri kohteet.\n\nKallio kohoaa noin 400 metriä ympäröivän maan yläpuolelle. Sen ympärillä sijaitsevat presidentin hallintokompleksi, parlamentti ja korkein oikeus. Asokoro-yhteisön kielessä Aso merkitsee voitokasta. Aso-kallion mukaan nimettiin myös Kansainyhteisön vuonna 2003 antama julistus, joka painotti demokratiaa ja kehitystä.',
+      kuvat: [
+        {
+          tiedosto: 'Aso Rock Nigeria.jpg',
+          lyhyt: 'Aso-kallion graniittimuodostuma Abujassa vuonna 2018.',
+          selite: 'Aso-kallion graniittimuodostuma Abujassa vuonna 2018.',
+          lahde: 'Ovinuchi Prince Ejiohuo, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/abuja/n1-9f1ebdd2512951a61002.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jabin järvi': {
+      aika: 'Tekojärvi',
+      teksti: 'Jabin järvi sijaitsee Abujan Jabin alueella. Se on maapadon synnyttämä vesialue, jonka alkuperäinen käyttötarkoitus liittyi kaupungin vedenhankintaan. Suurempi Usuma-järjestelmä muutti myöhemmin sen vesihuollollista roolia. Järvellä harjoitetaan myös kalastusta, ja rantaan liittyy virkistyskäyttöä.\n\nRantapuisto toimii ulkoilun ja sosiaalisten tapahtumien paikkana. Vesialueella on myös veneilykäyttöä. Rannalla voi ratsastaa ja ostaa tuoretta kalaa. Puistoalue nimettiin Jabi Lake Parkiksi vuonna 2007.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  accra: {
+    'Jamesin linnoitus': {
+      aika: '1600-luku',
+      teksti: 'Jamesin linnoitus sijaitsee Jamestownissa Accran vanhalla rannikolla. Sen rakennutti englantilainen Royal African Company kauppapaikaksi. Kullan rinnalla käytiin kauppaa orjuutetuilla ihmisillä: linnoituksen historia kuuluu myös Atlantin orjakaupan historiaan. Rannikon kauppapaikat olivat eurooppalaisten vallankäytön välineitä, samalla kun niiden ympärillä elivät paikalliset yhteisöt.\n\nSen lähellä olivat Ussherin linnoitus ja idempänä Osun linna, jotka kuuluivat saman rannikon kauppaverkostoon. Jamesin linnoitusta käytettiin myöhemmin myös vankilana. Nykyisin se on historiallinen kohde ja yksi Ghanan rannikon Unescon maailmanperintökokonaisuuteen nimetyistä linnoituksista. Viereinen Jamestownin majakka on oma rakennuksensa, vaikka se esiintyy usein samoissa näkymissä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Ussherin linnoitus': {
+      aika: '1600-luku, uudistuksia 1800-luvulla',
+      teksti: 'Ussherin linnoitus sai alkunsa hollantilaisena rannikon kauppapaikkana. Sen alkuperäinen nimi oli Fort Crèvecœur, ja kauppavarastoa laajennettiin linnoitukseksi. Se kuului Hollannin Kultarannikon toimipaikkoihin, joissa Euroopan kauppayhtiöt tavoittelivat rannikkokaupan tuottoja. Paikka sijaitsee vanhan Accran rannikkoytimessä, lähellä Jamesin linnoitusta.\n\nRakennuksen historiaan kuuluu tuhoutumista ja jälleenrakentamista. Hollantilainen rakennusmestari Hubertus Varlet johti sen uudelleen rakentamista 1800-luvulla. Paikka siirtyi brittien hallintaan, ja Ussher-nimi muistuttaa siirtomaahallinnon nimikerroksesta. Nykyinen historiallinen kohde kuuluu Unescon Ghanan rannikon linnoitusten ja linnojen kokonaisuuteen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Osun linna': {
+      aika: '1600-luku, myöhempiä rakennuskerroksia',
+      teksti: 'Osun linna seisoo Guineanlahden rannalla Osun kaupunginosassa. Christiansborg-nimelläkin tunnetun rakennuksen kehitys liittyy rannikon kauppaan: varastotiloja ja puolustusvarustuksia laajennettiin, kun alkuperäisen kauppapaikan tila ei enää riittänyt. Kullan ja norsunluun rinnalla kaupattiin orjuutettuja ihmisiä. Kaupankäynnin ja puolustuksen tarpeet muokkasivat samaa rakennusta.\n\nLinna on vaihtanut omistajaa Tanska–Norjan, Portugalin, akwamu-yhteisön ja Britannian välillä. Linnan ympäristössä on lisäksi puutarha, jossa kasvaa sekä paikallisia että muualta tuotuja kasveja. Osu kuuluu Unescon Ghanan rannikon linnojen ja linnoitusten maailmanperintökokonaisuuteen. Linna on ollut sekä kauppapaikka että valtion hallinnon käytössä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Holy Trinity -katedraali': {
+      aika: '1800-luvun loppupuoli',
+      teksti: 'Holy Trinity on anglikaaninen kirkko Accran High Streetillä. Sen virallinen nimi on Cathedral Church of the Most Holy Trinity. Tiilisen, romaaniseen tyyliin suunnitellun rakennuksen arkkitehti oli Aston Webb. Rahoitus tuli Britannian siirtomaahallinnolta, ja alkuaikojen kävijöihin kuului kaupungissa asuvia siirtomaavirkamiehiä.\n\nKirkko valmistui vuonna 1894. Katedraaliksi se nimettiin vasta myöhemmin Accran hiippakunnan perustamisen yhteydessä. Se kuuluu Accran anglikaaniseen hiippakuntaan ja Länsi-Afrikan kirkkoprovinssiin. High Streetiltä reitti jatkuu Ussherin ja Jamesin linnoitusten suuntaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Korlen laguuni': {
+      aika: 'Luonnonvesistö ja vanha asutusympäristö',
+      teksti: 'Korlen laguuni on Accran keskustan länsipuolinen vesistö, jolla on yhteys Guineanlahteen. Sen rantojen asutushistoria liittyy Jamestownin kasvuun. Laguuni oli aikanaan tärkeä kalan lähde, joten vesi kuului sekä asuinympäristöön että elinkeinoon. Odaw kulkee Accran esikaupunkien halki, ja sen valuma-alue kattaa suuren osan kaupungista.\n\nMyöhempi kaupunki muutti rantoja. Maata kuivattiin ja muokattiin rakentamista varten, ja Odaw-joen mukana kulkeutui valumavesiä ja jätettä. Veden laatu heikkeni, ja kunnostushankkeissa on pyritty vähentämään saastumista sekä parantamaan virtausta.',
+      kuvat: [
+        {
+          tiedosto: 'Korle Lagoon 4.jpg',
+          lyhyt: 'Korlen laguuni sijaitsee Accran keskustan länsipuolella.',
+          selite: 'Korlen laguuni on keskustan länsipuolinen vesistö, jonka rannat liittyvät Jamestownin historiaan.',
+          lahde: 'SAgbley, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/accra/n5-145f61c60cde0072d65c.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Labadin ranta': {
+      aika: 'Luonnonranta, nykyinen vapaa-ajan ympäristö',
+      teksti: 'Labadin ranta on Accran meriranta La-nimisellä alueella, Teshien lähellä. La tunnetaan usein nimellä Labadi, ja rannasta käytetään myös nimeä La Pleasure Beach. Se kuuluu Guineanlahden rannikkoympäristöön. Ranta sijaitsee La Palm- ja La Badi Beach -hotellien välissä. Rantakaistaleella on kahviloita, ravintoloita ja matkamuistokauppiaita.\n\nNykyisin rannalla järjestetään musiikki- ja rumputapahtumia, ja aamuisin siellä käy myös liikkujia. Hotellit osallistuvat rannan ylläpitoon. Rannalla on myös ratsastusta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  bamako: {},
+  lome: {
+    'Lomén keskustan meriranta': {
+      aika: 'Luonnonrannikko',
+      teksti: 'Lomén meriranta kuuluu Atlantin Guineanlahden hiekkarannikkoon. Sen maisemassa on hiekkaa, dyynejä ja kookospuita. Rannalla harjoitetaan paikallista kalastusta, myydään ruokaa ja vietetään vapaa-aikaa, esimerkiksi rantaurheilun parissa.\n\nRannikko on luonnonympäristö, jonka olemassaolo edeltää myöhempää pääkaupunkia. Lomén rannikon asutushistoriassa Bè ja muut ewe-yhteisöt kuuluvat varhaiseen kerrokseen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  ndjamena: {
+    'Logonen ja Charin yhtymäkohta': {
+      aika: 'Luonnonvesistön yhtymäkohta',
+      teksti: 'Logone liittyy Chariin N’Djamenan ja Koussérin luona. Tšadin pääkaupunki sijaitsee jokirannassa, ja vastarannan Kousséri kuuluu Kameruniin. Chari jatkaa yhtymäkohdasta pohjoiseen. Joet ovat osa valtioiden rajaympäristöä ja kaupunkien paikallista maantiedettä.\n\nLogonen valuma-alue ulottuu usean maan puolelle, ja sen päähaaroihin kuuluvat Pendé ja Mbéré. Charin ja Logonen vedet jatkavat yhtymäkohdasta yhteisenä jokena Tšadjärven suuntaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  niamey: {
+    'Gounti Yénan suu': {
+      aika: 'Luonnonuoma',
+      teksti: 'Gounti Yéna laskee Nigeriin Niameyn keskustassa. Joen vasemmalle rannalle päättyvä uoma kokoaa sade- ja valumavesiä ylempänä sijaitsevista kaupunginosista. Sen virtaus on kausittaista, joten laakso voi näyttää hyvin erilaiselta eri oloissa. Uoman varrella harjoitetaan hedelmä- ja vihannesviljelyä.\n\nLaakso kuului alueen maantieteeseen jo ennen nykyisen pääkaupungin kasvua. Se erotti Goudelin ja Gamkalén kylien viljelymaita, ja myöhemmin sen kohdalle asettui myös siirtomaa-ajan asuinalueiden raja.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Néini Goungoun saari': {
+      aika: 'Luonnonsaari ja vanha kylä',
+      teksti: 'Néini Goungou on Nigerjoen saarella sijaitseva kylä Niamey V:n alueella. Goudel on vastarannalla, Lamordé saaresta kaakkoon ja Kourtéré Samboro lounaaseen. Saari kuuluu pääkaupungin asuttuihin jokimaisemiin. Kyläyhteisöä johtaa paikallinen päällikkö.\n\nSaaresta tunnetaan tietoja jo 1800-luvulta, ennen nykyisen pääkaupungin kasvua. Myöhemmät tulvat ovat muuttaneet asukkaiden elämää, ja osa on joutunut muuttamaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Trois Sœursin kukkulat': {
+      aika: 'Luonnonmuodostuma',
+      teksti: 'Trois Sœursin kukkulajono sijaitsee Niamey V:n alueella. Ranskankielinen nimi tarkoittaa kolmea sisarta. Rakentamattomien kukkuloiden pinnassa näkyy paljasta lateriittia, ja kokonaisuus asettuu suunnilleen itä–länsisuuntaan. Pohjoisessa maasto viettää kohti Nigerjoen kaupunkitasankoa.\n\nKukkulat ovat luonnonmuodostuma, jonka olemassaolo edeltää pääkaupungin kasvua. Lähialueisiin kuuluvat Diamowé, Nordiré ja Lokoto, ja kukkuloilta on kirjattu myös linnustohavaintoja.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  ouagadougou: {
+    'Bangr Weogon kaupunkimetsä': {
+      aika: 'Vanha metsäympäristö, nykyinen kaupunkipuisto myöhempi',
+      teksti: 'Bangr Weogo on Ouagadougoun kaupunkimetsä, joka kuului ennen siirtomaakautta mossipäälliköiden hallitsemaan ympäristöön. Metsään liittyi pyhinä koettuja paikkoja, eläimiä ja pyhiä esineitä.\n\nKaupungin hallinnoima puisto toimii nykyisin myös ympäristökasvatuksessa ja virkistyksessä. Sen nimellä on tiedon metsän merkitys. Puistossa on kävely- ja juoksupolkuja sekä kosteikko, jossa elää krokotiileja.',
+      kuvat: [
+        {
+          lahde: 'Arzantiga, Wikimedia Commons (CC BY-SA 4.0)',
+          selite: 'Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.',
+          lyhyt: 'Bangr Weogon kaupunkipuiston lampi ja kasvillisuus marraskuussa 2022.',
+          tiedosto: 'Crocodile lake at Parc Urbain Bangr-Weoogo.jpg',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/ouagadougou/n1-de14e7d74a573a5e4496.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansakunnan aukion vanha markkinapaikka': {
+      aika: 'Markkinapaikka ennen siirtomaakautta, nykyinen aukio myöhempi',
+      teksti: 'Ouagadougoun keskustan Kansakunnan aukio tunnetaan nimillä Place de la Nation ja Place de la Révolution. Paikalla oli suuri markkina jo ennen siirtomaakautta.\n\nTori siirrettiin siirtomaakaudella, ja paikka sai tuolloin d’Arboussier-nimen. Aukio sijaitsee Avenue du Yatengan tuntumassa, lähellä kaupungin julkisia instituutioita. Markkinapaikan siirtäminen muutti alueen käyttöä kaupankäynnin paikasta julkiseksi aukioksi.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  portonovo: {
+    'Jardin des plantes et de la nature': {
+      aika: 'Aiempi pyhä metsä, myöhempi puutarha',
+      teksti: 'Jardin des plantes et de la nature on Porto-Novon viheralue hallinto- ja sairaalakortteleiden välissä. Paikassa kasvaa suuria vanhoja puita, muun muassa irokoa ja Ceiba pentandraa. Kasvillisuuden ohella alueelta on kirjattu lintu-, apina- ja sammakkoeläinhavaintoja. Puutarha palvelee kasvien säilyttämistä ja opetusta.\n\nAlue oli aiemmin Hogbonun pyhä metsä, joka liittyi kuningaskunnan perinteiseen auktoriteettiin. Sittemmin paikasta tuli koekasvipuutarha, ja sitä on kunnostettu eri vaiheissa.',
+      kuvat: [
+        {
+          tiedosto: 'Arbre géant au jardin des plantes et de la nature de Porto-Novo.jpg',
+          lyhyt: 'Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.',
+          selite: 'Puustoa Porto-Novon Jardin des plantes et de la nature -puutarhassa vuonna 2019.',
+          lahde: 'Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e05/portonovo/n1-1fce9ad67678da7d8a7b.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  yamoussoukro: {},
+  yaounde: {
+    'Mont Fébé': {
+      aika: 'Luonnonkukkula',
+      teksti: 'Mont Fébé on Kamerunin Centre-alueella, Mfoundin hallintoalueessa sijaitseva luonnonkukkula Yaoundén lähellä. Se kuuluu pääkaupunkiseudun kukkulamaisemaan, ja paikasta tunnetaan näkymä kaupunkiin.\n\nSen ympäristössä on myös luostari, hotelli ja golfkenttä, jotka ovat luonnonpaikasta erillisiä rakennettuja ympäristöjä. Kukkula oli olemassa ennen nykyisen kaupungin kasvua. Luostarin yhteydessä on myös pieni museo.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Mont Eloundem': {
+      aika: 'Luonnonkukkula',
+      teksti: 'Mont Eloundem sijaitsee Yaoundén lounaisessa lähialueessa, Mbankomon koillispuolella. Se kuuluu Kamerunin Centre-alueen ja Mfoundin hallintoalueen kukkulamaisemaan. Kukkulalta tunnetaan näkymä kaupunkiin, ja se liittyy pääkaupungin lounaispuolen erillisiin kalliokohoumiin.\n\nEloundem on luonnonmuodostuma, joka edeltää Yaoundén tutkimusasemaa ja myöhempää pääkaupunkia. Kukkulan rinteet ja laaksot ovat osa Yaoundén ympäröivää maastoa, jossa asutus ja kasvillisuus vuorottelevat.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Yaoundén kunnallinen järvi': {
+      aika: '1900-luvun tekojärvi',
+      teksti: 'Yaoundén kunnallinen järvi on tekojärvi hallintokeskuksen lähellä. Se sijaitsee Atemenguen ylängön laaksossa vanhan hallinto- ja asuinalueen välissä. Kreikkalaissyntyinen kauppias Georges Kyriakidès ehdotti kaupungille järveä saatuaan lahjaksi perämoottoriveneen. Järvi rakennettiin 1900-luvun puolivälissä, ja myöhemmin Kyriakidèsin vene kulki sen vesillä.\n\nSen myöhempään historiaan kuuluu erilaisia kunnostus- ja uudistushankkeita.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Mvog-Betsin zoo-botaaninen puisto': {
+      aika: '1900-luvun laitos',
+      teksti: 'Mvog-Betsin zoo-botaaninen puisto sijaitsee Yaoundé VI:n alueella. Sen historia alkoi elävien villieläinten pitopaikkana, ja toimintaan kuului myös karanteenitehtävä.\n\nMyöhemmin paikka siirtyi valtion hallintoon ja sen kunnostettuun toimintaan liitettiin tutkimusta, opetusta sekä virkistystä. Puiston vaiheisiin kuuluvat eläinten hoito, kasvien kasvattaminen, opetus ja luonnontutkimus. Eläimistöön on kuulunut esimerkiksi kädellisiä ja suuria kissaeläimiä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  bangui: {},
+  brazzaville: {
+    'Djoué-joen suu': {
+      aika: 'Luonnonympäristö',
+      teksti: 'Djoué on Kongojoen oikeanpuoleinen sivujoki, joka kulkee Brazzavillen länsiosassa. Se laskee Kongoon Kintamon koskien luona. Jokisuun ympäristö kuuluu Congo-Djouén kosteikkoalueeseen.\n\nKosteikkoihin kuuluu pysyviä ja tilapäisiä vesiuomia, soita ja metsäisiä saaria. Ne tarjoavat lisääntymisympäristöjä kaloille ja selkärangattomille. Alueella kalastetaan, viljellään puutarhoja ja kerätään palmuöljyä.',
+      kuvat: [
+        {
+          lyhyt: 'Havainnekuva makean veden kalojen elinympäristöstä.',
+          selite: 'Havainnekuva makean veden kalojen elinympäristöstä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/brazzaville/job14-e06-brazzaville-n1-v01-59000b325254.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia; Ramsar',
+    },
+  },
+  ciudaddelapaz: {},
+  gitega: {},
+  kigali: {
+    'Kigali-kukkula': {
+      aika: 'Luonnonmaasto',
+      teksti: 'Kigali-kukkula sijaitsee Nyarugengen alueella keskustan länsipuolella. Sen rinteillä on kaupunkialueita, ja länsirinne suuntautuu Nyabarongon laaksoon. Pohjoisessa on Jali-kukkula, joka on eri luonnonmuoto. Kukkula kuuluu harjanteiden ja laaksojen kokonaisuuteen, jonka mukana Kigali levittäytyy ympäristöönsä.\n\nKaupungin nimi liittyy Kigali-kukkulaan. Vuonna 1873 maasto oli olemassa, mutta nykyisen hallintokaupungin alku tuli myöhemmin.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Jali-kukkula': {
+      aika: 'Luonnonmaasto',
+      teksti: 'Jali on Kigalin pohjoispuolinen kukkula Gasabon alueella. Nimestä käytetään myös muotoa Jari. Se kuuluu kaupungin harjanteiden ja laaksojen maastoon ja on eri paikka kuin keskustan länsipuolinen Kigali-kukkula.\n\nKukkulalla on myös nykyistä radio- ja energiainfrastruktuuria. Vuonna 1873 nykyisiä radio- ja energiatoiminnan rakenteita ei vielä ollut kukkulalla. Kukkulalla sijaitsee myös Kigali Solaire -aurinkovoimala.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Nyabugogon jokisuu': {
+      aika: 'Luonnonmuodostuma',
+      teksti: 'Nyabugogo saa alkunsa Muhazijärveltä ja kulkee Kigalin alueella ennen liittymistään Nyabarongoon. Jokisuu on tämän sivujoen ja suuremman joen kohtaamispaikka. Kaupungin sivu-uomat ja laaksojen kosteikot liittyvät samaan vesiverkkoon, joka kuuluu Niilin valuma-alueeseen.\n\nNyabugogon sivujokiin kuuluvat muun muassa Kujevuba, Muyanza ja Yanze. Muhazijärvestä lähtevä joki virtaa länteen ja muodostaa osan Kigalin ja Pohjoisen provinssin rajasta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Nyandungun kosteikko': {
+      aika: 'Vanha kosteikko; nykyinen kunnostus 2000-luvulla',
+      teksti: 'Nyandungu on kosteikkolaakso Gasabon ja Kicukiron välissä. Aiemmin heikentynyttä ympäristöä on kunnostettu palauttamalla paikallista kasvillisuutta, viikunametsää ja vesiuomia. Alueelle on istutettu paikallisia puita, ja kokonaisuuteen kuuluu puroja, altaita ja ruovikkoja. Näiden rinnalla paikka palvelee luontokasvatusta.\n\nNykyinen kunnostus ja puistokäyttö kuuluvat 2000-luvulle. Kohteena on kosteikon ja metsän luonnonympäristö. Infokeskus ja luontopolut tukevat kosteikon käyttöä opetuspaikkana.',
+      kuvat: [
+        {
+          lyhyt: 'Havainnekuva kosteikon kasvillisuudesta.',
+          selite: 'Havainnekuva kosteikon kasvillisuudesta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kigali/job14-e06-kigali-n4-v01-18600fa6ae66.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  kinshasa: {
+    'Ngalieman lahti': {
+      aika: 'Luonnonlahti; satamahistoria 1800-luvun lopulta',
+      teksti: 'Ngalieman lahti sijaitsee Kongojoen vasemmalla rannalla Kintambon alueella, lähellä joen koskijaksoa. Varhainen Léopoldvillen kauppa-asema syntyi sen läheisyyteen 1800-luvun lopulla, ja lahtea käytettiin aseman satamapaikkana.\n\nLahti on saanut nimensä paikalliselta päälliköltä Ngaliemalta. Joenrannan Nshasan ja Ntamon kalastus- ja kauppapaikat edelsivät siirtomaa-asemaa. Lahti oli myös Henry Morton Stanleyn 1800-luvun lopun tutkimusretken paikka.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Kinshasan kasvitieteellinen puutarha': {
+      aika: 'perustettu 1933',
+      teksti: 'Kinshasan kasvitieteellinen puutarha sijaitsee Gombessa, Kasa-Vubu-kadun varrella eläintarhaa vastapäätä. Puutarha perustettiin vuonna 1933 nimellä Parc de Bock. Sitä hallinnoi Kongon luonnonsuojeluinstituutti ICCN.\n\nTaimistossa kasveja lisätään esimerkiksi siemenistä ja pistokkaista, ja osa taimista kasvatetaan kaupungin vihertämistä varten. Kokoelmiin kuuluu myös siemenpankki, herbaario ja arboretum, jossa painottuu kotoperäinen kasvisto. Nimillä varustetut kasvit ja opetustoiminta yhdistävät puutarhan ympäristökasvatukseen. Paikka on samalla elävä kasvikokoelma ja tietoa säilyttävä tutkimusympäristö.',
+      kuvat: [
+        {
+          lyhyt: 'Havainnekuva kasvin lisäämisestä pistokkaasta.',
+          selite: 'Havainnekuva kasvin lisäämisestä pistokkaasta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/kinshasa/job14-e06-kinshasa-n2-v01-b5a8c0143427.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  libreville: {
+    'Mont-Bouët\'n tori': {
+      aika: 'Nykyinen markkinapaikka',
+      teksti: 'Mont-Bouët on Librevillen keskeinen tori kaupungin kolmannessa hallintoalueessa. Sen tarjontaan kuuluvat hedelmät ja vihannekset sekä tekstiilit ja vaatteet. Kaupankäynti ulottuu myös torin ympäristöön, jossa on muita liikkeitä ja ravintoloita. Torilla myydään Länsi-Afrikasta tulevat kankaat ja Euroopasta tuodut käytetyt vaatteet osana tätä tavaroiden liikkumista.\n\nTori kuuluu nykyisen pääkaupungin arkisiin kohtaamispaikkoihin. Kantajat siirtävät tavaroita torin ahtaissa käytävissä kottikärryillä, ja ympärillä on vaatekauppoja sekä ruokapaikkoja.',
+      kuvat: [
+        {
+          lyhyt: 'Havainnekuva torikaupan kankaista.',
+          selite: 'Havainnekuva torikaupan kankaista.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/libreville/job14-e06-libreville-n1-v01-ce0daa3a5353.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sibangin arboretum': {
+      aika: '1900-luvun puoliväli',
+      teksti: 'Sibang on Librevillen sisäinen arboretum, jossa päiväntasaajan metsän puita säilytetään tutkimuksen ja suojelun kohteina. Se sijaitsee kaupungin kolmannessa hallintoalueessa.\n\nTutkimusta ohjaavat kansallinen tiede- ja teknologiatutkimuksen keskus ja farmakopean sekä perinteisen lääketieteen tutkimuslaitos, ja alueen puulajistossa mainitaan muun muassa okoumé sekä Duboscia macrocarpa. Metsän itäpuolta rajaa Adoung-joki ja pohjoispuolta Nzeng-Ayongin tie. Arboretum perustettiin 1900-luvun puolivälissä, joten vuonna 1873 nykyistä tutkimusmetsän instituutiota ei vielä ollut.',
+      kuvat: [
+        {
+          lyhyt: 'Havainnekuva tutkimusmetsän elävistä puista.',
+          selite: 'Havainnekuva tutkimusmetsän elävistä puista.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/libreville/job14-e06-libreville-n2-v01-26980766cef3.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  luanda: {
+    'Nossa Senhora dos Remédiosin katedraali': {
+      aika: '1600-luku, myöhempiä kunnostuksia',
+      teksti: 'Nossa Senhora dos Remédios on Luandan roomalaiskatolinen katedraali ja arkkipiispan pääkirkko. Sen rakennushistoria alkaa 1600-luvulta. Kun Angolan ja Kongon hiippakunnan pääpaikka siirtyi Luandaan, kirkon tehtävä muuttui myöhemmin katedraalin tehtäväksi.\n\nKirkko oli olemassa vuonna 1873, mutta sen nykyinen julkisivun perusmuoto syntyi myöhemmässä kunnostuksessa. Rakennus rapistui 1800-luvulla, ja vuosisadan lopun korjauksissa se sai oviaukot ja kaarevan päädyn nykyiseen järjestykseensä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Carmon kirkko ja luostari': {
+      aika: '1600-luku, kunnostuksia 1800-luvulla',
+      teksti: 'Nossa Senhora do Carmo on Luandan kirkon ja luostarin kokonaisuus. Sen synty liittyy karmeliitteihin, jotka rakensivat kirkon 1600-luvulla. Julkisivu on yksinkertainen, ja sen yläosa päättyy kolmionmuotoiseen päätyyn.\n\nKokonaisuus oli olemassa vuonna 1873. Se oli ehtinyt rapistua 1800-luvun alkupuolella, ja dominikaanipapit kunnostivat rakennusta. Sisätilaan kuuluu muun muassa veistettyjä alttareita, veistoksia, seinämaalauksia ja laattakoristelua, jotka ovat omia osiaan kirkon kokonaisuudessa.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e06/luanda/job14-e06-luanda-n2-v01-349c20ccc5e5.png',
+          suora: true,
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          selite: 'Havainnekuva koristeettomien laattojen pinnasta.',
+          lyhyt: 'Havainnekuva koristeettomien laattojen pinnasta.',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nazarén kirkko': {
+      aika: '1600-luku',
+      teksti: 'Nossa Senhora da Nazarén kirkko sijaitsee Luandan lahden rannalla Marginalin rantatietä vastapäätä. Sen rakennushistoria alkaa 1600-luvulta, joten kirkko kuului kaupungin vanhoihin paikkoihin jo vuonna 1873. Sijainti liittää sen satamakaupungin rannikkoympäristöön: merenlahti ja vanha kirkko ovat samassa kaupunkitilassa.\n\nKirkon arkkitehtuurissa näkyy barokkiperinne, mutta sen julkisivun perusmuoto on selkeä. Sisäänkäynnin yläosa on suora, sen yläpuolella on kolmionmuotoinen pääty ja pyöreä aukko. Pieni kellotorni kohoaa sivussa, ja rakennukseen kuuluvat myös sivuarkadit.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Jesuiittojen Jesus-kirkon historiallinen paikka': {
+      aika: '1600-luku, myöhempiä muutoksia',
+      teksti: 'Jesus-kirkon historiallinen paikka sijaitsee Luandan Cidade Altassa, Ingombotan alueella. Kirkko kuului alun perin jesuiittakollegioon, joka perustettiin kaupunkiin 1600-luvun alussa. Paikka tunnettiin aiemmin nimellä Praça da Feira. Kirkon barokkijulkisivu liittyy näin alueeseen, jossa uskonnollinen toiminta ja opetus olivat lähekkäin.\n\nJesuiittojen toiminnan päätyttyä rakennus rapistui. Sitä kunnostettiin 1900-luvun puolivälissä arkkitehti Humberto Reisin suunnitelmien mukaan, ja myöhempiäkin muutoksia tehtiin.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Nossa Senhora do Cabon kirkko': {
+      aika: '1500-luku, jälleenrakennus 1600-luvulla',
+      teksti: 'Nossa Senhora do Cabon kirkko sijaitsee Ilha de Luandan alueella. Sen alku liittyy portugalilaisten kauppiaiden asutukseen 1500-luvun loppupuolella. Kirkko omistettiin aluksi Nossa Senhora da Conceiçãolle. Myöhemmän jälleenrakennuksen yhteydessä se sai nykyisen Cabo-nimensä, joka liittää sen niemen paikkaan.\n\nKirkkoa rakennettiin uudelleen 1600-luvulla, ja se oli olemassa vuonna 1873. Kivirakennuksen tuntomerkkeihin kuuluu sivutorni. Se sai myöhemmin myös seurakuntakirkon tehtävän.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Ilha de Luandan hiekkaniemi': {
+      aika: 'Luonnonmuodostuma ja vanha asutusympäristö',
+      teksti: 'Ilha de Luanda eli Ilha do Cabo on matala hiekkaniemi Luandan edustalla. Se muodostui sedimentin kerrostumisesta ja liittyy kaupunkiin kapean yhteyden kautta. Niemi rajaa Luandan lahden ympäristöä ja kuuluu kaupungin rannikkomaantieteeseen.\n\nPaikalla eli Axi-lwanda-yhteisön asukkaita ennen portugalilaisten asettumista mantereelle. Myös Nossa Senhora do Cabon kirkon historia liittyy Ilhaan. Vuonna 1873 luonnonpaikka ja vanha asutusympäristö olivat jo olemassa, mutta nykyiset palvelut kuuluvat myöhempään kaupunkiin. Nykyisin Ilhalla on rantoja, ravintoloita ja veneilyä, ja alueella viettävät aikaa myös Luandan asukkaat.',
+      kuvat: [
+        {
+          tiedosto: '海滩beach - panoramio.jpg',
+          lyhyt: 'Ilha do Cabo on Luandan edustan luonnonmuodostuma.',
+          selite: 'Ilha do Cabon hiekkaranta kuuluu Luandan edustan matalaan niemimaiseen rannikkoympäristöön.',
+          lahde: 'yu huatian, Wikimedia Commons (CC BY 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/luanda/n6-ed92867125868253d8c8.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  saotome: {
+    'São Sebastiãon linnake': {
+      aika: '1500-luku',
+      teksti: 'São Sebastiãon linnake seisoo Ana Chavesin lahden kaakkoispäässä, nykyisen kaupungin koillisosassa. Se rakennettiin 1500-luvulla sataman ja kaupungin puolustukseksi. Rannan puolustusrakennus kuuluu São Tomén pitkään satamahistoriaan.\n\nLinnakkeessa toimii nykyisin kansallismuseo. Sen kokoelmiin kuuluu siirtomaa-ajan esineistöä ja uskonnollista taidetta. Linnaketta kunnostettiin myös 1900-luvun puolivälissä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Ana Chavesin lahti': {
+      aika: 'Luonnonlahti',
+      teksti: 'Ana Chavesin lahti sijaitsee São Tomén saaren koillisrannikolla. Pääkaupunki ja sen satama ovat asettuneet lahden äärelle. Pohjoisessa sitä rajaa Ponta Oque del Rei, etelässä Ponta São Sebastião.\n\nLahti on matala, ja sen rannalla näkyy useita rakentamisen vaiheita. Nykyinen satamalaituri kuuluu 1900-luvun jälkipuoliskolle, vaikka vesialue ja rantakaupunki olivat olemassa jo vuonna 1873. Satamasta kulkee kiinteää tavaraa; nestemäisten polttoaineiden pääsatama on Neves.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Ilhéu das Cabras': {
+      aika: 'Luonnonsaari; majakka 1800-luvun lopulta',
+      teksti: 'Ilhéu das Cabras on pieni asumaton saari Guineanlahdella. Ilhéu das Cabras sijaitsee Guineanlahdella São Tomén saaren koillisrannikon edustalla, pääkaupungin pohjoispuolella. Sen nimi viittaa vuohiin, ja vanhassa Vingboonsin kartassa esiintyy nimi Mooro Caebres.\n\nKoillisella kukkulalla on majakka, jonka alku kuuluu 1800-luvun loppuun. Vuonna 1873 saari oli olemassa, mutta tämä myöhempi majakka ei vielä kuulunut siihen.',
+      kuvat: [
+        {
+          tiedosto: 'Ilhéu das Cabras depuis Fernão Dias à São Tomé (1).jpg',
+          lyhyt: 'Ilhéu das Cabras näkyy Fernão Diasin rannalta.',
+          selite: 'Ilhéu das Cabras näkyy Fernão Diasin rannalta.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e06/saotome/n3-d69ff47743485c0ba49a.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  asmara: {
+    'Ruusukon Neitsyt Marian kirkko': {
+      aika: '1900-luvun alkupuoli',
+      teksti: 'Ruusukon Neitsyt Marian kirkko sijaitsee Asmaran keskustassa. Oreste Scanavini suunnitteli sen lombardialaisen uusromaanisuuden hengessä, ja rakennuksessa käytettiin ruskeaa tiiltä. Pohjakaavassa on keskilaiva, sivulaivat ja poikkilaiva.\n\nNykyistä kirkkoa edelsi pienempi Pyhän Markuksen kirkko vanhan katolisen lähetysaseman yhteydessä. Kokonaisuuteen kuului koulutoimintaa, kirjasto ja painokone, jolla tuotettiin uskonnollisia sekä koulutekstejä paikallisilla kielillä. Erillinen kellotorni on kirkon päävaihetta myöhempi. Nykyistä rakennusta ja tätä lähetyskokonaisuutta ei ollut vuonna 1873. Paikkaa kutsutaan usein katedraaliksi, mutta se ei ole sama kuin nykyinen Kidane Mehret -katedraali.',
+      kuvat: [
+        {
+          tiedosto: 'Asmara, cattedrale cattolica, campanile 01.JPG',
+          lyhyt: 'Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.',
+          selite: 'Ruusukon Neitsyt Marian kirkon erillinen kellotorni Asmarassa, kuvattu vuonna 2015.',
+          lahde: 'sailko, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/asmara/n1-87d53cae3ac4fe93f521.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  djibouti: {},
+  dodoma: {},
+  juba: {},
+  kampala: {
+    'Vanhan Kampalan kukkula': {
+      aika: 'vanha maastonpaikka; myöhempi kaupunkikerros',
+      teksti: 'Old Kampala eli Kampala Hill on kukkula keskustassa. Kampala-nimi tarkoitti ensin tätä paikkaa, ja sen yleinen selitys liittyy impala-antilooppeihin sekä Bugandan kuninkaan metsästysalueeseen. Kaupungin levittäytyessä muille mäille vanhaa aluetta alettiin kutsua Old Kampalaksi. Nykyisessä naapurustossa on asumista ja kaupankäyntiä.\n\nMakerere sijaitsee pohjoisessa, Namirembe lännessä ja Nakasero idempänä. Vuonna 1873 seutu oli Bugandan ydinaluetta, mutta myöhempää Fort Lugardia ei vielä ollut. Fort Lugard kuului myöhempään brittiläiseen kaupunkivaiheeseen, jonka jälkeen Kampala kasvoi alkuperäisen kukkulan ulkopuolelle.',
+      kuvat: [
+        {
+          tiedosto: 'Gaddafi Mosque view 24.jpg',
+          lyhyt: 'Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.',
+          selite: 'Näkymä Vanhan Kampalan kukkulalta kaupungin asutukseen ja muille kukkuloille, 2015.',
+          lahde: 'Ruslik0, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/kampala/n1-eafe7854d6088fb13cb8.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Namiremben kukkula': {
+      aika: 'vanha kukkula; lähetyskeskus 1800-luvun lopulta',
+      teksti: 'Namirembe on kukkula vanhan kaupungin länsipuolella. Sen nimi liittyy lugandan rauhaa tarkoittavaan mirembe-sanaan. Old Kampala on idässä, Lubaga lounaassa ja Mengo kaakossa.\n\nAnglikaaninen instituutio tuli alueelle 1800-luvun lopulla, ja nykyistä tiilikirkkoa edelsi useita eri rakennuksia. Myös Mengo Hospital sijaitsee tällä alueella nimestään huolimatta. Vuonna 1873 myöhempää anglikaanista keskusta ja nykyistä kirkkoa ei ollut. Namiremben kirkkojen uudelleenrakentaminen myrskyn, termiittituhojen pelon ja salamaniskun jälkeen muutti mäen ilmettä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Lubagan kukkula': {
+      aika: 'vanha palatsipaikan kukkula; myöhempiä laitoksia',
+      teksti: 'Lubaga eli Rubaga on kukkula ja samanniminen naapurusto Kampalan vanhassa länsiytimessä. Mengo sijaitsee sen itäpuolella ja Namirembe koillisessa.\n\nKatolinen lähetysyhteisö sai myöhemmin maata kukkulalta, ja alueelle tuli kirkollisen toiminnan lisäksi hoitoa sekä koulutusta. Sairaala ja hoitajakoulu kuuluvat tähän myöhempään kerrokseen. Kukkulalla ollut palatsi paloi Muteesa I:n kaudella, ja hovi siirtyi pois. Katolinen lähetysyhteisö tuli alueelle vasta vuoden 1873 jälkeen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Nakasero-kukkula': {
+      aika: 'vanha maasto; myöhempi kauppa ja hallinto',
+      teksti: 'Nakasero on keskustan kukkula ja sen rinteille levittäytyvä naapurusto. Alemmilla länsi- ja etelärinteillä on kaupan sekä liikkumisen toimintaa, ylemmälle alueelle sijoittui myöhemmin hallintoa ja muita laitoksia.\n\nOld Kampala on lännessä, Makerere luoteessa ja Kololo idässä. Alueen myöhempi linnake kuului brittiläisen siirtomaakaupungin vaiheeseen. Vuonna 1873 myöhempi linnake ja nykyiset liike- sekä hallintokorttelit eivät vielä olleet kukkulalla.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Kibulin kukkula': {
+      aika: 'vanha maasto; myöhempi yhteisö- ja opetusympäristö',
+      teksti: 'Kibuli on kukkula keskisessä Kampalassa. Sen nimi tarkoittaa myös rinteiden asuin- ja kaupallisia alueita. Nsambya on lounaassa ja Namuwongo itäpuolella. Kibuli kuuluu kaupungin muslimiyhteisön historiallisiin paikkoihin.\n\nPrinssi Nuhu Mbogo lahjoitti maata ensimmäiseen moskeijaan liittyvää käyttöä varten. Myöhempää lahjoitettua maata käytettiin myös koulu- ja hoitotoimintaan; alueen oppilaitoksiin kuuluvat Kibulin lukio ja opettajankoulutuslaitos. Nämä nimetyt vaiheet ovat vuotta 1873 myöhempiä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Nsambyan kukkula': {
+      aika: 'vanha maasto; opetus- ja hoitokeskus myöhemmin',
+      teksti: 'Nsambya on keskustan eteläisempi kukkula, jonka nimi ulottuu myös rinteiden kaupunginosiin. Se sijaitsee Ggaban suuntaan kulkevalla liikenneakselilla. Mäen maastonpaikka kuuluu vanhaan kaupunkiympäristöön, mutta monet sen tunnetut tehtävät ovat paljon myöhempiä.\n\nMill Hill -lähetysyhteisö aloitti toimintaa 1800-luvun lopulla. Kirkon rinnalle tuli kouluja, ja lääke- sekä hoitopaikasta kasvoi St. Francis -sairaala. Hoitajien ja lääkärien koulutus täydensi myöhemmin alueen tehtäviä. Vuonna 1873 tätä lähetys- ja sairaalakerrosta ei vielä ollut.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Makereren kukkula': {
+      aika: 'vanha maasto; korkeakoulutus 1900-luvulta',
+      teksti: 'Makerere on kukkula ja sen mukaan nimetty kaupunginosa. Old Kampala on etelässä, Wandegeya kaakossa ja Mulago idässä. Yliopiston pääkampus sijoittuu kukkulalle, mutta alueella on myös muita oppilaitoksia sekä kampusrajan ulkopuolista opiskelija-asumista.\n\nMakereren opetuksen taustalla oli 1900-luvun alkupuolen tekninen koulu, jossa opiskeltiin puusepäntyötä, rakentamista ja mekaniikkaa. Ammattiopinnot laajenivat myöhemmin korkeakoulutukseksi. Vuonna 1873 tätä koulua tai yliopistoa ei vielä ollut.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  khartum: {
+    'Tutin saari': {
+      aika: 'vanha kylä; myöhempiä yhteyksiä',
+      teksti: 'Tuti on jokisaari Khartumin, Omdurmanin ja Bahrin välissä. Saaren kylä perustettiin 1400-luvun lopulla. Sen pelloilla ja kasvitarhoissa viljeltiin hedelmiä ja vihanneksia läheisiin kaupunkeihin, ja saarella kasvoi sitrus- ja limettipuita.\n\nSaarelle kuljettiin pitkään lautoilla. Vuonna 2008 valmistunut riippusilta yhdisti sen Khartumiin. Tutin maankäytössä yhdistyivät kyläasutus, pellot, puutarhat ja hedelmätarhat.',
+      kuvat: [
+        {
+          tiedosto: 'Tuti Island (Khartoum, Sudan) 001.jpg',
+          lyhyt: 'Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.',
+          selite: 'Tutin saaren taloja ja piha-aluetta heinäkuussa 2009.',
+          lahde: 'Petr Adam Dohnálek, Wikimedia Commons (CC BY-SA 3.0 cz)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e07/khartum/n1-83b4053facae21d7bedd.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen kasvitieteellinen puutarha': {
+      aika: 'perustettu 1954',
+      teksti: 'Khartumin kansallinen kasvitieteellinen puutarha perustettiin vuonna 1954 Mogranin alueelle, Valkoisen ja Sinisen Niilin yhtymäkohtaan. \n\nSiellä on elävien kasvien kokoelma ja herbaario eli talletettujen kasvinäytteiden kokoelma. Puutarhassa on omat yksikkönsä siementen keruulle, kasvien lisäämiselle, geneettisten resurssien säilyttämiselle ja luokittelulle. Myös taloudellisesti tärkeille kasveille ja kansainväliselle vaihdolle on omat yksikkönsä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Souq al Arabi': {
+      aika: 'markkinapaikka',
+      teksti: 'Souq al Arabi on Khartumin keskustan ulkoilmamarkkina. Sen alue levittäytyy usealle korttelille suuren moskeijan ja minibussiaseman eteläpuolelle. Myyjät sijoittuvat tavararyhmittäisiin osiin. Markkinassa on esimerkiksi kultaan ja koruihin keskittyvä myyntialue.\n\nOmdurmanin markkina ja Bahrin Saad Gishra ovat kaupunkiseudun muita kauppapaikkoja. Ne sijaitsevat jokien eri puolilla, kun Souq al Arabi kuuluu Khartumin keskustaan.',
+      kuvat: [],
+      lahde: 'Wikipedia; Wikivoyage',
+    },
+  },
+  lilongwe: {
+    'Lilongwe Wildlife Centren metsäalue': {
+      aika: 'Nykyinen vierailu- ja kuntoutuskeskus 2000-luvulla',
+      teksti: 'Lilongwe Wildlife Centren metsäalue sijaitsee Old Townin ja City Centren välissä. Vierailualueelle tullaan Kenyatta Roadin kautta. Acacia- ja Combretum-puiden ympäristön läpi kulkee Lingadzi-joki. Metsässä on luonnonvaraisia marakatteja, ja jokialueen linnustoon kuuluvat myös Scopus umbretta -vesilinnut. Julkinen metsä ja erillinen eläinkuntoutusalue ovat eri osia.\n\nKuntoutuksessa ihmiskontaktia rajoitetaan villin käyttäytymisen säilyttämiseksi; metsäalueen tehtäviin taas kuuluvat luontokävelyt ja ympäristökasvatus. Vuonna 1873 nykyistä keskusta ei ollut.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  lusaka: {},
+  mogadishu: {
+    'Arba\'a Rukun -moskeija': {
+      aika: 'keskiaika',
+      teksti: 'Arba\'a Rukun on Shanganin historiallisessa kaupunginosassa oleva moskeija, joka tunnetaan myös nimellä Arba Rucun. Sen alkuperäinen rakennus on keskiajalta. Perustajaksi nimetään Khusra ibn Mubarak al-Shirazi, jonka nimi esiintyy rukoussyvennyksen eli mihrabin piirtokirjoituksessa.\n\nMoskeijan arkkitehtuuriin kuuluu kupoli ja minareetteja. Mihrabin piirtokirjoitus ajoittuu 1200-luvun jälkipuoliskolle.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Mogadishun katedraalin rauniot': {
+      aika: '1900-luvun alkupuoli',
+      teksti: 'Mogadishun katedraalin alkuperäisen suunnitelman teki Antonio Vandone. Esikuvana oli Cefalùn katedraali Sisiliassa, ja rakennus edusti normannivaikutteista historiallistyyliä. Alkuperäisessä julkisivussa tornit olivat molemmilla sivuilla. Pohjamuoto oli latinalainen risti; sisätilan laivoja erottivat pilarit ja teräväkaaret.\n\nKatedraali rakennettiin 1900-luvun alkupuolen siirtomaakaudella. Nykyisin katedraali on raunioitunut.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Liidon ranta': {
+      aika: 'luonnonranta; nimetty palvelualue 1900-luvulta',
+      teksti: 'Liido on Mogadishun hiekkaranta vanhan ydinkeskustan pohjoisemmalla rannikolla. Nimi tulee italian lido-sanasta, joka tarkoittaa rantaa. Paikallisessa käytössä kirjoitusasu on Liido. Luonnonrannan yhteyteen kehittyi siirtomaakaudella nimetty ranta- ja palvelualue, ja rannalla on ollut myöhempiä hotelli- ja ravintolarakennuksia.\n\nNykyinen Liido-nimi ja rannan palvelurakentaminen tulivat vasta 1900-luvun siirtomaakaudella.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  antananarivo: {
+    'Anosy-järvi': {
+      aika: '1800-luvun alkupuoli',
+      teksti: 'Anosy-järvi sijaitsee Antananarivon keskustan eteläpuolella. Se on rakennettu vesialue, jonka paikalla oli aluksi suo. Järven rakentaminen alkoi kuningas Radama I:n aikana 1800-luvun alkupuolella, ja siihen osallistui skotlantilainen James Cameron. Kaupungin historia liittää järven teollisen valmistuksen tarvitsemaan vesivoimaan.\n\nKeskellä järveä on maakaistaleella rantaan liittyvä saari. Se valittiin aluksi sepän työpajan paikaksi, koska työpajan palon ei haluttu leviävän kaupungin puisiin ja kasviaineilla katettuihin taloihin. Järven rannalla kasvaa jakarandoja. Isoisän matkavuoteen 1873 mennessä järvi oli jo rakennettu, mutta ympäröivä kaupunki on muuttunut sen jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Lac anosy Antananarivo 2019-10-02 8.jpg',
+          lyhyt: 'Anosy-järven rantaa Antananarivossa, 2019.',
+          selite: 'Anosy-järven rantaa Antananarivossa, 2019.',
+          lahde: 'Z thomas, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/antananarivo/n1-339e419e9c7f59e3e985.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  gaborone: {
+    'Kgale Hill': {
+      aika: 'Luontokohde',
+      teksti: 'Kgale Hill on Gaboronen maisemaan kuuluva kukkula, joka tunnetaan lempinimellä Nukkuva jättiläinen. Setswanankielinen nimi viittaa kuivuneeseen paikkaan. Laelta avautuu näkymä kaupunkiin ja ympäristöön, ja ylös johtaa kolme kävelyreittiä. Reiteillä voi nähdä paviaaneja.\n\nKukkulalla on toiminut myös televisiotoistin. Sen juurella kuvattiin televisiosarjaa The No. 1 Ladies’ Detective Agency, ja kuvauspaikkaa kutsuttiin leikillisesti Kgalewoodiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Kgale Hill area, Walking Trail 20200329.jpg',
+          lyhyt: 'Polku marulapuiden alla kohti Kgale Hilliä, 2020.',
+          selite: 'Polku marulapuiden alla kohti Kgale Hilliä, 2020.',
+          lahde: 'CNJerem, Wikimedia Commons (CC BY 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n1-faea6729f7782e220b27.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gaboronen pato': {
+      aika: '1960-luku; myöhempi korotus 1980-luvulla',
+      teksti: 'Gaboronen pato kokoaa Notwane-joen vettä kaupungin eteläpuolella. Vesihuolto palvelee Gaboronen lisäksi Lobatsea. Altaan valuma-alueeseen kuuluvat Notwanen ohella Taungin, Metsemaswaanen ja Nywanen jokien vedet. Pato on maatäyttöpato, ja sitä korotettiin myöhemmin varastointikyvyn lisäämiseksi.\n\nRakentaminen alkoi 1960-luvulla, kun uutta pääkaupunkia suunniteltiin. Altaan historia kuuluu modernin pääkaupungin rakentamiseen. Altaan vesitilanteeseen ovat vaikuttaneet sekä vaihtelevat sateet ja haihtuminen että vedenkulutuksen kasvu.\n\nTekojärven ympäristössä harrastetaan myös lintujen tarkkailua, purjehdusta ja kalastusta.',
+      kuvat: [
+        {
+          tiedosto: 'Gaborone Dam 20200315a.jpg',
+          lyhyt: 'Gaboronen padon tekojärven rantaa, 2020.',
+          selite: 'Gaboronen padon tekojärven rantaa, 2020.',
+          lahde: 'CNJerem, Wikimedia Commons (CC BY 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/gaborone/n2-0db9c6a73fcb7b064b1e.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen kasvitieteellinen puutarha': {
+      aika: '2000-luku',
+      teksti: 'Kansallinen kasvitieteellinen puutarha sijaitsee Okwa Roadin varrella The Village -alueella Notwanen ympäristössä. Se kuuluu Botswanan kansallismuseon luonnonhistorian yksikölle. Puutarhaan on koottu maan alkuperäiskasveja, ja sen tehtävä liittyy Botswanan kasviperinnön suojelemiseen.\n\nOsastot seuraavat maan erilaisia ekologisia alueita. Mukana ovat esimerkiksi Choben kasvisto, Okavangon ja suola-altaiden ympäristöihin liittyvät palmut sekä mopanemetsien kasvit. Lounaisen Kalaharin osastossa esitellään muun muassa ruohoja ja Hoodia-suvun kasveja.\n\nNykyinen puutarha avattiin 2000-luvulla. Se liittyy modernin pääkaupungin kulttuuri- ja luonnonhistoriallisiin laitoksiin: sama museo, joka säilyttää käsityöperinnettä, huolehtii myös elävästä kasvikokoelmasta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  harare: {},
+  maputo: {},
+  maseru: {},
+  mbabane: {
+    'Sibeben kallio': {
+      aika: 'Geologinen muodostuma',
+      teksti: 'Sibebe on graniittimuodostuma Mbabanen lähellä, Mbuluzi-joen laakson yläpuolella. Kalliosta käytetään myös englanninkielistä nimeä Bald Rock, Kalju kallio. Sen ympäristöön kuuluu ruohomaita, lohkareita ja metsäisiä uurteita.\n\nNykyisin Sibebelle noustaan merkittyjä polkuja pitkin, ja paikallisia oppaita on saatavilla. Sibebe on myös yhteisöllinen paikka: Mbabanen ja Mbuluzi-seudun Rotary järjestää Sibebe Survivor -kävelyä, jolla kerätään varoja hyväntekeväisyyteen.',
+      kuvat: [
+        {
+          tiedosto: 'Granite monolith.jpg',
+          lyhyt: 'Retkeilijöitä Sibeben graniittivuorella, 2012.',
+          selite: 'Retkeilijöitä Sibeben graniittivuorella, 2012.',
+          lahde: 'theswazigirl, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/mbabane/n1-5ed9110863c5fa0c06c5.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  moroni: {
+    Karthala: {
+      aika: 'Tulivuorimaisema; historiallisia purkauksia 1800-luvulta',
+      teksti: 'Karthala on Ngazidjan aktiivinen kilpitulivuori, joka kohoaa Moronin taustalla. Huipulla on laaja kaldera, ja sen ympäristö on muuttunut purkausten seurauksena. Vuoren rinteillä kostea ainavihanta metsä vaihtuu ylempänä matalampiin puihin ja kanervikkoon. Maisema kertoo yhtä aikaa tulivuoren toiminnasta ja eri korkeuksien elinympäristöistä.\n\nKarthalan tutkiminen on erillinen vuoristoretki, jonka olosuhteet eroavat kaupungin kävelystä. Rinteiden metsä ja huipun kaldera muodostavat erilliset elinympäristöt. Kraatterijärvi katosi 2000-luvun purkauksen yhteydessä, mikä muutti huipun maisemaa.',
+      kuvat: [
+        {
+          tiedosto: 'Hiking to Karthala crater.jpg',
+          lyhyt: 'Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.',
+          selite: 'Karthalan kraatteria kohti kuljetaan vuoriston kasvillisuuden läpi.',
+          lahde: 'Rokaso, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/moroni/n1-b36833eeb8fe3e61d534.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  portlouis: {
+    'Aapravasi Ghat': {
+      aika: '1800-luku',
+      teksti: 'Aapravasi Ghat on Trou Fanfaronin lahden tuntumassa säilynyt osa sopimustyöläisten vastaanottopaikkaa. Meritse saapuneet ihmiset ohjattiin satamasta kivisiä portaita pitkin vastaanottokeskukseen. Kokonaisuuteen kuului majoitustiloja, keittiöitä, peseytymistiloja ja sairaala. Nykyiset jäänteet edustavat vain osaa aikaisemmasta alueesta.\n\nMonet tulijat jatkoivat Mauritiuksen sokeritiloille, osa puolestaan muihin siirtomaihin. Vastaanottopaikan historia liittyy sekä työn järjestämiseen että muuttajien mukanaan tuomiin tapoihin ja perheiden muistoihin.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Champ de Marsin laukkarata': {
+      aika: '1800-luvun alku',
+      teksti: 'Champ de Mars on Port Louis’n kukkuloiden juurella sijaitseva laukkarata. Ennen hevoskilpailuja aluetta käyttivät ranskalaiset joukot harjoituskenttänä. Laukkakilpailut alkoivat 1800-luvun alussa, joten rata oli toiminnassa jo isoisän matkavuonna 1873. Ovaali kiertää oikealle ja päättyy ylämäkeen nousevaan loppusuoraan.\n\nVarhaisilla kilpailupäivillä paikalle rakennettiin ja vuokrattiin tilapäisiä aitioita. Pysyvät katsomot tulivat myöhemmin. Paikka kuuluu myös Mauritiuksen juhlahistoriaan: itsenäistymisen lipunnosto järjestettiin tällä kentällä.',
+      kuvat: [
+        {
+          tiedosto: 'Pferderennbahn port Louis 2019-09-27.jpg',
+          lyhyt: 'Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.',
+          selite: 'Champ de Marsin laukkarata Fort Adelaidelta nähtynä, 2019.',
+          lahde: 'Z thomas, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/portlouis/n2-3c0384b2d923cd16b408.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  victoria: {
+    'Mont Fleurin kasvitieteellinen puutarha': {
+      aika: '1900-luvun alku',
+      teksti: 'Mont Fleurin kasvitieteellinen puutarha on Victorian keskustan tuntumassa Mahén saarella. Se alkoi maatalousasemana, jonka kokoelmaan kerättiin hyötykasveja: puita, palmuja, mausteita, hedelmäpuita ja aromaattisia kasveja. Perustaja oli Mauritiukselta tullut agronomi Dupont.\n\nAlue kehittyi myöhemmin yleiseksi puistoksi. Nykyisessä kokoelmassa on sekä Seychellien omia kasveja että muualta tuotuja koristekasveja. Coco de mer -palmuja kasvaa täällä viljeltyinä, vaikka lajin luonnonvarainen elinalue on Praslinilla ja Curieusella. Puutarhassa elää myös Aldabran jättiläiskilpikonnia.\n\nKasvien säilyttäminen alkuperäisen elinympäristön ulkopuolella kuuluu puutarhan tehtäviin. Elävien kokoelmien tunnistus ja tutkimus täydentävät puiston virkistyskäyttöä.',
+      kuvat: [
+        {
+          tiedosto: 'Giant alocasia.jpg',
+          lyhyt: 'Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.',
+          selite: 'Alokasia Mont Fleurin kasvitieteellisessä puutarhassa Victoriassa, 2007.',
+          lahde: 'Anatoly Terentiev, Wikimedia Commons (PD)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/victoria/n1-f1d3e9001b1b1e0e69da.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  windhoek: {
+    Christuskirche: {
+      aika: '1900-luvun alku',
+      teksti: 'Christuskirche on Windhoekin keskustassa sijaitseva luterilainen kirkko. Gottlieb Redeckerin suunnittelemassa rakennuksessa yhdistyvät uusromaaniset, uusgoottilaiset ja jugendin vaikutteet. Kirkon hiekkakivi saatiin Avisin padon läheltä, mutta sisäänkäynnin Carraran marmori tuotiin Italiasta. Myös kellolaite ja osa katosta kulkivat paikalle Saksasta.\n\nKirkko rakennettiin siirtomaakaudella 1900-luvun alussa. Christuskirche sijaitsee liikennesaarekkeella Robert Mugabe Avenuen varrella.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de Cristo, Windhoek, Namibia, 2018-08-04, DD 05.jpg',
+          lyhyt: 'Christuskirche Windhoekissa, 2018.',
+          selite: 'Christuskirche Windhoekissa, 2018.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e08/windhoek/n1-2e1d8ed267280c5ce11a.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Alte Feste': {
+      aika: '1800-luvun loppu ja 1900-luvun alku',
+      teksti: 'Alte Feste eli Vanha linnake rakennettiin saksalaisen siirtomaajoukon päämajaksi Windhoekin keskustaan. Curt von François suunnitteli rakennuksen, jonka kokonaisuutta muutettiin rakentamisen eri vaiheissa. Korkeat seinät, sisäpiha ja kulmatornit muodostavat linnakkeen rungon. Rakennus sijaitsee Robert Mugabe Avenuen varrella.\n\nSotilaskäytön jälkeen rakennuksessa toimi koulun asuntola ja myöhemmin museon historiallinen kokoelma. Myöhemmät kunnostukset ovat muokanneet rakennuksen käyttöä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  asgabat: {
+    Nisa: {
+      aika: 'Antiikin aika',
+      teksti: 'Nisa on partialaisten arkeologinen alue nykyisen Ašgabatin länsipuolella. Maailmanperintökohteeseen kuuluvat Vanhan ja Uuden Nisan jäänteet. Kaivauksissa on löytynyt asumiseen, hallintoon ja uskonnolliseen käyttöön liittyneitä rakennuksia. Alue oli kauppa- ja kulkureittien risteyksessä, ja löydöissä näkyy Keski-Aasian sekä Välimeren kulttuurien vuorovaikutus. Iranilainen perinne kohtasi täällä hellenistisen maailman.\n\nNisan löydöissä on kirjoitettuja asiakirjoja, taideteoksia ja norsunluisia juomasarvia eli rhyton-astioita. Raunioilla nähtävä rakennusten hahmo ei vastaa muinaisen kaupungin alkuperäistä ulkoasua: eroosio on muuttanut maavalleja ja rakennusten jäänteitä.',
+      kuvat: [
+        {
+          tiedosto: 'Nisa fortress walls close to Ashgabat (44675736824).jpg',
+          lyhyt: 'Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.',
+          selite: 'Nisan eroosion muovaamia linnoitusvalleja vuonna 2018.',
+          lahde: 'Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/asgabat/n1-71d9ec11b75cd9a4bd3f.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  biskek: {
+    'Osh-tori': {
+      aika: '1900-luku',
+      teksti: 'Osh-tori sijaitsee Biškekin länsipuolella. Tällä torilla myydään elintarvikkeita, vaatteita, kodin tavaroita ja matkamuistoja, mutta tarjontaan kuuluvat myös soittimet.\n\nKansallistuotteiden osasto tunnetaan nimellä Kyyal, joka merkitsee unelmaa tai mielikuvitusta. Sieltä löytyy kirgisialaisia vaatteita, puisia säilytysarkkuja, vuodevaatteita ja kehtoja. Vaatteita voi myös tilata myyjiltä toivotussa koossa tai värissä.',
+      kuvat: [
+        {
+          tiedosto: 'Кыргзстан, Бишкек, Ошский базар, тандырные лепешки (1).jpg',
+          lyhyt: 'Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.',
+          selite: 'Tandoorileipiä Biškekin Osh-torilla huhtikuussa 2025.',
+          lahde: 'ElenaLitera, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/biskek/n1-605a07c3f1fc2238ba20.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  dhaka: {
+    'Lalbaghin linnake': {
+      aika: '1600-luku',
+      teksti: 'Lalbaghin linnake rakennettiin Dhakan vanhaan kaupunkiin mogulikauden Bengalin kuvernöörin asuinpaikaksi. Työt aloitti 1600-luvulla prinssi Muhammad Azam Shah, keisari Aurangzebin poika. Prinssin lähdettyä Shaista Khan jatkoi hanketta, mutta kokonaisuus jäi keskeneräiseksi: rakennustyö pysähtyi Pari Bibin kuoleman jälkeen. Paikalla on kuvernöörin asuintiloja, moskeija ja Pari Bibin hautarakennus.\n\nKuvernöörin asuintiloihin liittyy hammam, jonka veden lämmitys- ja jakelujärjestelmän osia on löydetty arkeologisissa tutkimuksissa. Vesikanavat ja suihkulähteet kuuluvat myös kompleksin puutarhoihin.\n\nSen alkuperäisen sijainnin ymmärtämistä vaikeuttaa myös joen muutos: Buriganga kulki aiemmin linnakkeen vierellä, mutta on sittemmin siirtynyt kauemmas.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Armenialainen kirkko': {
+      aika: '1700-luku',
+      teksti: 'Pyhän ylösnousemuksen armenialainen kirkko sijaitsee Armanitolassa Dhakan vanhassa kaupungissa. Kirkko valmistui 1700-luvulla alueelle, jolla oli jo armenialainen hautausmaa. Kauppiaiden yhteisö oli asettunut kaupunkiin ja osallistui muun muassa juutin ja nahan kauppaan. Armanitolan nimi säilyttää tämän historian kaupungin kartassa.\n\nRakennuksessa on rukoussali ja sivuilla suorakulmaiset siivet, joiden yhteydessä ovat sisäänkäynnit. Vanhan hautausmaan säilyneet kivet ovat toinen tapa seurata yhteisön historiaa: ne kertovat kaupungissa eläneistä ihmisistä. Kirkon yhteydessä oli myös kellotorni, joka tuhoutui myöhemmin maanjäristyksessä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  dusanbe: {},
+  islamabad: {
+    'Margallan kansallispuisto': {
+      aika: 'Kukkulat luonnonmaisemaa; kansallispuisto 1900-luvulta',
+      teksti: 'Margallan kansallispuiston kokonaisuuteen kuuluvat kukkulat, Shakarparianin alue ja Rawal-järvi. Himalajan esivuoriston rinteet alkavat aivan pääkaupungin vierestä. Puiston kasvistossa on Pinus roxburghii -mäntyä, villioliivia, paikallisia päärynäpuita sekä monia kukkivia puita ja pensaita. Eläimistöön kuuluvat leopardit, muntjakit ja goralit; lisäksi alueella elää makakkeja, piikkisikoja, lintuja ja käärmeitä.\n\nKukkuloilla on kävelyreittejä, mutta nousut voivat olla jyrkkiä. Luonnonlähteet ja monsuunin aikaan voimistuvat purot ovat osa maisemaa.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Rawal-järvi': {
+      aika: 'Tekoallas 1900-luvulta',
+      teksti: 'Rawal-järvi on Korang-joen ja pienempien purojen vettä keräävä tekoallas. Se rakennettiin palvelemaan pääkaupunkiseudun vedenhankintaa, ja sen valuma-alue ulottuu myös Murreen seudulle. Järvi kuuluu Margallan kansallispuiston kokonaisuuteen. Rannoilla on puutarhoja ja virkistysalueita, mutta vesiallas on myös sinisorsien kaltaisten vesilintujen talvehtimispaikka ja kalojen elinympäristö.\n\nJärven nykykäytössä yhdistyvät vedenhankinta, luonnon elinympäristö ja retkeily. Rannoilla käydään piknikillä ja veneilemässä, ja altaassa sekä sen tulopuroissa elää esimerkiksi karppeja ja tilapioita.',
+      kuvat: [
+        {
+          tiedosto: 'Rawal Lake Eastern Bank.jpg',
+          lyhyt: 'Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.',
+          selite: 'Rawal-järven itärantaa ja Margallan kukkuloita vuonna 2012.',
+          lahde: 'ZILL NIAZI, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e09/islamabad/n2-fa9d3352939ec06e5de5.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  taskent: {
+    'Kukeldashin medresa': {
+      aika: '1500-luku',
+      teksti: 'Kukeldashin medresa sijaitsee Taškentin vanhan kaupungin alueella Chorsun basaarin lähellä. Se on 1500-luvulla rakennettu islamilainen oppilaitosrakennus. Keltaisesta tiilestä tehdyn rakennuksen perusmuotoon kuuluvat sisäänkäyntiportaali ja sisäpiha, jota reunustavat opiskelijoiden huoneet. Rakennuksen rakenteita on korjattu useaan otteeseen.\n\nRakennus toimi 1700-luvulla myös karavaanien majapaikkana ja myöhemmin linnoituksena. Seuraavalla vuosisadalla osa siitä purettiin ja tiiliä käytettiin läheisen Beklarbegi-medresan rakentamiseen. Kukeldash kunnostettiin myöhemmin. Viime vuosisadalla rakennus oli museona, muun muassa kansanmusiikin esittelypaikkana, ja vuosisadan loppupuolella se palautettiin medresaksi.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  thimphu: {
+    'Simtokhan dzong': {
+      aika: '1600-luku',
+      teksti: 'Simtokhan dzong kohoaa Thimphun eteläpuolisella harjanteella. Sen sijainti liittyy laaksoon sekä kulkureitteihin, jotka johtavat Paron ja itäisen Bhutanin suuntiin. Dzong tarkoittaa linnoitusluostaria: samassa kokonaisuudessa on ollut sekä uskonnollisia että hallinnollisia tehtäviä. Simtokhan rakennutti 1600-luvulla Zhabdrung Ngawang Namgyal, joka yhdisti Bhutania.\n\nSisällä ja ulkoseinillä on kappeleita, maalauksia, rukouspyöriä ja liuskekivireliefejä. Ne kertovat rakennuksen uskonnollisesta käytöstä; linnoituksen historia ei näy vain muurien paksuudessa. Kokonaisuutta on korjattu ja laajennettu useaan otteeseen, joten nykyistä ulkoasua ei voi sellaisenaan siirtää menneisyyteen.\n\nRakennukseen on myöhemmin liittynyt myös dzongkhan kielen opetusta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  bandarseribegawan: {
+    'Kampong Ayer': {
+      aika: 'Vuosisatoja vanha vesiasutus',
+      teksti: 'Kampong Ayer on usean kylän muodostama vesiasutus Brunei-joella. Talot ja osa julkisista rakennuksista seisovat paalujen päällä, ja kävelysillat yhdistävät niitä toisiinsa. Leveämpien vesiväylien yli kuljetaan moottoriveneillä. Koulujen, moskeijoiden ja tavallisten kotien rinnakkaisuus kertoo, että alue on elävä kaupunginosa.\n\nNykyinen maalla sijaitseva keskusta kasvoi myöhemmin sen rinnalle, mutta vesikylän asukkaat eivät kaikki muuttaneet pois. Talojen materiaalit ja palvelut ovat muuttuneet: moniin koteihin tulee sähkö ja vesijohtovesi. Alueen galleria avaa vesikylän vaiheita ennen kävelyä sen yhteisillä kulkuväylillä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Tasek Lama': {
+      aika: 'Nykyinen virkistyspuisto 1900-luvun lopulta',
+      teksti: 'Tasek Lama on Bandar Seri Begawanin virkistyspuisto Jalan Tasek Laman varrella. Sen polkuja käytetään kävelyyn ja juoksuun, ja reittejä jatkuu myös ympäristön kukkuloille. Polkuja kulkee myös vesiputouksen luo. Puistossa on kasvillisuuden lisäksi liikunta- ja leikkipaikkoja. Se toimii kaupungin asukkaiden ulkoilupaikkana, eikä puistoretki edellytä siirtymistä kauas sisämaan metsiin.\n\nAlueen vedenkäyttö kuuluu myös kaupungin myöhempään historiaan: vesiputouksen yhteyteen rakennettiin pato veden johtamiseksi Brunei Towniin.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  kualalumpur: {
+    'Kuala Lumpurin historiallinen rautatieasema': {
+      aika: '1900-luvun alkupuoli',
+      teksti: 'Kuala Lumpurin historiallinen rautatieasema sijaitsee Jalan Sultan Hishamuddinin varrella. Arthur Benison Hubback suunnitteli rakennuksen, jonka arkkitehtuuri yhdistää länsimaisia ja moguliperinteeseen liittyviä muotoja. Julkisivun kaaret ja kulmien kattopaviljongit tekevät asemasta tunnistettavan. Julkisivu on rapattu vaaleaksi. Asemassa on ollut myös rautatiehotelli.\n\nNykyinen päärakennus syntyi 1900-luvun alkupuolella aiemman aseman tilalle. Sittemmin KL Sentral otti suuren osan kaupungin pääaseman tehtävistä.',
+      kuvat: [
+        {
+          tiedosto: '2024-09 Kuala Lumpur station 03.jpg',
+          lyhyt: 'Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.',
+          selite: 'Kuala Lumpurin historiallisen rautatieaseman laiturialuetta syyskuussa 2024.',
+          lahde: 'Ariyanto, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/kualalumpur/n1-819b4c7b1af87ad392bb.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bukit Nanas': {
+      aika: 'Metsän suojelualue 1900-luvun alusta',
+      teksti: 'Bukit Nanas on Kuala Lumpurin keskustan kukkula, jonka alueella on säilynyt trooppista sademetsää. Metsässä on kävelypolkuja, ja suojelualue tunnetaan nykyisin nimellä KL Forest Eco Park. Rakentaminen on vähentänyt metsän pinta-alaa, joten nykyinen vihreä alue on osa laajemmasta historiallisesta kokonaisuudesta.\n\nBukit Nanas merkitsee ananaskukkulaa. Perimätiedon mukaan ananaksia kasvatettiin puolustusasemaa ympäröivänä esteenä, mutta nimen selitys esitetään kertomuksena eikä todistettuna tapahtumana. Suojelualue perustettiin vasta 1900-luvun alussa.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  male: {
+    'Hukuru Miskiy, vanha perjantaimoskeija': {
+      aika: '1600-luku',
+      teksti: 'Hukuru Miskiy rakennettiin Malén keskustaan 1600-luvulla vanhemman moskeijan paikalle.\n\nSeinien Porites-koralli nostettiin merestä, leikattiin kosteana ja kuivattiin rakennuskiviksi. Lohkojen liittäminen pontti-uraliitoksilla muistuttaa puusepäntyötä. Rakennuksen puuosissa on kaiverruksia ja lakattuja koristeita; taitavat paikalliset käsityöläiset tekivät sekä katon että sisäosien työt.\n\nMoskeijakompleksiin kuuluu minareetti ja hautausmaa korallikivisine hautamuistomerkkeineen. Kohde on edelleen uskonnollisessa käytössä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  naypyidaw: {
+    'National Herbal Park': {
+      aika: '2000-luvun kasvipuisto',
+      teksti: 'National Herbal Park on Naypyidaw–Taungnyo-tien lähellä sijaitseva kasvipuisto. Sinne on koottu Myanmarin eri alueilta kasveja, jotka tunnetaan perinteisistä lääkekasvien käyttötavoista. Kokoelman tarkoitukseen kuuluu kasvien säilyttäminen ja perinteisen kasviosaamisen ylläpitäminen. Kasvien alkuperä ja käyttötavat kuuluvat kokoelman aiheeseen.\n\nPuisto kuuluu 2000-luvulla rakennetun pääkaupungin aikaan. Eri alueiden kasvit on tuotu samaan paikkaan, ja elävä kokoelma vaatii hoitoa.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  phnompenh: {
+    'Kambodžan kansallismuseo': {
+      aika: '1900-luvun alkupuoli',
+      teksti: 'Kambodžan kansallismuseo sijaitsee Kuninkaanpalatsin pohjoispuolella Phnom Penhin keskustassa. Sen rakennus ei ole vanha temppeli, vaikka suunnittelussa on käytetty khmerien temppeliarkkitehtuurin muotoja. George Groslier sovitti nämä esikuvat museon suurempiin tilatarpeisiin. Näyttelyrakennukset ja sisäpiha muodostavat kokonaisuuden, jossa arkkitehtuuri ja esineistö edustavat eri ikäisiä kerrostumia.\n\nKokoelmissa on veistoksia, keramiikkaa, pronssiesineitä ja kansatieteellistä aineistoa. Museo sekä esittelee että säilyttää kambodžalaista kulttuuriperintöä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  pjongjang: {
+    'Moran-kukkula': {
+      aika: 'Luonnollinen kukkula; nykyinen puistoalue',
+      kuvat: [
+        {
+          tiedosto: 'Moranbong Park - 03.jpg',
+          lyhyt: 'Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.',
+          selite: 'Moran-kukkulan puistopolkua Pjongjangissa heinäkuussa 2019.',
+          lahde: 'Jan Engelhardt, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e10/pjongjang/n1-041a192f8dce9e33e598.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+      teksti: 'Moran-kukkula eli Moranbong muodostaa puiston Pjongjangin keskustassa. Sen koreankielinen nimi tarkoittaa pionikukkulaa. Paikka tuo tasangolla sijaitsevaan kaupunkiin korkeuseroja ja liittyy myös joenrantaan: Taedongin puoleisella rantatörmällä sijaitsee vanha Pubyok-paviljonki. Kukkulan ympäristö on virkistysaluetta, ja sen lähellä on ravintoloita sekä muita vapaa-ajan paikkoja.\n\nPubyokin aiempi nimi oli Yongmyong, ja paviljonki kuului samannimiseen temppeliin. Keskiajalla käyttöön tullut Pubyok-nimi viittaa kelluviin muureihin, mielikuvaan rakennuksesta joen yllä. Paviljongin pylväät ja kattorakenne edustavat korealaista puurakentamista.',
+    },
+  },
+  vientiane: {
+    'Wat Si Saket': {
+      aika: '1800-luvun alkupuoli',
+      teksti: 'Wat Si Saket sijaitsee Lan Xangin ja Setthathiratin katujen kulmassa lähellä Haw Phra Kaewta. Kuningas Anouvong rakennutti temppelin 1800-luvun alkupuolella.\n\nTemppelin ympärillä on terassi, ja varsinaiseen rakennukseen kuuluu monitasoinen koristeltu katto. Käytäväseinien syvennyksissä on pieniä Buddha-kuvia, joiden materiaaleihin kuuluvat keramiikka ja hopea. Sisäpihan keskellä on sim, temppelin vihkimyssali. Sen seinämaalaukset kuvaavat Buddhan aiempia elämiä.\n\nKaupungin 1800-luvun tuhon yhteydessä Siamin joukot käyttivät temppelialuetta päämajana ja majoituspaikkana. Temppeliä korjattiin myöhemmin ranskalaisajan hallinnon aikana, ja siellä toimii myös museo.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  belmopan: {
+    'Guanacasten kansallispuisto': {
+      aika: 'Suojelualue 1900-luvun jälkipuoliskolta',
+      teksti: 'Guanacasten kansallispuisto sijaitsee Belmopanin lähellä, Roaring Creekin sillan tuntumassa päätien pohjoispuolella. Puisto sai nimensä suuresta guanacaste-puusta, jonka haarautunut runko vähensi sen arvoa puutavarana. Puu säästyi aikanaan hakkuulta ja antoi myöhemmin nimensä suojelualueelle.\n\nPuistoa hoitaa Belize Audubon Society. Alueella on ylläpidettyjä metsäpolkuja ja ympäristöopetuksen keskus. Puustoon kuuluu esimerkiksi mahonkia, ja metsän eläimistä on havaittu valkohäntäpeuroja, jaguarundeja ja vyötiäisiä. Lintuharrastajalle alue on myös paikallinen retkikohde.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  kingston: {},
+  ottawa: {
+    'Rideau-putoukset': {
+      aika: 'Luontokohde; teollisuutta 1800-luvulla, puisto 1900-luvulla',
+      teksti: 'Rideau-putoukset ovat Rideau-joen suulla, jossa sen vesi liittyy Ottawa-jokeen. Green Island jakaa joen kahteen haaraan ja erottaa myös putoukset toisistaan. Varhaiset ranskalaiset näkivät putoavassa vedessä verhon ja antoivat sille nimen rideau. Myöhemmin nimi siirtyi putouksilta joelle.\n\nPaikan historiaan kuuluu myös teollisuus. Joen haarojen virtaamaa säätelevät padot; ympäristö muutettiin vasta myöhemmin puistoksi. Nykyinen puisto on syntynyt entiselle teollisuusalueelle.',
+      kuvat: [
+        {
+          tiedosto: 'Rideau Falls - 01.jpg',
+          lyhyt: 'Rideau-putousten vettä ja kallioita vuonna 2016.',
+          selite: 'Rideau-putousten vettä ja kallioita vuonna 2016.',
+          lahde: 'Jeangagnon, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n1-15a6333771ef270822fc.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dominion Arboretum': {
+      aika: '1800-luvun loppu',
+      teksti: 'Dominion Arboretum on Central Experimental Farmin puiden ja pensaiden tutkimuskokoelma. Se sijaitsee kumpuilevalla maalla Prince of Wales Driven, Dows Laken ja Rideau-kanavan välissä. Kokoelman tarkoitus on arvioida kasvien kestävyyttä paikallisissa oloissa. Kävelijälle paikka avautuu puistona, mutta sen puut ovat myös tutkimusaineistoa.\n\nMaaston synnyttämä pienilmasto on mahdollistanut seudulle tavallista arempien kasvien kasvattamisen. Kokoelmassa on esimerkiksi magnolioita ja atsaleoita. Kanavan toisella puolella on Carleton University.',
+      kuvat: [
+        {
+          tiedosto: 'Dominion Arboretum 2025.JPG',
+          lyhyt: 'Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.',
+          selite: 'Dominion Arboretum on Ottawan puiden ja pensaiden tutkimus- ja viheralue.',
+          lahde: 'Canmenwalker, Wikimedia Commons (CC BY 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n2-cfc04dcb8f02d27db355.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dows Lake': {
+      aika: 'Rideau-kanavan rakentaminen 1800-luvun alkupuolella',
+      teksti: 'Dows Lake on Rideau-kanavaan kuuluva ihmisen tekemä järvi Ottawassa. Ennen kanavan rakentamista paikka tunnettiin Dow’n suurena suona. Pohjoisreunalle rakennettu maapato mahdollisti alueen tulvittamisen osaksi kanavareittiä. Nimi viittaa Abram Dow’hun, joka omisti seudulla maata.\n\nNykyisen järven länsipuolella on Dominion Arboretum ja etelän suunnalla Carleton University. Pohjoisrannan paviljongin yhteydessä on veneilypalveluja, ja kanavan varsia seuraavat tieyhteydet kulkevat myös järven ohi.',
+      kuvat: [
+        {
+          tiedosto: 'Dow’s Lake, off the Rideau Canal (48363469826).jpg',
+          lyhyt: 'Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.',
+          selite: 'Dows Laken vettä ja rantakasvillisuutta heinäkuussa 2019.',
+          lahde: 'Ross Dunn, Wikimedia Commons (CC BY-SA 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/ottawa/n3-7a95856475c338c42fdb.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  portauprince: {},
+  sanjose: {},
+  sansalvador: {
+    'San Salvadorin tulivuori': {
+      aika: 'Tuliperäinen maisema',
+      teksti: 'San Salvadorin tulivuori kohoaa kaupungin luoteispuolella, ja pääkaupungin länsiosat levittäytyvät sen rinteille. Samaan tulivuorikokonaisuuteen kuuluu El Picachon huippu. Boquerón on suuren kraatterin nimi; se tarkoittaa suurta suuta. Kraatterin pohjalla näkyvä pienempi kartio tunnetaan nimellä Boqueroncito.\n\nSe syntyi vasta 1900-luvun alun purkauksessa, jolloin aiempi kraatterijärvi katosi.\n\nBoquerónin ympäristöön pääsee El Boquerónin tietä ja kansallispuiston kautta.',
+      kuvat: [
+        {
+          tiedosto: 'El salvador Quezaltepeque Boquerón crater.jpg',
+          lyhyt: 'Boquerónin kraatterin sisällä kohoaa San Salvadorin tulivuoren pienempi Boqueroncito-kartio.',
+          selite: 'Boquerónin kraatterin sisällä kohoaa San Salvadorin tulivuoren pienempi Boqueroncito-kartio.',
+          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/sansalvador/n1-ff48e17ea5eb0fae406c.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  santodomingo: {
+    'Ozaman linnoitus': {
+      aika: '1500-luvun alku',
+      teksti: 'Ozaman linnoitus rakennettiin 1500-luvun alussa Santo Domingon sataman sisääntulon vartiointiin. Se sijaitsee Ozama-joen äärellä vanhassa keskustassa, ja sen keskellä kohoaa Torre del Homenaje. Rakennukseen käytettiin korallikiveä. Työhön osallistui orjuutettuja rakentajia, myös taínoja.\n\nRakennus palveli historiansa aikana myös vankilana. Nykyinen historiallinen kohde kuuluu Unescon maailmanperintöalueeseen yhdessä vanhan keskustan muiden rakennusten kanssa. Sen sijainti joen suun lähellä kertoo alkuperäisestä tehtävästä: vartiointi kohdistui satamaan tuleviin aluksiin ja kaupungin meriyhteyteen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Santo Domingon katedraali': {
+      aika: '1500-luku',
+      teksti: 'Santa María la Menorin katedraali kuuluu Santo Domingon vanhan keskustan 1500-luvun rakennuksiin. Se on omistettu Marialle ja toimii edelleen katedraalina. Julkisivu on kullansävyistä korallipitoista kalkkikiveä. Rakennuksen arkkitehtuurissa goottilaiset piirteet ja ruodeholvit yhdistyvät renessanssin vaikutukseen.\n\nKatedraali kuuluu Unescon maailmanperintöalueeseen. Ruodeholvien poikki kulkevat kiviset ruoteet ovat osa rakennuksen goottilaista arkkitehtuuria.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  tegucigalpa: {},
+  washington: {
+    'Georgetownin vanha kivitalo': {
+      aika: '1700-luku',
+      teksti: 'Old Stone House seisoo Georgetownin M Streetillä, liikkeiden ja ravintoloiden keskellä. Sen rakentaminen alkoi vaatimattomasta kodista 1700-luvulla. Rakennusta kasvatettiin vaiheittain: siihen lisättiin keittiö ja ylempiä kerroksia, ja eri aikoina siinä sekä asuttiin että harjoitettiin liiketoimintaa.\n\nTaloon liitettiin pitkään väärä tarina George Washingtonin ja L’Enfantin tapaamisesta. Kansallispuistopalvelun tutkimus osoitti kokousten tapahtuneen muualla. Talo kuitenkin säilyi, ja se kunnostettiin kotimuseoksi.',
+      kuvat: [
+        {
+          tiedosto: 'Old Stone House (Washington, D.C.) First Floor Rear Kitchen.jpg',
+          lyhyt: 'Georgetownin Old Stone House säilyttää historiallisen kotitalon ja työpaikan ympäristöä.',
+          selite: 'Georgetownin Old Stone House säilyttää historiallisen kotitalon ja työpaikan ympäristöä.',
+          lahde: 'Something Original ( talk ), Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n1-b3c814505039faf604da.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Smithsonianin linna': {
+      aika: '1800-luvun puoliväli',
+      teksti: 'Smithsonianin linnarakennus on punaisesta hiekkakivestä rakennettu museon ja tutkimuslaitoksen talo National Mallin laidalla. Sen suunnitteli James Renwick nuorempi, joka käytti romaanisen ja goottilaisen rakentamisen muotoja. Kivi saatiin Marylandin Senecasta. Alun perin taloon sijoittui myös laitoksen sihteerin perheen asunto: tiedon kerääminen, hallinto ja koti elivät saman katon alla.\n\nSitä oli myös ehditty korjata suuren tulipalon jälkeen; palo tuhosi muun muassa kirjastoja ja tutkimuspapereita.',
+      kuvat: [
+        {
+          tiedosto: 'Smithsonian Institution Building (53831938398).jpg',
+          lyhyt: 'Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.',
+          selite: 'Smithsonianin linna on James Renwick nuoremman suunnittelema historiallinen museorakennus.',
+          lahde: 'ajay_suresh, Wikimedia Commons (CC BY 2.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n2-a14ff8a7fcbe4a88f6db.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Washington-monumentti': {
+      aika: '1800-luvun jälkipuoli',
+      teksti: 'Washington-monumentti on George Washingtonin muistoksi tehty kivinen obeliski National Mallilla. Robert Millsin alkuperäisessä suunnitelmassa tornin ympärille kuului pylväikkö, mutta sitä ei toteutettu. Rakentaminen alkoi yksityisen muistomerkkiyhdistyksen hankkeena, ja työn loppuvaiheista vastasivat liittovaltio ja armeijan insinöörit.\n\nTyö oli pysähtynyt rahoitusvaikeuksiin, ja pitkä tauko näkyy edelleen kivien sävyissä. Uutta marmoria haettiin eri louhoksista, eikä se sopinut täysin yhteen vanhan kanssa. Myös perustuksia vahvistettiin ennen korkeuden kasvattamista.\n\nVuoden 2011 maanjäristys vaurioitti monumentin kivilaatoitusta, ja rakennus suljettiin korjausten ajaksi. Se avattiin uudelleen vuonna 2014.',
+      kuvat: [
+        {
+          tiedosto: 'Washington Monument 2011 earthquake damage 5.jpg',
+          lyhyt: 'Washington-monumentin marmoripinnan halkeama vuonna 2011.',
+          selite: 'Washington-monumentin marmoripinnan halkeama vuonna 2011.',
+          lahde: 'National Park Service, Wikimedia Commons (PD)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e11/washington/n3-7cd24386a35c9eb19a04.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'National Building Museum': {
+      aika: '1800-luvun loppupuoli',
+      teksti: 'National Building Museum toimii entisessä eläkeviraston talossa Judiciary Squaren lähellä. Montgomery C. Meigs suunnitteli punatiilisen rakennuksen, joka ottaa mallia Italian renessanssipalatsien arkkitehtuurista. Suuri keskushalli ja sen korkeat pylväät tekevät sisätilasta näyttävän, mutta pylväiden marmorilta näyttävä pinta on maalausta: niiden sisällä on tiiltä.\n\nVirastossa hoidettiin veteraanien ja heidän perheidensä etuuksia, ja käytännön tarpeet näkyivät rakennuksessa. Portaista tehtiin matalia kulkemisen helpottamiseksi. Viileää ilmaa otettiin sisään sisäpihan alatasolta, ja lämmintä johdettiin ulos katon kautta. Nykyinen museo käsittelee rakentamista ja suunnittelua tilassa, joka on itsekin niiden historian esimerkki. Talo kuuluu 1800-luvun loppupuolen kaupungin kasvuun.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Thomas Jefferson -kirjastotalo': {
+      aika: '1800-luvun loppupuoli',
+      teksti: 'Kongressin kirjaston Thomas Jefferson -rakennus sijaitsee Kapitolin vieressä. Kirjaston kasvavat kokoelmat saivat siinä oman talonsa 1800-luvun lopulla. Julkisivu ja koristeelliset sisätilat kuuluvat Beaux-Arts- ja klassistiseen arkkitehtuuriin. Suunnittelutyöhön osallistuivat John L. Smithmeyer, Paul J. Pelz ja myöhemmin Edward Pearce Casey.\n\nKirjastotaloa ei rakennettu vain katsottavaksi. Se yhdistettiin Kapitoliin kirjatunnelilla, jossa sähköinen kuljetin siirsi niteitä. Rakennuksen nykyinen nimi kunnioittaa Thomas Jeffersonia.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Kanavanvartijan talo': {
+      aika: '1800-luku',
+      teksti: 'Kanavanvartijan talo on National Mallin länsilaidan pieni rakennus Constitution Avenuen ja 17th Streetin kulmassa. Se palveli sulkua, jossa C&O-kanavan itäinen jatke liittyi Washington City Canaliin. Georgetownista jatkettu kanava liittyi Tiber Creekin suunnalla Washington City Canaliin, joka kulki nykyisen National Mallin alueen läpi kohti Kapitolia. Talo auttaa paikantamaan vesireitin maisemassa, jossa kanava ei enää muodosta kaupungin näkyvää selkärankaa.\n\nC&O-kanavan alukset kuljettivat hiiltä ja monenlaisia muita tavaroita Cumberlandin ja Washingtonin välillä. Niitä vedettiin muuleilla rantapolkua pitkin, ja sulut rytmittivät kulkua eri vedenkorkeuksien välillä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  basseterre: {
+    'Itsenäisyydenaukio': {
+      aika: '1700-luvulla hallituksen hankkima aukio',
+      teksti: 'Itsenäisyydenaukio on vanhan Basseterren keskeinen julkinen tila. Se tunnettiin aiemmin nimellä Pall Mall Square, ja siitä kehittyi hallinnon, kaupan ja sosiaalisen elämän keskus.\n\nAukion historiaan kuuluu orjuutettujen ihmisten myynti. Nykyinen nimi annettiin Saint Kittsin ja Nevisin itsenäistyessä. Orjakauppiaita toimi aukion lisäksi Liverpool Row -kadulla; kauppa käytiin heidän liiketiloissaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  bridgetown: {
+    'Nidhe Israelin synagoga': {
+      aika: '1600-luvulta; nykyinen rakennus 1800-luvulta',
+      teksti: 'Nidhe Israel on Bridgetownin historiallinen synagoga Synagogue Lanella. Sen alkuperäinen rakennus valmistui 1600-luvulla, tuhoutui myöhemmin hurrikaanissa ja korvattiin uudella synagogalla. Synagogan ympäristöön kuuluvat myös hautausmaa, museo ja arkeologisissa kaivauksissa löydetty mikveh eli rituaalikylpy.\n\nRakennus myytiin myöhemmin, ja sitä muutettiin uutta käyttöä varten. Naisten lehterin kohdalle rakennettiin kokonainen toinen kerros, ikkunoiden kaaria ja lattiaa vaihdettiin ja hautausmaa rappeutui. Kunnostus palautti talon synagogaksi.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    Parlamenttirakennukset: {
+      aika: '1800-luku',
+      teksti: 'Bridgetownin parlamenttirakennukset koostuvat itä- ja länsisiivestä keskustan vesialueen tuntumassa. Uusgoottilainen arkkitehtuuri liittyy Britannian viktoriaaniseen rakennusperinteeseen, mutta rakennusmateriaalina käytettiin paikallista korallikalkkikiveä. Parlamentin kokoussalit sijaitsevat itäsiivessä; länsisiivessä on ollut erilaisia julkisia toimistoja.\n\nKellotornin historiaan kuuluu paikkaa koskeva muutos. Alkuperäinen itäsiiven yhteydessä seissyt torni alkoi vajota huonojen maaperäolojen vuoksi ja purettiin. Uusi torni rakennettiin länsisiiven yhteyteen.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  castries: {
+    'Castriesin tori': {
+      aika: '1800-luvun loppu',
+      teksti: 'Castriesin tori sijaitsee keskustassa Jeremie Streetin äärellä. Kauppapaikan nimi on Castries Market and Vendor’s Arcade. Sen rakennuksen toteutti 1800-luvun lopulla Liverpoolin Bruce & Still -toimisto. Torilla myytiin lihaa, kalaa, yrttejä, mausteita ja käsitöitä.\n\nKauppapaikan toiminta on muuttunut ajan mukana: kalaa ei enää myydä entiseen tapaan eikä lihaa teurasteta paikan päällä. Kaupunginvaltuusto perusti torin rinnalle Vendor’s Arcaden vähentämään jalkakäytävien ruuhkaa. Lisärakennuksessa on paikallisia ruokapaikkoja, käsityömyyntiä ja elintarvikkeita. Torin ympärillä kauppa jatkuu sekä päivittäisinä ruokaostoksina että matkailijoiden hankintoina.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Derek Walcottin aukio': {
+      aika: 'Historiallinen aukio, nykyinen nimi 1900-luvun lopulta',
+      teksti: 'Derek Walcottin aukio on puistoaukio Castriesin keskustassa. Sen reunat seuraavat Bourbon-, Brazil-, Laborie- ja Micoud-katuja. Aukion äärellä sijaitsevat Neitsyt Marian tahrattoman sikiämisen katedraali ja kaupungin keskuskirjasto. Paikka on tunnettu muun muassa nimillä Place d’Armes, Promenade Square ja Columbus Square.\n\nNykyinen nimi kunnioittaa Castriesissa syntynyttä Derek Walcottia, joka sai kirjallisuuden Nobelin.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Morne Fortune': {
+      aika: 'Kukkula; vanha linnoitusalue 1700-luvulta',
+      teksti: 'Morne Fortune on Castriesin eteläpuolella sijaitseva kukkula ja asuinalue. Ranskalaiset rakensivat sinne linnoituksen, ja alue siirtyi myöhemmin brittien hallintaan. Myöhemmät tykkiasemat kuuluivat sataman puolustukseen.\n\nKukkulalla säilyy vanhoja linnoituksia ja sotilasrakennuksia, mutta alueella on myös oppilaitoksia. Niihin kuuluvat Sir Arthur Lewis Community College ja Länsi-Intian yliopiston Saint Lucian toimipaikka. Kukkulan pohjoispuolelta avautuu näkymiä Castriesiin. Historiallista aluetta hoitaa Saint Lucia National Trust.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  kingstown: {
+    'Kingstownin kasvitieteellinen puutarha': {
+      aika: '1700-luku',
+      teksti: 'Kingstownin kasvitieteellinen puutarha perustettiin 1700-luvulla uusien ravinto-, lääke- ja kauppakasvien kasvattamista varten. Varhaiseen työhön osallistuivat Robert Melville, George Young ja myöhemmin Alexander Anderson. Kasveja saatiin muilta Karibian saarilta sekä Aasiasta ja muualta maailmasta. William Blighin tuomat leipäpuut kuuluivat tähän kansainväliseen kasvinsiirtoon.\n\nHoito heikkeni 1800-luvun puolivälin tienoilla, ja elvytystyö alkoi myöhemmin vuosisadan loppupuolella. Nykyiseen alueeseen kuuluu kasvikokoelman lisäksi papukaijan suojelua palveleva lintutarha.',
+      kuvat: [
+        {
+          tiedosto: 'St. Vincent, Karibik - Botanical Garden of Kingstown - panoramio.jpg',
+          lyhyt: 'Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.',
+          selite: 'Kingstownin kasvitieteellisen puutarhan kasvillisuutta vuonna 2012.',
+          lahde: 'giggel, Wikimedia Commons (CC BY 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/kingstown/n1-8e284ce6021da00bf11e.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fort Charlotte': {
+      aika: 'Rakentaminen 1700-luvulta 1800-luvun alkuun',
+      teksti: 'Fort Charlotte on Britannian siirtomaa-ajan linnake Berkshire Hillillä Kingstownin länsipuolella. Sen rakentaminen alkoi 1700-luvulla ja valmistui 1800-luvun alussa. Nimi viittaa kuningas Yrjö III:n puolisoon Charlotteen. Linnakkeen tykit suunnattiin sisämaahan, sillä puolustussuunnitelma varautui saaren muulta rannikolta maitse tulevaan hyökkäykseen. Tukikohtaan kuljettiin viaduktia pitkin.\n\nSen sijainti näkyy laajoissa näkymissä Kingstowniin, Young Islandille, Bequialle ja Grenadiineille. Alueen rakennuksia käytettiin myöhemmin erilaisiin hoito- ja laitoskäyttöihin. Linnakkeella toimii myös sataman sisääntuloa merkitsevä majakka.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  nassau: {
+    'Fort Fincastle': {
+      aika: '1700-luvun loppu',
+      teksti: 'Fort Fincastle sijaitsee Bennet’s Hillin kukkulalla Nassaun keskustan yläpuolella. Lordi Dunmoren rakennuttama linnake on muotoiltu siipirataslaivaa muistuttavaksi. Sen nimen taustalla on Dunmoren toinen aatelisarvo, varakreivi Fincastle. Kukkulalta voi nähdä Nassaun, Paradise Islandin ja New Providencen itäiset lähestymissuunnat.\n\nLinnake ei toiminut pelkästään puolustusrakennuksena: se palveli myös majakkana, kunnes Paradise Islandille tuli korvaava valo, ja myöhemmin viestiasemana. Vierailijan kävelyreitti kulkee usein Queen’s Staircasen kautta.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Kuningattaren portaat': {
+      aika: '1700-luvun loppu',
+      teksti: 'Queen’s Staircase on kallioon louhittu portaikko Nassaun keskustassa. Orjuutetut ihmiset tekivät portaiden ja tien louhintatyön 1700-luvun lopulla, jotta kaupungin ja Fort Fincastlen välille syntyi kulkuyhteys. Reitti työstettiin kiinteään kalkkikiveen rajallisilla työkaluilla.\n\nPortaiden alaosan kulkuväylä jää korkeiden kiviseinien väliin. Reitti johtaa kohti Bennet’s Hillin linnaketta. Queen’s Staircase -nimi annettiin myöhemmin kuningatar Victorian kunniaksi.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Fort Charlotte': {
+      aika: '1700-luvun loppu',
+      teksti: 'Fort Charlotte seisoo kukkulalla Nassaun sataman länsipuolella. Kalkkikivestä rakennettu linnake syntyi Britannian siirtomaakaudella, kun lordi Dunmore hallitsi Bahamaa.\n\nLinnake rakennettiin Yhdysvaltain itsenäisyyssodan päättymisen jälkeen sataman puolustukseen. Se on yksi Nassaussa säilyneistä Britannian siirtomaakauden linnakkeista. Varustusten tarkoituksena oli torjua espanjalaisten hyökkäyksiä, mutta Fort Charlotte ei joutunut taistelukäyttöön.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  portofspain: {
+    'Queen\'s Park Savannah': {
+      aika: '1800-luvun alusta alkaen',
+      teksti: 'Queen\'s Park Savannahin alue oli sokeriruokomaata ennen kuin kaupunki osti sen Peschierin suvulta 1800-luvun alussa. Kauppaan ei kuulunut suvun hautapaikka, joka jäi yksityiseksi saarekkeeksi yhteisen alueen keskelle. Aluksi Savannah oli karjan laidun kaupungin laidalla.\n\nAlueella on myöhemmin pidetty hevoskilpailuja ja pelattu krikettiä, jalkapalloa sekä rugbya. Savannahin ydin ei ole kauttaaltaan istutettu puutarha; puut reunustavat sen laajaa avointa tilaa. Luoteiskulman Hollows puolestaan on entinen vesiallas, joka on tyhjennetty ja istutettu koristepensailla. Eteläreunan katsomo liittyy nykyiseen karnevaalin tapahtumapaikkaan, kun taas pohjoisreunalta alkaa erillinen kasvitieteellinen puutarha.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Royal Botanic Gardens': {
+      aika: '1800-luvun alusta alkaen',
+      teksti: 'Royal Botanic Gardens sijaitsee Queen\'s Park Savannahin pohjoispuolella Port of Spainissa. Puutarha on puukokoelma, jossa kasvaa sekä Trinidadin ja Tobagon omia lajeja että eri puolilta maailmaa tuotuja puita.\n\nAlueella on myös pieni hautapaikka, johon on haudattu Trinidadin entisiä kuvernöörejä. Savannahin avoin entinen laidun ja tämän puutarhan istutettu ympäristö ovat vierekkäin, mutta eri kohteita.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  roseau: {
+    'Old Market': {
+      aika: 'Siirtomaa-aika',
+      teksti: 'Old Market sijaitsee Dominican museon takana vanhassa rantakorttelissa. Paikka tunnetaan myös nimillä Old Market Plaza ja Dawbiney Market Square. Siirtomaa-aikana torilla käytiin kauppaa Dominican ja ympäröivien saarten välillä; tavaroiden lisäksi siellä myytiin orjuutettuja ihmisiä.\n\nMyöhemmin alue kunnostettiin käsityömyynnin paikaksi, ja nykyään siellä on esimerkiksi koruja, mausteita ja matkamuistoja. Jokirannan nykyinen ruokatori on eri paikka.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Dominican kasvitieteellinen puutarha': {
+      aika: '1800-luvun loppu',
+      teksti: 'Dominican kasvitieteellinen puutarha sijaitsee Roseaun keskustan itälaidalla Morne Bruce -kukkulan alapuolella. Alueella on nurmikenttiä, istutuksia ja nimikyltillä merkittyjä trooppisia puita. Kasvilajeihin kuuluvat myös ylang-ylang ja tykinkuulapuu.\n\nPuutarha perustettiin entiselle sokeriviljelmälle kokeilemaan hyötykasveja ja tuottamaan taimia viljelijöille. Alueelta lähtevä Jack’s Walk nousee Morne Brucelle, jolta näkyvät Roseau ja Karibianmeri.',
+      kuvat: [
+        {
+          tiedosto: 'Dominica Botanic Gardens 02 2025 08.jpg',
+          lyhyt: 'Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.',
+          selite: 'Kasvillisuutta Roseaun kasvitieteellisessä puutarhassa helmikuussa 2025.',
+          lahde: 'Concord, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e12/roseau/n2-049ae1bde568949060ac.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  saintjohns: {
+    'Saint John’sin katedraali': {
+      aika: '1800-luvun alkupuolisko',
+      teksti: 'Saint John’sin anglikaaninen katedraali seisoo kukkulalla keskustan yläpuolella. Nykyisen kirkon suunnitteli englantilainen Thomas Fuller. Sen ulkorakenne on kiveä, mutta sisällä on mäntypuusta tehty rakenne ja verhoilu. Puinen sisäosa tukee kirkkoa maanjäristysten ja myrskyjen kuormia vastaan. Tästä tulee rakennuksen kuvaus rakennuksena rakennuksen sisällä.\n\nSamalla paikalla oli aiemmin ensin puukirkko ja sitten suurempi tiilikirkko. Tornit kuuluvat kaupungin siluettiin, ja sisärakenne kertoo myös paikallisista rakentamisen haasteista. Katedraali on edelleen anglikaanisen kirkon käytössä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Antiguan ja Barbudan museo': {
+      aika: 'Rakennus 1700-luvun puoliväli',
+      teksti: 'Antiguan ja Barbudan museo sijaitsee Saint John’sin vanhassa siirtomaa-ajan oikeustalossa. Rakennus nousi kaupungin varhaisen torin paikalle 1700-luvun puolivälissä.\n\nMuseossa on saarilta arkeologisissa kaivauksissa löydettyjä alkuperäiskansojen ja siirtomaakauden esineitä. Kokoelmiin kuuluvat myös sokeriplantaasien mallit ja krikettipelaaja Viv Richardsin maila. Museon kokoelmiin kuuluu myös Antiguan sokeriruokorautateillä käytettyjä vetureita.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Fort James': {
+      aika: '1700-luku',
+      teksti: 'Fort James sijaitsee niemellä Saint John’sin sataman suulla. Britit rakensivat sen 1700-luvulla vartioimaan satamaa, ja rakennushanketta vauhditti pelko Ranskan hyökkäyksestä. Nimi viittaa Englannin kuningas Jaakko II:een. Paikalla on säilynyt ruutivarasto, tykkejä ja muurien perustuksia, ja niemeltä näkyy ympäröivä satama. Vastakkaisella puolella satamansuuta on Fort Barrington.\n\nSen tykeillä oli 1800-luvulla myös merkinantotehtäviä: vierailevia sotalaivoja tervehdittiin laukauksilla, ja tykillä annettiin merkkejä auringonnousun sekä auringonlaskun aikaan.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  stgeorges: {
+    'Fort George': {
+      aika: '1700-luvun alku',
+      teksti: 'Fort George on St. George’sin satamaa valvova historiallinen linnake. Ranskalaiset rakensivat sen 1700-luvun alussa ja kutsuivat sitä Fort Royaliksi. Brittihallinnon aikana se sai nimensä kuningas Yrjö III:n mukaan. Moniulmainen pohjamuoto ja ulkonevat bastionit kuuluvat aikakauden puolustusarkkitehtuuriin.\n\nLinnakkeen paikka kertoo sekä sen vahvuudesta että maaston aiheuttamasta ongelmasta. Se hallitsi satamaa, mutta sen yläpuolella sijaitsi korkeampaa maata. Ranskalaiset lähestyivät brittien hallitsemaa linnaketta myöhemmin maalta ja käyttivät korkeampia asemia. Kaupungin linnoitusten kokonaisuus kehittyi kukkuloiden harjanteille. Fort George on osa samaa linnoitusverkostoa kuin Fort Frederick ja Fort Matthew.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Grenadan kansallismuseo': {
+      aika: 'rakennuksia 1700–1800-luvuilta; museo 1900-luvulta',
+      teksti: 'Grenadan kansallismuseon rakennuskokonaisuus sijaitsee Young Streetin ja Monckton Streetin kulmassa. Sen historia liittyy brittihallinnon poliisitoimintaan, viereiseen vankilaan, myöhempiin hotelleihin ja varastoon. Varsinaiset vankilarakennukset sijaitsivat nykyisten museotalojen takana.\n\nMuseotoiminta alkoi vasta 1900-luvulla, pitkän hotelli- ja varastohistorian jälkeen. Kokoelmien aiheisiin kuuluvat saaren alkuperäisasukkaat, eurooppalaisten saapuminen, orjuus, plantaasitalous sekä vanha teknologia ja valaanpyynti.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  brasilia: {
+    'Brasílian kansallispuisto': {
+      aika: '1900-luvun jälkipuoliskolta',
+      teksti: 'Brasílian kansallispuisto sijaitsee pääkaupungin luoteispuolella. Se perustettiin uuden pääkaupungin syntymisen yhteydessä suojelemaan sen ympäristön luontoa.\n\nPuistossa cerrado vaihtelee avoimista kasvillisuusalueista vesistöjen varsia seuraaviin metsiin. Lähteet ja purot ovat tärkeä osa aluetta, ja vierailijoita houkuttelevat myös vedestä muodostuneet uima-altaat. Alueella on retkeilypolkuja ja ympäristökasvatusta. Puistoa hallinnoi luonnonsuojelusta vastaava Chico Mendesin luonnonsuojeluinstituutti, joten retki kuuluu suojelualueelle. Sen eläimistöön lukeutuvat esimerkiksi harjasusi, jättiläismuurahaiskarhu ja vesialueiden kapybara.',
+      kuvat: [
+        {
+          tiedosto: 'Piscina parquenacionalbrasilia.jpg',
+          lyhyt: 'Brasílian kansallispuiston allasalue tammikuussa 2008.',
+          selite: 'Brasílian kansallispuiston allasalue tammikuussa 2008.',
+          lahde: 'Fabio Rodrigues Pozzebom/ABr, Wikimedia Commons (CC BY 3.0 br)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/n1-7f523a2f1fdcf525ded6.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Paranoá-järvi': {
+      aika: 'Brasílian rakentamisen ajalta',
+      teksti: 'Paranoá on Brasílian rakentamisen yhteydessä patoamalla muodostettu järvi. Sen rannoilla on Lago Norten ja Lago Sulin asuinalueita, urheiluseuroja, ravintoloita ja yliopiston toimintoja. Nykyinen laaja vesimaisema on osa pääkaupungin rakentamista, vaikka järven vettä ja rantojen luontoa tarkastellaan nyt myös virkistysympäristönä.\n\nJärven pinnan alle jäi Vila Amaury, jossa asui Brasílian työmaille tulleita rakentajia. Vedenalainen Vila Amaury on sukelluskohde. Järvi on vapaa-ajan ja vesiurheilun ympäristö. Järven saaria on myös suojeltu ekologisina alueina. Järven vesi tulee muun muassa Torton, Gaman, Riacho Fundon ja Bananalin puroista, joten vesialue liittyy useisiin pääkaupunkiseudun valuma-alueisiin.',
+      kuvat: [
+        {
+          tiedosto: 'IlhaDosClubes.jpg',
+          lyhyt: 'Ilha dos Clubes on pieni saari Brasílian Paranoá-järvessä.',
+          selite: 'Ilha dos Clubes on pieni saari Brasílian Paranoá-järvessä.',
+          lahde: 'EliasTheHorse, Wikimedia Commons (CC BY-SA 3.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/brasilia/n2-0e8a0b9750cdfdf01957.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  georgetown: {
+    'Georgetownin majakka': {
+      aika: '1800-luvun alkupuoli',
+      teksti: 'Georgetownin majakka sijaitsee Water Streetillä. Nykyinen torni korvasi aiemman majakan 1800-luvun alkupuolella. Ylöspäin kapenevassa kivisessä tornissa on parveke ja lyhty, ja sen ulkopintaa merkitsevät punaiset ja valkoiset pystysuorat raidat. Majakka kuuluu Guyanan National Trustin ylläpitämiin kohteisiin.\n\nTornin perustus on greenheart-puusta tehtyjen paalujen varassa. Sen valo näyttää punaista tai valkoista katselusuunnan mukaan, joten kyse ei ole pelkästä yöllä erottuvasta tornista vaan merenkulun merkkijärjestelmästä. Majakka liittyy Georgetownin paikkaan jokisuun satamakaupunkina.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Promenade Gardens': {
+      aika: '',
+      teksti: 'Promenade Gardens on Georgetownin keskustan julkinen puutarha Middle Streetin tuntumassa. Siellä kasvaa trooppisia kasveja, ja se on pienempi kuin idempänä sijaitseva Guyana Botanical Gardens. Keskustan merkittävät rakennukset, kuten National Library ja St. George\'s Cathedral, sijoittuvat puutarhan ja Independence Squaren ympärille.\n\nMiddle Street erottaa puutarhan eteläpuolisesta Independence Parkista, jota kutsutaan myös Parade Groundiksi. Tämä naapuripaikka liittyy siirtomaa-ajan historiaan: siellä teloitettiin orjuutettuja ihmisiä, jotka osallistuivat kapinaan 1800-luvun alussa. Puutarha ja paraatikenttä ovat eri kohteita.',
+      kuvat: [
+        {
+          lyhyt: 'Trooppisissa puutarhoissa kasvaa monenlaisia lehtikasveja. Havainnekuva.',
+          selite: 'Trooppisissa puutarhoissa kasvaa monenlaisia lehtikasveja. Havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n2-tropiikin-lehdisto-v1-e6bf4c8676c0.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Guyana Botanical Gardens': {
+      aika: '1800-luvun loppupuoli',
+      teksti: 'Guyana Botanical Gardens perustettiin hylätyn Plantation Vlissengenin sokeritilan maalle 1800-luvun loppupuolella. Paikka oli silloisen kaupungin itälaidalla, mutta nykyisin ympärillä on asuinalueita. Puutarha sijaitsee Guyanan eläintarhan ja Castellani Housen lähellä. Sen varhaisiin hoitajiin kuului kasvitieteilijä George Samuel Jenman.\n\nPuutarhan manaatit elävät lammessa eläintarhan lähellä mutta sen ulkopuolella. Niitä tuotiin alueelle jo 1800-luvun loppupuolella, ja manaatteja pidetään myös kaupungin National Parkissa. Puutarhassa kasvaa trooppisia kasveja, palmuja ja suuria lumpeita.',
+      kuvat: [
+        {
+          lyhyt: 'Sulkalehtisen palmun lehdet jakautuvat kapeisiin osiin. Havainnekuva.',
+          selite: 'Sulkalehtisen palmun lehdet jakautuvat kapeisiin osiin. Havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/georgetown/e13-georgetown-n3-palmulehdet-v1-25f5069e0e63.png',
+          suora: true,
+        },
+      ],
+      lahde: 'https://en.wikipedia.org/wiki/Guyana_Botanical_Gardens ; https://en.wikivoyage.org/wiki/Georgetown_(Guyana)',
+    },
+  },
+  lapaz: {
+    'San Franciscon basilika': {
+      aika: '1700-luku; torni 1800-luvun lopulta',
+      teksti: 'San Franciscon basilika on Franciscus Assisilaiselle omistettu katolinen kirkko La Pazin keskustassa. Se seisoo Plaza San Franciscon laidalla ja edustaa Andien barokkia. Kirkon ja luostarin historia ulottuu kaupungin espanjalaisen perustamisen aikoihin, mutta nykyinen kirkkorakennus on 1700-luvulta. Sitä edeltänyt kirkko sortui runsaan lumisateen jälkeen 1600-luvun alussa.\n\nSen torni kuuluu kuitenkin 1800-luvun lopun rakennusvaiheeseen, joten nykyistä kokonaisuutta ei voi siirtää sellaisenaan tuohon vuoteen. Kirkon historia ei pääty julkisivuun: saman kompleksin luostarissa toimii museo, joka esittelee rakennuksen menneisyyttä. Aukio, kirkko ja luostari ovat eri osia samasta keskustan historiallisesta ympäristöstä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Plaza Murillo': {
+      aika: 'Siirtomaa-ajan aukio; nykyinen nimi myöhemmältä ajalta',
+      teksti: 'Plaza Murillo sijaitsee La Pazin vanhassa keskustassa eli Casco Viejossa. Aukion ympärillä ovat katedraali sekä hallintorakennuksia, ja sen rajoina kulkevat keskustan kadut. Se muodostui osaksi espanjalaisen kaupungin ruutukaavaa. Siirtomaa-aikana aukion laidalle sijoitettiin kaupunginhallinto, kirkollisia rakennuksia ja kruunun rahasto.\n\nAukio oli olemassa isoisän matkavuonna 1873, mutta nimet ovat vaihtuneet sen historian aikana. Se tunnettiin ensin Plaza Mayorina ja myös Plaza de Armasina. Nykyinen nimi viittaa itsenäisyyshistorian Pedro Domingo Murilloon. Aukion sivuja rajaavat muun muassa Socabaya-, Ayacucho- ja Comercio-kadut.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  paramaribo: {
+    'Fort Zeelandia': {
+      aika: '1600-luku',
+      teksti: 'Fort Zeelandia seisoo Paramaribon historiallisessa keskustassa Surinam-joen äärellä. Paikalla olleesta ranskalaisesta puulinnoituksesta kehittyi englantilaiskaudella Fort Willoughby. Hollantilaisten haltuun siirryttyään se sai nykyisen nimensä.\n\nNykyisin linnoituksessa toimii Surinaams Museum eli Surinamen museo. Sen kokoelmissa on arkeologista aineistoa, tekstiilejä, historiallisia valokuvia ja siirtomaa-ajan huonekaluja. Linnoituksen lähellä säilyneet upseeritalot kuuluvat samaan historialliseen ympäristöön, ja entisessä komentajan talossa toimii taidekoulu.',
+      kuvat: [
+        {
+          tiedosto: 'Fort Zeelandia, Paramaribo, Suriname.jpg',
+          lyhyt: 'Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.',
+          selite: 'Fort Zeelandia kuuluu Paramaribon varhaisiin siirtomaa-ajan rakennuskerroksiin.',
+          lahde: 'Medimir, Wikimedia Commons (CC BY-SA 4.0)',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/commons/e13/paramaribo/n1-90d2c2a88566c6ba2602.jpg',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Palmupuisto: {
+      aika: '1600-luvulta',
+      teksti: 'Palmentuin eli Palmupuisto sijaitsee Paramaribon historiallisessa keskustassa presidentinpalatsin takana. Kuningaspalmut istutettiin kuvernööri Cornelis van Aerssen van Sommelsdijckin määräyksestä siirtomaakaudella, ja puutarha avattiin yleisölle jo 1600-luvulla. Alue suljettiin myöhemmin pitkäksi aikaa ja avattiin uudelleen vasta 1900-luvun alussa.\n\nPalmupuisto mainitaan kaupungin maailmanperintöarvoihin kuuluvana maiseman osana. Palmujen lisäksi siellä on leikkipaikka, ja juhlapäivinä alueelle tulee myyntikojuja. Puustossa elää trooppisia lintuja, ja puutarhan historia liittyy suoraan sitä ympäröivään hallintokaupunkiin.',
+      kuvat: [
+        {
+          lyhyt: 'Palmujen yleishavainnollistus. Havainnekuva.',
+          selite: 'Palmujen yleishavainnollistus. Havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e13/paramaribo/e13-paramaribo-n2-palmut-v1-fbb9192ae09b.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  santiagodechile: {
+    'Plaza de Armas': {
+      aika: '1500-luvulta kehittynyt aukio',
+      teksti: 'Plaza de Armas on Santiagon keskustan pääaukio. Espanjalainen kaupunki suunniteltiin 1500-luvulla ruutukaavaksi, jonka keskelle sijoitettiin aukio hallintoa ja kirkkoa varten. Nykyään sen ympärillä ovat katedraali, keskusposti, entinen kuninkaallinen oikeusistuin ja kaupunginhallinnon rakennus. Metroasema sijaitsee aukion alapuolella.\n\nPostitalo ja aukion laidalla oleva Edwardsin liikerakennus valmistuivat myöhemmin 1800-luvulla. Lähellä sijaitsevat myös Casa Colorada ja esikolumbiaanisen taiteen museo.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'La Moneda': {
+      aika: '1800-luvun alku; hallintokäyttö samalla vuosisadalla',
+      teksti: 'La Moneda suunniteltiin siirtomaa-ajan Chilen rahapajaksi. Italialaissyntyinen Joaquín Toesca laati uusklassisen rakennuksen suunnitelmat, mutta kuoli ennen sen valmistumista. Rakennus otettiin käyttöön 1800-luvun alussa. Sen nimi muistuttaa edelleen kolikoista, vaikka paikka tunnetaan nykyään hallinnon kotina.\n\nHallinto muutti rakennukseen 1800-luvulla, ja kolikoiden valmistus jatkui sen rinnalla. Rakennuksessa on useita sisäpihoja. Nykyinen palatsi ei silti ole sellaisenaan sama kokonaisuus kuin varhaisen rahapajan aikana: rakennus on saanut myöhempiä osia, korjauksia ja muutoksia. Vanha pääjulkisivu osoittaa Moneda-kadulle.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Mercado Central': {
+      aika: '1800-luvun jälkipuolisko',
+      teksti: 'Mercado Central on Santiagon keskustan kauppahalli. Sen valurautainen katto ja tukirakenne valmistettiin Glasgow’ssa Skotlannissa. Suunnitteluun osallistuivat Edward Woods ja Charles Henry Driver, ja metalliosat teki Laidlaw’n yritys. Santiagossa rakennustyötä johti Fermín Vivaceta. Kauppahalli korvasi aiemman Plaza del Abaston, joka oli tuhoutunut tulipalossa.\n\nSen rakenne yhdistää keskiosan metallikaton ja sitä ympäröivän muuratun rakennuksen. Katon keskellä on pyramidimainen osa, jonka yläpuolella kohoaa kupolitorni; pienemmät kattotasot jatkavat kokonaisuutta sen ympärillä. Kauppahallin ympäristöön kuuluu myös ravintoloita.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+    'Santa Lucían kukkula': {
+      aika: 'Luonnonkukkula; puistotyöt 1800-luvun loppupuolella',
+      teksti: 'Santa Lucía, aiemmalta nimeltään Huelén, on kukkula Santiagon keskustassa. Sen eteläpuolella kulkee Alameda, ja kukkulan huipulla on näköalapaikka. Nykyisessä puistossa kulkee portaita ja kävelyreittejä, mutta ennen puistoa kukkulalla oli useita käytännön tehtäviä. Sen rinteiltä otettiin kiveä katujen, talojen ja julkisten rakennusten rakentamiseen.\n\nOsa paikasta oli hautausmaana katoliseen kirkkoon kuulumattomille. Kukkulalla toimi myös tähtitieteellinen havaintopaikka, jossa tutkittiin Auringon parallaksia. Kukkula itsessään oli vanha maamerkki: muutos koski sen käyttöä, reittejä ja istutuksia.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  apia: {
+    'Mount Vaea': {
+      aika: 'Luonnonvuori; kirjailijan hautapaikka 1800-luvun lopulta',
+      teksti: 'Mount Vaea kohoaa Apian eteläpuolella, Upolun sisämaan suunnassa. Vuoren juurella on Lalovaea, jonka nimi tarkoittaa Vaean alapuolta. Itäisellä rinteellä sijaitseva Vailima tunnetaan Robert Louis Stevensonin entisestä kodista. Vuoren maisema ja kirjailijan muistopaikka kuuluvat suojeltuun alueeseen.\n\nStevenson valitsi vuoren viimeiseksi leposijakseen, ja samoalaiset kantoivat hänen arkkunsa sinne hänen kuoltuaan 1800-luvun lopulla. Myös hänen puolisonsa Fannyn tuhka tuotiin myöhemmin Samoaan. Vailiman museolta johtaa kävelypolku hautapaikalle.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
+  canberra: {
+    'Mount Ainslie': {
+      aika: 'Luonnonmäki; nykyinen pääkaupunkimaisema 1900-luvulta',
+      teksti: 'Mount Ainslie on Canberran koillisosassa sijaitseva luonnonmäki, jonka rinteet kuuluvat Canberra Nature Parkiin. Nykyinen englanninkielinen nimi muistuttaa Duntroonin tilan työnjohtajasta James Ainsliestä. Ngunnawal- ja Ngambri-kansoille mäki on pyhä paikka. Sen luontopolkujen varrella tavataan harmaita kenguruja ja kakaduja.\n\nCanberran suunnitelmassa mäestä tehtiin kaupungin keskeisen maa-akselin pohjoispää. Huipulta avautuu näkymä muistomerkkialueen ja parlamenttitalojen kautta keskustaan.',
+      kuvat: [
+        {
+          lyhyt: 'Harmaa kenguru havainnollistaa Mount Ainslien tekstissä mainittua eläimistöä; yleinen havainnekuva.',
+          selite: 'Harmaa kenguru havainnollistaa Mount Ainslien tekstissä mainittua eläimistöä; yleinen havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/canberra/e14-canberra-n1-v1-20261012-7ad0ff1a1a95.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Galambary – Black Mountain': {
+      aika: 'Luonnonmäki; kallioperä siluurikaudelta',
+      teksti: 'Galambary eli Black Mountain sijaitsee Canberran keskustan länsipuolella. Se on paikallisten alkuperäiskansojen tärkeä kohtaamis- ja seremoniapaikka, ja nykyään sen rinteet kuuluvat Canberra Nature Parkiin. Alkuperäinen pensas- ja puukasvillisuus tarjoaa elinympäristöjä kaupungin lähellä. Englanninkielinen nimi tunnettiin aiemmin muodossa Black Hill.\n\nNimestä huolimatta mäen pääasiallinen kivilaji on vaalea kvartsihiekkakivi. Kallioperä on peräisin siluurikaudelta, joten se kertoo aivan eri aikamittakaavasta kuin pääkaupungin rakennukset. Canberra kasvoi mäen itäpuolelle, ja yliopiston pääkampus sijaitsee sen lähellä. Luonnonalue rajaa keskustaa lännen suunnasta.',
+      kuvat: [
+        {
+          lyhyt: 'Vaalea kvartsihiekkakivi havainnollistaa Black Mountainin kivilajia; yleinen havainnekuva.',
+          selite: 'Vaalea kvartsihiekkakivi havainnollistaa Black Mountainin kivilajia; yleinen havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/canberra/e14-canberra-n2-v1-20261012-859f0d770592.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mount Majura': {
+      aika: 'Luonnonmäki; nykyinen pääkaupunki 1900-luvulta',
+      teksti: 'Mount Majura sijaitsee Canberran koillisreunalla, lähellä Mount Ainslieta. Se kuuluu Canberra Nature Parkiin. Rinteitä peittävät pääasiassa eukalyptukset, joiden joukossa kasvaa herkkiä kasvilajeja ja maassa kasvavia orkideoita. Alueella toimii Friends of Mount Majura -niminen vapaaehtoinen puistonhoitoryhmä.\n\nMäen huipulla on lentoaseman tutka-asema. Kävelypolut nousevat Hackettin ja Ainslien suunnalta.',
+      kuvat: [
+        {
+          lyhyt: 'Eukalyptuksen lehtiä Mount Majuran kasvillisuusaiheen havainnollistuksena; yleinen havainnekuva.',
+          selite: 'Eukalyptuksen lehtiä Mount Majuran kasvillisuusaiheen havainnollistuksena; yleinen havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/canberra/e14-canberra-n3-v1-20261012-2fc0f1607f66.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  funafuti: {},
+  majuro: {},
+  ngerulmud: {
+    'Ngardok-järvi': {
+      aika: 'Luonnonmuodostuma',
+      teksti: 'Ngardok on makean veden järvi Babeldaobin saarella Melekeokin osavaltiossa. Ramsar-kohteeseen kuuluu myös järven valuma-alue, puroja, jokivarsien kosteikkoja ja makean veden suometsää. Kokonaisuuden suojelu liittyy veden laadun säilyttämiseen ja Melekeokin vesihuoltoon.\n\nJärvi ja suot ovat suistokrokotiilien (Crocodylus porosus) lisääntymisympäristöä. Ngerdorch-joki yhdistää ne merelle. Alueella tavataan myös Palaun omia lintuja, kuten palaunhedelmäkyyhkyä (Ptilinopus pelewensis), paikalliselta nimeltään biib.',
+      kuvat: [
+        {
+          lyhyt: 'Crocodylus porosus havainnollistaa Ngardok-jutun eläinaihetta; yleinen havainnekuva.',
+          selite: 'Crocodylus porosus havainnollistaa Ngardok-jutun eläinaihetta; yleinen havainnekuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva.',
+          osoite: 'https://media.matkakirja.app/karttanostot/20261012/paakaupungit-kuvat-nopeasti/e14/ngerulmud/e14-ngerulmud-n1-v1-20261012-d8032706a02f.png',
+          suora: true,
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  nukualofa: {},
+  palikir: {},
+  southtarawa: {},
+  yaren: {
+    'Moquan maanalainen järvi': {
+      aika: 'Luonnonmuodostuma',
+      teksti: 'Moqua Well on Yarenin alla sijaitseva pieni maanalainen järvi. Nimen Well merkitys on kaivo, ja nimi liittyy järven käyttöön juomaveden lähteenä. Toisen maailmansodan aikana Moqua oli Naurun asukkaiden tärkeä juomavesivaranto. Lähellä sijaitsevat myös Moquan luolat.\n\nMoqua ja Makwa ovat Yarenin entisiä nimimuotoja. Vuonna 2001 järven ympärille rakennettiin aita onnettomuuksien ehkäisemiseksi. Järven vesipinta-ala on noin 2 000 neliömetriä.',
+      kuvat: [],
+      lahde: 'Wikipedia',
+    },
+  },
 };
 
 // Islannin kohdekartta = Reykjavikin kartta (js/packs/maakartat.js KAUPUNKIKARTAT.islanti); jutut samat (Karttaseppä 12.10.2026).
