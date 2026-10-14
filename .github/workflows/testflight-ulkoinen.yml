@@ -4,7 +4,8 @@
 # beta-arvioon. Korvaa 23.9.:n säännön "vain omistajan kortilla".
 # Omistaja 11.10.2026: oma linkki raadille ("Beta-testaajat"), sama build kaikille julkisen linkin ryhmille.
 # Tyhjä build_numero = vain tila ja käyttötilastot (publicLinkUsages,
-# betaTesterUsages) yhteenvetoon. Skripti: tools/testflight/ulkoinen-ryhma.py.
+# betaTesterUsages) yhteenvetoon. vain_arvio=true (omistaja 14.10.2026): build vain
+# Applen beta-arvioon heti, ryhmäliitos myöhemmin normaalilla ajolla. Skripti: tools/testflight/ulkoinen-ryhma.py.
 
 name: TestFlight ulkoinen ryhmä
 
@@ -35,6 +36,10 @@ on:
         description: 'CFBundleVersion N: vanhenna kaikki N:ää vanhemmat buildit iOS + Mac (omistaja 11.10.: vain uusin ladattavissa)'
         type: string
         default: ''
+      vain_arvio:
+        description: 'Vain beta-arvio: lähetä build_numero Applen arvioon heti, ei ryhmäliitosta eikä vanhennuksia (omistaja 14.10.)'
+        type: boolean
+        default: false
       bundle_id:
         description: 'Bundle id'
         type: string
@@ -87,10 +92,13 @@ jobs:
           POISTA: ${{ inputs.poista }}
           VANHENNA_VANHEMMAT: ${{ inputs.vanhenna_vanhemmat }}
           LUO_RYHMA: ${{ inputs.luo_ryhma }}
+          VAIN_ARVIO: ${{ inputs.vain_arvio }}
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
-          python3 tools/testflight/ulkoinen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD" --ryhma "$RYHMA" --vanhenna "$VANHENNA" --poista "$POISTA" --luo-ryhma "$LUO_RYHMA" --vanhenna-vanhemmat "$VANHENNA_VANHEMMAT"
+          VAIN_ARVIO_LIPPU=""
+          if [[ "$VAIN_ARVIO" == "true" ]]; then VAIN_ARVIO_LIPPU="--vain-arvio"; fi
+          python3 tools/testflight/ulkoinen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD" --ryhma "$RYHMA" --vanhenna "$VANHENNA" --poista "$POISTA" --luo-ryhma "$LUO_RYHMA" --vanhenna-vanhemmat "$VANHENNA_VANHEMMAT" ${VAIN_ARVIO_LIPPU}
 
       - name: Siivoa avain
         if: always()

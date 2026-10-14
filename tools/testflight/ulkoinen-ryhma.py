@@ -19,6 +19,12 @@ testauksesta.
 ulkoiseen ryhmään ja lähettää sen Applen beta-arvioon, ellei se ole jo
 arviossa tai hyväksytty.
 
+--vain-arvio (omistaja 14.10.2026: ulkoiset testaajat saavat junan nopeammin):
+vaatii --buildin; odottaa käsittelyn ja lähettää buildin beta-arvioon heti, mutta
+EI liitä sitä mihinkään ryhmään eikä vanhenna/irrota mitään (muut liput ohitetaan).
+Myöhempi normaali ajo samalla buildilla liittää ryhmiin ja toteaa arvion olevan jo
+olemassa. Tulostaa rivin "ARVIO LÄHETETTY <build> (<tila>)" tai "ARVIO JO <tila> <build>".
+
 Ympäristö: ASC_KEY_ID, ASC_ISSUER_ID, ASC_AVAIN_POLKU. Virheet ::error-rivinä.
 """
 import argparse
@@ -57,7 +63,11 @@ def main():
     p.add_argument('--vanhenna', default='', help='pilkuin erotetut CFBundleVersionit, jotka vanhennetaan ensin')
     p.add_argument('--poista', default='', help='pilkuin erotetut CFBundleVersionit, jotka irrotetaan ulkoisesta ryhmästä (sisäisille jäävät)')
     p.add_argument('--vanhenna-vanhemmat', default='', help='CFBundleVersion N: vanhenna KAIKKI N:ää vanhemmat buildit (iOS + Mac)')
+    p.add_argument('--vain-arvio', action='store_true',
+                   help='lähetä --build vain beta-arvioon: ei ryhmäliitosta, ei vanhennuksia eikä irrotuksia')
     a = p.parse_args()
+    if a.vain_arvio and not a.build.strip():
+        virhe('Build puuttuu', '--vain-arvio vaatii --build <CFBundleVersion>.')
 
     kid = os.environ['ASC_KEY_ID']
     iss = os.environ['ASC_ISSUER_ID']
@@ -82,10 +92,73 @@ def main():
             except ValueError:
                 return e.code, {'raaka': out.decode(errors='replace')[:500]}
 
+    def odota_build():
+        """Odottaa, että --build on käsitelty (VALID); palauttaa buildin id:n."""
+        raja = time.time() + a.odota_min * 60
+        while True:
+            tila, d = kutsu('GET', f'/v1/builds?filter[app]={app_id}&filter[version]={a.build}&limit=5'
+                             f'&filter[preReleaseVersion.platform]={a.alusta}')
+            if tila != 200:
+                virhe('Buildia ei saatu', f'{tila}: {d}')
+            build = d['data'][0] if d.get('data') else None
+            tilanne = build['attributes'].get('processingState') if build else 'ei vielä näkyvissä'
+            if tilanne == 'VALID':
+                return build['id']
+            if tilanne in ('FAILED', 'INVALID'):
+                virhe('Apple hylkäsi buildin', f'{a.build}: {tilanne}')
+            if time.time() > raja:
+                virhe('Käsittely kesti liian kauan', f'{a.build}: {tilanne}')
+            print(f'Build {a.build}: {tilanne} — odotetaan 60 s')
+            time.sleep(60)
+
+    def arvion_tila(build_id):
+        """Olemassa olevan beta-arvion tila tai None. Ensin submission; jos sitä ei näy, buildBetaDetailin
+        externalBuildState (Apple voi hyväksyä saman version myöhemmät buildit ilman omaa submissionia)."""
+        tila, d = kutsu('GET', f'/v1/builds/{build_id}/betaAppReviewSubmission')
+        olemassa = d.get('data') if tila == 200 and isinstance(d, dict) else None
+        if olemassa:
+            return olemassa['attributes'].get('betaReviewState') or 'olemassa'
+        tila, d = kutsu('GET', f'/v1/builds/{build_id}/buildBetaDetail')
+        ulk = (d.get('data') or {}).get('attributes', {}).get('externalBuildState') if tila == 200 else None
+        if ulk in ('WAITING_FOR_BETA_REVIEW', 'IN_BETA_REVIEW', 'BETA_APPROVED', 'READY_FOR_BETA_TESTING',
+                   'IN_BETA_TESTING', 'BETA_REJECTED'):
+            return ulk
+        return None
+
+    def laheta_arvio(build_id):
+        """Idempotentti: jo lähetetty/hyväksytty arvio ei ole virhe (ei toista POSTia)."""
+        jo = arvion_tila(build_id)
+        if jo:
+            kirjaa(f'ARVIO JO {jo} {a.build}')
+            return
+        tila, d = kutsu('POST', '/v1/betaAppReviewSubmissions', {'data': {
+            'type': 'betaAppReviewSubmissions',
+            'relationships': {'build': {'data': {'type': 'builds', 'id': build_id}}}}})
+        if tila in (200, 201):
+            kirjaa(f"ARVIO LÄHETETTY {a.build} ({d.get('data', {}).get('attributes', {}).get('betaReviewState')})")
+            return
+        # Kilpaileva ajo tai Applen oma lähetys ehti väliin (esim. 409): tarkistetaan tila uudelleen ennen virhettä.
+        jo = arvion_tila(build_id)
+        if jo:
+            kirjaa(f'ARVIO JO {jo} {a.build} (lähetys vastasi {tila})')
+            return
+        virhe('Beta-arvioon lähetys epäonnistui', f'{tila}: {d}')
+
     tila, d = kutsu('GET', f'/v1/apps?filter[bundleId]={a.bundle_id}')
     if tila != 200 or not d.get('data'):
         virhe('Appia ei löydy', f'{a.bundle_id}: {tila}')
     app_id = d['data'][0]['id']
+
+    # VAIN ARVIO (omistaja 14.10.2026): arvio käyntiin heti, ryhmäliitos myöhemmin normaalilla ajolla.
+    # Ei ryhmien tilaa, luontia, liitosta, vanhennusta eikä irrotusta.
+    if a.vain_arvio:
+        ohitetut = [n for n, v in (('--ryhma', a.ryhma), ('--luo-ryhma', a.luo_ryhma), ('--vanhenna', a.vanhenna),
+                                   ('--poista', a.poista), ('--vanhenna-vanhemmat', a.vanhenna_vanhemmat)) if v.strip()]
+        if ohitetut:
+            print(f"::warning::--vain-arvio: ohitetaan {', '.join(ohitetut)}")
+        kirjaa(f'## Beta-arvio (vain arvio, ei ryhmäliitosta): build {a.build} ({a.alusta})')
+        laheta_arvio(odota_build())
+        return
 
     tila, d = kutsu('GET', f'/v1/apps/{app_id}/betaGroups?limit=50')
     if tila != 200:
@@ -241,23 +314,7 @@ def main():
     if not a.build:
         return
 
-    raja = time.time() + a.odota_min * 60
-    while True:
-        tila, d = kutsu('GET', f'/v1/builds?filter[app]={app_id}&filter[version]={a.build}&limit=5'
-                         f'&filter[preReleaseVersion.platform]={a.alusta}')
-        if tila != 200:
-            virhe('Buildia ei saatu', f'{tila}: {d}')
-        build = d['data'][0] if d.get('data') else None
-        tilanne = build['attributes'].get('processingState') if build else 'ei vielä näkyvissä'
-        if tilanne == 'VALID':
-            break
-        if tilanne in ('FAILED', 'INVALID'):
-            virhe('Apple hylkäsi buildin', f'{a.build}: {tilanne}')
-        if time.time() > raja:
-            virhe('Käsittely kesti liian kauan', f'{a.build}: {tilanne}')
-        print(f'Build {a.build}: {tilanne} — odotetaan 60 s')
-        time.sleep(60)
-    build_id = build['id']
+    build_id = odota_build()
 
     for ryhma in ryhmat:
         tila, d = kutsu('POST', f"/v1/betaGroups/{ryhma['id']}/relationships/builds",
@@ -266,18 +323,9 @@ def main():
             virhe('Buildin liitos ulkoiseen ryhmään epäonnistui', f"{ryhma['attributes'].get('name')}: {tila}: {d}")
         kirjaa(f"Build {a.build} liitetty ryhmään {ryhma['attributes'].get('name')}.")
 
-    # Beta-arvio on buildikohtainen: yksi lähetys kattaa kaikki ulkoiset ryhmät.
-    tila, d = kutsu('GET', f'/v1/builds/{build_id}/betaAppReviewSubmission')
-    olemassa = d.get('data') if tila == 200 else None
-    if olemassa:
-        kirjaa(f"Beta-arvio: jo olemassa ({olemassa['attributes'].get('betaReviewState')}).")
-        return
-    tila, d = kutsu('POST', '/v1/betaAppReviewSubmissions', {'data': {
-        'type': 'betaAppReviewSubmissions',
-        'relationships': {'build': {'data': {'type': 'builds', 'id': build_id}}}}})
-    if tila not in (200, 201):
-        virhe('Beta-arvioon lähetys epäonnistui', f'{tila}: {d}')
-    kirjaa(f"Beta-arvio: lähetetty ({d.get('data', {}).get('attributes', {}).get('betaReviewState')}).")
+    # Beta-arvio on buildikohtainen: yksi lähetys kattaa kaikki ulkoiset ryhmät. Jos --vain-arvio-ajo on jo
+    # lähettänyt sen (tai Apple hyväksynyt), laheta_arvio toteaa tilan eikä lähetä uudelleen.
+    laheta_arvio(build_id)
 
 
 if __name__ == '__main__':
