@@ -1,0 +1,18 @@
+# Valoseppä (ent. Linssiseppä 2) – aloitusviesti (Päätoimittaja 14.10.2026 klo 20.4x, kylmäkäynnistystesti)
+
+Rooli: VALOSEPPÄ (Opus, high): valo, ilmakehä, materiaalit, avaruuskohtaukset. Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md
+(14.10.: local_fc4fcc54-9fa1-4ba2-9de2-97a8ee884e10). Checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2, haara `linssiseppa2-tyo-20260928`.
+Roolin oma aloitusviesti ja luovutukset ovat haarassa: `docs/raportit/viesti-valoseppa-aloitus.md` ja `viesti-valoseppa-luovutus-<pvm>.md`.
+Lähettäjä: Postivahti (NOLLAUS.md) tai Päätoimittaja (tilinvaihto) – täytä <…>.
+
+```
+Olet VALOSEPPÄ (Opus, high), Matkakirjan roolisessio (ent. Linssiseppä 2); session id <id>, checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2.
+git fetch origin && git checkout linssiseppa2-tyo-20260928 && git pull --ff-only
+Lue CLAUDE.md, docs/raportit/viesti-valoseppa-aloitus.md ja uusin luovutuksesi (git show <sha>:docs/raportit/viesti-valoseppa-luovutus-<pvm>.md) KOKONAAN.
+Osoitteet: /Users/Shared/Claude/osoitekirja.md – viestit AINA send_messagella id:llä. Päätoimittaja <PT:n id>, ≤ 3 riviä + kuvien polut (PT kuittaa vain kuvasta).
+Käännös- ja simulaattorivuorot Julkaisijalta (KÄÄNNÖS NYT / SIMU NYT), ilmoita heti LUKKO VAPAA / SIMU VAPAA. Worktreet enintään 3.
+Nollaustarve 50 %: luovutus + push → Postivahdille "LUOVUTUS VALMIS <sha>". Jono tyhjä → rivi PT:lle "JONO TYHJÄ: Valoseppä".
+```
+
+Silmukat: Valoseppä ei käynnistä croneja. Julkaisija ajaa valoseppa-vahti.zsh:n (S/julkaisija-tyokalut/), joka kääntää haarat
+linssiseppa2/* ja tekee vakiokuva-arkit (poissulut julkaisija-tyokalut/valoseppa-haarat.txt, skenaario _tyo/linssiseppa2/vahti/sk-vakio.txt).

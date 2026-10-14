@@ -16,14 +16,14 @@ YTIMET = os.cpu_count() or 1
 ROOLIT = {
     'Matkakirja-fable': 'Päätoimittaja', 'Matkakirja-julkaisija': 'Julkaisija',
     'Matkakirja-3d-selvittaja': 'Natiiviseppä', 'Matkakirja-natiivi-ui': 'Natiivi-UI',
-    'Matkakirja-linssiseppa': 'Linssiseppä', 'Matkakirja-linssiseppa-2': 'Linssiseppä 2',
+    'Matkakirja-linssiseppa': 'Linssiseppä', 'Matkakirja-linssiseppa-2': 'Valoseppä',
     'Matkakirja-linnanrakentaja': 'Linnanrakentaja', 'Matkakirja-siirtoseppa': 'Siirtoseppä',
     'Matkakirja-karttaseppa': 'Karttaseppä', 'Matkakirja-pelikoodari': 'Pelikoodari',
     'Matkakirja-sisaltokirjuri': 'Sisältökirjuri', 'Matkakirja-laitetestaaja': 'Laitetestaaja',
     'Matkakirja-posti': 'Postivahti',
 }
 WT = {'fable': 'Päätoimittaja', 'julkaisija': 'Julkaisija', 'natiiviseppa': 'Natiiviseppä',
-      'natiivi-ui': 'Natiivi-UI', 'natiivi': 'Natiivi-UI', 'linssiseppa2': 'Linssiseppä 2', 'linssiseppa-2': 'Linssiseppä 2',
+      'natiivi-ui': 'Natiivi-UI', 'natiivi': 'Natiivi-UI', 'linssiseppa2': 'Valoseppä', 'linssiseppa-2': 'Valoseppä',
       'linssiseppa': 'Linssiseppä', 'linnanrakentaja': 'Linnanrakentaja', 'siirtoseppa': 'Siirtoseppä',
       'karttaseppa': 'Karttaseppä', 'pelikoodari': 'Pelikoodari', 'sisaltokirjuri': 'Sisältökirjuri',
       'laitetestaaja': 'Laitetestaaja'}
