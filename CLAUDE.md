@@ -46,17 +46,17 @@ LATAUS ON SAMA KAIKILLA VERKOILLA.
 ## Lue ensin
 
 - **Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT"** (sitova
-  20.9.2026): kuusi roolisessiota (Fable, Julkaisija, Karttaseppä,
-  Pelikoodari, Sisältökirjuri, Laitetestaaja), worktreet, viestisäännöt
-  Fablelle (vain valmis erä, jumi tai kysymys; enintään 8 riviä),
-  lukusääntö (ei koko Raamattua), kanavat ja kirjaus lokiin. Tämä
-  korvaa docs/roolitus.md:n vanhan kolmen session työnjaon.
+  20.9.2026): roolisessiot (nykyiset roolit, mallit ja kansiot:
+  docs/tilinvaihto.md:n roolitaulukko ja /Users/Shared/Claude/osoitekirja.md),
+  worktreet, viestisäännöt Päätoimittajalle (vain valmis erä, jumi tai
+  kysymys; enintään 3 riviä, omistaja 14.10.2026), lukusääntö (ei koko
+  Raamattua), kanavat ja kirjaus lokiin. Tämä korvaa docs/roolitus.md:n
+  vanhan kolmen session työnjaon.
 
-- **docs/roolitus.md** — TYÖNJAKO KOLMEN SESSION KESKEN (Fable =
-  tarina + koordinaatio, Opus = lehdet + koodi, Sonnet = QA).
-  Omistaja kehittää kahdella tilillä ja ohjaa kaikkea Fablen kautta;
-  katso dokumentista oma roolisi, viestintäkanava ja julkaisusäännöt
-  ennen kuin teet mitään.
+- **docs/roolitus.md** — julkaisusäännöt ja versionumerokäytäntö
+  ("Julkaisusäännöt"); sen kolmen session työnjako on vanhentunut (roolit
+  ja kanavat: Raamatun kohta 2). Omistaja kehittää neljällä tilillä ja
+  ohjaa kaikkea Keskustelukanavan kautta; Päätoimittaja orkestroi roolit.
 - **js/tyohuone-raamattu.js (RAAMATTU)** — koko pelin idea ja
   kaikki oleelliset linjaukset YHDESSÄ tiiviissä paketissa (omistajan
   linjaus 15.8.2026: uudet oleelliset linjaukset kirjataan VAIN tänne;
@@ -80,7 +80,9 @@ LATAUS ON SAMA KAIKILLA VERKOILLA.
   tekniset jatkeet (laudan hyväksyminen, etukäteispuskuri) CONTRIBUTING.md:ssä.
 - docs/moduulit/kaupunkilehti.md, docs/moduulit/maalehti.md ja
   docs/tyolista-opukselle.md — lehtimalli ja lehtityön ohjeet.
-- **docs/tilinvaihto.md** — TILINVAIHTO uudelle Claude-tilille: järjestys
+- **docs/tilinvaihto.md** — LUE ENSIMMÄISENÄ, KUN TILI VAIHTUU (omistaja
+  sanoo "tilinvaihto" tai "uusi tili", tai sessio aloittaa uudella tilillä).
+  TILINVAIHTO uudelle Claude-tilille: järjestys
   (tili ja omistajan toimet ensin), roolitaulukko, aloitusviestit
   (docs/aloitusviestit/), Macin vain-paikallisten ohjeiden peili
   (tools/tyotavat/) ja VOIMASSA OLEVA ARVO -taulu ristiriitoihin.
