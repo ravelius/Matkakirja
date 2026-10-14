@@ -10,6 +10,8 @@
 //                leveys vähintään MIN_KM, sivusuhde 0,6–1,4 (laajennetaan lyhyempää sivua).
 //   PALLOPISTE (PT 13.10.2026): rajat sisältävät AINA myös kaupungin pallopisteen (sisalto.kaupunki.pallo), myös
 //                VANHA KUVA -päätöksessä — muuten keskusta voi jäädä pois (Canberra: kohteina vain kolme kukkulaa).
+//   PIKSELIVARA (PT 13.10.2026, juna 189): REUNA-metrien lisäksi kohde ei saa jäädä iPhonella eikä iPadilla reunaan, opasteen,
+//                Kokoruutu-vihjeen eikä mittajanan alle (karttavarat.mjs; Canberran Mount Majura oli opasteen alla 7 km:n kartalla).
 // --vain id,id rajaa --piirra-vaiheen nimettyihin kaupunkeihin (kohdekartat-mac.json kirjoitetaan silti koko erälle).
 // Tulos <data>/<erä>/kohdekartat-mac.json; kytke-pilvisisalto.mjs käyttää sen rajat ja polun.
 // --piirra lisää PIIRRÄ-kaupungit tools/piirra-kaupunkikartta.mjs:n KAUPUNGIT-tauluun ja piirtää ne
@@ -19,6 +21,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { KAUPUNKIKARTAT } from '../../js/packs/maakartat.js';
+import { kaikkiRikkeet, korjaaVarat } from './karttavarat.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '../..');
 const [data, era] = process.argv.slice(2);
@@ -30,8 +33,9 @@ const PALLOVARA = 0.15; // pallopiste vähintään 15 % lyhyemmästä sivusta re
 const mLat = 110574;
 const mLon = (lat) => 111320 * Math.cos((lat * Math.PI) / 180);
 
-function sopii(r, kohteet) {
+function sopii(r, kohteet, laajennus = null) {
   const lat0 = (r.pohjoinen + r.etela) / 2;
+  if (kaikkiRikkeet(r, kohteet, { laajennus }).length) return false;
   return kohteet.every((k) => (r.pohjoinen - k.lat) * mLat >= REUNA && (k.lat - r.etela) * mLat >= REUNA
     && (r.ita - k.lon) * mLon(lat0) >= REUNA && (k.lon - r.lansi) * mLon(lat0) >= REUNA);
 }
@@ -61,7 +65,9 @@ function korjaa(r0, kohteet, pallo = null) {
   if (h / w > 1.4) kasvata('w', h / 1.4);
   if (h / w < 0.6) kasvata('h', w * 0.6);
   const p = (v) => Math.round(v * 1e4) / 1e4;
-  return { pohjoinen: p(r.pohjoinen), etela: p(r.etela), lansi: p(r.lansi), ita: p(r.ita), leveys_km: Math.round(w / 100) / 10, korkeus_km: Math.round(h / 100) / 10 };
+  const v = korjaaVarat({ pohjoinen: p(r.pohjoinen), etela: p(r.etela), lansi: p(r.lansi), ita: p(r.ita) }, kohteet).rajat;
+  w = (v.ita - v.lansi) * mLon(lat0); h = (v.pohjoinen - v.etela) * mLat;
+  return { ...v, leveys_km: Math.round(w / 100) / 10, korkeus_km: Math.round(h / 100) / 10 };
 }
 
 const kansio = join(data, era);
@@ -72,7 +78,7 @@ for (const id of readdirSync(kansio).filter((x) => existsSync(join(kansio, x, 's
   const pallo = sis.kaupunki?.pallo;
   const pisteet = Number.isFinite(pallo?.lat) && Number.isFinite(pallo?.lon) ? [...k.kohteet, pallo] : k.kohteet;
   const vanha = KAUPUNKIKARTAT[id];
-  if (vanha && existsSync(join(JUURI, vanha.polku)) && sopii(vanha.rajat, pisteet)) {
+  if (vanha && existsSync(join(JUURI, vanha.polku)) && sopii(vanha.rajat, pisteet, vanha.piirtoRajat ? 1.6 : null)) {
     tulos[id] = { paatos: 'VANHA KUVA', polku: vanha.polku, rajat: vanha.rajat, ...(vanha.laajennus ? { laajennus: vanha.laajennus } : {}) };
     continue;
   }
