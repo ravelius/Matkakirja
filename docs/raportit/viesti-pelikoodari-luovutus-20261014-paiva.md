@@ -29,10 +29,8 @@ Rooli Pelikoodari (Opus, high), checkout /Users/Shared/Claude/Matkakirja-pelikoo
   mustan alla) + Valosepän telakointikorjaus (fast-forward, telakointi10 todistettu). PT kuittaa telakoinnin videosta.
 
 ## Kesken — tee nämä ensin
-1. **Telakointivideo PT:lle**: ketju scratchpadissa ajossa luovutushetkellä (KÄÄNNÖS L1 + SIMU Julkaisijalta, 1858f8f53):
-   tulos /Users/Shared/Claude/proto-3d/lokit/pk-kupoli-v2-20261014/ketju-telakointi8.tulos, video telakointi8/telakointi-aanella.mp4.
-   Jos edellinen sessio ei ehtinyt: tarkista lokista "vaihe Telakointi", "kupoli valmis, raita jatkuu" (vasta Cupolan valmistuttua), tee
-   kuva-arkki 38–58 s (ffmpeg fps=1 tile=5x4) ja lähetä PT:lle; asema ja kapseli pitää näkyä valaistuina telakoinnissa. SIMU VAPAA Julkaisijalle.
+1. **Telakointi PT:n kuittaukseen** (lähetetty 11.1x): video telakointi8/telakointi-aanella.mp4 + kuva-arkki-46-66s.png (1858f8f53:
+   asema ja kapseli valaistuina, raita jatkuu Cupolan valmistuttua). Kun PT kuittaa: telakointi junaan omana haarana juna-190:n päälle.
 2. **ISS-kohdevalikko yhteiseen arkkiin NUI:n kanssa** (PT): NUI:n UI natiivi-ui/iss-kohdevalikko-190 @ d600ff002 (IssKohdevalikko.cs,
    käyttää rajapintaani). Pyysin NUI:lta (local_33ba1387…) ui-testikomennon valikon nappeihin; kun se tulee: yhdistä NUI:n haara
    iss-kupoli-190:een, käännä, aja: Cupola → `linssi napauta x y` → valikko → Pariisi talvi yö → perillä → Bergen kesä päivä → LIVE →
