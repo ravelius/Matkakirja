@@ -25,6 +25,12 @@ Näytön napautus → lista todistettu iPhonella (todistus-cupolanaytto2-uusi-ip
 osui ikkunaan (vaakakoordinaatit ≠ kosketustyökalun pystykoordinaatit) → iPad-kuva puuttuu, ei koodivika.
 Sivuhavainto 192:een: ylärivin valitsimet näyttävät LIVEnä molemmat "Nyt" (kumpi on kumpi vain vihjetekstistä).
 
+## SIIRTYMÄT 192 (omistaja 22.45 "Molemmat alle 250 ms", PT kuittasi 22.5x)
+natiivi-ui/siirtymat-192 6dcaa0fad (juna-191 9e92a9a6e päällä; worktree wt/proto-natiivi-ui-siirtymat), KÄÄNTÄMÄTTÄ:
+c9c3b948e kuvan suurennos (Ponnahdus.SuurennosS) 320 → 240 ms = Tyylikirja.Kesto.Liuku (PT KUITTASI junaan 192); avauskortti oli jo
+240 ms (vain kommentit). 6dcaa0fad kutsuminiatyyri esiin 350 → 240 ms, pois 250 → 200 ms (Kesto.Sulku), PT pyysi; ilmoitettu PT:lle.
+Jatko: anna kärki NS:lle junaan 192 PT:n kuittauksen jälkeen. Raamatun rivi 1779 (poikkeukset 320/280) = PT:n läpikäynti.
+
 ## AVOIMET (järjestys ISS-erän jälkeen)
 1. Pelikello vs suurennuslasi: SULJETTU 21.5x. Oikealla aloituslennolla (peli uusi-matka pariisi) kartan napit eivät näy, joten
    päällekkäisyyttä ei ole; havainto syntyi testikomennosta `ui pelikello lennossa 1` tavallisella kartalla. e6ea6183b
