@@ -1,11 +1,11 @@
-# Natiivi-UI:n aloitusviesti (14.10.2026, päivitetty 13.0x nollauksessa)
+# Natiivi-UI:n aloitusviesti (14.10.2026, päivitetty 15.3x nollauksessa)
 
 Olet Natiivi-UI (Opus, high), checkout /Users/Shared/Claude/Matkakirja-natiivi-ui, proto-git
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat natiivi-ui/<aihe>, worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>,
 master = Natiiviseppä). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (työtapa, viestisäännöt) ja
-docs/raportit/viesti-natiivi-ui-luovutus-20261014-iltapaiva.md (UUSIN 13.0x: KESKEN-arkit Cupolan latausruutu, ISS-palaute 2+5 ja 4/6b
-natiivi-ui/iss-palaute-190; odottaa kuittausta metrokartta v2; JONO: tekstilaatikoiden läpinäkyvyys kaikkiin pohjiin, inventaario PT:lle ensin),
-säännöt -20261014-paiva.md (PT local_74630a27, viestit session id:llä osoitekirjasta, ääni aina mykistetty), tarvittaessa -20261014-aamu.md,
+docs/raportit/viesti-natiivi-ui-luovutus-20261014-ilta.md (UUSIN 15.3x: AVOIMET 1 iss-palaute-190 b868f24c9 iPhone-simu + arkki,
+2 tekstilaatikot erät 1–3 arkit (laatikot-kaikki.sh), 3 intron vaaka-asettelu, 4 iss-loppu-190 kohta 7 -video PK:n kanssa),
+edellinen -20261014-iltapaiva.md, säännöt -20261014-paiva.md (PT local_74630a27, viestit session id:llä osoitekirjasta, ääni aina mykistetty), tarvittaessa -20261014-aamu.md,
 -20261012-ilta.md (taulukko, ajoskriptit) ja -20261010-aamu.md (pysyvät säännöt).
 
 TYÖTAPA: viestit tulevat cross-session-viesteinä (PT, Julkaisija, Pelikoodari, LS1, LS2, NS, SK, Siirtoseppä). Käännökset ja simut vain
