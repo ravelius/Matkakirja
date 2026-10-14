@@ -14,7 +14,7 @@ ylivalottunut → katuverkko OSM:stä. Pohja iss-kupoli-190 (4137fd6a9) + bc6485
   tarkoille ja rasterille; tarkat 500 m vain katsottu tiili (≤ 2, R8, _TarkatMaski/_TarkatTexel, 404 → ei uusintaa);
   komento `astro kyyti katuvalot <juuri>|pois|oletus`. befe97c86: pyöreä reunaliuku 75–100 % säteestä (PT: neliön reuna näkyi).
   Testit 1774 läpi, unity 0. VARJOSTINTA EI OLE VIELÄ KÄÄNNETTY (vahti kääntää; tarkista lokista Shader error -rivit!).
-- VIENTI pyydetty Julkaisijalta: proto-3d/_valmiit/iss-yovalot-katuvalot-vienti-20261014 (13 Mt; iss-katuvalot-v1 = Pariisi + Bergen,
+- VIETY 12.33 (Julkaisija: 10/10, reunavälimuistin 404 poistuu ~12.39; aja vahdin kupoli-yovalot-ajo vasta sen jälkeen). Vienti: proto-3d/_valmiit/iss-yovalot-katuvalot-vienti-20261014 (13 Mt; iss-katuvalot-v1 = Pariisi + Bergen,
   iss-yovalot-500m-v1 = KS:n 4096² tiilet). Ennen vientiä peli toimii kuten ennen (404 → ei rasteria/tiiliä).
 - Data: kadut _tyo/linssiseppa2/iss-katuvalot/osm/ (kadut-iss.mjs = KS:n kadut.mjs kaksikierroksisena, 25 km säde; Pariisi
   ile-de-france PBF KS:n T7:llä, Norja /Volumes/T7 4TB/Matkakirja-valoseppa/osm/norway-latest.osm.pbf), rasteri rakenna-rasteri.py
