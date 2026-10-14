@@ -14135,3 +14135,7 @@ Kuvat ovat tässä kansiossa: `iss-palaute-1225-1-maasto-tarkkuus-raja.webp`, `-
 Kiitos omistajalta: "iss animaatio oli nyt jo hurjan paljon parempi" ja "esittelyteksti on todella hyvä".
 
 PT 12.4x jako: Natiivi-UI kohdat 2 (tekstilaatikot läpinäkyviksi pohjiin, Raamattu UI-POHJAT), 4 (alapaneeli pois, SpaceX-tyyliset luvut + aikajana), 5, 6b (pienoismaapallo); Pelikoodari 7–9 ja aikajanan data; Valoseppä 1, 3, 6a (Kuu), 6c (nimet pallon pinnalle, data KS); Sisältökirjuri ja Äänittäjä kertojan loppurepliikit ja äänitasot; valas myöhemmin omana eränä (Linnanrakentaja + Valoseppä).
+
+## PT:N ILMOITUKSET OMISTAJALLE VAIN PAKOLLISET (14.10.2026 klo 13.52)
+
+Omistaja 14.10.2026 klo 13.52 (Keskustelukanavan välittämä, sanatarkasti): "Päätoimittajalta ei tarvitse tulla minulle ilmoituksia ellei ole aivan pakko". PT lähettää omistajalle tarkoitetun viestin Keskustelukanavalle vain, kun tarvitaan omistajan toimea tai päätöstä (KYSYMYS, TOIMI TARVITAAN). Valmistumiset, korjaukset ja TF-julkaisut kirjataan vain Asemataululle. Raamattu: KYSYMYKSET-SESSIO → KESKUSTELUKANAVA -kappale päivitetty.
