@@ -20675,12 +20675,7 @@ export const KAUPUNKIKARTAT = {
       + 'johdolla, ja keskellä kohoaa Torre del Homenaje -torni. Santo Domingon katedraali on '
       + 'goottilaistyylinen ja sen holvit ovat ruodeholveja. Kartan kohteista pääsee lukemaan '
       + 'lisää napauttamalla.',
-    rajat: {
-      pohjoinen: 18.4858,
-      etela: 18.4501,
-      lansi: -69.9402,
-      ita: -69.878,
-    },
+    rajat: { pohjoinen: 18.4864, etela: 18.4495, lansi: -69.9402, ita: -69.8761 },
     kohteet: [
       {
         nimi: 'Ozaman linnoitus',
@@ -21187,12 +21182,7 @@ export const KAUPUNKIKARTAT = {
       + 'vuonna 1667. Linnoituksessa toimii Surinamen museo. Palmupuisto on linnoituksen '
       + 'pohjoispuolella, ja sen korkeat kuningaspalmut ovat puiston tunnusmerkki. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
-    rajat: {
-      pohjoinen: 5.8583,
-      etela: 5.8163,
-      lansi: -55.2078,
-      ita: -55.1458,
-    },
+    rajat: { pohjoinen: 5.8583, etela: 5.8154, lansi: -55.2078, ita: -55.1458 },
     kohteet: [
       {
         nimi: 'Fort Zeelandia',

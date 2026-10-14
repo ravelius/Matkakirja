@@ -6462,7 +6462,7 @@ const KAUPUNGIT = {
   },
   // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
   paramaribo: {
-    rajat: { pohjoinen: 5.8583, etela: 5.8163, lansi: -55.2078, ita: -55.1458 },
+    rajat: { pohjoinen: 5.8583, etela: 5.8154, lansi: -55.2078, ita: -55.1458 },
   },
   // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
   asgabat: {
@@ -6514,7 +6514,7 @@ const KAUPUNGIT = {
   },
   // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
   santodomingo: {
-    rajat: { pohjoinen: 18.4858, etela: 18.4501, lansi: -69.9402, ita: -69.878 },
+    rajat: { pohjoinen: 18.4864, etela: 18.4495, lansi: -69.9402, ita: -69.8761 },
     meri: true,
     meriHaku: 0.05,
   },
