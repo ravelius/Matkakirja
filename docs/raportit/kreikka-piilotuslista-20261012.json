@@ -11,6 +11,7 @@
         "pallokierros:ateena",
         "maamerkki:ateena",
         "tehtava:ateena:katso",
+    "tehtava:kreeta:katso",
         {
           "tunnus": "kuva:herokoe/hero-ateena-akropoliskallio",
           "korvaava": "https://commons.wikimedia.org/wiki/Special:FilePath/Marina_Zeas_-_panoramio.jpg?width=1600",
