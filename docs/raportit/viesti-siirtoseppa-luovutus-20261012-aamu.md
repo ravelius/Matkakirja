@@ -178,3 +178,11 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
 - Ajo tyokalut/siirtoseppa-ajot/ajo-raketti-valo.zsh (OHITA_KAANNOS=1, LENNOT="0 0.35"; yksi lento per käynnistys — Cupolan latausruutu ei lue komentoja
   lennon jälkeen; mykistys peli-komento.txt:hen ennen käynnistystä; kello siirretään 14.10. 13.52 UTC:hen).
 - Viestit session id:llä /Users/Shared/Claude/osoitekirja.md; PT local_74630a27…; simu vain Julkaisijan SIMU NYT -lipulla (ei uusintaa samalla vuorolla ilman lupaa).
+
+## PÄIVITYS 15.10. 01.0x — LEVYSIIVOUS (Julkaisija, PT hyväksyi)
+
+- Raketin vastavalo KUITATTU ja tunnus NS:lle junaan 191 (e823b3bf2).
+- Kaikki proto-worktreeni poistettu (wt/proto-siirtoseppa-kello, -v47g, -pinnat, -raketti; puhtaita, masterissa). Haarat jäävät:
+  linnahaara siirtoseppa/laituri-varoitus cbad45ba9, paketit siirtoseppa/v47t…v49a. Linnan jatkuessa luo työpuu uudelleen:
+  `git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto worktree add /Users/Shared/Claude/wt/proto-siirtoseppa-kello siirtoseppa/laituri-varoitus`
+  (ajo-botti-osat.sh TYOPUU ja kiinnita-paketti.sh odottavat näitä polkuja; pakettipuu …-v47g haaralle siirtoseppa/v49a).
