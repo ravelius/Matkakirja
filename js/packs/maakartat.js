@@ -17981,66 +17981,6 @@ export const KAUPUNKIKARTAT = {
     ],
   },
   // AFRIKAN PÄÄKAUPUNKIPISTEET (Karttaseppä 11.10.2026, PT): kohteet OSM:stä ja Wikipediasta, tekstit myöhemmin.
-  abuja: {
-    polku: 'assets/kartat/abuja-keskusta.png',
-    lahde: '© OpenStreetMap-tekijät (ODbL)',
-    numeroympyrat: true,
-    rajat: {
-      pohjoinen: 9.0767,
-      etela: 9.0413,
-      lansi: 7.4833,
-      ita: 7.5249,
-    },
-    esittely: 'Kartan alue on Abujan reuna, jossa pääkaupunki kohtaa graniittisen maaston. Nigeria '
-      + 'siirsi pääkaupunkinsa Lagosista Abujaan, ja Abuja julistettiin pääkaupungiksi 12. '
-      + 'joulukuuta 1991.\n\n'
-      + 'Itäpuolella kohoaa Aso-kallio, graniittinen yksittäiskallio, joka nousee noin 400 '
-      + 'metriä ympäristöään korkeammaksi; suurin osa kaupungista levittäytyy sen '
-      + 'eteläpuolelle. Länsipuolella on Jabin järvi, patoamalla syntynyt tekojärvi, joka '
-      + 'suunniteltiin alun perin noin 100 000 asukkaan vesilähteeksi. Kun suurempi Lower '
-      + 'Usuman pato valmistui, järvestä tuli kalastus- ja matkailukohde. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
-    kohteet: [
-      {
-        nimi: 'Abujan kansallismoskeija',
-        wiki: 'Abuja National Mosque',
-        lat: 9.0602,
-        lon: 7.48964,
-      },
-      {
-        nimi: 'Eagle Square',
-        tyyppi: 'aukio',
-        wiki: 'Eagle Square, Abuja',
-        lat: 9.06095,
-        lon: 7.49982,
-      },
-      {
-        nimi: 'Millennium-puisto',
-        tyyppi: 'luonto',
-        wiki: 'Millennium Park (Abuja)',
-        lat: 9.07156,
-        lon: 7.49947,
-      },
-      {
-        nimi: 'State House (Aso Rock Villa)',
-        wiki: 'The State House (Aso Rock Villa)',
-        lat: 9.06227,
-        lon: 7.51853,
-      },
-      {
-        nimi: 'Kansalliskokouksen rakennus',
-        wiki: 'National Assembly Complex',
-        lat: 9.06912,
-        lon: 7.51013,
-      },
-      {
-        nimi: 'Kansallinen kristillinen keskus',
-        wiki: 'National Christian Centre',
-        lat: 9.0484,
-        lon: 7.49488,
-      },
-    ],
-  },
   bamako: {
     polku: 'assets/kartat/bamako-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -18140,51 +18080,6 @@ export const KAUPUNKIKARTAT = {
         wiki: "Notre Dame D'Afrique, Bangui",
         lat: 4.39786,
         lon: 18.55727,
-      },
-    ],
-  },
-  brazzaville: {
-    polku: 'assets/kartat/brazzaville-keskusta.png',
-    lahde: '© OpenStreetMap-tekijät (ODbL)',
-    numeroympyrat: true,
-    rajat: {
-      pohjoinen: -4.2548,
-      etela: -4.2892,
-      lansi: 15.2395,
-      ita: 15.2981,
-    },
-    esittely: 'Kartan alue on Brazzavillen länsiosa Kongo-joen pohjoisrannalla, Malebo-lammen '
-      + 'alapuolella ja Kinshasaa vastapäätä. Pierre Savorgnan de Brazza perusti kaupungin '
-      + 'vuonna 1880, ja toisen maailmansodan aikana se oli Vapaan Ranskan pääkaupunki.\n\n'
-      + 'Djoué-joen suu on kartan kohde. Djoué on Kongon oikeanpuoleinen sivujoki, joka '
-      + 'laskee pääjokeen kohdassa, jossa Kongo lähtee Malebo-lammesta ja alkaa Kongon '
-      + 'koskialue. Ympäröivä kosteikko, Congo-Djouén koskialue, otettiin Ramsar-sopimuksen '
-      + 'kansainvälisesti tärkeiden kosteikkojen luetteloon 3. huhtikuuta 2009; sen pinta-ala '
-      + 'on 2 500 hehtaaria. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
-    kohteet: [
-      {
-        nimi: 'Sainte-Anne-du-Congon basilika',
-        wiki: 'Basilica of Sainte-Anne-du-Congo in Brazzaville',
-        lat: -4.2685,
-        lon: 15.2844,
-      },
-      {
-        nimi: 'Sacré-Cœurin katedraali',
-        wiki: 'Sacred Heart Cathedral, Brazzaville',
-        lat: -4.27034,
-        lon: 15.27399,
-      },
-      {
-        nimi: 'Nabemba-torni',
-        wiki: 'Nabemba Tower',
-        lat: -4.27212,
-        lon: 15.2891,
-      },
-      {
-        nimi: 'Alphonse Massemba-Débat -stadion',
-        wiki: 'Stade Alphonse Massemba-Débat',
-        lat: -4.27353,
-        lon: 15.24842,
       },
     ],
   },
@@ -18375,142 +18270,6 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
-  kinshasa: {
-    polku: 'assets/kartat/kinshasa-keskusta.png',
-    lahde: '© OpenStreetMap-tekijät (ODbL)',
-    numeroympyrat: true,
-    esittely: 'Kartan alue on Kinshasan länsiosa Kongo-joen vasemmalla rannalla, jossa kaupunki sai '
-      + 'alkunsa. Henry Morton Stanley perusti 1800-luvun lopulla Ngalieman lahden rannalle '
-      + 'kauppa-aseman, josta kasvoi Léopoldville, ja lahti on saanut nimensä paikalliselta '
-      + 'päälliköltä Ngaliemalta.\n\n'
-      + 'Gomben kaupunginosassa on Kinshasan kasvitieteellinen puutarha, jonka '
-      + 'siirtomaahallinto perusti vuonna 1933 Parc de Bock -nimiseksi puistoksi. Se '
-      + 'sijaitsee Kasa-Vubu-kadun varrella eläintarhaa vastapäätä, ja sitä hoitaa Kongon '
-      + 'luonnonsuojeluinstituutti ICCN. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
-    rajat: { pohjoinen: -4.2911, etela: -4.3456, lansi: 15.2724, ita: 15.3229 },
-    kohteet: [
-      {
-        nimi: 'Kinshasan keskustori',
-        tyyppi: 'aukio',
-        wiki: 'Kinshasa Central Market',
-        lat: -4.31028,
-        lon: 15.3125,
-      },
-      {
-        nimi: 'Sainte-Annen kirkko',
-        wiki: 'Paroisse de Sainte-Anne',
-        lat: -4.30087,
-        lon: 15.3152,
-      },
-      {
-        nimi: 'Kansakunnan palatsi',
-        wiki: 'Palais de la Nation (Kinshasa)',
-        lat: -4.3025,
-        lon: 15.2801,
-      },
-      {
-        nimi: 'Kongon Neitsyt Marian katedraali',
-        wiki: 'Our Lady of the Congo Cathedral',
-        lat: -4.32383,
-        lon: 15.29444,
-      },
-      {
-        nimi: 'Kansanpalatsi',
-        wiki: 'Palais du Peuple (Kinshasa)',
-        lat: -4.3322,
-        lon: 15.3031,
-      },
-      {
-        nimi: 'Kongon demokraattisen tasavallan kansallismuseo',
-        wiki: 'National Museum of the Democratic Republic of the Congo',
-        lat: -4.3351,
-        lon: 15.2994,
-      },
-    ],
-  },
-  libreville: {
-    polku: 'assets/kartat/libreville-keskusta.png',
-    lahde: '© OpenStreetMap-tekijät (ODbL)',
-    numeroympyrat: true,
-    esittely: 'Kartan alue on Libreville, Gabonin pääkaupunki Komo-joen suistossa Guineanlahden '
-      + 'rannalla. Kaupungin perustivat vuonna 1848 ranskalaisten orjalaivalta vapauttamat '
-      + 'ihmiset, ja nimi, "vapaa kaupunki", otettiin Sierra Leonen Freetownista.\n\n'
-      + 'Mont-Bouët\'n tori on laaja markkina-alue Librevillessä: sadat kojut jakautuvat '
-      + 'usealle korttelille, ja myytävänä on muun muassa kankaita ja vaatteita. Sibangin '
-      + 'arboretum on 1930-luvulla perustettu koemetsä, jonka koealoille on istutettu '
-      + 'tropiikin hyötypuita; sen rajat merkittiin päätöksellä 31. maaliskuuta 1934. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
-    rajat: { pohjoinen: 0.4022, etela: 0.3879, lansi: 9.4389, ita: 9.4559 },
-    kohteet: [
-      {
-        nimi: 'Palais du bord de mer',
-        wiki: 'Palais du bord de mer',
-        lat: 0.3924,
-        lon: 9.442,
-      },
-      {
-        nimi: "Mont-Bouët'n tori",
-        tyyppi: 'aukio',
-        wiki: 'Mont-Bouët',
-        lat: 0.3989,
-        lon: 9.4528,
-      },
-      {
-        nimi: 'Omar Bongon stadion',
-        wiki: 'Stade Omar Bongo',
-        lat: 0.39181,
-        lon: 9.45217,
-      },
-      {
-        nimi: 'Librevillen urheiluhalli',
-        wiki: 'Palais des Sports de Libreville',
-        lat: 0.39472,
-        lon: 9.45278,
-      },
-    ],
-  },
-  lome: {
-    polku: 'assets/kartat/lome-keskusta.png',
-    lahde: '© OpenStreetMap-tekijät (ODbL)',
-    numeroympyrat: true,
-    esittely: 'Kartan alue on Lomén meriranta Guineanlahden hiekkarannikolla Togon lounaiskulmassa. '
-      + 'Kaupunki on aivan Ghanan rajan tuntumassa. Sen nimi tulee ewen kielen muodosta '
-      + 'Alomé, joka tarkoittaa suunnilleen alopuiden keskellä, ja Lomésta tuli Saksan '
-      + 'Togolandin pääkaupunki vuonna 1897.\n\n'
-      + 'Lomén keskustan meriranta on kaupungin eteläreuna, jossa kalastajat vetävät '
-      + 'verkkojaan aamun valjetessa ja ihmiset kävelevät rantaa iltaisin. Togo itsenäistyi '
-      + 'vuonna 1960, ja Lomessa on yhä maan iso satama. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
-    rajat: { pohjoinen: 6.1347, etela: 6.1162, lansi: 1.2089, ita: 1.2306 },
-    kohteet: [
-      {
-        nimi: 'Itsenäisyysmonumentti',
-        wiki: 'Independence Monument (Togo)',
-        lat: 6.12996,
-        lon: 1.21601,
-      },
-      {
-        nimi: 'Togon kansallismuseo',
-        wiki: 'Togon kansallismuseo',
-        lat: 6.13067,
-        lon: 1.21797,
-      },
-      {
-        nimi: 'Kuvernöörien palatsi',
-        wiki: 'Palace of the Governors, Togo',
-        lat: 6.12036,
-        lon: 1.21222,
-      },
-      {
-        nimi: 'Lomén suuri tori',
-        tyyppi: 'aukio',
-        wiki: 'Lomé Grand Market',
-        lat: 6.12603,
-        lon: 1.2273,
-      },
-    ],
-  },
   lusaka: {
     polku: 'assets/kartat/lusaka-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -18673,113 +18432,6 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
-  nouakchott: {
-    polku: 'assets/kartat/nouakchott-keskusta.png',
-    lahde: '© OpenStreetMap-tekijät (ODbL)',
-    numeroympyrat: true,
-    rajat: {
-      pohjoinen: 18.1109,
-      etela: 18.0681,
-      lansi: -15.9892,
-      ita: -15.9637,
-    },
-    esittely: 'Kartan alue on Nouakchott, Mauritanian pääkaupunki Atlantin rannikolla. Paikalla oli '
-      + 'pieni kalastajakylä ja linnoitettu ksar, kunnes 1950-luvun lopulla alettiin rakentaa '
-      + 'uutta pääkaupunkia. Kaupunki oli pääosin valmis, kun maa itsenäistyi marraskuussa '
-      + '1960.\n\n'
-      + 'Kalastajarannalla pienveneet tuovat saaliin kalatorille. Etelämpänä on Friendship '
-      + 'Port, kiinalaisyhtiön rakentama syväsatama, joka avattiin vuonna 1986; luontaista '
-      + 'satamalahtea ei ollut, joten laivoja suojaa betonilohkoista tehty aallonmurtaja. '
-      + 'Keskustassa ovat Marché Capitale ja Mauritanian kansallismuseo, jonka toiminta alkoi '
-      + '1972. Nouakchottin olympiastadion on pohjoisempana. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
-    kohteet: [
-      {
-        nimi: 'Mauritanian kansallismuseo',
-        wiki: 'National Museum of Mauritania',
-        lat: 18.08552,
-        lon: -15.9748,
-      },
-      {
-        nimi: 'Saudien moskeija',
-        wiki: 'Saudi Mosque',
-        lat: 18.09,
-        lon: -15.97556,
-      },
-      {
-        nimi: 'Marché Capitale',
-        tyyppi: 'aukio',
-        wiki: 'Marché Capitale',
-        lat: 18.08611,
-        lon: -15.97944,
-      },
-      {
-        nimi: 'Marokkolaisten tori',
-        tyyppi: 'aukio',
-        wiki: 'Marocaine market',
-        lat: 18.07667,
-        lon: -15.97917,
-      },
-      {
-        nimi: 'Nouakchottin olympiastadion',
-        wiki: 'Nouakchott Olympic Stadium',
-        lat: 18.10472,
-        lon: -15.98528,
-      },
-      {
-        nimi: 'Nouakchottin yliopisto',
-        wiki: 'University of Nouakchott Al Aasriya',
-        lat: 18.08934,
-        lon: -15.96764,
-      },
-    ],
-  },
-  ouagadougou: {
-    polku: 'assets/kartat/ouagadougou-keskusta.png',
-    lahde: '© OpenStreetMap-tekijät (ODbL)',
-    numeroympyrat: true,
-    esittely: 'Kartan alue on Ouagadougoun keskusta. Mossi-kansan Wagadugu-kuningaskunta syntyi '
-      + '1400-luvulla, ja Burkina Fason pääkaupunki on sen perua, joten kaupungin ympäristöt '
-      + 'ovat paljon vanhempia kuin siirtomaa-ajan katuverkko.\n\n'
-      + 'Bangr Weogon kaupunkimetsä oli ennen siirtomaa-aikaa mossipäälliköiden pyhänä pitämä '
-      + 'metsä. Ranskalaiset muuttivat sen puistoksi 1930-luvulla, ja tammikuussa 2001 se sai '
-      + 'nykyisen nimensä, joka tarkoittaa tiedon metsää. Toinen kohde on Kansakunnan aukion '
-      + 'vanha markkinapaikka kaupungin keskustassa. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
-    rajat: { pohjoinen: 12.377, etela: 12.3563, lansi: -1.5324, ita: -1.5136 },
-    kohteet: [
-      {
-        nimi: 'Ouagadougoun katedraali',
-        wiki: 'Ouagadougou Cathedral',
-        lat: 12.36197,
-        lon: -1.52701,
-      },
-      {
-        nimi: 'Ouagadougoun suurmoskeija',
-        wiki: 'Grand Mosque of Ouagadougou',
-        lat: 12.36622,
-        lon: -1.52139,
-      },
-      {
-        nimi: 'Maison du peuple',
-        wiki: 'La Maison du peuple (Ouagadougou)',
-        lat: 12.37219,
-        lon: -1.5236,
-      },
-      {
-        nimi: 'Kansallinen musiikkimuseo',
-        wiki: 'National Museum of Music (Burkina Faso)',
-        lat: 12.37351,
-        lon: -1.51683,
-      },
-      {
-        nimi: 'Kunnallisstadion',
-        wiki: 'Stade Dr Issoufou Joseph Conombo',
-        lat: 12.36056,
-        lon: -1.52917,
-      },
-    ],
-  },
   // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
   // VATIKAANI (Karttaseppä 11.10.2026, PT, juna 183): kohteet Wikipediasta ja OSM:stä, tekstit myöhemmin.
   vatikaanivaltio: {
@@ -18893,6 +18545,11 @@ export const KAUPUNKIKARTAT = {
    * Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs, rajat kohdekartat.mjs). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
    * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e04-pilvi, paakaupungit-e05-pilvi, paakaupungit-e06-pilvi, paakaupungit-e07-pilvi, paakaupungit-e08-pilvi, paakaupungit-e09-pilvi, paakaupungit-e10-pilvi, paakaupungit-e11-pilvi, paakaupungit-e12-pilvi, paakaupungit-e13-pilvi, paakaupungit-e14-pilvi.
    */
+  /*
+   * PÄÄKAUPUNKIPISTEET (Päätoimittaja 11.10.2026, pilvierät e04, e05, e06, e07, e08, e09, e10, e11, e12, e13, e14, 93 kaupunkia):
+   * Kohdekartat (piirto tools/piirra-kaupunkikartta.mjs, rajat kohdekartat.mjs). Avain on pääkaupunkipisteen id (js/packs/paakaupungit.js), ei laudan kaupunki: lehti aukeaa
+   * maakortin pääkaupunkirivistä (ei pysäkkiä). Lähteet ja faktapohja: haarat paakaupungit-e04-pilvi, paakaupungit-e05-pilvi, paakaupungit-e06-pilvi, paakaupungit-e07-pilvi, paakaupungit-e08-pilvi, paakaupungit-e09-pilvi, paakaupungit-e10-pilvi, paakaupungit-e11-pilvi, paakaupungit-e12-pilvi, paakaupungit-e13-pilvi, paakaupungit-e14-pilvi.
+   */
   alger: {
     polku: 'assets/kartat/alger-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -18961,7 +18618,12 @@ export const KAUPUNKIKARTAT = {
       + 'leveäksi suistoksi. Saaren länsi- ja lounaispuolella on Tanbin kosteikko, '
       + 'mangrovemetsän ja vuorovesikanavien vyöhyke, joka erottaa Banjulin Serekundan ja '
       + 'Bakaun kaupunkialueista. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
-    rajat: { pohjoinen: 13.4776, etela: 13.4081, lansi: -16.6206, ita: -16.5633 },
+    rajat: {
+      pohjoinen: 13.4776,
+      etela: 13.4081,
+      lansi: -16.6206,
+      ita: -16.5633,
+    },
     kohteet: [
       {
         nimi: 'Albertin tori',
@@ -19034,7 +18696,12 @@ export const KAUPUNKIKARTAT = {
       + 'olevan Roumen ympärille. Saariston nimi tulee portugalin sanoista, jotka '
       + 'tarkoittavat epäjumalten saaria. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
-    rajat: { pohjoinen: 9.5617, etela: 9.4386, lansi: -13.845, ita: -13.6744 },
+    rajat: {
+      pohjoinen: 9.5617,
+      etela: 9.4386,
+      lansi: -13.845,
+      ita: -13.6744,
+    },
     kohteet: [
       {
         nimi: 'Tombon saari',
@@ -19119,6 +18786,67 @@ export const KAUPUNKIKARTAT = {
         tyyppi: 'luonto',
         lat: 6.3,
         lon: -10.75,
+      },
+    ],
+  },
+  nouakchott: {
+    polku: 'assets/kartat/nouakchott-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 18.1109,
+      etela: 18.0681,
+      lansi: -15.9892,
+      ita: -15.9637,
+    },
+    esittely: 'Kartan alue on Nouakchott, Mauritanian pääkaupunki Atlantin rannikolla. Paikalla oli '
+      + 'pieni kalastajakylä ja linnoitettu ksar, kunnes 1950-luvun lopulla alettiin rakentaa '
+      + 'uutta pääkaupunkia. Kaupunki oli pääosin valmis, kun maa itsenäistyi marraskuussa '
+      + '1960.\n\n'
+      + 'Kalastajarannalla pienveneet tuovat saaliin kalatorille. Etelämpänä on Friendship '
+      + 'Port, kiinalaisyhtiön rakentama syväsatama, joka avattiin vuonna 1986; luontaista '
+      + 'satamalahtea ei ollut, joten laivoja suojaa betonilohkoista tehty aallonmurtaja. '
+      + 'Keskustassa ovat Marché Capitale ja Mauritanian kansallismuseo, jonka toiminta alkoi '
+      + '1972. Nouakchottin olympiastadion on pohjoisempana. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Mauritanian kansallismuseo',
+        wiki: 'National Museum of Mauritania',
+        lat: 18.08552,
+        lon: -15.9748,
+      },
+      {
+        nimi: 'Saudien moskeija',
+        wiki: 'Saudi Mosque',
+        lat: 18.09,
+        lon: -15.97556,
+      },
+      {
+        nimi: 'Marché Capitale',
+        tyyppi: 'aukio',
+        wiki: 'Marché Capitale',
+        lat: 18.08611,
+        lon: -15.97944,
+      },
+      {
+        nimi: 'Marokkolaisten tori',
+        tyyppi: 'aukio',
+        wiki: 'Marocaine market',
+        lat: 18.07667,
+        lon: -15.97917,
+      },
+      {
+        nimi: 'Nouakchottin olympiastadion',
+        wiki: 'Nouakchott Olympic Stadium',
+        lat: 18.10472,
+        lon: -15.98528,
+      },
+      {
+        nimi: 'Nouakchottin yliopisto',
+        wiki: 'University of Nouakchott Al Aasriya',
+        lat: 18.08934,
+        lon: -15.96764,
       },
     ],
   },
@@ -19282,6 +19010,66 @@ export const KAUPUNKIKARTAT = {
       + 'Bab el Bhar – Merenportti rajaa medinan idässä. Kartan kohteista pääsee lukemaan '
       + 'lisää napauttamalla.',
   },
+  abuja: {
+    polku: 'assets/kartat/abuja-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: 9.0767,
+      etela: 9.0413,
+      lansi: 7.4833,
+      ita: 7.5249,
+    },
+    esittely: 'Kartan alue on Abujan reuna, jossa pääkaupunki kohtaa graniittisen maaston. Nigeria '
+      + 'siirsi pääkaupunkinsa Lagosista Abujaan, ja Abuja julistettiin pääkaupungiksi 12. '
+      + 'joulukuuta 1991.\n\n'
+      + 'Itäpuolella kohoaa Aso-kallio, graniittinen yksittäiskallio, joka nousee noin 400 '
+      + 'metriä ympäristöään korkeammaksi; suurin osa kaupungista levittäytyy sen '
+      + 'eteläpuolelle. Länsipuolella on Jabin järvi, patoamalla syntynyt tekojärvi, joka '
+      + 'suunniteltiin alun perin noin 100 000 asukkaan vesilähteeksi. Kun suurempi Lower '
+      + 'Usuman pato valmistui, järvestä tuli kalastus- ja matkailukohde. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Abujan kansallismoskeija',
+        wiki: 'Abuja National Mosque',
+        lat: 9.0602,
+        lon: 7.48964,
+      },
+      {
+        nimi: 'Eagle Square',
+        tyyppi: 'aukio',
+        wiki: 'Eagle Square, Abuja',
+        lat: 9.06095,
+        lon: 7.49982,
+      },
+      {
+        nimi: 'Millennium-puisto',
+        tyyppi: 'luonto',
+        wiki: 'Millennium Park (Abuja)',
+        lat: 9.07156,
+        lon: 7.49947,
+      },
+      {
+        nimi: 'State House (Aso Rock Villa)',
+        wiki: 'The State House (Aso Rock Villa)',
+        lat: 9.06227,
+        lon: 7.51853,
+      },
+      {
+        nimi: 'Kansalliskokouksen rakennus',
+        wiki: 'National Assembly Complex',
+        lat: 9.06912,
+        lon: 7.51013,
+      },
+      {
+        nimi: 'Kansallinen kristillinen keskus',
+        wiki: 'National Christian Centre',
+        lat: 9.0484,
+        lon: 7.49488,
+      },
+    ],
+  },
   accra: {
     polku: 'assets/kartat/accra-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -19295,7 +19083,12 @@ export const KAUPUNKIKARTAT = {
       + 'linnoitusten UNESCO-listaukseen vuodesta 1979. Korlen laguuni on keskustan '
       + 'länsipuolella, ja Holy Trinity -katedraali on High Streetillä. Labadin ranta on Osun '
       + 'ja Teshien välissä. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
-    rajat: { pohjoinen: 5.5796, etela: 5.5176, lansi: -0.2251, ita: -0.1339 },
+    rajat: {
+      pohjoinen: 5.5796,
+      etela: 5.5176,
+      lansi: -0.2251,
+      ita: -0.1339,
+    },
     kohteet: [
       {
         nimi: 'Jamesin linnoitus',
@@ -19328,6 +19121,47 @@ export const KAUPUNKIKARTAT = {
         tyyppi: 'luonto',
         lat: 5.56242,
         lon: -0.13943,
+      },
+    ],
+  },
+  lome: {
+    polku: 'assets/kartat/lome-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Lomén meriranta Guineanlahden hiekkarannikolla Togon lounaiskulmassa. '
+      + 'Kaupunki on aivan Ghanan rajan tuntumassa. Sen nimi tulee ewen kielen muodosta '
+      + 'Alomé, joka tarkoittaa suunnilleen alopuiden keskellä, ja Lomésta tuli Saksan '
+      + 'Togolandin pääkaupunki vuonna 1897.\n\n'
+      + 'Lomén keskustan meriranta on kaupungin eteläreuna, jossa kalastajat vetävät '
+      + 'verkkojaan aamun valjetessa ja ihmiset kävelevät rantaa iltaisin. Togo itsenäistyi '
+      + 'vuonna 1960, ja Lomessa on yhä maan iso satama. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    rajat: { pohjoinen: 6.1347, etela: 6.1162, lansi: 1.2089, ita: 1.2306 },
+    kohteet: [
+      {
+        nimi: 'Itsenäisyysmonumentti',
+        wiki: 'Independence Monument (Togo)',
+        lat: 6.12996,
+        lon: 1.21601,
+      },
+      {
+        nimi: 'Togon kansallismuseo',
+        wiki: 'Togon kansallismuseo',
+        lat: 6.13067,
+        lon: 1.21797,
+      },
+      {
+        nimi: 'Kuvernöörien palatsi',
+        wiki: 'Palace of the Governors, Togo',
+        lat: 6.12036,
+        lon: 1.21222,
+      },
+      {
+        nimi: 'Lomén suuri tori',
+        tyyppi: 'aukio',
+        wiki: 'Lomé Grand Market',
+        lat: 6.12603,
+        lon: 1.2273,
       },
     ],
   },
@@ -19371,7 +19205,12 @@ export const KAUPUNKIKARTAT = {
       + 'Yénan suu on vanhan asutuksen kohdalla olevan uoman pää. Trois Sœursin kukkulat '
       + 'kuuluvat seudun kovettuneiden pintakerrosten maisemaan. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
-    rajat: { pohjoinen: 13.5251, etela: 13.4863, lansi: 2.0554, ita: 2.1213 },
+    rajat: {
+      pohjoinen: 13.5251,
+      etela: 13.4863,
+      lansi: 2.0554,
+      ita: 2.1213,
+    },
     kohteet: [
       {
         nimi: 'Gounti Yénan suu',
@@ -19390,6 +19229,52 @@ export const KAUPUNKIKARTAT = {
         lat: 13.49568,
         lon: 2.05985,
         tyyppi: 'luonto',
+      },
+    ],
+  },
+  ouagadougou: {
+    polku: 'assets/kartat/ouagadougou-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Ouagadougoun keskusta. Mossi-kansan Wagadugu-kuningaskunta syntyi '
+      + '1400-luvulla, ja Burkina Fason pääkaupunki on sen perua, joten kaupungin ympäristöt '
+      + 'ovat paljon vanhempia kuin siirtomaa-ajan katuverkko.\n\n'
+      + 'Bangr Weogon kaupunkimetsä oli ennen siirtomaa-aikaa mossipäälliköiden pyhänä pitämä '
+      + 'metsä. Ranskalaiset muuttivat sen puistoksi 1930-luvulla, ja tammikuussa 2001 se sai '
+      + 'nykyisen nimensä, joka tarkoittaa tiedon metsää. Toinen kohde on Kansakunnan aukion '
+      + 'vanha markkinapaikka kaupungin keskustassa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: { pohjoinen: 12.377, etela: 12.3563, lansi: -1.5324, ita: -1.5136 },
+    kohteet: [
+      {
+        nimi: 'Ouagadougoun katedraali',
+        wiki: 'Ouagadougou Cathedral',
+        lat: 12.36197,
+        lon: -1.52701,
+      },
+      {
+        nimi: 'Ouagadougoun suurmoskeija',
+        wiki: 'Grand Mosque of Ouagadougou',
+        lat: 12.36622,
+        lon: -1.52139,
+      },
+      {
+        nimi: 'Maison du peuple',
+        wiki: 'La Maison du peuple (Ouagadougou)',
+        lat: 12.37219,
+        lon: -1.5236,
+      },
+      {
+        nimi: 'Kansallinen musiikkimuseo',
+        wiki: 'National Museum of Music (Burkina Faso)',
+        lat: 12.37351,
+        lon: -1.51683,
+      },
+      {
+        nimi: 'Kunnallisstadion',
+        wiki: 'Stade Dr Issoufou Joseph Conombo',
+        lat: 12.36056,
+        lon: -1.52917,
       },
     ],
   },
@@ -19421,6 +19306,24 @@ export const KAUPUNKIKARTAT = {
       + '1895, ja nykyisen nimensä puutarha sai avajaisissa 22. tammikuuta 1999. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
   },
+  yamoussoukro: {
+    polku: 'assets/kartat/yamoussoukro-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Yamoussoukro, Norsunluurannikon poliittinen ja hallinnollinen '
+      + 'pääkaupunki. Kaupunki sai tämän aseman vuonna 1983, kun presidentti Félix '
+      + 'Houphouët-Boigny, joka oli syntynyt siellä, siirsi hallinnon synnyinkaupunkiinsa. '
+      + 'Abidjan jäi maan talouselämän keskukseksi.\n\n'
+      + 'Kaupungissa on Notre-Dame de la Paix -basilika. Sen rakennustyöt kestivät vuosina '
+      + '1985–1989, ja paavi Johannes Paavali II vihki sen 10. syyskuuta 1990.',
+    rajat: {
+      pohjoinen: 6.8342,
+      etela: 6.798,
+      lansi: -5.2968,
+      ita: -5.2516,
+    },
+    kohteet: [],
+  },
   yaounde: {
     polku: 'assets/kartat/yaounde-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -19434,7 +19337,12 @@ export const KAUPUNKIKARTAT = {
       + '1951–1952 kreikkalaissyntyisen kauppiaan Georges Kyriakidèsin aloitteesta, ja '
       + 'Mvog-Betsin zoo-botaaninen puisto perustettiin vuonna 1951. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
-    rajat: { pohjoinen: 3.9322, etela: 3.8107, lansi: 11.4322, ita: 11.531 },
+    rajat: {
+      pohjoinen: 3.9322,
+      etela: 3.8107,
+      lansi: 11.4322,
+      ita: 11.531,
+    },
     kohteet: [
       {
         nimi: 'Mont Fébé',
@@ -19462,6 +19370,90 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  brazzaville: {
+    polku: 'assets/kartat/brazzaville-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    rajat: {
+      pohjoinen: -4.2548,
+      etela: -4.2892,
+      lansi: 15.2395,
+      ita: 15.2981,
+    },
+    esittely: 'Kartan alue on Brazzavillen länsiosa Kongo-joen pohjoisrannalla, Malebo-lammen '
+      + 'alapuolella ja Kinshasaa vastapäätä. Pierre Savorgnan de Brazza perusti kaupungin '
+      + 'vuonna 1880, ja toisen maailmansodan aikana se oli Vapaan Ranskan pääkaupunki.\n\n'
+      + 'Djoué-joen suu on kartan kohde. Djoué on Kongon oikeanpuoleinen sivujoki, joka '
+      + 'laskee pääjokeen kohdassa, jossa Kongo lähtee Malebo-lammesta ja alkaa Kongon '
+      + 'koskialue. Ympäröivä kosteikko, Congo-Djouén koskialue, otettiin Ramsar-sopimuksen '
+      + 'kansainvälisesti tärkeiden kosteikkojen luetteloon 3. huhtikuuta 2009; sen pinta-ala '
+      + 'on 2 500 hehtaaria. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Sainte-Anne-du-Congon basilika',
+        wiki: 'Basilica of Sainte-Anne-du-Congo in Brazzaville',
+        lat: -4.2685,
+        lon: 15.2844,
+      },
+      {
+        nimi: 'Sacré-Cœurin katedraali',
+        wiki: 'Sacred Heart Cathedral, Brazzaville',
+        lat: -4.27034,
+        lon: 15.27399,
+      },
+      {
+        nimi: 'Nabemba-torni',
+        wiki: 'Nabemba Tower',
+        lat: -4.27212,
+        lon: 15.2891,
+      },
+      {
+        nimi: 'Alphonse Massemba-Débat -stadion',
+        wiki: 'Stade Alphonse Massemba-Débat',
+        lat: -4.27353,
+        lon: 15.24842,
+      },
+    ],
+  },
+  ciudaddelapaz: {
+    polku: 'assets/kartat/ciudaddelapaz-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Ciudad de la Paz, Päiväntasaajan Guinean mantereen puolelle Río Munin '
+      + 'keskiosaan rakennettu suunnittelukaupunki. Malabo on Bioko-saarella, mutta tämä '
+      + 'kaupunki on sisämaassa ekvatoriaalisen metsän keskellä. Se tunnettiin aiemmin '
+      + 'nimellä Oyala, ja nykyisen nimensä, espanjaksi rauhan kaupunki, se sai vuonna 2017.\n\n'
+      + 'Kaupungin suunnitteli portugalilainen arkkitehtitoimisto FAT, jonka nimi avautuu '
+      + 'sanoiksi Future Architecture Thinking. Alueelle on rakennettu muun muassa '
+      + 'golfkenttä, hotelli ja AAUCA eli Keski-Afrikan afroamerikkalainen yliopisto. Vuonna '
+      + '1873 paikalla ei ollut kaupunkia lainkaan.',
+    rajat: {
+      pohjoinen: 1.6056,
+      etela: 1.5784,
+      lansi: 10.804,
+      ita: 10.84,
+    },
+    kohteet: [],
+  },
+  gitega: {
+    polku: 'assets/kartat/gitega-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Gitega, Burundin keskiylängön kaupunki, joka on noin 1 500 metrin '
+      + 'korkeudessa lähellä maan maantieteellistä keskustaa. Gitega oli Burundin '
+      + 'kuningaskunnan keskus, ja kuninkaallinen perintö näkyy kaupungissa yhä.\n\n'
+      + 'Gitegan kansallismuseo säilyttää Burundin historiaan, käsitöihin ja soittimiin '
+      + 'liittyviä kokoelmia. Burundin parlamentti päätti vuonna 2019, että Gitegasta tulee '
+      + 'maan poliittinen pääkaupunki. Bujumbura on silti maan suurin kaupunki ja talouden '
+      + 'keskus, joten valtion tehtävät jakautuvat kahden kaupungin kesken.',
+    rajat: {
+      pohjoinen: -3.4174,
+      etela: -3.4392,
+      lansi: 29.9115,
+      ita: 29.9385,
+    },
+    kohteet: [],
+  },
   kigali: {
     polku: 'assets/kartat/kigali-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -19475,7 +19467,12 @@ export const KAUPUNKIKARTAT = {
       + 'Nyabugogon jokisuu kokoaa laaksojen vedet. Nyandungun kosteikko oli heikentynyt, '
       + 'mutta se kunnostettiin ja avattiin yleisölle ekopuistona heinäkuussa 2022; alue on '
       + 'noin 121 hehtaaria. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
-    rajat: { pohjoinen: -1.8689, etela: -1.9881, lansi: 29.9876, ita: 30.1582 },
+    rajat: {
+      pohjoinen: -1.8689,
+      etela: -1.9881,
+      lansi: 29.9876,
+      ita: 30.1582,
+    },
     kohteet: [
       {
         nimi: 'Kigali-kukkula',
@@ -19503,6 +19500,101 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  kinshasa: {
+    polku: 'assets/kartat/kinshasa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Kinshasan länsiosa Kongo-joen vasemmalla rannalla, jossa kaupunki sai '
+      + 'alkunsa. Henry Morton Stanley perusti 1800-luvun lopulla Ngalieman lahden rannalle '
+      + 'kauppa-aseman, josta kasvoi Léopoldville, ja lahti on saanut nimensä paikalliselta '
+      + 'päälliköltä Ngaliemalta.\n\n'
+      + 'Gomben kaupunginosassa on Kinshasan kasvitieteellinen puutarha, jonka '
+      + 'siirtomaahallinto perusti vuonna 1933 Parc de Bock -nimiseksi puistoksi. Se '
+      + 'sijaitsee Kasa-Vubu-kadun varrella eläintarhaa vastapäätä, ja sitä hoitaa Kongon '
+      + 'luonnonsuojeluinstituutti ICCN. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: { pohjoinen: -4.2911, etela: -4.3456, lansi: 15.2724, ita: 15.3229 },
+    kohteet: [
+      {
+        nimi: 'Kinshasan keskustori',
+        tyyppi: 'aukio',
+        wiki: 'Kinshasa Central Market',
+        lat: -4.31028,
+        lon: 15.3125,
+      },
+      {
+        nimi: 'Sainte-Annen kirkko',
+        wiki: 'Paroisse de Sainte-Anne',
+        lat: -4.30087,
+        lon: 15.3152,
+      },
+      {
+        nimi: 'Kansakunnan palatsi',
+        wiki: 'Palais de la Nation (Kinshasa)',
+        lat: -4.3025,
+        lon: 15.2801,
+      },
+      {
+        nimi: 'Kongon Neitsyt Marian katedraali',
+        wiki: 'Our Lady of the Congo Cathedral',
+        lat: -4.32383,
+        lon: 15.29444,
+      },
+      {
+        nimi: 'Kansanpalatsi',
+        wiki: 'Palais du Peuple (Kinshasa)',
+        lat: -4.3322,
+        lon: 15.3031,
+      },
+      {
+        nimi: 'Kongon demokraattisen tasavallan kansallismuseo',
+        wiki: 'National Museum of the Democratic Republic of the Congo',
+        lat: -4.3351,
+        lon: 15.2994,
+      },
+    ],
+  },
+  libreville: {
+    polku: 'assets/kartat/libreville-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Libreville, Gabonin pääkaupunki Komo-joen suistossa Guineanlahden '
+      + 'rannalla. Kaupungin perustivat vuonna 1848 ranskalaisten orjalaivalta vapauttamat '
+      + 'ihmiset, ja nimi, "vapaa kaupunki", otettiin Sierra Leonen Freetownista.\n\n'
+      + 'Mont-Bouët\'n tori on laaja markkina-alue Librevillessä: sadat kojut jakautuvat '
+      + 'usealle korttelille, ja myytävänä on muun muassa kankaita ja vaatteita. Sibangin '
+      + 'arboretum on 1930-luvulla perustettu koemetsä, jonka koealoille on istutettu '
+      + 'tropiikin hyötypuita; sen rajat merkittiin päätöksellä 31. maaliskuuta 1934. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: { pohjoinen: 0.4022, etela: 0.3879, lansi: 9.4389, ita: 9.4559 },
+    kohteet: [
+      {
+        nimi: 'Palais du bord de mer',
+        wiki: 'Palais du bord de mer',
+        lat: 0.3924,
+        lon: 9.442,
+      },
+      {
+        nimi: "Mont-Bouët'n tori",
+        tyyppi: 'aukio',
+        wiki: 'Mont-Bouët',
+        lat: 0.3989,
+        lon: 9.4528,
+      },
+      {
+        nimi: 'Omar Bongon stadion',
+        wiki: 'Stade Omar Bongo',
+        lat: 0.39181,
+        lon: 9.45217,
+      },
+      {
+        nimi: 'Librevillen urheiluhalli',
+        wiki: 'Palais des Sports de Libreville',
+        lat: 0.39472,
+        lon: 9.45278,
+      },
+    ],
+  },
   luanda: {
     polku: 'assets/kartat/luanda-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -19517,7 +19609,12 @@ export const KAUPUNKIKARTAT = {
       + 'jälkipuoliskolla. Nazarén kirkko on lahden rannalla, ja Nossa Senhora do Cabon '
       + 'kirkko rakennettiin uudelleen vuonna 1669. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
-    rajat: { pohjoinen: -8.7687, etela: -8.8421, lansi: 13.2076, ita: 13.2603 },
+    rajat: {
+      pohjoinen: -8.7687,
+      etela: -8.8421,
+      lansi: 13.2076,
+      ita: 13.2603,
+    },
     kohteet: [
       {
         nimi: 'Nossa Senhora dos Remédiosin katedraali',
@@ -19565,7 +19662,12 @@ export const KAUPUNKIKARTAT = {
       + 'Noin kahden kilometrin päässä rannikon edustalla on Ilhéu das Cabras, asumaton '
       + 'saari, jonka majakka rakennettiin vuonna 1890. Kartan kohteista pääsee lukemaan '
       + 'lisää napauttamalla.',
-    rajat: { pohjoinen: 0.4134, etela: 0.3319, lansi: 6.6983, ita: 6.7562 },
+    rajat: {
+      pohjoinen: 0.4134,
+      etela: 0.3319,
+      lansi: 6.6983,
+      ita: 6.7562,
+    },
     kohteet: [
       {
         nimi: 'São Sebastiãon linnake',
@@ -19612,11 +19714,36 @@ export const KAUPUNKIKARTAT = {
       + 'modernistisista rakennuksista valmistui vasta vuosina 1935–1941. Kartan kohteista '
       + 'pääsee lukemaan lisää napauttamalla.',
   },
+  dodoma: {
+    polku: 'assets/kartat/dodoma-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Dodoma, Tansanian pääkaupunki maan keskiosassa. Paikalla oli ennen '
+      + 'kaupunkia Idodomya-niminen pieni markkinapaikka gogo-väestön seudulla, ja '
+      + 'saksalaiset rakensivat siellä 1900-luvun alussa keskusrataa, jonka varrelle nykyinen '
+      + 'kaupunki syntyi.\n\n'
+      + 'Pääkaupungiksi Dodoma valittiin 1970-luvulla: hallinto päätettiin siirtää Dar es '
+      + 'Salaamista maan keskelle, ja kanadalainen Project Planning Associates voitti '
+      + 'suunnittelukilpailun. Suunnitelma nojasi puutarhakaupungin ajatukseen. Seudulla '
+      + 'kasvatetaan viinirypäleitä, ja Dodoman yliopisto aloitti vuonna 2007.',
+    rajat: {
+      pohjoinen: -6.1594,
+      etela: -6.1866,
+      lansi: 35.7239,
+      ita: 35.7601,
+    },
+    kohteet: [],
+  },
   kampala: {
     polku: 'assets/kartat/kampala-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: { pohjoinen: 0.3453, etela: 0.2912, lansi: 32.5439, ita: 32.5984 },
+    rajat: {
+      pohjoinen: 0.3453,
+      etela: 0.2912,
+      lansi: 32.5439,
+      ita: 32.5984,
+    },
     kohteet: [
       {
         nimi: 'Vanhan Kampalan kukkula',
@@ -19684,7 +19811,12 @@ export const KAUPUNKIKARTAT = {
       + 'Souq al Arabi on keskustan ulkoilmamarkkina Suuren moskeijan tuntumassa, ja siellä '
       + 'on kultakauppaan keskittynyt osa. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
-    rajat: { pohjoinen: 15.6222, etela: 15.597, lansi: 32.5025, ita: 32.5307 },
+    rajat: {
+      pohjoinen: 15.6222,
+      etela: 15.597,
+      lansi: 32.5025,
+      ita: 32.5307,
+    },
     kohteet: [
       {
         nimi: 'Tutin saari',
@@ -19813,7 +19945,12 @@ export const KAUPUNKIKARTAT = {
       + 'Kansallinen kasvitieteellinen puutarha avattiin 2. marraskuuta 2007, ja sen kuusi '
       + 'osastoa esittelevät Botswanan ekologisia alueita. Kartan kohteista pääsee lukemaan '
       + 'lisää napauttamalla.',
-    rajat: { pohjoinen: -24.6495, etela: -24.7089, lansi: 25.861, ita: 25.9517 },
+    rajat: {
+      pohjoinen: -24.6495,
+      etela: -24.7089,
+      lansi: 25.861,
+      ita: 25.9517,
+    },
     kohteet: [
       {
         nimi: 'Kgale Hill',
@@ -19834,11 +19971,69 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  mbabane: {
+    polku: 'assets/kartat/mbabane-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue ei ole Mbabanen keskusta vaan luontokohde sen ulkopuolella: Eswatinin '
+      + 'pääkaupungin lähellä, noin kahdeksan tai kymmenen kilometrin päässä, kohoaa Sibeben '
+      + 'graniittikallio. Kallio hallitsee maisemaa Mbuluzi-joen laakson yläpuolella.\n\n'
+      + 'Sibeben kallio on graniittia, ja englanniksi sitä kutsutaan myös nimellä Bald Rock '
+      + 'eli kalju kallio. Matkaoppaat luonnehtivat sitä Uluru-kiven jälkeen maailman '
+      + 'toiseksi suurimmaksi monoliitiksi. Kalliolle noustaan jyrkkää reittiä, ja '
+      + 'matkailijat ottavat yleensä oppaan mukaan vierailukeskuksesta. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -26.2523,
+      etela: -26.325,
+      lansi: 31.1215,
+      ita: 31.1796,
+    },
+    kohteet: [
+      {
+        nimi: 'Sibeben kallio',
+        tyyppi: 'luonto',
+        lat: -26.26262,
+        lon: 31.17252,
+      },
+    ],
+  },
+  moroni: {
+    polku: 'assets/kartat/moroni-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Moroni, Komorien pääkaupunki Grande Comoren eli Ngazidjan saarella. '
+      + 'Kaupunki sijaitsee Karthalan juurella, ja tulivuori hallitsee sen taustamaisemaa.\n\n'
+      + 'Karthala on aktiivinen kilpitulivuori ja Komorien korkein kohta, 2 361 metriä '
+      + 'merenpinnan yläpuolella. Huipulla on noin 4 kilometriä pitkä ja 3 kilometriä leveä '
+      + 'kaldera, jonka seinämät ovat noin 100 metriä korkeat. Tulivuori on purkautunut yli '
+      + 'kymmenen kertaa kahden viime vuosisadan aikana, myös vuosina 2005 ja 2006. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -11.6931,
+      etela: -11.7772,
+      lansi: 43.2438,
+      ita: 43.3606,
+    },
+    kohteet: [
+      {
+        nimi: 'Karthala',
+        tyyppi: 'luonto',
+        lat: -11.76028,
+        lon: 43.35306,
+      },
+    ],
+  },
   portlouis: {
     polku: 'assets/kartat/portlouis-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: { pohjoinen: -20.1551, etela: -20.1733, lansi: 57.4941, ita: 57.5134 },
+    rajat: {
+      pohjoinen: -20.1551,
+      etela: -20.1733,
+      lansi: 57.4941,
+      ita: 57.5134,
+    },
     kohteet: [
       {
         nimi: 'Aapravasi Ghat',
@@ -19920,6 +20115,450 @@ export const KAUPUNKIKARTAT = {
       + 'vuonna 1907 ja se vihittiin käyttöön lokakuussa 1910. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
   },
+  asgabat: {
+    polku: 'assets/kartat/asgabat-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Ašgabatin länsipuoli Köpetdag-vuoriston juurella; kaupungin '
+      + 'pohjoispuolella alkaa Karakumin autiomaa. Alue on maanjäristysherkkää, ja lokakuun '
+      + '1948 maanjäristys tuhosi suuren osan kaupungista.\n\n'
+      + 'Nisa on partialaisten muinainen kaupunki noin 15–18 kilometriä Ašgabatista länteen. '
+      + 'Alueeseen kuuluu kaksi kumpua, Vanha Nisa ja Uusi Nisa, joiden välimatka on noin '
+      + 'puolitoista kilometriä. Vanha Nisa oli kuninkaallinen linnoitus, jonka yhteydessä '
+      + 'mainitaan Mithridates I (171–138 eaa.) ja nimi Mithradatkert. Unesco otti Nisan '
+      + 'maailmanperintöluetteloon vuonna 2007. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: 38.0095,
+      etela: 37.9071,
+      lansi: 58.1811,
+      ita: 58.3959,
+    },
+    kohteet: [
+      {
+        nimi: 'Nisa',
+        lat: 37.96667,
+        lon: 58.195,
+      },
+    ],
+  },
+  biskek: {
+    polku: 'assets/kartat/biskek-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Biškekin länsiosa, jossa Osh-tori sijaitsee. Kaupunki on Kirgisian '
+      + 'pääkaupunki Chuin laaksossa. Kokandin khaanikunta rakensi paikalle Pishpekin '
+      + 'linnoituksen vuonna 1825; kaupunki kantoi Frunzen nimeä vuodesta 1926 ja sai '
+      + 'nykyisen nimensä vuonna 1991.\n\n'
+      + 'Osh-torilla myydään ruokaa, vaatteita, kodin tavaroita, matkamuistoja ja soittimia. '
+      + 'Kyyal-osasto, jonka nimi tarkoittaa unelmaa tai mielikuvitusta, on '
+      + 'kansallistuotteiden paikka: siellä on kirgisialaisia kansallisvaatteita, '
+      + 'kaiverrettuja puuarkkuja, vuodevaatteita ja kehtoja. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 42.878,
+      etela: 42.864,
+      lansi: 74.5612,
+      ita: 74.5759,
+    },
+    kohteet: [
+      {
+        nimi: 'Osh-tori',
+        tyyppi: 'aukio',
+        lat: 42.875,
+        lon: 74.57,
+      },
+    ],
+  },
+  dhaka: {
+    polku: 'assets/kartat/dhaka-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Dhakan vanha kaupunki Buriganga-joen rannalla Gangesin suistossa. '
+      + 'Mogulien kuvernööri Islam Khan siirsi Bengalin pääkaupungin Dhakaan vuonna 1610 ja '
+      + 'nimesi sen Jahangirnagariksi, mutta kaupunki säilytti vanhan nimensä.\n\n'
+      + 'Lalbaghin linnakkeen rakennutti prinssi Muhammad Azam vuonna 1678 Bengalin '
+      + 'kuvernöörin asuinpaikaksi. Työt jäivät kesken, kun kuvernöörin tytär Pari Bibi kuoli '
+      + 'vuonna 1684, ja alueella ovat mosku, kylpylä ja Pari Bibin hauta. Armenialainen '
+      + 'kirkko valmistui vuonna 1781 Armanitolaan entiselle armenialaiselle hautausmaalle; '
+      + 'kauppiaat kävivät siellä kauppaa juutilla ja nahalla. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 23.7324,
+      etela: 23.7095,
+      lansi: 90.3848,
+      ita: 90.4054,
+    },
+    kohteet: [
+      {
+        nimi: 'Lalbaghin linnake',
+        lat: 23.719,
+        lon: 90.3881,
+      },
+      {
+        nimi: 'Armenialainen kirkko',
+        lat: 23.71249,
+        lon: 90.40209,
+      },
+    ],
+  },
+  dusanbe: {
+    polku: 'assets/kartat/dusanbe-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Dušanben keskusta Tadžikistanin pääkaupungissa, Hissarin laaksossa. '
+      + 'Nimi tarkoittaa persiaksi maanantaita, ja se tulee maanantaisin pidetystä torista, '
+      + 'jonka ympärille kylä kasvoi. Neuvostoliitto teki paikasta Tadžikistanin autonomisen '
+      + 'tasavallan pääkaupungin vuonna 1924, ja vuosina 1929–1961 kaupunki kantoi nimeä '
+      + 'Stalinabad.\n\n'
+      + 'Rudaki-katu on keskustan pääkatu, ja sen varrella on hallinnon rakennuksia ja '
+      + 'kulttuurilaitoksia. Tadžikistanin kansallismuseo, muinaisesineiden museo ja '
+      + 'Rudaki-puisto kuuluvat tärkeimpiin käyntikohteisiin. Kaupunki suunniteltiin '
+      + 'leveiden, puiden reunustamien katujen varaan.',
+    rajat: {
+      pohjoinen: 38.584,
+      etela: 38.5622,
+      lansi: 68.7692,
+      ita: 68.8036,
+    },
+    kohteet: [],
+  },
+  islamabad: {
+    polku: 'assets/kartat/islamabad-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Islamabadin pohjoislaita, jossa Margallan kukkulat nousevat '
+      + 'Pothoharin tasangon reunalla. Pakistan valitsi uuden pääkaupunkinsa paikan vuonna '
+      + '1958, ja kreikkalainen arkkitehti Constantinos Doxiadis laati sille ruutukaavaan '
+      + 'perustuvan yleissuunnitelman, joka avautuu kukkuloita kohti.\n\n'
+      + 'Margallan kansallispuistoon kuuluvat kukkuloiden lisäksi Shakarparianin kulttuuri- '
+      + 'ja urheilualue sekä Rawal-järvi. Rawal-järvi on Korang-joen padottu tekoallas, jonka '
+      + 'presidentti Ayub Khan vihki käyttöön vuonna 1962 ja joka antaa vettä Islamabadille '
+      + 'ja Rawalpindille. Kukkuloilla elää muun muassa leopardeja. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 33.7662,
+      etela: 33.6619,
+      lansi: 72.9233,
+      ita: 73.1308,
+    },
+    kohteet: [
+      {
+        nimi: 'Margallan kansallispuisto',
+        tyyppi: 'luonto',
+        lat: 33.731,
+        lon: 72.937,
+      },
+      {
+        nimi: 'Rawal-järvi',
+        tyyppi: 'luonto',
+        lat: 33.7,
+        lon: 73.117,
+      },
+    ],
+  },
+  taskent: {
+    polku: 'assets/kartat/taskent-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Taškentin vanhakaupunki Chorsun basaarin ympärillä. Chorsu tarkoittaa '
+      + 'persiaksi "tienristeystä". Venäjän joukot valtasivat kaupungin toukokuussa 1865, ja '
+      + 'uusi kaupunki rakennettiin vanhan viereen; vuoden 1966 maanjäristys tuhosi suuren '
+      + 'osan vanhakaupungin savitaloista.\n\n'
+      + 'Kukeldashin medresa seisoo basaarin reunalla. Keltaisesta tiilestä rakennettu '
+      + 'oppilaitos valmistui 1500-luvun jälkipuoliskolla, ja sen noin 20 metriä korkean '
+      + 'portaalin sivuilla on kaksi tornia. Rakennus toimi myöhemmin karavaanien '
+      + 'majapaikkana ja linnakkeena, ja nykyään siellä on taas toimiva medresa. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 41.3295,
+      etela: 41.3053,
+      lansi: 69.231,
+      ita: 69.2834,
+    },
+    kohteet: [
+      {
+        nimi: 'Kukeldashin medresa',
+        lat: 41.32306,
+        lon: 69.23583,
+      },
+    ],
+  },
+  thimphu: {
+    polku: 'assets/kartat/thimphu-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Thimphu, Bhutanin pääkaupunki Wang Chhu -joen laaksossa. Kaupunki '
+      + 'ulottuu pohjois–etelä-suunnassa joen länsirannalla, ja se tuli hallinnon keskukseksi '
+      + '1900-luvun puolivälissä, kun pääkaupunki siirrettiin Punakhasta. Pohjoislaidalla on '
+      + 'Tashichho Dzong, jonka Zhabdrung nimesi uudelleen vuonna 1641.\n\n'
+      + 'Simtokhan dzong seisoo harjanteella noin viisi kilometriä Thimphun eteläpuolella. '
+      + 'Dzong tarkoittaa linnoitusluostaria, jossa hallinto ja uskonto ovat samassa '
+      + 'rakennuksessa. Zhabdrung Ngawang Namgyal rakennutti Simtokhan vuonna 1629, ja '
+      + 'nykyään siellä toimii dzongkhan kielen ja kulttuurin oppilaitos. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 27.477,
+      etela: 27.432,
+      lansi: 89.6274,
+      ita: 89.6728,
+    },
+    kohteet: [
+      {
+        nimi: 'Simtokhan dzong',
+        lat: 27.43806,
+        lon: 89.66944,
+      },
+    ],
+  },
+  bandarseribegawan: {
+    polku: 'assets/kartat/bandarseribegawan-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Bandar Seri Begawan, Brunein pääkaupunki Brunei-joen varrella Borneon '
+      + 'pohjoisrannikolla. Italialainen Antonio Pigafetta kuvasi vuonna 1521 jokeen '
+      + 'paaluille rakennettua suurta kaupunkia.\n\n'
+      + 'Kampong Ayer on usean kylän muodostama vesiasutus, jossa talot, koulut ja moskeijat '
+      + 'seisovat paalujen päällä ja kävelysillat yhdistävät niitä. Maalla, keskustan '
+      + 'tuntumassa, on Tasek Lama, puisto, jonka tekojärven ja vesiputouksen ympärillä '
+      + 'kulkee polkuja; sen näkötornista näkyy Kampong Ayerin vesiasutus. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 4.9218,
+      etela: 4.8772,
+      lansi: 114.9116,
+      ita: 114.9482,
+    },
+    kohteet: [
+      {
+        nimi: 'Kampong Ayer',
+        lat: 4.8825,
+        lon: 114.9425,
+      },
+      {
+        nimi: 'Tasek Lama',
+        tyyppi: 'luonto',
+        lat: 4.90292,
+        lon: 114.94512,
+      },
+    ],
+  },
+  kualalumpur: {
+    polku: 'assets/kartat/kualalumpur-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Kuala Lumpurin keskusta Klang- ja Gombak-jokien yhtymäkohdan lähellä. '
+      + 'Kaupunki syntyi tinakaivosten ympärille noin vuonna 1857, ja sen malaijinkielinen '
+      + 'nimi merkitsee suunnilleen mutaista yhtymäkohtaa.\n\n'
+      + 'Kuala Lumpurin historiallinen rautatieasema on Jalan Sultan Hishamuddinin varrella. '
+      + 'Arthur Benison Hubback suunnitteli sen, ja asema valmistui vuonna 1910; '
+      + 'arkkitehtuuri yhdistää itäisiä ja länsimaisia muotoja. Bukit Nanas on keskustan '
+      + 'sademetsäkumpu, josta rajattiin metsäsuojelualue vuonna 1906. Alue tunnetaan nimellä '
+      + 'KL Forest Eco Park, ja sen juurella seisoo KL Tower. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 3.1558,
+      etela: 3.1364,
+      lansi: 101.6903,
+      ita: 101.7055,
+    },
+    kohteet: [
+      {
+        nimi: 'Kuala Lumpurin historiallinen rautatieasema',
+        lat: 3.13944,
+        lon: 101.69333,
+      },
+      {
+        nimi: 'Bukit Nanas',
+        tyyppi: 'luonto',
+        lat: 3.15278,
+        lon: 101.7025,
+      },
+    ],
+  },
+  male: {
+    polku: 'assets/kartat/male-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Malé, Malediivien pääkaupunki, tiheästi asuttu korallisaari Intian '
+      + 'valtamerellä. Saariston tärkein rakennusmateriaali oli Porites-koralli, jota '
+      + 'nostettiin merestä ja leikattiin rakennuslohkoiksi.\n\n'
+      + 'Hukuru Miskiy, vanha perjantaimoskeija, rakennettiin sulttaani Ibrahim Iskandar I:n '
+      + 'aikana: työt alkoivat vuonna 1656 ja moskeija valmistui 1658 aiemman moskeijan '
+      + 'tilalle. Seinät on tehty toisiinsa sovitetuista korallilohkoista, joihin on '
+      + 'kaiverrettu koristeita, ja yläosa on lakattua puuta. Moskeija lisättiin Unescon '
+      + 'maailmanperintökohteiden ehdokaslistalle vuonna 2008. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 4.181,
+      etela: 4.1723,
+      lansi: 73.5051,
+      ita: 73.516,
+    },
+    kohteet: [
+      {
+        nimi: 'Hukuru Miskiy, vanha perjantaimoskeija',
+        lat: 4.17806,
+        lon: 73.5125,
+      },
+    ],
+  },
+  naypyidaw: {
+    polku: 'assets/kartat/naypyidaw-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Naypyidaw, Myanmarin pääkaupunki, joka rakennettiin tyhjälle alueelle '
+      + 'Pyinmanan lähelle Yangonin pohjoispuolelle. Hallinto siirtyi Yangonista 6. '
+      + 'marraskuuta 2005, ja kaupungin nimi julkistettiin Asevoimien päivänä 27. maaliskuuta '
+      + '2006.\n\n'
+      + 'Kartan kohde National Herbal Park on kasvipuisto Naypyidaw–Taungnyo-tien varrella. '
+      + 'Sinne on koottu yli 20 000 lääke- ja yrttikasvia, noin 700 lajia eri puolilta '
+      + 'Myanmaria. Puiston tarkoitus on suojella kasveja sekä ylläpitää maan perinteistä '
+      + 'lääketiedettä. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 19.7529,
+      etela: 19.7442,
+      lansi: 96.105,
+      ita: 96.1179,
+    },
+    kohteet: [
+      {
+        nimi: 'National Herbal Park',
+        tyyppi: 'luonto',
+        lat: 19.74952,
+        lon: 96.10793,
+      },
+    ],
+  },
+  phnompenh: {
+    polku: 'assets/kartat/phnompenh-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Phnom Penhin keskusta Tonlé Sap -joen ja Mekongin yhtymäkohdan '
+      + 'lähellä, jossa Bassac-joki lähtee omalle uralleen. Kaupunki on Kambodžan '
+      + 'pääkaupunki.\n\n'
+      + 'Kambodžan kansallismuseo seisoo Kuninkaanpalatsin pohjoispuolella. George Groslier '
+      + 'suunnitteli rakennuksen khmerien temppeliarkkitehtuurin mallien pohjalta; '
+      + 'rakennustyöt alkoivat vuonna 1917, ja museo vihittiin käyttöön huhtikuussa 1920. '
+      + 'Kokoelmassa on yli 14 000 esinettä muinaisesta ajasta Angkorin jälkeiseen aikaan, ja '
+      + 'se on yksi maailman suurimmista khmertaiteen kokoelmista. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 11.5723,
+      etela: 11.5628,
+      lansi: 104.9182,
+      ita: 104.932,
+    },
+    kohteet: [
+      {
+        nimi: 'Kambodžan kansallismuseo',
+        lat: 11.5658,
+        lon: 104.929,
+      },
+    ],
+  },
+  pjongjang: {
+    polku: 'assets/kartat/pjongjang-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Pjongjangin keskusta Taedong-joen rannalla. Goguryeon kuningas Jangsu '
+      + 'siirsi valtakuntansa pääkaupungin tänne vuonna 427, kun hän lähti Yalu-joen varrelta '
+      + 'ja asetti pääkaupungin Korean niemimaan keskelle, hedelmällisten riisimaiden '
+      + 'äärelle.\n\n'
+      + 'Kartan kohde on Moran-kukkula, jonka nimi tarkoittaa pionikukkulaa. Kukkulan puisto '
+      + 'on keskustan suosittu virkistysalue, ja sen reunalla on jäänteitä Goguryeon ajan '
+      + 'kaupunginmuurista. Taedongin puoleisella rantatörmällä on vanha Pubyok-paviljonki, '
+      + 'jonka nimi tarkoittaa kelluvia muureja. Kukkulalla on myös Pjongjangin '
+      + 'televisiotorni. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 39.0445,
+      etela: 39.014,
+      lansi: 125.7392,
+      ita: 125.7672,
+    },
+    kohteet: [
+      {
+        nimi: 'Moran-kukkula',
+        tyyppi: 'luonto',
+        lat: 39.04028,
+        lon: 125.75833,
+      },
+    ],
+  },
+  vientiane: {
+    polku: 'assets/kartat/vientiane-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Vientianen keskusta Mekong-joen rannalla. Kaupunki sijaitsee lähellä '
+      + 'Thaimaan rajaa, ja Laosin pääkaupungin keskustassa on useita buddhalaisia '
+      + 'temppeleitä.\n\n'
+      + 'Wat Si Saket seisoo Lan Xang -kadun ja Setthathirat-kadun kulmassa. Kuningas '
+      + 'Anouvong rakennutti temppelin vuonna 1818, ja sen luostarikäytävän seinien '
+      + 'syvennyksissä on yli kaksi tuhatta pientä keraamista ja hopeista Buddha-kuvaa. Kun '
+      + 'siamilaisjoukot hävittivät kaupungin 1820-luvun lopulla, temppeli säästyi suurelta '
+      + 'osin. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 17.9844,
+      etela: 17.9588,
+      lansi: 102.6085,
+      ita: 102.6335,
+    },
+    kohteet: [
+      {
+        nimi: 'Wat Si Saket',
+        lat: 17.96306,
+        lon: 102.61167,
+      },
+    ],
+  },
+  belmopan: {
+    polku: 'assets/kartat/belmopan-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Belmopanin ympäristö Belizen sisämaassa Cayon piirikunnassa. '
+      + 'Hurrikaani Hattie tuhosi lokakuussa 1961 suuren osan matalalla sijainneesta Belize '
+      + 'Citystä, ja hallitus päätti rakentaa uuden pääkaupungin sisämaahan. Rakennustyöt '
+      + 'alkoivat vuonna 1967, ja hallinto muutti Belmopaniin 1970.\n\n'
+      + 'Guanacasten kansallispuisto on noin 20 hehtaarin kokoinen, ja se sijaitsee Western '
+      + 'Highwayn pohjoispuolella Roaring Creekin sillan vieressä. Puisto nimettiin suuren '
+      + 'guanacaste-puun mukaan, joka säästyi hakkuulta, koska sen runko haarautui kolmeen '
+      + 'osaan. Kansallispuistoksi alue julistettiin 1990, ja sitä hoitaa Belize Audubon '
+      + 'Society. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 17.2672,
+      etela: 17.2465,
+      lansi: -88.789,
+      ita: -88.7644,
+    },
+    kohteet: [
+      {
+        nimi: 'Guanacasten kansallispuisto',
+        tyyppi: 'luonto',
+        lat: 17.2644,
+        lon: -88.786,
+      },
+    ],
+  },
+  kingston: {
+    polku: 'assets/kartat/kingston-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Kingston, Jamaikan pääkaupunki sataman rannalla Liguanean tasangolla '
+      + 'Hope-joen vieressä. Kaupunki perustettiin heinäkuussa 1692, kun kesäkuun '
+      + 'maanjäristys oli tuhonnut Port Royalin sataman vastarannalla.\n\n'
+      + 'Maanmittari John Goffe suunnitteli kaupungille ruutukaavan, jota rajasivat North, '
+      + 'East, West ja Harbour Street; sama katuverkko näkyy kartalla yhä. Kun tulipalo '
+      + 'tuhosi Port Royalin vuonna 1703, suurin osa merikaupasta siirtyi Kingstoniin. '
+      + 'Kingston julistettiin virallisesti Jamaikan pääkaupungiksi vuonna 1872, kun hallinto '
+      + 'siirtyi sinne Spanish Townista.',
+    rajat: {
+      pohjoinen: 17.9823,
+      etela: 17.9605,
+      lansi: -76.8073,
+      ita: -76.7789,
+    },
+    kohteet: [],
+  },
   ottawa: {
     polku: 'assets/kartat/ottawa-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -19932,7 +20571,12 @@ export const KAUPUNKIKARTAT = {
       + 'syntyi, kun kanavan reitillä oleva suo padottiin; sitä ennen paikka tunnettiin '
       + 'nimellä Dow\'s Great Swamp. Sen länsipuolella Dominion Arboretumin puuistutukset '
       + 'alkoivat vuonna 1889. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
-    rajat: { pohjoinen: 45.4502, etela: 45.3867, lansi: -75.7319, ita: -75.6677 },
+    rajat: {
+      pohjoinen: 45.4502,
+      etela: 45.3867,
+      lansi: -75.7319,
+      ita: -75.6677,
+    },
     kohteet: [
       {
         nimi: 'Rideau-putoukset',
@@ -19954,6 +20598,122 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  portauprince: {
+    polku: 'assets/kartat/portauprince-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Port-au-Princen vanha ydin Haitin länsirannikolla, Gonâvenlahden '
+      + 'pohjukassa. Ranskalaiset perustivat kaupungin vuonna 1749, ja suojaisa satama teki '
+      + 'siitä alueen merkittävän satamakaupungin.\n\n'
+      + 'Kaupunki nousee satamasta ylös kukkuloille, joiden kupeessa on Pétion-Villen '
+      + 'esikaupunki. Kauppatori Marché en Fer on rautarakennus, jonka presidentti Florvil '
+      + 'Hyppolite osti Pariisissa valmistettuna Haitiin 1890-luvulla; alun perin sen piti '
+      + 'olla rautatieasema Kairoon. Tammikuun 12. päivänä 2010 tapahtunut maanjäristys '
+      + 'tuhosi sen, ja se avattiin uudelleen vuonna 2011.',
+    rajat: {
+      pohjoinen: 18.5578,
+      etela: 18.536,
+      lansi: -72.3545,
+      ita: -72.3261,
+    },
+    kohteet: [],
+  },
+  sanjose: {
+    polku: 'assets/kartat/sanjose-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on San Josén historiallinen keskusta Costa Rican Keskilaaksossa. '
+      + 'Kaupunki on ollut Costa Rican pääkaupunki vuodesta 1823. Vauraus perustui '
+      + 'kahvinvientiin, joka oli 1800-luvulla maan tärkein.\n\n'
+      + 'Kansallisteatteri avattiin 21. lokakuuta 1897 Goethen Faustilla, ja sen rakentaminen '
+      + 'rahoitettiin kahviverolla. Barrio Amón syntyi 1800-luvun lopulla kahvikauppiaiden '
+      + 'varakkaaksi asuinalueeksi, ja Mercado Central on kauppahalli.',
+    rajat: {
+      pohjoinen: 9.9413,
+      etela: 9.9241,
+      lansi: -84.0905,
+      ita: -84.0687,
+    },
+    kohteet: [],
+  },
+  sansalvador: {
+    polku: 'assets/kartat/sansalvador-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on San Salvadorin tulivuori, joka kohoaa pääkaupungin luoteispuolella; '
+      + 'kaupungin länsiosat ulottuvat sen rinteille. Tulivuoren kärki on katkaistu: '
+      + 'Boquerónin kraatteri on noin puolitoista kilometriä leveä ja noin 500 metriä syvä.\n\n'
+      + 'Vanhan kalderan reunalla kohoaa El Picacho, noin 1 960 metriä korkea huippu. '
+      + 'Kraatterin pohjalla oleva pieni Boqueroncito-kartio syntyi kesäkuussa 1917 '
+      + 'alkaneessa purkauksessa, joka korvasi kraatterin järven. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 13.7492,
+      etela: 13.6799,
+      lansi: -89.3015,
+      ita: -89.1834,
+    },
+    kohteet: [
+      {
+        nimi: 'San Salvadorin tulivuori',
+        tyyppi: 'luonto',
+        lat: 13.734,
+        lon: -89.294,
+      },
+    ],
+  },
+  santodomingo: {
+    polku: 'assets/kartat/santodomingo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Santo Domingon Ciudad Colonial eli vanha kaupunki Ozama-joen '
+      + 'länsirannalla. Unesco merkitsi sen maailmanperintökohteeksi vuonna 1990. Kaupunki on '
+      + 'Dominikaanisen tasavallan pääkaupunki Hispaniolan eteläisellä rannikolla, ja sen '
+      + 'kivirakennukset ovat 1500-luvulta.\n\n'
+      + 'Ozaman linnoitus kohoaa joen rannalla vanhan kaupungin sisäänkäynnillä. '
+      + 'Espanjalaiset rakensivat sen vuosina 1502–1508 kuvernööri Nicolás de Ovandon '
+      + 'johdolla, ja keskellä kohoaa Torre del Homenaje -torni. Santo Domingon katedraali on '
+      + 'goottilaistyylinen ja sen holvit ovat ruodeholveja. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 18.4858,
+      etela: 18.4501,
+      lansi: -69.9402,
+      ita: -69.878,
+    },
+    kohteet: [
+      {
+        nimi: 'Ozaman linnoitus',
+        lat: 18.4732,
+        lon: -69.88171,
+      },
+      {
+        nimi: 'Santo Domingon katedraali',
+        lat: 18.47278,
+        lon: -69.88389,
+      },
+    ],
+  },
+  tegucigalpa: {
+    polku: 'assets/kartat/tegucigalpa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Tegucigalpan historiallinen keskusta Hondurasin pääkaupungissa, '
+      + 'vuoristoisessa laaksossa. Espanjalaiset perustivat paikalle hopeakaivosasutuksen 29. '
+      + 'syyskuuta 1578, ja nimen uskotaan tarkoittavan hopeakukkuloita. Pääkaupungiksi '
+      + 'Tegucigalpa tuli pysyvästi lokakuussa 1880, kun presidentti Marco Aurelio Soto '
+      + 'siirsi hallituksen Comayaguasta.\n\n'
+      + 'Choluteca-joki erottaa Tegucigalpan Comayagüelasta, ja kaupungit yhdistettiin '
+      + 'yhdeksi keskuspiiriksi 1930-luvun lopulla. Keskuspuiston vieressä seisoo San '
+      + 'Miguelin katedraali, barokkikirkko, jota rakennettiin vuosina 1765–1786.',
+    rajat: {
+      pohjoinen: 14.1144,
+      etela: 14.0972,
+      lansi: -87.2158,
+      ita: -87.1936,
+    },
+    kohteet: [],
+  },
   washington: {
     polku: 'assets/kartat/washington-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -19966,7 +20726,12 @@ export const KAUPUNKIKARTAT = {
       + 'Washington-monumentin kivirunko 1884. Thomas Jefferson -kirjastotalo avattiin vuonna '
       + '1897, ja National Building Museum toimii eläkeviraston talossa, joka valmistui 1887. '
       + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
-    rajat: { pohjoinen: 38.9122, etela: 38.8814, lansi: -77.0646, ita: -77.0006 },
+    rajat: {
+      pohjoinen: 38.9122,
+      etela: 38.8814,
+      lansi: -77.0646,
+      ita: -77.0006,
+    },
     kohteet: [
       {
         nimi: 'Georgetownin vanha kivitalo',
@@ -20000,6 +20765,65 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  basseterre: {
+    polku: 'assets/kartat/basseterre-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Basseterren vanha julkinen keskus Saint Kittsin saarella. '
+      + 'Ranskalaiset perustivat kaupungin vuonna 1627, ja se on ollut itsenäisen Saint '
+      + 'Kittsin ja Nevisin pääkaupunki vuodesta 1983.\n\n'
+      + 'Itsenäisyydenaukio tunnettiin aiemmin nimellä Pall Mall Square, ja nykyisen nimensä '
+      + 'se sai 19. syyskuuta 1983 itsenäistymisen kunniaksi. Aukiosta tuli hallinnon, kaupan '
+      + 'ja seuraelämän keskus, mutta siellä myytiin myös orjuutettuja ihmisiä. Aukion '
+      + 'asettelun on kerrottu muistuttavan Britannian lippua, Union Jackia. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 17.3022,
+      etela: 17.2919,
+      lansi: -62.737,
+      ita: -62.7193,
+    },
+    kohteet: [
+      {
+        nimi: 'Itsenäisyydenaukio',
+        tyyppi: 'aukio',
+        lat: 17.29612,
+        lon: -62.72227,
+      },
+    ],
+  },
+  bridgetown: {
+    polku: 'assets/kartat/bridgetown-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Bridgetownin historiallinen keskusta Barbadoksen pääkaupungissa, '
+      + 'jonka keskellä on Careenage eli Constitution-joen satama-allas. Historic Bridgetown '
+      + 'and its Garrison merkittiin UNESCOn maailmanperintölistalle vuonna 2011.\n\n'
+      + 'Parlamenttirakennukset ovat uusgoottilaista tyyliä, ja ne rakennettiin vuosina '
+      + '1870–1874 länsi- ja itäsiiveksi; parlamentti on kokoontunut niissä kesäkuusta 1874. '
+      + 'Nidhe Israelin synagoga on Synagogue Lanella. Se perustettiin 1600-luvulla, ja '
+      + 'hurrikaani tuhosi suuren osan alkuperäisestä rakennuksesta vuonna 1831. Pihapiirin '
+      + 'kaivauksissa löytyi vuonna 2008 rituaalikylpy eli mikveh. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 13.1026,
+      etela: 13.0939,
+      lansi: -59.6207,
+      ita: -59.6097,
+    },
+    kohteet: [
+      {
+        nimi: 'Nidhe Israelin synagoga',
+        lat: 13.09944,
+        lon: -59.61528,
+      },
+      {
+        nimi: 'Parlamenttirakennukset',
+        lat: 13.09699,
+        lon: -59.61392,
+      },
+    ],
+  },
   castries: {
     polku: 'assets/kartat/castries-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -20013,7 +20837,12 @@ export const KAUPUNKIKARTAT = {
       + 'Walcottin mukaan vuonna 1993; sen reunalla ovat katedraali ja keskuskirjasto. '
       + 'Etelässä kohoaa Morne Fortune, jonka huipulla on ranskalaisten Citadelle, '
       + 'valmistunut 1784. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
-    rajat: { pohjoinen: 14.0157, etela: 13.9859, lansi: -61.0013, ita: -60.9794 },
+    rajat: {
+      pohjoinen: 14.0157,
+      etela: 13.9859,
+      lansi: -61.0013,
+      ita: -60.9794,
+    },
     kohteet: [
       {
         nimi: 'Castriesin tori',
@@ -20031,6 +20860,38 @@ export const KAUPUNKIKARTAT = {
         tyyppi: 'luonto',
         lat: 13.98886,
         lon: -60.99137,
+      },
+    ],
+  },
+  kingstown: {
+    polku: 'assets/kartat/kingstown-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Kingstown, Saint Vincentin ja Grenadiinien pääkaupunki ja pääsatama '
+      + 'saaren lounaisrannikolla. Kaupunkia ympäröivät jyrkät kukkulat.\n\n'
+      + 'Kingstownin kasvitieteellinen puutarha perustettiin vuonna 1765 kuvernööri Robert '
+      + 'Melvillen aloitteesta lääke- ja hyötykasvien viljelyyn. Kapteeni William Bligh toi '
+      + 'sinne leipäpuun taimia vuonna 1793. Berkshire Hillillä on Fort Charlotte: britit '
+      + 'aloittivat sen rakentamisen vuonna 1763, ja se valmistui vuonna 1806. Linnakkeen '
+      + 'tykit suunnattiin sisämaahan, sillä puolustus varautui maitse tulevaan hyökkäykseen. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 13.1698,
+      etela: 13.1522,
+      lansi: -61.2452,
+      ita: -61.224,
+    },
+    kohteet: [
+      {
+        nimi: 'Kingstownin kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        lat: 13.16583,
+        lon: -61.22708,
+      },
+      {
+        nimi: 'Fort Charlotte',
+        lat: 13.1579,
+        lon: -61.2421,
       },
     ],
   },
@@ -20071,6 +20932,73 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  portofspain: {
+    polku: 'assets/kartat/portofspain-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Port of Spainin vihreä ydin, jossa Queen\'s Park Savannah ja sen '
+      + 'pohjoispuolella oleva Royal Botanic Gardens näyttävät kaksi tapaa antaa tilaa '
+      + 'kaupungin vihreydelle. Savannah oli sokeriruokotila, jonka kaupunki osti Peschierin '
+      + 'suvulta vuonna 1817; suvun pieni hautausmaa jäi yksityiseen omistukseen alueen '
+      + 'keskelle.\n\n'
+      + 'Royal Botanic Gardens perustettiin vuonna 1820 kuvernööri Ralph Woodfordin ja '
+      + 'kasvitieteilijä David Lockhartin johdolla, ja puutarha ulottuu Savannahin laidalta '
+      + 'presidentin residenssille asti. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: 10.678,
+      etela: 10.664,
+      lansi: -61.5204,
+      ita: -61.5094,
+    },
+    kohteet: [
+      {
+        nimi: 'Queen\'s Park Savannah',
+        tyyppi: 'luonto',
+        lat: 10.6693,
+        lon: -61.51408,
+      },
+      {
+        nimi: 'Royal Botanic Gardens',
+        tyyppi: 'luonto',
+        lat: 10.6744,
+        lon: -61.5143,
+      },
+    ],
+  },
+  roseau: {
+    polku: 'assets/kartat/roseau-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Roseaun keskusta Dominican länsirannikolla, Karibianmeren, '
+      + 'Roseau-joen ja Morne Bruce -kukkulan välissä. Kaupunki on Dominican pääkaupunki, ja '
+      + 'siinä näkyy sekä ranskalaisen että englantilaisen siirtomaakauden jälkiä.\n\n'
+      + 'Old Market on Dominican museon takana oleva tori, jolla käytiin siirtomaa-aikana '
+      + 'kauppaa ja myytiin myös orjuutettuja ihmisiä. Dominican kasvitieteellinen puutarha '
+      + 'perustettiin vuonna 1889 entiselle sokeriviljelmälle viljelykasvien kokeiluun ja '
+      + 'taimien tuotantoon. Hurrikaani David kaatoi sen vanhoja puita elokuussa 1979. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 15.3043,
+      etela: 15.2937,
+      lansi: -61.3902,
+      ita: -61.3789,
+    },
+    kohteet: [
+      {
+        nimi: 'Old Market',
+        tyyppi: 'aukio',
+        lat: 15.29667,
+        lon: -61.38722,
+      },
+      {
+        nimi: 'Dominican kasvitieteellinen puutarha',
+        tyyppi: 'luonto',
+        lat: 15.30125,
+        lon: -61.38191,
+      },
+    ],
+  },
   saintjohns: {
     polku: 'assets/kartat/saintjohns-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -20108,6 +21036,73 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  stgeorges: {
+    polku: 'assets/kartat/stgeorges-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on St. George\'s, Grenadan pääkaupunki, joka sijaitsee hevosenkengän '
+      + 'muotoisen sataman ympärillä vanhan tulivuorenkraatterin rinteillä. Ranskalaiset '
+      + 'perustivat kaupungin 1600-luvun puolivälissä, ja Pariisin rauha siirsi saaren '
+      + 'Britannialle vuonna 1763.\n\n'
+      + 'Fort George on sataman yllä olevalla niemekkeellä. Ranskalaiset rakensivat '
+      + 'kivilinnakkeen 1700-luvun alussa ja saivat sen valmiiksi 1710, ja britit nimesivät '
+      + 'sen uudelleen kuningas Yrjö III:n mukaan. Grenadan kansallismuseo on Young Streetin '
+      + 'ja Monckton Streetin kulmassa, ja se perustettiin vuonna 1976 entisten kasarmi-, '
+      + 'vankila- ja hotellirakennusten tiloihin. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: 12.0552,
+      etela: 12.0462,
+      lansi: -61.7588,
+      ita: -61.7478,
+    },
+    kohteet: [
+      {
+        nimi: 'Fort George',
+        lat: 12.0492,
+        lon: -61.7539,
+      },
+      {
+        nimi: 'Grenadan kansallismuseo',
+        lat: 12.05058,
+        lon: -61.75266,
+      },
+    ],
+  },
+  brasilia: {
+    polku: 'assets/kartat/brasilia-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Brasílian luontopuoli. Kaupunki vihittiin käyttöön pääkaupunkina 21. '
+      + 'huhtikuuta 1960; Lúcio Costa laati asemakaavan ja Oscar Niemeyer suunnitteli '
+      + 'suurimman osan julkisista rakennuksista. Unesco hyväksyi kaupungin '
+      + 'maailmanperintökohteeksi vuonna 1987.\n\n'
+      + 'Paranoá-järvi syntyi, kun Paranoá-joki padottiin kaupungin rakentamisen aikana '
+      + 'vuonna 1959; keinotekoisen järven pinta-ala on noin 48 neliökilometriä. Brasílian '
+      + 'kansallispuisto perustettiin marraskuussa 1961, ja sen noin 42 000 hehtaarin '
+      + 'alueella kasvaa cerradoa, savannimaista kasvillisuutta, sekä lähteitä ja puroja. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -15.7277,
+      etela: -15.8039,
+      lansi: -47.9341,
+      ita: -47.8149,
+    },
+    kohteet: [
+      {
+        nimi: 'Brasílian kansallispuisto',
+        tyyppi: 'luonto',
+        lat: -15.73806,
+        lon: -47.92667,
+      },
+      {
+        nimi: 'Paranoá-järvi',
+        tyyppi: 'luonto',
+        lat: -15.78056,
+        lon: -47.8225,
+      },
+    ],
+  },
   georgetown: {
     polku: 'assets/kartat/georgetown-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -20120,7 +21115,12 @@ export const KAUPUNKIKARTAT = {
       + 'Gardens on keskustan pieni puisto. Guyana Botanical Gardens on kaupungin itäpuolella '
       + 'entisen Vlissengenin sokeritilan maalla, ja se perustettiin 1800-luvun lopulla. '
       + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
-    rajat: { pohjoinen: 6.827, etela: 6.8015, lansi: -58.1697, ita: -58.1427 },
+    rajat: {
+      pohjoinen: 6.827,
+      etela: 6.8015,
+      lansi: -58.1697,
+      ita: -58.1427,
+    },
     kohteet: [
       {
         nimi: 'Georgetownin majakka',
@@ -20138,6 +21138,72 @@ export const KAUPUNKIKARTAT = {
         tyyppi: 'luonto',
         lat: 6.80547,
         lon: -58.14602,
+      },
+    ],
+  },
+  lapaz: {
+    polku: 'assets/kartat/lapaz-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on La Pazin vanha keskusta, Casco Viejo, noin 3 650 metrin korkeudessa. '
+      + 'Espanjalaiset perustivat kaupungin vuonna 1548, ja La Paz on Bolivian hallituksen ja '
+      + 'lainsäädäntöelimen kotipaikka.\n\n'
+      + 'Plaza Murillo suunniteltiin vuonna 1558 kaupungin ruutukaavan osaksi, ja sen '
+      + 'laidalla ovat katedraali ja Palacio Quemado. Aukion länsipuolella on San Franciscon '
+      + 'basilika: ensimmäinen kirkko sortui lumen alle 1600-luvun alussa, ja nykyinen '
+      + 'mestitsibarokkikirkko rakennettiin Viachan kivestä vuodesta 1743 alkaen. Basilikan '
+      + 'arvonimen kirkko sai vuonna 1948. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    rajat: {
+      pohjoinen: -16.4918,
+      etela: -16.5005,
+      lansi: -68.1411,
+      ita: -68.1298,
+    },
+    kohteet: [
+      {
+        nimi: 'San Franciscon basilika',
+        lat: -16.4965,
+        lon: -68.1373,
+      },
+      {
+        nimi: 'Plaza Murillo',
+        tyyppi: 'aukio',
+        lat: -16.4958,
+        lon: -68.1336,
+      },
+    ],
+  },
+  paramaribo: {
+    polku: 'assets/kartat/paramaribo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Paramaribon historiallinen sisäkaupunki Suriname-joen rannalla. '
+      + 'Hollantilaiset valtasivat englantilaisten perustaman kaupungin vuonna 1667, ja '
+      + 'alkuperäinen katuverkko sekä puurakennukset ovat kuuluneet UNESCOn maailmanperintöön '
+      + 'vuodesta 2002.\n\n'
+      + 'Fort Zeelandia rakennettiin ranskalaisten puulinnakkeen paikalle. Englantilaiset '
+      + 'kutsuivat sitä Fort Willoughbyksi, ja hollantilaiset antoivat sille nykyisen nimensä '
+      + 'vuonna 1667. Linnoituksessa toimii Surinamen museo. Palmupuisto on linnoituksen '
+      + 'pohjoispuolella, ja sen korkeat kuningaspalmut ovat puiston tunnusmerkki. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 5.8583,
+      etela: 5.8163,
+      lansi: -55.2078,
+      ita: -55.1458,
+    },
+    kohteet: [
+      {
+        nimi: 'Fort Zeelandia',
+        lat: 5.8252,
+        lon: -55.14987,
+      },
+      {
+        nimi: 'Palmupuisto',
+        tyyppi: 'luonto',
+        lat: 5.8282,
+        lon: -55.1502,
       },
     ],
   },
@@ -20185,6 +21251,32 @@ export const KAUPUNKIKARTAT = {
       },
     ],
   },
+  apia: {
+    polku: 'assets/kartat/apia-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Mount Vaea, vuori Apian eteläpuolella Upolun saarella Samoalla. Apia '
+      + 'on Upolun pohjarannikolla, ja vuoren juurella on Vailima, kirjailija Robert Louis '
+      + 'Stevensonin entinen koti, jossa on nykyään hänen museonsa.\n\n'
+      + 'Stevenson kuoli joulukuussa 1894, ja samoalaiset kantoivat hänen arkkunsa vuoren '
+      + 'huipulle, minne hänet haudattiin. Hänen vaimonsa Fanny haudattiin myöhemmin samaan '
+      + 'paikkaan. Hautaan johtaa jyrkkä polku, jota kutsutaan Rakastavien sydänten tieksi. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -13.8268,
+      etela: -13.8735,
+      lansi: -171.8388,
+      ita: -171.7694,
+    },
+    kohteet: [
+      {
+        nimi: 'Mount Vaea',
+        tyyppi: 'luonto',
+        lat: -13.86361,
+        lon: -171.77361,
+      },
+    ],
+  },
   canberra: {
     polku: 'assets/kartat/canberra-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
@@ -20197,7 +21289,12 @@ export const KAUPUNKIKARTAT = {
       + 'Mountain, 812 metriä, on ngunnawal-kansan pyhä kokoontumispaikka nimeltä Galambary. '
       + 'Mount Majura on 890 metriä korkea ja Canberran kaupunkialueen korkein kohta. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
-    rajat: { pohjoinen: -35.2231, etela: -35.3023, lansi: 149.0945, ita: 149.1861 },
+    rajat: {
+      pohjoinen: -35.2231,
+      etela: -35.3023,
+      lansi: 149.0945,
+      ita: 149.1861,
+    },
     kohteet: [
       {
         nimi: 'Mount Ainslie',
@@ -20216,6 +21313,153 @@ export const KAUPUNKIKARTAT = {
         tyyppi: 'luonto',
         lat: -35.2375,
         lon: 149.18056,
+      },
+    ],
+  },
+  funafuti: {
+    polku: 'assets/kartat/funafuti-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Funafuti, Tuvalun pääkaupunki, jossa on ohut soikea maakaistale '
+      + 'laguunin ympärillä. Atollilla asui vuonna 2017 noin 6 300 ihmistä, mikä on noin 60 '
+      + 'prosenttia koko Tuvalun väestöstä.\n\n'
+      + 'Yhteisöpaikat ovat Fongafale-saarella, jonka kapealla maakaistaleella kulkee '
+      + 'lentokentän kiitotie ja pääkatu. Kenttä rakennettiin toisen maailmansodan aikana, ja '
+      + 'sodan jäänteitä on saarella. Laguunin länsipuolella on Funafuti Conservation Area, '
+      + 'riutoille, laguunille ja saarekkeille tarkoitettu suojelualue, jonka pinta-ala on '
+      + 'noin 33 neliökilometriä.',
+    rajat: {
+      pohjoinen: -8.503,
+      etela: -8.5392,
+      lansi: 179.183,
+      ita: 179.2102,
+    },
+    kohteet: [],
+  },
+  majuro: {
+    polku: 'assets/kartat/majuro-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Majuro, Marshallinsaarten pääkaupunki ja Ratak-ketjuun kuuluva atolli '
+      + 'Tyynellämerellä. Atolli on matalien saarten rengas, jonka sisällä on laaja laguuni.\n\n'
+      + 'Kaupunkiydin Delap-Uliga-Djarrit on atollin itäosassa kolmen yhteen liitetyn saaren '
+      + 'kokonaisuutena, ja tie johtaa sieltä länsipäässä olevaan Lauraan, noin 40–50 '
+      + 'kilometrin päähän. Tammikuun lopussa 1944 yhdysvaltalaisjoukot valtasivat atollin '
+      + 'lähes tyhjänä, ja laguunista tuli suuri laivastotukikohta.',
+    rajat: {
+      pohjoinen: 7.1054,
+      etela: 7.0782,
+      lansi: 171.3621,
+      ita: 171.3983,
+    },
+    kohteet: [],
+  },
+  ngerulmud: {
+    polku: 'assets/kartat/ngerulmud-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Ngerulmudin ympäristö Palaun Babeldaobin saarella Melekeokin '
+      + 'osavaltiossa. Hallinto siirtyi tänne Kororista lokakuussa 2006, ja uusi pääkaupunki '
+      + 'sijaitsee noin 20 kilometriä Kororista koilliseen.\n\n'
+      + 'Ngardok-järvi on Palaun suurin makean veden järvi. Se liitettiin Ramsar-sopimuksen '
+      + 'kosteikkokohteiden luetteloon 18. lokakuuta 2002, ja suojelualue turvaa järven '
+      + 'vedenlaatua. Järvi ja sen kosteikot ovat suistokrokotiilin lisääntymisaluetta. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: 7.5155,
+      etela: 7.4968,
+      lansi: 134.6006,
+      ita: 134.6269,
+    },
+    kohteet: [
+      {
+        nimi: 'Ngardok-järvi',
+        tyyppi: 'luonto',
+        lat: 7.5125,
+        lon: 134.60361,
+      },
+    ],
+  },
+  nukualofa: {
+    polku: 'assets/kartat/nukualofa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Nukuʻalofa, Tongan pääkaupunki Tongatapun pohjarannalla. Kaupungissa '
+      + 'on syvänveden satama, ja kuningas George Tupou I antoi Tongan perustuslain 4. '
+      + 'marraskuuta 1875.\n\n'
+      + 'Kuninkaallinen palatsi, puurakenteinen rakennus, valmistettiin Aucklandin seudulla '
+      + 'ja pystytettiin vuonna 1867 kaupungin luoteisosaan meren rantaan. Se ei ole avoinna '
+      + 'yleisölle, mutta näkyy rannalta. Talamahun markkinoilla myydään muun muassa '
+      + 'paikallisten tekijöiden käsitöitä.',
+    rajat: {
+      pohjoinen: -21.1234,
+      etela: -21.1452,
+      lansi: -175.2162,
+      ita: -175.1874,
+    },
+    kohteet: [],
+  },
+  palikir: {
+    polku: 'assets/kartat/palikir-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Palikir, Mikronesian liittovaltion pääkaupunki Pohnpein saaren '
+      + 'luoteisosassa Sokehsin kunnassa. Pohnpei on Tyynenmeren saari, ja sen suurin '
+      + 'asutuskeskus Kolonia on pohjoisrannikolla.\n\n'
+      + 'Palikirissa ovat liittovaltion rakennukset ja toimistot, ja hallintoaluetta voi '
+      + 'kiertää kävellen. Kolonia on erillinen keskus: se on Pohnpein osavaltion '
+      + 'pääkaupunki, ja suurin osa saaren väestöstä asuu siellä.',
+    rajat: {
+      pohjoinen: 6.9287,
+      etela: 6.9069,
+      lansi: 158.1714,
+      ita: 158.1986,
+    },
+    kohteet: [],
+  },
+  southtarawa: {
+    polku: 'assets/kartat/southtarawa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on South Tarawa, Kiribatin pääkaupunki Tarawan atollin eteläosassa. Se '
+      + 'on jono matalia saaria atollin laguunin ja Tyynenmeren välissä, ja siellä asuu yli '
+      + 'puolet koko maan asukkaista.\n\n'
+      + 'Betio on saariketjun länsipäässä, ja siellä on pääkaupungin satama; Bairikiin johtaa '
+      + 'sieltä pengertie. Marraskuun 20. päivänä 1943 Betiossa alkoi Tarawan taistelu, jossa '
+      + 'Yhdysvaltain merijalkaväki hyökkäsi japanilaisten puolustajien kimppuun ja valtasi '
+      + 'saaren.',
+    rajat: {
+      pohjoinen: 1.3514,
+      etela: 1.3152,
+      lansi: 172.9397,
+      ita: 172.9937,
+    },
+    kohteet: [],
+  },
+  yaren: {
+    polku: 'assets/kartat/yaren-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    numeroympyrat: true,
+    esittely: 'Kartan alue on Yaren, Naurun eteläisen rannikon piirikunta ja saarivaltion '
+      + 'tosiasiallinen pääkaupunki; Naurulla ei ole virallista pääkaupunkia. Nauru on pieni '
+      + 'korallisaari Tyynellämerellä, ja se itsenäistyi vuonna 1968. Parlamenttitalo, '
+      + 'hallinnon toimistot ja saaren ainoa kansainvälinen lentokenttä ovat Yarenissa.\n\n'
+      + 'Moquan maanalainen järvi sijaitsee lentokentän vieressä. Sitä kutsutaan kaivoksi, '
+      + 'koska se oli toisen maailmansodan aikana asukkaiden tärkein juomavesilähde. Lähellä '
+      + 'ovat Moquan luolat. Moqua ja Makwa ovat Yarenin entisiä nimiä. Järven ympärille '
+      + 'rakennettiin aita vuonna 2001. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    rajat: {
+      pohjoinen: -0.5427,
+      etela: -0.5513,
+      lansi: 166.9149,
+      ita: 166.9257,
+    },
+    kohteet: [
+      {
+        nimi: 'Moquan maanalainen järvi',
+        tyyppi: 'luonto',
+        lat: -0.5466,
+        lon: 166.92,
       },
     ],
   },

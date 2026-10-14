@@ -80,9 +80,10 @@ const mac = (e) => (existsSync(join(data, e, 'kohdekartat-mac.json')) ? JSON.par
 const kartat = [], korvattavat = [];
 for (const k of kaupungit) {
   const kk = k.kohdekartta, vanha = VANHAT[k.id], t = mac(k.era)[k.id];
-  if (!kk?.kohteet?.length) continue;
+  // ALUEKARTTA (PT 14.10.2026): piirretty kartta ilman Codexin kohteita saa rivin tyhjällä kohdelistalla (esittely jää).
+  if (!kk?.kohteet?.length && t?.paatos !== 'PIIRRÄ') continue;
   let rivi = null;
-  if (t?.paatos === 'PIIRRÄ') rivi = { polku: t.polku, lahde: '© OpenStreetMap-tekijät (ODbL)', ...kk, rajat: t.rajat };
+  if (t?.paatos === 'PIIRRÄ') rivi = { polku: t.polku, lahde: '© OpenStreetMap-tekijät (ODbL)', ...kk, kohteet: kk?.kohteet ?? [], rajat: t.rajat };
   else if (vanha && sopii(vanha.rajat, kk.kohteet)) rivi = { ...vanha, ...(kk.esittely ? { esittely: kk.esittely } : {}), kohteet: kk.kohteet };
   if (!rivi) continue;
   if (vanha) korvattavat.push(k.id);
