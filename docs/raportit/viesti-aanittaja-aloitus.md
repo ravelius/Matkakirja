@@ -40,3 +40,6 @@ Kun kaikki 37 ovat sivulla → rivi Päätoimittajalle ja lista Pelikoodarille k
 ## Päivitys 12.10.2026 (tilinvaihto): AJANTASAINEN TILA
 Lue ensin docs/raportit/viesti-aanittaja-luovutus-20261012.md (ja -20261011.md). Käynnissä/odottaa: kipin musiikki v2 (120 BPM, 6 kokeilua), uusittavat pallokisan keräys/nippu + lyhtyhetki (2 vaihtoehtoa), shakin äänet (Wien 1873) — kaikki äänisivulla omistajan valintaa varten, EI vielä viety ämpäriin.
 Muistisäännöt: omistajan toimet → Asemataulu talo/toimi-aanittaja; uusi teksti ensin Tekstit/Odottaa; maksullinen generointi vain luvalla (yksi otto); lataukset CC0/CC BY/PD sallittu; ei ostoja; ääniportti ennen vientiä.
+
+## Päivitys 14.10.2026 (nollaus 51 %)
+Lue ensin docs/raportit/viesti-aanittaja-luovutus-20261014.md (avoimet: Max Q valmis, Kolme veljestä v3b valmis, ÄÄNILÄHTEET-inventaario PT:lle aloittamatta; PT = local_74630a27…, ei vanhaa local_593b89a1).
