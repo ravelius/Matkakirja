@@ -9,11 +9,16 @@ LS1 local_45a869de, KS local_37708e68, PK local_97810d35, Postivahti local_e6d70
 - KUITATTU ja NS:llä: maasto + horisontin meri, yövalot + katuvalorasteri, nimet, Kuu (ikkunasta todellinen koko 0,5° ≈ 18 px, sirppi +
   maavalo), korostuksen verho pois (korostus-rinne-190 660252ca2 → NS cherry-pick d9b50c004 + 8aae71cb1), lipun oma varjo
   (lippu-varjo-190 de075b93d → NS:lle 17.2x; iPad b7c3771a + iPhone 8D1FD618 -parit _tyo/linssiseppa2/lippu-varjo/).
-- VALAS: EI VIELÄ KUITATTU. Hyppy siirretty avauslennon loppuun (e7dd24ad3: kello sidottu RakettiLaukaisu.AvausS:ään, hyppy 1 alkaa
-  avauksen 10 s:ssa; avauksen jälkeen kamera on raketin lähikuvassa). Arkki 17.26 (65ac57c2): r0a nousu = valas näkyy (tumma selkä,
-  vaalea vatsa) alustan takana; r0b huippu = roiskepisarat peittivät → pisarat 0,5–1,2 m (f2e6eb769, kooste 1f4246858) → vahti ajaa
-  koosteen seuraavaksi: tarkista r0a/r0b/r0c ja lähetä PT:lle sarja + lähikuva (_tyo/linssiseppa2/vahti/valas-*-1726.png = edellinen).
-  Liioittelu 2,0, vaahto pienennetty (afc529636). Avaus kesti ajossa 17,1 s (puhe), joten r0c osui jo avauksen jälkeen.
+- VALAS = JUNAN 190 VIIMEINEN EHTO (AVOIN 1). PT 17.3x EI KUITATTU (8e4fe9256 ja 1726-kuvat: valas ~10 px, roiske pallorypäs ilmassa;
+  pisaroiden pienennys f2e6eb769 EI riitä). PT:n ehdot sanatarkasti: "1) hyppy niin lähelle avauslennon kameraa, että valas on ≥ 40 px
+  (n. 300–600 m), 2) vartalo näkyvästi vedestä nousten ja kaatuen (malli, ei hiukkasia), 3) roiske vettä pinnassa, ei ilmaan jäävää
+  pallorypästä." "Aja vasta sen jälkeen." → iss-kooste-190 on vahdissa POISSULJETTU (poista rivi valoseppa-haarat.txt:stä korjauksen jälkeen).
+  Tekniikka nyt: ValaanHyppy (Ydin/Iss, KeskiItaM −620 / KeskiPohjoinenM −108 = 630 m alustasta 257°, eli alustan TAKANA ~1,1 km
+  kamerasta); RakettiValas kello sidottu RakettiLaukaisu.AvausS:ään (hyppy 1 avauksen 10 s:ssa, e7dd24ad3). Avauskamera (Nousu.AvausKamera)
+  päättyy alustan ENE-puolelle 420 m:iin katse 250° (avaus kesti ajossa 17,1 s puheen takia). Ehdotus: hyppypaikka alustan ja kameran
+  väliin etualan mereen (alustasta ~40–100°, 150–350 m, lähin maa > 40 m; hae _tyo/linssiseppa2/andoya/kauko/valaan_paikka.py:n tapaan
+  andoya-alusta-v4.glb:stä) → ~300 m kamerasta ≈ 100+ px. Roiske: pinnan vaahtorengas + matalat pisarat (vMax ~5 m/s, ei pystykartiota
+  ilmaan), nousuroiske pois tai pieni. Todistus: r0a/r0b/r0c + lähikuva PT:lle.
 - Kooste linssiseppa2/iss-kooste-190 1f4246858 = juna-190 8aae71cb1 + andoya-kauko-190 f2e6eb769 (kaukolaatta, valas) +
   kupoli-yovalot-juna190 a6eb24b34 (katuvalot v2, Kuu-testikello AsetaHetki) + kupoli-nimet-190 d5b07b2ed. NS ottaa junaan näistä
   haaroista (pyysi jatkot juna-190:n päälle).
