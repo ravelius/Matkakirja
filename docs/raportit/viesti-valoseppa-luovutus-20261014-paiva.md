@@ -65,3 +65,18 @@ PK:n MaanKehys.Siirto(g, rakennus) (b28d792b8, iss-kupoli-190) korjaa sen – ta
 - Kevyen pallon 98d4de0f3 arkki puuttuu (PT pyysi luovutukseen): `linssiseppa2/kevyt-pallo-190`, PK yhdisti iss-kupoli-190:een.
 - Levy: omat app-kopiot lokit/linssiseppa2-app-{lp3,teosvalo1,lontoo4}; poista käytön jälkeen (teosvalo1 = juna-189:n "ennen"-pohja).
 - Ketjut: _tyo/linssiseppa2/{lontoo-praha,telakointi}/ketju-*.zsh + jatko-*.zsh (liput kaannos-nyt-* / simu-nyt-*). Tarkista `ps -ax | grep -E 'ketju-|jatko-'`.
+
+## PÄIVITYS 11.2x (luovutuksen jälkeen, ennen nollausta)
+- Lontoon haara kärki **7ab71527b**: + 6d17ba7c2 muodot-lontoo (Elizabeth Tower 12 × 12 m, korkeus 98, KS) ja index-v22 (Praha vesi-v2 ämpärissä)
+  + korostuksen yölisävalo 0,3 → 0,2 (PT hyväksyi). Testit 1768 läpi, unity 0. HUOM: praha-ateena-kehitys-haara on nyt vanhan kärjen päällä →
+  luo uudelleen: `git branch -f linssiseppa2/praha-ateena-kehitys linssiseppa2/lontoo-korkeus-v2 && cherry-pick 1a41ff9df` (worktreessä, push).
+- lontoo4: käännös 8101c93dd (LUKKO VAPAA 11.15 ilmoitettu), simu ajossa → ilmoita Julkaisijalle SIMU VAPAA (ketju-lontoo4.log).
+- PT 11.2x KUITTASI: Lontoon korostus 0,9 + yöajo; Prahan Vltava, liput, yölisävalo 0,2. EI vielä:
+  - **Josefov**: uudessa 340°-ruudussa keskellä alhaalla repeytynyt laattamassa → kokeile korkeammalta 90–110 m tai eri suunnasta (näkölinja
+    pintamallista: 330–345° paras; esim. 340°/90–110 tai 15°), uusi ruutu PT:lle; korjaustiedosto Documents/pallokierros-praha-korjaus.json.
+  - **Kaarlensillan yövesi**: KS korjaa padon raon pystyhelmana (praha3) → kytke index-v23/praha3 kun ämpärissä, uusi yökuva.
+  - **Trafalgar** (lontoo2 ja lontoo4): valkoinen suorakaide taivaalla keskellä ylhäällä (molemmat ruudut) + sumea laattamössö taustalla →
+    selvitä suorakaide (UI-elementti? Googlen laatta? korostuksen maski?) ja odottaako latausportti taustaa (NakymanTarkkuus mittaa kuvan alaosaa).
+  - **Greenwich**: +1,5 s harmaa taso yhä lontoo2:ssa (ennen porttia) → lontoo4 näyttää portin vaikutuksen; +4 s oikealla alhaalla violetit puut →
+    tarkista sävy (ilmakehä? aerosoli? puiden varjostin?).
+  - Telakointi 1858f8f53: arkki lähetetty PT:lle (proto-3d/lokit/todistus-telakointi10-*/arkki-telakointi10.png), PT kuittaa ennen yhdistämistä.
