@@ -1193,7 +1193,7 @@ export const OCEANIA_ARTIKKELIT = {
       + '\n\n'
       + 'Merkittävä eurooppalainen asutus alkoi vasta, kun '
       + 'Arltungasta löytyi kultaa 1887. Kaupungin ensimmäinen '
-      + 'kunnollinen rakennus, Stuart Town Gaol, valmistui 1907, '
+      + 'kunnollinen rakennus, Stuart Town Gaol, rakennettiin 1907–1909, '
       + 'jolloin eurooppalaisia asukkaita oli alle kaksikymmentä. '
       + 'Keski-Australian ensimmäinen sairaala Adelaide House avattiin '
       + '1926, rata tuli 1929, ja maailman ensimmäinen radiokoulu '

@@ -93647,7 +93647,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'eurooppalainen asutus alkoi vasta, kun Arltungasta '
             + 'löytyi kultaa 1887 sadan kilometrin päästä idästä. '
             + 'Kaupungin ensimmäinen kunnollinen rakennus, Stuart Town '
-            + 'Gaol, valmistui 1907, ja eurooppalaisia asukkaita oli '
+            + 'Gaol, rakennettiin 1907–1909, ja eurooppalaisia asukkaita oli '
             + 'silloin alle kaksikymmentä.',
           wiki: 'Alice Springs',
         },
