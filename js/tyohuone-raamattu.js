@@ -427,8 +427,8 @@ export const RAAMATTU = {
           + 'keskustelua ja/tai sen jälkeen, ei koskaan keskellä; Pulu ei puhu esittelyssä, vaan vain pelaajan napautuksesta lyhyesti '
           + 'siitä kohdasta, jota pelaaja osoitti (pelaaja päättää, milloin kuulee lisää). '
           + 'A) ROOLIT (omistaja avaa, Fable nimeää "Rooli (malli)"; täysi roolilista ja kansiot: ROOLIEN KANSIOT JA MALLIT): '
-          + 'PÄÄTOIMITTAJA (malli vaihtelee; vanha nimi FABLE, ks. PÄÄTOIMITTAJA = FABLE) = tarina ja kaanon, '
-          + 'päätökset, erien jako, Raamattu ja loki, omistajan kortit; ei koodaa, ei '
+          + 'PÄÄTOIMITTAJA (malli vaihtelee, 14.10.2026 alkaen Opus medium; vanha nimi FABLE, ks. PÄÄTOIMITTAJA = FABLE) = tarina ja kaanon, '
+          + 'päätökset, erien jako, Raamattu ja loki; omistajan kortit näyttää KESKUSTELUKANAVA (Opus, max; omistajan keskustelu ja ideointi, ks. KYSYMYKSET-SESSIO → KESKUSTELUKANAVA); ei koodaa, ei '
           + 'julkaise, ei seuraa CI:tä. JULKAISIJA (Opus) = merge '
           + 'v1973-prep-tyyppiseen työhaaraan, node --test 0 fail, uusi-versio.mjs (rivi <= '
           + '60 merkkiä), tarkista-kaksoisavaimet, build-standalone, PR, merge vihreänä '
@@ -516,9 +516,8 @@ export const RAAMATTU = {
           + 'aamun viestiin, ja roolille annetaan oletus, kunnes omistaja vastaa (ks. KYSYMYKSET-SESSIO). '
           + 'C) VIESTINTÄ FABLELLE (tärkein tokenisäästö): viesti VAIN '
           + 'kun a) erä on valmis ja pushattu, b) sessio on jumissa tai tarvitsee päätöksen, '
-          + 'c) Fable kysyy. Ei kuittauksia, ei väliraportteja. Valmistumisviesti enintään 8 '
-          + 'riviä: haara + commit, mitä muuttui (1-3 riviä), testit pass/fail, savuke x/y, '
-          + 'avoimet asiat. Pitkä raportti tiedostoon docs/raportit/ ja viestiin vain polku. '
+          + 'c) Fable kysyy. Ei kuittauksia, ei väliraportteja. Valmistumisviesti enintään 3 (omistaja 14.10.2026 klo 10.4x; ennen 8) '
+          + 'riviä: mitä (haara + commit, testit), sha, kuvien polku; muu (savuke, avoimet asiat) tiedostoon. Pitkä raportti tiedostoon docs/raportit/ ja viestiin vain polku. '
           + 'Sessiot puhuvat keskenään suoraan, kun asia ei vaadi päätöstä (Karttaseppä <-> '
           + 'Julkaisija polttovuorot ja luettelot, Laitetestaaja <-> Karttaseppä fps, '
           + 'Pelikoodari -> Julkaisija CI-korjaukset). Kaikki, mikä muuttaa sääntöä tai '
@@ -536,9 +535,9 @@ export const RAAMATTU = {
           + 'osuman ympäriltä; Fable lukee tiedostoja grep/head-otteina. E) OMISTAJAN '
           + 'KANAVAT: uudet toiminnot sekä bugit ja pienet ideat -> Fable (pilkkoo ja '
           + 'reitittää), kaappaukset docs/raportit/kaappaukset/omistaja-<pvm>/; Codex-'
-          + 'toimitukset -> Julkaisija hakee; päätökset ja luvat omistajalle Kysymykset-session kortilla '
+          + 'toimitukset -> Julkaisija hakee; päätökset ja luvat omistajalle Keskustelukanavan kortilla '
           + '(KYSYMYKSET-SESSIO), vihreät PR:t ilman kysymystä. '
-          + 'KYSYMYKSET-SESSIO (omistaja 14.10.2026 klo 09.0x, sanatarkasti: "Tee kysymyksille oma sonnet sessio, jotta mikään muu sessio varsinkaan sinä ei jää jumiin kun odotat kysymyksen vastausta minulta"; kumoaa 11.10.:n tekstikysymykset ja 12.10.:n Päätoimittajan omat kortit, historia lokissa): omistajan päätöstä vaativat kysymykset näytetään AskUserQuestion-kortteina vain roolisessiossa Kysymykset (Sonnet 5.5, low; checkout Matkakirja-kysymykset, ohje Matkakirja-fable/scratchpad/kysymykset/KYSYMYKSET-ROOLI.md). Päätoimittaja lähettää kysymyksen sille viestinä (KYSYMYS <tunnus>, vaihtoehdot ja suositus ensin) ja jatkaa työtä heti; Kysymykset-sessio nostaa kysymyksen Asemataululle ja puhelimeen ja välittää omistajan vastauksen sanatarkasti kysyjälle (OMISTAJAN VASTAUS <tunnus>), ja se on omistajan päätös. Roolien kysymykset kulkevat Päätoimittajan kautta; lupaikkunat jäävät roolien omiin ikkunoihin. Missä Raamattu muualla puhuu kortista, AskUserQuestionista tai tekstikysymyksestä, se tarkoittaa nyt Kysymykset-session korttia. OMISTAJALLE VAIN HÄNTÄ KOSKEVAT ASIAT (omistaja 9.10.2026 klo 19.0x): Päätoimittaja raportoi omistajalle vain sen, mikä vaatii hänen päätöstään, toimeaan tai hyväksyntäänsä, '
+          + 'KYSYMYKSET-SESSIO → KESKUSTELUKANAVA (omistaja 14.10.2026 klo 10.1x, sanatarkasti: "Kannattaisiko itse asiassa se uusi kysymyssessio muuttaakin Opus ja Medium Effortti ja muuttaa se päätoimittajaksi? Ja tämä nykyinen päätoimittajasessio olisikin sitten pelkästään keskustelukanava meidän kahden välillä. Ja tämän voisi pitää edelleen maksimiefortilla…"; kortti "Kyllä, kun juna 189 on TestFlightissa (Suositus)", voimaan 10.3x; kumoaa saman aamun 09.0x Kysymykset-session, historia lokissa): PÄÄTOIMITTAJA (Opus, medium; session local_74630a27, checkout Matkakirja-fable) orkestroi: roolit, erät, kuittaukset (kuvat katsottava), junat, jonokierros, odottajavahti, Asemataulu, Codex-posti ja Raamattu/loki (ainoa kirjoittaja). KESKUSTELUKANAVA (Opus, max; session local_593b89a1) on omistajan keskustelu ja ideointi: omistaja puhuu vain sinne, ja sieltä tulevat ohjeet ja "OMISTAJAN PÄÄTÖS … sanatarkasti" -viestit ovat omistajan sanaa. Omistajan päätöstä vaativat kysymykset näytetään AskUserQuestion-kortteina vain Keskustelukanavassa: Päätoimittaja lähettää kysymyksen sinne viestinä (KYSYMYS <tunnus>, vaihtoehdot ja suositus ensin) ja jatkaa työtä heti; vastaus palaa sanatarkasti. Päätoimittaja ei näytä kortteja eikä kirjoita omistajalle suoraan; omistajaa koskevat valmiit asiat (TF valmis, hyväksyttävät pelikuvat) menevät Keskustelukanavalle yhdellä rivillä. Roolien kysymykset kulkevat Päätoimittajan kautta; lupaikkunat jäävät roolien omiin ikkunoihin. Missä Raamattu muualla puhuu kortista, AskUserQuestionista, tekstikysymyksestä tai Kysymykset-sessiosta, se tarkoittaa nyt Keskustelukanavan korttia. OMA NOLLAUS VAIN KORTILLA (omistaja 14.10.2026 klo 10.2x, sanatarkasti: "kysy minulta kysymyskortilla ennen kuin meinaat nollata oman sessiosi. Nimittäin minulle on käynyt jo useamman kerran niin, että olen kirjoittanut pitkän pätkän tekstiä ja se hukkuukin yhtä äkkiä, kun sinä nollaatkin samaan aikaan sessiosi."): Keskustelukanava nollataan vain omistajan korttivastauksen jälkeen, eikä Postivahti nollaa sitä itsenäisesti; Päätoimittaja nollautuu kuten ennen (65 %). OMISTAJALLE VAIN HÄNTÄ KOSKEVAT ASIAT (omistaja 9.10.2026 klo 19.0x): Päätoimittaja raportoi omistajalle vain sen, mikä vaatii hänen päätöstään, toimeaan tai hyväksyntäänsä, '
           + 'tai mikä näkyy hänelle valmiina (esim. TestFlight valmis, hyväksyttävät pelikuvat, vastaukset hänen kysymyksiinsä). Roolien nollaukset, kuittaukset, '
           + 'tekniset sisäiset päätökset, levysiirrot ja jonokierrokset eivät mene chattiin; ne kirjataan lokiin ja tyojonot.md:hen. Vastaus omistajan kysymykseen kirjoitetaan '
           + 'vuoron VIIMEISEKSI tekstiksi, koska työkalukutsujen väliin jäävä teksti ei näy puhelimessa '
@@ -840,11 +839,11 @@ export const RAAMATTU = {
           + 'ROOLIEN KANSIOT JA MALLIT (kaikki /Users/Shared/Claude/ alla; haara = rooli-checkoutin työhaara, '
           + 'aloitusviesti docs/raportit/viesti-<rooli>-aloitus.md roolin uusimmassa origin-haarassa): '
           + 'Julkaisija Matkakirja-julkaisija (Opus); Natiiviseppä Matkakirja-3d-selvittaja, haara selvittaja-3d-luovutus (Opus); '
-          + 'Pelikoodari Matkakirja-pelikoodari (Opus); Natiivi-UI Matkakirja-natiivi-ui (Opus); Linssiseppä Matkakirja-linssiseppa (Opus); '
+          + 'Pelikoodari Matkakirja-pelikoodari (Opus); Natiivi-UI Matkakirja-natiivi-ui (Opus); Linssiseppä Matkakirja-linssiseppa (Opus; museot ja opas); VALOSEPPÄ (ent. Linssiseppä 2, nimi omistaja 14.10.2026 klo 10.4x) Matkakirja-linssiseppa-2 (Opus; valo, ilmakehä, materiaalit, avaruuskohtaukset); '
           + 'Siirtoseppä Matkakirja-siirtoseppa (Opus); Karttaseppä Matkakirja-karttaseppa (Opus); Sisältökirjuri Matkakirja-sisaltokirjuri (Sonnet); '
           + 'Laitetestaaja Matkakirja-laitetestaaja (Sonnet); Äänittäjä Matkakirja-aanittaja, haara aanittaja-tyo-20261011 (Sonnet); '
           + 'Postivahti Matkakirja-posti, haara postivahti (Sonnet); Asemataulu Matkakirja-asemataulu, haara asemataulu/tyo (Sonnet); '
-          + 'Päätoimittaja Matkakirja-fable (malli vaihtelee; vanha nimi Fable). Proto-git '
+          + 'Päätoimittaja Matkakirja-fable (malli vaihtelee; vanha nimi Fable); Keskustelukanava Matkakirja-fable (Opus, max). OSOITEKIRJA (omistaja 14.10.2026 klo 10.4x): /Users/Shared/Claude/osoitekirja.md (rooli → session id, kansio, malli; Päätoimittaja päivittää jokaisessa muutoksessa); roolit lähettävät viestit send_messagella session id:llä osoitekirjasta, eivät nimellä. VASTUUKARTTA: docs/vastuukartta.md (aineisto tai koodialue → omistava rooli). NOLLAUKSET POSTIVAHDILLE (omistaja 14.10.2026 klo 10.4x): Päätoimittaja päättää vain nollaustarpeen (roolin konteksti 50 %); rooli tekee luovutuksen ja lähettää Postivahdille LUOVUTUS VALMIS <sha>, ja Postivahti hoitaa loput (RC pois, clear-käsky tyhjällä jonolla, list_events 0, vakioaloitusviesti, RC päälle, rivi Päätoimittajalle); ohje Matkakirja-posti/NOLLAUS.md. TAVOITELUUPPI (omistaja 14.10.2026 klo 11.09; vaiheet lokissa TAVOITELUUPPI): malli tehdään kierroksittain Codexin havainnekuvia vastaan (pohjakartta + leikkaus + Commons-kuvat → PT hyväksyy → _valmiit/hyvaksytyt-mallit/), Blenderin vertailuarkki ja luvut joka kierros, tuore Sonnet-arvioija ennen valmista, pysähdys rajoissa tai 2 kierrosta ilman parannusta / 10 kierrosta; peliin vasta automaattisen kuvakierroksen kautta; enintään 2 luuppia kerrallaan. Pilotti Valoseppä (Petřínin näkötorni). AJOT AINA MYKISTETTYINÄ (omistaja 14.10.2026 klo 10.5x, loki): simu- ja Mac-ajot alkavat komennolla aani mykistys, Macin kaiuttimista ei soiteta mitään, ja esikatselun välilehti suljetaan aina tabs_close-komennolla (preview_stop ei sulje sivua); äänellinen tallenne kootaan klipeistä tiedostoon. Proto-git '
           + '/Users/Shared/Claude/proto-3d/Matkakirja-proto, erä-worktreet '
           + '/Users/Shared/Claude/wt/<rooli>-<aihe>. Loki: docs/raamattu-loki/paatokset-2026-09.md #KARSINTA '
           + '11.10.2026: TYÖTAPA JA SESSIOT (11.10.2026 klo 15.44).',
@@ -1018,10 +1017,10 @@ export const RAAMATTU = {
         'LAATU ON AINA TÄRKEIN PRIORITEETTI. Laatu voittaa vauhdin, '
           + 'määrän ja kustannuksen. Vähemmän ja viimeisteltyä.',
         'KYSYMYKSET OMISTAJALLE TEKSTINÄ VUORON LOPUSSA (omistaja 1.9. ja '
-          + '2.9.2026, muutettu 14.10.2026 klo 09.0x: Kysymykset-session kortteina, ks. '
+          + '2.9.2026, muutettu 14.10.2026 klo 10.1x: Keskustelukanavan kortteina, ks. '
           + 'TYÖTAPA JA SESSIOT, KYSYMYKSET-SESSIO): kun Päätoimittaja tarvitsee '
           + 'omistajan päätöksen tai vastauksen, se lähetetään '
-          + 'Kysymykset-sessiolle korttina näytettäväksi, vaihtoehdot '
+          + 'Keskustelukanavalle korttina näytettäväksi, vaihtoehdot '
           + 'ja suositus ensimmäisenä; 1–4 kysymystä kerrallaan. Kysymys esitetään vasta, kun työ, joka ei '
           + 'riipu vastauksesta, on '
           + 'tehty. VASTAUS ENNEN '
@@ -3430,7 +3429,7 @@ export const RAAMATTU = {
         'ÄÄNET PCM:NÄ, PAKKAUS KERRAN (omistaja 5.10.2026 klo 13.4x, sitova): kaikki generoitavat äänet tilataan muodossa pcm_44100, tasoitus ja limitteri tehdään PCM:nä, ja mp3 pakataan vain kerran lopullisesta masterista. Koosteet tehdään WAV-mastereista, eikä jo pakattua ääntä pakata uudelleen. LYHYET KERTAÄÄNET (Pelikoodari 10.10.2026 klo 01.4x: 61 lyhyttä kertaääntä oli tasoitettu integroituun LUFSiin, ja ne jäivät +18…+24 dB liian koviksi ja yli 0 dBTP:n, esim. Olavinlinnan askeleet): alle noin sekunnin kertaäänet tasoitetaan huippuun tai lyhyen aikavälin kovuuteen, ja kaikkien äänten true peak on PCM-masterissa enintään −1 dBTP. ÄÄNIPORTTI (Pelikoodari ja Päätoimittaja 10.10.2026 klo 04.5x): kaikki äänipaketit läpäisevät proto-3d/tyokalut/aaniportti.py:n ennen vientiä (vie-paketti.sh:n pakollinen vaihe): true peak enintään 0 dBTP (tavoite −1 dBTP PCM:nä) ja lyhyiden kertaäänten kovuus lyhyen aikavälin mittarilla. Perustellut poikkeukset ovat portin POIKKEUKSET-listalla (esim. Lyria-raidat omistajan linjalla ilman tasokorjauksia), ja määräaikainen poikkeus poistetaan, kun korjaus on tehty. GENEROIDUT ÄÄNET ILMAN KUUNTELUA (omistaja 11.10.2026 klo 11.3x): ääntämistä ei tarkisteta kuuntelemalla eikä omistajalta, puheentunnistuksen epäilyt eivät pysäytä vientiä; ehtona kieli määritelty suomeksi (language_code fi); ääniportin tekniset tarkistukset pysyvät. DIALOGIT YHTENÄ OTTONA (omistaja 12.10.2026 klo 00.1x: "Äänitä kumpikin repliikki yhtenä pitkänä dialogi ottona jotta rytmi säilyy luontevana"; jatke omistajan 3.10.2026 säännölle "Pitäisi generoida yksi pitkä teksti kerralla jotta tulisi luonnollinen ääni"): kahden tai useamman äänen keskustelu, myös kertojan ja Pulun yhteinen selostus, generoidaan yhtenä dialogiottona aikaleimoin, ei repliikki kerrallaan (linnojen kohtauksissa samoin, ks. KOHTAUKSET YHTENÄ OTTONA).',
         'LUKIJAÄÄNI WILLIAM, EI KONELUKIJAA (omistaja 5.10.2026 klo 13.2x, sitova): kuvaselitteet, nostokortit ja lehdet luetaan '
           + 'Williamin äänellä (ElevenLabs-striimi), Pulun chatin vastaukset Pulun omalla äänellä; xAI:n Aino-ääntä ei käytetä. ISS:n '
-          + 'kuvaselitteitä ei lueta automaattisesti, vaan vain kaiutinnapista (pelaaja päättää, milloin kuulee lisää).',
+          + 'kuvaselitteitä ei lueta automaattisesti, vaan vain kaiutinnapista (pelaaja päättää, milloin kuulee lisää); POIKKEUS AUTO (omistaja 14.10.2026 klo 09.4x): AUTO kytkee luennan heti, nappi on päällä oranssi, ja luennan aikana näkyvät vain otsikko, kuva ja maapallo (yksi napautus palauttaa napit ja Pulun). ISS:n tekstien äänet tehdään etukäteen; määrän päättää omistaja.',
         'STRIIMILUKIJAN KAKSI NAPPIA (omistaja 28.9.2026, sitova, web ja natiivi): kaikissa luentakohdissa näkyy vain '
           + 'kaiutin (toisto/tauko + VU) ja mini-hampurilainen; hammaspyörä-nappi poistuu. Hampurilainen avaa tiiviin valikon: '
           + 'tekstin kappaleet listana (napautus hyppää kappaleeseen, nykyinen korostettuna), alimpana kelausrivi — vasemmalla '
@@ -3972,6 +3971,7 @@ export const RAAMATTU = {
           + '(vain Fable kirjoittaa).',
         'docs/roolitus.md — työnjako, viestintä, julkaisusäännöt, '
           + 'pistokokeet.',
+        'docs/vastuukartta.md — aineisto ja koodialue → omistava rooli (omistaja 14.10.2026; session id:t /Users/Shared/Claude/osoitekirja.md).',
         'docs/kuvatuotanto-kohtaamiset.md — kohtaamiskuvien julkinen '
           + 'tuotantoloki, hyväksytty kuvalinja ja toimitustilat.',
         'docs/moduulit/linssit.md · docs/moduulit/kaupunkilehti.md · '
