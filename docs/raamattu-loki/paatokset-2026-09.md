@@ -14185,3 +14185,39 @@ Kylmäkäynnistystestin (14.10.2026 klo 20.35) korjauksena Raamatusta siirrettii
 2) Ydinajatus kohta 2, KONTEKSTIN NOLLAUS: POSTIVAHDIN KIERROS (sitova, omistaja 9.10.2026 klo 11.5x): Postivahti ajaa kierroksen 10 minuutin välein toistuvalla ajastuksella (CronCreate tai ScheduleWakeup), jonka kehote on sanatarkasti "POSTIVAHDIN KIERROS (Raamattu, KONTEKSTIN NOLLAUS): 1) get_usage jokaiselle roolisessiolle (myös levossa oleville) ja PÄÄTOIMITTAJALLE; rooli ≥ 50 % (uudestaan 65 %), Päätoimittaja ≥ 65 % (uudestaan 80 %) → yksi rivi Päätoimittajalle. 2) Viikkokiintiö 96 % ja 99 % → yksi rivi Päätoimittajalle, ei siirtopromptia. 3) tools/tarkista-tyotilat.sh. 4) Asemataulu: mittarit, roolit ja laitteet ArtifactDatalla omalla 5 minuutin ajastuksella, kun katsojan syke on alle 6 min vanha (tools/asemataulu/syke.py); muihin Asemataulun dokumentteihin Postivahti ei kirjoita." — ohje kulkee joka kierroksella kehotteessa, joten tiivistys, nollaus tai tilinvaihto ei pudota kohtia pois. Uusi, nollattu tai tilinvaihdon jälkeen avattu Postivahti käynnistää [jatkuu ennallaan: ajastuksen ensimmäisenä toimenaan …].
 
 Korvaavat: docs/tilinvaihto.md (järjestetty lista, roolitaulukko, VOIMASSA OLEVA ARVO) ja Postivahdin KIERROS.md (4–5 min ScheduleWakeup; peili tools/tyotavat/KIERROS.md). Samalla Raamatusta poistettiin kovakoodatut session id:t (ks. /Users/Shared/Claude/osoitekirja.md), PT:n malli korjattiin 'Opus max' → 'Opus medium', TF-junan rytmi korjattiin vastaamaan 12.10. linjaa (vain omistajan pyynnöstä, enintään 2/pv) ja tilataulun '10 minuutin' maininnat poistettiin.
+
+## KESKUSTELUKANAVAN NOLLAUS: VAIN KORTIN KYLLÄ, HETI SEN JÄLKEEN ETÄYHTEYS JA ASEMATAULU (14.10.2026 klo 21.10)
+
+Omistaja 14.10.2026 klo 20.48 (KK:n välittämä, sanatarkasti): "avaa asemataulu aina kun nollaat itsesi, koska muuten en näe sitä läppärillä."
+
+Linjaus: Keskustelukanava (KK) nollataan vain omistajan kortin Kyllä-vastauksella (ei omasta päätöksestä eikä sivumaininnasta; tekstilaatikkoon kesken kirjoitettu viesti katoaa, omistaja 14.10. klo 10.2x). Heti nollauksen jälkeen KK kytkee set_remote_control self true ja avaa Asemataulun (Artifact, action open). Syy: clear_session ei tyhjennä Remote Control -yhteydessä olevaa sessiota, joten etäyhteys katkaistaan nollauksen ajaksi ja kytketään heti uudelleen. Raamattuun tiivistetty kohta OMA NOLLAUS VAIN KORTILLA; aikaisempi sanatarkka lainaus 10.2x on tämän lokin kohdassa KESKUSTELUKANAVAN OMA NOLLAUS VAIN KORTILLA (10.33). Kirjaus: Päätoimittaja (apuagentti).
+
+## ASEMATAULU: JUNARIVIN NIMI (TF N / JUNA N) JA TF-ARVIO (14.10.2026 klo 21.10)
+
+Omistaja 14.10.2026 klo 20.51 ja 20.53, sanatarkasti: "Tuon juna 189 pitäisi olla jo nimetty TF koska se on perillä. TF:n alle voi laittaa junan saapumis ajan"
+
+Linjaus (työtapa, Raamattu ASEMATAULUN DOKUMENTIT JA KIRJOITTAJAT): Asemataulun junarivillä perillä oleva juna on "TF N" ja tila "TestFlightissa (saapui pvm klo)". Lähestyvä juna on "Juna N", ja kun sen sisältö on lukittu ja jäljellä olevien töiden kesto arvioitu, tila-kenttään kirjoitetaan TF-arvio "TestFlightissa arviolta noin klo HH.MM"; Päätoimittaja päivittää arvion sen muuttuessa.
+
+## ITALIA: MUKAAN MYÖS ITALIAN MUSEOT, ITALIA POIS APP STORESTA (14.10.2026 klo 21.10)
+
+Omistajan kysymys 14.10.2026 klo 21.00, sanatarkasti: "Voisiko Italian museon tehdä muihin maihin ja jättää Italian appstore sta pois?" Omistajan kortti 21.02, vastaus: "Mukaan myös Italian museot, Italia pois App Storesta". Ajoitus (kortti 20.58): "Ei vielä"; ensin Ranskan salin kertomukset ja zoomikohdat junaan 191.
+
+Linjaus: kun taidemuseon Italian sali tehdään, mukaan otetaan myös Italian valtion museoiden teokset (Commonsin PD-kuvat), ja koko sovellus jätetään pois Italian App Storesta (Julkaisija, kun sali tulee peliin; App Store Connect: Saatavuus). Kumoaa 24.9./9.10. rajauksen "Italian julkisten haltijoiden teokset piilotetaan Italian App Store -alueella / Italian taidetta ensisijaisesti Italian ulkopuolisten kokoelmien CC0-kuvin". Omistaja tietää riskin: Italia vaatii maailmanlaajuista kieltoa (Codice art. 107–108, docs/raportit/italia-kulttuuriperintolaki-20261009.md), LG/OLG Stuttgart 2024: kielto vain Italiassa. Vatikaani ei kuulu päätökseen. Raamattuun lisäksi APP STORE -ALUEIDEN TARKISTUSLISTA (Julkaisija): Kreikan piilotus GRC voimassa; "Italian sali pelissä → sovellus pois Italian App Store -alueelta (App Store Connect: Saatavuus)". Docs/-kansiossa ei ollut App Store -julkaisun tarkistuslistaa, joten rivi on Raamatussa.
+
+## VANHENTUNEET OHJEET KORJATAAN KYSYMÄTTÄ (14.10.2026 klo 21.10)
+
+Omistajan kortti 14.10.2026 klo 21.06, sanatarkasti: "Kyllä, nämä ja jatkossa vastaavat (Suositus)".
+
+Linjaus: vanhentuneet tiedot ohjeissa (CLAUDE.md, Raamattu, docs/) korjataan jatkossa kysymättä; uudet säännöt aina omistajan kortilla. CLAUDE.md:n korjaukset tekee Keskustelukanava, muut ohjeet Päätoimittaja.
+
+## VIESTIT PÄÄTOIMITTAJALLE ENINTÄÄN 3 RIVIÄ (VAHVISTUS) (14.10.2026 klo 21.10)
+
+Omistaja 14.10.2026 klo 10.4x: viestit Päätoimittajalle enintään 3 riviä (mitä, sha, kuvien polku; yksityiskohdat tiedostoon). Korvaa vanhan "enintään 8 riviä" -säännön. Raamatun Ydinajatus kohta 2 oli jo päivitetty ("enintään 3 … ennen 8"); muita 8 rivin mainintoja Raamatussa ei ole (grep 14.10. ilta). CLAUDE.md:n vastaavan kohdan korjasi Keskustelukanava (2cd664200).
+
+## RAAMATUN TIIVISTYS 14.10. ILTA (ASEMATAULU) (14.10.2026 klo 21.10)
+
+Tilan vuoksi Raamatusta poistettiin historia, joka on jo lokissa tai docs/tilinvaihto.md:ssä: 1) ASEMATAULU TILIKOHTAINEN -kohdan tilinvaihtovaiheet 1–3 (Artifact list, julkaisu, ArtifactData-batch, osoitteet.md, Postivahti, jonokierroksen kohta 7, omistajan rivi) korvattiin viittauksella docs/tilinvaihto.md kohtaan 4; 2) rivi "TILINVAIHDOSSA SAMA OSOITE (10.10.2026) KUMOTTU 12.10.2026: jokaisella tilillä oma kopio (ks. ASEMATAULU TILIKOHTAINEN), mittarit ja roolit vie Asemataulu-sessio; sanatarkka päätös lokissa." poistettu. ITALIA-kohdasta poistettiin kumottu 9.10. linjaus (yllä sanatarkasti).
+
+## LÄPINÄKYVYYDEN RAJA (omistaja 14.10.2026 klo 21.42) (14.10.2026 klo 21.43)
+
+Omistaja sanatarkasti (kuva Pulun ISS-taulusta pilvien päällä): "Teksti ei näy. Näissä saa olla tausta. Läpinökyvyys koskee vain yksittäisiä nappeja tai yksittäisiä tekstejä jotka ovat korkeintaan lauseen mittaisia". Korvaa 14.10. klo 12.25:n TEKSTILAATIKOT LÄPINÄKYVIKSI -linjan: valikot, taulut ja usean rivin paneelit saavat olemassa olevan paneelipohjan; läpinäkyviä vain yksittäiset napit ja enintään lauseen mittaiset tekstit. Pulun ISS-taulu kiireelliseen junaan 191.

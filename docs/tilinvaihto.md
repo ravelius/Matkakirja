@@ -6,20 +6,37 @@ TILINVAIHDON TARKISTUSLISTA viittaa tänne; tämä on se lista järjestyksessä.
 
 Lyhenteet: S = /Users/Shared/Claude, F = S/Matkakirja-fable/scratchpad. "Vain Mac" = ei gitissä; peili tools/tyotavat/ (LUEMINUT.md).
 
+## 0.0 Käynnistys ilman PT:tä ja KK:ta (kylmäkäynnistystesti 2, 14.10.2026)
+- Ensimmäinen sessio, jonka omistaja avaa uudella tilillä kansiossa S/Matkakirja-fable, ON PÄÄTOIMITTAJA: nimeä se heti
+  "PÄÄTOIMITTAJA (Opus, medium)" (set_session_title, set_session_effort medium) ja lue tämä tiedosto loppuun ennen muuta työtä.
+- Niin kauan kuin Keskustelukanavaa ja Asemataulua ei ole, omistajan toimet annetaan POIKKEUKSENA suoraan tähän chattiin
+  (sama muoto: "## ⚠️ TOIMI TARVITAAN", lihavoitu ohje, kopioitava rivi). Kun KK ja Asemataulu ovat pystyssä (kohdat 2 ja 4),
+  palataan tavalliseen: kortit KK:ssa ja VAATII TOIMIA (Asemataulun toimi-<rooli>).
+- Sallinnat ja hookit yhdellä omistajan rivillä (tiedosto, ei käsin kirjoitettua lohkoa):
+  `bash /Users/Shared/Claude/Matkakirja-fable/tools/tyotavat/palauta-sallinnat.sh`
+  (jos tiedostoa ei vielä ole PT:n checkoutissa: `git -C /Users/Shared/Claude/Matkakirja-fable fetch origin main` ja
+  `git -C /Users/Shared/Claude/Matkakirja-fable checkout origin/main -- tools/tyotavat/`).
+- Chrome kirjautuu uudelle tilille (claude.ai, omistaja): artefaktit ovat oletuksena yksityisiä, joten Asemataulu ei aukea
+  läppärin Chromessa vanhalla kirjautumisella (avauskomento kohdassa 4).
+
 ## 0. Tili ensin (ennen yhtään roolisessiota)
 1. `claude auth status` → millä tilillä komentorivi on. Jos väärä: `claude auth login` (omistaja hyväksyy selaimessa) ja tarkista,
    että accountUuid = ympäristön CLAUDE_CODE_ACCOUNT_UUID ja orgId = CLAUDE_CODE_ORGANIZATION_UUID. Komentorivi kirjataan SOVELLUKSEN
    tilille (Raamattu TILI ENNEN KÄYNNISTYSTÄ, 9.10.; kumoaa 7.10. "toinen tili kuin sovellus").
-2. OMISTAJAN TOIMET (yksi "## ⚠️ TOIMI TARVITAAN" -kortti Keskustelukanavassa, kaikki kerralla):
+2. OMISTAJAN TOIMET (yksi "## ⚠️ TOIMI TARVITAAN" -viesti, kaikki kerralla; ennen KK:n luontia suoraan PT:n chattiin, kohta 0.0):
+   - Chrome kirjautuu claude.ai:hin uudella tilillä (Asemataulun avaus);
    - puhelimen Claude-sovellus kirjautuu uudelle tilille (muuten Remote Control -ilmoitukset eivät tule);
    - claude.ai → Code → ympäristö Default: Network access = Full ja GitHub-yhteys (muuten Wikimedia/WebFetch 403, pilvi ei näe repoa);
    - tilin lisäosat: web-artifacts-builder, Unity, unity-perf (Raamattu, UUSI TILI TARKISTAA);
    - tilaustaso (Max, Opus 1M) ja push-ilmoitukset pois tilin asetuksista (EI PUSH-ILMOITUKSIA 14.10.);
-   - jos sallinnat puuttuvat (kohta 6): omistajan yksirivinen bash-lohko.
-3. Kirjaa tili: päätili (omistajan muukin käyttö) = siirtoprompti 50 %:ssa; koodaustili = vain rivi 99 %:ssa. Kerro Postivahdille.
+   - jos sallinnat puuttuvat (kohta 6): `bash /Users/Shared/Claude/Matkakirja-fable/tools/tyotavat/palauta-sallinnat.sh`.
+3. Kirjaa tili: päätili (omistajan muukin käyttö) = siirtoprompti 50 %:ssa; koodaustili = vain rivi 99 %:ssa. Kirjaus lokiin
+   (`node tools/raamattu-kirjaa.mjs "TILINVAIHTO …"`) ja F/asemataulu/osoitteet.md:n taulukkoon; Postivahdille, kun se on luotu.
 
 ## 1. Talteen ennen vanhojen sessioiden tyhjennystä
 1. Jokainen rooli, jolla on keskeneräistä: luovutus + push (docs/moduulit/siirtoraportti.md). Lue roolien uusimmat luovutukset.
+   Uusin luovutus löytyy aikajärjestyksessä (tiedostonimet -aamu/-ilta2/-yo eivät lajittele): `git fetch origin` ja
+   `git log --remotes=origin --since=3.days --format='%ci %h %D' --name-only -- 'docs/raportit/viesti-<rooli>-luovutus-*' | head`.
 2. PT:n ja Keskustelukanavan keskustelut: `python3 tools/tallenna-keskustelu.py <session-uuid> Päätoimittaja` ja
    `… <session-uuid> Keskustelukanava` (kirjoittaa S/keskustelut/). Muut roolit: luovutus riittää.
 3. Vanhat sessiot tyhjiksi: `clear_session`, tarkistus `list_events` = 0. Jos vanhan tilin sessiot eivät näy uudella tilillä,
@@ -29,7 +46,10 @@ Lyhenteet: S = /Users/Shared/Claude, F = S/Matkakirja-fable/scratchpad. "Vain Ma
 Kaava: Raamattu SESSIOIDEN LUONTI ILMAN OMISTAJAA (osascript + screencapture, valikot suomeksi: Tiedosto › Uusi istunto / Avaa kansio…,
 2560×1440-koordinaatit). Edellytys: sallinnat Bash(osascript:*), Bash(screencapture:*), Bash(sleep:*) PT:n .claude/settings.local.json:ssa;
 jos osascript ei saa ohjata appia, omistaja sallii Järjestelmäasetukset › Tietosuoja ja suojaus › Käyttöapu (Claude/Pääte).
-Nimi: "Rooli (malli, effort)", PT isoin kirjaimin "PÄÄTOIMITTAJA (Opus, medium)". Effort `set_session_effort`. Roolien aloitusviestin
+Osascriptissä valikkojen nimet suomeksi (`click menu item "Uusi istunto" of menu "Tiedosto"`); malli valitaan luonnoksessa ennen
+ensimmäistä viestiä. Järjestys per sessio: luonti → `set_session_model` (jos väärä) → `set_session_effort` → `set_session_title`
+"Rooli (malli, effort)" (PT ja KK isoin kirjaimin) → `set_session_permission_mode` → aloitusviesti → `set_remote_control`.
+Lupatila: ohitustila (bypassPermissions) kaikille paitsi Äänittäjä auto (sessiotiedostot 14.10.). Roolien aloitusviestin
 lähettää PT tilinvaihdossa (nollauksissa Postivahti, NOLLAUS.md).
 
 | Rooli | Malli, effort | Checkout (S/…) | Aloitusviesti | Silmukat, jotka rooli käynnistää |
@@ -37,7 +57,7 @@ lähettää PT tilinvaihdossa (nollauksissa Postivahti, NOLLAUS.md).
 | PÄÄTOIMITTAJA | Opus, medium | Matkakirja-fable | docs/raportit/viesti-fable-aloitus.md + uusin luovutus | cron JONOKIERROS "7,27,47 * * * *" (F/jonokierros-teksti.md); Monitor ODOTTAJAVAHTI `python3 -u S/hooks/odottajat-vahti.py` (timeout 1800000, uusi joka vanhenemisella) |
 | KESKUSTELUKANAVA | Opus, max | Matkakirja-fable | docs/aloitusviestit/keskustelukanava.md | ei |
 | Postivahti | Sonnet 5.5, medium | Matkakirja-posti | docs/aloitusviestit/postivahti.md | ScheduleWakeup 4–5 min (KIERROS.md) |
-| Asemataulu | Sonnet 5.5, low (auto) | Matkakirja-asemataulu | docs/aloitusviestit/asemataulu.md | cron "*/5" vienti, "13,43" tarkistus, "7 * * * *" kulutus |
+| Asemataulu | Sonnet 5.5, low | Matkakirja-asemataulu | docs/aloitusviestit/asemataulu.md | cron "*/5" vienti, "13,43" tarkistus, "7 * * * *" kulutus |
 | Julkaisija | Opus, high | Matkakirja-julkaisija | docs/raportit/viesti-julkaisija-aloitus.md + luovutus | vahdit `zsh S/julkaisija-tyokalut/valoseppa-vahti-kaynnista.zsh`, lukkovahti.zsh (olavinlinna-vahti ei, linna tauolla) |
 | Natiiviseppä | Opus, high | Matkakirja-3d-selvittaja | docs/raportit/viesti-natiiviseppa-aloitus.md + luovutus | cron "4 9 * * *" `python3 S/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py` |
 | Natiivi-UI | Opus, high | Matkakirja-natiivi-ui | docs/raportit/viesti-natiivi-ui-aloitus.md + luovutus | ei |
@@ -48,7 +68,7 @@ lähettää PT tilinvaihdossa (nollauksissa Postivahti, NOLLAUS.md).
 | Linnanrakentaja | Opus, high | Matkakirja-linnanrakentaja | docs/aloitusviestit/linnanrakentaja.md | ei |
 | Siirtoseppä | Opus, high | Matkakirja-siirtoseppa | docs/raportit/viesti-siirtoseppa-aloitus.md + luovutus | ei |
 | Sisältökirjuri | Sonnet 5.5, high | Matkakirja-sisaltokirjuri | docs/raportit/viesti-sisaltokirjuri-aloitus.md + luovutus | ei |
-| Äänittäjä | Sonnet 5.5, high (auto) | Matkakirja-aanittaja | docs/aloitusviestit/aanittaja.md | ei |
+| Äänittäjä | Sonnet 5.5, high (lupatila auto) | Matkakirja-aanittaja | docs/aloitusviestit/aanittaja.md | ei |
 | Laitetestaaja | Sonnet 5.5, high | Matkakirja-laitetestaaja | docs/raportit/viesti-laitetestaaja-aloitus.md + luovutus | ei |
 
 Aktiivisuus: luo vain roolit, joilla on jonoa (F/tyojonot.md) tai keskeneräinen luovutus; tauolla olevat (esim. Olavinlinna) odottavat.
@@ -57,16 +77,24 @@ Vanhat docs/raportit/viesti-*-aloitus.md -tiedostot ovat roolien haaroissa usein
 ## 3. Uudet session id:t (kaikki samassa vuorossa)
 S/osoitekirja.md (taulukko: rooli, id, kansio, malli, alue) on ainoa id-lähde. Päivitä sen jälkeen id:t, joita tiedostot toistavat:
 S/Matkakirja-posti/KIERROS.md (PT ja KK otsikossa), NOLLAUS.md (PT), F/asemataulu/ASEMATAULU-ROOLI.md (PT, KK), F/keskustelukanava/aloitus.md,
-F/jonokierros-teksti.md (KK, Asemataulu), F/asemataulu/roolit.json. Lopuksi `bash tools/tyotavat/peili.sh` ja commit.
+F/jonokierros-teksti.md (KK, Asemataulu), F/asemataulu/roolit.json ja data/talo/roolit.json sekä aloitusviestit. Skripti tekee kaiken:
+`node tools/tyotavat/paivita-idt.mjs "Julkaisija=local_<uusi>" "PÄÄTOIMITTAJA=local_<uusi>" …` (kuiva-ajo; sitten sama `--kirjoita`).
+Lopuksi `bash tools/tyotavat/peili.sh` ja commit PT:n työhaaraan (worktree `tools/uusi-worktree.sh fable <aihe>`, ks. VOIMASSA OLEVA ARVO).
 
 ## 4. Asemataulu (tilikohtainen kopio)
 Raamattu ASEMATAULU TILIKOHTAINEN: 1) Artifact list → onko tilillä oma taulu; julkaise tools/asemataulu/asemataulu.html (capabilities
 comments + db, icon dashboard) samaan tai uuteen osoitteeseen; 2) täytä kokoelma talo yhdellä ArtifactData-batchilla F/asemataulu/data/talo/*.json;
-3) kirjaa osoite F/asemataulu/osoitteet.md:hen, alla olevaan VOIMASSA OLEVA ARVO -tauluun, jonokierroksen kohtaan 7, ASEMATAULU-ROOLI.md:hen
-ja omistajalle yhdellä rivillä (avauskomento: `open -na "Google Chrome" --args --app=<osoite> --window-size=560,1000`).
+3) kirjaa osoite F/asemataulu/osoitteet.md:hen, alla olevaan VOIMASSA OLEVA ARVO -tauluun (vanha "nykyinen tili" siirtyy riviksi
+osoitteet.md:hen), jonokierroksen kohtaan 7, ASEMATAULU-ROOLI.md:hen, F/keskustelukanava/aloitus.md:n kohtaan 2, Postivahdille
+ja omistajalle yhdellä rivillä. PT avaa taulun (Artifact open) heti; KK avaa sen jokaisen nollauksensa jälkeen (avauskomento: `open -na "Google Chrome" --args --app=<osoite> --window-size=560,1000`).
 Vanhan tilin artefakteja (taulu, äänisivu) ei voi muokata uudelta tililtä.
 
 ## 5. Silmukat ja vahdit
+Työkalut ovat lykättyjä: lataa ne ENNEN käyttöä yhdellä ToolSearchilla
+(`select:CronCreate,ScheduleWakeup,Monitor,Artifact,ArtifactData` ja ccd_session_mgmt-työkalut `+ccd_session_mgmt`). Jos jokin
+puuttuu, se ei ole tällä tilillä/versiolla: JUMI-rivi omistajalle (kohta 0.0), ei korvata scheduled-tasks-MCP:llä (eri semantiikka:
+pysyvä, tuore konteksti). Ennen roolien luontia testicron: CronCreate "*/2 * * * *" kehotteella "TESTICRON: vastaa –", odota yksi
+laukaisu, poista (CronDelete) ja jatka.
 Taulukon viimeinen sarake. Cronit ovat session-only (CronCreate): ne kuolevat session mukana ja vanhenevat 7 vrk:ssa – rooli uusii ne
 aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tunnin sisällä.
 
@@ -75,8 +103,10 @@ aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tu
 - Sallinnat: projektin .claude/settings.json (gitissä) + PT:n .claude/settings.local.json. Gitissä oleva settings.local.json on vanha
   (vain aws/source/python3 -); Macin versiossa lisäksi Bash(osascript:*), Bash(screencapture:*), Bash(sleep:*),
   mcp__ccd_session_mgmt__set_session_effort sekä PostToolUse- ja UserPromptSubmit-hookit pt-taulu-muistutus.py:lle. Älä checkouttaa
-  gitin versiota Macin päälle. Puuttuva rivi → omistajan bash-lohko (lupa-asetus).
-- Hookit: `bash tools/hooks/asenna-viestiraja-hook.sh --tarkista`.
+  gitin versiota Macin päälle. Macin versio on peilissä tools/tyotavat/settings.local.json.malli (peili.sh pitää ajan tasalla);
+  palautus: `bash tools/tyotavat/palauta-sallinnat.sh` (vanha talteen .ennen-<pvm>, sitten PT:n session uudelleenkäynnistys).
+  Gitin seurattua .claude/settings.local.json:ia ei committata.
+- Hookit: `bash tools/hooks/asenna-viestiraja-hook.sh --tarkista`; pt-taulu-muistutus.py: totuus S/hooks/ (peili tools/hooks/).
 
 ## 7. Macin tarkistukset (eivät riipu tilistä)
 - `launchctl list | grep -i -E 'matkakirja|runner'`: fi.matkakirja.juna, juna-vahti, naytto-auki, siivous, app.matkakirja.natiivi-bundle,
@@ -86,7 +116,9 @@ aloitusviestissään. Tarkistus: PT `list_events` jokaiselle silmukkaroolille tu
 - `bash tools/tarkista-tyotilat.sh`.
 
 ## 8. Lopuksi
-Rivi Keskustelukanavalle: "Tilinvaihto valmis: N roolia, taulu <osoite>". Kirjaa tilinvaihto lokiin (`node tools/raamattu-kirjaa.mjs`).
+`node tools/tyotavat/tilinvaihto-valmis.mjs` (paluu 0 = valmis): osoitekirjan id:t elossa sovelluksen sessiotiedostoista (tili,
+ei arkistoitu, malli ja effort kuten osoitekirjassa, lupatila ja RC tiedoksi), peili ajan tasalla, aloitusviestit olemassa, vanhoja
+id:itä ei jäljellä. Rivi Keskustelukanavalle: "Tilinvaihto valmis: N roolia, taulu <osoite>". Kirjaa tilinvaihto lokiin (`node tools/raamattu-kirjaa.mjs`).
 
 ## VOIMASSA OLEVA ARVO (ristiriitojen ratkaisu 14.10.2026; uusin päätös voittaa)
 
@@ -102,3 +134,12 @@ Rivi Keskustelukanavalle: "Tilinvaihto valmis: N roolia, taulu <osoite>". Kirjaa
 | Session id:t | vain S/osoitekirja.md | Raamatun ja vanhojen ohjeiden kovakoodatut id:t |
 | PT:n malli | Opus, medium | "Opus max" (28.9.) |
 | Roolien määrä | osoitekirjan taulukko (14.10.: PT + KK + 14 roolia) | CLAUDE.md "kuusi roolisessiota", roolitus.md "kolme sessiota" |
+| Asemataulun malli ja effort | Sonnet 5.5, low (osoitekirja 14.10. ja sessiotiedosto; Raamattu korjattu 14.10.) | "Sonnet 5.5, high" (13.10. luonti), "low (auto)" |
+| Julkaisijan effort | Opus, high (omistaja 29.9. "Opus-roolit high oletuksena", osoitekirja 14.10.; Raamattu korjattu 14.10.) | "medium Julkaisijalle (high CI-vian ajaksi)" (28.9.) |
+| Session nimi | "Rooli (malli, effort)" kaikille, PT ja KK isoin kirjaimin (omistaja 29.9. ja 6.10.; Raamattu SESSION NIMI) | EFFORT NIMESSÄ (26.9.: effort nimessä vain yli highin) |
+| Valikkokieli | suomi 14.10. alkaen: Tiedosto › Uusi istunto / Avaa kansio… (myös osascriptissä; Raamattu korjattu 14.10.) | File > New Session / Open Folder… |
+| Uusien sessioiden lupatila | ohitustila (bypassPermissions) kaikille, Äänittäjä auto (omistajan lupa 11.10., tila 13.10.); sessiotiedostot 14.10. | osoitekirjan "Asemataulu auto-tila" (sessio on ohitustilassa) |
+| Uusin luovutus | roolin haaran docs/raportit/viesti-<rooli>-luovutus-*.md commit-ajan mukaan (komento kohdassa 1.1) + muistin tilaraportti (MEMORY.md "Rooli-tilaraportit") | tiedostonimen aakkosjärjestys |
+| PT:n haara | checkout S/Matkakirja-fable haarassa claude/bold-ride-vow4ki (sovelluksen nimi); PT:n muutokset worktreissa S/wt/fable-<aihe> omina PR:inä; nimenvaihto vasta, kun sovellus luo PT:n uudelle tilille uuden haaran | – |
+| KK:n aloitusviesti | elävä F/keskustelukanava/aloitus.md (Tila-osio, peili tools/tyotavat/keskustelukanava-aloitus.md); pysyvä osa docs/aloitusviestit/keskustelukanava.md | – |
+| KK:n nollaus | vain omistajan kortin Kyllä-vastauksella; heti sen jälkeen set_remote_control self true ja Artifact open Asemataulu (omistaja 14.10. klo 20.48) | Postivahdin nollaus |

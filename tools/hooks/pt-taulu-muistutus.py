@@ -40,12 +40,14 @@ def kirjoita_tila(t):
         pass
 
 
-def muistuta(laji, teksti, tapahtuma):
+def muistuta(laji, teksti, tapahtuma, sessio=""):
+    # 14.10.2026: raja per sessio (PT ja Keskustelukanava jakavat kansion, eivät saa kuluttaa toistensa muistutuksia)
+    avain = f"{laji}:{sessio}" if sessio else laji
     t = lue_tila()
     nyt = time.time()
-    if nyt - float(t.get(laji, 0)) < VALI:
+    if nyt - float(t.get(avain, 0)) < VALI:
         return
-    t[laji] = nyt
+    t[avain] = nyt
     kirjoita_tila(t)
     print(json.dumps({"hookSpecificOutput": {"hookEventName": tapahtuma, "additionalContext": teksti}},
                      ensure_ascii=False))
@@ -62,16 +64,18 @@ def main():
         if not p.strip() or "cross-session-message" in p or p.lstrip().startswith(("JONOKIERROS", "<", "Another Claude session")):
             return
         muistuta("omistaja",
-                 "ASEMATAULU (hook): jos omistajan viesti on uusi pyyntö tai päätös, lisää se työlistaan "
-                 f"({DATA}/tyolista.json: oma paketti tai Työn alla -rivi) samassa vuorossa; Postivahti vie "
-                 "tiedoston tauluun, tai vie itse ArtifactData set file_path.", tapahtuma)
+                 "ASEMATAULU (hook): jos omistajan viesti on uusi pyyntö tai päätös: Keskustelukanava välittää sen "
+                 "sanatarkasti Päätoimittajalle, ja Päätoimittaja lisää sen työlistaan "
+                 f"({DATA}/tyolista.json: oma paketti tai Työn alla -rivi) samassa vuorossa.", tapahtuma,
+                 str(d.get("session_id") or ""))
         return
     viesti = str((d.get("tool_input") or {}).get("message") or "")
     if JUNA.search(viesti):
         muistuta("juna",
                  "ASEMATAULU (hook): päivitä tämä kuittaus/junatapahtuma tiedostoihin "
                  f"{DATA}/junat.json (Valmiina / Työn alla) ja tyolista.json (paketin tilanne, 'Junassa N:') "
-                 "ennen vuoron loppua; Postivahti vie muuttuneet tiedostot tauluun.", tapahtuma)
+                 "ennen vuoron loppua; Postivahti vie muuttuneet tiedostot tauluun.", tapahtuma,
+                 str(d.get("session_id") or ""))
 
 
 if __name__ == "__main__":
