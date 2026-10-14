@@ -179,6 +179,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Mallilla, ja Westminster Bridge valaistiin kaasulla 31. joulukuuta 1813.',
           lahde: 'Matkakirjan havainnekuva',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuvasuhde 3:2 (2048x1362), rajausta ei tarvita.
+           */
+          tiedosto: 'Thames Clipper Hurricane Approaching Tower Bridge 2009.jpg',
+          lyhyt: 'Thames Clippersin jokibussi Hurricane Clipper kiitää Tower Bridgen ohi Thamesilla '
+            + 'Lontoossa.',
+          selite: 'Thames Clippersin jokibussiliikenne alkoi toukokuussa 1999, ja Hurricane Clipper '
+            + 'otettiin käyttöön vuonna 2001.',
+          lahde: 'David Merrett, Wikimedia Commons (CC BY 2.0)',
+        },
       ],
       /*
        * ENNEN JA NYT -PARI, PILOTTI (omistajan idea 21.8.2026:
@@ -1884,6 +1897,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Malá Stranan, eli Pikkukaupungin, kuningas Ottokar II perusti '
             + 'kuninkaalliseksi kaupungiksi vuonna 1257 Prahan linnan alapuolelle.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuvasuhde on jo 3:2, ei rajausta tarvita.
+           */
+          tiedosto: 'Prague 2010 Tatra T3 and Hradschin.jpg',
+          lyhyt: 'Tatra T3 -raitiovaunu ajaa Mánesin sillalla, taustalla Prahan linna.',
+          selite: 'Mánesin silta avattiin 1914 ja valmistui kokonaan 1916. Tatra T3 -vaunuja '
+            + 'valmistettiin Prahan Smíchovissa vuosina 1960–1997 lähes 14 000.',
+          lahde: 'hrs51, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       ennenNyt: [
@@ -3803,6 +3828,20 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuvasuhde 1,73 (noin 16:9), ei rajausta tarvita.
+           */
+          tiedosto: 'Madrid - Sky Bar 360º (Hotel Riu Plaza España), vistas 01.jpg',
+          lyhyt: 'Edificio Españan katolta näkyvät Madridin keskustan terrakottakatot, Teatro Real ja '
+            + 'kuninkaanlinna.',
+          selite: 'Edificio España valmistui 1953 ja toimii nykyään hotellina. Kuvan keskellä näkyvä '
+            + 'Teatro Real avattiin 19. marraskuuta 1850, ja sen takana erottuvat Almudenan '
+            + 'katedraalin kupoli ja kuninkaanlinna.',
+          lahde: 'Zarateman, Wikimedia Commons (CC0)',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -3847,6 +3886,18 @@ export const KULTTUURI_KATEGORIAT = {
             + '650 metrin korkeuteen, ja Cerro del Tío Pío on yksi kaupungin '
             + 'laidan kukkuloista.',
           lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'Teleférico de Madrid (30209578353).jpg',
+          lyhyt: 'Madridin köysiradan siniset gondolit kulkevat puiden ja kattojen yllä Casa de Campon '
+            + 'suuntaan.',
+          selite: 'Madridin teleférico avattiin 1969, ja sen noin 2,5 kilometrin rata yhdisti Parque '
+            + 'del Oesten Casa de Campon puistoon. Gondolit kulkevat noin 40 metrin korkeudessa.',
+          lahde: 'Tim Adams, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       ennenNyt: [
@@ -4170,6 +4221,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Vanha kansallisgalleria rakennettiin 1862–1876, ja koko '
             + 'Museosaari on ollut Unescon maailmanperintökohde vuodesta 1999.',
           lahde: 'Ansgar Koreng, Wikimedia Commons (CC BY 3.0 DE)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Ei rajausta tarvita: 2004x1336 on 3:2.
+           */
+          tiedosto: 'Spree-Athen auf der Spree.jpg',
+          lyhyt: 'Retkeilyalus Spree-Athen kulkee Spreellä Berliinin tuomiokirkon ja Museosaaren ohi.',
+          selite: 'Spree on noin 400 kilometriä pitkä, ja se yhtyy Havel-jokeen Spandaussa Berliinin '
+            + 'länsiosassa.',
+          lahde: 'Reederei Riedel, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       ennenNyt: [
@@ -5254,6 +5317,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Saaret sijaitsevat matalassa laguunissa kanavien erottamina. Venetsia ja '
             + 'sen laguuni on Unescon maailmanperintökohde vuodesta 1987.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuvasuhde 1,525:1 (3:2–16:9 sisällä). 16:9-rajaus: poista ylhäältä n. 320 px taivasta ja alhaalta n. 130 px.
+           */
+          tiedosto: '0 Venise, vaporetto naviguant sur le Grand Canal 2.JPG',
+          lyhyt: 'Vaporetto ajaa Canal Grandella, ja kaukana oikealla erottuu Rialton silta.',
+          selite: 'Ensimmäinen vaporetto, höyrykäyttöinen Regina Margherita, saapui Venetsiaan 1881 ja '
+            + 'aloitti liikenteen Canal Grandella.',
+          lahde: 'Jean-Pol Grandmont, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       ennenNyt: [
@@ -8628,6 +8703,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'valtakunnanmonumentti.',
           lahde: 'RubenVanKuik, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuvasuhde on jo 16:9 (3981x2239), ei rajausta tarvita.
+           */
+          tiedosto: 'Amsterdam Concertgebouw GVB 3048 lijn 5 Jordaan (51456943606).jpg',
+          lyhyt: 'Amsterdamin raitiovaunu kulkee Concertgebouwin ohi Museumpleinin laidalla.',
+          selite: 'Valkosininen GVB:n raitiovaunu kuuluu CAF:n Urbos 100 -sarjaan: se on 30 metriä '
+            + 'pitkä ja mitoitettu 175 matkustajalle. Concertgebouw avattiin 11.4.1888 Adolf '
+            + 'Leonard van Gendtin suunnitelman mukaan.',
+          lahde: 'Rob Dammers, Wikimedia Commons (CC BY 2.0)',
+        },
       ],
       ennenNyt: [
         {
@@ -9004,6 +9092,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Eminönün rantatorilla myydään balık ekmekiä suoraan '
             + 'veneistä, joissa kala kypsennetään laiturin kupeessa.',
           lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'Ferry-Bosphorus-Istanbul-October-2012.jpg',
+          lyhyt: 'Lautta ylittää Bosporinsalmen, taustalla Bosporin silta ja Neitsyttorni Üsküdarin '
+            + 'rannassa.',
+          selite: 'Kuvan taustalla näkyvä Bosporin silta valmistui 1973, ja se on 1 560 metriä pitkä. '
+            + 'Oikealla rannan edustalla erottuu Neitsyttorni.',
+          lahde: 'Acediscovery, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       ennenNyt: [
@@ -9916,6 +10016,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Grand Canalin rakennustyöt alkoivat 1750-luvun puolivälissä, ja kanava '
             + 'ulotettiin Dublinista Shannonille vuoteen 1804 mennessä.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'Dublin city Luftbild (22149147891).jpg',
+          lyhyt: 'Phoenix Parkin Wellingtonin obeliski kohoaa 62 metriin, taustalla Dublinin keskusta '
+            + 'ja Dublinin lahti.',
+          selite: 'Wellington Testimonial on yksi Euroopan korkeimmista obeliskeista, ja sen '
+            + 'rakentaminen kesti rahapulan takia vuodesta 1817 vuoteen 1861.',
+          lahde: 'dronepicr, Wikimedia Commons (CC BY 2.0)',
         },
         {
           /*
@@ -11141,6 +11253,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'eli panier, ja nimi siirtyi ensin kadulle ja sitten kaupunginosalle.',
           lahde: 'Matkakirjan havainnekuva',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Ei rajausta tarvita: 1735x1156 on 3:2.
+           */
+          tiedosto: 'Marseille tram.jpg',
+          lyhyt: 'Raitiovaunu kääntyy kadunkulmassa Marseillessa.',
+          selite: 'Marseillen nykyinen raitiotieverkko avattiin kesällä 2007, ja siinä ajetaan '
+            + 'Bombardierin Flexity Outlook -vaunuilla.',
+          lahde: 'Jonas Roux, Wikimedia Commons (CC BY 2.0)',
+        },
       ],
       ennenNyt: [
         {
@@ -11734,6 +11858,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuvasuhde 1,498:1 (käytännössä 3:2), käy sellaisenaan. 16:9-rajaus: poista ylhäältä n. 700 px alkuperäisestä (taivasta; kupolin huippu on n.
+           */
+          tiedosto: 'View from from Miradouro das Portas do Sol, Lisbon, 20250603 2018 9054.jpg',
+          lyhyt: 'Portas do Solin näköalapaikalta näkyvät Alfaman punaiset katot, kaksi kirkkoa ja '
+            + 'Tejo-joki.',
+          selite: 'Vasemmalla kohoaa Santa Engrácian kirkon kupoli, jonka rakentaminen alkoi 1600-luvun '
+            + 'lopulla ja valmistui vasta 1966.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (12.10.2026, Codex-toimitus 8a39d5cc5,
            * omistaja hyväksyy Codexissa): asuinkuja iltavalossa.
            */
@@ -11758,6 +11895,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Alfama, jonka kujilla on poikkeuksellisen tiheässä '
             + 'fado-baareja ja ravintoloita.',
           lahde: 'Vicuna R from Germany, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuva on 2,1:1 eli liian leveä. Rajaa 16:9:ään vasemmalta noin 14 % (alkaen x ≈ 0,14 × leveys), jolloin vaunu ja pää-ikkuna pysyvät mukana; v
+           */
+          tiedosto: 'No28 Tram (45248843404).jpg',
+          lyhyt: 'Raitiovaunu 549 ajaa linjalla 28 Alfamassa Santa Luzian näköalapaikan luona.',
+          selite: 'Lissabonin ensimmäinen sähköraitiovaunu liikkui 31.8.1901. Kuvan keltainen vaunu on '
+            + 'ilman mainoksia, ja sen kattoon on kirjoitettu linjan numero 28.',
+          lahde: 'Neil, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       ennenNyt: [
@@ -12443,6 +12592,20 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laidalla on vuodesta 1882 rakenteilla ollut Sagrada Família.',
           lahde: 'Jcca76, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Alkuperäinen 4:3. Rajaa 3:2:een: poista ylhäältä noin 8 % (puiden latvat ja virroittimen yläpää) ja alhaalta noin 3 %; vaunu pysyy kokonaan 
+           */
+          tiedosto: 'Old tram at Barcelona pic01.JPG',
+          lyhyt: 'Tramvia Blau on Barcelonan Tibidabon rinteen sininen museoraitiovaunu, jonka linja '
+            + 'avattiin 1901.',
+          selite: 'Tramvia Blaun 1 276 metrin linja kulkee Avinguda del Tibidabolla Plaça Kennedyltä '
+            + 'Plaça del Doctor Andreulle. Linja on ollut suljettuna kunnostuksen vuoksi, ja kuva '
+            + 'on vuodelta 2009.',
+          lahde: 'AlfvanBeem, Wikimedia Commons (CC0)',
+        },
       ],
       ennenNyt: [
         {
@@ -12970,6 +13133,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Darro-joesta johdettiin kanavaa pitkin vettä Alhambraan, ja kanava '
             + 'rakennettiin 1200-luvulla Nasridien aikana.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Alkuperäinen 3:2, valmis. Halutessa 16:9: poista ylhäältä noin 16 % pilvistä taivasta.
+           */
+          tiedosto: 'Granada 2025.jpg',
+          lyhyt: 'Alhambran Torre de la Velan tornista näkyvät Granadan katot ja kaukana vuoret.',
+          selite: 'Torre de la Velan tornista avautuu näkymä yli koko kaupungin, ja tornin kelloa '
+            + 'soitetaan joka vuosi 2. tammikuuta Granadan antautumisen muistoksi 1492.',
+          lahde: 'Wikiolo, Wikimedia Commons (CC BY 4.0)',
         },
         {
           /*
@@ -13645,6 +13820,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Alueella sijaitsi roomalainen Aquincum, Pannonia Inferiorin pääkaupunki, '
             + 'jonka jäänteet ovat nykyään museona ja arkeologisena puistona.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuva on 4:3. Rajaa 3:2:een poistamalla pystysuunnasta yhteensä ~11 % (n. 5 % ylhäältä ja 6 % alhaalta); vaunut ja ylisilta pysyvät mukana.
+           */
+          tiedosto: 'Budapest, Clark Ádám tér, sikló, Budavári sikló, 13.jpg',
+          lyhyt: 'Budan linnan siklon vaunut Gellért ja Margit kohtaavat toisensa 95 metrin radalla.',
+          selite: 'Siklo avattiin 2.3.1870, ja toisen maailmansodan vaurioiden jälkeen se rakennettiin '
+            + 'uudelleen ja avattiin 4.6.1986.',
+          lahde: 'Random photos 1989, Wikimedia Commons (CC0)',
         },
       ],
       ennenNyt: [
@@ -14959,6 +15146,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Alkuperäinen 4:3. Rajaa 3:2:een ylhäältä: poista noin 11 % pelkkää taivasta; Wawelin tornien huiput (noin 27 % ylhäältä) säilyvät.
+           */
+          tiedosto: 'Wawel-WidokZWieżyRatuszowej-POL, Kraków.jpg',
+          lyhyt: 'Raatihuoneen tornista näkee Krakovan Vanhankaupungin kattojen yli Wawelin linnalle.',
+          selite: 'Kuva on otettu Raatihuoneen tornista, joka on ainoa jäännös vuonna 1820 puretusta '
+            + 'goottilaisesta raatihuoneesta. Kattojen takana kohoavat Wawelin linna ja katedraali.',
+          lahde: 'Mach240390, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -15938,6 +16137,17 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'View to the south from Helsinki Olympic tower zoomed.jpg',
+          lyhyt: 'Olympiastadionin tornista näkee Helsingin kattojen yli Suomenlahdelle.',
+          selite: 'Olympiastadionin torni on noin 72 metriä korkea. Stadion valmistui 1938 ja isännöi '
+            + 'kesäolympialaisia 1952.',
+          lahde: 'Ypsilon, Wikimedia Commons (CC0)',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -15970,6 +16180,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Kauppatorilta ostetaan kesällä herneitä ja mansikoita ja '
             + 'lokakuussa silakkaa suoraan veneistä.',
           lahde: 'Tuula Sipilä, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Ei rajausta tarvita: 3984x2656 on 3:2.
+           */
+          tiedosto: 'MS Suomenlinna II.jpg',
+          lyhyt: 'Suomenlinnan lautta Suomenlinna II ylittää Helsingin merenlahtea kohti Kauppatoria.',
+          selite: 'Suomenlinna II valmistui 2004 Gdynian laivastotelakalla Puolassa, ja sen pituus on '
+            + '33,8 metriä.',
+          lahde: 'ExpressEditor, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       ennenNyt: [
@@ -16494,6 +16716,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Harju kohoaa noin 80 metriä Pyhäjärven pinnan yläpuolelle ja jatkuu '
             + 'lännessä Pispalanharjuna.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Rajaa 16:9:ään (4000x2250 ei onnistu, koska kuva on 4000x2025 eli ~1,98:1): leikkaa sivuilta 3600x2025, pidä vasen reuna mukana (Näsinneula 
+           */
+          tiedosto: 'Tampere from Pyynikki tower narrow.jpg',
+          lyhyt: 'Pyynikin näkötornista näkyvät Tampereen keskusta, Näsinneula ja Näsijärvi.',
+          selite: 'Punagraniittinen näkötorni on 26 metriä korkea, ja se valmistui 1929 Tampereen '
+            + '150-vuotisjuhlavuonna.',
+          lahde: 'Arkke, Wikimedia Commons (CC BY 4.0)',
         },
         {
           /*
@@ -17432,6 +17666,17 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuukauden ajan, ja helmikuu on vuoden kylmin kuukausi.',
           lahde: 'Enel Lepik, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'T5tramm.jpg',
+          lyhyt: 'Tallinnan raitiovaunu linjalla T5 kulkee puiston reunaa pitkin kohti Vana-Lõunaa.',
+          selite: 'Tallinnan raitiotie avattiin hevosvetoisena 1888, ja sähköraitiovaunut aloittivat '
+            + 'liikenteen 28.10.1925. Raideleveys on edelleen 1 067 millimetriä.',
+          lahde: 'MorsMe, Wikimedia Commons (CC0)',
+        },
       ],
       ennenNyt: [
         {
@@ -17942,6 +18187,17 @@ export const KULTTUURI_KATEGORIAT = {
             + 'metriä korkea, ja se paljastettiin 9. toukokuuta 1981 Vasyl '
             + 'Borodain johdolla valmistuneena.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'Київський фунікулер, 2008 рік 03.jpg',
+          lyhyt: 'Kiovan funikulaarin vaunu nousee puiston rinnettä ylä- ja alakaupungin välillä.',
+          selite: 'Kiovan funikulaari avattiin toukokuussa 1905. Radan kahdella vaunulla ajetaan '
+            + 'Podilin Postitorilta ylös Mikaelinmäelle.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC0)',
         },
       ],
       ennenNyt: [
@@ -18483,6 +18739,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Palatsisilta rakennettiin 1912–1916, ja se nostetaan '
             + 'öisin auki kuten lähes kaikki muutkin Nevan sillat.',
           lahde: 'Igor Abramov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuvasuhde 1,72:1 (2641x1531), sallitun 3:2–16:9 sisällä; rajausta ei tarvita.
+           */
+          tiedosto: 'Метеор (теплоход). Река Нева, Санкт-Петербург 20.08.2025.jpg',
+          lyhyt: 'Meteor-kantosiipialus kiitää Nevalla Talvipalatsin edessä.',
+          selite: 'Neuvostoliitossa rakennettiin noin 400 Meteor-alusta, ja Pietarissa niitä käytetään '
+            + 'yhä retkiveneinä Petergofiin.',
+          lahde: 'SmallSonMarex, Wikimedia Commons (CC0)',
         },
       ],
       ennenNyt: [
@@ -20987,6 +21255,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuva on jo 3:2 (5184x3456), ei pakollista rajausta. Valinnainen 16:9-rajaus: ota y 5-80 % (säilyttää vuoret, tornin ja katot; poistaa alareu
+           */
+          tiedosto: 'Sarajevo - Žuta Tabija (49126643821).jpg',
+          lyhyt: 'Žuta tabijan näköalapaikalta Sarajevon punakattoinen keskusta levittäytyy vuorten '
+            + 'juurelle.',
+          selite: 'Žuta tabija eli Keltainen bastioni kuuluu Vratnikin vanhoihin linnoituksiin. '
+            + 'Oikealla taustalla näkyy vuonna 2008 valmistunut Avaz Twist Tower.',
+          lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -21005,6 +21286,20 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ottomaanikaudella, ja sen kupeessa tapahtui kesäkuussa 1914 '
             + 'laukaus, joka sysäsi maailman sotaan.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Alkuperäinen 3:2 (1,54), mutta kuvan vasemmassa laidassa etualalla kävelee nainen: rajaa 3:2:een niin, että vasemmat 25 % ja ylhäältä noin 1
+           */
+          tiedosto: 'Tram Sarajevo former Wiener Linien Obala Kulina bana 2011.jpg',
+          lyhyt: 'Sarajevon raitiovaunu kulkee Miljackan rantakatua; kaupungin ensimmäinen linja '
+            + 'avattiin 1885.',
+          selite: 'Sarajevon ensimmäinen raitiolinja avattiin 1. tammikuuta 1885 hevosvetoisena, ja '
+            + 'sähkövaunut korvasivat hevoset 1895. Kuvassa vaunu ajaa Obala Kulina banaa pitkin '
+            + 'Miljacka-joen varrella.',
+          lahde: 'Maurits90, Wikimedia Commons (CC0)',
         },
       ],
       ennenNyt: [
@@ -26585,6 +26880,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuva on tasan 3:2. 16:9-rajaus: poista ylhäältä n. 250 px taivasta (kirkko ja lahti säilyvät).
+           */
+          tiedosto: 'Iceland - Reykjavik 050 - view from the Perlan (6571034905).jpg',
+          lyhyt: 'Perlanin näköalapaikalta näkee Reykjavikin kattojen yli Hallgrímskirkkoon ja '
+            + 'lahdelle.',
+          selite: 'Perlan avattiin yleisölle 21.6.1991, ja sen lasikupoli lepää kuuden kaukolämpöveden '
+            + 'säiliön päällä Öskjuhlíðin kukkulalla.',
+          lahde: 'McKay Savage, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -26594,6 +26902,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Alþingi on Islannin kansalliskokous, joka perustettiin alun perin noin '
             + 'vuonna 930. Reykjavik sai kaupunkioikeudet vuonna 1786.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuvasuhde on jo 3:2, ei rajausta tarvita.
+           */
+          tiedosto: '2017-08-23 01 ANDREA - IMO 7222231 - Reykjavik, Iceland.jpg',
+          lyhyt: 'Valaidenkatseluvene Andrea on matkalla Reykjavikin satamasta Faxaflóin lahdelle.',
+          selite: 'Faxaflói on lahti Snæfellsnesin ja Reykjanesin niemimaiden välissä. '
+            + 'Valaidenkatseluretkiä lähtee Reykjavikin Vanhasta satamasta ympäri vuoden.',
+          lahde: 'Gordon Leggett, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       ennenNyt: [
@@ -27155,6 +27475,19 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Ivalojoesta löydettiin kultaa 1868, ja 1870-luvulla joella huuhdottiin '
             + 'kultaa vilkkaasti.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Rajaa 3:2:een (2272x1515) ylhäältä (taivasta pois ~190 px); alus ja jää säilyvät.
+           */
+          tiedosto: 'Icebreaker Sampo in lapland 002.jpg',
+          lyhyt: 'Jäänmurtaja Sampo on tehnyt risteilyjä jäätyneelle Perämerelle Kemistä vuodesta '
+            + '1988.',
+          selite: 'Wärtsilä laski Sampon vesille Helsingissä 1960, ja laiva piti talviväyliä auki lähes '
+            + '30 vuotta, kunnes Kemin kaupunki osti sen 1987.',
+          lahde: 'ezioman, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       ennenNyt: [
@@ -30219,6 +30552,17 @@ export const KULTTUURI_KATEGORIAT = {
             + '1904–1914.',
           lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'Riga, Škoda 15T ForCity Alfa Riga č. 57016.jpg',
+          lyhyt: 'Raitiovaunulinja 11 ajaa Riian keskustan mukulakivikadulla kohti Mežaparksia.',
+          selite: 'Riian raitiotie avattiin 1882, ja liikenne oli aluksi hevosvetoista. '
+            + 'Sähköraitiovaunut aloittivat liikenteen 1901.',
+          lahde: 'Oleksandr Dede, Wikimedia Commons (CC BY 4.0)',
+        },
       ],
       ennenNyt: [
         {
@@ -30726,6 +31070,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuvasuhde on 1,44:1 eli hieman 3:2:ta (1,5) kapeampi. Rajaa 3:2:een alareunasta (~4 % korkeudesta) tai ylhäältä pilvistä; Gediminasin torni 
+           */
+          tiedosto: '210 vilnius From Three Crosses Hill (15315336184).jpg',
+          lyhyt: 'Kolmen Ristin kukkulalta näkyvät Gediminasin kukkula, suurruhtinaiden palatsi ja '
+            + 'televisiotorni.',
+          selite: 'Vasemmalla on jälleenrakennettu suurruhtinaiden palatsi, joka valmistui 2018, ja '
+            + 'taustan metsäharjun yllä kohoaa yli 326 metrin televisiotorni, valmistunut 1980.',
+          lahde: 'Brian Toward, Wikimedia Commons (CC0)',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -30746,6 +31103,16 @@ export const KULTTUURI_KATEGORIAT = {
             + 'noin kaksituhatta Giovanni Pietro Pertin veistämää '
             + 'stukkohahmoa.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'Solaris Trollino 15AC (II), VVT, 2713, route 3, Vilnius, Arsenalo gatvė.jpg',
+          lyhyt: 'Johdinauto ajaa linjalla 3 joen rantatietä Vilnassa.',
+          selite: 'Johdinautoliikenne alkoi Vilnassa marraskuussa 1956. Kuvan vaunu on linjalla 3.',
+          lahde: 'Terminator216, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       ennenNyt: [
@@ -31300,6 +31667,18 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rajojen sisällä on 40 saarta ja 343 järveä.',
           lahde: 'Chell Hill, Wikimedia Commons (CC BY-SA 3.0)',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuvasuhde 1,498:1 (3:2). Kuva on jo kelvollisessa suhteessa; 16:9-rajaus: poista alhaalta n. 190 px (katu) ja ylhäältä n. 90 px.
+           */
+          tiedosto: 'Stiopa-CAF Urbos 100-foto.3.jpg',
+          lyhyt: 'Sininen raitiovaunu kääntyy Oslon kadulla, ja toinen vaunu odottaa taustalla.',
+          selite: 'Oslon raitiotie sai alkunsa 1875, kun Norjan ensimmäisellä raitiolinjalla alettiin '
+            + 'ajaa hevosvaunuilla.',
+          lahde: 'Stiopa, Wikimedia Commons (CC BY 4.0)',
+        },
       ],
       ennenNyt: [
         {
@@ -31743,6 +32122,19 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Brunelleschin kupoliin kului yli neljä miljoonaa tiiltä, ja '
             + 'se valmistui vuonna 1436.',
           lahde: 'Francisco Anzola, Flickr (CC BY 2.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuva on 4:3 (4000x3000). Rajaa 3:2:een (4000x2667) tai 16:9:ään (4000x2250) ylhäältä ja alhaalta; vaunu on kuvan keskikolmanneksessa (noin y
+           */
+          tiedosto: 'GEST 1012 Strozzi Fallaci 20251011.jpg',
+          lyhyt: 'Firenzen T1-raitiolinjan vaunu on AnsaldoBredan rakentama Sirio.',
+          selite: 'T1-linja aloitti liikenteen 14.2.2010 Santa Maria Novellan aseman ja Scandiccin '
+            + 'välillä, ja silloin se oli 7,4 kilometriä pitkä. Linjaa ajavat AnsaldoBredan '
+            + 'Sirio-raitiovaunut.',
+          lahde: 'Moliva, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       ennenNyt: [
@@ -32410,6 +32802,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'Panoramicas de Copenhague 05.jpg',
+          lyhyt: 'Christiansborgin tornista näkyvät Kööpenhaminan katot, oopperatalo ja kaukana Amager '
+            + 'Bakken piiput.',
+          selite: 'Christiansborgin torni on 106 metriä korkea ja Kööpenhaminan korkein torni. Kuvan '
+            + 'keskellä kaukana erottuva oopperatalo avattiin 2005.',
+          lahde: 'Alberto-g-rovi, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex eurooppa-introt-kaikki,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -32448,6 +32852,17 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Nyhavn kaivettiin 1670-luvulla kanavaksi, jotta laivat '
             + 'pääsisivät purkamaan lastinsa keskelle kaupunkia.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'Copenhagen Harbour Bus Havnebus 2014 02.jpg',
+          lyhyt: 'Kööpenhaminan satamabussi kuljettaa matkustajia kaupungin satamassa vuodesta 2000.',
+          selite: 'Satamabussit aloittivat liikenteen 3.8.2000. Koko laivasto vaihdettiin vuonna 2020 '
+            + 'sähköveneisiin, joten kuvan vuoden 2014 vene on vielä aiempaa polvea.',
+          lahde: 'Julian Herzog, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       ennenNyt: [
@@ -33518,6 +33933,73 @@ export const KULTTUURI_KATEGORIAT = {
             + 'laakson yli.',
         },
       ],
+      avauskuvat: [
+        {
+          /*
+           * SAAPUMISINTRON KUVA 4 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/luxembourg/20261013-full/luxembourg-4-arki-intro-v1.png',
+          lyhyt: 'Pfaffenthal on Alzetten laakson vanha kaupunginosa, johon keskiajalla asettui vettä '
+            + 'tarvitsevia käsityöläisiä.',
+          selite: 'Alzetten rannoille asettui nahkureita, värjäreitä ja myllääjiä, jotka tarvitsivat '
+            + 'joen vettä. Pfaffenthal kuuluu Luxemburgin vanhimpiin asuinalueisiin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 5 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/luxembourg/20261013-full/luxembourg-5-luonto-intro-v1.png',
+          lyhyt: 'Passerelle-viadukti ylittää Pétrussen laakson 24 kaarella ja valmistui 1861.',
+          selite: 'Silta rakennettiin 1859–1861, ja se kohoaa noin 45 metriä laakson yläpuolelle. '
+            + 'Paikalliset kutsuvat sitä Vanhaksi sillaksi.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuva on jo 3:2 (6016x4016), ei pakollista rajausta. Suositus: rajaa 16:9:ään ylhäältä, ota y 17-94 % (taivasta on yli kolmannes), jolloin tu
+           */
+          tiedosto: '20190324 Plateau du Saint-Esprit 01.jpg',
+          lyhyt: 'Saint-Esprit-tasangolta näkyy Grundin alakaupunki Alzette-joen laaksossa.',
+          selite: 'Grund on Alzette-joen laaksossa sijaitseva alakaupunki, jonka yläpuolella kohoavat '
+            + 'vanhan kaupungin linnoitetut kalliot. Luxemburgin vanhat kaupunginosat ja '
+            + 'linnoitukset merkittiin Unescon maailmanperintöluetteloon 1994.',
+          lahde: 'Flocci Nivis, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia,
+           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/luxembourg/20261013-full/luxembourg-7-ilta-intro-v1.png',
+          lyhyt: 'Chemin de la Corniche kulkee 1600-luvun valleilla ja sitä sanotaan Euroopan '
+            + 'kauneimmaksi parvekkeeksi.',
+          selite: 'Kävelytie kulkee Bock-niemeltä Pyhän Hengen linnakkeen alaosaan, ja sieltä näkyy '
+            + 'Grundin kaupunginosa ja Rham-ylänkö. Nimitys liitetään kirjailija Batty Weberiin.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
+           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
+           * kahdella Sonnet-vaiheella.
+           */
+          ampari: 'saapumisintro/luxembourg/20261013-uudet-6-8/luxembourg-8-kulkuneuvo-intro-v1.png',
+          lyhyt: 'Luxemburgin raitiovaunu palasi kadulle 10.12.2017 yli viidenkymmenen vuoden tauon '
+            + 'jälkeen.',
+          selite: 'Luxemburgin vanha raitiotie lakkautettiin 5.9.1964, ja uusi Luxtram aloitti '
+            + 'liikenteen 10.12.2017. Nykyinen linja on noin 16 kilometriä pitkä ja siinä on 24 '
+            + 'pysäkkiä.',
+          lahde: 'Matkakirjan havainnekuva',
+        },
+      ],
       matkailijalle: {
         kuva: {
           tiedosto: 'Luxembourg City Square Guillaume II towards Notre-Dame Cathedral April 2011.jpg',
@@ -33801,58 +34283,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ottomaanit rakensivat 1572 vuosi saaren valtauksen jälkeen; '
             + 'sisäpihan keskellä on pieni moskeija suihkulähteineen, ja '
             + 'britit käyttivät taloa kaupungin ensimmäisenä vankilana.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 4 (13.10.2026, Codex viimeiset 5 kaupunkia,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/luxembourg/20261013-full/luxembourg-4-arki-intro-v1.png',
-          lyhyt: 'Pfaffenthal on Alzetten laakson vanha kaupunginosa, johon keskiajalla asettui vettä '
-            + 'tarvitsevia käsityöläisiä.',
-          selite: 'Alzetten rannoille asettui nahkureita, värjäreitä ja myllääjiä, jotka tarvitsivat '
-            + 'joen vettä. Pfaffenthal kuuluu Luxemburgin vanhimpiin asuinalueisiin.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 5 (13.10.2026, Codex viimeiset 5 kaupunkia,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/luxembourg/20261013-full/luxembourg-5-luonto-intro-v1.png',
-          lyhyt: 'Passerelle-viadukti ylittää Pétrussen laakson 24 kaarella ja valmistui 1861.',
-          selite: 'Silta rakennettiin 1859–1861, ja se kohoaa noin 45 metriä laakson yläpuolelle. '
-            + 'Paikalliset kutsuvat sitä Vanhaksi sillaksi.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia,
-           * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/luxembourg/20261013-full/luxembourg-7-ilta-intro-v1.png',
-          lyhyt: 'Chemin de la Corniche kulkee 1600-luvun valleilla ja sitä sanotaan Euroopan '
-            + 'kauneimmaksi parvekkeeksi.',
-          selite: 'Kävelytie kulkee Bock-niemeltä Pyhän Hengen linnakkeen alaosaan, ja sieltä näkyy '
-            + 'Grundin kaupunginosa ja Rham-ylänkö. Nimitys liitetään kirjailija Batty Weberiin.',
-          lahde: 'Matkakirjan havainnekuva',
-        },
-        {
-          /*
-           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 13.10.2026, Codex eurooppa-introt-uudet68,
-           * PT hyväksyi omistajan puolesta): havainnekuva, tekstit tarkistettu
-           * kahdella Sonnet-vaiheella.
-           */
-          ampari: 'saapumisintro/luxembourg/20261013-uudet-6-8/luxembourg-8-kulkuneuvo-intro-v1.png',
-          lyhyt: 'Luxemburgin raitiovaunu palasi kadulle 10.12.2017 yli viidenkymmenen vuoden tauon '
-            + 'jälkeen.',
-          selite: 'Luxemburgin vanha raitiotie lakkautettiin 5.9.1964, ja uusi Luxtram aloitti '
-            + 'liikenteen 10.12.2017. Nykyinen linja on noin 16 kilometriä pitkä ja siinä on 24 '
-            + 'pysäkkiä.',
           lahde: 'Matkakirjan havainnekuva',
         },
       ],
@@ -68316,6 +68746,18 @@ export const KULTTUURI_KATEGORIAT = {
             + '1435 mennessä.',
           lahde: 'Matkakirjan havainnekuva',
         },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Kuvasuhde 1,54:1 on jo sallitussa 3:2–16:9-alueessa, rajausta ei tarvita. 16:9-rajaus: poista ylhäältä n. 330 px taivasta (kupoli ja raitiov
+           */
+          tiedosto: 'BEL Brussels, Cathédrale Saint-Jacques-sur-Coudenberg 001.jpg',
+          lyhyt: 'Raitiovaunu kulkee Place Royalen aukion poikki Saint-Jacques-sur-Coudenbergin kirkon '
+            + 'edessä.',
+          selite: 'Kirkon ensimmäinen kivi laskettiin 1776, ja sen vihkiäiset pidettiin 1787.',
+          lahde: '-wuppertaler, Wikimedia Commons (CC BY 4.0)',
+        },
       ],
       ennenNyt: [
         {
@@ -69070,6 +69512,17 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'Ljubljana, Slovenia (22342237376).jpg',
+          lyhyt: 'Nebotičnikin huipulta näkyvät keskustan katot, metsäinen kukkula ja oikealla '
+            + 'Linnavuori.',
+          selite: 'Nebotičnik avattiin 1933, ja sen 13 kerrosta ulottuvat noin 70 metrin korkeuteen.',
+          lahde: 'Jeremy Segrott, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -69756,6 +70209,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           /*
+           * SAAPUMISINTRON KUVA 6 (näköalakuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: Alkuperäinen on 17993x3024 (noin 6:1). Rajaa 16:9: x 12617–17993 (5376 px), koko korkeus 0–3024 -> 5376x3024. Rajaus näyttää tuomiokirkon, s
+           */
+          tiedosto: 'Kosice panorama.jpg',
+          lyhyt: 'Pyhän Elisabetin tuomiokirkko kohoaa Košicen vanhankaupungin punaisten kattojen '
+            + 'yläpuolelle.',
+          selite: 'Tuomiokirkko on Slovakian suurin kirkko ja Euroopan itäisin länsityylinen '
+            + 'goottilainen katedraali.',
+          lahde: 'Govisity / Tip na Trip / kosice.guide, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          /*
            * SAAPUMISINTRON KUVA 7 (13.10.2026, Codex viimeiset 5 kaupunkia, uusinta v2,
            * omistaja hyväksyy Codexissa): havainnekuva, tekstit tarkistettu
            * kahdella Sonnet-vaiheella.
@@ -69766,6 +70232,18 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Urbanin tornin Urban-kello valettiin 1557. Kello rikkoutui tornin palossa 1966, ja '
             + 'siitä on tehty kopio.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           * Rajaus: PAKOLLINEN rajaus, koska oikeassa reunassa kävelee kuvan etualalla nainen aurinkolasit päässä: rajaa oikeasta reunasta pois. Kuva on 3:2 (36
+           */
+          tiedosto: 'Košice, Tatra T3 č. 410+411 (01).jpg',
+          lyhyt: 'Tatra T3 -raitiovaunupari linjalla 6 Košicen rautatieaseman edustalla.',
+          selite: 'Vaunut 410 ja 411 on kytketty yhteen. Säännöllinen sähköraitiotieliikenne alkoi '
+            + 'Košicessa 28.2.1914.',
+          lahde: 'Thomas Quine, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       ennenNyt: [
@@ -70895,6 +71373,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'alussa kuljettamaan matkustajia Grand Harbourin yli. Nykyään harvat jäljellä olevat '
             + 'veneet kuljettavat enimmäkseen matkailijoita.',
           lahde: 'Matkakirjan havainnekuva',
+        },
+        {
+          /*
+           * SAAPUMISINTRON KUVA 8 (kulkuneuvokuva, 14.10.2026, Commonsin valokuva, PT:n linja
+           * 14.10. "vain Commons"): kuvateksti kuvaa näkyvän sisällön; faktat kahdella lähteellä.
+           */
+          tiedosto: 'Bybanen Bergen Kaigaten.jpg',
+          lyhyt: 'Bybanen-raitiovaunu ajaa Bergenin keskustan katua linjalla 2; taustalla kohoaa '
+            + 'vuori.',
+          selite: 'Bybanen avattiin 22.6.2010 Byparkenin ja Nesttunin välille, ja ensimmäinen osuus oli '
+            + '9,8 kilometriä pitkä. Linja 2 Kaigatenilta Fyllingsdaleniin aloitti liikenteen '
+            + '21.11.2022.',
+          lahde: 'Espen Franck-Nielsen, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       nostot: [
