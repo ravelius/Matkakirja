@@ -8,7 +8,8 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (14.10. 00.5x, nollaus):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261014-yo.md` KOKONAAN. Valmiit: lähtöalusta v3c (Nordmela, LS2 kytki), Rijksmuseum-karttaesine (LS1 kytki), Ranskan sali v2h, pronssiarvot (LS2 korjaa patsaiden värikuvan sidonnan). Odota LS1/LS2/PT. OLAVINLINNA TAUOLLA, PEKING CODEXILLA.
+1. **NYT (14.10. iltapäivä):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261014-iltapaiva.md` KOKONAAN (raketti v3, ISS, valas, kaupungintalo v3b, Eiffel v2b; viestit id:llä osoitekirjasta).
+1y. **(vanha) 14.10. 00.5x, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261014-yo.md` KOKONAAN. Valmiit: lähtöalusta v3c (Nordmela, LS2 kytki), Rijksmuseum-karttaesine (LS1 kytki), Ranskan sali v2h, pronssiarvot (LS2 korjaa patsaiden värikuvan sidonnan). Odota LS1/LS2/PT. OLAVINLINNA TAUOLLA, PEKING CODEXILLA.
 1o. **(vanha) 13.10. 21.3x, tilinvaihto:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261013-myohaisilta.md` KOKONAAN. Ranskan museo v2d toimitettu (puutarha, Mona Lisa, Kolme haamua syvennyksessä); odota LS1/LS2:n huomioita tai PT:n erää. OLAVINLINNA TAUOLLA, PEKING CODEXILLA.
 1z. **(vanha) 13.10. 19.4x, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261013-ilta.md` KOKONAAN. OLAVINLINNA TAUOLLA, PEKING CODEXILLA. Seuraava erä: Rodinin veistosmallit (kohta 2; tarkista ensin päällekkäisyys LS1/LS2).
 1a. **(vanha) 13.10. 11.4x, OLAVINLINNA TAUOLLA:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261013-paiva.md` KOKONAAN. Älä aloita uusia tiloja; odota PÄÄTOIMITTAJAN uutta erää. Viiden tilan vientipaketti: luovutuksen kohta 4.3; leivontaliput kohta 6 (AINA --kuori).
