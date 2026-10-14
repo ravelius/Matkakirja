@@ -14054,3 +14054,34 @@ Keskustelukanava löysi lähteen: Pelikoodarin selainpaneelin pelisivu (pk-esitt
 ## AUTOMAATTINEN KUVAKIERROS LINSSEIHIN JA PELEIHIN: VALOSEPPÄ ENSIN (omistaja 14.10.2026 klo 10.56) (14.10.2026 klo 10.56)
 
 Omistaja kortilla (Keskustelukanava), sanatarkasti: "Kyllä, Valoseppä ensin (Suositus)" kysymykseen "Tehdäänkö [linsseihin ja peleihin] sama automaattinen kierros [kuin Olavinlinnan automaattikäännöksessä]?". Sisältö: jokainen Valosepän tallennettu (pushattu) muutos käännetään vapaalla vuorolla, ja vakiokuvat ja nopeusluvut syntyvät itsestään, äänet mykistettyinä. Julkaisija rakentaa tämän Olavinlinna-vahdin pohjalta ja pitää vuorojärjestyksen; Pelikoodari tulee mukaan, kun tämä toimii. Annettu Julkaisijalle ja Valosepälle 10.5x; PT ilmoittaa Keskustelukanavalle ensimmäisestä automaattisesta arkista.
+
+## TAVOITELUUPPI: VALOSEPPÄ ENSIN, PILOTTI PETŘÍNIN NÄKÖTORNI (omistaja 14.10.2026 klo 11.09) (14.10.2026 klo 11.10)
+
+## Omistajan sanat (sanatarkasti, 14.10. noin klo 11.0x, sanelu)
+
+> Lupeilla. Itse asiassa tarkoitin sitä, että kun sessio kehittää jotain, vaikka grafiikkaa peliin tai linssiin, niin se luuppaisi tavallaan aina uusia kierroksia, niin että välissä joko sessio itse tai joku toinen analysoisi sen, että onko se päässyt kuinka lähelle tavoitetta, ja sitten työskentely jatkuisi sen jälkeen uudestaan.
+>
+> Tätä varten varmasti pitäisi tehdä myös sitten aina selkeät tavoitteet, miltä joku tietty asia pitää näyttää, esimerkiksi 3D-malleissa. Codexilta voisi pyytää ensin jonkun havainnekuvan, ja se havainnekuvakin itse asiassa varmaan pitäisi pyytää jonkun pohjakartan perusteella. Esimerkiksi jos tehdään niitä 3D-malleja, niin annettaisiin Codexille ensin pohjakartta ja sivuleikkaus ja mallikuvia oikeista valokuvista, ja Codex tekisi sitten havainnekuvat, joiden perusteella sitten se varsinainen luuppi alkaisi, että sessio koettaa tehdä 3D-mallia ja sitten vertaa sitä aina niihin havainnekuviin. Ja mikäli se löytää eroja, niin se palaa uudestaan työskentelemään ja parantamaan 3D-mallia, kunnes loppujen lopuksi se on itse tyytyväinen.
+>
+> Varmaan muunlaisiakin luuppeja voi käyttää, mutta tällainen luuppi-idea, niin onko se meillä missään käytössä ja kannattaisiko sellaisia ottaa käyttöön? Ja miten se tehokkaimmin toteutettaisiin?
+
+## Kortti
+
+Kysymys: "Tavoiteluuppia ei vielä ole käytössä. Lähimpänä ovat liikkuvien kohtausten kuva-arkki, jossa arvioija nimeää kolme suurinta virhettä kerran, sekä teosvalotuksen mittaus lähdekuvaa vastaan. Otetaanko luuppi käyttöön kokeiluna?"
+
+Vastaus: **"Kyllä, Valoseppä ensin (Suositus)"**. Vaihtoehdon kuvaus: "Codex tekee tavoitekuvat pohjakartasta, leikkauksesta ja valokuvista, ja Päätoimittaja hyväksyy ne. Valoseppä parantaa seuraavaa omaa maamerkkimalliaan kierros kerrallaan, kunnes erot ovat pieniä, ja erillinen arvioija tarkistaa tuloksen. Peliin viedään vasta valmis malli."
+
+## Toteutus (Keskustelukanavan suositus, jonka omistaja hyväksyi)
+
+1. **Tavoitepaketti, kerran kohdetta kohden.** Paketissa on pohjakartta tai pohjapiirros, sivuleikkaus tai korkeudet, 3–5 valokuvaa Commonsista (PD/CC) ja 4–6 kiinteää kuvakulmaa. Codex tekee havainnekuvat juuri näistä kulmista. Kuvat ovat fotorealistisia, niissä ei käytetä Googlen 3D-laattoja eikä suojattuja teoksia, ja niihin tulee "havainnekuva"-merkintä. PT hyväksyy kuvat omistajan 13.10. antamalla valtuutuksella, ja makuvalinnat menevät omistajalle kortilla. Hyväksytty paketti tallennetaan kansioon `proto-3d/_valmiit/hyvaksytyt-mallit/<kohde>-<pvm>/`, ja se on sitova tavoite.
+2. **Nopea kierros ilman pelikäännöstä.** Malli kuvataan Blenderissä samoista kulmista (`Blender -b`, `nice -n 15`). Vertailuskripti tekee eroarkin, jossa tavoite, malli ja ääriviivat ovat päällekkäin, sekä luvut: ääriviivojen osuvuus prosentteina, korkeudet leikkausta vastaan ja värisävyjen ero. Jokainen kierros kirjataan kierroslokiin (pisteet ja paras versio), jotta luuppi jatkuu nollauksen yli. Työkalu tehdään kerran ja jaetaan kaikille rooleille.
+3. **Arviointi.** Rooli arvioi itse lukujen ja eroarkin perusteella joka kierroksella. Tarkistuspisteissä ja aina ennen valmis-ilmoitusta tuore arvioija (Sonnet-ali-agentti, joka ei ole nähnyt työtä) nimeää kolme suurinta eroa, kuten elokuvalinjan kohdassa 4.
+4. **Pysähdys.** Malli on valmis, kun luvut ovat rajojen sisällä ja arvioija ei löydä isoja eroja. Jos kaksi kierrosta ei tuo parannusta tai kierroksia on kertynyt 10, paras versio ja jäljellä olevat erot lähetetään PT:lle, ja makuasiat menevät omistajalle kortilla.
+5. **Peliin vasta valmis malli.** Valmis malli kulkee automaattisen käännös- ja kuvakierroksen kautta (omistajan päätös 14.10. klo 10.56, Valoseppä ensin), ja pelistä tehty kuva-arkki menee PT:lle. Käännöskierros on siis tavoiteluupin viimeinen vaihe.
+6. **Kuorma.** Koneella ajetaan enintään kaksi luuppia yhtä aikaa, äänet ovat mykistettyinä, eikä pelikäännöstä tehdä joka kierroksella (ks. 29.9. kuorma, joka esti omistajan etäyhteyden).
+7. **Pilotti ja laajennus.** Pilotti on Valosepän seuraava oma maamerkkimalli, ja PT valitsee kohteen. Jos pilotti onnistuu, tapaa laajennetaan Linnanrakentajaan (linnat), Pelikoodariin (pelikohtaukset, esim. Wienin kahvila) ja linssien valo- ja vesiefekteihin, joissa tavoitteena ovat valokuvat.
+8. **Onnistumisen mittarit.** Seurataan kierrosten määrää, PT:n korjauspyyntöjen määrää ennen ja jälkeen sekä aikaa ideasta hyväksyttyyn malliin. Tulokset raportoidaan omistajalle pilotin jälkeen.
+
+Kirjaus: PT kirjoittaa Raamattuun uuden linjauksen TAVOITELUUPPI (lokiin `tools/raamattu-kirjaa.mjs`) ja lisää työn työlistaan.
+
+PT 11.1x: pilottikohteeksi Petřínin näkötorni (Praha, 1891, selkeä ristikkogeometria ja tunnettu korkeus 63,5 m, PD-kuvia runsaasti, näkyy Prahan pallokierroksella ja yökuvissa). Raamattuun linjaus TAVOITELUUPPI. Valosepän seuraaja aloittaa tavoitepaketista; Julkaisijan valoseppa-vahti (11.09) on luupin viimeinen vaihe.
