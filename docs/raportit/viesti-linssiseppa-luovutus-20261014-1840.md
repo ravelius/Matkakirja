@@ -9,7 +9,7 @@ NS local_bf20055b-d582-4812-ba2b-b59c37a5e7b8. Simu iPad 00CF62C2 on joukossa `x
 
 ## 1. KESKEN: PRAHA v5 -AJO JA KUITTAUS (PT: Josefovin repeytynyt etuala korjattava ennen kuittausta)
 - Data: pallokierros-praha-v5 = v3 (Josefov 320) + v4 (Vyšehrad 75, KS v4c) + v5 (Josefov silmä 70–85, KS v4d). Haara linssiseppa/ateena-pallo-190 5ff1f17db.
-  Vienti _valmiit/opas-pallokierros-praha-v5-vienti-20261014 (SHA 933b68b2…) PYYDETTY Julkaisijalta 18.38 – tarkista kuittaus (praha-v3 ja -v4 jo ämpärissä).
+  Vienti _valmiit/opas-pallokierros-praha-v5-vienti-20261014 (SHA 933b68b2…) VIETY (Julkaisija kuittasi: 1/1, julkinen 200 + SHA; praha-v3 ja -v4 myös ämpärissä).
 - Testihaara linssiseppa/lontoo-testi-190 94e775f54 (wt /Users/Shared/Claude/wt/proto-linssiseppa-lontootesti190) = ateena-pallo-190 + Valosepän
   linssiseppa2/lontoo-korkeus-v2 fdebada27 (Lontoo v5, Prahan matala porttitasanne). VAIN AJOA VARTEN, ei junaan.
 - Ketju VALMIINA mutta EI käynnissä: `ajo-pallot-testi3.zsh` (Praha v5, skenaario sk-prahapallo6-ipad.txt, app pallot-testi190c, vahti 94e775f54).
