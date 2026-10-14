@@ -582,6 +582,413 @@ export const EUROPE_QUESTIONS = {
    * "Luxembourg City" ja "History of Luxembourg", luettu 21.9.2026), ei
    * uusia väitteitä.
    */
+  minsk: [
+    {
+      q: 'Mikä oli Minskin asema vuonna 1873, isoisän matkan aikaan?',
+      options: [
+        'Venäjän keisarikunnan Minskin kuvernementin keskus',
+        'Puolan kuningaskunnan pääkaupunki',
+        'Liettuan suuriruhtinaskunnan pääkaupunki',
+        'Valko-Venäjän pääkaupunki',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Minsk liitettiin Venäjään 1793 Puolan toisessa jaossa, ja '
+          + 'vuodesta 1796 se oli Minskin kuvernementin keskus. '
+          + 'Valko-Venäjän pääkaupungiksi se tuli vasta 1919.',
+      hint: 'Valko-Venäjän valtiota ei vielä ollut, vaan aluetta hallittiin '
+          + 'keisarikunnan kuvernementtina.',
+      source: 'https://en.wikipedia.org/wiki/Minsk_Governorate',
+    },
+    {
+      q: 'Minkä sodan uhreille Kyynelten saaren muistomerkki Minskissä on omistettu?',
+      options: [
+        'Afganistanin sota 1979–1989',
+        'Napoleonin sota 1812',
+        'Krimin sota',
+        'Toinen maailmansota',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Kyynelten saari eli Rohkeuden ja surun saari on muistomerkki '
+          + 'Afganistanin sodassa kuolleille valkovenäläisille. Kokonaisuus '
+          + 'avattiin 3.8.1996.',
+      hint: 'Sota käytiin 1900-luvun lopulla kaukana Minskistä, '
+          + 'Keski-Aasiassa.',
+      source: 'https://ru.wikipedia.org/wiki/%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2_%D0%9C%D1%83%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B0_%D0%B8_%D0%A1%D0%BA%D0%BE%D1%80%D0%B1%D0%B8',
+    },
+    {
+      q: 'Millä nimellä nykyinen Gorki-puisto perustettiin Minskiin vuonna 1800?',
+      options: [
+        'Kuvernöörin puutarha',
+        'Keisarillinen puisto',
+        'Kaupungin kasvitieteellinen puutarha',
+        'Tsaarin leikkikenttä',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Puisto perustettiin 1800 nimellä Governor\'s Garden eli '
+          + 'Kuvernöörin puutarha. Neuvostoaikana se nimettiin kirjailija '
+          + 'Maksim Gorkin mukaan.',
+      hint: 'Nimi kertoo, kuka kaupunkia hallitsi ylhäältä käsin.',
+      source: 'https://en.wikipedia.org/wiki/Gorky_Park_(Minsk)',
+    },
+  ],
+  chisinau: [
+    {
+      q: 'Mikä yhteys avattiin Chișinăuhun 28.8.1871, pari vuotta ennen isoisän matkaa?',
+      options: [
+        'höyrylaivareitti Dnestrille',
+        'kanava Prutille',
+        'rautatie Tiraspoliin',
+        'raitiotie Odessaan',
+      ],
+      correct: 2,
+      level: 1,
+      fact: 'Rautatie Tiraspoliin avattiin elokuussa 1871. Romaniaan '
+          + 'Unghenin kautta rata ulottui 1875, valmistautumaan '
+          + 'Venäjän–Turkin sotaan 1877–1878.',
+      hint: 'Yhteys kulki kiskoilla Dnestrin rannalla olevaan kaupunkiin.',
+      source: 'https://en.wikipedia.org/wiki/Chișinău_railway_station',
+    },
+    {
+      q: 'Kuka venäläinen runoilija asui Chișinăussa maanpaossa vuosina 1820–1823?',
+      options: [
+        'Lev Tolstoi',
+        'Aleksandr Puškin',
+        'Fjodor Dostojevski',
+        'Anton Tšehov',
+      ],
+      correct: 1,
+      fact: 'Puškin siirrettiin pääkaupungista etelään 1820 ja asui '
+          + 'Chișinăussa vuoteen 1823, jolloin hän kirjoitti kaksi '
+          + 'romanttista runoelmaa.',
+      hint: 'Hänen patsaansa seisoo kaupungin keskuspuiston klassikoiden '
+          + 'kujalla.',
+      source: 'https://en.wikipedia.org/wiki/Alexander_Pushkin',
+    },
+    {
+      q: 'Mitä Chișinăun nimen uskotaan tarkoittavan?',
+      options: [
+        'kivinen silta',
+        'tsaarin kaupunki',
+        'vihreä laakso',
+        'uusi lähde',
+      ],
+      correct: 3,
+      level: 2,
+      fact: 'Nimen uskotaan tulevan sanoista chișla, lähde, ja nouă, uusi, '
+          + 'sillä kylä nousi pienen lähteen ympärille.',
+      hint: 'Kaupunki syntyi veden ääreen.',
+      source: 'https://en.wikipedia.org/wiki/Chișinău',
+    },
+  ],
+  belgrad: [
+    {
+      q: 'Minä vuonna ottomaanien varuskunta lähti Belgradin linnoituksesta?',
+      options: [
+        '1867',
+        '1830',
+        '1878',
+        '1882',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Ottomaanien varuskunta poistui linnoituksesta 18. huhtikuuta '
+          + '1867, ja Serbian joukot ottivat sen haltuunsa. Itävalta-Unkari '
+          + 'ei tunnustanut Serbiaa linnoituksen omistajaksi, ja täysi '
+          + 'itsenäisyys tuli vasta 1878.',
+      hint: 'Tapahtuma oli kuusi vuotta ennen isoisän matkaa.',
+      source: 'https://en.wikipedia.org/wiki/Belgrade_Fortress',
+    },
+    {
+      q: 'Mitä tarkoittavat turkin sanat kale ja meydan, joista Kalemegdanin nimi muodostuu?',
+      options: [
+        'Linnoitus ja kenttä',
+        'Kukkula ja puutarha',
+        'Joki ja silta',
+        'Torni ja portti',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Kale tarkoittaa linnoitusta ja meydan kenttää tai aukiota. '
+          + 'Alue oli linnoituksen edustalla ottomaanien armeijan '
+          + 'harjoituskenttä, ennen kuin siitä tuli puisto.',
+      hint: 'Alue oli aikoinaan sotilaiden harjoituspaikka linnoituksen '
+          + 'edustalla.',
+      source: 'https://en.wikipedia.org/wiki/Kalemegdan',
+    },
+    {
+      q: 'Mikä oli Tasavallan aukion entinen nimi?',
+      options: [
+        'Teatteriaukio (Pozorišni trg)',
+        'Stambolin aukio',
+        'Linnoituksenaukio',
+        'Savan aukio',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Kansallisteatteri valmistui 1869 ja oli yli 30 vuotta aukion '
+          + 'ainoa suuri rakennus, minkä vuoksi aukio tunnettiin '
+          + 'Teatteriaukiona 1945 jälkeiseen kommunistiaikaan asti. '
+          + 'Ruhtinas Mihailon patsas pystytettiin 19.12.1882.',
+      hint: 'Nimi viittasi rakennukseen, joka valmistui vuonna 1869.',
+      source: 'https://en.wikipedia.org/wiki/Republic_Square,_Belgrade',
+    },
+  ],
+  vaduz: [
+    {
+      q: 'Mikä uusi rakennus vihittiin Vaduzissa käyttöön vuonna 1873, isoisän matkavuonna?',
+      options: [
+        'neogoottilainen St. Florinin kirkko',
+        'Kunstmuseum Liechtenstein',
+        'kansallismuseo',
+        'rautatieasema',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Friedrich von Schmidtin suunnittelema St. Florinin kirkko '
+          + 'rakennettiin 1869–1873 ja vihittiin lokakuussa 1873; samana '
+          + 'vuonna Vaduz sai oman seurakunnan. Katedraaliksi kirkko tuli '
+          + 'vasta 1997.',
+      hint: 'Rakennus on nykyään koko arkkihiippakunnan keskus.',
+      source: 'https://de.wikipedia.org/wiki/Kathedrale_St._Florin',
+    },
+    {
+      q: 'Kuka keisari yhdisti Schellenbergin ja Vaduzin 23.1.1719 ruhtinaskunnaksi nimeltä Liechtenstein?',
+      options: [
+        'Rudolf II',
+        'Kaarle VI',
+        'Kaarle V',
+        'Joosef II',
+      ],
+      correct: 1,
+      fact: 'Pyhän saksalais-roomalaisen keisarikunnan keisari Kaarle VI '
+          + 'yhdisti ostetut alueet ja antoi ruhtinaskunnalle nimen Anton '
+          + 'Florian Liechtensteinin kunniaksi.',
+      hint: 'Hän hallitsi 1700-luvun alussa, ei vielä 1500-luvulla.',
+      source: 'https://en.wikipedia.org/wiki/Liechtenstein',
+    },
+    {
+      q: 'Mistä aineista Kunstmuseum Liechtensteinin laatikkomainen ulkopinta on tehty?',
+      options: [
+        'valkoisesta marmorista ja lasista',
+        'punatiilestä ja kuparista',
+        'värjätystä betonista ja mustasta basaltista',
+        'kalkkikivestä ja puusta',
+      ],
+      correct: 2,
+      level: 2,
+      fact: 'Museo valmistui marraskuussa 2000, ja sen ulkopinta on '
+          + 'värjättyä betonia ja mustaa basalttia, johon on upotettu '
+          + 'jokikiviä.',
+      hint: 'Rakennusta kutsutaan mustaksi laatikoksi.',
+      source: 'https://en.wikipedia.org/wiki/Kunstmuseum_Liechtenstein',
+    },
+  ],
+  monaco: [
+    {
+      q: 'Kuka hallitsi Monacoa isoisän matkan aikaan vuonna 1873?',
+      options: [
+        'Honoré II',
+        'Charles III',
+        'Rainier III',
+        'Louis II',
+      ],
+      correct: 1,
+      level: 1,
+      fact: 'Ruhtinas Charles III hallitsi 20.6.1856 kuolemaansa 1889 asti. '
+          + 'Hänen aikanaan Menton ja Roquebrune menetettiin Ranskalle 1861 '
+          + 'ja kasino valmistui 1863.',
+      hint: 'Monte Carlon nimi tarkoittaa hänen vuortaan.',
+      source: 'https://en.wikipedia.org/wiki/Charles_III,_Prince_of_Monaco',
+    },
+    {
+      q: 'Miksi pukeutuneena François Grimaldi valtasi Monacon linnoituksen vuonna 1297?',
+      options: [
+        'kalastajaksi',
+        'kauppiaaksi',
+        'pyhiinvaeltajaksi',
+        'fransiskaanimunkiksi',
+      ],
+      correct: 3,
+      fact: 'Grimaldit valtasivat linnoituksen munkeiksi pukeutuneina 1297, '
+          + 'ja tapahtuma näkyy yhä vaakunassa, jossa kaksi fransiskaania '
+          + 'pitelee miekkoja.',
+      hint: 'Vaakunassa kaksi miestä pitelee miekkoja kaapuissaan.',
+      source: 'https://en.wikipedia.org/wiki/Monaco',
+    },
+    {
+      q: 'Mitä kasveja Jardin Exotique -puutarhassa kasvaa pääosin?',
+      options: [
+        'ruusuja',
+        'oliivipuita',
+        'orkideoita',
+        'sukkulentteja eli mehikasveja',
+      ],
+      correct: 3,
+      level: 2,
+      fact: 'Rinteeseen rakennettu puutarha avattiin 1931, ja siellä kasvaa '
+          + 'lähteen mukaan yli 1 000 lajia ja 6 000 lajiketta '
+          + 'sukkulentteja.',
+      hint: 'Kasvit varastoivat vettä paksuihin lehtiinsä.',
+      source: 'https://en.wikipedia.org/wiki/Jardin_Exotique_de_Monaco',
+    },
+  ],
+  skopje: [
+    {
+      q: 'Mikä uusi yhteys valmistui Skopjeen isoisän matkavuonna 1873?',
+      options: [
+        'kanava Egeanmerelle',
+        'rautatie Salonikiin',
+        'postireitti Belgradiin',
+        'höyrylaivalinja Vardarille',
+      ],
+      correct: 1,
+      level: 1,
+      fact: 'Rautatie Skopjesta Thessalonikiin rakennettiin 1873 '
+          + 'ottomaanien aikana, ja se oli normaaliraiteinen.',
+      hint: 'Savu nousee uudelta asemalta kohti Egeanmeren satamakaupunkia.',
+      source: 'https://en.wikipedia.org/wiki/Rail_transport_in_North_Macedonia',
+    },
+    {
+      q: 'Montako kaarta Skopjen Kivisillassa on?',
+      options: [
+        '6',
+        '9',
+        '16',
+        '12',
+      ],
+      correct: 3,
+      fact: 'Vardarin ylittävä Kivisilta on 214 metriä pitkä ja 6 metriä '
+          + 'leveä, ja sen 12 puolipyöreää kaarta lepäävät roomalaisten '
+          + 'perustusten päällä.',
+      hint: 'Kaaria on yhtä monta kuin kuukausia vuodessa.',
+      source: 'https://en.wikipedia.org/wiki/Stone_Bridge_(Skopje)',
+    },
+    {
+      q: 'Mikä roomalainen siirtokunta sijaitsi Skopjen seudulla ennen nykykaupunkia?',
+      options: [
+        'Naissus',
+        'Stobi',
+        'Scupi',
+        'Heraclea',
+      ],
+      correct: 2,
+      level: 2,
+      fact: 'Scupi perustettiin keisari Domitianuksen aikana 81–96 '
+          + 'legioonalaisveteraanien siirtokunnaksi, ja se hylättiin 518 '
+          + 'maanjäristyksen jälkeen.',
+      hint: 'Nimi muistuttaa kaupungin nykyistä nimeä.',
+      source: 'https://en.wikipedia.org/wiki/Scupi',
+    },
+  ],
+  tirana: [
+    {
+      q: 'Mikä seuraavista seisoi jo Tiranassa isoisän matkavuonna 1873?',
+      options: [
+        'Et\'hem Beyn moskeija ja kellotorni',
+        'Tiranan pyramidi',
+        'Skanderbeg-aukion nykyinen jalankulkualue',
+        'Stalinin patsas Skanderbeg-aukiolla',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Et\'hem Beyn moskeija valmistui 1819 tai 1821 ja viereinen '
+          + 'kellotorni 1820-luvulla. Pyramidi avattiin 1988, aukion '
+          + 'jalankulkualue 2017 ja Stalinin patsas pystytettiin vasta '
+          + 'kommunistiaikana.',
+      hint: 'Etsi rakennus, joka on ottomaanien ajalta ja oli jo isoisän '
+          + 'matkan aikaan yli viisikymmentä vuotta vanha.',
+      source: 'https://en.wikipedia.org/wiki/Et\'hem_Bey_Mosque',
+    },
+    {
+      q: 'Mitä Tiranan pyramidi oli, kun se avattiin vuonna 1988?',
+      options: [
+        'Enver Hoxhan museo',
+        'kauppakeskus',
+        'rautatieasema',
+        'urheiluhalli',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Pyramidi avattiin 1988 Albanian pitkäaikaisen johtajan Enver '
+          + 'Hoxhan museona. Hollantilaisen MVRDV-toimiston uudistama TUMO '
+          + 'Tirana avattiin yleisölle 2023.',
+      hint: 'Rakennus oli omistettu maan pitkäaikaiselle johtajalle, joka '
+          + 'oli kuollut kolme vuotta aiemmin.',
+      source: 'https://en.wikipedia.org/wiki/Pyramid_of_Tirana',
+    },
+    {
+      q: 'Mihin Kokonozin moskeija muutettiin vuonna 1966, kun kommunistihallinto sulki sen?',
+      options: [
+        'ruokavarastoksi',
+        'museoksi',
+        'kouluksi',
+        'kirjastoksi',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Moskeija suljettiin 1966 ja muutettiin ruokavarastoksi, '
+          + 'myöhemmin sitä käytettiin tupakan säilytykseen. Se avattiin '
+          + 'uudelleen 18.2.1991.',
+      hint: 'Uusi käyttö liittyi kauppatavaraan, ei kulttuuriin tai '
+          + 'opetukseen.',
+      source: 'https://en.wikipedia.org/wiki/Kokonozi_Mosque',
+    },
+  ],
+  zagreb: [
+    {
+      q: 'Mikä seuraavista oli jo olemassa Zagrebissa isoisän matkavuonna 1873?',
+      options: [
+        'Ban Jelačićin ratsastajapatsas Ban Jelačić -aukiolla',
+        'Lotrščakin tornin keskipäivän tykki',
+        'Taidepaviljonki',
+        'hevosraitiotie',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Anton Dominik Fernkornin tekemä ratsastajapatsas paljastettiin '
+          + '1866. Keskipäivän tykki ammuttiin ensi kerran 1.1.1877, '
+          + 'hevosraitiotie avattiin 1891 ja Taidepaviljonki 1898.',
+      hint: 'Kolme vaihtoehtoa kuuluu vasta isoisän matkaa seuranneisiin '
+          + 'vuosikymmeniin.',
+      source: 'https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square',
+    },
+    {
+      q: 'Minkä kaupungin vuosituhatnäyttelyä varten Zagrebin Taidepaviljongin rautarunko alun perin tehtiin?',
+      options: [
+        'Budapestin',
+        'Wienin',
+        'Prahan',
+        'Pariisin',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Paviljongin esivalmistettu rautarunko tehtiin Budapestin '
+          + 'vuosituhatnäyttelyyn 1896 ja kuljetettiin sieltä Zagrebiin. '
+          + 'Taidepaviljonki avattiin 15.12.1898.',
+      hint: 'Näyttely juhli yhden valtakunnan osan tuhatvuotista historiaa, '
+          + 'johon Kroatiakin tuolloin kuului.',
+      source: 'https://en.wikipedia.org/wiki/Art_pavilion_in_Zagreb',
+    },
+    {
+      q: 'Mitä Lotrščakin tornin nimi tarkoittaa, kun se juontuu latinan sanoista campana latrunculorum?',
+      options: [
+        'varkaiden kello',
+        'vartijoiden torni',
+        'kaupunginportin kello',
+        'lohikäärmeen torni',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Torniin ripustettiin 1646 kello, jota soitettiin illalla ennen '
+          + 'kuin kaupunginportit suljettiin. Siitä tornin nimi Lotrščak, '
+          + 'varkaiden kello, juontuu.',
+      hint: 'Kello soi iltaisin, kun portit suljettiin yön ajaksi.',
+      source: 'https://en.wikipedia.org/wiki/Lotr%C5%A1%C4%8Dak_Tower',
+    },
+  ],
   luxemburg: [
     {
       q: 'Missä valtiomuodossa Luxemburg on isoisän matkan aikaan vuonna 1873?',
@@ -2529,6 +2936,120 @@ export const EUROPE_FACTS = {
     'Galeries Royales Saint-Hubert avattiin vuonna 1847 lasikattoisena kauppakujana, ja se oli aikanaan yksi Euroopan ensimmäisistä katetuista ostoskaduista.',
     {
       text: 'Belgian suklaa on vielä tavallista kaakaolevyä: täytetty praliini keksitään täällä vasta neljänkymmenen vuoden päästä. Torilla myydään sen sijaan pitsiä, jota nyplätään sormin niin nopeasti, etten ehdi seurata.',
+      voice: 'isoisa',
+    },
+  ],
+  minsk: [
+    'Valko-Venäjän kansalliskirjasto Minskissä on rombikuboktaedrin '
+      + 'muotoinen monitahokas, jonka korkeus on yli 70 metriä. '
+      + 'Rakennus avattiin 16.6.2006, ja ylimmässä kerroksessa on '
+      + 'näköalatasanne.',
+    'Vuoden 1897 väestönlaskennassa yli puolet minskiläisistä oli '
+      + 'juutalaisia. Venäjää äidinkielenään puhui noin neljännes ja '
+      + 'valkovenäjää vain noin yhdeksän prosenttia.',
+    {
+      text: 'Minskissä on julkinen kirjasto jo vuodesta 1836 ja teatteri '
+          + 'vuodesta 1844, joten kuvernementin kaupungissa ei illalla '
+          + 'tarvitse vain istua torilla.',
+      voice: 'isoisa',
+    },
+  ],
+  chisinau: [
+    'Anastase Ciufli rahoitti Ciuflea-luostarin veljensä Teodorin '
+      + 'testamentin mukaan. Veljekset olivat aromunikauppiaita, jotka '
+      + 'muuttivat Makedoniasta Bessarabiaan 1821.',
+    'Venäläiset sotilasinsinöörit perustivat Tapani Suuren '
+      + 'keskuspuiston 1818, ja sen pinta-ala on noin seitsemän '
+      + 'hehtaaria.',
+    {
+      text: 'Riemukaaren yläkerrassa riippuu valtava kello, lähes kuusi ja '
+          + 'puoli tonnia, ja kaaren kellotaulun koneisto on tuotu '
+          + 'Odessasta.',
+      voice: 'isoisa',
+    },
+  ],
+  belgrad: [
+    'Ada Ciganlija oli ennen saari Savassa. 1960-luvun padot ja '
+      + 'penger muuttivat sen niemeksi ja loivat Sava-järven, josta '
+      + 'tuli kaupunkilaisten suosittu kesäpaikka.',
+    'Suuri sotasaari on 2,11 neliökilometrin kokoinen, matala ja '
+      + 'usein tulviva saari Savan suulla. Siellä pesii merikotkapari, '
+      + 'joka asettui saarelle vuonna 2010.',
+    {
+      text: 'Kalemegdanin kenttä oli ennen turkkilaisten harjoituskenttä, '
+          + 'jolla ei kasvanut puuta eikä pensasta. Nyt ruhtinas Milan '
+          + 'haluaa siitä ranskalaisten puistojen kaltaisen, ja taimet ovat '
+          + 'vielä lapsen kokoisia.',
+      voice: 'isoisa',
+    },
+  ],
+  vaduz: [
+    'Liechtensteinin armeija oli noin 80 miestä, ja kansantarun '
+      + 'mukaan 80 miestä lähti Tirolin rajalle 1866 ja 81 palasi '
+      + 'kotiin.',
+    'Vaduzin nimi juontuu retoromaanin sanasta auadutg, vesijohto, '
+      + 'joka tulee latinan sanasta aquaeductus.',
+    {
+      text: 'Vaduz kuului ennen Schaanin seurakuntaan. Vasta tänä vuonna se '
+          + 'sai oman seurakunnan ja oman kirkon, ja pienen maan suurin '
+          + 'juhla taisi olla vihkiäiset.',
+      voice: 'isoisa',
+    },
+  ],
+  monaco: [
+    'Monte Carlo -laskentamenetelmän nimi tulee kasinosta: '
+      + 'matemaatikko Stanisław Ulam sai idean setänsä '
+      + 'uhkapelaamisesta.',
+    'Valtamerimuseon julkisivun friisiin on kaiverrettu 20 '
+      + 'tutkimusaluksen nimeä, jotka ruhtinas Albert I valitsi itse.',
+    {
+      text: 'Kasinon viereen avattiin yhdeksän vuotta sitten Hôtel de '
+          + 'Paris, jotta pelaajilla olisi mukava nukkua pelien välissä.',
+      voice: 'isoisa',
+    },
+  ],
+  skopje: [
+    'Maanjäristyksen jälkeen 1963 apua tarjottiin 78 maasta, ja '
+      + 'konserttisali Univerzalna sala rakennettiin noin 35 maan '
+      + 'lahjoituksilla.',
+    'Kale-linnoituksen ensimmäinen vaihe rakennettiin 500-luvulla '
+      + 'keltaisesta kalkkikivestä ja travertiinista, ja kivien seassa '
+      + 'on latinankielisten kirjoitusten palasia.',
+    {
+      text: 'Kivisilta on kestänyt vuoden 1555 maanjäristyksen, joka tuhosi '
+          + 'tai vaurioitti neljää pilaria. Sen jälkeen siltaa on korjattu, '
+          + 'ja sillä on kuljettu yli kolmesataa vuotta.',
+      voice: 'isoisa',
+    },
+  ],
+  tirana: [
+    'Et\'hem Beyn moskeija avattiin uskonnolliseen käyttöön '
+      + 'uudelleen 18.1.1991 ilman viranomaisten lupaa: tuhannet '
+      + 'ihmiset astuivat sisään lippujen kanssa, ja tapahtuma oli '
+      + 'uskonnonvapauden palaamisen merkkipaalu.',
+    'Skanderbeg-aukion paikalle Itävalta-Unkarin armeija rakensi '
+      + 'julkisen aukion 1917. Aukion nykyinen jalankulkijoiden ilme '
+      + 'valmistui kesäkuussa 2017, tasan sata vuotta myöhemmin.',
+    {
+      text: 'Moskeijan vieressä seisova kellotorni on rakennettu '
+          + '1820-luvulla, joten se on ehtinyt lyödä tunnit kaupungille jo '
+          + 'yli neljäkymmentä vuotta. Moni basaarin kauppias ei kuulemma '
+          + 'muuta kelloa tarvitsekaan.',
+      voice: 'isoisa',
+    },
+  ],
+  zagreb: [
+    'Alakaupungin puistoaukioiden ketju, Lenucin vihreä '
+      + 'hevosenkenkä, koostuu seitsemästä aukiosta. Vanhin niistä, '
+      + 'Zrinjevac, oli aluksi karjamarkkina.',
+    'Zagrebin piispanistuin perustettiin 1094, kun kuningas '
+      + 'Ladislaus I perusti hiippakunnan. Piispanistuimen ympärille '
+      + 'kasvoi Kaptolin asutus.',
+    {
+      text: 'Gradec ja Kaptol, kaksi kukkulakaupunkia, riitelivät keskenään '
+          + 'vuosisatoja, mutta ne yhdistettiin yhdeksi kaupungiksi vuonna '
+          + '1850. Nyt ne ovat yksi Zagreb, vaikka kukkulat seisovat yhä '
+          + 'omilla paikoillaan.',
       voice: 'isoisa',
     },
   ],
