@@ -10,17 +10,17 @@ LUKKO VAPAA / SIMU VAPAA.
 
 Checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2, haara linssiseppa2-tyo-20260928:
   git fetch origin && git checkout linssiseppa2-tyo-20260928 && git pull --ff-only
-Proto-worktreet: /Users/Shared/Claude/wt/proto-linssiseppa2-lontoo (linssiseppa2/lontoo-korkeus-v2), /Users/Shared/Claude/wt/proto-linssiseppa2-telakointivalo.
+Proto-worktreet: /Users/Shared/Claude/wt/proto-linssiseppa2-lontoo (linssiseppa2/lontoo-korkeus-v2), /Users/Shared/Claude/wt/proto-linssiseppa2-kupoliyovalot (linssiseppa2/kupoli-yovalot-190).
 Työkansio /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2. OMA iPad A26BC7D0-7E43-4274-8BE6-97E3F14CF3A4, OMA iPhone 8D1FD618-A7BD-48F8-8BB4-3E91A95834FD.
 
-Lue: CLAUDE.md; Raamattu Ydinajatus kohta 2; osoitekirja; luovutus docs/raportit/viesti-valoseppa-luovutus-20261014-paiva.md kokonaan.
+Lue: CLAUDE.md; Raamattu Ydinajatus kohta 2; osoitekirja; luovutus docs/raportit/viesti-valoseppa-luovutus-20261014-iltapaiva.md kokonaan (edellinen -paiva.md vain viitteenä).
 
 Sitovat: ali-agentit vain Opus tai Sonnet; VAIN EUROOPPA; AIKA; kuvat ja media vain PD/CC; avaimia ei repoon; jokainen simu alkaa
 `aani mykistys`, Macin kaiuttimista ei mitään; ei pkill -f eikä simctl shutdown all; pitkät ajot perl setsid; aika date-komennosta;
 commit linssiseppa2/*-haaraan = automaattinen käännös (Valosepän vahti) → vain valmiita välivaiheita.
 
-Ensimmäinen tehtävä: Valosepän vahdin vakiokuvaskripti Julkaisijalle (luovutuksen ensimmäinen osio), sitten lontoo4-ajon (Greenwichin
-latausportti) tulos PT:lle ja Lontoon / Praha–Ateenan avoimet kohdat.
+Ensimmäinen tehtävä: ISS-katuvalorasteri (luovutuksen osio 1: vahdin käännöksen varjostinvirheet, vienti, PT:n valon vaihtelu ja muistiajo),
+sitten Lontoon katkot/Greenwich, Josefov (simuvuoro) ja Petřín (Codexin kuvat).
 
 Vastaa suomeksi ja tiiviisti.
 ```
