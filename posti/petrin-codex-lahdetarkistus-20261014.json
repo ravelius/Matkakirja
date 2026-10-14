@@ -1,0 +1,1243 @@
+{
+  "taskNumbers": [
+    252,
+    253,
+    254
+  ],
+  "stage": "source-and-camera-preflight-only",
+  "sourceReadReceipt": {
+    "taskNumbers": [
+      252,
+      253,
+      254
+    ],
+    "reader": "root",
+    "readAt": "2026-10-14T09:33:06.177973+00:00",
+    "sourceReadInFull": true,
+    "originalPackageVerifiedFiles": 11,
+    "updatePackageVerifiedFiles": 5,
+    "targetLoopAdditionalFile": 1,
+    "personallyViewedImages": 8,
+    "sourceFiles": [
+      {
+        "path": "posti/petrin-1-sisaankaynti.jpg",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "b22c48612ae90fa5791f8e56bfd1a3ee33db4542",
+        "sha256": "f64dff6ea662704aefa8f5037a2efcde2a0751f8f43928d1282648e941436756",
+        "bytes": 1983348,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-1-sisaankaynti.jpg",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-1-sisaankaynti.jpg",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-2-etela.jpg",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "6f0e4461465ca7a39e18fcca9983f8ddae98403a",
+        "sha256": "39be4197c3240b708958446f29809df91e9348dfe0653eed5c5f5cccba7acab9",
+        "bytes": 1619562,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-2-etela.jpg",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-2-etela.jpg",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-3-lansi.jpg",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "217b0505d2615ab1cbde7ccf0573c45b5a29f19f",
+        "sha256": "ee7cd17cec55425a24f5baeb0eb3c5efec71d26bdb31580d77e718d0166b9797",
+        "bytes": 1723276,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-3-lansi.jpg",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-3-lansi.jpg",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-4-muurin-takaa.jpg",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "e5f6968facc05a6ec32da4ea5a432d7425abfca2",
+        "sha256": "3329cfe2b8b2f39c729aae9c32fc7102162f8ba7fd53e6d40c061f935bff374a",
+        "bytes": 1424450,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-4-muurin-takaa.jpg",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-4-muurin-takaa.jpg",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-5-ylhaalta.jpg",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "b811e6f0d2d0bcbb1d90fa7fb2d0ac21656b222e",
+        "sha256": "cf91c3db3959f14df630a89543de81dea2692bca2280fca60d41a99fc1db0dc9",
+        "bytes": 1250823,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-5-ylhaalta.jpg",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-5-ylhaalta.jpg",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-LAHTEET.md",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "a46ccfe658f6118190333e058a140c823876ed3a",
+        "sha256": "fa1c0ed2f318e29b8d290e4619d193480653314f686aa4b05bb49dbf325ae216",
+        "bytes": 4125,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-LAHTEET.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-LAHTEET.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-codex-tilaus.md",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "0f5a17fe73c4a6e4eb80dcd79181390654864607",
+        "sha256": "1031a91ec30ad4f33d5d480513600307dbb2599ac412f92ffb08b3aa303c10c9",
+        "bytes": 4920,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-codex-tilaus.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-codex-tilaus.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": true
+      },
+      {
+        "path": "posti/petrin-faktat.md",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "163b0a92c4fef2e909dd942f72e14e64eaec2fc4",
+        "sha256": "66ea9ceba502c064ffb4c080f0a8bca8912d94e009a1800d35dfce84525ef48c",
+        "bytes": 10915,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-faktat.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-faktat.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": true
+      },
+      {
+        "path": "posti/petrin-kulmat.json",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "95a361eef6cca5c0a6f523779b6f5fce2a5c181d",
+        "sha256": "1b4c9a973db5955779b6636e5d9ab3e91f5fd242778d4585b81e9c4ea7188e99",
+        "bytes": 5942,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-kulmat.json",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-kulmat.json",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-leikkaus.png",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "fb8e1510b235f9aa54d2bb8f4ee24072fd940634",
+        "sha256": "653ee2f12fd5a4d7afa906355bd692b436494e20eff5eb019e2fab26df8b4311",
+        "bytes": 300980,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-leikkaus.png",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-leikkaus.png",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": true
+      },
+      {
+        "path": "posti/petrin-pohjakartta.png",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "5ed8d89871e6531482415c76541fea0a54c9fa3b",
+        "sha256": "48555ec77f06d15792b0da855fd2d1305e8c5634a3867e7c3c23a80c876cb35c",
+        "bytes": 539707,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-pohjakartta.png",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-pohjakartta.png",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-KORJAUS.md",
+        "commit": "bf2e58a791a08963320d8a668491d3637c3218ed",
+        "blob": "22a39474252f4a6f4511fa689e5d76b9b8dac0c5",
+        "sha256": "008b8b653314dddf508c35fd400bc0ac85160804e3f6dd7d695b0764786abbee",
+        "bytes": 527,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-KORJAUS.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-KORJAUS.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-codex-tilaus.md",
+        "commit": "bf2e58a791a08963320d8a668491d3637c3218ed",
+        "blob": "9432d692cf55990413625adfb099e7d2c6a8a820",
+        "sha256": "b6e93b6220c84e35ee52f95f104f4edfe7cc65ae0dc0aa925f06deb2c0a04f11",
+        "bytes": 4965,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-codex-tilaus.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-codex-tilaus.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-faktat.md",
+        "commit": "bf2e58a791a08963320d8a668491d3637c3218ed",
+        "blob": "2bc92eedd1ae31f5bda7f9a72d0234ad705d119a",
+        "sha256": "e202dcb509b9c0e490ae80538a527261c6c14bd8b829d0578319c311f29d81cc",
+        "bytes": 11568,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-faktat.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-faktat.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-leikkaus.png",
+        "commit": "bf2e58a791a08963320d8a668491d3637c3218ed",
+        "blob": "ddb331191ca4329df47ae0b3e76445f5f2185d7c",
+        "sha256": "f712a95d6da954bab78f82210fcbd3556796101aeb962cbecb3ec6ab15aa7a9c",
+        "bytes": 300364,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-leikkaus.png",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-leikkaus.png",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-LISAYS-maskit.md",
+        "commit": "70328561bbb36329ab8af2e111b56ee973b06755",
+        "blob": "e1ff52aa5a15fe969cc0c2f4be4a529142a7e587",
+        "sha256": "f2dba7ac315116922bb0e655dda40d0247ffae0d466611af063db607b8e28c65",
+        "bytes": 602,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/70328561/petrin-LISAYS-maskit.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/70328561/petrin-LISAYS-maskit.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/codex-peking-tavoiteluuppi-20261014.md",
+        "commit": "70328561bbb36329ab8af2e111b56ee973b06755",
+        "blob": "58d7d8effd5e546f198460cbbf30231274e3a490",
+        "sha256": "8c88abb1414837d014c4b8f33aaa2d60622fc5eff40ebd3804cc7ffe8e80e2ca",
+        "bytes": 2180,
+        "textReadInFull": true,
+        "role": "target-loop stage 2 authority, no model work before PT acceptance"
+      }
+    ],
+    "missingReferencedInputs": [
+      "pohjakartta.svg",
+      "leikkaus.svg",
+      "osm.json"
+    ],
+    "noMissingInputsFabricated": true,
+    "historic60m55mValuesPreservedButInactive": true,
+    "activeDimensions": {
+      "bodyHeightM": 58.7,
+      "upperPlatformM": 51,
+      "lowerPlatformM": 20,
+      "mastHeightApproxM": 12,
+      "totalHeightApproxM": 71,
+      "totalHeightUncertain": true,
+      "hallWidthApproxM": 22.5,
+      "hallWidthUncertain": true,
+      "hallHeightApproxM": 7,
+      "hallHeightUncertain": true
+    },
+    "photoDirectionCaveats": {
+      "petrin-4-muurin-takaa.jpg": "GPS north contradicts visible south wall; no verified north orientation assumed",
+      "petrin-5-ylhaalta.jpg": "From the tower platform looking down; NOT an aerial photograph",
+      "entranceOrientation": "Estimated south around 190 deg, not independently surveyed"
+    },
+    "allReferenceAuthorsLicensesRetained": true,
+    "generationCallsIssued": 0,
+    "deliveredImages": 0,
+    "deliveredMasks": 0
+  },
+  "cameraPreflight": {
+    "activeDimensions": {
+      "bodyHeightM": 58.7,
+      "upperPlatformM": 51,
+      "lowerPlatformM": 20,
+      "mastHeightApproxM": 12,
+      "totalHeightApproxM": 71,
+      "totalHeightUncertain": true,
+      "hallWidthApproxM": 22.5,
+      "hallWidthUncertain": true,
+      "hallHeightApproxM": 7,
+      "hallHeightUncertain": true
+    },
+    "cameraRows": [
+      {
+        "id": "K1",
+        "sourceCamera": {
+          "nimi": "K1 pallokierros",
+          "tyyppi": "pallokierros",
+          "atsimuutti_deg": 200,
+          "atsimuutti_selite": "suunta tornin keskustasta kameraan, astetta pohjoisesta myötäpäivään (kamera katsoo tornia kohti, eli suuntaan 20 deg)",
+          "etaisyys_m": 200,
+          "kameran_korkeus_m": 90,
+          "kallistus_deg": -14.8,
+          "kallistus_selite": "pitch: + ylös, - alas; osoittaa tornin korkeusvälin (0-71 m) keskikohtaan; roll 0",
+          "vfov_deg": 45,
+          "kuvasuhde": "3:2 vaaka tai 2:3 pysty (vfov pätee pystysuunnassa; vaakasuuntainen = 2*atan(1.5*tan(vfov/2)) vaakakuvalla)",
+          "torni_kulmakoko_deg": 18.8,
+          "torni_osuus_kuvan_korkeudesta": 0.42,
+          "kamera_itaan_m": -68.4,
+          "kamera_pohjoiseen_m": -187.9,
+          "kamera_lat": 50.081809,
+          "kamera_lon": 14.394132,
+          "kuvaus": "Pelin pallokierroksen tyyppinen korkea kulma lounaasta/etelä-lounaasta (sisäänkäyntipuoli edessä): silmä 90 m maan pinnasta, etäisyys 200 m; koko torni mastoineen kuvan keskellä, Prahan vanhaakaupunki ei tarvitse näkyä.",
+          "vertailukuva": null
+        },
+        "requestedDimensions": [
+          2400,
+          1600
+        ],
+        "wholeTowerAxisFitsVerticalFOV": true,
+        "analyticVerticalAxisProjection": {
+          "ground": {
+            "heightM": 0,
+            "yNormalized": 0.700436,
+            "yPixelsAt1600High": 1120.7,
+            "yPixelsAtRequestedHeight": 1120.7
+          },
+          "hallRoofApprox": {
+            "heightM": 7,
+            "yNormalized": 0.664032,
+            "yPixelsAt1600High": 1062.45,
+            "yPixelsAtRequestedHeight": 1062.45
+          },
+          "lowerPlatform": {
+            "heightM": 20,
+            "yNormalized": 0.59479,
+            "yPixelsAt1600High": 951.66,
+            "yPixelsAtRequestedHeight": 951.66
+          },
+          "upperPlatform": {
+            "heightM": 51,
+            "yNormalized": 0.420548,
+            "yPixelsAt1600High": 672.88,
+            "yPixelsAtRequestedHeight": 672.88
+          },
+          "bodyTop": {
+            "heightM": 58.7,
+            "yNormalized": 0.375144,
+            "yPixelsAt1600High": 600.23,
+            "yPixelsAtRequestedHeight": 600.23
+          },
+          "mastTopApprox": {
+            "heightM": 71,
+            "yNormalized": 0.300745,
+            "yPixelsAt1600High": 481.19,
+            "yPixelsAtRequestedHeight": 481.19
+          }
+        },
+        "analyticTowerAxisFractionOfImageHeight": 0.399691,
+        "sourceAngularFractionIsApproximate": true,
+        "calculationIsCameraPreflightNot3DModel": true,
+        "actualGeneratedCameraVerified": false,
+        "actualGenerationCalls": 0,
+        "status": "waiting-for-feedback-gate-decision",
+        "maskContract": {
+          "filename": "petrin-K1-maski.png",
+          "dimensions": [
+            2400,
+            1600
+          ],
+          "sameFramingAsImage": true,
+          "towerWhite255OtherBlack0": true,
+          "softEdgeMaximumPixels": 2,
+          "completeTowerBehindOccluders": true,
+          "mustMatchActualProducedImageNotAnIndependentGuessedOutline": true,
+          "maskProduced": false
+        }
+      },
+      {
+        "id": "K2",
+        "sourceCamera": {
+          "nimi": "K2 maantaso sisaankaynti",
+          "tyyppi": "maantaso",
+          "atsimuutti_deg": 190,
+          "atsimuutti_selite": "suunta tornin keskustasta kameraan, astetta pohjoisesta myötäpäivään (kamera katsoo tornia kohti, eli suuntaan 10 deg)",
+          "etaisyys_m": 55,
+          "kameran_korkeus_m": 1.7,
+          "kallistus_deg": 24.9,
+          "kallistus_selite": "pitch: + ylös, - alas; osoittaa tornin korkeusvälin (0-71 m) keskikohtaan; roll 0",
+          "vfov_deg": 70,
+          "kuvasuhde": "3:2 vaaka tai 2:3 pysty (vfov pätee pystysuunnassa; vaakasuuntainen = 2*atan(1.5*tan(vfov/2)) vaakakuvalla)",
+          "torni_kulmakoko_deg": 53.3,
+          "torni_osuus_kuvan_korkeudesta": 0.76,
+          "kamera_itaan_m": -9.6,
+          "kamera_pohjoiseen_m": -54.2,
+          "kamera_lat": 50.083019,
+          "kamera_lon": 14.394956,
+          "kuvaus": "Maantasokulma sisäänkäyntipuolelta (etelä; ovet ja juurihalli etualalla), 55 m: koko torni juurihalleineen, alagallerioineen ja mastoineen; hyvin leveä kulma (70 deg), voimakas ylöskatsomisperspektiivi (vrt. kuva 1, kuvattu tornin juurelta). Nälkämuuri kulkee ~40 m tornin eteläpuolella: jätä pois tai pidä matalana etualan muurina.",
+          "vertailukuva": "kuvat/petrin-1-sisaankaynti.jpg, kuvat/petrin-2-etela.jpg"
+        },
+        "requestedDimensions": [
+          1600,
+          2400
+        ],
+        "wholeTowerAxisFitsVerticalFOV": true,
+        "analyticVerticalAxisProjection": {
+          "ground": {
+            "heightM": 0,
+            "yNormalized": 0.85868,
+            "yPixelsAt1600High": 1373.89,
+            "yPixelsAtRequestedHeight": 2060.83
+          },
+          "hallRoofApprox": {
+            "heightM": 7,
+            "yNormalized": 0.751406,
+            "yPixelsAt1600High": 1202.25,
+            "yPixelsAtRequestedHeight": 1803.37
+          },
+          "lowerPlatform": {
+            "heightM": 20,
+            "yNormalized": 0.581312,
+            "yPixelsAt1600High": 930.1,
+            "yPixelsAtRequestedHeight": 1395.15
+          },
+          "upperPlatform": {
+            "heightM": 51,
+            "yNormalized": 0.282069,
+            "yPixelsAt1600High": 451.31,
+            "yPixelsAtRequestedHeight": 676.97
+          },
+          "bodyTop": {
+            "heightM": 58.7,
+            "yNormalized": 0.224132,
+            "yPixelsAt1600High": 358.61,
+            "yPixelsAtRequestedHeight": 537.92
+          },
+          "mastTopApprox": {
+            "heightM": 71,
+            "yNormalized": 0.14144,
+            "yPixelsAt1600High": 226.3,
+            "yPixelsAtRequestedHeight": 339.46
+          }
+        },
+        "analyticTowerAxisFractionOfImageHeight": 0.71724,
+        "sourceAngularFractionIsApproximate": true,
+        "calculationIsCameraPreflightNot3DModel": true,
+        "actualGeneratedCameraVerified": false,
+        "actualGenerationCalls": 0,
+        "status": "waiting-for-K1-feedback",
+        "maskContract": {
+          "filename": "petrin-K2-maski.png",
+          "dimensions": [
+            1600,
+            2400
+          ],
+          "sameFramingAsImage": true,
+          "towerWhite255OtherBlack0": true,
+          "softEdgeMaximumPixels": 2,
+          "completeTowerBehindOccluders": true,
+          "mustMatchActualProducedImageNotAnIndependentGuessedOutline": true,
+          "maskProduced": false
+        }
+      },
+      {
+        "id": "K3",
+        "sourceCamera": {
+          "nimi": "K3 maantaso lansi",
+          "tyyppi": "maantaso",
+          "atsimuutti_deg": 270,
+          "atsimuutti_selite": "suunta tornin keskustasta kameraan, astetta pohjoisesta myötäpäivään (kamera katsoo tornia kohti, eli suuntaan 90 deg)",
+          "etaisyys_m": 110,
+          "kameran_korkeus_m": 1.7,
+          "kallistus_deg": 15.7,
+          "kallistus_selite": "pitch: + ylös, - alas; osoittaa tornin korkeusvälin (0-71 m) keskikohtaan; roll 0",
+          "vfov_deg": 45,
+          "kuvasuhde": "3:2 vaaka tai 2:3 pysty (vfov pätee pystysuunnassa; vaakasuuntainen = 2*atan(1.5*tan(vfov/2)) vaakakuvalla)",
+          "torni_kulmakoko_deg": 33.1,
+          "torni_osuus_kuvan_korkeudesta": 0.74,
+          "kamera_itaan_m": -110.0,
+          "kamera_pohjoiseen_m": -0.0,
+          "kamera_lat": 50.083509,
+          "kamera_lon": 14.39355,
+          "kuvaus": "Maantasokulma lännestä (Strahovin puiston suunta), 110 m; torni sivuprofiilissa, ylätasanne ja masto selvät.",
+          "vertailukuva": "kuvat/petrin-3-lansi.jpg"
+        },
+        "requestedDimensions": [
+          2400,
+          1600
+        ],
+        "wholeTowerAxisFitsVerticalFOV": true,
+        "analyticVerticalAxisProjection": {
+          "ground": {
+            "heightM": 0,
+            "yNormalized": 0.859519,
+            "yPixelsAt1600High": 1375.23,
+            "yPixelsAtRequestedHeight": 1375.23
+          },
+          "hallRoofApprox": {
+            "heightM": 7,
+            "yNormalized": 0.777385,
+            "yPixelsAt1600High": 1243.82,
+            "yPixelsAtRequestedHeight": 1243.82
+          },
+          "lowerPlatform": {
+            "heightM": 20,
+            "yNormalized": 0.632297,
+            "yPixelsAt1600High": 1011.68,
+            "yPixelsAtRequestedHeight": 1011.68
+          },
+          "upperPlatform": {
+            "heightM": 51,
+            "yNormalized": 0.320866,
+            "yPixelsAt1600High": 513.39,
+            "yPixelsAtRequestedHeight": 513.39
+          },
+          "bodyTop": {
+            "heightM": 58.7,
+            "yNormalized": 0.250188,
+            "yPixelsAt1600High": 400.3,
+            "yPixelsAtRequestedHeight": 400.3
+          },
+          "mastTopApprox": {
+            "heightM": 71,
+            "yNormalized": 0.142188,
+            "yPixelsAt1600High": 227.5,
+            "yPixelsAtRequestedHeight": 227.5
+          }
+        },
+        "analyticTowerAxisFractionOfImageHeight": 0.717331,
+        "sourceAngularFractionIsApproximate": true,
+        "calculationIsCameraPreflightNot3DModel": true,
+        "actualGeneratedCameraVerified": false,
+        "actualGenerationCalls": 0,
+        "status": "waiting-for-K1-feedback",
+        "maskContract": {
+          "filename": "petrin-K3-maski.png",
+          "dimensions": [
+            2400,
+            1600
+          ],
+          "sameFramingAsImage": true,
+          "towerWhite255OtherBlack0": true,
+          "softEdgeMaximumPixels": 2,
+          "completeTowerBehindOccluders": true,
+          "mustMatchActualProducedImageNotAnIndependentGuessedOutline": true,
+          "maskProduced": false
+        }
+      },
+      {
+        "id": "K4",
+        "sourceCamera": {
+          "nimi": "K4 maantaso pohjoinen",
+          "tyyppi": "maantaso",
+          "atsimuutti_deg": 5,
+          "atsimuutti_selite": "suunta tornin keskustasta kameraan, astetta pohjoisesta myötäpäivään (kamera katsoo tornia kohti, eli suuntaan 185 deg)",
+          "etaisyys_m": 100,
+          "kameran_korkeus_m": 1.7,
+          "kallistus_deg": 16.9,
+          "kallistus_selite": "pitch: + ylös, - alas; osoittaa tornin korkeusvälin (0-71 m) keskikohtaan; roll 0",
+          "vfov_deg": 45,
+          "kuvasuhde": "3:2 vaaka tai 2:3 pysty (vfov pätee pystysuunnassa; vaakasuuntainen = 2*atan(1.5*tan(vfov/2)) vaakakuvalla)",
+          "torni_kulmakoko_deg": 35.7,
+          "torni_osuus_kuvan_korkeudesta": 0.79,
+          "kamera_itaan_m": 8.7,
+          "kamera_pohjoiseen_m": 99.6,
+          "kamera_lat": 50.08441,
+          "kamera_lon": 14.395212,
+          "kuvaus": "Maantasokulma pohjoisesta, 100 m; ei valokuvaviitettä; torni lähes symmetrisenä, kapea runko erottuu; sisäänkäynti ei näy (takapuoli).",
+          "vertailukuva": null
+        },
+        "requestedDimensions": [
+          2400,
+          1600
+        ],
+        "wholeTowerAxisFitsVerticalFOV": true,
+        "analyticVerticalAxisProjection": {
+          "ground": {
+            "heightM": 0,
+            "yNormalized": 0.889279,
+            "yPixelsAt1600High": 1422.85,
+            "yPixelsAtRequestedHeight": 1422.85
+          },
+          "hallRoofApprox": {
+            "heightM": 7,
+            "yNormalized": 0.797972,
+            "yPixelsAt1600High": 1276.76,
+            "yPixelsAtRequestedHeight": 1276.76
+          },
+          "lowerPlatform": {
+            "heightM": 20,
+            "yNormalized": 0.638165,
+            "yPixelsAt1600High": 1021.06,
+            "yPixelsAtRequestedHeight": 1021.06
+          },
+          "upperPlatform": {
+            "heightM": 51,
+            "yNormalized": 0.301392,
+            "yPixelsAt1600High": 482.23,
+            "yPixelsAtRequestedHeight": 482.23
+          },
+          "bodyTop": {
+            "heightM": 58.7,
+            "yNormalized": 0.226126,
+            "yPixelsAt1600High": 361.8,
+            "yPixelsAtRequestedHeight": 361.8
+          },
+          "mastTopApprox": {
+            "heightM": 71,
+            "yNormalized": 0.11193,
+            "yPixelsAt1600High": 179.09,
+            "yPixelsAtRequestedHeight": 179.09
+          }
+        },
+        "analyticTowerAxisFractionOfImageHeight": 0.777349,
+        "sourceAngularFractionIsApproximate": true,
+        "calculationIsCameraPreflightNot3DModel": true,
+        "actualGeneratedCameraVerified": false,
+        "actualGenerationCalls": 0,
+        "status": "waiting-for-K1-feedback",
+        "maskContract": {
+          "filename": "petrin-K4-maski.png",
+          "dimensions": [
+            2400,
+            1600
+          ],
+          "sameFramingAsImage": true,
+          "towerWhite255OtherBlack0": true,
+          "softEdgeMaximumPixels": 2,
+          "completeTowerBehindOccluders": true,
+          "mustMatchActualProducedImageNotAnIndependentGuessedOutline": true,
+          "maskProduced": false
+        }
+      },
+      {
+        "id": "K5",
+        "sourceCamera": {
+          "nimi": "K5 korkea vino idasta",
+          "tyyppi": "ilmakulma",
+          "atsimuutti_deg": 100,
+          "atsimuutti_selite": "suunta tornin keskustasta kameraan, astetta pohjoisesta myötäpäivään (kamera katsoo tornia kohti, eli suuntaan 280 deg)",
+          "etaisyys_m": 130,
+          "kameran_korkeus_m": 150,
+          "kallistus_deg": -40.2,
+          "kallistus_selite": "pitch: + ylös, - alas; osoittaa tornin korkeusvälin (0-71 m) keskikohtaan; roll 0",
+          "vfov_deg": 40,
+          "kuvasuhde": "3:2 vaaka tai 2:3 pysty (vfov pätee pystysuunnassa; vaakasuuntainen = 2*atan(1.5*tan(vfov/2)) vaakakuvalla)",
+          "torni_kulmakoko_deg": 17.8,
+          "torni_osuus_kuvan_korkeudesta": 0.44,
+          "kamera_itaan_m": 128.0,
+          "kamera_pohjoiseen_m": -22.6,
+          "kamera_lat": 50.083305,
+          "kamera_lon": 14.396882,
+          "kuvaus": "Korkea vinokulma idästä (Vltavan suunta), kamera 150 m maan pinnasta, 130 m päässä: näkee juurihallin katon, gallerian ylhäältä ja ylätasanteen lyhdyn; ilmakuvan korvike (Commonsissa ei ole varsinaista ilmakuvaa).",
+          "vertailukuva": "kuvat/petrin-5-ylhaalta.jpg (vain tasanteelta alaspäin)"
+        },
+        "requestedDimensions": [
+          2400,
+          1600
+        ],
+        "wholeTowerAxisFitsVerticalFOV": true,
+        "analyticVerticalAxisProjection": {
+          "ground": {
+            "heightM": 0,
+            "yNormalized": 0.714768,
+            "yPixelsAt1600High": 1143.63,
+            "yPixelsAtRequestedHeight": 1143.63
+          },
+          "hallRoofApprox": {
+            "heightM": 7,
+            "yNormalized": 0.681498,
+            "yPixelsAt1600High": 1090.4,
+            "yPixelsAtRequestedHeight": 1090.4
+          },
+          "lowerPlatform": {
+            "heightM": 20,
+            "yNormalized": 0.615356,
+            "yPixelsAt1600High": 984.57,
+            "yPixelsAtRequestedHeight": 984.57
+          },
+          "upperPlatform": {
+            "heightM": 51,
+            "yNormalized": 0.430185,
+            "yPixelsAt1600High": 688.3,
+            "yPixelsAtRequestedHeight": 688.3
+          },
+          "bodyTop": {
+            "heightM": 58.7,
+            "yNormalized": 0.37693,
+            "yPixelsAt1600High": 603.09,
+            "yPixelsAtRequestedHeight": 603.09
+          },
+          "mastTopApprox": {
+            "heightM": 71,
+            "yNormalized": 0.284552,
+            "yPixelsAt1600High": 455.28,
+            "yPixelsAtRequestedHeight": 455.28
+          }
+        },
+        "analyticTowerAxisFractionOfImageHeight": 0.430216,
+        "sourceAngularFractionIsApproximate": true,
+        "calculationIsCameraPreflightNot3DModel": true,
+        "actualGeneratedCameraVerified": false,
+        "actualGenerationCalls": 0,
+        "status": "waiting-for-K1-feedback",
+        "maskContract": {
+          "filename": "petrin-K5-maski.png",
+          "dimensions": [
+            2400,
+            1600
+          ],
+          "sameFramingAsImage": true,
+          "towerWhite255OtherBlack0": true,
+          "softEdgeMaximumPixels": 2,
+          "completeTowerBehindOccluders": true,
+          "mustMatchActualProducedImageNotAnIndependentGuessedOutline": true,
+          "maskProduced": false
+        }
+      }
+    ],
+    "updatedAt": "2026-10-14T09:33:06.177973+00:00"
+  },
+  "productionState": {
+    "taskNumbers": [
+      252,
+      253,
+      254
+    ],
+    "status": "source-camera-preflight-complete-awaiting-first-image-feedback-gate",
+    "sourceReadReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/source-read-receipt.json",
+    "sourceCorrection253AppliedBeforeGeneration": true,
+    "activeDimensions": {
+      "bodyHeightM": 58.7,
+      "upperPlatformM": 51,
+      "lowerPlatformM": 20,
+      "mastHeightApproxM": 12,
+      "totalHeightApproxM": 71,
+      "totalHeightUncertain": true,
+      "hallWidthApproxM": 22.5,
+      "hallWidthUncertain": true,
+      "hallHeightApproxM": 7,
+      "hallHeightUncertain": true
+    },
+    "sourceLicenses": [
+      {
+        "filename": "petrin-1-sisaankaynti.jpg",
+        "author": "VANOCE2022",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Petrinska_rozhledna_a_nejblizsi_okoli_20250427_121942.jpg",
+        "role": "tower geometry and color only"
+      },
+      {
+        "filename": "petrin-2-etela.jpg",
+        "author": "Ivan Korostelev",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADnsk%C3%A1_rozhledna,_Prague.jpg",
+        "role": "tower geometry and color only"
+      },
+      {
+        "filename": "petrin-3-lansi.jpg",
+        "author": "Giorgio Galeotti",
+        "license": "CC BY 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADn_Lookout_Tower_-_Prague,_Czech_Republic_-_May_17,_2019.jpg",
+        "role": "tower geometry and color only"
+      },
+      {
+        "filename": "petrin-4-muurin-takaa.jpg",
+        "author": "Edgar El",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Prag_%E2%80%93_Aussichtsturm_Pet%C5%99%C3%ADn_-_Pet%C5%99%C3%ADnsk%C3%A1_rozhledna_-_panoramio_(1).jpg",
+        "role": "structure only, conflicting camera GPS and winter setting are not transferred"
+      },
+      {
+        "filename": "petrin-5-ylhaalta.jpg",
+        "author": "VANOCE2022",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Petrinska_rozhledna_a_nejblizsi_okoli_20250427_130633.jpg",
+        "role": "hall roof and metal structure only; viewpoint is downward from tower platform, not aerial"
+      }
+    ],
+    "cameraRows": [
+      {
+        "id": "K1",
+        "sourceCamera": {
+          "nimi": "K1 pallokierros",
+          "tyyppi": "pallokierros",
+          "atsimuutti_deg": 200,
+          "atsimuutti_selite": "suunta tornin keskustasta kameraan, astetta pohjoisesta myötäpäivään (kamera katsoo tornia kohti, eli suuntaan 20 deg)",
+          "etaisyys_m": 200,
+          "kameran_korkeus_m": 90,
+          "kallistus_deg": -14.8,
+          "kallistus_selite": "pitch: + ylös, - alas; osoittaa tornin korkeusvälin (0-71 m) keskikohtaan; roll 0",
+          "vfov_deg": 45,
+          "kuvasuhde": "3:2 vaaka tai 2:3 pysty (vfov pätee pystysuunnassa; vaakasuuntainen = 2*atan(1.5*tan(vfov/2)) vaakakuvalla)",
+          "torni_kulmakoko_deg": 18.8,
+          "torni_osuus_kuvan_korkeudesta": 0.42,
+          "kamera_itaan_m": -68.4,
+          "kamera_pohjoiseen_m": -187.9,
+          "kamera_lat": 50.081809,
+          "kamera_lon": 14.394132,
+          "kuvaus": "Pelin pallokierroksen tyyppinen korkea kulma lounaasta/etelä-lounaasta (sisäänkäyntipuoli edessä): silmä 90 m maan pinnasta, etäisyys 200 m; koko torni mastoineen kuvan keskellä, Prahan vanhaakaupunki ei tarvitse näkyä.",
+          "vertailukuva": null
+        },
+        "requestedDimensions": [
+          2400,
+          1600
+        ],
+        "wholeTowerAxisFitsVerticalFOV": true,
+        "analyticVerticalAxisProjection": {
+          "ground": {
+            "heightM": 0,
+            "yNormalized": 0.700436,
+            "yPixelsAt1600High": 1120.7,
+            "yPixelsAtRequestedHeight": 1120.7
+          },
+          "hallRoofApprox": {
+            "heightM": 7,
+            "yNormalized": 0.664032,
+            "yPixelsAt1600High": 1062.45,
+            "yPixelsAtRequestedHeight": 1062.45
+          },
+          "lowerPlatform": {
+            "heightM": 20,
+            "yNormalized": 0.59479,
+            "yPixelsAt1600High": 951.66,
+            "yPixelsAtRequestedHeight": 951.66
+          },
+          "upperPlatform": {
+            "heightM": 51,
+            "yNormalized": 0.420548,
+            "yPixelsAt1600High": 672.88,
+            "yPixelsAtRequestedHeight": 672.88
+          },
+          "bodyTop": {
+            "heightM": 58.7,
+            "yNormalized": 0.375144,
+            "yPixelsAt1600High": 600.23,
+            "yPixelsAtRequestedHeight": 600.23
+          },
+          "mastTopApprox": {
+            "heightM": 71,
+            "yNormalized": 0.300745,
+            "yPixelsAt1600High": 481.19,
+            "yPixelsAtRequestedHeight": 481.19
+          }
+        },
+        "analyticTowerAxisFractionOfImageHeight": 0.399691,
+        "sourceAngularFractionIsApproximate": true,
+        "calculationIsCameraPreflightNot3DModel": true,
+        "actualGeneratedCameraVerified": false,
+        "actualGenerationCalls": 0,
+        "status": "waiting-for-feedback-gate-decision",
+        "maskContract": {
+          "filename": "petrin-K1-maski.png",
+          "dimensions": [
+            2400,
+            1600
+          ],
+          "sameFramingAsImage": true,
+          "towerWhite255OtherBlack0": true,
+          "softEdgeMaximumPixels": 2,
+          "completeTowerBehindOccluders": true,
+          "mustMatchActualProducedImageNotAnIndependentGuessedOutline": true,
+          "maskProduced": false
+        }
+      },
+      {
+        "id": "K2",
+        "sourceCamera": {
+          "nimi": "K2 maantaso sisaankaynti",
+          "tyyppi": "maantaso",
+          "atsimuutti_deg": 190,
+          "atsimuutti_selite": "suunta tornin keskustasta kameraan, astetta pohjoisesta myötäpäivään (kamera katsoo tornia kohti, eli suuntaan 10 deg)",
+          "etaisyys_m": 55,
+          "kameran_korkeus_m": 1.7,
+          "kallistus_deg": 24.9,
+          "kallistus_selite": "pitch: + ylös, - alas; osoittaa tornin korkeusvälin (0-71 m) keskikohtaan; roll 0",
+          "vfov_deg": 70,
+          "kuvasuhde": "3:2 vaaka tai 2:3 pysty (vfov pätee pystysuunnassa; vaakasuuntainen = 2*atan(1.5*tan(vfov/2)) vaakakuvalla)",
+          "torni_kulmakoko_deg": 53.3,
+          "torni_osuus_kuvan_korkeudesta": 0.76,
+          "kamera_itaan_m": -9.6,
+          "kamera_pohjoiseen_m": -54.2,
+          "kamera_lat": 50.083019,
+          "kamera_lon": 14.394956,
+          "kuvaus": "Maantasokulma sisäänkäyntipuolelta (etelä; ovet ja juurihalli etualalla), 55 m: koko torni juurihalleineen, alagallerioineen ja mastoineen; hyvin leveä kulma (70 deg), voimakas ylöskatsomisperspektiivi (vrt. kuva 1, kuvattu tornin juurelta). Nälkämuuri kulkee ~40 m tornin eteläpuolella: jätä pois tai pidä matalana etualan muurina.",
+          "vertailukuva": "kuvat/petrin-1-sisaankaynti.jpg, kuvat/petrin-2-etela.jpg"
+        },
+        "requestedDimensions": [
+          1600,
+          2400
+        ],
+        "wholeTowerAxisFitsVerticalFOV": true,
+        "analyticVerticalAxisProjection": {
+          "ground": {
+            "heightM": 0,
+            "yNormalized": 0.85868,
+            "yPixelsAt1600High": 1373.89,
+            "yPixelsAtRequestedHeight": 2060.83
+          },
+          "hallRoofApprox": {
+            "heightM": 7,
+            "yNormalized": 0.751406,
+            "yPixelsAt1600High": 1202.25,
+            "yPixelsAtRequestedHeight": 1803.37
+          },
+          "lowerPlatform": {
+            "heightM": 20,
+            "yNormalized": 0.581312,
+            "yPixelsAt1600High": 930.1,
+            "yPixelsAtRequestedHeight": 1395.15
+          },
+          "upperPlatform": {
+            "heightM": 51,
+            "yNormalized": 0.282069,
+            "yPixelsAt1600High": 451.31,
+            "yPixelsAtRequestedHeight": 676.97
+          },
+          "bodyTop": {
+            "heightM": 58.7,
+            "yNormalized": 0.224132,
+            "yPixelsAt1600High": 358.61,
+            "yPixelsAtRequestedHeight": 537.92
+          },
+          "mastTopApprox": {
+            "heightM": 71,
+            "yNormalized": 0.14144,
+            "yPixelsAt1600High": 226.3,
+            "yPixelsAtRequestedHeight": 339.46
+          }
+        },
+        "analyticTowerAxisFractionOfImageHeight": 0.71724,
+        "sourceAngularFractionIsApproximate": true,
+        "calculationIsCameraPreflightNot3DModel": true,
+        "actualGeneratedCameraVerified": false,
+        "actualGenerationCalls": 0,
+        "status": "waiting-for-K1-feedback",
+        "maskContract": {
+          "filename": "petrin-K2-maski.png",
+          "dimensions": [
+            1600,
+            2400
+          ],
+          "sameFramingAsImage": true,
+          "towerWhite255OtherBlack0": true,
+          "softEdgeMaximumPixels": 2,
+          "completeTowerBehindOccluders": true,
+          "mustMatchActualProducedImageNotAnIndependentGuessedOutline": true,
+          "maskProduced": false
+        }
+      },
+      {
+        "id": "K3",
+        "sourceCamera": {
+          "nimi": "K3 maantaso lansi",
+          "tyyppi": "maantaso",
+          "atsimuutti_deg": 270,
+          "atsimuutti_selite": "suunta tornin keskustasta kameraan, astetta pohjoisesta myötäpäivään (kamera katsoo tornia kohti, eli suuntaan 90 deg)",
+          "etaisyys_m": 110,
+          "kameran_korkeus_m": 1.7,
+          "kallistus_deg": 15.7,
+          "kallistus_selite": "pitch: + ylös, - alas; osoittaa tornin korkeusvälin (0-71 m) keskikohtaan; roll 0",
+          "vfov_deg": 45,
+          "kuvasuhde": "3:2 vaaka tai 2:3 pysty (vfov pätee pystysuunnassa; vaakasuuntainen = 2*atan(1.5*tan(vfov/2)) vaakakuvalla)",
+          "torni_kulmakoko_deg": 33.1,
+          "torni_osuus_kuvan_korkeudesta": 0.74,
+          "kamera_itaan_m": -110.0,
+          "kamera_pohjoiseen_m": -0.0,
+          "kamera_lat": 50.083509,
+          "kamera_lon": 14.39355,
+          "kuvaus": "Maantasokulma lännestä (Strahovin puiston suunta), 110 m; torni sivuprofiilissa, ylätasanne ja masto selvät.",
+          "vertailukuva": "kuvat/petrin-3-lansi.jpg"
+        },
+        "requestedDimensions": [
+          2400,
+          1600
+        ],
+        "wholeTowerAxisFitsVerticalFOV": true,
+        "analyticVerticalAxisProjection": {
+          "ground": {
+            "heightM": 0,
+            "yNormalized": 0.859519,
+            "yPixelsAt1600High": 1375.23,
+            "yPixelsAtRequestedHeight": 1375.23
+          },
+          "hallRoofApprox": {
+            "heightM": 7,
+            "yNormalized": 0.777385,
+            "yPixelsAt1600High": 1243.82,
+            "yPixelsAtRequestedHeight": 1243.82
+          },
+          "lowerPlatform": {
+            "heightM": 20,
+            "yNormalized": 0.632297,
+            "yPixelsAt1600High": 1011.68,
+            "yPixelsAtRequestedHeight": 1011.68
+          },
+          "upperPlatform": {
+            "heightM": 51,
+            "yNormalized": 0.320866,
+            "yPixelsAt1600High": 513.39,
+            "yPixelsAtRequestedHeight": 513.39
+          },
+          "bodyTop": {
+            "heightM": 58.7,
+            "yNormalized": 0.250188,
+            "yPixelsAt1600High": 400.3,
+            "yPixelsAtRequestedHeight": 400.3
+          },
+          "mastTopApprox": {
+            "heightM": 71,
+            "yNormalized": 0.142188,
+            "yPixelsAt1600High": 227.5,
+            "yPixelsAtRequestedHeight": 227.5
+          }
+        },
+        "analyticTowerAxisFractionOfImageHeight": 0.717331,
+        "sourceAngularFractionIsApproximate": true,
+        "calculationIsCameraPreflightNot3DModel": true,
+        "actualGeneratedCameraVerified": false,
+        "actualGenerationCalls": 0,
+        "status": "waiting-for-K1-feedback",
+        "maskContract": {
+          "filename": "petrin-K3-maski.png",
+          "dimensions": [
+            2400,
+            1600
+          ],
+          "sameFramingAsImage": true,
+          "towerWhite255OtherBlack0": true,
+          "softEdgeMaximumPixels": 2,
+          "completeTowerBehindOccluders": true,
+          "mustMatchActualProducedImageNotAnIndependentGuessedOutline": true,
+          "maskProduced": false
+        }
+      },
+      {
+        "id": "K4",
+        "sourceCamera": {
+          "nimi": "K4 maantaso pohjoinen",
+          "tyyppi": "maantaso",
+          "atsimuutti_deg": 5,
+          "atsimuutti_selite": "suunta tornin keskustasta kameraan, astetta pohjoisesta myötäpäivään (kamera katsoo tornia kohti, eli suuntaan 185 deg)",
+          "etaisyys_m": 100,
+          "kameran_korkeus_m": 1.7,
+          "kallistus_deg": 16.9,
+          "kallistus_selite": "pitch: + ylös, - alas; osoittaa tornin korkeusvälin (0-71 m) keskikohtaan; roll 0",
+          "vfov_deg": 45,
+          "kuvasuhde": "3:2 vaaka tai 2:3 pysty (vfov pätee pystysuunnassa; vaakasuuntainen = 2*atan(1.5*tan(vfov/2)) vaakakuvalla)",
+          "torni_kulmakoko_deg": 35.7,
+          "torni_osuus_kuvan_korkeudesta": 0.79,
+          "kamera_itaan_m": 8.7,
+          "kamera_pohjoiseen_m": 99.6,
+          "kamera_lat": 50.08441,
+          "kamera_lon": 14.395212,
+          "kuvaus": "Maantasokulma pohjoisesta, 100 m; ei valokuvaviitettä; torni lähes symmetrisenä, kapea runko erottuu; sisäänkäynti ei näy (takapuoli).",
+          "vertailukuva": null
+        },
+        "requestedDimensions": [
+          2400,
+          1600
+        ],
+        "wholeTowerAxisFitsVerticalFOV": true,
+        "analyticVerticalAxisProjection": {
+          "ground": {
+            "heightM": 0,
+            "yNormalized": 0.889279,
+            "yPixelsAt1600High": 1422.85,
+            "yPixelsAtRequestedHeight": 1422.85
+          },
+          "hallRoofApprox": {
+            "heightM": 7,
+            "yNormalized": 0.797972,
+            "yPixelsAt1600High": 1276.76,
+            "yPixelsAtRequestedHeight": 1276.76
+          },
+          "lowerPlatform": {
+            "heightM": 20,
+            "yNormalized": 0.638165,
+            "yPixelsAt1600High": 1021.06,
+            "yPixelsAtRequestedHeight": 1021.06
+          },
+          "upperPlatform": {
+            "heightM": 51,
+            "yNormalized": 0.301392,
+            "yPixelsAt1600High": 482.23,
+            "yPixelsAtRequestedHeight": 482.23
+          },
+          "bodyTop": {
+            "heightM": 58.7,
+            "yNormalized": 0.226126,
+            "yPixelsAt1600High": 361.8,
+            "yPixelsAtRequestedHeight": 361.8
+          },
+          "mastTopApprox": {
+            "heightM": 71,
+            "yNormalized": 0.11193,
+            "yPixelsAt1600High": 179.09,
+            "yPixelsAtRequestedHeight": 179.09
+          }
+        },
+        "analyticTowerAxisFractionOfImageHeight": 0.777349,
+        "sourceAngularFractionIsApproximate": true,
+        "calculationIsCameraPreflightNot3DModel": true,
+        "actualGeneratedCameraVerified": false,
+        "actualGenerationCalls": 0,
+        "status": "waiting-for-K1-feedback",
+        "maskContract": {
+          "filename": "petrin-K4-maski.png",
+          "dimensions": [
+            2400,
+            1600
+          ],
+          "sameFramingAsImage": true,
+          "towerWhite255OtherBlack0": true,
+          "softEdgeMaximumPixels": 2,
+          "completeTowerBehindOccluders": true,
+          "mustMatchActualProducedImageNotAnIndependentGuessedOutline": true,
+          "maskProduced": false
+        }
+      },
+      {
+        "id": "K5",
+        "sourceCamera": {
+          "nimi": "K5 korkea vino idasta",
+          "tyyppi": "ilmakulma",
+          "atsimuutti_deg": 100,
+          "atsimuutti_selite": "suunta tornin keskustasta kameraan, astetta pohjoisesta myötäpäivään (kamera katsoo tornia kohti, eli suuntaan 280 deg)",
+          "etaisyys_m": 130,
+          "kameran_korkeus_m": 150,
+          "kallistus_deg": -40.2,
+          "kallistus_selite": "pitch: + ylös, - alas; osoittaa tornin korkeusvälin (0-71 m) keskikohtaan; roll 0",
+          "vfov_deg": 40,
+          "kuvasuhde": "3:2 vaaka tai 2:3 pysty (vfov pätee pystysuunnassa; vaakasuuntainen = 2*atan(1.5*tan(vfov/2)) vaakakuvalla)",
+          "torni_kulmakoko_deg": 17.8,
+          "torni_osuus_kuvan_korkeudesta": 0.44,
+          "kamera_itaan_m": 128.0,
+          "kamera_pohjoiseen_m": -22.6,
+          "kamera_lat": 50.083305,
+          "kamera_lon": 14.396882,
+          "kuvaus": "Korkea vinokulma idästä (Vltavan suunta), kamera 150 m maan pinnasta, 130 m päässä: näkee juurihallin katon, gallerian ylhäältä ja ylätasanteen lyhdyn; ilmakuvan korvike (Commonsissa ei ole varsinaista ilmakuvaa).",
+          "vertailukuva": "kuvat/petrin-5-ylhaalta.jpg (vain tasanteelta alaspäin)"
+        },
+        "requestedDimensions": [
+          2400,
+          1600
+        ],
+        "wholeTowerAxisFitsVerticalFOV": true,
+        "analyticVerticalAxisProjection": {
+          "ground": {
+            "heightM": 0,
+            "yNormalized": 0.714768,
+            "yPixelsAt1600High": 1143.63,
+            "yPixelsAtRequestedHeight": 1143.63
+          },
+          "hallRoofApprox": {
+            "heightM": 7,
+            "yNormalized": 0.681498,
+            "yPixelsAt1600High": 1090.4,
+            "yPixelsAtRequestedHeight": 1090.4
+          },
+          "lowerPlatform": {
+            "heightM": 20,
+            "yNormalized": 0.615356,
+            "yPixelsAt1600High": 984.57,
+            "yPixelsAtRequestedHeight": 984.57
+          },
+          "upperPlatform": {
+            "heightM": 51,
+            "yNormalized": 0.430185,
+            "yPixelsAt1600High": 688.3,
+            "yPixelsAtRequestedHeight": 688.3
+          },
+          "bodyTop": {
+            "heightM": 58.7,
+            "yNormalized": 0.37693,
+            "yPixelsAt1600High": 603.09,
+            "yPixelsAtRequestedHeight": 603.09
+          },
+          "mastTopApprox": {
+            "heightM": 71,
+            "yNormalized": 0.284552,
+            "yPixelsAt1600High": 455.28,
+            "yPixelsAtRequestedHeight": 455.28
+          }
+        },
+        "analyticTowerAxisFractionOfImageHeight": 0.430216,
+        "sourceAngularFractionIsApproximate": true,
+        "calculationIsCameraPreflightNot3DModel": true,
+        "actualGeneratedCameraVerified": false,
+        "actualGenerationCalls": 0,
+        "status": "waiting-for-K1-feedback",
+        "maskContract": {
+          "filename": "petrin-K5-maski.png",
+          "dimensions": [
+            2400,
+            1600
+          ],
+          "sameFramingAsImage": true,
+          "towerWhite255OtherBlack0": true,
+          "softEdgeMaximumPixels": 2,
+          "completeTowerBehindOccluders": true,
+          "mustMatchActualProducedImageNotAnIndependentGuessedOutline": true,
+          "maskProduced": false
+        }
+      }
+    ],
+    "feedbackGate": {
+      "state": "awaiting-explicit-scope-clarification-before-first-generation",
+      "questionAskedAt": "2026-10-14T09:33:06.177973+00:00",
+      "reportedPriorOwnerInstruction": "Odota, tehdään yksi kerrallaan. Annan tässä palautteen",
+      "priorOpenTasks": [
+        70,
+        71
+      ],
+      "priorPauseReleased": false,
+      "newRoutingDoesNotReleasePriorPause": true,
+      "oneImagePerFeedbackStep": true,
+      "proposedFirstImage": "K1",
+      "K2toK5GenerationAllowedBeforeK1Feedback": false,
+      "permissionReceived": false,
+      "generationMayStart": false,
+      "oldTasksWereNotResumed": true
+    },
+    "requestedImages": 5,
+    "requestedMasks": 5,
+    "generationCallsIssued": 0,
+    "generationCallsCompleted": 0,
+    "returnedCandidates": 0,
+    "nativeResolutionRequiredLongEdgeMinimum": 2400,
+    "nativeResolutionNotYetVerified": true,
+    "noAutomaticAPIOrCLIModelSwitch": true,
+    "noAutomaticUpscaleOrImageEditsAuthorizedByThisPlan": true,
+    "productionStarted": true,
+    "productionActive": false,
+    "requiredWorkComplete": false,
+    "deliveredImages": 0,
+    "deliveredMasks": 0,
+    "PTAcceptanceVerified": false,
+    "modelLoopAuthorized": false,
+    "gameIntegrated": false,
+    "published": false,
+    "startedAt": "2026-10-14T09:33:06.177973+00:00",
+    "updatedAt": "2026-10-14T09:33:06.177973+00:00"
+  },
+  "imagesDelivered": 0,
+  "masksDelivered": 0,
+  "generationCallsIssued": 0,
+  "deliveryComplete": false,
+  "PTAcceptanceVerified": false,
+  "modelLoopAuthorized": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-14T09:35:07.349165+00:00"
+}
