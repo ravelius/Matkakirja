@@ -21,6 +21,8 @@ iso 5 s → puolikoko oikeaan reunaan mini-kehyksen varaan, napautus 10 s), 1504
 telineeseen) + PK: cab8a700e (ikkuna ei avaa listaa; cherry-pick f6516a79b), 562097064 (Cupola ei katoa, katse säilyy, ei sumeaa),
 0054480e1 (paikannimet pystyssä, isompi, piste). Käännös 43ed5539. Todisteet: todistus-cupolakys-{nyk,uusi}-{iphone,ipad}-20261014-22*,
 todistus-cupolanaytto2-uusi-*; arkit natiivi-ui-arkit-191/iss-191-{iphone,ipad}.png. Varmista NS:ltä, että erä on junan 191 rungossa.
+Näytön napautus → lista todistettu iPhonella (todistus-cupolanaytto2-uusi-iphone-20261014-2230 n1/n2); iPadin vaakassa tap 526 719
+osui ikkunaan (vaakakoordinaatit ≠ kosketustyökalun pystykoordinaatit) → iPad-kuva puuttuu, ei koodivika.
 Sivuhavainto 192:een: ylärivin valitsimet näyttävät LIVEnä molemmat "Nyt" (kumpi on kumpi vain vihjetekstistä).
 
 ## AVOIMET (järjestys ISS-erän jälkeen)
@@ -42,8 +44,8 @@ Sivuhavainto 192:een: ylärivin valitsimet näyttävät LIVEnä molemmat "Nyt" (
 ## Opit
 - Piilotettu (opacity 0) elementti ei ole ui-puussa → tap-kohta ei löydä; käytä koordinaatteja (tap x y) tai tauko ensin.
 - todistusajon `oleta-uusi` laskee askeleen alun viimeisestä komennosta (ui/tap), ei edellisestä oletuksesta.
-- ISS-ohjaamon LCD ei löydy ui-puusta luokalla (mk-issohjaamo__lcd): napauta koordinaatteja (iPhone 147 768, iPad vaaka 526 719;
-  matriisin keskikohta). Ikkunan napautus pienentää paneelin miniksi → LCD katoaa (tap ensin, ei ikkunaa).
+- ISS-ohjaamon LCD ei löydy ui-puusta luokalla (mk-issohjaamo__lcd): napauta koordinaatteja (iPhone 147 768 toimii; iPad vaaka 526 719 EI – muunna
+  pystykoordinaateiksi; matriisin keskikohta). Ikkunan napautus pienentää paneelin miniksi → LCD katoaa (tap ensin, ei ikkunaa).
 - Käynnissä olevaa proto-kaanna.sh:ta ei saa tappaa Unityn ollessa käynnissä (yhteinen Library): anna Unityn päättyä, sitten oma
   lukko /tmp/matkakirja-kaannospalvelu.lukko pois vain jos kuka = oma haara.
 - `ui kierto vaaka` iPadin vaakaan; `peli uusi-matka <kaupunki>` käynnistää oikean aloituslennon Lontoosta.
