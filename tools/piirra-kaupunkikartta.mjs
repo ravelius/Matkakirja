@@ -6147,11 +6147,11 @@ const KAUPUNGIT = {
    * Monaco ja Reykjavík rannalla: meri-lippu.
    */
   belgrad: {
-    rajat: { pohjoinen: 44.8343, etela: 44.7953, lansi: 20.432, ita: 20.4723 },
+    rajat: { pohjoinen: 44.8343, etela: 44.7937, lansi: 20.4318, ita: 20.4725 },
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   bratislava: {
-    rajat: { pohjoinen: 48.1519, etela: 48.139, lansi: 17.096, ita: 17.1208 },
+    rajat: { pohjoinen: 48.1523, etela: 48.139, lansi: 17.096, ita: 17.1208 },
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   chisinau: {
@@ -6159,7 +6159,7 @@ const KAUPUNGIT = {
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   minsk: {
-    rajat: { pohjoinen: 53.9126, etela: 53.8938, lansi: 27.543, ita: 27.579 },
+    rajat: { pohjoinen: 53.9126, etela: 53.893, lansi: 27.543, ita: 27.579 },
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   podgorica: {
@@ -6180,15 +6180,15 @@ const KAUPUNGIT = {
   },
   andorralavella: {
     // Etelä- ja länsireunaa laskettu (Karttaseppä 11.10.): Santa Coloma osui mittakaavajanan päälle.
-    rajat: { pohjoinen: 42.5144, etela: 42.4891, lansi: 1.4906, ita: 1.5405 },
+    rajat: { pohjoinen: 42.5185, etela: 42.4882, lansi: 1.4906, ita: 1.5405 },
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   bern: {
-    rajat: { pohjoinen: 46.9508, etela: 46.9438, lansi: 7.4403, ita: 7.4636 },
+    rajat: { pohjoinen: 46.951, etela: 46.9438, lansi: 7.4403, ita: 7.4636 },
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   monaco: {
-    rajat: { pohjoinen: 43.7421, etela: 43.7275, lansi: 7.4102, ita: 7.4326 },
+    rajat: { pohjoinen: 43.7427, etela: 43.7275, lansi: 7.4102, ita: 7.4326 },
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
     meri: true,
   },
@@ -6209,7 +6209,7 @@ const KAUPUNGIT = {
    * PÄÄKAUPUNKIPISTEET e03 (Päätoimittaja 11.10.2026, Kaukasus ja Lähi-itä): rajat sisalto.json:n kohdekartasta. Rannikolla meri-lippu.
    */
   abudhabi: {
-    rajat: { pohjoinen: 24.4875, etela: 24.4545, lansi: 54.3, ita: 54.361 },
+    rajat: { pohjoinen: 24.493, etela: 24.4522, lansi: 54.3, ita: 54.361 },
     meri: true,
   },
   amman: {
@@ -6220,14 +6220,14 @@ const KAUPUNGIT = {
     meri: true,
   },
   beirut: {
-    rajat: { pohjoinen: 33.903, etela: 33.8755, lansi: 35.4945, ita: 35.5225 },
+    rajat: { pohjoinen: 33.903, etela: 33.8755, lansi: 35.4945, ita: 35.5228 },
     meri: true,
   },
   jerevan: {
-    rajat: { pohjoinen: 40.1948, etela: 40.1715, lansi: 44.4987, ita: 44.5246 },
+    rajat: { pohjoinen: 40.1959, etela: 40.1715, lansi: 44.4987, ita: 44.5246 },
   },
   manama: {
-    rajat: { pohjoinen: 26.2433, etela: 26.2162, lansi: 50.5703, ita: 50.6013 },
+    rajat: { pohjoinen: 26.2459, etela: 26.2146, lansi: 50.5703, ita: 50.6013 },
     meri: true,
   },
   tbilisi: {
@@ -6235,7 +6235,7 @@ const KAUPUNGIT = {
   },
   // e03b (Päätoimittaja 11.10.2026): Ramallah, sisalto.json:n kohdekartan rajat.
   ramallah: {
-    rajat: { pohjoinen: 31.908, etela: 31.8824, lansi: 35.1877, ita: 35.2196 },
+    rajat: { pohjoinen: 31.9104, etela: 31.8812, lansi: 35.1877, ita: 35.2196 },
   },
   // AFRIKAN PÄÄKAUPUNKIPISTEET (Karttaseppä 11.10.2026, PT): kohteet OSM:stä ja Wikipediasta, tekstit myöhemmin.
   abuja: {
@@ -6269,66 +6269,66 @@ const KAUPUNGIT = {
     meri: true,
   },
   freetown: {
-    rajat: { pohjoinen: 8.502, etela: 8.4658, lansi: -13.2585, ita: -13.1963 },
+    rajat: { pohjoinen: 8.5039, etela: 8.4658, lansi: -13.2585, ita: -13.1963 },
     meri: true,
   },
   gaborone: {
-    rajat: { pohjoinen: -24.6495, etela: -24.7032, lansi: 25.8645, ita: 25.9482 },
+    rajat: { pohjoinen: -24.6495, etela: -24.7089, lansi: 25.861, ita: 25.9517 },
   },
   harare: {
     rajat: { pohjoinen: -17.7949, etela: -17.8419, lansi: 31.0321, ita: 31.06 },
   },
   juba: {
-    rajat: { pohjoinen: 4.8506, etela: 4.8161, lansi: 31.5779, ita: 31.6227 },
+    rajat: { pohjoinen: 4.8513, etela: 4.8161, lansi: 31.5779, ita: 31.6227 },
   },
   kampala: {
-    rajat: { pohjoinen: 0.3432, etela: 0.2923, lansi: 32.5439, ita: 32.5973 },
+    rajat: { pohjoinen: 0.3453, etela: 0.2912, lansi: 32.5439, ita: 32.5984 },
   },
   khartum: {
-    rajat: { pohjoinen: 15.6222, etela: 15.598, lansi: 32.5025, ita: 32.5307 },
+    rajat: { pohjoinen: 15.6222, etela: 15.597, lansi: 32.5025, ita: 32.5307 },
   },
   kigali: {
-    rajat: { pohjoinen: -1.8787, etela: -1.9721, lansi: 29.9954, ita: 30.15 },
+    rajat: { pohjoinen: -1.8689, etela: -1.9881, lansi: 29.9876, ita: 30.1582 },
   },
   kinshasa: {
-    rajat: { pohjoinen: -4.2933, etela: -4.3456, lansi: 15.2724, ita: 15.3229 },
+    rajat: { pohjoinen: -4.2911, etela: -4.3456, lansi: 15.2724, ita: 15.3229 },
   },
   libreville: {
-    rajat: { pohjoinen: 0.402, etela: 0.3879, lansi: 9.4389, ita: 9.4559 },
+    rajat: { pohjoinen: 0.4022, etela: 0.3879, lansi: 9.4389, ita: 9.4559 },
     meri: true,
   },
   lilongwe: {
     rajat: { pohjoinen: -13.9359, etela: -13.9907, lansi: 33.7452, ita: 33.7971 },
   },
   lome: {
-    rajat: { pohjoinen: 6.1338, etela: 6.1162, lansi: 1.2089, ita: 1.2306 },
+    rajat: { pohjoinen: 6.1347, etela: 6.1162, lansi: 1.2089, ita: 1.2306 },
     meri: true,
   },
   lusaka: {
-    rajat: { pohjoinen: -15.4072, etela: -15.4346, lansi: 28.2743, ita: 28.3226 },
+    rajat: { pohjoinen: -15.4052, etela: -15.4346, lansi: 28.2743, ita: 28.3226 },
   },
   maputo: {
-    rajat: { pohjoinen: -25.9627, etela: -25.988, lansi: 32.5498, ita: 32.5975 },
+    rajat: { pohjoinen: -25.9603, etela: -25.988, lansi: 32.5498, ita: 32.5975 },
     meri: true,
   },
   maseru: {
-    rajat: { pohjoinen: -29.3079, etela: -29.3271, lansi: 27.4734, ita: 27.5064 },
+    rajat: { pohjoinen: -29.3057, etela: -29.3271, lansi: 27.4734, ita: 27.5064 },
   },
   ndjamena: {
     rajat: { pohjoinen: 12.1265, etela: 12.0935, lansi: 15.0296, ita: 15.0597 },
   },
   niamey: {
-    rajat: { pohjoinen: 13.5247, etela: 13.4867, lansi: 2.0567, ita: 2.1213 },
+    rajat: { pohjoinen: 13.5251, etela: 13.4863, lansi: 2.0554, ita: 2.1213 },
   },
   nouakchott: {
     rajat: { pohjoinen: 18.1109, etela: 18.0681, lansi: -15.9892, ita: -15.9637 },
     meri: true,
   },
   ouagadougou: {
-    rajat: { pohjoinen: 12.3767, etela: 12.3563, lansi: -1.5324, ita: -1.5136 },
+    rajat: { pohjoinen: 12.377, etela: 12.3563, lansi: -1.5324, ita: -1.5136 },
   },
   portlouis: {
-    rajat: { pohjoinen: -20.1555, etela: -20.1733, lansi: 57.4941, ita: 57.5134 },
+    rajat: { pohjoinen: -20.1551, etela: -20.1733, lansi: 57.4941, ita: 57.5134 },
     meri: true,
   },
   portonovo: {
@@ -6355,46 +6355,46 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -22.5562, etela: -22.5785, lansi: 17.0776, ita: 17.0957 },
   },
   yaounde: {
-    rajat: { pohjoinen: 3.9169, etela: 3.8253, lansi: 11.4351, ita: 11.531 },
+    rajat: { pohjoinen: 3.9322, etela: 3.8107, lansi: 11.4322, ita: 11.531 },
   },
   // AFRIKAN PÄÄKAUPUNKIPISTEET LOPPU
   // VATIKAANI (PT 11.10.2026, juna 183): Euroopan viimeinen pääkaupunkipiste ilman karttaa.
   vatikaanivaltio: {
-    rajat: { pohjoinen: 41.9081, etela: 41.8986, lansi: 12.4467, ita: 12.4605 },
+    rajat: { pohjoinen: 41.9082, etela: 41.8986, lansi: 12.4467, ita: 12.4605 },
     laajennus: 1.6, // reunus kuten muissa kartoissa (Karttaseppä 12.10.2026, yhtenäisyystarkistus)
   },
   // PÄÄKAUPUNKI e04 (Codex, kohdekartat.mjs)
   banjul: {
-    rajat: { pohjoinen: 13.4694, etela: 13.414, lansi: -16.6194, ita: -16.5639 },
+    rajat: { pohjoinen: 13.4776, etela: 13.4081, lansi: -16.6206, ita: -16.5633 },
     meri: true,
   },
   // PÄÄKAUPUNKI e04 (Codex, kohdekartat.mjs)
   conakry: {
     // meri: 'maa' (Karttaseppä 13.10.2026): Codexin kohteisiin kuuluvat Îles de Losin saaret, joten ruutu on 18 × 11 km
     // ja enimmäkseen merta; vesipuolen täyttö varoitti 93–98 % ja piirsi pelkän rantanauhan (meri paperin värinen).
-    rajat: { pohjoinen: 9.5364, etela: 9.4386, lansi: -13.845, ita: -13.681 },
+    rajat: { pohjoinen: 9.5617, etela: 9.4386, lansi: -13.845, ita: -13.6744 },
     meri: 'maa',
     meriHaku: 0.05,
     meriMax: 0.98,
   },
   // PÄÄKAUPUNKI e04 (Codex, kohdekartat.mjs)
   monrovia: {
-    rajat: { pohjoinen: 6.3602, etela: 6.2973, lansi: -10.814, ita: -10.7473 },
+    rajat: { pohjoinen: 6.3641, etela: 6.2896, lansi: -10.814, ita: -10.7412 },
     meri: true,
   },
   // PÄÄKAUPUNKI e05 (Codex, kohdekartat.mjs)
   accra: {
-    rajat: { pohjoinen: 5.5739, etela: 5.5222, lansi: -0.2225, ita: -0.1366 },
+    rajat: { pohjoinen: 5.5796, etela: 5.5176, lansi: -0.2251, ita: -0.1339 },
     meri: true,
   },
   // PÄÄKAUPUNKI e06 (Codex, kohdekartat.mjs)
   luanda: {
-    rajat: { pohjoinen: -8.7756, etela: -8.8421, lansi: 13.2101, ita: 13.2578 },
+    rajat: { pohjoinen: -8.7687, etela: -8.8421, lansi: 13.2076, ita: 13.2603 },
     meri: true,
   },
   // PÄÄKAUPUNKI e06 (Codex, kohdekartat.mjs)
   saotome: {
-    rajat: { pohjoinen: 0.411, etela: 0.3319, lansi: 6.6992, ita: 6.7553 },
+    rajat: { pohjoinen: 0.4134, etela: 0.3319, lansi: 6.6983, ita: 6.7562 },
     meri: true,
   },
   // PÄÄKAUPUNKI e07 (Codex, kohdekartat.mjs)
@@ -6404,15 +6404,15 @@ const KAUPUNGIT = {
   },
   // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs)
   ottawa: {
-    rajat: { pohjoinen: 45.4442, etela: 45.388, lansi: -75.7282, ita: -75.6714 },
+    rajat: { pohjoinen: 45.4502, etela: 45.3867, lansi: -75.7319, ita: -75.6677 },
   },
   // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs)
   washington: {
-    rajat: { pohjoinen: 38.9122, etela: 38.8821, lansi: -77.0646, ita: -77.0006 },
+    rajat: { pohjoinen: 38.9122, etela: 38.8814, lansi: -77.0646, ita: -77.0006 },
   },
   // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs)
   castries: {
-    rajat: { pohjoinen: 14.0148, etela: 13.9859, lansi: -61.0009, ita: -60.9798 },
+    rajat: { pohjoinen: 14.0157, etela: 13.9859, lansi: -61.0013, ita: -60.9794 },
     meri: true,
     meriHaku: 0.05,
   },
@@ -6430,7 +6430,7 @@ const KAUPUNGIT = {
   },
   // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs)
   georgetown: {
-    rajat: { pohjoinen: 6.827, etela: 6.802, lansi: -58.1697, ita: -58.1427 },
+    rajat: { pohjoinen: 6.827, etela: 6.8015, lansi: -58.1697, ita: -58.1427 },
     meri: true,
     meriHaku: 0.05,
   },
@@ -6440,7 +6440,7 @@ const KAUPUNGIT = {
   },
   // PÄÄKAUPUNKI e14 (Codex, kohdekartat.mjs)
   canberra: {
-    rajat: { pohjoinen: -35.2345, etela: -35.3023, lansi: 149.0963, ita: 149.1843 },
+    rajat: { pohjoinen: -35.2231, etela: -35.3023, lansi: 149.0945, ita: 149.1861 },
   },
 };
 

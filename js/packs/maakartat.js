@@ -16591,13 +16591,8 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Belgradin ydin on kahden joen yhtymäkohdan kalliolla. Kohteet kulkevat linnoituksesta ja sen puistosta pääkaupungin 1800-luvun keskustaan, Vračarin kukkulalle ja joen saarelle.',
-    rajat: {
-      pohjoinen: 44.8343,
-      etela: 44.7953,
-      lansi: 20.432,
-      ita: 20.4723,
-    },
-    piirtoRajat: { pohjoinen: 44.846, etela: 44.7836, lansi: 20.41991, ita: 20.48439 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    rajat: { pohjoinen: 44.8343, etela: 44.7937, lansi: 20.4318, ita: 20.4725 },
+    piirtoRajat: { pohjoinen: 44.84648, etela: 44.78152, lansi: 20.41959, ita: 20.48471 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Belgradin linnoitus',
@@ -16651,13 +16646,8 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Bratislavan vanhan ytimen kohteet kertovat kaupungin eri aikakausista: Unkarin kruunajaiskaupungista, 1700-luvun palatseista ja 1900-luvun alun jugendista. Linna ja tuomiokirkko vartioivat Tonavaa, raatihuone ja aukiot ovat kaupungin arjen keskus, ja Mikaelin portti on säilynyt keskiaikaisen muurin ajalta.',
-    rajat: {
-      pohjoinen: 48.1519,
-      etela: 48.139,
-      lansi: 17.096,
-      ita: 17.1208,
-    },
-    piirtoRajat: { pohjoinen: 48.15577, etela: 48.13513, lansi: 17.08856, ita: 17.12824 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    rajat: { pohjoinen: 48.1523, etela: 48.139, lansi: 17.096, ita: 17.1208 },
+    piirtoRajat: { pohjoinen: 48.15629, etela: 48.13501, lansi: 17.08856, ita: 17.12824 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Bratislavan linna',
@@ -16755,13 +16745,8 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Minskin historiallinen ydin on Svislač-joen varrella, jossa Yläkaupungin barokkikirkot ja Kolminaisuuden esikaupunki kertovat vanhasta Minskistä. Vanhan Minskin kohteet ovat Niamiha- ja Kastryčnickaja-asemien tuntumassa, ja Voitonaukio ja Gorki-puisto Pieramohi-aseman lähellä.',
-    rajat: {
-      pohjoinen: 53.9126,
-      etela: 53.8938,
-      lansi: 27.543,
-      ita: 27.579,
-    },
-    piirtoRajat: { pohjoinen: 53.91824, etela: 53.88816, lansi: 27.5322, ita: 27.5898 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    rajat: { pohjoinen: 53.9126, etela: 53.893, lansi: 27.543, ita: 27.579 },
+    piirtoRajat: { pohjoinen: 53.91848, etela: 53.88712, lansi: 27.5322, ita: 27.5898 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Kolminaisuuden esikaupunki',
@@ -17009,13 +16994,8 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Kartan ydin on Gran Valiran laakso, jossa vanha keskusta ja Santa Coloma ovat rinnakkain. Mukana on myös Escaldesin kylpylä.',
-    rajat: {
-      pohjoinen: 42.5144,
-      etela: 42.4891,
-      lansi: 1.4906,
-      ita: 1.5405,
-    },
-    piirtoRajat: { pohjoinen: 42.52199, etela: 42.48151, lansi: 1.47563, ita: 1.55547 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    rajat: { pohjoinen: 42.5185, etela: 42.4882, lansi: 1.4906, ita: 1.5405 },
+    piirtoRajat: { pohjoinen: 42.52759, etela: 42.47911, lansi: 1.47563, ita: 1.55547 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Casa de la Vall',
@@ -17045,13 +17025,8 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Bernin ydin kulkee Aaren niemekkeen harjalla Bundesplatzilta Zytgloggen ja tuomiokirkon ohi karhukuopalle. Kohteet ovat parin kilometrin kävelyn sisällä toisistaan.',
-    rajat: {
-      pohjoinen: 46.9508,
-      etela: 46.9438,
-      lansi: 7.4403,
-      ita: 7.4636,
-    },
-    piirtoRajat: { pohjoinen: 46.9529, etela: 46.9417, lansi: 7.43331, ita: 7.47059 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    rajat: { pohjoinen: 46.951, etela: 46.9438, lansi: 7.4403, ita: 7.4636 },
+    piirtoRajat: { pohjoinen: 46.95316, etela: 46.94164, lansi: 7.43331, ita: 7.47059 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Zytglogge',
@@ -17086,13 +17061,8 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Monacon vanha kaupunki, ruhtinaanlinna ja katedraali ovat kalliolla, jonka vieressä on Port Hercule -satama. Satamasta itään rinne nousee Monte Carloon, jossa sijaitsevat kasino ja oopperasali.',
-    rajat: {
-      pohjoinen: 43.7421,
-      etela: 43.7275,
-      lansi: 7.4102,
-      ita: 7.4326,
-    },
-    piirtoRajat: { pohjoinen: 43.74648, etela: 43.72312, lansi: 7.40348, ita: 7.43932 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    rajat: { pohjoinen: 43.7427, etela: 43.7275, lansi: 7.4102, ita: 7.4326 },
+    piirtoRajat: { pohjoinen: 43.74726, etela: 43.72294, lansi: 7.40348, ita: 7.43932 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Monte Carlon kasino',
@@ -17282,12 +17252,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Abu Dhabin länsiranta on kaupungin nykyinen julkinen kasvo. Vanha linnake kertoo asutuksen alusta, ja rantakadun palatsit, hotelli ja tornit kertovat, kuinka nopeasti kaupunki on kasvanut.',
-    rajat: {
-      pohjoinen: 24.4875,
-      etela: 24.4545,
-      lansi: 54.3,
-      ita: 54.361,
-    },
+    rajat: { pohjoinen: 24.493, etela: 24.4522, lansi: 54.3, ita: 54.361 },
     kohteet: [
       {
         nimi: 'Qasr Al Hosn',
@@ -17410,12 +17375,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Beirutin historiallinen ydin ulottuu niemen kärjestä kukkuloille, ja Rooman, osmanien ja ranskalaisen mandaatin ajan kerrostumat ovat vierekkäin. Rantakalliot, kirkot ja moskeijat, aukiot ja museot kertovat, miten kaupunki on elänyt Välimeren kauppasatamana.',
-    rajat: {
-      pohjoinen: 33.903,
-      etela: 33.8755,
-      lansi: 35.4945,
-      ita: 35.5225,
-    },
+    rajat: { pohjoinen: 33.903, etela: 33.8755, lansi: 35.4945, ita: 35.5228 },
     kohteet: [
       {
         nimi: 'Beirutin kansallismuseo',
@@ -17461,12 +17421,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Jerevanin historiallinen ydin on pieni. Hrazdanin rotkon tuntumassa ovat säilyneet kirkot ja moskeija, ja keskustassa Tamanianin suunnittelema tuffiaukio, oopperatalo, Kaskadi ja Matenadaran kertovat 1900-luvun kaupungista.',
-    rajat: {
-      pohjoinen: 40.1948,
-      etela: 40.1715,
-      lansi: 44.4987,
-      ita: 44.5246,
-    },
+    rajat: { pohjoinen: 40.1959, etela: 40.1715, lansi: 44.4987, ita: 44.5246 },
     kohteet: [
       {
         nimi: 'Tasavallan aukio',
@@ -17517,12 +17472,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Manaman vanha ydin on pieni: kauppa-alue portin ja basaarin ympärillä. Lähellä sitä ovat nykyajan pankkikaupunginosa, museot ja moskeija.',
-    rajat: {
-      pohjoinen: 26.2433,
-      etela: 26.2162,
-      lansi: 50.5703,
-      ita: 50.6013,
-    },
+    rajat: { pohjoinen: 26.2459, etela: 26.2146, lansi: 50.5703, ita: 50.6013 },
     kohteet: [
       {
         nimi: 'Bab Al Bahrain',
@@ -17623,12 +17573,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Ramallahin kartta kattaa kaupungin ytimen: Al-Manaran aukion ja Al-Kasaba-teatterin, vanhan kaupungin Pyhän perheen kirkon ja Friends-koulut sekä lounaisella kukkulalla olevan Kulttuuripalatsin ja Darwish-museon. Kaupungin eteläpuolella nousee Tell en-Nasbehin muinainen kukkula.',
-    rajat: {
-      pohjoinen: 31.908,
-      etela: 31.8824,
-      lansi: 35.1877,
-      ita: 35.2196,
-    },
+    rajat: { pohjoinen: 31.9104, etela: 31.8812, lansi: 35.1877, ita: 35.2196 },
     kohteet: [
       {
         nimi: 'Al-Manaran aukio',
@@ -17886,12 +17831,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/freetown-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: 8.502,
-      etela: 8.4658,
-      lansi: -13.2585,
-      ita: -13.1963,
-    },
+    rajat: { pohjoinen: 8.5039, etela: 8.4658, lansi: -13.2585, ita: -13.1963 },
     kohteet: [
       {
         nimi: 'Pyhän Yrjön katedraali',
@@ -17979,12 +17919,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/juba-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: 4.8506,
-      etela: 4.8161,
-      lansi: 31.5779,
-      ita: 31.6227,
-    },
+    rajat: { pohjoinen: 4.8513, etela: 4.8161, lansi: 31.5779, ita: 31.6227 },
     kohteet: [
       {
         nimi: 'Nyakuron kulttuurikeskus',
@@ -18016,12 +17951,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kinshasa-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: -4.2933,
-      etela: -4.3456,
-      lansi: 15.2724,
-      ita: 15.3229,
-    },
+    rajat: { pohjoinen: -4.2911, etela: -4.3456, lansi: 15.2724, ita: 15.3229 },
     kohteet: [
       {
         nimi: 'Kinshasan keskustori',
@@ -18066,12 +17996,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/libreville-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: 0.402,
-      etela: 0.3879,
-      lansi: 9.4389,
-      ita: 9.4559,
-    },
+    rajat: { pohjoinen: 0.4022, etela: 0.3879, lansi: 9.4389, ita: 9.4559 },
     kohteet: [
       {
         nimi: 'Palais du bord de mer',
@@ -18104,12 +18029,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/lome-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: 6.1338,
-      etela: 6.1162,
-      lansi: 1.2089,
-      ita: 1.2306,
-    },
+    rajat: { pohjoinen: 6.1347, etela: 6.1162, lansi: 1.2089, ita: 1.2306 },
     kohteet: [
       {
         nimi: 'Itsenäisyysmonumentti',
@@ -18142,12 +18062,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/lusaka-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: -15.4072,
-      etela: -15.4346,
-      lansi: 28.2743,
-      ita: 28.3226,
-    },
+    rajat: { pohjoinen: -15.4052, etela: -15.4346, lansi: 28.2743, ita: 28.3226 },
     kohteet: [
       {
         nimi: 'Cairo Road',
@@ -18199,12 +18114,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/maputo-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: -25.9627,
-      etela: -25.988,
-      lansi: 32.5498,
-      ita: 32.5975,
-    },
+    rajat: { pohjoinen: -25.9603, etela: -25.988, lansi: 32.5498, ita: 32.5975 },
     kohteet: [
       {
         nimi: 'Maputon katedraali',
@@ -18254,12 +18164,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/maseru-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: -29.3079,
-      etela: -29.3271,
-      lansi: 27.4734,
-      ita: 27.5064,
-    },
+    rajat: { pohjoinen: -29.3057, etela: -29.3271, lansi: 27.4734, ita: 27.5064 },
     kohteet: [
       {
         nimi: 'Our Lady of Victories -katedraali',
@@ -18348,12 +18253,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/ouagadougou-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: 12.3767,
-      etela: 12.3563,
-      lansi: -1.5324,
-      ita: -1.5136,
-    },
+    rajat: { pohjoinen: 12.377, etela: 12.3563, lansi: -1.5324, ita: -1.5136 },
     kohteet: [
       {
         nimi: 'Ouagadougoun katedraali',
@@ -18394,13 +18294,8 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/vatikaanivaltio-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: 41.9081,
-      etela: 41.8986,
-      lansi: 12.4467,
-      ita: 12.4605,
-    },
-    piirtoRajat: { pohjoinen: 41.91095, etela: 41.89575, lansi: 12.44256, ita: 12.46464 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    rajat: { pohjoinen: 41.9082, etela: 41.8986, lansi: 12.4467, ita: 12.4605 },
+    piirtoRajat: { pohjoinen: 41.91108, etela: 41.89572, lansi: 12.44256, ita: 12.46464 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
       {
         nimi: 'Pietarinkirkko',
@@ -18551,12 +18446,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Banjulin torikadut liittyvät Gambia-joen suun yhteyksiin. Saaren länsi- ja etelärannan Tanbi näyttää, miten kaupunki ja vuorovesikosteikko ovat toistensa naapureita.',
-    rajat: {
-      pohjoinen: 13.4694,
-      etela: 13.414,
-      lansi: -16.6194,
-      ita: -16.5639,
-    },
+    rajat: { pohjoinen: 13.4776, etela: 13.4081, lansi: -16.6206, ita: -16.5633 },
     kohteet: [
       {
         nimi: 'Albertin tori',
@@ -18613,12 +18503,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Tombon vanhan kaupungin rannalla satama yhdistää Conakryn Atlanttiin. Camayennen puutarha sekä edustan Kassa, Roume ja Tamara tuovat kaupunkimaisemaan suuret puut, saarten kaaren ja kiviset rannat.',
-    rajat: {
-      pohjoinen: 9.5364,
-      etela: 9.4386,
-      lansi: -13.845,
-      ita: -13.681,
-    },
+    rajat: { pohjoinen: 9.5617, etela: 9.4386, lansi: -13.845, ita: -13.6744 },
     kohteet: [
       {
         nimi: 'Tombon saari',
@@ -18662,12 +18547,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Vanhan oikeustalon ja historiallisen pyhäkön ympärillä Monrovia jatkuu saariin, jokiveteen ja rantakosteikkoon. Rakennusten käytöt ja veden erottamat luonnonpaikat kertovat kaupungin eri aikakerroksista.',
-    rajat: {
-      pohjoinen: 6.3602,
-      etela: 6.2973,
-      lansi: -10.814,
-      ita: -10.7473,
-    },
+    rajat: { pohjoinen: 6.3641, etela: 6.2896, lansi: -10.814, ita: -10.7412 },
     kohteet: [
       {
         nimi: 'Kansallismuseon vanha oikeustalo',
@@ -18843,12 +18723,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Accran vanha rannikkoydin kasvoi Ga-yhteisöjen asutuksista ja eurooppalaisten kauppapaikkojen ympäriltä. Linnoitusten rinnalla siihen kuuluvat Korlen laguunin historia ja myöhempi kirkkoarkkitehtuuri. Labadissa sama rannikko jatkuu meren ja vapaa-ajan ympäristönä.',
-    rajat: {
-      pohjoinen: 5.5739,
-      etela: 5.5222,
-      lansi: -0.2225,
-      ita: -0.1366,
-    },
+    rajat: { pohjoinen: 5.5796, etela: 5.5176, lansi: -0.2251, ita: -0.1339 },
     kohteet: [
       {
         nimi: 'Jamesin linnoitus',
@@ -18909,12 +18784,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Nigerjoen saari, kausittaisen uoman suu ja lateriittikukkulat kuuluvat Niameyn maisemaan. Saari on myös asukkaiden koti.',
-    rajat: {
-      pohjoinen: 13.5247,
-      etela: 13.4867,
-      lansi: 2.0567,
-      ita: 2.1213,
-    },
+    rajat: { pohjoinen: 13.5251, etela: 13.4863, lansi: 2.0554, ita: 2.1213 },
     kohteet: [
       {
         nimi: 'Gounti Yénan suu',
@@ -18961,12 +18831,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Kukkulat edeltävät kaupunkia, järvi ja puisto kuuluvat sen myöhempään historiaan. Yaoundén luontopaikoilla on erilaiset synty- ja käyttövaiheet.',
-    rajat: {
-      pohjoinen: 3.9169,
-      etela: 3.8253,
-      lansi: 11.4351,
-      ita: 11.531,
-    },
+    rajat: { pohjoinen: 3.9322, etela: 3.8107, lansi: 11.4322, ita: 11.531 },
     kohteet: [
       {
         nimi: 'Mont Fébé',
@@ -18999,12 +18864,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Kigali- ja Jali-kukkulat kertovat kaupungin maastosta. Nyabugogon jokisuu ja Nyandungun kosteikko näyttävät laaksojen vesiverkon eri osia.',
-    rajat: {
-      pohjoinen: -1.8787,
-      etela: -1.9721,
-      lansi: 29.9954,
-      ita: 30.15,
-    },
+    rajat: { pohjoinen: -1.8689, etela: -1.9881, lansi: 29.9876, ita: 30.1582 },
     kohteet: [
       {
         nimi: 'Kigali-kukkula',
@@ -19037,12 +18897,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Luandan vanha rannikkoydin yhdistää sataman lähellä olevan Baixan ja ylempänä sijaitsevan Cidade Altan. Kirkonpaikat edustavat eri rakennusvaiheita, ja Ilha de Luandan hiekkaniemi kuuluu samaan rannikkoympäristöön.',
-    rajat: {
-      pohjoinen: -8.7756,
-      etela: -8.8421,
-      lansi: 13.2101,
-      ita: 13.2578,
-    },
+    rajat: { pohjoinen: -8.7687, etela: -8.8421, lansi: 13.2076, ita: 13.2603 },
     kohteet: [
       {
         nimi: 'Nossa Senhora dos Remédiosin katedraali',
@@ -19082,12 +18937,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Ana Chavesin rannalla vanha linnake liittyy kaupungin satamahistoriaan. Pohjoisen merimaisemaan kuuluu Ilhéu das Cabras.',
-    rajat: {
-      pohjoinen: 0.411,
-      etela: 0.3319,
-      lansi: 6.6992,
-      ita: 6.7553,
-    },
+    rajat: { pohjoinen: 0.4134, etela: 0.3319, lansi: 6.6983, ita: 6.7562 },
     kohteet: [
       {
         nimi: 'São Sebastiãon linnake',
@@ -19131,12 +18981,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/kampala-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: 0.3432,
-      etela: 0.2923,
-      lansi: 32.5439,
-      ita: 32.5973,
-    },
+    rajat: { pohjoinen: 0.3453, etela: 0.2912, lansi: 32.5439, ita: 32.5984 },
     kohteet: [
       {
         nimi: 'Vanhan Kampalan kukkula',
@@ -19188,12 +19033,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Tutin saari, kasvitieteellinen puutarha ja Souq al Arabi kertovat viljelystä, kasvikokoelmista ja kaupankäynnistä.',
-    rajat: {
-      pohjoinen: 15.6222,
-      etela: 15.598,
-      lansi: 32.5025,
-      ita: 32.5307,
-    },
+    rajat: { pohjoinen: 15.6222, etela: 15.597, lansi: 32.5025, ita: 32.5307 },
     kohteet: [
       {
         nimi: 'Tutin saari',
@@ -19290,12 +19130,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Kgale Hill tarjoaa kaupunkinäkymän, Gaboronen pato palvelee vesihuoltoa ja kasvitieteellinen puutarha esittelee maan omaa kasvistoa.',
-    rajat: {
-      pohjoinen: -24.6495,
-      etela: -24.7032,
-      lansi: 25.8645,
-      ita: 25.9482,
-    },
+    rajat: { pohjoinen: -24.6495, etela: -24.7089, lansi: 25.861, ita: 25.9517 },
     kohteet: [
       {
         nimi: 'Kgale Hill',
@@ -19320,12 +19155,7 @@ export const KAUPUNKIKARTAT = {
     polku: 'assets/kartat/portlouis-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    rajat: {
-      pohjoinen: -20.1555,
-      etela: -20.1733,
-      lansi: 57.4941,
-      ita: 57.5134,
-    },
+    rajat: { pohjoinen: -20.1551, etela: -20.1733, lansi: 57.4941, ita: 57.5134 },
     kohteet: [
       {
         nimi: 'Aapravasi Ghat',
@@ -19389,12 +19219,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Rideau-joen putoukset, kanavajärvi ja puiden tutkimuskokoelma näyttävät Ottawan vesimaiseman eri kerroksia.',
-    rajat: {
-      pohjoinen: 45.4442,
-      etela: 45.388,
-      lansi: -75.7282,
-      ita: -75.6714,
-    },
+    rajat: { pohjoinen: 45.4502, etela: 45.3867, lansi: -75.7319, ita: -75.6677 },
     kohteet: [
       {
         nimi: 'Rideau-putoukset',
@@ -19421,12 +19246,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Washingtonin historia näkyy sekä suurissa kokoelmataloissa että pienessä kanavanvartijan kodissa. Georgetownin vanha kivitalo vie pääkaupunkia edeltävään aikaan, ja National Mallin ympäristö näyttää, miten tietoa ja muistia varten rakennettiin.',
-    rajat: {
-      pohjoinen: 38.9122,
-      etela: 38.8821,
-      lansi: -77.0646,
-      ita: -77.0006,
-    },
+    rajat: { pohjoinen: 38.9122, etela: 38.8814, lansi: -77.0646, ita: -77.0006 },
     kohteet: [
       {
         nimi: 'Georgetownin vanha kivitalo',
@@ -19465,12 +19285,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Castriesin tori, puistoaukio ja Morne Fortunen kukkula kertovat kaupasta, kulttuurista ja vanhasta sotilasalueesta. Satamakaupunki avautuu eri tavoin keskustan tasolta ja kukkulalta.',
-    rajat: {
-      pohjoinen: 14.0148,
-      etela: 13.9859,
-      lansi: -61.0009,
-      ita: -60.9798,
-    },
+    rajat: { pohjoinen: 14.0157, etela: 13.9859, lansi: -61.0013, ita: -60.9794 },
     kohteet: [
       {
         nimi: 'Castriesin tori',
@@ -19554,12 +19369,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Water Streetin majakka ja kaupungin puutarhat kertovat rannikon rakentamisesta ja yhteisistä tiloista. Pienempi Promenade Gardens ja kasvitieteellinen puutarha ovat eri puolilla keskustaa.',
-    rajat: {
-      pohjoinen: 6.827,
-      etela: 6.802,
-      lansi: -58.1697,
-      ita: -58.1427,
-    },
+    rajat: { pohjoinen: 6.827, etela: 6.8015, lansi: -58.1697, ita: -58.1427 },
     kohteet: [
       {
         nimi: 'Georgetownin majakka',
@@ -19621,12 +19431,7 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Canberran luonnonmäet olivat paikallaan jo ennen pääkaupunkia. Niiden rinteillä yhdistyvät suojeltu luonto ja näkymät nykyiseen kaupunkiin.',
-    rajat: {
-      pohjoinen: -35.2345,
-      etela: -35.3023,
-      lansi: 149.0963,
-      ita: 149.1843,
-    },
+    rajat: { pohjoinen: -35.2231, etela: -35.3023, lansi: 149.0945, ita: 149.1861 },
     kohteet: [
       {
         nimi: 'Mount Ainslie',
