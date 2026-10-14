@@ -14089,3 +14089,7 @@ PT 11.1x: pilottikohteeksi Petřínin näkötorni (Praha, 1891, selkeä ristikko
 ## MYKISTYS KOSKEE MYÖS UNITYN BATCH- JA EDITORIAJOJA (14.10.2026) (14.10.2026 klo 11.33)
 
 Keskustelukanava klo 11.3x: ääntä kuului taas (Etnan purkaus). Lähde: Natiivi-UI:n asettelutesti (ui-asettelutesti.sh, Unityn batchmode-ajo linjalla L2) soitti pelin äänet kaiuttimiin. NUI:ta pyydetty lopettamaan/mykistämään ajo ja lisäämään mykistys skriptiin. Sääntö AJOT AINA MYKISTETTYINÄ laajennettu: koskee myös Unityn batch- ja editoriajoja (asettelutestit, kuva-ajot).
+
+## ISOISÄN ÄÄNI AINA VANHEMMALLA MALLILLA; ISOISÄN JA PULUN KUVAT ISOMMIKSI (omistaja 14.10.2026 klo 12.16) (14.10.2026 klo 12.16)
+
+Omistaja (Keskustelukanavan kautta), sanatarkasti: "isoisän aloituskertomus kolmesta veljestä on generoitu väärällä moottorilla. isoisän teksti pitää generoida aina sillä vanhemmalla mallilla, koska se kuulostaa paremmalta silloin. lisäksi isoisän ja pulun kuvat saisi avautua hieman isommaksi ruudulla ja olla klikattavissa lähes täysikokoisiksi ruudulle". Linjaus: isoisän eleven_v3-poikkeus aina-turbo-sääntöön vahvistetaan; resepti tools/generoi-avaus.mjs (Viisas Kertoja, eleven_v3, text-to-dialogue, stability 0,5). Kolme veljestä generoidaan uudelleen yhtenä ottona pysyvällä kertojaluvalla (12.10.) → juna 190 (Äänittäjä); Äänittäjä listaa muut turbolla tehdyt isoisän tekstit PT:lle. Kuvat: isoisän ja Pulun kuvat avautuvat isompina ja napautuksesta lähes koko ruudulle olemassa olevalla suurenevan kuvan pohjalla (Natiivi-UI, junaan 190).
