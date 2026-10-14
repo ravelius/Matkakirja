@@ -10,8 +10,8 @@ Viestit AINA session id:llä osoitekirjasta /Users/Shared/Claude/osoitekirja.md 
 - **BUILD 189 julkaistu** (OMISTAJA PYYSI JULKAISUA 14.10. 10.05): proto master fecbb3c7e (juna/b17 2e980dd33), lukituskäännös 8c87393fb (L1),
   iOS TF Julkaisijalla, Mac 1.1 (189) TF-ajo 38526635343 SUCCESS 10.12. Muistiajot 189: museo Ranska 2678/2441 Mt, raketti 3831/1288 Mt.
 - **Master nyt 578d481d0** = BUILD 189 + kaksi AsetteluTesti-mykistyksen cherry-pickiä (5d1d800d4, 578d481d0; PT 14.10.: asettelutesti soitti kaiuttimista).
-- **Juna 190 -runko** natiiviseppa/juna-190 (wt/proto-natiiviseppa-ehdokas) = **bbcebf1c9** (testit 039432778:ssa 1777/585/491; bbcebf1c9:n testit
-  ajossa 13.45 → tarkista jono-190.txt). Yhdistetty (kaikki PT:n kuittaamia): PK suikale 41763f287, PK cupola-pinta a00fd0507, PK telakointi
+- **Juna 190 -runko** natiiviseppa/juna-190 (wt/proto-natiiviseppa-ehdokas) = **8cefa558b** (bbcebf1c9 vihreä 1777/585/491; 8cefa558b:n testit kesken,
+  ks. alla). Yhdistetty (kaikki PT:n kuittaamia): PK suikale 41763f287, PK cupola-pinta a00fd0507, PK telakointi
   1858f8f53 (⊃ kevyt pallo 98d4de0f3), AsetteluTesti-mykistykset, NUI iss-auto-189 8d66868f5, PK alkulento-huntu 45748f3db, PK iss-valikko-juna-190
   3c5adf35a (ristiriita AsetteluTesti-näkymälistassa ratkaistu), NUI kertomuskuvat 8d0bc0963, NUI metro-paperi d9bf517fe, junavahdin taukolippu
   ef906526f, KS karttamerkit-kiinni 78f0e65be, LS1 ateena-pallo 67ecaa222, NUI cupola-latauskuva-190b b5872327d (= 59ab58bc4 cherry-pickinä),
@@ -22,14 +22,16 @@ Viestit AINA session id:llä osoitekirjasta /Users/Shared/Claude/osoitekirja.md 
   saa lukea ulkoista levyä → pysyvä lippu lokit/kaannospalvelu/juna-tauko (juna-ajo.sh). Varmuuskopio jatkuu. Junakäännökset LT:n simuihin KÄSIN.
   Myös Mac-kopio on T7:llä (Matkakirja-proto-mac → proto-mac-kopio). Varmuuskopio: master EI enää proto/masteriin (omistajan 5.10. muutos jää).
 
-## KÄYNNISSÄ LUOVUTUSHETKELLÄ (tarkista tulos)
+## PYSÄYTETTY (HILJAINEN TUNTI omistaja 14.12 → klo 15.15; ei ajoja ennen sitä)
 
-1. `juna190/ketju-l2.sh` (Julkaisijan KÄÄNNÖS NYT L2 + LAITE NYT): simukäännös bbcebf1c9 → lokit/natiiviseppa-app-190-sim, sitten
-   `kupoli190.sh 44a598b42 8a61f1f09` = Valosepän Cupolan yövalojen muistiajo (B yövalot vs A runko, Pariisi → pallo → raketti → Cupola-yö,
-   kupoli-muisti-ipad.sh, mykistetty). Tulos (KUPOLI … fp huippu / vapaa min / varoitukset) → PT:lle ja Valosepälle; se on yövalojen KUITTAUSEHTO.
-   Ilmoita Julkaisijalle LUKKO VAPAA (kolmannen käännöksen jälkeen) ja LAITE VAPAA.
-2. TEHTY 14.03 (PT kuittasi): `juna190/uusipeli-sim.sh bbcebf1c9` ajettiin OHITA_KAANNOS=1:llä, kun Julkaisija antaa SIMU NYT (natiiviseppa-iPad13 jonossa LT:n jälkeen):
-   PK:n ajo-uusipeli.sh + napautukset → kuva 3-valinta.png (uusi peli → aloitusvalinta ILMAN huntua ja korostettua Britanniaa) → PT:lle polku.
+- **Runko 190 nyt 8cefa558b** (+ NUI iss-palaute-190 a9fbdf4d4 = 2f9b1297d + runko, ristiriidat NUI:n ratkaisemina). Sen testit190 PYSÄYTETTY kesken
+  → aja 15.15 jälkeen `zsh juna190/testit190.sh` (edellinen vihreä bbcebf1c9: 1777/585/491).
+- **Valosepän Cupolan yövalojen muistiajo** (yövalojen kuittausehto) PYSÄYTETTY kesken laitekäännöksen → 15.15 jälkeen pyydä Julkaisijalta
+  KÄÄNNÖS NYT (L2) + LAITE NYT ja aja `PROTO_LINJA=2 zsh juna190/kupoli190.sh 44a598b42 8a61f1f09` run_in_backgroundilla (touch
+  lokit/natiiviseppa-laitevuoro-ok vasta LAITE NYT:n jälkeen). laite-sha.sh uusii nyt viennin kerran T7:n "Directory not empty" -virheessä.
+  Tulos (KUPOLI kup-yovalot vs kup-runko: fp huippu / vapaa min / varoitukset) → PT:lle ja Valosepälle.
+- Uusi peli -todistus TEHTY ja PT kuittasi (lokit/natiiviseppa-uusipeli190-1358/kuvat/3-valinta.png). Simukopio rungosta bbcebf1c9:
+  lokit/natiiviseppa-app-190-sim (PK käyttää telakointitodisteeseen).
 
 ## ODOTTAA PT:N KUITTAUSTA (ei runkoon ennen sitä)
 

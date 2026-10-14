@@ -9,7 +9,7 @@ Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (vain se) ja luovutus KOKONAAN: `git 
 Viestit AINA send_messagella session id:llä (PT local_74630a27-8c1b-4ac3-9143-538efab8cbcd), PT:lle ≤ 3 riviä.
 
 ## KÄRKI
-1. Tarkista ketju-l2.sh:n tulos (Valosepän Cupolan yövalojen muistiajo) ja uusipeli-sim (SIMU NYT) → PT:lle ja Valosepälle.
+1. HILJAINEN TUNTI klo 15.15 asti; sen jälkeen testit190 (runko 8cefa558b) ja Valosepän yövalojen muistiajo (luovutus: PYSÄYTETTY).
 2. Juna 190 kertyy: yhdistä vain PT:n kuittaamat (`zsh juna190/yhdista-erat.sh juna190/erat-N.txt`, testit `zsh juna190/testit190.sh` run_in_backgroundilla).
 3. LUKITSE 190 vasta PT:n merkistä: iPad-muistiajo Pariisissa ennen VIE:tä, ei laitetestejä (ks. luovutus).
 4. Unity-beetaseuranta: CronCreate "4 9 * * *" + aja unity-julkaisut.py kerran.
