@@ -80,3 +80,10 @@ PK:n MaanKehys.Siirto(g, rakennus) (b28d792b8, iss-kupoli-190) korjaa sen – ta
   - **Greenwich**: +1,5 s harmaa taso yhä lontoo2:ssa (ennen porttia) → lontoo4 näyttää portin vaikutuksen; +4 s oikealla alhaalla violetit puut →
     tarkista sävy (ilmakehä? aerosoli? puiden varjostin?).
   - Telakointi 1858f8f53: arkki lähetetty PT:lle (proto-3d/lokit/todistus-telakointi10-*/arkki-telakointi10.png), PT kuittaa ennen yhdistämistä.
+
+## PT 11.3x: SEURAAJAN 1.–2. TEHTÄVÄ
+1. **Vakiokuvaskripti** Julkaisijan valoseppa-vahtiin (Lontoo + pallo + ISS, `aani mykistys` ensin, arkki + nopeus.txt); kirjaa rivi
+   `vakio=<skriptin polku>` tiedostoon valoseppa-haarat.txt (Julkaisijan vahdin asetus; kysy polku Julkaisijalta).
+2. **TAVOITELUUPPI-pilotti** (omistaja 11.09; ohje /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/tavoiteluuppi-20261014.md):
+   kohde **Petřínin näkötorni** (Praha). Järjestys: tavoitepaketti (pohjakartta, leikkaus/korkeudet 63,5 m, 3–5 Commons-kuvaa, 4–6 kulmaa)
+   → Codex-tilaus PT:n kautta → PT hyväksyy → Blender-kierrokset vertailuskriptillä → tuore Sonnet-arvioija → vahti peliin.
