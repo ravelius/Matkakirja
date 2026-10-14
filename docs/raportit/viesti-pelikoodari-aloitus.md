@@ -5,8 +5,8 @@ Olet Pelikoodari (Opus, high), checkout /Users/Shared/Claude/Matkakirja-pelikood
 push remoteen natiivi-backup). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-pelikoodari-luovutus-20261014-aamu.md
 KOKONAAN.
 
-JONO: 1) Telakoinnin äänellinen video PT:lle (proto-3d/lokit/pk-kupoli-v2-20261014/telakointi3/, telakointi-aanella.mp4; tarkista
-lokista "kupoli: tapahtuma telakointi"); PT kuittaa telakoinnin omana eränään LS2:n yhteisajosta (telakointi-190 kärki f7d398b4a).
+JONO: 1) Telakointi: varmistusajo kärjellä bf8183158 (Cupolan repliikin katto korjattu) ajo-telakointi.sh + kokoa-aani.py → video PT:lle;
+PT kuittaa telakoinnin omana eränään LS2:n yhteisajosta (telakointi-190). Edellinen video telakointi3/telakointi-aanella.mp4.
 2) Pääkaupunkien e04–e14 pidemmät esittelyt kytke-pilvisisalto.mjs:llä, kun SK toimittaa (PR). 3) Simussa ajamatta: v2-kiihdytys,
 v2-nyt, IssAlbumi.Kohde.
 

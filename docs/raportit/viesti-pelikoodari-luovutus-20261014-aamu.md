@@ -12,15 +12,16 @@
   `Ylilennot.Seuraava` 500 km/72 h koko maailma → kelaus, LCD "HUOMENNA 04.12 / 14 KIERROSTA" (IssOhjaamo, NUI:lle kerrottu);
   V3a ylilentokohteet koko maailmasta; V3b kuvan synnyn kertoja; `IssAlbumi.Kuva.Kohde` (NUI:n V3c-galleria odottaa omistajaa);
   lyhyen lennon raitahyppy Cupolan repliikkiin. Testikomento `linssi raketti kelaa <lat> <lon>`. LS2:n kevyt pallo 98d4de0f3 yhdistetty.
-- **Telakointi** (pelikoodari/telakointi-190, kärki f7d398b4a; LS2 malli/kamera `Iss.Telakointi`, minä kytkentä): vaihe Telakointi
+- **Telakointi** (pelikoodari/telakointi-190, kärki bf8183158; LS2 malli/kamera `Iss.Telakointi`, minä kytkentä): vaihe Telakointi
   lennon perään (KestoS 10 s), kertojan klippi `KupoliAanet.Tapahtuma("telakointi")` (manifesti audio/iss-kupoli-v2.json, v1 varalla),
   raita pysähtyy Cupolan repliikin alkuun, origo ISS:lle kehyksen alussa ja palautus 1,2 s viiveellä Cupolan mustan alle
   (`OrigonPalautus`: ei sinisiä välikehyksiä, varmistettu 10 fps videolla fe27919ad), kuva-ala `Telakointi.KentanKerroin`.
 
 ## Kesken / seuraavaksi
-1. **Telakoinnin äänellinen video PT:lle**: ajo käynnissä luovutushetkellä (L1, käännös telakointi-190 kärjestä) →
-   proto-3d/lokit/pk-kupoli-v2-20261014/telakointi3/ (telakointi.mp4, kokoa-aani.py → telakointi-aanella.mp4). Tarkista lokista
-   "kupoli: tapahtuma telakointi" ja lähetä video PT:lle; PT kuittaa telakoinnin omana eränään (LS2:n yhteisajo telakointi4).
+1. **Telakointi PT:n kuittaukseen**: äänellinen video valmis (bec080137 = f7d398b4a): proto-3d/lokit/pk-kupoli-v2-20261014/telakointi3/
+   telakointi-aanella.mp4 – klippi soi (7,5 s). Siinä näkyvä virhe (Cupolan raitarepliikki alkoi 2 s ennen Cupolaa, katto laukesi
+   telakoinnissa) on korjattu bf8183158, ajamatta simussa → seuraava ajo bf8183158:lla (L2/L1 + oma simu) ennen PT:n kuittausta;
+   PT kuittaa telakoinnin omana eränään (LS2:n yhteisajo telakointi4 samalla kärjellä).
 2. **Pääkaupunkien pidemmät esittelyt** (PT 14.10.): SK toimittaa e04–e14 kohdekartta.esittely-tekstit → kytke
    `node tools/paakaupungit/kytke-pilvisisalto.mjs <repo> <paakaupungit-pilvi>` ja PR.
 3. Simussa ajamatta: v2-kiihdytys (kaasuvipu), v2-nyt (NYT-nappi), IssAlbumi.Kohde (kuva Cupolassa).
