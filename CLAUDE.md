@@ -62,8 +62,11 @@ LATAUS ON SAMA KAIKILLA VERKOILLA.
   linjaus 15.8.2026: uudet oleelliset linjaukset kirjataan VAIN tänne;
   tekniset toteutusohjeet saavat asua muualla). JAKO 20.9.2026: Raamatussa
   on vain voimassa oleva linjaus per aihe; koko päätöshistoria on
-  sanatarkasti kansiossa docs/raamattu-loki/ (PAATOKSET-, TARKENNUS- ja
-  TILA-otsikot löytyvät sieltä grepillä). Uudet päätökset kirjataan
+  sanatarkasti kansiossa docs/raamattu-loki/. Lokia haetaan VAIN
+  `node tools/loki-hae.mjs <hakusana> [--alkaen pp.kk]` -työkalulla
+  (enintään 8 osumaa uusimmasta alkaen; koko kirjaus `--kirjaus
+  tiedosto:rivi`), ei grepillä: lokin rivit voivat olla kymmeniä
+  tuhansia merkkejä (omistaja 15.10.2026 klo 00.09). Uudet päätökset kirjataan
   `node tools/raamattu-kirjaa.mjs "OTSIKKO" "teksti"` -työkalulla lokiin;
   Raamatun linjausta muutetaan vain kun sääntö muuttuu. Vain Fable kirjoittaa;
   ristiriidassa hyväksytty Raamattu-osio voittaa muut dokumentit.
