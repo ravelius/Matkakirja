@@ -11,7 +11,7 @@ Edellinen luovutus: `viesti-karttaseppa-luovutus-20261013-ilta2.md`.
   `origin/karttaseppa-kohdekartta-reunavara` (#4576 SULJETTU; Julkaisija korvasi sen #4582:lla `karttaseppa-kohdekartta-reunavara-2`).
   → Ennen PR:ää rebase/cherry-pick mainin (tai #4582:n) päälle.
 - Muutokset: `tools/piirra-kaupunkikartta.mjs` KAUPUNGIT-rivit 30 + 14 kaupungille (meri 12 + 6 rannikolle). Kohdekartat-mac.json:t
-  T7 `paakaupungit-pilvi-20261013/eXX/` päivitetty VAIN näille (varmuus scratchpad `mac-varmuus-20261014/`, scratchpad katoaa nollauksessa).
+  T7 `paakaupungit-pilvi-20261013/eXX/` päivitetty VAIN näille (varmuus ja skriptit kopioitu T7 `_tyo/karttaseppa/paakaupungit-piirto-20261014/`).
 - 30 Codex-kohteellista: piirto `scratchpad/piirra-loput30.sh` → `.log` (16/30 valmis 11.4x). 14 aluekarttaa ilman kohteita
   (PT hyväksyi; palikir … nukualofa): `piirra-alue14.sh` odottaa 30:n LOPPU-riviä ja piirtää sitten. Skriptit: scratchpad-polku
   `/private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-karttaseppa/2f01e24a-…/scratchpad/` — jos katoaa, aja uudelleen
