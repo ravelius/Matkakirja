@@ -1,0 +1,1409 @@
+{
+  "taskNumber": 259,
+  "relatedTaskNumbers": [
+    252,
+    253,
+    254,
+    256,
+    258
+  ],
+  "version": "K1-v3-method1",
+  "sourcePath": "posti/fable-codex-petrin-K1-v2-palaute-20261014.md",
+  "sourceCommit": "a7de16e378793738e2c2d8677b0e386c41f0d98b",
+  "sourceBlob": "26174a0d0b9ce4eddb0118d9b89943131f288690",
+  "sourceReadInFull": true,
+  "imageFile": "posti/petrin-K1-v3.png",
+  "maskFile": "posti/petrin-K1-v3-maski.png",
+  "imageSHA256": "3be76904100a1cdf4cbb65058ca004f5f3e30f3d6383182ad4e1c7d346623717",
+  "maskSHA256": "37af16eb46ff060d8c2b59c96bb1e098de6e7f04c8e119a7e4ccb0272fcab614",
+  "nativeSHA256": "bb8e0565c1cdb62afa733d5fcc82abe26ac2a568674353220c3b03585b882f44",
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "requestedNativeDimensions": [
+    2400,
+    1600
+  ],
+  "deliveredDimensions": [
+    1536,
+    1024
+  ],
+  "nativeRequestNotReturned": true,
+  "nativeSizeAcceptedAsMethodAttributeByPT259": true,
+  "upscaled": false,
+  "nativePixelsUnchanged": true,
+  "newGenerationCallsForCorrection": 1,
+  "totalPetrinGenerationCalls": 3,
+  "K2toK5GenerationCalls": 0,
+  "generationMode": "builtin imagegen full-canvas conversion of NEW code-drawn structure guide into NEW photographic content",
+  "generationPrompt": "EDIT IMAGE1, THE NEW STRUCTURAL CANVAS, over the WHOLE canvas into one completely new photorealistic Petřín lookout-tower photograph. This is a full-frame diagram-to-photo transformation; Image1 is the EDIT TARGET, not merely a reference. Do NOT edit Images2 or3. No photographic pixels from any prior generated image should be retained.\nImage2 is only a STYLE reference (the previous rejected v2): retain its natural daylight, muted blue-gray metal, cream hall, green summer park and believable photographic surfaces, but NEVER transfer its camera, tower size, gallery heights, composition or tower geometry. Image3 is only an architectural material/details reference, VANOCE2022's CC0 ground photograph. Neither reference controls silhouette or perspective.\n\nLOCK THE GEOMETRY OF IMAGE1 EXACTLY. Preserve the tower's complete EXTERIOR SILHOUETTE at the SAME pixel positions, size, proportions and floor heights. Do not move, zoom, crop, enlarge or recenter it. Transform the gray silhouette into a realistically lit riveted open lattice structure while keeping its exterior boundary unchanged. Upper gallery and lower gallery must remain at the two dark horizontal lines from Image1. Replace its flat graphic planes with a natural photographic park and sky. Regenerate all photographic content from scratch, not a patch of an old photograph.\nOutput dimensions are the SAME1536x1024 landscape canvas as the edit target; no upscaling. Tower antenna tip stays at approximately y308(30percent from top); all ground-contact feet stay around y717(70percent). Complete tower is only40percent of full frame height, centered horizontally atx768. Approximate total footprint width is166pixels. Keep broad areas of park and sky outside the tower. The tower MUST NOT fill most of the photograph. Do not change the camera to make an impressive close-up.\nPreserve Image1 physical height targets: low cream octagonal hall at approximately0–7m; lower octagonal open observation gallery FLOOR at20m near y609; glazed ring and diamond lattice railing above it. Upper octagonal glazed FLOOR at51m near y431. Gray roof and steel body end at58.7m near y384; slender antenna mast continues approximately12m to about71m at y308. The lower floor lies roughly26percent of the visible tower axis above the ground; upper floor roughly70percent in this fixed elevated camera projection. Physical total-height fractions20/71≈28percent and51/71≈72percent are not the body-only fractions. Do not repeat the overly high lower gallery from Image2.\nSubject details: real eight-sided/octagonal Petřín1891 riveted steel lookout structure, EIGHT slender splayed supports around a cream octagonal entrance hall, not a square/four-legged Eiffel tower. Pale cool blue-gray steel, narrow central octagonal tube and twin spiral stairs visible within the open cross-braced lattice. Natural architectural details inside the locked silhouette. Gray shallow roof above cream hall, delicate pierced steel arches, small green lanterns and completely BLANK red entrance panels. Gray octagonal upper lantern roof and thin lattice mast. No extra platforms or invented buildings. Use gentle downward viewing perspective of the prescribed K1 camera (azimuth200degrees from tower center to camera, horizontal distance200m, camera90m above ground, pitch−14.8degrees, verticalFOV45degrees, roll0); Image1 image-space positions override photographic reference perspectives.\nPhotographic appearance across the whole image: believable subtle metal and stone texture, green leafy spring/summer park, unobtrusive distant trees and simple gravel paths, natural ordinary daylight, muted colors, no HDR, artificial cinematic saturation or plastic foliage. All trees/bushes BEHIND or well to the SIDES of the entire tower; every hall corner and support foot visible and unobscured. No recognizable Prague skyline, detailed neighboring buildings, monuments, artworks, signage, cars or people. No Google/StreetView data.\nVisible text: ONLY a small unobtrusive lowercase word “havainnekuva” in a lower corner. No other writing, numbers, logos, border, guide labels or watermarks. Return the ONE newly generated full-frame photographic K1v3, preserving the entire structural silhouette and floor lines from Image1 exactly.\n",
+  "actualGenerationRequest": {
+    "taskNumber": 259,
+    "sourcePath": "posti/fable-codex-petrin-K1-v2-palaute-20261014.md",
+    "sourceCommit": "a7de16e378793738e2c2d8677b0e386c41f0d98b",
+    "sourceBlob": "26174a0d0b9ce4eddb0118d9b89943131f288690",
+    "sourceReadInFull": true,
+    "method": "whole-frame NEW structural-guide to complete NEW photographic candidate",
+    "ownerRuleScopeDecision": {
+      "ownerInstruction": "Kayta Matkakirja-kuvien korjauksiin aina kokonaan uutta generointia. Ala koskaan muuta vain pienta osaa olemassa olevasta generoidusta kuvasta.",
+      "ownerInstructionEvidenceFile": "/Users/samireivinen/.codex/memories/extensions/ad_hoc/notes/20260902-230640-imagegen-no-partial-edits.md",
+      "scopeDecision": "Method1 creates the complete photographic content anew from a newly drawn non-photographic guide. Old generated photographs are style references only; no old-photo pixels are retained. This does not modify a small area of an existing generated photograph.",
+      "method1": "full-canvas conversion of NEW code-drawn structural diagram into ONE newly generated photo",
+      "editingTargetIsNewDiagramNotV1orV2Photo": true,
+      "allPhotographicContentRegenerated": true,
+      "oldGeneratedPhotographsNotEdited": true,
+      "v2DownscaleAndOutpaintFallbackAuthorized": false,
+      "fallbackRequiresDirectOwnerMethodException": true,
+      "additionalAttemptsRequireFeedback": true,
+      "modelProductionAuthorized": false,
+      "decidedAt": "2026-10-14T18:19:45.010315+00:00"
+    },
+    "generationMode": "builtin image_gen",
+    "editTargetRole": "new non-photographic code diagram, not an earlier generated photo",
+    "arguments": {
+      "prompt": "EDIT IMAGE1, THE NEW STRUCTURAL CANVAS, over the WHOLE canvas into one completely new photorealistic Petřín lookout-tower photograph. This is a full-frame diagram-to-photo transformation; Image1 is the EDIT TARGET, not merely a reference. Do NOT edit Images2 or3. No photographic pixels from any prior generated image should be retained.\nImage2 is only a STYLE reference (the previous rejected v2): retain its natural daylight, muted blue-gray metal, cream hall, green summer park and believable photographic surfaces, but NEVER transfer its camera, tower size, gallery heights, composition or tower geometry. Image3 is only an architectural material/details reference, VANOCE2022's CC0 ground photograph. Neither reference controls silhouette or perspective.\n\nLOCK THE GEOMETRY OF IMAGE1 EXACTLY. Preserve the tower's complete EXTERIOR SILHOUETTE at the SAME pixel positions, size, proportions and floor heights. Do not move, zoom, crop, enlarge or recenter it. Transform the gray silhouette into a realistically lit riveted open lattice structure while keeping its exterior boundary unchanged. Upper gallery and lower gallery must remain at the two dark horizontal lines from Image1. Replace its flat graphic planes with a natural photographic park and sky. Regenerate all photographic content from scratch, not a patch of an old photograph.\nOutput dimensions are the SAME1536x1024 landscape canvas as the edit target; no upscaling. Tower antenna tip stays at approximately y308(30percent from top); all ground-contact feet stay around y717(70percent). Complete tower is only40percent of full frame height, centered horizontally atx768. Approximate total footprint width is166pixels. Keep broad areas of park and sky outside the tower. The tower MUST NOT fill most of the photograph. Do not change the camera to make an impressive close-up.\nPreserve Image1 physical height targets: low cream octagonal hall at approximately0–7m; lower octagonal open observation gallery FLOOR at20m near y609; glazed ring and diamond lattice railing above it. Upper octagonal glazed FLOOR at51m near y431. Gray roof and steel body end at58.7m near y384; slender antenna mast continues approximately12m to about71m at y308. The lower floor lies roughly26percent of the visible tower axis above the ground; upper floor roughly70percent in this fixed elevated camera projection. Physical total-height fractions20/71≈28percent and51/71≈72percent are not the body-only fractions. Do not repeat the overly high lower gallery from Image2.\nSubject details: real eight-sided/octagonal Petřín1891 riveted steel lookout structure, EIGHT slender splayed supports around a cream octagonal entrance hall, not a square/four-legged Eiffel tower. Pale cool blue-gray steel, narrow central octagonal tube and twin spiral stairs visible within the open cross-braced lattice. Natural architectural details inside the locked silhouette. Gray shallow roof above cream hall, delicate pierced steel arches, small green lanterns and completely BLANK red entrance panels. Gray octagonal upper lantern roof and thin lattice mast. No extra platforms or invented buildings. Use gentle downward viewing perspective of the prescribed K1 camera (azimuth200degrees from tower center to camera, horizontal distance200m, camera90m above ground, pitch−14.8degrees, verticalFOV45degrees, roll0); Image1 image-space positions override photographic reference perspectives.\nPhotographic appearance across the whole image: believable subtle metal and stone texture, green leafy spring/summer park, unobtrusive distant trees and simple gravel paths, natural ordinary daylight, muted colors, no HDR, artificial cinematic saturation or plastic foliage. All trees/bushes BEHIND or well to the SIDES of the entire tower; every hall corner and support foot visible and unobscured. No recognizable Prague skyline, detailed neighboring buildings, monuments, artworks, signage, cars or people. No Google/StreetView data.\nVisible text: ONLY a small unobtrusive lowercase word “havainnekuva” in a lower corner. No other writing, numbers, logos, border, guide labels or watermarks. Return the ONE newly generated full-frame photographic K1v3, preserving the entire structural silhouette and floor lines from Image1 exactly.\n",
+      "referenced_image_paths": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/K1/v3/structure-edit-target.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/K1/v2/native.png",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-1-sisaankaynti.jpg"
+      ],
+      "transparent_background": false
+    },
+    "correctionCallsIssued": 1,
+    "oldPhotoPartialEditsOrOutpaintIssued": 0,
+    "otherAnglesIssued": 0,
+    "issuedAt": "2026-10-14T18:19:45.010315+00:00"
+  },
+  "generationReferenceRoles": [
+    "FIRST: newly drawn structural diagram is full-canvas edit target",
+    "SECOND: v2 is photographic style reference only; no previous photo pixels edited or pasted",
+    "THIRD: CC0 entrance photograph is architecture/material/color reference only"
+  ],
+  "sourceLicenses": [
+    {
+      "filename": "petrin-1-sisaankaynti.jpg",
+      "author": "VANOCE2022",
+      "license": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Petrinska_rozhledna_a_nejblizsi_okoli_20250427_121942.jpg",
+      "role": "tower geometry and color only"
+    },
+    {
+      "filename": "petrin-2-etela.jpg",
+      "author": "Ivan Korostelev",
+      "license": "CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADnsk%C3%A1_rozhledna,_Prague.jpg",
+      "role": "tower geometry and color only"
+    },
+    {
+      "filename": "petrin-3-lansi.jpg",
+      "author": "Giorgio Galeotti",
+      "license": "CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADn_Lookout_Tower_-_Prague,_Czech_Republic_-_May_17,_2019.jpg",
+      "role": "tower geometry and color only"
+    },
+    {
+      "filename": "petrin-4-muurin-takaa.jpg",
+      "author": "Edgar El",
+      "license": "CC BY 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Prag_%E2%80%93_Aussichtsturm_Pet%C5%99%C3%ADn_-_Pet%C5%99%C3%ADnsk%C3%A1_rozhledna_-_panoramio_(1).jpg",
+      "role": "structure only, conflicting camera GPS and winter setting are not transferred"
+    },
+    {
+      "filename": "petrin-5-ylhaalta.jpg",
+      "author": "VANOCE2022",
+      "license": "CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Petrinska_rozhledna_a_nejblizsi_okoli_20250427_130633.jpg",
+      "role": "hall roof and metal structure only; viewpoint is downward from tower platform, not aerial"
+    }
+  ],
+  "activeDimensions": {
+    "bodyHeightM": 58.7,
+    "upperPlatformM": 51,
+    "lowerPlatformM": 20,
+    "mastHeightApproxM": 12,
+    "totalHeightApproxM": 71,
+    "totalHeightUncertain": true,
+    "hallWidthApproxM": 22.5,
+    "hallWidthUncertain": true,
+    "hallHeightApproxM": 7,
+    "hallHeightUncertain": true
+  },
+  "sourceReadReceipt": {
+    "taskNumbers": [
+      252,
+      253,
+      254
+    ],
+    "reader": "root",
+    "readAt": "2026-10-14T09:33:06.177973+00:00",
+    "sourceReadInFull": true,
+    "originalPackageVerifiedFiles": 11,
+    "updatePackageVerifiedFiles": 5,
+    "targetLoopAdditionalFile": 1,
+    "personallyViewedImages": 8,
+    "sourceFiles": [
+      {
+        "path": "posti/petrin-1-sisaankaynti.jpg",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "b22c48612ae90fa5791f8e56bfd1a3ee33db4542",
+        "sha256": "f64dff6ea662704aefa8f5037a2efcde2a0751f8f43928d1282648e941436756",
+        "bytes": 1983348,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-1-sisaankaynti.jpg",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-1-sisaankaynti.jpg",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-2-etela.jpg",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "6f0e4461465ca7a39e18fcca9983f8ddae98403a",
+        "sha256": "39be4197c3240b708958446f29809df91e9348dfe0653eed5c5f5cccba7acab9",
+        "bytes": 1619562,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-2-etela.jpg",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-2-etela.jpg",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-3-lansi.jpg",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "217b0505d2615ab1cbde7ccf0573c45b5a29f19f",
+        "sha256": "ee7cd17cec55425a24f5baeb0eb3c5efec71d26bdb31580d77e718d0166b9797",
+        "bytes": 1723276,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-3-lansi.jpg",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-3-lansi.jpg",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-4-muurin-takaa.jpg",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "e5f6968facc05a6ec32da4ea5a432d7425abfca2",
+        "sha256": "3329cfe2b8b2f39c729aae9c32fc7102162f8ba7fd53e6d40c061f935bff374a",
+        "bytes": 1424450,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-4-muurin-takaa.jpg",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-4-muurin-takaa.jpg",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-5-ylhaalta.jpg",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "b811e6f0d2d0bcbb1d90fa7fb2d0ac21656b222e",
+        "sha256": "cf91c3db3959f14df630a89543de81dea2692bca2280fca60d41a99fc1db0dc9",
+        "bytes": 1250823,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-5-ylhaalta.jpg",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-5-ylhaalta.jpg",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-LAHTEET.md",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "a46ccfe658f6118190333e058a140c823876ed3a",
+        "sha256": "fa1c0ed2f318e29b8d290e4619d193480653314f686aa4b05bb49dbf325ae216",
+        "bytes": 4125,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-LAHTEET.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-LAHTEET.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-codex-tilaus.md",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "0f5a17fe73c4a6e4eb80dcd79181390654864607",
+        "sha256": "1031a91ec30ad4f33d5d480513600307dbb2599ac412f92ffb08b3aa303c10c9",
+        "bytes": 4920,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-codex-tilaus.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-codex-tilaus.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": true
+      },
+      {
+        "path": "posti/petrin-faktat.md",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "163b0a92c4fef2e909dd942f72e14e64eaec2fc4",
+        "sha256": "66ea9ceba502c064ffb4c080f0a8bca8912d94e009a1800d35dfce84525ef48c",
+        "bytes": 10915,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-faktat.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-faktat.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": true
+      },
+      {
+        "path": "posti/petrin-kulmat.json",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "95a361eef6cca5c0a6f523779b6f5fce2a5c181d",
+        "sha256": "1b4c9a973db5955779b6636e5d9ab3e91f5fd242778d4585b81e9c4ea7188e99",
+        "bytes": 5942,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-kulmat.json",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-kulmat.json",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-leikkaus.png",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "fb8e1510b235f9aa54d2bb8f4ee24072fd940634",
+        "sha256": "653ee2f12fd5a4d7afa906355bd692b436494e20eff5eb019e2fab26df8b4311",
+        "bytes": 300980,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-leikkaus.png",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-leikkaus.png",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": true
+      },
+      {
+        "path": "posti/petrin-pohjakartta.png",
+        "commit": "d3ecc0bbf147d301efff681ae35a8b414a3c55e0",
+        "blob": "5ed8d89871e6531482415c76541fea0a54c9fa3b",
+        "sha256": "48555ec77f06d15792b0da855fd2d1305e8c5634a3867e7c3c23a80c876cb35c",
+        "bytes": 539707,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-pohjakartta.png",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/d3ecc0bb/petrin-pohjakartta.png",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-KORJAUS.md",
+        "commit": "bf2e58a791a08963320d8a668491d3637c3218ed",
+        "blob": "22a39474252f4a6f4511fa689e5d76b9b8dac0c5",
+        "sha256": "008b8b653314dddf508c35fd400bc0ac85160804e3f6dd7d695b0764786abbee",
+        "bytes": 527,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-KORJAUS.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-KORJAUS.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-codex-tilaus.md",
+        "commit": "bf2e58a791a08963320d8a668491d3637c3218ed",
+        "blob": "9432d692cf55990413625adfb099e7d2c6a8a820",
+        "sha256": "b6e93b6220c84e35ee52f95f104f4edfe7cc65ae0dc0aa925f06deb2c0a04f11",
+        "bytes": 4965,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-codex-tilaus.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-codex-tilaus.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-faktat.md",
+        "commit": "bf2e58a791a08963320d8a668491d3637c3218ed",
+        "blob": "2bc92eedd1ae31f5bda7f9a72d0234ad705d119a",
+        "sha256": "e202dcb509b9c0e490ae80538a527261c6c14bd8b829d0578319c311f29d81cc",
+        "bytes": 11568,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-faktat.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-faktat.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-leikkaus.png",
+        "commit": "bf2e58a791a08963320d8a668491d3637c3218ed",
+        "blob": "ddb331191ca4329df47ae0b3e76445f5f2185d7c",
+        "sha256": "f712a95d6da954bab78f82210fcbd3556796101aeb962cbecb3ec6ab15aa7a9c",
+        "bytes": 300364,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-leikkaus.png",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/bf2e58a7/petrin-leikkaus.png",
+        "personallyViewedInFull": true,
+        "textReadInFull": false,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/petrin-LISAYS-maskit.md",
+        "commit": "70328561bbb36329ab8af2e111b56ee973b06755",
+        "blob": "e1ff52aa5a15fe969cc0c2f4be4a529142a7e587",
+        "sha256": "f2dba7ac315116922bb0e655dda40d0247ffae0d466611af063db607b8e28c65",
+        "bytes": 602,
+        "NASPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/70328561/petrin-LISAYS-maskit.md",
+        "workspacePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/petrin-tavoitehavainnekuvat-20261014/sources/70328561/petrin-LISAYS-maskit.md",
+        "personallyViewedInFull": false,
+        "textReadInFull": true,
+        "role": "source attachment",
+        "historicSuperseded": false
+      },
+      {
+        "path": "posti/codex-peking-tavoiteluuppi-20261014.md",
+        "commit": "70328561bbb36329ab8af2e111b56ee973b06755",
+        "blob": "58d7d8effd5e546f198460cbbf30231274e3a490",
+        "sha256": "8c88abb1414837d014c4b8f33aaa2d60622fc5eff40ebd3804cc7ffe8e80e2ca",
+        "bytes": 2180,
+        "textReadInFull": true,
+        "role": "target-loop stage 2 authority, no model work before PT acceptance"
+      }
+    ],
+    "missingReferencedInputs": [
+      "pohjakartta.svg",
+      "leikkaus.svg",
+      "osm.json"
+    ],
+    "noMissingInputsFabricated": true,
+    "historic60m55mValuesPreservedButInactive": true,
+    "activeDimensions": {
+      "bodyHeightM": 58.7,
+      "upperPlatformM": 51,
+      "lowerPlatformM": 20,
+      "mastHeightApproxM": 12,
+      "totalHeightApproxM": 71,
+      "totalHeightUncertain": true,
+      "hallWidthApproxM": 22.5,
+      "hallWidthUncertain": true,
+      "hallHeightApproxM": 7,
+      "hallHeightUncertain": true
+    },
+    "photoDirectionCaveats": {
+      "petrin-4-muurin-takaa.jpg": "GPS north contradicts visible south wall; no verified north orientation assumed",
+      "petrin-5-ylhaalta.jpg": "From the tower platform looking down; NOT an aerial photograph",
+      "entranceOrientation": "Estimated south around 190 deg, not independently surveyed"
+    },
+    "allReferenceAuthorsLicensesRetained": true,
+    "generationCallsIssued": 0,
+    "deliveredImages": 0,
+    "deliveredMasks": 0
+  },
+  "v2PTReceiptAndRejection": {
+    "taskNumber": 259,
+    "sourcePath": "posti/fable-codex-petrin-K1-v2-palaute-20261014.md",
+    "sourceCommit": "a7de16e378793738e2c2d8677b0e386c41f0d98b",
+    "sourceBlob": "26174a0d0b9ce4eddb0118d9b89943131f288690",
+    "sourceReadInFull": true,
+    "sourceSHA256": "30ccff1d8da39005e52b5976d863cd792ced1cbf19a9101619f1c33494b40594",
+    "v2ReceiptCommit": "d419fa40beffe953a8394687c7d76c39f741e4b5",
+    "v2ReceivedByPT": true,
+    "v2PTVerdict": "rejected-as-binding-target",
+    "nativeResolutionNoUpscaleMethodAcceptedByPT": true,
+    "styleMaterialHallParkHorizonAcceptedAsAttributesOnly": true,
+    "targetApprovalVerified": false,
+    "recordedAt": "2026-10-14T18:19:45.010315+00:00"
+  },
+  "oldV1V2MailboxFilesPreserved": true,
+  "oldV1ReviewCommit": "cc4f74fdaba2f110294abb117c488976aac08a06",
+  "oldV2ReviewCommit": "d419fa40beffe953a8394687c7d76c39f741e4b5",
+  "rootQA": {
+    "taskNumber": 259,
+    "version": "K1-v3-method1",
+    "reviewer": "root",
+    "wholeExactNativePersonallyViewed": true,
+    "nativeSHA256": "bb8e0565c1cdb62afa733d5fcc82abe26ac2a568674353220c3b03585b882f44",
+    "finalImageSHA256": "3be76904100a1cdf4cbb65058ca004f5f3e30f3d6383182ad4e1c7d346623717",
+    "maskSHA256": "37af16eb46ff060d8c2b59c96bb1e098de6e7f04c8e119a7e4ccb0272fcab614",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "pixelsEqualNative": true,
+    "upscaled": false,
+    "method": "whole-frame NEW structural-guide to NEW photographic candidate; no old-photo partial edits or outpaint",
+    "method1Calls": 1,
+    "totalPetrinCalls": 3,
+    "oldV1V2Preserved": true,
+    "photographicStylePassed": true,
+    "wholeTowerVisible": true,
+    "fixedCameraPassed": false,
+    "silhouetteLockPassed": false,
+    "observedTowerHeightFraction": 0.6318359375,
+    "expectedTowerHeightFraction": 0.39969099999999996,
+    "landmarks": {
+      "mastTop": {
+        "nativeY": 156,
+        "observedNormalizedY": 0.15234375,
+        "expectedNormalizedY": 0.300745,
+        "differenceNativePixels": -151.96
+      },
+      "bodyRoofTop": {
+        "nativeY": 249,
+        "observedNormalizedY": 0.2431640625,
+        "expectedNormalizedY": 0.375144,
+        "differenceNativePixels": -135.15
+      },
+      "upperPlatformFloorApprox": {
+        "nativeY": 300,
+        "observedNormalizedY": 0.29296875,
+        "expectedNormalizedY": 0.420548,
+        "differenceNativePixels": -130.64
+      },
+      "lowerPlatformFloorApprox": {
+        "nativeY": 565,
+        "observedNormalizedY": 0.5517578125,
+        "expectedNormalizedY": 0.59479,
+        "differenceNativePixels": -44.06
+      },
+      "groundContact": {
+        "nativeY": 803,
+        "observedNormalizedY": 0.7841796875,
+        "expectedNormalizedY": 0.700436,
+        "differenceNativePixels": 85.75
+      }
+    },
+    "relativePlatformHeightFractions": {
+      "observedLower": 0.3678516228748068,
+      "observedUpper": 0.7774343122102009,
+      "expectedLower": 0.2643191865716264,
+      "expectedUpper": 0.7002609515850995
+    },
+    "draftMaskVsPlannedStencilIoU": 0.4209875671093529,
+    "IoUIsDiagnosticOnlyNotModelAccuracyOrCertifiedGT": true,
+    "absoluteCameraAndMeterDimensionsNotVerified": true,
+    "maskSameCanvas": true,
+    "maskBinary0And255": true,
+    "maskSoftEdgePixels": 0,
+    "maskPixelExactCertified": false,
+    "maskOverlayPersonallyViewed": true,
+    "verdict": "rejected-as-binding-target; method1 did not lock geometry",
+    "validForModelTarget": false,
+    "validForIoU": false,
+    "PTAcceptanceVerified": false,
+    "ownerAcceptanceVerified": false,
+    "modelLoopAuthorized": false,
+    "gameIntegrated": false,
+    "published": false,
+    "reason": "Rakennestensiilin koko ja tasannepaikat eivät säilyneet pyydetysti. Torni vie noin 63 % kuvakorkeudesta tavoitellun 40 % sijaan; mastokärki alkaa noin 15 %:n kohdalla, tavoite noin 30 %. Tasannepaikat poikkeavat annetun kameran projektiosta. Natiivi 1536×1024 säilyy suurentamatta. Maski on uusi saman kuvan täytetty ulkosiluettiluonnos, ei sertifioitu IoU-vertailutotuus. V2:n pienennys/osittainen muokkaus ja outpaint eivät ole käytettyjä menetelmiä.",
+    "reviewedAt": "2026-10-14T18:30:14.469803+00:00",
+    "maskExteriorContourAdjustedAfterReview": true
+  },
+  "rootQAFileSHA256": "cb462b0a854a867c85d6f5b743ce68c2a4099e0f8212aa3f9c303a97f8efca5f",
+  "maskAnnotation": {
+    "version": "K1-v3-method1",
+    "nativeImageSHA256": "bb8e0565c1cdb62afa733d5fcc82abe26ac2a568674353220c3b03585b882f44",
+    "finalImageSHA256": "3be76904100a1cdf4cbb65058ca004f5f3e30f3d6383182ad4e1c7d346623717",
+    "coordinateSystem": [
+      1536,
+      1024
+    ],
+    "parts": {
+      "mast": [
+        [
+          765,
+          156
+        ],
+        [
+          767,
+          160
+        ],
+        [
+          767,
+          168
+        ],
+        [
+          774,
+          166
+        ],
+        [
+          777,
+          169
+        ],
+        [
+          778,
+          180
+        ],
+        [
+          780,
+          184
+        ],
+        [
+          778,
+          189
+        ],
+        [
+          778,
+          216
+        ],
+        [
+          781,
+          220
+        ],
+        [
+          779,
+          225
+        ],
+        [
+          779,
+          242
+        ],
+        [
+          783,
+          249
+        ],
+        [
+          777,
+          252
+        ],
+        [
+          753,
+          252
+        ],
+        [
+          748,
+          246
+        ],
+        [
+          751,
+          240
+        ],
+        [
+          752,
+          215
+        ],
+        [
+          750,
+          211
+        ],
+        [
+          752,
+          194
+        ],
+        [
+          750,
+          191
+        ],
+        [
+          752,
+          172
+        ],
+        [
+          756,
+          166
+        ],
+        [
+          764,
+          168
+        ]
+      ],
+      "upper-lantern": [
+        [
+          752,
+          248
+        ],
+        [
+          781,
+          248
+        ],
+        [
+          794,
+          260
+        ],
+        [
+          800,
+          265
+        ],
+        [
+          802,
+          269
+        ],
+        [
+          800,
+          272
+        ],
+        [
+          800,
+          294
+        ],
+        [
+          792,
+          301
+        ],
+        [
+          788,
+          308
+        ],
+        [
+          746,
+          308
+        ],
+        [
+          741,
+          301
+        ],
+        [
+          733,
+          296
+        ],
+        [
+          731,
+          269
+        ],
+        [
+          735,
+          264
+        ]
+      ],
+      "upper-lattice-envelope": [
+        [
+          746,
+          305
+        ],
+        [
+          788,
+          305
+        ],
+        [
+          787,
+          344
+        ],
+        [
+          789,
+          382
+        ],
+        [
+          791,
+          423
+        ],
+        [
+          794,
+          463
+        ],
+        [
+          799,
+          504
+        ],
+        [
+          808,
+          523
+        ],
+        [
+          813,
+          528
+        ],
+        [
+          718,
+          529
+        ],
+        [
+          721,
+          523
+        ],
+        [
+          728,
+          500
+        ],
+        [
+          733,
+          464
+        ],
+        [
+          738,
+          425
+        ],
+        [
+          742,
+          385
+        ],
+        [
+          745,
+          346
+        ]
+      ],
+      "lower-gallery": [
+        [
+          719,
+          524
+        ],
+        [
+          814,
+          524
+        ],
+        [
+          821,
+          531
+        ],
+        [
+          823,
+          541
+        ],
+        [
+          825,
+          547
+        ],
+        [
+          825,
+          558
+        ],
+        [
+          819,
+          563
+        ],
+        [
+          809,
+          567
+        ],
+        [
+          727,
+          568
+        ],
+        [
+          713,
+          566
+        ],
+        [
+          706,
+          561
+        ],
+        [
+          706,
+          546
+        ],
+        [
+          712,
+          541
+        ],
+        [
+          713,
+          534
+        ]
+      ],
+      "lower-lattice-envelope": [
+        [
+          726,
+          565
+        ],
+        [
+          809,
+          565
+        ],
+        [
+          822,
+          601
+        ],
+        [
+          834,
+          636
+        ],
+        [
+          847,
+          678
+        ],
+        [
+          856,
+          709
+        ],
+        [
+          842,
+          720
+        ],
+        [
+          691,
+          720
+        ],
+        [
+          681,
+          707
+        ],
+        [
+          691,
+          677
+        ],
+        [
+          704,
+          636
+        ],
+        [
+          716,
+          602
+        ]
+      ],
+      "hall-roof": [
+        [
+          684,
+          703
+        ],
+        [
+          711,
+          690
+        ],
+        [
+          823,
+          691
+        ],
+        [
+          848,
+          705
+        ],
+        [
+          859,
+          716
+        ],
+        [
+          861,
+          725
+        ],
+        [
+          817,
+          738
+        ],
+        [
+          718,
+          739
+        ],
+        [
+          668,
+          723
+        ],
+        [
+          670,
+          716
+        ]
+      ],
+      "hall": [
+        [
+          675,
+          729
+        ],
+        [
+          718,
+          740
+        ],
+        [
+          819,
+          738
+        ],
+        [
+          850,
+          727
+        ],
+        [
+          849,
+          774
+        ],
+        [
+          824,
+          789
+        ],
+        [
+          773,
+          798
+        ],
+        [
+          719,
+          791
+        ],
+        [
+          678,
+          773
+        ]
+      ],
+      "rear-left-foot": [
+        [
+          674,
+          726
+        ],
+        [
+          680,
+          729
+        ],
+        [
+          658,
+          780
+        ],
+        [
+          662,
+          783
+        ],
+        [
+          660,
+          787
+        ],
+        [
+          650,
+          785
+        ],
+        [
+          650,
+          782
+        ],
+        [
+          654,
+          780
+        ]
+      ],
+      "rear-right-foot": [
+        [
+          852,
+          726
+        ],
+        [
+          857,
+          724
+        ],
+        [
+          875,
+          778
+        ],
+        [
+          880,
+          781
+        ],
+        [
+          879,
+          785
+        ],
+        [
+          869,
+          787
+        ],
+        [
+          866,
+          783
+        ],
+        [
+          870,
+          781
+        ]
+      ],
+      "front-left-foot": [
+        [
+          722,
+          738
+        ],
+        [
+          727,
+          739
+        ],
+        [
+          721,
+          792
+        ],
+        [
+          727,
+          795
+        ],
+        [
+          725,
+          802
+        ],
+        [
+          715,
+          804
+        ],
+        [
+          710,
+          800
+        ],
+        [
+          716,
+          796
+        ]
+      ],
+      "front-right-foot": [
+        [
+          807,
+          738
+        ],
+        [
+          813,
+          737
+        ],
+        [
+          820,
+          792
+        ],
+        [
+          827,
+          795
+        ],
+        [
+          826,
+          801
+        ],
+        [
+          816,
+          802
+        ],
+        [
+          811,
+          797
+        ],
+        [
+          816,
+          795
+        ]
+      ]
+    },
+    "method": "new manual filled outer-silhouette annotation of exact v3 raster; no prior mask reuse",
+    "internalLatticeHoles": "filled exterior silhouette",
+    "binaryValues": [
+      0,
+      255
+    ],
+    "softEdgePixels": 0,
+    "resampled": false,
+    "pixelExactCertified": false,
+    "nativeOutlineOverlayReviewed": true,
+    "status": "outer contour visually reviewed and adjusted; still provisional, no pixel-exact certification",
+    "createdAt": "2026-10-14T18:30:14.469803+00:00",
+    "maskDraftBeforeReviewSHA256": "6e190a3f45c5e59ad36e646ca6ad78dbd405e3067eeb09c9b4f1da198b510d89",
+    "maskSHA256": "37af16eb46ff060d8c2b59c96bb1e098de6e7f04c8e119a7e4ccb0272fcab614",
+    "updatedAt": "2026-10-14T18:32:52.707331+00:00"
+  },
+  "maskAnnotationFileSHA256": "1207c97bb2262139b5f40ff92b33c49118a0318e1b3e290b9565f10d785483df",
+  "newStructureEditTarget": {
+    "role": "NEW complete-frame 2D structural edit target, not an existing generated photo",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "sourceDimensions": {
+      "bodyM": 58.7,
+      "upperFloorM": 51,
+      "lowerFloorM": 20,
+      "totalMApprox": 71
+    },
+    "sourceWidthsApproximate": true,
+    "camera": {
+      "azimuth": 200,
+      "distanceM": 200,
+      "heightM": 90,
+      "pitchDeg": -14.8,
+      "vfovDeg": 45
+    },
+    "landmarkY": {
+      "0": 717.246,
+      "7": 679.969,
+      "20": 609.065,
+      "51": 430.641,
+      "58.7": 384.147,
+      "71": 307.963
+    },
+    "polygons": {
+      "mast": [
+        [
+          767,
+          307.9629723793456
+        ],
+        [
+          769,
+          307.9629723793456
+        ],
+        [
+          774.8419043721558,
+          320.5146244978133
+        ],
+        [
+          774.7525039773502,
+          384.146987660638
+        ],
+        [
+          761.2474960226498,
+          384.146987660638
+        ],
+        [
+          761.1580956278442,
+          320.5146244978133
+        ]
+      ],
+      "upper-lantern": [
+        [
+          762,
+          384.146987660638
+        ],
+        [
+          774,
+          384.146987660638
+        ],
+        [
+          790.6640900371127,
+          394.48987983147015
+        ],
+        [
+          790.4932486667848,
+          430.6410719318895
+        ],
+        [
+          784.3872281876943,
+          438.40211152661453
+        ],
+        [
+          751.6127718123057,
+          438.40211152661453
+        ],
+        [
+          745.5067513332152,
+          430.6410719318895
+        ],
+        [
+          745.3359099628873,
+          394.48987983147015
+        ]
+      ],
+      "upper-lattice": [
+        [
+          751.6066032353019,
+          436.6133496634163
+        ],
+        [
+          784.3933967646981,
+          436.6133496634163
+        ],
+        [
+          784.2304748714511,
+          483.8573848988579
+        ],
+        [
+          791.0996634528437,
+          552.9885861413816
+        ],
+        [
+          800.3389443197908,
+          586.7981675879116
+        ],
+        [
+          735.6610556802092,
+          586.7981675879116
+        ],
+        [
+          744.9003365471563,
+          552.9885861413816
+        ],
+        [
+          751.7695251285489,
+          483.8573848988579
+        ]
+      ],
+      "lower-gallery": [
+        [
+          728.3112956075295,
+          586.7981675879116
+        ],
+        [
+          807.6887043924705,
+          586.7981675879116
+        ],
+        [
+          813.1647615884665,
+          597.958740549765
+        ],
+        [
+          813.05553203366,
+          609.0653305225301
+        ],
+        [
+          722.94446796634,
+          609.0653305225301
+        ],
+        [
+          722.8352384115335,
+          597.958740549765
+        ]
+      ],
+      "lower-lattice": [
+        [
+          735.8174771188143,
+          609.0653305225301
+        ],
+        [
+          800.1825228811857,
+          609.0653305225301
+        ],
+        [
+          832.8090859331611,
+          679.9689609510098
+        ],
+        [
+          703.1909140668389,
+          679.9689609510098
+        ]
+      ],
+      "hall-roof": [
+        [
+          710.3232583436976,
+          674.5928473036251
+        ],
+        [
+          825.6767416563024,
+          674.5928473036251
+        ],
+        [
+          835.6089999364552,
+          685.3322890862084
+        ],
+        [
+          700.3910000635448,
+          685.3322890862084
+        ]
+      ],
+      "hall": [
+        [
+          703.2679787842451,
+          685.3322890862084
+        ],
+        [
+          832.7320212157549,
+          685.3322890862084
+        ],
+        [
+          832.2734544393438,
+          717.2462982018249
+        ],
+        [
+          802.2791757009834,
+          720.2462982018249
+        ],
+        [
+          733.7208242990166,
+          720.2462982018249
+        ],
+        [
+          703.7265455606562,
+          717.2462982018249
+        ]
+      ],
+      "outer-left-foot": [
+        [
+          703.1909140668389,
+          679.9689609510098
+        ],
+        [
+          706.0713178860905,
+          679.9689609510098
+        ],
+        [
+          688.0152566977054,
+          717.2462982018249
+        ],
+        [
+          685.1586587226235,
+          717.2462982018249
+        ]
+      ],
+      "outer-right-foot": [
+        [
+          829.9286821139095,
+          679.9689609510098
+        ],
+        [
+          832.8090859331611,
+          679.9689609510098
+        ],
+        [
+          850.8413412773765,
+          717.2462982018249
+        ],
+        [
+          847.9847433022946,
+          717.2462982018249
+        ]
+      ]
+    },
+    "stencilSHA256": "8ca84d0573d164fa10ad06f95f0e9c4fdbc31c7179a47c66982bc070cda17bac",
+    "expectedMaskSHA256": "a0ae84ff54557cf541ecc97701c5f52ca2bcb74257e4cd879c0e05b994614915",
+    "expectedMaskIsNotYetActualFinalImageMask": true,
+    "oldPhotoPixelsCopied": false,
+    "threeDModelCreated": false,
+    "missingSVGorOSMReconstructed": false
+  },
+  "newStructureEditTargetSHA256": "8ca84d0573d164fa10ad06f95f0e9c4fdbc31c7179a47c66982bc070cda17bac",
+  "expectedLayoutMaskSHA256": "a0ae84ff54557cf541ecc97701c5f52ca2bcb74257e4cd879c0e05b994614915",
+  "methodScopeDecision": {
+    "ownerInstruction": "Kayta Matkakirja-kuvien korjauksiin aina kokonaan uutta generointia. Ala koskaan muuta vain pienta osaa olemassa olevasta generoidusta kuvasta.",
+    "ownerInstructionEvidenceFile": "/Users/samireivinen/.codex/memories/extensions/ad_hoc/notes/20260902-230640-imagegen-no-partial-edits.md",
+    "scopeDecision": "Method1 creates the complete photographic content anew from a newly drawn non-photographic guide. Old generated photographs are style references only; no old-photo pixels are retained. This does not modify a small area of an existing generated photograph.",
+    "method1": "full-canvas conversion of NEW code-drawn structural diagram into ONE newly generated photo",
+    "editingTargetIsNewDiagramNotV1orV2Photo": true,
+    "allPhotographicContentRegenerated": true,
+    "oldGeneratedPhotographsNotEdited": true,
+    "v2DownscaleAndOutpaintFallbackAuthorized": false,
+    "fallbackRequiresDirectOwnerMethodException": true,
+    "additionalAttemptsRequireFeedback": true,
+    "modelProductionAuthorized": false,
+    "decidedAt": "2026-10-14T18:19:45.010315+00:00"
+  },
+  "method1FailedToLockSilhouette": true,
+  "method2WasExecuted": false,
+  "method2OwnerExceptionRequired": true,
+  "method2OwnerExceptionReceived": false,
+  "unexecutedMethod2ExceptionPlan": {
+    "scope": "potential owner-authorized METHOD2 only; NOT EXECUTED",
+    "sourceTaskNumber": 259,
+    "sourceV2NativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/K1/v2/native.png",
+    "sourceV2NativeSHA256": "8c491e7f091f00ddc5298ed122e3c795e87830ec1a055beb19c614a4df58b8be",
+    "sourceDimensions": [
+      1536,
+      1024
+    ],
+    "resizeScaleApprox": 0.5493739382550336,
+    "resizedDimensionsApprox": [
+      844,
+      563
+    ],
+    "placementTopLeftApprox": [
+      346.08,
+      223.36
+    ],
+    "finalCanvasDimensions": [
+      1536,
+      1024
+    ],
+    "towerTargetHeightFraction": 0.4,
+    "mastTargetYFraction": 0.300745,
+    "feetTargetYFraction": 0.700436,
+    "galleryRepositioningNeeded": {
+      "lowerPlatform": {
+        "scaledV2YApprox": 541.45,
+        "targetYApprox": 609.06
+      },
+      "upperPlatform": {
+        "scaledV2YApprox": 387.07,
+        "targetYApprox": 430.64
+      },
+      "bodyTop": {
+        "scaledV2YApprox": 359.6,
+        "targetYApprox": 384.15
+      }
+    },
+    "outpaintingAndPhotoPartialEditsRequired": true,
+    "oldPhotoPixelsWouldBeRetained": true,
+    "conflictsWithExistingOwnerWholeNewPolicy": true,
+    "explicitDirectOwnerMethodExceptionRequired": true,
+    "ownerExceptionReceived": false,
+    "fallbackImageEditsIssued": 0,
+    "fallbackGenerativeCallsIssued": 0,
+    "sourceWidthsAndMastHeightRemainEstimates": true,
+    "modelWorkAuthorized": false,
+    "preparedAt": "2026-10-14T18:32:52.707331+00:00"
+  },
+  "sourceMissingAttachmentsNotReconstructed": [
+    "pohjakartta.svg",
+    "leikkaus.svg",
+    "osm.json"
+  ],
+  "reviewPairPrepared": true,
+  "mailboxDeliveryVerified": false,
+  "acceptedTargetImages": 0,
+  "acceptedIoUMasks": 0,
+  "PTAcceptanceVerified": false,
+  "ownerAcceptanceVerified": false,
+  "allFiveDelivered": false,
+  "modelLoopAuthorized": false,
+  "gameIntegrated": false,
+  "published": false,
+  "R2NotUsed": true,
+  "createdAt": "2026-10-14T18:39:31.300238+00:00"
+}
