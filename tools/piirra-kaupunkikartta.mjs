@@ -6442,6 +6442,226 @@ const KAUPUNGIT = {
   canberra: {
     rajat: { pohjoinen: -35.2231, etela: -35.3023, lansi: 149.0945, ita: 149.1861 },
   },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  bandarseribegawan: {
+    rajat: { pohjoinen: 4.9218, etela: 4.8772, lansi: 114.9116, ita: 114.9482 },
+  },
+  // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  lapaz: {
+    rajat: { pohjoinen: -16.4918, etela: -16.5005, lansi: -68.1411, ita: -68.1298 },
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  kualalumpur: {
+    rajat: { pohjoinen: 3.1558, etela: 3.1364, lansi: 101.6903, ita: 101.7055 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  kingstown: {
+    rajat: { pohjoinen: 13.1698, etela: 13.1522, lansi: -61.2452, ita: -61.224 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  paramaribo: {
+    rajat: { pohjoinen: 5.8583, etela: 5.8154, lansi: -55.2078, ita: -55.1458 },
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  asgabat: {
+    rajat: { pohjoinen: 38.0095, etela: 37.9071, lansi: 58.1811, ita: 58.3959 },
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  male: {
+    rajat: { pohjoinen: 4.181, etela: 4.1723, lansi: 73.5051, ita: 73.516 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e14 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  yaren: {
+    rajat: { pohjoinen: -0.5427, etela: -0.5513, lansi: 166.9149, ita: 166.9257 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  biskek: {
+    rajat: { pohjoinen: 42.878, etela: 42.864, lansi: 74.5612, ita: 74.5759 },
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  naypyidaw: {
+    rajat: { pohjoinen: 19.7529, etela: 19.7442, lansi: 96.105, ita: 96.1179 },
+  },
+  // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  sansalvador: {
+    rajat: { pohjoinen: 13.7492, etela: 13.6799, lansi: -89.3015, ita: -89.1834 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  portofspain: {
+    rajat: { pohjoinen: 10.678, etela: 10.664, lansi: -61.5204, ita: -61.5094 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e14 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  apia: {
+    rajat: { pohjoinen: -13.8268, etela: -13.8735, lansi: -171.8388, ita: -171.7694 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  dhaka: {
+    rajat: { pohjoinen: 23.7324, etela: 23.7095, lansi: 90.3848, ita: 90.4054 },
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  phnompenh: {
+    rajat: { pohjoinen: 11.5723, etela: 11.5628, lansi: 104.9182, ita: 104.932 },
+  },
+  // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  santodomingo: {
+    rajat: { pohjoinen: 18.4864, etela: 18.4495, lansi: -69.9402, ita: -69.8761 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  roseau: {
+    rajat: { pohjoinen: 15.3043, etela: 15.2937, lansi: -61.3902, ita: -61.3789 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  pjongjang: {
+    rajat: { pohjoinen: 39.0445, etela: 39.014, lansi: 125.7392, ita: 125.7672 },
+  },
+  // PÄÄKAUPUNKI e08 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  mbabane: {
+    rajat: { pohjoinen: -26.2523, etela: -26.325, lansi: 31.1215, ita: 31.1796 },
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  islamabad: {
+    rajat: { pohjoinen: 33.7662, etela: 33.6619, lansi: 72.9233, ita: 73.1308 },
+  },
+  // PÄÄKAUPUNKI e10 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  vientiane: {
+    rajat: { pohjoinen: 17.9844, etela: 17.9588, lansi: 102.6085, ita: 102.6335 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  stgeorges: {
+    rajat: { pohjoinen: 12.0552, etela: 12.0462, lansi: -61.7588, ita: -61.7478 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e08 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  // Grande Comore on rajausta isompi saari: 0,05°:n haulla rantaviiva ei sulkeutunut ja täyttö maalasi Karthalan rinteet
+  // mereksi (PT 14.10.: "lähes pelkkää merta"). 0,4° kattaa koko saaren (Karttaseppä 14.10.).
+  moroni: {
+    rajat: { pohjoinen: -11.6931, etela: -11.7772, lansi: 43.2438, ita: 43.3606 },
+    meri: true,
+    meriHaku: 0.4,
+    meriMax: 0.97,   // täyttö lasketaan hakulaatikossa, jossa saari on vain ~6 %
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  taskent: {
+    rajat: { pohjoinen: 41.3295, etela: 41.3053, lansi: 69.231, ita: 69.2834 },
+  },
+  // PÄÄKAUPUNKI e11 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  belmopan: {
+    rajat: { pohjoinen: 17.2672, etela: 17.2465, lansi: -88.789, ita: -88.7644 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  basseterre: {
+    rajat: { pohjoinen: 17.3022, etela: 17.2919, lansi: -62.737, ita: -62.7193 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e13 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  brasilia: {
+    rajat: { pohjoinen: -15.7277, etela: -15.8039, lansi: -47.9341, ita: -47.8149 },
+  },
+  // PÄÄKAUPUNKI e14 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  ngerulmud: {
+    rajat: { pohjoinen: 7.5155, etela: 7.4968, lansi: 134.6006, ita: 134.6269 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e09 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  thimphu: {
+    rajat: { pohjoinen: 27.477, etela: 27.432, lansi: 89.6274, ita: 89.6728 },
+  },
+  // PÄÄKAUPUNKI e12 (Codex, kohdekartat.mjs + karttavarat.mjs 14.10.2026)
+  bridgetown: {
+    rajat: { pohjoinen: 13.1026, etela: 13.0939, lansi: -59.6207, ita: -59.6097 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e14: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  palikir: {
+    rajat: { pohjoinen: 6.9287, etela: 6.9069, lansi: 158.1714, ita: 158.1986 },
+  },
+  // PÄÄKAUPUNKI e11: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  portauprince: {
+    rajat: { pohjoinen: 18.5578, etela: 18.536, lansi: -72.3545, ita: -72.3261 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e14: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  southtarawa: {
+    rajat: { pohjoinen: 1.3514, etela: 1.3152, lansi: 172.9397, ita: 172.9937 },
+    meri: true,
+    meriHaku: 0.05,
+    meriMax: 0.98,   // atolli: meri yli 85 % ruudusta
+  },
+  // PÄÄKAUPUNKI e11: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  sanjose: {
+    rajat: { pohjoinen: 9.9413, etela: 9.9241, lansi: -84.0905, ita: -84.0687 },
+  },
+  // PÄÄKAUPUNKI e06: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  ciudaddelapaz: {
+    rajat: { pohjoinen: 1.6056, etela: 1.5784, lansi: 10.804, ita: 10.84 },
+  },
+  // PÄÄKAUPUNKI e07: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  dodoma: {
+    rajat: { pohjoinen: -6.1594, etela: -6.1866, lansi: 35.7239, ita: 35.7601 },
+  },
+  // PÄÄKAUPUNKI e06: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  gitega: {
+    rajat: { pohjoinen: -3.4174, etela: -3.4392, lansi: 29.9115, ita: 29.9385 },
+  },
+  // PÄÄKAUPUNKI e09: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  dusanbe: {
+    rajat: { pohjoinen: 38.584, etela: 38.5622, lansi: 68.7692, ita: 68.8036 },
+  },
+  // PÄÄKAUPUNKI e11: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  tegucigalpa: {
+    rajat: { pohjoinen: 14.1144, etela: 14.0972, lansi: -87.2158, ita: -87.1936 },
+  },
+  // PÄÄKAUPUNKI e14: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  // Rajaus Fongafalen Vaiakuun (Karttaseppä 14.10.): SK:n pallopiste -8,5048/179,1174 on atollin keskellä laguunissa.
+  // Atolli: meri aidosti yli 85 % ruudusta (Funafutissa 99 %) → meriMax 0.995.
+  funafuti: {
+    rajat: { pohjoinen: -8.503, etela: -8.5392, lansi: 179.183, ita: 179.2102 },
+    meri: true,
+    meriHaku: 0.05,
+    meriMax: 0.995,   // kapea Fongafale: meri 99 % rajauksesta
+  },
+  // PÄÄKAUPUNKI e14: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  majuro: {
+    rajat: { pohjoinen: 7.1054, etela: 7.0782, lansi: 171.3621, ita: 171.3983 },
+    meri: true,
+    meriHaku: 0.05,
+    meriMax: 0.98,   // atolli: meri yli 85 % ruudusta
+  },
+  // PÄÄKAUPUNKI e05: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  yamoussoukro: {
+    rajat: { pohjoinen: 6.8342, etela: 6.798, lansi: -5.2968, ita: -5.2516 },
+  },
+  // PÄÄKAUPUNKI e11: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  kingston: {
+    rajat: { pohjoinen: 17.9823, etela: 17.9605, lansi: -76.8073, ita: -76.7789 },
+    meri: true,
+    meriHaku: 0.05,
+  },
+  // PÄÄKAUPUNKI e14: aluekartta ilman kohteita (PT 14.10.2026; SK:n esittelyn alue)
+  nukualofa: {
+    rajat: { pohjoinen: -21.1234, etela: -21.1452, lansi: -175.2162, ita: -175.1874 },
+    meri: true,
+    meriHaku: 0.05,
+  },
 };
 
 /*
