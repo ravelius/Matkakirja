@@ -54,11 +54,11 @@ lähettää PT tilinvaihdossa (nollauksissa Postivahti, NOLLAUS.md).
 
 | Rooli | Malli, effort | Checkout (S/…) | Aloitusviesti | Silmukat, jotka rooli käynnistää |
 |---|---|---|---|---|
-| PÄÄTOIMITTAJA | Opus, medium | Matkakirja-fable | docs/raportit/viesti-fable-aloitus.md + uusin luovutus | cron JONOKIERROS "7,27,47 * * * *" (F/jonokierros-teksti.md); Monitor ODOTTAJAVAHTI `python3 -u S/hooks/odottajat-vahti.py` (timeout 1800000, uusi joka vanhenemisella) |
+| PÄÄTOIMITTAJA | Opus, medium | Matkakirja-fable | docs/raportit/viesti-fable-aloitus.md + uusin luovutus | ei jonokierros-cronia (omistaja 14.10. klo 22.34: PT herää Postivahdin herätteestä); Monitor ODOTTAJAVAHTI `python3 -u S/hooks/odottajat-vahti.py` (timeout 1800000, uusi joka vanhenemisella) |
 | KESKUSTELUKANAVA | Opus, max | Matkakirja-fable | docs/aloitusviestit/keskustelukanava.md | ei |
-| Postivahti | Sonnet 5.5, medium | Matkakirja-posti | docs/aloitusviestit/postivahti.md | ScheduleWakeup 4–5 min (KIERROS.md) |
-| Asemataulu | Sonnet 5.5, low | Matkakirja-asemataulu | docs/aloitusviestit/asemataulu.md | cron "*/5" vienti, "13,43" tarkistus, "7 * * * *" kulutus |
-| Julkaisija | Opus, high | Matkakirja-julkaisija | docs/raportit/viesti-julkaisija-aloitus.md + luovutus | vahdit `zsh S/julkaisija-tyokalut/valoseppa-vahti-kaynnista.zsh`, lukkovahti.zsh (olavinlinna-vahti ei, linna tauolla) |
+| Postivahti | Sonnet 5.5, medium | Matkakirja-posti | docs/aloitusviestit/postivahti.md | ScheduleWakeup 4–5 min, 20 min kun kaikki roolit lepäävät eikä junaa ole (KIERROS.md) |
+| Asemataulu | Sonnet 5.5, low | Matkakirja-asemataulu | docs/aloitusviestit/asemataulu.md | vienti A "*/5" vain Boostin aikana (Postivahti herättää talo/boostista, sammuu 1 h); tarkistus tunnin välein, Raati ja Testaajat "0 8 * * *" (omistaja 14.10. klo 22.34, 22.40 ja 23.39) |
+| Julkaisija | Opus, medium (high vain CI-vian ajaksi) | Matkakirja-julkaisija | docs/raportit/viesti-julkaisija-aloitus.md + luovutus | vahdit `zsh S/julkaisija-tyokalut/valoseppa-vahti-kaynnista.zsh`, lukkovahti.zsh (olavinlinna-vahti ei, linna tauolla) |
 | Natiiviseppä | Opus, high | Matkakirja-3d-selvittaja | docs/raportit/viesti-natiiviseppa-aloitus.md + luovutus | cron "4 9 * * *" `python3 S/proto-3d/tyokalut/natiiviseppa-skriptit/unity-julkaisut.py` |
 | Natiivi-UI | Opus, high | Matkakirja-natiivi-ui | docs/raportit/viesti-natiivi-ui-aloitus.md + luovutus | ei |
 | Pelikoodari | Opus, high | Matkakirja-pelikoodari | docs/raportit/viesti-pelikoodari-aloitus.md + luovutus | ei |
@@ -124,10 +124,10 @@ id:itä ei jäljellä. Rivi Keskustelukanavalle: "Tilinvaihto valmis: N roolia, 
 
 | Asia | Voimassa | Kumotut / huom |
 |---|---|---|
-| Postivahdin kierros | ScheduleWakeup 4–5 min, kehote "Lue S/Matkakirja-posti/KIERROS.md ja aja kierros sen mukaan"; KIERROS.md on sitova sisältö | 10 min (9.10.), Raamatun vanha sanatarkka kehote (loki TIIVISTYS 14.10.) |
-| Mittareiden vienti Asemataululle | Asemataulu-sessio (5 min, aina, ilman syke-ehtoa); Postivahti vie vain Raati- ja Testaajat-luvut ja junan edistyksen | Postivahti 5 min syke-ehdolla (11.10.) |
+| Postivahdin kierros | ScheduleWakeup 4–5 min (20 min, kun kaikki roolit lepäävät eikä junaa ole käynnissä; omistaja 14.10. klo 22.34), kehote "Lue S/Matkakirja-posti/KIERROS.md ja aja kierros sen mukaan"; KIERROS.md on sitova sisältö | 10 min (9.10.), Raamatun vanha sanatarkka kehote (loki TIIVISTYS 14.10.) |
+| Mittareiden vienti Asemataululle | Asemataulu-sessio: mittarit (kulutus, muisti, kone), roolit ja laitteet 5 min vain Boostin aikana (talo/boost → Postivahti herättää, sammuu 1 h; omistaja 14.10. klo 23.39); junat ja VAATII TOIMIA heti; sisällön tarkistus tunnin välein; Raati ja Testaajat klo 08 ja TF:n saapuessa (omistaja 14.10. klo 22.34 ja 22.40); Postivahti vie junan edistyksen ja lukee talo/boostin | Postivahti 5 min syke-ehdolla (11.10.); "5 min aina" (13.10.); Raati ja Testaajat Postivahdin kierroksella |
 | Asemataulun osoite | nykyinen tili (sami.reivinen@vvi.fi, 13.10. alkaen): https://claude.ai/artifact/EekZDPMuAcsjT3awvn4jPb; muut tilit F/asemataulu/osoitteet.md | Rq5ajPU4SraE2XKd7BYAix on päätilin taulu (10.10.), ei nykyisen |
-| Kontekstirajat | roolit 50 % (luovutus → Postivahti nollaa); PT 65 % (oma nollaus, Postivahti suorittaa); KK 55 % aloitus.md, 65 % kortti "Nollaanko nyt?" (vain omistaja nollaa); Asemataulu 50 % | Postivahti ei nollaa KK:ta |
+| Kontekstirajat | liukumat pehmeä–kova (omistaja 14.10. klo 22.55 ja 22.57): Postivahti 20–30 %; koodi-, kartta- ja sisältöroolit, Julkaisija ja Asemataulu 25–35 %; PT (oma nollaus), Laitetestaaja ja Äänittäjä 30–40 %; KK 40–50 % kortilla "Nollaanko nyt?" (vain KK:n nollaus kysytään omistajalta). Pehmeän rajan yli nollaus ensimmäisellä luontevalla tauolla, uusi iso tehtävä → nollaus ensin; luovutus → Postivahti nollaa ilman omistajan vahvistusta | roolit 50 % (10.10.), 35 % (14.10. 22.4x); PT 65 %; KK 55/65 %; Postivahti ei nollaa KK:ta |
 | Viikkokiintiö | päätili: siirtoprompti 50 %:ssa; koodaustilit: vain rivi 99 %:ssa (Postivahti hälyttää 96 % ja 99 %); ei keventämistä | "ei siirtopromptia" koskee vain koodaustilejä |
 | Komentorivin tili | sama kuin sovelluksen tili; uudelleenkirjautuminen jokaisessa tilinvaihdossa | "toinen tili kuin sovellus" (7.10.) |
 | TF-juna | lähtee vain omistajan pyynnöstä ("OMISTAJA PYYSI JULKAISUA", PT:n välittämä riittää), kaikki kuitattu samaan junaan, TF enintään 2/pv | "heti kun valmista" (6.10.); launchd fi.matkakirja.juna (2 h välein 08–22) ja juna-vahti (10 min) ovat simulaattorikäännöksiä, eivät TF-junia |
@@ -135,7 +135,9 @@ id:itä ei jäljellä. Rivi Keskustelukanavalle: "Tilinvaihto valmis: N roolia, 
 | PT:n malli | Opus, medium | "Opus max" (28.9.) |
 | Roolien määrä | osoitekirjan taulukko (14.10.: PT + KK + 14 roolia) | CLAUDE.md "kuusi roolisessiota", roolitus.md "kolme sessiota" |
 | Asemataulun malli ja effort | Sonnet 5.5, low (osoitekirja 14.10. ja sessiotiedosto; Raamattu korjattu 14.10.) | "Sonnet 5.5, high" (13.10. luonti), "low (auto)" |
-| Julkaisijan effort | Opus, high (omistaja 29.9. "Opus-roolit high oletuksena", osoitekirja 14.10.; Raamattu korjattu 14.10.) | "medium Julkaisijalle (high CI-vian ajaksi)" (28.9.) |
+| Julkaisijan effort | Opus, medium, high vain CI-vian ajaksi (omistaja 14.10. klo 22.4x, kortti "Säästöt 2") | Opus, high (29.9.) |
+| PT:n jonokierros | ei cronia; PT herää Postivahdin herätteestä (rooli levossa/hiljaa > 20 min, Codex-posti, äänisivuvalinta, levy < 80 Gi, kontekstiraja, TF-vaihe, ODOTTAA; omistaja 14.10. klo 22.34) | cron JONOKIERROS "7,27,47 * * * *" |
+| Roolin aloitus | lukulista aloitusviestissä (LUE ALUSSA ≤ 5, ÄLÄ LUE), roolitaulukko docs/vastuukartta.md, luovutus ≤ 60 riviä, tavoite ≤ 8 % kontekstista (omistaja 14.10. klo 22.4x) | koko aloitusviesti + Raamattu kohdennetusti |
 | Session nimi | "Rooli (malli, effort)" kaikille, PT ja KK isoin kirjaimin (omistaja 29.9. ja 6.10.; Raamattu SESSION NIMI) | EFFORT NIMESSÄ (26.9.: effort nimessä vain yli highin) |
 | Valikkokieli | suomi 14.10. alkaen: Tiedosto › Uusi istunto / Avaa kansio… (myös osascriptissä; Raamattu korjattu 14.10.) | File > New Session / Open Folder… |
 | Uusien sessioiden lupatila | ohitustila (bypassPermissions) kaikille, Äänittäjä auto (omistajan lupa 11.10., tila 13.10.); sessiotiedostot 14.10. | osoitekirjan "Asemataulu auto-tila" (sessio on ohitustilassa) |
