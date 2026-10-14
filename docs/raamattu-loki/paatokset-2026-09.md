@@ -14085,3 +14085,7 @@ Vastaus: **"Kyllä, Valoseppä ensin (Suositus)"**. Vaihtoehdon kuvaus: "Codex t
 Kirjaus: PT kirjoittaa Raamattuun uuden linjauksen TAVOITELUUPPI (lokiin `tools/raamattu-kirjaa.mjs`) ja lisää työn työlistaan.
 
 PT 11.1x: pilottikohteeksi Petřínin näkötorni (Praha, 1891, selkeä ristikkogeometria ja tunnettu korkeus 63,5 m, PD-kuvia runsaasti, näkyy Prahan pallokierroksella ja yökuvissa). Raamattuun linjaus TAVOITELUUPPI. Valosepän seuraaja aloittaa tavoitepaketista; Julkaisijan valoseppa-vahti (11.09) on luupin viimeinen vaihe.
+
+## MYKISTYS KOSKEE MYÖS UNITYN BATCH- JA EDITORIAJOJA (14.10.2026) (14.10.2026 klo 11.33)
+
+Keskustelukanava klo 11.3x: ääntä kuului taas (Etnan purkaus). Lähde: Natiivi-UI:n asettelutesti (ui-asettelutesti.sh, Unityn batchmode-ajo linjalla L2) soitti pelin äänet kaiuttimiin. NUI:ta pyydetty lopettamaan/mykistämään ajo ja lisäämään mykistys skriptiin. Sääntö AJOT AINA MYKISTETTYINÄ laajennettu: koskee myös Unityn batch- ja editoriajoja (asettelutestit, kuva-ajot).
