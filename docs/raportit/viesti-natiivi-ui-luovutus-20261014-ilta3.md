@@ -31,6 +31,19 @@ c9c3b948e kuvan suurennos (Ponnahdus.SuurennosS) 320 → 240 ms = Tyylikirja.Kes
 240 ms (vain kommentit). 6dcaa0fad kutsuminiatyyri esiin 350 → 240 ms, pois 250 → 200 ms (Kesto.Sulku), PT pyysi; ilmoitettu PT:lle.
 Jatko: anna kärki NS:lle junaan 192 PT:n kuittauksen jälkeen. Raamatun rivi 1779 (poikkeukset 320/280) = PT:n läpikäynti.
 
+## TILANNE 15.10. 02.1x (jatkoa samasta sessiosta)
+Kaikki proto-repossa, worktree wt/proto-natiivi-ui-issikkuna (muut siivottu; wt/proto-natiivi-ui-luettavuus pidetään: todistusajo.sh).
+Ajoskriptit natiivi-ui-ajoskriptit-20261012 (testi192*-kaanna.sh, *-simut.sh, sk-*.txt), arkit proto-3d/lokit/natiivi-ui-arkit-192.
+- NS:llä junassa 192 (PT kuittasi): siirtymat-192 6dcaa0fad, lippu-kartussi-192 3c23eb73c, iss-ikkuna-192 @ b0094af60, ylareuna-ipad-192
+  a1333cc3c, versio-build-192 222fea1d7.
+- PT:n kuittausta odottaa: ISS 5–7 iss-ikkuna-192 e39809f76 (arkki iss57-192-*), yläreuna v2 ylareuna-ipad-192 868688099 (arkki
+  ylareuna2-192-ipad) → kuittauksen jälkeen SHA:t NS:lle (192 jos ennen lukitusta, muuten 193).
+- LASI (omistajalla): lasi-iss-192 102d68516 (Lasitausta + Lasipohja, ui lasi 0|1|mittaa); chat hyväksytty, taululle kevyempi sävy
+  → testi-192h a8c97b744 kääntyy + lasi3-simut.sh (b0lvf1w64-ketju) → pari PT:lle. Pohja kaikkialle vasta omistajan hyväksynnän jälkeen.
+- JUNA 193 natiivi-ui/iss-193: A1 074217053 (lasi/pallo vain pienentää, mininäytön osuma 44 pt), C 4e11f8d1f (kolmas loppuvalinta,
+  IssLoppuvalinta.KameraValittu → PK). SEURAAVA: B aseman skanneri (suunnitelma /Users/Shared/Claude/Matkakirja-fable/scratchpad/
+  keskustelukanava/iss-skanneri-20261015.md): yksi kohde videona ääniraidan kanssa; KS korkeuskartta, Äänittäjä sirinä.
+
 ## AVOIMET (järjestys ISS-erän jälkeen)
 1. Pelikello vs suurennuslasi: SULJETTU 21.5x. Oikealla aloituslennolla (peli uusi-matka pariisi) kartan napit eivät näy, joten
    päällekkäisyyttä ei ole; havainto syntyi testikomennosta `ui pelikello lennossa 1` tavallisella kartalla. e6ea6183b
