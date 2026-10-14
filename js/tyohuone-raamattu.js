@@ -355,7 +355,7 @@ export const RAAMATTU = {
           + 'työt (äänet, ämpäri, julkaisu). '
           + 'UI-POHJAT JA TYYLIMÄÄRITTELYT (omistaja 1.10.2026, SITOVA, koskee jokaista sessiota ja '
           + 'jokaista uutta ominaisuutta, linssiä, ikkunaa, korttia, nostoa ja paneelia sekä natiivissa '
-          + 'että webissä): TEKSTILAATIKOT LÄPINÄKYVIKSI (omistaja 14.10.2026 klo 12.25: "myös tekstilaatikot läpinäkyviksi kaikissa peleissa ja linsseissä, ei pelkästään napit"): kaikki tekstilaatikot ja paneelit tehdään läpinäkyvinä pohjissa. uudet asiat tehdään AINA olemassa olevilla tyylimäärittelyillä ja pohjilla '
+          + 'että webissä): LÄPINÄKYVYYDEN RAJA (omistaja 14.10.2026 klo 21.42, korvaa klo 12.25:n): läpinäkyviä ovat vain yksittäiset napit ja enintään lauseen mittaiset yksittäiset tekstit; valikot, taulut ja usean rivin paneelit saavat olemassa olevan paneelipohjan. uudet asiat tehdään AINA olemassa olevilla tyylimäärittelyillä ja pohjilla '
           + '(värit, typografia, koot, kortit, nostot, paneelit, napit, Pulun chat ja taulut; UI-pohjien '
           + 'hyväksymisen jälkeen tokenitiedosto, pohjagalleria ja tyylikirja linssikatalogin alla). Jos '
           + 'jokin tarvittava elementti tai muunnelma puuttuu, OMAA RATKAISUA EI TEHDÄ: sessio kysyy ensin '

@@ -14217,3 +14217,7 @@ Omistaja 14.10.2026 klo 10.4x: viestit Päätoimittajalle enintään 3 riviä (m
 ## RAAMATUN TIIVISTYS 14.10. ILTA (ASEMATAULU) (14.10.2026 klo 21.10)
 
 Tilan vuoksi Raamatusta poistettiin historia, joka on jo lokissa tai docs/tilinvaihto.md:ssä: 1) ASEMATAULU TILIKOHTAINEN -kohdan tilinvaihtovaiheet 1–3 (Artifact list, julkaisu, ArtifactData-batch, osoitteet.md, Postivahti, jonokierroksen kohta 7, omistajan rivi) korvattiin viittauksella docs/tilinvaihto.md kohtaan 4; 2) rivi "TILINVAIHDOSSA SAMA OSOITE (10.10.2026) KUMOTTU 12.10.2026: jokaisella tilillä oma kopio (ks. ASEMATAULU TILIKOHTAINEN), mittarit ja roolit vie Asemataulu-sessio; sanatarkka päätös lokissa." poistettu. ITALIA-kohdasta poistettiin kumottu 9.10. linjaus (yllä sanatarkasti).
+
+## LÄPINÄKYVYYDEN RAJA (omistaja 14.10.2026 klo 21.42) (14.10.2026 klo 21.43)
+
+Omistaja sanatarkasti (kuva Pulun ISS-taulusta pilvien päällä): "Teksti ei näy. Näissä saa olla tausta. Läpinökyvyys koskee vain yksittäisiä nappeja tai yksittäisiä tekstejä jotka ovat korkeintaan lauseen mittaisia". Korvaa 14.10. klo 12.25:n TEKSTILAATIKOT LÄPINÄKYVIKSI -linjan: valikot, taulut ja usean rivin paneelit saavat olemassa olevan paneelipohjan; läpinäkyviä vain yksittäiset napit ja enintään lauseen mittaiset tekstit. Pulun ISS-taulu kiireelliseen junaan 191.
