@@ -14221,3 +14221,7 @@ Tilan vuoksi Raamatusta poistettiin historia, joka on jo lokissa tai docs/tilinv
 ## LÄPINÄKYVYYDEN RAJA (omistaja 14.10.2026 klo 21.42) (14.10.2026 klo 21.43)
 
 Omistaja sanatarkasti (kuva Pulun ISS-taulusta pilvien päällä): "Teksti ei näy. Näissä saa olla tausta. Läpinökyvyys koskee vain yksittäisiä nappeja tai yksittäisiä tekstejä jotka ovat korkeintaan lauseen mittaisia". Korvaa 14.10. klo 12.25:n TEKSTILAATIKOT LÄPINÄKYVIKSI -linjan: valikot, taulut ja usean rivin paneelit saavat olemassa olevan paneelipohjan; läpinäkyviä vain yksittäiset napit ja enintään lauseen mittaiset tekstit. Pulun ISS-taulu kiireelliseen junaan 191.
+
+## TF-KETJUN ILMOITUS JA LIIKENNEVALOT (omistaja 14.10.2026 klo 22.20) (14.10.2026 klo 22.28)
+
+Omistaja sanatarkasti: "190 oli jo klo 21:26 valmiina. miten sinulle ei ole tullut sitä tietoa? ja tuleehan junan valmistumisesta entiseen tapaan ne liikennevalot junan alle?" Syy: Julkaisija ei päivittänyt talo/etenemistä junalle 190 eikä lähettänyt valmistumisriviä (TF 21.22, sisäinen 21.28, ulkoinen 22.21). Linja: jokainen ketjun vaihe talo/etenemiseen; sisäinen valmis → Julkaisijan Monitorista rivi PT:lle ja Keskustelukanavalle; PT nimeää junarivin TF N + aika; Postivahti varmistaa tf*-ketju.logista joka kierros.
