@@ -19,6 +19,17 @@ kirjoitetaan Raamattuun (`js/tyohuone-raamattu.js`) ja raportissa
 viitataan siihen osion nimellä. Raporttiin kirjoitettu uusi linjaus
 katoaa, koska raportteja ei lueta vanhoina.
 
+## 0. Pituus ja lukeminen (omistaja 14.10.2026 klo 22.4x, kortti "Aloitus")
+
+- **Luovutus on enintään 60 riviä** (koskee kaikkia rooleja ja PT:tä). Pitkä
+  aineisto (lokit, kuva-arkit, mittaukset) tiedostoon ja luovutukseen vain polku.
+- **Uusi sessio lukee Raamatusta vain omat osionsa**: roolin lukulista on sen
+  aloitusviestissä (LUE ALUSSA enintään 5 kohtaa, ÄLÄ LUE: koko Raamattu, muiden
+  luovutukset, kokonaiset lokit) ja roolitaulukossa docs/vastuukartta.md.
+  Luovutus nimeää osiot otsikoittain, ei kopioi niitä.
+- Tavoite: roolin aloitus nollauksen jälkeen enintään 8 % kontekstista.
+  Nollausrajat (liukumat) ja nollauksen kulku: Raamattu, TYÖTAPA JA SESSIOT, kohta I.
+
 ## 1. Mihin se tallennetaan
 
 **Polku:** `docs/raportit/viesti-fable-luovutus-<pvm>.md`, missä
