@@ -12283,13 +12283,12 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: -18.1329, etela: -18.1605, lansi: 178.418, ita: 178.447 },
     esittely: 'Kartan alue on Suvan niemen kärki, Fidžin pääkaupungin siirtomaa-ajan keskusta. '
-      + 'Lännessä on Suva Harbour, pohjoisessa kauppakadut ja purosuu, keskellä '
-      + 'Hallintorakennukset rantabulevardin varrella ja etelässä puutarhat sekä '
-      + 'Valtionpäämiehen talo.\n\n'
+      + 'Lännessä on Suva Harbour ja sen rantabulevardin varrella Hallintorakennukset, '
+      + 'pohjoisessa kauppakadut ja purosuu ja etelässä puutarhat sekä Valtionpäämiehen talo.\n\n'
       + 'Pyhän sydämen katedraali valmistui 1902. Thurston Gardensin puutarhassa on Fidžin '
-      + 'museo, joka perustettiin 1904. Katedraali on kartan koillisosassa, ja '
-      + 'Hallintorakennukset ovat länsiosassa rannan tuntumassa. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+      + 'museo, joka perustettiin 1904. Katedraali on kartan koillisosassa, ja Thurston '
+      + 'Gardens ja Valtionpäämiehen talo ovat etelässä lähellä toisiaan. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään. Koordinaatit en-Wikipedian
@@ -12334,7 +12333,7 @@ export const KAUPUNKIKARTAT = {
       + 'tarvittiin satama, ja se nimettiin Queenslandin kuvernöörin William Cairnsin mukaan.\n\n'
       + 'Pohjoisessa ovat St Monican katedraali ja vapaamuurarien temppeli, Esplanadilla '
       + 'sotamuistomerkki. Abbott Streetin varrella ovat kaupunginvaltuuston talo, '
-      + 'oikeustalojen kortteli ja tullitalo. Nykyinen tullitalo valmistui 1936-1937, '
+      + 'oikeustalojen kortteli ja tullitalo. Nykyinen tullitalo valmistui 1936–1937, '
       + 'kolmantena samalle paikalle; ensimmäiset tullirakennukset olivat valmiit heinäkuuhun '
       + '1877 mennessä. Rautatieasema ja vanha satamalaituri ovat etelässä. Kartan kohteista '
       + 'pääsee lukemaan lisää napauttamalla.',
@@ -13798,9 +13797,9 @@ export const KAUPUNKIKARTAT = {
       + 'Kaupungintalo valmistui 1928 ja oli kaupungin korkein rakennus vuoteen 1964. Bunker '
       + 'Hillin rinnettä nousee Angels Flight, vuonna 1901 avattu köysirata, ja Grand '
       + 'Avenuella on Frank Gehryn suunnittelema Walt Disney -konserttitalo vuodelta 2003. '
-      + 'Pershing Square perustettiin 1866 kaupungin ensimmäiseksi puistoksi, ja Eastern '
-      + 'Columbian turkoosi Art Deco -rakennus valmistui 1930. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+      + 'Pershing Square varattiin julkiseksi aukioksi 1866, ja Eastern Columbian turkoosi '
+      + 'Art Deco -rakennus valmistui 1930. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -15071,9 +15070,9 @@ export const KAUPUNKIKARTAT = {
       lansi: -7.9965,
       ita: -7.9785,
     },
-    esittely: 'Kartan alue on Marrakechin medina, jonka hiekkakivimuurit ovat antaneet kaupungille '
-      + 'lempinimen Punainen kaupunki. Medina on ollut Unescon maailmanperintökohde vuodesta '
-      + '1985. Sen sydän on Jemaa el-Fnan aukio.\n\n'
+    esittely: 'Kartan alue on Marrakechin medina, jonka punaisesta savesta tehdyt muurit ovat '
+      + 'antaneet kaupungille lempinimen Punainen kaupunki. Medina on ollut Unescon '
+      + 'maailmanperintökohde vuodesta 1985. Sen sydän on Jemaa el-Fnan aukio.\n\n'
       + 'Pohjoisessa on Ben Youssefin medresa, jonka nykyinen rakennus valmistui 1564–1565 '
       + 'saadilaissulttaanin aikana; lähellä ovat Dar el Bacha ja Mouassinen suihkulähde. '
       + 'Etelässä Bahian palatsin rakentaminen alkoi 1860-luvulla ja sitä laajennettiin '
@@ -15602,8 +15601,8 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 64.1825, etela: 64.173, lansi: -51.751, ita: -51.7245 },
     esittely: 'Kartan alue on Nuukin vanha keskusta Grönlannin lounaisrannikolla. Hans Egeden '
-      + 'aloittama siirtokunta siirrettiin tälle paikalle vuonna 1728, ja nykyinen '
-      + 'pääkaupunki on Grönlannin suurin kaupunki.\n\n'
+      + 'aloittama siirtokunta siirrettiin tälle paikalle vuonna 1728. Nuuk on nykyään '
+      + 'Grönlannin pääkaupunki ja suurin kaupunki.\n\n'
       + 'Hans Egeden talo on kaupungin vanhin säilynyt rakennus, ja kukkulalla sen yllä '
       + 'seisoo Egeden patsas. Lähellä ovat luterilainen katedraali ja Kalaaliaraq-tori. '
       + 'Idempänä nykyisessä keskustassa ovat parlamentti Inatsisartut, revontulten '
@@ -17989,10 +17988,9 @@ export const KAUPUNKIKARTAT = {
     numeroympyrat: true,
     esittely: 'Kartta kattaa Ramallahin ytimen: Al-Manaran aukion ja Al-Kasaba-teatterin, vanhan '
       + 'kaupungin ja kaupungin lounaisella kukkulalla olevan Kulttuuripalatsin ja Mahmoud '
-      + 'Darwish -museon. Ramallahin Friends-koulut perustettiin 1869 amerikkalaisten '
-      + 'kveekarien toimesta.\n\n'
+      + 'Darwish -museon. Amerikkalaiset kveekarit perustivat Ramallahin Friends-koulut 1869.\n\n'
       + 'Kaupungin eteläpuolella on Tell en-Nasbehin muinainen kukkula, jonka arvellaan '
-      + 'olevan Raamatun Mispa. William Badè johti sen kaivauksia vuosina 1926-1935. Pyhän '
+      + 'olevan Raamatun Mispa. William Badè johti sen kaivauksia vuosina 1926–1935. Pyhän '
       + 'perheen kirkko, Friends-koulut ja Al-Manaran aukio ovat kaupungin tiiviissä '
       + 'ytimessä, ja Kulttuuripalatsi on lounaassa. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
