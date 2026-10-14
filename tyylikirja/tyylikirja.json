@@ -586,11 +586,11 @@
     }
   },
   "mitat": {
-    "_selite": "pt (web px). vali = välien asteikko; kulma = border-radius; nappi = kolme nappityyppiä 38 pt, osuma-ala aina ≥ 44 pt; nappi.ohjaus = OHJAUSNAPPI-neliö (kuvake ohjaus-kuvake); galleria = GALLERIA-ruudukon sarakkeen vähimmäisleveys ja väli. kulma.hius 2 ohuille elementeille (kahvat, urat; EI OVAALEJA, omistaja 2.10.2026: kevyet suorakulmiot pyöristetyin kulmin, Päätoimittaja 8.10.2026) ja kulma.keski 8 nykyiselle käytölle (pohjavahtikierros 8.10.2026, ulkoasu ennallaan).",
+    "_selite": "pt (web px). vali = välien asteikko; kulma = border-radius; nappi = kolme nappityyppiä 38 pt, osuma-ala aina ≥ 44 pt; nappi.ohjaus = OHJAUSNAPPI-neliö (kuvake ohjaus-kuvake); galleria = GALLERIA-ruudukon sarakkeen vähimmäisleveys ja väli; leveällä ruudulla (paneeli ≥ levea-raja) osiot rinnakkain osio-levea-sarakkeisiin ja pikkukuvan sarake sarake-levea (omistaja 14.10.2026, ISS V3c; kaikki galleriat). kulma.hius 2 ohuille elementeille (kahvat, urat; EI OVAALEJA, omistaja 2.10.2026: kevyet suorakulmiot pyöristetyin kulmin, Päätoimittaja 8.10.2026) ja kulma.keski 8 nykyiselle käytölle (pohjavahtikierros 8.10.2026, ulkoasu ennallaan).",
     "vali": { "xs": 4, "s": 8, "m": 12, "l": 16, "xl": 24 },
     "kulma": { "hius": 2, "pieni": 6, "keski": 8, "nappi": 10, "kortti": 12, "pilleri": 999 },
     "nappi": { "korkeus": 38, "osuma": 44, "laukaisin": 64, "ohjaus": 40, "ohjaus-kuvake": 22, "ohjaus-iso": 56 },
-    "galleria": { "sarake": 92, "vali": 10 },
+    "galleria": { "sarake": 92, "vali": 10, "sarake-levea": 140, "osio-levea": 300, "levea-raja": 700 },
     "leveys": { "kapea": 600, "levea": 940, "kortti": 420, "minipopup": 320, "paneeli": 350, "sivukortti": 400, "lukupalsta": 640, "lehti": 960 },
     "peitto": { "max": 45, "ohjain": 25, "kamera": 20, "laajennettu": 85, "paneeli": 70 },
     "kuva": { "hero-kortti": "2:1", "hero-arkki": "3:2", "upotus": "4:3", "upotus-leveys": 40, "galleria-korkeus": 64 }
