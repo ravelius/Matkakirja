@@ -1,0 +1,21 @@
+# Asemataulun osoitteet tileittäin (omistaja 12.10.2026 klo 19.3x: kopio jokaiselle tilille, lähde repossa)
+
+Toisen tilin jakama taulu aukeaa, mutta sen tietokantaan ei voi kirjoittaa toiselta tililtä (ArtifactData: "shared from another
+organization … invited editors"). Siksi jokaisella tilillä on oma kopio samasta sivusta.
+
+| Tili | Osoite | Huom |
+|---|---|---|
+| Päätili (omistajan muukin käyttö, raja 50 %) | https://claude.ai/artifact/Rq5ajPU4SraE2XKd7BYAix | alkuperäinen 10.10.; jäi 12.10. 19.2x:n tilaan |
+| samireivinen@gmail.com (koodaus, raja 99 %, viikko nollautuu ma 03.59) | https://claude.ai/artifact/R6VQFTUNq629zSzah719Uy | julkaistu 12.10. 19.39 |
+| sami.reivinen@vvi.fi (koodaus, raja 99 %, viikko nollautuu ti 20.10. klo 01.59) | https://claude.ai/artifact/EekZDPMuAcsjT3awvn4jPb | julkaistu 13.10. 21.5x (PT local_593b89a1) |
+
+## Tilinvaihdossa (uusi PT)
+1. Artifact list: onko tällä tilillä jo oma Asemataulu? Jos on, read + publish samaan osoitteeseen; jos ei, publish uutena
+   (lähde `git show origin/main:tools/asemataulu/asemataulu.html` → scratchpad/asemataulu/asemataulu-julkaisu.html,
+   capabilities {"comments": {}, "db": {}}, icon dashboard) ja lisää rivi tähän taulukkoon.
+2. Täytä tietokanta yhdellä ArtifactData batchilla tiedostoista scratchpad/asemataulu/data/talo/*.json
+   (junat, tyolista, tehtavat, eteneminen, huom, viestit = PT; roolit, laitteet = Postivahdin vienti/), op set, file_path.
+3. Uusi osoite Postivahdille, jonokierros-teksti.md:n kohtaan 7 ja omistajalle yhdellä rivillä.
+
+PT kirjoittaa omat dokumenttinsa aina ensin data/talo/<doc>.json-tiedostoon ja vie sen file_path-kentällä, jotta tiedostot
+pysyvät tauluun nähden ajan tasalla.
