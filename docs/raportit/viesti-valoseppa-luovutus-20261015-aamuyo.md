@@ -55,3 +55,11 @@ LR local_08e82dfc, PK local_97810d35, Postivahti local_e6d70b5a. Käännös- ja 
   runko valkoinen vatsa/evät kameraan päin, kiilto, koko ≥ 2,5 %, r0c valkoinen sormimainen kruunu + rengasaalto, r0d rikkonainen vaahto,
   raketin savu ennallaan. Avoimet: lento ~1,7× liian nopea 30 m valaalle (aikakerroin ValaanHyppyyn + uudet todistusajat), malli jäykkä
   (LR: valas-v2 luurangolla, evät 1/3 rungosta). Pari NYK (0011, v8d) | UUSI + video PT:lle, sitten junaan 192.
+
+## LISÄYS 01.45: ISS-todistusajo AJETTU (SIMU VAPAA ilmoitettu Julkaisijalle)
+Tuloskansio /Users/Shared/Claude/proto-3d/lokit/todistus-iss192-20261015-0137 (iss192-taysi.mp4, iss192-lyhyt.mp4, kuvat/, TODISTUS.md).
+SEURAAVAKSI: `python3 /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/iss192/analysoi-iss192.py <tuloskansio>` (ilman -I, ~4 min) →
+YHTEENVETO.md + liikekayra.png + kuva-arkki-iss192.jpg. Huomioita TODISTUS.md:stä tarkistettavaksi ENNEN PT:lle lähettämistä:
+- lähtö t 3.23 kiihtyvyys 81,5 m/s² (agentin taulukossa täysi lento ≤ 4,3 m/s²?) – katso mitä yksikköä lokirivi käyttää (toistoaika vs lentoaika).
+- lähestymisen 1. rivi: "asema 0.0 % ruudusta … keula 11 991 106 m portista" – 12 000 km portista loppulähestymisen alussa näyttää väärältä
+  (agentti: lähikuvavaihe alkaa ~400 m kamerasta); tarkista videolta, kasvaako asema tasaisesti ja onko hyppyä.
