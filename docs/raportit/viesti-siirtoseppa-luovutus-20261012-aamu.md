@@ -187,7 +187,7 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
   `git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto worktree add /Users/Shared/Claude/wt/proto-siirtoseppa-kello siirtoseppa/laituri-varoitus`
   (ajo-botti-osat.sh TYOPUU ja kiinnita-paketti.sh odottavat näitä polkuja; pakettipuu …-v47g haaralle siirtoseppa/v49a).
 
-## PÄIVITYS 15.10. 16.4x — KOLMEN KIERROKSEN HIONTA (PT kuittasi)
+## PÄIVITYS 15.10. 16.1x — KOLMEN KIERROKSEN HIONTA (PT kuittasi)
 
 - PT:n erä (omistaja 16.02: Lontoon, Prahan ja Ateenan kierrosten hionta): EI simuajoa (omistajan 09.36 "Ei testejä junaan"). Tulos: 0 jumia.
   Linssit-testit 51540404d:llä 13/13 (KokoKierrosKaikkiPysahdykset: kaikki kolme 8/8 + loppu, 547–586 s); Pelikoodarin ajoloki
