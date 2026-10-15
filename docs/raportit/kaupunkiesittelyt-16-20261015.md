@@ -12,3 +12,7 @@ Huomioita tarkistajalle:
 - Barcelonan Sagrada Família -keskitorni "valmistui rakenteellisesti 2026" (172,5 m): tarkista ennen julkaisua.
 
 Kytkentä maakartat.js:ään (KAUPUNKIKARTAT.<tunnus>.esittely) Karttasepälle vasta omistajan hyväksynnän jälkeen. Loput 20 (36 yhden kappaleen esittelystä): vasta kun omistaja on hyväksynyt mallin.
+
+## Loput 20 (omistajan päätös 21.29: sama malli, "hyväksytty mallin perusteella")
+Kaupungit: luxemburg, kiova, moskova, praha, bukarest, rooma, firenze, krakova, pietari, edinburgh, varsova, sarajevo, marseille, dublin, wien, sevilla, oslo, helsinki, tampere, kobenhavn. Tiedostot docs/kohtaukset/kaupunkiesittelyt/<tunnus>.json (620–720 merkkiä, 2 kappaletta). Äänisivun Tekstit-osastossa omana ryhmänään; julkaistu.
+PT tarkistaa faktat ennen kytkentää. Heikoimmat toiset lähteet (hakutulos): Praha (synagoga 1270, Vanhankaupungin maan nosto), Bukarest (Stavropoleos), Krakova ja Pietari (lähes kaikki), Tampere (Tammerkosken 18 m, Pyynikin torni, Vapriikki), Helsinki (Uspenski, rautatieasema), Oslo (kuninkaanlinna 1849, oopperakatto), Sevilla (Torre del Oro, Maestranza), Kööpenhamina (Rundetårn). Sevillan "suurin goottilainen" pehmennetty.

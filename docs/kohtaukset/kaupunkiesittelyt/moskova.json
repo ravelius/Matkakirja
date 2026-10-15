@@ -1,0 +1,85 @@
+[
+  {
+    "id": "moskova",
+    "esittely": "Kartan alue on Moskovan ydin Moskova-joen mutkassa. Kremlin muuri on 2 235 metriä pitkä, siinä on 20 tornia, ja sen rakentaminen alkoi 1400-luvun lopulla. Punaisen torin eteläpäässä seisova Pyhän Vasilin katedraali rakennettiin 1500-luvun puolivälissä tsaari Ivan IV:n käskystä Kazanin valtauksen muistoksi.\n\nKremlin pohjoispuolella olevan Bolšoi-teatterin nykyinen rakennus avattiin 1825. Kristus Vapahtajan katedraali vihittiin 1883, räjäytettiin 1931 ja vihittiin uudelleen 2000. Kauppias Pavel Tretjakov lahjoitti taidekokoelmansa Moskovan kaupungille 1892, ja siitä kasvoi Tretjakovin galleria. Perlovin teetalon kiinalaistyylinen ulkoasu on vuodelta 1896. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 715,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Moscow_Kremlin",
+        "title": "Wikipedia: Moscow Kremlin",
+        "tukee": "muurit 1485-1495, pituus 2235 m, 20 tornia (alun perin 18)"
+      },
+      {
+        "url": "https://kremlin-architectural-ensemble.kreml.ru/en-Us/architecture",
+        "title": "Kremlin architectural ensemble: Towers of the Kremlin (hakutulos)",
+        "tukee": "muurit ja tornit 1485-1516, pituus 2235 m, 20 tornia"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Saint_Basil%27s_Cathedral",
+        "title": "Wikipedia: Saint Basil's Cathedral",
+        "tukee": "1555-1561, Ivan IV, Kazanin ja Astrahanin valtauksen muistoksi, Punaisella torilla"
+      },
+      {
+        "url": "https://www.britannica.com/print/article/516839",
+        "title": "Britannica: Saint Basil's Cathedral (hakutulos)",
+        "tukee": "1554-1560, Kazanin ja Astrahanin voitot"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Bolshoi_Theatre",
+        "title": "Wikipedia: Bolshoi Theatre",
+        "tukee": "nykyinen rakennus avattiin 18.1.1825"
+      },
+      {
+        "url": "https://andreas-praefcke.de/carthalia/russia/rus_moskva_bolshoi.htm",
+        "title": "Moskva: Bolshoi Teatr (hakutulos)",
+        "tukee": "nykyinen rakennus avattiin tammikuussa 1825"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Cathedral_of_Christ_the_Saviour",
+        "title": "Wikipedia: Cathedral of Christ the Saviour",
+        "tukee": "vihitty 26.5.1883, räjäytetty 5.12.1931, uudelleen vihitty 19.8.2000"
+      },
+      {
+        "url": "https://orthochristian.com/86793.html",
+        "title": "Orthochristian: A short history of Christ the Saviour Cathedral (hakutulos)",
+        "tukee": "1883, 1931, 2000"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Tretyakov_Gallery",
+        "title": "Wikipedia: Tretyakov Gallery",
+        "tukee": "Tretjakov lahjoitti kokoelman kaupungille elokuussa 1892"
+      },
+      {
+        "url": "https://www.meer.com/en/34672-125th-anniversary-of-the-tretyakov-gallery",
+        "title": "Meer: 125th anniversary of the Tretyakov Gallery",
+        "tukee": "Tretjakov lahjoitti kokoelman ja rakennuksen Moskovalle 27.9.1892"
+      },
+      {
+        "url": "https://www.mos.ru/en/news/item/80953073/",
+        "title": "mos.ru: Perlov's Tea House",
+        "tukee": "kiinalaistyylinen julkisivu ja sisustus 1896, Mjasnitskaja 19"
+      },
+      {
+        "url": "https://www.mos.ru/en/news/item/127827073",
+        "title": "mos.ru: How merchants evolved Moscow's architecture (hakutulos)",
+        "tukee": "Perlovin teetalon pseudokiinalainen uudistus 1896"
+      }
+    ],
+    "pudotetut": [
+      "Kremlin kolmio, Punainen tori itäkyljessä ja kartan maantiede (entinen teksti): geometriaa ei tarkistettu, korvattu Kremlin muurin luvuilla",
+      "Neglinnaja katettiin 1817-1819: vain Wikipedia (lähteetön artikkeli), jätetty pois",
+      "Bulevardikehä ja Puutarhakehä vanhojen muurien linjoilla: periaate vahvistettu, mutta ajoitukset ristiriitaisia, jätetty pois",
+      "Näyttely 1872 (Polyteknillinen näyttely): ei löytynyt lähdettä, jätetty pois",
+      "Tretjakovin gallerian perustamisvuosi 1856: vain Wikipedia + hakutulos, ei käytetty",
+      "Unesco 1990 (Kreml ja Punainen tori): vain Wikipedia-sivut, UNESCO-sivu 403, jätetty pois",
+      "Bolšoin restaurointi 2005-2011: vahvistettu, jätetty pois tilan vuoksi"
+    ],
+    "ristiriidat": [
+      "Kremlin muurin rakentaminen: 1485-1495 (Wikipedia) vs. 1485-1516 (Kremlin) -> 'alkoi 1400-luvun lopulla'",
+      "Pyhän Vasilin katedraali: 1555-1561 vs. 1554-1560 (Britannica) -> 'puolivälissä 1500-lukua'",
+      "Tretjakovin lahjoitus: elokuu vs. 27.9.1892 -> käytetty vain vuotta 1892"
+    ],
+    "muutos_sk": "Poistettu geometriakuvaus, Neglinnaja-joki (lähteetön) ja Näyttely 1872. Lisätty Kremlin muurin pituus ja tornien lukumäärä, Pyhän Vasilin ajoitus ja tarkoitus, Bolšoin nykyinen rakennus 1825, Kristus Vapahtajan katedraalin 1883/1931/2000, Tretjakovin lahjoitus 1892 ja Perlovin teetalon ulkoasu 1896."
+  }
+]
