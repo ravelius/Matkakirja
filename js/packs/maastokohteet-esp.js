@@ -892,5 +892,26 @@ export const MAASTOKOHTEET_ESP = [
     lahde: 'en-Wikipedia "Serra de Tramuntana", osiot "Geography", "Environmental protection" ja '
       + '"Sustainable Tourism" (tarkistettu 30.9.2026).',
   },
+  {
+    id: 'gibraltarinsalmi',
+    nimi: 'Gibraltarinsalmi',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mitä Herkuleen patsaat ovat?',
+      'Mitä Trafalgarin taistelussa tapahtui?',
+    ],
+    nappi: 'Herkuleen patsaiden salmi',
+    // -5.6 E / 35.95 N — salmen keskiosa Tarifan ja Tangerin välissä
+    laudat: {
+      maailmankartta: { x: 5646.7, y: 1959.4 },
+      europe: { x: 103.7, y: 948.1 },
+    },
+    teksti: 'Gibraltarinsalmi yhdistää Atlantin ja Välimeren. Sen pohjoisrannalla ovat Espanja ja '
+      + 'Britannian Gibraltar, eteläpuolella Marokko ja Espanjan Ceuta. Kapeimmillaan salmi on '
+      + 'noin 13–14 kilometriä leveä, ja syvyys vaihtelee noin 300 metristä 900 metriin. '
+      + 'Antiikissa salmen kahta kallioniemeä sanottiin Herkuleen patsaiksi.',
+    lahde: 'en-Wikipedia "Strait of Gibraltar", johdanto-osa ja Geography-osa (tarkistettu '
+      + '16.10.2026); WorldAtlas "Strait of Gibraltar"; Livius "Pillars of Heracles".',
+  },
 ];
 

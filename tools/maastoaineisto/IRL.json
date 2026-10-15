@@ -12,7 +12,9 @@
         "Mitä nimi Corrán Tuathail tarkoittaa?",
         "Mikä on Devil's Ladder?"
       ],
-      "korostukset": ["MacGillycuddy's Reeks|MacGillycuddy's Reeks"],
+      "korostukset": [
+        "MacGillycuddy's Reeks|MacGillycuddy's Reeks"
+      ],
       "teksti": "Carrauntoohil on Irlannin korkein vuori, 1 038,6 metriä. Se on Iveraghin niemimaalla Kerryn kreivikunnassa lähellä maan korkeimman vuorijonon MacGillycuddy's Reeksin keskustaa. Vuori on pääosin hiekkakiveä, jonka jäätiköityminen on veistänyt jyrkiksi rotkoiksi ja teräviksi harjanteiksi itä- ja koillisseinämiin. Irlanninkielinen nimi Corrán Tuathail tarkoittaa Tuathalin sirppiä.",
       "lahde": "en-Wikipedia \"Carrauntoohil\", johdanto-osa (tarkistettu 29.8.2026)."
     }
@@ -30,6 +32,19 @@
       ],
       "teksti": "Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.",
       "lahde": "en-Wikipedia \"Irish Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Keltienmeri",
+      "lon": -7,
+      "lat": 50.8,
+      "lahdeKoordinaatti": "ulappa Irlannin eteläpuolella, Cornwallin ja Bretagnen välillä",
+      "nappi": "Meri Irlannin eteläpuolella",
+      "kysymykset": [
+        "Mitä Lusitanialle tapahtui vuonna 1915?",
+        "Mikä Fastnet Rock on?"
+      ],
+      "teksti": "Keltienmeri on Atlantin osa Irlannin eteläpuolella, ja sitä rajaavat Irlanti, Britannia ja Ranska. Pinta-ala on noin 300 000 neliökilometriä, ja meren pohja on osa Euroopan mannerjalustaa. Nimen ehdotti tutkija E. W. L. Holt vuonna 1921 Dublinin kalastusasiantuntijoiden kokouksessa; aiemmin pohjoisosaa pidettiin St. George's Channelin osana.",
+      "lahde": "en-Wikipedia \"Celtic Sea\", johdanto-osa ja nimiosio; WorldAtlas \"Celtic Sea\"; AM Nautical \"10 Major Facts About the Celtic Sea\" (tarkistettu 16.10.2026)."
     }
   ],
   "joet": [

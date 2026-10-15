@@ -883,5 +883,26 @@ export const MAASTOKOHTEET_RUS = [
     lahde: 'en-Wikipedia "Königsberg Cathedral", osiot "Kant\'s Tomb", "Restoration" ja "Museum '
       + 'and current use" (tarkistettu 30.9.2026).',
   },
+  {
+    id: 'vienanmeri',
+    nimi: 'Vienanmeri',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mikä Solovetskin saaristo on?',
+      'Mikä Vienanmeren kanava on?',
+    ],
+    nappi: 'Valkoinen meri pohjoisessa',
+    // 38 E / 65.5 N — meren keskiosa Solovetskin saarten ja Arkangelin Dvinanlahden välissä
+    laudat: {
+      maailmankartta: { x: 7100, y: 639 },
+      europe: { x: 940.8, y: 171 },
+    },
+    teksti: 'Vienanmeri on Barentsinmeren etelään työntyvä lahti Venäjän luoteisrannikolla, ja sitä '
+      + 'rajaa vain Venäjä. Pinta-ala on noin 90 000 neliökilometriä, keskisyvyys 60-70 metriä '
+      + 'ja syvin kohta yli 300 metriä. Meri jäätyy talveksi, mutta jäänmurtajat pitävät väylät '
+      + 'auki. Venäjäksi se on Valkoinen meri.',
+    lahde: 'en-Wikipedia "White Sea", johdanto-osa; Store norske leksikon "Kvitsjøen"; '
+      + 'fi-Wikipedia "Vienanmeri" (tarkistettu 16.10.2026).',
+  },
 ];
 

@@ -222,5 +222,50 @@ export const MAASTOKOHTEET_TUR = [
     lahde: 'en-Wikipedia "Selimiye Mosque, Edirne", yleiskuvaus, arkkitehtuuri ja kompleksi '
       + '(tarkistettu 30.9.2026).',
   },
+  {
+    id: 'bosporinsalmi',
+    nimi: 'Bosporinsalmi',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Montako siltaa ja tunnelia Bosporin ylittää?',
+      'Miksi Bosporissa vesi virtaa kahteen suuntaan?',
+    ],
+    nappi: 'Istanbulin halki kulkeva salmi',
+    // 29.06 E / 41.1 N — salmen keskiosa Istanbulin kohdalla
+    laudat: {
+      maailmankartta: { x: 6802, y: 1759.4 },
+      europe: { x: 769.2, y: 812.7 },
+    },
+    teksti: 'Bosporinsalmi on Turkin salmi, joka yhdistää Mustanmeren Marmaranmereen ja kulkee '
+      + 'Istanbulin halki Euroopan ja Aasian välistä. Se on noin 30 kilometriä pitkä ja '
+      + 'kapeimmillaan vain noin 700–750 metriä leveä. Salmen yli on rakennettu kolme siltaa, '
+      + 'joista vanhin avattiin vuonna 1973, ja sen alitse kulkee kaksi tunnelia. Nimi tulee '
+      + 'kreikasta, ja kreikkalaiset tulkitsivat sen tarkoittavan härän kulkuväylää.',
+    lahde: 'en-Wikipedia "Bosporus", johdanto-osa ja Geography-osa; New World Encyclopedia '
+      + '"Bosporus"; Britannica "Bosporus" (hakutulos); CNN Style / KTVZ 26.12.2022 '
+      + '(tarkistettu 16.10.2026).',
+  },
+  {
+    id: 'dardanellit',
+    nimi: 'Dardanellit',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mitä Gallipolin sotaretkellä tapahtui?',
+      'Miten Kserkes ylitti Hellespontoksen?',
+    ],
+    nappi: 'Muinainen Hellespontos',
+    // 26.4 E / 40.2 N — salmen keskiosa Çanakkalen kohdalla
+    laudat: {
+      maailmankartta: { x: 6713.3, y: 1795 },
+      europe: { x: 718.1, y: 836.3 },
+    },
+    teksti: 'Dardanellit on Turkin salmi, joka yhdistää Egeanmeren Marmaranmereen. Se on noin 61 '
+      + 'kilometriä pitkä, noin 1,2–6 kilometriä leveä ja syvimmillään noin 100 metriä. '
+      + 'Pohjoispuolella on Gallipolin niemimaa, jonka mukaan salmea kutsutaan myös Gallipolin '
+      + 'salmeksi. Muinaiset kreikkalaiset kutsuivat sitä Hellespontokseksi. Maaliskuussa 2022 '
+      + 'salmen ylitse avattiin 1915 Çanakkalen silta.',
+    lahde: 'en-Wikipedia "Dardanelles", johdanto-osa (tarkistettu 16.10.2026); WorldAtlas '
+      + '"Dardanelles Strait"; CNN Style / KTVZ 26.12.2022.',
+  },
 ];
 

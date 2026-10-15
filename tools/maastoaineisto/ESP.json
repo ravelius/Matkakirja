@@ -12,7 +12,9 @@
         "Kuka oli Muley Hacén?",
         "Miksi Sierra Nevadassa on lunta niin etelässä?"
       ],
-      "korostukset": ["Sierra Nevada|Sierra Nevadan"],
+      "korostukset": [
+        "Sierra Nevada|Sierra Nevadan"
+      ],
       "teksti": "Mulhacén kohoaa 3 479 metriin ja on mannermaisen Espanjan sekä koko Iberian niemimaan korkein vuori. Se kuuluu Sierra Nevadan vuoristoon Penibeettisessä järjestelmässä. Nimi tulee Granadan toiseksi viimeiseltä muslimihallitsijalta Abu'l-Hasan Alilta, jota espanjaksi kutsuttiin Muley Hacéniksi ja joka tarun mukaan haudattiin vuoren huipulle.",
       "lahde": "en-Wikipedia \"Mulhacén\", johdanto-osa (tarkistettu 29.8.2026)."
     },
@@ -42,9 +44,24 @@
         "Kuinka kapea Gibraltarinsalmi todella on?",
         "Mitä Espanjan Välimeren rannikolla kalastetaan?"
       ],
-      "korostukset": ["Gibraltarinsalmi|Gibraltarinsalmen"],
+      "korostukset": [
+        "Gibraltarinsalmi|Gibraltarinsalmen"
+      ],
       "teksti": "Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Espanja on ainoa maa, jolla on rantaa sekä tällä merellä että Atlantilla.",
       "lahde": "en-Wikipedia \"Mediterranean Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Gibraltarinsalmi",
+      "lon": -5.6,
+      "lat": 35.95,
+      "lahdeKoordinaatti": "salmen keskiosa Tarifan ja Tangerin välissä",
+      "nappi": "Herkuleen patsaiden salmi",
+      "kysymykset": [
+        "Mitä Herkuleen patsaat ovat?",
+        "Mitä Trafalgarin taistelussa tapahtui?"
+      ],
+      "teksti": "Gibraltarinsalmi yhdistää Atlantin ja Välimeren. Sen pohjoisrannalla ovat Espanja ja Britannian Gibraltar, eteläpuolella Marokko ja Espanjan Ceuta. Kapeimmillaan salmi on noin 13–14 kilometriä leveä, ja syvyys vaihtelee noin 300 metristä 900 metriin. Antiikissa salmen kahta kallioniemeä sanottiin Herkuleen patsaiksi.",
+      "lahde": "en-Wikipedia \"Strait of Gibraltar\", johdanto-osa ja Geography-osa (tarkistettu 16.10.2026); WorldAtlas \"Strait of Gibraltar\"; Livius \"Pillars of Heracles\"."
     }
   ],
   "joet": [
