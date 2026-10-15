@@ -25,7 +25,7 @@ a) Louvren kulman B pari (PT 22.5x + Linnanrakentaja local_996d60ab: käytä LR:
    katso kuva, lisää RGB-taulukko $D/louvre1/HAVAINNOT-v2.md:hen (kuten v2e), polku LR:lle ja PT:lle. Jos kuva puuttuu, aja skripti uudelleen.
 b) Heti sen jälkeen "SIMU VAPAA" Julkaisijalle.
 
-## 2. Seuraava käännös (Julkaisija jonossa): testi-196 f8addb9c9 → $D/tulivuoret/app/
+## 2. Seuraava käännös: testi-196 f8addb9c9 KÄÄNNETTY db72524c2 23.14 → $D/tulivuoret/app/ (Julkaisija; simu pyydettävä uudelleen, en ottanut vuoroa)
 Julkaisija ilmoittaa "KÄÄNNETTY + SIMU NYT". HUOM: f8addb9c9 EI sisällä salamat v3:a eikä tulivuoret v7:ää (tehty jälkeen, ks. 3).
 Ennen ajoja kannattaa pyytää uusi käännös, jossa ne ovat: tee testi-196:ssa `git merge linssiseppa2/salamat-196` (432fab535,
 sisältää salamat v3 9e008fe11 ja tulivuoret v7 7b71353a6; worktree wt/proto-linssiseppa2-testi; LinssiOhjain-ristiriita ratkaistaan kuten
