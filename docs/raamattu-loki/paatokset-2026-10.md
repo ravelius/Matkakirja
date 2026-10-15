@@ -243,3 +243,7 @@ Omistaja kysyi 23.0x: "Pitäisikö iss näkymään lisätä samoja efektejä kui
 2) TÄHDENLENNOT: aseman alapuolella oikeiden meteoriparvien aikaan (Orionidit ~21.10., Leonidit 17.11., Geminidit 14.12.). Kohokohta vie Perseidien hetkeen.
 3) VÄREILY (asemalta ei näe → kaksi paikkaa): raketin laukaisun liekin yläpuolelle sekä horisontin aurinkoon, joka litistyy ja aaltoilee nousussa ja laskussa (kiertoradan auringonnousu).
 Kaikki kytkimen taakse; omistaja näkee videon ennen kytkentää. Toteutus: Valoseppä (efektit) + Pelikoodari (säätieto ja meteoriparvien ajat ISS-näkymään).
+
+## PAATOKSET 15.10.2026 klo 23.35: Asemataulun cronit aina nollauksen jälkeen (15.10.2026 klo 23.35)
+
+Omistaja (kortti KK:ssa, "Kyllä, aina nollauksen jälkeen (Suositus)") klo 23.35: Asemataulun hoitaja luo päivityscronit (A */5, B 13,43, kulutus 7) aina heti nollauksen jälkeen ilman uutta lupaa. Syy: hoitaja kieltäytyi 21.15 luomasta croneja Postivahdin (vertaisen) pyynnöstä, ja taulu jäi klo 21.11:n tilaan; omistaja painoi 23.30 Päivitä-nappia, KK päivitti taulun 23.33. Kirjattu Raamattuun (SILMUKAT, VAHDIT JA OHJETIEDOSTOT, kohta 3) ja tools/tyotavat/ASEMATAULU-ROOLI.md:hen.
