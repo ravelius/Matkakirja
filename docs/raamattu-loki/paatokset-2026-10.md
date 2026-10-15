@@ -268,3 +268,7 @@ niiden pitäisi olla täysin korin reunaan sidotun näköisiä."
 JAKO (junaan 196): neliöt → Karttaseppä (+ PK:n Marokko-laattalohko); intro-fps, aarteen merkki sivuun + sykkivä piste, visanostoista vihreä pois → Natiivi-UI; tuplaklikkaus-maakunta, Mac-hipaisu,
 kohtaamiskysymyksen ajoitus + ääni hiljemmalle + paljastusanimaatio → Pelikoodari; merinostot natiiviin klikattaviksi (VAIN EUROOPPA; tekstit on jo webissä, 124 merinostoa 84 maassa) → Siirtoseppä;
 Pulun merikysymykset luonnoksena omistajalle → Sisältökirjuri; Pariisin kippi (este karkeasta laatasta?, pehmeä linja, köydet koriin) → Linssiseppä.
+
+## PAATOKSET 16.10.2026 klo 00.17: pallokierrosten koko reitin karkea esilataus (16.10.2026 klo 00.17)
+
+Omistaja (kortti KK:ssa, "Kyllä, junaan 196 (Suositus)") klo 00.17: pallokierroksille koko reitin karkea esilataus ennen lähtöä, ja tarkennus etenee pallon edellä; Linssiseppä tekee Pariisin kippikorjausten yhteydessä. Kortin ehto hyväksytty: pallon korkeus ja este luetaan vain tarkasta mallista, ei karkeasta laatasta (muuten karkeat möhkäleet pysäyttävät pallon). Tausta: omistajan 00.11 havainto Notre-Damen hitaasta lähestymisestä; nykyisin Cesium tarkentaa karkeasta, preloadAncestors+forbidHoles vain isomuistisilla laitteilla, reitin esilatausta ei ollut (vain saapumislaatat).
