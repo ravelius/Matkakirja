@@ -92,3 +92,34 @@ silloin äänessä olla kertoja? En ole tästä ihan varma." + kortti "Kyllä, n
 loppusanojen jälkeen Pulu kertoo äänellä, että nyt saa lentää itse ja kysyä rakennuksista, ja vapaan lennon ohjaimet tulevat esiin. 2) "Mikä tämä on?" -nappi (olemassa oleva nappipohja) → pelaaja
 napauttaa rakennusta → Pulu vastaa aina lyhyesti omalla äänellään (striimipuhe); jos rakennuksesta on esittely, Pulu tiivistää sen pääasiat esittelytekstistä; tunnistamattomasta Pulu sanoo suoraan,
 ettei tunne sitä (ei arvailua). 3) Pulun kutsurepliikki äänisivun Tekstit-osastoon omistajan hyväksyttäväksi ennen äänitystä. Toteutus junan 194 jälkeen, Pariisi ensin.
+
+## PAATOKSET 15.10.2026 klo 17.0x: AARREJAHDIN ALKU ISOISÄN UNI (15.10.2026 klo 17.11)
+
+Omistaja 16.33 (sanatarkasti): "nykyinen isoisän piirros ei ole houkutteleva aarre jahtiin. pitäisi ehkä esitellä niitä kaikkia aarteita mitä aarnin luettelossa on ja näyttää niistä tehtyjä upeita
+codexin havainnekuvia unimaisina kuvina, eli feidautuen näkyviin ja pois hieman eri kohtiin näyttöä suhteellisen isoina ja niin että kuvan rajat eivät näy vaan ne häipyvät pehmeästi läpinäkyviksi.
+ehkä kaikkia aarteita ei tarvitse näyttää mutta ehkä kolme tai neljä kaikkein näyttävintä voisi näyttää. ja miten isoisän tekstin rakentaisi uudelleen? kaikkea ei tarvitsisi paljastaa mutta
+jonkinlainen odotus löydettävistä aarteista pitäisi luoda. mitä olet mieltä?" KK:n suositukseen "hyvä idea. tosin missä vaiheessa aarnin luettelo sitten paljastuu? vai pitäisikö se mainita jo tässä
+alussa? ja pitäisikö ensimmäisestä kaupungista jättää intro pois vai pitäisikö tämä tulla ennen introa? mitä olet mieltä?"; jatkokortti 17.0x: "Kun Kolme veljestä löytyy (Suositus)" ja "Ennen
+aloituslentoa (Suositus)". Päätös: uni alkusoittona Uusi matka -valinnan jälkeen ennen aloituslentoa; kolme unikuvaa (El Dorado, Montezuman turkoosinaamio, keisarin jadesinetti) + Kolme veljestä,
+reunat pehmeästi läpinäkyviksi; Eteläristin helmi ei mukaan (1883); Aarnia ja luetteloa ei mainita, luettelo paljastuu kun Kolme veljestä löytyy; kaupungin intro säilyy, isoisän aarreluenta saapumisen
+jälkeen pois; uusi isoisän teksti SK:n faktantarkistukseen ja omistajan hyväksyntään Tekstit-osastossa ennen äänitystä. Junasta 195 eteenpäin.
+
+## PAATOKSET 15.10.2026 klo 17.12: ALOITUSKAUPUNGISSA EI ISOISÄN PUHETTA (15.10.2026 klo 17.13)
+
+Omistaja 17.12 (sanatarkasti, tarkentaa 17.0x:n Isoisän unen): "Se onkin itse asiassa ihan hyvä, että lennon ja intron jälkeen ei tule enää mitään isoisän puhetta, vaan Pulu voi suoraan aloittaa siitä, että pöllö on kadonnut, ja kertoa sitten, miten peliä pelataan, ja ensimmäinen isoisän matkakirja. Teksti tuleekin vasta seuraavassa kaupungissa, niin ei tule liikaa puhetta heti siinä alussa." Päätös: aloituskaupungissa intron jälkeen ei isoisän luentaa; Pulu aloittaa Pöllön katoamisesta ja kertoo pelin; isoisän ensimmäinen matkakirjateksti vasta seuraavassa kaupungissa; Pulun repliikit Tekstit-osastoon hyväksyttäväksi.
+
+## PAATOKSET 15.10.2026 klo 17.17: LOUVRE V2D POHJAKSI, JATKO TAVOITELUUPPINA (15.10.2026 klo 17.22)
+
+Omistaja 17.17 (Louvre-kortti, kuvapari v2d, sanatarkasti): "kyllä ja hydynnetäänkö tässä nyt sitten sitä loop ajattelua ja tiedätkö mitä sillä tarkoitan ja jos kyllä, niin miten sitä aiotaan toteuttaa?" KK:n kuvaama toteutus: tavoite omasta aineistosta (LiDAR HD 50 cm, orto 20 cm, Commons-julkisivukuvat → Codex-havainnekuvat pallokierroksen kulmista ilman lasipyramidia + varmennetut kohdemaskit alussa), ei Googlen näkymästä; lisäksi lähikulmat julkisivuista ja kiveyksestä; joka kierros vertaa.py + tuore Sonnet-arvioija (3 suurinta eroa); pysähdys rajoissa / 2 ilman parannusta / 10 kierrosta; omistajalle uusi kuvapari ennen peliin kytkemistä. Tekijä Linnanrakentaja, Valoseppä vie peliin. Pyramidi Googlelta, sen ympäriltä Googlen sulanut reunus pois; ratsastajapatsas (Berninin teoksen kopio) saa mallintaa.
+
+## PAATOKSET 15.10.2026 klo 17.18: PEKINGIN PIILOTETTU TESTIKAUPUNKI OMISTAJALLE (15.10.2026 klo 17.22)
+
+Omistaja 17.18 (sanatarkasti): "Jossain vaiheessa olisi hauska kokeilla sitä Pekingiä, mitä nyt on rakennettu, että toimiiko se paremmin, kun se pyörii kokonaan oman aineiston päällä ja miltä se näyttää. Pystyykö siitä tekemään tällaista välitestiversiota? Riittää ihan, että voisin vain lennellä kuumailmapallolla siellä ja kokeilla. Siihen saisi kyllä silloin jo lisätä kaikki mahdolliset grafiikkaherkut, mitä muissa kipeissä on jo käytössä." Toteutus (KK:n suositus): piilotettu testikaupunki vain omistajalle kehityslipun takana, muille Peking pysyy OFFGAME; Codexin viimeisin oma malli ilman Googlen laattoja, vapaa pallolento, samat grafiikkaherkut kuin muissa pallokaupungeissa; välivedos. Tekijä Valoseppä junan 194 TF:n jälkeen, Codex toimittaa mallipaketin; kohde juna 196.
+
+## PAATOKSET 15.10.2026 klo 17.22: UUDET 3D-MALLIT CODEXILLE, LOUVRE VERTAILUKSI CLAUDELLA (15.10.2026 klo 17.23)
+
+Omistaja 17.22 (sanatarkasti): "toisaalta näitä 3d hommia voisi siirtää jatkossa codexille, niin saadaan ohjattua tokenien käyttöä myös sinne. tämä louvre voidaan tehdä kyllä tässä clauden puolella vielä niin saadaan samalla vertailua miten onnistuu" Päätös: uudet 3D-mallit (maamerkit, rakennukset) tilataan jatkossa Codexilta; pelin kytkentä, laattojen vienti ja tarkistukset Clauden rooleille. Louvre Claudella (LR, tavoiteluuppi) vertailuksi: kierrokset, kesto, kulutus ja lopputulos kirjataan ja verrataan Codexin seuraavaan vastaavaan maamerkkiin.
+
+## PAATOKSET 15.10.2026 klo 17.23–17.24: LUUPIN TYÖNJAKO; JUNA 195 VASTA PYYNNÖSTÄ (15.10.2026 klo 17.25)
+
+Omistaja 17.23 (sanatarkasti): "Tuota luuppia varten varmaan kannattaa tehdä eritasoisia sessioita, jotka tekevät eri osia, jotta saadaan tästä mahdollisimman nopea ja tokenystävällinen ratkaisu. Mutta sinä varmasti osaat sanoa, miten se käytännössä kannattaa tehdä. Eli paras mahdollinen lopputulos, niin nopeasti ja halvalla kuin mahdollista." KK:n työnjako (Raamattu TAVOITELUUPPI, LUUPIN TYÖNJAKO): Codex tavoitteet+maskit, LR rakentaja Opus medium kierroslokista, kierrosskripti, tuore Sonnet-arvioija, mekaaniset Sonnetille, Valoseppä peliin, PT vain tavoitteet ja lopputarkistus. Omistaja 17.24 (sanatarkasti): "tehdään juna 195 vasta sitten kun pyydän" → juna 195 kertyy, lukitus/TF vasta omistajan pyynnöstä.
