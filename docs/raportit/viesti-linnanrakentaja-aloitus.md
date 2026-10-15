@@ -8,7 +8,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **UUSIN (15.10. 12.5x, tilinvaihdon jälkeen):** valaan luuranko VALMIS: proto-haara `linnanrakentaja/valas-luuranko-195` @ b55630222
+1. **NYT (15.10. 16.1x, nollaus kovalla rajalla):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261015-iltapaiva.md` KOKONAAN.
+   LOUVRE ensin (omistajan päätös 16.05, junaan 194 jos kuitattu): v1 + vienti + leikkaus valmiit `proto-3d/_valmiit/louvre-v1/`,
+   seuraavaksi v1-arkki + kamerakulma PT:lle → Valosepän pelikuvapari. Valaan luuranko Valosepällä.
+1. **(vanha) 15.10. 12.5x, tilinvaihdon jälkeen:** valaan luuranko VALMIS: proto-haara `linnanrakentaja/valas-luuranko-195` @ b55630222
    (worktree /Users/Shared/Claude/wt/proto-linnanrakentaja-valasluuranko – poista kun Valoseppä on ottanut haaran), Iss.ValaanLuusto +
    RakettiValas.shader/cs, testit 1839/1839; selitys `proto-3d/_valmiit/valas-v1/LUEMINUT.md` lopussa. Viety Valosepälle (local_c238f4af…) ja PT:lle
    (local_5df52e10…). Id:t osoitekirjasta. Odota Valosepän vahtikuvat (amplitudit ValaanLuusto.cs:n taulukoissa) tai PT:n erä.
