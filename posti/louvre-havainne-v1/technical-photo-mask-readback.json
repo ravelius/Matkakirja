@@ -1,0 +1,43 @@
+{
+  "taskNumber": 285,
+  "continuationTask": 298,
+  "verifiedAt": "2026-10-15T15:17:44.504458+00:00",
+  "photo": {
+    "file": "louvre-K1.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "sha256": "b50ad80ca50f55767f406d509b699eac0c40f97080e285e065c761aa437ebe03",
+    "bytes": 3211665
+  },
+  "mask": {
+    "file": "louvre-K1-maski.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "L",
+    "uniqueValues": [
+      0,
+      255
+    ],
+    "whitePixelCount": 651247,
+    "blackPixelCount": 921617,
+    "sha256": "11f14a741dec7d9129f8adb2a01e5efcf58dff6f9da7e4eda695b239b925474c",
+    "bytes": 7315
+  },
+  "ownMaskProvenanceFile": "mask-provenance.json",
+  "rootReviewFile": "root-mask-review.json",
+  "nativeLiDARReferenceAvailable": false,
+  "IoU": null,
+  "IoUThreshold": 0.95,
+  "IoUPassed": null,
+  "old2400MaskResampledForIoU": false,
+  "acceptedAsBindingTarget": false,
+  "nativePhotoUnchanged": true,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "generationCallsCompleted": 1
+}

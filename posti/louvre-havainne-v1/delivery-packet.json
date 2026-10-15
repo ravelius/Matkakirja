@@ -1,0 +1,157 @@
+{
+  "createdAt": "2026-10-15T15:19:47.816768+00:00",
+  "taskNumber": 285,
+  "continuationTask": 298,
+  "scope": "First K1 native photo and own mask for Linnanrakentaja and PT review only",
+  "sourceAuthorization": {
+    "taskNumber": 298,
+    "sourceCommit": "98c3dcfe4f11a7cf295c33b4a03b09ab3dc30970",
+    "sourcePath": "posti/linnanrakentaja-codex-louvre-vastaus-20261015.md",
+    "sourceBlob": "2be2ca8a10c4b41f475c257f94322d07a3b8f0cc",
+    "sourceSHA256": "ff946da68526255ab5a41bc741f569599af0b7dea61895e8c76550ff84501703",
+    "sourceReadInFull": true,
+    "recordedAt": "2026-10-15T15:05:54.113773+00:00",
+    "APIAllowed": false,
+    "CLIAllowed": false,
+    "paidModelAccessCheckAllowed": false,
+    "builtinNativeSizeAllowed": true,
+    "upscalingAllowed": false,
+    "postGenerationCropOrStretchAllowed": false,
+    "requestedAspectK1": "3:2",
+    "differentNativeAspectMayBeDeliveredUnchanged": true,
+    "keepCameraAndVFOV": true,
+    "onlyHorizontalFOVMayChangeToActualNativeAspect": true,
+    "ownMaskMustMatchActualNativeDimensions": true,
+    "LiDARReferenceMustBeFreshNativeRenderByLinnanrakentaja": true,
+    "downsampled2400ReferenceMaskNotAllowedAsIoUReference": true,
+    "IoUThresholdRemains": 0.95,
+    "authorizedNow": [
+      "K1 one whole new image and own mask"
+    ],
+    "K2toK7AwaitFeedback": true,
+    "stopAfterK1Delivery": true,
+    "oldAPIQuestionSuperseded": true,
+    "Q1075988PalaceConfirmed": true,
+    "noK8": true,
+    "dreamSequenceWasNotInterrupted": true
+  },
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "aspect": "3:2",
+  "generationCallsIssued": 1,
+  "generationCallsCompleted": 1,
+  "ownMaskDerivedFromActualPhoto": true,
+  "maskIndependentlyCertified": false,
+  "nativeLiDARReferenceAvailable": false,
+  "IoU": null,
+  "IoUThreshold": 0.95,
+  "IoUPassed": null,
+  "outputPhysicalCameraVerified": false,
+  "old2400MaskResampledForIoU": false,
+  "acceptedAsBindingTarget": false,
+  "PTAccepted": false,
+  "furtherGenerationAllowed": false,
+  "K2toK7Started": false,
+  "upscaled": false,
+  "cropped": false,
+  "partiallyEdited": false,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "R2Used": false,
+  "gameIntegrated": false,
+  "mainMerged": false,
+  "published": false,
+  "files": {
+    "posti/louvre-havainne-v1/louvre-K1.png": {
+      "sha256": "b50ad80ca50f55767f406d509b699eac0c40f97080e285e065c761aa437ebe03",
+      "bytes": 3211665
+    },
+    "posti/louvre-havainne-v1/louvre-K1-maski.png": {
+      "sha256": "11f14a741dec7d9129f8adb2a01e5efcf58dff6f9da7e4eda695b239b925474c",
+      "bytes": 7315
+    },
+    "posti/louvre-havainne-v1/native-camera-specification.json": {
+      "sha256": "ad5aae50ca18792ef3a13091414edcae0d075af7bc07446c4ddab0bf7c10dd1f",
+      "bytes": 1032
+    },
+    "posti/louvre-havainne-v1/prompt-task298.txt": {
+      "sha256": "6d0a41cd3d9e5b99a512547c378818cb8d1a62163eaddaff4153c0dd0fb35499",
+      "bytes": 4801
+    },
+    "posti/louvre-havainne-v1/actual-reference-roles-task298.json": {
+      "sha256": "f34c5588ddd9b9517b08ce4a510e41bb265b2bceff3a3667212d6b50c69f33d8",
+      "bytes": 2689
+    },
+    "posti/louvre-havainne-v1/generation-call-record.json": {
+      "sha256": "4dac29ca90f854208d9fbdceba6e9e077f5e4712a0e01472983a099336beb2e0",
+      "bytes": 966
+    },
+    "posti/louvre-havainne-v1/native-file-readback.json": {
+      "sha256": "f767851c4b50666b7b34a5794dfe7a56fbf050318c8e2124affb4c30eae70172",
+      "bytes": 941
+    },
+    "posti/louvre-havainne-v1/mask-provenance.json": {
+      "sha256": "f8a25af20eb2f097fa0c3c8c94073a8fcc467712eb36f290f620411f0d95ea70",
+      "bytes": 29782
+    },
+    "posti/louvre-havainne-v1/make-own-mask.py": {
+      "sha256": "cbce4821a4b75b93c747c595a13cc6fb8a9565b1527c9f65c14f1cfef0594371",
+      "bytes": 11258
+    },
+    "posti/louvre-havainne-v1/QA-own-mask-overlay.png": {
+      "sha256": "958a7bdcad139344f59603a93f4f3254fe965bbe99d3e89fd748ba3d45ce2b26",
+      "bytes": 2783181
+    },
+    "posti/louvre-havainne-v1/technical-photo-mask-readback.json": {
+      "sha256": "fce8c2eb3392bb3f5396b402b203eeb5528f3cc37772c274182e4173a53cc117",
+      "bytes": 1029
+    },
+    "posti/louvre-havainne-v1/visual-QA.json": {
+      "sha256": "62fa22cb1bda5ebd41b50c809e5b0b229a8cd22fefb0dd813fa254104fd0175a",
+      "bytes": 2458
+    },
+    "posti/louvre-havainne-v1/root-mask-review.json": {
+      "sha256": "a32c0a6a9c8aa2c244da2ca3f64f8df3fe373a23bb96bdbf456cdfd42a8dd134",
+      "bytes": 1379
+    },
+    "posti/louvre-havainne-v1/QA-FI.md": {
+      "sha256": "9bba042d3c9d44922112f847ed2c9ad106564df926149640220e9797353b2883",
+      "bytes": 2203
+    },
+    "posti/louvre-havainne-v1/acceptance-protocol-task298.json": {
+      "sha256": "d73094d4a501ef4deec6caa089190735effaa2b92d87d22e1eed13d2f8b31366",
+      "bytes": 2662
+    },
+    "posti/louvre-havainne-v1/K1-photo-own-mask-review.png": {
+      "sha256": "df7b38d1064f3681f857098439fb4504c2250909dcadebcaf568de872072e7a5",
+      "bytes": 777278
+    },
+    "posti/louvre-havainne-v1/sources/linnanrakentaja-codex-louvre-vastaus-20261015.md": {
+      "sha256": "ff946da68526255ab5a41bc741f569599af0b7dea61895e8c76550ff84501703",
+      "bytes": 1520
+    },
+    "posti/louvre-havainne-v1/sources/authorization.json": {
+      "sha256": "7a231c000992ba4f1020e75d4e87e8602920ccdc9ba4aae393be21a139e1ec61",
+      "bytes": 1227
+    },
+    "posti/louvre-havainne-v1/sources/incoming-manifest.json": {
+      "sha256": "5be81805decb941f9741c41edce63aec9166c8cca71e98dcc86cf15a9aab5a5a",
+      "bytes": 23368
+    },
+    "posti/louvre-havainne-v1/sources/louvre-LAHTEET.md": {
+      "sha256": "f1320eb51dec60a506301533759685256525c71905780a390304bb778d7f2606",
+      "bytes": 4473
+    },
+    "posti/louvre-havainne-v1/sources/louvre-codex-tilaus.md": {
+      "sha256": "74026ce85d1fed36210aaf23eedf384729d851f6fb8f663c3d1706074f2834c3",
+      "bytes": 6900
+    },
+    "posti/louvre-havainne-v1/sources/louvre-kulmat.json": {
+      "sha256": "a40d646237d88fb20793b311fe5dba699363e705a80d241e2f1666f732263037",
+      "bytes": 4201
+    }
+  },
+  "manifestNote": "This file excludes itself; post-push receipt covers the entire outgoing package and letter."
+}

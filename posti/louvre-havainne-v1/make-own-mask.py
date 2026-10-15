@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+"""Replay an independent manual silhouette trace of louvre-K1.png.
+No reference/target/LiDAR mask is read. All points are native image pixels.
+"""
+from pathlib import Path
+import hashlib, json, datetime
+from PIL import Image, ImageDraw, ImageFilter
+
+ROOT = Path(__file__).resolve().parent
+SOURCE = ROOT / 'louvre-K1.png'
+MASK = ROOT / 'louvre-K1-maski.png'
+OVERLAY = ROOT / 'QA-own-mask-overlay.png'
+PROVENANCE = ROOT / 'mask-provenance.json'
+def sha256(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+source_hash_before = sha256(SOURCE)
+im = Image.open(SOURCE)
+assert im.size == (1536,1024), im.size
+im = im.convert('RGB')
+
+# A single non-convex foreground U, following the roofs on its outside and
+# the visible facade/ground contact around the open central courtyard inside.
+# Windows, facade arcades and their dark interiors are retained as palace mass.
+polygons = {
+'main_U_foreground_and_central_rear': [
+(0,594),(5,581),(18,580),(22,570),(38,569),(40,558),(58,556),(64,550),(78,548),(81,537),(104,536),(105,500),(113,493),(145,488),(158,453),(190,373),(196,355),(234,352),(266,340),(272,348),(274,359),(281,370),(291,387),(308,402),(316,394),(324,390),(326,401),(333,398),(340,404),(344,417),(352,413),(359,416),(367,409),(378,408),(384,400),(390,398),(394,378),(405,375),(413,369),(417,351),(426,347),(434,323),(445,319),(451,329),(464,338),(494,338),(501,330),(534,331),(547,324),(551,315),(570,311),(577,281),(587,250),(594,246),(617,245),(626,242),(639,244),(647,262),(722,259),(731,245),(737,226),(749,223),(758,223),(762,215),(765,201),(766,188),(769,189),(770,211),(775,215),(785,219),(788,224),(797,236),(804,259),(867,259),(876,247),(886,244),(915,244),(923,247),(934,287),(940,289),(949,307),(952,320),(973,345),(979,348),(979,370),(995,380),(1000,388),(1004,390),(1005,401),(1022,405),(1035,405),(1056,415),(1059,432),(1064,443),(1074,444),(1080,447),(1085,449),(1091,454),(1093,449),(1107,449),(1114,455),(1118,463),(1122,466),(1128,476),(1144,482),(1154,477),(1156,442),(1165,436),(1176,416),(1200,384),(1212,367),(1225,355),(1229,345),(1237,341),(1240,336),(1246,337),(1248,346),(1261,353),(1274,355),(1280,353),(1282,343),(1290,340),(1297,341),(1300,350),(1333,353),(1346,346),(1351,344),(1364,348),(1373,356),(1380,373),(1414,473),(1419,481),(1423,491),(1418,498),(1418,565),(1426,578),(1426,593),(1440,610),(1458,619),(1469,629),(1474,625),(1483,624),(1491,631),(1492,649),(1497,661),(1504,674),(1535,703),(1535,1023),(1324,1023),(1310,998),(1293,968),(1269,932),(1253,907),(1236,876),(1224,855),(1214,837),(1199,813),(1183,786),(1169,763),(1158,743),(1149,731),(1143,709),(1139,687),(1125,679),(1113,678),(1048,680),(1011,681),(979,679),(975,659),(969,629),(964,597),(956,558),(948,522),(941,491),(932,460),(923,433),(918,421),(914,417),(907,418),(900,420),(634,419),(630,430),(624,449),(617,466),(610,484),(603,502),(596,522),(590,541),(584,561),(579,582),(574,602),(568,623),(562,645),(558,667),(550,679),(384,680),(367,691),(349,708),(329,726),(311,743),(294,760),(274,779),(254,798),(233,821),(211,844),(188,867),(166,889),(144,911),(123,933),(102,957),(80,981),(59,1004),(41,1023),(0,1023)
+],
+'left_rear_diagonal_wing': [
+(0,310),(31,309),(65,308),(69,315),(132,319),(143,310),(147,300),(176,300),(176,294),(191,293),(198,294),(199,304),(212,306),(243,301),(285,295),(330,287),(338,287),(348,301),(354,324),(350,344),(328,350),(303,359),(292,373),(265,375),(237,388),(213,400),(193,425),(158,434),(125,444),(91,453),(40,468),(0,481)
+],
+'left_lower_rear_roof_and_facade': [
+(0,386),(24,380),(56,376),(77,379),(92,383),(96,380),(110,382),(128,387),(144,394),(160,405),(157,419),(131,432),(104,442),(75,451),(51,459),(21,468),(0,474)
+],
+'left_back_palace_like_block_uncertain_identity': [
+(141,263),(149,255),(156,252),(166,253),(174,251),(177,249),(189,249),(191,247),(197,247),(199,244),(204,248),(280,248),(285,246),(286,239),(290,241),(291,248),(310,251),(318,256),(324,257),(326,252),(330,254),(333,264),(336,281),(338,288),(307,293),(270,298),(227,307),(204,310),(188,302),(175,302),(174,306),(142,306)
+],
+'left_small_back_palace_like_block_uncertain_identity': [
+(349,285),(355,274),(363,268),(374,266),(377,262),(381,264),(400,263),(405,265),(407,262),(417,264),(422,261),(432,265),(439,269),(445,267),(451,278),(456,288),(452,309),(440,320),(416,320),(407,327),(354,344),(347,327)
+],
+'left_rear_horizontal_wing': [
+(455,287),(462,285),(466,282),(473,284),(478,287),(569,287),(580,279),(578,309),(570,326),(548,339),(461,340)
+],
+'left_inner_roof_group': [
+(288,354),(305,345),(327,340),(349,336),(373,330),(401,321),(423,311),(432,299),(437,291),(444,291),(448,297),(450,310),(457,322),(469,329),(481,331),(503,332),(525,331),(546,327),(559,319),(578,318),(587,319),(581,334),(570,350),(561,372),(552,394),(539,411),(517,408),(496,402),(467,405),(444,412),(418,412),(393,410),(369,412),(345,421),(326,414),(309,402),(299,385)
+],
+'right_rear_horizontal_wing': [
+(927,287),(950,286),(952,282),(957,286),(1064,286),(1071,284),(1082,280),(1086,286),(1094,298),(1095,322),(1080,349),(1081,385),(1002,384),(989,366),(958,343),(946,321)
+],
+'right_rear_diagonal_roof_wing': [
+(1087,298),(1114,300),(1119,303),(1145,304),(1163,308),(1185,316),(1194,323),(1216,331),(1244,339),(1280,345),(1270,362),(1255,359),(1233,353),(1220,349),(1213,359),(1204,373),(1194,386),(1187,402),(1176,416),(1156,437),(1138,425),(1126,406),(1103,393),(1079,378),(1081,353),(1072,330)
+],
+'right_inner_roof_group': [
+(988,389),(1014,389),(1039,387),(1048,384),(1065,388),(1075,394),(1090,397),(1101,405),(1122,408),(1131,415),(1143,427),(1154,443),(1160,461),(1154,480),(1142,492),(1130,496),(1119,480),(1104,472),(1084,463),(1064,451),(1046,442),(1026,430),(1011,415),(996,405)
+],
+'right_back_court_building': [
+(1357,383),(1370,382),(1371,377),(1377,380),(1383,383),(1477,383),(1482,380),(1486,383),(1487,392),(1505,396),(1506,390),(1513,388),(1516,380),(1523,380),(1526,389),(1535,391),(1535,532),(1508,520),(1488,507),(1465,499),(1421,501),(1407,500),(1388,487),(1381,458)
+]
+}
+# Close gaps only where source crops show a roof or facade, not an open court.
+polygons['left_visible_roof_facade_continuity'] = [(281,343),(427,298),(461,299),(467,340),(437,379),(385,415),(312,415),(283,377)]
+polygons['right_visible_roof_facade_continuity'] = [(980,350),(1012,350),(1040,350),(1071,350),(1128,400),(1166,429),(1154,445),(1099,430),(1042,409),(991,399)]
+polygons['right_small_visible_facade_join'] = [(976,350),(1000,350),(1000,398),(976,398)]
+polygons['right_small_visible_roof_join'] = [(1147,420),(1170,420),(1170,442),(1147,442)]
+# Visible vegetation within the rear roof group is subtracted after building union.
+holes = {
+'right_tree_in_small_court': [(1174,339),(1180,331),(1189,328),(1198,330),(1207,331),(1214,337),(1218,344),(1216,354),(1211,364),(1205,371),(1195,374),(1185,372),(1179,365),(1174,355)]
+}
+mask=Image.new('L',im.size,0); d=ImageDraw.Draw(mask)
+for points in polygons.values(): d.polygon(points,fill=255)
+for points in holes.values(): d.polygon(points,fill=0)
+# The mask stays native-resolution and is not antialiased/resized.
+assert set(mask.tobytes()) == {0,255}
+mask.save(MASK)
+# Diagnostic, derived from the source plus a translucent tint and one-pixel edge.
+tint=Image.new('RGB',im.size,(255,30,110))
+alpha=mask.point(lambda p: 64 if p else 0)
+overlay=Image.composite(tint,im,alpha)
+edge=mask.filter(ImageFilter.MaxFilter(3)).point(lambda p: p)
+import PIL.ImageChops
+edge=PIL.ImageChops.difference(edge,mask)
+overlay.paste((255,230,0),(0,0),edge)
+od=ImageDraw.Draw(overlay);od.rectangle((1060,8,1527,48),fill=(20,20,20));od.text((1070,15),'OWN IMAGE MASK | 255 palace / 0 other',fill='white');od.text((1070,30),'Diagnostic only; independent geometry certification: false',fill='white')
+overlay.save(OVERLAY)
+source_hash_after=sha256(SOURCE)
+assert source_hash_before==source_hash_after
+counts=mask.histogram()
+prov={
+'schemaVersion':1,
+'createdAtUTC':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+'sourceImage':{'path':str(SOURCE),'size':[1536,1024],'sha256Before':source_hash_before,'sha256After':source_hash_after,'bytesPreserved':source_hash_before==source_hash_after},
+'outputMask':{'path':str(MASK),'mode':'L','bitDepth':8,'size':[1536,1024],'allowedValues':[0,255],'actualValues':sorted(set(mask.tobytes())),'whitePixels':counts[255],'blackPixels':counts[0],'sha256':sha256(MASK)},
+'overlay':{'path':str(OVERLAY),'sha256':sha256(OVERLAY),'diagnosticOnly':True},
+'method':{'kind':'manual native-pixel polygon trace after viewing entire native photograph and upper-building crops','referenceInput':'louvre-K1.png only','replayScript':str(Path(__file__).resolve()),'replayScriptSha256':sha256(Path(__file__)),'rasterization':'Pillow ImageDraw integer polygon fill; union of observed building components, then subtract observed courtyard/vegetation holes; no smoothing, antialiasing, resize, target fitting or IoU optimization','polygons255':polygons,'holes0':holes},
+'filledOccludedRegions':[],
+'occlusionPolicy':'No hidden palace footprint is certified or filled behind trees. Visible roof/facade mass and dark facade windows/arcades are filled; actually open courtyards are excluded. Tiny facade relief/statues are manually approximated at native pixels.',
+'uncertainty':[
+'Image is generated and contains ambiguous/repeated rear palace-like blocks. The two named left back blocks are included on visual architectural/adjacency evidence only; their identity as real Louvre campus is unverified.',
+'The upper rear diagonal wing and side courtyard roof groups may be invented or spatially inconsistent. Their photographed extents are traced, not historically certified.',
+'Manual edge tracing has local uncertainty of several pixels, especially small roof ornaments, finials, balustrades, facade-ground contacts and tree/building overlap.',
+'Windows and arcade dark interiors are treated as part of the facade mass; this is a palace mass silhouette, not a per-material or per-opening segmentation.',
+'No LiDAR rerender or target mass mask was supplied/read. This output cannot establish geometric agreement with Louvre, camera correctness, or acceptance of the generated photograph.'
+],
+'excluded': ['distant city blocks and skyline','sky','visible vegetation','central open courtyard and side court gaps','equestrian statue and pedestal','all image text'],
+'independentlyCertified':False,
+'IoU':None,
+'IoUReason':'No native LiDAR rerender/reference mask supplied; no comparison performed.',
+'visualQA':{'status':'saved diagnostic overlay inspected at native whole-image extent and enlarged upper roof/facade crops; false courtyard guesses removed where source shows facades/roofs','sourceFullImageViewed':True,'referenceMaskRead':False,'limitations':'Rear palace identity and small ornament/ground edges remain approximate; no independent geometry certification.'},
+'hashesNote':'SHA-256 values cover source, mask, diagnostic overlay and replay script. Manifest excludes its own recursive hash.'
+}
+PROVENANCE.write_text(json.dumps(prov,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'mask':str(MASK),'overlay':str(OVERLAY),'provenance':str(PROVENANCE),'whitePixels':counts[255],'sourceSHA256':source_hash_after,'maskSHA256':sha256(MASK)},indent=2))

@@ -1,0 +1,66 @@
+{
+  "taskNumber": 285,
+  "continuationTask": 298,
+  "updatedAt": "2026-10-15T15:14:57.305445+00:00",
+  "currentAuthority": {
+    "taskNumber": 298,
+    "sourceCommit": "98c3dcfe4f11a7cf295c33b4a03b09ab3dc30970",
+    "sourcePath": "posti/linnanrakentaja-codex-louvre-vastaus-20261015.md",
+    "sourceBlob": "2be2ca8a10c4b41f475c257f94322d07a3b8f0cc",
+    "sourceSHA256": "ff946da68526255ab5a41bc741f569599af0b7dea61895e8c76550ff84501703",
+    "sourceReadInFull": true,
+    "recordedAt": "2026-10-15T15:05:54.113773+00:00",
+    "APIAllowed": false,
+    "CLIAllowed": false,
+    "paidModelAccessCheckAllowed": false,
+    "builtinNativeSizeAllowed": true,
+    "upscalingAllowed": false,
+    "postGenerationCropOrStretchAllowed": false,
+    "requestedAspectK1": "3:2",
+    "differentNativeAspectMayBeDeliveredUnchanged": true,
+    "keepCameraAndVFOV": true,
+    "onlyHorizontalFOVMayChangeToActualNativeAspect": true,
+    "ownMaskMustMatchActualNativeDimensions": true,
+    "LiDARReferenceMustBeFreshNativeRenderByLinnanrakentaja": true,
+    "downsampled2400ReferenceMaskNotAllowedAsIoUReference": true,
+    "IoUThresholdRemains": 0.95,
+    "authorizedNow": [
+      "K1 one whole new image and own mask"
+    ],
+    "K2toK7AwaitFeedback": true,
+    "stopAfterK1Delivery": true,
+    "oldAPIQuestionSuperseded": true,
+    "Q1075988PalaceConfirmed": true,
+    "noK8": true,
+    "dreamSequenceWasNotInterrupted": true
+  },
+  "photoAndOwnMaskDimensionsRequired": [
+    1536,
+    1024
+  ],
+  "maskModeRequired": "L",
+  "maskValuesRequired": [
+    0,
+    255
+  ],
+  "whiteMeans": "The palace depicted by this generated image, including only inferred palace pixels behind occluders.",
+  "blackMeans": "Sky, distant city outside the intended palace, courtyard voids and paving, vegetation, statue, people and label.",
+  "ownMaskMustBeDerivedFromActualPhoto": true,
+  "sourceLiDARMaskMustNotBeCopiedAsOwnMask": true,
+  "nativeReferenceProvider": "Linnanrakentaja",
+  "nativeReferenceAvailable": false,
+  "requiredReferenceConstruction": "Rerender LiDAR mass and mask at 1536x1024 from the original fixed camera and VFOV45. Do not resize the original 2400x1600 mask as a binding substitute.",
+  "originalCameraFile": "native-camera-specification.json",
+  "IoUFormula": "count(own AND reference) / count(own OR reference)",
+  "IoUThreshold": 0.95,
+  "IoU": null,
+  "IoUPassed": null,
+  "beforeAnyModelLoop": [
+    "Fresh native comparison by Linnanrakentaja",
+    "PT approval of K1 target"
+  ],
+  "stopAfterFirstPhotoAndMaskDelivery": true,
+  "K1RetryAuthorized": false,
+  "K2toK7AuthorizedToStart": false,
+  "historicalPreflight2400RequirementSupersededOnlyBySource298": true
+}

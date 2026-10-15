@@ -1,0 +1,28 @@
+{
+  "taskNumber": 285,
+  "continuationTask": 298,
+  "startedAt": "2026-10-15T15:05:54.113773+00:00",
+  "issued": 1,
+  "completed": 1,
+  "newWholeImage": true,
+  "builtinImageGenUsed": true,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "promptSHA256": "6d0a41cd3d9e5b99a512547c378818cb8d1a62163eaddaff4153c0dd0fb35499",
+  "referenceRolesPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K1/v1/actual-reference-roles-task298.json",
+  "nativeSizeReadbackPending": false,
+  "requestedAspect": "3:2",
+  "partialEditingMaskSupplied": false,
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "nativeSHA256": "b50ad80ca50f55767f406d509b699eac0c40f97080e285e065c761aa437ebe03",
+  "nativeBytes": 3211665,
+  "nativeOutputRecordedAt": "2026-10-15T15:08:19.875432+00:00",
+  "completionVerifiedAt": "2026-10-15T15:14:57.305445+00:00",
+  "upscaled": false,
+  "cropped": false,
+  "warped": false,
+  "partiallyEdited": false
+}

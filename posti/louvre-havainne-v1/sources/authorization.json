@@ -1,0 +1,32 @@
+{
+  "taskNumber": 298,
+  "sourceCommit": "98c3dcfe4f11a7cf295c33b4a03b09ab3dc30970",
+  "sourcePath": "posti/linnanrakentaja-codex-louvre-vastaus-20261015.md",
+  "sourceBlob": "2be2ca8a10c4b41f475c257f94322d07a3b8f0cc",
+  "sourceSHA256": "ff946da68526255ab5a41bc741f569599af0b7dea61895e8c76550ff84501703",
+  "sourceReadInFull": true,
+  "recordedAt": "2026-10-15T15:05:54.113773+00:00",
+  "APIAllowed": false,
+  "CLIAllowed": false,
+  "paidModelAccessCheckAllowed": false,
+  "builtinNativeSizeAllowed": true,
+  "upscalingAllowed": false,
+  "postGenerationCropOrStretchAllowed": false,
+  "requestedAspectK1": "3:2",
+  "differentNativeAspectMayBeDeliveredUnchanged": true,
+  "keepCameraAndVFOV": true,
+  "onlyHorizontalFOVMayChangeToActualNativeAspect": true,
+  "ownMaskMustMatchActualNativeDimensions": true,
+  "LiDARReferenceMustBeFreshNativeRenderByLinnanrakentaja": true,
+  "downsampled2400ReferenceMaskNotAllowedAsIoUReference": true,
+  "IoUThresholdRemains": 0.95,
+  "authorizedNow": [
+    "K1 one whole new image and own mask"
+  ],
+  "K2toK7AwaitFeedback": true,
+  "stopAfterK1Delivery": true,
+  "oldAPIQuestionSuperseded": true,
+  "Q1075988PalaceConfirmed": true,
+  "noK8": true,
+  "dreamSequenceWasNotInterrupted": true
+}

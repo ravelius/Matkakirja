@@ -1,0 +1,151 @@
+{
+ "kohde": "Louvren palatsi (Wikidata Q19675), Pariisi",
+ "origo": {
+  "lat": 48.861,
+  "lon": 2.3359,
+  "selite": "Napoleonin piha, maa 0 m = pihan kiveys (33,9 m NGF). Palatsin akseli (Rivolin suunta) on 20 deg idästä etelään (suunta 110 deg)."
+ },
+ "koordinaatit": "kamera_enu_m = [itä, pohjoinen, korkeus maasta] metreinä origosta; katse_deg = katsesuunta pohjoisesta myötäpäivään; kallistus_deg + ylös / - alas; roll 0; vfov_deg pystysuuntainen; atsimuutti_deg/etaisyys_m = kameran suunta ja etäisyys origosta",
+ "kulmat": [
+  {
+   "id": "K1",
+   "nimi": "K1 pallokierros länsi",
+   "tyyppi": "pallokierros",
+   "kamera_enu_m": [
+    -357.08,
+    129.97,
+    180
+   ],
+   "kamera_lat": 48.8621675,
+   "kamera_lon": 2.3310242,
+   "katse_deg": 110,
+   "atsimuutti_deg": 290.0,
+   "etaisyys_m": 380.0,
+   "kameran_korkeus_m": 180,
+   "kallistus_deg": -23.47,
+   "vfov_deg": 45,
+   "kuvasuhde": "3:2",
+   "kuvaus": "Akselilta lännestä Carrousel-puiston yltä: Napoleonin piha edessä, Richelieu vasemmalla, Denon oikealla, Sullyn paviljonki ja Cour Carrée taustalla."
+  },
+  {
+   "id": "K2",
+   "nimi": "K2 pallokierros pohjoinen",
+   "tyyppi": "pallokierros",
+   "kamera_enu_m": [
+    153.91,
+    422.86,
+    280
+   ],
+   "kamera_lat": 48.8647986,
+   "kamera_lon": 2.3380015,
+   "katse_deg": 200,
+   "atsimuutti_deg": 20.0,
+   "etaisyys_m": 450.0,
+   "kameran_korkeus_m": 280,
+   "kallistus_deg": -30.49,
+   "vfov_deg": 40,
+   "kuvasuhde": "2:1",
+   "kuvaus": "Rue de Rivolin puolelta: Richelieun lohko ja Rivolin julkisivu edessä, Napoleonin piha ja Cour Carrée näkyvät sen yli."
+  },
+  {
+   "id": "K3",
+   "nimi": "K3 pallokierros etelä",
+   "tyyppi": "pallokierros",
+   "kamera_enu_m": [
+    -153.91,
+    -422.86,
+    280
+   ],
+   "kamera_lat": 48.8572014,
+   "kamera_lon": 2.3337985,
+   "katse_deg": 20,
+   "atsimuutti_deg": 200.0,
+   "etaisyys_m": 450.0,
+   "kameran_korkeus_m": 280,
+   "kallistus_deg": -30.49,
+   "vfov_deg": 40,
+   "kuvasuhde": "2:1",
+   "kuvaus": "Seinen yltä vasemmalta rannalta: Grande Galerie ja Denonin Seinen julkisivu edessä, piha takana."
+  },
+  {
+   "id": "K4",
+   "nimi": "K4 pallokierros itä",
+   "tyyppi": "pallokierros",
+   "kamera_enu_m": [
+    357.08,
+    -129.97,
+    180
+   ],
+   "kamera_lat": 48.8598325,
+   "kamera_lon": 2.3407758,
+   "katse_deg": 290,
+   "atsimuutti_deg": 110.0,
+   "etaisyys_m": 380.0,
+   "kameran_korkeus_m": 180,
+   "kallistus_deg": -23.47,
+   "vfov_deg": 45,
+   "kuvasuhde": "3:2",
+   "kuvaus": "Idästä Saint-Germain-l'Auxerroisin puolelta: itäinen kolonnadi ja Cour Carrée edessä, Napoleonin piha takana."
+  },
+  {
+   "id": "K5",
+   "nimi": "K5 pelikulma B",
+   "tyyppi": "pelikulma",
+   "kamera_enu_m": [
+    -140.95,
+    51.3,
+    32
+   ],
+   "kamera_lat": 48.8614609,
+   "kamera_lon": 2.3339753,
+   "katse_deg": 110,
+   "atsimuutti_deg": 290.0,
+   "etaisyys_m": 150.0,
+   "kameran_korkeus_m": 32,
+   "kallistus_deg": -4.9,
+   "vfov_deg": 47.6,
+   "kuvasuhde": "16:9",
+   "kuvaus": "Pelin Louvre-näkymä: akselilla 147 m pyramidista länteen, 32 m korkeudella, katse Sullyn paviljonkia kohti."
+  },
+  {
+   "id": "K6",
+   "nimi": "K6 lähikierros pohjoinen",
+   "tyyppi": "pallokierros",
+   "kamera_enu_m": [
+    58.14,
+    159.75,
+    130
+   ],
+   "kamera_lat": 48.862435,
+   "kamera_lon": 2.3366939,
+   "katse_deg": 200,
+   "atsimuutti_deg": 20.0,
+   "etaisyys_m": 170.0,
+   "kameran_korkeus_m": 130,
+   "kallistus_deg": -35.22,
+   "vfov_deg": 45,
+   "kuvasuhde": "3:2",
+   "kuvaus": "Lähi-pallokulma Richelieun siiven yltä etelään: Napoleonin pihan kiveys, ratsastajapatsas ja Denonin/Darun pihajulkisivut, Denonin paviljonki ja kupoli."
+  },
+  {
+   "id": "K7",
+   "nimi": "K7 lähikierros kaakko",
+   "tyyppi": "pallokierros",
+   "kamera_enu_m": [
+    58.14,
+    -159.75,
+    130
+   ],
+   "kamera_lat": 48.859565,
+   "kamera_lon": 2.3366939,
+   "katse_deg": 340,
+   "atsimuutti_deg": 160.0,
+   "etaisyys_m": 170.0,
+   "kameran_korkeus_m": 130,
+   "kallistus_deg": -35.22,
+   "vfov_deg": 45,
+   "kuvasuhde": "3:2",
+   "kuvaus": "Lähi-pallokulma Darun siiven yltä luoteeseen: Sullyn paviljonki ja kupoli sivulla, Richelieun/Colbertin pihajulkisivut ja Richelieun paviljonki, kiveys."
+  }
+ ]
+}

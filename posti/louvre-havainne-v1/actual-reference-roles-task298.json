@@ -1,0 +1,51 @@
+{
+  "taskNumber": 285,
+  "continuationTask": 298,
+  "recordedAt": "2026-10-15T15:17:44.504458+00:00",
+  "status": "actual-five-reference-list-for-one-completed-generation",
+  "referenceOrderUnchanged": true,
+  "references": [
+    {
+      "order": 1,
+      "sourceMailboxPath": "posti/louvre-K1-massa.jpg",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K1-massa.jpg",
+      "role": "locked pixel composition and coarse measured masses",
+      "sha256": "ccbac31412407f041c724efb3c99d703db49937b08b5cff621ce3db6f8f24151",
+      "bytes": 202443
+    },
+    {
+      "order": 2,
+      "sourceMailboxPath": "posti/louvre-K1-maski.png",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K1-maski.png",
+      "role": "geometry-reference envelope only; not a substitute own output mask",
+      "sha256": "0d5c9e01dff3c1ad079d5ab6590961869de21549f3a634a68f0af0f2eca8c32b",
+      "bytes": 10960
+    },
+    {
+      "order": 3,
+      "sourceMailboxPath": "posti/louvre-ref-North-facade-of-the-Denon-Wing-28184065532.jpg",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-North-facade-of-the-Denon-Wing-28184065532.jpg",
+      "role": "Denon facade details only",
+      "sha256": "9d7f575087563add6cb14e9a4176ee4ebffd9f7e1b00a4d720dd48ad3bf81c54",
+      "bytes": 1518863
+    },
+    {
+      "order": 4,
+      "sourceMailboxPath": "posti/louvre-ref-Paris-Louvre-Cour-d-Honneur-Richelieu-Flugel-4.jpg",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Paris-Louvre-Cour-d-Honneur-Richelieu-Flugel-4.jpg",
+      "role": "Richelieu facade details only",
+      "sha256": "e1ad6dcb19ec524f5cbdde0cbdbeaf844035268429d8d8d5945ff71475c07b3d",
+      "bytes": 1483277
+    },
+    {
+      "order": 5,
+      "sourceMailboxPath": "posti/louvre-ref-Cour-Napol-on-Pavillon-de-l-horloge-Louvre-007-jpg.jpg",
+      "localPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Cour-Napol-on-Pavillon-de-l-horloge-Louvre-007-jpg.jpg",
+      "role": "Sully details only",
+      "sha256": "36734a0b490b35417d7f35d54dfdc42830a774cb6186e706484fa374a4059c6b",
+      "bytes": 1725336
+    }
+  ],
+  "sourceMaskRole": "Geometry guide supplied to the whole-frame generation; NOT used to produce the separate own mask.",
+  "partialEditingMaskSupplied": false
+}
