@@ -310,7 +310,9 @@ test('näyttönimi ≠ tunnus: Reykjavík löytää islanti-esittelyn', async ()
 test('historia_polut: kehityskaupunkien historiaosiot (Tukholma, Pariisi) omasta polustaan', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
   assert.deepEqual(OPAS_AINEISTOT.historia_polut, { tukholma: 'opas/historia-v1/tukholma.json', pariisi: 'opas/historia-v1/pariisi.json' });
-  assert.deepEqual(Object.keys(OPAS_AINEISTOT.historia_yksityiskohdat_polut).sort(), Object.keys(OPAS_AINEISTOT.historia_polut).sort());
+  // Yksityiskohtakuvat myös Prahalle, Ateenalle ja Kööpenhaminalle (#4635, juna 195); historiaosiot niille pallokierroksen kautta.
+  assert.deepEqual(Object.keys(OPAS_AINEISTOT.historia_yksityiskohdat_polut).sort(), ['ateena', 'koopenhamina', 'pariisi', 'praha', 'tukholma']);
+  for (const [k, p] of Object.entries(OPAS_AINEISTOT.historia_yksityiskohdat_polut)) assert.equal(p, `esittely/${k}-historia-v1/${k}-historia-yksityiskohdat.json`);
 });
 
 test('esittely_polut: Pariisi v1h (v1g + kipin aukiot Vendôme, Bastille, République, Saint-Michel; juna 183), äänet ennallaan', async () => {
