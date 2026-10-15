@@ -45,6 +45,18 @@ Käynnissä olevat kääreet kirjoittavat tulosrivin lokiin `julkaisija-tyokalut
   sen jälkeen nimet-196 0e26d1dee (ajaa itse) → **SIMULAATTORI NYT 123B4B25** (iPhone 16).
 - **PR #4636** bf177452f + ac82fef2a: junaan 195, merge vasta OMISTAJA PYYSI JULKAISUA.
 
+### 2b. Koko jono järjestyksessä (PT 21.2x – mikään ei saa pudota)
+1. SS 70883ee13+1cefa0f9b (auringonnousu, Lappi v6, Pariisi) – L2 käynnissä 21.14 → SIMU 8362879F ~11 min.
+2. PK mika-en-tunne-195 f82aa303a (vain KÄÄNNETTY) ja PK iss-pulu-vastaukset-196 30e07d6f1 (app-kopio).
+3. NUI isoisän uni aloitus-195 2cd6b6428 (NUI ajaa) → SIMU F7513985 ~10 min (video äänineen omistajan päätökseen).
+4. NUI nimet-196 0e26d1dee (NUI ajaa uni-käännöksen jälkeen) → SIMU 123B4B25 iPhone 16, 393 pt (omistajan 21.03 reunavika + "/c").
+5. Valoseppä tulivuoret-196 ⊇ 8f202fc4c → SIMU A26BC7D0 ~6 min (k4).
+6. LS1 kuvat-196c da1aadc88 (⊇ ce4492460 Black Marble -korjaus) → lippu simu-kuvat196c.nyt → SIMU 00CF62C2 ~6 min.
+7. PK etsinvideo 2: iss-kamera-195 6d11ccf6f (sRGB) → asennus 39644E75 → SIMU 39644E75 ~6 min.
+L2 on lukkokilpa: todellinen järjestys voi poiketa; tarkista kunkin lokit ja anna simuvuorot sitä mukaa.
+
+**Juna 195 c84f140ef odottaa yhä "OMISTAJA PYYSI JULKAISUA"** (ei lukitusta, käännöstä, TF:ää eikä #4636-mergeä ennen sitä).
+
 ## 3. Linjat nyt
 L1 vapaa. L2: jono yllä. Simut: kaikki vapaina 21.20 (A26BC7D0, 00CF62C2, 39644E75, 8362879F, F7513985, 123B4B25).
 Levy ~62 Gi (raja 50 → pysäytä viennit ja ilmoita PT:lle).
