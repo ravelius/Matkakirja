@@ -235,3 +235,30 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
 2. **Vapaan lennon kutsut Lontoo/Praha/Ateena**: SK:n tekstit omistajan hyväksyttävinä (pulu-vapaalento-kutsu-*); kun ämpärissä on
    aanet/pulu/vapaalento-v1/livia-kutsu-{lontoo,praha,ateena}.mp3 (curl -I = 200): lisää rivit OpasSovitin.VapaaLentoKutsu.cs:n VapaaLentoKutsut-sanakirjaan
    (haara siirtoseppa/vapaalento-195 2468450eb tai uusi juna-195/196:n päälle) → tarkista.sh + Linssit → SHA PT:lle. Taustaodottaja kuoli nollauksessa.
+
+## PÄIVITYS 15.10. 21.3x — NOLLAUS (Postivahti, kova raja 35 %): ISS PARAS HETKI JUNASSA, KOHOKOHTIEN KUVAT KESKEN
+
+**Valmiit (NS:llä junaan 196):** siirtoseppa/iss-ilmiot-196 **e68ee684f** (= paras hetki -haara b3653fa5c, oletus PÄÄLLÄ omistaja 20.42,
+LCD pelkkä nimi, Live piiloon + ilmiöt + kohokohtien data). Uudempi kärki **e776bb186** (vielä NS:lle kertomatta, mukaan seuraavassa SHA:ssa):
+- KS:n ilmiot.json (9 hetkeä, avaimet ilmio.*, utc = kiinteä hetki → sama päivä+UTC lähimpänä vuonna), Valosepän tavoitekuva-ajat d570f435e
+- Kohokohdat (omistaja 20.27): Resources/IssParasHetki/kohokohdat.json + Ydin Iss.IssKohokohdat (Kaytossa=false, Nakyvat, Ehto(nimi,func), Valitse→Valittu);
+  NUI tekee kortit (nimet-196), PK kysymykset chattiin, Valoseppä ehdot (tulivuoret rekisteröity). QA `ui linssi kohdevalikko paras <hetkiavain>` 1567458e0.
+- Valitun paikan nimi korostuu: KupoliNimet.Valittu (Linssisepän koodi cherry-pick f9bebf5d4 = dd7fc0b3f; QA-rivi valittu tulee LS:n haarasta) asetetaan
+  AstronauttiKerros.Valinnalla, null KupoliLive/PalaaIssNyt (c788f6dc9, 70883ee13). Toimii (kuva 21.29: Pariisi kirkas, muut 0,3).
+- e776bb186 = NUI:n c9774e32b cherry-pick (korttikuvien URL:t revontulet + kiinan-muuri). Haara yhdistyy puhtaasti: nimet-196, yotaivas-196-juna, 1cefa0f9b.
+- Vapaan lennon kutsut Lontoo/Praha/Ateena: siirtoseppa/vapaalento-195 **473d566ca** → NS runkoon 195, PT kuittasi.
+
+**KESKEN (seuraaja jatkaa):**
+1. **Uusinta-simuajo käynnissä 21.32** (Julkaisijan SIMU NYT 8362879F, käännös 673c030b2 = 70883ee13+1cefa0f9b): odottaja pid 43696,
+   loki proto-3d/lokit/siirtoseppa-kohokohta2-196.log, skenaario tyokalut/siirtoseppa-ajot/skenaariot/sk-kohokohta2-196.txt → todistus-kohokohta2-196-*.
+   Kun loki päättyy "AJO …": **SIMU VAPAA Julkaisijalle**. Sitten:
+   a) **Auringonnousun korttikuva** (PT 20.4x): kuvat k0/k60/k120/km60/k90 (katse 8° alas, suunta = poikkeama maajäljestä). Ajossa 21.29 aurinkoa ei
+      näkynyt (katse pohjoiseen). Jos ei näy nyt: hetkeä aikaisemmaksi (asemalta aurinko limbillä kun maassa ~−15…−20°) → laji "aamu"-sääntö
+      (−2…15°) estää; tarvitsee esim. lajin "aamunkoitto" testisääntöineen. Kortti JPG 960×640 3:2, aihe keskellä (NUI) → vientipaketti
+      _valmiit/iss-kohokohta-auringonnousu-vienti-20261015/kuvat/iss/kohokohta-auringonnousu.jpg (SHA256SUMS, LAHTEET.md) → Julkaisija vie-paketti.sh
+      → kohokohdat.json "kuva" = https://media.matkakirja.app/kuvat/iss/kohokohta-auringonnousu.jpg → SHA NUI:lle + NS:lle.
+   b) **Pariisi-pari** nimikorostuksella (a2/b2, revontulet oletus): pari iss-hetki-parit.py-tyylillä → omistajalle/iss-paras-hetki-pariisi.jpg → PT.
+2. **Lappi-pari** revontulet v6 (kp5) ajosta lokit/todistus-kohokohta-lappi-196-20261015-2122 → PT:lle vasta Valosepän v7:n jälkeen (ei omistajalle).
+3. Ajoskripti tyokalut/siirtoseppa-ajot/ajo-iss-paras-hetki-196.zsh: KH (proto-kaanna-arg, a+b), H, ERA, SK, OHITA_KAANNOS ympäristöstä; porttitiedostot
+   kaannos-iss-hetki.nyt / simu-iss-hetki.nyt (vain Julkaisijan NYT-viestillä). Worktreet wt/proto-siirtoseppa-{iss-hetki,ilmiot,vapaalento}.
+
