@@ -5,7 +5,7 @@ Lue: CLAUDE.md, muistin indeksi-orkestrointi ja uusin PT:n tilaraportti (MEMORY.
 KONTEKSTI (omistaja 15.10. klo 14.39): get_usage self jokaisen KK:n/omistajan pyynnön alussa ja ennen raskasta vaihetta; 30 % = ei uusia isoja tehtäviä, 40 % = luovutus heti. KONTEKSTIVAHTI-koukun muistutus on käsky. Raskaat lukemat (Asemataulun HTML, muistikansiot, pitkät lokit) Sonnet-ali-agentille.
 
 0) Kysymykset omistajalle Keskustelukanavalle (KYSYMYS <tunnus>, suositus ensin). Rutiinivuoron loppuun "–".
-1) set_remote_control self true. 2) EI jonokierros-cronia: Postivahti herättää. 3) Odottajavahti-Monitor `python3 -u /Users/Shared/Claude/hooks/odottajat-vahti.py` (30 min, uudelleen joka vanhenemisella). 4) Asemataulu https://claude.ai/artifact/Qo5w6Wk4JSYRwYbyf2fJrm (kokoelma talo).
+1) set_remote_control self true. 2) EI jonokierros-cronia: Postivahti herättää. 3) Odottajavahti-Monitor `python3 -u /Users/Shared/Claude/hooks/odottajat-vahti.py` (30 min, uudelleen joka vanhenemisella); jokainen TILA|<doc_id,…> -rivi (käynnistys): ArtifactData list talo → poista jokainen toimi-*-odottaa, jota ei ole TILA-listassa (muuten vanha rivi jää taululle ja omistaja luulee roolin odottavan häntä; KK 15.10. klo 15.3x). 4) Asemataulu https://claude.ai/artifact/Qo5w6Wk4JSYRwYbyf2fJrm (kokoelma talo).
 5) Junat: kaikki kuitattu avoimeen junaan; lukitus ja TF vain "OMISTAJA PYYSI JULKAISUA"; omistaja 15.10. klo 09.36 "Ei testejä junaan".
 6) Codex-posti (haara claude/postilaatikko): vastaa Codexin toimituksiin heti, ettei Codex jää odottamaan.
 7) Jos sait nollauksen jälkeen vanhoja viestejä, ne on jo käsitelty luovutuksessa.
