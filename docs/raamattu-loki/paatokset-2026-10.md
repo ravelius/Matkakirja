@@ -92,3 +92,14 @@ silloin äänessä olla kertoja? En ole tästä ihan varma." + kortti "Kyllä, n
 loppusanojen jälkeen Pulu kertoo äänellä, että nyt saa lentää itse ja kysyä rakennuksista, ja vapaan lennon ohjaimet tulevat esiin. 2) "Mikä tämä on?" -nappi (olemassa oleva nappipohja) → pelaaja
 napauttaa rakennusta → Pulu vastaa aina lyhyesti omalla äänellään (striimipuhe); jos rakennuksesta on esittely, Pulu tiivistää sen pääasiat esittelytekstistä; tunnistamattomasta Pulu sanoo suoraan,
 ettei tunne sitä (ei arvailua). 3) Pulun kutsurepliikki äänisivun Tekstit-osastoon omistajan hyväksyttäväksi ennen äänitystä. Toteutus junan 194 jälkeen, Pariisi ensin.
+
+## PAATOKSET 15.10.2026 klo 17.0x: AARREJAHDIN ALKU ISOISÄN UNI (15.10.2026 klo 17.11)
+
+Omistaja 16.33 (sanatarkasti): "nykyinen isoisän piirros ei ole houkutteleva aarre jahtiin. pitäisi ehkä esitellä niitä kaikkia aarteita mitä aarnin luettelossa on ja näyttää niistä tehtyjä upeita
+codexin havainnekuvia unimaisina kuvina, eli feidautuen näkyviin ja pois hieman eri kohtiin näyttöä suhteellisen isoina ja niin että kuvan rajat eivät näy vaan ne häipyvät pehmeästi läpinäkyviksi.
+ehkä kaikkia aarteita ei tarvitse näyttää mutta ehkä kolme tai neljä kaikkein näyttävintä voisi näyttää. ja miten isoisän tekstin rakentaisi uudelleen? kaikkea ei tarvitsisi paljastaa mutta
+jonkinlainen odotus löydettävistä aarteista pitäisi luoda. mitä olet mieltä?" KK:n suositukseen "hyvä idea. tosin missä vaiheessa aarnin luettelo sitten paljastuu? vai pitäisikö se mainita jo tässä
+alussa? ja pitäisikö ensimmäisestä kaupungista jättää intro pois vai pitäisikö tämä tulla ennen introa? mitä olet mieltä?"; jatkokortti 17.0x: "Kun Kolme veljestä löytyy (Suositus)" ja "Ennen
+aloituslentoa (Suositus)". Päätös: uni alkusoittona Uusi matka -valinnan jälkeen ennen aloituslentoa; kolme unikuvaa (El Dorado, Montezuman turkoosinaamio, keisarin jadesinetti) + Kolme veljestä,
+reunat pehmeästi läpinäkyviksi; Eteläristin helmi ei mukaan (1883); Aarnia ja luetteloa ei mainita, luettelo paljastuu kun Kolme veljestä löytyy; kaupungin intro säilyy, isoisän aarreluenta saapumisen
+jälkeen pois; uusi isoisän teksti SK:n faktantarkistukseen ja omistajan hyväksyntään Tekstit-osastossa ennen äänitystä. Junasta 195 eteenpäin.

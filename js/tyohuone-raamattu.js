@@ -893,8 +893,8 @@ export const RAAMATTU = {
           + '(omistaja 11.10.2026 klo 21.5x: "vaihdetaan tuohon riipukseen"; korvaa Meripihkahuoneen, joka ei mahdu matkalaukkuun): riipus vuodelta 1389 (Juhana Peloton), kateissa 1640-luvulta; '
           + 'Euroopan pikkuaarre Itämeren meripihka säilyy. MITTASÄÄNTÖ (omistaja 21.5x): unohdettu aarre on yhden ihmisen kannettavissa (Suuren Zimbabwen kivilintu käy). NIMET (Päätoimittaja '
           + '11.10.2026 klo 23.0x): Euroopan aarre on "Kolme veljestä -riipus" ja Riian nähtävyys "Kolme veljestä -talot", jotta ne eivät sekoitu (Sisältökirjuri muuttaa datan). AARNIN LUETTELO '
-          + 'ESITELLÄÄN VASTA MYÖHEMMIN (omistaja 21.3x: "pelaaja ei vielä tiedä mitään koko aarnin luettelosta"): pelin alussa isoisä kertoo aarteesta mainitsematta luetteloa (ks. Kaupungit, '
-          + 'ALOITUSKAUPUNKI JA KAUPUNGIN INTRO).',
+          + 'ESITELLÄÄN VASTA MYÖHEMMIN (omistaja 21.3x ja 15.10.2026 17.0x): pelin alussa isoisän uni ei mainitse Aarnia eikä luetteloa; luettelo paljastuu, kun Kolme veljestä löytyy '
+          + '(ks. Kaupungit, ISOISÄN UNI).',
         'AARREVIHJEET: ei symboleja eikä järjestelmiä — vain harvat sivuhuomiot (muutama per manner) vihjaavat pääaarteen olevan totta. Loksahtavat paikoilleen löydössä.',
         'KAANON: kukaan ei ole odottanut lapsenlasta 150 vuotta, eikä isoisä virittänyt mitään ajan yli. Kirja saa olla arvoitus, koska vanhan päiväkirjan lukeminen on hidasta.',
         'Tekstit: isoisän seikkailut. Tarina avaa kaupungin tunnelman; lehti syventää tiedoksi.',
@@ -1913,11 +1913,12 @@ export const RAAMATTU = {
           + 'iskulauseen, taustalla kaupungin nopea kappale (aluksi Pariisin kappale kaikille), 6 avauskuvaa lähes koko ruudun kokoisina 3 s välein, Ohita; 2) kartta ja Pulu: "Kääk! Apua! Pöllö on '
           + 'kadonnut!" ja "Kuuntele sillä välin isoisän matkakirjaa, minä jatkan etsimistä!"; 3) isoisän luenta ja kuvat; 4) luennan jälkeen Pulu: "Pöllö sähkötti, että oli taittanut siipensä, ja '
           + 'pyysi, että tuuraisin häntä." ja "No, jos tulee kysyttävää, napauta minua. Enköhän minäkin jotain osaa vastata – olenhan sentään kuuluisaa kirjekyyhkyjen sukua!" (odottaa, että avoin '
-          + 'nosto suljetaan). ENSIMMÄINEN SAAPUMINEN = ISOISÄN AARRETEKSTI (omistaja 11.10.2026 klo 13.4x–13.5x; aarre, teksti, kuva ja Pulun ohje 20.5x–22.1x): pelin ensimmäisellä saapumisella '
-          + 'aloituskaupunkiin isoisän luentana on aarreteksti, jossa isoisä kertoo Euroopan unohdetusta aarteesta, Kolme veljestä -riipuksesta (ks. Tarina ja hahmot, AARNI): teksti on kirjoitettu '
-          + 'kuin oikea päiväkirjamerkintä, isoisä kuvailee aarretta ja vannoo löytävänsä sen vielä tältä mantereelta, eikä Aarnin luetteloa vielä mainita; kuvana on isoisän nopea kynäluonnos '
-          + 'riipuksesta vanhalla paperilla (ks. Tarina ja hahmot, ISOISÄ ON PIIRTÄJÄ), eikä alkuperäistä isoisän tekstiä näytetä silloin missään. Tätä ensimmäistä isoisän ja Pulun luentaa ei voi '
-          + 'ohittaa (ei Ohita-nappia); seuraavissa kaupungeissa ohitus toimii normaalisti. Luennan jälkeen Pulu sanoo "Isoisäsi ei tiettävästi koskaan löytänyt sitä aarretta. Ehkä sinä olet '
+          + 'nosto suljetaan). ISOISÄN UNI (omistaja 15.10.2026 klo 16.33–17.0x; korvaa 11.10. ensimmäisen saapumisen aarretekstin ja kynäluonnoksen): aarrejahti alkaa alkusoitolla heti Uusi matka '
+          + '-valinnan jälkeen ennen aloituslentoa: isoisä kertoo unestaan (uusi teksti, Sisältökirjuri tarkistaa faktat, omistaja hyväksyy Tekstit-osastossa ennen äänitystä), ja ruudulle '
+          + 'häivyttyy suurina unikuvina eri kohtiin hitaasti liikkuen kolme näyttävää aarretta (El Dorado, Montezuman turkoosinaamio, keisarin jadesinetti) ja lopuksi Kolme veljestä; kuvien '
+          + 'reunat häipyvät pehmeästi läpinäkyviksi (ei näkyviä rajoja), kuvat Codexin tarkkoina versioina tummalla taustalla. Eteläristin helmi ei ole mukana (löytyi 1883, päiväkirja 1873). '
+          + 'Aarnia ja luetteloa ei mainita unessa; LUETTELO PALJASTUU, KUN KOLME VELJESTÄ LÖYTYY: silloin unien aarteet tunnistetaan sen sivuilta ja matka muihin maanosiin aukeaa. '
+          + 'Kaupungin intro säilyy, mutta isoisän aarreluenta saapumisen jälkeen jää pois (Pulun repliikit sovitetaan). Luennan jälkeen Pulu sanoo "Isoisäsi ei tiettävästi koskaan löytänyt sitä aarretta. Ehkä sinä olet '
           + 'etevämpi!" (ennallaan, omistaja 21.6x), sitten kohdan 4 repliikit ja lopuksi "Napauta kohteita kartalta ja vastaa oikein kysymykseen, niin löydät aarteen.", ja sama teksti näkyy samalla '
           + 'hetkellä ruudun ohjeena (aloituksen ainoa ohjerivi). ALOITUSMAAN NOSTOT (omistaja 20.5x): pelin ensimmäisessä maassa kartalla näkyvät aluksi vain nostot, joissa on visa; ensimmäinen '
           + 'oikea vastaus sytyttää kartalle aarteen vihreän pisteen, ja vasta sen jälkeen syttyvät muut nostot. ETSITYT KAUPUNGIT (omistaja 13.5x ja 20.5x): laskuri "Etsityt kaupungit X/50" (avatut '
