@@ -1,5 +1,7 @@
 # Euroopan meri-nostot: inventaario ja Pulun vastausluonnokset (16.10.2026, Sisältökirjuri)
 
+PT:n faktatarkistus 16.10. klo 00.3x (scratchpad merinostot-tarkistus-20261016.md) on tehty tähän: 3 virhettä korjattu, noin 20 varovammin muotoiltu, 79 yhdistetty 77:ään (tupla). Numerot ovat luonnosten järjestysnumeroita.
+
 PT:n erä (omistaja 23.56: merien nimet klikattaviksi nostoiksi; tekstit; Pulun kysymykset). VAIN EUROOPPA. Ei äänitystä, ei kytkentää; PT vie omistajalle hyväksyttäväksi.
 
 ## 1. Inventaario
@@ -69,7 +71,7 @@ Lähde: js/packs/maastokohteet-<maa>.js, tyyppi 'meri' (sisältää myös järvi
 - Vänernin kysymys "Miksi järvessä elää merieläimiä?" sisältää osin väärän oletuksen (jääkauden jäännelajeja, ei merieläimiä); vastaus oikaisee.
 - Heikoimmin tuetut ja pudotetut luvut: kunkin vastauksen kohdalla alla (sekä docs/kohtaukset/merinostot/meri-pulu-<1..6>.json tarkistus-kentät).
 
-## 3. Pulun vastausluonnokset (81 kysymystä)
+## 3. Pulun vastausluonnokset (81 kysymystä; korjattu PT:n tarkistuksen jälkeen)
 
 Muoto: kysymys; vastaus (sanoja); käyttökohteet; huom. Lähteet ja tarkistukset JSON-tiedostoissa docs/kohtaukset/merinostot/meri-pulu-*.json.
 
@@ -79,15 +81,17 @@ Vattimeri on Pohjanmeren kaakkoisrannan matala vuorovesialue Alankomaiden, Saksa
 
 *45 sanaa · kohteet: dnk/pohjanmeri*
 
-Huom: Lähteet antavat 450 ja 500 km sekä 10 000 ja 11 400 km2, joten vastauksessa käytetään vain alarajoja ('yli'). · Sivun whc.unesco.org WebFetch antoi 403, joten UNESCOn lause on vain hakutuloksen tiivistelmästä. · Lintujen lukumääriä (10-12 miljoonaa) ei käytetä, vain yksi lähde. · Kysymyksessä oleva nimi 'Vattimeri' vastaa Wadden Seaa (hollanniksi Waddenzee).
+Huom (kirjoittaja): Lähteet antavat 450 ja 500 km sekä 10 000 ja 11 400 km2, joten vastauksessa käytetään vain alarajoja ('yli'). · Sivun whc.unesco.org WebFetch antoi 403, joten UNESCOn lause on vain hakutuloksen tiivistelmästä. · Lintujen lukumääriä (10-12 miljoonaa) ei käytetä, vain yksi lähde. · Kysymyksessä oleva nimi 'Vattimeri' vastaa Wadden Seaa (hollanniksi Waddenzee).
 
 ### 2. Miksi Jyllannin länsirannikko on niin suora?
 
-Meri on tehnyt sen suoraksi. Länsiranta on hiekkaista ja avoinna Pohjanmeren länsituulille ja aalloille. Jäätikön jättämä irtonainen maa ei vastustanut aaltoja, ja ne kuluttivat kukkuloita ja rakensivat särkkiä lahtien eteen. Skagenista Skallingeniin kulkee lähes yhtenäinen dyynivyö, noin 300 kilometriä. Rannikon muoto ei siis johdu maaston alkuperäisestä muodosta vaan aaltojen työstä.
+Meri on tehnyt sen suoraksi. Länsiranta on hiekkaista ja avoinna Pohjanmeren länsituulille ja aalloille. Jäätikön jättämä irtonainen maa ei vastustanut aaltoja, ja ne kuluttivat kukkuloita ja rakensivat särkkiä lahtien eteen. Skagenista Skallingeniin kulkee lähes yhtenäinen dyynivyö, satoja kilometrejä pitkä. Rannikon muoto ei siis johdu maaston alkuperäisestä muodosta vaan aaltojen työstä.
 
 *50 sanaa · kohteet: dnk/pohjanmeri*
 
-Huom: Yksikään lähde ei sano suoraan 'suora koska X' kuin vuoden 1960 artikkeli; CoastalWiki tukee mekanismia (aallot, hiekan kuljetus, dyynit). Heikommin tuettu kuin muut. · 300 km vain yhdestä lähteestä, siksi 'noin'. · Jätetty pois vastauksesta, koska vain yksi lähde.
+**PT 16.10.: "noin 300 km" -> "satoja kilometrejä" (korjattu).**
+
+Huom (kirjoittaja): Yksikään lähde ei sano suoraan 'suora koska X' kuin vuoden 1960 artikkeli; CoastalWiki tukee mekanismia (aallot, hiekan kuljetus, dyynit). Heikommin tuettu kuin muut. · 300 km vain yhdestä lähteestä, siksi 'noin'. · Jätetty pois vastauksesta, koska vain yksi lähde.
 
 ### 3. Miksi Itämeren vesi on murtovettä?
 
@@ -95,7 +99,7 @@ Koska mereen virtaa paljon makeaa jokivettä, mutta suolaista vettä pääsee si
 
 *55 sanaa · kohteet: dnk/itameri, est/itameri, ltu/itameri, lva/itameri, pol/itameri, swe/itameri*
 
-Huom: Meier & Kauker (hakutulos) antaa 7,4 promillea; sopii. · Lähteet eroavat metrillä, siksi 'alle 20 m' eikä tarkkoja lukuja.
+Huom (kirjoittaja): Meier & Kauker (hakutulos) antaa 7,4 promillea; sopii. · Lähteet eroavat metrillä, siksi 'alle 20 m' eikä tarkkoja lukuja.
 
 ### 4. Mitkä salmet yhdistävät Itämeren Pohjanmereen?
 
@@ -103,7 +107,7 @@ Tanskan salmet: Juutinrauma eli Öresund sekä Iso-Belt ja Vähä-Belt. Ne johta
 
 *45 sanaa · kohteet: dnk/itameri*
 
-Huom: Toinen lähde on hakutulosten tiivistelmä. · Eri lähteet 7 ja 8 m, siksi 'noin 8'.
+Huom (kirjoittaja): Toinen lähde on hakutulosten tiivistelmä. · Eri lähteet 7 ja 8 m, siksi 'noin 8'.
 
 ### 5. Miksi Viron saaret ovat niin matalia?
 
@@ -111,7 +115,7 @@ Ne ovat nousseet merestä vasta jääkauden jälkeen ja lepäävät tasaisen kal
 
 *49 sanaa · kohteet: est/itameri*
 
-Huom: PeakVisor antaa 65 m; kaksi lähdettä sanoo 54 m, käytetään sitä. · Molemmat Wikipedian artikkeleita; riippumatonta toista lähdettä ei hakutuloksissa. · Vaihteluväli 2-3 mm eri paikoissa. · Vuosilukuja ei käytetä vastauksessa, koska saaret nousivat eri aikoina.
+Huom (kirjoittaja): PeakVisor antaa 65 m; kaksi lähdettä sanoo 54 m, käytetään sitä. · Molemmat Wikipedian artikkeleita; riippumatonta toista lähdettä ei hakutuloksissa. · Vaihteluväli 2-3 mm eri paikoissa. · Vuosilukuja ei käytetä vastauksessa, koska saaret nousivat eri aikoina.
 
 ### 6. Miksi Tallinnasta tuli hansakaupunki?
 
@@ -119,7 +123,7 @@ Koska se sijaitsi Suomenlahden rannalla keskeisellä kauppareitillä Novgorodin 
 
 *47 sanaa · kohteet: est/suomenlahti*
 
-Huom: Hakutulokset eroavat täsmällisestä vuodesta (osa antaa 1248), joten vastauksessa vain 'lopulla'. Vuosi 1285 on kirjattu vain Wikipediaan ja WorldAtlasiin. · UNESCOn sivun WebFetch antoi 403. · Kivestä rakentaminen 1400-luvulla vain hakutuloksessa (WorldAtlas); vastauksessa ei mainita vuosisataa.
+Huom (kirjoittaja): Hakutulokset eroavat täsmällisestä vuodesta (osa antaa 1248), joten vastauksessa vain 'lopulla'. Vuosi 1285 on kirjattu vain Wikipediaan ja WorldAtlasiin. · UNESCOn sivun WebFetch antoi 403. · Kivestä rakentaminen 1400-luvulla vain hakutuloksessa (WorldAtlas); vastauksessa ei mainita vuosisataa.
 
 ### 7. Kuinka syvä Suomenlahti on?
 
@@ -127,7 +131,7 @@ Keskimäärin noin 38 metriä ja syvimmillään 123 metriä. Itämeren keskisyvy
 
 *46 sanaa · kohteet: est/suomenlahti*
 
-Huom: Lähteet 37 ja 38; 'noin 38'. · en.wikipedia antaa 115 m, mutta kaksi lähdettä (mukaan lukien viranomaisen Itameri.fi) antaa 123 m. · Vain Itameri.fi; luvut ovat laajalti tunnettuja (Landsortin syvänne 459 m).
+Huom (kirjoittaja): Lähteet 37 ja 38; 'noin 38'. · en.wikipedia antaa 115 m, mutta kaksi lähdettä (mukaan lukien viranomaisen Itameri.fi) antaa 123 m. · Vain Itameri.fi; luvut ovat laajalti tunnettuja (Landsortin syvänne 459 m).
 
 ### 8. Mitä järven jäällä tapahtui vuonna 1242?
 
@@ -135,7 +139,9 @@ Novgorodin ja Vladimir-Suzdalin joukot voittivat Liivinmaan ritarikunnan ja Tart
 
 *47 sanaa · kohteet: est/peipsi*
 
-Huom: Päivämäärä on vanhan ajanlaskun mukaan; Venäjän kirjaston mukaan gregoriaanisessa 12. huhtikuuta. · Aihe on kiistanalainen: vanhin kronikka tuntee jään pettämisen yksityiskohdan, mutta historioitsijat epäilevät koko ritarien hukkumiskuvaa; vastauksessa sanamuoto 'epäilevät'. Taistelupaikka on epävarma (1958-59 vedenalaiset haut eivät löytäneet esineitä). · Vain yksi lähde; muotoiltu varovasti ('tiedetään huonosti').
+**PT 16.10.: vastaus ja huomautus yhdenmukaistettu: "historioitsijat epäilevät" (jään murtumistarina ei ole varhaisissa kronikoissa).**
+
+Huom (kirjoittaja): Päivämäärä on vanhan ajanlaskun mukaan; Venäjän kirjaston mukaan gregoriaanisessa 12. huhtikuuta. · Aihe on kiistanalainen: vanhin kronikka tuntee jään pettämisen yksityiskohdan, mutta historioitsijat epäilevät koko ritarien hukkumiskuvaa; vastauksessa sanamuoto 'epäilevät'. Taistelupaikka on epävarma (1958-59 vedenalaiset haut eivät löytäneet esineitä). · Vain yksi lähde; muotoiltu varovasti ('tiedetään huonosti').
 
 ### 9. Mihin Peipsin vedet lopulta laskevat?
 
@@ -143,7 +149,7 @@ Suomenlahteen, Narvajoen kautta. Joki on noin 77 kilometriä pitkä, ja se alkaa
 
 *46 sanaa · kohteet: est/peipsi*
 
-Huom: Nostokortin teksti sanoo samaa. · Raja kulkee järven keskellä ja Narvajoella.
+Huom (kirjoittaja): Nostokortin teksti sanoo samaa. · Raja kulkee järven keskellä ja Narvajoella.
 
 ### 10. Mikä Merenkurkku on?
 
@@ -151,31 +157,37 @@ Merenkurkku on Pohjanlahden kapein kohta Suomen ja Ruotsin välissä. Se erottaa
 
 *45 sanaa · kohteet: fin/pohjanlahti, swe/pohjanlahti*
 
-Huom: Muita lukuja (60-70 km) esiintyy tietyille ylityspaikoille, siksi 'noin'. · en.wikipedia antaa 2000, mutta Metsähallitus ja hakutulokset (Unescon kuvaus) 2006; käytetty 2006. Muutos: jos tarkkuutta halutaan, voi jättää vuoden pois.
+Huom (kirjoittaja): Muita lukuja (60-70 km) esiintyy tietyille ylityspaikoille, siksi 'noin'. · en.wikipedia antaa 2000, mutta Metsähallitus ja hakutulokset (Unescon kuvaus) 2006; käytetty 2006. Muutos: jos tarkkuutta halutaan, voi jättää vuoden pois.
 
 ### 11. Miksi Pohjanlahden rannat nousevat yhä?
 
-Koska jääkauden mannerjää painoi maankuoren alas, eikä se ole vielä palautunut. Jää oli täällä noin kolme kilometriä paksu. Pohjanlahdella maa kohoaa yhä noin 8–9 millimetriä vuodessa, eli lähes metrin sadassa vuodessa. Merenkurkun alue kasvaa noin neliökilometrin vuodessa. Maankuori joustaa siis vielä tuhansia vuosia jään poistumisen jälkeen.
+Koska jääkauden mannerjää painoi maankuoren alas, eikä se ole vielä palautunut. Jää oli täällä noin kolme kilometriä paksu. Pohjanlahdella maa kohoaa yhä noin 8–9 millimetriä vuodessa, eli lähes metrin sadassa vuodessa. Merenkurkun saaristo kasvaa vuosi vuodelta uutta maata. Maankuori joustaa siis vielä tuhansia vuosia jään poistumisen jälkeen.
 
-*46 sanaa · kohteet: fin/pohjanlahti*
+*47 sanaa · kohteet: fin/pohjanlahti*
 
-Huom: Nostokortin teksti sanoo maan painuneen 'lähes kilometrin', mikä ei vastaa NASAn arviota (yli 500 m alas Itämeren alla); tätä lukua ei käytetä. Korttitekstin lukua kannattaa tarkistaa. · Eri lähteet 8-10 mm/v, siksi 'noin 8-9 mm'. 'Lähes metri sadassa vuodessa' on laskettu (9 mm x 100 = 90 cm). Nostokortin '80 cm vuosisadassa' vastaa 8 mm:ää.
+**PT 16.10.: Merenkurkun "neliökilometri vuodessa" pois (arviot 1–7 km²); nyt yleinen muotoilu.**
+
+Huom (kirjoittaja): Nostokortin teksti sanoo maan painuneen 'lähes kilometrin', mikä ei vastaa NASAn arviota (yli 500 m alas Itämeren alla); tätä lukua ei käytetä. Korttitekstin lukua kannattaa tarkistaa. · Eri lähteet 8-10 mm/v, siksi 'noin 8-9 mm'. 'Lähes metri sadassa vuodessa' on laskettu (9 mm x 100 = 90 cm). Nostokortin '80 cm vuosisadassa' vastaa 8 mm:ää.
 
 ### 12. Mikä joki laskee Suomenlahden pohjukkaan?
 
-Neva. Se on vain 74 kilometriä pitkä, mutta virtaamaltaan Euroopan neljänneksi suurin joki. Neva lähtee Laatokasta, virtaa Pietarin läpi ja laskee Nevanlahteen Suomenlahden itäpäähän. Keskivirtaama on noin 2 500 kuutiometriä sekunnissa. Se tuo lahteen niin paljon makeaa vettä, että Suomenlahden itäosan vesi on lähes makeaa.
+Neva. Se on vain 74 kilometriä pitkä, mutta virtaamaltaan yksi Euroopan suurimmista joista. Neva lähtee Laatokasta, virtaa Pietarin läpi ja laskee Nevanlahteen Suomenlahden itäpäähän. Keskivirtaama on noin 2 500 kuutiometriä sekunnissa. Se tuo lahteen niin paljon makeaa vettä, että Nevanlahden vesi on lähes makeaa. Pietari on rakennettu Nevan suistoon.
 
-*45 sanaa · kohteet: fin/suomenlahti*
+*49 sanaa · kohteet: fin/suomenlahti*
 
-Huom: en.wikipedia lukuja ei käytetä; 'lähes makeaa' on tulkinta Nevanlahden ja itäosan suolaisuudesta.
+**PT 16.10.: "neljänneksi suurin" -> "yksi Euroopan suurimmista"; "itäosa lähes makeaa" -> vain Nevanlahti.**
+
+Huom (kirjoittaja): en.wikipedia lukuja ei käytetä; 'lähes makeaa' on tulkinta Nevanlahden ja itäosan suolaisuudesta.
 
 ### 13. Miksi lahden ympäristöongelmat ovat pahimpia juuri täällä?
 
-Koska Suomenlahti on matala, ja sen vesi vaihtuu hitaasti, mutta rannoilta ja Nevasta tulee paljon ravinteita. Keskisyvyys on vain noin 38 metriä. Ravinteet rehevöittävät vettä, ja pohjaan aiemmin kertyneet ravinteet pitävät rehevöitymistä yllä vielä nytkin. Siksi kesäisin lahdessa on runsaasti sinilevää. Suomenlahti on Itämeren rehevöitynein osa.
+Koska Suomenlahti on matala, ja sen vesi vaihtuu hitaasti, mutta rannoilta ja Nevasta tulee paljon ravinteita. Keskisyvyys on vain noin 38 metriä. Ravinteet rehevöittävät vettä, ja pohjaan aiemmin kertyneet ravinteet pitävät rehevöitymistä yllä vielä nytkin. Siksi kesäisin lahdessa on runsaasti sinilevää. Suomenlahti on yksi Itämeren rehevöityneimmistä osista.
 
-*46 sanaa · kohteet: fin/suomenlahti*
+*47 sanaa · kohteet: fin/suomenlahti*
 
-Huom: Syken tiedote sanoo, että Suomenlahdella pohjaan varastoituneet ravinteet pitävät rehevyyttä yllä. · Fosforiosuutta (puolet) ei käytetä vastauksessa: yksi hakutulos ilman suoraa vahvistusta. 'Vesi vaihtuu hitaasti' on Itämeren yleisestä viipymästä, ei Suomenlahden erillisestä luvusta.
+**PT 16.10.: "rehevöitynein" -> "yksi rehevöityneimmistä".**
+
+Huom (kirjoittaja): Syken tiedote sanoo, että Suomenlahdella pohjaan varastoituneet ravinteet pitävät rehevyyttä yllä. · Fosforiosuutta (puolet) ei käytetä vastauksessa: yksi hakutulos ilman suoraa vahvistusta. 'Vesi vaihtuu hitaasti' on Itämeren yleisestä viipymästä, ei Suomenlahden erillisestä luvusta.
 
 ### 14. Miksi saimaannorppa elää vain täällä?
 
@@ -183,7 +195,7 @@ Koska se jäi eristyksiin Saimaalle jääkauden jälkeen. Maa kohosi, ja norppa 
 
 *46 sanaa · kohteet: fin/saimaa*
 
-Huom: Metsähallituksen mukaan norppa erosi Laatokan norpista; Wikipedian mukaan muista norpakannoista. Vastauksessa vain 'jäi eristyksiin'. Laatokannorppa (Pusa hispida ladogensis) elää Laatokalla, joten 'vain Saimaalla' koskee nimenomaan saimaannorppaa. · Luku vaihtelee vuosittain; 'noin 500'. · Vuonna 2025 on esitetty luokittelua omaksi lajikseen (Pusa saimensis), vain Wikipedia; ei käytetty.
+Huom (kirjoittaja): Metsähallituksen mukaan norppa erosi Laatokan norpista; Wikipedian mukaan muista norpakannoista. Vastauksessa vain 'jäi eristyksiin'. Laatokannorppa (Pusa hispida ladogensis) elää Laatokalla, joten 'vain Saimaalla' koskee nimenomaan saimaannorppaa. · Luku vaihtelee vuosittain; 'noin 500'. · Vuonna 2025 on esitetty luokittelua omaksi lajikseen (Pusa saimensis), vain Wikipedia; ei käytetty.
 
 ### 15. Mihin Saimaan vedet laskevat?
 
@@ -191,7 +203,7 @@ Saimaan vedet laskevat Vuoksi-jokea pitkin Laatokkaan. Laivoille on rakennettu l
 
 *46 sanaa · kohteet: fin/saimaa*
 
-Huom: Vuoksen pituus jätetty pois (150 km tai 162 km haarasta riippuen). · Alkuperäinen kanava oli pidempi (vanhemmat lähteet noin 58 km), nykyinen pituus noin 43 km. · Lähteet tiivistelmiä hakutuloksesta.
+Huom (kirjoittaja): Vuoksen pituus jätetty pois (150 km tai 162 km haarasta riippuen). · Alkuperäinen kanava oli pidempi (vanhemmat lähteet noin 58 km), nykyinen pituus noin 43 km. · Lähteet tiivistelmiä hakutuloksesta.
 
 ### 16. Mikä Kuurinkynnäs on?
 
@@ -199,7 +211,7 @@ Kuurinkynnäs on kapea, kaareva hiekkaniemi, joka erottaa Kuurinlahden Itämeres
 
 *47 sanaa · kohteet: ltu/itameri*
 
-Huom: UNESCO-aineistosta lukua ei löytynyt; toinen lähde on toissijainen. Teksti sanoo "korkeimmat noin 60 m". · Suomenkielinen nimi Kuurinlahti on käännös englannin Curonian Lagoon -nimestä.
+Huom (kirjoittaja): UNESCO-aineistosta lukua ei löytynyt; toinen lähde on toissijainen. Teksti sanoo "korkeimmat noin 60 m". · Suomenkielinen nimi Kuurinlahti on käännös englannin Curonian Lagoon -nimestä.
 
 ### 17. Miksi Riianlahti on erillinen?
 
@@ -207,7 +219,9 @@ Riianlahti on Itämeren oma sivumeri, koska sen yhteydet avomerelle ovat ahtaat:
 
 *49 sanaa · kohteet: lva/itameri*
 
-Huom: Yhden lähteen luvut; kirjoitettu "noin". Harkitse poistoa jos halutaan tiukka kahden lähteen sääntö. · Prosenttia ja suolaisuusarvoja ei käytetty tekstissä.
+**PT 16.10.: YHDEN LÄHTEEN VARASSA, vahvistettava toisesta ennen äänitystä.**
+
+Huom (kirjoittaja): Yhden lähteen luvut; kirjoitettu "noin". Harkitse poistoa jos halutaan tiukka kahden lähteen sääntö. · Prosenttia ja suolaisuusarvoja ei käytetty tekstissä.
 
 ### 18. Miksi Norjan rannikko pysyy sulana talvella?
 
@@ -215,15 +229,17 @@ Norjan rannikkoa lämmittää Pohjois-Atlantin virta, Golfvirran jatke, joka tuo
 
 *45 sanaa · kohteet: nor/norjanmeri*
 
-Huom: Tutkimustulos; muotoiltu varovasti ("tutkijoiden mukaan"). Golfvirran osuudesta tutkijat ovat osin eri mieltä.
+Huom (kirjoittaja): Tutkimustulos; muotoiltu varovasti ("tutkijoiden mukaan"). Golfvirran osuudesta tutkijat ovat osin eri mieltä.
 
 ### 19. Mikä Jan Mayenin harjanne on?
 
-Jan Mayenin harjanne on vedenalainen kohouma Islannin koillispuolella, ja se erottaa Norjanmeren Grönlanninmerestä. Se ei ole tavallista merenpohjaa, vaan yli 400 kilometriä pitkä mantereen kuoren palanen. Se kuului ennen Grönlantiin, kunnes merenpohjan leviäminen irrotti sen kymmeniä miljoonia vuosia sitten. Siksi sitä kutsutaan mikromantereeksi, eli pieneksi irronneeksi mantereen osaksi.
+Jan Mayenin harjanne on vedenalainen kohouma Islannin koillispuolella, Islanninmeren alueella. Se ei ole tavallista merenpohjaa, vaan yli 400 kilometriä pitkä mantereen kuoren palanen. Se kuului ennen Grönlantiin, kunnes merenpohjan leviäminen irrotti sen kymmeniä miljoonia vuosia sitten. Siksi sitä kutsutaan mikromantereeksi, eli pieneksi irronneeksi mantereen osaksi.
 
-*48 sanaa · kohteet: nor/norjanmeri*
+*45 sanaa · kohteet: nor/norjanmeri*
 
-Huom: Kortin teksti on tämän kanssa yhtäpitävä. · Lähteet antavat 400-500 km; teksti sanoo "yli 400". · Tarkkaa ajankohtaa ei annettu, lähteet eroavat.
+**PT 16.10.: harjanne kuuluu Islanninmeren alueelle; "erottaa Norjanmeren Grönlanninmerestä" pois (korjattu).**
+
+Huom (kirjoittaja): Kortin teksti on tämän kanssa yhtäpitävä. · Lähteet antavat 400-500 km; teksti sanoo "yli 400". · Tarkkaa ajankohtaa ei annettu, lähteet eroavat.
 
 ### 20. Kuka Willem Barentsz oli?
 
@@ -231,7 +247,7 @@ Willem Barentsz oli hollantilainen merenkulkija, joka etsi koillisväylää Euro
 
 *50 sanaa · kohteet: nor/barentsinmeri, rus/barentsinmeri*
 
-Huom: Vuoden 1911 Britannica antaa 30.6.; teksti sanoo vain "kesäkuussa 1597".
+Huom (kirjoittaja): Vuoden 1911 Britannica antaa 30.6.; teksti sanoo vain "kesäkuussa 1597".
 
 ### 21. Miksi merta kutsuttiin ennen Murmanskinmereksi?
 
@@ -239,7 +255,7 @@ Venäläiset kutsuivat Kolan niemimaan pohjoisrannikkoa Murmaniksi, ja meri nime
 
 *46 sanaa · kohteet: nor/barentsinmeri*
 
-Huom: Mercator-yksityiskohta toisessa lähteessä vain kauppiaan sivulla. · Päätelmä "nimetty rannikon mukaan" on johdettu; yksi venäläinen artikkeli (hakutulos) väittää nimen tulevan kaupungista, mikä on anakronismi (kaupunki 1900-luvulla). Varovaisempi muotoilu mahdollinen. · Lähteet ovat ristiriidassa, siksi teksti kertoo vain että alkuperä on kiistanalainen. · Vuosilukua (1853) ei käytetty, koska se jäi vahvistamatta.
+Huom (kirjoittaja): Mercator-yksityiskohta toisessa lähteessä vain kauppiaan sivulla. · Päätelmä "nimetty rannikon mukaan" on johdettu; yksi venäläinen artikkeli (hakutulos) väittää nimen tulevan kaupungista, mikä on anakronismi (kaupunki 1900-luvulla). Varovaisempi muotoilu mahdollinen. · Lähteet ovat ristiriidassa, siksi teksti kertoo vain että alkuperä on kiistanalainen. · Vuosilukua (1853) ei käytetty, koska se jäi vahvistamatta.
 
 ### 22. Miksi Itämerellä ei ole vuorovettä?
 
@@ -247,23 +263,27 @@ Itämerellä on vuorovettä vain muutaman sentin verran, joten sillä ei ole kä
 
 *46 sanaa · kohteet: pol/itameri*
 
-Huom: Cm-lukuja ei käytetty. · Toinen lähde yleisluonteinen; 1 hPa = 1 cm löytyi vain Ilmatieteen laitoksen tiivistelmästä.
+Huom (kirjoittaja): Cm-lukuja ei käytetty. · Toinen lähde yleisluonteinen; 1 hPa = 1 cm löytyi vain Ilmatieteen laitoksen tiivistelmästä.
 
 ### 23. Miksi Murmansk ei jäädy talvella?
 
-Murmanskin satama pysyy sulana, koska lämmin Pohjois-Atlantin virta tuo Barentsinmeren lounaisosaan lämmintä vettä. Murmansk on Euroopan Venäjän ainoa ympärivuotisesti jäätön satama, ja siksi se kasvoi tärkeäksi pohjoiseksi satamakaupungiksi. Kaupunki itse ei pysy lämpimänä: talvella ilma on kylmää ja lunta on paljon, vain satamavesi pysyy auki.
+Murmanskin satama pysyy sulana, koska lämmin Pohjois-Atlantin virta tuo Barentsinmeren lounaisosaan lämmintä vettä. Murmansk on Venäjän pohjoisen tärkein ympärivuoden sula satama, ja siksi se kasvoi tärkeäksi pohjoiseksi satamakaupungiksi. Kaupunki itse ei pysy lämpimänä: talvella ilma on kylmää ja lunta on paljon, vain satamavesi pysyy auki.
 
 *45 sanaa · kohteet: rus/barentsinmeri*
 
-Huom: WorldAtlas (hakutulos) sanoo "suurimman osan vuodesta" - teksti sanoo "pysyy sulana". · Muotoilu "ainoa" peräisin yhdestä toimituksellisesta lähteestä; hakutulos. · Ei erikseen lähteistetty luku; yleinen toteamus, ei lukuja.
+**PT 16.10. VIRHE korjattu: ei "Euroopan Venäjän ainoa jäätön satama" (Novorossijsk, Kaliningrad) -> "Venäjän pohjoisen tärkein ympärivuoden sula satama".**
+
+Huom (kirjoittaja): WorldAtlas (hakutulos) sanoo "suurimman osan vuodesta" - teksti sanoo "pysyy sulana". · Muotoilu "ainoa" peräisin yhdestä toimituksellisesta lähteestä; hakutulos. · Ei erikseen lähteistetty luku; yleinen toteamus, ei lukuja.
 
 ### 24. Kuinka paksua Jäämeren jää on?
 
-Jäämeren jää on yleensä parin–kolmen metrin paksuista. NASAn mukaan yhden talven aikana kasvanut jää yltää tavallisesti noin kahteen metriin, ja useamman kesän yli säilynyt vanha jää on keskimäärin noin kolme metriä. Pohjoisen jäämeren keskiosassa mitattiin huhtikuussa 2018 keskimäärin 2,1 metriä. Paksuus vaihtelee siis alueen ja vuodenajan mukaan.
+Jäämeren jää on yleensä parin–kolmen metrin paksuista. NASAn mukaan yhden talven aikana kasvanut jää yltää tavallisesti noin kahteen metriin, ja useamman kesän yli säilynyt vanha jää on keskimäärin noin kolme metriä. Paksuus vaihtelee siis alueen ja vuodenajan mukaan. Talvella jää kasvaa ja kesällä sulaa, joten peittoala vaihtelee vuoden mittaan.
 
-*47 sanaa · kohteet: rus/jaameri*
+*49 sanaa · kohteet: rus/jaameri*
 
-Huom: NASA-luvut ovat vuodelta 2009 (ICESat). NOAA-aineisto antaa monivuotiselle 2-4 m. · Vain talvimittaukset; kesällä ei mitata. Luvut vaihtelevat vuosittain.
+**PT 16.10.: "huhtikuu 2018, 2,1 m" pois (lähde epäselvä).**
+
+Huom (kirjoittaja): NASA-luvut ovat vuodelta 2009 (ICESat). NOAA-aineisto antaa monivuotiselle 2-4 m. · Vain talvimittaukset; kesällä ei mitata. Luvut vaihtelevat vuosittain.
 
 ### 25. Miksi jotkut kutsuvat sitä Atlantin suistoksi?
 
@@ -271,7 +291,7 @@ Joidenkin tutkijoiden mielestä Jäämeri on kuin Atlantin suisto, koska sen tä
 
 *46 sanaa · kohteet: rus/jaameri*
 
-Huom: Täsmälleen sanaa "estuary of the Atlantic" ei löytynyt toisesta lähteestä, vain vastaava "double estuary" -käsite. · Jokivesi (Ob, Jenisei, Lena) jätetty pois vastauksesta, koska sille ei löytynyt kahta lähdettä.
+Huom (kirjoittaja): Täsmälleen sanaa "estuary of the Atlantic" ei löytynyt toisesta lähteestä, vain vastaava "double estuary" -käsite. · Jokivesi (Ob, Jenisei, Lena) jätetty pois vastauksesta, koska sille ei löytynyt kahta lähdettä.
 
 ### 26. Miksi Gotlanti oli kauppareittien risteys?
 
@@ -279,7 +299,7 @@ Gotlanti on keskellä Itämerta, joten kauppareitit kulkivat luontevasti sen kau
 
 *52 sanaa · kohteet: swe/itameri*
 
-Huom: Yli 700 hopea-aarretta (Archaeology) jätetty pois: yksi lähde.
+Huom (kirjoittaja): Yli 700 hopea-aarretta (Archaeology) jätetty pois: yksi lähde.
 
 ### 27. Miksi Pohjanlahden rannat nousevat?
 
@@ -287,7 +307,7 @@ Rannat nousevat, koska maa kohoaa vapauduttuaan jääkauden mannerjään painost
 
 *51 sanaa · kohteet: swe/pohjanlahti*
 
-Huom: Kortin "80 cm vuosisadassa" on yhtäpitävä (Wikipedia). · Lähteiden luvut vaihtelevat 285-300 m; käytetty NASAn lukua. · Maksimiarvio; teksti sanoo "jopa". · Teksti sanoo vain "tuhansien vuosien päästä".
+Huom (kirjoittaja): Kortin "80 cm vuosisadassa" on yhtäpitävä (Wikipedia). · Lähteiden luvut vaihtelevat 285-300 m; käytetty NASAn lukua. · Maksimiarvio; teksti sanoo "jopa". · Teksti sanoo vain "tuhansien vuosien päästä".
 
 ### 28. Miksi järvessä elää merieläimiä?
 
@@ -295,7 +315,7 @@ Vänernissä elää pikemminkin meren jäänteitä kuin varsinaisia merieläimi�
 
 *45 sanaa · kohteet: swe/vanern*
 
-Huom: Mysis relicta on myöhemmin jaettu kahdeksi lajiksi, jolloin lajeja on seitsemän; teksti sanoo "perinteisesti luetteloitua kuusi".
+Huom (kirjoittaja): Mysis relicta on myöhemmin jaettu kahdeksi lajiksi, jolloin lajeja on seitsemän; teksti sanoo "perinteisesti luetteloitua kuusi".
 
 ### 29. Mihin Vänernin vedet laskevat?
 
@@ -303,7 +323,7 @@ Vänernin vedet laskevat länteen Göta älv -jokea pitkin Kattegatin merelle G�
 
 *48 sanaa · kohteet: swe/vanern*
 
-Huom: Joen pituutta (93 km) ei käytetty: vain Wikipedia.
+Huom (kirjoittaja): Joen pituutta (93 km) ei käytetty: vain Wikipedia.
 
 ### 30. Miksi Pohjanmeri on niin matala?
 
@@ -311,15 +331,17 @@ Pohjanmeri on matala, koska se lepää Euroopan mannerjalustalla eikä syvän va
 
 *50 sanaa · kohteet: gbr/pohjanmeri, nld/pohjanmeri*
 
-Huom: Mannerjalusta-termi vain Wikipediassa; nostokortti sanoo saman. · Lähteet eroavat (90-95 m), siksi "noin 90 metriä" (karkea). · Lähteet eroavat (120-137 m), käytetty "yli sata metriä".
+Huom (kirjoittaja): Mannerjalusta-termi vain Wikipediassa; nostokortti sanoo saman. · Lähteet eroavat (90-95 m), siksi "noin 90 metriä" (karkea). · Lähteet eroavat (120-137 m), käytetty "yli sata metriä".
 
 ### 31. Milloin Pohjanmereltä löydettiin öljy?
 
-Pohjanmeren ensimmäinen kaupallinen öljylöytö tehtiin vuonna 1969 Norjan puolella, kun yhdysvaltalainen Phillips Petroleum löysi Ekofiskin kentän. Geologi näki öljyn merkit porausnäytteissä lokakuussa 1969. Tuotanto alkoi vuonna 1971, ja öljy lastattiin aluksi suoraan tankkereihin merenpohjan kaivoista. Löytö tuli yli 200 koeporauksen jälkeen, jotka oli käynnistänyt Groningenin kaasulöytö.
+Pohjanmeren ensimmäinen kaupallinen öljylöytö tehtiin vuonna 1969 Norjan puolella, kun yhdysvaltalainen Phillips Petroleum löysi Ekofiskin kentän. Tuotanto alkoi vuonna 1971, ja öljy lastattiin aluksi suoraan tankkereihin merenpohjan kaivoista. Löytö vahvistui joulukuussa 1969. Pohjanmeri on sen jälkeen ollut yksi Euroopan tärkeimmistä öljyn tuotantoalueista, ja Norja ja Britannia ovat pumpanneet sieltä öljyä vuosikymmenten ajan.
 
-*46 sanaa · kohteet: gbr/pohjanmeri*
+*52 sanaa · kohteet: gbr/pohjanmeri*
 
-Huom: Joulukuussa 1969 löytö vahvistettiin/ilmoitettiin viranomaisille; vastauksessa vain lokakuu. · Vain yksi lähde; muotoilu pidetty tiiviinä. · Jätetty vastauksesta pois, koska vain yksi lähde. Vastaus rajattu öljyyn.
+**PT 16.10.: "yli 200 koeporauksen jälkeen" pois (Ekofisk noin 32. kaivo); löytö joulukuussa 1969 (korjattu).**
+
+Huom (kirjoittaja): Joulukuussa 1969 löytö vahvistettiin/ilmoitettiin viranomaisille; vastauksessa vain lokakuu. · Vain yksi lähde; muotoilu pidetty tiiviinä. · Jätetty vastauksesta pois, koska vain yksi lähde. Vastaus rajattu öljyyn.
 
 ### 32. Mikä Mansaari on?
 
@@ -327,7 +349,7 @@ Mansaari on saari keskellä Irlanninmerta, meren toiseksi suurin Anglesey-saaren
 
 *47 sanaa · kohteet: gbr/irlanninmeri*
 
-Huom: Järjestys vain Wikipediassa. · Pinta-alaa (noin 572 km2), asukaslukua ja Tynwaldin 979-vuotta ei käytetty: yksi lähde / epävarma.
+Huom (kirjoittaja): Järjestys vain Wikipediassa. · Pinta-alaa (noin 572 km2), asukaslukua ja Tynwaldin 979-vuotta ei käytetty: yksi lähde / epävarma.
 
 ### 33. Miksi merta kutsutaan joskus Manxinmereksi?
 
@@ -335,15 +357,19 @@ Manxinmeri on harvinainen sivunimi Irlanninmerelle, eikä se ole vakiintunut. Ni
 
 *48 sanaa · kohteet: gbr/irlanninmeri*
 
-Huom: HEIKOSTI TUETTU: nimen käytölle vain yksi lähde. Syy "nimetty saaren mukaan" on johdettu, ei suoraan lähteessä.
+**PT 16.10.: HEIKKO TUKI ("Manxinmeri" mainitaan vain yhdessä lähteessä). SUOSITUS: poista kysymys ja vastaus; korvaa uudella kysymyksellä (Irlanninmeri-noston toinen kysymys).**
+
+Huom (kirjoittaja): HEIKOSTI TUETTU: nimen käytölle vain yksi lähde. Syy "nimetty saaren mukaan" on johdettu, ei suoraan lähteessä.
 
 ### 34. Miten meri on muovannut kallioon valtavan kaaren?
 
-Aallot ovat kuluttaneet Durdle Doorin kaaren rannan suuntaisesta kalliovyöhykkeestä. Kova Portlandin kalkkikivi kesti, mutta sen takana oleva pehmeämpi kivi murtui ja huuhtoutui pois. Merenkäynti poisti kalkkikiven lähes kaikkialta, ja jäljelle jäi niemeke, josta aallot puhkaisivat aukon. Rannikko rapautuu yhä, joten aallot jatkavat työtään ja kaari muuttuu hitaasti edelleen.
+Aallot ovat kuluttaneet Durdle Doorin kaaren rannan suuntaisesta kalliovyöhykkeestä. Durdle Door on Dorsetin Jurassic Coastilla Englannin etelärannikolla. Kova Portlandin kalkkikivi kesti, mutta sen takana oleva pehmeämpi kivi murtui ja huuhtoutui pois, ja aallot puhkaisivat kaaren. Rannikko rapautuu yhä, joten aallot jatkavat työtään ja kaari muuttuu hitaasti edelleen.
 
-*48 sanaa · kohteet: gbr/jurassic-coast-durdle-door*
+*47 sanaa · kohteet: gbr/jurassic-coast-durdle-door*
 
-Huom: Kaaren ikää, mittoja ja omistajaa ei käytetty: lähteet ristiriitaisia (140 / 170 milj. vuotta kivi).
+**PT 16.10. VIRHE korjattu: aallot kuluttivat pehmeämmän kiven Portlandin kalkkikivivyön takaa ja puhkaisivat kaaren (ei "merenkäynti poisti kalkkikiven lähes kaikkialta").**
+
+Huom (kirjoittaja): Kaaren ikää, mittoja ja omistajaa ei käytetty: lähteet ristiriitaisia (140 / 170 milj. vuotta kivi).
 
 ### 35. Kuinka pitkän ajan geologinen historia näkyy Jurassic Coastilla?
 
@@ -351,7 +377,7 @@ Jurassic Coastin kallioissa näkyy noin 185 miljoonan vuoden historia. Kerrostum
 
 *45 sanaa · kohteet: gbr/jurassic-coast-durdle-door*
 
-Huom: "Maan keskiaikakausi" = mesozoinen aikakausi; sana selitetty näin.
+Huom (kirjoittaja): "Maan keskiaikakausi" = mesozoinen aikakausi; sana selitetty näin.
 
 ### 36. Mikä Yrjönkanaali on?
 
@@ -359,7 +385,9 @@ Yrjönkanaali on merikaista Irlannin kaakkoisosan ja Walesin lounaiskärjen väl
 
 *47 sanaa · kohteet: irl/irlanninmeri*
 
-Huom: Lähteet ovat ristiriidassa siitä, onko 76 km kapein vai leveä kohta; Dictionary.com antaa jopa 145 km. Vastauksessa "kapeimmillaan" on siis epävarma; pituutta (noin 160 km, vain Britannica) ei käytetty. · Heikosti tuettu (yksi lähde); lause "meriraja kulkee juuri tuota linjaa pitkin" perustuu Wikipediaan.
+**PT 16.10.: YHDEN LÄHTEEN VARASSA, vahvistettava.**
+
+Huom (kirjoittaja): Lähteet ovat ristiriidassa siitä, onko 76 km kapein vai leveä kohta; Dictionary.com antaa jopa 145 km. Vastauksessa "kapeimmillaan" on siis epävarma; pituutta (noin 160 km, vain Britannica) ei käytetty. · Heikosti tuettu (yksi lähde); lause "meriraja kulkee juuri tuota linjaa pitkin" perustuu Wikipediaan.
 
 ### 37. Miksi Mansaari on oma alueensa?
 
@@ -367,7 +395,7 @@ Mansaari on oma alueensa, koska se on Britannian kruunun alainen itsehallintoalu
 
 *48 sanaa · kohteet: irl/irlanninmeri*
 
-Huom: Viimeinen lause ("kasvanut historiassa") on yleistys; Britannican kruunuhallinta 1828 ja Tynwaldin 979 jätetty pois (yksi lähde).
+Huom (kirjoittaja): Viimeinen lause ("kasvanut historiassa") on yleistys; Britannican kruunuhallinta 1828 ja Tynwaldin 979 jätetty pois (yksi lähde).
 
 ### 38. Kuuluuko Grönlanninmeri Jäämereen vai Atlanttiin?
 
@@ -375,7 +403,7 @@ Siihen ei ole yhtä oikeaa vastausta. Britannica pitää Grönlanninmerta Jääm
 
 *47 sanaa · kohteet: isl/gronlanninmeri*
 
-Huom: Kysymys on määritelmäkysymys; vastaus kertoo tämän. · IHO:n tarkkaa määritelmää ei saatu primäärilähteestä; vain Wikipedia kertoo IHO:n rajaavan meren. Pinta-alaa (1,2 milj. km2) ei käytetty (yksi lähde).
+Huom (kirjoittaja): Kysymys on määritelmäkysymys; vastaus kertoo tämän. · IHO:n tarkkaa määritelmää ei saatu primäärilähteestä; vain Wikipedia kertoo IHO:n rajaavan meren. Pinta-alaa (1,2 milj. km2) ei käytetty (yksi lähde).
 
 ### 39. Mikä Framinsalmi on?
 
@@ -383,7 +411,7 @@ Framinsalmi on meriväylä Grönlannin ja Huippuvuorten välillä, kaikkiaan noi
 
 *48 sanaa · kohteet: isl/gronlanninmeri*
 
-Huom: Luvut eroavat, siksi "yli 2 500 metriä". · Nimi ei ole virallinen; nimen alkuperä venäläisessä tieteellisessä kirjallisuudessa.
+Huom (kirjoittaja): Luvut eroavat, siksi "yli 2 500 metriä". · Nimi ei ole virallinen; nimen alkuperä venäläisessä tieteellisessä kirjallisuudessa.
 
 ### 40. Mistä järvi on saanut nimensä?
 
@@ -391,7 +419,7 @@ Mývatn tarkoittaa islanniksi sääskijärveä: mý on surviaissääski ja vatn 
 
 *45 sanaa · kohteet: isl/myvatn*
 
-Huom: Huom: alueella on myös puraisevia mäkäriä; vastaus sanoo vain "valtaosa ei pure". Heikosti tuettu.
+Huom (kirjoittaja): Huom: alueella on myös puraisevia mäkäriä; vastaus sanoo vain "valtaosa ei pure". Heikosti tuettu.
 
 ### 41. Miksi sorsia on juuri täällä niin paljon?
 
@@ -399,7 +427,7 @@ Sorsia on Mývatnilla paljon, koska ravinteikas lähdevesi tuottaa järveen valt
 
 *47 sanaa · kohteet: isl/myvatn*
 
-Huom: Lähteet eroavat (13/14/15) -> vaihteluväli; "enemmän kuin missään muualla Euroopassa" jätetty pois (vain Wikipedia). · Populaatioarvio vaihtelee ("noin 2 000" / "muutama tuhat").
+Huom (kirjoittaja): Lähteet eroavat (13/14/15) -> vaihteluväli; "enemmän kuin missään muualla Euroopassa" jätetty pois (vain Wikipedia). · Populaatioarvio vaihtelee ("noin 2 000" / "muutama tuhat").
 
 ### 42. Miten hollantilaiset ovat vallanneet maata mereltä?
 
@@ -407,7 +435,7 @@ Hollantilaiset ovat rakentaneet vesialueen ympärille penkereet ja pumpanneet ve
 
 *45 sanaa · kohteet: nld/pohjanmeri*
 
-Huom: Molemmat Wikipediassa; yleisesti tunnettu tieto. · Suljettu 1932; juhlallisesti avattu 1933. · Pienet erot (1 620 / 1 650) -> "noin 1 600".
+Huom (kirjoittaja): Molemmat Wikipediassa; yleisesti tunnettu tieto. · Suljettu 1932; juhlallisesti avattu 1933. · Pienet erot (1 620 / 1 650) -> "noin 1 600".
 
 ### 43. Kuinka kapea Gibraltarinsalmi todella on?
 
@@ -415,15 +443,17 @@ Kapeimmillaan salmi on vain noin 14 kilometriä leveä, vaikka se erottaa kaksi 
 
 *47 sanaa · kohteet: esp/valimeri, fra/valimeri, syr/valimeri, tur/valimeri*
 
-Huom: Britannican (hakutulos) mukaan 13 km, joten sanottu 'noin 14'. Britannican sivu antoi 403. · Vaite on kysymyksen kannalta luonnollinen yhteys; Suezin ja Bosporin kautta on yhteys muihin meriin, ei Atlanttiin.
+Huom (kirjoittaja): Britannican (hakutulos) mukaan 13 km, joten sanottu 'noin 14'. Britannican sivu antoi 403. · Vaite on kysymyksen kannalta luonnollinen yhteys; Suezin ja Bosporin kautta on yhteys muihin meriin, ei Atlanttiin.
 
 ### 44. Mitä Espanjan Välimeren rannikolla kalastetaan?
 
-Yleisiä saaliita ovat pienet parvikalat, anjovis ja sardiini, joita pyydetään Välimerellä eniten. Pohjatroolarit hakevat syvältä kummeliturskaa ja punakatkarapua, ja Dénian punakatkarapu on kuuluisa herkku. Vuonna 2025 Espanja nosti punakatkaravun saaliskiintiön 45,9 tonniin, ja se koskee 286 troolaria. Pyyntiä ohjataan siis kiintiöillä ja pyyntikielloilla, jotta kalakannat säilyvät.
+Yleisiä saaliita ovat pienet parvikalat, anjovis ja sardiini, joita pyydetään Välimerellä eniten. Pohjatroolarit hakevat syvältä kummeliturskaa ja punakatkarapua, ja Dénian punakatkarapu on kuuluisa herkku. Välimeren alueella punakatkaravun pyyntiä rajoitetaan saaliskiintiöillä. Pyyntiä ohjataan siis kiintiöillä ja pyyntikielloilla, jotta kalakannat säilyvät. Kalat ja äyriäiset kuuluvat rannikon ruokakulttuuriin.
 
-*46 sanaa · kohteet: esp/valimeri*
+*45 sanaa · kohteet: esp/valimeri*
 
-Huom: GFCM-luku koskee koko Välimerta, ei erikseen Espanjaa; Espanjan lajikohtaista saalisjakaumaa ei löytynyt. Muotoilu 'koko Välimeren alueella'. HEIKOSTI TUETTU Espanja-osuus. · Pyyntisyvyys jätetty pois: lähteet 600 m ja 900 m. · Kaksi riippumatonta lähdettä ei löytynyt; tietoa pidettävä yhden uutislähteen varassa. Ei viranomaisen omaa sivua.
+**PT 16.10. VIRHE korjattu: punakatkaravun 45,9 t / 286 troolaria on koko Välimeren GFCM-luku, ei Espanjan; pois, nyt "Välimeren alueella".**
+
+Huom (kirjoittaja): GFCM-luku koskee koko Välimerta, ei erikseen Espanjaa; Espanjan lajikohtaista saalisjakaumaa ei löytynyt. Muotoilu 'koko Välimeren alueella'. HEIKOSTI TUETTU Espanja-osuus. · Pyyntisyvyys jätetty pois: lähteet 600 m ja 900 m. · Kaksi riippumatonta lähdettä ei löytynyt; tietoa pidettävä yhden uutislähteen varassa. Ei viranomaisen omaa sivua.
 
 ### 45. Miksi Välimeri on niin suolainen?
 
@@ -431,7 +461,7 @@ Koska siellä haihtuu enemmän vettä kuin sateet ja joet tuovat. Haihtuessaan v
 
 *49 sanaa · kohteet: fra/valimeri*
 
-Huom: Luku vaihtelee alueittain; sanottu 'noin 3,8 prosenttia' (38 PSU on noin 38 g suolaa kilossa vettä) ammattikielen välttämiseksi. · Toinen lähde ei ole tutkimuslaitos; Wikipedia antaa Biskajanlahdelle 35 g/l, mikä on samaa suuruusluokkaa. · Vastauksessa ei lukuja.
+Huom (kirjoittaja): Luku vaihtelee alueittain; sanottu 'noin 3,8 prosenttia' (38 PSU on noin 38 g suolaa kilossa vettä) ammattikielen välttämiseksi. · Toinen lähde ei ole tutkimuslaitos; Wikipedia antaa Biskajanlahdelle 35 g/l, mikä on samaa suuruusluokkaa. · Vastauksessa ei lukuja.
 
 ### 46. Miksi Biskajanlahti on niin pahamaineinen merenkulkijoille?
 
@@ -439,7 +469,7 @@ Atlantin matalapaineet iskevät lahteen lännestä, etenkin talvella, ja myrskyt
 
 *46 sanaa · kohteet: fra/biskajanlahti*
 
-Huom: Suurin syvyys jätetty pois: 4 735 m vs 2 790 m. · 'Aallot jyrkkiä' perustuu purjehduslähteeseen; ei viranomaislähdettä. · Merkittävin tukihuomio on purjehduslehdistä; HEIKOMMIN TUETTU osuus. Tuulta vastaan -kohta jätettävissä pois, jos halutaan vain yhden lähteen väitteet.
+Huom (kirjoittaja): Suurin syvyys jätetty pois: 4 735 m vs 2 790 m. · 'Aallot jyrkkiä' perustuu purjehduslähteeseen; ei viranomaislähdettä. · Merkittävin tukihuomio on purjehduslehdistä; HEIKOMMIN TUETTU osuus. Tuulta vastaan -kohta jätettävissä pois, jos halutaan vain yhden lähteen väitteet.
 
 ### 47. Mitä eläimiä lahdella tapaa?
 
@@ -447,7 +477,7 @@ Lahdella on paljon valaita ja delfiinejä. Alueella on havaittu 28 valaslajia, j
 
 *46 sanaa · kohteet: fra/biskajanlahti*
 
-Huom: Lukua tukee vain ICES, mutta se on viranomaistaso. Wikipedia ei anna lajimääriä. · Kaksi riippumatonta lähdettä ei löytynyt; 'arviolta' säilytetty. Ei Wikipedia-vahvistusta.
+Huom (kirjoittaja): Lukua tukee vain ICES, mutta se on viranomaistaso. Wikipedia ei anna lajimääriä. · Kaksi riippumatonta lähdettä ei löytynyt; 'arviolta' säilytetty. Ei Wikipedia-vahvistusta.
 
 ### 48. Miksi juuri portugalilaiset lähtivät Atlantille ensimmäisinä?
 
@@ -455,7 +485,7 @@ Portugalin koko rannikko on Atlanttia, joten sen merimiehet katsoivat luontevast
 
 *48 sanaa · kohteet: prt/atlantti*
 
-Huom: Perinteinen Sagresin merikoulu on Wikipedian mukaan myytti, joten sitä ei mainita; 'Navigator'-lisänimi 1800-luvun. · Käytännössä 'lähelle tuulta'; sanamuoto 'vastatuuleen' yleistys. · Ei erikseen tarkistettu lähteestä; Portugalilla ei ole Välimeren rantaa.
+Huom (kirjoittaja): Perinteinen Sagresin merikoulu on Wikipedian mukaan myytti, joten sitä ei mainita; 'Navigator'-lisänimi 1800-luvun. · Käytännössä 'lähelle tuulta'; sanamuoto 'vastatuuleen' yleistys. · Ei erikseen tarkistettu lähteestä; Portugalilla ei ole Välimeren rantaa.
 
 ### 49. Kuinka syvä Atlantti on?
 
@@ -463,7 +493,7 @@ Keskimäärin noin 3 300–3 650 metriä, riippuen siitä lasketaanko sivumerten
 
 *48 sanaa · kohteet: prt/atlantti*
 
-Huom: Lähteet ovat ristiriidassa keskenään, siksi haarukka. · Joissain sivuissa 8 605 m ja 8 742 m (heikkolaatuisia); pyöristetty 'noin 8 400'. · Loppulause on tulkinta, ei lähteen väite; voi poistaa.
+Huom (kirjoittaja): Lähteet ovat ristiriidassa keskenään, siksi haarukka. · Joissain sivuissa 8 605 m ja 8 742 m (heikkolaatuisia); pyöristetty 'noin 8 400'. · Loppulause on tulkinta, ei lähteen väite; voi poistaa.
 
 ### 50. Miksi maan rannikko on niin lyhyt?
 
@@ -471,7 +501,7 @@ Rannikko on vain noin 20 kilometriä, koska Dubrovnikin tasavalta luovutti Neumi
 
 *45 sanaa · kohteet: bih/adrianmeri*
 
-Huom: Kolmas lähde on blogityyppinen; luotettavin lähde on Wikipedian viitteet. 'Tavoitteena oli' -muotoilu vastaa kaikkia lähteitä. Rauha ei sanatarkasti nimetty vastauksessa, koska Karlowitzin vuosi 1699 riittää.
+Huom (kirjoittaja): Kolmas lähde on blogityyppinen; luotettavin lähde on Wikipedian viitteet. 'Tavoitteena oli' -muotoilu vastaa kaikkia lähteitä. Rauha ei sanatarkasti nimetty vastauksessa, koska Karlowitzin vuosi 1699 riittää.
 
 ### 51. Mikä Otranton salmi on?
 
@@ -479,7 +509,9 @@ Otranton salmi on kapea vesiväylä Italian ja Albanian välissä, ja se on nime
 
 *48 sanaa · kohteet: bih/adrianmeri, ita/adrianmeri*
 
-Huom: Pieni vaihtelu; 'noin 72' säilytetty. Syvyysluvut jätetty pois (18 m vs 325 m). · Sulku ei pysäyttänyt sukellusveneitä; jätetty pois mahtuakseen sanarajaan. Aloitusvuodesta lähteet ristiriidassa (1915 vs 1917), joten vuotta ei mainita. · Tiivistelmätason tuki; HEIKOSTI TUETTU, voi poistaa.
+**PT 16.10.: YHDEN LÄHTEEN VARASSA, vahvistettava.**
+
+Huom (kirjoittaja): Pieni vaihtelu; 'noin 72' säilytetty. Syvyysluvut jätetty pois (18 m vs 325 m). · Sulku ei pysäyttänyt sukellusveneitä; jätetty pois mahtuakseen sanarajaan. Aloitusvuodesta lähteet ristiriidassa (1915 vs 1917), joten vuotta ei mainita. · Tiivistelmätason tuki; HEIKOSTI TUETTU, voi poistaa.
 
 ### 52. Miksi Venetsia rakennettiin juuri tänne?
 
@@ -487,15 +519,17 @@ Koska laguunin saaret olivat turvallinen pakopaikka. Perimätiedon mukaan kaupun
 
 *49 sanaa · kohteet: ita/adrianmeri*
 
-Huom: Päivämäärä on legenda; vastauksessa 'perimätiedon mukaan'. · Lähteiden mukaan laguunissa asui kalastajia jo ennen pakolaisia (hakutulos), joten vastauksessa sanotaan 'monet asukkaat' ja mainitaan kalastajat. · Wikipedia ei sano suoraan, että laguuni valittiin puolustuksen vuoksi. Paaluperustuksia ei mainita, koska kumpikaan luettu lähde ei kata niitä.
+Huom (kirjoittaja): Päivämäärä on legenda; vastauksessa 'perimätiedon mukaan'. · Lähteiden mukaan laguunissa asui kalastajia jo ennen pakolaisia (hakutulos), joten vastauksessa sanotaan 'monet asukkaat' ja mainitaan kalastajat. · Wikipedia ei sano suoraan, että laguuni valittiin puolustuksen vuoksi. Paaluperustuksia ei mainita, koska kumpikaan luettu lähde ei kata niitä.
 
 ### 53. Keitä tyrrhenialaiset olivat?
 
-Tyrrhenialaiset oli kreikkalaisten antama nimi etruskeille, Italian keskiosan muinaiselle kansalle, joka kukoisti noin 700-luvulta 200-luvulle eaa. Roomalaiset muodostivat nimestä merelle nimen Mare Tyrrhenum, ja meri kantaa sitä yhä. Rooma valtasi etruskien kaupungit vähitellen, ja viimeistään vuoteen 27 eaa. mennessä koko heidän alueensa oli Rooman vallan alla. Nimi on siis kadonneen kansan muisto.
+Tyrrhenialaiset oli kreikkalaisten antama nimi etruskeille, Italian keskiosan muinaiselle kansalle, joka kukoisti noin 700-luvulta 300-luvulle eaa. Roomalaiset muodostivat nimestä merelle nimen Mare Tyrrhenum, ja meri kantaa sitä yhä. Rooma valtasi etruskien kaupungit vähitellen, ja heidän alueensa joutui lopulta kokonaan Rooman vallan alle. Nimi on siis kadonneen kansan muisto.
 
-*52 sanaa · kohteet: ita/tyrrhenanmeri*
+*48 sanaa · kohteet: ita/tyrrhenanmeri*
 
-Huom: Britannican verkkosivu antoi 403. · Wikipedia laskee varhaisemman alun; käytetty World Historyn haarukkaa 'kukoisti'. · Vuosi 27 eaa. vain Wikipediassa; muut lähteet vahvistavat vähittäisen valloituksen. Etruskien oma nimi merelle jätetty pois (vain yksi lähde).
+**PT 16.10.: ajoitus 700-luvulta 300-luvulle eaa.; "27 eaa." pois (korjattu).**
+
+Huom (kirjoittaja): Britannican verkkosivu antoi 403. · Wikipedia laskee varhaisemman alun; käytetty World Historyn haarukkaa 'kukoisti'. · Vuosi 27 eaa. vain Wikipediassa; muut lähteet vahvistavat vähittäisen valloituksen. Etruskien oma nimi merelle jätetty pois (vain yksi lähde).
 
 ### 54. Miksi meren pohjassa on tulivuoria?
 
@@ -503,7 +537,9 @@ Koska Afrikan laatan reuna painuu Euraasian laatan alle, ja meren pohja venyy ja
 
 *53 sanaa · kohteet: ita/tyrrhenanmeri*
 
-Huom: Ylempänä oleva laatta kiistanalainen lähteissä (Euraasian vs Apulian); sanottu 'Euraasian alle' Wikipedian mukaan. Springer ja CNR mainitsevat vain Ionian laatan. HEIKOSTI TUETTU tässä yksityiskohdassa. · Lähteet vaihtelevat 450-508 m; sanottu 'noin 500'. · Saarten lukumäärä (7/8) jätetty pois.
+**PT 16.10.: YHDEN LÄHTEEN VARASSA, vahvistettava.**
+
+Huom (kirjoittaja): Ylempänä oleva laatta kiistanalainen lähteissä (Euraasian vs Apulian); sanottu 'Euraasian alle' Wikipedian mukaan. Springer ja CNR mainitsevat vain Ionian laatan. HEIKOSTI TUETTU tässä yksityiskohdassa. · Lähteet vaihtelevat 450-508 m; sanottu 'noin 500'. · Saarten lukumäärä (7/8) jätetty pois.
 
 ### 55. Keitä liguurit olivat?
 
@@ -511,7 +547,7 @@ Liguurit olivat muinainen kansa, joka asui Luoteis-Italian rannikolla ja vuorist
 
 *47 sanaa · kohteet: ita/ligurianmeri*
 
-Huom: Tarkka vuosi (180 eaa. apuaanien karkotus, 40 000 / 47 000) jätetty pois, koska luvut ovat ristiriitaiset.
+Huom (kirjoittaja): Tarkka vuosi (180 eaa. apuaanien karkotus, 40 000 / 47 000) jätetty pois, koska luvut ovat ristiriitaiset.
 
 ### 56. Mikä Välimeren valassuojelualue on?
 
@@ -519,7 +555,7 @@ Se on Pelagos-suojelualue, jonka Ranska, Italia ja Monaco perustivat sopimuksell
 
 *49 sanaa · kohteet: ita/ligurianmeri*
 
-Huom: Voimaantulo 2002; vastauksessa 'sopimuksella 1999' tarkoittaa allekirjoitusta. · Lähteet ristiriidassa; sanottu 'yli 80 000'. · Wikipedian sillivalasväite on 'believed'; vastauksessa yleinen muotoilu. Sanamäärälukuja (1 000 valasta, 40 000 delfiiniä) ei käytetty, vain yksi lähde.
+Huom (kirjoittaja): Voimaantulo 2002; vastauksessa 'sopimuksella 1999' tarkoittaa allekirjoitusta. · Lähteet ristiriidassa; sanottu 'yli 80 000'. · Wikipedian sillivalasväite on 'believed'; vastauksessa yleinen muotoilu. Sanamäärälukuja (1 000 valasta, 40 000 delfiiniä) ei käytetty, vain yksi lähde.
 
 ### 57. Mikä oli Kharybdis?
 
@@ -527,15 +563,17 @@ Kharybdis oli Homeroksen Odysseiassa esiintyvä merihirviö, joka oli oikeastaan
 
 *47 sanaa · kohteet: ita/messinansalmi*
 
-Huom: Homeros ei itse nimeä salmea; klassisella ajalla sijoitus vakiintui Messinansalmeen. · Ilmaistu "kertomusten mukaan", ei yksiselitteisesti Homeroksen tekstinä. · Toinen lähde vain hakutuloksen tiivistelmä.
+Huom (kirjoittaja): Homeros ei itse nimeä salmea; klassisella ajalla sijoitus vakiintui Messinansalmeen. · Ilmaistu "kertomusten mukaan", ei yksiselitteisesti Homeroksen tekstinä. · Toinen lähde vain hakutuloksen tiivistelmä.
 
 ### 58. Miksi salmen yli ei vieläkään kulje siltaa?
 
-Koska hanke on yhä jumissa lupa- ja rahoituskiistoissa. Hallitus hyväksyi sillan elokuussa 2025, mutta Italian tilintarkastustuomioistuin kieltäytyi lokakuussa vahvistamasta päätöstä. Urakan työkustannukset ovat nousseet noin 3,8 miljardista 10,5 miljardiin euroon, ja EU:n hankintasääntöjen mukaan yli 50 prosentin nousu vaatisi uuden kilpailutuksen. Siltaa on suunniteltu, hylätty ja herätetty henkiin jo vuosikymmeniä.
+Koska hanke on yhä jumissa lupa- ja rahoituskiistoissa. Hallitus hyväksyi sillan elokuussa 2025, mutta Italian tilintarkastustuomioistuin kieltäytyi lokakuussa vahvistamasta päätöstä. Hankkeen kustannukset ovat kolminkertaistuneet, ja EU:n hankintasääntöjen mukaan yli 50 prosentin nousu vaatisi uuden kilpailutuksen. Siltaa on suunniteltu, hylätty ja herätetty henkiin jo vuosikymmeniä. Silta yhdistäisi Italian saappaan kärjen Sisiliaan.
 
 *50 sanaa · kohteet: ita/messinansalmi*
 
-Huom: Luku kolmannen osapuolen raportoimana Il Postista; toinen lähde ei vahvista juuri tätä lukua. Pidetään, koska suunta (iso nousu) vahvistuu molemmista; vaihtoehtoisesti voi korvata "kustannukset ovat kolminkertaistuneet". · Aikajana vain Wikipediasta; muotoilu yleinen.
+**PT 16.10.: kustannusluvut 3,8 -> 10,5 mrd heikko tuki -> "kolminkertaistuneet" (korjattu).**
+
+Huom (kirjoittaja): Luku kolmannen osapuolen raportoimana Il Postista; toinen lähde ei vahvista juuri tätä lukua. Pidetään, koska suunta (iso nousu) vahvistuu molemmista; vaihtoehtoisesti voi korvata "kustannukset ovat kolminkertaistuneet". · Aikajana vain Wikipediasta; muotoilu yleinen.
 
 ### 59. Mistä limoncellon sitruunat tulevat?
 
@@ -543,7 +581,9 @@ Pääosin Etelä-Italiasta, erityisesti Campanian Sorrenton ja Amalfin rannikoil
 
 *51 sanaa · kohteet: ita/amalfin-rannikko*
 
-Huom: Vastaus rajaa kysymyksen Campaniaan, koska nostokortti koskee Amalfia. · Wikipedian Limoncello- ja Sorrento lemon -sivut eivät (luetulta osalta) mainitse IGP:tä; jäi kahden toissijaisen lähteen varaan. Heikoin kohta. · Vain yksi lähde; ei kriittinen luku, mutta kirjataan.
+**PT 16.10.: YHDEN LÄHTEEN VARASSA, vahvistettava (Kotorin kapein 340 m).**
+
+Huom (kirjoittaja): Vastaus rajaa kysymyksen Campaniaan, koska nostokortti koskee Amalfia. · Wikipedian Limoncello- ja Sorrento lemon -sivut eivät (luetulta osalta) mainitse IGP:tä; jäi kahden toissijaisen lähteen varaan. Heikoin kohta. · Vain yksi lähde; ei kriittinen luku, mutta kirjataan.
 
 ### 60. Kuka ryösti Amalfin vuonna 1137?
 
@@ -551,7 +591,7 @@ Pisalaiset. Aiemmin Amalfi oli ollut itsenäinen ja vaikutusvaltainen merivalta,
 
 *48 sanaa · kohteet: ita/amalfin-rannikko*
 
-Huom: Wikipedia ei nimeä Rogeria; sanamuoto "Sisilian normannit".
+Huom (kirjoittaja): Wikipedia ei nimeä Rogeria; sanamuoto "Sisilian normannit".
 
 ### 61. Millä rannikolla Tropea sijaitsee?
 
@@ -559,7 +599,7 @@ Tropea on Calabrian länsirannikolla Tyrrhenanmeren äärellä, Sant'Eufemian la
 
 *51 sanaa · kohteet: ita/tropea*
 
-Huom: Italia.it ei nimeä merta, mutta kuvaa Calabrian rannikon. · Rajattu kuvailevaan sanamuotoon.
+Huom (kirjoittaja): Italia.it ei nimeä merta, mutta kuvaa Calabrian rannikon. · Rajattu kuvailevaan sanamuotoon.
 
 ### 62. Millaisella kalliolla Santa Maria dell'Isola on?
 
@@ -567,7 +607,9 @@ Hiekkakivikalliolla. Kirkko seisoo hiekkakivestä koostuvalla kalliolla, joka ol
 
 *48 sanaa · kohteet: ita/tropea*
 
-Huom: Avygeo on matkailuopas, ei geologinen lähde.
+**PT 16.10.: YHDEN LÄHTEEN VARASSA, vahvistettava.**
+
+Huom (kirjoittaja): Avygeo on matkailuopas, ei geologinen lähde.
 
 ### 63. Kuinka kapea Kotorinlahti on kapeimmillaan?
 
@@ -575,7 +617,9 @@ Noin 340 metriä. Kapein kohta on Verigen salmi, jossa vastarannat ovat alle puo
 
 *52 sanaa · kohteet: mne/kotorinlahti*
 
-Huom: Matkailulähde mne.today (hakutulos) mainitsee salmen päässä 283 m, mikä viittaa eri mittauskohtaan; siksi "noin" ja maininta mittauskohdasta. · Päätelmä kapeudesta, ei erillinen faktaväite. · Toinen itsenäinen lähde puuttuu; luku noin-muodossa.
+**PT 16.10.: YHDEN LÄHTEEN VARASSA, vahvistettava.**
+
+Huom (kirjoittaja): Matkailulähde mne.today (hakutulos) mainitsee salmen päässä 283 m, mikä viittaa eri mittauskohtaan; siksi "noin" ja maininta mittauskohdasta. · Päätelmä kapeudesta, ei erillinen faktaväite. · Toinen itsenäinen lähde puuttuu; luku noin-muodossa.
 
 ### 64. Minkä vuoristojen väliin lahti jää?
 
@@ -583,7 +627,7 @@ Kotorinlahti jää Orjenin ja Lovćenin vuoristojen väliin: Orjen on lännessä
 
 *51 sanaa · kohteet: mne/kotorinlahti*
 
-Huom: Vain yksi lähde. · UNESCOn sivu antoi 403 suoraan; tieto hakutuloksen tiivistelmästä.
+Huom (kirjoittaja): Vain yksi lähde. · UNESCOn sivu antoi 403 suoraan; tieto hakutuloksen tiivistelmästä.
 
 ### 65. Mikä on lessepsiläinen vaellus?
 
@@ -591,7 +635,7 @@ Lessepsiläinen vaellus tarkoittaa merieliöiden siirtymistä Suezin kanavan kau
 
 *47 sanaa · kohteet: cyp/levantinmeri*
 
-Huom: Mongabay ei nimeä Katkeria järviä. · Lähteiden luvut eroavat, joten vastauksessa vain "satoja".
+Huom (kirjoittaja): Mongabay ei nimeä Katkeria järviä. · Lähteiden luvut eroavat, joten vastauksessa vain "satoja".
 
 ### 66. Miten Suezin kanava muutti Välimeren eliöstöä?
 
@@ -599,7 +643,7 @@ Se avasi Välimerelle uuden reitin, jota pitkin Punaisenmeren ja Intian valtamer
 
 *50 sanaa · kohteet: cyp/levantinmeri*
 
-Huom: Täsmäluku jätetty pois, lähteet ristiriitaisia.
+Huom (kirjoittaja): Täsmäluku jätetty pois, lähteet ristiriitaisia.
 
 ### 67. Mikä oli niemen antiikinaikainen nimi?
 
@@ -607,7 +651,7 @@ Pedalion. Antiikissa Kyproksen kaakkoiskulman niemi tunnettiin tällä nimellä.
 
 *50 sanaa · kohteet: cyp/kapgreco*
 
-Huom: Ei sanatarkkaa lainausta.
+Huom (kirjoittaja): Ei sanatarkkaa lainausta.
 
 ### 68. Miten merenalaiset luolat syntyvät kalkkikiveen?
 
@@ -615,15 +659,17 @@ Useimmiten ensin sade ja pohjavesi liuottavat kalkkikiveä, ja sitten meri laaje
 
 *56 sanaa · kohteet: cyp/kapgreco*
 
-Huom: Vain yksi lähde; muotoiltu yleisenä suuruusluokkana. · Yleinen selitys; Kap Grecon luolien tarkkaa syntyhistoriaa ei tarkistettu, joten vastaus ei väitä siitä muuta.
+Huom (kirjoittaja): Vain yksi lähde; muotoiltu yleisenä suuruusluokkana. · Yleinen selitys; Kap Grecon luolien tarkkaa syntyhistoriaa ei tarkistettu, joten vastaus ei väitä siitä muuta.
 
 ### 69. Mikä oli Messinan suolakriisi?
 
-Messinan suolakriisi oli ajanjakso noin 5,96-5,33 miljoonaa vuotta sitten, jolloin Välimeri eristyi Atlantista ja sen vesi haihtui suurelta osin. Merenpinta laski huippuvaiheessa arviolta satoja metrejä, ja pohjalle kertyi paksuja suolakerroksia. Kriisi päättyi, kun Gibraltarin kohta aukesi uudelleen. Se osoittaa, miten sulkeutunut merialtaan voi muuttua nopeasti.
+Messinan suolakriisi oli ajanjakso noin 5,96-5,33 miljoonaa vuotta sitten, jolloin Välimeri eristyi Atlantista ja sen vesi haihtui suurelta osin. Merenpinta laski huippuvaiheessa arviolta satoja metrejä, syvimmillä altailla yli kilometrin, ja pohjalle kertyi paksuja suolakerroksia. Kriisi päättyi, kun Gibraltarin kohta aukesi uudelleen. Se osoittaa, miten sulkeutunut merialtaan voi muuttua nopeasti.
 
-*45 sanaa · kohteet: dza/valimeri*
+*49 sanaa · kohteet: dza/valimeri*
 
-Huom: CIESM huomauttaa, ettei syvän altaan täydellinen kuivuminen ole varmaa; siksi "suurelta osin" ja "arviolta". · Paksuusarvio (3 km) pudotettu, koska vain vanha lähde; suolan kokonaismäärää ei esitetty.
+**PT 16.10.: lisätty "syvimmillä altailla yli kilometrin".**
+
+Huom (kirjoittaja): CIESM huomauttaa, ettei syvän altaan täydellinen kuivuminen ole varmaa; siksi "suurelta osin" ja "arviolta". · Paksuusarvio (3 km) pudotettu, koska vain vanha lähde; suolan kokonaismäärää ei esitetty.
 
 ### 70. Miten kuivunut meri täyttyi uudelleen?
 
@@ -631,7 +677,7 @@ Atlantin vesi syöksyi Gibraltarin kautta takaisin Välimereen noin 5,33 miljoon
 
 *45 sanaa · kohteet: dza/valimeri*
 
-Huom: Nature-artikkelin suora sivu vaati kirjautumisen; luku tiivistelmästä. SciAm antaa vähän väljemmän "muutaman vuoden".
+Huom (kirjoittaja): Nature-artikkelin suora sivu vaati kirjautumisen; luku tiivistelmästä. SciAm antaa vähän väljemmän "muutaman vuoden".
 
 ### 71. Miksi Syyrian rannikkoa kutsutaan Levantiksi?
 
@@ -639,7 +685,7 @@ Nimi tulee ranskan sanasta levant, "nouseva", ja viittaa auringonnousuun eli it�
 
 *49 sanaa · kohteet: syr/valimeri*
 
-Huom: Vuosilukua (englannissa 1497) ei käytetty, koska toista lähdettä ei vahvistettu. · Rajaus vaihtelee suppeasta laajaan, siksi vastaus sanoo vain "Välimeren itäpuolen maat".
+Huom (kirjoittaja): Vuosilukua (englannissa 1497) ei käytetty, koska toista lähdettä ei vahvistettu. · Rajaus vaihtelee suppeasta laajaan, siksi vastaus sanoo vain "Välimeren itäpuolen maat".
 
 ### 72. Miksi Välimerta ympäröi maa lähes joka suunnalta?
 
@@ -647,7 +693,7 @@ Välimeri on jäänne muinaisesta Tethys-merestä, jonka Afrikan ja Euraasian ma
 
 *48 sanaa · kohteet: tun/valimeri*
 
-Huom: Ajankohdasta ("noin 30 milj. vuotta") lähteet vaihtelevat; vastaus sanoo vain "kymmeniä miljoonia vuosia". · Joissakin lähteissä 13 km; käytetty "noin 14".
+Huom (kirjoittaja): Ajankohdasta ("noin 30 milj. vuotta") lähteet vaihtelevat; vastaus sanoo vain "kymmeniä miljoonia vuosia". · Joissakin lähteissä 13 km; käytetty "noin 14".
 
 ### 73. Mitä reittiä Välimereltä pääsee valtamerelle?
 
@@ -655,7 +701,7 @@ Gibraltarinsalmen kautta Atlantille, Välimeren länsipäässä. Salmi erottaa E
 
 *50 sanaa · kohteet: tun/valimeri*
 
-Huom: Punainenmeri johtaa Intian valtamerelle; vastaus ei väitä kanavan olevan valtamerireitti.
+Huom (kirjoittaja): Punainenmeri johtaa Intian valtamerelle; vastaus ei väitä kanavan olevan valtamerireitti.
 
 ### 74. Miksi Bosporinsalmi on niin tärkeä?
 
@@ -663,7 +709,7 @@ Se on Mustanmeren ainoa meriyhteys Marmaranmerelle ja sitä kautta Välimerelle.
 
 *50 sanaa · kohteet: tur/marmaranmeri*
 
-Huom: Luvut vaihtelevat 38 000–56 000; käytetty varovaista "yli 40 000".
+Huom (kirjoittaja): Luvut vaihtelevat 38 000–56 000; käytetty varovaista "yli 40 000".
 
 ### 75. Mikä Dardanellit on?
 
@@ -671,15 +717,17 @@ Dardanellit on Turkin salmi, joka yhdistää Egeanmeren Marmaranmereen. Se on no
 
 *45 sanaa · kohteet: tur/marmaranmeri*
 
-Huom: Joissakin lähteissä viimeiset joukot lähtivät tammikuussa 1916; vastaus mainitsee vain vuoden 1915 taistelut.
+Huom (kirjoittaja): Joissakin lähteissä viimeiset joukot lähtivät tammikuussa 1916; vastaus mainitsee vain vuoden 1915 taistelut.
 
 ### 76. Miksi Anatolian etelärannikkoa kutsutaan Turkoosiksi rannikoksi?
 
-Nimi tulee meren väristä: rannikon vesi näyttää kirkkaan turkoosin sinivihreältä. Turkoosi rannikko sijaitsee Turkin lounaisosassa, karkeasti Bodrumista Antalyaan. Sana turkoosi tulee ranskan ilmauksesta "turkkilainen kivi", koska jalokivi tuli Eurooppaan Turkin kautta. Nimi viittaa siis sekä veden väriin että maahan. Se on suosittu kansanomainen nimitys, jota käytetään myös englanniksi.
+Nimi viittaa veden väriin: rannikon vesi näyttää kirkkaan turkoosin sinivihreältä. Turkoosi rannikko sijaitsee Turkin lounaisosassa, karkeasti Bodrumista Antalyaan. Sana turkoosi tulee ranskan ilmauksesta "turkkilainen kivi", koska jalokivi tuli Eurooppaan Turkin kautta. Nimi viittaa siis sekä veden väriin että maahan. Se on suosittu kansanomainen nimitys, jota käytetään myös englanniksi.
 
 *48 sanaa · kohteet: tur/valimeri*
 
-Huom: Wikipedia (Turkish Riviera) kertoo vain, että rannikkoa kutsutaan Turkoosiksi rannikoksi, nimen alkuperää ei selitetä. Wikipedia kuvaa nimeä suosituksi (popular) nimitykseksi. · Rajaus vaihtelee lähteittäin (Antalya–Marmaris, Bodrum–Antalya); käytetty "karkeasti". Pituutta ei mainittu. · Kivi tuli Eurooppaan kaupan kautta Turkista; yksityiskohdat (Marco Polo vai basaarit) vaihtelevat, vastaus ei niitä mainitse.
+**PT 16.10.: nimen alkuperä -> "nimi viittaa veden väriin" (korjattu).**
+
+Huom (kirjoittaja): Wikipedia (Turkish Riviera) kertoo vain, että rannikkoa kutsutaan Turkoosiksi rannikoksi, nimen alkuperää ei selitetä. Wikipedia kuvaa nimeä suosituksi (popular) nimitykseksi. · Rajaus vaihtelee lähteittäin (Antalya–Marmaris, Bodrum–Antalya); käytetty "karkeasti". Pituutta ei mainittu. · Kivi tuli Eurooppaan kaupan kautta Turkista; yksityiskohdat (Marco Polo vai basaarit) vaihtelevat, vastaus ei niitä mainitse.
 
 ### 77. Miksi Mustanmeren syvyys on hapeton?
 
@@ -687,7 +735,7 @@ Syvä vesi on hapetonta, koska meren kerrokset eivät sekoitu. Joet tuovat pinna
 
 *49 sanaa · kohteet: rou/mustameri*
 
-Huom: Lähteet antavat 80–90 %; käytetty muotoa "lähes 90 prosenttia". · Raja vaihtelee paikan ja vuoden mukaan; siksi väli. · Rikkivety pohjalla: National Academies (hakutulos) mainitsee rikkivetyä alle noin 200 m.
+Huom (kirjoittaja): Lähteet antavat 80–90 %; käytetty muotoa "lähes 90 prosenttia". · Raja vaihtelee paikan ja vuoden mukaan; siksi väli. · Rikkivety pohjalla: National Academies (hakutulos) mainitsee rikkivetyä alle noin 200 m.
 
 ### 78. Mistä meri sai nimensä?
 
@@ -695,15 +743,19 @@ Varmaa vastausta ei ole. Antiikin kreikkalaiset kutsuivat merta ensin nimellä, 
 
 *50 sanaa · kohteet: rou/mustameri, ukr/mustameri*
 
-Huom: Teoria, ei varmaa tietoa. · Nimen alkuperä on kiistanalainen; vastaus kertoo sen eikä ota kantaa.
+Huom (kirjoittaja): Teoria, ei varmaa tietoa. · Nimen alkuperä on kiistanalainen; vastaus kertoo sen eikä ota kantaa.
 
 ### 79. Miksi Mustameren syvyys on hapeton?
+
+**TUPLA 77:stä, yhdistetty (sama vastaus):**
 
 Syvä vesi on hapetonta, koska meren kerrokset eivät sekoitu. Joet tuovat pinnalle kevyttä makeaa vettä, ja Bosporin kautta pohjalle valuu raskaampaa, suolaisempaa Välimeren vettä. Noin 100–200 metrin alapuolella happi on loppunut, ja lähes 90 prosenttia syvästä vedestä on hapetonta. Pohjalla on hapen sijaan rikkivetyä. Siksi vain pintakerroksessa on happea.
 
 *49 sanaa · kohteet: ukr/mustameri*
 
-Huom: Lähteet antavat 80–90 %; käytetty muotoa "lähes 90 prosenttia". · Raja vaihtelee paikan ja vuoden mukaan; siksi väli. · Rikkivety pohjalla: National Academies (hakutulos) mainitsee rikkivetyä alle noin 200 m. · Kysymys on kirjoitettu "Mustameren" (kirjoitusvirhe, oikein Mustanmeren); vastaus sama kuin Mustanmeren hapettomuuskysymykseen.
+**PT 16.10.: TUPLA 77:stä (sama vastaus); yhdistetty: käytä yhtä vastausta kummallekin nostolle. Ukrainan nostossa kysymys korjattu muotoon "Mustanmeren" (korjaus-PR #4685).**
+
+Huom (kirjoittaja): Lähteet antavat 80–90 %; käytetty muotoa "lähes 90 prosenttia". · Raja vaihtelee paikan ja vuoden mukaan; siksi väli. · Rikkivety pohjalla: National Academies (hakutulos) mainitsee rikkivetyä alle noin 200 m. · Kysymys on kirjoitettu "Mustameren" (kirjoitusvirhe, oikein Mustanmeren); vastaus sama kuin Mustanmeren hapettomuuskysymykseen.
 
 ### 80. Mikä Kertšinsalmi on?
 
@@ -711,13 +763,15 @@ Kertšinsalmi on kapea salmi, joka yhdistää Mustanmeren ja Asovanmeren. Se on 
 
 *45 sanaa · kohteet: ukr/asovanmeri*
 
-Huom: Hakutulos antoi myös "noin 4 km"; käytetty "noin kolme". · Salmen pituudesta lähteet ovat ristiriidassa (35 vs 45 km), joten pituutta ei mainittu. · Joet (Don, Kuban) tuovat myös makeaa vettä; vastaus ei väitä salmea ainoaksi syyksi.
+Huom (kirjoittaja): Hakutulos antoi myös "noin 4 km"; käytetty "noin kolme". · Salmen pituudesta lähteet ovat ristiriidassa (35 vs 45 km), joten pituutta ei mainittu. · Joet (Don, Kuban) tuovat myös makeaa vettä; vastaus ei väitä salmea ainoaksi syyksi.
 
 ### 81. Miksi Asovanmeri on niin matala?
 
-Jokien tuoma maa-aines täyttää sen pohjaa. Meri on suurimmillaankin vain noin 14 metriä syvä ja keskimäärin noin 7 metriä, joten sitä pidetään maailman matalimpana merenä. Don ja Kuban tuovat siihen yli 90 prosenttia vedestä sekä hiekkaa ja savea. Syvyys vähenee edelleen. Pohja on tasainen, ja syvyys kasvaa keskustaa kohti vain hitaasti.
+Jokien tuoma maa-aines täyttää sen pohjaa. Meri on suurimmillaankin vain noin 14 metriä syvä ja keskimäärin noin 7 metriä, joten sitä pidetään maailman matalimpana merenä. Don ja Kuban tuovat siihen suurimman osan jokivedestä sekä hiekkaa ja savea. Syvyys vähenee edelleen. Pohja on tasainen, ja syvyys kasvaa keskustaa kohti vain hitaasti.
 
-*51 sanaa · kohteet: ukr/asovanmeri*
+*50 sanaa · kohteet: ukr/asovanmeri*
 
-Huom: Keskisyvyys 7–8 m lähteestä riippuen. · Syy-yhteys perustuu pääosin Wikipediaan; Encyclopedia of Ukraine ei selitä syytä. Maailman matalimpana merenä pitäminen perustuu Wikipediaan ja Britannicaan (hakutulos).
+**PT 16.10.: "Don ja Kuban yli 90 %" -> "suurimman osan jokivedestä" (korjattu).**
+
+Huom (kirjoittaja): Keskisyvyys 7–8 m lähteestä riippuen. · Syy-yhteys perustuu pääosin Wikipediaan; Encyclopedia of Ukraine ei selitä syytä. Maailman matalimpana merenä pitäminen perustuu Wikipediaan ja Britannicaan (hakutulos).
 

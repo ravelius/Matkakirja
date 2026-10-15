@@ -40,6 +40,9 @@
     "lahde2": "sv.wikipedia: Vänern (Trollhätte kanal laajennettu 1916, laivat pääsevät järvelle)",
     "huom": "Joen pituutta (93 km) ei käytetty: vain Wikipedia."
    }
+  ],
+  "kohteet": [
+   "swe/vanern"
   ]
  },
  {
@@ -95,12 +98,16 @@
     "lahde2": "EBSCO: 15-30 m",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "gbr/pohjanmeri",
+   "nld/pohjanmeri"
   ]
  },
  {
   "kysymys": "Milloin Pohjanmereltä löydettiin öljy?",
-  "vastaus": "Pohjanmeren ensimmäinen kaupallinen öljylöytö tehtiin vuonna 1969 Norjan puolella, kun yhdysvaltalainen Phillips Petroleum löysi Ekofiskin kentän. Geologi näki öljyn merkit porausnäytteissä lokakuussa 1969. Tuotanto alkoi vuonna 1971, ja öljy lastattiin aluksi suoraan tankkereihin merenpohjan kaivoista. Löytö tuli yli 200 koeporauksen jälkeen, jotka oli käynnistänyt Groningenin kaasulöytö.",
-  "sanoja": 46,
+  "vastaus": "Pohjanmeren ensimmäinen kaupallinen öljylöytö tehtiin vuonna 1969 Norjan puolella, kun yhdysvaltalainen Phillips Petroleum löysi Ekofiskin kentän. Tuotanto alkoi vuonna 1971, ja öljy lastattiin aluksi suoraan tankkereihin merenpohjan kaivoista. Löytö vahvistui joulukuussa 1969. Pohjanmeri on sen jälkeen ollut yksi Euroopan tärkeimmistä öljyn tuotantoalueista, ja Norja ja Britannia ovat pumpanneet sieltä öljyä vuosikymmenten ajan.",
+  "sanoja": 52,
   "lahteet": [
    {
     "url": "https://en.wikipedia.org/wiki/Ekofisk_oil_field",
@@ -146,6 +153,9 @@
     "lahde2": "ei vahvistettu (ICE 403)",
     "huom": "Jätetty vastauksesta pois, koska vain yksi lähde. Vastaus rajattu öljyyn."
    }
+  ],
+  "kohteet": [
+   "gbr/pohjanmeri"
   ]
  },
  {
@@ -189,6 +199,9 @@
     "lahde2": "gov.im (hakutulos)",
     "huom": "Pinta-alaa (noin 572 km2), asukaslukua ja Tynwaldin 979-vuotta ei käytetty: yksi lähde / epävarma."
    }
+  ],
+  "kohteet": [
+   "gbr/irlanninmeri"
   ]
  },
  {
@@ -228,12 +241,15 @@
     "lahde2": "Britannica (hakutulos)",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "gbr/irlanninmeri"
   ]
  },
  {
   "kysymys": "Miten meri on muovannut kallioon valtavan kaaren?",
-  "vastaus": "Aallot ovat kuluttaneet Durdle Doorin kaaren rannan suuntaisesta kalliovyöhykkeestä. Kova Portlandin kalkkikivi kesti, mutta sen takana oleva pehmeämpi kivi murtui ja huuhtoutui pois. Merenkäynti poisti kalkkikiven lähes kaikkialta, ja jäljelle jäi niemeke, josta aallot puhkaisivat aukon. Rannikko rapautuu yhä, joten aallot jatkavat työtään ja kaari muuttuu hitaasti edelleen.",
-  "sanoja": 48,
+  "vastaus": "Aallot ovat kuluttaneet Durdle Doorin kaaren rannan suuntaisesta kalliovyöhykkeestä. Durdle Door on Dorsetin Jurassic Coastilla Englannin etelärannikolla. Kova Portlandin kalkkikivi kesti, mutta sen takana oleva pehmeämpi kivi murtui ja huuhtoutui pois, ja aallot puhkaisivat kaaren. Rannikko rapautuu yhä, joten aallot jatkavat työtään ja kaari muuttuu hitaasti edelleen.",
+  "sanoja": 47,
   "lahteet": [
    {
     "url": "https://en.wikipedia.org/wiki/Durdle_Door",
@@ -263,6 +279,9 @@
     "lahde2": "Journal of Coastal Research (hakutulos): UNESCO seuraa kaaren kuntoa",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "gbr/jurassic-coast-durdle-door"
   ]
  },
  {
@@ -302,6 +321,9 @@
     "lahde2": "UNESCO UK",
     "huom": "\"Maan keskiaikakausi\" = mesozoinen aikakausi; sana selitetty näin."
    }
+  ],
+  "kohteet": [
+   "gbr/jurassic-coast-durdle-door"
   ]
  },
  {
@@ -345,6 +367,9 @@
     "lahde2": "ei toista lähdettä",
     "huom": "Heikosti tuettu (yksi lähde); lause \"meriraja kulkee juuri tuota linjaa pitkin\" perustuu Wikipediaan."
    }
+  ],
+  "kohteet": [
+   "irl/irlanninmeri"
   ]
  },
  {
@@ -384,6 +409,9 @@
     "lahde2": "gov.im (hakutulos)",
     "huom": "Viimeinen lause (\"kasvanut historiassa\") on yleistys; Britannican kruunuhallinta 1828 ja Tynwaldin 979 jätetty pois (yksi lähde)."
    }
+  ],
+  "kohteet": [
+   "irl/irlanninmeri"
   ]
  },
  {
@@ -423,6 +451,9 @@
     "lahde2": "Britannica/hakutulos (Nordic Seas)",
     "huom": "IHO:n tarkkaa määritelmää ei saatu primäärilähteestä; vain Wikipedia kertoo IHO:n rajaavan meren. Pinta-alaa (1,2 milj. km2) ei käytetty (yksi lähde)."
    }
+  ],
+  "kohteet": [
+   "isl/gronlanninmeri"
   ]
  },
  {
@@ -472,6 +503,9 @@
     "lahde2": "Hakutulos (Dictionary.com, matkakertomukset): nimi liittyy Fram-laivaan, vakiintunut 1970-luvulla",
     "huom": "Nimi ei ole virallinen; nimen alkuperä venäläisessä tieteellisessä kirjallisuudessa."
    }
+  ],
+  "kohteet": [
+   "isl/gronlanninmeri"
   ]
  },
  {
@@ -511,6 +545,9 @@
     "lahde2": "Lake Scientist: shallow eutrophic spring-fed",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "isl/myvatn"
   ]
  },
  {
@@ -550,6 +587,9 @@
     "lahde2": "UNESCO tentative list (hakutulos): only breeding area in Europe",
     "huom": "Populaatioarvio vaihtelee (\"noin 2 000\" / \"muutama tuhat\")."
    }
+  ],
+  "kohteet": [
+   "isl/myvatn"
   ]
  },
  {
@@ -597,6 +637,9 @@
     "lahde2": "Britannica (hakutulos): 1 620 km2",
     "huom": "Pienet erot (1 620 / 1 650) -> \"noin 1 600\"."
    }
+  ],
+  "kohteet": [
+   "nld/pohjanmeri"
   ]
  }
 ]

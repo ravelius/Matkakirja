@@ -32,6 +32,9 @@
     "lahde2": "Hakutulos (Wiktionary/etymologiasivut): latinan oriens, orior \"nousta\"",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "syr/valimeri"
   ]
  },
  {
@@ -75,6 +78,9 @@
     "lahde2": "Taylor & Francis (hakutulos): 14 km",
     "huom": "Joissakin lähteissä 13 km; käytetty \"noin 14\"."
    }
+  ],
+  "kohteet": [
+   "tun/valimeri"
   ]
  },
  {
@@ -114,6 +120,9 @@
     "lahde2": "Wikipedia, Mediterranean Sea: Gibraltar yhdistää Atlanttiin",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "tun/valimeri"
   ]
  },
  {
@@ -153,6 +162,9 @@
     "lahde2": "WorldAtlas: ainoa merireitti Välimeren ja Mustanmeren välillä",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "tur/marmaranmeri"
   ]
  },
  {
@@ -192,11 +204,14 @@
     "lahde2": "Encyclopedia.com: epäonnistunut liittoutuneiden hyökkäys ensimmäisessä maailmansodassa; Anzac Portal (hakutulos)",
     "huom": "Joissakin lähteissä viimeiset joukot lähtivät tammikuussa 1916; vastaus mainitsee vain vuoden 1915 taistelut."
    }
+  ],
+  "kohteet": [
+   "tur/marmaranmeri"
   ]
  },
  {
   "kysymys": "Miksi Anatolian etelärannikkoa kutsutaan Turkoosiksi rannikoksi?",
-  "vastaus": "Nimi tulee meren väristä: rannikon vesi näyttää kirkkaan turkoosin sinivihreältä. Turkoosi rannikko sijaitsee Turkin lounaisosassa, karkeasti Bodrumista Antalyaan. Sana turkoosi tulee ranskan ilmauksesta \"turkkilainen kivi\", koska jalokivi tuli Eurooppaan Turkin kautta. Nimi viittaa siis sekä veden väriin että maahan. Se on suosittu kansanomainen nimitys, jota käytetään myös englanniksi.",
+  "vastaus": "Nimi viittaa veden väriin: rannikon vesi näyttää kirkkaan turkoosin sinivihreältä. Turkoosi rannikko sijaitsee Turkin lounaisosassa, karkeasti Bodrumista Antalyaan. Sana turkoosi tulee ranskan ilmauksesta \"turkkilainen kivi\", koska jalokivi tuli Eurooppaan Turkin kautta. Nimi viittaa siis sekä veden väriin että maahan. Se on suosittu kansanomainen nimitys, jota käytetään myös englanniksi.",
   "sanoja": 48,
   "lahteet": [
    {
@@ -231,6 +246,9 @@
     "lahde2": "Fethiye Times (hakutulos): ranskan pierre turquoise, \"turkkilainen kivi\"",
     "huom": "Kivi tuli Eurooppaan kaupan kautta Turkista; yksityiskohdat (Marco Polo vai basaarit) vaihtelevat, vastaus ei niitä mainitse."
    }
+  ],
+  "kohteet": [
+   "tur/valimeri"
   ]
  },
  {
@@ -270,6 +288,9 @@
     "lahde2": "National Academies (hakutulos): halokliini estää hapen kulun syvään veteen",
     "huom": "Rikkivety pohjalla: National Academies (hakutulos) mainitsee rikkivetyä alle noin 200 m."
    }
+  ],
+  "kohteet": [
+   "rou/mustameri"
   ]
  },
  {
@@ -309,6 +330,10 @@
     "lahde2": "Anca Dan (hakutulos): musta = pohjoinen akhemeniditason väri-ilmansuuntajärjestelmässä",
     "huom": "Nimen alkuperä on kiistanalainen; vastaus kertoo sen eikä ota kantaa."
    }
+  ],
+  "kohteet": [
+   "rou/mustameri",
+   "ukr/mustameri"
   ]
  },
  {
@@ -354,6 +379,9 @@
     "lahde2": "",
     "huom": "Kysymys on kirjoitettu \"Mustameren\" (kirjoitusvirhe, oikein Mustanmeren); vastaus sama kuin Mustanmeren hapettomuuskysymykseen."
    }
+  ],
+  "kohteet": [
+   "ukr/mustameri"
   ]
  },
  {
@@ -399,12 +427,15 @@
     "lahde2": "Hakutulos (Ocean Science, Copernicus): rajoitettu vaihto salmen kautta pitää suolaisuuden matalana",
     "huom": "Joet (Don, Kuban) tuovat myös makeaa vettä; vastaus ei väitä salmea ainoaksi syyksi."
    }
+  ],
+  "kohteet": [
+   "ukr/asovanmeri"
   ]
  },
  {
   "kysymys": "Miksi Asovanmeri on niin matala?",
-  "vastaus": "Jokien tuoma maa-aines täyttää sen pohjaa. Meri on suurimmillaankin vain noin 14 metriä syvä ja keskimäärin noin 7 metriä, joten sitä pidetään maailman matalimpana merenä. Don ja Kuban tuovat siihen yli 90 prosenttia vedestä sekä hiekkaa ja savea. Syvyys vähenee edelleen. Pohja on tasainen, ja syvyys kasvaa keskustaa kohti vain hitaasti.",
-  "sanoja": 51,
+  "vastaus": "Jokien tuoma maa-aines täyttää sen pohjaa. Meri on suurimmillaankin vain noin 14 metriä syvä ja keskimäärin noin 7 metriä, joten sitä pidetään maailman matalimpana merenä. Don ja Kuban tuovat siihen suurimman osan jokivedestä sekä hiekkaa ja savea. Syvyys vähenee edelleen. Pohja on tasainen, ja syvyys kasvaa keskustaa kohti vain hitaasti.",
+  "sanoja": 50,
   "lahteet": [
    {
     "url": "https://en.wikipedia.org/wiki/Sea_of_Azov",
@@ -442,6 +473,9 @@
     "lahde2": "Hakutulos (Britannica-tiivistelmä): savi tekee Taganrogin lahden enintään metrin syväksi",
     "huom": "Syy-yhteys perustuu pääosin Wikipediaan; Encyclopedia of Ukraine ei selitä syytä. Maailman matalimpana merenä pitäminen perustuu Wikipediaan ja Britannicaan (hakutulos)."
    }
+  ],
+  "kohteet": [
+   "ukr/asovanmeri"
   ]
  }
 ]

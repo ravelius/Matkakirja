@@ -40,6 +40,9 @@
     "lahde2": "Presidentin kirjasto (prlib.ru) / hakutulos: vihkiäiset 1856",
     "huom": "Lähteet tiivistelmiä hakutuloksesta."
    }
+  ],
+  "kohteet": [
+   "fin/saimaa"
   ]
  },
  {
@@ -85,6 +88,9 @@
     "lahde2": "UNESCO (hakutulos)",
     "huom": "Suomenkielinen nimi Kuurinlahti on käännös englannin Curonian Lagoon -nimestä."
    }
+  ],
+  "kohteet": [
+   "ltu/itameri"
   ]
  },
  {
@@ -128,6 +134,9 @@
     "lahde2": "Tiedejulkaisu (hakutulos): Daugava noin 70 % jokivirtaamasta, suolaisuus Irbessä 6 PSU, jokisuilla alle 2 PSU",
     "huom": "Prosenttia ja suolaisuusarvoja ei käytetty tekstissä."
    }
+  ],
+  "kohteet": [
+   "lva/itameri"
   ]
  },
  {
@@ -171,12 +180,15 @@
     "lahde2": "Wikipedia: Norwegian Current (hakutulos)",
     "huom": "Tutkimustulos; muotoiltu varovasti (\"tutkijoiden mukaan\"). Golfvirran osuudesta tutkijat ovat osin eri mieltä."
    }
+  ],
+  "kohteet": [
+   "nor/norjanmeri"
   ]
  },
  {
   "kysymys": "Mikä Jan Mayenin harjanne on?",
-  "vastaus": "Jan Mayenin harjanne on vedenalainen kohouma Islannin koillispuolella, ja se erottaa Norjanmeren Grönlanninmerestä. Se ei ole tavallista merenpohjaa, vaan yli 400 kilometriä pitkä mantereen kuoren palanen. Se kuului ennen Grönlantiin, kunnes merenpohjan leviäminen irrotti sen kymmeniä miljoonia vuosia sitten. Siksi sitä kutsutaan mikromantereeksi, eli pieneksi irronneeksi mantereen osaksi.",
-  "sanoja": 48,
+  "vastaus": "Jan Mayenin harjanne on vedenalainen kohouma Islannin koillispuolella, Islanninmeren alueella. Se ei ole tavallista merenpohjaa, vaan yli 400 kilometriä pitkä mantereen kuoren palanen. Se kuului ennen Grönlantiin, kunnes merenpohjan leviäminen irrotti sen kymmeniä miljoonia vuosia sitten. Siksi sitä kutsutaan mikromantereeksi, eli pieneksi irronneeksi mantereen osaksi.",
+  "sanoja": 45,
   "lahteet": [
    {
     "url": "https://en.wikipedia.org/wiki/Jan_Mayen_Microcontinent",
@@ -214,6 +226,9 @@
     "lahde2": "NGU (hakutulos): n. 30-20 Ma",
     "huom": "Tarkkaa ajankohtaa ei annettu, lähteet eroavat."
    }
+  ],
+  "kohteet": [
+   "nor/norjanmeri"
   ]
  },
  {
@@ -249,6 +264,10 @@
     "lahde2": "Britannica (hakutulos): northeast passage Europe to Asia",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "nor/barentsinmeri",
+   "rus/barentsinmeri"
   ]
  },
  {
@@ -298,6 +317,9 @@
     "lahde2": "Britannica / hakutulokset",
     "huom": "Vuosilukua (1853) ei käytetty, koska se jäi vahvistamatta."
    }
+  ],
+  "kohteet": [
+   "nor/barentsinmeri"
   ]
  },
  {
@@ -341,11 +363,14 @@
     "lahde2": "Tiedejulkaisut (hakutulos)",
     "huom": "Toinen lähde yleisluonteinen; 1 hPa = 1 cm löytyi vain Ilmatieteen laitoksen tiivistelmästä."
    }
+  ],
+  "kohteet": [
+   "pol/itameri"
   ]
  },
  {
   "kysymys": "Miksi Murmansk ei jäädy talvella?",
-  "vastaus": "Murmanskin satama pysyy sulana, koska lämmin Pohjois-Atlantin virta tuo Barentsinmeren lounaisosaan lämmintä vettä. Murmansk on Euroopan Venäjän ainoa ympärivuotisesti jäätön satama, ja siksi se kasvoi tärkeäksi pohjoiseksi satamakaupungiksi. Kaupunki itse ei pysy lämpimänä: talvella ilma on kylmää ja lunta on paljon, vain satamavesi pysyy auki.",
+  "vastaus": "Murmanskin satama pysyy sulana, koska lämmin Pohjois-Atlantin virta tuo Barentsinmeren lounaisosaan lämmintä vettä. Murmansk on Venäjän pohjoisen tärkein ympärivuoden sula satama, ja siksi se kasvoi tärkeäksi pohjoiseksi satamakaupungiksi. Kaupunki itse ei pysy lämpimänä: talvella ilma on kylmää ja lunta on paljon, vain satamavesi pysyy auki.",
   "sanoja": 45,
   "lahteet": [
    {
@@ -384,12 +409,15 @@
     "lahde2": "-",
     "huom": "Ei erikseen lähteistetty luku; yleinen toteamus, ei lukuja."
    }
+  ],
+  "kohteet": [
+   "rus/barentsinmeri"
   ]
  },
  {
   "kysymys": "Kuinka paksua Jäämeren jää on?",
-  "vastaus": "Jäämeren jää on yleensä parin–kolmen metrin paksuista. NASAn mukaan yhden talven aikana kasvanut jää yltää tavallisesti noin kahteen metriin, ja useamman kesän yli säilynyt vanha jää on keskimäärin noin kolme metriä. Pohjoisen jäämeren keskiosassa mitattiin huhtikuussa 2018 keskimäärin 2,1 metriä. Paksuus vaihtelee siis alueen ja vuodenajan mukaan.",
-  "sanoja": 47,
+  "vastaus": "Jäämeren jää on yleensä parin–kolmen metrin paksuista. NASAn mukaan yhden talven aikana kasvanut jää yltää tavallisesti noin kahteen metriin, ja useamman kesän yli säilynyt vanha jää on keskimäärin noin kolme metriä. Paksuus vaihtelee siis alueen ja vuodenajan mukaan. Talvella jää kasvaa ja kesällä sulaa, joten peittoala vaihtelee vuoden mittaan.",
+  "sanoja": 38,
   "lahteet": [
    {
     "url": "https://svs.gsfc.nasa.gov/3593",
@@ -417,6 +445,9 @@
     "lahde2": "CPOM/EOCIS (hakutulos): joulukuu 2024 keskimäärin 1,3 m",
     "huom": "Vain talvimittaukset; kesällä ei mitata. Luvut vaihtelevat vuosittain."
    }
+  ],
+  "kohteet": [
+   "rus/jaameri"
   ]
  },
  {
@@ -450,6 +481,9 @@
     "lahde2": "Tiedekatsaus/CORDIS (hakutulos): Atlantin vesi pääasiallinen tilavuuden, suolan ja lämmön lähde, 10-kertainen",
     "huom": "Jokivesi (Ob, Jenisei, Lena) jätetty pois vastauksesta, koska sille ei löytynyt kahta lähdettä."
    }
+  ],
+  "kohteet": [
+   "rus/jaameri"
   ]
  },
  {
@@ -499,6 +533,9 @@
     "lahde2": "UNESCO (hakutulos): inscribed 1995, 13th-century ramparts",
     "huom": "Yli 700 hopea-aarretta (Archaeology) jätetty pois: yksi lähde."
    }
+  ],
+  "kohteet": [
+   "swe/itameri"
   ]
  },
  {
@@ -554,6 +591,9 @@
     "lahde2": "NASA (hakutulos): vuosituhansien kuluttua",
     "huom": "Teksti sanoo vain \"tuhansien vuosien päästä\"."
    }
+  ],
+  "kohteet": [
+   "swe/pohjanlahti"
   ]
  },
  {
@@ -592,6 +632,9 @@
     "huom": "Mysis relicta on myöhemmin jaettu kahdeksi lajiksi, jolloin lajeja on seitsemän; teksti sanoo \"perinteisesti luetteloitua kuusi\"."
    }
   ],
-  "huom": "Kysymyksen oletus on osittain virheellinen: Vänernissä ei elä merieläimiä vaan jääkauden jäänteitä (glasiaalirelikteja), jotka ovat polveutuneet murtovesi- ja merilajeista. Vastaus oikaisee oletuksen."
+  "huom": "Kysymyksen oletus on osittain virheellinen: Vänernissä ei elä merieläimiä vaan jääkauden jäänteitä (glasiaalirelikteja), jotka ovat polveutuneet murtovesi- ja merilajeista. Vastaus oikaisee oletuksen.",
+  "kohteet": [
+   "swe/vanern"
+  ]
  }
 ]
