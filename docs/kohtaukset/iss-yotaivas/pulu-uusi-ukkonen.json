@@ -1,0 +1,74 @@
+[
+ {
+  "kysymys": "Näkyykö ukkosmyrsky avaruuteen asti?",
+  "vastaus": "Näkyy, ja yöllä parhaiten. Asemalta kameralla kuvattuna salamat välähtelevät pilvien sisällä kaupunkien valojen vieressä, kuten astronautin ottamassa kuvassa Länsi-Turkin yöllisestä myrskystä. Pilvien yläpuolellakin tapahtuu: tanskalainen astronautti Andreas Mogensen kuvasi syyskuussa 2015 Thor-kokeessa sinisiä purkauksia, joista yksi nousi noin 40 kilometriin, sekä punaisen keijun eli spriten. Keiju syttyy salamaniskun jälkeen noin 50–90 kilometrin korkeudessa. Siksi ESA asensi asemalle vuonna 2018 ASIM-laitteen tutkimaan niitä.",
+  "lahteet": [
+   {
+    "url": "https://science.nasa.gov/earth/earth-observatory/lightning-storm-over-turkiye-153092/",
+    "title": "Lightning Storm over Türkiye - NASA Earth Observatory"
+   },
+   {
+    "url": "https://physics.aps.org/articles/v10/1",
+    "title": "Thunderstorms from space (Thor, Mogensen) - APS Physics"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Thor_experiment",
+    "title": "Thor experiment - Wikipedia (hakutulos)"
+   },
+   {
+    "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Research/Atmosphere_Space_Interactions_Monitor",
+    "title": "Atmosphere Space Interactions Monitor - ESA"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Atmosphere-Space_Interactions_Monitor",
+    "title": "Atmosphere-Space Interactions Monitor - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Upper-atmospheric_lightning",
+    "title": "Upper-atmospheric lightning - Wikipedia"
+   },
+   {
+    "url": "https://www.nasa.gov/image-article/sprites-over-chateau-de-beynac/",
+    "title": "Sprites over Chateau de Beynac - NASA"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Asemalta kuvataan yöllisiä salamoita pilvien sisällä ja kaupunkien valot samassa kuvassa (Länsi-Turkki)",
+    "lahde1": "NASA Earth Observatory, Lightning Storm over Türkiye (astronautin kuva ISS-miehistö, Nikon D5, aikasarjakuvaus)",
+    "lahde2": "APS Physics 2017: Mogensenin kuvaamat myrskyt asemalta (Kalifornia, Itä-Intia, Thaimaa, Costa Rica)",
+    "huom": "Vuosi (marraskuu 2023) jätetty pois tekstistä, koska vain yksi lähde. Paljas silmä: vastaus sanoo 'kameralla kuvattuna', ei lupaa paljasta silmää."
+   },
+   {
+    "vaite": "Mogensen kuvasi syyskuussa 2015 Thor-kokeessa sinisiä purkauksia ja spriten",
+    "lahde1": "APS Physics 2017: Thor, Mogensenin 10 päivän lento syyskuussa 2015, blue jet ja sprite",
+    "lahde2": "Wikipedia Thor experiment (hakutulos; IRISS-lento syyskuu 2015, C-sprite ja pulssimainen blue jet)",
+    "huom": "Wikipedia-sivua ei avattu WebFetchillä, vain hakutuloksen tiivistelmä. 'Punainen' sprite: väri NASAn ja Wikipedian yleiskuvauksesta (punertava), ei Mogensenin kuvan omasta kuvauksesta. Sijainti jätetty pois: lähteet ristiriidassa (Meksiko/Karibia vs Itä-Intia; ESA:n sivun 'Bengalinlahti' ei vahvistunut hakutuloksessa)."
+   },
+   {
+    "vaite": "Yksi sininen purkaus (blue jet) nousi noin 40 km:n korkeuteen",
+    "lahde1": "ESA, ASIM-sivu: pulssimainen blue jet 40 km",
+    "lahde2": "APS Physics 2017: blue jets noin 40 km",
+    "huom": "V."
+   },
+   {
+    "vaite": "Sprite syttyy noin 50–90 km:n korkeudessa salamaniskun jälkeen",
+    "lahde1": "Wikipedia, Upper-atmospheric lightning: 50–90 km",
+    "lahde2": "NASA, Sprites over Chateau de Beynac: noin 80 km (50 mailia), syttyy salaman jälkeen",
+    "huom": "Lähteiden välillä pieni ero (NASA 80 km, Wikipedia 50–90 km); vastaus käyttää väliä. Kestoa ei mainita, koska lähteet eivät riittävästi tue."
+   },
+   {
+    "vaite": "ESA:n ASIM asennettiin asemalle 2018 tutkimaan sprite-, jet- ja elves-ilmiöitä",
+    "lahde1": "ESA, ASIM-sivu: laukaisu 2.4.2018, Columbuksen ulkopuolella, tutkii sprite/blue jet/elves",
+    "lahde2": "Wikipedia ASIM: laukaisu 2.4.2018, asennus Columbukseen 13.4.2018",
+    "huom": "V. Thor oli ASIMin edeltäjä/pilottikoe (Wikipedia Thor experiment, hakutulos)."
+   },
+   {
+    "vaite": "PUDOTETTU: Nichole Ayersin heinäkuun 2025 kuva",
+    "lahde1": "Hakutulokset: ensin raportoitu spritena",
+    "lahde2": "NASA Spritacular: tunnistettu myöhemmin gigantic jetiksi",
+    "huom": "Ristiriita, ei käytetty."
+   }
+  ]
+ }
+]
