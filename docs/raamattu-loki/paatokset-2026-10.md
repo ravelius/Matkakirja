@@ -197,3 +197,7 @@ Omistaja: kohdevalikkoon rauhallisempi tausta ja isommat kuvat (nimi kuvan alare
 ## PAATOKSET 15.10.2026 klo 21.07 (KK välitti): yöllä-sanat jäävät (15.10.2026 klo 21.08)
 
 Omistaja: "Jätetään se yöllä sittenkin" – peruu 21.03:n kohdan 'pois yöllä-sanat'; kohdevalikon nimet ennallaan (esim. 'Bagdad yöllä'). Rauhallisempi tausta ja isommat kuvat pysyvät. PT välitti Natiivi-UI:lle.
+
+## PAATOKSET 15.10.2026 klo 21.29 (KK välitti): kaupunkiesittelyt hyväksytty (15.10.2026 klo 21.30)
+
+Omistaja: "Hyväksyn kaikki" – İzmir-malli ja 16 Euroopan kaupunkiesittelyä pidennettynä kahdeksi kappaleeksi (600–700 merkkiä) hyväksytty. Loput 20 Euroopan yhden kappaleen esittelyä tehdään samalla mallilla; PT tarkistaa faktat, Tekstit-osastoon merkintä 'hyväksytty mallin perusteella'.
