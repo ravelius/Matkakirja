@@ -156,3 +156,7 @@ Omistaja (kortti pulu-sahke, Kyllä): aloituskaupungissa isoisän unen jälkeen 
 ## PAATOKSET 15.10.2026 klo 18.44: ISS-kameran kuvauskokemus 1–3 (15.10.2026 klo 18.45)
 
 Omistaja (sanatarkasti, KK:n välittämä): "Tee 1-3". 1) Etsin: rajauksen ulkopuoli tummuu, skannerin vihreät kulmat = kuvan rajat, alareunassa objektiivi (24 mm / 400 mm) ja keskikohdan paikan nimi. 2) Lähennys: LAAJA = koko ikkuna, TELE = pehmeä lähennys keskikohtaan, nipistys väliltä, kohde pysyy rajauksessa. 3) Laukaisu: suljinääni + välähdys, valmis kuva hetken korttina (paikka, aika, korkeus, objektiivi NASAn astronauttikuvien tapaan) → albumiin. Ei NASA-vertailua eikä kuvaustehtäviä. Junaan 195 kytkimen taakse; kuvapari/video omistajalle ennen kytkentää. UI-POHJAT: skannerin kulmakehys ja olemassa olevat korttipohjat. Toteuttaa Pelikoodari.
+
+## PAATOKSET 15.10.2026 klo 19.04: Aloituskartan vihjeet, kaikki 9 (15.10.2026 klo 19.05)
+
+Omistaja (kortti vihjeet-suunnitelma): "Kyllä, kaikki 9 (Suositus)". Karttasepän suunnitelma: napautus avaa nostokortin (pienoismalli, nimi, yksi arvoituksellinen rivi, tila 'Odottaa myöhempiä matkoja'), ei avaa kaupunkia eikä anna palkintoa. Myöhemmin: mantereen ovet (Tripoli, Marrakech = Afrikka; Bagdad, Teheran, Dubai = Lähi-itä; Samarkand = Aasia), Giza = aarnivalkea-videopeli, Sahara ja Grönlanti = ISS-luontokohteet; kukin 'myöhemmin' oman päätöksensä kautta. Kattaa 5 uutta Codex-kuvaa. 9 riviä omistajan hyväksyttäviksi ennen kytkentää. Ehto (17.0x): kortissa ei mainita Aarnia eikä luetteloa; rivi ilman lähdettä.
