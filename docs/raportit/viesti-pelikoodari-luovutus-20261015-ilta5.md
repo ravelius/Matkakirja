@@ -33,7 +33,9 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus viesti-pelikoodari-luovu
 - Minipallon mielivaltainen piste: NUI käyttää AstronauttiKerros.LennaOmaanValinnalla(nimi, lat, lon) – ei koodia minulta.
 
 ## Odottaa omistajaa / seurattavat
-- Pulun 4 uutta ISS-kysymystä (PT 22.2x): kytke kun omistajan hyväksyntä tulee (sama polku PuluChat.IssVastaukset: lisää rivit + mp3).
+- **Pulun 4 uutta ISS-vastausta HYVÄKSYTTY** (omistaja 23.03, lyhennettyinä; tekstit main-lokissa b91af3460): Äänittäjä äänittää ja ilmoittaa
+  → kytke junaan 196 samalla polulla (PuluChat.IssVastaukset: 4 uutta riviä Id/Kysymys/Vastaus/Aani; jos kysymys kuuluu kohokohtaan,
+  Siirtosepälle id kohokohdat.json:iin) → L2 → NS + kuva PT:lle.
 - Pieni viilaus (ei pyydetty): ISS-vastauksen kupla vierii loppuun, alku jää ylös (PuluChat.VastaaIssAanella → Vierita(kupla)).
 - Proto-worktreet poistettavissa kun junassa: -mika-en-tunne-195, -mika-tama-on-195 (BUILD 195), -pulu-tekstit-196, -pulu-chat-aanet-196 ja
   -iss-pulu-vastaukset-196 kun NS on ottanut, -iss-kamera-195 kun junassa. Poisto `git -C …/Matkakirja-proto worktree remove <polku>`.
