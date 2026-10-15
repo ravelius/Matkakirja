@@ -1,0 +1,194 @@
+{
+  "round": "M13",
+  "parentRound": "M12",
+  "sourceTask": 274,
+  "cameraFits": {
+    "K1": {
+      "parentRound": "M12",
+      "softwareFitScale": 1.0,
+      "beforeIoU": 0.8472966788702929,
+      "afterIoU": 0.8473950074381651,
+      "evaluations": 213,
+      "lowerBounds": [
+        189.1411788,
+        166.7831546956667,
+        63.099055832372976,
+        -16.294437646307724,
+        29.00839633425787,
+        738.0320447177687,
+        506.0174491929429
+      ],
+      "upperBounds": [
+        201.1411788,
+        225.6477975294314,
+        85.61931083203402,
+        -10.294437646307724,
+        36.919777152691836,
+        798.0320447177687,
+        566.0174491929429
+      ],
+      "cameraOptimizationOnlyNoImageWarp": true,
+      "nativeFinalBlenderRenderRequired": true
+    },
+    "K2": {
+      "parentRound": "M12",
+      "softwareFitScale": 1.0,
+      "beforeIoU": 0.9184658565941997,
+      "afterIoU": 0.9184795368376883,
+      "evaluations": 213,
+      "lowerBounds": [
+        180.42399498408153,
+        42.119230253349876,
+        1.3176434799999999,
+        21.027239296877898,
+        56.89436895020521,
+        490.4342272206003,
+        750.0811819862852
+      ],
+      "upperBounds": [
+        192.42399498408153,
+        56.984840931002765,
+        2.03269412,
+        27.027239296877898,
+        72.41101502753392,
+        550.4342272206003,
+        810.0811819862852
+      ],
+      "cameraOptimizationOnlyNoImageWarp": true,
+      "nativeFinalBlenderRenderRequired": true
+    },
+    "K3": {
+      "parentRound": "M12",
+      "softwareFitScale": 1.0,
+      "beforeIoU": 0.9003432858546849,
+      "afterIoU": 0.9003979651866976,
+      "evaluations": 213,
+      "lowerBounds": [
+        267.37293623552983,
+        85.52062079662112,
+        1.1560000000000001,
+        12.276792875885205,
+        35.007155862005526,
+        736.0933946589296,
+        516.515756716
+      ],
+      "upperBounds": [
+        279.37293623552983,
+        115.70436931307563,
+        1.814,
+        18.276792875885207,
+        44.55456200618885,
+        796.0933946589296,
+        576.515756716
+      ],
+      "cameraOptimizationOnlyNoImageWarp": true,
+      "nativeFinalBlenderRenderRequired": true
+    },
+    "K4": {
+      "parentRound": "M12",
+      "softwareFitScale": 1.0,
+      "beforeIoU": 0.902218627813085,
+      "afterIoU": 0.9026395803188404,
+      "evaluations": 213,
+      "lowerBounds": [
+        0.16602067267550158,
+        68.28483717130305,
+        1.168677833246436,
+        17.612197525622644,
+        41.38474659977597,
+        731.0619926103328,
+        459.2177238607505
+      ],
+      "upperBounds": [
+        12.1660206726755,
+        92.38536793764531,
+        1.831152362627531,
+        23.612197525622644,
+        52.67149567244215,
+        791.0619926103328,
+        519.2177238607505
+      ],
+      "cameraOptimizationOnlyNoImageWarp": true,
+      "nativeFinalBlenderRenderRequired": true
+    },
+    "K5": {
+      "parentRound": "M12",
+      "softwareFitScale": 1.0,
+      "beforeIoU": 0.865829267836782,
+      "afterIoU": 0.8665390832574645,
+      "evaluations": 213,
+      "lowerBounds": [
+        89.588,
+        106.83812469716425,
+        102.595767835327,
+        -40.214607256380994,
+        26.627558736010727,
+        734.0364793437126,
+        516.515756716
+      ],
+      "upperBounds": [
+        101.588,
+        144.5456981196928,
+        139.05603883603064,
+        -34.214607256380994,
+        33.8896202094682,
+        794.0364793437126,
+        576.515756716
+      ],
+      "cameraOptimizationOnlyNoImageWarp": true,
+      "nativeFinalBlenderRenderRequired": true
+    }
+  },
+  "geometryChanges": [
+    {
+      "parameter": "upper_xy_scale",
+      "before": 1.0,
+      "after": 0.9736,
+      "objectiveBefore": 1.4624735894901142,
+      "objectiveAfter": 1.4633151602558876
+    },
+    {
+      "parameter": "mast_top",
+      "before": 68.6125,
+      "after": 68.07249999999999,
+      "objectiveBefore": 1.4633151602558876,
+      "objectiveAfter": 1.4636436773317252
+    },
+    {
+      "parameter": "upper_shoulder_z",
+      "before": 57.0,
+      "after": 56.92,
+      "objectiveBefore": 1.4636436773317252,
+      "objectiveAfter": 1.4636692678117211
+    },
+    {
+      "parameter": "mast_top",
+      "before": 68.07249999999999,
+      "after": 67.8475,
+      "objectiveBefore": 1.4636692678117211,
+      "objectiveAfter": 1.4640181418624323
+    },
+    {
+      "parameter": "upper_shoulder_z",
+      "before": 56.92,
+      "after": 56.952,
+      "objectiveBefore": 1.4640181418624323,
+      "objectiveAfter": 1.4640458394858098
+    },
+    {
+      "parameter": "lower_xy_scale",
+      "before": 1.0,
+      "after": 0.9978,
+      "objectiveBefore": 1.4640458394858098,
+      "objectiveAfter": 1.464050255284997
+    }
+  ],
+  "seconds": 31.00209927558899,
+  "bindingHeightsM": [
+    58.7,
+    20,
+    51
+  ],
+  "newAIImages": 0,
+  "maskImagesUnchanged": true
+}

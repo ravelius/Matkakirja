@@ -1,0 +1,529 @@
+{
+  "taskNumber": 274,
+  "verifiedAt": "2026-10-15T13:16:43.919131+00:00",
+  "verificationActor": "producer independent-algorithm numeric readback, not the separate visual reviewer",
+  "verifiedNativeViews": 25,
+  "roundsVerified": [
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15"
+  ],
+  "oldTenRoundsRemainInTask273VerifiedHistory": true,
+  "completedTotalModelRounds": 15,
+  "authorizedNewRounds": 5,
+  "additionalRoundsCompleted": 5,
+  "allTargetImagesAndMasksUnchanged": true,
+  "eightFootComponentsEverySavedModel": true,
+  "savedModelBindingHeightsAudited": true,
+  "bindingHeightsM": [
+    58.7,
+    20,
+    51
+  ],
+  "bestRound": "M15",
+  "latestRound": "M15",
+  "allIoUThresholdsPassed": false,
+  "fourViewsPassLatest": true,
+  "bindingMaterialDeltaE": null,
+  "materialColorThresholdPassClaimed": false,
+  "newAIImageGenerations": 0,
+  "finalNativeSoftwareMaxDifferencePercentagePoints": 0.00442282063407573,
+  "softwareMetricIsNotBinding": true,
+  "rows": [
+    {
+      "round": "M11",
+      "view": "K1",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 50498,
+      "unionPixels": 60376,
+      "recomputedIoUPercent": 83.6391943818736,
+      "thresholdPercent": 85,
+      "passed": false,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M11",
+      "view": "K2",
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "intersectionPixels": 368341,
+      "unionPixels": 402301,
+      "recomputedIoUPercent": 91.55855938712556,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M11",
+      "view": "K3",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 127695,
+      "unionPixels": 143107,
+      "recomputedIoUPercent": 89.23043596749287,
+      "thresholdPercent": 90,
+      "passed": false,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M11",
+      "view": "K4",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 139568,
+      "unionPixels": 156021,
+      "recomputedIoUPercent": 89.45462469795733,
+      "thresholdPercent": 90,
+      "passed": false,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M11",
+      "view": "K5",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 92418,
+      "unionPixels": 107245,
+      "recomputedIoUPercent": 86.17464683668237,
+      "thresholdPercent": 90,
+      "passed": false,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M12",
+      "view": "K1",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 51974,
+      "unionPixels": 61333,
+      "recomputedIoUPercent": 84.74067793846706,
+      "thresholdPercent": 85,
+      "passed": false,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M12",
+      "view": "K2",
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "intersectionPixels": 368547,
+      "unionPixels": 401226,
+      "recomputedIoUPercent": 91.85521376979557,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M12",
+      "view": "K3",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 130401,
+      "unionPixels": 144757,
+      "recomputedIoUPercent": 90.08269030167799,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M12",
+      "view": "K4",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 142077,
+      "unionPixels": 157273,
+      "recomputedIoUPercent": 90.33782022343314,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M12",
+      "view": "K5",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 92821,
+      "unionPixels": 107484,
+      "recomputedIoUPercent": 86.35796955825984,
+      "thresholdPercent": 90,
+      "passed": false,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M13",
+      "view": "K1",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 51839,
+      "unionPixels": 61206,
+      "recomputedIoUPercent": 84.69594484200896,
+      "thresholdPercent": 85,
+      "passed": false,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M13",
+      "view": "K2",
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "intersectionPixels": 367741,
+      "unionPixels": 400381,
+      "recomputedIoUPercent": 91.84776500383384,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M13",
+      "view": "K3",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 130095,
+      "unionPixels": 144485,
+      "recomputedIoUPercent": 90.04048863203793,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M13",
+      "view": "K4",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 141608,
+      "unionPixels": 156881,
+      "recomputedIoUPercent": 90.2645954577036,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M13",
+      "view": "K5",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 93276,
+      "unionPixels": 107640,
+      "recomputedIoUPercent": 86.65551839464884,
+      "thresholdPercent": 90,
+      "passed": false,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M14",
+      "view": "K1",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 52761,
+      "unionPixels": 61622,
+      "recomputedIoUPercent": 85.62039531336211,
+      "thresholdPercent": 85,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M14",
+      "view": "K2",
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "intersectionPixels": 367741,
+      "unionPixels": 400381,
+      "recomputedIoUPercent": 91.84776500383384,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M14",
+      "view": "K3",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 130095,
+      "unionPixels": 144485,
+      "recomputedIoUPercent": 90.04048863203793,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M14",
+      "view": "K4",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 141612,
+      "unionPixels": 156872,
+      "recomputedIoUPercent": 90.27232393288796,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M14",
+      "view": "K5",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 93276,
+      "unionPixels": 107640,
+      "recomputedIoUPercent": 86.65551839464884,
+      "thresholdPercent": 90,
+      "passed": false,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M15",
+      "view": "K1",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 52671,
+      "unionPixels": 61402,
+      "recomputedIoUPercent": 85.78059346601088,
+      "thresholdPercent": 85,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M15",
+      "view": "K2",
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "intersectionPixels": 367511,
+      "unionPixels": 399517,
+      "recomputedIoUPercent": 91.98882650800843,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M15",
+      "view": "K3",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 129836,
+      "unionPixels": 144019,
+      "recomputedIoUPercent": 90.15199383414688,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M15",
+      "view": "K4",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 141292,
+      "unionPixels": 156373,
+      "recomputedIoUPercent": 90.35575195206333,
+      "thresholdPercent": 90,
+      "passed": true,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    },
+    {
+      "round": "M15",
+      "view": "K5",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 93282,
+      "unionPixels": 107439,
+      "recomputedIoUPercent": 86.82322061821127,
+      "thresholdPercent": 90,
+      "passed": false,
+      "rawAlphaMaskIndependentlyFloodFilledWithPillow": true,
+      "immutableTargetAndCameraAndRenderHashesVerified": true
+    }
+  ],
+  "savedModels": [
+    {
+      "round": "M11",
+      "savedModelSHA256": "04735eb8566a7f936799ddec08705a098fe5c9e2130b6f0e0c743d3d38b2c6f7",
+      "savedModelAuditSHA256": "1e2132b471f3a52feb229d7481fe2ff02f8d7124ce9d35e378393eb06e84a2b8",
+      "auditPassed": true,
+      "bindingHeightReadback": {
+        "body_top": {
+          "expectedMaxZ": 58.7,
+          "actualMaxZ": 58.70000076293945,
+          "absoluteErrorM": 7.629394502828291e-07
+        },
+        "lower_floor": {
+          "expectedMaxZ": 20,
+          "actualMaxZ": 20.0,
+          "absoluteErrorM": 0.0
+        },
+        "upper_floor": {
+          "expectedMaxZ": 51,
+          "actualMaxZ": 51.0,
+          "absoluteErrorM": 0.0
+        }
+      }
+    },
+    {
+      "round": "M12",
+      "savedModelSHA256": "8b22cf4d9324d5b311759d0e0625e88d309f8e404d557e1affe850580cd59b50",
+      "savedModelAuditSHA256": "89da1ba1717c6b5556761ff62d33f8594b87f9a3350194926663c56e9edaff23",
+      "auditPassed": true,
+      "bindingHeightReadback": {
+        "body_top": {
+          "expectedMaxZ": 58.7,
+          "actualMaxZ": 58.70000076293945,
+          "absoluteErrorM": 7.629394502828291e-07
+        },
+        "lower_floor": {
+          "expectedMaxZ": 20,
+          "actualMaxZ": 20.0,
+          "absoluteErrorM": 0.0
+        },
+        "upper_floor": {
+          "expectedMaxZ": 51,
+          "actualMaxZ": 51.0,
+          "absoluteErrorM": 0.0
+        }
+      }
+    },
+    {
+      "round": "M13",
+      "savedModelSHA256": "d6b52c5e600531b0fd567bdab8b90cdaee49a8b2ab6f188eab3adbd3783d9c4d",
+      "savedModelAuditSHA256": "b29ff33125b9685d8c79a6c20384e1ad907746a9abc8a93c2c9d553842264b45",
+      "auditPassed": true,
+      "bindingHeightReadback": {
+        "body_top": {
+          "expectedMaxZ": 58.7,
+          "actualMaxZ": 58.70000076293945,
+          "absoluteErrorM": 7.629394502828291e-07
+        },
+        "lower_floor": {
+          "expectedMaxZ": 20,
+          "actualMaxZ": 20.0,
+          "absoluteErrorM": 0.0
+        },
+        "upper_floor": {
+          "expectedMaxZ": 51,
+          "actualMaxZ": 51.0,
+          "absoluteErrorM": 0.0
+        }
+      }
+    },
+    {
+      "round": "M14",
+      "savedModelSHA256": "b7d5c1ad7840801d368352755fcf9b1da96fdadfc1dd9a023a134bec8ccfebd8",
+      "savedModelAuditSHA256": "0d5f4ed610e37ea2abc98959438c709fa437e4811aecce728bbd52d5d24fcf9c",
+      "auditPassed": true,
+      "bindingHeightReadback": {
+        "body_top": {
+          "expectedMaxZ": 58.7,
+          "actualMaxZ": 58.70000076293945,
+          "absoluteErrorM": 7.629394502828291e-07
+        },
+        "lower_floor": {
+          "expectedMaxZ": 20,
+          "actualMaxZ": 20.0,
+          "absoluteErrorM": 0.0
+        },
+        "upper_floor": {
+          "expectedMaxZ": 51,
+          "actualMaxZ": 51.0,
+          "absoluteErrorM": 0.0
+        }
+      }
+    },
+    {
+      "round": "M15",
+      "savedModelSHA256": "206051e1e9caeb03eab9a246f039168de003d9ed324cc04c50b012978c1be7a0",
+      "savedModelAuditSHA256": "bb1c046d5ad43ff5c8ca6375ab761f0c9b2224618646f6f2f66702549cee74f6",
+      "auditPassed": true,
+      "bindingHeightReadback": {
+        "body_top": {
+          "expectedMaxZ": 58.7,
+          "actualMaxZ": 58.70000076293945,
+          "absoluteErrorM": 7.629394502828291e-07
+        },
+        "lower_floor": {
+          "expectedMaxZ": 20,
+          "actualMaxZ": 20.0,
+          "absoluteErrorM": 0.0
+        },
+        "upper_floor": {
+          "expectedMaxZ": 51,
+          "actualMaxZ": 51.0,
+          "absoluteErrorM": 0.0
+        }
+      }
+    }
+  ],
+  "furtherModelRoundsAuthorized": false
+}

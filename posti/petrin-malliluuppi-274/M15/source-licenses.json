@@ -1,0 +1,37 @@
+[
+  {
+    "filename": "petrin-1-sisaankaynti.jpg",
+    "author": "VANOCE2022",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Petrinska_rozhledna_a_nejblizsi_okoli_20250427_121942.jpg",
+    "role": "tower geometry and color only"
+  },
+  {
+    "filename": "petrin-2-etela.jpg",
+    "author": "Ivan Korostelev",
+    "license": "CC BY-SA 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADnsk%C3%A1_rozhledna,_Prague.jpg",
+    "role": "tower geometry and color only"
+  },
+  {
+    "filename": "petrin-3-lansi.jpg",
+    "author": "Giorgio Galeotti",
+    "license": "CC BY 4.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADn_Lookout_Tower_-_Prague,_Czech_Republic_-_May_17,_2019.jpg",
+    "role": "tower geometry and color only"
+  },
+  {
+    "filename": "petrin-4-muurin-takaa.jpg",
+    "author": "Edgar El",
+    "license": "CC BY 3.0",
+    "url": "https://commons.wikimedia.org/wiki/File:Prag_%E2%80%93_Aussichtsturm_Pet%C5%99%C3%ADn_-_Pet%C5%99%C3%ADnsk%C3%A1_rozhledna_-_panoramio_(1).jpg",
+    "role": "structure only, conflicting camera GPS and winter setting are not transferred"
+  },
+  {
+    "filename": "petrin-5-ylhaalta.jpg",
+    "author": "VANOCE2022",
+    "license": "CC0",
+    "url": "https://commons.wikimedia.org/wiki/File:Petrinska_rozhledna_a_nejblizsi_okoli_20250427_130633.jpg",
+    "role": "hall roof and metal structure only; viewpoint is downward from tower platform, not aerial"
+  }
+]

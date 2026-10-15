@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "model": "Petřín M13",
+  "reviewType": "fresh independent visual checkpoint",
+  "status": "completed independent visual checkpoint; not final acceptance",
+  "visualFindingsRecordedAtUtc": "2026-10-15T13:06:07.178328+00:00",
+  "metricsFileOpenedAtVisualFindingRecord": false,
+  "topThreeDifferences": [
+    {
+      "rank": 1,
+      "area": "Yläkoppi ja masto",
+      "views": [
+        "K2",
+        "K3",
+        "K4",
+        "K5"
+      ],
+      "observation": "Yläkopin tumma ikkunaosa on mallissa korkea ja lähes yhtenäinen pystysivuinen vyöhyke. Tavoitteen ikkunoiden ja vaalean alavyön suhde, alapuolinen viistetty tuki sekä keveämpi kehystys erottuvat etenkin K2:ssa. K5:ssa kopin tumma sylinterimäinen vaikutelma korostuu. Masto on mallissa ohut, vaalea ja harva ristikkopiikki; tavoitteessa se on tiheämpi, leveämmin varusteltu ja siinä näkyy enemmän sivuille ulottuvia antenni- ja tukiosia.",
+      "significance": "Tornin tunnistettavan ylimmän osan muoto ja visuaalinen paino poikkeavat selvästi myös kaukonäkymissä.",
+      "boundedRecommendation": "Tarkenna kopin kehystyksen, vaaleiden vyöhykkeiden, alapinnan ja mastovarusteiden muotoa luotettavasta lähteestä. Säilytä sitovat 58,7/20/51 m korkeudet; älä ratkaise eroa siirtämällä lattioita generoitujen tavoitekuvien mukaan."
+    },
+    {
+      "rank": 2,
+      "area": "Jalustan aukotus ja jalkojen alaliitokset",
+      "views": [
+        "K2",
+        "K3",
+        "K4",
+        "K5"
+      ],
+      "observation": "K2:ssa mallin jalustaa hallitsee tiheä, lähes samanlaisena toistuva korkeiden ristikkoikkunoiden ja kapeiden punaisten luukkujen sarja sekä tumma lasipariovi. Tavoitteessa aukkoja on näkyvällä sivulla harvemmin, keskellä on selkeä avoin sisäänkäynti ja seinäpintaa jää enemmän. Tavoitteen kaarevat jalkaliitokset sisältävät pyöreitä aukkoja ja koristeellista levy- ja kaarirakennetta; mallissa niiden tilalla näkyvät pelkistetyt pitkät vinotuet ja irrallisilta näyttävät ohuet kaaret. Tämä muuttaa sokkelin ja rungon liittymän luonnetta.",
+      "significance": "Lähinäkymän arkkitehtuuri ja rakenteen kiinnittyminen jalustaan jäävät selvästi tavoitetta kaavamaisemmiksi.",
+      "boundedRecommendation": "Tarkenna aukotuksen rytmi, sisäänkäynti ja kaarevien liitososien siluetti sekä liittymät lähdevarmennetusti. K4:n pohjoissivun aukkoja tai koristeita ei voi hyväksyä todellisiksi pelkän varmentamattoman rekonstruktion perusteella."
+    },
+    {
+      "rank": 3,
+      "area": "20 metrin tasanteen kaide, kotelo ja alapinta",
+      "views": [
+        "K2",
+        "K3",
+        "K4",
+        "K5"
+      ],
+      "observation": "Mallin tasanteella on avoin, harva X-kaide, tumma lähes suorakaiteinen lasitettu keskikotelo ja ohut yhtenäinen reunalevy. Tavoitteessa kaide on selvästi tiheämpi ja koristeellisempi, keskikotelon ikkunayläreunoissa on kaarevaa muotoa ja tasanteen uloke sekä alapinnan tukiliitokset muodostavat syvemmän, vahvemmin jäsennellyn kokonaisuuden. K2 tekee eron selvimmäksi; K3–K5:ssa se näkyy vyöhykkeen vaaleuden ja reunaprofiilin erona.",
+      "significance": "Tasanteen pieni yksityiskohtamäärä ja pelkistetty poikkileikkaus näkyvät, vaikka ulkosiluetti on useassa näkymässä lähellä tavoitetta.",
+      "boundedRecommendation": "Tarkenna kaiteen rytmiä, ikkunoiden muotoa, reunaprofiilia ja alapinnan liitoksia. Arvio koskee muotoa ja yksityiskohtia; 20 m lattiatason sijaintia ei pidä muuttaa generoitujen tavoitekuvien tasanne-erojen mukaiseksi."
+    }
+  ],
+  "metricsIndependentlyRecomputed": false,
+  "modelReadyAsFinal": false,
+  "completedAtUtc": "2026-10-15T13:07:24.298441+00:00",
+  "reviewer": {
+    "role": "fresh subagent reviewer",
+    "productionParticipation": false,
+    "priorReviewsRead": false
+  },
+  "viewedFiles": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M13/qa/petrin-M13-comparison-sheet.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M13/inputs/targets/K2.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M13/renders/K2-model.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M13/inputs/targets/K5.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M13/renders/K5-model.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M13/qa/K1-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M13/qa/K3-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M13/qa/K4-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M13/qa/metrics.json"
+  ],
+  "visualEvidenceBasis": {
+    "allFiveViewsPersonallyInspected": true,
+    "allFiveViewsSeenInComparisonSheet": true,
+    "nativeImagesSeparatelyOpenedForDetail": [
+      "K2 target",
+      "K2 model",
+      "K5 target",
+      "K5 model"
+    ],
+    "additionalIndividualComparisonSheetsOpened": [
+      "K1",
+      "K3",
+      "K4"
+    ],
+    "noImageEditingCroppingOrRenderingPerformed": true
+  },
+  "independenceLimits": [
+    "Arvioija ei osallistunut M13:n tuotantoon eikä lukenut aiempia arvioita. Tuotannon sisäisiä muistiinpanoja, mallikoodia, Blender-tiedostoa tai aiempia kierroksia ei avattu.",
+    "Kolme suurinta näkyvää eroa tallennettiin tähän raporttiin ennen qa/metrics.json-tiedoston avaamista. Arkeissa painetut IoU-luvut ja niiden värit olivat kuitenkin näkyvissä jo kuvia katsottaessa. Arvio ei siis ole mittariteksteiltä sokkoutettu.",
+    "Arvio vertaa toimitettuja rasterikuvia ja niiden näkyviä muotoja. Generoidut tavoitehavainnekuvat eivät itsessään varmista rakennuksen todellisia yksityiskohtia tai mittasuhteita.",
+    "Sitovat korkeudet 58,7 m / 20 m / 51 m on otettu toimeksiannosta. Fyysisiä korkeuksia tai mallin geometriaa ei mitattu eikä itsenäisesti varmennettu. Generoitujen tavoitteiden tasanne-eroja ei pidä kopioida mallin lattioihin.",
+    "Kameraoptimointi on sallittu; kamerat ovat tavoitekuviin sovituksia, eivät mitattuja kuvauspaikkoja. Kuvasta näkyvän ulkorajan ero ei yksin erottele kameran, geometrian ja tavoitekuvan virheitä.",
+    "K5-maskin v2 on toimeksiannon mukaan PT:n hyväksymä. Peittyvä maapiste on arvio, ja maskin pikselintarkkuutta ei tässä sertifioitu.",
+    "K4:n pohjoispuolen yksityiskohdat ovat varmentamaton rekonstruktio. Niiden vastaavuus tavoitekuvan kanssa ei osoita historiallista tai nykyistä rakennustodellisuutta.",
+    "Harmaa ympäristö on neutraali esikatselu; arvio ei edellytä eikä väitä valmiin puiston toteutusta.",
+    "Värihavainnot ovat silmämääräisiä eri valaistuksissa. Materiaali-ΔE on null, ja pikseli-ΔE on vain muodon, kohdistuksen, taustan ja valaistuksenkin vaikutuksia sisältävä diagnostiikka.",
+    "Toimeksiannon mainitsemaa uutta M09-palautelähdettä ei avattu, jotta aiempi palaute ei ohjaisi näkyvien erojen valintaa; työn M11–M15-rajaus ja M09-lähtökohta on tässä otettu suoraan toimeksiannosta."
+  ],
+  "colorAndLightingObservation": {
+    "lighting": "Renderien valaistus näyttää pehmeältä, hillityltä ja silmämääräisesti neutraalilta harmaata esikatselutaustaa vasten. Tavoitteiden aurinkoinen puistovalaistus on kirkkaampi ja kontrastisempi. Pelkkä tätä tummempi kokonaisvaikutelma ei todista väärää materiaaliväriä.",
+    "steel": "Teräs on renderissä tunnistettavasti tummaa sinertävänharmaata. Kirkkaat reunat ja sisärungon tummat osat erottuvat, mutta yläkopin lasitus on hyvin yhtenäisen tumma ja muuttaa sen visuaalista painoa.",
+    "base": "Jalusta näyttää vaalealta kermaiselta; valaistus tekee siitä tavoitetta hillitymmän ja hieman harmaamman.",
+    "redShutters": "Punaiset luukut ovat näkyvissä, mutta K2:ssa ne näyttävät tavoitteen syvää punaista haaleammilta, tiilenpunaisilta. Luukkujen ja ikkunoiden toistorytmin ero on varmempi havainto kuin sävyn materiaalivirhe.",
+    "overall": "Pyydetty tumma sinertävänharmaa teräs / vaalea kerma / punainen luukku -värijako on tunnistettavissa. Lopullista materiaalivärien vastaavuutta ei voida hyväksyä näistä eri tavoin valaistuista kuvista.",
+    "bindingMaterialDeltaE": null,
+    "materialColorThresholdPassClaimed": false,
+    "registeredPixelDeltaEInterpretation": "diagnostic only; not material-color acceptance"
+  },
+  "metricsReadAfterVisualFindings": {
+    "source": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M13/qa/metrics.json",
+    "readAfterTopThreeRecorded": true,
+    "independentlyRecomputed": false,
+    "reportedMeanIoUPercent": 88.70086246604663,
+    "reportedAllIoUThresholdsPassed": false,
+    "reportedPerView": [
+      {
+        "view": "K1",
+        "silhouetteIoUPercent": 84.69594484200896,
+        "requiredIoUPercent": 85,
+        "thresholdPassed": false
+      },
+      {
+        "view": "K2",
+        "silhouetteIoUPercent": 91.84776500383384,
+        "requiredIoUPercent": 90,
+        "thresholdPassed": true
+      },
+      {
+        "view": "K3",
+        "silhouetteIoUPercent": 90.04048863203793,
+        "requiredIoUPercent": 90,
+        "thresholdPassed": true
+      },
+      {
+        "view": "K4",
+        "silhouetteIoUPercent": 90.2645954577036,
+        "requiredIoUPercent": 90,
+        "thresholdPassed": true
+      },
+      {
+        "view": "K5",
+        "silhouetteIoUPercent": 86.65551839464884,
+        "requiredIoUPercent": 90,
+        "thresholdPassed": false
+      }
+    ],
+    "reportedBindingMaterialDeltaE": null,
+    "interpretation": "Tuotannon mittarit raportoivat K2–K4:n ylittävän omat siluettirajansa, K1:n (84,70 % / 85 %) ja K5:n (86,66 % / 90 %) alittavan. Nämä ovat luettuja tuotannon arvoja, eivät tämän arvioijan uudelleen laskemia tuloksia. Ne täydentävät ennen mittaritiedoston avaamista kirjattuja näkyviä eroja; siluettirajan ylitys ei ratkaise yksityiskohta-, väri- tai lähdevarmennuksen puutteita.",
+    "reportedPhysicalHeightAuditIsIndependentSurvey": false
+  },
+  "scopeAndConstraints": {
+    "authorizationSourceProvidedByTask": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/e8a797c5/fable-codex-petrin-M09-palaute-20261015.md",
+    "authorizationSourceReadByThisReviewer": false,
+    "task274AuthorizedRoundsAsProvided": "M11–M15 from M09 only",
+    "thisReviewProducesAdditionalModelIteration": false,
+    "bindingHeightsMeters": {
+      "body": 58.7,
+      "lowerFloor": 20,
+      "upperFloor": 51
+    },
+    "cameraFitsAreMeasuredLocations": false,
+    "K5MaskV2PTAcceptedAsProvided": true,
+    "K5OccludedGroundPointInferred": true,
+    "K4NorthDetailsUnverifiedReconstruction": true,
+    "environment": "neutral preview; not finished park",
+    "onlyWrittenFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M13/qa/independent-review.json"
+  },
+  "modelReadyAsFinalReasons": [
+    "Yläkopin ja maston, jalustan ja jalkaliitosten sekä 20 m tasanteen yksityiskohdissa on merkittäviä näkyviä eroja.",
+    "Tuotannon raportoimat K1- ja K5-siluettirajat eivät täyty.",
+    "K4:n pohjoisdetaljien todellisuus ja materiaalivärien tarkka vastaavuus jäävät varmentamatta. Tämä on visuaalinen tarkistuspiste, ei lopullinen hyväksyntä."
+  ]
+}

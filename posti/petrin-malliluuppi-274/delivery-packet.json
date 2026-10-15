@@ -1,0 +1,737 @@
+{
+  "taskNumber": 274,
+  "createdAt": "2026-10-15T13:21:22.099001+00:00",
+  "sourceCommit": "e8a797c5e3aaf2360c8bbd39db375a7a1fdf3fde",
+  "sourceBlob": "b93049955540c0e6bf5ff853eb66d58b54be9840",
+  "completedTotalRounds": 15,
+  "additionalModelRounds": 5,
+  "rounds": [
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15"
+  ],
+  "bestRound": "M15",
+  "latestRound": "M15",
+  "bestAndLatestAreSameArtifact": true,
+  "bestSelectionCriterion": "Maximize worst threshold-normalized native rendered IoU; mean IoU breaks ties",
+  "allIoUThresholdsPassed": false,
+  "passedViews": [
+    "K1",
+    "K2",
+    "K3",
+    "K4"
+  ],
+  "failedViews": [
+    "K5"
+  ],
+  "modelFinalAcceptanceVerified": false,
+  "bindingMaterialDeltaE": null,
+  "newAIImageGenerations": 0,
+  "furtherModelRoundsAuthorized": false,
+  "stopReason": "Five additional rounds M11-M15 complete; stop for PT feedback; M16 not authorized",
+  "R2Used": false,
+  "gameIntegrated": false,
+  "mainMerged": false,
+  "published": false,
+  "manifestScope": "Payload before this manifest and separate letter; post-push receipt covers every file",
+  "files": {
+    "posti/petrin-malliluuppi-274/M15/petrin-M15.blend": {
+      "sha256": "206051e1e9caeb03eab9a246f039168de003d9ed324cc04c50b012978c1be7a0",
+      "bytes": 736328
+    },
+    "posti/petrin-malliluuppi-274/M15/build_and_render.py": {
+      "sha256": "85f4192511138114d3abef7417728105fbbce561912836271fbd665656c21d12",
+      "bytes": 24336
+    },
+    "posti/petrin-malliluuppi-274/M15/analyse_round.py": {
+      "sha256": "489271e7724eb97cb47ccbe16052bbe52eb848b15b5beccf131481e2d7cd9820",
+      "bytes": 7441
+    },
+    "posti/petrin-malliluuppi-274/M15/audit_saved_model.py": {
+      "sha256": "170812581eb6661db2488ca857ab4cababcae6070446c82d6ed349eae17bebbd",
+      "bytes": 2825
+    },
+    "posti/petrin-malliluuppi-274/M15/configuration.json": {
+      "sha256": "9675294b18e959e8ed11bff9ea298dcd67788c22239f2982796905012dbc418b",
+      "bytes": 1103
+    },
+    "posti/petrin-malliluuppi-274/M15/authorization.json": {
+      "sha256": "7cd05243eaad3e3b07c23e1d647cce748781b47313156bb69a8b4bcd00371df2",
+      "bytes": 1206
+    },
+    "posti/petrin-malliluuppi-274/M15/geometry-manifest.json": {
+      "sha256": "20f46c3e72cb92bae4e2bf29d915f7328328fd4fb580f4dae33b9e702ab4e1c5",
+      "bytes": 8508
+    },
+    "posti/petrin-malliluuppi-274/M15/saved-model-audit.json": {
+      "sha256": "bb1c046d5ad43ff5c8ca6375ab761f0c9b2224618646f6f2f66702549cee74f6",
+      "bytes": 2385
+    },
+    "posti/petrin-malliluuppi-274/M15/render-complete.json": {
+      "sha256": "87113492cffa92596ac070135b4e73063744efc2961ccfa902059c69141ea925",
+      "bytes": 322
+    },
+    "posti/petrin-malliluuppi-274/M15/round-log.json": {
+      "sha256": "4f096f09b364f41192842866dae96aba66275ba600210ce0682883b57208884d",
+      "bytes": 28469
+    },
+    "posti/petrin-malliluuppi-274/M15/source-licenses.json": {
+      "sha256": "e338b6706a96a49967a35120b25f6a554f67c1aa95488ca00740991deefbe520",
+      "bytes": 1474
+    },
+    "posti/petrin-malliluuppi-274/M15/projection-mesh.json": {
+      "sha256": "298ecd11c78a20cc37ef666ea66fc3139aaf2c676d5c9a471a3ea1439f7d5134",
+      "bytes": 8678
+    },
+    "posti/petrin-malliluuppi-274/M15/projection-mesh-vertices.f32": {
+      "sha256": "26fce03770786d3b593c4a2045e3427eaf33956d6ffb411e69ef9573cb9fc212",
+      "bytes": 488352
+    },
+    "posti/petrin-malliluuppi-274/M15/projection-mesh-triangles.i32": {
+      "sha256": "c53ad86d294fb517cd8f7f2bc216ab492c065b944b62c283576b36fc997d3e09",
+      "bytes": 803424
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/cameras/K1.json": {
+      "sha256": "63167dc490dda2e9700eed15f0832abee2b37136c22b971727623969f6a36e9d",
+      "bytes": 5135
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/cameras/K2.json": {
+      "sha256": "f12079d4cfa1a0fd1ead4396c18dbf62478bc5e02b8e76fe6452244894c0f290",
+      "bytes": 5059
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/cameras/K3.json": {
+      "sha256": "65c47b073234581c21a4480b2739001b73dcc034f2c2bd0f45e5a0e628cf8e31",
+      "bytes": 5013
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/cameras/K4.json": {
+      "sha256": "f2f4c4765367dc1d2b91eed6d77fdd4779431dabe58ad1749219f66b172bfd6b",
+      "bytes": 5252
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/cameras/K5.json": {
+      "sha256": "854a02a3a25f6df4d45cbb978f7e34ee099a4f959f0d1197edb8d4d3819d2a27",
+      "bytes": 7401
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/targets/K1-mask.png": {
+      "sha256": "37af16eb46ff060d8c2b59c96bb1e098de6e7f04c8e119a7e4ccb0272fcab614",
+      "bytes": 4558
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/targets/K1.png": {
+      "sha256": "3be76904100a1cdf4cbb65058ca004f5f3e30f3d6383182ad4e1c7d346623717",
+      "bytes": 2632827
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/targets/K2-mask.png": {
+      "sha256": "1bdedddab334e16b1570af9ef41fb870384f47693422e22c771d7c2dafb5d981",
+      "bytes": 7451
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/targets/K2.png": {
+      "sha256": "c869913a3b4c86cc0f191f02c61fd38c45761d9a7396f3376afe3501bd2c4f52",
+      "bytes": 2846731
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/targets/K3-mask.png": {
+      "sha256": "541a1135f8ba8376dce24223d8cc8b6685e66fd0910a22c446f2d144ab22b55d",
+      "bytes": 5394
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/targets/K3.png": {
+      "sha256": "f73e5fa19f14d4db1f8753d5c2f2c09d9e471b2b68d73d81deadc514cdd5d813",
+      "bytes": 2867976
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/targets/K4-mask.png": {
+      "sha256": "9925cbecf0f25d51bde4c20936d35896711e542c8b4bf5abcc50bfd0398eaac8",
+      "bytes": 5531
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/targets/K4.png": {
+      "sha256": "6ec296c9aaef7018aef9560128d7dee422fcea66913985c3a966db300aa25fe9",
+      "bytes": 2755142
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/targets/K5-mask.png": {
+      "sha256": "f54ea03d6558e636a943f83f561c72a80fc3c80d0bc5bdc7f5d5621f6ea534a3",
+      "bytes": 5285
+    },
+    "posti/petrin-malliluuppi-274/M15/inputs/targets/K5.png": {
+      "sha256": "a695d52f270138fdcaa797cb3f288e1957a1acec121340e93e5034f359f2c134",
+      "bytes": 3588883
+    },
+    "posti/petrin-malliluuppi-274/M15/renders/K1-geometry-alpha.png": {
+      "sha256": "45f39fff97755d2049829ad5e95527cb42481bcc9b623b756cc6555d637cbf4b",
+      "bytes": 442490
+    },
+    "posti/petrin-malliluuppi-274/M15/renders/K1-model.png": {
+      "sha256": "e31547c3082c62483c3a0ecd85a704311a847734a67849a6faff0af43dbd38d8",
+      "bytes": 1194631
+    },
+    "posti/petrin-malliluuppi-274/M15/renders/K2-geometry-alpha.png": {
+      "sha256": "b1377b500db6728452be6d04d23da8a3f9e9ab67e5b46ca850040c7cc00a73df",
+      "bytes": 562995
+    },
+    "posti/petrin-malliluuppi-274/M15/renders/K2-model.png": {
+      "sha256": "ed6876fe1352ca5a673e44ff0c2b0c8906e8b35ba724e42426841f0bff9aeea3",
+      "bytes": 1720191
+    },
+    "posti/petrin-malliluuppi-274/M15/renders/K3-geometry-alpha.png": {
+      "sha256": "fb4e63cf7752ebc3f0948482c5e004d191bd167df3f1c3e30207e172acc08728",
+      "bytes": 497940
+    },
+    "posti/petrin-malliluuppi-274/M15/renders/K3-model.png": {
+      "sha256": "8890621a82dc8d11cf3631b68dedd220b1aec827bca9a31c7347f78eddbee213",
+      "bytes": 1425112
+    },
+    "posti/petrin-malliluuppi-274/M15/renders/K4-geometry-alpha.png": {
+      "sha256": "e29398867d52de4fddeb7849e91be2e1503d6c3130d3bf3547139ca6dfd3ed82",
+      "bytes": 505454
+    },
+    "posti/petrin-malliluuppi-274/M15/renders/K4-model.png": {
+      "sha256": "a40cf7e86235a6d176ecefefbb2d4a8aae8e79140dc02d26f3944c419cf336fb",
+      "bytes": 1443610
+    },
+    "posti/petrin-malliluuppi-274/M15/renders/K5-geometry-alpha.png": {
+      "sha256": "b3c3c27382cfb63de9aa133aa15f1117d537dc816c3f4a963a17d1fdd7569c8e",
+      "bytes": 484829
+    },
+    "posti/petrin-malliluuppi-274/M15/renders/K5-model.png": {
+      "sha256": "581dea9e3687f2d9233eef1cc2d45614e592158e769fce4727ff9cf7aff0013f",
+      "bytes": 1197887
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K1-comparison.png": {
+      "sha256": "b02081572140b905de080b2ed0f7773a59a4d72d0d85d6d4e2e66da602632a9d",
+      "bytes": 685541
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K1-contour-overlay.png": {
+      "sha256": "237a12e01d5d47f1d022e20437d445cb122a983f8b9cb3d02f3a20298e3af8d3",
+      "bytes": 2380387
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K1-model-filled-mask.png": {
+      "sha256": "f13703e1b002e68abb00ec91e6dde0f4c2e049e0f9bae3c735ee7c4c716e106f",
+      "bytes": 4019
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K1-model-visible-mask.png": {
+      "sha256": "a59e71f766eb2876c7a653fec267e7c9cae161bdd4c975f56c6461cb8921b27c",
+      "bytes": 10349
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K2-comparison.png": {
+      "sha256": "81509efdd1a77ead2cc00adffb9370c222a04c923337c7ee7b8bc724f90d5a1f",
+      "bytes": 1790600
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K2-contour-overlay.png": {
+      "sha256": "e794bd342cc1535bfc8b63c28a0f1613c1076d985da7d399d7887519d51720aa",
+      "bytes": 2574684
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K2-model-filled-mask.png": {
+      "sha256": "b3b91209d2bcd641a1e9ea6da0566a6b21f4d570dc38f47bd67b291b3db553fa",
+      "bytes": 6956
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K2-model-visible-mask.png": {
+      "sha256": "c60688de861d55fa2a3c1cb06aabcc3a83b786fe975d53a02f31764675582b9c",
+      "bytes": 26183
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K3-comparison.png": {
+      "sha256": "ef68cad2bfdf3510cbaadd85564bccfbaf948e2a58ff40445db6ec1e7a382c1e",
+      "bytes": 767941
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K3-contour-overlay.png": {
+      "sha256": "78dc30043723656c521ec68e2e1054ef0e74bb32e9614fd235fbdddcc97519f1",
+      "bytes": 2595440
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K3-model-filled-mask.png": {
+      "sha256": "751a8ad263fe4a23dd7690b5259c463a9ca80847b56eaea37cfbf34002c60947",
+      "bytes": 4685
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K3-model-visible-mask.png": {
+      "sha256": "e3bb2fbc35d9599112f6a347c1b628b5865fd5fbd3845c85d1167e177a204d2c",
+      "bytes": 17196
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K4-comparison.png": {
+      "sha256": "a645e7f817db75db315f9e80ce47a048bc1fba0f8d27d449fc061f3b0844d4f1",
+      "bytes": 753326
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K4-contour-overlay.png": {
+      "sha256": "bb4470c2e6a08075a3370cadd82edc741c0d49da4d766017bee3d7197c2a877e",
+      "bytes": 2489605
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K4-model-filled-mask.png": {
+      "sha256": "be4e5d9df8ad1ab7d1e02700be0e7fd12460ea45088a8c94340a592427ec34ca",
+      "bytes": 4942
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K4-model-visible-mask.png": {
+      "sha256": "f5af348b13da62da7542ea1e4045448ebf4f9e2ab99e0a84fe08ea1dda968439",
+      "bytes": 17506
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K5-comparison.png": {
+      "sha256": "d3fbd4eb73ffac02d5c7c6013c540b8a7e9ae32fe1ba7844f39105dd8e38dbfc",
+      "bytes": 926520
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K5-contour-overlay.png": {
+      "sha256": "6f8b7940dbc6de2fabcb44aa7da520b0abfff06abf9d4796c39da1d3b6fdad72",
+      "bytes": 3275682
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K5-model-filled-mask.png": {
+      "sha256": "7a548db7b080bbce52f04aef81e44b0fbe990819a56ab6fd556e68cdd6d112d8",
+      "bytes": 4670
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/K5-model-visible-mask.png": {
+      "sha256": "e020ac2905bbed8884ea382646d30fe898edb55ccdd0842f398a2c6a753dfa77",
+      "bytes": 9988
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/metrics.json": {
+      "sha256": "33d273f03f41022ba7cab2ab563ad24a1b5cb5b3f59040481d4033db544f9ebc",
+      "bytes": 19192
+    },
+    "posti/petrin-malliluuppi-274/M15/qa/petrin-M15-comparison-sheet.png": {
+      "sha256": "de946bdf990fcabce655550a5734d1d0afaa774f4e1fc5e4f1be3ae363b9b3a7",
+      "bytes": 4924639
+    },
+    "posti/petrin-malliluuppi-274/history/M11/petrin-M11.blend": {
+      "sha256": "04735eb8566a7f936799ddec08705a098fe5c9e2130b6f0e0c743d3d38b2c6f7",
+      "bytes": 730201
+    },
+    "posti/petrin-malliluuppi-274/history/M11/configuration.json": {
+      "sha256": "819ec651f2be8763323cc7746e1cc861a3b7201c0b8c565409704e3087ab8077",
+      "bytes": 969
+    },
+    "posti/petrin-malliluuppi-274/history/M11/build_and_render.py": {
+      "sha256": "ed8d4cf2dad38ed26efe51600e2fbee138642dc1045942e569001ee7c466e24a",
+      "bytes": 23122
+    },
+    "posti/petrin-malliluuppi-274/history/M11/geometry-manifest.json": {
+      "sha256": "7b76a748fd10c99dfda5e65a2c3bd1883bf68635ac7b572b5d9f9278c51a1b5e",
+      "bytes": 8507
+    },
+    "posti/petrin-malliluuppi-274/history/M11/saved-model-audit.json": {
+      "sha256": "1e2132b471f3a52feb229d7481fe2ff02f8d7124ce9d35e378393eb06e84a2b8",
+      "bytes": 2379
+    },
+    "posti/petrin-malliluuppi-274/history/M11/round-log.json": {
+      "sha256": "389dfec143107bc08aba9f35aefc6af4cb38bb053a427805b0cf51981e1a8450",
+      "bytes": 28212
+    },
+    "posti/petrin-malliluuppi-274/history/M11/qa/metrics.json": {
+      "sha256": "5fe3994907c900856ff0ab9148a9255c00d426ec360cc07a439d65966a6e3cd5",
+      "bytes": 19201
+    },
+    "posti/petrin-malliluuppi-274/history/M11/qa/petrin-M11-comparison-sheet.png": {
+      "sha256": "af0f2a29cfe953095efd38b1b2c3e16b3b67fa7308352942f1c018b94c779e89",
+      "bytes": 4820730
+    },
+    "posti/petrin-malliluuppi-274/history/M11/inputs/cameras/K1.json": {
+      "sha256": "27dd4ba05653fa1fcf673bf795ede143ed332986668f80612200aa588b58287d",
+      "bytes": 5139
+    },
+    "posti/petrin-malliluuppi-274/history/M11/inputs/cameras/K2.json": {
+      "sha256": "99bfd57b70a00402ee17ddb798145542896923acea8009154bc81d0674bd6951",
+      "bytes": 5053
+    },
+    "posti/petrin-malliluuppi-274/history/M11/inputs/cameras/K3.json": {
+      "sha256": "eb38236af901c6c86ae1ddd53abf8f202acd85f83a513c9422c033ef8343274d",
+      "bytes": 5001
+    },
+    "posti/petrin-malliluuppi-274/history/M11/inputs/cameras/K4.json": {
+      "sha256": "1dcae5c691180cfce2df250507da37fa0877977c015e98164b314141e6380e4e",
+      "bytes": 5263
+    },
+    "posti/petrin-malliluuppi-274/history/M11/inputs/cameras/K5.json": {
+      "sha256": "469e8b5789c07873bf8c97ec5ca6ef9e1df165803f3dbc08a3b965ef0cf4d724",
+      "bytes": 7405
+    },
+    "posti/petrin-malliluuppi-274/history/M12/petrin-M12.blend": {
+      "sha256": "8b22cf4d9324d5b311759d0e0625e88d309f8e404d557e1affe850580cd59b50",
+      "bytes": 730296
+    },
+    "posti/petrin-malliluuppi-274/history/M12/configuration.json": {
+      "sha256": "1ed35d026c65442a58cf81a761fd06cbdc93f69d90f14fc9a85b9c8ae8cb2544",
+      "bytes": 1047
+    },
+    "posti/petrin-malliluuppi-274/history/M12/build_and_render.py": {
+      "sha256": "86e3586134e877701dee7ecae0792901a5350e97b97f3cdcc89286119c56f75c",
+      "bytes": 23932
+    },
+    "posti/petrin-malliluuppi-274/history/M12/geometry-manifest.json": {
+      "sha256": "b3c39e6b0e73ee65a48d1011e225bb04797a23ea258724372b7b4722e5f05fe0",
+      "bytes": 8513
+    },
+    "posti/petrin-malliluuppi-274/history/M12/saved-model-audit.json": {
+      "sha256": "89da1ba1717c6b5556761ff62d33f8594b87f9a3350194926663c56e9edaff23",
+      "bytes": 2379
+    },
+    "posti/petrin-malliluuppi-274/history/M12/round-log.json": {
+      "sha256": "61678c38b3c985f0eaa783c95096ecf1aed6577851795434313e713e53195555",
+      "bytes": 28286
+    },
+    "posti/petrin-malliluuppi-274/history/M12/qa/metrics.json": {
+      "sha256": "2f2c06b6bebf6f4d97e8ada4eff53877133336d20029451c249d0db11626ffd8",
+      "bytes": 19208
+    },
+    "posti/petrin-malliluuppi-274/history/M12/qa/petrin-M12-comparison-sheet.png": {
+      "sha256": "fcb6ed2140eaf498a6f114d3d374e69cef76a88d1b4a590c48f6add998325ebf",
+      "bytes": 4823637
+    },
+    "posti/petrin-malliluuppi-274/history/M12/inputs/cameras/K1.json": {
+      "sha256": "26ba011bfced36da71e41866824f6536336775b267856f6520f5fda7615dca07",
+      "bytes": 5131
+    },
+    "posti/petrin-malliluuppi-274/history/M12/inputs/cameras/K2.json": {
+      "sha256": "cb6a665badef32fbd584e39f1bfb9557b0b2338f6a74218d6976ae00fd45a5f9",
+      "bytes": 5059
+    },
+    "posti/petrin-malliluuppi-274/history/M12/inputs/cameras/K3.json": {
+      "sha256": "5dee7e780ee4e3381e3f220f3de8409ca3833b8268d1c9a18f23c12672f1eccc",
+      "bytes": 5015
+    },
+    "posti/petrin-malliluuppi-274/history/M12/inputs/cameras/K4.json": {
+      "sha256": "f3093857048e48ed7a6f30917fda5725febed29d85333555af67d3111cf19346",
+      "bytes": 5252
+    },
+    "posti/petrin-malliluuppi-274/history/M12/inputs/cameras/K5.json": {
+      "sha256": "efdaf0cd2fb5f0143d714781be9fa95dab5d61d2198b61e0848fc448fb6e81ab",
+      "bytes": 7404
+    },
+    "posti/petrin-malliluuppi-274/history/M13/petrin-M13.blend": {
+      "sha256": "d6b52c5e600531b0fd567bdab8b90cdaee49a8b2ab6f188eab3adbd3783d9c4d",
+      "bytes": 736353
+    },
+    "posti/petrin-malliluuppi-274/history/M13/configuration.json": {
+      "sha256": "c2b161dceecd606e858fab5dbff057091472defe6e9710ba25891227c4cd42ef",
+      "bytes": 1056
+    },
+    "posti/petrin-malliluuppi-274/history/M13/build_and_render.py": {
+      "sha256": "8a3eceada30c107f03bf91863d3814b52553c74b8d0bbbbcf9fba8a17e9a667e",
+      "bytes": 23932
+    },
+    "posti/petrin-malliluuppi-274/history/M13/geometry-manifest.json": {
+      "sha256": "ac5b0aa45238b88f2f19fb1533a33e4cb338018c900358a216b3309fd7e534a3",
+      "bytes": 8538
+    },
+    "posti/petrin-malliluuppi-274/history/M13/saved-model-audit.json": {
+      "sha256": "b29ff33125b9685d8c79a6c20384e1ad907746a9abc8a93c2c9d553842264b45",
+      "bytes": 2384
+    },
+    "posti/petrin-malliluuppi-274/history/M13/round-log.json": {
+      "sha256": "5bad3de95c55d3ea0a96066744552411b9e9f53a4a7fb1192568796a9d411ecd",
+      "bytes": 28623
+    },
+    "posti/petrin-malliluuppi-274/history/M13/qa/metrics.json": {
+      "sha256": "8fc9513ac9ad1ea82ab807a14a2c8c4378b0b14a6d13d0a0e11ab90e5ba9b115",
+      "bytes": 19219
+    },
+    "posti/petrin-malliluuppi-274/history/M13/qa/petrin-M13-comparison-sheet.png": {
+      "sha256": "dedde8ba881f048cd3bac2e9a41ef9aa4c521cc82bd16fc440437cfccbe108da",
+      "bytes": 4925481
+    },
+    "posti/petrin-malliluuppi-274/history/M13/inputs/cameras/K1.json": {
+      "sha256": "c7711e03cfe6d3762d4e20e95cfbd5171a17c803b98b2d61122f0bd95e97f7c9",
+      "bytes": 5132
+    },
+    "posti/petrin-malliluuppi-274/history/M13/inputs/cameras/K2.json": {
+      "sha256": "bc08caa9b4f1d2abf6e6711178c778ffcfa026e404387287ba7864fef2722303",
+      "bytes": 5059
+    },
+    "posti/petrin-malliluuppi-274/history/M13/inputs/cameras/K3.json": {
+      "sha256": "1bb262c75211f890ea8e067f75c24eff7f2e6eb486dccba526778bb91681ebd4",
+      "bytes": 5015
+    },
+    "posti/petrin-malliluuppi-274/history/M13/inputs/cameras/K4.json": {
+      "sha256": "f9a41bad9fe9322051ea2d921f1cbaa3ee1b16541197c4c16c867d7b9a190af1",
+      "bytes": 5251
+    },
+    "posti/petrin-malliluuppi-274/history/M13/inputs/cameras/K5.json": {
+      "sha256": "3186fcce083583700496f11a38edb2a87eb4dbbb86242c144e18f584f1a8ea0f",
+      "bytes": 7403
+    },
+    "posti/petrin-malliluuppi-274/history/M13/qa/independent-review.json": {
+      "sha256": "9e028edfdfa989c941543e3fc71272e8e00460c608705c162d37d0c29178987b",
+      "bytes": 11867
+    },
+    "posti/petrin-malliluuppi-274/history/M14/petrin-M14.blend": {
+      "sha256": "b7d5c1ad7840801d368352755fcf9b1da96fdadfc1dd9a023a134bec8ccfebd8",
+      "bytes": 736318
+    },
+    "posti/petrin-malliluuppi-274/history/M14/configuration.json": {
+      "sha256": "c2b161dceecd606e858fab5dbff057091472defe6e9710ba25891227c4cd42ef",
+      "bytes": 1056
+    },
+    "posti/petrin-malliluuppi-274/history/M14/build_and_render.py": {
+      "sha256": "89048f925182efe4692a85cfe1866c30894032e6eaaffe7d9762a6169bfe62f9",
+      "bytes": 23932
+    },
+    "posti/petrin-malliluuppi-274/history/M14/geometry-manifest.json": {
+      "sha256": "63dabb04d5c6b3b14364b069754683d40986b095c95616ea77ba22fe51ac3ad7",
+      "bytes": 8544
+    },
+    "posti/petrin-malliluuppi-274/history/M14/saved-model-audit.json": {
+      "sha256": "0d5f4ed610e37ea2abc98959438c709fa437e4811aecce728bbd52d5d24fcf9c",
+      "bytes": 2386
+    },
+    "posti/petrin-malliluuppi-274/history/M14/round-log.json": {
+      "sha256": "cc47fd0b932ab70956236dec472bb665d1a7058f81d8f2c09ce20b884656f7c0",
+      "bytes": 28308
+    },
+    "posti/petrin-malliluuppi-274/history/M14/qa/metrics.json": {
+      "sha256": "c6e09b2f5542081d5c7da21da7ee5a465347cf4699f1427b2f986b218a458b81",
+      "bytes": 19226
+    },
+    "posti/petrin-malliluuppi-274/history/M14/qa/petrin-M14-comparison-sheet.png": {
+      "sha256": "58b99d2f4841e47a7989b6487a404fcb3d01bc062051ff5201b3a3e9e5b3a2ee",
+      "bytes": 4924422
+    },
+    "posti/petrin-malliluuppi-274/history/M14/inputs/cameras/K1.json": {
+      "sha256": "f8f7287e2ec43f18894d62574856286cd1cdf7fa1346a75c6fa29f9296c63996",
+      "bytes": 5136
+    },
+    "posti/petrin-malliluuppi-274/history/M14/inputs/cameras/K2.json": {
+      "sha256": "3ae08fdd46a317e1924b1757b3ad31dd03a61668d770f244796fee718f6d9af5",
+      "bytes": 5059
+    },
+    "posti/petrin-malliluuppi-274/history/M14/inputs/cameras/K3.json": {
+      "sha256": "6d6922c822e91418ecbf8cfd5eacfaafeb4e14a4b9127fd5109e9b2c31b26799",
+      "bytes": 5015
+    },
+    "posti/petrin-malliluuppi-274/history/M14/inputs/cameras/K4.json": {
+      "sha256": "ab7c39b7c704a06218622d48bc9caa29265e33603f549f38ab287be295543859",
+      "bytes": 5251
+    },
+    "posti/petrin-malliluuppi-274/history/M14/inputs/cameras/K5.json": {
+      "sha256": "b2911d026739db951d7983673ae12fb6c8905d644a7746d1efe87828fbb13514",
+      "bytes": 7403
+    },
+    "posti/petrin-malliluuppi-274/history/M09-basis-reference.json": {
+      "sha256": "1aa2eee3965759d1512da119abd3f971441dd7fb1bde35bec9d4138696f89c39",
+      "bytes": 21246
+    },
+    "posti/petrin-malliluuppi-274/authorization.json": {
+      "sha256": "7cd05243eaad3e3b07c23e1d647cce748781b47313156bb69a8b4bcd00371df2",
+      "bytes": 1206
+    },
+    "posti/petrin-malliluuppi-274/loop-journal.json": {
+      "sha256": "dcd77fc3ff309f9a14c7c7d97a1a2a49095a50d2ca63d325f3d9ac99259e57dc",
+      "bytes": 180332
+    },
+    "posti/petrin-malliluuppi-274/final-numerical-verification.json": {
+      "sha256": "29073d8cc37b4367e10ce4eccb005f0e3d388c472634c4932b8b0e99b569cc2c",
+      "bytes": 14808
+    },
+    "posti/petrin-malliluuppi-274/final-independent-review.json": {
+      "sha256": "fa71f9b3e1b610bc95b249a2b37fd0fbdca27f77f33ac8f7645042e8dd4508e8",
+      "bytes": 30063
+    },
+    "posti/petrin-malliluuppi-274/optimization/M12-configuration.json": {
+      "sha256": "819ec651f2be8763323cc7746e1cc861a3b7201c0b8c565409704e3087ab8077",
+      "bytes": 969
+    },
+    "posti/petrin-malliluuppi-274/optimization/M13-configuration.json": {
+      "sha256": "c2b161dceecd606e858fab5dbff057091472defe6e9710ba25891227c4cd42ef",
+      "bytes": 1056
+    },
+    "posti/petrin-malliluuppi-274/optimization/M14-configuration.json": {
+      "sha256": "c2b161dceecd606e858fab5dbff057091472defe6e9710ba25891227c4cd42ef",
+      "bytes": 1056
+    },
+    "posti/petrin-malliluuppi-274/optimization/M15-configuration.json": {
+      "sha256": "9675294b18e959e8ed11bff9ea298dcd67788c22239f2982796905012dbc418b",
+      "bytes": 1103
+    },
+    "posti/petrin-malliluuppi-274/optimization/M12-actual-mesh-camera-fit.json": {
+      "sha256": "1c306a8ffbc3741e72ca06b075d4bd9e03e9464003b097e6ae4614176dba2b4b",
+      "bytes": 3769
+    },
+    "posti/petrin-malliluuppi-274/optimization/M13-actual-mesh-camera-fit.json": {
+      "sha256": "b9539b5e9001a66ae32f1e5a1f35ccd5fdd6e22103cead94ed299ad0e2360911",
+      "bytes": 4909
+    },
+    "posti/petrin-malliluuppi-274/optimization/M14-actual-mesh-camera-fit.json": {
+      "sha256": "b845bd1b255902a6a02dedf61a47ec59094f66d4bf35244e8c3e042fba627a5c",
+      "bytes": 3793
+    },
+    "posti/petrin-malliluuppi-274/optimization/M15-actual-mesh-camera-fit.json": {
+      "sha256": "9f822e7f8d75e6e2e696c4704be89ba0fefff3d4eb5af313d5f8e25df860eab6",
+      "bytes": 5455
+    },
+    "posti/petrin-malliluuppi-274/optimization/M11-software-projection-validation.json": {
+      "sha256": "fe4e328565aa56adb611535e271b5c1f56252990c53a126dfa2d81b5829b72b7",
+      "bytes": 3204
+    },
+    "posti/petrin-malliluuppi-274/optimization/M12-software-projection-validation.json": {
+      "sha256": "06848c36971f360d0b51c91f71bfa9aeeadf195d14c6ee429902b15236bf5af3",
+      "bytes": 3203
+    },
+    "posti/petrin-malliluuppi-274/optimization/M13-software-projection-validation.json": {
+      "sha256": "2a6eec5d4a0a2965011424d8c8a58fa26af08d627626507f41b95291f4ca2a60",
+      "bytes": 3206
+    },
+    "posti/petrin-malliluuppi-274/optimization/M14-software-projection-validation.json": {
+      "sha256": "b88b24373ed1e5de7e3d23660b821b30a061880026c8e7d33c7078464dc95401",
+      "bytes": 3202
+    },
+    "posti/petrin-malliluuppi-274/optimization/M15-software-projection-validation.json": {
+      "sha256": "d5d9cbea51f7c9850650528f83d1e85a0476661b89e5cebab92281cde2f21fec",
+      "bytes": 3201
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M12/K1.json": {
+      "sha256": "184a7d83e49699d515a0ee695b3a650db7bf85d3ed0b4bc53444997b889c168e",
+      "bytes": 5131
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M12/K2.json": {
+      "sha256": "72e4d9e603ceab2555f60d5f822d98c6f808446e772504152892813769e57134",
+      "bytes": 5059
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M12/K3.json": {
+      "sha256": "28db5b000e1b52a54781daba839c626c3892ff8505cc1b0be595a378db251875",
+      "bytes": 5015
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M12/K4.json": {
+      "sha256": "db63119ea04a1ce20f83d189ca12342f687f99bbe56e95a03d26299c05c1e1ff",
+      "bytes": 5252
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M12/K5.json": {
+      "sha256": "cf4f1050554a4d5f9cf84a69ee5b2e63f023af51813c0fd5d9f9b5f1db0c9e67",
+      "bytes": 7404
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M13/K1.json": {
+      "sha256": "6c9a92c2664c34c6e4839b77f00a430ad0d26fa6d935528cc5cbe8e4ad0c6394",
+      "bytes": 5132
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M13/K2.json": {
+      "sha256": "139e58cbeb73922e13cd0f1c2676add19b7b35c177ab816b5ecd5091167b8c5c",
+      "bytes": 5059
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M13/K3.json": {
+      "sha256": "e776801041b07def53e2d27c52449ada50872a83d0c4c8f22b3080022de2d46f",
+      "bytes": 5015
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M13/K4.json": {
+      "sha256": "079e67e10ae0467752fd0ef25331b305f4927d84676072d7901b81ebadd59691",
+      "bytes": 5251
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M13/K5.json": {
+      "sha256": "a1c80423a5befd8c8f29504d00ab7bd772138ccb4dbd1b61126d3d5d5a551f72",
+      "bytes": 7403
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M14/K1.json": {
+      "sha256": "b3c71bc180b86588132c92b35d9056ba9f0bb7c8918dd06a6617381a784b81e2",
+      "bytes": 5136
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M14/K2.json": {
+      "sha256": "bc08caa9b4f1d2abf6e6711178c778ffcfa026e404387287ba7864fef2722303",
+      "bytes": 5059
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M14/K3.json": {
+      "sha256": "1bb262c75211f890ea8e067f75c24eff7f2e6eb486dccba526778bb91681ebd4",
+      "bytes": 5015
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M14/K4.json": {
+      "sha256": "252c3bd49381ec28bd89f3e020340445a5a88defdbd1249ad56f2e6b0fcb0178",
+      "bytes": 5251
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M14/K5.json": {
+      "sha256": "3186fcce083583700496f11a38edb2a87eb4dbbb86242c144e18f584f1a8ea0f",
+      "bytes": 7403
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M15/K1.json": {
+      "sha256": "43d9b7e7a736b599471b822bdaf3776e1d9651910974c5c42088e6c884526243",
+      "bytes": 5135
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M15/K2.json": {
+      "sha256": "d1ee544aa3777b89e0c5f1c4fb0a17b1e73be51b1467cc0af0c22cde94f65faa",
+      "bytes": 5059
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M15/K3.json": {
+      "sha256": "f096be7b161527c2848d37c159a80cf367702ad9f83f06233978a539ab481b35",
+      "bytes": 5013
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M15/K4.json": {
+      "sha256": "1dfee8fa929741ae99cb732cc4e92c7270434fb8e047b9c25ac47b6d94d1f801",
+      "bytes": 5252
+    },
+    "posti/petrin-malliluuppi-274/optimization/optimized-cameras/M15/K5.json": {
+      "sha256": "9ab7736b193222a5473faffe5f60809d22f299272413db055b021e9530a022ee",
+      "bytes": 7401
+    },
+    "posti/petrin-malliluuppi-274/scripts/._complete274.py": {
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f",
+      "bytes": 4096
+    },
+    "posti/petrin-malliluuppi-274/scripts/._fit_actual_mesh.py": {
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f",
+      "bytes": 4096
+    },
+    "posti/petrin-malliluuppi-274/scripts/._mailbox274.py": {
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f",
+      "bytes": 4096
+    },
+    "posti/petrin-malliluuppi-274/scripts/._package274.py": {
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f",
+      "bytes": 4096
+    },
+    "posti/petrin-malliluuppi-274/scripts/._prepare274.py": {
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f",
+      "bytes": 4096
+    },
+    "posti/petrin-malliluuppi-274/scripts/._project_mesh.cpp": {
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f",
+      "bytes": 4096
+    },
+    "posti/petrin-malliluuppi-274/scripts/._record274.py": {
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f",
+      "bytes": 4096
+    },
+    "posti/petrin-malliluuppi-274/scripts/._run274.py": {
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f",
+      "bytes": 4096
+    },
+    "posti/petrin-malliluuppi-274/scripts/._verify274.py": {
+      "sha256": "78fee7a91b5e89ae2a0a644f4ba09dd0a51a1ee3faa354e1d376ca16ed42a05f",
+      "bytes": 4096
+    },
+    "posti/petrin-malliluuppi-274/scripts/complete274.py": {
+      "sha256": "07dcf30c670fa149831f304455c13676c0966a5ba975dd844dced642e7fb671b",
+      "bytes": 11082
+    },
+    "posti/petrin-malliluuppi-274/scripts/fit_actual_mesh.py": {
+      "sha256": "e132d12e80caf818ee5a48dae418c89777b5b44ce23aff13413e9ed28cded270",
+      "bytes": 10610
+    },
+    "posti/petrin-malliluuppi-274/scripts/mailbox274.py": {
+      "sha256": "32aa2d91dfc2d154a075a5fb56e9e0f33850c9044be6360c7109f83d1e87fb5a",
+      "bytes": 2799
+    },
+    "posti/petrin-malliluuppi-274/scripts/package274.py": {
+      "sha256": "a3d2e6b86685828c5d9fb8377a1b09e9647d5ffc075d221147f94d4d3b8aa944",
+      "bytes": 16418
+    },
+    "posti/petrin-malliluuppi-274/scripts/prepare274.py": {
+      "sha256": "715dc8aacec5ca2ddf766a5d19838e8715b8359882903c5bd890eda2b91af3b5",
+      "bytes": 7244
+    },
+    "posti/petrin-malliluuppi-274/scripts/project_mesh.cpp": {
+      "sha256": "d5707bb7ee8253213aaa23eb2f391cc6fa0dc670ec2a87201e044e395283ad25",
+      "bytes": 2156
+    },
+    "posti/petrin-malliluuppi-274/scripts/record274.py": {
+      "sha256": "037d10ecf5ae8631ef18e2eb02b7f550cdc68937837cca74701bf688649c87c6",
+      "bytes": 4629
+    },
+    "posti/petrin-malliluuppi-274/scripts/run274.py": {
+      "sha256": "f4578b00579c61450ea2243e5f6cedd90f9465b3a6dd6130a610668d15eb219b",
+      "bytes": 1436
+    },
+    "posti/petrin-malliluuppi-274/scripts/verify274.py": {
+      "sha256": "aeabede55681c90630300b544d7dd283105e3a6edea28e96848b8a793939c4b0",
+      "bytes": 4461
+    },
+    "posti/petrin-malliluuppi-274/K5-mask-v2-PT-acceptance-272.json": {
+      "sha256": "b14c078675c5c4217b87b35a85c3776df1a5e575a7810905706730451743e05c",
+      "bytes": 668
+    },
+    "posti/petrin-malliluuppi-274/sources/fable-codex-petrin-M09-palaute-20261015.md": {
+      "sha256": "434f910390018535941a0e12d690f6f336a1731313e751c4484433597431856e",
+      "bytes": 1260
+    },
+    "posti/petrin-malliluuppi-274/source-licenses.json": {
+      "sha256": "e338b6706a96a49967a35120b25f6a554f67c1aa95488ca00740991deefbe520",
+      "bytes": 1474
+    },
+    "posti/petrin-malliluuppi-274/README-FI.md": {
+      "sha256": "91b910526384990b561273e4afd3abd2c29017c805932a40c804b73306a9662d",
+      "bytes": 7971
+    }
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "round": "M15",
+  "vertices": 40696,
+  "triangles": 66952,
+  "source": "actual same tower objects used for Blender rendering, world coordinates",
+  "parts": [
+    {
+      "name": "LOWER_FLOOR_Z20",
+      "role": "lower_floor",
+      "firstVertex": 0,
+      "vertices": 128,
+      "firstTriangle": 0,
+      "triangles": 64
+    },
+    {
+      "name": "Lower gallery lattice railing",
+      "role": "body",
+      "firstVertex": 128,
+      "vertices": 2784,
+      "firstTriangle": 64,
+      "triangles": 4672
+    },
+    {
+      "name": "Lower glazed ring approximation_spandrel",
+      "role": "body",
+      "firstVertex": 2912,
+      "vertices": 32,
+      "firstTriangle": 4736,
+      "triangles": 16
+    },
+    {
+      "name": "Lower glazed ring approximation_glazing",
+      "role": "body",
+      "firstVertex": 2944,
+      "vertices": 32,
+      "firstTriangle": 4752,
+      "triangles": 16
+    },
+    {
+      "name": "Lower glazed ring approximation_frames",
+      "role": "body",
+      "firstVertex": 2976,
+      "vertices": 864,
+      "firstTriangle": 4768,
+      "triangles": 1472
+    },
+    {
+      "name": "Lower shallow roof",
+      "role": "body",
+      "firstVertex": 3840,
+      "vertices": 40,
+      "firstTriangle": 6240,
+      "triangles": 22
+    },
+    {
+      "name": "UPPER_FLOOR_Z51",
+      "role": "upper_floor",
+      "firstVertex": 3880,
+      "vertices": 128,
+      "firstTriangle": 6262,
+      "triangles": 64
+    },
+    {
+      "name": "Upper lantern_spandrel",
+      "role": "body",
+      "firstVertex": 4008,
+      "vertices": 32,
+      "firstTriangle": 6326,
+      "triangles": 16
+    },
+    {
+      "name": "Upper lantern_glazing",
+      "role": "body",
+      "firstVertex": 4040,
+      "vertices": 32,
+      "firstTriangle": 6342,
+      "triangles": 16
+    },
+    {
+      "name": "Upper lantern_frames",
+      "role": "body",
+      "firstVertex": 4072,
+      "vertices": 864,
+      "firstTriangle": 6358,
+      "triangles": 1472
+    },
+    {
+      "name": "BODY_ROOF_TOP_Z58_7",
+      "role": "body_top",
+      "firstVertex": 4936,
+      "vertices": 40,
+      "firstTriangle": 7830,
+      "triangles": 22
+    },
+    {
+      "name": "Upper roof radial seams",
+      "role": "body",
+      "firstVertex": 4976,
+      "vertices": 96,
+      "firstTriangle": 7852,
+      "triangles": 160
+    },
+    {
+      "name": "Upper cabin tapered underside",
+      "role": "body",
+      "firstVertex": 5072,
+      "vertices": 32,
+      "firstTriangle": 8012,
+      "triangles": 16
+    },
+    {
+      "name": "Eight structural legs",
+      "role": "body",
+      "firstVertex": 5104,
+      "vertices": 896,
+      "firstTriangle": 8028,
+      "triangles": 1568
+    },
+    {
+      "name": "Eight ground support shoes",
+      "role": "body",
+      "firstVertex": 6000,
+      "vertices": 64,
+      "firstTriangle": 9596,
+      "triangles": 96
+    },
+    {
+      "name": "Eight-sided diagonal lattice",
+      "role": "body",
+      "firstVertex": 6064,
+      "vertices": 4352,
+      "firstTriangle": 9692,
+      "triangles": 7616
+    },
+    {
+      "name": "Horizontal structural hoops",
+      "role": "body",
+      "firstVertex": 10416,
+      "vertices": 2304,
+      "firstTriangle": 17308,
+      "triangles": 4032
+    },
+    {
+      "name": "Octagonal central core",
+      "role": "body",
+      "firstVertex": 12720,
+      "vertices": 40,
+      "firstTriangle": 21340,
+      "triangles": 22
+    },
+    {
+      "name": "Spiral stair treads 0",
+      "role": "body",
+      "firstVertex": 12760,
+      "vertices": 2392,
+      "firstTriangle": 21362,
+      "triangles": 3588
+    },
+    {
+      "name": "Spiral handrail 0",
+      "role": "body",
+      "firstVertex": 15152,
+      "vertices": 4488,
+      "firstTriangle": 24950,
+      "triangles": 7480
+    },
+    {
+      "name": "Spiral stair treads 1",
+      "role": "body",
+      "firstVertex": 19640,
+      "vertices": 2392,
+      "firstTriangle": 32430,
+      "triangles": 3588
+    },
+    {
+      "name": "Spiral handrail 1",
+      "role": "body",
+      "firstVertex": 22032,
+      "vertices": 4488,
+      "firstTriangle": 36018,
+      "triangles": 7480
+    },
+    {
+      "name": "Cream hall walls with physical openings",
+      "role": "body",
+      "firstVertex": 26520,
+      "vertices": 632,
+      "firstTriangle": 43498,
+      "triangles": 948
+    },
+    {
+      "name": "Physical window and doorway trim",
+      "role": "body",
+      "firstVertex": 27152,
+      "vertices": 768,
+      "firstTriangle": 44446,
+      "triangles": 1152
+    },
+    {
+      "name": "Deep window and doorway recesses",
+      "role": "body",
+      "firstVertex": 27920,
+      "vertices": 192,
+      "firstTriangle": 45598,
+      "triangles": 288
+    },
+    {
+      "name": "Recessed window glass",
+      "role": "body",
+      "firstVertex": 28112,
+      "vertices": 184,
+      "firstTriangle": 45886,
+      "triangles": 276
+    },
+    {
+      "name": "Window mullions",
+      "role": "body",
+      "firstVertex": 28296,
+      "vertices": 576,
+      "firstTriangle": 46162,
+      "triangles": 864
+    },
+    {
+      "name": "Window transom",
+      "role": "body",
+      "firstVertex": 28872,
+      "vertices": 192,
+      "firstTriangle": 47026,
+      "triangles": 288
+    },
+    {
+      "name": "Blank southern information boards",
+      "role": "body",
+      "firstVertex": 29064,
+      "vertices": 16,
+      "firstTriangle": 47314,
+      "triangles": 24
+    },
+    {
+      "name": "Southern green lanterns",
+      "role": "body",
+      "firstVertex": 29080,
+      "vertices": 32,
+      "firstTriangle": 47338,
+      "triangles": 56
+    },
+    {
+      "name": "Lantern brackets",
+      "role": "body",
+      "firstVertex": 29112,
+      "vertices": 32,
+      "firstTriangle": 47394,
+      "triangles": 56
+    },
+    {
+      "name": "Hall shallow octagonal roof",
+      "role": "body",
+      "firstVertex": 29144,
+      "vertices": 40,
+      "firstTriangle": 47450,
+      "triangles": 22
+    },
+    {
+      "name": "Hall roof standing seams",
+      "role": "body",
+      "firstVertex": 29184,
+      "vertices": 96,
+      "firstTriangle": 47472,
+      "triangles": 160
+    },
+    {
+      "name": "Hall decorative arches",
+      "role": "body",
+      "firstVertex": 29280,
+      "vertices": 3072,
+      "firstTriangle": 47632,
+      "triangles": 5376
+    },
+    {
+      "name": "Hall horizontal facade mouldings",
+      "role": "body",
+      "firstVertex": 32352,
+      "vertices": 192,
+      "firstTriangle": 53008,
+      "triangles": 288
+    },
+    {
+      "name": "Hall corner pilasters",
+      "role": "body",
+      "firstVertex": 32544,
+      "vertices": 128,
+      "firstTriangle": 53296,
+      "triangles": 192
+    },
+    {
+      "name": "Raised curved opening caps",
+      "role": "body",
+      "firstVertex": 32672,
+      "vertices": 1920,
+      "firstTriangle": 53488,
+      "triangles": 3200
+    },
+    {
+      "name": "Roof-level arched leg joints",
+      "role": "body",
+      "firstVertex": 34592,
+      "vertices": 3072,
+      "firstTriangle": 56688,
+      "triangles": 5376
+    },
+    {
+      "name": "Cornice vertical dentils",
+      "role": "body",
+      "firstVertex": 37664,
+      "vertices": 672,
+      "firstTriangle": 62064,
+      "triangles": 1120
+    },
+    {
+      "name": "Double entry doors physical center stile",
+      "role": "body",
+      "firstVertex": 38336,
+      "vertices": 8,
+      "firstTriangle": 63184,
+      "triangles": 12
+    },
+    {
+      "name": "Door handles",
+      "role": "body",
+      "firstVertex": 38344,
+      "vertices": 24,
+      "firstTriangle": 63196,
+      "triangles": 40
+    },
+    {
+      "name": "Entry threshold",
+      "role": "body",
+      "firstVertex": 38368,
+      "vertices": 16,
+      "firstTriangle": 63236,
+      "triangles": 24
+    },
+    {
+      "name": "Estimated antenna mast",
+      "role": "mast",
+      "firstVertex": 38384,
+      "vertices": 952,
+      "firstTriangle": 63260,
+      "triangles": 1588
+    },
+    {
+      "name": "Lower gallery deep structural brackets",
+      "role": "body",
+      "firstVertex": 39336,
+      "vertices": 128,
+      "firstTriangle": 64848,
+      "triangles": 224
+    },
+    {
+      "name": "Lower gallery side bracket ties",
+      "role": "body",
+      "firstVertex": 39464,
+      "vertices": 128,
+      "firstTriangle": 65072,
+      "triangles": 224
+    },
+    {
+      "name": "Estimated red window shutters",
+      "role": "body",
+      "firstVertex": 39592,
+      "vertices": 368,
+      "firstTriangle": 65296,
+      "triangles": 552
+    },
+    {
+      "name": "Shutter metal hinges",
+      "role": "body",
+      "firstVertex": 39960,
+      "vertices": 736,
+      "firstTriangle": 65848,
+      "triangles": 1104
+    }
+  ]
+}

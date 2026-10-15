@@ -1,0 +1,40 @@
+{
+  "taskNumber": 274,
+  "sourcePath": "posti/fable-codex-petrin-M09-palaute-20261015.md",
+  "sourceCommit": "e8a797c5e3aaf2360c8bbd39db375a7a1fdf3fde",
+  "sourceBlob": "b93049955540c0e6bf5ff853eb66d58b54be9840",
+  "sourceSHA256": "434f910390018535941a0e12d690f6f336a1731313e751c4484433597431856e",
+  "sourceReadInFull": true,
+  "startedAt": "2026-10-15T12:49:14.024244+00:00",
+  "previousDeliveredTask273Commit": "43fd25c05e83b47a07b34a767def3caf223e4274",
+  "parentModelRound": "M09",
+  "parentModelSHA256": "139f4c4f65034b22d5ceb5126a62c3a58466c6d30024f58049ccf2bbe74f9384",
+  "M09PTAcceptedAsBasisOnly": true,
+  "modelFinalAcceptanceVerified": false,
+  "authorizedRounds": [
+    "M11",
+    "M12",
+    "M13",
+    "M14",
+    "M15"
+  ],
+  "maximumAdditionalRounds": 5,
+  "previousRoundsCompleted": 10,
+  "maximumTotalRounds": 15,
+  "stopAtAllFiveIoUThresholdsOrFiveAdditionalRounds": true,
+  "cameraSilhouetteOptimizationAuthorized": true,
+  "bindingHeightsM": [
+    58.7,
+    20,
+    51
+  ],
+  "mastUncertainRangeRetainedM": [
+    66.5,
+    71
+  ],
+  "newAIImageGenerationsAllowed": false,
+  "R2Allowed": false,
+  "gameIntegrationAllowed": false,
+  "mainMergeAllowed": false,
+  "productionOnNAS": true
+}

@@ -1,0 +1,16 @@
+{
+  "taskNumber": 272,
+  "sourcePath": "posti/fable-codex-petrin-M01-palaute-20261015.md",
+  "sourceCommit": "d76d2504ef01584adf5ed6fd7a8b820c77df3840",
+  "sourceBlob": "d7a51d3d4e1f39cec063e530e9ce1eb445601a24",
+  "sourceSHA256": "aa96e6e131f913a7cd7106ddf65a38bb92d712b8b33214f5c0ae391155f254f0",
+  "sourceReadInFull": true,
+  "PTCorrectedMaskAcceptanceVerified": true,
+  "maskVersion": "K5-v2",
+  "maskSHA256": "f54ea03d6558e636a943f83f561c72a80fc3c80d0bc5bdc7f5d5621f6ea534a3",
+  "addedWhitePixels": 1544,
+  "removedWhitePixels": 0,
+  "M01AcceptedAsIntermediate": true,
+  "modelFinalAcceptanceVerified": false,
+  "recordedAt": "2026-10-15T11:56:11.287475+00:00"
+}

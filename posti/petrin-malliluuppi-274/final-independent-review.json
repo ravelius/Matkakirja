@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0",
+  "reviewType": "fresh-independent-visual-final-review",
+  "model": "M15",
+  "status": "completed",
+  "independence": {
+    "participatedInProduction": false,
+    "priorReviewsRead": false,
+    "modelSourceCodeRead": false,
+    "metricTextWasVisibleInComparisonImages": true,
+    "blindedToMetrics": false,
+    "metricsFileReadAtThisPoint": true,
+    "metricsIndependentlyRecomputed": false,
+    "otherModelVersionsOpened": false,
+    "rawMaskImagesInspected": false,
+    "sceneLightingConfigurationRead": false,
+    "cameraFilesRead": false,
+    "reviewedOnlyRequestedM15ImagesAndProductionMetrics": true,
+    "topThreeObservationsWrittenToThisFileBeforeMetricsFileRead": true,
+    "topThreeObservationsPreservedVerbatimAfterMetricsRead": true,
+    "sequence": [
+      "Katsottiin M15:n vertailuarkki ja kaikki viisi erillistä vertailukuvaa.",
+      "Katsottiin K1–K5:n kaikki tavoite- ja mallikuvat natiiviresoluutiolla.",
+      "Kirjoitettiin tämän tiedoston alustava versio, jossa kolme suurinta näkyvää eroa olivat jo järjestyksessä.",
+      "Luettiin vasta tämän jälkeen M15/qa/metrics.json.",
+      "Täydennettiin loppuarvio tuotannon luvuilla ja rajoituksilla muuttamatta kolmea ennakkohavaintoa."
+    ],
+    "noBlindingClaim": "Vertailuarkkien IoU- ja diagnostiikkatekstit olivat näkyvissä ennen mittaritiedoston lukua. Arvio ei ole mittareihin nähden sokkoutettu.",
+    "independentlyVerifiedInThisReview": "Tarkastettujen tavoite- ja renderkuvien SHA256-tunnisteet laskettiin tiedostojen version lukitsemiseksi ja ne vastaavat mittaritiedoston kuvatunnisteita. IoU-, DeltaE-, kamera- tai fyysisen korkeuden mittareita ei laskettu uudelleen.",
+    "reviewSnapshotImageHashesMatchProductionMetricReferences": true
+  },
+  "topThreeVisualDifferencesBeforeMetricsRead": [
+    {
+      "rank": 1,
+      "feature": "Alemman näköalatasanteen sijainti, syvyys ja kaiteen kuvio",
+      "observations": "M15:n alempi tasanne näkyy tavoitteita alempana etenkin K2–K5:ssä. Mallin ulkokaide on matala ja avoin risti-/vinoristikkokaide; tavoitteissa tasanne on syvempi ja sen yhteydessä on selvä ikkunallinen sisäosa sekä tiheämpi vaalea koristeverkko. Ero muuttaa pitkän ylävarren ja alemman levenevän osan keskinäistä rytmiä.",
+      "strongestViews": [
+        "K2",
+        "K3",
+        "K4",
+        "K5"
+      ],
+      "constraint": "Tämä on näkyvä ero generoituun tavoitteeseen. Sitovaa 20 m:n tasannekorkeutta tai 58,7/51 m:n korkeuksia ei saa muuttaa tavoitekuvien tasannevirheeseen sopiviksi. Geometrisen oikeellisuuden varmennusta ei voi johtaa tästä erosta."
+    },
+    {
+      "rank": 2,
+      "feature": "Yläkopin ja antennin ilme",
+      "observations": "M15:n yläkopin suuret lähes mustansiniset ikkunapinnat ja niukka vaalea alareuna tekevät kopista tavoitteita tummemman ja suljetumman. Tavoitteissa näkyvät vaaleat ala-/välipaneelit ja selvempi ikkunajako. Mallin antenni on ohut ja harva; tavoitteiden masto on selvästi tiheämpi ja siinä on enemmän sivulle ulottuvia osia.",
+      "strongestViews": [
+        "K2",
+        "K5",
+        "K1"
+      ],
+      "constraint": "Tavoitekuvia käytetään näkyvän vastaavuuden arviointiin, ei mittapiirustuksina tai todistetun antennivarustuksen lähteenä."
+    },
+    {
+      "rank": 3,
+      "feature": "Jalustan aukotus, koristeet ja punaluukkujen sijoittelu",
+      "observations": "M15 toistaa kapeita korkeita ikkunoita ja punertavia luukkuja lähes koko näkyvällä seinäkehällä. K1/K2/K5-tavoitteiden etusivulla korostuvat avoin tumma sisäänkäynti, vain sen lähellä olevat punaiset luukut, vihreät lyhdyt sekä suuret kaari- ja ympyräkoristeet. K3/K4-tavoitteissa näkyy harvempi aukotus ilman vastaavaa punaluukkusarjaa. Mallin yksinkertaistetut kaaret ja räystäs eivät vastaa tavoitteiden rikasta koristelua.",
+      "strongestViews": [
+        "K2",
+        "K3",
+        "K4",
+        "K5"
+      ],
+      "constraint": "K4:n pohjoisdetaljit ovat varmentamatonta rekonstruktiota; tavoitteiden yksityiskohtia ei hyväksytä tällä arviolla rakennushistoriallisesti tosiksi."
+    }
+  ],
+  "reviewedAtUTC": "2026-10-15T13:16:18Z",
+  "language": "fi",
+  "reviewer": "independent-agent /root/petrin_m15_final_review",
+  "assetRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014",
+  "outputFile": "models/continuation-274/final-independent-review.json",
+  "modelReadyAsFinal": false,
+  "metricsIndependentlyRecomputed": false,
+  "summary": "M15 on tunnistettava Petřín-torni ja ulkosiluetti sopii tuotannon mukaan neljässä viidestä näkymästä asetettuun rajaan. Suuret näkyvät erot jäävät alemman tasanteen rytmiin ja rakenteeseen, yläkopin/antennin ilmeeseen sekä jalustan julkisivuihin. K5 jää 90 %:n siluettirajan alle. Värit ovat laadullisesti tunnistettavat, mutta sitova materiaalien DeltaE on null. Rajattu #274-luuppi on päättynyt; tämä ei ole lopullinen laatuhyväksyntä.",
+  "loopScope": {
+    "task": "#274",
+    "baseModel": "M09",
+    "allowedAdditionalModels": [
+      "M11",
+      "M12",
+      "M13",
+      "M14",
+      "M15"
+    ],
+    "maximumAdditionalRounds": 5,
+    "remainingAdditionalRounds": 0,
+    "loopComplete": true,
+    "currentVersionIsLatestAndBestWithinLoop": {
+      "value": true,
+      "source": "Arviointitehtävän rajaus.",
+      "independentlyComparedWithOtherVersions": false
+    },
+    "noFurtherModelIterationAuthorized": true,
+    "decision": "M15 on tämän rajatun luupin päättävä arviointiversio. Kierrosrajan täyttyminen ei muuta puutteita hyväksytyiksi eikä oikeuta uuteen mallikierrokseen.",
+    "scopeOfThisReview": "Vain visuaalinen loppuarvio ja tämä JSON. Ei generointia, renderöintiä, kuvien/mallien/maskien muutoksia tai toimitusta R2:een, peliin, main-haaraan tai julkaisuun."
+  },
+  "perViewVisualAssessment": [
+    {
+      "view": "K1",
+      "visualResult": "Kokonaisuus tunnistettava, yksityiskohtavastaavuus osittainen.",
+      "strengths": [
+        "Korkea kapeneva ristikkorunko, levenevä alaosa ja monikulmainen vaalea jalusta muodostavat tavoitteen kanssa samankaltaisen kokonaismuodon.",
+        "Ylätasanteen, maston ja jalustan paikat ovat vertailukuvassa yleisellä tasolla lähellä tavoitetta."
+      ],
+      "visibleDifferences": [
+        "Mallin alempi tasanne on tavoitetta alempana ja sitä seuraava pitkä ylävarsi hallitsee kokonaisuutta.",
+        "Yläkoppi on selvästi tummempi ja vähemmän vaaleasti jäsennelty; antenni on harva ja vaikeasti erottuva harmaata taustaa vasten.",
+        "Mallin jalustan ikkuna- ja punaluukkusarja tuottaa erilaisen etusivun kuin tavoitteen keskellä oleva avoin sisäänkäynti.",
+        "Mallin tumma, tasaisesti toistuva ristikkokuvio näyttää tavoitteeseen nähden sileämmältä ja yksinkertaisemmalta."
+      ],
+      "confidence": "Hyvä kokonaismuodolle, rajallinen pienille kaukonäkymän yksityiskohdille.",
+      "productionMetricInterpretation": "Tuotannon IoU ylittää K1:n 85 % rajan. Se ei poista sisäisten rakenteiden tai materiaalien näkyviä eroja."
+    },
+    {
+      "view": "K2",
+      "visualResult": "Selkein näkymä rakenteiden ja julkisivun eroihin; hyvä ulkosiluetin sovitus.",
+      "strengths": [
+        "Levenevät jalat, ristikkorunko ja keskellä näkyvä porrasyhteys ovat selvästi mallinnettuja.",
+        "Jalustan kerma, punertavat luukut ja sinertävänharmaa teräs erottuvat toisistaan.",
+        "Ulkomitta ja yleinen kapeneminen seuraavat tavoitetta vertailun ääriviivoissa varsin läheltä."
+      ],
+      "visibleDifferences": [
+        "Alatasanteen sijaintiero on hyvin suuri havaittava sisäinen ero: mallin tasanne näkyy alempana, vaikka kärki ja maan taso ovat lähellä tavoitetta.",
+        "Mallin kaide on harva avoin vinoristikko; tavoitteen kaide on tiheä koristeverkko, ja tasanteen alapinta sekä ikkunallinen sisäosa ovat eri profiilisia.",
+        "Mallin yläkopin tummat korkeat ruudut ja niukka vaalea verhoilu poikkeavat tavoitteen vaaleasta alaosasta ja ikkunajaosta.",
+        "Mallin antennin sivuvarusteita on selvästi tavoitetta vähemmän.",
+        "Jalustan sisäänkäynti näyttää suljetulta ruudutetulta lasiovelta; tavoitteessa on tumma avoin sisäänkäynti. Vihreät lyhdyt eivät erotu mallissa tavoitteen tavoin.",
+        "Mallin suuret ohuet kaaret ja toistuvat pienet ikkunakaaret eivät vastaa tavoitteen suuria kaari- ja ympyräkoristeita. Punaluukut toistuvat laajemmin."
+      ],
+      "confidence": "Korkea näkyvien erojen osalta, koska molemmat kuvat katsottiin 1024×1536-resoluutiossa.",
+      "productionMetricInterpretation": "91,99 % IoU on tämän joukon paras tuotannon luku. Täytetty ulkomaski painottaa ulkomuotoa eikä osoita tasanteiden, sisäänkäynnin tai koristeiden vastaavuutta."
+    },
+    {
+      "view": "K3",
+      "visualResult": "Tunnistettava yleismuoto; useita selviä sisäisiä ja julkisivun eroja.",
+      "strengths": [
+        "Leveä jalusta, kapea ylävarsi ja yläkoppi asettuvat yleisesti kohteen tavoin.",
+        "Sinertävänharmaa ristikkoteräs ja vaalea kivijalka ovat helposti erotettavissa."
+      ],
+      "visibleDifferences": [
+        "Mallin alatasanne jää tavoitetta alemmas ja sen visuaalinen paino on tavoitteen syvää, leveää tasannetta pienempi.",
+        "Yläkoppi on tavoitteeseen nähden tumma; vaaleiden paneelien rytmi puuttuu.",
+        "Mallissa näkyy useita ikkunoita ja punaisia luukkuja, kun tavoitteen tällä sivulla näkyy harvempi, luukuton aukotus.",
+        "Tavoitteen kaarikoristelu ja renkaat eivät toistu mallissa samalla tavalla.",
+        "Mallin keskinen porras-/ydinosa on suuri tasainen rakenne; tavoitteen sisus näyttää hienojakoisemmalta ja vaihtelevammalta."
+      ],
+      "confidence": "Hyvä näkyvälle vastaavuudelle; tavoite ei varmista todellisen rakennuksen yksityiskohtia.",
+      "productionMetricInterpretation": "Tuotannon 90,15 % ylittää 90 % rajan hyvin niukasti. Läpäisy koskee vain käytettyä siluettimittaria."
+    },
+    {
+      "view": "K4",
+      "visualResult": "Yleismuoto sovitettu, pohjoissivun yksityiskohtien vastaavuus ja aitous jäävät avoimiksi.",
+      "strengths": [
+        "Runko on ehjä ja selvästi tunnistettava myös tästä suunnasta.",
+        "Pääasiallinen kapeneminen ja jalustan leveneminen seuraavat tavoitetta."
+      ],
+      "visibleDifferences": [
+        "Alatasanne on jälleen tavoitetta alempana ja ohuempi/avoimempi vaikutelmaltaan.",
+        "Punaluukkujen ja kapeiden ikkunoiden sarja eroaa tavoitteen rauhallisemmasta, luukuttomasta julkisivusta.",
+        "Kaari- ja ympyräkoristeet ovat eri tavalla jäsenneltyjä.",
+        "Yläkoppi ja masto jäävät tavoitetta tummemmiksi ja vähädetaljisemmiksi.",
+        "Mallin neutraalin alustan horisonttiraja näkyy selvänä vaakalinjana jalustan yläpuolisessa taustassa."
+      ],
+      "confidence": "Kohtalainen kuvien keskinäiselle vertailulle; heikko todellisen pohjoissivun aitouden arviointiin.",
+      "productionMetricInterpretation": "Tuotannon 90,36 % ylittää 90 % rajan niukasti. K4:n pohjoisdetaljit ovat tehtävänannon mukaan varmentamatonta rekonstruktiota; siluettiläpäisy ei muuta sitä."
+    },
+    {
+      "view": "K5",
+      "visualResult": "Tämän vertailun selvin jäljelle jäävä kokonaismuodon ongelmanäkymä.",
+      "strengths": [
+        "Ylhäältä katsottu monikulmainen perusmuoto, peltikatto ja tornin pystyrunko ovat luettavia.",
+        "Kamera tavoittaa pääpiirteissään saman yläviiston katselun kuin tavoite."
+      ],
+      "visibleDifferences": [
+        "Mallin alempi tasanne on tavoitetta alempana; sen reunus, sisätila ja katon/rungon liittymä ovat tavoitetta kapeammat ja yksinkertaisemmat.",
+        "Jalustan/katon näkyvä muoto ja räystään reuna eivät seuraa tavoitetta tarkasti. Ääriviivoissa näkyy eroa sekä jaloissa että sivureunoissa.",
+        "Mallin yläkopin tumma kylki hallitsee; tavoitteessa vaalea alaosa, ikkunajako ja katon profiili erottuvat paremmin.",
+        "Mallin maston yläreuna näkyy vertailussa tavoitetta ylempänä; maston pieni sivuvarustus poikkeaa tavoitteesta.",
+        "Jalustan etusivulta puuttuu tavoitteen selvästi avoin sisäänkäynti, ja punaluukkujen/ikkunoiden rytmi on eri.",
+        "Mallin tummahko neutraali esikatselu vähentää maston ja rungon hienoimpien osien luettavuutta."
+      ],
+      "confidence": "Hyvä näkyvälle erolle; peittyvän maapisteen sijaintiin jää annettu epävarmuus.",
+      "productionMetricInterpretation": "86,82 % jää 90 % rajasta noin 3,18 prosenttiyksikköä. Käytössä on PT:n hyväksymä maskiv2; sitä ei tässä arviossa muutettu tai tarkistettu pikselintarkasti. Heikompi tulos ei oikeuta maskin muokkaamiseen tai fyysisten korkeuksien venyttämiseen."
+    }
+  ],
+  "materialAndLightingAssessment": {
+    "assessmentType": "Laadullinen kuviin perustuva arvio, ei kalibroitu värimittaus.",
+    "steel": {
+      "requestedAppearance": "Tumma sinertävänharmaa teräs.",
+      "visualAssessment": "Mallin teräs kuuluu selvästi tähän väriperheeseen. Se näyttää neutraalissa valaistuksessa tavoitteiden päivänvalossa näkyvää terästä tummemmalta, sinisemmältä ja tasaisemmalta. Ristikoiden sileä ja säännöllinen rakenne korostaa teknisen esikatselun ilmettä.",
+      "qualitativePaletteRecognizable": true,
+      "exactMaterialColorVerified": false
+    },
+    "cream": {
+      "requestedAppearance": "Vaalea kerma.",
+      "visualAssessment": "Jalusta on selvästi vaalean kerman/ivorin sävyinen. Tavoitteet näyttävät aurinkoisina lämpimämmiltä ja niiden rappaus/saumaus sekä koristeiden varjot ovat yksityiskohtaisempia. Sävyeroa ei voi erottaa luotettavasti valaistuksesta näillä kuvilla.",
+      "qualitativePaletteRecognizable": true,
+      "exactMaterialColorVerified": false
+    },
+    "shutters": {
+      "requestedAppearance": "Punaiset luukut.",
+      "visualAssessment": "Luukut ovat selvästi punertavia, hieman tiilen-/ruosteenruskeita. Tavoitteiden etusivun luukut näyttävät tummemman punaisilta. Suurempi havaittava ongelma on luukkujen määrä ja sijoittelu, erityisesti K3/K4-sivuilla.",
+      "qualitativePaletteRecognizable": true,
+      "exactMaterialColorVerified": false
+    },
+    "upperCabin": {
+      "visualAssessment": "Lähes mustansiniset ikkunat ja vähäinen vaalea alaverhoilu tekevät yläkopista tavoitteita tummemman ja suljetumman. Tämä on suuri luettavuus- ja ilme-ero myös kaukonäkymissä.",
+      "requiresAttentionInOwnerDecision": true
+    },
+    "lighting": {
+      "neutralAppearance": true,
+      "visualAssessment": "Valaistus näyttää vähäväriseltä ja esikatseluun neutraalilta. Pehmeät suunnatut varjot ja harmaa maataso auttavat muodon tarkastelua. Harmaan taustan ja maan terävä horisonttiraja näkyy K1–K4:ssä, ja erityisesti K5:n tummahko valo heikentää antennin ja sisäisen ristikon erottumista.",
+      "matchedToTargetIllumination": false,
+      "sceneConfigurationVerified": false
+    },
+    "environment": {
+      "neutralPreviewOnly": true,
+      "siteLandscapeOrGroundTruthVerified": false,
+      "visualAssessment": "Harmaa tausta ja tasainen maataso ovat neutraali malliesikatselu. Ne eivät osoita todellista puistoympäristöä, maastoa, kasvillisuutta tai paikan valoa."
+    },
+    "bindingMaterialDeltaE": null,
+    "bindingColorCertificateIssued": false,
+    "reason": "Vertailukuvat käyttävät eri valaistusta ja ympäristöä. Rekisteröityjä pelkkään materiaaliin rajattuja vertailualueita ja yhtäläistä valaisinta ei ole osoitettu. Tuotannon pikseli-DeltaE sisältää muoto-, kohdistus- ja valaistuseroja."
+  },
+  "productionMetrics": {
+    "source": "models/M15/qa/metrics.json",
+    "provenance": "Tuotannon raportoimat luvut. IoU-, väri-, kamera- ja korkeusmittareita ei laskettu riippumattomasti uudelleen.",
+    "metricsIndependentlyRecomputed": false,
+    "imageSHA256ReferencesVerifiedAgainstViewedFiles": true,
+    "perView": [
+      {
+        "view": "K1",
+        "silhouetteIoUPercent": 85.78059346601088,
+        "requiredIoUPercent": 85,
+        "IoUThresholdPassed": true,
+        "K5CorrectedMaskUsed": false,
+        "targetMaskIndependentPixelExactCertification": false,
+        "imageBoundingHeightDifferencePercentDiagnostic": -1.8489984591679507,
+        "boundingHeightIsNotPhysicalHeightError": true,
+        "bindingMaterialDeltaE": null,
+        "registeredPixelColorDiagnostic": {
+          "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+          "samples": 44465,
+          "meanDeltaE76": 24.134055048799237,
+          "medianDeltaE76": 22.341976623102685,
+          "p90DeltaE76": 42.407689252932336,
+          "notAPureMaterialColorMetric": true,
+          "includesShapeRegistrationAndLightingErrors": true,
+          "notUsedToClaimBindingDeltaEPass": true
+        }
+      },
+      {
+        "view": "K2",
+        "silhouetteIoUPercent": 91.98882650800843,
+        "requiredIoUPercent": 90,
+        "IoUThresholdPassed": true,
+        "K5CorrectedMaskUsed": false,
+        "targetMaskIndependentPixelExactCertification": false,
+        "imageBoundingHeightDifferencePercentDiagnostic": -1.7384731670445956,
+        "boundingHeightIsNotPhysicalHeightError": true,
+        "bindingMaterialDeltaE": null,
+        "registeredPixelColorDiagnostic": {
+          "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+          "samples": 306318,
+          "meanDeltaE76": 26.920848554201903,
+          "medianDeltaE76": 23.98696126079365,
+          "p90DeltaE76": 50.235170418179905,
+          "notAPureMaterialColorMetric": true,
+          "includesShapeRegistrationAndLightingErrors": true,
+          "notUsedToClaimBindingDeltaEPass": true
+        }
+      },
+      {
+        "view": "K3",
+        "silhouetteIoUPercent": 90.15199383414688,
+        "requiredIoUPercent": 90,
+        "IoUThresholdPassed": true,
+        "K5CorrectedMaskUsed": false,
+        "targetMaskIndependentPixelExactCertification": false,
+        "imageBoundingHeightDifferencePercentDiagnostic": -1.9867549668874172,
+        "boundingHeightIsNotPhysicalHeightError": true,
+        "bindingMaterialDeltaE": null,
+        "registeredPixelColorDiagnostic": {
+          "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+          "samples": 104878,
+          "meanDeltaE76": 25.84448519058738,
+          "medianDeltaE76": 23.43115476163642,
+          "p90DeltaE76": 46.54273982517019,
+          "notAPureMaterialColorMetric": true,
+          "includesShapeRegistrationAndLightingErrors": true,
+          "notUsedToClaimBindingDeltaEPass": true
+        }
+      },
+      {
+        "view": "K4",
+        "silhouetteIoUPercent": 90.35575195206333,
+        "requiredIoUPercent": 90,
+        "IoUThresholdPassed": true,
+        "K5CorrectedMaskUsed": false,
+        "targetMaskIndependentPixelExactCertification": false,
+        "imageBoundingHeightDifferencePercentDiagnostic": -2.8508771929824563,
+        "boundingHeightIsNotPhysicalHeightError": true,
+        "bindingMaterialDeltaE": null,
+        "registeredPixelColorDiagnostic": {
+          "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+          "samples": 115601,
+          "meanDeltaE76": 27.063215628282673,
+          "medianDeltaE76": 24.712872847842263,
+          "p90DeltaE76": 48.93327739752207,
+          "notAPureMaterialColorMetric": true,
+          "includesShapeRegistrationAndLightingErrors": true,
+          "notUsedToClaimBindingDeltaEPass": true
+        }
+      },
+      {
+        "view": "K5",
+        "silhouetteIoUPercent": 86.82322061821127,
+        "requiredIoUPercent": 90,
+        "IoUThresholdPassed": false,
+        "K5CorrectedMaskUsed": true,
+        "targetMaskIndependentPixelExactCertification": false,
+        "imageBoundingHeightDifferencePercentDiagnostic": 1.8796992481203008,
+        "boundingHeightIsNotPhysicalHeightError": true,
+        "bindingMaterialDeltaE": null,
+        "registeredPixelColorDiagnostic": {
+          "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+          "samples": 87942,
+          "meanDeltaE76": 26.498536275079818,
+          "medianDeltaE76": 24.200408321266938,
+          "p90DeltaE76": 48.303343907921096,
+          "notAPureMaterialColorMetric": true,
+          "includesShapeRegistrationAndLightingErrors": true,
+          "notUsedToClaimBindingDeltaEPass": true
+        }
+      }
+    ],
+    "meanIoUPercent": 89.02007727568817,
+    "allIoUThresholdsPassed": false,
+    "maskMethodReported": "geometry alpha >=128 then fill enclosed holes from outside flood fill; no convex hull, image tracing, scaling or target-based mask adjustment",
+    "silhouetteMetricLimitation": "Täytetty siluetti ei mittaa avoimen ristikon sisäisiä aukkoja, tasanteiden yksityiskohtia, ikkunajakoa, koristeita tai materiaalien uskollisuutta. Siksi hyvä IoU ei yksin ratkaise visuaalista hyväksyttävyyttä.",
+    "physicalHeightSourceConformanceReported": {
+      "body": 1.299726491112145e-06,
+      "lowerFloor": 0,
+      "upperFloor": 0
+    },
+    "physicalHeightIsMeshAuditAgainstTask253NotIndependentSurvey": true,
+    "bindingMaterialDeltaE": null,
+    "bindingColorThresholdPassNotClaimed": true,
+    "cameraOptimizationAgainstTargetsUsed": true,
+    "cameraProjectionErrorsAreProductionInternalConsistencyOnly": true,
+    "cameraProjectionMaximumAxisErrorsPixelsReported": [
+      {
+        "view": "K1",
+        "maximumAxisProjectionErrorPixels": 0.0032323418306532403
+      },
+      {
+        "view": "K2",
+        "maximumAxisProjectionErrorPixels": 0.0059917709806995845
+      },
+      {
+        "view": "K3",
+        "maximumAxisProjectionErrorPixels": 0.005627889190463975
+      },
+      {
+        "view": "K4",
+        "maximumAxisProjectionErrorPixels": 0.004078683704278774
+      },
+      {
+        "view": "K5",
+        "maximumAxisProjectionErrorPixels": 0.014588553777741708
+      }
+    ],
+    "cameraMetricLimitation": "Tuotannon pienet projektioerot osoittavat laskennan ja renderöijän sisäistä yhteensopivuutta. Ne eivät todista todellista kuvauspaikkaa, kameran kenttämittausta tai itsenäistä tavoitteiden geometrisen oikeellisuuden varmennusta.",
+    "acceptanceVerifiedReported": false,
+    "colorMetricConclusion": "Sitova materiaalien DeltaE on null kaikille näkymille. Diagnostisia keskiarvoja ei tulkita materiaalivärien hyväksynnäksi."
+  },
+  "constraintsAndUncertainties": {
+    "bindingPhysicalHeightsM": {
+      "body": 58.7,
+      "lowerPlatform": 20,
+      "upperPlatform": 51
+    },
+    "heightsSource": "Arviointitehtävän sitova rajaus; tässä arviossa ei luettu mallikoodia eikä mitattu mesh-geometriaa.",
+    "changeHeightsToMatchGeneratedTargets": false,
+    "generatedTargetPlatformErrorsMustNotOverridePhysicalHeights": true,
+    "K5MaskV2PTApproved": true,
+    "K5MaskApprovalSource": "Arviointitehtävän rajaus; tuotannon mittarit ilmoittavat korjatun maskin käytön ja vahvistuksen odotuksen päättyneen.",
+    "K5MaskPixelExactIndependentlyCertified": false,
+    "K5OccludedGroundPointIsEstimate": true,
+    "K5GroundPointEstimateIndependentlyValidated": false,
+    "K4NorthDetailsUnverifiedReconstruction": true,
+    "camerasAreTargetFitsNotMeasuredLocations": true,
+    "targetPicturesAreGeneratedVisualTargetsNotSurveyEvidence": true,
+    "independentPhysicalHeightAuditPerformed": false,
+    "independentMaterialColorCertificationPerformed": false,
+    "priorVersionsRankedIndependently": false,
+    "observedDifferencesDoNotByThemselvesEstablishHistoricalOrSurveyAccuracy": true
+  },
+  "decision": {
+    "modelReadyAsFinal": false,
+    "limitedLoopDeliverableComplete": true,
+    "bestLatestStatusAcceptedFromTaskButNotIndependentlyRanked": true,
+    "blockersForUnqualifiedFinalQualityAcceptance": [
+      "K5:n siluettiraja ei täyty tuotannon mittarissa: 86,8232 % < 90 %.",
+      "Tasanteen rakenne, yläkopin ilme/antenni ja jalustan julkisivut jäävät näkyvästi tavoitteista. Tasanteen sijaintiero täytyy tulkita yhdessä sitovien korkeuksien ja generoituun tavoitteeseen liittyvän virheen kanssa.",
+      "Sitova materiaalien DeltaE on null, joten värisertifikaattia tai sitovan värirajan läpäisyä ei voi antaa.",
+      "K4:n pohjoisdetaljit ja K5:n peittyvä maapiste jäävät erikseen ilmoitetuiksi epävarmuuksiksi."
+    ],
+    "finalAcceptanceByOwnerVerified": false,
+    "recommendedDisposition": "Päätä #274:n viiden lisäkierroksen luuppi M15:een ja toimita tämä rehellinen arvio PT:n päätöksen pohjaksi. Älä aloita uutta mallikierrosta nykyisellä valtuutuksella. Tavoitekuvien tasannevirheisiin sovittaminen ei saa syrjäyttää 58,7/20/51 m:n korkeuksia.",
+    "noImplicitPermissionForAdditionalIterationOrPublication": true
+  },
+  "downstreamActions": {
+    "generatedImages": false,
+    "renderedImages": false,
+    "modifiedModels": false,
+    "modifiedImages": false,
+    "modifiedMasks": false,
+    "R2Performed": false,
+    "gameIntegrationPerformed": false,
+    "mainBranchChanged": false,
+    "publicationPerformed": false,
+    "messagesSentToOtherChats": false,
+    "onlyWrittenFile": "models/continuation-274/final-independent-review.json"
+  },
+  "filesSeen": [
+    {
+      "path": "models/M15/qa/petrin-M15-comparison-sheet.png",
+      "sha256": "de946bdf990fcabce655550a5734d1d0afaa774f4e1fc5e4f1be3ae363b9b3a7",
+      "bytes": 4924639,
+      "dimensions": [
+        1600,
+        2958
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/inputs/targets/K1.png",
+      "sha256": "3be76904100a1cdf4cbb65058ca004f5f3e30f3d6383182ad4e1c7d346623717",
+      "bytes": 2632827,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/renders/K1-model.png",
+      "sha256": "e31547c3082c62483c3a0ecd85a704311a847734a67849a6faff0af43dbd38d8",
+      "bytes": 1194631,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/qa/K1-comparison.png",
+      "sha256": "b02081572140b905de080b2ed0f7773a59a4d72d0d85d6d4e2e66da602632a9d",
+      "bytes": 685541,
+      "dimensions": [
+        1600,
+        487
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/inputs/targets/K2.png",
+      "sha256": "c869913a3b4c86cc0f191f02c61fd38c45761d9a7396f3376afe3501bd2c4f52",
+      "bytes": 2846731,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/renders/K2-model.png",
+      "sha256": "ed6876fe1352ca5a673e44ff0c2b0c8906e8b35ba724e42426841f0bff9aeea3",
+      "bytes": 1720191,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/qa/K2-comparison.png",
+      "sha256": "81509efdd1a77ead2cc00adffb9370c222a04c923337c7ee7b8bc724f90d5a1f",
+      "bytes": 1790600,
+      "dimensions": [
+        1600,
+        914
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/inputs/targets/K3.png",
+      "sha256": "f73e5fa19f14d4db1f8753d5c2f2c09d9e471b2b68d73d81deadc514cdd5d813",
+      "bytes": 2867976,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/renders/K3-model.png",
+      "sha256": "8890621a82dc8d11cf3631b68dedd220b1aec827bca9a31c7347f78eddbee213",
+      "bytes": 1425112,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/qa/K3-comparison.png",
+      "sha256": "ef68cad2bfdf3510cbaadd85564bccfbaf948e2a58ff40445db6ec1e7a382c1e",
+      "bytes": 767941,
+      "dimensions": [
+        1600,
+        487
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/inputs/targets/K4.png",
+      "sha256": "6ec296c9aaef7018aef9560128d7dee422fcea66913985c3a966db300aa25fe9",
+      "bytes": 2755142,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/renders/K4-model.png",
+      "sha256": "a40cf7e86235a6d176ecefefbb2d4a8aae8e79140dc02d26f3944c419cf336fb",
+      "bytes": 1443610,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/qa/K4-comparison.png",
+      "sha256": "a645e7f817db75db315f9e80ce47a048bc1fba0f8d27d449fc061f3b0844d4f1",
+      "bytes": 753326,
+      "dimensions": [
+        1600,
+        487
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/inputs/targets/K5.png",
+      "sha256": "a695d52f270138fdcaa797cb3f288e1957a1acec121340e93e5034f359f2c134",
+      "bytes": 3588883,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/renders/K5-model.png",
+      "sha256": "581dea9e3687f2d9233eef1cc2d45614e592158e769fce4727ff9cf7aff0013f",
+      "bytes": 1197887,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/qa/K5-comparison.png",
+      "sha256": "d3fbd4eb73ffac02d5c7c6013c540b8a7e9ae32fe1ba7844f39105dd8e38dbfc",
+      "bytes": 926520,
+      "dimensions": [
+        1600,
+        487
+      ],
+      "viewedAtNativeResolution": true
+    },
+    {
+      "path": "models/M15/qa/metrics.json",
+      "sha256": "33d273f03f41022ba7cab2ab563ad24a1b5cb5b3f59040481d4033db544f9ebc",
+      "bytes": 19192
+    }
+  ]
+}

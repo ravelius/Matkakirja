@@ -1,0 +1,90 @@
+{
+  "parentRound": "M13",
+  "meshVertices": 40696,
+  "meshTriangles": 66952,
+  "method": "Rasterize actual saved tower triangles, opaque mask then outside flood fill; analytical perspective camera. Optimization proposal only; final acceptance measured from native Blender render.",
+  "rows": [
+    {
+      "view": "K1",
+      "scale": 0.5,
+      "softwareVsBlenderFilledMaskIoU": 0.9848708746745479,
+      "softwareTargetIoU": 0.8461990979802602,
+      "BlenderTargetIoUAtSameScale": 0.8457818728353917,
+      "absoluteDifferencePercentagePoints": 0.04172251448684161
+    },
+    {
+      "view": "K1",
+      "scale": 1.0,
+      "softwareVsBlenderFilledMaskIoU": 0.9992912953349515,
+      "softwareTargetIoU": 0.8473950074381651,
+      "BlenderTargetIoUAtSameScale": 0.8469594484200895,
+      "absoluteDifferencePercentagePoints": 0.043555901807557085
+    },
+    {
+      "view": "K2",
+      "scale": 0.5,
+      "softwareVsBlenderFilledMaskIoU": 0.9940850663601212,
+      "softwareTargetIoU": 0.9173342389675769,
+      "BlenderTargetIoUAtSameScale": 0.9184835828054118,
+      "absoluteDifferencePercentagePoints": 0.11493438378348264
+    },
+    {
+      "view": "K2",
+      "scale": 1.0,
+      "softwareVsBlenderFilledMaskIoU": 0.9999764265227812,
+      "softwareTargetIoU": 0.9184795368376883,
+      "BlenderTargetIoUAtSameScale": 0.9184776500383385,
+      "absoluteDifferencePercentagePoints": 0.00018867993498705715
+    },
+    {
+      "view": "K3",
+      "scale": 0.5,
+      "softwareVsBlenderFilledMaskIoU": 0.9879638327853453,
+      "softwareTargetIoU": 0.9000276931597895,
+      "BlenderTargetIoUAtSameScale": 0.9000830794793686,
+      "absoluteDifferencePercentagePoints": 0.005538631957913154
+    },
+    {
+      "view": "K3",
+      "scale": 1.0,
+      "softwareVsBlenderFilledMaskIoU": 0.9999926218864361,
+      "softwareTargetIoU": 0.9003979651866976,
+      "BlenderTargetIoUAtSameScale": 0.9004048863203793,
+      "absoluteDifferencePercentagePoints": 0.0006921133681725422
+    },
+    {
+      "view": "K4",
+      "scale": 0.5,
+      "softwareVsBlenderFilledMaskIoU": 0.9889904782514607,
+      "softwareTargetIoU": 0.9002014843530822,
+      "BlenderTargetIoUAtSameScale": 0.9022611976444795,
+      "absoluteDifferencePercentagePoints": 0.20597132913973137
+    },
+    {
+      "view": "K4",
+      "scale": 1.0,
+      "softwareVsBlenderFilledMaskIoU": 0.999966054055522,
+      "softwareTargetIoU": 0.9026395803188404,
+      "BlenderTargetIoUAtSameScale": 0.9026459545770361,
+      "absoluteDifferencePercentagePoints": 0.0006374258195718241
+    },
+    {
+      "view": "K5",
+      "scale": 0.5,
+      "softwareVsBlenderFilledMaskIoU": 0.9828202143459238,
+      "softwareTargetIoU": 0.8617472118959107,
+      "BlenderTargetIoUAtSameScale": 0.866223838503785,
+      "absoluteDifferencePercentagePoints": 0.447662660787429
+    },
+    {
+      "view": "K5",
+      "scale": 1.0,
+      "softwareVsBlenderFilledMaskIoU": 0.9999797904267251,
+      "softwareTargetIoU": 0.8665390832574645,
+      "BlenderTargetIoUAtSameScale": 0.8665551839464883,
+      "absoluteDifferencePercentagePoints": 0.0016100689023801351
+    }
+  ],
+  "validationSeconds": 0.24930095672607422,
+  "softwareIsNotTheBindingFinalMetric": true
+}

@@ -1,0 +1,285 @@
+{
+  "round": "M11",
+  "maximumTotalModelRounds": 15,
+  "blender": "5.2.1 LTS",
+  "renderDevice": {
+    "engine": "CYCLES",
+    "device": "METAL",
+    "blender": "5.2.1 LTS",
+    "devices": [
+      "Apple M4 Max (GPU - 40 cores)"
+    ]
+  },
+  "meshObjects": 47,
+  "meshVertices": 40696,
+  "meshPolygons": 26992,
+  "sourceBindingHeightsM": {
+    "body": 58.7,
+    "lowerFloor": 20,
+    "upperFloor": 51
+  },
+  "actualMeshMeasurements": {
+    "body": {
+      "minZ": -0.07999992370605469,
+      "maxZ": 58.699745178222656,
+      "vertices": 39448
+    },
+    "body_top": {
+      "minZ": 57.0,
+      "maxZ": 58.70000076293945,
+      "vertices": 40
+    },
+    "lower_floor": {
+      "minZ": 19.700000762939453,
+      "maxZ": 20.0,
+      "vertices": 128
+    },
+    "upper_floor": {
+      "minZ": 50.70000076293945,
+      "maxZ": 51.0,
+      "vertices": 128
+    },
+    "mast": {
+      "minZ": 58.68779373168945,
+      "maxZ": 68.61250305175781,
+      "vertices": 952
+    }
+  },
+  "heightSourceConformanceErrorsPercent": {
+    "body": 1.299726491112145e-06,
+    "lowerFloor": 0.0,
+    "upperFloor": 0.0
+  },
+  "heightConformanceIsNotPhotoAccuracy": true,
+  "hallDimensionsAndWidthsAreSourceEstimates": true,
+  "stairPitchAndDetailGeometryApproximate": true,
+  "rearHallDetailUnverified": true,
+  "targetPhotosUsedAsTextures": false,
+  "geometryIndependentOfImagePlatformErrors": true,
+  "cameraProjectionChecks": [
+    {
+      "view": "K1",
+      "maximumAxisProjectionErrorPixels": 0.004030949927312122,
+      "levels": [
+        {
+          "level": "ground",
+          "expectedNativeY": 761.6480728725487,
+          "blenderNativeY": 761.6442260742188,
+          "errorPixels": -0.003846798329959711
+        },
+        {
+          "level": "hallRoofApprox",
+          "expectedNativeY": 706.296775454012,
+          "blenderNativeY": 706.2929077148438,
+          "errorPixels": -0.003867739168299522
+        },
+        {
+          "level": "lowerPlatform",
+          "expectedNativeY": 601.1775174755018,
+          "blenderNativeY": 601.1736450195312,
+          "errorPixels": -0.0038724559705087813
+        },
+        {
+          "level": "upperPlatform",
+          "expectedNativeY": 337.5881033936473,
+          "blenderNativeY": 337.58416748046875,
+          "errorPixels": -0.003935913178565897
+        },
+        {
+          "level": "bodyTop",
+          "expectedNativeY": 269.1206910151411,
+          "blenderNativeY": 269.11669921875,
+          "errorPixels": -0.003991796391119351
+        },
+        {
+          "level": "mastTopApprox",
+          "expectedNativeY": 179.1231715749273,
+          "blenderNativeY": 179.119140625,
+          "errorPixels": -0.004030949927312122
+        }
+      ],
+      "principalPointCalibrationOnly": true,
+      "noImageBasedCameraOptimization": false
+    },
+    {
+      "view": "K2",
+      "maximumAxisProjectionErrorPixels": 0.0020428227571755997,
+      "levels": [
+        {
+          "level": "ground",
+          "expectedNativeY": 1367.2665768193392,
+          "blenderNativeY": 1367.264533996582,
+          "errorPixels": -0.0020428227571755997
+        },
+        {
+          "level": "hallRoofApprox",
+          "expectedNativeY": 1168.5864324616753,
+          "blenderNativeY": 1168.5844116210938,
+          "errorPixels": -0.0020208405815083097
+        },
+        {
+          "level": "lowerPlatform",
+          "expectedNativeY": 856.5485398775929,
+          "blenderNativeY": 856.5466003417969,
+          "errorPixels": -0.0019395357960547699
+        },
+        {
+          "level": "upperPlatform",
+          "expectedNativeY": 316.3143923318117,
+          "blenderNativeY": 316.3125915527344,
+          "errorPixels": -0.0018007790773140187
+        },
+        {
+          "level": "bodyTop",
+          "expectedNativeY": 212.98247815782008,
+          "blenderNativeY": 212.9805908203125,
+          "errorPixels": -0.0018873375075827425
+        },
+        {
+          "level": "mastTopApprox",
+          "expectedNativeY": 93.10566085121536,
+          "blenderNativeY": 93.10382080078125,
+          "errorPixels": -0.0018400504341116175
+        }
+      ],
+      "principalPointCalibrationOnly": true,
+      "noImageBasedCameraOptimization": false
+    },
+    {
+      "view": "K3",
+      "maximumAxisProjectionErrorPixels": 0.005938424720966395,
+      "levels": [
+        {
+          "level": "ground",
+          "expectedNativeY": 953.6652707001116,
+          "blenderNativeY": 953.6593322753906,
+          "errorPixels": -0.005938424720966395
+        },
+        {
+          "level": "hallRoofApprox",
+          "expectedNativeY": 849.0740461327389,
+          "blenderNativeY": 849.0681457519531,
+          "errorPixels": -0.005900380785760717
+        },
+        {
+          "level": "lowerPlatform",
+          "expectedNativeY": 664.8713967353258,
+          "blenderNativeY": 664.865478515625,
+          "errorPixels": -0.005918219700788541
+        },
+        {
+          "level": "upperPlatform",
+          "expectedNativeY": 271.85564200118677,
+          "blenderNativeY": 271.8497314453125,
+          "errorPixels": -0.00591055587426581
+        },
+        {
+          "level": "bodyTop",
+          "expectedNativeY": 183.11007636794795,
+          "blenderNativeY": 183.10418701171875,
+          "errorPixels": -0.005889356229204168
+        },
+        {
+          "level": "mastTopApprox",
+          "expectedNativeY": 73.48365642653403,
+          "blenderNativeY": 73.47772216796875,
+          "errorPixels": -0.005934258565275741
+        }
+      ],
+      "principalPointCalibrationOnly": true,
+      "noImageBasedCameraOptimization": false
+    },
+    {
+      "view": "K4",
+      "maximumAxisProjectionErrorPixels": 0.003934937797566818,
+      "levels": [
+        {
+          "level": "ground",
+          "expectedNativeY": 954.9446246394307,
+          "blenderNativeY": 954.9485244750977,
+          "errorPixels": 0.00389983566697083
+        },
+        {
+          "level": "hallRoofApprox",
+          "expectedNativeY": 840.1696795641556,
+          "blenderNativeY": 840.1736145019531,
+          "errorPixels": 0.003934937797566818
+        },
+        {
+          "level": "lowerPlatform",
+          "expectedNativeY": 645.3744892925549,
+          "blenderNativeY": 645.3783874511719,
+          "errorPixels": 0.0038981586169484217
+        },
+        {
+          "level": "upperPlatform",
+          "expectedNativeY": 258.51234694111724,
+          "blenderNativeY": 258.5162353515625,
+          "errorPixels": 0.0038884104452563406
+        },
+        {
+          "level": "bodyTop",
+          "expectedNativeY": 176.1473844348883,
+          "blenderNativeY": 176.1512451171875,
+          "errorPixels": 0.0038606822992051093
+        },
+        {
+          "level": "mastTopApprox",
+          "expectedNativeY": 76.76578304356201,
+          "blenderNativeY": 76.76971435546875,
+          "errorPixels": 0.00393131190674012
+        }
+      ],
+      "principalPointCalibrationOnly": true,
+      "noImageBasedCameraOptimization": false
+    },
+    {
+      "view": "K5",
+      "maximumAxisProjectionErrorPixels": 0.014867217968799196,
+      "levels": [
+        {
+          "level": "ground",
+          "expectedNativeY": 766.4607700330098,
+          "blenderNativeY": 766.4755554199219,
+          "errorPixels": 0.014785386912080867
+        },
+        {
+          "level": "hallRoofApprox",
+          "expectedNativeY": 709.4591704034694,
+          "blenderNativeY": 709.4739379882812,
+          "errorPixels": 0.014767584811806955
+        },
+        {
+          "level": "lowerPlatform",
+          "expectedNativeY": 595.6458164389373,
+          "blenderNativeY": 595.66064453125,
+          "errorPixels": 0.014828092312654917
+        },
+        {
+          "level": "upperPlatform",
+          "expectedNativeY": 273.4737802429687,
+          "blenderNativeY": 273.4886474609375,
+          "errorPixels": 0.014867217968799196
+        },
+        {
+          "level": "bodyTop",
+          "expectedNativeY": 179.83800949376496,
+          "blenderNativeY": 179.85284423828125,
+          "errorPixels": 0.01483474451629263
+        },
+        {
+          "level": "mastTopApprox",
+          "expectedNativeY": 49.54032253839256,
+          "blenderNativeY": 49.55511474609375,
+          "errorPixels": 0.014792207701191273
+        }
+      ],
+      "principalPointCalibrationOnly": true,
+      "noImageBasedCameraOptimization": false
+    }
+  ],
+  "noGameIntegration": true,
+  "noR2": true,
+  "noPublication": true,
+  "createdSecondsAfterStart": 0.1622929573059082
+}
