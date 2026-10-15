@@ -1,0 +1,56 @@
+{
+  "photo": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8e478221-c4fe-4a2b-a85f-136bd49e9f84.png",
+  "photoSHA256": "a29ae64401165d6b2c819c7c81ffb47ebd2939b3882d382848caea3b825947c9",
+  "width": 1536,
+  "height": 1024,
+  "mode": "L",
+  "values": [
+    0,
+    255
+  ],
+  "method": "Manual native-coordinate polygons traced from the actual K4/v1 photograph alone; Pillow rasterization without scaling or antialiasing. Main building boundaries are traced; fine ornament microdetail is approximate. White denotes visible palace architecture; black denotes everything else.",
+  "blindness": "No source renders, target/reference masks, prompts, camera data, previous images or metrics were read for this trace.",
+  "included": "Visible palace roofs, facades and glass roof structures, including shadowed vertical building faces.",
+  "excluded": "Main open court, near open court and statue, visible west courtyard floor, unrelated city, trees, streets, river, ground and ground shadows.",
+  "courtAssessment": "The northern small west-wing recess shows windowed vertical faces down to the occluding foreground roof; no confidently separable exposed ground is visible there. Those building faces are retained.",
+  "uncertainEdges": [
+    {
+      "region": [
+        205,
+        208,
+        622,
+        758
+      ],
+      "detail": "Oblique west-side facade/roof edge and small finials traced approximately; typical boundary uncertainty 2-5 pixels, with a few thin ornaments omitted."
+    },
+    {
+      "region": [
+        341,
+        558,
+        451,
+        623
+      ],
+      "detail": "West courtyard ground contact, shadowed wall foot and small roof projection have about 3-5 pixel uncertainty."
+    },
+    {
+      "region": [
+        883,
+        248,
+        1258,
+        748
+      ],
+      "detail": "East wing glass roofs retained. Oblique roof edge and decorative details have about 2-5 pixel uncertainty."
+    },
+    {
+      "region": [
+        235,
+        619,
+        1263,
+        1023
+      ],
+      "detail": "Near roof ornaments, perspective facade foot and image-edge intersections are manual; about 2-5 pixel uncertainty. The near courtyard remains black to the image edge."
+    }
+  ],
+  "foregroundPixels": 399906,
+  "maskSHA256": "18d0bcd31d7b746ded35cfbce93e2a918b80812db44e607904a494a18d8f4cb0"
+}

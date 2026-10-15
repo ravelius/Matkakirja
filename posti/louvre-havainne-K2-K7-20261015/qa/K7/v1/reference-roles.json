@@ -1,0 +1,26 @@
+{
+  "view": "K7",
+  "attempt": 1,
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K7-massa.png",
+      "sha256": "5a664bfe3332da889a87aed49f11a5937e0760061fb2696b277f8c7903fb5d13",
+      "role": "full-frame geometry base"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K7-ohje.png",
+      "sha256": "c7f91e81a9c209b209f5af9c645a4d1eb541e54d1c00ef8f2b12c72e303fe305",
+      "role": "red target contour guide"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K7-maski.png",
+      "sha256": "97d746c04d7266c843c72a857fa454bff68d24aa66147a28824e448280055796",
+      "role": "binary geometry target"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Paris-Louvre-Cour-d-Honneur-Richelieu-Flugel-4.jpg",
+      "sha256": "e1ad6dcb19ec524f5cbdde0cbdbeaf844035268429d8d8d5945ff71475c07b3d",
+      "role": "Commons materials only"
+    }
+  ]
+}

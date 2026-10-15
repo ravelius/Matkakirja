@@ -1,0 +1,225 @@
+{
+  "taskNumber": 323,
+  "correctPalaceWikidata": "Q1075988",
+  "sourceJSONLegacyQ19675Preserved": true,
+  "views": [
+    {
+      "view": "K2",
+      "selectedAttempt": 2,
+      "selectedIoU": 0.5850468014686869,
+      "attempts": [
+        {
+          "view": "K2",
+          "attempt": 1,
+          "IoU": 0.25573394723594595,
+          "intersectionPixels": 128526,
+          "unionPixels": 502577,
+          "targetPixels": 280024,
+          "actualPalacePixels": 351079,
+          "ownMaskSHA256": "9dfb27b4768ce18e5b16041e12b7452de670a53dc12c8321b018e23ae76324f3",
+          "nativePhotoSHA256": "31f6496ee0433caea52fd795dd0e6bd25bf572d5233c2cd5a8e79c037474dccb",
+          "targetSHA256": "8ac1ec533b6634ea2972362b654b40470299d37f404b7fb18c3c04ca0e328590",
+          "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+          "physicalCameraCertified": false,
+          "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+          "measuredAt": "2026-10-15T18:28:08.089463+00:00"
+        },
+        {
+          "view": "K2",
+          "attempt": 2,
+          "IoU": 0.5850468014686869,
+          "intersectionPixels": 226261,
+          "unionPixels": 386740,
+          "targetPixels": 280024,
+          "actualPalacePixels": 332977,
+          "ownMaskSHA256": "23d23a212617155e906cd811600dbbf43f2d9ee40f3e1f23a3084325320d4e61",
+          "nativePhotoSHA256": "cef53b26c4822b60aa1ef05874952fca0eb60f392705dc35713cb006a60ffc3a",
+          "targetSHA256": "8ac1ec533b6634ea2972362b654b40470299d37f404b7fb18c3c04ca0e328590",
+          "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+          "physicalCameraCertified": false,
+          "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+          "measuredAt": "2026-10-15T18:31:50.896447+00:00"
+        }
+      ],
+      "photoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K2/v2/louvre-K2.png",
+      "ownMaskPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K2/v2/own-mask.png",
+      "visualQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K2/v2/visual-QA.json",
+      "source323Commit": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+      "selectionPolicy": "First>=85, otherwise best of two; not a PT acceptance",
+      "PTAccepted": false,
+      "selectedAt": "2026-10-15T18:32:25.550919+00:00"
+    },
+    {
+      "view": "K3",
+      "selectedAttempt": 1,
+      "selectedIoU": 0.17434897783804665,
+      "attempts": [
+        {
+          "view": "K3",
+          "attempt": 1,
+          "IoU": 0.17434897783804665,
+          "intersectionPixels": 88457,
+          "unionPixels": 507356,
+          "targetPixels": 271009,
+          "actualPalacePixels": 324804,
+          "ownMaskSHA256": "fbba09a0174c6e8fdf0502ffe4131bb831251c5844770aaeb1ec371055debe6f",
+          "nativePhotoSHA256": "f2c0c963d0682c819cbb22776969f1f3a1ca46d84bc6703b12b161433429f443",
+          "targetSHA256": "9da77e23f9de2b39a7e6cf0fb8bd6da05510aafd1764675b7ce6090f53c7b8c2",
+          "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+          "physicalCameraCertified": false,
+          "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+          "measuredAt": "2026-10-15T18:37:39.704471+00:00"
+        },
+        {
+          "view": "K3",
+          "attempt": 2,
+          "IoU": 0.16916819594164853,
+          "intersectionPixels": 83518,
+          "unionPixels": 493698,
+          "targetPixels": 271009,
+          "actualPalacePixels": 306207,
+          "ownMaskSHA256": "7810005396492aecb63b9ccbe4b8022c38475fb0916f584c78afeac4334402c3",
+          "nativePhotoSHA256": "0830d5db3f1f73c20c3abf18b182e112e60694bb4c59f376231c07a25623a579",
+          "targetSHA256": "9da77e23f9de2b39a7e6cf0fb8bd6da05510aafd1764675b7ce6090f53c7b8c2",
+          "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+          "physicalCameraCertified": false,
+          "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+          "measuredAt": "2026-10-15T18:42:06.541372+00:00"
+        }
+      ],
+      "photoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K3/v1/louvre-K3.png",
+      "ownMaskPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K3/v1/own-mask.png",
+      "visualQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K3/v1/visual-QA.json",
+      "source323Commit": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+      "selectionPolicy": "First>=85, otherwise best of two; not a PT acceptance",
+      "PTAccepted": false,
+      "selectedAt": "2026-10-15T18:42:32.065946+00:00"
+    },
+    {
+      "view": "K4",
+      "selectedAttempt": 1,
+      "selectedIoU": 0.854641775402794,
+      "attempts": [
+        {
+          "view": "K4",
+          "attempt": 1,
+          "IoU": 0.854641775402794,
+          "intersectionPixels": 371047,
+          "unionPixels": 434155,
+          "targetPixels": 405296,
+          "actualPalacePixels": 399906,
+          "ownMaskSHA256": "18d0bcd31d7b746ded35cfbce93e2a918b80812db44e607904a494a18d8f4cb0",
+          "nativePhotoSHA256": "a29ae64401165d6b2c819c7c81ffb47ebd2939b3882d382848caea3b825947c9",
+          "targetSHA256": "bebd55416208f66323c035800690e9083d9b411e60af1d7761742334fd10a4cf",
+          "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+          "physicalCameraCertified": false,
+          "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+          "measuredAt": "2026-10-15T18:47:57.567165+00:00"
+        }
+      ],
+      "photoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K4/v1/louvre-K4.png",
+      "ownMaskPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K4/v1/own-mask.png",
+      "visualQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K4/v1/visual-QA.json",
+      "source323Commit": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+      "selectionPolicy": "First>=85, otherwise best of two; not a PT acceptance",
+      "PTAccepted": false,
+      "selectedAt": "2026-10-15T18:48:39.475859+00:00"
+    },
+    {
+      "view": "K5",
+      "selectedAttempt": 1,
+      "selectedIoU": 0.9000280521189022,
+      "attempts": [
+        {
+          "view": "K5",
+          "attempt": 1,
+          "IoU": 0.9000280521189022,
+          "intersectionPixels": 372176,
+          "unionPixels": 413516,
+          "targetPixels": 387824,
+          "actualPalacePixels": 397868,
+          "ownMaskSHA256": "933565c333874a57c7fcd236588a05e778f77dfee942470a5bed02402dda81e8",
+          "nativePhotoSHA256": "4052354495e7cb3488c3161d1d39d968f63483809b147ce7bf1c3d45b09904f9",
+          "targetSHA256": "67e406fe847eb03175a159a43424ff86cafb8df2d7c7115a4fd22e5e0f2b9ace",
+          "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+          "physicalCameraCertified": false,
+          "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+          "measuredAt": "2026-10-15T18:53:29.285613+00:00"
+        }
+      ],
+      "photoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K5/v1/louvre-K5.png",
+      "ownMaskPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K5/v1/own-mask.png",
+      "visualQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K5/v1/visual-QA.json",
+      "source323Commit": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+      "selectionPolicy": "First>=85, otherwise best of two; not a PT acceptance",
+      "PTAccepted": false,
+      "selectedAt": "2026-10-15T18:53:53.346572+00:00"
+    },
+    {
+      "view": "K6",
+      "selectedAttempt": 1,
+      "selectedIoU": 0.9713063809288828,
+      "attempts": [
+        {
+          "view": "K6",
+          "attempt": 1,
+          "IoU": 0.9713063809288828,
+          "intersectionPixels": 826708,
+          "unionPixels": 851130,
+          "targetPixels": 837761,
+          "actualPalacePixels": 840077,
+          "ownMaskSHA256": "d311f12f7e49b0479b03419f6cbf062566da5138e22822211b06685454b7be96",
+          "nativePhotoSHA256": "a8249ce7d28cc772fd22f85482cf2bfc03acf75e16abc286aad320b8ef86cf40",
+          "targetSHA256": "7d1f3cd6365553b7ae25c2c2f84df34dc81dfa225a62f2027cd5f49ad4f07391",
+          "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+          "physicalCameraCertified": false,
+          "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+          "measuredAt": "2026-10-15T18:58:46.295939+00:00"
+        }
+      ],
+      "photoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K6/v1/louvre-K6.png",
+      "ownMaskPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K6/v1/own-mask.png",
+      "visualQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K6/v1/visual-QA.json",
+      "source323Commit": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+      "selectionPolicy": "First>=85, otherwise best of two; not a PT acceptance",
+      "PTAccepted": false,
+      "selectedAt": "2026-10-15T18:59:04.081535+00:00"
+    },
+    {
+      "view": "K7",
+      "selectedAttempt": 1,
+      "selectedIoU": 0.928838735252701,
+      "attempts": [
+        {
+          "view": "K7",
+          "attempt": 1,
+          "IoU": 0.928838735252701,
+          "intersectionPixels": 627947,
+          "unionPixels": 676056,
+          "targetPixels": 642038,
+          "actualPalacePixels": 661965,
+          "ownMaskSHA256": "af0d9e9d6b3bfd12f45ee9734895ce6d7b784df4ca8375928cc0d8850e0cd528",
+          "nativePhotoSHA256": "78fb83c4074a3da5a3b8aad4420f72511fc07a22e324f089b20378b22b6f3c6d",
+          "targetSHA256": "97d746c04d7266c843c72a857fa454bff68d24aa66147a28824e448280055796",
+          "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+          "physicalCameraCertified": false,
+          "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+          "measuredAt": "2026-10-15T19:04:59.805426+00:00"
+        }
+      ],
+      "photoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K7/v1/louvre-K7.png",
+      "ownMaskPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K7/v1/own-mask.png",
+      "visualQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K7/v1/visual-QA.json",
+      "source323Commit": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+      "selectionPolicy": "First>=85, otherwise best of two; not a PT acceptance",
+      "PTAccepted": false,
+      "selectedAt": "2026-10-15T19:05:22.715139+00:00"
+    }
+  ],
+  "callsInThisBatch": 8,
+  "K1Regenerated": false,
+  "PTAccepted": false,
+  "physicalCameraCertified": false,
+  "masks": "Hand-traced actual-image palace masks, exact native binary IoU; semantic boundary uncertainty retained",
+  "createdAt": "2026-10-15T19:05:56.778731+00:00"
+}

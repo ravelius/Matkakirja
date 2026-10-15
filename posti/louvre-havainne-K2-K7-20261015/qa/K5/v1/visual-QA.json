@@ -1,0 +1,21 @@
+{
+  "reviewedBy": "root",
+  "reviewedAt": "2026-10-15T18:50:46.084841+00:00",
+  "view": "K5",
+  "attempt": 1,
+  "photographicAppearance": true,
+  "labelPresent": true,
+  "pyramidsPresent": false,
+  "poolsPresent": false,
+  "geometryErrors": [
+    "Right near facade-ground boundary appears lower than measured base; quantify with native mask",
+    "Fine facade sculptures, dormers and distant skyline remain generated reconstruction"
+  ],
+  "geographyNotes": [
+    "Enclosed courtyard view contains no misplaced river",
+    "Equestrian statue present but its exact position/identity is unverified; LiDAR/map determines placement"
+  ],
+  "physicalCameraVerified": false,
+  "PTAccepted": false,
+  "photoModifiedAfterGeneration": false
+}

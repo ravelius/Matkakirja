@@ -1,0 +1,56 @@
+{
+  "photo": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-84d0ab9a-be92-4301-89c4-8dd0e20e0833.png",
+  "photoSHA256": "a8249ce7d28cc772fd22f85482cf2bfc03acf75e16abc286aad320b8ef86cf40",
+  "width": 1536,
+  "height": 1024,
+  "mode": "L",
+  "values": [
+    0,
+    255
+  ],
+  "method": "Manual native-coordinate boundary polygons from only the K6/v1 actual photo, rasterized with Pillow without scaling or antialiasing. White denotes visible palace walls, roofs and connected architectural sculpture; black denotes everything else.",
+  "blindness": "No source render, target/reference mask, camera files, prompts, prior images or metrics were inspected for this trace.",
+  "included": "Near palace roof mass, distant palace wings, all shadowed vertical faces, and connected architectural sculpture.",
+  "excluded": "Actual courtyard paving, ground shadows, statue, people, river, trees and streets. External occlusions at facade foot are approximately traced.",
+  "courtAssessment": "No confidently separable exposed ground is visible inside the narrow rear roof recesses; the windowed vertical faces and occluding roofs remain white.",
+  "uncertainEdges": [
+    {
+      "region": [
+        0,
+        82,
+        1535,
+        271
+      ],
+      "detail": "Distant roof/chimney/sculpture silhouette and local vegetation overlaps have typical 2-5 pixel uncertainty; thin ornament microdetail approximate."
+    },
+    {
+      "region": [
+        0,
+        375,
+        1222,
+        633
+      ],
+      "detail": "Distant facade foot and oblique left wing ground contact are manually traced, typical 2-5 pixels uncertain. Shadowed building faces retained."
+    },
+    {
+      "region": [
+        0,
+        589,
+        1535,
+        759
+      ],
+      "detail": "Near roof sculpture and chimney silhouettes traced with main architectural shape preserved; small 2-5 pixel ornament uncertainty."
+    },
+    {
+      "region": [
+        0,
+        375,
+        1222,
+        633
+      ],
+      "detail": "Very small people and lamp overlap at distant facade foot is approximate; some sub-3-pixel silhouettes may be unresolved."
+    }
+  ],
+  "foregroundPixels": 840077,
+  "maskSHA256": "d311f12f7e49b0479b03419f6cbf062566da5138e22822211b06685454b7be96"
+}

@@ -1,0 +1,65 @@
+{
+  "photo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K2/v2/louvre-K2.png",
+  "photoSHA256": "cef53b26c4822b60aa1ef05874952fca0eb60f392705dc35713cb006a60ffc3a",
+  "width": 1536,
+  "height": 1024,
+  "mode": "L",
+  "values": [
+    0,
+    255
+  ],
+  "method": "Manual polygons traced in native photo coordinates from only the supplied actual v2 photograph. Pillow rasterization without resizing or antialiasing. White denotes visible palace roofs/facades; black denotes everything else.",
+  "blindness": "No targets, reference masks, source renders, camera files, prompts, previous images, or metrics were read for this trace.",
+  "included": "All visible connected palace roofs and facades, including shadowed faces.",
+  "excluded": "Open western court floor; large open court; statue; roads; greenery; other city buildings; people and surrounding surfaces.",
+  "lightwellAssessment": "No clearly separable exposed ground floor was identifiable in the narrow northern roof recesses; the visible windowed vertical faces and roof surfaces were included. Those small boundaries remain uncertain.",
+  "uncertainEdges": [
+    {
+      "region": [
+        60,
+        355,
+        270,
+        625
+      ],
+      "detail": "Western oblique roof edge, minor tree overlaps, and facade foot are manually traced; about 2-4 pixel uncertainty."
+    },
+    {
+      "region": [
+        540,
+        310,
+        940,
+        390
+      ],
+      "detail": "North wing fine chimneys, roof ornaments and partially occluded recess edges; about 1-5 pixel uncertainty. Tiny roof recess floors cannot be confidently distinguished from shaded facade/roof at this resolution."
+    },
+    {
+      "region": [
+        1360,
+        270,
+        1435,
+        400
+      ],
+      "detail": "Small tower pinnacles and decorative roof silhouette traced approximately; about 1-4 pixel uncertainty."
+    },
+    {
+      "region": [
+        475,
+        493,
+        1535,
+        779
+      ],
+      "detail": "Foreground roof ornaments and local facade-base details are approximate, about 1-4 pixels."
+    },
+    {
+      "region": [
+        210,
+        453,
+        452,
+        529
+      ],
+      "detail": "Western court boundary retains the shaded walls. Exact ground contact and foreground roof projection have about 2-4 pixel ambiguity."
+    }
+  ],
+  "foregroundPixels": 332977,
+  "maskSHA256": "23d23a212617155e906cd811600dbbf43f2d9ee40f3e1f23a3084325320d4e61"
+}

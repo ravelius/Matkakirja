@@ -1,0 +1,26 @@
+{
+  "view": "K5",
+  "attempt": 1,
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K5-massa.png",
+      "sha256": "0dea3d7d61ccb19642b6beadba40cfe162ccc53029d378901fdc847fe03c3c12",
+      "role": "full-frame geometry base"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K5-ohje.png",
+      "sha256": "96b5a3d7cec9cb59afa44db7fa193a50506bd7918b330bfcbf3adc09bc2db6d4",
+      "role": "red target contour guide"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K5-maski.png",
+      "sha256": "67e406fe847eb03175a159a43424ff86cafb8df2d7c7115a4fd22e5e0f2b9ace",
+      "role": "binary geometry target"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Cour-Napol-on-Pavillon-de-l-horloge-Louvre-007-jpg.jpg",
+      "sha256": "36734a0b490b35417d7f35d54dfdc42830a774cb6186e706484fa374a4059c6b",
+      "role": "Commons materials only"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "view": "K5",
+  "attempt": 1,
+  "IoU": 0.9000280521189022,
+  "intersectionPixels": 372176,
+  "unionPixels": 413516,
+  "targetPixels": 387824,
+  "actualPalacePixels": 397868,
+  "ownMaskSHA256": "933565c333874a57c7fcd236588a05e778f77dfee942470a5bed02402dda81e8",
+  "nativePhotoSHA256": "4052354495e7cb3488c3161d1d39d968f63483809b147ce7bf1c3d45b09904f9",
+  "targetSHA256": "67e406fe847eb03175a159a43424ff86cafb8df2d7c7115a4fd22e5e0f2b9ace",
+  "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+  "physicalCameraCertified": false,
+  "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+  "measuredAt": "2026-10-15T18:53:29.285613+00:00"
+}

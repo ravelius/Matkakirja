@@ -1,0 +1,232 @@
+{
+  "taskNumbers": [
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321
+  ],
+  "files": [
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/VASTAUS-K1-v3-ja-K2-K7-FI.md",
+      "gitBlob": "9759945704c191fa78e5d95627049f5ed4c1844f",
+      "sha256": "29233c822bf728585e329750dba78a36abfbae9b97a9a309902212d6c2a6a0ff",
+      "bytes": 2025,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/VASTAUS-K1-v3-ja-K2-K7-FI.md",
+      "sourceReadInFull": true,
+      "personallyViewed": false
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-kulmat-natiivi.json",
+      "gitBlob": "b8f18cb1e5410a4617204596b7da7f3a114fdc16",
+      "sha256": "43387231950e7fe58e7fff59a88c78cf28ccdf1ac6066e256d068fd6bf3d8e29",
+      "bytes": 4204,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-kulmat-natiivi.json",
+      "sourceReadInFull": true,
+      "personallyViewed": false
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K2-massa.png",
+      "gitBlob": "397325f648311d601be3aecc9808bb2cd3cb0fc4",
+      "sha256": "9168467d972eedab653b0441654aa38c0567969eb303709dfd32dfb2dc90387f",
+      "bytes": 658297,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K2-massa.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.252371+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K2-maski.png",
+      "gitBlob": "f616c294ad65539ab4461ca7bcc4048fc6f6b1b1",
+      "sha256": "8ac1ec533b6634ea2972362b654b40470299d37f404b7fb18c3c04ca0e328590",
+      "bytes": 6393,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K2-maski.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.252661+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K2-ohje.png",
+      "gitBlob": "28f7f530f3d1eaec85fa6ae0b0a63efd02070916",
+      "sha256": "5b0f3b431455e89b8bb6bdfef39d7b9b66b005b90938a818e19c4dcf39a16aba",
+      "bytes": 526289,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K2-ohje.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.252742+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K3-massa.png",
+      "gitBlob": "8efc7a88ea92a457e40b3082f731b3587be0faa8",
+      "sha256": "3cd938742a629df168c7b26175788250db9d93d82713fe97d268dfa6c1ccc3d1",
+      "bytes": 488270,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K3-massa.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.252868+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K3-maski.png",
+      "gitBlob": "2c86e5b44ae2f97c53c4779371c367ce3b3a5048",
+      "sha256": "9da77e23f9de2b39a7e6cf0fb8bd6da05510aafd1764675b7ce6090f53c7b8c2",
+      "bytes": 6794,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K3-maski.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.252914+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K3-ohje.png",
+      "gitBlob": "2f53aab09e9b78194f3fa676cb9f798e1f2c92c4",
+      "sha256": "4679cf9567c2adb00e430d2a827e86f468cc90da62e9f705e60d95e14bf759dc",
+      "bytes": 405007,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K3-ohje.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.252972+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K4-massa.png",
+      "gitBlob": "3981069b99fb364807b0f0cd256d2cb419880586",
+      "sha256": "a2c4c7bad448ccf770ed684674be8b5c4df11df53a53d571fe21f825f9e2da04",
+      "bytes": 1016364,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K4-massa.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.253106+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K4-maski.png",
+      "gitBlob": "819fd1506d65e85d6c60ebccafb36a58c0069c81",
+      "sha256": "bebd55416208f66323c035800690e9083d9b411e60af1d7761742334fd10a4cf",
+      "bytes": 7976,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K4-maski.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.253146+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K4-ohje.png",
+      "gitBlob": "d452f1114c0e913672a1cc76358e9c331e0a36bc",
+      "sha256": "a8535b03ac5d98f76fdb88badb1300e13710bda414f77c38e4d8ceabca6bffff",
+      "bytes": 859340,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K4-ohje.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.253228+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K5-massa.png",
+      "gitBlob": "7bf071675a6401e58a8f3bf323d74ac7abafb380",
+      "sha256": "0dea3d7d61ccb19642b6beadba40cfe162ccc53029d378901fdc847fe03c3c12",
+      "bytes": 698373,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K5-massa.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.253342+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K5-maski.png",
+      "gitBlob": "1ec37b7294ecf663a56432891da0a48ad6054ef2",
+      "sha256": "67e406fe847eb03175a159a43424ff86cafb8df2d7c7115a4fd22e5e0f2b9ace",
+      "bytes": 5985,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K5-maski.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.253383+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K5-ohje.png",
+      "gitBlob": "6f33fd2ae204997fae6680ff71bfcd7c267d1c12",
+      "sha256": "96b5a3d7cec9cb59afa44db7fa193a50506bd7918b330bfcbf3adc09bc2db6d4",
+      "bytes": 540303,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K5-ohje.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.253446+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K6-massa.png",
+      "gitBlob": "7434ebb9054d13687eead92e5b765903740557d4",
+      "sha256": "c59d0ebd77be740149712ef34183b9334b722dcc81aa5105c4051c52a382d448",
+      "bytes": 1321525,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K6-massa.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.253554+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K6-maski.png",
+      "gitBlob": "a401eac65608e5893afd34e830f5f330b234513b",
+      "sha256": "7d1f3cd6365553b7ae25c2c2f84df34dc81dfa225a62f2027cd5f49ad4f07391",
+      "bytes": 8150,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K6-maski.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.253588+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K6-ohje.png",
+      "gitBlob": "39f18602268af68407200bbf0afe105a1cd342b9",
+      "sha256": "9be2d021452abc9cd4c713de2bc6cc0c96dc5e3359c44318df684d1e1c522a17",
+      "bytes": 1154233,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K6-ohje.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.253678+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K7-massa.png",
+      "gitBlob": "6f9e13d115cc16952e0a5cfebeabdd04f5bfc998",
+      "sha256": "5a664bfe3332da889a87aed49f11a5937e0760061fb2696b277f8c7903fb5d13",
+      "bytes": 1667043,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K7-massa.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.253890+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K7-maski.png",
+      "gitBlob": "da702b959b70af9ec0e36ee6a2ac79d37a1aeaf7",
+      "sha256": "97d746c04d7266c843c72a857fa454bff68d24aa66147a28824e448280055796",
+      "bytes": 10195,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K7-maski.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.254006+00:00"
+    },
+    {
+      "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+      "sourcePath": "posti/louvre-natiivi-1536x1024/louvre-K7-ohje.png",
+      "gitBlob": "90a9b3b4157e2736e3d420525b31a148508fca3d",
+      "sha256": "c7f91e81a9c209b209f5af9c645a4d1eb541e54d1c00ef8f2b12c72e303fe305",
+      "bytes": 1443639,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K7-ohje.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T18:22:04.254173+00:00"
+    }
+  ],
+  "nativePNGs": 18
+}

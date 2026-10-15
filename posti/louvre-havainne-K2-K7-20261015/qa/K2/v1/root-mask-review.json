@@ -1,0 +1,12 @@
+{
+  "personallyViewed": true,
+  "actualPhotoViewed": true,
+  "ownMaskOverlayViewed": true,
+  "semanticTraceAcceptedForIoU": true,
+  "notPixelExactSemanticCertification": true,
+  "notes": [
+    "Palace faces and roofs retained, open ground and unrelated city excluded",
+    "Tiny recess/ornament boundaries retain 1-5px hand-trace uncertainty"
+  ],
+  "reviewedAt": "2026-10-15T18:28:19.242834+00:00"
+}

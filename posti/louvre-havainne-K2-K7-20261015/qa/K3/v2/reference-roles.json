@@ -1,0 +1,26 @@
+{
+  "view": "K3",
+  "attempt": 2,
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K3-massa.png",
+      "sha256": "3cd938742a629df168c7b26175788250db9d93d82713fe97d268dfa6c1ccc3d1",
+      "role": "full-frame geometry base"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K3-ohje.png",
+      "sha256": "4679cf9567c2adb00e430d2a827e86f468cc90da62e9f705e60d95e14bf759dc",
+      "role": "red target contour guide"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K3-maski.png",
+      "sha256": "9da77e23f9de2b39a7e6cf0fb8bd6da05510aafd1764675b7ce6090f53c7b8c2",
+      "role": "binary geometry target"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Paris-1er-Louvre-Quai-Francois-Mitterrand-Aile-494.jpg",
+      "sha256": "01b0950a53ad1a4eb94759ab891f1a629dd8025eae645c6ddad17265d46a95cd",
+      "role": "Commons materials only"
+    }
+  ]
+}

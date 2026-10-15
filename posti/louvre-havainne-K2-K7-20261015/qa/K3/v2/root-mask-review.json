@@ -1,0 +1,12 @@
+{
+  "personallyViewed": true,
+  "actualPhotoViewed": true,
+  "ownMaskOverlayViewed": true,
+  "semanticTraceAcceptedForIoU": true,
+  "notPixelExactSemanticCertification": true,
+  "notes": [
+    "Actual visible palace traced, shadowed facades retained and actual floor holes removed",
+    "City/river/statue/trees excluded; small1-5px detail uncertainty retained"
+  ],
+  "reviewedAt": "2026-10-15T18:42:32.053233+00:00"
+}

@@ -1,0 +1,73 @@
+{
+  "photo": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-fd7b4dff-2583-482f-8076-bd255d792555.png",
+  "photoSHA256": "31f6496ee0433caea52fd795dd0e6bd25bf572d5233c2cd5a8e79c037474dccb",
+  "width": 1536,
+  "height": 1024,
+  "mode": "L",
+  "values": [
+    0,
+    255
+  ],
+  "method": "Manual native-coordinate polygons traced visually from the supplied photo only, rasterized with Pillow without resizing or antialiasing. White means visible palace roofs and facades; black means all other pixels.",
+  "blindness": "No target masks, source renders, camera files, prompts, previous images, or metrics were inspected.",
+  "included": "Visible palace wings and pavilions, including their shadowed facades.",
+  "excluded": "Open western court floor and narrow visible floors of two north-wing recesses; large open court; streets; city blocks; trees; statue; people; all other surroundings.",
+  "uncertainEdges": [
+    {
+      "region": [
+        585,
+        273,
+        749,
+        323
+      ],
+      "detail": "Small north-wing recess: dark windowed vertical faces retained; narrow floor boundary partly occluded by foreground roof. Manual floor estimate may vary by about 3-5 pixels."
+    },
+    {
+      "region": [
+        790,
+        285,
+        895,
+        323
+      ],
+      "detail": "Second north-wing recess: narrow visible floor separated from dark facade by a manual estimate; about 3-5 pixel ambiguity."
+    },
+    {
+      "region": [
+        741,
+        228,
+        1110,
+        282
+      ],
+      "detail": "Back roofline has fine chimneys and partial tree occlusions. Polygon follows visible architectural outline, with about 2-4 pixel uncertainty on small details."
+    },
+    {
+      "region": [
+        1354,
+        214,
+        1429,
+        345
+      ],
+      "detail": "Fine tower pinnacles and roof ornaments traced approximately to their visible silhouettes; several 1-3 pixel ornaments may be omitted."
+    },
+    {
+      "region": [
+        60,
+        305,
+        275,
+        575
+      ],
+      "detail": "Western oblique edge and facade foot: local vegetation overlap and small roof ornaments give about 2-4 pixel boundary uncertainty."
+    },
+    {
+      "region": [
+        465,
+        437,
+        1535,
+        746
+      ],
+      "detail": "Long foreground roofline and facade base include manual small-scale tracing; subpixel and fine rail/chimney details are approximate."
+    }
+  ],
+  "maskSHA256": "9dfb27b4768ce18e5b16041e12b7452de670a53dc12c8321b018e23ae76324f3",
+  "foregroundPixels": 351079
+}

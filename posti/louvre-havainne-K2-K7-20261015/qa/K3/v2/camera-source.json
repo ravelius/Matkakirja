@@ -1,0 +1,20 @@
+{
+  "id": "K3",
+  "nimi": "K3 pallokierros etelä",
+  "tyyppi": "pallokierros",
+  "kamera_enu_m": [
+    -153.91,
+    -422.86,
+    280
+  ],
+  "kamera_lat": 48.8572014,
+  "kamera_lon": 2.3337985,
+  "katse_deg": 20,
+  "atsimuutti_deg": 200.0,
+  "etaisyys_m": 450.0,
+  "kameran_korkeus_m": 280,
+  "kallistus_deg": -30.49,
+  "vfov_deg": 51.8,
+  "kuvasuhde": "3:2",
+  "kuvaus": "Seinen yltä vasemmalta rannalta: Grande Galerie ja Denonin Seinen julkisivu edessä, piha takana."
+}

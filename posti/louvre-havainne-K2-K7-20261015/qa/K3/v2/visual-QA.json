@@ -1,0 +1,23 @@
+{
+  "reviewedBy": "root",
+  "reviewedAt": "2026-10-15T18:40:39.863818+00:00",
+  "view": "K3",
+  "attempt": 2,
+  "photographicAppearance": true,
+  "labelPresent": true,
+  "pyramidsPresent": false,
+  "poolsPresent": false,
+  "geometryErrors": [
+    "Palace still substantially above target screen-space rows; far roofs near190 vs343, near pavilion near380 vs534",
+    "Foreground wing and internal courts have different silhouette proportions",
+    "Extra far roof forms and details are illustrative reconstruction"
+  ],
+  "geographyNotes": [
+    "Seine foreground south with city/Rivoli north beyond",
+    "Cour Carree on right, Tuileries on left",
+    "Equestrian statue moved into broad western courtyard; exact location not verified"
+  ],
+  "physicalCameraVerified": false,
+  "PTAccepted": false,
+  "photoModifiedAfterGeneration": false
+}

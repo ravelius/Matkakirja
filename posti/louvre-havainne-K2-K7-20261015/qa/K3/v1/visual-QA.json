@@ -1,0 +1,22 @@
+{
+  "reviewedBy": "root",
+  "reviewedAt": "2026-10-15T18:35:09.498201+00:00",
+  "view": "K3",
+  "attempt": 1,
+  "photographicAppearance": true,
+  "labelPresent": true,
+  "pyramidsPresent": false,
+  "poolsPresent": false,
+  "geometryErrors": [
+    "Palace displaced upward: far roofline aboutrow180 vs target343; foreground wing bottom about640 vs732",
+    "Courtyard shape and inner facade placement differ from source",
+    "Near roof courtyard proportions and central pavilions are illustrative reconstruction"
+  ],
+  "geographyNotes": [
+    "Seine foreground south, Rivoli far north, Cour Carree right and Tuileries left are directionally consistent",
+    "Equestrian statue appears in Cour Carree; position not verified and must not drive model"
+  ],
+  "physicalCameraVerified": false,
+  "PTAccepted": false,
+  "photoModifiedAfterGeneration": false
+}

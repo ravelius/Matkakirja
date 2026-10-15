@@ -1,0 +1,56 @@
+{
+  "photo": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-885158c2-d73a-4ad5-9159-690b56c90680.png",
+  "photoSHA256": "78fb83c4074a3da5a3b8aad4420f72511fc07a22e324f089b20378b22b6f3c6d",
+  "width": 1536,
+  "height": 1024,
+  "mode": "L",
+  "values": [
+    0,
+    255
+  ],
+  "method": "Manual native-coordinate polygons traced from only the actual K7/v1 photograph, rasterized with Pillow without resampling or antialiasing. White denotes visible palace walls, roofs, connected sculpture and glass roofs; black denotes everything else.",
+  "blindness": "No source renders, target/reference masks, camera files, prompts, previous images or metrics were read for this trace.",
+  "included": "Visible palace facades, shadowed faces, ordinary/glass roofs and connected architectural sculpture.",
+  "excluded": "Large open court, court statue, people, external lamps, near open court paving, streets, trees, other city and ground shadows.",
+  "recessAssessment": "The far roof recess shows windowed vertical facades down to the occluding front roof. No exposed ground floor can be confidently separated; those shadowed walls remain white. Two near court floors are visibly exposed and explicitly excluded.",
+  "uncertainEdges": [
+    {
+      "region": [
+        339,
+        0,
+        1535,
+        308
+      ],
+      "detail": "Far rear roof/road boundary and chimney/sculpture detail traced manually; typical 2-5 pixel uncertainty."
+    },
+    {
+      "region": [
+        649,
+        290,
+        1535,
+        700
+      ],
+      "detail": "Oblique facade-to-ground contact and small lamp/person occlusions have about 2-5 pixel uncertainty; some sub-3-pixel people may be unresolved."
+    },
+    {
+      "region": [
+        0,
+        355,
+        975,
+        1023
+      ],
+      "detail": "Near roof and attached sculpture silhouette use reliable main shapes; thin ornament microdetail has about 2-5 pixel uncertainty."
+    },
+    {
+      "region": [
+        0,
+        643,
+        480,
+        1023
+      ],
+      "detail": "Near actual courtyard ground contact is partly shadowed; about 3-5 pixel uncertainty at wall bases and steps. Shadowed vertical faces retained."
+    }
+  ],
+  "foregroundPixels": 661965,
+  "maskSHA256": "af0d9e9d6b3bfd12f45ee9734895ce6d7b784df4ca8375928cc0d8850e0cd528"
+}

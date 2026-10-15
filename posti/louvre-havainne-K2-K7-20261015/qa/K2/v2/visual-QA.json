@@ -1,0 +1,26 @@
+{
+  "reviewedBy": "root",
+  "reviewedAt": "2026-10-15T18:30:41.505077+00:00",
+  "view": "K2",
+  "attempt": 2,
+  "photographicAppearance": true,
+  "labelPresent": true,
+  "pyramidsPresent": false,
+  "poolsPresent": true,
+  "geometryErrors": [
+    "Vertical composition remains too high: far right pavilion near row280 vs target340, near central pavilion near490 vs529",
+    "Far facade and courtyard openings differ from LiDAR",
+    "Near roof wells have invented geometry; do not copy into physical model"
+  ],
+  "geographyNotes": [
+    "Cour Carree on screen left and Tuileries screen right are directionally consistent",
+    "Extra dense city detail is unverified reconstruction; Seine not established in this framing"
+  ],
+  "physicalCameraVerified": false,
+  "PTAccepted": false,
+  "photoModifiedAfterGeneration": false,
+  "poolScope": "Small round background pool/basin at extreme upper-right; no palace courtyard pool observed",
+  "otherNotes": [
+    "Independent review found a round basin at extreme upper-right despite no-pools instruction. This is a known residual deviation; do not copy it into model. Both authorized attempts already used, no third generation allowed."
+  ]
+}

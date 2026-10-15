@@ -1,0 +1,26 @@
+{
+  "view": "K4",
+  "attempt": 1,
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K4-massa.png",
+      "sha256": "a2c4c7bad448ccf770ed684674be8b5c4df11df53a53d571fe21f825f9e2da04",
+      "role": "full-frame geometry base"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K4-ohje.png",
+      "sha256": "a8535b03ac5d98f76fdb88badb1300e13710bda414f77c38e4d8ceabca6bffff",
+      "role": "red target contour guide"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K4-maski.png",
+      "sha256": "bebd55416208f66323c035800690e9083d9b411e60af1d7761742334fd10a4cf",
+      "role": "binary geometry target"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-West-facade-of-the-Cour-Carr-e-Louvre-11-February.jpg",
+      "sha256": "4be60c9c4855b0001174e5c0da980bd906df89100e953c4355b24961a7f2f93b",
+      "role": "Commons materials only"
+    }
+  ]
+}

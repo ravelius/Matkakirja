@@ -1,0 +1,17 @@
+{
+  "task": 315,
+  "receiverSelectedVersion": "v2",
+  "PTAccepted": true,
+  "sourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+  "sourcePath": "posti/louvre-natiivi-1536x1024/VASTAUS-K1-v3-ja-K2-K7-FI.md",
+  "corroboratedByTask323": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+  "IoU": 0.9133664569438069,
+  "acceptedImageSHA256": "4d17784bd0b0e98d5566447a5d23f5c1b0f41f389fbf751e5719dda4b063623e",
+  "modelGeometryUsesLiDARNotPhoto": true,
+  "knownImageErrors": [
+    "Seine wrongly behind palace",
+    "Cour Carree absent",
+    "Near wings10-25px narrow"
+  ],
+  "acceptedAtRecorded": "2026-10-15T18:22:04.322501+00:00"
+}

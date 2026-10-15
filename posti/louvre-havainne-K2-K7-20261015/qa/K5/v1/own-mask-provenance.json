@@ -1,0 +1,55 @@
+{
+  "photo": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d2f9d330-d2e2-4779-a377-f1414349f964.png",
+  "photoSHA256": "4052354495e7cb3488c3161d1d39d968f63483809b147ce7bf1c3d45b09904f9",
+  "width": 1536,
+  "height": 1024,
+  "mode": "L",
+  "values": [
+    0,
+    255
+  ],
+  "method": "Manual native-coordinate silhouette and occlusion polygons from only the actual K5/v1 photograph, rasterized with Pillow without scaling or antialiasing. White denotes visible palace walls, roofs and connected architectural sculpture; black denotes everything else.",
+  "blindness": "No source renders, reference/target masks, camera files, prompts, previous images or metrics were inspected for this trace.",
+  "included": "Visible palace facades, roofs, connected architectural sculpture and building surfaces in shadow.",
+  "excluded": "Open paving and ground shadows, court statue, lamps and small people where they overlap palace, sky, distant city, trees and non-palace background.",
+  "uncertainEdges": [
+    {
+      "region": [
+        0,
+        300,
+        1535,
+        453
+      ],
+      "detail": "Fine roof ornaments and connected sculpture are traced approximately; typical 2-5 pixel uncertainty, with some thin sculpture/finial microdetail omitted."
+    },
+    {
+      "region": [
+        0,
+        550,
+        1535,
+        865
+      ],
+      "detail": "Oblique facade-to-paving contact traced manually. Typical 2-5 pixel uncertainty on steps, projecting bases and local shadowed contacts."
+    },
+    {
+      "region": [
+        0,
+        550,
+        1535,
+        882
+      ],
+      "detail": "Small lamp and person occlusions are manual approximate silhouettes, typically 1-3 pixels uncertain. Very distant tiny people may be unresolved at native resolution."
+    },
+    {
+      "region": [
+        383,
+        397,
+        551,
+        447
+      ],
+      "detail": "Background openings between stepped left roofs are kept black, with 2-5 pixel uncertainty along small ornamental edges."
+    }
+  ],
+  "foregroundPixels": 397868,
+  "maskSHA256": "933565c333874a57c7fcd236588a05e778f77dfee942470a5bed02402dda81e8"
+}

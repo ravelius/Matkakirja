@@ -1,0 +1,20 @@
+{
+  "id": "K5",
+  "nimi": "K5 pelikulma B",
+  "tyyppi": "pelikulma",
+  "kamera_enu_m": [
+    -140.95,
+    51.3,
+    32
+  ],
+  "kamera_lat": 48.8614609,
+  "kamera_lon": 2.3339753,
+  "katse_deg": 110,
+  "atsimuutti_deg": 290.0,
+  "etaisyys_m": 150.0,
+  "kameran_korkeus_m": 32,
+  "kallistus_deg": -4.9,
+  "vfov_deg": 55.2,
+  "kuvasuhde": "3:2",
+  "kuvaus": "Pelin Louvre-näkymä: akselilla 147 m pyramidista länteen, 32 m korkeudella, katse Sullyn paviljonkia kohti."
+}

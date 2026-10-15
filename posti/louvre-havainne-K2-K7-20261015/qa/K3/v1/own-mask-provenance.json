@@ -1,0 +1,64 @@
+{
+  "photo": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-e6438c69-2f61-434c-ab1a-ae4c8d7aa831.png",
+  "photoSHA256": "f2c0c963d0682c819cbb22776969f1f3a1ca46d84bc6703b12b161433429f443",
+  "width": 1536,
+  "height": 1024,
+  "mode": "L",
+  "values": [
+    0,
+    255
+  ],
+  "method": "Manual native-coordinate polygon trace from only the actual K3/v1 photograph. Rasterized with Pillow without resizing or antialiasing. White denotes visible palace roofs/facades; black denotes everything else.",
+  "blindness": "No source renders, target/reference masks, camera files, prompts, previous images or metrics were inspected.",
+  "included": "Palace roofs and facades including shadowed vertical faces.",
+  "excluded": "Large open western court; eastern enclosed court floor including statue; visible floors of the two narrow foreground recesses; city buildings, greenery, river, streets and other surroundings.",
+  "uncertainEdges": [
+    {
+      "region": [
+        207,
+        157,
+        605,
+        279
+      ],
+      "detail": "Distant northern roof ornaments and facade foot have about 1-4 pixel uncertainty."
+    },
+    {
+      "region": [
+        985,
+        250,
+        1467,
+        525
+      ],
+      "detail": "Eastern oblique roof edge has fine details and local partial occlusions; about 2-5 pixel uncertainty."
+    },
+    {
+      "region": [
+        1075,
+        332,
+        1335,
+        425
+      ],
+      "detail": "Eastern court ground/wall boundary and south roof projection manually estimated; about 2-4 pixel uncertainty. All visible shadowed walls retained."
+    },
+    {
+      "region": [
+        587,
+        511,
+        970,
+        533
+      ],
+      "detail": "Narrow foreground court floor strips are shadowed and partly roof-occluded; exact floor contact about 3-5 pixels uncertain."
+    },
+    {
+      "region": [
+        0,
+        385,
+        1078,
+        636
+      ],
+      "detail": "Foreground fine ornaments, spires and facade ground contact have about 1-4 pixel uncertainty."
+    }
+  ],
+  "foregroundPixels": 324804,
+  "maskSHA256": "fbba09a0174c6e8fdf0502ffe4131bb831251c5844770aaeb1ec371055debe6f"
+}

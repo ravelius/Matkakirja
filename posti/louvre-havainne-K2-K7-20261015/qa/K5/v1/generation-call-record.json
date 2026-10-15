@@ -1,0 +1,24 @@
+{
+  "view": "K5",
+  "attempt": 1,
+  "taskNumber": 319,
+  "source323Commit": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+  "issued": 1,
+  "completed": 1,
+  "issuedAt": "2026-10-15T18:48:59.938646+00:00",
+  "builtinImageGen": true,
+  "wholeNewCandidate": true,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "completedAt": "2026-10-15T18:50:01.164898+00:00",
+  "returnedPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d2f9d330-d2e2-4779-a377-f1414349f964.png",
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "nativeMode": "RGB",
+  "nativeSHA256": "4052354495e7cb3488c3161d1d39d968f63483809b147ce7bf1c3d45b09904f9",
+  "nativeBytes": 2774475,
+  "upscaled": false,
+  "photoEditedAfterGeneration": false
+}

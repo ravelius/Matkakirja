@@ -1,0 +1,13 @@
+{
+  "personallyViewed": true,
+  "actualPhotoViewed": true,
+  "ownMaskOverlayViewed": true,
+  "semanticTraceAcceptedForIoU": true,
+  "notPixelExactSemanticCertification": true,
+  "notes": [
+    "Trace follows actual palace rather than desired source silhouette",
+    "Actual courtyard ground excluded; shadowed building retained",
+    "Small decorations and roof-recess ambiguity retained as1-5px uncertainty"
+  ],
+  "reviewedAt": "2026-10-15T18:32:25.534761+00:00"
+}

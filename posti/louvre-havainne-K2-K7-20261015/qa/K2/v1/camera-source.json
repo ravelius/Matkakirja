@@ -1,0 +1,20 @@
+{
+  "id": "K2",
+  "nimi": "K2 pallokierros pohjoinen",
+  "tyyppi": "pallokierros",
+  "kamera_enu_m": [
+    153.91,
+    422.86,
+    280
+  ],
+  "kamera_lat": 48.8647986,
+  "kamera_lon": 2.3380015,
+  "katse_deg": 200,
+  "atsimuutti_deg": 20.0,
+  "etaisyys_m": 450.0,
+  "kameran_korkeus_m": 280,
+  "kallistus_deg": -30.49,
+  "vfov_deg": 51.8,
+  "kuvasuhde": "3:2",
+  "kuvaus": "Rue de Rivolin puolelta: Richelieun lohko ja Rivolin julkisivu edessä, Napoleonin piha ja Cour Carrée näkyvät sen yli."
+}

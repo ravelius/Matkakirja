@@ -1,0 +1,52 @@
+{
+  "taskNumber": 323,
+  "reviewType": "independent_visual_comparison_K7",
+  "view": "K7",
+  "candidate": "v1",
+  "photoSHA256": "78fb83c4074a3da5a3b8aad4420f72511fc07a22e324f089b20378b22b6f3c6d",
+  "purpose": "Version-specific modeling guidance; not approval or PT acceptance.",
+  "method": "Direct visual inspection of the actual native photograph and matching massa/ohje images. No silhouette masks or IoU artifacts consulted.",
+  "filesViewed": [
+    {
+      "role": "actual_photo",
+      "path": "K7/v1/louvre-K7.png",
+      "sha256": "78fb83c4074a3da5a3b8aad4420f72511fc07a22e324f089b20378b22b6f3c6d"
+    },
+    {
+      "role": "native_massa",
+      "path": "sources/task315-321/louvre-K7-massa.png",
+      "sha256": "5a664bfe3332da889a87aed49f11a5937e0760061fb2696b277f8c7903fb5d13"
+    },
+    {
+      "role": "native_ohje",
+      "path": "sources/task315-321/louvre-K7-ohje.png",
+      "sha256": "c7f91e81a9c209b209f5af9c645a4d1eb541e54d1c00ef8f2b12c72e303fe305"
+    }
+  ],
+  "findings": [
+    {
+      "area": "internal_roof_mass",
+      "severity": "moderate",
+      "observation": "Behind the left part of the far wing, immediately left/back of its central domed pavilion, the photograph renders an open rectangular inner court with visible inward-facing walls. The corresponding source area reads as a continuous raised sloping/curved roof mass.",
+      "modelingGuidance": "Retain the source roof mass at this location rather than opening the generated rectangular well."
+    },
+    {
+      "area": "far_facade_footline",
+      "severity": "minor",
+      "observation": "The far wing facade extends slightly farther downward toward the right frame edge than the source contour, making that side of the courtyard a little more compressed.",
+      "modelingGuidance": "Keep the native source facade footline and diagonal projection."
+    }
+  ],
+  "cameraAndMassObservation": "The distinctive diagonal composition is preserved: the close roof band enters from the bottom-left and crosses the bottom edge, while the far wing enters at the clipped top-left and descends toward the right edge. The near pavilion and foreground crops closely follow the source; the photograph has not been converted into a symmetric frontal view.",
+  "geographyObservation": "The open courtyard remains between the two diagonal palace bands. A street, trees and city buildings sit behind the far wing along the upper edge. No river is inserted into the courtyard, and no river is visible in this tight composition.",
+  "literalHavainnekuva": "Present, readable and correctly spelled at top-left.",
+  "pyramidsObserved": false,
+  "poolsObserved": false,
+  "photographicSurfaceQuality": "Credible limestone, slate/lead roofs, paving, roof ornament and coherent strong daylight. The broad dark glazed roof area on the far-right block reads as roofing rather than a free-standing pyramid.",
+  "K1Reviewed": false,
+  "masksOrIoUArtifactsConsulted": false,
+  "imagesEditedOrGenerated": false,
+  "gitOrNetworkUsed": false,
+  "PTAcceptanceEvaluated": false,
+  "createdAt": "2026-10-15T19:02:07.625917+00:00"
+}

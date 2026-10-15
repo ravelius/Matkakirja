@@ -1,0 +1,23 @@
+{
+  "reviewedBy": "root",
+  "reviewedAt": "2026-10-15T18:24:48.982033+00:00",
+  "view": "K2",
+  "attempt": 1,
+  "photographicAppearance": true,
+  "labelPresent": true,
+  "pyramidsPresent": false,
+  "poolsPresent": false,
+  "geometryErrors": [
+    "Whole palace shifted upward versus native LiDAR: far right pavilion about row220 rather than340",
+    "Near central pavilion about row435 rather than529",
+    "Near wing footline also too high; open courtyard silhouettes differ"
+  ],
+  "geographyNotes": [
+    "Cour Carree appears on left",
+    "Rivoli in foreground, Tuileries screen right",
+    "Seine not visibly established; no misplaced courtyard water"
+  ],
+  "physicalCameraVerified": false,
+  "PTAccepted": false,
+  "photoModifiedAfterGeneration": false
+}

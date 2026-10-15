@@ -1,0 +1,655 @@
+{
+  "taskNumber": 323,
+  "relatedTaskNumbers": [
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321
+  ],
+  "scope": "All six K2-K7 as one combined mailbox delivery",
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "correctPalaceWikidata": "Q1075988",
+  "K1SelectedVersion": "v2",
+  "K1PTAccepted": true,
+  "K1Regenerated": false,
+  "newCalls": 8,
+  "totalLouvreCalls": 11,
+  "selectedViews": [
+    {
+      "view": "K2",
+      "selectedAttempt": 2,
+      "selectedIoU": 0.5850468014686869
+    },
+    {
+      "view": "K3",
+      "selectedAttempt": 1,
+      "selectedIoU": 0.17434897783804665
+    },
+    {
+      "view": "K4",
+      "selectedAttempt": 1,
+      "selectedIoU": 0.854641775402794
+    },
+    {
+      "view": "K5",
+      "selectedAttempt": 1,
+      "selectedIoU": 0.9000280521189022
+    },
+    {
+      "view": "K6",
+      "selectedAttempt": 1,
+      "selectedIoU": 0.9713063809288828
+    },
+    {
+      "view": "K7",
+      "selectedAttempt": 1,
+      "selectedIoU": 0.928838735252701
+    }
+  ],
+  "source323Commit": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+  "PTAccepted": false,
+  "masksAreActualImageTraces": true,
+  "upscaled": false,
+  "cropped": false,
+  "photoPartiallyEdited": false,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "R2Used": false,
+  "gameIntegrated": false,
+  "mainMerged": false,
+  "published": false,
+  "files": {
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K2.png": {
+      "sha256": "cef53b26c4822b60aa1ef05874952fca0eb60f392705dc35713cb006a60ffc3a",
+      "bytes": 3788199
+    },
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K2-maski.png": {
+      "sha256": "23d23a212617155e906cd811600dbbf43f2d9ee40f3e1f23a3084325320d4e61",
+      "bytes": 5769
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/prompt.txt": {
+      "sha256": "a896f9376f75038e137601393fc173590777e6777a61bc0b2437ecf6b941c2fb",
+      "bytes": 3218
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/reference-roles.json": {
+      "sha256": "6b5a139dc84717f4fcabd3d8e7a1101963e0abe24f8a28e975818a99ca40cfa7",
+      "bytes": 1267
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/camera-source.json": {
+      "sha256": "a302815a03ce62325fb1bef305f13c217f85ae6b977a8d3ac9de8c466c6d73b7",
+      "bytes": 500
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/louvre-K2.png": {
+      "sha256": "31f6496ee0433caea52fd795dd0e6bd25bf572d5233c2cd5a8e79c037474dccb",
+      "bytes": 3732330
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/generation-call-record.json": {
+      "sha256": "37625f2ba63dc257a53790f15973e20ab146903686496f70c80ad2ea33fceb90",
+      "bytes": 744
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/visual-QA.json": {
+      "sha256": "7dce589bd9d7e2c3135029be348ef3dbd317b13ab68a5c37dd4bf62ffad3cca0",
+      "bytes": 762
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/trace-own-mask.py": {
+      "sha256": "e699cb4ae2987fcc5672653e8e83e2f7bbfba07298b38482f00220977e0552b0",
+      "bytes": 9940
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/own-mask.png": {
+      "sha256": "9dfb27b4768ce18e5b16041e12b7452de670a53dc12c8321b018e23ae76324f3",
+      "bytes": 6299
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/own-mask-overlay.png": {
+      "sha256": "ec37f1575a3ce2f2c3688b6de3983e83fdb17ff9a73fd7947dcfdf66888b5829",
+      "bytes": 3226440
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/own-mask-provenance.json": {
+      "sha256": "b56d1107e691c4d8b4d0859a7c0e075c44090bd2c6234944836a29fd59d66637",
+      "bytes": 2581
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/native-IoU.json": {
+      "sha256": "c0042311f4dff0931c2768562b0acb92f47d1f0e6ff2d8c0002b3349de0afeb8",
+      "bytes": 733
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/target-own-contour-overlay.png": {
+      "sha256": "a87a84687a6c9dde960a89608017e8c822c83c5fb7f405fdc186e2ab053ed04b",
+      "bytes": 3291956
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/mask-difference.png": {
+      "sha256": "3d2104a238fe824dd8e122e49c9caa4a810da8b4bb726f9f5623ffaac468cf28",
+      "bytes": 15447
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v1/root-mask-review.json": {
+      "sha256": "5f74629fe965f56238d0c3c346381bee4c81c3069c4747f2c151f13e68df272e",
+      "bytes": 401
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/prompt.txt": {
+      "sha256": "6e8cf9b8f21ef105389f2781cbf00e04e369ff135bae08c8cde044765cce60a1",
+      "bytes": 4018
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/reference-roles.json": {
+      "sha256": "c100dcc6b7f430eda0fb3e8398f284355a1ff52a6b27730c287bfc0fea9392e2",
+      "bytes": 1267
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/camera-source.json": {
+      "sha256": "a302815a03ce62325fb1bef305f13c217f85ae6b977a8d3ac9de8c466c6d73b7",
+      "bytes": 500
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/louvre-K2.png": {
+      "sha256": "cef53b26c4822b60aa1ef05874952fca0eb60f392705dc35713cb006a60ffc3a",
+      "bytes": 3788199
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/generation-call-record.json": {
+      "sha256": "bab7372f1cb34533e4f8a4449599d21a3216464eb25da94781fa91b9b098d710",
+      "bytes": 744
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/visual-QA.json": {
+      "sha256": "23624e0c05cd1fcfefc9661ea0bd3863c7ceb68fa06b76c84c6d3a92d5ff1bb9",
+      "bytes": 1188
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/trace-own-mask.py": {
+      "sha256": "1f5519fea1ed2748a1817bf7c66115ed19fb39b04061ddefa505160114cdb199",
+      "bytes": 8831
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/own-mask.png": {
+      "sha256": "23d23a212617155e906cd811600dbbf43f2d9ee40f3e1f23a3084325320d4e61",
+      "bytes": 5769
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/own-mask-overlay.png": {
+      "sha256": "87e2b648363625ca14e344eb8c6aa6137c6a7c0a376bda67697f1885538e767d",
+      "bytes": 3283960
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/own-mask-provenance.json": {
+      "sha256": "273c960fbf08b37dfd74b4bd5e367937c8449d5c030716a1d5971321e8f78b26",
+      "bytes": 2495
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/native-IoU.json": {
+      "sha256": "ea1dd42531f4002c18224d9760fa8e1c82dc22f7c885869aed457df7dd5b626c",
+      "bytes": 732
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/target-own-contour-overlay.png": {
+      "sha256": "77d779e68fec35e5109f32c22d973da34fc2fafe4277573c1b2cc1c44276f738",
+      "bytes": 3343235
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/mask-difference.png": {
+      "sha256": "c4631186435695e0a7424e92068b686c7d893b995f466c5aa7ea3600473e316d",
+      "bytes": 14498
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/v2/root-mask-review.json": {
+      "sha256": "b7b8a0558ef1b364e43dc6b12ed88379e8e185955966e87c9b1a17740b0de2d2",
+      "bytes": 467
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K2/selection-task323.json": {
+      "sha256": "09e96dde2128d5c03dd8acc91fd567bc820dc6382607d4d0e3c90acde2b7246d",
+      "bytes": 2335
+    },
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K3.png": {
+      "sha256": "f2c0c963d0682c819cbb22776969f1f3a1ca46d84bc6703b12b161433429f443",
+      "bytes": 3449007
+    },
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K3-maski.png": {
+      "sha256": "fbba09a0174c6e8fdf0502ffe4131bb831251c5844770aaeb1ec371055debe6f",
+      "bytes": 5886
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/prompt.txt": {
+      "sha256": "57d2d52bce20a80cb01bbb9998e2db478a973a13b122f8c0c260dba0d474d18c",
+      "bytes": 3113
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/reference-roles.json": {
+      "sha256": "5b7c4db85fe12b302b2dee2f9e77db81cec72d3d142729b759c62e387b14ba89",
+      "bytes": 1279
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/camera-source.json": {
+      "sha256": "1a4da88226fe3fac9fc3a9096c9846e56d6b704b40cb22d96f4e5e261ddd2840",
+      "bytes": 475
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/louvre-K3.png": {
+      "sha256": "f2c0c963d0682c819cbb22776969f1f3a1ca46d84bc6703b12b161433429f443",
+      "bytes": 3449007
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/generation-call-record.json": {
+      "sha256": "465cd16b9c01245dab0070c11095f672d58069d606d8f150bba8e4e5b353f82a",
+      "bytes": 744
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/visual-QA.json": {
+      "sha256": "d255ac9de28d8e117346dcc313bc919eaa18062a377682dd598846590e32d915",
+      "bytes": 855
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/trace-own-mask.py": {
+      "sha256": "b42221ab68fff88d8120ed04e089ae479d8cf002668ee3f84f1ccea8d845deef",
+      "bytes": 8379
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/own-mask.png": {
+      "sha256": "fbba09a0174c6e8fdf0502ffe4131bb831251c5844770aaeb1ec371055debe6f",
+      "bytes": 5886
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/own-mask-overlay.png": {
+      "sha256": "7a8590dffb118d0974edb72c22e38187e41dfde2c3692249f23643076674b8cd",
+      "bytes": 3008042
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/own-mask-provenance.json": {
+      "sha256": "ab5273c78afcf38e1a9d990749e8f0ddc90a81bec0b00dc0af58ea0e3773e61d",
+      "bytes": 2187
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/native-IoU.json": {
+      "sha256": "8731a9c34dfa624bfa1626188aa78c4dbcd4dad8da85cf995d4df4417e19bae9",
+      "bytes": 732
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/target-own-contour-overlay.png": {
+      "sha256": "f6de7b38d6f181fc2b769f84add27411418b8352da159fd1edbee3a1a44aad92",
+      "bytes": 3068627
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/mask-difference.png": {
+      "sha256": "d07bfa1a7843246bc45b8952d5d9668824cf8099df59df6ddcde8de98f340817",
+      "bytes": 15575
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v1/root-mask-review.json": {
+      "sha256": "e5fb28bdcbf8ee27dcd05a1519088742eb6f272c18e760127de31385ad3ba427",
+      "bytes": 430
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/prompt.txt": {
+      "sha256": "381aacc907548fabfbdb9e7a997d228b0dee8c58ec15b0f22d487db61ebfd443",
+      "bytes": 3888
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/reference-roles.json": {
+      "sha256": "d657cdb68e8b39be1823da3b44ffb87fe93a0510f5f814bfc2149e03d9ab592f",
+      "bytes": 1279
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/camera-source.json": {
+      "sha256": "1a4da88226fe3fac9fc3a9096c9846e56d6b704b40cb22d96f4e5e261ddd2840",
+      "bytes": 475
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/louvre-K3.png": {
+      "sha256": "0830d5db3f1f73c20c3abf18b182e112e60694bb4c59f376231c07a25623a579",
+      "bytes": 3505998
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/generation-call-record.json": {
+      "sha256": "e5b8666560ec2ee221d6ebb622c5ffa18c9abcb3d4cb9f335d7153604a71dbb2",
+      "bytes": 744
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/visual-QA.json": {
+      "sha256": "8b667ed0f3594a13630dcad0d2d262304535506d1bbeaf562a5f8d88a3f461d4",
+      "bytes": 841
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/trace-own-mask.py": {
+      "sha256": "9bfdb1d5afc9fd35571f2677c87dfc3d846ccc35a0e9cba16a0950028015821a",
+      "bytes": 8332
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/own-mask.png": {
+      "sha256": "7810005396492aecb63b9ccbe4b8022c38475fb0916f584c78afeac4334402c3",
+      "bytes": 5736
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/own-mask-overlay.png": {
+      "sha256": "9edc8f744429b99baf8d7331433b1abd4887053e83016cc36667e838da7cf8dd",
+      "bytes": 3082763
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/own-mask-provenance.json": {
+      "sha256": "e115ce5cbcefab1170aa5b7042f87128a21587ad2ce9676a59bb20740221630b",
+      "bytes": 2242
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/native-IoU.json": {
+      "sha256": "70006a690c8144308d094ee0e4f88cd509152cc0f2efb62eb434948ac6325b99",
+      "bytes": 732
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/target-own-contour-overlay.png": {
+      "sha256": "a87dd017fcc4a658eb9357490628c1ea4abac87c3c2d3d1cfa361a69639b9399",
+      "bytes": 3138177
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/mask-difference.png": {
+      "sha256": "dbec2b961d4b06e26f4e77d4d1a85fa3725019138cc6a8a7bde56eab09987606",
+      "bytes": 15336
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/v2/root-mask-review.json": {
+      "sha256": "c86526c6ac6d0196ca310e1c5e6304e791a7527e8f875fb6e7061af99e186ee9",
+      "bytes": 420
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K3/selection-task323.json": {
+      "sha256": "e37463aeaa7535a6e5b1a5fea8e5bc1ceb8b39ce94cda3d9e583010871d96418",
+      "bytes": 2335
+    },
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K4.png": {
+      "sha256": "a29ae64401165d6b2c819c7c81ffb47ebd2939b3882d382848caea3b825947c9",
+      "bytes": 3728065
+    },
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K4-maski.png": {
+      "sha256": "18d0bcd31d7b746ded35cfbce93e2a918b80812db44e607904a494a18d8f4cb0",
+      "bytes": 7350
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/prompt.txt": {
+      "sha256": "a4eaacddeeffd95ae3e04b234e7268dc532b646f800a2b29d2e431c439fe2779",
+      "bytes": 4209
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/reference-roles.json": {
+      "sha256": "68d44f0bb84ac9b5292018e087f5cafaa8decc3e4a2a027e6dd011fa973bfc83",
+      "bytes": 1278
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/camera-source.json": {
+      "sha256": "cb0310c35850f20f91c8f95bae1cb260a20fb54bf210b260ea886c96f726efa9",
+      "bytes": 487
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/louvre-K4.png": {
+      "sha256": "a29ae64401165d6b2c819c7c81ffb47ebd2939b3882d382848caea3b825947c9",
+      "bytes": 3728065
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/generation-call-record.json": {
+      "sha256": "b7ee3594e4a4825797b49210da366c53151fde4e03e6f3bde80f44906b4bf43d",
+      "bytes": 744
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/trace-own-mask.py": {
+      "sha256": "06012b4900a179f3f77eaf35f729ac4418edc902e1eb4153467e4819d6a60fcb",
+      "bytes": 6385
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/own-mask.png": {
+      "sha256": "18d0bcd31d7b746ded35cfbce93e2a918b80812db44e607904a494a18d8f4cb0",
+      "bytes": 7350
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/own-mask-overlay.png": {
+      "sha256": "7acff1143cc5df9256c62aa794d8980f8fe674990c961850c6d14ae1f7212677",
+      "bytes": 3239387
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/own-mask-provenance.json": {
+      "sha256": "656b0cef73e7b1ccb6ff2abd79f64cdf3d15dd536507f39914d68912b34406b7",
+      "bytes": 2364
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/target-own-contour-overlay.png": {
+      "sha256": "0febac3276c5be178da8c0f75c821af5421a99548e89a70d16532b2afbef4d0f",
+      "bytes": 3325469
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/mask-difference.png": {
+      "sha256": "c1ed36e8ea563c2f1baef0ed15c8a435130fd4234870d6e1a7aa8062743f377e",
+      "bytes": 16791
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/native-IoU.json": {
+      "sha256": "6d592616d82d6237955452be5b7fbb3d28fc15929f2701473f14f33ced62c755",
+      "bytes": 731
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/root-mask-review.json": {
+      "sha256": "3871c128c04ad09a4faf0025a58e33f853df272e66a450caa5d88d8ee086c839",
+      "bytes": 537
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/v1/visual-QA.json": {
+      "sha256": "70812f6e45305d95bf91c6980642cefc7683c75b6579c7bd3a3a342dfe5b1442",
+      "bytes": 1250
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K4/selection-task323.json": {
+      "sha256": "1e079be310c3189b42ead24709a1a0cdb0b5e0e3e78d851a9e1866425ab4b231",
+      "bytes": 1535
+    },
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K5.png": {
+      "sha256": "4052354495e7cb3488c3161d1d39d968f63483809b147ce7bf1c3d45b09904f9",
+      "bytes": 2774475
+    },
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K5-maski.png": {
+      "sha256": "933565c333874a57c7fcd236588a05e778f77dfee942470a5bed02402dda81e8",
+      "bytes": 6614
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/prompt.txt": {
+      "sha256": "30f8c82edb24e185b4ecf751f9a33132277e9a66c209b2f09007ddf1a768df6a",
+      "bytes": 4259
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/reference-roles.json": {
+      "sha256": "c0736cb5f48d9a4b8b44fa2a59bc84be33a67a8d5c144b90b3fb44180e2c6d93",
+      "bytes": 1279
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/camera-source.json": {
+      "sha256": "66355fd59514254b09df829b636e404844811eded7a7740940fd0849c588155b",
+      "bytes": 470
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/louvre-K5.png": {
+      "sha256": "4052354495e7cb3488c3161d1d39d968f63483809b147ce7bf1c3d45b09904f9",
+      "bytes": 2774475
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/generation-call-record.json": {
+      "sha256": "02f39bdb50a1b59df84c52377cfa1973a98a7767fdf2db1271e1c244c03e2640",
+      "bytes": 744
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/visual-QA.json": {
+      "sha256": "cc86b79d5925b45510722f00f3f147287dbe3365a952204f68a81b6d170eb1d6",
+      "bytes": 735
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/trace-own-mask.py": {
+      "sha256": "e9c1e35c43d04993621e159e289775649567301274df454aa71e321658835bd9",
+      "bytes": 8028
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/own-mask.png": {
+      "sha256": "933565c333874a57c7fcd236588a05e778f77dfee942470a5bed02402dda81e8",
+      "bytes": 6614
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/own-mask-overlay.png": {
+      "sha256": "46f9af76e82bdbbe6d4ad8a87274c49d5666b22b8e12c650b148958e77a933d0",
+      "bytes": 2402636
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/own-mask-provenance.json": {
+      "sha256": "b41e20e73a44b2c894d11022569db49245eb630acbf52f84888a489a1465d98e",
+      "bytes": 2165
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/native-IoU.json": {
+      "sha256": "ee62ef6b35fb9a11c7151e36381863733d82bd6db4a72b2110abe2f76e9c469f",
+      "bytes": 732
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/target-own-contour-overlay.png": {
+      "sha256": "bf5821d6c7289538e0fe4bc731d0a34639c1f668b04a80bc8fba1a5bc2b7eca6",
+      "bytes": 2482151
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/mask-difference.png": {
+      "sha256": "2e5626bde6a528a301e6903147caf32af354560947ad5ac07cf72e14c20fa872",
+      "bytes": 14041
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/v1/root-mask-review.json": {
+      "sha256": "3ea7416282228b2ba826a7a3d1a43905763b8a2bd62a80ead004e551dd658ba3",
+      "bytes": 447
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K5/selection-task323.json": {
+      "sha256": "5e2dfd8cac483ff22c194543bf0864c590f243f93f04b173a2d168a403e19c79",
+      "bytes": 1537
+    },
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K6.png": {
+      "sha256": "a8249ce7d28cc772fd22f85482cf2bfc03acf75e16abc286aad320b8ef86cf40",
+      "bytes": 3397229
+    },
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K6-maski.png": {
+      "sha256": "d311f12f7e49b0479b03419f6cbf062566da5138e22822211b06685454b7be96",
+      "bytes": 7356
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/prompt.txt": {
+      "sha256": "7bee20e095854b3db09ab4427d50751b038427e1baf97014c01d7f6674327373",
+      "bytes": 4291
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/reference-roles.json": {
+      "sha256": "a91791407f578e96573a1dd33526187f21d4a22e501a4468922b6060ce8230ab",
+      "bytes": 1271
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/camera-source.json": {
+      "sha256": "1d64ebd95413d62baf353a3e062c8e5f6bd01f6ae5de2cc250db2f4f2db7fc6b",
+      "bytes": 530
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/louvre-K6.png": {
+      "sha256": "a8249ce7d28cc772fd22f85482cf2bfc03acf75e16abc286aad320b8ef86cf40",
+      "bytes": 3397229
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/generation-call-record.json": {
+      "sha256": "e643b94244b6c9044f5172ba391546e47b6d5f6923a2312a21be949d3c1c1581",
+      "bytes": 744
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/visual-QA.json": {
+      "sha256": "449d9ec5f19e13c3ecf0b3a1572a7a06b40ce817e2353f4bf8187364ec649824",
+      "bytes": 680
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/trace-own-mask.py": {
+      "sha256": "723013b3764448adc9a51caa6020e0449ce827fff6c0d7f6b931ba088383ac29",
+      "bytes": 8240
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/own-mask.png": {
+      "sha256": "d311f12f7e49b0479b03419f6cbf062566da5138e22822211b06685454b7be96",
+      "bytes": 7356
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/own-mask-overlay.png": {
+      "sha256": "fdf2e171131dfb6f60a4a8a1b594cab290e44c1968f5c0df1d169fbce9401e6a",
+      "bytes": 2827911
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/own-mask-provenance.json": {
+      "sha256": "f7b637a3da78430714451d8d5e6d3ca814472a3dcf858fb18a1884be771beef5",
+      "bytes": 2288
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/native-IoU.json": {
+      "sha256": "5e61fc38738a0f2e4e54ea6c55026da2ce796d962d71865bcba1cccee15e86dd",
+      "bytes": 732
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/target-own-contour-overlay.png": {
+      "sha256": "596aa4f5c1e32204cafa038d061c29eb11e7bb79f2b5d1dd4f8294acfee343f2",
+      "bytes": 3015431
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/mask-difference.png": {
+      "sha256": "db9217cf1a99207684fd7de110779e5a234688d63ac0851c27b3699d90056dff",
+      "bytes": 17257
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/v1/root-mask-review.json": {
+      "sha256": "375c5f06f077ce7de1de278ab4626c9134d40032e784743ce9cc0ea20840e562",
+      "bytes": 459
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K6/selection-task323.json": {
+      "sha256": "accb9b880eaa6f4a2b9ea71cb38ba30509048ffd6165e4bf0157467b0282c159",
+      "bytes": 1537
+    },
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K7.png": {
+      "sha256": "78fb83c4074a3da5a3b8aad4420f72511fc07a22e324f089b20378b22b6f3c6d",
+      "bytes": 3527890
+    },
+    "posti/louvre-havainne-K2-K7-20261015/louvre-K7-maski.png": {
+      "sha256": "af0d9e9d6b3bfd12f45ee9734895ce6d7b784df4ca8375928cc0d8850e0cd528",
+      "bytes": 9865
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/prompt.txt": {
+      "sha256": "4190a4fa88d141cf8ed18cfa71bec6e70746c325629b2d7175b6cc28a8cbedc6",
+      "bytes": 4259
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/reference-roles.json": {
+      "sha256": "9ad5d7b1da1dbb573bcd96355f905739eb48ab612330ef40458172df310b7576",
+      "bytes": 1275
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/camera-source.json": {
+      "sha256": "d4b5b8cd7b2e58b540d22f2bcbfd4bee7449e010356e742de82a8b2aed78a47a",
+      "bytes": 527
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/louvre-K7.png": {
+      "sha256": "78fb83c4074a3da5a3b8aad4420f72511fc07a22e324f089b20378b22b6f3c6d",
+      "bytes": 3527890
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/generation-call-record.json": {
+      "sha256": "9592669c80ce9f8ae2b3c653656cccf4acc84230dc83906849c03e90eb7232c3",
+      "bytes": 744
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/visual-QA.json": {
+      "sha256": "8022985b541966b5773bd2d16709b6452bcccd26b1b0d942498a6034f313fab6",
+      "bytes": 918
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/trace-own-mask.py": {
+      "sha256": "3a167ad7be51ce07030700ea87dddf4f21c2184affaa285996f7b990131a1ee3",
+      "bytes": 7884
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/own-mask.png": {
+      "sha256": "af0d9e9d6b3bfd12f45ee9734895ce6d7b784df4ca8375928cc0d8850e0cd528",
+      "bytes": 9865
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/own-mask-overlay.png": {
+      "sha256": "9ad1ee0eb6792490efdc464262a917db8344ceebbca73c0a63f373443c3ba69a",
+      "bytes": 3026764
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/own-mask-provenance.json": {
+      "sha256": "793e8e6713e8d61b9245f2c939a4405b6aa390bec7b10afc20bb859b81a9347c",
+      "bytes": 2338
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/native-IoU.json": {
+      "sha256": "1e7945869d14b3cb9c755535e5951fc8367513e53061b34d73e947a5aecb2b25",
+      "bytes": 731
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/target-own-contour-overlay.png": {
+      "sha256": "433582059562fcd9495bcf2e5481968788d5f61a57551c17620dcd8264bc7541",
+      "bytes": 3201416
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/mask-difference.png": {
+      "sha256": "b695c5fa2286b4ebc7c5821ca80ce199c8b154afdb4dfdefad76a39d27ce2486",
+      "bytes": 21706
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/v1/root-mask-review.json": {
+      "sha256": "96289690c4f24158147574c298d60d005a9ea385aa1654363ef7dc794c0eb263",
+      "bytes": 532
+    },
+    "posti/louvre-havainne-K2-K7-20261015/qa/K7/selection-task323.json": {
+      "sha256": "9d6547b57e1a64972dc62afc7a815d0a89efdf39e0c7509a1f40debe46158c59",
+      "bytes": 1535
+    },
+    "posti/louvre-havainne-K2-K7-20261015/authorization.json": {
+      "sha256": "8d465ca6bb584cdc65c4d5af59fdc2529f3da3bdba4bec42cbfad88ac3e4bef2",
+      "bytes": 1557
+    },
+    "posti/louvre-havainne-K2-K7-20261015/source-task323.md": {
+      "sha256": "6cb91c59cc35f9f449f77c41bb72a0b8dcdd3e67a253ad971798362b4438d228",
+      "bytes": 637
+    },
+    "posti/louvre-havainne-K2-K7-20261015/K1-v2-acceptance-task315.json": {
+      "sha256": "e60b386a84bf7eb2dc142d6fddf10ad49b115d73f308b728b22dca67b929e3dc",
+      "bytes": 632
+    },
+    "posti/louvre-havainne-K2-K7-20261015/K1-preservation-snapshot.json": {
+      "sha256": "bd2d64cbe8f6b1069bea0b3d200d381b1eefd919094ab554121d265e89e213f0",
+      "bytes": 7847
+    },
+    "posti/louvre-havainne-K2-K7-20261015/K2-K7-review-board.png": {
+      "sha256": "ac420dacd3be963180ed30406ec5ef75f0739481eddc81d3e67831b2180ba725",
+      "bytes": 2137667
+    },
+    "posti/louvre-havainne-K2-K7-20261015/six-view-summary.json": {
+      "sha256": "ed6f78132a356d9d3bbbe9cb6eb43e13d733256871d1b563f4edef28a47fe904",
+      "bytes": 12069
+    },
+    "posti/louvre-havainne-K2-K7-20261015/QA-FI.md": {
+      "sha256": "b466f517ef783f7cecb2494d966ca5303033b867046cf50143a1146c5ed900eb",
+      "bytes": 4744
+    },
+    "posti/louvre-havainne-K2-K7-20261015/final-root-review.json": {
+      "sha256": "62a58b534e60ddc9b53a9f7bac6e96b993e311e3004b93f6dc180edb0b544a70",
+      "bytes": 816
+    },
+    "posti/louvre-havainne-K2-K7-20261015/independent-visual-review-K2-K4.json": {
+      "sha256": "5a77bbfb8d5d6a7255dc5f696c7b9fadc3f47e48160934b70c488112f88e7576",
+      "bytes": 7047
+    },
+    "posti/louvre-havainne-K2-K7-20261015/independent-visual-review-K5-K6.json": {
+      "sha256": "36914ece3454f622491ae269e657a27f6bd5044e30e52ccfaa78b33f49a96009",
+      "bytes": 4409
+    },
+    "posti/louvre-havainne-K2-K7-20261015/independent-visual-review-K7.json": {
+      "sha256": "8a8fe3a5de24305657ffa71cb983c286ef808b6a3b90eebb9ff05b3722e9d37f",
+      "bytes": 3090
+    },
+    "posti/louvre-havainne-K2-K7-20261015/sources/VASTAUS-K1-v3-ja-K2-K7-FI.md": {
+      "sha256": "29233c822bf728585e329750dba78a36abfbae9b97a9a309902212d6c2a6a0ff",
+      "bytes": 2025
+    },
+    "posti/louvre-havainne-K2-K7-20261015/sources/louvre-kulmat-natiivi.json": {
+      "sha256": "43387231950e7fe58e7fff59a88c78cf28ccdf1ac6066e256d068fd6bf3d8e29",
+      "bytes": 4204
+    },
+    "posti/louvre-havainne-K2-K7-20261015/sources/incoming-manifest.json": {
+      "sha256": "5a97f0a87c23fbae1f72b9542d193a91d8a3be389c843ff76214969b6e5ebd7e",
+      "bytes": 12068
+    },
+    "posti/louvre-havainne-K2-K7-20261015/sources/louvre-LAHTEET.md": {
+      "sha256": "f1320eb51dec60a506301533759685256525c71905780a390304bb778d7f2606",
+      "bytes": 4473
+    }
+  },
+  "createdAt": "2026-10-15T19:07:23.449348+00:00"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "K6",
+  "nimi": "K6 lähikierros pohjoinen",
+  "tyyppi": "pallokierros",
+  "kamera_enu_m": [
+    58.14,
+    159.75,
+    130
+  ],
+  "kamera_lat": 48.862435,
+  "kamera_lon": 2.3366939,
+  "katse_deg": 200,
+  "atsimuutti_deg": 20.0,
+  "etaisyys_m": 170.0,
+  "kameran_korkeus_m": 130,
+  "kallistus_deg": -35.22,
+  "vfov_deg": 45,
+  "kuvasuhde": "3:2",
+  "kuvaus": "Lähi-pallokulma Richelieun siiven yltä etelään: Napoleonin pihan kiveys, ratsastajapatsas ja Denonin/Darun pihajulkisivut, Denonin paviljonki ja kupoli."
+}

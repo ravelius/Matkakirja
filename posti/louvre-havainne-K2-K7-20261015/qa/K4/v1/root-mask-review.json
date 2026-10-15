@@ -1,0 +1,14 @@
+{
+  "personallyViewed": true,
+  "actualPhotoViewed": true,
+  "ownMaskOverlayViewed": true,
+  "finalCorrectedOwnMaskViewed": true,
+  "semanticTraceAcceptedForIoU": true,
+  "notPixelExactSemanticCertification": true,
+  "notes": [
+    "Photo-only tracer removed actual ground strips before final measurement",
+    "Glass roofs and shadowed facades retained, open courts and street excluded",
+    "Small2-5px uncertainty matters near85 percent; receiver should independently verify"
+  ],
+  "reviewedAt": "2026-10-15T18:48:39.451703+00:00"
+}

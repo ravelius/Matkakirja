@@ -1,0 +1,144 @@
+{
+  "taskNumber": 323,
+  "reviewType": "independent_visual_comparison_K2_K4",
+  "purpose": "Observed modeling guidance; not approval or PT acceptance.",
+  "method": "Direct visual inspection of the three actual photos and their corresponding native massa/ohje images. No silhouette masks or IoU artifacts consulted for this review.",
+  "filesViewed": [
+    {
+      "view": "K2",
+      "role": "actual_photo",
+      "path": "K2/v2/louvre-K2.png",
+      "sha256": "cef53b26c4822b60aa1ef05874952fca0eb60f392705dc35713cb006a60ffc3a"
+    },
+    {
+      "view": "K2",
+      "role": "native_massa",
+      "path": "sources/task315-321/louvre-K2-massa.png",
+      "sha256": "9168467d972eedab653b0441654aa38c0567969eb303709dfd32dfb2dc90387f"
+    },
+    {
+      "view": "K2",
+      "role": "native_ohje",
+      "path": "sources/task315-321/louvre-K2-ohje.png",
+      "sha256": "5b0f3b431455e89b8bb6bdfef39d7b9b66b005b90938a818e19c4dcf39a16aba"
+    },
+    {
+      "view": "K3",
+      "role": "actual_photo",
+      "path": "K3/v1/louvre-K3.png",
+      "sha256": "f2c0c963d0682c819cbb22776969f1f3a1ca46d84bc6703b12b161433429f443"
+    },
+    {
+      "view": "K3",
+      "role": "native_massa",
+      "path": "sources/task315-321/louvre-K3-massa.png",
+      "sha256": "3cd938742a629df168c7b26175788250db9d93d82713fe97d268dfa6c1ccc3d1"
+    },
+    {
+      "view": "K3",
+      "role": "native_ohje",
+      "path": "sources/task315-321/louvre-K3-ohje.png",
+      "sha256": "4679cf9567c2adb00e430d2a827e86f468cc90da62e9f705e60d95e14bf759dc"
+    },
+    {
+      "view": "K4",
+      "role": "actual_photo",
+      "path": "K4/v1/louvre-K4.png",
+      "sha256": "a29ae64401165d6b2c819c7c81ffb47ebd2939b3882d382848caea3b825947c9"
+    },
+    {
+      "view": "K4",
+      "role": "native_massa",
+      "path": "sources/task315-321/louvre-K4-massa.png",
+      "sha256": "a2c4c7bad448ccf770ed684674be8b5c4df11df53a53d571fe21f825f9e2da04"
+    },
+    {
+      "view": "K4",
+      "role": "native_ohje",
+      "path": "sources/task315-321/louvre-K4-ohje.png",
+      "sha256": "a8535b03ac5d98f76fdb88badb1300e13710bda414f77c38e4d8ceabca6bffff"
+    }
+  ],
+  "views": [
+    {
+      "view": "K2",
+      "candidate": "v2",
+      "findings": [
+        {
+          "area": "camera_and_mass",
+          "severity": "moderate",
+          "observation": "The distant palace range and its terminal right pavilion are visibly higher in the generated frame than in the source. The near-right facade footline remains substantially closer, so the projected depth is stretched rather than the whole image simply translated.",
+          "modelingGuidance": "Retain the native source roofline and camera projection; do not raise or deepen the distant range to follow this photograph."
+        },
+        {
+          "area": "courtyard_and_mass",
+          "severity": "moderate",
+          "observation": "The left enclosed Cour Carree roofline and courtyard opening sit higher than in the source, and the visible opening is vertically compressed.",
+          "modelingGuidance": "Use the source courtyard opening and surrounding mass boundaries."
+        },
+        {
+          "area": "environment",
+          "severity": "moderate",
+          "observation": "The far background is filled by city blocks, a boulevard and gardens; no river is depicted. A pale round pool/basin is visible at the extreme upper-right.",
+          "modelingGuidance": "Do not copy this painted background or the added basin into mapped geography."
+        }
+      ],
+      "literalHavainnekuva": "Present and readable at top-left.",
+      "pyramidsObserved": false,
+      "poolsObserved": "Round pool/basin cropped by the extreme upper-right edge.",
+      "photographicSurfaceQuality": "Convincing limestone, slate roofs, paving, tree detail and daylight at native full-frame inspection."
+    },
+    {
+      "view": "K3",
+      "candidate": "v1",
+      "findings": [
+        {
+          "area": "camera_and_mass",
+          "severity": "major",
+          "observation": "The palace is pulled substantially upward. The far range is much higher than its source roofline, and the foreground facade footline is also higher; the courtyard projection is vertically expanded and much more foreground river is exposed. This does not preserve the supplied camera/framing.",
+          "modelingGuidance": "Keep the source screen-space mass placement, depth and foreground crop; do not shift the modeled palace upward or alter the camera to match this photograph."
+        },
+        {
+          "area": "courtyard_detail",
+          "severity": "minor",
+          "observation": "An equestrian statue is inserted into the enclosed right-hand courtyard. That placement is an added photographic detail rather than a feature established by the supplied mass/guide.",
+          "modelingGuidance": "Do not derive statue placement from this generated photograph."
+        }
+      ],
+      "environmentObservation": "The river is on the near side, the main open court is left and the enclosed court is right. The dominant visible error is the displaced palace framing.",
+      "literalHavainnekuva": "Present and readable at top-left.",
+      "pyramidsObserved": false,
+      "poolsObserved": "No obvious pool observed.",
+      "photographicSurfaceQuality": "Stone, roof material, paving, river surface and illumination read photographically at full frame; the major defect is mass placement."
+    },
+    {
+      "view": "K4",
+      "candidate": "v1",
+      "findings": [
+        {
+          "area": "courtyard_detail",
+          "severity": "moderate",
+          "observation": "A conspicuous circular planted feature with a rectangular center has been inserted into the otherwise open far courtyard.",
+          "modelingGuidance": "Keep the source courtyard empty at this location; do not model this invented feature."
+        },
+        {
+          "area": "environment",
+          "severity": "moderate",
+          "observation": "The left-side river makes a pronounced inward turn behind the far-left wing instead of reading as a continuous longitudinal corridor beside the palace.",
+          "modelingGuidance": "Do not trace this generated river course into mapped geography."
+        }
+      ],
+      "cameraAndMassObservation": "The principal framing, distant terminal masses, center pavilion and large cropped foreground wings follow the supplied massa/ohje closely in this visual comparison.",
+      "literalHavainnekuva": "Present and readable at top-left.",
+      "pyramidsObserved": false,
+      "poolsObserved": "No definite courtyard pool observed; the added central circular feature reads as planting.",
+      "photographicSurfaceQuality": "Credible limestone, roof surfaces, courtyard paving and coherent daylight; material appearance is useful independently of the added ground features."
+    }
+  ],
+  "K1Reviewed": false,
+  "masksOrIoUArtifactsConsulted": false,
+  "imagesEditedOrGenerated": false,
+  "gitOrNetworkUsed": false,
+  "PTAcceptanceEvaluated": false,
+  "createdAt": "2026-10-15T18:54:56.055642+00:00"
+}

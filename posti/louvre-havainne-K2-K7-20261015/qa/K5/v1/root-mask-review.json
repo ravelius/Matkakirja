@@ -1,0 +1,13 @@
+{
+  "personallyViewed": true,
+  "actualPhotoViewed": true,
+  "ownMaskOverlayViewed": true,
+  "semanticTraceAcceptedForIoU": true,
+  "notPixelExactSemanticCertification": true,
+  "notes": [
+    "Mask follows actual roofline and wall-ground contact; sky/city/ground excluded",
+    "Small lamp/person occlusion cutouts are documented and retained",
+    "Small2-5px edge uncertainty retained"
+  ],
+  "reviewedAt": "2026-10-15T18:53:53.330983+00:00"
+}

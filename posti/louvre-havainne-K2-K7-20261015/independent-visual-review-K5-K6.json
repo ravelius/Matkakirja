@@ -1,0 +1,83 @@
+{
+  "taskNumber": 323,
+  "reviewType": "independent_visual_comparison_K5_K6",
+  "purpose": "Version-specific observations for modeling guidance; not approval or PT acceptance.",
+  "method": "Direct native-image visual comparison against the corresponding massa/ohje images. No silhouette masks or IoU artifacts consulted.",
+  "filesViewed": [
+    {
+      "view": "K5",
+      "role": "actual_photo",
+      "path": "K5/v1/louvre-K5.png",
+      "sha256": "4052354495e7cb3488c3161d1d39d968f63483809b147ce7bf1c3d45b09904f9"
+    },
+    {
+      "view": "K5",
+      "role": "native_massa",
+      "path": "sources/task315-321/louvre-K5-massa.png",
+      "sha256": "0dea3d7d61ccb19642b6beadba40cfe162ccc53029d378901fdc847fe03c3c12"
+    },
+    {
+      "view": "K5",
+      "role": "native_ohje",
+      "path": "sources/task315-321/louvre-K5-ohje.png",
+      "sha256": "96b5a3d7cec9cb59afa44db7fa193a50506bd7918b330bfcbf3adc09bc2db6d4"
+    },
+    {
+      "view": "K6",
+      "role": "actual_photo",
+      "path": "K6/v1/louvre-K6.png",
+      "sha256": "a8249ce7d28cc772fd22f85482cf2bfc03acf75e16abc286aad320b8ef86cf40"
+    },
+    {
+      "view": "K6",
+      "role": "native_massa",
+      "path": "sources/task315-321/louvre-K6-massa.png",
+      "sha256": "c59d0ebd77be740149712ef34183b9334b722dcc81aa5105c4051c52a382d448"
+    },
+    {
+      "view": "K6",
+      "role": "native_ohje",
+      "path": "sources/task315-321/louvre-K6-ohje.png",
+      "sha256": "9be2d021452abc9cd4c713de2bc6cc0c96dc5e3359c44318df684d1e1c522a17"
+    }
+  ],
+  "views": [
+    {
+      "view": "K5",
+      "candidate": "v1",
+      "photoSHA256": "4052354495e7cb3488c3161d1d39d968f63483809b147ce7bf1c3d45b09904f9",
+      "findings": [
+        {
+          "area": "courtyard_boundary",
+          "severity": "minor",
+          "observation": "The far facade footline and the courtyard far ground boundary sit slightly lower than in the source; the right-hand near facade also extends slightly farther downward at the frame edge.",
+          "modelingGuidance": "Keep the source footlines and courtyard boundary rather than following these small photographic shifts."
+        }
+      ],
+      "cameraAndMassObservation": "The low elevated courtyard camera, large near pavilions cut by the side edges, centered distant pavilion, roof heights and broad open foreground closely follow the source composition. No major reframing is apparent.",
+      "backgroundObservation": "A distant city skyline appears behind the far palace bar. No river is forced into the enclosed courtyard. The courtyard remains largely open, with one small equestrian statue and sparse people and lamps.",
+      "literalHavainnekuva": "Present, readable and correctly spelled at top-left.",
+      "pyramidsObserved": false,
+      "poolsObserved": false,
+      "photographicSurfaceQuality": "Detailed warm limestone, credible slate and lead roofs, paving texture, small human scale figures and coherent sun/shadow treatment. The surfaces read photographically at native full frame."
+    },
+    {
+      "view": "K6",
+      "candidate": "v1",
+      "photoSHA256": "a8249ce7d28cc772fd22f85482cf2bfc03acf75e16abc286aad320b8ef86cf40",
+      "findings": [],
+      "cameraAndMassObservation": "The two separate palace bands are preserved: a close foreground roof band with its central pavilion and bottom crop, and a far long facade connected at the left. The broad open courtyard between them and the principal roofline positions closely follow the source. No obvious major camera, framing or mass error is apparent in this visual comparison.",
+      "backgroundObservation": "The river is beyond the far palace band at the top of the image, with banks, trees and boats; it does not enter the courtyard. The courtyard is open apart from a small equestrian statue, sparse people and lamps.",
+      "literalHavainnekuva": "Present, readable and correctly spelled at top-left.",
+      "pyramidsObserved": false,
+      "poolsObserved": false,
+      "photographicSurfaceQuality": "Convincing lead/slate roof seams, limestone facades, courtyard paving and sunlit outdoor exposure. Roof ornament, dormers and facade detail read photographically at native full frame."
+    }
+  ],
+  "K1Reviewed": false,
+  "masksOrIoUArtifactsConsulted": false,
+  "imagesEditedOrGenerated": false,
+  "gitOrNetworkUsed": false,
+  "PTAcceptanceEvaluated": false,
+  "createdAt": "2026-10-15T18:57:50.946030+00:00"
+}

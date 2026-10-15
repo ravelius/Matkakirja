@@ -1,0 +1,46 @@
+{
+  "view": "K2",
+  "selectedAttempt": 2,
+  "selectedIoU": 0.5850468014686869,
+  "attempts": [
+    {
+      "view": "K2",
+      "attempt": 1,
+      "IoU": 0.25573394723594595,
+      "intersectionPixels": 128526,
+      "unionPixels": 502577,
+      "targetPixels": 280024,
+      "actualPalacePixels": 351079,
+      "ownMaskSHA256": "9dfb27b4768ce18e5b16041e12b7452de670a53dc12c8321b018e23ae76324f3",
+      "nativePhotoSHA256": "31f6496ee0433caea52fd795dd0e6bd25bf572d5233c2cd5a8e79c037474dccb",
+      "targetSHA256": "8ac1ec533b6634ea2972362b654b40470299d37f404b7fb18c3c04ca0e328590",
+      "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+      "physicalCameraCertified": false,
+      "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+      "measuredAt": "2026-10-15T18:28:08.089463+00:00"
+    },
+    {
+      "view": "K2",
+      "attempt": 2,
+      "IoU": 0.5850468014686869,
+      "intersectionPixels": 226261,
+      "unionPixels": 386740,
+      "targetPixels": 280024,
+      "actualPalacePixels": 332977,
+      "ownMaskSHA256": "23d23a212617155e906cd811600dbbf43f2d9ee40f3e1f23a3084325320d4e61",
+      "nativePhotoSHA256": "cef53b26c4822b60aa1ef05874952fca0eb60f392705dc35713cb006a60ffc3a",
+      "targetSHA256": "8ac1ec533b6634ea2972362b654b40470299d37f404b7fb18c3c04ca0e328590",
+      "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+      "physicalCameraCertified": false,
+      "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+      "measuredAt": "2026-10-15T18:31:50.896447+00:00"
+    }
+  ],
+  "photoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K2/v2/louvre-K2.png",
+  "ownMaskPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K2/v2/own-mask.png",
+  "visualQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K2/v2/visual-QA.json",
+  "source323Commit": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+  "selectionPolicy": "First>=85, otherwise best of two; not a PT acceptance",
+  "PTAccepted": false,
+  "selectedAt": "2026-10-15T18:32:25.550919+00:00"
+}

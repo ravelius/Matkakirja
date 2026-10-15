@@ -1,0 +1,23 @@
+{
+  "taskNumber": 323,
+  "reviewBoardPersonallyViewed": true,
+  "selectedNativePhotosPersonallyViewed": true,
+  "allSelectedOwnMaskOverlaysPersonallyViewed": true,
+  "sixNative1536x1024Confirmed": true,
+  "callsInThisBatch": 8,
+  "allCallsCompleted": true,
+  "knownIoUFailures": [
+    "K2",
+    "K3"
+  ],
+  "knownResidualBackgroundBasin": "K2 v2 extreme upper-right",
+  "K4Near85UncertaintyDisclosed": true,
+  "PTAccepted": false,
+  "gameIntegrated": false,
+  "reviewedSHA256": {
+    "six-view-summary.json": "ed6f78132a356d9d3bbbe9cb6eb43e13d733256871d1b563f4edef28a47fe904",
+    "K2-K7-review-board.png": "ac420dacd3be963180ed30406ec5ef75f0739481eddc81d3e67831b2180ba725",
+    "QA-FI.md": "b466f517ef783f7cecb2494d966ca5303033b867046cf50143a1146c5ed900eb"
+  },
+  "reviewedAt": "2026-10-15T19:06:58.294001+00:00"
+}

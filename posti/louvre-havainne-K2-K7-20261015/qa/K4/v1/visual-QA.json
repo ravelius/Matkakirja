@@ -1,0 +1,27 @@
+{
+  "reviewedBy": "root",
+  "reviewedAt": "2026-10-15T18:44:44.429979+00:00",
+  "view": "K4",
+  "attempt": 1,
+  "photographicAppearance": true,
+  "labelPresent": true,
+  "pyramidsPresent": false,
+  "poolsPresent": false,
+  "geometryErrors": [
+    "Fine roof, dormer and facade details remain generated reconstruction; use LiDAR for mass and physical dimensions",
+    "Near wing widths and small courtyard apertures require native contour measurement"
+  ],
+  "geographyNotes": [
+    "Seine on screen left/south, Tuileries beyond/west are directionally consistent",
+    "Unrequested green oval in western court/axis is not a modeling reference",
+    "Equestrian statue added in near Cour Carree: location is unverified and should not drive model",
+    "Eastern church placement in distant right context is unverified background reconstruction",
+    "Independent review flags generated river bend behind far-left wing; retain source/map river course rather than tracing photograph."
+  ],
+  "physicalCameraVerified": false,
+  "PTAccepted": false,
+  "photoModifiedAfterGeneration": false,
+  "otherNotes": [
+    "Measured85.4642 percent is near the85-percent policy boundary; hand-trace uncertainty is retained and receiver review remains necessary"
+  ]
+}

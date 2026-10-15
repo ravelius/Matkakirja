@@ -1,0 +1,13 @@
+{
+  "personallyViewed": true,
+  "actualPhotoViewed": true,
+  "ownMaskOverlayViewed": true,
+  "semanticTraceAcceptedForIoU": true,
+  "notPixelExactSemanticCertification": true,
+  "notes": [
+    "Near roofs and far facade/roof bands traced from actual photo",
+    "Open floor and ground shadows/statue excluded, shaded palace retained",
+    "Tiny2-5px ornament and distant occlusion ambiguity retained"
+  ],
+  "reviewedAt": "2026-10-15T18:59:04.067537+00:00"
+}

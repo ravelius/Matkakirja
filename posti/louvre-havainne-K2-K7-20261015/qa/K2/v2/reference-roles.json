@@ -1,0 +1,26 @@
+{
+  "view": "K2",
+  "attempt": 2,
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K2-massa.png",
+      "sha256": "9168467d972eedab653b0441654aa38c0567969eb303709dfd32dfb2dc90387f",
+      "role": "full-frame geometry base"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K2-ohje.png",
+      "sha256": "5b0f3b431455e89b8bb6bdfef39d7b9b66b005b90938a818e19c4dcf39a16aba",
+      "role": "red target contour guide"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K2-maski.png",
+      "sha256": "8ac1ec533b6634ea2972362b654b40470299d37f404b7fb18c3c04ca0e328590",
+      "role": "binary geometry target"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Facade-Nord-de-l-aile-Richelieu-Louvre.jpg",
+      "sha256": "be3d4ecdbb57293d8e92a336ed0abc2d22b692db4215354874e566a0cd397916",
+      "role": "Commons materials only"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "task": 323,
+  "sourceCommit": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+  "sourcePath": "posti/fable-codex-louvre-312-vastaus-20261015.md",
+  "sourceBlob": "79780a6c9eedde057ca7b1f353e2e18e078f2b3d",
+  "sourceReadInFull": true,
+  "nativeSourceCommit": "3d1b5099f3e0663d0691522de781a0eb2368ad92",
+  "sequentialViews": [
+    "K2",
+    "K3",
+    "K4",
+    "K5",
+    "K6",
+    "K7"
+  ],
+  "maximumAttemptsPerView": 2,
+  "retryOnlyIfFirstIoUBelow": 0.85,
+  "singleCombinedDeliveryRequired": true,
+  "noIntermediateFeedbackRequired": true,
+  "APIAllowed": false,
+  "CLIAllowed": false,
+  "gameIntegrationAllowed": false,
+  "K1RegenerationAllowed": false,
+  "correctPalaceWikidata": "Q1075988",
+  "sourceJSONQ19675LegacyTypoPreserved": true,
+  "targetStatistics": {
+    "K2": {
+      "whitePixels": 280024,
+      "bbox": [
+        70,
+        340,
+        1535,
+        788
+      ]
+    },
+    "K3": {
+      "whitePixels": 271009,
+      "bbox": [
+        0,
+        343,
+        1467,
+        732
+      ]
+    },
+    "K4": {
+      "whitePixels": 405296,
+      "bbox": [
+        203,
+        212,
+        1286,
+        1023
+      ]
+    },
+    "K5": {
+      "whitePixels": 387824,
+      "bbox": [
+        0,
+        304,
+        1535,
+        829
+      ]
+    },
+    "K6": {
+      "whitePixels": 837761,
+      "bbox": [
+        0,
+        85,
+        1535,
+        1023
+      ]
+    },
+    "K7": {
+      "whitePixels": 642038,
+      "bbox": [
+        0,
+        0,
+        1535,
+        1023
+      ]
+    }
+  },
+  "startedAt": "2026-10-15T18:22:04.310864+00:00"
+}

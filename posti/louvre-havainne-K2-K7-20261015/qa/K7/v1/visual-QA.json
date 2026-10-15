@@ -1,0 +1,22 @@
+{
+  "reviewedBy": "root",
+  "reviewedAt": "2026-10-15T19:01:53.123060+00:00",
+  "view": "K7",
+  "attempt": 1,
+  "photographicAppearance": true,
+  "labelPresent": true,
+  "pyramidsPresent": false,
+  "poolsPresent": false,
+  "geometryErrors": [
+    "Principal diagonal near/far masses visually follow base; fine glass roof, lightwell, facade and dormer details remain generated reconstruction",
+    "Independent review: opened rectangular roof well where source shows roof mass; preserve LiDAR roof mass in model",
+    "Independent review: minor downward drift of far-right facade footline"
+  ],
+  "geographyNotes": [
+    "Rivoli/city behind northern far wing, Seine outside this crop are directionally consistent",
+    "Statue present on courtyard; exact coordinates/identity not verified and must use source/map"
+  ],
+  "physicalCameraVerified": false,
+  "PTAccepted": false,
+  "photoModifiedAfterGeneration": false
+}

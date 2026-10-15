@@ -1,0 +1,13 @@
+{
+  "personallyViewed": true,
+  "actualPhotoViewed": true,
+  "ownMaskOverlayViewed": true,
+  "semanticTraceAcceptedForIoU": true,
+  "notPixelExactSemanticCertification": true,
+  "notes": [
+    "Actual diagonal near/far palace silhouettes traced, open near court floors excluded",
+    "Far rectangular recess contains visible building surfaces but no separable ground floor; white retained rather than invented hole",
+    "Small2-5px ornament/occlusion uncertainty retained"
+  ],
+  "reviewedAt": "2026-10-15T19:05:22.701836+00:00"
+}

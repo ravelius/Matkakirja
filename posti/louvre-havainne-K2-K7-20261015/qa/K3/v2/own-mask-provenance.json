@@ -1,0 +1,64 @@
+{
+  "photo": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2c19f3bb-14a0-4db3-99fe-552393480283.png",
+  "photoSHA256": "0830d5db3f1f73c20c3abf18b182e112e60694bb4c59f376231c07a25623a579",
+  "width": 1536,
+  "height": 1024,
+  "mode": "L",
+  "values": [
+    0,
+    255
+  ],
+  "method": "Manual native-coordinate palace polygons traced from only the actual K3/v2 photograph; Pillow rasterization without resampling or antialiasing. White denotes visible palace roofs and facades; black denotes everything else.",
+  "blindness": "No source renders, target/reference masks, camera files, prompts, previous images, or metrics were inspected for this trace.",
+  "included": "Visible palace roofs and vertical faces, including all shadowed building faces.",
+  "excluded": "Large open western court and statue, eastern enclosed court floor, two visible foreground court floor strips, city beyond, river, roads, trees and surroundings.",
+  "uncertainEdges": [
+    {
+      "region": [
+        216,
+        176,
+        607,
+        279
+      ],
+      "detail": "Fine distant roof ornaments, pinnacles and building ground contact have about 1-4 pixel uncertainty."
+    },
+    {
+      "region": [
+        985,
+        240,
+        1472,
+        512
+      ],
+      "detail": "Eastern oblique wing roof edge, ornaments and some partial background occlusions have about 2-5 pixel uncertainty."
+    },
+    {
+      "region": [
+        1073,
+        325,
+        1328,
+        421
+      ],
+      "detail": "Eastern court ground contact and southern roof projection traced manually; about 2-4 pixel uncertainty; shaded vertical walls retained."
+    },
+    {
+      "region": [
+        582,
+        499,
+        972,
+        526
+      ],
+      "detail": "Two foreground court floors are partly shadowed/roof-occluded. Their floor-versus-facade contact has about 3-5 pixel uncertainty."
+    },
+    {
+      "region": [
+        0,
+        382,
+        1078,
+        626
+      ],
+      "detail": "Foreground small roof decorations, local tree overlap and facade foot have about 1-5 pixel uncertainty."
+    }
+  ],
+  "foregroundPixels": 306207,
+  "maskSHA256": "7810005396492aecb63b9ccbe4b8022c38475fb0916f584c78afeac4334402c3"
+}

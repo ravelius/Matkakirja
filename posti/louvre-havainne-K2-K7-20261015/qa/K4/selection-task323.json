@@ -1,0 +1,30 @@
+{
+  "view": "K4",
+  "selectedAttempt": 1,
+  "selectedIoU": 0.854641775402794,
+  "attempts": [
+    {
+      "view": "K4",
+      "attempt": 1,
+      "IoU": 0.854641775402794,
+      "intersectionPixels": 371047,
+      "unionPixels": 434155,
+      "targetPixels": 405296,
+      "actualPalacePixels": 399906,
+      "ownMaskSHA256": "18d0bcd31d7b746ded35cfbce93e2a918b80812db44e607904a494a18d8f4cb0",
+      "nativePhotoSHA256": "a29ae64401165d6b2c819c7c81ffb47ebd2939b3882d382848caea3b825947c9",
+      "targetSHA256": "bebd55416208f66323c035800690e9083d9b411e60af1d7761742334fd10a4cf",
+      "method": "Native1536x1024 binary pixel intersection/union, no registration or resizing",
+      "physicalCameraCertified": false,
+      "ownMaskUncertainty": "Hand-traced actual-image boundaries; reviewer may independently refine boundaries",
+      "measuredAt": "2026-10-15T18:47:57.567165+00:00"
+    }
+  ],
+  "photoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K4/v1/louvre-K4.png",
+  "ownMaskPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K4/v1/own-mask.png",
+  "visualQAPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K4/v1/visual-QA.json",
+  "source323Commit": "c7d6cbfe9f7bb68779d933386404ae54822c3164",
+  "selectionPolicy": "First>=85, otherwise best of two; not a PT acceptance",
+  "PTAccepted": false,
+  "selectedAt": "2026-10-15T18:48:39.475859+00:00"
+}

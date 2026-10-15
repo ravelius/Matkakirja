@@ -1,0 +1,26 @@
+{
+  "view": "K6",
+  "attempt": 1,
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K6-massa.png",
+      "sha256": "c59d0ebd77be740149712ef34183b9334b722dcc81aa5105c4051c52a382d448",
+      "role": "full-frame geometry base"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K6-ohje.png",
+      "sha256": "9be2d021452abc9cd4c713de2bc6cc0c96dc5e3359c44318df684d1e1c522a17",
+      "role": "red target contour guide"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task315-321/louvre-K6-maski.png",
+      "sha256": "7d1f3cd6365553b7ae25c2c2f84df34dc81dfa225a62f2027cd5f49ad4f07391",
+      "role": "binary geometry target"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-North-facade-of-the-Denon-Wing-28184065532.jpg",
+      "sha256": "9d7f575087563add6cb14e9a4176ee4ebffd9f7e1b00a4d720dd48ad3bf81c54",
+      "role": "Commons materials only"
+    }
+  ]
+}

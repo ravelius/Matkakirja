@@ -1,0 +1,20 @@
+{
+  "reviewedBy": "root",
+  "reviewedAt": "2026-10-15T18:57:16.287026+00:00",
+  "view": "K6",
+  "attempt": 1,
+  "photographicAppearance": true,
+  "labelPresent": true,
+  "pyramidsPresent": false,
+  "poolsPresent": false,
+  "geometryErrors": [
+    "Main near/far roof bands visually follow base; fine roof, dormer, facade and aperture details are generated reconstruction"
+  ],
+  "geographyNotes": [
+    "Seine beyond far south wing; no water through courtyard",
+    "Equestrian statue present on paving; exact position/identity remains unverified and must follow map/source"
+  ],
+  "physicalCameraVerified": false,
+  "PTAccepted": false,
+  "photoModifiedAfterGeneration": false
+}
