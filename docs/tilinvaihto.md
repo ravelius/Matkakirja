@@ -86,7 +86,7 @@ Raamattu ASEMATAULU TILIKOHTAINEN: 1) Artifact list → onko tilillä oma taulu;
 comments + db, icon dashboard) samaan tai uuteen osoitteeseen; 2) täytä kokoelma talo yhdellä ArtifactData-batchilla F/asemataulu/data/talo/*.json;
 3) kirjaa osoite F/asemataulu/osoitteet.md:hen, alla olevaan VOIMASSA OLEVA ARVO -tauluun (vanha "nykyinen tili" siirtyy riviksi
 osoitteet.md:hen), jonokierroksen kohtaan 7, ASEMATAULU-ROOLI.md:hen, F/keskustelukanava/aloitus.md:n kohtaan 2, Postivahdille
-ja omistajalle yhdellä rivillä. PT avaa taulun (Artifact open) heti; KK avaa sen jokaisen nollauksensa jälkeen (avauskomento: `open -na "Google Chrome" --args --app=<osoite> --window-size=560,1000`).
+ja omistajalle yhdellä rivillä. KK avaa taulun aina omaan keskustelunsa sivupaneeliin (Artifact read + muuttamaton julkaisu samaan osoitteeseen) heti luonnin ja jokaisen nollauksensa jälkeen; ulkoista Chrome-ikkunaa ei käytetä eikä ehdoteta (omistaja 15.10.2026 klo 12.27).
 Vanhan tilin artefakteja (taulu, äänisivu) ei voi muokata uudelta tililtä.
 
 ## 5. Silmukat ja vahdit

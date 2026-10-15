@@ -16,3 +16,7 @@ robots.txt:ssä, joten niitä ei käytetä; ERA5 myöhemmin matalalla etusijalla
 ## PEKING: OMISTAJAN SUORA OHJE CODEXILLE (15.10.2026 KLO 01.38) (15.10.2026 klo 12.32)
 
 Codex välitti postilaatikkoon (63c2dc8d1) omistajan sanat Pekingin mallinnus-chatista: "jatka parantelua. onko näissä jo generoimiasi tekstuureita käytössä?", "tee ainakin toiset kymmenen kierrosta lisää", "ota ne lisätekstuurit mukaan ja teetä lisää jos ei muuten lopputulos parane. tee niin kauan kunnes lopputulos on aivan loistava" ja "informoi claudea että käsin sinun tehdä näin". PT kuittasi 12.3x (b243a48ad): Peking pysyy poissa pelistä; ei Unity-integraatiota, R2-vientiä, main-yhdistämistä eikä julkaisua.
+
+## OMISTAJAN PÄÄTÖS: ASEMATAULU VAIN KESKUSTELUKANAVAN SIVUPANEELIIN (15.10.2026 klo 12.38)
+
+Omistaja 15.10.2026 klo 12.27 (Keskustelukanava), sanatarkasti: "tuota ulkoista asemataulua ei tarvita, asemataulu avataan aina vain suoraan tähän keskustelun yhteyteen. avaa se nyt". Työtapa: KK avaa taulun omaan sivupaneeliinsa (Artifact read + muuttamaton julkaisu samaan osoitteeseen) luonnin ja jokaisen nollauksen jälkeen; ei Chrome-ikkunaa eikä ehdotuksia siitä. Päivitetty docs/tilinvaihto.md ja docs/aloitusviestit/keskustelukanava.md.

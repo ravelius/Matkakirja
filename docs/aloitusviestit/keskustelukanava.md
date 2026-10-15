@@ -27,5 +27,5 @@ PÄÄTOIMITTAJA (Opus, medium, <PT:n id>) orkestroi roolit, kuittaukset, junat j
 8. Jokainen uusi työtapa kirjataan Raamattuun (omistaja 14.10.); varmista, että PT kirjaa sen.
 ```
 
-Asemataulun avaus omistajan läppärillä: `open -na "Google Chrome" --args --app=<tilin taulun osoite> --window-size=560,1000`
+Asemataulun avaus: aina tämän keskustelun sivupaneeliin (Artifact read + muuttamaton julkaisu samaan osoitteeseen); ei ulkoista Chrome-ikkunaa eikä ehdotuksia siitä (omistaja 15.10.2026 klo 12.27).
 (osoite docs/tilinvaihto.md, VOIMASSA OLEVA ARVO). Aiemmat keskustelut: /Users/Shared/Claude/keskustelut/Keskustelukanava-*.md.
