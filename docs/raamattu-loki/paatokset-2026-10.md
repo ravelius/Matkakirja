@@ -21,6 +21,14 @@ Codex välitti postilaatikkoon (63c2dc8d1) omistajan sanat Pekingin mallinnus-ch
 
 Omistaja 15.10.2026 klo 12.27 (Keskustelukanava), sanatarkasti: "tuota ulkoista asemataulua ei tarvita, asemataulu avataan aina vain suoraan tähän keskustelun yhteyteen. avaa se nyt". Työtapa: KK avaa taulun omaan sivupaneeliinsa (Artifact read + muuttamaton julkaisu samaan osoitteeseen) luonnin ja jokaisen nollauksen jälkeen; ei Chrome-ikkunaa eikä ehdotuksia siitä. Päivitetty docs/tilinvaihto.md ja docs/aloitusviestit/keskustelukanava.md.
 
+## KORJAUS: TILINVAIHDON TILI ON VVI@VVI.FI (15.10.2026 klo 13.55)
+
+Kohdan TILINVAIHTO: KOODAUSTILI SAMI@VALOKUVAAMOKLIK.FI (15.10.2026 klo 12.32) tili oli väärin: sovelluksen tili on vvi@vvi.fi (accountUuid c01e5d1e, org b408744a "vvi@vvi.fi's Organization"); sami@valokuvaamoklik.fi oli vain komentorivin vanha kirjautuminen. Omistaja kirjautui komentoriville samalle tilille 15.10. klo 13.5x (KK tarkisti). Viikkoraja 99 % ennallaan.
+
+## OMISTAJAN PÄÄTÖS: VIIKKORAJAKYSELY VAIN TILINVAIHDOSSA (15.10.2026 klo 13.55)
+
+Omistaja 15.10.2026 klo 13.53 (kortti), sanatarkasti: "nyt sinulla on mennyt jotain sekaisin, koska nämä kyselyt pitää tulla vain kun vaihdetaan tili ei silloin kun olet esim. nollannut jonkun session tai itsesi, mutta käytetään 99%". Tilin viikkoraja kysytään omistajalta vain tilinvaihdossa, ei nollauksissa; raja 99 % pysyy.
+
 ## OMISTAJAN PYYNTÖ: PT:N KONTEKSTIN VALVONTA JA PAKKONOLLAUS (15.10.2026 klo 14.39) (15.10.2026 klo 14.55)
 
 OMISTAJAN PYYNTÖ klo 14.39 (nollauskortin vastaus, sanatarkasti): "nollaa ja selvitä sen jälkeen miksi päätoimittajan konteksti pääsi karkaamaan ja varmista että tarvittavat toimet tehdään että
