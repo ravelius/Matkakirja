@@ -196,3 +196,12 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
   kiertävään yleiskuvaan (vain ☰ → Poistu linssistä). Toteutus: OpasSovitin.Pallokierros.cs PalloLoppu, "pallokierros päättyi" -rivin jälkeen
   odotus → jos Ok() eikä tauolla / pelaajan toimea → LinssiOhjain.Rekisteri?.Sulje() (sama kuin LinssiUi.SuljeLinssi / QA `linssi linssi pois`);
   AsetaKaupunkitila(null) hoitaa paluukuvan. Testi Ydin-tasolle, jos ehto on puhdasta logiikkaa.
+
+## PÄIVITYS 15.10. 16.2x — OMISTAJAN PÄÄTÖS 16.21 (loki e41fe420c): KIERROKSEN LOPPU → PULU + VAPAA LENTO (junaan 195)
+
+- EI automaattista paluuta kartalle (edellisen päivityksen suunnitelma KUMOTTU). Kertojan loppusanojen jälkeen Pulu kertoo äänellä, että nyt saa
+  lentää itse ja kysyä rakennuksista, ja vapaan lennon ohjaimet tulevat esiin. MINUN osani = tämä siirtymä, PARIISI ENSIN. Aloitus vasta kun juna 194 on TF:ssä.
+- Ei minun: "Mikä tämä on?" -nappi ja Pulun vastaus = Pelikoodari; Pulun kutsurepliikki = Sisältökirjuri (äänisivun Tekstit-osasto, omistaja hyväksyy ennen äänitystä).
+- Lähtökohdat: OpasSovitin.Pallokierros.cs PalloLoppu ("pallokierros päättyi") → OpasSovitin.AloitaVapaaLento() (VapaaLentoKaytettavissa; sama kuin
+  OpasValikko vapaaNappi); Pulun ääni klippiavaimella, joka toimii ilman ääntä (repliikki tulee SK:lta myöhemmin). Pariisi ei ole Pallokierros.Kaupungit-listassa
+  (praha, lontoo, koopenhamina, ateena) → selvitä ensin Pariisin kierroksen loppu (yleinen opas-esitys / kippi).
