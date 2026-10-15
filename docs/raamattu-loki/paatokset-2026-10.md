@@ -247,3 +247,24 @@ Kaikki kytkimen taakse; omistaja näkee videon ennen kytkentää. Toteutus: Valo
 ## PAATOKSET 15.10.2026 klo 23.35: Asemataulun cronit aina nollauksen jälkeen (15.10.2026 klo 23.35)
 
 Omistaja (kortti KK:ssa, "Kyllä, aina nollauksen jälkeen (Suositus)") klo 23.35: Asemataulun hoitaja luo päivityscronit (A */5, B 13,43, kulutus 7) aina heti nollauksen jälkeen ilman uutta lupaa. Syy: hoitaja kieltäytyi 21.15 luomasta croneja Postivahdin (vertaisen) pyynnöstä, ja taulu jäi klo 21.11:n tilaan; omistaja painoi 23.30 Päivitä-nappia, KK päivitti taulun 23.33. Kirjattu Raamattuun (SILMUKAT, VAHDIT JA OHJETIEDOSTOT, kohta 3) ja tools/tyotavat/ASEMATAULU-ROOLI.md:hen.
+
+## PAATOKSET 15.–16.10.2026 klo 23.56 ja 00.11: omistajan bugilista (kartta, kysymykset, aarre, meret, Pariisin kippi) (16.10.2026 klo 00.13)
+
+Omistajan bugipyynnöt KK:n kautta (sanatarkasti KK:n viesteissä), jako PT:
+OSA 1, klo 23.56 (kuva docs/raportit/kaappaukset/omistaja-20261015/peruskartta-neliot-macos-2356.webp): "bugeja: peruskartassa näkyy edelleen neliöt / Intron animaatio tökkii edelleen (matala fps?) /
+kartalla tyhjän kohdan tuplaklikkauksella pitäisi tulla pelkkä valinta maakunnasta, mutta se avaa samalla myös koko maakunnan pidemmän jutun, mikä on väärin. / MacOS sovelluksessa peli ei ota hipaisu
+klikkausta vastaan osoitinlevyllä tuplaklikkauksessa (normaali klikkaus toimii hipaisulla) / Jos vastaa väärin kohtaamiskysymyksessä, niin silloin pulun kommentti tulee yhtäaikaa väärin -ääniefektin
+kanssa. pulun kommentti saisi tulla reilun sekunnin perässä jotta äänet eivät menisi päällekkäin. lisäksi ääniefekti saisi olla hieman hiljemmalla / Väärän vastauksen ja oikean vastauksen
+paljastumisen animaatio on liian nopea. Ensin pitää tulla väärän vastauksen ilmoitus punaisella vastauspohjalla ja sen jälkeen kun pulu on pahoitellut asiaa tulee vihreä pohja oikean vastauksen alle
+ja vasta lopuksi aukeaa selitys alapuolelle, sekin vasta pienen tauon jälkeen. / Vihreä aarteen merkki ei saa tulla kohdekaupungin kohdalle vaan se pitää sijoittaa vähän sivuun. Aarteen pyöreä vihräe
+rengas on turha, ota se pois ja korvaa se hitaasti sykkien hehkuvana vihreänä pisteenä / poista vihreä väri visa nostoista. riittää että aluksi tulee pelkät visanostot kartalle / merien nimet pitäisi
+olla klikattavia nostoja (onko näiden tekstejä vielä tehty?) myös pulukysymykset tarvitaan"
+OSA 2, klo 00.11 (Pariisin kippi): "notredamen lähestyminen on jotenkin todella hidasta ja kertomuksessa on pitkiä taukoja. voiko olla että kippi ei pääse jonkun korkeusesteen ohi ja jää siksi
+pitkäksi aikaa paikoilleen? estettä ei oikeasti ole, mutta voisiko korkeus olla laskettu väärin? huomasin itse joskus aiemmin saman ongelman: en päässyt lentämään pallolla eteenpäin, kunnes tajusin
+että alapuolella olevan rakennuksen korkeus on ehkä merkitty vain väärin, koska kun nostin korkeutta reilusti, pääsin eteenpäin / onko kartoissa jo käytössä se latausmuoto että ensin ladataan kaikki
+karkealla tarkkuudella ja sitten vasta tarkennetaan edestä alkaen? / joka tapauksessa lento pitäisi olla yksi pehmeä linja ilman että koydet joutuisivat kauheasti rimpuilemaan kuten nyt. näyttää että
+palllo joutuu tekemään äkkipysähdyksiä. vai onko se jostain muusta johtuvaa? / kipin köydet eivät näytä olevan kiinni kopassa vaan ne liikkuvat ylös alas ilman että kori liikkuisi samassa tahdissa.
+niiden pitäisi olla täysin korin reunaan sidotun näköisiä."
+JAKO (junaan 196): neliöt → Karttaseppä (+ PK:n Marokko-laattalohko); intro-fps, aarteen merkki sivuun + sykkivä piste, visanostoista vihreä pois → Natiivi-UI; tuplaklikkaus-maakunta, Mac-hipaisu,
+kohtaamiskysymyksen ajoitus + ääni hiljemmalle + paljastusanimaatio → Pelikoodari; merinostot natiiviin klikattaviksi (VAIN EUROOPPA; tekstit on jo webissä, 124 merinostoa 84 maassa) → Siirtoseppä;
+Pulun merikysymykset luonnoksena omistajalle → Sisältökirjuri; Pariisin kippi (este karkeasta laatasta?, pehmeä linja, köydet koriin) → Linssiseppä.
