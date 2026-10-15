@@ -280,3 +280,7 @@ Omistajan pyyntö (KK:n kautta, sanatarkasti): "taidemuseossa pitäisi pystyä l
 ## PAATOKSET 16.10.2026 klo 00.18: taidemuseon automaattinen kävely (16.10.2026 klo 00.20)
 
 Omistaja (kortti KK:ssa, "Kyllä, näin (Suositus)") klo 00.18: reitti pehmeänä kaarena ja ovista keskeltä, ei suorina viivoina; rauhallinen museovauhti, pehmeä kiihdytys ja hidastus; hienovarainen pään keinunta askelissa; askeläänet lattian mukaan salin kaiun kanssa; katse kääntyy seuraavaan teokseen jo matkalla ja vilkaisee ohimennen muita tauluja; pysähdys silmien korkeudelle ja taulun koon mukaiselle katseluetäisyydelle. 00.17-pyynnön lisäksi; video omistajalle ennen kytkentää. Jako: Pelikoodari (kävely, kamera, kytkentä), Äänittäjä (askeläänet ja kaiku, CC0/CC BY/PD).
+
+## PAATOKSET 16.10.2026 klo 00.31 (KK välitti): juna 196 julkaistaan kun pyynnöt valmiina (16.10.2026 klo 00.33)
+
+OMISTAJA PYYSI JULKAISUA klo 00.31 (juna 196), sanatarkasti: "Julkaise juna kun kaikki pyyntöni valmiina. Ei testejä". Ehdollinen: tarkistuslista Asemataulun Juna 196 -rivillä (ISS 9 korttia + minipallo, ISS-efektit, bugilista 23.56/00.11, merinostot + Pulun merikysymykset, Pariisin kippi + karkea esilataus, taidemuseo); omistajalle näytettävät (9 kortin valikko, ISS-efektit, museokävely) KK:n kautta ennen lukitusta. PT sanoo LUKITSE 196, kun kaikki kuitattu; TF:stä rivi KK:lle. Välitetty NS:lle ja Julkaisijalle 00.3x.
