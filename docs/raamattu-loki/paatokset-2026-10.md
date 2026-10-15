@@ -201,3 +201,7 @@ Omistaja: "Jätetään se yöllä sittenkin" – peruu 21.03:n kohdan 'pois yöl
 ## PAATOKSET 15.10.2026 klo 21.29 (KK välitti): kaupunkiesittelyt hyväksytty (15.10.2026 klo 21.30)
 
 Omistaja: "Hyväksyn kaikki" – İzmir-malli ja 16 Euroopan kaupunkiesittelyä pidennettynä kahdeksi kappaleeksi (600–700 merkkiä) hyväksytty. Loput 20 Euroopan yhden kappaleen esittelyä tehdään samalla mallilla; PT tarkistaa faktat, Tekstit-osastoon merkintä 'hyväksytty mallin perusteella'.
+
+## PAATOKSET 15.10.2026 klo 21.48 (KK välitti): julkaisu ilman isoisän unta (15.10.2026 klo 21.49)
+
+Omistaja uni-videon (2 min 42 s) jälkeen, sanatarkasti: "Julkaise ilman unta. Se ei tunnu ollenkaan unelta" ja "Tehdään julkaisu ilman unta. Se vaatii paljon muutoksia". IsoisanUni-kytkin pysyy kiinni junissa 195 ja 196; saapuminen kuten ennen (isoisän luento). Unen uudistus työlistalle ilman kiirettä, KK tuo uuden suunnan omistajalle myöhemmin. Lisäksi 21.35 OMISTAJA PYYSI JULKAISUA juna 195: "Junan voi julkaista heti kun kaikki valmiina. Ei testejä".
