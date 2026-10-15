@@ -205,3 +205,12 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
 - Lähtökohdat: OpasSovitin.Pallokierros.cs PalloLoppu ("pallokierros päättyi") → OpasSovitin.AloitaVapaaLento() (VapaaLentoKaytettavissa; sama kuin
   OpasValikko vapaaNappi); Pulun ääni klippiavaimella, joka toimii ilman ääntä (repliikki tulee SK:lta myöhemmin). Pariisi ei ole Pallokierros.Kaupungit-listassa
   (praha, lontoo, koopenhamina, ateena) → selvitä ensin Pariisin kierroksen loppu (yleinen opas-esitys / kippi).
+
+## PÄIVITYS 15.10. 17.0x — VAPAA LENTO KIERROKSEN JÄLKEEN TEHTY (juna 195, odottaa PT:n kuittausta)
+
+- Proto-haara **siirtoseppa/vapaalento-195 2468450eb** (BUILD 194 b110dff52 päällä; worktree /Users/Shared/Claude/wt/proto-siirtoseppa-vapaalento).
+  Ydin OpasSilmukka.KierrosLoppuun / VapaaLentoLopussaKaytettavissa / AloitaVapaaLentoLopussa; Unity OpasSovitin.VapaaLentoKutsu.cs
+  (kutsut kaupungeittain, nyt vain pariisi → aanet/pulu/vapaalento-v1/livia-kutsu-pariisi.mp3; pallokierroksella palloPaattyi-ehto).
+  Testit VapaaLentoLopussaTestit 3/3, Linssit 1862/1862, tarkista.sh 0. Kuittauksen jälkeen SHA Natiivisepälle junaan 195.
+- Uusi kaupunki: lisää rivi VapaaLentoKutsut-sanakirjaan, kun SK:n teksti on hyväksytty ja Äänittäjä vienyt äänen.
+- PK:lle kerrottu kytkentä: "Mikä tämä on?" -nappi näkyy jo vapaassa tilassa (OpasSovitin.VapaaTila); Pulun kutsu Aanet.Soita(Puhe).
