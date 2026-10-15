@@ -1,0 +1,84 @@
+[
+ {
+  "kysymys": "Näkyykö auringonpimennys avaruuteen?",
+  "vastaus": "Näkyy, ainakin kameralla: asemalta Kuun varjo on tumma täplä, joka liukuu Maan pinnalla pilvien ja maiden yli. NASA julkaisi 8. huhtikuuta 2024 asemalta noin 420 kilometrin korkeudesta otetun kuvan, jossa varjo peittää osia Quebecistä, New Brunswickista ja Mainesta. Varjon tummin osa on kapea: elokuun 2017 pimennyksessä sen kulkureitti oli noin 110 kilometriä leveä, ja varjo liikkui yli tuhatta kilometriä tunnissa. Pimennys on siis pieni ja nopea tumma laikku koko Maan kokoisella pallolla.",
+  "lahteet": [
+   {
+    "url": "https://www.nasa.gov/?p=643296",
+    "title": "NASA: Moon's shadow over Quebec, New Brunswick and Maine from the ISS, 8.4.2024 (kuvasivu)"
+   },
+   {
+    "url": "https://www.planetary.org/space-images/total-solar-eclipse-2024-as-seen-from-iss",
+    "title": "Total Solar Eclipse 2024 as seen from ISS - The Planetary Society"
+   },
+   {
+    "url": "https://science.nasa.gov/earth/earth-observatory/eclipse-shadow-darkens-the-united-states-90792",
+    "title": "Eclipse Shadow Darkens the United States - NASA Earth Observatory"
+   },
+   {
+    "url": "https://science.nasa.gov/resource/shadow-of-a-total-solar-eclipse-from-the-space-station/",
+    "title": "Shadow of a Total Solar Eclipse from the Space Station - NASA"
+   },
+   {
+    "url": "https://www.fox9.com/news/astronauts-get-eerie-view-of-moons-shadow-as-it-trudges-across-earth-during-solar-eclipse",
+    "title": "Astronauts get eerie view of Moon's shadow ... - FOX 9 (NASAn nopeustieto)"
+   },
+   {
+    "url": "https://earthsky.org/todays-image/view-from-space-total-solar-eclipse-aug-21-2017",
+    "title": "View from space: total solar eclipse Aug 21, 2017 - EarthSky"
+   },
+   {
+    "url": "https://space.com/how-fast-will-total-solar-eclipse-2024-travel",
+    "title": "How fast will April's total solar eclipse travel? - Space.com (hakutulos)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Solar_eclipse_of_April_8,_2024",
+    "title": "Solar eclipse of April 8, 2024 - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Asema kuvasi Kuun varjon Maan pinnalla 8.4.2024 (Quebec, New Brunswick, Maine)",
+    "lahde1": "NASA kuvasivu: varjo (umbra) peittää osia Quebecistä ja New Brunswickista sekä Mainen; otettu 8.4.2024 asemalta 261 mailin korkeudesta",
+    "lahde2": "Planetary Society: sama kuvateksti, päivä 'on or about 08 April 2024'",
+    "huom": "V. Kuvaajaa ei nimetä kummassakaan; Dominick/Epps tulivat vain hakutuloksen tiivistelmästä, joten nimiä ei käytetä. NASAn sivulla bannerin mukaan sivustoa ei päivitetä."
+   },
+   {
+    "vaite": "Asema noin 420 km korkeudessa (261 mailia)",
+    "lahde1": "NASA kuvateksti: 261 miles (= 420 km)",
+    "lahde2": "Hakutuloksen tiivistelmä (Space.com-uutisointi): 260 miles / 420 km",
+    "huom": "Heikosti tuettu toiselta osin (hakutulos); kuvatekstin 261 mailia on kuitenkin NASAn. Teksti sanoo 'noin 420 km'."
+   },
+   {
+    "vaite": "2017 pimennyksen täydellisyyden kulkureitti noin 110 km (70 mailia) leveä",
+    "lahde1": "NASA Earth Observatory: path of totality about 70 miles (110 km) wide",
+    "lahde2": "Hakutulos: Space.com ka. 68 mailia (109 km), enintään 71 mailia (114 km)",
+    "huom": "V, toinen hakutuloksena. Sanotaan 'kulkureitti', ei varjon tarkkaa läpimittaa. Muotoa 'noin' käytetty."
+   },
+   {
+    "vaite": "Varjo liikkuu Maan pinnalla yli tuhat km/h",
+    "lahde1": "NASA (FOX 9 -uutisen mukaan): 1 100 mph päiväntasaajalla, jopa 5 000 mph napojen lähellä (1 100 mph = noin 1 770 km/h)",
+    "lahde2": "Hakutulos: Sky & Telescope noin 1 400 mph 2017 huipussaan; Space.com 2024 yli 1 500 mph",
+    "huom": "Tarkkaa lukua ei käytetä, koska nopeus vaihtelee paikan mukaan ja lähteiden luvut eroavat (1 100 / 1 251 / 1 400 / 1 500 mph). 'Yli tuhat km/h' on kaikkien alapuolella. Kumpikaan ei ole NASA-sivu suoraan avattuna (Space.com-sivu katkesi)."
+   },
+   {
+    "vaite": "Pudotettu: 2017 pimennyksessä asema ylitti kulkureitin kolme kertaa, noin 250 mailin korkeudessa",
+    "lahde1": "NASA 2017 -kuvasivu: ISS 250 mailia, ylitti pimennyksen reitin kolme kertaa",
+    "lahde2": "EarthSky: sama (3 ylitystä)",
+    "huom": "Jätetty pois vastauksesta tilan vuoksi. Lisäksi lähteet ovat ristiriitaiset siitä, kävikö asema varjon tummassa ytimessä vai vain puolivarjossa (NASA/EarthSky: 'only six people witnessed the umbra from space'; hakutulosten tiivistelmät: asema ei koskaan ollut umbrassa), joten 2017 ISS-kuvaa ei käytetä esimerkkinä."
+   },
+   {
+    "vaite": "Pudotettu: Kuvaajien nimet 2024 (Dominick, Epps) ja ISS:n osittaisen pimennyksen aste (90 / 94 %)",
+    "lahde1": "Vain hakutuloksen tiivistelmä",
+    "lahde2": "-",
+    "huom": "Ei vahvistettu avatusta lähteestä; ei käytetä."
+   },
+   {
+    "vaite": "Vastauksessa ei väitetä, että varjo näkyisi paljain silmin",
+    "lahde1": "-",
+    "lahde2": "-",
+    "huom": "Teksti sanoo 'kameralla' ja viittaa NASAn kuvaan; paljaan silmän havainnosta ei avattua lähdettä."
+   }
+  ]
+ }
+]
