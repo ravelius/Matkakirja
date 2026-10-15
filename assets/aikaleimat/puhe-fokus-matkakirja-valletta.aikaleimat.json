@@ -4,264 +4,264 @@
   "teksti": "Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.",
   "tekstiSha256": "1f2cbe6f03ed2af6f9e2c3cd74323a19cc1b90015b6ad9f27a1d0f5dd10b2b6e",
   "aani": {
-    "nimi": "puhe-fokus-matkakirja-valletta.mp3",
+    "nimi": "puhe-fokus-matkakirja-valletta-v3.mp3",
     "versio": 2,
-    "tavut": 786851,
-    "sha256": "eabd394bc6d9b3c2879e8cd7294acfb5b0683474d1ac2ef6c76b2088274dc552"
+    "tavut": 878384,
+    "sha256": "dcd72dd703baf95a586bcc6b50391e82673f382f590e64f0a26ed4f30e12d954"
   },
-  "kesto": 32720,
+  "kesto": 36540,
   "sanat": [
     {
       "sana": "Valletta",
-      "alku": 280,
-      "loppu": 800
+      "alku": 200,
+      "loppu": 560
     },
     {
       "sana": "syyskuussa",
-      "alku": 1280,
-      "loppu": 2000
+      "alku": 860,
+      "loppu": 1800
     },
     {
       "sana": "1873",
-      "alku": 2080,
-      "loppu": 4480
+      "alku": 1840,
+      "loppu": 4000
     },
     {
       "sana": "Koko",
-      "alku": 5440,
-      "loppu": 5680
+      "alku": 4840,
+      "loppu": 5840
     },
     {
       "sana": "kaupunki",
-      "alku": 5760,
-      "loppu": 6320
-    },
-    {
-      "sana": "on",
-      "alku": 6400,
+      "alku": 5900,
       "loppu": 6480
     },
     {
+      "sana": "on",
+      "alku": 6580,
+      "loppu": 6800
+    },
+    {
       "sana": "veistetty",
-      "alku": 6520,
-      "loppu": 7040
+      "alku": 6860,
+      "loppu": 7280
     },
     {
       "sana": "samasta",
-      "alku": 7120,
-      "loppu": 7600
+      "alku": 7340,
+      "loppu": 7840
     },
     {
       "sana": "vaaleasta",
-      "alku": 7680,
-      "loppu": 8240
+      "alku": 7920,
+      "loppu": 8480
     },
     {
       "sana": "kalkkikivestä",
-      "alku": 8320,
-      "loppu": 9200
+      "alku": 8560,
+      "loppu": 9520
     },
     {
       "sana": "ja",
-      "alku": 9680,
-      "loppu": 9760
+      "alku": 9780,
+      "loppu": 10160
     },
     {
       "sana": "iltarusko",
-      "alku": 9840,
-      "loppu": 10480
+      "alku": 10280,
+      "loppu": 10800
     },
     {
       "sana": "polttaa",
-      "alku": 10560,
-      "loppu": 11040
+      "alku": 10840,
+      "loppu": 11280
     },
     {
       "sana": "muurit",
-      "alku": 11120,
-      "loppu": 11440
+      "alku": 11360,
+      "loppu": 11760
     },
     {
       "sana": "melkein",
-      "alku": 11520,
-      "loppu": 11920
+      "alku": 11820,
+      "loppu": 12240
     },
     {
       "sana": "kullankeltaisiksi",
-      "alku": 12080,
-      "loppu": 13440
+      "alku": 12280,
+      "loppu": 13520
     },
     {
       "sana": "Grand",
-      "alku": 14160,
-      "loppu": 14480
+      "alku": 14600,
+      "loppu": 15360
     },
     {
       "sana": "Harbourissa",
-      "alku": 14560,
-      "loppu": 15120
+      "alku": 15400,
+      "loppu": 16000
     },
     {
       "sana": "kyljettäin",
-      "alku": 15200,
-      "loppu": 15840
-    },
-    {
-      "sana": "makaa",
-      "alku": 15960,
-      "loppu": 16240
-    },
-    {
-      "sana": "laivaston",
-      "alku": 16320,
+      "alku": 16120,
       "loppu": 16880
     },
     {
-      "sana": "mustia",
-      "alku": 17040,
-      "loppu": 17360
+      "sana": "makaa",
+      "alku": 16940,
+      "loppu": 17280
     },
     {
-      "sana": "runkoja",
-      "alku": 17440,
+      "sana": "laivaston",
+      "alku": 17360,
       "loppu": 17920
     },
     {
-      "sana": "kuin",
+      "sana": "mustia",
       "alku": 18000,
-      "loppu": 18240
+      "loppu": 18480
+    },
+    {
+      "sana": "runkoja",
+      "alku": 18540,
+      "loppu": 19040
+    },
+    {
+      "sana": "kuin",
+      "alku": 19120,
+      "loppu": 19440
     },
     {
       "sana": "tikkuja",
-      "alku": 18320,
-      "loppu": 18880
+      "alku": 19520,
+      "loppu": 20000
     },
     {
       "sana": "laatikossa",
-      "alku": 18960,
-      "loppu": 19680
+      "alku": 20040,
+      "loppu": 20720
     },
     {
       "sana": "Ritarikunnan",
-      "alku": 20320,
-      "loppu": 21040
-    },
-    {
-      "sana": "paksut",
-      "alku": 21120,
-      "loppu": 21520
-    },
-    {
-      "sana": "muurit",
-      "alku": 21600,
-      "loppu": 21920
-    },
-    {
-      "sana": "ovat",
-      "alku": 22000,
-      "loppu": 22240
-    },
-    {
-      "sana": "yhä",
-      "alku": 22320,
-      "loppu": 22480
-    },
-    {
-      "sana": "pystyssä",
       "alku": 22560,
       "loppu": 23200
     },
     {
+      "sana": "paksut",
+      "alku": 23280,
+      "loppu": 23680
+    },
+    {
+      "sana": "muurit",
+      "alku": 23760,
+      "loppu": 24160
+    },
+    {
+      "sana": "ovat",
+      "alku": 24220,
+      "loppu": 24480
+    },
+    {
+      "sana": "yhä",
+      "alku": 24520,
+      "loppu": 24640
+    },
+    {
+      "sana": "pystyssä",
+      "alku": 24720,
+      "loppu": 25500
+    },
+    {
       "sana": "vaikka",
-      "alku": 23480,
-      "loppu": 23760
+      "alku": 25780,
+      "loppu": 26080
     },
     {
       "sana": "niiden",
-      "alku": 23800,
-      "loppu": 24080
+      "alku": 26100,
+      "loppu": 26400
     },
     {
       "sana": "purkamisesta",
-      "alku": 24160,
-      "loppu": 24800
+      "alku": 26460,
+      "loppu": 27120
     },
     {
       "sana": "on",
-      "alku": 24880,
-      "loppu": 24960
+      "alku": 27180,
+      "loppu": 27280
     },
     {
       "sana": "puhuttu",
-      "alku": 25000,
-      "loppu": 25440
+      "alku": 27320,
+      "loppu": 27680
     },
     {
       "sana": "täällä",
-      "alku": 25460,
-      "loppu": 25760
+      "alku": 27740,
+      "loppu": 28080
     },
     {
       "sana": "useaan",
-      "alku": 25920,
-      "loppu": 26240
+      "alku": 28160,
+      "loppu": 28560
     },
     {
       "sana": "otteeseen",
-      "alku": 26320,
-      "loppu": 27040
-    },
-    {
-      "sana": "paikallinen",
-      "alku": 27740,
-      "loppu": 28240
-    },
-    {
-      "sana": "upseeri",
-      "alku": 28360,
-      "loppu": 28800
-    },
-    {
-      "sana": "vannoi",
-      "alku": 28840,
+      "alku": 28640,
       "loppu": 29360
     },
     {
+      "sana": "paikallinen",
+      "alku": 31240,
+      "loppu": 31760
+    },
+    {
+      "sana": "upseeri",
+      "alku": 31820,
+      "loppu": 32240
+    },
+    {
+      "sana": "vannoi",
+      "alku": 32280,
+      "loppu": 32720
+    },
+    {
       "sana": "ettei",
-      "alku": 29600,
-      "loppu": 29840
+      "alku": 32880,
+      "loppu": 33200
     },
     {
       "sana": "kivi",
-      "alku": 29920,
-      "loppu": 30240
+      "alku": 33240,
+      "loppu": 33520
     },
     {
       "sana": "anna",
-      "alku": 30320,
-      "loppu": 30640
+      "alku": 33580,
+      "loppu": 33920
     },
     {
       "sana": "periksi",
-      "alku": 30720,
-      "loppu": 31120
+      "alku": 33960,
+      "loppu": 34400
     },
     {
       "sana": "ennen",
-      "alku": 31200,
-      "loppu": 31440
+      "alku": 34460,
+      "loppu": 34720
     },
     {
       "sana": "tuomiopäivää",
-      "alku": 31520,
-      "loppu": 32560
+      "alku": 34800,
+      "loppu": 35840
     }
   ],
   "lauseet": [
-    280,
-    5440,
-    14160,
-    20320
+    200,
+    4840,
+    14600,
+    22560
   ],
-  "luotu": "2026-10-11T19:36:03.000Z"
+  "luotu": "2026-10-15T12:57:37.000Z"
 }

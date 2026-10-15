@@ -122,9 +122,9 @@ export function aikaleimojenOsoite(aaniPolku) {
   return osoite.replace('.mp3', '.aikaleimat.json');
 }
 
-/** Kaupungin tunnus matkakirjaluennan tiedostonimestä, tai null. */
+/** Kaupungin tunnus matkakirjaluennan tiedostonimestä (uusinnan -vN-pääte ohitetaan, esim. -v3 15.10.2026), tai null. */
 export function kaupunkiOsoitteesta(polku) {
-  const osuma = String(polku ?? '').match(/puhe-fokus-matkakirja-([a-z0-9-]+)\.mp3/i);
+  const osuma = String(polku ?? '').match(/puhe-fokus-matkakirja-([a-z0-9-]+?)(?:-v\d+)?\.mp3/i);
   return osuma ? osuma[1] : null;
 }
 

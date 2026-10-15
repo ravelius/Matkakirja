@@ -4,285 +4,285 @@
   "teksti": "Ljubljana, syyskuussa 1873. Laibach, sanovat itävaltalaiset virkamiehet, ja kaupunki kuuntelee kahdella korvalla. Linna kyyhöttää kukkulalla kuin vartija, joka on nukahtanut virkaansa: sisällä on vankila, ei ruhtinaita. Ljubljanica kiertää vanhan kaupungin hitaasti kuin ei tahtoisi lähteä, ja rannan pajat haisevat nahalta ja tervalta. Juna toi minut Wienistä yhdessä päivässä; isoisäni aikaan matka kesti viikon.",
   "tekstiSha256": "c7e8ddabddb82f6bfac836f5c04e5b68cbe15a085824aeec9552359a9af31aa9",
   "aani": {
-    "nimi": "puhe-fokus-matkakirja-ljubljana.mp3",
+    "nimi": "puhe-fokus-matkakirja-ljubljana-v3.mp3",
     "versio": 2,
-    "tavut": 873368,
-    "sha256": "c163b9f03df8be7b072f845e925114f5289d74334a5dd156b593180a323fffb6"
+    "tavut": 922896,
+    "sha256": "bd505a02a9103e4faf31354a13a12347e7a3c662ea86fc61069aea7612a9beba"
   },
-  "kesto": 36320,
+  "kesto": 38380,
   "sanat": [
     {
       "sana": "Ljubljana",
-      "alku": 160,
-      "loppu": 960
+      "alku": 120,
+      "loppu": 720
     },
     {
       "sana": "syyskuussa",
-      "alku": 1440,
-      "loppu": 2160
+      "alku": 1180,
+      "loppu": 1840
     },
     {
       "sana": "1873",
-      "alku": 2240,
-      "loppu": 4640
+      "alku": 1920,
+      "loppu": 4160
     },
     {
       "sana": "Laibach",
-      "alku": 5520,
-      "loppu": 6160
+      "alku": 5600,
+      "loppu": 6720
     },
     {
       "sana": "sanovat",
-      "alku": 6640,
-      "loppu": 7040
+      "alku": 7180,
+      "loppu": 7600
     },
     {
       "sana": "itävaltalaiset",
-      "alku": 7120,
-      "loppu": 8000
+      "alku": 7660,
+      "loppu": 8400
     },
     {
       "sana": "virkamiehet",
-      "alku": 8040,
-      "loppu": 8800
-    },
-    {
-      "sana": "ja",
-      "alku": 9120,
+      "alku": 8460,
       "loppu": 9200
     },
     {
+      "sana": "ja",
+      "alku": 9620,
+      "loppu": 9680
+    },
+    {
       "sana": "kaupunki",
-      "alku": 9280,
-      "loppu": 9760
+      "alku": 9740,
+      "loppu": 10240
     },
     {
       "sana": "kuuntelee",
-      "alku": 9840,
-      "loppu": 10400
+      "alku": 10300,
+      "loppu": 10800
     },
     {
       "sana": "kahdella",
-      "alku": 10480,
-      "loppu": 10960
+      "alku": 10860,
+      "loppu": 11280
     },
     {
       "sana": "korvalla",
-      "alku": 11040,
-      "loppu": 11680
+      "alku": 11340,
+      "loppu": 11840
     },
     {
       "sana": "Linna",
-      "alku": 12560,
-      "loppu": 12880
+      "alku": 12320,
+      "loppu": 13680
     },
     {
       "sana": "kyyhöttää",
-      "alku": 12960,
-      "loppu": 13600
+      "alku": 13720,
+      "loppu": 14320
     },
     {
       "sana": "kukkulalla",
-      "alku": 13640,
-      "loppu": 14240
+      "alku": 14380,
+      "loppu": 14880
     },
     {
       "sana": "kuin",
-      "alku": 14320,
-      "loppu": 14480
+      "alku": 14940,
+      "loppu": 15120
     },
     {
       "sana": "vartija",
-      "alku": 14640,
-      "loppu": 15200
+      "alku": 15200,
+      "loppu": 15680
     },
     {
       "sana": "joka",
-      "alku": 15400,
-      "loppu": 15600
+      "alku": 15920,
+      "loppu": 16080
     },
     {
       "sana": "on",
-      "alku": 15680,
-      "loppu": 15760
+      "alku": 16140,
+      "loppu": 16240
     },
     {
       "sana": "nukahtanut",
-      "alku": 15800,
-      "loppu": 16400
+      "alku": 16300,
+      "loppu": 16720
     },
     {
       "sana": "virkaansa",
-      "alku": 16480,
-      "loppu": 17200
+      "alku": 16780,
+      "loppu": 17440
     },
     {
       "sana": "sisällä",
-      "alku": 17840,
-      "loppu": 18320
+      "alku": 18140,
+      "loppu": 18800
     },
     {
       "sana": "on",
-      "alku": 18400,
-      "loppu": 18480
+      "alku": 18860,
+      "loppu": 18960
     },
     {
       "sana": "vankila",
-      "alku": 18560,
-      "loppu": 19120
+      "alku": 19000,
+      "loppu": 19520
     },
     {
       "sana": "ei",
-      "alku": 19600,
-      "loppu": 19760
+      "alku": 20080,
+      "loppu": 20240
     },
     {
       "sana": "ruhtinaita",
-      "alku": 19840,
-      "loppu": 20560
+      "alku": 20300,
+      "loppu": 20960
     },
     {
       "sana": "Ljubljanica",
-      "alku": 21280,
-      "loppu": 22080
+      "alku": 22780,
+      "loppu": 23440
     },
     {
       "sana": "kiertää",
-      "alku": 22160,
-      "loppu": 22640
+      "alku": 23520,
+      "loppu": 24000
     },
     {
       "sana": "vanhan",
-      "alku": 22760,
-      "loppu": 23040
+      "alku": 24060,
+      "loppu": 24320
     },
     {
       "sana": "kaupungin",
-      "alku": 23120,
-      "loppu": 23680
+      "alku": 24400,
+      "loppu": 24960
     },
     {
       "sana": "hitaasti",
-      "alku": 23760,
-      "loppu": 24400
+      "alku": 25020,
+      "loppu": 25520
     },
     {
       "sana": "kuin",
-      "alku": 24560,
-      "loppu": 24720
+      "alku": 25600,
+      "loppu": 25840
     },
     {
       "sana": "ei",
-      "alku": 24800,
-      "loppu": 24880
+      "alku": 25900,
+      "loppu": 26000
     },
     {
       "sana": "tahtoisi",
-      "alku": 24960,
-      "loppu": 25440
+      "alku": 26060,
+      "loppu": 26560
     },
     {
       "sana": "lähteä",
-      "alku": 25520,
-      "loppu": 26080
+      "alku": 26620,
+      "loppu": 27040
     },
     {
       "sana": "ja",
-      "alku": 26720,
-      "loppu": 26800
-    },
-    {
-      "sana": "rannan",
-      "alku": 26840,
-      "loppu": 27200
-    },
-    {
-      "sana": "pajat",
-      "alku": 27360,
+      "alku": 27580,
       "loppu": 27680
     },
     {
+      "sana": "rannan",
+      "alku": 27720,
+      "loppu": 28080
+    },
+    {
+      "sana": "pajat",
+      "alku": 28140,
+      "loppu": 28560
+    },
+    {
       "sana": "haisevat",
-      "alku": 27760,
-      "loppu": 28240
+      "alku": 28620,
+      "loppu": 28960
     },
     {
       "sana": "nahalta",
-      "alku": 28320,
-      "loppu": 28880
+      "alku": 29020,
+      "loppu": 29440
     },
     {
       "sana": "ja",
-      "alku": 28960,
-      "loppu": 29040
+      "alku": 29460,
+      "loppu": 29520
     },
     {
       "sana": "tervalta",
-      "alku": 29120,
-      "loppu": 29760
+      "alku": 29600,
+      "loppu": 30160
     },
     {
       "sana": "Juna",
-      "alku": 30480,
-      "loppu": 30720
+      "alku": 32000,
+      "loppu": 32160
     },
     {
       "sana": "toi",
-      "alku": 30800,
-      "loppu": 30960
+      "alku": 32220,
+      "loppu": 32400
     },
     {
       "sana": "minut",
-      "alku": 31040,
-      "loppu": 31280
+      "alku": 32440,
+      "loppu": 32640
     },
     {
       "sana": "Wienistä",
-      "alku": 31320,
-      "loppu": 31920
+      "alku": 32700,
+      "loppu": 33280
     },
     {
       "sana": "yhdessä",
-      "alku": 32000,
-      "loppu": 32480
+      "alku": 33320,
+      "loppu": 33720
     },
     {
       "sana": "päivässä",
-      "alku": 32560,
-      "loppu": 33120
+      "alku": 33760,
+      "loppu": 34240
     },
     {
       "sana": "isoisäni",
-      "alku": 33680,
-      "loppu": 34320
+      "alku": 35200,
+      "loppu": 35760
     },
     {
       "sana": "aikaan",
-      "alku": 34360,
-      "loppu": 34720
+      "alku": 35840,
+      "loppu": 36320
     },
     {
       "sana": "matka",
-      "alku": 34800,
-      "loppu": 35120
+      "alku": 36400,
+      "loppu": 36800
     },
     {
       "sana": "kesti",
-      "alku": 35240,
-      "loppu": 35520
+      "alku": 36820,
+      "loppu": 37120
     },
     {
       "sana": "viikon",
-      "alku": 35600,
-      "loppu": 36160
+      "alku": 37180,
+      "loppu": 37600
     }
   ],
   "lauseet": [
-    160,
-    5520,
-    12560,
-    21280,
-    30480
+    120,
+    5600,
+    12320,
+    22780,
+    32000
   ],
-  "luotu": "2026-10-11T19:36:03.000Z"
+  "luotu": "2026-10-15T12:57:37.000Z"
 }
