@@ -83,3 +83,12 @@ Omistaja (kortti Keskustelukanavassa, vaihtoehdot Rooma/Wien/Barcelona/Ei vielä
 ## PAATOKSET 15.10.2026 klo 16.05: JUNA 194 JULKAISTAAN KUN NYKYISET TYOT VALMIIT; LOUVRE TYON ALLE (15.10.2026 klo 16.06)
 
 Omistaja (sanatarkasti): "tehdään nykyiset kaikki loppuun ja julkaistaan juna. mietitään sen jälkeen mitä tehdään. esim. olavin linna on vielä kesken ja se on iso työ. sitten myös louvren siitiminen on odottavissa, minkä voisi kyllä nyt laittaa työn alle, liittyy kippiin". Toteutus: 1) OMISTAJA PYYSI JULKAISUA (ehdollinen): juna 194 lukitaan ja viedään TF:ään, kun nyt käynnissä olevat työt (Ateena + Zeuksen temppelin kulma, Lontoon/Prahan/Ateenan hionta, isoisä v3) on kuitattu; ei uusia isoja kokonaisuuksia ennen julkaisua. 2) Louvren siistiminen (Pariisin kippi) työn alle nyt Linnanrakentajalle; junaan jos kuitattu ennen lukitusta, junaa ei pidätetä sen takia. 3) Olavinlinna tauolla; jatko päätetään junan jälkeen.
+
+## PAATOKSET 15.10.2026 klo 16.21: KUUMAILMAPALLOKIERROKSEN LOPPU – PULU JA VAPAA LENTO (15.10.2026 klo 16.21)
+
+Omistaja (kysymys PALLOKIERROKSEN-LOPPU, omin sanoin): "[Kuumailmapallon] kierroksen jälkeen pitää tulla äänellinen ohje, että pelaaja voi nyt itse lentää vapaasti kaupungissa ja painamalla, mikä tämä
+on, pelaaja voi klikata jotain kohtaa kartalla ja pulu kertoo sen jälkeen, mikä kyseinen rakennus on, jos se tietää sen. Toisaalta, jos kyse on rakennuksista, joista on jo esittely, niin pitäisikö
+silloin äänessä olla kertoja? En ole tästä ihan varma." + kortti "Kyllä, näin (Suositus)": 1) Kertoja on kierroksen ääni, Pulu vapaan lennon ääni. Ei automaattista paluuta kartalle: kertojan
+loppusanojen jälkeen Pulu kertoo äänellä, että nyt saa lentää itse ja kysyä rakennuksista, ja vapaan lennon ohjaimet tulevat esiin. 2) "Mikä tämä on?" -nappi (olemassa oleva nappipohja) → pelaaja
+napauttaa rakennusta → Pulu vastaa aina lyhyesti omalla äänellään (striimipuhe); jos rakennuksesta on esittely, Pulu tiivistää sen pääasiat esittelytekstistä; tunnistamattomasta Pulu sanoo suoraan,
+ettei tunne sitä (ei arvailua). 3) Pulun kutsurepliikki äänisivun Tekstit-osastoon omistajan hyväksyttäväksi ennen äänitystä. Toteutus junan 194 jälkeen, Pariisi ensin.
