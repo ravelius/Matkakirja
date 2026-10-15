@@ -193,3 +193,7 @@ Pululle taustatietona.
 ## PAATOKSET 15.10.2026 klo 21.03 (kortti, KK välitti): ISS-kohdevalikon ulkoasu (15.10.2026 klo 21.07)
 
 Omistaja: kohdevalikkoon rauhallisempi tausta ja isommat kuvat (nimi kuvan alareunaan), pois 'yöllä'-sanat otsikoista; järjestys ennallaan. Viat korjattavaksi: iPhonen oikea reuna ja logon pala. Toteuttaja Natiivi-UI (PT välitti).
+
+## PAATOKSET 15.10.2026 klo 21.07 (KK välitti): yöllä-sanat jäävät (15.10.2026 klo 21.08)
+
+Omistaja: "Jätetään se yöllä sittenkin" – peruu 21.03:n kohdan 'pois yöllä-sanat'; kohdevalikon nimet ennallaan (esim. 'Bagdad yöllä'). Rauhallisempi tausta ja isommat kuvat pysyvät. PT välitti Natiivi-UI:lle.
