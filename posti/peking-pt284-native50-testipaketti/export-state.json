@@ -1,0 +1,693 @@
+{
+  "order": 284,
+  "nativeSourceRound": 50,
+  "nativeBlendSHA256": "a66aa21512056731c19399db1fe25bcfef42f63c958e055a09638f1be46b734f",
+  "sourceProfilePins": {
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/test-export284-work/export-test284-tile.py": "eedb1faebfd9aaecca51e908cb865dc89775d61d65fcd9e85314b9b786a861a6",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/test-export284-work/source-lod284.py": "f2ab61be19519db449ae63277be277074444aa657902361ee771fc687f1000e4",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/prepare-test284-tree-normal-compensation.py": "a46f9f50ce7fa8c35cc22c273d692ae8bffc6c8ddc1e41f509a943865ea94a9f",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/prepare-test284-texture-cache.py": "f380cf237b7b479f41c25588d56ddd522222ccd0cf93e905171e5ff0e95a11e4",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/prepare-test284-cell-cache.py": "518cb3df1933f179e5796fbfbcb1926c395217e9075490fb56af82519520c0c1"
+  },
+  "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50",
+  "status": "ready_for_restricted_private_flight_test",
+  "expectedGLBFiles": 72,
+  "completed": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "sha256": "c88e104a60ab3a888a4496defdd0493372d6e874cf2f85d685efeea159cd1736",
+      "bytes": 1691132,
+      "triangles": 8361,
+      "treeCount": 117,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_0_lod1.glb",
+      "sha256": "51e7a5d923316cf401bda89282d4569ceab08f7ba96aed1ef3073787b5ffc05b",
+      "bytes": 882756,
+      "triangles": 7893,
+      "treeCount": 117,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_0_lod2.glb",
+      "sha256": "a6c67d3077639219aa1c54f8e0461bc69cd8d90cf02213f9f05174ebfdceafbb",
+      "bytes": 838584,
+      "triangles": 7893,
+      "treeCount": 117,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "sha256": "78e15c9f92b8a6426330b8ea8653d735a0d7b2170254f1aa5c66650155383a3f",
+      "bytes": 2086020,
+      "triangles": 8315,
+      "treeCount": 253,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_1_lod1.glb",
+      "sha256": "c6585a0adab784328c11a90bd0c1fc84a0a0b0923fe846689505954fcd3fdefb",
+      "bytes": 926024,
+      "triangles": 6967,
+      "treeCount": 253,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_1_lod2.glb",
+      "sha256": "9fd5653e3fdeac96de0761ba3d958c2b99b9598a305cad6e2479c7e30a2f1c29",
+      "bytes": 851920,
+      "triangles": 6967,
+      "treeCount": 253,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "sha256": "4be9fe8268ae024227960fcf5ec96fc1694dbec5b94f4622b46d72f9d992035f",
+      "bytes": 2538540,
+      "triangles": 11017,
+      "treeCount": 368,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_2_lod1.glb",
+      "sha256": "45b8dc9e8efac2a0288b9fefdbd46043295fd43a763f1f1e83cf2361ede1af3b",
+      "bytes": 1123080,
+      "triangles": 8645,
+      "treeCount": 368,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_2_lod2.glb",
+      "sha256": "b5ea8828ec88fb96114e23a4735cc17dc92cd16dd74c8de1ff180189c1d758a3",
+      "bytes": 1033804,
+      "triangles": 8645,
+      "treeCount": 368,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "sha256": "960b19ff12f4691fe99c807fe6afac325a203b421713a3849a0c8775b85c85b3",
+      "bytes": 2029396,
+      "triangles": 8420,
+      "treeCount": 178,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_3_lod1.glb",
+      "sha256": "6bc2c3163dc1d9cbc0d83803df92a9735172e3f6164a4d555544556d489803a6",
+      "bytes": 964280,
+      "triangles": 7564,
+      "treeCount": 178,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_3_lod2.glb",
+      "sha256": "08b4674c881a94e68765b125f5ea72f8437605af965ca475853472601026e767",
+      "bytes": 889708,
+      "triangles": 7564,
+      "treeCount": 178,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "sha256": "9311a21e13e44679e61fe1c6efff18ec837d88406a28b5623577c967dba3669b",
+      "bytes": 2186844,
+      "triangles": 8777,
+      "treeCount": 172,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_4_lod1.glb",
+      "sha256": "6ce6204517bd8450c81e350c00a64c4fd988b646384dee21e382c44ce00d79f8",
+      "bytes": 1009236,
+      "triangles": 7825,
+      "treeCount": 172,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_4_lod2.glb",
+      "sha256": "dcd1802a583c858c85bb2b252402e3599f0461f59ddeb27b6bb5ededbd5bc3bf",
+      "bytes": 932984,
+      "triangles": 7825,
+      "treeCount": 172,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "sha256": "ca9bd6c42adcdc7a03efb234f34fb172555405aa5e894fe96308ffa99b99ddd9",
+      "bytes": 2347380,
+      "triangles": 14420,
+      "treeCount": 628,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_5_lod1.glb",
+      "sha256": "efbd8afdd9b8208d31b362444c2e6b45fe9a5a4bfff9593171e0b80111280038",
+      "bytes": 1180816,
+      "triangles": 11568,
+      "treeCount": 628,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_0_5_lod2.glb",
+      "sha256": "9271631189f7b1764462230e0360186c63bfe4b72306fc443076980afa18d34e",
+      "bytes": 1113480,
+      "triangles": 11568,
+      "treeCount": 628,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "sha256": "507d90b21514cb7a0985b7882558d46129b449103553483f458ab86be046a322",
+      "bytes": 1644172,
+      "triangles": 6000,
+      "treeCount": 117,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_0_lod1.glb",
+      "sha256": "743b02c7cf753d51bde81a64b291f9fff5cb858d259c10b6f6cbfc8c5468247f",
+      "bytes": 751804,
+      "triangles": 5532,
+      "treeCount": 117,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_0_lod2.glb",
+      "sha256": "91742345cf9e09c9247fe93d084252a931990220b5a9272612d0882256331d53",
+      "bytes": 701412,
+      "triangles": 5532,
+      "treeCount": 117,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "sha256": "6e18692bfc79badaf6b37c82332744cb24220ec50dedbe3c3443ab77a95bcd7e",
+      "bytes": 2528804,
+      "triangles": 14439,
+      "treeCount": 338,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_1_lod1.glb",
+      "sha256": "a50d38732e2d379a358cb496a9ee47e2e5c2b928aadda6a1904b479713862c3f",
+      "bytes": 1341032,
+      "triangles": 12783,
+      "treeCount": 338,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_1_lod2.glb",
+      "sha256": "a98b4d7c32d42e73a54b0b6d6508edbcb74a612f0a1bb64b94313d82e636e81f",
+      "bytes": 1265588,
+      "triangles": 12783,
+      "treeCount": 338,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "sha256": "f20a7b2502a4638ce7ef1f619642399bed3741eb7466359671c1faafcc0b2416",
+      "bytes": 2750000,
+      "triangles": 16403,
+      "treeCount": 541,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_2_lod1.glb",
+      "sha256": "69857441ce146a5657902452d2f438f99d15257b6b205cf02a73b6371dfcfe33",
+      "bytes": 1375652,
+      "triangles": 12909,
+      "treeCount": 541,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_2_lod2.glb",
+      "sha256": "e166f945dc4d3b2c21fff6a586fe4397092f7e681a91d0358fcbcf2a8023834c",
+      "bytes": 1291072,
+      "triangles": 12909,
+      "treeCount": 541,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "sha256": "d4b0a8a7d3d90b66d1cd8cb2f38fbfe49fa7370eabd091f4331f503e8bfab33e",
+      "bytes": 5482676,
+      "triangles": 59148,
+      "treeCount": 196,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_3_lod1.glb",
+      "sha256": "160b5f872d5132ae9824e52bc4203c435e894c333cd104c164b402dc7d470f87",
+      "bytes": 2263524,
+      "triangles": 26710,
+      "treeCount": 196,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_3_lod2.glb",
+      "sha256": "592f493519aa26a70df46dd1e9ece696af5cbbec8cfd9b3168743a352a3cf839",
+      "bytes": 2192592,
+      "triangles": 26710,
+      "treeCount": 196,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "sha256": "d4e961dd122bc174399cbdd4510cb7b2fe18444c8d30fb2afcce8626da19f0c4",
+      "bytes": 4559244,
+      "triangles": 47131,
+      "treeCount": 411,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_4_lod1.glb",
+      "sha256": "7f5c4af1f88202337820a9f00880adc20960af32bc9a02dc77f9e8029b5a0fcc",
+      "bytes": 3072688,
+      "triangles": 38497,
+      "treeCount": 411,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_4_lod2.glb",
+      "sha256": "7db4a092f7168351bb1e6325c528a004edb4b3a17233c549ae50f83771fb0ec7",
+      "bytes": 3016040,
+      "triangles": 38497,
+      "treeCount": 411,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "sha256": "f1333405d3be4fcf43d4080980224efee2d901ead14cf94f19b2f187f853c547",
+      "bytes": 3213840,
+      "triangles": 26716,
+      "treeCount": 1339,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_5_lod1.glb",
+      "sha256": "9c882ddcbe37574022463eb03fec7d3a97ff729706934e9c724dc42d387de736",
+      "bytes": 1886820,
+      "triangles": 21184,
+      "treeCount": 1339,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_1_5_lod2.glb",
+      "sha256": "3c2f8c7131b42dc7ac6e6ca2c213877584797347c50bae7568312912d34ac788",
+      "bytes": 1817936,
+      "triangles": 21184,
+      "treeCount": 1339,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "sha256": "4e9edc2f145a4e0d4c84dc9b410c8c2a3d1f9da775b841bc0789cd788ce90109",
+      "bytes": 2080552,
+      "triangles": 7094,
+      "treeCount": 65,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_0_lod1.glb",
+      "sha256": "9a51b84d1bab70535279a15cbc58537dc4963ae5d67727eecced0d350f9455ff",
+      "bytes": 964760,
+      "triangles": 6834,
+      "treeCount": 65,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_0_lod2.glb",
+      "sha256": "caf46fda8a4edb6bb2edc09cee2d675fd287c8f678c39bd09b0a080025e85983",
+      "bytes": 896628,
+      "triangles": 6834,
+      "treeCount": 65,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "sha256": "a3d0a36bb6b25ddb42a9c0da6b3ee472e96943e41405cdc2df3dee130f9ac543",
+      "bytes": 2414960,
+      "triangles": 14405,
+      "treeCount": 277,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_1_lod1.glb",
+      "sha256": "0890e87070b2b54b2eafd15f20e51449b74bf365a2a49808ea3324992455581e",
+      "bytes": 1304648,
+      "triangles": 12917,
+      "treeCount": 277,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_1_lod2.glb",
+      "sha256": "d87845e1ab2fb060b7057bebcc3d2e364977a9cf2119a7b7228d9f13fea0618f",
+      "bytes": 1234588,
+      "triangles": 12917,
+      "treeCount": 277,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "sha256": "57660b229bfb31177d57cfdd21952a299ea6758dc4fb4569142ec4d8c373ea62",
+      "bytes": 2769128,
+      "triangles": 17299,
+      "treeCount": 288,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_2_lod1.glb",
+      "sha256": "47972da0e52eb35026dea41339ae3776b4ec0e794d13c2c036eb8148c5b0cfbc",
+      "bytes": 1462300,
+      "triangles": 14363,
+      "treeCount": 288,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_2_lod2.glb",
+      "sha256": "c812084c03b488239e8a7b3a466f6ea90c9f11373a9c694da3db308be6746bfb",
+      "bytes": 1383892,
+      "triangles": 14363,
+      "treeCount": 288,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "237dbfeaf31e1029f3b0c1c18a1309a54f31e8a3604a3774c94932143d64bd35",
+      "bytes": 8542952,
+      "triangles": 97715,
+      "treeCount": 168,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "sha256": "7ddc06f0ca1cc0c21bb82923b2ac849bba10a82e15515febbbb6ffcb0cc323f2",
+      "bytes": 3997444,
+      "triangles": 50311,
+      "treeCount": 168,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "sha256": "471fd596784e5bf07810f43816eea2d2551c21ac04f5243d4250f68efe8615f2",
+      "bytes": 3785212,
+      "triangles": 48979,
+      "treeCount": 168,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "sha256": "674ca2676b7f3634817d5c7b43a1fd2660657254ab8d5d8883d4cdf5c30388c0",
+      "bytes": 4877028,
+      "triangles": 48505,
+      "treeCount": 346,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_4_lod1.glb",
+      "sha256": "8a42b492f4530fdf4e4affca43412bd2d9af13fd929cb19a4badd24254be0db4",
+      "bytes": 3183512,
+      "triangles": 39179,
+      "treeCount": 346,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_4_lod2.glb",
+      "sha256": "3830b034b85c28b4dd894911ca45f01525ea4ccfc44bfa32e8e89da0199a931d",
+      "bytes": 3110968,
+      "triangles": 39179,
+      "treeCount": 346,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "sha256": "e7878faaea84859c1ecfeb406b32c885526f23513f710270fa1757e19b8a6db4",
+      "bytes": 3966828,
+      "triangles": 33135,
+      "treeCount": 733,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_5_lod1.glb",
+      "sha256": "af03c34e8ed0e30eb6085eb4a2f8e658c8c9b696b9a573bcb539ebd35e0663df",
+      "bytes": 2632460,
+      "triangles": 30123,
+      "treeCount": 733,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_2_5_lod2.glb",
+      "sha256": "ee3406633f0adbb3e8b80fe749349d8cf9c81ab1d2b303a918589a1e19539ab4",
+      "bytes": 2541092,
+      "triangles": 30123,
+      "treeCount": 733,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "sha256": "f1b438b5d784c1e5fb9538d05ddf8c21fccc5ee02ef5f195b4c8324fd765e0db",
+      "bytes": 2574416,
+      "triangles": 10525,
+      "treeCount": 291,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_0_lod1.glb",
+      "sha256": "6a3649aadd85932e8ffbd579d7ee47b24a1b5968b38f090fa7705317a83a1bb3",
+      "bytes": 1234920,
+      "triangles": 9361,
+      "treeCount": 291,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_0_lod2.glb",
+      "sha256": "d7527e437bc98cb2e5414e12535e5dbf16eae3587f86a99a8945fc8fc2cbfa74",
+      "bytes": 1152348,
+      "triangles": 9361,
+      "treeCount": 291,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "sha256": "ab9b83c5117f29af17bfedf2836f7e9d33a6b7ecdfce1600685a16741e5dee2d",
+      "bytes": 2584288,
+      "triangles": 11016,
+      "treeCount": 192,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_1_lod1.glb",
+      "sha256": "e940925922978765b0fe2059a82e79032488d98d21e65ef64121726ae760dbe2",
+      "bytes": 1248508,
+      "triangles": 10032,
+      "treeCount": 192,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_1_lod2.glb",
+      "sha256": "b11ad4d20edcf5ce572b24aab436601e2113051d5c2ce1d081f926ff2adab941",
+      "bytes": 1162928,
+      "triangles": 10032,
+      "treeCount": 192,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "sha256": "04c6e90870d80012aa3fe4e93c3ee09af28a599d589b4a063214117a74a3c3e6",
+      "bytes": 2840428,
+      "triangles": 18150,
+      "treeCount": 251,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_2_lod1.glb",
+      "sha256": "d4aa49945cf4dbe2e7831a013976af607933314753d535302ce42526354be7b9",
+      "bytes": 1694780,
+      "triangles": 16966,
+      "treeCount": 251,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_2_lod2.glb",
+      "sha256": "21f439d7396f43f20c03ff51ba477639c51663db458d2e7c2395ecb74a148d3b",
+      "bytes": 1618012,
+      "triangles": 16966,
+      "treeCount": 251,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "sha256": "24cea4ec97e39a63a72f1074da12ee810e2ed34c3154e065d682fe33a9c7f546",
+      "bytes": 3037760,
+      "triangles": 12604,
+      "treeCount": 208,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_3_lod1.glb",
+      "sha256": "75e5536ef796ab90d10273d1959500cda8e60f26741a882709fd34cb2fdd2a78",
+      "bytes": 1471676,
+      "triangles": 11532,
+      "treeCount": 208,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_3_lod2.glb",
+      "sha256": "bcbda3377268c35b0ea89dab7f21477bdf887672654954f5ac337e9f03a09be2",
+      "bytes": 1362072,
+      "triangles": 11532,
+      "treeCount": 208,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "sha256": "52bdced97b8ec8ef6a4c548ec30142a62bb4607885e70776a69f55a51b7ac7bd",
+      "bytes": 3127332,
+      "triangles": 17671,
+      "treeCount": 232,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_4_lod1.glb",
+      "sha256": "a65a9514c73a0fc85fa0f6c3600e5f832baaf6a9ce308574beac79d27c5d79a5",
+      "bytes": 1745248,
+      "triangles": 16407,
+      "treeCount": 232,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_4_lod2.glb",
+      "sha256": "cb30d1c6c94a1ebcee1d5effba0d36a0cba0b5c378fbd91d3b2566d64593258d",
+      "bytes": 1653472,
+      "triangles": 16407,
+      "treeCount": 232,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "fb2b74b0f0d1bd03e32eaed5e62795e97bf2c3542d5d83d6d66c822259937626",
+      "bytes": 3923796,
+      "triangles": 29533,
+      "treeCount": 283,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "sha256": "da686063800dd08e140a75778bcca4b412f3548dbd5c72656d009c67e9ecbbd6",
+      "bytes": 2544240,
+      "triangles": 28253,
+      "treeCount": 283,
+      "nodeCount": 2,
+      "meshCount": 2
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "sha256": "18790a67c0754255c54fd38bdd083a5944e716d75a389f9c49937914f19ab359",
+      "bytes": 2450096,
+      "triangles": 28253,
+      "treeCount": 283,
+      "nodeCount": 2,
+      "meshCount": 2
+    }
+  ],
+  "byteCeiling": 164326250,
+  "triangleCeiling": 1397383,
+  "gameRuntimeVerified": false,
+  "noGameOrR2OrMainChanges": true,
+  "newMassColorOrder304DeferredToNextModel": true,
+  "createdAtUTC": "2026-10-15T16:09:37.179070+00:00",
+  "bytes": 154356152,
+  "triangles": 1374177,
+  "updatedAtUTC": "2026-10-15T16:52:15.116910+00:00",
+  "error": null,
+  "roofDiagRepairTile": [
+    2,
+    3
+  ],
+  "roofDiagRepairLODs": [
+    0,
+    1,
+    2
+  ],
+  "roofDiagSourceSHA256": "78bfc2167c87224e72d0c9de8197d4f5c460d97f5d41a2330ac7237a4b10e577",
+  "nonColorImageRepackRevision": 2,
+  "localReadbackComplete": true,
+  "independentTechnical72GLBReviewComplete": true,
+  "independent15FrameReviewComplete": true,
+  "visualReviewUniqueGLBFiles": 26,
+  "knownVisualLimitsPreserved": true,
+  "full96FileBudgetAccepted": false,
+  "ownerHighQualityGoalReached": false
+}

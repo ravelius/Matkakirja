@@ -1,0 +1,29 @@
+{
+  "privateTest284LocalPackageReady": true,
+  "nativeSourceRound": 50,
+  "GLBCount": 72,
+  "bytes": 154356152,
+  "triangles": 1374177,
+  "all72BinaryReadAndSourceOwnershipVerified": true,
+  "actual24LOD0TilesAssembled": true,
+  "actualUniqueGLBsVisuallyTested": 26,
+  "actualOriginalImagesIndependentlyViewed": 15,
+  "producerPersonallyViewed6CityImages": true,
+  "independentSolTechnicalPASS": true,
+  "independentAstraRestrictedInterimAcceptance": true,
+  "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50",
+  "newMassColors304Included": false,
+  "nextModelColorCorrectionRound": 51,
+  "allSourceNative50PinsUnchanged": true,
+  "gameIntegrationPerformed": false,
+  "gameRuntimeVerified": false,
+  "published": false,
+  "final96BudgetAccepted": false,
+  "ownerQualityGoalReached": false,
+  "createdAtUTC": "2026-10-15T16:52:15.116910+00:00",
+  "evidenceSHA256": {
+    "visible-session-sol-test284-final72-audit.json": "8176e81ab5c089224661b42423efcb56f4394484f324b2505fb2d621a58cb17c",
+    "visible-session-astra-test284-final72-review.json": "b34d2a57cc9382df4a1da5b15ba7a58373516b7879a1c92f7793b53e29bffbdc",
+    "global-ownership-and-source-geometry-readback.json": "cc494212e42c9a89b3d4c1f6a4a998103634b2b4ae785d87d4b221bc5835bd0b"
+  }
+}
