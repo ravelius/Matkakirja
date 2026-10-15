@@ -79,3 +79,7 @@ uudelleenjulkaisua).
 ## PAATOKSET 15.10.2026 klo 16.02: EI UUTTA KUUMAILMAPALLOKAUPUNKIA VIELA (15.10.2026 klo 16.04)
 
 Omistaja (kortti Keskustelukanavassa, vaihtoehdot Rooma/Wien/Barcelona/Ei vielä) valitsi 'Ei vielä': uutta kuumailmapallokaupunkia ei aloiteta Ateenan jälkeen. Roolit hiovat Lontoon, Prahan ja Ateenan kierroksia (valo, vesi, maasto, maamerkit, tekstit, kertojat, pelaajille pääsy). Seuraava kaupunki vasta omistajan erillisellä päätöksellä.
+
+## PAATOKSET 15.10.2026 klo 16.05: JUNA 194 JULKAISTAAN KUN NYKYISET TYOT VALMIIT; LOUVRE TYON ALLE (15.10.2026 klo 16.06)
+
+Omistaja (sanatarkasti): "tehdään nykyiset kaikki loppuun ja julkaistaan juna. mietitään sen jälkeen mitä tehdään. esim. olavin linna on vielä kesken ja se on iso työ. sitten myös louvren siitiminen on odottavissa, minkä voisi kyllä nyt laittaa työn alle, liittyy kippiin". Toteutus: 1) OMISTAJA PYYSI JULKAISUA (ehdollinen): juna 194 lukitaan ja viedään TF:ään, kun nyt käynnissä olevat työt (Ateena + Zeuksen temppelin kulma, Lontoon/Prahan/Ateenan hionta, isoisä v3) on kuitattu; ei uusia isoja kokonaisuuksia ennen julkaisua. 2) Louvren siistiminen (Pariisin kippi) työn alle nyt Linnanrakentajalle; junaan jos kuitattu ennen lukitusta, junaa ei pidätetä sen takia. 3) Olavinlinna tauolla; jatko päätetään junan jälkeen.
