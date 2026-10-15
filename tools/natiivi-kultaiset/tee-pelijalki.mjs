@@ -54,7 +54,7 @@ const AJOT = [
   { seed: 58, start: 'rio', liput: true, kuvat: true },
   { seed: 404, start: 'praha', liput: true, kuvat: false },
   { seed: 11, start: 'dublin', liput: true, kuvat: true, raha: 40 },
-  { seed: 8, start: 'pariisi', liput: false, kuvat: true, koe: true },
+  { seed: 173, start: 'pariisi', liput: false, kuvat: true, koe: true },
 ];
 
 const pos = (p) => (p.pos.type === 'city' ? `c:${p.pos.city}` : `e:${p.pos.edge}:${p.pos.idx}`);
