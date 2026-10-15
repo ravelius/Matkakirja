@@ -20,8 +20,8 @@ Sitovat: ali-agentit vain Opus tai Sonnet; VAIN EUROOPPA; AIKA; kuvat ja media v
 `aani mykistys`, Macin kaiuttimista ei mitään; ei pkill -f eikä simctl shutdown all; pitkät ajot perl setsid; aika date-komennosta;
 commit linssiseppa2/*-haaraan = automaattinen käännös (Valosepän vahti) → vain valmiita välivaiheita.
 
-Ensimmäinen tehtävä: tarkista PT:n kuittaus ateena-utu-194 443eefe77:lle (list_events); jos jono tyhjä, kysy PT:ltä
-rivillä "JONO TYHJÄ: Valoseppä". Lisää vahdin poissulku ennen uuden haaran luontia.
+Ensimmäinen tehtävä (PT 15.10. 15.4x): Codexin Peking46 kohdat 2–5 (Postivahti lisää kuvauksen tähän viestiin). Lisää vahdin
+poissulku ennen uuden haaran luontia; ilman simua: automaattitestit → SHA PT:lle.
 
 Vastaa suomeksi ja tiiviisti.
 ```
