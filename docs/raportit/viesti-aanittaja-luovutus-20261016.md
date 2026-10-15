@@ -1,0 +1,24 @@
+# Äänittäjän luovutus 16.10.2026 klo ~01.25 (Postivahti: kova raja 35 %)
+
+Lue ensin: viesti-aanittaja-luovutus-20261015.md ja -20261014.md (säännöt, työkalut, tekniset). Osoitteet: /Users/Shared/Claude/osoitekirja.md. PT local_5df52e10-10e4-4b72-9554-0049db300dfe, Postivahti local_a24c43c0-8094-4141-b734-90b9555f5044, PK local_7fcab04b-864c-4ec2-98bd-46e171326701, NUI local_44392b3c-86ee-4873-9d76-82f9aaa6b832, Siirtoseppä local_86d0c984-aeeb-430d-bc85-3112f27b9437, Sisältökirjuri local_72d15713-eb20-402b-95f7-87bdaaf91b74, Julkaisija local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914. Viestit PT:lle ≤ 3 riviä, send_message session_id:llä. Paketit eivät ole gitissä (proto-3d/_valmiit/<nimi>-vienti-<pvm>); työkansiot proto-3d/_tyo/<aihe>-<pvm>.
+
+## TEHTY 15.–16.10. (kaikki ämpärissä; vienti `julkaisija-tyokalut/vie-paketti.sh`, portti ok, PT/kytkijä ilmoitettu)
+- ISS v1-aika ilman NYT-nappia: `audio/iss-192/v1-aika-v2.mp3` (PK kytki ef62db63e). Lontoon 8 historiaosiota (`aanet/pallokierros-lontoo-v1/`, Julkaisija vei). Pulun `livia-sahke` (NUI kytki 70c6c4f76).
+- ISS-faktat (5 kertojaklippiä) `audio/iss-fakta-v1/`; Pulun 5 ISS-vastausta `aanet/pulu/iss-kysymykset-v1/` + 4 uutta (ukkonen, pimennys, tahdenlento, hurrikaani; loki b91af3460) samassa kansiossa.
+- Juna 195: Pulun kutsut Lontoo/Praha/Ateena + mika-en-tunne (`aanet/pulu/vapaalento-v1/`), isoisan-uni-alkusoitto (`aanet/isoisan-uni-v1/`, eleven_v3), Pulun aloitus-ohje + kesäyö opetus/maapallo (`aanet/pulu/isoisan-uni-v1/`), Pulun 49 chat-ottoa (`aanet/pulu/chat-v1/` + manifest). NUI kytki isoisän uni + aloitus-ohjeen (856930465).
+- Taidemuseon lattia-askeleet: parketti + marmori, 6+6 kuivana/salikaiulla `aanet/taidemuseo-askeleet-v2/` (+manifest); marmori KORJATTU `aanet/taidemuseo-askeleet-v2b/askel-marmori-*` (v2:n marmori-04/06 alkoivat esikohinalla/napsahduksella, tasot −25…−32 LUFS → v2b tasattu −31,7, alku ≤ −34,8 dB; SHA256SUMS 9011512d…). PK:lle EI vielä ilmoitettu v2b:stä — kerro (korvaa v2:n marmorin, parketti ennallaan; Aalto OK5 -nimeämisrivi sali-versioille).
+- Pulun 81 merivastausta (80 ottoa, 79 = kopio 77:stä) `aanet/pulu/meri-v1/pulu-meri-NN.mp3` + manifest (SHA256SUMS ee9b431f…; Siirtoseppä kytkee, juna 196).
+
+## KESKEN / AVOINTA
+1. **Merinostojen Whisper-tarkistus (PT 01.2x) VALMIS, kuitti PT:lle puuttuu**: `_tyo/pulu-merivastaukset-20261016/tarkista.py` (Whisper medium, venv-kohdistus) → `tarkistus.json`/`tarkista.log`. Keskimääräinen sanasuhde 0,867 (matala 20: 0,68; 64: 0,74; 75: 0,76; 53: 0,77; 16, 21, 41, 55, 61, 80 < 0,8). Whisper kirjoittaa vieraat nimet suomalaisittain (Jan Majanin, Dirtle Door, Carnsall Point, Zangliin, Jöötta-Elvi, Tefyssmeri, Myyvahdilla), mikä viittaa suomalaiseen ääntämykseen, ei selvään virheeseen; konetta ei voi käyttää oikean ääntämyksen tuomariksi. EI uusintoja tehty (enintään yksi uusi otto/kohta on luvassa). Ehdotus PT:lle: ei uusintoja ilman kuuntelua; jos halutaan, ensin 20 (Barentsz-vuodet), 64, 75, 53. Epäselvimmät nimet: Moonsund(17), Mayen(19), Kola(21), Fram(25), Visby(26), Göta/Göteborg(29), Dogger(30), Durdle Door(34), Carnsore(36), Mývatn(41), Zuiderzee(42), Bojador(48), Neum(50), Isola(61), Tivat(63), Zanclean(70), Tethys(72).
+2. 22 uuden meri-vastauksen (82–103) äänitys odottaa omistajan korttia (PT); EI lupaa.
+3. Kuuntelematta: kaikki tämän session otot (ääntämys, marmoriaskeleet, ISS-sana), ks. LAHTEET.md-tiedostot paketeissa.
+4. Vanhat avoimet: Kipin v2 ja muut 12.10. äänisivun valinnat odottavat omistajaa; Soundly-lataus vaatii GUI:n; Ranskan 51 kertomuksen nimien ääntämys kuuntelematta; muiden kaupunkien Pulu-kutsut vasta PT:n käskystä; sora/kivi_hiekka-askelille ei lähdettä.
+
+## OPITUT (uusia)
+- Pulun otto: `proto-3d/_tyo/pulu-juna195-20261015/pulu.py` (`otto(tyo, id, teksti, mp3)`: Pulu piI8Kku0DcvcL6TTSeQt, eleven_v4_turbo, stability 0,5, fi, −17,2 LUFS, alimiter 0,79, mp3 192k; raaka tallennetaan → ei uusintaa). Luvut sanoiksi: `_tyo/pulu-merivastaukset-20261016/puhe.py` (taivutetut käsin, vuosiluvut yhteen, "eaa." vain `\beaa\.` — "makeaa." rikkoutui kerran).
+- Kertojaklippi (William): `_tyo/iss-kamera-kertoja-20261015/tee.py + tempo.py` (tempo 1,10×). Isoisä: text-to-dialogue eleven_v3 + loppufade 150 ms + 0,5 s hiljaisuus.
+- Whisper: `_tyo/venv-kohdistus/bin/python` (openai-whisper, medium.pt välimuistissa); AST: `_tyo/venv-aaniluokitin` (ast_top.py; yksittäisiä askelia ei luokitella, jaksot 5 s kyllä).
+- Freesound-haku: `gh workflow run aanihaku.yml -f tila=ehdokkaat -f haku=… -f lahteet=freesound -f maara=12` (ajo ~45 s; tulokset `gh run view <id> --log`); esikuuntelu-mp3 curlilla cdn.freesound.org kuvaavalla UA:lla (vaatii dangerouslyDisableSandbox, hidas).
+- zsh: `grep --include=*.json` ilman lainausta kaatuu "no matches found" → lainaa glob.
+- Pitkät ajot (80 ottoa, Whisper) run_in_background; odotus `until grep -q VALMIS …; do sleep 15; done` taustalla.
