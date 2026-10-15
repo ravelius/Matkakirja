@@ -43,3 +43,6 @@ Muistisäännöt: omistajan toimet → Asemataulu talo/toimi-aanittaja; uusi tek
 
 ## Päivitys 14.10.2026 (nollaus 51 %)
 Lue ensin docs/raportit/viesti-aanittaja-luovutus-20261014.md (avoimet: Max Q valmis, Kolme veljestä v3b valmis, ÄÄNILÄHTEET-inventaario PT:lle aloittamatta; PT = local_74630a27…, ei vanhaa local_593b89a1).
+
+## Päivitys 15.10.2026 (tilinvaihto)
+Lue ensin docs/raportit/viesti-aanittaja-luovutus-20261014.md (osio "PÄIVITYS 15.10.2026" alimpana): ISS-työt, skanneri, valas, museo, Ranska ja avoimet. Uusi PT = local_74630a27… (ei local_593b89a1, joka on KK). Ei uusia töitä ennen PT:n käskyä.

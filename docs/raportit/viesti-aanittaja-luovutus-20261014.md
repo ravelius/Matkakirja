@@ -30,3 +30,27 @@ Kolme veljestä v3b (+data v4), ISS-kupoli v1+v2 (+telakointi), raketin lähtöl
 - Freesound: `gh workflow run 326102787 -f tila=ehdokkaat -f haku=… -f lahteet=freesound -f maara=10` (syöte on `maara`, ei lukumaara; concurrency peruu odottavan ajon → aja yksi kerrallaan).
 - numpy-venv: proto-3d/_tyo/venv-aaniluokitin/bin/python -I (ei muuta numpya); AST: _tyo/pallo-lyhty-v2-20261012/ast_top.py.
 - Kertoja-putki (tempo 1,10×): proto-3d/_tyo/taidemuseo-kertoja-20261011/tee.py ja johdannaiset (ranska-/iss-kupoli-/yovartio-kertoja-… kansiot).
+
+## PÄIVITYS 15.10.2026 klo ~11 (tilinvaihto; Postivahdin pyyntö) – kaikki ämpärissä ellei toisin mainittu
+Osoitteet: PT local_74630a27-8c1b-4ac3-9143-538efab8cbcd, PK local_97810d35-a79c-484b-8573-660a4c40eaa6, NUI local_33ba1387-d688-4e44-8e05-10951e61efc0, LS1 local_45a869de-4d6b-4ed6-a6c9-30fd8442587e, KK (omistajan Keskustelukanava) local_593b89a1-2514-4d74-b956-2a73db862382. Viestit jäävät usein jonoon ("ei aloittanut 20 s"): älä toista, kirjaa polut paketteihin.
+
+### Tehty ja viety (polut ämpärissä)
+- ISS-raketti: lähtölaskenta v2 `audio/raketti-lahtolaskenta-v2.mp3` + manifesti `audio/raketti-aanet-v12.json` (iskut mitattu energia-alusta tasan 1,00 s, T0 5,0 s; v1:n ElevenLabs-aikaleimat olivat −0,08…+0,10 s pielessä); selostus v7 + manifesti v10; Max Q `audio/efekti-raketti-maxq-nousu|isku.mp3`; Andøya-avaus + manifesti v9; valas `audio/efekti-raketti-valas-parskahdys|roiske.mp3` (+ `audio/iss-192/valas-*.mp3`).
+- ISS-kupoli v1/v2 (+telakointi), ISS-loppu (7), ISS-kamera `audio/iss-kamera-v1.json` + `audio/iss-192/iss-kamera-*.mp3`; ohje `audio/iss-192/ohje-ohjauspaneeli.mp3` (omistaja hyväksyi); Pulu Max Livia v4 `audio/iss-192/pulu-max-livia-v4.mp3` (omistaja hyväksyi 08.1x); telakoinnin Sojuz-radio `aanet/iss-v1/radio/iss-radio-sojuz-telakointi-alle.mp3`.
+- Skanneri `aanet/cupola/skanneri/v1|v2/` WAV: avaus (v1 0,23 s; v2 `avaus-pitka` 0,72 s), sirina, rivi (v2: Soundly SND83198), sulku, kirjain (Sonic Bat) ja valittu `iss-skanneri-kirjain-mekaaninen.wav` (omistaja valitsi 1 "matala mekaaninen", Soundly SND163994). HUOM: ylikirjoitusta samaan nimeen EI tehty: ämpärin objektit ovat immutable (1 v) → NUI vaihtaa tiedostonimen koodissa; PT/KK:lle ilmoitettu (viestit jonossa).
+- Museo: Moderato + 3 uutta (soittolista `audio/museo-sello-soittolista-v1.json`; moderato-2 harppumainen, -3 viulumainen AST:n mukaan), adagio, askelsarja kaiulla, askel-parketti, shakki; Ranska 6 puheklippiä + Ranskan salin 51 teoskertomusta `aanet/taidemuseo-kertoja-v2/ranska/<id>.mp3` + `ajat/ranska/` + `manifest-rivit-ranska51.json` (LS1 kytkee; hän kysyi "kohdat/"-polusta → rivin `aani`-kenttä riittää); Yövartio 4; Praha v2 + Ateena v1 pallokierrosten kerronta (36) VALMIS mutta EI ämpärissä (`_valmiit/pallokierros-praha-ateena-kerronta-vienti-20261014`); ISS-kupolin 17 jaksoa ämpärissä.
+- Lautapelit: Tavli/Mylly-tavoitteet (`aanet/pelit/opas-v1/` + opas-v2.json). Kolme veljestä isoisä eleven_v3 (`aanet/aloitus-aarre-v3b/isoisa-aarre.mp3` + `seikkailu/aloitus-aarre-v4/aarre.json`).
+- ÄÄNILÄHTEET-inventaario: `docs/raportit/aanilahteet-inventaario-20261014.md` (306efb1f9).
+
+### AVOINTA
+1. Skannerin kirjainääni: NUI vaihtaa nimen `iss-skanneri-kirjain-mekaaninen.wav` (TF 192 -ehto) tai PT päättää vanhan objektin poistosta (Julkaisija).
+2. ISS-selitteiden (Kuvat-galleria 277 kpl, 73 277 merkkiä) etukäteisgenerointi odottaa PT:n lupaa määrälle; R2:ssa vain 185 ääntä, ≥92 puuttuu; tarkka lista vaatii säilöavaimen (puheenAvain SHA256 `malli|aani|ohje|teksti`).
+3. Praha/Ateena kerronta vientiin PT:n käskystä. Soundly-lataus (kuukausipassi, uusia scifi-ääniä) vaatii GUI-ikkunan (näyttö vapaana ~15 min).
+4. Moderato-2/-3 soitin voi olla väärä (harppu/viulu) → PT/omistaja päättää poistetaanko soittolistalta; uusi otto vaatii luvan.
+5. Ranskan 51 kertomuksen nimien ääntämys (Géricault, Delacroix, Cha-U-Kao, Moulin de la Galette ym.) kuuntelematta.
+
+### Opitut säännöt (uusia)
+- vie-paketti.sh: kansion nimessä pitää olla `-vienti-`; kansiopolussa ei `..`; ämpäri ei ylikirjoita; nimeä muutokset uudella polulla/versiolla.
+- Isoisä AINA eleven_v3 (omistaja 14.10.); muut turbo; ElevenLabs-aikaleimat sopivat lauseajoitukseen mutta EI iskun rytmitykseen → mittaa energia-alku.
+- Soundly-lataus vain GUI:lla; oma kirjasto (Sonniss ~2 850 + Soundly 1 130 tiedostoa NAS/T7) on laaja – käy läpi ennen Freesoundia (omistaja 15.10.: "meillä on paljon niitä ääni lähteitä"). Raamatun järjestys: Sonniss → Soundly → Freesound CC0.
+- Työkansiot `proto-3d/_tyo/<aihe>-<pvm>/` (iss-lahtolasku-20261013, iss-kupoli-kertoja-20261013, ranska-kohdat-20261014, skanneri-aanet-20261015, valas-aanet-20261015, kirjain-vaihtoehdot-20261015, maxq-efekti-20261014 ym.) sisältävät tee.py-skriptit.
