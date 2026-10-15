@@ -1,0 +1,238 @@
+{
+ "tarkistaja": "Sonnet 5.5 (riippumaton faktantarkistus ja kielentarkastus, 15.10.2026)",
+ "kysymykset": [
+  {
+   "kysymys": "Miksi astronautit eivät näe lentokoneita?",
+   "vaitteet": [
+    {
+     "vaite": "Noin 70 metriä pitkä matkustajakone näyttää 400 km:n korkeudesta pienemmältä kuin paljas silmä erottaa.",
+     "tulos": "KORJAA",
+     "lahde1": "Oma laskenta: 70 m / 400 000 m = 1,75e-4 rad = 0,60 kaariminuuttia. Normaalin silmän erotuskyky on noin 1 kaariminuutti, joten kone jää alle rajan. (Todellinen etäisyys on hieman pienempi, kone lentää 10-12 km korkeudessa, mutta ero on mitätön.)",
+     "lahde2": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/A_good_night_s_sleep_in_orbit ja https://www.nasa.gov/missions/station/observing-our-planet-from-low-earth-orbit/ : asema kiertää noin 400 km:n korkeudessa (NASA: 'approximately 400 kilometers (250 miles)').",
+     "huom": "Luku on oikein, mutta 70 m on vain suurimpien koneiden pituus (Boeing 747-400 noin 70,7 m, A380 noin 72,7 m); tyypillinen matkustajakone on 35-60 m. Lisäksi 'ei erota' on tarkempi kuin 'ei näe': kirkas heijastus tai vana voi näkyä, vaikka koneen muotoa ei erota.",
+     "korjaus": "Jopa suurimmat, noin 70 metriä pitkät matkustajakoneet näyttäisivät 400 kilometrin korkeudesta niin pieniltä, ettei paljas silmä erota niitä."
+    },
+    {
+     "vaite": "Koneen koko 400 km:stä vastaa millimetrin kokoista pistettä kuuden metrin päässä.",
+     "tulos": "OK",
+     "lahde1": "Oma laskenta: 1 mm / 6 m = 1,67e-4 rad = 0,57 kaariminuuttia; 70 m / 400 km = 0,60 kaariminuuttia. Täsmää (kuudessa metrissä 70 m / 400 km vastaa 1,05 mm).",
+     "lahde2": "Silmän erotuskyky noin 1 kaariminuutti (yleinen näöntarkkuuden määritelmä, esim. Wikipedia: Visual acuity, 20/20 = 1 arcmin). Vertailu: 0,6' < 1'.",
+     "huom": "",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Koneen jättämä valkoinen tiivistymisvana näkyy asemalta asti ja astronautit ovat kuvanneet sellaisia ikkunastaan.",
+     "tulos": "OK",
+     "lahde1": "https://www.nasa.gov/?p=595520 : NASA, kuva iss059e042046, 3.5.2019: Expedition 59 -miehistön jäsen kuvasi lentokoneen vanan, kun asema oli 258 mailia Pohjois-Atlantin yllä lähestyen Irlannin rannikkoa.",
+     "lahde2": "https://www.esa.int/ESA_Multimedia/Images/2012/05/Aircraft_trails : ESA/NASA, André Kuipers, PromISSe-lento 2012, suihkukoneiden valkoiset vanat ISS:ltä.",
+     "huom": "Kielitarkastus: 'tiivistysvana' on harvinaisempi; yleinen sana on 'tiivistymisvana' (tai arkisemmin 'lentokoneen vana'). 'Ikkunastaan' sopii: kuvat on otettu käsikameralla esim. Cupolan ikkunasta.",
+     "korjaus": "Ehdotus: kirjoita 'tiivistymisvana' (kone jättää taakseen valkoisen pilvijuovan, joka syntyy kun pakokaasun vesihöyry jäätyy)."
+    },
+    {
+     "vaite": "Itse kone on saatu kuvaan vain erittäin pitkällä teleobjektiivilla.",
+     "tulos": "KORJAA",
+     "lahde1": "NASA Visible Earth / Earth Observatory, kuva ISS044-E-18893 'Great Exuma Island, Bahamas' (hakutulos, sivua ei saatu avattua: julkaistu 21.9.2015; Expedition 44 -miehistön jäsen, 19.7.2015; Nikon D4, 1150 mm objektiivi; kuvassa lentokone ja kaksi vanaa, kuvaaja ei nimetty; kuvateksti M. Justin Wilkinson). Sama tieto: https://petapixel.com/2015/09/23/astronaut-snaps-photo-of-an-airplane-from-the-iss (PetaPixel: Nikon D4, 1150 mm).",
+     "lahde2": "https://www.itechpost.com/articles/16008/20150922/airplane-photographs-from-astronaut-in-space.htm : sama kuva, yksittäinen matkustajakone ja sen kaksi vanaa Great Exuman yllä; kone ei ollut kuvan tavoite.",
+     "huom": "Tosiasia pitää (pitkä objektiivi), mutta 'vain' on liian vahva ja kuvaa ei yksilöity. Lisäksi kone oli sivuseikka eikä kuvan kohde. Yksilöity esimerkki on turvallisempi kuin yleistys.",
+     "korjaus": "Kone on saatu kuvaan harvoin: esimerkiksi vuonna 2015 asemalta otettiin Bahaman saarten kuva, jossa näkyy pieni lentokone vanoineen. Kuvassa oli käytetty erittäin pitkää, 1150 millimetrin teleobjektiivia."
+    },
+    {
+     "vaite": "Kone jää siis näkymättömiin, mutta sen vana näkyy.",
+     "tulos": "KORJAA",
+     "lahde1": "Johtopäätös edellisistä: NASA 3.5.2019 (iss059e042046) ja ESA 2012 (Kuipers) näyttävät vanat; NASA 2015 (ISS044-E-18893) näyttää koneen vain 1150 mm objektiivilla.",
+     "lahde2": "Oma laskenta 0,6 kaariminuuttia < 1 kaariminuutti.",
+     "huom": "'Kone jää näkymättömiin' on hieman liian ehdoton, koska kuvassa kone näkyy teleobjektiivilla; paljaalla silmällä se ei erotu. Muotoile 'paljaalla silmällä'.",
+     "korjaus": "Paljaalla silmällä kone jää siis näkymättömiin, mutta sen vana voi näkyä."
+    }
+   ]
+  },
+  {
+   "kysymys": "Miltä tulivuorenpurkaus näyttää avaruudesta?",
+   "vaitteet": [
+    {
+     "vaite": "Sarytševin tulivuori purkautui Kuriilisaarilla kesäkuussa 2009.",
+     "tulos": "OK",
+     "lahde1": "https://science.nasa.gov/earth/earth-observatory/sarychev-peak-eruption-kuril-islands-38985/ : NASA Earth Observatory, purkaus kuvattu 12.6.2009; Sarychev Peak on Matuan saarella, Kuriilisaarilla.",
+     "lahde2": "https://geochristian.com/2009/06/20/sarychev-peak-eruption/ ja https://www.universetoday.com/33431/volcanic-shockwave-captured-by-iss-imagery/ : sama purkaus, ISS-kuva ISS020-E-9048, Expedition 20 -miehistö, 12.6.2009.",
+     "huom": "Suomeksi 'Sarytševin' on käytetty suomalaisissa lähteissä; englanniksi Sarychev. Sopii.",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Aseman miehistö kuvasi ruskeasta tuhkasta ja valkoisesta höyrystä koostuvan pilven.",
+     "tulos": "OK",
+     "lahde1": "https://science.nasa.gov/earth/earth-observatory/sarychev-peak-eruption-kuril-islands-38985/ : 'The plume appears to be a combination of brown ash and white steam.'",
+     "lahde2": "https://geochristian.com/2009/06/20/sarychev-peak-eruption/ (lainaa NASA:n kuvatekstiä) ja ISS020-E-9048, Expedition 20 -miehistö, Nikon D2XS, 400 mm.",
+     "huom": "Selkeyden vuoksi 'höyry' on parempi kuin 'vesihöyry', koska valkoinen osa on tiivistynyttä vettä.",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Pilven ympärille pilvikerrokseen oli auennut pyöreä aukko.",
+     "tulos": "OK",
+     "lahde1": "https://science.nasa.gov/earth/earth-observatory/sarychev-peak-eruption-kuril-islands-38985/ : NASA mainitsee 'the hole in the cloud deck above the volcano' (aukko pilvikerroksessa tulivuoren kohdalla).",
+     "lahde2": "https://www.universetoday.com/33431/volcanic-shockwave-captured-by-iss-imagery/ : aukko pilvikerroksessa; selityksiksi esitetty paineaalto tai pilven alle painuvaa ilmaa.",
+     "huom": "Aukon syy ei ole varma (paineaalto, ilman laskeutuminen pilven ympärillä tai saaren vanavesi), joten älä väitä syytä. Vastaus ei väitä, hyvä. Ehdotus: lisää 'kuvassa näkyy' jos halutaan pysyä varmana.",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Kuvassa näkyy tiheämpi harmaa tuhkapilvi, joka todennäköisesti valui maata pitkin vuoren rinnettä alas.",
+     "tulos": "OK",
+     "lahde1": "https://science.nasa.gov/earth/earth-observatory/sarychev-peak-eruption-kuril-islands-38985/ : 'a cloud of denser, gray ash, probably a pyroclastic flow, appears to be hugging the ground, descending from the volcano summit.'",
+     "lahde2": "https://geochristian.com/2009/06/20/sarychev-peak-eruption/ ja SpaceRef-uudelleenjulkaisu NASA:n tekstistä (sama kuvaus: tiheämpi harmaa tuhkapilvi, todennäköisesti pyroklastinen virta).",
+     "huom": "Ammattisana 'pyroklastinen virta' on jätetty pois, hyvä. 'Todennäköisesti' on säilytettävä.",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Etnan purkausta vuonna 2002 kuvattiin viistosti kaakkoon Sisilian yli ja tuhkapilvi kaartui kohti horisonttia.",
+     "tulos": "OK",
+     "lahde1": "https://science.nasa.gov/earth/earth-observatory/spectacular-view-of-etna-from-the-international-space-station-2923 : 'looking obliquely to the southeast over the island of Sicily', 'the ash plume curving out toward the horizon'; kuva 30.10.2002, Expedition 5.",
+     "lahde2": "https://spaceflightnow.com/news/n0211/07issetna : Spaceflight Now (6.11.2002), NASA:n tiedote samasta purkauksesta ja ISS-kuvista.",
+     "huom": "'Viistosti' on selkeä sana. Älä sekoita kuvaa kuvasuuntaan: kaakkoon katsominen ei tarkoita, että pilvi menisi kaakkoon.",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Tuuli vei tuhkaa matalalla kaakkoon ja korkeammalla etelään kohti Afrikkaa.",
+     "tulos": "OK",
+     "lahde1": "https://science.nasa.gov/earth/earth-observatory/spectacular-view-of-etna-from-the-international-space-station-2923 : plume 'caught first by low-level winds blowing to the southeast' ja 'to the south toward Africa at higher altitudes'.",
+     "lahde2": "https://spaceflightnow.com/news/n0211/07issetna : tuhkaa satoi Libyaan yli 350 mailin päähän; pilvi kulkeutui Afrikkaa kohti.",
+     "huom": "Sama tuhkapilven kulku on kuvan ylä- ja alaosassa, joten kuvailu on oikein.",
+     "korjaus": ""
+    }
+   ]
+  },
+  {
+   "kysymys": "Näkyykö Kiinan muuri avaruuteen?",
+   "vaitteet": [
+    {
+     "vaite": "Paljain silmin muuri ei näy matalalta kiertoradalta, ja ISS lentää juuri sellaisella korkeudella.",
+     "tulos": "OK",
+     "lahde1": "https://www.nasa.gov/image-article/great-wall : NASA: muuri on 'difficult or impossible to see from Earth orbit without the high-powered lenses used for this photo'.",
+     "lahde2": "https://www.scientificamerican.com/article/is-chinas-great-wall-visible-from-space/ (Yang Liwei ei nähnyt muuria; Jeffrey Hoffman: muurin väri ei poikkea paljon ympäröivästä maasta) ja ESA:n Alexander Gerst 2018: 'Next to impossible with the naked eye' (800 mm teleobjektiivilla vaikea).",
+     "huom": "ISS kiertää noin 400 km korkeudessa (NASA), eli matalalla kiertoradalla.",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Yang Liwei kertoi vuoden 2003 lennon jälkeen, ettei nähnyt muuria.",
+     "tulos": "OK",
+     "lahde1": "https://www.scientificamerican.com/article/is-chinas-great-wall-visible-from-space/ : Shenzhou 5 -lennon (2003) jälkeen Yang Liwei myönsi, ettei nähnyt muuria; Kiinan opetusministeriö muutti oppikirjoja.",
+     "lahde2": "https://www.skyatnightmagazine.com/space-science/can-you-see-great-wall-china-from-space ja https://universetoday.com/tag/yang-liwei : sama tieto.",
+     "huom": "Yang Liwei oli Kiinan ensimmäinen avaruuslentäjä, 'astronautti' on suomeksi tavallinen (kiinaksi taikonautti).",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Leroy Chiao sai muurin kameraan vuonna 2004 vain pitkällä objektiivilla.",
+     "tulos": "OK",
+     "lahde1": "https://www.nasa.gov/image-article/great-wall : kuva ISS010-E-08497, Expedition 10 -komentaja Leroy Chiao, 24.11.2004, Sisä-Mongolia; muuri on 'difficult or impossible to see ... without the high-powered lenses used for this photo'.",
+     "lahde2": "https://www.scientificamerican.com/article/is-chinas-great-wall-visible-from-space/ : NASA-asiantuntijoiden mukaan kuva näyttää muurin; Chiao itse sanoi, ettei ollut varma mitä näki.",
+     "huom": "Objektiivin tarkkuus vaihtelee lähteissä (180 mm NASA:n 2005 -jutussa, 400 mm kuvatiedoissa), joten älä mainitse millimetrejä. Chiao ei ollut varma, näkyikö muuri kuvassa, mutta NASA tunnisti sen. Vastaus ei väitä liikaa.",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Muuri on pitkä mutta kapea.",
+     "tulos": "OK",
+     "lahde1": "https://www.skyatnightmagazine.com/space-science/can-you-see-great-wall-china-from-space : Chris Hadfield (ISS 2012-13): muuri on liian kapea ja seuraa maaston muotoja ja värejä.",
+     "lahde2": "https://www.scientificamerican.com/article/is-chinas-great-wall-visible-from-space/ : muurin pituus noin 4 500 mailia (n. 7 300 km) mutta vain muutamia metrejä leveä; Hoffman: väri ei poikkea maastosta.",
+     "huom": "",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Muurin rakennusaineet muistuttavat ympäröivää maastoa, joten se sulautuu taustaansa.",
+     "tulos": "OK",
+     "lahde1": "https://www.scientificamerican.com/article/is-chinas-great-wall-visible-from-space/ : Jeffrey Hoffman: 'the color of the wall is not that different from the ground on either side of it'.",
+     "lahde2": "https://www.skyatnightmagazine.com/space-science/can-you-see-great-wall-china-from-space : Hadfield: muuri seuraa maaston muotoja ja värejä.",
+     "huom": "Tarkkaan ottaen Hoffman puhuu väristä, ei rakennusaineesta; muurin kivi ja tiili ovat kuitenkin paikallista maata ja kiveä, joten väite on perusteltu. Voi lyhentää: 'väriltään ympäristön kaltainen'.",
+     "korjaus": "Muuri on väriltään lähes samanlainen kuin sen ympäristö, joten se sulautuu taustaansa."
+    },
+    {
+     "vaite": "Yöllä asemalta erottuvat selvemmin kaupunkien valot ja kirkkaasti valaistut tiet.",
+     "tulos": "OK",
+     "lahde1": "https://science.nasa.gov/earth/earth-observatory/the-i-95-corridor-at-night-90129/ : NASA: valaistut moottoritiet ja pääväylät erottuvat yöllä, vaikka päivällä niitä on vaikea erottaa; I-95 on yksi kirkkaimmista viivoista.",
+     "lahde2": "https://www.nasa.gov/missions/station/observing-our-planet-from-low-earth-orbit/ : miehistö kuvaa säännöllisesti öisiä kaupunkivaloja (kaupunkien valot, valosaaste).",
+     "huom": "Vertailu 'selvemmin' sopii, koska omavalo on helpompi nähdä kuin kapea rakenne.",
+     "korjaus": ""
+    }
+   ]
+  },
+  {
+   "kysymys": "Miksi taivas on musta, vaikka aurinko paistaa?",
+   "vaitteet": [
+    {
+     "vaite": "Ilmakehän kaasut sirottavat auringonvaloa joka suuntaan, ja sininen valo siroaa muita värejä enemmän, siksi päivätaivas on sininen.",
+     "tulos": "OK",
+     "lahde1": "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question52.html : NASA StarChild: auringonvalo osuu ilmakehän molekyyleihin ja siroaa joka suuntaan; ilmakehä siroittaa lyhyitä aallonpituuksia (sininen) eniten.",
+     "lahde2": "https://imagine.gsfc.nasa.gov/ask_astro/night_sky.html : NASA Ask an Astrophysicist; sama selitys. NASA kutsuu ilmiötä Rayleigh-sironnaksi (esim. https://www.naturalhazards.nasa.gov/images/150090/crepuscular-rays-and-light-scattering).",
+     "huom": "Yksinkertaistus on 13-vuotiaalle sopiva; sanaa 'Rayleigh-sironta' ei käytetä, hyvä.",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Avaruudessa ei ole ilmaa, jonka pinnasta valo voisi kimmota silmiin, joten aurinko paistaa mutta taivas pysyy mustana.",
+     "tulos": "KORJAA",
+     "lahde1": "https://imagine.gsfc.nasa.gov/ask_astro/night_sky.html : 'The Sun is shining in space too, but there is no air for the light to bounce off of in space.' (NASA käyttää itse samaa kuvausta, mutta se on yksinkertaistus.)",
+     "lahde2": "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question52.html : Kuussa ilmakehää ei ole, ja taivas on musta myös päivällä.",
+     "huom": "Sisältö on oikein, mutta 'ilman pinnasta' on harhaanjohtava: ilmalla ei ole pintaa, valo siroaa ilman molekyyleistä. Muutos on pieni mutta tarkentaa.",
+     "korjaus": "Avaruudessa ei ole ilmaa, jonka molekyyleihin valo voisi osua ja sirota silmiin, joten aurinko paistaa mutta taivas sen ympärillä pysyy mustana."
+    },
+    {
+     "vaite": "Tähtiä ei yleensä näy asemalta otetuissa valokuvissa, koska kamera säädetään kirkkaan Maan mukaan ja tähdet ovat siihen verrattuna liian himmeitä.",
+     "tulos": "OK",
+     "lahde1": "https://science.nasa.gov/blogs/earth-matters/2011/09/28/where-are-the-stars : NASA Earth Matters: tähdet jäävät pois lyhyiden valotusaikojen takia, koska Maa on niin kirkas; tähdet ovat 'too dim compared to the brightness of the planet'.",
+     "lahde2": "Toinen lähde (toissijainen, vain hakutulos): https://newspaceeconomy.ca/2026/04/29/why-arent-any-stars-visible-in-photos-taken-in-space-or-on-the-moon/ ja https://starlust.org/can-you-see-stars-in-space/ : kamera-asetukset (lyhyt valotus) selittävät sen. NASA:n Gateway to Astronaut Photography -usein kysytyt kysymykset sanovat samaa.",
+     "huom": "Vastaus erottaa oikein kamerasyyn ('kuvissa') ja silmän näkemän. Älä väitä, ettei tähtiä voisi nähdä asemalta paljain silmin: ne näkyvät hyvin yöpuolella, kun silmät tottuvat pimeään. Nykyisessä muotoilussa ei väitetä.",
+     "korjaus": ""
+    }
+   ]
+  },
+  {
+   "kysymys": "Montako auringonnousua astronautit näkevät päivässä?",
+   "vaitteet": [
+    {
+     "vaite": "Auringonnousuja on noin 16 päivässä.",
+     "tulos": "OK",
+     "lahde1": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/A_good_night_s_sleep_in_orbit : ESA: astronautit 'experience 16 sunsets and sunrises every day'.",
+     "lahde2": "https://www.nasa.gov/image-article/year-space-crew-will-see-10944-sunrises-sunsets/ : NASA: ISS-miehistö 'sees 16 sunrises and sunsets every day'.",
+     "huom": "NASA:n vanhempi kuvateksti sanoo '15 or 16', joten 'noin 16' on tarkka.",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Asema kiertää Maan 90-93 minuutissa.",
+     "tulos": "OK",
+     "lahde1": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/A_good_night_s_sleep_in_orbit : ESA: 'a full circle of Earth every 90 minutes'.",
+     "lahde2": "https://www.nasa.gov/missions/station/observing-our-planet-from-low-earth-orbit/ : NASA: kiertää 'every 90 minutes at an altitude of approximately 400 kilometers'. Tarkempi jaksonaika on noin 91-93 min korkeudesta riippuen (yksi NASA-sivu: 91 min 12 s; 420 km:n radalla laskennallisesti noin 92,9 min).",
+     "huom": "Haarukka 90-93 on turvallinen. Lähteet antavat 90 (ESA, NASA) ja 91-93 (tarkka jakso).",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Vuorokauteen mahtuu 15-16 kierrosta ja yhtä monta auringonnousua ja -laskua.",
+     "tulos": "OK",
+     "lahde1": "Oma laskenta: 1440 min / 92,9 min = 15,5 ja 1440 / 90 = 16 kierrosta; jokaisella kierroksella yksi nousu ja yksi lasku.",
+     "lahde2": "NASA:n kuvateksti 'astronauts experience 15 or 16 sunrises and sunsets every day' (esim. https://eol.jsc.nasa.gov/Collections/EarthFromSpace/caption.pl?PHOTO=STS131-E-11693 haussa; ESA ja NASA yllä sanovat 16).",
+     "huom": "",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Valo ei kerro astronauteille, milloin on aamu tai ilta.",
+     "tulos": "OK",
+     "lahde1": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/A_good_night_s_sleep_in_orbit : ESA: päivällä ja yöllä ei ole merkitystä kiertoradalla; miehistö seuraa 24 tunnin kelloa.",
+     "lahde2": "https://scienceblog.com/ (haku: 16 sunrises, body does not adopt a 90-minute clock) ja DLR https://www.dlr.de/en/blog/archive/2018/always-on-saturday-everyday-life-on-the-iss : keho ei sopeudu 90 minuutin rytmiin.",
+     "huom": "Täsmennys: ISS:llä on myös valolamppuja, jotka jäljittelevät päivänvaloa (ESA: Circadian Light), mutta tämä ei muuta väitettä.",
+     "korjaus": ""
+    },
+    {
+     "vaite": "Asemalla noudatetaan 24 tunnin vuorokautta, joka on sidottu Greenwichin aikaan (GMT/UTC).",
+     "tulos": "OK",
+     "lahde1": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/A_good_night_s_sleep_in_orbit : ESA: asema 'follows Greenwich Mean Time (GMT), which helps keep a consistent schedule'.",
+     "lahde2": "https://www.nasa.gov/blogs/spacestation/2020/12/31/crew-exploring-life-science-before-relaxing-on-new-years-day/ : NASA: miehistö asettaa kellonsa GMT:hen ja aloittaa uuden vuoden klo 0.00 GMT.",
+     "huom": "Kielitarkastus: 13-vuotiaalle kannattaa selittää, mikä Greenwichin aika on.",
+     "korjaus": "Ehdotus: 'Greenwichin aikaan (Lontoon lähellä olevan Greenwichin mukaiseen maailmanaikaan)'."
+    },
+    {
+     "vaite": "Työ- ja unijaksot ajoitetaan kellon eikä ikkunan takana vaihtuvan valon mukaan.",
+     "tulos": "OK",
+     "lahde1": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/A_good_night_s_sleep_in_orbit : ESA: säännölliset heräämis- ja nukkumaanmenoajat, GMT-kello.",
+     "lahde2": "https://www.esa.int/kids/en/learn/Life_in_Space/Living_in_space/Sleeping_on_the_ISS ja DLR-blogi: kiinteä aikataulu (työpäivä enintään 10 tuntia, unijakso 8 tuntia).",
+     "huom": "",
+     "korjaus": ""
+    }
+   ]
+  }
+ ]
+}
