@@ -1,6 +1,6 @@
 /*
  * BERNN FOKUSVIRTA — KEVYT PAKKI (Sisältökirjuri 15.10.2026, juna 193:
- * pääkaupunki laudan pysäkiksi, PT:n erä b, 5 kaupunkia).
+ * pääkaupunki laudan pysäkiksi, PT:n erä b, 3 kaupunkia).
  *
  * Sama muoto kuin js/packs/fokusvirta-luxemburg.js: matkakirja ja pulun
  * kupla. EI vielä kohtaamista eikä kohtamispistettä (laudan paikka tulee

@@ -34,8 +34,8 @@ test('fokusvirtakaupunkeja löytyy odotettu määrä', () => {
   // Luxemburg ja Valletta (Kypros, Luxemburg ja Malta saavat
   // pelikaupungin); 50 → 58 (15.10.2026, juna 193): Minsk, Chișinău,
   // Belgrad, Vaduz, Monaco, Skopje, Tirana ja Zagreb (PT:n rajaus);
-  // 58 → 63: Bern, Andorra la Vella, Podgorica, San Marino ja Bratislava.
-  assert.equal(FOKUSVIRTAKAUPUNGIT.length, 63);
+  // 58 → 61: Bern, Podgorica ja Bratislava.
+  assert.equal(FOKUSVIRTAKAUPUNGIT.length, 61);
 });
 
 test('jokaisella fokusvirtakaupungilla on tasan kaksi saapumiskysymystä', () => {
