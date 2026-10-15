@@ -1646,6 +1646,24 @@
    "vuosi": 2022,
    "wikidata": "Q3711",
    "alue": false
+  },
+  "bern": {
+   "asukkaat": 136988,
+   "vuosi": 2023,
+   "wikidata": "Q70",
+   "alue": false
+  },
+  "bratislava": {
+   "asukkaat": 480902,
+   "vuosi": 2025,
+   "wikidata": "Q1780",
+   "alue": false
+  },
+  "podgorica": {
+   "asukkaat": 150977,
+   "vuosi": 2011,
+   "wikidata": "Q23564",
+   "alue": false
   }
  }
 }

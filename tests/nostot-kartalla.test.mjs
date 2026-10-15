@@ -170,10 +170,16 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // "kartan oma kohde" Belgradin linnoitus ja Zagreb (fokuskortti; Zagrebin
   // laatta on 23 km itään siirretty, ks. js/packs/europe.js). Muiden
   // kaupunkien luku ei kasva.
+  //
+  // 60 → 62 (15.10.2026, juna 193b): Bern liittyi laudan pysäkiksi (PT), ja
+  // tosi-Bernin kaksi nostoa osuvat kaupungin kohdalle sallituilla syillä:
+  // Zytglogge ("kartan oma kohde") ja hetki Einstein 1905. Bernin laatta on
+  // 78 km etelään siirretty (ks. js/packs/europe.js). Bratislava ja Podgorica
+  // eivät tuo nostoja.
   const kesken = keskenKaikki.filter((r) => r.kaupunginKohdalla !== 'lähizoomi');
-  assert.ok(kesken.length <= 60,
+  assert.ok(kesken.length <= 62,
     `kaupungin kohdalla on pääkartalla ${kesken.length} nostoa (säde `
-    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 60 sallittu — uusi nosto kuuluu kohdekartalle`);
+    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 62 sallittu — uusi nosto kuuluu kohdekartalle`);
   // 48 → 49 (19.9.2026): Bryssel liittyi pelikaupungiksi (omistajan
   // päätös, Belgian pilotti), ja Tervurenin museonosto
   // (hahmotelma-tervuren) osuu nyt kaupungin kohdalle syyllä
@@ -194,8 +200,9 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // yllä. Katto nousee vain näiden kahden verran.
   // 52 → 56 (14.10.2026, juna 193): Milestii Mici, Cricova, Matkan kanjoni,
   // Belgradin linnoitus ja Zagreb (selitetty yllä).
+  // 56 → 57 (15.10.2026, juna 193b): Bernin Zytglogge (selitetty yllä).
   const muutKuinHetket = kesken.filter((r) => r.kaupunginKohdalla !== 'hetki');
-  assert.ok(muutKuinHetket.length <= 56,
+  assert.ok(muutKuinHetket.length <= 57,
     `muita kuin hetkiä on kaupungin kohdalla ${muutKuinHetket.length} — luku saa vain laskea`);
 });
 

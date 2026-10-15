@@ -311,8 +311,10 @@ export const ELAINTAKYT = {
     lahde: 'en-Wikipedia "St. Bernard (dog)" ja en-Wikipedia "Barry (dog)". '
       + 'Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-che.jpg',
-    lon: 7.4,
-    lat: 46.2,
+    // Siirretty Valais'sta Vaudiin 15.10.2026 (juna 193b): Bernin laatta on 78 km
+    // etelään Valais'ssa, ja merkin pitää olla 35 yksikön päässä kaupungeista.
+    lon: 6.5,
+    lat: 46.55,
   },
   AUT: {
     elain: 'murmeli',

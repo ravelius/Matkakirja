@@ -228,6 +228,7 @@ test('sama sääntö kahdelle laudalle: laudan ladonta ja ruutuladonta kulkevat 
   // pakotus kirjataan (tests/karttanimet.test.mjs vertaa arvot).
   const tulos = karttanimienLadonta(MAAILMANKARTTA, 1.88);
   // Jokainen kaupunki saa merkkinsä: nimi on oma tai maastoparin (Alpit).
+  // 274 → 277 (15.10.2026, juna 193b): Bern, Bratislava ja Podgorica laudan pysäkeiksi (Karttaseppä, PT).
   // 266 → 274 (14.10.2026, juna 193): kahdeksan pääkaupunkia laudan pysäkeiksi (Minsk, Chișinău,
   // Belgrad, Vaduz, Monaco, Skopje, Tirana, Zagreb; Karttaseppä, PT).
   // 264 → 266 (21.9.2026): Luxemburg ja Valletta liittyivät
@@ -239,7 +240,7 @@ test('sama sääntö kahdelle laudalle: laudan ladonta ja ruutuladonta kulkevat 
   // pelikaupunki, omistajan päätös 19.9.2026).
   // 261 → 262 (19.9.2026): Bryssel liittyi maailmankartalle (omistajan
   // päätös, Belgian pelikaupunki, pilotti).
-  assert.equal(tulos.merkit.filter((m) => m.laji === 'kaupunki').length, 274);
+  assert.equal(tulos.merkit.filter((m) => m.laji === 'kaupunki').length, 277);
   assert.equal(typeof tulos.pakotettu, 'number');
   // Nimen elementti käyttää samaa kirjasinta ja luokkia kuin kartta.
   const nimet = lue('../js/pallolauta/nimet.js');
