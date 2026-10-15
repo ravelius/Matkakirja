@@ -20,3 +20,42 @@ Codex välitti postilaatikkoon (63c2dc8d1) omistajan sanat Pekingin mallinnus-ch
 ## OMISTAJAN PÄÄTÖS: ASEMATAULU VAIN KESKUSTELUKANAVAN SIVUPANEELIIN (15.10.2026 klo 12.38)
 
 Omistaja 15.10.2026 klo 12.27 (Keskustelukanava), sanatarkasti: "tuota ulkoista asemataulua ei tarvita, asemataulu avataan aina vain suoraan tähän keskustelun yhteyteen. avaa se nyt". Työtapa: KK avaa taulun omaan sivupaneeliinsa (Artifact read + muuttamaton julkaisu samaan osoitteeseen) luonnin ja jokaisen nollauksen jälkeen; ei Chrome-ikkunaa eikä ehdotuksia siitä. Päivitetty docs/tilinvaihto.md ja docs/aloitusviestit/keskustelukanava.md.
+
+## OMISTAJAN PYYNTÖ: PT:N KONTEKSTIN VALVONTA JA PAKKONOLLAUS (15.10.2026 klo 14.39) (15.10.2026 klo 14.55)
+
+OMISTAJAN PYYNTÖ klo 14.39 (nollauskortin vastaus, sanatarkasti): "nollaa ja selvitä sen jälkeen miksi päätoimittajan konteksti pääsi karkaamaan ja varmista että tarvittavat toimet tehdään että
+jatkossa ei tapahdu ja tallenna ne toimet selkeästi myös raamattuun"
+
+Mitä tapahtui (tallenne bba4e950, nyt /Users/Shared/Claude/keskustelut/Paatoimittaja-2026-10-15-klo-1212-1439.md)
+- PT local_5df52e10 aloitti 12.08 ja teki tilinvaihdon itse: 16 session luonti, 98 viestiä, Asemataulun HTML luettiin kolmesti (≈ 58 k tokenia), muistit, tilinvaihto.md, list_sessions include_archived
+ja oma ajattelu (≈ 160 k tokenia 30 minuutissa).
+- Konteksti nousi 8 %:sta 50 %:iin klo 12.10–12.40. Pehmeä raja 30 % ylittyi ~12.20 ja kova 40 % ~12.28. Sen jälkeen kasvu oli tavallista (~100 k / 2 h), ja PT oli 59–60 % klo 14.35.
+- Myös edellinen PT (vanha tili, 00.51–11.05) päättyi 53 %:iin, eli raja on ylittynyt toistuvasti.
+
+Miksi raja ei lauennut
+1. Postivahti ajoi 21 kierrosta (12.19–14.34), mutta joka kierroksella vain tilin get_usagen. KIERROS.md:n kohta 3 (roolien ja PT:n konteksti) jäi tekemättä, kunnes KK kysyi 14.36.
+2. Postivahdin hälytys olisi mennyt PT:lle itselleen, eikä kovalle rajalle ollut pakkoa.
+3. PT:n ohjeissa oli yhä vanha 55/65 % (muisti pt-oma-nollaus-65, jonokierros-teksti.md, saastot-2-nollaus-35, PT:n aloitusviestin muistilista). PT luki oman kontekstinsa vain kahdesti, eikä sillä ole
+enää jonokierros-cronia.
+4. Lisäksi PT:n keskustelu jäi tallentamatta ennen nollausta.
+
+KK teki jo (15.10. klo 14.4x–14.5x)
+- KONTEKSTIVAHTI-KOUKKU: /Users/Shared/Claude/hooks/pt-taulu-muistutus.py (varmuuskopio .ennen-konteksti-20261015). Sama koukku, joka jo ajetaan tämän kansion jokaisella saapuvalla viestillä ja
+send_messagen jälkeen, lukee nyt session oman kontekstin tallenteesta ja muistuttaa 30 %:ssa (PT pehmeä), 35 %:ssa (KK aloitus.md) ja 40 %:ssa (PT kova raja → luovutus heti, toistuu 10 min välein; KK
+nollauskortti). Asetuksiin ei koskettu. Testattu vanhoilla tallenteilla (60 % ja 53 % → kova raja; KK 15 % → ei mitään).
+- POSTIVAHTI: Matkakirja-posti/KIERROS.md kohta 3 pakolliseksi joka kierroksella (PT ja KK aina, muut kun lastActivityAt muuttunut), Hälytysrajoihin PT:n PAKKONOLLAUS 40 %:ssa (rivi PT:lle + KK:lle,
+LUOVUTUS VALMIS → nollaus, 20 min ilman luovutusta → KK). NOLLAUS.md: tallenteen tarkistus ennen PT:n clear_sessionia.
+- MUISTI: pt-oma-nollaus-65 → pt-oma-nollaus (30/40, valvonta, tilinvaihto, ali-agentit, tallennus); linkit ja indeksi-orkestrointi päivitetty; saastot-2-nollaus-35:een merkintä "kumottu";
+oma-nollaus-vain-kortilla: Asemataulu avataan open-toiminnolla.
+- scratchpad/jonokierros-teksti.md kohta 0: 55/65 → 30/40.
+- PT:n keskustelu 12.12–14.39 tallennettu: /Users/Shared/Claude/keskustelut/Paatoimittaja-2026-10-15-klo-1212-1439.md.
+
+Raamattuun (NOLLAUSRAJAT-kohtaan, tiivis linjaus)
+VALVONTA JA PAKKONOLLAUS (omistaja 15.10.2026 klo 14.39): 1) KONTEKSTIVAHTI-koukku (Päätoimittajan kansio, /Users/Shared/Claude/hooks/pt-taulu-muistutus.py) lukee jokaisen saapuvan ja lähetetyn
+viestin yhteydessä session oman kontekstin ja muistuttaa 30 %:ssa (PT pehmeä), 35 %:ssa (KK aloitus.md) ja 40 %:ssa (PT kova raja: luovutus heti, toistuu 10 min välein; KK nollauskortti); koukun
+muistutus on käsky. 2) Postivahti lukee joka kierroksella, myös harvennetulla, PT:n ja KK:n kontekstin sekä jokaisen roolin, jonka lastActivityAt on muuttunut; PT ≥ 40 % = pakkonollaus (rivi PT:lle ja
+KK:lle, LUOVUTUS VALMIS → nollaus, 20 min ilman luovutusta → KK hoitaa). 3) PT lukee oman kontekstinsa jokaisen KK:n tai omistajan pyynnön alussa ja ennen raskasta vaihetta; pehmeän rajan yli ei
+aloiteta uutta isoa tehtävää. 4) Tilinvaihdon tai muun raskaan kertatyön (sessioiden luonti, Asemataulun julkaisu) jälkeen PT luovuttaa ja nollautuu heti. 5) Raskaat lukemat (Asemataulun HTML,
+kokonaiset muistikansiot, pitkät lokit, list_sessions include_archived) Sonnet-ali-agentille, joka palauttaa tiivistelmän. 6) Ennen PT:n nollausta keskustelu tallennetaan
+(tools/tallenna-keskustelu.py), ja Postivahti tarkistaa tiedoston ennen clear_sessionia. 7) KK avaa Asemataulun nollauksen jälkeen Artifact-työkalun open-toiminnolla (ei lukua eikä
+uudelleenjulkaisua).
