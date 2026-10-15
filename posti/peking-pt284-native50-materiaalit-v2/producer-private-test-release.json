@@ -1,0 +1,25 @@
+{
+  "privateTestLocalPackageReady": true,
+  "privatePacketRevision": 2,
+  "nativeSourceRound": 50,
+  "GLBCount": 72,
+  "bytes": 154356360,
+  "triangles": 1374177,
+  "independentSolAll72DeltaPASS": true,
+  "independentAstra15FrameRestrictedInterimAcceptance": true,
+  "onlyNativePlainPBRFactorsReconciled": true,
+  "allBINPayloadsAndOtherJSONUnchanged": true,
+  "basePacketRemainsUnmodified": true,
+  "actualGLBVisualUniqueFileCount": 26,
+  "producerPersonallyViewedV2FinalSpotChecks": [
+    "city-lod0/aukio",
+    "city-lod0/beihai"
+  ],
+  "producerPersonallyViewedAll15V2Images": false,
+  "native51MassColorsIncluded": false,
+  "final96Accepted": false,
+  "gameIntegrationVerified": false,
+  "gameRuntimeAccepted": false,
+  "ownerHighQualityGoalReached": false,
+  "createdAtUTC": "2026-10-15T17:16:28.318272+00:00"
+}

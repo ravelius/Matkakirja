@@ -1,0 +1,2078 @@
+{
+  "revision": 2,
+  "onlyPlainPBRFactorsChanged": true,
+  "nativeRound": 50,
+  "sourceActualReadbackSHA256": "737cc0179cf1e84da5b9dbdfe60cd57d2cf41bd5d514498df7561aa6f76e578c",
+  "files": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "oldSHA256": "c88e104a60ab3a888a4496defdd0493372d6e874cf2f85d685efeea159cd1736",
+      "newSHA256": "28bcce4f48d8dcb5169f158f7ac62a368b4d45cccd5c63f7cd1877973c3ee118",
+      "oldBytes": 1691132,
+      "newBytes": 1691136,
+      "triangles": 8361,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "5ce8d864aec3679cb7f0e49614bade219ad0da818884fce40a485b600c52ab11",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_0_lod1.glb",
+      "oldSHA256": "51e7a5d923316cf401bda89282d4569ceab08f7ba96aed1ef3073787b5ffc05b",
+      "newSHA256": "1b120ad7a1d37406a09395a4cc307742df602c6d219cc6717725b61655b8c444",
+      "oldBytes": 882756,
+      "newBytes": 882760,
+      "triangles": 7893,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "6f5ba8dbf0c0a6bff3cfde8bbf84a325bececf7fd4ab10381d884036a28be61e",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_0_lod2.glb",
+      "oldSHA256": "a6c67d3077639219aa1c54f8e0461bc69cd8d90cf02213f9f05174ebfdceafbb",
+      "newSHA256": "9d52a55d7115fd5bd7a897295e49a709e7bb5298aae50ad18154960afc2d687b",
+      "oldBytes": 838584,
+      "newBytes": 838588,
+      "triangles": 7893,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "bb23b64eced4959886ce838ad7a1618936c28bb2b36c6c047dee4ae68ec642a5",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "oldSHA256": "78e15c9f92b8a6426330b8ea8653d735a0d7b2170254f1aa5c66650155383a3f",
+      "newSHA256": "047b806bcfcca0486525d7a76c2833d280842df6c810323fa912ffacbe021c94",
+      "oldBytes": 2086020,
+      "newBytes": 2086020,
+      "triangles": 8315,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 10,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "3b2866483a068502d1abb539099978e316efad2d99e0c44afe61a6ea026d93b4",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_1_lod1.glb",
+      "oldSHA256": "c6585a0adab784328c11a90bd0c1fc84a0a0b0923fe846689505954fcd3fdefb",
+      "newSHA256": "4a11b5ecfe3203d94d34c7587aee6edd1a804ad6beaec06b6b227a2db0734911",
+      "oldBytes": 926024,
+      "newBytes": 926028,
+      "triangles": 6967,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 9,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "a8554e5508883546fc4e522275a9ff13482defb6688a41d8c2235e6e7f0feab5",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_1_lod2.glb",
+      "oldSHA256": "9fd5653e3fdeac96de0761ba3d958c2b99b9598a305cad6e2479c7e30a2f1c29",
+      "newSHA256": "a9d373222360b9d142630db07f7d6e9570f1360088f87f6a057374355a494990",
+      "oldBytes": 851920,
+      "newBytes": 851924,
+      "triangles": 6967,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 9,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "d4465f98c998237abb388369211a2cb42fd1fe4668a168bf9c802f4bd0ca248a",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "oldSHA256": "4be9fe8268ae024227960fcf5ec96fc1694dbec5b94f4622b46d72f9d992035f",
+      "newSHA256": "4941d567af93189b04c911954254796b754caa99c07a43435ad8eb30fcfa49fb",
+      "oldBytes": 2538540,
+      "newBytes": 2538540,
+      "triangles": 11017,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 10,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "baa80e04edc78b03384e6e6ac824691b99a2f5ee00ee7a554823ed36a5598d3a",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_2_lod1.glb",
+      "oldSHA256": "45b8dc9e8efac2a0288b9fefdbd46043295fd43a763f1f1e83cf2361ede1af3b",
+      "newSHA256": "c4e43384d9c2ff1a44aae70ce9af42f2b989dc67dc9155fabe750b623fc00ac0",
+      "oldBytes": 1123080,
+      "newBytes": 1123084,
+      "triangles": 8645,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 9,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "6fc01e090ece60f06c673aee62084212b687694aa01b013996ab1b6779232ac8",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_2_lod2.glb",
+      "oldSHA256": "b5ea8828ec88fb96114e23a4735cc17dc92cd16dd74c8de1ff180189c1d758a3",
+      "newSHA256": "c8b5275a8c9fe5d95319b5a88f856db8be0665a9f2f2470c8170307342f150fd",
+      "oldBytes": 1033804,
+      "newBytes": 1033808,
+      "triangles": 8645,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 9,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "a4366c9592c169f88d431f5bdfd1c63d330f7266cf3a871226663b468bad8ec4",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "oldSHA256": "960b19ff12f4691fe99c807fe6afac325a203b421713a3849a0c8775b85c85b3",
+      "newSHA256": "f81636591a5858feefe3d627013b529b9d1a8e8ab0cbc291153662b0a55402e9",
+      "oldBytes": 2029396,
+      "newBytes": 2029400,
+      "triangles": 8420,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 10,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "30789a2657d3eec81a64cc46d621215b01434f0389bf8f6607bdc72c5e91232c",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_3_lod1.glb",
+      "oldSHA256": "6bc2c3163dc1d9cbc0d83803df92a9735172e3f6164a4d555544556d489803a6",
+      "newSHA256": "99db1e20e9bacc1f9a6942db5d0675f86a9d7593a845ed554e93503fb57446df",
+      "oldBytes": 964280,
+      "newBytes": 964284,
+      "triangles": 7564,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 10,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "629def0b159b865592379c4b37a313703e9ada1262d7b6a6aff2530641752903",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_3_lod2.glb",
+      "oldSHA256": "08b4674c881a94e68765b125f5ea72f8437605af965ca475853472601026e767",
+      "newSHA256": "926e3569f7f2df35f834ada681de9d1c9f73b1f14f72b5b1bd7541340e254723",
+      "oldBytes": 889708,
+      "newBytes": 889708,
+      "triangles": 7564,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 10,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "e9b30bbcd39277851ef19db191f882dff454b4051a198b8b004427183b57bcc3",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "oldSHA256": "9311a21e13e44679e61fe1c6efff18ec837d88406a28b5623577c967dba3669b",
+      "newSHA256": "7b9f9cb2ba2968cff6040e5e1f89308381536d96d0ec3adb60f2fbb611f2cfb3",
+      "oldBytes": 2186844,
+      "newBytes": 2186848,
+      "triangles": 8777,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 10,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "839521e375f33d7011e29b54e1e58030a41c073f9fd6fccba3451f88eaee4ba0",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_4_lod1.glb",
+      "oldSHA256": "6ce6204517bd8450c81e350c00a64c4fd988b646384dee21e382c44ce00d79f8",
+      "newSHA256": "95ef418635ea0b48c803e0f050aa543b0811c6658903c38f32f62d9eb6a69df9",
+      "oldBytes": 1009236,
+      "newBytes": 1009236,
+      "triangles": 7825,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 9,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "1865c820bc8a94ce67a10f3c253c3f29d14394012e3264210d0b8859d4b07fb1",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_4_lod2.glb",
+      "oldSHA256": "dcd1802a583c858c85bb2b252402e3599f0461f59ddeb27b6bb5ededbd5bc3bf",
+      "newSHA256": "c8b85eba8561d8081d5270646a456a0506b5fd013c82c8305e4d4e7908eb2c7e",
+      "oldBytes": 932984,
+      "newBytes": 932988,
+      "triangles": 7825,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 9,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "9de01f6b7684f316773ce3b16a317f3befd8e70689ec66bfaee04bef489c3436",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "oldSHA256": "ca9bd6c42adcdc7a03efb234f34fb172555405aa5e894fe96308ffa99b99ddd9",
+      "newSHA256": "b9f80e8437c3636798ca37c1961a94da036f44771a8234fafaeea1c5b93d3ab9",
+      "oldBytes": 2347380,
+      "newBytes": 2347400,
+      "triangles": 14420,
+      "changes": [
+        {
+          "material": "stupa_valkoinen",
+          "index": 8,
+          "oldBaseColorFactor": [
+            0.8399999737739563,
+            0.8199999928474426,
+            0.75,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.699999988079071,
+            0.6949999928474426,
+            0.6700000166893005,
+            1.0
+          ]
+        },
+        {
+          "material": "stage5_road",
+          "index": 12,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "279339337820f4bae6e18e412db3ee1a3d2a9280848e6f77a0437ddb26535304",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_5_lod1.glb",
+      "oldSHA256": "efbd8afdd9b8208d31b362444c2e6b45fe9a5a4bfff9593171e0b80111280038",
+      "newSHA256": "7ca6548bd49c8972ae27a114fd2e26a1e8434020042c27c070ccdcbb5cad28c1",
+      "oldBytes": 1180816,
+      "newBytes": 1180832,
+      "triangles": 11568,
+      "changes": [
+        {
+          "material": "stupa_valkoinen",
+          "index": 7,
+          "oldBaseColorFactor": [
+            0.8399999737739563,
+            0.8199999928474426,
+            0.75,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.699999988079071,
+            0.6949999928474426,
+            0.6700000166893005,
+            1.0
+          ]
+        },
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "b0190dca346c321df91b0d78c813e8aadf582d049d7b1817ed2c6f3e6814e571",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_0_5_lod2.glb",
+      "oldSHA256": "9271631189f7b1764462230e0360186c63bfe4b72306fc443076980afa18d34e",
+      "newSHA256": "46de796e54024796e73394f6ba4dc1509ffaecc745f12e26d4d6a53a371bc1b0",
+      "oldBytes": 1113480,
+      "newBytes": 1113500,
+      "triangles": 11568,
+      "changes": [
+        {
+          "material": "stupa_valkoinen",
+          "index": 7,
+          "oldBaseColorFactor": [
+            0.8399999737739563,
+            0.8199999928474426,
+            0.75,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.699999988079071,
+            0.6949999928474426,
+            0.6700000166893005,
+            1.0
+          ]
+        },
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "3db3cfc45af4b46f35d7f1b10ef6d0832151621be00ffad0d0a986830b02273e",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "oldSHA256": "507d90b21514cb7a0985b7882558d46129b449103553483f458ab86be046a322",
+      "newSHA256": "3eba5fd715aa6b211fbcabb1be6545c159f488fa7ce95035bb869b35b330baf0",
+      "oldBytes": 1644172,
+      "newBytes": 1644176,
+      "triangles": 6000,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "000848815d81b3a2d4f7e6a20b2a53d9e1a7eabeb4f6673589cdf94c8896ff1b",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_0_lod1.glb",
+      "oldSHA256": "743b02c7cf753d51bde81a64b291f9fff5cb858d259c10b6f6cbfc8c5468247f",
+      "newSHA256": "d4edd9039c16007dfd1d05fe0ee9ba9cfb533849ce43b0231869f92865335948",
+      "oldBytes": 751804,
+      "newBytes": 751804,
+      "triangles": 5532,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "e1051eaf0fcfc32c4f4c73ec65ba79dbe8076b0064a5c148401e057d08be3188",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_0_lod2.glb",
+      "oldSHA256": "91742345cf9e09c9247fe93d084252a931990220b5a9272612d0882256331d53",
+      "newSHA256": "bef9003f1bf619a0ad2661af9d525241b0d634036d333fe7adad95f5dd2d685a",
+      "oldBytes": 701412,
+      "newBytes": 701412,
+      "triangles": 5532,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "3edad266dd8f0278ee02e580385725237a8745bf8e427ffa3d04c70ed263030f",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "oldSHA256": "6e18692bfc79badaf6b37c82332744cb24220ec50dedbe3c3443ab77a95bcd7e",
+      "newSHA256": "50546c3125c380afbaaf5e67a852b69378fc4b473f9279f9e181b3911b06fa31",
+      "oldBytes": 2528804,
+      "newBytes": 2528804,
+      "triangles": 14439,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 10,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "8950affc1dd8c2c641de33ed3a9e44c236bcb771d38f2ed14ac228dab2cce2c9",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_1_lod1.glb",
+      "oldSHA256": "a50d38732e2d379a358cb496a9ee47e2e5c2b928aadda6a1904b479713862c3f",
+      "newSHA256": "32a0aaeccd15b35ac4299bacd01ac304e13a30d7377e23240b10c1207fa2e611",
+      "oldBytes": 1341032,
+      "newBytes": 1341036,
+      "triangles": 12783,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 9,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "8daa3f244ff449c9e6f03fe1946cca85e03215e1b913a250f4fba61dac41a282",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_1_lod2.glb",
+      "oldSHA256": "a98b4d7c32d42e73a54b0b6d6508edbcb74a612f0a1bb64b94313d82e636e81f",
+      "newSHA256": "860a2a613485df7bf87ee55cf4fd42b3ebb6d5f1ce42defca6f8e5e0433891f0",
+      "oldBytes": 1265588,
+      "newBytes": 1265592,
+      "triangles": 12783,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 9,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "1e697b7d174d216ab5517391fad3125fff6e85f0443141c32fd7fad6473088a1",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "oldSHA256": "f20a7b2502a4638ce7ef1f619642399bed3741eb7466359671c1faafcc0b2416",
+      "newSHA256": "779c15f66b632cf5fe3469c24bc9df9204ac23fac29191c1794d1858a4e03cdf",
+      "oldBytes": 2750000,
+      "newBytes": 2750004,
+      "triangles": 16403,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 12,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "55d15932504a79b363bff9010f6846f2dd73ce90432523ffe0b446b583812821",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_2_lod1.glb",
+      "oldSHA256": "69857441ce146a5657902452d2f438f99d15257b6b205cf02a73b6371dfcfe33",
+      "newSHA256": "eb61a30646431fa315d2f3040d9cce1cf18fa93de20c4bacf743a6628d6857c1",
+      "oldBytes": 1375652,
+      "newBytes": 1375652,
+      "triangles": 12909,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "5155fa2c61d87502e849a85546179e2bb6d09090d942e7ca727b7f527a05d7b1",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_2_lod2.glb",
+      "oldSHA256": "e166f945dc4d3b2c21fff6a586fe4397092f7e681a91d0358fcbcf2a8023834c",
+      "newSHA256": "4758ad131adcae339423ec7e7372dedabcf1d8069d7b0f44afdd7055a50923d2",
+      "oldBytes": 1291072,
+      "newBytes": 1291072,
+      "triangles": 12909,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "5f585fe34d846f6f40932c64815f7179b9ec821a5bbd86ece75738a53d0d755c",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "oldSHA256": "d4b0a8a7d3d90b66d1cd8cb2f38fbfe49fa7370eabd091f4331f503e8bfab33e",
+      "newSHA256": "b04bfc251e43fae3a497230a61be0a7256ab7b612c2d6f2520bba6ff841ed5bc",
+      "oldBytes": 5482676,
+      "newBytes": 5482676,
+      "triangles": 59148,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 12,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "ba5f807786ff357b58b9b01661de1988c6c820a38aa2782b116839c144689deb",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_3_lod1.glb",
+      "oldSHA256": "160b5f872d5132ae9824e52bc4203c435e894c333cd104c164b402dc7d470f87",
+      "newSHA256": "8c6910b2735620b57cc18554bd14be1c2942439cbb4f176949c3e26b767ce52a",
+      "oldBytes": 2263524,
+      "newBytes": 2263524,
+      "triangles": 26710,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "26f7961c1106903938fc3ec0d8403a2c40e7c6c188c65eff94e4c9274fc6de96",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_3_lod2.glb",
+      "oldSHA256": "592f493519aa26a70df46dd1e9ece696af5cbbec8cfd9b3168743a352a3cf839",
+      "newSHA256": "ec0e6644b8c237085530a429f1937d621b2031645a95a3cc504d0463992ba092",
+      "oldBytes": 2192592,
+      "newBytes": 2192592,
+      "triangles": 26710,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "170c241486750f03bae1bff9f36eb646739ddaeff62d46486eb466d5483246dc",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "oldSHA256": "d4e961dd122bc174399cbdd4510cb7b2fe18444c8d30fb2afcce8626da19f0c4",
+      "newSHA256": "642f2f39c77c28ee400f10fb5ab2d8ebdfe3f74a1eab80aee023bf3f58fbd934",
+      "oldBytes": 4559244,
+      "newBytes": 4559248,
+      "triangles": 47131,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 12,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "b6d918a742b55cc179df54938c0d26bf30ff89f74c878b4caa90830d9771cad9",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_4_lod1.glb",
+      "oldSHA256": "7f5c4af1f88202337820a9f00880adc20960af32bc9a02dc77f9e8029b5a0fcc",
+      "newSHA256": "a5ab496580e9ad746af45bfd34c8d69fed2fc10bdd6e64096fe8327d6656347b",
+      "oldBytes": 3072688,
+      "newBytes": 3072692,
+      "triangles": 38497,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "456ebd63319168efa70ab5b319c3590aa31ebce0d1421b3433dcf42a07113221",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_4_lod2.glb",
+      "oldSHA256": "7db4a092f7168351bb1e6325c528a004edb4b3a17233c549ae50f83771fb0ec7",
+      "newSHA256": "e270b9a89461b1da130e373757dabf81ada2c580def2a139932c9292f36b4454",
+      "oldBytes": 3016040,
+      "newBytes": 3016044,
+      "triangles": 38497,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "f8a8cbf0d32a63320e928d6e90814f99181d441bed66eaae02ea610000121d0d",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "oldSHA256": "f1333405d3be4fcf43d4080980224efee2d901ead14cf94f19b2f187f853c547",
+      "newSHA256": "e6899ce111842b5d5bd2859115f73eaa868e16214ca2cc4aa154f0917498774c",
+      "oldBytes": 3213840,
+      "newBytes": 3213844,
+      "triangles": 26716,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 13,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "1e31bec0f9077e22dd266b3276ef8900c178271ab58853fa7d520a824a9b4dc1",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_5_lod1.glb",
+      "oldSHA256": "9c882ddcbe37574022463eb03fec7d3a97ff729706934e9c724dc42d387de736",
+      "newSHA256": "9b7e0dcd1c5beaf5e409009c6533f49e5d087c01df75fab3177387218ab41524",
+      "oldBytes": 1886820,
+      "newBytes": 1886820,
+      "triangles": 21184,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 12,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "1fafbf8a4b25abbce108c9fbd0721f79f174bf2e8caf9214440aff98ba37f5fe",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_1_5_lod2.glb",
+      "oldSHA256": "3c2f8c7131b42dc7ac6e6ca2c213877584797347c50bae7568312912d34ac788",
+      "newSHA256": "52fb5fe70a91fdb056e787791a001997abd0e93440beaf99ba8deedb012088c4",
+      "oldBytes": 1817936,
+      "newBytes": 1817940,
+      "triangles": 21184,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 12,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "e33557e39d52b7ceb4052dc8108255f4c83fed0c15b1a8f4007cf867bae18716",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "oldSHA256": "4e9edc2f145a4e0d4c84dc9b410c8c2a3d1f9da775b841bc0789cd788ce90109",
+      "newSHA256": "6ba6551d76d1ef8a7d3e6ebeec12d800ab8076c15338f999d37d40576565d64e",
+      "oldBytes": 2080552,
+      "newBytes": 2080556,
+      "triangles": 7094,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "80920c0da1b3eb099ad0e7b34e64ab7e085b8f04094cc7cc6db070649bcfcbf2",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_0_lod1.glb",
+      "oldSHA256": "9a51b84d1bab70535279a15cbc58537dc4963ae5d67727eecced0d350f9455ff",
+      "newSHA256": "fe06444813c1a4c05f3077f79b39481dffbdfd83c5c18cc2374319b4a424785e",
+      "oldBytes": 964760,
+      "newBytes": 964760,
+      "triangles": 6834,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "0bdfa8a1d189554279b9ee75c18c5a65024703b56d13885a7201931528cebd73",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_0_lod2.glb",
+      "oldSHA256": "caf46fda8a4edb6bb2edc09cee2d675fd287c8f678c39bd09b0a080025e85983",
+      "newSHA256": "cdd3e7f77aa1df2bccf8c5b4d25868a0b13423348c846e0b2490b4b9a5191e3b",
+      "oldBytes": 896628,
+      "newBytes": 896632,
+      "triangles": 6834,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "89ab4fccc925d31977de8e878c4c08507db4af0e3ed19c89ad97416296b52e02",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "oldSHA256": "a3d0a36bb6b25ddb42a9c0da6b3ee472e96943e41405cdc2df3dee130f9ac543",
+      "newSHA256": "ef5707f8a2db9a43d368161c125058002e4b32e4626ca7de2b6b836313f52cb1",
+      "oldBytes": 2414960,
+      "newBytes": 2414964,
+      "triangles": 14405,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "c7c1ad05ff5ebff32c41a691f9aac317681d772f4abbf3504d4175636bf6c0a8",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_1_lod1.glb",
+      "oldSHA256": "0890e87070b2b54b2eafd15f20e51449b74bf365a2a49808ea3324992455581e",
+      "newSHA256": "9e9e5ec22ae014795c59ebf6f4be4aef3aa00a7aeb1506f7e24b0f885c7daa67",
+      "oldBytes": 1304648,
+      "newBytes": 1304648,
+      "triangles": 12917,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 10,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "d018040744fbbb9c90c8995e66b10135fdc3fb64f2ab3379de0ac6b4b9d0f707",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_1_lod2.glb",
+      "oldSHA256": "d87845e1ab2fb060b7057bebcc3d2e364977a9cf2119a7b7228d9f13fea0618f",
+      "newSHA256": "a6ce40f1cbee7a17f5925c86bec64e52e6d5e3889a611d9c94b6f879465e0bdc",
+      "oldBytes": 1234588,
+      "newBytes": 1234588,
+      "triangles": 12917,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 10,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "2d315688686940c65f6196df564ccd9978ff846f4bae9fb903b08621c3dd89ca",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "oldSHA256": "57660b229bfb31177d57cfdd21952a299ea6758dc4fb4569142ec4d8c373ea62",
+      "newSHA256": "5dd9c16a48022edefbc27d422a21b7e28618f7de1b53b5464f02646be29abdfe",
+      "oldBytes": 2769128,
+      "newBytes": 2769132,
+      "triangles": 17299,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 12,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "a6ca410f663452e670faf8b7f67138f9aa716049b78e214cb8bed821ef3af37c",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_2_lod1.glb",
+      "oldSHA256": "47972da0e52eb35026dea41339ae3776b4ec0e794d13c2c036eb8148c5b0cfbc",
+      "newSHA256": "a875304c6472cb10ebe6423f12fc431b659be97ffa28b5968c887f03ec88abb3",
+      "oldBytes": 1462300,
+      "newBytes": 1462300,
+      "triangles": 14363,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "751053e0cdadb1b14bf3ee2e188c797a595833f9f09556a66889953de2e13e6c",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_2_lod2.glb",
+      "oldSHA256": "c812084c03b488239e8a7b3a466f6ea90c9f11373a9c694da3db308be6746bfb",
+      "newSHA256": "5ad7ffc9931f8f48710da5520d69bc180cca4d99fa338b0be3790025c4534774",
+      "oldBytes": 1383892,
+      "newBytes": 1383892,
+      "triangles": 14363,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "0ac9e6d7fb076c34665427fb806dadfc8baef6430ee902fc2f939ef949708f2a",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "oldSHA256": "237dbfeaf31e1029f3b0c1c18a1309a54f31e8a3604a3774c94932143d64bd35",
+      "newSHA256": "07dce56754fe9e7976fa0d4f65a6042b2900e6ea13907b967f80d135daf78a66",
+      "oldBytes": 8542952,
+      "newBytes": 8542956,
+      "triangles": 97715,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "3a0e4d0b3c11f877a0f1ad8b52317376d66a9d299f841b5611efc28626af2d8a",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "oldSHA256": "7ddc06f0ca1cc0c21bb82923b2ac849bba10a82e15515febbbb6ffcb0cc323f2",
+      "newSHA256": "0b857a5e80c5595ccb796560529390e5d1a2609fc6cf9235b8ab212c0d73060c",
+      "oldBytes": 3997444,
+      "newBytes": 3997448,
+      "triangles": 50311,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "b7a74c9670ebf7fc7339a2924c0bf1e46a579d1298f9f477e22f43c2d6d725f9",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "oldSHA256": "471fd596784e5bf07810f43816eea2d2551c21ac04f5243d4250f68efe8615f2",
+      "newSHA256": "821dd1286d48e64949612a9adb6eb21f33fbacdd3184186cd64e8a909ec0f3de",
+      "oldBytes": 3785212,
+      "newBytes": 3785212,
+      "triangles": 48979,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "d107f73e78e35a1f7881434f3fd51342c8faf5ab45c812cc66bf83b0e1412793",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "oldSHA256": "674ca2676b7f3634817d5c7b43a1fd2660657254ab8d5d8883d4cdf5c30388c0",
+      "newSHA256": "898bacdc14389e7d9fe1d0f34feaba5ef803914dd5e9f7e657ceb3332b405583",
+      "oldBytes": 4877028,
+      "newBytes": 4877028,
+      "triangles": 48505,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 12,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "e2a0f4aa6ee804d1c4298038e66e77f8891e90de13ed952005e073a3728c95c1",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_4_lod1.glb",
+      "oldSHA256": "8a42b492f4530fdf4e4affca43412bd2d9af13fd929cb19a4badd24254be0db4",
+      "newSHA256": "da95520b518a290cff76b213eaa7440e0d44a4b301c299007bb38c18728aea50",
+      "oldBytes": 3183512,
+      "newBytes": 3183512,
+      "triangles": 39179,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "07d4aa0e825f21a0710366b2f837fcd60a3caf4c4c9354c7d117f1625a522342",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_4_lod2.glb",
+      "oldSHA256": "3830b034b85c28b4dd894911ca45f01525ea4ccfc44bfa32e8e89da0199a931d",
+      "newSHA256": "a242576ea28d54ce20adc9c41df370277d13242deee89c678b1e634ecc2175e7",
+      "oldBytes": 3110968,
+      "newBytes": 3110972,
+      "triangles": 39179,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "52a9bf029f96a5206c03aaebedbd90e3f1e99cabd89395fc804ae1eb27a4527a",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "oldSHA256": "e7878faaea84859c1ecfeb406b32c885526f23513f710270fa1757e19b8a6db4",
+      "newSHA256": "198df0e965ca61cf76f46a93fff0ac7bc1f177f28d77e61164d66ff79813cfef",
+      "oldBytes": 3966828,
+      "newBytes": 3966832,
+      "triangles": 33135,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 12,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "510b513519244d689b52b7bf10a93edf2888070b55e50e2aa8bca57666e66177",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_5_lod1.glb",
+      "oldSHA256": "af03c34e8ed0e30eb6085eb4a2f8e658c8c9b696b9a573bcb539ebd35e0663df",
+      "newSHA256": "ccb41c162c57fe712dd854289ed3152d9c4f33b3c16e45c56e81fe27e68bf44f",
+      "oldBytes": 2632460,
+      "newBytes": 2632464,
+      "triangles": 30123,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "45cef5efdee38d8ea5ce214cdd1da723c90992501803b8ebf65b85a725bf7aa6",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_2_5_lod2.glb",
+      "oldSHA256": "ee3406633f0adbb3e8b80fe749349d8cf9c81ab1d2b303a918589a1e19539ab4",
+      "newSHA256": "1f99024033b6a80bfcb828e349dbe15701bf5419f046930e5fbfc5abe5e4eb49",
+      "oldBytes": 2541092,
+      "newBytes": 2541096,
+      "triangles": 30123,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 11,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "a85cec4080f3a575b85ea560ed21acbcc12a26e62a9c75aee02169e8300a2ed7",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "oldSHA256": "f1b438b5d784c1e5fb9538d05ddf8c21fccc5ee02ef5f195b4c8324fd765e0db",
+      "newSHA256": "bbe7574e7e70e6b2a84a958c42cccfc03474491909d9a4553d344bc8df09e7b0",
+      "oldBytes": 2574416,
+      "newBytes": 2574416,
+      "triangles": 10525,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "0afd97082110edd40634f3516b4a746cccc06cde9fa0e7ddfe34ff650239018b",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_0_lod1.glb",
+      "oldSHA256": "6a3649aadd85932e8ffbd579d7ee47b24a1b5968b38f090fa7705317a83a1bb3",
+      "newSHA256": "641879f95cfcb8da98303518f7e0490eeaaf24be769a7fd6f73e29f6b1fca796",
+      "oldBytes": 1234920,
+      "newBytes": 1234920,
+      "triangles": 9361,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "6c8d71be0b395d61398b20eed0d3e82c4a27a960affcaa49fd5af48e99d2aba5",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_0_lod2.glb",
+      "oldSHA256": "d7527e437bc98cb2e5414e12535e5dbf16eae3587f86a99a8945fc8fc2cbfa74",
+      "newSHA256": "6ce8657f5ffc1e9ae45cfbfd38df1f11ca7b9a0cfd9810e35caa5162ac8c9e1d",
+      "oldBytes": 1152348,
+      "newBytes": 1152352,
+      "triangles": 9361,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 3,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "0ef25068f26c050ec8930fb44102ad615ee82695f69a20f4bca3bcd0ad7db520",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "oldSHA256": "ab9b83c5117f29af17bfedf2836f7e9d33a6b7ecdfce1600685a16741e5dee2d",
+      "newSHA256": "da1bab85281ab1e6283df8b058451dff8a9148b0df48e004ff51342313321200",
+      "oldBytes": 2584288,
+      "newBytes": 2584292,
+      "triangles": 11016,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 8,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "03e0b17fd9d5624b192d5e39c33ec6b60fa8d5fb1f0f6d84772e39544fba8a76",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_1_lod1.glb",
+      "oldSHA256": "e940925922978765b0fe2059a82e79032488d98d21e65ef64121726ae760dbe2",
+      "newSHA256": "c896a1159467ba2c88498f40de19b18d383a89897de4c8fb9fcdb9f2c30576f2",
+      "oldBytes": 1248508,
+      "newBytes": 1248508,
+      "triangles": 10032,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 7,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "054c3d6ffef83afe01a64f697c4f1cbb8f089bc61c36d09845a47667d19e9e21",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_1_lod2.glb",
+      "oldSHA256": "b11ad4d20edcf5ce572b24aab436601e2113051d5c2ce1d081f926ff2adab941",
+      "newSHA256": "4e9196d3c4375cc286375cc04d4653147daa0e2bf9adf4626675e8bcf21bc3bc",
+      "oldBytes": 1162928,
+      "newBytes": 1162932,
+      "triangles": 10032,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 7,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "15f130e904c7e54a6505be0ad5700c32adeb8d900ad402a3ec6d3186e94f88b6",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "oldSHA256": "04c6e90870d80012aa3fe4e93c3ee09af28a599d589b4a063214117a74a3c3e6",
+      "newSHA256": "9bd090537f0103a979d5bc258dbbb3aa3ce2bf8b3007adb154c72b2b81b13cde",
+      "oldBytes": 2840428,
+      "newBytes": 2840428,
+      "triangles": 18150,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 8,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "659d0a6e9125178c6fbc55474a1f677ba877372a1a9cb59cc1981cdb07d37486",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_2_lod1.glb",
+      "oldSHA256": "d4aa49945cf4dbe2e7831a013976af607933314753d535302ce42526354be7b9",
+      "newSHA256": "3ff8c7952dd383468ed664fe85646baaf812201480b0e012406d05236bbfe1f6",
+      "oldBytes": 1694780,
+      "newBytes": 1694784,
+      "triangles": 16966,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 7,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "3428a4edf0322114b24d461da418963cc762ecf395d6581b009cf3fab70ade33",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_2_lod2.glb",
+      "oldSHA256": "21f439d7396f43f20c03ff51ba477639c51663db458d2e7c2395ecb74a148d3b",
+      "newSHA256": "984ac1b35072b8ccd6b0f153d9ec8264e8d501e44be1dfb072efcc3b37287767",
+      "oldBytes": 1618012,
+      "newBytes": 1618012,
+      "triangles": 16966,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 7,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "87ed5eb75becda76247ce0baf6b5c50b5024c2087249fc0427743c09a6258c79",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "oldSHA256": "24cea4ec97e39a63a72f1074da12ee810e2ed34c3154e065d682fe33a9c7f546",
+      "newSHA256": "3b7b8151022eaec720a0e645088d5f24ac65023cc0dd3ebc37062b87aa04923c",
+      "oldBytes": 3037760,
+      "newBytes": 3037764,
+      "triangles": 12604,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 8,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "3491d2fa2b5da7fbf0175637c3601abe6142200d5dc78abc687e8936f62e58b5",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_3_lod1.glb",
+      "oldSHA256": "75e5536ef796ab90d10273d1959500cda8e60f26741a882709fd34cb2fdd2a78",
+      "newSHA256": "30207cb9d2c67c5f83c1b0a7f4790b93b9d47fb7f1d259d282bb80dcde8f79f4",
+      "oldBytes": 1471676,
+      "newBytes": 1471676,
+      "triangles": 11532,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 8,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "fd7d70630920b6de4c92a965ac1dae06888b7612ed540e988b79a795049e846d",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_3_lod2.glb",
+      "oldSHA256": "bcbda3377268c35b0ea89dab7f21477bdf887672654954f5ac337e9f03a09be2",
+      "newSHA256": "7a54be20c227aad8cf9ec779a8adfff1026d044e1362e4bfdb1587e28b922d2d",
+      "oldBytes": 1362072,
+      "newBytes": 1362076,
+      "triangles": 11532,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 8,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "106c8727e603742ece94bcdc129893de140418289e41e70163eb77beeb5d49ce",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "oldSHA256": "52bdced97b8ec8ef6a4c548ec30142a62bb4607885e70776a69f55a51b7ac7bd",
+      "newSHA256": "b2f8a338660163c7444b5223740059a9e16a1341b2a7f8812035bec4ee3e3b6d",
+      "oldBytes": 3127332,
+      "newBytes": 3127332,
+      "triangles": 17671,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 9,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "4aeb2d08fdb90a84f76d88f029197b5fa5370c280d4a6ef5373dd3890ef842a7",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_4_lod1.glb",
+      "oldSHA256": "a65a9514c73a0fc85fa0f6c3600e5f832baaf6a9ce308574beac79d27c5d79a5",
+      "newSHA256": "bc6283e2dd6393add1d84a8c732af655a90e758972da4e4c7af0c5de009f3dbb",
+      "oldBytes": 1745248,
+      "newBytes": 1745248,
+      "triangles": 16407,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 8,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "5fb672590ad8cfeeff764e128a69c2d3c25c8daa631398a5e5eebd7cb7e6ea7b",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_4_lod2.glb",
+      "oldSHA256": "cb30d1c6c94a1ebcee1d5effba0d36a0cba0b5c378fbd91d3b2566d64593258d",
+      "newSHA256": "ce48dcb06d3f69a0189f1d8b31160b27a10541566cd4545012f29cb249b183e2",
+      "oldBytes": 1653472,
+      "newBytes": 1653472,
+      "triangles": 16407,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 8,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "8d7a5ddf427756cc84e62b33f2104e01ef9ac7d9ce801ad714175b7615dbdabc",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "oldSHA256": "fb2b74b0f0d1bd03e32eaed5e62795e97bf2c3542d5d83d6d66c822259937626",
+      "newSHA256": "7215916a21a16916160e8d7bb2248c1ee77cff5a4bc41730176104daf1603b35",
+      "oldBytes": 3923796,
+      "newBytes": 3923800,
+      "triangles": 29533,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 8,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "819fe4ee595c9e8cafeabc5e3ca05ec4e69af7742578ad033fb72a40e9365cfd",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "oldSHA256": "da686063800dd08e140a75778bcca4b412f3548dbd5c72656d009c67e9ecbbd6",
+      "newSHA256": "711d45dae038c48e7ed9148c8d43841eba0fad8a50c13d04b5e71856a6832da3",
+      "oldBytes": 2544240,
+      "newBytes": 2544240,
+      "triangles": 28253,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 7,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "b98d06bfdf1630d38452440563902015dccdefc6d400670405facff82a95ddba",
+      "allOtherJSONExact": true
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "oldSHA256": "18790a67c0754255c54fd38bdd083a5944e716d75a389f9c49937914f19ab359",
+      "newSHA256": "0735fcf9b6dd806c52eecc527d91fa10cec56c44132db48183de7b3baf3db011",
+      "oldBytes": 2450096,
+      "newBytes": 2450100,
+      "triangles": 28253,
+      "changes": [
+        {
+          "material": "stage5_road",
+          "index": 7,
+          "oldBaseColorFactor": [
+            0.30000001192092896,
+            0.28999999165534973,
+            0.25999999046325684,
+            1
+          ],
+          "newBaseColorFactor": [
+            0.14000000059604645,
+            0.14000000059604645,
+            0.11900000274181366,
+            1.0
+          ]
+        }
+      ],
+      "wholeBINPayloadSHA256": "41eb01363b32582211eb00a2605bbf45903a105330f63d1c6045fbff050085b8",
+      "allOtherJSONExact": true
+    }
+  ],
+  "triangles": 1374177,
+  "bytes": 154356360,
+  "geometryNormalsUVAllEmbeddedImagesAndAllOtherJSONProtected": true,
+  "noChangesToSourceImagesOrNativeBlend": true,
+  "roof303Unchanged": true,
+  "source51ColorsNotInThisPackage": true
+}
