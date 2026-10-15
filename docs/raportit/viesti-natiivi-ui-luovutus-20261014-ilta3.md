@@ -31,6 +31,18 @@ c9c3b948e kuvan suurennos (Ponnahdus.SuurennosS) 320 → 240 ms = Tyylikirja.Kes
 240 ms (vain kommentit). 6dcaa0fad kutsuminiatyyri esiin 350 → 240 ms, pois 250 → 200 ms (Kesto.Sulku), PT pyysi; ilmoitettu PT:lle.
 Jatko: anna kärki NS:lle junaan 192 PT:n kuittauksen jälkeen. Raamatun rivi 1779 (poikkeukset 320/280) = PT:n läpikäynti.
 
+## TILANNE 15.10. 04.3x (sama sessio jatkuu)
+- Junan 192 rungossa (NS 5312cd91d): iss-193 6fca25f2b (A1, C, joystick, taulu odottaa mustan) + lasi-iss-192 b052768c8 (lasipohja ISS-taulu ja chat).
+  ISS 5–7 e39809f76 ja yläreuna v2 868688099 myös rungossa.
+- SKANNERI (hologrammi) LEPOTILASSA: natiivi-ui/iss-193 d9a144076 (IssSkanneri.Kaytossa = false; ui linssi skanneri <kohde>|kiinni|kaytossa 1|0;
+  143 kohdetta Resources/IssSkanneri: <tunnus>-korkeus.bytes + <tunnus>.json + faktat.json + hakemisto.json). PT hyväksyi videon
+  (arkit-192/skanneri-puhdas/, käännös c31fa2220) → omistajalle aamulla. Omistajan Kyllä: Kaytossa = true + iss-193 + PK pelikoodari/iss-nimet-192
+  (paikannimien napautus → IssSkanneri.NimiNapautettu, pallohaku, Sojuz-radio) NS:lle.
+- Jonossa matala: LS1 museon teosnimi kankaan päällä Ranskan salissa iPad vaaka (lokit/todistus-ranskasali2-ipad-20261015-0120).
+- Ajot: natiivi-ui-ajoskriptit-20261012 (testi192*-kaanna.sh, skan192*/pisto192-simut.sh, sk-*.txt). Ennen käännöspyyntöä AINA
+  sh Linssit-testit/unity-tarkistus.sh + python3 tyokalut/kielivahti.py + tyokalut/pohjavahti.py (192i/192j kaatuivat niihin).
+- Videot: simulaattori ei nauhoita ääntä → ffmpeg adelay avauskohtaan; iPad-video transpose=2.
+
 ## TILANNE 15.10. 02.1x (jatkoa samasta sessiosta)
 Kaikki proto-repossa, worktree wt/proto-natiivi-ui-issikkuna (muut siivottu; wt/proto-natiivi-ui-luettavuus pidetään: todistusajo.sh).
 Ajoskriptit natiivi-ui-ajoskriptit-20261012 (testi192*-kaanna.sh, *-simut.sh, sk-*.txt), arkit proto-3d/lokit/natiivi-ui-arkit-192.
