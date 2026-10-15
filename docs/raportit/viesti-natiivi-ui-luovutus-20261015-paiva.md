@@ -41,6 +41,9 @@ Työpuu: /Users/Shared/Claude/wt/proto-natiivi-ui-issikkuna (haara natiivi-ui/is
    kohdasta (kartoitus lähteen elementin worldBoundiin); 2) sisäpinnat – paneelin lapsen peittävä tausta peittää lasin (korjattu vain
    tumma kortti, mk-lasi--paalla); epäiltävät: aikajana-paneeli, ajattelija(-lappu), lentopeli, ISS-ikkunat; 3) lasikerros paneelin
    lapsena (Children()/IndexOf-koodi). Korjaus seuraavaan junaan.
+1c. PT 15.10. ilta: museon salilista natiivi-ui/museo-lista-194 1c759c09d (2358c4f21 päällä, worktree wt/proto-natiivi-ui-museonimi):
+   Kosketusvieritys.Liita Valitse näyttely -sivulle ja LinssiValikon listoille; Lasipohja ohittaa koko sivut (mk-opas-aloitus).
+   Junan 194 erä (ISS-luvut, kertomuskuvat) oli jo tehty; tekstilaatikot läpinäkyviksi EI (kumottu 21.42/23.33). PT:lle ilmoitettu.
 2. Omistaja 09.36: "Ei testejä junaan" (vain skannerivideo oli poikkeus).
 3. Levy oli 99 %: NUI:n vanhat app-kopiot poistettu, jäljellä natiivi-ui-app-testi192v ja -192w (poista vanhempi seuraavan
    käännöksen jälkeen). Testihaarat natiivi-ui/testi-192* ja koe-* ovat poistettavissa junan 192 jälkeen.
