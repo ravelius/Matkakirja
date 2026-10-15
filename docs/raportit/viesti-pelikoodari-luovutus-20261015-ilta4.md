@@ -47,6 +47,9 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus viesti-pelikoodari-luovu
    + **KOHOKOHDAT** (omistaja 20.27, PT): kysymykset liitetään ISS-kohdevalikon kohokohtiin; kohokohdan avaus → liitetty kysymys Pulun chatissa
    valmiina ehdotuksena. Siirtoseppä tekee datan (kysymys-id), Pelikoodari chat-puolen. Toimeksianto
    /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/iss-kohokohdat-20261015.md (ei vielä luettu).
+   Siirtoseppä 20.4x: haara siirtoseppa/iss-ilmiot-196 578f99511, Ydin Iss.IssKohokohdat: NUI kutsuu IssKohokohdat.Valitse(k) lennon jälkeen →
+   tapahtuma IssKohokohdat.Valittu(k); k.Kysymykset = lista (Id, Teksti), esim. ("kiinan-muuri", "Näkyykö Kiinan muuri avaruuteen?")
+   (kohokohdat.json "kysymykset"); teksti = iss-pulu-kysymykset.json:n kysymys → kuuntele Valittu ja näytä Pulun chatissa valmiina ehdotuksina.
 3. **Pulun 49 chat-ottoa ÄMPÄRISSÄ** (Äänittäjä 20.3x): aanet/pulu/chat-v1/{tervehdys, odotus-yleiset-01..36, odotus-vastaus-01..09,
    virheet-01..03}.mp3 + manifest.json (id → kesto, teksti; paketti pulu-chat-49-vienti-20261015). Kytke (odotusrivit PuluChat Yleiset/
    Vastausmietinnat; tekstit ba2778726:n mukaiset).
