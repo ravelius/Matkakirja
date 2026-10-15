@@ -26,3 +26,6 @@ Viestit send_messagella id:llä; PT:lle ≤ 3 riviä. Proto-worktreet ja remote 
 - natiivi-ui/aloitus-195: KS:n 5 Codex-vihjekuvaa mergetty (8027364e0) + LAHDE.txt (e51b351d5), pushattu. Kaikki 9 vihjettä kuvalla.
 - Linssiseppä: kohokohtien korttikuvat valmiit _valmiit/iss-kohokohdat-kortit-20261015/ (revontulet, kiinan-muuri); odottaa ämpäriä +
   SS:n kohokohdat.json "kuva"-kenttiä → sitten ilta6:n avoin 2 (merge nimet-196:een, asettelukuva).
+- 21.2x Linssiseppä: korttikuvat ÄMPÄRISSÄ (200 OK) https://media.matkakirja.app/kuvat/iss/kohokohta-revontulet.jpg ja
+  …/kohokohta-kiinan-muuri.jpg → vie kohokohdat.json "kuva"-kenttiin (Assets/Matkakirja/Linssit/Resources/IssParasHetki/kohokohdat.json,
+  data on Siirtosepän: tarkista ensin, tekeekö SS sen omaan haaraansa) → asettelukuva "iss kohdevalikko kohokohdat" → PT.
