@@ -264,7 +264,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
 <main class="wrap">
   <header>
     <h1>Asemataulu</h1>
-    <button type="button" class="paivitetty paivita" id="paivitetty" title="Päivitä tiedot nyt">…</button>
+    <span class="selite"><button type="button" class="paivita" id="boost" aria-pressed="false" title="Mittarit ja kulutus näkyviin tunniksi">Boost</button><button type="button" class="paivitetty paivita" id="paivitetty" title="Päivitä tiedot nyt">…</button></span>
   </header>
   <p class="tyhja" id="tyhja">Täällä näkyvät Matkakirjan kehityksen mittarit, junat, työlista ja roolien tila. Päätoimittaja ja Postivahti päivittävät sivun automaattisesti.</p>
   <section class="palkit" id="palkit" aria-label="Käyttörajat"></section>
@@ -521,7 +521,17 @@ section:not(.kiinni) .yhteenveto { display: none; }
     return f;
   }
   var pyyntoKesken = 0;
+  // Boost (omistaja 14.10. 23.39, KK 15.10. 11.29): nappi kirjoittaa talo/boost {paalla, alkoi}; mittarit ja kulutus näkyvät vain
+  // Boostin aikana, ja Boost sammuu itsestään tunnin kuluttua (vanhentunut tila kirjataan pois päältä).
+  var BOOST_MS = 3600000;
+  var dbRef = null, boostSammutettu = 0;
+  function boostJaljella() {
+    var b = tila.boost;
+    if (!b || !b.paalla || typeof b.alkoi !== 'number') return 0;
+    return Math.max(0, b.alkoi + BOOST_MS - Date.now());
+  }
   var SONNET_ROOLIT = { 'Postivahti': 1, 'Sis\u00e4lt\u00f6kirjuri': 1, 'Laitetestaaja': 1 };
+  function aikaRivi(t) { var a = luo('span', 'juna-aika', String(t)); a.style.marginLeft = '0'; return a; }
   function junaRivi(sailio, paneeli, rivit) {
     sailio.replaceChildren();
     paneeli.replaceChildren();
@@ -550,7 +560,13 @@ section:not(.kiinni) .yhteenveto { display: none; }
           ed.append(luo('span', 'juna-aika', '(' + (mm >= 60 ? Math.floor(mm / 60) + ' h ' + (mm % 60) + ' min' : mm + ' min') + ')'));
         }
         solu.append(b, ed);
+        if (r.aika) solu.append(aikaRivi(r.aika));
         sailio.append(solu);
+      } else if (r.aika) {
+        // Pieni aika välilehden alla (omistaja 14.10. 21.07): arvio tai TF:ään saapumisaika, olemassa oleva juna-aika-tyyli.
+        var s2 = luo('span', 'juna-solu');
+        s2.append(b, aikaRivi(r.aika));
+        sailio.append(s2);
       } else sailio.append(b);
       if (valittuJuna === nimi) {
         if (r.teksti) paneeli.append(jasennelty('teksti', r.teksti));
@@ -564,6 +580,15 @@ section:not(.kiinni) .yhteenveto { display: none; }
     var m = tila.mittarit, j = tila.junat, t = tila.tyolista, r = tila.roolit, h = tila.huom;
     var onTietoa = !!(m || j || t || r || h);
     $('tyhja').hidden = onTietoa;
+    var bJ = boostJaljella(), boostPaalla = bJ > 0;
+    var bn = $('boost');
+    bn.setAttribute('aria-pressed', boostPaalla ? 'true' : 'false');
+    bn.textContent = boostPaalla ? 'Boost päällä · ' + Math.ceil(bJ / 60000) + ' min' : 'Boost';
+    bn.title = boostPaalla ? 'Sammuta Boost nyt' : 'Mittarit ja kulutus näkyviin tunniksi';
+    if (tila.boost && tila.boost.paalla && !boostPaalla && dbRef && boostSammutettu !== tila.boost.alkoi) {
+      boostSammutettu = tila.boost.alkoi;
+      dbRef.doc('talo/boost').set({ paalla: false, alkoi: tila.boost.alkoi }).catch(function () { /* ei kirjoitusoikeutta */ });
+    }
 
     // Ikä = mittareiden ikä (omistaja 10.10. 17.2x: "nämä eivät päivity tarpeeksi usein"); Postivahti vie mittarit 5 min välein,
     // joten muiden dokumenttien tuore aikaleima ei saa peittää vanhoja lukuja. Ilman mittareita uusin muu aikaleima.
@@ -581,16 +606,17 @@ section:not(.kiinni) .yhteenveto { display: none; }
       p.textContent = onTietoa ? '' : 'Ei vielä tietoja';
     }
 
-    var laatat = (m && m.laatat) || [];
+    var laatat = boostPaalla ? ((m && m.laatat) || []) : [];
     var pa = $('palkit');
     pa.replaceChildren();
-    // Viikko koko leveydelle; 5 h ja Päätoimittajan konteksti (mittarit.pt_konteksti) rinnakkain. Rajat: käyttö 70/90 %, konteksti 55/65 % (oma nollaus).
+    // Viikko koko leveydelle; 5 h ja Keskustelukanavan konteksti (mittarit.kk_konteksti) rinnakkain. Rajat: käyttö 70/90 %, konteksti 40/50 % (liukuma, omistaja 14.10. 22.57).
     var palkkiLaatat = laatat.filter(function (l) { return l.palkki; }).map(function (l) {
       // 5 h -rivin muutosprosentti pois (omistaja 10.10. 22.5x); viikolle arvio jäljellä olevasta ja koko ajasta tällä tahdilla.
       return { nimi: l.nimi, prosentti: l.prosentti, muutos: /^5\s*t/i.test(String(l.nimi || '')) ? null : l.muutos, nollautuu: l.nollautuu,
         jaljella_h: l.jaljella_h, kokonais_h: l.kokonais_h, kulta: 70, punainen: 90 };
     });
-    if (m && typeof m.pt_konteksti === 'number') palkkiLaatat.push({ nimi: 'Päätoimittaja', prosentti: m.pt_konteksti, kulta: 55, punainen: 65, otsikko: 'Päätoimittajan konteksti' });
+    // Kolmas palkki = Keskustelukanavan konteksti (omistaja 14.10. 22.37: "päätoimittaja piti vaihtaa keskustelukanavaksi"); rajat 40/50 % (liukuma, omistaja 14.10. 22.57).
+    if (boostPaalla && m && typeof m.kk_konteksti === 'number') palkkiLaatat.push({ nimi: 'Keskustelukanava', prosentti: m.kk_konteksti, kulta: 40, punainen: 50, otsikko: 'Keskustelukanavan konteksti' });
     palkkiLaatat.forEach(function (l, i) {
       var pr = Math.max(0, Math.min(100, Number(l.prosentti) || 0));
       var koko = i === 0 || (i === palkkiLaatat.length - 1 && i % 2 === 1);
@@ -599,16 +625,25 @@ section:not(.kiinni) .yhteenveto { display: none; }
       var arvo = luo('span', 'arvo', Math.round(pr) + ' %');
       if (l.muutos) arvo.append(luo('span', 'muutos', ' (' + l.muutos + ')'));
       var viisiH = /^5\s*t/i.test(String(l.nimi || ''));
-      var nimi = luo('span', 'nimi' + (viisiH ? ' ei-versaali' : ''), viisiH ? '5h' : l.nimi);
+      var viikko = i === 0 && !viisiH && !l.otsikko;
+      var nimi = luo('span', 'nimi' + (viisiH || viikko ? ' ei-versaali' : ''), viisiH ? '5h' : viikko ? 'Viikon käyttö' : l.nimi);
       // Aika seuraavaan nollaukseen otsikon perässä (omistaja 10.10. 15.5x); laatan kenttä nollautuu = ISO-aika tai ms.
       var jaljella = l.nollautuu ? new Date(l.nollautuu).getTime() - Date.now() : NaN;
-      if (jaljella > 0) {
+      var kesto = function (ms) {
+        var mn = Math.ceil(ms / 60000), hh = Math.floor(mn / 60);
+        return hh >= 48 ? Math.floor(hh / 24) + ' vrk ' + (hh % 24) + ' h' : hh >= 1 ? hh + ' h ' + (mn % 60) + ' min' : mn + ' min';
+      };
+      if (jaljella > 0 && !viikko) {
         var min = Math.ceil(jaljella / 60000), tt = Math.floor(min / 60);
         nimi.append(luo('span', 'aika', ' (' + tt + ':' + String(min % 60).padStart(2, '0') + ')'));
       }
       // Viikon tahti (omistaja 10.10. 22.5x: "arvioitu jäljellä oleva käyttöaika sekä arvioitu kokonaisaika"): paivita.py laskee historiasta.
-      if (typeof l.jaljella_h === 'number' && typeof l.kokonais_h === 'number') {
-        var tunnit = function (h) { return h < 1 ? 'alle 1 h' : h < 48 ? '~' + Math.round(h) + ' h' : '~' + Math.round(h / 24) + ' vrk'; };
+      var tunnit = function (h) { return h < 1 ? 'alle tunnin' : h < 48 ? 'noin ' + Math.round(h) + ' tuntia' : 'noin ' + Math.round(h / 24) + ' vuorokautta'; };
+      var selko = [];
+      if (viikko) {
+        if (jaljella > 0) selko.push('Viikon kiintiö alkaa alusta ' + kesto(jaljella) + ' päästä.');
+        if (typeof l.jaljella_h === 'number') selko.push('Nykyisellä tahdilla kiintiö riittää vielä ' + tunnit(l.jaljella_h) + '.');
+      } else if (typeof l.jaljella_h === 'number' && typeof l.kokonais_h === 'number') {
         nimi.append(luo('span', 'aika', ' (jäljellä ' + tunnit(l.jaljella_h) + ', koko ' + tunnit(l.kokonais_h) + ')'));
       }
       paa.append(nimi, arvo);
@@ -622,6 +657,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
       tayte.style.width = pr + '%';
       ura.append(tayte);
       rivi.append(paa, ura);
+      if (selko.length) rivi.append(luo('div', 'kysymykset', selko.join(' ')));
       pa.append(rivi);
     });
 
@@ -799,7 +835,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
     var kMax = kr.reduce(function (m, x) { return Math.max(m, Number(x.viikko) || 0); }, 0);
     var jaannos = function (x) { return x.nimi === 'Muu työ' || x.nimi === 'Muut projektit'; };
     var kpMax = kp.reduce(function (m, x) { return jaannos(x) ? m : Math.max(m, Number(x.viikko) || 0); }, 0);
-    $('kulutus-osio').hidden = kr.length === 0;
+    $('kulutus-osio').hidden = kr.length === 0 || !boostPaalla;
     $('kulutus-projektit-otsikko').hidden = $('kulutus-roolit-otsikko').hidden = kp.length === 0;
     // Ilman projekteja Roolit-väliotsikkoa ei näytetä, joten roolit näkyvät aina.
     $('kulutus-projektit').hidden = kp.length === 0 || !kulutusAuki.projektit;
@@ -880,6 +916,13 @@ section:not(.kiinni) .yhteenveto { display: none; }
       });
     }).catch(function () { pyyntoKesken = 0; nappi.title = 'Päivitys epäonnistui, yritä hetken päästä'; piirra(); });
   });
+  $('boost').addEventListener('click', function () {
+    if (!dbRef) return;
+    var paalle = boostJaljella() === 0;
+    var uusi = paalle ? { paalla: true, alkoi: Date.now() } : { paalla: false, alkoi: (tila.boost && tila.boost.alkoi) || Date.now() };
+    tila.boost = uusi; piirra();
+    dbRef.doc('talo/boost').set(uusi).catch(function () { $('boost').title = 'Boostia ei voitu tallentaa'; });
+  });
   document.querySelectorAll('.taitto').forEach(function (b) {
     var s = $(b.dataset.osio), avain = 'kiinni-' + b.dataset.osio, k = false;
     try { k = localStorage.getItem(avain) === '1'; } catch (e) { k = false; }
@@ -905,6 +948,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
       $('paivitetty').textContent = 'Kirjaudu Claudeen nähdäksesi tilan';
       return;
     }
+    dbRef = db;
     db.collection('talo').onSnapshot(function (snap) {
       var uusi = {};
       snap.docs.forEach(function (d) { if (d.exists) uusi[d.id] = d.data(); });
