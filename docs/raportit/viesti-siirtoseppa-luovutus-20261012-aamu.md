@@ -263,7 +263,7 @@ LCD pelkkä nimi, Live piiloon + ilmiöt + kohokohtien data). Uudempi kärki **e
    kaannos-iss-hetki.nyt / simu-iss-hetki.nyt (vain Julkaisijan NYT-viestillä). Worktreet wt/proto-siirtoseppa-{iss-hetki,ilmiot,vapaalento}.
 
 
-## PÄIVITYS 15.10. 22.0x — PARIISI-PARI VALMIS, AURINGONNOUSU ODOTTAA PT:N PÄÄTÖSTÄ
+## PÄIVITYS 15.10. 21.4x — PARIISI-PARI VALMIS, AURINGONNOUSU ODOTTAA PT:N PÄÄTÖSTÄ
 
 - Pariisi-pari (nimikorostus) lokit/siirtoseppa-iss-paras-hetki/omistajalle/iss-paras-hetki-pariisi-v2.jpg → PT:llä.
 - Auringonnousu: ajossa 21.32 ei aurinkoa (1) hetki oli maan nousu 06.30 → korjattu aseman nousuun 03.28, laji "nousu"
