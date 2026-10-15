@@ -22,6 +22,13 @@ Skriptit: /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-natiivi-ui/2ba
    tap/veto-koordinaatit arvioitu iPhonen 393 pt:lle – korjaa, jos osuvat ohi). → PT iPhone-kuvat ennen kytkentää.
    Julkaisija tietää SHA-vaihdon 5b2dede11 → a67af930e.
 
+## PT 22.5x (LISÄYS, tee ENNEN kohdan 1 kuvia omistajalle)
+9 kortin valikko 151c6fd3 iPhonella: ikkuna ja vieritys OK, mutta korttien nimet katkeavat keskeltä sanaa ("Tulivuorenpur|kaus",
+"Auringonpim|ennyksen varjo", "Lentokoneide|n vanat", "auringonnous|u"). Korjaa olemassa olevalla tekstityylillä: tavutus tavurajalla
+väliviivalla tai sanarajalla kahdelle riville (esim. "Tulivuoren-purkaus", "Auringon-pimennyksen varjo"), tai lyhyempi nimi
+("Tulivuoret", "Pimennyksen varjo"). Nimet: ui.iss.kohdevalikko.kohokohta.* (ui.fi.json) – Ruutu() IssKohdevalikko.cs (mk-liuska__kuvanimi,
+WhiteSpace.Normal). Sitten uudet kuvat iPhone + iPad PT:lle.
+
 ## TEHTY (pushattu natiivi-backup; kaikki kytkinten takana)
 - nimet-196: c9774e32b + c4e7d9453 kaikki 9 kohokohtaa kuvallisia (LS1 ämpärissä); 7a1d4bf54 SS iss-ilmiot-196 mergetty (auringonnousun hetki,
   KupoliNimet.Valittu); 3a87ea5a0 IssKohokohdat.Nakyvat = kaikki (Valmis = efektin tila; Linssit-testit 1892/1892); 1f703d095 testikomento
