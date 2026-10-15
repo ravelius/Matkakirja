@@ -19,15 +19,17 @@ Ainoa muutos KK:n luonnokseen: sinetti "katosi kuin savu lähes tuhat vuotta sit
 | "Viimeksi Hollannissa yli kaksisataa vuotta sitten" | Pitää: viimeinen varma merkintä Alankomaista 1634 (Amsterdam), Henrietta Marian myyntiyritys Haagissa 1642; 1873 − 1642 = 231. Kaanon: kateissa 1640-luvulta. |
 | Näkökulma 1873, ei Aarnia eikä luetteloa | Täyttyy. |
 
-## Pulun saapumisrepliikkien sovitus
+## Pulun saapumisrepliikit (omistajan päätös 15.10. 17.12)
 
-Aloituskaupungin saapumisessa isoisän luenta jää pois, joten Pulun toinen rivi "Kuuntele sillä välin isoisän matkakirjaa, minä jatkan etsimistä!" ei enää päde.
+Aloituskaupungissa intron jälkeen EI isoisän puhetta: Pulu aloittaa suoraan Pöllön katoamisesta ja kertoo, miten peliä pelataan. Isoisän ensimmäinen matkakirjateksti tulee vasta seuraavassa kaupungissa. Pois jää vain "Kuuntele sillä välin isoisän matkakirjaa"; muut rivit ovat omistajan sanatarkkoja ja ennallaan (388 merkkiä, 5 riviä). Tunnus äänisivulla `pulu-saapuminen-ilman-luentaa`.
 
-> Katsele sillä välin ympärillesi, minä jatkan etsimistä! (55 merkkiä)
+1. Kääk! Apua! Pöllö on kadonnut!
+2. Pöllö sähkötti, että oli taittanut siipensä, ja pyysi, että tuuraisin häntä.
+3. Isoisäsi ei tiettävästi koskaan löytänyt sitä aarretta. Ehkä sinä olet etevämpi!
+4. No, jos tulee kysyttävää, napauta minua. Enköhän minäkin jotain osaa vastata – olenhan sentään kuuluisaa kirjekyyhkyjen sukua!
+5. Napauta kohteita kartalta ja vastaa oikein kysymykseen, niin löydät aarteen.
 
-Muut repliikit ennallaan: "Kääk! Apua! Pöllö on kadonnut!", "Pöllö sähkötti, että oli taittanut siipensä…", "No, jos tulee kysyttävää…", "Isoisäsi ei tiettävästi koskaan löytänyt sitä aarretta. Ehkä sinä olet etevämpi!" (omistajan 21.6x sanatarkka rivi) ja "Napauta kohteita kartalta ja vastaa oikein kysymykseen, niin löydät aarteen."
-
-Huomio: "sitä aarretta" viittaa nyt unen Kolmeen veljekseen; väli unesta Pulun repliikkiin on intron ja Pulun kahden rivin verran. Jos viittaus tuntuu irralliselta pelissä, vaihtoehto on "…koskaan löytänyt sitä aarretta, josta hän uneksi" — vain omistajan päätöksellä, koska rivi on sanatarkka.
+Huomio: rivin 3 "sitä aarretta" viittaa unen Kolmeen veljekseen; unesta on kulunut intro ja kaksi Pulun riviä. Jos viittaus tuntuu pelissä irralliselta, vaihtoehto on "…koskaan löytänyt sitä aarretta, josta hän uneksi" — vain omistajan päätöksellä (rivi on sanatarkka). Rivi 4 odottaa, että avoin nosto suljetaan (Raamattu).
 
 ## Tekniikka
 
