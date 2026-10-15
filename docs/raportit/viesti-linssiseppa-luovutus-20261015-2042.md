@@ -20,7 +20,10 @@ Jos lippu on jo olemassa, f alkaa heti. Kun kohokohdat päättyy → SIMU VAPAA 
 - kohokohdat (sk-kohokohdat-196.txt): K1/K2 revontulet Lappi (kohdevalikko hetki 1 + taivas lappi, laaja + `astro kyyti etsin tele`),
   K3/K4 Kiinan muuri (kohdevalikko kohde Peking + vrk 1, laaja + TELE). Kiinan muuria EI ole kohteissa eikä hetket.json:ssa. Jos komento
   epäonnistuu (katso ajo.log), korjaa skenaario ja aja uudelleen. Rajaa 3:2 → NUI:lle polku + tiedostonimet (NUI bd2285c04: kohokohdat.json
-  "kuva" = tiedostonimi/osoite → Kuvat.Hae; NUI + Siirtoseppä vievät dataan). PT:n järjestys: kohokohdat ennen Black Marblea.
+  "kuva" = tiedostonimi/osoite → Kuvat.Hae; NUI + Siirtoseppä vievät dataan).
+  NUI:N MUOTO (20.4x): JPG 3:2, 960×640, aihe keskellä (ruutu rajaa iPhonella ~1,4:1, iPadilla ~2:1). Ämpäriin (Julkaisija)
+  kuvat/iss/kohokohta-revontulet.jpg ja kuvat/iss/kohokohta-kiinan-muuri.jpg; kohokohdat.json "kuva" =
+  https://media.matkakirja.app/kuvat/iss/kohokohta-<tunnus>.jpg. Kerro NUI:lle, kun viety. PT:n järjestys: kohokohdat ennen Black Marblea.
 
 ## 2. VALMIIT TÄNÄÄN (haara linssiseppa/yotaivas-196, worktree /Users/Shared/Claude/wt/proto-linssiseppa-yotaivas)
 - 00415ef29 omistajan päätös 19.28: taivas mustana (KyydinLinnunrata musta taso), Linnunrata tähtijuovana (PCG3D-mikrotähdet), Pulu-väistö
