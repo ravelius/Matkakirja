@@ -11,4 +11,7 @@ Ensimmäisenä:
 2. Lukko-Monitor: `zsh /Users/Shared/Claude/julkaisija-tyokalut/lukkovahti.zsh | grep --line-buffered -v juna/b17`.
 3. Vahti-Monitor: `tail -n 0 -F /Users/Shared/Claude/julkaisija-tyokalut/valoseppa-vahti.log | grep --line-buffered -E "KÄÄNNÖS|KÄÄNNETTY|SIMU|VALMIS|VIKA"`.
    Vahti ja Valoseppä = sama iPad-simu A26BC7D0: simuvuoro vain toiselle kerrallaan.
+4. CRON (PT 15.10.): luo heti `CronCreate "3 4 * * *"` → aja yksinään `/Users/Shared/Claude/proto-3d/tyokalut/bundle-natiivi-nas.sh`
+   (NAS-git-bundle, ~1 min); "OK: bundlet valmiit" → lokirivi; VIKA/exit ≠ 0 → rivi PT:lle. launchd-ajo on pois käytöstä
+   (macOS esti NAS-kirjoituksen), Postivahti ei aja tätä. Cron vanhenee 7 vrk:ssa → luo uudelleen.
 Nollausraja 35 %; kuva-arkit Sonnet-apuagentille.

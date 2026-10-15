@@ -53,3 +53,10 @@ valmiit (192w viimeisin), LS1:n museo/Ranska/Andøya-ajot valmiit.
 ## 5. Viennit 15.10.
 
 vesi-indeksi-v24-vienti-20261015 (KS; index-v24 + praha5-8m): 3 viety, 0 virhettä (09.00).
+
+## 6. Pysyvät cronit (lisätty 15.10. 12.4x, uusi tili)
+
+- **NAS-bundle 04.03 joka yö** (PT 15.10.): `CronCreate "3 4 * * *"` → `/Users/Shared/Claude/proto-3d/tyokalut/bundle-natiivi-nas.sh`
+  yksinään; VIKA → rivi PT:lle. Skripti korjattu 15.10. (vanha `.ennen-korjaus-20261015`), ensimmäinen ajo 12.40
+  proto-3d-20261015.bundle 622 Mt OK. launchd `app.matkakirja.natiivi-bundle` bootout + disable (plist paikallaan, kopio
+  `tyokalut/app.matkakirja.natiivi-bundle.plist.talteen-20261015`). Luo cron uudelleen jokaisessa nollauksessa (vanhenee 7 vrk).
