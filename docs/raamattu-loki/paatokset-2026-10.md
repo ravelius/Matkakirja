@@ -152,3 +152,7 @@ Karttasepän kuvaparit (kortti, sanatarkasti): 1) aloituskartan vihjeet ja 5 Cod
 ## PAATOKSET 15.10.2026 klo 18.44: Pulun sähke aloituskaupungissa (15.10.2026 klo 18.44)
 
 Omistaja (kortti pulu-sahke, Kyllä): aloituskaupungissa isoisän unen jälkeen ei isoisän merkintää eikä luentaa; Pulun sarjaan uusi ui.livia.sahke "Ai, odotas – Pöllöltä tuli sähke!" heti tuuraus-1:n jälkeen, tuuraus-2 pois, muut ennallaan. Äänittäjä äänittää; Natiivi-UI kytkimen IsoisanUni.Kaytossa takana (5a57a7114).
+
+## PAATOKSET 15.10.2026 klo 18.44: ISS-kameran kuvauskokemus 1–3 (15.10.2026 klo 18.45)
+
+Omistaja (sanatarkasti, KK:n välittämä): "Tee 1-3". 1) Etsin: rajauksen ulkopuoli tummuu, skannerin vihreät kulmat = kuvan rajat, alareunassa objektiivi (24 mm / 400 mm) ja keskikohdan paikan nimi. 2) Lähennys: LAAJA = koko ikkuna, TELE = pehmeä lähennys keskikohtaan, nipistys väliltä, kohde pysyy rajauksessa. 3) Laukaisu: suljinääni + välähdys, valmis kuva hetken korttina (paikka, aika, korkeus, objektiivi NASAn astronauttikuvien tapaan) → albumiin. Ei NASA-vertailua eikä kuvaustehtäviä. Junaan 195 kytkimen taakse; kuvapari/video omistajalle ennen kytkentää. UI-POHJAT: skannerin kulmakehys ja olemassa olevat korttipohjat. Toteuttaa Pelikoodari.
