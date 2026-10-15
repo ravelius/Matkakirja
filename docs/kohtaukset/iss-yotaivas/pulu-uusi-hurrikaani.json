@@ -1,7 +1,7 @@
 [
  {
   "kysymys": "Miltä hurrikaanin silmä näyttää avaruudesta?",
-  "vastaus": "Ylhäältä silmä on suunnilleen pyöreä, melkein pilvetön aukko, jota kiertää tiheiden ukkospilvien rengas, silmänseinämä. Syyskuun 12. päivänä 2018 ESA:n astronautti Alexander Gerst kuvasi asemalta neljännen luokan hurrikaani Florencen silmää suoraan ylhäältä, noin 400 kilometrin korkeudesta. Silmä on tavallisesti noin 30–65 kilometriä leveä. Sen keskellä ilma painuu alas, mikä estää pilvien syntymisen, ja tuuli on heikkoa, kun taas silmänseinämässä puhaltavat myrskyn kovimmat tuulet. Tyven paikka siis syntyy myrskyn voimakkaimman osan keskelle.",
+  "vastaus": "Ylhäältä silmä on suunnilleen pyöreä, melkein pilvetön aukko, jota kiertää tiheiden ukkospilvien rengas, silmänseinämä. Syyskuun 12. päivänä 2018 ESA:n astronautti Alexander Gerst kuvasi asemalta voimakkaan hurrikaani Florencen silmää suoraan ylhäältä, noin 400 kilometrin korkeudesta. Toinen tunnettu kuva on Ed Lun 13. syyskuuta 2003 ottama kuva hurrikaani Isabelin silmästä; silloin myrsky oli neljännen luokan hurrikaani. Silmä on tavallisesti noin 30–65 kilometriä leveä. Sen keskellä ilma painuu alas, mikä estää pilvien syntymisen, ja tuuli on heikkoa, kun taas silmänseinämässä puhaltavat myrskyn kovimmat tuulet. Tyven paikka siis syntyy myrskyn voimakkaimman osan keskelle.",
   "lahteet": [
    {
     "url": "https://www.esa.int/ESA_Multimedia/Images/2018/09/Hurricane_Florence_eye",
@@ -26,6 +26,14 @@
    {
     "url": "https://www.nhc.noaa.gov/aboutgloss.shtml",
     "title": "Glossary of NHC terms - NOAA National Hurricane Center"
+   },
+   {
+    "url": "https://commons.wikimedia.org/wiki/File:Hurricane_Isabel_eye_from_ISS.jpg",
+    "title": "Hurricane Isabel eye from ISS (NASA, Ed Lu 13.9.2003) - Wikimedia Commons"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Hurricane_Isabel",
+    "title": "Hurricane Isabel - Wikipedia"
    }
   ],
   "tarkistus": [
@@ -76,6 +84,13 @@
     "lahde1": "",
     "lahde2": "",
     "huom": "SK: tuulen 24 km/h (yksi lähde) pois, haihduttaa pilviä -> estää pilvien syntymisen"
+   },
+   {
+    "vaite": "Ed Lu kuvasi Isabelin silmän asemalta 13.9.2003; myrsky silloin 4. luokan hurrikaani",
+    "lahde1": "Commons-kuvasivu (NASA-kuvaus: Ed Lu, 11.18 UTC 13.9.2003, heikentynyt Category 4:ksi huipun Category 5 jälkeen)",
+    "lahde2": "en.wikipedia.org/wiki/Hurricane_Isabel (13.9. alkuun heikentyi vahvaksi Category 4:ksi, myöhemmin samana päivänä Category 5 uudelleen)",
+    "huom": "PT 15.10.: Florence 12.9.2018 ei varmasti enää 4. luokka -> \"voimakkaan\"; kortin kuva on Isabel (LS1), lause lisätty. Isabelin silmän leveys (64 km) vain Wikipediassa, ei käytetty.",
+    "korjaus": ""
    }
   ]
  }
