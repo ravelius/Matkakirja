@@ -21,7 +21,8 @@ Työpuu: /Users/Shared/Claude/wt/proto-natiivi-ui-issikkuna (haara natiivi-ui/is
 - Aineisto Resources/IssSkanneri: faktat.json + data.json (SK, PT hyväksyi; data.json:ssa myös keskilampo 45 kohteelle), 143 kohteen
   korkeuskartat (KS). KS:n datat.json (karttaseppa/iss-skanneri-193) EI käytössä (sama tieto SK:n datassa).
 - Äänet OhjaamonAanet: ämpäri aanet/cupola/skanneri/v2/ (avaus = iss-skanneri-avaus-pitka.wav, sirina, rivi, sulku, kirjain).
-  OMISTAJA 10.33: "etsi toinen digi kirjoituskoneen ääni" → Äänittäjä vaihtaa iss-skanneri-kirjain.wav:n samalla nimellä (ei koodia).
+  OMISTAJA 10.33: "etsi toinen digi kirjoituskoneen ääni" → omistajan valinta iss-skanneri-kirjain-mekaaninen.wav: iss-193
+  **ad776c15d** (OhjaamonAanet lataa sen tehosteeksi iss-skanneri-kirjain) annettu NS:lle JUNAAN 193 (11.5x); varmista NS:ltä.
 - Videot: proto-3d/_valmiit/skanneri-video-20261015/skanneri-ateena-{iphone,ipad}-v2.mp4 (äänet lisätty jälkikäteen:
   scratchpadin mux/aanita2.py + vihrea.py; iPad käännetään transpose=2). Uusi video vain pyynnöstä.
 

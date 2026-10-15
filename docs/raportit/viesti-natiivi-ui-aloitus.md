@@ -4,7 +4,7 @@ Olet Natiivi-UI (Opus, high), checkout /Users/Shared/Claude/Matkakirja-natiivi-u
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat natiivi-ui/<aihe>, worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>,
 master = Natiiviseppä). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (työtapa, viestisäännöt) ja
 docs/raportit/viesti-natiivi-ui-luovutus-20261015-paiva.md (UUSIN 11.5x: ISS-skanneri valmis junaan 192 iss-193 4a68ce760 + PK
-414f68bd5, varmista NS:ltä; AVOIMET 1 LS1:n museon nimikylttilista), edellinen -20261014-ilta3.md (opit, worktreet), säännöt
+414f68bd5 ja mekaaninen kirjainääni ad776c15d junaan 193, varmista NS:ltä; AVOIMET 1 LS1:n museon nimikylttilista), edellinen -20261014-ilta3.md (opit, worktreet), säännöt
 -20261014-paiva.md (PT local_74630a27, viestit session id:llä osoitekirjasta, ääni aina mykistetty), tarvittaessa -20261012-ilta.md
 (taulukko, ajoskriptit) ja -20261010-aamu.md (pysyvät säännöt).
 
