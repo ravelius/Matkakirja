@@ -233,6 +233,9 @@ const MODULES = [
   'js/packs/fokusvirta-chisinau.js',
   'js/packs/fokusvirta-skopje.js',
   'js/packs/fokusvirta-belgrad.js',
+  'js/packs/fokusvirta-bern.js',
+  'js/packs/fokusvirta-bratislava.js',
+  'js/packs/fokusvirta-podgorica.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan

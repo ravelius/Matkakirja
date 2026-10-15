@@ -208,6 +208,7 @@ export const ALUEEN_MAAT = {
   MCO: 'valimeri',
   HRV: 'balkan',
   BIH: 'balkan',
+  MNE: 'balkan',
   BGR: 'balkan',
   ROU: 'balkan',
   TUR: 'balkan',

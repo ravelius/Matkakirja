@@ -25,7 +25,8 @@ test('media lookup exposes the new take without fallback or playback',()=>{
  */
 // Juna 193 (PT 15.10.2026): kahdeksan pääkaupunkia laudan pysäkeiksi; Horation saapumisotto oma ääni-eränsä.
 const ILMAN_SAAPUMISOTTOA = new Set(['bryssel', 'ljubljana', 'kosice', 'luxemburg', 'valletta',
-  'tirana', 'minsk', 'zagreb', 'vaduz', 'monaco', 'chisinau', 'skopje', 'belgrad']);
+  'tirana', 'minsk', 'zagreb', 'vaduz', 'monaco', 'chisinau', 'skopje', 'belgrad',
+  'bern', 'bratislava', 'podgorica']);
 
 test('saapumispuheet cover exactly the canonical 45 Europe cities plus named gaps',()=>{
   const odotettu=Object.keys(FOKUSVIRRAT).filter((id)=>!ILMAN_SAAPUMISOTTOA.has(id));

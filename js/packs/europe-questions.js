@@ -989,6 +989,164 @@ export const EUROPE_QUESTIONS = {
       source: 'https://en.wikipedia.org/wiki/Lotr%C5%A1%C4%8Dak_Tower',
     },
   ],
+  bern: [
+    {
+      q: 'Mikä seuraavista oli jo olemassa Bernissä isoisän matkavuonna 1873?',
+      options: [
+        'Bundes-Rathaus eli nykyinen Bundeshaus West',
+        'Kupolilla varustettu parlamenttirakennus',
+        'Tuomiokirkon valmis 100 metrin torni',
+        'BärenPark Aare-rinteessä',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Bundes-Rathaus rakennettiin 1852–1857 Jakob Friedrich Studerin '
+          + 'suunnitelmin. Itäsiipi valmistui 1892 ja kupolilla varustettu '
+          + 'parlamenttirakennus 1902, ja BärenPark avattiin 2009.',
+      hint: 'Vain yksi liittopalatsin nykyisistä osista oli valmis, ja se '
+          + 'valmistui jo 1850-luvulla.',
+      source: 'https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland',
+    },
+    {
+      q: 'Mitä työtä Albert Einstein teki Bernissä asuessaan Kramgasse 49:ssä 1903–1905?',
+      options: [
+        'Hän työskenteli patenttitoimistossa',
+        'Hän oli yliopiston professori',
+        'Hän oli kelloseppä',
+        'Hän opetti lukiossa',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Einstein asui talon toisessa kerroksessa vaimonsa Mileva '
+          + 'Marićin ja poikansa Hansin kanssa 1903–1905 ja työskenteli '
+          + 'liittovaltion henkisen omaisuuden toimistossa. Annus mirabilis '
+          + '-artikkelit kirjoitettiin samaan aikaan.',
+      hint: 'Päivätyössä hän arvioi muiden keksintöjä, ja omat ideansa '
+          + 'syntyivät illalla.',
+      source: 'https://en.wikipedia.org/wiki/Einstein_House',
+    },
+    {
+      q: 'Minkä kansainvälisen järjestön perustamissopimus allekirjoitettiin Bernissä 9.10.1874?',
+      options: [
+        'Yleinen postiliitto, nykyinen Maailmanpostiliitto',
+        'Punainen Risti',
+        'Kansainvälinen olympiakomitea',
+        'Kansainliitto',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Bernin sopimus teki postista yhtenäisen: Yleinen postiliitto '
+          + 'sai nykyisen nimensä Maailmanpostiliitto 1878. Sen päämaja on '
+          + 'perustamisesta asti ollut Bernissä.',
+      hint: 'Sopimus allekirjoitettiin vuosi isoisän matkan jälkeen, ja se '
+          + 'koski kirjeiden kulkua maasta toiseen.',
+      source: 'https://en.wikipedia.org/wiki/Universal_Postal_Union',
+    },
+  ],
+  podgorica: [
+    {
+      q: 'Minkä valtakunnan kaupunki Podgorica oli isoisän matkavuonna 1873?',
+      options: [
+        'Ottomaanien valtakunnan',
+        'Montenegron ruhtinaskunnan',
+        'Itävalta-Unkarin',
+        'Serbian ruhtinaskunnan',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Ottomaanit valtasivat Podgorican vuonna 1474, ja Berliinin '
+          + 'kongressi liitti sen Montenegroon vasta vuonna 1878. Kaupunki '
+          + 'kuului siis vielä ottomaaneille isoisän matkan aikaan.',
+      hint: 'Kaupunki vaihtoi hallitsijaa vasta viisi vuotta isoisän matkan '
+          + 'jälkeen.',
+      source: 'https://en.wikipedia.org/wiki/Podgorica',
+    },
+    {
+      q: 'Millä nimellä Podgoricaa kutsuttiin keskiajalla?',
+      options: [
+        'Ribnica',
+        'Skutari',
+        'Medun',
+        'Kotor',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Keskiajalla kaupunki tunnettiin nimellä Ribnica. Nimi '
+          + 'Podgorica mainitaan ensi kerran vuonna 1326 Kotorin arkiston '
+          + 'asiakirjassa.',
+      hint: 'Sama nimi on yhä vanhan kaupungin vieressä virtaavalla joella.',
+      source: 'https://en.wikipedia.org/wiki/Podgorica',
+    },
+    {
+      q: 'Minkä tuotteen Plinius vanhempi mainitsi kuuluisaksi Podgorican lähellä sijainneesta Docleasta?',
+      options: [
+        'juuston',
+        'viinin',
+        'oliiviöljyn',
+        'purppuravärin',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Plinius vanhempi mainitsee Doclean juuston kuuluisana '
+          + 'illyrialaisena tuotteena. Doclea oli noin kolme kilometriä '
+          + 'nykyisen Podgorican pohjoispuolella.',
+      hint: 'Tuote syntyi seudun laidunmailla ja kuljetettiin Rooman '
+          + 'valtakunnan eri provinsseihin.',
+      source: 'https://en.wikipedia.org/wiki/Doclea_(city)',
+    },
+  ],
+  bratislava: [
+    {
+      q: 'Millainen silta ylitti Tonavan Pozsonyssa isoisän matkavuonna 1873?',
+      options: [
+        'Laivojen varaan rakennettu ponttonisilta',
+        'Teräksinen kaarisilta',
+        'Kiviholvinen silta',
+        'Ei siltaa lainkaan, vain lautta',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Kaupungin ensimmäinen silta oli vuonna 1825 rakennettu '
+          + 'ponttonisilta, joka oli käytössä vuoden 1890 loppuun. '
+          + 'Teräksinen Franz Josephin silta eli Starý most avattiin 1891.',
+      hint: 'Pysyvä silta valmistui vasta lähes kaksi vuosikymmentä isoisän '
+          + 'matkan jälkeen.',
+      source: 'https://en.wikipedia.org/wiki/Star%C3%BD_most',
+    },
+    {
+      q: 'Kenen päähän Pyhän Tapanin kruunu asetettiin Pyhän Martinin kirkossa 8.9.1563?',
+      options: [
+        'Maximilian II:n',
+        'Ferdinand I:n',
+        'Franz Joseph I:n',
+        'Matias Corvinuksen',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Pyhän Martinin kirkosta tuli Unkarin kruunajaiskirkko 1563, '
+          + 'kun Székesfehérvár oli joutunut osmanien haltuun. Kruunajaisia '
+          + 'pidettiin siellä vuoteen 1830.',
+      hint: 'Hän oli keisari Ferdinand I:n poika.',
+      source: 'https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava',
+    },
+    {
+      q: 'Mikä uudistus kuului lakeihin, jotka kuningas Ferdinand V allekirjoitti Primasin palatsissa huhtikuussa 1848?',
+      options: [
+        'Maaorjuuden lakkauttaminen',
+        'Yleinen asevelvollisuus',
+        'Naisten äänioikeus',
+        'Rautateiden kansallistaminen',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Unkarin valtiopäivät hyväksyivät huhtikuun lait maaliskuussa '
+          + '1848 Pressburgissa, ja kuningas allekirjoitti ne Primasin '
+          + 'palatsissa 11.4.1848. Lakeihin kuului maaorjuuden '
+          + 'lakkauttaminen.',
+      hint: 'Uudistus muutti maata viljelevien talonpoikien asemaa.',
+      source: 'https://en.wikipedia.org/wiki/April_laws',
+    },
+  ],
   luxemburg: [
     {
       q: 'Missä valtiomuodossa Luxemburg on isoisän matkan aikaan vuonna 1873?',
@@ -3053,6 +3211,50 @@ export const EUROPE_FACTS = {
       voice: 'isoisa',
     },
   ],
+  bern: [
+    'Bernissä sipulit saavat oman juhlapäivänsä: Zibelemärit eli '
+      + 'sipulitori järjestetään marraskuun neljäntenä maanantaina. '
+      + 'Myyntiin tuodaan sipulipalmikoita ja sipulipiirakkaa, ja '
+      + 'iltapäivällä ilmassa lentää konfettia.',
+    'Liittopalatsin edessä oleva Bundesplatz oli vuosikymmeniä '
+      + 'pysäköintialue. Kansallisen kilpailun 1991 voitti ehdotus '
+      + 'Platz als Platz, ja uusi aukio vihittiin Sveitsin '
+      + 'kansallispäivänä 1.8.2004.',
+    {
+      text: 'Zytgloggen kellokoneisto on Kaspar Brunnerin tekemä vuodelta '
+          + '1530, joten se on käynyt jo yli kolmesataa vuotta. Bernissä '
+          + 'sen lyömä aika on kaikkien yhteinen aika.',
+      voice: 'isoisa',
+    },
+  ],
+  podgorica: [
+    'Roomalainen Doclea oli 8 000–10 000 asukkaan kaupunki, ja '
+      + 'voimakas maanjäristys tuhosi sen vuonna 518. Rauniot ovat yhä '
+      + 'nähtävissä Podgorican pohjoispuolella.',
+    'Kun Berliinin kongressi liitti Podgorican Montenegroon vuonna '
+      + '1878, kaupungissa oli arvioiden mukaan noin 1 500 taloa ja yli '
+      + '8 000 asukasta.',
+    {
+      text: 'Kävelin Ribnican rantaa Stara Varošin läpi: linnoitus, '
+          + 'kivitorni ja vanha silta mahtuvat yhdelle katseelle. Linnoitus '
+          + 'on 1400-luvun lopulta ja torni vuodelta 1667. Kirjoitin '
+          + 'molemmat muistikirjaani, ettei minun tarvitse arvailla.',
+      voice: 'isoisa',
+    },
+  ],
+  bratislava: [
+    'Bratislava on lähteiden mukaan ainoa pääkaupunki, joka '
+      + 'rajoittuu kahteen toiseen valtioon: Itävaltaan ja Unkariin.',
+    'Pressburgissa 1734 syntynyt Wolfgang von Kempelen tunnetaan '
+      + 'shakkia pelaavasta Turkki-automaatista, jonka sisällä '
+      + 'piileskeli ihminen, sekä puhekoneesta.',
+    {
+      text: 'Säveltäjä Johann Nepomuk Hummel syntyi täällä vuonna 1778. '
+          + 'Kaupunki ei ole suuri, mutta se on kasvattanut miehen, jonka '
+          + 'nimen musiikkimaailma tuntee.',
+      voice: 'isoisa',
+    },
+  ],
   luxemburg: [
     'Luxemburgin linnoituksen purkaminen kesti vuodesta 1867 vuoteen 1883 eli kuusitoista vuotta, ja työ tuhosi yli 24 kilometriä maanalaisia käytäviä ja maksoi 1,5 miljoonaa kultafrangia.',
     'Kaupungin Bock-kallio sai varustuksensa vuonna 963, kun kreivi Siegfried rakensi sille Lucilinburhuc-linnansa — tapahtumaa pidetään koko Luxemburgin kaupungin syntyhetkenä.',
@@ -3975,18 +4177,18 @@ export const PAAKAUPUNKIEN_KYSYMYKSET = {
       source: 'https://en.wikipedia.org/wiki/Casa_de_la_Vall',
     },
     {
-      q: 'Kuka valittiin Andorran uudistetun Consell Generalin ensimmäiseksi syndiciksi toukokuussa 1866? Vastaa sukunimellä.',
+      q: 'Kuka on Andorran suojeluspyhimys, jonka päivä 8. syyskuuta on maan kansallispäivä?',
       options: [
-        'Areny-Plandolit',
-        'Fiter i Rossell',
-        'Puig i Cadafalch',
-        'de Guinda',
+        'Meritxellin Neitsyt Maria',
+        'Pyhä Ermengol',
+        'Pyhä Stefanos',
+        'Pyhä Marinus',
       ],
       correct: 0,
       level: 2,
-      hint: 'Hän toimi syndicina eli neuvoston puheenjohtajana.',
-      fact: 'Uudistus korvasi aatelisvaltaisen oligarkian ja vahvistettiin molempien ruhtinaskumppaneiden hyväksynnällä.',
-      source: 'https://en.wikipedia.org/wiki/Andorra',
+      hint: 'Hänen nimensä tulee Canillon seudulla sijaitsevasta paikasta, ei kaupungin kirkosta.',
+      fact: 'Meritxellin Neitsyt Maria on Andorran suojeluspyhimys, ja hänen päivänsä 8. syyskuuta on kansallispäivä. Perimätiedon mukaan kyläläiset löysivät 1100-luvun lopulla Neitsyt Marian patsaan villiruusun juurelta.',
+      source: 'https://en.wikipedia.org/wiki/Our_Lady_of_Meritxell',
     },
     {
       q: 'Mikä laakso on Andorran ensimmäinen Unescon maailmanperintökohde?',
@@ -11679,7 +11881,6 @@ export const PAAKAUPUNKIEN_TIEDOT = {
     'Gorki-puiston maailmanpyörä on yli 50 metriä korkea, ja samassa puistossa on myös planetaario.',
   ],
   podgorica: [
-    'Podgoricassa sataa vuodessa noin 1 700 millimetriä, enemmän kuin missään muussa Euroopan pääkaupungissa.',
     'Millennium-sillan pylon kohoaa 57 metriä tien yläpuolelle, ja siltaa kannattelee 12 köyttä, kun 24 muuta kiinnittyy vastapainoihin.',
     'Sahat kula on yksi harvoista ottomaanien ajan rakennuksista, jotka selvisivät Podgorican pommituksista toisessa maailmansodassa.',
   ],

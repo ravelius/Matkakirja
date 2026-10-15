@@ -131,11 +131,20 @@ const EU_CITIES = [
    * (Ljubljanaan 60,0). Sama ratkaisu kuin Firenzellä (~65 km) ja
    * Tampereella; piste pysyy maan rajojen sisällä (vrt. Sarajevon kommentti).
    *
-   * Jäivät kevyiksi pisteiksi (PT 14.10.2026, sijoitusraportti
+   * BERN, BRATISLAVA JA PODGORICA (PT 15.10.2026, juna 193b) liittyivät
+   * samalla kaavalla, mutta tosipaikoillaan ne olisivat liian lähellä
+   * naapuria (Bern Alpit 30,5, Bratislava Wien 23,8, Podgorica Dubrovnik
+   * 38,2). Pisteet on siirretty lähimpään sallittuun kohtaan oman maan
+   * sisällä (sijoitusraportti
    * proto-3d/_tyo/karttaseppa/paakaupungit-pysakeiksi-193-sijoitus.md):
-   * Reykjavík on jo laudan 'islanti', San Marino ja Andorra la Vella eivät
-   * mahdu omaan maahansa, ja Bern, Bratislava ja Podgorica vaatisivat
-   * 75–81 km:n siirron.
+   * Bern 78 km etelään Valaisiin (46,278 N / 7,747 E; Alpit 60,0), Bratislava
+   * 81 km itään Nitran suuntaan (48,158 / 18,197; Wien 60,0) ja Podgorica
+   * 75 km koilliseen Beranen suuntaan (42,871 / 19,963; Skopje ja Dubrovnik
+   * 60,2). Ennakkotapaukset Tampere (~75 km) ja Sevilla (~70 km).
+   *
+   * Jäivät kevyiksi pisteiksi: Reykjavík on jo laudan 'islanti', ja San
+   * Marino ja Andorra la Vella eivät mahdu omaan maahansa (Firenze 40,3,
+   * Barcelona 37,6).
    */
   { id: 'minsk', name: 'Minsk', wiki: 'Minsk', ambience: 'kaupunki', x: 740, y: 476, la: 'start', lx: 16, ly: 5 },
   { id: 'chisinau', name: 'Chișinău', wiki: 'Chișinău', ambience: 'kaupunki', x: 765, y: 657, la: 'start', lx: 16, ly: 5 },
@@ -145,6 +154,9 @@ const EU_CITIES = [
   { id: 'skopje', name: 'Skopje', wiki: 'Skopje', ambience: 'kaupunki', x: 623, y: 789, la: 'start', lx: 16, ly: 5 },
   { id: 'tirana', name: 'Tirana', wiki: 'Tirana', ambience: 'kaupunki', x: 592, y: 807, la: 'end', lx: -16, ly: 5 },
   { id: 'zagreb', name: 'Zagreb', wiki: 'Zagreb', ambience: 'kaupunki', x: 524, y: 689, la: 'start', lx: 16, ly: 5 },
+  { id: 'bern', name: 'Bern', wiki: 'Bern', ambience: 'kaupunki', x: 360, y: 676, la: 'start', lx: 16, ly: 5 },
+  { id: 'bratislava', name: 'Bratislava', wiki: 'Bratislava', ambience: 'kaupunki', x: 561, y: 627, la: 'start', lx: 16, ly: 5 },
+  { id: 'podgorica', name: 'Podgorica', wiki: 'Podgorica', ambience: 'kaupunki', x: 594, y: 766, la: 'start', lx: 16, ly: 5 },
   { id: 'berliini', name: 'Berliini', wiki: 'Berliini', ambience: 'kaupunki', x: 468, y: 512, airport: true },
   { id: 'praha', name: 'Praha', wiki: 'Praha', ambience: 'kaupunki', x: 488, y: 576, la: 'end', lx: -16, ly: 5 },
   { id: 'wien', name: 'Wien', wiki: 'Wien', ambience: 'kaupunki', x: 526, y: 626, la: 'start', lx: 16, ly: -6 },
@@ -307,7 +319,10 @@ const EU_EDGES = [
   { a: 'pariisi', b: 'luxemburg', steps: 2 },
   { a: 'luxemburg', b: 'alpit', steps: 2 },
   { a: 'marseille', b: 'barcelona', steps: 3 },
-  { a: 'marseille', b: 'alpit', steps: 3 },
+  // Bern (juna 193b) katkaisi vanhan marseille–alpit-yhteyden (3) kahdeksi (2 + 2):
+  // reitti kulkee 35 yksikön päästä Bernin pisteestä.
+  { a: 'marseille', b: 'bern', steps: 2 },
+  { a: 'bern', b: 'alpit', steps: 2 },
   { a: 'madrid', b: 'lissabon', steps: 3 },
   { a: 'madrid', b: 'barcelona', steps: 3 },
   { a: 'madrid', b: 'granada', steps: 3 },
@@ -338,7 +353,11 @@ const EU_EDGES = [
    */
   { a: 'krakova', b: 'kosice', steps: 2 },
   { a: 'kosice', b: 'budapest', steps: 2 },
-  { a: 'wien', b: 'budapest', steps: 2 },
+  // Bratislava (juna 193b) katkaisi wien–budapest-yhteyden (2) kahdeksi (2 + 2): reitti
+  // kulkee 23 yksikön päästä Bratislavan pisteestä. Košice saa Slovakian sisäisen yhteyden.
+  { a: 'wien', b: 'bratislava', steps: 2 },
+  { a: 'bratislava', b: 'budapest', steps: 2 },
+  { a: 'bratislava', b: 'kosice', steps: 2 },
   /*
    * Ljubljana katkaisi vanhan wien–venetsia-yhteyden (4 askelta)
    * kahdeksi (2 + 2), samalla tavalla kuin Bryssel ja Firenze
@@ -388,9 +407,13 @@ const EU_EDGES = [
   { a: 'marseille', b: 'monaco', steps: 2 },
   { a: 'monaco', b: 'firenze', steps: 2 },
   { a: 'sofia', b: 'skopje', steps: 2 },
-  { a: 'belgrad', b: 'skopje', steps: 2 },
+  // Podgorica (juna 193b) katkaisi belgrad–skopje- (37 yksikköä) ja tirana–dubrovnik-
+  // yhteydet (47) kahdeksi; Belgradista Skopjeen pääsee yhä Sofian kautta samoin 4 askelin.
+  { a: 'belgrad', b: 'podgorica', steps: 2 },
+  { a: 'podgorica', b: 'skopje', steps: 2 },
   { a: 'skopje', b: 'tirana', steps: 2 },
-  { a: 'tirana', b: 'dubrovnik', steps: 2 },
+  { a: 'tirana', b: 'podgorica', steps: 2 },
+  { a: 'podgorica', b: 'dubrovnik', steps: 2 },
   { a: 'ljubljana', b: 'zagreb', steps: 2 },
   { a: 'zagreb', b: 'budapest', steps: 2 },
   { a: 'zagreb', b: 'belgrad', steps: 2 },
@@ -530,11 +553,11 @@ export const EUROPE = {
           + 'asti, ja kirkkaimpiin paloihin on jäänyt hyönteisiä kiinni.',
       },
     }),
-    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (58). Uusi
+    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (61). Uusi
     // kaupunki lisätään paikallisaarteisiin samassa suhteessa kuin
     // muutkin (noin kolmasosa isoja) — pääaarre ja mantereen aarre ovat
     // aina yksi kumpikin, eikä ryöstäjien määrä muutu kaupunkien mukana.
-    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 42 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 45 },
   },
 
   questions: EUROPE_QUESTIONS,
