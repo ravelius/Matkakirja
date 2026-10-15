@@ -189,3 +189,7 @@ linjan (ISS nyt ensimmäisenä).
 - 20.42 paras-hetki-kuittaus: "Kyllä, junaan 196" (Pariisin kuvapari); Lappi näytetään, kun revontulet ovat valmiit.
 PT:n linjaus: nämä 5 Pulun ISS-vastausta soittavat äänityksen ja saman tekstin (omistajan 20.23/20.27 päätökset ovat uudempia kuin 5.10. 'ei valmiita vastauksia'); muut kysymykset menevät elävälle
 Pululle taustatietona.
+
+## PAATOKSET 15.10.2026 klo 21.03 (kortti, KK välitti): ISS-kohdevalikon ulkoasu (15.10.2026 klo 21.07)
+
+Omistaja: kohdevalikkoon rauhallisempi tausta ja isommat kuvat (nimi kuvan alareunaan), pois 'yöllä'-sanat otsikoista; järjestys ennallaan. Viat korjattavaksi: iPhonen oikea reuna ja logon pala. Toteuttaja Natiivi-UI (PT välitti).
