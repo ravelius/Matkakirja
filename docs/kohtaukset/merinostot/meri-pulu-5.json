@@ -42,11 +42,14 @@
     "lahde2": "WebSearch-tiivistelmä (hakutulos)",
     "huom": "Toinen lähde vain hakutuloksen tiivistelmä."
    }
+  ],
+  "kohteet": [
+   "ita/messinansalmi"
   ]
  },
  {
   "kysymys": "Miksi salmen yli ei vieläkään kulje siltaa?",
-  "vastaus": "Koska hanke on yhä jumissa lupa- ja rahoituskiistoissa. Hallitus hyväksyi sillan elokuussa 2025, mutta Italian tilintarkastustuomioistuin kieltäytyi lokakuussa vahvistamasta päätöstä. Urakan työkustannukset ovat nousseet noin 3,8 miljardista 10,5 miljardiin euroon, ja EU:n hankintasääntöjen mukaan yli 50 prosentin nousu vaatisi uuden kilpailutuksen. Siltaa on suunniteltu, hylätty ja herätetty henkiin jo vuosikymmeniä.",
+  "vastaus": "Koska hanke on yhä jumissa lupa- ja rahoituskiistoissa. Hallitus hyväksyi sillan elokuussa 2025, mutta Italian tilintarkastustuomioistuin kieltäytyi lokakuussa vahvistamasta päätöstä. Hankkeen kustannukset ovat kolminkertaistuneet, ja EU:n hankintasääntöjen mukaan yli 50 prosentin nousu vaatisi uuden kilpailutuksen. Siltaa on suunniteltu, hylätty ja herätetty henkiin jo vuosikymmeniä. Silta yhdistäisi Italian saappaan kärjen Sisiliaan.",
   "sanoja": 50,
   "lahteet": [
    {
@@ -93,6 +96,9 @@
     "lahde2": "",
     "huom": "Aikajana vain Wikipediasta; muotoilu yleinen."
    }
+  ],
+  "kohteet": [
+   "ita/messinansalmi"
   ]
  },
  {
@@ -150,6 +156,9 @@
     "lahde2": "",
     "huom": "Vain yksi lähde; ei kriittinen luku, mutta kirjataan."
    }
+  ],
+  "kohteet": [
+   "ita/amalfin-rannikko"
   ]
  },
  {
@@ -195,6 +204,9 @@
     "lahde2": "Britannica (hakutulos)",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "ita/amalfin-rannikko"
   ]
  },
  {
@@ -240,6 +252,9 @@
     "lahde2": "Wikipedia: Tropea (asukasluku/kuvaus)",
     "huom": "Rajattu kuvailevaan sanamuotoon."
    }
+  ],
+  "kohteet": [
+   "ita/tropea"
   ]
  },
  {
@@ -281,6 +296,9 @@
     "lahde2": "Avygeo",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "ita/tropea"
   ]
  },
  {
@@ -326,6 +344,9 @@
     "lahde2": "nostokortin nykyinen teksti (ei itsenäinen)",
     "huom": "Toinen itsenäinen lähde puuttuu; luku noin-muodossa."
    }
+  ],
+  "kohteet": [
+   "mne/kotorinlahti"
   ]
  },
  {
@@ -381,6 +402,9 @@
     "lahde2": "UNESCO-hakutulos (3. istunto, 1979)",
     "huom": "UNESCOn sivu antoi 403 suoraan; tieto hakutuloksen tiivistelmästä."
    }
+  ],
+  "kohteet": [
+   "mne/kotorinlahti"
   ]
  },
  {
@@ -430,6 +454,9 @@
     "lahde2": "Wikipedia: yli 1 000 Punaisenmeren lajia löydetty (n. 2010)",
     "huom": "Lähteiden luvut eroavat, joten vastauksessa vain \"satoja\"."
    }
+  ],
+  "kohteet": [
+   "cyp/levantinmeri"
   ]
  },
  {
@@ -469,6 +496,9 @@
     "lahde2": "Wikipedia (kultaviirakampela osuus Israelin saaliista)",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "cyp/levantinmeri"
   ]
  },
  {
@@ -508,6 +538,9 @@
     "lahde2": "Wikipedia: Cape Greco",
     "huom": "Ei sanatarkkaa lainausta."
    }
+  ],
+  "kohteet": [
+   "cyp/kapgreco"
   ]
  },
  {
@@ -553,12 +586,15 @@
     "lahde2": "Hakutulos: Koillis-Adrianmeren tutkimus (myöhäisholoseeninen nousu)",
     "huom": "Yleinen selitys; Kap Grecon luolien tarkkaa syntyhistoriaa ei tarkistettu, joten vastaus ei väitä siitä muuta."
    }
+  ],
+  "kohteet": [
+   "cyp/kapgreco"
   ]
  },
  {
   "kysymys": "Mikä oli Messinan suolakriisi?",
-  "vastaus": "Messinan suolakriisi oli ajanjakso noin 5,96-5,33 miljoonaa vuotta sitten, jolloin Välimeri eristyi Atlantista ja sen vesi haihtui suurelta osin. Merenpinta laski huippuvaiheessa arviolta satoja metrejä, ja pohjalle kertyi paksuja suolakerroksia. Kriisi päättyi, kun Gibraltarin kohta aukesi uudelleen. Se osoittaa, miten sulkeutunut merialtaan voi muuttua nopeasti.",
-  "sanoja": 45,
+  "vastaus": "Messinan suolakriisi oli ajanjakso noin 5,96-5,33 miljoonaa vuotta sitten, jolloin Välimeri eristyi Atlantista ja sen vesi haihtui suurelta osin. Merenpinta laski huippuvaiheessa arviolta satoja metrejä, syvimmillä altailla yli kilometrin, ja pohjalle kertyi paksuja suolakerroksia. Kriisi päättyi, kun Gibraltarin kohta aukesi uudelleen. Se osoittaa, miten sulkeutunut merialtaan voi muuttua nopeasti.",
+  "sanoja": 49,
   "lahteet": [
    {
     "url": "https://en.wikipedia.org/wiki/Messinian_salinity_crisis",
@@ -594,6 +630,9 @@
     "lahde2": "CIESM",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "dza/valimeri"
   ]
  },
  {
@@ -639,6 +678,9 @@
     "lahde2": "",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "dza/valimeri"
   ]
  }
 ]

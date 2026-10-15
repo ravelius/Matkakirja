@@ -44,12 +44,18 @@
     "lahde2": "Ocean Science 2025 -tutkimus (hakutulos): Gibraltarin kahden kerroksen virtaus",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "esp/valimeri",
+   "fra/valimeri",
+   "syr/valimeri",
+   "tur/valimeri"
   ]
  },
  {
   "kysymys": "Mitä Espanjan Välimeren rannikolla kalastetaan?",
-  "vastaus": "Yleisiä saaliita ovat pienet parvikalat, anjovis ja sardiini, joita pyydetään Välimerellä eniten. Pohjatroolarit hakevat syvältä kummeliturskaa ja punakatkarapua, ja Dénian punakatkarapu on kuuluisa herkku. Vuonna 2025 Espanja nosti punakatkaravun saaliskiintiön 45,9 tonniin, ja se koskee 286 troolaria. Pyyntiä ohjataan siis kiintiöillä ja pyyntikielloilla, jotta kalakannat säilyvät.",
-  "sanoja": 46,
+  "vastaus": "Yleisiä saaliita ovat pienet parvikalat, anjovis ja sardiini, joita pyydetään Välimerellä eniten. Pohjatroolarit hakevat syvältä kummeliturskaa ja punakatkarapua, ja Dénian punakatkarapu on kuuluisa herkku. Välimeren alueella punakatkaravun pyyntiä rajoitetaan saaliskiintiöillä. Pyyntiä ohjataan siis kiintiöillä ja pyyntikielloilla, jotta kalakannat säilyvät. Kalat ja äyriäiset kuuluvat rannikon ruokakulttuuriin.",
+  "sanoja": 45,
   "lahteet": [
    {
     "url": "https://www.fao.org/gfcm/publications/somfi/state-of-the-mediterranean-and-black-sea-fisheries-2025/highlights/en/",
@@ -97,6 +103,9 @@
     "lahde2": "Sama uutinen toisessa osoitteessa (hakutulos)",
     "huom": "Kaksi riippumatonta lähdettä ei löytynyt; tietoa pidettävä yhden uutislähteen varassa. Ei viranomaisen omaa sivua."
    }
+  ],
+  "kohteet": [
+   "esp/valimeri"
   ]
  },
  {
@@ -150,6 +159,9 @@
     "lahde2": "Greek Reporter (hakutulos)",
     "huom": "Vastauksessa ei lukuja."
    }
+  ],
+  "kohteet": [
+   "fra/valimeri"
   ]
  },
  {
@@ -195,6 +207,9 @@
     "lahde2": "Marine Insight: ahtaat satamat saavuttamattomia Atlantin ruoskimina",
     "huom": "Merkittävin tukihuomio on purjehduslehdistä; HEIKOMMIN TUETTU osuus. Tuulta vastaan -kohta jätettävissä pois, jos halutaan vain yhden lähteen väitteet."
    }
+  ],
+  "kohteet": [
+   "fra/biskajanlahti"
   ]
  },
  {
@@ -234,6 +249,9 @@
     "lahde2": "ORCA (hakutulos): kanjonit 'mixing bowl'",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "fra/biskajanlahti"
   ]
  },
  {
@@ -285,6 +303,9 @@
     "lahde2": "Yleistieto",
     "huom": "Ei erikseen tarkistettu lähteestä; Portugalilla ei ole Välimeren rantaa."
    }
+  ],
+  "kohteet": [
+   "prt/atlantti"
   ]
  },
  {
@@ -324,6 +345,9 @@
     "lahde2": "-",
     "huom": "Loppulause on tulkinta, ei lähteen väite; voi poistaa."
    }
+  ],
+  "kohteet": [
+   "prt/atlantti"
   ]
  },
  {
@@ -363,6 +387,9 @@
     "lahde2": "John Bills: Osmanit liittivät Bosnian maakuntaan",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "bih/adrianmeri"
   ]
  },
  {
@@ -412,6 +439,10 @@
     "lahde2": "Wikipedia (Otranto) (hakutulos)",
     "huom": "Tiivistelmätason tuki; HEIKOSTI TUETTU, voi poistaa."
    }
+  ],
+  "kohteet": [
+   "bih/adrianmeri",
+   "ita/adrianmeri"
   ]
  },
  {
@@ -457,12 +488,15 @@
     "lahde2": "World History Encyclopedia -sivu mainitsee merivallan 900-luvulla",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "ita/adrianmeri"
   ]
  },
  {
   "kysymys": "Keitä tyrrhenialaiset olivat?",
-  "vastaus": "Tyrrhenialaiset oli kreikkalaisten antama nimi etruskeille, Italian keskiosan muinaiselle kansalle, joka kukoisti noin 700-luvulta 200-luvulle eaa. Roomalaiset muodostivat nimestä merelle nimen Mare Tyrrhenum, ja meri kantaa sitä yhä. Rooma valtasi etruskien kaupungit vähitellen, ja viimeistään vuoteen 27 eaa. mennessä koko heidän alueensa oli Rooman vallan alla. Nimi on siis kadonneen kansan muisto.",
-  "sanoja": 52,
+  "vastaus": "Tyrrhenialaiset oli kreikkalaisten antama nimi etruskeille, Italian keskiosan muinaiselle kansalle, joka kukoisti noin 700-luvulta 300-luvulle eaa. Roomalaiset muodostivat nimestä merelle nimen Mare Tyrrhenum, ja meri kantaa sitä yhä. Rooma valtasi etruskien kaupungit vähitellen, ja heidän alueensa joutui lopulta kokonaan Rooman vallan alle. Nimi on siis kadonneen kansan muisto.",
+  "sanoja": 48,
   "lahteet": [
    {
     "url": "https://en.wikipedia.org/wiki/Etruscan_civilization",
@@ -504,6 +538,9 @@
     "lahde2": "World History Encyclopedia: Rooma valloitti kaupungit vuosikymmenten kuluessa 300-200-luvuilla eaa.",
     "huom": "Vuosi 27 eaa. vain Wikipediassa; muut lähteet vahvistavat vähittäisen valloituksen. Etruskien oma nimi merelle jätetty pois (vain yksi lähde)."
    }
+  ],
+  "kohteet": [
+   "ita/tyrrhenanmeri"
   ]
  },
  {
@@ -557,6 +594,9 @@
     "lahde2": "Wikipedia (Aeolian Islands) (hakutulos): seitsemän saarta",
     "huom": "Saarten lukumäärä (7/8) jätetty pois."
    }
+  ],
+  "kohteet": [
+   "ita/tyrrhenanmeri"
   ]
  },
  {
@@ -598,6 +638,9 @@
     "lahde2": "EBSCO",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "ita/ligurianmeri"
   ]
  },
  {
@@ -647,6 +690,9 @@
     "lahde2": "Wikipedia: pidetään sillivalaiden pääasiallisena ruokailualueena Välimerellä",
     "huom": "Wikipedian sillivalasväite on 'believed'; vastauksessa yleinen muotoilu. Sanamäärälukuja (1 000 valasta, 40 000 delfiiniä) ei käytetty, vain yksi lähde."
    }
+  ],
+  "kohteet": [
+   "ita/ligurianmeri"
   ]
  }
 ]

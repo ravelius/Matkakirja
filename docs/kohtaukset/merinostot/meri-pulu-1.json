@@ -56,11 +56,14 @@
     "lahde2": "-",
     "huom": "Kysymyksessä oleva nimi 'Vattimeri' vastaa Wadden Seaa (hollanniksi Waddenzee)."
    }
+  ],
+  "kohteet": [
+   "dnk/pohjanmeri"
   ]
  },
  {
   "kysymys": "Miksi Jyllannin länsirannikko on niin suora?",
-  "vastaus": "Meri on tehnyt sen suoraksi. Länsiranta on hiekkaista ja avoinna Pohjanmeren länsituulille ja aalloille. Jäätikön jättämä irtonainen maa ei vastustanut aaltoja, ja ne kuluttivat kukkuloita ja rakensivat särkkiä lahtien eteen. Skagenista Skallingeniin kulkee lähes yhtenäinen dyynivyö, noin 300 kilometriä. Rannikon muoto ei siis johdu maaston alkuperäisestä muodosta vaan aaltojen työstä.",
+  "vastaus": "Meri on tehnyt sen suoraksi. Länsiranta on hiekkaista ja avoinna Pohjanmeren länsituulille ja aalloille. Jäätikön jättämä irtonainen maa ei vastustanut aaltoja, ja ne kuluttivat kukkuloita ja rakensivat särkkiä lahtien eteen. Skagenista Skallingeniin kulkee lähes yhtenäinen dyynivyö, satoja kilometrejä pitkä. Rannikon muoto ei siis johdu maaston alkuperäisestä muodosta vaan aaltojen työstä.",
   "sanoja": 50,
   "lahteet": [
    {
@@ -99,6 +102,9 @@
     "lahde2": "-",
     "huom": "Jätetty pois vastauksesta, koska vain yksi lähde."
    }
+  ],
+  "kohteet": [
+   "dnk/pohjanmeri"
   ]
  },
  {
@@ -152,6 +158,14 @@
     "lahde2": "Itameri.fi: suolaisuus vähenee Pohjanlahden ja Suomenlahden pohjukoissa",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "dnk/itameri",
+   "est/itameri",
+   "ltu/itameri",
+   "lva/itameri",
+   "pol/itameri",
+   "swe/itameri"
   ]
  },
  {
@@ -205,6 +219,9 @@
     "lahde2": "hakutulos: major Baltic inflows",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "dnk/itameri"
   ]
  },
  {
@@ -254,6 +271,9 @@
     "lahde2": "en.wikipedia Hiiumaa: noin 8 500 vuotta sitten",
     "huom": "Vuosilukuja ei käytetä vastauksessa, koska saaret nousivat eri aikoina."
    }
+  ],
+  "kohteet": [
+   "est/itameri"
   ]
  },
  {
@@ -313,6 +333,9 @@
     "lahde2": "UNESCO / WorldAtlas (hakutulos): kauppiaiden puutalot uudelleen kivestä, uusi kaupungintalo",
     "huom": "Kivestä rakentaminen 1400-luvulla vain hakutuloksessa (WorldAtlas); vastauksessa ei mainita vuosisataa."
    }
+  ],
+  "kohteet": [
+   "est/suomenlahti"
   ]
  },
  {
@@ -364,6 +387,9 @@
     "lahde2": "Nostokortin teksti ja en.wikipedia",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "est/suomenlahti"
   ]
  },
  {
@@ -413,6 +439,9 @@
     "lahde2": "-",
     "huom": "Vain yksi lähde; muotoiltu varovasti ('tiedetään huonosti')."
    }
+  ],
+  "kohteet": [
+   "est/peipsi"
   ]
  },
  {
@@ -456,6 +485,9 @@
     "lahde2": "fi.wikipedia Peipsijärvi: valtionraja kulkee osittain Narvajoen syvänneuraa pitkin",
     "huom": "Raja kulkee järven keskellä ja Narvajoella."
    }
+  ],
+  "kohteet": [
+   "est/peipsi"
   ]
  },
  {
@@ -505,12 +537,16 @@
     "lahde2": "fi.wikipedia Maankohoaminen: Oulu-Kemi noin 9 mm/v",
     "huom": ""
    }
+  ],
+  "kohteet": [
+   "fin/pohjanlahti",
+   "swe/pohjanlahti"
   ]
  },
  {
   "kysymys": "Miksi Pohjanlahden rannat nousevat yhä?",
-  "vastaus": "Koska jääkauden mannerjää painoi maankuoren alas, eikä se ole vielä palautunut. Jää oli täällä noin kolme kilometriä paksu. Pohjanlahdella maa kohoaa yhä noin 8–9 millimetriä vuodessa, eli lähes metrin sadassa vuodessa. Merenkurkun alue kasvaa noin neliökilometrin vuodessa. Maankuori joustaa siis vielä tuhansia vuosia jään poistumisen jälkeen.",
-  "sanoja": 46,
+  "vastaus": "Koska jääkauden mannerjää painoi maankuoren alas, eikä se ole vielä palautunut. Jää oli täällä noin kolme kilometriä paksu. Pohjanlahdella maa kohoaa yhä noin 8–9 millimetriä vuodessa, eli lähes metrin sadassa vuodessa. Merenkurkun saaristo kasvaa vuosi vuodelta uutta maata. Maankuori joustaa siis vielä tuhansia vuosia jään poistumisen jälkeen.",
+  "sanoja": 47,
   "lahteet": [
    {
     "url": "https://science.nasa.gov/earth/earth-observatory/uplift-underway-in-finlands-kvarken-archipelago-153740/",
@@ -548,12 +584,15 @@
     "lahde2": "Metsähallitus (hakutulos) 8 mm/v; NASA (hakutulos) 9 mm/v",
     "huom": "Eri lähteet 8-10 mm/v, siksi 'noin 8-9 mm'. 'Lähes metri sadassa vuodessa' on laskettu (9 mm x 100 = 90 cm). Nostokortin '80 cm vuosisadassa' vastaa 8 mm:ää."
    }
+  ],
+  "kohteet": [
+   "fin/pohjanlahti"
   ]
  },
  {
   "kysymys": "Mikä joki laskee Suomenlahden pohjukkaan?",
-  "vastaus": "Neva. Se on vain 74 kilometriä pitkä, mutta virtaamaltaan Euroopan neljänneksi suurin joki. Neva lähtee Laatokasta, virtaa Pietarin läpi ja laskee Nevanlahteen Suomenlahden itäpäähän. Keskivirtaama on noin 2 500 kuutiometriä sekunnissa. Se tuo lahteen niin paljon makeaa vettä, että Suomenlahden itäosan vesi on lähes makeaa.",
-  "sanoja": 45,
+  "vastaus": "Neva. Se on vain 74 kilometriä pitkä, mutta virtaamaltaan yksi Euroopan suurimmista joista. Neva lähtee Laatokasta, virtaa Pietarin läpi ja laskee Nevanlahteen Suomenlahden itäpäähän. Keskivirtaama on noin 2 500 kuutiometriä sekunnissa. Se tuo lahteen niin paljon makeaa vettä, että Nevanlahden vesi on lähes makeaa. Pietari on rakennettu Nevan suistoon.",
+  "sanoja": 49,
   "lahteet": [
    {
     "url": "https://en.wikipedia.org/wiki/Neva",
@@ -591,12 +630,15 @@
     "lahde2": "fi.wikipedia Suomenlahti: vesi on makeampaa idässä Nevan, Kymijoen, Narvan ja Lugan tuodessa vettä",
     "huom": "en.wikipedia lukuja ei käytetä; 'lähes makeaa' on tulkinta Nevanlahden ja itäosan suolaisuudesta."
    }
+  ],
+  "kohteet": [
+   "fin/suomenlahti"
   ]
  },
  {
   "kysymys": "Miksi lahden ympäristöongelmat ovat pahimpia juuri täällä?",
-  "vastaus": "Koska Suomenlahti on matala, ja sen vesi vaihtuu hitaasti, mutta rannoilta ja Nevasta tulee paljon ravinteita. Keskisyvyys on vain noin 38 metriä. Ravinteet rehevöittävät vettä, ja pohjaan aiemmin kertyneet ravinteet pitävät rehevöitymistä yllä vielä nytkin. Siksi kesäisin lahdessa on runsaasti sinilevää. Suomenlahti on Itämeren rehevöitynein osa.",
-  "sanoja": 46,
+  "vastaus": "Koska Suomenlahti on matala, ja sen vesi vaihtuu hitaasti, mutta rannoilta ja Nevasta tulee paljon ravinteita. Keskisyvyys on vain noin 38 metriä. Ravinteet rehevöittävät vettä, ja pohjaan aiemmin kertyneet ravinteet pitävät rehevöitymistä yllä vielä nytkin. Siksi kesäisin lahdessa on runsaasti sinilevää. Suomenlahti on yksi Itämeren rehevöityneimmistä osista.",
+  "sanoja": 47,
   "lahteet": [
    {
     "url": "https://fi.wikipedia.org/wiki/Suomenlahti",
@@ -644,6 +686,9 @@
     "lahde2": "Hakutulos: Pietari ja Neva suurimpia ulkoisia lähteitä (puolet fosforista), Tieteessä tapahtuu: Itämeren viipymä jopa 25 vuotta",
     "huom": "Fosforiosuutta (puolet) ei käytetä vastauksessa: yksi hakutulos ilman suoraa vahvistusta. 'Vesi vaihtuu hitaasti' on Itämeren yleisestä viipymästä, ei Suomenlahden erillisestä luvusta."
    }
+  ],
+  "kohteet": [
+   "fin/suomenlahti"
   ]
  },
  {
@@ -693,6 +738,9 @@
     "lahde2": "Metsähallitus (hakutulos): esiintyy vain Saimaan järvialtaassa",
     "huom": "Vuonna 2025 on esitetty luokittelua omaksi lajikseen (Pusa saimensis), vain Wikipedia; ei käytetty."
    }
+  ],
+  "kohteet": [
+   "fin/saimaa"
   ]
  }
 ]
