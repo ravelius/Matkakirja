@@ -1,0 +1,63 @@
+{
+  "modelRound": 47,
+  "actualNativeModelSHA256": "59868fc2dfb5dda2b79c0a2be4ca55e422e0af2b26f0e754394e73708d29eae9",
+  "sourceRGBPreviewBytesUnchanged": true,
+  "renderer": "Cycles Metal128; previousAgXcontrolProfile",
+  "notFinalGameLook": true,
+  "images": [
+    {
+      "view": "ilma",
+      "file": "ilma.png",
+      "sha256": "48f59002fea8ae4a60a7884b2023a10935eeb8f36a434cb8d6f96b068df5fb10",
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "view": "taihedian",
+      "file": "taihedian.png",
+      "sha256": "2ee69e8880bcdf94be500f6bbcb9225c696e1fa6301a82812819bdb3559130f4",
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "view": "aukio",
+      "file": "aukio.png",
+      "sha256": "ec09ba5f719f025266d6d724b1f21249eab476e373f56b7deb62e6a2102a8ed6",
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "view": "beihai",
+      "file": "beihai.png",
+      "sha256": "b6362e3978671681077d8c2b85e10fb23cc79cd2340ff5f4f8273f32fa66b5fc",
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "view": "jingshan",
+      "file": "jingshan.png",
+      "sha256": "789096ef33b19d38d8e9257372866bdb5084ca9b8d40044818547b20342fc852",
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "view": "hutong_ilma",
+      "file": "hutong_ilma.png",
+      "sha256": "70bb3cc8d350949409103d58c49c68ea9fd263be4696c2f88371688910ffa7e0",
+      "resolution": [
+        1600,
+        900
+      ]
+    }
+  ]
+}
