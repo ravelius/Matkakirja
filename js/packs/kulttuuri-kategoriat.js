@@ -142811,7 +142811,7 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Andorran vanhin kirkko ja matkustaneet seinämaalaukset',
-          teksti: 'Santa Coloman kirkko on lähteen mukaan Andorran vanhin kirkko. Se on omistettu Sensin Columballe, jota lähteen mukaan pidetään Andorran suojeluspyhimyksenä. Kirkon runkohuone on 700- tai 800-luvulta ja kellotorni 1100-luvulta. Seinät on tehty kiilleliuskeesta ja graniitista, ja tornin ikkunakehyksissä on travertiinista veistettyjä päitä. Kirkon 1100-luvun seinämaalauksista suurin osa irrotettiin 1933, ja ne olivat Berliinissä vuoteen 2007. Nykyisin ne ovat esillä Espai Columba -museossa kirkon vieressä. Kirkko on esillä joissakin Andorran euro-kolikoissa.',
+          teksti: 'Santa Coloman kirkko on lähteen mukaan Andorran vanhin kirkko. Se on omistettu Sensin Columballe. Kirkon runkohuone on 700- tai 800-luvulta ja kellotorni 1100-luvulta. Seinät on tehty kiilleliuskeesta ja graniitista, ja tornin ikkunakehyksissä on travertiinista veistettyjä päitä. Kirkon 1100-luvun seinämaalauksista suurin osa irrotettiin 1933, ja ne olivat Berliinissä vuoteen 2007. Nykyisin ne ovat esillä Espai Columba -museossa kirkon vieressä. Kirkko on esillä joissakin Andorran euro-kolikoissa.',
           tiedosto: 'Iglesia de Santa Coloma de Andorra, Santa Coloma, Andorra, 2013-12-30, DD 04.JPG',
           selite: 'Santa Coloman kirkon runkohuone on 700- tai 800-luvulta ja kellotorni 1100-luvulta.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
