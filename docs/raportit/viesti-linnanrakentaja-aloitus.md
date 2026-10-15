@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 14.10.2026 00.5x, nollaus)
+# Linnanrakentajan aloitusviesti (päivitetty 15.10.2026 17.18, nollaus)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,7 +8,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (15.10. 16.1x, nollaus kovalla rajalla):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261015-iltapaiva.md` KOKONAAN.
+1. **NYT (15.10. 17.18, nollaus PT:n pyynnöstä):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261015-ilta.md` KOKONAAN.
+   LOUVRE v2e viety (`proto-3d/_valmiit/louvre-v1/`, LUEMINUT.md:n loppu); PT hyväksyi v2d:n omistajalle; Valoseppä ajaa v2e-parin → PT.
+   Seuraava: PT:n palaute → Cour Carrée.
+1. **(vanha) 15.10. 16.1x, nollaus kovalla rajalla:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261015-iltapaiva.md` KOKONAAN.
    LOUVRE ensin (omistajan päätös 16.05, junaan 194 jos kuitattu): v1 + vienti + leikkaus valmiit `proto-3d/_valmiit/louvre-v1/`,
    seuraavaksi v1-arkki + kamerakulma PT:lle → Valosepän pelikuvapari. Valaan luuranko Valosepällä.
 1. **(vanha) 15.10. 12.5x, tilinvaihdon jälkeen:** valaan luuranko VALMIS: proto-haara `linnanrakentaja/valas-luuranko-195` @ b55630222
