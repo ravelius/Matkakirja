@@ -1,0 +1,41 @@
+{
+  "referencesPersonallyViewed": true,
+  "files": [
+    {
+      "file": "bagdad-mustansiriya-koulu.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "c35680f61b3fca1e7101d053844a9b0e6e705f3d17962cc9c7d377b66d52935a"
+    },
+    {
+      "file": "dubai-dhow-satama.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "18006f30538f001444622cf99e8d246fd4f827e5a1a82ba5116fa9c5cf79da09"
+    },
+    {
+      "file": "teheran-golestanin-palatsi.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "d4922bc31a94289b27f1be9ae6d5dbe442ad8747db9466b0ac1c9d4049418549"
+    },
+    {
+      "file": "tripoli-marcus-aureliuksen-riemukaari.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "7c73124f9067d921c2e5507d96af31c74026e38c7888997193bb282fafeca93e"
+    }
+  ]
+}

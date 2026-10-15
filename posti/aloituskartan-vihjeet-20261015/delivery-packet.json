@@ -1,0 +1,111 @@
+{
+  "createdAt": "2026-10-15T16:20:33.801052+00:00",
+  "tasks": [
+    306,
+    307,
+    308,
+    309,
+    310,
+    311
+  ],
+  "deliveredTaskNumbers": [
+    306
+  ],
+  "scope": "First Giza image for feedback only; one of five new assets, not full order delivery",
+  "newImagesDelivered": 1,
+  "newImagesRequired": 5,
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeFormat": "PNG",
+  "nativeMode": "RGBA",
+  "exportDimensions": [
+    1024,
+    1024
+  ],
+  "exportFormat": "WebP",
+  "exportMode": "RGBA",
+  "exportResampled": true,
+  "exportNotClaimedAsNative": true,
+  "trueAlphaVerified": true,
+  "oneWholeNewGeneration": true,
+  "otherFourGenerated": false,
+  "finalNineImageBoardComplete": false,
+  "comparisonScope": "Giza plus four original assets only",
+  "feedbackRequiredBeforeNextImage": true,
+  "PTAccepted": false,
+  "sourceReadInFull": true,
+  "allFourReferencesPersonallyViewed": true,
+  "missingReadme": {
+    "path": "assets/kartat/miniatyyrit/LUEMINUT.md",
+    "commit": "40845b421428210cd59e0c1a546f02bf3d8e24ea",
+    "exists": false,
+    "contentInvented": false
+  },
+  "APIUsed": false,
+  "CLIUsed": false,
+  "R2Used": false,
+  "gameIntegrated": false,
+  "mainMerged": false,
+  "published": false,
+  "Louvre302Resumed": false,
+  "files": {
+    "posti/aloituskartan-vihjeet-20261015/giza-pyramidit.webp": {
+      "sha256": "d3a3d22f16ea7bd30637e1648d3d6791cd415ba4fa9df1cdb0b0a8b58f2ccb14",
+      "bytes": 470784
+    },
+    "posti/aloituskartan-vihjeet-20261015/native/giza-pyramidit-v1-native.png": {
+      "sha256": "63185dca0c51942723239e3a1380c410b9550fa8d60c62c2aabd7fd7d78cc007",
+      "bytes": 1077206
+    },
+    "posti/aloituskartan-vihjeet-20261015/vertailu-ensimmainen-5kuvaa.png": {
+      "sha256": "3cb65423a2bfc5966928b7527a6940decb16defed231e0b2fb51c9f5172daa74",
+      "bytes": 505152
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/giza/native-and-export-readback.json": {
+      "sha256": "2ada74fa68f2056b08ed0d5483ce514b7e242dc4aba837b36aa94c5f7e5494aa",
+      "bytes": 2299
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/giza/reference-readback.json": {
+      "sha256": "6650ad14a85f86dbd24678071d5d91328deca469537a960c6e699c446d9d7cf2",
+      "bytes": 959
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/giza/visual-QA.json": {
+      "sha256": "15353b05071b18ed6660be59158081beef1e82e1e0a7ad28d7b057178b0e1df3",
+      "bytes": 1448
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/giza/QA-FI.md": {
+      "sha256": "14dea0bfd58d67613d1931c41bb19de55927464a12d33f3f2318b3ce701fb455",
+      "bytes": 1903
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/giza/alpha-vaalea-tumma-QA.png": {
+      "sha256": "d09744e5f31f00228cd4d1dc7da4035f2484f51d3351c46f9a494db06d29f621",
+      "bytes": 274987
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/giza/generation-call-record.json": {
+      "sha256": "5fbcf0fbaa5862017b7f9252d08ecfc631c61661ad1b29a7c2a980b567935922",
+      "bytes": 569
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/giza/prompt.txt": {
+      "sha256": "08846c13fea7f7fdc1b245bb5c8ad725886e46c2fb59c7b148b71864d3e6e950",
+      "bytes": 3118
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/giza/reference-roles.json": {
+      "sha256": "b1232d4f68ab6690d334e1bc5bddfc67291f0d84c9d08ae176ac17e1d7b742da",
+      "bytes": 1238
+    },
+    "posti/aloituskartan-vihjeet-20261015/sources/incoming-manifest.json": {
+      "sha256": "c9b125336815feefaf4be3d27a115f39056e30b06fd14f32d25c73d350d15a3a",
+      "bytes": 3313
+    },
+    "posti/aloituskartan-vihjeet-20261015/sources/karttaseppa-codex-aloituskartan-vihjeet-20261015.md": {
+      "sha256": "7405f6755bd353a1b18e2cacb0f9bfbdaeddd70c407a0041d205f1672a5f7fa3",
+      "bytes": 2281
+    },
+    "posti/aloituskartan-vihjeet-20261015/sources/authorization-and-feedback-gate.json": {
+      "sha256": "b07df045b47e3f1f4178e3ad87ddad7969164138b8fef6ca138fc774c315ae96",
+      "bytes": 1361
+    }
+  }
+}

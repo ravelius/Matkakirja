@@ -1,0 +1,71 @@
+{
+  "taskNumber": 306,
+  "recordedAt": "2026-10-15T16:17:57.925171+00:00",
+  "nativeSourcePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-62da6a01-5bc3-4b53-b1d5-396874f64cb9.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1/giza-pyramidit-v1-native.png",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeMode": "RGBA",
+  "nativeFormat": "PNG",
+  "native": {
+    "sha256": "63185dca0c51942723239e3a1380c410b9550fa8d60c62c2aabd7fd7d78cc007",
+    "bytes": 1077206
+  },
+  "originalAndNASBytesEqual": true,
+  "transparentBackgroundRequested": true,
+  "nativeAlphaRange": [
+    0,
+    255
+  ],
+  "nativeFullyTransparentPixels": 1124432,
+  "nativePartialAlphaPixels": 447716,
+  "nativeAlphaBoundingBox": [
+    0,
+    32,
+    1192,
+    1157
+  ],
+  "nativeCanvasEdgesFullyTransparent": false,
+  "nativeEdgeNonzeroAlphaPixels": 10,
+  "nativeEdgeMaximumAlpha": 1,
+  "nativeEdgeAlphaAbove16Pixels": 0,
+  "nativeAlphaNoiseNote": "Ten edge samples have alpha1/255; no edge alpha exceeds1. These source pixels are preserved, not threshold-cleaned or painted out.",
+  "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1/giza-pyramidit.webp",
+  "exportDimensions": [
+    1024,
+    1024
+  ],
+  "exportMode": "RGBA",
+  "exportFormat": "WEBP",
+  "export": {
+    "sha256": "d3a3d22f16ea7bd30637e1648d3d6791cd415ba4fa9df1cdb0b0a8b58f2ccb14",
+    "bytes": 470784
+  },
+  "nativeAndExportAreDifferentFiles": true,
+  "resampled": true,
+  "conversion": "Whole native RGBA canvas resized once to1024x1024 with premultiplied-alpha Lanczos, converted toRGBA, lossless WebP encoded. No crop, paint, alpha extraction or background removal.",
+  "exportDecodedPixelsEqualPreencodingRGBA": true,
+  "exportAlphaRange": [
+    0,
+    255
+  ],
+  "exportFullyTransparentPixels": 749903,
+  "exportPartialAlphaPixels": 298069,
+  "exportAlphaBoundingBox": [
+    0,
+    26,
+    973,
+    945
+  ],
+  "exportNotClaimedAsNative": true,
+  "wholeNewGeneration": true,
+  "generationCallsIssued": 1,
+  "generationCallsCompleted": 1,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "PTAccepted": false,
+  "gameIntegrated": false,
+  "published": false
+}

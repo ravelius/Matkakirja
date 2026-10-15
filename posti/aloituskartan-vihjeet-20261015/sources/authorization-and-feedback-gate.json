@@ -1,0 +1,41 @@
+{
+  "taskNumbers": [
+    306,
+    307,
+    308,
+    309,
+    310,
+    311
+  ],
+  "sourceCommit": "40845b421428210cd59e0c1a546f02bf3d8e24ea",
+  "sourcePath": "posti/karttaseppa-codex-aloituskartan-vihjeet-20261015.md",
+  "sourceBlob": "9460ba03bfc9f5a5c88ee0542a2be5f920993e2e",
+  "sourceReadInFull": true,
+  "ownerDecisionStated": "2026-10-15 19:04 Europe/Helsinki via PT",
+  "scope": "Order4 addendum3: five new opening-map watercolor clue miniatures and final nine-image comparison",
+  "notCapitalProduction": true,
+  "notEurope50AuditRetry": true,
+  "style": "Existing four images: isometric three-quarter watercolor, sepia pen, muted washes; expressly not photorealistic",
+  "nativeBuiltinGenerationOnly": true,
+  "APIAllowed": false,
+  "CLIAllowed": false,
+  "exportDimensions": [
+    1024,
+    1024
+  ],
+  "exportMode": "RGBA",
+  "exportFormat": "WebP",
+  "trueAlphaRequired": true,
+  "nativeSizeAndConversionMustBeReportedSeparately": true,
+  "oneImageAtATimeFeedbackGatePreserved": true,
+  "firstImageOnlyNow": 306,
+  "otherFourRequireFirstImageFeedback": true,
+  "automaticRetryAllowed": false,
+  "PTApprovesBeforeKarttaseppaIntegration": true,
+  "integrationAuthorizedToThisThread": false,
+  "R2Allowed": false,
+  "mainMergeAllowed": false,
+  "publicationAllowed": false,
+  "referencedLUEMINUTMissing": true,
+  "missingReadmeContentInvented": false
+}

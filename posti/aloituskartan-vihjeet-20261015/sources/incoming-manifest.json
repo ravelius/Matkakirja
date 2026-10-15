@@ -1,0 +1,72 @@
+{
+  "tasks": [
+    306,
+    307,
+    308,
+    309,
+    310,
+    311
+  ],
+  "files": [
+    {
+      "sourcePath": "posti/karttaseppa-codex-aloituskartan-vihjeet-20261015.md",
+      "sourceCommit": "40845b421428210cd59e0c1a546f02bf3d8e24ea",
+      "gitBlob": "9460ba03bfc9f5a5c88ee0542a2be5f920993e2e",
+      "sha256": "7405f6755bd353a1b18e2cacb0f9bfbdaeddd70c407a0041d205f1672a5f7fa3",
+      "bytes": 2281,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/karttaseppa-codex-aloituskartan-vihjeet-20261015.md",
+      "sourceReadInFull": true,
+      "personallyViewed": false
+    },
+    {
+      "sourcePath": "assets/kartat/miniatyyrit/tripoli-marcus-aureliuksen-riemukaari.webp",
+      "sourceCommit": "40845b421428210cd59e0c1a546f02bf3d8e24ea",
+      "gitBlob": "5d496db051b77a5194a4cd6f10980b5453113226",
+      "sha256": "7c73124f9067d921c2e5507d96af31c74026e38c7888997193bb282fafeca93e",
+      "bytes": 96652,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/tripoli-marcus-aureliuksen-riemukaari.webp",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T16:15:05.437909+00:00"
+    },
+    {
+      "sourcePath": "assets/kartat/miniatyyrit/bagdad-mustansiriya-koulu.webp",
+      "sourceCommit": "40845b421428210cd59e0c1a546f02bf3d8e24ea",
+      "gitBlob": "035ce1411dadfed17ca84a309c9781abcf1afb73",
+      "sha256": "c35680f61b3fca1e7101d053844a9b0e6e705f3d17962cc9c7d377b66d52935a",
+      "bytes": 112820,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/bagdad-mustansiriya-koulu.webp",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T16:15:05.437909+00:00"
+    },
+    {
+      "sourcePath": "assets/kartat/miniatyyrit/teheran-golestanin-palatsi.webp",
+      "sourceCommit": "40845b421428210cd59e0c1a546f02bf3d8e24ea",
+      "gitBlob": "33f5ace034a46f674c3e650105203952189076cb",
+      "sha256": "d4922bc31a94289b27f1be9ae6d5dbe442ad8747db9466b0ac1c9d4049418549",
+      "bytes": 108354,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/teheran-golestanin-palatsi.webp",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T16:15:05.437909+00:00"
+    },
+    {
+      "sourcePath": "assets/kartat/miniatyyrit/dubai-dhow-satama.webp",
+      "sourceCommit": "40845b421428210cd59e0c1a546f02bf3d8e24ea",
+      "gitBlob": "3f5e222817b677c30a56fb9c578686c1e5f7e914",
+      "sha256": "18006f30538f001444622cf99e8d246fd4f827e5a1a82ba5116fa9c5cf79da09",
+      "bytes": 119526,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/dubai-dhow-satama.webp",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T16:15:05.437909+00:00"
+    }
+  ],
+  "referencedReadmeMissing": {
+    "path": "assets/kartat/miniatyyrit/LUEMINUT.md",
+    "commit": "40845b421428210cd59e0c1a546f02bf3d8e24ea",
+    "exists": false,
+    "contentInvented": false
+  }
+}

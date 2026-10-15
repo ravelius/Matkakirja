@@ -1,0 +1,47 @@
+{
+  "taskNumber": 306,
+  "reviewedAt": "2026-10-15T16:20:33.706521+00:00",
+  "rootPersonallyViewedNativeInline": true,
+  "rootPersonallyViewedExport": true,
+  "rootPersonallyViewedFiveImageComparison": true,
+  "rootPersonallyViewedLightAndDarkAlphaProof": true,
+  "contentChecks": {
+    "threePyramids": true,
+    "oneSphinx": true,
+    "peopleVisible": false,
+    "recognizableRealHumanFacesVisible": false,
+    "sphinxHasStylizedSculpturalFace": true,
+    "allSubjectTipsAndBaseVisible": true,
+    "watercolorAndSepiaLine": true,
+    "mutedCreamOchrePalette": true,
+    "textWatermarkOrFrameObserved": false,
+    "photorealistic": false
+  },
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeSHA256": "63185dca0c51942723239e3a1380c410b9550fa8d60c62c2aabd7fd7d78cc007",
+  "exportDimensions": [
+    1024,
+    1024
+  ],
+  "exportMode": "RGBA",
+  "exportFormat": "WebP",
+  "exportSHA256": "d3a3d22f16ea7bd30637e1648d3d6791cd415ba4fa9df1cdb0b0a8b58f2ccb14",
+  "resampledExportNotNative": true,
+  "trueAlphaVerified": true,
+  "alphaInspectedOnBothBackgrounds": true,
+  "alpha1EdgeNoisePreservedAndDocumented": true,
+  "existingFourReferenceAssetsUnchanged": true,
+  "PTAccepted": false,
+  "feedbackRequiredBeforeNextImage": true,
+  "newImagesComplete": 1,
+  "newImagesRequired": 5,
+  "finalNineImageBoardComplete": false,
+  "otherFourGenerated": false,
+  "gameIntegrated": false,
+  "R2Used": false,
+  "mainMerged": false,
+  "published": false
+}

@@ -1,0 +1,19 @@
+{
+  "taskNumber": 306,
+  "startedAt": "2026-10-15T16:15:05.437909+00:00",
+  "issued": 1,
+  "completed": 1,
+  "oneWholeNewImage": true,
+  "transparentBackgroundRequested": true,
+  "nativeDimensionsPending": false,
+  "builtinImageGenUsed": true,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "promptSHA256": "08846c13fea7f7fdc1b245bb5c8ad725886e46c2fb59c7b148b71864d3e6e950",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "nativeSHA256": "63185dca0c51942723239e3a1380c410b9550fa8d60c62c2aabd7fd7d78cc007",
+  "nativeOutputRecordedAt": "2026-10-15T16:17:57.925171+00:00"
+}
