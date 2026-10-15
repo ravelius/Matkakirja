@@ -103,3 +103,7 @@ alussa? ja pitäisikö ensimmäisestä kaupungista jättää intro pois vai pit�
 aloituslentoa (Suositus)". Päätös: uni alkusoittona Uusi matka -valinnan jälkeen ennen aloituslentoa; kolme unikuvaa (El Dorado, Montezuman turkoosinaamio, keisarin jadesinetti) + Kolme veljestä,
 reunat pehmeästi läpinäkyviksi; Eteläristin helmi ei mukaan (1883); Aarnia ja luetteloa ei mainita, luettelo paljastuu kun Kolme veljestä löytyy; kaupungin intro säilyy, isoisän aarreluenta saapumisen
 jälkeen pois; uusi isoisän teksti SK:n faktantarkistukseen ja omistajan hyväksyntään Tekstit-osastossa ennen äänitystä. Junasta 195 eteenpäin.
+
+## PAATOKSET 15.10.2026 klo 17.12: ALOITUSKAUPUNGISSA EI ISOISÄN PUHETTA (15.10.2026 klo 17.13)
+
+Omistaja 17.12 (sanatarkasti, tarkentaa 17.0x:n Isoisän unen): "Se onkin itse asiassa ihan hyvä, että lennon ja intron jälkeen ei tule enää mitään isoisän puhetta, vaan Pulu voi suoraan aloittaa siitä, että pöllö on kadonnut, ja kertoa sitten, miten peliä pelataan, ja ensimmäinen isoisän matkakirja. Teksti tuleekin vasta seuraavassa kaupungissa, niin ei tule liikaa puhetta heti siinä alussa." Päätös: aloituskaupungissa intron jälkeen ei isoisän luentaa; Pulu aloittaa Pöllön katoamisesta ja kertoo pelin; isoisän ensimmäinen matkakirjateksti vasta seuraavassa kaupungissa; Pulun repliikit Tekstit-osastoon hyväksyttäväksi.
