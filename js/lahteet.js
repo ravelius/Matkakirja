@@ -292,6 +292,11 @@ export const LAHTEET = [
         lisenssi: 'Vapaasti käytettävissä lähteen maininnalla; tilastot laskettu havainnoista',
       },
       {
+        nimi: 'SYNOP-havainnot, NOAA Integrated Surface Database (ISD) — kaupunkien pilvi-ilmasto natiivipelissä (pilvet-v4)',
+        tekija: 'NOAA National Centers for Environmental Information; AWS Open Data -kopio noaa-global-hourly-pds',
+        lisenssi: 'NOAA:n avoin data (vapaa käyttö lähteen maininnalla); tilastot laskettu havainnoista',
+      },
+      {
         nimi: 'Copernicus Sentinel-2 L2A (Earth Search, AWS Open Data) — kaupunkien veden väri natiivipelissä',
         tekija: 'Contains modified Copernicus Sentinel data 2019–2025 (ESA); Element 84 Earth Search -STAC',
         lisenssi: 'Copernicus-avoin data (vapaa käyttö lähdemaininnalla)',

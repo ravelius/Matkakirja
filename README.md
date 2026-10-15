@@ -390,6 +390,7 @@ pakettien otsikkokommentit).
 | Silkkitien kaupungit, reitit ja valtakuntien rajat | UNESCO Silk Roads Programme; IDP (British Library); Silk Road Seattle; Britannica; Wikipedia | Tosiasiatietoa; selitetekstit kirjoitettu itse |
 | AERONET Version 3, Level 2.0 — kaupunkien ilman utu (aerosoli) natiivipelissä | NASA GSFC, AERONET; asemien vastuututkijat ilmakeha.json-tiedostossa | Vapaa käyttö lähteen maininnalla |
 | METAR-havainnot, IEM ASOS -arkisto — kaupunkien pilvi-ilmasto natiivipelissä | Iowa Environmental Mesonet, Iowa State University | Vapaa käyttö lähteen maininnalla |
+| SYNOP-havainnot, NOAA Integrated Surface Database (ISD) — kaupunkien pilvi-ilmasto natiivipelissä (pilvet-v4) | NOAA NCEI (AWS Open Data noaa-global-hourly-pds) | NOAA:n avoin data, lähteen maininnalla |
 | Copernicus Sentinel-2 L2A (Earth Search) — kaupunkien veden väri natiivipelissä | Contains modified Copernicus Sentinel data 2019–2025 (ESA); Element 84 | Copernicus-avoin data |
 
 ### Valokuvat ja kuvitus
