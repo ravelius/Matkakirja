@@ -444,6 +444,36 @@ export const POLLO_VALMISKYSYMYKSET = {
       'Minä vuonna Kroatian ja Unkarin sopimus tehtiin?',
     ],
   },
+  bern: {
+    saapuminen: [
+      'Millä nimellä sveitsiläiset kutsuvat Berniä pääkaupungin sijaan?',
+      'Mikä rakennus yhdisti hallituksen ja parlamentin saman katon alle?',
+    ],
+  },
+  andorralavella: {
+    saapuminen: [
+      'Mikä vuosiluku lukee neuvoston kartanon ovessa?',
+      'Mitkä eläimet seisovat kartanon alakerrassa neuvoston istuessa?',
+    ],
+  },
+  podgorica: {
+    saapuminen: [
+      'Mikä on Podgorican vanhan kaupunginosan nimi Ribnican rannalla?',
+      'Mikä kivitorni seisoi Podgoricassa jo isoisän aikaan?',
+    ],
+  },
+  sanmarino: {
+    saapuminen: [
+      'Minkä valtakunnan ympäröimä San Marino oli isoisän matkan aikaan?',
+      'Montako kapteenivaltionhoitajaa johtaa San Marinoa yhtä aikaa?',
+    ],
+  },
+  bratislava: {
+    saapuminen: [
+      'Millä unkarilaisella nimellä kaupunki tunnettiin isoisän aikaan?',
+      'Minkä kirkon tornin huipulla kiiltää kultainen kruunu?',
+    ],
+  },
   luxemburg: {
     saapuminen: [
       'Kenen linnasta Luxemburgin kaupunki sai alkunsa vuonna 963?',

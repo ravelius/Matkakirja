@@ -989,6 +989,272 @@ export const EUROPE_QUESTIONS = {
       source: 'https://en.wikipedia.org/wiki/Lotr%C5%A1%C4%8Dak_Tower',
     },
   ],
+  bern: [
+    {
+      q: 'Mikä seuraavista oli jo olemassa Bernissä isoisän matkavuonna 1873?',
+      options: [
+        'Bundes-Rathaus eli nykyinen Bundeshaus West',
+        'Kupolilla varustettu parlamenttirakennus',
+        'Tuomiokirkon valmis 100 metrin torni',
+        'BärenPark Aare-rinteessä',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Bundes-Rathaus rakennettiin 1852–1857 Jakob Friedrich Studerin '
+          + 'suunnitelmin. Itäsiipi valmistui 1892 ja kupolilla varustettu '
+          + 'parlamenttirakennus 1902, ja BärenPark avattiin 2009.',
+      hint: 'Vain yksi liittopalatsin nykyisistä osista oli valmis, ja se '
+          + 'valmistui jo 1850-luvulla.',
+      source: 'https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland',
+    },
+    {
+      q: 'Mitä työtä Albert Einstein teki Bernissä asuessaan Kramgasse 49:ssä 1903–1905?',
+      options: [
+        'Hän työskenteli patenttitoimistossa',
+        'Hän oli yliopiston professori',
+        'Hän oli kelloseppä',
+        'Hän opetti lukiossa',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Einstein asui talon toisessa kerroksessa vaimonsa Mileva '
+          + 'Marićin ja poikansa Hansin kanssa 1903–1905 ja työskenteli '
+          + 'liittovaltion henkisen omaisuuden toimistossa. Annus mirabilis '
+          + '-artikkelit kirjoitettiin samaan aikaan.',
+      hint: 'Päivätyössä hän arvioi muiden keksintöjä, ja omat ideansa '
+          + 'syntyivät illalla.',
+      source: 'https://en.wikipedia.org/wiki/Einstein_House',
+    },
+    {
+      q: 'Minkä kansainvälisen järjestön perustamissopimus allekirjoitettiin Bernissä 9.10.1874?',
+      options: [
+        'Yleinen postiliitto, nykyinen Maailmanpostiliitto',
+        'Punainen Risti',
+        'Kansainvälinen olympiakomitea',
+        'Kansainliitto',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Bernin sopimus teki postista yhtenäisen: Yleinen postiliitto '
+          + 'sai nykyisen nimensä Maailmanpostiliitto 1878. Sen päämaja on '
+          + 'perustamisesta asti ollut Bernissä.',
+      hint: 'Sopimus allekirjoitettiin vuosi isoisän matkan jälkeen, ja se '
+          + 'koski kirjeiden kulkua maasta toiseen.',
+      source: 'https://en.wikipedia.org/wiki/Universal_Postal_Union',
+    },
+  ],
+  andorralavella: [
+    {
+      q: 'Ketkä kaksi ruhtinasta hallitsivat Andorraa isoisän matkan aikaan 1873?',
+      options: [
+        'Urgellin piispa ja Ranskan valtionpäämies',
+        'Foix\'n kreivi ja Urgellin piispa',
+        'Espanjan kuningas ja Ranskan keisari',
+        'Aragonian kuningas ja Barcelonan kreivi',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Vuoden 1278 sopimus jakoi vallan Foix\'n kreivin ja Urgellin '
+          + 'piispan kesken. Ranskan puolen ruhtinas on sittemmin ollut '
+          + 'Ranskan valtionpäämies, ja nykyään tehtävä kuuluu Ranskan '
+          + 'presidentille.',
+      hint: 'Toinen ruhtinas oli kirkonmies Espanjan puolella, toinen johti '
+          + 'Ranskaa.',
+      source: 'https://en.wikipedia.org/wiki/Andorra',
+    },
+    {
+      q: 'Kuka on Andorran suojeluspyhimys, jonka päivä 8. syyskuuta on maan kansallispäivä?',
+      options: [
+        'Meritxellin Neitsyt Maria',
+        'Pyhä Ermengol',
+        'Pyhä Stefanos',
+        'Pyhä Marinus',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Meritxellin Neitsyt Maria on Andorran suojeluspyhimys, ja '
+          + 'hänen päivänsä 8. syyskuuta on kansallispäivä. Perimätiedon '
+          + 'mukaan kyläläiset löysivät 1100-luvun lopulla Neitsyt Marian '
+          + 'patsaan villiruusun juurelta.',
+      hint: 'Hänen nimensä tulee Canillon seudulla sijaitsevasta paikasta, '
+          + 'ei kaupungin kirkosta.',
+      source: 'https://en.wikipedia.org/wiki/Our_Lady_of_Meritxell',
+    },
+    {
+      q: 'Minä vuonna Escaldes-Engordanin Caldean lämpökylpylä valmistui?',
+      options: [
+        '1994',
+        '1979',
+        '2004',
+        '1968',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Caldea valmistui 1994. Rakennuksessa on 80 metriä korkea '
+          + 'kolmionmuotoinen torni, ja kylpylä käyttää alueen kuumia '
+          + 'lähteitä.',
+      hint: 'Kolmionmuotoinen lasi- ja teräsrakennus on 1900-luvun '
+          + 'viimeisiltä vuosilta.',
+      source: 'https://de.wikipedia.org/wiki/Centre_Termol%C3%BAdic_Caldea',
+    },
+  ],
+  podgorica: [
+    {
+      q: 'Minkä valtakunnan kaupunki Podgorica oli isoisän matkavuonna 1873?',
+      options: [
+        'Ottomaanien valtakunnan',
+        'Montenegron ruhtinaskunnan',
+        'Itävalta-Unkarin',
+        'Serbian ruhtinaskunnan',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Ottomaanit valtasivat Podgorican vuonna 1474, ja Berliinin '
+          + 'kongressi liitti sen Montenegroon vasta vuonna 1878. Kaupunki '
+          + 'kuului siis vielä ottomaaneille isoisän matkan aikaan.',
+      hint: 'Kaupunki vaihtoi hallitsijaa vasta viisi vuotta isoisän matkan '
+          + 'jälkeen.',
+      source: 'https://en.wikipedia.org/wiki/Podgorica',
+    },
+    {
+      q: 'Millä nimellä Podgoricaa kutsuttiin keskiajalla?',
+      options: [
+        'Ribnica',
+        'Skutari',
+        'Medun',
+        'Kotor',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Keskiajalla kaupunki tunnettiin nimellä Ribnica. Nimi '
+          + 'Podgorica mainitaan ensi kerran vuonna 1326 Kotorin arkiston '
+          + 'asiakirjassa.',
+      hint: 'Sama nimi on yhä vanhan kaupungin vieressä virtaavalla joella.',
+      source: 'https://en.wikipedia.org/wiki/Podgorica',
+    },
+    {
+      q: 'Minkä tuotteen Plinius vanhempi mainitsi kuuluisaksi Podgorican lähellä sijainneesta Docleasta?',
+      options: [
+        'juuston',
+        'viinin',
+        'oliiviöljyn',
+        'purppuravärin',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Plinius vanhempi mainitsee Doclean juuston kuuluisana '
+          + 'illyrialaisena tuotteena. Doclea oli noin kolme kilometriä '
+          + 'nykyisen Podgorican pohjoispuolella.',
+      hint: 'Tuote syntyi seudun laidunmailla ja kuljetettiin Rooman '
+          + 'valtakunnan eri provinsseihin.',
+      source: 'https://en.wikipedia.org/wiki/Doclea_(city)',
+    },
+  ],
+  sanmarino: [
+    {
+      q: 'Mikä seuraavista oli jo olemassa San Marinon kaupungissa isoisän matkavuonna 1873?',
+      options: [
+        'San Marinon basilika',
+        'Palazzo Pubblico',
+        'Vapauden patsas',
+        'Cestan tornin asemuseo',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Basilika vihittiin 5.2.1838. Vapauden patsas lahjoitettiin '
+          + '1876, Cestan asemuseo perustettiin 1956 ja nykyinen Palazzo '
+          + 'Pubblico valmistui 1894.',
+      hint: 'Kolme vaihtoehtoa kuuluu vasta isoisän matkaa seuranneisiin '
+          + 'vuosikymmeniin.',
+      source: 'https://en.wikipedia.org/wiki/Basilica_di_San_Marino',
+    },
+    {
+      q: 'Minne Garibaldi ja hänen seuraajansa pakenivat Rooman tasavallan kaaduttua vuonna 1849?',
+      options: [
+        'San Marinoon',
+        'Sveitsiin',
+        'Korsikalle',
+        'Maltalle',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Italian yhdistymisen aikana San Marino antoi turvapaikan '
+          + 'vainotuille, heidän joukossaan Garibaldille. Tasavalta pysyi '
+          + 'itsenäisenä myös Italian kuningaskunnan synnyn jälkeen.',
+      hint: 'Pakopaikka oli pieni tasavalta Apenniinien rinteellä, lähellä '
+          + 'Riminiä.',
+      source: 'https://en.wikipedia.org/wiki/History_of_San_Marino',
+    },
+    {
+      q: 'Minä vuonna San Marino ja Italian kuningaskunta solmivat ystävyyssopimuksen?',
+      options: [
+        '1862',
+        '1861',
+        '1815',
+        '1877',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Italian kuningaskunta julistettiin 17.3.1861, ja '
+          + 'ystävyyssopimus San Marinon kanssa tehtiin 22.3.1862. Sopimus '
+          + 'uusittiin 27.3.1872.',
+      hint: 'Sopimus tehtiin pian sen jälkeen, kun Italian kuningaskunta '
+          + 'oli julistettu.',
+      source: 'https://de.wikipedia.org/wiki/San_Marino',
+    },
+  ],
+  bratislava: [
+    {
+      q: 'Millainen silta ylitti Tonavan Pozsonyssa isoisän matkavuonna 1873?',
+      options: [
+        'Laivojen varaan rakennettu ponttonisilta',
+        'Teräksinen kaarisilta',
+        'Kiviholvinen silta',
+        'Ei siltaa lainkaan, vain lautta',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Kaupungin ensimmäinen silta oli vuonna 1825 rakennettu '
+          + 'ponttonisilta, joka oli käytössä vuoden 1890 loppuun. '
+          + 'Teräksinen Franz Josephin silta eli Starý most avattiin 1891.',
+      hint: 'Pysyvä silta valmistui vasta lähes kaksi vuosikymmentä isoisän '
+          + 'matkan jälkeen.',
+      source: 'https://en.wikipedia.org/wiki/Star%C3%BD_most',
+    },
+    {
+      q: 'Kenen päähän Pyhän Tapanin kruunu asetettiin Pyhän Martinin kirkossa 8.9.1563?',
+      options: [
+        'Maximilian II:n',
+        'Ferdinand I:n',
+        'Franz Joseph I:n',
+        'Matias Corvinuksen',
+      ],
+      correct: 0,
+      level: 2,
+      fact: 'Pyhän Martinin kirkosta tuli Unkarin kruunajaiskirkko 1563, '
+          + 'kun Székesfehérvár oli joutunut osmanien haltuun. Kruunajaisia '
+          + 'pidettiin siellä vuoteen 1830.',
+      hint: 'Hän oli keisari Ferdinand I:n poika.',
+      source: 'https://en.wikipedia.org/wiki/St_Martin%27s_Cathedral,_Bratislava',
+    },
+    {
+      q: 'Mikä uudistus kuului lakeihin, jotka kuningas Ferdinand V allekirjoitti Primasin palatsissa huhtikuussa 1848?',
+      options: [
+        'Maaorjuuden lakkauttaminen',
+        'Yleinen asevelvollisuus',
+        'Naisten äänioikeus',
+        'Rautateiden kansallistaminen',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Unkarin valtiopäivät hyväksyivät huhtikuun lait maaliskuussa '
+          + '1848 Pressburgissa, ja kuningas allekirjoitti ne Primasin '
+          + 'palatsissa 11.4.1848. Lakeihin kuului maaorjuuden '
+          + 'lakkauttaminen.',
+      hint: 'Uudistus muutti maata viljelevien talonpoikien asemaa.',
+      source: 'https://en.wikipedia.org/wiki/April_laws',
+    },
+  ],
   luxemburg: [
     {
       q: 'Missä valtiomuodossa Luxemburg on isoisän matkan aikaan vuonna 1873?',
@@ -3050,6 +3316,80 @@ export const EUROPE_FACTS = {
           + 'vuosisatoja, mutta ne yhdistettiin yhdeksi kaupungiksi vuonna '
           + '1850. Nyt ne ovat yksi Zagreb, vaikka kukkulat seisovat yhä '
           + 'omilla paikoillaan.',
+      voice: 'isoisa',
+    },
+  ],
+  bern: [
+    'Bernissä sipulit saavat oman juhlapäivänsä: Zibelemärit eli '
+      + 'sipulitori järjestetään marraskuun neljäntenä maanantaina. '
+      + 'Myyntiin tuodaan sipulipalmikoita ja sipulipiirakkaa, ja '
+      + 'iltapäivällä ilmassa lentää konfettia.',
+    'Liittopalatsin edessä oleva Bundesplatz oli vuosikymmeniä '
+      + 'pysäköintialue. Kansallisen kilpailun 1991 voitti ehdotus '
+      + 'Platz als Platz, ja uusi aukio vihittiin Sveitsin '
+      + 'kansallispäivänä 1.8.2004.',
+    {
+      text: 'Zytgloggen kellokoneisto on Kaspar Brunnerin tekemä vuodelta '
+          + '1530, joten se on käynyt jo yli kolmesataa vuotta. Bernissä '
+          + 'sen lyömä aika on kaikkien yhteinen aika.',
+      voice: 'isoisa',
+    },
+  ],
+  andorralavella: [
+    'Nimi Andorra la Vella tarkoittaa Andorran kaupunkia. Sana '
+      + 'vella ei tarkoita vanhaa, vaan se juontuu latinan sanasta '
+      + 'villa, ja lisäys erottaa kaupungin koko ruhtinaskunnasta.',
+    'Fromental Halévyn ooppera Le val d\'Andorre sai ensi-iltansa '
+      + 'Pariisin Opéra-Comiquessa 11.11.1848 ja meni 165 esitystä. Se '
+      + 'oli yksi säveltäjän suurimmista menestyksistä, vaikka nykyään '
+      + 'se on melkein unohdettu.',
+    {
+      text: 'Seitsemän vuotta sitten neuvoston uudistus antoi äänioikeuden '
+          + 'kaikille perheenpäille, ja nyt neuvostossa istuu '
+          + 'kaksikymmentäneljä miestä. Ylhäisten sukujen yksinvalta loppui '
+          + 'siihen.',
+      voice: 'isoisa',
+    },
+  ],
+  podgorica: [
+    'Roomalainen Doclea oli 8 000–10 000 asukkaan kaupunki, ja '
+      + 'voimakas maanjäristys tuhosi sen vuonna 518. Rauniot ovat yhä '
+      + 'nähtävissä Podgorican pohjoispuolella.',
+    'Kun Berliinin kongressi liitti Podgorican Montenegroon vuonna '
+      + '1878, kaupungissa oli arvioiden mukaan noin 1 500 taloa ja yli '
+      + '8 000 asukasta.',
+    {
+      text: 'Kävelin Ribnican rantaa Stara Varošin läpi: linnoitus, '
+          + 'kivitorni ja vanha silta mahtuvat yhdelle katseelle. Linnoitus '
+          + 'on 1400-luvun lopulta ja torni vuodelta 1667. Kirjoitin '
+          + 'molemmat muistikirjaani, ettei minun tarvitse arvailla.',
+      voice: 'isoisa',
+    },
+  ],
+  sanmarino: [
+    'San Marinon alue koostui vuoteen 1463 asti pelkästä Monte '
+      + 'Titanosta. Silloin tasavaltaan liitettiin Faetano, Fiorentino, '
+      + 'Montegiardino ja Serravalle.',
+    'Napoleon tarjosi San Marinolle 1790-luvun lopulla alueen '
+      + 'laajennusta, mutta tasavalta kieltäytyi kohteliaasti. Lahjaksi '
+      + 'se otti vastaan vain viljalastin.',
+    {
+      text: 'Yhdysvaltain edesmennyt presidentti Lincoln otti keväällä 1861 '
+          + 'vastaan tämän pienen tasavallan tarjoaman '
+          + 'kunniakansalaisuuden. Täällä siitä puhutaan vieläkin.',
+      voice: 'isoisa',
+    },
+  ],
+  bratislava: [
+    'Bratislava on lähteiden mukaan ainoa pääkaupunki, joka '
+      + 'rajoittuu kahteen toiseen valtioon: Itävaltaan ja Unkariin.',
+    'Pressburgissa 1734 syntynyt Wolfgang von Kempelen tunnetaan '
+      + 'shakkia pelaavasta Turkki-automaatista, jonka sisällä '
+      + 'piileskeli ihminen, sekä puhekoneesta.',
+    {
+      text: 'Säveltäjä Johann Nepomuk Hummel syntyi täällä vuonna 1778. '
+          + 'Kaupunki ei ole suuri, mutta se on kasvattanut miehen, jonka '
+          + 'nimen musiikkimaailma tuntee.',
       voice: 'isoisa',
     },
   ],
