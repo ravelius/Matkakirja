@@ -45,8 +45,12 @@ valo), keijut 42–92 km ja siniset suihkut. IssKohokohdat.Ehto("keijut") + Vali
   Pyysin SS:ltä korttikuvan kirkkauden tarkistukseen. Sama muutos salamat-196:ssa (e282b3b44, Varjossa-ehdolla).
 - `revontulet iss` -korjaus (Linssisepän löydös: kohdevalikon Lapin siirto jäi voimaan): revontulet-196 **8d7f26d05** → NS junaan 196.
 
-## 5. Jonossa
-Revontulet v7 tulivuorten jälkeen; sitten pimennyksen varjo, Perseidit, hurrikaanin silmä (kukin oma erä, kytkimen taakse).
+## 5. Jonossa – PT:n järjestys 22.3x (sitova)
+1. Tulivuoret ja salamat valmiiksi kierroksilla (kohdat 1–3 yllä) → kärjet Natiivisepälle junaan 196, kun PT on kuitannut parin.
+2. Seuraavat ilmiöt, kukin oma erä kytkimen taakse: pimennyksen varjo, Perseidit, hurrikaani ja **lentokoneiden vanat**
+   (kohokohta "lentokoneet", vaatii "vanat"). Kaikki 9 kohokohtaa ovat jo valikossa kortteina (omistaja 22.05), joten jokainen
+   efekti rekisteröi IssKohokohdat.Ehto(<vaatii>, …) ja kuuntelee Valittu-tapahtumaa kuten Salamat.cs.
+3. Revontulet v7: musta maa → kaupunkien valot ja hämärä pinta, vihreä nauha ei maan päällä, limbikaari.
 
 ## Työtilat
 wt/proto-linssiseppa2-salamat (salamat-196), -tulivuoret (tulivuoret-196), -aurinko (aurinko-196 → poista kun junassa),
