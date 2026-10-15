@@ -209,3 +209,7 @@ Omistaja uni-videon (2 min 42 s) jälkeen, sanatarkasti: "Julkaise ilman unta. S
 ## PAATOKSET 15.10.2026 klo 22.05 (KK välitti): ISS-paketti junaan 196 ja kaikki 9 kohokohtaa kortteina (15.10.2026 klo 22.06)
 
 Omistaja paketista 1–5: "Eikö kohokohtia ole enempää?" → (KK: 9 suunniteltu, 3 valmiina + auringonnousu, 5 odottaa animaatioita) → "Lisää kaikki jo kortteina". Junaan 196 päälle: NIMET-nappi, kohdevalikon uusi ulkoasu, skannerin taivastila, paras hetki ja nimen korostus. Kohokohtiin kaikki 9 korttia heti (myös ukkosmyrsky ja keijut, pimennyksen varjo, tähdenlennot, hurrikaanin silmä, lentokoneiden vanat): kortti vie parhaaseen hetkeen ja Pulun kysymys toimii, ilmiö näkyy kun animaatio valmistuu; ei uutta Tulossa-merkintää (UI-POHJAT). 9 kortin valikosta kuva (iPhone + iPad) omistajalle ennen kohokohtien kytkentää.
+
+## PAATOKSET 15.10.2026 klo 22.06 (KK välitti): kohokohdat ja kohteet samaan ikkunaan (15.10.2026 klo 22.07)
+
+Omistaja: "Ja kohokohdat ja kohteet saisi näkyä jotenkin samassa ikkunassa. Vaikka vain kelaamalla alaspäin. Ja kohokohdat saisi olla vähän pienempinä. Vaikka kolme per rivi". Toteutus: yksi vieritettävä ikkuna (ylärivi → Kohokohdat 9 korttia kolme per rivi samalla korttipohjalla → ISS nyt | Oma sijainti → nykyinen lista); erillistä Kaikki paikat -näkymää ei tarvita. Kuva iPhone + iPad omistajalle ennen kohokohtien kytkentää. Natiivi-UI.
