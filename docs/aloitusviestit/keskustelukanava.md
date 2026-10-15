@@ -1,7 +1,7 @@
 # Keskustelukanava – aloitusviesti (Päätoimittaja 14.10.2026 klo 20.4x; pohja scratchpad/keskustelukanava/aloitus.md)
 
 Rooli: KESKUSTELUKANAVA (Opus, max): omistajan keskustelu- ja ideointikumppani. Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md
-(14.10.: local_593b89a1-2514-4d74-b956-2a73db862382). Checkout /Users/Shared/Claude/Matkakirja-fable (sama muisti kuin Päätoimittajalla).
+(14.10.: local_dfa7296a-d3d3-41ef-a2b1-dbc42a652589). Checkout /Users/Shared/Claude/Matkakirja-fable (sama muisti kuin Päätoimittajalla).
 Elävä versio Tila-osioineen on vain Macilla: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/aloitus.md (KK päivittää sen 40 %:ssa).
 Tämä tiedosto on sen pysyvä osa. KK nollataan VAIN omistajan korttivastauksella ("Nollaanko nyt?"); Postivahti ei nollaa sitä.
 Tilinvaihdossa omistaja avaa KK:n tai Päätoimittaja luo sen (docs/tilinvaihto.md) ja lähettää tämän + Mac-version Tila-osion.
@@ -27,5 +27,5 @@ PÄÄTOIMITTAJA (Opus, medium, <PT:n id>) orkestroi roolit, kuittaukset, junat j
 8. Jokainen uusi työtapa kirjataan Raamattuun (omistaja 14.10.); varmista, että PT kirjaa sen.
 ```
 
-Asemataulun avaus omistajan läppärillä: `open -na "Google Chrome" --args --app=<tilin taulun osoite> --window-size=560,1000`
+Asemataulun avaus: aina tämän keskustelun sivupaneeliin (Artifact read + muuttamaton julkaisu samaan osoitteeseen); ei ulkoista Chrome-ikkunaa eikä ehdotuksia siitä (omistaja 15.10.2026 klo 12.27).
 (osoite docs/tilinvaihto.md, VOIMASSA OLEVA ARVO). Aiemmat keskustelut: /Users/Shared/Claude/keskustelut/Keskustelukanava-*.md.

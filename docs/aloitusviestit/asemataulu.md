@@ -1,6 +1,6 @@
 # Asemataulu-sessio – aloitusviesti (Päätoimittaja 14.10.2026 klo 20.4x, kylmäkäynnistystesti)
 
-Rooli: ASEMATAULU (Sonnet 5.5, low; auto-tila). Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md (14.10.: local_5ee4b72f-98c8-45f0-b846-51c5d8ffa972).
+Rooli: ASEMATAULU (Sonnet 5.5, low; auto-tila). Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md (14.10.: local_aea9822b-c1c9-40aa-aecc-e84d19148a8c).
 Checkout /Users/Shared/Claude/Matkakirja-asemataulu, haara `asemataulu/tyo`. Työkansio (TAULU) on Päätoimittajan scratchpadissa:
 /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/. Ohje ASEMATAULU-ROOLI.md (vain Macilla, peili tools/tyotavat/ASEMATAULU-ROOLI.md).
 Lähettäjä: Päätoimittaja – täytä <…>. Tilinvaihdossa PT julkaisee ensin tilin oman taulun (docs/tilinvaihto.md, kohta Asemataulu) ja antaa osoitteen.

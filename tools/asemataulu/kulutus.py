@@ -73,7 +73,7 @@ OSA = 16 * 1024 * 1024
 ASSISTANT = b'"assistant"'
 KAYTTAJA = b'"user"'
 TOOL_RESULT = b'"tool_result"'
-TILAN_VERSIO = 2  # kasvatetaan, kun tilan rakenne tai luokittelun säännöt muuttuvat: tila luetaan silloin alusta
+TILAN_VERSIO = 4  # kasvatetaan, kun tilan rakenne tai luokittelun säännöt muuttuvat: tila luetaan silloin alusta
 # Käyttäjärivit, jotka eivät aloita vuoroa (alku pienaakkosin): tehtäväilmoitukset, kuvaselosteet, keskeytykset ja järjestelmäilmoitukset.
 EI_VUOROA = ('<task-notification', '[image', '[request interrupted', '[usage limit reached', '[cross-session delivery notice')
 RISTISESSIO = 'another claude session sent a message'
@@ -245,6 +245,35 @@ def jsonl_tiedostot(kansio):
             yield e
 
 
+# Keskustelukanava jakaa Päätoimittajan kansion Matkakirja-fable (omistaja 14.10. 22.31). Tunniste: KK:n transkriptiin saapuu
+# viestejä Päätoimittajalta (from="<PT:n session id>"), PT:n omaan ei koskaan; lisäksi tunnetut KK:n uuid:t.
+# Vain käyttäjärivit ilman tool_resultia (PT:n list_events-tulosteissa sama merkkijono esiintyy tool_resultina).
+KK_UUID = {'09750ee7-e104-4293-97d5-62db7ee60599'}
+PT_ID = (b'from=\\"local_74630a27-8c1b-4ac3-9143-538efab8cbcd\\"', b'from="local_74630a27-8c1b-4ac3-9143-538efab8cbcd"')
+_kk_valimuisti = {}
+
+
+def on_keskustelukanava(polku):
+    """True, jos Matkakirja-fable-kansion pääkeskustelu on Keskustelukanavan."""
+    if os.path.basename(polku)[:-6] in KK_UUID:
+        return True
+    if polku in _kk_valimuisti:
+        return _kk_valimuisti[polku]
+    tulos = False
+    try:
+        with open(polku, 'rb') as f:
+            for rivi in f:
+                if KAYTTAJA not in rivi or TOOL_RESULT in rivi:
+                    continue
+                if any(m in rivi for m in PT_ID):
+                    tulos = True
+                    break
+    except OSError:
+        pass
+    _kk_valimuisti[polku] = tulos
+    return tulos
+
+
 def loki_tiedostot(lokit, raja_s):
     """Lokitiedostot, joiden mtime ≥ raja_s: (polku, rooli, agentti 0/1, koko, mtime_ns)."""
     ulos = []
@@ -271,11 +300,14 @@ def loki_tiedostot(lokit, raja_s):
             continue
         for e in sisalto_:
             if e.name.endswith('.jsonl') and e.is_file():
-                lisaa(e, rooli, 0)
+                r = 'Keskustelukanava' if rooli == 'Päätoimittaja' and h.name == ETU + 'Matkakirja-fable' and on_keskustelukanava(e.path) else rooli
+                lisaa(e, r, 0)
             elif e.is_dir() and e.name != 'memory':
                 # <uuid>/subagents/*.jsonl ja mahdolliset työnkulkujen alikansiot (subagents/workflows/wf_…/agent-….jsonl)
+                emo = os.path.join(h.path, e.name + '.jsonl')
+                r = 'Keskustelukanava' if rooli == 'Päätoimittaja' and h.name == ETU + 'Matkakirja-fable' and os.path.exists(emo) and on_keskustelukanava(emo) else rooli
                 for s in jsonl_tiedostot(os.path.join(e.path, 'subagents')):
-                    lisaa(s, rooli, 1)
+                    lisaa(s, r, 1)
     return ulos
 
 

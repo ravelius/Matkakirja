@@ -1,7 +1,7 @@
 # Linnanrakentaja – aloitusviesti (Päätoimittaja 14.10.2026 klo 20.4x, kylmäkäynnistystesti)
 
 Rooli: LINNANRAKENTAJA (Opus, high): 3D-mallit (linnat, raketti, ISS, valas, kaupunkimallit). Session id: osoitekirja /Users/Shared/Claude/osoitekirja.md
-(14.10.: local_08e82dfc-ac27-4a27-a62b-b0ff862022ae). Checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja, haara `linnanrakentaja-tyo-20260929`.
+(14.10.: local_996d60ab-b4af-4172-ad31-f8e948f141a3). Checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja, haara `linnanrakentaja-tyo-20260929`.
 Roolin oma aloitusviesti (säännöt, historia) ja luovutukset ovat haarassa: `docs/raportit/viesti-linnanrakentaja-aloitus.md` ja `-luovutus-<pvm>.md`.
 OLAVINLINNA TAUOLLA, PEKING CODEXILLA (omistaja 13.10.). Lähettäjä: Postivahti (NOLLAUS.md) tai Päätoimittaja – täytä <…>.
 

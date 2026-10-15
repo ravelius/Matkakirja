@@ -4,17 +4,17 @@ Omistaja 13.10.2026 klo 08.4x (kortti, "Sonnet, luo nyt"): Asemataululle oma ses
 että kaikki on ajan tasalla ("tämä on nimittäin monesti pielessä ja minulla menee aika asioiden tarkistamiseen").
 Tavoite: omistajan ei tarvitse koskaan tarkistaa taulua itse.
 
-- Taulu (tämän tilin kopio): https://claude.ai/artifact/EekZDPMuAcsjT3awvn4jPb, tietokannan kokoelma `talo`.
+- Taulu (tämän tilin kopio): https://claude.ai/artifact/Qo5w6Wk4JSYRwYbyf2fJrm, tietokannan kokoelma `talo`.
 - Kansio: /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/ (jäljempänä TAULU).
-- Totuus: TAULU/data/talo/<doc>.json. Päätoimittaja (PT, session local_74630a27-8c1b-4ac3-9143-538efab8cbcd) kirjoittaa
+- Totuus: TAULU/data/talo/<doc>.json. Päätoimittaja (PT, session local_5df52e10-10e4-4b72-9554-0049db300dfe) kirjoittaa
   junat, tyolista, tehtavat, viestit ja huom. Sinä viet kaiken tauluun ja pidät sisällön oikeana.
 - Mittarit, roolit ja laitteet kokoat sinä (Postivahti lopettaa niiden viennin, kun sinä aloitat).
 
 ## A. JOKA 5 MINUUTTI (cron "*/5 * * * *")
-1. `get_usage self` → plan: "5-hour limit" ja "Weekly · all models" (prosentti + resetsAt). `get_usage` Keskustelukanavan session id:llä (local_593b89a1-2514-4d74-b956-2a73db862382; omistaja 14.10., ei enää Päätoimittaja) →
+1. `get_usage self` → plan: "5-hour limit" ja "Weekly · all models" (prosentti + resetsAt). `get_usage` Keskustelukanavan session id:llä (local_dfa7296a-d3d3-41ef-a2b1-dbc42a652589; omistaja 14.10., ei enää Päätoimittaja) →
    context.percentUsed = pt_konteksti = Keskustelukanavan konteksti (jos ei saatavilla, pidä edellinen).
 2. `list_sessions` → roolit: nimi sessionimestä ennen sulkeita, malli ja effort sulkeista, tila "työ" jos isRunning, muuten
-   "lepo", teksti "Työ käynnissä" / "Levossa", aika HH.MM. Mukaan omilla riveillään (omistaja 14.10. 20.2x): "Keskustelukanava" (Opus, max) = local_593b89a1 ja "Päätoimittaja" (Opus, medium) = local_74630a27 (oma sessio, aina "työ", konteksti get_usage self) sekä sinä itse. Rivin tekstiin konteksti-%, kun se on saatavilla.
+   "lepo", teksti "Työ käynnissä" / "Levossa", aika HH.MM. Mukaan omilla riveillään (omistaja 14.10. 20.2x): "Keskustelukanava" (Opus, max) = local_dfa7296a ja "Päätoimittaja" (Opus, medium) = local_5df52e10 (oma sessio, aina "työ", konteksti get_usage self) sekä sinä itse. Rivin tekstiin konteksti-%, kun se on saatavilla.
 3. `df -g /` → Levy "N Gi" (lisa "alle 100 Gi", kun < 100). `python3 -I TAULU/kone.py` → Muisti ja Prosessori.
    `python3 -I TAULU/laitteet.py` → laitteet-dokumentti (viimeinen JSON-rivi).
 4. Raati ja Testaajat: pidä taulun edellinen arvo (Postivahti päivittää ne TF-luvuista).
@@ -36,7 +36,7 @@ Tavoite: omistajan ei tarvitse koskaan tarkistaa taulua itse.
 2. tyolista.json: käy läpi jokaisen keskeneräisen rivin "Työn alla" -kohdat. Kohta, joka on jo junassa tai TF:ssä,
    siirretään osioon "Junassa N:". Viittaus vanhaan junaan, esimerkiksi "TF 184:llä", kun uusin on 186, päivitetään.
    Uusi omistajan pyyntö, josta PT on viestinyt, lisätään omaksi rivikseen tai Työn alla -kohdaksi. Jos et ole varma,
-   kysy PT:ltä yhdellä rivillä (SendMessage "PÄÄTOIMITTAJA (Opus, medium) local_74630a27"). Älä arvaa.
+   kysy PT:ltä yhdellä rivillä (SendMessage "PÄÄTOIMITTAJA (Opus, medium) local_5df52e10"). Älä arvaa.
 3. tehtavat.json: kirjoita jokaiselle roolille lyhyt tehtävä, enintään 8 sanaa, sen viimeisten viestien perusteella.
 4. Muokkaa tiedostoja aina väliaikaisen tiedoston ja os.replace-kutsun kautta, ja vie muutokset heti tauluun.
 

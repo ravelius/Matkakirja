@@ -43,7 +43,7 @@ Lyhenteet: S = /Users/Shared/Claude, F = S/Matkakirja-fable/scratchpad. "Vain Ma
    ne jäävät vanhalle tilille – ei toimia (ne eivät kuluta uuden tilin kiintiötä).
 
 ## 2. Sessioiden luonti (roolitaulukko)
-Kaava: Raamattu SESSIOIDEN LUONTI ILMAN OMISTAJAA (osascript + screencapture, valikot suomeksi: Tiedosto › Uusi istunto / Avaa kansio…,
+Kaava (15.10.2026 alkaen ensisijainen): `start_session` (initiation user_asked, context fresh, cwd roolikansio, use_worktree false, model, effort enintään PT:n oma, permission_mode) ja heti `detach_session`; RC kytkeytyy itsestään. Tilin vanhat sessiot tyhjenevät send_message-pyynnöllä "lataa clear_session ja kutsu self" (list_events = 0), sitten aloitusviesti. PT:n oma effort on uusien sessioiden yläraja, joten luo Opus-max-sessiot ennen kuin PT:n effort lasketaan. Varalla: Raamattu SESSIOIDEN LUONTI ILMAN OMISTAJAA (osascript + screencapture, valikot suomeksi: Tiedosto › Uusi istunto / Avaa kansio…,
 2560×1440-koordinaatit). Edellytys: sallinnat Bash(osascript:*), Bash(screencapture:*), Bash(sleep:*) PT:n .claude/settings.local.json:ssa;
 jos osascript ei saa ohjata appia, omistaja sallii Järjestelmäasetukset › Tietosuoja ja suojaus › Käyttöapu (Claude/Pääte).
 Osascriptissä valikkojen nimet suomeksi (`click menu item "Uusi istunto" of menu "Tiedosto"`); malli valitaan luonnoksessa ennen
@@ -86,7 +86,7 @@ Raamattu ASEMATAULU TILIKOHTAINEN: 1) Artifact list → onko tilillä oma taulu;
 comments + db, icon dashboard) samaan tai uuteen osoitteeseen; 2) täytä kokoelma talo yhdellä ArtifactData-batchilla F/asemataulu/data/talo/*.json;
 3) kirjaa osoite F/asemataulu/osoitteet.md:hen, alla olevaan VOIMASSA OLEVA ARVO -tauluun (vanha "nykyinen tili" siirtyy riviksi
 osoitteet.md:hen), jonokierroksen kohtaan 7, ASEMATAULU-ROOLI.md:hen, F/keskustelukanava/aloitus.md:n kohtaan 2, Postivahdille
-ja omistajalle yhdellä rivillä. PT avaa taulun (Artifact open) heti; KK avaa sen jokaisen nollauksensa jälkeen (avauskomento: `open -na "Google Chrome" --args --app=<osoite> --window-size=560,1000`).
+ja omistajalle yhdellä rivillä. KK avaa taulun aina omaan keskustelunsa sivupaneeliin (Artifact read + muuttamaton julkaisu samaan osoitteeseen) heti luonnin ja jokaisen nollauksensa jälkeen; ulkoista Chrome-ikkunaa ei käytetä eikä ehdoteta (omistaja 15.10.2026 klo 12.27).
 Vanhan tilin artefakteja (taulu, äänisivu) ei voi muokata uudelta tililtä.
 
 ## 5. Silmukat ja vahdit
@@ -126,7 +126,7 @@ id:itä ei jäljellä. Rivi Keskustelukanavalle: "Tilinvaihto valmis: N roolia, 
 |---|---|---|
 | Postivahdin kierros | ScheduleWakeup 4–5 min (20 min, kun kaikki roolit lepäävät eikä junaa ole käynnissä; omistaja 14.10. klo 22.34), kehote "Lue S/Matkakirja-posti/KIERROS.md ja aja kierros sen mukaan"; KIERROS.md on sitova sisältö | 10 min (9.10.), Raamatun vanha sanatarkka kehote (loki TIIVISTYS 14.10.) |
 | Mittareiden vienti Asemataululle | Asemataulu-sessio: mittarit (kulutus, muisti, kone), roolit ja laitteet 5 min vain Boostin aikana (talo/boost → Postivahti herättää, sammuu 1 h; omistaja 14.10. klo 23.39); junat ja VAATII TOIMIA heti; sisällön tarkistus tunnin välein; Raati ja Testaajat klo 08 ja TF:n saapuessa (omistaja 14.10. klo 22.34 ja 22.40); Postivahti vie junan edistyksen ja lukee talo/boostin | Postivahti 5 min syke-ehdolla (11.10.); "5 min aina" (13.10.); Raati ja Testaajat Postivahdin kierroksella |
-| Asemataulun osoite | nykyinen tili (sami.reivinen@vvi.fi, 13.10. alkaen): https://claude.ai/artifact/EekZDPMuAcsjT3awvn4jPb; muut tilit F/asemataulu/osoitteet.md | Rq5ajPU4SraE2XKd7BYAix on päätilin taulu (10.10.), ei nykyisen |
+| Asemataulun osoite | nykyinen tili (sami@valokuvaamoklik.fi, koodaustili, 15.10.2026 klo 12.1x alkaen): https://claude.ai/artifact/Qo5w6Wk4JSYRwYbyf2fJrm; muut tilit F/asemataulu/osoitteet.md | EekZDPMuAcsjT3awvn4jPb on VVI-tilin taulu (13.10.), Rq5ajPU4SraE2XKd7BYAix päätilin (10.10.) |
 | Kontekstirajat | liukumat pehmeä–kova (omistaja 14.10. klo 22.55 ja 22.57): Postivahti 20–30 %; koodi-, kartta- ja sisältöroolit, Julkaisija ja Asemataulu 25–35 %; PT (oma nollaus), Laitetestaaja ja Äänittäjä 30–40 %; KK 40–50 % kortilla "Nollaanko nyt?" (vain KK:n nollaus kysytään omistajalta). Pehmeän rajan yli nollaus ensimmäisellä luontevalla tauolla, uusi iso tehtävä → nollaus ensin; luovutus → Postivahti nollaa ilman omistajan vahvistusta | roolit 50 % (10.10.), 35 % (14.10. 22.4x); PT 65 %; KK 55/65 %; Postivahti ei nollaa KK:ta |
 | Viikkokiintiö | päätili: siirtoprompti 50 %:ssa; koodaustilit: vain rivi 99 %:ssa (Postivahti hälyttää 96 % ja 99 %); ei keventämistä | "ei siirtopromptia" koskee vain koodaustilejä |
 | Komentorivin tili | sama kuin sovelluksen tili; uudelleenkirjautuminen jokaisessa tilinvaihdossa | "toinen tili kuin sovellus" (7.10.) |
