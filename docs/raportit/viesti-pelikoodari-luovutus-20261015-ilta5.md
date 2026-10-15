@@ -32,6 +32,10 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus viesti-pelikoodari-luovu
   (korvaa 30e07d6f1) → kuva PT:lle (ajo-iss-pulu-vastaukset-196.zsh, vaihda kohokohdaksi esim. hurrikaani). Siirtosepälle tieto
   kohokohdat.json-muutoksesta.
 
+- UUSI TYÖ (OMISTAJAN PÄÄTÖS 23.12, loki 5a74d78b0): ISS-näkymään salamat oikeiden ukkosten kohdalle (/opas/saa "ukkonen") ja
+  tähdenlennot meteoriparvien aikaan (Orionidit ~21.10., Leonidit 17.11., Geminidit 14.12.; kohokohta Perseidit), kytkimen taakse.
+  PK tuo säätiedon ja parviajat ISS-näkymään (rajapinta Valosepälle), Valoseppä tekee efektit. Sovi rajapinta Valosepän kanssa ensin.
+
 ## Valmiit tässä vuorossa
 - "En tunne" mp3 (f82aa303a) BUILD 195:ssä (lukittu 21.46).
 - Pulun 5 ISS-vastausta + kohokohtien kysymykset 30e07d6f1 KÄÄNNETTY a4e0ddfb4 → NS junaan 196; kuvapari _tyo/pelikoodari/iss-pulu-vastaukset-196/
