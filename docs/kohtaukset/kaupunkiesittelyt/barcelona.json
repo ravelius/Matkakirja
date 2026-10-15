@@ -1,0 +1,42 @@
+[
+  {
+    "id": "barcelona",
+    "esittely": "Kartan alue on Barcelonan keskusta vanhankaupungin ja Eixamplen alueella. Kaupungin muurit purettiin 1850-luvulla, ja Eixamplen neliönmuotoiset korttelit ovat noin 113 metriä leveitä ja kulmistaan viistoja. Sagrada Família aloitettiin 1882, ja sen 172,5 metriä korkea keskitorni valmistui rakenteellisesti 2026. Gaudí uudisti Casa Batllón vuosina 1904–1906.\n\nArc de Triomf on punatiilinen, ja se rakennettiin vuoden 1888 maailmannäyttelyn portiksi. Musiikkipalatsi avattiin 1908, ja sen konserttisalia valaisee päivisin luonnonvalo. La Boqueria mainitaan ensimmäisen kerran 1217. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 633,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Cerd%C3%A0_Plan", "title": "Wikipedia: Cerdà Plan", "tukee": "korttelit neliöitä, sivu n. 113,3 m, kulmat leikattu 45 asteen viisteellä; muurien purkumääräys 9.8.1854"},
+      {"url": "https://geographyfieldwork.com/Eixample.htm", "title": "Geography Fieldwork: The Eixample", "tukee": "korttelin sivu 113,3 m, 45 asteen viisteet, muurit purettiin 1850-luvulla"},
+      {"url": "https://www.ub.edu/visitavirtual/visitavirtualEH/index.php/en/get-to-know-the-university-of-barcelona/the-city-in-the-nineteenth-century/the-old-city-and-the-walls", "title": "Barcelonan yliopisto: The old city and the walls", "tukee": "muurit purettiin 1854-1856"},
+      {"url": "https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia", "title": "Wikipedia: Sagrada Família", "tukee": "rakentaminen alkoi 19.3.1882; keskitorni 172,5 m, rakenteellisesti valmis 20.2.2026"},
+      {"url": "https://www.vaticannews.va/en/church/news/2026-02/basilica-sagrada-familia-cross-completed-tower-of-jesus-christ.html", "title": "Vatican News: Sagrada Família cross completed, Tower of Jesus Christ", "tukee": "Jeesuksen tornin risti asennettu 20.2.2026, korkeus 172,5 m"},
+      {"url": "https://sagradafamilia.org/en/-/benediccio-i-inauguracio-de-la-torre-de-jesucrist", "title": "Sagrada Família: Blessing and inauguration of the tower of Jesus Christ", "tukee": "tornin siunaus ja vihkiminen 10.6.2026 (haun yhteenveto)"},
+      {"url": "https://en.wikipedia.org/wiki/Casa_Batll%C3%B3", "title": "Wikipedia: Casa Batlló", "tukee": "alkuperäinen talo 1877, Gaudí suunnitteli uudistuksen 1904, valmis 1906"},
+      {"url": "https://www.barcelona-tickets.com/pt/casa-batllo-history", "title": "Barcelona-Tickets: Casa Batlló history (hakutuloksen yhteenveto)", "tukee": "alkuperäinen 1877; Gaudín uudistus 1904-1906"},
+      {"url": "https://barcelonaturisme.com/wv3/en/page/1211/.html", "title": "Barcelona Turisme: Arc de Triomf", "tukee": "rakennettu 1888 maailmannäyttelyn pääsisäänkäynniksi, punatiili, neomudéjar, Vilaseca"},
+      {"url": "https://aviewoncities.com/barcelona/arc-de-triomf", "title": "A View on Cities: Arc de Triomf", "tukee": "1888 maailmannäyttelyn pääportti, tiilirakenne, Vilaseca"},
+      {"url": "https://en.wikipedia.org/wiki/Palau_de_la_M%C3%BAsica_Catalana", "title": "Wikipedia: Palau de la Música Catalana", "tukee": "rakennettu 1905-1908, avattu 9.2.1908; konserttisali päivisin kokonaan luonnonvalossa (kattoikkuna)"},
+      {"url": "https://www.palaumusica.cat/en/1159134", "title": "Palau de la Música Catalana (virallinen sivusto)", "tukee": "keskuskattoikkuna päästää päivävalon saliin; avajaiset 1908 (haun yhteenveto)"},
+      {"url": "https://en.wikipedia.org/wiki/La_Boqueria", "title": "Wikipedia: La Boqueria", "tukee": "ensimmäinen maininta 1217"},
+      {"url": "https://ajuntament.barcelona.cat/mercats/en/mercat-de-sant-josep-boqueria", "title": "Barcelonan kaupunki: Mercat de Sant Josep (La Boqueria) (hakutuloksen yhteenveto)", "tukee": "ensimmäinen maininta vuodelta 1217, liha-pöytä"}
+    ],
+    "pudotetut": [
+      "Eixamplen 'joka kulmasta leikattu 20 metrin viiste' (vanha teksti): Wikipedia antaa 15 m ja 20 m ristiriitaisesti -> luku pois, jäljelle vain 'viistot kulmat'",
+      "Roomalaiset perustivat Barcinon 'kummulle jonka päällä katedraali': Wikipedia Barcelona-artikkeli ei tue katedraali-kummun yhteyttä (Mons Taber lähellä kaupungintaloa) -> pois; Barcinon perustamisaika (n. 15 eaa. / 15-10 eaa.) ei tekstissä",
+      "Collserola ja meri sijainti: Wikipedia tukee, toista lähdettä ei haettu -> pois",
+      "Cerdàn suunnitelman vuosi: 1855/1859/1860 eri lähteissä -> pois",
+      "Casa Batlló UNESCO 2005 ja 'luiden talo': vain Wikipedia ja kaupallinen lippusivusto -> pois",
+      "Font de Canaletesin 'juo ja palaat Barcelonaan' -legenda: Wikipedia ja Lonely Planet -haku tukevat, mutta rakennusvuosi (1888/1892) ristiriitainen ja kohde jätettiin tilanpuutteen vuoksi pois",
+      "Boqueria-hallin avaus (1840/1853) ja katon vuosi 1914: lähteet eroavat -> pois; Roviran aukio ja Sagrada Famílian Gaudín kuolinvuosi 1926: ei tekstissä"
+    ],
+    "ristiriidat": [
+      "Vanha teksti 'muurien sisässä aina 1850-luvulle asti': muurien purku 1854-1856 (UB), määräys 9.8.1854 (Wikipedia) -> käytetty '1850-luvulla'",
+      "Eixamplen viisteen mitta: 15 m vs. 20 m samassa Wikipedia-artikkelissa -> ei mittaa; 113,3 m yhtäpitävä (Wikipedia, geographyfieldwork, celog) -> 'noin 113 metriä'",
+      "Casa Batllón uudistus: Wikipedia 'suunnitteli 1904, valmis 1906', muut '1904-1906' -> käytetty 1904-1906",
+      "Boqueria: ensimmäinen maininta 1217 yhtäpitävä; virallinen avaus 1840 vs. 1853 -> ei tekstissä",
+      "Sagrada Família: valmistumisarvio 2026 (vanha), nyt tornin rakenteellinen valmistuminen 20.2.2026 ja siunaus 10.6.2026 vahvistettu useasta lähteestä; kokonaisuus ei ole valmis (sisätyöt 2027-2028, koristeet myöhemmin) -> teksti sanoo vain 'keskitorni valmistui rakenteellisesti'",
+      "ESTO: Wikipedian Arc de Triomf (Barcelona) -sivu palautti 404; Arc de Triomfin rakennusvuosi 1888 perustuu Barcelona Turismen ja A View on Citiesin kertomaan 'rakennettu 1888 näyttelyyn'"
+    ],
+    "muutos_sk": "Poistettu: Barcinon perustaminen kummulle katedraalin kohdalle, '20 metrin viiste', Collserola/meri-sijainti, satama. Säilytetty ja tarkistettu: muurit 1850-luvulla, kortteli 113 m. Lisätty: Sagrada Família 1882 ja 172,5 m torni 2026, Casa Batlló 1904-1906, Arc de Triomf 1888, Musiikkipalatsi 1908 ja luonnonvalo, La Boqueria 1217."
+  }
+]

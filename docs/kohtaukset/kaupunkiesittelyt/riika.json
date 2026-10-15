@@ -1,0 +1,94 @@
+[
+ {
+  "id": "riika",
+  "esittely": "Kartan alue on Riian vanhakaupunki. Riika perustettiin 1201. Vapaudenpatsas paljastettiin 1935 itsenäisyystaistelun kaatuneiden muistoksi, ja se on yli 40 metriä korkea. Tuomiokirkon perustus laskettiin 1211, ja sitä pidetään Baltian suurimpana keskiaikaisena kirkkona. Pyhän Pietarin kirkon tornissa on näköalatasanne 72 metrin korkeudessa.\n\nKolme veljestä on Riian vanhin säilynyt asuintalojen ryhmä: vanhin on 1400-luvun lopulta, keskimmäinen vuodelta 1646. Mustapäiden talo rakennettiin 1300-luvulla, tuhoutui sodassa ja avattiin uudelleenrakennettuna 1999. Keskustorin viisi hallia tehtiin ilmalaivahallien rungoista ja avattiin 1930. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+  "merkkeja": 693,
+  "kappaleita": 2,
+  "lahteet": [
+   {
+    "url": "https://www.latvia.travel/en/sight/old-town-riga",
+    "title": "Latvia Travel: Old Town Riga",
+    "tukee": "Riika perustettu 1201 (Albert); Pyhän Pietarin näköalatasanne 72 m"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Riga",
+    "title": "Wikipedia: Riga",
+    "tukee": "Riian perustaminen 1201 (hakutulos)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Freedom_Monument_(Riga)",
+    "title": "Wikipedia: Freedom Monument (Riga)",
+    "tukee": "paljastettu 18.11.1935, itsenäisyyssodan kaatuneiden muistomerkki, 42 m, yksityiset lahjoittajat"
+   },
+   {
+    "url": "https://www.liveriga.com/en/3231-freedom-monument",
+    "title": "LiveRiga: Freedom Monument",
+    "tukee": "paljastettu 1935, 42,7 m, rahoitus lahjoituksin"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Riga_Cathedral",
+    "title": "Wikipedia: Riga Cathedral",
+    "tukee": "perustettu 1211 piispa Albertin toimesta; suurin keskiaikainen kirkko Baltian maissa"
+   },
+   {
+    "url": "https://doms.lv/en/pages/50",
+    "title": "Riga Cathedral: History",
+    "tukee": "peruskivi laskettiin 1211 (hakutulos); LiveRiga: suurin keskiaikainen kirkko Baltiassa"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/St._Peter%27s_Church,_Riga",
+    "title": "Wikipedia: St. Peter's Church, Riga",
+    "tukee": "näköalatasanne 72 m"
+   },
+   {
+    "url": "https://www.celotajs.lv/en/e/peterbaznica",
+    "title": "Celotajs: St. Peter's Church",
+    "tukee": "torni 123 m, näköalatasanne 72 m"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Three_Brothers,_Riga",
+    "title": "Wikipedia: Three Brothers, Riga",
+    "tukee": "Riian vanhin asuintalojen ryhmä; nro 17 1400-luvun loppu, nro 19 ulkoasu 1646"
+   },
+   {
+    "url": "https://latvia.travel/en/sight/three-brothers",
+    "title": "Latvia Travel: Three Brothers",
+    "tukee": "vanhin noin 1490, keskimmäinen 1646, 'Riian vanhimmat asuintalot'"
+   },
+   {
+    "url": "https://melngalvjunams.lv/en/exposition/history",
+    "title": "House of the Blackheads: History",
+    "tukee": "rakennettu 1334, sodassa tuhoutui, uudelleenrakennus, vihkiäiset 9.12.1999"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/House_of_the_Blackheads_(Riga)",
+    "title": "Wikipedia: House of the Blackheads (Riga)",
+    "tukee": "rakennettu 1334, sodassa tuhoutui, uudelleenrakennus 1996-2000, avattu 9.12.1999"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Riga_Central_Market",
+    "title": "Wikipedia: Riga Central Market",
+    "tukee": "viisi paviljonkia kahden Vaiņoden zeppeliinihallin rungoista, kauppa alkoi 1930"
+   },
+   {
+    "url": "https://eng.lsm.lv/article/culture/history/german-traces-in-latvia-riga-central-market.a438481/",
+    "title": "LSM: German traces in Latvia - Riga Central Market",
+    "tukee": "viisi hallia Vaiņoden ilmalaivahallien rakenteista; avattiin 2.11.1930"
+   }
+  ],
+  "pudotetut": [
+   "Vapaudenpatsaan tarkka korkeus: 42 m vs. 42,7 m, käytetty 'yli 40 metriä'",
+   "Pyhän Pietarin kirkon perustus/ensimmäinen maininta 1209: toinen riippumaton lähde puuttui, jätetty pois",
+   "Tornin korkeus: 120,7 m (Wikipedia) vs. 123 m (muut), jätetty pois",
+   "Tuomiokirkon täsmällinen perustuspäivä: 25.6. vs. 25.7., käytetty vain vuotta",
+   "Muurin purku ja kanava/puisto sekä jugendkortteli (entinen teksti): ei tarkistettu kahdesta lähteestä, jätetty pois"
+  ],
+  "ristiriidat": [
+   "Mustapäiden talon rakennusvuosi: 1334 (Wikipedia, talon oma sivusto) vs. 1344 (In Your Pocket, Rambling Wombat) -> käytetty 1334 (kaksi vahvaa lähdettä)",
+   "Mustapäiden talon tuhoutumisvuosi 1941 ja purku 1948: sodan ajoitus lähteissä vaihtelee, tekstissä vain 'sodassa'",
+   "Keskustorin avajaispäivä: 10.11.1930 (Wikipedia) vs. 2.11.1930 (LSM) -> käytetty vain vuotta 1930",
+   "Vapaudenpatsaan korkeus 42 vs. 42,7 m"
+  ],
+  "muutos_sk": "Lisätty: perustamisvuosi 1201, Vapaudenpatsas 1935 ja sen tarkoitus, tuomiokirkon 1211 ja asema, Pietarin näköalatasanne 72 m, Kolmen veljeksen ikä, Mustapäiden talon 1334/1999, Keskustorin hallit 1930. Poistettu: muurin purku ja vallihaudasta tehty kanava, jugendkortteli kartan ulkopuolella ja tarkistamaton tieto hallien lähteestä. [SK-tarkistus: epävarma tarkka vuosi korvattu vuosikymmenellä/vuosisadalla]"
+ }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "sofia",
+    "esittely": "Kartan alue on Sofian keskusta, jossa kuumia lähteitä on käytetty jo antiikin ajoista. Keskusmineraalikylpylä avattiin 1913, ja vuodesta 2015 siinä on toiminut Sofian historiamuseo. Pyhän Yrjön rotunda on 300-luvun alusta ja kaupungin vanhin säilynyt rakennus. Banja Bashin moskeija on 1500-luvulta, ja Serdican areena löytyi 2004 hotellin työmaalta.\n\nAleksanteri Nevskin katedraali vihittiin 1924, ja sen kultakupoli on 45 metriä korkea. Sofian yliopisto perustettiin 1888, ja Borisovan puiston rakentaminen alkoi 1884. Kansalliskulttuuripalatsi avattiin 1981. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 615,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Sofia", "title": "Wikipedia: Sofia", "tukee": "kaupunki tunnettu kivennäis- ja lämpölähteistään; kuumat lähteet virtaavat keskustassa, historiallinen vetovoima"},
+      {"url": "https://www.sofia.bg/web/sofia-municipality/w/the-mineral-springs", "title": "Sofian kaupunki: The Mineral Springs (hakutuloksen yhteenveto)", "tukee": "keskustan kuuma lähde käytössä jo traakialaisten pyhäkkönä ja roomalaisten kylpylöinä"},
+      {"url": "https://en.wikipedia.org/wiki/Sofia_Central_Mineral_Baths", "title": "Wikipedia: Sofia Central Mineral Baths", "tukee": "avattu 13.5.1913; suljettu 1986; Sofian historiamuseo syyskuusta 2015"},
+      {"url": "https://tourism.government.bg/bg/tourist-destinations/2799/5775", "title": "Bulgarian matkailuministeriö: Sofia History Museum / Central Mineral Baths (hakutuloksen yhteenveto)", "tukee": "avajaiset 1913, museona 2015 alkaen"},
+      {"url": "https://en.wikipedia.org/wiki/Church_of_St._George,_Sofia", "title": "Wikipedia: Church of St. George, Sofia", "tukee": "myöhäisantiikin tiilirotunda, rakennettu 300-luvun alussa, kaupungin vanhin säilynyt rakennus"},
+      {"url": "https://inyourpocket.com/bulgaria/sofia/venues/st-george-rotunda", "title": "In Your Pocket: St George Rotunda (hakutuloksen yhteenveto)", "tukee": "4. vuosisadalla rakennettu, Sofian vanhin säilynyt rakennus"},
+      {"url": "https://en.wikipedia.org/wiki/Banya_Bashi_Mosque", "title": "Wikipedia: Banya Bashi Mosque", "tukee": "Mimar Sinan, valmistui 1566; Sofian ainoa toimiva moskeija"},
+      {"url": "https://www.guidebg.com/banya-bashi-mosque/", "title": "GuideBG: Banya Bashi Mosque (hakutuloksen yhteenveto)", "tukee": "1500-luvulla rakennettu, Sinan, ainoa toimiva moskeija (vuosi 1566-1576 vaihtelee)"},
+      {"url": "https://en.wikipedia.org/wiki/Amphitheatre_of_Serdica", "title": "Wikipedia: Amphitheatre of Serdica", "tukee": "löytyi 2004 hotellin rakentamisen yhteydessä"},
+      {"url": "https://emerging-europe.com/culture-travel-sport/staying-underground-sofias-ancient-roman-ampitheatre/", "title": "Emerging Europe: Staying underground: Sofia's ancient Roman amphitheatre", "tukee": "löytö 2004 Arena di Serdica -hotellin työmaalla"},
+      {"url": "https://en.wikipedia.org/wiki/Alexander_Nevsky_Cathedral,_Sofia", "title": "Wikipedia: Alexander Nevsky Cathedral, Sofia", "tukee": "vihitty 12.9.1924; kultakupoli 45 m"},
+      {"url": "https://www.guidebg.com/?p=30167", "title": "GuideBG: Alexander Nevsky Cathedral (hakutuloksen yhteenveto)", "tukee": "keskuskupoli 45 m, kullattu; vihitty 1924"},
+      {"url": "https://bnrnews.bg/en/post/113444/100-years-since-the-consecration-of-saint-alexander-nevsky-patriarchal-cathedral", "title": "BNR: 100 years since the consecration of Saint Alexander Nevsky Patriarchal Cathedral", "tukee": "vihkiminen syyskuussa 1924"},
+      {"url": "https://en.wikipedia.org/wiki/Sofia_University", "title": "Wikipedia: Sofia University", "tukee": "perustettu 1.10.1888"},
+      {"url": "https://freesofiatour.com/blog/sofia-university/", "title": "Free Sofia Tour: Sofia University (hakutuloksen yhteenveto)", "tukee": "perustettu 1888"},
+      {"url": "https://en.wikipedia.org/wiki/Borisova_gradina", "title": "Wikipedia: Borisova gradina", "tukee": "rakentaminen alkoi 1884 (suunnittelu 1882), Daniel Neff"},
+      {"url": "https://www.kupi.com/en/explore/bulgaria/sofia/borisova-gradina-park", "title": "Kupi: Borisova Gradina Park (hakutuloksen yhteenveto)", "tukee": "ensimmäinen suunnitelma ja ensimmäiset puut 1884"},
+      {"url": "https://en.wikipedia.org/wiki/National_Palace_of_Culture", "title": "Wikipedia: National Palace of Culture", "tukee": "avattu 31.3.1981"},
+      {"url": "https://www.bta.bg/en/news/862334-march-31-1981-national-palace-of-culture-inaugurated-in-sofia", "title": "BTA: March 31, 1981: National Palace of Culture Inaugurated in Sofia", "tukee": "vihitty 31.3.1981"}
+    ],
+    "pudotetut": [
+      "'49 kivennäis- ja lämpölähdettä' (vanha teksti, Wikipedia): Sofian kaupunki sanoo 'yli 40' -> luku pois",
+      "'Roomalaiset rakensivat lähteiden päälle Serdican' (vanha teksti): ei tarkasti vahvistettu kahdesta lähteestä -> korvattu muotoilulla 'kuumia lähteitä on käytetty jo antiikin ajoista'",
+      "Mineraalikylpylän arkkitehdit Momchilov ja Grünanger, Vienna Secession: Wikipedia ja haku, mutta ei tekstissä (tilanpuute)",
+      "Serdican areenan rakennusaika (200-300-luvut, Archaeology 2004 jopa 100-luku), kapasiteetti 24 000-25 000 ja mitat: lähteet eroavat -> pois",
+      "Katedraalin rakennusvuodet (kulmakivi 1882, pääosa 1904-1912) ja kapasiteetti (5 000 vs. 10 000): lähteet eroavat -> pois",
+      "Sofian yliopiston päärakennus 1924-1934: ei tekstissä; Borisovan puiston pinta-ala (9 ha vs. 302 ha) ja 'vanhin puisto' (vain matkasivu) -> pois",
+      "Kansalliskulttuuripalatsin pinta-ala 123 000 m2 ja 'Kaakkois-Euroopan suurin': 'suurin' vain mainossivuilla -> pois",
+      "Levski-muistomerkki, Sofia-patsas, Ruhtinaskaappaus, Vihellyskonsertti ja Banja Bashin moskeijan nosto: ei tarkistettu, ei tekstissä"
+    ],
+    "ristiriidat": [
+      "Banja Bashin valmistumisvuosi: Wikipedia ja useimmat 1566, Mosqpedia 1570, Zabihah 1576 -> teksti vain '1500-luvulta'",
+      "Rotundan alkuperäinen tarkoitus (kylpylä vs. uskonnollinen) ja rakennuttaja (Konstantinus vs. Galerius) -> ei tekstissä; vanha tieto 'kaupungin vanhin rakennus' vahvistettu",
+      "Mineraalikylpylän avaus: 1913 (Wikipedia, haku), Michelin 1908, yksi lähde 1911 pieni kylpylä -> käytetty 1913 (juhlallinen avajaisvuosi, useimmat lähteet)",
+      "Katedraalin kulmakivi 1882 vs. rakentaminen 1904-1912 -> ei tekstissä; vihkimisvuosi 1924 yhtäpitävä",
+      "Borisovan puisto: päätös 1882, rakennustyöt 1884 -> käytetty 'rakentaminen alkoi 1884'; vanha esittely sanoi 'puutarha vuodelta 1884'",
+      "Vanha esittely: mineraalikylpylä valmistui 1913 -> uusi 'avattiin 1913' (Wikipedia: viimeistely vielä parin vuoden kuluttua)"
+    ],
+    "muutos_sk": "Poistettu: '49 lähdettä' (Sofian kaupunki sanoo yli 40), 'roomalaiset rakensivat Serdican lähteiden päälle', 'kaupunginmuseo' -> 'Sofian historiamuseo', itä/kaakko/etelä-sijaintilauseet. Säilytetty ja tarkistettu: mineraalikylpylä 1913, rotunda 300-luvulta, yliopisto 1888, Borisovan puisto 1884. Lisätty: kylpylän museokäyttö 2015, Banja Bashin moskeija 1500-luvulta, Serdican areenan löytö 2004, katedraalin vihkiminen 1924 ja 45 m kupoli, NDK 1981."
+  }
+]

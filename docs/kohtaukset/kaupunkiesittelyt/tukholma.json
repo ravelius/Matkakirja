@@ -1,0 +1,38 @@
+[
+  {
+    "id": "tukholma",
+    "esittely": "Kartan alue on Tukholman ydin siinä kohdassa, jossa Mälaren-järvi laskee Itämereen. Salmessa nimeltä Strömmen saa onkia lohta ilman erillistä lupaa. Kuninkaanlinna rakennettiin vuonna 1697 palaneen Kolmen Kruunun linnan paikalle, ja kuninkaallinen perhe muutti siihen 1754. Riddarholmenin kirkko oli fransiskaanien luostarin kirkko; viimeinen sinne haudattu kuningas oli Kustaa V vuonna 1950.\n\nKaupungintalo valmistui 1923 lähes kahdeksasta miljoonasta tiilestä. Vasa-laiva upposi neitsytmatkallaan 1628, nostettiin 1961, ja museo avattiin 1990. Skansen perustettiin 1891. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 626,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Stockholm", "title": "Wikipedia: Stockholm", "tukee": "Mälaren laskee Itämereen Tukholman kohdalla"},
+      {"url": "https://www.naturkartan.se/en/stockholms-lan/norrstrom", "title": "Naturkartan: Norrström", "tukee": "lohta pyydettävissä, kalastuslupaa ei tarvita käsivälineillä; lohi istutetaan vuosittain"},
+      {"url": "https://www.visitstockholm.com/see--do/activities/go-fish/", "title": "Visit Stockholm: Go Fish", "tukee": "keskustan vesissä lohta ja meritaimenta; heittovapa/viehe ilman erillistä todistusta Stockholms Strömissä"},
+      {"url": "https://en.wikipedia.org/wiki/Stockholm_Palace", "title": "Wikipedia: Stockholm Palace", "tukee": "palo 7.5.1697 tuhosi Tre Kronor -linnan; Tessin nuorempi; käyttöön 1754"},
+      {"url": "https://kungligaslotten.se/english/articles-and-movies/news/2018-04-13-the-royal-palace-of-stockholm-a-history.html", "title": "Kungliga slotten: The Royal Palace of Stockholm, a history", "tukee": "palo 7.5.1697, kuninkaallinen perhe muutti sisään joulukuussa 1754"},
+      {"url": "https://en.wikipedia.org/wiki/Riddarholmen_Church", "title": "Wikipedia: Riddarholmen Church", "tukee": "fransiskaanien luostarin kirkko, 1200-luvun loppu; useimmat monarkit haudattu; Kustaa V viimeisin lueteltu"},
+      {"url": "https://www.kungligaslotten.se/english/royal-palaces-and-sites/the-riddarholmen-church/history.html", "title": "Kungliga slotten: The Riddarholmen Church, history", "tukee": "fransiskaaniluostari perustettu 1270; Kustaa V haudattu 1950, viimeinen kuningas kirkossa"},
+      {"url": "https://en.wikipedia.org/wiki/Stockholm_City_Hall", "title": "Wikipedia: Stockholm City Hall", "tukee": "rakennettu 1911–1923, vihitty 23.6.1923, lähes kahdeksan miljoonaa tiiltä, arkkitehti Östberg"},
+      {"url": "https://aviewoncities.com/stockholm/stadshuset", "title": "A View on Cities: Stadshuset", "tukee": "Östberg, 1911–1923, lähes kahdeksan miljoonaa tiiltä, vihittiin 23.6.1923 (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/Vasa_(ship)", "title": "Wikipedia: Vasa (ship)", "tukee": "upposi 10.8.1628 neitsytmatkalla; nostettu 1961; museo avattu yleisölle 1990"},
+      {"url": "https://en.wikipedia.org/wiki/Vasa_Museum", "title": "Wikipedia: Vasa Museum (hakutuloksena)", "tukee": "upposi 1628, nostettiin 1961, museo avattiin virallisesti 15.6.1990 Djurgårdenilla"},
+      {"url": "https://en.wikipedia.org/wiki/Skansen", "title": "Wikipedia: Skansen", "tukee": "avattu 11.10.1891, perustaja Artur Hazelius, Djurgården"},
+      {"url": "https://skansen.se/en/about-us/our-history/", "title": "Skansen: Our history", "tukee": "perustettu 1891 Artur Hazeliuksen toimesta, vihitty 11.10.1891"}
+    ],
+    "pudotetut": [
+      "Perimätieto, että salmi suljettiin 1200-luvulla paaluilla: Wikipedia mainitsee vain yhtenä nimen selitysteoriana ('pile barrages'), ei toista lähdettä tapahtumalle",
+      "'Djurgården, entinen kuninkaan metsästyspuisto': Wikipedia mainitsee vain Juhana III:n riistapuiston 1579; ei kahta lähdettä, jätetty pois",
+      "Kaupungintornin korkeus 106 m: vain yksi lähde",
+      "Sergelin tori (valmistui 1967), Vädersolstavlan (1535, nykyinen kopio 1636): faktat tarkistettu mutta eivät mahtuneet 700 merkkiin; Setelipankki, Naamiaislaukaus ja Kreuger: ei tarkistettu tässä erässä",
+      "Skansen 'maailman ensimmäinen ulkoilmamuseo': kiistanalainen (Norsk Folkemuseum 1881), jätetty pois"
+    ],
+    "ristiriidat": [
+      "Kuninkaanlinnan valmistuminen: käyttöön 1754, Wikipedian infolaatikko 1760, virallisesti valmis 1771; teksti käyttää vain muuttoa 1754",
+      "Riddarholmenin luostarin perustaminen 1270 (kungligaslotten) vs. 1200-luvun loppu (Wikipedia); teksti ei anna vuotta",
+      "Ensimmäinen kuninkaan hautaus Riddarholmenissa: Magnus Ladulås 1290 vs. Karl Knutsson 1470 eri lähteissä; teksti käyttää vain viimeistä hautausta 1950",
+      "Lohi Strömmenissä: lähteet toteavat, että lohta istutetaan vuosittain; teksti ei väitä sen olevan luonnonvarainen",
+      "Vasan säilöntävaiheen (Wasavarvet) päättymisvuosi 1983 vs. 1988 eri lähteissä; teksti ei käytä sitä (museon avaus 1990 yhtenevä)"
+    ],
+    "muutos_sk": "Poistettu: paaluperimätieto, 'kuninkaan metsästyspuisto', kaupungintalon ja Sergelin torin kohdat siltä osin kuin ei tarkistettu, Gamla stanin kujat. Lisätty: lohenkalastus ilman lupaa, Kolmen Kruunun linnan palo 1697 ja muutto 1754, Riddarholmenin viimeinen kuningashautaus 1950, kaupungintalon 1923 ja tiilimäärä, Vasan 1628/1961/1990 sekä Skansenin 1891."
+  }
+]

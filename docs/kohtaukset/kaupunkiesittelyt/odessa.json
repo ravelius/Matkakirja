@@ -1,0 +1,38 @@
+[
+  {
+    "id": "odessa",
+    "esittely": "Kartan alue on Odessan keskusta ja satama Mustanmeren rannalla. Katariina II määräsi vuonna 1794 uuden sataman ja kaupungin perustettavaksi Hadzibeyn linnoituksen paikalle, ja rakennustyötä ohjasi pitkälti flaamilaisen insinöörin Franz de Wollantin suunnitelma. Potjomkinin portaat rakennettiin vuosina 1837–1841; niissä on nykyään 192 askelmaa ja korkeutta 27 metriä.\n\nOopperatalon edeltäjä paloi vuonna 1873, ja wieniläisten Fellnerin ja Helmerin suunnittelema nykyinen talo avattiin 1887. Sataman suulla on Vorontsovin majakka. Kaupunginpuisto on perustettu 1803, ja Privozin tori lasketaan alkaneeksi vuodesta 1827. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 673,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Odesa", "title": "Wikipedia: Odesa", "tukee": "Katariina II:n määräys 1794 (satama ja kauppapaikka, osoitettu de Ribasille); flaamilainen insinööri Franz de Voland/Wollant laati suunnitelman, jota käytettiin rakentamisessa"},
+      {"url": "https://en.scientificrussia.ru/historical-events/2-sentabra-1794-byla-zalozena-odessa-2", "title": "Scientific Russia: Odessa founded 2 Sept 1794", "tukee": "perustaminen 1794 Hadzibeyn (Khadzhibey) linnoituksen paikalle Katariina II:n päätöksellä; Wollantin ehdotus (luettu hakutuloksen tiivistelmänä, suora haku 404)"},
+      {"url": "https://whc.unesco.org/document/198694", "title": "UNESCO World Heritage nomination dossier: Odesa", "tukee": "kaupunki perustettu 1794 Katariina II:n päätöksellä; de Wollantin ortogonaalinen kaupunkisuunnitelma (luettu hakutuloksen tiivistelmänä, suora haku 403)"},
+      {"url": "https://en.wikipedia.org/wiki/Potemkin_Stairs", "title": "Wikipedia: Potemkin Stairs", "tukee": "rakennettu 1837–1841, 192 askelmaa (alun perin 200), korkeus 27 m"},
+      {"url": "https://www.amusingplanet.com/2014/08/potemkin-stairs-odessa.html", "title": "Amusing Planet: Potemkin Stairs, Odessa", "tukee": "1837–1841, 192 askelmaa (alin kahdeksan hiekan alla), 27 m korkea, 142 m pitkä"},
+      {"url": "https://en.wikipedia.org/wiki/Odesa_Opera_and_Ballet_Theater", "title": "Wikipedia: Odesa Opera and Ballet Theater", "tukee": "ensimmäinen teatteri 1810 paloi 1873; nykyinen talo avattu 1887, rakentajat Fellner ja Helmer"},
+      {"url": "https://ukraine.wilsoncenter.org/blog-post/opera-houses-take-center-stage", "title": "Kennan Institute: Opera houses take center stage", "tukee": "edellinen teatteri paloi 1873; nykyinen valmistui 1887; wieniläiset arkkitehdit Fellner ja Helmer"},
+      {"url": "https://en.wikipedia.org/wiki/Odesa_city_garden", "title": "Wikipedia: Odesa city garden", "tukee": "puisto perustettu 1803 (Felix de Ribas), kaupungin vanhin puisto"},
+      {"url": "https://www.inyourpocket.com/ukraine/odesa/venues/City-Garden", "title": "In Your Pocket: City Garden (Odesa)", "tukee": "perustettu 1803, de Ribasin veljekset; Odessan ensimmäinen puisto"},
+      {"url": "https://en.wikipedia.org/wiki/Pryvoz_Market", "title": "Wikipedia: Pryvoz Market", "tukee": "kauppa alkoi 1827 hevoskärryiltä; Odessan suurin ruokatori"},
+      {"url": "https://odessa-journal.com/public/legends-of-odessa-privoz-trade-police-plague-fire-treasure-and-elephants", "title": "Odessa Journal: Legends of Odessa, Privoz", "tukee": "Privozin syntyvuotena pidetään virallisesti 1827 (luettu hakutuloksen tiivistelmänä, suora haku 403)"},
+      {"url": "https://en.wikipedia.org/wiki/Vorontsov_Lighthouse", "title": "Wikipedia: Vorontsov Lighthouse", "tukee": "majakka sataman suulla Odessassa"},
+      {"url": "https://structurae.net/en/structures/vorontsov-lighthouse", "title": "Structurae: Vorontsov Lighthouse", "tukee": "majakka sataman suulla, nykyinen on kolmas samalla paikalla (luettu hakutuloksen tiivistelmänä)"}
+    ],
+    "pudotetut": [
+      "Morse-O (kolme pitkää välähdystä): Wikipedia ristiriitainen itsensä kanssa (Fl(3) R 12s vs. kolme viivaa), toinen lähde vain toistaa Wikipediaa",
+      "Majakan rakennusvuosi: 1862 / 1888 / 1955 lähteestä riippuen, ei käytetty",
+      "'Ranskalainen insinööri' ruutukaavan piirtäjänä (nykyinen teksti): lähteet sanovat flaamilainen (Wollant); korvattu",
+      "'Odessan suurin ruokatori' ja 'kaupungin vanhin puisto' jätetty pois (ylisanoja, toinen lähde sanoo vain 'ensimmäinen puisto')",
+      "Oopperatalon sähkövalo (ensimmäinen Edison-lamppuja käyttänyt rakennus): vain yksi lähde"
+    ],
+    "ristiriidat": [
+      "Vorontsovin majakka: rakennusvuosi 1862 / 1888 / 1955; Morse-O vs. Fl(3) R 12s; korkeus 26 / 27,2 m",
+      "Privoz: virallinen 1827, paikalliset lähteet 1795–1797; Hedelmäpassaasi 1904 vs. 1913",
+      "Oopperatalon rakennustyön alku 1883 vs. 1884 (avajaiset 1.10.1887 kaikissa)",
+      "Kaupungin suunnitelman kunnia: Wollant vs. de Ribas vs. Zubov eri lähteissä; Wollantin suunnitelma mainitaan tekstissä 'ohjasi pitkälti' (Wikipedia: kaupunki rakennettiin pitkälti hänen suunnitelmallaan)",
+      "Katariina II:n määräyksen päivämäärä 2.9.1794 vain yhdessä lähteessä; teksti käyttää vain vuotta 1794"
+    ],
+    "muutos_sk": "Poistettu: Morse-O ja majakan 'kolme pitkää', 'ranskalainen insinööri', 'ruutukaava piirrettiin kerralla', Odessan suurin ruokatori, kaupungin vanhin puisto, majakan nimi lauseen aiheena. Lisätty: perustaminen 1794 (Katariina II, Hadzibeyn linnoituksen paikka), Wollantin suunnitelma, portaiden 192 askelmaa ja 27 m, oopperatalon palo 1873 ja Fellner/Helmer, Vorontsovin majakka lyhyesti, Privozin 1827 'lasketaan alkaneeksi'."
+  }
+]
