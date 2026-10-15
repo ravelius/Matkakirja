@@ -281,3 +281,23 @@ LCD pelkkä nimi, Live piiloon + ilmiöt + kohokohtien data). Uudempi kärki **e
   Ajo todistus-kohokohta5-196-20261015-2321 (c312aba15): kuvapari omistajalle/iss-kohokohta-auringonnousu-cupola.jpg → PT:llä.
 - Opit: asema seisoo ~650 km kohteen takana (Cupolan katse kohteeseen), radan suunta riippuu hetkestä (03.28 koilliseen, 04.18 kaakkoon);
   ISS-kameran kuvaputki piirtää nousun aina, live-Cupola vasta kiekon kanssa. Valoseppä voi säätää kiekon kirkkautta (16).
+
+## PÄIVITYS 16.10. 00.20 — NOLLAUS (Postivahti, kova raja 36 %): MERINIMET NOSTOINA KESKEN (seuraaja jatkaa tästä)
+
+**Valmis:** auringonnousu junassa 196 (siirtoseppa/iss-nousu-196 21f52356f NS:llä, PT kuittasi). Pelikoodarin d0164dd0d (kohokohdat.json
+kysymykset) yhdistyy puhtaasti.
+
+**KESKEN: MERINIMET NOSTOINA** (PT, OMISTAJAN PYYNTÖ 15.10. 23.56 "merien nimet pitäisi olla klikattavia nostoja"; VAIN EUROOPPA, kytkin, juna 196,
+kuva iPhone + Mac PT:lle; SK luonnostelee Pulun kysymykset rinnalla – älä odota):
+- Proto-haara **siirtoseppa/meri-nostot-196 d7d4a89eb** (BUILD 195 master 64e1efcd1; worktree /Users/Shared/Claude/wt/proto-siirtoseppa-meri).
+  Nimikerros.MeriOsuma (näkyvän merinimen laatikko + 8 pt) → NostoKerros.MeriNosto (NostoSaannot.MeriVastaa + OnEuroopanMeri, lähin) →
+  UiPalvelut.IlmoitaValo → olemassa oleva Nostokortti (NostotKartalla.MeriNapautus kuuntelee PalloKierto.Napautettu). Kytkin
+  NostoKerros.MeriNostot (oletus pois); komento `nostot meri 0|1|tila|napauta <id>`. Meri-nostoa ei piirretä merkiksi (Syy.Meri ennallaan).
+  Testit Kartta-testit NostoSaannot 19/19, Peli-testit 2/2, unity-tarkistus 0, tarkista.sh 0.
+- Sisältö v751: 18 merinimeä saa noston; ILMAN nostoa 11 (englannin-kanaali, riianlahti, kattegat, skagerrak, vienanmeri, keltienmeri,
+  lioninlahti, bosporinsalmi, dardanellit, gibraltarinsalmi, juutinrauma) + valtameret → kerro PT:lle (sisältöaukko, SK/web).
+- **iPhone-ajo odottaa**: odottaja pid 65296 (tyokalut/siirtoseppa-ajot/ajo-meri-nostot-196.zsh, loki lokit/siirtoseppa-meri-nostot-196.log,
+  skenaario skenaariot/sk-meri-nostot-196.txt, siirtoseppa-iPhone 95EEDB48), liput kaannos-meri.nyt + simu-meri.nyt Julkaisijalta (pyydetty 00.0x).
+  Valmis → kuvat m0–m3 tarkista (merinimi suomenlahti/tyrrhenanmeri → kortti), SIMU VAPAA Julkaisijalle, kuvat PT:lle.
+- **Mac-kuva**: Julkaisijalta kysytty lupa mac-kaanna.sh d7d4a89eb + appi ikkunassa (malli tyokalut/linssiseppa-ajot/mac-merkit.sh, idle-tarkistus).
+- PT:n kuittauksen jälkeen SHA NS:lle junaan 196.
