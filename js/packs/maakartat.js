@@ -4558,15 +4558,15 @@ export const KAUPUNKIKARTAT = {
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
      * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
      */
-    esittely: 'Kartta rajaa Granadan vanhan ytimen Sierra Nevadan '
-      + 'juurella noin 740 metrin korkeudessa. Kaupunki syntyi '
-      + 'kohtaan, jossa vuorilta tuleva Darro yhtyy Geniliin; Darro '
-      + 'katettiin 1800-luvun lopulla kadun alle ja virtaa nykyään '
-      + 'talojen alitse. Joen molemmin puolin nousee kaksi kukkulaa '
-      + 'vastakkain: toisella on Alhambran 142 000 neliömetrin '
-      + 'palatsialue, toisella Albaicínin valkoinen kaupunginosa. '
-      + 'Tasaisemmalla maalla lännessä seisoo katedraali. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartta kattaa Granadan vanhan ytimen Sierra Nevadan juurella, missä Darro-joen '
+      + 'vastakkaisilla puolilla kohoavat Alhambran ja Albaicínin kukkulat. Nasrid-dynastia '
+      + 'rakensi Alhambran; sen valtio päättyi vuonna 1492, kun kaupunki luovutettiin '
+      + 'Kastilian ja Aragonian hallitsijoille.\n\n'
+      + 'Alhambran sisällä ovat Leijonain piha ja Irvingin huoneet; Washington Irvingin '
+      + 'Alhambra-kertomukset ilmestyivät 1832. Vastarinteellä ovat Albaicínin näköalapaikka '
+      + 'ja Sacromonten luolat, ja Albaicín liitettiin Alhambran ja Generalifen '
+      + 'maailmanperintökohteeseen 1994. Alempana ovat Granadan katedraali (1523–1704) ja '
+      + 'Alcaicería, joka paloi 1843. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Sacromonten luolista ja Granadan katedraalista ei ole
@@ -5912,15 +5912,14 @@ export const KAUPUNKIKARTAT = {
      */
     rajat: { pohjoinen: 51.5291, etela: 51.4884, lansi: -0.1725, ita: -0.0475 },
     piirtoRajat: { pohjoinen: 51.54131, etela: 51.47619, lansi: -0.21, ita: -0.01 },
-    esittely: 'Lontoo ei ole yksi kaupunki vaan kaksi, jotka kasvoivat '
-      + 'yhteen: idässä City of London, roomalaisten muurien rajaama, '
-      + '"neliömailiksi" kutsuttu alue, jossa tehdään rahaa, ja lännessä '
-      + 'Westminster, '
-      + 'jossa tehdään päätöksiä. Väliin jäänyt maa täyttyi vähitellen '
-      + 'taloilla.\n\nThames on vuorovesijoki: pinta nousee ja laskee '
-      + 'Lontoon kohdalla noin seitsemän metriä kahdesti päivässä, ja '
-      + 'laskuveden aikaan rannalta löytyy yhä savipiippuja ja '
-      + 'keskiaikaisia nuppineuloja.',
+    esittely: 'Kartan alue on Lontoon ydin Thamesin molemmin puolin. Lännessä Westminsterin '
+      + 'kohteita ovat Buckinghamin palatsi, Trafalgar Square, Big Ben ja joen vastarannalla '
+      + 'Lontoon silmä; idässä kartta päättyy Tower Bridgeen.\n\n'
+      + 'Pyhän Paavalin katedraali on Christopher Wrenin työ: sen rakentaminen alkoi 1675 ja '
+      + 'valmistui 1710, kun Palo 1666 oli tuhonnut edeltäjän ja yli 13 000 taloa. Tower '
+      + 'Bridge avattiin 30. kesäkuuta 1894. Kartan luoteisosassa Alexander Fleming huomasi '
+      + 'St Mary\'s -sairaalassa 1928 homeen tappavan bakteereja, ja siitä syntyi '
+      + 'penisilliini. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Buckinghamin palatsi',
@@ -6148,13 +6147,15 @@ export const KAUPUNKIKARTAT = {
      */
     rajat: { pohjoinen: 52.547, etela: 52.478, lansi: 13.325, ita: 13.475 },
     piirtoRajat: { pohjoinen: 52.5677, etela: 52.4573, lansi: 13.28, ita: 13.52 },
-    esittely: 'Berliini on rakennettu veden ja metsän keskelle: siltoja on '
-      + 'noin 1 700 — moninkertaisesti Venetsian verran — ja kolmasosa '
-      + 'kaupungista on puistoa, metsää tai järveä. Vaakunassa seisoo musta '
-      + 'karhu, ja karhupatsaita tulee kaduilla vastaan vähän väliä.\n\n'
-      + 'Kylmän sodan jäljet näkyvät yhä: muurin linja on merkitty '
-      + 'keskustaan katukiveyksen kaksoisrivinä, ja idän ja lännen '
-      + 'katuvalot hohtavat öisin eri sävyissä.',
+    esittely: 'Kartan alue on Berliinin historiallinen keskusta Spree-joen varrella: '
+      + 'Valtiopäivätalosta ja Brandenburgin portilta itään Museosaarelle ja Tv-tornille, '
+      + 'etelässä Checkpoint Charlie ja kaakossa East Side Gallery. Vuosina 1961–1989 raja '
+      + 'kulki juuri tämän alueen läpi.\n\n'
+      + 'Brandenburgin portin suunnitteli Carl Gotthard Langhans, ja se valmistui 1791. '
+      + 'Museosaari kuuluu UNESCOn maailmanperintöön vuodesta 1999. Tv-torni valmistui 1969 '
+      + 'ja on 368 metriä korkea. Muuri 1961 kertoo yöstä 13. elokuuta 1961, jolloin '
+      + 'Itä-Saksa alkoi sulkea rajaa; raja avattiin 9. marraskuuta 1989. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Järjestys on kartan numerointi (omistajan taittopäätös
@@ -6500,13 +6501,14 @@ export const KAUPUNKIKARTAT = {
      * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
      * ilmansuuntien ja kortteleiden kuvailu on poistettu.
      */
-    esittely: 'Venetsia on rakennettu 118 saarelle keskelle matalaa '
-      + 'laguunia, ja talot seisovat miljoonien puupaalujen varassa: '
-      + 'hapettomassa liejussa puu ei lahoa vaan kovettuu. Saaret on '
-      + 'ommeltu yhteen sadoilla silloilla, ja jokainen niistä '
-      + 'ylitetään jalan. Alueen halki kaartaa Canal Grande, kaupungin '
-      + 'lähes neljä kilometriä pitkä pääkatu, jonka yli pääsee kuivin '
-      + 'jaloin vain neljästä kohdasta. Kartan kohteista pääsee '
+    esittely: 'Kartan alue on Venetsian vanha ydin laguunin saarilla: Canal Granden varrelta Pyhän '
+      + 'Markuksen torille ja itään Arsenaalille asti. Kaupunki on rakennettu veden varaan, '
+      + 'ja saaret on yhdistetty toisiinsa silloilla.\n\n'
+      + 'Rialton silta on Antonio da Ponten suunnittelema ja valmistui kivisenä 1591; Canal '
+      + 'Granden yli kulkee nykyään neljä siltaa. Markuksen hevoset tuotiin '
+      + 'Konstantinopolista 1204 neljännen ristiretken jälkeen. Aldon paino julkaisi 1501 '
+      + 'klassikoita pienikokoisina kirjoina ja kursiivilla. La Fenicen oopperatalo avattiin '
+      + '1792, tuhoutui tulipalossa 1996 ja avattiin uudelleen 2003. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
@@ -8630,14 +8632,15 @@ export const KAUPUNKIKARTAT = {
     // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta --vari).
     piirtoRajat: { pohjoinen: 35.9068, etela: 35.8892, lansi: 14.5049, ita: 14.5241 },
     varikartta: 'assets/kartat/valletta-varikartta.png',
-    esittely: 'Vallettan koko vanhakaupunki mahtuu kapealle niemelle Grand '
-      + 'Harbourin ja Marsamxett-sataman välissä. Ritarikunta rakensi '
-      + 'kaupungin ruutukaavaan suuren piirityksen 1565 jälkeen, ja '
-      + 'isoisän matkan aikaan vuonna 1873 kaupunki on brittiläisen '
-      + 'Maltan pääkaupunki: paksut kalkkikivimuurit, Suurmestarin '
-      + 'palatsi ja Pyhän Johanneksen konkatedraali ovat yhä samat, '
-      + 'mutta ritarikunnan majataloista on tullut sotilashallinnon '
-      + 'virastoja. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Vallettan vanhakaupunki Sciberrasin niemellä Grand Harbourin ja '
+      + 'Marsamxett-sataman välissä. Johanneksen ritarikunta voitti ottomaanit suuressa '
+      + 'piirityksessä 1565 ja rakensi sen jälkeen uuden, linnoitetun pääkaupungin.\n\n'
+      + 'Pyhän Elmon linnake kaatui 23. kesäkuuta 1565 lähes kuukauden piirityksen jälkeen; '
+      + 'Pyhä Elmo 1565 kertoo siitä. Vallettan peruskiven laski Jean de Valette 28. '
+      + 'maaliskuuta 1566. Keskustassa ovat Pyhän Johanneksen ko-katedraali (rakennettu '
+      + '1572–1577, arkkitehti Girolamo Cassar), Suurmestarin palatsi ja Auberge de Castille. '
+      + 'Piirityskello-muistomerkki vihittiin 1992 toisen maailmansodan uhreille. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Auberge de Castille', lat: 35.895833, lon: 14.511389,
@@ -14899,12 +14902,14 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
     piirtoRajat: { pohjoinen: 60.4058, etela: 60.3802, lansi: 5.28745, ita: 5.34905 }, // reunus 1,6 (Karttaseppä 12.10.2026)
-    esittely: 'Kartta näyttää Vågenin lahden ja sen ympärille '
-      + 'kiertyvän vanhan Bergenin. Vasemmalla työntyy veteen '
-      + 'Nordnesin kapea niemi, lahden itärannalla erottuvat '
-      + 'Bryggenin laiturit, lahden pohjukassa on tori, oikealla '
-      + 'nousevat Fløyenin rinteen kadut ja oikealla alhaalla on '
-      + 'Lille Lungegårdsvannetin monikulmainen lampi. Kartan '
+    esittely: 'Kartta kattaa Bergenin vanhan keskustan Vågenin lahden ympärillä. Perimätiedon '
+      + 'mukaan kuningas Olav Kyrre perusti kaupungin vuonna 1070, ja lahden rannalla toimi '
+      + 'myöhemmin Hansaliiton kauppa-asema. Puukaupunki paloi usein, muun muassa 1702.\n\n'
+      + 'Nordnesin niemellä ovat Fredriksbergin linnake ja Munkelivin luostarin paikka. '
+      + 'Luostarin perusti noin 1110 Øystein Magnusson, ja linnake rakennettiin 1660-luvulla '
+      + 'Vågenin meritaistelun jälkeen. Korskirken mainitaan jo 1100-luvun lopulla, ja '
+      + 'Nykirkenin nykyisen kivikirkon suunnitteli Reichborn 1756 palon jälkeen. Permanenten '
+      + 'valmistui 1896, Kaupunginkirjasto 1917 ja Yliopistomuseo perustettiin 1825. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
@@ -18443,6 +18448,15 @@ export const KAUPUNKIKARTAT = {
     numeroympyrat: true,
     rajat: { pohjoinen: 41.9082, etela: 41.8986, lansi: 12.4467, ita: 12.4605 },
     piirtoRajat: { pohjoinen: 41.91108, etela: 41.89572, lansi: 12.44256, ita: 12.46464 }, // reunus 1,6 (Karttaseppä 12.10.2026)
+    esittely: 'Kartta kattaa Vatikaanivaltion, jonka pinta-ala on noin 0,44 neliökilometriä. Valtio '
+      + 'syntyi Lateraanisopimuksella, joka allekirjoitettiin 11. helmikuuta 1929 pyhän '
+      + 'istuimen ja Italian välillä. Puutarhat peittävät siitä noin puolet, ja niiden alku '
+      + 'on paavi Nikolai III:n (1277–1280) ajalta.\n\n'
+      + 'Pietarinkirkon rakennustyö alkoi 1506 ja kirkko vihittiin 1626; Pietarinaukion '
+      + 'obeliski siirrettiin paikalleen 1586. Apostolisen palatsin nykyinen rakennus '
+      + 'aloitettiin 1589, ja siinä on paavin asunto ja Vatikaanin museot, jotka polveutuvat '
+      + 'Julius II:n kokoelmasta. Sikstuksen kappelin katon Michelangelo maalasi 1508–1512. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       {
         nimi: 'Pietarinkirkko',
