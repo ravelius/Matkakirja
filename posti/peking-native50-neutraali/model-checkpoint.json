@@ -1,0 +1,40 @@
+{
+  "modelRound": 50,
+  "native50ScopedCheckpointComplete": true,
+  "parentNativeRound": 49,
+  "nativeBlendSHA256": "a66aa21512056731c19399db1fe25bcfef42f63c958e055a09638f1be46b734f",
+  "packedBlendSHA256": "ecf8fd28d7168a2a4c59180a4dff4717b62baaf565e42d62c78353b6d2efd4b6",
+  "independentAstraPersonallyViewedAll18OriginalsAnd18ParentReferences": true,
+  "producerPersonallyViewedFinalSpotChecks": [
+    "controlRGB/aukio",
+    "neutral/beihai"
+  ],
+  "producerAlsoPersonallyViewedBothNeutralPilotFrames": true,
+  "producerPersonallyViewedAll18FinalFrames": false,
+  "fourSupplementalPlainSourceFootprintMassesActualAndPacked": true,
+  "newMassesRegistryMember": false,
+  "originalRegistry225Built223Unchanged": true,
+  "allPreviousNative49MeshesExact": true,
+  "onlyOldMaterialChangeIsGoldRoofFactor": true,
+  "originalRGBAndFixedCamerasAnd6TargetsByteExact": true,
+  "ordinaryHeightMeasurementOrigin": 41,
+  "newIndependentOrdinaryHeightMeasurement": false,
+  "historicalHeightChoicesResolvedByDecision295": true,
+  "sourceNumericalToleranceFailuresRemainHistorical": true,
+  "physicalHeightVerificationClaimed": false,
+  "generatedTextureCalls": 30,
+  "actualAppliedFreshGeneratedTextures": 22,
+  "buildingInventorySHA256": "f20dc9c5f318b5a3abd54060d70d4f988c41463981249bb4c37874fe7da72c26",
+  "buildingInventoryRound": 50,
+  "allImagesPackedByteExact": true,
+  "gameExportAndRuntimeAccepted": false,
+  "ownerQualityGoalReached": false,
+  "createdAtUTC": "2026-10-15T15:46:43.092461+00:00",
+  "evidenceSHA256": {
+    "visible-session-astra-native50-and-neutral-review.json": "4d010bdf96439d0b64322b7ee796d6023cb746821463c59e9188d9771e79e5c2",
+    "visible-session-sol-square50-native-pilot-audit.json": "35099195549bff624e3c404326d89bc84485d53601d19f8b26b8645057381516",
+    "round50/final-native-square-readback.json": "737cc0179cf1e84da5b9dbdfe60cd57d2cf41bd5d514498df7561aa6f76e578c",
+    "round50/prepared-source-proof-stable.json": "d878a9c22e34e4ad20155491fd13cf1ae9388587fcd1503382d5596cb468dfe4",
+    "review-candidate-round50/3d/peking.packing-proof.json": "58b9e627490b0f6fbce4b52f531ad1b0feab3ba58a8c358098a4ad7c7b6a3dcc"
+  }
+}
