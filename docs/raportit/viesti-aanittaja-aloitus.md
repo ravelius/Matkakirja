@@ -46,3 +46,6 @@ Lue ensin docs/raportit/viesti-aanittaja-luovutus-20261014.md (avoimet: Max Q va
 
 ## Päivitys 15.10.2026 (tilinvaihto)
 Lue ensin docs/raportit/viesti-aanittaja-luovutus-20261014.md (osio "PÄIVITYS 15.10.2026" alimpana): ISS-työt, skanneri, valas, museo, Ranska ja avoimet. Uusi PT = local_74630a27… (ei local_593b89a1, joka on KK). Ei uusia töitä ennen PT:n käskyä.
+
+## Päivitys 15.10.2026 klo 16.3x (nollaus 27 %)
+Lue ensin docs/raportit/viesti-aanittaja-luovutus-20261015.md (ja -20261014.md). Osoitteet: PT local_5df52e10…, Postivahti local_a24c43c0…, PK local_7fcab04b…, KK local_dfa7296a…. Ei uusia töitä ennen PT:n käskyä.
