@@ -206,7 +206,7 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
   OpasValikko vapaaNappi); Pulun ääni klippiavaimella, joka toimii ilman ääntä (repliikki tulee SK:lta myöhemmin). Pariisi ei ole Pallokierros.Kaupungit-listassa
   (praha, lontoo, koopenhamina, ateena) → selvitä ensin Pariisin kierroksen loppu (yleinen opas-esitys / kippi).
 
-## PÄIVITYS 15.10. 17.0x — VAPAA LENTO KIERROKSEN JÄLKEEN TEHTY (juna 195, odottaa PT:n kuittausta)
+## PÄIVITYS 15.10. 16.5x — VAPAA LENTO KIERROKSEN JÄLKEEN TEHTY (juna 195, odottaa PT:n kuittausta)
 
 - Proto-haara **siirtoseppa/vapaalento-195 2468450eb** (BUILD 194 b110dff52 päällä; worktree /Users/Shared/Claude/wt/proto-siirtoseppa-vapaalento).
   Ydin OpasSilmukka.KierrosLoppuun / VapaaLentoLopussaKaytettavissa / AloitaVapaaLentoLopussa; Unity OpasSovitin.VapaaLentoKutsu.cs
