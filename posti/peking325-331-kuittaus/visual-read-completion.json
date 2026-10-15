@@ -1,0 +1,79 @@
+{
+  "sourceCommit": "fbe7d644a4e9bbbea7d80d897af0a096850167be",
+  "sourceBlobSHA1": "87583829f13125b1fbd5a204cac3752d96e297e5",
+  "sourceTextReadInFull": true,
+  "parentPersonallyViewedAllThreeDeliveredJPGs": true,
+  "deliveredJPGDimensions": [
+    2400,
+    1595
+  ],
+  "reportedOriginalSimulatorScreenDimensions": [
+    2064,
+    2752
+  ],
+  "pixelStatisticsInPartnerLetterNotIndependentlyRecomputed": true,
+  "twoFlightsNotPixelRegistered": true,
+  "files": [
+    {
+      "sourcePath": "posti/valoseppa-codex-peking284-lentotesti-ja-native51-20261015.md",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/incoming-feedback/flight325-331/valoseppa-codex-peking284-lentotesti-ja-native51-20261015.md",
+      "bytes": 4968,
+      "gitBlobSHA1": "87583829f13125b1fbd5a204cac3752d96e297e5",
+      "sha256": "8d98b2cc5ac275204381b67964da0755d3e8f9c8d01c050a4ba369cd4d86c580",
+      "remoteCommitBytesExact": true
+    },
+    {
+      "sourcePath": "posti/valoseppa-peking284-lentotesti/peking284-pari-1-alku.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/incoming-feedback/flight325-331/peking284-pari-1-alku.jpg",
+      "bytes": 947705,
+      "gitBlobSHA1": "f9da1beee5af62f34098288360261f90f5c12d1e",
+      "sha256": "45b4d522172393179f74fed25c660f498ac82339928b2d323de1a8a72634089a",
+      "remoteCommitBytesExact": true,
+      "imageFormat": "JPEG",
+      "size": [
+        2400,
+        1595
+      ]
+    },
+    {
+      "sourcePath": "posti/valoseppa-peking284-lentotesti/peking284-pari-2-30s.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/incoming-feedback/flight325-331/peking284-pari-2-30s.jpg",
+      "bytes": 878894,
+      "gitBlobSHA1": "817f76d6bb8a199dd4d0d6af2bb4bff6e97b1256",
+      "sha256": "5cc2aa4fe1da6638d73484720dc6b17d4363dc4f0d406b2333f37ba2302329ec",
+      "remoteCommitBytesExact": true,
+      "imageFormat": "JPEG",
+      "size": [
+        2400,
+        1595
+      ]
+    },
+    {
+      "sourcePath": "posti/valoseppa-peking284-lentotesti/peking284-pari-3-ilta.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/incoming-feedback/flight325-331/peking284-pari-3-ilta.jpg",
+      "bytes": 818948,
+      "gitBlobSHA1": "57fc0f7310a33ddee274e43436d46d1be8e4af9e",
+      "sha256": "471c73199b93eb69a6e3029c46df38c1ca7eb44dc1895f0f06a792414cf78ea7",
+      "remoteCommitBytesExact": true,
+      "imageFormat": "JPEG",
+      "size": [
+        2400,
+        1595
+      ]
+    }
+  ],
+  "observed": [
+    "own buildings visible over Ion photographic terrain",
+    "Ion photographic shadows remain under own buildings",
+    "foliage conspicuously pale",
+    "day versus evening roof appearance changes"
+  ],
+  "notValidated": [
+    "real-device FPS and memory",
+    "moving and mixed-neighbor LOD transitions",
+    "own game water and submerged floor visibility",
+    "source-surveyed heights",
+    "public or normal game integration"
+  ],
+  "createdAtUTC": "2026-10-15T18:31:44.618215+00:00"
+}

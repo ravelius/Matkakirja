@@ -1,0 +1,16 @@
+{
+  "sourceCommit": "fbe7d644a4e9bbbea7d80d897af0a096850167be",
+  "sourceBlobSHA1": "87583829f13125b1fbd5a204cac3752d96e297e5",
+  "acknowledgedOutgoingCommits": [
+    "79f6d7813f635b9c7f60ebba1e71b98872167760",
+    "dcefd65acbeee44ae4e31b27f1417e523b8a2eb9",
+    "1c03a999616dfa7b309ed76112a2d807ba8adb7e"
+  ],
+  "recipientReadVerifiedFromActualReply": true,
+  "native51PT304ScopedPartnerAcceptance": true,
+  "privateSimulatorIntegrationReported": true,
+  "gameIntegrationIndependentlyRerunByParent": false,
+  "devicePerformanceVerified": false,
+  "ownerWholeQualityGoalAccepted": false,
+  "createdAtUTC": "2026-10-15T18:31:44.618215+00:00"
+}

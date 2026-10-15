@@ -1,0 +1,82 @@
+{
+  "planningOnly": true,
+  "noModelChanged": true,
+  "sourceRound": 51,
+  "camera": "aukio",
+  "cameraIdentityProjectionForExistingNamedMasses": [
+    {
+      "id": "relation/8607825",
+      "nameFI": "Kansallismuseo",
+      "projectedBoundsXYXY": [
+        1383.2098587669695,
+        469.7502849093003,
+        2565.762873849032,
+        1001.6524263352168
+      ],
+      "worldCenterXY": [
+        396.37,
+        -1352.17
+      ]
+    },
+    {
+      "id": "relation/8847722",
+      "nameFI": "Kansan sankarien muistomerkki",
+      "projectedBoundsXYXY": [
+        718.429312404951,
+        429.3862269908764,
+        907.2338566570608,
+        559.7646703263274
+      ],
+      "worldCenterXY": [
+        52.21,
+        -1409.99
+      ]
+    },
+    {
+      "id": "relation/8848142",
+      "nameFI": "Maon muistohalli",
+      "projectedBoundsXYXY": [
+        -3.546619002690221,
+        510.19526780382756,
+        595.7044319798575,
+        842.5775271607998
+      ],
+      "worldCenterXY": [
+        62.36,
+        -1641.22
+      ]
+    },
+    {
+      "id": "relation/8848388",
+      "nameFI": "Kansankongressitalo",
+      "projectedBoundsXYXY": [
+        -114.6875258298568,
+        329.7132155898828,
+        658.4356478574674,
+        500.5057006009409
+      ],
+      "worldCenterXY": [
+        -301.88,
+        -1381.44
+      ]
+    }
+  ],
+  "treeSourceAtlasReadOnlyStatistics": {
+    "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/test-export284-work/tree-atlas/trees-albedo-2048.png",
+    "sha256": "cdee89ab46ae398fd8ad9622fd4908288a63739d4e45e67ec3bcf4f8b1e6dad5",
+    "mask": "alpha>=128; background excluded",
+    "opaqueSampleCount": 1535769,
+    "meanTextureSRGB": [
+      118.97718797639868,
+      134.17647510598948,
+      98.29186551062196
+    ],
+    "meanTextureLinear": [
+      0.18737811113198186,
+      0.2447128506824224,
+      0.12550201060263458
+    ],
+    "textureStatisticsAreNotRuntimePixelValues": true
+  },
+  "notAnApprovalOfFutureMaoEdit": true
+}

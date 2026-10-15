@@ -1,0 +1,40 @@
+{
+  "feedbackTasksReportedByCoordinator": [
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331
+  ],
+  "sourceCommit": "fbe7d644a4e9bbbea7d80d897af0a096850167be",
+  "sourceBlobSHA1": "87583829f13125b1fbd5a204cac3752d96e297e5",
+  "native51PT304AcceptedInNeutralRenders": true,
+  "privateV2SimulatorIntegrationReportedWorking": true,
+  "privateV2GeometryNativeRound": 50,
+  "native51NotYetInTestExport": true,
+  "roof303Locked": true,
+  "priorityOrder": [
+    "audit existing palace ground and terrace coverage then own ground and clipping polygon",
+    "tree albedo/color-space/alpha/front-back-normal chain",
+    "warmer and10to15percent darker modern background",
+    "carry approved native51 masses and planned Mao plinth with atmost5percent lighter appearance"
+  ],
+  "MaoMassConfirmedID": "relation/8848142",
+  "whiteObeliskKeptID": "relation/8847722",
+  "minimum03mAboveIonRequestedButNotMeasured": true,
+  "ownDEMAndSourceHeightOriginUnchanged": true,
+  "clippingPolygonCoordinatesProduced": false,
+  "modelOrTextureOrExportProductionStarted": false,
+  "reportedCoordinationHold": {
+    "source": "Valoseppa final paragraph; task331 as labelled by coordinator",
+    "reason": "Raamattu focus",
+    "nextPackageTiming": "to be agreed with PT",
+    "notADirectHumanGoalPauseRequest": true
+  },
+  "priorHutong52ExperimentDeferredBehindNewPriorities": true,
+  "sourceReadbackStatisticsSHA256": "be14e80a267499898ae5659d306f67abf4be0ac350f1645c12385da33e1efb12",
+  "planMarkdownSHA256": "b47974671488aadb8ed4aefcaca87a2b77659e44627ecb8a2cca4f85699b0500",
+  "createdAtUTC": "2026-10-15T18:31:44.618215+00:00"
+}
