@@ -1043,61 +1043,6 @@ export const EUROPE_QUESTIONS = {
       source: 'https://en.wikipedia.org/wiki/Universal_Postal_Union',
     },
   ],
-  andorralavella: [
-    {
-      q: 'Ketkä kaksi ruhtinasta hallitsivat Andorraa isoisän matkan aikaan 1873?',
-      options: [
-        'Urgellin piispa ja Ranskan valtionpäämies',
-        'Foix\'n kreivi ja Urgellin piispa',
-        'Espanjan kuningas ja Ranskan keisari',
-        'Aragonian kuningas ja Barcelonan kreivi',
-      ],
-      correct: 0,
-      level: 1,
-      fact: 'Vuoden 1278 sopimus jakoi vallan Foix\'n kreivin ja Urgellin '
-          + 'piispan kesken. Ranskan puolen ruhtinas on sittemmin ollut '
-          + 'Ranskan valtionpäämies, ja nykyään tehtävä kuuluu Ranskan '
-          + 'presidentille.',
-      hint: 'Toinen ruhtinas oli kirkonmies Espanjan puolella, toinen johti '
-          + 'Ranskaa.',
-      source: 'https://en.wikipedia.org/wiki/Andorra',
-    },
-    {
-      q: 'Kuka on Andorran suojeluspyhimys, jonka päivä 8. syyskuuta on maan kansallispäivä?',
-      options: [
-        'Meritxellin Neitsyt Maria',
-        'Pyhä Ermengol',
-        'Pyhä Stefanos',
-        'Pyhä Marinus',
-      ],
-      correct: 0,
-      level: 2,
-      fact: 'Meritxellin Neitsyt Maria on Andorran suojeluspyhimys, ja '
-          + 'hänen päivänsä 8. syyskuuta on kansallispäivä. Perimätiedon '
-          + 'mukaan kyläläiset löysivät 1100-luvun lopulla Neitsyt Marian '
-          + 'patsaan villiruusun juurelta.',
-      hint: 'Hänen nimensä tulee Canillon seudulla sijaitsevasta paikasta, '
-          + 'ei kaupungin kirkosta.',
-      source: 'https://en.wikipedia.org/wiki/Our_Lady_of_Meritxell',
-    },
-    {
-      q: 'Minä vuonna Escaldes-Engordanin Caldean lämpökylpylä valmistui?',
-      options: [
-        '1994',
-        '1979',
-        '2004',
-        '1968',
-      ],
-      correct: 0,
-      level: 3,
-      fact: 'Caldea valmistui 1994. Rakennuksessa on 80 metriä korkea '
-          + 'kolmionmuotoinen torni, ja kylpylä käyttää alueen kuumia '
-          + 'lähteitä.',
-      hint: 'Kolmionmuotoinen lasi- ja teräsrakennus on 1900-luvun '
-          + 'viimeisiltä vuosilta.',
-      source: 'https://de.wikipedia.org/wiki/Centre_Termol%C3%BAdic_Caldea',
-    },
-  ],
   podgorica: [
     {
       q: 'Minkä valtakunnan kaupunki Podgorica oli isoisän matkavuonna 1873?',
@@ -1148,59 +1093,6 @@ export const EUROPE_QUESTIONS = {
       hint: 'Tuote syntyi seudun laidunmailla ja kuljetettiin Rooman '
           + 'valtakunnan eri provinsseihin.',
       source: 'https://en.wikipedia.org/wiki/Doclea_(city)',
-    },
-  ],
-  sanmarino: [
-    {
-      q: 'Mikä seuraavista oli jo olemassa San Marinon kaupungissa isoisän matkavuonna 1873?',
-      options: [
-        'San Marinon basilika',
-        'Palazzo Pubblico',
-        'Vapauden patsas',
-        'Cestan tornin asemuseo',
-      ],
-      correct: 0,
-      level: 1,
-      fact: 'Basilika vihittiin 5.2.1838. Vapauden patsas lahjoitettiin '
-          + '1876, Cestan asemuseo perustettiin 1956 ja nykyinen Palazzo '
-          + 'Pubblico valmistui 1894.',
-      hint: 'Kolme vaihtoehtoa kuuluu vasta isoisän matkaa seuranneisiin '
-          + 'vuosikymmeniin.',
-      source: 'https://en.wikipedia.org/wiki/Basilica_di_San_Marino',
-    },
-    {
-      q: 'Minne Garibaldi ja hänen seuraajansa pakenivat Rooman tasavallan kaaduttua vuonna 1849?',
-      options: [
-        'San Marinoon',
-        'Sveitsiin',
-        'Korsikalle',
-        'Maltalle',
-      ],
-      correct: 0,
-      level: 2,
-      fact: 'Italian yhdistymisen aikana San Marino antoi turvapaikan '
-          + 'vainotuille, heidän joukossaan Garibaldille. Tasavalta pysyi '
-          + 'itsenäisenä myös Italian kuningaskunnan synnyn jälkeen.',
-      hint: 'Pakopaikka oli pieni tasavalta Apenniinien rinteellä, lähellä '
-          + 'Riminiä.',
-      source: 'https://en.wikipedia.org/wiki/History_of_San_Marino',
-    },
-    {
-      q: 'Minä vuonna San Marino ja Italian kuningaskunta solmivat ystävyyssopimuksen?',
-      options: [
-        '1862',
-        '1861',
-        '1815',
-        '1877',
-      ],
-      correct: 0,
-      level: 3,
-      fact: 'Italian kuningaskunta julistettiin 17.3.1861, ja '
-          + 'ystävyyssopimus San Marinon kanssa tehtiin 22.3.1862. Sopimus '
-          + 'uusittiin 27.3.1872.',
-      hint: 'Sopimus tehtiin pian sen jälkeen, kun Italian kuningaskunta '
-          + 'oli julistettu.',
-      source: 'https://de.wikipedia.org/wiki/San_Marino',
     },
   ],
   bratislava: [
@@ -3335,22 +3227,6 @@ export const EUROPE_FACTS = {
       voice: 'isoisa',
     },
   ],
-  andorralavella: [
-    'Nimi Andorra la Vella tarkoittaa Andorran kaupunkia. Sana '
-      + 'vella ei tarkoita vanhaa, vaan se juontuu latinan sanasta '
-      + 'villa, ja lisäys erottaa kaupungin koko ruhtinaskunnasta.',
-    'Fromental Halévyn ooppera Le val d\'Andorre sai ensi-iltansa '
-      + 'Pariisin Opéra-Comiquessa 11.11.1848 ja meni 165 esitystä. Se '
-      + 'oli yksi säveltäjän suurimmista menestyksistä, vaikka nykyään '
-      + 'se on melkein unohdettu.',
-    {
-      text: 'Seitsemän vuotta sitten neuvoston uudistus antoi äänioikeuden '
-          + 'kaikille perheenpäille, ja nyt neuvostossa istuu '
-          + 'kaksikymmentäneljä miestä. Ylhäisten sukujen yksinvalta loppui '
-          + 'siihen.',
-      voice: 'isoisa',
-    },
-  ],
   podgorica: [
     'Roomalainen Doclea oli 8 000–10 000 asukkaan kaupunki, ja '
       + 'voimakas maanjäristys tuhosi sen vuonna 518. Rauniot ovat yhä '
@@ -3363,20 +3239,6 @@ export const EUROPE_FACTS = {
           + 'kivitorni ja vanha silta mahtuvat yhdelle katseelle. Linnoitus '
           + 'on 1400-luvun lopulta ja torni vuodelta 1667. Kirjoitin '
           + 'molemmat muistikirjaani, ettei minun tarvitse arvailla.',
-      voice: 'isoisa',
-    },
-  ],
-  sanmarino: [
-    'San Marinon alue koostui vuoteen 1463 asti pelkästä Monte '
-      + 'Titanosta. Silloin tasavaltaan liitettiin Faetano, Fiorentino, '
-      + 'Montegiardino ja Serravalle.',
-    'Napoleon tarjosi San Marinolle 1790-luvun lopulla alueen '
-      + 'laajennusta, mutta tasavalta kieltäytyi kohteliaasti. Lahjaksi '
-      + 'se otti vastaan vain viljalastin.',
-    {
-      text: 'Yhdysvaltain edesmennyt presidentti Lincoln otti keväällä 1861 '
-          + 'vastaan tämän pienen tasavallan tarjoaman '
-          + 'kunniakansalaisuuden. Täällä siitä puhutaan vieläkin.',
       voice: 'isoisa',
     },
   ],
