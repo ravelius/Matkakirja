@@ -1,0 +1,85 @@
+{
+  "referenceOnly": true,
+  "notActualUnityGameScreenshot": true,
+  "notFinalGameWaterAppearance": true,
+  "modelRound": 48,
+  "nativeBlendSHA256": "41b70274ac53acd5805474df4aee326705af7356df8756c01d73f6be86d2891d",
+  "originalNativeAndHistorical6RGBUnchanged": true,
+  "viewTransform": "Khronos PBR Neutral",
+  "look": "None",
+  "exposure": 0.0,
+  "gamma": 1.0,
+  "uniformEnvironmentRGB": [
+    0.75,
+    0.75,
+    0.75
+  ],
+  "environmentStrength": 0.7,
+  "cameraBackgroundRGB": [
+    0.45,
+    0.45,
+    0.45
+  ],
+  "whiteSunElevationDegrees": 45,
+  "whiteSunTravelAzimuthDegrees": 135,
+  "sunDiscAngleDegrees": 3,
+  "lights": [
+    {
+      "name": "PT257 sun",
+      "type": "SUN",
+      "energy": 2.0,
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "noSkyTextureOrMistOrBloomOrCompositor": true,
+  "originalMaterialsAndRGBReused": true,
+  "waterMeshesPreviewOnlyExcludedFromFutureGameExport": true,
+  "frames": [
+    {
+      "view": "ilma",
+      "file": "ilma.png",
+      "sha256": "78b4f4e1b130dc23bac56f3244b49a04a5b1087b3c08ba2fd77f730e37293e41",
+      "seconds": 9.874963208014378
+    },
+    {
+      "view": "taihedian",
+      "file": "taihedian.png",
+      "sha256": "7575bb84f9b976379b4329386c83a55b4aa97042267216748544d2a27541871a",
+      "seconds": 8.034287957998458
+    },
+    {
+      "view": "aukio",
+      "file": "aukio.png",
+      "sha256": "65b9b14340c72359efa0934180df0d8cec9a8f4a19ea5565af6a16fa1ea4eb1b",
+      "seconds": 9.462914792005904
+    },
+    {
+      "view": "beihai",
+      "file": "beihai.png",
+      "sha256": "9e9e65748d2d3e3714a2ef9cb89c1a921b9b9e25bff280b8c84ce2e42e0262eb",
+      "seconds": 10.764418334001675
+    },
+    {
+      "view": "jingshan",
+      "file": "jingshan.png",
+      "sha256": "daf171d53c42771550c1f5c86efd9f4bc59247c11dcb072af7d5e38a00a5fbac",
+      "seconds": 8.37260333300219
+    },
+    {
+      "view": "hutong_ilma",
+      "file": "hutong_ilma.png",
+      "sha256": "9f988d7f519af9dbdd38e33c2bcdd11183b2cacc803582672a2d1ab2679f3812",
+      "seconds": 7.725608290988021
+    }
+  ],
+  "resolution": [
+    1600,
+    900
+  ],
+  "samples": 128,
+  "actualDevice": "Cycles fresh Metal GPU only"
+}
