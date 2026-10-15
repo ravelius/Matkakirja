@@ -1,0 +1,73 @@
+{
+  "actualNativeModelRenders": true,
+  "unchangedPreviewBytes": true,
+  "nativeBlendSHA256": "59f0709fe099414b2efe92e5399536462eea5c3c20d8a7e9a11e3434ccd41ee0",
+  "images": [
+    {
+      "view": "ilma",
+      "file": "ilma.png",
+      "sha256": "e4a3f98a6f0dc9d63d4cdb2d2652db4d938a50f637d5b8ada9b58bcf447f30b3",
+      "bytes": 450613,
+      "resolution": [
+        640,
+        360
+      ],
+      "sourceNativeRound": 46
+    },
+    {
+      "view": "taihedian",
+      "file": "taihedian.png",
+      "sha256": "cf0f9ce2452306fb4a935c5906b543bb6cc3921dd3605f1f63261a2239e772a3",
+      "bytes": 430157,
+      "resolution": [
+        640,
+        360
+      ],
+      "sourceNativeRound": 46
+    },
+    {
+      "view": "aukio",
+      "file": "aukio.png",
+      "sha256": "b0ca24fc5f5bb862bd5f7d4268b7778f5881c3e4c0c4f6d0663ea78cecb63a61",
+      "bytes": 372842,
+      "resolution": [
+        640,
+        360
+      ],
+      "sourceNativeRound": 46
+    },
+    {
+      "view": "beihai",
+      "file": "beihai.png",
+      "sha256": "9b0068d4d6bde9c587464e328f159f9b06bfbda7e9b5befe245ce4fa53ff797b",
+      "bytes": 381349,
+      "resolution": [
+        640,
+        360
+      ],
+      "sourceNativeRound": 46
+    },
+    {
+      "view": "jingshan",
+      "file": "jingshan.png",
+      "sha256": "94a5fda89c27bc2fd22e6d461306b9b8fa367de48ac9c509050d773ec12036c7",
+      "bytes": 408378,
+      "resolution": [
+        640,
+        360
+      ],
+      "sourceNativeRound": 46
+    },
+    {
+      "view": "hutong_ilma",
+      "file": "hutong_ilma.png",
+      "sha256": "aba6d524d2a2c76f0a7cd1687d4a3aef683bd60c36b252aaa4b5a5b36d715ee5",
+      "bytes": 423340,
+      "resolution": [
+        640,
+        360
+      ],
+      "sourceNativeRound": 46
+    }
+  ]
+}
