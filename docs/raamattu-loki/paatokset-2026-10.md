@@ -221,3 +221,17 @@ Omistaja etsinvideo 2:n jälkeen (kortti): "Kyllä, kehitys lyhyeksi (Suositus)"
 ## PAATOKSET 15.10.2026 klo 22.40 (KK välitti): ISS-minimaapallo ja kameran kortin ilmoitus (15.10.2026 klo 22.41)
 
 Omistaja: "Minimaapallo pitää suurentua vähän suuremmaksi ja sinne pitää lisätä kaikki pääkaupungit sekä muut mielenkiintoiset kohteet. Kohteen nimi pitää näkyä pallon päällä tai vasemmalla puolella koska muuten peukalo peittää sen" (ISS = linssi, koko maailma; KS pisteet, NUI toteutus; kuva iPhonesta ennen kytkentää). Ja kameran kortista: "Siitä pitää olla ilmoitus pienellä" → pieni teksti (esim. 'Kuva tarkentuu…'), kunnes tarkka kuva on vaihtunut (NUI).
+
+## PAATOKSET 15.10.2026 klo 23.03: Pulun 4 ISS-vastausta lyhennettyinä (15.10.2026 klo 23.04)
+
+Omistaja (kortti KK:ssa) klo 23.03: Pulun 4 uutta ISS-vastausta (ukkonen, pimennys, tähdenlento, hurrikaani) – kaikkiin "Lyhennetty (Suositus)": KK:n lyhennetyt versiot (43–50 sanaa) äänitetään,
+kysymykset ennallaan.
+UKKONEN: "Näkyy, ja yöllä parhaiten: salamat välähtelevät pilvien sisällä. Pilvien yläpuolellakin tapahtuu. Tanskalainen astronautti Andreas Mogensen kuvasi asemalta vuonna 2015 sinisiä purkauksia,
+joista yksi nousi noin 40 kilometriin, sekä punaisen keijun, joka syttyy salaman jälkeen 50–90 kilometrin korkeudessa. Vuonna 2018 asemalle asennettiin ESA:n laite tutkimaan näitä ilmiöitä."
+PIMENNYS: "Näkyy. Asemalta Kuun varjo näyttää tummalta laikulta, joka kiitää Maan pinnalla yli tuhatta kilometriä tunnissa. Varjon tummin osa on vain 100–300 kilometrin levyinen. Huhtikuussa 2024
+asemalta kuvattiin varjo Kanadan ja Mainen yllä. Elokuun 12. päivänä 2026 se kulki Grönlannin, Islannin ja Espanjan yli."
+TÄHDENLENTO: "Kyllä, mutta asemalta niitä katsotaan alaspäin. Tähdenlento syntyy, kun avaruuspölyn hiukkanen palaa ilmakehässä noin sadan kilometrin korkeudessa, selvästi aseman alapuolella. Elokuussa
+2011 astronautti Ron Garan kuvasi asemalta tähdenlennon Kiinan yllä. Elokuu on Perseidien aikaa: silloin Maa kulkee komeetta Swift–Tuttlen jättämän pölyparven läpi."
+HURRIKAANI: "Ylhäältä silmä on pyöreä, melkein pilvetön aukko, jota kiertää tiheä ukkospilvien rengas, silmänseinämä. Siellä puhaltavat myrskyn kovimmat tuulet, mutta silmän keskellä ilma painuu alas
+ja tuuli on heikkoa. Silmä on yleensä 30–65 kilometriä leveä. Syyskuussa 2018 saksalainen astronautti Alexander Gerst kuvasi asemalta hurrikaani Florencen silmää suoraan ylhäältä."
+PT tarkisti lisäykset (12.8.2026 reitti Grönlanti–Islanti–Espanja; varjon leveys 2017 ~115 km, 2026 ~294 km) → Äänittäjä (kertojaäänten pysyvä lupa) → Pelikoodari kytkee.
