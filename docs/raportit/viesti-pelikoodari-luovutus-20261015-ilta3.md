@@ -42,6 +42,9 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus viesti-pelikoodari-luovu
    KuvanSynty soittaa v3-kuva-paiva/-paikka (molemmissa "pitkällä teleobjektiivilla", SK:n iss-kupoli-v1-v2-v3.json) myös LAAJA-kuvassa:
    ehdota LAAJAlle uutta lausetta SK:lle tai ohita repliikki LAAJAlla (KuvanSynty(kuvauspaikka, laaja)); (c) KÄÄNNETTY → NS + PT.
    HUOM: IssKyytiNakyma.cs myös LS:n 1cbeb50d4:ssä (eri kohta), kerrottu LS:lle.
+   MERGE-KONFLIKTI (LS 19.2x, merge-tree 62aab166f yotaivas-196 × 938fab35e): IssSkanneri.cs ~r. 750 – ratkaisu: pidä
+   `PiirraKulmat(p, k, KulmaPt * s, muste, piste, s);` ja heti perään LS:n rivi `if (korkeus == null) return;   // taivaskohde`.
+   IssKyytiNakyma.cs puhdas. Kumpi mergeää myöhemmin, ratkaisee näin (kerro NS:lle).
 2. KERTOJAN 5 ISS-ÄÄNTÄ KYTKETTÄVIKSI (Äänittäjä 19.1x, PT): audio/iss-fakta-v1/<avain>.mp3 + .json sanaajat + manifest.json
    (paketti _valmiit/iss-fakta-vienti-20261015): iss-raketti-fakta-alusta|nousu|toinen-vaihe|telakointi (raketin ruutufaktat
    faktat.json; RakettiLaukaisu.cs:400, RakettiNakyma.cs:245; FaktaJono.Enintaan 5 RakettiLento.cs:143) ja iss-kuu-telekuva-kuvan-synty
