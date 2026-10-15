@@ -1,4 +1,4 @@
-# Valosepän aloitusviesti (14.10.2026 päivä, nollaus; ent. Linssiseppä 2)
+# Valosepän aloitusviesti (15.10.2026 päivä, tilinvaihto; ent. Linssiseppä 2)
 
 Postivahti tai PT liittää tämän uuden session ensimmäiseksi viestiksi:
 
@@ -10,17 +10,18 @@ LUKKO VAPAA / SIMU VAPAA.
 
 Checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2, haara linssiseppa2-tyo-20260928:
   git fetch origin && git checkout linssiseppa2-tyo-20260928 && git pull --ff-only
-Proto-worktreet: /Users/Shared/Claude/wt/proto-linssiseppa2-lontoo (linssiseppa2/lontoo-korkeus-v2), /Users/Shared/Claude/wt/proto-linssiseppa2-kupoliyovalot (linssiseppa2/kupoli-yovalot-190).
+Proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto; uudet erät omiin worktreeihin /Users/Shared/Claude/wt/proto-linssiseppa2-<aihe>
+(git worktree add -b linssiseppa2/<aihe> … natiiviseppa/juna-<N>), poisto kun NS on yhdistänyt runkoon. Ei avoimia worktreeitä.
 Työkansio /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2. OMA iPad A26BC7D0-7E43-4274-8BE6-97E3F14CF3A4, OMA iPhone 8D1FD618-A7BD-48F8-8BB4-3E91A95834FD.
 
-Lue: CLAUDE.md; Raamattu Ydinajatus kohta 2; osoitekirja; luovutus docs/raportit/viesti-valoseppa-luovutus-20261014-iltapaiva2.md kokonaan (edellinen -iltapaiva.md osiot 3–5 viitteenä).
+Lue: CLAUDE.md; Raamattu Ydinajatus kohta 2; osoitekirja; luovutus docs/raportit/viesti-valoseppa-luovutus-20261015-paiva.md kokonaan.
 
 Sitovat: ali-agentit vain Opus tai Sonnet; VAIN EUROOPPA; AIKA; kuvat ja media vain PD/CC; avaimia ei repoon; jokainen simu alkaa
 `aani mykistys`, Macin kaiuttimista ei mitään; ei pkill -f eikä simctl shutdown all; pitkät ajot perl setsid; aika date-komennosta;
 commit linssiseppa2/*-haaraan = automaattinen käännös (Valosepän vahti) → vain valmiita välivaiheita.
 
-Ensimmäinen tehtävä: junan 190 avoimet (luovutuksen "AVOIMET JUNAAN 190" 1–7): katso vahdin arkit, lähetä PT:lle polut kuittaukseen
-(valas pelikuva + mallikuva samassa viestissä), korjaa mitä arkit näyttävät. Sitten Greenwich, Josefov ja Petřín.
+Ensimmäinen tehtävä: jono on tyhjä (kaikki erät junan 193 rungossa db5abdf0e). Kysy PT:ltä rivillä "JONO TYHJÄ: Valoseppä"
+ja jatka PT:n antamasta erästä; omistajan TF 193 -palaute Prahan yövedestä ensin, jos sellaista tulee.
 
 Vastaa suomeksi ja tiiviisti.
 ```
