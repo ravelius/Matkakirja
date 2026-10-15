@@ -1,0 +1,103 @@
+{
+ "kaupunki": "lontoo",
+ "versio": 1,
+ "kuvaus": "Lontoon historiaosiot pallokierroksen lentojen ajaksi (Sisältökirjuri 15.10.2026; kaksi lähdettä per väite, riippumattoman Sonnet-tarkistajan korjaama; faktaliite lontoo-historia-faktat-20261015.md, muutokset lontoo-historia-muutokset-20261015.md). Kertoja William. kesto_s on arvio (sanamäärä x 0,70 s); korvataan äänityksen todellisella kestolla. sha lisätään äänityksen jälkeen. Ääntä ei ole tehty.",
+ "osiot": [
+  {
+   "tunnus": "lontoo-historia-ruutisalaliitto",
+   "otsikko": "Ruutisalaliitto 1605",
+   "teksti": "Myöhään 4. marraskuuta 1605 Thomas Knyvetin etsintäpartio löysi Guy Fawkesin parlamentin kellarista. Sinne oli kätketty 36 ruutitynnyriä, jotka oli peitetty polttopuilla. Salaliittolaiset aikoivat räjäyttää ne parlamentin avajaisissa, joihin kuningas Jaakko I osallistuisi. Fawkes ja seitsemän muuta eloon jäänyttä salaliittolaista tuomittiin kuolemaan tammikuussa 1606.",
+   "kesto_s": 30.1,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Gunpowder_Plot",
+    "https://www.nationalarchives.gov.uk/education/teaching-resources/the-gunpowder-plot/"
+   ]
+  },
+  {
+   "tunnus": "lontoo-historia-tuntematon-sotilas",
+   "otsikko": "Tuntematon sotilas",
+   "teksti": "Marraskuun 11. päivänä 1920 Westminster Abbeyyn haudattiin Britannian tuntematon sotilas. Ranskan ja Belgian taistelualueilta kaivettiin neljä nimetöntä kaatunutta, ja prikaatinkenraali Wyatt valitsi yhden tietämättä, mistä se oli peräisin. Kolme muuta haudattiin uudelleen. Arkku tehtiin Hampton Courtin palatsin tammesta, ja sata Viktoria-ristin saajaa muodosti kunniavartion kuningas Yrjö V:n ollessa paikalla.",
+   "kesto_s": 34.3,
+   "lahteet": [
+    "https://www.westminster-abbey.org/abbey-commemorations/commemorations/unknown-warrior/",
+    "https://www.westminster-abbey.org/our-history/people/unknown-warrior",
+    "https://en.wikipedia.org/wiki/Tomb_of_the_Unknown_Warrior",
+    "https://www.history.co.uk/articles/the-secret-mission-to-select-the-unknown-warrior"
+   ]
+  },
+  {
+   "tunnus": "lontoo-historia-blitz-palatsi",
+   "otsikko": "Palatsi pommituksessa",
+   "teksti": "Syyskuun 13. päivänä 1940 saksalaiset pommit osuivat Buckinghamin palatsiin, ja palatsin kappeli tuhoutui. Kuningas Yrjö VI ja kuningatar Elisabet olivat silloin palatsissa. Sodan aikana palatsiin osui yhdeksän kertaa. Pariskunta ei suostunut lähtemään maasta, vaikka sitä kehotettiin. Kappelin paikalle rakennettiin galleria, joka avattiin vuonna 1962.",
+   "kesto_s": 30.8,
+   "lahteet": [
+    "https://col.rct.uk/collection/919912/the-private-chapel-at-buckingham-palace",
+    "https://britishheritage.com/history/buckingham-palace-bombing-wwii",
+    "https://en.wikipedia.org/wiki/Buckingham_Palace",
+    "https://en.wikipedia.org/wiki/Elizabeth_Bowes-Lyon"
+   ]
+  },
+  {
+   "tunnus": "lontoo-historia-trafalgar",
+   "otsikko": "Trafalgarin taistelu",
+   "teksti": "Trafalgarin meritaistelu käytiin 21. lokakuuta 1805. Nelson johti Victory-aluksellaan toista brittilaivaston kahdesta jonosta ja Collingwood toista. Victory ajautui kiinni ranskalaiseen Redoutable-laivaan, jolta ammuttu muskettiluoti osui Nelsoniin. Hän kuoli iltapäivällä noin kello 16.30. Britit eivät menettäneet yhtään alusta, mutta ranskalais-espanjalaisista aluksista ainakin 17 antautui ja yksi räjähti.",
+   "kesto_s": 32.2,
+   "lahteet": [
+    "https://www.rmg.co.uk/collections/objects/rmgc-object-12040",
+    "https://thegazette.co.uk/all-notices/content/100305",
+    "https://en.wikipedia.org/wiki/Battle_of_Trafalgar"
+   ]
+  },
+  {
+   "tunnus": "lontoo-historia-suuri-palo",
+   "otsikko": "Lontoon suuri palo",
+   "teksti": "Lontoon suuri palo syttyi 2. syyskuuta 1666 yöllä Thomas Farrinerin leipomossa Pudding Lane -kadulla. Se paloi noin neljä päivää ja tuhosi noin 13 200 taloa sekä yli 80 kirkkoa, mutta kirjattuja kuolemantapauksia on alle kymmenen. Palon muistoksi 1670-luvulla pystytetty Monument on 202 jalkaa (noin 62 metriä) korkea, ja sen etäisyys leipomon paikasta on yhtä monta jalkaa.",
+   "kesto_s": 39.2,
+   "lahteet": [
+    "https://www.londonmuseum.org.uk/collections/london-stories/great-fire-of-london/",
+    "https://www.british-history.ac.uk/node/37743",
+    "https://en.wikipedia.org/wiki/Great_Fire_of_London",
+    "https://en.wikipedia.org/wiki/Monument_to_the_Great_Fire_of_London",
+    "https://www.history.com/this-day-in-history/september-2/great-fire-of-london-begins",
+    "https://www.historic-uk.com/HistoryUK/HistoryofEngland/The-Great-Fire-of-London/"
+   ]
+  },
+  {
+   "tunnus": "lontoo-historia-kruunuvarkaus",
+   "otsikko": "Kruunuvarkaus 1671",
+   "teksti": "Toukokuun 9. päivänä 1671 pappisasuun pukeutunut Thomas Blood yritti varastaa kruununjalokivet Towerista. Hän ja apurit kaatoivat jalokivien vartijan, 77-vuotiaan Talbot Edwardsin, ja litistivät kruunun nuijalla piilottaakseen sen takkinsa alle. Blood otettiin kiinni ennen kuin hän ehti ulos Towerista. Kuningas Kaarle II kuulusteli häntä ja armahti hänet, ja Blood sai Irlannista maita, jotka tuottivat 500 puntaa vuodessa.",
+   "kesto_s": 39.2,
+   "lahteet": [
+    "https://en.wikipedia.org/wiki/Thomas_Blood",
+    "https://www.historic-uk.com/HistoryUK/HistoryofEngland/The-Theft-of-the-Crown-Jewels/",
+    "https://www.historyhit.com/facts-about-thomas-bloods-attempt-to-steal-crown-jewels/"
+   ]
+  },
+  {
+   "tunnus": "lontoo-historia-suuri-loyhka",
+   "otsikko": "Suuri löyhkä 1858",
+   "teksti": "Kesällä 1858 helle ja Thamesiin laskettu jäte synnyttivät Lontoon suuren löyhkän, ja parlamentin jokipuolen verhot kastettiin kloorikalkkiin. Viemäriverkoston rakennustyö annettiin Metropolitan Board of Worksin pääinsinöörille Joseph Bazalgettelle. Verkostoon kuului noin 1 800 kilometriä katuviemäreitä, ja hanke valmistui vuonna 1875.",
+   "kesto_s": 27.3,
+   "lahteet": [
+    "https://www.londonmuseum.org.uk/collections/london-stories/great-stink-of-1858/",
+    "https://www.historic-uk.com/HistoryUK/HistoryofBritain/Londons-Great-Stink/",
+    "https://en.wikipedia.org/wiki/Great_Stink",
+    "https://blog.sciencemuseum.org.uk/joseph-bazalgette-londons-sewer-king",
+    "https://www.gracesguide.co.uk/Joseph_Bazalgette"
+   ]
+  },
+  {
+   "tunnus": "lontoo-historia-harrison",
+   "otsikko": "Harrison ja pituusaste",
+   "teksti": "Merellä pituusaste selviää vertaamalla paikallista aikaa vertailupaikan aikaan, joten laivaan tarvittiin tarkka kello. Vuoden 1714 laki lupasi enimmillään 20 000 puntaa menetelmälle, jonka virhe olisi enintään puoli astetta. John Harrisonin H4-kello oli vuonna 1761 Jamaikalle tehdyn koematkan päätteeksi vain viisi sekuntia jäljessä. Parlamentti myönsi hänelle vielä 8 750 puntaa vuonna 1773.",
+   "kesto_s": 35.7,
+   "lahteet": [
+    "https://www.lindahall.org/john-harrison/",
+    "https://exploring-london.com/tag/h2",
+    "https://en.wikipedia.org/wiki/John_Harrison",
+    "https://en.wikipedia.org/wiki/Longitude_rewards",
+    "https://en.wikipedia.org/wiki/Marine_chronometer"
+   ]
+  }
+ ]
+}
