@@ -361,6 +361,13 @@ pakettien otsikkokommentit).
 | OpenHistoricalMap — vuoden 1873 rautatiet elävään karttaan | OpenHistoricalMap-yhteisö | CC0 1.0 |
 | ETOPO1 Global Relief Model, Ice Surface (1 kaariminuutti) — korkeus, syvyys, varjostus, reliefikartta | Amante & Eakins 2009, NOAA NGDC/NCEI, doi:10.7289/V5C8276M; haettu NOAA CoastWatch ERDDAPista | Public domain (Yhdysvaltain liittovaltion virasto) |
 | Earth at Night (Black Marble) 2016 — yökartan valot | NASA Earth Observatory / Visible Earth; NASA GSFC, Miguel Román, kuvankäsittely Joshua Stevens (SSAI) | Public domain (NASA), maininta ehtona |
+| IGN LiDAR HD — Pariisin maanpinta ja pintamalli natiivipelissä | © IGN | Licence Ouverte Etalab 2.0 |
+| Lantmäteriet Markhöjdmodell — Tukholman maanpinta natiivipelissä | © Lantmäteriet | CC BY 4.0 |
+| Danmarks Højdemodel (Terræn, Overflade) — Kööpenhaminan maanpinta ja pintamalli natiivipelissä | © Klimadatastyrelsen | CC BY 4.0 |
+| Environment Agency LIDAR Composite DTM ja First Return DSM 1 m — Lontoon maanpinta ja pintamalli natiivipelissä | © Environment Agency copyright and/or database right 2022 | Open Government Licence v3.0 |
+| ČÚZK DMR 4G ja DMP 1G — Prahan maanpinta ja pintamalli natiivipelissä | © ČÚZK | CC BY 4.0 |
+| Mapterhorn — muiden kaupunkien maanpinta (DTM) natiivipelissä | mapterhorn.com; kansalliset korkeusmallit, tekijä tiedostossa maa-<kaupunki>.json | Lähdekohtainen avoin lisenssi |
+| ESA WorldCover 2021 — kaupunkien vesialueet natiivipelissä | © ESA WorldCover project 2021, Copernicus Sentinel data | CC BY 4.0 |
 
 ### Tietoaineistot
 
@@ -381,6 +388,10 @@ pakettien otsikkokommentit).
 | Wikidata — koordinaatit, ISO-koodit, maannimet | Wikidata-yhteisö | CC0 1.0 |
 | Ihmisen leviämisen ajoitukset | Julkaistut tutkimusartikkelit (Hublin, Richter, Vidal, Hershkovitz, Groucutt, Clarkson, Fu, Bennett, Dillehay, Wilmshurst, Iasi ym.) | Lainauksia; viite rivikohtaisesti |
 | Silkkitien kaupungit, reitit ja valtakuntien rajat | UNESCO Silk Roads Programme; IDP (British Library); Silk Road Seattle; Britannica; Wikipedia | Tosiasiatietoa; selitetekstit kirjoitettu itse |
+| AERONET Version 3, Level 2.0 — kaupunkien ilman utu (aerosoli) natiivipelissä | NASA GSFC, AERONET; asemien vastuututkijat ilmakeha.json-tiedostossa | Vapaa käyttö lähteen maininnalla |
+| METAR-havainnot, IEM ASOS -arkisto — kaupunkien pilvi-ilmasto natiivipelissä | Iowa Environmental Mesonet, Iowa State University | Vapaa käyttö lähteen maininnalla |
+| SYNOP-havainnot, NOAA Integrated Surface Database (ISD) — kaupunkien pilvi-ilmasto natiivipelissä (pilvet-v4) | NOAA NCEI (AWS Open Data noaa-global-hourly-pds) | NOAA:n avoin data, lähteen maininnalla |
+| Copernicus Sentinel-2 L2A (Earth Search) — kaupunkien veden väri natiivipelissä | Contains modified Copernicus Sentinel data 2019–2025 (ESA); Element 84 | Copernicus-avoin data |
 
 ### Valokuvat ja kuvitus
 
