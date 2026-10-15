@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-15T14:23:10.181626+00:00",
+  "sourceCommit": "d705fd7ec90c0df6e68cd9b0279630e7aba725d8",
+  "notAnAuthorizationToStartImages281to283": true,
+  "items": [
+    {
+      "task": 280,
+      "gamePath": "js/packs/southamerica.js:311",
+      "currentGameDescription": "Muisca gold objects offered into Guatavita on a new-ruler rite",
+      "primarySource": "https://enciclopedia.banrepcultural.org/Muisca",
+      "resolution": "New imagined underwater scene follows latest source. No museum raft placed in lake, no claim of a photographed archaeological find."
+    },
+    {
+      "task": 281,
+      "gamePath": "js/packs/northamerica.js:306",
+      "currentGameDescription": "Montezumas treasure is gold lost in the lake; no exact turquoise-mask design specified here",
+      "primarySource": "https://www.britishmuseum.org/collection/object/E_Am-St-400",
+      "sourceConflict": "The museum Xiuhtecuhtli candidate uses mother-of-pearl pierced eyes, not an authenticated Montezuma mask with obsidian pupils. Other mosaic objects use different eye materials.",
+      "resolutionBeforeGeneration": "Latest order defines a fictional game treasure with shell/obsidian eyes. It must not be labelled an exact museum replica or a verified personal possession of Montezuma. Image281 remains unstarted."
+    },
+    {
+      "task": 282,
+      "gamePath": "js/packs/asia.js:339",
+      "currentGameDescription": "Lost Heirloom Seal passed between dynasties; exact color/handle unspecified here",
+      "olderPromptPath": "tools/aarrekuvat-promptit.md:109",
+      "olderPromptConflict": "Old prompt says green jade, latest order explicitly says white jade.",
+      "primarySource": "https://www.dpm.org.cn/subject_hesui/qinzheng/250173.html",
+      "resolutionBeforeGeneration": "Latest white-jade directive takes precedence. Surviving white-jade dragon-handled Qing seals are material/shape analogies, not proof of the lost Heirloom Seals exact form. Image282 remains unstarted."
+    },
+    {
+      "task": 283,
+      "sourceDescription": "Three red spinels around one central diamond with pearls between, linked by order to John the Fearless and1389",
+      "gameEvidenceLimit": "No matching treasure-description passage located in this mailbox branchs current js files; latest task description is authoritative visual specification.",
+      "resolutionBeforeGeneration": "Keep latest required gem layout. Do not invent exact gemstone cuts, added gems or claim an authenticated historical reconstruction. Verify any extra historical claim separately before publication. Image283 remains unstarted."
+    }
+  ]
+}

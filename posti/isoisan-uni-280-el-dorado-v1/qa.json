@@ -1,0 +1,52 @@
+{
+  "taskNumber": 280,
+  "version": "v1",
+  "checkedAt": "2026-10-15T14:25:35.891431+00:00",
+  "producerPersonallyViewedGeneratedImage": true,
+  "nativeFileReadback": {
+    "sourcePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8cc77f1c-f850-4d49-b112-5128f28e8241.png",
+    "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/isoisan-uni-unikuvat-20261015/280-el-dorado/v1/el-dorado-v1-native.png",
+    "format": "PNG",
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "bytes": 2083550,
+    "sha256": "78c4fd5b538e3c6720bb6167090cce56fd2deea42538aaab68c8d19864825cd4",
+    "sourceAndNASBytesEqual": true,
+    "PNGHeaderAndPillowVerified": true,
+    "upscaled": false,
+    "nativeSizeMeetsOrder": false,
+    "iccProfilePresent": false
+  },
+  "visualReview": {
+    "photographicAppearance": true,
+    "dreamlikeSoftLight": true,
+    "objectsDetailedInCenter": true,
+    "darkNearlyBlackBackground": true,
+    "generousMargins": true,
+    "waterAndLakebedContextVisible": true,
+    "peopleVisible": false,
+    "readableTextOrLogoOrBorderVisible": false,
+    "sourceContext": "Imagined Muisca gold offerings in Guatavita, not an authenticated photographed find or exact museum-object replica",
+    "remainingReview": "Owner/PT judgment of visual style and gold/silt realism remains open"
+  },
+  "outer15PercentEncodedLumaDiagnostic": {
+    "median": 5.787400000000001,
+    "p95": 27.4436,
+    "scale": "0..255 encoded sRGB luma; compositing diagnostic only"
+  },
+  "imageEditedOrUpscaled": false,
+  "sizeGatePassed": false,
+  "allDeliveryRequirementsMet": false,
+  "scope": "First-image style review preview only; not final order delivery",
+  "newGenerations": 1,
+  "retryMade": false,
+  "PTAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrated": false,
+  "R2Used": false,
+  "mainMerged": false,
+  "published": false
+}

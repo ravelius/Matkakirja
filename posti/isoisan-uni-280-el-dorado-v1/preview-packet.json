@@ -1,0 +1,60 @@
+{
+  "taskNumber": 280,
+  "relatedTasks": [
+    281,
+    282,
+    283
+  ],
+  "scope": "Noncompliant-size FIRST STYLE PREVIEW ONLY, not completed image order",
+  "sourceCommit": "d705fd7ec90c0df6e68cd9b0279630e7aba725d8",
+  "sourceBlob": "829c238fad8c1a25b6eb5dcb39b2f004d4e7bd57",
+  "createdAt": "2026-10-15T14:25:35.891431+00:00",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "upscaled": false,
+  "sizeRequirementMet": false,
+  "allDeliveryRequirementsMet": false,
+  "otherImagesStarted": false,
+  "ownerFeedbackPending": true,
+  "PTAccepted": false,
+  "R2Used": false,
+  "gameIntegrated": false,
+  "mainMerged": false,
+  "published": false,
+  "files": {
+    "posti/isoisan-uni-280-el-dorado-v1/el-dorado-v1-native.png": {
+      "sha256": "78c4fd5b538e3c6720bb6167090cce56fd2deea42538aaab68c8d19864825cd4",
+      "bytes": 2083550
+    },
+    "posti/isoisan-uni-280-el-dorado-v1/el-dorado-v1-review-sheet.png": {
+      "sha256": "fea07c2674d71cdfee872161771aff1696277cde56f5864ff51ea3569a58d914",
+      "bytes": 2028620
+    },
+    "posti/isoisan-uni-280-el-dorado-v1/prompt.txt": {
+      "sha256": "348cc6073eb08e61bd934129af0d9f9320bc729a9b9911b94d39bc8f14402477",
+      "bytes": 2551
+    },
+    "posti/isoisan-uni-280-el-dorado-v1/native-file-readback.json": {
+      "sha256": "a747464ea6ce49066a0f1843dfcc7c27bfd817e4ec471137a8d025b8ff8ad27a",
+      "bytes": 643
+    },
+    "posti/isoisan-uni-280-el-dorado-v1/qa.json": {
+      "sha256": "4db15bdb6a8703210c4f26afcae36aac342ca88e365ace05b8204498d983d048",
+      "bytes": 1927
+    },
+    "posti/isoisan-uni-280-el-dorado-v1/fable-codex-isoisan-uni-unikuvat-20261015.md": {
+      "sha256": "697c967043ce4fca174f1957e6cf8409f699ccf9e206d22aec693a20fdac2a77",
+      "bytes": 1487
+    },
+    "posti/isoisan-uni-280-el-dorado-v1/description-conflicts-and-scope.json": {
+      "sha256": "83e3c40655060d18ca7a51b8b013753adba8d25af5f441a241e2f9a263fefd4b",
+      "bytes": 2619
+    },
+    "posti/isoisan-uni-280-el-dorado-v1/banrepcultural-muisca-reference.json": {
+      "sha256": "b138989f17b7c4fcae6d919c56a479210f6e7dbd23322ad7425dc01c92feb041",
+      "bytes": 471
+    }
+  }
+}
