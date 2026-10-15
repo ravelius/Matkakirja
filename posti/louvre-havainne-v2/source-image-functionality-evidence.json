@@ -1,0 +1,44 @@
+{
+  "taskNumber": 302,
+  "recordedAt": "2026-10-15T16:06:21.635781+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "toolDocumentedSupports": [
+    "description-based raster generation",
+    "editing or transformation using referenced images"
+  ],
+  "fieldsActuallyUsed": [
+    "prompt",
+    "referenced_image_paths",
+    "transparent_background"
+  ],
+  "inputCount": 4,
+  "baseInput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-massa-1536x1024.png",
+  "secondInput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-ohje-1536x1024.png",
+  "thirdInput": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-maski-1536x1024.png",
+  "fourthInputRole": "Commons facade material/detail only",
+  "firstInputRequestedAsWholeFrameBase": true,
+  "oldV1GeneratedPhotoUsedAsInput": false,
+  "selectiveInpaintingOrOldPhotoPartialEditUsed": false,
+  "exactNativeOutputReturned": [
+    1536,
+    1024
+  ],
+  "dedicatedEditModeParameterExposed": false,
+  "maskParameterExposed": false,
+  "denoiseOrReferenceStrengthParameterExposed": false,
+  "depthOrEdgeControlParameterExposed": false,
+  "seedParameterExposed": false,
+  "nativeWidthHeightParametersExposed": false,
+  "actualBehaviorObserved": "The tool returned one new native1536x1024 photograph from the four supplied local references and a whole-frame transformation prompt. Compared withv1 the framing is more distant and the rear palace roof is near the requested row, but it also synthesized different background geography and omitted the requested corner label.",
+  "supportConclusion": "The interface accepts source images and documents generation/editing. It does not expose an explicit editing mode, per-pixel geometry lock, inpainting mask, strength or depth/edge-control fields here. Source-image support is real, but exact camera/silhouette preservation is not guaranteed merely by supplying a base image or prompt. Final alignment must be measured from the actual own mask.",
+  "IoUAtReportCreation": null,
+  "noAutomaticRetryRegardlessOfResult": true,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "paidAccessProbeUsed": false,
+  "upscaled": false,
+  "IoUAfterOwnMaskReadback": 0.9133664569438069,
+  "maskIoUThresholdPassed": false,
+  "automaticRetryAllowed": false,
+  "requiresPTMethodDecisionIfFailed": true
+}

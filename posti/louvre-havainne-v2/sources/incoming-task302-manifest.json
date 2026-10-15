@@ -1,0 +1,67 @@
+{
+  "tasks": [
+    299,
+    300,
+    302
+  ],
+  "files": [
+    {
+      "sourceCommit": "9add49cdad0f9154a15d86e6a06cb6319207dc6c",
+      "sourcePath": "posti/fable-codex-kuittaus-uni-louvre-peking-20261015.md",
+      "gitBlob": "4c56842c56f0b5d783e5f5c3dd7eeb96b2b970cf",
+      "sha256": "9383a7696fbdb26e0be2f148fbf467fa094c1ed4dcd01d80dddde165e6f9c5fb",
+      "bytes": 937,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/fable-codex-kuittaus-uni-louvre-peking-20261015.md",
+      "readInFull": true
+    },
+    {
+      "sourceCommit": "89eeaa7fc0ed21f85f13b73ac7645480875d02e7",
+      "sourcePath": "posti/louvre-havainne-v1-vastaus/VASTAUS-FI.md",
+      "gitBlob": "cdadb1c41e26ff19e48bcc1cebd708c05bb44a55",
+      "sha256": "87056936c0b4de380a7e94a932f88db15723cc49deadcec061c061353bd4d42d",
+      "bytes": 2129,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/VASTAUS-FI.md",
+      "readInFull": true
+    },
+    {
+      "sourceCommit": "89eeaa7fc0ed21f85f13b73ac7645480875d02e7",
+      "sourcePath": "posti/louvre-havainne-v1-vastaus/louvre-K1-massa-1536x1024.png",
+      "gitBlob": "4c4d7cf1a5319a96f89a27b176e6f7f894962a6c",
+      "sha256": "101b50cd75f2e9e5d616b3ffb8636050c3c079682c5bec731720b41e737e0390",
+      "bytes": 909897,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-massa-1536x1024.png",
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T16:03:39.884729+00:00"
+    },
+    {
+      "sourceCommit": "89eeaa7fc0ed21f85f13b73ac7645480875d02e7",
+      "sourcePath": "posti/louvre-havainne-v1-vastaus/louvre-K1-maski-1536x1024.png",
+      "gitBlob": "5496b4976872d38a1489a507b49a0153d071d09b",
+      "sha256": "7d3bb8571f347bf3c1bdd57142f2b41fc706c9cfacd3799c6c0405b5f718f19e",
+      "bytes": 31884,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-maski-1536x1024.png",
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T16:03:39.884729+00:00"
+    },
+    {
+      "sourceCommit": "89eeaa7fc0ed21f85f13b73ac7645480875d02e7",
+      "sourcePath": "posti/louvre-havainne-v1-vastaus/louvre-K1-ohje-1536x1024.png",
+      "gitBlob": "55424a34a787ae8c31815ad8164388c17338cb4c",
+      "sha256": "7fd375ec3bfed9cf56c0668109c21b072a54b31d7ea6a1447e9688671d8d93a8",
+      "bytes": 737897,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-ohje-1536x1024.png",
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T16:03:39.884729+00:00"
+    },
+    {
+      "sourceCommit": "89eeaa7fc0ed21f85f13b73ac7645480875d02e7",
+      "sourcePath": "posti/louvre-havainne-v1-vastaus/louvre-K1-v1-iou.jpg",
+      "gitBlob": "7b3c0cc2c825fab61aa9715d7a8e329899f7b54e",
+      "sha256": "ac9037c266484f6e91feedd025629aad0e5c91137c6a9734e79ddd6b8b9dc3cc",
+      "bytes": 19440,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-v1-iou.jpg",
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T16:03:39.884729+00:00"
+    }
+  ]
+}

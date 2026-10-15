@@ -1,0 +1,33 @@
+{
+  "taskNumber": 302,
+  "viewTaskNumber": 285,
+  "version": "v2",
+  "recordedAt": "2026-10-15T16:05:18.180076+00:00",
+  "sourcePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-1e883336-c0d3-4e60-8259-56c647383319.png",
+  "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K1/v2/louvre-K1.png",
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "mode": "RGB",
+  "format": "PNG",
+  "sha256": "4d17784bd0b0e98d5566447a5d23f5c1b0f41f389fbf751e5719dda4b063623e",
+  "bytes": 3368458,
+  "originalAndNASBytesEqual": true,
+  "requestedDimensions": [
+    1536,
+    1024
+  ],
+  "nativeDimensionsMatchRequest": true,
+  "requestedAspect": "3:2",
+  "upscaled": false,
+  "cropped": false,
+  "warped": false,
+  "partiallyEdited": false,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "imageCallsIssuedThisTask": 1,
+  "imageCallsCompletedThisTask": 1,
+  "nativeLiDARReferenceAvailable": true,
+  "IoU": null
+}

@@ -1,0 +1,26 @@
+{
+  "taskNumber": 302,
+  "sourceCommit": "89eeaa7fc0ed21f85f13b73ac7645480875d02e7",
+  "sourcePath": "posti/louvre-havainne-v1-vastaus/VASTAUS-FI.md",
+  "sourceBlob": "cdadb1c41e26ff19e48bcc1cebd708c05bb44a55",
+  "sourceReadInFull": true,
+  "recordedAt": "2026-10-15T16:03:39.884729+00:00",
+  "authorizedScope": "one whole new K1 v2 photo and own mask, then feedback",
+  "maxNewGenerations": 1,
+  "wholeNewCandidateRequired": true,
+  "oldGeneratedImagePartialEditingAllowed": false,
+  "APIAllowed": false,
+  "CLIAllowed": false,
+  "upscalingAllowed": false,
+  "K2toK7Allowed": false,
+  "automaticRetryChainAllowed": false,
+  "ifBelow95": "Report actual source-image functionality and agree another instruction with PT; no automatic retry",
+  "IoUThreshold": 0.95,
+  "v1IoU": 0.5344519404383268,
+  "v1RejectedAsTarget": true,
+  "newNativeLiDARReferenceAvailable": true,
+  "requestedDimensions": [
+    1536,
+    1024
+  ]
+}

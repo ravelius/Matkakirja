@@ -1,0 +1,49 @@
+{
+  "taskNumber": 302,
+  "viewTaskNumber": 285,
+  "version": "v2",
+  "reviewedAt": "2026-10-15T16:06:21.635781+00:00",
+  "method": "Root viewed actual generated image returned inline by built-in tool and previously viewed all four native feedback attachments; mask review follows separately.",
+  "photoSHA256": "4d17784bd0b0e98d5566447a5d23f5c1b0f41f389fbf751e5719dda4b063623e",
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "wholeNewImage": true,
+  "oneGenerationThisTask": true,
+  "totalLouvreGenerations": 2,
+  "oldV1PhotoBytesPreserved": true,
+  "visualChecks": {
+    "photographicSurfaceAppearance": true,
+    "palaceFrameMoreDistantThanV1": true,
+    "foregroundPavingAndParkVisible": true,
+    "glassPyramidsVisible": false,
+    "poolsVisible": false,
+    "equestrianStatueVisible": true,
+    "statueExactMapPositionVerified": false,
+    "requestedHavainnekuvaLabelPresent": false,
+    "requestedLabelOmissionIsKnownQAError": true,
+    "redInstructionLinesVisibleInOutput": false,
+    "backgroundRiverAndCityGeographyVerified": false,
+    "outputPhysicalCameraVerified": false
+  },
+  "knownLimitations": [
+    "The required small havainnekuva corner label was omitted. No partial correction or additional image call is authorized.",
+    "The generated side and rear architecture is still not certified to match the source. In particular, rear pavilion/roof details and side-block classification must follow actual own-mask comparison.",
+    "The river and city background were synthesized; their geography, statue position and exact solar azimuth/elevation have not been certified."
+  ],
+  "IoU": 0.9133664569438069,
+  "IoUThreshold": 0.95,
+  "acceptedAsBindingTarget": false,
+  "PTAccepted": false,
+  "K2toK7Started": false,
+  "furtherGenerationAuthorized": false,
+  "R2Used": false,
+  "gameIntegrated": false,
+  "mainMerged": false,
+  "published": false,
+  "localMaskIoUPassed": false,
+  "nativeMaskComparisonPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K1/v2/native-IoU-task302.json",
+  "nativeLiDARReferenceAvailable": true,
+  "knownLabelErrorStillPresent": true
+}

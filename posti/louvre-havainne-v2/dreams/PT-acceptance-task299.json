@@ -1,0 +1,21 @@
+{
+  "taskNumber": 299,
+  "sourceCommit": "9add49cdad0f9154a15d86e6a06cb6319207dc6c",
+  "sourcePath": "posti/fable-codex-kuittaus-uni-louvre-peking-20261015.md",
+  "sourceBlob": "4c56842c56f0b5d783e5f5c3dd7eeb96b2b970cf",
+  "sourceReadInFull": true,
+  "acceptedAtRecorded": "2026-10-15T16:03:39.884729+00:00",
+  "PTAcceptedTasks": [
+    280,
+    281,
+    282,
+    283
+  ],
+  "newThreeDirectOwnerAcceptanceEstablished": false,
+  "productionEndsNoRetries": true,
+  "PTForwardToNativeUIStated": true,
+  "PTForwardVerified": false,
+  "NativeUIIntegrated": false,
+  "gameIntegrated": false,
+  "published": false
+}

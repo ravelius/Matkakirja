@@ -1,0 +1,57 @@
+{
+  "source": "Linnanrakentaja #302 native LiDAR rerender",
+  "images": [
+    {
+      "file": "louvre-K1-maski-1536x1024.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "7d3bb8571f347bf3c1bdd57142f2b41fc706c9cfacd3799c6c0405b5f718f19e",
+      "whitePixels": 364307,
+      "coverage": 0.23162015279134116,
+      "topRow": 262,
+      "bottomRow": 1023,
+      "maskValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "file": "louvre-K1-massa-1536x1024.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "101b50cd75f2e9e5d616b3ffb8636050c3c079682c5bec731720b41e737e0390"
+    },
+    {
+      "file": "louvre-K1-ohje-1536x1024.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "7fd375ec3bfed9cf56c0668109c21b072a54b31d7ea6a1447e9688671d8d93a8"
+    },
+    {
+      "file": "louvre-K1-v1-iou.jpg",
+      "dimensions": [
+        600,
+        406
+      ],
+      "mode": "RGB",
+      "sha256": "ac9037c266484f6e91feedd025629aad0e5c91137c6a9734e79ddd6b8b9dc3cc"
+    }
+  ],
+  "v1IndependentLocalReadback": {
+    "intersection": 353719,
+    "union": 661835,
+    "IoU": 0.5344519404383268,
+    "threshold": 0.95,
+    "passed": false,
+    "sourceReportedRoundedPercent": 53.4
+  }
+}

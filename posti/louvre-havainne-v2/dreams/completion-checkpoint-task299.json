@@ -1,0 +1,25 @@
+{
+  "taskNumber": 299,
+  "savedAt": "2026-10-15T16:08:10.323382+00:00",
+  "status": "all-four-PT-accepted-production-ended",
+  "productionActive": false,
+  "generationCallsIssued": 4,
+  "generationCallsCompleted": 4,
+  "PTAcceptedTasks": [
+    280,
+    281,
+    282,
+    283
+  ],
+  "PTAcceptanceSourceCommit": "9add49cdad0f9154a15d86e6a06cb6319207dc6c",
+  "originalDeliveryCommit": "71a500371adf260c000a218d4668f2bd2e571253",
+  "allNativeDimensions": [
+    1254,
+    1254
+  ],
+  "noRetries": true,
+  "PTForwardToNativeUIStated": true,
+  "NativeUIForwardVerified": false,
+  "gameIntegrated": false,
+  "published": false
+}

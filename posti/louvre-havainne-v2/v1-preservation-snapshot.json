@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-10-15T16:03:39.884729+00:00",
+  "files": {
+    "K1/v1/locked-camera.json": "4ebdd4659079dbf511cb2688ce332bd1390969004318605c8a4e8007f2eb3dd7",
+    "K1/v1/proposed-prompt.txt": "9e540e9761c999da0f0a29a135f4760d070215efbeab9fe26f1e67f30411fa40",
+    "K1/v1/proposed-reference-roles.json": "0019709cb0f2370f770a8fb98e9a15d51e6fc828cd005d142612bd7bfca5b261",
+    "K1/v1/prompt-task298.txt": "6d0a41cd3d9e5b99a512547c378818cb8d1a62163eaddaff4153c0dd0fb35499",
+    "K1/v1/louvre-K1.png": "b50ad80ca50f55767f406d509b699eac0c40f97080e285e065c761aa437ebe03",
+    "K1/v1/native-file-readback.json": "f767851c4b50666b7b34a5794dfe7a56fbf050318c8e2124affb4c30eae70172",
+    "K1/v1/native-camera-specification.json": "ad5aae50ca18792ef3a13091414edcae0d075af7bc07446c4ddab0bf7c10dd1f",
+    "K1/v1/QA-coordinate-grid-only.png": "75d611e48b05bd58cbc5ecd38e0539a7f31fcd6dfb0f068d834355f678a1b5dd",
+    "K1/v1/make-own-mask.py": "cbce4821a4b75b93c747c595a13cc6fb8a9565b1527c9f65c14f1cfef0594371",
+    "K1/v1/louvre-K1-maski.png": "11f14a741dec7d9129f8adb2a01e5efcf58dff6f9da7e4eda695b239b925474c",
+    "K1/v1/QA-own-mask-overlay.png": "958a7bdcad139344f59603a93f4f3254fe965bbe99d3e89fd748ba3d45ce2b26",
+    "K1/v1/mask-provenance.json": "f8a25af20eb2f097fa0c3c8c94073a8fcc467712eb36f290f620411f0d95ea70",
+    "K1/v1/visual-QA.json": "62fa22cb1bda5ebd41b50c809e5b0b229a8cd22fefb0dd813fa254104fd0175a",
+    "K1/v1/acceptance-protocol-task298.json": "d73094d4a501ef4deec6caa089190735effaa2b92d87d22e1eed13d2f8b31366",
+    "K1/v1/root-mask-review.json": "a32c0a6a9c8aa2c244da2ca3f64f8df3fe373a23bb96bdbf456cdfd42a8dd134",
+    "K1/v1/actual-reference-roles-task298.json": "f34c5588ddd9b9517b08ce4a510e41bb265b2bceff3a3667212d6b50c69f33d8",
+    "K1/v1/generation-call-record.json": "4dac29ca90f854208d9fbdceba6e9e077f5e4712a0e01472983a099336beb2e0",
+    "K1/v1/technical-photo-mask-readback.json": "fce8c2eb3392bb3f5396b402b203eeb5528f3cc37772c274182e4173a53cc117",
+    "K1/v1/K1-photo-own-mask-review.png": "df7b38d1064f3681f857098439fb4504c2250909dcadebcaf568de872072e7a5",
+    "K1/v1/QA-FI.md": "9bba042d3c9d44922112f847ed2c9ad106564df926149640220e9797353b2883",
+    "K1/v1/mailbox-letter.md": "0c4a7d1a17693b0110e08e0bb287a8d45473bf27c170e66fe34d5a0021efe0a5",
+    "K1/v1/staging-files.json": "24781600baca19b9fd95962426e705f2ec3193366efa9ca25bf92237d73a7a9a",
+    "K1/v1/handoff-receipt.json": "4aa55e0866faf9f44df674a5f21b21ad4e25425df2714bcf8f15ed7c7e677382"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "taskNumber": 302,
+  "version": "v2",
+  "reviewedAt": "2026-10-15T16:11:50.793076+00:00",
+  "reviewer": "root",
+  "photoSHA256": "4d17784bd0b0e98d5566447a5d23f5c1b0f41f389fbf751e5719dda4b063623e",
+  "maskSHA256": "599d1679d892a55e0182c0f30915d7630c2d461447da93fd9aefcc64aa56885a",
+  "maskPersonallyViewed": true,
+  "overlayPersonallyViewed": true,
+  "agentReferenceMaskRead": false,
+  "maskDerivedFromActualPhoto": true,
+  "independentlyCertified": false,
+  "reviewBoardPersonallyViewed": true,
+  "IoU": null,
+  "notes": [
+    "Mask follows the visible U-shaped palace and rear block; central paving, statue, side city, river and skyline are black.",
+    "Rear roof fins and narrow courtyard holes have tracing uncertainty. Vegetation obscures parts of the lower right wing; hidden extents are not geometrically certified.",
+    "No target-fitting correction was requested. Root will compute exact native overlap only after this mask is fixed."
+  ],
+  "acceptedAsBindingTarget": false,
+  "nativeComparisonPersonallyReviewed": true
+}
