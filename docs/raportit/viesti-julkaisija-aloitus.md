@@ -5,7 +5,7 @@ Olet Julkaisija (Opus, medium), checkout /Users/Shared/Claude/Matkakirja-julkais
 Lue myös CLAUDE.md, /Users/Shared/Claude/osoitekirja.md. Loki: /Users/Shared/Claude/julkaisija-tyokalut/tf-jono-20261002.txt (tail -150).
 
 Ensimmäisenä:
-1. JUNA 194 (luovutuksen kohta 2): vienti 38743063789 ⊇ 100b07b42 valmis + CDN-tarkistus → NS:n BUILD-SHA → `tf-kaynnista.sh 194 <BUILD> 5f48994bf3bdf539aab4c7894396ed426b5822ee`;
+1. JUNA 194 (luovutuksen kohta 2): vienti 38743063789 ⊇ 100b07b42 valmis + CDN-tarkistus → `tf-kaynnista.sh 194 b110dff52ab9166fca0f36ead256d68ae7c8c12d 5f48994bf3bdf539aab4c7894396ed426b5822ee`;
    pollaava Monitor tf194-ketju.log (wc -l), vaiheet talo/eteneminen, sisäinen → rivi PT + KK, BETA-ARVIO → rivi + VANHENNUS 193.
 2. Lukko-Monitor: `zsh /Users/Shared/Claude/julkaisija-tyokalut/lukkovahti.zsh | grep --line-buffered -v juna/b17`.
 3. Vahti-Monitor: `tail -n 0 -F /Users/Shared/Claude/julkaisija-tyokalut/valoseppa-vahti.log | grep --line-buffered -E "KÄÄNNÖS|KÄÄNNETTY|SIMU|VALMIS|VIKA"`.

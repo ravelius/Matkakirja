@@ -38,3 +38,11 @@ paketoi), maa-koopenhamina-dhm-v3 (KS), maa-ateena-lontoo-v2 (KS), PK ateena-v9 
 ## 4. Muut
 Merget: #4609 #4579 #4611 #4615 #4616 #4617 #4618 #4619. Louvre v1c -pari Valosepälle 16.34. Linjat: NS 194; simut 0/2.
 Cron 04.03 NAS-bundle (session-only) → luo uudelleen.
+
+## 5. Lisäys 16.4x (ennen nollausta)
+- **BUILD 194 = b110dff52ab9166fca0f36ead256d68ae7c8c12d** (NS L1 KÄÄNNETTY fd13650bd 16.35). Mac 194 käännetty; NS käynnistää Mac-TF:n,
+  kun ilmoitat viennin valmiiksi. → `tf-kaynnista.sh 194 b110dff52ab9166fca0f36ead256d68ae7c8c12d 5f48994bf3bdf539aab4c7894396ed426b5822ee`
+  heti kun vienti 38743063789 = success ja CDN-tarkistus OK; sitten rivi NS:lle ("vienti valmis, Mac-TF").
+- Valovahti-tauko POISTETTU 16.4x (L1 + L2 vapaat).
+- Valosepän Louvre v1c Google -ajo (kuvat-google.zsh, A26BC7D0) käynnistetty 16.4x tämän session taustalla; jos nollaus katkaisi sen,
+  tarkista `/Users/Shared/Claude/proto-3d/lokit/valoseppa-louvre-v1c-google-ajo.log` ja kerro Valosepälle (aja uudelleen tarvittaessa).
