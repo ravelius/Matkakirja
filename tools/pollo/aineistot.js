@@ -119,5 +119,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     praha: 'esittely/praha-historia-v1/praha-historia-yksityiskohdat.json',
     ateena: 'esittely/ateena-historia-v1/ateena-historia-yksityiskohdat.json',
     koopenhamina: 'esittely/koopenhamina-historia-v1/koopenhamina-historia-yksityiskohdat.json',
+    // Sisältökirjuri 15.10. (#4638, juna 195): Lontoo
+    lontoo: 'esittely/lontoo-historia-v1/lontoo-historia-yksityiskohdat.json',
   },
 });
