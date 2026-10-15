@@ -34,6 +34,8 @@ Jos R1:ssä yhä ei nimeä: Tila-rivi kertoo "revontulten ehdokkaita N, nimelle 
   (PT 7.10.: esikamera vain SEURAAVAAN pysähdykseen, "ÄLÄ LÖYSENNÄ ilman uutta tarkistusta"). Odota PT:n/omistajan päätös ennen koodia.
   Selvitys rakennuspalikoista: AsetaReittikamerat (ReittiNaytteet 0,15/0,4/0,65, ReittiSkaala 0,5), EsilatausEstetty, LahtoValmis;
   korkeus/este jo VAIN omasta mallista (ehto täyttyy).
+  PT 01.1x: ehtoraja pysyy; kysymys omistajalle KK:n kautta (suositus: tarkennus etenee seuraavaan pysähdykseen asti). Toteuta sallittu
+  jatke VASTA omistajan vastauksen jälkeen. Järjestys: ensin kippi b43c288ce + ennen/jälkeen-video (kohta 1), sitten tämä.
 - PT:n lisä: ISS → Lissabon -siirtymässä Blue Marble -Cesium-laatta ilmestyy ISS-pallon päälle ilman häivytystä (terävä lohko), kuva
   /Users/Shared/Claude/proto-3d/_tyo/pelikoodari/iss-pulu-vastaukset-196/kelaus-kehys-ipad.png – häivytys/sekoitus. EI ALOITETTU.
 - Karttasepän korostusehdotus kohta "Jäljelle" = korostus-maa (yllä); ennen/jälkeen-kuva PT:lle 196f-ajosta.
