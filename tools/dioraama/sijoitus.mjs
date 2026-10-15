@@ -1,6 +1,6 @@
 // DIORAAMAN TILAKOHTAINEN SIJOITUS (Linnanrakentaja 29.9.2026). Speksi docs/raportit/dioraama-rajapinnat-blender-20260929.md
 // kohta 2. Tilalla voi olla `sijoitus: { ankkuri: [x,y,z], paikka: [x,y,z], suunta: astetta }`. Silloin KAIKKI tilan
-// pistedata (palikat, rajat, kamerat, pulu, hahmot ja reitit, valot, liekit, leikkaus, elava.kohde ja elava.reitti, esineet, etsinta-kohteet, taulu.kohdat[].kohde.paikka) muunnetaan
+// pistedata (palikat, rajat, kamerat, pulu, hahmot ja reitit, valot, liekit, leikkaus, elava.kohde ja elava.reitti, esineet, etsinta-kohteet, taulu.kohdat[].kohde.paikka, hahmot[].kadet[] (tartu: paikka ja kierto), kuunnelma[].vuorot[].osoita.paikka) muunnetaan
 //   p' = R(suunta) · (p − ankkuri) + paikka
 // ennen rakennusta. Tila-data pysyy tiivistetyissä lähdekoordinaateissaan; rakenna.mjs kutsuu sijoitaTila()a ensimmäisenä.
 //
@@ -40,7 +40,10 @@ function muunnin({ ankkuri = [0, 0, 0], paikka = [0, 0, 0], suunta = 0 }) {
       max: [0, 1, 2].map((i) => Math.max(...kaikki.map((k) => k[i]))),
     };
   };
-  return { piste, laatikko, suunta };
+  // Kierto (kvaternio [x, y, z, w], glTF): sama Y-kierto kuin pisteille eli R_y(−suunta) vasemmalta (Final IK -kädet, 5.10.).
+  const [kc, ks] = [Math.cos((-suunta * RAD) / 2), Math.sin((-suunta * RAD) / 2)];
+  const kierto = ([x, y, z, w]) => [kc * x + ks * z, kc * y + ks * w, kc * z - ks * x, kc * w - ks * y].map(pyorista);
+  return { piste, laatikko, suunta, kierto };
 }
 
 const onPiste = (p) => Array.isArray(p) && p.length === 3 && p.every((x) => typeof x === 'number');
@@ -83,7 +86,17 @@ export function sijoitaTila(tila) {
   // Elävä linna (29.9.): yleisnäkymän napautuskohde ja reittihahmon polku samaan sijoitukseen.
   pisteeksi(t.elava, 'kohde');
   for (const v of t.etsinta ?? []) pisteeksi(v, 'kohde');  // voudin sinetti: vihjeen/löydön kohta
-  for (const k of t.taulu?.kohdat ?? []) pisteeksi(k.kohde, 'paikka');  // kohtaukset v2 (5.10.): fakta napautuskohteeseen
+  for (const k of t.taulu?.kohdat ?? []) pisteeksi(k.kohde, 'paikka');
+  // Final IK (5.10.): hahmon kädet kahvoihin (tartu: maailman paikka ja kierto; kanna on käden paikallinen, ei muunneta)
+  // ja vuoron osoituskohde.
+  for (const h of t.hahmot ?? []) {
+    for (const k of h.kadet ?? []) {
+      if (k.tyyppi !== 'tartu') continue;
+      pisteeksi(k, 'paikka');
+      if (Array.isArray(k.kierto) && k.kierto.length === 4) k.kierto = m.kierto(k.kierto);
+    }
+  }
+  for (const r of t.kuunnelma ?? []) for (const v of r.vuorot ?? []) pisteeksi(v.osoita, 'paikka');  // kohtaukset v2 (5.10.): fakta napautuskohteeseen
   if (Array.isArray(t.elava?.reitti?.pisteet)) t.elava.reitti.pisteet = t.elava.reitti.pisteet.map((p) => (onPiste(p) ? m.piste(p) : p));
   return t;
 }
