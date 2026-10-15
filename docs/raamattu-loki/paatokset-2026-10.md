@@ -177,3 +177,15 @@ noin 16 auringonnousua päivässä. Vastaukset lähteineen omistajan hyväksytt�
 - 20.05 "Joo animoidaan kuuluisimmat purkaukset" ja 20.07 (kortti, kaikki neljä): ISS-näkymään animoituina tulivuoret (Sarytšev 2009, Etna 2002, Raikoke 2019, Hunga Tonga 2022, Reykjanes), salamat ja
 keijut, pimennyksen varjo (12.8.2026), Perseidit aseman alapuolella ja hurrikaanin silmä. Kukin oma kohdevalikon ryhmä ja paras hetki = tapahtuman todellinen aika; tavoitekuvina NASA/satelliittien
 PD-kuvat; kuvapari tai video omistajalle ennen kytkentää. ISS on linssi: ei Eurooppa-rajausta.
+
+## OMISTAJAN PAATOKSET 15.10. ILTA 2: PULUN AANET, KOHOKOHDAT, PARAS HETKI (15.10.2026 klo 21.03)
+
+Keskustelukanavan välittäminä (PT kirjasi):
+- 20.23 pulu-iss-kysymykset: "Hyväksyn" – Pulun 5 ISS-vastausta ja äänitys Pulun äänellä (5 ottoa, noin 2 300 merkkiä); tulivuorivastaus KK:n muodossa.
+- 20.24 (kortti, kaikki neljä): isoisan-uni-alkusoitto (lisälause: "Asemalta katsottuna maapallo peittää noin kolmanneksen taivaasta, maan pinnalta katsottuna puolet."), iss-aanettomat 49 ottoa KK:n
+muokkauksin, vapaalento-kutsut Lontoo/Praha/Ateena ja pulu-mika-en-tunne junaan 195, aloituskartan vihjerivit (Samarkand ja Giza muokattu).
+- 20.27 (kortti "Kyllä, näin"): ISS-kohdevalikon ylimmäksi KOHOKOHDAT isoina kuvakortteina parhaaseen hetkeen, Pulun 5 kysymystä liitettynä; alla ISS nyt | Oma sijainti | Kaikki paikat. Korvaa 17.52
+linjan (ISS nyt ensimmäisenä).
+- 20.42 paras-hetki-kuittaus: "Kyllä, junaan 196" (Pariisin kuvapari); Lappi näytetään, kun revontulet ovat valmiit.
+PT:n linjaus: nämä 5 Pulun ISS-vastausta soittavat äänityksen ja saman tekstin (omistajan 20.23/20.27 päätökset ovat uudempia kuin 5.10. 'ei valmiita vastauksia'); muut kysymykset menevät elävälle
+Pululle taustatietona.
