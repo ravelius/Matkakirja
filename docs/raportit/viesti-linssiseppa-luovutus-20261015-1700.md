@@ -23,7 +23,7 @@ KATSEKULMAT (PT: Ateenan stadion, Tuulten torni, Josefovin talo):
   kehittäjän korjaustiedostolla, ei omaa käännöstä). Skenaario sk-kulmat-195.txt: Ateena A/B (Kallimarmaro katse_suunta 329 = stadionin akselilta
   luoteesta, keskipiste 37.96769/23.74152, kaari 30, silmä A 90–110 / B 130–160; Tuulten torni A katse 20 silmä 45–55 koko 60 / B katse 270 silmä 40–50),
   Praha A/B (Josefov katse 45 / katse 90 silmä 90–110). Vertailu nykyisiin: todistus-pallot-pelaajille-194-20261015-1513 (e01, e03, k05).
-  Tulos proto-3d/lokit/todistus-kulmat195-ipad-<aika>/; ajo-kulmat195.log "SIMU ALAS" → ILMOITA JULKAISIJALLE SIMU VAPAA.
+  VALMIS 17.01: proto-3d/lokit/todistus-kulmat195-ipad-20261015-1646/ (OK, 12 kuvaa A/B, katsomatta); SIMU VAPAA ilmoitettu Julkaisijalle.
 - PT:n 17.0x korjaus koskee kuva-arkkeja: VARMISTA PT:ltä ennen arkin lähettämistä, saako kulmakuvia käyttää (kulmia ei voi valita sokkona;
   omat kuvat valintaan, PT:lle vain rivi + SHA). Valitut arvot uusiin datakansioihin: pallokierros-ateena-v10 (v9:n päälle) ja pallokierros-praha-v7
   (v6:n päälle) → vientipaketit _valmiit/opas-pallokierros-<x>-vienti-<pvm> Julkaisijalle → Pallokierros.cs Versiot-rivi + testirivit (PallokierrosV1Testit).
