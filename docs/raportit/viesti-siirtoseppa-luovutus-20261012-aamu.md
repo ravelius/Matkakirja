@@ -287,7 +287,7 @@ LCD pelkkä nimi, Live piiloon + ilmiöt + kohokohtien data). Uudempi kärki **e
 **Valmis:** auringonnousu junassa 196 (siirtoseppa/iss-nousu-196 21f52356f NS:llä, PT kuittasi). Pelikoodarin d0164dd0d (kohokohdat.json
 kysymykset) yhdistyy puhtaasti.
 
-**KESKEN: MERINIMET NOSTOINA** (PT, OMISTAJAN PYYNTÖ 15.10. 23.56 "merien nimet pitäisi olla klikattavia nostoja"; VAIN EUROOPPA, kytkin, juna 196,
+**KESKEN: MERINIMET NOSTOINA** (SEURAAJAN ENSIMMÄINEN ERÄ; PT, OMISTAJAN PYYNTÖ 15.10. 23.56, loki 04964505b, "merien nimet pitäisi olla klikattavia nostoja"; VAIN EUROOPPA, kytkin, juna 196,
 kuva iPhone + Mac PT:lle; SK luonnostelee Pulun kysymykset rinnalla – älä odota):
 - Proto-haara **siirtoseppa/meri-nostot-196 d7d4a89eb** (BUILD 195 master 64e1efcd1; worktree /Users/Shared/Claude/wt/proto-siirtoseppa-meri).
   Nimikerros.MeriOsuma (näkyvän merinimen laatikko + 8 pt) → NostoKerros.MeriNosto (NostoSaannot.MeriVastaa + OnEuroopanMeri, lähin) →
