@@ -217,3 +217,7 @@ Omistaja: "Ja kohokohdat ja kohteet saisi näkyä jotenkin samassa ikkunassa. Va
 ## PAATOKSET 15.10.2026 klo 22.37 (KK välitti): ISS-etsin junaan 196, kehitys lyhyeksi (15.10.2026 klo 22.37)
 
 Omistaja etsinvideo 2:n jälkeen (kortti): "Kyllä, kehitys lyhyeksi (Suositus)". IssEtsin päälle junaan 196: kortti aukeaa noin 5 s:ssa laukaisuhetken kuvalla, tarkka kuva vaihtuu korttiin taustalla (kuvan teko noin 40 s). PK IssKameraKuva, NUI kortin vaihto. Kortin alarivillä 'korkeus 429 km' (ei pelkkä km, ettei lueta etäisyydeksi).
+
+## PAATOKSET 15.10.2026 klo 22.40 (KK välitti): ISS-minimaapallo ja kameran kortin ilmoitus (15.10.2026 klo 22.41)
+
+Omistaja: "Minimaapallo pitää suurentua vähän suuremmaksi ja sinne pitää lisätä kaikki pääkaupungit sekä muut mielenkiintoiset kohteet. Kohteen nimi pitää näkyä pallon päällä tai vasemmalla puolella koska muuten peukalo peittää sen" (ISS = linssi, koko maailma; KS pisteet, NUI toteutus; kuva iPhonesta ennen kytkentää). Ja kameran kortista: "Siitä pitää olla ilmoitus pienellä" → pieni teksti (esim. 'Kuva tarkentuu…'), kunnes tarkka kuva on vaihtunut (NUI).
