@@ -1,0 +1,28 @@
+{
+  "task": 285,
+  "view": "K1",
+  "generationHasNotStarted": true,
+  "requiredNativeDimensions": [
+    2400,
+    1600
+  ],
+  "requiredOwnMaskFormat": {
+    "mode": "L",
+    "values": [
+      0,
+      255
+    ],
+    "size": [
+      2400,
+      1600
+    ]
+  },
+  "requiredOwnMaskSemantics": "Palace roofs and facades255; courtyards, ground, sky, trees, distant blocks, people, text, statues including equestrian statue0. Fill only palace parts occluded by intervening objects, not empty courtyard holes.",
+  "ownMaskProvenanceRequired": "Trace actual new photograph first. Keep independent source mask byte-immutable; do not return a copy of target mask to claim100%IoU. Any inferred hidden palace extent must be separately marked.",
+  "measurement": "At exact output dimensions without crop/warp/scale alignment: count own AND source mask pixels, own OR source mask pixels; IoU=intersection/union. Save counts, SHA and difference image.",
+  "requiredIoU": 0.95,
+  "LiDARExceptions": "Only individually described conspicuous measurement spikes/errors; no blanket allowance for changed wings, domes or camera. No exception predeclared.",
+  "outputCameraClaim": "Locked input matrix/metadata is not proof that an image model recreated the physical camera. Verify landmark and silhouette correspondence from output; no field-survey claim.",
+  "failureHandling": "Stop after first whole image for feedback; no partial repairs or automatic retries. Never mark failed resolution/silhouette as passed.",
+  "newGenerationsSoFar": 0
+}

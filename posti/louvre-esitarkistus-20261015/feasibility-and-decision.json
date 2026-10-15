@@ -1,0 +1,324 @@
+{
+  "checkedAt": "2026-10-15T14:43:17.881842+00:00",
+  "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+  "sourceBlob": "20ab0bdd25430718d260bcb37f814bf2650d3ebd",
+  "sourceFilesRead": 31,
+  "sourceImagesPersonallyViewed": 27,
+  "originalSourceBytesPreserved": true,
+  "all7InputMasksAreBinaryAndMatchTheirMassCanvases": true,
+  "views": [
+    {
+      "view": "K1",
+      "massDimensions": [
+        2400,
+        1600
+      ],
+      "maskDimensions": [
+        2400,
+        1600
+      ],
+      "maskMode": "L",
+      "maskValues": [
+        0,
+        255
+      ],
+      "whitePixels": 889671,
+      "whiteBBox": [
+        0,
+        409,
+        2400,
+        1600
+      ],
+      "maskSHA256": "0d5c9e01dff3c1ad079d5ab6590961869de21549f3a634a68f0af0f2eca8c32b",
+      "cameraENU": [
+        -357.08,
+        129.97,
+        180
+      ],
+      "headingDegrees": 110,
+      "pitchDegrees": -23.47,
+      "verticalFOVDegrees": 45,
+      "rollDegrees": 0,
+      "nativeAPISizeMultiple16Compatible": true
+    },
+    {
+      "view": "K2",
+      "massDimensions": [
+        2400,
+        1200
+      ],
+      "maskDimensions": [
+        2400,
+        1200
+      ],
+      "maskMode": "L",
+      "maskValues": [
+        0,
+        255
+      ],
+      "whitePixels": 684724,
+      "whiteBBox": [
+        109,
+        331,
+        2400,
+        1034
+      ],
+      "maskSHA256": "d870093afb47569cab8c926e17bf00772534cd05bedf67a984ae56796ec28a95",
+      "cameraENU": [
+        153.91,
+        422.86,
+        280
+      ],
+      "headingDegrees": 200,
+      "pitchDegrees": -30.49,
+      "verticalFOVDegrees": 40,
+      "rollDegrees": 0,
+      "nativeAPISizeMultiple16Compatible": true
+    },
+    {
+      "view": "K3",
+      "massDimensions": [
+        2400,
+        1200
+      ],
+      "maskDimensions": [
+        2400,
+        1200
+      ],
+      "maskMode": "L",
+      "maskValues": [
+        0,
+        255
+      ],
+      "whitePixels": 662379,
+      "whiteBBox": [
+        0,
+        336,
+        2294,
+        946
+      ],
+      "maskSHA256": "801379bf05d7021972dd38bd1a86c2c9756717a3edd686c10a1f0944ff8797d3",
+      "cameraENU": [
+        -153.91,
+        -422.86,
+        280
+      ],
+      "headingDegrees": 20,
+      "pitchDegrees": -30.49,
+      "verticalFOVDegrees": 40,
+      "rollDegrees": 0,
+      "nativeAPISizeMultiple16Compatible": true
+    },
+    {
+      "view": "K4",
+      "massDimensions": [
+        2400,
+        1600
+      ],
+      "maskDimensions": [
+        2400,
+        1600
+      ],
+      "maskMode": "L",
+      "maskValues": [
+        0,
+        255
+      ],
+      "whitePixels": 989779,
+      "whiteBBox": [
+        317,
+        331,
+        2010,
+        1600
+      ],
+      "maskSHA256": "ad7c08b24240f81cd88594f5ed747eb8a112ac59cb0b12a563e533a2e03f9630",
+      "cameraENU": [
+        357.08,
+        -129.97,
+        180
+      ],
+      "headingDegrees": 290,
+      "pitchDegrees": -23.47,
+      "verticalFOVDegrees": 45,
+      "rollDegrees": 0,
+      "nativeAPISizeMultiple16Compatible": true
+    },
+    {
+      "view": "K5",
+      "massDimensions": [
+        2400,
+        1350
+      ],
+      "maskDimensions": [
+        2400,
+        1350
+      ],
+      "maskMode": "L",
+      "maskValues": [
+        0,
+        255
+      ],
+      "whitePixels": 946945,
+      "whiteBBox": [
+        0,
+        350,
+        2400,
+        1173
+      ],
+      "maskSHA256": "1be307ed7f5eabd0135ebec07a721ac693766c8a880b370345a79bb1110ca883",
+      "cameraENU": [
+        -140.95,
+        51.3,
+        32
+      ],
+      "headingDegrees": 110,
+      "pitchDegrees": -4.9,
+      "verticalFOVDegrees": 47.6,
+      "rollDegrees": 0,
+      "nativeAPISizeMultiple16Compatible": false
+    },
+    {
+      "view": "K6",
+      "massDimensions": [
+        2400,
+        1600
+      ],
+      "maskDimensions": [
+        2400,
+        1600
+      ],
+      "maskMode": "L",
+      "maskValues": [
+        0,
+        255
+      ],
+      "whitePixels": 2045601,
+      "whiteBBox": [
+        0,
+        133,
+        2400,
+        1600
+      ],
+      "maskSHA256": "3119f3738d091ac673ef73ca7626ffcc5b17f199453ad374d50a75fa8c110092",
+      "cameraENU": [
+        58.14,
+        159.75,
+        130
+      ],
+      "headingDegrees": 200,
+      "pitchDegrees": -35.22,
+      "verticalFOVDegrees": 45,
+      "rollDegrees": 0,
+      "nativeAPISizeMultiple16Compatible": true
+    },
+    {
+      "view": "K7",
+      "massDimensions": [
+        2400,
+        1600
+      ],
+      "maskDimensions": [
+        2400,
+        1600
+      ],
+      "maskMode": "L",
+      "maskValues": [
+        0,
+        255
+      ],
+      "whitePixels": 1567498,
+      "whiteBBox": [
+        0,
+        0,
+        2400,
+        1600
+      ],
+      "maskSHA256": "9731c1ed2eb3c8f2fdace82e3baf5bb8f29c8827cb4258d758cdfd6244385c64",
+      "cameraENU": [
+        58.14,
+        -159.75,
+        130
+      ],
+      "headingDegrees": 340,
+      "pitchDegrees": -35.22,
+      "verticalFOVDegrees": 45,
+      "rollDegrees": 0,
+      "nativeAPISizeMultiple16Compatible": true
+    }
+  ],
+  "builtinTool": {
+    "available": true,
+    "explicitSizeArgumentExposed": false,
+    "observedPreviousNativeOutput": [
+      1254,
+      1254
+    ],
+    "previousTask": 280,
+    "previousRequestedSize": [
+      2048,
+      2048
+    ],
+    "exact2400WidthGuaranteed": false,
+    "newLouvreCallsIssued": 0
+  },
+  "optionalAPIPath": {
+    "requiresDirectUserAuthorization": true,
+    "authorizationReceived": false,
+    "networkCallMade": false,
+    "localCredentialPresenceCheckedWithoutReadingOrDisplayingValue": true,
+    "credentialPresent": true,
+    "localImagegenSkillDefaultFallbackModel": "gpt-image-2",
+    "K1RequestedSize": [
+      2400,
+      1600
+    ],
+    "K1AcceptedByInstalledCLIStaticSizeRules": true,
+    "accountModelAccessAndActualNativeOutputNotYetVerified": true,
+    "noSilentModelDowngrade": true
+  },
+  "K5SizeResolutionPlan": {
+    "sourceAndFinalSize": [
+      2400,
+      1350
+    ],
+    "installedCLIRequires16PixelMultiples": true,
+    "proposedHigherNativeCanvas": [
+      2560,
+      1440
+    ],
+    "sameAspectRatio": true,
+    "proposedFinalUniformDownsampleFactor": 0.9375,
+    "notUpscaling": true,
+    "noCropNoImageWarpNoPartialRepair": true,
+    "notExecuted": true,
+    "futureK5StillAwaitsItsFeedbackStep": true
+  },
+  "sourceMetadataNotes": [
+    {
+      "kind": "entity identifier distinction",
+      "sourceClaims": "Louvre Palace Q19675",
+      "verified": "Q19675 is Louvre Museum; Palace is Q1075988",
+      "evidenceURLs": [
+        "https://www.wikidata.org/wiki/Q19675",
+        "https://www.wikidata.org/wiki/Q1075988"
+      ],
+      "effect": "Record distinction only. Building scope remains source mass geometry and camera package; no source data rewritten."
+    },
+    {
+      "kind": "K5 distance reference",
+      "note": "JSON is150m from courtyard origin; narrative147m is from pyramid. Preserve ENU values; do not substitute147m into camera distance."
+    },
+    {
+      "kind": "source map legend",
+      "note": "Map legend mentionsK1–K8, but actual source JSON/order specifies onlyK1–K7. Do not inventK8."
+    }
+  ],
+  "outputOwnMaskIoU": null,
+  "outputNativeDimensions": null,
+  "imageDelivered": false,
+  "modelProductionStarted": false,
+  "R2Used": false,
+  "gameIntegrated": false,
+  "mainMerged": false,
+  "published": false
+}

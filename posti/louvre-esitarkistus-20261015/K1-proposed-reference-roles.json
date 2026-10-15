@@ -1,0 +1,27 @@
+{
+  "generationHasNotStarted": true,
+  "references": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K1-massa.jpg",
+      "role": "locked pixel composition and coarse measured masses"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K1-maski.png",
+      "role": "geometry-reference envelope only; not a substitute own output mask"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-North-facade-of-the-Denon-Wing-28184065532.jpg",
+      "role": "Denon facade details only"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Paris-Louvre-Cour-d-Honneur-Richelieu-Flugel-4.jpg",
+      "role": "Richelieu facade details only"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Cour-Napol-on-Pavillon-de-l-horloge-Louvre-007-jpg.jpg",
+      "role": "Sully details only"
+    }
+  ],
+  "all11ReferencePhotosReadAndCreditsPreservedInSource": true,
+  "noReferenceCompositionsOrPeopleCopied": true
+}

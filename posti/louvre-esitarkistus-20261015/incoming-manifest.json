@@ -1,0 +1,361 @@
+{
+  "checkedAt": "2026-10-15T14:35:44.402492+00:00",
+  "taskNumbers": [
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291
+  ],
+  "files": [
+    {
+      "sourcePath": "posti/louvre-K1-maski.png",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "8383896a29232dd27efdfc03570b1a92b5ba7871",
+      "sha256": "0d5c9e01dff3c1ad079d5ab6590961869de21549f3a634a68f0af0f2eca8c32b",
+      "bytes": 10960,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K1-maski.png",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K1-massa.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "015875596715c4fce638f5e76e53219349ff72f9",
+      "sha256": "ccbac31412407f041c724efb3c99d703db49937b08b5cff621ce3db6f8f24151",
+      "bytes": 202443,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K1-massa.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K2-maski.png",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "38247e0c09817e4b927505c70826b9617ad86a61",
+      "sha256": "d870093afb47569cab8c926e17bf00772534cd05bedf67a984ae56796ec28a95",
+      "bytes": 9215,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K2-maski.png",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K2-massa.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "97cae99888ebbd4c0204519eb98bd7f9d1ded606",
+      "sha256": "7a44a9bc2642f5bbe93b1413524ae2f19aec1bda33067c7d3ece5e247e0d4e6b",
+      "bytes": 174551,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K2-massa.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K3-maski.png",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "836c91e295f90cc3715126a0c1b5bd3f40a7c999",
+      "sha256": "801379bf05d7021972dd38bd1a86c2c9756717a3edd686c10a1f0944ff8797d3",
+      "bytes": 9453,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K3-maski.png",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K3-massa.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "7cfd7b3e8a6d1c083f7a3c211c3878a80fdf8369",
+      "sha256": "23a5c714eb08d1636ca530fb38eed29ea92664223a88478423d4cffdad5ecd51",
+      "bytes": 161272,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K3-massa.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K4-maski.png",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "844dfe29c815d8238ea060ae063533d5fb1cc7fb",
+      "sha256": "ad7c08b24240f81cd88594f5ed747eb8a112ac59cb0b12a563e533a2e03f9630",
+      "bytes": 10876,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K4-maski.png",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K4-massa.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "22ea04f15854d73196dbbd105146e144461bc72b",
+      "sha256": "baac1c6c77e23f064a9db7731af826f7a51bc9c87ca5132ee029737b20f4370b",
+      "bytes": 249331,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K4-massa.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K5-maski.png",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "0d41c37affc101c877fa9c315fe8e97e412c4b69",
+      "sha256": "1be307ed7f5eabd0135ebec07a721ac693766c8a880b370345a79bb1110ca883",
+      "bytes": 8123,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K5-maski.png",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K5-massa.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "d157ebcb0400703a7a4d864aaa6693c3f433debc",
+      "sha256": "1da78d43527514e4c6f771ee48c9a0ccf1287148d4b3f69f399506f387cd88a7",
+      "bytes": 160110,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K5-massa.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K6-maski.png",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "410470a55ec807f40ac90df2576a87344c77e02d",
+      "sha256": "3119f3738d091ac673ef73ca7626ffcc5b17f199453ad374d50a75fa8c110092",
+      "bytes": 11907,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K6-maski.png",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K6-massa.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "4a3c37352026c16ad7266484081e02937423d84d",
+      "sha256": "2f9348f0d92fedbd4abe88cfdadd22d13469f14a65ca504fd143e789cb78bd7c",
+      "bytes": 300867,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K6-massa.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K7-maski.png",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "04a2240734e98104c746c18c88f4e8cf48796070",
+      "sha256": "9731c1ed2eb3c8f2fdace82e3baf5bb8f29c8827cb4258d758cdfd6244385c64",
+      "bytes": 14296,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K7-maski.png",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-K7-massa.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "828af4d990a4d5fe3dc9f35407ab2d57d66b2425",
+      "sha256": "f4f7b5873eb1c82ee1ea59311ac2f99dee142f6897d4d2abef527e740f28a280",
+      "bytes": 286510,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-K7-massa.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-LAHTEET.md",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "efbf7b999b267b0bb8c29484c12ce19fb69ff4a0",
+      "sha256": "f1320eb51dec60a506301533759685256525c71905780a390304bb778d7f2606",
+      "bytes": 4473,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-LAHTEET.md",
+      "independentlyViewed": false,
+      "textReadInFull": true
+    },
+    {
+      "sourcePath": "posti/louvre-codex-tilaus.md",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "20ab0bdd25430718d260bcb37f814bf2650d3ebd",
+      "sha256": "74026ce85d1fed36210aaf23eedf384729d851f6fb8f663c3d1706074f2834c3",
+      "bytes": 6900,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-codex-tilaus.md",
+      "independentlyViewed": false,
+      "textReadInFull": true
+    },
+    {
+      "sourcePath": "posti/louvre-korkeuskartta.png",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "76916f32573b2bf5ebae2979e0c0cac51b314e10",
+      "sha256": "8aba4e969d64d0de0550faf363b77a5221eff22aca2a287403b97b05b583c4a2",
+      "bytes": 344026,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-korkeuskartta.png",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-kulmat.json",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "b41ea999de534a8ceb1bd0d5972c53f5d09f8adc",
+      "sha256": "a40d646237d88fb20793b311fe5dba699363e705a80d241e2f1666f732263037",
+      "bytes": 4201,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-kulmat.json",
+      "independentlyViewed": false,
+      "textReadInFull": true
+    },
+    {
+      "sourcePath": "posti/louvre-pohjakartta.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "32cb1c8dd737fb4712c70cde65c462ea0f4e099c",
+      "sha256": "092f08cafa7ae1fd483910521d89c4aafa31881ddd1bec46f852338585d8a57c",
+      "bytes": 837538,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-pohjakartta.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-ref-Cour-Napol-on-Aile-Lemercier-Louvre-23-August-2016.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "0e5385d968f6eb75416735ae146a6e7c9f069747",
+      "sha256": "a19c3397e23bc10729f34adec630984f3d7b620d1c984ae163581b275db67618",
+      "bytes": 927125,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Cour-Napol-on-Aile-Lemercier-Louvre-23-August-2016.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-ref-Cour-Napol-on-Pavillon-de-l-horloge-Louvre-007-jpg.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "0ffd424da64802394ffa82b6f18340e542311985",
+      "sha256": "36734a0b490b35417d7f35d54dfdc42830a774cb6186e706484fa374a4059c6b",
+      "bytes": 1725336,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Cour-Napol-on-Pavillon-de-l-horloge-Louvre-007-jpg.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-ref-Cour-Napoleon-in-2017.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "988b4900c830dcac08b221f576653c76b468604a",
+      "sha256": "92b720cbb5dbe276cd37d9a802446108361bbd873d5c95845bb584533a44ceda",
+      "bytes": 1042783,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Cour-Napoleon-in-2017.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-ref-Facade-Nord-de-l-aile-Richelieu-Louvre.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "68f61a8c988879be10b0b67a0736d71f0a2d7927",
+      "sha256": "be3d4ecdbb57293d8e92a336ed0abc2d22b692db4215354874e566a0cd397916",
+      "bytes": 1362811,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Facade-Nord-de-l-aile-Richelieu-Louvre.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-ref-North-facade-of-the-Denon-Wing-28184065532.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "6325db0004f3adbeab47b61ab871e4cdcfe1a110",
+      "sha256": "9d7f575087563add6cb14e9a4176ee4ebffd9f7e1b00a4d720dd48ad3bf81c54",
+      "bytes": 1518863,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-North-facade-of-the-Denon-Wing-28184065532.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-ref-Paris-1er-Louvre-Quai-Francois-Mitterrand-Aile-494.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "ea50b14ced4c1a10c4b79c2aaf5361fda1d9a514",
+      "sha256": "01b0950a53ad1a4eb94759ab891f1a629dd8025eae645c6ddad17265d46a95cd",
+      "bytes": 2623868,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Paris-1er-Louvre-Quai-Francois-Mitterrand-Aile-494.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-ref-Paris-75001-Cour-Napol-on-Louvre-Pavillon-Sully-jp.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "6aa6ecc1ce21bfe048e2de14c366f356910c9fec",
+      "sha256": "867119a87a24b8e7b802133c2a2e56b968d4c9f79878d3aba4b85d6a542b60ae",
+      "bytes": 807572,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Paris-75001-Cour-Napol-on-Louvre-Pavillon-Sully-jp.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-ref-Paris-Louvre-Cour-d-Honneur-Richelieu-Flugel-4.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "0ffbffd536e3a0bca396444a8fdd00a07382ee94",
+      "sha256": "e1ad6dcb19ec524f5cbdde0cbdbeaf844035268429d8d8d5945ff71475c07b3d",
+      "bytes": 1483277,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Paris-Louvre-Cour-d-Honneur-Richelieu-Flugel-4.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-ref-Pavillon-Richelieu-27671874174.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "9887a313231d74c6278980e48ffdcae7152b4f29",
+      "sha256": "7adee949ac4326c7fd114faa370dc6af4ab4b84b78046f5025457c95e54a8ea2",
+      "bytes": 1837376,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Pavillon-Richelieu-27671874174.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-ref-Pediment-Pavillon-Sully-Louvre-jpg.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "06e7bb7f6cdd60ed9cf47e57ad95ac745a462b87",
+      "sha256": "04bbccde7ef957b1800538e3688d0c69a21c1cf479c110931d7fb40980bc73ab",
+      "bytes": 820871,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Pediment-Pavillon-Sully-Louvre-jpg.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/louvre-ref-West-facade-of-the-Cour-Carr-e-Louvre-11-February.jpg",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "5a96d7bc77c91fd07a9eb5921ade47d71e847226",
+      "sha256": "4be60c9c4855b0001174e5c0da980bd906df89100e953c4355b24961a7f2f93b",
+      "bytes": 587958,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-West-facade-of-the-Cour-Carr-e-Louvre-11-February.jpg",
+      "independentlyViewed": true,
+      "visualReviewAt": "2026-10-15T14:43:17.881842+00:00",
+      "visualReviewMethod": "Whole original image opened with view_image; tool may downsize display, native file dimensions read separately; no pixel-exact LiDAR correctness certificate"
+    },
+    {
+      "sourcePath": "posti/codex-peking-tavoiteluuppi-20261014.md",
+      "sourceCommit": "8c0fbcdea78f880b87d981ebb0afa443914c0935",
+      "gitBlob": "58d7d8effd5e546f198460cbbf30231274e3a490",
+      "sha256": "8c88abb1414837d014c4b8f33aaa2d60622fc5eff40ebd3804cc7ffe8e80e2ca",
+      "bytes": 2180,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/codex-peking-tavoiteluuppi-20261014.md",
+      "textReadInFull": true,
+      "appliedSection": 2,
+      "otherPekingWorkResumed": false
+    }
+  ],
+  "sourceTextsReadInFull": [
+    "louvre-codex-tilaus.md",
+    "louvre-kulmat.json",
+    "louvre-LAHTEET.md",
+    "codex-peking-tavoiteluuppi-20261014.md"
+  ],
+  "imagesVisualReviewPending": false,
+  "all27ImagesPersonallyViewed": true,
+  "reviewCompletedAt": "2026-10-15T14:43:17.881842+00:00"
+}
