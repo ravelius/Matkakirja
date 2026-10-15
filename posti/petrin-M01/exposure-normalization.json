@@ -1,0 +1,16 @@
+{
+  "round": "M01",
+  "geometryIterations": 1,
+  "uniformDisplayExposureEV": -2.5,
+  "geometrySHA256Before": "9e8236d73b3b30c027255a69f19b7a280af8d6460cfb9f597402ac30ad0f6afd",
+  "geometrySHA256After": "9e8236d73b3b30c027255a69f19b7a280af8d6460cfb9f597402ac30ad0f6afd",
+  "cameraSHA256Before": "8ffde652400f81619167a3147079f62e9ddfc61774bc1e34e7161cb62815bf70",
+  "cameraSHA256After": "8ffde652400f81619167a3147079f62e9ddfc61774bc1e34e7161cb62815bf70",
+  "geometryUnchanged": true,
+  "camerasUnchanged": true,
+  "materialsUnchanged": true,
+  "oldRendersPreserved": true,
+  "targetPhotographsUnchanged": true,
+  "rawGeometryMasksUnchanged": true,
+  "onlyTechnicalDisplayExposureNormalization": true
+}

@@ -1,0 +1,104 @@
+{
+  "taskNumber": 270,
+  "sourcePath": "posti/fable-codex-petrin-K5-maskikorjaus-20261015.md",
+  "sourceCommit": "e045c855c60fef0d2d30ae3928e64de0a2a521ae",
+  "sourceBlob": "a5a8769b17a6d7071ed66bc5107eaacffe955fcb",
+  "sourceReadInFull": true,
+  "correctedCoordinatesSupersedeEarlierWrongCoordinates": true,
+  "actualPolygonNativePixels": [
+    [
+      831,
+      570
+    ],
+    [
+      840,
+      596
+    ],
+    [
+      850,
+      627
+    ],
+    [
+      861,
+      661
+    ],
+    [
+      872,
+      696
+    ],
+    [
+      883,
+      732
+    ],
+    [
+      895,
+      769
+    ],
+    [
+      906,
+      807
+    ],
+    [
+      908,
+      813
+    ],
+    [
+      899,
+      816
+    ],
+    [
+      887,
+      777
+    ],
+    [
+      876,
+      741
+    ],
+    [
+      865,
+      705
+    ],
+    [
+      853,
+      669
+    ],
+    [
+      842,
+      634
+    ],
+    [
+      832,
+      601
+    ],
+    [
+      823,
+      576
+    ]
+  ],
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "originalMaskPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/K5/v1/petrin-K5-maski.png",
+  "originalMaskSHA256": "012a62a500f0720cdc64913359b03eea3e3187f70426c32312a461d707f5cd0e",
+  "correctedMaskPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/K5/mask-v2/petrin-K5-maski-v2.png",
+  "correctedMaskSHA256": "f54ea03d6558e636a943f83f561c72a80fc3c80d0bc5bdc7f5d5621f6ea534a3",
+  "onlyAddedWhitePixels": true,
+  "addedWhitePixelCount": 1544,
+  "removedWhitePixels": 0,
+  "addedPixelsBoundingBox": [
+    823,
+    570,
+    909,
+    817
+  ],
+  "photoUnchangedSHA256": "a695d52f270138fdcaa797cb3f288e1957a1acec121340e93e5034f359f2c134",
+  "originalMaskPreserved": true,
+  "softEdgePixels": 0,
+  "newImageGenerations": 0,
+  "pixelExactIndependentCertification": false,
+  "PTCorrectedMaskAcceptancePending": true,
+  "overlayPersonallyViewed": true,
+  "createdAt": "2026-10-15T10:32:16.545173+00:00",
+  "producerCorrectionReview": "actual outer steel leg followed; original image/mask preserved"
+}

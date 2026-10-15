@@ -1,0 +1,540 @@
+{
+  "round": "M01",
+  "createdAt": "2026-10-15T11:00:53.885700+00:00",
+  "modelIterationsAuthorized": 1,
+  "modelIterationsCompleted": 1,
+  "roundHistory": [
+    "M01"
+  ],
+  "bestAvailableRound": "M01",
+  "bestRoundIsNotFinalAcceptance": true,
+  "sourceAuthorization": {
+    "taskNumbers": [
+      269,
+      270,
+      271
+    ],
+    "sourceAcceptCommit": "13b0f0b1e7157b7cfecb38cd4a075c57f191b2d4",
+    "sourceCorrectionCommit": "e045c855c60fef0d2d30ae3928e64de0a2a521ae",
+    "bothSourcesReadInFull": true,
+    "modelRound": "M01",
+    "maximumModelIterationsThisAuthorization": 1,
+    "modelRoundsIssued": 1,
+    "stopAfterFirstModelRoundForFeedback": true,
+    "allFiveTargetImagesPTAccepted": true,
+    "K5MaskCorrectionRequiredAndPrepared": true,
+    "oldSourcesImagesMasksAndQAImmutable": true,
+    "newImageGenerationsAllowed": false,
+    "physicalDimensions": {
+      "bodyHeightM": 58.7,
+      "lowerPlatformM": 20,
+      "upperPlatformM": 51,
+      "totalHeightApproxM": 71,
+      "totalHeightUncertain": true
+    },
+    "IoUThresholds": {
+      "K1": 0.85,
+      "K2": 0.9,
+      "K3": 0.9,
+      "K4": 0.9,
+      "K5": 0.9
+    },
+    "cameraAndTargetInputs": [
+      {
+        "view": "K1",
+        "targetImageSHA256": "3be76904100a1cdf4cbb65058ca004f5f3e30f3d6383182ad4e1c7d346623717",
+        "targetMaskSHA256": "37af16eb46ff060d8c2b59c96bb1e098de6e7f04c8e119a7e4ccb0272fcab614",
+        "cameraSHA256": "7ccc7c695764eeb668980b8ddf28431e481e406e96f6ade0428cee596e874f54",
+        "targetMaskVersion": "PT-accepted",
+        "cameraIntrinsicsAndPoseFrozen": true,
+        "K5OriginalCameraMetadataRefersToOriginalMask": false,
+        "activeMaskBoundExplicitlyByThisManifest": true
+      },
+      {
+        "view": "K2",
+        "targetImageSHA256": "c869913a3b4c86cc0f191f02c61fd38c45761d9a7396f3376afe3501bd2c4f52",
+        "targetMaskSHA256": "1bdedddab334e16b1570af9ef41fb870384f47693422e22c771d7c2dafb5d981",
+        "cameraSHA256": "934673b5ac7bf875a96a80796a7a086829d09bf5bb39f4a3adf0d1d813a67c17",
+        "targetMaskVersion": "PT-accepted",
+        "cameraIntrinsicsAndPoseFrozen": true,
+        "K5OriginalCameraMetadataRefersToOriginalMask": false,
+        "activeMaskBoundExplicitlyByThisManifest": true
+      },
+      {
+        "view": "K3",
+        "targetImageSHA256": "f73e5fa19f14d4db1f8753d5c2f2c09d9e471b2b68d73d81deadc514cdd5d813",
+        "targetMaskSHA256": "541a1135f8ba8376dce24223d8cc8b6685e66fd0910a22c446f2d144ab22b55d",
+        "cameraSHA256": "71331fa09d9502e6096a15bde55ae193448d409f321e88b37d040a7dd223fb1e",
+        "targetMaskVersion": "PT-accepted",
+        "cameraIntrinsicsAndPoseFrozen": true,
+        "K5OriginalCameraMetadataRefersToOriginalMask": false,
+        "activeMaskBoundExplicitlyByThisManifest": true
+      },
+      {
+        "view": "K4",
+        "targetImageSHA256": "6ec296c9aaef7018aef9560128d7dee422fcea66913985c3a966db300aa25fe9",
+        "targetMaskSHA256": "9925cbecf0f25d51bde4c20936d35896711e542c8b4bf5abcc50bfd0398eaac8",
+        "cameraSHA256": "5509ee33d2926b7e92199799a5196ab17e83bfebe6983b51de1fd09e7993a816",
+        "targetMaskVersion": "PT-accepted",
+        "cameraIntrinsicsAndPoseFrozen": true,
+        "K5OriginalCameraMetadataRefersToOriginalMask": false,
+        "activeMaskBoundExplicitlyByThisManifest": true
+      },
+      {
+        "view": "K5",
+        "targetImageSHA256": "a695d52f270138fdcaa797cb3f288e1957a1acec121340e93e5034f359f2c134",
+        "targetMaskSHA256": "f54ea03d6558e636a943f83f561c72a80fc3c80d0bc5bdc7f5d5621f6ea534a3",
+        "cameraSHA256": "dfcd7af3cb0d43e58e7583700ac5ed7610c465aa5c1809862b62e651b8736cf2",
+        "targetMaskVersion": "corrected-v2-producer-reviewed-awaiting-PT",
+        "cameraIntrinsicsAndPoseFrozen": true,
+        "K5OriginalCameraMetadataRefersToOriginalMask": true,
+        "activeMaskBoundExplicitlyByThisManifest": true
+      }
+    ],
+    "modelIntegrationAllowed": false,
+    "R2Allowed": false,
+    "mainMergeAllowed": false,
+    "publicationAllowed": false,
+    "PekingNotModified": true,
+    "startedAt": "2026-10-15T10:32:16.545173+00:00"
+  },
+  "newAIImageGenerationsThisRound": 0,
+  "perView": [
+    {
+      "view": "K1",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "cameraSHA256": "7ccc7c695764eeb668980b8ddf28431e481e406e96f6ade0428cee596e874f54",
+      "targetImageSHA256": "3be76904100a1cdf4cbb65058ca004f5f3e30f3d6383182ad4e1c7d346623717",
+      "targetMaskSHA256": "37af16eb46ff060d8c2b59c96bb1e098de6e7f04c8e119a7e4ccb0272fcab614",
+      "modelImageSHA256": "34ce6837d1f1746721b869655f0c01009d03fc5d1b6f581ce9a40bbb0ce5a434",
+      "rawGeometryAlphaSHA256": "4135e7f92ea83eb394339a6e9f7551603c327ca7e324cb2fcaaec886a4a8da79",
+      "modelFilledMaskSHA256": "1a8af167d50ea0a48f5563d49dc2e7405ddd588818e7bb4421f708011a28f48b",
+      "maskMethod": "geometry alpha >=128 then fill enclosed holes from outside flood fill; no convex hull, image tracing, scaling or target-based mask adjustment",
+      "intersectionPixels": 51901,
+      "unionPixels": 74771,
+      "targetWhitePixels": 56605,
+      "modelWhitePixels": 70067,
+      "silhouetteIoU": 0.6941327520027818,
+      "silhouetteIoUPercent": 69.41327520027818,
+      "requiredIoUPercent": 85,
+      "IoUThresholdPassed": false,
+      "K5CorrectedMaskUsed": false,
+      "targetMaskIndependentPixelExactCertification": false,
+      "K5CorrectedMaskPTConfirmationPending": false,
+      "targetBBox": [
+        650,
+        156,
+        881,
+        805
+      ],
+      "modelBBox": [
+        629,
+        158,
+        909,
+        865
+      ],
+      "imageBoundingHeightDifferencePercentDiagnostic": 8.936825885978429,
+      "boundingHeightIsNotPhysicalHeightError": true,
+      "bindingMaterialDeltaE": null,
+      "bindingDeltaEUnavailableReason": "No independently registered material-only reference ROIs and matched illuminant; filled target silhouette includes background within lattice.",
+      "registeredPixelColorDiagnostic": {
+        "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+        "samples": 43417,
+        "meanDeltaE76": 24.80149940626539,
+        "medianDeltaE76": 22.26473645011358,
+        "p90DeltaE76": 44.213401088798776,
+        "notAPureMaterialColorMetric": true,
+        "includesShapeRegistrationAndLightingErrors": true,
+        "notUsedToClaimBindingDeltaEPass": true
+      }
+    },
+    {
+      "view": "K2",
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "cameraSHA256": "934673b5ac7bf875a96a80796a7a086829d09bf5bb39f4a3adf0d1d813a67c17",
+      "targetImageSHA256": "c869913a3b4c86cc0f191f02c61fd38c45761d9a7396f3376afe3501bd2c4f52",
+      "targetMaskSHA256": "1bdedddab334e16b1570af9ef41fb870384f47693422e22c771d7c2dafb5d981",
+      "modelImageSHA256": "ce9fa99b1b1452f515e3518391ebc7ee52e5cc63a954f577463abe180ef40935",
+      "rawGeometryAlphaSHA256": "563793e1a5e16d7d5cc8730397fd62968ba3014f87ff7954f7ded5ab32f66ba3",
+      "modelFilledMaskSHA256": "f4194bfe432e38f3e1b1683e5d266472d3b3ed2e4488c8ffaea8318cf54ca512",
+      "maskMethod": "geometry alpha >=128 then fill enclosed holes from outside flood fill; no convex hull, image tracing, scaling or target-based mask adjustment",
+      "intersectionPixels": 367751,
+      "unionPixels": 417838,
+      "targetWhitePixels": 386339,
+      "modelWhitePixels": 399250,
+      "silhouetteIoU": 0.8801281836501228,
+      "silhouetteIoUPercent": 88.01281836501228,
+      "requiredIoUPercent": 90,
+      "IoUThresholdPassed": false,
+      "K5CorrectedMaskUsed": false,
+      "targetMaskIndependentPixelExactCertification": false,
+      "K5CorrectedMaskPTConfirmationPending": false,
+      "targetBBox": [
+        165,
+        63,
+        889,
+        1386
+      ],
+      "modelBBox": [
+        113,
+        58,
+        950,
+        1393
+      ],
+      "imageBoundingHeightDifferencePercentDiagnostic": 0.9070294784580499,
+      "boundingHeightIsNotPhysicalHeightError": true,
+      "bindingMaterialDeltaE": null,
+      "bindingDeltaEUnavailableReason": "No independently registered material-only reference ROIs and matched illuminant; filled target silhouette includes background within lattice.",
+      "registeredPixelColorDiagnostic": {
+        "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+        "samples": 296877,
+        "meanDeltaE76": 27.430405717149736,
+        "medianDeltaE76": 24.97484639682178,
+        "p90DeltaE76": 50.898504093992955,
+        "notAPureMaterialColorMetric": true,
+        "includesShapeRegistrationAndLightingErrors": true,
+        "notUsedToClaimBindingDeltaEPass": true
+      }
+    },
+    {
+      "view": "K3",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "cameraSHA256": "71331fa09d9502e6096a15bde55ae193448d409f321e88b37d040a7dd223fb1e",
+      "targetImageSHA256": "f73e5fa19f14d4db1f8753d5c2f2c09d9e471b2b68d73d81deadc514cdd5d813",
+      "targetMaskSHA256": "541a1135f8ba8376dce24223d8cc8b6685e66fd0910a22c446f2d144ab22b55d",
+      "modelImageSHA256": "9126aed5ed2e9239bbc2ca9cbdce61737acaa65a78fdf1bbce086d3baacaf2af",
+      "rawGeometryAlphaSHA256": "c2ea9b107564cf82ffcdcbb55c79053fe7fddbead5c4d8fec03d48847979b734",
+      "modelFilledMaskSHA256": "1f4ecdf11a48f1bfe822be06886b29573d2f9236ded3e4a3c6b02eac2e53afe7",
+      "maskMethod": "geometry alpha >=128 then fill enclosed holes from outside flood fill; no convex hull, image tracing, scaling or target-based mask adjustment",
+      "intersectionPixels": 128956,
+      "unionPixels": 148454,
+      "targetWhitePixels": 139044,
+      "modelWhitePixels": 138366,
+      "silhouetteIoU": 0.8686596521481401,
+      "silhouetteIoUPercent": 86.86596521481401,
+      "requiredIoUPercent": 90,
+      "IoUThresholdPassed": false,
+      "K5CorrectedMaskUsed": false,
+      "targetMaskIndependentPixelExactCertification": false,
+      "K5CorrectedMaskPTConfirmationPending": false,
+      "targetBBox": [
+        575,
+        56,
+        963,
+        962
+      ],
+      "modelBBox": [
+        548,
+        56,
+        982,
+        960
+      ],
+      "imageBoundingHeightDifferencePercentDiagnostic": -0.22075055187637968,
+      "boundingHeightIsNotPhysicalHeightError": true,
+      "bindingMaterialDeltaE": null,
+      "bindingDeltaEUnavailableReason": "No independently registered material-only reference ROIs and matched illuminant; filled target silhouette includes background within lattice.",
+      "registeredPixelColorDiagnostic": {
+        "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+        "samples": 100570,
+        "meanDeltaE76": 24.934372723441154,
+        "medianDeltaE76": 23.29928175877345,
+        "p90DeltaE76": 41.94923868596779,
+        "notAPureMaterialColorMetric": true,
+        "includesShapeRegistrationAndLightingErrors": true,
+        "notUsedToClaimBindingDeltaEPass": true
+      }
+    },
+    {
+      "view": "K4",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "cameraSHA256": "5509ee33d2926b7e92199799a5196ab17e83bfebe6983b51de1fd09e7993a816",
+      "targetImageSHA256": "6ec296c9aaef7018aef9560128d7dee422fcea66913985c3a966db300aa25fe9",
+      "targetMaskSHA256": "9925cbecf0f25d51bde4c20936d35896711e542c8b4bf5abcc50bfd0398eaac8",
+      "modelImageSHA256": "0ddb2e93c3d9bb179725f82177a0f5df60769796423f93aa751d5726dbcf5f81",
+      "rawGeometryAlphaSHA256": "e014f145d71d53cb1a75025903a9be81d60851bed45b56f06d47a73e196ec5ab",
+      "modelFilledMaskSHA256": "512f8cf8e3e9a0db41561ef02c0c9c588adcaf9b08f7bd59a6263b5159f90342",
+      "maskMethod": "geometry alpha >=128 then fill enclosed holes from outside flood fill; no convex hull, image tracing, scaling or target-based mask adjustment",
+      "intersectionPixels": 138013,
+      "unionPixels": 157832,
+      "targetWhitePixels": 151198,
+      "modelWhitePixels": 144647,
+      "silhouetteIoU": 0.8744297734299762,
+      "silhouetteIoUPercent": 87.44297734299762,
+      "requiredIoUPercent": 90,
+      "IoUThresholdPassed": false,
+      "K5CorrectedMaskUsed": false,
+      "targetMaskIndependentPixelExactCertification": false,
+      "K5CorrectedMaskPTConfirmationPending": false,
+      "targetBBox": [
+        548,
+        53,
+        979,
+        965
+      ],
+      "modelBBox": [
+        540,
+        52,
+        991,
+        964
+      ],
+      "imageBoundingHeightDifferencePercentDiagnostic": 0.0,
+      "boundingHeightIsNotPhysicalHeightError": true,
+      "bindingMaterialDeltaE": null,
+      "bindingDeltaEUnavailableReason": "No independently registered material-only reference ROIs and matched illuminant; filled target silhouette includes background within lattice.",
+      "registeredPixelColorDiagnostic": {
+        "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+        "samples": 108605,
+        "meanDeltaE76": 27.013056271040043,
+        "medianDeltaE76": 25.735699421570978,
+        "p90DeltaE76": 45.670312600878574,
+        "notAPureMaterialColorMetric": true,
+        "includesShapeRegistrationAndLightingErrors": true,
+        "notUsedToClaimBindingDeltaEPass": true
+      }
+    },
+    {
+      "view": "K5",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "cameraSHA256": "dfcd7af3cb0d43e58e7583700ac5ed7610c465aa5c1809862b62e651b8736cf2",
+      "targetImageSHA256": "a695d52f270138fdcaa797cb3f288e1957a1acec121340e93e5034f359f2c134",
+      "targetMaskSHA256": "f54ea03d6558e636a943f83f561c72a80fc3c80d0bc5bdc7f5d5621f6ea534a3",
+      "modelImageSHA256": "5cbc6e09117e2b4d386be436d657d672bb950353346de228de96aaa88832f3b2",
+      "rawGeometryAlphaSHA256": "8094d2f4b26572fb6f5a058b6982684132706429d9ffb038a17506b6b9aef8f4",
+      "modelFilledMaskSHA256": "b819b96871307f9a8ac236bc04d0b22f0a06063141e328392ee83a91f350239b",
+      "maskMethod": "geometry alpha >=128 then fill enclosed holes from outside flood fill; no convex hull, image tracing, scaling or target-based mask adjustment",
+      "intersectionPixels": 92802,
+      "unionPixels": 129664,
+      "targetWhitePixels": 101955,
+      "modelWhitePixels": 120511,
+      "silhouetteIoU": 0.7157113770977295,
+      "silhouetteIoUPercent": 71.57113770977294,
+      "requiredIoUPercent": 90,
+      "IoUThresholdPassed": false,
+      "K5CorrectedMaskUsed": true,
+      "targetMaskIndependentPixelExactCertification": false,
+      "K5CorrectedMaskPTConfirmationPending": true,
+      "targetBBox": [
+        617,
+        67,
+        909,
+        865
+      ],
+      "modelBBox": [
+        594,
+        69,
+        948,
+        943
+      ],
+      "imageBoundingHeightDifferencePercentDiagnostic": 9.523809523809524,
+      "boundingHeightIsNotPhysicalHeightError": true,
+      "bindingMaterialDeltaE": null,
+      "bindingDeltaEUnavailableReason": "No independently registered material-only reference ROIs and matched illuminant; filled target silhouette includes background within lattice.",
+      "registeredPixelColorDiagnostic": {
+        "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+        "samples": 88908,
+        "meanDeltaE76": 24.59338691291648,
+        "medianDeltaE76": 22.09421374089028,
+        "p90DeltaE76": 46.49656583313302,
+        "notAPureMaterialColorMetric": true,
+        "includesShapeRegistrationAndLightingErrors": true,
+        "notUsedToClaimBindingDeltaEPass": true
+      }
+    }
+  ],
+  "meanIoUPercent": 80.661234766575,
+  "allIoUThresholdsPassed": false,
+  "actualSavedModelAudit": {
+    "savedBlendReadbackPassed": true,
+    "blender": "5.2.1 LTS",
+    "towerMeshObjects": 33,
+    "towerVertices": 29824,
+    "towerPolygons": 19680,
+    "actualBindingHeightMeasurements": {
+      "body_top": {
+        "expectedMaxZ": 58.7,
+        "actualMaxZ": 58.70000076293945,
+        "absoluteErrorM": 7.629394502828291e-07
+      },
+      "lower_floor": {
+        "expectedMaxZ": 20,
+        "actualMaxZ": 20.0,
+        "absoluteErrorM": 0.0
+      },
+      "upper_floor": {
+        "expectedMaxZ": 51,
+        "actualMaxZ": 51.0,
+        "absoluteErrorM": 0.0
+      }
+    },
+    "allNonMastMeshMinZ": -0.07999992370605469,
+    "allNonMastMeshMaxZ": 58.70005416870117,
+    "nonMastOverallHeightErrorPercent": 0.1363783516307048,
+    "actualGroundShoeConnectedComponents": 8,
+    "targetImageTextureNodes": [],
+    "cameraChecks": [
+      {
+        "view": "K1",
+        "maximumAxisProjectionErrorPixels": 4.206468247502926e-05,
+        "lensMm": 45.784690856933594,
+        "positionM": [
+          -68.4040298461914,
+          -187.9385223388672,
+          90.0
+        ],
+        "sourceCameraSHAUnchangedInInputs": true
+      },
+      {
+        "view": "K2",
+        "maximumAxisProjectionErrorPixels": 0.0002937316896804987,
+        "lensMm": 20.386577606201172,
+        "positionM": [
+          -9.550649642944336,
+          -54.164424896240234,
+          1.7000000476837158
+        ],
+        "sourceCameraSHAUnchangedInInputs": true
+      },
+      {
+        "view": "K3",
+        "maximumAxisProjectionErrorPixels": 0.00017717844082199008,
+        "lensMm": 35.49552917480469,
+        "positionM": [
+          -110.0,
+          -2.020667230003166e-14,
+          1.7000000476837158
+        ],
+        "sourceCameraSHAUnchangedInInputs": true
+      },
+      {
+        "view": "K4",
+        "maximumAxisProjectionErrorPixels": 0.0003051757813068434,
+        "lensMm": 33.0097770690918,
+        "positionM": [
+          8.715574264526367,
+          99.61946868896484,
+          1.7000000476837158
+        ],
+        "sourceCameraSHAUnchangedInInputs": true
+      },
+      {
+        "view": "K5",
+        "maximumAxisProjectionErrorPixels": 0.00019071974111284362,
+        "lensMm": 54.574310302734375,
+        "positionM": [
+          128.02500915527344,
+          -22.574262619018555,
+          150.0
+        ],
+        "sourceCameraSHAUnchangedInInputs": true
+      }
+    ],
+    "uniformDisplayExposureEV": -2.5,
+    "reRenderingPerformed": false,
+    "independentRealWorldSurvey": false,
+    "onlyFirstAuthorizedModelRound": true
+  },
+  "bindingMaterialDeltaE": null,
+  "bindingColorThresholdPassVerified": false,
+  "colorDiagnosticLimitation": "Registered pixel DeltaE76 is only a diagnostic: shape registration, lattice background and lighting contaminate it; material-only reference ROIs are unavailable.",
+  "independentReviewPath": "qa/independent-review.json",
+  "independentReviewTopThreeDifferences": [
+    {
+      "rank": 1,
+      "difference": "Alajalkojen ja jalustan projektio leviää tavoitteen ulkopuolelle, erityisesti ilmakuvissa.",
+      "views": [
+        "K1",
+        "K5",
+        "K2",
+        "K3",
+        "K4"
+      ],
+      "strongestIn": [
+        "K1",
+        "K5",
+        "K2"
+      ],
+      "observation": "K1:ssä ja K5:ssä maston kärki osuu lähelle tavoitetta, mutta mallin lähimmät jalkapäät ja jalustan alareuna jäävät selvästi tavoitetta alemmas ja sivujalat ulommas. K2:ssa molemmat ulommat jalat levittävät pohjaa tavoitetta leveämmäksi. K3:ssa ja K4:ssä pohjan sivureunojen ero näkyy pienempänä.",
+      "visibleImpact": "Torni näyttää ilmakuvissa tavoitetta suuremmalta ja alhaalta levähtäneemmältä; tavoitteen ja mallin ääriviivojen välille jää alaneljännekseen selvä vyöhyke. Tämä on kuvatason havainto, ei näyttö fyysisen kokonaiskorkeuden virheestä.",
+      "constraint": "Kamerat ovat tämän kierroksen hyväksytyt lähtökamerat. K5:n peittyvä maapiste on arvio, joten havainto ei yksin ratkaise, mikä osa erosta tulee pohjan muodosta, perspektiivistä tai tavoitteen epäjohdonmukaisuudesta. Havainto ei valtuuta kameran uudelleensovitusta."
+    },
+    {
+      "rank": 2,
+      "difference": "Alatasanteen kaide ja tasanteiden sekä yläkopin kerroksellinen rakenne ovat selvästi tavoitetta pelkistetymmät.",
+      "views": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5"
+      ],
+      "strongestIn": [
+        "K2",
+        "K5"
+      ],
+      "observation": "K2:n tavoitteen alatasanteessa näkyy tiheä vinoristikkoinen kaide, tarkka ikkunajako ja uurteinen, kannatettu alapinta. Mallissa kaide on suuria avoimia X-kenttiä ja alapinta leveä sileä levy. Yläkopissa mallin korkea yhtenäinen pystylasitus korostuu suhteessa tavoitteen lyhyempään ikkunanauhaan ja selvemmin eroteltuun alaosaan. K5 vahvistaa kopin ja tasanteen sileän, vähädetaljisen ulkoasun.",
+      "visibleImpact": "Tornin tunnistettavat tasannerakenteet lukevat mallissa yksinkertaisina, paksuina renkaina ja yläkoppi pitkänä lasiboksina. Läheltä katsottuna niiden arkkitehtuuri ei vielä vastaa tavoitteen rakennetta.",
+      "constraint": "Alatasanne näkyy vertailuissa myös tavoitetta alempana. Generoitujen tavoitteiden tasannevirheitä ei saa kopioida: alatasanteen lattia 20 m ja ylätasanteen lattia 51 m pysyvät sitovina. Tämä huomio koskee muotoa ja detaljointia, ei lattioiden siirtämistä tavoitepikseleihin."
+    },
+    {
+      "rank": 3,
+      "difference": "Alarakennuksen julkisivu ja jalkojen koristeellinen kaaristo jäävät yleismuodoiksi.",
+      "views": [
+        "K2",
+        "K1",
+        "K5",
+        "K3",
+        "K4"
+      ],
+      "strongestIn": [
+        "K2"
+      ],
+      "observation": "K2:n tavoitteessa näkyvät räystään alla koristekiehkurat, jäsennellyt kaarevat kannattimet, seinäpintojen vaakajaot, ovikehys ja lyhtymäiset valaisimet. Mallin kaaret ovat paljaita yksittäisiä putkiviivoja, seinät sileät ja ovialue yksinkertainen harmaa lasipinta. Ikkuna- ja räystäsdetaljeja on huomattavasti vähemmän. K1:ssä ja K5:ssä sama pelkistyminen näkyy pienemmässä koossa; K3/K4-etäisyydeltä yksityiskohtien arvio on epävarmempi.",
+      "visibleImpact": "Sisäänkäynti ja tornin koristeellinen jalusta menettävät lähinäkymässä ominaisluonteensa. K2 jää selvästi luonnosmaiseksi, vaikka rakennuksen yleinen massa on tunnistettava.",
+      "constraint": "Havainto koskee tavoitekuvissa näkyvää eroa. En varmistanut yksittäisten koristeiden historiallista tai rakennuskohtaista oikeellisuutta ulkoisista valokuvista; K4:n pohjoisdetaljeja ei pidä pitää varmennettuna lähteenä."
+    }
+  ],
+  "K5MaskCorrectionPath": "../../K5/mask-v2/correction-qa.json",
+  "K5CorrectedMaskPTAcceptanceVerified": false,
+  "technicalRepairs": [
+    "Blender 5.2 sky enum compatibility before any saved model or render",
+    "Uniform -2.5 EV beauty-render exposure normalization with identical geometry, materials, cameras and raw geometry masks"
+  ],
+  "exposureGeometryCameraAudit": {
+    "round": "M01",
+    "geometryIterations": 1,
+    "uniformDisplayExposureEV": -2.5,
+    "geometrySHA256Before": "9e8236d73b3b30c027255a69f19b7a280af8d6460cfb9f597402ac30ad0f6afd",
+    "geometrySHA256After": "9e8236d73b3b30c027255a69f19b7a280af8d6460cfb9f597402ac30ad0f6afd",
+    "cameraSHA256Before": "8ffde652400f81619167a3147079f62e9ddfc61774bc1e34e7161cb62815bf70",
+    "cameraSHA256After": "8ffde652400f81619167a3147079f62e9ddfc61774bc1e34e7161cb62815bf70",
+    "geometryUnchanged": true,
+    "camerasUnchanged": true,
+    "materialsUnchanged": true,
+    "oldRendersPreserved": true,
+    "targetPhotographsUnchanged": true,
+    "rawGeometryMasksUnchanged": true,
+    "onlyTechnicalDisplayExposureNormalization": true
+  },
+  "stopReason": "First authorized model round complete; stop for PT feedback. No M02 authorization and no automatic further geometry work.",
+  "productionActive": false,
+  "modelFinalAcceptanceVerified": false,
+  "gameIntegrated": false,
+  "R2Used": false,
+  "mainMerged": false,
+  "published": false
+}

@@ -1,0 +1,99 @@
+{
+  "reviewer": {
+    "id": "codex-petrin-m01-fresh-review",
+    "role": "Erillinen tuore silmämääräinen arvioija",
+    "reviewedAtUTC": "2026-10-15T10:53:10.852259+00:00",
+    "independenceScope": "En osallistunut M01-mallin, kameroiden, renderien tai maskien tuottamiseen. Etsin erot itse valmiista kuvista ennen metrics.json-tiedoston lukemista. En muuttanut niitä enkä käynnistänyt renderöintiä."
+  },
+  "personallyViewedFiles": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M01/qa/K1-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M01/qa/K2-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M01/qa/K3-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M01/qa/K4-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M01/qa/K5-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/K5/mask-v2/right-leg-correction-overlay.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/K5/v1/petrin-K5-maski.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/K5/mask-v2/petrin-K5-maski-v2.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M01/renders/K2-model.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M01/inputs/targets/K2.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M01/renders/K5-model.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M01/inputs/targets/K5.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M01/renders/K1-model.png"
+  ],
+  "topThreeDifferences": [
+    {
+      "rank": 1,
+      "difference": "Alajalkojen ja jalustan projektio leviää tavoitteen ulkopuolelle, erityisesti ilmakuvissa.",
+      "views": [
+        "K1",
+        "K5",
+        "K2",
+        "K3",
+        "K4"
+      ],
+      "strongestIn": [
+        "K1",
+        "K5",
+        "K2"
+      ],
+      "observation": "K1:ssä ja K5:ssä maston kärki osuu lähelle tavoitetta, mutta mallin lähimmät jalkapäät ja jalustan alareuna jäävät selvästi tavoitetta alemmas ja sivujalat ulommas. K2:ssa molemmat ulommat jalat levittävät pohjaa tavoitetta leveämmäksi. K3:ssa ja K4:ssä pohjan sivureunojen ero näkyy pienempänä.",
+      "visibleImpact": "Torni näyttää ilmakuvissa tavoitetta suuremmalta ja alhaalta levähtäneemmältä; tavoitteen ja mallin ääriviivojen välille jää alaneljännekseen selvä vyöhyke. Tämä on kuvatason havainto, ei näyttö fyysisen kokonaiskorkeuden virheestä.",
+      "constraint": "Kamerat ovat tämän kierroksen hyväksytyt lähtökamerat. K5:n peittyvä maapiste on arvio, joten havainto ei yksin ratkaise, mikä osa erosta tulee pohjan muodosta, perspektiivistä tai tavoitteen epäjohdonmukaisuudesta. Havainto ei valtuuta kameran uudelleensovitusta."
+    },
+    {
+      "rank": 2,
+      "difference": "Alatasanteen kaide ja tasanteiden sekä yläkopin kerroksellinen rakenne ovat selvästi tavoitetta pelkistetymmät.",
+      "views": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5"
+      ],
+      "strongestIn": [
+        "K2",
+        "K5"
+      ],
+      "observation": "K2:n tavoitteen alatasanteessa näkyy tiheä vinoristikkoinen kaide, tarkka ikkunajako ja uurteinen, kannatettu alapinta. Mallissa kaide on suuria avoimia X-kenttiä ja alapinta leveä sileä levy. Yläkopissa mallin korkea yhtenäinen pystylasitus korostuu suhteessa tavoitteen lyhyempään ikkunanauhaan ja selvemmin eroteltuun alaosaan. K5 vahvistaa kopin ja tasanteen sileän, vähädetaljisen ulkoasun.",
+      "visibleImpact": "Tornin tunnistettavat tasannerakenteet lukevat mallissa yksinkertaisina, paksuina renkaina ja yläkoppi pitkänä lasiboksina. Läheltä katsottuna niiden arkkitehtuuri ei vielä vastaa tavoitteen rakennetta.",
+      "constraint": "Alatasanne näkyy vertailuissa myös tavoitetta alempana. Generoitujen tavoitteiden tasannevirheitä ei saa kopioida: alatasanteen lattia 20 m ja ylätasanteen lattia 51 m pysyvät sitovina. Tämä huomio koskee muotoa ja detaljointia, ei lattioiden siirtämistä tavoitepikseleihin."
+    },
+    {
+      "rank": 3,
+      "difference": "Alarakennuksen julkisivu ja jalkojen koristeellinen kaaristo jäävät yleismuodoiksi.",
+      "views": [
+        "K2",
+        "K1",
+        "K5",
+        "K3",
+        "K4"
+      ],
+      "strongestIn": [
+        "K2"
+      ],
+      "observation": "K2:n tavoitteessa näkyvät räystään alla koristekiehkurat, jäsennellyt kaarevat kannattimet, seinäpintojen vaakajaot, ovikehys ja lyhtymäiset valaisimet. Mallin kaaret ovat paljaita yksittäisiä putkiviivoja, seinät sileät ja ovialue yksinkertainen harmaa lasipinta. Ikkuna- ja räystäsdetaljeja on huomattavasti vähemmän. K1:ssä ja K5:ssä sama pelkistyminen näkyy pienemmässä koossa; K3/K4-etäisyydeltä yksityiskohtien arvio on epävarmempi.",
+      "visibleImpact": "Sisäänkäynti ja tornin koristeellinen jalusta menettävät lähinäkymässä ominaisluonteensa. K2 jää selvästi luonnosmaiseksi, vaikka rakennuksen yleinen massa on tunnistettava.",
+      "constraint": "Havainto koskee tavoitekuvissa näkyvää eroa. En varmistanut yksittäisten koristeiden historiallista tai rakennuskohtaista oikeellisuutta ulkoisista valokuvista; K4:n pohjoisdetaljeja ei pidä pitää varmennettuna lähteenä."
+    }
+  ],
+  "K5MaskCorrectionAssessment": {
+    "personallyComparedOriginalCorrectedAndOverlay": true,
+    "assessment": "Korjaus on silmämääräisesti perusteltu näkyvän oikean ulkojalan kohdalla. V2-maskissa tasanteen alapuolinen kapea ulkojalka erottuu omana valkoisena kaistanaan ja sen sekä sisemmän tornimassan väliin jää tumma rako. V1-maskissa tämä erillinen kapea osa puuttuu tai sulautuu päämassan rajaukseen. Korjausoverlayn reuna kulkee näkyvän jalan sivua pitkin ja palauttaa sen ulottuvuuden paremmin kuin alkuperäisen maskin yhtenäinen raja.",
+    "limits": "Tämä on valmiiden kuvien silmämääräinen rajausarvio. En sertifioi maskia pikselintarkaksi, koko siluettia virheettömäksi tai peittyvää maapistettä mitatuksi. Korjaus ei poista K5:n mallin ja tavoitteen suurta alareunan eroa eikä itsessään merkitse PT-hyväksyntää.",
+    "newImageGenerationClaimed": false,
+    "independentPixelExactCertification": false,
+    "PTAcceptanceClaimed": false
+  },
+  "modelReadyAsFinal": false,
+  "modelReadyAsFinalReason": "Jalustan projektioero sekä tasanteiden ja lähijulkisivun näkyvä pelkistyminen ovat vielä suuria. Lisäksi tuotannon qa/metrics.json ilmoittaa IoU-luvut K1 69,4 % / raja 85 %, K2 88,0 %, K3 86,9 %, K4 87,4 % ja K5 71,6 % / muiden raja 90 %: kaikki jäävät ilmoitetun rajansa alle. Luin luvut tuotannon tiedostosta; en laskenut tai varmentanut niitä itsenäisesti. Tämä M01-arvio ei ole PT-hyväksyntä eikä lupa uuteen mallikierrokseen.",
+  "caveats": [
+    "Arvio kattaa yhden valmiin M01-mallikierroksen ja yllä luetellut henkilökohtaisesti katsotut tiedostot. Mallia, kameroita, maskeja ja kuvia ei muutettu.",
+    "Sitovat fyysiset lähtöarvot ovat runko 58,7 m, alatasanteen lattia 20 m ja ylätasanteen lattia 51 m. En avannut tai mitannut 3D-geometriaa; noin 71 m kokonaiskorkeus on epävarma lähtötieto.",
+    "Generoidut tavoitekuvat sisältävät mahdollisia rakenne- ja tasannevirheitä. Näkyvän eron kirjaaminen ei ole suositus kopioida virhettä fyysiseen malliin.",
+    "Nykyiset lähtökamerat pidetään tämän ensimmäisen kierroksen arvioinnissa kiinteinä; en sovittanut niitä kuviin. K5:n peittyvä maapiste rajoittaa päätelmiä.",
+    "K4:n pohjoisdetaljit ovat varmentamaton rekonstruktio. Niiden yksityiskohtainen vastaavuus ei yksin osoita mallin oikeellisuutta.",
+    "Neutraali maataso, taivas ja esikatselun varjo eivät ole lopullinen ympäristö. En luokittele puiston puuttumista mallin kolmen suurimman eron joukkoon.",
+    "Valotus, valaistus, tausta ja kohdistus vaikuttavat pikselien sävyeroon. metrics.json:n värilukuja ei pidetä varmennettuna materiaalivärin läpäisynä.",
+    "IoU-luvut ja niiden käyttämä K5-v2-maskitila ovat tuotannon raporttia. En varmentanut laskentaa tai tiedostohajautuksia itsenäisesti, eikä maskikorjauksen silmämääräinen arvio ole omistajan hyväksyntä."
+  ]
+}

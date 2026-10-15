@@ -1,0 +1,15 @@
+{
+  "round": "M01",
+  "geometryIterations": 1,
+  "technicalAttempts": 2,
+  "repairs": [
+    {
+      "type": "Blender5.2 sky API compatibility",
+      "oldEnum": "NISHITA",
+      "currentEnum": "MULTIPLE_SCATTERING",
+      "verifiedAgainstInstalledRuntimeRNA": true,
+      "geometryChanged": false,
+      "previousRenderViews": 0
+    }
+  ]
+}

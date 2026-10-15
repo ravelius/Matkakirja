@@ -1,0 +1,90 @@
+{
+  "taskNumbers": [
+    269,
+    270,
+    271
+  ],
+  "sourceAcceptCommit": "13b0f0b1e7157b7cfecb38cd4a075c57f191b2d4",
+  "sourceCorrectionCommit": "e045c855c60fef0d2d30ae3928e64de0a2a521ae",
+  "bothSourcesReadInFull": true,
+  "modelRound": "M01",
+  "maximumModelIterationsThisAuthorization": 1,
+  "modelRoundsIssued": 1,
+  "stopAfterFirstModelRoundForFeedback": true,
+  "allFiveTargetImagesPTAccepted": true,
+  "K5MaskCorrectionRequiredAndPrepared": true,
+  "oldSourcesImagesMasksAndQAImmutable": true,
+  "newImageGenerationsAllowed": false,
+  "physicalDimensions": {
+    "bodyHeightM": 58.7,
+    "lowerPlatformM": 20,
+    "upperPlatformM": 51,
+    "totalHeightApproxM": 71,
+    "totalHeightUncertain": true
+  },
+  "IoUThresholds": {
+    "K1": 0.85,
+    "K2": 0.9,
+    "K3": 0.9,
+    "K4": 0.9,
+    "K5": 0.9
+  },
+  "cameraAndTargetInputs": [
+    {
+      "view": "K1",
+      "targetImageSHA256": "3be76904100a1cdf4cbb65058ca004f5f3e30f3d6383182ad4e1c7d346623717",
+      "targetMaskSHA256": "37af16eb46ff060d8c2b59c96bb1e098de6e7f04c8e119a7e4ccb0272fcab614",
+      "cameraSHA256": "7ccc7c695764eeb668980b8ddf28431e481e406e96f6ade0428cee596e874f54",
+      "targetMaskVersion": "PT-accepted",
+      "cameraIntrinsicsAndPoseFrozen": true,
+      "K5OriginalCameraMetadataRefersToOriginalMask": false,
+      "activeMaskBoundExplicitlyByThisManifest": true
+    },
+    {
+      "view": "K2",
+      "targetImageSHA256": "c869913a3b4c86cc0f191f02c61fd38c45761d9a7396f3376afe3501bd2c4f52",
+      "targetMaskSHA256": "1bdedddab334e16b1570af9ef41fb870384f47693422e22c771d7c2dafb5d981",
+      "cameraSHA256": "934673b5ac7bf875a96a80796a7a086829d09bf5bb39f4a3adf0d1d813a67c17",
+      "targetMaskVersion": "PT-accepted",
+      "cameraIntrinsicsAndPoseFrozen": true,
+      "K5OriginalCameraMetadataRefersToOriginalMask": false,
+      "activeMaskBoundExplicitlyByThisManifest": true
+    },
+    {
+      "view": "K3",
+      "targetImageSHA256": "f73e5fa19f14d4db1f8753d5c2f2c09d9e471b2b68d73d81deadc514cdd5d813",
+      "targetMaskSHA256": "541a1135f8ba8376dce24223d8cc8b6685e66fd0910a22c446f2d144ab22b55d",
+      "cameraSHA256": "71331fa09d9502e6096a15bde55ae193448d409f321e88b37d040a7dd223fb1e",
+      "targetMaskVersion": "PT-accepted",
+      "cameraIntrinsicsAndPoseFrozen": true,
+      "K5OriginalCameraMetadataRefersToOriginalMask": false,
+      "activeMaskBoundExplicitlyByThisManifest": true
+    },
+    {
+      "view": "K4",
+      "targetImageSHA256": "6ec296c9aaef7018aef9560128d7dee422fcea66913985c3a966db300aa25fe9",
+      "targetMaskSHA256": "9925cbecf0f25d51bde4c20936d35896711e542c8b4bf5abcc50bfd0398eaac8",
+      "cameraSHA256": "5509ee33d2926b7e92199799a5196ab17e83bfebe6983b51de1fd09e7993a816",
+      "targetMaskVersion": "PT-accepted",
+      "cameraIntrinsicsAndPoseFrozen": true,
+      "K5OriginalCameraMetadataRefersToOriginalMask": false,
+      "activeMaskBoundExplicitlyByThisManifest": true
+    },
+    {
+      "view": "K5",
+      "targetImageSHA256": "a695d52f270138fdcaa797cb3f288e1957a1acec121340e93e5034f359f2c134",
+      "targetMaskSHA256": "f54ea03d6558e636a943f83f561c72a80fc3c80d0bc5bdc7f5d5621f6ea534a3",
+      "cameraSHA256": "dfcd7af3cb0d43e58e7583700ac5ed7610c465aa5c1809862b62e651b8736cf2",
+      "targetMaskVersion": "corrected-v2-producer-reviewed-awaiting-PT",
+      "cameraIntrinsicsAndPoseFrozen": true,
+      "K5OriginalCameraMetadataRefersToOriginalMask": true,
+      "activeMaskBoundExplicitlyByThisManifest": true
+    }
+  ],
+  "modelIntegrationAllowed": false,
+  "R2Allowed": false,
+  "mainMergeAllowed": false,
+  "publicationAllowed": false,
+  "PekingNotModified": true,
+  "startedAt": "2026-10-15T10:32:16.545173+00:00"
+}
