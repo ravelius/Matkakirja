@@ -29,6 +29,10 @@ Kohdan TILINVAIHTO: KOODAUSTILI SAMI@VALOKUVAAMOKLIK.FI (15.10.2026 klo 12.32) t
 
 Omistaja 15.10.2026 klo 13.53 (kortti), sanatarkasti: "nyt sinulla on mennyt jotain sekaisin, koska nämä kyselyt pitää tulla vain kun vaihdetaan tili ei silloin kun olet esim. nollannut jonkun session tai itsesi, mutta käytetään 99%". Tilin viikkoraja kysytään omistajalta vain tilinvaihdossa, ei nollauksissa; raja 99 % pysyy.
 
+## OMISTAJAN VASTAUS: ISS-KUVASELITTEET VAIN PUUTTUVAT (15.10.2026 klo 14.12)
+
+Omistaja 15.10.2026 klo 14.12 (kortti KK:ssa): "Kyllä, puuttuvat (Suositus)". ISS:n Kuvat-gallerian 277 selitteestä äänitetään vain puuttuvat (noin 92, enintään 25 000 merkkiä), sama kertojan ääni kuin valmiissa 185:ssä, yksi otto, ääniportti ennen vientiä (Äänittäjä).
+
 ## OMISTAJAN PYYNTÖ: PT:N KONTEKSTIN VALVONTA JA PAKKONOLLAUS (15.10.2026 klo 14.39) (15.10.2026 klo 14.55)
 
 OMISTAJAN PYYNTÖ klo 14.39 (nollauskortin vastaus, sanatarkasti): "nollaa ja selvitä sen jälkeen miksi päätoimittajan konteksti pääsi karkaamaan ja varmista että tarvittavat toimet tehdään että
