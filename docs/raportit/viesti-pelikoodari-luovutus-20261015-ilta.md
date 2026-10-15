@@ -35,7 +35,7 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus viesti-pelikoodari-luovu
 3. MIKÄ TÄMÄ ON? (omistaja 16.21, Pariisi ensin): ei aloitettu. Pohja siirtoseppa/vapaalento-195 (VapaaTila → nykyinen nappi näkyy, ei uutta
    lippua). Nykyinen nappi = ruudun keskikohdan /opas/lahella → kertojan (William) vastaus; uusi: pelaaja NAPAUTTAA rakennusta → Pulu vastaa
    lyhyesti OMALLA äänellään (striimipuhe, AaniKanava.Puhe), esittelystä tiivistys, tuntemattomasta "en tunne". Selvitys aloitettiin Sonnet-
-   agentilla (PuluChat-ääni, napautus → maapiste, Pariisin esittelytekstit) — tulos ei ehtinyt tähän; tee selvitys uudelleen.
+   agentilla (PuluChat-ääni, napautus → maapiste, Pariisin esittelytekstit): VALMIS, tulos ja suositus MUISTIO.md:n lopussa (SELVITYS).
 
 ## Avoimet / seurattavat
 - Proto-worktreet: wt/proto-pelikoodari-pallot-pelaajille-194 (junassa 194, poista kun BUILD 194 TF:ssä), -aloituskone-195 (työn alla),
