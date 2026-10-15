@@ -226,8 +226,8 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
    - Toiminta: valinta → kello KelaaHetkeen(hetki, lähin vuosi), LIVE pois, KupolinValinta.Kausi/Vuorokausi hetkestä; perillä SiirraAlus (Cupolan katse kohteeseen kuten Oma sijainti).
    - **paikat.json: 10 Natural Earth -aikavyöhykevirhettä korjattu** (Praha oli America/Chicago, Cardiff Australia/Sydney, Lagos Europe/Athens, Colombo, Macau,
      Asunción, Bridgetown, George Town, Castries, Tripoli LBN) → myös LCD:n paikallinen kello korjaantuu. Kerro PT:lle rivinä (muiden alue: LS2:n iss_paikat.py).
-   - Testit: IssParasHetkiTestit 4/4, tarkista.sh 0. **Koko Linssit-sarja ajettiin 19.4x, tulos lukematta** → aja `sh Linssit-testit/kaanna.sh` uudelleen ennen kuittausta.
-   - JÄLJELLÄ: (a) Linssit kokonaan (b) KÄÄNNÖS NYT + SIMU NYT Julkaisijalta (local_5cb16c00…) haaralle (c) kuvapari omistajalle (omistajan pyytämä, poikkeus "ei testejä"):
+   - Testit: IssParasHetkiTestit 4/4, tarkista.sh 0. Koko Linssit-sarja 83229986b:llä **1883/1883 läpi** (19.5x).
+   - JÄLJELLÄ: (b) KÄÄNNÖS NYT + SIMU NYT Julkaisijalta (local_5cb16c00…) haaralle (c) kuvapari omistajalle (omistajan pyytämä, poikkeus "ei testejä"):
      skenaario /Users/Shared/Claude/proto-3d/tyokalut/siirtoseppa-ajot/skenaariot/sk-iss-paras-hetki-196.txt (Lappi + Pariisi, nykyinen | paras), todistusajo.sh
      (/Users/Shared/Claude/wt/proto-natiiviseppa-tyokalut/tyokalut/todistusajo/todistusajo.sh, malli tyokalut/pelikoodari-ajot/ajo-pallot-pelaajille-194.zsh) →
      NYK|PARAS-parit itse tarkistettuina täydellä tarkkuudella PT:lle (d) kerro NUI:lle (IssKohdevalikko: LennaTaivaalle-alku + Testaa hetki/taivas) ja PK:lle

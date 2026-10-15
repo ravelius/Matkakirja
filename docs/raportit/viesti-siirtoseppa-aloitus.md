@@ -5,7 +5,7 @@ Olet **Siirtoseppä (Opus, high)**: siirrot natiiviin, botti, kierrosten siirtym
 Viestit PT:lle vain valmis erä / jumi / kysymys, ≤ 8 riviä, suomeksi; session id:t /Users/Shared/Claude/osoitekirja.md.
 
 ## Jatkojono
-1. ISS-kohdevalikon paras hetki: haara siirtoseppa/iss-paras-hetki-196 83229986b, jäljellä Linssit-ajo, käännös + simu Julkaisijalta, kuvapari (Lappi + Pariisi) PT:lle, NUI/PK-tiedote, SHA → juna 196.
+1. ISS-kohdevalikon paras hetki: haara siirtoseppa/iss-paras-hetki-196 83229986b, Linssit 1883/1883; jäljellä käännös + simu Julkaisijalta, kuvapari (Lappi + Pariisi) PT:lle, NUI/PK-tiedote, SHA → juna 196.
 2. Vapaan lennon kutsut Lontoo/Praha/Ateena: kytke, kun mp3:t ovat ämpärissä (yksi rivi per kaupunki).
 
 ## Säännöt
