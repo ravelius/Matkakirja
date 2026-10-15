@@ -1,0 +1,586 @@
+{
+  "actualGLBCount": 72,
+  "newlyIntroducedCollapsedTriangles": 0,
+  "newlyIntroducedNormalGeometryMismatches": 0,
+  "minimumNewNormalGeometricDot": 0.9999999701980715,
+  "all3LODsGroundPositionNormalUVIdenticalPerTile": true,
+  "files": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "3cc754e8e5f93a66a6f2e561d3afe05bb642f89fbaf550fa87e79637c33b004b"
+    },
+    {
+      "file": "peking_0_0_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "3cc754e8e5f93a66a6f2e561d3afe05bb642f89fbaf550fa87e79637c33b004b"
+    },
+    {
+      "file": "peking_0_0_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "3cc754e8e5f93a66a6f2e561d3afe05bb642f89fbaf550fa87e79637c33b004b"
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "92b3de241671cd98234df401746f1fac235e6499648d951d4af4fca08ecd8c7e"
+    },
+    {
+      "file": "peking_0_1_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "92b3de241671cd98234df401746f1fac235e6499648d951d4af4fca08ecd8c7e"
+    },
+    {
+      "file": "peking_0_1_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "92b3de241671cd98234df401746f1fac235e6499648d951d4af4fca08ecd8c7e"
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "f417cceb6650691ba1a84f5871a6d89fec4495c1d5a7e8ec6d80a2176428c1c4"
+    },
+    {
+      "file": "peking_0_2_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "f417cceb6650691ba1a84f5871a6d89fec4495c1d5a7e8ec6d80a2176428c1c4"
+    },
+    {
+      "file": "peking_0_2_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "f417cceb6650691ba1a84f5871a6d89fec4495c1d5a7e8ec6d80a2176428c1c4"
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "43a0337f170ec4f2b53477044b6ab0e78f9d473d3352fe0a929bb32e52062ab7"
+    },
+    {
+      "file": "peking_0_3_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "43a0337f170ec4f2b53477044b6ab0e78f9d473d3352fe0a929bb32e52062ab7"
+    },
+    {
+      "file": "peking_0_3_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "43a0337f170ec4f2b53477044b6ab0e78f9d473d3352fe0a929bb32e52062ab7"
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "6d9c27aeb682cd80d038a932dcbdb6694a8873df8f2e73d0157167b551678684"
+    },
+    {
+      "file": "peking_0_4_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "6d9c27aeb682cd80d038a932dcbdb6694a8873df8f2e73d0157167b551678684"
+    },
+    {
+      "file": "peking_0_4_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "6d9c27aeb682cd80d038a932dcbdb6694a8873df8f2e73d0157167b551678684"
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "a02f79863c6b7c32bbbe2d2084b7412de71dfc5768bf8fe97b5db9a31d3b0ebb"
+    },
+    {
+      "file": "peking_0_5_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "a02f79863c6b7c32bbbe2d2084b7412de71dfc5768bf8fe97b5db9a31d3b0ebb"
+    },
+    {
+      "file": "peking_0_5_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "a02f79863c6b7c32bbbe2d2084b7412de71dfc5768bf8fe97b5db9a31d3b0ebb"
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "41965d2e726e7c96300477e3483a4888a8321447d5bddfc85ded63656c1794c0"
+    },
+    {
+      "file": "peking_1_0_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "41965d2e726e7c96300477e3483a4888a8321447d5bddfc85ded63656c1794c0"
+    },
+    {
+      "file": "peking_1_0_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "41965d2e726e7c96300477e3483a4888a8321447d5bddfc85ded63656c1794c0"
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "9f9aed7a33524e0b9d8a37cf3ccc6203d79b38890c14faa7f6de5cb6149f21c3"
+    },
+    {
+      "file": "peking_1_1_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "9f9aed7a33524e0b9d8a37cf3ccc6203d79b38890c14faa7f6de5cb6149f21c3"
+    },
+    {
+      "file": "peking_1_1_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "9f9aed7a33524e0b9d8a37cf3ccc6203d79b38890c14faa7f6de5cb6149f21c3"
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "newGroundTrianglesChecked": 433,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.999999971149264,
+      "groundGeometryNormalUVSignature": "b5797c3b517a4635900e7d79667d22cf26e74e3c8501fb8ba7f3e1e476f738ae"
+    },
+    {
+      "file": "peking_1_2_lod1.glb",
+      "newGroundTrianglesChecked": 433,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.999999971149264,
+      "groundGeometryNormalUVSignature": "b5797c3b517a4635900e7d79667d22cf26e74e3c8501fb8ba7f3e1e476f738ae"
+    },
+    {
+      "file": "peking_1_2_lod2.glb",
+      "newGroundTrianglesChecked": 433,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.999999971149264,
+      "groundGeometryNormalUVSignature": "b5797c3b517a4635900e7d79667d22cf26e74e3c8501fb8ba7f3e1e476f738ae"
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "newGroundTrianglesChecked": 949,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999701980715,
+      "groundGeometryNormalUVSignature": "5e79d755b5da316d901e6fb60a99cda5c9b66bf3e601e4b807eeac7bdbae4109"
+    },
+    {
+      "file": "peking_1_3_lod1.glb",
+      "newGroundTrianglesChecked": 949,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999701980715,
+      "groundGeometryNormalUVSignature": "5e79d755b5da316d901e6fb60a99cda5c9b66bf3e601e4b807eeac7bdbae4109"
+    },
+    {
+      "file": "peking_1_3_lod2.glb",
+      "newGroundTrianglesChecked": 949,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999701980715,
+      "groundGeometryNormalUVSignature": "5e79d755b5da316d901e6fb60a99cda5c9b66bf3e601e4b807eeac7bdbae4109"
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "newGroundTrianglesChecked": 186,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999702594998,
+      "groundGeometryNormalUVSignature": "fd5c4fddcd4a4ea7b5bfcdbdb8c9e7ebd00accf321fc4078db05df4e1f3f4a5c"
+    },
+    {
+      "file": "peking_1_4_lod1.glb",
+      "newGroundTrianglesChecked": 186,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999702594998,
+      "groundGeometryNormalUVSignature": "fd5c4fddcd4a4ea7b5bfcdbdb8c9e7ebd00accf321fc4078db05df4e1f3f4a5c"
+    },
+    {
+      "file": "peking_1_4_lod2.glb",
+      "newGroundTrianglesChecked": 186,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999702594998,
+      "groundGeometryNormalUVSignature": "fd5c4fddcd4a4ea7b5bfcdbdb8c9e7ebd00accf321fc4078db05df4e1f3f4a5c"
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "db97dca45477889e334013ce69f981b664a11bca1efa99d27eeb1ed38fa10bf4"
+    },
+    {
+      "file": "peking_1_5_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "db97dca45477889e334013ce69f981b664a11bca1efa99d27eeb1ed38fa10bf4"
+    },
+    {
+      "file": "peking_1_5_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "db97dca45477889e334013ce69f981b664a11bca1efa99d27eeb1ed38fa10bf4"
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "ab9c897ffcb8364b1f4461669c65aae044b2c7d1413ffa62f6427044e6cc37df"
+    },
+    {
+      "file": "peking_2_0_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "ab9c897ffcb8364b1f4461669c65aae044b2c7d1413ffa62f6427044e6cc37df"
+    },
+    {
+      "file": "peking_2_0_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "ab9c897ffcb8364b1f4461669c65aae044b2c7d1413ffa62f6427044e6cc37df"
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "ce2e4136873cecb393e67ddfa1b3d8a82d5f72a9a8eec96cb7ba592f996aafdb"
+    },
+    {
+      "file": "peking_2_1_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "ce2e4136873cecb393e67ddfa1b3d8a82d5f72a9a8eec96cb7ba592f996aafdb"
+    },
+    {
+      "file": "peking_2_1_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "ce2e4136873cecb393e67ddfa1b3d8a82d5f72a9a8eec96cb7ba592f996aafdb"
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "newGroundTrianglesChecked": 612,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999702326359,
+      "groundGeometryNormalUVSignature": "e4df6d4bf17410ac3359eaa270f7c606e979ad5bea6e9d4d4aeaa727fe670b04"
+    },
+    {
+      "file": "peking_2_2_lod1.glb",
+      "newGroundTrianglesChecked": 612,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999702326359,
+      "groundGeometryNormalUVSignature": "e4df6d4bf17410ac3359eaa270f7c606e979ad5bea6e9d4d4aeaa727fe670b04"
+    },
+    {
+      "file": "peking_2_2_lod2.glb",
+      "newGroundTrianglesChecked": 612,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999702326359,
+      "groundGeometryNormalUVSignature": "e4df6d4bf17410ac3359eaa270f7c606e979ad5bea6e9d4d4aeaa727fe670b04"
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "newGroundTrianglesChecked": 807,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999703097668,
+      "groundGeometryNormalUVSignature": "8c70ebefc19d75a61ce70355d40f20f2298069ad202b8b746d40e51be1e31fce"
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "newGroundTrianglesChecked": 807,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999703097668,
+      "groundGeometryNormalUVSignature": "8c70ebefc19d75a61ce70355d40f20f2298069ad202b8b746d40e51be1e31fce"
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "newGroundTrianglesChecked": 807,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999703097668,
+      "groundGeometryNormalUVSignature": "8c70ebefc19d75a61ce70355d40f20f2298069ad202b8b746d40e51be1e31fce"
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "newGroundTrianglesChecked": 16,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.999999971295067,
+      "groundGeometryNormalUVSignature": "de54906de4a0c90e22efa139fa7db6293f51a97a8fb91c7199492743652a804f"
+    },
+    {
+      "file": "peking_2_4_lod1.glb",
+      "newGroundTrianglesChecked": 16,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.999999971295067,
+      "groundGeometryNormalUVSignature": "de54906de4a0c90e22efa139fa7db6293f51a97a8fb91c7199492743652a804f"
+    },
+    {
+      "file": "peking_2_4_lod2.glb",
+      "newGroundTrianglesChecked": 16,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.999999971295067,
+      "groundGeometryNormalUVSignature": "de54906de4a0c90e22efa139fa7db6293f51a97a8fb91c7199492743652a804f"
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "c9b701bce70d1aa0a5495a1fce11d7d55a227541e4b7882bda91262f9e98fb28"
+    },
+    {
+      "file": "peking_2_5_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "c9b701bce70d1aa0a5495a1fce11d7d55a227541e4b7882bda91262f9e98fb28"
+    },
+    {
+      "file": "peking_2_5_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "c9b701bce70d1aa0a5495a1fce11d7d55a227541e4b7882bda91262f9e98fb28"
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "fa58b585998b541b132f81183f055991386903b426695c8c55fe45983144fc10"
+    },
+    {
+      "file": "peking_3_0_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "fa58b585998b541b132f81183f055991386903b426695c8c55fe45983144fc10"
+    },
+    {
+      "file": "peking_3_0_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "fa58b585998b541b132f81183f055991386903b426695c8c55fe45983144fc10"
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "e06cc6347b737960728ac2d6b70858bdada2128be9a1f045506403eb10b0d135"
+    },
+    {
+      "file": "peking_3_1_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "e06cc6347b737960728ac2d6b70858bdada2128be9a1f045506403eb10b0d135"
+    },
+    {
+      "file": "peking_3_1_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "e06cc6347b737960728ac2d6b70858bdada2128be9a1f045506403eb10b0d135"
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "f4f1ecd0f7be16e87877e07f5bb30673599d5ebac5500ef14012e3e3c8b5a171"
+    },
+    {
+      "file": "peking_3_2_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "f4f1ecd0f7be16e87877e07f5bb30673599d5ebac5500ef14012e3e3c8b5a171"
+    },
+    {
+      "file": "peking_3_2_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "f4f1ecd0f7be16e87877e07f5bb30673599d5ebac5500ef14012e3e3c8b5a171"
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "70a2ece952ea119ce9d97d844de100f94f68e93fc4657dd728d26b1b547b2f58"
+    },
+    {
+      "file": "peking_3_3_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "70a2ece952ea119ce9d97d844de100f94f68e93fc4657dd728d26b1b547b2f58"
+    },
+    {
+      "file": "peking_3_3_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "70a2ece952ea119ce9d97d844de100f94f68e93fc4657dd728d26b1b547b2f58"
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "40c3a972c2266d5731ee2b4d44fa617c5c4b8816937c93b3d2dcd68489c6912b"
+    },
+    {
+      "file": "peking_3_4_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "40c3a972c2266d5731ee2b4d44fa617c5c4b8816937c93b3d2dcd68489c6912b"
+    },
+    {
+      "file": "peking_3_4_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "40c3a972c2266d5731ee2b4d44fa617c5c4b8816937c93b3d2dcd68489c6912b"
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "81364369b55fbbd8325da413deb8ff3b3138a4ea70ab705bde980bab4ebe82eb"
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "81364369b55fbbd8325da413deb8ff3b3138a4ea70ab705bde980bab4ebe82eb"
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "newGroundTrianglesChecked": 0,
+      "newCollapsedTriangles": 0,
+      "newNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 1.0,
+      "groundGeometryNormalUVSignature": "81364369b55fbbd8325da413deb8ff3b3138a4ea70ab705bde980bab4ebe82eb"
+    }
+  ],
+  "baselineInheritedGroundTrianglesNotClaimedAsNewlyCorrected": true
+}

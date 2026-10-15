@@ -1,0 +1,43 @@
+{
+  "source": "actual final GLBs, sRGB decode then material RGB factor and alpha>=0.5",
+  "uniformLinearFactor": 0.55,
+  "target": "linear luminance Y0.10..0.14; green largest, original chroma preserved",
+  "byLOD": {
+    "0": {
+      "actualMeanLinearRGB": [
+        0.10383607133284659,
+        0.13583090748463864,
+        0.0694331309358872
+      ],
+      "actualMeanLinearY": 0.1242348858519478,
+      "targetIsLinearLuminanceNotEveryRGBChannel": true,
+      "opaquePixels": 99198,
+      "embeddedImageSHA256": "30d33f5f23113ef5ecfd1d733103af34a25f32e7c62a7607a65ca8c8d9f99f50",
+      "alphaAndNormalPayloadsExact": true
+    },
+    "1": {
+      "actualMeanLinearRGB": [
+        0.10309847700267738,
+        0.13480462573052412,
+        0.06892139281929972
+      ],
+      "actualMeanLinearY": 0.12330712909479351,
+      "targetIsLinearLuminanceNotEveryRGBChannel": true,
+      "opaquePixels": 25315,
+      "embeddedImageSHA256": "978f17db957bbe3031dc1313b34ee419106b5743b581f6590fa29ee9e10ec313",
+      "alphaAndNormalPayloadsExact": true
+    },
+    "2": {
+      "actualMeanLinearRGB": [
+        0.10309847700267738,
+        0.13480462573052412,
+        0.06892139281929972
+      ],
+      "actualMeanLinearY": 0.12330712909479351,
+      "targetIsLinearLuminanceNotEveryRGBChannel": true,
+      "opaquePixels": 25315,
+      "embeddedImageSHA256": "978f17db957bbe3031dc1313b34ee419106b5743b581f6590fa29ee9e10ec313",
+      "alphaAndNormalPayloadsExact": true
+    }
+  }
+}

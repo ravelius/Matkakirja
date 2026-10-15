@@ -1,0 +1,1594 @@
+{
+  "status": "TECHNICAL_GLOBAL_FIELD_WATER_TREE_DELTA_PASS_NOT_VISUAL_OR_RUNTIME_ACCEPTANCE",
+  "reviewedRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti",
+  "baselineV2": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2",
+  "files": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "sha256": "0f1415d1d237251fb93cc7bde487db4845cdafc1c534d89485c68f5dde11ca91",
+      "bytes": 1691512,
+      "triangles": 8361,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_0_lod1.glb",
+      "sha256": "000451f919ced76215fd3af944694eee308e9994ff2a9904ac023522450a71c2",
+      "bytes": 883136,
+      "triangles": 7893,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_0_lod2.glb",
+      "sha256": "e94219a3d99908b12beaf4e3804f6b29ddb654e646b7dc63b41873b2fcf54007",
+      "bytes": 838964,
+      "triangles": 7893,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "sha256": "864459537a014fb48fa8efd9bfb4b26badcbc65bff4f20a688d9c2246b02a5b4",
+      "bytes": 2086548,
+      "triangles": 8315,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_1_lod1.glb",
+      "sha256": "fe63071dba06708a29084e62b756faac38e816d87f5a0b9f56814f2760edeff3",
+      "bytes": 926556,
+      "triangles": 6967,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_1_lod2.glb",
+      "sha256": "7a86fd8e40127bb7216e72ea1c2c56dc939a9454afa1b6961c52400e18b7efb6",
+      "bytes": 852452,
+      "triangles": 6967,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "sha256": "5dcd964bd24c4d0d310091bcfb93f01d45e1b19bb2ea0687304678203fde04eb",
+      "bytes": 2539220,
+      "triangles": 11017,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_2_lod1.glb",
+      "sha256": "a5513581c510118b290b9b04cf2d931bbb2034923d339a5593eda057ea650ef6",
+      "bytes": 1123764,
+      "triangles": 8645,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_2_lod2.glb",
+      "sha256": "4dcc97da9346b8a92c021b56ca46a6947bbb5bb12139ab883ae3bce0d2802587",
+      "bytes": 1034488,
+      "triangles": 8645,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "sha256": "77da068b72834104df01255ad3bf037ce8e673206c9d0b020fd3bf3d26c76b4a",
+      "bytes": 2029812,
+      "triangles": 8420,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_3_lod1.glb",
+      "sha256": "c4b72ccb6ed5e4feecf9ada555a7f5963ef051aa5b510da4683a87bf23108e14",
+      "bytes": 964696,
+      "triangles": 7564,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_3_lod2.glb",
+      "sha256": "4706259be1b3f5dd9e798714746a78c32b44ebefe2d1c7554c287cf41fcefc5a",
+      "bytes": 890124,
+      "triangles": 7564,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "sha256": "1438d9bf27ffbea0304cff8c4bfa6a171d544e706898486a2cfa819c0e0b3c7b",
+      "bytes": 2187376,
+      "triangles": 8777,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_4_lod1.glb",
+      "sha256": "41dbc8d8a289921c1fc7b3766ac220041e8424270ccbd1afac754c3d50f2b4ce",
+      "bytes": 1009764,
+      "triangles": 7825,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_4_lod2.glb",
+      "sha256": "5f556a2640ac4d51eb4477cbfaec3b0046eb281407457c0532c473bd51711d58",
+      "bytes": 933516,
+      "triangles": 7825,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "sha256": "14ba48b15003201d866ef3ca8f2e460eff1a4307810259a7e489226515939fdb",
+      "bytes": 2347736,
+      "triangles": 14420,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_5_lod1.glb",
+      "sha256": "6c6f5b46cdfe7108297536742140ef700ec8d5bbddb5490284f1928c4f34e3d3",
+      "bytes": 1181168,
+      "triangles": 11568,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_0_5_lod2.glb",
+      "sha256": "defb6173eb5555f7e1d85eba2ce5f79dd375e211ecc4f2e3998ef08569457c72",
+      "bytes": 1113836,
+      "triangles": 11568,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "sha256": "8c322d06b1eecb8c971213bda3bdb5e63efcbccd9473528f4a76ef6d416803db",
+      "bytes": 1723596,
+      "triangles": 6176,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_1_0_lod1.glb",
+      "sha256": "1311c15fa58a01496d94a8694bdfe2fe1a3b6a0f6ac0a35322ac0bc944077f6f",
+      "bytes": 831212,
+      "triangles": 5708,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_1_0_lod2.glb",
+      "sha256": "25595748033bb7108a1687eb92b8959f3063d4b0637be4b3380784a27b6904ff",
+      "bytes": 780820,
+      "triangles": 5708,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "sha256": "e63c93b6d8991da97233b3accbba7e81c0e7e4df53bd2422364509559679374f",
+      "bytes": 2529220,
+      "triangles": 14439,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_1_1_lod1.glb",
+      "sha256": "f26a4763dfe941912498a03eb78477852222ffce691341778d6d4392c4380e0f",
+      "bytes": 1341448,
+      "triangles": 12783,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_1_1_lod2.glb",
+      "sha256": "db9c3a24ae5577edc175c2adc04a6684e44029207efab784150cda85f01df74b",
+      "bytes": 1266004,
+      "triangles": 12783,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "sha256": "a244d17aaf729e9e828af19ef4e0555c0d6b593a1c67b9b089e65de9c933902b",
+      "bytes": 2825384,
+      "triangles": 16534,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 433
+    },
+    {
+      "file": "peking_1_2_lod1.glb",
+      "sha256": "6b58bf87a135a4fa35f2c0dcedd9e9387d8fbc6629518d8380e2c7b931f80d0d",
+      "bytes": 1451032,
+      "triangles": 13040,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 433
+    },
+    {
+      "file": "peking_1_2_lod2.glb",
+      "sha256": "3da70d3d7358ff060f2a031b32d43131c1429505d427271d1971d7d19228b415",
+      "bytes": 1366452,
+      "triangles": 13040,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 433
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "sha256": "9919aa5028f5f3babf8e78ab41d521a76cf0bf84958e249f4e8dc2f9f18661f5",
+      "bytes": 5606788,
+      "triangles": 59280,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 949
+    },
+    {
+      "file": "peking_1_3_lod1.glb",
+      "sha256": "c2ebea3f2be2c2c61930fef6777d53df206c37ccc03b6b6ba150d6e52194ce55",
+      "bytes": 2387636,
+      "triangles": 26842,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 949
+    },
+    {
+      "file": "peking_1_3_lod2.glb",
+      "sha256": "925554c4aba566bbe5670ad9252b52c3f9a366736354f0857cb505e620b3068e",
+      "bytes": 2316704,
+      "triangles": 26842,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 949
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "sha256": "07083a9ae652d52bfd8704d3e41e0c623b5f99a21be22efac54a9ddc84b3a918",
+      "bytes": 4618484,
+      "triangles": 47146,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 186
+    },
+    {
+      "file": "peking_1_4_lod1.glb",
+      "sha256": "8d45a12f43848628c02011aadd8feac277c3b8b5169d66b33865af8deaf3d754",
+      "bytes": 3131928,
+      "triangles": 38512,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 186
+    },
+    {
+      "file": "peking_1_4_lod2.glb",
+      "sha256": "7a74862ab62bcd6fd0e9573b458904a2024b97b9dd3a31fe852f0a1b0e165224",
+      "bytes": 3075280,
+      "triangles": 38512,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 186
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "sha256": "2d7351f3966efe8bcd3709445bb93735f362ba5afbaf515b1152f49fc1c8ea9a",
+      "bytes": 3214068,
+      "triangles": 26716,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_1_5_lod1.glb",
+      "sha256": "f3b390f54ee6574a17558968bcd6ca835e23d08e0aa1829a02cfa8f5980243ac",
+      "bytes": 1887044,
+      "triangles": 21184,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_1_5_lod2.glb",
+      "sha256": "2906c3cf12f30f5395a64ffa9d3761fab657bad8df1b4970f981cb61b7cbcf0f",
+      "bytes": 1818164,
+      "triangles": 21184,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "sha256": "4db9f54a4deff9918eb9b5b4441cbaecb4013f5d6e484184efb84e715d3eab6d",
+      "bytes": 2195924,
+      "triangles": 7274,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_2_0_lod1.glb",
+      "sha256": "1c6ddd410d89287fe1c4a09677119b0330fec8f788ead873ff109480714b43e0",
+      "bytes": 1080112,
+      "triangles": 7014,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_2_0_lod2.glb",
+      "sha256": "55455b99b7aee7a685adadb7fa3bfd6e67e896d25557fdec31a6997cc8334e9c",
+      "bytes": 1011972,
+      "triangles": 7014,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "sha256": "0c0ff10c06d4b49972e2795f3304e954fa3903656df1b33c119f90e43dde4405",
+      "bytes": 2415300,
+      "triangles": 14405,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_2_1_lod1.glb",
+      "sha256": "5de1ca84006184ceebb4b6334e1a2fa8bb950b9998dd82f7de48a7acc1e2d008",
+      "bytes": 1304988,
+      "triangles": 12917,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_2_1_lod2.glb",
+      "sha256": "3bb9b2c426cbdf9837c9507637d85cdfc96c606f7f5259068fd2bbcf240e3542",
+      "bytes": 1234928,
+      "triangles": 12917,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "sha256": "4d21a0075a994220dc4e2494f6d5a220cb9fdcb2b6e3f6d0de6bad8cb04aa7af",
+      "bytes": 2871804,
+      "triangles": 17477,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 612
+    },
+    {
+      "file": "peking_2_2_lod1.glb",
+      "sha256": "343d9babaae7c0b94259164017d711b0a49acf6897e56eb60d31bf014678ee54",
+      "bytes": 1564976,
+      "triangles": 14541,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 612
+    },
+    {
+      "file": "peking_2_2_lod2.glb",
+      "sha256": "a438f18d43527192e9541cccbdd316182e7235ce462094d222bb7ef08c666646",
+      "bytes": 1486568,
+      "triangles": 14541,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 612
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "3a2ee3eb49554dea57a01c12088961648dcc954f434a45d3b4087f3808e85d74",
+      "bytes": 8660160,
+      "triangles": 97895,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 807
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "sha256": "60952e0ef3c47374ceef060c95ab67bfae6f8bd52caa295ae50baea350b8c87d",
+      "bytes": 4114652,
+      "triangles": 50491,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 807
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "sha256": "cd1c2cefae61cb531a1efc7dbb7ea9af8ab1fd00519e88e81f31094f509c653b",
+      "bytes": 3902420,
+      "triangles": 49159,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 807
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "sha256": "e0191748f1bfd6ce004a958e8eea14db0a3459ebcc194ebc0a727facb4db53b5",
+      "bytes": 4918844,
+      "triangles": 48515,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 16
+    },
+    {
+      "file": "peking_2_4_lod1.glb",
+      "sha256": "afac94fc11dab2266945aeab22b42157478f6cc48d92732ce10ed5af49c7e05f",
+      "bytes": 3225328,
+      "triangles": 39189,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 16
+    },
+    {
+      "file": "peking_2_4_lod2.glb",
+      "sha256": "5210e20f8d9e9a03da3cfa5ef870908abf1e5761eb98d305da83d138040613e6",
+      "bytes": 3152788,
+      "triangles": 39189,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 16
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "sha256": "30d104fe377d07f8e32c1a5f0ade3f520284c6fab7000aa0002f88fd1da8ba66",
+      "bytes": 3967244,
+      "triangles": 33135,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_2_5_lod1.glb",
+      "sha256": "554f35b4fa3736b2d29eca358887af153b9382e1cee05ea65bdb94e964c81655",
+      "bytes": 2632876,
+      "triangles": 30123,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_2_5_lod2.glb",
+      "sha256": "4a269ea0ec0284b288d55fc3609c7bfd1d62529b9d5d7f0ecd267040d0d778f7",
+      "bytes": 2541508,
+      "triangles": 30123,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "sha256": "9b0758c429f806c83214659b7da9a5c3b58f7d9a38251d2d80fca8f5dbee2036",
+      "bytes": 2575400,
+      "triangles": 10525,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_0_lod1.glb",
+      "sha256": "0bf14c99860da690e0a1afbae107c8ec49947a6f08e4ef4418ef8c40bed90e6f",
+      "bytes": 1235904,
+      "triangles": 9361,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_0_lod2.glb",
+      "sha256": "bed0d35cb8e2318867f1175fc60d9158094402e8d757c30fa3331380e4ac868b",
+      "bytes": 1153336,
+      "triangles": 9361,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "sha256": "fb9e04dc5c12b2787ffa2844b9952e26a0a1857c706c08963d78022fba5f1a43",
+      "bytes": 2585048,
+      "triangles": 11016,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_1_lod1.glb",
+      "sha256": "93339b9efc88a4161a57ea41e2f861366fd18fc1b55d413adf9d4a1f948d5dfb",
+      "bytes": 1249264,
+      "triangles": 10032,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_1_lod2.glb",
+      "sha256": "259493d2d83c722c3e5f9280ba5ec5a2d064d28bf6e298f58a05f9f583ef230a",
+      "bytes": 1163688,
+      "triangles": 10032,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "sha256": "c1a3ee5004e91b48a0a48e4635b38cb783aa19a8e433e28c8adfed1c383d4f37",
+      "bytes": 2841072,
+      "triangles": 18150,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_2_lod1.glb",
+      "sha256": "a99aafbf17454710b959a13da9010548c2aaebdedeed05ff62287a184f658bf1",
+      "bytes": 1695424,
+      "triangles": 16966,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_2_lod2.glb",
+      "sha256": "9f6e675e8daf57c0136a8c6e4c983e7c89a14d62ac02385b93fcfbd26381d78d",
+      "bytes": 1618656,
+      "triangles": 16966,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "sha256": "787659b796d744cf385d74587ee7d180b373c1e20f900c7cf7db0519892cf177",
+      "bytes": 3038784,
+      "triangles": 12604,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_3_lod1.glb",
+      "sha256": "b64d92c185d0ea46bc1aea1d21b1f79c5dc14ef073261f1f493d3758be629282",
+      "bytes": 1472700,
+      "triangles": 11532,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_3_lod2.glb",
+      "sha256": "4bd14233ae5a66332f21720b752990bc033d5fe20beaa10957924550694ad6a4",
+      "bytes": 1363096,
+      "triangles": 11532,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "sha256": "4f60bb98cc82084540d08391a2e1ac772729cf3467a4fdcee2ab6fc3c8d5be7e",
+      "bytes": 3128088,
+      "triangles": 17671,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_4_lod1.glb",
+      "sha256": "2bd91fd6be02fa5d64b830862cb1ed465335647d9f8290e05d720542c8c49118",
+      "bytes": 1746004,
+      "triangles": 16407,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_4_lod2.glb",
+      "sha256": "69386a1b0d63a175c0ec91896c2e28fd665f7cc34fa69d92cd849373ef1f28d2",
+      "bytes": 1654228,
+      "triangles": 16407,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0",
+      "bytes": 3924440,
+      "triangles": 29533,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "sha256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9",
+      "bytes": 2544884,
+      "triangles": 28253,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "sha256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9",
+      "bytes": 2450740,
+      "triangles": 28253,
+      "V2BINPrefixExact": true,
+      "protectedV2PrimitivesAndImagesExact": true,
+      "massArraysExactToAuditedWaterVersion": true,
+      "newGroundTriangles": 0
+    }
+  ],
+  "findings": [],
+  "globalField": {
+    "gridM": 25,
+    "nonzeroNodes": 150,
+    "nonzeroTriangles": 484,
+    "maximumOffsetM": 0.31,
+    "maximumCoefficientNodeResidualM": 1.7763568394002505e-15,
+    "maximumAdjacentFieldEdgeDisagreementM": 1.7763568394002505e-15,
+    "externalZeroOffsetEdges": 202,
+    "allUnmatchedFieldEdgesHaveZeroOffset": true,
+    "sourceNearContactGuardAreaM2": 105355.31196873194,
+    "zeroDomainAreaM2": 650875.7509520899,
+    "originalNearContactGuardOutsideZeroDomainM2": 0.0,
+    "nonzeroDomainAreaM2": 151250.0,
+    "safetyRadiusM": 35.365339059327376,
+    "independentAllGridNodeSafetyRuleMatch": true,
+    "maximumSlope": 0.017536248173426392
+  },
+  "evidenceSHA256": {
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/global-linear-ground-field.json": "5cc2ca8cb6cfa7cbe88cd05d61f700147b36fb152568d91ca8fda63d66792c55",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/contact-guard-plan-before-conservative-dilation.json": "6f2509dc1fc4b5cc6eb20f2d5336e6487fc24fb80c9b1a5bd3f320d6682c3d14",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/package336-build-receipt.json": "5a7d291f3b5d80ba70e69eae8c4eac792ceb54be095581195d8d252803eea215",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/global-field-build-receipt.json": "34d9c421f5c7ba5017c1a86012910d09581de6876ea606e4ff0937625ab36f73",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-sol-package336-water-final-audit.json": "0e0a42476bed2ca9ac6e0151478df088c7567abaf8d66968069ea1fee3d14667",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/manifest-sha256.json": "30ca5e8ada6e74ee5f1166dce2261c929762dd095aeb3bdf4002d6046aac4017",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/build-package336-global-field.py": "8db7204e04a8a43c62a29ae14e997dd2369a83ebcdf018286663cec10d1d7410",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/water-reservation-plan.json": "0c52dd23d60f6bfd43ca636cda688180bca24afefab93aaaf4d29b433df6384b",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/palatsialue-leikkaus-wgs84.geojson": "77fa13fce4fe61d4dc5014601ccfcc5e6ea0374555d5fbd8c0a47a6ce6ad7ef7",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/palatsialue-leikkaus-wgs84-reikaversio.geojson": "145fff606ce775b0262c16324d7109249e500a46edf38e7543ca31a3b22e3e8b",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-ground-contact-and-coverage-readback.json": "1d5d29c9a44bb13ac8a0c35909ca2c612a52439df59f85eb944144bc8e7f408c",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-new-ground-float32-normal-readback.json": "0c2d7a905c05b67a50820a0a6a075b249f66cee59bfacc3d52abb9eeb983984a",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/parent-all72-delta-readback.json": "a75c6232a3598ceb3a73fc5f95a020b0e74185d9bc266b07455d45c49aef99de",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/export-state.json": "1d43ed5368832dc144c54cab7ff1e71d4bc4cf74a3bea503ecc320f6e85c71a8",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/LUEMINUT.md": "07425e5d699dee1d74578e34897a61d4d06ec740eac7a5600694c0e347880fc4",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/glb-v4/laatat.json": "725c8ab1d0e8b8170a400c968519390023fad74eef008ea4d0fe818a2a0e695e",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/render-proof.json": "9ed0b09ea4fc63b81a966e3b17c516027f258040771e7be53e4376e979b48318",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/glb-v4/independent-binary-readback.json": "9ff4221e4bcefad48090b1a8e3addb8197e3c8b2b4e6e8c3fa4cde4622be70d2",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/current-effective-tree-albedo-readback.json": "d48a32e97b0f38a85a702906ac3edf2d611dcdf761e6e1bd35075bdbce43267c",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-sol-package336-initial-audit.json": "e3f645cdedf36a7975d6def85b482e91eee3c5a379011e01e39ce0a2647bef0f",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/source-provenance.json": "34f687bea2867aee5b977e595c78b4d0ed5c84b10f75d2a1c6f70acdd27507cd"
+  },
+  "statistics": {
+    "files": 72,
+    "bytes": 156529080,
+    "triangles": 1377183,
+    "newGroundTriangles": 9009,
+    "newCollapsedTriangles": 0,
+    "newNormalMismatches": 0,
+    "minimumNewNormalDot": 0.9999999701980715,
+    "maxVertexSourcePlusFieldErrorM": 5.319241105361527e-07,
+    "maxUVError": 1.525878911934342e-05,
+    "maxEntireChildPiecewiseFieldErrorM": 5.319241104033329e-07,
+    "maxNormalUnitError": 1.3298211842815988e-07,
+    "maxPerMaterialCoverageDifferenceM2": 0.0017612798113885318,
+    "sumGroundWaterOverlapLOD0M2": 0.0038392584716444396
+  },
+  "treeAlbedo": {
+    "0": {
+      "actualMeanLinearRGB": [
+        0.10383607133282943,
+        0.13583090748456372,
+        0.06943313093593796
+      ],
+      "actualMeanLinearY": 0.12423488585189423,
+      "opaquePixels": 99198,
+      "uniformFactor": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "sourceChromaPreserved": true,
+      "albedoImageSHA256": "30d33f5f23113ef5ecfd1d733103af34a25f32e7c62a7607a65ca8c8d9f99f50"
+    },
+    "1": {
+      "actualMeanLinearRGB": [
+        0.10309847700269811,
+        0.1348046257305341,
+        0.06892139281931207
+      ],
+      "actualMeanLinearY": 0.12330712909480591,
+      "opaquePixels": 25315,
+      "uniformFactor": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "sourceChromaPreserved": true,
+      "albedoImageSHA256": "978f17db957bbe3031dc1313b34ee419106b5743b581f6590fa29ee9e10ec313"
+    },
+    "2": {
+      "actualMeanLinearRGB": [
+        0.10309847700269811,
+        0.1348046257305341,
+        0.06892139281931207
+      ],
+      "actualMeanLinearY": 0.12330712909480591,
+      "opaquePixels": 25315,
+      "uniformFactor": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "sourceChromaPreserved": true,
+      "albedoImageSHA256": "978f17db957bbe3031dc1313b34ee419106b5743b581f6590fa29ee9e10ec313"
+    }
+  },
+  "geometryFailures": [],
+  "groundCoverageByLOD0TileMaterial": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_0_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_0_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "material": "stage5_paving",
+      "expectedLandDifferenceM2": 0.0017612798113885318,
+      "waterOverlapM2": 0.0009394937399876503
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "material": "stage5_paving",
+      "expectedLandDifferenceM2": 0.0012453646939684917,
+      "waterOverlapM2": 0.0007580025048615155
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.00012332369527440716,
+      "waterOverlapM2": 2.6188288449080404e-05
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.00014884397738066846,
+      "waterOverlapM2": 6.871754098469775e-05
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "material": "stage5_paving",
+      "expectedLandDifferenceM2": 0.000411693296306561,
+      "waterOverlapM2": 0.00014965354464264622
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 9.074952616142932e-05,
+      "waterOverlapM2": 4.6971172632154e-05
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "material": "stage5_paving",
+      "expectedLandDifferenceM2": 0.0017457840153596023,
+      "waterOverlapM2": 0.0009549204890942924
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0001977818565697334,
+      "waterOverlapM2": 8.107050506852114e-05
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "material": "stage5_paving",
+      "expectedLandDifferenceM2": 0.0015882979035276472,
+      "waterOverlapM2": 0.0007669903205741301
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.00011052054677984867,
+      "waterOverlapM2": 2.8266761169167623e-05
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 3.847767753879127e-05,
+      "waterOverlapM2": 1.4385829687209475e-05
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 9.457688777333686e-06,
+      "waterOverlapM2": 3.639356446226427e-06
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "material": "stage5_paving",
+      "expectedLandDifferenceM2": 7.173775257158761e-06,
+      "waterOverlapM2": 9.58418047147802e-07
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "material": "stage5_earth",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "material": "stage5_grass",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "material": "stage5_road",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "material": "stage5_footway",
+      "expectedLandDifferenceM2": 0.0,
+      "waterOverlapM2": 0.0
+    }
+  ],
+  "all3LODsOriginalAndNewGroundIdenticalPerTile": true,
+  "sourceMatchedNewLOD0Triangles": 3003,
+  "massPrimitiveCountsByLOD": [
+    10,
+    10,
+    10
+  ],
+  "byteHeadroom": 7797170,
+  "triangleHeadroom": 20200,
+  "waterMask": {
+    "features": 12,
+    "allValidHoleFreeCCW": true,
+    "pairwiseOverlapM2": 0,
+    "unionAreaM2": 762504.5335348698,
+    "expectedLandDifferenceM2": 1.0618231830908655e-06,
+    "waterOverlapM2": 4.849107858574579e-07,
+    "holeVersionUnionDifferenceM2": 2.748492840959349e-07,
+    "source9WetPolygonsAnd12OpenLinesEvidenceChainedByteExact": true,
+    "technicalRetentionHalfWidthM": 10,
+    "notMeasuredWaterWidth": true,
+    "rawSourceAndPlanAndBothGeoJSONSHA256StillExactlyMatchIndependentlyAuditedWaterVersion": true
+  },
+  "source51PinnedFilesReread": 271,
+  "TBNShaderCurrentSHA256": "8a3400821943d147480d59141f564e2644232573b6917aea0d64afe1927ccc68",
+  "previous80Fixture": {
+    "shaderCurrentSHA256": "8a3400821943d147480d59141f564e2644232573b6917aea0d64afe1927ccc68",
+    "compensationTargetSHA256": "8a3400821943d147480d59141f564e2644232573b6917aea0d64afe1927ccc68",
+    "targetFileSameAsCompensationManifest": true,
+    "binCentres": [
+      0.7161496893179449,
+      0.9393079098799711,
+      1.2320040945676798,
+      1.61590685340389
+    ],
+    "publishedBinningOnlyAngleDegrees": 3.8824546483537725,
+    "pairedCameraFixtures": 80,
+    "maxRepresentativeFrontErrorDegrees": 1.9090959104164224e-06,
+    "maxBackNormalComponentReflectionErrorDegrees": 1.9090959104164224e-06,
+    "maxBackVersusFullVectorNegationErrorDegrees": 179.72331486301033,
+    "frontBackConventionUnresolvedWithoutReceiverAgreementAndRuntimeFixtures": true
+  },
+  "parentContactReadOnly": {
+    "actualStoneAndRampTriangles": 19249,
+    "sampledCentroidsAndCorners": 76775,
+    "newlyBuriedPreviouslyVisibleStoneSamples": 0,
+    "contactGuardLiftRegressions": 0,
+    "examples": [],
+    "guardRegressionExamples": [],
+    "sourceAndNewGroundProjectedSymmetricDifferenceM2": 0.00336580426538804,
+    "comparisonScope": "land outside documented source-water and technical Ion-retention reservations",
+    "waterReservationStoneSamplesDeferredToIon": 221,
+    "actualNewGroundOverlapWithWaterReservationsM2": 0.00379785616629249,
+    "oldCoveredPalaceAreaM2": 802125.7374344085,
+    "newCoveredPalaceAreaM2": 762504.5204491327,
+    "palaceBoundaryAreaM2": 802125.7509520903,
+    "retainedWaterAndCorridorAreaM2": 39621.2174173278,
+    "actualIonClearanceM": null
+  },
+  "unchangedGroundFieldCheck": {
+    "LOD0RetainedTriangles": 47618,
+    "maximumNonzeroFieldOverRetainedFacesM": 0.0,
+    "inheritedXYDegenerateTrianglesSkippedFromSurfaceClaim": 0,
+    "scope": "Retained V2 face surfaces carry zero offset; inherited projected-degenerate geometry not certified as new geometry."
+  },
+  "metadata": {
+    "exportStateAll72RowsSHABytesTrianglesMatch": true,
+    "tileIndexAll24OriginsCoverageNamesUnchangedAnd72SizesCorrect": true,
+    "all72PerFileProofCurrentSHABytesTrianglesAndMassPlanBindingsMatch": true,
+    "readmeUpdatedToCurrentRootAnd12FeaturesAndGlobalField": true,
+    "stateStatus": "final_local_checks_and20images_complete_independent_reviews_pending",
+    "KESKENERAINENMarkerPresent": true
+  },
+  "renderEvidenceReadOnly": {
+    "frames": 20,
+    "imports": 27,
+    "uniqueGLBFiles": 26,
+    "allImportedSHAAndTriangleCountsMatch": true,
+    "all20PNGSHA256Match": true,
+    "all72BinaryReadbackReceiptBound": true,
+    "visualAcceptanceNotPerformedHere": true
+  },
+  "parentFloat32ResultMatchesIndependentReadback": true,
+  "producerRecordedDroppedProjectedAreaM2All3LODs": 0.001131809480093242,
+  "sourceProvenanceProfilesVerified": 14,
+  "currentEffectiveTreeAlbedoMatchesIndependentActualImageDecode": true,
+  "same72GLBSHA256AtClose": true,
+  "notes": [
+    {
+      "scope": "float32 clipping precision",
+      "producerDroppedProjectedAreaAll3LODsM2": 0.001131809480093242,
+      "note": "Positive source projected area discarded when final float32 triangle collapses; logged coverage tolerance, not zero area loss claim. No collapsed output triangles remain."
+    },
+    {
+      "scope": "water boundary precision",
+      "note": "Actual ground has microscopic float32 water-boundary slivers; independent per-material sum0.003839m2 includes overlaps. GeoJSON water overlap approx4.85e-7m2. Not an exact watertightness claim."
+    }
+  ],
+  "openGates": {
+    "IonMinimum03m": "UNMEASURED; own offset not Ion measurement",
+    "receiverAll12MaskFeaturesAndInternalWaterVisibility": "GAME_TEST_REQUIRED",
+    "deviceMovingLODAndDayNight": "UNVERIFIED",
+    "physicalBackfaceTargetAndTBNRuntime": "UNVERIFIED; existing80fixtures chained by protected payload and shader SHA only",
+    "wholeCityHighQualityAndOwnerAcceptance": "OPEN",
+    "renderVisualAcceptance": "Separate independent image review; here only SHA/provenance verified",
+    "integrationDeliveryPublication": "NOT_CLAIMED"
+  },
+  "noBlenderOrModelSourcePackageMutation": true,
+  "reportsWrittenOnly": [
+    "visible-session-sol-package336-global-final-audit.md",
+    "visible-session-sol-package336-global-final-audit.json"
+  ],
+  "budgetProvenance": {
+    "conclusion": "Inherited owner-delegated aggregate v4+10percent policy, numerically derived from measured v4; not PT284 numeric instruction and not a new72-subset forecast. Applying same ceilings to private72 subset was conservative local continuation, not a separately stated PT284 hard cap. No evidence of receiver engine/device hard limit. Older aggregate policy remains unresolved for any overrun; audit does not waive it.",
+    "MAILLetters": [
+      {
+        "repo": "game-mailbox (MAIL)",
+        "commit": "664b6ee8017c1237518dec1da7e5a347d1ae5f2f",
+        "path": "posti/fable-codex-peking-testikaupunki-20261015.md",
+        "blobSHA1": "1c67435dbe79c52e7358ca06b223cdefaa5a4580",
+        "sha256": "9d232eb947d040d3064871028b6c88ff03f01b6180cbc8a96524e5cfcc52971a",
+        "wholeLetterRead": true
+      },
+      {
+        "repo": "game-mailbox (MAIL)",
+        "commit": "664b6ee8017c1237518dec1da7e5a347d1ae5f2f",
+        "path": "posti/fable-codex-peking-v6-hyvaksynta-20261013.md",
+        "blobSHA1": "f1081b9b56aafaed9f7bc77545277558d62c964a",
+        "sha256": "552f1c798dc35529eff397638dd9f7afb6d25005c4e2b02cf5ef6170cc106796",
+        "wholeLetterRead": true
+      },
+      {
+        "repo": "game-mailbox (MAIL)",
+        "commit": "664b6ee8017c1237518dec1da7e5a347d1ae5f2f",
+        "path": "posti/fable-codex-peking-v10-hyvaksynta-era6-20261014.md",
+        "blobSHA1": "882a2a44a16129905bbdf6cbfdca9d0e3e36efa5",
+        "sha256": "c643944b67a3fdcb204c2e19db91e337859689ee80beeb4d12f2b59e09eee186",
+        "wholeLetterRead": true
+      },
+      {
+        "repo": "game-mailbox (MAIL)",
+        "commit": "664b6ee8017c1237518dec1da7e5a347d1ae5f2f",
+        "path": "posti/fable-codex-peking-era6-64-pintaa-20261014.md",
+        "blobSHA1": "fa48d78fac504d073b713083a68ca2942fda742f",
+        "sha256": "0b76b44d740506f07e04f762c753f7dae575d7260935e1034a8e869564800fc2",
+        "wholeLetterRead": true
+      }
+    ],
+    "PT284ContainsBudgetLimit": false,
+    "PT284AllowsIncompleteInterim": true,
+    "originalPolicyQuotes": {
+      "v6": "kokonaiskoko takaisin enint\u00e4\u00e4n noin v4 + 10 %:iin ennen kuin Pekingi\u00e4 harkitaan peliin",
+      "v10": "Kolmio- ja tavubudjetti ennallaan (\u2264 v4 + 10 %)",
+      "64surfaces": "Kolmio- ja tavubudjetti ennallaan (\u2264 v4 + 10 %)"
+    },
+    "v4MeasuredBaseline": {
+      "bytes": 149387500,
+      "storedTrianglesAllLODs": 1270349,
+      "files": 72,
+      "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/stages/v10/geometry-and-budget-QA.json",
+      "sha256": "01eab749a192f846bdac9f18b88800c1b03d76fa27bceb437ea38b85c18f05a3"
+    },
+    "numericDerivation": {
+      "bytes": "int(149387500 * 1.1) = 164326250",
+      "triangles": "int(1270349 * 1.1) = 1397383",
+      "sourceCode": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/export-model.py",
+      "lines": [
+        95,
+        96
+      ],
+      "sourceCodeSHA256": "eab4742975922735b4656649111c9480657f82c69de0986a6ad84920c8c8a829"
+    },
+    "scopeDistinction": "Original v4 budget baseline is72 GLBs. Later local96 export audits carried same aggregate ceiling; this is not96-file original baseline. New PT28472 subset request states no separate cap.",
+    "gateStatus": "BUDGET_POLICY_RESERVATION; no unilateral cap increase or physical runtime guarantee",
+    "seamCandidateReadOrCompared": false,
+    "currentGlobalCandidateUnderInheritedCaps": true
+  }
+}

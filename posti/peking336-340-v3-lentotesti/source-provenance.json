@@ -1,0 +1,46 @@
+{
+  "taskNumbers": [
+    336,
+    337,
+    338,
+    339,
+    340
+  ],
+  "sourceCommit": "7d94044517bb58a7d66ad41d180dbc1585b44969",
+  "sourceBlobSHA1": "41e238b9c25cb398580c2d601507f59aee4d0665",
+  "nativeSourceRound": 51,
+  "sourceNativeBlendSHA256": "0572b74e033361077de63ec10eba5d5194f6cf65da6d63681e21d9bbb84adfc2",
+  "sourcePackedNativeBlendSHA256": "6fe272101e263d675f2abb487804c30080844f0c8561c254963cf529c5447d05",
+  "sourcePinsManifestSHA256": "17010587702bd0a1e22c114c5d72b1ca06c7608f472f997b3e1d46ed95a3da26",
+  "sourcePinnedFileCount": 271,
+  "basePrivatePacket": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2",
+  "basePrivatePacketManifestSHA256": "30ca5e8ada6e74ee5f1166dce2261c929762dd095aeb3bdf4002d6046aac4017",
+  "ownDEMSHA256": "c367ebd2ee6f65eb3be1e8ab07e94fa63c5056d5dd2cccdba716db802159d6b2",
+  "heightOriginEllipsoidM": 37.9,
+  "originalRegistryCount": 225,
+  "ordinaryModeledCount": 223,
+  "originalUnbuiltIDs": [
+    "3dglobfp/9094",
+    "way/149216919"
+  ],
+  "historicalHeightChoices295AreNotNewSurveys": true,
+  "noNewCanonicalNativeRound": true,
+  "profileFiles": {
+    "profile-source/apply-package336-water-reservations.py": "0834bb88656a53c8c9f0a767313ceedb6d36b6fac4094bb9c080ba84837a7c22",
+    "profile-source/audit-package336-all-water-boundaries.py": "45ccf5641fad97177c6aba6e2af40881103605c13ee1a3240698a662150a5652",
+    "profile-source/audit-package336-ground-clearance.py": "b116a4b67cfab169ec3827f1fb8c4399f130cec088c1da4f14147affc64aa597",
+    "profile-source/build-package336-global-field.py": "8db7204e04a8a43c62a29ae14e997dd2369a83ebcdf018286663cec10d1d7410",
+    "profile-source/build-package336.py": "cb7d07d0da81db63231a5e87785cb3db5efae045836c9acbe86e4b96690e48f9",
+    "profile-source/close-package336-and-prepare-mail.py": "0d06f160547e99bf7493cf123a706e56beca4db55cb14777ae1b7ee6cefae675",
+    "profile-source/compact-package336-contact-guards.py": "bf68256d19bd66f4c9e266953283d31d54b614f91f1b88e9c7558de9a4d90359",
+    "profile-source/normalize-package336-final-metadata.py": "914bc09bc8e8c1c7e4d9704cd34887775795423cacfb5713a75345471298d3e3",
+    "profile-source/prepare-package336-contact-guards.py": "c862bcce2fd176886cbd7938eb2853e99e6698897053539c2190fbea9427b514",
+    "profile-source/prepare-package336-final-docs.py": "56d3de995e9c100bed346802ea674dbc906966ceae5adc7c7b350ac72133d72f",
+    "profile-source/render-package336-actual-glbs.py": "20845812cfcb55a3a9a002cbcffb744aeefb8356880f76c54d2f411883603f44",
+    "profile-source/run-package336-hull-guard-candidate.py": "34c70948ee4d1433d57c28fa6c83a3e0206ca426b43ff686e8bc85e016644f39",
+    "profile-source/run-package336-render.py": "346d7ebcea92126a95c64abe87208e281d2d4266a7f01cb9912420dcf772e621",
+    "profile-source/test284_glb_readback.py": "8b0eda274e18ebd2cea0d45a4fe5e34848e17d7e9e1057abb0ad0a12f0535695",
+    "profile-source/verify-package336-delta.py": "3995b6489e3f2b66609f329e977bbe85d750ba6b2756e11f6d2ccf4348fab21f",
+    "profile-source/verify-package336-ground-float32.py": "c496405b34111245b8c98249aed492c9cc4fb1bb334503f14c393e6ccf5c1f02"
+  }
+}

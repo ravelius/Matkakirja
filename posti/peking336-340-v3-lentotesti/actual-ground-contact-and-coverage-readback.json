@@ -1,0 +1,17 @@
+{
+  "actualStoneAndRampTriangles": 19249,
+  "sampledCentroidsAndCorners": 76775,
+  "newlyBuriedPreviouslyVisibleStoneSamples": 0,
+  "contactGuardLiftRegressions": 0,
+  "examples": [],
+  "guardRegressionExamples": [],
+  "sourceAndNewGroundProjectedSymmetricDifferenceM2": 0.00336580426538804,
+  "comparisonScope": "land outside documented source-water and technical Ion-retention reservations",
+  "waterReservationStoneSamplesDeferredToIon": 221,
+  "actualNewGroundOverlapWithWaterReservationsM2": 0.00379785616629249,
+  "oldCoveredPalaceAreaM2": 802125.7374344085,
+  "newCoveredPalaceAreaM2": 762504.5204491327,
+  "palaceBoundaryAreaM2": 802125.7509520903,
+  "retainedWaterAndCorridorAreaM2": 39621.2174173278,
+  "actualIonClearanceM": null
+}

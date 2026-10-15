@@ -1,0 +1,44 @@
+{
+  "decision": "release_for_restricted_recipient_flight_test",
+  "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti",
+  "wholeQualityGoalReached": false,
+  "minimum30cmIonConditionOpen": true,
+  "gameIntegrationOrRuntimeVerified": false,
+  "producerReadBothCompletedFinalReportsInFull": true,
+  "reviewFilesSHA256": {
+    "visible-session-sol-package336-global-final-audit.md": "e79bae8e51f83049ee8963cc61f25fe54781cbd047237b90e59da8b9acc911a2",
+    "visible-session-sol-package336-global-final-audit.json": "ff5828ce0266571c0630e44d3ab8aa23c99ff48c998200972a7e84c8842b1995",
+    "visible-session-astra-package336-global-final-review.md": "cf9c1aa7291e1fb1dd3d5f27996eaeca148e4c267267710edba0645dcc7d06e6",
+    "visible-session-astra-package336-global-final-review.json": "d758f9f0e6e811f00fd7e020e8309b2c0c71cd966b7d4c846261cfba3368c9dc"
+  },
+  "binaryReadbackSHA256": "9ff4221e4bcefad48090b1a8e3addb8197e3c8b2b4e6e8c3fa4cde4622be70d2",
+  "renderProofSHA256": "9ed0b09ea4fc63b81a966e3b17c516027f258040771e7be53e4376e979b48318",
+  "producerPersonallyViewedFinalImages": [
+    "city-lod0-taihedian.png",
+    "city-lod0-jingshan.png",
+    "city-lod0-hutong_ilma.png",
+    "city-lod0-aukio.png",
+    "city-lod0-ilma.png",
+    "city-lod0-beihai.png",
+    "diagnostic-city-lod0-mao-front.png",
+    "diagnostic-water-lod0-source-inner-canal.png",
+    "diagnostic-water-lod0-source-palace-pond.png"
+  ],
+  "producerPersonallyViewedAll20": false,
+  "independentAstraPersonallyViewedAll20": true,
+  "findingsClosed": [
+    "Q336-ground-seam local visual regression",
+    "Q336-tree-green local gray cast",
+    "newly introduced float32 ground normal/degeneracy mismatches",
+    "internal water reservations missing from own ground and Ion mask"
+  ],
+  "retainedLimits": [
+    "Ion ellipsoid clearance unmeasured",
+    "221 water reservation contacts require Ion test",
+    "tree card shape and old LOD changes",
+    "current TBN convention conditional on target game",
+    "20 frames cover26 unique GLBs not all72 individually",
+    "no device runtime or owner acceptance"
+  ],
+  "createdAtUTC": "2026-10-15T22:53:20.816840+00:00"
+}

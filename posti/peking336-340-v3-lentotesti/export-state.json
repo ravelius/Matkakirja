@@ -1,0 +1,463 @@
+{
+  "status": "ready_for_restricted_recipient_flight_test",
+  "nativeSourceRound": 51,
+  "privatePacketRevision": 3,
+  "bytes": 156529080,
+  "triangles": 1377183,
+  "completed": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "sha256": "0f1415d1d237251fb93cc7bde487db4845cdafc1c534d89485c68f5dde11ca91",
+      "bytes": 1691512,
+      "triangles": 8361
+    },
+    {
+      "file": "peking_0_0_lod1.glb",
+      "sha256": "000451f919ced76215fd3af944694eee308e9994ff2a9904ac023522450a71c2",
+      "bytes": 883136,
+      "triangles": 7893
+    },
+    {
+      "file": "peking_0_0_lod2.glb",
+      "sha256": "e94219a3d99908b12beaf4e3804f6b29ddb654e646b7dc63b41873b2fcf54007",
+      "bytes": 838964,
+      "triangles": 7893
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "sha256": "864459537a014fb48fa8efd9bfb4b26badcbc65bff4f20a688d9c2246b02a5b4",
+      "bytes": 2086548,
+      "triangles": 8315
+    },
+    {
+      "file": "peking_0_1_lod1.glb",
+      "sha256": "fe63071dba06708a29084e62b756faac38e816d87f5a0b9f56814f2760edeff3",
+      "bytes": 926556,
+      "triangles": 6967
+    },
+    {
+      "file": "peking_0_1_lod2.glb",
+      "sha256": "7a86fd8e40127bb7216e72ea1c2c56dc939a9454afa1b6961c52400e18b7efb6",
+      "bytes": 852452,
+      "triangles": 6967
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "sha256": "5dcd964bd24c4d0d310091bcfb93f01d45e1b19bb2ea0687304678203fde04eb",
+      "bytes": 2539220,
+      "triangles": 11017
+    },
+    {
+      "file": "peking_0_2_lod1.glb",
+      "sha256": "a5513581c510118b290b9b04cf2d931bbb2034923d339a5593eda057ea650ef6",
+      "bytes": 1123764,
+      "triangles": 8645
+    },
+    {
+      "file": "peking_0_2_lod2.glb",
+      "sha256": "4dcc97da9346b8a92c021b56ca46a6947bbb5bb12139ab883ae3bce0d2802587",
+      "bytes": 1034488,
+      "triangles": 8645
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "sha256": "77da068b72834104df01255ad3bf037ce8e673206c9d0b020fd3bf3d26c76b4a",
+      "bytes": 2029812,
+      "triangles": 8420
+    },
+    {
+      "file": "peking_0_3_lod1.glb",
+      "sha256": "c4b72ccb6ed5e4feecf9ada555a7f5963ef051aa5b510da4683a87bf23108e14",
+      "bytes": 964696,
+      "triangles": 7564
+    },
+    {
+      "file": "peking_0_3_lod2.glb",
+      "sha256": "4706259be1b3f5dd9e798714746a78c32b44ebefe2d1c7554c287cf41fcefc5a",
+      "bytes": 890124,
+      "triangles": 7564
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "sha256": "1438d9bf27ffbea0304cff8c4bfa6a171d544e706898486a2cfa819c0e0b3c7b",
+      "bytes": 2187376,
+      "triangles": 8777
+    },
+    {
+      "file": "peking_0_4_lod1.glb",
+      "sha256": "41dbc8d8a289921c1fc7b3766ac220041e8424270ccbd1afac754c3d50f2b4ce",
+      "bytes": 1009764,
+      "triangles": 7825
+    },
+    {
+      "file": "peking_0_4_lod2.glb",
+      "sha256": "5f556a2640ac4d51eb4477cbfaec3b0046eb281407457c0532c473bd51711d58",
+      "bytes": 933516,
+      "triangles": 7825
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "sha256": "14ba48b15003201d866ef3ca8f2e460eff1a4307810259a7e489226515939fdb",
+      "bytes": 2347736,
+      "triangles": 14420
+    },
+    {
+      "file": "peking_0_5_lod1.glb",
+      "sha256": "6c6f5b46cdfe7108297536742140ef700ec8d5bbddb5490284f1928c4f34e3d3",
+      "bytes": 1181168,
+      "triangles": 11568
+    },
+    {
+      "file": "peking_0_5_lod2.glb",
+      "sha256": "defb6173eb5555f7e1d85eba2ce5f79dd375e211ecc4f2e3998ef08569457c72",
+      "bytes": 1113836,
+      "triangles": 11568
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "sha256": "8c322d06b1eecb8c971213bda3bdb5e63efcbccd9473528f4a76ef6d416803db",
+      "bytes": 1723596,
+      "triangles": 6176
+    },
+    {
+      "file": "peking_1_0_lod1.glb",
+      "sha256": "1311c15fa58a01496d94a8694bdfe2fe1a3b6a0f6ac0a35322ac0bc944077f6f",
+      "bytes": 831212,
+      "triangles": 5708
+    },
+    {
+      "file": "peking_1_0_lod2.glb",
+      "sha256": "25595748033bb7108a1687eb92b8959f3063d4b0637be4b3380784a27b6904ff",
+      "bytes": 780820,
+      "triangles": 5708
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "sha256": "e63c93b6d8991da97233b3accbba7e81c0e7e4df53bd2422364509559679374f",
+      "bytes": 2529220,
+      "triangles": 14439
+    },
+    {
+      "file": "peking_1_1_lod1.glb",
+      "sha256": "f26a4763dfe941912498a03eb78477852222ffce691341778d6d4392c4380e0f",
+      "bytes": 1341448,
+      "triangles": 12783
+    },
+    {
+      "file": "peking_1_1_lod2.glb",
+      "sha256": "db9c3a24ae5577edc175c2adc04a6684e44029207efab784150cda85f01df74b",
+      "bytes": 1266004,
+      "triangles": 12783
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "sha256": "a244d17aaf729e9e828af19ef4e0555c0d6b593a1c67b9b089e65de9c933902b",
+      "bytes": 2825384,
+      "triangles": 16534
+    },
+    {
+      "file": "peking_1_2_lod1.glb",
+      "sha256": "6b58bf87a135a4fa35f2c0dcedd9e9387d8fbc6629518d8380e2c7b931f80d0d",
+      "bytes": 1451032,
+      "triangles": 13040
+    },
+    {
+      "file": "peking_1_2_lod2.glb",
+      "sha256": "3da70d3d7358ff060f2a031b32d43131c1429505d427271d1971d7d19228b415",
+      "bytes": 1366452,
+      "triangles": 13040
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "sha256": "9919aa5028f5f3babf8e78ab41d521a76cf0bf84958e249f4e8dc2f9f18661f5",
+      "bytes": 5606788,
+      "triangles": 59280
+    },
+    {
+      "file": "peking_1_3_lod1.glb",
+      "sha256": "c2ebea3f2be2c2c61930fef6777d53df206c37ccc03b6b6ba150d6e52194ce55",
+      "bytes": 2387636,
+      "triangles": 26842
+    },
+    {
+      "file": "peking_1_3_lod2.glb",
+      "sha256": "925554c4aba566bbe5670ad9252b52c3f9a366736354f0857cb505e620b3068e",
+      "bytes": 2316704,
+      "triangles": 26842
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "sha256": "07083a9ae652d52bfd8704d3e41e0c623b5f99a21be22efac54a9ddc84b3a918",
+      "bytes": 4618484,
+      "triangles": 47146
+    },
+    {
+      "file": "peking_1_4_lod1.glb",
+      "sha256": "8d45a12f43848628c02011aadd8feac277c3b8b5169d66b33865af8deaf3d754",
+      "bytes": 3131928,
+      "triangles": 38512
+    },
+    {
+      "file": "peking_1_4_lod2.glb",
+      "sha256": "7a74862ab62bcd6fd0e9573b458904a2024b97b9dd3a31fe852f0a1b0e165224",
+      "bytes": 3075280,
+      "triangles": 38512
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "sha256": "2d7351f3966efe8bcd3709445bb93735f362ba5afbaf515b1152f49fc1c8ea9a",
+      "bytes": 3214068,
+      "triangles": 26716
+    },
+    {
+      "file": "peking_1_5_lod1.glb",
+      "sha256": "f3b390f54ee6574a17558968bcd6ca835e23d08e0aa1829a02cfa8f5980243ac",
+      "bytes": 1887044,
+      "triangles": 21184
+    },
+    {
+      "file": "peking_1_5_lod2.glb",
+      "sha256": "2906c3cf12f30f5395a64ffa9d3761fab657bad8df1b4970f981cb61b7cbcf0f",
+      "bytes": 1818164,
+      "triangles": 21184
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "sha256": "4db9f54a4deff9918eb9b5b4441cbaecb4013f5d6e484184efb84e715d3eab6d",
+      "bytes": 2195924,
+      "triangles": 7274
+    },
+    {
+      "file": "peking_2_0_lod1.glb",
+      "sha256": "1c6ddd410d89287fe1c4a09677119b0330fec8f788ead873ff109480714b43e0",
+      "bytes": 1080112,
+      "triangles": 7014
+    },
+    {
+      "file": "peking_2_0_lod2.glb",
+      "sha256": "55455b99b7aee7a685adadb7fa3bfd6e67e896d25557fdec31a6997cc8334e9c",
+      "bytes": 1011972,
+      "triangles": 7014
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "sha256": "0c0ff10c06d4b49972e2795f3304e954fa3903656df1b33c119f90e43dde4405",
+      "bytes": 2415300,
+      "triangles": 14405
+    },
+    {
+      "file": "peking_2_1_lod1.glb",
+      "sha256": "5de1ca84006184ceebb4b6334e1a2fa8bb950b9998dd82f7de48a7acc1e2d008",
+      "bytes": 1304988,
+      "triangles": 12917
+    },
+    {
+      "file": "peking_2_1_lod2.glb",
+      "sha256": "3bb9b2c426cbdf9837c9507637d85cdfc96c606f7f5259068fd2bbcf240e3542",
+      "bytes": 1234928,
+      "triangles": 12917
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "sha256": "4d21a0075a994220dc4e2494f6d5a220cb9fdcb2b6e3f6d0de6bad8cb04aa7af",
+      "bytes": 2871804,
+      "triangles": 17477
+    },
+    {
+      "file": "peking_2_2_lod1.glb",
+      "sha256": "343d9babaae7c0b94259164017d711b0a49acf6897e56eb60d31bf014678ee54",
+      "bytes": 1564976,
+      "triangles": 14541
+    },
+    {
+      "file": "peking_2_2_lod2.glb",
+      "sha256": "a438f18d43527192e9541cccbdd316182e7235ce462094d222bb7ef08c666646",
+      "bytes": 1486568,
+      "triangles": 14541
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "3a2ee3eb49554dea57a01c12088961648dcc954f434a45d3b4087f3808e85d74",
+      "bytes": 8660160,
+      "triangles": 97895
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "sha256": "60952e0ef3c47374ceef060c95ab67bfae6f8bd52caa295ae50baea350b8c87d",
+      "bytes": 4114652,
+      "triangles": 50491
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "sha256": "cd1c2cefae61cb531a1efc7dbb7ea9af8ab1fd00519e88e81f31094f509c653b",
+      "bytes": 3902420,
+      "triangles": 49159
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "sha256": "e0191748f1bfd6ce004a958e8eea14db0a3459ebcc194ebc0a727facb4db53b5",
+      "bytes": 4918844,
+      "triangles": 48515
+    },
+    {
+      "file": "peking_2_4_lod1.glb",
+      "sha256": "afac94fc11dab2266945aeab22b42157478f6cc48d92732ce10ed5af49c7e05f",
+      "bytes": 3225328,
+      "triangles": 39189
+    },
+    {
+      "file": "peking_2_4_lod2.glb",
+      "sha256": "5210e20f8d9e9a03da3cfa5ef870908abf1e5761eb98d305da83d138040613e6",
+      "bytes": 3152788,
+      "triangles": 39189
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "sha256": "30d104fe377d07f8e32c1a5f0ade3f520284c6fab7000aa0002f88fd1da8ba66",
+      "bytes": 3967244,
+      "triangles": 33135
+    },
+    {
+      "file": "peking_2_5_lod1.glb",
+      "sha256": "554f35b4fa3736b2d29eca358887af153b9382e1cee05ea65bdb94e964c81655",
+      "bytes": 2632876,
+      "triangles": 30123
+    },
+    {
+      "file": "peking_2_5_lod2.glb",
+      "sha256": "4a269ea0ec0284b288d55fc3609c7bfd1d62529b9d5d7f0ecd267040d0d778f7",
+      "bytes": 2541508,
+      "triangles": 30123
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "sha256": "9b0758c429f806c83214659b7da9a5c3b58f7d9a38251d2d80fca8f5dbee2036",
+      "bytes": 2575400,
+      "triangles": 10525
+    },
+    {
+      "file": "peking_3_0_lod1.glb",
+      "sha256": "0bf14c99860da690e0a1afbae107c8ec49947a6f08e4ef4418ef8c40bed90e6f",
+      "bytes": 1235904,
+      "triangles": 9361
+    },
+    {
+      "file": "peking_3_0_lod2.glb",
+      "sha256": "bed0d35cb8e2318867f1175fc60d9158094402e8d757c30fa3331380e4ac868b",
+      "bytes": 1153336,
+      "triangles": 9361
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "sha256": "fb9e04dc5c12b2787ffa2844b9952e26a0a1857c706c08963d78022fba5f1a43",
+      "bytes": 2585048,
+      "triangles": 11016
+    },
+    {
+      "file": "peking_3_1_lod1.glb",
+      "sha256": "93339b9efc88a4161a57ea41e2f861366fd18fc1b55d413adf9d4a1f948d5dfb",
+      "bytes": 1249264,
+      "triangles": 10032
+    },
+    {
+      "file": "peking_3_1_lod2.glb",
+      "sha256": "259493d2d83c722c3e5f9280ba5ec5a2d064d28bf6e298f58a05f9f583ef230a",
+      "bytes": 1163688,
+      "triangles": 10032
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "sha256": "c1a3ee5004e91b48a0a48e4635b38cb783aa19a8e433e28c8adfed1c383d4f37",
+      "bytes": 2841072,
+      "triangles": 18150
+    },
+    {
+      "file": "peking_3_2_lod1.glb",
+      "sha256": "a99aafbf17454710b959a13da9010548c2aaebdedeed05ff62287a184f658bf1",
+      "bytes": 1695424,
+      "triangles": 16966
+    },
+    {
+      "file": "peking_3_2_lod2.glb",
+      "sha256": "9f6e675e8daf57c0136a8c6e4c983e7c89a14d62ac02385b93fcfbd26381d78d",
+      "bytes": 1618656,
+      "triangles": 16966
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "sha256": "787659b796d744cf385d74587ee7d180b373c1e20f900c7cf7db0519892cf177",
+      "bytes": 3038784,
+      "triangles": 12604
+    },
+    {
+      "file": "peking_3_3_lod1.glb",
+      "sha256": "b64d92c185d0ea46bc1aea1d21b1f79c5dc14ef073261f1f493d3758be629282",
+      "bytes": 1472700,
+      "triangles": 11532
+    },
+    {
+      "file": "peking_3_3_lod2.glb",
+      "sha256": "4bd14233ae5a66332f21720b752990bc033d5fe20beaa10957924550694ad6a4",
+      "bytes": 1363096,
+      "triangles": 11532
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "sha256": "4f60bb98cc82084540d08391a2e1ac772729cf3467a4fdcee2ab6fc3c8d5be7e",
+      "bytes": 3128088,
+      "triangles": 17671
+    },
+    {
+      "file": "peking_3_4_lod1.glb",
+      "sha256": "2bd91fd6be02fa5d64b830862cb1ed465335647d9f8290e05d720542c8c49118",
+      "bytes": 1746004,
+      "triangles": 16407
+    },
+    {
+      "file": "peking_3_4_lod2.glb",
+      "sha256": "69386a1b0d63a175c0ec91896c2e28fd665f7cc34fa69d92cd849373ef1f28d2",
+      "bytes": 1654228,
+      "triangles": 16407
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0",
+      "bytes": 3924440,
+      "triangles": 29533
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "sha256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9",
+      "bytes": 2544884,
+      "triangles": 28253
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "sha256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9",
+      "bytes": 2450740,
+      "triangles": 28253
+    }
+  ],
+  "actualIonClearanceM": null,
+  "gameRuntimeVerified": false,
+  "local72StructuralDeltaAndContactPASS": true,
+  "actual18FrameGLBReimportComplete": false,
+  "actualUniqueGLBFilesVisuallyRendered": 26,
+  "maximumTechnicalPalaceGroundLiftM": 0.31,
+  "minimumTechnicalPalaceGroundLiftM": 0.0,
+  "IonMinimum30cmConditionOpen": true,
+  "source51MassesIncluded": true,
+  "newCanonicalNativeRoundBuilt": false,
+  "updatedAtUTC": "2026-10-15T22:53:48.949650+00:00",
+  "sourceWaterReservationsIncluded": true,
+  "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti",
+  "actual20FrameGLBReimportComplete": true,
+  "actualGLBFrameCount": 20,
+  "globalContinuousLinearGroundField": true,
+  "independentSolFinalScopedPASS": true,
+  "independentAstra20FrameScopedPASS": true,
+  "localPrivatePacketReady": true,
+  "wholeQualityGoalReached": false,
+  "minimum30cmIonConditionOpen": true,
+  "deliveryReceiptStoredExternally": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/final-mail-delivery-receipt.json"
+}

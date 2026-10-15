@@ -1,0 +1,1798 @@
+{
+  "schemaVersion": 1,
+  "review": "astra-package336-global-final-review",
+  "dateEuropeHelsinki": "2026-10-16",
+  "status": "accepted_for_scoped_private_flight_test_with_receiver_gates",
+  "reviewComplete": true,
+  "offgame": true,
+  "packageRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti",
+  "newOriginalsPersonallyViewed": 20,
+  "all20RenderProofPinsMatch": true,
+  "frames": [
+    {
+      "file": "city-lod0-ilma.png",
+      "group": "city-lod0",
+      "view": "ilma",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-ilma.png",
+      "sha256": "13b04dc5ee20e95ae3f8b12e4366d23ed10ee37e3afbbe0104910be59c7f4894",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/city-lod0-ilma.png",
+        "sha256": "8ed445d978822d42655074d45e4e7a0b2a97858cdb6a581b36d02c478349d8eb",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.40145925925925924
+    },
+    {
+      "file": "city-lod0-taihedian.png",
+      "group": "city-lod0",
+      "view": "taihedian",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-taihedian.png",
+      "sha256": "e812b4ea5e219c1ed3afeec8a0c38c6ae8631c4b4d5e0a212e19062f1b991faf",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/city-lod0-taihedian.png",
+        "sha256": "9cf4437a5a6800119dde51c6dcc1e79c623c734da092ea50931897a4492389bf",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.9270840277777778
+    },
+    {
+      "file": "city-lod0-aukio.png",
+      "group": "city-lod0",
+      "view": "aukio",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-aukio.png",
+      "sha256": "d91cbb7ad066f335489165a358a982cb9e759719e3b069cf3eef1df5729f3aff",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/city-lod0-aukio.png",
+        "sha256": "8a41a644f200f2ed815e4b9a8fa83580dec550ac90a01347603f4db3e1cc81ad",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.3036064814814815
+    },
+    {
+      "file": "city-lod0-beihai.png",
+      "group": "city-lod0",
+      "view": "beihai",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-beihai.png",
+      "sha256": "05aef2084cdb1cab00f17e25908fc2c767b823be56926615d2ca31cf0eb3132b",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/city-lod0-beihai.png",
+        "sha256": "f39b2798ccf5291ccd32faf0ba3cb8c25beb2f3b0beb4a2eb113629f61c31fdd",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.6013388888888889
+    },
+    {
+      "file": "city-lod0-jingshan.png",
+      "group": "city-lod0",
+      "view": "jingshan",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-jingshan.png",
+      "sha256": "e0fbd499068da1f501a3084ad57426b2a7d7345752b01a9394d470e55fbf90c8",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/city-lod0-jingshan.png",
+        "sha256": "8a839a7981bf9b76d0c91807768fdbf983ead71aa00bddbfd8c8a23790a16427",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": true,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 1.6589641203703704
+    },
+    {
+      "file": "city-lod0-hutong_ilma.png",
+      "group": "city-lod0",
+      "view": "hutong_ilma",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-hutong_ilma.png",
+      "sha256": "1a8a69a12d167092c0f102644a4ad0dbc2515a3c6f1b5397a9228db570946107",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/city-lod0-hutong_ilma.png",
+        "sha256": "c3638862508fc89b829737e691ab116bd02d9cd4c98170402093881a9b23e3f1",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": true,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.6162437500000001
+    },
+    {
+      "file": "diagnostic-city-lod0-mao-front.png",
+      "group": "diagnostic-city-lod0",
+      "view": "mao-front",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/diagnostic-city-lod0-mao-front.png",
+      "sha256": "f38a02815258babce9869c009893a8de494888a906dca8b665ce4c5283714857",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/diagnostic-city-lod0-mao-front.png",
+        "sha256": "4373fef428f99be4af2f2b542ed7b970246dacda1712c78fc2b21e15a9fc3fed",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.17492296006944444
+    },
+    {
+      "file": "diagnostic-city-lod0-palace-inner-bank.png",
+      "group": "diagnostic-city-lod0",
+      "view": "palace-inner-bank",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/diagnostic-city-lod0-palace-inner-bank.png",
+      "sha256": "9b8630814b5c74d3f9a9ae3132e60dcfdaa2389fa6404e0bce90169a7555717b",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/diagnostic-city-lod0-palace-inner-bank.png",
+        "sha256": "80d699a093f9722855f0d20dedd54692757e4b2b99aacb993779ef7a4ae1510f",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 2.13021484375
+    },
+    {
+      "file": "diagnostic-city-lod0-palace-ground.png",
+      "group": "diagnostic-city-lod0",
+      "view": "palace-ground",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/diagnostic-city-lod0-palace-ground.png",
+      "sha256": "7a732b47c20c2c31e080ceb711c994e3b84ddf8abd670bdfe21c2074b9954dc6",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/diagnostic-city-lod0-palace-ground.png",
+        "sha256": "8895eab774bc209edd94e5b712eeede9a174462bc275e4b07021bd5cf86316d4",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 1.1159443721064815
+    },
+    {
+      "file": "diagnostic-water-lod0-source-inner-canal.png",
+      "group": "diagnostic-water-lod0",
+      "view": "source-inner-canal",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/diagnostic-water-lod0-source-inner-canal.png",
+      "sha256": "7708f0b2cce92d01d2879a00caa8bc8024eb3a211180064909e0ec4bb44c02c9",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/diagnostic-water-lod0-source-inner-canal.png",
+        "sha256": "ffadc004b84030bab120d246eb0e617d9ab08b02fea749aa246f2b4e83737c49",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 1.0037738715277778
+    },
+    {
+      "file": "diagnostic-water-lod0-source-palace-pond.png",
+      "group": "diagnostic-water-lod0",
+      "view": "source-palace-pond",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/diagnostic-water-lod0-source-palace-pond.png",
+      "sha256": "d8cc0af3c3d70d87f4d44c8dcfc651d6bafae3ff392cbeb530146c0051b82d7f",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/diagnostic-water-lod0-source-palace-pond.png",
+        "sha256": "9a7b9944bb609db9892a82461e09a1725d68969fe57bc2ae3a176ddcf4e32d78",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 1.481808810763889
+    },
+    {
+      "file": "tile2-3-lod0-taihedian.png",
+      "group": "tile2-3-lod0",
+      "view": "taihedian",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/tile2-3-lod0-taihedian.png",
+      "sha256": "0143e9be94e636ade5cc537e683aa3c2b4313d5ccbaf40fb6f1d1223db4711e6",
+      "dimensions": [
+        960,
+        540
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/tile2-3-lod0-taihedian.png",
+        "sha256": "7e013b73acc19a6ef954f55e886c61bc3418dee664e2f9ee0100398cca55ead0",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.32591242283950617
+    },
+    {
+      "file": "tile2-3-lod0-high-oblique.png",
+      "group": "tile2-3-lod0",
+      "view": "high-oblique",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/tile2-3-lod0-high-oblique.png",
+      "sha256": "bfa808f4818567b891d2822e7f639aef4ffe171fb82d39cdbadbada8038a65ed",
+      "dimensions": [
+        960,
+        540
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/tile2-3-lod0-high-oblique.png",
+        "sha256": "14ae02ad47739614b76454d5e3fe9ba543c2e0210327e393f29808061462cf72",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.5999054783950617
+    },
+    {
+      "file": "tile2-3-lod0-top.png",
+      "group": "tile2-3-lod0",
+      "view": "top",
+      "lod": 0,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/tile2-3-lod0-top.png",
+      "sha256": "a1521ab40f3bf631082527b3942946fd20eb0a1a944a90d8505609c57a47a7b0",
+      "dimensions": [
+        960,
+        540
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/tile2-3-lod0-top.png",
+        "sha256": "46016120b856271e7791f8c19f8db526bf118049ff2b876293c58e3d261c8c8e",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.651909079218107
+    },
+    {
+      "file": "tile2-3-lod1-taihedian.png",
+      "group": "tile2-3-lod1",
+      "view": "taihedian",
+      "lod": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/tile2-3-lod1-taihedian.png",
+      "sha256": "87d7de04e30c0da60a5c822c94f668e9449abc968cb9e7a918b4e45990438e18",
+      "dimensions": [
+        960,
+        540
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/tile2-3-lod1-taihedian.png",
+        "sha256": "6d316c7defc78b58e0d23a839747598a6a6899ebe6afaf444d89bc3b77ad8258",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.32425411522633746
+    },
+    {
+      "file": "tile2-3-lod1-high-oblique.png",
+      "group": "tile2-3-lod1",
+      "view": "high-oblique",
+      "lod": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/tile2-3-lod1-high-oblique.png",
+      "sha256": "a1895e0e582c8e682aa897a938726f0503d8f82951fc0e15d5ffe6ef7512b82f",
+      "dimensions": [
+        960,
+        540
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/tile2-3-lod1-high-oblique.png",
+        "sha256": "3aadd6db1629d969f96e7a3a6cf28eeb041a3f8bcc8aa71f8b2e67ccad770563",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.5742213220164608
+    },
+    {
+      "file": "tile2-3-lod1-top.png",
+      "group": "tile2-3-lod1",
+      "view": "top",
+      "lod": 1,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/tile2-3-lod1-top.png",
+      "sha256": "d65f71bc7d5c5c3844606d117a8ceb2f6510d4be5b9bcbf8bc87db061e4cd4a8",
+      "dimensions": [
+        960,
+        540
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/tile2-3-lod1-top.png",
+        "sha256": "b01d238001b6214bb6c661b85aff6e234a260d79a75b7258f0317649ed6b4167",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.5944013631687243
+    },
+    {
+      "file": "tile2-3-lod2-taihedian.png",
+      "group": "tile2-3-lod2",
+      "view": "taihedian",
+      "lod": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/tile2-3-lod2-taihedian.png",
+      "sha256": "76d52014a7344f6f617b296458ca99942aef44b31f3972bbb3d47c623112ff09",
+      "dimensions": [
+        960,
+        540
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/tile2-3-lod2-taihedian.png",
+        "sha256": "cc729fbc0637e6f9caa471bafe06a2b501dee5160a8f3ffb8052bc9e19e49cf5",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.31890625
+    },
+    {
+      "file": "tile2-3-lod2-high-oblique.png",
+      "group": "tile2-3-lod2",
+      "view": "high-oblique",
+      "lod": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/tile2-3-lod2-high-oblique.png",
+      "sha256": "70c6b4c56585d4fb8579269e40a6dcb77fcda7f66d6daae18e9fee9a83279d9d",
+      "dimensions": [
+        960,
+        540
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/tile2-3-lod2-high-oblique.png",
+        "sha256": "0e8edb70fa481df9a89a6e137e759cd833415671c713fc41533c95fe1ee187f7",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.5476395318930042
+    },
+    {
+      "file": "tile2-3-lod2-top.png",
+      "group": "tile2-3-lod2",
+      "view": "top",
+      "lod": 2,
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/tile2-3-lod2-top.png",
+      "sha256": "628b25de3615b5bfa2de0d3b01bb902e779828779b46647d0dcf08a6032d407f",
+      "dimensions": [
+        960,
+        540
+      ],
+      "personallyViewedOriginal": true,
+      "matchesRenderProof": true,
+      "waterComparator": {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/tile2-3-lod2-top.png",
+        "sha256": "201e5780f2b9b7dc4187fbdff083b99ceb01037a506901c6cc5a06ed9b114ca5",
+        "personallyViewedInPreviousReview": true,
+        "reopenedThisTurn": false,
+        "hashRechecked": true
+      },
+      "meanAbsoluteRGBChannelDifferenceFromWater": 0.5550713734567901
+    }
+  ],
+  "earlierComparators": [
+    {
+      "version": "v2",
+      "file": "city-lod0-ilma.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/city-lod0-ilma.png",
+      "sha256": "3154606c97e9ede9edc8bfc2175b6eb91f695cfe41533aeeda63d45d056a49af",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "city-lod0-taihedian.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/city-lod0-taihedian.png",
+      "sha256": "1c69df47e2a3aac7281b7f77acb69a5c7d23a84b4980b7e2912715927eeef8ba",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "city-lod0-aukio.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/city-lod0-aukio.png",
+      "sha256": "60380c6d10b26293f58dc282b0b2a7e90d64764eb830d483df2b79146dad9a2e",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "city-lod0-beihai.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/city-lod0-beihai.png",
+      "sha256": "519630498733c96252ee72baf858a649675a6a34c75dea69a70ff43e2f402d49",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "city-lod0-jingshan.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/city-lod0-jingshan.png",
+      "sha256": "c989d0c5c5cef66ca9c7580881148172419222137917329c7bb43c8430b160a7",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": true,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "city-lod0-hutong_ilma.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/city-lod0-hutong_ilma.png",
+      "sha256": "4777f221116c849a40117d71a4b9b1e824cd15108fb6a23f0384a733d0927eb4",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": true,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "tile2-3-lod0-taihedian.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/tile2-3-lod0-taihedian.png",
+      "sha256": "fd632b9775b39ca94eee23221606da0ddb13cddc7c112e012e42fc0c711b0311",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "tile2-3-lod0-high-oblique.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/tile2-3-lod0-high-oblique.png",
+      "sha256": "1dce944c6b88bf231f521167c3a05dd9efc84e9648e63650cd1b2e8d6498d882",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "tile2-3-lod0-top.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/tile2-3-lod0-top.png",
+      "sha256": "2a1deb23a1aac94ba7d490857533ec8a28adf2b33fc697c36409c28b8c58472f",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "tile2-3-lod1-taihedian.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/tile2-3-lod1-taihedian.png",
+      "sha256": "f4a850e705f405887010fbdf4ed251043ad92f78e89241f8398334d088c5cad5",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "tile2-3-lod1-high-oblique.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/tile2-3-lod1-high-oblique.png",
+      "sha256": "e2fa9eff72e2a75b1dbd7bab76a80f4a375a7d1e6ca11cd0a73f2c0cc7e0c72c",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "tile2-3-lod1-top.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/tile2-3-lod1-top.png",
+      "sha256": "65325cd91e0ab381a3bad5f1d1455954d14eb485f75bb20a8c7c598b031a04b2",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "tile2-3-lod2-taihedian.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/tile2-3-lod2-taihedian.png",
+      "sha256": "405e238afd2973bbefe26a6abbc56e641070f140f50af5a58b7ef8aa422f3cac",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "tile2-3-lod2-high-oblique.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/tile2-3-lod2-high-oblique.png",
+      "sha256": "4359de0fafacef53704c092df9ed17155ac8c35eea0a798cbc29141fc6e21063",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "v2",
+      "file": "tile2-3-lod2-top.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/tile2-3-lod2-top.png",
+      "sha256": "37f463e577ba5ada9e9f72504a3efb6daeebeeb2da08fd63b63b6534899e4944",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "city-lod0-ilma.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/city-lod0-ilma.png",
+      "sha256": "c2a39aa1b61b9b1946624c682c5daae1e00a6a80a7c00ad1a2c01a8b8be7adf4",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "city-lod0-taihedian.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/city-lod0-taihedian.png",
+      "sha256": "afdcecb475d7ee0dc97599d86635236d15d4e105e73b876a6f0558a1bda74a77",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "city-lod0-aukio.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/city-lod0-aukio.png",
+      "sha256": "2cef900c0fe5d53ae98e8304f8d1a28c2f0017b1d0cf3c05b2fec75ed0b3434d",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "city-lod0-beihai.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/city-lod0-beihai.png",
+      "sha256": "63c323609847088cc9224bcef9180425c08dd2fe52c06f18672d41858da98e8d",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "city-lod0-jingshan.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/city-lod0-jingshan.png",
+      "sha256": "e0a3be6604c4001607444407d27ac9cbaef23e9125edda37a6de2339ef6502e3",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "city-lod0-hutong_ilma.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/city-lod0-hutong_ilma.png",
+      "sha256": "b18501262fbdd8fe1184c8137e1d6dabd07cf7a9520941e68bd58859b1ecf619",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "diagnostic-city-lod0-mao-front.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/diagnostic-city-lod0-mao-front.png",
+      "sha256": "df6523dc1330cd530736a8cd7c007de84db332795244bcad59d099aff978cb00",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "diagnostic-city-lod0-palace-inner-bank.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/diagnostic-city-lod0-palace-inner-bank.png",
+      "sha256": "fe6bcecb10b65dba97da34ec878c3dc2d718ff4f6d45a359ec942c599c4e2177",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "diagnostic-city-lod0-palace-ground.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/diagnostic-city-lod0-palace-ground.png",
+      "sha256": "e3da0c27af3ad473f75acaed7cd52f8303f422716df6de437639ee39446f42d9",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "tile2-3-lod0-taihedian.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/tile2-3-lod0-taihedian.png",
+      "sha256": "5b7b2499d0294044ef4b112665a7026171549be9207b0aa9141024913a2553ae",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "tile2-3-lod0-high-oblique.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/tile2-3-lod0-high-oblique.png",
+      "sha256": "202566b961f0db4e3c238034ca1acd4554fff9545e2000bb119a6b721143ab2a",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "tile2-3-lod0-top.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/tile2-3-lod0-top.png",
+      "sha256": "475d6dff8f4845acabbd88b2f0283e3caa9e8c1d52d4574f6b8f576845e06ca1",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "tile2-3-lod1-taihedian.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/tile2-3-lod1-taihedian.png",
+      "sha256": "e871f718ffbb98dd1ca0cfd32d2655c548ebe0512dc0d506c87ba757d288a23e",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "tile2-3-lod1-high-oblique.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/tile2-3-lod1-high-oblique.png",
+      "sha256": "5ddda25a71524d6708088b03a3c91adad7732796d34b1684b6c95c6c5ef3c243",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "tile2-3-lod1-top.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/tile2-3-lod1-top.png",
+      "sha256": "0afcf7eee2dcb887eac38eaf1b4e67469f9390b4b12035343d75af936f02fb7c",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "tile2-3-lod2-taihedian.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/tile2-3-lod2-taihedian.png",
+      "sha256": "ff9a8fae04875dc06d77398dcf1bbfca4e77f2049a5ef3f23c284f4da8ec2d41",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "tile2-3-lod2-high-oblique.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/tile2-3-lod2-high-oblique.png",
+      "sha256": "dfc7c6c4828d708d48b750152d757052e5b229104012e1daa3af6c46d546c491",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    },
+    {
+      "version": "preWater",
+      "file": "tile2-3-lod2-top.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/tile2-3-lod2-top.png",
+      "sha256": "e7a5328381bd197cf727984f2f45b1f663debe50dc166b1c9fcdf24a1e1c2d12",
+      "personallyViewedInPriorReviews": true,
+      "reopenedThisTurn": false,
+      "hashRechecked": true
+    }
+  ],
+  "importsHashChecked": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "sha256": "0f1415d1d237251fb93cc7bde487db4845cdafc1c534d89485c68f5dde11ca91",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "sha256": "864459537a014fb48fa8efd9bfb4b26badcbc65bff4f20a688d9c2246b02a5b4",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "sha256": "5dcd964bd24c4d0d310091bcfb93f01d45e1b19bb2ea0687304678203fde04eb",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "sha256": "77da068b72834104df01255ad3bf037ce8e673206c9d0b020fd3bf3d26c76b4a",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "sha256": "1438d9bf27ffbea0304cff8c4bfa6a171d544e706898486a2cfa819c0e0b3c7b",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "sha256": "14ba48b15003201d866ef3ca8f2e460eff1a4307810259a7e489226515939fdb",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "sha256": "8c322d06b1eecb8c971213bda3bdb5e63efcbccd9473528f4a76ef6d416803db",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "sha256": "e63c93b6d8991da97233b3accbba7e81c0e7e4df53bd2422364509559679374f",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "sha256": "a244d17aaf729e9e828af19ef4e0555c0d6b593a1c67b9b089e65de9c933902b",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "sha256": "9919aa5028f5f3babf8e78ab41d521a76cf0bf84958e249f4e8dc2f9f18661f5",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "sha256": "07083a9ae652d52bfd8704d3e41e0c623b5f99a21be22efac54a9ddc84b3a918",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "sha256": "2d7351f3966efe8bcd3709445bb93735f362ba5afbaf515b1152f49fc1c8ea9a",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "sha256": "4db9f54a4deff9918eb9b5b4441cbaecb4013f5d6e484184efb84e715d3eab6d",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "sha256": "0c0ff10c06d4b49972e2795f3304e954fa3903656df1b33c119f90e43dde4405",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "sha256": "4d21a0075a994220dc4e2494f6d5a220cb9fdcb2b6e3f6d0de6bad8cb04aa7af",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "3a2ee3eb49554dea57a01c12088961648dcc954f434a45d3b4087f3808e85d74",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "sha256": "e0191748f1bfd6ce004a958e8eea14db0a3459ebcc194ebc0a727facb4db53b5",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "sha256": "30d104fe377d07f8e32c1a5f0ade3f520284c6fab7000aa0002f88fd1da8ba66",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "sha256": "9b0758c429f806c83214659b7da9a5c3b58f7d9a38251d2d80fca8f5dbee2036",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "sha256": "fb9e04dc5c12b2787ffa2844b9952e26a0a1857c706c08963d78022fba5f1a43",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "sha256": "c1a3ee5004e91b48a0a48e4635b38cb783aa19a8e433e28c8adfed1c383d4f37",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "sha256": "787659b796d744cf385d74587ee7d180b373c1e20f900c7cf7db0519892cf177",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "sha256": "4f60bb98cc82084540d08391a2e1ac772729cf3467a4fdcee2ab6fc3c8d5be7e",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "3a2ee3eb49554dea57a01c12088961648dcc954f434a45d3b4087f3808e85d74",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "sha256": "60952e0ef3c47374ceef060c95ab67bfae6f8bd52caa295ae50baea350b8c87d",
+      "matchesActualFile": true
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "sha256": "cd1c2cefae61cb531a1efc7dbb7ea9af8ab1fd00519e88e81f31094f509c653b",
+      "matchesActualFile": true
+    }
+  ],
+  "all72GLBHashChecks": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "sha256": "0f1415d1d237251fb93cc7bde487db4845cdafc1c534d89485c68f5dde11ca91",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_0_lod1.glb",
+      "sha256": "000451f919ced76215fd3af944694eee308e9994ff2a9904ac023522450a71c2",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_0_lod2.glb",
+      "sha256": "e94219a3d99908b12beaf4e3804f6b29ddb654e646b7dc63b41873b2fcf54007",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "sha256": "864459537a014fb48fa8efd9bfb4b26badcbc65bff4f20a688d9c2246b02a5b4",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_1_lod1.glb",
+      "sha256": "fe63071dba06708a29084e62b756faac38e816d87f5a0b9f56814f2760edeff3",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_1_lod2.glb",
+      "sha256": "7a86fd8e40127bb7216e72ea1c2c56dc939a9454afa1b6961c52400e18b7efb6",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "sha256": "5dcd964bd24c4d0d310091bcfb93f01d45e1b19bb2ea0687304678203fde04eb",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_2_lod1.glb",
+      "sha256": "a5513581c510118b290b9b04cf2d931bbb2034923d339a5593eda057ea650ef6",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_2_lod2.glb",
+      "sha256": "4dcc97da9346b8a92c021b56ca46a6947bbb5bb12139ab883ae3bce0d2802587",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "sha256": "77da068b72834104df01255ad3bf037ce8e673206c9d0b020fd3bf3d26c76b4a",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_3_lod1.glb",
+      "sha256": "c4b72ccb6ed5e4feecf9ada555a7f5963ef051aa5b510da4683a87bf23108e14",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_3_lod2.glb",
+      "sha256": "4706259be1b3f5dd9e798714746a78c32b44ebefe2d1c7554c287cf41fcefc5a",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "sha256": "1438d9bf27ffbea0304cff8c4bfa6a171d544e706898486a2cfa819c0e0b3c7b",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_4_lod1.glb",
+      "sha256": "41dbc8d8a289921c1fc7b3766ac220041e8424270ccbd1afac754c3d50f2b4ce",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_4_lod2.glb",
+      "sha256": "5f556a2640ac4d51eb4477cbfaec3b0046eb281407457c0532c473bd51711d58",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "sha256": "14ba48b15003201d866ef3ca8f2e460eff1a4307810259a7e489226515939fdb",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_5_lod1.glb",
+      "sha256": "6c6f5b46cdfe7108297536742140ef700ec8d5bbddb5490284f1928c4f34e3d3",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_0_5_lod2.glb",
+      "sha256": "defb6173eb5555f7e1d85eba2ce5f79dd375e211ecc4f2e3998ef08569457c72",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "sha256": "8c322d06b1eecb8c971213bda3bdb5e63efcbccd9473528f4a76ef6d416803db",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_0_lod1.glb",
+      "sha256": "1311c15fa58a01496d94a8694bdfe2fe1a3b6a0f6ac0a35322ac0bc944077f6f",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_0_lod2.glb",
+      "sha256": "25595748033bb7108a1687eb92b8959f3063d4b0637be4b3380784a27b6904ff",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "sha256": "e63c93b6d8991da97233b3accbba7e81c0e7e4df53bd2422364509559679374f",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_1_lod1.glb",
+      "sha256": "f26a4763dfe941912498a03eb78477852222ffce691341778d6d4392c4380e0f",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_1_lod2.glb",
+      "sha256": "db9c3a24ae5577edc175c2adc04a6684e44029207efab784150cda85f01df74b",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "sha256": "a244d17aaf729e9e828af19ef4e0555c0d6b593a1c67b9b089e65de9c933902b",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_2_lod1.glb",
+      "sha256": "6b58bf87a135a4fa35f2c0dcedd9e9387d8fbc6629518d8380e2c7b931f80d0d",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_2_lod2.glb",
+      "sha256": "3da70d3d7358ff060f2a031b32d43131c1429505d427271d1971d7d19228b415",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "sha256": "9919aa5028f5f3babf8e78ab41d521a76cf0bf84958e249f4e8dc2f9f18661f5",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_3_lod1.glb",
+      "sha256": "c2ebea3f2be2c2c61930fef6777d53df206c37ccc03b6b6ba150d6e52194ce55",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_3_lod2.glb",
+      "sha256": "925554c4aba566bbe5670ad9252b52c3f9a366736354f0857cb505e620b3068e",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "sha256": "07083a9ae652d52bfd8704d3e41e0c623b5f99a21be22efac54a9ddc84b3a918",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_4_lod1.glb",
+      "sha256": "8d45a12f43848628c02011aadd8feac277c3b8b5169d66b33865af8deaf3d754",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_4_lod2.glb",
+      "sha256": "7a74862ab62bcd6fd0e9573b458904a2024b97b9dd3a31fe852f0a1b0e165224",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "sha256": "2d7351f3966efe8bcd3709445bb93735f362ba5afbaf515b1152f49fc1c8ea9a",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_5_lod1.glb",
+      "sha256": "f3b390f54ee6574a17558968bcd6ca835e23d08e0aa1829a02cfa8f5980243ac",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_1_5_lod2.glb",
+      "sha256": "2906c3cf12f30f5395a64ffa9d3761fab657bad8df1b4970f981cb61b7cbcf0f",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "sha256": "4db9f54a4deff9918eb9b5b4441cbaecb4013f5d6e484184efb84e715d3eab6d",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_0_lod1.glb",
+      "sha256": "1c6ddd410d89287fe1c4a09677119b0330fec8f788ead873ff109480714b43e0",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_0_lod2.glb",
+      "sha256": "55455b99b7aee7a685adadb7fa3bfd6e67e896d25557fdec31a6997cc8334e9c",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "sha256": "0c0ff10c06d4b49972e2795f3304e954fa3903656df1b33c119f90e43dde4405",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_1_lod1.glb",
+      "sha256": "5de1ca84006184ceebb4b6334e1a2fa8bb950b9998dd82f7de48a7acc1e2d008",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_1_lod2.glb",
+      "sha256": "3bb9b2c426cbdf9837c9507637d85cdfc96c606f7f5259068fd2bbcf240e3542",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "sha256": "4d21a0075a994220dc4e2494f6d5a220cb9fdcb2b6e3f6d0de6bad8cb04aa7af",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_2_lod1.glb",
+      "sha256": "343d9babaae7c0b94259164017d711b0a49acf6897e56eb60d31bf014678ee54",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_2_lod2.glb",
+      "sha256": "a438f18d43527192e9541cccbdd316182e7235ce462094d222bb7ef08c666646",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "3a2ee3eb49554dea57a01c12088961648dcc954f434a45d3b4087f3808e85d74",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "sha256": "60952e0ef3c47374ceef060c95ab67bfae6f8bd52caa295ae50baea350b8c87d",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "sha256": "cd1c2cefae61cb531a1efc7dbb7ea9af8ab1fd00519e88e81f31094f509c653b",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "sha256": "e0191748f1bfd6ce004a958e8eea14db0a3459ebcc194ebc0a727facb4db53b5",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_4_lod1.glb",
+      "sha256": "afac94fc11dab2266945aeab22b42157478f6cc48d92732ce10ed5af49c7e05f",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_4_lod2.glb",
+      "sha256": "5210e20f8d9e9a03da3cfa5ef870908abf1e5761eb98d305da83d138040613e6",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "sha256": "30d104fe377d07f8e32c1a5f0ade3f520284c6fab7000aa0002f88fd1da8ba66",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_5_lod1.glb",
+      "sha256": "554f35b4fa3736b2d29eca358887af153b9382e1cee05ea65bdb94e964c81655",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_2_5_lod2.glb",
+      "sha256": "4a269ea0ec0284b288d55fc3609c7bfd1d62529b9d5d7f0ecd267040d0d778f7",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "sha256": "9b0758c429f806c83214659b7da9a5c3b58f7d9a38251d2d80fca8f5dbee2036",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_0_lod1.glb",
+      "sha256": "0bf14c99860da690e0a1afbae107c8ec49947a6f08e4ef4418ef8c40bed90e6f",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_0_lod2.glb",
+      "sha256": "bed0d35cb8e2318867f1175fc60d9158094402e8d757c30fa3331380e4ac868b",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "sha256": "fb9e04dc5c12b2787ffa2844b9952e26a0a1857c706c08963d78022fba5f1a43",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_1_lod1.glb",
+      "sha256": "93339b9efc88a4161a57ea41e2f861366fd18fc1b55d413adf9d4a1f948d5dfb",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_1_lod2.glb",
+      "sha256": "259493d2d83c722c3e5f9280ba5ec5a2d064d28bf6e298f58a05f9f583ef230a",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "sha256": "c1a3ee5004e91b48a0a48e4635b38cb783aa19a8e433e28c8adfed1c383d4f37",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_2_lod1.glb",
+      "sha256": "a99aafbf17454710b959a13da9010548c2aaebdedeed05ff62287a184f658bf1",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_2_lod2.glb",
+      "sha256": "9f6e675e8daf57c0136a8c6e4c983e7c89a14d62ac02385b93fcfbd26381d78d",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "sha256": "787659b796d744cf385d74587ee7d180b373c1e20f900c7cf7db0519892cf177",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_3_lod1.glb",
+      "sha256": "b64d92c185d0ea46bc1aea1d21b1f79c5dc14ef073261f1f493d3758be629282",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_3_lod2.glb",
+      "sha256": "4bd14233ae5a66332f21720b752990bc033d5fe20beaa10957924550694ad6a4",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "sha256": "4f60bb98cc82084540d08391a2e1ac772729cf3467a4fdcee2ab6fc3c8d5be7e",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_4_lod1.glb",
+      "sha256": "2bd91fd6be02fa5d64b830862cb1ed465335647d9f8290e05d720542c8c49118",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_4_lod2.glb",
+      "sha256": "69386a1b0d63a175c0ec91896c2e28fd665f7cc34fa69d92cd849373ef1f28d2",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "sha256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9",
+      "matchesGlobalBuildAndBinaryReadback": true
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "sha256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9",
+      "matchesGlobalBuildAndBinaryReadback": true
+    }
+  ],
+  "bytes": 156529080,
+  "triangles": 1377183,
+  "binaryProofPinMatches": true,
+  "findings": [
+    {
+      "id": "Q336-ground-seam",
+      "status": "closed_for_fixed_camera_visual_scope",
+      "bboxXYXYExclusive": [
+        0,
+        724,
+        240,
+        735
+      ],
+      "image": "city-lod0-taihedian.png",
+      "evidence": "Dark horizontal seam removed. Pixel (200,729): v2 122/116/107; pre-water and water 17/12/4; global 122/116/108. No equivalent new seam observed in 20 shown views."
+    },
+    {
+      "id": "Q336-tree-green",
+      "status": "closed_for_offline_color_correction; game_appearance_still_unverified",
+      "evidence": "Trees now visibly green rather than gray-green, closer to v2 chroma while darker. Deep shadow and preexisting card/LOD limitations remain."
+    },
+    {
+      "id": "Q336-internal-water",
+      "status": "offline_reservations_preserved; receiver_water_and_support_gates_open",
+      "evidence": "Both water diagnostics and shown tile LODs retain intentional gray openings. Water plan and both GeoJSON files byte-identical to reviewed water version."
+    }
+  ],
+  "regions": {
+    "seam": {
+      "view": "taihedian",
+      "bboxXYXYExclusive": [
+        120,
+        728,
+        230,
+        732
+      ],
+      "units": "rendered_sRGB_code_value_not_linear_albedo",
+      "v2": [
+        115.32727272727273,
+        111.225,
+        103.97727272727273
+      ],
+      "preWater": [
+        67.77045454545454,
+        64.025,
+        56.67727272727273
+      ],
+      "water": [
+        67.77045454545454,
+        64.025,
+        56.67727272727273
+      ],
+      "global": [
+        115.31818181818181,
+        111.17954545454545,
+        103.95227272727273
+      ]
+    },
+    "seamControl": {
+      "view": "taihedian",
+      "bboxXYXYExclusive": [
+        120,
+        737,
+        230,
+        741
+      ],
+      "units": "rendered_sRGB_code_value_not_linear_albedo",
+      "v2": [
+        124.22272727272727,
+        120.57954545454545,
+        114.27727272727273
+      ],
+      "preWater": [
+        124.82954545454545,
+        120.88181818181818,
+        114.12272727272727
+      ],
+      "water": [
+        124.82954545454545,
+        120.88409090909092,
+        114.12272727272727
+      ],
+      "global": [
+        124.25681818181818,
+        120.62272727272727,
+        114.30681818181819
+      ]
+    },
+    "roof303": {
+      "view": "taihedian",
+      "bboxXYXYExclusive": [
+        720,
+        380,
+        890,
+        425
+      ],
+      "units": "rendered_sRGB_code_value_not_linear_albedo",
+      "v2": [
+        181.85424836601308,
+        132.61254901960785,
+        45.46222222222222
+      ],
+      "preWater": [
+        181.85098039215686,
+        132.61058823529413,
+        45.46261437908497
+      ],
+      "water": [
+        181.8541176470588,
+        132.61450980392158,
+        45.46300653594771
+      ],
+      "global": [
+        181.8524183006536,
+        132.61503267973856,
+        45.46588235294118
+      ]
+    },
+    "treeCrownLight": {
+      "view": "hutong_ilma",
+      "bboxXYXYExclusive": [
+        916,
+        399,
+        941,
+        415
+      ],
+      "units": "rendered_sRGB_code_value_not_linear_albedo",
+      "v2": [
+        48.465,
+        62.0425,
+        31.2675
+      ],
+      "preWater": [
+        27.1925,
+        36.16,
+        25.405
+      ],
+      "water": [
+        27.1925,
+        36.16,
+        25.405
+      ],
+      "global": [
+        31.3275,
+        42.175,
+        16.6175
+      ]
+    },
+    "treeCrownMixed": {
+      "view": "hutong_ilma",
+      "bboxXYXYExclusive": [
+        861,
+        338,
+        1007,
+        439
+      ],
+      "units": "rendered_sRGB_code_value_not_linear_albedo",
+      "v2": [
+        43.15244812152448,
+        51.28997694289977,
+        27.4655499796555
+      ],
+      "preWater": [
+        30.02536281025363,
+        34.188322256883225,
+        24.313915638139157
+      ],
+      "water": [
+        30.025498440254985,
+        34.188322256883225,
+        24.313915638139157
+      ],
+      "global": [
+        31.794791807947917,
+        37.59331344093314,
+        19.642682761426826
+      ]
+    },
+    "forestMixed": {
+      "view": "jingshan",
+      "bboxXYXYExclusive": [
+        50,
+        520,
+        550,
+        800
+      ],
+      "units": "rendered_sRGB_code_value_not_linear_albedo",
+      "v2": [
+        32.32456428571429,
+        41.61942142857143,
+        19.381435714285715
+      ],
+      "preWater": [
+        19.00820714285714,
+        23.816357142857143,
+        16.357235714285714
+      ],
+      "water": [
+        19.008342857142857,
+        23.816585714285715,
+        16.3572
+      ],
+      "global": [
+        20.95295,
+        27.409064285714287,
+        11.955607142857144
+      ]
+    },
+    "museumRoof": {
+      "view": "aukio",
+      "bboxXYXYExclusive": [
+        220,
+        370,
+        300,
+        395
+      ],
+      "units": "rendered_sRGB_code_value_not_linear_albedo",
+      "v2": [
+        198.882,
+        196.067,
+        188.1155
+      ],
+      "preWater": [
+        177.7115,
+        173.2665,
+        163.8885
+      ],
+      "water": [
+        177.7115,
+        173.2665,
+        163.8885
+      ],
+      "global": [
+        177.71,
+        173.2685,
+        163.8855
+      ]
+    },
+    "maoWall": {
+      "view": "aukio",
+      "bboxXYXYExclusive": [
+        200,
+        650,
+        300,
+        730
+      ],
+      "units": "rendered_sRGB_code_value_not_linear_albedo",
+      "v2": [
+        179.511875,
+        175.450625,
+        166.69825
+      ],
+      "preWater": [
+        169.715375,
+        164.293625,
+        153.136625
+      ],
+      "water": [
+        169.7155,
+        164.293625,
+        153.13675
+      ],
+      "global": [
+        169.713875,
+        164.294875,
+        153.1305
+      ]
+    },
+    "hero": {
+      "view": "aukio",
+      "bboxXYXYExclusive": [
+        805,
+        442,
+        820,
+        490
+      ],
+      "units": "rendered_sRGB_code_value_not_linear_albedo",
+      "v2": [
+        181.44027777777777,
+        176.07916666666668,
+        165.55555555555554
+      ],
+      "preWater": [
+        181.29722222222222,
+        175.91666666666666,
+        165.40972222222223
+      ],
+      "water": [
+        181.29722222222222,
+        175.91666666666666,
+        165.40972222222223
+      ],
+      "global": [
+        181.29583333333332,
+        175.91666666666666,
+        165.40694444444443
+      ]
+    },
+    "modernRoof": {
+      "view": "hutong_ilma",
+      "bboxXYXYExclusive": [
+        1350,
+        46,
+        1390,
+        62
+      ],
+      "units": "rendered_sRGB_code_value_not_linear_albedo",
+      "v2": [
+        176.125,
+        175.959375,
+        174.95
+      ],
+      "preWater": [
+        167.696875,
+        165.8546875,
+        163.290625
+      ],
+      "water": [
+        167.696875,
+        165.8546875,
+        163.2890625
+      ],
+      "global": [
+        167.6953125,
+        165.85625,
+        163.2875
+      ]
+    }
+  },
+  "seamPixel200729": {
+    "v2": [
+      122,
+      116,
+      107
+    ],
+    "preWater": [
+      17,
+      12,
+      4
+    ],
+    "water": [
+      17,
+      12,
+      4
+    ],
+    "global": [
+      122,
+      116,
+      108
+    ]
+  },
+  "roofDiagonalPixel590256ByLOD": [
+    [
+      183,
+      133,
+      46
+    ],
+    [
+      181,
+      131,
+      44
+    ],
+    [
+      184,
+      133,
+      46
+    ]
+  ],
+  "waterPlanAndGeojsonByteIdentityToWaterVersion": {
+    "QA/water-reservation-plan.json": true,
+    "palatsialue-leikkaus-wgs84.geojson": true,
+    "palatsialue-leikkaus-wgs84-reikaversio.geojson": true
+  },
+  "visualDecisions": {
+    "ground": "known seam corrected; no new visible ground tear in reviewed views",
+    "stairs": "visible lower steps and terrace contacts preserved outside reservations",
+    "waterReservations": "intentional gray background openings preserved, not actual water",
+    "fourMasses": "museum great hall Mao plinth and Hero preserve prior approved scoped appearance",
+    "modernBackground": "warmer darker appearance unchanged",
+    "roof303": "gold and diagonal fix preserved",
+    "LOD": "no new visible architectural or reservation regression across 3 tile LODs; known detail/card shading transition remains"
+  },
+  "producerClaimsNotOwnGeometryAudit": {
+    "normalReadbackSummary": {
+      "actualGLBCount": 72,
+      "newlyIntroducedCollapsedTriangles": 0,
+      "newlyIntroducedNormalGeometryMismatches": 0,
+      "minimumNewNormalGeometricDot": 0.9999999701980715,
+      "all3LODsGroundPositionNormalUVIdenticalPerTile": true,
+      "baselineInheritedGroundTrianglesNotClaimedAsNewlyCorrected": true
+    },
+    "contactReadback": {
+      "actualStoneAndRampTriangles": 19249,
+      "sampledCentroidsAndCorners": 76775,
+      "newlyBuriedPreviouslyVisibleStoneSamples": 0,
+      "contactGuardLiftRegressions": 0,
+      "examples": [],
+      "guardRegressionExamples": [],
+      "sourceAndNewGroundProjectedSymmetricDifferenceM2": 0.00336580426538804,
+      "comparisonScope": "land outside documented source-water and technical Ion-retention reservations",
+      "waterReservationStoneSamplesDeferredToIon": 221,
+      "actualNewGroundOverlapWithWaterReservationsM2": 0.00379785616629249,
+      "oldCoveredPalaceAreaM2": 802125.7374344085,
+      "newCoveredPalaceAreaM2": 762504.5204491327,
+      "palaceBoundaryAreaM2": 802125.7509520903,
+      "retainedWaterAndCorridorAreaM2": 39621.2174173278,
+      "actualIonClearanceM": null
+    },
+    "effectiveTreeAlbedo": {
+      "source": "actual final GLBs, sRGB decode then material RGB factor and alpha>=0.5",
+      "uniformLinearFactor": 0.55,
+      "target": "linear luminance Y0.10..0.14; green largest, original chroma preserved",
+      "byLOD": {
+        "0": {
+          "actualMeanLinearRGB": [
+            0.10383607133284659,
+            0.13583090748463864,
+            0.0694331309358872
+          ],
+          "actualMeanLinearY": 0.1242348858519478,
+          "targetIsLinearLuminanceNotEveryRGBChannel": true,
+          "opaquePixels": 99198,
+          "embeddedImageSHA256": "30d33f5f23113ef5ecfd1d733103af34a25f32e7c62a7607a65ca8c8d9f99f50",
+          "alphaAndNormalPayloadsExact": true
+        },
+        "1": {
+          "actualMeanLinearRGB": [
+            0.10309847700267738,
+            0.13480462573052412,
+            0.06892139281929972
+          ],
+          "actualMeanLinearY": 0.12330712909479351,
+          "targetIsLinearLuminanceNotEveryRGBChannel": true,
+          "opaquePixels": 25315,
+          "embeddedImageSHA256": "978f17db957bbe3031dc1313b34ee419106b5743b581f6590fa29ee9e10ec313",
+          "alphaAndNormalPayloadsExact": true
+        },
+        "2": {
+          "actualMeanLinearRGB": [
+            0.10309847700267738,
+            0.13480462573052412,
+            0.06892139281929972
+          ],
+          "actualMeanLinearY": 0.12330712909479351,
+          "targetIsLinearLuminanceNotEveryRGBChannel": true,
+          "opaquePixels": 25315,
+          "embeddedImageSHA256": "978f17db957bbe3031dc1313b34ee419106b5743b581f6590fa29ee9e10ec313",
+          "alphaAndNormalPayloadsExact": true
+        }
+      }
+    },
+    "globalFieldGridM": 25,
+    "offsetRangeM": [
+      0,
+      0.31
+    ],
+    "actualIonClearanceM": null,
+    "protectedNonGroundPayloadsPreserved": true
+  },
+  "receiverGates": [
+    "Ion mask and ground/water visibility at internal channels ponds and all reservations",
+    "land support and edge joins for trees walls and stone surfaces in technical corridors; 221 stone samples deferred",
+    "actual >=0.3m clearance above Ion, not measured",
+    "same-camera game daylight green identity and both-sided normal shading",
+    "evening light and gold appearance",
+    "moving LOD transitions",
+    "device performance and owner acceptance"
+  ],
+  "geometryAuditIndependentlyReexecuted": false,
+  "blenderRunByReviewer": false,
+  "all72IndividuallyVisuallyInspected": false,
+  "scopedVisualGateForPrivateFlightTest": true,
+  "gameRuntimeApproved": false,
+  "deliveryOrIntegrationPerformed": false,
+  "ownerQualityGoalReached": false,
+  "publicationApproved": false,
+  "priorReportsModified": false,
+  "evidence": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/AGENTS.md",
+      "sha256": "2725ad90e0fcf91accd58c2981b63f4c3f4d22613613b2e61a186f017a409616"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-package336-final-review.json",
+      "sha256": "cf5aa627f8c54f9255473e32a337b4b2a1640941dda51c086c85b4b06ba0d34d"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-package336-water-final-review.json",
+      "sha256": "c6163b3afcc6b2b37b2afa27a6c5ababfc612aae465b4c439a4c9478c1e0a7b7"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/render-proof.json",
+      "sha256": "9ed0b09ea4fc63b81a966e3b17c516027f258040771e7be53e4376e979b48318"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-maa-puut-v3-vesivaraukset/QA/actual-glb-reimport/render-proof.json",
+      "sha256": "f2037258d1eb013d0db1fb1efad6daec290cfb2cc61d4c62cfbac85025737add"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/package336-work/draft5-pre-water-reviewed-not-delivered/QA/actual-glb-reimport/render-proof.json",
+      "sha256": "65ceee6e14b61b13be77843690b2df9c0235d7745bae11718f4bd3aff94046f5"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261015-native50-materiaalit-v2/QA/actual-glb-reimport/render-proof.json",
+      "sha256": "bdefea37a6f78371b94ffebe6808acb86470db4a52da1de66d2af21d7fee6849"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/global-field-build-receipt.json",
+      "sha256": "34d9c421f5c7ba5017c1a86012910d09581de6876ea606e4ff0937625ab36f73"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/global-linear-ground-field.json",
+      "sha256": "5cc2ca8cb6cfa7cbe88cd05d61f700147b36fb152568d91ca8fda63d66792c55"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-new-ground-float32-normal-readback.json",
+      "sha256": "0c2d7a905c05b67a50820a0a6a075b249f66cee59bfacc3d52abb9eeb983984a"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-ground-contact-and-coverage-readback.json",
+      "sha256": "1d5d29c9a44bb13ac8a0c35909ca2c612a52439df59f85eb944144bc8e7f408c"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/parent-all72-delta-readback.json",
+      "sha256": "a75c6232a3598ceb3a73fc5f95a020b0e74185d9bc266b07455d45c49aef99de"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/current-effective-tree-albedo-readback.json",
+      "sha256": "d48a32e97b0f38a85a702906ac3edf2d611dcdf761e6e1bd35075bdbce43267c"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/glb-v4/independent-binary-readback.json",
+      "sha256": "9ff4221e4bcefad48090b1a8e3addb8197e3c8b2b4e6e8c3fa4cde4622be70d2"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/water-reservation-plan.json",
+      "sha256": "0c52dd23d60f6bfd43ca636cda688180bca24afefab93aaaf4d29b433df6384b"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/palatsialue-leikkaus-wgs84.geojson",
+      "sha256": "77fa13fce4fe61d4dc5014601ccfcc5e6ea0374555d5fbd8c0a47a6ce6ad7ef7"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/palatsialue-leikkaus-wgs84-reikaversio.geojson",
+      "sha256": "145fff606ce775b0262c16324d7109249e500a46edf38e7543ca31a3b22e3e8b"
+    }
+  ]
+}
