@@ -205,3 +205,7 @@ Omistaja: "Hyväksyn kaikki" – İzmir-malli ja 16 Euroopan kaupunkiesittelyä 
 ## PAATOKSET 15.10.2026 klo 21.48 (KK välitti): julkaisu ilman isoisän unta (15.10.2026 klo 21.49)
 
 Omistaja uni-videon (2 min 42 s) jälkeen, sanatarkasti: "Julkaise ilman unta. Se ei tunnu ollenkaan unelta" ja "Tehdään julkaisu ilman unta. Se vaatii paljon muutoksia". IsoisanUni-kytkin pysyy kiinni junissa 195 ja 196; saapuminen kuten ennen (isoisän luento). Unen uudistus työlistalle ilman kiirettä, KK tuo uuden suunnan omistajalle myöhemmin. Lisäksi 21.35 OMISTAJA PYYSI JULKAISUA juna 195: "Junan voi julkaista heti kun kaikki valmiina. Ei testejä".
+
+## PAATOKSET 15.10.2026 klo 22.05 (KK välitti): ISS-paketti junaan 196 ja kaikki 9 kohokohtaa kortteina (15.10.2026 klo 22.06)
+
+Omistaja paketista 1–5: "Eikö kohokohtia ole enempää?" → (KK: 9 suunniteltu, 3 valmiina + auringonnousu, 5 odottaa animaatioita) → "Lisää kaikki jo kortteina". Junaan 196 päälle: NIMET-nappi, kohdevalikon uusi ulkoasu, skannerin taivastila, paras hetki ja nimen korostus. Kohokohtiin kaikki 9 korttia heti (myös ukkosmyrsky ja keijut, pimennyksen varjo, tähdenlennot, hurrikaanin silmä, lentokoneiden vanat): kortti vie parhaaseen hetkeen ja Pulun kysymys toimii, ilmiö näkyy kun animaatio valmistuu; ei uutta Tulossa-merkintää (UI-POHJAT). 9 kortin valikosta kuva (iPhone + iPad) omistajalle ennen kohokohtien kytkentää.
