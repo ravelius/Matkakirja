@@ -22,6 +22,16 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus viesti-pelikoodari-luovu
   sha NS:lle junaan 196. Tarkista: kortti ~5 s laukaisusta, ei tyhjää väliä vaihdossa, merellä ei korttia ("EI MAATA KUVASSA").
   Huom: skenaario lentää Pariisin ylle (kohde pariisi valoisa) – Euroopassa on ilta, kuva on yökuva (kaupunkien valot), se on ok.
 
+## PÄIVITYS 23.12 (luovutuksen jälkeen tehty)
+- Etsin: iPhone-ajo d3e3320db (f264f428e) OK – esikatselu 5,0 s, tarkka vaihtuu, pino; kuvat _tyo/pelikoodari/iss-kamera-196/kuvat-iphone.png.
+  LÖYDÖS: esikatselu/pysäytyskuva näytti jo kuvan kapean kentän (Ajo vaihtoi kameran samassa ruudussa) → korjaus **94627484b**
+  (Ajo vasta laukaisuruudun jälkeen). TEE: L2 + asennus 96044270 → aja ajo-etsin-kortti-196.zsh uudelleen (HAARA=94627484b) → k1 pitää
+  näyttää samalta kuin k0 → kuvat PT:lle → 94627484b NS:lle junaan 196 (korvaa f264f428e).
+- Pulun 4 uutta ISS-vastausta KYTKETTY: proto pelikoodari/iss-pulu-vastaukset-196 **d0164dd0d** (30e07d6f1 + 4 riviä + kohokohdat keijut/
+  pimennys/tähdenlennot/hurrikaani kohokohdat.json:iin, testi 9 kysymystä; Linssit 1892/1892, unity 0). TEE: L2 JU:lta → NS junaan 196
+  (korvaa 30e07d6f1) → kuva PT:lle (ajo-iss-pulu-vastaukset-196.zsh, vaihda kohokohdaksi esim. hurrikaani). Siirtosepälle tieto
+  kohokohdat.json-muutoksesta.
+
 ## Valmiit tässä vuorossa
 - "En tunne" mp3 (f82aa303a) BUILD 195:ssä (lukittu 21.46).
 - Pulun 5 ISS-vastausta + kohokohtien kysymykset 30e07d6f1 KÄÄNNETTY a4e0ddfb4 → NS junaan 196; kuvapari _tyo/pelikoodari/iss-pulu-vastaukset-196/
@@ -33,7 +43,7 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus viesti-pelikoodari-luovu
 - Minipallon mielivaltainen piste: NUI käyttää AstronauttiKerros.LennaOmaanValinnalla(nimi, lat, lon) – ei koodia minulta.
 
 ## Odottaa omistajaa / seurattavat
-- **Pulun 4 uutta ISS-vastausta HYVÄKSYTTY** (omistaja 23.03, lyhennettyinä; tekstit main-lokissa b91af3460): Äänittäjä äänittää ja ilmoittaa
+- (kytketty, ks. PÄIVITYS) **Pulun 4 uutta ISS-vastausta HYVÄKSYTTY** (omistaja 23.03, lyhennettyinä; tekstit main-lokissa b91af3460): Äänittäjä äänittää ja ilmoittaa
   → kytke junaan 196 samalla polulla (PuluChat.IssVastaukset: 4 uutta riviä Id/Kysymys/Vastaus/Aani; jos kysymys kuuluu kohokohtaan,
   Siirtosepälle id kohokohdat.json:iin) → L2 → NS + kuva PT:lle.
 - Pieni viilaus (ei pyydetty): ISS-vastauksen kupla vierii loppuun, alku jää ylös (PuluChat.VastaaIssAanella → Vierita(kupla)).
