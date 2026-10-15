@@ -186,3 +186,13 @@ Olavinlinna junaan 183 (PT): **BOTTI 17/17 v48k:lla** (koostettu: täysi ajo 15/
   linnahaara siirtoseppa/laituri-varoitus cbad45ba9, paketit siirtoseppa/v47t…v49a. Linnan jatkuessa luo työpuu uudelleen:
   `git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto worktree add /Users/Shared/Claude/wt/proto-siirtoseppa-kello siirtoseppa/laituri-varoitus`
   (ajo-botti-osat.sh TYOPUU ja kiinnita-paketti.sh odottavat näitä polkuja; pakettipuu …-v47g haaralle siirtoseppa/v49a).
+
+## PÄIVITYS 15.10. 16.4x — KOLMEN KIERROKSEN HIONTA (PT kuittasi)
+
+- PT:n erä (omistaja 16.02: Lontoon, Prahan ja Ateenan kierrosten hionta): EI simuajoa (omistajan 09.36 "Ei testejä junaan"). Tulos: 0 jumia.
+  Linssit-testit 51540404d:llä 13/13 (KokoKierrosKaikkiPysahdykset: kaikki kolme 8/8 + loppu, 547–586 s); Pelikoodarin ajoloki
+  lokit/todistus-pallot-pelaajille-194-20261015-1513 (Praha + Ateena aloitus → 8/8 → loppu, 0 poikkeusta). "ääni ei" saapui-rivillä = kerronta alkaa saapuessa, ei vika.
+- AVOIN, odottaa omistajan vastausta PT:n kautta → junaan 195: automaattinen paluu kartalle ~3 s loppuäänen jälkeen. Nyt pelaaja jää
+  kiertävään yleiskuvaan (vain ☰ → Poistu linssistä). Toteutus: OpasSovitin.Pallokierros.cs PalloLoppu, "pallokierros päättyi" -rivin jälkeen
+  odotus → jos Ok() eikä tauolla / pelaajan toimea → LinssiOhjain.Rekisteri?.Sulje() (sama kuin LinssiUi.SuljeLinssi / QA `linssi linssi pois`);
+  AsetaKaupunkitila(null) hoitaa paluukuvan. Testi Ydin-tasolle, jos ehto on puhdasta logiikkaa.
