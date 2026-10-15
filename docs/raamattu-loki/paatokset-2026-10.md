@@ -33,6 +33,10 @@ Omistaja 15.10.2026 klo 13.53 (kortti), sanatarkasti: "nyt sinulla on mennyt jot
 
 Omistaja 15.10.2026 klo 14.12 (kortti KK:ssa): "Kyllä, puuttuvat (Suositus)". ISS:n Kuvat-gallerian 277 selitteestä äänitetään vain puuttuvat (noin 92, enintään 25 000 merkkiä), sama kertojan ääni kuin valmiissa 185:ssä, yksi otto, ääniportti ennen vientiä (Äänittäjä).
 
+## OMISTAJAN VASTAUS: ISS-KUVASELITTEET KAIKKI 277 (15.10.2026 klo 14.17)
+
+Omistaja 15.10.2026 klo 14.17 (kortti KK:ssa): "Kyllä, kaikki 277 (Suositus)". Korvaa klo 14.12:n puuttuvat-luvan: säilössä olleet 185 ääntä olivat vanhalla xAI-äänellä, Williamia (eleven_v4) ei ollut yhtään. Kaikki 277 selitettä Williamilla etukäteen (73 277 merkkiä), yksi otto, ääniportti ennen vientiä (Äänittäjä).
+
 ## OMISTAJAN PYYNTÖ: PT:N KONTEKSTIN VALVONTA JA PAKKONOLLAUS (15.10.2026 klo 14.39) (15.10.2026 klo 14.55)
 
 OMISTAJAN PYYNTÖ klo 14.39 (nollauskortin vastaus, sanatarkasti): "nollaa ja selvitä sen jälkeen miksi päätoimittajan konteksti pääsi karkaamaan ja varmista että tarvittavat toimet tehdään että
