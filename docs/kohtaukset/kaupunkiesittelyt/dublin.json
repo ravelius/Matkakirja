@@ -1,0 +1,94 @@
+[
+  {
+    "id": "dublin",
+    "esittely": "Kartan alue on Dublinin keskusta Liffey-joen varrella. Nimi Dublin tulee sanoista dubh linn, musta lampi, ja iirinkielinen nimi Baile Átha Cliath tarkoittaa risuaitojen kahlaamon kaupunkia. Dublinin linna rakennettiin 1204 kuningas Juhanan käskystä paikalle, jossa Poddle-joki liittyi Liffeyyn. Trinity College perustettiin 1592, ja sen kirjastossa säilytetään Kellsin kirjaa.\n\nHa’penny-silta avattiin 1816, ja sen valurauta tehtiin Englannissa Coalbrookdalessa. Patrickin katedraali rakennettiin pääosin 1200-luvulla. Guinnessin panimon vuokrasopimus vuodelta 1759 oli 9 000 vuoden mittainen. Spire valmistui O’Connell Streetille 2003, ja se on 120 metriä korkea. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 718,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Dublin",
+        "title": "Wikipedia: Dublin",
+        "tukee": "nimi Blackpool (dubh linn); Baile Átha Cliath = risuaitainen kahlaamo; linna 1204; Trinity 1592; Liffey jakaa kaupungin"
+      },
+      {
+        "url": "https://brehonacademy.org/dublin-or-baile-cliatha-blackpool-or-the-or-the-ford-of-hurdles-on-the-name-origins-of-irelands-capital-city/",
+        "title": "Brehon Academy / hakutulos: Dublin name origins (hakutulos)",
+        "tukee": "dubh linn = musta lampi; Baile Átha Cliath = risuaitojen kahlaamon kaupunki"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Dublin_Castle",
+        "title": "Wikipedia: Dublin Castle",
+        "tukee": "rakennettu 1204 kuningas Juhanan käskystä (Meiler Fitzhenry); Poddle, Dubh Linn"
+      },
+      {
+        "url": "https://www.irishstones.org/place.aspx?i=3&p=702",
+        "title": "Irish Stones / hakutulos: Dublin Castle (hakutulos)",
+        "tukee": "linna 1204; sijainti Black Poolin kohdalla; Poddle"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Trinity_College_Dublin",
+        "title": "Wikipedia: Trinity College Dublin",
+        "tukee": "perustettu 1592; Kellsin kirja Old Libraryssa"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Library_of_Trinity_College_Dublin",
+        "title": "Wikipedia: Library of Trinity College Dublin / hakutulos (hakutulos)",
+        "tukee": "perustettu 1592 Elisabet I:n kirjeellä; Kellsin kirja Old Libraryssa"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Ha%27penny_Bridge",
+        "title": "Wikipedia: Ha'penny Bridge",
+        "tukee": "avattu 1816; valurauta Coalbrookdale, Shropshire"
+      },
+      {
+        "url": "https://www.archiseek.com/1816-hapenny-bridge-dublin/",
+        "title": "Archiseek / hakutulos: Ha'penny Bridge (hakutulos)",
+        "tukee": "1816; Coalbrookdale Company"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/St_Patrick%27s_Cathedral,_Dublin",
+        "title": "Wikipedia: St Patrick's Cathedral, Dublin",
+        "tukee": "nykyinen rakennus pääosin 1191-1270"
+      },
+      {
+        "url": "https://inyourpocket.com/ireland/dublin/venues/Saint-Patricks-Cathedral",
+        "title": "In Your Pocket / hakutulos: St Patrick's Cathedral (hakutulos)",
+        "tukee": "kivirakennus 1200-1270"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/St._James%27s_Gate",
+        "title": "Wikipedia: St. James's Gate / hakutulos (hakutulos)",
+        "tukee": "Arthur Guinness, 9 000 vuoden vuokrasopimus 31.12.1759"
+      },
+      {
+        "url": "https://mentalfloss.com/article/531665/secrets-from-guinness-archives",
+        "title": "Mental Floss / hakutulos: Secrets from Guinness Archives (hakutulos)",
+        "tukee": "9 000 vuoden vuokra 45 puntaa vuodessa"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Spire_of_Dublin",
+        "title": "Wikipedia: Spire of Dublin",
+        "tukee": "120 m; valmistui 21.1.2003; O'Connell Street"
+      },
+      {
+        "url": "https://www.scoilnet.ie/threads/stories/story/37/page/9",
+        "title": "Scoilnet / hakutulos: Spire (hakutulos)",
+        "tukee": "valmistui 21.1.2003; 120 m"
+      }
+    ],
+    "pudotetut": [
+      "Viikinkien tukikohta 841 (entinen teksti): vain osa lähteistä, muissa 988 -> pois",
+      "Ha'penny-sillan pohjana \"toistakymmentä siltaa\" keskustassa: ei tarkistettu -> pois",
+      "Poddle-altaan \"Dublinin linnan takapiha\" -> korvattu vahvistetulla toteamuksella, että linna rakennettiin Black Poolin ja Poddlen kohdalle",
+      "Kellsin kirjan ajoitus (noin 800 vs 8./9. vuosisata) -> ei ajoitusta",
+      "Ouzel Galley, Patrickin katedraalin 1191: Wikipedia (1191) vs matkasivut (800 vuotta / 1200-1270) -> käytetty vain \"1200-luvulla\""
+    ],
+    "ristiriidat": [
+      "Viikinkiasutus 841 vs 988 -> vuosilukua ei käytetty ja viikingit jätettiin kokonaan pois",
+      "Nimen alkuperä: iirilainen dubh linn vs norjalainen Dyflinn -> käytetty vain neutraalia \"dubh linn = musta lampi\"",
+      "Spiren korkeus 120 m vs 121,2 m (antenni mukana) -> käytetty 120 m, jonka useimmat lähteet antavat",
+      "Katedraalin aloitusvuosi 1191 vs 1200-1270 -> käytetty \"1200-luvulla\""
+    ],
+    "muutos_sk": "Teksti uusittu: säilytetty nimien alkuperä (tarkistettu), poistettu viikinkivuosi 841 ja toistakymmentä siltaa. Lisätty Dublinin linna 1204, Trinity 1592 ja Kellsin kirja, Ha'penny 1816 ja Coalbrookdale, Patrickin katedraali 1200-luvulla, Guinnessin 9 000 vuoden vuokra 1759, Spire 2003 / 120 m."
+  }
+]

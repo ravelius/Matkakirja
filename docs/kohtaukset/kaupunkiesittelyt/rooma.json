@@ -1,0 +1,93 @@
+[
+  {
+    "id": "rooma",
+    "esittely": "Kartan alue on Rooman keskusta Tiberin molemmin puolin. Joen keskellä oleva Isola Tiberina on noin 270 metriä pitkä. Forum Romanumin notkon kuivatti Cloaca Maxima -viemäri, joka rakennettiin 500-luvulla eaa. Colosseum rakennettiin 1. vuosisadalla jKr., ja sen ulkoseinä on noin 48 metriä korkea.\n\nPantheonin kupolin sisähalkaisija on 43,3 metriä, ja rakennus muutettiin kirkoksi vuonna 609. Castel Sant’Angelo rakennettiin keisari Hadrianuksen hautamonumentiksi, ja se valmistui vuonna 139. Trevin suihkulähde valmistui 1762, ja se on Acqua Vergine -vesijohdon päätepiste. Espanjalaisissa portaissa on 135 askelmaa, ja ne valmistuivat 1725. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 694,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Tiber_Island",
+        "title": "Wikipedia: Tiber Island",
+        "tukee": "saari noin 270 m pitkä ja 67 m leveä; sillat molemmille rannoille antiikista asti"
+      },
+      {
+        "url": "https://www.aviewoncities.com/rome/tiberisland.htm",
+        "title": "A View on Cities: Tiber Island",
+        "tukee": "270 m x 67 m, veneen muotoinen, sillat"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Cloaca_Maxima",
+        "title": "Wikipedia: Cloaca Maxima",
+        "tukee": "rakennettu 6. vuosisadalla eaa.; kuivatti Forumin notkon"
+      },
+      {
+        "url": "https://livius.org/articles/place/rome/rome-photos/rome-cloaca-maxima",
+        "title": "Livius.org: Rome, Cloaca Maxima",
+        "tukee": "6. vuosisata eaa.; viemäri Forum Romanumin läpi"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Colosseum",
+        "title": "Wikipedia: Colosseum",
+        "tukee": "rakennus 70-luvulla jKr. Vespasianuksen aikana, avattu 80/81; ulkoseinä noin 48 m"
+      },
+      {
+        "url": "https://www.tourist-in-rom.com/en/colosseum-history-events/",
+        "title": "Tourist in Rom: Colosseum history",
+        "tukee": "rakennusaika 72-80 jKr.; korkeus nyt 48,5 m"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Pantheon,_Rome",
+        "title": "Wikipedia: Pantheon",
+        "tukee": "kupolin sisähalkaisija noin 43,3 m; kirkoksi 609"
+      },
+      {
+        "url": "https://www.aviewoncities.com/rome/pantheon.htm",
+        "title": "A View on Cities: Pantheon",
+        "tukee": "kupolin halkaisija 43,3 m; muutettu kirkoksi 609"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Castel_Sant%27Angelo",
+        "title": "Wikipedia: Castel Sant'Angelo",
+        "tukee": "Hadrianuksen mausoleumi, valmistui noin 139"
+      },
+      {
+        "url": "https://www.aviewoncities.com/rome/castelsantangelo.htm",
+        "title": "A View on Cities: Castel Sant'Angelo",
+        "tukee": "rakennus 123-139 jKr.; Hadrianuksen mausoleumi"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Trevi_Fountain",
+        "title": "Wikipedia: Trevi Fountain",
+        "tukee": "valmistui 1762; Acqua Vergine -vesijohdon päätepiste"
+      },
+      {
+        "url": "https://www.aviewoncities.com/rome/trevi.htm",
+        "title": "A View on Cities: Trevi Fountain",
+        "tukee": "vihitty 1762; Aqua Virgon vesi syöttää suihkulähteitä"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Spanish_Steps",
+        "title": "Wikipedia: Spanish Steps",
+        "tukee": "135 askelmaa; rakennettu 1723-1725"
+      },
+      {
+        "url": "https://www.e-architect.com/rome/spanish-steps",
+        "title": "e-architect: Spanish Steps (hakutulos)",
+        "tukee": "135 askelmaa; 1723-1725"
+      }
+    ],
+    "pudotetut": [
+      "Entinen teksti: Tiberin kahlaamo, 25 km merestä, seitsemän kukkulaa, Forum Romanumin tori: ei vahvistettu kahdesta lähteestä (Wikipedia ei mainitse kahlaamoa tai etäisyyttä), jätetty pois",
+      "Colosseumin katsojamäärä (50 000-80 000 / 87 000), jätetty pois",
+      "Pantheonin valmistumisvuosi (118-128), jätetty pois",
+      "Cloaca Maxima \"yhä käytössä\": livius sanoo vain pieni vesivirta, jätetty pois"
+    ],
+    "ristiriidat": [
+      "Colosseumin rakennusajan alku (70, 72 tai 73-75) ja avajaisvuosi (80/81): käytetty vain \"1. vuosisadalla\"",
+      "Pantheonin valmistumisvuosi 118-128 / 125 / 126: ei käytetty",
+      "Cloaca Maxima: 7. vuosisata eaa. / noin 600 eaa. / 6. vuosisata: käytetty \"500-luvulla eaa.\" (6. vuosisata)",
+      "Espanjalaisten portaiden askelmäärä: alimman kuivatuselementin laskeminen voi muuttaa lukua (135 yleisin, kahdessa lähteessä)"
+    ],
+    "muutos_sk": "Kirjoitettu kokonaan uudelleen. Poistettu Tiberin kahlaamo, 25 km merestä, seitsemän kukkulaa ja Forumin tori (ei vahvistettu). Lisätty: Isola Tiberina 270 m, Cloaca Maxima, Colosseum 1. vuosisata ja 48 m, Pantheonin kupoli 43,3 m ja kirkoksi 609, Castel Sant'Angelo 139, Trevi 1762, Espanjalaiset portaat 135 askelmaa ja 1725."
+  }
+]

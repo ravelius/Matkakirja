@@ -1,0 +1,115 @@
+[
+  {
+    "id": "wien",
+    "esittely": "Kartan alue on Wienin vanhakaupunki, Ring ja lähikohteet. Roomalaiset perustivat Vindobonan leirin noin vuoden 100 tienoilla. Ring syntyi keisari Frans Joosefin vuoden 1857 käskystä kaupungin muurien paikalle. Stephansdomin eteläinen torni valmistui 1433 ja on noin 136 metriä korkea. Hofburg oli Habsburgien asuinpaikka vuoteen 1918, ja nykyään se on Itävallan presidentin työpaikka.\n\nValtionooppera avattiin 1869 ja Rathaus rakennettiin 1872–1883. Belvederessä allekirjoitettiin Itävallan valtiosopimus 15. toukokuuta 1955. Praterin jättiratas valmistui 1897 ja on 64,75 metriä korkea. Schönbrunn on Unescon maailmanperintökohde vuodesta 1996. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 699,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Vindobona",
+        "title": "Wikipedia: Vindobona",
+        "tukee": "legioonaleiri n. 100 jKr (nimikirjoitukset vasta 103; leiri alkoi n. 97)"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vienna",
+        "title": "Wikipedia: Vienna",
+        "tukee": "Vindobona 1. vuosisadalla; Ring 1800-luvun jälkipuoliskolla"
+      },
+      {
+        "url": "https://www.habsburger.net/en/events/ringstrasse-era-1857-1914",
+        "title": "habsburger.net / hakutulos: Ringstrasse era (hakutulos)",
+        "tukee": "Frans Joosefin määräys 20.12.1857 muurien purkamisesta"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Ringstra%C3%9Fe",
+        "title": "Wikipedia: Ringstraße",
+        "tukee": "1857 määräys; Ring rakennettu muurien paikalle"
+      },
+      {
+        "url": "https://austria-forum.org/af/AEIOU/Stephansdom/Stephansdom_english",
+        "title": "Austria-Forum: Stephansdom",
+        "tukee": "eteläinen torni valmistui 1433 (Prachatitz); noin 136 m"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/St._Stephen%27s_Cathedral,_Vienna",
+        "title": "Wikipedia: St. Stephen's Cathedral, Vienna",
+        "tukee": "eteläinen torni 1368-1433; 136,7 m"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Hofburg",
+        "title": "Wikipedia: Hofburg",
+        "tukee": "Habsburgien asuinpaikka vuoteen 1918; presidentin virkapaikka vuodesta 1946"
+      },
+      {
+        "url": "https://explorial.com/sights/vienna-hofburg/",
+        "title": "Explorial / hakutulos: Vienna Hofburg (hakutulos)",
+        "tukee": "Habsburgien asuinpaikka; presidentti vuodesta 1946"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vienna_State_Opera",
+        "title": "Wikipedia: Vienna State Opera",
+        "tukee": "avattu 25.5.1869"
+      },
+      {
+        "url": "https://wiener-staatsoper.at/en/history",
+        "title": "Wiener Staatsoper: History / hakutulos (hakutulos)",
+        "tukee": "avajaiset 25.5.1869 (Don Giovanni)"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Vienna_City_Hall",
+        "title": "Wikipedia: Vienna City Hall",
+        "tukee": "rakennettu 1872-1883; Friedrich von Schmidt"
+      },
+      {
+        "url": "https://www.aviewoncities.com/vienna/rathaus.htm",
+        "title": "A View on Cities / hakutulos: Rathaus (hakutulos)",
+        "tukee": "1872-1883"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Belvedere,_Vienna",
+        "title": "Wikipedia: Belvedere, Vienna",
+        "tukee": "valtiosopimus allekirjoitettu Ylä-Belvederessä 15.5.1955"
+      },
+      {
+        "url": "https://www.belvedere.at/sites/default/files/2026-02/Belvedere_PM_LANG_en.pdf",
+        "title": "Belvedere (tiedote) / hakutulos (hakutulos)",
+        "tukee": "valtiosopimus 15.5.1955 Marmorisalissa"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Wiener_Riesenrad",
+        "title": "Wikipedia: Wiener Riesenrad",
+        "tukee": "rakennettu 1897; 64,75 m"
+      },
+      {
+        "url": "https://www.wien.info/en/sightseeing/sights/giant-ferris-wheel-fun-facts-347044",
+        "title": "Wien.info / hakutulos: Riesenrad (hakutulos)",
+        "tukee": "avattu 21.6.1897; 64,75 m"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Sch%C3%B6nbrunn_Palace",
+        "title": "Wikipedia: Schönbrunn Palace",
+        "tukee": "Unesco-kohteeksi 1996"
+      },
+      {
+        "url": "https://webarchive.unesco.org/web/20160803143826/http://whc.unesco.org/archive/advisory_body_evaluation/786.pdf",
+        "title": "UNESCO ICOMOS-arviointi 786 / hakutulos (hakutulos)",
+        "tukee": "Schönbrunn listattu 1996"
+      }
+    ],
+    "pudotetut": [
+      "Wienerwald, Alppien viimeinen kukkulaselänne ja lakeus Unkariin asti: ei tarkistettu -> pois",
+      "Pääuoman suoristus 1870-luvulla: ei vahvistettu kahdesta lähteestä -> pois",
+      "Ringin avaus 1865: ei vahvistettu (lähteet kertovat vain määräyksen 1857) -> pois",
+      "Praterin jättiratas: \"laidoilla\" -> korvattu vahvistetulla 1897/64,75 m",
+      "Sivukohteet (Klimt, Saliera, Figaro, Lipizzanit, Taikahuilu, Vuoristovesijohto ym.): ei tarkistettu -> pois",
+      "Schönbrunnin 1 441 huonetta: lähteinä lähinnä matkasivut -> pois"
+    ],
+    "ristiriidat": [
+      "Vindobonan ajoitus: leiri aloitettu n. 97 jKr vs rakennuskirjoitukset vasta 103 -> käytetty \"noin vuoden 100 tienoilla\"",
+      "Stephansdomin tornin rakennusaika 1359/1368-1433 -> käytetty valmistumisvuotta 1433 (Austria-Forum + Wikipedia)",
+      "Rathaus: Wikipedia sanoo ettei se ole itse Ringillä (Zweierlinie), muut kertovat sen olevan Ringin varrella -> teksti ei väitä sijaintia",
+      "Belvederen rakennusvuodet 1714/1717-1723 -> ei käytetty"
+    ],
+    "muutos_sk": "Teksti kirjoitettu uusiksi: poistettu Tonava-/maantiekerronta ja Ringin avausvuosi 1865. Lisätty Vindobona, Ringin määräys 1857, Stephansdomin torni 1433/136 m, Hofburg, Valtionooppera 1869, Rathaus 1872-1883, Belvederen valtiosopimus 1955, Riesenrad 1897/64,75 m, Schönbrunn Unesco 1996."
+  }
+]

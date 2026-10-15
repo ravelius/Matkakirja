@@ -1600,17 +1600,17 @@ export const LIVIAN_MIETINNAT = {
     'Annas kun mietin. Tai ei — kysyn joltain viisaammalta..',
     'Odota, järjestän ajatukseni oksalle..',
     'Muistan lukeneeni tästä. Mistäs se nyt olikaan..',
-    'Setä tiesi tästä jotain. Mietin hetken..',
+    'Setäni tiesi tästä jotain. Mietin hetken..',
     'Pieni hetki, untuvia sähkekoneessa..',
     'Katsotaas. Nokka kirjaan, siipi kartalle..',
     'Hetki vain, kynä on väärässä siivessä..',
     'Odotas, luen omat muistiinpanoni. Käsiala on kanan..',
-    'Hetkinen, kirjastonhoitaja on pöllö ja pöllö nukkuu päivisin..',
+    'Hetkinen, kirjastonhoitaja on lepakko ja lepakko nukkuu päivisin..',
     'Pieni hetki, arkiston ovi on jumissa..',
     'Hetki, tarkistan asian kahdesta paikasta..',
     'Odotas, pudotin muistiinpanot katolle..',
     'Pieni hetki, tästä on jossain sähke..',
-    'Nokka kiinni, minä ajattelen..',
+    'Nokka kiinni, ajatus käyntiin..',
     'Hetkinen, siivet ovat vielä märät sateesta..',
     'Odota, tämä vaatii kaksi kierrosta tornin ympäri..',
     'Annas kun kaivan tämän muistista. Siellä on ruuhkaa..',
@@ -1636,7 +1636,7 @@ export const LIVIAN_MIETINNAT = {
     'Minä tiedän kenelle tämä kuuluu. Käyn lentämässä..',
     'Otan tämän kysymyksen mukaani. Kaksi kaartoa ja palaan..',
     'Tämän minä tiedän. Tai tiedän kenen luota se löytyy..',
-    'Hyvä että kysyit. Käyn hakemassa tarkan luvun..',
+    'Hyvä että kysyit. Käyn hakemassa tarkan tiedon..',
     'Tästä on kirjoitettu. Etsin mistä..',
     'Sopiva kysymys minulle. Hetki, tarkistan etten muista väärin..',
     'Tuohon on vastaus. Se on vain hieman kaukana..',
@@ -6982,7 +6982,7 @@ export class Pollo {
       // pohjaan kuten ennenkin eikä jää tyhjän yläpuolelle.
       this.nollaaTyhjaTila();
       this.lisaaViesti('pollo', virhe?.viesti
-        ?? 'Livia ei saanut kysymyksestä kiinni. Yritä hetken päästä uudelleen.');
+        ?? 'En saanut kysymyksestäsi kiinni. Yritä hetken päästä uudelleen.');
       /*
        * Uusintanappi myös tänne, mutta EI käyttörajaan: päivä- ja
        * kuukausiraja eivät katoa uudelleen kysymällä, ja nappi vain
