@@ -241,7 +241,7 @@ test('ehdotushaun token vaihtuu kysymystokeniin katkaisematta kesken olevaa pois
 
 test('kaikki kriittiset mietintärivit käyttävät täsmällistä semantiikkaa',()=>{
  assert.equal(livianMietintaEle('Katsotaas. Nokka kirjaan, siipi kartalle..'),'bookStudy');
- assert.equal(livianMietintaEle('Hetkinen, kirjastonhoitaja on pöllö ja pöllö nukkuu päivisin..'),'listen');
+ assert.equal(livianMietintaEle('Hetkinen, kirjastonhoitaja on lepakko ja lepakko nukkuu päivisin..'),'listen');
  assert.equal(livianMietintaEle('Kohta tulee. Arkistossa oli enemmän pölyä kuin muistin..'),'sneeze');
  assert.equal(livianMietintaEle('Pieni hetki, sähkekone rätisee taas..'),'scratch');
  assert.equal(livianMietintaEle('täysin uusi odotusteksti'),'glance');
