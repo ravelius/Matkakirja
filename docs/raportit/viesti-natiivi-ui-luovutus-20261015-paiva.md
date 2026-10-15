@@ -32,7 +32,7 @@ Työpuu: /Users/Shared/Claude/wt/proto-natiivi-ui-issikkuna (haara natiivi-ui/is
    Ehto: kankaan vasen reuna < ~25 % ruudun leveydestä ja yläreuna < ~17 % korkeudesta.
    12.3x (uusi tili): natiivi-ui/museo-nimi-ipad-193 98b573e50 (juna-193 4f59aeb69 päällä, worktree wt/proto-natiivi-ui-museonimi):
    kapean pystyn himmennysliuku nimen taakse, kun teos ulottuu tekstin alle (MuseoSovitin.TeosVasenRuudulla uusi). tarkista.sh 0.
-   Pelistä tarkistamatta; PT:ltä kysytty simulupa vs. suoraan junaan 193. Kirjainääni ad776c15d juna-193:ssa (4f59aeb69).
+   PT KUITTASI 12.4x ilman simua (omistaja 09.36) ja välitti NS:lle junaan 193; varmista rungosta, poista worktree mergen jälkeen. Kirjainääni ad776c15d juna-193:ssa (4f59aeb69).
 2. Omistaja 09.36: "Ei testejä junaan" (vain skannerivideo oli poikkeus).
 3. Levy oli 99 %: NUI:n vanhat app-kopiot poistettu, jäljellä natiivi-ui-app-testi192v ja -192w (poista vanhempi seuraavan
    käännöksen jälkeen). Testihaarat natiivi-ui/testi-192* ja koe-* ovat poistettavissa junan 192 jälkeen.
