@@ -1,0 +1,15 @@
+{
+  "taskNumber": 281,
+  "sourceTask": 297,
+  "startedAt": "2026-10-15T14:57:55.694442+00:00",
+  "issued": 1,
+  "completed": 1,
+  "builtinImageGen": true,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "promptSHA256": "766383fc4cbc2822c095ed842282e032b07c9a0d51852bd1c9d4c20925b623c2",
+  "orderIndex": 1,
+  "entirelyNewImage": true,
+  "completedAt": "2026-10-15T14:59:07.506575+00:00",
+  "nativeFileReadbackPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/isoisan-uni-unikuvat-20261015/281-montezuman-naamio/v1/native-file-readback.json"
+}

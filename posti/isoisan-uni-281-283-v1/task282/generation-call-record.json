@@ -1,0 +1,15 @@
+{
+  "taskNumber": 282,
+  "sourceTask": 297,
+  "startedAt": "2026-10-15T14:59:09.467938+00:00",
+  "issued": 1,
+  "completed": 1,
+  "builtinImageGen": true,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "promptSHA256": "a391a636496697dfe0502293b2351c3cd3459a60eaa921474752d28b155d4a38",
+  "orderIndex": 2,
+  "entirelyNewImage": true,
+  "completedAt": "2026-10-15T15:00:05.635098+00:00",
+  "nativeFileReadbackPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/isoisan-uni-unikuvat-20261015/282-jadesinetti/v1/native-file-readback.json"
+}

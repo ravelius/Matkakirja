@@ -1,0 +1,12 @@
+{
+  "sourceTask": 297,
+  "taskNumber": 281,
+  "orderIndex": 1,
+  "maximumFirstVersionCallsThisTask": 1,
+  "newWholeImageOnly": true,
+  "builtinOnly": true,
+  "APIAllowed": false,
+  "intermediateOwnerFeedbackWaivedOnlyFor281to283": true,
+  "imageAcceptedByOwner": false,
+  "imageAcceptedByPT": false
+}

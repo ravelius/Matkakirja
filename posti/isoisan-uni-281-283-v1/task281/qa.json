@@ -1,0 +1,47 @@
+{
+  "visualPassedForPTReview": true,
+  "subject": "Turquoise mosaic ceremonial mask, shell eye inlays with black obsidian pupils",
+  "observations": [
+    "Complete centered artifact and near-black margins, no text or living person.",
+    "Individual irregular blue-green mosaic pieces and dark resin seams are visible.",
+    "Shell eyes are strongly luminous/large; this is an imagined game artifact, not an authenticated Montezuma museum replica."
+  ],
+  "knownLimitations": [
+    "Owner and PT acceptance of this new candidate remains pending; no historical-authenticity certification."
+  ],
+  "taskNumber": 281,
+  "version": "v1",
+  "producerPersonallyViewedNativeCandidate": true,
+  "nativeFileReadback": {
+    "taskNumber": 281,
+    "version": "v1",
+    "sourcePath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-872c0a1b-e2db-4025-aa4c-d5d62e461152.png",
+    "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/isoisan-uni-unikuvat-20261015/281-montezuman-naamio/v1/montezuman-naamio-v1-native.png",
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "fed6e1d09573c9c406e6839a10e4192304daafaa0cb6f892d75fee47aee8db78",
+    "bytes": 2186086,
+    "sourceAndNASBytesEqual": true,
+    "upscaled": false,
+    "edited": false,
+    "sameDimensionsAsApprovedElDorado": true,
+    "original2048MinimumRemovedByTask292": true,
+    "nativeSizeMeetsCurrentTask": true,
+    "recordedAt": "2026-10-15T14:59:07.506575+00:00"
+  },
+  "fullRequirementVisualReviewForPT": true,
+  "PTAccepted": false,
+  "ownerAccepted": false,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "upscaled": false,
+  "gameIntegrated": false,
+  "R2Used": false,
+  "mainMerged": false,
+  "published": false,
+  "reviewedAt": "2026-10-15T14:59:07.506575+00:00"
+}

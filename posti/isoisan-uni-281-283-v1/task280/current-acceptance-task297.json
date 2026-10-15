@@ -1,0 +1,17 @@
+{
+  "task": 280,
+  "nativeImageSHA256": "78c4fd5b538e3c6720bb6167090cce56fd2deea42538aaab68c8d19864825cd4",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "currentSizeRequirementMet": true,
+  "originalSizeFailureSupersededNotDeleted": true,
+  "PTAccepted": true,
+  "ownerAccepted": true,
+  "ownerQuote": "Kyllä, tällä tyylillä.",
+  "sourceCommit": "bacc7f7f62b12d73f8547e549c0d5f9a13030a75",
+  "recordedAt": "2026-10-15T14:57:02.986895+00:00",
+  "regenerated": false,
+  "upscaled": false
+}

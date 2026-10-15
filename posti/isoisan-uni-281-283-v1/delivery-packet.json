@@ -1,0 +1,155 @@
+{
+  "createdAt": "2026-10-15T15:03:49.861553+00:00",
+  "scope": "Three new first-version dream images plus unchanged accepted El Dorado for PT review",
+  "taskNumbers": [
+    280,
+    281,
+    282,
+    283,
+    292,
+    297
+  ],
+  "nativeDimensionsAll": [
+    1254,
+    1254
+  ],
+  "newGenerations": 3,
+  "totalGenerations": 4,
+  "ElDoradoRegenerated": false,
+  "upscaled": false,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "ownerAcceptedTasks": [
+    280
+  ],
+  "PTAcceptedTasks": [
+    280
+  ],
+  "PTAcceptancePendingTasks": [
+    281,
+    282,
+    283
+  ],
+  "gameIntegrated": false,
+  "R2Used": false,
+  "mainMerged": false,
+  "published": false,
+  "files": {
+    "posti/isoisan-uni-281-283-v1/el-dorado-v1-native.png": {
+      "sha256": "78c4fd5b538e3c6720bb6167090cce56fd2deea42538aaab68c8d19864825cd4",
+      "bytes": 2083550
+    },
+    "posti/isoisan-uni-281-283-v1/task280/prompt.txt": {
+      "sha256": "348cc6073eb08e61bd934129af0d9f9320bc729a9b9911b94d39bc8f14402477",
+      "bytes": 2551
+    },
+    "posti/isoisan-uni-281-283-v1/task280/native-file-readback.json": {
+      "sha256": "a747464ea6ce49066a0f1843dfcc7c27bfd817e4ec471137a8d025b8ff8ad27a",
+      "bytes": 643
+    },
+    "posti/isoisan-uni-281-283-v1/montezuman-naamio-v1-native.png": {
+      "sha256": "fed6e1d09573c9c406e6839a10e4192304daafaa0cb6f892d75fee47aee8db78",
+      "bytes": 2186086
+    },
+    "posti/isoisan-uni-281-283-v1/task281/prompt.txt": {
+      "sha256": "766383fc4cbc2822c095ed842282e032b07c9a0d51852bd1c9d4c20925b623c2",
+      "bytes": 2391
+    },
+    "posti/isoisan-uni-281-283-v1/task281/native-file-readback.json": {
+      "sha256": "c0bc422b414083ab703e9a868be412df90cbce0e927577d6233f2caf5601cbbc",
+      "bytes": 798
+    },
+    "posti/isoisan-uni-281-283-v1/task281/qa.json": {
+      "sha256": "e9094cb56ba3c25a2622c5eed585640e36722d577d75245ea2f80748d3534c06",
+      "bytes": 1847
+    },
+    "posti/isoisan-uni-281-283-v1/task281/authorization.json": {
+      "sha256": "59dff736107077cbd0da1511061196b2d882fd55dab59a8093044dc48a6fe0c5",
+      "bytes": 301
+    },
+    "posti/isoisan-uni-281-283-v1/task281/generation-call-record.json": {
+      "sha256": "06138e0ac1fc004d3bf70631b22ff2efe6137fae9d59afb149a10183fc3af686",
+      "bytes": 558
+    },
+    "posti/isoisan-uni-281-283-v1/jadesinetti-v1-native.png": {
+      "sha256": "5887075d1a9005b855001b739fc28e9ea820598ba1454e9b95e08eb0eca17391",
+      "bytes": 1842362
+    },
+    "posti/isoisan-uni-281-283-v1/task282/prompt.txt": {
+      "sha256": "a391a636496697dfe0502293b2351c3cd3459a60eaa921474752d28b155d4a38",
+      "bytes": 2428
+    },
+    "posti/isoisan-uni-281-283-v1/task282/native-file-readback.json": {
+      "sha256": "a2c0774bc0d6a82e72eaacdc5b0d2288793ac0dd2638a6ade2697190cf3bf835",
+      "bytes": 786
+    },
+    "posti/isoisan-uni-281-283-v1/task282/qa.json": {
+      "sha256": "0d5df8e9811986719e10946baef2c70bd9ea33e09eaf24d8fe4f246741439975",
+      "bytes": 1888
+    },
+    "posti/isoisan-uni-281-283-v1/task282/authorization.json": {
+      "sha256": "142886164acf3acee1f73c1b27ff2913b75eb24b729c2174a79358b9fbd5c04d",
+      "bytes": 301
+    },
+    "posti/isoisan-uni-281-283-v1/task282/generation-call-record.json": {
+      "sha256": "716ce6b93cf049bbbe75c7588d60004caf388cc94e8e627faeec0ce522aef382",
+      "bytes": 552
+    },
+    "posti/isoisan-uni-281-283-v1/kolme-veljesta-v1-native.png": {
+      "sha256": "ef4611bf1815f4c8f5d70e69e09aecd3b103782c111d45f34760ac05d17d82b1",
+      "bytes": 2040237
+    },
+    "posti/isoisan-uni-281-283-v1/task283/prompt.txt": {
+      "sha256": "ca72307e469b3916dfa93c90a8149555095f2c464a2ed631d4c7e1d0678a980b",
+      "bytes": 2725
+    },
+    "posti/isoisan-uni-281-283-v1/task283/native-file-readback.json": {
+      "sha256": "dc98186b67077aa9447955e4020da7c32c507ef283b1ce80df7bcce96d1b2f4b",
+      "bytes": 792
+    },
+    "posti/isoisan-uni-281-283-v1/task283/qa.json": {
+      "sha256": "375fb2d1520fc4003b5aec1966f7e217afaa6f682c60242da28ac02a49f741ab",
+      "bytes": 1919
+    },
+    "posti/isoisan-uni-281-283-v1/task283/authorization.json": {
+      "sha256": "5ec00f56b87fea531560289d9a8fd485b626a0ba9bd2ccdbf7e194ae72a0be4c",
+      "bytes": 301
+    },
+    "posti/isoisan-uni-281-283-v1/task283/generation-call-record.json": {
+      "sha256": "88d824992d301155a36516b4cb0822ab4f8db9f76b6be0037427f355cd410bdb",
+      "bytes": 555
+    },
+    "posti/isoisan-uni-281-283-v1/task280/current-acceptance-task297.json": {
+      "sha256": "ed9f27f3e1e53ceb089b930a52cdb0e2fee923b0fcabc5c96f8546d396864d1f",
+      "bytes": 497
+    },
+    "posti/isoisan-uni-281-283-v1/isoisan-uni-nelja-kuvaa-vertailu.png": {
+      "sha256": "e4e127aad8137b5549572b31d7ef885b35fbf6c721d2f5a62a071afee1d1c578",
+      "bytes": 3254079
+    },
+    "posti/isoisan-uni-281-283-v1/batch-QA.json": {
+      "sha256": "922eb24a32b1783e657e6738928e23aa675f8099547675939602b338063c0405",
+      "bytes": 4451
+    },
+    "posti/isoisan-uni-281-283-v1/sources/fable-codex-isoisan-uni-unikuvat-20261015.md": {
+      "sha256": "697c967043ce4fca174f1957e6cf8409f699ccf9e206d22aec693a20fdac2a77",
+      "bytes": 1487
+    },
+    "posti/isoisan-uni-281-283-v1/sources/fable-codex-isoisan-uni-280-vastaus-20261015.md": {
+      "sha256": "1710d65aa86ec67580eb06605f48e26236e1680cbd32abb7c9d1d118a94387ab",
+      "bytes": 472
+    },
+    "posti/isoisan-uni-281-283-v1/sources/fable-codex-isoisan-uni-281-283-jatko-20261015.md": {
+      "sha256": "27df92c6f85318f791ef05e6cf08128dd7102fc325cd7cac2a1d5426dc0c132b",
+      "bytes": 768
+    },
+    "posti/isoisan-uni-281-283-v1/sources/task292-297-acceptance-and-continuation.json": {
+      "sha256": "e8726c1d1b0367a964202a2fdfe772d4fa5db0f58476fe50839873d70913986c",
+      "bytes": 1686
+    },
+    "posti/isoisan-uni-281-283-v1/sources/description-conflicts-and-scope.json": {
+      "sha256": "83e3c40655060d18ca7a51b8b013753adba8d25af5f441a241e2f9a263fefd4b",
+      "bytes": 2619
+    }
+  }
+}

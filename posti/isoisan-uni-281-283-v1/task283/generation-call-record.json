@@ -1,0 +1,15 @@
+{
+  "taskNumber": 283,
+  "sourceTask": 297,
+  "startedAt": "2026-10-15T15:00:06.065090+00:00",
+  "issued": 1,
+  "completed": 1,
+  "builtinImageGen": true,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "promptSHA256": "ca72307e469b3916dfa93c90a8149555095f2c464a2ed631d4c7e1d0678a980b",
+  "orderIndex": 3,
+  "entirelyNewImage": true,
+  "completedAt": "2026-10-15T15:01:10.133713+00:00",
+  "nativeFileReadbackPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/isoisan-uni-unikuvat-20261015/283-kolme-veljesta/v1/native-file-readback.json"
+}
