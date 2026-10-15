@@ -315,3 +315,11 @@ kuva iPhone + Mac PT:lle; SK luonnostelee Pulun kysymykset rinnalla – älä od
   Kun ämpärissä (curl -I 200) → kerro PT:lle; vastaukset 82–103 (11 uutta merinostoa) vaativat omistajan uuden luvan.
 - iOS-käännös vaihdettu f7ffbff4d:aan: odottaja pid 41221 (H=f7ffbff4d), skenaarioon lisätty m2b (ui chat meri). Mac-skripti
   tyokalut/siirtoseppa-ajot/mac-meri-nostot-196.sh <.app> <kansio> (idle ≥ 600 s, mac-kaanna.sh f7ffbff4d PROTO_LINJA=2 iOS-käännöksen jälkeen).
+
+## PÄIVITYS 16.10. 02.0x — MERINOSTOT + MERIVASTAUKSET KUITATTU JUNAAN 196
+
+- PT kuittasi f7ffbff4d → NS:lle ilmoitettu. iPhone-todistus lokit/todistus-meri-nostot-196-20261016-0151 (käännös 71e1c19c3): m3 Tyrrhenanmeri-kortti,
+  m2b Pulun merivastaus (otto 07 soi 30,1 s). PUUTE-rivit = skenaario (Suomenlahden nimi ei näy zoomilla 9; oleta-rivi), ei vika.
+- Tekoälymerkintä chatissa jää (PT). Vastaukset 82–103 (11 uutta merinostoa) vasta omistajan äänityskortin jälkeen: lisää uusi-meri-*.json generaattoriin.
+- AUKI: Mac-kuva. Odottaja (scratchpad mac-jonoon.sh) jonottaa `PROTO_LINJA=2 mac-kaanna.sh f7ffbff4d` vasta kun NUI 122169f34 on L2-lukossa
+  (Julkaisija 01.5x). Sitten tyokalut/siirtoseppa-ajot/mac-meri-nostot-196.sh <.app> <kansio> (idle ≥ 600 s; napauttaa itameri + tyrrhenanmeri) → PT.
