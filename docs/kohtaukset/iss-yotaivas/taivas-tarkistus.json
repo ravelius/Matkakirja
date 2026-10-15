@@ -768,6 +768,40 @@
     "huom": "",
     "korjaus": ""
    }
+  ],
+  "taivas-revontulet": [
+   {
+    "vaite": "Revontulet hehkuvat yleensä ISS:n alapuolella",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Revontulet (suurin osa 80–250 km:n korkeudella; koko vaihteluväli 80–600 km)",
+    "lahde2": "en.wikipedia.org/wiki/Aurora (Størmer: ei revontulia alle 70 km, vain 6,5 % yli 150 km, maksimi n. 100 km) + en.wikipedia.org/wiki/International_Space_Station (ISS 370–460 km)",
+    "huom": "fi.wikipedia ISS-sivu antaa vanhentuneen 355–368 km; kumpikin yli 250 km. 'Yleensä', koska ylin reuna ulottuu 600 km:iin (STEVE ym. ei revontulta).",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KORKEUS n. 80–250 km",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Revontulet (80–250 km suurin osa)",
+    "lahde2": "en.wikipedia.org/wiki/Aurora (alle 70 km ei yhtään, 93,5 % alle 150 km, maksimi n. 100 km: yhteensopiva)",
+    "huom": "Linssisepän ehdotus 'n. 100–300 km' ei ole lähteiden mukainen (ei 300:aa); käytetty fi.wikipedian väliä.",
+    "korjaus": "100–300 → 80–250"
+   },
+   {
+    "vaite": "VIHREÄ = happi, alempana; PUNAINEN = happi, ylempänä",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Aurora (green 557,7 nm hapen päästö alemmilla korkeuksilla; red 630 nm hapen päästö ylimmillä korkeuksilla)",
+    "lahde2": "spaceplace.nasa.gov/aurora/en/ (happi säteilee vihreää ja punaista, typpi sinistä ja violettia)",
+    "huom": "NASA ei erittele korkeutta; korkeusero Wikipediasta. Ilmatieteen laitos: tyypilliset värit vihreä, punainen, violetti.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "SYY aurinkotuuli",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Revontulet (aurinkotuulen varautuneet hiukkaset osuvat ilmakehään)",
+    "lahde2": "spaceplace.nasa.gov/aurora/en/ (aurinkotuuli ja auringon myrskyt; hiukkaset magneettikentän kautta napojen ilmakehään)",
+    "huom": "Etäisyysriviä ei ole (Linssisepän pyyntö: ei 'laskettu').",
+    "korjaus": ""
+   }
   ]
  },
  "kesayo": [
@@ -811,5 +845,6 @@
    "huom": "Kolmannes (32,7 %) täsmää. Tarkemmin 'noin kolmanneksen koko näkökentästä (täyskulmasta)'; pallon pinta-alasta 32,7 %.",
    "korjaus": ""
   }
- ]
+ ],
+ "revontulet_huom": "Sisältökirjuri 15.10.2026 itse (ei riippumatonta tarkistajaa): faktat luettu suoraan lähdesivuilta, ks. kohteet.taivas-revontulet."
 }

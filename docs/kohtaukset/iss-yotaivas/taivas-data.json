@@ -352,6 +352,24 @@
     "NÄKYY",
     "Etelätaivaalla"
    ]
+  ],
+  "taivas-revontulet": [
+   [
+    "KORKEUS",
+    "n. 80–250 km"
+   ],
+   [
+    "VIHREÄ",
+    "happi, alempana"
+   ],
+   [
+    "PUNAINEN",
+    "happi, ylempänä"
+   ],
+   [
+    "SYY",
+    "aurinkotuuli"
+   ]
   ]
  }
 }
