@@ -8,7 +8,11 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (14.10. iltapäivä):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261014-iltapaiva.md` KOKONAAN (raketti v3, ISS, valas, kaupungintalo v3b, Eiffel v2b; viestit id:llä osoitekirjasta).
+1. **UUSIN (15.10. 12.5x, tilinvaihdon jälkeen):** valaan luuranko VALMIS: proto-haara `linnanrakentaja/valas-luuranko-195` @ b55630222
+   (worktree /Users/Shared/Claude/wt/proto-linnanrakentaja-valasluuranko – poista kun Valoseppä on ottanut haaran), Iss.ValaanLuusto +
+   RakettiValas.shader/cs, testit 1839/1839; selitys `proto-3d/_valmiit/valas-v1/LUEMINUT.md` lopussa. Viety Valosepälle (local_c238f4af…) ja PT:lle
+   (local_5df52e10…). Id:t osoitekirjasta. Odota Valosepän vahtikuvat (amplitudit ValaanLuusto.cs:n taulukoissa) tai PT:n erä.
+1. **(vanha) 14.10. iltapäivä:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261014-iltapaiva.md` KOKONAAN (raketti v3, ISS, valas, kaupungintalo v3b, Eiffel v2b; viestit id:llä osoitekirjasta).
 1y. **(vanha) 14.10. 00.5x, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261014-yo.md` KOKONAAN. Valmiit: lähtöalusta v3c (Nordmela, LS2 kytki), Rijksmuseum-karttaesine (LS1 kytki), Ranskan sali v2h, pronssiarvot (LS2 korjaa patsaiden värikuvan sidonnan). Odota LS1/LS2/PT. OLAVINLINNA TAUOLLA, PEKING CODEXILLA.
 1o. **(vanha) 13.10. 21.3x, tilinvaihto:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261013-myohaisilta.md` KOKONAAN. Ranskan museo v2d toimitettu (puutarha, Mona Lisa, Kolme haamua syvennyksessä); odota LS1/LS2:n huomioita tai PT:n erää. OLAVINLINNA TAUOLLA, PEKING CODEXILLA.
 1z. **(vanha) 13.10. 19.4x, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261013-ilta.md` KOKONAAN. OLAVINLINNA TAUOLLA, PEKING CODEXILLA. Seuraava erä: Rodinin veistosmallit (kohta 2; tarkista ensin päällekkäisyys LS1/LS2).
