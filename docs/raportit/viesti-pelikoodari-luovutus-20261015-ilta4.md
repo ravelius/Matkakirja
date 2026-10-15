@@ -47,7 +47,8 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus viesti-pelikoodari-luovu
    + **KOHOKOHDAT** (omistaja 20.27, PT): kysymykset liitetään ISS-kohdevalikon kohokohtiin; kohokohdan avaus → liitetty kysymys Pulun chatissa
    valmiina ehdotuksena. Siirtoseppä tekee datan (kysymys-id), Pelikoodari chat-puolen. Toimeksianto
    /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/iss-kohokohdat-20261015.md (ei vielä luettu).
-3. **Pulun 49 chat-ottoa** tulossa Äänittäjältä (iss-aanettomat / pulu-chat-odotus-*): kytke kun ämpärissä (odotusrivit PuluChat Yleiset/
+3. **Pulun 49 chat-ottoa ÄMPÄRISSÄ** (Äänittäjä 20.3x): aanet/pulu/chat-v1/{tervehdys, odotus-yleiset-01..36, odotus-vastaus-01..09,
+   virheet-01..03}.mp3 + manifest.json (id → kesto, teksti; paketti pulu-chat-49-vienti-20261015). Kytke (odotusrivit PuluChat Yleiset/
    Vastausmietinnat; tekstit ba2778726:n mukaiset).
 4. Äänittäjä 20.3x: ämpärissä isoisan-uni-alkusoitto (aanet/isoisan-uni-v1/, 45,8 s) ja Pulun aloitus-ohje, kesäyön opetus, maapallo
    (aanet/pulu/isoisan-uni-v1/…; paketti isoisan-uni-pulu-kesayo-vienti-20261015). Kytkijä epäselvä (isoisän uni = NUI 580f28994?) → kysy PT:ltä.
