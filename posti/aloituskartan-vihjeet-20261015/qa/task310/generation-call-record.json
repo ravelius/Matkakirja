@@ -1,0 +1,31 @@
+{
+  "task": 310,
+  "batch": 314,
+  "version": "v1",
+  "tool": "image_gen.imagegen",
+  "topLevelMode": "built-in",
+  "intent": "generate",
+  "issued": 1,
+  "completed": 1,
+  "issuedAt": "2026-10-15T17:03:38.260821+00:00",
+  "maxCallsForThisTask": 1,
+  "promptFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/prompt.txt",
+  "promptSha256": "a96ce46d8e06939ded9774800c8f057df686a6febe3c922a23a19d55cdaf256b",
+  "transparent_background": true,
+  "referenced_image_paths": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1/giza-pyramidit.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/tripoli-marcus-aureliuksen-riemukaari.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/bagdad-mustansiriya-koulu.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/teheran-golestanin-palatsi.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/dubai-dhow-satama.webp"
+  ],
+  "sourceReadInFull": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/task313-314/karttaseppa-codex-aloituskartan-vihjeet-20261015.md",
+  "authorizationFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/batch314/authorization.json",
+  "completedAt": "2026-10-15T17:04:49.475167+00:00",
+  "toolOriginalPath": "/Users/samireivinen/.codex/generated_images/01a14081-e3cf-7002-a1ff-2f8d9bc2b905/exec-973fba3b-5f55-474d-bcd8-4bbcc235b51b.png",
+  "nativeCopyPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/gronlanti-jaavuoret-v1-native.png",
+  "nativeCopiedUnchanged": true,
+  "promptFileSha256AtIssue": "c94e068af43ee172a2958f3354d59d0c254148d1d53650186a38bfec824af6a5",
+  "exactToolInputSaved": true,
+  "toolInputNormalization": "The call used trimEnd on cat output; prompt.txt now preserves that exact tool input without the final newline. Original issued file SHA retained separately."
+}

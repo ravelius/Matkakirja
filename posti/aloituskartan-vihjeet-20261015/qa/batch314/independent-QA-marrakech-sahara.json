@@ -1,0 +1,256 @@
+{
+  "batch": 314,
+  "reviewedAt": "2026-10-15T17:08:15.452179+00:00",
+  "reviewer": "independent samarkand-gronland worker reviewing other worker outputs",
+  "scope": "Visual/style/subject and independent alpha/dimension readback only, eligible for owner review; no historical certification or final PT acceptance.",
+  "sourceReadInFull": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/task313-314/karttaseppa-codex-aloituskartan-vihjeet-20261015.md",
+  "styleReferencesPreviouslyViewed": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1/giza-pyramidit.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/tripoli-marcus-aureliuksen-riemukaari.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/bagdad-mustansiriya-koulu.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/teheran-golestanin-palatsi.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/dubai-dhow-satama.webp"
+  ],
+  "overallStatus": "pass-for-nine-image-review-with-notes",
+  "findings": [
+    {
+      "task": 307,
+      "file": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/marrakech-koutoubia.webp",
+      "sha256": "6a3997566a5cff127d0c3a80827579bd69bdd2180b6bc889c9497b3f76b957ef",
+      "bytes": 476210,
+      "exportDimensions": [
+        1024,
+        1024
+      ],
+      "exportMode": "RGBA",
+      "nativeDimensionsReadIndependently": [
+        1254,
+        1254
+      ],
+      "inspectedVisuals": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/marrakech-koutoubia.webp",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/alpha-proof-light-dark.png"
+      ],
+      "independentAlphaReadback": {
+        "transparentPixels": 786818,
+        "partialAlphaPixels": 261184,
+        "alpha1Pixels": 10177,
+        "boundsByMinimumAlpha": {
+          "1": {
+            "bboxXYXYExclusive": [
+              0,
+              15,
+              1014,
+              1024
+            ],
+            "marginsLTRB": [
+              0,
+              15,
+              10,
+              0
+            ]
+          },
+          "2": {
+            "bboxXYXYExclusive": [
+              242,
+              35,
+              801,
+              974
+            ],
+            "marginsLTRB": [
+              242,
+              35,
+              223,
+              50
+            ]
+          },
+          "8": {
+            "bboxXYXYExclusive": [
+              244,
+              35,
+              799,
+              972
+            ],
+            "marginsLTRB": [
+              244,
+              35,
+              225,
+              52
+            ]
+          },
+          "16": {
+            "bboxXYXYExclusive": [
+              244,
+              35,
+              799,
+              972
+            ],
+            "marginsLTRB": [
+              244,
+              35,
+              225,
+              52
+            ]
+          },
+          "128": {
+            "bboxXYXYExclusive": [
+              245,
+              38,
+              798,
+              971
+            ],
+            "marginsLTRB": [
+              245,
+              38,
+              226,
+              53
+            ]
+          }
+        }
+      },
+      "status": "pass-for-nine-image-review-with-notes",
+      "visibleClipping": false,
+      "trueAlpha": true,
+      "noTextWatermarkOrFrame": true,
+      "historicalCertification": false,
+      "PTAcceptance": false,
+      "subjectFindings": [
+        "One square-section Koutoubia-like minaret with two visible faces, crenellated upper ledges, a smaller upper pavilion and a brass/ochre finial.",
+        "Palms flank the base; trunks and leaves remain legible. Whole finial, palms and irregular ground footprint are visible.",
+        "Pale cream/brick/ochre washes and fine sepia contours fit the accepted Giza and original four. Olive palm foliage and the restrained green geometric band stay muted.",
+        "No readable decorative lettering or portrait is visible."
+      ],
+      "reviewNotes": [
+        "The corner view reads as three-quarter architectural drawing; the overhead/isometric viewpoint is less pronounced than accepted Giza because of the tall upright tower.",
+        "Visible alpha>=8 margins L/T/R/B are 244/35/225/52 px. Top and bottom clearance are tighter than side clearance but no visible tip or ground is cut. Do not label every margin ample.",
+        "Alpha=1 dust extends to left/bottom canvas borders; alpha>=2 remains inset. This is unchanged tiny-alpha dust, not visible subject clipping."
+      ]
+    },
+    {
+      "task": 308,
+      "file": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/308-sahara/v1/sahara-karavaani.webp",
+      "sha256": "ad8796920ab6ad925429b2276289022eb71482bb165bce9aeacd67a68b32b759",
+      "bytes": 415696,
+      "exportDimensions": [
+        1024,
+        1024
+      ],
+      "exportMode": "RGBA",
+      "nativeDimensionsReadIndependently": [
+        1254,
+        1254
+      ],
+      "inspectedVisuals": [
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/308-sahara/v1/sahara-karavaani.webp",
+        "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/308-sahara/v1/alpha-proof-light-dark.png"
+      ],
+      "independentAlphaReadback": {
+        "transparentPixels": 816561,
+        "partialAlphaPixels": 230363,
+        "alpha1Pixels": 9807,
+        "boundsByMinimumAlpha": {
+          "1": {
+            "bboxXYXYExclusive": [
+              0,
+              17,
+              1009,
+              1008
+            ],
+            "marginsLTRB": [
+              0,
+              17,
+              15,
+              16
+            ]
+          },
+          "2": {
+            "bboxXYXYExclusive": [
+              52,
+              299,
+              1004,
+              800
+            ],
+            "marginsLTRB": [
+              52,
+              299,
+              20,
+              224
+            ]
+          },
+          "8": {
+            "bboxXYXYExclusive": [
+              53,
+              301,
+              1002,
+              798
+            ],
+            "marginsLTRB": [
+              53,
+              301,
+              22,
+              226
+            ]
+          },
+          "16": {
+            "bboxXYXYExclusive": [
+              54,
+              301,
+              1002,
+              796
+            ],
+            "marginsLTRB": [
+              54,
+              301,
+              22,
+              228
+            ]
+          },
+          "128": {
+            "bboxXYXYExclusive": [
+              54,
+              302,
+              1001,
+              795
+            ],
+            "marginsLTRB": [
+              54,
+              302,
+              23,
+              229
+            ]
+          }
+        }
+      },
+      "status": "pass-for-nine-image-review-with-notes",
+      "visibleClipping": false,
+      "trueAlpha": true,
+      "noTextWatermarkOrFrame": true,
+      "historicalCertification": false,
+      "PTAcceptance": false,
+      "subjectFindings": [
+        "Exactly four camels form one clear caravan along the crest of one irregular dune patch.",
+        "One small hooded rider sits on the first camel; face is an unidentifiable small shadow/blank area, with no readable eyes or mouth or portrait detail.",
+        "Camel necks, heads, saddles, tails and walking legs are readable. Some legs overlap in a normal walking silhouette; no conspicuous extra/fused limb or impossible joint was observed at export size.",
+        "Sparse fine fur marks vary naturally; no conspicuous repeated fur stamp or synthetic texture artifact was observed.",
+        "Cream/ochre dune, sepia line and faded gray-blue/brick packs fit the reference palette. No sky, horizon or rectangular backdrop is visible."
+      ],
+      "reviewNotes": [
+        "The camels are shown predominantly in side profile. The sloped dune gives some three-quarter ground depth, but the caravan is less overhead/isometric than Giza or the architectural references. This remains an explicit style-consistency review point.",
+        "Visible alpha>=8 margins L/T/R/B are 53/301/22/226 px. The right edge of the dune is close to the canvas (22 px) but wholly visible; margin balance is tight on the right.",
+        "Alpha=1 dust touches the left canvas border; alpha>=2 remains inset. Retain it unchanged rather than report false clipping."
+      ]
+    }
+  ],
+  "actions": {
+    "generationCalls": 0,
+    "fixes": 0,
+    "retries": 0,
+    "imageEdits": 0,
+    "otherFilesChanged": false
+  },
+  "requiredOwnerReviewPoints": [
+    "Sahara uses predominantly side-profile camels rather than a strong overhead/isometric view.",
+    "Sahara right dune margin and Marrakech top/bottom margins are relatively tight, though complete visible silhouettes are preserved."
+  ],
+  "finalAcceptance": "PT pending nine-image comparison board"
+}

@@ -1,0 +1,26 @@
+{
+  "task": 307,
+  "inspectedNative": true,
+  "inspectedExport": true,
+  "inspectedLightDarkAlphaProof": true,
+  "status": "worker QA pass; independent QA and final PT acceptance pending",
+  "subject": "Single tall square minaret with palms at base; all tower/finial/palm tips and ground visible.",
+  "style": "Thin sepia architectural line, pale cream and ochre watercolor, desaturated dusty palm green; two sides visible, gentle illustrative miniature.",
+  "checks": {
+    "subjectComplete": true,
+    "visibleClipping": false,
+    "genuineTransparency": true,
+    "opaqueRectangle": false,
+    "textOrWatermark": false,
+    "frame": false,
+    "recognizableFaces": false,
+    "repetitiveUnnaturalPalmFronds": false,
+    "nativeUnchanged": true,
+    "exportLosslessRGBAReadbackEqual": true
+  },
+  "notes": [
+    "Native 1254x1254; authorized whole-canvas premultiplied Lanczos resize to1024x1024.",
+    "6 native and5 export border samples have alpha1 only; content alpha>=2 stays within [297,43,981,1192] native / [242,35,801,974] export. Dust documented unchanged, no threshold or repair.",
+    "Final style acceptance belongs to the nine-image board."
+  ]
+}

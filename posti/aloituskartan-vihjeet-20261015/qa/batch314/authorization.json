@@ -1,0 +1,36 @@
+{
+  "taskNumbers": [
+    313,
+    314
+  ],
+  "sourceCommit": "980a1b1e3d60ec5aba3f8991d9b04bde75dce53c",
+  "sourcePath": "posti/karttaseppa-codex-aloituskartan-vihjeet-20261015.md",
+  "sourceBlob": "c328fe230e2a04b7962cda389b1c302e87a4ffb2",
+  "sourceReadInFull": true,
+  "recordedAt": "2026-10-15T16:59:11.307899+00:00",
+  "GizaStyleAnchorAccepted": true,
+  "GizaCorrectionsOrRegenerationAllowed": false,
+  "finalPTAcceptancePendingNineImageBoard": true,
+  "authorizedNewImages": [
+    307,
+    308,
+    309,
+    310
+  ],
+  "maxCallsThisBatch": 4,
+  "oneFirstVersionEach": true,
+  "batchWithoutIntermediateFeedbackExplicitlyAllowed": true,
+  "finalNineImageComparisonTask": 311,
+  "style": "Accepted Giza plus original four isometric watercolor miniatures; muted palette, sepia pen, no text or real faces",
+  "nativeBuiltinImagesPreservedSeparately": true,
+  "deliveryFormat": "1024x1024 RGBA WebP with true alpha",
+  "nativeSizeAndConversionReportedSeparately": true,
+  "APIAllowed": false,
+  "CLIAllowed": false,
+  "Louvre312ContinuedByThisAuthorization": false,
+  "otherPausedWorkResumed": false,
+  "R2Allowed": false,
+  "integrationAllowed": false,
+  "mainMergeAllowed": false,
+  "publicationAllowed": false
+}

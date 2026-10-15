@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-10-15T16:59:11.307899+00:00",
+  "files": {
+    "306-giza/v1/prompt.txt": "08846c13fea7f7fdc1b245bb5c8ad725886e46c2fb59c7b148b71864d3e6e950",
+    "306-giza/v1/reference-roles.json": "b1232d4f68ab6690d334e1bc5bddfc67291f0d84c9d08ae176ac17e1d7b742da",
+    "306-giza/v1/giza-pyramidit-v1-native.png": "63185dca0c51942723239e3a1380c410b9550fa8d60c62c2aabd7fd7d78cc007",
+    "306-giza/v1/giza-pyramidit.webp": "d3a3d22f16ea7bd30637e1648d3d6791cd415ba4fa9df1cdb0b0a8b58f2ccb14",
+    "306-giza/v1/native-and-export-readback.json": "2ada74fa68f2056b08ed0d5483ce514b7e242dc4aba837b36aa94c5f7e5494aa",
+    "306-giza/v1/generation-call-record.json": "5fbcf0fbaa5862017b7f9252d08ecfc631c61661ad1b29a7c2a980b567935922",
+    "306-giza/v1/reference-readback.json": "6650ad14a85f86dbd24678071d5d91328deca469537a960c6e699c446d9d7cf2",
+    "306-giza/v1/vertailu-ensimmainen-5kuvaa.png": "3cb65423a2bfc5966928b7527a6940decb16defed231e0b2fb51c9f5172daa74",
+    "306-giza/v1/alpha-vaalea-tumma-QA.png": "d09744e5f31f00228cd4d1dc7da4035f2484f51d3351c46f9a494db06d29f621",
+    "306-giza/v1/visual-QA.json": "15353b05071b18ed6660be59158081beef1e82e1e0a7ad28d7b057178b0e1df3",
+    "306-giza/v1/QA-FI.md": "14dea0bfd58d67613d1931c41bb19de55927464a12d33f3f2318b3ce701fb455",
+    "306-giza/v1/mailbox-letter.md": "f237e231cc7e347461eef56ee749df9d8381d284923b0add2a993f94f4781c41",
+    "306-giza/v1/staging-files.json": "d88e86230daa74dbf02537519183dd4823d7ba5ef162a5d27b572f3a1344ac25",
+    "306-giza/v1/handoff-receipt.json": "337e6c9bb03716ba1f3a4d9bcc9e77b48dd6abd740f8cbcbf920d015bf5c3f8b"
+  }
+}

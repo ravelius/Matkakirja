@@ -1,0 +1,249 @@
+{
+  "task": 310,
+  "nativeOriginal": {
+    "path": "/Users/samireivinen/.codex/generated_images/01a14081-e3cf-7002-a1ff-2f8d9bc2b905/exec-973fba3b-5f55-474d-bcd8-4bbcc235b51b.png",
+    "sha256": "19a2e44de83e5dc46727d92ca2a40370c43003bc865c53f896e219804e7ba270",
+    "copyByteIdentical": true
+  },
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/gronlanti-jaavuoret-v1-native.png",
+    "sha256": "19a2e44de83e5dc46727d92ca2a40370c43003bc865c53f896e219804e7ba270",
+    "bytes": 988282,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "format": "PNG",
+    "alpha": {
+      "minimum": 0,
+      "maximum": 255,
+      "transparentPixels": 1196739,
+      "partialAlphaPixels": 375146,
+      "opaquePixels": 631,
+      "alpha1Pixels": 8686,
+      "boundsAtThreshold": {
+        "1": {
+          "bboxXYXYExclusive": [
+            0,
+            37,
+            1208,
+            1214
+          ],
+          "marginsLTRB": [
+            0,
+            37,
+            46,
+            40
+          ]
+        },
+        "2": {
+          "bboxXYXYExclusive": [
+            109,
+            309,
+            1150,
+            970
+          ],
+          "marginsLTRB": [
+            109,
+            309,
+            104,
+            284
+          ]
+        },
+        "8": {
+          "bboxXYXYExclusive": [
+            111,
+            311,
+            1147,
+            967
+          ],
+          "marginsLTRB": [
+            111,
+            311,
+            107,
+            287
+          ]
+        },
+        "16": {
+          "bboxXYXYExclusive": [
+            111,
+            311,
+            1147,
+            966
+          ],
+          "marginsLTRB": [
+            111,
+            311,
+            107,
+            288
+          ]
+        },
+        "128": {
+          "bboxXYXYExclusive": [
+            112,
+            312,
+            1146,
+            965
+          ],
+          "marginsLTRB": [
+            112,
+            312,
+            108,
+            289
+          ]
+        },
+        "255": {
+          "bboxXYXYExclusive": [
+            114,
+            317,
+            1145,
+            964
+          ],
+          "marginsLTRB": [
+            114,
+            317,
+            109,
+            290
+          ]
+        }
+      },
+      "edgeNonzeroPixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 1
+      }
+    }
+  },
+  "export": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/gronlanti-jaavuoret.webp",
+    "sha256": "017a36c8f3e3f7acf1c2a29ce20a58d24967d1f9dcc594df51db913662d62ce7",
+    "bytes": 431668,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "format": "WEBP",
+    "alpha": {
+      "minimum": 0,
+      "maximum": 255,
+      "transparentPixels": 798115,
+      "partialAlphaPixels": 249571,
+      "opaquePixels": 890,
+      "alpha1Pixels": 5382,
+      "boundsAtThreshold": {
+        "1": {
+          "bboxXYXYExclusive": [
+            0,
+            30,
+            987,
+            991
+          ],
+          "marginsLTRB": [
+            0,
+            30,
+            37,
+            33
+          ]
+        },
+        "2": {
+          "bboxXYXYExclusive": [
+            88,
+            252,
+            939,
+            791
+          ],
+          "marginsLTRB": [
+            88,
+            252,
+            85,
+            233
+          ]
+        },
+        "8": {
+          "bboxXYXYExclusive": [
+            90,
+            254,
+            937,
+            789
+          ],
+          "marginsLTRB": [
+            90,
+            254,
+            87,
+            235
+          ]
+        },
+        "16": {
+          "bboxXYXYExclusive": [
+            90,
+            254,
+            937,
+            789
+          ],
+          "marginsLTRB": [
+            90,
+            254,
+            87,
+            235
+          ]
+        },
+        "128": {
+          "bboxXYXYExclusive": [
+            91,
+            255,
+            936,
+            788
+          ],
+          "marginsLTRB": [
+            91,
+            255,
+            88,
+            236
+          ]
+        },
+        "255": {
+          "bboxXYXYExclusive": [
+            93,
+            258,
+            934,
+            787
+          ],
+          "marginsLTRB": [
+            93,
+            258,
+            90,
+            237
+          ]
+        }
+      },
+      "edgeNonzeroPixels": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 1
+      }
+    }
+  },
+  "conversion": {
+    "operation": "whole-canvas resize only",
+    "sourceMode": "RGBA",
+    "premultiply": "RGBA to RGBa",
+    "resize": "Lanczos",
+    "targetDimensions": [
+      1024,
+      1024
+    ],
+    "unpremultiply": "RGBa to RGBA",
+    "webpLossless": true,
+    "webpExact": true,
+    "crop": false,
+    "alphaExtraction": false,
+    "thresholdCleanup": false,
+    "backgroundRemoval": false,
+    "paintRepair": false
+  },
+  "decodedLosslessRGBAEquality": true
+}

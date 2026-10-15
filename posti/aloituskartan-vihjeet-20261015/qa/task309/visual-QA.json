@@ -1,0 +1,37 @@
+{
+  "task": 309,
+  "version": "v1",
+  "reviewedAt": "2026-10-15T17:03:38.131036+00:00",
+  "status": "review-ready-with-framing-note",
+  "finalOwnerAcceptance": "pending nine-image board",
+  "generationCalls": 1,
+  "checks": {
+    "threeDistinctMadrasasEncloseThreeSides": true,
+    "oneCompactPlazaNearSideOpen": true,
+    "restrainedPaleGrayBlueDomes": true,
+    "creamSepiaDominates": true,
+    "thinSepiaPenPaleWatercolor": true,
+    "noReadableText": true,
+    "noWatermarkOrFrame": true,
+    "noFiguresOrRecognizableFaces": true,
+    "genuinelyTransparentBackground": true,
+    "entireVisibleSilhouette": true,
+    "visibleClipping": false,
+    "noRectangularOrOvalBackdrop": true
+  },
+  "notes": [
+    "Horizontal framing is tighter than the accepted Giza: visible alpha>=8 margins 23 px on both sides in export; top 225 px, bottom 203 px. Complete footprint remains visible. Leave framing acceptance to PT on the nine-image board.",
+    "Alpha=1 dust reaches top, bottom and left canvas borders. Alpha>=2 remains inside the canvas. Kept unchanged; not a visible-clipping failure.",
+    "Native 1254x1254; export 1024x1024. Only whole-canvas premultiplied RGBA Lanczos resize and lossless WebP encoding performed.",
+    "Native direct image preview rendered black in this viewer although the generation display and decoded export/proof show the full art; native light/dark composite is included to inspect the decoded unchanged PNG."
+  ],
+  "inspectedPaths": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan-v1-native.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/alpha-proof-light-dark.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/native-alpha-proof-light-dark.png"
+  ],
+  "noPartialRepair": true,
+  "noRetry": true,
+  "nativeDecodedLightDarkProofInspected": true
+}

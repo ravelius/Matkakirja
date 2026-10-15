@@ -1,0 +1,103 @@
+{
+  "task": 308,
+  "createdAt": "2026-10-15T17:04:28.876811+00:00",
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/308-sahara/v1/sahara-karavaani-v1-native.png",
+    "bytes": 904366,
+    "sha256": "bcee952f2edf7a8728da9ae688a17e9b47fdd4f540e402c5b48a822bd0857362",
+    "fileFormat": "PNG",
+    "mode": "RGBA",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparent0": 1224437,
+      "partial1to254": 346978,
+      "opaque255": 1101,
+      "bboxAlphaAtLeast1": [
+        0,
+        21,
+        1236,
+        1234
+      ],
+      "bboxAlphaAtLeast2": [
+        64,
+        368,
+        1229,
+        979
+      ],
+      "bboxAlphaAtLeast8": [
+        66,
+        368,
+        1227,
+        976
+      ],
+      "borderNonzeroCount": 7,
+      "borderAlpha1Count": 7,
+      "borderAlphaAtLeast2Count": 0,
+      "borderMaxAlpha": 1
+    }
+  },
+  "export": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/308-sahara/v1/sahara-karavaani.webp",
+    "bytes": 415696,
+    "sha256": "ad8796920ab6ad925429b2276289022eb71482bb165bce9aeacd67a68b32b759",
+    "fileFormat": "WEBP",
+    "mode": "RGBA",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparent0": 816561,
+      "partial1to254": 230363,
+      "opaque255": 1652,
+      "bboxAlphaAtLeast1": [
+        0,
+        17,
+        1009,
+        1008
+      ],
+      "bboxAlphaAtLeast2": [
+        52,
+        299,
+        1004,
+        800
+      ],
+      "bboxAlphaAtLeast8": [
+        53,
+        301,
+        1002,
+        798
+      ],
+      "borderNonzeroCount": 5,
+      "borderAlpha1Count": 5,
+      "borderAlphaAtLeast2Count": 0,
+      "borderMaxAlpha": 1
+    }
+  },
+  "nativePreservedByteForByteAgainstToolFile": true,
+  "transform": {
+    "canvasOnlyResize": true,
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "exportDimensions": [
+      1024,
+      1024
+    ],
+    "resample": "Pillow premultiplied RGBa Lanczos then RGBA",
+    "crop": false,
+    "alphaThreshold": false,
+    "backgroundRemoval": false,
+    "paintingOrRepair": false
+  },
+  "decodedLosslessRGBAEquality": true,
+  "exportDecodedRGBA_SHA256": "4bc675cba735e1b9dcee0f3bd6b60e4133959bd1b945a8f3f88cdc75e3ce2e95"
+}

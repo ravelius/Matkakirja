@@ -1,0 +1,103 @@
+{
+  "task": 307,
+  "createdAt": "2026-10-15T17:02:20.373746+00:00",
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/marrakech-koutoubia-v1-native.png",
+    "bytes": 1067369,
+    "sha256": "6c297e90360c33f099fb40557abb31564024e21a3aaf091a66f3c384d9b879b0",
+    "fileFormat": "PNG",
+    "mode": "RGBA",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparent0": 1179598,
+      "partial1to254": 392478,
+      "opaque255": 440,
+      "bboxAlphaAtLeast1": [
+        0,
+        19,
+        1242,
+        1254
+      ],
+      "bboxAlphaAtLeast2": [
+        297,
+        43,
+        981,
+        1192
+      ],
+      "bboxAlphaAtLeast8": [
+        299,
+        43,
+        979,
+        1191
+      ],
+      "borderNonzeroCount": 6,
+      "borderAlpha1Count": 6,
+      "borderAlphaAtLeast2Count": 0,
+      "borderMaxAlpha": 1
+    }
+  },
+  "export": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/marrakech-koutoubia.webp",
+    "bytes": 476210,
+    "sha256": "6a3997566a5cff127d0c3a80827579bd69bdd2180b6bc889c9497b3f76b957ef",
+    "fileFormat": "WEBP",
+    "mode": "RGBA",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "alpha": {
+      "min": 0,
+      "max": 255,
+      "transparent0": 786818,
+      "partial1to254": 261184,
+      "opaque255": 574,
+      "bboxAlphaAtLeast1": [
+        0,
+        15,
+        1014,
+        1024
+      ],
+      "bboxAlphaAtLeast2": [
+        242,
+        35,
+        801,
+        974
+      ],
+      "bboxAlphaAtLeast8": [
+        244,
+        35,
+        799,
+        972
+      ],
+      "borderNonzeroCount": 5,
+      "borderAlpha1Count": 5,
+      "borderAlphaAtLeast2Count": 0,
+      "borderMaxAlpha": 1
+    }
+  },
+  "nativePreservedByteForByteAgainstToolFile": true,
+  "transform": {
+    "canvasOnlyResize": true,
+    "nativeDimensions": [
+      1254,
+      1254
+    ],
+    "exportDimensions": [
+      1024,
+      1024
+    ],
+    "resample": "Pillow premultiplied RGBa Lanczos then RGBA",
+    "crop": false,
+    "alphaThreshold": false,
+    "backgroundRemoval": false,
+    "paintingOrRepair": false
+  },
+  "decodedLosslessRGBAEquality": true,
+  "exportDecodedRGBA_SHA256": "e9137005008e37495b66bffe6a0ead733e8b129d583831c76567630814a25804"
+}

@@ -1,0 +1,19 @@
+{
+  "taskNumbers": [
+    313,
+    314
+  ],
+  "sourceCommit": "980a1b1e3d60ec5aba3f8991d9b04bde75dce53c",
+  "sourcePath": "posti/karttaseppa-codex-aloituskartan-vihjeet-20261015.md",
+  "sourceBlob": "c328fe230e2a04b7962cda389b1c302e87a4ffb2",
+  "sha256": "4665e92eeee18d586f7cf2e43885fd502883298a2c5072e846aee1e1a44ae734",
+  "sourceReadInFull": true,
+  "readAt": "2026-10-15T16:59:11.307899+00:00",
+  "previousRevision": "69cdc8f0ecd3a45594afdd26f36ac5bb24b84f8b",
+  "previousBlob": "5b70177ba0229be3a920a9c326e0a3aaa23983aa",
+  "onlyIntermediateRevisionChange": "Timestamp corrected to16:53UTC",
+  "notSecondOrder": true,
+  "LUEMINUTOnOriginMainStated": true,
+  "ReadmeFetchRequired": false,
+  "sourceStyleInstructionSufficient": true
+}

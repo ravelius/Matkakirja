@@ -1,0 +1,249 @@
+{
+  "task": 309,
+  "nativeOriginal": {
+    "path": "/Users/samireivinen/.codex/generated_images/01a14081-e3cf-7002-a1ff-2f8d9bc2b905/exec-d96a0b6b-3978-4b0f-86a4-56beb3fa579e.png",
+    "sha256": "1f95918ce051c3f19d156e69a7b98805b4b613a778455a961756656bbe0dfbc6",
+    "copyByteIdentical": true
+  },
+  "native": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan-v1-native.png",
+    "sha256": "1f95918ce051c3f19d156e69a7b98805b4b613a778455a961756656bbe0dfbc6",
+    "bytes": 1401394,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "format": "PNG",
+    "alpha": {
+      "minimum": 0,
+      "maximum": 255,
+      "transparentPixels": 1030208,
+      "partialAlphaPixels": 541764,
+      "opaquePixels": 544,
+      "alpha1Pixels": 10116,
+      "boundsAtThreshold": {
+        "1": {
+          "bboxXYXYExclusive": [
+            0,
+            0,
+            1228,
+            1254
+          ],
+          "marginsLTRB": [
+            0,
+            0,
+            26,
+            0
+          ]
+        },
+        "2": {
+          "bboxXYXYExclusive": [
+            26,
+            273,
+            1228,
+            1010
+          ],
+          "marginsLTRB": [
+            26,
+            273,
+            26,
+            244
+          ]
+        },
+        "8": {
+          "bboxXYXYExclusive": [
+            28,
+            275,
+            1226,
+            1005
+          ],
+          "marginsLTRB": [
+            28,
+            275,
+            28,
+            249
+          ]
+        },
+        "16": {
+          "bboxXYXYExclusive": [
+            28,
+            276,
+            1226,
+            1005
+          ],
+          "marginsLTRB": [
+            28,
+            276,
+            28,
+            249
+          ]
+        },
+        "128": {
+          "bboxXYXYExclusive": [
+            29,
+            277,
+            1225,
+            1004
+          ],
+          "marginsLTRB": [
+            29,
+            277,
+            29,
+            250
+          ]
+        },
+        "255": {
+          "bboxXYXYExclusive": [
+            35,
+            293,
+            1222,
+            1001
+          ],
+          "marginsLTRB": [
+            35,
+            293,
+            32,
+            253
+          ]
+        }
+      },
+      "edgeNonzeroPixels": {
+        "top": 6,
+        "right": 0,
+        "bottom": 1,
+        "left": 41
+      }
+    }
+  },
+  "export": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan.webp",
+    "sha256": "856240288d14ff5031968234e63362f9089086b05f12c2026afe9e8c2a9dc137",
+    "bytes": 626620,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "format": "WEBP",
+    "alpha": {
+      "minimum": 0,
+      "maximum": 255,
+      "transparentPixels": 686920,
+      "partialAlphaPixels": 360864,
+      "opaquePixels": 792,
+      "alpha1Pixels": 6502,
+      "boundsAtThreshold": {
+        "1": {
+          "bboxXYXYExclusive": [
+            0,
+            0,
+            1003,
+            1024
+          ],
+          "marginsLTRB": [
+            0,
+            0,
+            21,
+            0
+          ]
+        },
+        "2": {
+          "bboxXYXYExclusive": [
+            21,
+            223,
+            1003,
+            825
+          ],
+          "marginsLTRB": [
+            21,
+            223,
+            21,
+            199
+          ]
+        },
+        "8": {
+          "bboxXYXYExclusive": [
+            23,
+            225,
+            1001,
+            821
+          ],
+          "marginsLTRB": [
+            23,
+            225,
+            23,
+            203
+          ]
+        },
+        "16": {
+          "bboxXYXYExclusive": [
+            23,
+            225,
+            1001,
+            821
+          ],
+          "marginsLTRB": [
+            23,
+            225,
+            23,
+            203
+          ]
+        },
+        "128": {
+          "bboxXYXYExclusive": [
+            24,
+            226,
+            1000,
+            820
+          ],
+          "marginsLTRB": [
+            24,
+            226,
+            24,
+            204
+          ]
+        },
+        "255": {
+          "bboxXYXYExclusive": [
+            26,
+            240,
+            998,
+            817
+          ],
+          "marginsLTRB": [
+            26,
+            240,
+            26,
+            207
+          ]
+        }
+      },
+      "edgeNonzeroPixels": {
+        "top": 6,
+        "right": 0,
+        "bottom": 1,
+        "left": 32
+      }
+    }
+  },
+  "conversion": {
+    "operation": "whole-canvas resize only",
+    "sourceMode": "RGBA",
+    "premultiply": "RGBA to RGBa",
+    "resize": "Lanczos",
+    "targetDimensions": [
+      1024,
+      1024
+    ],
+    "unpremultiply": "RGBa to RGBA",
+    "webpLossless": true,
+    "webpExact": true,
+    "crop": false,
+    "alphaExtraction": false,
+    "thresholdCleanup": false,
+    "backgroundRemoval": false,
+    "paintRepair": false
+  },
+  "decodedLosslessRGBAEquality": true
+}

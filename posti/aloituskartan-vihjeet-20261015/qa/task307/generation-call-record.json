@@ -1,0 +1,36 @@
+{
+  "task": 307,
+  "batch": 314,
+  "asset": "marrakech-koutoubia",
+  "version": 1,
+  "builtinTool": "image_gen.imagegen",
+  "intent": "new_complete_image",
+  "issued": 1,
+  "completed": 1,
+  "maxCalls": 1,
+  "automaticRetryAllowed": false,
+  "partialRepairAllowed": false,
+  "issuedAt": "2026-10-15T17:00:49.988Z",
+  "transparent_background": true,
+  "referenced_image_paths": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1/giza-pyramidit.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/tripoli-marcus-aureliuksen-riemukaari.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/bagdad-mustansiriya-koulu.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/teheran-golestanin-palatsi.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/dubai-dhow-satama.webp"
+  ],
+  "completedAt": "2026-10-15T17:01:49.568380+00:00",
+  "nativeToolPath": "/Users/samireivinen/.codex/generated_images/01a14081-8a3d-7a60-9e09-55b101d3b864/exec-2250c834-b056-4da4-ae32-c87865dc4271.png",
+  "savedNativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/marrakech-koutoubia-v1-native.png",
+  "nativeSHA256": "6c297e90360c33f099fb40557abb31564024e21a3aaf091a66f3c384d9b879b0",
+  "nativeDimensions": [
+    1254,
+    1254
+  ],
+  "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/marrakech-koutoubia.webp",
+  "exportSHA256": "6a3997566a5cff127d0c3a80827579bd69bdd2180b6bc889c9497b3f76b957ef",
+  "exportDimensions": [
+    1024,
+    1024
+  ]
+}

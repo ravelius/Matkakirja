@@ -1,0 +1,407 @@
+{
+  "taskNumbers": [
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    313,
+    314
+  ],
+  "checkedAt": "2026-10-15T17:13:41.955095+00:00",
+  "newImages": [
+    {
+      "taskNumber": 306,
+      "title": "Giza",
+      "file": "giza-pyramidit.webp",
+      "root": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1/giza-pyramidit-v1-native.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "nativeFormat": "PNG",
+      "native": {
+        "sha256": "63185dca0c51942723239e3a1380c410b9550fa8d60c62c2aabd7fd7d78cc007",
+        "bytes": 1077206
+      },
+      "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1/giza-pyramidit.webp",
+      "exportDimensions": [
+        1024,
+        1024
+      ],
+      "exportMode": "RGBA",
+      "exportFormat": "WebP",
+      "export": {
+        "sha256": "d3a3d22f16ea7bd30637e1648d3d6791cd415ba4fa9df1cdb0b0a8b58f2ccb14",
+        "bytes": 470784
+      },
+      "originalToolBytesEqualNASCopy": true,
+      "rootRecomputedPremultipliedResizeRGBAEquality": true,
+      "exportResampledNotNative": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "fullyTransparentPixels": 749903,
+      "partialAlphaPixels": 298069,
+      "visibleBBoxAlphaAtLeast8": [
+        69,
+        268,
+        970,
+        818
+      ],
+      "visibleMargins": [
+        69,
+        268,
+        54,
+        206
+      ],
+      "edgeNonzeroAlphaSamples": 8,
+      "edgeMaximumAlpha": 1,
+      "visibleContentClipped": false,
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "PTAccepted": false,
+      "styleAnchorAccepted": true
+    },
+    {
+      "taskNumber": 307,
+      "title": "Marrakech",
+      "file": "marrakech-koutoubia.webp",
+      "root": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/marrakech-koutoubia-v1-native.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "nativeFormat": "PNG",
+      "native": {
+        "sha256": "6c297e90360c33f099fb40557abb31564024e21a3aaf091a66f3c384d9b879b0",
+        "bytes": 1067369
+      },
+      "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/marrakech-koutoubia.webp",
+      "exportDimensions": [
+        1024,
+        1024
+      ],
+      "exportMode": "RGBA",
+      "exportFormat": "WebP",
+      "export": {
+        "sha256": "6a3997566a5cff127d0c3a80827579bd69bdd2180b6bc889c9497b3f76b957ef",
+        "bytes": 476210
+      },
+      "originalToolBytesEqualNASCopy": true,
+      "rootRecomputedPremultipliedResizeRGBAEquality": true,
+      "exportResampledNotNative": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "fullyTransparentPixels": 786818,
+      "partialAlphaPixels": 261184,
+      "visibleBBoxAlphaAtLeast8": [
+        244,
+        35,
+        799,
+        972
+      ],
+      "visibleMargins": [
+        244,
+        35,
+        225,
+        52
+      ],
+      "edgeNonzeroAlphaSamples": 5,
+      "edgeMaximumAlpha": 1,
+      "visibleContentClipped": false,
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "PTAccepted": false,
+      "styleAnchorAccepted": false
+    },
+    {
+      "taskNumber": 308,
+      "title": "Sahara",
+      "file": "sahara-karavaani.webp",
+      "root": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/308-sahara/v1",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/308-sahara/v1/sahara-karavaani-v1-native.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "nativeFormat": "PNG",
+      "native": {
+        "sha256": "bcee952f2edf7a8728da9ae688a17e9b47fdd4f540e402c5b48a822bd0857362",
+        "bytes": 904366
+      },
+      "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/308-sahara/v1/sahara-karavaani.webp",
+      "exportDimensions": [
+        1024,
+        1024
+      ],
+      "exportMode": "RGBA",
+      "exportFormat": "WebP",
+      "export": {
+        "sha256": "ad8796920ab6ad925429b2276289022eb71482bb165bce9aeacd67a68b32b759",
+        "bytes": 415696
+      },
+      "originalToolBytesEqualNASCopy": true,
+      "rootRecomputedPremultipliedResizeRGBAEquality": true,
+      "exportResampledNotNative": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "fullyTransparentPixels": 816561,
+      "partialAlphaPixels": 230363,
+      "visibleBBoxAlphaAtLeast8": [
+        53,
+        301,
+        1002,
+        798
+      ],
+      "visibleMargins": [
+        53,
+        301,
+        22,
+        226
+      ],
+      "edgeNonzeroAlphaSamples": 5,
+      "edgeMaximumAlpha": 1,
+      "visibleContentClipped": false,
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "PTAccepted": false,
+      "styleAnchorAccepted": false
+    },
+    {
+      "taskNumber": 309,
+      "title": "Samarkand",
+      "file": "samarkand-registan.webp",
+      "root": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan-v1-native.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "nativeFormat": "PNG",
+      "native": {
+        "sha256": "1f95918ce051c3f19d156e69a7b98805b4b613a778455a961756656bbe0dfbc6",
+        "bytes": 1401394
+      },
+      "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan.webp",
+      "exportDimensions": [
+        1024,
+        1024
+      ],
+      "exportMode": "RGBA",
+      "exportFormat": "WebP",
+      "export": {
+        "sha256": "856240288d14ff5031968234e63362f9089086b05f12c2026afe9e8c2a9dc137",
+        "bytes": 626620
+      },
+      "originalToolBytesEqualNASCopy": true,
+      "rootRecomputedPremultipliedResizeRGBAEquality": true,
+      "exportResampledNotNative": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "fullyTransparentPixels": 686920,
+      "partialAlphaPixels": 360864,
+      "visibleBBoxAlphaAtLeast8": [
+        23,
+        225,
+        1001,
+        821
+      ],
+      "visibleMargins": [
+        23,
+        225,
+        23,
+        203
+      ],
+      "edgeNonzeroAlphaSamples": 39,
+      "edgeMaximumAlpha": 1,
+      "visibleContentClipped": false,
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "PTAccepted": false,
+      "styleAnchorAccepted": false
+    },
+    {
+      "taskNumber": 310,
+      "title": "Grönlanti",
+      "file": "gronlanti-jaavuoret.webp",
+      "root": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1",
+      "nativePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/gronlanti-jaavuoret-v1-native.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "nativeMode": "RGBA",
+      "nativeFormat": "PNG",
+      "native": {
+        "sha256": "19a2e44de83e5dc46727d92ca2a40370c43003bc865c53f896e219804e7ba270",
+        "bytes": 988282
+      },
+      "exportPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/gronlanti-jaavuoret.webp",
+      "exportDimensions": [
+        1024,
+        1024
+      ],
+      "exportMode": "RGBA",
+      "exportFormat": "WebP",
+      "export": {
+        "sha256": "017a36c8f3e3f7acf1c2a29ce20a58d24967d1f9dcc594df51db913662d62ce7",
+        "bytes": 431668
+      },
+      "originalToolBytesEqualNASCopy": true,
+      "rootRecomputedPremultipliedResizeRGBAEquality": true,
+      "exportResampledNotNative": true,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "fullyTransparentPixels": 798115,
+      "partialAlphaPixels": 249571,
+      "visibleBBoxAlphaAtLeast8": [
+        90,
+        254,
+        937,
+        789
+      ],
+      "visibleMargins": [
+        90,
+        254,
+        87,
+        235
+      ],
+      "edgeNonzeroAlphaSamples": 1,
+      "edgeMaximumAlpha": 1,
+      "visibleContentClipped": false,
+      "generationCallsIssued": 1,
+      "generationCallsCompleted": 1,
+      "PTAccepted": false,
+      "styleAnchorAccepted": false
+    }
+  ],
+  "comparisonItems": [
+    {
+      "title": "Tripoli",
+      "kind": "olemassa oleva",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/tripoli-marcus-aureliuksen-riemukaari.webp",
+      "sha256": "7c73124f9067d921c2e5507d96af31c74026e38c7888997193bb282fafeca93e",
+      "file": "tripoli-marcus-aureliuksen-riemukaari.webp",
+      "sourceMailboxPath": "assets/kartat/miniatyyrit/tripoli-marcus-aureliuksen-riemukaari.webp"
+    },
+    {
+      "title": "Bagdad",
+      "kind": "olemassa oleva",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/bagdad-mustansiriya-koulu.webp",
+      "sha256": "c35680f61b3fca1e7101d053844a9b0e6e705f3d17962cc9c7d377b66d52935a",
+      "file": "bagdad-mustansiriya-koulu.webp",
+      "sourceMailboxPath": "assets/kartat/miniatyyrit/bagdad-mustansiriya-koulu.webp"
+    },
+    {
+      "title": "Teheran",
+      "kind": "olemassa oleva",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/teheran-golestanin-palatsi.webp",
+      "sha256": "d4922bc31a94289b27f1be9ae6d5dbe442ad8747db9466b0ac1c9d4049418549",
+      "file": "teheran-golestanin-palatsi.webp",
+      "sourceMailboxPath": "assets/kartat/miniatyyrit/teheran-golestanin-palatsi.webp"
+    },
+    {
+      "title": "Dubai",
+      "kind": "olemassa oleva",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/dubai-dhow-satama.webp",
+      "sha256": "18006f30538f001444622cf99e8d246fd4f827e5a1a82ba5116fa9c5cf79da09",
+      "file": "dubai-dhow-satama.webp",
+      "sourceMailboxPath": "assets/kartat/miniatyyrit/dubai-dhow-satama.webp"
+    },
+    {
+      "title": "Giza",
+      "kind": "Giza-tyyliankkuri",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1/giza-pyramidit.webp",
+      "sha256": "d3a3d22f16ea7bd30637e1648d3d6791cd415ba4fa9df1cdb0b0a8b58f2ccb14",
+      "file": "giza-pyramidit.webp",
+      "taskNumber": 306
+    },
+    {
+      "title": "Marrakech",
+      "kind": "uusi",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/marrakech-koutoubia.webp",
+      "sha256": "6a3997566a5cff127d0c3a80827579bd69bdd2180b6bc889c9497b3f76b957ef",
+      "file": "marrakech-koutoubia.webp",
+      "taskNumber": 307
+    },
+    {
+      "title": "Sahara",
+      "kind": "uusi",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/308-sahara/v1/sahara-karavaani.webp",
+      "sha256": "ad8796920ab6ad925429b2276289022eb71482bb165bce9aeacd67a68b32b759",
+      "file": "sahara-karavaani.webp",
+      "taskNumber": 308
+    },
+    {
+      "title": "Samarkand",
+      "kind": "uusi",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan.webp",
+      "sha256": "856240288d14ff5031968234e63362f9089086b05f12c2026afe9e8c2a9dc137",
+      "file": "samarkand-registan.webp",
+      "taskNumber": 309
+    },
+    {
+      "title": "Grönlanti",
+      "kind": "uusi",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/gronlanti-jaavuoret.webp",
+      "sha256": "017a36c8f3e3f7acf1c2a29ce20a58d24967d1f9dcc594df51db913662d62ce7",
+      "file": "gronlanti-jaavuoret.webp",
+      "taskNumber": 310
+    }
+  ],
+  "allFiveNative1254SquareRGBA": true,
+  "allFiveExport1024SquareRGBAWebP": true,
+  "rootRecomputedRGBAEqualityAll": true,
+  "nativeToolBytesPreservedAll": true,
+  "GizaRegenerated": false,
+  "GizaPreviousFilesPreserved": true,
+  "originalFourAssetsPreserved": true,
+  "totalGenerations": 5,
+  "newGenerationsUnder314": 4,
+  "explicitBatchWithoutIntermediateFeedback": true,
+  "rootPersonallyViewedAllFourNewExports": true,
+  "rootBoardPersonallyViewed": true,
+  "rootAlphaProofPersonallyViewed": true,
+  "contentChecks": {
+    "Marrakech": "Square minaret and palms visible, whole subject, pale sepia/watercolor.",
+    "Sahara": "Exactly four camels with a tiny featureless rider; no obvious repeated fur artifact. Side-profile emphasis noted.",
+    "Samarkand": "Three distinct madrasa fronts, restrained gray-blue domes, full U-shaped square scene.",
+    "Greenland": "Exactly two icebergs on dark muted water and one small kayak/featureless paddler."
+  },
+  "reviewNotes": [
+    "Sahara and Samarkand have tight horizontal margins, around20-23px; no visible clipping. Their framing and Sahara side-profile emphasis are explicitly left to PT final review.",
+    "Tiny alpha1 edge dust is preserved from generator, not threshold-cleaned or painted out. Native/export readbacks quantify it.",
+    "Miniatures are stylistic clues; no historically exact architectural model or survey certification is claimed."
+  ],
+  "independentReviewFiles": [
+    "independent-QA-marrakech-sahara.json",
+    "independent-QA-samarkand-gronland.json"
+  ],
+  "nineImageComparisonComplete": true,
+  "GizaStyleAnchorAccepted": true,
+  "finalPTAccepted": false,
+  "gameIntegrated": false,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "R2Used": false,
+  "mainMerged": false,
+  "published": false,
+  "Louvre312Resumed": false
+}

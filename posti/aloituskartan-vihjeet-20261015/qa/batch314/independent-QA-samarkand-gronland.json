@@ -1,0 +1,430 @@
+{
+  "review": "independent visual and pixel QA of the other worker's task309 and310 first versions",
+  "batch": 314,
+  "reviewedAt": "2026-10-15T17:08:11.405Z",
+  "reviewerProducedTheseTasks": false,
+  "scope": "Pass-for-review only: subject count/readability, broad style compatibility with accepted Giza and originals, visible clipping, transparency and export readback. Historical architectural exactness and final PT acceptance are not certified.",
+  "sourceReadInFull": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/task313-314/karttaseppa-codex-aloituskartan-vihjeet-20261015.md",
+  "styleReferencesPreviouslyInspected": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1/giza-pyramidit.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/tripoli-marcus-aureliuksen-riemukaari.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/bagdad-mustansiriya-koulu.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/teheran-golestanin-palatsi.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/dubai-dhow-satama.webp"
+  ],
+  "viewsInspected": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan-v1-native.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/alpha-proof-light-dark.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/gronlanti-jaavuoret-v1-native.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/gronlanti-jaavuoret.webp",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/alpha-proof-light-dark.png"
+  ],
+  "independentlyRecomputedPixelEvidence": [
+    {
+      "task": 309,
+      "native": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan-v1-native.png",
+        "sha256": "1f95918ce051c3f19d156e69a7b98805b4b613a778455a961756656bbe0dfbc6",
+        "bytes": 1401394,
+        "mode": "RGBA",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alpha0Count": 1030208,
+        "partialAlphaCount": 541764,
+        "alpha255Count": 544,
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaThresholdReadOnlyBounds": {
+          "1": {
+            "bbox": [
+              0,
+              0,
+              1228,
+              1254
+            ],
+            "marginsLTRB": [
+              0,
+              0,
+              26,
+              0
+            ]
+          },
+          "2": {
+            "bbox": [
+              26,
+              273,
+              1228,
+              1010
+            ],
+            "marginsLTRB": [
+              26,
+              273,
+              26,
+              244
+            ]
+          },
+          "8": {
+            "bbox": [
+              28,
+              275,
+              1226,
+              1005
+            ],
+            "marginsLTRB": [
+              28,
+              275,
+              28,
+              249
+            ]
+          },
+          "128": {
+            "bbox": [
+              29,
+              277,
+              1225,
+              1004
+            ],
+            "marginsLTRB": [
+              29,
+              277,
+              29,
+              250
+            ]
+          }
+        },
+        "borderNonzero": 47,
+        "borderAlpha1": 47,
+        "borderAtLeast2": 0
+      },
+      "export": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan.webp",
+        "sha256": "856240288d14ff5031968234e63362f9089086b05f12c2026afe9e8c2a9dc137",
+        "bytes": 626620,
+        "mode": "RGBA",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "alpha0Count": 686920,
+        "partialAlphaCount": 360864,
+        "alpha255Count": 792,
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaThresholdReadOnlyBounds": {
+          "1": {
+            "bbox": [
+              0,
+              0,
+              1003,
+              1024
+            ],
+            "marginsLTRB": [
+              0,
+              0,
+              21,
+              0
+            ]
+          },
+          "2": {
+            "bbox": [
+              21,
+              223,
+              1003,
+              825
+            ],
+            "marginsLTRB": [
+              21,
+              223,
+              21,
+              199
+            ]
+          },
+          "8": {
+            "bbox": [
+              23,
+              225,
+              1001,
+              821
+            ],
+            "marginsLTRB": [
+              23,
+              225,
+              23,
+              203
+            ]
+          },
+          "128": {
+            "bbox": [
+              24,
+              226,
+              1000,
+              820
+            ],
+            "marginsLTRB": [
+              24,
+              226,
+              24,
+              204
+            ]
+          }
+        },
+        "borderNonzero": 38,
+        "borderAlpha1": 38,
+        "borderAtLeast2": 0
+      },
+      "independentDecodedRGBAEqualsPremultipliedLanczosExport": true
+    },
+    {
+      "task": 310,
+      "native": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/gronlanti-jaavuoret-v1-native.png",
+        "sha256": "19a2e44de83e5dc46727d92ca2a40370c43003bc865c53f896e219804e7ba270",
+        "bytes": 988282,
+        "mode": "RGBA",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "alpha0Count": 1196739,
+        "partialAlphaCount": 375146,
+        "alpha255Count": 631,
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaThresholdReadOnlyBounds": {
+          "1": {
+            "bbox": [
+              0,
+              37,
+              1208,
+              1214
+            ],
+            "marginsLTRB": [
+              0,
+              37,
+              46,
+              40
+            ]
+          },
+          "2": {
+            "bbox": [
+              109,
+              309,
+              1150,
+              970
+            ],
+            "marginsLTRB": [
+              109,
+              309,
+              104,
+              284
+            ]
+          },
+          "8": {
+            "bbox": [
+              111,
+              311,
+              1147,
+              967
+            ],
+            "marginsLTRB": [
+              111,
+              311,
+              107,
+              287
+            ]
+          },
+          "128": {
+            "bbox": [
+              112,
+              312,
+              1146,
+              965
+            ],
+            "marginsLTRB": [
+              112,
+              312,
+              108,
+              289
+            ]
+          }
+        },
+        "borderNonzero": 1,
+        "borderAlpha1": 1,
+        "borderAtLeast2": 0
+      },
+      "export": {
+        "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/gronlanti-jaavuoret.webp",
+        "sha256": "017a36c8f3e3f7acf1c2a29ce20a58d24967d1f9dcc594df51db913662d62ce7",
+        "bytes": 431668,
+        "mode": "RGBA",
+        "dimensions": [
+          1024,
+          1024
+        ],
+        "alpha0Count": 798115,
+        "partialAlphaCount": 249571,
+        "alpha255Count": 890,
+        "alphaMinMax": [
+          0,
+          255
+        ],
+        "alphaThresholdReadOnlyBounds": {
+          "1": {
+            "bbox": [
+              0,
+              30,
+              987,
+              991
+            ],
+            "marginsLTRB": [
+              0,
+              30,
+              37,
+              33
+            ]
+          },
+          "2": {
+            "bbox": [
+              88,
+              252,
+              939,
+              791
+            ],
+            "marginsLTRB": [
+              88,
+              252,
+              85,
+              233
+            ]
+          },
+          "8": {
+            "bbox": [
+              90,
+              254,
+              937,
+              789
+            ],
+            "marginsLTRB": [
+              90,
+              254,
+              87,
+              235
+            ]
+          },
+          "128": {
+            "bbox": [
+              91,
+              255,
+              936,
+              788
+            ],
+            "marginsLTRB": [
+              91,
+              255,
+              88,
+              236
+            ]
+          }
+        },
+        "borderNonzero": 1,
+        "borderAlpha1": 1,
+        "borderAtLeast2": 0
+      },
+      "independentDecodedRGBAEqualsPremultipliedLanczosExport": true
+    }
+  ],
+  "tasks": [
+    {
+      "task": 309,
+      "asset": "samarkand-registan.webp",
+      "verdict": "pass_for_PT_review_with_margin_reservation",
+      "checks": {
+        "exactlyThreeMadrasaFacadesVisuallyReadable": true,
+        "subduedBlue": true,
+        "threeQuarterElevatedMiniature": true,
+        "sepiaLineAndPaleWatercolor": true,
+        "visibleClipping": false,
+        "allVisibleBuildingPartsContained": true,
+        "textVisible": false,
+        "watermarkOrFrameVisible": false,
+        "recognizableFacesVisible": false,
+        "genuineAlpha": true,
+        "export1024RGBA": true,
+        "independentLosslessRGBAReadbackEqual": true
+      },
+      "observations": [
+        "Three distinct large entrance facades are legible as left, rear and right madrasa buildings surrounding one courtyard. Domes, minarets, entrances and stairs remain inside the canvas.",
+        "Blue ornament and dome washes are dusty gray-blue, subdued rather than vivid; warm cream masonry, sepia contours and light watercolor fit the reference vocabulary.",
+        "The broad three-wing composition nearly fills the horizontal canvas: alpha>=2 bounds [21,223,1003,825], only21px left and right. At alpha>=8 margins are23px. No visible clipping, but generous horizontal margin is not met as strongly as the style anchors.",
+        "38 export border samples (47 native) have alpha1 only, with no border alpha>=2. The measured alpha1 dust is visually negligible and is not subject clipping."
+      ],
+      "uncertaintyOrDefects": [
+        {
+          "severity": "review_note",
+          "issue": "Tight horizontal margins",
+          "detail": "Review the21px side margins in the nine-image board; the image is complete, but this should not be described as ample framing."
+        },
+        {
+          "severity": "not_assessed",
+          "issue": "Historical exactness",
+          "detail": "The arrangement is a stylized Registan-like ensemble with three clear facades. This review does not certify exact architectural form, building identity or site geometry."
+        }
+      ],
+      "ptAccepted": false
+    },
+    {
+      "task": 310,
+      "asset": "gronlanti-jaavuoret.webp",
+      "verdict": "pass_for_PT_review",
+      "checks": {
+        "exactlyTwoIcebergs": true,
+        "exactlyOneKayak": true,
+        "exactlyOneTinyFeaturelessPaddler": true,
+        "miniatureBoundedWaterPatch": true,
+        "darkMutedWater": true,
+        "threeQuarterElevatedMiniature": true,
+        "sepiaLineAndPaleWatercolor": true,
+        "visibleClipping": false,
+        "textVisible": false,
+        "watermarkOrFrameVisible": false,
+        "recognizableFacesVisible": false,
+        "genuineAlpha": true,
+        "export1024RGBA": true,
+        "independentLosslessRGBAReadbackEqual": true
+      },
+      "observations": [
+        "Two separate angular icebergs are clear: one large left/rear, one smaller right. One small ochre kayak with one tiny blank-faced paddler sits in the foreground.",
+        "The dark slate-gray-blue water is one irregular bounded watercolor patch with pale reflections; there is no horizon or rectangular scene background.",
+        "Cream ice, thin sepia contour, gray-blue facets and light watercolor texture broadly fit the Giza/original miniature set. The water creates a darker local area as requested by the brief.",
+        "Alpha>=2 bounds [88,252,939,791] leave88px left,85px right,252px top and233px bottom; whole bergs, water and kayak are contained.",
+        "One export/native border sample has alpha1 only, with no border alpha>=2; no visible edge clip or opaque background."
+      ],
+      "uncertaintyOrDefects": [
+        {
+          "severity": "not_assessed",
+          "issue": "Final set balance",
+          "detail": "PT should judge the darker water patch against the full nine-image board; this is a review gate, not final acceptance."
+        }
+      ],
+      "ptAccepted": false
+    }
+  ],
+  "mutations": {
+    "imageGenerationCalls": 0,
+    "imageEdits": 0,
+    "retries": 0,
+    "outputAssetsChanged": false,
+    "writtenFiles": [
+      "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/batch314/independent-QA-samarkand-gronland.json"
+    ]
+  }
+}

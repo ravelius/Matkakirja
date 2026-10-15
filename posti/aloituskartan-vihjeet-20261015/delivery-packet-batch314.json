@@ -1,0 +1,324 @@
+{
+  "createdAt": "2026-10-15T17:16:42.661805+00:00",
+  "tasks": [
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    313,
+    314
+  ],
+  "scope": "All five new map clue assets plus final nine-image comparison for PT review",
+  "sourceCommit": "980a1b1e3d60ec5aba3f8991d9b04bde75dce53c",
+  "sourceBlob": "c328fe230e2a04b7962cda389b1c302e87a4ffb2",
+  "sameOrderTimestampCorrectionNotSecondOrder": true,
+  "newImagesTotal": 5,
+  "newImagesThisContinuation": 4,
+  "totalGenerationCalls": 5,
+  "newBatchGenerationCalls": 4,
+  "GizaRegenerated": false,
+  "nativeDimensionsAll": [
+    1254,
+    1254
+  ],
+  "nativeFormat": "PNG",
+  "exportDimensionsAll": [
+    1024,
+    1024
+  ],
+  "exportFormat": "WebP",
+  "exportMode": "RGBA",
+  "trueAlphaVerifiedAll": true,
+  "exportResampledAndNotClaimedAsNative": true,
+  "nativeToolBytesPreservedAll": true,
+  "rootRecomputedRGBAEqualityAll": true,
+  "allFiveAssetFiles": {
+    "posti/aloituskartan-vihjeet-20261015/giza-pyramidit.webp": {
+      "sha256": "d3a3d22f16ea7bd30637e1648d3d6791cd415ba4fa9df1cdb0b0a8b58f2ccb14",
+      "bytes": 470784
+    },
+    "posti/aloituskartan-vihjeet-20261015/marrakech-koutoubia.webp": {
+      "sha256": "6a3997566a5cff127d0c3a80827579bd69bdd2180b6bc889c9497b3f76b957ef",
+      "bytes": 476210
+    },
+    "posti/aloituskartan-vihjeet-20261015/sahara-karavaani.webp": {
+      "sha256": "ad8796920ab6ad925429b2276289022eb71482bb165bce9aeacd67a68b32b759",
+      "bytes": 415696
+    },
+    "posti/aloituskartan-vihjeet-20261015/samarkand-registan.webp": {
+      "sha256": "856240288d14ff5031968234e63362f9089086b05f12c2026afe9e8c2a9dc137",
+      "bytes": 626620
+    },
+    "posti/aloituskartan-vihjeet-20261015/gronlanti-jaavuoret.webp": {
+      "sha256": "017a36c8f3e3f7acf1c2a29ce20a58d24967d1f9dcc594df51db913662d62ce7",
+      "bytes": 431668
+    }
+  },
+  "comparisonItems": [
+    {
+      "title": "Tripoli",
+      "kind": "olemassa oleva",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/tripoli-marcus-aureliuksen-riemukaari.webp",
+      "sha256": "7c73124f9067d921c2e5507d96af31c74026e38c7888997193bb282fafeca93e",
+      "file": "tripoli-marcus-aureliuksen-riemukaari.webp",
+      "sourceMailboxPath": "assets/kartat/miniatyyrit/tripoli-marcus-aureliuksen-riemukaari.webp"
+    },
+    {
+      "title": "Bagdad",
+      "kind": "olemassa oleva",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/bagdad-mustansiriya-koulu.webp",
+      "sha256": "c35680f61b3fca1e7101d053844a9b0e6e705f3d17962cc9c7d377b66d52935a",
+      "file": "bagdad-mustansiriya-koulu.webp",
+      "sourceMailboxPath": "assets/kartat/miniatyyrit/bagdad-mustansiriya-koulu.webp"
+    },
+    {
+      "title": "Teheran",
+      "kind": "olemassa oleva",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/teheran-golestanin-palatsi.webp",
+      "sha256": "d4922bc31a94289b27f1be9ae6d5dbe442ad8747db9466b0ac1c9d4049418549",
+      "file": "teheran-golestanin-palatsi.webp",
+      "sourceMailboxPath": "assets/kartat/miniatyyrit/teheran-golestanin-palatsi.webp"
+    },
+    {
+      "title": "Dubai",
+      "kind": "olemassa oleva",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/dubai-dhow-satama.webp",
+      "sha256": "18006f30538f001444622cf99e8d246fd4f827e5a1a82ba5116fa9c5cf79da09",
+      "file": "dubai-dhow-satama.webp",
+      "sourceMailboxPath": "assets/kartat/miniatyyrit/dubai-dhow-satama.webp"
+    },
+    {
+      "title": "Giza",
+      "kind": "Giza-tyyliankkuri",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1/giza-pyramidit.webp",
+      "sha256": "d3a3d22f16ea7bd30637e1648d3d6791cd415ba4fa9df1cdb0b0a8b58f2ccb14",
+      "file": "giza-pyramidit.webp",
+      "taskNumber": 306
+    },
+    {
+      "title": "Marrakech",
+      "kind": "uusi",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/marrakech-koutoubia.webp",
+      "sha256": "6a3997566a5cff127d0c3a80827579bd69bdd2180b6bc889c9497b3f76b957ef",
+      "file": "marrakech-koutoubia.webp",
+      "taskNumber": 307
+    },
+    {
+      "title": "Sahara",
+      "kind": "uusi",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/308-sahara/v1/sahara-karavaani.webp",
+      "sha256": "ad8796920ab6ad925429b2276289022eb71482bb165bce9aeacd67a68b32b759",
+      "file": "sahara-karavaani.webp",
+      "taskNumber": 308
+    },
+    {
+      "title": "Samarkand",
+      "kind": "uusi",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/samarkand-registan.webp",
+      "sha256": "856240288d14ff5031968234e63362f9089086b05f12c2026afe9e8c2a9dc137",
+      "file": "samarkand-registan.webp",
+      "taskNumber": 309
+    },
+    {
+      "title": "Grönlanti",
+      "kind": "uusi",
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/gronlanti-jaavuoret.webp",
+      "sha256": "017a36c8f3e3f7acf1c2a29ce20a58d24967d1f9dcc594df51db913662d62ce7",
+      "file": "gronlanti-jaavuoret.webp",
+      "taskNumber": 310
+    }
+  ],
+  "finalNineImageBoardComplete": true,
+  "GizaStyleAnchorAccepted": true,
+  "PTFinalAcceptanceVerified": false,
+  "PTAccepted": false,
+  "gameIntegrated": false,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "R2Used": false,
+  "mainMerged": false,
+  "published": false,
+  "otherWorkResumedByThisBatch": false,
+  "previousFirstCandidateLetterPreservedAt": "posti/aloituskartan-vihjeet-20261015/history/codex-karttaseppa-aloituskartan-first306-20261015.md",
+  "previousFirstCandidateLetterSHA256": "f237e231cc7e347461eef56ee749df9d8381d284923b0add2a993f94f4781c41",
+  "files": {
+    "posti/aloituskartan-vihjeet-20261015/marrakech-koutoubia.webp": {
+      "sha256": "6a3997566a5cff127d0c3a80827579bd69bdd2180b6bc889c9497b3f76b957ef",
+      "bytes": 476210
+    },
+    "posti/aloituskartan-vihjeet-20261015/native/marrakech-koutoubia-v1-native.png": {
+      "sha256": "6c297e90360c33f099fb40557abb31564024e21a3aaf091a66f3c384d9b879b0",
+      "bytes": 1067369
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task307/prompt.txt": {
+      "sha256": "9d8b36e94ec05baabd8406c8ac69d3d624999d6c7270ea46dde2947652966a92",
+      "bytes": 2542
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task307/reference-roles.json": {
+      "sha256": "07090d70df4fe6bfe5a4c48bb80716a9debb2025a1fcdeb35964a3afa609bd58",
+      "bytes": 1248
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task307/generation-call-record.json": {
+      "sha256": "26b6b06a419f0101e040f341a8802c3db0430fbf0a6fb4d9d45d59440ebd8a8c",
+      "bytes": 1920
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task307/native-and-export-readback.json": {
+      "sha256": "543f0dab82c023d73ff023b6c2ddcb670d5e52b0069e12d2b82a4aee54cddb92",
+      "bytes": 2404
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task307/visual-QA.json": {
+      "sha256": "2eb419aa23a18a3ba44a3b14a8b18ee78bcd375036e4b0c72bfd779832852c85",
+      "bytes": 1163
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task307/alpha-proof-light-dark.png": {
+      "sha256": "ec039c478175f02163acdc1e24c49c8aa908fdc00e4815761eac7b47752b9276",
+      "bytes": 951490
+    },
+    "posti/aloituskartan-vihjeet-20261015/sahara-karavaani.webp": {
+      "sha256": "ad8796920ab6ad925429b2276289022eb71482bb165bce9aeacd67a68b32b759",
+      "bytes": 415696
+    },
+    "posti/aloituskartan-vihjeet-20261015/native/sahara-karavaani-v1-native.png": {
+      "sha256": "bcee952f2edf7a8728da9ae688a17e9b47fdd4f540e402c5b48a822bd0857362",
+      "bytes": 904366
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task308/prompt.txt": {
+      "sha256": "7f94c64896cbbeb9bacac584960c01778a125d430b7fec8572f997d95346246b",
+      "bytes": 2650
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task308/reference-roles.json": {
+      "sha256": "07090d70df4fe6bfe5a4c48bb80716a9debb2025a1fcdeb35964a3afa609bd58",
+      "bytes": 1248
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task308/generation-call-record.json": {
+      "sha256": "4848c46f129ab71afa1630c1fca6985a0af64017bc41a202eabc2aef1dbbf735",
+      "bytes": 1905
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task308/native-and-export-readback.json": {
+      "sha256": "4513ae840c2b548caa36dc80b068324d084f3f6e6e1b22972864055b5a16d727",
+      "bytes": 2395
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task308/visual-QA.json": {
+      "sha256": "4152ae94e2688272f8b2425a161b26ed3cfbc340d9a8a883d3005cb06b1de7a1",
+      "bytes": 1508
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task308/alpha-proof-light-dark.png": {
+      "sha256": "5d5064d44ce3da9bdfc45f5fb7d61816ceeb8b6cc29a15730ecc71f7e2d21121",
+      "bytes": 803074
+    },
+    "posti/aloituskartan-vihjeet-20261015/samarkand-registan.webp": {
+      "sha256": "856240288d14ff5031968234e63362f9089086b05f12c2026afe9e8c2a9dc137",
+      "bytes": 626620
+    },
+    "posti/aloituskartan-vihjeet-20261015/native/samarkand-registan-v1-native.png": {
+      "sha256": "1f95918ce051c3f19d156e69a7b98805b4b613a778455a961756656bbe0dfbc6",
+      "bytes": 1401394
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task309/prompt.txt": {
+      "sha256": "62793cf9f5d7c6bdc0f16b56a44f72e566111f6545891618022ca84ecdf085b4",
+      "bytes": 2426
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task309/reference-roles.json": {
+      "sha256": "a8e415c88ab988534cc8ec51807748c3bfe44d5277834cb89fa42fe02169d211",
+      "bytes": 2015
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task309/generation-call-record.json": {
+      "sha256": "ba4ea9a1b67ceeeb89ee02986f1cfacf41a2f02039856dd8eb6122b3bf9f86c7",
+      "bytes": 2348
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task309/native-and-export-readback.json": {
+      "sha256": "70de56fc932a7042eb9921cd3474a9bb2eae4998b2bfc66b5f35e82a4cf61151",
+      "bytes": 5110
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task309/visual-QA.json": {
+      "sha256": "8055f22e610a28d71ad84cb7ff968a44fe67911d8de7e9d17c5e29a384975243",
+      "bytes": 2160
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task309/alpha-proof-light-dark.png": {
+      "sha256": "3a0bcad516ff5d5a6bf810c88a1131a556f00f753defc8d26504e6b3e304e20d",
+      "bytes": 1230558
+    },
+    "posti/aloituskartan-vihjeet-20261015/gronlanti-jaavuoret.webp": {
+      "sha256": "017a36c8f3e3f7acf1c2a29ce20a58d24967d1f9dcc594df51db913662d62ce7",
+      "bytes": 431668
+    },
+    "posti/aloituskartan-vihjeet-20261015/native/gronlanti-jaavuoret-v1-native.png": {
+      "sha256": "19a2e44de83e5dc46727d92ca2a40370c43003bc865c53f896e219804e7ba270",
+      "bytes": 988282
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task310/prompt.txt": {
+      "sha256": "a96ce46d8e06939ded9774800c8f057df686a6febe3c922a23a19d55cdaf256b",
+      "bytes": 2579
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task310/reference-roles.json": {
+      "sha256": "b144815d80d7620ef9a1583b0f3cc42930c4532df2862ddfbd504cdfa07b14eb",
+      "bytes": 1999
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task310/generation-call-record.json": {
+      "sha256": "b52653f9d6f5f34782dae5d5cd647b2d4a844550f8de5a7c4d176333ec3703f1",
+      "bytes": 2349
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task310/native-and-export-readback.json": {
+      "sha256": "cab48e1e190d6eedbc7d1e56db95dcf0147f087c4353fd0e7cc53c60c51d0003",
+      "bytes": 5118
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task310/visual-QA.json": {
+      "sha256": "6ac2a5e7c6a59a1c3ce629bc410a3694de22859b456399ed0a61aa6cedb3db3f",
+      "bytes": 2101
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/task310/alpha-proof-light-dark.png": {
+      "sha256": "7735bcf3759642bed7477b6f1011e7cdd95a154f5166b0d5001032edb8b7ab4a",
+      "bytes": 840973
+    },
+    "posti/aloituskartan-vihjeet-20261015/vertailu-9kuvaa.png": {
+      "sha256": "ed9add08780c1bf39e18d0880a272c953ed795a5e4ad5b430b4773c5ec0a16e1",
+      "bytes": 1735056
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/batch314/root-nine-image-QA.json": {
+      "sha256": "5375cd6b10bf40897078cf97bf1ce259c8014f7b757ef2a05016aba86950edbb",
+      "bytes": 14438
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/batch314/QA-FI.md": {
+      "sha256": "fde1272f399516bc58c8714976c854ae2edb70088016dc62cc12be92daafa167",
+      "bytes": 2497
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/batch314/uudet-5-alpha-vaalea-tumma-QA.png": {
+      "sha256": "06d5ec16429fb791c9b868eb42861487e5c22580b5aff0adc5ee9bd27e0d24ee",
+      "bytes": 586284
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/batch314/authorization.json": {
+      "sha256": "564f007e160483b4720d8b302498ebb3995f47ba3445886cb82f2f4b0ddd6543",
+      "bytes": 1215
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/batch314/worker-call-readback.json": {
+      "sha256": "84ec1d68b725c9822a900a543f081071afd012137cdf7915d026d6d09e054dd2",
+      "bytes": 1173
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/batch314/Giza-preservation-snapshot.json": {
+      "sha256": "c0892273313b4f1e8e51e0f5378ca34ea86ab91c698caa894daa566f923ee522",
+      "bytes": 1595
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/batch314/independent-QA-marrakech-sahara.json": {
+      "sha256": "6e57c4534b8236447585d83764ab47666b9c8d181bf00d6ae664fe97e53a9eb7",
+      "bytes": 9466
+    },
+    "posti/aloituskartan-vihjeet-20261015/qa/batch314/independent-QA-samarkand-gronland.json": {
+      "sha256": "a1905cfd11d70d5a74b9a55e4a7bab949cf1e5741051c804c1660b4c11d47721",
+      "bytes": 13712
+    },
+    "posti/aloituskartan-vihjeet-20261015/sources/task313-314/karttaseppa-codex-aloituskartan-vihjeet-20261015.md": {
+      "sha256": "4665e92eeee18d586f7cf2e43885fd502883298a2c5072e846aee1e1a44ae734",
+      "bytes": 3113
+    },
+    "posti/aloituskartan-vihjeet-20261015/sources/task313-314/source-version-record.json": {
+      "sha256": "73135fe6e4657973ba88cf4b200afbccc80fe1959e1eba34c43f5aac23f603ed",
+      "bytes": 737
+    },
+    "posti/aloituskartan-vihjeet-20261015/history/codex-karttaseppa-aloituskartan-first306-20261015.md": {
+      "sha256": "f237e231cc7e347461eef56ee749df9d8381d284923b0add2a993f94f4781c41",
+      "bytes": 3022
+    }
+  }
+}

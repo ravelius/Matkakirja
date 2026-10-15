@@ -1,0 +1,28 @@
+{
+  "task": 308,
+  "inspectedNative": true,
+  "inspectedExport": true,
+  "inspectedLightDarkAlphaProof": true,
+  "status": "technical pass; worker visual review complete with composition note; independent QA and final PT acceptance pending",
+  "subject": "Exactly4 separate single-humped camels with normal readable bodies/legs along a dune crest. One small rider has no facial detail.",
+  "style": "Thin sepia line, pale cream/ochre watercolor dune and camels, tiny faded brick/gray-blue packs. Dune viewed from above in3/4; caravan animals read mostly in side profile.",
+  "checks": {
+    "exactlyFourCamels": true,
+    "anatomicallyReadable": true,
+    "subjectComplete": true,
+    "visibleClipping": false,
+    "genuineTransparency": true,
+    "opaqueRectangle": false,
+    "textOrWatermark": false,
+    "frame": false,
+    "recognizableFaces": false,
+    "nativeUnchanged": true,
+    "exportLosslessRGBAReadbackEqual": true
+  },
+  "notes": [
+    "Native1254x1254; authorized whole-canvas premultiplied Lanczos resize to1024x1024.",
+    "7 native and5 export border samples have alpha1 only; content alpha>=2 stays within [64,368,1229,979] native / [52,299,1004,800] export. Dust documented unchanged, no threshold or repair.",
+    "Elongated composition has a narrower right transparent margin:20px at alpha>=2; no subject clipping. Independent review should assess desired map-set margin/style compatibility.",
+    "No retries or repairs. Final style acceptance belongs to the nine-image board."
+  ]
+}

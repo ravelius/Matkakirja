@@ -1,0 +1,32 @@
+[
+  {
+    "image": 1,
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/306-giza/v1/giza-pyramidit.webp",
+    "role": "primary accepted style anchor",
+    "editTarget": false
+  },
+  {
+    "image": 2,
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/tripoli-marcus-aureliuksen-riemukaari.webp",
+    "role": "original set style reference",
+    "editTarget": false
+  },
+  {
+    "image": 3,
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/bagdad-mustansiriya-koulu.webp",
+    "role": "original set style reference",
+    "editTarget": false
+  },
+  {
+    "image": 4,
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/teheran-golestanin-palatsi.webp",
+    "role": "original set style reference",
+    "editTarget": false
+  },
+  {
+    "image": 5,
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/sources/40845b42/dubai-dhow-satama.webp",
+    "role": "original set style reference",
+    "editTarget": false
+  }
+]

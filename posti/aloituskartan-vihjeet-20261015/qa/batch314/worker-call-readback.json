@@ -1,0 +1,35 @@
+{
+  "recordedAt": "2026-10-15T17:05:18.167061+00:00",
+  "batchCallsIssued": 4,
+  "batchCallsCompleted": 4,
+  "rows": [
+    {
+      "taskNumber": 307,
+      "issued": 1,
+      "completed": 1,
+      "recordPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/307-marrakech/v1/generation-call-record.json",
+      "exists": true
+    },
+    {
+      "taskNumber": 308,
+      "issued": 1,
+      "completed": 1,
+      "recordPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/308-sahara/v1/generation-call-record.json",
+      "exists": true
+    },
+    {
+      "taskNumber": 309,
+      "issued": 1,
+      "completed": 1,
+      "recordPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/309-samarkand/v1/generation-call-record.json",
+      "exists": true
+    },
+    {
+      "taskNumber": 310,
+      "issued": 1,
+      "completed": 1,
+      "recordPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/aloituskartan-vihjeet-20261015/310-gronlanti/v1/generation-call-record.json",
+      "exists": true
+    }
+  ]
+}
