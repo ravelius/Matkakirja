@@ -123,3 +123,36 @@ Omistaja 17.22 (sanatarkasti): "toisaalta näitä 3d hommia voisi siirtää jatk
 ## PAATOKSET 15.10.2026 klo 17.23–17.24: LUUPIN TYÖNJAKO; JUNA 195 VASTA PYYNNÖSTÄ (15.10.2026 klo 17.25)
 
 Omistaja 17.23 (sanatarkasti): "Tuota luuppia varten varmaan kannattaa tehdä eritasoisia sessioita, jotka tekevät eri osia, jotta saadaan tästä mahdollisimman nopea ja tokenystävällinen ratkaisu. Mutta sinä varmasti osaat sanoa, miten se käytännössä kannattaa tehdä. Eli paras mahdollinen lopputulos, niin nopeasti ja halvalla kuin mahdollista." KK:n työnjako (Raamattu TAVOITELUUPPI, LUUPIN TYÖNJAKO): Codex tavoitteet+maskit, LR rakentaja Opus medium kierroslokista, kierrosskripti, tuore Sonnet-arvioija, mekaaniset Sonnetille, Valoseppä peliin, PT vain tavoitteet ja lopputarkistus. Omistaja 17.24 (sanatarkasti): "tehdään juna 195 vasta sitten kun pyydän" → juna 195 kertyy, lukitus/TF vasta omistajan pyynnöstä.
+
+## PAATOKSET 15.10.2026 klo 17.51 (15.10.2026 klo 18.12)
+
+Isoisän uni: El Dorado -unikuva v1 hyväksytty (kortti 'Kyllä, tällä tyylillä'); Codex tekee Montezuman naamion, jadesinetin ja Kolme veljestä samalla tummalla, valokuvamaisella ilmeellä.
+
+## PAATOKSET 15.10.2026 klo 18.10 (15.10.2026 klo 18.12)
+
+Omistaja (sanelu, sanatarkasti): "Joo, tehdään tuo sinne Chiileen, mutta laita tämä odottaviin työlistalla. Ja muutenkin on hyvä idea, että sitten kun peli on valmis ja pelaaja alkaa valita
+ensimmäistä aloituskaupunkia, niin ympäri maailmaa on mielenkiintoisennäköisiä paikkoja tai mielenkiintoisia elementtejä eri puolella maapalloa. Näitä vihjeitä voitaisiin jo nyt ottaa myös siihen
+aloituskartalle. Ne vain täytyisi jotenkin tehdä kartan tyylin mukaisesti, jotta väripaletti ei karkaa liikaa. Myös nykyinen ISS-raketti on ehkä liian värikäs nykykartan tyyliin. Pitäi vielä miettiä,
+mutta tuota ISS:n tähti- ja revontuli-osiota voitaisiin nyt alkaa kehittämään, ja näille voisi tehdä omat kuvalliset pienet paikat sijaintikarttaan, minkä saa auki, kun sitä ohjaamoa klikkaa. Myös
+muita Kohteita voisi vielä miettiä tarkemmin, että nyt kun siellä sijaintikartassa on vain iso kasa eri kohteita, niin niitä olisi hyvä jotenkin hieman ryhmitellä ja tehdä niitä pieniä kuvakkeita.
+Avuksi, jotta näkymä olisi herkullisempi ja samalla pitää ratkaista ne aiemmat ongelmat, joista annoin palautetta. Voit alkaa hommiin."
+Toteutus (KK:n toimeksianto scratchpad/keskustelukanava/iss-yotaivas-20261015.md): 1) Kaukoputkilinssi Chilen Atacamaan odottaviin. 2) ISS-vaihe 2 työn alle: yötaivas (tähdet, planeetat, skanneri
+taivaalle, suomalaiset tähtinimet, lähennys) ja revontulet 3D-verhoina tavoiteluupilla (NASA PD -kuvat tavoitteina), sijaintikartan kuvalliset paikat, ryhmittely ja kuvakkeet, yhdessä 17.52-palautteen
+korjausten kanssa. 3) Aloituskartalle vihjeitä ympäri maailmaa kartan tyylillä (VAIN EUROOPPA -poikkeus, kirjattu Raamattuun), kuvapari ennen kytkentää. 4) ISS-raketin väreistä yksi ehdotus
+kuvaparina, ei muutosta ilman päätöstä.
+
+## PAATOKSET 15.10.2026 klo 18.28 (15.10.2026 klo 18.28)
+
+ISS-sijaintikartta (kortti, kuvapari nyt|ryhmät nähty): 'Kyllä, kaikki kuvaruuduiksi (Suositus)'. Ryhmittely säilyy, kaikki ryhmät samoiksi kuvaruuduiksi kuin revontulet (3 riviin), revontulikuvien mustat kulmat rajataan; kytkentä vasta korjausten jälkeen.
+
+## PAATOKSET 15.10.2026 klo 18.31 (15.10.2026 klo 18.31)
+
+Karttasepän kuvaparit (kortti, sanatarkasti): 1) aloituskartan vihjeet ja 5 Codex-kuvaa: "Tehdään ne vasta kun niile on tehty selkeä suunnitelma mitä niissä tapahtuu" → odottaviin, ensin suunnitelma. 2) ISS-raketti karttapaletilla: "Kyllä sekä muillekin samanlaisille kohteille" → raketti kerma/murrettu tiili/okra junaan 195 ja sama karttapaletti kaikille vastaaville karttakohteille (Raamattu KARTAN KOHTEET KARTTAPALETILLA).
+
+## PAATOKSET 15.10.2026 klo 18.44: Pulun sähke aloituskaupungissa (15.10.2026 klo 18.44)
+
+Omistaja (kortti pulu-sahke, Kyllä): aloituskaupungissa isoisän unen jälkeen ei isoisän merkintää eikä luentaa; Pulun sarjaan uusi ui.livia.sahke "Ai, odotas – Pöllöltä tuli sähke!" heti tuuraus-1:n jälkeen, tuuraus-2 pois, muut ennallaan. Äänittäjä äänittää; Natiivi-UI kytkimen IsoisanUni.Kaytossa takana (5a57a7114).
+
+## PAATOKSET 15.10.2026 klo 18.44: ISS-kameran kuvauskokemus 1–3 (15.10.2026 klo 18.45)
+
+Omistaja (sanatarkasti, KK:n välittämä): "Tee 1-3". 1) Etsin: rajauksen ulkopuoli tummuu, skannerin vihreät kulmat = kuvan rajat, alareunassa objektiivi (24 mm / 400 mm) ja keskikohdan paikan nimi. 2) Lähennys: LAAJA = koko ikkuna, TELE = pehmeä lähennys keskikohtaan, nipistys väliltä, kohde pysyy rajauksessa. 3) Laukaisu: suljinääni + välähdys, valmis kuva hetken korttina (paikka, aika, korkeus, objektiivi NASAn astronauttikuvien tapaan) → albumiin. Ei NASA-vertailua eikä kuvaustehtäviä. Junaan 195 kytkimen taakse; kuvapari/video omistajalle ennen kytkentää. UI-POHJAT: skannerin kulmakehys ja olemassa olevat korttipohjat. Toteuttaa Pelikoodari.
