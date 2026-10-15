@@ -213,3 +213,7 @@ Omistaja paketista 1–5: "Eikö kohokohtia ole enempää?" → (KK: 9 suunnitel
 ## PAATOKSET 15.10.2026 klo 22.06 (KK välitti): kohokohdat ja kohteet samaan ikkunaan (15.10.2026 klo 22.07)
 
 Omistaja: "Ja kohokohdat ja kohteet saisi näkyä jotenkin samassa ikkunassa. Vaikka vain kelaamalla alaspäin. Ja kohokohdat saisi olla vähän pienempinä. Vaikka kolme per rivi". Toteutus: yksi vieritettävä ikkuna (ylärivi → Kohokohdat 9 korttia kolme per rivi samalla korttipohjalla → ISS nyt | Oma sijainti → nykyinen lista); erillistä Kaikki paikat -näkymää ei tarvita. Kuva iPhone + iPad omistajalle ennen kohokohtien kytkentää. Natiivi-UI.
+
+## PAATOKSET 15.10.2026 klo 22.37 (KK välitti): ISS-etsin junaan 196, kehitys lyhyeksi (15.10.2026 klo 22.37)
+
+Omistaja etsinvideo 2:n jälkeen (kortti): "Kyllä, kehitys lyhyeksi (Suositus)". IssEtsin päälle junaan 196: kortti aukeaa noin 5 s:ssa laukaisuhetken kuvalla, tarkka kuva vaihtuu korttiin taustalla (kuvan teko noin 40 s). PK IssKameraKuva, NUI kortin vaihto. Kortin alarivillä 'korkeus 429 km' (ei pelkkä km, ettei lueta etäisyydeksi).
