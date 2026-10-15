@@ -9,7 +9,7 @@ Pelikoodari local_7fcab04b…), PT:lle ≤ 3 riviä. Edellinen luovutus: `viesti
 > Olet Karttaseppä (Opus, high). Aja git fetch origin, lue CLAUDE.md ja `git show <SHA>:docs/raportit/viesti-karttaseppa-luovutus-20261015-ilta.md`
 > KOKONAAN (haara karttaseppa-tyo-20260922). Viestit send_messagella id:llä (osoitekirja.md), PT:lle ≤ 3 riviä. Jatka kohdasta 1.
 
-## 1. KIERROSTEN MAASTO JA MAAMERKIT (PT 16.0x, omistaja 16.02: Lontoon, Prahan ja Ateenan hionta) — TEHTY, odottaa kuittausta
+## 1. KIERROSTEN MAASTO JA MAAMERKIT (PT 16.0x, omistaja 16.02: Lontoon, Prahan ja Ateenan hionta) — TEHTY JA KUITATTU junaan 194 (PT 16.2x)
 
 Läpilento datasta (ei simua: omistajan "vain automaattiset testit"), raportti ja kuvat `proto-3d/_tyo/karttaseppa/kierrostarkistus-20261015/`
 (LUEMINUT.md, ateena-maanpinta-v1-v2.jpg, lontoo-maanpinta-v2-greenwich.jpg, tarkista.py, tulos-*.txt). PT:lle lähetetty 16.1x.
@@ -18,7 +18,7 @@ Läpilento datasta (ei simua: omistajan "vain automaattiset testit"), raportti j
   Natiivi poimii -v2:n itse (OmaKorkeus.MaaVersiot).
 - **Tuulten tornin muoto**: natiivi wt `/Users/Shared/Claude/wt/proto-karttaseppa-kierrokset-194`, haara karttaseppa/kierrokset-194
   **5222f796b** (muodot-ateena.json + Q372717) → NS junaan 194 PT:n kuittauksella.
-- **Avoin koodiehdotus** (LS1/Valoseppä, ei KS): korostuksen pohja DTM:stä — nyt DSM-kehä kelluu (Abbey +7, Petřín +14, Vyšehrad +9 m).
+- **Koodiehdotus** (PT välitti LS1:lle junaan 195, ei KS): korostuksen pohja DTM:stä — nyt DSM-kehä kelluu (Abbey +7, Petřín +14, Vyšehrad +9 m).
 - Jos PT pyytää lisää: seuraavaksi näkyvimmät ovat koodissa; datassa ei avoimia vikoja (saumat, kuopat ja muotojen osumat ok).
 
 ## 2. Muut tämän vuoron erät (valmiit)
