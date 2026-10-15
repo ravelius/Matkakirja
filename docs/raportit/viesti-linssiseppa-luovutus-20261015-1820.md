@@ -28,17 +28,20 @@ Toimeksianto: /Users/Shared/Claude/Matkakirja-fable/scratchpad/keskustelukanava/
   (vain historian soidessa, omistajan 7.10. lähtösääntö pysyy); 6cea52597 historialento kaaressa (HistoriaLentoRho 0,7).
 - 93c146524 Ateena v11 (kertojan kulku: v10 venytti lennot 61/36 s → stadion ilman katse_suuntaa, Tuulten torni v9-arvoihin; testivahti
   lento ≤ 35 s, poikkeukset Akropolis 53,5 s ja Greenwich 44,4 s) – PT:lle ilmoitettu, kuittaus odottaa.
-- 08ac5caee Ateena v12 (Zeus silmä 75–90, PK:n valinta zeus-silma-195-ajosta) – NS:lle, Julkaisijalle (vienti v12) ja PT:lle ilmoitettu. Viennit: v10 ja v11 CDN:ssä, v12 Julkaisijalla.
+- Ateena v12 = PELIKOODARIN edb351a43 (pelikoodari/ateena-v12, 93c146524:n päällä; Zeus silmä 75–90; ämpärissä 18.16, PT: voimassa).
+  Oma rinnakkainen 08ac5caee hylätty (sama data, vain versioteksti eri; ei v13:a). kierrokset195-haara siirretty edb351a43:een.
 - Praha pysyy v6:ssa (Josefovin 45/90 rikkoivat 15 s:n liukurajan). Hylätty v7-paketti: proto-3d/_tyo/linssiseppa/hylatyt/.
 - Historiaosioiden kuvat (404 Prahalle, Ateenalle, Lontoolle, Kööpenhaminalle) → PT antoi Sisältökirjurille; koodi lukee ne heti.
 - Arvio historia195-arkista: proto-3d/_tyo/linssiseppa/historia195-arvio-20261015.md.
 - Orpo museokohdat6-recordVideo (pid 26437, 19 h) pysäytetty 18.1x, simu vapaa; PT:lle kuitattu.
 
 ## 3. MUUT
+- NS:n löydös (PT 18.2x, pieni, ENNEN yötaivasta): AstronauttiLinssiTestit.CupolanEnnakkoOnAvautuvaAsento kaatui kerran (e9fba547b) –
+  oikea kello ylitti päivä/yö-rajan 20 s:n ennakossa. Korjaus: kiinteä kello testiin (tai yö-tarkistus myös e20-hetkelle).
 - Hefaistos → Akropolis -lento 53,5 s (vanha, ei käännöstä; KS:n maanpinta v3 7a16a11d0 korjaa Propylaian korostuksen – katso, lyheneekö).
-- Worktreet: historia194 (poista kun juna-194 julkaistu), kierrokset195 (työ, juna-195:n kärjessä + 93c146524 + 08ac5caee), puutomat191 (pysäköity).
+- Worktreet: historia194 (poista kun juna-194 julkaistu), kierrokset195 (työ, = edb351a43), puutomat191 (pysäköity).
 - tools/gpu-vapaa.sh ja .claude/settings.local.json* checkoutissa eivät ole minun (älä committaa).
 
 ## ALOITUSVIESTI SEURAAJALLE
 Olet Linssiseppä (Opus, high). Lue CLAUDE.md ja tämä luovutus (git show <sha>:docs/raportit/viesti-linssiseppa-luovutus-20261015-1820.md).
-Aloita ISS-yötaivaasta: lue toimeksianto ja nykyinen taivaskoodi, lähetä PT:lle suunnitelma 3 rivillä ennen koodia (PK:n kanssa ISS-koodista sovittava).
+Korjaa ensin NS:n testilöydös (kohta 3), sitten ISS-yötaivas (AVOIN ERÄ, kohta 1): lue toimeksianto ja nykyinen taivaskoodi, lähetä PT:lle suunnitelma 3 rivillä ennen koodia (PK:n kanssa ISS-koodista sovittava).
