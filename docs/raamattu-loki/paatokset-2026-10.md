@@ -148,3 +148,7 @@ ISS-sijaintikartta (kortti, kuvapari nyt|ryhmät nähty): 'Kyllä, kaikki kuvaru
 ## PAATOKSET 15.10.2026 klo 18.31 (15.10.2026 klo 18.31)
 
 Karttasepän kuvaparit (kortti, sanatarkasti): 1) aloituskartan vihjeet ja 5 Codex-kuvaa: "Tehdään ne vasta kun niile on tehty selkeä suunnitelma mitä niissä tapahtuu" → odottaviin, ensin suunnitelma. 2) ISS-raketti karttapaletilla: "Kyllä sekä muillekin samanlaisille kohteille" → raketti kerma/murrettu tiili/okra junaan 195 ja sama karttapaletti kaikille vastaaville karttakohteille (Raamattu KARTAN KOHTEET KARTTAPALETILLA).
+
+## PAATOKSET 15.10.2026 klo 18.44: Pulun sähke aloituskaupungissa (15.10.2026 klo 18.44)
+
+Omistaja (kortti pulu-sahke, Kyllä): aloituskaupungissa isoisän unen jälkeen ei isoisän merkintää eikä luentaa; Pulun sarjaan uusi ui.livia.sahke "Ai, odotas – Pöllöltä tuli sähke!" heti tuuraus-1:n jälkeen, tuuraus-2 pois, muut ennallaan. Äänittäjä äänittää; Natiivi-UI kytkimen IsoisanUni.Kaytossa takana (5a57a7114).
