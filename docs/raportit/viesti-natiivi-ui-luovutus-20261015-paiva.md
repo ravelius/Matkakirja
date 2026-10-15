@@ -24,7 +24,7 @@ Työpuu: /Users/Shared/Claude/wt/proto-natiivi-ui-issikkuna (haara natiivi-ui/is
   OMISTAJA 10.33: "etsi toinen digi kirjoituskoneen ääni" → omistajan valinta iss-skanneri-kirjain-mekaaninen.wav: iss-193
   **ad776c15d** (OhjaamonAanet lataa sen tehosteeksi iss-skanneri-kirjain) annettu NS:lle JUNAAN 193 (11.5x); varmista NS:ltä.
 - Videot: proto-3d/_valmiit/skanneri-video-20261015/skanneri-ateena-{iphone,ipad}-v2.mp4 (äänet lisätty jälkikäteen:
-  scratchpadin mux/aanita2.py + vihrea.py; iPad käännetään transpose=2). Uusi video vain pyynnöstä.
+  ajoskriptit/aanita2.py <video> <konsoli-stdout.log> <äänikansio> <ulos> + vihrea.py; iPad käännetään transpose=2). Uusi video vain pyynnöstä.
 
 ## AVOIMET
 1. LS1:n tarkistuslista (PT:n pyyntö): Ranskan salin teosnimi osuu kankaan päälle iPad vaakana 37/51 teoksessa (4 rajalla):
