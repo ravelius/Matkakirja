@@ -144,3 +144,7 @@ kuvaparina, ei muutosta ilman päätöstä.
 ## PAATOKSET 15.10.2026 klo 18.28 (15.10.2026 klo 18.28)
 
 ISS-sijaintikartta (kortti, kuvapari nyt|ryhmät nähty): 'Kyllä, kaikki kuvaruuduiksi (Suositus)'. Ryhmittely säilyy, kaikki ryhmät samoiksi kuvaruuduiksi kuin revontulet (3 riviin), revontulikuvien mustat kulmat rajataan; kytkentä vasta korjausten jälkeen.
+
+## PAATOKSET 15.10.2026 klo 18.31 (15.10.2026 klo 18.31)
+
+Karttasepän kuvaparit (kortti, sanatarkasti): 1) aloituskartan vihjeet ja 5 Codex-kuvaa: "Tehdään ne vasta kun niile on tehty selkeä suunnitelma mitä niissä tapahtuu" → odottaviin, ensin suunnitelma. 2) ISS-raketti karttapaletilla: "Kyllä sekä muillekin samanlaisille kohteille" → raketti kerma/murrettu tiili/okra junaan 195 ja sama karttapaletti kaikille vastaaville karttakohteille (Raamattu KARTAN KOHTEET KARTTAPALETILLA).
