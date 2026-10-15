@@ -21,17 +21,17 @@
  },
  {
   "kohde": "andromeda",
-  "kuvateksti": "Andromedan galaksi M31 ja sen kaksi pientä kumppania",
-  "commons_tiedosto": "File:Andromeda Galaxy (M31) wide-field image (heic0512d).jpg",
-  "url": "https://commons.wikimedia.org/wiki/File:Andromeda_Galaxy_(M31)_wide-field_image_(heic0512d).jpg",
-  "lisenssi": "PD",
-  "tekija": "÷ 2002 R. Gendler, Photo by R. Gendler",
-  "perustelu": "Katsoin esikatselun: M31 kokonaisuudessaan, selvä keskusta ja pölykaistat, kaksi seuralaisgalaksia (M32, M110) mukana; ei kehystä (PD, ESA/Hubble heic0512d, R. Gendler).",
-  "media_tiedosto": "taivas/kuvat/c1abe7d2d63503f0.jpg",
+  "kuvateksti": "Andromedan galaksi M31 ja sen kaksi kumppania, harrastajan kuva",
+  "commons_tiedosto": "File:Andromeda Galaxy 2025.png",
+  "url": "https://commons.wikimedia.org/wiki/File:Andromeda_Galaxy_2025.png",
+  "lisenssi": "CC0",
+  "tekija": "Brody Wesner",
+  "perustelu": "Vaihdettu 15.10.: vanha kuva (heic0512d) oli Commonsissa PD mutta tekijänoikeusmerkintä © R. Gendler, joten ei varma. Katsoin esikatselun: valokuva M31:stä ja kahdesta kumppanigalaksista (M32, M110), CC0 (Brody Wesner).",
+  "media_tiedosto": "taivas/kuvat/17e231b2762435d3.jpg",
   "paketti_leveys": 1280,
-  "paketti_korkeus": 1768,
-  "alkuperainen_leveys": 1955,
-  "alkuperainen_korkeus": 2700
+  "paketti_korkeus": 835,
+  "alkuperainen_leveys": 5827,
+  "alkuperainen_korkeus": 3803
  },
  {
   "kohde": "orioninsumu",
