@@ -5,7 +5,12 @@ Viestit `send_message` id:llä (/Users/Shared/Claude/osoitekirja.md); PT local_5
 Käännös ja simu AINA Julkaisijalta (local_5cb16c00): "KÄÄNNÄ <kärki> → app-polku" ja "SIMU VAPAA" heti ajon jälkeen.
 Jono: /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/JONO.md (tila 22.57 lopussa). Kaikki polut alla: D=/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2.
 
-## 1. ENSIMMÄISENÄ (simu A26BC7D0 on vielä minulla)
+## 1. ENSIMMÄISENÄ
+PÄIVITYS 23.13: Louvren ajo päättyi, mutta oma kuva (l2-kulmaB-oma.png) jäi ALOITUSRUUTUUN (Matkakirja-logo, "Aloita seikkailu") →
+pari louvre1/louvre-v2f-k11-pari-kulmaB.jpg on KELVOTON, älä lähetä. SIMU VAPAA on jo lähetetty Julkaisijalle. Pyydä uusi simuvuoro,
+katso $L/tapahtumat.txt ja stderr.log (miksi aloitus ei edennyt; appi 193 vs nykyinen?) ja aja kuvat-v2f-k11.zsh uudelleen
+(poista/nimeä ensin vanha lokit/valoseppa-louvre-v2f-k11-pari). Ilmoitin LR:lle, että pari tulee seuraajalta.
+Alkuperäinen ohje:
 a) Louvren kulman B pari (PT 22.5x + Linnanrakentaja local_996d60ab: käytä LR:n 22.54-vientiä k11): ajo $D/louvre1/kuvat-v2f-k11.zsh
    KÄYNNISSÄ klo 23.09 (prosessi kuvat-utu-mykistetty.sh, appi 193, paketti $D/louvre1/v6k18-lv2f-k11 = 22.54-vienti).
    Kun `lokit/valoseppa-louvre-v2f-k11-pari/pariisi/l2-kulmaB-oma.png` on syntynyt (tai `pgrep -fl kuvat-utu` tyhjä):
