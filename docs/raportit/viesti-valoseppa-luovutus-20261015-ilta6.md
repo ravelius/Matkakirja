@@ -5,6 +5,13 @@ Viestit `send_message` id:llä (/Users/Shared/Claude/osoitekirja.md); PT local_5
 Käännös ja simu AINA Julkaisijalta (local_5cb16c00): "KÄÄNNÄ <kärki> → app-polku" ja "SIMU VAPAA" heti ajon jälkeen.
 Jono: /Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/JONO.md (tila 22.57 lopussa). Kaikki polut alla: D=/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2.
 
+## 0. SEURAAJAN ENSIMMÄINEN ERÄ: OMISTAJAN PÄÄTÖS klo 23.12 (PT 23.1x; loki 5a74d78b0, sanatarkasti paatokset-2026-10.md)
+ISS-näkymään kytkimen taakse: 1) SALAMAT ISS nyt -tilassa oikeiden ukkosten kohdalle (/opas/saa "ukkonen", pohjana salamat k2 → nyt v3
+9e008fe11), kohokohdassa aina; 2) TÄHDENLENNOT aseman alapuolella meteoriparvien aikaan (kohokohta Perseidit; pohja perseidit-196 fe1b3b85c);
+3) VÄREILY raketin laukaisun liekin yläpuolelle + horisontin aurinko litistyy/aaltoilee nousussa ja laskussa. Video omistajalle ennen kytkentää
+(PT tarkistaa ensin). Efektit Valosepälle; säätieto ja parviajat Pelikoodarille (sovi rajapinta: esim. Salamat.Ukkoset(lista lat/lon/voima),
+Tahdenlennot.Parvi(aktiivinen, radiantti, ZHR)). Kohdat 1–3 tehdään ennen luvun 2 kierroksia, jos PT ei toisin sano.
+
 ## 1. ENSIMMÄISENÄ
 PÄIVITYS 23.13: Louvren ajo päättyi, mutta oma kuva (l2-kulmaB-oma.png) jäi ALOITUSRUUTUUN (Matkakirja-logo, "Aloita seikkailu") →
 pari louvre1/louvre-v2f-k11-pari-kulmaB.jpg on KELVOTON, älä lähetä. SIMU VAPAA on jo lähetetty Julkaisijalle. Pyydä uusi simuvuoro,
