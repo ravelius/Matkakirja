@@ -304,3 +304,14 @@ kuva iPhone + Mac PT:lle; SK luonnostelee Pulun kysymykset rinnalla – älä od
 - Julkaisija 00.2x: iPhone-liput (kaannos-meri.nyt + simu-meri.nyt) ANNETTU → odottaja 65296 kääntää ja ajaa itse; seuraaja tarkistaa lokin.
   **Mac LUVALLA**: `mac-kaanna.sh d7d4a89eb` vasta iOS-käännöksen jälkeen (L2-lukko, levy > 22 Gi), appi ikkunassa ~5 min vain kun
   omistaja idle ≥ 10 min (ioreg HIDIdleTime), sulje appi heti. Julkaisijalle: SIMU VAPAA + Mac valmis.
+
+## PÄIVITYS 16.10. 00.5x — PULUN 81 MERIVASTAUSTA KYTKETTY (PT 00.4x, omistaja 00.40, loki 83bc3b855)
+
+- **siirtoseppa/meri-nostot-196 2042f2738** (= d7d4a89eb + merge natiiviseppa/juna-196 d3d2b9f98 + merivastaukset): Peli/PuluMeriVastaukset
+  (data UI/Resources/PuluMeri/vastaukset.json, tuotto `python3 tyokalut/meri_pulu_vastaukset.py <verkkorepo> --ref origin/main`; tarkistaa kysymykset
+  korteista), PuluChat.MeriVastaukset (Kysy-polussa ennen pakettia/workeria: teksti + otto, jatkot saman kortin kysymättömät; kytkin päällä;
+  QA `ui chat meri [0|1|kysymys]`). Peli-testit 4/4, unity-tarkistus 0, tarkista.sh ok.
+- Äänet: aanet/pulu/meri-vastaukset-v1/pulu-meri-NN.mp3, NN = raportin "### N." (Äänittäjälle ehdotettu 00.4x; jos eri nimet → generaattorin AANET/nimi).
+  Kun ämpärissä (curl -I 200) → kerro PT:lle; vastaukset 82–103 (11 uutta merinostoa) vaativat omistajan uuden luvan.
+- iOS-käännös vaihdettu 2042f2738:aan: odottaja pid 39758 (H=2042f2738), skenaarioon lisätty m2b (ui chat meri). Mac-skripti
+  tyokalut/siirtoseppa-ajot/mac-meri-nostot-196.sh <.app> <kansio> (idle ≥ 600 s, mac-kaanna.sh 2042f2738 PROTO_LINJA=2 iOS-käännöksen jälkeen).
