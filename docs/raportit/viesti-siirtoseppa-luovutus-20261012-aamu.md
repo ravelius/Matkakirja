@@ -270,3 +270,14 @@ LCD pelkkä nimi, Live piiloon + ilmiöt + kohokohtien data). Uudempi kärki **e
   **73c4aa0a8** (siirtoseppa/iss-ilmiot-196; NS:lle vielä kertomatta, mukaan seuraavassa SHA:ssa) (2) Cupolassa ei piirretä aurinkoa
   (KyydinTaivas: vain kuvaputkessa). PT:ltä kysytty: kiekko Cupolaan (Valoseppä)? Sitten yksi simuajo → kortti 960×640 → vienti.
   Yksityiskohdat lokit/siirtoseppa-iss-paras-hetki/KOHOKOHTA-NOUSU.md.
+
+## PÄIVITYS 15.10. 23.3x — AURINKO NOUSEE CUPOLASSA (odottaa PT:n kuittausta → NS 196)
+
+- PT 22.3x: korttiin jää Linssisepän NASA-kuva; minun osani = kohokohta vie hetkeen, jossa aurinko todella nousee Cupolassa.
+- **siirtoseppa/iss-ilmiot-196 a4e218839** (e776bb186 + 73c4aa0a8 + bae6eee4c + a4e218839): laji "nousu", hetki 21.3. klo 04.33,
+  perillä AstronauttiLinssi.KatseAurinkoon (katse oletuskulmaan auringon atsimuuttiin ennen SiirraAlusta → alus ~650 km kohteesta poispäin
+  auringosta). Testit IssParasHetki 6/6, Astronautti/Kupoli/IssKyyti/Cupola läpi, tarkista.sh 0.
+- Tarvitsee Valosepän kiekon linssiseppa2/aurinko-196 240357565; yhdistelmä + ristiriitojen ratkaisu: siirtoseppa/nousu-kortti-196 085fac1a9.
+  Ajo todistus-kohokohta5-196-20261015-2321 (c312aba15): kuvapari omistajalle/iss-kohokohta-auringonnousu-cupola.jpg → PT:llä.
+- Opit: asema seisoo ~650 km kohteen takana (Cupolan katse kohteeseen), radan suunta riippuu hetkestä (03.28 koilliseen, 04.18 kaakkoon);
+  ISS-kameran kuvaputki piirtää nousun aina, live-Cupola vasta kiekon kanssa. Valoseppä voi säätää kiekon kirkkautta (16).
