@@ -906,7 +906,7 @@ export const MAASTOKOHTEET_DNK = [
     nimi: 'Skagerrak',
     tyyppi: 'meri',
     kysymykset: [
-      'Mitä Skagerrakilla tapahtui vuonna 1916?',
+      'Mitä Skagerrakin suulla ja Jyllannin edustalla tapahtui vuonna 1916?',
       'Missä Skagerrak ja Kattegat kohtaavat?',
     ],
     nappi: 'Pohjanmeren ja Kattegatin yhdistäjä',

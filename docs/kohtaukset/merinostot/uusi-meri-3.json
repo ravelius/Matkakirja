@@ -217,7 +217,7 @@
   "vastaukset": [
    {
     "kysymys": "Mitä Gallipolin sotaretkellä tapahtui?",
-    "vastaus": "Gallipolin sotaretki oli liittoutuneiden vuonna 1915 tekemä yritys pakottaa Dardanellit auki ja vallata Konstantinopoli. Laivaston hyökkäys 18. maaliskuuta pysähtyi miinoihin, ja joukot nousivat maihin 25. huhtikuuta. Taistelut juuttuivat asemasotaan, ja retki päättyi tammikuun 1916 alussa liittoutuneiden vetäytymiseen. Konstantinopoli, nykyinen Istanbul, jäi valtaamatta, ja uhreja kertyi noin puoli miljoonaa.",
+    "vastaus": "Gallipolin sotaretki oli liittoutuneiden vuonna 1915 tekemä yritys pakottaa Dardanellit auki ja vallata Konstantinopoli. Laivaston hyökkäys 18. maaliskuuta pysähtyi miinoihin, ja joukot nousivat maihin 25. huhtikuuta. Taistelut juuttuivat asemasotaan, ja retki päättyi tammikuun 1916 alussa liittoutuneiden vetäytymiseen. Konstantinopoli, nykyinen Istanbul, jäi valtaamatta, ja uhreja (kaatuneita, haavoittuneita ja sairastuneita) kertyi yli puoli miljoonaa.",
     "lahteet": [
      {
       "url": "https://en.wikipedia.org/wiki/Gallipoli_campaign",
@@ -264,7 +264,7 @@
       "huom": "Uhri = kaatunut tai haavoittunut; kirjattu 'noin'."
      }
     ],
-    "sanoja": 48
+    "sanoja": 52
    },
    {
     "kysymys": "Miten Kserkes ylitti Hellespontoksen?",
@@ -364,7 +364,7 @@
   "vastaukset": [
    {
     "kysymys": "Mitä Herkuleen patsaat ovat?",
-    "vastaus": "Herkuleen patsaat ovat antiikin nimi Gibraltarinsalmen kahdelle kallioniemelle. Pohjoinen patsas on tunnistettu Gibraltarin kallioksi, mutta eteläisen sijainti on epävarma: ehdokkaina ovat Jebel Musa Marokossa ja Monte Hacho Ceutassa. Myytin mukaan Herakles halkaisi vuoren ja avasi salmen. Renessanssin perimätiedon mukaan patsaissa luki varoitus \"Ne plus ultra\", ei pidemmälle, sillä ne merkitsivät tunnetun maailman länsireunaa.",
+    "vastaus": "Herkuleen patsaat ovat antiikin nimi Gibraltarinsalmen kahdelle kallioniemelle. Pohjoinen patsas on tunnistettu Gibraltarin kallioksi, mutta eteläisen sijainti on epävarma: ehdokkaina ovat Jebel Musa Marokossa ja Monte Hacho Ceutassa. Myytin mukaan Herakles halkaisi vuoren ja avasi salmen. Perimätiedon mukaan patsaissa luki varoitus \"Non plus ultra\", ei pidemmälle, sillä ne merkitsivät tunnetun maailman länsireunaa.",
     "lahteet": [
      {
       "url": "https://en.wikipedia.org/wiki/Pillars_of_Hercules",
@@ -405,11 +405,11 @@
       "huom": "Perimätieto, ei historiallinen fakta; vastaus sanoo 'perimätiedon mukaan'."
      }
     ],
-    "sanoja": 53
+    "sanoja": 52
    },
    {
     "kysymys": "Mitä Trafalgarin taistelussa tapahtui?",
-    "vastaus": "Trafalgarin taistelu käytiin 21. lokakuuta 1805 Espanjan Atlantin-rannikolla, lähellä salmen länsipäätä. Britannian 27 alusta löi ranskalais-espanjalaisen 33 aluksen laivaston. Amiraali Nelson haavoittui kuolettavasti lippulaivansa Victoryn kannella ja kuoli saman päivän aikana. Ranskalais-espanjalaisia kuoli noin 4 400, brittejä alle 500, ja voitto vahvisti Britannian asemaa merellä.",
+    "vastaus": "Trafalgarin taistelu käytiin 21. lokakuuta 1805 Espanjan Atlantin-rannikolla, lähellä salmen länsipäätä. Britannian 27 linjalaivaa löi ranskalais-espanjalaisen 33 linjalaivan laivaston. Amiraali Nelson haavoittui kuolettavasti lippulaivansa Victoryn kannella ja kuoli saman päivän aikana. Ranskalais-espanjalaisia kuoli noin 4 400, brittejä alle 500, ja voitto vahvisti Britannian asemaa merellä.",
     "lahteet": [
      {
       "url": "https://en.wikipedia.org/wiki/Battle_of_Trafalgar",

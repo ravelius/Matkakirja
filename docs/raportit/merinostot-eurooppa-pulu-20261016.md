@@ -783,17 +783,17 @@ Muoto kuten osio 3. Nostot ovat tiedostoissa tools/maastoaineisto/<ISO>.json ja 
 
 *Kapea meri Britannian edessä* · Englannin kanaali on Atlantin haara, joka erottaa Englannin Ranskasta ja jatkuu Doverin salmen kautta Pohjanmerelle. Salmi on kapeimmillaan vain runsaat 30 kilometriä leveä. Meren alla kulkee Kanaalitunneli, jonka noin 50 kilometristä noin 38 on veden alla; se on maailman pisin merenalainen tunneliosuus.
 
-### 82. Kuka lensi Englannin kanaalin yli ensimmäisenä?
+### 82. Kuka lensi Englannin kanaalin yli ensimmäisenä lentokoneella?
 
-Ranskalainen Louis Blériot. Hän nousi ilmaan aamulla ennen viittä 25. heinäkuuta 1909 Calais'n seudulta ja lensi yksitasoisellaan noin 40 kilometrin matkan Doveriin, ja lento kesti noin 36 minuuttia. Palkinnoksi hän sai Daily Mail -lehden tuhannen punnan summan. Se oli ensimmäinen lentokoneella tehty kanaalin ylitys, ja se osoitti, että lentokone selviää merenkin yli.
+Ranskalainen Louis Blériot lensi kanaalin yli ensimmäisenä lentokoneella. Hän nousi ilmaan aamulla ennen viittä 25. heinäkuuta 1909 Calais'n seudulta ja lensi yksitasoisellaan noin 40 kilometrin matkan Doveriin, ja lento kesti noin 36 minuuttia. Palkinnoksi hän sai Daily Mail -lehden tuhannen punnan summan. Lento osoitti, että lentokone selviää merenkin yli.
 
-*52 sanaa · kohteet: gbr/englannin-kanaali*
+*49 sanaa · kohteet: gbr/englannin-kanaali*
 
 Huom (kirjoittaja): NASM-sivun suora WebFetch antoi 404; tieto vain hakutuloksen tiivistelmästä. Museums Victoria antaa 37 min, siksi 'noin 36'. · Dollarisumma on sama palkinto toisessa valuutassa.
 
 ### 83. Kuinka syvällä Kanaalitunneli kulkee?
 
-Syvimmillään noin 75 metriä merenpinnan alapuolella. Keskimäärin tunneli kulkee noin 40-45 metriä merenpohjan alla. Se on noin 50 kilometriä pitkä, ja siitä noin 38 kilometriä on meren alla. Tunneli yhdistää Folkestonen ja Ranskan Calais'n lähellä sijaitsevan Coquellesin terminaalin, ja se avattiin virallisesti 6. toukokuuta 1994.
+Syvimmillään noin 75 metriä merenpinnan alapuolella. Keskimäärin tunneli kulkee noin 45 metriä merenpohjan alla. Se on noin 50 kilometriä pitkä, ja siitä noin 38 kilometriä on meren alla. Tunneli yhdistää Folkestonen ja Ranskan Calais'n lähellä sijaitsevan Coquellesin terminaalin, ja se avattiin virallisesti 6. toukokuuta 1994.
 
 *45 sanaa · kohteet: gbr/englannin-kanaali*
 
@@ -815,9 +815,9 @@ Huom (kirjoittaja): Käytetty haarukkaa. · Wikipedian Hydrology-osio antaa pros
 
 ### 85. Miksi Kattegatilla vuorovesi on niin pieni?
 
-Vedenkorkeus vaihtelee Kattegatilla vuorovesi-ilmiön takia alle puoli metriä. Alue on Pohjanmeren, jossa vuorovesi on selvästi suurempi, ja lähes vuorovedettömän Itämeren välinen siirtymävyöhyke. Siksi rannat eivät kuivu ja täyty samalla tavalla kuin Pohjanmeren Vattimerellä. Myrskyt voivat nostaa tai laskea vettä noin parisen metriä. Kattegat kertoo, miten yksi meri vaimenee toiseksi.
+Vedenkorkeus vaihtelee Kattegatilla vuorovesi-ilmiön takia alle puoli metriä. Alue on Pohjanmeren, jossa vuorovesi on selvästi suurempi, ja lähes vuorovedettömän Itämeren välinen siirtymävyöhyke. Siksi rannat eivät kuivu ja täyty samalla tavalla kuin Pohjanmeren Vattimerellä. Myrskytuuli voi muuttaa vedenkorkeutta enemmän kuin vuorovesi. Kattegat kertoo, miten yksi meri vaimenee toiseksi.
 
-*49 sanaa · kohteet: dnk/kattegat*
+*47 sanaa · kohteet: dnk/kattegat*
 
 Huom (kirjoittaja): Pohjanmeren 1-4 m on vain Lex.dk:ssa, joten vastaukseen jäi vain 'selvästi suurempi'. Myrskyjen aiheuttama jopa 2 metrin vedenkorkeuden vaihtelu jätettiin pois (yksi lähde). · Johtopäätös pienestä vuorovedestä; tuulen sekoittavaa vaikutusta ei enää väitetä. · Vain yksi lähde; muotoiltu 'noin parisen metriä'. Heikosti tuettu; voi pudottaa.
 
@@ -827,11 +827,11 @@ Noston huom (kirjoittaja): Pinta-ala jätetty pois: Wikipedia 24 000 km2, Lex.dk
 
 *Pohjanmeren ja Kattegatin yhdistäjä* · Skagerrak on Norjan, Ruotsin ja Tanskan välinen merialue, joka yhdistää Pohjanmeren Kattegatiin. Se on noin 240 kilometriä pitkä, ja Norjan rannikon edustalla syvyys ylittää 700 metriä. Nimi on hollantilaista perua: rak tarkoittaa suoraa vesiväylää, ja ensimmäinen osa viittaa Tanskan pohjoiskärjessä sijaitsevaan Skageniin.
 
-### 86. Mitä Skagerrakilla tapahtui vuonna 1916?
+### 86. Mitä Skagerrakin suulla ja Jyllannin edustalla tapahtui vuonna 1916?
 
-Siellä käytiin ensimmäisen maailmansodan suurin meritaistelu 31. toukokuuta - 1. kesäkuuta 1916 Jyllannin rannikon edustalla. Britannian ja Saksan laivastot ottivat yhteen noin 250 aluksella, ja yli 8 600 miestä kuoli. Britit kutsuvat taistelua Jyllannin taisteluksi, saksalaiset Skagerrakin taisteluksi. Kumpikin osapuoli julisti voittaneensa, eikä taistelu ratkaissut sotaa.
+Siellä käytiin ensimmäisen maailmansodan suurin meritaistelu 31. toukokuuta - 1. kesäkuuta 1916 Pohjanmerellä Jyllannin rannikon edustalla. Britannian ja Saksan laivastot ottivat yhteen noin 250 aluksella, ja yli 8 600 miestä kuoli. Britit kutsuvat taistelua Jyllannin taisteluksi, saksalaiset Skagerrakin taisteluksi. Kumpikin osapuoli julisti voittaneensa, eikä taistelu ratkaissut sotaa.
 
-*46 sanaa · kohteet: dnk/skagerrak*
+*47 sanaa · kohteet: dnk/skagerrak*
 
 Huom (kirjoittaja): RMG:n ja IWM:n omille sivuille ei päästy (IWM 403), joten toinen lähde on heikko (hakutulos, kirjan esittelyteksti ja uutissivu). · Lähteiden kuolleiden luvut vaihtelevat (yli 8 000 - 8 648), siksi 'yli 8 600'. Hakutulosten tiivistelmät, ei suoraa WebFetchiä. · Saksalaisia museo- tai arkistolähteitä ei löytynyt; molemmat lähteet ovat käytännössä Wikipedian artikkeleita.
 
@@ -859,7 +859,7 @@ Huom (kirjoittaja): Kertakorvauksen summa (33,5 milj. riikintaaleria) ja kaksi k
 
 ### 89. Mitä Tycho Brahe teki Hvenin saarella?
 
-Tanskalainen tähtitieteilijä Tycho Brahe sai Hvenin saaren läänityksenä kuningas Fredrik II:lta vuonna 1576. Saari on nykyään Ruotsin puolella, mutta oli silloin Tanskan alaisuudessa. Hän rakennutti sinne Uraniborgin observatoriolinnan, joka valmistui noin 1580, ja myöhemmin maanalaisen Stjerneborgin. Hän lähti saarelta 1597 ja jätti jälkeensä tarkistetun tähtiluettelon.
+Tanskalainen tähtitieteilijä Tycho Brahe sai Hvenin saaren läänityksenä kuningas Fredrik II:lta vuonna 1576. Saari on nykyään Ruotsin puolella, mutta oli silloin Tanskan alaisuudessa. Hän rakennutti sinne Uraniborgin observatoriolinnan, joka valmistui noin 1580, ja myöhemmin maanalaisen Stjerneborgin. Hän lähti saarelta 1597 ja jätti jälkeensä tarkan tähtiluettelon.
 
 *45 sanaa · kohteet: dnk/juutinrauma*
 
@@ -873,9 +873,9 @@ Noston huom (kirjoittaja): Täsmällinen päivämäärä: en.wikipedia Øresund;
 
 ### 90. Mikä Irbensalmi on?
 
-Irbensalmi on Riianlahden pääyhteys Itämereen. Se sijaitsee Saarenmaan Sõrven niemimaan ja Latvian Kuurinmaan niemimaan välissä, ja sen leveys on noin 25 kilometriä. Salmen kynnyssyvyys on vain noin 25 metriä. Suurin osa lahden ja Itämeren vedenvaihdosta kulkee tämän salmen kautta, joten kapea portti pitää lahden melko eristettynä Itämerestä.
+Irbensalmi on Riianlahden pääyhteys Itämereen. Se sijaitsee Saarenmaan Sõrven niemimaan ja Latvian Kuurinmaan niemimaan välissä, ja sen leveys on noin 27 kilometriä. Salmen kynnyssyvyys on vain noin 25 metriä. Valtaosa (noin 70–80 %) lahden ja Itämeren vedenvaihdosta kulkee tämän salmen kautta, joten kapea portti pitää lahden melko eristettynä Itämerestä.
 
-*47 sanaa · kohteet: lva/riianlahti*
+*49 sanaa · kohteet: lva/riianlahti*
 
 Huom (kirjoittaja): Leveys 24-27 km, siksi 'noin 25'. Preprintin PDF-tiedot vain hakutuloksen tiivistelmästä. · Prosenttilukua ei käytetty, koska se on yhden hakutuloksen lukema. Heikosti tuettu.
 
@@ -895,17 +895,17 @@ Noston huom (kirjoittaja): Pinta-ala vaihtelee määritelmän mukaan (16 330-18 
 
 ### 92. Mikä Solovetskin saaristo on?
 
-Solovetskin saaristo on Vienanmeren Äänisenlahden suulla sijaitseva saariryhmä, jonka tunnetuin kohde on Solovetskin luostari. Luostari perustettiin jo 1400-luvulla. Vuonna 1923 sen tiloihin perustettiin vankileiri, jota pidetään Gulagin ensimmäisenä. Saaret erottavat Äänisenlahden Vienanmeren pääaltaasta. Saaristo otettiin Unescon maailmanperintöluetteloon 1992, ja se kertoo sekä pyhiinvaelluksen että pakkotyön historiasta.
+Solovetskin saaristo on Vienanmeren Äänisenlahden suulla sijaitseva saariryhmä, jonka tunnetuin kohde on Solovetskin luostari. Luostari perustettiin jo 1400-luvulla. Vuonna 1923 sen tiloihin perustettiin vankileiri, jota pidetään Gulagin esikuvana ja ensimmäisenä. Saaret erottavat Äänisenlahden Vienanmeren pääaltaasta. Saaristo otettiin Unescon maailmanperintöluetteloon 1992, ja se kertoo sekä pyhiinvaelluksen että pakkotyön historiasta.
 
-*46 sanaa · kohteet: rus/vienanmeri*
+*48 sanaa · kohteet: rus/vienanmeri*
 
 Huom (kirjoittaja): UNESCO-sivun suora WebFetch antoi 403; tieto hakutuloksen tiivistelmästä. Vuosi 1436 jätettiin pois (yksi lähde). · en.wikipedian runko-osa antaa myös vuoden 1921, joten päivämäärä on lähteissä ristiriitainen; 1923 on kolmen lähteen yhteinen luku.
 
 ### 93. Mikä Vienanmeren kanava on?
 
-Vienanmeri-Itämeri-kanava eli Belomorkanal on 227 kilometriä pitkä vesiväylä, joka yhdistää Vienanmeren Äänisjärveen ja sitä kautta Itämereen. Vangit kaivoivat sen noin 20 kuukaudessa vuosina 1931-1933, ja kanava avattiin elokuussa 1933. Tuhansia heistä kuoli. Väylä on vain noin 3,5 metriä syvä, joten merialukset eivät mahdu siihen. Kanava kertoo Stalinin ajan pakkotyöstä.
+Vienanmeri-Itämeri-kanava eli Belomorkanal on 227 kilometriä pitkä vesiväylä, joka yhdistää Vienanmeren Äänisjärveen ja sitä kautta Itämereen. Vangit kaivoivat sen vuosina 1931-1933, ja kanava avattiin elokuussa 1933. Virallisten lukujen mukaan yli 12 000 vankia kuoli, arvioiden mukaan jopa 25 000. Väylä on vain noin 3,5 metriä syvä, joten merialukset eivät mahdu siihen. Kanava kertoo Stalinin ajan pakkotyöstä.
 
-*49 sanaa · kohteet: rus/vienanmeri*
+*56 sanaa · kohteet: rus/vienanmeri*
 
 Huom (kirjoittaja): Kuolleiden määrä vaihtelee 8 700 - 25 000+, siksi pelkkä 'tuhansia'. · Tarkka 3,5 m vain en.wikipediassa (1970-luvulla nostettu 4 m); heikosti tuettu, voi pudottaa 'noin 3,5 metriä'.
 
@@ -935,7 +935,7 @@ Noston huom (kirjoittaja): Etelä- ja länsiraja on epätarkka (WorldAtlas), sik
 
 ### Nosto: Lioninlahti (fra/lioninlahti)
 
-*Mistralin ja tramontanen lahti* · Lioninlahti on Välimeren laaja lahti Ranskan etelärannikolla, lännessä Pyreneille ja Espanjan rajalle asti ja idässä Rhônen suistoon. Alue tunnetaan kylmistä, puuskaisista tuulista, mistralista ja tramontanesta. Nimi mainitaan jo keskiajalla, ja sen arvellaan viittaavan äkillisten, rajujen tuulten leijonamaiseen vaaraan.
+*Mistralin ja tramontanen lahti* · Lioninlahti on Välimeren laaja lahti Ranskan etelärannikolla; se ulottuu lännessä Espanjan Katalonian rannikolle ja idässä Toulonin tienoille. Alue tunnetaan kylmistä, puuskaisista tuulista, mistralista ja tramontanesta. Nimi mainitaan jo keskiajalla, ja sen arvellaan viittaavan äkillisten, rajujen tuulten leijonamaiseen vaaraan.
 
 ### 96. Mikä on mistral-tuuli?
 
@@ -953,7 +953,7 @@ Camargue on Rhônen suistoalue Etelä-Ranskassa, Grand Rhônen ja Petit Rhônen 
 
 Huom (kirjoittaja): Lukujen väli 930-950, siksi 'yli 900'. · 'Vanhaa laidunmaata' perustuu Lex.dk:n ja SNL:n kuvaukseen entisestä laidunalueesta.
 
-Noston huom (kirjoittaja): Lähteet antavat lahden rajauksen eri laajuisena (en.wikipedia ulottaa Katalonian rannikolle ja Toulonin suuntaan), joten teksti noudattaa kapeampaa SNL:n rajausta. · SNL mainitsee vain mistralin; tramontane perustuu en.wikipedian kahteen artikkeliin. Heikosti tuettu. · Nimen alkuperä on arvelu; teksti sanoo 'arvellaan'.
+Noston huom (kirjoittaja): Lähteet antavat lahden rajauksen eri laajuisena (en.wikipedia ulottaa Katalonian rannikolle ja Toulonin suuntaan), PT 16.10.: teksti korjattu en.wikipedian rajaukseen (Begur–Toulon). · SNL mainitsee vain mistralin; tramontane perustuu en.wikipedian kahteen artikkeliin. Heikosti tuettu. · Nimen alkuperä on arvelu; teksti sanoo 'arvellaan'.
 
 ### Nosto: Bosporinsalmi (tur/bosporinsalmi)
 
@@ -983,9 +983,9 @@ Noston huom (kirjoittaja): Kaksi mittapaikkaa, siksi vaihteluväli. · Vanhin si
 
 ### 100. Mitä Gallipolin sotaretkellä tapahtui?
 
-Gallipolin sotaretki oli liittoutuneiden vuonna 1915 tekemä yritys pakottaa Dardanellit auki ja vallata Konstantinopoli. Laivaston hyökkäys 18. maaliskuuta pysähtyi miinoihin, ja joukot nousivat maihin 25. huhtikuuta. Taistelut juuttuivat asemasotaan, ja retki päättyi tammikuun 1916 alussa liittoutuneiden vetäytymiseen. Konstantinopoli, nykyinen Istanbul, jäi valtaamatta, ja uhreja kertyi noin puoli miljoonaa.
+Gallipolin sotaretki oli liittoutuneiden vuonna 1915 tekemä yritys pakottaa Dardanellit auki ja vallata Konstantinopoli. Laivaston hyökkäys 18. maaliskuuta pysähtyi miinoihin, ja joukot nousivat maihin 25. huhtikuuta. Taistelut juuttuivat asemasotaan, ja retki päättyi tammikuun 1916 alussa liittoutuneiden vetäytymiseen. Konstantinopoli, nykyinen Istanbul, jäi valtaamatta, ja uhreja (kaatuneita, haavoittuneita ja sairastuneita) kertyi yli puoli miljoonaa.
 
-*48 sanaa · kohteet: tur/dardanellit*
+*52 sanaa · kohteet: tur/dardanellit*
 
 Huom (kirjoittaja): Ei tarkistettu täysin, kaksi toisistaan riippumatonta luettua lähdettä vain osittain. · Uhri = kaatunut tai haavoittunut; kirjattu 'noin'.
 
@@ -1005,15 +1005,15 @@ Noston huom (kirjoittaja): Ylärajassa 0,5 km ero, siksi 'noin'. · Pohjoispuole
 
 ### 102. Mitä Herkuleen patsaat ovat?
 
-Herkuleen patsaat ovat antiikin nimi Gibraltarinsalmen kahdelle kallioniemelle. Pohjoinen patsas on tunnistettu Gibraltarin kallioksi, mutta eteläisen sijainti on epävarma: ehdokkaina ovat Jebel Musa Marokossa ja Monte Hacho Ceutassa. Myytin mukaan Herakles halkaisi vuoren ja avasi salmen. Renessanssin perimätiedon mukaan patsaissa luki varoitus "Ne plus ultra", ei pidemmälle, sillä ne merkitsivät tunnetun maailman länsireunaa.
+Herkuleen patsaat ovat antiikin nimi Gibraltarinsalmen kahdelle kallioniemelle. Pohjoinen patsas on tunnistettu Gibraltarin kallioksi, mutta eteläisen sijainti on epävarma: ehdokkaina ovat Jebel Musa Marokossa ja Monte Hacho Ceutassa. Myytin mukaan Herakles halkaisi vuoren ja avasi salmen. Perimätiedon mukaan patsaissa luki varoitus "Non plus ultra", ei pidemmälle, sillä ne merkitsivät tunnetun maailman länsireunaa.
 
-*53 sanaa · kohteet: esp/gibraltarinsalmi*
+*52 sanaa · kohteet: esp/gibraltarinsalmi*
 
 Huom (kirjoittaja): Diodoros kertoo toisin (kavensi salmea); vastaus sanoo 'myytin mukaan'. · Tulkinta, ei sanatarkka väite. · Perimätieto, ei historiallinen fakta; vastaus sanoo 'perimätiedon mukaan'.
 
 ### 103. Mitä Trafalgarin taistelussa tapahtui?
 
-Trafalgarin taistelu käytiin 21. lokakuuta 1805 Espanjan Atlantin-rannikolla, lähellä salmen länsipäätä. Britannian 27 alusta löi ranskalais-espanjalaisen 33 aluksen laivaston. Amiraali Nelson haavoittui kuolettavasti lippulaivansa Victoryn kannella ja kuoli saman päivän aikana. Ranskalais-espanjalaisia kuoli noin 4 400, brittejä alle 500, ja voitto vahvisti Britannian asemaa merellä.
+Trafalgarin taistelu käytiin 21. lokakuuta 1805 Espanjan Atlantin-rannikolla, lähellä salmen länsipäätä. Britannian 27 linjalaivaa löi ranskalais-espanjalaisen 33 linjalaivan laivaston. Amiraali Nelson haavoittui kuolettavasti lippulaivansa Victoryn kannella ja kuoli saman päivän aikana. Ranskalais-espanjalaisia kuoli noin 4 400, brittejä alle 500, ja voitto vahvisti Britannian asemaa merellä.
 
 *45 sanaa · kohteet: esp/gibraltarinsalmi*
 

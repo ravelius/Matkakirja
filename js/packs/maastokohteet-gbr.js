@@ -656,7 +656,7 @@ export const MAASTOKOHTEET_GBR = [
     nimi: 'Englannin kanaali',
     tyyppi: 'meri',
     kysymykset: [
-      'Kuka lensi Englannin kanaalin yli ensimmäisenä?',
+      'Kuka lensi Englannin kanaalin yli ensimmäisenä lentokoneella?',
       'Kuinka syvällä Kanaalitunneli kulkee?',
     ],
     nappi: 'Kapea meri Britannian edessä',
