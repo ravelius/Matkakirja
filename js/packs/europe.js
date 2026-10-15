@@ -115,6 +115,36 @@ const EU_CITIES = [
    * tämä on Luxemburgin osuus.
    */
   { id: 'luxemburg', name: 'Luxemburg', wiki: 'Luxemburg (kaupunki)', ambience: 'kaupunki', x: 329, y: 589, la: 'start', lx: 16, ly: 5 },
+  /*
+   * PÄÄKAUPUNGIT PYSÄKEIKSI (Karttaseppä 14.10.2026, juna 193, PT): kahdeksan
+   * kevyttä pääkaupunkipistettä muutettiin laudan kaupungeiksi samalla kaavalla
+   * kuin Luxemburg (#2682). Pisteet ovat todellisilla paikoillaan
+   * (js/packs/paakaupungit.js), x = (lon + 11) x 19,2 ja y = (72 - lat) x 26,3
+   * pyöristettynä. Pelilauta on maailmankartta, jossa vähimmäisväli 60 täyttyy
+   * kaikille (lähin naapuri suluissa): Minsk (Vilna 65,6), Chișinău (Odessa
+   * 64,1), Belgrad (Sarajevo 75,0), Vaduz (Alpit 76,2), Monaco (Marseille 72,4),
+   * Skopje (Sofia 68,9) ja Tirana (Skopje 60,1).
+   *
+   * ZAGREB ON SIIRRETTY 23 km ITÄÄN (45,793 N / 16,277 E; tosipaikka
+   * 45,813 / 15,977): tosipaikalta Ljubljanaan on maailmankartalla vain 50,0
+   * yksikköä. Lähin sallittu piste Kroatian sisällä on Sesvetén suunnalla
+   * (Ljubljanaan 60,0). Sama ratkaisu kuin Firenzellä (~65 km) ja
+   * Tampereella; piste pysyy maan rajojen sisällä (vrt. Sarajevon kommentti).
+   *
+   * Jäivät kevyiksi pisteiksi (PT 14.10.2026, sijoitusraportti
+   * proto-3d/_tyo/karttaseppa/paakaupungit-pysakeiksi-193-sijoitus.md):
+   * Reykjavík on jo laudan 'islanti', San Marino ja Andorra la Vella eivät
+   * mahdu omaan maahansa, ja Bern, Bratislava ja Podgorica vaatisivat
+   * 75–81 km:n siirron.
+   */
+  { id: 'minsk', name: 'Minsk', wiki: 'Minsk', ambience: 'kaupunki', x: 740, y: 476, la: 'start', lx: 16, ly: 5 },
+  { id: 'chisinau', name: 'Chișinău', wiki: 'Chișinău', ambience: 'kaupunki', x: 765, y: 657, la: 'start', lx: 16, ly: 5 },
+  { id: 'belgrad', name: 'Belgrad', wiki: 'Belgrad', ambience: 'kaupunki', x: 604, y: 715, la: 'start', lx: 16, ly: 5 },
+  { id: 'vaduz', name: 'Vaduz', wiki: 'Vaduz', ambience: 'kaupunki', x: 394, y: 654, la: 'start', lx: 16, ly: 5 },
+  { id: 'monaco', name: 'Monaco', wiki: 'Monaco', ambience: 'satama', x: 354, y: 744, la: 'start', lx: 16, ly: 5 },
+  { id: 'skopje', name: 'Skopje', wiki: 'Skopje', ambience: 'kaupunki', x: 623, y: 789, la: 'start', lx: 16, ly: 5 },
+  { id: 'tirana', name: 'Tirana', wiki: 'Tirana', ambience: 'kaupunki', x: 592, y: 807, la: 'end', lx: -16, ly: 5 },
+  { id: 'zagreb', name: 'Zagreb', wiki: 'Zagreb', ambience: 'kaupunki', x: 524, y: 689, la: 'start', lx: 16, ly: 5 },
   { id: 'berliini', name: 'Berliini', wiki: 'Berliini', ambience: 'kaupunki', x: 468, y: 512, airport: true },
   { id: 'praha', name: 'Praha', wiki: 'Praha', ambience: 'kaupunki', x: 488, y: 576, la: 'end', lx: -16, ly: 5 },
   { id: 'wien', name: 'Wien', wiki: 'Wien', ambience: 'kaupunki', x: 526, y: 626, la: 'start', lx: 16, ly: -6 },
@@ -318,7 +348,10 @@ const EU_EDGES = [
    */
   { a: 'wien', b: 'ljubljana', steps: 2 },
   { a: 'ljubljana', b: 'venetsia', steps: 2 },
-  { a: 'alpit', b: 'venetsia', steps: 3 },
+  // Vaduz katkaisi vanhan alpit–venetsia-yhteyden (3) kahdeksi (2 + 2): reitti kulkee
+  // 15 yksikön päästä Vaduzista (segDist), sama ratkaisu kuin Luxemburgilla.
+  { a: 'alpit', b: 'vaduz', steps: 2 },
+  { a: 'vaduz', b: 'venetsia', steps: 2 },
   { a: 'alpit', b: 'berliini', steps: 4 },
   /*
    * Firenze katkaisi vanhan venetsia–rooma-yhteyden (3 askelta)
@@ -334,12 +367,33 @@ const EU_EDGES = [
   // Bosnian rata: Budapestista Sarajevoon ja vuorten yli rannikolle.
   { a: 'budapest', b: 'sarajevo', steps: 2 },
   { a: 'sarajevo', b: 'dubrovnik', steps: 2 },
-  { a: 'sarajevo', b: 'sofia', steps: 3 },
+  // Belgrad katkaisi vanhan sarajevo–sofia-yhteyden (3) kahdeksi (2 + 2): reitti kulkee
+  // 29 yksikön päästä Belgradista. Tonavan reitti Budapestiin on uusi (93 yksikköä).
+  { a: 'sarajevo', b: 'belgrad', steps: 2 },
+  { a: 'belgrad', b: 'sofia', steps: 2 },
+  { a: 'budapest', b: 'belgrad', steps: 2 },
   { a: 'budapest', b: 'bukarest', steps: 4 },
   { a: 'sofia', b: 'ateena', steps: 4 },
   { a: 'sofia', b: 'istanbul', steps: 3 },
   { a: 'sofia', b: 'bukarest', steps: 2 },
-  { a: 'bukarest', b: 'odessa', steps: 3 },
+  // Chișinău katkaisi vanhan bukarest–odessa-yhteyden (3) kahdeksi (2 + 2): reitti
+  // kulkee 47 yksikön päästä Chișinăusta.
+  { a: 'bukarest', b: 'chisinau', steps: 2 },
+  { a: 'chisinau', b: 'odessa', steps: 2 },
+
+  // Pääkaupungit pysäkeiksi (Karttaseppä 14.10.2026, juna 193): uudet maayhteydet.
+  // Askeleet laudan mitasta kuten muualla: maailmankartalla 60–157 yksikköä = 2, 158–281 = 3.
+  { a: 'vilna', b: 'minsk', steps: 2 },
+  { a: 'minsk', b: 'kiova', steps: 3 },
+  { a: 'marseille', b: 'monaco', steps: 2 },
+  { a: 'monaco', b: 'firenze', steps: 2 },
+  { a: 'sofia', b: 'skopje', steps: 2 },
+  { a: 'belgrad', b: 'skopje', steps: 2 },
+  { a: 'skopje', b: 'tirana', steps: 2 },
+  { a: 'tirana', b: 'dubrovnik', steps: 2 },
+  { a: 'ljubljana', b: 'zagreb', steps: 2 },
+  { a: 'zagreb', b: 'budapest', steps: 2 },
+  { a: 'zagreb', b: 'belgrad', steps: 2 },
   { a: 'odessa', b: 'kiova', steps: 3 },
   { a: 'kiova', b: 'varsova', steps: 5 },
   { a: 'pietari', b: 'tallinna', steps: 3 },
@@ -476,11 +530,11 @@ export const EUROPE = {
           + 'asti, ja kirkkaimpiin paloihin on jäänyt hyönteisiä kiinni.',
       },
     }),
-    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (50). Uusi
+    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (58). Uusi
     // kaupunki lisätään paikallisaarteisiin samassa suhteessa kuin
     // muutkin (noin kolmasosa isoja) — pääaarre ja mantereen aarre ovat
     // aina yksi kumpikin, eikä ryöstäjien määrä muutu kaupunkien mukana.
-    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 34 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 42 },
   },
 
   questions: EUROPE_QUESTIONS,

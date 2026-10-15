@@ -17240,6 +17240,8 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Zagrebin tuomiokirkko',
         lat: 45.81444,
         lon: 15.97972,
+        // Zagreb laudan kaupungiksi 14.10.2026: skandaali (Zrinskin ja Frankopanin hauta) kohdekartalle.
+        nosto: 'skandaali-zrinski-frankopan-salaliitto',
       },
       {
         nimi: 'Zrinjevac',

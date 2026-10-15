@@ -225,6 +225,14 @@ const MODULES = [
   'js/packs/fokusvirta-luxemburg.js',
   // Valletta (21.9.2026, omistajan päätös: Maltan pelikaupunki).
   'js/packs/fokusvirta-valletta.js',
+  'js/packs/fokusvirta-tirana.js',
+  'js/packs/fokusvirta-minsk.js',
+  'js/packs/fokusvirta-zagreb.js',
+  'js/packs/fokusvirta-vaduz.js',
+  'js/packs/fokusvirta-monaco.js',
+  'js/packs/fokusvirta-chisinau.js',
+  'js/packs/fokusvirta-skopje.js',
+  'js/packs/fokusvirta-belgrad.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan
