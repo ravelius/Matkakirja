@@ -160,3 +160,7 @@ Omistaja (sanatarkasti, KK:n välittämä): "Tee 1-3". 1) Etsin: rajauksen ulkop
 ## PAATOKSET 15.10.2026 klo 19.04: Aloituskartan vihjeet, kaikki 9 (15.10.2026 klo 19.05)
 
 Omistaja (kortti vihjeet-suunnitelma): "Kyllä, kaikki 9 (Suositus)". Karttasepän suunnitelma: napautus avaa nostokortin (pienoismalli, nimi, yksi arvoituksellinen rivi, tila 'Odottaa myöhempiä matkoja'), ei avaa kaupunkia eikä anna palkintoa. Myöhemmin: mantereen ovet (Tripoli, Marrakech = Afrikka; Bagdad, Teheran, Dubai = Lähi-itä; Samarkand = Aasia), Giza = aarnivalkea-videopeli, Sahara ja Grönlanti = ISS-luontokohteet; kukin 'myöhemmin' oman päätöksensä kautta. Kattaa 5 uutta Codex-kuvaa. 9 riviä omistajan hyväksyttäviksi ennen kytkentää. Ehto (17.0x): kortissa ei mainita Aarnia eikä luetteloa; rivi ilman lähdettä.
+
+## PAATOKSET 15.10.2026 klo 19.28: ISS-yötaivas kytketään korjattuna (15.10.2026 klo 19.29)
+
+Omistaja (kortti yotaivas-kytkenta, A1/B1 + taivaan lähikuva nähty): "Kyllä, kun taivas on korjattu (Suositus)". Ehto: taivas pysyy mustana (ei harmaata laikukasta nousua), Linnunrata tarkka tähtijuova (ei sumea ruskea savu); Vancouver-nimi ei jää Pulun alle. Uusi kuva omistajalle ennen junaa 196. Toteuttaa Linssiseppä.
