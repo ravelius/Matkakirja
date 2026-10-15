@@ -38,6 +38,13 @@ Jos lippu on jo olemassa, f alkaa heti. Kun kohokohdat päättyy → SIMU VAPAA 
   SEURAAVAKSI (kohokohtien jälkeen): käännös 8686dcbf1:stä (+ nimet-196 kuvahaaraan tarvittaessa), simukuva Euroopan ulkopuolelta yöllä
   (esim. kohdevalikko kohde Peking + vrk 3, tai Brasilia) ennen/jälkeen (maailmavalot pois/oletus) → PT; vasta sitten sha NS:lle junaan.
 
+## 2b. PT:N JÄRJESTYS (20.4x): 1) kuvasarja f, 2) kohokohtien korttikuvat → NUI, 3) Black Marble 8686dcbf1 simutarkistus,
+4) SIIRTOSEPÄN RAJAPINTA valitun paikan nimen korostukseen (omistaja hyväksyi paras hetki 20.42; olemassa oleva tyyli, muut nimet
+himmeämmiksi). Valmis pohja: `KupoliNimet.Korostus` (string, nimi joka pysyy kirkkaana; muut liukuvat MuutHimmennys 0,3:een HaivytysS:ssä;
+"" = kaikki himmeiksi; null = normaali). Sovi Siirtosepän kanssa (osoitekirja): asettaako hän Korostuksen kohteen valinnassa ja milloin
+se nollataan (IssSkanneri käyttää samaa kenttää – älä riko sitä: skanneri palauttaa null sulkiessa). Tarvittaessa erillinen
+`KupoliNimet.Valittu`, joka yhdistetään Korostukseen.
+
 ## 3. AVOIMET
 - Pulun kesäyön opetuslause SK:lla omistajan hyväksyttävänä → kytkentä TaivasKohteet.AsemaVarjossaYlla.
 - Revontulet skanneriin (Valosepän Revontulet.Havainto), taivaskohteet teleobjektiiviin.
