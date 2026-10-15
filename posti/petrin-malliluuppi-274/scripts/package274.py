@@ -38,7 +38,7 @@ for pattern in ['M*-configuration.json','M*-actual-mesh-camera-fit.json','M*-sof
  for f in sorted(C.glob(pattern)):copy(f,'optimization/'+f.name)
 for f in sorted((C/'optimized-cameras').rglob('K*.json')):copy(f,'optimization/optimized-cameras/'+str(f.relative_to(C/'optimized-cameras')))
 for f in sorted((C/'scripts').glob('*')):
- if f.is_file() and f.suffix in ['.py','.cpp']:copy(f,'scripts/'+f.name)
+ if f.is_file() and not f.name.startswith('._') and f.suffix in ['.py','.cpp']:copy(f,'scripts/'+f.name)
 copy(P/'K5/mask-v2/PT-acceptance-272.json','K5-mask-v2-PT-acceptance-272.json')
 copy(P/'sources/e8a797c5/fable-codex-petrin-M09-palaute-20261015.md','sources/fable-codex-petrin-M09-palaute-20261015.md')
 copy(P/'models/M01/source-licenses.json','source-licenses.json')
