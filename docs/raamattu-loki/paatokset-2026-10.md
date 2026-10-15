@@ -235,3 +235,11 @@ TÄHDENLENTO: "Kyllä, mutta asemalta niitä katsotaan alaspäin. Tähdenlento s
 HURRIKAANI: "Ylhäältä silmä on pyöreä, melkein pilvetön aukko, jota kiertää tiheä ukkospilvien rengas, silmänseinämä. Siellä puhaltavat myrskyn kovimmat tuulet, mutta silmän keskellä ilma painuu alas
 ja tuuli on heikkoa. Silmä on yleensä 30–65 kilometriä leveä. Syyskuussa 2018 saksalainen astronautti Alexander Gerst kuvasi asemalta hurrikaani Florencen silmää suoraan ylhäältä."
 PT tarkisti lisäykset (12.8.2026 reitti Grönlanti–Islanti–Espanja; varjon leveys 2017 ~115 km, 2026 ~294 km) → Äänittäjä (kertojaäänten pysyvä lupa) → Pelikoodari kytkee.
+
+## PAATOKSET 15.10.2026 klo 23.12: ISS-näkymän efektit (salamat, tähdenlennot, väreily) (15.10.2026 klo 23.13)
+
+Omistaja kysyi 23.0x: "Pitäisikö iss näkymään lisätä samoja efektejä kuin kipissä?", "Ne elävät salamat olisi kyllä hienoja", "Näkyykö tähden lennot?", "Tai onko lämpöväreilyä?". Kortilla (KK) klo 23.12 "Kaikki kolme näin (Suositus)":
+1) SALAMAT: ISS nyt -tilassa salamat välähtelevät pilvissä siellä, missä oikeasti ukkostaa (sama säätieto kuin kierroksella, /opas/saa "ukkonen"). Kohokohdassa aina päällä. Pohjana Valosepän salamat k2.
+2) TÄHDENLENNOT: aseman alapuolella oikeiden meteoriparvien aikaan (Orionidit ~21.10., Leonidit 17.11., Geminidit 14.12.). Kohokohta vie Perseidien hetkeen.
+3) VÄREILY (asemalta ei näe → kaksi paikkaa): raketin laukaisun liekin yläpuolelle sekä horisontin aurinkoon, joka litistyy ja aaltoilee nousussa ja laskussa (kiertoradan auringonnousu).
+Kaikki kytkimen taakse; omistaja näkee videon ennen kytkentää. Toteutus: Valoseppä (efektit) + Pelikoodari (säätieto ja meteoriparvien ajat ISS-näkymään).
