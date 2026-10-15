@@ -6,9 +6,9 @@ Viestit `send_message` id:llä (/Users/Shared/Claude/osoitekirja.md); PT local_5
 
 ## 0. ENSIMMÄISENÄ: SIMU A26BC7D0 ON VALOSEPÄLLÄ (Julkaisija: "pysyy sinulla"; lopuksi SIMU VAPAA Julkaisijalle)
 Taustaprosessit (luovuttajan; voivat katketa nollauksessa – tarkista `pgrep -fl "raketti-v2-jono|salamat-eu2-jono|yovalot-tele/aja"`):
-1. etsimen A/B käynnissä 01.42 (yovalot-tele 0ca3e2ce2, $D/yovalot-tele/aja.out). aja.zsh lukee nyt SHA:n appin kaannos.txt:stä.
+1. VALMIS 01.47 (arvioimatta): lokit/todistus-yovalot-tele-20261016-0142/TODISTUS.md. Oli: etsimen A/B käynnissä 01.42 (yovalot-tele 0ca3e2ce2, $D/yovalot-tele/aja.out). aja.zsh lukee nyt SHA:n appin kaannos.txt:stä.
    Valmistuttua kirjataan "LOPPU etsin-AB (merkitty)" lokiin. Tulos → arvioi + PT:lle (etsimen kipinöinti, PT:n järjestys kohta 2).
-2. salamat-eu2-jono.zsh: etsimen jälkeen SALAMAT EUROOPASSA (sk-salamat-eurooppa.txt: kohdevalikko "Rooma" kesäyö kausi 2 vrk 3,
+2. KÄYNNISSÄ 01.47 – salamat-eu2-jono.zsh: etsimen jälkeen SALAMAT EUROOPASSA (sk-salamat-eurooppa.txt: kohdevalikko "Rooma" kesäyö kausi 2 vrk 3,
    testiukkoset radan eteen) → $D/iss-nyt/salamat-eu2.out. ENSIMMÄINEN ajo kohdevalikon kelauksella: tarkista lokista "valikko Rooma
    kelaus" ja "elävät 3". Jos ei kelannut: kokeile "Venetsia"/"Napoli ja Vesuvius" tai `linssi raketti kelaa <lat> <lon>` Cupolassa.
 3. raketti-v2-jono.zsh: odottaa testi-196 68a606437 -käännöstä (L2-jonossa) → raketin TÄYSI lento väreily v2:lla (sk-raketti-v2.txt,
