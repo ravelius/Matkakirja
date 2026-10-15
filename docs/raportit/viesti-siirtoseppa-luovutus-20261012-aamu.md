@@ -271,7 +271,7 @@ LCD pelkkä nimi, Live piiloon + ilmiöt + kohokohtien data). Uudempi kärki **e
   (KyydinTaivas: vain kuvaputkessa). PT:ltä kysytty: kiekko Cupolaan (Valoseppä)? Sitten yksi simuajo → kortti 960×640 → vienti.
   Yksityiskohdat lokit/siirtoseppa-iss-paras-hetki/KOHOKOHTA-NOUSU.md.
 
-## PÄIVITYS 15.10. 23.3x — AURINKO NOUSEE CUPOLASSA (odottaa PT:n kuittausta → NS 196)
+## PÄIVITYS 15.10. 23.3x — AURINKO NOUSEE CUPOLASSA: NS:LLÄ JUNAAN 196 (siirtoseppa/iss-nousu-196 21f52356f = a4e218839 + 240357565)
 
 - PT 22.3x: korttiin jää Linssisepän NASA-kuva; minun osani = kohokohta vie hetkeen, jossa aurinko todella nousee Cupolassa.
 - **siirtoseppa/iss-ilmiot-196 a4e218839** (e776bb186 + 73c4aa0a8 + bae6eee4c + a4e218839): laji "nousu", hetki 21.3. klo 04.33,
