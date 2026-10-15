@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "fresh-independent-final-review-at-ten-round-cap",
+  "createdAtUTC": "2026-10-15T12:01:19.797137+00:00",
+  "language": "fi",
+  "reviewer": "/root/petrin_cap_fresh_review",
+  "productionRoot": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014",
+  "independenceScope": {
+    "participatedInProduction": false,
+    "previousReviewsRead": false,
+    "reviewedModelVersions": [
+      "M09",
+      "M10"
+    ],
+    "personalVisualInspection": true,
+    "comparisonSheetsViewedBeforeMetricsJson": true,
+    "topThreeDifferencesLockedBeforeMetricsJsonRead": true,
+    "lockingEvidence": "Kolme eroa ilmoitettiin erikseen agenttikanavassa ennen metrics.json-tiedostojen avaamista.",
+    "metricCaptionsVisibleInComparisonImages": true,
+    "fullyBlindToNumericalMetrics": false,
+    "metricCaptionLimitation": "Vertailuarkkien painetut IoU-luvut olivat nähtävillä kuvien mukana. Erojen nimeäminen perustui kuvien henkilökohtaiseen tarkasteluun; metrics.json-tiedostot luettiin vasta kolmen eron nimeämisen jälkeen.",
+    "selectionCriterionAndConstraintsKnownBeforeReview": true,
+    "cameraOrGeometryChanged": false,
+    "maskChanged": false,
+    "renderingOrGenerationPerformed": false,
+    "onlyWrittenFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/continuation-273/final-independent-review.json",
+    "meshOrPhysicalSurveyIndependentlyPerformed": false,
+    "scopeLimitation": "Tuore visuaalinen arvio kahdesta versiosta ja tuottajan raportoimien lukujen lukeminen. Ei riippumaton siluettimaskien pikselivarmennus, mittauspaikkojen todentaminen, materiaalimittaus tai todellisen rakennuksen mittaus."
+  },
+  "personallyViewedFiles": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M09/qa/petrin-M09-comparison-sheet.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M10/qa/petrin-M10-comparison-sheet.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M09/qa/K2-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M10/qa/K2-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M09/qa/K5-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M10/qa/K5-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M09/renders/K2-model.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M10/renders/K2-model.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M10/qa/K4-comparison.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M09/inputs/targets/K2.png",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M09/inputs/targets/K5.png"
+  ],
+  "textSourcesRead": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M01/sources/codex-peking-tavoiteluuppi-20261014.md",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/sources/d76d2504/fable-codex-petrin-M01-palaute-20261015.md"
+  ],
+  "metricsFilesReadAfterVisualFindings": [
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M09/qa/metrics.json",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M10/qa/metrics.json"
+  ],
+  "topThreeDifferences": [
+    {
+      "rank": 1,
+      "title": "Alatasanteen gallerian muoto ja kuvallinen sijainti",
+      "views": [
+        "K2",
+        "K1",
+        "K3",
+        "K4",
+        "K5"
+      ],
+      "mostVisibleViews": [
+        "K2"
+      ],
+      "versions": [
+        "M09",
+        "M10"
+      ],
+      "observation": "Mallin alatasanteessa on harva avoin ristikkokaide ja laaja loiva vaalea alapuoli. Tavoitteessa galleria on syvempi, kaide tiheämpi ja alapuolen tukirakenne tumma ja pystympi. K2:ssa mallin galleria asettuu selvästi tavoitegalleriaa alemmaksi suhteessa huippuun ja jalustaan; ero näkyy myös muissa kulmissa.",
+      "classification": "Näkyvä muotoero sekä generoidun tavoitteen ja sitovan fyysisen korkeuden ristiriita.",
+      "physicalHeightConstraint": "Alalattian 20 m korkeus säilyy. Tavoitekuvien tasannevirhettä ei saa kopioida nostamalla mallin tasannetta. Gallerian havaittu ulkoasu ja virheellinen kuvallinen sijainti on erotettava toisistaan.",
+      "materiality": "significant"
+    },
+    {
+      "rank": 2,
+      "title": "Ristikkorungon sekä jalkojen ja hallin katon liitosten yksinkertaistuminen",
+      "views": [
+        "K2",
+        "K5"
+      ],
+      "mostVisibleViews": [
+        "K2"
+      ],
+      "versions": [
+        "M09",
+        "M10"
+      ],
+      "observation": "Mallin ristikon toistuvat tasavahvat sauvat ja sisällä selvästi erottuvat portaiden askelmat muodostavat tavoitetta pelkistetymmän sisäkuvion. Hallin katon ja jalkojen koristeellisten kaariliitosten leveät levyt, pyöreät aukot ja pienet liitososat ovat mallissa pääosin ohuita sileitä kaaria. K5:ssa katon, ristikon ja ulkojalkojen kohtaaminen jää selvästi yksinkertaistetuksi; tyven ääriviivoissa on edelleen paikallista eroa.",
+      "classification": "Rakenne- ja yksityiskohtaero, jota täytetyn siluetin IoU ei kokonaan mittaa.",
+      "physicalHeightConstraint": "Havainto ei edellytä sitovien kerros- tai kattokorkeuksien muuttamista. K5:n peittyvää maapistettä ei käsitellä mitattuna jalansijana.",
+      "materiality": "significant"
+    },
+    {
+      "rank": 3,
+      "title": "Yläkopin alaosan, reunavärin ja antennimaston ulkoasu",
+      "views": [
+        "K2",
+        "K5",
+        "K3",
+        "K4"
+      ],
+      "mostVisibleViews": [
+        "K2",
+        "K5"
+      ],
+      "versions": [
+        "M09",
+        "M10"
+      ],
+      "observation": "Mallin yläkopin alapuolella on pitkä yhtenäinen vaalea umpinainen viiste, kun tavoitteen alapuoli näkyy tummempana, lyhyempänä ja tukirakenteellisesti eriytyvänä. Kopin tumma vihertävä reunus sekä harmaa-vihertävä lasitus poikkeavat tavoitteen harmaa-valkoisesta vaikutelmasta. Mallin masto on yksinkertainen kapea tikasristikko ja sivutangot; tavoitteen antenniryhmä on tiheämpi ja epäsäännöllisempi. Maston kuvallinen pituusero vaihtelee kulmittain.",
+      "classification": "Muoto- ja yksityiskohtaero sekä silmämääräinen väriero; ei varmennettu materiaalin DeltaE-virhe.",
+      "physicalHeightConstraint": "Rungon/katon 58,7 m ja ylälattian 51 m korkeudet säilyvät. Yhden generoidun näkymän koppi- tai mastoproportion perusteella ei tehdä fyysistä korkeuskorjausta.",
+      "materiality": "significant"
+    }
+  ],
+  "metricsIndependentlyRecomputed": false,
+  "metricProvenance": "IoU-luvut kopioitu M09/M10 qa/metrics.json-tiedostoista. Rajaerot ja raja-arvoon suhteutetut suhteet on laskettu näistä raportoiduista luvuista; maskeja tai pikselileikkauksia ei laskettu riippumattomasti uudelleen.",
+  "requiredIoUPercent": {
+    "K1": 85,
+    "K2": 90,
+    "K3": 90,
+    "K4": 90,
+    "K5": 90
+  },
+  "metricsByVersion": {
+    "M09": {
+      "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M09/qa/metrics.json",
+      "modelIterationsCompletedReported": 9,
+      "perView": [
+        {
+          "view": "K1",
+          "silhouetteIoU": 0.8362927961535274,
+          "silhouetteIoUPercent": 83.62927961535274,
+          "requiredIoUPercent": 85,
+          "thresholdPassed": false,
+          "marginPercentagePointsFromReportedValues": -1.3707203846472567,
+          "ratioToThresholdFromReportedValues": 0.9838738778276793,
+          "targetMaskSHA256Reported": "37af16eb46ff060d8c2b59c96bb1e098de6e7f04c8e119a7e4ccb0272fcab614",
+          "K5CorrectedMaskUsedReported": false,
+          "bindingMaterialDeltaE": null
+        },
+        {
+          "view": "K2",
+          "silhouetteIoU": 0.9154736745153975,
+          "silhouetteIoUPercent": 91.54736745153976,
+          "requiredIoUPercent": 90,
+          "thresholdPassed": true,
+          "marginPercentagePointsFromReportedValues": 1.5473674515397562,
+          "ratioToThresholdFromReportedValues": 1.017192971683775,
+          "targetMaskSHA256Reported": "1bdedddab334e16b1570af9ef41fb870384f47693422e22c771d7c2dafb5d981",
+          "K5CorrectedMaskUsedReported": false,
+          "bindingMaterialDeltaE": null
+        },
+        {
+          "view": "K3",
+          "silhouetteIoU": 0.8913294393340562,
+          "silhouetteIoUPercent": 89.13294393340561,
+          "requiredIoUPercent": 90,
+          "thresholdPassed": false,
+          "marginPercentagePointsFromReportedValues": -0.8670560665943867,
+          "ratioToThresholdFromReportedValues": 0.9903660437045068,
+          "targetMaskSHA256Reported": "541a1135f8ba8376dce24223d8cc8b6685e66fd0910a22c446f2d144ab22b55d",
+          "K5CorrectedMaskUsedReported": false,
+          "bindingMaterialDeltaE": null
+        },
+        {
+          "view": "K4",
+          "silhouetteIoU": 0.8936426866514385,
+          "silhouetteIoUPercent": 89.36426866514385,
+          "requiredIoUPercent": 90,
+          "thresholdPassed": false,
+          "marginPercentagePointsFromReportedValues": -0.6357313348561462,
+          "ratioToThresholdFromReportedValues": 0.9929363185015984,
+          "targetMaskSHA256Reported": "9925cbecf0f25d51bde4c20936d35896711e542c8b4bf5abcc50bfd0398eaac8",
+          "K5CorrectedMaskUsedReported": false,
+          "bindingMaterialDeltaE": null
+        },
+        {
+          "view": "K5",
+          "silhouetteIoU": 0.8624663526244953,
+          "silhouetteIoUPercent": 86.24663526244953,
+          "requiredIoUPercent": 90,
+          "thresholdPassed": false,
+          "marginPercentagePointsFromReportedValues": -3.75336473755047,
+          "ratioToThresholdFromReportedValues": 0.9582959473605503,
+          "targetMaskSHA256Reported": "f54ea03d6558e636a943f83f561c72a80fc3c80d0bc5bdc7f5d5621f6ea534a3",
+          "K5CorrectedMaskUsedReported": true,
+          "bindingMaterialDeltaE": null
+        }
+      ],
+      "meanIoUPercentReported": 87.9840989855783,
+      "minimumIoUToThresholdRatioFromReportedValues": 0.9582959473605503,
+      "weakestRelativeView": "K5",
+      "allIoUThresholdsPassedReported": false,
+      "passingViews": [
+        "K2"
+      ],
+      "failingViews": [
+        "K1",
+        "K3",
+        "K4",
+        "K5"
+      ],
+      "physicalHeightSourceConformanceRawProducerReport": {
+        "body": 1.299726491112145e-06,
+        "lowerFloor": 0.0,
+        "upperFloor": 0.0
+      },
+      "physicalHeightIsMeshAuditAgainstTask253NotIndependentSurveyReported": true,
+      "bindingMaterialDeltaE": null,
+      "cameraOptimizationAgainstTargetsUsedReported": true,
+      "K5GroundPointIsInferredReported": true,
+      "K4RearDetailsUnverifiedReconstructionReported": true
+    },
+    "M10": {
+      "sourceFile": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/petrin-tavoitehavainnekuvat-20261014/models/M10/qa/metrics.json",
+      "modelIterationsCompletedReported": 10,
+      "perView": [
+        {
+          "view": "K1",
+          "silhouetteIoU": 0.8376566260061405,
+          "silhouetteIoUPercent": 83.76566260061405,
+          "requiredIoUPercent": 85,
+          "thresholdPassed": false,
+          "marginPercentagePointsFromReportedValues": -1.23433739938595,
+          "ratioToThresholdFromReportedValues": 0.9854783835366359,
+          "targetMaskSHA256Reported": "37af16eb46ff060d8c2b59c96bb1e098de6e7f04c8e119a7e4ccb0272fcab614",
+          "K5CorrectedMaskUsedReported": false,
+          "bindingMaterialDeltaE": null
+        },
+        {
+          "view": "K2",
+          "silhouetteIoU": 0.9187202259892645,
+          "silhouetteIoUPercent": 91.87202259892645,
+          "requiredIoUPercent": 90,
+          "thresholdPassed": true,
+          "marginPercentagePointsFromReportedValues": 1.8720225989264492,
+          "ratioToThresholdFromReportedValues": 1.0208002510991827,
+          "targetMaskSHA256Reported": "1bdedddab334e16b1570af9ef41fb870384f47693422e22c771d7c2dafb5d981",
+          "K5CorrectedMaskUsedReported": false,
+          "bindingMaterialDeltaE": null
+        },
+        {
+          "view": "K3",
+          "silhouetteIoU": 0.8922874389031273,
+          "silhouetteIoUPercent": 89.22874389031273,
+          "requiredIoUPercent": 90,
+          "thresholdPassed": false,
+          "marginPercentagePointsFromReportedValues": -0.7712561096872719,
+          "ratioToThresholdFromReportedValues": 0.9914304876701414,
+          "targetMaskSHA256Reported": "541a1135f8ba8376dce24223d8cc8b6685e66fd0910a22c446f2d144ab22b55d",
+          "K5CorrectedMaskUsedReported": false,
+          "bindingMaterialDeltaE": null
+        },
+        {
+          "view": "K4",
+          "silhouetteIoU": 0.8949803674594657,
+          "silhouetteIoUPercent": 89.49803674594658,
+          "requiredIoUPercent": 90,
+          "thresholdPassed": false,
+          "marginPercentagePointsFromReportedValues": -0.5019632540534218,
+          "ratioToThresholdFromReportedValues": 0.9944226305105175,
+          "targetMaskSHA256Reported": "9925cbecf0f25d51bde4c20936d35896711e542c8b4bf5abcc50bfd0398eaac8",
+          "K5CorrectedMaskUsedReported": false,
+          "bindingMaterialDeltaE": null
+        },
+        {
+          "view": "K5",
+          "silhouetteIoU": 0.8620683211242338,
+          "silhouetteIoUPercent": 86.20683211242338,
+          "requiredIoUPercent": 90,
+          "thresholdPassed": false,
+          "marginPercentagePointsFromReportedValues": -3.7931678875766153,
+          "ratioToThresholdFromReportedValues": 0.9578536901380376,
+          "targetMaskSHA256Reported": "f54ea03d6558e636a943f83f561c72a80fc3c80d0bc5bdc7f5d5621f6ea534a3",
+          "K5CorrectedMaskUsedReported": true,
+          "bindingMaterialDeltaE": null
+        }
+      ],
+      "meanIoUPercentReported": 88.11425958964465,
+      "minimumIoUToThresholdRatioFromReportedValues": 0.9578536901380376,
+      "weakestRelativeView": "K5",
+      "allIoUThresholdsPassedReported": false,
+      "passingViews": [
+        "K2"
+      ],
+      "failingViews": [
+        "K1",
+        "K3",
+        "K4",
+        "K5"
+      ],
+      "physicalHeightSourceConformanceRawProducerReport": {
+        "body": 1.299726491112145e-06,
+        "lowerFloor": 0.0,
+        "upperFloor": 0.0
+      },
+      "physicalHeightIsMeshAuditAgainstTask253NotIndependentSurveyReported": true,
+      "bindingMaterialDeltaE": null,
+      "cameraOptimizationAgainstTargetsUsedReported": true,
+      "K5GroundPointIsInferredReported": true,
+      "K4RearDetailsUnverifiedReconstructionReported": true
+    }
+  },
+  "versionSelection": {
+    "criterion": "Suurin viiden näkymän heikoin raja-arvoon suhteutettu IoU: max(min(IoU_K / raja_K)).",
+    "criterionPredeclared": true,
+    "bestVersionForCappedHandoff": "M09",
+    "latestVersion": "M10",
+    "M09MinimumRatio": 0.9582959473605503,
+    "M10MinimumRatio": 0.9578536901380376,
+    "M10MeanImprovementPercentagePoints": 0.13016060406634722,
+    "M10K5ChangePercentagePoints": -0.03980315002614532,
+    "interpretation": "M10 parantaa keskiarvoa hieman, mutta heikoin suhteellinen näkymä K5 heikkenee hieman. M09 jää ennalta annetun kriteerin parhaaksi. Visuaalisesti molemmissa säilyvät samat kolme suurta eroa; kumpikaan ei läpäise kaikkia rajoja."
+  },
+  "bindingPhysicalHeightsMetres": {
+    "bodyRoof": 58.7,
+    "lowerFloor": 20.0,
+    "upperFloor": 51.0,
+    "mustRemainUnchanged": true,
+    "producerReportsSourceConformingMesh": true,
+    "independentlyVerifiedByThisReviewer": false,
+    "note": "Tuottajan mesh-auditointiluvut on kirjattu erikseen kummallekin versiolle. Ne eivät ole riippumaton maastomittaus eivätkä kuvarajauksen korkeuserot ole fyysisiä korkeusvirheitä."
+  },
+  "evidenceLimits": {
+    "K5MaskV2PTApproved": true,
+    "K5GroundPointIsInferred": true,
+    "K5MaskPixelExactCertificationIndependentlyPerformed": false,
+    "K4NorthRearDetails": "varmentamaton rekonstruktio",
+    "cameraOptimizationAllowed": true,
+    "camerasAreMeasuredRealPhotographyLocations": false,
+    "cameraInterpretation": "Kamerat on sovitettu hyväksyttyihin generoituun tavoitekuviin. Hyvä projektiosovitus ei todista todellisia kuvauspaikkoja eikä yksin erota kamera- ja muotoeron osuuksia.",
+    "environment": "Neutraali renderöintiympäristö; lopullista puistoa ei ole arvioitu valmiiksi.",
+    "bindingMaterialDeltaE": null,
+    "bindingMaterialDeltaEPass": null,
+    "pixelDeltaEUse": "Vain diagnostinen pikseliero. Sisältää muodon, rekisteröinnin, taustan ja valaistuksen vaikutusta, eikä kelpaa sitovan materiaalivärin läpäisyväitteeksi.",
+    "filledSilhouetteMetricLimit": "Täytetty ulkosiluetti ei mittaa aukkojen, ristikon, kaiteiden, portaiden ja koristeosien oikeellisuutta."
+  },
+  "modelReadyAsFinal": false,
+  "significantVisibleDifferencesRemain": true,
+  "allBindingGatesVerifiedPassed": false,
+  "modelFinalAcceptanceVerified": false,
+  "iterationCap": {
+    "maximumTotalModelRounds": 10,
+    "completedTotalModelRounds": 10,
+    "capReached": true,
+    "M11Authorized": false,
+    "decision": "Pysäytä malliluuppi kokonaisrajan täytyttyä. Toimita M09 parhaana versiona, M10 viimeisimpänä vertailuna ja avoimet erot PT:n palautteeseen; tämä arvio ei merkitse lopullista hyväksyntää."
+  },
+  "deliveryScope": {
+    "gameIntegrationPerformedByReviewer": false,
+    "R2ExportPerformedByReviewer": false,
+    "publicationPerformedByReviewer": false,
+    "externalSessionMessagingUsed": false
+  },
+  "reviewedFileSHA256": {
+    "models/M09/qa/petrin-M09-comparison-sheet.png": "09823b97582f4300a73cccc25795251edb886567c802acda28aff1d3d0a64ef3",
+    "models/M10/qa/petrin-M10-comparison-sheet.png": "0d590a3352d0e5690cd63865f52ff32fa70df33edf6ad72b25c0492febbd6e06",
+    "models/M09/qa/K2-comparison.png": "b1528cdb6f539b54b15d0c5edd6be12741e272efc6a77b8ebe2fc36086414726",
+    "models/M10/qa/K2-comparison.png": "3cad99631db3dda87c75bfa8ef2425a249051e91699685c9029812ff4d0f20e9",
+    "models/M09/qa/K5-comparison.png": "d009a50522ed06e54f7631a8393c297847da264f29df59befb087098143e1ccb",
+    "models/M10/qa/K5-comparison.png": "eff18bc857d898c38f6e5815ef2def4dcbe0945692914713121abe8e1c1f0f2a",
+    "models/M09/renders/K2-model.png": "8e4bbcf686d1475e68232c3e9251b310c2aec05659742974542346f5398949d3",
+    "models/M10/renders/K2-model.png": "1e416550ab601858a6770f3c3cfea42ba99e47f352c647c4681864d03e18f9a7",
+    "models/M10/qa/K4-comparison.png": "b1274dad7eefdec8b294ce096ed0fcf8c5491e5cdc93517d06158d5eff444d88",
+    "models/M09/inputs/targets/K2.png": "c869913a3b4c86cc0f191f02c61fd38c45761d9a7396f3376afe3501bd2c4f52",
+    "models/M09/inputs/targets/K5.png": "a695d52f270138fdcaa797cb3f288e1957a1acec121340e93e5034f359f2c134",
+    "models/M01/sources/codex-peking-tavoiteluuppi-20261014.md": "8c88abb1414837d014c4b8f33aaa2d60622fc5eff40ebd3804cc7ffe8e80e2ca",
+    "sources/d76d2504/fable-codex-petrin-M01-palaute-20261015.md": "aa96e6e131f913a7cd7106ddf65a38bb92d712b8b33214f5c0ae391155f254f0",
+    "models/M09/qa/metrics.json": "fc968ec63acc926880c3f0b901fa58a99f14797cb45d71cc3bef2127808de4c9",
+    "models/M10/qa/metrics.json": "2c20344ca9713cbf45fd1b2e4c2d9efe6a9e017f487608ed4df577df7862bb3b"
+  }
+}

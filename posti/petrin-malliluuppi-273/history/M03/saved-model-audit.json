@@ -1,0 +1,90 @@
+{
+  "savedBlendReadbackPassed": true,
+  "blender": "5.2.1 LTS",
+  "towerMeshObjects": 40,
+  "towerVertices": 41328,
+  "towerPolygons": 26994,
+  "actualBindingHeightMeasurements": {
+    "body_top": {
+      "expectedMaxZ": 58.7,
+      "actualMaxZ": 58.70000076293945,
+      "absoluteErrorM": 7.629394502828291e-07
+    },
+    "lower_floor": {
+      "expectedMaxZ": 20,
+      "actualMaxZ": 20.0,
+      "absoluteErrorM": 0.0
+    },
+    "upper_floor": {
+      "expectedMaxZ": 51,
+      "actualMaxZ": 51.0,
+      "absoluteErrorM": 0.0
+    }
+  },
+  "allNonMastMeshMinZ": -0.07999992370605469,
+  "allNonMastMeshMaxZ": 58.70005416870117,
+  "nonMastOverallHeightErrorPercent": 0.1363783516307048,
+  "actualGroundShoeConnectedComponents": 8,
+  "targetImageTextureNodes": [],
+  "cameraChecks": [
+    {
+      "view": "K1",
+      "maximumAxisProjectionErrorPixels": 0.0011497669630671226,
+      "lensMm": 43.114662170410156,
+      "positionM": [
+        -57.379417419433594,
+        -191.59228515625,
+        90.0
+      ],
+      "sourceCameraSHAUnchangedInInputs": true
+    },
+    {
+      "view": "K2",
+      "maximumAxisProjectionErrorPixels": 0.0009043334912348655,
+      "lensMm": 20.386577606201172,
+      "positionM": [
+        -9.36722469329834,
+        -52.963897705078125,
+        1.5547444820404053
+      ],
+      "sourceCameraSHAUnchangedInInputs": true
+    },
+    {
+      "view": "K3",
+      "maximumAxisProjectionErrorPixels": 0.00017961759908757813,
+      "lensMm": 35.49552917480469,
+      "positionM": [
+        -106.58582305908203,
+        2.0197131633758545,
+        1.509831190109253
+      ],
+      "sourceCameraSHAUnchangedInInputs": true
+    },
+    {
+      "view": "K4",
+      "maximumAxisProjectionErrorPixels": 0.001146653644241269,
+      "lensMm": 33.0097770690918,
+      "positionM": [
+        5.828556060791016,
+        95.30995178222656,
+        1.9042365550994873
+      ],
+      "sourceCameraSHAUnchangedInInputs": true
+    },
+    {
+      "view": "K5",
+      "maximumAxisProjectionErrorPixels": 0.0026793393784600994,
+      "lensMm": 53.695945739746094,
+      "positionM": [
+        128.9254150390625,
+        -16.6804256439209,
+        150.0
+      ],
+      "sourceCameraSHAUnchangedInInputs": true
+    }
+  ],
+  "uniformDisplayExposureEV": -2.5,
+  "reRenderingPerformed": false,
+  "independentRealWorldSurvey": false,
+  "maximumTotalModelRounds": 10
+}

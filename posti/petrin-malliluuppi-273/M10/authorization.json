@@ -1,0 +1,35 @@
+{
+  "taskNumbers": [
+    272,
+    273
+  ],
+  "sourcePath": "posti/fable-codex-petrin-M01-palaute-20261015.md",
+  "sourceCommit": "d76d2504ef01584adf5ed6fd7a8b820c77df3840",
+  "sourceBlob": "d7a51d3d4e1f39cec063e530e9ce1eb445601a24",
+  "sourceSHA256": "aa96e6e131f913a7cd7106ddf65a38bb92d712b8b33214f5c0ae391155f254f0",
+  "sourceReadInFull": true,
+  "readAt": "2026-10-15T11:38:22.232873+00:00",
+  "K5MaskV2PTAccepted": true,
+  "M01AcceptedAsIntermediateOnly": true,
+  "firstCompletedRoundIncludedInCap": true,
+  "completedRoundsAtStart": [
+    "M01"
+  ],
+  "maximumTotalRounds": 10,
+  "authorizedNewRoundsMaximum": 9,
+  "startRound": "M02",
+  "stopWhenAllIoUThresholdsPassedOrTenTotalRounds": true,
+  "latestSourceOverridesEarlierTwoUnimprovedRoundStop": true,
+  "cameraSilhouetteOptimizationAuthorized": true,
+  "bindingHeightsM": [
+    58.7,
+    20,
+    51
+  ],
+  "newAIImageGenerationAllowed": false,
+  "noR2": true,
+  "noGameIntegration": true,
+  "noMainMerge": true,
+  "noPublication": true,
+  "startedAt": "2026-10-15T11:38:22.232873+00:00"
+}

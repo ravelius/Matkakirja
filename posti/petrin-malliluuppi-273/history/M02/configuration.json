@@ -1,0 +1,15 @@
+{
+  "foot_radius": 13.0,
+  "leg_r7": 10.6,
+  "leg_r12": 8.65,
+  "leg_r20": 5.8,
+  "hall_flat_width": 20.8,
+  "lower_gallery_radius": 7.8,
+  "upper_cabin_radius": 4.06,
+  "mast_top": 68.5,
+  "lattice_pitch": 1.6,
+  "lattice_rod_radius": 0.085,
+  "lower_glass_height": 2.8,
+  "upper_spandrel": 3.5,
+  "facade_detail_level": 1
+}

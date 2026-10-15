@@ -1,0 +1,149 @@
+{
+  "cameraID": "K2",
+  "sourceTaskNumber": 260,
+  "imageSHA256": "c869913a3b4c86cc0f191f02c61fd38c45761d9a7396f3376afe3501bd2c4f52",
+  "maskSHA256": "1bdedddab334e16b1570af9ef41fb870384f47693422e22c771d7c2dafb5d981",
+  "canvas": [
+    1024,
+    1536
+  ],
+  "fittingMethod": "analytical vertical-axis two-anchor pinhole fit; D and eye height held as source priors; solve pitch and vertical FOV from mast tip and estimated base contact",
+  "fitIsNotUniqueRecoveredCamera": true,
+  "noMeshModelOrRenderCreated": true,
+  "cameraAzimuthConvention": "from tower center to camera, clockwise from north; x east y north z up",
+  "cameraAzimuthDegrees": 190,
+  "distanceM": 55,
+  "heightM": 1.7,
+  "distanceAndHeightHeldAsPriorsNotPhotographicallyVerified": true,
+  "pitchDegrees": 23.178698150696896,
+  "rollDegrees": 0,
+  "verticalFOVDegrees": 60.96405697117353,
+  "horizontalFOVDegrees": 42.851580921743405,
+  "positionRelativeTowerCenterM": [
+    -9.550649771681176,
+    -54.16442641567144,
+    1.7
+  ],
+  "opticalHorizontalAzimuthDegrees": 10,
+  "principalPointNativePx": [
+    524,
+    768.0
+  ],
+  "focalLengthNativePixels": 1304.7409330246792,
+  "projectionEquationY": "native_y = H * (0.5 - tan(atan2(z-camera_height, horizontal_distance)-pitch)/(2*tan(vfov/2)))",
+  "projectionAssumptions": [
+    "tower vertical axis at fixed distance",
+    "square pixels, zero roll and lens distortion",
+    "horizontal center supplied from manual axis observation",
+    "not all gallery edge points lie on tower center axis",
+    "physical dimensions stay fixed under #253"
+  ],
+  "fixedPhysicalDimensions": {
+    "bodyHeightM": 58.7,
+    "lowerPlatformM": 20,
+    "upperPlatformM": 51,
+    "totalHeightApproxM": 71,
+    "totalHeightUncertain": true,
+    "hallRoofApproxM": 7,
+    "hallWidthApproxM": 22.5,
+    "hallEstimatesUncertain": true
+  },
+  "landmarks": {
+    "mastTop": {
+      "nativeY": 63,
+      "uncertaintyPixels": 3
+    },
+    "groundContactAxisEstimate": {
+      "nativeY": 1375,
+      "uncertaintyPixels": 8,
+      "note": "center/base estimate from ground contacts spanning roughly1365–1385 due ground-plane perspective"
+    },
+    "bodyRoofTop": {
+      "nativeY": 182,
+      "uncertaintyPixels": 4
+    },
+    "upperPlatformFloorApprox": {
+      "nativeY": 229,
+      "uncertaintyPixels": 5
+    },
+    "lowerPlatformFloorApprox": {
+      "nativeY": 710,
+      "uncertaintyPixels": 12,
+      "note": "front visible floor band; visible side edge extends to about744, not a single axis point"
+    },
+    "axisXNative": 524
+  },
+  "modelPhysicalLevelAxisProjection": {
+    "ground": {
+      "heightM": 0,
+      "normalizedY": 0.8951822916666665,
+      "nativeY": 1374.9999999999998
+    },
+    "hallRoofApprox": {
+      "heightM": 7,
+      "normalizedY": 0.7706740240753518,
+      "nativeY": 1183.7553009797402
+    },
+    "lowerPlatform": {
+      "heightM": 20,
+      "normalizedY": 0.5709563994580676,
+      "nativeY": 876.9890295675918
+    },
+    "upperPlatform": {
+      "heightM": 51,
+      "normalizedY": 0.21259259995547908,
+      "nativeY": 326.54223353161586
+    },
+    "bodyTop": {
+      "heightM": 58.7,
+      "normalizedY": 0.1421543682149578,
+      "nativeY": 218.3491095781752
+    },
+    "mastTopApprox": {
+      "heightM": 71,
+      "normalizedY": 0.041015625000000056,
+      "nativeY": 63.000000000000085
+    }
+  },
+  "platformAndRoofResiduals": {
+    "bodyRoofTop": {
+      "observedNativeY": 182,
+      "modelAxisProjectionNativeY": 218.3491095781752,
+      "observedMinusProjectionPixels": -36.34910957817519,
+      "observationUncertaintyPixels": 4,
+      "modelHeightM": 58.7,
+      "isNotInstructionToChangeModelHeight": true
+    },
+    "upperPlatformFloorApprox": {
+      "observedNativeY": 229,
+      "modelAxisProjectionNativeY": 326.54223353161586,
+      "observedMinusProjectionPixels": -97.54223353161586,
+      "observationUncertaintyPixels": 5,
+      "modelHeightM": 51,
+      "isNotInstructionToChangeModelHeight": true
+    },
+    "lowerPlatformFloorApprox": {
+      "observedNativeY": 710,
+      "modelAxisProjectionNativeY": 876.9890295675918,
+      "observedMinusProjectionPixels": -166.98902956759184,
+      "observationUncertaintyPixels": 12,
+      "modelHeightM": 20,
+      "isNotInstructionToChangeModelHeight": true
+    }
+  },
+  "mastBaseAnchorResidualPixels": {
+    "mast": 8.526512829121202e-14,
+    "base": 2.2737367544323206e-13
+  },
+  "generatorGeometryMismatchMustNotBeCopiedIntoModel": true,
+  "fullSilhouetteFitVerified": false,
+  "modelSilhouetteIoU": null,
+  "heightErrorMetric": null,
+  "deltaE": null,
+  "IoUThreshold": 0.9,
+  "thresholdAppliesOnlyToThisCamera": true,
+  "heightAndDeltaEThresholdsUnchanged": true,
+  "modelLoopAuthorized": false,
+  "PTCameraAcceptanceVerified": false,
+  "createdAt": "2026-10-14T19:29:20.026235+00:00"
+}

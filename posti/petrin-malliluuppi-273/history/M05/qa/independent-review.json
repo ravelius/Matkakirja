@@ -1,0 +1,200 @@
+{
+  "modelRound": "M05",
+  "reviewType": "fresh-independent-visual-review",
+  "status": "complete-independent-visual-review-not-final-ready",
+  "visualFindingsRecordedAt": "2026-10-15T11:49:15.500506+00:00",
+  "language": "fi",
+  "independenceScope": {
+    "productionParticipation": false,
+    "statement": "Arvioija ei ole osallistunut M05:n mallin, kameroiden, kuvien tai maskien tuotantoon. Katsottu henkilökohtaisesti tämän kierroksen vertailukuvat ja K2:n natiivi tavoite sekä mallirenderi. Kolme suurinta kuvaeroa nimettiin ja kirjattiin ennen metrics.jsonin lukemista.",
+    "metricsReadBeforeTopThree": false,
+    "comparisonSheetShowsMetricCaptions": true,
+    "comparisonSheetMetricCaptionCaveat": "Vaaditussa vertailuarkissa ja kulmavertailuissa on valmiiksi näkyvät IoU-tekstit. Niitä ei voi pitää sokkoutettuina. Havaintojen perustelut syntyivät kuvista; metrics.jsonia ei avattu ennen tämän tallennuksen tekemistä.",
+    "modelGeometryOrCameraFilesInspected": false,
+    "priorRoundVisualReviewsReadBeforeTopThree": false,
+    "priorRoundFeedbackReadAfterTopThree": [
+      "../../sources/d76d2504/fable-codex-petrin-M01-palaute-20261015.md"
+    ]
+  },
+  "viewedFiles": [
+    "qa/petrin-M05-comparison-sheet.png",
+    "qa/K2-comparison.png",
+    "qa/K5-comparison.png",
+    "inputs/targets/K2.png",
+    "renders/K2-model.png",
+    "qa/K1-comparison.png",
+    "qa/K3-comparison.png",
+    "qa/K4-comparison.png"
+  ],
+  "topThreeDifferences": [
+    {
+      "rank": 1,
+      "title": "Välitasanteen näkyvä sijainti ja rakenne poikkeavat",
+      "views": [
+        "K2",
+        "K3",
+        "K4",
+        "K1"
+      ],
+      "evidence": "K2:ssa antennin huippu ja jalusta asettuvat lähes samoille kuvakorkeuksille, mutta mallin välitasanne on tavoitetta selvästi alempana. Sama ero näkyy K3:ssa ja K4:ssä. Mallin tasanne näyttää vaalealta laatta- ja kaideyhdistelmältä; tavoitteessa tumma syvä alapinta, ulokkeiden tuet sekä tiheä koristekaide muodostavat vahvemman monikulmaisen vyön.",
+      "whyItMatters": "Tasanteen paikka ja tumma uloke jakavat tornin tunnistettavan siluetin. Ero näkyy jo kokonaiskuvissa.",
+      "constraint": "Lattiatasoja 20 m ja 51 m sekä rungon/katon yläpintaa 58,7 m ei saa siirtää generoidun tavoitteen tasannevirheiden perusteella. Näkyvä korkeusero on kirjattava tavoitteen ja sitovan geometrian ristiriidaksi; sallittu jatkotyö koskee varmennettujen mittojen sisällä tasanteen tuentaa, kaidetta ja pintojen jäsentelyä."
+    },
+    {
+      "rank": 2,
+      "title": "Yläkopin vaalea seinävyö on raskas ja yksinkertainen",
+      "views": [
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K1"
+      ],
+      "evidence": "K2:n natiivikuvissa mallin yläkopin ikkunan alapuoli on korkea yhtenäinen vaalea vyö. Tavoitteessa ikkunoiden, kapeamman vaalean paneloinnin, tumman taitetun alapinnan ja tukien erottelu on selvästi rikkaampi. Mallin oliivinvihertävä räystäs/alapinta ja tasainen vaalea julkisivu tekevät kopista raskaan vaalean kuution myös K3–K5:ssä.",
+      "whyItMatters": "Yläkoppi on tornin toinen pääsilmuetti ja suuri materiaalinen tunnusmerkki. Yhtenäisen vaalean pinnan osuus poikkeaa, vaikka ulkoreunat olisivat lähellä tavoitetta.",
+      "constraint": "Arvio koskee näkyvää jäsentelyä, alapinnan muotoa ja värisuhteita; se ei ole ehdotus muuttaa sitovaa 51 m lattiakorkeutta tai 58,7 m yläpintaa."
+    },
+    {
+      "rank": 3,
+      "title": "Ristikko ja tyven metallidetaljit ovat liian tasarytmisiä",
+      "views": [
+        "K2",
+        "K5",
+        "K3",
+        "K4"
+      ],
+      "evidence": "K2:ssa mallin sekä ylä- että alarunko täyttyvät tasavälein toistuvista vaaleista vino- ja vaakapalkeista. Tavoitteessa erottuvat harvemmat suuret X-jaksot, paksuuserot, tummempi sisäinen porrasrakenne ja avoimemmat välit. Jalustan koristeellisissa kannatuskaarissa tavoitteen renkaat ja spiraalinen taivutus jäävät mallissa ohuiksi suuriksi kaariviivoiksi. K5:ssä alarungon toistuva palkkiverkko näkyy erityisen tasaisena.",
+      "whyItMatters": "Kuva muistuttaa toistuvaa teknistä ristikkoverkkoa; tavoitteen vaihteleva kantava rakenne ja tunnistettava koristeellinen tyvi jäävät heikoiksi.",
+      "constraint": "Palkkijärjestelyä ja koristeita tulee korjata vain varmennetun rakennustiedon perusteella. K4:n pohjoispuolen detaljeja ei vahvisteta tämän generoidun tavoitteen avulla."
+    }
+  ],
+  "additionalVisualObservations": [
+    "K2:n jalustan seinissä mallilta puuttuvat tavoitteen kivijakoon, listoitukseen ja aukkojen syvyyteen perustuvat varjot. Ovi näyttää tasaiselta harmaalta pinnalta, kun tavoitteessa on tumma syvä sisäänkäynti. Tämä on detalji- ja materiaaliero, ei vaatimus kopioida generoitua ovitilannetta.",
+    "Teräs ja kopit ovat mallissa kauttaaltaan vaalean vihertävänharmaat; tavoitteessa metallin sävy on viileämpi harmaa ja sisärakenne sekä alapinnat tummemmat. Jalustan kermanvärinen ja punaruskeiden taulujen yleinen värijako tunnistuu. Valaistus ja ympäristö selittävät osan värierosta, joten pikseliero ei sellaisenaan osoita materiaaliväriarvojen virhettä.",
+    "K5:ssä jalustan ulkokehällä ja tasanteiden reunoilla on näkyvää ääriviivaeroa; tarkka pohjakosketuksen päätelmä jää maskin ja arvioidun maapisteen varaan."
+  ],
+  "caveats": [
+    "Ympäristö on neutraali placeholder eikä ympäristön, puiden, taivaan, maaston tai varjon osumista tavoitteeseen käytetä hyväksymisvaatimuksena.",
+    "Sitovat lattiakorkeudet 20 m ja 51 m sekä rungon/katon yläpinta 58,7 m säilytetään. Kuvista ei ole tässä arvioinnissa itsenäisesti mitattu näitä metreinä.",
+    "K5-v2-maski on tehtävänannossa PT-hyväksytty, mutta pohjan maapiste on edelleen arvio.",
+    "K4:n pohjoisdetaljit eivät ole varmennettua tosimaailman tietoa.",
+    "Kamerasovitus on tehtävänannon lähteen d76d2504ef01584adf5ed6fd7a8b820c77df3840 mukaan sallittu; kameran muutosta ei itsessään pidetä virheenä.",
+    "Enimmäismäärä on 10 mallikierrosta yhteensä M01 mukaan lukien. Tämä arvio koskee vain M05:ttä.",
+    "Arvio on kuvapohjainen. Blend-tiedostoa tai geometrian metrimittauksia ei avattu eikä mallia, kameroita, maskeja tai kuvia muutettu."
+  ],
+  "modelReadyAsFinal": false,
+  "metricsIndependentlyRecomputed": false,
+  "metricsReview": {
+    "readAfterVisualFindingsWereWritten": true,
+    "source": "qa/metrics.json",
+    "method": "Lähdetiedoston raportoitujen arvojen tarkistus rajoja vasten; maskeja tai pikseleitä ei laskettu uudelleen.",
+    "independentPixelRecomputation": false,
+    "thresholdSource": "../../sources/d76d2504/fable-codex-petrin-M01-palaute-20261015.md",
+    "perView": [
+      {
+        "view": "K1",
+        "reportedIoUPercent": 83.54985306633694,
+        "requiredIoUPercent": 85,
+        "marginPercentagePoints": -1.450147,
+        "reportedThresholdPassed": false,
+        "reviewedThresholdDecision": false
+      },
+      {
+        "view": "K2",
+        "reportedIoUPercent": 90.85374645142366,
+        "requiredIoUPercent": 90,
+        "marginPercentagePoints": 0.853746,
+        "reportedThresholdPassed": true,
+        "reviewedThresholdDecision": true
+      },
+      {
+        "view": "K3",
+        "reportedIoUPercent": 89.2748073267313,
+        "requiredIoUPercent": 90,
+        "marginPercentagePoints": -0.725193,
+        "reportedThresholdPassed": false,
+        "reviewedThresholdDecision": false
+      },
+      {
+        "view": "K4",
+        "reportedIoUPercent": 88.08632821127695,
+        "requiredIoUPercent": 90,
+        "marginPercentagePoints": -1.913672,
+        "reportedThresholdPassed": false,
+        "reviewedThresholdDecision": false
+      },
+      {
+        "view": "K5",
+        "reportedIoUPercent": 83.73702422145328,
+        "requiredIoUPercent": 90,
+        "marginPercentagePoints": -6.262976,
+        "reportedThresholdPassed": false,
+        "reviewedThresholdDecision": false
+      }
+    ],
+    "allIoUThresholdsPassed": false,
+    "meanIoUPercentDiagnosticOnly": 87.10035185544443,
+    "meanCannotReplacePerViewThresholds": true,
+    "interpretation": "Vain K2 ylittää vaaditun rajan. K1 alittaa 85 % rajan 1,45 prosenttiyksiköllä; K3 alittaa 90 % rajan 0,73 prosenttiyksiköllä; K4 1,91 prosenttiyksiköllä ja K5 6,26 prosenttiyksiköllä. K5 on suurin siluettivaje. K2:n läpäisevä siluetti ei poista sen näkyviä tasanne-, koppi- ja ristikkodetaljien eroja.",
+    "physicalHeight": {
+      "requiredLowerFloorM": 20,
+      "requiredUpperFloorM": 51,
+      "requiredBodyRoofTopM": 58.7,
+      "sourceConformanceRawReportedValues": {
+        "body": 1.299726491112145e-06,
+        "lowerFloor": 0.0,
+        "upperFloor": 0.0
+      },
+      "reportStatesMeshAuditNotIndependentSurvey": true,
+      "independentlyMeasuredByThisReviewer": false,
+      "assessment": "Raportoitu auditointi tukee sitovien korkeuksien säilymistä; tässä silmämääräisessä arvioinnissa niitä ei ole itsenäisesti varmennettu. Kuvan pystysuuntaisen rajauslaatikon erot eivät ole fyysisen korkeuden virheitä."
+    },
+    "materialColor": {
+      "bindingMaterialDeltaE": null,
+      "bindingPassVerified": false,
+      "reason": "Itsenäisesti kohdistettuja pelkän materiaalin vertailualueita ja yhtenevää valaistusta ei ole. Kuvien pikselikohtainen CIE76 sisältää muodon, rekisteröinnin ja valaistuksen eroja, joten se ei kelpaa sitovan materiaalivärirajan passiksi tai hylkäykseksi.",
+      "diagnosticPerViewMeanDeltaE76": [
+        {
+          "view": "K1",
+          "mean": 24.2727926998483
+        },
+        {
+          "view": "K2",
+          "mean": 27.025976916200314
+        },
+        {
+          "view": "K3",
+          "mean": 24.49704789053852
+        },
+        {
+          "view": "K4",
+          "mean": 27.866281385363113
+        },
+        {
+          "view": "K5",
+          "mean": 24.535811655721055
+        }
+      ]
+    },
+    "maskCaveat": "K5-v2:n PT-hyväksyntä ei tarkoita tämän arvioijan tekemää maskin pikselintarkkaa sertifiointia. metrics.json merkitsee targetMaskIndependentPixelExactCertification=false kaikissa kulmissa.",
+    "modelIterationsCompletedReported": 5,
+    "maximumTotalIterations": 10,
+    "remainingIterationsIfReportedCountCorrect": 5
+  },
+  "reviewCompletedAt": "2026-10-15T11:51:08.339183+00:00",
+  "readEvidenceFilesAfterVisualFindings": [
+    "qa/metrics.json",
+    "../../sources/70328561/codex-peking-tavoiteluuppi-20261014.md",
+    "../../sources/d76d2504/fable-codex-petrin-M01-palaute-20261015.md",
+    "../../sources/70328561/petrin-LISAYS-maskit.md"
+  ],
+  "overallAssessment": {
+    "modelReadyAsFinal": false,
+    "largeVisibleDifferencesRemain": true,
+    "allRequiredSilhouetteThresholdsMet": false,
+    "bindingMaterialColorPassVerified": false,
+    "recommendedNextStep": "Jatka jo valtuutettua malliluuppia jäljellä olevien kokonaiskierrosten puitteissa. K5:n siluetti on ensisijainen numeerinen ongelma; yläkopin pintajako, tasanteiden tuenta/kaiteet ja rungon vaihteleva palkkijako ovat keskeiset näkyvät detaljikorjaukset. Säilytä sitovat korkeudet ja erottele tavoitekuvien tasannevirheet todellisista mallikorjauksista. Pysähdy uusimman PT-ohjeen mukaan, kun kaikki viisi IoU-rajaa täyttyvät tai yhteensä 10 kierrosta on tehty; toimita paras versio sekä jäljellä olevat erot. Lopullinen PT-hyväksyntä arvioidaan erikseen.",
+    "permissionQuestionRequired": false
+  },
+  "onlyFileWrittenByReviewer": "qa/independent-review.json"
+}

@@ -1,0 +1,155 @@
+{
+  "cameraID": "K4",
+  "sourceTaskNumber": 264,
+  "imageSHA256": "6ec296c9aaef7018aef9560128d7dee422fcea66913985c3a966db300aa25fe9",
+  "maskSHA256": "9925cbecf0f25d51bde4c20936d35896711e542c8b4bf5abcc50bfd0398eaac8",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "fittingMethod": "Task273 bounded numerical silhouette fit of 3D physical envelope; exact actual geometry/render IoU measured separately after Blender render",
+  "fitIsNotUniqueRecoveredCamera": true,
+  "noMeshModelOrRenderCreated": false,
+  "cameraAzimuthConvention": "from tower center to camera clockwise from north; x east y north z up",
+  "cameraAzimuthDegrees": 6.166020672675502,
+  "distanceM": 80.33510255447419,
+  "heightM": 1.3749150979369835,
+  "distanceHeightAndAbsoluteAzimuthNotPhotographicallyVerified": true,
+  "northPhotographReferenceVerified": false,
+  "rearHallDetailsAreUnverifiedReconstruction": true,
+  "pitchDegrees": 20.612197525622644,
+  "rollDegrees": 0,
+  "verticalFOVDegrees": 47.02812113610906,
+  "horizontalFOVDegrees": 57.20664978112074,
+  "positionRelativeTowerCenterM": [
+    8.628773633984824,
+    79.87035099466719,
+    1.3749150979369835
+  ],
+  "opticalHorizontalAzimuthDegrees": 185,
+  "principalPointNativePx": [
+    761.0619926103328,
+    489.2177238607505
+  ],
+  "focalLengthNativePixels": 1176.7296047912434,
+  "projectionEquationY": "native_y = H * (0.5 - tan(atan2(z-camera_height, horizontal_distance)-pitch)/(2*tan(vfov/2)))",
+  "projectionAssumptions": [
+    "tower vertical axis at fixed distance",
+    "square pixels, zero roll and no lens distortion",
+    "horizontal center manually estimated; top axis differs by about5 px, no claim of complete 2D pose fit",
+    "gallery front edges are not all tower-axis points",
+    "geometry stays at Task253 physical levels"
+  ],
+  "fixedPhysicalDimensions": {
+    "bodyHeightM": 58.7,
+    "lowerPlatformM": 20,
+    "upperPlatformM": 51,
+    "totalHeightApproxM": 68.6125,
+    "totalHeightUncertain": true,
+    "hallHeightApproxM": 7,
+    "hallWidthApproxM": 22.5,
+    "hallEstimatesUncertain": true
+  },
+  "landmarks": {
+    "mastTop": {
+      "nativeY": 53,
+      "nativeX": 758,
+      "uncertaintyPixels": 3
+    },
+    "groundContactAxisEstimate": {
+      "nativeY": 960,
+      "nativeX": 763,
+      "uncertaintyPixels": 5,
+      "note": "axis/base estimate from several visible support contacts roughly953–964; their depths differ"
+    },
+    "bodyRoofTop": {
+      "nativeY": 165,
+      "uncertaintyPixels": 4
+    },
+    "upperPlatformFloorApprox": {
+      "nativeY": 210,
+      "uncertaintyPixels": 4
+    },
+    "lowerPlatformFloorApprox": {
+      "nativeY": 563,
+      "uncertaintyPixels": 8,
+      "note": "visible front floor band; side edges extend lower and are not center-axis points"
+    },
+    "axisXNative": 763
+  },
+  "modelPhysicalLevelAxisProjection": {
+    "ground": {
+      "heightM": 0,
+      "nativeY": 954.9446246394307,
+      "normalizedY": 0.932563109999444
+    },
+    "hallRoofApprox": {
+      "heightM": 7,
+      "nativeY": 840.1696795641556,
+      "normalizedY": 0.8204782026993707
+    },
+    "lowerPlatform": {
+      "heightM": 20,
+      "nativeY": 645.3744892925549,
+      "normalizedY": 0.6302485246997607
+    },
+    "upperPlatform": {
+      "heightM": 51,
+      "nativeY": 258.51234694111724,
+      "normalizedY": 0.2524534638096848
+    },
+    "bodyTop": {
+      "heightM": 58.7,
+      "nativeY": 176.1473844348883,
+      "normalizedY": 0.1720189301121956
+    },
+    "mastTopApprox": {
+      "heightM": 68.6125,
+      "nativeY": 76.76578304356201,
+      "normalizedY": 0.07496658500347853
+    }
+  },
+  "platformAndRoofResiduals": {
+    "bodyRoofTop": {
+      "observedNativeY": 165,
+      "modelAxisProjectionNativeY": 186.53434112244042,
+      "observedMinusProjectionPixels": -21.534341122440424,
+      "observationUncertaintyPixels": 4,
+      "modelHeightM": 58.7,
+      "isNotInstructionToChangeModelHeight": true
+    },
+    "upperPlatformFloorApprox": {
+      "observedNativeY": 210,
+      "modelAxisProjectionNativeY": 274.4917008078463,
+      "observedMinusProjectionPixels": -64.49170080784631,
+      "observationUncertaintyPixels": 4,
+      "modelHeightM": 51,
+      "isNotInstructionToChangeModelHeight": true
+    },
+    "lowerPlatformFloorApprox": {
+      "observedNativeY": 563,
+      "modelAxisProjectionNativeY": 667.5132715541677,
+      "observedMinusProjectionPixels": -104.51327155416766,
+      "observationUncertaintyPixels": 8,
+      "modelHeightM": 20,
+      "isNotInstructionToChangeModelHeight": true
+    }
+  },
+  "mastBaseAnchorResidualPixels": {
+    "mast": 5.684341886080802e-14,
+    "base": 2.2737367544323206e-13
+  },
+  "generatorGeometryMismatchMustNotBeCopiedIntoModel": true,
+  "fullSilhouetteFitVerified": false,
+  "modelSilhouetteIoU": null,
+  "heightErrorMetric": null,
+  "deltaE": null,
+  "IoUThreshold": 0.9,
+  "K1OnlyThreshold": 0.85,
+  "heightAndDeltaEThresholdsUnchanged": true,
+  "PTStartingCameraAccepted": false,
+  "modelLoopAuthorized": false,
+  "createdAt": "2026-10-14T22:04:46.731218+00:00",
+  "cameraSilhouetteOptimizationAuthorizedByTask": 273,
+  "PTCameraAcceptanceVerified": false
+}

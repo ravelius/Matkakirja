@@ -1,0 +1,781 @@
+{
+  "round": "M08",
+  "completedAt": "2026-10-15T11:53:16.935158+00:00",
+  "configuration": {
+    "foot_radius": 12.712,
+    "leg_r7": 10.485999999999999,
+    "leg_r12": 8.65,
+    "leg_r20": 6.144500000000001,
+    "hall_flat_width": 21.240000000000002,
+    "lower_gallery_radius": 7.077499999999996,
+    "upper_cabin_radius": 3.658500000000001,
+    "mast_top": 68.6125,
+    "lattice_pitch": 1.4,
+    "lattice_rod_radius": 0.095,
+    "lower_glass_height": 2.8,
+    "upper_spandrel": 1.8,
+    "facade_detail_level": 2,
+    "freshM05ReviewCorrections": [
+      "less uniform lattice",
+      "darker inner stairs",
+      "gray upper band reduced to1.8m",
+      "tapered upper underside",
+      "entrance glass removed to reveal dark recess"
+    ]
+  },
+  "actualModelSHA256": "da061f44bf7873c6d067be749b139e5774172599d9618e95c7975a147298b435",
+  "metrics": {
+    "round": "M08",
+    "modelIterationsCompleted": 8,
+    "perView": [
+      {
+        "view": "K1",
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "cameraSHA256": "7630f70c312bce8d857299762782c8d07c820fb45e51de2c1bd441f595fa412f",
+        "targetImageSHA256": "3be76904100a1cdf4cbb65058ca004f5f3e30f3d6383182ad4e1c7d346623717",
+        "targetMaskSHA256": "37af16eb46ff060d8c2b59c96bb1e098de6e7f04c8e119a7e4ccb0272fcab614",
+        "modelImageSHA256": "dba9ced80fd474fbea587692e2197b954b27be2f1cab050c6320bac5c4e04d4d",
+        "rawGeometryAlphaSHA256": "2c7f3cd940a78bc6fc3c087cc9d3bf92d1c362dc7ea8e4dad3640b035d17ac26",
+        "modelFilledMaskSHA256": "691870e2464794e84356f83fc522c34d97956ac3bffbf491b8d254c0fe26c011",
+        "maskMethod": "geometry alpha >=128 then fill enclosed holes from outside flood fill; no convex hull, image tracing, scaling or target-based mask adjustment",
+        "intersectionPixels": 51976,
+        "unionPixels": 61941,
+        "targetWhitePixels": 56605,
+        "modelWhitePixels": 57312,
+        "silhouetteIoU": 0.8391210991104439,
+        "silhouetteIoUPercent": 83.91210991104438,
+        "requiredIoUPercent": 85,
+        "IoUThresholdPassed": false,
+        "K5CorrectedMaskUsed": false,
+        "targetMaskIndependentPixelExactCertification": false,
+        "K5CorrectedMaskPTConfirmationPending": false,
+        "targetBBox": [
+          650,
+          156,
+          881,
+          805
+        ],
+        "modelBBox": [
+          656,
+          170,
+          878,
+          804
+        ],
+        "imageBoundingHeightDifferencePercentDiagnostic": -2.3112480739599386,
+        "boundingHeightIsNotPhysicalHeightError": true,
+        "bindingMaterialDeltaE": null,
+        "bindingDeltaEUnavailableReason": "No independently registered material-only reference ROIs and matched illuminant; filled target silhouette includes background within lattice.",
+        "registeredPixelColorDiagnostic": {
+          "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+          "samples": 45091,
+          "meanDeltaE76": 24.037935786627408,
+          "medianDeltaE76": 21.49835217698773,
+          "p90DeltaE76": 43.681199393172776,
+          "notAPureMaterialColorMetric": true,
+          "includesShapeRegistrationAndLightingErrors": true,
+          "notUsedToClaimBindingDeltaEPass": true
+        }
+      },
+      {
+        "view": "K2",
+        "nativeDimensions": [
+          1024,
+          1536
+        ],
+        "cameraSHA256": "f5062a1bc9f2f77df4ca073cb8b27506e2d3511db9c8cddffa21e776cf9816c9",
+        "targetImageSHA256": "c869913a3b4c86cc0f191f02c61fd38c45761d9a7396f3376afe3501bd2c4f52",
+        "targetMaskSHA256": "1bdedddab334e16b1570af9ef41fb870384f47693422e22c771d7c2dafb5d981",
+        "modelImageSHA256": "dbcef2df5e689136f0dd0b5c42b5816f35078124745b6eb2d255f6cb483bbc1e",
+        "rawGeometryAlphaSHA256": "80655ebf657725b613f45bd5139f16787d4328841feb6bd331bc3fbb997da6ea",
+        "modelFilledMaskSHA256": "2ddaa70fa8d3c567b65656400bceac58ac8399caabcddc013faa8a93f2ab050d",
+        "maskMethod": "geometry alpha >=128 then fill enclosed holes from outside flood fill; no convex hull, image tracing, scaling or target-based mask adjustment",
+        "intersectionPixels": 364403,
+        "unionPixels": 397463,
+        "targetWhitePixels": 386339,
+        "modelWhitePixels": 375527,
+        "silhouetteIoU": 0.9168224463660768,
+        "silhouetteIoUPercent": 91.68224463660768,
+        "requiredIoUPercent": 90,
+        "IoUThresholdPassed": true,
+        "K5CorrectedMaskUsed": false,
+        "targetMaskIndependentPixelExactCertification": false,
+        "K5CorrectedMaskPTConfirmationPending": false,
+        "targetBBox": [
+          165,
+          63,
+          889,
+          1386
+        ],
+        "modelBBox": [
+          165,
+          82,
+          888,
+          1384
+        ],
+        "imageBoundingHeightDifferencePercentDiagnostic": -1.5873015873015872,
+        "boundingHeightIsNotPhysicalHeightError": true,
+        "bindingMaterialDeltaE": null,
+        "bindingDeltaEUnavailableReason": "No independently registered material-only reference ROIs and matched illuminant; filled target silhouette includes background within lattice.",
+        "registeredPixelColorDiagnostic": {
+          "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+          "samples": 303991,
+          "meanDeltaE76": 26.833248176420437,
+          "medianDeltaE76": 24.352214384580574,
+          "p90DeltaE76": 48.344483856100844,
+          "notAPureMaterialColorMetric": true,
+          "includesShapeRegistrationAndLightingErrors": true,
+          "notUsedToClaimBindingDeltaEPass": true
+        }
+      },
+      {
+        "view": "K3",
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "cameraSHA256": "d8de361bd0a0c4933b43a5cc2d7430cfe6bcffa38e0da507c154ad2a6d52545c",
+        "targetImageSHA256": "f73e5fa19f14d4db1f8753d5c2f2c09d9e471b2b68d73d81deadc514cdd5d813",
+        "targetMaskSHA256": "541a1135f8ba8376dce24223d8cc8b6685e66fd0910a22c446f2d144ab22b55d",
+        "modelImageSHA256": "07d225e6e1e8dc022ab730278154d12626c92efea17c51466d812d6cf282be13",
+        "rawGeometryAlphaSHA256": "2385d09361184b6764c34b8edc40bb616e15f8cb6b6dfbc2d4e3e4367ab838f9",
+        "modelFilledMaskSHA256": "15f97d815416cc104df4266b27b15aa938491d3f5aa5f0bda9389a2f50c5e46c",
+        "maskMethod": "geometry alpha >=128 then fill enclosed holes from outside flood fill; no convex hull, image tracing, scaling or target-based mask adjustment",
+        "intersectionPixels": 127685,
+        "unionPixels": 143140,
+        "targetWhitePixels": 139044,
+        "modelWhitePixels": 131781,
+        "silhouetteIoU": 0.892028783009641,
+        "silhouetteIoUPercent": 89.2028783009641,
+        "requiredIoUPercent": 90,
+        "IoUThresholdPassed": false,
+        "K5CorrectedMaskUsed": false,
+        "targetMaskIndependentPixelExactCertification": false,
+        "K5CorrectedMaskPTConfirmationPending": false,
+        "targetBBox": [
+          575,
+          56,
+          963,
+          962
+        ],
+        "modelBBox": [
+          578,
+          73,
+          955,
+          957
+        ],
+        "imageBoundingHeightDifferencePercentDiagnostic": -2.4282560706401766,
+        "boundingHeightIsNotPhysicalHeightError": true,
+        "bindingMaterialDeltaE": null,
+        "bindingDeltaEUnavailableReason": "No independently registered material-only reference ROIs and matched illuminant; filled target silhouette includes background within lattice.",
+        "registeredPixelColorDiagnostic": {
+          "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+          "samples": 103669,
+          "meanDeltaE76": 25.722237114505344,
+          "medianDeltaE76": 24.05917515573822,
+          "p90DeltaE76": 43.35483582571217,
+          "notAPureMaterialColorMetric": true,
+          "includesShapeRegistrationAndLightingErrors": true,
+          "notUsedToClaimBindingDeltaEPass": true
+        }
+      },
+      {
+        "view": "K4",
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "cameraSHA256": "2673484c3bece2caeec23974fd387536f8f43d896706b5704215d756bfc03c78",
+        "targetImageSHA256": "6ec296c9aaef7018aef9560128d7dee422fcea66913985c3a966db300aa25fe9",
+        "targetMaskSHA256": "9925cbecf0f25d51bde4c20936d35896711e542c8b4bf5abcc50bfd0398eaac8",
+        "modelImageSHA256": "ffd464c44240ce66bea690440783d5616b71c7d125d55c0e84201737be16f86d",
+        "rawGeometryAlphaSHA256": "5edcfb7f1e2e4330b2949a35a55919f35c504443bcea129c22e604ac33747e84",
+        "modelFilledMaskSHA256": "56954d85763909e21b4fae6f815f7ea284b45311817d1413604d797c03a70681",
+        "maskMethod": "geometry alpha >=128 then fill enclosed holes from outside flood fill; no convex hull, image tracing, scaling or target-based mask adjustment",
+        "intersectionPixels": 139670,
+        "unionPixels": 155927,
+        "targetWhitePixels": 151198,
+        "modelWhitePixels": 144399,
+        "silhouetteIoU": 0.8957396730521334,
+        "silhouetteIoUPercent": 89.57396730521334,
+        "requiredIoUPercent": 90,
+        "IoUThresholdPassed": false,
+        "K5CorrectedMaskUsed": false,
+        "targetMaskIndependentPixelExactCertification": false,
+        "K5CorrectedMaskPTConfirmationPending": false,
+        "targetBBox": [
+          548,
+          53,
+          979,
+          965
+        ],
+        "modelBBox": [
+          559,
+          76,
+          970,
+          960
+        ],
+        "imageBoundingHeightDifferencePercentDiagnostic": -3.0701754385964914,
+        "boundingHeightIsNotPhysicalHeightError": true,
+        "bindingMaterialDeltaE": null,
+        "bindingDeltaEUnavailableReason": "No independently registered material-only reference ROIs and matched illuminant; filled target silhouette includes background within lattice.",
+        "registeredPixelColorDiagnostic": {
+          "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+          "samples": 113758,
+          "meanDeltaE76": 28.241587304194464,
+          "medianDeltaE76": 26.601102561145364,
+          "p90DeltaE76": 47.542942577052294,
+          "notAPureMaterialColorMetric": true,
+          "includesShapeRegistrationAndLightingErrors": true,
+          "notUsedToClaimBindingDeltaEPass": true
+        }
+      },
+      {
+        "view": "K5",
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "cameraSHA256": "395a625e240bf09d96a5ddf03d7b2e3ecc863f3e458e35d93851f6a3cafcec9d",
+        "targetImageSHA256": "a695d52f270138fdcaa797cb3f288e1957a1acec121340e93e5034f359f2c134",
+        "targetMaskSHA256": "f54ea03d6558e636a943f83f561c72a80fc3c80d0bc5bdc7f5d5621f6ea534a3",
+        "modelImageSHA256": "a3cea2784ef024254da6ec8459fc6fc35c454b93a32b1e051ab1721ed3e1f25f",
+        "rawGeometryAlphaSHA256": "300029f3aa6f8dc0ab3fc152151560bf811b955c29d214590215bb0f2e41341e",
+        "modelFilledMaskSHA256": "979b8ad40feba94eb72989b8f4b9a45a5019bf86489d2e11945a3c55f50dc6a7",
+        "maskMethod": "geometry alpha >=128 then fill enclosed holes from outside flood fill; no convex hull, image tracing, scaling or target-based mask adjustment",
+        "intersectionPixels": 92287,
+        "unionPixels": 107324,
+        "targetWhitePixels": 101955,
+        "modelWhitePixels": 97656,
+        "silhouetteIoU": 0.8598915433640192,
+        "silhouetteIoUPercent": 85.98915433640192,
+        "requiredIoUPercent": 90,
+        "IoUThresholdPassed": false,
+        "K5CorrectedMaskUsed": true,
+        "targetMaskIndependentPixelExactCertification": false,
+        "K5CorrectedMaskPTConfirmationPending": false,
+        "targetBBox": [
+          617,
+          67,
+          909,
+          865
+        ],
+        "modelBBox": [
+          629,
+          54,
+          903,
+          871
+        ],
+        "imageBoundingHeightDifferencePercentDiagnostic": 2.380952380952381,
+        "boundingHeightIsNotPhysicalHeightError": true,
+        "bindingMaterialDeltaE": null,
+        "bindingDeltaEUnavailableReason": "No independently registered material-only reference ROIs and matched illuminant; filled target silhouette includes background within lattice.",
+        "registeredPixelColorDiagnostic": {
+          "method": "CIE76 D65 sRGB target/model pixel distance on raw opaque model-alpha AND target-filled-mask intersection",
+          "samples": 87403,
+          "meanDeltaE76": 23.67168438846901,
+          "medianDeltaE76": 20.507165660101187,
+          "p90DeltaE76": 45.97348548506255,
+          "notAPureMaterialColorMetric": true,
+          "includesShapeRegistrationAndLightingErrors": true,
+          "notUsedToClaimBindingDeltaEPass": true
+        }
+      }
+    ],
+    "meanIoUPercent": 88.07207089804629,
+    "allIoUThresholdsPassed": false,
+    "physicalHeightSourceConformance": {
+      "body": 1.299726491112145e-06,
+      "lowerFloor": 0.0,
+      "upperFloor": 0.0
+    },
+    "physicalHeightIsMeshAuditAgainstTask253NotIndependentSurvey": true,
+    "bindingMaterialDeltaE": null,
+    "bindingColorThresholdPassNotClaimed": true,
+    "cameraProjectionChecks": [
+      {
+        "view": "K1",
+        "maximumAxisProjectionErrorPixels": 0.0010887318066465923,
+        "levels": [
+          {
+            "level": "ground",
+            "expectedNativeY": 755.1639168184381,
+            "blenderNativeY": 755.1629638671875,
+            "errorPixels": -0.0009529512506105675
+          },
+          {
+            "level": "hallRoofApprox",
+            "expectedNativeY": 700.2342149422943,
+            "blenderNativeY": 700.2332153320312,
+            "errorPixels": -0.0009996102630793757
+          },
+          {
+            "level": "lowerPlatform",
+            "expectedNativeY": 595.4117065850887,
+            "blenderNativeY": 595.4107055664062,
+            "errorPixels": -0.0010010186824729317
+          },
+          {
+            "level": "upperPlatform",
+            "expectedNativeY": 329.62575073677806,
+            "blenderNativeY": 329.62469482421875,
+            "errorPixels": -0.0010559125593090357
+          },
+          {
+            "level": "bodyTop",
+            "expectedNativeY": 259.89073716930665,
+            "blenderNativeY": 259.8896484375,
+            "errorPixels": -0.0010887318066465923
+          },
+          {
+            "level": "mastTopApprox",
+            "expectedNativeY": 167.78413202752625,
+            "blenderNativeY": 167.7830810546875,
+            "errorPixels": -0.0010509728387546602
+          }
+        ],
+        "principalPointCalibrationOnly": true,
+        "noImageBasedCameraOptimization": false
+      },
+      {
+        "view": "K2",
+        "maximumAxisProjectionErrorPixels": 0.009777629587119918,
+        "levels": [
+          {
+            "level": "ground",
+            "expectedNativeY": 1369.5686950154045,
+            "blenderNativeY": 1369.5784378051758,
+            "errorPixels": 0.009742789771280513
+          },
+          {
+            "level": "hallRoofApprox",
+            "expectedNativeY": 1174.8628119299274,
+            "blenderNativeY": 1174.8725051879883,
+            "errorPixels": 0.009693258060906373
+          },
+          {
+            "level": "lowerPlatform",
+            "expectedNativeY": 865.2407285702866,
+            "blenderNativeY": 865.2504272460938,
+            "errorPixels": 0.009698675807157997
+          },
+          {
+            "level": "upperPlatform",
+            "expectedNativeY": 317.8468023072667,
+            "blenderNativeY": 317.8565368652344,
+            "errorPixels": 0.009734557967647106
+          },
+          {
+            "level": "bodyTop",
+            "expectedNativeY": 211.46824971416288,
+            "blenderNativeY": 211.47802734375,
+            "errorPixels": 0.009777629587119918
+          },
+          {
+            "level": "mastTopApprox",
+            "expectedNativeY": 87.36928995246171,
+            "blenderNativeY": 87.37893676757812,
+            "errorPixels": 0.009646815116411744
+          }
+        ],
+        "principalPointCalibrationOnly": true,
+        "noImageBasedCameraOptimization": false
+      },
+      {
+        "view": "K3",
+        "maximumAxisProjectionErrorPixels": 0.005938424720966395,
+        "levels": [
+          {
+            "level": "ground",
+            "expectedNativeY": 953.6652707001116,
+            "blenderNativeY": 953.6593322753906,
+            "errorPixels": -0.005938424720966395
+          },
+          {
+            "level": "hallRoofApprox",
+            "expectedNativeY": 849.0740461327389,
+            "blenderNativeY": 849.0681457519531,
+            "errorPixels": -0.005900380785760717
+          },
+          {
+            "level": "lowerPlatform",
+            "expectedNativeY": 664.8713967353258,
+            "blenderNativeY": 664.865478515625,
+            "errorPixels": -0.005918219700788541
+          },
+          {
+            "level": "upperPlatform",
+            "expectedNativeY": 271.85564200118677,
+            "blenderNativeY": 271.8497314453125,
+            "errorPixels": -0.00591055587426581
+          },
+          {
+            "level": "bodyTop",
+            "expectedNativeY": 183.11007636794795,
+            "blenderNativeY": 183.10418701171875,
+            "errorPixels": -0.005889356229204168
+          },
+          {
+            "level": "mastTopApprox",
+            "expectedNativeY": 73.48365642653403,
+            "blenderNativeY": 73.47772216796875,
+            "errorPixels": -0.005934258565275741
+          }
+        ],
+        "principalPointCalibrationOnly": true,
+        "noImageBasedCameraOptimization": false
+      },
+      {
+        "view": "K4",
+        "maximumAxisProjectionErrorPixels": 0.002978914263223942,
+        "levels": [
+          {
+            "level": "ground",
+            "expectedNativeY": 955.6364007594307,
+            "blenderNativeY": 955.6334609985352,
+            "errorPixels": -0.0029397608955150645
+          },
+          {
+            "level": "hallRoofApprox",
+            "expectedNativeY": 840.8614556841554,
+            "blenderNativeY": 840.8585357666016,
+            "errorPixels": -0.00291991755386789
+          },
+          {
+            "level": "lowerPlatform",
+            "expectedNativeY": 646.0662654125548,
+            "blenderNativeY": 646.0633239746094,
+            "errorPixels": -0.002941437945423786
+          },
+          {
+            "level": "upperPlatform",
+            "expectedNativeY": 259.2041230611171,
+            "blenderNativeY": 259.20123291015625,
+            "errorPixels": -0.002890150960865867
+          },
+          {
+            "level": "bodyTop",
+            "expectedNativeY": 176.83916055488822,
+            "blenderNativeY": 176.836181640625,
+            "errorPixels": -0.002978914263223942
+          },
+          {
+            "level": "mastTopApprox",
+            "expectedNativeY": 77.457559163562,
+            "blenderNativeY": 77.45465087890625,
+            "errorPixels": -0.002908284655745774
+          }
+        ],
+        "principalPointCalibrationOnly": true,
+        "noImageBasedCameraOptimization": false
+      },
+      {
+        "view": "K5",
+        "maximumAxisProjectionErrorPixels": 0.0057047880442837595,
+        "levels": [
+          {
+            "level": "ground",
+            "expectedNativeY": 770.831650425608,
+            "blenderNativeY": 770.8260803222656,
+            "errorPixels": -0.00557010334239294
+          },
+          {
+            "level": "hallRoofApprox",
+            "expectedNativeY": 713.8012954094028,
+            "blenderNativeY": 713.7957153320312,
+            "errorPixels": -0.00558007737151911
+          },
+          {
+            "level": "lowerPlatform",
+            "expectedNativeY": 599.955836960924,
+            "blenderNativeY": 599.9502258300781,
+            "errorPixels": -0.005611130845863954
+          },
+          {
+            "level": "upperPlatform",
+            "expectedNativeY": 277.8756748628326,
+            "blenderNativeY": 277.87005615234375,
+            "errorPixels": -0.005618710488874967
+          },
+          {
+            "level": "bodyTop",
+            "expectedNativeY": 184.31722822554428,
+            "blenderNativeY": 184.3115234375,
+            "errorPixels": -0.0057047880442837595
+          },
+          {
+            "level": "mastTopApprox",
+            "expectedNativeY": 54.165050455351945,
+            "blenderNativeY": 54.15936279296875,
+            "errorPixels": -0.005687662383195402
+          }
+        ],
+        "principalPointCalibrationOnly": true,
+        "noImageBasedCameraOptimization": false
+      }
+    ],
+    "cameraOptimizationAgainstTargetsUsed": true,
+    "K5GroundPointIsInferred": true,
+    "K4RearDetailsUnverifiedReconstruction": true,
+    "K5MaskCorrectionAwaitingPTConfirmation": false,
+    "stopReason": "Task273 active continuation: stop at all five IoU thresholds or ten total model rounds; final PT acceptance separate.",
+    "modelFinalAcceptanceVerified": false,
+    "gameIntegrated": false,
+    "R2Used": false,
+    "published": false
+  },
+  "savedModelAudit": {
+    "savedBlendReadbackPassed": true,
+    "blender": "5.2.1 LTS",
+    "towerMeshObjects": 43,
+    "towerVertices": 38760,
+    "towerPolygons": 25620,
+    "actualBindingHeightMeasurements": {
+      "body_top": {
+        "expectedMaxZ": 58.7,
+        "actualMaxZ": 58.70000076293945,
+        "absoluteErrorM": 7.629394502828291e-07
+      },
+      "lower_floor": {
+        "expectedMaxZ": 20,
+        "actualMaxZ": 20.0,
+        "absoluteErrorM": 0.0
+      },
+      "upper_floor": {
+        "expectedMaxZ": 51,
+        "actualMaxZ": 51.0,
+        "absoluteErrorM": 0.0
+      }
+    },
+    "allNonMastMeshMinZ": -0.07999992370605469,
+    "allNonMastMeshMaxZ": 58.70000076293945,
+    "nonMastOverallHeightErrorPercent": 0.13628737077598801,
+    "actualGroundShoeConnectedComponents": 8,
+    "targetImageTextureNodes": [],
+    "cameraChecks": [
+      {
+        "view": "K1",
+        "maximumAxisProjectionErrorPixels": 0.0010887318066465923,
+        "lensMm": 43.114662170410156,
+        "positionM": [
+          -58.75428009033203,
+          -191.17514038085938,
+          90.0
+        ],
+        "sourceCameraSHAUnchangedInInputs": true
+      },
+      {
+        "view": "K2",
+        "maximumAxisProjectionErrorPixels": 0.009777629587119918,
+        "lensMm": 19.61492919921875,
+        "positionM": [
+          -8.421924591064453,
+          -50.968379974365234,
+          1.4140814542770386
+        ],
+        "sourceCameraSHAUnchangedInInputs": true
+      },
+      {
+        "view": "K3",
+        "maximumAxisProjectionErrorPixels": 0.005938424720966395,
+        "lensMm": 33.16694259643555,
+        "positionM": [
+          -100.4382095336914,
+          5.919520854949951,
+          1.3600000143051147
+        ],
+        "sourceCameraSHAUnchangedInInputs": true
+      },
+      {
+        "view": "K4",
+        "maximumAxisProjectionErrorPixels": 0.002978914263223942,
+        "lensMm": 27.579599380493164,
+        "positionM": [
+          8.74122428894043,
+          79.85812377929688,
+          1.3749151229858398
+        ],
+        "sourceCameraSHAUnchangedInInputs": true
+      },
+      {
+        "view": "K5",
+        "maximumAxisProjectionErrorPixels": 0.0057047880442837595,
+        "lensMm": 44.38373947143555,
+        "positionM": [
+          125.21361541748047,
+          -10.954771995544434,
+          120.7009048461914
+        ],
+        "sourceCameraSHAUnchangedInInputs": true
+      }
+    ],
+    "uniformDisplayExposureEV": -2.5,
+    "reRenderingPerformed": false,
+    "independentRealWorldSurvey": false,
+    "maximumTotalModelRounds": 10
+  },
+  "producerPersonallyViewedComparisonSheet": true,
+  "producerVisibleDifferences": [
+    "Hallin sivuilla on nyt useampia fyysisiä ikkuna-aukkoja ja sisäänkäynti on tumma syvennys; yksityiskohdat ovat edelleen arvioita.",
+    "Tasanteiden kuvatason korkeus ja tuennan muoto poikkeavat yhä tavoitteesta, vaikka korkeudet pysyvät annetuissa metreissä.",
+    "K1/K5:n jalustan ääriviiva sekä yläkopin ja maston pieni muotoero ovat vielä näkyviä."
+  ],
+  "independentReviewPath": null,
+  "cameraChangesAgainstM01": {
+    "K1": {
+      "cameraAzimuthDegrees": {
+        "original": 200,
+        "current": 197.08388000000002
+      },
+      "pitchDegrees": {
+        "original": -15.754989399617008,
+        "current": -16.95498939961701
+      },
+      "verticalFOVDegrees": {
+        "original": 29.37333016984782,
+        "current": 31.106705229052633
+      },
+      "principalPointNativePx": {
+        "original": [
+          768,
+          512.0
+        ],
+        "current": [
+          765.98316,
+          520.4
+        ]
+      }
+    },
+    "K2": {
+      "cameraAzimuthDegrees": {
+        "original": 190,
+        "current": 189.38267173187734
+      },
+      "distanceM": {
+        "original": 55,
+        "current": 51.65950616765268
+      },
+      "heightM": {
+        "original": 1.7,
+        "current": 1.4140814281839997
+      },
+      "pitchDegrees": {
+        "original": 23.178698150696896,
+        "current": 23.195330154977537
+      },
+      "verticalFOVDegrees": {
+        "original": 60.96405697117353,
+        "current": 62.91483282268155
+      },
+      "principalPointNativePx": {
+        "original": [
+          524,
+          768.0
+        ],
+        "current": [
+          519.1936003646996,
+          790.488480352856
+        ]
+      }
+    },
+    "K3": {
+      "cameraAzimuthDegrees": {
+        "original": 270,
+        "current": 273.37293623552983
+      },
+      "distanceM": {
+        "original": 110,
+        "current": 100.61249505484838
+      },
+      "heightM": {
+        "original": 1.7,
+        "current": 1.36
+      },
+      "pitchDegrees": {
+        "original": 15.45418201934394,
+        "current": 15.276792875885205
+      },
+      "verticalFOVDegrees": {
+        "original": 37.35778029193747,
+        "current": 39.78085893409719
+      },
+      "principalPointNativePx": {
+        "original": [
+          768,
+          512.0
+        ],
+        "current": [
+          766.0933946589296,
+          546.515756716
+        ]
+      }
+    },
+    "K4": {
+      "cameraAzimuthDegrees": {
+        "original": 5,
+        "current": 6.246694272675501
+      },
+      "distanceM": {
+        "original": 100,
+        "current": 80.33510255447419
+      },
+      "heightM": {
+        "original": 1.7,
+        "current": 1.3749150979369835
+      },
+      "pitchDegrees": {
+        "original": 16.671286219136697,
+        "current": 20.612197525622644
+      },
+      "verticalFOVDegrees": {
+        "original": 39.95531160915671,
+        "current": 47.02812113610906
+      },
+      "principalPointNativePx": {
+        "original": [
+          763,
+          512.0
+        ],
+        "current": [
+          761.0619926103328,
+          489.90949998075047
+        ]
+      }
+    },
+    "K5": {
+      "cameraAzimuthDegrees": {
+        "original": 100,
+        "current": 95.0
+      },
+      "distanceM": {
+        "original": 130,
+        "current": 125.69191140842852
+      },
+      "heightM": {
+        "original": 150,
+        "current": 120.70090333567882
+      },
+      "pitchDegrees": {
+        "original": -42.03482156068001,
+        "current": -37.073428456380995
+      },
+      "verticalFOVDegrees": {
+        "original": 24.802122518638903,
+        "current": 30.258589472739462
+      },
+      "principalPointNativePx": {
+        "original": [
+          768,
+          512.0
+        ],
+        "current": [
+          764.0364793437126,
+          546.1561705245416
+        ]
+      }
+    }
+  },
+  "modelFinalAcceptanceVerified": false
+}

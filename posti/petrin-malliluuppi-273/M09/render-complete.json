@@ -1,0 +1,20 @@
+{
+  "round": "M09",
+  "views": [
+    "K1",
+    "K2",
+    "K3",
+    "K4",
+    "K5"
+  ],
+  "modelIterationsCompleted": 1,
+  "secondsElapsed": 12.93326997756958,
+  "renderDevice": {
+    "engine": "CYCLES",
+    "device": "METAL",
+    "blender": "5.2.1 LTS",
+    "devices": [
+      "Apple M4 Max (GPU - 40 cores)"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "foot_radius": 12.508,
+  "leg_r7": 10.485999999999999,
+  "leg_r12": 8.65,
+  "leg_r20": 6.144500000000001,
+  "hall_flat_width": 21.240000000000002,
+  "lower_gallery_radius": 7.077499999999996,
+  "upper_cabin_radius": 3.5650000000000013,
+  "mast_top": 68.6125,
+  "lattice_pitch": 1.4,
+  "lattice_rod_radius": 0.095,
+  "lower_glass_height": 2.8,
+  "upper_spandrel": 1.8,
+  "facade_detail_level": 2,
+  "freshM05ReviewCorrections": [
+    "less uniform lattice",
+    "darker inner stairs",
+    "gray upper band reduced to1.8m",
+    "tapered upper underside",
+    "entrance glass removed to reveal dark recess"
+  ]
+}

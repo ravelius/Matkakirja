@@ -1,0 +1,313 @@
+{
+  "round": "M05",
+  "previousRound": "M04",
+  "sourceTask": 273,
+  "cameraFits": {
+    "K1": {
+      "proxyIoUBefore": 0.8362068965517241,
+      "proxyIoUAfter": 0.8362068965517241,
+      "bounds": {
+        "lower": [
+          195.0,
+          160.0,
+          72.0,
+          -20.75498939961701,
+          22.9111975324813,
+          733.0,
+          477.0
+        ],
+        "upper": [
+          205.0,
+          240.0,
+          108.0,
+          -10.754989399617008,
+          35.83546280721434,
+          803.0,
+          547.0
+        ]
+      },
+      "optimizationUsesSimplifiedPhysicalEnvelopeOnly": true,
+      "notAnExactRenderedIoUPass": true,
+      "afterGeometryFit": {
+        "proxyIoUBefore": 0.8378653113087675,
+        "proxyIoUAfter": 0.8378653113087675,
+        "bounds": {
+          "lower": [
+            195.0,
+            160.0,
+            72.0,
+            -20.75498939961701,
+            22.9111975324813,
+            733.0,
+            477.0
+          ],
+          "upper": [
+            205.0,
+            240.0,
+            108.0,
+            -10.754989399617008,
+            35.83546280721434,
+            803.0,
+            547.0
+          ]
+        },
+        "optimizationUsesSimplifiedPhysicalEnvelopeOnly": true,
+        "notAnExactRenderedIoUPass": true
+      }
+    },
+    "K2": {
+      "proxyIoUBefore": 0.9020285022428645,
+      "proxyIoUAfter": 0.9024099733989757,
+      "bounds": {
+        "lower": [
+          185.0,
+          44.0,
+          1.36,
+          18.178698150696896,
+          47.55196443751535,
+          489.0,
+          733.0
+        ],
+        "upper": [
+          195.0,
+          66.0,
+          2.54,
+          28.178698150696896,
+          74.3761495048317,
+          559.0,
+          803.0
+        ]
+      },
+      "optimizationUsesSimplifiedPhysicalEnvelopeOnly": true,
+      "notAnExactRenderedIoUPass": true,
+      "afterGeometryFit": {
+        "proxyIoUBefore": 0.9035492599076874,
+        "proxyIoUAfter": 0.9035492599076874,
+        "bounds": {
+          "lower": [
+            185.0,
+            44.0,
+            1.36,
+            18.178698150696896,
+            47.55196443751535,
+            489.0,
+            733.0
+          ],
+          "upper": [
+            195.0,
+            66.0,
+            2.54,
+            28.178698150696896,
+            74.3761495048317,
+            559.0,
+            803.0
+          ]
+        },
+        "optimizationUsesSimplifiedPhysicalEnvelopeOnly": true,
+        "notAnExactRenderedIoUPass": true
+      }
+    },
+    "K3": {
+      "proxyIoUBefore": 0.8914061649057837,
+      "proxyIoUAfter": 0.8914061649057837,
+      "bounds": {
+        "lower": [
+          265.0,
+          88.0,
+          1.36,
+          10.45418201934394,
+          29.13906862771123,
+          733.0,
+          477.0
+        ],
+        "upper": [
+          275.0,
+          132.0,
+          2.54,
+          20.45418201934394,
+          45.576491956163714,
+          803.0,
+          547.0
+        ]
+      },
+      "optimizationUsesSimplifiedPhysicalEnvelopeOnly": true,
+      "notAnExactRenderedIoUPass": true,
+      "afterGeometryFit": {
+        "proxyIoUBefore": 0.8922338568935427,
+        "proxyIoUAfter": 0.8929116684841876,
+        "bounds": {
+          "lower": [
+            265.0,
+            88.0,
+            1.36,
+            10.45418201934394,
+            29.13906862771123,
+            733.0,
+            477.0
+          ],
+          "upper": [
+            275.0,
+            132.0,
+            2.54,
+            20.45418201934394,
+            45.576491956163714,
+            803.0,
+            547.0
+          ]
+        },
+        "optimizationUsesSimplifiedPhysicalEnvelopeOnly": true,
+        "notAnExactRenderedIoUPass": true
+      }
+    },
+    "K4": {
+      "proxyIoUBefore": 0.8761265772080913,
+      "proxyIoUAfter": 0.8777043269230769,
+      "bounds": {
+        "lower": [
+          0.0,
+          80.0,
+          1.36,
+          11.671286219136697,
+          31.165143055142234,
+          728.0,
+          477.0
+        ],
+        "upper": [
+          10.0,
+          120.0,
+          2.54,
+          21.671286219136697,
+          48.74548016317119,
+          798.0,
+          547.0
+        ]
+      },
+      "optimizationUsesSimplifiedPhysicalEnvelopeOnly": true,
+      "notAnExactRenderedIoUPass": true,
+      "afterGeometryFit": {
+        "proxyIoUBefore": 0.8819919517102616,
+        "proxyIoUAfter": 0.8819919517102616,
+        "bounds": {
+          "lower": [
+            0.0,
+            80.0,
+            1.36,
+            11.671286219136697,
+            31.165143055142234,
+            728.0,
+            477.0
+          ],
+          "upper": [
+            10.0,
+            120.0,
+            2.54,
+            21.671286219136697,
+            48.74548016317119,
+            798.0,
+            547.0
+          ]
+        },
+        "optimizationUsesSimplifiedPhysicalEnvelopeOnly": true,
+        "notAnExactRenderedIoUPass": true
+      }
+    },
+    "K5": {
+      "proxyIoUBefore": 0.8398536448072051,
+      "proxyIoUAfter": 0.8408387278356318,
+      "bounds": {
+        "lower": [
+          95.0,
+          104.0,
+          120.0,
+          -47.03482156068001,
+          19.345655564538344,
+          733.0,
+          477.0
+        ],
+        "upper": [
+          105.0,
+          156.0,
+          180.0,
+          -37.03482156068001,
+          30.258589472739462,
+          803.0,
+          547.0
+        ]
+      },
+      "optimizationUsesSimplifiedPhysicalEnvelopeOnly": true,
+      "notAnExactRenderedIoUPass": true,
+      "afterGeometryFit": {
+        "proxyIoUBefore": 0.8439003679592414,
+        "proxyIoUAfter": 0.8444790046656299,
+        "bounds": {
+          "lower": [
+            95.0,
+            104.0,
+            120.0,
+            -47.03482156068001,
+            19.345655564538344,
+            733.0,
+            477.0
+          ],
+          "upper": [
+            105.0,
+            156.0,
+            180.0,
+            -37.03482156068001,
+            30.258589472739462,
+            803.0,
+            547.0
+          ]
+        },
+        "optimizationUsesSimplifiedPhysicalEnvelopeOnly": true,
+        "notAnExactRenderedIoUPass": true
+      }
+    }
+  },
+  "geometryChanges": [
+    {
+      "parameter": "leg_r20",
+      "before": 5.9105,
+      "after": 5.9885,
+      "proxyObjectiveBefore": 1.204195976543728,
+      "proxyObjectiveAfter": 1.2045316484104727
+    },
+    {
+      "parameter": "lower_gallery_radius",
+      "before": 7.655499999999999,
+      "after": 7.553499999999999,
+      "proxyObjectiveBefore": 1.2045316484104727,
+      "proxyObjectiveAfter": 1.2059853326966694
+    },
+    {
+      "parameter": "upper_cabin_radius",
+      "before": 3.9665,
+      "after": 3.9005,
+      "proxyObjectiveBefore": 1.2059853326966694,
+      "proxyObjectiveAfter": 1.206366805557844
+    },
+    {
+      "parameter": "lower_gallery_radius",
+      "before": 7.553499999999999,
+      "after": 7.510999999999998,
+      "proxyObjectiveBefore": 1.206366805557844,
+      "proxyObjectiveAfter": 1.2068390151859645
+    },
+    {
+      "parameter": "upper_cabin_radius",
+      "before": 3.9005,
+      "after": 3.873,
+      "proxyObjectiveBefore": 1.2068390151859645,
+      "proxyObjectiveAfter": 1.207054274079407
+    }
+  ],
+  "seconds": 2.058927059173584,
+  "targetImagesAndMasksUnchanged": true,
+  "bindingHeightsUnchanged": [
+    58.7,
+    20,
+    51
+  ],
+  "estimatedMastTopM": 68.6125,
+  "methodLimit": "Proxy optimization is only a proposal; acceptance uses actual Blender geometry masks on native grid, never this proxy metric."
+}
