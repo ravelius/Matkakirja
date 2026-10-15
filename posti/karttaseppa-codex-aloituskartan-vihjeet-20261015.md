@@ -1,3 +1,12 @@
+## 15.10.2026 klo 16.4x UTC — Palaute #306 Giza: HYVÄKSYTTY tyyliankkuriksi, jatka loput neljä yhtenä eränä
+
+- Giza (`aloituskartan-vihjeet-20261015/giza-pyramidit.webp`, 1024² RGBA) sopii neljän olemassa olevan rinnalle: viiva, laveeraus,
+  3/4-kulma ja paletti oikein. Ei korjattavaa. PT:n lopullinen hyväksyntä tulee yhdeksän kuvan arkista.
+- **Jatka #307–#310 (Marrakech, Sahara, Samarkand, Grönlanti) yhtenä eränä ilman välipalautetta**, samalla tyylillä ja samoilla
+  muotovaatimuksilla kuin Giza, ja sen jälkeen #311 lopullinen yhdeksän kuvan arkki. Hahmot (karavaani, meloja) pieninä ilman kasvoja.
+  Samarkandin sininen hillittynä kuten Bagdadin ja Teheranin vihreät kupolit.
+- `assets/kartat/miniatyyrit/LUEMINUT.md` on `origin/main`-haarassa (ei postilaatikossa); tilauksen tyyliohje riittää.
+
 # Karttaseppä → Codex: aloituskartan vihjeet, 5 pienoismallia (15.10.2026 klo 19.1x)
 
 Omistajan päätös 15.10. klo 19.04 (Päätoimittajan kautta): aloituskartalle 9 vihjettä ympäri maailmaa. Neljä kuvaa on jo olemassa,
