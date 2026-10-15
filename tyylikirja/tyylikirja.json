@@ -71,6 +71,18 @@
     "raja-muste": "#6b5539",
     "kerma": "#faf4d6"
   },
+  "karttapaletti": {
+    "_selite": "KARTAN KOHTEET KARTTAPALETILLA (omistaja 15.10.2026 klo 18.31: \"Kyllä sekä muillekin samanlaisille kohteille\"; Raamattu). Kartalla olevien 3D-kohteiden (natiivi UI/Resources/KaupunkiPallo: kuumailmapallo, ISS-raketti, Olavinlinnan torni, Rijksmuseum) palettilaattojen värit pallon paperista ja akvarellipienoismallien laveerauksista, ei kirkkaita UI-värejä (accent, mark, kulta). Uusi karttamalli valitsee näistä ja kartan paper/map-ink-sävyistä. Ei generoi CSS- eikä USS-muuttujia (värit ovat mallien palettikuvissa); vaihtotyökalu proto-3d/_tyo/karttaseppa/karttapaletti-20261015/karttapaletti.py (Karttaseppä).",
+    "kerma": "#e6d8ba",
+    "kerma-varjo": "#d6c6a8",
+    "tiili": "#9e5c48",
+    "okra": "#c4a26c",
+    "messinki": "#cdb280",
+    "liuske": "#929a98",
+    "alusta": "#96866c",
+    "seepia": "#46331f",
+    "seepia-tumma": "#34281c"
+  },
   "teemat": {
     "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Värit webin nykyisistä pinnoista; ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus). HARMAA = ohjausnappien neutraali harmaa valokuvan, 3D:n ja avaruuden päällä (omistaja 16.9.2026, .satelliitti-sulku; OHJAUSNAPPI 2.10.2026). TUMMA = kuvan päällä, videopeleissä ja muissa pimeissä näkymissä (yö); hyväksytty pohja tai variantti käy vastaaviin tilanteisiin kysymättä (omistaja 9.10.2026, Raamattu #4243).",
     "paperi": {
