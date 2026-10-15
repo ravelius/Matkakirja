@@ -25,3 +25,11 @@ Valmis lukittavaksi: runko c336d48ed (NS 19.40, testit 1879/586/494, kaikki kuit
 - Revontulet: Valoseppä (nollattu 19.29) ajaa v5 52028dfd6 kierrokset 7–8; k6 oli selvästi kesken (punainen tasainen nauha, sahalaitainen vihreä) → ei omistajalle ennen parempaa paria.
 - Siivous: PT poisti _valmiit/pallo-lohkoton-vienti-20261015 (7,8 Gt, T7-kopio tarkistettu 611 678 tiedostoa). Levy ~70 Gi.
 - Nollattu tällä vuorolla: Sisältökirjuri, Asemataulu, KK (18.56), Natiivi-UI, Linssiseppä, Pelikoodari, Valoseppä; Siirtoseppä jonossa.
+
+## 5. Lisäys klo 19.5x (konteksti 30 % → nollaus)
+- ISS-yötaivas: LS1 korjasi (yotaivas-196 00415ef29, kuvapari lokit/todistus-yotaivas196d-ipad-20261015-1941/kuvapari/) → KK:lle kysymys yotaivas-kuittaus (suositus Kyllä → kytkentä junaan 196). Odottaa omistajaa.
+- ISS-etsin: kuvapari ei riitä, omistajan ehto on VIDEO. PK korjaa polttovälin, iOS-tallennuksen (vain tallenna-nappi) ja suomenkielisen otsikon, sitten video PT:lle → KK.
+- Raketin 4 faktaääntä EI kytketä (raita soi myös toistolennoilla); Kuu-telekuva 06072c1c0 → L2 → NS runkoon 195.
+- Revontulet: k8 parempi mutta verhot roikkuvat maakiekon päällä ja punainen puuttuu → Valoseppä tekee v6:n (käännös + 2 kierrosta), ei omistajalle ennen.
+- Louvre: Codex #302 K1 v2 odottaa → LR vertaa. PT:n linja: vielä yksi uusinta, jos < 95 %; sen jälkeen paras ≥ 85 % hyväksytään ja erot kirjataan mallinnusohjeeksi (ei API-polkua).
+- Siirtoseppä 40 % → luovutus pyydetty; paras hetki -erä seuraajalle.
