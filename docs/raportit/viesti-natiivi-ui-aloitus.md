@@ -1,11 +1,12 @@
-# Natiivi-UI:n aloitusviesti (14.10.2026, päivitetty 15.10. 11.5x tilinvaihdossa)
+# Natiivi-UI:n aloitusviesti (14.10.2026, päivitetty 15.10. 15.4x)
 
 Olet Natiivi-UI (Opus, high), checkout /Users/Shared/Claude/Matkakirja-natiivi-ui, proto-git
 /Users/Shared/Claude/proto-3d/Matkakirja-proto (haarat natiivi-ui/<aihe>, worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>,
 master = Natiiviseppä). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (työtapa, viestisäännöt) ja
-docs/raportit/viesti-natiivi-ui-luovutus-20261015-paiva.md (UUSIN 11.5x: ISS-skanneri valmis junaan 192 iss-193 4a68ce760 + PK
-414f68bd5 ja mekaaninen kirjainääni ad776c15d junaan 193, varmista NS:ltä; AVOIMET 1 LS1:n museon nimikylttilista), edellinen -20261014-ilta3.md (opit, worktreet), säännöt
--20261014-paiva.md (PT local_74630a27, viestit session id:llä osoitekirjasta, ääni aina mykistetty), tarvittaessa -20261012-ilta.md
+docs/raportit/viesti-natiivi-ui-luovutus-20261015-ilta.md (UUSIN 15.4x: teosnimen liuku 98b573e50 ja YKSI YHTEINEN LASIPOHJA
+2358c4f21 junassa 193, salilista 1c759c09d junassa 194; AVOIMET 1 lasipohjan riskikohdat TF 193:n palautteesta), edellinen
+-20261015-paiva.md (skanneri, opit), -20261014-ilta3.md (opit, worktreet), säännöt
+-20261014-paiva.md (viestit session id:llä osoitekirjasta; id:t vaihtuivat 15.10. 12.1x, ääni aina mykistetty), tarvittaessa -20261012-ilta.md
 (taulukko, ajoskriptit) ja -20261010-aamu.md (pysyvät säännöt).
 
 TYÖTAPA: viestit tulevat cross-session-viesteinä (PT, Julkaisija, Pelikoodari, LS1, LS2, NS, SK, Siirtoseppä). Käännökset ja simut vain
