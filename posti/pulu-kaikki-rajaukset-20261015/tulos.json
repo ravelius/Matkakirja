@@ -1,0 +1,520 @@
+{
+  "eleita": 70,
+  "vainKypara": false,
+  "ruutuja": 19293,
+  "asetteluja": 72,
+  "tarkistuksia": 716380,
+  "viat": [],
+  "paikallaan": [
+    {
+      "ele": "shock",
+      "ryhma": "Ilme",
+      "xMin": 93,
+      "xMax": 169,
+      "yMin": 205,
+      "yMax": 280,
+      "p": 0.29,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "confused",
+      "ryhma": "Ilme",
+      "xMin": 89,
+      "xMax": 165,
+      "yMin": 210,
+      "yMax": 285,
+      "p": 0.31,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "angry",
+      "ryhma": "Ilme",
+      "xMin": 88,
+      "xMax": 164,
+      "yMin": 213,
+      "yMax": 287,
+      "p": 0.36,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "bread",
+      "ryhma": "Touhu",
+      "xMin": 86,
+      "xMax": 163,
+      "yMin": 209,
+      "yMax": 283,
+      "p": 0.22,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "manic",
+      "ryhma": "Ilme",
+      "xMin": 86,
+      "xMax": 162,
+      "yMin": 208,
+      "yMax": 282,
+      "p": 0.23,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "love",
+      "ryhma": "Ilme",
+      "xMin": 85,
+      "xMax": 161,
+      "yMin": 214,
+      "yMax": 288,
+      "p": 0.4,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "puff",
+      "ryhma": "Ilme",
+      "xMin": 82,
+      "xMax": 158,
+      "yMin": 215,
+      "yMax": 289,
+      "p": 0.25,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "expert",
+      "ryhma": "Ilme",
+      "xMin": 88,
+      "xMax": 158,
+      "yMin": 208,
+      "yMax": 282,
+      "p": 0.54,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "present",
+      "ryhma": "Pelitilanne",
+      "xMin": 82,
+      "xMax": 158,
+      "yMin": 210,
+      "yMax": 284,
+      "p": 0.34,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "wind",
+      "ryhma": "Touhu",
+      "xMin": 114,
+      "xMax": 154,
+      "yMin": 240,
+      "yMax": 279,
+      "p": 0.44,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "glasses",
+      "ryhma": "Pelitilanne",
+      "xMin": 80,
+      "xMax": 154,
+      "yMin": 215,
+      "yMax": 287,
+      "p": 0.22,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "happy",
+      "ryhma": "Ilme",
+      "xMin": 78,
+      "xMax": 153,
+      "yMin": 213,
+      "yMax": 286,
+      "p": 0.55,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "yawn",
+      "ryhma": "Touhu",
+      "xMin": 112,
+      "xMax": 153,
+      "yMin": 232,
+      "yMax": 272,
+      "p": 0.43,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "embarrassed",
+      "ryhma": "Ilme",
+      "xMin": 77,
+      "xMax": 152,
+      "yMin": 215,
+      "yMax": 289,
+      "p": 0.79,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "bored",
+      "ryhma": "Ilme",
+      "xMin": 77,
+      "xMax": 152,
+      "yMin": 215,
+      "yMax": 288,
+      "p": 0.79,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "sneeze",
+      "ryhma": "Touhu",
+      "xMin": 112,
+      "xMax": 152,
+      "yMin": 234,
+      "yMax": 274,
+      "p": 0.27,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "smile",
+      "ryhma": "Pelitilanne",
+      "xMin": 78,
+      "xMax": 152,
+      "yMin": 213,
+      "yMax": 287,
+      "p": 0.32,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "shake",
+      "ryhma": "Pää",
+      "xMin": 111,
+      "xMax": 151,
+      "yMin": 239,
+      "yMax": 278,
+      "p": 0.24,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "disbelief",
+      "ryhma": "Ilme",
+      "xMin": 112,
+      "xMax": 151,
+      "yMin": 242,
+      "yMax": 281,
+      "p": 0.67,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "facepalm",
+      "ryhma": "Ilme",
+      "xMin": 76,
+      "xMax": 151,
+      "yMin": 214,
+      "yMax": 288,
+      "p": 0.77,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "sleep",
+      "ryhma": "Touhu",
+      "xMin": 111,
+      "xMax": 151,
+      "yMin": 256,
+      "yMax": 296,
+      "p": 0.32,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "wink",
+      "ryhma": "Pelitilanne",
+      "xMin": 79,
+      "xMax": 151,
+      "yMin": 216,
+      "yMax": 287,
+      "p": 0.22,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "turn",
+      "ryhma": "Pää",
+      "xMin": 113,
+      "xMax": 150,
+      "yMin": 239,
+      "yMax": 278,
+      "p": 0.24,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "preen",
+      "ryhma": "Touhu",
+      "xMin": 109,
+      "xMax": 150,
+      "yMin": 247,
+      "yMax": 286,
+      "p": 0.29,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "grin",
+      "ryhma": "Pelitilanne",
+      "xMin": 110,
+      "xMax": 150,
+      "yMin": 238,
+      "yMax": 277,
+      "p": 0.39,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "lookRight",
+      "ryhma": "Pää",
+      "xMin": 112,
+      "xMax": 149,
+      "yMin": 240,
+      "yMax": 278,
+      "p": 0.26,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "lookDown",
+      "ryhma": "Pää",
+      "xMin": 109,
+      "xMax": 149,
+      "yMin": 241,
+      "yMax": 280,
+      "p": 0.23,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "doubleTake",
+      "ryhma": "Pää",
+      "xMin": 110,
+      "xMax": 149,
+      "yMin": 242,
+      "yMax": 281,
+      "p": 0.15,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "think",
+      "ryhma": "Puhe",
+      "xMin": 108,
+      "xMax": 149,
+      "yMin": 240,
+      "yMax": 279,
+      "p": 0.22,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "sun",
+      "ryhma": "Touhu",
+      "xMin": 108,
+      "xMax": 149,
+      "yMin": 240,
+      "yMax": 279,
+      "p": 0.21,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "scratch",
+      "ryhma": "Pelitilanne",
+      "xMin": 108,
+      "xMax": 149,
+      "yMin": 242,
+      "yMax": 281,
+      "p": 0.44,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "lookUp",
+      "ryhma": "Pää",
+      "xMin": 107,
+      "xMax": 148,
+      "yMin": 240,
+      "yMax": 279,
+      "p": 0.68,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "tilt",
+      "ryhma": "Pää",
+      "xMin": 107,
+      "xMax": 147,
+      "yMin": 242,
+      "yMax": 281,
+      "p": 0.57,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "nod",
+      "ryhma": "Pää",
+      "xMin": 107,
+      "xMax": 147,
+      "yMin": 239,
+      "yMax": 278,
+      "p": 0.15,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "rain",
+      "ryhma": "Touhu",
+      "xMin": 106,
+      "xMax": 147,
+      "yMin": 242,
+      "yMax": 281,
+      "p": 0.1,
+      "voimakkuus": 0.35
+    },
+    {
+      "ele": "snow",
+      "ryhma": "Touhu",
+      "xMin": 106,
+      "xMax": 147,
+      "yMin": 242,
+      "yMax": 281,
+      "p": 0.11,
+      "voimakkuus": 0.35
+    },
+    {
+      "ele": "crumb",
+      "ryhma": "Touhu",
+      "xMin": 106,
+      "xMax": 146,
+      "yMin": 239,
+      "yMax": 278,
+      "p": 0.21,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "chatDustOff",
+      "ryhma": "Pelitilanne",
+      "xMin": 106,
+      "xMax": 146,
+      "yMin": 243,
+      "yMax": 281,
+      "p": 0.46,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "mapPeck",
+      "ryhma": "Pelitilanne",
+      "xMin": 106,
+      "xMax": 145,
+      "yMin": 240,
+      "yMax": 279,
+      "p": 0.47,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "bunFeast",
+      "ryhma": "Pelitilanne",
+      "xMin": 105,
+      "xMax": 145,
+      "yMin": 236,
+      "yMax": 275,
+      "p": 0.06,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "welcome",
+      "ryhma": "Pelitilanne",
+      "xMin": 106,
+      "xMax": 145,
+      "yMin": 241,
+      "yMax": 279,
+      "p": 0.07,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "chuckle",
+      "ryhma": "Pelitilanne",
+      "xMin": 106,
+      "xMax": 145,
+      "yMin": 240,
+      "yMax": 279,
+      "p": 0.11,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "glance",
+      "ryhma": "Pieni ele",
+      "xMin": 105,
+      "xMax": 144,
+      "yMin": 243,
+      "yMax": 281,
+      "p": 0.08,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "wake",
+      "ryhma": "Touhu",
+      "xMin": 105,
+      "xMax": 144,
+      "yMin": 249,
+      "yMax": 287,
+      "p": 0.29,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "bookStudy",
+      "ryhma": "Pelitilanne",
+      "xMin": 105,
+      "xMax": 144,
+      "yMin": 241,
+      "yMax": 280,
+      "p": 0.88,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "eyeRub",
+      "ryhma": "Pelitilanne",
+      "xMin": 104,
+      "xMax": 144,
+      "yMin": 243,
+      "yMax": 282,
+      "p": 0.82,
+      "voimakkuus": 1
+    },
+    {
+      "ele": "reading",
+      "ryhma": "Puhe",
+      "xMin": 104,
+      "xMax": 143,
+      "yMin": 243,
+      "yMax": 281,
+      "p": 0.13,
+      "voimakkuus": 0.35
+    },
+    {
+      "ele": "blink",
+      "ryhma": "Pieni ele",
+      "xMin": 103,
+      "xMax": 142,
+      "yMin": 242,
+      "yMax": 281,
+      "p": 0,
+      "voimakkuus": 0.35
+    },
+    {
+      "ele": "talk",
+      "ryhma": "Puhe",
+      "xMin": 103,
+      "xMax": 142,
+      "yMin": 242,
+      "yMax": 281,
+      "p": 0,
+      "voimakkuus": 0.35
+    },
+    {
+      "ele": "listen",
+      "ryhma": "Puhe",
+      "xMin": 103,
+      "xMax": 142,
+      "yMin": 242,
+      "yMax": 281,
+      "p": 0,
+      "voimakkuus": 0.35
+    },
+    {
+      "ele": "cityExplain",
+      "ryhma": "Puhe",
+      "xMin": 103,
+      "xMax": 142,
+      "yMin": 242,
+      "yMax": 281,
+      "p": 0,
+      "voimakkuus": 0.35
+    }
+  ]
+}
