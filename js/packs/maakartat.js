@@ -4696,18 +4696,17 @@ export const KAUPUNKIKARTAT = {
      * esittely kertoo, mitä alueella on ja miksi; kartan viivastojen,
      * ilmansuuntien ja kortteleiden kuvailu on poistettu.
      */
-    esittely: 'Marseille on rakennettu valkoisten kalkkikivikukkuloiden '
-      + 'muodostamaan kulhoon, joka aukeaa länteen merelle. Kulhon '
-      + 'pohjassa on kapea luonnonpoukama, joka on suojassa '
-      + 'mistraalilta, luoteesta syöksyvältä kylmältä tuulelta — juuri '
-      + 'siksi kreikkalaiset purjehtijat pysähtyivät tähän noin 600 '
-      + 'eaa. ja perustivat Massalian. Poukama on Vanhasatama, noin '
-      + '900 metriä pitkä ja 400 metriä leveä allas, jossa on nykyään '
-      + 'huviveneitä: rahtilaivat siirtyivät pohjoisempiin '
-      + 'satama-altaisiin 1800-luvun puolivälissä. Makeaa vettä '
-      + 'kukkuloilla ei ollut juuri lainkaan, ja lopulta se tuotiin 80 '
-      + 'kilometrin päästä kanavaa pitkin, joka valmistui 1849. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Marseillen Vanhasatama ja sen ympäristö. '
+      + 'Foikaialaiset kreikkalaiset perustivat Massalian noin 600 eaa., ja '
+      + 'Marseillea pidetään Ranskan vanhimpana kaupunkina. Saint-Victorin '
+      + 'luostarin alku on 400-luvulla, ja sataman suulla on MuCEM, joka '
+      + 'avattiin 2013. Sen kävelysilta johtaa 1600-luvun Saint-Jeanin '
+      + 'linnakkeeseen.\n\n'
+      + 'Notre-Dame de la Garde -basilikan rakentaminen alkoi 1853, ja se '
+      + 'vihittiin käyttöön 1864. Marseillen uuden katedraalin peruskiven '
+      + 'laski Napoleon III 1852. Saint-Charlesin asema avattiin 1848, ja '
+      + 'sen monumentaaliset portaat vihittiin 1927. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Saint-Victorin kirkosta ja Saint-Charlesin asemasta ei ole
