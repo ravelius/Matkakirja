@@ -75,3 +75,7 @@ aloiteta uutta isoa tehtävää. 4) Tilinvaihdon tai muun raskaan kertatyön (se
 kokonaiset muistikansiot, pitkät lokit, list_sessions include_archived) Sonnet-ali-agentille, joka palauttaa tiivistelmän. 6) Ennen PT:n nollausta keskustelu tallennetaan
 (tools/tallenna-keskustelu.py), ja Postivahti tarkistaa tiedoston ennen clear_sessionia. 7) KK avaa Asemataulun nollauksen jälkeen Artifact-työkalun open-toiminnolla (ei lukua eikä
 uudelleenjulkaisua).
+
+## PAATOKSET 15.10.2026 klo 16.02: EI UUTTA KUUMAILMAPALLOKAUPUNKIA VIELA (15.10.2026 klo 16.04)
+
+Omistaja (kortti Keskustelukanavassa, vaihtoehdot Rooma/Wien/Barcelona/Ei vielä) valitsi 'Ei vielä': uutta kuumailmapallokaupunkia ei aloiteta Ateenan jälkeen. Roolit hiovat Lontoon, Prahan ja Ateenan kierroksia (valo, vesi, maasto, maamerkit, tekstit, kertojat, pelaajille pääsy). Seuraava kaupunki vasta omistajan erillisellä päätöksellä.
