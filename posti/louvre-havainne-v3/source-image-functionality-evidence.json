@@ -1,0 +1,24 @@
+{
+  "taskNumber": 312,
+  "actualFieldsUsed": [
+    "prompt",
+    "referenced_image_paths",
+    "transparent_background"
+  ],
+  "fourInputsIdenticalToTask302": true,
+  "massRequestedAsWholeFrameBase": true,
+  "oldGeneratedPhotographsUsedAsInput": false,
+  "oneWholeNewImage": true,
+  "noPerPixelGeometryLockExposed": true,
+  "actualNativeDimensions": [
+    1536,
+    1024
+  ],
+  "sourceImagesAccepted": true,
+  "actualObservedBehavior": "Seine side/direction and label responded to instruction; palace geometry drifted. Source-image support did not preserve exact camera/silhouette in this call.",
+  "v3IoU": 0.705264354488513,
+  "v2IoU": 0.9133664569438069,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "v4Allowed": false
+}

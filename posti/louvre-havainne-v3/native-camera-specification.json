@@ -1,0 +1,36 @@
+{
+  "id": "K1",
+  "nimi": "K1 pallokierros länsi",
+  "tyyppi": "pallokierros",
+  "kamera_enu_m": [
+    -357.08,
+    129.97,
+    180
+  ],
+  "kamera_lat": 48.8621675,
+  "kamera_lon": 2.3310242,
+  "katse_deg": 110,
+  "atsimuutti_deg": 290.0,
+  "etaisyys_m": 380.0,
+  "kameran_korkeus_m": 180,
+  "kallistus_deg": -23.47,
+  "vfov_deg": 45,
+  "kuvasuhde": "3:2",
+  "kuvaus": "Akselilta lännestä Carrousel-puiston yltä: Napoleonin piha edessä, Richelieu vasemmalla, Denon oikealla, Sullyn paviljonki ja Cour Carrée taustalla.",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "rollDegrees": 0,
+  "source": "louvre-kulmat.json; fixed input specification, not measured output-camera certification",
+  "sourceContinuationTask": 312,
+  "verticalFOVDegrees": 45,
+  "horizontalFOVDegrees": 63.707050416224,
+  "nominalFocalLengthNativePixels": 1236.0773439350246,
+  "inputCameraSpecificationOnly": true,
+  "outputPhysicalCameraVerified": false,
+  "sourceMaskMustBeNativeRerenderedByLinnanrakentaja": false,
+  "reference2400MaskDownsampled": false,
+  "nativeLiDARReferenceAvailable": true,
+  "nativeLiDARMaskPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-maski-1536x1024.png"
+}

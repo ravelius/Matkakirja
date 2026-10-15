@@ -1,0 +1,26 @@
+{
+  "taskNumber": 312,
+  "files": [
+    {
+      "sourceCommit": "57c6322df1c9ab7e04805e5ad2e1f5684351373f",
+      "sourcePath": "posti/louvre-havainne-v2-vastaus/VASTAUS-FI.md",
+      "gitBlob": "e3694d3a863fce2c0bfee4ed1aecbf0b319ad22f",
+      "sha256": "28ce7839fa33419e27bb646913323a3e88ee561ff4364fbac5644370abe7d180",
+      "bytes": 1776,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task312/VASTAUS-FI.md",
+      "sourceReadInFull": true,
+      "personallyViewed": false
+    },
+    {
+      "sourceCommit": "57c6322df1c9ab7e04805e5ad2e1f5684351373f",
+      "sourcePath": "posti/louvre-havainne-v2-vastaus/louvre-K1-v2-iou.jpg",
+      "gitBlob": "0d5da0e251ca01d37f4b666d21b0105475c346a4",
+      "sha256": "d6f01ca19fabc79bd49664fb911ec3e418ed7726e7a9c2e5b4d781b37b6f1937",
+      "bytes": 16456,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task312/louvre-K1-v2-iou.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "viewedAt": "2026-10-15T16:54:08.026677+00:00"
+    }
+  ]
+}

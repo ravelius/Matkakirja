@@ -1,0 +1,134 @@
+{
+  "reviewType": "independent-visual-review",
+  "createdAtUTC": "2026-10-15T16:58:51.810151+00:00",
+  "version": "K1/v3",
+  "language": "fi",
+  "source": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task312/VASTAUS-FI.md",
+    "sha256": "28ce7839fa33419e27bb646913323a3e88ee561ff4364fbac5644370abe7d180"
+  },
+  "photo": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K1/v3/louvre-K1.png",
+  "photoSHA": "6736127a13903194e20ae24e219c8a319b96ae374791a080e821e0d2661acc8c",
+  "nativeSize": {
+    "width": 1536,
+    "height": 1024
+  },
+  "visualReferencesInspected": [
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-massa-1536x1024.png",
+      "sha256": "101b50cd75f2e9e5d616b3ffb8636050c3c079682c5bec731720b41e737e0390"
+    },
+    {
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-pohjakartta.jpg",
+      "sha256": "092f08cafa7ae1fd483910521d89c4aafa31881ddd1bec46f852338585d8a57c"
+    }
+  ],
+  "scope": {
+    "basis": "Toimitetun PNG-kuvan suora visuaalinen tarkastus natiivikoossa sekä alkuperäisen massakuvapohjan ja pohjakartan laadullinen vertailu.",
+    "maskFilesInspected": false,
+    "metricFilesInspected": false,
+    "quantitativeOverlapEvaluated": false,
+    "geographicAccuracyCertified": false,
+    "architecturalAccuracyCertified": false,
+    "physicalCameraCertified": false,
+    "cameraNote": "Syötekameran määrittely on kiinteä lähtöehto. Valmiin havainnekuvan fyysistä kameraa, polttoväliä, sijaintia tai kuvakulmaa ei varmenneta tekstiohjeesta eikä silmämääräisesti."
+  },
+  "checks": [
+    {
+      "id": "task312-1-nearest-wing-width",
+      "requirement": "Lähimpien vasemman ja oikean siiven leveys sekä massa vastaavat massakuvapohjaa.",
+      "status": "uncertain_not_accepted",
+      "visibleAppearance": "Molemmat pitkät etualan siivet näkyvät jatkuvina ja ulottuvat kuvan sivureunoihin. Vasemmalla ja oikealla keskiosan paviljongeilla on selvästi leveät massat.",
+      "evidence": "Massakuvapohjan ja havainnekuvan yleinen U-sommittelu tunnistuu, mutta yläkeskuksen takimmainen kattolinja on havainnekuvassa selvästi ylempänä ja rakennusosien räystäiden, päätyjen sekä ulkoreunojen paikat eroavat pohjasta. Pintojen yksityiskohdat eivät todista vaadittua ulkoreunan leventämistä.",
+      "approximateEvidenceRegionNativePixels": [
+        0,
+        440,
+        1536,
+        1024
+      ],
+      "conclusion": "Vaaditun leveyden korjaantumista tai massan tarkkaa vastaavuutta ei hyväksytä tällä visuaalisella tarkastuksella. Näkyvä geometria poikkeaa yhä pohjasta; erojen määrää ei mitata."
+    },
+    {
+      "id": "task312-2-seine-axis",
+      "requirement": "Seine kulkee oikealla Grande Galerien vieressä pitkän akselin suuntaisesti; kauimpana takana on kaupunkia.",
+      "status": "visible_appearance_pass",
+      "visibleAppearance": "Joki kulkee kuvan oikeassa laidassa palatsin pitkän oikean siiven suuntaisesti. Palatsin kauimmaisen pään takana näkyy puustoa ja kaupunkikortteleita, ei koko takaosan poikki kulkevaa jokea.",
+      "evidence": "Jokiuoma jatkuu oikean reunan etualalta oikean yläosan kaupunkiin; takakeskuksen rakennusten takana on yhtenäinen kaupunkitausta.",
+      "approximateEvidenceRegionNativePixels": [
+        930,
+        130,
+        1536,
+        620
+      ],
+      "conclusion": "Pyydetty pääasiallinen suunta ja kuvanpuoli näkyvät korjattuina. Joen mutkia, rantojen etäisyyksiä, siltoja tai taustarakennusten todellisia sijainteja ei tällä hyväksytä maantieteellisesti oikeiksi."
+    },
+    {
+      "id": "task312-3-cour-carree",
+      "requirement": "Sully-paviljongin takana näkyy neljän siiven sulkema Cour Carrée.",
+      "status": "visible_appearance_pass_geometry_uncertain",
+      "visibleAppearance": "Keskimmäisen suuren paviljongin takana näkyy erillinen suljettua suorakulmaista pihaa muistuttava rakennuskehys: etu- ja takasiipi sekä molemmat sivusiivet erottuvat.",
+      "evidence": "Kuvan yläkeskuksessa takimmainen pitkä julkisivu, sivujen kattolinjat ja lähempi poikittaissiipi rajaavat tummaa sisäpiha-aukkoa. Takaosa ei näytä pelkältä yhdeltä kapealta siiveltä.",
+      "approximateEvidenceRegionNativePixels": [
+        577,
+        210,
+        970,
+        336
+      ],
+      "conclusion": "Neljältä sivulta suljetun pihan visuaalinen rakenne on mukana. Cour Carréen neliömäisyyttä, mittasuhteita tai yksittäisten siipien arkkitehtonista oikeellisuutta ei varmenneta perspektiivikuvasta."
+    },
+    {
+      "id": "task312-4-right-block-lightwells",
+      "requirement": "Oikean keskisiiven kaksi sisäpihaa näkyvät pieninä valopihoina.",
+      "status": "partial_visible_openings_size_uncertain",
+      "visibleAppearance": "Oikeassa keskiosan rakennusryhmässä näkyy peräkkäisiä avoimia pihatiloja ja tummia sisäsivuja. Kaksi selkeää pääaukkoa on erotettavissa, mutta ne lukevat melko syvinä ja suurina sisäpihoina, eivät vain ohuina kattopinnan rakoina.",
+      "evidence": "Etummaisen oikean paviljongin takana sekä sitä kauempana näkyy vaaleiden kattojen ympäröimiä tummia aukkoja. Aukkojen koko ja välirakenteet eivät anna varmaa vastaavuutta pohjan pieniin aukkoihin.",
+      "approximateEvidenceRegionNativePixels": [
+        986,
+        326,
+        1230,
+        544
+      ],
+      "conclusion": "Aukkojen näkyvyys on parantuneen vaikutelman tasolla todettavissa; täsmälleen kahden pienen valopihan oikeaa kokoa, rajauksia ja sijaintia ei hyväksytä varmennetuksi."
+    },
+    {
+      "id": "task312-5-havainnekuva-label",
+      "requirement": "Täsmällinen havainnekuva-merkintä vasemmassa yläkulmassa.",
+      "status": "pass",
+      "visibleAppearance": "Teksti havainnekuva näkyy täsmälleen tällä kirjoitusasulla vasemmassa yläkulmassa.",
+      "evidence": "Tumma, luettava pienaakkosinen teksti vaalealla taivaalla lähellä vasenta ja ylintä reunaa.",
+      "approximateEvidenceRegionNativePixels": [
+        20,
+        14,
+        122,
+        30
+      ],
+      "conclusion": "Merkintä on mukana ja luettava."
+    },
+    {
+      "id": "equestrian-statue-visibility",
+      "requirement": "Arvioi ratsastajapatsaan näkyvyys vain varsinaisesta kuvasta.",
+      "status": "equestrian_like_silhouette_visible_identity_uncertain",
+      "visibleAppearance": "Keskipihan vasemmalla puoliskolla näkyy tumma patsashahmo vaalealla jalustalla. Hahmossa erottuu hevosta ja ratsastajaa muistuttava sivusiluetti.",
+      "evidence": "Jalusta ja sen päällä oleva tumma hahmo erottuvat avoimen kiveyksen keskellä hieman kuvan keskilinjan vasemmalla puolella. Hahmo on natiivikuvassa pieni, eikä anatomisia tai monumentin tunnistetietoja voi lukea varmasti.",
+      "approximateEvidenceRegionNativePixels": [
+        637,
+        530,
+        670,
+        587
+      ],
+      "statueAndPedestalVisible": true,
+      "specificEquestrianMonumentCertified": false,
+      "conclusion": "Patsas jalustoineen on näkyvissä, ja siluetti vaikuttaa ratsastajapatsaalta. Tietyn historiallisen ratsastajapatsaan läsnäoloa, tarkkaa muotoa tai oikeaa sijaintia ei vahvisteta."
+    }
+  ],
+  "unmetOrUncertainItems": [
+    "Lähimpien siipien vaaditun leveyden ja ulkoreunojen vastaavuus massakuvapohjaan jää varmentamatta; näkyvissä on edelleen geometrisia eroja.",
+    "Oikean keskiosan valopihojen täsmällinen määrä, koko ja sijainti eivät ole arkkitehtonisesti varmennettuja; näkyvät pääaukot vaikuttavat suurilta suhteessa pienten valopihojen pyyntöön.",
+    "Cour Carréen nelisivuinen sulkeutuminen näkyy, mutta neliömäisyys ja mittasuhteet jäävät varmentamatta.",
+    "Ratsastajaa muistuttava patsassiluetti näkyy, mutta tietty monumentti ja sen oikea sijainti jäävät varmentamatta.",
+    "Fyysistä kameraa, maantieteellistä sijoittelua tai koko palatsin arkkitehtonista tarkkuutta ei tällä visuaalisella arviolla sertifioida."
+  ],
+  "overallVisualConclusion": "Merkintä ja joen pääasiallinen suunta näkyvät korjattuina; suljettu takapiha sekä oikean rakennusryhmän aukot ovat mukana. Siipien massan vastaavuus ja valopihojen oikea mittakaava jäävät ratkaisematta. Arvio on ulkoasun tarkastus ja sisältää erikseen rajatut epävarmuudet.",
+  "acceptedAsBindingTarget": false,
+  "PTAccepted": false
+}

@@ -1,0 +1,25 @@
+{
+  "taskNumber": 312,
+  "viewTaskNumber": 285,
+  "version": "v3",
+  "startedAt": "2026-10-15T16:54:08.026677+00:00",
+  "issued": 1,
+  "completed": 1,
+  "oneWholeNewImage": true,
+  "builtinImageGenUsed": true,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "sameFourOriginalInputs": true,
+  "oldV1V2UsedAsInput": false,
+  "promptSHA256": "170721c06336e0d04a1cfe1ee2fd4f2b7a6fdbd0023d8ad348a6b3110ca9d507",
+  "requestedDimensions": [
+    1536,
+    1024
+  ],
+  "nativeOutputRecordedAt": "2026-10-15T16:55:50.250463+00:00",
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "nativeSHA256": "6736127a13903194e20ae24e219c8a319b96ae374791a080e821e0d2661acc8c"
+}

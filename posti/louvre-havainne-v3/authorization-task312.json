@@ -1,0 +1,36 @@
+{
+  "taskNumber": 312,
+  "sourceCommit": "57c6322df1c9ab7e04805e5ad2e1f5684351373f",
+  "sourcePath": "posti/louvre-havainne-v2-vastaus/VASTAUS-FI.md",
+  "sourceBlob": "e3694d3a863fce2c0bfee4ed1aecbf0b319ad22f",
+  "sourceReadInFull": true,
+  "recordedAt": "2026-10-15T16:54:08.026677+00:00",
+  "scope": "One whole new K1v3 image and own mask using the same four inputs; then stop for feedback",
+  "maxNewCalls": 1,
+  "oldV1V2PartialEditingAllowed": false,
+  "preserveV1V2": true,
+  "sameFourInputImagesRequired": true,
+  "requestedDimensions": [
+    1536,
+    1024
+  ],
+  "APIAllowed": false,
+  "CLIAllowed": false,
+  "R2Allowed": false,
+  "gameIntegrationAllowed": false,
+  "mainMergeAllowed": false,
+  "publicationAllowed": false,
+  "modelLoopAllowed": false,
+  "IoUTarget": 0.95,
+  "fallbackPolicy": {
+    "ifV3Below95": "Best candidate at least85percent may be accepted by PT policy; record discrepancies as modeling guidance",
+    "minimumIoU": 0.85,
+    "automaticReceiverAcceptanceClaimAllowed": false
+  },
+  "v4AutomaticAllowed": false,
+  "K2toK7GenerationAllowedNow": false,
+  "GizaAndOtherCluesResumeAllowed": false,
+  "v2ReceiverConfirmedRoundedPercent": 91.3,
+  "v2ExactLocalIoU": 0.9133664569438069,
+  "v2CompositionDistanceAndAppearanceAcceptedInSource": true
+}

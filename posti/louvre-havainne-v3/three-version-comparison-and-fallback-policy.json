@@ -1,0 +1,52 @@
+{
+  "taskNumber": 312,
+  "sourceCommit": "57c6322df1c9ab7e04805e5ad2e1f5684351373f",
+  "originalTarget": 0.95,
+  "fallbackMinimum": 0.85,
+  "fallbackCondition": "If v3 remains below95percent, PT allows accepting the best candidate>=85percent with deviations recorded as modeling instructions.",
+  "v3Below95": true,
+  "versions": [
+    {
+      "version": "v1",
+      "IoU": 0.5344519404383268,
+      "percent": 53.44519404383268,
+      "meets95": false,
+      "meets85FallbackFloor": false,
+      "photoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K1/v1/louvre-K1.png",
+      "photoSHA256": "b50ad80ca50f55767f406d509b699eac0c40f97080e285e065c761aa437ebe03",
+      "maskSHA256": "11f14a741dec7d9129f8adb2a01e5efcf58dff6f9da7e4eda695b239b925474c"
+    },
+    {
+      "version": "v2",
+      "IoU": 0.9133664569438069,
+      "percent": 91.33664569438069,
+      "meets95": false,
+      "meets85FallbackFloor": true,
+      "photoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K1/v2/louvre-K1.png",
+      "photoSHA256": "4d17784bd0b0e98d5566447a5d23f5c1b0f41f389fbf751e5719dda4b063623e",
+      "maskSHA256": "599d1679d892a55e0182c0f30915d7630c2d461447da93fd9aefcc64aa56885a"
+    },
+    {
+      "version": "v3",
+      "IoU": 0.705264354488513,
+      "percent": 70.5264354488513,
+      "meets95": false,
+      "meets85FallbackFloor": false,
+      "photoPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/K1/v3/louvre-K1.png",
+      "photoSHA256": "6736127a13903194e20ae24e219c8a319b96ae374791a080e821e0d2661acc8c",
+      "maskSHA256": "49ff5990604ace03db71560c12b5021ddbf9de0de75a7d2a68b039b3aceb8b78"
+    }
+  ],
+  "highestNativeIoUVersion": "v2",
+  "highestNativeIoU": 0.9133664569438069,
+  "eligibleUnderFallbackByIoU": [
+    "v2"
+  ],
+  "receiverSelectedVersion": null,
+  "receiverAcceptanceVerified": false,
+  "PTAccepted": false,
+  "acceptedAsBindingTarget": false,
+  "decisionNote": "HighestIoU is a geometry-only ranking. V3 river/courtyard/label corrections and remaining geometry are separately reviewed. Receiver selection and acceptance must be confirmed, not inferred from policy eligibility.",
+  "noAutomaticV4": true,
+  "K2toK7Started": false
+}

@@ -1,0 +1,72 @@
+{
+  "taskNumber": 312,
+  "createdAt": "2026-10-15T17:05:17.465913+00:00",
+  "scope": "Modeling instructions only; no model was edited or rendered",
+  "nativeGeometryAuthority": "Original fixed camera, dimensions and supplied LiDAR mass/mask; do not reshape geometry to arbitrary AI detail.",
+  "v3OwnTopRow": 203,
+  "LiDARTopRow": 262,
+  "topRowDifferencePixels": -59,
+  "diagnosticPixelRegions": [
+    {
+      "diagnosticRegion": "rear_upper_block",
+      "bbox": [
+        560,
+        180,
+        990,
+        440
+      ],
+      "ownOnly": 25107,
+      "referenceOnly": 12187
+    },
+    {
+      "diagnosticRegion": "nearest_left",
+      "bbox": [
+        0,
+        480,
+        620,
+        1024
+      ],
+      "ownOnly": 8052,
+      "referenceOnly": 20290
+    },
+    {
+      "diagnosticRegion": "nearest_right",
+      "bbox": [
+        920,
+        480,
+        1536,
+        1024
+      ],
+      "ownOnly": 14693,
+      "referenceOnly": 18621
+    },
+    {
+      "diagnosticRegion": "right_lightwells",
+      "bbox": [
+        960,
+        320,
+        1240,
+        600
+      ],
+      "ownOnly": 16032,
+      "referenceOnly": 1171
+    }
+  ],
+  "diagnosticRegionsAreNotArchitecturalSegmentation": true,
+  "requirements": [
+    "Preserve original ENU camera andVFOV45, palace footprint and measured wing heights from LiDAR. The image prompt is not physical-camera evidence.",
+    "Keep nearest Rivoli/Richelieu and GrandeGalerie outer edges at the measured native contour; use supplied difference overlay to avoid reproducing AI silhouette drift.",
+    "Place Seine on the right/south along GrandeGalerie, with city/Saint-Germain-lAuxerrois behind the east end, not a transverse river behind palace.",
+    "Build CourCarree as a four-wing enclosed square courtyard behind Sully; preserve its visible courtyard voids, not a solid rear slab.",
+    "Keep the two right Daru/Mollien roof lightwells small and geometrically grounded; AI enlarged court details are not binding.",
+    "Use warm weathered limestone, gray-blue slate/lead, granite Napoleon paving, no pyramids/pools, equestrian statue from source-map location."
+  ],
+  "highestIoUVersion": "v2",
+  "highestIoU": 0.9133664569438069,
+  "selectedBindingTarget": null,
+  "receiverAcceptanceVerified": false,
+  "PTFallbackPolicySourceCommit": "57c6322df1c9ab7e04805e5ad2e1f5684351373f",
+  "fallbackFloor": 0.85,
+  "noModelLoopStarted": true,
+  "noV4Authorized": true
+}

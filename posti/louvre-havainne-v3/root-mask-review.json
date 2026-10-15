@@ -1,0 +1,24 @@
+{
+  "taskNumber": 312,
+  "version": "v3",
+  "reviewedAt": "2026-10-15T17:05:16.882117+00:00",
+  "reviewer": "root",
+  "photoSHA256": "6736127a13903194e20ae24e219c8a319b96ae374791a080e821e0d2661acc8c",
+  "maskSHA256": "49ff5990604ace03db71560c12b5021ddbf9de0de75a7d2a68b039b3aceb8b78",
+  "maskPersonallyViewed": true,
+  "overlayPersonallyViewed": true,
+  "independentVisualReviewReadInFull": true,
+  "maskCreatedWithoutTarget": true,
+  "independentlyCertified": false,
+  "reviewBoardPersonallyViewed": true,
+  "IoU": null,
+  "notes": [
+    "Own mask follows visible palace and facade masses; sky, city, river, foreground paving, statue and label excluded.",
+    "Rear ground slits are very narrow and dark court recesses can be facades; source-image-only segmentation uncertainty is retained. No target-shaped artificial holes were requested.",
+    "Upper roof is visibly above source mass; exact native metric follows this fixed own-mask candidate."
+  ],
+  "PTAccepted": false,
+  "acceptedAsBindingTarget": false,
+  "threeVersionBoardPersonallyViewed": true,
+  "nativeDifferencePersonallyViewed": true
+}

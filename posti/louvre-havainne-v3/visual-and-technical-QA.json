@@ -1,0 +1,50 @@
+{
+  "taskNumber": 312,
+  "version": "v3",
+  "reviewedAt": "2026-10-15T17:05:17.465913+00:00",
+  "nativeDimensions": [
+    1536,
+    1024
+  ],
+  "photoSHA256": "6736127a13903194e20ae24e219c8a319b96ae374791a080e821e0d2661acc8c",
+  "oneWholeNewGenerationThisTask": true,
+  "totalLouvreCalls": 3,
+  "sameFourInputsAsV2": true,
+  "v1V2Preserved": true,
+  "upscaled": false,
+  "cropped": false,
+  "partiallyEdited": false,
+  "APIUsed": false,
+  "CLIUsed": false,
+  "independentVisualReviewPath": "independent-visual-review.json",
+  "visibleCorrections": {
+    "SeineOnRight": true,
+    "riverNotAcrossRear": true,
+    "fourWingRearCourtAppearance": true,
+    "havainnekuvaTopLeft": true
+  },
+  "uncertainties": [
+    "Lähimpien siipien vaaditun leveyden ja ulkoreunojen vastaavuus massakuvapohjaan jää varmentamatta; näkyvissä on edelleen geometrisia eroja.",
+    "Oikean keskiosan valopihojen täsmällinen määrä, koko ja sijainti eivät ole arkkitehtonisesti varmennettuja; näkyvät pääaukot vaikuttavat suurilta suhteessa pienten valopihojen pyyntöön.",
+    "Cour Carréen nelisivuinen sulkeutuminen näkyy, mutta neliömäisyys ja mittasuhteet jäävät varmentamatta.",
+    "Ratsastajaa muistuttava patsassiluetti näkyy, mutta tietty monumentti ja sen oikea sijainti jäävät varmentamatta.",
+    "Fyysistä kameraa, maantieteellistä sijoittelua tai koko palatsin arkkitehtonista tarkkuutta ei tällä visuaalisella arviolla sertifioida."
+  ],
+  "IoU": 0.705264354488513,
+  "passed95": false,
+  "meets85FallbackFloor": false,
+  "highestNativeIoUVersion": "v2",
+  "highestNativeIoU": 0.9133664569438069,
+  "fallbackPolicyEligibleVersions": [
+    "v2"
+  ],
+  "PTAccepted": false,
+  "acceptedAsBindingTarget": false,
+  "receiverSelectedVersion": null,
+  "v4AutomaticAllowed": false,
+  "K2toK7Started": false,
+  "gameIntegrated": false,
+  "R2Used": false,
+  "mainMerged": false,
+  "published": false
+}

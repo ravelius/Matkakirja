@@ -1,0 +1,11 @@
+# Louvre K1 v3 / #312 — yksi kokonaan uusi natiivikuva ja oma maski
+
+Kuva ja oma maski ovat 1536 × 1024. V3 tehtiin yhdellä sisäisen kuvatoiminnon kokonaan uudella generoinnilla käyttäen täsmälleen samoja neljää syötettä kuin v2: massa, punainen ääriviivaohje, natiivi lähdemaski geometriaviitteeksi sekä Commons-julkisivukuva vain pintaan. Vanhoja v1/v2-kuvia ei käytetty syötteinä tai osakorjattu. API:a, CLI:tä, rajausta tai suurennusta ei käytetty.
+
+Oman uuden maskin natiivi-IoU on **70.5264 % / 95 %**. Yhteisiä pikseleitä 310207, unionissa 439845; oman maskin ylin rivi203, LiDARin 262. V1 53.4452 %, v2 91.3366 %. Paras mitattu maskivastaavuus on **v2 / 91.3366 %**. Maskit tehtiin erikseen vastaavista valokuvista, eivät lähdemaskin kopioina. Vertailussa ei skaalattu tai kohdistettu kuvia.
+
+PT:n #312:n uusi poikkeus sallii v3:n jäädessä alle 95 % parhaan vähintään 85 % ehdokkaan hyväksymisen, kun erot kirjataan mallinnusohjeeksi. Poikkeus on kirjattu lähdetunnisteineen. **Se ei ole väite vastaanottajan jo tekemästä K1-valinnasta tai hyväksynnästä.** Versioiden matemaattinen maskijärjestys ei yksin ratkaise kuvan muuta laatua: v3:ssa joen puoli/suunta, suljettu takapiha ja havainnekuva-merkintä ovat näkyvissä, mutta massan, valopihojen ja ympäristön tarkkuudessa on yhä eroja. PT/Linnanrakentaja valitsee sitovan K1:n ja kuittaa mahdollisen poikkeuksen.
+
+Riippumaton visuaaliarvio ei lukenut maskeja tai IoU-mittareita. Se tunnisti joen pääsuunnan ja merkinnän korjaantumisen, nelisivuisen takapihan vaikutelman sekä ratsastajaa muistuttavan patsaan. Siipien leveyttä, valopihojen kokoa, CourCarreen mittasuhteita, patsaan monumenttitunnistusta ja ympäristön tarkkaa maantiedettä ei varmennettu. Maskin piirtäjä puolestaan luki vain todellisen v3-kuvan, ei kohdemaskia tai vanhoja versioita. Käsin jäljityksen epävarmuus on kirjattu.
+
+`modeling-guidance-and-known-differences.json` kertoo konkreettiset massan ja piharakenteen ohjeet sekä natiivit erot. Se on pelkkä ohje: yhtään mallikierrosta, R2-siirtoa, peli-integraatiota, main-yhdistämistä tai julkaisua ei tehty. V4:ää ei tehdä automaattisesti. K2–K7 odottavat K1-valintaa ja uutta palautetta. Karttavihjeiden erillinen #314-lupa ei laajenna Louvren tätä yhtä yritystä.

@@ -1,0 +1,31 @@
+{
+  "taskNumber": 312,
+  "sourceImageEditingRequested": true,
+  "firstImageRole": "entire-frame measured mass base for photorealistic transformation",
+  "oldGeneratedV1UsedAsInput": false,
+  "separatePartialEditingMaskParameterSupplied": false,
+  "references": [
+    {
+      "order": 1,
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-massa-1536x1024.png",
+      "sha256": "101b50cd75f2e9e5d616b3ffb8636050c3c079682c5bec731720b41e737e0390"
+    },
+    {
+      "order": 2,
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-ohje-1536x1024.png",
+      "sha256": "7fd375ec3bfed9cf56c0668109c21b072a54b31d7ea6a1447e9688671d8d93a8"
+    },
+    {
+      "order": 3,
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/task302/louvre-K1-maski-1536x1024.png",
+      "sha256": "7d3bb8571f347bf3c1bdd57142f2b41fc706c9cfacd3799c6c0405b5f718f19e"
+    },
+    {
+      "order": 4,
+      "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-tavoitehavainnekuvat-20261015/sources/8c0fbcde/louvre-ref-Cour-Napol-on-Pavillon-de-l-horloge-Louvre-007-jpg.jpg",
+      "sha256": "36734a0b490b35417d7f35d54dfdc42830a774cb6186e706484fa374a4059c6b"
+    }
+  ],
+  "oldGeneratedV2UsedAsInput": false,
+  "sameFourInputsAsTask302": true
+}
