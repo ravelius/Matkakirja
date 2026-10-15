@@ -164,3 +164,16 @@ Omistaja (kortti vihjeet-suunnitelma): "Kyllä, kaikki 9 (Suositus)". Karttasep�
 ## PAATOKSET 15.10.2026 klo 19.28: ISS-yötaivas kytketään korjattuna (15.10.2026 klo 19.29)
 
 Omistaja (kortti yotaivas-kytkenta, A1/B1 + taivaan lähikuva nähty): "Kyllä, kun taivas on korjattu (Suositus)". Ehto: taivas pysyy mustana (ei harmaata laikukasta nousua), Linnunrata tarkka tähtijuova (ei sumea ruskea savu); Vancouver-nimi ei jää Pulun alle. Uusi kuva omistajalle ennen junaa 196. Toteuttaa Linssiseppä.
+
+## OMISTAJAN PAATOKSET 15.10. ILTA: ISS-YOTAIVAS, NIMET-NAPPI, PULUN KYSYMYKSET, ISS-ILMIOT (15.10.2026 klo 20.22)
+
+Keskustelukanavan välittäminä (PT kirjasi):
+- 19.55 yotaivas-kuittaus: "Kyllä, junaan 196" – ISS-yötaivas (musta taivas, Linnunrata tähtijuovana, Vancouver ei Pulun alla) oletuksena päällä junassa 196. Skannerin uusi taivastila kytkimen takana
+(oletus pois), kunnes omistaja näkee sen.
+- 20.01 pyyntö: "voisi tehdä napin jolla pelaaja voisi sammuttaa kartan selitteet" – ISS-kohdevalikon ylärivin NIMET-nappi olemassa olevalla kytkinpohjalla (Live-napin tilalle), piilottaa
+ikkunanäkymän kaikki nimet, valinta muistetaan; skanneri näyttää nimen napautuksesta. Kuva omistajalle ennen kytkentää.
+- 20.04 pyyntö ja 20.08 "Hyviä nuo kysymykset": Pulun valmiit ISS-kysymykset – miksi astronautit eivät näe lentokoneita, tulivuorenpurkaus avaruudesta, Kiinan muuri, musta taivas auringonpaisteessa,
+noin 16 auringonnousua päivässä. Vastaukset lähteineen omistajan hyväksyttäviksi ennen äänitystä.
+- 20.05 "Joo animoidaan kuuluisimmat purkaukset" ja 20.07 (kortti, kaikki neljä): ISS-näkymään animoituina tulivuoret (Sarytšev 2009, Etna 2002, Raikoke 2019, Hunga Tonga 2022, Reykjanes), salamat ja
+keijut, pimennyksen varjo (12.8.2026), Perseidit aseman alapuolella ja hurrikaanin silmä. Kukin oma kohdevalikon ryhmä ja paras hetki = tapahtuman todellinen aika; tavoitekuvina NASA/satelliittien
+PD-kuvat; kuvapari tai video omistajalle ennen kytkentää. ISS on linssi: ei Eurooppa-rajausta.
