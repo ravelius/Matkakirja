@@ -251,7 +251,7 @@ LCD pelkkä nimi, Live piiloon + ilmiöt + kohokohtien data). Uudempi kärki **e
 **KESKEN (seuraaja jatkaa):**
 1. **Uusinta-simuajo käynnissä 21.32** (Julkaisijan SIMU NYT 8362879F, käännös 673c030b2 = 70883ee13+1cefa0f9b): odottaja pid 43696,
    loki proto-3d/lokit/siirtoseppa-kohokohta2-196.log, skenaario tyokalut/siirtoseppa-ajot/skenaariot/sk-kohokohta2-196.txt → todistus-kohokohta2-196-*.
-   Kun loki päättyy "AJO …": **SIMU VAPAA Julkaisijalle**. Sitten:
+   **AJO VALMIS 21.38, SIMU VAPAA ilmoitettu** (todistus lokit/todistus-kohokohta2-196-20261015-2132, kuvat tarkistamatta). Seuraavaksi:
    a) **Auringonnousun korttikuva** (PT 20.4x): kuvat k0/k60/k120/km60/k90 (katse 8° alas, suunta = poikkeama maajäljestä). Ajossa 21.29 aurinkoa ei
       näkynyt (katse pohjoiseen). Jos ei näy nyt: hetkeä aikaisemmaksi (asemalta aurinko limbillä kun maassa ~−15…−20°) → laji "aamu"-sääntö
       (−2…15°) estää; tarvitsee esim. lajin "aamunkoitto" testisääntöineen. Kortti JPG 960×640 3:2, aihe keskellä (NUI) → vientipaketti
