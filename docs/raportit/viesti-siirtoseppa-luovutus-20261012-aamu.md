@@ -301,3 +301,6 @@ kuva iPhone + Mac PT:lle; SK luonnostelee Pulun kysymykset rinnalla – älä od
   Valmis → kuvat m0–m3 tarkista (merinimi suomenlahti/tyrrhenanmeri → kortti), SIMU VAPAA Julkaisijalle, kuvat PT:lle.
 - **Mac-kuva**: Julkaisijalta kysytty lupa mac-kaanna.sh d7d4a89eb + appi ikkunassa (malli tyokalut/linssiseppa-ajot/mac-merkit.sh, idle-tarkistus).
 - PT:n kuittauksen jälkeen SHA NS:lle junaan 196.
+- Julkaisija 00.2x: iPhone-liput (kaannos-meri.nyt + simu-meri.nyt) ANNETTU → odottaja 65296 kääntää ja ajaa itse; seuraaja tarkistaa lokin.
+  **Mac LUVALLA**: `mac-kaanna.sh d7d4a89eb` vasta iOS-käännöksen jälkeen (L2-lukko, levy > 22 Gi), appi ikkunassa ~5 min vain kun
+  omistaja idle ≥ 10 min (ioreg HIDIdleTime), sulje appi heti. Julkaisijalle: SIMU VAPAA + Mac valmis.
