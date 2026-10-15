@@ -1,0 +1,41 @@
+[
+  {
+    "id": "vilna",
+    "esittely": "Kartan alue on Vilnan vanhakaupunki, joka on ollut Unescon maailmanperintökohde vuodesta 1994. Gediminaksen torni on ylälinnan ainoa säilynyt osa, ja siinä on museo ja näköalatasanne. Tuomiokirkon uusklassinen ulkoasu syntyi Laurynas Gucevičiuksen suunnitelmien mukaan vuosina 1783–1801. Pyhän Annan kirkko valmistui noin vuonna 1500, ja sen julkisivussa on 33 eri tiilityyppiä.\n\nVilnan yliopisto sai perustamiskirjansa 1579, ja sen alueella on kolmetoista sisäpihaa. Aamuportti on kaupunginmuurin ainoa jäljellä oleva portti. Užupis julistautui tasavallaksi 1. huhtikuuta 1997. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 632,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Vilnius_Old_Town", "title": "Wikipedia: Vilnius Old Town", "tukee": "Unescon maailmanperintökohde (hakutuloksena: merkitty 17.12.1994)"},
+      {"url": "https://unesco.lt/tangible-cultural-heritage/vilnius-historic-centre", "title": "UNESCO Lithuania: Vilnius Historic Centre", "tukee": "kohde merkitty maailmanperintöluetteloon 1994 (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/Gediminas%27_Tower", "title": "Wikipedia: Gediminas' Tower", "tukee": "ylälinnan ainoa säilynyt osa; kolme kerrosta; museo ja näköalatasanne"},
+      {"url": "https://lnm.lt/?p=19877", "title": "Lithuanian National Museum: Gediminas' Tower", "tukee": "torni on ylälinnan jäänne; museo ja näköalatasanne avattu 1960 (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://www.historyhit.com/locations/gediminas-tower/", "title": "History Hit: Gediminas Tower", "tukee": "säilynyt torni, museo (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/Vilnius_Cathedral", "title": "Wikipedia: Vilnius Cathedral", "tukee": "uusklassinen uudistus Laurynas Gucevičius, aloitettu 1780-luvun alussa, valmis 1801"},
+      {"url": "https://www.ldkistorija.lt/?p=8113", "title": "LDK istorija: Vilnius Cathedral, a sanctuary built in the classical style", "tukee": "rakennettu 1783–1801 Gucevičiuksen suunnitelmin (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/Church_of_St._Anne,_Vilnius", "title": "Wikipedia: Church of St. Anne, Vilnius", "tukee": "rakennettu 1495–1500, 33 erilaista savitiiltä, goottilainen"},
+      {"url": "https://cyark.org/projects/st-annes-church", "title": "CyArk: St. Anne's Church", "tukee": "ulkoseinä 33 erilaisesta savitiilestä; myöhäisgoottilainen (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/Vilnius_University", "title": "Wikipedia: Vilnius University", "tukee": "perustettu 1579, jesuiittaakatemia; noin kolmetoista sisäpihaa"},
+      {"url": "https://vu.lt/en/about-vu/history", "title": "Vilnius University: History", "tukee": "1.4.1579 Báthoryn privilegiokirje; 30.10.1579 paavin vahvistus"},
+      {"url": "https://vu.lt/en/about-vu/history/university-ensemble", "title": "Vilnius University: University ensemble", "tukee": "13 sisäpihaa (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/Gate_of_Dawn", "title": "Wikipedia: Gate of Dawn", "tukee": "rakennettu 1500-luvun alussa; kaupunginmuurien purkamisen (1799–1805) jälkeen ainoa jäljelle jäänyt"},
+      {"url": "https://www.historyhit.com/locations/the-gate-of-dawn/", "title": "History Hit: The Gate of Dawn", "tukee": "ainoa jäljellä oleva kaupungin portti; rakennettu 1503–1522 (luettu hakutuloksen tiivistelmänä)"},
+      {"url": "https://en.wikipedia.org/wiki/U%C5%BEupis", "title": "Wikipedia: Užupis", "tukee": "julistautui tasavallaksi 1.4.1997 (hakutuloksena)"},
+      {"url": "https://www.govilnius.lt/uzupis-en", "title": "Go Vilnius: Užupis, a Republic inside Vilnius", "tukee": "itsenäisyysjulistus 1.4.1997; perustuslaki Paupio-kadun laatalla"}
+    ],
+    "pudotetut": [
+      "'Puolentoista kilometrin matka tuomiokirkon aukiolta Aamuportille': ei tarkistettu kahdesta lähteestä, jätetty pois",
+      "'Yhdeksästä kaupunginportista' (nykyinen teksti): lähteet erimielisiä (yhdeksän vs. kymmenen), luku jätetty pois",
+      "Tuomiokirkon kellotornin korkeus 57 m: vain Wikipedia, toista lähdettä ei löytynyt",
+      "Napoleonin 'kämmenellä Pariisiin' -tarina: kuvattu legendaksi, ei faktaksi, jätetty pois",
+      "Užupisin perustuslain artiklojen määrä ja Vilnia-joen takana oleminen: artiklamäärä vaihtelee (38 / 39 / 41), jätetty pois",
+      "Kirjankantajat, Salattu avioliitto ja Boratynka: ei kuulu tähän, ei tarkistettu"
+    ],
+    "ristiriidat": [
+      "Aamuportin porttien lukumäärä: yhdeksän vs. kymmenen; rakennusaika 1503–1514 (Wikipedia) vs. 1503–1522 (muut); teksti ei anna lukua eikä vuosia",
+      "Pyhän Annan kirkon rakennusvuodet: 1495–1500 (Wikipedia) vs. 1495–1501 (muut); teksti sanoo 'noin vuonna 1500'",
+      "Tuomiokirkon uudistuksen valmistuminen: 1783 (Wikipedian infolaatikko) vs. 1801 (teksti ja muut lähteet); teksti käyttää 1783–1801",
+      "Užupisin perustuslain artiklat: 38 / 39 / 41; tasavallan vuosi 1997 vs. 1998 joissakin lähteissä (1997 Wikipedia ja Go Vilnius)"
+    ],
+    "muutos_sk": "Poistettu: puolentoista kilometrin pituus, 'yhdeksästä kaupunginportista', joet, Užupisin perustuslaki, punatiilinen. Lisätty: Unescon 1994, Gediminaksen tornin museo ja näköalatasanne, tuomiokirkon Gucevičius ja 1783–1801, Pyhän Annan kirkon 33 tiilityyppiä, yliopiston 1579, Užupisin 1.4.1997."
+  }
+]

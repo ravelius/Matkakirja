@@ -1,0 +1,42 @@
+[
+  {
+    "id": "tallinna",
+    "esittely": "Kartan alue on Tallinnan vanhakaupunki ja sen satama. Vanhakaupunki on ollut Unescon maailmanperintökohde vuodesta 1997. Raatihuoneentorin goottilainen raatihuone valmistui 1404, ja Olevisten kirkon torni on noin 123 metriä korkea. Kaupunginmuuria on säilynyt noin 1,85 kilometriä. Virun portista ovat jäljellä kulmatornit.\n\nPaksu Margareeta on 1500-luvun alussa rakennettu puolustustorni, jossa toimii nykyään Viron merenkulkumuseo. Toompean kukkulalla seisova Aleksanteri Nevskin katedraali valmistui 1900. Matkustajasatamasta lähtee lauttoja Helsinkiin, ja e-valtiolla viitataan Viron sähköisiin palveluihin: e-residenssi käynnistyi 2014. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 695,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Tallinn_Old_Town", "title": "Wikipedia: Tallinn Old Town", "tukee": "Unesco-kohde 1997"},
+      {"url": "https://www.inyourpocket.com/estonia/tallinn/articles/tallinn-fortifications%3A-a-mighty-fortress", "title": "In Your Pocket: Tallinn Fortifications", "tukee": "Old Town julistettu Unesco-kohteeksi 1997; lähes 2 km muuria säilynyt; Virun portin kulmatornit"},
+      {"url": "https://en.wikipedia.org/wiki/Tallinn_Town_Hall", "title": "Wikipedia: Tallinn Town Hall", "tukee": "goottilainen, valmistui 1404, Raekoja plats"},
+      {"url": "https://www.inyourpocket.com/estonia/tallinn/venues/town-hall", "title": "In Your Pocket: Town Hall", "tukee": "nykyinen goottilainen rakennus 1404"},
+      {"url": "https://en.wikipedia.org/wiki/St._Olaf%27s_Church,_Tallinn", "title": "Wikipedia: St. Olaf's Church, Tallinn", "tukee": "tornin korkeus 123,8 m"},
+      {"url": "https://www.visitestonia.com/en/st-olafs-church-in-tallinn", "title": "Visit Estonia: St. Olaf's Church", "tukee": "torni noin 123 m"},
+      {"url": "https://www.visitestonia.com/en/tallinns-city-wall", "title": "Visit Estonia: Tallinn's city wall", "tukee": "noin 1,85 km muuria säilynyt"},
+      {"url": "https://en.wikipedia.org/wiki/Gatehouse_of_the_Viru_Gate", "title": "Wikipedia: Gatehouse of the Viru Gate", "tukee": "pyöreät kulmatornit säilyneet, muu purettu 1888"},
+      {"url": "https://visitestonia.com/en/viru-gate", "title": "Visit Estonia: Viru Gate", "tukee": "kulmatornit säilyneet"},
+      {"url": "https://en.wikipedia.org/wiki/Fat_Margaret", "title": "Wikipedia: Fat Margaret", "tukee": "rakennettu 1511-1530; Viron merenkulkumuseo"},
+      {"url": "https://balticguide.ee/en/fat-margaret-and-the-great-coastal-gate/", "title": "Baltic Guide: Fat Margaret", "tukee": "torni lisätty 1500-luvulla; merenkulkumuseo"},
+      {"url": "https://en.wikipedia.org/wiki/Alexander_Nevsky_Cathedral,_Tallinn", "title": "Wikipedia: Alexander Nevsky Cathedral, Tallinn", "tukee": "rakennettu 1894-1900, Toompean kukkula"},
+      {"url": "https://www.visitestonia.com/en/st-alexander-nevsky-cathedral", "title": "Visit Estonia: Alexander Nevsky Cathedral", "tukee": "valmistui 1900"},
+      {"url": "https://www.visittallinn.ee/eng/visitor/plan/arrival/by-sea", "title": "Visit Tallinn: Arrival by sea", "tukee": "lauttayhteys Helsinkiin, terminaalit A ja D"},
+      {"url": "https://www.ts.ee/en/old-city-harbour/", "title": "Tallink: Old City Harbour", "tukee": "lautat Helsinkiin Vanhasta satamasta"},
+      {"url": "https://en.wikipedia.org/wiki/E-Residency_of_Estonia", "title": "Wikipedia: E-Residency of Estonia", "tukee": "ohjelma käynnistyi 1.12.2014"},
+      {"url": "https://www.e-resident.gov.ee/about-us/", "title": "e-Residency: About us", "tukee": "käynnistetty 2014"}
+    ],
+    "pudotetut": [
+      "Muurin kokonaispinta-ala 35 ha (entinen teksti): ei vahvistettu kahdesta lähteestä",
+      "Raatihuone 'pohjois-Euroopan vanhin': vain matkailusivut, jätetty pois",
+      "Lyhyen jalan torni, Pirtulaivat: ei riittävästi tarkistettavaa tilaa/lähteitä, jätetty pois",
+      "Paksu Margareeta seinän paksuus: 5 m vs. 6 m, jätetty pois",
+      "Virun portin tornien lukumäärä (kaksi): vahvistus vain Wikipediassa, jätetty pois",
+      "Nevskin katedraalin arkkitehti: vain Wikipedia, jätetty pois"
+    ],
+    "ristiriidat": [
+      "Muurin tornien lukumäärä: entinen teksti 28, Visit Estonia/Visit Tallinn 26, jokin opas 20 -> lukua ei käytetä",
+      "Paksun Margareetan rakennusvuodet: 1511-1530 (Wikipedia) vs. 1529 -> teksti sanoo vain 'alussa 1500-luvulla'",
+      "Raatihuoneen alku: 1322 vs. 1400-luvun alku -> käytetty vain valmistumisvuotta 1404",
+      "Matka-aika Helsinkiin 2-3 h (Visit Tallinn) vs. noin 2 h -> aikaa ei mainita"
+    ],
+    "muutos_sk": "Lisätty: Unesco 1997, raatihuone 1404, Olevisten torni 123 m, muuria 1,85 km, Virun portin kulmatornit, Paksun Margareetan ajoitus ja museo, Nevskin katedraali 1900, lautat Helsinkiin, e-residenssi 2014. Poistettu tarkistamattomat luvut: 35 hehtaaria ja 28 tornia (Visit Estonia: 26 tornia), Margareetan nimi tykkitornina ja Toompean kaksi katua. Pirtulaivat ja Lyhyen jalan torni jäivät pois."
+  }
+]
