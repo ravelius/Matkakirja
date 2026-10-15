@@ -1,0 +1,35 @@
+[
+  {
+    "id": "helsinki",
+    "esittely": "Kartan alue on Helsingin keskusta. Kustaa Vaasa perusti kaupungin 1550 Vantaanjoen suulle Tallinnan kilpailijaksi, ja kaupunki siirrettiin 1640 Vironniemelle, jossa Senaatintorin ympäristö on kaupungin vanhaa ydintä. Ruotsi aloitti Suomenlinnan merilinnoituksen rakentamisen 1748, ja se on ollut Unescon maailmanperintökohde vuodesta 1991. Venäjä teki Helsingistä Suomen pääkaupungin 1812.\n\nCarl Ludvig Engelin suunnittelema tuomiokirkko valmistui Senaatintorin laidalle 1852 ja Uspenskin katedraali 1868. Eliel Saarisen suunnittelema päärautatieasema valmistui 1919. Temppeliaukion kirkko on louhittu kallioon, ja se vihittiin käyttöön 1969. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 696,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://fi.wikipedia.org/wiki/Helsingin_historia", "title": "Wikipedia (fi): Helsingin historia", "tukee": "perustettu 1550 Vantaanjoen suulle Tallinnan kilpailijaksi; siirto Vironniemelle 1640; pääkaupunki 1812"},
+      {"url": "https://en.wikipedia.org/wiki/History_of_Helsinki", "title": "Wikipedia: History of Helsinki", "tukee": "perustettu 1550 Tallinnan kilpailijaksi; siirto etelään 1640; Suomenlinna 1748; pääkaupunki 1812; uusklassinen Senaatintori"},
+      {"url": "https://www.suomenlinna.fi/en/about-suomenlinna/history/", "title": "Suomenlinna.fi: History", "tukee": "rakennustyö alkoi 1748; Unesco 1991"},
+      {"url": "https://en.wikipedia.org/wiki/Suomenlinna", "title": "Wikipedia: Suomenlinna", "tukee": "alkoi 1748 Ruotsin kruunun aikana; Unesco 1991"},
+      {"url": "https://fi.wikipedia.org/wiki/Suomenlinna", "title": "Wikipedia (fi): Suomenlinna", "tukee": "rakentaminen alkoi 1748; Unesco 1991"},
+      {"url": "https://www.myhelsinki.fi/en/see-and-do/sights/helsinki-cathedral", "title": "MyHelsinki: Helsinki Cathedral", "tukee": "Engelin suunnittelema, valmistui 1852, Senaatintorin laidalla"},
+      {"url": "https://fi.wikipedia.org/wiki/Helsingin_tuomiokirkko", "title": "Wikipedia (fi): Helsingin tuomiokirkko", "tukee": "Engel, vihitty 15.2.1852, Senaatintorin laidalla"},
+      {"url": "https://fi.wikipedia.org/wiki/Uspenskin_katedraali", "title": "Wikipedia (fi): Uspenskin katedraali", "tukee": "rakennettu 1862–1868, vihitty 25.10.1868"},
+      {"url": "https://finnisharchitecture.fi/uspenski-cathedral/", "title": "Museum of Finnish Architecture: Uspenski Cathedral (hakutulos)", "tukee": "valmistui ja vihittiin 1868"},
+      {"url": "https://en.wikipedia.org/wiki/Helsinki_Central_Station", "title": "Wikipedia: Helsinki Central Station", "tukee": "nykyinen rakennus vihitty 1919, Eliel Saarinen"},
+      {"url": "https://www.finnisharchitecture.fi/projects/helsinki-central-railway-station", "title": "Finnish Architecture: Helsinki Central Railway Station (hakutulos)", "tukee": "asema valmistui 1919, Saarisen suunnittelema"},
+      {"url": "https://en.wikipedia.org/wiki/Temppeliaukio_Church", "title": "Wikipedia: Temppeliaukio Church", "tukee": "vihitty syyskuussa 1969; louhittu kallioon"},
+      {"url": "https://www.myhelsinki.fi/en/see-and-do/sights/temppeliaukio-church", "title": "MyHelsinki: Temppeliaukio Church", "tukee": "valmistui 1969, louhittu kallioon"}
+    ],
+    "pudotetut": [
+      "Siirron syy (Vanhankaupunginlahden matala satama): vain fi-Wikipedia, jätetty pois",
+      "Entinen kuvaus Vironniemen sijainnista, väylistä ja ratapihasta: ei tarkistettu, jätetty pois",
+      "Linnanmäki, Kallion kirkko, Johanneksenkirkko, Kaisaniemi: ei tarkistettu tässä erässä, jätetty pois",
+      "Uspenskin 'Pohjois- ja Länsi-Euroopan suurin ortodoksinen kirkko': väite vaihtelee lähteittäin, jätetty pois"
+    ],
+    "ristiriidat": [
+      "Suomenlinnan aloitus: fi-Wikipedian Helsingin historia -sivun tiivistelmässä 1743 (todennäköinen virhe tai tiivistelmän sekaannus Turun rauhaan), muut lähteet 1748 -> käytetty 1748",
+      "Päärautatieaseman valmistuminen: 1912–1919 rakennusaika; yhden lähteen mukaan 1909 suunnittelun valmistuminen -> käytetty 1919",
+      "Uspenskin arkkitehti: Gornostajev (kuoli 1862), työtä johti Varnek -> arkkitehtia ei mainita tekstissä"
+    ],
+    "muutos_sk": "Tiivistetty 791 -> 696 merkkiin ja jaettu kahteen kappaleeseen. Säilytetty: perustaminen 1550, siirto 1640, Suomenlinna 1748, pääkaupunki 1812. Lisätty: Suomenlinnan Unesco 1991, tuomiokirkko 1852, Uspenski 1868, päärautatieasema 1919, Temppeliaukio 1969. Poistettu: matalan sataman selitys, väylät, Katajanokka, Töölönlahti, ratapiha."
+  }
+]
