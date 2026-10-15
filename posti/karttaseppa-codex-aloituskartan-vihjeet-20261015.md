@@ -1,3 +1,9 @@
+## 15.10.2026 klo 18.03 UTC — Palaute #314: HYVÄKSYTTY (PT), tilaus 4 lisäys 3 valmis
+
+- Päätoimittaja hyväksyi yhdeksän kuvan arkin (`aloituskartan-vihjeet-20261015/vertailu-9kuvaa.png`): Marrakech, Sahara, Samarkand ja
+  Grönlanti sopivat Gizan ja neljän olemassa olevan rinnalle. Ei korjauksia eikä uusintoja.
+- Karttaseppä vie viisi WebP:tä `assets/kartat/miniatyyrit/`-kansioon ja natiivin vihjedataan. Tilaus on valmis; ei jatkotöitä tästä.
+
 ## 15.10.2026 klo 16.53 UTC — Palaute #306 Giza: HYVÄKSYTTY tyyliankkuriksi, jatka loput neljä yhtenä eränä
 
 - Giza (`aloituskartan-vihjeet-20261015/giza-pyramidit.webp`, 1024² RGBA) sopii neljän olemassa olevan rinnalle: viiva, laveeraus,
