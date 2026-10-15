@@ -1,8 +1,9 @@
 {
- "nimi": "TF 188",
- "tila": "TestFlightissa",
- "edistys": 5,
- "kirjoittaja": "Päätoimittaja",
- "vaihe": "5/5 – TestFlightissa 13.10. klo 23.24 (iOS) ja 23.26 (Mac)",
- "ts": 1791926178778
+  "edistys": 5,
+  "kirjoittaja": "Julkaisija",
+  "nimi": "Juna 192",
+  "tila": "TestFlightissa",
+  "ts": 1792059240000,
+  "vaihe": "5/5 – TestFlightissa sisäisillä klo 10.54 (iOS + Mac 1.1 (192)); beta-arvio pyydetty heti, ulkoisille kun sisältövienti valmis",
+  "valmis_arvio": "ulkoisille ~11.45–12.15"
 }

@@ -1,1 +1,20 @@
-{"rivit": {"Julkaisija": "Valosepän vahdin lipun varjo: iPad- ja iPhone-ajo", "Karttaseppä": "Kippikaupunkien sää, vesi ja maasto Kööpenhaminan tasolle", "Laitetestaaja": "Levossa, testit pyydettäessä", "Linnanrakentaja": "Olavinlinna tauolla; raketin mallit valmiit", "Linssiseppä": "Ranskan kertoja valmis; museon askeleet", "Natiivi-UI": "ISS-kohdevalikko ja AUTO-arkki junaan 190", "Natiiviseppä": "Junan 190 runko testattu; yövalojen muistiajo", "Pelikoodari": "ISS-telakointi ja kupolin pinta junaan 190", "Postivahti": "Valvonta", "Päätoimittaja": "Junan 190 viimeistely, erien kuittaus", "Siirtoseppä": "Olavinlinna tauolla", "Sisältökirjuri": "Kaupunkikarttojen pidemmät esittelyt peliin", "Äänittäjä": "Museon askeleet", "Valoseppä": "ISS: valaan kytkentä ja yövalot", "Keskustelukanava": "Omistajan keskustelut ja kortit"}, "ts": 1791986226878}
+{
+  "rivit": {
+    "Julkaisija": "Vahdin Kuu-käännös valmis 11.15, odottaa iPad-simua (Valosepän yövesiajo ensin); junan 192 TF-käännös käynnissä",
+    "Karttaseppä": "Kippikaupunkien sää, vesi ja maasto Kööpenhaminan tasolle",
+    "Keskustelukanava": "Omistajan keskustelut ja kortit",
+    "Laitetestaaja": "iPhone-todistusajot (juna 191)",
+    "Linnanrakentaja": "Olavinlinna tauolla; raketin mallit valmiit",
+    "Linssiseppä": "Ranskan kertoja valmis; museon askeleet",
+    "Natiivi-UI": "Luettavuusajot simulaattorilla (juna 190)",
+    "Natiiviseppä": "Junan 190 runko testattu; yövalojen muistiajo",
+    "Pelikoodari": "Museon äänet valmiit junassa 190",
+    "Postivahti": "Valvonta",
+    "Päätoimittaja": "Junan 190 viimeistely, erien kuittaus",
+    "Siirtoseppä": "Raketin uusi lento valmis; Olavinlinna tauolla",
+    "Sisältökirjuri": "Kaupunkikarttojen pidemmät esittelyt peliin",
+    "Valoseppä": "Valaan mallit (juna 191)",
+    "Äänittäjä": "Museon askeleet"
+  },
+  "ts": 1792052329921
+}
