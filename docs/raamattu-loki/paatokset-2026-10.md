@@ -140,3 +140,7 @@ Toteutus (KK:n toimeksianto scratchpad/keskustelukanava/iss-yotaivas-20261015.md
 taivaalle, suomalaiset tähtinimet, lähennys) ja revontulet 3D-verhoina tavoiteluupilla (NASA PD -kuvat tavoitteina), sijaintikartan kuvalliset paikat, ryhmittely ja kuvakkeet, yhdessä 17.52-palautteen
 korjausten kanssa. 3) Aloituskartalle vihjeitä ympäri maailmaa kartan tyylillä (VAIN EUROOPPA -poikkeus, kirjattu Raamattuun), kuvapari ennen kytkentää. 4) ISS-raketin väreistä yksi ehdotus
 kuvaparina, ei muutosta ilman päätöstä.
+
+## PAATOKSET 15.10.2026 klo 18.28 (15.10.2026 klo 18.28)
+
+ISS-sijaintikartta (kortti, kuvapari nyt|ryhmät nähty): 'Kyllä, kaikki kuvaruuduiksi (Suositus)'. Ryhmittely säilyy, kaikki ryhmät samoiksi kuvaruuduiksi kuin revontulet (3 riviin), revontulikuvien mustat kulmat rajataan; kytkentä vasta korjausten jälkeen.
