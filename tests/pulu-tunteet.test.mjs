@@ -40,7 +40,8 @@ test('jokaisella fokusvirtakaupungilla on kelvollinen pulun tunnetagi', () => {
   // Luxemburg ja Valletta (Kypros, Luxemburg ja Malta saavat
   // pelikaupungin); 50 → 58 (15.10.2026, juna 193): Tirana, Minsk, Zagreb,
   // Vaduz, Monaco, Chișinău, Skopje ja Belgrad laudan pysäkeiksi.
-  assert.equal(KAUPUNGIT.length, 58, 'Euroopan fokusvirtapakkeja pitää olla 58');
+  // 58 → 61 (15.10.2026, juna 193b): Bern, Bratislava ja Podgorica.
+  assert.equal(KAUPUNGIT.length, 61, 'Euroopan fokusvirtapakkeja pitää olla 61');
   for (const id of KAUPUNGIT) {
     const tagi = FOKUSVIRRAT[id]?.pollo?.tunne;
     assert.ok(tagi, `${id}: pollo.tunne puuttuu`);
@@ -96,7 +97,8 @@ test('fokusvirta ilmoittaa tunnetagin kommenttikuplan alussa', () => {
  * livahda mukaan huomaamatta.
  */
 const AANETTOMAT = new Set(['bryssel', 'ljubljana', 'kosice', 'luxemburg', 'valletta',
-  'tirana', 'minsk', 'zagreb', 'vaduz', 'monaco', 'chisinau', 'skopje', 'belgrad']);
+  'tirana', 'minsk', 'zagreb', 'vaduz', 'monaco', 'chisinau', 'skopje', 'belgrad',
+  'bern', 'bratislava', 'podgorica']);
 
 test('tunnetagi ei muuta tekstiä eikä ohita versionoidun äänen porttia', () => {
   for (const id of KAUPUNGIT) {

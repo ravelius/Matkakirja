@@ -714,6 +714,9 @@ const SHELL = [
   './js/packs/fokusvirta-chisinau.js',
   './js/packs/fokusvirta-skopje.js',
   './js/packs/fokusvirta-belgrad.js',
+  './js/packs/fokusvirta-bern.js',
+  './js/packs/fokusvirta-bratislava.js',
+  './js/packs/fokusvirta-podgorica.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',
