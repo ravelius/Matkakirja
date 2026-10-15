@@ -4,15 +4,19 @@
  *   NODE_USE_ENV_PROXY=1 node tools/tee-reliefipyramidi.mjs \
  *       [--alue 5,40,15,48] [--tasot 0-7] [--ulos <kansio>] \
  *       [--rinnakkain 3] [--jatka] [--pakota-laatat z7/89/35,z7/89/39] \
- *       [--katto-kt 120] [--kuiva] [--palvelu ncss|opendap]
+ *       [--katto-kt 120] [--kuiva] [--palvelu gtif|ncss|opendap] [--lahdekansio <kansio>]
  *
  * --jatka        ohittaa laatat, jotka ovat jo levyllä tai kirjattu
  *                manifestiin avomereksi; manifesti päivittyy lisäten.
  * --rinnakkain   montako laattaa haetaan yhtä aikaa (oletus 3).
  * --pakota-laatat  nimetyt laatat ajetaan vaikka --jatka ohittaisi ne.
  * --tasot 0-7    z7 haetaan NOAA:lta, z6…z0 alinäytteistetään z7:stä.
- * --palvelu      NOAA:n THREDDS-reitti: ncss (oletus) tai opendap
- *                (sama aineisto; varalla, kun NCSS on alhaalla).
+ * --palvelu      gtif (oletus, Karttaseppä 15.10.2026): NOAA:n suora GeoTIFF-lataus
+ *                /mgg/global/relief/ETOPO2022/ 15°:n laattoina (tools/etopo-gtif.mjs).
+ *                ncss ja opendap ovat THREDDS-reittejä, jotka NOAA:n robots.txt
+ *                KIELTÄÄ (Disallow: /thredds/): niitä ei käytetä ilman erillistä lupaa.
+ * --lahdekansio  pysyvä kansio GeoTIFF-lähdelaatoille (oletus NAS:n arkisto);
+ *                ladataan kerran, 60 s:n välein (robots.txt Crawl-delay 60).
  *
  * === MIKSI PYRAMIDI EIKÄ OMA LAATTAJAKO =============================
  *
@@ -100,6 +104,7 @@ import { fileURLToPath } from 'node:url';
 import { gzipSync, gunzipSync } from 'node:zlib';
 
 import { lueNetCDF } from './hae-korkeusruudukko.mjs';
+import { gtifLaatta, lueGtifIkkuna } from './etopo-gtif.mjs';
 import { varjosta, tasainenVarjo, AURINKO } from './varjostus.mjs';
 import { LUT, LUT_POHJA, LUT_YLA, KALVO, lutKohta } from './reliefivarit.mjs';
 import { sovitaMaailma, miller } from './vanha-maailma.mjs';
@@ -245,10 +250,15 @@ const OPENDAP = 'https://www.ngdc.noaa.gov/thredds/dodsC/global/ETOPO2022/15s'
 /** Yhden NOAA:n 15°-lähdelaatan hilan koko soluina kumpaankin suuntaan. */
 const LAHDELAATAN_SOLUT = 15 * 240;
 
-let palvelu = 'ncss';
-/** Lähdepalvelu: 'ncss' (oletus) tai 'opendap'. */
+let palvelu = 'gtif';
+/** Pysyvä kansio GeoTIFF-lähdelaatoille (--lahdekansio). */
+export let LAHDEKANSIO = '/Volumes/NAS-Homes/koodaus/Claude/Matkakirja-arkisto/dem/etopo2022-15s-gtif';
+export function asetaLahdekansio(k) { LAHDEKANSIO = k; }
+const palvelunNimi = () => (palvelu === 'gtif' ? 'NOAA GeoTIFF -suoralataus (/mgg/global/relief/ETOPO2022)'
+  : palvelu === 'opendap' ? 'THREDDS OPeNDAP (DAP2)' : LAHDE.palvelu);
+/** Lähdepalvelu: 'gtif' (oletus) tai THREDDS-reitit 'ncss' ja 'opendap', jotka NOAA:n robots.txt kieltää. */
 export function asetaPalvelu(nimi) {
-  if (nimi !== 'ncss' && nimi !== 'opendap') throw new Error(`--palvelu ncss|opendap (${nimi})`);
+  if (!['gtif', 'ncss', 'opendap'].includes(nimi)) throw new Error(`--palvelu gtif|ncss|opendap (${nimi})`);
   palvelu = nimi;
 }
 
@@ -386,6 +396,7 @@ export function dodsIndeksit(a, b, pohja) {
 /** Yhden lähdelaatan sisällä oleva ikkuna. */
 async function haePala({ lon0, lat0, lon1, lat1 }) {
   const laatta = lahdeLaatta((lon0 + lon1) / 2, (lat0 + lat1) / 2);
+  if (palvelu === 'gtif') return haePalaGtif(laatta, { lon0, lat0, lon1, lat1 });
   let url;
   let nimi;
   if (palvelu === 'opendap') {
@@ -475,6 +486,25 @@ async function haePala({ lon0, lat0, lon1, lat1 }) {
   return {
     z, lat, lon: lonN, leveys: lon.length, korkeus: lat.length,
   };
+}
+
+/**
+ * GeoTIFF-reitti (oletus): sama ikkuna kuin OPeNDAP-haarassa (dodsIndeksit,
+ * solukeskipisteet), mutta luettuna paikallisesta 15°:n lähdelaatasta.
+ * Palauttaa saman muodon kuin NCSS: lat ja lon nousevina, z rivit etelästä.
+ */
+async function haePalaGtif(laatta, { lon0, lat0, lon1, lat1 }) {
+  const lonPohja = Math.floor(((lon0 + lon1) / 2) / 15) * 15;
+  const latPohja = Math.min(90, Math.ceil(((lat0 + lat1) / 2) / 15) * 15) - 15;
+  const [x0, x1] = dodsIndeksit(lon0, lon1, lonPohja);
+  const [y0, y1] = dodsIndeksit(lat0, lat1, latPohja);
+  if (x1 < x0 || y1 < y0) throw new Error(`GeoTIFF: tyhjä ikkuna ${lon0}…${lon1}, ${lat0}…${lat1}`);
+  const polku = await gtifLaatta(laatta, LAHDEKANSIO);
+  if (!polku) throw new Error(`GeoTIFF-laattaa ${laatta} ei ole`);
+  const z = lueGtifIkkuna(polku, x0, x1, y0, y1);
+  const lat = new Float64Array(y1 - y0 + 1); for (let y = y0; y <= y1; y++) lat[y - y0] = latPohja + (y + 0.5) / 240;
+  const lon = new Float64Array(x1 - x0 + 1); for (let x = x0; x <= x1; x++) lon[x - x0] = lonPohja + (x + 0.5) / 240;
+  return { z, lat, lon, leveys: lon.length, korkeus: lat.length };
 }
 
 /** Globaalin 15″-hilan sarake-/rivi-indeksi (solukeskipisteet). */
@@ -1205,8 +1235,10 @@ async function main() {
   const pakotetut = new Set(
     String(lippu('--pakota-laatat', '')).split(',').map((s) => s.trim()).filter(Boolean),
   );
-  /* Lähdepalvelu: NCSS oletuksena, OPeNDAP varalla (ks. OPENDAP). */
-  asetaPalvelu(String(lippu('--palvelu', 'ncss')));
+  /* Lähdepalvelu: GeoTIFF-suoralataus oletuksena (robots.txt kieltää THREDDSin, ks. tools/etopo-gtif.mjs). */
+  asetaPalvelu(String(lippu('--palvelu', 'gtif')));
+  if (lippu('--lahdekansio', null)) asetaLahdekansio(String(lippu('--lahdekansio', null)));
+  if (palvelu !== 'gtif') console.warn('VAROITUS: NOAA:n robots.txt kieltää /thredds/-polun (NCSS, OPeNDAP). Käytä --palvelu gtif.');
   /*
    * JÄRVIMASKIN AINEISTO (`--jarvet <kansio>`, ne_10m_lakes.geojson).
    * Ilman kansiota työkalu toimii täsmälleen kuten ennen: maski on
@@ -1226,7 +1258,7 @@ async function main() {
   mkdirSync(VALIMUISTI, { recursive: true });
 
   console.log(`lähde: ${LAHDE.nimi}`);
-  console.log(`       ${LAHDE.lisenssi}, doi:${LAHDE.doi}, ${palvelu === 'opendap' ? 'THREDDS OPeNDAP (DAP2)' : LAHDE.palvelu}`);
+  console.log(`       ${LAHDE.lisenssi}, doi:${LAHDE.doi}, ${palvelunNimi()}`);
   console.log(`arkki: x ${ARKKI.x} y ${ARKKI.y.toFixed(2)} `
     + `w ${ARKKI.w} h ${ARKKI.h.toFixed(2)} (sama kuin pääkartan pyramidilla)`);
   console.log(`ajo:   tasot ${tasot.join(',')}, rinnakkain ${rinnakkain}`
@@ -1247,7 +1279,7 @@ async function main() {
    * laatat tulivat (versio 20260924: NCSS + itäsarakkeet OPeNDAPista).
    */
   const aiemmatPalvelut = String(vanha?.lahde?.palvelu ?? '').split('; ').filter(Boolean);
-  const tamaPalvelu = palvelu === 'opendap' ? 'THREDDS OPeNDAP (DAP2)' : LAHDE.palvelu;
+  const tamaPalvelu = palvelunNimi();
   const luettelo = {
     tunnus: 'reliefipyramidi',
     lahde: { ...LAHDE, palvelu: [...new Set([...aiemmatPalvelut, tamaPalvelu])].join('; ') },
