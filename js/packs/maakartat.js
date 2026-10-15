@@ -4038,12 +4038,17 @@ export const KAUPUNKIKARTAT = {
      * esittely kertoo kohteet, ei kartan viivastoja.
      */
     esittely: 'Kartan alue on İzmirin vanha keskusta lahden pohjukassa. '
-      + 'Kemeraltın basaari kasvoi antiikin sataman päälle sen jälkeen, kun '
-      + 'poukama kasvoi umpeen, ja samoilla kujilla ovat Hisarin moskeija, '
-      + 'Sulu Han ja Salepçioğlun moskeija. Idässä on Smyrnan roomalainen '
-      + 'agora, jonka holvit kannattivat torin lattiaa, ja lännessä Konakin '
-      + 'aukio kellotorneineen. Kaikki mahtuvat saman kilometrin sisään. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+      + 'Kemeraltın basaari syntyi 1600-luvulla, kun lahden matalimpia osia '
+      + 'täytettiin maaksi, ja se on siitä asti ollut kaupungin '
+      + 'kauppakeskus. Sen kujien varrella ovat Hisarin moskeija ja '
+      + 'Salepçioğlun moskeija; kartalla on lisäksi Sulu Han.\n\n'
+      + 'Smyrnan agora on hellenistisen ajan tori. Maanjäristys vahingoitti '
+      + 'sitä vuonna 178, ja keisari Marcus Aurelius tuki '
+      + 'uudelleenrakennusta; pohjoisen pylväshallin basilika on 165 metriä '
+      + 'pitkä. Lännessä Konakin aukion kellotorni on 25 metriä korkea ja '
+      + 'valmistui 1901 sulttaani Abdülhamid II:n valtaannousun '
+      + '25-vuotisjuhlaksi. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       { nimi: 'İzmirin kellotorni', lat: 38.4189, lon: 27.1287 },
       { nimi: 'Kemeraltin basaari', lat: 38.4187, lon: 27.1329 },
@@ -4407,17 +4412,17 @@ export const KAUPUNKIKARTAT = {
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
      * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
      */
-    esittely: 'Kartan alue on Lissabonin keskusta Tejo-joen '
-      + 'pohjoisrannalla. Joki on tässä kohtaa jo melkein meri, ja '
-      + 'juuri siksi kaupunki on tässä: laivat pääsivät leveään ja '
-      + 'suojaisaan satamaan, mutta avomerelle oli vain noin '
-      + 'viisitoista kilometriä. Rannasta nousee Baixa eli alakaupunki, '
-      + 'joka vedettiin suoraksi ruudukoksi sen jälkeen, kun vanha '
-      + 'keskusta romahti maanjäristyksessä 1. marraskuuta 1755. Sen '
-      + 'molemmin puolin kohoavat vanhat kukkulakaupunginosat, Alfama '
-      + 'linnankukkulalla ja Bairro Alto, ja pohjoiseen lähtee '
-      + 'puistokatu Avenida da Liberdade. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Lissabonin keskusta Tejo-joen rannalla. '
+      + 'Maanjäristys, tsunami ja tulipalo 1. marraskuuta 1755 tuhosivat '
+      + 'suuren osan kaupungista. Pombalin markiisin johdolla Baixa '
+      + 'rakennettiin ruudukoksi, ja Praça do Comércio sai Eugénio dos '
+      + 'Santosin suunnittelemana U:n muotoisen asemakaavan.\n\n'
+      + 'Sé-tuomiokirkon rakentaminen alkoi 1147, kun kaupunki oli vallattu '
+      + 'takaisin, ja samana vuonna Afonso Henriques valtasi São Jorgen '
+      + 'linnan. Santa Engrácian kirkon työt alkoivat 1682, ja kupoli '
+      + 'valmistui vasta 1900-luvulla. Rossion aaltokuvioinen kivilaatoitus '
+      + 'tehtiin 1840-luvun lopulla. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Kansallispanteonista ei ole suomenkielistä artikkelia; se jää
@@ -4499,17 +4504,17 @@ export const KAUPUNKIKARTAT = {
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
      * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
      */
-    esittely: 'Kartta kattaa Barcelonan keskustan kapealla tasangolla '
-      + 'Välimeren ja Collserolan metsäisen harjanteen välissä. '
-      + 'Roomalaiset perustivat Barcinon pienelle kummulle, jonka '
-      + 'päällä seisoo nyt katedraali, ja kaupunki pysyi muurien '
-      + 'sisässä aina 1850-luvulle asti; muurien paikalta alkaa '
-      + 'vanhankaupungin sokkelo. Sen pohjoispuolelle piirrettiin '
-      + 'tyhjälle kentälle Eixample, jonka korttelit ovat 113 metriä '
-      + 'sivultaan ja joiden joka kulmasta on leikattu 20 metrin '
-      + 'viiste. Ruudukon sisällä seisoo Sagrada Família, ja etelässä '
-      + 'ovat satama ja meri. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Barcelonan keskusta vanhankaupungin ja Eixamplen '
+      + 'alueella. Kaupungin muurit purettiin 1850-luvulla, ja Eixamplen '
+      + 'neliönmuotoiset korttelit ovat noin 113 metriä leveitä ja '
+      + 'kulmistaan viistoja. Sagrada Família aloitettiin 1882, ja sen '
+      + '172,5 metriä korkea keskitorni valmistui rakenteellisesti 2026. '
+      + 'Gaudí uudisti Casa Batllón vuosina 1904–1906.\n\n'
+      + 'Arc de Triomf on punatiilinen, ja se rakennettiin vuoden 1888 '
+      + 'maailmannäyttelyn portiksi. Musiikkipalatsi avattiin 1908, ja sen '
+      + 'konserttisalia valaisee päivisin luonnonvalo. La Boqueria '
+      + 'mainitaan ensimmäisen kerran 1217. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Boquerian kauppahallista ja Kolumbuksen patsaasta ei ole
@@ -4893,15 +4898,17 @@ export const KAUPUNKIKARTAT = {
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
      * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
      */
-    esittely: 'Ateena syntyi kallion ympärille. Akropolis kohoaa noin '
-      + '90 metriä ympäröivän tasangon yli ja 156 metrin korkeuteen '
-      + 'merenpinnasta; seinämät ovat jyrkät ja sisään pääsee vain '
-      + 'länsipäästä, joten kukkula kesti pitkänkin piirityksen. Meri '
-      + 'jäi kauas, sillä Pireuksen satama on kahdeksan kilometriä '
-      + 'lounaaseen, eikä keskustan läpi virtaa yhtään jokea. Kartan '
-      + 'alueella ovat Akropoliin rinteet, antiikin kaupungin torit ja '
-      + 'kukkuloiden puistot, ja koillisessa kohoaa vielä Lykavittós, '
-      + '277 metriä korkea ja koko keskustan korkein kohta. Kartan '
+    esittely: 'Kartan alue on Ateenan vanha ydin Akropoliin ympärillä. Akropoliin '
+      + 'lounaiskulmalla on Kallikrateen suunnittelema Niken temppeli '
+      + '400-luvulta eaa., ja kaakkoisrinteellä Akropolis-museo, joka '
+      + 'avattiin kesäkuussa 2009. Antiikin agoralla Attaloksen stoa '
+      + 'rakennettiin uudelleen 1950-luvulla, ja siinä toimii nykyään '
+      + 'agoran museo.\n\n'
+      + 'Olympieionin 104 pylväästä on pystyssä 15, ja Hadrianus sai '
+      + 'temppelin valmiiksi 130-luvun alussa. Marmorinen Kallimarmaro '
+      + 'kunnostettiin ensimmäisiin nykyajan olympialaisiin 1896. Iliou '
+      + 'Melathron rakennettiin Heinrich Schliemannille, ja siinä on '
+      + 'nykyään kolikkomuseo. Lykavittós on 277 metriä korkea. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
@@ -5043,16 +5050,17 @@ export const KAUPUNKIKARTAT = {
      * poistettu, ja kaupungin oma historia asuu nyt etusivun
      * leipätekstissä (js/packs/europe-artikkelit.js).
      */
-    esittely: 'Kartan alue on Amsterdamin vanha ydin. Amstel-joki '
-      + 'padottiin noin vuonna 1270, ja padon päälle kasvoi kylä '
-      + 'Amstelredam; pato on yhä paikallaan, mutta sen päällä on nyt '
-      + 'Dam-aukio ja kuninkaanpalatsi. Ympärille kaivettiin vuodesta 1613 '
-      + 'alkaen kanavavyöhyke, joka pilkkoo keskustan noin '
-      + 'yhdeksäksikymmeneksi saareksi ja jota yhdistää toistatuhatta '
-      + 'siltaa. Alueella ovat myös Anne Frankin talo, Rembrandtin talo, '
-      + 'Artis-eläintarha ja Rijksmuseum, ja keskusasema rakennettiin '
-      + '1880-luvulla kolmelle tekosaarelle entiseen merenlahteen IJ:hin. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Amsterdamin vanha keskusta. Kanavavyöhykkeen '
+      + 'rakentaminen alkoi 1613, ja Unesco otti sen '
+      + 'maailmanperintölistalle 2010. Keskusasema avattiin 1889 kolmelle '
+      + 'tekosaarelle, ja sen suunnitteli Pierre Cuypers, jonka tekemä '
+      + 'Rijksmuseumin rakennus otettiin käyttöön 1885.\n\n'
+      + 'Dam-aukion kuninkaanpalatsi rakennettiin 1600-luvulla '
+      + 'kaupungintaloksi, ja siitä tuli palatsi 1808. Rembrandt asui '
+      + 'Jodenbreestraatin talossa 1639–1658; se on nykyään museo. Anne '
+      + 'Frank perheineen piileskeli Prinsengracht 263:ssa vuodesta 1942, '
+      + 'ja talo avattiin museoksi 1960. Artis perustettiin 1838. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Rembrandtin talosta ei ole suomenkielistä artikkelia, joten se
@@ -5242,15 +5250,18 @@ export const KAUPUNKIKARTAT = {
      * saarta, siltoja, tähtiristeystä ja Montmartren sijaintia kuvassa.
      * Jäljelle jäi se, miksi kaupunki syntyi tähän ja mitä alueella on.
      */
-    esittely: 'Pariisi alkoi saarelta. Seine haarautuu keskellä kaupunkia '
-      + 'kahdeksi kapeaksi uomaksi, ja niiden väliin jää Île de la Cité — '
-      + 'saari, joka on kymmenen katua pitkä ja viisi leveä. Kapeat haarat '
-      + 'oli helppo ylittää ja saari helppo puolustaa, joten kelttiläinen '
-      + 'kalastajakylä ja sen jälkeen roomalaisten Lutetia asettuivat juuri '
-      + 'tähän. Kaupunki kasvoi saarelta molemmille rannoille, ja joen suuri '
-      + 'kaari on yhä sen selkäranka. Kartan alueelle mahtuvat sekä '
-      + 'Eiffel-torni että Montmartren laella oleva Sacré-Cœur, vaikka '
-      + 'niiden väli on lähes viisi kilometriä.',
+    esittely: 'Kartan alue on Pariisin keskusta. Eiffel-torni rakennettiin '
+      + 'vuosina 1887–1889 vuoden 1889 maailmannäyttelyn päänähtävyydeksi, '
+      + 'ja Riemukaaren työt aloitettiin Napoleonin tilauksesta 1806; kaari '
+      + 'vihittiin käyttöön 1836. Louvre sai alkunsa Filip II Augustuksen '
+      + '1100-luvun lopulla rakennuttamasta linnoituksesta ja avattiin '
+      + 'museona 1793.\n\n'
+      + 'Notre-Damen rakentaminen alkoi 1163, tulipalo vaurioitti kirkkoa '
+      + '2019 ja se avattiin uudelleen joulukuussa 2024. Orsayn asema '
+      + 'valmistui maailmannäyttelyn aikaan 1900, ja siitä tuli taidemuseo '
+      + '1986. Montmartren Sacré-Cœurin työt alkoivat 1875, ja basilika '
+      + 'vihittiin 1919. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Laaja rajaus, 15.8.2026 alkaen 8,3 km (pelin laajin on nyt
@@ -5481,15 +5492,17 @@ export const KAUPUNKIKARTAT = {
     // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Amsterdamissa:
     // esittely kertoo kohteet, ei kartan viivastoja.
     esittely: 'Kartan alue on Budapestin keskusta Tonavan molemmin puolin. '
-      + 'Lännessä ovat Budan kalkkikivikukkulat: Kalastajanlinnake '
-      + 'linnavuorella ja Gellértinvuori, joka kohoaa 140 metriä joen '
-      + 'yläpuolelle. Idässä alkaa Unkarin suuri tasanko, jolla ovat '
-      + 'parlamenttitalo, Pyhän Tapanin kirkko ja suuri kauppahalli. '
-      + 'Rannat yhdisti ensimmäisenä Ketjusilta, joka avattiin '
-      + 'marraskuussa 1849 ja on 375 metriä pitkä; sitä ennen välissä oli '
-      + 'ponttonisilta, joka oli talvella jäiden takia usein poissa '
-      + 'käytöstä. Kainalokartassa on Sankarien aukio Városligetin '
-      + 'laidalla. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+      + 'Széchenyin ketjusilta avattiin 20. marraskuuta 1849 Unkarin '
+      + 'ensimmäisenä pysyvänä Tonavan siltana, ja sen pituus on 375 '
+      + 'metriä. Kalastajanlinnake rakennettiin 1895–1902, ja sen seitsemän '
+      + 'tornia viittaavat unkarilaisten seitsemään heimoon. '
+      + 'Gellértinvuoren huipulla oleva Citadella rakennettiin Unkarin '
+      + 'vuosien 1848–1849 kansannousun jälkeen.\n\n'
+      + 'Parlamenttitalossa on 691 huonetta, ja sen kupoli on 96 metriä '
+      + 'korkea. Pyhän Tapanin kirkon kupoli yltää samaan korkeuteen. Suuri '
+      + 'kauppahalli avattiin 15. helmikuuta 1897. Maanalainen rata '
+      + 'avattiin 1896 Andrássy-kadun alle. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Kolme kohdetta kummallakin rannalla, jotta kartan juoni —
@@ -6279,16 +6292,18 @@ export const KAUPUNKIKARTAT = {
      * PAINOPISTE"): esittely kertoo, mitä alueella on ja miksi
      * kaupunki on juuri tässä; kartan visuaalinen kuvailu on poistettu.
      */
-    esittely: 'Kartta rajaa Madridin vanhan ytimen kuninkaanlinnalta '
-      + 'Retiron portille. Madrid oli pieni linnoituskaupunki, kunnes '
-      + 'kuningas Filip II siirsi hovinsa tänne vuonna 1561, ja sen '
-      + 'jälkeen kaupunki kasvoi ulospäin keskustastaan: vanhat kadut '
-      + 'mutkittelevat kapeina, uudemmat kulkevat suorina ja leveinä. '
-      + 'Reitin varrella ovat Plaza Mayor ja Puerta del Sol, jonka '
-      + 'kiveyksessä on kilometri nolla, laatta, josta Espanjan '
-      + 'päätiet mitataan. Idässä on Retiro, entinen kuninkaan '
-      + 'puutarha, joka siirtyi kaupungille ja kaikkien käyttöön vasta '
-      + '1868. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Madridin vanha ydin kuninkaanlinnasta itään. Filip '
+      + 'II siirsi hovinsa Madridiin vuonna 1561. Kuninkaanlinna '
+      + 'rakennettiin Alcázar-linnan tuhoutuneen vuoden 1734 palon jälkeen, '
+      + 'ja siinä on 3 418 huonetta. Plaza Mayor valmistui 1619, ja Puerta '
+      + 'del Solin kiveyksessä on nollakilometrin laatta, josta Espanjan '
+      + 'tiet mitataan.\n\n'
+      + 'Prado-museo avattiin yleisölle 1819 Juan de Villanuevan '
+      + 'suunnittelemassa rakennuksessa. Alcalán portti valmistui 1778, ja '
+      + 'Gran Vían rakentaminen alkoi 1910. Cibeleen suihkulähteellä Real '
+      + 'Madrid juhlii voittojaan. Retiro tuli kaupungin yleiseksi '
+      + 'puistoksi 1868. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       /*
        * Lännestä itään, eli kuninkaanlinnalta Retiron portille.
@@ -6408,15 +6423,16 @@ export const KAUPUNKIKARTAT = {
      * syntyi juuri tähän.
      */
     esittely: 'Kartan alue on Tukholman ydin siinä kohdassa, jossa Mälaren-järvi '
-      + 'purkautuu Itämereen. Kapeikossa vesi virtaa kuin joessa — sen nimi '
-      + 'on Strömmen, ja siinä saa onkia lohta keskellä kaupunkia. Juuri '
-      + 'tämä paikka teki kaupungista tärkeän: perimätiedon mukaan salmi '
-      + 'suljettiin 1200-luvulla paaluilla, jotka pysäyttivät vieraat '
-      + 'laivat ennen '
-      + 'järveä. Alueella ovat vanhakaupunki Gamla stan kujineen, sen '
-      + 'laidalla kuninkaanlinna ja Riddarholmenin kirkko, kaupungintalo '
-      + 'ja Sergelin tori sekä idässä Djurgården, entinen kuninkaan '
-      + 'metsästyspuisto, jossa ovat nyt Vasa-museo ja Skansen.',
+      + 'laskee Itämereen. Salmessa nimeltä Strömmen saa onkia lohta ilman '
+      + 'erillistä lupaa. Kuninkaanlinna rakennettiin vuonna 1697 palaneen '
+      + 'Kolmen Kruunun linnan paikalle, ja kuninkaallinen perhe muutti '
+      + 'siihen 1754. Riddarholmenin kirkko oli fransiskaanien luostarin '
+      + 'kirkko; viimeinen sinne haudattu kuningas oli Kustaa V vuonna '
+      + '1950.\n\n'
+      + 'Kaupungintalo valmistui 1923 lähes kahdeksasta miljoonasta '
+      + 'tiilestä. Vasa-laiva upposi neitsytmatkallaan 1628, nostettiin '
+      + '1961, ja museo avattiin 1990. Skansen perustettiin 1891. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Lännestä itään: kaupungintalolta Skansenille. Jokaisen wiki on
@@ -6856,15 +6872,17 @@ export const KAUPUNKIKARTAT = {
      * ilmansuuntien kuvailu on poistettu.
      */
     esittely: 'Kartan alue on Tallinnan vanhakaupunki ja sen satama. '
-      + 'Entinen kaupunginmuuri sulki sisäänsä 35 hehtaaria, ja '
-      + 'muurista on yhä pystyssä 1,85 kilometriä ja 28 tornia. '
-      + 'Pohjoisessa seisovat tykkitorni Paksu Margareeta ja Olevisten '
-      + 'kirkko, keskellä on Raatihuoneentori ja idässä Virun portti. '
-      + 'Lännessä kohoaa Toompean kallio, jonne alakaupungista nousee '
-      + 'vain kaksi katua ja jolla on Aleksanteri Nevskin katedraali. '
-      + 'Pohjoisrannassa on matkustajasatama, josta lähtee lautta '
-      + 'Helsinkiin. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+      + 'Vanhakaupunki on ollut Unescon maailmanperintökohde vuodesta 1997. '
+      + 'Raatihuoneentorin goottilainen raatihuone valmistui 1404, ja '
+      + 'Olevisten kirkon torni on noin 123 metriä korkea. Kaupunginmuuria '
+      + 'on säilynyt noin 1,85 kilometriä. Virun portista ovat jäljellä '
+      + 'kulmatornit.\n\n'
+      + 'Paksu Margareeta on 1500-luvun alussa rakennettu puolustustorni, '
+      + 'jossa toimii nykyään Viron merenkulkumuseo. Toompean kukkulalla '
+      + 'seisova Aleksanteri Nevskin katedraali valmistui 1900. '
+      + 'Matkustajasatamasta lähtee lauttoja Helsinkiin, ja e-valtiolla '
+      + 'viitataan Viron sähköisiin palveluihin: e-residenssi käynnistyi '
+      + '2014. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään, lopuksi satama.
@@ -6931,17 +6949,17 @@ export const KAUPUNKIKARTAT = {
      * miksi ne kiinnostavat; kartan viivastojen, nauhojen ja
      * ilmansuuntien kuvailu on poistettu.
      */
-    esittely: 'Kartan alue on Sofian keskusta, joka syntyi lämpimien '
-      + 'lähteiden ympärille: maan alla on 49 kivennäis- ja '
-      + 'lämpölähdettä, ja roomalaiset rakensivat niiden päälle '
-      + 'Serdican. Lähteiden kohdalla seisoo vuonna 1913 valmistunut '
-      + 'mineraalikylpylä, jossa toimii nyt kaupunginmuseo, ja aivan '
-      + 'sen tuntumassa kaupungin vanhin rakennus eli 300-luvun Pyhän '
-      + 'Yrjön rotunda. Idässä ovat Aleksanteri Nevskin katedraali ja '
-      + 'Sofian yliopisto, joka aloitti 1888. Kaakossa levittäytyy '
-      + 'Borisovan puutarha vuodelta 1884 ja etelässä '
-      + 'Kansalliskulttuuripalatsi. Kartan kohteista pääsee lukemaan '
-      + 'lisää napauttamalla.',
+    esittely: 'Kartan alue on Sofian keskusta, jossa kuumia lähteitä on käytetty '
+      + 'jo antiikin ajoista. Keskusmineraalikylpylä avattiin 1913, ja '
+      + 'vuodesta 2015 siinä on toiminut Sofian historiamuseo. Pyhän Yrjön '
+      + 'rotunda on 300-luvun alusta ja kaupungin vanhin säilynyt rakennus. '
+      + 'Banja Bashin moskeija on 1500-luvulta, ja Serdican areena löytyi '
+      + '2004 hotellin työmaalta.\n\n'
+      + 'Aleksanteri Nevskin katedraali vihittiin 1924, ja sen kultakupoli '
+      + 'on 45 metriä korkea. Sofian yliopisto perustettiin 1888, ja '
+      + 'Borisovan puiston rakentaminen alkoi 1884. '
+      + 'Kansalliskulttuuripalatsi avattiin 1981. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään.
@@ -7539,16 +7557,17 @@ export const KAUPUNKIKARTAT = {
      * miksi ne kiinnostavat; kartan viivastojen, ruudukon ja
      * ilmansuuntien kuvailu on poistettu.
      */
-    esittely: 'Kartan alue on Odessan keskusta ja satama meren äärellä. '
-      + 'Sataman suulla seisoo Vorontsovin majakka, jonka valo vilkkuu '
-      + 'kolme pitkää — morseaakkosten O niin kuin Odessa. Sataman ja '
-      + 'keskustan välillä nousevat Potjomkinin portaat vuosilta '
-      + '1837–1841, ja niiden yläpuolelta alkaa ruutukaava, jonka '
-      + 'ranskalainen insinööri piirsi kerralla valmiiksi. Keskustassa '
-      + 'ovat vuonna 1887 avattu oopperatalo ja Kaupunginpuisto, '
-      + 'kaupungin vanhin puisto vuodelta 1803. Etelämpänä on Privozin '
-      + 'tori vuodelta 1827, Odessan suurin ruokatori. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Odessan keskusta ja satama Mustanmeren rannalla. '
+      + 'Katariina II määräsi vuonna 1794 uuden sataman ja kaupungin '
+      + 'perustettavaksi Hadzibeyn linnoituksen paikalle, ja rakennustyötä '
+      + 'ohjasi pitkälti flaamilaisen insinöörin Franz de Wollantin '
+      + 'suunnitelma. Potjomkinin portaat rakennettiin vuosina 1837–1841; '
+      + 'niissä on nykyään 192 askelmaa ja korkeutta 27 metriä.\n\n'
+      + 'Oopperatalon edeltäjä paloi vuonna 1873, ja wieniläisten Fellnerin '
+      + 'ja Helmerin suunnittelema nykyinen talo avattiin 1887. Sataman '
+      + 'suulla on Vorontsovin majakka. Kaupunginpuisto on perustettu 1803, '
+      + 'ja Privozin tori lasketaan alkaneeksi vuodesta 1827. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * Numerointi pohjoisesta etelään: majakalta satamaan, portaita
@@ -8221,15 +8240,17 @@ export const KAUPUNKIKARTAT = {
     // --vari, 20.9.2026).
     piirtoRajat: { pohjoinen: 50.85625, etela: 50.82825, lansi: 4.3318, ita: 4.3862 },
     varikartta: 'assets/kartat/bryssel-varikartta.png',
-    esittely: 'Brysselin sydän on Grand-Place, keskiaikainen kiltatori, jonka '
-      + 'ympärille vanhakaupunki kasvoi. Isoisän matkan aikaan kaupunki on '
-      + 'juuri uudistunut: Senne-joki katettiin vuosina 1867–1871 ja sen '
-      + 'päälle nousivat leveät bulevardit, uusi pörssipalatsi rakennettiin '
-      + 'vuosina 1868–1873 ja valtava Oikeuspalatsi on yhä rakenteilla '
-      + '(1866–1883). Kuninkaanpalatsi seisoo vanhakaupungin itäpuolella '
-      + 'kukkulalla, jonka rinteellä on vielä tiheää vanhaa asutusta: '
-      + 'Mont des Artsin puisto ja museot tulevat vasta 1900-luvulla. '
-      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Brysselin vanhakaupunki. Grand-Place sai nykyisen '
+      + 'ilmeensä, kun ranskalaiset pommittivat sen 1695 ja killat '
+      + 'rakensivat talonsa uudelleen. Manneken Pis on vuonna 1619 tilattu '
+      + 'pronssipatsas, joka on noin 55 senttiä korkea. Galeries Royales '
+      + 'Saint-Hubert avattiin 1847 ja sen lasikatto peittää käytävät.\n\n'
+      + 'Pörssipalatsi rakennettiin 1868–1873 ja Oikeuspalatsi 1866–1883 '
+      + 'Joseph Poelaertin suunnitelmien mukaan. Kuninkaanpalatsin paikalla '
+      + 'ollut Coudenbergin linna paloi 1731, ja nykyinen julkisivu on '
+      + '1900-luvun alusta. Mont des Artsin puisto ja kirjasto rakennettiin '
+      + '1950- ja 1960-luvuilla. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       { nimi: 'Brysselin pörssi', lat: 50.84795, lon: 4.34916, wiki: 'Brysselin pörssi' },
       { nimi: 'Manneken Pis', lat: 50.84499, lon: 4.34999, wiki: 'Manneken Pis' },
@@ -8315,15 +8336,18 @@ export const KAUPUNKIKARTAT = {
     // --vari, 20.9.2026).
     piirtoRajat: { pohjoinen: 46.05915, etela: 46.04235, lansi: 14.487, ita: 14.519 },
     varikartta: 'assets/kartat/ljubljana-varikartta.png',
-    esittely: 'Ljubljanan vanhakaupunki mahtuu Ljubljanica-joen mutkaan '
-      + 'Linnavuoren juurelle, ja kaupunki on pieni: vielä vuonna 1895 '
-      + 'asukkaita on vasta noin 31 000. Isoisän matkan aikaan, vuonna '
-      + '1873, Wienistä kulkee jo juna (1849), linna toimii läänin '
-      + 'vankilana ja Tromostovje on vasta yksi kivisilta. Prešernin '
-      + 'aukio on suppilomainen katujen risteys eikä Lohikäärmesiltaa '
-      + 'ole vielä lainkaan: moni kartan kohde saa nykyisen ilmeensä '
-      + 'vasta vuoden 1895 maanjäristyksen jälkeen. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Ljubljanan vanhakaupunki Ljubljanica-joen molemmin '
+      + 'puolin. Prešernin aukiolla on runoilija France Prešerenin patsas '
+      + 'vuodelta 1905. Aukiolta joen yli kulkee Tromostovje: keskimmäinen '
+      + 'silta rakennettiin 1842, ja Jože Plečnik lisäsi viereen kaksi '
+      + 'jalankulkusiltaa, jotka valmistuivat 1932. Tuomiokirkon nykyinen '
+      + 'rakennus on barokkia vuosilta 1701–1706.\n\n'
+      + 'Keskustorin hallit on suunnitellut Plečnik. Lohikäärmesilta '
+      + 'avattiin 1901 teräsbetonisiltana. Križanke oli Saksalaisen '
+      + 'ritarikunnan luostari, jonka Plečnik muutti 1952–1956 '
+      + 'ulkoilmateatteriksi. Tivoli-puiston suunnitteli 1813 ranskalainen '
+      + 'insinööri Jean Blanchard. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     kohteet: [
       {
         nimi: 'Tivoli-puisto', tyyppi: 'luonto', lat: 46.05404, lon: 14.49574,
@@ -8453,14 +8477,17 @@ export const KAUPUNKIKARTAT = {
     // --vari, 20.9.2026).
     piirtoRajat: { pohjoinen: 48.7253, etela: 48.7173, lansi: 21.25135, ita: 21.26815 },
     varikartta: 'assets/kartat/kosice-varikartta.png',
-    esittely: 'Košicen vanha ydin kasvaa Hlavná-kadun eli Pääkadun ympärille, '
-      + 'joka on syntynyt keskiaikaisena toriaukiona ja jonka keskellä '
-      + 'seisoo Slovakian suurin kirkko. Isoisän matkan aikaan vuonna 1873 '
-      + 'kaupunki on unkarilaisittain Kassa, ja moni kartan kohde on vielä '
-      + 'vanha: Pyhän Elisabetin tuomiokirkko, Urbanin torni, Immaculata, '
-      + 'Pyövelin bastioni ja Miklušin vankila, joka toimii kaupungin '
-      + 'vankilana vuoteen 1909. Valtionteatteri ja Jakabin palatsi '
-      + 'valmistuvat vasta 1800-luvun lopussa. Kartan kohteista pääsee '
+    esittely: 'Kartan alue on Košicen vanha keskusta. Kaupunki mainitaan ensi '
+      + 'kerran asiakirjassa 1230. Hlavná-katu on keskiaikaisesta '
+      + 'toriaukiosta syntynyt, noin 1,2 kilometrin pituinen kävelykatu. '
+      + 'Sen varrella on Pyhän Elisabetin tuomiokirkko, Slovakian suurin '
+      + 'kirkko, jonka rakentaminen alkoi 1300-luvun lopulla. '
+      + 'Valtionteatterin uusbarokkirakennus valmistui 1899.\n\n'
+      + 'Immaculata on ruttopylväs vuodelta 1723, ja se pystytettiin '
+      + 'kiitokseksi ruton päättymisestä. Jakabin palatsi on '
+      + 'uusgoottilainen ja valmistui 1899. Miklušin vankila oli kaupungin '
+      + 'vankila 1600-luvulta 1900-luvun alkuun, ja Pyövelin bastioni on '
+      + 'nykyisin Itä-Slovakian museon käytössä. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     kohteet: [
       {
@@ -8881,17 +8908,18 @@ export const KAUPUNKIKARTAT = {
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kartan viivastoja eikä ilmansuuntia.
      */
-    esittely: 'Kartan alue on Riian vanhakaupunki Väinäjoen '
-      + 'itärannalla. Keskiaikainen muuri purettiin 1800-luvulla, ja '
-      + 'sen paikalle tehtiin puisto ja kanava, joka on entinen '
-      + 'vallihauta. Puiston laidalla seisoo Vapaudenpatsas, ja '
-      + 'vanhassakaupungissa ovat Kolme veljestä -talot, Riian tuomiokirkko, '
-      + 'Pyhän Pietarin kirkko ja Mustapäiden talo. Eteläreunassa on '
-      + 'keskustorin viisi hallia, jotka koottiin zeppelin-ilmalaivojen '
-      + 'hallien teräsrungoista. Jugendkortteli, josta Riika on '
-      + 'kuuluisa, jää runsaan kilometrin päähän pohjoiseen kartan '
-      + 'ulkopuolelle. Kartan kohteista pääsee lukemaan lisää '
-      + 'napauttamalla.',
+    esittely: 'Kartan alue on Riian vanhakaupunki. Riika perustettiin 1201. '
+      + 'Vapaudenpatsas paljastettiin 1935 itsenäisyystaistelun kaatuneiden '
+      + 'muistoksi, ja se on yli 40 metriä korkea. Tuomiokirkon perustus '
+      + 'laskettiin 1211, ja sitä pidetään Baltian suurimpana '
+      + 'keskiaikaisena kirkkona. Pyhän Pietarin kirkon tornissa on '
+      + 'näköalatasanne 72 metrin korkeudessa.\n\n'
+      + 'Kolme veljestä on Riian vanhin säilynyt asuintalojen ryhmä: vanhin '
+      + 'on 1400-luvun lopulta, keskimmäinen vuodelta 1646. Mustapäiden '
+      + 'talo rakennettiin 1300-luvulla, tuhoutui sodassa ja avattiin '
+      + 'uudelleenrakennettuna 1999. Keskustorin viisi hallia tehtiin '
+      + 'ilmalaivahallien rungoista ja avattiin 1930. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * NELJÄLLÄ KUUDESTA ON PAIKAN OMA WIKI, tarkistettu hakemalla.
@@ -8923,16 +8951,17 @@ export const KAUPUNKIKARTAT = {
      * TEKSTIREMONTTI 20.8.2026, ERÄ E5 (sama linjaus kuin Tallinnassa):
      * esittely kertoo kohteet, ei kartan viivastoja eikä ilmansuuntia.
      */
-    esittely: 'Kartan alue on Vilnan vanhakaupunki, joka ulottuu '
-      + 'tuomiokirkon aukiolta Aamuportille noin puolentoista '
-      + 'kilometrin matkalla. Jokien väliin jäävällä kukkulalla seisoo '
-      + 'Gediminaksen torni, ja sen juurella ovat Vilnan tuomiokirkko '
-      + 'ja erillinen kellotorni. Etelämpänä ovat punatiilinen Pyhän '
-      + 'Annan kirkko ja Vilnan yliopisto, jonka rakennusten väliin jäi '
-      + 'kolmetoista sisäpihaa. Aamuportti on ainoa jäljellä oleva '
-      + 'yhdeksästä kaupunginportista. Vilnia-joen takana on Užupis, '
-      + 'joka julistautui omaksi tasavallakseen ja kirjoitti itselleen '
-      + 'perustuslain. Kartan kohteista pääsee lukemaan lisää '
+    esittely: 'Kartan alue on Vilnan vanhakaupunki, joka on ollut Unescon '
+      + 'maailmanperintökohde vuodesta 1994. Gediminaksen torni on '
+      + 'ylälinnan ainoa säilynyt osa, ja siinä on museo ja näköalatasanne. '
+      + 'Tuomiokirkon uusklassinen ulkoasu syntyi Laurynas Gucevičiuksen '
+      + 'suunnitelmien mukaan vuosina 1783–1801. Pyhän Annan kirkko '
+      + 'valmistui noin vuonna 1500, ja sen julkisivussa on 33 eri '
+      + 'tiilityyppiä.\n\n'
+      + 'Vilnan yliopisto sai perustamiskirjansa 1579, ja sen alueella on '
+      + 'kolmetoista sisäpihaa. Aamuportti on kaupunginmuurin ainoa '
+      + 'jäljellä oleva portti. Užupis julistautui tasavallaksi 1. '
+      + 'huhtikuuta 1997. Kartan kohteista pääsee lukemaan lisää '
       + 'napauttamalla.',
     kohteet: [
       /*
