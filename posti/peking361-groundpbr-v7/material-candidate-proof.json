@@ -1,0 +1,182 @@
+{
+  "status": "TASK361_ONE_TILE_PBR_CANDIDATE_BUILT_NOT_DELIVERED",
+  "baseV6Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+  "baseV6ManifestSHA256": "1ae73f93a31de1102dccf506bd5c506b1ee582476a6dc3195a6755e1e0d261a5",
+  "materialProofSHA256": "174e50eaafae96af85f10134455ec39fc9d7309d3c6ff3a192c20173fbfbda8d",
+  "onlyTile": "peking_2_3",
+  "files": [
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "b7fd08dde1ae86bee5b39f2df0baf8ef4d5620cddba0d8b20fff851550ce4846",
+      "bytes": 13070020,
+      "sourceV6Bytes": 9289480,
+      "sourceV6SHA256": "be28e72d4768e1738dfdd956c42c485089b8bf1533f42c5c40b7d7eb3a37c23c",
+      "addedBytes": 3780540,
+      "triangles": 98042,
+      "mergedSourceGroups": [
+        [
+          25,
+          33
+        ],
+        [
+          26,
+          27,
+          36
+        ],
+        [
+          28,
+          29
+        ]
+      ],
+      "newGroundMaterial": 35,
+      "newPBRImages": [
+        {
+          "role": "base",
+          "file": "ground-albedo-lod0.jpg",
+          "sha256": "e6aca7a4609154b6ee3422edabccd380423e8b83b5848a074c05b904b60d88ed",
+          "bytes": 2830055,
+          "imageIndex": 44,
+          "textureIndex": 58
+        },
+        {
+          "role": "normal",
+          "file": "ground-normal-lod0.png",
+          "sha256": "dfd67c42e14b6a769eaeafec697a5ebcab56a1092ffaa5478eb20cedcc2a151c",
+          "bytes": 216827,
+          "imageIndex": 45,
+          "textureIndex": 59
+        },
+        {
+          "role": "MR",
+          "file": "ground-MR-lod0.png",
+          "sha256": "89b713fa9aa0f9b6e163124893b0eba0c667d03d115d10ad5790eacdd2b11b3d",
+          "bytes": 481013,
+          "imageIndex": 46,
+          "textureIndex": 60
+        }
+      ]
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "sha256": "65ec98b55dfe04b2b1b8d7706d8ed544d815bcb60f94f9df86ca14205e4a21e4",
+      "bytes": 5517040,
+      "sourceV6Bytes": 4403940,
+      "sourceV6SHA256": "4365493041ef76b1363459f58283abf79dd2f3676fec1f017304992239bc672e",
+      "addedBytes": 1113100,
+      "triangles": 50638,
+      "mergedSourceGroups": [
+        [
+          24,
+          32
+        ],
+        [
+          25,
+          26,
+          35
+        ],
+        [
+          27,
+          28
+        ]
+      ],
+      "newGroundMaterial": 34,
+      "newPBRImages": [
+        {
+          "role": "base",
+          "file": "ground-albedo-lod1.jpg",
+          "sha256": "69b1c92a49638e41f65844b865800707193128cb3adac7836bd0fa24f17440a2",
+          "bytes": 686295,
+          "imageIndex": 44,
+          "textureIndex": 58
+        },
+        {
+          "role": "normal",
+          "file": "ground-normal-lod1.png",
+          "sha256": "3b472e5d1aea9613ecf54387fb0591c1163c7eef2e93f4b8320ed46af7a019bd",
+          "bytes": 64243,
+          "imageIndex": 45,
+          "textureIndex": 59
+        },
+        {
+          "role": "MR",
+          "file": "ground-MR-lod1.png",
+          "sha256": "16dbcb1e8586fa0b77e758deaa05ae02d186340448ecbeddc83afd51ae85279d",
+          "bytes": 109939,
+          "imageIndex": 46,
+          "textureIndex": 60
+        }
+      ]
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "sha256": "26f9858e580e835f28bfcc55855febe78c8deccb7b7641aca7e2a6bf6984f28b",
+      "bytes": 4476024,
+      "sourceV6Bytes": 4034100,
+      "sourceV6SHA256": "8f9c06f18509cc31ed11a7c18f55858eb7e1c16a82e8850df8f8c9cb255ae158",
+      "addedBytes": 441924,
+      "triangles": 49306,
+      "mergedSourceGroups": [
+        [
+          24,
+          32
+        ],
+        [
+          25,
+          26,
+          35
+        ],
+        [
+          27,
+          28
+        ]
+      ],
+      "newGroundMaterial": 34,
+      "newPBRImages": [
+        {
+          "role": "base",
+          "file": "ground-albedo-lod2.jpg",
+          "sha256": "0d7b0138fa8db7c89ac6ea63dd1fd89ae50fc33c07c7e268850ca3c6f7c8ab5e",
+          "bytes": 151729,
+          "imageIndex": 44,
+          "textureIndex": 58
+        },
+        {
+          "role": "normal",
+          "file": "ground-normal-lod2.png",
+          "sha256": "315f81bf74496bb8cf45664803fb56fab7b81320481e13ffde0e242a5c281c8d",
+          "bytes": 16212,
+          "imageIndex": 45,
+          "textureIndex": 59
+        },
+        {
+          "role": "MR",
+          "file": "ground-MR-lod2.png",
+          "sha256": "5a409451fcf7d47ed5efbbc08c4197dbdebe64d8b649bef571da6b74de02498c",
+          "bytes": 21362,
+          "imageIndex": 46,
+          "textureIndex": 60
+        }
+      ]
+    }
+  ],
+  "projectedAll72Bytes": 163991572,
+  "projectedAll72Triangles": 1385100,
+  "addedTriangles": 0,
+  "originalV6BINPrefixesAndAllOriginalImagesPreserved": true,
+  "allSourceTriangleCornerPOSNORMALUV0UV1BitExact": true,
+  "AOImageAndBindingUnchanged": true,
+  "AOAlbedoSeparate": true,
+  "originalRoof303AndTreesAndHeightsDEMOriginsMasksAndSeamGeometryPreserved": true,
+  "normalMaximumSize": 1024,
+  "albedoMaximumSize": 4096,
+  "albedoLOD0MetersPerPixel": [
+    0.13525390625,
+    0.123046875
+  ],
+  "dataPNGPaletteLossless": true,
+  "onlyUnreferencedVerticesOmittedFromNewCopyOriginalPrefixIntact": true,
+  "pilotThreeGLBTexturedMaterialSharingResolved": true,
+  "remainingOther66SourcePortFailuresNotChanged": true,
+  "ETC1S192UASTCAndKTX2DecodeStillReceiverGate": true,
+  "notRuntimeOrOwnerAcceptance": true
+}

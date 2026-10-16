@@ -1,0 +1,259 @@
+{
+  "task": 361,
+  "packetVersion": 7,
+  "packet": "native51-groundpbr-v7-delta",
+  "sourceCanonicalNativeRound": 51,
+  "actualGLBCount": 3,
+  "overlayGLBCount": 72,
+  "bytesOverlayGLB72": 163991572,
+  "trianglesOverlayGLB72": 1385100,
+  "changedGLBCount": 3,
+  "unchangedGLBCount": 69,
+  "baseV6Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+  "baseV6ManifestSHA256": "1ae73f93a31de1102dccf506bd5c506b1ee582476a6dc3195a6755e1e0d261a5",
+  "notGameOrOwnerAcceptance": true,
+  "packageFiles": {
+    "LUEMINUT.md": {
+      "bytes": 4020,
+      "sha256": "9fc0b56d823443e3a797831848fd0cefca71674f2132e12eaa954e3380778636"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-aukio.png": {
+      "bytes": 2137932,
+      "sha256": "a27aea7929a2860a78d83653a764a99726c3790323f197ec57dad584dd43122e"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-beihai.png": {
+      "bytes": 1845744,
+      "sha256": "7f86258e8a6c789788038abe2ab80c3181638610b432700cc8a333d3068f22f4"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-flight-350m-65deg.png": {
+      "bytes": 2433651,
+      "sha256": "0d030b530600ccb6b5586df87a34b9f9ee38ac6b460ffdf5e550e5dd1c50bd61"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-flight-500m-78deg.png": {
+      "bytes": 2464920,
+      "sha256": "3113c5edd540623d79d1da6eee946e19c829f77205ca70c09e228d02d19ef3e5"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-ground-contact-1.png": {
+      "bytes": 1406395,
+      "sha256": "22c5b2512f9349a72bf6d03b009a6452ddc39bf9e68286db3e7b11329426a78d"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-ground-contact-2.png": {
+      "bytes": 1548755,
+      "sha256": "82f82ae604c4823d3c99f29295e6d905770ac4c3418194686b8373fe5847b47a"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-ground-contact-3.png": {
+      "bytes": 1730987,
+      "sha256": "5d2e9710d974ab03d021ced93468cdf11988bc7c421890568a1faa7528d5928b"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-hutong_ilma.png": {
+      "bytes": 2459121,
+      "sha256": "6f7e804300d0423a19256bc48051f9d8e184d08943c5773c935fa197a5d3e26c"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-ilma.png": {
+      "bytes": 2418686,
+      "sha256": "cdf1cc253e21f8151a0a2cae09979301d2945cc03df8b25cad26f6a7e96d23dd"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-jingshan.png": {
+      "bytes": 1918371,
+      "sha256": "dead98b92bbdd02b6043410d1309b0509086cee87d3243404827b5ad972e1e4a"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-rejected-probe2-contact-1.png": {
+      "bytes": 2746185,
+      "sha256": "55a826fe6cb705789145dff9b65420984aad8280fe890794aabea5022d19b6ac"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-rejected-probe2-contact-2.png": {
+      "bytes": 2371395,
+      "sha256": "db2d4d6a8afb9c17aa1a88af3f69ada877f87921fcb399e98c29f81410ea963b"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-rejected-probe2-contact-3.png": {
+      "bytes": 2649164,
+      "sha256": "4125e88766cf493dce7be5fe6445b6693a5558f0b4a64b391c3a6829af0dcbb3"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/ambient-diagnostic-taihedian.png": {
+      "bytes": 2441998,
+      "sha256": "bb72a538c85de1a571e39c80f84aae81cf4a84365aeb9ed8cb3b4d7e88571fb8"
+    },
+    "QA/actual-GLB-renders/after-groundPBR6/render-proof.json": {
+      "bytes": 34387,
+      "sha256": "c8ecb83e9b56ab86a6e3e6fff57018df28f41a647aaf12e2a41389b99c2ea4aa"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-aukio.png": {
+      "bytes": 2137864,
+      "sha256": "f201517b2a3bce82aec06d9bbf6cb82b0a9b95d586b752bec1cf87fafcb3533b"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-beihai.png": {
+      "bytes": 1845605,
+      "sha256": "8c217dd879763ba7fc41249e2254db89543dcea59d44f0fbe92c084605e74014"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-flight-350m-65deg.png": {
+      "bytes": 2610692,
+      "sha256": "25a35a7f89bc1fd200531a28b8aa34b7399e5d1f88e404e878877ce4e14606aa"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-flight-500m-78deg.png": {
+      "bytes": 2537848,
+      "sha256": "20b44eebad1b72200d616275e27e8675d453993eef827ec09d10c04a069c38ed"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-ground-contact-1.png": {
+      "bytes": 1547372,
+      "sha256": "ccb423f2c335eae3993654443a3445e921f4cd1f25b96e7fe7eaad27de73b424"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-ground-contact-2.png": {
+      "bytes": 1569429,
+      "sha256": "3e33c7495bcc898cfdd3ec928db1300c3cd6f725adbbcb3e4ceafecb25963fae"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-ground-contact-3.png": {
+      "bytes": 1846057,
+      "sha256": "c9d3e2ff5f1342b744b968b944429406da069adc67e1a304babed79b6a8881db"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-hutong_ilma.png": {
+      "bytes": 2459134,
+      "sha256": "90cdbc8061cdf896c51a99e9ade215ffb6d3f12f66a90cd14cfa534a2a68fb53"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-ilma.png": {
+      "bytes": 2418063,
+      "sha256": "664b52629069e525b1486d638779ddbe27e513eee3dbb724ad39c5d28b084a9a"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-jingshan.png": {
+      "bytes": 1918355,
+      "sha256": "1bb36beb6970d5ce21cfbdcae20bf9015633c5f1a765a83ac4b49c65a7ea7ebc"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-rejected-probe2-contact-1.png": {
+      "bytes": 2936732,
+      "sha256": "09d13d0f1f50c6d0943d568b02da8833c73e5dbc165b71e56853f36015d393ad"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-rejected-probe2-contact-2.png": {
+      "bytes": 2713184,
+      "sha256": "bed2097917eedac8bcaf98c80455b3dc90e322675cc0b4065e8d08a432c22acf"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-rejected-probe2-contact-3.png": {
+      "bytes": 2793494,
+      "sha256": "f652305834a46b7bb9702fa13370de27d062ed564d7d6757dbc9c771d9c525a8"
+    },
+    "QA/actual-GLB-renders/before-v6/ambient-diagnostic-taihedian.png": {
+      "bytes": 2476917,
+      "sha256": "62f083d0f6882e4b8dcd7b484dc17ad295cd63416f11578247e61528def00aa6"
+    },
+    "QA/actual-GLB-renders/before-v6/render-proof.json": {
+      "bytes": 34346,
+      "sha256": "46a1b2c13bbe40da6cdfa0e0005fbb6e4e469b92017621d2c100df87dad0563d"
+    },
+    "QA/actual-GLB-renders/render-proof.json": {
+      "bytes": 52250,
+      "sha256": "81f839fa95c5341e306b765053c945ad1f6c4e4389871ab87fd4cda61912be4b"
+    },
+    "QA/delta-3GLB-structural-readback.json": {
+      "bytes": 72904,
+      "sha256": "8b7c5e17b3c054a4c3d0fb9b9ae7509dbfebd0bf9566f942439036bac2a4f27b"
+    },
+    "QA/ground-layout.json": {
+      "bytes": 1738050,
+      "sha256": "409b3517788d356501c74cef034b6b6f0b04b093dd00fba29285997cd4b33de3"
+    },
+    "QA/material-candidate-proof.json": {
+      "bytes": 5430,
+      "sha256": "59ebe7ab6817604ecefc5303682379344b79b29c89b1c2221e2d8b06b736891e"
+    },
+    "QA/material-proof.json": {
+      "bytes": 5890,
+      "sha256": "174e50eaafae96af85f10134455ec39fc9d7309d3c6ff3a192c20173fbfbda8d"
+    },
+    "QA/parent-private-test-decision.json": {
+      "bytes": 4667,
+      "sha256": "58f67849c940cba483d94d75782e02e8883f1b66856b5ad34b171f9310e3d472"
+    },
+    "QA/receiver-v6-game-feedback/erot-koko-kuva.tsv": {
+      "bytes": 613,
+      "sha256": "1a06ffb64110e9b553937993dac6f882c58c7c602703aed29d5c89d4be9d630e"
+    },
+    "QA/receiver-v6-game-feedback/erot-maa-alue.tsv": {
+      "bytes": 662,
+      "sha256": "6957a01cd144a63d03fd37b3605107eb715946d06f4ae1ff908383b95f03d061"
+    },
+    "QA/receiver-v6-game-feedback/source-receipt.json": {
+      "bytes": 4459,
+      "sha256": "e200903428f83db8a4fd7a4f88dad5167cead7df5b3e2cdfa1b3b34dbe7a7168"
+    },
+    "QA/receiver-v6-game-feedback/source-review.md": {
+      "bytes": 3613,
+      "sha256": "e0d470596709ac5d567f6b0fe32c9d95b728bfc0195040a0e905c22270a5ee55"
+    },
+    "QA/reproducibility-source-pins.json": {
+      "bytes": 6584,
+      "sha256": "e88d51a30b3bc63d05a55857153b9f0b6bae68f9a8698af9b8ac401816988c07"
+    },
+    "QA/visible-session-astra-task361-pbr-candidate6-review.json": {
+      "bytes": 35343,
+      "sha256": "cf802600fb5fdaf95916320cb1f907aed1f87d726cb16966e8f8d9b0cf036e67"
+    },
+    "QA/visible-session-astra-task361-pbr-candidate6-review.md": {
+      "bytes": 6499,
+      "sha256": "b5027ebac7d3182cdc4675faaa277758b44a02f927a6958fc13eb6249f829223"
+    },
+    "QA/visible-session-sol-task361-pbr-candidate6-audit.json": {
+      "bytes": 31139,
+      "sha256": "d69a869472f583362f8143533ce6cc19ef271402e0f716620b8baaa616b4a24d"
+    },
+    "QA/visible-session-sol-task361-pbr-candidate6-audit.md": {
+      "bytes": 8499,
+      "sha256": "dc871ecfaccde4d307c4ed00561af14d15a6637b83dbb5e22a98f2515e195a50"
+    },
+    "QA/whole-new-generated-stone-prompt.txt": {
+      "bytes": 1543,
+      "sha256": "446a6b9342878b9161e5ce016ac098f49e2ab2ee4d6713a6b058e8f8b133e9dd"
+    },
+    "QA/whole-new-generated-stone-source.json": {
+      "bytes": 1192,
+      "sha256": "1985ed829353b8e7c05b812debb0cdca2a0f197f36e99c72307e2efbe38bb75b"
+    },
+    "RAJATTU-LENTOTESTI.txt": {
+      "bytes": 182,
+      "sha256": "6a3a043cd5cde6b379efdb4220eb7c9bfa58284a0b17c8d4d66ec42d1ebc6d81"
+    },
+    "export-state.json": {
+      "bytes": 2070,
+      "sha256": "bc62c20dfb0979affba600a2fd28eecd5101d79f411510d8792cf7f8cedfbbb2"
+    },
+    "glb-v4/laatat.json": {
+      "bytes": 20141,
+      "sha256": "45a1861936021c56838e66f9cc52a8e72e2ff2ef354e04312332994eb2a34127"
+    },
+    "glb-v4/peking_2_3_lod0-proof.json": {
+      "bytes": 291698,
+      "sha256": "0be10d49ee7c88253e9477244eedea3b0bcd5c4de8c6a8e6f90495b5490b0f62"
+    },
+    "glb-v4/peking_2_3_lod0.glb": {
+      "bytes": 13070020,
+      "sha256": "b7fd08dde1ae86bee5b39f2df0baf8ef4d5620cddba0d8b20fff851550ce4846"
+    },
+    "glb-v4/peking_2_3_lod1-proof.json": {
+      "bytes": 644852,
+      "sha256": "65f8670e62c0165c84ed3b6a3679bc785d735f998c33fb88f184cc23338f21de"
+    },
+    "glb-v4/peking_2_3_lod1.glb": {
+      "bytes": 5517040,
+      "sha256": "65ec98b55dfe04b2b1b8d7706d8ed544d815bcb60f94f9df86ca14205e4a21e4"
+    },
+    "glb-v4/peking_2_3_lod2-proof.json": {
+      "bytes": 637707,
+      "sha256": "c9aa6477a576422fe32c19475686ad4c35efe9c2ed21d1d32ab9a89b401d799c"
+    },
+    "glb-v4/peking_2_3_lod2.glb": {
+      "bytes": 4476024,
+      "sha256": "26f9858e580e835f28bfcc55855febe78c8deccb7b7641aca7e2a6bf6984f28b"
+    },
+    "overlay-glb72-manifest.json": {
+      "bytes": 31390,
+      "sha256": "d29f6c9302499bc7183f9dcc548efa1f7e3f3a2a21be5938d313926c8c813431"
+    },
+    "palatsialue-leikkaus-wgs84-reikaversio.geojson": {
+      "bytes": 39570,
+      "sha256": "145fff606ce775b0262c16324d7109249e500a46edf38e7543ca31a3b22e3e8b"
+    },
+    "palatsialue-leikkaus-wgs84.geojson": {
+      "bytes": 54729,
+      "sha256": "77fa13fce4fe61d4dc5014601ccfcc5e6ea0374555d5fbd8c0a47a6ce6ad7ef7"
+    }
+  },
+  "packagePayloadBytesExcludingThisManifest": 89221563,
+  "createdAtUTC": "2026-10-16T16:40:51.464656+00:00"
+}

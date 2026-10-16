@@ -1,0 +1,132 @@
+{
+  "selectedCandidate": 6,
+  "allowRestrictedPrivateTest": true,
+  "onlyTile": "peking_2_3",
+  "deliveryForm": "three GLB overlay on pinned V6",
+  "visualDecision": "ALLOW_MEASURED_ONE_TILE_PRIVATE_GAME_TEST_WITH_EXPLICIT_WATCH_ITEMS",
+  "technicalDecision": "C4_TO_C6_TECHNICAL_DELTA_PASS_PENDING_VISUAL_KTX2_RUNTIME",
+  "visualReviewerDecision": "No remaining blocking visual defect for the requested measured private test of tile peking_2_3. Individual staggered stones now read as masonry and the former dominant plank/concrete striping is relieved. This is readiness for a test, not a passed game test or final visual approval.",
+  "auditReports": {
+    "visible-session-sol-task361-pbr-candidate6-audit.md": {
+      "bytes": 8499,
+      "sha256": "dc871ecfaccde4d307c4ed00561af14d15a6637b83dbb5e22a98f2515e195a50"
+    },
+    "visible-session-sol-task361-pbr-candidate6-audit.json": {
+      "bytes": 31139,
+      "sha256": "d69a869472f583362f8143533ce6cc19ef271402e0f716620b8baaa616b4a24d"
+    },
+    "visible-session-astra-task361-pbr-candidate6-review.md": {
+      "bytes": 6499,
+      "sha256": "b5027ebac7d3182cdc4675faaa277758b44a02f927a6958fc13eb6249f829223"
+    },
+    "visible-session-astra-task361-pbr-candidate6-review.json": {
+      "bytes": 35343,
+      "sha256": "cf802600fb5fdaf95916320cb1f907aed1f87d726cb16966e8f8d9b0cf036e67"
+    }
+  },
+  "candidateProofSHA256": "59ebe7ab6817604ecefc5303682379344b79b29c89b1c2221e2d8b06b736891e",
+  "renderProofSHA256": "81f839fa95c5341e306b765053c945ad1f6c4e4389871ab87fd4cda61912be4b",
+  "parentPersonallyViewedAfterFrames": [
+    {
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "taihedian",
+      "file": "ambient-diagnostic-taihedian.png",
+      "sha256": "bb72a538c85de1a571e39c80f84aae81cf4a84365aeb9ed8cb3b4d7e88571fb8",
+      "seconds": 1.7108156249742024,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "ground-contact-1",
+      "file": "ambient-diagnostic-ground-contact-1.png",
+      "sha256": "22c5b2512f9349a72bf6d03b009a6452ddc39bf9e68286db3e7b11329426a78d",
+      "seconds": 1.1305502080358565,
+      "resolution": [
+        1280,
+        720
+      ]
+    },
+    {
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "ground-contact-2",
+      "file": "ambient-diagnostic-ground-contact-2.png",
+      "sha256": "82f82ae604c4823d3c99f29295e6d905770ac4c3418194686b8373fe5847b47a",
+      "seconds": 1.2031891670194454,
+      "resolution": [
+        1280,
+        720
+      ]
+    },
+    {
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "ground-contact-3",
+      "file": "ambient-diagnostic-ground-contact-3.png",
+      "sha256": "5d2e9710d974ab03d021ced93468cdf11988bc7c421890568a1faa7528d5928b",
+      "seconds": 1.1359183329623193,
+      "resolution": [
+        1280,
+        720
+      ]
+    },
+    {
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "rejected-probe2-contact-1",
+      "file": "ambient-diagnostic-rejected-probe2-contact-1.png",
+      "sha256": "55a826fe6cb705789145dff9b65420984aad8280fe890794aabea5022d19b6ac",
+      "seconds": 1.73017749999417,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "flight-350m-65deg",
+      "file": "ambient-diagnostic-flight-350m-65deg.png",
+      "sha256": "0d030b530600ccb6b5586df87a34b9f9ee38ac6b460ffdf5e550e5dd1c50bd61",
+      "seconds": 1.723702457966283,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "group": "ambient-diagnostic",
+      "lod": 0,
+      "view": "flight-500m-78deg",
+      "file": "ambient-diagnostic-flight-500m-78deg.png",
+      "sha256": "3113c5edd540623d79d1da6eee946e19c829f77205ca70c09e228d02d19ef3e5",
+      "seconds": 1.7127125000115484,
+      "resolution": [
+        1600,
+        900
+      ]
+    }
+  ],
+  "independentReviewerPersonallyViewedAll28Frames": true,
+  "parentReadBothCompleteMDReports": true,
+  "watchItems": [
+    "new paving softness and larger stone-scale colour mosaic",
+    "visible old/new material transition",
+    "game compression, mips, moire, motion and LOD",
+    "verify visible surface ownership and new material activity before comparing",
+    "memory increase relative to preprocessed V6"
+  ],
+  "AOUnchangedFromV6": true,
+  "allProtectedSourceGeometryAndPayloadsPreserved": true,
+  "roof362NotImplementedHere": true,
+  "wholeCityOwnerAccepted": false,
+  "physicalDeviceVerified": false,
+  "gameRuntimeVerified": false,
+  "ownerQualityGoalReached": false,
+  "createdAtUTC": "2026-10-16T16:40:48.640520+00:00"
+}

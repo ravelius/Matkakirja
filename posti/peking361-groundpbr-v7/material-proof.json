@@ -1,0 +1,218 @@
+{
+  "status": "WHOLE_NEW_PROCEDURAL_PBR_MATERIAL_BAKE_NOT_YET_GLB_OR_DELIVERED",
+  "sourceV6ManifestSHA256": "1ae73f93a31de1102dccf506bd5c506b1ee582476a6dc3195a6755e1e0d261a5",
+  "layoutSHA256": "409b3517788d356501c74cef034b6b6f0b04b093dd00fba29285997cd4b33de3",
+  "sourcePBRReadOnlyPins": [
+    {
+      "slot": "baseColorTexture",
+      "sha256": "3d8e06486bb5a1064c5f92387310df4bd4b7f255fad6ffe5607cbd39d66e7fc3",
+      "sourceImageIndex": 14,
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "slot": "normalTexture",
+      "sha256": "03aedefbafeb436a0a068899bcdc0536538783c5dadd8db48fb34b780fc3615f",
+      "sourceImageIndex": 13,
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "slot": "metallicRoughnessTexture",
+      "sha256": "dc133e4a073a142c74acb91bbf923f40a6b0a0d9116e436eb63e6063417ce27d",
+      "sourceImageIndex": 15,
+      "size": [
+        128,
+        128
+      ]
+    }
+  ],
+  "sourceRGBNeverEditedOrOverwritten": true,
+  "sourceAOReadOrBakedIntoMaterial": false,
+  "wholeNewFieldGenerated": true,
+  "fieldsShareStoneCellCoordinates": true,
+  "sourceGeometryAndAllProtectedPayloadsUnchanged": true,
+  "sourceUV0ToUV1AxesAlignedToPositiveEAndNegativeN": true,
+  "materialBaseColorFactorToUse": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "targetLinearAlbedoMean": [
+    0.24017751216888428,
+    0.2272661030292511,
+    0.20267152786254883
+  ],
+  "sourceMRRoughnessMean": 0.8395208716392517,
+  "designZoneCount": 28,
+  "designRowPitchM": 0.5,
+  "designBrickWidthMeanM": 0.95,
+  "variableRowSpacing": true,
+  "wholeGeneratedStoneSource": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/generated-source-assets/gray-stone-slab-g31.png",
+  "wholeGeneratedStoneSourceSHA256": "51a7a2817228a595041fbf30f16b1e0b614624a0d9806d22d436622564114c93",
+  "wholeSourceTextureSampledPerStoneWithoutEditing": true,
+  "physicalDesignValuesNotHistoricalSurvey": true,
+  "periodic4point8MTextureNotUsedInsidePilot": true,
+  "perRowHashOffsetsAndWidthVariation": true,
+  "pilotEdgeBlendWidthM": 8,
+  "edgeOnlyExistingSourceMaterialSampledWithoutEditing": true,
+  "wearPath": {
+    "sourceIDs": [
+      "way/638308745",
+      "way/638449347"
+    ],
+    "sourceGateCenterENU": [
+      6.78,
+      -214.8
+    ],
+    "sourceHallFrontRampTargetENU": [
+      2.411617677755699,
+      -91.00803889375838
+    ],
+    "endpointsPilotENU": [
+      [
+        -268.2294072946771,
+        -214.79529114510848
+      ],
+      [
+        -272.5933304758886,
+        -91.00317276483483
+      ]
+    ],
+    "inferredWearNotMeasuredTraffic": true
+  },
+  "normalConvention": "OpenGL +Y up, Nx=-height derivative east, Ny=+height derivative image-row",
+  "normalMaximumSize": 1024,
+  "albedoMaximumSize": 4096,
+  "albedoLOD0MetersPerPixel": [
+    0.13525390625,
+    0.123046875
+  ],
+  "candidate1RejectedTooSmooth": true,
+  "candidate2RejectedOverBudget": true,
+  "dataPNGPaletteHasNoRGBQuantization": true,
+  "meanCalibrationToSource": [
+    1.0419474717533224,
+    1.0419932156531635,
+    1.0422047892830013
+  ],
+  "JPEGQuality": 83,
+  "sourceLowFrequencyStoneColourDistributionMatched": true,
+  "sourcePaletteCV": [
+    0.13769946992397308,
+    0.11559510231018066,
+    0.09902947396039963
+  ],
+  "wallAxisModulo90ClosestToOriginalUAxis": true,
+  "JPEGChromaSubsampling": 2,
+  "sourceAOToRemainSeparateLinearOcclusion": true,
+  "files": [
+    {
+      "lod": 0,
+      "role": "albedo-sRGB",
+      "file": "ground-albedo-lod0.jpg",
+      "bytes": 2830055,
+      "size": [
+        4096,
+        4096
+      ],
+      "sha256": "e6aca7a4609154b6ee3422edabccd380423e8b83b5848a074c05b904b60d88ed"
+    },
+    {
+      "lod": 0,
+      "role": "normal-linear",
+      "file": "ground-normal-lod0.png",
+      "bytes": 216827,
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "dfd67c42e14b6a769eaeafec697a5ebcab56a1092ffaa5478eb20cedcc2a151c"
+    },
+    {
+      "lod": 0,
+      "role": "MR-linear-Grough-Bmetal0",
+      "file": "ground-MR-lod0.png",
+      "bytes": 481013,
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "89b713fa9aa0f9b6e163124893b0eba0c667d03d115d10ad5790eacdd2b11b3d"
+    },
+    {
+      "lod": 1,
+      "role": "albedo-sRGB",
+      "file": "ground-albedo-lod1.jpg",
+      "bytes": 686295,
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "69b1c92a49638e41f65844b865800707193128cb3adac7836bd0fa24f17440a2"
+    },
+    {
+      "lod": 1,
+      "role": "normal-linear",
+      "file": "ground-normal-lod1.png",
+      "bytes": 64243,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "3b472e5d1aea9613ecf54387fb0591c1163c7eef2e93f4b8320ed46af7a019bd"
+    },
+    {
+      "lod": 1,
+      "role": "MR-linear-Grough-Bmetal0",
+      "file": "ground-MR-lod1.png",
+      "bytes": 109939,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "16dbcb1e8586fa0b77e758deaa05ae02d186340448ecbeddc83afd51ae85279d"
+    },
+    {
+      "lod": 2,
+      "role": "albedo-sRGB",
+      "file": "ground-albedo-lod2.jpg",
+      "bytes": 151729,
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "0d7b0138fa8db7c89ac6ea63dd1fd89ae50fc33c07c7e268850ca3c6f7c8ab5e"
+    },
+    {
+      "lod": 2,
+      "role": "normal-linear",
+      "file": "ground-normal-lod2.png",
+      "bytes": 16212,
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "315f81bf74496bb8cf45664803fb56fab7b81320481e13ffde0e242a5c281c8d"
+    },
+    {
+      "lod": 2,
+      "role": "MR-linear-Grough-Bmetal0",
+      "file": "ground-MR-lod2.png",
+      "bytes": 21362,
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "5a409451fcf7d47ed5efbbc08c4197dbdebe64d8b649bef571da6b74de02498c"
+    }
+  ],
+  "totalImageBytes": 4577675,
+  "ETC1S192StillReceiverGate": true,
+  "notRuntimeOrQualityAcceptance": true
+}

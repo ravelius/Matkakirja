@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: original physically based material source for a 3D game, a SINGLE bare grey paving stone surface, albedo only.
+Primary request: Generate a completely new highly realistic mineral texture of one old fine-grained grey stone slab, suitable for palace courtyard paving. Show only the continuous stone material filling the entire frame edge to edge.
+Composition: orthographic flat-on texture scan, landscape rectangle approximately 2:1, no perspective and no visible slab border. The entire image is stone surface, not a scene or a floor made of many stones.
+Material: subdued neutral to slightly warm medium grey, dense fine mineral grain, very small natural speckling and gentle centuries-worn surface character, restrained individual mineral variation. Natural and tactile rather than brushed, plastic, or smooth concrete. Variation must remain fine-scale and evenly distributed, with no obvious large blotch that would repeat recognizably.
+Lighting: pure diffuse albedo, perfectly even illumination, no directional shading, no baked ambient occlusion, no highlights, no shadows, no vignette or gradients from illumination.
+Constraints: brand-new complete generation, do not edit any existing image. No grout lines, no seams, no brick grid, no multiple tiles, no cracks, no large veins, no stains, no grass, no objects, no buildings, no labels, no writing, no symbols, no watermark. Opaque stone across the complete canvas. High texture detail suitable for sampling onto individual 3D paving stones.

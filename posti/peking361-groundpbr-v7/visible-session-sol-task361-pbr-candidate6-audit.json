@@ -1,0 +1,831 @@
+{
+  "status": "C4_TO_C6_TECHNICAL_DELTA_PASS_PENDING_VISUAL_KTX2_RUNTIME",
+  "baseV6Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6",
+  "candidateRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-glb-candidate6",
+  "candidateProofSHA256": "59ebe7ab6817604ecefc5303682379344b79b29c89b1c2221e2d8b06b736891e",
+  "materialProofSHA256": "174e50eaafae96af85f10134455ec39fc9d7309d3c6ff3a192c20173fbfbda8d",
+  "layoutSHA256": "409b3517788d356501c74cef034b6b6f0b04b093dd00fba29285997cd4b33de3",
+  "checks3GLB": [
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "b7fd08dde1ae86bee5b39f2df0baf8ef4d5620cddba0d8b20fff851550ce4846",
+      "bytes": 13070020,
+      "addedBytes": 3780540,
+      "triangles": 98042,
+      "oldBINPrefixExact": true,
+      "allOldImagesExact": true,
+      "allOldMaterialsNodesTreeMeshesExact": true,
+      "everyOldCornerAttributeBitsExact": true,
+      "allFaceBlocksCoverExactlyOnce": true,
+      "referencedVertexUniqueSearchsortedRemapExact": true,
+      "omittedCopyVertices": 1130,
+      "pavingOmittedCopyVertices": 1115,
+      "seamCoverRolesRetained": true,
+      "AOImageBindingStrengthExact": true,
+      "mergedGroups": [
+        {
+          "newPrimitive": 25,
+          "sourceCount": 2,
+          "triangles": 328
+        },
+        {
+          "newPrimitive": 26,
+          "sourceCount": 3,
+          "triangles": 37
+        },
+        {
+          "newPrimitive": 27,
+          "sourceCount": 2,
+          "triangles": 2281
+        }
+      ],
+      "actualMaterialCount": 36,
+      "actualImages": 47,
+      "receiverGateErrors": [],
+      "gpuV6Estimate": {
+        "slotLoads": 68,
+        "RGBA8FullMipEstimateBytes": 64633514.6666667,
+        "KTX2FormatFullMipEstimateBytes": 9138688.000000004
+      },
+      "gpuCandidateEstimate": {
+        "slotLoads": 61,
+        "RGBA8FullMipEstimateBytes": 140830037.33333334,
+        "KTX2FormatFullMipEstimateBytes": 19340458.66666666
+      }
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "sha256": "65ec98b55dfe04b2b1b8d7706d8ed544d815bcb60f94f9df86ca14205e4a21e4",
+      "bytes": 5517040,
+      "addedBytes": 1113100,
+      "triangles": 50638,
+      "oldBINPrefixExact": true,
+      "allOldImagesExact": true,
+      "allOldMaterialsNodesTreeMeshesExact": true,
+      "everyOldCornerAttributeBitsExact": true,
+      "allFaceBlocksCoverExactlyOnce": true,
+      "referencedVertexUniqueSearchsortedRemapExact": true,
+      "omittedCopyVertices": 1130,
+      "pavingOmittedCopyVertices": 1115,
+      "seamCoverRolesRetained": true,
+      "AOImageBindingStrengthExact": true,
+      "mergedGroups": [
+        {
+          "newPrimitive": 24,
+          "sourceCount": 2,
+          "triangles": 328
+        },
+        {
+          "newPrimitive": 25,
+          "sourceCount": 3,
+          "triangles": 37
+        },
+        {
+          "newPrimitive": 26,
+          "sourceCount": 2,
+          "triangles": 2281
+        }
+      ],
+      "actualMaterialCount": 35,
+      "actualImages": 47,
+      "receiverGateErrors": [],
+      "gpuV6Estimate": {
+        "slotLoads": 68,
+        "RGBA8FullMipEstimateBytes": 16158037.333333341,
+        "KTX2FormatFullMipEstimateBytes": 2284629.333333334
+      },
+      "gpuCandidateEstimate": {
+        "slotLoads": 61,
+        "RGBA8FullMipEstimateBytes": 35207168.00000001,
+        "KTX2FormatFullMipEstimateBytes": 4835071.999999998
+      }
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "sha256": "26f9858e580e835f28bfcc55855febe78c8deccb7b7641aca7e2a6bf6984f28b",
+      "bytes": 4476024,
+      "addedBytes": 441924,
+      "triangles": 49306,
+      "oldBINPrefixExact": true,
+      "allOldImagesExact": true,
+      "allOldMaterialsNodesTreeMeshesExact": true,
+      "everyOldCornerAttributeBitsExact": true,
+      "allFaceBlocksCoverExactlyOnce": true,
+      "referencedVertexUniqueSearchsortedRemapExact": true,
+      "omittedCopyVertices": 1130,
+      "pavingOmittedCopyVertices": 1115,
+      "seamCoverRolesRetained": true,
+      "AOImageBindingStrengthExact": true,
+      "mergedGroups": [
+        {
+          "newPrimitive": 24,
+          "sourceCount": 2,
+          "triangles": 328
+        },
+        {
+          "newPrimitive": 25,
+          "sourceCount": 3,
+          "triangles": 37
+        },
+        {
+          "newPrimitive": 26,
+          "sourceCount": 2,
+          "triangles": 2281
+        }
+      ],
+      "actualMaterialCount": 35,
+      "actualImages": 47,
+      "receiverGateErrors": [],
+      "gpuV6Estimate": {
+        "slotLoads": 68,
+        "RGBA8FullMipEstimateBytes": 5760000.0,
+        "KTX2FormatFullMipEstimateBytes": 984874.666666667
+      },
+      "gpuCandidateEstimate": {
+        "slotLoads": 61,
+        "RGBA8FullMipEstimateBytes": 10456746.666666675,
+        "KTX2FormatFullMipEstimateBytes": 1610197.3333333328
+      }
+    }
+  ],
+  "sourceCornerCount": 593958,
+  "seamCoverFaceBlocks": 15,
+  "actualNewImageBytes": 4577675,
+  "projected72Bytes": 163991572,
+  "projected72Triangles": 1385100,
+  "byteHeadroom": 334678,
+  "triangleHeadroom": 12283,
+  "issues": [],
+  "comparisonCandidate4": {
+    "auditPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-sol-task361-pbr-candidate4-audit.json",
+    "auditSHA256": "d77f0ab717197d90581100335eb63f1ee5ba71dfc36ff52d0d2b0a447da1ef12",
+    "deltas": [
+      {
+        "file": "peking_2_3_lod0.glb",
+        "bytesC4": 12744056,
+        "bytesC6": 13070020,
+        "deltaBytes": 325964,
+        "allGeometryAndFaceBlocksExactToC4": true,
+        "allJSONExceptBufferOffsetsLengthsExactToC4": true,
+        "onlyThreeNewImagePayloadsChanged": true
+      },
+      {
+        "file": "peking_2_3_lod1.glb",
+        "bytesC4": 5381724,
+        "bytesC6": 5517040,
+        "deltaBytes": 135316,
+        "allGeometryAndFaceBlocksExactToC4": true,
+        "allJSONExceptBufferOffsetsLengthsExactToC4": true,
+        "onlyThreeNewImagePayloadsChanged": true
+      },
+      {
+        "file": "peking_2_3_lod2.glb",
+        "bytesC4": 4434552,
+        "bytesC6": 4476024,
+        "deltaBytes": 41472,
+        "allGeometryAndFaceBlocksExactToC4": true,
+        "allJSONExceptBufferOffsetsLengthsExactToC4": true,
+        "onlyThreeNewImagePayloadsChanged": true
+      }
+    ],
+    "projected72ByteChange": 502752,
+    "newImageByteChange": 502749,
+    "changedMaterialImageCount": 9
+  },
+  "sourceProvenance": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/generated-source-assets/gray-stone-slab-g31-source.json",
+    "sha256": "1985ed829353b8e7c05b812debb0cdca2a0f197f36e99c72307e2efbe38bb75b",
+    "verifiedOriginalDefaultPhysicalAndT7Paths": [
+      "/Users/samireivinen/.codex/generated_images/01a136eb-438c-77b2-85f2-7ab55020e302/exec-a73ad2a5-b528-4451-a3dd-9cb0df8b00c3.png",
+      "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a136eb-438c-77b2-85f2-7ab55020e302/exec-a73ad2a5-b528-4451-a3dd-9cb0df8b00c3.png",
+      "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/generated-source-assets/gray-stone-slab-g31.png"
+    ],
+    "imageSHA256": "51a7a2817228a595041fbf30f16b1e0b614624a0d9806d22d436622564114c93",
+    "imageBytes": 4092865,
+    "imageSize": [
+      1774,
+      887
+    ],
+    "promptSHA256": "446a6b9342878b9161e5ce016ac098f49e2ab2ee4d6713a6b058e8f8b133e9dd",
+    "wholeSourceNotPartialEdit": true,
+    "actualSampling": "whole source BOX resized to16x8 and bilinearly mapped across each whole stone; U/V flips, grainRatio clip .8..1.2 mixed at .45; RAM only",
+    "historicalNotBoundFlag": "provenance notBoundToModelYet refers to source capture time, current C6 is bound"
+  },
+  "palettePNGs": [
+    {
+      "file": "ground-normal-lod0.png",
+      "mode": "P",
+      "usedPaletteIndices": 5,
+      "decodedRGBSHA256": "8bb788458d62d721bf80556a0fadcca04e9087514c6b1fe0ad716ed4da3beb6f",
+      "noGammaOrAlpha": true
+    },
+    {
+      "file": "ground-MR-lod0.png",
+      "mode": "P",
+      "usedPaletteIndices": 26,
+      "decodedRGBSHA256": "f9785bd2064a206550d3a8ee3a4997ab7f4f1a95726c906e32538bb733cd70a2",
+      "noGammaOrAlpha": true
+    },
+    {
+      "file": "ground-normal-lod1.png",
+      "mode": "P",
+      "usedPaletteIndices": 4,
+      "decodedRGBSHA256": "e0bb9466fd51cef4ad62ddb65cac2c31862eb39735707557e891fba9da1059ca",
+      "noGammaOrAlpha": true
+    },
+    {
+      "file": "ground-MR-lod1.png",
+      "mode": "P",
+      "usedPaletteIndices": 17,
+      "decodedRGBSHA256": "98f873dd97ad036f649294e86ce021f6f8ae534acd99e2f46e4ff59d017864d0",
+      "noGammaOrAlpha": true
+    },
+    {
+      "file": "ground-normal-lod2.png",
+      "mode": "P",
+      "usedPaletteIndices": 4,
+      "decodedRGBSHA256": "501cbbc3425bdd7baa29157baef2626ed1a08246e6444c26b898dfb17f253383",
+      "noGammaOrAlpha": true
+    },
+    {
+      "file": "ground-MR-lod2.png",
+      "mode": "P",
+      "usedPaletteIndices": 12,
+      "decodedRGBSHA256": "245c62af8557b496169402b2079020f5bc6de8b2030d50efe08a12db906fc5f0",
+      "noGammaOrAlpha": true
+    }
+  ],
+  "normalReadback": [
+    {
+      "lod": 0,
+      "interiorXYCodes": [
+        127,
+        128
+      ],
+      "decodedLengthMin": 1.0000153785822494,
+      "decodedLengthMax": 1.000076890546421
+    },
+    {
+      "lod": 1,
+      "interiorXYCodes": [
+        127,
+        128
+      ],
+      "decodedLengthMin": 1.0000153785822494,
+      "decodedLengthMax": 1.0000153785822494
+    },
+    {
+      "lod": 2,
+      "interiorXYCodes": [
+        127,
+        128
+      ],
+      "decodedLengthMin": 1.0000153785822494,
+      "decodedLengthMax": 1.0000153785822494
+    }
+  ],
+  "albedoReadback": [
+    {
+      "lod": 0,
+      "canonicalJPEG83_420FromRawExact": true
+    },
+    {
+      "lod": 1,
+      "canonicalJPEG83_420FromRawExact": true
+    },
+    {
+      "lod": 2,
+      "canonicalJPEG83_420FromRawExact": true
+    }
+  ],
+  "measuredByteDeltaFromV6": 5335564,
+  "nonImageAddedBytes": 757889,
+  "comparisonToReceiverPreprocessedV6": {
+    "scope": "Same C3 model reused after verifying unchanged C6 texture dimensions/formats/slots and equal GPU estimate; recipient KTX2/VRAM not measured.",
+    "perLOD": [
+      {
+        "file": "peking_2_3_lod0.glb",
+        "preprocessedV6": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 40691029.33333335,
+          "KTX2FormatFullMipEstimateBytes": 6134954.666666665
+        },
+        "candidate3": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 140830037.33333334,
+          "KTX2FormatFullMipEstimateBytes": 19340458.66666666
+        },
+        "delta": {
+          "slotLoads": 0,
+          "RGBA8FullMipEstimateBytes": 100139008.0,
+          "KTX2FormatFullMipEstimateBytes": 13205503.999999996
+        },
+        "candidate4": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 140830037.33333334,
+          "KTX2FormatFullMipEstimateBytes": 19340458.66666666
+        },
+        "candidate6": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 140830037.33333334,
+          "KTX2FormatFullMipEstimateBytes": 19340458.66666666
+        }
+      },
+      {
+        "file": "peking_2_3_lod1.glb",
+        "preprocessedV6": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 10172416.000000004,
+          "KTX2FormatFullMipEstimateBytes": 1533695.9999999995
+        },
+        "candidate3": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 35207168.00000001,
+          "KTX2FormatFullMipEstimateBytes": 4835071.999999998
+        },
+        "delta": {
+          "slotLoads": 0,
+          "RGBA8FullMipEstimateBytes": 25034752.000000004,
+          "KTX2FormatFullMipEstimateBytes": 3301375.9999999986
+        },
+        "candidate4": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 35207168.00000001,
+          "KTX2FormatFullMipEstimateBytes": 4835071.999999998
+        },
+        "candidate6": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 35207168.00000001,
+          "KTX2FormatFullMipEstimateBytes": 4835071.999999998
+        }
+      },
+      {
+        "file": "peking_2_3_lod2.glb",
+        "preprocessedV6": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 4230826.666666669,
+          "KTX2FormatFullMipEstimateBytes": 790997.3333333335
+        },
+        "candidate3": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 10456746.666666675,
+          "KTX2FormatFullMipEstimateBytes": 1610197.3333333328
+        },
+        "delta": {
+          "slotLoads": 0,
+          "RGBA8FullMipEstimateBytes": 6225920.0000000065,
+          "KTX2FormatFullMipEstimateBytes": 819199.9999999993
+        },
+        "candidate4": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 10456746.666666675,
+          "KTX2FormatFullMipEstimateBytes": 1610197.3333333328
+        },
+        "candidate6": {
+          "slotLoads": 61,
+          "RGBA8FullMipEstimateBytes": 10456746.666666675,
+          "KTX2FormatFullMipEstimateBytes": 1610197.3333333328
+        }
+      }
+    ],
+    "all3LODDelta": {
+      "slotLoads": 0,
+      "RGBA8FullMipEstimateBytes": 131399680.00000001,
+      "KTX2FormatFullMipEstimateBytes": 17326079.999999993
+    },
+    "runtimeSlotSavingFromRaw68To61": false,
+    "all3LODDeltaVsC3": {
+      "slotLoads": 0,
+      "RGBA8FullMipEstimateBytes": 0,
+      "KTX2FormatFullMipEstimateBytes": 0
+    },
+    "all3LODDeltaVsC4": {
+      "slotLoads": 0,
+      "RGBA8FullMipEstimateBytes": 0,
+      "KTX2FormatFullMipEstimateBytes": 0
+    }
+  },
+  "incomingV6GameReview": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v6-game-review-20261016/source-review.md",
+    "bytes": 3613,
+    "gitBlobSHA1": "b707942f4af551e1462a525b86a35ce56cd7529f",
+    "sourceCommit": "399c814e5daf91b37caeeb3b1e6e586056fb11ac",
+    "sourceSHA256": "e0d470596709ac5d567f6b0fe32c9d95b728bfc0195040a0e905c22270a5ee55",
+    "sourceReadFully": true,
+    "device": "iPad Pro 13 simulator 00CF62C2",
+    "scope": "V6 accepted as #361/#362 base in simulator only; not physical device/owner/runtime general acceptance",
+    "reportedAOVisibleEffect": "practically zero",
+    "reportedV5V6PostPreprocessPortFailures": 0,
+    "other69GLBNeedNoFix": true,
+    "deliverV7ThreeChangedGLBsDeltaOverV6": true
+  },
+  "roof303ExplicitException": {
+    "source": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v6-game-review-20261016/source-review.md",
+    "allowedTile": "peking_2_3",
+    "variants": 6,
+    "variationPercent": [
+      -7.5,
+      7.5
+    ],
+    "roofAreaWeightedMean": "exact accepted303",
+    "baseMaterialAndOriginalRGBPreserved": true,
+    "changeOnly": "brightness and saturation; no hue-angle shift",
+    "roughness": "variants around .53 permitted in source review",
+    "implementation": "Not performed in this #361 audit; source guard not modified; parent handles #362 separately"
+  },
+  "AOChangeForV7": "No optional wider AO or strength1 in V7; keep existing V6 AO bytes/binding/.6 for isolated #361 comparison.",
+  "ownershipGate": "Recipient must verify actual game surface ownership. Images alone do not identify own GLB vs Ion/LOD/shader surfaces.",
+  "memoryAssumptions": "Per node/primitive/slot; PNG palette decoded RGB not indexed GPU; PNG/JPEG assumed RGBA8; ETC1S RGB .5 B/px or alpha1, UASTC normal1; full mip factor4/3. Not measured KTX2 bytes, VRAM or FPS; CPU/driver/streaming excluded.",
+  "sourceEvidence": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/generate-task361-coherent-ground-pbr.py",
+      "sha256": "439e9b410ca87592767ddc43e514718f3c101d7b40b75c599ad2e634a10db775"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/generate-task361-coherent-ground-pbr2.py",
+      "sha256": "aac7ff979bff22e0aebe5f23f7c05fcb59d53018f97c2a4b9e960e8f9177c3ac"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/generate-task361-coherent-ground-pbr3.py",
+      "sha256": "f56064171145f10d803636435687043d3ec0562fd643a7b1c7fe0ccc1ac3d039"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/generate-task361-coherent-ground-pbr4.py",
+      "sha256": "ec326a6ae9cc3b19719c9816f3e02f1d2ccfa9d5dc8ac83898c0adfb0e347bf6"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/generate-task361-coherent-ground-pbr5.py",
+      "sha256": "464cfcad101f7b05c6d52faaf0d6008a50d5de1090815b09323973a06562e87e"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/generate-task361-coherent-ground-pbr6.py",
+      "sha256": "ead763fb7b79b11e1e60228cb584632a36cd51a07d430f66896bbc6b1e2400f4"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-candidate6-expanded-recipe.py",
+      "sha256": "09b5cff176b5582a754b84c2a1999c64209607a20bfd36aef2ce8cd52cabc59a"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/build-task361-ground-glbs.py",
+      "sha256": "cc44208db9787d678f20ebb2ea647b731e7a72641734931e26d9583b8bce783b"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/build-task361-ground-glbs3.py",
+      "sha256": "849d2b8c5892c03e14a90423b69b47718b5ce98efc010f3a88c14ea2e8c94a57"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/build-task361-ground-glbs6.py",
+      "sha256": "6bfbeb2dbb0e46184337fe8e6ad09d8f5ed977dce3a82772752819fa103bb5a6"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/tyokalut/omat_mallit_ktx2.py",
+      "sha256": "36798f120bc06151da9d183dfc7b3187c9add82e2f20e313dfcd26099e649b21"
+    }
+  ],
+  "designDelta": {
+    "nominalStoneMeters": [
+      0.95,
+      0.5
+    ],
+    "brickWidthRangeMeters": [
+      0.874,
+      1.026
+    ],
+    "rowWarpDerivativeRange": [
+      0.88225,
+      1.11775
+    ],
+    "stagger": "half-brick odd/even rows plus +/-2% row offset",
+    "fieldAndStoneNotHistoricalSurvey": true,
+    "sourceOnlyChangesAlbedoGrain": "Stone cells/mortar shared by albedo/height/MR, source stone image grain affects colour only; no inferred normal from source bitmap",
+    "edgeBlend": "same8m original-material boundary blend retained; C4 rejected boundary is not technically proved fixed",
+    "axes": "float32 ((angle+pi/4) % (pi/2))-pi/4; closest modulo90 wall axis to original U/+E",
+    "colour": "Source14 linear24x24 RGB distribution, calibrated targetmean; no synthetic warm factor; wholeg31 grain unchanged"
+  },
+  "gates": [
+    "Technical pass only: C4 was visually rejected, C6 not visually accepted by this audit.",
+    "KTX2 ETC1S192/UASTC normal<=1024, decoded colours/linear AO/normal channels/mips still recipient gate.",
+    "No new runtime slot-saving claim: preprocessed V6/C3/C4 all61 slots perLOD.",
+    "Receiver preprocessed V5/V6 port0; other69 files do not need source repairs due to old66 raw failures.",
+    "Recipient verifies actual visible-surface ownership; do not infer ownGLB vs Ion/LOD/shader from screenshots.",
+    "Water/light/physical-device/runtime/owner approvals remain separate."
+  ],
+  "auditScope": "Only assigned C6 MD/JSON written. Python T7 external wrapper nice15; RAM data only. No Blender/Git/Unity/assets/generator edits or delegation.",
+  "snapshots": {
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-glb-candidate6/glb-v4/peking_2_3_lod0.glb": "b7fd08dde1ae86bee5b39f2df0baf8ef4d5620cddba0d8b20fff851550ce4846",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-glb-candidate6/glb-v4/peking_2_3_lod1.glb": "65ec98b55dfe04b2b1b8d7706d8ed544d815bcb60f94f9df86ca14205e4a21e4",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-glb-candidate6/glb-v4/peking_2_3_lod2.glb": "26f9858e580e835f28bfcc55855febe78c8deccb7b7641aca7e2a6bf6984f28b"
+  },
+  "recipeReadback": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-candidate6-expanded-recipe.py",
+    "sha256": "09b5cff176b5582a754b84c2a1999c64209607a20bfd36aef2ce8cd52cabc59a",
+    "sourceImageIndex": 14,
+    "sourceImageSHA256": "3d8e06486bb5a1064c5f92387310df4bd4b7f255fad6ffe5607cbd39d66e7fc3",
+    "sourceLinearBaseMean": [
+      0.24017751216888428,
+      0.2272661030292511,
+      0.20267152786254883
+    ],
+    "sourceOldBaseFactor": [
+      1.0,
+      0.9800000190734863,
+      0.9300000071525574
+    ],
+    "paletteSize": [
+      24,
+      24
+    ],
+    "paletteEntries": 576,
+    "paletteLinearMean": [
+      0.24014922976493835,
+      0.2272510826587677,
+      0.20267638564109802
+    ],
+    "paletteCV": [
+      0.13769946992397308,
+      0.11559510231018066,
+      0.09902947396039963
+    ],
+    "paletteRGBcorrelation": [
+      [
+        1.0,
+        0.9754664693358037,
+        0.7887181113528716
+      ],
+      [
+        0.9754664693358038,
+        1.0,
+        0.900165475744123
+      ],
+      [
+        0.7887181113528717,
+        0.900165475744123,
+        1.0
+      ]
+    ],
+    "distributionUse": "One deterministic per-stone index samples whole RGB triplet from empirical linear palette; ratios normalized by palette mean. Not a proof of final image histogram equality after grain/mortar/wear/calibration.",
+    "noArtificialWarmFactor": true,
+    "unusedWarmVariablePresentButNotRead": true,
+    "meanCalibration": [
+      1.0419474717533224,
+      1.0419932156531635,
+      1.0422047892830013
+    ],
+    "nominalStoneMeters": [
+      0.95,
+      0.5
+    ],
+    "axes": [
+      {
+        "zone": 1,
+        "areaM2": 1959.749326766274,
+        "oldRadians": 1.342342734336853,
+        "oldDegrees": 76.91057333755236,
+        "newRadians": -0.22845369577407837,
+        "newDegrees": -13.08943258202038
+      },
+      {
+        "zone": 2,
+        "areaM2": 2183.2996829903914,
+        "oldRadians": 1.599838137626648,
+        "oldDegrees": 91.66397319007667,
+        "newRadians": 0.029041707515716553,
+        "newDegrees": 1.6639672705039215
+      },
+      {
+        "zone": 3,
+        "areaM2": 926.2281590006146,
+        "oldRadians": 1.6036840677261353,
+        "oldDegrees": 91.88432875307963,
+        "newRadians": 0.03288763761520386,
+        "newDegrees": 1.8843228335068727
+      },
+      {
+        "zone": 4,
+        "areaM2": 5957.340801221585,
+        "oldRadians": 0.0,
+        "oldDegrees": 0.0,
+        "newRadians": 0.0,
+        "newDegrees": 0.0
+      },
+      {
+        "zone": 5,
+        "areaM2": 441.18354267545385,
+        "oldRadians": 1.6054027080535889,
+        "oldDegrees": 91.9827995903437,
+        "newRadians": 0.03460639715194702,
+        "newDegrees": 1.9828005009601166
+      },
+      {
+        "zone": 6,
+        "areaM2": 197.27779465928856,
+        "oldRadians": 0.031630419194698334,
+        "oldDegrees": 1.8122895240858026,
+        "newRadians": 0.03163039684295654,
+        "newDegrees": 1.8122882434253333
+      },
+      {
+        "zone": 7,
+        "areaM2": 359.2385043304189,
+        "oldRadians": 0.035399530082941055,
+        "oldDegrees": 2.0282436704989153,
+        "newRadians": 0.035399556159973145,
+        "newDegrees": 2.0282451646027964
+      },
+      {
+        "zone": 8,
+        "areaM2": 1649.9557340496503,
+        "oldRadians": 1.5943249464035034,
+        "oldDegrees": 91.34809060134192,
+        "newRadians": 0.02352851629257202,
+        "newDegrees": 1.3480846817691716
+      },
+      {
+        "zone": 9,
+        "areaM2": 166.65458658110907,
+        "oldRadians": 1.5957579612731934,
+        "oldDegrees": 91.43019630535464,
+        "newRadians": 0.024961650371551514,
+        "newDegrees": 1.430197215971065
+      },
+      {
+        "zone": 10,
+        "areaM2": 952.7730238700469,
+        "oldRadians": 0.03480995446443558,
+        "oldDegrees": 1.9944634758547366,
+        "newRadians": 0.03480994701385498,
+        "newDegrees": 1.9944630489679134
+      },
+      {
+        "zone": 11,
+        "areaM2": 105071.06314335244,
+        "oldRadians": 1.5707963705062866,
+        "oldDegrees": 90.00000250447816,
+        "newRadians": -5.960464477539063e-08,
+        "newDegrees": -3.4150945850063755e-06
+      },
+      {
+        "zone": 12,
+        "areaM2": 440.9535717211864,
+        "oldRadians": 0.0352841392159462,
+        "oldDegrees": 2.0216322608257546,
+        "newRadians": 0.03528416156768799,
+        "newDegrees": 2.0216335414862243
+      },
+      {
+        "zone": 13,
+        "areaM2": 427.0580432605598,
+        "oldRadians": 0.03865836188197136,
+        "oldDegrees": 2.2149609787263773,
+        "newRadians": 0.03865838050842285,
+        "newDegrees": 2.214962045943435
+      },
+      {
+        "zone": 14,
+        "areaM2": 428.2976093758603,
+        "oldRadians": 0.03517202287912369,
+        "oldDegrees": 2.0152084679113575,
+        "newRadians": 0.03517204523086548,
+        "newDegrees": 2.015209748571827
+      },
+      {
+        "zone": 15,
+        "areaM2": 636.3963324316297,
+        "oldRadians": 1.6058530807495117,
+        "oldDegrees": 92.00860404502801,
+        "newRadians": 0.03505676984786987,
+        "newDegrees": 2.008604955644425
+      },
+      {
+        "zone": 16,
+        "areaM2": 136.56040704540482,
+        "oldRadians": 1.5975679159164429,
+        "oldDegrees": 91.53389906752295,
+        "newRadians": 0.026771485805511475,
+        "newDegrees": 1.5338931479501985
+      },
+      {
+        "zone": 17,
+        "areaM2": 531.6646560751614,
+        "oldRadians": 0.03873502463102341,
+        "oldDegrees": 2.21935343069293,
+        "newRadians": 0.038735032081604004,
+        "newDegrees": 2.2193538575797533
+      },
+      {
+        "zone": 18,
+        "areaM2": 509.802900527762,
+        "oldRadians": 0.038915928453207016,
+        "oldDegrees": 2.229718456201836,
+        "newRadians": 0.038915932178497314,
+        "newDegrees": 2.229718669645248
+      },
+      {
+        "zone": 19,
+        "areaM2": 499.5878928337461,
+        "oldRadians": 0.03874962776899338,
+        "oldDegrees": 2.2201901288662564,
+        "newRadians": 0.038749635219573975,
+        "newDegrees": 2.2201905557530797
+      },
+      {
+        "zone": 20,
+        "areaM2": 363.4031099398029,
+        "oldRadians": 0.0351407527923584,
+        "oldDegrees": 2.0134168239146986,
+        "newRadians": 0.0351407527923584,
+        "newDegrees": 2.0134168239146986
+      },
+      {
+        "zone": 21,
+        "areaM2": 337.3486012759114,
+        "oldRadians": 0.03535035252571106,
+        "oldDegrees": 2.0254260040228735,
+        "newRadians": 0.03535038232803345,
+        "newDegrees": 2.025427711570166
+      },
+      {
+        "zone": 22,
+        "areaM2": 339.7569366362292,
+        "oldRadians": 0.03520018979907036,
+        "oldDegrees": 2.016822313546185,
+        "newRadians": 0.03520017862319946,
+        "newDegrees": 2.0168216732159503
+      },
+      {
+        "zone": 23,
+        "areaM2": 661.4736083244375,
+        "oldRadians": 0.03494168445467949,
+        "oldDegrees": 2.002011048331012,
+        "newRadians": 0.034941673278808594,
+        "newDegrees": 2.0020104080007775
+      },
+      {
+        "zone": 24,
+        "areaM2": 117.94577068649203,
+        "oldRadians": 0.03493094444274902,
+        "oldDegrees": 2.0013956909754764,
+        "newRadians": 0.03493094444274902,
+        "newDegrees": 2.0013956909754764
+      },
+      {
+        "zone": 25,
+        "areaM2": 228.97127235510305,
+        "oldRadians": 1.6170258522033691,
+        "oldDegrees": 92.64875669479828,
+        "newRadians": 0.046229541301727295,
+        "newDegrees": 2.6487576054147
+      },
+      {
+        "zone": 26,
+        "areaM2": 970.4218891401623,
+        "oldRadians": 0.0,
+        "oldDegrees": 0.0,
+        "newRadians": 0.0,
+        "newDegrees": 0.0
+      },
+      {
+        "zone": 27,
+        "areaM2": 655.9637187413064,
+        "oldRadians": 0.03099140152335167,
+        "oldDegrees": 1.7756765084833608,
+        "newRadians": 0.03099137544631958,
+        "newDegrees": 1.77567501437948
+      },
+      {
+        "zone": 28,
+        "areaM2": 112.41045362889336,
+        "oldRadians": 0.0215830747038126,
+        "oldDegrees": 1.2366190894440312,
+        "newRadians": 0.021583080291748047,
+        "newDegrees": 1.2366194096091485
+      }
+    ],
+    "largestZone": {
+      "zone": 11,
+      "areaM2": 105071.06314335244,
+      "oldRadians": 1.5707963705062866,
+      "oldDegrees": 90.00000250447816,
+      "newRadians": -5.960464477539063e-08,
+      "newDegrees": -3.4150945850063755e-06
+    },
+    "axisRule": "float32 ((angle+pi/4) % (pi/2))-pi/4; closest modulo90 wall axis to original U/+E",
+    "sourceOnlyNoRecipeExecution": true
+  },
+  "candidate5Rejection": {
+    "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/candidate5-budget-rejection.json",
+    "sha256": "cf650254e8af93382553b96d331b89e5315699edac8b9bf077c31e229f7edcf7",
+    "estimatedBytes": 164531089,
+    "estimatedOverBudgetBytes": 204839,
+    "sourceReportNoGLBs": true
+  },
+  "budgetExactReadback": {
+    "base72ActualBytes": 158656008,
+    "addedBytes": 5335564,
+    "actualProjectionBytes": 163991572,
+    "parentApproximationBytes": 163991564,
+    "differenceFromParentApproximation": 8,
+    "ceilingBytes": 164326250,
+    "headroomBytes": 334678
+  }
+}

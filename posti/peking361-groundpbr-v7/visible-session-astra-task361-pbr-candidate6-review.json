@@ -1,0 +1,797 @@
+{
+  "task": 361,
+  "candidate": "candidate6",
+  "verdict": "VISUAL_PASS_FOR_LIMITED_ONE_TILE_PRIVATE_V6_V7_TEST_ONLY",
+  "blockingVisualDefectBeforeLimitedTest": false,
+  "privateMeasuredV6V7TestRecommended": true,
+  "decision": "No remaining blocking visual defect for the requested measured private test of tile peking_2_3. Individual staggered stones now read as masonry and the former dominant plank/concrete striping is relieved. This is readiness for a test, not a passed game test or final visual approval.",
+  "scope": "All 28 native PNGs personally viewed, 14 before-v6 and 14 after-groundPBR6. Every unique C3/C4 ROI revisited, plus contact and old black-polygon controls. No new render, asset audit or runtime work.",
+  "evidence": {
+    "images": [
+      {
+        "stage": "before-v6",
+        "view": "ilma",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-ilma.png",
+        "sha256": "664b52629069e525b1486d638779ddbe27e513eee3dbb724ad39c5d28b084a9a",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "taihedian",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-taihedian.png",
+        "sha256": "62f083d0f6882e4b8dcd7b484dc17ad295cd63416f11578247e61528def00aa6",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "aukio",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-aukio.png",
+        "sha256": "f201517b2a3bce82aec06d9bbf6cb82b0a9b95d586b752bec1cf87fafcb3533b",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "beihai",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-beihai.png",
+        "sha256": "8c217dd879763ba7fc41249e2254db89543dcea59d44f0fbe92c084605e74014",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "jingshan",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-jingshan.png",
+        "sha256": "1bb36beb6970d5ce21cfbdcae20bf9015633c5f1a765a83ac4b49c65a7ea7ebc",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "hutong_ilma",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-hutong_ilma.png",
+        "sha256": "90cdbc8061cdf896c51a99e9ade215ffb6d3f12f66a90cd14cfa534a2a68fb53",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "ground-contact-1",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-ground-contact-1.png",
+        "sha256": "ccb423f2c335eae3993654443a3445e921f4cd1f25b96e7fe7eaad27de73b424",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "ground-contact-2",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-ground-contact-2.png",
+        "sha256": "3e33c7495bcc898cfdd3ec928db1300c3cd6f725adbbcb3e4ceafecb25963fae",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "ground-contact-3",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-ground-contact-3.png",
+        "sha256": "c9d3e2ff5f1342b744b968b944429406da069adc67e1a304babed79b6a8881db",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "rejected-probe2-contact-1",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-rejected-probe2-contact-1.png",
+        "sha256": "09d13d0f1f50c6d0943d568b02da8833c73e5dbc165b71e56853f36015d393ad",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "rejected-probe2-contact-2",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-rejected-probe2-contact-2.png",
+        "sha256": "bed2097917eedac8bcaf98c80455b3dc90e322675cc0b4065e8d08a432c22acf",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "rejected-probe2-contact-3",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-rejected-probe2-contact-3.png",
+        "sha256": "f652305834a46b7bb9702fa13370de27d062ed564d7d6757dbc9c771d9c525a8",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "flight-350m-65deg",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-flight-350m-65deg.png",
+        "sha256": "25a35a7f89bc1fd200531a28b8aa34b7399e5d1f88e404e878877ce4e14606aa",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "before-v6",
+        "view": "flight-500m-78deg",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/ambient-diagnostic-flight-500m-78deg.png",
+        "sha256": "20b44eebad1b72200d616275e27e8675d453993eef827ec09d10c04a069c38ed",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "ilma",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-ilma.png",
+        "sha256": "cdf1cc253e21f8151a0a2cae09979301d2945cc03df8b25cad26f6a7e96d23dd",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "taihedian",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-taihedian.png",
+        "sha256": "bb72a538c85de1a571e39c80f84aae81cf4a84365aeb9ed8cb3b4d7e88571fb8",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "aukio",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-aukio.png",
+        "sha256": "a27aea7929a2860a78d83653a764a99726c3790323f197ec57dad584dd43122e",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "beihai",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-beihai.png",
+        "sha256": "7f86258e8a6c789788038abe2ab80c3181638610b432700cc8a333d3068f22f4",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "jingshan",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-jingshan.png",
+        "sha256": "dead98b92bbdd02b6043410d1309b0509086cee87d3243404827b5ad972e1e4a",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "hutong_ilma",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-hutong_ilma.png",
+        "sha256": "6f7e804300d0423a19256bc48051f9d8e184d08943c5773c935fa197a5d3e26c",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "ground-contact-1",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-ground-contact-1.png",
+        "sha256": "22c5b2512f9349a72bf6d03b009a6452ddc39bf9e68286db3e7b11329426a78d",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "ground-contact-2",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-ground-contact-2.png",
+        "sha256": "82f82ae604c4823d3c99f29295e6d905770ac4c3418194686b8373fe5847b47a",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "ground-contact-3",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-ground-contact-3.png",
+        "sha256": "5d2e9710d974ab03d021ced93468cdf11988bc7c421890568a1faa7528d5928b",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "rejected-probe2-contact-1",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-rejected-probe2-contact-1.png",
+        "sha256": "55a826fe6cb705789145dff9b65420984aad8280fe890794aabea5022d19b6ac",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "rejected-probe2-contact-2",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-rejected-probe2-contact-2.png",
+        "sha256": "db2d4d6a8afb9c17aa1a88af3f69ada877f87921fcb399e98c29f81410ea963b",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "rejected-probe2-contact-3",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-rejected-probe2-contact-3.png",
+        "sha256": "4125e88766cf493dce7be5fe6445b6693a5558f0b4a64b391c3a6829af0dcbb3",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "flight-350m-65deg",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-flight-350m-65deg.png",
+        "sha256": "0d030b530600ccb6b5586df87a34b9f9ee38ac6b460ffdf5e550e5dd1c50bd61",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "view": "flight-500m-78deg",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/ambient-diagnostic-flight-500m-78deg.png",
+        "sha256": "3113c5edd540623d79d1da6eee946e19c829f77205ca70c09e228d02d19ef3e5",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewedNative": true,
+        "matchesStageProof": true
+      }
+    ],
+    "stageProofs": [
+      {
+        "stage": "before-v6",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/before-v6/render-proof.json",
+        "sha256": "46a1b2c13bbe40da6cdfa0e0005fbb6e4e469b92017621d2c100df87dad0563d",
+        "AOConstantInBothStages": true,
+        "AOImageLinks": [
+          {
+            "material": "stage5_paving_owner360_groundAO_probe",
+            "AOImage": "owner360-linear-groundAO-probe-lod0",
+            "strength": 0.6,
+            "BlenderDiagnosticOnly": true
+          }
+        ],
+        "noSunOnlyUniformAmbientLight": true,
+        "normalBasisDifferentFromGame": true,
+        "actual24LOD0GLBImportsReported": true
+      },
+      {
+        "stage": "after-groundPBR6",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/after-groundPBR6/render-proof.json",
+        "sha256": "c8ecb83e9b56ab86a6e3e6fff57018df28f41a647aaf12e2a41389b99c2ea4aa",
+        "AOConstantInBothStages": true,
+        "AOImageLinks": [
+          {
+            "material": "stage5_paving_owner360_groundAO_probe_owner361_coherentPBR",
+            "AOImage": "owner360-linear-groundAO-probe-lod0",
+            "strength": 0.6,
+            "BlenderDiagnosticOnly": true
+          }
+        ],
+        "noSunOnlyUniformAmbientLight": true,
+        "normalBasisDifferentFromGame": true,
+        "actual24LOD0GLBImportsReported": true
+      }
+    ],
+    "rootProof": {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-actual-renders-candidate6/render-proof.json",
+      "sha256": "81f839fa95c5341e306b765053c945ad1f6c4e4389871ab87fd4cda61912be4b",
+      "status": "GROUND_AO_PROBE_ACTUAL_IMPORT_AMBIENT_DIAGNOSTICS_COMPLETE"
+    },
+    "allCameraMetadataEqualAcrossStages": true,
+    "sixFrozenCameraNames": [
+      "ilma",
+      "taihedian",
+      "aukio",
+      "beihai",
+      "jingshan",
+      "hutong_ilma"
+    ],
+    "priorROIReports": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-pbr-candidate3-review.json",
+        "sha256": "448cb934266fb5d26ddbf9ca3d681d5f7792acdd081c2a4c9b4cfebab82906fc",
+        "use": "Prior ROI coordinates only; prior verdict preserved."
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-pbr-candidate4-review.json",
+        "sha256": "ae1dca99ad329dfdc9ebdc81a6a05e11938451a3bb59f63d663b53f67131f81f",
+        "use": "Prior ROI coordinates only; prior verdict preserved."
+      }
+    ],
+    "renderImportIdentityForChangedTile": [
+      {
+        "file": "peking_2_3_lod0.glb",
+        "sha256": "b7fd08dde1ae86bee5b39f2df0baf8ef4d5620cddba0d8b20fff851550ce4846",
+        "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/ground-pbr-glb-candidate6",
+        "actualTileRootECEF": [
+          [
+            -0.8957580813174272,
+            0.28524581381406705,
+            -0.3409578939635686,
+            -2177692.301040704
+          ],
+          [
+            -0.4445418537714098,
+            -0.574774322638481,
+            0.687034946913877,
+            4388080.583933108
+          ],
+          [
+            0.0,
+            0.7669871600861555,
+            0.6416624472906094,
+            4070851.8673680564
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "identityLimit": "Import identity is from render proof; GLB bytes and preservation/budget audit are Sol responsibility."
+  },
+  "perViewPair": [
+    {
+      "view": "ground-contact-3",
+      "observation": "Limittäiset yksittäiset kivet ja niiden päädyt palautuvat; jatkuva puu-/betonijuovaisuus ei enää hallitse. Uusi pinta on vanhaa pehmeämpi ja kivikohtainen sävymosaiikki näyttää suuremmalta. Pitkät vanhat geometriset linjat säilyvät.",
+      "meanAbsoluteRGBDifference0to255": 2.809461,
+      "maximumChannelDifference0to255": 48
+    },
+    {
+      "view": "taihedian",
+      "observation": "T1:n oikea etuala lukee kiveyksenä; T2:n portaiden alla vanhan ja uuden pinnan ero on pienempi mutta erotettavissa pehmeyden ja sävyalueiden koon perusteella. Ei uutta voimakasta keskikäytävän värikaistaa.",
+      "meanAbsoluteRGBDifference0to255": 0.534777,
+      "maximumChannelDifference0to255": 35
+    },
+    {
+      "view": "ground-contact-1",
+      "observation": "Kivien päädyt ja sävyt katkaisevat rivit. Vanhasta etualasta uuteen pintaan jää pehmeä tekstuuritiheyden muutos, joka on vietävä pelitestin tarkastuskohteeksi. Valkoiset aukot ja pitkä tumma linja näkyvät jo ennen muutosta.",
+      "meanAbsoluteRGBDifference0to255": 2.851335,
+      "maximumChannelDifference0to255": 41
+    },
+    {
+      "view": "ground-contact-2",
+      "observation": "Muurin jalkakaista ja sisäpihat näyttävät jälleen kiveykseltä. Ei uutta suurta mustaa läiskää; kapean kaistan pehmeys ja kontaktin luettavuus tarkistettava pelissä.",
+      "meanAbsoluteRGBDifference0to255": 0.29449,
+      "maximumChannelDifference0to255": 32
+    },
+    {
+      "view": "rejected-probe2-contact-1",
+      "observation": "Vanha/uusi diagonaaliraja on paljon lähempänä samaa kivimateriaaliperhettä; uusi puoli on silti pehmeämpi ja sävyvaihtelu karkeampaa. Ei täydellistä saumattomuutta.",
+      "meanAbsoluteRGBDifference0to255": 2.972528,
+      "maximumChannelDifference0to255": 51
+    },
+    {
+      "view": "rejected-probe2-contact-2",
+      "observation": "Suorakaiteiset kivipinnat ja päätysaumat erottuvat. Ei vanhan suuren mustan AO-polygonin ilmeistä paluuta rakennusten välissä. Läheinen sävymosaiikki on voimakkaampi kuin lähteessä.",
+      "meanAbsoluteRGBDifference0to255": 3.813825,
+      "maximumChannelDifference0to255": 53
+    },
+    {
+      "view": "rejected-probe2-contact-3",
+      "observation": "Avoin kenttä ja kapeat käytävät säilyttävät kivimateriaalin lukunsa; ei hallitsevaa jatkuvaa rivijuovaa tai uutta suurta mustaa läiskää.",
+      "meanAbsoluteRGBDifference0to255": 1.999706,
+      "maximumChannelDifference0to255": 45
+    },
+    {
+      "view": "flight-350m-65deg",
+      "observation": "Piha lukee kivimäisenä tasaisena kokonaisuutena, ei tyhjänä harmaana massana. Sävyvaihtelu on pienipiirteistä arkkitehtuuriin nähden; ei silmään osuvaa identtistä monikivistä toistomerkkiä.",
+      "meanAbsoluteRGBDifference0to255": 2.498805,
+      "maximumChannelDifference0to255": 36
+    },
+    {
+      "view": "flight-500m-78deg",
+      "observation": "Kivipinnan yleisilme säilyy myös korkeammassa diagnostiikassa, eikä sävymosaiikki muodosta suuria pilviä. Ei liikkeen tai mip-välkkeen näyttöä.",
+      "meanAbsoluteRGBDifference0to255": 2.077535,
+      "maximumChannelDifference0to255": 31
+    },
+    {
+      "view": "ilma",
+      "observation": "Kaupunkisilhuetti ja yleinen värihierarkia säilyvät; tästä etäisyydestä ei päätellä lähikuvan kivilaatua.",
+      "meanAbsoluteRGBDifference0to255": 0.010393,
+      "maximumChannelDifference0to255": 12
+    },
+    {
+      "view": "aukio",
+      "observation": "Ei havaittavaa uutta etualan ongelmaa; kontrollinäkymä ei vahvista muuttuneen pavingin runtime-laatua.",
+      "meanAbsoluteRGBDifference0to255": 9.3e-05,
+      "maximumChannelDifference0to255": 6
+    },
+    {
+      "view": "beihai",
+      "observation": "Ei havaittavaa uutta ympäristöongelmaa kontrollikuvassa.",
+      "meanAbsoluteRGBDifference0to255": 2.9e-05,
+      "maximumChannelDifference0to255": 1
+    },
+    {
+      "view": "jingshan",
+      "observation": "Ei havaittavaa uutta ympäristöongelmaa kontrollikuvassa.",
+      "meanAbsoluteRGBDifference0to255": 2.3e-05,
+      "maximumChannelDifference0to255": 1
+    },
+    {
+      "view": "hutong_ilma",
+      "observation": "Ei havaittavaa uutta ympäristöongelmaa kontrollikuvassa.",
+      "meanAbsoluteRGBDifference0to255": 3.7e-05,
+      "maximumChannelDifference0to255": 1
+    }
+  ],
+  "rois": [
+    {
+      "view": "ground-contact-3",
+      "xyxy": [
+        90,
+        500,
+        410,
+        690
+      ],
+      "priorROIIds": [
+        "C3:G1",
+        "C4:G1"
+      ],
+      "status": "NONBLOCKING_FOR_LIMITED_TEST_WITH_WATCH_ITEM",
+      "observation": "Yksittäiset limittäiset kivet palautuvat. Pehmeys ja vanhaa suurempana näkyvä sävymosaiikki jäävät seurattaviksi; ei enää estävää puu-/levytulkintaa."
+    },
+    {
+      "view": "ground-contact-3",
+      "xyxy": [
+        700,
+        355,
+        850,
+        440
+      ],
+      "priorROIIds": [
+        "C3:G2",
+        "C4:G2"
+      ],
+      "status": "NONBLOCKING_FOR_LIMITED_TEST_WITH_WATCH_ITEM",
+      "observation": "Jalustojen välissä näkyy kivijako ilman laajaa likapilveä; kosketusreuna pysyy paikallisena."
+    },
+    {
+      "view": "ground-contact-3",
+      "xyxy": [
+        200,
+        375,
+        540,
+        520
+      ],
+      "priorROIIds": [
+        "C3:G3"
+      ],
+      "status": "NONBLOCKING_FOR_LIMITED_TEST_WITH_WATCH_ITEM",
+      "observation": "Vanhat pitkät tummat linjat näkyvät yhä, mutta pienkivien palautuminen vähentää jättilaatan tulkintaa. Ei uutta geometriajohtopäätöstä."
+    },
+    {
+      "view": "taihedian",
+      "xyxy": [
+        1000,
+        815,
+        1270,
+        890
+      ],
+      "priorROIIds": [
+        "C3:T1",
+        "C4:T1"
+      ],
+      "status": "NONBLOCKING_FOR_LIMITED_TEST_WITH_WATCH_ITEM",
+      "observation": "T1: pinta hahmottuu jälleen kiveykseksi keskietäisyydellä. Pehmeys on pelitestihavainto, ei tämän rajatun kokeen este."
+    },
+    {
+      "view": "taihedian",
+      "xyxy": [
+        760,
+        865,
+        950,
+        899
+      ],
+      "priorROIIds": [
+        "C3:T2",
+        "C4:T2"
+      ],
+      "status": "NONBLOCKING_FOR_LIMITED_TEST_WITH_WATCH_ITEM",
+      "observation": "T2: portaiden alla ero ei katoa, mutta molemmat puolet ovat nyt samaa kivimateriaaliperhettä. Eri terävyys ja sävyvaihtelun koko on tarkastettava pelissä."
+    },
+    {
+      "view": "ground-contact-1",
+      "xyxy": [
+        170,
+        360,
+        470,
+        520
+      ],
+      "priorROIIds": [
+        "C3:B1"
+      ],
+      "status": "NONBLOCKING_FOR_LIMITED_TEST_WITH_WATCH_ITEM",
+      "observation": "Reunasiirtymä jää pehmeäksi ja erotettavaksi, mutta ei vaihda materiaalia kiveyksestä sileäksi massaksi. Tarkista kiinteällä pelikameralla ja rajanylityksessä."
+    },
+    {
+      "view": "rejected-probe2-contact-1",
+      "xyxy": [
+        760,
+        180,
+        1090,
+        400
+      ],
+      "priorROIIds": [
+        "C3:B2",
+        "C4:B1"
+      ],
+      "status": "NONBLOCKING_FOR_LIMITED_TEST_WITH_WATCH_ITEM",
+      "observation": "Diagonaalinen uusi/vanha tiheys- ja terävyysero säilyy lievempänä; ei uutta jyrkkää värisaumaa tai aukkoa."
+    },
+    {
+      "view": "flight-350m-65deg",
+      "xyxy": [
+        680,
+        445,
+        1100,
+        615
+      ],
+      "priorROIIds": [
+        "C3:F350",
+        "C4:F350"
+      ],
+      "status": "NONBLOCKING_FOR_LIMITED_TEST_WITH_WATCH_ITEM",
+      "observation": "Kivimäinen tekstuuri luettavissa arkkitehtuuria häiritsemättä; ei suurta sävypilveä tai jatkuvaa riviraitaa."
+    },
+    {
+      "view": "flight-500m-78deg",
+      "xyxy": [
+        720,
+        455,
+        1040,
+        585
+      ],
+      "priorROIIds": [
+        "C3:F500"
+      ],
+      "status": "NONBLOCKING_FOR_LIMITED_TEST_WITH_WATCH_ITEM",
+      "observation": "Korkeammalla hieno vaihtelu säilyy rauhallisena. Aliasingia/LOD-siirtymää ei hyväksytä still-kuvasta."
+    },
+    {
+      "view": "rejected-probe2-contact-1",
+      "xyxy": [
+        1120,
+        430,
+        1550,
+        680
+      ],
+      "priorROIIds": [
+        "C4:B2"
+      ],
+      "status": "NONBLOCKING_FOR_LIMITED_TEST_WITH_WATCH_ITEM",
+      "observation": "Rivien päätysaumat ja kivikohtainen vaihtelu katkaisevat aiemmat pitkät nauhat; pinta näyttää kiveltä."
+    },
+    {
+      "id": "C1-open",
+      "view": "ground-contact-1",
+      "xyxy": [
+        200,
+        320,
+        480,
+        425
+      ],
+      "status": "VISUAL_CLEAR_FOR_LIMITED_TEST",
+      "observation": "Kivikohtainen värijako katkaisee rivit; ei yhtenäistä pitkittäisnauhaa."
+    },
+    {
+      "id": "C2-foot",
+      "view": "ground-contact-2",
+      "xyxy": [
+        580,
+        305,
+        700,
+        415
+      ],
+      "status": "VISUAL_CLEAR_FOR_LIMITED_TEST",
+      "observation": "Muurin jalan ympäristössä ei uutta suurta paikallista mustaa läiskää; kapean paving-kaistan pehmeys jää tarkistettavaksi."
+    },
+    {
+      "id": "R2-blackpatch",
+      "view": "rejected-probe2-contact-2",
+      "xyxy": [
+        690,
+        405,
+        840,
+        540
+      ],
+      "status": "VISUAL_CLEAR_FOR_LIMITED_TEST",
+      "observation": "Rakennusten välisessä aiemman hylätyn AO-kokeen ongelmakohdassa ei suurta mustaa polygonia."
+    },
+    {
+      "id": "R2-foreground",
+      "view": "rejected-probe2-contact-2",
+      "xyxy": [
+        400,
+        700,
+        780,
+        870
+      ],
+      "status": "VISUAL_CLEAR_FOR_LIMITED_TEST",
+      "observation": "Kivien hahmo palautunut; lähikuvan sävymosaiikki on vanhaa näkyvämpi ja pehmeämpi."
+    },
+    {
+      "id": "R3-open",
+      "view": "rejected-probe2-contact-3",
+      "xyxy": [
+        400,
+        40,
+        760,
+        155
+      ],
+      "status": "VISUAL_CLEAR_FOR_LIMITED_TEST",
+      "observation": "Avoin kenttä näyttää kiveykseltä, ei laajaa mustaa läiskää tai hallitsevaa rivijuovaa."
+    }
+  ],
+  "priorROIUniqueCount": 10,
+  "priorROICoverage": "All unique C3 and C4 review rectangles covered; equivalent coordinates retain both prior IDs.",
+  "roiConvention": "Zero-based native xyxy, right/bottom exclusive. Ground-contact images 1280x720, remaining reviewed PNGs 1600x900.",
+  "remainingWatchItems": [
+    {
+      "issue": "New side is softer and has broader-looking stone-local tonal variation than V6.",
+      "locations": [
+        "ground-contact-3 G1/G2",
+        "rejected-probe2-contact-2 foreground",
+        "taihedian T1"
+      ],
+      "limitedTestBlocker": false,
+      "testFailureTrigger": "In real paired game views it reads as blurred oversized color blocks or patchwork rather than stones."
+    },
+    {
+      "issue": "Old/new finish transition remains discernible, especially contact1 and regression contact1; T2 has a sharpness/density difference.",
+      "limitedTestBlocker": false,
+      "testFailureTrigger": "At the fixed game cameras or boundary crossing a distinct strip, material cut, halo or LOD pop becomes distracting."
+    },
+    {
+      "issue": "Stone courses remain regular and local tonal runs may occur, but no dominating continuous row stripes or recognizable old copied multistone marker is apparent in reviewed C6 frames.",
+      "limitedTestBlocker": false,
+      "testFailureTrigger": "Motion/mips produce row bands, shimmering, obvious repetition or loss of stone identity."
+    }
+  ],
+  "blackPatchResult": "No visible return of the previous large black polygon in regression contact2; no new comparable large blotch in the three contact and three regression views. This is a visual result, not AO mapping proof.",
+  "AOAndPreview": "Both stage proofs report the same AO image and strength 0.6, with Blender-only base-color diagnostic connection and normal basis different from the game. Do not infer game normal/specular response or visible AO strength from this preview.",
+  "causalityAndHistory": "Parent reports the largest zone changed axis 90 to 0, stones 0.95 x 0.50 m, colors sampled per stone from source14 linear 24x24 mean palette, g31 grain. These are material-design/provenance statements, not historical laying evidence. Their combined visual result is assessed; individual cause was not isolated. Recipe and source preservation were not independently audited here.",
+  "handoffConditions": [
+    "Sol technical preservation and budget audit must independently pass for the exact candidate/package being tested. This report does not preempt it.",
+    "Limit change/test to peking_2_3 and identify exact V6 and candidate-derived V7 package hashes; do not expand to other tiles.",
+    "Receiver must record the loaded tile LOD, actual paving renderer/material and effective albedo/normal/MR/AO bindings after preprocessing.",
+    "Before quality comparison, prove the new paving contributes the visible ground pixels using receiver object/material identification or a reversible isolated renderer-visibility diagnostic at fixed camera/exposure. A loaded file alone is insufficient.",
+    "Keep own-paving versus Ion/LOD/shader explanation as an open hypothesis until that test; do not state own paving is occluded from screenshots alone.",
+    "Then compare V6/V7 at fixed cameras/time/exposure, including close stone areas, T1/T2, material boundary and 350/500m-equivalent views; inspect motion/LOD and 13/18 lighting separately.",
+    "Record remaining softness/mosaic/boundary observations and measured performance; do not call this test preparation physical-device, KTX2, game-lighting or final owner acceptance."
+  ],
+  "preservedScope": [
+    "old RGB and UV/source geometry preservation assigned to technical audit",
+    "roof303 and V4 trees not changed or newly accepted by this review",
+    "six frozen cameras and approved images unchanged",
+    "separate AO unchanged in the compared stage proofs"
+  ],
+  "notApproved": [
+    "completed game test",
+    "whole-city or owner final quality",
+    "historical paving reconstruction",
+    "physical device",
+    "KTX2/filtering or memory/performance",
+    "motion or LOD transitions",
+    "13/18 game lighting, normal/specular response or effects",
+    "water",
+    "publication"
+  ],
+  "writes": [
+    "visible-session-astra-task361-pbr-candidate6-review.md",
+    "visible-session-astra-task361-pbr-candidate6-review.json"
+  ]
+}

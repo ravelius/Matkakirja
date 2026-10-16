@@ -1,0 +1,276 @@
+[
+  {
+    "deliveryFile": "before-v6-taihedian.png",
+    "originalStage": "before-v6",
+    "originalFile": "ambient-diagnostic-taihedian.png",
+    "sha256": "62f083d0f6882e4b8dcd7b484dc17ad295cd63416f11578247e61528def00aa6",
+    "camera": {
+      "positionENU": [
+        0,
+        -260,
+        70
+      ],
+      "lookAtENU": [
+        0,
+        0,
+        20
+      ],
+      "FOVDegrees": 45,
+      "id": "taihedian",
+      "projection": "perspective",
+      "lensUnit": "FOV",
+      "resolution": [
+        1600,
+        900
+      ],
+      "upAxis": "Z",
+      "imageFacingAxis": "camera local -Z",
+      "clipStartM": 1,
+      "clipEndM": 8000,
+      "fixedAcrossAllIterations": true,
+      "exactSource": "v10 frozen lahde/rakenna.py esikatselu KAM; region[-1100,-1750,1100,1250]"
+    },
+    "pixelsUnmodified": true
+  },
+  {
+    "deliveryFile": "before-v6-ground-contact-3.png",
+    "originalStage": "before-v6",
+    "originalFile": "ambient-diagnostic-ground-contact-3.png",
+    "sha256": "c9d3e2ff5f1342b744b968b944429406da069adc67e1a304babed79b6a8881db",
+    "camera": {
+      "positionENU": [
+        128.33619516867464,
+        -98.33528442489879,
+        54.79086550888706
+      ],
+      "lookAtENU": [
+        83.33619516867462,
+        -33.33528442489878,
+        -0.20913449111293891
+      ],
+      "FOVDegrees": 50,
+      "clipStartM": 0.1,
+      "clipEndM": 10000,
+      "sourceMaterial": "stage5_paving",
+      "sourcePrimitive": 28,
+      "sourceTriangle": 81,
+      "AOProbeValue": 0.578125,
+      "onlyAutoDiagnosticCamera": true
+    },
+    "pixelsUnmodified": true
+  },
+  {
+    "deliveryFile": "before-v6-rejected-probe2-contact-1.png",
+    "originalStage": "before-v6",
+    "originalFile": "ambient-diagnostic-rejected-probe2-contact-1.png",
+    "sha256": "09d13d0f1f50c6d0943d568b02da8833c73e5dbc165b71e56853f36015d393ad",
+    "camera": {
+      "positionENU": [
+        53.341544157129526,
+        -248.33798591805362,
+        53.53276128367388
+      ],
+      "lookAtENU": [
+        8.341544157129524,
+        -183.33798591805362,
+        -1.467238716326121
+      ],
+      "FOVDegrees": 50,
+      "clipStartM": 0.1,
+      "clipEndM": 10000,
+      "sourceMaterial": "stage5_paving",
+      "sourcePrimitive": 28,
+      "sourceTriangle": 5,
+      "AOProbeValue": 0.0,
+      "onlyAutoDiagnosticCamera": true
+    },
+    "pixelsUnmodified": true
+  },
+  {
+    "deliveryFile": "before-v6-flight-350m-65deg.png",
+    "originalStage": "before-v6",
+    "originalFile": "ambient-diagnostic-flight-350m-65deg.png",
+    "sha256": "25a35a7f89bc1fd200531a28b8aa34b7399e5d1f88e404e878877ce4e14606aa",
+    "camera": {
+      "positionENU": [
+        275,
+        -163.2076803542495,
+        350
+      ],
+      "lookAtENU": [
+        275,
+        0,
+        0
+      ],
+      "FOVDegrees": 50,
+      "clipStartM": 0.1,
+      "clipEndM": 10000,
+      "onlyAdditionalDiagnosticCamera": true,
+      "downwardPitchFromHorizontalDegrees": 65,
+      "heightAboveNominalCityZeroM": 350
+    },
+    "pixelsUnmodified": true
+  },
+  {
+    "deliveryFile": "before-v6-flight-500m-78deg.png",
+    "originalStage": "before-v6",
+    "originalFile": "ambient-diagnostic-flight-500m-78deg.png",
+    "sha256": "20b44eebad1b72200d616275e27e8675d453993eef827ec09d10c04a069c38ed",
+    "camera": {
+      "positionENU": [
+        275,
+        -106.27828083501113,
+        500
+      ],
+      "lookAtENU": [
+        275,
+        0,
+        0
+      ],
+      "FOVDegrees": 50,
+      "clipStartM": 0.1,
+      "clipEndM": 10000,
+      "onlyAdditionalDiagnosticCamera": true,
+      "downwardPitchFromHorizontalDegrees": 78,
+      "heightAboveNominalCityZeroM": 500
+    },
+    "pixelsUnmodified": true
+  },
+  {
+    "deliveryFile": "after-v7-taihedian.png",
+    "originalStage": "after-groundPBR6",
+    "originalFile": "ambient-diagnostic-taihedian.png",
+    "sha256": "bb72a538c85de1a571e39c80f84aae81cf4a84365aeb9ed8cb3b4d7e88571fb8",
+    "camera": {
+      "positionENU": [
+        0,
+        -260,
+        70
+      ],
+      "lookAtENU": [
+        0,
+        0,
+        20
+      ],
+      "FOVDegrees": 45,
+      "id": "taihedian",
+      "projection": "perspective",
+      "lensUnit": "FOV",
+      "resolution": [
+        1600,
+        900
+      ],
+      "upAxis": "Z",
+      "imageFacingAxis": "camera local -Z",
+      "clipStartM": 1,
+      "clipEndM": 8000,
+      "fixedAcrossAllIterations": true,
+      "exactSource": "v10 frozen lahde/rakenna.py esikatselu KAM; region[-1100,-1750,1100,1250]"
+    },
+    "pixelsUnmodified": true
+  },
+  {
+    "deliveryFile": "after-v7-ground-contact-3.png",
+    "originalStage": "after-groundPBR6",
+    "originalFile": "ambient-diagnostic-ground-contact-3.png",
+    "sha256": "5d2e9710d974ab03d021ced93468cdf11988bc7c421890568a1faa7528d5928b",
+    "camera": {
+      "positionENU": [
+        128.33619516867464,
+        -98.33528442489879,
+        54.79086550888706
+      ],
+      "lookAtENU": [
+        83.33619516867462,
+        -33.33528442489878,
+        -0.20913449111293891
+      ],
+      "FOVDegrees": 50,
+      "clipStartM": 0.1,
+      "clipEndM": 10000,
+      "sourceMaterial": "stage5_paving",
+      "sourcePrimitive": 28,
+      "sourceTriangle": 81,
+      "AOProbeValue": 0.578125,
+      "onlyAutoDiagnosticCamera": true
+    },
+    "pixelsUnmodified": true
+  },
+  {
+    "deliveryFile": "after-v7-rejected-probe2-contact-1.png",
+    "originalStage": "after-groundPBR6",
+    "originalFile": "ambient-diagnostic-rejected-probe2-contact-1.png",
+    "sha256": "55a826fe6cb705789145dff9b65420984aad8280fe890794aabea5022d19b6ac",
+    "camera": {
+      "positionENU": [
+        53.341544157129526,
+        -248.33798591805362,
+        53.53276128367388
+      ],
+      "lookAtENU": [
+        8.341544157129524,
+        -183.33798591805362,
+        -1.467238716326121
+      ],
+      "FOVDegrees": 50,
+      "clipStartM": 0.1,
+      "clipEndM": 10000,
+      "sourceMaterial": "stage5_paving",
+      "sourcePrimitive": 28,
+      "sourceTriangle": 5,
+      "AOProbeValue": 0.0,
+      "onlyAutoDiagnosticCamera": true
+    },
+    "pixelsUnmodified": true
+  },
+  {
+    "deliveryFile": "after-v7-flight-350m-65deg.png",
+    "originalStage": "after-groundPBR6",
+    "originalFile": "ambient-diagnostic-flight-350m-65deg.png",
+    "sha256": "0d030b530600ccb6b5586df87a34b9f9ee38ac6b460ffdf5e550e5dd1c50bd61",
+    "camera": {
+      "positionENU": [
+        275,
+        -163.2076803542495,
+        350
+      ],
+      "lookAtENU": [
+        275,
+        0,
+        0
+      ],
+      "FOVDegrees": 50,
+      "clipStartM": 0.1,
+      "clipEndM": 10000,
+      "onlyAdditionalDiagnosticCamera": true,
+      "downwardPitchFromHorizontalDegrees": 65,
+      "heightAboveNominalCityZeroM": 350
+    },
+    "pixelsUnmodified": true
+  },
+  {
+    "deliveryFile": "after-v7-flight-500m-78deg.png",
+    "originalStage": "after-groundPBR6",
+    "originalFile": "ambient-diagnostic-flight-500m-78deg.png",
+    "sha256": "3113c5edd540623d79d1da6eee946e19c829f77205ca70c09e228d02d19ef3e5",
+    "camera": {
+      "positionENU": [
+        275,
+        -106.27828083501113,
+        500
+      ],
+      "lookAtENU": [
+        275,
+        0,
+        0
+      ],
+      "FOVDegrees": 50,
+      "clipStartM": 0.1,
+      "clipEndM": 10000,
+      "onlyAdditionalDiagnosticCamera": true,
+      "downwardPitchFromHorizontalDegrees": 78,
+      "heightAboveNominalCityZeroM": 500
+    },
+    "pixelsUnmodified": true
+  }
+]

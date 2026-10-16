@@ -1,0 +1,19 @@
+# Peking V7: #361 pihakiveys, kolmen GLB:n delta
+
+Tämä on yhden ruudun yksityisen vastaanottajatestin ehdokas. Käytä V6-pohjan kanssa; tämä kansio ei yksin ole 72 GLB:n kaupunki. Korvaa vain glb-v4/peking_2_3_lod0/1/2.glb sekä niiden proofit ja taulukon koot. Muut 69 GLB:tä säilyvät V6:sta. Overlay-manifesti varmentaa myös ne. Maskit ja origot ovat byteilleen V6:n mukaiset.
+
+Kiveyksen albedo on uusi yhtenäinen 4096/2048/1024-kuva, joka poistaa sisäalueelta vanhan 4,8 metrin monikivisen kuvajakson. Kivien väri arvotaan yksilöllisesti koskemattoman lähteen lineaarisesta värijakaumasta. Kokonaan uusi built-in-imagegenin kivipintalähde g31 antaa kivien sisäistä pintavaihtelua. Lähde-PNG:tä eikä vanhoja kuvabittejä editoida. Kivijako, korkeus ja karheus syntyvät samasta uudesta jaosta; normal/MR enintään 1024. AO pysyy erillisessä lineaarisessa occlusion-slotissa, täsmälleen V6:n kuva/sidonta/UV1/strength0,6. Suunnittelumitat ja pihasuunnat eivät ole historiallisia mittauksia.
+
+V6:n pelipalautteen kaikki liitteet luettiin. V6 on hyväksytty pohja simulaattorin rajatussa testissä; sen AO:n näkyvä hyöty oli lähes nolla. V7:ään ei lisätty valinnaista AO-muutosta, jotta #361:n vaikutus on erotettavissa. #362:n kuusi kattovarianttia on lähteessä hyväksytty vain2_3:lle, mutta niitä eikä punaisten pintojen muutosta ole vielä tässä paketissa.
+
+Tekninen auditointi varmensi kolme GLB:tä, vanhan BIN-prefixin, alkuperäiset kuvat ja materiaalit sekä jokaisen kolmion järjestetyt POS/NORMAL/UV0/UV1-kulmat. Earth/grass/paving-primitiivejä yhdistetään häviöttömästi; uusia kolmioita tai geometriasiirtoja ei ole. Rakennukset, kattokulta303, V4-puut, DEM, origot, maskit ja saumapeitot säilyvät. Vanha noin7cm geometriasauma ja aiemmat pitkät pintalinjat eivät ole tämän materiaalimuutoksen geometrisesti korjaamia.
+
+QA sisältää 28 alkuperäistä actualGLB-vertailukuvaa, 14 kameraa ennen/jälkeen: kuusi jäädytettyä, kuusi kontakti-/regressiokameraa ja kaksi lentokorkeuden diagnostiikkaa. Ne ovat varjottomia Blender-ambient-diagnostiikoita samoilla kamerametatiedoilla ja AO:lla. Ne eivät ole pelin klo13/18, normaalikehyksen, veden, heijastusten, liikkeen, mipien tai KTX2-pakkauksen hyväksyntä. Lue Astran rajattu päätös ja parentin päätös QA:sta.
+
+## Vastaanottajan seuraava testi
+
+1. Esikäsittele vain kolme vaihtuvaa GLB:tä V6:n päälle. Värit/MR/AO ETC1S192, normaalit UASTC ja normaali-max1024. Säilytä uuden albedon4096/2048/1024-mitat, lineaariset data-slotit, kanavat ja mipit. Tarkista pakkausportti ja puretut kuvat. Vanhojen69 tiedoston materiaalijako ratkeaa jo teidän esikäsittelyssänne.
+2. Todenna ladattu paketti/hash, ruudun2_3 LOD ja pavingin uudet kolme karttaa. Todenna saman kameran näkyvistä maapikseleistä, tuottaako ne oma paving-renderer: esimerkiksi palautettava objektitunnistus/eristetty näkyvyyskoe. Eri näköinen pelietuala herätti vain hypoteesin pintaomistuksesta (oma/Ion/LOD/shader); kuvista ei päätellä peittymistä eikä maata nosteta.
+3. V6/V7 samalla kameralla,FOV:lla,valotuksella ja LOD:lla klo13 ja18; samat kontaktit sekä300–500m kallistus55–78°, matala vino liike ja LOD-vaihdot. Katso päätysaumat, kivien luettavuus, sävymosaiikki, toisto/moiré, vanha/uusi-raja, mustat läiskät ja mahdollinen halo.
+4. Mittaa KTX2-tavut, muisti/streaming ja ruutuaika. C6:lla ja esikäsitellylläV6:lla on sama61 slottia/LOD, joten uusia slot-säästöjä ei väitetä. Uusi4K-albedo kasvattaa laskennallista LOD0-muistia noin100,14MB RGBA8+mipit tai13,21MB ETC/UASTC-formaattioletuksella. KolmenLOD:n yhtäaikainen lisäys on131,40/17,33MB; nämä ovat arvioita, eivät VRAM/FPS-mittauksia. Katso Solin oletukset QA:sta.
+5. Palauta kriittiset pelikuvaparit ja build-/alustatunniste. Simulaattori ja fyysinen laite erotetaan. Älä laajenna muihin ruutuihin ennen kuvahyväksyntää. Julkaisu, Unity/R2/main ja omistajan koko kaupungin laatuhyväksyntä jäävät erillisiksi.
