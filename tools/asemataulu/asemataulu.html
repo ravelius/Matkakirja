@@ -290,6 +290,7 @@ section:not(.kiinni) .yhteenveto { display: none; }
   <section class="kortti" id="laitteet-osio" hidden>
     <h2><button type="button" class="otsikkonappi taitto" data-osio="laitteet-osio" aria-expanded="true">Laitteet</button> <span class="kysymykset yhteenveto" id="laitteet-yhteenveto"></span></h2>
     <div class="roolit" id="laitteet"></div>
+    <div class="palkit" id="google-palkki" hidden></div>
   </section>
   <section class="kortti" id="roolit-osio" hidden>
     <h2><button type="button" class="otsikkonappi taitto" data-osio="roolit-osio" aria-expanded="true">Roolit</button> <span class="kysymykset" id="roolimaara"></span></h2>
@@ -762,7 +763,39 @@ section:not(.kiinni) .yhteenveto { display: none; }
     var la = $('laitteet');
     la.replaceChildren();
     var lr = (tila.laitteet && tila.laitteet.rivit) || [];
-    $('laitteet-osio').hidden = lr.length === 0;
+    var g = tila.google;
+    $('laitteet-osio').hidden = lr.length === 0 && !(g && g.rivi !== false);
+    // Google-palkki (omistaja 16.10. 14.02, "pelkkä google"): kuluvan kuukauden kulut (Gemini, Maps, 3D-laatat ym.) laskutusviennistä,
+    // haku kerran päivässä (tools/kulut/hae-google.mjs → dokumentti google). Palkki = krediitin käytetty osuus (tai budjetti_usd, jos asetettu).
+    var gp = $('google-palkki');
+    gp.replaceChildren();
+    gp.hidden = !(g && typeof g.kulut_usd === 'number');
+    if (!gp.hidden) {
+      var usd = function (x) { return (Math.round(x * 100) / 100).toFixed(2).replace('.', ',') + ' $'; };
+      var kr = g.krediitti && typeof g.krediitti.summa_usd === 'number' && g.krediitti.summa_usd > 0 ? g.krediitti : null;
+      var kanta = kr ? kr.summa_usd : (typeof g.budjetti_usd === 'number' && g.budjetti_usd > 0 ? g.budjetti_usd : 0);
+      var kulu = kr ? Number(kr.kaytetty_usd) || 0 : g.kulut_usd;
+      var gpr = kanta ? Math.max(0, Math.min(100, kulu / kanta * 100)) : 0;
+      var grivi = luo('div', 'palkki koko');
+      var gpaa = luo('div', 'paa');
+      var gnimi = luo('span', 'nimi ei-versaali', 'Google');
+      if (g.kk) gnimi.append(luo('span', 'aika', ' (' + g.kk + ')'));
+      gpaa.append(gnimi, luo('span', 'arvo', kanta ? Math.round(gpr) + ' %' : usd(g.kulut_usd)));
+      var gura = luo('div', 'ura');
+      gura.setAttribute('role', 'meter');
+      gura.setAttribute('aria-label', 'Googlen kulut');
+      gura.setAttribute('aria-valuemin', '0');
+      gura.setAttribute('aria-valuemax', '100');
+      gura.setAttribute('aria-valuenow', String(Math.round(gpr)));
+      var gt = luo('div', 'tayte' + (gpr >= 90 ? ' punainen' : gpr >= 70 ? ' kulta' : ''));
+      gt.style.width = gpr + '%';
+      gura.append(gt);
+      grivi.append(gpaa, gura);
+      var gs = ['Tässä kuussa ' + usd(g.kulut_usd) + (Array.isArray(g.palvelut) && g.palvelut.length ? ' (' + g.palvelut.slice(0, 5).map(function (x) { return x.nimi + ' ' + usd(x.usd); }).join(', ') + ')' : '') + '.'];
+      if (kr) gs.push('Krediittiä käytetty ' + usd(kr.kaytetty_usd) + ' / ' + usd(kr.summa_usd) + (kr.nollautuu ? '; nollautuu ' + String(kr.nollautuu).slice(0, 10).split('-').reverse().join('.') : '') + '.');
+      grivi.append(luo('div', 'kysymykset', gs.join(' ')));
+      gp.append(grivi);
+    }
     var tehtavatL = (tila.tehtavat && tila.tehtavat.rivit) || {};
     lr.forEach(function (x) {
       var kaytossa = x.tila === 'käytössä';

@@ -1,0 +1,29 @@
+# Googlen kuukauden kulut Asemataulun Google-palkkiin (omistaja 16.10.2026 klo 14.02): haku kerran päivässä laskutusviennistä.
+# GOOGLE_BILLING_PROJECT/TAULU/TOKEN ovat vain repon secreteissä; tulos artifaktina (google.json, ei avaimia), Päätoimittaja vie sen tauluun.
+name: Hae Googlen kulut
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  hae:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - env:
+          GOOGLE_BILLING_TOKEN: ${{ secrets.GOOGLE_BILLING_TOKEN }}
+          GOOGLE_BILLING_PROJECT: ${{ secrets.GOOGLE_BILLING_PROJECT }}
+          GOOGLE_BILLING_TAULU: ${{ secrets.GOOGLE_BILLING_TAULU }}
+          GOOGLE_KREDIITTI_USD: ${{ vars.GOOGLE_KREDIITTI_USD }}
+          GOOGLE_KREDIITTI_NOLLAUTUU: ${{ vars.GOOGLE_KREDIITTI_NOLLAUTUU }}
+          GOOGLE_BUDJETTI_USD: ${{ vars.GOOGLE_BUDJETTI_USD }}
+        run: node tools/kulut/hae-google.mjs /tmp/google.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: google-kulut
+          path: /tmp/google.json
