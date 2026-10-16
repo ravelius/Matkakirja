@@ -14,11 +14,13 @@ Käynnistä kukin simu VAIN Julkaisijan SIMU NYT -viestistä ja lähetä SIMU VA
 | kamerapöytä-198 (agentin keskeneräinen työ viety loppuun) | 1ff45e88e | natiivi-ui/kamerapoyta-198 | ajo-kamerapoyta-198 iPad + iPhone |
 | skanneri-viivat-198 (KS 158e90cd9 päällä) | 5c2cb709b | natiivi-ui/skanneri-viivat-198 | ajo-skanneri-viivat-198 iPhone (Kiova, Marseille, Bergen) |
 | cupola-ohita2-197 (Ohita vasemmalle, pois Pulun päältä) | dc48eb887 | natiivi-ui/cupola-ohita-197 | ajo-cupola-ohita2-197 iPhone + iPad, 1 still → PT → KK |
+| lasipohja3-197 (PT 01.5x: Äänet-lasi Kehys.Panel2, puolikas alarivi leikataan) | 9faf8ae4f | natiivi-ui/lasipohja-197 | ajo-lasipohja3-197 iPhone → PT → KK → SHA NS 198 |
 | kehys-kaaro-198 (UUSI POHJA KEHYS-KÄÄRÖ) | 9365854c2 | natiivi-ui/kehys-kaaro-198 | ajo-kehys-kaaro-198 iPhone, VASTA 198-simujen jälkeen |
 
 Kaikki kytkimet oletuksena pois (kamerapöytä, skannerin viivat) paitsi museo-kevyt (PT voi pyytää pois). Kuvat PT:lle ennen kytkentää.
 
-## SIMUJONO (Julkaisijan järjestys): 1. lasipohja-197 iPhone (käännetty, lasipohja-197-app) → 2. yllä olevat käännöksen jälkeen.
+## SIMUJONO: lasipohja-197 iPhone AJETTU 01.4x (lokit/todistus-lasipohja-iphone-197-20261017-0142 + lasipohja2-…-0146; PT: korjaa → lasipohja3). Muut käännöksen jälkeen.
+LS otti KehysKaaron käyttöön haarassa linssiseppa/kiina-valmis-198 (AikajanaNakyma.cs, 3 riviä) – älä muokkaa samaa kohtaa.
 
 ## VALMIIT TÄSSÄ SESSIOSSA
 - Cupola Ohita -video OK b38e4dbb4: lokit/todistus-cupola-ohita-iphone-197-20261017-0127 (PT:lle lähetetty; löydös Pulu → dc48eb887).
