@@ -46,7 +46,7 @@ kuin muissa faktapohjissa.
 | 10 | 790 | Tang kaventunut · **Tiibet** hallitsee Hexiä ja Tarimia | Chang'an · Lhasa | An Lushanin kapinan (755–763) jälkeen Tiibet valtaa Silkkitien ja ehtii vuonna 763 hetkeksi Chang'aniin. |
 | 11 | 950 | Viisi dynastiaa ja kymmenen kuningaskuntaa · **Liao** (kitaanit) | Kaifeng · Shangjing | Kiina pirstoutuu taas, ja kitaanien Liao saa haltuunsa nykyisen Pekingin seudun vuonna 938. |
 | 12 | 1100 | Pohjoinen Song · **Liao** · **Länsi-Xia** (tangutit) | Kaifeng · Shangjing · Xingqing | Song-ajan Kiinassa painetaan kirjoja ja käytetään paperirahaa, mutta pohjoisen rajan takana hallitsevat Liao ja Länsi-Xia. |
-| 13 | 1142 | Eteläinen Song · **Jin** (jurchenit) · Länsi-Xia | Lin'an (Hangzhou) · Shangjing/Zhongdu | Jurchenien Jin valtaa Kaifengin 1127, ja Song jatkaa etelässä Hangzhoun ympärillä. |
+| 13 | 1142 | Eteläinen Song · **Jin** (jurchenit) · Länsi-Xia | Lin'an (Hangzhou) · Shangjing (Zhongdu vasta 1153) | Jurchenien Jin valtaa Kaifengin 1127, ja Song jatkaa etelässä Hangzhoun ympärillä. |
 | 14 | 1280 | **Yuan** (mongolit), kotiseutu Mongolian aroilla | Dadu (Peking) | Kublai-kaani hallitsee koko Kiinaa, ja Dadusta eli nykyisestä Pekingistä tulee pääkaupunki. |
 | 15 | 1421 | Ming | Nanjing → Peking | Ming ajaa mongolit pohjoiseen, ja keisari Yongle siirtää pääkaupungin Pekingiin, jossa Kielletty kaupunki valmistuu 1420. |
 | 16 | 1644 | Ming kaatuu · **Qing** (mantšut), kotiseutu Mantšuriassa | Mukden → Peking | Mantšut pääsevät Shanhain solan kautta muurin läpi Pekingiin, ja Qing-dynastia hallitsee seuraavat 268 vuotta. |
@@ -64,10 +64,11 @@ patinaan sopivia vesivärisävyjä, ja lopullisen säädön tekee kuvaputki peli
 - **Kiinalaiset dynastiat: lämmin punaruskea perhe.** Qin musta-ruskea (#4a3a32), Han punainen (#a8432f), Jin ja etelän
   dynastiat ruosteenpunainen (#b4603c), Sui ja Tang kirkas punaoranssi (#c25a2c), Song terrakotta (#b86a4a), Ming
   karmiini (#9e2f36). Hajoamisen ajan rinnakkaiset valtiot erotetaan kirkkaudella saman perheen sisällä (Wei, Shu ja Wu).
-- **Ulkoiset hallitsijat: viileät omat värit.** Xiongnut harmaanvihreä (#6f7d5c), Xianbei ja Pohjois-Wei sinivihreä
+- **Ulkoiset hallitsijat: viileät omat värit.** Xiongnut harmaanvihreä (#5f7b69), Xianbei ja Pohjois-Wei sinivihreä
   (#3f7f7a), Tiibet violetti (#6b4f86), Liao (kitaanit) sininen (#3d6595), Länsi-Xia (tangutit) turkoosi (#2f8f95), Jin
-  (jurchenit) teräksensininen (#4d6c8c), Yuan (mongolit) indigo (#34406f) ja Qing (mantšut) keltainen (#c9a227). Qingin
-  keltainen on keisarillinen väri, joka johdattaa Kielletyn kaupungin keltaisiin kattoihin.
+  (jurchenit) teräksensininen (#4d6c8c), Yuan (mongolit) indigo (#34406f) ja Qing (mantšut) viileä sininen (#41709c,
+  omistaja 16.10.2026 klo 20.35). Sääntö: ulkoiset hallitsijat viileillä, kiinalaiset dynastiat lämpimillä värisävyillä;
+  Jin (jurchenit) ja Qing (mantšut) ovat sukulaisvärejä, koska mantšut polveutuvat jurcheneista.
 - **Kotiseutu:** ulkoisen kansan kotiseutu näkyy aina sen omalla värillä vinoviivoitettuna, myös silloin kun kansa hallitsee
   Kiinaa. Esimerkiksi Yuanin ja Qingin aikana pelaaja näkee, mistä hallitsijat tulivat.
 - **Pääkaupunki:** pieni sinettimerkki. Siirtyessään se liukuu kartalla, ja vanhaan paikkaan jää himmeä piste.
