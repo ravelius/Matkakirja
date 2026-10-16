@@ -323,3 +323,12 @@ kuva iPhone + Mac PT:lle; SK luonnostelee Pulun kysymykset rinnalla – älä od
 - Tekoälymerkintä chatissa jää (PT). Vastaukset 82–103 (11 uutta merinostoa) vasta omistajan äänityskortin jälkeen: lisää uusi-meri-*.json generaattoriin.
 - AUKI: Mac-kuva. Odottaja (scratchpad mac-jonoon.sh) jonottaa `PROTO_LINJA=2 mac-kaanna.sh f7ffbff4d` vasta kun NUI 122169f34 on L2-lukossa
   (Julkaisija 01.5x). Sitten tyokalut/siirtoseppa-ajot/mac-meri-nostot-196.sh <.app> <kansio> (idle ≥ 600 s; napauttaa itameri + tyrrhenanmeri) → PT.
+
+## PÄIVITYS 16.10. 03.3x — MAC-KUVA VALMIS, JONO TYHJÄ
+
+- Mac f7ffbff4d: lokit/siirtoseppa-meri-nostot-196-mac4 (kortti Suomenlahti/Tyrrhenanmeri, merivastaus 07 soi). PT:lle, ei omistajalle.
+- MAC-OPIT: konsolissa voi olla toinen macOS-käyttäjä (CGSession kCGSSessionOnConsoleKey=0) → appi "piilossa" (1 fps, Cesium seis), ikkunakuva
+  (screencapture -l/-R) jää vanhaksi, System Events -ikkunan siirto kielletty. Toimii: pelin oma `kuva <nimi>` ui-komento.txt:ssä
+  (→ persistentDataPath/ui-<nimi>.png, odota ≤ 90 s). Leveässä ikkunassa merinimet näkyvät vasta kaarella ~12 (Itämeri) / 34 (Välimeri).
+  Binääri Contents/MacOS/Matkakirja; asetukset app.matkakirja.proto3d (defaults export/import ajon ympärille). Skripti mac-meri-nostot-196.sh v4.
+- Jono tyhjä (PT:lle 03.3x). Seuraavat mahdolliset: merivastaukset 82–103 omistajan äänityskortin jälkeen (uusi-meri-*.json generaattoriin).
