@@ -8,7 +8,7 @@
  *        [--alue -6,41,10,52] [--tasot 0-11] [--ruudukko 65] [--osa i/n]
  *        [--maailma 6] [--vain-maa-alkaen 7] [--glo30-kynnys 0.001]
  *        [--luettelo] [--lista] [--mapterhorn <raakakansio>] [--vanhempi <url>] [--laatat <lista>]
- *        [--naytetaso 15] [--dem-normaalit]
+ *        [--naytetaso 15] [--dem-normaalit] [--jatka]
  *
  * TASAN NÄYTTEET (Karttaseppä 12.10.2026, LS2:n vuoristopilotti 3): `--naytetaso Z` näytteistää
  * jokaisen tason z < Z samalla välillä kuin taso Z (ruudukko (n−1)·2^(Z−z)+1, esim. z13 257, z14 129,
@@ -65,7 +65,7 @@
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { gzipSync } from 'node:zlib';
+import { gunzipSync, gzipSync } from 'node:zlib';
 
 import { avaaGeotiff } from './geotiff.mjs';
 import { rtinVerkko, rtinVirheet } from './rtin.mjs';
@@ -513,6 +513,7 @@ export function lueAsetukset(argv) {
     vanhempi: arvo('vanhempi', null),
     luettelo: argv.includes('--luettelo'),
     lista: argv.includes('--lista'),
+    jatka: argv.includes('--jatka'),
   };
 }
 
@@ -600,8 +601,11 @@ export async function aja(argv, loki = console.log) {
     const kansiot = new Set();
     for (const [x, y] of lista ? listanLaatatJarjestyksessa(lista.get(s.z) ?? [], s.z, osa, osia) : tasonLaatatJarjestyksessa(s, dem.onRuutu, osa, osia)) {
       if (!kansiot.has(x)) { mkdirSync(join(a.ulos, String(s.z), String(x)), { recursive: true }); kansiot.add(x); }
+      const polku = join(a.ulos, String(s.z), String(x), `${y}.terrain`);
+      // --jatka: keskeytyneen ajon ehjät laatat (gzip purkautuu) jätetään; vajaa tai puuttuva lasketaan uudelleen.
+      if (a.jatka && existsSync(polku)) { try { gunzipSync(readFileSync(polku)); laattoja += 1; tasolla += 1; continue; } catch { /* lasketaan uudelleen */ } }
       const l = teeLaatta(dem, s.z, x, y, ruudukkoTasolle(n, s.z, a.naytetaso), a.virhekerroin, { demNormaalit: a.demNormaalit });
-      writeFileSync(join(a.ulos, String(s.z), String(x), `${y}.terrain`), l.tavut);
+      writeFileSync(polku, l.tavut);
       laattoja += 1; tasolla += 1; tavuja += l.tavut.length; kolmioita += l.kolmioita;
     }
     maarat[s.z] = tasolla;
