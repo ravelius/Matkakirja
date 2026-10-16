@@ -1,0 +1,62 @@
+{
+  "sourceCommit": "d4bf541f49df907db0818b2e3ac3a71ea5410995",
+  "sourcePath": "posti/valoseppa-codex-iss-havainnekuvat-uusinta-20261016.md",
+  "sourceBlob": "6a920be803d97381b9be3a16161748cd26079137",
+  "sourceReadInFull": true,
+  "fourReferencesPersonallyViewed": true,
+  "files": [
+    {
+      "sourceCommit": "d4bf541f49df907db0818b2e3ac3a71ea5410995",
+      "sourcePath": "posti/valoseppa-codex-iss-havainnekuvat-uusinta-20261016.md",
+      "sourceBlob": "6a920be803d97381b9be3a16161748cd26079137",
+      "sha256": "efe92526fdf44cf4f72c52ffd214c6e49318323339f860d53c70c2b60a8e0a4e",
+      "bytes": 2294,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/sources/valoseppa-codex-iss-havainnekuvat-uusinta-20261016.md",
+      "sourceReadInFull": true,
+      "personallyViewed": false
+    },
+    {
+      "sourceCommit": "d4bf541f49df907db0818b2e3ac3a71ea5410995",
+      "sourcePath": "posti/iss-havainnekuvat-20261016/havainne-r1.png",
+      "sourceBlob": "47a3c6d2dd0154c78e350bb4500324e1dcd0bccc",
+      "sha256": "9e6bb4220c27f01f7eec36dcc042570527dd4a5cce844088d8d86dd2a680ae6d",
+      "bytes": 2444667,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/sources/havainne-r1.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true
+    },
+    {
+      "sourceCommit": "d4bf541f49df907db0818b2e3ac3a71ea5410995",
+      "sourcePath": "posti/iss-havainnekuvat-20261016/havainne-s1.png",
+      "sourceBlob": "5256ca5219229df9d9dbcc8b26b9dfa5fe501dbb",
+      "sha256": "68412d25c750fb68fc0cb3b1c0d57a7c4582da9f7f45861a14d578b0c24713d5",
+      "bytes": 1958237,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/sources/havainne-s1.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true
+    },
+    {
+      "sourceCommit": "d4bf541f49df907db0818b2e3ac3a71ea5410995",
+      "sourcePath": "posti/valoseppa-iss-havainne9-pelikulmat/r2-syttyminen.jpg",
+      "sourceBlob": "9cb98e1825cbc73706a6bc80d1cc583db499e6f0",
+      "sha256": "4e317cd360563e9579f5aa4a5113eefd3ca5630138073d99b42562a366c95168",
+      "bytes": 1053758,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/sources/r2-syttyminen.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true
+    },
+    {
+      "sourceCommit": "d4bf541f49df907db0818b2e3ac3a71ea5410995",
+      "sourcePath": "posti/valoseppa-iss-havainne9-pelikulmat/s1-salamat.jpg",
+      "sourceBlob": "32794e4700e0fd1be5e2113d5c6104a1e9e4d888",
+      "sha256": "26f3beabb5678f41b3fd99344d40cf0658425276eeddc76d852bc40452074f5a",
+      "bytes": 143915,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/sources/s1-salamat.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true
+    }
+  ],
+  "priorDeliveryReadByRecipient": true,
+  "formatDeviationAcceptedOnly": true,
+  "notPriorBatchQualityAcceptance": true
+}

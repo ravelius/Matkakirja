@@ -1,0 +1,62 @@
+{
+  "authority": "d4bf541f49df907db0818b2e3ac3a71ea5410995",
+  "maximumNewCalls": 2,
+  "actualNewCalls": 2,
+  "calls": [
+    {
+      "angle": "r2-u1",
+      "taskNumber": 372,
+      "status": "completed",
+      "attempt": 1,
+      "issuedAt": "2026-10-16T06:38:32.343560+00:00",
+      "toolArgs": {
+        "prompt": "Use case: stylized-concept, cinematic photorealism. Make one completely NEW photographic scene from scratch, NOT an edit, patch or local repair. The supplied images are reference images only. Very high-end cinematic realism, credible physical materials and light, restrained cool shadows and warm light. PORTRAIT 3:4, same camera and framing as references, largest native output. No text, numbers, map labels, logos, flags, inset globe, HUD, typography, caption strips or watermark. Absolutely no added vignette; darkness only where scene lighting physically warrants it. Do not alter the viewpoint or subject scale.\nPrimary request: stationary rocket ENGINE IGNITION at T+1 seconds, BEFORE hold-down release. This is NOT liftoff. Image1 is the authoritative composition, exact launch-table geometry, rocket position and NIGHT lighting reference. Image2 is the same game camera for placement only; ignore its daylight and all UI. Recreate the coastal pad, four lightning masts/cables, gantry behind the centered white rocket, high downward oblique camera, wet concrete and dark water exactly like image1. Rocket tip near y32%, base y65%; FULL rocket body must extend all the way down to the existing table mounting ring with no shortening or raising. Crucial visible evidence: the rocket foot is still seated directly ON the launch-table ring, touching it; hold-down clamps remain visibly engaged. There is NO air or flame gap between rocket foot and table. Support hardware and hoses remain attached. Engines ignite into the ENCLOSED opening of the table/flame trench, whose roof lies immediately beneath the rocket foot. The white-hot core is visible INSIDE the SIDE opening of the flame trench, NOT as a vertical gap lifting the rocket. Hot exhaust redirects HORIZONTALLY out of the side trench, with thick lobed steam/smoke rolling sideways across the ground, internally lit orange, brightest at the side exit and fading with distance. Preserve a clear enough view of the seated mounting connection above the side-exiting flame to prove ground contact; do not hide contact entirely in smoke. Floodlights, humid light beams, tank steam and wet concrete reflections like image1, with ignition adding intense warm light locally. Sea/land otherwise truly night-dark. No moonlit landscape. One full fresh scene, do not just reuse or patch the old photo.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/sources/havainne-r1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/sources/r2-syttyminen.jpg"
+        ],
+        "transparent_background": false
+      },
+      "promptSHA256": "ae48cdc027f704288527fa34d107189b38a3c85bafaaec11f0e1e06d1afbf97b",
+      "completedAt": "2026-10-16T06:39:34.553971+00:00",
+      "nativeToolPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-85fd50d5-c0f7-4df0-ba0b-f5e70b3bcd27.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/images/havainne-r2-u1.png",
+      "sha256": "b58bb52ebece3e3783b74c5db455859a5fafefba34e741593847564c6efea09d",
+      "bytes": 2305688,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true
+    },
+    {
+      "angle": "s1-u1",
+      "taskNumber": 373,
+      "status": "completed",
+      "attempt": 1,
+      "issuedAt": "2026-10-16T06:39:36.154570+00:00",
+      "toolArgs": {
+        "prompt": "Use case: stylized-concept, cinematic photorealism. Make one completely NEW photographic scene from scratch, NOT an edit, patch or local repair. The supplied images are reference images only. Very high-end cinematic realism, credible physical materials and light, restrained cool shadows and warm light. PORTRAIT 3:4, same camera and framing as references, largest native output. No text, numbers, map labels, logos, flags, inset globe, HUD, typography, caption strips or watermark. Absolutely no added vignette; darkness only where scene lighting physically warrants it. Do not alter the viewpoint or subject scale.\nPrimary request: a new night Earth thunderstorm image through the single large Cupola window. Image1 supplies ONLY the framing, physical window rim/console and the good lower-cell lightning style, NOT the number or placement of bright cloud patches. Image2 supplies ONLY game camera/frame/console positions; ignore both blue cloud glows and every UI element. Preserve the single large circular opening with top/side metal rim, physical blank-screen console at lower center and Earth filling the downward view, no new struts or extra panes. Generate a different complete scene: exactly ONE cumulonimbus cell near lower-middle x50%,y62% is illuminated, with exactly ONE connected blue-white spider-lightning discharge across its cloud top. The discharge has one main thin horizontal channel and FIVE delicate short offshoot branches, one connected event with one brightest core, lighting only its own billowing cloud domes. Every other cloud mass in the entire window is unlit, near-black, reflecting no blue/white light; upper-left area is simply dark ocean and almost invisible unlit cloud folds, NO isolated luminous patch. There must be no other lightning core, blue spot, white glow or second illuminated storm anywhere, including the far upper-left region where the old picture failed. Only a few dim AMBER city lights far away, no white lights that resemble flashes. One single local flash; rest of night Earth dark. Console and rim dark with extremely faint local reflection from the ONE near cell. Cinematic photographic cloud texture, physically credible lighting, horizontal spider channel stays on the cloud not in space, no laser bolts. Maintain 3:4 framing and source camera. A whole NEW image; do NOT partially erase anything from image1.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/sources/havainne-s1.png",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/sources/s1-salamat.jpg"
+        ],
+        "transparent_background": false
+      },
+      "promptSHA256": "8ac45cda9910b8a4eacf93831cbdd469e16de41179fde6673f5c63570a43c2ec",
+      "completedAt": "2026-10-16T06:40:41.047674+00:00",
+      "nativeToolPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a3637f8a-5bb3-4b8b-b24b-6c8e06e8527a.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/retry372-373/images/havainne-s1-u1.png",
+      "sha256": "47d5360e7bb08fafd784ddde0eb406d621b4145f2b4b456082cf9ca0ce174b47",
+      "bytes": 1918850,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true
+    }
+  ],
+  "priorNineCallsUnchanged": true
+}

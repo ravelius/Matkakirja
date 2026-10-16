@@ -1,0 +1,32 @@
+{
+  "nativeDimensions": [
+    1086,
+    1448
+  ],
+  "aspectRatio": "3:4",
+  "nativeBytesUnedited": true,
+  "formatDeviationAcceptedByNewSource": true,
+  "ownerAccepted": false,
+  "images": [
+    {
+      "angle": "r2-u1",
+      "sha256": "b58bb52ebece3e3783b74c5db455859a5fafefba34e741593847564c6efea09d",
+      "bytes": 2305688,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "angle": "s1-u1",
+      "sha256": "47d5360e7bb08fafd784ddde0eb406d621b4145f2b4b456082cf9ca0ce174b47",
+      "bytes": 1918850,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    }
+  ]
+}

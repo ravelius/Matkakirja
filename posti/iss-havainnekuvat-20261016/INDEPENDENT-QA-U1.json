@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_visual_review",
+  "reviewer": "iss_scene_camera_qa",
+  "reviewed_at_utc": "2026-10-16T06:43:06.833794+00:00",
+  "scope": "Korjaustilaus #372–373; vain r2-u1 ja s1-u1. Ei vanhan 9 kuvan erän uudelleenarviointia.",
+  "brief": "sources/valoseppa-codex-iss-havainnekuvat-uusinta-20261016.md",
+  "brief_sha256": "efe92526fdf44cf4f72c52ffd214c6e49318323339f860d53c70c2b60a8e0a4e",
+  "brief_read_completely": true,
+  "state": "review_complete_2_of_2_owner_and_recipient_acceptance_separate",
+  "method": "Kaikki neljä kuvareferenssiä ja molemmat tulos-PNG:t katsottu henkilökohtaisesti view_image-työkalulla. Ei kuvagenerointia, kuvamuutoksia tai skaalausta QA:ssa.",
+  "sources": [
+    {
+      "path": "sources/havainne-r1.png",
+      "sha256": "9e6bb4220c27f01f7eec36dcc042570527dd4a5cce844088d8d86dd2a680ae6d",
+      "bytes": 2444667,
+      "width": 1086,
+      "height": 1448,
+      "format": "PNG",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "path": "sources/r2-syttyminen.jpg",
+      "sha256": "4e317cd360563e9579f5aa4a5113eefd3ca5630138073d99b42562a366c95168",
+      "bytes": 1053758,
+      "width": 2064,
+      "height": 2752,
+      "format": "JPEG",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "path": "sources/havainne-s1.png",
+      "sha256": "68412d25c750fb68fc0cb3b1c0d57a7c4582da9f7f45861a14d578b0c24713d5",
+      "bytes": 1958237,
+      "width": 1086,
+      "height": 1448,
+      "format": "PNG",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "path": "sources/s1-salamat.jpg",
+      "sha256": "26f3beabb5678f41b3fd99344d40cf0658425276eeddc76d852bc40452074f5a",
+      "bytes": 143915,
+      "width": 2064,
+      "height": 2752,
+      "format": "JPEG",
+      "aspect_ratio": "3:4"
+    }
+  ],
+  "images": [
+    {
+      "id": "r2-u1",
+      "candidate": {
+        "path": "images/havainne-r2-u1.png",
+        "sha256": "b58bb52ebece3e3783b74c5db455859a5fafefba34e741593847564c6efea09d",
+        "bytes": 2305688,
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "aspect_ratio": "3:4"
+      },
+      "references": [
+        "sources/havainne-r1.png",
+        "sources/r2-syttyminen.jpg"
+      ],
+      "assessment": "visible_correction_supported_with_static_image_limits",
+      "on_pad": {
+        "finding": "Raketin alaosa näyttää istuvan laukaisupöydän renkaalla. Alaosan ja renkaan väliin ei näy selvää ilmarakoa; liekin kirkas ydin on renkaan ja pöydän alapuolella, ei rakettia ilmaan nostavana pitkänä näkyvänä välinä.",
+        "visible_air_gap": false,
+        "on_ring_observed": true,
+        "confidence": "visual_observation_not_mechanical_proof"
+      },
+      "clamps": {
+        "finding": "Renkaan sivuilla erottuu tummia/kulmikkaita pitoa ja tukea muistuttavia rakenteita. Kuva ei kuitenkaan erottele yksittäisiä hold-down-clampeja ja niiden lukittumista niin selvästi, että niistä voisi tehdä teknisen kiinnitysväitteen.",
+        "support_like_structures_visible": true,
+        "clamp_engagement_proven": false
+      },
+      "camera_composition_scale": {
+        "finding": "Korkea viisto kamera, keskitetty raketti, sen nokan/jalan kuvapaikat, torni, ukkossuojat, säiliöt ja laukaisupöytä vastaavat r1-kamerareferenssiä hyvin. 3:4-pystyrajaus säilyy. Savu peittää osan alustan sivuista, mutta näkymä tunnistuu samaksi kameraksi ja alustaksi.",
+        "material_deviation_observed": false
+      },
+      "night_light": {
+        "finding": "Yö, valonheittimet, punaiset estevalot ja märän betonin heijastukset ovat r1:n kanssa samaa visuaalista tilaa. Valkoinen liekin ydin purkautuu pöydän alta, savu valaistuu oranssiksi ja leviää sivulle; päämassa oikealle on vasenta voimakkaampi.",
+        "material_deviation_observed": false
+      },
+      "clean_image": {
+        "finding": "Ei havaittua luettavaa tekstiä, tunnistettavaa logoa, päälle lisättyä UI:ta tai selkeää vinjettiä.",
+        "issues_observed": []
+      },
+      "invented_elements": [
+        "Liekin ja savun tarkka muoto, määrä ja tuulen suunta.",
+        "Renkaan tuki-/pitomekanismien tekniset yksityiskohdat, kosteus ja heijastusten tarkka voimakkuus."
+      ],
+      "limitations": [
+        "T+1-ajankohtaa tai sitä, että raketti pysyy alustalla animaation koko sytytysvaiheen ajan, ei voi todistaa yksittäiskuvasta.",
+        "Näkyvä kontakti ei todista clampien mekaanista kiinnitystä tai fyysistä kantavuutta."
+      ]
+    },
+    {
+      "id": "s1-u1",
+      "candidate": {
+        "path": "images/havainne-s1-u1.png",
+        "sha256": "47d5360e7bb08fafd784ddde0eb406d621b4145f2b4b456082cf9ca0ce174b47",
+        "bytes": 1918850,
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "aspect_ratio": "3:4"
+      },
+      "references": [
+        "sources/havainne-s1.png",
+        "sources/s1-salamat.jpg"
+      ],
+      "assessment": "visible_correction_supported_with_static_image_limits",
+      "lightning_groups": {
+        "finding": "Havaitsen yhden yhtenäisen sinivalkoisena valaistun pääpilviryhmän kuvan alaosan keskellä. Aiemman s1:n erillinen ylävasen sinivalkoinen kirkastuma on poissa. Yläosan muut pilvet jäävät tummiksi ilman itsenäistä valkoista/sinistä ydintä.",
+        "observed_independent_illuminated_groups": 1,
+        "separate_second_flash_observed": false
+      },
+      "light_spill": {
+        "finding": "Pääryhmän valo leviää sen viereisiin ja alaoikeisiin kumpuihin. Näissä ei näy toista itsenäistä kirkasta ydintä tai erillistä salamakanavaa. Ne näyttävät saman laajan pilvipankin/ryhmän valaistukselta, joten niitä ei lasketa automaattisesti toiseksi välähdykseksi. Pilvisolujen meteorologisia rajoja ei voi varmasti ratkaista 2D-kuvasta.",
+        "treated_as_same_contiguous_lit_group": true,
+        "meteorological_cell_count_proven": false
+      },
+      "channel": {
+        "finding": "Pääryhmässä näkyy yksi yhtenäinen ohut sinivalkoinen, pääosin vaakasuora kanavaverkko pilven pinnalla/reunalla. Silmämääräisesti noin 4–6 päähaaraa; pienempiä sivuoksia on enemmän, joten tarkka päähaaraluku riippuu haaroitustason tulkinnasta. Ei havaittua toista irtonaista kanavaverkkoa.",
+        "observed_contiguous_channel_networks": 1,
+        "estimated_major_branches_min": 4,
+        "estimated_major_branches_max": 6,
+        "thin_horizontal_channel_observed": true
+      },
+      "camera_composition_scale": {
+        "finding": "Cupolan yksi fyysinen ikkuna, kehyksen kaari ja alakeskikonsolin paikka/koko vastaavat aiempaa s1-referenssiä hyvin. Ei lisäikkunoita tai uusia näkymän jakavia poikkipuita. Pääpilviryhmä ja sen muodot on generoitu uudestaan, eivät täsmällinen kopio aiemman kuvan pilvistä.",
+        "material_camera_deviation_observed": false,
+        "single_physical_window_preserved": true,
+        "lower_center_console_preserved": true
+      },
+      "night_light": {
+        "finding": "Maa/meri pysyy tummana, muut pilvet ovat tummaa reliefiä ja kultaiset kaupunkivalot näkyvät paikallisesti. Salamavalon kirkkaus keskittyy pääryhmään; aiemman kuvan toisessa paikassa ollutta kirkasta sinivalkoista solua ei näy.",
+        "material_deviation_observed": false
+      },
+      "clean_image": {
+        "finding": "Ei havaittua luettavaa tekstiä, tunnistettavaa logoa, päälle lisättyä UI:ta tai selkeää vinjettiä. Konsolin näyttö on blankko.",
+        "issues_observed": []
+      },
+      "invented_elements": [
+        "Pilvien yksityiskohtainen rakenne ja todentamattomat meteorologiset solurajat.",
+        "Salamakanavan tarkka muoto, haaroitus ja valon leviäminen sekä kaupungit/rannikon yksityiskohdat."
+      ],
+      "limitations": [
+        "Yhden kuvan näkyvä yksi välähdys ei todista, että animaatio tai runtime estää kaksi yhtäaikaista välähdystä.",
+        "Yksi näkyvä valaistunut pilviryhmä ei todista meteorologisesti vain yhtä ukkossolua tai yksittäistä purkausta.",
+        "3–6 päähaaran vaatimus arvioidaan näkyvästä pääkanavasta; hienoja sivuhaaroja ei lasketa päähaaroiksi."
+      ]
+    }
+  ],
+  "size": {
+    "native_width": 1086,
+    "native_height": 1448,
+    "aspect_ratio": "3:4",
+    "explicitly_accepted_in_retry_brief": true,
+    "reported_as_size_defect": false,
+    "meaning": "Uusintatilauksen kokohyväksyntä ei ole vanhan erän kuva-, peli-, runtime- tai omistajahyväksyntä."
+  },
+  "summary": {
+    "personally_reviewed_candidates": 2,
+    "review_complete": true,
+    "r2_on_ring_without_visible_gap": true,
+    "r2_clamp_engagement_proven": false,
+    "s1_observed_independent_lit_groups": 1,
+    "s1_contiguous_channel_networks": 1,
+    "s1_major_branches_estimate": "4–6",
+    "material_retry_target_deviation_observed": false,
+    "recommendation": "Molemmat ovat perusteltuja korjausehdokkaita PT:n/omistajan arvioon näkyvien kuvahavaintojen perusteella; ei lopullista hyväksyntää."
+  },
+  "acceptance": {
+    "owner": "not_obtained_in_this_review",
+    "recipient": "not_obtained_in_this_review",
+    "runtime": "not_tested",
+    "game_integration": "not_verified",
+    "old_nine_image_batch": "unchanged_not_approved_by_this_review"
+  },
+  "prior_qa_unchanged_sha256": {
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/qa/independent-review.json": "28ac29812b57fb57b5ac5e7a0b13a9b4652e50d5117e31a813aaedd2e282274c",
+    "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/qa/INDEPENDENT-QA-FI.md": "ed5c8f1e31d7375ee308ba9c9129a99db27c161fecf155fadf527ba5af168151"
+  },
+  "pending": []
+}

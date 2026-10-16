@@ -1,0 +1,55 @@
+{
+  "createdAt": "2026-10-16T06:44:09.047954+00:00",
+  "files": [
+    {
+      "path": "GENERATION-CALLS-U1.json",
+      "sha256": "059c0fa331bee29107d0db0a6dfcd369786e5b7019dd583e7cd0e5cdf1e91107",
+      "bytes": 7470
+    },
+    {
+      "path": "INDEPENDENT-QA-U1-FI.md",
+      "sha256": "0eacad7a5deae892af11f8c4164c4ad3898acfa9c8e9a82f4cf6baeb0fe5a763",
+      "bytes": 4019
+    },
+    {
+      "path": "INDEPENDENT-QA-U1.json",
+      "sha256": "dfaff5e373338df7b875b9607d71bd731288fc19caf1fe6f210cf8c585261e33",
+      "bytes": 9712
+    },
+    {
+      "path": "NATIVE-MANIFEST-U1.json",
+      "sha256": "d8b378af5985d2dffd74810fcbef7ff108fa0fabf5ee55c580aafc0c6a7997fa",
+      "bytes": 642
+    },
+    {
+      "path": "PROMPTS-U1.json",
+      "sha256": "d13aeae9de95aa799bebc1ac3460be9a3cbab01eed844346b7c45f5457214b28",
+      "bytes": 4937
+    },
+    {
+      "path": "QA-FI-UUSINTA.md",
+      "sha256": "3eee6c8e4053501751c47c957fe6b69c4b0a38f491a9d606c4a966d4605c78d2",
+      "bytes": 2588
+    },
+    {
+      "path": "SOURCE-U1.json",
+      "sha256": "d37adca746e614ab3e86d2da33e63739e69e2f3d253b38bcbd5bc174fd1106c7",
+      "bytes": 3215
+    },
+    {
+      "path": "U1-REVIEW-BOARD.jpg",
+      "sha256": "14c4586c6d9f47711a8d74ad1ba726b44a94ea40f7e8cb3f4ebf08e084183309",
+      "bytes": 127822
+    },
+    {
+      "path": "havainne-r2-u1.png",
+      "sha256": "b58bb52ebece3e3783b74c5db455859a5fafefba34e741593847564c6efea09d",
+      "bytes": 2305688
+    },
+    {
+      "path": "havainne-s1-u1.png",
+      "sha256": "47d5360e7bb08fafd784ddde0eb406d621b4145f2b4b456082cf9ca0ce174b47",
+      "bytes": 1918850
+    }
+  ]
+}
