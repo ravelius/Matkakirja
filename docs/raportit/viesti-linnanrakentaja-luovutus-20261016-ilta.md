@@ -4,6 +4,8 @@ Edellinen: `viesti-linnanrakentaja-luovutus-20261016-iltapaiva.md`. Viestit AINA
 Valoseppä local_c238f4af…, Postivahti local_a24c43c0…. PT:lle ≤ 3 riviä.
 
 ## 1. SEURAAVAKSI
+**PT 19.5x ensimmäisenä:** Louvre k52: L2:n varjopuoli ~25 % tavoitetta tummempi → selvitys Valosepän kanssa (valo vai malli; työnjako alla);
+L1-arkit jatkossa AINA L1b-kamerasta; k51-paketti `v6k18-lv2f-k51s` EI tuotantoon (tuotannossa k48 = v6k20).
 1. **Louvre k52s (Valoseppä kuvaa):** k52 = luuppi-vienti/glb (md5 224accaf/28db1999/fb031cec). Sovittu työnjako 19.5x: minä kivi +7 %
    (tehty), Valoseppä L2:n varjopuoli ~+25 % (taivas/maa) + AO koloihin; arkki L1b + L2 + L3 vs Codex. Kun arkki tulee
    (`_tyo/linssiseppa2/louvre1/lahi-L1-L3/k52s/`): mittaa sävyt (L1 tavoite 136,121,100; L2 125,110,91; mittausrajat kuten
