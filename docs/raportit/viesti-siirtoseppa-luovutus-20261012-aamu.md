@@ -379,3 +379,6 @@ kun 9fa3b99f1 on juna-196:ssa).
   (askeleet 10–12 dB salin/sellon yli kuten 14.10., sisäänmeno soi; kertoja ei puhunut, lista auki) ja -198b-…-2141 ("museo nayttely kg" ei sulje
   listaa → kertoja tauolla). 3. ajo (198c, lopullinen SHA, skenaario napauttaa "Punainen kabinetti" → Siirry näyttelyyn) odottaa Julkaisijan lippuja.
   Verhokäyrä: scratchpadin verho.py (100 ms RMS) → tee uudelleen, jos nollaus. Vahti: sali-belgrad + musa-URL:t rekisteröimättä (Aanisoitin, ei pohjan).
+- 22.0x: L2 seis levyn takia (17,6 Gi, Postivahti) → 198c-odottaja pysäytetty, liput pois. Kun Julkaisija ilmoittaa levy > 26: käynnistä
+  `H=b9d629780 ERA=aanipohja-198c nohup zsh tyokalut/siirtoseppa-ajot/ajo-aanipohja-197.zsh` + pyydä KÄÄNNÖS NYT + SIMU NYT.
+  Poistettu omat vanhat: _tyo/siirtoseppa/meri2-196-app, lokit/siirtoseppa-app/raketti-valo-191, lokit/siirtoseppa-raketti-valo/{nyk,uusi} (191-kuvat).
