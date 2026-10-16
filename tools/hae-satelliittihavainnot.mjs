@@ -161,7 +161,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'italia-yolla', nimi: 'Italian saapas yöllä', seutu: 'Italia', lat: 41.30, lon: 14.60,
+    tunnus: 'italia-yolla', nimi: 'Italian saapas', seutu: 'Italia', lat: 41.30, lon: 14.60,
     selite: 'Koko niemimaa kerralla: kaupunkien valot piirtävät rannikon tarkemmin kuin kartta.',
     oletus: 'iss037e018864',
     kuvat: [
@@ -264,7 +264,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'korea', nimi: 'Korean niemimaa yöllä', seutu: 'Korea', lat: 38.30, lon: 127.20,
+    tunnus: 'korea', nimi: 'Korean niemimaa', seutu: 'Korea', lat: 38.30, lon: 127.20,
     selite: 'Yökuva, jossa valtioiden raja näkyy pelkkänä pimeytenä.',
     oletus: 'iss038e038300',
     kuvat: [
@@ -410,7 +410,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'new-york', nimi: 'New York yöllä', seutu: 'Yhdysvallat', lat: 40.71, lon: -74.00,
+    tunnus: 'new-york', nimi: 'New York', seutu: 'Yhdysvallat', lat: 40.71, lon: -74.00,
     selite: 'Katuverkko, jonka muodon tunnistaa pelkistä valoista.',
     oletus: 'iss064e016772',
     kuvat: [
@@ -1006,7 +1006,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'tunis', nimi: 'Tunis yöllä', seutu: 'Tunisia', lat: 36.80, lon: 10.18,
+    tunnus: 'tunis', nimi: 'Tunis', seutu: 'Tunisia', lat: 36.80, lon: 10.18,
     selite: 'Kaupungin valot piirtävät lahden ja laguunin muodon.',
     oletus: 'iss073e0078538',
     kuvat: [
@@ -1019,7 +1019,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'kairo-yolla', nimi: 'Kairo yöllä', seutu: 'Egypti', lat: 30.05, lon: 31.25,
+    tunnus: 'kairo-yolla', nimi: 'Kairo', seutu: 'Egypti', lat: 30.05, lon: 31.25,
     selite: 'Niili halkaisee valomeren ja jatkuu suistoon.',
     oletus: 'iss074e0043697',
     kuvat: [
@@ -2234,7 +2234,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'buenos-aires-yolla', nimi: 'Buenos Aires yöllä', seutu: 'Argentiina', lat: -34.61, lon: -58.44,
+    tunnus: 'buenos-aires-yolla', nimi: 'Buenos Aires', seutu: 'Argentiina', lat: -34.61, lon: -58.44,
     selite: 'Argentiinan pääkaupunki levittäytyy miljoonine valoineen Río de la '
             + 'Platan rannalle.',
     oletus: 'iss072e519264',
@@ -2250,7 +2250,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'riyadh-yolla', nimi: 'Riad yöllä', seutu: 'Saudi-Arabia', lat: 24.7136, lon: 46.6753,
+    tunnus: 'riyadh-yolla', nimi: 'Riad', seutu: 'Saudi-Arabia', lat: 24.7136, lon: 46.6753,
     selite: 'Aavikon keskelle noussut pääkaupunki hehkuu yöllä laajana '
             + 'ruudukkona ilman ainoatakaan lähijokea.',
     oletus: 'iss033e020288',
@@ -2267,7 +2267,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'casablanca-yolla', nimi: 'Casablanca yöllä', seutu: 'Marokko', lat: 33.5731, lon: -7.5898,
+    tunnus: 'casablanca-yolla', nimi: 'Casablanca', seutu: 'Marokko', lat: 33.5731, lon: -7.5898,
     selite: 'Marokon suurin kaupunki ja tärkein satama loistaa Atlantin '
             + 'rannalla.',
     oletus: 'iss072e645691',
@@ -2465,7 +2465,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'baghdad-yolla', nimi: 'Bagdad yöllä', seutu: 'Irak', lat: 33.3152, lon: 44.3661,
+    tunnus: 'baghdad-yolla', nimi: 'Bagdad', seutu: 'Irak', lat: 33.3152, lon: 44.3661,
     selite: 'Tigris-joen mutka kiemurtelee kirkkaana miljoonakaupungin '
             + 'valomeren keskellä.',
     oletus: 'iss073e0515117',
@@ -2598,7 +2598,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'lasvegas-yolla', nimi: 'Las Vegas yöllä', seutu: 'Nevada, Yhdysvallat', lat: 36.17, lon: -115.14,
+    tunnus: 'lasvegas-yolla', nimi: 'Las Vegas', seutu: 'Nevada, Yhdysvallat', lat: 36.17, lon: -115.14,
     selite: 'Aavikkokaupunki, jonka suorakulmainen katuverkko ja kirkkaasti '
             + 'valaistu Strip erottuvat yöllä selvästi ympäröivästä pimeästä '
             + 'autiomaasta.',
@@ -2615,7 +2615,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'iberia-yolla', nimi: 'Iberian niemimaa yöllä', seutu: 'Espanja ja Portugali', lat: 40, lon: -4.5,
+    tunnus: 'iberia-yolla', nimi: 'Iberian niemimaa', seutu: 'Espanja ja Portugali', lat: 40, lon: -4.5,
     selite: 'Koko niemimaa yöllä: kaksi pääkaupunkia erottuu kirkkaimpina '
             + 'pisteinä valoverkon keskellä.',
     oletus: 'iss030e010008',
@@ -2874,7 +2874,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'valakian-tasanko', nimi: 'Valakian tasanko yöllä', seutu: 'Romania', lat: 45.3, lon: 25.3,
+    tunnus: 'valakian-tasanko', nimi: 'Valakian tasanko', seutu: 'Romania', lat: 45.3, lon: 25.3,
     selite: 'Yöllä otetussa kuvassa Karpaateilta Valakian tasangolle laskevat '
             + 'joet erottuvat siitä, miten asutuksen valot seuraavat '
             + 'jokilaaksoja.',
@@ -2911,7 +2911,7 @@ export const KOHTEET = [
     ],
   },
   {
-    tunnus: 'englanninkanaali-yolla', nimi: 'Englannin kanaali yöllä', seutu: 'Iso-Britannia, Ranska, Belgia ja Alankomaat', lat: 51.2, lon: 2,
+    tunnus: 'englanninkanaali-yolla', nimi: 'Englannin kanaali', seutu: 'Iso-Britannia, Ranska, Belgia ja Alankomaat', lat: 51.2, lon: 2,
     selite: 'Englannin kanaalin molemmin puolin syttyvät Lontoon, Amsterdamin, '
             + 'Brysselin ja niiden naapurikaupunkien valot yhdeksi Euroopan '
             + 'tiheimmin asutuksi yövyöhykkeeksi.',
