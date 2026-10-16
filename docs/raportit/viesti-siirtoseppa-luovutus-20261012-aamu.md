@@ -419,3 +419,5 @@ kun 9fa3b99f1 on juna-196:ssa).
   (puhe, id linssi-luenta, taso 1,0 ennallaan, mykistys ennallaan). Lista 31. Seuraavaksi itsenäiset: SeikkailuLoppumusiikki, EsityksenAani,
   SeikkailuSade, VeneAanet. SeikkailuKuulija EI ole pieni: sen Lahde-tehdasta käyttää 6 tiedostoa (SeikkailuAanet, -Esineet, -Kappeli,
   -Repliikit, -TyrmaAanet, -Vartijat), jotka asettavat volumen itse → siirto kutsuja kerrallaan, tehdas viimeisenä.
+- 01.2x: siirrot 2–3 samalla haaralla: **75a4cbc20** SeikkailuLoppumusiikki (musiikki/linna, oma liuku + linnan puheen väistö Tasossa),
+  **7dccbcd26** EsityksenAani (puhe, id esitys-kertoja, taso 1,0 ennallaan). Lista 29. Aanipohja 6/6, unity 0. Seuraavaksi SeikkailuSade, VeneAanet.
