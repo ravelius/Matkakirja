@@ -346,3 +346,7 @@ Omistajan kortti Keskustelukanavassa 16.10.2026 klo 21.54, sanatarkasti: "Pyöre
 ## PAATOKSET 16.10.2026 klo 22.24: YKSI JUNA (16.10.2026 klo 22.25)
 
 Omistaja (KK:n chat, sanatarkasti, pysyvä): "kerää aina kaikki vain yhteen junaan". Auki on vain yksi juna kerrallaan; juna 198:n jono (museon liikepohja, i-kortti ja muotokuvat, pienoismallit, yhteiset pohjat, kertojan korjaukset) yhdistetään junaan 197. Juna lähtee vain omistajan julkaisupyynnöstä. Raamattu C) JUNA päivitetty.
+
+## PAATOKSET 16.10.2026 klo 23.28: LOUVREN OMA PYRAMIDI (16.10.2026 klo 23.30)
+
+Omistaja (KK:n kortti, sanatarkasti): "Tehdään oma pyramidi" (kysymys: Louvren palatsi on oma mallimme, mutta lasipyramidi on Googlen kuvaama ja siksi tumma). Poikkeus Ranskan suojatun arkkitehtuurin linjaan; pyramidi suojattu vuoteen 2089, peli kaupallinen → voi joutua pois ennen App Store -julkaisua; App Store -tarkistuslistalla. Tavoite: kirkas lasi (taivas ja julkisivut heijastuvat, ohut vinoneliöristikko, sisähalli kuultaa), kolme pientä pyramidia ja altaat, yöllä sisältä hehku; mitat LiDAR HD + ortosta. Linnanrakentaja Louvren jatkoksi.
