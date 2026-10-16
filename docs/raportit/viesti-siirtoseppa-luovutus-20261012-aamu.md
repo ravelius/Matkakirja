@@ -443,3 +443,6 @@ kun 9fa3b99f1 on juna-196:ssa).
   vanha SeikkailuKuulija.Lahde poistettu. Lista 13. Linssit 1935/1935, unity 0, tarkista.sh 0. Opit: OlavinlinnaTekstitTestit ei tunnista
   Pohja(...)-kutsun nimeä olion nimeksi → "// kieli: ei (äänilähteen olion nimi)". Jäljellä 13: AjattelijatSovitin, DioraamaAanet, ElavaKaupunki,
   KaupunkiAanimaisemaSoitin, OpasSovitin, RakettiAanet, Aanisoitin, PallokisaOhjain, PeliKomennot, Puhe, PuluRealtime, UI/Aanet, ShakkiNakyma.
+- 02.1x: siirto 17 **a8196acdf** shakki (humina, kello; lautapelit) + pallokisan poltin. Lista 11. PT:ltä kysytty: Aanisoitin, Puhe, UI/Aanet
+  (ydinäänet ryhmätasolla) ja PeliKomennot (testisini) pohjan apureiksi vai siirtoon? Jatkan isoja: ElavaKaupunki, RakettiAanet, DioraamaAanet,
+  KaupunkiAanimaisemaSoitin, OpasSovitin, AjattelijatSovitin, PuluRealtime.
