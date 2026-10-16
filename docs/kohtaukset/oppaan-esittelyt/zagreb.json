@@ -24,7 +24,7 @@
    "kuvaus": "Zagrebin pääaukio ja tapaamispaikka",
    "luokka": "aukio",
    "koko_m": 230,
-   "teksti": "Ban Jelačićin aukio on Zagrebin pääaukio, ja ylhäältä sen erottaa avoimena tilana, jonka halki kulkevat raitiovaunut. Aukiota kutsuttiin aluksi nimellä Harmica, koska siellä pidettiin markkinoita ja myyjät maksoivat tavaroistaan veroa. Vuonna 1641 aukio nimettiin paikaksi, jossa markkinoita sai pitää. Vuonna 1848 se sai nykyisen nimensä Kroatian banin Josip Jelačićin mukaan. Aukion keskellä seisoo hänen ratsastajapatsaansa, jonka itävaltalainen kuvanveistäjä Anton Fernkorn teki ja joka pystytettiin vuonna 1866. Kommunistiviranomaiset veivät patsaan pois 1940-luvulla, ja se palasi aukiolle vuonna 1990.",
+   "teksti": "Ban Jelačićin aukio on Zagrebin pääaukio, ja ylhäältä sen erottaa avoimena tilana, jonka halki kulkevat raitiovaunut. Aukiota kutsuttiin aluksi nimellä Harmica, koska siellä pidettiin markkinoita ja myyjät maksoivat tavaroistaan veroa. Aukio mainitaan markkinapaikkana ensimmäisen kerran vuonna 1641. Vuonna 1848 se sai nykyisen nimensä Kroatian banin Josip Jelačićin mukaan. Aukion keskellä seisoo hänen ratsastajapatsaansa, jonka itävaltalainen kuvanveistäjä Anton Fernkorn teki ja joka pystytettiin vuonna 1866. Kommunistiviranomaiset veivät patsaan pois 1940-luvulla, ja se palasi aukiolle vuonna 1990.",
    "lyhyt": "Patsas katsoi aluksi pohjoiseen, mutta kun se palasi aukiolle, se käännettiin katsomaan etelään. Aukion itälaidalla on suihkulähde, joka muistuttaa Manduševac-lähteestä. Legendan mukaan sotapäällikkö pyysi tyttöä ammentamaan vettä lähteestä, ja kaupungin nimi syntyi kroatian sanasta zagrabiti, ammentaa.",
    "syventava": "Kuka oli Josip Jelačić?",
    "kysymykset": [
@@ -352,7 +352,7 @@
    "koko_m": 40,
    "katse_suunta": 60,
    "katse_kaari": 40,
-   "teksti": "Pyhän Markuksen kirkon värikäs katto erottuu pallokorista kauas. Monivärisistä lasitetuista laatoista on muodostettu kaksi vaakunaa: toisessa on Kroatian, Slavonian ja Dalmatian kolmoiskuningaskunta, toisessa Gradecin punaisella kilvellä oleva linna. Katto tehtiin 1870-luvun lopun ja 1880-luvun alun kunnostuksessa, jota johtivat wieniläinen Friedrich von Schmidt ja hänen työtoverinsa Hermann Bollé. Kirkon alkuperä on 1200-luvulla: sen etelämuurissa on yhä romaaninen ikkuna. 1300-luvun jälkipuoliskolla kirkko muutettiin kolmilaivaiseksi myöhäisgoottilaiseksi kirkoksi.",
+   "teksti": "Pyhän Markuksen kirkon värikäs katto erottuu kauas. Monivärisistä lasitetuista laatoista on muodostettu kaksi vaakunaa: toisessa on Kroatian, Slavonian ja Dalmatian kolmoiskuningaskunta, toisessa Gradecin punaisella kilvellä oleva linna. Katto tehtiin 1870-luvun lopun ja 1880-luvun alun kunnostuksessa, jota johtivat wieniläinen Friedrich von Schmidt ja hänen työtoverinsa Hermann Bollé. Kirkon alkuperä on 1200-luvulla: sen etelämuurissa on yhä romaaninen ikkuna. 1300-luvun jälkipuoliskolla kirkko muutettiin kolmilaivaiseksi myöhäisgoottilaiseksi kirkoksi.",
    "lyhyt": "Kirkon purkamista pohdittiin useaan otteeseen 1700- ja 1800-luvuilla, mutta lopulta se päätettiin korjata. 1900-luvun alkupuolen kunnostuksissa kirkkoon tuli kuvanveistäjä Ivan Meštrovićin töitä. Vuoden 2020 maanjäristys vaurioitti kirkkoa, ja korjauksen jälkeen siellä pidettiin ensimmäinen messu joulukuussa 2023.",
    "syventava": "Miksi katon Zagrebin vaakuna on punainen, vaikka kaupungin nykyinen vaakuna on sininen?",
    "kysymykset": [
@@ -449,7 +449,7 @@
    "luokka": "torni",
    "koko_m": 20,
    "korkeus_m": 19,
-   "teksti": "Lotrščakin torni seisoo Yläkaupungin eteläreunalla, ja ylhäältä se erottuu kaupunginmuurin vanhana vartiotornina. Se valmistui vuonna 1266, kun Gradecin muurien rakentaminen oli kestänyt noin kaksikymmentä vuotta. Torni vartioi eteläistä Dverce-porttia, joka purettiin vuonna 1812. Tornin nimi tulee latinan sanoista campana latrunculorum, ja sen kello soi iltaisin ennen kuin kaupungin portit suljettiin. Vuonna 1857 torniin lisättiin kaksi kerrosta ja katolle puinen palovartiotorni. Ylimmästä kerroksesta kuuluu nykyään joka päivä voimakas laukaus.",
+   "teksti": "Lotrščakin torni seisoo Yläkaupungin eteläreunalla, ja ylhäältä se erottuu kaupunginmuurin vanhana vartiotornina. Se valmistui 1200-luvulla, kun Gradecin muurien rakentaminen oli kestänyt noin kaksikymmentä vuotta. Torni vartioi eteläistä Dverce-porttia, joka purettiin vuonna 1812. Tornin nimi tulee latinan sanoista campana latrunculorum, ja sen kello soi iltaisin ennen kuin kaupungin portit suljettiin. Vuonna 1857 torniin lisättiin kaksi kerrosta ja katolle puinen palovartiotorni. Ylimmästä kerroksesta kuuluu nykyään joka päivä voimakas laukaus.",
    "lyhyt": "Tornin Grič-kanuuna ampuu joka päivä keskipäivällä, ja ensimmäinen laukaus ammuttiin 1.1.1877. Laukaus antaa kaupungin kirkkojen kellonsoittajille merkin tarkasta puolesta päivästä, jotta kellot voi asettaa oikeaan aikaan. Tornin ylimmästä osasta avautuu näköala yli kaupungin.",
    "syventava": "Miksi tornin kello soitettiin juuri ennen porttien sulkemista?",
    "kysymykset": [

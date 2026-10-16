@@ -71,13 +71,13 @@ export const OPAS_AINEISTOT = Object.freeze({
     valletta: 'opas/esittely-v2/valletta.json',
     venetsia: 'opas/esittely-v2/venetsia.json',
     vilna: 'opas/esittely-v2/vilna.json',
-    monaco: 'opas/esittely-v2/monaco.json',
-    bern: 'opas/esittely-v2/bern.json',
-    belgrad: 'opas/esittely-v2/belgrad.json',
-    zagreb: 'opas/esittely-v2/zagreb.json',
-    bratislava: 'opas/esittely-v2/bratislava.json',
-    tirana: 'opas/esittely-v2/tirana.json',
-    podgorica: 'opas/esittely-v2/podgorica.json',
+    monaco: 'opas/esittely-v2a/monaco.json',   // v2a 16.10. (PT:n tarkistuksen korjaukset)
+    bern: 'opas/esittely-v2a/bern.json',   // v2a 16.10. (PT:n tarkistuksen korjaukset)
+    belgrad: 'opas/esittely-v2a/belgrad.json',   // v2a 16.10. (PT:n tarkistuksen korjaukset)
+    zagreb: 'opas/esittely-v2a/zagreb.json',   // v2a 16.10. (PT:n tarkistuksen korjaukset)
+    bratislava: 'opas/esittely-v2a/bratislava.json',   // v2a 16.10. (PT:n tarkistuksen korjaukset)
+    tirana: 'opas/esittely-v2a/tirana.json',   // v2a 16.10. (PT:n tarkistuksen korjaukset)
+    podgorica: 'opas/esittely-v2a/podgorica.json',   // v2a 16.10. (PT:n tarkistuksen korjaukset)
   },
   // Yksityiskohtakuvat (Sisältökirjuri 7.10.; natiivi lentää kuvan sivuun ankkurisanan kohdalla): luettelo media-juuresta.
   // 10.10. (Päätoimittajan kuittaus 09.3x): 63 uutta Codex-havainnekuvaa 20 kaupunkiin (paketit opas-havainnekuvat-vienti-20261010 ja opas-havainnekuvat-7okt-vienti-20261010: + Pariisi 5, Praha 1, Wien 1, Kööpenhamina 1 kuvaa 7.10. toimituksista; Sevilla perässä, kun Codex toimittaa).

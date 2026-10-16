@@ -194,7 +194,8 @@ test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () =
   assert.deepEqual([...OPAS_AINEISTOT.esittely].sort(), [...new Set([...OPAS_SALLITUT.sallitut.map((x) => x.id), ...ODOTTAVAT])].sort());
   // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku; 9.10. lähikohteet esittely-v3, v3b Vasan katse_suunta, v3c Stortorget (juna 183).
   // LS1 11.10.: Bryssel ja Firenze v2a (korkeus_m tornillisille rakennuksille, natiivin kierroksen esteet).
-  const AANELLISET = { tukholma: 'opas/esittely-v3c/tukholma.json', bryssel: 'opas/esittely-v2a/bryssel.json', firenze: 'opas/esittely-v2a/firenze.json' };
+  const AANELLISET = { tukholma: 'opas/esittely-v3c/tukholma.json', bryssel: 'opas/esittely-v2a/bryssel.json', firenze: 'opas/esittely-v2a/firenze.json',
+    monaco: 'opas/esittely-v2a/monaco.json', bern: 'opas/esittely-v2a/bern.json', belgrad: 'opas/esittely-v2a/belgrad.json', zagreb: 'opas/esittely-v2a/zagreb.json', bratislava: 'opas/esittely-v2a/bratislava.json', tirana: 'opas/esittely-v2a/tirana.json', podgorica: 'opas/esittely-v2a/podgorica.json' };
   for (const id of OPAS_AINEISTOT.esittely.slice(6)) assert.equal(OPAS_AINEISTOT.esittely_polut[id], AANELLISET[id] ?? `opas/esittely-v2/${id}.json`);
 });
 

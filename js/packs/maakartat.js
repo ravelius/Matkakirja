@@ -16827,15 +16827,15 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/belgrad-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Kartan alue on Belgradin ydin kalliolla, jossa Sava yhtyy Tonaviin. Linnoituksen '
-      + 'paikalla oli roomalaisten legioonan leiri. Kalemegdanin puisto raivattiin '
-      + 'linnoituksen edustalle 1800-luvulla; nimi tulee turkin sanoista kale ja megdan, '
-      + 'linnake ja taistelukenttä.\n\n'
-      + 'Linnoitukseen kuuluu 1400-luvun Nebojšan torni. Pyhän arkkienkeli Mikaelin '
-      + 'katedraali rakennettiin 1837–1840. Tasavallan aukiolla seisoo ruhtinas Mikaelin '
-      + 'ratsastajapatsas vuodelta 1882, ja Skadarlija sai katunimensä 1872. Pyhän Savan '
-      + 'temppelin rakennustyöt alkoivat 1935. Suuri sotasaari on luonnonsuojelualue joen '
-      + 'yhtymäkohdassa. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Belgradin vanha ydin kalliolla, jossa Sava yhtyy Tonaviin. '
+      + 'Linnoituksen paikalla oli roomalaisten legioonan leiri. Kalemegdanin nimi tulee '
+      + 'turkin sanoista kale, linnake, ja megdan, kenttä, ja puisto raivattiin 1800-luvulla. '
+      + 'Nebojšan torni on 1400-luvulta, ja nebojša tarkoittaa serbiaksi pelotonta.\n\n'
+      + 'Pyhän arkkienkeli Mikaelin katedraali rakennettiin 1837–1840. Tasavallan aukion '
+      + 'ratsastajapatsas ruhtinas Mihailosta pystytettiin 1882. Skadarlija sai katunimensä '
+      + '1872. Pyhän Savan temppelin rakentaminen alkoi 1935, ja se on yksi maailman '
+      + 'suurimmista ortodoksikirkoista. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
     rajat: { pohjoinen: 44.8343, etela: 44.7937, lansi: 20.4318, ita: 20.4725 },
     piirtoRajat: { pohjoinen: 44.84648, etela: 44.78152, lansi: 20.41959, ita: 20.48471 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
@@ -16890,15 +16890,15 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/bratislava-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Kartan alue on Bratislavan vanha kaupunki Tonavan rannalla, linnamäen juurella. '
-      + 'Kaupunki oli Unkarin kruunajaiskaupunki: Pyhän Martinin tuomiokirkossa kruunattiin '
-      + 'hallitsijoita vuosina 1563–1830.\n\n'
-      + 'Bratislavan linna palasi 1811 tulipalossa raunioksi ja kunnostettiin 1900-luvun '
-      + 'jälkipuoliskolla. Mikaelin portti on kaupungin ainoa säilynyt keskiaikainen portti, '
-      + 'ja sen tornia korjattiin 1758. Vanha raatihuone ja Hviezdoslavin aukio ovat '
-      + 'ytimessä. Idässä on Ödön Lechnerin suunnittelema Sininen kirkko, vihitty 1913, ja '
-      + 'pohjoisessa Grassalkovichin palatsi, joka on ollut presidentin virka-asunto vuodesta '
-      + '1996. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Bratislavan vanha kaupunki Tonavan varrella. Pyhän Martinin '
+      + 'tuomiokirkossa kruunattiin Unkarin hallitsijoita vuosina 1563–1830, ja kirkon torni '
+      + 'on 85 metriä korkea. Bratislavan linna paloi 1811 ja kunnostettiin 1950- ja '
+      + '1960-luvuilla.\n\n'
+      + 'Mikaelin portti on keskiaikaisista kaupunginporteista ainoa säilynyt, ja sen '
+      + 'barokkimuoto on 1750-luvulta. Ödön Lechnerin suunnittelema Sininen kirkko valmistui '
+      + '1913 ja on omistettu Pyhälle Elisabet Unkarilaiselle. Grassalkovichin palatsi '
+      + 'valmistui 1760, ja se on ollut Slovakian presidentin virka-asunto vuodesta 1996. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: { pohjoinen: 48.1523, etela: 48.139, lansi: 17.096, ita: 17.1208 },
     piirtoRajat: { pohjoinen: 48.15629, etela: 48.13501, lansi: 17.08856, ita: 17.12824 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
@@ -17061,15 +17061,14 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/podgorica-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Kartan alue on Podgorican keskusta Moračan ja Ribnican yhtymäkohdassa. Osmanit '
-      + 'valtasivat kaupungin 1474, ja Montenegro sai sen 1878. Vuosina 1946–1992 kaupungin '
-      + 'nimi oli Titograd.\n\n'
-      + 'Vanhassa kaupungissa ovat Sahat kula -kellotorni, joka rakennettiin ottomaanien '
-      + 'aikana 1600-luvulla, Ribnican linnoitus ja Vanha silta Ribnican yli. Uudemmalla '
-      + 'puolella ovat Itsenäisyydenaukio, Millennium-silta, jonka pylon on 57 metriä korkea '
-      + 'ja joka avattiin 13. heinäkuuta 2005, sekä Kristuksen ylösnousemuksen katedraali, '
-      + 'jonka rakentaminen alkoi 1993 ja jonka vihkiäiset pidettiin 2013. Kartan kohteista '
-      + 'pääsee lukemaan lisää napauttamalla.',
+    esittely: 'Kartan alue on Podgorican keskusta Ribnican ja Moračan yhtymäkohdassa. Osmanit '
+      + 'valtasivat kaupungin 1474, ja se liitettiin Montenegroon 1878 Berliinin kongressin '
+      + 'päätöksellä. Vuosina 1946–1992 kaupungin nimi oli Titograd Josip Broz Titon mukaan.\n\n'
+      + 'Sahat kula -kellotorni on ottomaanien ajalta ja 19 metriä korkea. Ribnican linnoitus '
+      + 'rakennettiin 1400-luvun lopulla osmanien vallan aikana. Millennium-sillan pylon on '
+      + '57 metriä korkea, ja silta avattiin 13. heinäkuuta 2005. Kristuksen ylösnousemuksen '
+      + 'katedraalin rakentaminen alkoi 1993, ja se vihittiin 2013. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 42.4484,
       etela: 42.43286,
@@ -17176,14 +17175,14 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/tirana-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Kartan alue on Tiranan keskusta, jossa kaupunki sai alkunsa 1614, kun ottomaanien '
-      + 'paikallinen ylhäisö Sulejman Pasha Bargjini rakennutti sinne moskeijan. Tirana '
-      + 'nimettiin Albanian väliaikaiseksi pääkaupungiksi 8. helmikuuta 1920 ja pysyväksi '
-      + '1925.\n\n'
-      + 'Skanderbeg-aukion laidalla ovat Et\'hem Beyn moskeija, valmistunut noin 1820, ja '
-      + 'kellotorni 1820-luvulta. Tiranan linnoituksen jäänteet ovat bysanttilaisajalta ja '
-      + 'ulottuvat ajalle ennen vuotta 1300; lähellä ovat Tabakkien silta ja Kokonozin '
-      + 'moskeija. Etelämpänä Rinian puisto ja Tiranan pyramidi, joka avattiin 1988 Enver '
+    esittely: 'Kartan alue on Tiranan keskusta. Kaupungin virallinen perustamisvuosi on 1614, ja '
+      + 'perustajana pidetään paikallista ylimystä Sulejman Bargjinia. Tirana julistettiin '
+      + 'Albanian väliaikaiseksi pääkaupungiksi 1920 ja pysyväksi 1925. Skanderbeg-aukio '
+      + 'uudistettiin jalankulkualueeksi 2017, ja työ palkittiin 2018 Euroopan julkisen '
+      + 'kaupunkitilan palkinnolla.\n\n'
+      + 'Et\'hem Beyn moskeijan rakentaminen alkoi 1700-luvun lopulla, ja viereinen kellotorni '
+      + 'on 1820-luvulta. Tabakkien silta on 1700-luvulta ja nimetty nahkureiden mukaan. '
+      + 'Kokonozin moskeija on 1700-luvun puolivälistä. Tiranan pyramidi avattiin 1988 Enver '
       + 'Hoxhan museona. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 41.3328,
@@ -17242,13 +17241,15 @@ export const KAUPUNKIKARTAT = {
     varikartta: 'assets/kartat/zagreb-varikartta.png', // Karttaseppä 11.10.2026: kaikki Euroopan kartat värikartoiksi
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
-    esittely: 'Kartan alue on Zagrebin historiallinen ydin. Kukkulalla on Yläkaupunki eli Gradec ja '
-      + 'sen vieressä Kaptol, joiden alapuolella ruutukaavainen Alakaupunki jatkuu etelään '
-      + 'vihreinä puistoaukioina.\n\n'
-      + 'Lotrščakin torni on 1200-luvulta, ja sen kanuuna ampuu keskipäivän laukauksen '
-      + 'vuodesta 1877. Kivinen portti on Yläkaupungin vanha portti. Kaptolin tuomiokirkko on '
-      + 'uusgoottilainen. Taidepaviljonki rakennettiin Budapestin vuoden 1896 näyttelyä '
-      + 'varten tehdyn rautarungon ympärille ja avattiin 1898. Kartan kohteista pääsee '
+    esittely: 'Kartan alue on Zagrebin vanha ydin: Kaptolin ja Yläkaupungin eli Gradecin kukkulat '
+      + 'sekä Alakaupungin puistot. Gradec sai kultaisessa bullassa 1242 vapaan '
+      + 'kuninkaallisen kaupungin aseman. Kaptolin tuomiokirkko rakennettiin uudelleen '
+      + 'uusgoottilaiseksi vuoden 1880 maanjäristyksen jälkeen.\n\n'
+      + 'Lotrščakin tornin nimi viittaa varkaiden kelloon, joka soi ennen porttien sulkua. '
+      + 'Torni on 1200-luvulta, ja kanuuna on ampunut keskipäivän laukauksen joka päivä '
+      + '1.1.1877 lähtien. Kivinen portti on Yläkaupungin ainoa säilynyt portti, ja sen '
+      + 'Marian kuva säilyi vuoden 1731 palossa. Taidepaviljonki tehtiin Budapestin vuoden '
+      + '1896 näyttelyn metallirungon ympärille ja avattiin 1898. Kartan kohteista pääsee '
       + 'lukemaan lisää napauttamalla.',
     rajat: {
       pohjoinen: 45.8186,
@@ -17332,14 +17333,13 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Kartan alue on Bernin vanhakaupunki, joka sijaitsee Aare-joen mutkan muodostamalla '
-      + 'niemekkeellä. Joki ympäröi kolmea sivua, joten kaupunki tarvitsi vain yhden '
-      + 'puolustusmuurin. Berthold V Zähringeniläinen perusti sen todennäköisesti 1191, ja '
-      + 'vanhakaupunki on ollut Unescon maailmanperintökohde vuodesta 1983.\n\n'
-      + 'Niemekkeen länsiosassa ovat Liittopalatsi ja Zytglogge, jonka porttitorni '
-      + 'rakennettiin noin 1218–1220. Bernin tuomiokirkon rakentaminen alkoi 1421 ja torni '
-      + 'valmistui 1893. Einsteinhausissa Albert Einstein asui 1903–1905. Itäpäässä ovat '
-      + 'Bärengraben ja joen rannassa vuonna 2009 avattu BärenPark. Kartan kohteista pääsee '
-      + 'lukemaan lisää napauttamalla.',
+      + 'niemekkeellä; joki ympäröi sitä kolmelta sivulta. Berthold V Zähringeniläisen '
+      + 'kerrotaan perustaneen kaupungin 1191, ja vanhakaupunki on ollut Unescon '
+      + 'maailmanperintökohde vuodesta 1983. Zytglogge-torni rakennettiin noin 1218–1220.\n\n'
+      + 'Berner Münsterin rakentaminen alkoi 1421, ja sen torni valmistui vasta 1893. '
+      + 'Liittopalatsin parlamenttirakennus rakennettiin vuosina 1894–1902. Einsteinhausissa '
+      + 'Albert Einstein asui 1903–1905. Aaren rannalla Bärengrabenin vieressä on BärenPark, '
+      + 'joka avattiin 2009. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
     rajat: { pohjoinen: 46.951, etela: 46.9438, lansi: 7.4403, ita: 7.4636 },
     piirtoRajat: { pohjoinen: 46.95316, etela: 46.94164, lansi: 7.43331, ita: 7.47059 }, // reunus 1,6 (Karttaseppä 12.10.2026)
     kohteet: [
@@ -17376,13 +17376,13 @@ export const KAUPUNKIKARTAT = {
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     numeroympyrat: true,
     esittely: 'Kartan alue on Monacon ruhtinaskunta, jonka vanha kaupunki on kalliolla meren '
-      + 'rannalla. Kalliolle rakennettiin 1200-luvun alussa linnoitus, ja vuonna 1297 '
-      + 'François Grimaldi valtasi sen; ruhtinaanlinna on suvun virallinen asuinpaikka yhä. '
-      + 'Linnan vieressä on katedraali, jonne monet ruhtinassuvun jäsenet on haudattu.\n\n'
-      + 'Kallion juurella on Port Hercule, Monacon ainoa syvänveden satama, jonka nimi tulee '
-      + 'Herkules-sankarin palvonnasta. Satamasta itään rinne nousee Monte Carloon, jossa '
-      + 'sijaitsevat kasino ja oopperasali. Rannikon jyrkänteellä seisoo Valtamerimuseo, '
-      + 'jonka ruhtinas Albert I vihki käyttöön vuonna 1910. Kartan kohteista pääsee lukemaan '
+      + 'rannalla. Kalliolle alettiin rakentaa linnoitusta kesäkuussa 1215, ja François '
+      + 'Grimaldi valtasi sen tammikuussa 1297. Katedraali rakennettiin vuosina 1875–1903, ja '
+      + 'sinne on haudattu monia ruhtinassuvun jäseniä.\n\n'
+      + 'Port Hercule -sataman nimi viittaa Herkules-sankariin: antiikin latinassa satamaa '
+      + 'kutsuttiin nimellä Portus Herculis Monoeci. Salle Garnier avattiin 1879, ja sen '
+      + 'suunnitteli Charles Garnier. Ruhtinas Albert I vihki Valtamerimuseon käyttöön 1910, '
+      + 'ja Eksoottinen puutarha avattiin yleisölle 1933. Kartan kohteista pääsee lukemaan '
       + 'lisää napauttamalla.',
     rajat: { pohjoinen: 43.7427, etela: 43.7275, lansi: 7.4102, ita: 7.4326 },
     piirtoRajat: { pohjoinen: 43.74726, etela: 43.72294, lansi: 7.40348, ita: 7.43932 }, // reunus 1,6 (Karttaseppä 12.10.2026)

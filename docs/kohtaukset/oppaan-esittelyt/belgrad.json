@@ -128,7 +128,7 @@
    "katse_suunta": 135,
    "katse_kaari": 30,
    "teksti": "Nebojšan torni nousee linnoituksen alakaupungissa joen rannalla, missä Sava yhtyy Tonavaan. Nykyinen torni rakennettiin noin vuonna 1460 linnoituksen puolustukseksi, ja sen seinät ovat lähes kolmen metrin paksuiset. Nimi nebojša tarkoittaa serbiaksi pelotonta. Aluksi tornia kutsuttiin Valkoiseksi torniksi. Torni on nelikerroksinen. 1700-luvulla se muuttui pahamaineiseksi vankilaksi, jossa vankien kerrotaan kärsineen hirvittävistä oloista. Kuuluisin vanki oli kreikkalainen vallankumouksellinen ja runoilija Rigas Feraios, joka sai tornissa surmansa vuonna 1798.",
-   "lyhyt": "Nykyään tornissa on museo, jonka kerrokset kertovat vankilan ajasta, Rigas Feraioksesta ja ensimmäisestä serbikapinasta. Tornin kunnostus kesti vuosina 2009–2010, ja Kreikka tuki sitä suurella lahjoituksella. Myös Belgradin metropoliitta Metodios surmattiin tornissa muutamaa vuotta Rigasin jälkeen.",
+   "lyhyt": "Nykyään tornissa on museo, jonka kerrokset kertovat vankilan ajasta, Rigas Feraioksesta ja ensimmäisestä serbikapinasta. Torni kunnostettiin vuosina 2009–2010, ja Kreikka tuki sitä suurella lahjoituksella. Myös Belgradin metropoliitta Metodios surmattiin tornissa muutamaa vuotta Rigasin jälkeen.",
    "syventava": "Kuka oli Rigas Feraios, ja miksi hän joutui vankilaan?",
    "kysymykset": [
     "Mikä oli tornin entinen nimi?",
@@ -438,7 +438,7 @@
    "kuvaus": "Belgradin tärkein kohtaamisaukio",
    "luokka": "aukio",
    "koko_m": 150,
-   "teksti": "Tasavallan aukio, serbiaksi Trg Republike, on Belgradin tärkein kohtaamispaikka. Ylhäältä sen keskeltä erottuu ratsastajapatsas, joka esittää ruhtinas Mihailo Obrenovićia. Italialainen kuvanveistäjä Enrico Pazzi teki patsaan, ja se paljastettiin joulukuussa 1882 muistoksi ottomaanien karkottamisesta ja kaupunkien vapauttamisesta. Belgradilaiset sopivat tapaamisia 'kod konja', hevosen luona. Aukion laidoilla ovat Kansallismuseo ja Kansallisteatteri. Aukio on alle sadan metrin päässä Terazijesta, jota pidetään virallisesti kaupungin keskustana.",
+   "teksti": "Tasavallan aukio, serbiaksi Trg Republike, on Belgradin tärkein kohtaamispaikka. Ylhäältä sen keskeltä erottuu ratsastajapatsas, joka esittää ruhtinas Mihailo Obrenovićia. Italialainen kuvanveistäjä Enrico Pazzi teki patsaan, ja se paljastettiin joulukuussa 1882 muistoksi ottomaanien karkottamisesta ja kaupunkien vapauttamisesta. Belgradilaiset sopivat tapaamisia ”kod konja”, hevosen luona. Aukion laidoilla ovat Kansallismuseo ja Kansallisteatteri. Aukio on alle sadan metrin päässä Terazijesta, jota pidetään virallisesti kaupungin keskustana.",
    "lyhyt": "Pitkään aukio tunnettiin nimellä Teatteriaukio, Pozorišni trg. Nykyinen aukion muoto syntyi vasta, kun Istanbulin portti purettiin vuonna 1866. Patsaan jalustaan on kirjattu ruhtinas Mihailon aikana vapautettujen kaupunkien nimet.",
    "syventava": "Miksi ruhtinas Mihailoa muistetaan Serbiassa?",
    "kysymykset": [
@@ -537,14 +537,14 @@
    "luokka": "katu",
    "koko_m": 265,
    "teksti": "Skadarlija on ylhäältä katsottuna lyhyt, mutkitteleva kivetty katu vanhan Belgradin ytimessä. 1800-luvun alkupuoliskolla alue oli köyhä romanien asuinalue, kunnes kaupunkirakentaminen ulottui sinne ja katu sai vuonna 1872 nykyisen nimensä, Skadarska. Alueen tunnetuin kapakka on Tri šešira, Kolme hattua. Boheemi leima syntyi vuonna 1901, kun Teatteriaukion kuuluisa Dardaneli-kapakka purettiin ja sen vakioasiakkaat, kirjailijat ja näyttelijät, siirtyivät Skadarlijan kapakoihin. Kirjailija ja taidemaalari Đura Jakšić asui ja kuoli kadun varrella.",
-   "lyhyt": "Pariisin aloitteesta Skadarlijasta tehtiin Montmartren vastine Belgradissa 22. lokakuuta 1977. Katu kunnostettiin vuonna 1968, ja ensimmäisen maailmansodan miehityksen aikana itävaltalais-unkarilaiset nimesivät sen hetkeksi Ružinaksi.",
+   "lyhyt": "Katu kunnostettiin vuonna 1968, ja Pariisin aloitteesta Skadarlijasta tehtiin Montmartren vastine Belgradissa 22. lokakuuta 1977.",
    "syventava": "Kuka oli Đura Jakšić?",
    "kysymykset": [
     "Millainen paikka Tri šešira on?",
     "Millainen kapakka Dardaneli oli?",
     "Milloin Skadarlija kunnostettiin?",
     "Mikä merkitys Jakšićin talolla on?",
-    "Miksi katua kutsuttiin Ružinaksi?"
+    "Miksi Skadarlijasta tehtiin Montmartren vastine?"
    ],
    "isoisa": false,
    "lahteet": [

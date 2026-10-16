@@ -27,8 +27,8 @@
    "korkeus_m": 54.5,
    "katse_suunta": 270,
    "katse_kaari": 20,
-   "teksti": "Zytglogge erottuu pallokorista katsottuna korkeana kellotornina vanhassakaupungissa. Torni rakennettiin noin vuonna 1218 kaupungin läntiseksi porttitorniksi, mutta kaupungin kasvaessa se menetti puolustustehtävänsä ja toimi myöhemmin vankilana. Vuoden 1405 suuren kaupunkipalon jälkeen torni sai kellotornin tehtävän, ja kellotorni se on ollut siitä lähtien. Nykyisen kellokoneiston rakensi uudelleen lukkoseppä Kaspar Brunner vuosina 1527–1530. Tähtitieteellinen kello on astrolabi, joka näyttää ajan lisäksi viikonpäivän, kuun vaiheen ja eläinratamerkit. Tornin länsisivun maalauksen teki taidemaalari Victor Surbek vuonna 1930.",
-   "lyhyt": "Tornin itäsivun kellopeli on esitys, jonka voi katsoa joka tunti. Kukko kiekaisee kolme kertaa tunnin aikana, ensimmäisen kerran muutama minuutti ennen tasatuntia. Sitten karhut kiertävät kehää ja narri lyö tuntia liian aikaisin, kunnes Chronos kääntää tiimalasiaan ja kullattu Hans von Thann lyö suurta tuntikelloa.",
+   "teksti": "Zytglogge erottuu korkeana kellotornina vanhassakaupungissa. Torni rakennettiin noin vuonna 1218 kaupungin läntiseksi porttitorniksi, mutta kaupungin kasvaessa se menetti puolustustehtävänsä ja toimi myöhemmin vankilana. Vuoden 1405 suuren kaupunkipalon jälkeen torni sai kellotornin tehtävän, ja kellotorni se on ollut siitä lähtien. Nykyisen kellokoneiston rakensi uudelleen lukkoseppä Kaspar Brunner vuosina 1527–1530. Tähtitieteellinen kello on astrolabi, joka näyttää ajan lisäksi viikonpäivän, kuun vaiheen ja eläinratamerkit. Tornin länsisivun maalauksen teki taidemaalari Victor Surbek vuonna 1930.",
+   "lyhyt": "Tornin itäsivun kellopeli on esitys, jonka voi katsoa joka tunti. Esitys alkaa noin neljä minuuttia ennen tasatuntia, ja kukko kiekaisee sen aikana kolme kertaa. Sitten karhut kiertävät kehää ja narri lyö tuntia liian aikaisin, kunnes Chronos kääntää tiimalasiaan ja kullattu Hans von Thann lyö suurta tuntikelloa.",
    "syventava": "Miksi tornin kello kertoi koko kaupungille oikean ajan?",
    "kysymykset": [
     "Mihin tarkoitukseen torni rakennettiin alun perin?",
@@ -253,7 +253,7 @@
    "korkeus_m": 64,
    "katse_suunta": 0,
    "katse_kaari": 40,
-   "teksti": "Bundeshaus, Liittopalatsi, on ylhäältä katsottuna laaja rakennuskokonaisuus, jonka keskellä kohoaa kupoli. Parlamenttirakennus tehtiin arkkitehti Hans Wilhelm Auerin suunnitelmien mukaan vuosina 1894–1902, ja se otettiin käyttöön 1.4.1902. Se on länsisiiven (1852–1857) ja itäsiiven (1888–1892) välissä. Kupolin ulkokorkeus on 64 metriä. Kupolisalin kupolissa ovat kantonien vaakunat, ja pääsisäänkäynti avautuu Bundesplatzille. Rakennuksessa kokoontuvat Sveitsin parlamentin kaksi kamaria, kansallisneuvosto ja kantoneuvosto.",
+   "teksti": "Bundeshaus, Liittopalatsi, on ylhäältä katsottuna laaja rakennuskokonaisuus, jonka keskellä kohoaa kupoli. Parlamenttirakennus tehtiin arkkitehti Hans Wilhelm Auerin suunnitelmien mukaan vuosina 1894–1902, ja se otettiin käyttöön 1.4.1902. Se on länsisiiven (1852–1857) ja itäsiiven (1888–1892) välissä. Kupolin ulkokorkeus on 64 metriä. Kupolisalin kupolissa ovat kantonien vaakunat, ja pääsisäänkäynti avautuu Bundesplatzille. Rakennuksessa kokoontuvat Sveitsin parlamentin kaksi kamaria, kansallisneuvosto ja kantonien neuvosto.",
    "lyhyt": "Kupolisalissa seisoo James André Vibertin veistämä patsas Kolme valaliittolaista, joka viittaa Rütlin valaan. Rakennukseen käytettiin lähes yksinomaan sveitsiläisiä materiaaleja. Kansallisneuvoston salissa on lisäksi Gertrud Stauffacherin patsas.",
    "syventava": "Miksi kupolin vaakunoissa on juuri kantonit?",
    "kysymykset": [
@@ -464,9 +464,9 @@
    "korkeus_m": 100.6,
    "katse_suunta": 90,
    "katse_kaari": 30,
-   "teksti": "Bernin tuomiokirkko erottuu pallokorista katsottuna pitkänä kirkkona, jonka länsipäässä kohoaa noin 100 metriä korkea torni. Kirkon peruskivi laskettiin 11.3.1421, ja ensimmäiseksi rakennusmestariksi kutsuttiin Strasbourgista Matthäus Ensinger. Rakennustyö kesti vuosisatoja: tornin ylempi kahdeksankulmio ja huippu rakennettiin vasta vuosina 1889–1893. Länsipäädyn pääportaalin veistokset esittävät viimeistä tuomiota, ja niiden tekijä oli mestari Erhart Küng. Veistokset säilyivät uskonpuhdistuksen kuvainraivauksessa, vaikka muu kirkon sisustus menetti paljon. Kirkkoa pidetään Sveitsin tärkeimpänä myöhäisgoottilaisena rakennuksena.",
+   "teksti": "Bernin tuomiokirkko erottuu pitkänä kirkkona, jonka länsipäässä kohoaa noin 100 metriä korkea torni. Kirkon peruskivi laskettiin 11.3.1421, ja ensimmäiseksi rakennusmestariksi kutsuttiin Strasbourgista Matthäus Ensinger. Rakennustyö kesti vuosisatoja: tornin ylempi kahdeksankulmio ja huippu rakennettiin vasta vuosina 1889–1893. Länsipäädyn pääportaalin veistokset esittävät viimeistä tuomiota, ja niiden tekijä oli mestari Erhart Küng. Veistokset säilyivät uskonpuhdistuksen kuvainraivauksessa, vaikka muu kirkon sisustus menetti paljon. Kirkkoa pidetään Sveitsin tärkeimpänä myöhäisgoottilaisena rakennuksena.",
    "lyhyt": "Kuoron värilasi-ikkunat ovat 1400-luvun puolivälistä, ja vanhimmat niistä on tehty vuodesta 1441 alkaen. Pääportaalin vapaasti seisovat hahmot on korvattu restauroinnissa kopioilla, ja alkuperäiset ovat nykyään Bernin historiallisessa museossa.",
-   "syventava": "Miksi kirkon torni jäi kesken lähes kolmeksi vuosisadaksi?",
+   "syventava": "Miksi kirkon torni jäi kesken yli kolmeksi vuosisadaksi?",
    "kysymykset": [
     "Kuka oli Matthäus Ensinger?",
     "Kuinka korkea kirkon torni on?",
@@ -689,7 +689,7 @@
    "kuvaus": "Bernin karhutarha ja BärenPark",
    "luokka": "puisto",
    "koko_m": 45,
-   "teksti": "Bärengraben on pallokorista katsottuna kuoppa Aare-joen rinteessä lähellä Nydeggbrückea, ja sen alapuolella rinne laskeutuu joelle BärenPark-puistona. Karhu on sekä Bernin kaupungin että kantonin vaakunassa. Ensimmäinen karhutarha oli nykyisellä Bärenplatzilla Käfigturmin lähellä, ja vuoden 1513 tiedoissa mainitaan siellä pidetyt karhut. Nykyinen kuoppa, joka on kaupungin neljäs, otettiin käyttöön vuonna 1857. Uusi BärenPark vihittiin käyttöön 22.10.2009 ja avattiin yleisölle kolme päivää myöhemmin. Vanha iso kuoppa on yhä karhujen käytössä.",
+   "teksti": "Bärengraben on kuoppa Aare-joen rinteessä lähellä Nydeggbrückea, ja sen alapuolella rinne laskeutuu joelle BärenPark-puistona. Karhu on sekä Bernin kaupungin että kantonin vaakunassa. Ensimmäinen karhutarha oli nykyisellä Bärenplatzilla Käfigturmin lähellä, ja vuoden 1513 tiedoissa mainitaan siellä pidetyt karhut. Nykyinen kuoppa, joka on kaupungin neljäs, otettiin käyttöön vuonna 1857. Uusi BärenPark vihittiin käyttöön 22.10.2009 ja avattiin yleisölle kolme päivää myöhemmin. Vanha iso kuoppa on yhä karhujen käytössä.",
    "lyhyt": "Vanhan kuopan viereen rakennettiin 1920-luvulla pienempi kuoppa pentujen kasvatusta varten. Nykyään pienessä kuopassa on kauppa, ja sitä käytetään myös esityksiin ja vuokrataan tapahtumiin. Rinteessä kulkeva viistohissi, Bärenbähnli, yhdistää yläpuiston Aaren rantatiehen ja tekee alueesta esteettömän.",
    "syventava": "Miksi karhu on Bernin tunnus?",
    "kysymykset": [
