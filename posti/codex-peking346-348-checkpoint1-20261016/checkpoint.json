@@ -1,0 +1,26 @@
+{
+  "status": "FEEDBACK_CHECKPOINT_NOT_GAME_PACKAGE",
+  "tasks": [
+    346,
+    347,
+    348
+  ],
+  "curtainCandidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task346-348-work/curtain-candidate1",
+  "curtainCandidateProofSHA256": "e8841c9eb4e9788990e5bb47852a1b993da9e5882d49c6b9a37349b972796cf6",
+  "curtainVisibleRedPalaceFacadeOcclusionObserved": true,
+  "curtainNotVisuallyAccepted": true,
+  "seamCandidate": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task346-348-work/seam-candidate1",
+  "seamCandidateProofSHA256": "0467a4e768250cf9adb7b5205674b721e1e180f94f259baf669379639b21e9e5",
+  "sampledSavedSeamRays": 11988,
+  "oldGapSamplesCovered": 9324,
+  "uncoveredSamples": 0,
+  "waterExcludedSamples": 675,
+  "seamWholeContinuousCoverageAndDeviceStillOpen": true,
+  "sourceCoordinateModelNotObservedUnityMask": true,
+  "effectiveGetCartographicPointsStillRequested": true,
+  "noOldLandRaisedOrMoved": true,
+  "allOriginalV4BINBytesPreserved": true,
+  "V4TreesReceiverAcceptedOnly": true,
+  "notGameOrOwnerAcceptance": true,
+  "createdAtUTC": "2026-10-16T03:57:28.793384+00:00"
+}

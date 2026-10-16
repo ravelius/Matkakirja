@@ -1,0 +1,8112 @@
+{
+  "status": "SAVED_ACTUAL_ROOT_SEAM_POINT_COVERAGE_READBACK",
+  "counts": {
+    "samples": 11988,
+    "oldGapCoveredBySavedAppendGeometry": 9324,
+    "excludedWaterReservation": 675,
+    "alreadyCoveredByUnchangedOldGround": 1989
+  },
+  "sourceSegments": 1332,
+  "samplesPerSegment": 9,
+  "notContinuousCoverageProof": true,
+  "oldGroundTriangles": 58578,
+  "addedCoverTrianglesLOD0": 2595,
+  "files": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "sha256": "2d3b5aeb91460cc1e5e11a43c777d41b019452a0259db9d26ae6d77364b03f2c"
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "sha256": "91aeb2f3de4a2b15382fb60e5ec9b3d2511656b68257b00c53387381a042450b"
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "sha256": "7559b2338d4872206544d269a860216caef4df115b44e768e58b9b5457bed91a"
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "sha256": "7d8d9ddf41cd1c1862a742d067312059b7536fb23dad2d420a5c916fba8ae060"
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "sha256": "bc81975df29448e5ce898ea85415eba75d7fe3483a25c5ab7c89a219157bb474"
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "sha256": "32992ff306b9f83690757ca9a4f386130c52d44599c190c0dedca49e52513f7e"
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "sha256": "7a58a4b05cc6300e13581722105f6bdd1c5246ea014cdca38465d38d61c84f77"
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "sha256": "124a9138a8fb65505eb09bf8815d6440ad66baa4dc5165aa15a1abc6238b2278"
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "sha256": "a92f98ea27c03418a7ac4c2a94c4ca0c54184664823011f441601d24642810d4"
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "sha256": "648f398c9e8a1f84641a0083e834272c86eafc1337b0cd435854fb04051e5c34"
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "sha256": "d5ded673f005b258816c783efbf5086b71f30c7b1e0d5c61bf644d7e1bafcdbd"
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "sha256": "dbd0d69e6c80b195235004fe95de816dd040aacf7db857639176f2348c398382"
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "sha256": "a72b968ce34c91d525a45c562207281ee4c10e0704cd67072434858f726d3505"
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "sha256": "fb44fc2f7de17b5279338332c81cd312e2a63eaeeb12800805622c423238d592"
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "sha256": "94db27007f24573fab16d7a3eab4759da97022460d482564fc6759dc40caf45a"
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "98c8895722394d9814693e062fa4d75ecb993131e4e6750884a60f0a39c0a0f4"
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "sha256": "cad252211ccaec8b83f4a2ca06b3f388ed74147a323a2bad82e71187c7c8918a"
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "sha256": "0481b3924c57db55c5d3e2f581fccc27db0f23208322a07b825d9dc6b9e1b009"
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "sha256": "aab32ed205b188e94bb2353de16b2ea365b0c2e2331519e312bfd409052aa914"
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "sha256": "906885485bb8f29093baf74815936bfd221ad17835c011c91fb189686b226253"
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "sha256": "8f6b031f419e1bc6c3c9f6b0d7991f15084b008c0afe45bcf6becd00975896bb"
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "sha256": "b225eb575a214fd465332fede862063050d0b42a1364345f5904a7d150ff6d2f"
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "sha256": "606f185639abaef7385b3bf62319ea804df2e4bbc9d2d1c8f313b7a7f61a0748"
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "6c55a56a50d4e2bd4c6cca6d63cdd4298b7b6aa7d76f2d987aca673d14774d36"
+    }
+  ],
+  "bySegment": [
+    {
+      "segment": 0,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 2,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 3,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 4,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 5,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 6,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 7,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 8,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 9,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 10,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 11,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 12,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 13,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 14,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 15,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 16,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 17,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 18,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 19,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 20,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 21,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 22,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 23,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 24,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 25,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 26,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 27,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 28,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 29,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 30,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 31,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 32,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 33,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 34,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 35,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 36,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 37,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 38,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 39,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 40,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 41,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 42,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 43,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 44,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 45,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 46,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 47,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 48,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 49,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 50,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 51,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 52,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 53,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 54,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 55,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 56,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 57,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 58,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 59,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 60,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 61,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 62,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 63,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 64,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 65,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 66,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 67,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 68,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 69,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 70,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 71,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 72,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 73,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 74,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 75,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 76,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 77,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 78,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 79,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 80,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 81,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 82,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 83,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 84,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 85,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 86,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 87,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 88,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 89,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 90,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 91,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 92,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 93,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 94,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 95,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 96,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 97,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 98,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 99,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 100,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 101,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 102,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 103,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 104,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 105,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 106,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 107,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 108,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 109,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 110,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 111,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 112,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 113,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 114,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 115,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 116,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 117,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 118,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 119,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 120,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 121,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 122,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 123,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 124,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 125,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 126,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 127,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 128,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 129,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 130,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 131,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 132,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 133,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 134,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 135,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 136,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 137,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 138,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 139,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 140,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 141,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 142,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 143,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 144,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 145,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 146,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 147,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 148,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 149,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 150,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 151,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 152,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 153,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 154,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 155,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 156,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 157,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 158,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 159,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 160,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 161,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 162,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 163,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 164,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 165,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 166,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 167,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 168,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 169,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 170,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 171,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 172,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 173,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 174,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 175,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 176,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 177,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 178,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 179,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 180,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 181,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 182,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 183,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 184,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 185,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 186,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 187,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 188,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 189,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 190,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 191,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 192,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 193,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 194,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 195,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 196,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 197,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 198,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 199,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 200,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 6,
+      "alreadyCoveredByUnchangedOldGround": 3
+    },
+    {
+      "segment": 201,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 202,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 203,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 204,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 205,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 206,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 207,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 208,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 209,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 210,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 211,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 212,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 213,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 214,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 215,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 216,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 217,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 218,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 219,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 220,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 221,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 222,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 223,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 224,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 225,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 226,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 227,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 228,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 229,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 230,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 231,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 232,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 233,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 234,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 235,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 236,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 237,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 238,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 239,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 240,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 241,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 242,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 243,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 244,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 245,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 246,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 247,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 248,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 249,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 250,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 251,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 252,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 253,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 254,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 255,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 256,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 257,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 258,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 259,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 260,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 261,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 262,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 263,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 264,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 265,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 266,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 267,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 268,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 269,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 270,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 271,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 272,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 273,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 274,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 275,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 276,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 277,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 278,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 279,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 280,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 281,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 282,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 283,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 284,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 285,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 286,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 287,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 288,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 289,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 290,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 291,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 292,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 293,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 294,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 295,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 296,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 297,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 298,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 299,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 300,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 301,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 302,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 303,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 304,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 305,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 306,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 307,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 308,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 309,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 310,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 311,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 312,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 313,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 314,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 315,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 316,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 317,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 318,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 319,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 320,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 321,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 322,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 323,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 324,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 325,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 326,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 327,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 328,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 329,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 330,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 331,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 332,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 333,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 334,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 335,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 336,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 337,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 338,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 339,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 340,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 341,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 342,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 343,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 344,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 345,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 346,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 347,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 348,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 349,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 350,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 351,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 352,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 353,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 354,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 355,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 356,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 357,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 358,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 359,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 360,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 361,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 362,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 363,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 364,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 365,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 366,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 367,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 368,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 369,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 370,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 371,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 372,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 373,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 374,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 375,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 376,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 377,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 378,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 379,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 380,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 381,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 382,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 383,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 384,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 385,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 386,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 387,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 388,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 389,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 390,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 391,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 392,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 393,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 394,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 395,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 396,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 397,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 398,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 399,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 400,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 401,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 402,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 403,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 404,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 405,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 406,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 407,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 408,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 409,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 410,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 411,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 412,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 413,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 414,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 415,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 416,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 417,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 418,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 419,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 420,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 421,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 422,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 423,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 424,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 425,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 426,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 427,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 428,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 429,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 430,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 431,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 432,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 433,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 434,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 435,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 436,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 437,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 438,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 439,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 440,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 441,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 442,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 443,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 444,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 445,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 446,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 447,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 448,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 449,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 450,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 451,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 452,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 453,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 454,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 455,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 456,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 457,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 458,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 459,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 460,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 461,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 462,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 463,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 464,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 465,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 466,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 467,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 468,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 469,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 470,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 471,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 472,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 473,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 474,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 475,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 476,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 477,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 478,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 479,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 480,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 481,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 482,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 483,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 484,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 485,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 486,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 487,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 488,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 489,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 490,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 491,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 492,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 493,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 494,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 495,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 496,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 497,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 498,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 499,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 500,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 501,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 502,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 503,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 504,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 505,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 506,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 507,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 508,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 509,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 510,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 511,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 512,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 513,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 514,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 515,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 516,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 517,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 518,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 519,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 520,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 521,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 522,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 523,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 524,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 525,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 526,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 527,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 528,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 529,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 530,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 531,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 532,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 533,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 534,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 535,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 536,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 537,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 538,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 539,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 540,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 541,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 542,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 543,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 544,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 545,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 546,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 547,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 548,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 549,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 550,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 551,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 552,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 553,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 554,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 555,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 556,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 557,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 558,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 559,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 560,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 561,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 562,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 563,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 564,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 565,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 566,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 567,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 568,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 569,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 570,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 571,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 572,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 6,
+      "alreadyCoveredByUnchangedOldGround": 3
+    },
+    {
+      "segment": 573,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 574,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 575,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 576,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 577,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 578,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 579,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 580,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 581,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 582,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 583,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 584,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 585,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 586,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 587,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 588,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 589,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 590,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 591,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 592,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 593,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 594,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 595,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 596,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 597,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 598,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 599,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 600,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 601,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 602,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 603,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 604,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 605,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 606,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 607,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 608,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 609,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 610,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 611,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 612,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 613,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 614,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 615,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 616,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 617,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 618,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 619,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 620,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 621,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 622,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 623,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 624,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 625,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 626,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 627,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 628,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 629,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 630,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 631,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 632,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 633,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 634,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 635,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 636,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 637,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 638,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 639,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 640,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 641,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 642,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 643,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 644,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 645,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 646,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 647,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 648,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 649,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 650,
+      "withinNominalMask": true,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 651,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 652,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 653,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 654,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 655,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 656,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 657,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 658,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 659,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 660,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 661,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 662,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 663,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 664,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 665,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 666,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 667,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 668,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 669,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 670,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 671,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 672,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 673,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 674,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 675,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 676,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 677,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 678,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 679,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 680,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 681,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 682,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 683,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 684,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 685,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 686,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 687,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 688,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 689,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 690,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 691,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 692,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 693,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 694,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 695,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 696,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 697,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 698,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 699,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 700,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 701,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 702,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 703,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 704,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 705,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 706,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 707,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 708,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 709,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 710,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 711,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 712,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 713,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 714,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 715,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 716,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 717,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 718,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 719,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 720,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 721,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 722,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 723,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 724,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 725,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 726,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 727,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 728,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 729,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 730,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 731,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 732,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 733,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 734,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 735,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 736,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 737,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 738,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 739,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 740,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 741,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 742,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 743,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 744,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 745,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 746,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 747,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 748,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 749,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 750,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 751,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 752,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 753,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 754,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 755,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 756,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 757,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 758,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 759,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 760,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 761,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 762,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 763,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 764,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 765,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 766,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 767,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 768,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 769,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 770,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 771,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 772,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 773,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 774,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 775,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 776,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 777,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 778,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 779,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 780,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 781,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 782,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 783,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 784,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 785,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 786,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 787,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 788,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 789,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 790,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 791,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 792,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 793,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 794,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 795,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 796,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 797,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 798,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 799,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 800,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 801,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 802,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 803,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 804,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 805,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 806,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 807,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 808,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 809,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 810,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 811,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 812,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 813,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 814,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 815,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 816,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 817,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 818,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 819,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 820,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 821,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 822,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 823,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 824,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 825,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 826,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 827,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 828,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 829,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 830,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 831,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 832,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 833,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 834,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 835,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 836,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 837,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 838,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 839,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 840,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 841,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 842,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 843,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 844,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 845,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 846,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 847,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 848,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 849,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 850,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 851,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 852,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 853,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 854,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 855,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 856,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 857,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 858,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 859,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 860,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 861,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 862,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 863,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 864,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 865,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 866,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 867,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 868,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 869,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 870,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 871,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 872,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 873,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 874,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 875,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 876,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 877,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 878,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 879,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 880,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 881,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 882,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 883,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 884,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 885,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 886,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 887,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 888,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 889,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 890,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 891,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 892,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 893,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 894,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 895,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 896,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 897,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 898,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 899,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 900,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 901,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 902,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 903,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 904,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 905,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 906,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 907,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 908,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 909,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 910,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 911,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 912,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 913,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 914,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 915,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 916,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 917,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 918,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 919,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 920,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 921,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 922,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 923,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 924,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 925,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 926,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 927,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 928,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 929,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 930,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 931,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 932,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 933,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 934,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 935,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 936,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 937,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 938,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 939,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 940,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 941,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 942,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 943,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 944,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 945,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 946,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 947,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 948,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 949,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 950,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 951,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 952,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 953,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 954,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 955,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 956,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 957,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 958,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 959,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 960,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 961,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 962,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 963,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 964,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 965,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 966,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 967,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 968,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 969,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 970,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 971,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 972,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 973,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 974,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 975,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 976,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 977,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 978,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 979,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 980,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 981,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 982,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 983,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 984,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 985,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 986,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 987,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 988,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 989,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 990,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 991,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 992,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 993,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 994,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 995,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 996,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 997,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 998,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 999,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 6,
+      "alreadyCoveredByUnchangedOldGround": 3
+    },
+    {
+      "segment": 1000,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1001,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1002,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1003,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1004,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1005,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1006,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1007,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1008,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1009,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1010,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1011,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1012,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1013,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1014,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1015,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1016,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1017,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1018,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1019,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1020,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1021,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1022,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1023,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1024,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1025,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1026,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1027,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1028,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1029,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1030,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1031,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1032,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1033,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1034,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1035,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1036,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1037,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1038,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1039,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1040,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1041,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1042,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1043,
+      "withinNominalMask": true,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1044,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 1045,
+      "withinNominalMask": false,
+      "samples": 9,
+      "excludedWaterReservation": 9
+    },
+    {
+      "segment": 1046,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1047,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1048,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1049,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1050,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1051,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1052,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1053,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1054,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1055,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1056,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1057,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1058,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1059,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1060,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1061,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1062,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1063,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1064,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1065,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1066,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1067,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1068,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1069,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1070,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1071,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1072,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1073,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1074,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1075,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1076,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1077,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1078,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1079,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1080,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1081,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1082,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1083,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1084,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1085,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1086,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1087,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1088,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1089,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1090,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1091,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1092,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1093,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1094,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1095,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1096,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1097,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1098,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1099,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1100,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1101,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1102,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1103,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1104,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1105,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1106,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1107,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1108,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1109,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1110,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1111,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1112,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1113,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1114,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1115,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1116,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1117,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1118,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1119,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1120,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1121,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1122,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1123,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1124,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1125,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1126,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1127,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1128,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1129,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1130,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1131,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1132,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1133,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1134,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1135,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1136,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1137,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1138,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1139,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1140,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1141,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1142,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1143,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1144,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1145,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1146,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1147,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1148,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1149,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1150,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1151,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1152,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1153,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1154,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1155,
+      "withinNominalMask": false,
+      "samples": 9,
+      "alreadyCoveredByUnchangedOldGround": 9
+    },
+    {
+      "segment": 1156,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1157,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1158,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1159,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1160,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1161,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1162,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1163,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1164,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1165,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1166,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1167,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1168,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1169,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1170,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1171,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1172,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1173,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1174,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1175,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1176,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1177,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1178,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1179,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1180,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1181,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1182,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1183,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1184,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1185,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1186,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1187,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1188,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1189,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1190,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1191,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1192,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1193,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1194,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1195,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1196,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1197,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1198,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1199,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1200,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1201,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1202,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1203,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1204,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1205,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1206,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1207,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1208,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1209,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1210,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1211,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1212,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1213,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1214,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1215,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1216,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1217,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1218,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1219,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1220,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1221,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1222,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1223,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1224,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1225,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1226,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1227,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1228,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1229,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1230,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1231,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1232,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1233,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1234,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1235,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1236,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1237,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1238,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1239,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1240,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1241,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1242,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1243,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1244,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1245,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1246,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1247,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1248,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1249,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1250,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1251,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1252,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1253,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1254,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1255,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1256,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1257,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1258,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1259,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1260,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1261,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1262,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1263,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1264,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1265,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1266,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1267,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1268,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1269,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1270,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1271,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1272,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1273,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1274,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1275,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1276,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1277,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1278,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1279,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1280,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1281,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1282,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1283,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1284,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1285,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1286,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1287,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1288,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1289,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1290,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1291,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1292,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1293,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1294,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1295,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1296,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1297,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1298,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1299,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1300,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1301,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1302,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1303,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1304,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1305,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1306,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1307,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1308,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1309,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1310,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1311,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1312,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1313,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1314,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1315,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1316,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1317,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1318,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1319,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1320,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1321,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1322,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1323,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1324,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1325,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1326,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1327,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1328,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1329,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1330,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    },
+    {
+      "segment": 1331,
+      "withinNominalMask": false,
+      "samples": 9,
+      "oldGapCoveredBySavedAppendGeometry": 9
+    }
+  ],
+  "uncovered": [],
+  "noOldGeometryOrHeightMutations": true,
+  "notRuntimeRasterOrGameApproval": true
+}

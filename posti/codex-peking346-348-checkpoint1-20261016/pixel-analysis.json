@@ -1,0 +1,68 @@
+{
+  "status": "THREE_ACTUAL_ROOT_SEAM_DIAGNOSTICS_CLOSED",
+  "frames": [
+    {
+      "file": "seam1-before.png",
+      "sha256": "6d65a8f8e69c3e09d58cc33f87da7b3f206be03abaf11c29da2fcac03f3210b8",
+      "after": false,
+      "gapM": 0.03256801489372829,
+      "allMagentaPixels": 8192,
+      "centralMagentaPixels": 7168,
+      "widthPixelsMax": 8
+    },
+    {
+      "file": "seam2-before.png",
+      "sha256": "5bcfac80ce9ff8f11dac134944adb01d577e1a8143670389f654213f659835f5",
+      "after": false,
+      "gapM": 0.029976615821842363,
+      "allMagentaPixels": 8192,
+      "centralMagentaPixels": 7168,
+      "widthPixelsMax": 8
+    },
+    {
+      "file": "seam3-before.png",
+      "sha256": "641e26ae21c2a4545479720ad63e7511e7dbd8e649c5864aa87f734dcb9551a7",
+      "after": false,
+      "gapM": 0.02722828793912687,
+      "allMagentaPixels": 6144,
+      "centralMagentaPixels": 5376,
+      "widthPixelsMax": 6
+    },
+    {
+      "file": "seam1-after.png",
+      "sha256": "f6f4be1c55e264a643e02cc6d1568df42f22dd6c3df076d188c701949ff22d4c",
+      "after": true,
+      "gapM": 0.03256801489372829,
+      "allMagentaPixels": 0,
+      "centralMagentaPixels": 0,
+      "widthPixelsMax": 0
+    },
+    {
+      "file": "seam2-after.png",
+      "sha256": "95b5ea82dc0116f85d89e97676a25b4e168e26f0dcd0b0d1282da33d4625ee0a",
+      "after": true,
+      "gapM": 0.029976615821842363,
+      "allMagentaPixels": 0,
+      "centralMagentaPixels": 0,
+      "widthPixelsMax": 0
+    },
+    {
+      "file": "seam3-after.png",
+      "sha256": "3f33c989ee8f619d7b2b68d8ba1059105531d5bcd111f428213bdc93665d7547",
+      "after": true,
+      "gapM": 0.02722828793912687,
+      "allMagentaPixels": 0,
+      "centralMagentaPixels": 0,
+      "widthPixelsMax": 0
+    }
+  ],
+  "centralROIPixels": [
+    64,
+    64,
+    960,
+    960
+  ],
+  "diagnosticMaterialNotGameAppearance": true,
+  "noRasterEdits": true,
+  "sourceProofSHA256": "c99306e05aa415f58fbdd61464909af21545413602cde9ca59d7dda5038053eb"
+}

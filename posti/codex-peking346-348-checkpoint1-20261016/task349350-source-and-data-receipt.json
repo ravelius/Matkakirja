@@ -1,0 +1,75 @@
+{
+  "tasks": [
+    349,
+    350
+  ],
+  "sourceCommit": "e81e898fe5a7b3c9516dde0b3b9de60238ec94f0",
+  "sourceBlobSHA1": "3f2d902b59738d1d5fd0699473d11ce874d7b9ab",
+  "sourcePath": "posti/valoseppa-codex-peking344-v4-lentotesti-ja-reunan-ion-20261016.md",
+  "sourceSHA256": "bda02f46a7735f0e1512a87ee5bbf4c5564500528228280c27121ea742d1f90d",
+  "sourceAndARVIOFullyRead": true,
+  "bothOriginalJPEGsPersonallyViewed": true,
+  "attachments": [
+    {
+      "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/peking284/ion-vali-tulos-p344v4.json",
+      "externalCopy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task346-348-work/incoming350/ion-vali-tulos-p344v4.json",
+      "sha256": "b4dd839c44c8057a03568b444430624575b094ccb3ffb8c5ce50b3a10daab38b",
+      "bytes": 246485,
+      "keys": [
+        "tulos"
+      ],
+      "rows": 4597,
+      "boundaryRows": 4004,
+      "firstRows": [
+        [
+          39.9135378,
+          116.3879366,
+          37.66,
+          43.52,
+          "vesivaraus-kivi:marmori"
+        ],
+        [
+          39.9135835,
+          116.387935,
+          37.66,
+          43.62,
+          "vesivaraus-kivi:marmori"
+        ]
+      ]
+    },
+    {
+      "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/peking284/ARVIO-p344v4.md",
+      "externalCopy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task346-348-work/incoming350/ARVIO-p344v4.md",
+      "sha256": "99c13372ead2ec442e9af9d321a26720a33c8c9389dc53b5589f5f4439210291",
+      "bytes": 1339
+    },
+    {
+      "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/peking284/peking-v3-vs-v4-klo13.jpg",
+      "externalCopy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task346-348-work/incoming350/peking-v3-vs-v4-klo13.jpg",
+      "sha256": "c865455db0a90176993860daca152e30f2d5ef4ce7590788a5d0c4695c19395b",
+      "bytes": 2915344
+    },
+    {
+      "sourcePath": "/Users/Shared/Claude/proto-3d/_tyo/linssiseppa2/peking284/peking-v3-vs-v4-klo18.jpg",
+      "externalCopy": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task346-348-work/incoming350/peking-v3-vs-v4-klo18.jpg",
+      "sha256": "d381ea862273d6ee6e0f4b44b54e139adda930771c8078ae1485128be820df6d",
+      "bytes": 1695609
+    }
+  ],
+  "task349": "V4 receiver-reported iPad13/18 tree color accepted, not human owner or full city acceptance",
+  "receiverReportedPacket": "p344v4",
+  "expectedV4ManifestSHA256": "8c1a1ecdf69f75d6fa5d74e9106d720ab374682588565ed5b9af9d74fbdc29cd",
+  "receiverReportedKTX2Errors": 0,
+  "receiverReportedMaskParts": 12,
+  "receiverReportedDevice": "iPad A26BC7D0 t196-k4 d9cf06ee",
+  "dayCamerasDifferNotPixelMatched": true,
+  "eveningDarkSilhouettesAcceptedByReceiverAsLightingNotPackageDefect": true,
+  "task350": "4597 finite-height source rows,4004 boundary rows ready for actual-own-surface matching",
+  "boundary4004OrderTagsAndCoordinatesMatched": true,
+  "own379StillPlaceholderNotMeasurement": true,
+  "IonHeightsWGS84Ellipsoid": true,
+  "noCurtainWhereIonBelowActualOwnSurface": true,
+  "oldTask348NoRaiseAndCurtainReplacementPreserved": true,
+  "noTask346347DeliveryOrCorrectedRuntimeClaim": true,
+  "createdAtUTC": "2026-10-16T03:07:21.581433+00:00"
+}
