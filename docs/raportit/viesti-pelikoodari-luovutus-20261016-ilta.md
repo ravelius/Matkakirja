@@ -41,6 +41,8 @@ peleihin; uudet vain pohjilla; ei väliaikaisia paikallisia korjauksia. PT: äl�
   Kameran päivitys tarkistettu: Update joka ruutu, unscaledDeltaTime, linssi pitää täyden tahdin (PeliOhjain Aktiivinen). Linssit 1930/1930.
   **KONFLIKTI NUI:n kanssa:** minun autoZoomOdottaa/AutoZoomViiveS 0,5 vs NUI:n autoOdottaa/AutoZoomViive 2,5 – käytä NUI:n mekanismia
   (rebase 0048e60e6:n päälle, poista omani), AutoZoomValmisS-testivakio → AutoZoomViive + liuku.
+  NUI:n natiivi-ui/museo-ikortti-198 **fb82e9f08** lisää MuseoKierros.cs:n leveysosaan UiTila-kentän (LaajaTavoite) – ota mukaan pohjaan;
+  0048e60e6 ⊂ 693f265ed. Seuraava NUI jatkaa luovutuksesta 441bea1ec; sovi yhdistysjärjestys PT:n kanssa.
 - JU:lla jonossa käännös 9b61757d8:stä (L2 seis levyn takia, käynnistyy > 26 Gi) → _tyo/pelikoodari/museo-pehmea-197-app. Kun KÄÄNNETTY tulee,
   aja "ennen-pohjaa"-video halutessasi: `SHA=<käännös> UDID=96044270-92AA-4BD3-BE2D-772C8495AB19 zsh .../pelikoodari-ajot/ajo-museo-pehmea-197.zsh`
   (skenaario sk-museo-pehmea-197.txt: Punainen kabinetti, 3 teosta, Auto Zoom + kävely, ääni) → SIMU VAPAA JU:lle. Ennen-video = juna 196 -käännös.
