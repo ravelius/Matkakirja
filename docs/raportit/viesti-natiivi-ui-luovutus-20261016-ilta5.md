@@ -6,6 +6,10 @@ Ennen käännöstä tyokalut/tarkista.sh (0 virhettä); museon ydinmuutoksissa L
 Ketjut: /Users/Shared/Claude/proto-3d/tyokalut/natiivi-ui-ajot/ketjut-20261016/*.zsh (ei muokata ajon aikana). Levyraja 25 Gt.
 _tyo/natiivi-ui/: .app nimi9 + ikortti-198 (+ nimi10 ja vihjeet-198 kääntymässä) → poista nimi7 ja vanhimmat, kun uudet varmistettu (≤ 2 + käytössä).
 
+## !!! PT 22.45: OMISTAJA PYYSI JULKAISUA – juna 197 lähtee heti kun Työn alla valmis, NUI on KRIITTINEN POLKU !!!
+Järjestys, jokainen heti valmistuttuaan: 1) kehys pois → museo-nimi SHA NS:lle (hyväksytty); 2) EB Garamond -pari + i-kortti
+d2b995bc9 -pari (iPhone + iPad) → PT; 3) pienoismallit-video (= vihjeet-198, kohta 5) → PT; 4) leveät teokset + lasipohja 4 paneeliin → NS.
+
 ## OMISTAJAN PÄÄTÖKSET (PT 22.24–22.26)
 - 22.24 (pysyvä): "juna 198" = juna 197. Kaikki (i-kortti, lasipohja, pienoismallit, liikepohja) samaan junaan; SHA:t NS:n
   (local_674b9ec4-e2f3-48e9-a810-a129f20a4f03) 197-jonoon omistajan ok:n jälkeen.
