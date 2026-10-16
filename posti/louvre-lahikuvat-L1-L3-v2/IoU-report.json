@@ -1,0 +1,189 @@
+{
+  "threshold": 0.95,
+  "twoUnmodifiedRequiredTargets": true,
+  "sourceMasksPreserved": true,
+  "noAutomaticMaskSubstitution": true,
+  "results": [
+    {
+      "code": "L1",
+      "nativeImageSHA256": "c3a0f1a5f4f500889c3a377a90a59d30c8a0f191e718f28dbbbdca6a6c92ca56",
+      "photoDerivedMaskSHA256": "654d7eda8e68eb0d07b4152b3dbba002ada4cbd480993df611cab4496899aea2",
+      "comparisons": [
+        {
+          "target": "K42-raw",
+          "targetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/v2-k42/sources/louvre-L1-maski-k42.png",
+          "targetSHA256": "5c8189c3e86fbb778f52ec2397c1ac57c4ab23621700957cee03802e85711395",
+          "targetUnmodified": true,
+          "intersectionPixels": 652424,
+          "unionPixels": 675840,
+          "iou": 0.9653527462121212,
+          "threshold": 0.95,
+          "measuredThresholdReached": true,
+          "boundaryUncertaintyPixels": 3,
+          "conservativeIoURange": [
+            0.9442284778620039,
+            0.9789741860999323
+          ],
+          "receiverAccepted": false
+        },
+        {
+          "target": "LiDAR-raw",
+          "targetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/v2-k42/sources/louvre-L1-maski.png",
+          "targetSHA256": "58a940c47c044eaf6edf50a7766ae4b69684179514e60d8c6ddc6cb9565e0c0f",
+          "targetUnmodified": true,
+          "intersectionPixels": 641968,
+          "unionPixels": 686740,
+          "iou": 0.9348050208230189,
+          "threshold": 0.95,
+          "measuredThresholdReached": false,
+          "boundaryUncertaintyPixels": 3,
+          "conservativeIoURange": [
+            0.9150328589050879,
+            0.9489517825849973
+          ],
+          "receiverAccepted": false
+        }
+      ],
+      "rawThresholdReachedEitherTarget": true,
+      "contentAcceptanceSeparate": true,
+      "receiverAccepted": false
+    },
+    {
+      "code": "L2",
+      "nativeImageSHA256": "b10ed21405de6c38009a184093b2c2edf3b14a28593b59de18bf54fed516397d",
+      "photoDerivedMaskSHA256": "9da0d20cadd25df16f6bb27429e097b17ed1b71d9793e72641a430beece47fd5",
+      "comparisons": [
+        {
+          "target": "K42-raw",
+          "targetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/v2-k42/sources/louvre-L2-maski-k42.png",
+          "targetSHA256": "76eb51d39bbef06ca30af9b3d8e73edb4d3e18753cf355ecfecdea55b280f7d0",
+          "targetUnmodified": true,
+          "intersectionPixels": 648832,
+          "unionPixels": 670733,
+          "iou": 0.9673476629299587,
+          "threshold": 0.95,
+          "measuredThresholdReached": true,
+          "boundaryUncertaintyPixels": 3,
+          "conservativeIoURange": [
+            0.9370465869329084,
+            0.9793640851871711
+          ],
+          "receiverAccepted": false
+        },
+        {
+          "target": "LiDAR-raw",
+          "targetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/v2-k42/sources/louvre-L2-maski.png",
+          "targetSHA256": "ed9b39ba2ec2fe6c860c911da0bac96a280f5800cca850193bcf426d03da0a50",
+          "targetUnmodified": true,
+          "intersectionPixels": 652385,
+          "unionPixels": 679602,
+          "iou": 0.9599515598835789,
+          "threshold": 0.95,
+          "measuredThresholdReached": true,
+          "boundaryUncertaintyPixels": 3,
+          "conservativeIoURange": [
+            0.9334275583471209,
+            0.9753678960244557
+          ],
+          "receiverAccepted": false
+        }
+      ],
+      "rawThresholdReachedEitherTarget": true,
+      "contentAcceptanceSeparate": true,
+      "receiverAccepted": false
+    },
+    {
+      "code": "L3",
+      "nativeImageSHA256": "d8dcd6267d00a1a2106f306d627f7c88221bae08fa6aea11ecd890a8f961757f",
+      "photoDerivedMaskSHA256": "ea0b73e7a617abd41b705f7e4747d8272bdf64f39cd26dad4dab77081f2a3e5b",
+      "comparisons": [
+        {
+          "target": "K42-raw",
+          "targetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/v2-k42/sources/louvre-L3-maski-k42.png",
+          "targetSHA256": "5b57bc68cc65b029b252ad40e4266a8fe0246328070c30504528d4b06695b65a",
+          "targetUnmodified": true,
+          "intersectionPixels": 411061,
+          "unionPixels": 457850,
+          "iou": 0.8978071420770994,
+          "threshold": 0.95,
+          "measuredThresholdReached": false,
+          "boundaryUncertaintyPixels": 3,
+          "conservativeIoURange": [
+            0.8655197666799429,
+            0.914089886002443
+          ],
+          "receiverAccepted": false
+        },
+        {
+          "target": "LiDAR-raw",
+          "targetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/v2-k42/sources/louvre-L3-maski.png",
+          "targetSHA256": "3078e4d8754d7bd927871b763ad03805e7eaf2fcca06a1e120b306f129a20eb0",
+          "targetUnmodified": true,
+          "intersectionPixels": 410074,
+          "unionPixels": 428761,
+          "iou": 0.9564162785327956,
+          "threshold": 0.95,
+          "measuredThresholdReached": true,
+          "boundaryUncertaintyPixels": 3,
+          "conservativeIoURange": [
+            0.9261701191157655,
+            0.9798807342284208
+          ],
+          "receiverAccepted": false
+        }
+      ],
+      "rawThresholdReachedEitherTarget": true,
+      "contentAcceptanceSeparate": true,
+      "receiverAccepted": false,
+      "sourceInconsistency": {
+        "suppliedK42HasForegroundStatue": true,
+        "briefSaysStatueNotInMask": true,
+        "diagnosticRemovalPolygon": [
+          [
+            875,
+            350
+          ],
+          [
+            940,
+            351
+          ],
+          [
+            1000,
+            354
+          ],
+          [
+            1075,
+            357
+          ],
+          [
+            1075,
+            690
+          ],
+          [
+            875,
+            690
+          ]
+        ],
+        "removedWhitePixels": 30433,
+        "diagnosticNotAcceptanceTarget": true
+      },
+      "additionalDiagnosticComparison": {
+        "target": "K42-statue-excluded-DIAGNOSTIC",
+        "targetPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/v2-k42/qa/L3-K42-statue-excluded-DIAGNOSTIC.png",
+        "targetSHA256": "8d9fd9740dab58d940790119041414208cf74d9be86907732a4669f7b5789e67",
+        "targetUnmodified": false,
+        "intersectionPixels": 410433,
+        "unionPixels": 428045,
+        "iou": 0.9588547933044423,
+        "threshold": 0.95,
+        "measuredThresholdReached": true,
+        "boundaryUncertaintyPixels": 3,
+        "conservativeIoURange": [
+          0.9231293232326465,
+          0.9770026830203143
+        ],
+        "receiverAccepted": false
+      }
+    }
+  ]
+}

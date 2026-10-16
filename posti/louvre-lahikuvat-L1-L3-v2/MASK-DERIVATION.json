@@ -1,0 +1,310 @@
+{
+  "sourceMasksNotCopied": true,
+  "nativeImagesNotWarpedOrEdited": true,
+  "allOutputMaskHashesFrozenBeforeTargetComparison": true,
+  "method": [
+    {
+      "code": "L1",
+      "nativeImageSHA256": "c3a0f1a5f4f500889c3a377a90a59d30c8a0f191e718f28dbbbdca6a6c92ca56",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "maskSHA256": "654d7eda8e68eb0d07b4152b3dbba002ada4cbd480993df611cab4496899aea2",
+      "method": "photo-derived sky-connected RGB segmentation for roofline plus manually observed photo facade/ground contact polyline; filled silhouette",
+      "groundPolylineNativePixels": [
+        [
+          0,
+          743
+        ],
+        [
+          180,
+          743
+        ],
+        [
+          400,
+          744
+        ],
+        [
+          700,
+          744
+        ],
+        [
+          900,
+          745
+        ],
+        [
+          1100,
+          745
+        ],
+        [
+          1300,
+          747
+        ],
+        [
+          1535,
+          747
+        ]
+      ],
+      "brightLeadRoofPhotoTraces": [
+        [
+          [
+            990,
+            215
+          ],
+          [
+            1000,
+            202
+          ],
+          [
+            1010,
+            198
+          ],
+          [
+            1020,
+            193
+          ],
+          [
+            1030,
+            189
+          ],
+          [
+            1040,
+            185
+          ],
+          [
+            1050,
+            181
+          ]
+        ]
+      ],
+      "sourceMasksReadForDerivation": false,
+      "sourceMaskCopyOrImageWarp": false,
+      "statueExcludedBelowPalaceSilhouette": true,
+      "windowsAndArchways": "solid building silhouette; occluded building filled behind foreground statue/lamps",
+      "uncertaintyPixels": 3,
+      "nativeImageUnedited": true
+    },
+    {
+      "code": "L2",
+      "nativeImageSHA256": "b10ed21405de6c38009a184093b2c2edf3b14a28593b59de18bf54fed516397d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "maskSHA256": "9da0d20cadd25df16f6bb27429e097b17ed1b71d9793e72641a430beece47fd5",
+      "method": "photo-derived sky-connected RGB segmentation for roofline plus manually observed photo facade/ground contact polyline; filled silhouette",
+      "groundPolylineNativePixels": [
+        [
+          0,
+          753
+        ],
+        [
+          180,
+          754
+        ],
+        [
+          400,
+          754
+        ],
+        [
+          580,
+          755
+        ],
+        [
+          700,
+          761
+        ],
+        [
+          805,
+          763
+        ],
+        [
+          900,
+          757
+        ],
+        [
+          1100,
+          757
+        ],
+        [
+          1300,
+          758
+        ],
+        [
+          1535,
+          759
+        ]
+      ],
+      "brightLeadRoofPhotoTraces": [
+        [
+          [
+            465,
+            333
+          ],
+          [
+            470,
+            334
+          ],
+          [
+            477,
+            372
+          ],
+          [
+            520,
+            373
+          ],
+          [
+            580,
+            377
+          ]
+        ],
+        [
+          [
+            1205,
+            335
+          ],
+          [
+            1210,
+            332
+          ],
+          [
+            1215,
+            328
+          ],
+          [
+            1220,
+            326
+          ],
+          [
+            1226,
+            326
+          ],
+          [
+            1230,
+            330
+          ],
+          [
+            1240,
+            334
+          ],
+          [
+            1250,
+            337
+          ],
+          [
+            1260,
+            340
+          ],
+          [
+            1270,
+            344
+          ],
+          [
+            1280,
+            350
+          ],
+          [
+            1288,
+            358
+          ]
+        ],
+        [
+          [
+            1218,
+            323
+          ],
+          [
+            1220,
+            315
+          ],
+          [
+            1228,
+            312
+          ],
+          [
+            1234,
+            319
+          ],
+          [
+            1235,
+            325
+          ]
+        ]
+      ],
+      "sourceMasksReadForDerivation": false,
+      "sourceMaskCopyOrImageWarp": false,
+      "statueExcludedBelowPalaceSilhouette": true,
+      "windowsAndArchways": "solid building silhouette; occluded building filled behind foreground statue/lamps",
+      "uncertaintyPixels": 3,
+      "nativeImageUnedited": true
+    },
+    {
+      "code": "L3",
+      "nativeImageSHA256": "d8dcd6267d00a1a2106f306d627f7c88221bae08fa6aea11ecd890a8f961757f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "maskSHA256": "ea0b73e7a617abd41b705f7e4747d8272bdf64f39cd26dad4dab77081f2a3e5b",
+      "method": "photo-derived sky-connected RGB segmentation for roofline plus manually observed photo facade/ground contact polyline; filled silhouette",
+      "groundPolylineNativePixels": [
+        [
+          0,
+          436
+        ],
+        [
+          120,
+          429
+        ],
+        [
+          265,
+          416
+        ],
+        [
+          390,
+          405
+        ],
+        [
+          530,
+          393
+        ],
+        [
+          680,
+          380
+        ],
+        [
+          800,
+          364
+        ],
+        [
+          875,
+          359
+        ],
+        [
+          945,
+          358
+        ],
+        [
+          1100,
+          361
+        ],
+        [
+          1300,
+          368
+        ],
+        [
+          1535,
+          369
+        ]
+      ],
+      "brightLeadRoofPhotoTraces": [],
+      "sourceMasksReadForDerivation": false,
+      "sourceMaskCopyOrImageWarp": false,
+      "statueExcludedBelowPalaceSilhouette": true,
+      "windowsAndArchways": "solid building silhouette; occluded building filled behind foreground statue/lamps",
+      "uncertaintyPixels": 3,
+      "nativeImageUnedited": true
+    }
+  ]
+}

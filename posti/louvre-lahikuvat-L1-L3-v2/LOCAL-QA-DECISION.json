@@ -1,0 +1,24 @@
+{
+  "localGeometryThresholdReached": [
+    "L1",
+    "L2",
+    "L3"
+  ],
+  "localGeometryRejected": [],
+  "localContentRejected": [
+    "L2"
+  ],
+  "reasonL2": "Upper Horloge/Sully facade has opaque relief instead of Commons photo upper three arched windows/caryatids, clock/window relationship differs",
+  "recommendedForReceiverReview": [
+    "L1",
+    "L3"
+  ],
+  "L2NotBindingModelTarget": true,
+  "ownerAccepted": false,
+  "recipientAccepted": false,
+  "wholeBatchApproved": false,
+  "threeCallAuthorizationExhausted": true,
+  "noAutomaticRetry": true,
+  "gameIntegrationVerified": false,
+  "published": false
+}

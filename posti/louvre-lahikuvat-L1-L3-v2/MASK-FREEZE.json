@@ -1,0 +1,9 @@
+{
+  "visuallyInspectedAgainstNativePhotos": true,
+  "sourceMasksNotReadForDerivation": true,
+  "masks": {
+    "L1": "654d7eda8e68eb0d07b4152b3dbba002ada4cbd480993df611cab4496899aea2",
+    "L2": "9da0d20cadd25df16f6bb27429e097b17ed1b71d9793e72641a430beece47fd5",
+    "L3": "ea0b73e7a617abd41b705f7e4747d8272bdf64f39cd26dad4dab77081f2a3e5b"
+  }
+}

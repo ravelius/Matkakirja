@@ -1,0 +1,150 @@
+{
+  "createdAt": "2026-10-16T11:13:50.005198+00:00",
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "bytes": 18592,
+      "sha256": "95483b961237686cf8d544e80452eb8a46c219f8e86a78f88ae30a81760067c3"
+    },
+    {
+      "path": "INDEPENDENT-QA-FI.md",
+      "bytes": 1557,
+      "sha256": "efd3b27a0ef36d50efb86e8a8fb49b3863f8b3b79f813d6be6523d71007a15da"
+    },
+    {
+      "path": "INDEPENDENT-QA.json",
+      "bytes": 9558,
+      "sha256": "bea6fe151f22c168fcdfd68023a095803573b53a696a5a7da0b2b26362c4daa7"
+    },
+    {
+      "path": "IoU-report.json",
+      "bytes": 6908,
+      "sha256": "f902ef0209635d484a1bf72ccd4b520074fcfa08444661b390b654eaed465996"
+    },
+    {
+      "path": "L1-difference-K42-raw.png",
+      "bytes": 9721,
+      "sha256": "7c1f6022e6c06b0330be669b7a34acc161cdf2efb7aa305ed7086cc28af26e36"
+    },
+    {
+      "path": "L1-difference-LiDAR-raw.png",
+      "bytes": 10224,
+      "sha256": "db88e7ebcb8f1ee8f264497e32d0e2a2ca493f5dee9badf25114cb6bf9ab4d2b"
+    },
+    {
+      "path": "L1-photo-mask-overlay.jpg",
+      "bytes": 511713,
+      "sha256": "727abf6fee870360776108a86b0d508fecfd45dafe7e5eb014de5c51a2927881"
+    },
+    {
+      "path": "L2-difference-K42-raw.png",
+      "bytes": 10548,
+      "sha256": "192a0224b17a30f00cb26e482b7d5cdec5531c1583bd8208d9a661104d61f2ba"
+    },
+    {
+      "path": "L2-difference-LiDAR-raw.png",
+      "bytes": 10400,
+      "sha256": "a6c73d33ebbf74734500d2e7dfcfa2059a73710676b560984f05d3f37efe0462"
+    },
+    {
+      "path": "L2-photo-mask-overlay.jpg",
+      "bytes": 574494,
+      "sha256": "a2f5eba6aec101dd65aeada7bceb68d1115cdc5d53a53891f3ca6551f9e922ce"
+    },
+    {
+      "path": "L3-K42-statue-excluded-DIAGNOSTIC.png",
+      "bytes": 4765,
+      "sha256": "8d9fd9740dab58d940790119041414208cf74d9be86907732a4669f7b5789e67"
+    },
+    {
+      "path": "L3-difference-K42-raw.png",
+      "bytes": 11567,
+      "sha256": "c3a86990c9a325b1a5db1d1e6cfb8e1fc317c940e0b322ef4f341f550005d972"
+    },
+    {
+      "path": "L3-difference-K42-statue-excluded-DIAGNOSTIC.png",
+      "bytes": 10111,
+      "sha256": "2a5041f010fff348e1749772f31605ae02eaa324d0b1b699bcdf052007a3d09e"
+    },
+    {
+      "path": "L3-difference-LiDAR-raw.png",
+      "bytes": 9333,
+      "sha256": "104d86ed53b043d1f6fcbd94eb9724d281686a3a2625021f91b76143459d37a7"
+    },
+    {
+      "path": "L3-photo-mask-overlay.jpg",
+      "bytes": 692987,
+      "sha256": "8bd7f4a96e6d6f077ea6ab1eef394bf3670ec67f7ba7438a3f40cc695aae20ee"
+    },
+    {
+      "path": "LAHTEET.md",
+      "bytes": 4473,
+      "sha256": "f1320eb51dec60a506301533759685256525c71905780a390304bb778d7f2606"
+    },
+    {
+      "path": "LOCAL-QA-DECISION.json",
+      "bytes": 617,
+      "sha256": "7322c0654f48d3abd019ae366ab1585c894e282d70b9e59d9fc1e1664100682b"
+    },
+    {
+      "path": "MASK-DERIVATION.json",
+      "bytes": 5946,
+      "sha256": "b91181769e3aeff59ecaaa1f04bccc321582780219ea03cbe1ddb0aac73081fc"
+    },
+    {
+      "path": "MASK-FREEZE.json",
+      "bytes": 345,
+      "sha256": "8978d0a868b5439b03a6c141cf67303f383507f17ee4c9f42c4884f871619bfc"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 13603,
+      "sha256": "4909c7e8ebe61327f3b4c92a0fb4fad39ac9d3a68b59bd5365bc51ca4f922ed3"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 4702,
+      "sha256": "ef954917927604d77cd9443b9700e0eea7f2f28bcffb7de016d3d67d6e45397e"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 15854,
+      "sha256": "652fbc9481949308f08b9f7dada2086324f3b3d676431a98c396b52b8fefa498"
+    },
+    {
+      "path": "derive_masks.py",
+      "bytes": 7229,
+      "sha256": "3837a632b4e8338cf603b7d2247d3190b827c63312c155a0c56f99b2d7c03162"
+    },
+    {
+      "path": "louvre-L1-maski.png",
+      "bytes": 4246,
+      "sha256": "654d7eda8e68eb0d07b4152b3dbba002ada4cbd480993df611cab4496899aea2"
+    },
+    {
+      "path": "louvre-L1.png",
+      "bytes": 2481882,
+      "sha256": "c3a0f1a5f4f500889c3a377a90a59d30c8a0f191e718f28dbbbdca6a6c92ca56"
+    },
+    {
+      "path": "louvre-L2-maski.png",
+      "bytes": 4425,
+      "sha256": "9da0d20cadd25df16f6bb27429e097b17ed1b71d9793e72641a430beece47fd5"
+    },
+    {
+      "path": "louvre-L2.png",
+      "bytes": 2718283,
+      "sha256": "b10ed21405de6c38009a184093b2c2edf3b14a28593b59de18bf54fed516397d"
+    },
+    {
+      "path": "louvre-L3-maski.png",
+      "bytes": 3886,
+      "sha256": "ea0b73e7a617abd41b705f7e4747d8272bdf64f39cd26dad4dab77081f2a3e5b"
+    },
+    {
+      "path": "louvre-L3.png",
+      "bytes": 3070601,
+      "sha256": "d8dcd6267d00a1a2106f306d627f7c88221bae08fa6aea11ecd890a8f961757f"
+    }
+  ]
+}

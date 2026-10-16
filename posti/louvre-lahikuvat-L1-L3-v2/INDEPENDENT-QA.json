@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "task": "Louvre v2-k42 #381–383",
+  "reviewer": "iss_scene_camera_qa",
+  "reviewed_at_utc": "2026-10-16T11:11:18.339029+00:00",
+  "state": "review_complete_3_of_3_PT_acceptance_separate",
+  "brief": {
+    "path": "sources/louvre-lahikulmat-codex-tilaus-2.md",
+    "sha256": "b68df9f6e42bc58817939bfb2672560529b4840ab03ce0486207989a554c4ac7",
+    "read_completely": true
+  },
+  "retained_base_instructions": [
+    {
+      "path": "sources/louvre-lahikulmat-codex-tilaus.md",
+      "sha256": "b28e27d5109483fe58bce57d153f914c3033feb59cd491534ed5196a142b7a62",
+      "previously_read_completely_identical_bytes_confirmed": true
+    },
+    {
+      "path": "sources/louvre-codex-tilaus.md",
+      "sha256": "74026ce85d1fed36210aaf23eedf384729d851f6fb8f663c3d1706074f2834c3",
+      "previously_read_completely_identical_bytes_confirmed": true
+    },
+    {
+      "path": "sources/louvre-lahikulmat.json",
+      "sha256": "8960a8e4330b4e881b5a3293cdf328eed151737de2b1b558f3fda64997eb41a3",
+      "previously_read_completely_identical_bytes_confirmed": true
+    },
+    {
+      "path": "sources/louvre-LAHTEET.md",
+      "sha256": "f1320eb51dec60a506301533759685256525c71905780a390304bb778d7f2606",
+      "previously_read_completely_identical_bytes_confirmed": true
+    }
+  ],
+  "images": [
+    {
+      "id": "L1",
+      "candidate": {
+        "path": "images/louvre-L1.png",
+        "sha256": "c3a0f1a5f4f500889c3a377a90a59d30c8a0f191e718f28dbbbdca6a6c92ca56",
+        "width": 1536,
+        "height": 1024,
+        "format": "PNG"
+      },
+      "K42_camera": {
+        "path": "sources/louvre-L1-peli-k42.jpg",
+        "sha256": "618ca94f16efd5f9cfc15a9d8f81d804583c808ec048ccb299cd4cc4f73f7b73",
+        "width": 1536,
+        "height": 1024,
+        "format": "JPEG"
+      },
+      "K42_mask": {
+        "path": "sources/louvre-L1-maski-k42.png",
+        "sha256": "5c8189c3e86fbb778f52ec2397c1ac57c4ab23621700957cee03802e85711395",
+        "width": 1536,
+        "height": 1024,
+        "format": "PNG"
+      },
+      "candidate_and_K42_personally_viewed_with": "view_image",
+      "view_detail_requested": "original",
+      "geometry": "K42:n paviljonkien paikka, vasemman mansardin rajaus, kupoli ja julkisivu–maa-raja ovat silmämääräisesti lähellä lähdettä. Pieniä maareunan/katonkoristeiden eroja jää; tämä ei ole pikseli- tai95%todistus.",
+      "materials_details": "Hunajanbeige kivi, pilasterit, arkadit, veistokset sekä siniharmaat katot ovat pääosin valokuvamaisia. Suuret harmaat graniittilaatat toteutuvat. Kaikkien veistosten/reliefien ja kerrosjäsentelyn historiallista oikeellisuutta ei varmenneta pelkällä K42-vastaavuudella.",
+      "arches": "Kaikki näkyvät arkadit ja sisäänkäynnit tarkastettu nativesta; havaittavissa varjoa/muuria, ei pyramidia, lasikolmiota, vinoruutuista kehikkoa tai allasta.",
+      "label_observed": true
+    },
+    {
+      "id": "L2",
+      "candidate": {
+        "path": "images/louvre-L2.png",
+        "sha256": "b10ed21405de6c38009a184093b2c2edf3b14a28593b59de18bf54fed516397d",
+        "width": 1536,
+        "height": 1024,
+        "format": "PNG"
+      },
+      "K42_camera": {
+        "path": "sources/louvre-L2-peli-k42.jpg",
+        "sha256": "240897ce884c6531aad569ff97cb9c60c895f10e00f33089119af6733de40b74",
+        "width": 1536,
+        "height": 1024,
+        "format": "JPEG"
+      },
+      "K42_mask": {
+        "path": "sources/louvre-L2-maski-k42.png",
+        "sha256": "76eb51d39bbef06ca30af9b3d8e73edb4d3e18753cf355ecfecdea55b280f7d0",
+        "width": 1536,
+        "height": 1024,
+        "format": "PNG"
+      },
+      "candidate_and_K42_personally_viewed_with": "view_image",
+      "view_detail_requested": "original",
+      "geometry": "K42:n keskipaviljonki, sivusiivet ja maareuna vastaavat silmämääräisesti lähdettä läheisesti. Katon pienet koristeet/katteiden muodot poikkeavat, mutta vanhan massan rosoisia LiDAR-lohkoryhmiä ei nyt havaittu. Ei numeeristaIoU-väitettä.",
+      "materials_details": "Kivi, liuske/lyijy ja hiekkapiha ovat pääosin valokuvamaisia. MATERIAALINEN JULKISIVUVARAUS: paikallisen West-facade-Cour-Carrée-valokuvan Sully/Horloge-paviljongin yläkentässä on kolme korkeaa kaari-ikkunaa ja karyatidit, joiden alapuolella kello. Ehdokkaassa vastaava yläkenttä on umpinainen reliefiseinä ja kello jää sen alle mutta kolmen korkean ikkunan yläpuolelle. Kerros-/ikkunajäsentely näyttää K42:n sisäisen rakenteen tulkinnalta, ei tarkan valokuvajulkisivun vastaavuudelta.",
+      "arches": "Keskiaukko on nyt syvä tumma varjo ilman aiempaa pyramidimotiivia. Myös molempien sivujen kaikki näkyvät arkadit tarkastettu; ei havaittua pyramidia, lasiruudukkoa, kolmiopintaa tai allasta.",
+      "material_facade_fidelity_issue": true,
+      "label_observed": true
+    },
+    {
+      "id": "L3",
+      "candidate": {
+        "path": "images/louvre-L3.png",
+        "sha256": "d8dcd6267d00a1a2106f306d627f7c88221bae08fa6aea11ecd890a8f961757f",
+        "width": 1536,
+        "height": 1024,
+        "format": "PNG"
+      },
+      "K42_camera": {
+        "path": "sources/louvre-L3-peli-k42.jpg",
+        "sha256": "d1b37649c2ef511543e49a166da9c172b2df56def4617eace50a6f0aef096d99",
+        "width": 1536,
+        "height": 1024,
+        "format": "JPEG"
+      },
+      "K42_mask": {
+        "path": "sources/louvre-L3-maski-k42.png",
+        "sha256": "5b57bc68cc65b029b252ad40e4266a8fe0246328070c30504528d4b06695b65a",
+        "width": 1536,
+        "height": 1024,
+        "format": "PNG"
+      },
+      "candidate_and_K42_personally_viewed_with": "view_image",
+      "view_detail_requested": "original",
+      "geometry": "K42:n vasen rakennus rajautuu ylä-/vasenreunasta, maareuna kohoaa etäisyyteen ja takapaviljonki pysyy lähteen paikassa. Pieniä maareunaeroja jää. Patsas on lähteen lähellä, mutta pää ulottuu hieman ylemmäs ja jalusta alemmaksi: patsas/jalusta näyttää lähteen esinettä hieman korkeammalta.",
+      "materials_details": "Suuret laatat, perspektiiviset saumat ja sävy-/kulumavaihtelu näkyvät. Kiveyksen tiheä laikkuisuus on paikoin korostunut. Pystyyn nouseva hevonen, ratsastaja ja jalusta ovat realistisemman näköiset kuin K42:n massat, mutta täsmällistä LudvigXIV/Bernini-patsasidentiteettiä, patinaa tai anatomiaa ei varmenneta ilman vastaavaa patsasvalokuvaa.",
+      "arches": "Kaikki näkyvät läheiset ja takajulkisivun holvit sekä patsaan ympäristön tausta tarkastettu. Ei havaittua pyramidia, lasikolmiota, vinoruudukkoa, allasta tai altaan reunusta; piha jatkuu kiveyksenä.",
+      "label_observed": true
+    }
+  ],
+  "evidence": {
+    "all_six_new_K42_JPEG_and_mask_sources_personally_viewed": true,
+    "all_three_new_native_outputs_personally_viewed": true,
+    "old_rejected_candidates_used_as_base_or_image_reference": false,
+    "all_visible_arches_and_passages_inspected": true,
+    "masks_created_edited_or_normalized_by_reviewer": false,
+    "image_generation_editing_upload_mail_or_ledger_changes_by_reviewer": false
+  },
+  "L3_mask_conflict": {
+    "source_claim": "L3:ssa patsas ei kuulu maskiin",
+    "observed": "Toimitetun louvre-L3-maski-k42.png:n valkoisessa alueessa näkyvät koko ratsastajapatsas ja jalusta. Ristiriita vahvistettu henkilökohtaisella maski/K42-katselulla ennen generoinnin lopputuloksia.",
+    "statue_and_pedestal_in_raw_K42_white_region": true,
+    "required_output_palace_mask_excludes_statue_per_text": true,
+    "handling": "Lähdemaskia ei muuteta. Pääagentti johtaa tulosmaskit kuvista ja raportoi raakaK42- sekä alkuperäisenLiDAR-vertailun erikseen. Patsasristiriitaa ei piiloteta normalisoinnilla tai kohdemaskin vaihtamisella."
+  },
+  "geometry_gate": {
+    "iou_measured_by_this_reviewer": false,
+    "iou": null,
+    "ninety_five_percent_claim": false,
+    "visual_assessment_only": true,
+    "raw_K42_and_original_LiDAR_scores": "Pääagentin erillinen mittaus; ei tämän raportin mittaustulos."
+  },
+  "Commons_fidelity_reference": {
+    "path": "sources/louvre-ref-West-facade-of-the-Cour-Carr-e-Louvre-11-February.jpg",
+    "sha256": "4be60c9c4855b0001174e5c0da980bd906df89100e953c4355b24961a7f2f93b",
+    "personally_viewed_this_review": true,
+    "used_for": "L2:n ylimmän ikkunakentän/karyatidien ja kellon järjestyksen riippumaton vertailu"
+  },
+  "summary": {
+    "photographic_surface": "Pääosin valokuvamainen, mutta tyylikäs pinta ei todista historiallista arkkitehtuuri- tai veistosvastaavuutta.",
+    "forbidden_pyramids_basins_observed": false,
+    "no_pyramid_check_scope": "Kaikkien kolmen natiivin näkyvät holvit, läpikulut, taustat ja etualat; ei absoluuttista piilopintatodistusta.",
+    "roof_LiDAR_blocks_observed": false,
+    "materials": "L1/L3 suurlaattapiha ja L2 hiekkapiha toteutuvat; L3:n kulumalaikkuisuus korostunut.",
+    "all_labels_observed": "Pieni havainnekuva alaoikealla kaikissa3.",
+    "material_fidelity_hold": "L2:n yläjulkisivun ikkuna-/reliefijäsentely poikkeaa Commons-valokuvasta. L3-patsaan identiteetti jää varmistamatta."
+  },
+  "acceptance": {
+    "PT": "not_granted_by_this_reviewer",
+    "owner": "not_obtained_in_this_review",
+    "model_loop": "not_authorized_by_this_review",
+    "game": "internal_targets_not_game_assets"
+  },
+  "scope_mutations": [
+    "qa/INDEPENDENT-QA-FI.md",
+    "qa/independent-review.json"
+  ],
+  "pending": [
+    "Pääagentin tulosmaskien molemmat raakamittaukset",
+    "L2:n valokuvajulkisivun detaljivastaavuuden ratkaisu",
+    "Vastaanottajan/PT:n erillinen päätös"
+  ]
+}
