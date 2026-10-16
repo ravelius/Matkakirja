@@ -455,3 +455,4 @@ kun 9fa3b99f1 on juna-196:ssa).
   AjattelijatSovitin, OpasSovitin, RakettiAanet, PuluRealtime + Aanisoitin, Puhe, UI/Aanet, PeliKomennot (PT:n vastaus kesken). Kärki 8b0b4c02d.
 - 02.4x: siirto 21 **6f10473a8** PuluRealtime (puhe, taso 1,0, striimi ilman kelausta). Lista 7: AjattelijatSovitin, OpasSovitin, RakettiAanet +
   Aanisoitin, Puhe, UI/Aanet, PeliKomennot (PT). Kärki 6f10473a8.
+- 02.5x: siirto 22 **f08681cbe** AjattelijatSovitin (LuoLahde → pohja, AsetaTaso; näytetarkka ajastus ennallaan). Lista 6. Kärki f08681cbe.
