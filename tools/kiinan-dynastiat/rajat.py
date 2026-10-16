@@ -5,6 +5,7 @@ Rannikko tulee Natural Earthin maasta (PD): merelle ulottuvat kärjet leikataan 
 järjestyksessä (aiempi alue voittaa), joten yhteistä rajaa ei tarvitse piirtää kahdesti.
 Cliopatria (CC BY 4.0) on vain vertailukuvan katkoviiva, ei geometrian lähde.
 """
+import os, sys
 
 # Värit (suunnitelma luku 3).
 VARIT = {
@@ -116,6 +117,13 @@ VUODET = {
                 (97.5, 31.0), (98.8, 30.0), (98.6, 28.3), (97.5, 28.2), (95.5, 28.2), (92.0, 27.8), (89.5, 28.0),
                 (88.0, 27.9), (86.0, 28.0), (83.5, 29.2), (80.5, 30.5), (79.2, 32.3),
             ]),
+            ('Mongolia', 'qing', 'protektoraatti', [  # Ulko-Mongolia (Khalkha 1691, Uliastain kenraali) ja Tannu Uriankhai
+                (87.8, 49.2), (89.0, 50.5), (92.0, 51.5), (98.0, 52.5), (102.0, 51.7), (106.4, 50.3), (110.0, 49.9),
+                (116.7, 49.85), (115.6, 48.2), (117.8, 47.9), (119.7, 47.2), (119.9, 46.7),  # Hulunbuir jää Heilongjiangille
+                (118.0, 46.7), (116.6, 46.3), (115.6, 45.4), (113.6, 44.75), (111.9, 43.7), (110.4, 42.8),  # Gobi: Sisä-Mongolian raja
+                (108.0, 42.4), (105.0, 41.6), (103.0, 42.1), (100.0, 42.6), (96.4, 42.7),  # Alxa ja Hexi Qingin maakuntia
+                (95.3, 44.2), (93.5, 44.9), (91.0, 45.3), (90.7, 46.5), (88.9, 48.0),  # Khovd; Dzungaria (Ili 1759) sotilashallinnossa
+            ]),
             ('Qing', 'qing', 'ulkoinen', [
                 (141.0, 53.5), (138.0, 55.0), (135.0, 55.3), (127.0, 55.8), (121.5, 53.3),  # Uda, Stanovoi (Nertšinsk 1689)
                 (117.5, 49.8), (116.0, 50.0), (110.0, 49.9), (106.4, 50.3), (102.0, 51.7),  # Argun, Kjahta (1727)
@@ -133,3 +141,14 @@ VUODET = {
         ],
     },
 }
+
+
+# Osamoduulit (vuodet_*.py): kukin määrittää VUODET ja tarvittaessa uudet VARIT, KOTISEUDUT ja KAUPUNGIT.
+import importlib, glob as _glob
+for _p in sorted(_glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'vuodet_*.py'))):
+    try:
+        _m = importlib.import_module(os.path.basename(_p)[:-3])
+    except Exception as _e:
+        print('VAROITUS: osamoduuli ohitettu', os.path.basename(_p), _e, file=sys.stderr); continue
+    for _nimi in ('VARIT', 'KOTISEUDUT', 'KAUPUNGIT', 'VUODET'):
+        globals()[_nimi].update(getattr(_m, _nimi, {}))

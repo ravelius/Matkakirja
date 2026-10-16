@@ -6,7 +6,7 @@ import matplotlib; matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import PathPatch
 from matplotlib.path import Path
-from shapely.geometry import shape, Polygon, mapping, box
+from shapely.geometry import shape, Polygon, MultiPolygon, mapping, box
 from shapely.ops import unary_union
 import rajat
 
@@ -81,6 +81,41 @@ def piirra(vuosi, vertailu=False, ax=None):
     ax.set_title(v['otsikko'], fontsize=20, family='serif', loc='left')
     return al
 
+def ilman_reikia(g, nimi):
+    """Linssisepän muoto: peli kolmioi vain ulkorenkaat → reiät pois; varoitus, jos reikä on merkittävä."""
+    osat = []
+    for p in getattr(g, 'geoms', [g]):
+        if p.is_empty or p.geom_type != 'Polygon': continue
+        for r in p.interiors:
+            if Polygon(r).area > 0.05: print('VAROITUS: reikä', nimi, round(Polygon(r).area, 2), 'deg2 (kerro Linssisepälle)', file=sys.stderr)
+        osat.append(Polygon(p.exterior))
+    return osat[0] if len(osat) == 1 else MultiPolygon(osat)
+
+def nimen_paikka(g, v):
+    """Nimi alueen sisään, pois pääkaupungin päältä (sama logiikka kuin kuvassa)."""
+    c = g.representative_point(); cx, cy = c.x, c.y
+    for kn in v['paakaupungit']:
+        px, py = rajat.KAUPUNGIT[kn]; alas = box(px - 30, py - 30, px + 30, py - 1.8)
+        if abs(px - cx) < 4 and abs(py - cy) < 1.5 and g.intersects(alas):
+            p2 = g.intersection(alas).representative_point(); cx, cy = p2.x, p2.y
+    return round(cx, 2), round(cy, 2)
+
+def vie(vu, al):
+    """rajat-<vuosi>.geojson Linssisepän muodossa (16.10.2026): alueet + kotiseudut featureina, otsikko ja pääkaupungit ylätasolla."""
+    v = rajat.VUODET[vu]; f = []
+    for n, a, t, g in al:
+        if g.is_empty: continue
+        lon, lat = nimen_paikka(g, v)
+        f.append({'type': 'Feature', 'properties': {'nimi': n, 'avain': a, 'tyyppi': t, 'vari': rajat.VARIT[a], 'nimi_lon': lon, 'nimi_lat': lat},
+                  'geometry': mapping(ilman_reikia(g.simplify(0.02), n))})
+    for a in dict.fromkeys(a for _, a, _, g in al if a in rajat.KOTISEUDUT and not g.is_empty):
+        k = Polygon(rajat.KOTISEUDUT[a]).intersection(maa).simplify(0.02)
+        f.append({'type': 'Feature', 'properties': {'nimi': 'kotiseutu', 'avain': a, 'tyyppi': 'kotiseutu', 'vari': rajat.VARIT[a]},
+                  'geometry': mapping(ilman_reikia(k, 'kotiseutu ' + a))})
+    json.dump({'type': 'FeatureCollection', 'vuosi': vu, 'otsikko': v['otsikko'], 'lisenssi': 'CC0-1.0',
+               'paakaupungit': [{'nimi': kn, 'lon': rajat.KAUPUNGIT[kn][0], 'lat': rajat.KAUPUNGIT[kn][1]} for kn in v['paakaupungit']],
+               'features': f}, open(f'{K}/tulos/rajat-{vu}.geojson', 'w'), ensure_ascii=False)
+
 if __name__ == '__main__':
     vuodet = [int(x) for x in sys.argv[1].split(',')]; vertailu = '--vertailu' in sys.argv
     os.makedirs(f'{K}/tulos', exist_ok=True)
@@ -88,8 +123,5 @@ if __name__ == '__main__':
         fig, ax = plt.subplots(figsize=(12, 8.2), dpi=110)
         al = piirra(vu, vertailu, ax)
         fig.tight_layout(); fig.savefig(f"{K}/tulos/{vu}{'-vertailu' if vertailu else ''}.png"); plt.close(fig)
-        if not vertailu:
-            json.dump({'type': 'FeatureCollection', 'vuosi': vu, 'lisenssi': 'CC0-1.0', 'features': [
-                {'type': 'Feature', 'properties': {'nimi': n, 'avain': a, 'tyyppi': t, 'vari': rajat.VARIT[a]}, 'geometry': mapping(g.simplify(0.02))}
-                for n, a, t, g in al]}, open(f'{K}/tulos/rajat-{vu}.geojson', 'w'))
+        if not vertailu: vie(vu, al)
         print(vu, [(n, round(g.area, 1)) for n, _, _, g in al])
