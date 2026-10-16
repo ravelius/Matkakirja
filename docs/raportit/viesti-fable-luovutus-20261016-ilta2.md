@@ -20,7 +20,7 @@ PT kuittaa NS:lle vasta kun valmis:
 ## 3. Muut käynnissä
 - PEKING (omistaja 18.05 CODEXIN TAHTI, pysyvä): Codexilla #361 pinnat + #362 sävy (addcc8ac1). #360-pelitesti ajossa irrotettuna (ajo-peking360b) → LS:n seuraaja arvioi Codexille < 30 min. Postivahti hälyttää "CODEX ODOTTAA" (KIERROS.md, ei ledger.jsonia – postilaatikon commit-ajat). Arvioitu Peking-paketti → ämpäri ilman junaa omistajan piilotettuun kippiin + rivi KK:lle.
 - JUOKSUPELI (omistaja 18.18): suunnitelma #4714/#4715 (kesä, näköala 1914). Codex 3 kuvaa tilattu (Pelikoodari arvioi < 30 min) → kuvat KK:lle. Sisältökirjuri: Puyin lapsuuden faktapohja oppaan esittelyjen jälkeen. Rakentaminen vasta kun Codexin Peking valmis.
-- KIINAN DYNASTIAT -LINSSI (omistaja 18.3x): Karttaseppä tekee suunnitelman + CC0-rajojen lähdeselvityksen, ei rakentamista. Työlistalla.
+- KIINAN DYNASTIAT -LINSSI (omistaja 18.3x): suunnitelma + lähdeselvitys mergetty #4716 (18 avainvuotta; omat CC0-piirrokset, Cliopatria CC BY viitteenä). Rajojen piirto (1–2 pv) odottaa PT:n tilausta – päätä järjestys junan 197 ja Pekingin rinnalla (Karttaseppä muuten vapaa).
 - KESKUSTELUSSA, EI PÄÄTÖSTÄ: kesä 1923 esityksenä vs peli; Taiwanin palatsimuseo (VAIN EUROOPPA -poikkeus). Älä tee mitään ennen omistajaa.
 - Prahan ja Ateenan historiaosiot 8+8 Tekstit-osastossa omistajan hyväksyttävänä → sitten Äänittäjä.
 
