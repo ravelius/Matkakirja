@@ -14,6 +14,18 @@ Väliaikaisia paikallisia korjauksia ei tehdä.
 | ÄÄNI | Yhteinen mikseri: puhe, musiikki, tehosteet, maisema. Tasot, pehmeät häivytykset, musiikin vaimennus kertojan alle, askeleet alustan mukaan. Jaetun mikserin kertoimet (worker /mikseri/tasot) säilyvät. | Siirtoseppä (koodi), Äänittäjä (tasot ja kuuntelu) | Museo: askeleet, kertoja, sellot |
 | VALO JA KUVA | Yhteiset valaistus-, varjo-, sävykäsittely- ja materiaaliprofiilit, joista linssit ja pelit valitsevat. | Valoseppä | Valosepän suunnitelman mukaan |
 
+## Välineet (Keskustelukanavan lisäys 16.10.2026; kaikki ilmaisia tai jo projektissa, ei ostoja)
+
+- LIIKE: liikemerkit (nimi + käyrä + kesto) tyylikirjaan Material 3:n ja SwiftUI:n mallin mukaan;
+  UI:ssa USS-transitiot samoilla arvoilla. 3D-kamerat Cinemachinen kautta (com.unity.cinemachine
+  6.7.0 ja splines 2.9.1 jo asennettu; nyt käytössä vain DioraamaCinemachine.cs:ssä ja
+  Seikkailu*-tiedostoissa), yksi yhteinen blend-asetus.
+- ÄÄNI: yksi Unityn AudioMixer (ryhmät, Duck Volume, snapshotit) ja jo asennettu Steam Audio.
+- VALO: yksi URP Volume -oletusprofiili, materiaalivariantit, prefab-variantit ja Preset Managerin
+  tuontioletukset.
+- VALVONTA: Roslyn-analysaattori tai EditMode-testi varoittaa ohituksista; pohjan muutoksille
+  vertailukuvat; yksi näyttelynäkymä, jossa kaikki liikkeet, kortit ja äänet näkyvät ja kuuluvat.
+
 ## Tarkistus
 
 Jokaisella pohjalla on automaattinen tarkistus. Se listaa pohjan ohittavat omat liikkeet (Lerp,
