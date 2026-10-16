@@ -1,0 +1,37 @@
+{
+  "task": 360,
+  "status": "ALLOW_ONE_TILE_PRIVATE_GROUND_AO_TEST_AFTER_PACKAGING_METADATA_CORRECTION",
+  "groundOnlyPrivateTestCandidateAllowed": true,
+  "wholeTask360Or361OrOwnerAccepted": false,
+  "reviewFilePins": {
+    "visible-session-sol-task360-ground-world-audit.md": "2512356bebfb701ccc93741e3fcef971022150ba3559b3916b5e772063d230d4",
+    "visible-session-sol-task360-ground-world-audit.json": "139973fca1e5498e639fad6f1ce54c8ced01adfec0f25f59149504898b19b082",
+    "visible-session-astra-task360-ground-world-review.md": "ebf48531f5f55d886e5ebde28f3ac7fbae1507c5691a05b72bf5384e055884ed",
+    "visible-session-astra-task360-ground-world-review.json": "80a070912a37a0542214f3c05deee3008f3a97d53639d97d8c04842df697cfff"
+  },
+  "candidateProofSHA256": "48badc4ae9f2b1ac8a554f3a6cb5b39ff023263a77a8ee2c9148031b9be0e9bf",
+  "technicalScopeConclusion": "Rajattu AO-rakenne läpäisee: kaikkien kolmen GLB:n lähdegeometria ja RGB säilyvät; metrinen FLOAT32 UV1 ja lineaariset R8/LOD-kuvat täsmäävät. Paketin perityt proof-laskurit ja lähteen hyväksyntään viittaava avainnimi korjataan ennen toimitusta.",
+  "visualScopeConclusion": "Astra katsoi 24 uutta ennen/jälkeen-kuvaa ja vanhan virhekuvan. Paikalliset maakontaktit vahvistuvat maltillisesti; suuret tummat polygoniläiskät eivät toistu tarkistetuissa kameroissa. Kelvollinen yhden ruudun yksityiseen pelitestiin.",
+  "metadataCorrectionsRequired": [
+    "Read materialCount and embeddedImages from current GLB; record inherited counts",
+    "Rename sourceAcceptedV5SHA256 to sourceDeliveredV5SHA256; do not imply V5 runtime acceptance"
+  ],
+  "helperBoundarySliverAreaUpperBoundM2": 2.1989111162950525e-09,
+  "helperBoundarySliverMaxFractionOfLOD0Texel": 9.135785221036468e-09,
+  "remainingGates": [
+    "Packaging metadata readback",
+    "Receiver actual KTX2 linear DFD/R/mip/decode and UV1 texCoord1 strength.6",
+    "Same-camera game13/18 and AO off/on",
+    "Entire pilot boundary, seam-cover contact, low-oblique motion and LOD1/2",
+    "Device texture duplication memory/FPS",
+    "Building AO/COLOR0 still unimplemented",
+    "Ground albedo repeat361 still uncorrected",
+    "Water/reflections/Ion/light compatibility in game",
+    "Whole-city human quality/owner acceptance"
+  ],
+  "parentPersonallyViewedCurrentFrozenTaihedianAndAir": true,
+  "parentPersonallyViewedThreeNewContactViewsAndPriorFailureContact2": true,
+  "noNewCanonicalNativeRound": true,
+  "allOwnWritesExternalT7OrNAS": true,
+  "createdAtUTC": "2026-10-16T06:57:33.848072+00:00"
+}

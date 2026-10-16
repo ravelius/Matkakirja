@@ -1,0 +1,118 @@
+{
+  "status": "METRIC_WORLD_GROUND_AO_2048_CANDIDATE_BUILT_NOT_DELIVERED",
+  "baseV5Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5",
+  "sourceProbeProofSHA256": "73b4cb5917028abf5832263c41daad71e01bd227b2d7e0557651c5f51bf0fb87",
+  "pilotOnlyTile": "peking_2_3",
+  "AOscope": "only two original stage5_paving primitives; no seam/roof/tree/material-base changes",
+  "noCOLOR0BuildingAOYet": true,
+  "noGroundRepeatFixClaim": true,
+  "resolutionLOD0Is2048WithMetricPixelSizeM": [
+    0.2705078125,
+    0.24609375
+  ],
+  "allThreeSourcePavingGeometriesAndUV0IdenticalVerified": true,
+  "allOriginalV5BINPrefixesAndSourceRGBImagesPreserved": true,
+  "allTriangleCornerGeometryNormalsUV0ByteExact": true,
+  "allOldMaterialsTreeGold303SourceHeightsDEMOriginsPreserved": true,
+  "projectedAll72Bytes": 158656008,
+  "projectedAll72Triangles": 1385100,
+  "addedBytes": 988048,
+  "imageReferencedOnlyGround2PrimitivesPerLOD": true,
+  "gameTextureDuplicationStillReceiverMeasurement": true,
+  "files": [
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "be28e72d4768e1738dfdd956c42c485089b8bf1533f42c5c40b7d7eb3a37c23c",
+      "bytes": 9289480,
+      "sourceV5Bytes": 8680908,
+      "addedBytes": 608572,
+      "triangles": 98042,
+      "imageBytes": 558000,
+      "imageSize": [
+        2048,
+        2048
+      ],
+      "bindings": [
+        {
+          "primitive": 28,
+          "sourceMaterial": 10,
+          "newMaterial": 34,
+          "sourceVertices": 3990,
+          "vertexSplits": 0,
+          "onlyGroundAO": true
+        },
+        {
+          "primitive": 29,
+          "sourceMaterial": 10,
+          "newMaterial": 34,
+          "sourceVertices": 2223,
+          "vertexSplits": 0,
+          "onlyGroundAO": true
+        }
+      ]
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "sha256": "4365493041ef76b1363459f58283abf79dd2f3676fec1f017304992239bc672e",
+      "bytes": 4403940,
+      "sourceV5Bytes": 4135400,
+      "addedBytes": 268540,
+      "triangles": 50638,
+      "imageBytes": 217966,
+      "imageSize": [
+        1024,
+        1024
+      ],
+      "bindings": [
+        {
+          "primitive": 27,
+          "sourceMaterial": 10,
+          "newMaterial": 33,
+          "sourceVertices": 3990,
+          "vertexSplits": 0,
+          "onlyGroundAO": true
+        },
+        {
+          "primitive": 28,
+          "sourceMaterial": 10,
+          "newMaterial": 33,
+          "sourceVertices": 2223,
+          "vertexSplits": 0,
+          "onlyGroundAO": true
+        }
+      ]
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "sha256": "8f9c06f18509cc31ed11a7c18f55858eb7e1c16a82e8850df8f8c9cb255ae158",
+      "bytes": 4034100,
+      "sourceV5Bytes": 3923164,
+      "addedBytes": 110936,
+      "triangles": 49306,
+      "imageBytes": 60357,
+      "imageSize": [
+        512,
+        512
+      ],
+      "bindings": [
+        {
+          "primitive": 27,
+          "sourceMaterial": 10,
+          "newMaterial": 33,
+          "sourceVertices": 3990,
+          "vertexSplits": 0,
+          "onlyGroundAO": true
+        },
+        {
+          "primitive": 28,
+          "sourceMaterial": 10,
+          "newMaterial": 33,
+          "sourceVertices": 2223,
+          "vertexSplits": 0,
+          "onlyGroundAO": true
+        }
+      ]
+    }
+  ],
+  "notRuntimeOrOwnerAcceptance": true
+}

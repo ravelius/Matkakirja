@@ -1,0 +1,508 @@
+{
+  "status": "TECHNICAL_AO_PILOT_PASS_PENDING_METADATA_CORRECTION_KTX2_VISUAL_RUNTIME_GATES",
+  "candidateRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1",
+  "baseExactFromCandidateProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5",
+  "candidateProofSHA256": "48badc4ae9f2b1ac8a554f3a6cb5b39ff023263a77a8ee2c9148031b9be0e9bf",
+  "bakeProofSHA256": "73b4cb5917028abf5832263c41daad71e01bd227b2d7e0557651c5f51bf0fb87",
+  "all24BakeSourcePinsVerified": true,
+  "checks3GLB": [
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "be28e72d4768e1738dfdd956c42c485089b8bf1533f42c5c40b7d7eb3a37c23c",
+      "sourceSHA256": "eb4becb832c159296e306a83842f84add3da2e9a7c25b87681af4157cbc88ad9",
+      "bytes": 9289480,
+      "addedBytes": 608572,
+      "triangles": 98042,
+      "oldBINPrefixExact": true,
+      "allOriginalPositionNormalUV0IndexAccessorsExact": true,
+      "allOtherPrimitiveNodeAndMaterialImageDataExact": true,
+      "UV1SourceU1minusVAndMetricFormulaExact": true,
+      "vertexSplits": 0,
+      "AOImageSize": [
+        2048,
+        2048
+      ],
+      "AOImageBytes": 558000,
+      "canonicalLinearR8Exact": true,
+      "AOstrength": 0.6,
+      "textureSampler": {
+        "magFilter": 9729,
+        "minFilter": 9987,
+        "wrapS": 33071,
+        "wrapT": 33071
+      },
+      "onlyTwoOriginalPavingPrimitives": true
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "sha256": "4365493041ef76b1363459f58283abf79dd2f3676fec1f017304992239bc672e",
+      "sourceSHA256": "2c1addd34400ec3bc13f529d34186d646275a17ad30e10784a61ccdeacb77b92",
+      "bytes": 4403940,
+      "addedBytes": 268540,
+      "triangles": 50638,
+      "oldBINPrefixExact": true,
+      "allOriginalPositionNormalUV0IndexAccessorsExact": true,
+      "allOtherPrimitiveNodeAndMaterialImageDataExact": true,
+      "UV1SourceU1minusVAndMetricFormulaExact": true,
+      "vertexSplits": 0,
+      "AOImageSize": [
+        1024,
+        1024
+      ],
+      "AOImageBytes": 217966,
+      "canonicalLinearR8Exact": true,
+      "AOstrength": 0.6,
+      "textureSampler": {
+        "magFilter": 9729,
+        "minFilter": 9987,
+        "wrapS": 33071,
+        "wrapT": 33071
+      },
+      "onlyTwoOriginalPavingPrimitives": true
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "sha256": "8f9c06f18509cc31ed11a7c18f55858eb7e1c16a82e8850df8f8c9cb255ae158",
+      "sourceSHA256": "16af87b3e281399f71c6f7e6d89a2bc08a41ed3f9eade3fea243dd419421fbb6",
+      "bytes": 4034100,
+      "addedBytes": 110936,
+      "triangles": 49306,
+      "oldBINPrefixExact": true,
+      "allOriginalPositionNormalUV0IndexAccessorsExact": true,
+      "allOtherPrimitiveNodeAndMaterialImageDataExact": true,
+      "UV1SourceU1minusVAndMetricFormulaExact": true,
+      "vertexSplits": 0,
+      "AOImageSize": [
+        512,
+        512
+      ],
+      "AOImageBytes": 60357,
+      "canonicalLinearR8Exact": true,
+      "AOstrength": 0.6,
+      "textureSampler": {
+        "magFilter": 9729,
+        "minFilter": 9987,
+        "wrapS": 33071,
+        "wrapT": 33071
+      },
+      "onlyTwoOriginalPavingPrimitives": true
+    }
+  ],
+  "snapshotsSHA256": {
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1/glb-v4/peking_2_3_lod0.glb": "be28e72d4768e1738dfdd956c42c485089b8bf1533f42c5c40b7d7eb3a37c23c",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_3_lod0.glb": "eb4becb832c159296e306a83842f84add3da2e9a7c25b87681af4157cbc88ad9",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1/glb-v4/peking_2_3_lod1.glb": "4365493041ef76b1363459f58283abf79dd2f3676fec1f017304992239bc672e",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_3_lod1.glb": "2c1addd34400ec3bc13f529d34186d646275a17ad30e10784a61ccdeacb77b92",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1/glb-v4/peking_2_3_lod2.glb": "8f9c06f18509cc31ed11a7c18f55858eb7e1c16a82e8850df8f8c9cb255ae158",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_3_lod2.glb": "16af87b3e281399f71c6f7e6d89a2bc08a41ed3f9eade3fea243dd419421fbb6"
+  },
+  "projectedAll72Bytes": 158656008,
+  "projectedAll72Triangles": 1385100,
+  "byteHeadroom": 5670242,
+  "triangleHeadroom": 12283,
+  "highestReceiver": {
+    "sourceUpwardPavingTriangles": 2281,
+    "receiverTriangles": 4096,
+    "receiverNonzeroProjectedTriangles": 3966,
+    "receiverZeroOrTinyProjectedTriangles": 130,
+    "receiverSourcePlaneUsedForStableEvaluation": true,
+    "sourcePrimitiveTriangleProvenanceVerified": true,
+    "maxSourcePlaneReconstructionErrorM": 6.355374708305071e-14,
+    "oldReceiverOverlapPairs": 39117,
+    "maxOldAboveReceiverAtAnyOverlapVertexM": 0.07000103119386059,
+    "sourceUnionAreaM2": 177476.6537864188,
+    "receiverUnionAreaM2": 177476.65378641876,
+    "missingAreaM2": 0.0,
+    "extraAreaM2": 2.7754979577768095e-13,
+    "receiverInternalOverlapAreaM2": 2.153683453798294e-09,
+    "bakeOnly2mmOffsetNotInAssetVerifiedByOldBuffers": true,
+    "boundaryHeightDiagnostic": {
+      "heightThresholdM": 1.1e-05,
+      "meaningfulAreaThresholdM2": 1e-08,
+      "areaCutoffReason": "same retained-piece area cutoff as receiver preparer; height tolerance not relaxed",
+      "aboveHeightThresholdPairs": 9042,
+      "positiveAreaSliverPairs": 176,
+      "zeroAreaContactPairs": 8866,
+      "sliverPairAreaSumUpperBoundM2": 2.1989111162950525e-09,
+      "maxSliverIntersectionAreaM2": 6.0817179829524e-10,
+      "maxSliverFractionOfLOD0Texel": 9.135785221036468e-09,
+      "meaningfulAreaWrongTopPairs": 0,
+      "sourceFloat32ULPAt275m": 3.0517578125e-05,
+      "LOD0TexelAreaM2": 0.06657028198242188,
+      "examples": [
+        {
+          "receiver": 527,
+          "receiverToken": [
+            28,
+            97
+          ],
+          "otherSourceToken": [
+            28,
+            740
+          ],
+          "diffM": 0.06999968727585859,
+          "intersectionArea": 6.0817179829524e-10,
+          "intersectionType": "Polygon"
+        },
+        {
+          "receiver": 441,
+          "receiverToken": [
+            28,
+            85
+          ],
+          "otherSourceToken": [
+            28,
+            692
+          ],
+          "diffM": 0.0699995438553973,
+          "intersectionArea": 1.4224922950616788e-10,
+          "intersectionType": "Polygon"
+        },
+        {
+          "receiver": 3527,
+          "receiverToken": [
+            29,
+            215
+          ],
+          "otherSourceToken": [
+            28,
+            1323
+          ],
+          "diffM": 0.07000041445180027,
+          "intersectionArea": 1.2374378129832838e-10,
+          "intersectionType": "Polygon"
+        },
+        {
+          "receiver": 663,
+          "receiverToken": [
+            28,
+            131
+          ],
+          "otherSourceToken": [
+            28,
+            874
+          ],
+          "diffM": 0.06999973834585216,
+          "intersectionArea": 1.1449595026420678e-10,
+          "intersectionType": "Polygon"
+        },
+        {
+          "receiver": 2827,
+          "receiverToken": [
+            29,
+            7
+          ],
+          "otherSourceToken": [
+            29,
+            374
+          ],
+          "diffM": 0.07000024879831468,
+          "intersectionArea": 1.0992615822469407e-10,
+          "intersectionType": "Polygon"
+        },
+        {
+          "receiver": 2954,
+          "receiverToken": [
+            29,
+            39
+          ],
+          "otherSourceToken": [
+            29,
+            468
+          ],
+          "diffM": 0.07000047196728909,
+          "intersectionArea": 9.252220658707267e-11,
+          "intersectionType": "Polygon"
+        },
+        {
+          "receiver": 336,
+          "receiverToken": [
+            28,
+            69
+          ],
+          "otherSourceToken": [
+            28,
+            622
+          ],
+          "diffM": 0.0699994962343955,
+          "intersectionArea": 7.06132797633624e-11,
+          "intersectionType": "Polygon"
+        },
+        {
+          "receiver": 3527,
+          "receiverToken": [
+            29,
+            215
+          ],
+          "otherSourceToken": [
+            28,
+            1324
+          ],
+          "diffM": 0.07000041445180027,
+          "intersectionArea": 6.477983096830523e-11,
+          "intersectionType": "Polygon"
+        },
+        {
+          "receiver": 2764,
+          "receiverToken": [
+            29,
+            0
+          ],
+          "otherSourceToken": [
+            29,
+            343
+          ],
+          "diffM": 0.07000016602825898,
+          "intersectionArea": 6.253207066736488e-11,
+          "intersectionType": "Polygon"
+        },
+        {
+          "receiver": 688,
+          "receiverToken": [
+            28,
+            133
+          ],
+          "otherSourceToken": [
+            28,
+            915
+          ],
+          "diffM": 0.0700000088837962,
+          "intersectionArea": 5.783013736590933e-11,
+          "intersectionType": "Polygon"
+        }
+      ]
+    },
+    "sourceUpwardCrossZThresholds": {
+      "audit": 1e-10,
+      "preparer": 1e-08
+    },
+    "sourceUpwardTrianglesPreparer": 2280,
+    "technicalVerdict": "PASS_FOR_BOUNDED_AO_PILOT_WITH_EXPLICIT_SUBTEXEL_BOUNDARY_SLIVERS"
+  },
+  "metricBoundsLocalENU": [
+    -277,
+    -252,
+    277,
+    252
+  ],
+  "pixelMetersByLOD": [
+    {
+      "lod": 0,
+      "width": 2048,
+      "height": 2048,
+      "metersE": 0.2705078125,
+      "metersN": 0.24609375,
+      "nominalTileGuard2mPixelsE": 7.393501805054152,
+      "nominalTileGuard2mPixelsN": 8.126984126984127
+    },
+    {
+      "lod": 1,
+      "width": 1024,
+      "height": 1024,
+      "metersE": 0.541015625,
+      "metersN": 0.4921875,
+      "nominalTileGuard2mPixelsE": 3.696750902527076,
+      "nominalTileGuard2mPixelsN": 4.063492063492063
+    },
+    {
+      "lod": 2,
+      "width": 512,
+      "height": 512,
+      "metersE": 1.08203125,
+      "metersN": 0.984375,
+      "nominalTileGuard2mPixelsE": 1.848375451263538,
+      "nominalTileGuard2mPixelsN": 2.0317460317460316
+    }
+  ],
+  "sourceGroundMetricUVTexelAreaQuantiles2048": [
+    0.0,
+    10.700984448194504,
+    131.16157882194966,
+    4694.286829573684,
+    4694.291353523382,
+    4694.294090420008
+  ],
+  "sourceGroundFacesWithZeroUVArea": 19,
+  "sourceGroundAreaUVMappingIsXYProjectionIncludesIntentionalStackedPavingOverlap": true,
+  "viewsNotRequiredOrAwaited": true,
+  "issues": [
+    {
+      "severity": "PACKAGING_METADATA_GATE",
+      "detail": "Inherited proof counters disagree with actual GLB arrays. Correct future package, preserve candidate1.",
+      "readback": [
+        {
+          "lod": 0,
+          "proofMaterialCount": 34,
+          "actualMaterialCount": 35,
+          "proofEmbeddedImages": 43,
+          "actualEmbeddedImages": 44
+        },
+        {
+          "lod": 1,
+          "proofMaterialCount": 33,
+          "actualMaterialCount": 34,
+          "proofEmbeddedImages": 43,
+          "actualEmbeddedImages": 44
+        },
+        {
+          "lod": 2,
+          "proofMaterialCount": 33,
+          "actualMaterialCount": 34,
+          "proofEmbeddedImages": 43,
+          "actualEmbeddedImages": 44
+        }
+      ]
+    },
+    {
+      "severity": "PROVENANCE_WORDING_GATE",
+      "detail": "Rename inherited sourceAcceptedV5SHA256 to sourceDeliveredV5SHA256 in future package. V5 delivery is not runtime or owner acceptance."
+    }
+  ],
+  "metadataCountReadback": [
+    {
+      "lod": 0,
+      "proofMaterialCount": 34,
+      "actualMaterialCount": 35,
+      "proofEmbeddedImages": 43,
+      "actualEmbeddedImages": 44
+    },
+    {
+      "lod": 1,
+      "proofMaterialCount": 33,
+      "actualMaterialCount": 34,
+      "proofEmbeddedImages": 43,
+      "actualEmbeddedImages": 44
+    },
+    {
+      "lod": 2,
+      "proofMaterialCount": 33,
+      "actualMaterialCount": 34,
+      "proofEmbeddedImages": 43,
+      "actualEmbeddedImages": 44
+    }
+  ],
+  "previouslyRejectedFaceCentroidDataOnly": [
+    {
+      "primitive": 28,
+      "sourceTriangle": 5,
+      "centroidLocalENU": [
+        -266.6666666666667,
+        -183.33333333333334,
+        -1.4728000164031982
+      ],
+      "blenderUV": [
+        0.018652226233453636,
+        0.13624338624338622
+      ],
+      "sampleValues": [
+        {
+          "lod": 0,
+          "floatLinearAO": 1.0,
+          "canonicalR8AO": 1.0
+        },
+        {
+          "lod": 1,
+          "floatLinearAO": 1.0,
+          "canonicalR8AO": 1.0
+        },
+        {
+          "lod": 2,
+          "floatLinearAO": 1.0,
+          "canonicalR8AO": 1.0
+        }
+      ]
+    },
+    {
+      "primitive": 28,
+      "sourceTriangle": 204,
+      "centroidLocalENU": [
+        -58.333333333333336,
+        -41.666666666666664,
+        -0.9938666820526123
+      ],
+      "blenderUV": [
+        0.39470517448856796,
+        0.4173280423280423
+      ],
+      "sampleValues": [
+        {
+          "lod": 0,
+          "floatLinearAO": 1.0,
+          "canonicalR8AO": 1.0
+        },
+        {
+          "lod": 1,
+          "floatLinearAO": 1.0,
+          "canonicalR8AO": 1.0
+        },
+        {
+          "lod": 2,
+          "floatLinearAO": 1.0,
+          "canonicalR8AO": 1.0
+        }
+      ]
+    },
+    {
+      "primitive": 28,
+      "sourceTriangle": 214,
+      "centroidLocalENU": [
+        -66.66666666666667,
+        91.66666666666667,
+        -0.5885333220163981
+      ],
+      "blenderUV": [
+        0.3796630565583634,
+        0.6818783068783069
+      ],
+      "sampleValues": [
+        {
+          "lod": 0,
+          "floatLinearAO": 0.9089836462730569,
+          "canonicalR8AO": 0.9086267193956964
+        },
+        {
+          "lod": 1,
+          "floatLinearAO": 0.9086230321387977,
+          "canonicalR8AO": 0.9082646910883616
+        },
+        {
+          "lod": 2,
+          "floatLinearAO": 0.8412128566260302,
+          "canonicalR8AO": 0.8404816211816961
+        }
+      ]
+    }
+  ],
+  "linearAOStatistics": {
+    "min": 0.0,
+    "mean": 0.8525299429893494,
+    "max": 1.0,
+    "fractionBelowPoint9": 0.21625185012817383,
+    "outerBorderMin": 1.0
+  },
+  "edgePaddingRisks": {
+    "bakeMarginRawPixels": 4,
+    "bakeMarginMetersE": 1.08203125,
+    "bakeMarginMetersN": 0.984375,
+    "paddingPixelsByLOD": [
+      4,
+      2,
+      1
+    ],
+    "metricXYMapsTopFieldOntoAllSelectedPavingLayers": true,
+    "projectedZeroAreaSourceFaces": 19,
+    "limitations": [
+      "White background and padding at holes or height discontinuities can affect bilinear/mip sampling.",
+      "Lower stacked paving shares upper surface XY AO.",
+      "XY-degenerate source faces have no independent AO area.",
+      "LOD2 is about 1 m per texel with one downsampled bake-margin pixel; moving LOD and edge review remains.",
+      "Actual importer-generated mip behavior remains receiver/runtime gated."
+    ]
+  },
+  "receiverGates": [
+    "Actual AO KTX2 not produced/audited here: require linear DFD/R channel, UV1 FLOAT/texCoord1, strength .6 and mip/decode readback.",
+    "Visual regression, edge/halo and moving LOD approval remains.",
+    "Runtime import, city integration, publication and owner acceptance remain separate."
+  ],
+  "auditScope": "Independent read-only GLB/NPZ/PNG/F32 and source-text audit. Only assigned audit MD/JSON written. No Blender, Unity, Git, asset or generator changes."
+}

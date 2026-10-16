@@ -1,0 +1,159 @@
+{
+  "status": "WORLD_METRIC_GROUND_AO_BAKE_COMPLETE_NOT_CANDIDATE",
+  "processLocalMetalBinaryArchivesDisabled": true,
+  "priorFailedBakePreserved": "ao-ground-world-2048",
+  "sourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5",
+  "sourceFile": "peking_2_3_lod0.glb",
+  "sourceSHA256": "eb4becb832c159296e306a83842f84add3da2e9a7c25b87681af4157cbc88ad9",
+  "inputGLB24Pins": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "sha256": "6e4f06070b1c9d030d7d07cbd8c259537234f520872fdd668738ff009222bdec"
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "sha256": "bf687f20d346e193824ed613e83e42ce5974a3e2368c6fd2202aeee998c653b4"
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "sha256": "a2e1d3b5691f146a54feed7e24861e883c6c5c89332fbbdd5a549cb468161d88"
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "sha256": "1ba6b8db2fd8b0c484211fc51d936f3b5beeba95c3eb4d59eb81d26f0232e50a"
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "sha256": "4ae9c9bbf3f29f86f1dfb746b28536d31b72125a981b63e0c7b6bcd2a8dbd3d5"
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "sha256": "b0ade05cbe4cc3902ae119452f3a9bee723f5c1d6ac0bc199bd9b3a01fd51fe0"
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "sha256": "aa9c46dbff78adcb62d820f38e8ed56c54aa7a982bc281457466a375e93c085d"
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "sha256": "fa85f39dddcca6053fa48943a700347f079efcfc061f5f28c02377edb5c45811"
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "sha256": "3e7d7a7f61efa76ca17481fcb531b74d804e31d1c349f1f2b2c9a030eb17108b"
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "sha256": "85f4e2a4adcea4c8c0cc4f2fa7604fb7c4d507636b8cf7f7bd4dadbba444fab4"
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "sha256": "0890cb821a84e0548167e86312d342c3887f077f11f566738b5c7a399f5ed6b4"
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "sha256": "7bfb18f646dcc5c2ada36923d7583d1f697a789194a8196867b6dd00def7e4bb"
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "sha256": "71a6a7ae099021430336cc99f3549518744b32553f032b842a08bb066e1f9660"
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "sha256": "d1c746bee22e99049ce22bb3b203e417bd56b8d4db8c61ecf38c677e7504fc95"
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "sha256": "0f5ed9c51b3b6c5c4428c72ec92d914ed4e2cd1e941824a1e8884c716e44c8d4"
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "eb4becb832c159296e306a83842f84add3da2e9a7c25b87681af4157cbc88ad9"
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "sha256": "7ebfea65f9d4a625e6a2363d42f59e76a8d169dff38abd0b72b8b72dc18433e6"
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "sha256": "936e0a1f7fc37109a5ed1dd9036656ee09f70354e8a00001c9baa1a509367d84"
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "sha256": "726d58d14d48fc6b19d16baee390733608ea897b1602a74089ed84b956eaa52f"
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "sha256": "ecd644a0f93aab37a0446fdb195855f1fef1e28bbd9327f0e0fc0128ceeb34eb"
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "sha256": "894319d2fd32684fe178427296d4673b6081dc82861fa47c0ab1b1f7dc469277"
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "sha256": "35700ee27e7ba7c6c1491b5976ab49a99452ff3e7cf68381d265c6eb465d114b"
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "sha256": "c64abf98c866aaac92e59435656e2502a9594c75cb22cf3eb6067e15f09b4c76"
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "6c55a56a50d4e2bd4c6cca6d63cdd4298b7b6aa7d76f2d987aca673d14774d36"
+    }
+  ],
+  "actualStaticOccluderTriangles": 470520,
+  "onlyTreeCardsExcludedAsOccluders": true,
+  "onlyHighestPavingReceiverBaked": true,
+  "bakeAuxiliaryUpwardOffsetM": 0.002,
+  "assetGeometryNeverMoved": true,
+  "receiverProofSHA256": "6f8bdf2b5b24ba5e91223854358e32eee7891cc21c9cda98ae726db1d1a01268",
+  "primitiveMapping": [
+    {
+      "primitive": 28,
+      "material": "stage5_paving",
+      "sourceLoopStart": 0,
+      "sourceIndexCount": 4620,
+      "sourceVertexCount": 3990
+    },
+    {
+      "primitive": 29,
+      "material": "stage5_paving",
+      "sourceLoopStart": 4620,
+      "sourceIndexCount": 2223,
+      "sourceVertexCount": 2223
+    }
+  ],
+  "UVMapSHA256": "2b49d99d4c04c650d1746c135c0ca5db75066b07c2056b707346c9c2dbdf6909",
+  "UV1Convention": "saved mapping BpyUV(u,v); glTF writer must convert(u,1-v)",
+  "metricMapBoundsPilotENU": [
+    -277,
+    -252,
+    277,
+    252
+  ],
+  "metersPerPixel": [
+    0.2705078125,
+    0.24609375
+  ],
+  "AOdistanceM": 2,
+  "AOinnerSamples": 8,
+  "cyclesSamples": 8,
+  "resolution": [
+    2048,
+    2048
+  ],
+  "device": "fresh Metal GPU",
+  "noSourceGLBOrRGBEdits": true,
+  "notGameOrQualityAcceptance": true,
+  "seconds": 1.8295209589996375,
+  "rawFloatSHA256": "37b7cc687f25a86922eef649253acd23025abed7e1b70e7fb7f59c94db6c4413",
+  "linearAOStats": {
+    "min": 0.0,
+    "mean": 0.8525299429893494,
+    "p1": 0.0,
+    "p50": 1.0,
+    "fractionBelow09": 0.21625185012817383
+  }
+}

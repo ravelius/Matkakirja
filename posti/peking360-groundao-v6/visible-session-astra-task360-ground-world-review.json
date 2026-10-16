@@ -1,0 +1,1562 @@
+{
+  "task": "360 ground world AO candidate1 independent visual review",
+  "createdAtUTC": "2026-10-16T06:47:58.683527+00:00",
+  "status": "VISUAL_PASS_FOR_ONE_TILE_PRIVATE_GAME_TEST_ONLY",
+  "decision": "Kelvollinen yhden ruudun 2_3 yksityiseksi pelitestiehdokkaaksi näytetyn ambient-diagnostiikan perusteella. Ei havaittua visuaalista blokkeria näissä kuvissa. Hyöty on paikallinen ja maltillinen; ei koko tehtävän 360 tai kaupungin hyväksyntä.",
+  "scope": {
+    "candidateRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1",
+    "tile": "peking_2_3",
+    "surfaces": "two original stage5_paving primitives 28 and 29",
+    "buildingCOLOR0AO": false,
+    "groundRepeatFix361": false,
+    "seamCoverChange": false,
+    "gameRuntimeAccepted": false,
+    "wholeCityAccepted": false,
+    "humanOwnerAccepted": false,
+    "deliveryPerformed": false
+  },
+  "findings": {
+    "contact": "Seinän ja jalustan maapuolelle syntyy pehmeä paikallinen lisätummuma. Kaikki kuvissa näkyvä kontaktitummuus ei ole uutta: before-kuvissa on valmiiksi tummia alareunoja.",
+    "openCourtyard": "Tarkastetuissa avoimissa piha-ROI:ssa sävy pysyy lähes ennallaan. Ei nähtyä suurta teräväreunaista tai kolmiomaista uutta tummaa läiskää.",
+    "halos": "Ei havaittua paksua mustaa reunusta, leveää haloa, kutistuneita aukkoja tai uutta julkisivun värjäytymistä.",
+    "tileBoundary": "Näytetyissä yleiskuvissa ei näy laajaa ruudunmuotoista sävykehystä. Koko 2_3-ulkorajan jatkuvuutta ei silti ole paikannettu näihin kuviin rajatodisteella; yksityistestissä rajan molemmat puolet ja LOD-vaihdot katsottava.",
+    "missingAO": "Rakennusten pinnat, räystäiden alapuolet, terassitasojen alapinnat/kaiteet ja muun kaupungin maakontaktit eivät saa tässä uutta AO:ta.",
+    "priorPackedUVProbe": "Alkuperäisessä18kuvanarviossa vanhaa probe2-kuvaa ei katsottu. Lisätarkistuksessa katsottiin vanha contact-2-virhekuva ja kaikki6uutta regressionäkymää; laaja polygoniläiskä ei toistu uuden ehdokkaan näytetyissä kulmissa. Eriresoluutioiden vertailu vain laadullinen.",
+    "oldLines": "Ground-contact-1:n kulmikas ohut saumaviiva ja tumma T-muotoinen pinta sekä ground-contact-3:n ohut diagonaalinen sauma näkyvät jo ennen-kuvissa; eivät uuden AO:n tuottamia laajoja laikkuja."
+  },
+  "roi": [
+    {
+      "id": "C1-wall",
+      "file": "ambient-diagnostic-ground-contact-1.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        140,
+        245,
+        300,
+        330
+      ],
+      "observation": "Punaisen muurin alakulman maakontakti: hienoinen pehmeä tummuma, ei paksua mustaa kehystä.",
+      "meanRGBBefore": [
+        72.83066176470588,
+        53.670367647058825,
+        45.498970588235295
+      ],
+      "meanRGBAfter": [
+        71.93875,
+        52.731764705882355,
+        44.57095588235294
+      ],
+      "meanArithmeticRGBDelta": -0.919509803921566
+    },
+    {
+      "id": "C1-wall-run",
+      "file": "ambient-diagnostic-ground-contact-1.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        300,
+        155,
+        480,
+        250
+      ],
+      "observation": "Muurin vinon jalan vieressä paikallinen tummuma; punainen julkisivu säilyy.",
+      "meanRGBBefore": [
+        74.2,
+        57.617134502923975,
+        49.4587134502924
+      ],
+      "meanRGBAfter": [
+        73.53900584795322,
+        56.92666666666667,
+        48.77157894736842
+      ],
+      "meanArithmeticRGBDelta": -0.6795321637426923
+    },
+    {
+      "id": "C1-open",
+      "file": "ambient-diagnostic-ground-contact-1.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        230,
+        340,
+        460,
+        425
+      ],
+      "observation": "Avoin kiveys: käytännössä sama sävytaso; ei suurta kolmioläiskää.",
+      "meanRGBBefore": [
+        86.1435294117647,
+        83.31150895140665,
+        77.43176470588236
+      ],
+      "meanRGBAfter": [
+        86.11217391304348,
+        83.2835294117647,
+        77.40347826086956
+      ],
+      "meanArithmeticRGBDelta": -0.02920716112532773
+    },
+    {
+      "id": "C1-far-open",
+      "file": "ambient-diagnostic-ground-contact-1.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        800,
+        250,
+        1040,
+        350
+      ],
+      "observation": "Toinen avoin pihakiveysalue pysyy tasaisena.",
+      "meanRGBBefore": [
+        82.96858333333333,
+        80.55191666666667,
+        74.56033333333333
+      ],
+      "meanRGBAfter": [
+        82.79166666666667,
+        80.37741666666666,
+        74.38825
+      ],
+      "meanArithmeticRGBDelta": -0.17449999999999477
+    },
+    {
+      "id": "C1-old-line",
+      "file": "ambient-diagnostic-ground-contact-1.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        0,
+        425,
+        570,
+        515
+      ],
+      "observation": "Tumma kulmikas ohut saumaviiva näkyy jo ennen-kuvassa; sitä ei tulkita AO:n uudeksi polygoniläiskäksi.",
+      "meanRGBBefore": [
+        84.06231968810916,
+        81.344522417154,
+        75.34089668615984
+      ],
+      "meanRGBAfter": [
+        83.89812865497076,
+        81.17908382066277,
+        75.18103313840156
+      ],
+      "meanArithmeticRGBDelta": -0.1631643924626284
+    },
+    {
+      "id": "C2-wall-low",
+      "file": "ambient-diagnostic-ground-contact-2.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        320,
+        520,
+        440,
+        615
+      ],
+      "observation": "Pitkän ulkomuurin jalan kapea kiveysalue tummuu maltillisesti.",
+      "meanRGBBefore": [
+        54.93245614035088,
+        20.92157894736842,
+        12.14078947368421
+      ],
+      "meanRGBAfter": [
+        53.71359649122807,
+        19.67017543859649,
+        10.913859649122807
+      ],
+      "meanArithmeticRGBDelta": -1.2323976608187148
+    },
+    {
+      "id": "C2-wall-mid",
+      "file": "ambient-diagnostic-ground-contact-2.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        580,
+        305,
+        700,
+        415
+      ],
+      "observation": "Sama ulkomuurin kontakti ylempänä kuvassa; ei leveää mustaa haloaluetta.",
+      "meanRGBBefore": [
+        49.690681818181815,
+        26.33568181818182,
+        18.12969696969697
+      ],
+      "meanRGBAfter": [
+        48.40598484848485,
+        25.018409090909092,
+        16.841287878787877
+      ],
+      "meanArithmeticRGBDelta": -1.2967929292929294
+    },
+    {
+      "id": "C2-far-control",
+      "file": "ambient-diagnostic-ground-contact-2.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        920,
+        90,
+        1010,
+        170
+      ],
+      "observation": "Ulkomuurin kauempana näkyvä osa ei osoita merkittävää uutta AO-vaikutusta: vaikutusta ei saa yleistää koko muuriin.",
+      "meanRGBBefore": [
+        25.23736111111111,
+        28.16236111111111,
+        14.442777777777778
+      ],
+      "meanRGBAfter": [
+        25.23736111111111,
+        28.16263888888889,
+        14.442777777777778
+      ],
+      "meanArithmeticRGBDelta": 9.259259258935042e-05
+    },
+    {
+      "id": "C3-plinth",
+      "file": "ambient-diagnostic-ground-contact-3.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        465,
+        340,
+        680,
+        415
+      ],
+      "observation": "Keskimmäisen vaalean jalustan jalkakontakti vahvistuu; muutos jää maapuolelle.",
+      "meanRGBBefore": [
+        72.76688372093024,
+        68.40359689922481,
+        60.67603100775194
+      ],
+      "meanRGBAfter": [
+        71.17296124031007,
+        66.79578294573643,
+        59.09246511627907
+      ],
+      "meanArithmeticRGBDelta": -1.5951007751937993
+    },
+    {
+      "id": "C3-corner",
+      "file": "ambient-diagnostic-ground-contact-3.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        735,
+        278,
+        850,
+        330
+      ],
+      "observation": "Takaosan vaalean jalustan kulman ja maan liittymä saa paikallista syvyyttä.",
+      "meanRGBBefore": [
+        53.657023411371235,
+        49.64548494983278,
+        41.96571906354515
+      ],
+      "meanRGBAfter": [
+        52.10819397993311,
+        48.07424749163879,
+        40.44849498327759
+      ],
+      "meanArithmeticRGBDelta": -1.545763656633227
+    },
+    {
+      "id": "C3-terrace",
+      "file": "ambient-diagnostic-ground-contact-3.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        165,
+        275,
+        430,
+        335
+      ],
+      "observation": "Terassin alimman näkyvän reunan maakontakti vahvistuu hienoisesti. Jo ennen näkyvä tumma alareuna ei ole kokonaan tämän AO:n tulos.",
+      "meanRGBBefore": [
+        65.08440251572327,
+        60.50188679245283,
+        52.44779874213837
+      ],
+      "meanRGBAfter": [
+        63.7914465408805,
+        59.20333333333333,
+        51.16836477987422
+      ],
+      "meanArithmeticRGBDelta": -1.2903144654088028
+    },
+    {
+      "id": "C3-open",
+      "file": "ambient-diagnostic-ground-contact-3.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        225,
+        375,
+        425,
+        490
+      ],
+      "observation": "Avoin piha jää tasaiseksi; olemassa oleva toistokiveys ja sauma jäävät.",
+      "meanRGBBefore": [
+        81.25139130434782,
+        78.413,
+        72.50060869565218
+      ],
+      "meanRGBAfter": [
+        81.03926086956521,
+        78.20243478260869,
+        72.29613043478261
+      ],
+      "meanArithmeticRGBDelta": -0.20905797101449744
+    },
+    {
+      "id": "C3-near-plinth",
+      "file": "ambient-diagnostic-ground-contact-3.png",
+      "resolution": [
+        1280,
+        720
+      ],
+      "roiXYXY": [
+        470,
+        580,
+        630,
+        655
+      ],
+      "observation": "Lähemmän vaalean tasanteen alapuolinen maakontakti tummuu paikallisesti; ei pitkä suunnattu heittovarjo.",
+      "meanRGBBefore": [
+        94.77075,
+        88.05716666666666,
+        77.637
+      ],
+      "meanRGBAfter": [
+        92.9065,
+        86.19358333333334,
+        75.79675
+      ],
+      "meanArithmeticRGBDelta": -1.856027777777778
+    },
+    {
+      "id": "T-right",
+      "file": "ambient-diagnostic-taihedian.png",
+      "resolution": [
+        1600,
+        900
+      ],
+      "roiXYXY": [
+        910,
+        780,
+        1250,
+        820
+      ],
+      "observation": "Terassin oikean etureunan maapuolella pieni lisäsyvyys.",
+      "meanRGBBefore": [
+        62.51911764705882,
+        58.552867647058825,
+        51.44169117647059
+      ],
+      "meanRGBAfter": [
+        62.02441176470588,
+        58.06316176470588,
+        50.9797794117647
+      ],
+      "meanArithmeticRGBDelta": -0.48210784313725225
+    },
+    {
+      "id": "T-left-control",
+      "file": "ambient-diagnostic-taihedian.png",
+      "resolution": [
+        1600,
+        900
+      ],
+      "roiXYXY": [
+        350,
+        780,
+        710,
+        820
+      ],
+      "observation": "Vasemman etureunan maapuoli säilyy käytännössä muuttumattomana. Yhden ruudun AO ei ole koko etuterassin AO.",
+      "meanRGBBefore": [
+        65.2245138888889,
+        60.761875,
+        53.048125
+      ],
+      "meanRGBAfter": [
+        65.22444444444444,
+        60.761805555555554,
+        53.048125
+      ],
+      "meanArithmeticRGBDelta": -4.6296296299412156e-05
+    },
+    {
+      "id": "T-upper-control",
+      "file": "ambient-diagnostic-taihedian.png",
+      "resolution": [
+        1600,
+        900
+      ],
+      "roiXYXY": [
+        1060,
+        560,
+        1300,
+        675
+      ],
+      "observation": "Ylemmät vaaleat terassitasot ja kaiteet eivät saa uutta rakennus-AO:ta.",
+      "meanRGBBefore": [
+        94.58148550724637,
+        83.65550724637681,
+        71.1090579710145
+      ],
+      "meanRGBAfter": [
+        94.58155797101449,
+        83.65561594202899,
+        71.10942028985507
+      ],
+      "meanArithmeticRGBDelta": 0.0001811594202839236
+    }
+  ],
+  "verification": {
+    "frameCount18AllViewedAndHashesMatch": true,
+    "GLBImportCount48AllHashesMatch": true,
+    "changedLOD0ImportFiles": [
+      "peking_2_3_lod0.glb"
+    ],
+    "candidateGLB3HashesMatch": true,
+    "candidateFiles": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1/glb-v4/peking_2_3_lod0.glb",
+        "sha256": "be28e72d4768e1738dfdd956c42c485089b8bf1533f42c5c40b7d7eb3a37c23c",
+        "bytes": 9289480
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1/glb-v4/peking_2_3_lod1.glb",
+        "sha256": "4365493041ef76b1363459f58283abf79dd2f3676fec1f017304992239bc672e",
+        "bytes": 4403940
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1/glb-v4/peking_2_3_lod2.glb",
+        "sha256": "8f9c06f18509cc31ed11a7c18f55858eb7e1c16a82e8850df8f8c9cb255ae158",
+        "bytes": 4034100
+      }
+    ],
+    "sourceBakeProofPinMatches": true,
+    "matchingBeforeAfterMetadata": {
+      "commonFrameECEF": true,
+      "sixFrozenCameras": true,
+      "automaticCloseViews": true,
+      "geometricCastShadowVisibilityDisabledForAllMeshes": true,
+      "noSunOnlyUniformAmbientLight": true,
+      "cyclesMaxBounces": true,
+      "cyclesDiffuseBounces": true,
+      "cyclesGlossyBounces": true
+    },
+    "frames": [
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/before-v5/ambient-diagnostic-ilma.png",
+        "sha256": "ef99e52b7459ff749f6c342fd3965c2fab06036eb1713e60a009f63cf037b947",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/before-v5/ambient-diagnostic-taihedian.png",
+        "sha256": "6e5c52ada4f09ec099ef53dc7a317c6cac09e94ce7bed20f6a3153aa2403503f",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/before-v5/ambient-diagnostic-aukio.png",
+        "sha256": "46adf223a52dca01f77925a2e1939999f0047e535bbc1cace8d2e67ba7b72485",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/before-v5/ambient-diagnostic-beihai.png",
+        "sha256": "c25a9cec4051339830b46594aaf2d4b258f73610693deab60c9454d012e35f32",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/before-v5/ambient-diagnostic-jingshan.png",
+        "sha256": "88d8fbf7fa1afcd986e381032e55db10cfffd154cbde5eb348b39d297cb6efc6",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/before-v5/ambient-diagnostic-hutong_ilma.png",
+        "sha256": "aeb2a8f0beedb38767ff7d007c9bb60f69a6c5949b8b99d2c47c5acb477dcd8c",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/before-v5/ambient-diagnostic-ground-contact-1.png",
+        "sha256": "dbb41f4a507ab8ecb89596bc0ea5cefad27421d8a42b263c3b0e5e0281173bdc",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/before-v5/ambient-diagnostic-ground-contact-2.png",
+        "sha256": "4e828f10a4d656917c7465f262f9fcabb3a5ddb8360b65f041aec4909960bbb0",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/before-v5/ambient-diagnostic-ground-contact-3.png",
+        "sha256": "7dc4fded57de949d8dd667f9a13694faed0922df2548ea9d7a154f7c86ee37f9",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/after-groundAO-probe/ambient-diagnostic-ilma.png",
+        "sha256": "59fde2fddaf9d611c53718d60e5683a0e9ec7d372655ac87e9d9e3d3cd2e833b",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/after-groundAO-probe/ambient-diagnostic-taihedian.png",
+        "sha256": "47bb5eb40b6d0fa08fef5b2af52b6c1d6fa9dc2172ecb314c99abc606ec0ee06",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/after-groundAO-probe/ambient-diagnostic-aukio.png",
+        "sha256": "2706d34197448da94189104e1c459c520231a6443cfe70d3f2794118825266a2",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/after-groundAO-probe/ambient-diagnostic-beihai.png",
+        "sha256": "62969c170b892615b13f3840d3366f3267260add6db70fef7c7111d8a541f5f7",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/after-groundAO-probe/ambient-diagnostic-jingshan.png",
+        "sha256": "e0bf22f38e3e0f537df2ca16d54cbcaa8b7253d91a09ea7b3fce9a543d77b225",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/after-groundAO-probe/ambient-diagnostic-hutong_ilma.png",
+        "sha256": "9862f522c0b8dbd0d71098a82f54cc9e453e1210b39bf837fbc8c72efb50d56f",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/after-groundAO-probe/ambient-diagnostic-ground-contact-1.png",
+        "sha256": "810f1c4ce6ea60bfc2877ba4c7a9c5f4d12c21fb7f27ad6eea1d530577c1bb54",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/after-groundAO-probe/ambient-diagnostic-ground-contact-2.png",
+        "sha256": "f0fb6a4b9827d3c2ec11aa3e3de0de778809654e323c9d16fdefb1f62ac4d90a",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewed": true
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/after-groundAO-probe/ambient-diagnostic-ground-contact-3.png",
+        "sha256": "5bcd6b4a0719d7aaab544a6e673707c284252b7ea48cf2987eeff73911f36417",
+        "resolution": [
+          1280,
+          720
+        ],
+        "personallyViewed": true
+      }
+    ],
+    "imports": [
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_0_lod0.glb",
+        "sha256": "6e4f06070b1c9d030d7d07cbd8c259537234f520872fdd668738ff009222bdec"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_1_lod0.glb",
+        "sha256": "bf687f20d346e193824ed613e83e42ce5974a3e2368c6fd2202aeee998c653b4"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_2_lod0.glb",
+        "sha256": "a2e1d3b5691f146a54feed7e24861e883c6c5c89332fbbdd5a549cb468161d88"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_3_lod0.glb",
+        "sha256": "1ba6b8db2fd8b0c484211fc51d936f3b5beeba95c3eb4d59eb81d26f0232e50a"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_4_lod0.glb",
+        "sha256": "4ae9c9bbf3f29f86f1dfb746b28536d31b72125a981b63e0c7b6bcd2a8dbd3d5"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_5_lod0.glb",
+        "sha256": "b0ade05cbe4cc3902ae119452f3a9bee723f5c1d6ac0bc199bd9b3a01fd51fe0"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_0_lod0.glb",
+        "sha256": "aa9c46dbff78adcb62d820f38e8ed56c54aa7a982bc281457466a375e93c085d"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_1_lod0.glb",
+        "sha256": "fa85f39dddcca6053fa48943a700347f079efcfc061f5f28c02377edb5c45811"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_2_lod0.glb",
+        "sha256": "3e7d7a7f61efa76ca17481fcb531b74d804e31d1c349f1f2b2c9a030eb17108b"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_3_lod0.glb",
+        "sha256": "85f4e2a4adcea4c8c0cc4f2fa7604fb7c4d507636b8cf7f7bd4dadbba444fab4"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_4_lod0.glb",
+        "sha256": "0890cb821a84e0548167e86312d342c3887f077f11f566738b5c7a399f5ed6b4"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_5_lod0.glb",
+        "sha256": "7bfb18f646dcc5c2ada36923d7583d1f697a789194a8196867b6dd00def7e4bb"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_0_lod0.glb",
+        "sha256": "71a6a7ae099021430336cc99f3549518744b32553f032b842a08bb066e1f9660"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_1_lod0.glb",
+        "sha256": "d1c746bee22e99049ce22bb3b203e417bd56b8d4db8c61ecf38c677e7504fc95"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_2_lod0.glb",
+        "sha256": "0f5ed9c51b3b6c5c4428c72ec92d914ed4e2cd1e941824a1e8884c716e44c8d4"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_3_lod0.glb",
+        "sha256": "eb4becb832c159296e306a83842f84add3da2e9a7c25b87681af4157cbc88ad9"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_4_lod0.glb",
+        "sha256": "7ebfea65f9d4a625e6a2363d42f59e76a8d169dff38abd0b72b8b72dc18433e6"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_5_lod0.glb",
+        "sha256": "936e0a1f7fc37109a5ed1dd9036656ee09f70354e8a00001c9baa1a509367d84"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_0_lod0.glb",
+        "sha256": "726d58d14d48fc6b19d16baee390733608ea897b1602a74089ed84b956eaa52f"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_1_lod0.glb",
+        "sha256": "ecd644a0f93aab37a0446fdb195855f1fef1e28bbd9327f0e0fc0128ceeb34eb"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_2_lod0.glb",
+        "sha256": "894319d2fd32684fe178427296d4673b6081dc82861fa47c0ab1b1f7dc469277"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_3_lod0.glb",
+        "sha256": "35700ee27e7ba7c6c1491b5976ab49a99452ff3e7cf68381d265c6eb465d114b"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_4_lod0.glb",
+        "sha256": "c64abf98c866aaac92e59435656e2502a9594c75cb22cf3eb6067e15f09b4c76"
+      },
+      {
+        "stage": "before-v5",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_5_lod0.glb",
+        "sha256": "6c55a56a50d4e2bd4c6cca6d63cdd4298b7b6aa7d76f2d987aca673d14774d36"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_0_lod0.glb",
+        "sha256": "6e4f06070b1c9d030d7d07cbd8c259537234f520872fdd668738ff009222bdec"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_1_lod0.glb",
+        "sha256": "bf687f20d346e193824ed613e83e42ce5974a3e2368c6fd2202aeee998c653b4"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_2_lod0.glb",
+        "sha256": "a2e1d3b5691f146a54feed7e24861e883c6c5c89332fbbdd5a549cb468161d88"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_3_lod0.glb",
+        "sha256": "1ba6b8db2fd8b0c484211fc51d936f3b5beeba95c3eb4d59eb81d26f0232e50a"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_4_lod0.glb",
+        "sha256": "4ae9c9bbf3f29f86f1dfb746b28536d31b72125a981b63e0c7b6bcd2a8dbd3d5"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_0_5_lod0.glb",
+        "sha256": "b0ade05cbe4cc3902ae119452f3a9bee723f5c1d6ac0bc199bd9b3a01fd51fe0"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_0_lod0.glb",
+        "sha256": "aa9c46dbff78adcb62d820f38e8ed56c54aa7a982bc281457466a375e93c085d"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_1_lod0.glb",
+        "sha256": "fa85f39dddcca6053fa48943a700347f079efcfc061f5f28c02377edb5c45811"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_2_lod0.glb",
+        "sha256": "3e7d7a7f61efa76ca17481fcb531b74d804e31d1c349f1f2b2c9a030eb17108b"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_3_lod0.glb",
+        "sha256": "85f4e2a4adcea4c8c0cc4f2fa7604fb7c4d507636b8cf7f7bd4dadbba444fab4"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_4_lod0.glb",
+        "sha256": "0890cb821a84e0548167e86312d342c3887f077f11f566738b5c7a399f5ed6b4"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_1_5_lod0.glb",
+        "sha256": "7bfb18f646dcc5c2ada36923d7583d1f697a789194a8196867b6dd00def7e4bb"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_0_lod0.glb",
+        "sha256": "71a6a7ae099021430336cc99f3549518744b32553f032b842a08bb066e1f9660"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_1_lod0.glb",
+        "sha256": "d1c746bee22e99049ce22bb3b203e417bd56b8d4db8c61ecf38c677e7504fc95"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_2_lod0.glb",
+        "sha256": "0f5ed9c51b3b6c5c4428c72ec92d914ed4e2cd1e941824a1e8884c716e44c8d4"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1/glb-v4/peking_2_3_lod0.glb",
+        "sha256": "be28e72d4768e1738dfdd956c42c485089b8bf1533f42c5c40b7d7eb3a37c23c"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_4_lod0.glb",
+        "sha256": "7ebfea65f9d4a625e6a2363d42f59e76a8d169dff38abd0b72b8b72dc18433e6"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_2_5_lod0.glb",
+        "sha256": "936e0a1f7fc37109a5ed1dd9036656ee09f70354e8a00001c9baa1a509367d84"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_0_lod0.glb",
+        "sha256": "726d58d14d48fc6b19d16baee390733608ea897b1602a74089ed84b956eaa52f"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_1_lod0.glb",
+        "sha256": "ecd644a0f93aab37a0446fdb195855f1fef1e28bbd9327f0e0fc0128ceeb34eb"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_2_lod0.glb",
+        "sha256": "894319d2fd32684fe178427296d4673b6081dc82861fa47c0ab1b1f7dc469277"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_3_lod0.glb",
+        "sha256": "35700ee27e7ba7c6c1491b5976ab49a99452ff3e7cf68381d265c6eb465d114b"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_4_lod0.glb",
+        "sha256": "c64abf98c866aaac92e59435656e2502a9594c75cb22cf3eb6067e15f09b4c76"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-saumat-v5/glb-v4/peking_3_5_lod0.glb",
+        "sha256": "6c55a56a50d4e2bd4c6cca6d63cdd4298b7b6aa7d76f2d987aca673d14774d36"
+      }
+    ],
+    "pixelDifferenceMetrics": [
+      {
+        "view": "ilma",
+        "meanAbsoluteRGBDifference0to255": [
+          0.002872916666666667,
+          0.0031361111111111112,
+          0.0031444444444444445
+        ],
+        "countAnyChannelDifferenceAbove10": 0,
+        "boundingBoxAbove10XYXY": null
+      },
+      {
+        "view": "taihedian",
+        "meanAbsoluteRGBDifference0to255": [
+          0.039988194444444444,
+          0.039559027777777776,
+          0.03762361111111111
+        ],
+        "countAnyChannelDifferenceAbove10": 192,
+        "boundingBoxAbove10XYXY": [
+          803,
+          396,
+          1600,
+          856
+        ]
+      },
+      {
+        "view": "aukio",
+        "meanAbsoluteRGBDifference0to255": [
+          4.861111111111111e-05,
+          5.6944444444444445e-05,
+          5.069444444444444e-05
+        ],
+        "countAnyChannelDifferenceAbove10": 0,
+        "boundingBoxAbove10XYXY": null
+      },
+      {
+        "view": "beihai",
+        "meanAbsoluteRGBDifference0to255": [
+          3.194444444444445e-05,
+          2.986111111111111e-05,
+          3.125e-05
+        ],
+        "countAnyChannelDifferenceAbove10": 0,
+        "boundingBoxAbove10XYXY": null
+      },
+      {
+        "view": "jingshan",
+        "meanAbsoluteRGBDifference0to255": [
+          1.8055555555555555e-05,
+          1.875e-05,
+          2.0833333333333333e-05
+        ],
+        "countAnyChannelDifferenceAbove10": 0,
+        "boundingBoxAbove10XYXY": null
+      },
+      {
+        "view": "hutong_ilma",
+        "meanAbsoluteRGBDifference0to255": [
+          4.722222222222222e-05,
+          4.027777777777778e-05,
+          2.5694444444444445e-05
+        ],
+        "countAnyChannelDifferenceAbove10": 0,
+        "boundingBoxAbove10XYXY": null
+      },
+      {
+        "view": "ground-contact-1",
+        "meanAbsoluteRGBDifference0to255": [
+          0.1560373263888889,
+          0.15895724826388888,
+          0.15435438368055557
+        ],
+        "countAnyChannelDifferenceAbove10": 2523,
+        "boundingBoxAbove10XYXY": [
+          0,
+          0,
+          1280,
+          659
+        ]
+      },
+      {
+        "view": "ground-contact-2",
+        "meanAbsoluteRGBDifference0to255": [
+          0.11778754340277778,
+          0.11907986111111112,
+          0.11437608506944444
+        ],
+        "countAnyChannelDifferenceAbove10": 1014,
+        "boundingBoxAbove10XYXY": [
+          1,
+          119,
+          750,
+          720
+        ]
+      },
+      {
+        "view": "ground-contact-3",
+        "meanAbsoluteRGBDifference0to255": [
+          0.28691297743055555,
+          0.28527126736111114,
+          0.27949761284722224
+        ],
+        "countAnyChannelDifferenceAbove10": 3401,
+        "boundingBoxAbove10XYXY": [
+          381,
+          5,
+          1280,
+          680
+        ]
+      }
+    ],
+    "metricsCaution": "RGB-ero on renderöity 0–255 näyttöarvo, ei lineaarisen AO-kartan arvo tai metrinen leveys. Keskimääräiset erot eivät yksin todista virheettömyyttä.",
+    "AOImages": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1/ao-ground-linear-r8-lod0.png",
+        "sha256": "98a2d123420f9b1b7532e045d6a121f47e842555a562145507c2fd23a8e48703",
+        "resolution": [
+          2048,
+          2048
+        ]
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1/ao-ground-linear-r8-lod1.png",
+        "sha256": "809e2070cf150c708143bfde5fcb4a5932cd4e2d196f30fae2951ecce98d30be",
+        "resolution": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1/ao-ground-linear-r8-lod2.png",
+        "sha256": "48f7329c0d94820ddbd4ca4b5f09d15373f7fb51ff0271cd8a10ab432c2ed058",
+        "resolution": [
+          512,
+          512
+        ]
+      }
+    ]
+  },
+  "ambientDiagnosticLimitations": {
+    "noSun": true,
+    "geometricCastShadowsDisabled": true,
+    "AOAppliedToBaseColorForDiagnostic": true,
+    "strengthFromProof": 0.6,
+    "notPredictionOfDirectSunOrSpecularGameAO": true,
+    "normalBasisDifferentFromGame": true,
+    "treesAlphaCutoffPreviewOnly": true,
+    "onlyLOD0Rendered": true
+  },
+  "sixViewSummary": {
+    "ilma": "Parannus hyvin pieni normaalissa yleiskuvassa; ei suurta tummaa pilottiruutua.",
+    "taihedian": "Oikean maapuolen kontaktissa paikallinen lisäsyvyys, vasen etuterassi ja rakennuspinnat kontrollina.",
+    "aukio": "Ei havaittua uutta regressiota tai laajaa muutosta.",
+    "beihai": "Negatiivinen kontrolli: ei näkyvää muutosta.",
+    "jingshan": "Negatiivinen kontrolli: ei näkyvää muutosta.",
+    "hutong_ilma": "Negatiivinen kontrolli: ei näkyvää muutosta."
+  },
+  "nextGameTest": [
+    "V5 ennen / sama ruutu AO jälkeen samoissa ground-contact-1..3-kameroissa ja taihedian-kamerassa; klo 13 ja 18, sama valotus/LOD ja kirjattu AO-slotin tila.",
+    "Tarkista oikea lineaarinen AO-slotin toteutuminen, voimakkuus sekä suoran auringon ja heijastusten käyttäytyminen; ambient-albedokytkentää ei siirretä hyväksyttynä pelin materiaaliohjeena.",
+    "Tarkista koko ruudun2_3 ulkoraja molemmin puolin ja liikkeessä sekä LOD1/2-vaihdot; materiaalin AO ei saa synnyttää saumaa muuttumattomaan seam-coveriin tai naapuriin.",
+    "Katso maapuolen kontaktihäivitys läheltä: C1-wall, C2-wall-mid, C3-plinth/C3-corner. Rakennus-AO ja #361 toistokorjaus jätetään erillisiksi."
+  ],
+  "offlineBlockingCameraRequest": null,
+  "technicalAuditNotReimplemented": true,
+  "inputProofs": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/render-proof.json",
+      "sha256": "1f8347d4b0dedb52d7d9be5e1dea3e67c6155658e4bf0affd847d68175438de8"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/before-v5/render-proof.json",
+      "sha256": "caeee256b91aa9d05f8cd7f56e2e660fc8669fb8f49d80b0b8b9f9cc58c21c22"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-actual-renders/after-groundAO-probe/render-proof.json",
+      "sha256": "d53ca72f974c1b34ea1ad2a53c87203e37ce598f05a414c5cd27339690ebbfa7"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-candidate1/candidate-proof.json",
+      "sha256": "48badc4ae9f2b1ac8a554f3a6cb5b39ff023263a77a8ee2c9148031b9be0e9bf"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ao-ground-world-2048-retry1/probe-proof.json",
+      "sha256": "73b4cb5917028abf5832263c41daad71e01bd227b2d7e0557651c5f51bf0fb87"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task360370-baseline-review.md",
+      "sha256": "813633575cac118bb954595c89d99fa265ef8d0570425df528ecc56ab2b5b11c"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task360370-baseline-review.json",
+      "sha256": "9f7203b6060bff544cdd4da0bf5f123fe78dd49ab96fad4a70e89e1844d22fb5"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-regression-renders/render-proof.json",
+      "sha256": "0586f21bb26faab1dc4ee8c0e518c9f60fc4c7f5e8e99eb754d3c43548d549a3"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-regression-renders/before-v5/render-proof.json",
+      "sha256": "cca2f2af81b6b51888cc39680231c95f873b493d6b08da809cd70050d122d652"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-regression-renders/after-groundAO-probe/render-proof.json",
+      "sha256": "10185fecf31549ecf756f27956c3aa6515be41ad7ba70efbeb1421258cd6db48"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-probe2-actual-renders/before-v5/render-proof.json",
+      "sha256": "15693cae3057a918b88ef810931e4cf7aa586900747cc9477de327accfd8323d"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-probe2-actual-renders/after-groundAO-probe/render-proof.json",
+      "sha256": "564e590a982cae9daff124cbfc8ab0aee46e0bb8cf31989d061ab052da677127"
+    }
+  ],
+  "writes": "Only assigned MD/JSON; baseline report and all source/model/image assets unchanged.",
+  "regressionAddendum": {
+    "reviewedAtUTC": "2026-10-16T06:53:54.005255+00:00",
+    "status": "REGRESSION_VIEWS_PASS_WITH_PRIOR_SCOPE_UNCHANGED",
+    "allSixNewFramesViewed": true,
+    "frames": [
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-regression-renders/before-v5/ambient-diagnostic-rejected-probe2-contact-1.png",
+        "sha256": "1f40d528166726d7a0190fff985c6c50cdb269a38215ebe90b149080e8d8a31d",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-regression-renders/before-v5/ambient-diagnostic-rejected-probe2-contact-2.png",
+        "sha256": "16690d2fb63d446a3044b1ba52072d3deab77b1de87bdf7728deb3b026123b50",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-regression-renders/before-v5/ambient-diagnostic-rejected-probe2-contact-3.png",
+        "sha256": "f3a10cdba2163b5861200cfa427fcd82dd20a27b7f27dc0d63e53d1be48d8940",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-regression-renders/after-groundAO-probe/ambient-diagnostic-rejected-probe2-contact-1.png",
+        "sha256": "572a1b11ad254c442c2078a86fd4e8bbfc896866b58d5ab3b8544f26b9a1a16a",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-regression-renders/after-groundAO-probe/ambient-diagnostic-rejected-probe2-contact-2.png",
+        "sha256": "2eb1e2f7bd2b685ae6e1d1176d2798f0ea59b2d3bba7bec589227d7987b3e60f",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      },
+      {
+        "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-world-regression-renders/after-groundAO-probe/ambient-diagnostic-rejected-probe2-contact-3.png",
+        "sha256": "d63e928d3e2592b4137acad53d0392ef424c9a488a11565fb3d5e22477435ced",
+        "resolution": [
+          1600,
+          900
+        ],
+        "personallyViewed": true
+      }
+    ],
+    "oldFailureImage": {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-probe2-actual-renders/after-groundAO-probe/ambient-diagnostic-ground-contact-2.png",
+      "sha256": "009662c6e19d17dd72f61092af0e9270a15c1d9c5e426c1a6307569d353ebfa2",
+      "resolution": [
+        1280,
+        720
+      ],
+      "personallyViewed": true,
+      "ROI": [
+        550,
+        315,
+        675,
+        430
+      ],
+      "observation": "Vanhan 1280x720 probe2-kuvan rakennusten välissä on selvä tumma kulmikas pinta. Uuden 1600x900 sarjan samassa kohtauksessa vastaavaa laajaa läiskää ei näy."
+    },
+    "noCrossResolutionPixelComparison": true,
+    "priorCameraProofPinVerifiedAgainst": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task360-370-work/ground-ao-probe2-actual-renders/before-v5/render-proof.json",
+    "priorCameraProofSHA256": "15693cae3057a918b88ef810931e4cf7aa586900747cc9477de327accfd8323d",
+    "all3PoseAndFOVDefinitionsEqualOldBeforeAndAfter": true,
+    "newImportsEqualOriginal18FrameSeries": true,
+    "new48ImportHashesVerified": [
+      {
+        "stage": "before-v5",
+        "file": "peking_0_0_lod0.glb",
+        "sha256": "6e4f06070b1c9d030d7d07cbd8c259537234f520872fdd668738ff009222bdec"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_0_1_lod0.glb",
+        "sha256": "bf687f20d346e193824ed613e83e42ce5974a3e2368c6fd2202aeee998c653b4"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_0_2_lod0.glb",
+        "sha256": "a2e1d3b5691f146a54feed7e24861e883c6c5c89332fbbdd5a549cb468161d88"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_0_3_lod0.glb",
+        "sha256": "1ba6b8db2fd8b0c484211fc51d936f3b5beeba95c3eb4d59eb81d26f0232e50a"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_0_4_lod0.glb",
+        "sha256": "4ae9c9bbf3f29f86f1dfb746b28536d31b72125a981b63e0c7b6bcd2a8dbd3d5"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_0_5_lod0.glb",
+        "sha256": "b0ade05cbe4cc3902ae119452f3a9bee723f5c1d6ac0bc199bd9b3a01fd51fe0"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_1_0_lod0.glb",
+        "sha256": "aa9c46dbff78adcb62d820f38e8ed56c54aa7a982bc281457466a375e93c085d"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_1_1_lod0.glb",
+        "sha256": "fa85f39dddcca6053fa48943a700347f079efcfc061f5f28c02377edb5c45811"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_1_2_lod0.glb",
+        "sha256": "3e7d7a7f61efa76ca17481fcb531b74d804e31d1c349f1f2b2c9a030eb17108b"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_1_3_lod0.glb",
+        "sha256": "85f4e2a4adcea4c8c0cc4f2fa7604fb7c4d507636b8cf7f7bd4dadbba444fab4"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_1_4_lod0.glb",
+        "sha256": "0890cb821a84e0548167e86312d342c3887f077f11f566738b5c7a399f5ed6b4"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_1_5_lod0.glb",
+        "sha256": "7bfb18f646dcc5c2ada36923d7583d1f697a789194a8196867b6dd00def7e4bb"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_2_0_lod0.glb",
+        "sha256": "71a6a7ae099021430336cc99f3549518744b32553f032b842a08bb066e1f9660"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_2_1_lod0.glb",
+        "sha256": "d1c746bee22e99049ce22bb3b203e417bd56b8d4db8c61ecf38c677e7504fc95"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_2_2_lod0.glb",
+        "sha256": "0f5ed9c51b3b6c5c4428c72ec92d914ed4e2cd1e941824a1e8884c716e44c8d4"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_2_3_lod0.glb",
+        "sha256": "eb4becb832c159296e306a83842f84add3da2e9a7c25b87681af4157cbc88ad9"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_2_4_lod0.glb",
+        "sha256": "7ebfea65f9d4a625e6a2363d42f59e76a8d169dff38abd0b72b8b72dc18433e6"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_2_5_lod0.glb",
+        "sha256": "936e0a1f7fc37109a5ed1dd9036656ee09f70354e8a00001c9baa1a509367d84"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_3_0_lod0.glb",
+        "sha256": "726d58d14d48fc6b19d16baee390733608ea897b1602a74089ed84b956eaa52f"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_3_1_lod0.glb",
+        "sha256": "ecd644a0f93aab37a0446fdb195855f1fef1e28bbd9327f0e0fc0128ceeb34eb"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_3_2_lod0.glb",
+        "sha256": "894319d2fd32684fe178427296d4673b6081dc82861fa47c0ab1b1f7dc469277"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_3_3_lod0.glb",
+        "sha256": "35700ee27e7ba7c6c1491b5976ab49a99452ff3e7cf68381d265c6eb465d114b"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_3_4_lod0.glb",
+        "sha256": "c64abf98c866aaac92e59435656e2502a9594c75cb22cf3eb6067e15f09b4c76"
+      },
+      {
+        "stage": "before-v5",
+        "file": "peking_3_5_lod0.glb",
+        "sha256": "6c55a56a50d4e2bd4c6cca6d63cdd4298b7b6aa7d76f2d987aca673d14774d36"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_0_0_lod0.glb",
+        "sha256": "6e4f06070b1c9d030d7d07cbd8c259537234f520872fdd668738ff009222bdec"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_0_1_lod0.glb",
+        "sha256": "bf687f20d346e193824ed613e83e42ce5974a3e2368c6fd2202aeee998c653b4"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_0_2_lod0.glb",
+        "sha256": "a2e1d3b5691f146a54feed7e24861e883c6c5c89332fbbdd5a549cb468161d88"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_0_3_lod0.glb",
+        "sha256": "1ba6b8db2fd8b0c484211fc51d936f3b5beeba95c3eb4d59eb81d26f0232e50a"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_0_4_lod0.glb",
+        "sha256": "4ae9c9bbf3f29f86f1dfb746b28536d31b72125a981b63e0c7b6bcd2a8dbd3d5"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_0_5_lod0.glb",
+        "sha256": "b0ade05cbe4cc3902ae119452f3a9bee723f5c1d6ac0bc199bd9b3a01fd51fe0"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_1_0_lod0.glb",
+        "sha256": "aa9c46dbff78adcb62d820f38e8ed56c54aa7a982bc281457466a375e93c085d"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_1_1_lod0.glb",
+        "sha256": "fa85f39dddcca6053fa48943a700347f079efcfc061f5f28c02377edb5c45811"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_1_2_lod0.glb",
+        "sha256": "3e7d7a7f61efa76ca17481fcb531b74d804e31d1c349f1f2b2c9a030eb17108b"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_1_3_lod0.glb",
+        "sha256": "85f4e2a4adcea4c8c0cc4f2fa7604fb7c4d507636b8cf7f7bd4dadbba444fab4"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_1_4_lod0.glb",
+        "sha256": "0890cb821a84e0548167e86312d342c3887f077f11f566738b5c7a399f5ed6b4"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_1_5_lod0.glb",
+        "sha256": "7bfb18f646dcc5c2ada36923d7583d1f697a789194a8196867b6dd00def7e4bb"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_2_0_lod0.glb",
+        "sha256": "71a6a7ae099021430336cc99f3549518744b32553f032b842a08bb066e1f9660"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_2_1_lod0.glb",
+        "sha256": "d1c746bee22e99049ce22bb3b203e417bd56b8d4db8c61ecf38c677e7504fc95"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_2_2_lod0.glb",
+        "sha256": "0f5ed9c51b3b6c5c4428c72ec92d914ed4e2cd1e941824a1e8884c716e44c8d4"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_2_3_lod0.glb",
+        "sha256": "be28e72d4768e1738dfdd956c42c485089b8bf1533f42c5c40b7d7eb3a37c23c"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_2_4_lod0.glb",
+        "sha256": "7ebfea65f9d4a625e6a2363d42f59e76a8d169dff38abd0b72b8b72dc18433e6"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_2_5_lod0.glb",
+        "sha256": "936e0a1f7fc37109a5ed1dd9036656ee09f70354e8a00001c9baa1a509367d84"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_3_0_lod0.glb",
+        "sha256": "726d58d14d48fc6b19d16baee390733608ea897b1602a74089ed84b956eaa52f"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_3_1_lod0.glb",
+        "sha256": "ecd644a0f93aab37a0446fdb195855f1fef1e28bbd9327f0e0fc0128ceeb34eb"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_3_2_lod0.glb",
+        "sha256": "894319d2fd32684fe178427296d4673b6081dc82861fa47c0ab1b1f7dc469277"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_3_3_lod0.glb",
+        "sha256": "35700ee27e7ba7c6c1491b5976ab49a99452ff3e7cf68381d265c6eb465d114b"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_3_4_lod0.glb",
+        "sha256": "c64abf98c866aaac92e59435656e2502a9594c75cb22cf3eb6067e15f09b4c76"
+      },
+      {
+        "stage": "after-groundAO-probe",
+        "file": "peking_3_5_lod0.glb",
+        "sha256": "6c55a56a50d4e2bd4c6cca6d63cdd4298b7b6aa7d76f2d987aca673d14774d36"
+      }
+    ],
+    "original18ImageAnd3CandidateGLBHashesRecheckedUnchanged": true,
+    "sameResolutionNewPairMetrics": [
+      {
+        "view": 1,
+        "comparison": "new1600x900 before vs new1600x900 after only",
+        "meanAbsoluteRGBDifference": [
+          0.032808333333333335,
+          0.03273541666666667,
+          0.03185138888888889
+        ]
+      },
+      {
+        "view": 2,
+        "comparison": "new1600x900 before vs new1600x900 after only",
+        "meanAbsoluteRGBDifference": [
+          0.21883263888888888,
+          0.22107013888888888,
+          0.21471319444444445
+        ]
+      },
+      {
+        "view": 3,
+        "comparison": "new1600x900 before vs new1600x900 after only",
+        "meanAbsoluteRGBDifference": [
+          0.1261201388888889,
+          0.1259611111111111,
+          0.11620069444444445
+        ]
+      }
+    ],
+    "ROI": [
+      {
+        "file": "ambient-diagnostic-rejected-probe2-contact-2.png",
+        "resolution": [
+          1600,
+          900
+        ],
+        "roiXYXY": [
+          690,
+          405,
+          840,
+          540
+        ],
+        "observation": "Rakennusten välisessä kohdassa ei uutta laajaa tummaa kulmioläiskää.",
+        "newBeforeMeanArithmeticRGB": 60.376576131687244,
+        "newAfterMeanArithmeticRGB": 60.15211522633745
+      },
+      {
+        "file": "ambient-diagnostic-rejected-probe2-contact-2.png",
+        "resolution": [
+          1600,
+          900
+        ],
+        "roiXYXY": [
+          450,
+          690,
+          760,
+          850
+        ],
+        "observation": "Etualan avoin kiveys pysyy tasaisena.",
+        "newBeforeMeanArithmeticRGB": 71.64914650537635,
+        "newAfterMeanArithmeticRGB": 71.64793010752688
+      },
+      {
+        "file": "ambient-diagnostic-rejected-probe2-contact-2.png",
+        "resolution": [
+          1600,
+          900
+        ],
+        "roiXYXY": [
+          320,
+          590,
+          690,
+          670
+        ],
+        "observation": "Vasemman rakennuksen maapuolella maltillinen kontakti.",
+        "newBeforeMeanArithmeticRGB": 56.34906531531532,
+        "newAfterMeanArithmeticRGB": 55.60677927927927
+      },
+      {
+        "file": "ambient-diagnostic-rejected-probe2-contact-2.png",
+        "resolution": [
+          1600,
+          900
+        ],
+        "roiXYXY": [
+          820,
+          680,
+          1030,
+          765
+        ],
+        "observation": "Oikean rakennuksen jalustassa paikallinen kontakti.",
+        "newBeforeMeanArithmeticRGB": 51.01434173669468,
+        "newAfterMeanArithmeticRGB": 50.05635854341737
+      },
+      {
+        "file": "ambient-diagnostic-rejected-probe2-contact-2.png",
+        "resolution": [
+          1600,
+          900
+        ],
+        "roiXYXY": [
+          1300,
+          300,
+          1595,
+          500
+        ],
+        "observation": "Oikean puolen avoimessa kiveyksessä ei vanhan virhekuvan kaltaista suurta tummennettua polygonialuetta.",
+        "newBeforeMeanArithmeticRGB": 75.88058757062147,
+        "newAfterMeanArithmeticRGB": 75.7322824858757
+      }
+    ],
+    "otherViews": {
+      "rejected-probe2-contact-1": "Laaja pihakiveys on tasainen; vanhat tummat ja vaaleat ohuet linjat säilyvät eikä suuri uusi polygonilaikku synny. Katto peittää osan etualasta.",
+      "rejected-probe2-contact-3": "Kapeissa käytävissä jalustojen lähellä maltillinen kontakti; avoimella taustapihalla ei uutta laajaa läiskää. Katot ja muurit peittävät osan kiveyksestä."
+    },
+    "limits": "Vertailu vanhaan virhekuvaan on laadullinen. Uudet ennen/jälkeen ovat samaa1600x900resoluutiota. Ei pelin auringonvalon, koko ruudun ulkorajan tai runtimen hyväksyntää."
+  }
+}

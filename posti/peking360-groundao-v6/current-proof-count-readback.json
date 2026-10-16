@@ -1,0 +1,46 @@
+{
+  "currentProofCountsReadFromActualGLBDocuments": true,
+  "prototypeProofCountMetadataCorrected": true,
+  "noReviewedGLBBytesChanged": true,
+  "corrections": [
+    {
+      "file": "peking_2_3_lod0.glb",
+      "inheritedCounts": {
+        "materialCount": 34,
+        "embeddedImages": 43
+      },
+      "currentCounts": {
+        "materialCount": 35,
+        "embeddedImages": 44
+      },
+      "GLBBytesUnchangedFromReviewedCandidate": true,
+      "sha256": "be28e72d4768e1738dfdd956c42c485089b8bf1533f42c5c40b7d7eb3a37c23c"
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "inheritedCounts": {
+        "materialCount": 33,
+        "embeddedImages": 43
+      },
+      "currentCounts": {
+        "materialCount": 34,
+        "embeddedImages": 44
+      },
+      "GLBBytesUnchangedFromReviewedCandidate": true,
+      "sha256": "4365493041ef76b1363459f58283abf79dd2f3676fec1f017304992239bc672e"
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "inheritedCounts": {
+        "materialCount": 33,
+        "embeddedImages": 43
+      },
+      "currentCounts": {
+        "materialCount": 34,
+        "embeddedImages": 44
+      },
+      "GLBBytesUnchangedFromReviewedCandidate": true,
+      "sha256": "8f9c06f18509cc31ed11a7c18f55858eb7e1c16a82e8850df8f8c9cb255ae158"
+    }
+  ]
+}
