@@ -1,7 +1,7 @@
 [
  {
   "kysymys": "Näkevätkö astronautit revontulet ylhäältä vai alhaalta päin?",
-  "vastaus": "Yleensä ylhäältä päin. Asema kiertää Maata noin 400 kilometrin korkeudessa, mutta suurin osa revontulista hehkuu 80–250 kilometrin korkeudessa, eli selvästi aseman alapuolella. Astronautit katsovat revontulia siis alaspäin, ilmakehän ylimmissä kerroksissa hehkuvaa valoa. Kesäkuussa 2025 astronautti kuvasi asemalta eteläisiä revontulia Intian valtameren yllä, kun asema oli noin 430 kilometrin korkeudessa. Revontulet syntyvät, kun aurinkotuulen varautuneet hiukkaset osuvat ilmakehään.",
+  "vastaus": "Yleensä ylhäältä päin. Asema kiertää Maata noin 400 kilometrin korkeudessa, mutta suurin osa revontulista hehkuu 80–250 kilometrin korkeudessa, eli selvästi aseman alapuolella. Astronautit katsovat revontulia siis alaspäin, ilmakehän ylimmissä kerroksissa hehkuvaa valoa. Revontulet syntyvät, kun aurinkotuulen varautuneet hiukkaset osuvat ilmakehään.",
   "lahteet": [
    {
     "url": "https://fi.wikipedia.org/wiki/Revontulet",
@@ -10,10 +10,6 @@
    {
     "url": "https://en.wikipedia.org/wiki/Aurora",
     "title": "Aurora - Wikipedia"
-   },
-   {
-    "url": "https://www.nasa.gov/image-article/aurora-australis-6/",
-    "title": "Aurora Australis - NASA (12.6.2025, asema 269 mailin korkeudessa)"
    },
    {
     "url": "https://www.nasa.gov/?p=414148",
@@ -33,15 +29,9 @@
    },
    {
     "vaite": "Asema kiertää noin 400 km:n korkeudessa",
-    "lahde1": "NASA 12.6.2025 kuvateksti: 269 mailia (= noin 433 km)",
-    "lahde2": "NASA tammikuun 2012 kuvateksti: noin 240 mailia (= noin 386 km); en.wikipedia ISS 370–460 km",
+    "lahde1": "NASA tammikuun 2012 kuvateksti: noin 240 mailia (= noin 386 km)",
+    "lahde2": "en.wikipedia International Space Station: kiertoradan korkeus noin 370–460 km; NASA-kuvateksti 2025: 269 mailia (= noin 433 km)",
     "huom": "Aseman korkeus vaihtelee; 'noin 400 km' sopii molempiin."
-   },
-   {
-    "vaite": "Astronautti kuvasi eteläisiä revontulia Intian valtameren yllä kesäkuussa 2025, asema noin 430 km korkeudessa",
-    "lahde1": "NASA/Nichole Ayers, 12.6.2025: aurora australis Intian valtameren yllä Australian ja Etelämantereen välissä, asema 269 mailin korkeudessa",
-    "lahde2": "NASA-kuvasivu on ainoa suora lähde tälle kuvalle; korkeus 269 mailia = 433 km laskettu",
-    "huom": "Heikosti tuettu: yksi lähde päivämäärälle ja paikalle. Jos PT haluaa vain kahden lähteen väitteet, lause voidaan pudottaa (loppuvastaus toimii ilman sitä)."
    },
    {
     "vaite": "Astronautit katsovat revontulia alaspäin (asema yläpuolella)",
@@ -54,6 +44,12 @@
     "lahde1": "fi.wikipedia Revontulet: aurinkotuulen varautuneet hiukkaset osuvat ilmakehään",
     "lahde2": "NASA Space Place (spaceplace.nasa.gov/aurora): aurinkotuuli ja auringon myrskyt, hiukkaset magneettikentän kautta napojen ilmakehään",
     "huom": "Sama kuin taivas-tarkistus.json (OK)."
+   },
+   {
+    "vaite": "(PT 16.10.) Kesäkuun 2025 NASA-kuvalause pudotettu",
+    "lahde1": "vain NASA-kuvasivu",
+    "lahde2": "-",
+    "huom": "Yhden lähteen väite poistettu PT:n ohjeesta."
    }
   ]
  }
