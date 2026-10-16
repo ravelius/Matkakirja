@@ -28,7 +28,8 @@ Haara proto linssiseppa/vapaalento-197 = juna-197 + 6 committia, kärki 8aed785c
   (sk-pariisimuseo-197-iphone.txt tekee sen). Ajot käynnistetty uudelleen 23.54 tällä kärjellä (edelliset olivat kuolleet jonossa).
 - 259bdbecb LOUVREN LÄHESTYMISTEKSTI SK:lta (main 198ac9aee, #4741; 412 merkkiä, Orsay + Rodin, Marmottan pois), luonnos true edelleen.
   PT 00.4x: Pariisin museovideo EI tarpeen junaan 197 → ajo-pariisimuseo197.zsh pysäytetty; vain vapaalento-skenaario ajetaan.
-TILA 23.57: ajo-vapaalento197.zsh (kärki 259bdbecb) odottaa käännöslukkoa (jonossa PK:n intro ja SS; Julkaisija pitää odottajaa SIGSTOPissa, jatkuu itse).
+TILA 00.1x (17.10.): ajo-vapaalento197.zsh (kärki 259bdbecb) PYSÄYTETTY: Julkaisijan mukaan L2-järjestys KS → PK → SS → LS; käynnistä
+  uudelleen nohupilla VASTA, kun Julkaisija ilmoittaa "SS lukossa" (jonossa PK:n intro ja SS; Julkaisija pitää odottajaa SIGSTOPissa, jatkuu itse).
 Loki ajo-vapaalento197.log / kaanna-vapaalento.out. Museoskenaariota EI ajeta junaan 197 (PT 00.4x).
 Jos prosessit puuttuvat (`pgrep -fl vapaalento`), käynnistä nohupilla uudelleen: ensin ajo-vapaalento197.zsh, sitten ajo-pariisimuseo197.zsh.
 Kun lokissa "VAPAALENTO VALMIS <sha>": SIMU NYT Julkaisijalta iPhone BD64C8E4 (kaksi skenaariota, ~15 min) → `touch .../simu-vapaalento.nyt`.
@@ -40,8 +41,9 @@ se osa pois (git revert), ei väliaikaisia poikkeamia.
 
 ## 2. SEURAAVA JUNA
 - LOUVREN PARITEETTIERÄ, ASKELEET (PT 01.1x, EI junaan 197): Äänittäjän sora- ja kivi_hiekka-askeleet ämpärissä aanet/taidemuseo-askeleet-v3/,
-  kytkentä 3 riviä MuseoAskeleet.cs:ään ohjeella proto-3d/_tyo/museo-askeleet-lattiat-20261016/KYTKENTA-v3.md. Tee vasta, kun ääniportti on
-  ok ja vapaalento-197 on ajettu simulla; oma haara juna-197:n päälle.
+  TEHTY 66fb8b7fc (ääniportti 24/24, PT 01.2x "vapaasti"): proto linssiseppa/louvre-pariteetti (vapaalento-197:n päällä, worktree
+  wt/proto-linssiseppa-louvre), MuseoAskeleet.LataaV2(juuri) lukee v2:n ja v3:n manifestit; ämpärin manifest tarkistettu (24 ääntä,
+  lattiat = Ranskan salien sora ja kivi_hiekka). Ei käännetty; käännös ja simutarkistus Louvren pariteettierän mukana.
 - LOUVREN AVAUS PARITEETIN JÄLKEEN: kun PT ilmoittaa SK:n (kohdat.json + lähestyminen) ja Äänittäjän (askeläänet) valmiiksi ja Ranskan
   museon Alankomaiden tasolle, oletus PariisiMuseoAuki = true (KaupunkiPallot.cs) + houkutin samaan erään, kuvat PT:lle, sitten NS.
 - Pariisin museon houkutin PALLON VIEREEN (avauksen yhteydessä, ei ennen): proto linssiseppa/pariisi-houkutin 7266f0ae1 (8aed785c3:n päällä; worktree wt/proto-linssiseppa-houkutin): vapaa piste
