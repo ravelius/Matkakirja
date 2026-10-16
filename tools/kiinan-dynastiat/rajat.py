@@ -81,7 +81,7 @@ VUODET = {
         ],
     },
     1142: {
-        'otsikko': '1142', 'paakaupungit': ["Lin'an", 'Shangjing (Jin)', 'Xingqing'],
+        'otsikko': '1142', 'paakaupungit': ["Lin'an", 'Shangjing (Jin)', 'Xingqing', 'Yangjumie'],
         'alueet': [
             ('Eteläinen Song', 'song', 'kiina', [
                 (103.4, 34.0), (105.5, 34.3), (106.9, 34.2),  # Dasan-sola
@@ -107,6 +107,7 @@ VUODET = {
                 (120.0, 33.0), (114.5, 31.5), (110.5, 32.5), (106.9, 33.5), (103.0, 33.4),  # Song-raja (Song vähennetään ensin)
                 (102.4, 36.7), (105.2, 35.9), (107.5, 36.5), (110.3, 38.0), (110.4, 39.5),  # Xia-raja
             ]),
+            ('Dali', 'dali', 'ulkoinen', []),  # kärjet vuodet_b.DALI (täytetään alla, sama monikulmio kuin 950 ja 1100)
         ],
     },
     1760: {
@@ -152,3 +153,5 @@ for _p in sorted(_glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file_
         print('VAROITUS: osamoduuli ohitettu', os.path.basename(_p), _e, file=sys.stderr); continue
     for _nimi in ('VARIT', 'KOTISEUDUT', 'KAUPUNGIT', 'VUODET'):
         globals()[_nimi].update(getattr(_m, _nimi, {}))
+    if hasattr(_m, 'DALI'):  # 1142:n Dali samoista kärjistä kuin 950 ja 1100
+        VUODET[1142]['alueet'] = [(n, a, t, _m.DALI if a == 'dali' else k) for n, a, t, k in VUODET[1142]['alueet']]

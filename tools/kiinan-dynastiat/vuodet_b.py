@@ -13,9 +13,24 @@ VARIT = {
     'etelan-han': '#c0623e',     # keskisävy
     'myohempi-shu': '#cf9466',   # vaalea
     'jingnan': '#b07050',        # keskisävy
+    # Aukkojen täyttö (PT 16.10. ilta): ulkoiset ja ei-kiinalaiset naapurit viileillä (omistaja 16.10. 20.35)
+    'turkit': '#61808f',         # Itäturkit 589: siniharmaa
+    'turkit-lansi': '#7f98a5',   # Länsiturkit 589: sama perhe vaaleampana
+    'uiguurit': '#3f8a84',       # Uiguurien kaganaatti 790: sinivihreä (naapurina violetti Tiibet)
+    'dali': '#5f8f6a',           # Nanzhao 790 ja Dali 950–1142: viileä salvianvihreä (bai-kansan valtio, ei Kiinaa)
 }
 KOTISEUDUT = {}
-KAUPUNGIT = {'Daxing': (108.94, 34.34)}  # Sui-pääkaupunki Daxing = myöhempi Tangin Chang'an
+KAUPUNGIT = {
+    'Daxing': (108.94, 34.34),  # Sui-pääkaupunki Daxing = myöhempi Tangin Chang'an
+    'Ötüken': (101.5, 47.6),  # Itäturkkien pyhä Ötükenin metsä Hangain vuorilla (likimääräinen leiripaikka)
+    'Ordu-Baliq': (102.66, 47.43),  # Uiguurien pääkaupunki Orhonin varrella (Karabalgasun)
+    'Yangjumie': (100.16, 25.69),  # Nanzhaon pääkaupunki 779 alkaen ja Dalin pääkaupunki (nykyinen Dali)
+    'Jiangling': (112.19, 30.35),  # Jingnan
+    'Hangzhou': (120.16, 30.27),  # Wuyue (Xifu); sama paikka kuin Songin Lin'an
+    'Jinling': (118.78, 32.06),  # Eteläinen Tang (nykyinen Nanjing)
+    'Changsha': (112.94, 28.23),  # Chu
+    'Xingwang': (113.26, 23.13),  # Eteläinen Han (nykyinen Guangzhou)
+}
 
 # Yhteiset viivat (lon, lat).
 _ETELARANNIKKO = [  # Itä-Kiinan meri ja Etelä-Kiinan meri pohjoisesta etelään (sama kuin -100 ja 1142)
@@ -36,10 +51,17 @@ _LIAO_KOILLINEN = [  # Liaon (ja 1142 Jinin) pohjois- ja itäreuna: muuri, Amur,
     (136.0, 44.5), (131.5, 42.6), (130.5, 42.3), (128.2, 42.0), (126.0, 41.2), (124.4, 40.0),
     (123.2, 38.5), (121.0, 38.3),  # Liaodongin kärjen ohi Bohaille
 ]
+DALI = [  # Nanzhao (790) ja Dali (950, 1100, 1142): Yunnan; kiinalaiset ja Tiibet piirretään ensin ja voittavat
+    (97.6, 28.0), (99.5, 27.8), (100.6, 27.9), (101.5, 28.4),  # Jinsha-joen mutka, Lijiang; Tiibet pohjoisessa
+    (102.3, 28.8), (103.4, 28.4), (104.3, 27.3), (104.6, 26.0),  # Jianchang (Xichang), Wumeng, Qujing
+    (104.5, 24.5), (104.0, 23.3), (103.0, 22.4),  # Itä-Yunnan; Punaisen joen yläjuoksu
+    (102.0, 21.6), (101.0, 21.3), (100.0, 21.6), (99.0, 22.1),  # Xishuangbanna (Yinsheng)
+    (98.4, 23.3), (97.6, 24.3), (97.3, 25.6), (97.6, 27.0),  # Lancang–Salween; Yongchang ja Irrawaddyn yläjuoksu
+]
 
 VUODET = {
     589: {
-        'otsikko': '589', 'paakaupungit': ['Daxing'],
+        'otsikko': '589', 'paakaupungit': ['Daxing', 'Ötüken'],
         'alueet': [
             ('Sui', 'sui', 'kiina', [  # Chen kukistui 589 alussa; Lingnan (rouva Xian) alistui saman vuoden lopulla
                 (121.8, 42.6), (122.3, 41.6), (122.1, 40.9),  # Liao-joki: itäpuoli Goguryeolle
@@ -55,6 +77,21 @@ VUODET = {
                 (102.3, 39.6), (104.2, 39.4), (105.8, 39.5), (106.9, 40.6),  # Alxan aavikon reuna, Helan
                 (108.2, 41.2), (110.5, 41.0), (111.5, 40.4),  # Keltaisen joen mutka: Fengzhou ja Shengzhou
                 (112.5, 40.6), (113.5, 41.0), (115.5, 41.0), (117.5, 41.2), (119.0, 41.8), (120.5, 42.3),  # muuri, Yingzhou
+            ]),
+            ('Itäturkit', 'turkit', 'ulkoinen', [  # kaganaatti jakautui 583; Shabolüe alistui Suin vasalliksi 584, Dulan kagaani 588–599
+                (92.5, 44.0), (91.0, 45.5), (90.0, 48.0), (89.0, 50.0),  # Barkol; Altai erottaa Länsiturkeista
+                (92.5, 51.2), (97.0, 52.0), (102.0, 52.3), (106.0, 52.8),  # Tannu-Ola, Sajanit, Baikalin länsipuoli
+                (110.0, 51.8), (114.5, 50.5), (118.0, 50.0), (120.5, 48.0),  # Selenga, Onon, Hulunbuir
+                (121.0, 45.5), (121.8, 43.5), (121.8, 42.6),  # Hinggan; kitaanit ja xit turkkien piirissä
+                (120.5, 41.8), (117.0, 40.5), (113.0, 40.0), (110.0, 40.2),  # Sui voittaa muurin eteläpuolella
+                (106.0, 40.0), (102.0, 39.8), (98.0, 40.6), (95.5, 41.2), (93.5, 42.5),  # Alxa ja Yiwu (Hami)
+            ]),
+            ('Länsiturkit', 'turkit-lansi', 'ulkoinen', [  # Tardu; Tarimin kaupunkivaltiot (Gaochang ym.) veronmaksajia, ei piirretä
+                (92.0, 43.3), (91.0, 45.5), (90.0, 48.0), (87.5, 49.5),  # Itäturkit voittavat Altailla
+                (85.0, 50.5), (80.0, 50.0), (75.0, 49.0), (70.0, 47.0),  # Irtyš, Kazakstanin aro
+                (66.0, 44.5), (64.0, 42.0), (66.5, 40.0), (70.0, 39.5),  # Syrdarja, Sogdiana; Fergana
+                (73.5, 39.5), (76.0, 40.5), (78.5, 41.5), (81.0, 42.0),  # Alai, Tianshanin harja
+                (84.0, 42.6), (87.0, 43.0), (89.5, 43.0),  # Karashahr ja Turfan (Gaochang) etelään
             ]),
         ],
     },
@@ -110,7 +147,7 @@ VUODET = {
         ],
     },
     790: {
-        'otsikko': '790', 'paakaupungit': ["Chang'an", 'Lhasa'],
+        'otsikko': '790', 'paakaupungit': ["Chang'an", 'Lhasa', 'Ordu-Baliq', 'Yangjumie'],
         'alueet': [
             ('Tang', 'tang', 'kiina', [  # An Lushanin kapinan (755–763) jälkeen; Hebein sotilaskuvernöörit nimellisesti Tangin
                 (106.0, 37.5), (106.1, 38.5), (106.6, 39.6), (106.9, 40.5),  # Lingzhou (Shuofang), Helanin itäpuoli
@@ -139,10 +176,21 @@ VUODET = {
                 (86.0, 43.5), (83.5, 42.8), (80.5, 42.3), (78.0, 41.3),  # Tianshanin harja: Karashahr, Kucha, Aksu
                 (76.0, 40.8), (74.5, 40.3),  # Torugart, Kašgar
             ]),
+            ('Uiguurien kaganaatti', 'uiguurit', 'ulkoinen', [  # 744–840; Tangin liittolainen, menetti Beitingin Tiibetille 790
+                (86.0, 45.5), (86.5, 47.8), (89.0, 49.5), (92.0, 51.0),  # Dzungarian pohjoisosa, Musta Irtyš, Altai
+                (97.0, 52.0), (102.0, 52.5), (104.0, 52.0), (108.5, 52.5),  # Sajanit, Hövsgöl, Baikal
+                (112.0, 51.5), (116.5, 50.5), (119.5, 49.5), (120.5, 47.0),  # Selenga, Onon, Hulunbuir, Hinggan
+                (119.0, 45.0), (117.5, 43.5), (116.0, 42.0), (114.0, 41.3),  # kitaanit ja xit (uiguurien vasalleja) idässä
+                (112.0, 40.8), (109.0, 41.0), (106.5, 40.6),  # Tang voittaa muurilla
+                (104.5, 40.5), (101.0, 41.5), (97.0, 42.0), (95.0, 43.0),  # Tiibet voittaa Hexissä ja Hamissa
+                (91.0, 44.8), (88.0, 45.0),  # Tiibetin Beiting etelässä
+            ]),
+            ('Nanzhao', 'dali', 'ulkoinen', DALI),  # Yi Mouxun, Tiibetin liittolainen vuoteen 794; Xichang Nanzhaolle
         ],
     },
     950: {
-        'otsikko': '950', 'paakaupungit': ['Kaifeng', 'Shangjing (Liao)'],
+        'otsikko': '950', 'paakaupungit': ['Kaifeng', 'Shangjing (Liao)', 'Jinling', 'Hangzhou', 'Changsha', 'Xingwang',
+                                            'Chengdu', 'Jiangling', 'Yangjumie'],
         'alueet': [
             ('Myöhempi Han', 'myohempi-han', 'kiina', [  # 947–951; Pohjoinen Han erosi vasta 951
                 (106.0, 38.6), (107.6, 38.4), (108.8, 38.6), (109.8, 39.0),  # Lingzhou; Dingnan (Xiazhou) nimellisesti
@@ -207,10 +255,11 @@ VUODET = {
                 (117.2, 37.9), (115.3, 38.0), (113.5, 38.6), (112.0, 38.9), (111.3, 39.4),  # Han voittaa etelässä
                 (110.6, 40.0), (109.5, 40.6),  # Shengzhou (Togtoh), Keltaisen joen pohjoisranta
             ]),
+            ('Dali', 'dali', 'ulkoinen', DALI),  # Duan Siping perusti 937 (Yangjumie)
         ],
     },
     1100: {
-        'otsikko': '1100', 'paakaupungit': ['Kaifeng', 'Shangjing (Liao)', 'Xingqing'],
+        'otsikko': '1100', 'paakaupungit': ['Kaifeng', 'Shangjing (Liao)', 'Xingqing', 'Yangjumie'],
         'alueet': [
             ('Pohjoinen Song', 'song', 'kiina', [
                 (102.6, 34.2), (102.4, 35.0), (102.6, 35.8), (103.2, 36.4),  # Xihe-piiri 1072: Tao-, He- ja Lanzhou
@@ -236,6 +285,7 @@ VUODET = {
                 (119.0, 38.8), (117.5, 38.5), (115.0, 38.6), (112.5, 38.6), (111.0, 39.2),  # Song voittaa etelässä
                 (110.6, 39.6), (109.4, 40.6), (107.5, 41.8),  # Dongsheng ja Tiande; Xia voittaa lännessä
             ]),
+            ('Dali', 'dali', 'ulkoinen', DALI),  # Duan-suku; Gao-suvun valtionhoitajat (1094–1096 välikausi Dazhong)
         ],
     },
 }
