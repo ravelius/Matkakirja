@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-16T15:40:14.807641+00:00",
+  "tool": "built-in image_gen",
+  "errorType": "image_generation_user_error",
+  "errorCode": "moderation_blocked",
+  "moderationStage": "output",
+  "categories": [
+    "other"
+  ],
+  "requestID": "53727a84-a35a-4fe1-97ab-78c65733ea92",
+  "usableImageReturned": false,
+  "preciseSafetyReasonProvided": false,
+  "attemptCountsAgainstOneCallAuthorization": true,
+  "automaticRetry": false,
+  "noSearchForBlockedOutput": true
+}

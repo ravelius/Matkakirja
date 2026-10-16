@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "task": "#384–386 running-game illustration summer-source review",
+  "reviewer": "iss_scene_camera_qa",
+  "reviewed_at_utc": "2026-10-16T15:49:54.241490+00:00",
+  "state": "visual_review_complete_for_2_available_natives_J2_missing",
+  "current_brief": {
+    "path": "sources/pelikoodari-codex-juoksupeli-havainnekuvat-20261016.md",
+    "sha256": "00da87fa22aedec81636c5a7fc57988a43a4c24bb1d27d3178bbae7886a74d34",
+    "reread_completely": true,
+    "source_commit_from_J3_decision": "c43bec90cf350b07037fd52d8ea81c1fc8d967a1",
+    "binding_season": "summer",
+    "binding_story_year": "approximately1914",
+    "binding_child_age": "approximately8; visual portrayal not a historical identification"
+  },
+  "plan": {
+    "path": "docs/suunnitelmat/juoksupeli-kielletty-kaupunki.md",
+    "read": false,
+    "not_claimed_as_read": true
+  },
+  "evidence": {
+    "J1_and_J3_new_natives_personally_viewed": true,
+    "old_rejected_or_autumn_outputs_viewed": false,
+    "J2_failure_metadata_read": true,
+    "J2_blocked_output_searched_or_recovered": false,
+    "J3_preflight_decision_read": true,
+    "preflight_fact_file_preserved_sha256": "038b5c5cfc2a6f0731fc9a7829acf384bfb47d80c9ca1c37670d42c9c00fb8c3"
+  },
+  "images": [
+    {
+      "id": "j1",
+      "candidate": {
+        "path": "images/havainne-j1.png",
+        "sha256": "cb50a05b036d46f6863690fa0451fa22cd576aea19e1ada6114bf856540abce7",
+        "width": 1086,
+        "height": 1448,
+        "native": true,
+        "personally_viewed_with": "view_image",
+        "detail_requested": "original"
+      },
+      "assessment": "material_door_stud_count_deviation_other_scene_goals_readable",
+      "door_studs": {
+        "required": "9×9=81per suitable door leaf",
+        "visible_right_leaf_columns": 6,
+        "visible_right_leaf_rows": 10,
+        "eighty_one_verified": false,
+        "finding": "Oikeassa lehdessä näkyy6saraketta×10riviä; osa niiteistä peittyy lapseen/helaan. En vahvista81niititystä. Vasen lehti on viisto ja osin rajattu, eikä sekään varmista9×9. Tämä on olennainen täsmällisen nastatavoitteen poikkeama. Parent independently confirmed6×10from a diagnostic; no new crop made by this reviewer."
+      },
+      "threshold_jump": "Lapsi on ilmassa korkean punaisen poikittaisen kynnyksen/palkin yläpuolella, kaapu ja letti hulmuavat. Palkin korkeus on näkyvä; tarkkaa polvi/reisi-suhdetta tai puumateriaalia ei varmisteta maalatun pinnan ja perspektiivin perusteella.",
+      "characters": {
+        "male_servants_observed": 3,
+        "female_nurse_observed": 1,
+        "finding": "Kolme tumma-asuisen miespalvelijan hahmoa ja yksi päähineellinen hoitaja juoksevat perässä; yksi kurottaa/kompastelee ja toinen pitää päähinettään. Lapsen pieni ikä, keltainen lohikäärmekaapu, pyöreä päähine ja lentävä letti erottuvat. Ei havaittuja silmälaseja; todellista Puyi- tai näyttelijäidentiteettiä ei varmenneta."
+      },
+      "vat": {
+        "visible_ring_handles": 2,
+        "open_uncovered_water_observed": true,
+        "stone_base_observed": true,
+        "finding": "Suurikokoinen kupariseokselta/pronssilta näyttävä vesiastia, kaksi näkyvää rengaskahvaa ja kiviperusta erottuvat. Ei täkkiä tai kantta. Astia rajautuu oikealta/alhaalta, joten jalustan koko mataluutta, vastakkaisten kahvojen tarkkaa geometriaa tai materiaalianalyysiä ei todisteta."
+      },
+      "summer": "Vihreää lehdistöä ja kirkasta lämmintä valoa, ei havaittua lunta, syyslehtiä tai ammepeitettä.",
+      "surface": "Valokuvamainen valo ja vaatemateriaalit; kivien/maalauspintojen voimakas kuluma ja koristeiden tarkka muoto ovat havainnollistavia. Ei täsmällisen historiallisen portin dokumentti."
+    },
+    {
+      "id": "j3",
+      "candidate": {
+        "path": "images/havainne-j3.png",
+        "sha256": "e9d27f707ff1a74b2fd0bb66c696d99485528cf844c5459edd7ce23519e9bf06",
+        "width": 1086,
+        "height": 1448,
+        "native": true,
+        "personally_viewed_with": "view_image",
+        "detail_requested": "original"
+      },
+      "assessment": "cinematic_composite_with_historical_and_roof_line_caveats",
+      "child_and_mood": "Selin nähty pieni lapsi, pitkä letti, pyöreä päähine ja keltainen lohikäärmekaapu; rauhallinen katselu muurin yli ja takana yksi hengästynyt miespalvelija. Lapsi on leveällä kävelytasolla, ei parapetin päällä. Noin8vuotias on visuaalinen tulkinta, ei henkilöhistorian tai tarkan kasvovastaavuuden varmennus.",
+      "tower_moat_city": "Monikerroksinen keltakattoinen tornisivu, punaiset seinät, leveä vallihauta, vihreät puut ja matalat harmaat/keltaiset katot näkyvät. Luoteiskulmatunnistusta, tornin harja-/korkeusmittoja, muurin korkeutta tai vallihaudan50mleveyttä ei voi todistaa yhdestä kuvasta.",
+      "landmark_geography": {
+        "decision_path": "j3-preflight-decision.json",
+        "decision_sha256": "1e6ff11032d4f2eac8009bb0688825ca1abc84df23ba836de746136e07d3ce96",
+        "same_map_accurate_camera_verified": false,
+        "finding": "Jingshanin paviljonkikukkula ja Beihai-tyyppinen valkoinen dagoba on yhdistetty elokuvalliseksi maisemaksi. Suuntia, etäisyyksiä tai niiden yhtäaikaista näkymistä samasta luoteiskulman kamerasta ei ole todennettu. Ei karttatarkka maisemareferenssi."
+      },
+      "thin_roof_line": {
+        "line_observed": true,
+        "approximate_location": "vasemman katonharjan yläpuolella x≈20–42%,y≈16–20%",
+        "electric_function_confirmed": false,
+        "wire_free_historical_scene_confirmed": false,
+        "finding": "Ohut tumma lankamainen viiva kulkee kahden kattokoristealueen välillä. Se näyttää kaapeli-/kiinnityslankamaiselta, mutta sähkö-/ukkossuoja- tai muu käyttötarkoitus jää epäselväksi. Johdottomuutta ja täsmällistä1914näkymää ei kuitata varmennetuiksi."
+      },
+      "summer_and_modernity": "Vihreä kesäkasvillisuus ja lämmin iltapäivä, ei havaittua lunta tai syysmaisemaa. Ei havaittuja autoja, pyöriä, moderneja korkeita rakennuksia tai turistijoukkoja. Katon ohut viiva kirjattu erikseen.",
+      "surface": "Pääosin valokuvamainen hahmo ja ympäristö, mutta kiven tiheä kuluma sekä katto- ja kaupunkidetaljit ovat synteettistä havainnollistusta. Kulmatornin ja kattokoristeiden täsmällinen historiallinen vastaavuus ei varmistu."
+    }
+  ],
+  "missing_J2": {
+    "candidate": null,
+    "status": "no_usable_PNG_returned",
+    "failure_metadata_path": "j2-failure.json",
+    "failure_metadata_sha256": "48b46f0ecd396a91e2fa40f4706487f58e055da41003b05feb9bf07e7c16d922",
+    "error_code": "moderation_blocked",
+    "moderation_stage": "output",
+    "categories": [
+      "other"
+    ],
+    "precise_safety_reason_provided": false,
+    "attempt_consumed_authorized_call": true,
+    "automatic_retry": false,
+    "blocked_output_searched_or_recovered": false,
+    "visual_QA_possible": false,
+    "finding": "AinoaJ2kutsu hylättiin output-moderoinnissa luokallaother; käyttökelpoistaPNG:tä ei palautunut. Ei arvausta tarkasta syystä, ei uusintaa tai palautusyritystä."
+  },
+  "summary": {
+    "requested_scenes": 3,
+    "available_native_images": 2,
+    "personally_viewed_native_images": 2,
+    "missing_scenes": [
+      "j2"
+    ],
+    "complete_three_image_delivery": false,
+    "visual_review_complete_for_available_images": true,
+    "all_scene_requirements_verified": false,
+    "material_fact_deviation": "J1näkyvä niititys6×10, ei9×9/81.",
+    "J3_cartographic_claim": false,
+    "all_scene_owner_approved": false,
+    "clean_image": "Ei havaittua UI:ta, luettavaa päälle lisättyä tekstiä, logoja tai selvää vinjettiä. Arkkitehtuurin koristeita ja mahdollisia pieniä merkkejä ei autentikoitu."
+  },
+  "acceptance": {
+    "PT": "not_granted_by_this_reviewer",
+    "owner": "not_obtained_in_this_review",
+    "game_implementation": "not_verified"
+  },
+  "scope_mutations": [
+    "qa/INDEPENDENT-QA-FI.md",
+    "qa/independent-review.json"
+  ],
+  "generation_upload_post_ledger_or_image_changes_by_reviewer": false
+}

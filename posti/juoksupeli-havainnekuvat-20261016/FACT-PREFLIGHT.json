@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "task": "#384–386 running-game illustration factual preflight",
+  "reviewer": "iss_scene_camera_qa",
+  "reviewed_at_utc": "2026-10-16T15:36:36.733755+00:00",
+  "state": "factual_preflight_complete_with_J3_geography_and_size_uncertainties",
+  "brief": {
+    "path": "sources/pelikoodari-codex-juoksupeli-havainnekuvat-20261016.md",
+    "sha256": "00da87fa22aedec81636c5a7fc57988a43a4c24bb1d27d3178bbae7886a74d34",
+    "read_completely": true
+  },
+  "missing_plan": {
+    "path": "docs/suunnitelmat/juoksupeli-kielletty-kaupunki.md",
+    "read": false,
+    "availability": "Parent reports absent from order commit764ee49; not accessed or used.",
+    "no_claim_of_reading": true
+  },
+  "findings": {
+    "door_studs": {
+      "status": "supported_for_selected_palace_gates_not_universal",
+      "finding_FI": "9×9 koskee yhtä ovilehteä esimerkiksi Shunzhen-portilla; kahta ovilehteä ei lasketa yhdeksi81niitiksi. PalaceMuseum dokumentoi poikkeuksia Donghua-portissa ja Wumenin sivuovissa. j1 voi käyttää pääporttityyppistä9×9ratkaisua, mutta kuvan tarkkaa portti-identiteettiä ei pidä keksiä.",
+      "source_ids": [
+        "door-9x9",
+        "door-exceptions"
+      ],
+      "visual_QA_rule": "Laske näkyvät rivit/sarakkeet vain jos ne oikeasti näkyvät. Peittynyttä81niititystä ei vahvisteta."
+    },
+    "roof_figures": {
+      "status": "rider_order_and_5_or_7_examples_supported_exact_size_unverified",
+      "front": "Rider on bird/phoenix (骑凤仙人) precedes the beast row; rider is separate from the animal count.",
+      "animal_order": [
+        "dragon (龙)",
+        "phoenix (凤)",
+        "lion (狮子)",
+        "tianma (天马)",
+        "haima (海马)",
+        "suanni (狻猊)",
+        "yayu (押鱼)",
+        "xiezhi (獬豸)",
+        "douniu (斗牛)",
+        "hangshi (行什)"
+      ],
+      "count_FI": "Viisi tai seitsemän eläintä ratsastajan lisäksi sopii nimettyihin PalaceMuseum-esimerkkeihin; älä tulkitse5–7satunnaiseksi kuuden riviksi. Taihe Hallin10eläimen rivi ei ole jokaisen sivusalin normi.",
+      "position_FI": "Rivi kuuluu vinon nurkka-/aumaräystään harjan alareunaan, ei pitkäksi riviksi vaakasuoran pääharjan päälle.",
+      "size_FI": "Tehtävänannon30–40cm ei saatu tässä preflightissa kohdekohtaisesti varmennettua; koot vaihtelevat kattokoristeen/buildingrankin mukaan. Merkitse kuvan senttimitta havainnollistavaksi, älä faktaksi tai lapsen kokoiseksi patsasriviksi.",
+      "source_ids": [
+        "beast-order",
+        "rider-and-rank",
+        "five-example",
+        "seven-example"
+      ],
+      "size_cm_verified": false
+    },
+    "bronze_vat": {
+      "status": "object_type_stone_support_and_ring_handles_supported_from_primary_indexed_scan_exact_shape_height_unverified",
+      "finding_FI": "Tavoittele leveää, suurta kupariseos-/rautavesisäiliötä, jonka vastakkaisissa korvakkeissa on rengaskahvat. Kyse on palontorjunnan vesiastiasta, ei kolmijalkaisesta rituaalidingistä tai ihmisille tarkoitetusta kylpyammeesta. PalaceMuseumin teksti tukee kivijalustaa ja sen alla tapahtunutta lämmitystä; juuri tämän kuvan jalustan mataluutta/senttikorkeutta ei ole mitattu.",
+      "source_ids": [
+        "vat"
+      ],
+      "exact_height_or_specific_model_verified": false
+    },
+    "J3_NW_corner_view": {
+      "status": "not_verified_as_one_cartographically_faithful_portrait_perspective",
+      "facts_FI": "Jingshan/Wanchun on palatsin pohjoisella keskiakselilla. Beihain oma valkoinen dagoba on Qionghua-saarella palatsista luoteeseen. Beihai ja Jingshan ovat eri itä–länsisuuntien maamerkkejä; virallinen suunnitteluaineisto erottaa itään Jingshan/Wanchun- ja länteen Beihai-dagoba-näkymät puistojen välialueelta. Älä sekoita Beihain tornia läntisempään Miaoying-temppelin toiseen valkoiseen dagobaan.",
+      "inference_FI": "En vahvista molempien uskottavaa sijoittumista samaan tavalliseen luoteiskulman3:4perspektiivikameraan. Kohteet ovat merkittävästi eri suuntasektoreissa. Kuvasuhde3:4ei yksin määrääFOV:ta; erittäin laaja panoraama-/fisheyeprojekti voisi yhdistää sektoreita, joten absoluuttista näkyvyysmahdottomuutta ei väitetä ilman kameramittausta.",
+      "map_precision_claimed": false,
+      "coordinates_bearings_distances_or_FOV_calculated": false,
+      "both_landmarks_same_narrow_camera_confirmed": false,
+      "report_if_both_drawn_FI": "Kuva yhdistää Jingshanin ja Beihain maamerkit elokuvalliseksi/sommitelluksi näkymäksi. Niiden keskinäistä suuntaa, etäisyyttä tai näkymistä samasta luoteiskulman kamerasta ei ole todennettu; kuva ei ole karttatarkka maisemareferenssi.",
+      "faithful_alternative_FI": "Yhden suunnan luonnollisessa kamerassa näytä vain siihen kuuluvat maamerkit tai jätä toinen kuvan ulkopuolelle. Jos tilaaja vaatii molemmat, merkitse sommittelukompromissi näkyvästiQA:han.",
+      "source_ids": [
+        "jingshan",
+        "beihai-white-dagoba",
+        "district-layout",
+        "opposed-view-directions"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "door-9x9",
+      "title": "顺贞门 — Palace Museum",
+      "url": "https://www.dpm.org.cn/explore/building/236543.html",
+      "authority": "Palace Museum, building description",
+      "evidence": "Museum indexed text says each Shunzhen Gate door leaf has9studs vertically and horizontally.",
+      "retrieval": "Primary indexed excerpt read; direct web-open repeatedly timed out."
+    },
+    {
+      "id": "door-exceptions",
+      "title": "午掖门门钉为何每路八颗 — Palace Museum PDF",
+      "url": "https://www.dpm.org.cn/Uploads/pdf/1941/T00021_00.pdf",
+      "authority": "Palace Museum scholarly publication",
+      "evidence": "Museum indexed PDF text identifies Donghua Gate and Meridian Gate side doors as9-by8exceptions, contrasting the common9-by9arrangement.",
+      "retrieval": "Primary indexed excerpt and PDF metadata read; PDF page text OCR sparse, screenshot call did not expose readable image pixels in this interface."
+    },
+    {
+      "id": "beast-order",
+      "title": "走兽 — Palace Museum glossary",
+      "url": "https://www.dpm.org.cn/lemmas/241413.html",
+      "authority": "Palace Museum glossary",
+      "evidence": "Order:龙、凤、狮子、天马、海马、狻猊、押鱼、獬豸、斗牛、行什. Located at lower ends of sloping垂脊/戗脊roof ridges.",
+      "retrieval": "Primary indexed excerpt read; direct web-open timed out."
+    },
+    {
+      "id": "rider-and-rank",
+      "title": "仙人走兽与大吻 — Palace Museum PDF",
+      "url": "https://www.dpm.org.cn/Uploads/pdf/1602/T00091_00.pdf",
+      "authority": "Palace Museum publication",
+      "evidence": "Front figure is骑凤仙人; Taihe Hall has10small beasts behind it. Glazed roof-component sizes and beast counts vary with building use/rank.",
+      "retrieval": "Primary indexed excerpt and PDF metadata read; detailed source text from indexed scan, not a measured artifact."
+    },
+    {
+      "id": "five-example",
+      "title": "承乾宫 — Palace Museum",
+      "url": "https://www.dpm.org.cn/explore/building/236438.html",
+      "authority": "Palace Museum, building description",
+      "evidence": "Chengqian Palace description explicitly specifies5beasts at roof corners.",
+      "retrieval": "Primary indexed building description read; direct open failed."
+    },
+    {
+      "id": "seven-example",
+      "title": "体仁阁 — Palace Museum",
+      "url": "https://www.dpm.org.cn/explore/building/236453.html",
+      "authority": "Palace Museum, building description",
+      "evidence": "Tiren Pavilion description explicitly specifies7ridge beasts at eave corners.",
+      "retrieval": "Primary indexed building description read."
+    },
+    {
+      "id": "vat",
+      "title": "故宫的缸 — Palace Museum PDF",
+      "url": "https://www.dpm.org.cn/Uploads/pdf/1948/T00034_00.pdf",
+      "authority": "Palace Museum publication, indexed scan",
+      "evidence": "Large outdoor palace vats stored water for firefighting. Text discusses copper-alloy/iron variants, paired ears/rings and warming with charcoal beneath a stone base during cold periods.",
+      "retrieval": "Primary indexed scan excerpt and PDF metadata read; no centimeter dimensions or pedestal height independently verified."
+    },
+    {
+      "id": "jingshan",
+      "title": "Jingshan Park — Beijing municipal government",
+      "url": "https://english.beijing.gov.cn/specials/parktours/guidevisitors/jingshanpark/index.html",
+      "authority": "Beijing municipal government",
+      "evidence": "Jingshan/Wanchun Pavilion sits on the north-south central axis and overlooks the Forbidden City.",
+      "retrieval": "Official page opened and relevant text read."
+    },
+    {
+      "id": "beihai-white-dagoba",
+      "title": "坐落在琼岛之巅的美丽白塔 — Beijing Municipal Parks Administration Center",
+      "url": "https://gygl.beijing.gov.cn/whgy/whgy_wsgc/201912/t20191206_885792.html",
+      "authority": "Beijing Municipal Parks Administration Center",
+      "evidence": "Beihai White Dagoba is on top of Qionghua/Jade Islet northwest of the Forbidden City; belongs to the Yong an Temple area.",
+      "retrieval": "Official page opened and relevant text read."
+    },
+    {
+      "id": "district-layout",
+      "title": "北京旧城历史文化保护区保护和控制范围规划 — Beijing municipal government",
+      "url": "https://www.beijing.gov.cn/zhengce/zfwj/zfwj/szfwj/201905/t20190523_72137.html",
+      "authority": "Beijing municipal government planning document",
+      "evidence": "Zhishanmen Street connects Beihai East Gate to Jingshan West Gate; document identifies view corridors among Jingshan Wanchun Pavilion, Beihai White Dagoba and palace corner towers.",
+      "retrieval": "Official HTML opened and relevant district paragraph read."
+    },
+    {
+      "id": "opposed-view-directions",
+      "title": "Beijing planning authority PDF: old-city view-corridor guidance",
+      "url": "https://ghzrzyw.beijing.gov.cn/zhengwuxinxi/zcwj/qtwj/202409/P020240911614925558614.pdf",
+      "authority": "Beijing Municipal Commission of Planning and Natural Resources",
+      "evidence": "Primary indexed passage distinguishes an eastward view to Jingshan/Wanchun and westward view to Beihai White Dagoba from Zhishanmen Street; also eastward view from Beihai Bridge to the Forbidden City NWcorner tower.",
+      "retrieval": "Official PDF indexed passage read; full PDF open refused by web tool because content length too large. No exact bearing/FOV extracted."
+    }
+  ],
+  "limits": [
+    "Ei1930/1914vaatetus-, henkilöhistoria-, kasvo-, porttikynnys- tai tornikorkeuden laajaa varmennusta tässä rajatussa preflightissa.",
+    "Osa PalaceMuseum-sivuista toistuvasti timeout: faktat sidottu heidän indeksoituihin ensisijaisiin katkelmiin ja haettuihinPDF-metatietoihin, ei väitetty kaikkien kokotekstien onnistunutta lukua.",
+    "Tarkkoja koordinaatteja, kartan asteita tai optista kuvakulmaa ei keksitty."
+  ],
+  "visual_QA_pending": true,
+  "images_generated_by_reviewer": 0,
+  "production_state_ledger_mail_native_files_modified": false,
+  "scope_mutations": [
+    "qa/preflight-facts.json"
+  ]
+}

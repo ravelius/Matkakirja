@@ -1,0 +1,69 @@
+{
+  "files": [
+    {
+      "path": "DELIVERY-STATUS.json",
+      "bytes": 1750,
+      "sha256": "7a02f1d4af24bb6960bb9cfc77adfe4f3def6cee0a71e69169ac931e8b1321bd"
+    },
+    {
+      "path": "FACT-PREFLIGHT.json",
+      "bytes": 11280,
+      "sha256": "038b5c5cfc2a6f0731fc9a7829acf384bfb47d80c9ca1c37670d42c9c00fb8c3"
+    },
+    {
+      "path": "GENERATION.json",
+      "bytes": 19585,
+      "sha256": "f672f5dda05f469979d5bd802af95b15279822954e5be9ec08fcb2e7cfa36843"
+    },
+    {
+      "path": "INDEPENDENT-QA-FI.md",
+      "bytes": 1712,
+      "sha256": "5c2f2d55c4e46bf1030e8dcf54d580188c31c5f41c73ebb57a88fa9f3b64a872"
+    },
+    {
+      "path": "INDEPENDENT-QA.json",
+      "bytes": 8088,
+      "sha256": "e168413b61820e24f9dee32ccbbbcb69cd2d1e4409260c86e57427b36b5632b0"
+    },
+    {
+      "path": "J2-FAILURE.json",
+      "bytes": 470,
+      "sha256": "48b46f0ecd396a91e2fa40f4706487f58e055da41003b05feb9bf07e7c16d922"
+    },
+    {
+      "path": "J3-COMPOSITION.json",
+      "bytes": 747,
+      "sha256": "1e6ff11032d4f2eac8009bb0688825ca1abc84df23ba836de746136e07d3ce96"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 16585,
+      "sha256": "d70a2430cde5cb2245303dba478971c2458a036d7a24704e6b1958ac7189e531"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 3226,
+      "sha256": "de4cb7523dda556c1031fe3a93efd147af266a7f1e19bc530241c04168b776d5"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 1361,
+      "sha256": "16394de89d0dfc0e67fbca5f93fe62c01c29a48c99385fec0620c1a9df1bab24"
+    },
+    {
+      "path": "havainne-j1.png",
+      "bytes": 2678260,
+      "sha256": "cb50a05b036d46f6863690fa0451fa22cd576aea19e1ada6114bf856540abce7"
+    },
+    {
+      "path": "havainne-j3.png",
+      "bytes": 2791985,
+      "sha256": "e9d27f707ff1a74b2fd0bb66c696d99485528cf844c5459edd7ce23519e9bf06"
+    },
+    {
+      "path": "j1-stud-grid-DIAGNOSTIC-2x.png",
+      "bytes": 849436,
+      "sha256": "381ea21234afc440dac9d51b3554746aa6cfedee89dbeeb740e82ede10c4bbe7"
+    }
+  ]
+}

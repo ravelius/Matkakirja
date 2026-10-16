@@ -1,0 +1,29 @@
+{
+  "latestSourceCommit": "c43bec90cf350b07037fd52d8ea81c1fc8d967a1",
+  "latestSourceBlob": "a3110d6fcbb8333d88febdc1d336250c8ec4473b",
+  "sourceFiles": [
+    {
+      "sourceCommit": "c43bec90cf350b07037fd52d8ea81c1fc8d967a1",
+      "sourcePath": "posti/pelikoodari-codex-juoksupeli-havainnekuvat-20261016.md",
+      "sourceBlob": "a3110d6fcbb8333d88febdc1d336250c8ec4473b",
+      "sha256": "00da87fa22aedec81636c5a7fc57988a43a4c24bb1d27d3178bbae7886a74d34",
+      "bytes": 4971,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/sources/pelikoodari-codex-juoksupeli-havainnekuvat-20261016.md",
+      "sourceReadInFull": true
+    }
+  ],
+  "sourceHistory": [
+    {
+      "sourceCommit": "764ee49b4ab057e0bc81c51cf4ca79c81486f378",
+      "sourceBlob": "291b06f6e28afed5534f090d2e610679a6c396f6",
+      "archivedSourcePath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/sources/history/source-764ee49-autumn.md",
+      "callsIssuedUsingOldAutumnSource": 0,
+      "disposition": "source guard blocked first issue before any model call"
+    }
+  ],
+  "sourceReadInFull": true,
+  "missingPlanPath": "docs/suunnitelmat/juoksupeli-kielletty-kaupunki.md",
+  "planAvailableAtSourceCommit": false,
+  "planRead": false,
+  "standaloneBriefUsed": true
+}

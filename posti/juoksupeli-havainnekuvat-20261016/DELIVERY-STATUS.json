@@ -1,0 +1,54 @@
+{
+  "taskNumbers": [
+    384,
+    385,
+    386
+  ],
+  "authorizedCalls": 3,
+  "callsIssued": 3,
+  "callsCompletedWithImage": 2,
+  "callsFailedWithoutUsableImage": 1,
+  "allThreeRequestedImagesProduced": false,
+  "perImage": {
+    "j1": {
+      "taskNumber": 384,
+      "nativeImageReturned": true,
+      "deliveredFile": "havainne-j1.png",
+      "localReviewDisposition": "candidate with important door-stud grid noncompliance",
+      "doorStudGrid9x9Verified": false,
+      "visibleRightDoorGrid": "6 columns by10 rows, portions occluded; not9x9",
+      "noAutomaticRetry": true
+    },
+    "j2": {
+      "taskNumber": 385,
+      "nativeImageReturned": false,
+      "deliveredFile": null,
+      "localReviewDisposition": "one authorized attempt rejected at output safety stage; no usable image",
+      "failureCode": "moderation_blocked",
+      "exactSafetyReasonProvided": false,
+      "reportDelivered": true,
+      "callsUsed": 1,
+      "remainingAuthorizedCalls": 0,
+      "requiresNewAuthorizationBeforeAnyNewCall": true,
+      "noAutomaticRetry": true
+    },
+    "j3": {
+      "taskNumber": 386,
+      "nativeImageReturned": true,
+      "deliveredFile": "havainne-j3.png",
+      "localReviewDisposition": "cinematic concept candidate; geographic composition unverified; thin roof line unresolved",
+      "geographicallyExactNWCornerCamera": false,
+      "thinRoofLineObserved": true,
+      "lineFunctionConfirmed": false,
+      "wireFreeSceneVerified": false,
+      "noAutomaticRetry": true
+    }
+  },
+  "summerSourceAdoptedBeforeAllCalls": true,
+  "callsIssuedWithOldAutumnSource": 0,
+  "oldLouvreAndPekingWorkUnchanged": true,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

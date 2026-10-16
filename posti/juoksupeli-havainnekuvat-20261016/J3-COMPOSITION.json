@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-16T15:42:06.369674+00:00",
+  "sourceCommit": "c43bec90cf350b07037fd52d8ea81c1fc8d967a1",
+  "sourceReadInFull": true,
+  "season": "summer",
+  "preflightFactsPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/qa/preflight-facts.json",
+  "preflightFactsSHA256": "038b5c5cfc2a6f0731fc9a7829acf384bfb47d80c9ca1c37670d42c9c00fb8c3",
+  "bothLandmarksSameCartographicCameraVerified": false,
+  "interpretation": "Cinematic composed panorama per briefing allowance; both landmark placements illustrative, not a map-accurate view. Disclose explicitly in QA and handoff.",
+  "noInventedExactBearingsOrDistances": true,
+  "childOnBroadProtectedWalkway": true,
+  "noPartialEdit": true
+}
