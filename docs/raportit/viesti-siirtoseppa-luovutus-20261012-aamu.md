@@ -341,3 +341,21 @@ kuva iPhone + Mac PT:lle; SK luonnostelee Pulun kysymykset rinnalla – älä od
 - Levysiivous: worktreet ilmiot/iss-hetki/meri/vapaalento ja meri-196-app/-mac poistettu; todistus-kohokohta*-196 (15.10.) poistettu
   (Lapin revontulipari poistui niiden mukana – tee uusi ajo, jos PT pyytää).
 - Jono tyhjä merivastausten jälkeen.
+
+## PÄIVITYS 16.10. 20.5x — NOLLAUS ENNEN ISOA ERÄÄ: ÄÄNIPOHJA (SEURAAJAN ENSIMMÄINEN ERÄ, juna 197)
+
+**Toimeksianto (PT, OMISTAJAN PÄÄTÖS 20.54 "Kyllä, kaikki yhtä aikaa"):** pehmeä liike, ääni ja valo yhteisiksi pohjiksi kuten lasikortit;
+parannus pohjaan leviää kaikkiin linsseihin ja peleihin, uudet vain pohjilla. SIIRTOSEPÄLLE ÄÄNIPOHJA (natiivi):
+- yhteinen mikseri (ryhmät puhe, musiikki, tehosteet, maisema), tasot, pehmeät häivytykset, musiikin vaimennus kertojan alle, askeleet alustan mukaan
+- nyt ei yhtään AudioMixeriä; linssitiedostot luovat omat AudioSourcet → kytke olemassa olevaan jaettuun kertoimeen (MikseriPalvelin,
+  worker /mikseri/tasot – säilyy). Tasot ja kuuntelu yhdessä Äänittäjän kanssa.
+- automaattinen tarkistus (testi/vahti), joka listaa pohjan ohittavat omat AudioSourcet (vanhat siirtolistana); siirrä vanhat vuorollaan
+- JÄRJESTYS: 1) suunnitelma ≤ 1 sivu docs/:iin (esim. docs/moduulit/aanipohja.md, lisää Raamatun karttaan vain PT) + SHA PT:lle,
+  2) pohja + ensimmäinen käyttäjä MUSEO (askeleet, kertoja, sellot) → käännös (Julkaisijan KÄÄNNÖS NYT) → PT.
+- Lähtökohdat (juna-196 90f1ef54a): UI/Aanet.cs (AaniKanava, Aanet.Soita/Pysayta, Puhesoitin), UI/MikseriPalvelin.cs, UI/Aanentasot.cs,
+  Linssit/Ydin/AaniHaivytys.cs, Linssit/Unity/SeikkailuAanet.cs, DioraamaLimitteri.cs, SaumatonSilmukka.cs; `git grep -l "AddComponent<AudioSource>"`
+  Assets/Matkakirja → 34 tiedostoa. Muistin ÄÄNI-INDEKSI (memory/indeksi-aanet.md) ennen työtä. UI-POHJAT-sääntö: ei omaa UI:ta ilman PT:tä.
+
+**Tila nyt:** jono muuten tyhjä. Junassa 196: merinostot f7ffbff4d + merivastaukset 82–103 9fa3b99f1 (NS:llä). Revontulten Pulun kysymys tilattu SK:lta
+(kytkentä myöhemmin PuluChat.IssVastaukset-malliin + kohokohdat.json kysymykset). Worktree wt/proto-siirtoseppa-meri2 (mergettävissä/poistettavissa
+kun 9fa3b99f1 on juna-196:ssa).
