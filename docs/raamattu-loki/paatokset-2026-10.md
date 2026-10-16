@@ -300,3 +300,13 @@ Omistaja 18.05 (KK:n välittämä): "Pitä huolehtia, että kodeksille ei tule l
 ## PAATOKSET 16.10.2026 klo 18.14: 7 UUTTA PÄÄKAUPUNKIA PELAAJILLE (16.10.2026 klo 18.14)
 
 Omistaja 18.14 (kortti PAAKAUPUNGIT-7, arkki-kaikki.jpg nähtyään): "Avataan, kun hyväksyn esittelyt (Suositus)". Monaco, Bern, Bratislava, Podgorica, Tirana, Belgrad ja Zagreb OPAS_SALLITUT-listalle heti, kun omistaja hyväksyy niiden 7 esittelyä äänisivulla (3D-mittaus sallitut.js + still 450 m/55° läpäisty 16.10.). Vaduz (raja), Skopje, Chișinău ja Minsk jäävät kehityskaupungeiksi.
+
+## PAATOKSET 16.10.2026 klo 18.18: KIELLETYN KAUPUNGIN JUOKSUPELI (16.10.2026 klo 18.18)
+
+Omistaja 18.18 (KK:n välittämä): uusi juoksupeli Kielletyssä kaupungissa, ei korvaa kesän 1923 seikkailua ("Mietin, että pystyisikö kummankin toteuttamaan"). 1) "Kannatan kaikkia ideoita, mitä kerroit
+juoksupeliin.": pikku-Puyi karkaa hovia, juoksee itse, pelaaja pyyhkäisee hypyt, liu'ut ja käännökset; reitti pihojen, muurien ja kattojen kautta, piiloutuminen (esim. vesiammeet); sävy aikuisillekin
+kelpaava kepposhenki (Untitled Goose Game, kuvasto kuten Viimeinen keisari); kerättävinä kattojen koristehahmot (Korkeimman harmonian sali 10), porttien 81 nastaa, salien nimet; lopussa kulmatornin
+näköala Pekingiin. Ensin lyhyt suunnitelma (reitti, ohjaus, tarkistetut faktat), rakentaminen vasta kun Codexin Peking on valmis. 2) Kortti "Kuka juoksupelin Puyi on?" → "Lapsi, noin 1914": ei
+polkupyörää (tuli 1922), omat lapsihahmot; Sisältökirjurille faktapohja Puyin lapsuudesta 1912–1918. 3) Kortti "Tehdäänkö Codexilla havainnekuvia juoksupelistä?" → "3 kuvaa (Suositus)" = lupa TASAN 3
+kuvaan: noin 8-vuotias Puyi juoksee porttikäytävän korkean kynnyksen yli eunukkien ja hoitajien perässä (ei pyörää); juoksu keltaisilla katoilla koristehahmojen ohi; kulmatornin näköala muurin yli
+Pekingiin. Kuvat omistajalle KK:n kautta.
