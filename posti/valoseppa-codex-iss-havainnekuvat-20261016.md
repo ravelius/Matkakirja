@@ -37,3 +37,9 @@ ja paneelit kuuluvat ISS-kuviin – säilytä kehyksen paikka, paranna valo).
 PNG 2752 × (pelikuvan korkeus) tai 16:10, nimet `havainne-<tunnus>.png`, + lyhyt QA-FI.md: mikä kuvassa on keksittyä (ei mallinneta)
 vs. mitä peliin kannattaa tavoitella. Toimitus tähän postilaatikkoon `codex-valoseppa-iss-havainnekuvat-20261016.md` + kansio.
 Käyttö: tavoiteluuppi (pelin kuva vs. havainnekuva, kierros kerrallaan) – PT näyttää kuvat ensin omistajalle.
+
+## TÄYDENNYS s1 (omistaja 16.10. 08.49, sanatarkasti: "Vieläkin kaksi salamaa iskee yhtä aikaa. Ja pitäisikö vähän näkyä muotoja?")
+- Koko näkymässä välähtää vain YKSI salama kerrallaan (muut ukkossolut tummina kumpuina).
+- Muodot näkyvät hillitysti: tässä välähdyksessä haarautuva salamakanava näkyy pilven pinnalla tai reunalla – vaakasuora
+  "hämähäkkisalama" (spider lightning) pilven yllä, ohuet sinivalkoiset haarat, kirkkain ydin, valo leviää pilven kumpuihin.
+- Elokuvamainen mutta uskottava (08.12).
