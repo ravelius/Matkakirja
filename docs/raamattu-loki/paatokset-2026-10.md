@@ -310,3 +310,7 @@ näköala Pekingiin. Ensin lyhyt suunnitelma (reitti, ohjaus, tarkistetut faktat
 polkupyörää (tuli 1922), omat lapsihahmot; Sisältökirjurille faktapohja Puyin lapsuudesta 1912–1918. 3) Kortti "Tehdäänkö Codexilla havainnekuvia juoksupelistä?" → "3 kuvaa (Suositus)" = lupa TASAN 3
 kuvaan: noin 8-vuotias Puyi juoksee porttikäytävän korkean kynnyksen yli eunukkien ja hoitajien perässä (ei pyörää); juoksu keltaisilla katoilla koristehahmojen ohi; kulmatornin näköala muurin yli
 Pekingiin. Kuvat omistajalle KK:n kautta.
+
+## PAATOKSET 16.10.2026 klo 18.3x: KIINAN DYNASTIAT -LINSSI (16.10.2026 klo 18.37)
+
+Omistaja 18.3x (sanatarkasti, KK:n välittämä): "Sitten ehdottomasti haluan oman linssin siitä, missä käydään karttamuodossa jollain tavalla läpi Kiinan eri dynastiat ja ulkoiset hallitsijat ja millaisilla alueilla ne toimivat." Toteutus = linssikatalogin M1 (aluemoottorin pilotti) + ulkoiset hallitsijat omana värinään kotiseutuineen (Xiongnut, Pohjois-Wei, Tiibet, Liao, Länsi-Xia, Jin, Yuan, Qing). Kokemus: Kiina laajenee, hajoaa ja yhdistyy, pohjoisen ja lännen kansat tulevat hallitsemaan, pääkaupunki siirtyy, loppu 1912 → Kielletty kaupunki. Työlistalle; ensin suunnitelma ja omat CC0-rajat.
