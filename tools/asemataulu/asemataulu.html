@@ -289,8 +289,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
   </section>
   <section class="kortti" id="laitteet-osio" hidden>
     <h2><button type="button" class="otsikkonappi taitto" data-osio="laitteet-osio" aria-expanded="true">Laitteet</button> <span class="kysymykset yhteenveto" id="laitteet-yhteenveto"></span></h2>
+    <div class="palkit" id="eleven-palkit"></div>
     <div class="roolit" id="laitteet"></div>
-    <div class="palkit" id="google-palkki" hidden></div>
   </section>
   <section class="kortti" id="roolit-osio" hidden>
     <h2><button type="button" class="otsikkonappi taitto" data-osio="roolit-osio" aria-expanded="true">Roolit</button> <span class="kysymykset" id="roolimaara"></span></h2>
@@ -320,20 +320,21 @@ section:not(.kiinni) .yhteenveto { display: none; }
     if (teksti != null) e.textContent = String(teksti);
     return e;
   }
-  // Kulutus-kortti (Laitteet-pohja): nimi, viisi palkkia suhteessa suurimpaan (kMax) ja osuus viikon kulutuksesta prosentteina.
-  // Roolilla malli-piste sekä tokenit- ja agentit-rivi; projektilla (omistaja 13.10. 11.3x) ei pistettä, vaan rivi eniten kuluttaneista
-  // rooleista, koska projekti ei ole malli.
+  // Kulutus-kortti (Laitteet-pohja): nimi, viisi palkkia = viimeisen 5 h:n kulutus (viisi_h) suhteessa suurimpaan (kMax), perässä
+  // pienellä osuus viikon kulutuksesta prosentteina (omistaja 15.10. 17.0x). Roolilla malli-piste sekä tokenit- ja agentit-rivi;
+  // projektilla (omistaja 13.10. 11.3x) ei pistettä, vaan rivi eniten kuluttaneista rooleista, koska projekti ei ole malli.
   function kulutusKortti(x, kMax, projekti) {
     var osuus = Math.max(0, Math.min(100, Number(x.viikko) || 0));
     var pr = Math.round(osuus);
+    var viisi = Math.max(0, Number(x.viisi_h) || 0);
     var kortti = luo('div', 'rooli tila-lepo');
     var paa = luo('div', 'r-paa');
     if (!projekti) paa.append(luo('span', 'piste' + (String(x.malli || '').toLowerCase() === 'sonnet' ? ' sonnet' : '')));
     paa.append(luo('span', '', x.nimi || ''));
     var ed = luo('span', 'edistys laite-cpu');
-    ed.title = 'osuus viikon kulutuksesta ' + pr + ' %';
-    ed.setAttribute('aria-label', 'osuus viikon kulutuksesta ' + pr + ' %');
-    var n = osuus > 0 && kMax > 0 ? Math.min(5, Math.max(1, Math.round(5 * osuus / kMax))) : 0;
+    ed.title = '5 h: ' + Math.round(viisi) + ' %, osuus viikon kulutuksesta ' + pr + ' %';
+    ed.setAttribute('aria-label', ed.title);
+    var n = viisi > 0 && kMax > 0 ? Math.min(5, Math.max(1, Math.round(5 * viisi / kMax))) : 0;
     for (var q = 1; q <= 5; q++) ed.append(luo('i', q <= n ? 'on' : ''));
     // Kiinteä väli, jotta prosentti ei rivity luvun ja merkin väliltä, kun pitkä nimi vie tilaa.
     ed.append(luo('span', 'laite-cpu-arvo', pr + '\u00a0%'));
@@ -763,39 +764,67 @@ section:not(.kiinni) .yhteenveto { display: none; }
     var la = $('laitteet');
     la.replaceChildren();
     var lr = (tila.laitteet && tila.laitteet.rivit) || [];
-    var g = tila.google;
-    $('laitteet-osio').hidden = lr.length === 0 && !(g && g.rivi !== false);
-    // Google-palkki (omistaja 16.10. 14.02, "pelkkä google"): kuluvan kuukauden kulut (Gemini, Maps, 3D-laatat ym.) laskutusviennistä,
-    // haku kerran päivässä (tools/kulut/hae-google.mjs → dokumentti google). Palkki = krediitin käytetty osuus (tai budjetti_usd, jos asetettu).
-    var gp = $('google-palkki');
-    gp.replaceChildren();
-    gp.hidden = !(g && typeof g.kulut_usd === 'number');
-    if (!gp.hidden) {
-      var usd = function (x) { return (Math.round(x * 100) / 100).toFixed(2).replace('.', ',') + ' $'; };
-      var kr = g.krediitti && typeof g.krediitti.summa_usd === 'number' && g.krediitti.summa_usd > 0 ? g.krediitti : null;
-      var kanta = kr ? kr.summa_usd : (typeof g.budjetti_usd === 'number' && g.budjetti_usd > 0 ? g.budjetti_usd : 0);
-      var kulu = kr ? Number(kr.kaytetty_usd) || 0 : g.kulut_usd;
-      var gpr = kanta ? Math.max(0, Math.min(100, kulu / kanta * 100)) : 0;
-      var grivi = luo('div', 'palkki koko');
-      var gpaa = luo('div', 'paa');
-      var gnimi = luo('span', 'nimi ei-versaali', 'Google');
-      if (g.kk) gnimi.append(luo('span', 'aika', ' (' + g.kk + ')'));
-      gpaa.append(gnimi, luo('span', 'arvo', kanta ? Math.round(gpr) + ' %' : usd(g.kulut_usd)));
-      var gura = luo('div', 'ura');
-      gura.setAttribute('role', 'meter');
-      gura.setAttribute('aria-label', 'Googlen kulut');
-      gura.setAttribute('aria-valuemin', '0');
-      gura.setAttribute('aria-valuemax', '100');
-      gura.setAttribute('aria-valuenow', String(Math.round(gpr)));
-      var gt = luo('div', 'tayte' + (gpr >= 90 ? ' punainen' : gpr >= 70 ? ' kulta' : ''));
-      gt.style.width = gpr + '%';
-      gura.append(gt);
-      grivi.append(gpaa, gura);
-      var gs = ['Tässä kuussa ' + usd(g.kulut_usd) + (Array.isArray(g.palvelut) && g.palvelut.length ? ' (' + g.palvelut.slice(0, 5).map(function (x) { return x.nimi + ' ' + usd(x.usd); }).join(', ') + ')' : '') + '.'];
-      if (kr) gs.push('Krediittiä käytetty ' + usd(kr.kaytetty_usd) + ' / ' + usd(kr.summa_usd) + (kr.nollautuu ? '; nollautuu ' + String(kr.nollautuu).slice(0, 10).split('-').reverse().join('.') : '') + '.');
-      grivi.append(luo('div', 'kysymykset', gs.join(' ')));
-      gp.append(grivi);
+    // ElevenLabsin krediitit (omistaja 16.10. 13.55): Macin elevenlabs.py hakee kerran päivässä → dokumentti elevenlabs; koko leveä palkki Viikon käytön pohjalla, rajat 70/90 %.
+    var el = tila.elevenlabs, ep = $('eleven-palkit');
+    ep.replaceChildren();
+    var elOk = !!(el && typeof el.kaytetty === 'number' && typeof el.raja === 'number' && el.raja > 0);
+    $('laitteet-osio').hidden = lr.length === 0 && !elOk;
+    if (elOk) {
+      var epr = Math.max(0, Math.min(100, el.kaytetty / el.raja * 100));
+      var erivi = luo('div', 'palkki koko');
+      var epaa = luo('div', 'paa');
+      var enimi = luo('span', 'nimi ei-versaali', 'ElevenLabs');
+      if (el.nollautuu) {
+        var ep2 = new Date(el.nollautuu);
+        if (!isNaN(ep2)) enimi.append(luo('span', 'aika', ' (nollautuu ' + ep2.getDate() + '.' + (ep2.getMonth() + 1) + '.)'));
+      }
+      var jaljellaK = Math.max(0, el.raja - el.kaytetty);
+      var earvo = luo('span', 'arvo', Math.round(epr) + ' %');
+      earvo.append(luo('span', 'muutos', ' (jäljellä ' + jaljellaK.toLocaleString('fi-FI') + ' krediittiä)'));
+      epaa.append(enimi, earvo);
+      var eura = luo('div', 'ura');
+      eura.setAttribute('role', 'meter');
+      eura.setAttribute('aria-label', 'ElevenLabsin krediitit');
+      eura.setAttribute('aria-valuemin', '0');
+      eura.setAttribute('aria-valuemax', '100');
+      eura.setAttribute('aria-valuenow', String(Math.round(epr)));
+      var etayte = luo('div', 'tayte' + (epr >= 90 ? ' punainen' : epr >= 70 ? ' kulta' : ''));
+      etayte.style.width = epr + '%';
+      eura.append(etayte);
+      erivi.append(epaa, eura);
+      ep.append(erivi);
     }
+    // Google-palkki (omistaja 16.10. 14.02, "pelkkä google"): kuluvan kuukauden kulut (Gemini, Maps, 3D-laatat ym.) laskutusviennistä, haku
+    // kerran päivässä (tools/kulut/hae-google.mjs → dokumentti google); ElevenLabs-palkin pohja. Ilman dokumenttia: "odottaa laskutusvientiä".
+    var g = tila.google;
+    var gOk = !!(g && typeof g.kulut_usd === 'number');
+    $('laitteet-osio').hidden = false;
+    var usd = function (x) { return (Math.round(x * 100) / 100).toFixed(2).replace('.', ',') + '\u00a0$'; };
+    var gkr = gOk && g.krediitti && Number(g.krediitti.summa_usd) > 0 ? g.krediitti : null;
+    var gkanta = gkr ? Number(gkr.summa_usd) : (gOk && Number(g.budjetti_usd) > 0 ? Number(g.budjetti_usd) : 0);
+    var gpr = gkanta ? Math.max(0, Math.min(100, (gkr ? Number(gkr.kaytetty_usd) || 0 : g.kulut_usd) / gkanta * 100)) : 0;
+    var grivi = luo('div', 'palkki koko');
+    var gpaa = luo('div', 'paa');
+    var gnimi = luo('span', 'nimi ei-versaali', 'Google');
+    if (gOk && gkr && gkr.nollautuu) {
+      var gn = new Date(gkr.nollautuu);
+      if (!isNaN(gn)) gnimi.append(luo('span', 'aika', ' (nollautuu ' + gn.getDate() + '.' + (gn.getMonth() + 1) + '.)'));
+    }
+    var garvo = luo('span', 'arvo', !gOk ? 'odottaa laskutusvientiä' : gkanta ? Math.round(gpr) + ' %' : usd(g.kulut_usd));
+    if (gOk && gkanta) garvo.append(luo('span', 'muutos', ' (' + usd(g.kulut_usd) + ' tässä kuussa)'));
+    gpaa.append(gnimi, garvo);
+    var gura = luo('div', 'ura');
+    gura.setAttribute('role', 'meter');
+    gura.setAttribute('aria-label', 'Googlen kulut');
+    gura.setAttribute('aria-valuemin', '0');
+    gura.setAttribute('aria-valuemax', '100');
+    gura.setAttribute('aria-valuenow', String(Math.round(gpr)));
+    var gt = luo('div', 'tayte' + (gpr >= 90 ? ' punainen' : gpr >= 70 ? ' kulta' : ''));
+    gt.style.width = gpr + '%';
+    gura.append(gt);
+    grivi.append(gpaa, gura);
+    if (gOk && Array.isArray(g.palvelut) && g.palvelut.length) grivi.append(luo('div', 'kysymykset', g.palvelut.slice(0, 5).map(function (x) { return x.nimi + ' ' + usd(x.usd); }).join(', ') + '.'));
+    ep.append(grivi);
     var tehtavatL = (tila.tehtavat && tila.tehtavat.rivit) || {};
     lr.forEach(function (x) {
       var kaytossa = x.tila === 'käytössä';
@@ -863,11 +892,13 @@ section:not(.kiinni) .yhteenveto { display: none; }
     // toisistaan; rooleissa suurin rooli, projekteissa suurin nimetty projekti), perässä osuus viikon kulutuksesta prosentteina;
     // osio piilossa ilman dokumenttia. Projektit (viisi suurinta + Muu työ + Muut projektit) omana väliotsikkonaan roolien yläpuolella.
     var kd = tila.kulutus;
-    var kr = (kd && Array.isArray(kd.rivit)) ? kd.rivit : [];
-    var kp = (kd && Array.isArray(kd.projektit)) ? kd.projektit : [];
-    var kMax = kr.reduce(function (m, x) { return Math.max(m, Number(x.viikko) || 0); }, 0);
-    var jaannos = function (x) { return x.nimi === 'Muu työ' || x.nimi === 'Muut projektit'; };
-    var kpMax = kp.reduce(function (m, x) { return jaannos(x) ? m : Math.max(m, Number(x.viikko) || 0); }, 0);
+    // Palkit ja järjestys viimeisen 5 h:n mukaan (omistaja 15.10. 17.0x, talo/kulutus v5 kenttä viisi_h); jäännösrivit viimeisinä.
+    var jaannos = function (x) { return x.nimi === 'Muu työ' || x.nimi === 'Muut projektit' || x.nimi === 'Muut'; };
+    var viisiJarj = function (a, b) { return (jaannos(a) - jaannos(b)) || ((Number(b.viisi_h) || 0) - (Number(a.viisi_h) || 0)); };
+    var kr = (kd && Array.isArray(kd.rivit)) ? kd.rivit.slice().sort(viisiJarj) : [];
+    var kp = (kd && Array.isArray(kd.projektit)) ? kd.projektit.slice().sort(viisiJarj) : [];
+    var kMax = kr.reduce(function (m, x) { return Math.max(m, Number(x.viisi_h) || 0); }, 0);
+    var kpMax = kp.reduce(function (m, x) { return jaannos(x) ? m : Math.max(m, Number(x.viisi_h) || 0); }, 0);
     $('kulutus-osio').hidden = kr.length === 0 || !boostPaalla;
     $('kulutus-projektit-otsikko').hidden = $('kulutus-roolit-otsikko').hidden = kp.length === 0;
     // Ilman projekteja Roolit-väliotsikkoa ei näytetä, joten roolit näkyvät aina.
@@ -881,9 +912,8 @@ section:not(.kiinni) .yhteenveto { display: none; }
     var ku = $('kulutus');
     ku.replaceChildren();
     kr.forEach(function (x) { ku.append(kulutusKortti(x, kMax, false)); });
-    var kEnin = (kp.length ? kp.filter(function (x) { return !jaannos(x); }) : kr.filter(function (x) { return x.nimi !== 'Muut'; }))
-      .sort(function (a, b) { return (Number(b.viikko) || 0) - (Number(a.viikko) || 0); })[0];
-    $('kulutus-yhteenveto').textContent = kEnin ? '(eniten: ' + kEnin.nimi + ' ' + Math.round(Number(kEnin.viikko) || 0) + ' %)' : '';
+    var kEnin = (kp.length ? kp : kr).filter(function (x) { return !jaannos(x); })[0];
+    $('kulutus-yhteenveto').textContent = kEnin ? '(eniten 5 h: ' + kEnin.nimi + ' ' + Math.round(Number(kEnin.viisi_h) || 0) + ' %)' : '';
     $('kulutus-tieto').textContent = kr.length ? '(arvio' + (typeof kd.viikko_pros === 'number' ? ', viikko ' + Math.round(kd.viikko_pros) + ' %' : '') + ')' : '';
 
     // Pienennetyn osion yhteenveto otsikkorivillä (omistaja 11.10. 19.3x).
