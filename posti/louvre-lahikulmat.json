@@ -1,0 +1,78 @@
+{
+ "kohde": "Louvren palatsi (Wikidata Q19675), Pariisi",
+ "origo": {
+  "lat": 48.861,
+  "lon": 2.3359,
+  "selite": "Napoleonin piha, maa 0 m = pihan kiveys (33,9 m NGF). Palatsin akseli (Rivolin suunta) on 20 deg idästä etelään (suunta 110 deg)."
+ },
+ "koordinaatit": "kamera_enu_m = [itä, pohjoinen, korkeus maasta] metreinä origosta; katse_deg = katsesuunta pohjoisesta myötäpäivään; kallistus_deg + ylös / - alas; roll 0; vfov_deg pystysuuntainen; atsimuutti_deg/etaisyys_m = kameran suunta ja etäisyys origosta",
+ "kulmat": [
+  {
+   "id": "L1",
+   "nimi": "L1 Richelieun pihajulkisivu",
+   "tyyppi": "lähikulma",
+   "kamera_enu_m": [
+    -43.58,
+    -32.03,
+    22
+   ],
+   "kamera_lat": 48.8607123,
+   "kamera_lon": 2.3353049,
+   "katse_deg": 20.0,
+   "kameran_korkeus_m": 22,
+   "kallistus_deg": -1.61,
+   "vfov_deg": 42,
+   "kuvasuhde": "3:2",
+   "palatsin_kehys_uv": [
+    -30,
+    -45
+   ],
+   "kuvaus": "Napoleonin pihalta pohjoiseen: Richelieun siiven pihajulkisivu (Cour Napoléon) koko korkeudeltaan, pilasterit, kerroslistat, veistokset syvennyksissä, lucarnet ja mansardikatto; kiveys etualalla."
+  },
+  {
+   "id": "L2",
+   "nimi": "L2 Cour Carrée",
+   "tyyppi": "lähikulma",
+   "kamera_enu_m": [
+    236.63,
+    -80.81,
+    20
+   ],
+   "kamera_lat": 48.8602741,
+   "kamera_lon": 2.3391311,
+   "katse_deg": 287.25,
+   "kameran_korkeus_m": 20,
+   "kallistus_deg": -1.1,
+   "vfov_deg": 40,
+   "kuvasuhde": "3:2",
+   "palatsin_kehys_uv": [
+    250,
+    5
+   ],
+   "kuvaus": "Cour Carréen itäpäästä länteen: pihan länsijulkisivu ja Pavillon de l'Horloge (Sully) keskellä, pohjois- ja eteläsiipien pihajulkisivut sivuilla, pihan hiekkapinta ja kivireunat."
+  },
+  {
+   "id": "L3",
+   "nimi": "L3 pyramidin kiveys",
+   "tyyppi": "lähikulma",
+   "kamera_enu_m": [
+    -94.66,
+    8.91,
+    9
+   ],
+   "kamera_lat": 48.8610801,
+   "kamera_lon": 2.3346075,
+   "katse_deg": 82.95,
+   "kameran_korkeus_m": 9,
+   "kallistus_deg": -9.68,
+   "vfov_deg": 46,
+   "kuvasuhde": "3:2",
+   "palatsin_kehys_uv": [
+    -92,
+    -24
+   ],
+   "kuvaus": "Napoleonin pihan länsipäästä matalalta: graniittilaattakiveys saumoineen ja kulumineen, Ludvig XIV:n ratsastajapatsas, pyramidin paikka (ei pyramidia: tasainen kiveys), Denon ja Richelieu taustalla."
+  }
+ ],
+ "selite_lahikulmat": "Lähikulmat L1–L3 (omistaja 16.10. 12.17): julkisivujen ja kiveyksen tavoite; palatsin_kehys_uv = (u akselia 110 deg, v pohjoiseen päin)."
+}
