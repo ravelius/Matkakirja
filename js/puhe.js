@@ -56,6 +56,18 @@ export const PUHE_PERSOONAT = ['kertoja', 'merkinnat', 'pollo'];
 export const PUHE_ASETUS_AVAIN = 'matkakirja-puhe-persoonat';
 export const PUHE_KOODI_AVAIN = 'matkakirja-puhe-kehittaja';
 
+/*
+ * EI LUKIJAN ÄÄNI- EIKÄ NOPEUSVALINTOJA (omistaja 16.10.2026 23.58): kaikki kuulevat oletusäänen oletusnopeudella. Vanhat
+ * tallennetut valinnat (persoonien ääni ja ohje, nopeus) poistetaan kerran moduulin latautuessa; kehittäjäsäätimen istunnon
+ * aikaiset kokeilut eivät säily seuraavaan käynnistykseen. Natiivi: Puhe.Saadot.
+ */
+(function ohitaVanhatLukijavalinnat() {
+  try {
+    window.localStorage?.removeItem('matkakirja-puhe-persoonat');
+    window.localStorage?.removeItem('matkakirja-puhe-nopeus');
+  } catch { /* yksityistila */ }
+}());
+
 /** Lukee koko laitekohtaisen persoonasäätötaulun (jaettu apuri —
  * sama luku työhuoneen välilehdellä ja pelin kehittäjäsäätimellä). */
 export function luePuheAsetukset() {
@@ -547,12 +559,11 @@ export const NOPEUS_OLETUS = 1.15;
 export const NOPEUS_MIN = 0.6;
 export const NOPEUS_MAX = 1.6;
 
-/** Lukijaäänen nopeus (1 = normaali). */
+/**
+ * Lukijaäänen nopeus: AINA oletus (omistaja 16.10.2026 23.58: "poista koko pelistä valinnat lukijan äänestä ja nopeudesta";
+ * tallennettu vanha nopeus ohitetaan ja poistetaan, ks. ohitaVanhatLukijavalinnat).
+ */
 export function puheenNopeus() {
-  try {
-    const arvo = Number.parseFloat(window.localStorage?.getItem(NOPEUS_AVAIN));
-    if (Number.isFinite(arvo)) return Math.min(NOPEUS_MAX, Math.max(NOPEUS_MIN, arvo));
-  } catch { /* yksityistila estää localStoragen */ }
   return NOPEUS_OLETUS;
 }
 

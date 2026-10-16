@@ -596,9 +596,11 @@ test('nostokortin kaiutin: keskeytys, jatko samasta kohdasta, ratas ja VU', () =
   // Vilkunta vain läpinäkyvyydellä, liike vähennettynä ei animaatiota.
   assert.match(tyyli, /button\.lukija-nappi\.keskeytetty \{ animation: lukija-keskeytetty/);
   assert.match(tyyli, /@keyframes lukija-keskeytetty \{\s*0%, 100% \{ opacity: 1; \}\s*50% \{ opacity: 0\.4; \}/);
-  // Valikko (entinen ratas): nopeus ja ääni; äänivalinta ei enää kehittäjävalikossa.
-  assert.match(lukija, /asetaPuheenNopeus\(liuku\.value\)/);
-  assert.match(lukija, /asetaStriimiaani\(valinta\.value \|\| null\)/);
+  // Valikko: EI nopeutta eikä ääntä (omistaja 16.10.2026 23.58); tallennetut valinnat ohitetaan (js/puhe.js).
+  assert.doesNotMatch(lukija, /asetaPuheenNopeus|asetaStriimiaani|Lukijan ääni|Luennan nopeus/);
+  assert.match(puhe, /export function puheenNopeus\(\) \{\s*return NOPEUS_OLETUS;/);
+  assert.match(puhe, /removeItem\('matkakirja-puhe-persoonat'\)/);
+  assert.doesNotMatch(html, /id="puhe-nopeus"/);
   assert.doesNotMatch(html, /id="kehittaja-striimiaani"/);
   // VU kaiuttimessa itsessään kuten isoisän luennassa: kolme kaarta, oma mittari, lukijaäänen analysaattori.
   assert.equal((lukija.match(/class="kaiutin-kaari" data-kaari="\d"/g) ?? []).length, 3);
@@ -608,13 +610,11 @@ test('nostokortin kaiutin: keskeytys, jatko samasta kohdasta, ratas ja VU', () =
   assert.match(puhe, /kompressori\.connect\(vuAnalysaattori\);\s*vuAnalysaattori\.connect\(piiri\.destination\);/);
 });
 
-test('lukijan äänillä on pelinimet: jokainen moottorin ääni nimetty, tunnus ei näy valikossa', async () => {
+test('lukijan äänillä on pelinimet: jokainen moottorin ääni nimetty', async () => {
   const { AANTEN_PELINIMET, STRIIMIAANET_XAI, STRIIMIAANI_OLETUS, aanenPelinimi } = await import('../js/puhe.js');
   assert.deepEqual(Object.keys(AANTEN_PELINIMET).sort(), [...STRIIMIAANET_XAI].sort(), 'kaikki 28 ääntä nimetty');
   assert.equal(new Set(Object.values(AANTEN_PELINIMET)).size, STRIIMIAANET_XAI.length, 'nimet ovat yksilöllisiä');
   assert.equal(AANTEN_PELINIMET[STRIIMIAANI_OLETUS], 'Aino');
   assert.equal(aanenPelinimi('tuntematon'), 'Aino');
-  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
-  assert.match(lukija, /vaihtoehto\(`\$\{AANTEN_PELINIMET\[STRIIMIAANI_OLETUS\]\} \(oletus\)`, ''\)/);
-  assert.match(lukija, /valinta\.append\(vaihtoehto\(nimi, aani\)\)/);
+  // Äänivalikko poistettu pelistä (omistaja 16.10.2026 23.58): pelinimet näkyvät vain kaiuttimen nimessä.
 });
