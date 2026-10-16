@@ -603,7 +603,16 @@
     "maksimi": 250,
     "sisaan": "cubic-bezier(0.22, 0.9, 0.24, 1)",
     "pehmea": "cubic-bezier(0.45, 0, 0.2, 1)",
-    "ulos": "cubic-bezier(0.4, 0, 1, 1)"
+    "ulos": "cubic-bezier(0.4, 0, 1, 1)",
+    "liikkeet": {
+      "_selite": "LIIKEPOHJA (omistaja 16.10.2026 klo 20.54 PT:n kautta, 'kaikki yhtä aikaa': pehmeä liike, ääni ja valo yhteisiksi pohjiksi kuten lasikortit). Nimetyt liikkeet: kesto ms ja käyrä (yllä oleva nimetty cubic-bezier). Kortin avaus ja sulku ovat UI-siirtymiä (≤ maksimi); kävely, liuku, suurennus ja katseen käännös ovat näkymän omaa liikettä (ei maksimia). Kävelyn kesto on vähimmäiskesto, matkasta riippuva osa liikepohjassa (Pelikoodari, museo ensimmäinen käyttäjä); katseen käännös = 180°.",
+      "kavely": { "kesto": 2500, "kayra": "pehmea" },
+      "liuku": { "kesto": 1200, "kayra": "pehmea" },
+      "suurennus": { "kesto": 450, "kayra": "pehmea" },
+      "katseen-kaanto": { "kesto": 1000, "kayra": "pehmea" },
+      "kortti-avaus": { "kesto": 220, "kayra": "sisaan", "ui": true },
+      "kortti-sulku": { "kesto": 200, "kayra": "ulos", "ui": true }
+    }
   },
   "pohjat": {
     "_selite": "Hyväksytyt pohjat (omistaja 1.10.2026). Uusi pinta valitsee näistä; merge-pyynnössä rivi 'Pohja: …'.",

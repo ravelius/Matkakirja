@@ -39,8 +39,10 @@ export function muuttujat(tk) {
   m.push(['radius', px(tk.mitat.kulma.kortti), 'w']);
   for (const [k, v] of julkiset(tk.liike)) {
     if (typeof v === 'string') m.push([`liike-${k}`, v, 'w']);
-    else m.push([`tk-kesto-${k}`, `${v}ms`, 'wn']);
+    else if (typeof v === 'number') m.push([`tk-kesto-${k}`, `${v}ms`, 'wn']);
   }
+  // LIIKEPOHJA (omistaja 16.10.2026): nimettyjen liikkeiden kestot; käyrä webissä --liike-<käyrä>, natiivissa Tyylikirja.Kayrat (USS ei tue cubic-bezieriä).
+  for (const [k, v] of julkiset(tk.liike.liikkeet || {})) m.push([`tk-liike-${k}-kesto`, `${v.kesto}ms`, 'wn']);
   for (const [k, v] of julkiset(tk.fontit.web)) m.push([k, v, 'w']);
   for (const [teema, arvot] of julkiset(tk.teemat))
     for (const [k, v] of julkiset(arvot)) m.push([`tk-${teema}-${k}`, v, 'wn']);
@@ -98,6 +100,11 @@ function vari(v) {
   throw new Error('tuntematon väri ' + v);
 }
 const c32 = (v) => `new Color32(${vari(v).join(', ')})`;
+function bezier(v) {
+  const m = /^cubic-bezier\(([^)]*)\)$/.exec(v);
+  if (!m) throw new Error('tuntematon käyrä ' + v);
+  return `new Vector4(${m[1].split(',').map((x) => `${+x}f`).join(', ')})`;
+}
 
 export function csTiedosto(tk, tunniste) {
   const r = [];
@@ -126,6 +133,10 @@ export function csTiedosto(tk, tunniste) {
   for (const [nimi, arvot] of julkiset(tk.mitat))
     ryhma(cs(nimi), julkiset(arvot).map(([k, v]) => typeof v === 'number' ? `public const float ${cs(k)} = ${v}f;` : `public const string ${cs(k)} = "${v}";`));
   ryhma('Kesto', julkiset(tk.liike).filter(([, v]) => typeof v === 'number').map(([k, v]) => `public const int ${cs(k)} = ${v};`));
+  // LIIKEPOHJA: nimetyt käyrät (x1, y1, x2, y2) ja liikkeet (kesto ms, käyrä); arvioija liikepohjassa.
+  ryhma('Kayrat', julkiset(tk.liike).filter(([, v]) => typeof v === 'string').map(([k, v]) => `public static readonly Vector4 ${cs(k)} = ${bezier(v)};`));
+  if (tk.liike.liikkeet) ryhma('Liikkeet', julkiset(tk.liike.liikkeet).map(([k, v]) =>
+    `public static readonly (int Kesto, Vector4 Kayra) ${cs(k)} = (${v.kesto}, Kayrat.${cs(v.kayra)});`));
   ryhma('Fontit', julkiset(tk.fontit.natiivi).map(([k, l]) =>
     `public static readonly (string Perhe, string Tyyli)[] ${k} = { ${l.map(([p, t]) => `("${p}", "${t}")`).join(', ')} };`));
   r.push('        public static readonly string[] Pohjat = { ' + julkiset(tk.pohjat).map(([k]) => `"${k}"`).join(', ') + ' };');

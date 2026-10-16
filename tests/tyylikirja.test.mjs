@@ -36,3 +36,14 @@ test('liike ≤ maksimi, osuma-ala ≥ 44 ja typografia nousee', () => {
   assert.deepEqual([...portaat].sort((a, b) => a - b), portaat);
   assert.ok(tk.mitat.peitto.max <= 45);
 });
+
+test('liikepohja: nimetyillä liikkeillä kesto ja olemassa oleva käyrä, UI-siirtymät ≤ maksimi', () => {
+  const { liikkeet, maksimi } = tk.liike;
+  for (const k of ['kavely', 'liuku', 'suurennus', 'katseen-kaanto', 'kortti-avaus', 'kortti-sulku']) assert.ok(liikkeet[k], `liike.liikkeet.${k} puuttuu`);
+  for (const [k, v] of Object.entries(liikkeet)) {
+    if (k.startsWith('_')) continue;
+    assert.ok(Number.isInteger(v.kesto) && v.kesto > 0, `${k}.kesto`);
+    assert.match(tk.liike[v.kayra] || '', /^cubic-bezier\(/, `${k}.kayra ${v.kayra}`);
+    if (v.ui) assert.ok(v.kesto <= maksimi, `${k} ${v.kesto} > ${maksimi}`);
+  }
+});
