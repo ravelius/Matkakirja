@@ -814,6 +814,10 @@ export const RAAMATTU = {
           + 'hiljaisia paikkauksia toisen tiedostoihin; 3) yhteiselle ominaisuudelle yksi julkaisuvastaava - Pulun kokonaisuudessa Fable, Codex tekee integraatio-QA:n; tiedostojen muutosomistajuus '
           + 'ei siirry; 4) kevyet agentit rajattuihin tehtäviin, pääsessio tarkistaa; 5) git-postilaatikko on toimituskanava, kortti nykytila, ei jatkuvaa pollausta; 6) omistajalle vain valmis '
           + 'vaihe, olennainen ongelma tai tuotevalinta; erotetaan aina testattu / toimitettu / kuitattu / mainissa / julkaistu / oikeassa pelissä tarkistettu. Työnkulku docs/roolitus.md:ssä.',
+        'CODEXIN TAHTI: EI PITKIÄ TAUKOJA (omistaja 16.10.2026 klo 18.05: "Pitä huolehtia, että kodeksille ei tule liian pitkiä taukoja ja että se työskentely etenee. '
+          + 'Haluan päästä kokeilemaan Pekingiä kipillä heti, kun se on valmis."): Codexilla on aina 2–3 hyväksyttyä seuraavaa tehtävää jonossa; jokainen Codex-toimitus arvioidaan alle 30 minuutissa '
+          + 'vapaalla roolilla (ei odoteta kiireistä roolia); Postivahti tarkistaa kierroksellaan ledger.jsonin ja postilaatikon ja hälyttää PT:lle, jos toimitus on odottanut yli 30 min tai Codexilla '
+          + 'ei ole tehtävää. Jokainen arvioitu Peking-paketti viedään ämpäriin ilman junaa omistajan piilotettuun kippiin ja siitä rivi KK:lle. Loki PAATOKSET 16.10.2026 klo 18.05.',
         'TYONJAKO FABLE / CODEX SELKEYTETTY (omistaja 15.9.2026 klo 19.10 UTC; kortin tarkennukset "Kaanon Fablella, tekstit Codexilla" ja "Ei, Opus-kuvaputki jatkaa"): 1) CODEX: pelin TEKSTIT '
           + 'kaanonin mukaan (kaupunki- ja pulutekstit, luennat, selitteet, iskulauseet), AANIGENEROINTI kokonaan (tyonkulut, aaniviat, ElevenLabs-ajot, R2-vienti, kuitit), ANIMAATIOT (pulu, '
           + 'minipulu, eleet, hahmot) ja GENEROIDUT KUVAT (havainnekuvat, hahmokuvat); 2) FABLE: TARINAKAANON (docs/tarina.md, Isoisan raamattu, Fogg-suku, Grimshaw; hyvaksyy tekstien ristiriidat '

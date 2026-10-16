@@ -292,3 +292,7 @@ Omistaja klo 00.33 (juna 196), sanatarkasti: "Vielä nämä mukaan : lehden skro
 ## PAATOKSET 16.10.2026 klo 00.40 (KK välitti): Pulun merivastaukset valmiit + äänitetyt (16.10.2026 klo 00.40)
 
 Omistaja (kortti KK:ssa) klo 00.40: "Valmiit + äänitetyt (Suositus)". Generointilupa juuri tälle määrälle: 81 vastausta (#4686), noin 30 600 merkkiä Pulun äänellä kuten ISS-vastaukset, yksi otto kustakin, junaan 196. Määrä ylittää pysyvän kertojaluvan (noin 10 000 mrk), joten lupa on tämä kortti; lisäykset (vastaukset 82–103, 11 uutta merinostoa) vaativat uuden luvan. Äänittäjä äänittää, Siirtoseppä kytkee natiivin merinostoihin.
+
+## PAATOKSET 16.10.2026 klo 18.05: CODEXIN TAHTI (Peking) (16.10.2026 klo 18.05)
+
+Omistaja 18.05 (KK:n välittämä): "Pitä huolehtia, että kodeksille ei tule liian pitkiä taukoja ja että se työskentely etenee. Haluan päästä kokeilemaan Pekingiä kipillä heti, kun se on valmis." Pysyvä työtapa: Codexilla on aina 2–3 hyväksyttyä seuraavaa tehtävää jonossa (Peking nyt #361 pintojen toisto ja #362 sävyvaihtelu rinnakkain #360:n arvion kanssa); jokainen Codex-toimitus arvioidaan alle 30 minuutissa vapaalla roolilla (ei odoteta kiireistä roolia); Postivahti tarkistaa kierroksellaan ledger.jsonin ja postilaatikon ja hälyttää PT:lle, jos toimitus on odottanut yli 30 min tai Codexilla ei ole tehtävää. Jokainen arvioitu Peking-paketti viedään ämpäriin ilman junaa omistajan piilotettuun kippiin, ja siitä rivi KK:lle.
