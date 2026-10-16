@@ -33,9 +33,9 @@ Haara natiivi-ui/museo-ikortti-198 (wt/proto-natiivi-ui-museo-ikortti-198). Omis
 - MuseoKierros.UiTila (leveyden LaajaTavoite = max(leveys, UiTila), max 2,5): jos kortit eivät mahdu, kuvakulma levenee pehmeästi.
 - Teos.Lyhyt (teokset.json lyhyt_fi), muotokuva Resources/Museo/taiteilijat.json { tekijä: { kuva: Resources-polku } }.
 TEHTÄVÄÄ: (a) omistaja 21.54: lisää MUOTOKUVARIVI uutena pohjana tyylikirjaan (webin tyylikirja.json pohjat; pyöreä kuva kuten
-mk-linssirivi__kuva, tekijä + elinvuodet, tuntematon ilman kuvaa) – web-PR. (b) Sisältökirjurin data (~22.3x–22.4x):
-docs/kohtaukset/museoteokset/{taiteilijat,lyhyt-ranska,lyhyt-alankomaat}.json + kuvat proto-3d/_valmiit/museo-taiteilijat-20261016/
-<slug>.jpg (384 px) → tuo proto-gitiin: kuvat Resources/Museo/taiteilijat/, taiteilijat.json kuva-polut, lyhyt_fi teokset.json:iin.
+mk-linssirivi__kuva, tekijä + elinvuodet, tuntematon ilman kuvaa) – web-PR. (b) Sisältökirjurin data (22.1x viimeisin sopimus, PR-numero
+tulossa ~22.3x): webin repoon docs/kohtaukset/museoteokset/: taiteilijat.json (tekijä-avain → tiedosto tai null) + kuvat/<slug>.jpg
+256×256 + teokset {"tunnus","faktat":[…]} ≤ 160 merkkiä, alankomaat (kohtia-teokset) ensin, sitten ranska → tuo proto-gitiin: kuvat Resources/Museo/taiteilijat/, taiteilijat.json kuva-polut, lyhyt_fi teokset.json:iin.
 (c) Käännös (vasta levy ≥ 25 Gt): museo-ikortti-ketju.zsh <sha> ajaa sk-museo-ikortti-198 (Laivamalli, Yövartio, SK-A-2099,
 mauritshuis-605: nimi / i-kortti / kohdan teksti / kiinni) JA sk-museo-leveys-198 iPhone + iPad. (d) Kuvapari iPhone + iPad
 (i auki + ympyrän teksti) PT:lle → KK ennen kytkentää. Leveät teokset: kuvat PT:lle → NS juna 198 (rebasetaan juna-198 4b6ef2395).
