@@ -501,7 +501,14 @@ export const RAAMATTU = {
           + 'kuuluvaa repliikkiä ei näytetä puhekuplana eikä tekstityksenä; teksti näytetään vain, jos sitä ei puhuta; lukunäkymät ja Pulun chat säilyvät. KOHTAUKSET YHTENÄ OTTONA (omistaja '
           + '5.10.2026, linnoissa ja muissa esittelyissä): henkilöiden keskustelu generoidaan kohtaus kerrallaan YHTENÄ monipuhujaottona (ElevenLabs Text to Dialogue); kertoja (oma tiedosto, William '
           + 'kuten ajattelijoissa) puhuu vain ennen keskustelua tai sen jälkeen, ei keskellä; Pulu ei puhu esittelyssä, vaan vain pelaajan napautuksesta lyhyesti siitä kohdasta, jota pelaaja '
-          + 'osoitti. Loki: docs/raamattu-loki/paatokset-2026-09.md #KARSINTA 0.11 UI-POHJAT JA KOHTAUKSET 14.10.2026 (14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: YKSI YHTEINEN LASIPOHJA KORTEILLE JA '
+          + 'osoitti. YHTEISET POHJAT: LIIKE, ÄÄNI JA VALO (omistaja 16.10.2026 klo 20.54, kortti "Kyllä, kaikki yhtä aikaa"): pehmeä liike, äänet ja valaistus ovat '
+          + 'lasipohjan tapaan yhteisiä pohjia, joita jokainen uusi linssi ja peli käyttää alusta asti; parannus tehdään pohjaan, ja se leviää kaikkiin valmiisiin linsseihin ja peleihin. '
+          + 'LIIKEPOHJA: nimetyt liikkeet (kävely, liuku, suurennus, katseen käännös, kortin avaus ja sulku) alkavat ja pysähtyvät pehmeästi (ease in/out), kesto ja käyrä tyylikirjassa Keston '
+          + 'vieressä; museon kävely ja auto zoom ovat ensimmäinen käyttäjä. ÄÄNIPOHJA: yhteinen mikseri (puhe, musiikki, tehosteet, maisema), tasot, pehmeät häivytykset, musiikin vaimennus '
+          + 'kertojan alle ja askeleet alustan mukaan; jaetun mikserin kertoimet (worker /mikseri/tasot) säilyvät. VALO- JA KUVAPOHJA: yhteiset valaistus-, varjo-, sävykäsittely- ja '
+          + 'materiaaliprofiilit. Omaa liikettä, ääntä tai valoa ei tehdä yksittäiseen linssiin (ei väliaikaisia paikallisia korjauksia); automaattinen tarkistus listaa pohjan ohittavat, '
+          + 'ja vanhat siirtyvät pohjiin vuorollaan. Omistajat ja tila: docs/moduulit/yhteiset-pohjat.md. '
+          + 'Loki: docs/raamattu-loki/paatokset-2026-10.md #OMISTAJAN PÄÄTÖS: YHTEISET POHJAT LIIKKEELLE, ÄÄNELLE JA VALOLLE (16.10.2026 klo 20.56); docs/raamattu-loki/paatokset-2026-09.md #KARSINTA 0.11 UI-POHJAT JA KOHTAUKSET 14.10.2026 (14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: YKSI YHTEINEN LASIPOHJA KORTEILLE JA '
           + 'PANEELEILLE (14.10.2026 klo 23.34), #KARSINTA 7.1 ANIMAATIOPOIKKEUKSET 14.10.2026 '
           + '(14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: ANIMAATIOT ALLE 250 MS (14.10.2026 klo 22.55).',
         'TYÖSKENTELYTAVAT AINA RAAMATTUUN (omistaja 14.10.2026 klo 20.3x, SITOVA: "tällaiset työskentelytavat on todella tärkeä kirjata, koska muuten seuraava tili ei osaa käyttää tätä '
@@ -2360,6 +2367,8 @@ export const RAAMATTU = {
         'docs/moduulit/horatio-livia-tuotanto.md — Horatio ja Livia: hahmojen tuotantoketju, kaupunkiparin työnjako, pituus- ja kuvapäätökset sekä erien tarkistuslistat (toteutusohje; kanoniset '
           + 'linjaukset pysyvät Raamatussa).',
         'docs/moduulit/huipennus-teksti.md — huipennuksen kaanoniteksti (kaikki unohdetut aarteet löytyivät): otsikko, Foggin merkintä, napit ja isoisän luentalause; sitova natiivissa ja webissä.',
+        'docs/moduulit/yhteiset-pohjat.md — yhteiset liike-, ääni- ja valopohjat: mitä kukin sisältää, omistava rooli, ensimmäinen käyttäjä, tarkistus ja siirtojärjestys.',
+        'docs/moduulit/aanipohja.md — natiivin äänipohja (AaniPohja + PohjaLahde): luonti, taso mikserin kautta, häivytykset, väistö kertojan alla, askeleet alustan mukaan, vahti ja siirtojärjestys.',
         'docs/moduulit/aanet.md — siirtymämusiikki ja äänet: raitojen tuotanto-ohje (kesto, looppisauma, -33 LUFS, vienti).',
         'docs/moduulit/viitekuvat.md — viitekuvallinen herogenerointi: kohde tunnistetaan sen omasta Commons-kategoriasta, generointi ankkuroidaan 2–4 vapaasti lisensoituun nykyvalokuvaan, ja '
           + 'generointiportti estää kuvan syntymisen jos viitteitä on alle kaksi tai tunnistus jää epävarmaksi.',
