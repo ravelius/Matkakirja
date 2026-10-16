@@ -1,0 +1,91 @@
+[
+  {
+    "id": "bern",
+    "esittely": "Kartan alue on Bernin vanhakaupunki, joka sijaitsee Aare-joen mutkan muodostamalla niemekkeellä; joki ympäröi sitä kolmelta sivulta. Berthold V Zähringeniläisen kerrotaan perustaneen kaupungin 1191, ja vanhakaupunki on ollut Unescon maailmanperintökohde vuodesta 1983. Zytglogge-torni rakennettiin noin 1218–1220.\n\nBerner Münsterin rakentaminen alkoi 1421, ja sen torni valmistui vasta 1893. Liittopalatsin parlamenttirakennus rakennettiin vuosina 1894–1902. Einsteinhausissa Albert Einstein asui 1903–1905. Aaren rannalla Bärengrabenin vieressä on BärenPark, joka avattiin 2009. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 633,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Bern",
+        "title": "Wikipedia: Bern",
+        "tukee": "perustettu 1191 Berthold V:n toimesta (1300-luvun kronikka); vanhakaupunki maailmanperintökohde 1983; Einstein Kramgasse 49 1903-1905"
+      },
+      {
+        "url": "https://www.swissinfo.ch/eng/culture/the-medieval-pearl-on-the-aare/7814422",
+        "title": "swissinfo: The medieval pearl on the Aare",
+        "tukee": "perustettu 1191 Berthold V; Unesco-kohde vuodesta 1983; niemeke, joen mutka, joki kolmella sivulla; Zytglogge alun perin 1218-1220"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Old_City_(Bern)",
+        "title": "Wikipedia: Old City (Bern)",
+        "tukee": "Aaren rajaama kolmelta sivulta; Unesco 1983"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Zytglogge",
+        "title": "Wikipedia: Zytglogge",
+        "tukee": "torni rakennettu noin 1218-1220"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Bern_Minster",
+        "title": "Wikipedia: Bern Minster",
+        "tukee": "rakentaminen alkoi 11.3.1421; kellotorni valmistui 1893"
+      },
+      {
+        "url": "https://www.swissinfo.ch/eng/history/happy-600th-to-bern-s-cathedral/46410342",
+        "title": "swissinfo: Happy 600th to Bern's cathedral",
+        "tukee": "peruskivi 11.3.1421; kuvateksti: valmistui vasta 1893"
+      },
+      {
+        "url": "https://www.swissinfo.ch/eng/bern-s-minster-through-the-years/7466220",
+        "title": "swissinfo: Bern's Minster through the years",
+        "tukee": "peruskivi 1421; rakennus valmistui 1893"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Federal_Palace_of_Switzerland",
+        "title": "Wikipedia: Federal Palace of Switzerland",
+        "tukee": "parlamenttirakennus 1894-1902, arkkitehti Hans Wilhelm Auer"
+      },
+      {
+        "url": "https://hls-dhs-dss.ch/articles/011007",
+        "title": "Historisches Lexikon der Schweiz (HLS)",
+        "tukee": "uusi parlamenttirakennus 1894-1902, arkkitehti Hans Auer"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Einstein_House",
+        "title": "Wikipedia: Einstein House",
+        "tukee": "asunto Kramgasse 49: 1903-1905"
+      },
+      {
+        "url": "https://www.museums.ch/de/museumsbesuch/museen/museen/einstein-haus-2890.html",
+        "title": "museums.ch: Einstein-Haus",
+        "tukee": "'Einstein 1903 bis 1905 gemietet' Kramgasse 49"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/B%C3%A4renPark",
+        "title": "Wikipedia: BärenPark",
+        "tukee": "avattu 2009 Bärengrabenin ja Aaren rannan väliselle rinteelle"
+      },
+      {
+        "url": "https://www.museums.ch/de/museumsbesuch/museen/museen/baerenpark-bern-4445.html",
+        "title": "museums.ch: BärenPark Bern",
+        "tukee": "vihitty 22.10.2009, yleisölle 25.10.2009; Aaren rannalla; vanha Bärengraben yhä käytössä"
+      }
+    ],
+    "pudotetut": [
+      "Karhulegenda ja Bernin nimen selitys: Wikipedia pitää kelttiteoriaa/Veronaa todennäköisempänä, selitys kiistanalainen; pudotettu",
+      "Vanha teksti 'tarvitsi vain yhden puolustusmuurin': ei löytynyt kahdesta lähteestä, pudotettu",
+      "Zytglogge porttitornina ja tähtitieteellinen kello 1530: porttitorni vain Wikipedia, kellon vuosi vaihtelee (1405/1467-83/1527-30), pudotettu",
+      "Liittopalatsin koko rakentamisaika (1852/1857-1902): Wikipedian sivut ristiriitaisia (1857 vs 1852), itäsiipi 1884 vs 1888 -> käytetty vain parlamenttirakennus 1894-1902",
+      "Münsterin tornin korkeus 100,6 m ja 'Sveitsin korkein katedraali': 100,6 (Wikipedia) vs 101 (swissinfo) -> jätetty pois tilan vuoksi",
+      "Bärengrabenin 1857-vuosi: vain Wikipedia, ei käytetty",
+      "Einsteinin Bern-vuodet 1902-1909 ja 'kahdeksan muuta osoitetta': swissinfo 'yhdeksän osoitetta, seitsemän vuotta', ei käytetty"
+    ],
+    "ristiriidat": [
+      "Bernin perustaminen: 1191 (Wikipedia, swissinfo) vs UNESCO-haku 'vain 1100-luku'; Wikipedia: perustamisvuosi ja ensimmäisen kaupungin laajuus kiistanalaisia (kronikka 1309) -> muotoiltu 'kerrotaan perustaneen 1191'",
+      "Münsterin valmistuminen: swissinfo 'rakennustyö kesti 1575 asti' vs kuvateksti 'valmistui 1893' ja Wikipedia 'torni valmistui 1893' -> käytetty 'torni valmistui vasta 1893'",
+      "Liittopalatsi: Wikipedia Bern 'rakennettu 1857-1902' vs Wikipedia Federal Palace 1852-1902 -> käytetty vain parlamenttirakennus 1894-1902 (Wikipedia + HLS)",
+      "Einsteinin asunnon kerros 2. vs 3. (Globe and Mail) -> ei mainittu; vuodet 1903-1905 yhtäpitävät"
+    ],
+    "muutos_sk": "Vanhasta tekstistä säilytetty niemeke ja Aaren kolme sivua, perustaminen 1191 (muotoiltu 'kerrotaan'), Unesco 1983, Zytglogge noin 1218-1220, Münster 1421/1893, Einstein 1903-1905 ja BärenPark 2009. Pois: 'tarvitsi vain yhden muurin', Berthold 'todennäköisesti'. Lisätty parlamenttirakennus 1894-1902 (korvaa epämääräisen Liittopalatsi-maininnan) ja BärenPark Bärengrabenin vieressä Aaren rannalla."
+  }
+]
