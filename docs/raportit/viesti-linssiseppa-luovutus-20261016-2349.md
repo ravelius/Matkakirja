@@ -39,6 +39,9 @@ Kuvat ja videot _valmiit/<aihe>-20261016/ → PT (3 riviä) → PT:n kuittauksel
 se osa pois (git revert), ei väliaikaisia poikkeamia.
 
 ## 2. SEURAAVA JUNA
+- LOUVREN PARITEETTIERÄ, ASKELEET (PT 01.1x, EI junaan 197): Äänittäjän sora- ja kivi_hiekka-askeleet ämpärissä aanet/taidemuseo-askeleet-v3/,
+  kytkentä 3 riviä MuseoAskeleet.cs:ään ohjeella proto-3d/_tyo/museo-askeleet-lattiat-20261016/KYTKENTA-v3.md. Tee vasta, kun ääniportti on
+  ok ja vapaalento-197 on ajettu simulla; oma haara juna-197:n päälle.
 - LOUVREN AVAUS PARITEETIN JÄLKEEN: kun PT ilmoittaa SK:n (kohdat.json + lähestyminen) ja Äänittäjän (askeläänet) valmiiksi ja Ranskan
   museon Alankomaiden tasolle, oletus PariisiMuseoAuki = true (KaupunkiPallot.cs) + houkutin samaan erään, kuvat PT:lle, sitten NS.
 - Pariisin museon houkutin PALLON VIEREEN (avauksen yhteydessä, ei ennen): proto linssiseppa/pariisi-houkutin 7266f0ae1 (8aed785c3:n päällä; worktree wt/proto-linssiseppa-houkutin): vapaa piste
