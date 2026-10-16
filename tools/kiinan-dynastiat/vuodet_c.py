@@ -29,6 +29,9 @@ _MONGOLIA_1760 = [  # Ulko-Mongolia (Khalkha), Khovd ja Tannu Uriankhai
     (108.0, 42.4), (105.0, 41.6), (103.0, 42.1), (100.0, 42.6), (96.4, 42.7),
     (95.3, 44.2), (93.5, 44.9), (91.0, 45.3), (90.7, 46.5), (88.9, 48.0)]
 # Venäjän raja Aigunin (1858) ja Pekingin (1860) sopimusten jälkeen: Argun, Amur, Ussuri, Khanka, Tumen.
+_MONGOLIA_1912 = _MONGOLIA_1760[:8] + [  # Hulunbuir (barga) karkotti kiinalaiset 1912 ja liittyi Bogd-kaaniin
+    (117.8, 49.8), (119.3, 51.2), (120.2, 52.5), (121.5, 53.3), (122.0, 52.0), (121.5, 50.5), (121.0, 48.5),
+    (120.5, 47.3)] + _MONGOLIA_1760[11:]
 _AMUR_USSURI = [
     (130.5, 42.4), (130.8, 42.7), (131.2, 43.2), (131.0, 44.1), (131.4, 44.8),  # Tumen ylös, Suifen
     (132.0, 45.0), (132.9, 45.3), (133.6, 46.0),  # Khankan poikki ja Song'acha Ussurille (Hutou)
@@ -98,18 +101,19 @@ VUODET = {
             ]),
         ],
     },
-    1644: {  # tilanne kesäkuussa 1644: Li Zicheng pakeni Pekingistä 4.6., Hongguang kruunattiin Nanjingissa 19.6.
+    1644: {  # tilanne syyskuussa 1644: Qing Pekingissä 6.6. ja Shandongissa, Hongguang Nanjingissa 19.6., Zhang Chengdussa 9.9.
         'otsikko': '1644', 'paakaupungit': ['Mukden', 'Peking'],
         'alueet': [
             ('Qing', 'qing', 'ulkoinen', [
                 (141.3, 53.4), (137.5, 54.0), (133.0, 53.2), (127.5, 53.6), (121.5, 53.3),  # Amur: daurit ja solonit (1639–40)
-                (119.3, 51.2), (117.8, 49.8), (116.7, 49.85), (115.6, 48.2), (117.8, 47.9), (119.7, 47.2),  # Argun, Hulunbuir
+                (120.5, 51.5), (121.5, 50.0), (121.0, 48.5), (120.5, 47.3),  # Hinggan: Hulunbuir ei vahvistettu Qingille 1644
                 (119.9, 46.7), (118.0, 46.7), (116.6, 46.3), (115.6, 45.4), (113.6, 44.75), (111.9, 43.7),  # Gobi: Khalkha ulkona
                 (110.4, 42.8), (108.0, 42.3), (107.0, 41.4), (106.5, 40.3), (106.2, 39.0),  # Ordos (alistui 1636), Keltainen joki
                 (107.6, 37.6), (109.7, 38.3), (110.6, 39.0), (111.5, 39.5),  # Mingin muuri: Dingbian, Yulin, Shenmu
                 (112.5, 40.2), (113.6, 40.7), (114.3, 40.5),  # Datongin muuri; Shanxi vielä Shunilla
-                (114.2, 39.3), (114.6, 38.3), (116.0, 38.3), (117.5, 38.4), (117.8, 38.6),  # Zhili: Taihang, Baoding, Hejian
-                (118.5, 38.8), (120.0, 39.0), (121.0, 38.4), (122.5, 39.0), (124.3, 39.9),  # Bohai, Liaodong
+                (114.2, 39.3), (114.6, 38.3), (116.0, 38.3),  # Zhili: Taihang, Baoding
+                (116.0, 36.0), (115.5, 34.8), (116.5, 34.6), (117.5, 34.5), (118.5, 34.8), (119.4, 35.1),  # Shandong Qingille
+                (121.0, 35.0), (123.5, 36.5), (122.5, 39.0), (124.3, 39.9),  # meri, Liaodong
                 (126.5, 41.5), (128.3, 42.0), (130.5, 42.4),  # Joseonin raja (vasalli 1637)
                 (133.0, 42.0), (138.5, 46.0), (140.8, 50.0), (141.5, 52.5),  # Japaninmeri, Sahalin ulkona
             ]),
@@ -122,17 +126,18 @@ VUODET = {
                 (108.0, 32.2), (106.0, 32.6), (104.5, 33.0), (103.5, 34.0), (102.4, 34.4),  # Daba, Hanzhong
                 (101.2, 35.7), (100.6, 36.9), (100.0, 37.8), (98.5, 38.8),  # Xining, Qilian
             ]),
-            ('Zhang Xianzhong', 'daxi', 'kiina', [  # Itä-Sichuan: Kuizhou ja Wanxian (alkuvuosi), Chongqingin piiritys
-                (110.4, 31.1), (109.8, 32.0), (108.4, 32.4), (107.3, 30.9),  # Daba-vuoret Shunin rajaan (ei reikää Mingiin)
-                (106.4, 29.9), (106.8, 29.2),
+            ('Daxi (Zhang Xianzhong)', 'daxi', 'kiina', [  # Sichuanin allas: Chongqing 25.7., Chengdu 9.9.1644
+                (110.4, 31.1), (109.8, 32.3), (108.4, 32.8), (106.5, 33.2), (105.0, 33.4),  # Daba: Shun voittaa (ei reikää Mingiin)
+                (103.8, 33.6), (103.2, 31.5), (103.0, 30.5), (103.3, 29.5),  # Minin laakso, Chengdun tasanko
+                (104.5, 28.8), (105.8, 28.6), (106.8, 29.2),  # Luzhou, Jangtse
                 (107.8, 29.5), (108.8, 30.1), (110.0, 30.6),
             ]),
-            ('Ming (eteläinen)', 'ming', 'kiina', [
-                (116.0, 38.6), (118.5, 38.9), (121.0, 38.3), (123.0, 37.5), (123.0, 35.0),  # Shandong (Qing heinäkuussa)
+            ('Eteläinen Ming', 'ming', 'kiina', [
+                (117.5, 34.5), (118.5, 34.8), (119.4, 35.1), (121.0, 35.0), (123.0, 35.0),  # Xuzhou Mingille, Shandong Qingin
                 (123.0, 30.0), (121.5, 26.5), (118.8, 23.3)] + _ETELARANTA[::-1] + _BURMA_VIET[::-1] + [
                 (98.7, 27.6), (99.8, 27.7), (101.0, 28.1), (101.9, 29.6), (102.4, 31.2), (103.2, 33.0),  # Yunnan, Länsi-Sichuan
                 (103.8, 34.3), (106.0, 33.2), (110.0, 32.5), (113.0, 32.2), (115.0, 33.0),  # Shunin raja (Shun voittaa)
-                (115.3, 34.5), (115.5, 36.0), (115.5, 38.0),
+                (115.3, 34.5), (116.5, 34.6),
             ]),
         ],
     },
@@ -158,8 +163,8 @@ VUODET = {
     1912: {  # Puyi luopui 12.2.1912; Yuan Shikai siirsi hallituksen Nanjingista Pekingiin maaliskuussa
         'otsikko': '1912', 'paakaupungit': ['Peking'],
         'alueet': [
-            ('Tiibet', 'tasavalta', 'protektoraatti', _TIIBET_1760),  # karkotti Qingin joukot 1912, tasavalta vaati
-            ('Mongolia', 'tasavalta', 'protektoraatti', _MONGOLIA_1760),  # Bogd-kaani julisti itsenäisyyden 12/1911
+            ('Tiibet', 'tiibet', 'ulkoinen', _TIIBET_1760),  # de facto itsenäinen: kiinalaisjoukot ulos 12.8.1912; tasavalta vaati
+            ('Mongolia', 'mongol', 'ulkoinen', _MONGOLIA_1912),  # de facto itsenäinen: Bogd-kaani 29.12.1911; tasavalta vaati
             ('Kiinan tasavalta', 'tasavalta', 'kiina', _AMUR_USSURI + [
                 (116.0, 50.0), (110.0, 49.9), (106.4, 50.3), (102.0, 51.7),
                 (98.0, 52.5), (92.0, 51.5), (89.0, 50.5), (87.5, 49.2),

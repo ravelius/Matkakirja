@@ -78,7 +78,7 @@ def vuosi(vu):
         'viivat': [{'l': 1, 'p': p} for p in viivat(taydet)] + ([{'l': 2, 'p': p} for p in viivat(prot)] if not prot.is_empty else []),
         'nimet': [dict(zip(('teksti', 'lat', 'lon'), (n.upper(),) + nimen_paikka(g, v)), luokka=2 if t == 'protektoraatti' else 1, koko=KOKO[t])
                   for n, a, t, g in alueet],
-        'paakaupungit': [{'nimi': kn, 'lat': rajat.KAUPUNGIT[kn][1], 'lon': rajat.KAUPUNGIT[kn][0]} for kn in v['paakaupungit']],
+        'paakaupungit': [{'nimi': kn.split('|')[0], 'lat': rajat.KAUPUNGIT[kn][1], 'lon': rajat.KAUPUNGIT[kn][0]} for kn in v['paakaupungit']],
     }
 
 
@@ -92,7 +92,7 @@ if __name__ == '__main__':
                        'ja piirretty uudelleen. Rannikko Natural Earth 50 m (public domain).',
         'lahdekoodi': 'tools/kiinan-dynastiat/ (rajat.py, vuodet_*.py, vie.py)',
         'luokat': {'1': 'valtionraja', '2': 'protektoraatin tai vasallin raja'},
-        'tyypit': {'kiina': 'kiinalainen dynastia', 'ulkoinen': 'ulkoinen hallitsija', 'protektoraatti': 'protektoraatti tai vasalli (vaaleampi)'},
+        'tyypit': {'kiina': 'kiinalainen dynastia', 'ulkoinen': 'ulkoinen hallitsija', 'protektoraatti': 'löyhemmin hallittu alue: protektoraatti, vasalli tai yliherruus (vaaleampi)'},
         'vuodet': [vuosi(vu) for vu in vuodet],
     }
     json.dump(d, open(sys.argv[1], 'w'), ensure_ascii=False, separators=(',', ':'))

@@ -65,7 +65,7 @@ def piirra(vuosi, vertailu=False, ax=None):
                     fontweight='bold', color='#2b211a', family='serif')
     for kn in v['paakaupungit']:
         x, y = rajat.KAUPUNGIT[kn]
-        ax.plot(x * KX, y, marker='s', ms=6, mfc='#8b1a1a', mec='#2b211a'); ax.text(x * KX + 0.5, y + 0.4, kn, fontsize=8.5, family='serif')
+        ax.plot(x * KX, y, marker='s', ms=6, mfc='#8b1a1a', mec='#2b211a'); ax.text(x * KX + 0.5, y + 0.4, kn.split('|')[0], fontsize=8.5, family='serif')
     if vertailu:
         d = json.load(open(f'{K}/viite/cliopatria-{vuosi}.geojson'))
         for f in d['features']:
@@ -119,7 +119,7 @@ def vie(vu, al):
         f.append({'type': 'Feature', 'properties': {'nimi': 'kotiseutu', 'avain': a, 'tyyppi': 'kotiseutu', 'vari': rajat.VARIT[a]},
                   'geometry': mapping(ilman_reikia(k, 'kotiseutu ' + a))})
     json.dump({'type': 'FeatureCollection', 'vuosi': vu, 'otsikko': v['otsikko'], 'lisenssi': 'CC0-1.0',
-               'paakaupungit': [{'nimi': kn, 'lon': rajat.KAUPUNGIT[kn][0], 'lat': rajat.KAUPUNGIT[kn][1]} for kn in v['paakaupungit']],
+               'paakaupungit': [{'nimi': kn.split('|')[0], 'lon': rajat.KAUPUNGIT[kn][0], 'lat': rajat.KAUPUNGIT[kn][1]} for kn in v['paakaupungit']],
                'features': f}, open(f'{K}/tulos/rajat-{vu}.geojson', 'w'), ensure_ascii=False)
 
 if __name__ == '__main__':

@@ -8,7 +8,7 @@ Cliopatria (CC BY 4.0) vain vertailukuvana.
 # Etelän dynastiat: sama lämmin ruosteenpunainen perhe kuin jin-etela (#b4603c), hieman eri sävyt.
 VARIT = {'liu-song': '#b0573a', 'qi-etela': '#c06f4a'}
 KOTISEUDUT = {}
-KAUPUNGIT = {}
+KAUPUNGIT = {'Xiongnun hovi|-200': (111.5, 42.3)}  # Shiji 110: hovi Dain ja Yunzhongin kohdalla, Yinshanin pohjoispuolella
 
 # Yhteiset viivat (lon, lat).
 _ETELA_LANSI = [  # Shun ja Yunnanin länsireuna etelästä pohjoiseen (Han 100 eaa + Yongchang 69 jaa.)
@@ -35,7 +35,17 @@ _KOREA = [  # Xuantu (Fushun 107 jaa.), Liaodong ja Lelang Luoteis-Koreassa; Gog
     (126.3, 40.0), (127.1, 39.5), (127.4, 38.5), (127.0, 37.6),  # Chongchon, Nangnim-vuorten länsirinne, Han-joki
     (125.8, 37.1), (124.0, 35.0),  # meri: Keltainenmeri Korean ja Shandongin välissä
 ]
-_TARIM = [  # Länsialueet: Tarimin allas Kašgarista Lop Noriin, Turfan ja Hami (Yiwu 131 jaa.)
+_TARIM_140 = [  # Länsialueiden päällikkö (zhangshi, Liuzhong): löyhä yliherruus pohjoisella reitillä Aksusta Hamiin
+    (80.0, 41.0), (81.0, 42.0), (84.0, 42.3), (86.5, 42.5), (88.0, 43.3), (90.0, 43.3), (93.0, 43.4), (94.6, 43.0),
+    (94.8, 42.2), (94.0, 41.2), (93.6, 40.6), (92.0, 40.1),  # Kum-tag, Yumen; Lop Nor
+    (90.0, 40.0), (88.0, 40.3), (85.0, 40.8), (82.5, 40.6), (80.5, 40.3),  # Tarim-joki: eteläreitti ulkona
+]
+_TARIM_250 = [  # Wein Länsialueiden päällikkö Loulanissa ja Gaochangin varuskunta: itäinen Tarim
+    (85.5, 42.0), (86.5, 42.5), (88.0, 43.3), (90.0, 43.3), (93.0, 43.4), (94.6, 43.0),  # Karashahr, Turfan, Hami
+    (94.8, 42.2), (94.0, 41.2), (93.6, 40.6), (92.0, 40.1),  # Yumen; Lop Nor
+    (90.0, 39.6), (88.5, 39.8), (87.0, 40.6), (85.8, 41.3),  # Loulan, Tarim-joen alajuoksu
+]
+_TARIM = [  # (vanha laaja rajaus, ei käytössä) Tarimin allas Kašgarista Lop Noriin
     (75.5, 39.5), (76.5, 40.8), (78.5, 41.6), (81.0, 42.0), (84.0, 42.3),  # Tianshanin etelärinne: Aksu, Kucha
     (86.5, 42.5), (88.0, 43.3), (90.0, 43.3), (93.0, 43.4), (94.6, 43.0),  # Bogda: Turfan (Liuzhong), Hami
     (94.8, 42.2), (94.0, 41.2), (93.6, 40.6), (92.0, 40.1),  # Kum-tag; liittyy Yumeniin, Lop Nor (Loulan)
@@ -45,8 +55,9 @@ _TARIM = [  # Länsialueet: Tarimin allas Kašgarista Lop Noriin, Turfan ja Hami
 _RAJA_440 = [  # Songin ja Wein raja 440 idästä länteen (Wei valloitti Luoyangin, Hulaon ja Huatain 423)
     (119.0, 38.3), (118.2, 37.9),  # Keltaisen joen (Itä-Hanin uoma) suu Bohaihin
     (117.5, 37.6), (116.7, 37.2), (116.0, 36.5), (115.3, 35.8),  # joki rajana: Pingyuan, Dong'e
-    (114.7, 35.3), (114.2, 34.9), (113.6, 34.5),  # Huatai ja Hulao Weille, Kaifeng Songille
-    (112.8, 34.25), (111.7, 34.0), (110.7, 33.6),  # Luoyang Weille; Funiu-vuoret, Wuguan
+    (115.5, 35.1), (115.2, 34.5),  # Huatai Weille; Suiyang (Shangqiu) Songille
+    (114.6, 34.1), (113.8, 33.8), (112.9, 33.9),  # Kaifeng (Chenliu), Hulao ja Luoyang Weille; raja ~34° P (faktatarkistus 16.10.)
+    (111.7, 34.0), (110.7, 33.6),  # Funiu-vuoret, Wuguan
     (109.5, 33.6), (108.5, 33.7), (107.4, 33.8),  # Qinlingin harja: Guanzhong Weille, Hanzhong Songille
 ]
 _RAJA_500 = [  # Qin ja Wein raja 500 idästä länteen: Huai-joen tienoo
@@ -75,7 +86,7 @@ _WEI_POHJOINEN = [  # Pohjois-Wein pohjoisraja Liao-joelta Dunhuangiin ja Qilian
 
 VUODET = {
     -200: {
-        'otsikko': '200 eaa', 'paakaupungit': ["Chang'an", 'Xiongnun hovi'],
+        'otsikko': '200 eaa', 'paakaupungit': ["Chang'an", 'Xiongnun hovi|-200'],
         'alueet': [
             # Han perii Qinin ytimen (kuningaskunnat Chu, Qi, Zhao, Yan, Changsha vasalleina). Nanyue ja Minyue
             # eivät ole Hanin: etelä- ja kaakkoisraja on Qinin 221 eaa. viiva (Nanling, Wuyi). Ordos menetetty.
@@ -119,7 +130,7 @@ VUODET = {
                 *_YIN,
             ]),
             # Länsialueiden protektoraatti (Ban Yong, hallintoupseeri Liuzhongissa 123 alkaen).
-            ('Länsialueet', 'han', 'protektoraatti', _TARIM),
+            ('Länsialueet', 'han', 'protektoraatti', _TARIM_140),
             # Xianbeit levittäytyivät Mongolian ylängölle pohjoisten Xiongnujen hajottua (89–91 jaa.).
             ('Xianbeit', 'xianbei', 'ulkoinen', [
                 (123.5, 42.4), (123.0, 44.5), (121.8, 46.5), (120.5, 48.5),  # Liao-joen yläjuoksu, Khingan
@@ -163,7 +174,7 @@ VUODET = {
                 (120.0, 41.2), (121.5, 42.0), (122.8, 42.3),  # Liaoxi; Murong- ja Yuwen-xianbeit pohjoisessa
             ]),
             # Wei hallitsi Länsialueita väljästi (hallintoupseeri Loulanissa); jatkumo Hanin protektoraatista.
-            ('Länsialueet', 'wei', 'protektoraatti', _TARIM),
+            ('Länsialueet', 'wei', 'protektoraatti', _TARIM_250),
             # Itäinen Wu: Jangtsen alajuoksu, Jingzhoun etelä (219), Jiaozhou; Linyi vei Xianglinin 192.
             ('Wu', 'wu', 'kiina', [
                 (110.0, 32.0), (112.0, 31.8), (114.0, 31.8), (115.5, 31.8),  # yli Wein rajan (Wei voittaa)

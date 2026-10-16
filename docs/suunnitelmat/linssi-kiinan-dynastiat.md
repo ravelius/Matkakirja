@@ -46,7 +46,7 @@ kuin muissa faktapohjissa.
 | 10 | 790 | Tang kaventunut · **Tiibet** hallitsee Hexiä ja Tarimia | Chang'an · Lhasa | An Lushanin kapinan (755–763) jälkeen Tiibet valtaa Silkkitien ja ehtii vuonna 763 hetkeksi Chang'aniin. |
 | 11 | 950 | Viisi dynastiaa ja kymmenen kuningaskuntaa · **Liao** (kitaanit) | Kaifeng · Shangjing | Kiina pirstoutuu taas, ja kitaanien Liao saa haltuunsa nykyisen Pekingin seudun vuonna 938. |
 | 12 | 1100 | Pohjoinen Song · **Liao** · **Länsi-Xia** (tangutit) | Kaifeng · Shangjing · Xingqing | Song-ajan Kiinassa painetaan kirjoja ja käytetään paperirahaa, mutta pohjoisen rajan takana hallitsevat Liao ja Länsi-Xia. |
-| 13 | 1142 | Eteläinen Song · **Jin** (jurchenit) · Länsi-Xia | Lin'an (Hangzhou) · Shangjing/Zhongdu | Jurchenien Jin valtaa Kaifengin 1127, ja Song jatkaa etelässä Hangzhoun ympärillä. |
+| 13 | 1142 | Eteläinen Song · **Jin** (jurchenit) · Länsi-Xia | Lin'an (Hangzhou) · Shangjing (Zhongdu vasta 1153) | Jurchenien Jin valtaa Kaifengin 1127, ja Song jatkaa etelässä Hangzhoun ympärillä. |
 | 14 | 1280 | **Yuan** (mongolit), kotiseutu Mongolian aroilla | Dadu (Peking) | Kublai-kaani hallitsee koko Kiinaa, ja Dadusta eli nykyisestä Pekingistä tulee pääkaupunki. |
 | 15 | 1421 | Ming | Nanjing → Peking | Ming ajaa mongolit pohjoiseen, ja keisari Yongle siirtää pääkaupungin Pekingiin, jossa Kielletty kaupunki valmistuu 1420. |
 | 16 | 1644 | Ming kaatuu · **Qing** (mantšut), kotiseutu Mantšuriassa | Mukden → Peking | Mantšut pääsevät Shanhain solan kautta muurin läpi Pekingiin, ja Qing-dynastia hallitsee seuraavat 268 vuotta. |

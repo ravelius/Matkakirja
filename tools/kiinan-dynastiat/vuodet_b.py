@@ -8,7 +8,7 @@ VARIT = {
     'sui': '#c25a2c',            # Sui = Tangin kirkas punaoranssi
     'myohempi-han': '#9a3e2c',   # 950 pohjoinen dynastia, tumma
     'etelan-tang': '#d0925c',    # vaalea oranssi
-    'wuyue': '#84473a',          # tumma ruskea (naapurina vain vaalea Etelän Tang)
+    'wuyue': '#84473a',          # tumma ruskea (naapurina vain vaalea Eteläinen Tang)
     'chu': '#8c3f2e',            # tumma punaruskea
     'etelan-han': '#c0623e',     # keskisävy
     'myohempi-shu': '#cf9466',   # vaalea
@@ -151,7 +151,7 @@ VUODET = {
                 (115.75, 39.35), (115.7, 38.7), (115.8, 38.25), (116.4, 38.1),  # Yizhou Hanille; Mo ja Ying (Hejian) Liaolle
                 (116.6, 38.4), (116.9, 38.75), (117.9, 38.75),  # Cangzhou Hanille
                 (120.5, 38.3), (122.8, 37.4), (121.0, 35.2), (119.6, 35.0),  # Bohai, Shandong
-                (118.9, 34.5), (118.4, 33.7), (117.5, 33.1), (116.5, 32.7),  # Haizhou ja Huainan Etelän Tangille
+                (118.9, 34.5), (118.4, 33.7), (117.5, 33.1), (116.5, 32.7),  # Haizhou ja Huainan Eteläinen Tangille
                 (115.5, 32.5), (114.6, 32.2), (114.4, 31.6), (114.0, 30.9),  # Huai-joki, Guangzhou; Dabie-vuoret
                 (113.4, 30.5), (112.8, 30.9), (112.0, 31.3), (111.2, 31.3),  # Anzhou ja Fuzhou Hanille; Jingnan etelässä
                 (110.4, 31.6), (109.5, 32.2), (108.6, 32.6), (108.0, 33.7),  # Fangzhou, Jinzhou (Ankang)
@@ -169,24 +169,24 @@ VUODET = {
                 (118.6, 26.6), (118.8, 26.0), (119.0, 25.6), (119.5, 25.4),  # Fuzhoun prefektuuri; Putian Qingyuanille
                 (120.5, 26.5), (122.5, 29.5), (122.5, 31.0),  # meri, Zhoushan
             ]),
-            ('Etelän Tang', 'etelan-tang', 'kiina', [  # Jinling; Huainan, Jiangxi ja Min (945), Qingyuan nimellisesti
+            ('Eteläinen Tang', 'etelan-tang', 'kiina', [  # Jinling; Huainan, Jiangxi ja Min (945), Qingyuan nimellisesti
                 (120.3, 35.3), (116.0, 33.0), (114.0, 32.6), (114.2, 31.2),  # pohjoinen Hanin alle (Han voittaa)
                 (113.2, 30.7), (112.9, 30.0), (113.3, 29.9), (113.6, 29.3),  # Ezhou ja Mianzhou; Yuezhou Chulle
                 (114.0, 28.6), (113.9, 28.2), (113.9, 27.3), (113.8, 26.4),  # Luoxiao- ja Wugong-vuoret
                 (113.9, 25.8), (114.3, 25.3), (115.0, 24.9), (115.6, 24.85),  # Dayun sola, Qianzhou
-                (116.2, 24.6), (116.9, 24.2), (117.2, 23.7),  # Tingzhou ja Zhangzhou; Chaozhou Etelän Hanille
+                (116.2, 24.6), (116.9, 24.2), (117.2, 23.7),  # Tingzhou ja Zhangzhou; Chaozhou Eteläinen Hanille
                 (117.5, 23.3), (119.5, 25.0), (119.3, 26.0), (119.5, 28.5),  # meri; Wuyue voittaa idässä
                 (119.8, 30.5), (120.5, 31.5), (121.2, 32.0), (121.9, 32.0), (121.2, 33.5),  # Tongzhou Tangille
             ]),
-            ('Chu', 'chu', 'kiina', [  # Ma-suku, Changsha; sisällissodassa 950, Etelän Tang valtasi 951
-                (110.2, 30.6), (113.0, 30.4), (114.4, 29.5), (114.3, 25.6),  # Jingnan ja Etelän Tang voittavat
-                (113.6, 25.35), (112.5, 25.1), (111.6, 25.0), (110.9, 24.8),  # Nanling; Hezhou (948) Etelän Hanille
+            ('Chu', 'chu', 'kiina', [  # Ma-suku, Changsha; sisällissodassa 950, Eteläinen Tang valtasi 951
+                (110.2, 30.6), (113.0, 30.4), (114.4, 29.5), (114.3, 25.6),  # Jingnan ja Eteläinen Tang voittavat
+                (113.6, 25.35), (112.5, 25.1), (111.6, 25.0), (110.9, 24.8),  # Nanling; Hezhou (948) Eteläinen Hanille
                 (110.0, 24.6), (109.4, 24.2), (108.6, 24.3), (107.7, 24.6),  # Guilin, Liuzhou, Yizhou Chulle
                 (108.2, 25.5), (108.5, 26.5), (108.8, 27.6), (109.2, 28.5),  # Länsi-Hunanin vuoret; Xizhou (Peng)
                 (109.4, 29.4), (109.8, 30.0),  # Shizhou (Enshi) Shulle
             ]),
-            ('Etelän Han', 'etelan-han', 'kiina', [  # Liu-suku, Xingwang (Guangzhou); Hainan
-                (117.6, 23.5), (117.3, 24.6), (116.0, 25.3), (114.0, 25.7),  # Etelän Tang ja Chu voittavat pohjoisessa
+            ('Eteläinen Han', 'etelan-han', 'kiina', [  # Liu-suku, Xingwang (Guangzhou); Hainan
+                (117.6, 23.5), (117.3, 24.6), (116.0, 25.3), (114.0, 25.7),  # Eteläinen Tang ja Chu voittavat pohjoisessa
                 (112.0, 25.6), (110.0, 25.3), (108.0, 24.9), (107.0, 24.7),
                 (106.0, 24.0), (105.6, 23.1), (106.6, 22.5), (107.0, 22.0), (108.0, 21.4),  # Ngô-dynastian Vietnam (938)
                 (108.3, 18.3), (109.5, 17.6), (111.6, 18.0), (112.5, 20.4), (116.0, 21.3),
@@ -214,7 +214,7 @@ VUODET = {
         'alueet': [
             ('Pohjoinen Song', 'song', 'kiina', [
                 (102.6, 34.2), (102.4, 35.0), (102.6, 35.8), (103.2, 36.4),  # Xihe-piiri 1072: Tao-, He- ja Lanzhou
-            ] + _XIA_ETELA[::-1] + [  # Xia-raja kuten 1142; Huangzhou (Xining) luovutettiin 1100
+            ] + _XIA_ETELA[::-1] + [  # Xia-raja kuten 1142; Tsongkha (Xining): Song miehitti 1099, paikallinen hallinto 1100, liitettiin 1103
                 (111.2, 39.6), (111.8, 39.25), (112.5, 39.1), (113.0, 39.25),  # Fuzhou ja Linzhou; Yanmen Songille
                 (113.8, 39.35), (114.5, 39.1), (115.0, 39.15), (115.5, 39.0),  # Daizhou; Yizhou Liaolle (986)
                 (116.0, 39.1), (116.6, 39.15), (117.2, 39.1), (117.9, 38.95),  # Baigou- ja Juma-joki (Shanyuan 1005)
