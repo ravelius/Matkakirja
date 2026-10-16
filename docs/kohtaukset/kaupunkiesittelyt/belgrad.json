@@ -1,0 +1,114 @@
+[
+  {
+    "id": "belgrad",
+    "esittely": "Kartan alue on Belgradin vanha ydin kalliolla, jossa Sava yhtyy Tonaviin. Linnoituksen paikalla oli roomalaisten legioonan leiri. Kalemegdanin nimi tulee turkin sanoista kale, linnake, ja megdan, kenttä, ja puisto raivattiin 1800-luvulla. Nebojšan torni on 1400-luvulta, ja nebojša tarkoittaa serbiaksi pelotonta.\n\nPyhän arkkienkeli Mikaelin katedraali rakennettiin 1837–1840. Tasavallan aukion ratsastajapatsas ruhtinas Mihailosta pystytettiin 1882. Skadarlija sai katunimensä 1872. Pyhän Savan temppelin rakentaminen alkoi 1935, ja se on yksi maailman suurimmista ortodoksikirkoista. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 639,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Belgrade_Fortress",
+        "title": "Wikipedia: Belgrade Fortress",
+        "tukee": "legioonan linnoitettu leiri kukkulalla Savan ja Tonavan yhtymäkohdassa; Kalemegdan = kale (linnake) + meydan (kenttä); Nebojša = 'peloton'"
+      },
+      {
+        "url": "https://www.beograd.rs/en/discover-belgrade/a2014/History.html",
+        "title": "Belgradin kaupungin virallinen sivusto: History",
+        "tukee": "roomalainen castrum nykyisen yläkaupungin (Kalemegdan) alueella, Legio IV Flavia; yläkaupunki Savan ja Tonavan yhtymäkohdan yläpuolella"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Kalemegdan",
+        "title": "Wikipedia: Kalemegdan",
+        "tukee": "nimi turkin kale (linnake) ja meydan; puiston ensimmäiset työt alkoivat 1869, laajimmat työt 1890-"
+      },
+      {
+        "url": "https://www.serbiaincoming.com/?p=1682",
+        "title": "Serbia Incoming: Kalemegdan fortress",
+        "tukee": "nimi turkin kale (linnake) ja megdan (kenttä); tasanne muutettu puistoksi 1800-luvun kahdeksankymmentäluvulla"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Neboj%C5%A1a_Tower",
+        "title": "Wikipedia: Nebojša Tower",
+        "tukee": "nykyinen torni rakennettu n. 1460 (1400-luku); nebojša = peloton"
+      },
+      {
+        "url": "https://beotura.rs/en/nebojsa-tower/",
+        "title": "Beotura (Belgradin matkailu): Nebojša Tower",
+        "tukee": "torni rakennettu 1456; nebojša = peloton"
+      },
+      {
+        "url": "https://www.beogradskatvrdjava.co.rs/%D0%BA%D1%83%D0%BB%D0%B0-%D0%BD%D0%B5%D0%B1%D0%BE%D1%98%D1%88%D0%B0/?lang=en",
+        "title": "Belgradin linnoitus (virallinen): Nebojša Tower",
+        "tukee": "rakennettu n. 1460"
+      },
+      {
+        "url": "https://beotura.rs/en/saborna-crkva/",
+        "title": "Beotura: Saborna crkva (St Michael's Cathedral)",
+        "tukee": "rakennettu 1837-1840 vuodelta 1728 olleen kirkon paikalle"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/St._Michael%27s_Cathedral,_Belgrade",
+        "title": "Wikipedia: St. Michael's Cathedral, Belgrade",
+        "tukee": "rakennettu 1837-1840"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Republic_Square,_Belgrade",
+        "title": "Wikipedia: Republic Square, Belgrade",
+        "tukee": "ruhtinas Mihailon ratsastajapatsas pystytettiin 19.12.1882, kuvanveistäjä Enrico Pazzi"
+      },
+      {
+        "url": "https://tob.rs/en/what-to-see/belgrade-attractions/republic-square",
+        "title": "Belgradin matkailujärjestö (tob.rs): Republic Square",
+        "tukee": "ruhtinas Mihailon monumentti pystytettiin 1882, Enrico Pazzi"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Skadarlija",
+        "title": "Wikipedia: Skadarlija",
+        "tukee": "katu nimettiin virallisesti Skadarska ulica 1872"
+      },
+      {
+        "url": "https://dipos.rs/en/blog/known-as-the-bohemian-heart-of-belgrade-skadarlija-has-enchanted-through-the-ages/",
+        "title": "Dipos: Skadarlija",
+        "tukee": "kun kaupunkirakentaminen ulottui alueelle 1872, katu nimettiin Skadarskaksi"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava",
+        "title": "Wikipedia: Church of Saint Sava",
+        "tukee": "rakentaminen alkoi 1935; maailman neljänneksi suurin ortodoksikirkko"
+      },
+      {
+        "url": "https://orthodoxwiki.org/Temple_of_Saint_Sava_(Belgrade)",
+        "title": "OrthodoxWiki: Temple of Saint Sava",
+        "tukee": "rakentaminen alkoi 1935; suurin käytössä oleva ortodoksikirkko (wiki, heikompi lähde)"
+      },
+      {
+        "url": "https://beotura.rs/en/hram-svetog-save/",
+        "title": "Beotura: Hram Svetog Save",
+        "tukee": "'Construction began in 1935'; tilavuus 170 000 m3, 10 000 henkeä"
+      },
+      {
+        "url": "https://www.serbiaincoming.com/?p=4371",
+        "title": "Serbia Incoming: Temple of Saint Sava",
+        "tukee": "suurin aktiivinen ortodoksikirkko maailmassa"
+      }
+    ],
+    "pudotetut": [
+      "Roomalaisen leirin vuosi / legioona (VIII Augusta 46-69 vs. IV Flavia 86 vs. 91 beograd.rs:n aikajanalla): vaihtelee -> teksti vain 'roomalaisten legioonan leiri'",
+      "Nebojšan tornin rakentajat unkarilaiset (Wikipedia, beotura; beogradskatvrdjava ei mainitse) ja vuosi 1456 vs. n. 1460 -> käytetty vain 1400-lukua",
+      "Kalemegdanin puiston tarkka vuosi: Wikipedia 1869 (ensimmäiset työt) vs. serbiaincoming 1880-luku -> käytetty 1800-lukua",
+      "Katedraalin arkkitehti (Querfeld/Kwerfeld, 'pitkään kiistelty'): nimi vaihtelee -> pois",
+      "Suuri sotasaari luonnonsuojelualueena 2005 (Wikipedia) vs. 2007 (matkailuartikkeli): vaihtelee; pinta-ala 2,11 km2 vs. 2,11 ha Wikipedian sisällä -> koko saari pois tekstistä",
+      "Skadarlijan katunimen selitys 'akveduktin kaaren nimi' (vain Wikipedia): ei toista lähdettä -> jätetty pois; säilytetty vain vuosi 1872",
+      "Pyhän Savan temppelin tarkka aloituspäivä (10.5. vs. 15.9.1935; 1935 sama): päivä pois; 'suurin ortodoksikirkko' vs. 'neljänneksi suurin' (Wikipedia) -> muotoiltu 'yksi maailman suurimmista'",
+      "Ruhtinas Mihailon patsaan käden suunta ja lempinimi 'kod konja': hakutulosten varassa, jätetty pois",
+      "Vanha 'kale ja megdan, linnake ja taistelukenttä': 'taistelukenttä' vain osassa lähteitä; Wikipedia ja serbiaincoming sanovat 'kenttä' -> käytetty 'kenttä'"
+    ],
+    "ristiriidat": [
+      "Kalemegdanin 'megdan': kenttä/aukio (Wikipedia, serbiaincoming) vs. 'taistelukenttä' (osa hakutuloksista) -> käytetty 'kenttä'",
+      "Nebojšan torni 1456 (beotura) vs. n. 1460 (Wikipedia, beogradskatvrdjava) -> käytetty 1400-lukua",
+      "Puiston raivaus 1869 vs. 1880-luku -> käytetty 1800-lukua",
+      "Pyhän Savan temppelin koko: neljänneksi suurin (Wikipedia) vs. suurin (OrthodoxWiki, Serbia Incoming) -> 'yksi suurimmista'",
+      "Legio IV Flavian saapuminen 86 (Wikipedia, beograd.rs teksti) vs. 91 (beograd.rs aikajana) -> vuotta ei mainita"
+    ],
+    "muutos_sk": "Säilytetty: sijainti joenhaarassa, roomalainen leiri, Kalemegdanin nimen selitys, Nebojšan torni, katedraali 1837-1840, Mihailon patsas 1882, Skadarlija 1872, Pyhän Savan temppeli 1935. Lisätty: nebojša = peloton, Pyhän Savan temppeli yhtenä maailman suurimmista ortodoksikirkoista. Muutettu: 'taistelukenttä' -> 'kenttä', puiston raivaus 1800-luvulle (vanha teksti sijoitti linnoituksen edustalle), Nebojšan torni 1400-luvulle. Poistettu: Suuri sotasaari (suojeluvuosi ristiriidassa)."
+  }
+]

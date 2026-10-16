@@ -1,0 +1,98 @@
+[
+  {
+    "id": "monaco",
+    "esittely": "Kartan alue on Monacon ruhtinaskunta, jonka vanha kaupunki on kalliolla meren rannalla. Kalliolle alettiin rakentaa linnoitusta kesäkuussa 1215, ja François Grimaldi valtasi sen tammikuussa 1297. Katedraali rakennettiin vuosina 1875–1903, ja sinne on haudattu monia ruhtinassuvun jäseniä.\n\nPort Hercule -sataman nimi viittaa Herkules-sankariin: antiikin latinassa satamaa kutsuttiin nimellä Portus Herculis Monoeci. Salle Garnier avattiin 1879, ja sen suunnitteli Charles Garnier. Ruhtinas Albert I vihki Valtamerimuseon käyttöön 1910, ja Eksoottinen puutarha avattiin yleisölle 1933. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 638,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Monaco-Ville",
+        "title": "Wikipedia: Monaco-Ville",
+        "tukee": "linnoituksen rakentaminen alkoi 10.6.1215; François Grimaldi valtasi sen 8.1.1297; katedraali sisältää monien hallitsijasuvun jäsenten jäännökset"
+      },
+      {
+        "url": "https://www.palais.mc/en/l-institution/the-prince-s-palace-of-monaco-1-16.html",
+        "title": "Palais princier de Monaco (virallinen): The Prince's Palace of Monaco",
+        "tukee": "rakentaminen alkoi kesäkuussa 1215; 8.1.1297 François Grimaldi valtasi linnoituksen"
+      },
+      {
+        "url": "https://monacodc.org/monhistory.html",
+        "title": "Monaco-Washington DC: Monaco history",
+        "tukee": "1215 genovalaisten ghibelliinien rakennustyö kalliolla; 1297 Grimaldi valtasi linnoituksen (kolmas tuki)"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Monaco_Cathedral",
+        "title": "Wikipedia: Monaco Cathedral",
+        "tukee": "rakennettu 1875-1903; monia Grimaldi-suvun jäseniä haudattu"
+      },
+      {
+        "url": "https://www.finestresullarte.info/en/travel/the-cathedral-of-monaco-art-history-and-faith-on-the-rock-of-the-principality",
+        "title": "Finestre sull'Arte: The Cathedral of Monaco",
+        "tukee": "peruskivi 6.1.1875, valmis virallisesti 12.11.1903; ruhtinaiden hautoja kuorikäytävässä"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Port_Hercules",
+        "title": "Wikipedia: Port Hercules",
+        "tukee": "nimi juontuu Herkules-sankarin paikallisesta palvonnasta; Tacitus: portum Herculis Monoeci"
+      },
+      {
+        "url": "https://monacolife.net/2024/01/21/",
+        "title": "Monaco Life: How did Monaco's Port Hercule get its name?",
+        "tukee": "latinankielinen nimi Portus Herculis Monœci liittää sataman Herkulekseen; 'todellista alkuperää ei ehkä koskaan tiedetä'"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Op%C3%A9ra_de_Monte-Carlo",
+        "title": "Wikipedia: Opéra de Monte-Carlo",
+        "tukee": "avattu 1879 (25.1.1879), arkkitehti Charles Garnier, tunnetaan nimellä Salle Garnier"
+      },
+      {
+        "url": "https://www.universalis.fr/encyclopedie/opera-de-monte-carlo/",
+        "title": "Encyclopaedia Universalis: Opéra de Monte-Carlo",
+        "tukee": "Charles Garnierin rakentaman salin vihkiäiset 25.1.1879"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Oceanographic_Museum_of_Monaco",
+        "title": "Wikipedia: Oceanographic Museum of Monaco",
+        "tukee": "vihki käyttöön 1910 ruhtinas Albert I"
+      },
+      {
+        "url": "https://oceano.org/en/organization/the-great-figures/prince-albert-i",
+        "title": "Oceanographic Institute (virallinen): Prince Albert I",
+        "tukee": "museon vihkiäiset maaliskuussa 1910; museo Albert I:n viimeinen hanke (päivä 25. vai 29.3. vaihtelee, vuosi 1910 sama)"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Jardin_Exotique,_Monaco",
+        "title": "Wikipedia: Jardin Exotique, Monaco",
+        "tukee": "perustettu/avattu 1933, kaktus- ja mehikasvikokoelma"
+      },
+      {
+        "url": "https://monaconow.com/exotic-garden-the-largest-succulent-rock-garden-in-the-world",
+        "title": "Monaco Now: Exotic Garden",
+        "tukee": "avattiin yleisölle 1933"
+      },
+      {
+        "url": "https://www.montecarlosbm.com/en/inspiration/exotic-garden-rebirth-monaco",
+        "title": "Monte-Carlo SBM: Exotic Garden",
+        "tukee": "'First opened to the public in 1933'; työt alkoivat 1913"
+      }
+    ],
+    "pudotetut": [
+      "Ruhtinaanlinnan ydin = 1215 linnoitus ja 'virallinen asuinpaikka yhä': vain Wikipedia (Prince's Palace) varmisti; palais.mc-sivu ei sano suoraan asuinpaikaksi; pudotettu, vanha maininta linnasta virallisena asuinpaikkana pois",
+      "Linnoituksen alkuperä 1191 (Wikipedia: Prince's Palace) vs 1215: 1191 vain yhdessä lähteessä, ei käytetty",
+      "Munkkiasu 1297: Wikipedian mukaan legenda ja osa historioitsijoista kiistää; ei mainittu tekstissä",
+      "Port Hercule 'Monacon ainoa syvänveden satama': Wikipedia 'only deep-water port in Monaco' vs satamaviranomainen 'one of the few, if not the only, deep-water port of the French Riviera'; sanamuodot eivät täsmää, pudotettu",
+      "Kasino (Monte Carlo) ja Monte Carlon nimen selitys: ei tarkistettu kahdesta lähteestä tässä ajossa, pudotettu",
+      "Valtamerimuseon tarkka vihkiäispäivä ja korkeus 85 m: päivä vaihtelee (25.3./29.3.), korkeus vain yhdessä lähteessä; vain vuosi 1910 käytetty",
+      "Salle Garnierin paikkamäärä: 517/524/525 lähteittäin, pudotettu",
+      "Katedraalin vihkiminen 1911 ja Grace Kellyn hauta: vahvistettu mutta jätetty pois tilan vuoksi"
+    ],
+    "ristiriidat": [
+      "Linnoituksen alku: 1191 (Wikipedia Prince's Palace) vs 10.6.1215 (Wikipedia Monaco-Ville, palais.mc, monacodc.org) -> käytetty 1215 (rakennustyön alku kalliolla)",
+      "Valtamerimuseon vihkiäispäivä 25.3. vs 29.3.1910 (oceano.org itse mainitsee molemmat) -> vain vuosi 1910",
+      "Jardin Exotique: Wikipedia 'Founded by Prince Albert I in 1933' vs monaconow/montecarlosbm: Albert I:n aloitteesta, työt 1913, avattu yleisölle 1933 (Albert I kuoli 1922) -> käytetty 'avattiin yleisölle 1933'",
+      "Katedraali: valmis 1903 (Wikipedia, Finestre sull'Arte), vihitty 1911 -> käytetty rakennusaika 1875-1903",
+      "Port Hercule -nimen alkuperä: Wikipedia kreikkalaisen kolonian palvonta, Monaco Life roomalaiset todennäköinen nimeäjä, 'todellista alkuperää ei ehkä tiedetä' -> muotoiltu vain latinankielisen nimen ja Herkules-viittauksen kautta"
+    ],
+    "muutos_sk": "Vanhasta tekstistä säilytetty alueen kuvaus (vanha kaupunki kalliolla), linnoitus 1200-luvun alussa tarkennettuna kesäkuuhun 1215, Grimaldin valtaus 1297 (tarkennettu tammikuuksi), katedraalin ruhtinashaudat ja Valtamerimuseo 1910. Pois: ruhtinaanlinna virallisena asuinpaikkana, Monte Carlon kasino ja oopperasali ilman vuosia, Port Hercule 'ainoa syvänveden satama', 'itään nousevan rinteen' maisemakuvaus. Uutta: katedraalin 1875-1903, Port Hercule -nimen latinankielinen muoto, Salle Garnier 1879 ja Charles Garnier, Eksoottinen puutarha 1933."
+  }
+]
