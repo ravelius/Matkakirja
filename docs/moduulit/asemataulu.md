@@ -130,11 +130,6 @@ valmiiksi). Kun juna on TF:ssä, PT muuttaa junarivin TF-riviksi ja tyhjentää 
 - KATSOJAN SYKE: näkyvissä oleva sivu kirjoittaa `talo/katsoja.ts` 2 min välein ja esiin tullessaan;
   mittareiden vienti ei riipu sykkeestä (Boost korvaa sykkeen, 14.10. klo 23.39).
 
-## Google-rivi (omistaja 16.10.2026 klo 14.18, "Pelkkä kuun summa")
+## Google-rivi peruttu (omistaja 16.10.2026 klo 16.47)
 
-Laitteet-osiossa ElevenLabs-palkin alla yksi rivi "Google lokakuu 4,10 €": kuluvan kuun todellinen veloitus laskutusviennistä,
-ei rajaa eikä prosenttia. Haku Macilla kerran päivässä: `tools/kulut/hae-google.mjs <tiedosto>` → dokumentti `google`
-(`{ts, kk, summa, valuutta}`), jonka Asemataulun hoitaja vie tauluun. Avain: palvelutilin JSON ~/.config/matkakirja/google-laskutus.json
-(ei repoon eikä lokiin); taulu etsitään itse (`gcp_billing_export_v1_*`). Jos avainta tai taulua ei ole, dokumentti on
-`{odottaa:true}` ja rivi näyttää "odottaa laskutusvientiä". Ei GitHub Actions -työnkulkua. Toteutuslinja: Keskustelukanavan
-scratchpad google-palkki-20261016.md.
+"Googlen voi ottaa pois, koska sen lukua ei näemmä saa heti." Rivi, hae-google.mjs ja dokumentti `google` poistettu.

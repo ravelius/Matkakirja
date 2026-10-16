@@ -794,20 +794,6 @@ section:not(.kiinni) .yhteenveto { display: none; }
       erivi.append(epaa, eura);
       ep.append(erivi);
     }
-    // Google-rivi (omistaja 16.10. 14.18, "Pelkkä kuun summa"): kuluvan kuun veloitus laskutusviennistä, haku Macilla kerran päivässä
-    // (tools/kulut/hae-google.mjs → dokumentti google {kk, summa, valuutta}); ei rajaa eikä prosenttia. Ennen vientiä "odottaa laskutusvientiä".
-    var g = tila.google;
-    var gOk = !!(g && typeof g.summa === 'number');
-    $('laitteet-osio').hidden = false;
-    var KK_NIMET = ['tammikuu', 'helmikuu', 'maaliskuu', 'huhtikuu', 'toukokuu', 'kesäkuu', 'heinäkuu', 'elokuu', 'syyskuu', 'lokakuu', 'marraskuu', 'joulukuu'];
-    var gkk = gOk && /^\d{4}-\d{2}$/.test(String(g.kk || '')) ? KK_NIMET[Number(String(g.kk).slice(5)) - 1] : KK_NIMET[new Date().getMonth()];
-    var gsym = { EUR: '\u20ac', USD: '$' }[g && g.valuutta] || (g && g.valuutta) || '\u20ac';
-    var grivi = luo('div', 'palkki koko');
-    var gpaa = luo('div', 'paa');
-    gpaa.append(luo('span', 'nimi ei-versaali', 'Google ' + gkk),
-      luo('span', 'arvo', gOk ? g.summa.toFixed(2).replace('.', ',') + '\u00a0' + gsym : 'odottaa laskutusvientiä'));
-    grivi.append(gpaa);
-    ep.append(grivi);
     var tehtavatL = (tila.tehtavat && tila.tehtavat.rivit) || {};
     lr.forEach(function (x) {
       var kaytossa = x.tila === 'käytössä';
