@@ -1,4 +1,4 @@
-# KESKUSTELUKANAVA: aloitusviesti (päivitetty 16.10.2026 klo 19.46; sessio luotu uudelle tilille 15.10. 12.13)
+# KESKUSTELUKANAVA: aloitusviesti (päivitetty 16.10.2026 klo 23.19; sessio luotu uudelle tilille 15.10. 12.13)
 
 Olet KESKUSTELUKANAVA (Opus, max), omistajan keskustelu- ja ideointikumppani Matkakirja-pelissä. Session id on local_dfa7296a-d3d3-41ef-a2b1-dbc42a652589, ja kansio on /Users/Shared/Claude/Matkakirja-fable (sama muisti kuin Päätoimittajalla). PÄÄTOIMITTAJA (Opus, medium, local_5df52e10-10e4-4b72-9554-0049db300dfe) orkestroi roolit, kuittaukset, junat ja Raamatun. Osoitteet: /Users/Shared/Claude/osoitekirja.md, viestit send_messagella id:llä. Postivahti = local_a24c43c0-8094-4141-b734-90b9555f5044, Asemataulun hoitaja = local_aea9822b-c1c9-40aa-aecc-e84d19148a8c, Äänittäjä = local_16ee69c8-b917-4dcd-9060-3542c5e03e67.
 
@@ -16,6 +16,39 @@ Olet KESKUSTELUKANAVA (Opus, max), omistajan keskustelu- ja ideointikumppani Mat
 ## ENSIMMÄINEN TEHTÄVÄ NOLLAUKSEN JÄLKEEN
 Kohta 2 (etäyhteys + Asemataulu). Sitten odota PT:n viestejä; avoimet omistajan asiat alla.
 GOOGLE-PALKKI PERUTTU 16.47 (omistaja: "Googlen voi ottaa pois, koska sen lukua ei näemmä saa heti."); 14.18:n TOIMI-ohje raukesi, avainta ei tehty. Raamatun avainlistan GOOGLE_BILLING_*-korjaus PT:llä.
+
+## PÄIVITYS 16.10. klo 23.22– (sessio nollattu 23.2x; RC oli päällä, Asemataulu avautui Artifact open -toiminnolla)
+- 23.22 MUSEO: "Miksi taidemuseon kävelyssä tauluja katsotaan alaviistossa. Haluan että kamera on lähestyessä taulun keskipisteen korkeudella" → PT:lle (syy: Kävely V2 kulkee silmän korkeudella 1,6 m ja katsoo enintään 12° ylös; tavoite: nousu kävelyn aikana taulun keskikorkeudelle). Video tulossa → tarkista, hyväksy puolesta, näytä tiedoksi.
+- 23.28 PYRAMIDI: omistaja 23.22 "Teemme kyllä Louvren itse." → kortti "Tehdään oma pyramidi" (poikkeus suojatun arkkitehtuurin linjaan, App Store -tarkistuslistalle) → PT:lle päätösrivinä. Kuvapari tulossa → hyväksy puolesta, näytä tiedoksi.
+
+## PÄIVITYS 16.10. klo 19.50–23.15 (KK konteksti 38 %; sessio nollattu 19.5x, käynnistetty 19.50)
+- KK HYVÄKSYY PUOLESTA 23.06–23.07: "hyväksy sinä kaikki puolestani ja vie peliin ilman testejä" + "näytä kuitenkin valmistuvat jutut minulle mutta älä jää odottamaan hyväksyntääni" → junan 197 esikatselut (fontti, i-kortti, pienoismallit, liikepohja/auto zoom -video, intro) tulevat KK:lle: TARKISTA itse, hyväksy PT:lle ("KK HYVÄKSYY omistajan puolesta") ja lähetä omistajalle tiedoksi SendUserFile attach ILMAN korttia. Lukitus ~01.45, TF ~02.45 (PT 22.58).
+- HAJAUTUS 23.13 (omistaja kysyi, KK suositti): NUI museo (kehys, fontti, i-kortti, leveät teokset); Karttaseppä pienoismallit + lasipohja 4 paneeliin; Linssiseppä nopeusvipu + vapaan lennon matala lento; Pelikoodari intro; Siirtoseppä äänet pois linssin alussa.
+- INTRO 23.06 "miksi intron kuvien vieritys puolelta toiselle tökkii vieläkin?" → syy: koko ruudun sumennus joka ruudulla myös piilokerroksissa, ruutuja putosi; korjaus f596cae43 (sumennus vain näkyviin, liikepohjan askel ≤ 1/30 s) → video tulossa, kerrottu omistajalle.
+- ÄÄNET 23.06 "kip ei pysäytä keskenjäänyttä luentaa, kaikki ääni pitää lopettaa kun mikä tahansa linssi tai peli käynnistyy" → ÄÄNI-pohjaan yhteen paikkaan (Siirtoseppä). Kippi = kuumailmapallo (kori).
+- VAPAA LENTO 23.13: vipu on NOPEUSVIPU (nuppi irti radan alla, väärässä paikassa); matala lento: pallo nousee pehmeästi talojen yli ja laskee takaisin, läpi talojen vasta jos ei onnistu (omistajan ehto). Kuva pariisi-vapaa-lento-nopeusvipu-rikki-2313.jpg.
+- KOMPASSI 23.14: "Kipin kompassi näyttää vähän irralliselle … oma pieni valo lasikuvun alareunassa" → kiinni korin reunaan + lämmin kompassikaapin lamppu (Linssiseppä).
+- Uudet pyynnöt junaan 197 vain, jos ehtivät ennen lukitusta; 197 ei viivästy.
+- LOUVRE K57 23.15: KK HYVÄKSYI omistajan puolesta (kello, ei varjokaistaa, lämmin laatoitus) ja näytti omistajalle tiedoksi.
+- VAPAA LENTO -SYY 23.1x (kerrottu omistajalle): kiinteä 40 m kattojen yllä + syvyysluotain luuli katua esteeksi → korjaus ja video tulossa (Linssiseppä).
+- 23.16 OMISTAJA KYSYI: "Pitäisikö Louvren lasi pyramidi olla kirkkaampi?" (KK: suojattu, Pei k. 2019 → ei omaa mallia eikä kohdistettua muokkausta) ja "Miksi Louvren kohdalla puhutaan Pariisin perustamisesta esittelyssä?" (KK:n oletus: historiaosio 1 soi lennolla Louvren kohdalla → PT tarkistaa; tavoite: osiot liittyviin paikkoihin). Odota PT:n syyriviä → kerro omistajalle.
+- 23.17 VIPU: "Vipu voisi olla leveämpi ja näyttää kaasuvivulta siis vähän kuin laivoissa nopeuden säädin" → leveä messinkikahva kaarevalla asteikolla (hidas–puoli–täysi), olemassa olevalla vipupohjalla (Linssiseppä). Kerrottu omistajalle samoin kuin pyramidi ja perustaminen (vastattu 23.17).
+- 23.18 KIPPI: "Kipsissä on vielä selitteet paikan nimien alla. Nekin pitää ottaa pois" → PT:lle (pelkkä nimi kartalla ja listassa). Kuitattu omistajalle 23.19 (välitetty PT:lle).
+- 23.18 KK HYVÄKSYI museon pehmeän auto zoomin ja kävelyn (c32cbb200) PT:n kehystarkistuksella. Videot (ennen/jälkeen, 200+ MiB) pakataan: scratchpad/keskustelukanava/pakkaa-museo-pehmea.sh → videot-20261016/28-museo-pehmea-ennen.mp4 ja 29-museo-pehmea-jalkeen.mp4. Pakattu (2,2 + 2,3 MiB) ja LÄHETETTY omistajalle tiedoksi 23.2x.
+- LOUVRE/LUTETIA SYY (PT 23.2x, kerrottu omistajalle): junasta 195 historiaosiot soivat joka toisen pysähdyksen lopussa kiinteässä järjestyksessä → Louvre sai osion 1 "Lutetia"; korjaus: jokaiselle osiolle oma kohde (Pelikoodari, kohdistuslista PT:lle).
+- NOLLAUS 23.18 omistajan kortilla "Kyllä, nollaa nyt (Suositus)"; keskustelu tallennettu /Users/Shared/Claude/keskustelut/.
+- AVAUS 19.50: RC oli jo päällä, Asemataulu avautui Artifact open -toiminnolla.
+- JULKAISU 22.45 (juna 197): "julkaise heti kun nämä valmiina" → PT lukitsee, kun taulun Työn alla on rungossa. NÄYTÄ omistajalle heti kun tulevat (SendUserFile attach + kortti ok): fontin kuvapari (EB Garamond, ohuena Iowan Old Style), i-kortin pari iPhone + iPad, pallon pienoismallien video, auto zoom + kävely -video (liikepohja). Yhteisistä pohjista junaan vain 1. vaihe. TF-rivi → tarkista tf197-ketju.log → kerro omistajalle.
+- YKSI JUNA 22.24 (pysyvä): "kerää aina kaikki vain yhteen junaan" → 198 yhdistetty 197:ään (Raamattu PR #4734). Taulu näytti vielä 198:aa → KK vei junat.json tauluun 22.34 (talo/junat v58), PT korjasi rivin v59.
+- PÄÄKAUPUNKIEN ESITTELYT 19.51: "Älä kysy näistä minulta: pääkaupunkien esittelyt. Osaat itse arvioida nämä" → tiimi arvioi; 7 pääkaupunkia + Prahan ja Ateenan historiaosiot; jatkossa ei kysytä.
+- MUSEO (TF 196 -palaute): 19.56 salikortti liquid glass, auto zoom ja kävely nykivät (ease in out); 20.04 nimi piiloon suurennettaessa; 20.47 auto zoom ensin laaja nimen kanssa, ‹ ›-rivit pois; 21.38 i-nappi kehyksen ulkopuolelle (tehty, seinällä tekijärivin perässä); 21.51 "Kyllä, teksti ja puhe": i-kortti kehyksen yläpuolelle + taiteilijan muotokuva (Commons PD), ympyröiden teksti kehyksen alle kertojan lukiessa (kumoaa 13.10. vain puhe); 21.54 muotokuva pyöreänä yläriville (uusi pohja); 22.25 "ota kehys pois" (kabinettikyltti; KK: kaikki museon lasikortit); 22.26 "fontti ei näytä taidegalleriaan sopivalle".
+- YHTEINEN PERUSTA 20.54 "Kyllä, kaikki yhtä aikaa": LIIKE Pelikoodari (+ NUI tyylikirja), ÄÄNI Siirtoseppä (+ Äänittäjä), VALO Valoseppä; Raamattu + standardisivu PR #4727. KK:n työkalut PT:lle: Cinemachine (asennettu, käytössä 3 tiedostossa), AudioMixer + Steam Audio, URP Volume, materiaalivariantit, analysaattori/EditMode-testi, vertailukuvat, näyttelynäkymä.
+- QING-VÄRI 20.35 viileä sininen (#41709c); värisääntö: ulkoiset hallitsijat viileät, kiinalaiset lämpimät.
+- LOUVRE-K53 20.44 junaan; KK:n jatkohuomiot: Kellopaviljongin kello ja veistokset, ylivalottunut piha, L3-laatoitus.
+- DYNASTIAT-IDEAT 21.0x (omistaja kysyi mallia, EI päätöstä): KK suositti Kings and Generals + Minard 1869 + käärö ja sinettileima; muste leviää, pääkaupungin jälki, 5 taistelua; kerrokset muuri, Keltainen joki 1128/1855, kanava + Silkkitie + Marco Polo, Zheng He, väestöpisteet, keksinnöt Eurooppaan. Jos omistaja jatkaa → PT:lle.
+- PALLON PIENOISMALLIT 22.18 (liian isoja, pieni varjo, heiluvat) → Karttaseppä, video ennen kytkentää.
+- LEVY 22.0x: vuotava Codex (53 Gt, Computer Use -apuprosessit) on käyttäjätilillä samireivinen; omistajan komennot koodaus-tilillä eivät tavoittaneet. TOIMI annettu: sulje Evoto ja Capture One ja käynnistä ChatGPT uudelleen samireivinen-tilillä Codexin tehtävän jälkeen. EI kuitattu.
+- Juoksupelin j4-kuva näytetty 22.0x. Museon pehmeä liike tulee liikepohjan kautta (ei väliaikaista korjausta).
 
 ## PÄIVITYS 16.10. klo 19.05–19.45 (KK konteksti 41 %; sessio nollattu 18.20, käynnistetty 18.21)
 - ASEMATAULU 18.2x: Artifactin open-toimintoa EI ollut työkalussa → read + Read koko tiedosto + publish samaan url:iin + show_pane artifact (versio 10). RC oli jo päällä.
