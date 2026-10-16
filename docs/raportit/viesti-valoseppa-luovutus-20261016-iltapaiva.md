@@ -52,3 +52,7 @@ proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto. Skriptit tiedostoon, e
 - Salama- ja nousuvideot; auringonnousu ilman säteitä/kuusikulmioita (12.01) hyväksytty 12.56.
 - ISS-luuppi raketti k1–k5 + k6, jaady/pida-testikomennot, juna196-iss → NS. Codex-tilaukset: uusinta d4bf541f4, valas 43066735c.
 - Levy: poistettu omat vanhat app-kopiot (yhteensä ~8 Gt); jäljellä t196-luuppi-k5 (juna196-iss) ja -k4.
+
+## 4. TÄYDENNYS (PT 13.4x)
+- Järjestys vahvistettu: 1) savu + LR alusta v4 d78d313ea (jo luupissa 5bb75dcee) → T+1-koehetki vs Codex r2-u1 → PT; 2) valas OpenVAT-putkella; 3) muut.
+- LR: _valmiit/louvre-v1/glb sisälsi 13.38–13.45 vahingossa k38/k40, nyt taas k36. Valoseppä EI paketoinut Louvre v6k20:tä tällä vuorolla → ei uudelleenpaketointia; paketoi v6k20 vasta nyt (k36) junaan 197.
