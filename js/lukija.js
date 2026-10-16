@@ -87,9 +87,7 @@ import { luoLivianKuunteluvuoro, seuraaLivianKuuntelulausumaa } from './livia-ti
 
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import {
-  AANTEN_PELINIMET, NOPEUS_MAX, NOPEUS_MIN, STRIIMIAANI_OLETUS,
-  asetaPuheenNopeus, asetaStriimiaani, esihaePala, kappaleenPalat, luoPuheSoitin,
-  puheMittari, puheTuettu, puheenNopeus, striimiaani,
+  esihaePala, kappaleenPalat, luoPuheSoitin, puheMittari, puheTuettu,
 } from './puhe.js';
 import { luoKaiutinmittari } from './kaiutinmittari.js';
 /*
@@ -1883,54 +1881,6 @@ function hyppaaKappaleeseen(nappi, kappale) {
   paivitaValikko();
 }
 
-/** Nopeuden ja äänen rivit (entinen säätöratas, omistaja 27.9.2026 klo 10.1x). */
-function saatoRivit(doc) {
-  const nopeusRivi = doc.createElement('label');
-  nopeusRivi.className = 'lukija-saadot-rivi';
-  const nopeusNimi = doc.createElement('span');
-  nopeusNimi.textContent = 'Nopeus';
-  const liuku = doc.createElement('input');
-  liuku.type = 'range';
-  liuku.min = String(NOPEUS_MIN);
-  liuku.max = String(NOPEUS_MAX);
-  liuku.step = '0.05';
-  liuku.value = String(puheenNopeus());
-  liuku.setAttribute('aria-label', 'Luennan nopeus');
-  const arvo = doc.createElement('output');
-  arvo.textContent = nopeusTeksti(liuku.value);
-  liuku.addEventListener('input', () => { arvo.textContent = nopeusTeksti(liuku.value); });
-  liuku.addEventListener('change', () => {
-    liuku.value = String(asetaPuheenNopeus(liuku.value));
-    arvo.textContent = nopeusTeksti(liuku.value);
-  });
-  nopeusRivi.append(nopeusNimi, liuku, arvo);
-
-  const aaniRivi = doc.createElement('label');
-  aaniRivi.className = 'lukija-saadot-rivi';
-  const aaniNimi = doc.createElement('span');
-  aaniNimi.textContent = 'Ääni';
-  const valinta = doc.createElement('select');
-  valinta.setAttribute('aria-label', 'Lukijan ääni');
-  // Pelinimet (AANTEN_PELINIMET): arvo on sisäinen tunnus, teksti pelaajan nimi.
-  const vaihtoehto = (teksti, arvoNyt) => {
-    const o = doc.createElement('option');
-    o.value = arvoNyt;
-    o.textContent = teksti;
-    return o;
-  };
-  valinta.append(vaihtoehto(`${AANTEN_PELINIMET[STRIIMIAANI_OLETUS]} (oletus)`, ''));
-  for (const [aani, nimi] of Object.entries(AANTEN_PELINIMET)) {
-    if (aani !== STRIIMIAANI_OLETUS) valinta.append(vaihtoehto(nimi, aani));
-  }
-  valinta.value = striimiaani() ?? '';
-  valinta.addEventListener('change', () => {
-    asetaStriimiaani(valinta.value || null);
-    valinta.value = striimiaani() ?? '';
-  });
-  aaniRivi.append(aaniNimi, valinta);
-  return [nopeusRivi, aaniRivi];
-}
-
 /** Avaa (tai sulkee, jos jo auki) napin valikon valikkonapin alle. */
 function avaaValikko(nappi, valikkonappi) {
   if (valikko?.nappi === nappi) {
@@ -2038,10 +1988,10 @@ function avaaValikko(nappi, valikkonappi) {
     kelausnappi(eteen, 'Seuraava kappale', `<span class="icon-glyph viiva-ikoni">${ohjainIkoni('seuraava')}</span>`, (s) => s.siirryKappale(1)),
   ];
 
-  /* 3. nopeus ja ääni; lehdessä jatkuva luenta */
+  /* 3. lehdessä jatkuva luenta. EI nopeutta eikä ääntä (omistaja 16.10.2026 23.58: "poista koko pelistä valinnat lukijan
+   * äänestä ja nopeudesta"; js/puhe.js ohittaa tallennetut valinnat → oletusääni oletusnopeudella). */
   const saadot = doc.createElement('div');
   saadot.className = 'lukija-valikko-saadot';
-  saadot.append(...saatoRivit(doc));
   if (nappi.__lukijaJatko) {
     const rivi = doc.createElement('label');
     rivi.className = 'lukija-jatkuva';
@@ -2655,11 +2605,6 @@ function seuraaLatausta(nappi, lukee) {
   };
   seuranta.kello = setInterval(tarkista, LATAUS_TAHTI_MS);
   tarkista();
-}
-
-/** Nopeus näytölle: 1,15× (pilkku kuten muuallakin pelissä). */
-function nopeusTeksti(arvo) {
-  return `${Number(arvo).toFixed(2).replace('.', ',')}×`;
 }
 
 /** Kortin kaiuttimen mykistysmerkki ja nimi pelin äänivalinnan mukaan. */

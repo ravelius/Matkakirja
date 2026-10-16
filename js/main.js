@@ -60,8 +60,8 @@ import { asennaPollo } from './pollo.js';
 import { kytkeSahke, nollaaSahke } from './sahke.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
-  asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset,
-  paivitaLukijanVoima, puheenNopeus, puheenVoima, PUHEMITTARI_TAPAHTUMA,
+  asetaPuheenVoima, luePuheAsetukset,
+  paivitaLukijanVoima, puheenVoima, PUHEMITTARI_TAPAHTUMA,
   tallennaPuheAsetukset, viimeisinPuhe,
 } from './puhe.js';
 import { lueAaneen, pysaytaLukija, vaiennaAanikytkimella } from './lukija.js';
@@ -2169,8 +2169,6 @@ const puheDialog = document.getElementById('puhe-dialog');
 const puhePersoonaValinta = document.getElementById('puhe-persoona');
 const puheAaniValinta = document.getElementById('puhe-aani');
 const puheOhjeKentta = document.getElementById('puhe-ohje');
-const puheNopeusLiuku = document.getElementById('puhe-nopeus');
-const puheNopeusArvo = document.getElementById('puhe-nopeus-arvo');
 // Voimakkuus siirtyi poistetulta työhuonesivustolta 18.8.2026.
 const puheVoimaLiuku = document.getElementById('puhe-voima');
 const puheVoimaArvo = document.getElementById('puhe-voima-arvo');
@@ -2623,8 +2621,6 @@ function lataaPuheKentat() {
   }
   puheAaniValinta.value = PUHE_AANIVAIHTOEHDOT.includes(oma.aani) ? oma.aani : '';
   puheOhjeKentta.value = oma.ohje ?? '';
-  puheNopeusLiuku.value = String(puheenNopeus());
-  puheNopeusArvo.textContent = `${puheenNopeus().toFixed(2)}×`;
   if (puheVoimaLiuku) {
     puheVoimaLiuku.value = String(puheenVoima());
     puheVoimaArvo.textContent = `${puheenVoima().toFixed(2)}×`;
@@ -2663,10 +2659,6 @@ if (puheDialog) {
   puhePersoonaValinta.addEventListener('change', lataaPuheKentat);
   puheAaniValinta.addEventListener('change', tallennaPuheKentat);
   puheOhjeKentta.addEventListener('change', tallennaPuheKentat);
-  puheNopeusLiuku.addEventListener('input', () => {
-    const nopeus = asetaPuheenNopeus(Number(puheNopeusLiuku.value));
-    puheNopeusArvo.textContent = `${nopeus.toFixed(2)}×`;
-  });
   // Voimakkuus vaikuttaa heti soivaan ääneen (js/puhe.js vahvistin).
   puheVoimaLiuku?.addEventListener('input', () => {
     const voima = asetaPuheenVoima(Number(puheVoimaLiuku.value));
