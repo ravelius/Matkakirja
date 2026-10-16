@@ -58,7 +58,14 @@ TEHTY (proto linssiseppa/kiina-valmis-198, worktree wt/proto-linssiseppa-kiinava
 - 20881fe90 Kerrokset (muotoehdotus KS:lle 01.3x: juuren "kerrokset" [{avain, laji viiva|virtaus|piste, alku, loppu, pisteet [[lon,lat]],
   leveys/leveydet, arvo, vari}]): viiva kynänä, virtaus Minardin nuolena, piste ympyränä. Odottaa KS:n dataa.
 - Kiina-testit 11/11, tarkista.sh 0 virhettä. Simuskenaario sk-kiina-valmis-ipad.txt (S0–S6) valmiina; käännös Julkaisijan vuorolla.
-AVOIN: sinettileima ja käärökehys (kysytty PT:ltä 01.3x; ehdotus: sinetti iss-sinetti-työkalun mallilla, käärö NUI:lle).
+- 6143e97ee Kings and Generals -liike: filminauhan ajossa muste etenee kellon mukana avainvuodesta seuraavaan, pysäkki viimeistelee.
+- aaa7193c1 KS:n data faf3badee (241 kerrosta; muoto kuitattu KS:lle) + piirtotavat avaimittain (KiinaKerrokset.Tyyli).
+- 7304f0a27 SINETTI (KK 01.3x: iss-sinetti-leimapohja): tyokalut/dynastia-sinetti (Songti, baiwen, 25 PNG Resources/Kiina/Sinetit),
+  KiinaSinetti.shader; päädynastian vaihtuessa (Luoyang tai suurin; 13 leimaa) lyönti kuten löydön leima kun muste t ≥ 0,55.
+- 44d3b57e4 + 401f38ca7 KÄÄRÖ: NUI:n KEHYS-KÄÄRÖ 9365854c2 mergetty, AikajanaNakyma avaa/sulkee Kiinan kanssa (NUI:lle tiedoksi).
+  Jos KK hylkää käärön: revert 401f38ca7 → lasipohja.
+SEURAAVAKSI: L2 seis levyn takia (PT 01.4x) → kun Julkaisija antaa vuoron: nohup zsh ajo-kiinavalmis.zsh (iPad 00CF62C2,
+sk-kiina-valmis-ipad.txt S0–S7) → SIMU NYT → touch simu-kiinavalmis.nyt → kuvat _valmiit/kiina-valmis-20261017/ → PT/KK.
 
 ## 2. SEURAAVA JUNA
 - LOUVREN PARITEETTIERÄ, ASKELEET (PT 01.1x, EI junaan 197): Äänittäjän sora- ja kivi_hiekka-askeleet ämpärissä aanet/taidemuseo-askeleet-v3/,
