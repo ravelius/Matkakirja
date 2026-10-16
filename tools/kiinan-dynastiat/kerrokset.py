@@ -30,6 +30,25 @@ def kaari(a, b, kaarevuus=0.18):
     return [(ax + dx * t + nx * kaarevuus * 4 * t * (1 - t), ay + dy * t + ny * kaarevuus * 4 * t * (1 - t)) for t in (i / 23 for i in range(24))]
 
 
+def taistelualue(viiva, sade_km, n=24):
+    """Epävarman paikan alue: sade_km-levyinen vyöhyke viivan ympärillä (pisteiden ympyröiden kupera verho), suljettu rengas
+    vastapäivään. Paikan viiva on lähes suora, joten kupera verho ei laajenna aluetta merkittävästi."""
+    p = []
+    for x, y in tihenna(viiva):
+        dx = sade_km / (111.32 * math.cos(math.radians(y))); dy = sade_km / 110.57
+        p += [(x + dx * math.cos(2 * math.pi * k / n), y + dy * math.sin(2 * math.pi * k / n)) for k in range(n)]
+    p = sorted(set(p))
+    def puoli(pp):
+        h = []
+        for q in pp:
+            while len(h) >= 2 and (h[-1][0] - h[-2][0]) * (q[1] - h[-2][1]) - (h[-1][1] - h[-2][1]) * (q[0] - h[-2][0]) <= 0: h.pop()
+            h.append(q)
+        return h
+    a, y = puoli(p), puoli(p[::-1])
+    rengas = a[:-1] + y[:-1]
+    return [[round(x, 3), round(y, 3)] for x, y in rengas + rengas[:1]]
+
+
 VARIT = {'muuri': '#6b3a2a', 'joki': '#3b6ea8', 'joki-vanha': '#8fb0d6', 'kanava': '#2f8f8a', 'silkkitie': '#b5832f',
          'marco-polo': '#7d4fa0', 'zheng-he': '#b0306a', 'siirto': '#5a5a5a', 'taistelu': '#a01818', 'vaesto': '#4a3a32',
          'pysakki': '#7d4fa0'}
@@ -69,7 +88,8 @@ def kerrokset():
     for t in K.TAISTELUT:
         lisaa('taistelu', 'piste', t['nimi'], t['vuosi'], LOPPU, [[t['lon'], t['lat']]], VARIT['taistelu'], arvo=None,
               voittaja=t['voittaja'], havio=t['havio'], seuraus=t['seuraus'], vuosi=t['vuosi'],
-              **{k: True for k in ('epavarma', 'tausta') if t.get(k)})
+              **{k: True for k in ('epavarma', 'tausta') if t.get(k)},
+              **({'alue': taistelualue(t['alue']['viiva'], t['alue']['sade_km']), 'alue_km': t['alue']['sade_km']} if 'alue' in t else {}))
     for avain, vuosi, a, b in K.SIIRROT:
         lisaa('siirto', 'virtaus', f'{a} → {b}', vuosi, LOPPU, tihenna(kaari(K._P[a], K._P[b])), VARIT['siirto'],
               leveydet=[round(0.25 + 0.75 * i / 23, 2) for i in range(24)], dynastia=avain)
@@ -81,7 +101,10 @@ LAHTEET = {
         'reitit ja siirtojäljet: omat piirrokset (Matkakirja, CC0) julkisista paikkakoordinaateista, tarkkuus ~20 km.',
     'vaesto': 'Väkiluvut historiallisista väestölaskennoista (Han 140, Sui 609, Yuan 1290, Qing 1762) ja tutkimusarvioista '
         '(arvio = true). Alueosuudet ovat Karttasepän arvio väestön painopisteen siirtymästä etelään.',
-    'taistelut': 'Paikat ja vuodet Sisältökirjurin tarkistuksesta 17.10.2026 (epavarma = paikka kiistanalainen; tausta = ennen linssin alkua 221 eaa, näytetään alusta). Changping, Punainen kallio ja Fei-joki epävarmoja.'}
+    'taistelut': 'Paikat ja vuodet Sisältökirjurin tarkistuksesta 17.10.2026 (epavarma = paikka kiistanalainen; tausta = ennen linssin alkua 221 eaa, näytetään alusta). Changping, Punainen kallio ja Fei-joki epävarmoja. '
+        '`alue` = mahdollisten paikkojen vyöhyke (suljettu rengas): Punainen kallio Jangtsen varrella Baqiun (Yueyang) '
+        'koillispuolelta Wuhanin lounaispuolelle, Fei-joki Shouchunin (Shouxian) ympäristössä (Wikipedia: Battle of Red '
+        'Cliffs, Battle of Fei River).'}
 
 
 if __name__ == '__main__':
