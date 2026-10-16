@@ -42,7 +42,8 @@ se osa pois (git revert), ei väliaikaisia poikkeamia.
 SIMU 17.10. 01.01–01.21 (e66dc74de): VAPAALENTO HYLÄTTY — OpasTapit TypeInitializationException (kaasuvipu 7cbf392fb: NopeusVipu = LueVipu()
 luki Askeleet-taulukkoa ennen sen alustusta) → opaslinssi ei auennut, 51 546 poikkeusta. Korjaus 9096ff5d2 (vapaalento-197 kärki; louvre-pariteetti
 rebasettu 4c8f93fd5). Museon maa OK → _valmiit/museomaa-197-20261017/. SEURAAVAKSI: Julkaisijan vuorolla ajo-vapaalento197.zsh uudelleen
-(nohup) → SIMU NYT → touch simu-vapaalento.nyt → kuvat _valmiit/vapaalento-20261017/ → PT. Löydös NUI:lle PT:n kautta: otsikko "RIJKSMUSEU/M".
+(nohup) → SIMU NYT → touch simu-vapaalento.nyt → kuvat _valmiit/vapaalento-20261017/ → PT.
+PT 01.1x: JUNA 197 LUKITTU ILMAN VAPAALENTOA → vapaalento-197 (9096ff5d2) menee JUNAAN 198: simu OK → sha NS:lle 198:aa varten. Löydös NUI:lle PT:n kautta: otsikko "RIJKSMUSEU/M".
 
 ## 2. SEURAAVA JUNA
 - LOUVREN PARITEETTIERÄ, ASKELEET (PT 01.1x, EI junaan 197): Äänittäjän sora- ja kivi_hiekka-askeleet ämpärissä aanet/taidemuseo-askeleet-v3/,
