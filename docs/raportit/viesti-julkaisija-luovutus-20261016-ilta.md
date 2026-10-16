@@ -38,3 +38,6 @@ Asemataulu (TÄMÄ TILI): https://claude.ai/artifact/Qo5w6Wk4JSYRwYbyf2fJrm (v9,
 
 ## 5. Levy
 33,4 Gi 18.46 (NAS-arkistointi kesken, nousee). Pysäytys < 22 Gi, jatko > 26 Gi; Mac-käännös ≥ 30 Gi.
+
+## 6. AVOIN (PT 18.4x)
+- PR #4711 (PT: Raamattu CODEXIN TAHTI + lokit + PT:n luovutus) mergeen CI:n jälkeen, **ei --delete-branch**. 18.47 Testit ajossa; taustaodottaja mergeää vihreänä (jos sessio nollattiin ennen sitä, tarkista `gh pr view 4711` ja merge itse).
