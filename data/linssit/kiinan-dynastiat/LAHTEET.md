@@ -15,3 +15,13 @@ Omat, käsin piirretyt monikulmiot (suunnitelma `docs/suunnitelmat/linssi-kiinan
   maarajat ilman rannikkoa (luokka 1 valtio, 2 protektoraatti), täytöt, kotiseudut, nimiöt ja pääkaupungit.
   Per-vuosi-GeoJSONit jäävät vertailuun; peli ei käytä niitä.
 - **Tila 16.10.2026 ilta:** kaikki 19 vuotta (18 avainvuotta + loppu 1912). Qing viileä #41709c (omistaja 16.10. 20.35).
+
+## Lisäkerrokset (`kerrokset`, Karttaseppä 17.10.2026)
+
+- Muurit (Qin, Han, Pohjois-Qi/Sui, Ming), Keltaisen joen kolme uomaa, Suuri kanava (Sui, Yuan), Silkkitie, Marco Polon ja
+  Zheng He'n reitit sekä pääkaupunkien siirtojäljet: omat piirrokset (Matkakirja, CC0) julkisista paikkakoordinaateista,
+  tarkkuus ~20 km. Ei OSM:ää.
+- Väkiluvut: historialliset väestölaskennat (Han 140, Sui 609, Yuan 1290, Qing 1762) ja tutkimusarviot (`arvio`: true);
+  alueosuudet ovat Karttasepän arvio väestön painopisteen siirtymästä etelään.
+- Taistelujen paikat ja vuodet: yleisesti tunnetut faktat.
+- Tuottaja: `tools/kiinan-dynastiat/kerrokset.py` (data `kerrokset_data.py`), ajetaan `vie.py`:n jälkeen.
