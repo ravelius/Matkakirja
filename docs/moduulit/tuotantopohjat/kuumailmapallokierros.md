@@ -1,0 +1,162 @@
+# Tuotantopohja: kuumailmapallokierros
+
+*(LUONNOS 17.10.2026, Sisältökirjuri, PT:n toimeksianto. Raamattu, TUOTANTOPOHJAT ja TUOTANTOPOHJIEN SANASTO. Tähän on koottu
+vain nykyisten ohjeiden ja luovutusten opit (Lontoo, Praha, Ateena; Tukholma ja Pariisi suunnitelmina); uusia sääntöjä ei ole.
+PT:n toimeksiannon tiivistykset omistajan päätöksistä 23.16 ja 23.18 on merkitty "(PT)": niiden tarkka sanamuoto ei ollut
+vielä lokissa. Jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa. Sisältö-osuuden omistaa Sisältökirjuri; muut osat
+täydentävät tekijänsä otsikoilla "TÄYDENTÄÄ: <rooli>". PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
+
+Kuumailmapallokierros = kaupungin valmis esittelylento: pallo laskeutuu avaukseen, pysähtyy kahdeksalla kohteella, lentää
+niiden välillä ja päättää kierroksen loppuun; kertoja William kertoo ja historiaosiot kuuluvat reitin varrelle. Kierroksen
+päätteeksi Pulu kutsuu vapaaseen lentoon. Pohja kattaa sisällön ja sen tarkistuksen; lennon, kameran, kaupungin 3D:n ja
+äänen työ on omissa osissaan (luvut 7–9). Ei kata 3D-maamerkkiä eikä pääkaupungin avausta (`paakaupungin-avaus.md`, oma pohja).
+
+**Rajaus:** uusi kierros on Euroopassa (VAIN EUROOPPA). Kreikan muistomerkkikohteisiin ei tehdä uusia kierroksia, ja Ateenan
+kierros piilotetaan Kreikan App Storessa (storefront GRC); Ateenan tilalle tuli Praha (Raamattu, KREIKKA, 12.10.).
+
+## 1. Tuotantoputki ja roolit
+
+```
+Karttaseppä: kaupungin 3D ja kohdelista (8 kohdetta, järjestys, Q-id, sijainti, H_m)
+  → Sisältökirjuri: faktaliite → kertojan käsikirjoitus (avaus, 8 pysäkkiä, loppu) + 8 historiaosiota + metrokartan nimet
+  → riippumaton tarkistus (3 Sonnet-tarkistajaa) → korjaukset → PT: lista, tyyli ja hyväksyntä
+  → Äänittäjä: kertoja William (pysyvä lupa PT:n hyväksymiin teksteihin) + musiikki
+  → Linssiseppä: lento, kamera, ajoitus, historiaosioiden paikat → kytkentä → Julkaisija
+  → Pulun kutsu: Tekstit-osasto → omistajan rasti (sanatarkka toisinto ei rastia)
+```
+
+| Vaihe | Rooli | Tulos |
+|---|---|---|
+| 0. Kaupunki ja kohteet | Karttaseppä | 3D läpi; kohdelista ja reitti (`kohteet.json`, `matka_m`, `H_m`) |
+| 1. Faktaliite | Sisältökirjuri (Sonnet) | `<kaupunki>-faktat-<pvm>.md`, kaksi lähdettä per väite |
+| 2. Käsikirjoitus | Sisältökirjuri | `<kaupunki>-kerronta-<pvm>.json` + `<kaupunki>-kasikirjoitus-<pvm>.md` |
+| 3. Historiaosiot | Sisältökirjuri | `<kaupunki>-historia-<pvm>.json` (8) + faktaliite + kuvat Commonsista |
+| 4. Tarkistus | tarkistaja-agentit, PT | `pallokierros-tarkistus-<pvm>.md` (KORJAA/EPÄVARMA) |
+| 5. Pulun kutsu | Sisältökirjuri | tunnus `pulu-vapaalento-kutsu-<kaupunki>` Tekstit-osastoon |
+| 6. Ääni ja musiikki | Äänittäjä | otot, mittaus, vienti |
+| 7. Lento ja kytkentä | Linssiseppä | kierros pelissä, ajoitus, nimet, kutsu |
+| 8. Retrospektiivi | Sisältökirjuri | kirjaus luvun 10 oppeihin |
+
+Sisältökirjuri ei kytke eikä vie; ilmoita PT:lle viestillä (enintään 3 riviä), yksityiskohdat tiedostoon. Agentit vain Opus ja
+Sonnet.
+
+## 2. Kultainen polku (oletustapa)
+
+1. **Kohteet tulevat Karttaseppä-listalta, ei sisältökirjuri valitse.** Kahdeksan kohdetta kierrosjärjestyksessä (lyhin reitti),
+   avausnäkymän kohde ja reitti (`kaari` tai `lento`, `matka_m`). Kohteita ei vaihdeta eikä järjestetä uudelleen tekstityön
+   aikana. Kierroksella on kolme "muistettavaa asiaa" (esim. Lontoo: joki, kaksi keskustaa, rakennettu uudelleen tulesta ja
+   sodasta): jokainen kohde palvelee jotakin niistä, eikä kierros luettele kohteita (`suunnitelma.md` luku 1).
+2. **Faktaliite ensin.** Jokainen väite saa kaksi itsenäistä lähdettä (Wikipedian kieliversiot ja saman julkaisijan sivut eivät
+   ole riippumattomia); väitteet, jotka eivät varmistuneet, poistetaan. Britannica/UNESCO/matkasivut 403: ei kierretä, kirjataan.
+   Kameran korkeus `H_m` kirjataan faktaliitteeseen lähteineen mutta ei kerrontaan; merkitse, jos luku on pituus tai arvio.
+3. **Käsikirjoitus.** Kertoja William, yksi otto per teksti. Rakenne: avaus ("Tervetuloa <kaupunkiin>.", maisema ylhäältä,
+   "Kierros alkaa …"), 8 pysäkkiä, loppu. Pysäkkiteksti on pieni tarina (neljä tai viisi tarkistettua faktaa, tunnistettava piirre
+   ensin), lähes puhekielinen mutta ei hehkutusta; isoisän 1873-viittaus vain harvoin ja tosiasiana (Prahan kello). Luvut sanoiksi
+   ennen merkkimäärän laskemista; kokonaispituus ilmoitetaan (Praha 8 103, Ateena 7 274 merkkiä).
+4. **Historiaosiot: 8 per kaupunki, kukin omassa paikassaan (PT, omistaja 23.16).** Osio kertoo sen paikan tai alueen
+   historiasta, jonka yllä pallo lentää, eikä satunnaisella lennolla. Pituus 38–56 sanaa (noin 28–46 s). Jokaisella osiolla on
+   `tunnus`, `otsikko`, `teksti`, `kesto_s` (sanamäärä × 0,70 s, korvataan äänen todellisella kestolla), `lahteet` ja Commons-kuva
+   (PD/CC0/CC BY, tarkistettu API:lla). Historiaosio ja pysäkin kerronta eivät toista toisiaan.
+5. **Metrokartan nimet ilman selitettä (PT, omistaja 23.18).** Kierroksen kohdekartalla näkyvät nimet pelkkinä nimiä: `selite`-kenttä
+   ei näy pelaajalle (nimet ovat tarkistettuja Wikidata-nimiä; vakiintunut suomalainen nimi kerronnassa). **AVOIN (PT/LS):**
+   PT:n sana oli "kipin nimet"; tulkittu kohdekartan nimiksi, vahvistetaan ennen kuin kenttä poistetaan tai piilotetaan.
+6. **Pulun kutsu.** Kierroksen jälkeen Pulu kutsuu vapaaseen lentoon: tunnus `pulu-vapaalento-kutsu-<kaupunki>`, kaksi
+   virkettä: "<Kaupunki> on nyt sinun, …", sitten viittaus nappiin "Mikä tämä on?" ja pyyntö napauttaa rakennusta. Ensimmäinen virke saa
+   kaupungin oman, näkyvän piirteen (Thames, Akropolis); loppu on sanatarkka. Luku sanoiksi, ei ammattikieltä, Pulun tyyli
+   (`livia-aani.md`).
+7. **Riippumaton tarkistus ennen PT:tä.** Kolme tarkistajaa, jotka eivät kirjoittaneet tekstejä, hakevat omat lähteensä
+   (omat haut ennen faktaliitteen lukemista) ja tarkistavat faktat ja suomen kielen. Raportti: KORJAA / EPÄVARMA / OK väitteittäin;
+   korjaus tehdään varovaisemmaksi muotoiluksi, ei uudeksi väitteeksi; kaikki korjaukset viedään tekstiin, käsikirjoitukseen ja
+   faktaliitteeseen.
+8. **Äänen ennakkotarkistus Äänittäjälle:** "eaa." lauseen keskellä ja luvut 100–199 sanoiksi; merkitse tekstit, joissa ne
+   esiintyvät (Ateena: pysäkit 3, 6 ja 7 sekä historiaosiot).
+9. **Kuvat ja ääni vasta hyväksynnän jälkeen.** Kertojan ääneen on pysyvä lupa PT:n hyväksymille teksteille; Pulun kutsu ei kuulu
+   siihen. Historiaosiot PT arvioi itse riippumattoman tarkistuksen jälkeen ilman omistajan rastia
+   (omistaja 16.10. 19.51).
+
+## 3. Valmiin määritelmä (tarkistuslista)
+
+Sisältö-osuus ei ole valmis ennen kuin kaikki kohdat täyttyvät:
+
+- [ ] Kaupunki Euroopassa (ei Kreikan muistomerkkikohteita), 3D läpi, kohdelista ja reitti Karttasepältä.
+- [ ] Faktaliite: kaksi lähdettä per väite, ei-varmistuneet pois, `H_m`-lähteet merkitty.
+- [ ] Käsikirjoitus: avaus, 8 pysäkkiä, loppu; kierroksella kolme muistettavaa asiaa; puhuttu merkkimäärä ilmoitettu.
+- [ ] 8 historiaosiota, kukin omassa paikassaan, 38–56 sanaa, kuvat Commonsista lisenssitarkistettuina.
+- [ ] Metrokartan nimet ilman selitettä (kun tulkinta vahvistettu).
+- [ ] Pulun kutsu Tekstit-osastossa ja hyväksytty (tai sanatarkka toisinto).
+- [ ] Riippumaton tarkistus tehty (3 tarkistajaa), KORJAA-rivit korjattu, EPÄVARMA-rivit pehmennetty tai pois.
+- [ ] PT:n hyväksyntä listalle, tyylille ja teksteille.
+- [ ] `eaa.`- ja lukulista Äänittäjälle; `H_m`-huomautukset Linssisepälle ja Karttasepälle.
+- [ ] Avoimet kuvariskit (esim. tekijätön PD-anon-70, vanha PD-old-80) kirjattu PT:lle.
+- [ ] Luovutusraportti: tiedostopolut, heikoimmat kohdat, pudotetut väitteet.
+- [ ] Retrospektiivi kirjattu luvun 10 oppeihin.
+
+## 4. Poikkeaminen
+
+Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan joko uudeksi poluksi tai jätetään pois.
+
+## 5. Hyväksyntäpolku
+
+| Sisältö | Hyväksyjä | Perusta |
+|---|---|---|
+| Kierroksen lista (kohteet, järjestys) ja tyyli | PT | Karttasepän lista, PT 14.10. |
+| Pysäkkitekstit ja historiaosiot | PT riippumattoman tarkistuksen jälkeen, ilman omistajan rastia | omistaja 16.10. 19.51; kertojan pysyvä lupa |
+| Pulun kutsu | omistaja (Tekstit-osasto); sanatarkka toisinto (vain kaupungin nimi vaihtuu) ei rastia | PT 17.10.; Pululle ei pysyvää lupaa |
+| Äänet | kertoja: pysyvä lupa; muut KK:n "OMISTAJAN PÄÄTÖS" -rivillä | `kertojan-teksti-ja-aani.md` |
+| Sääntöjen muutos | PT → omistaja | Raamattu |
+
+## 6. Tyypilliset virheet (tarkistajan lista)
+
+1. **Yksi tai ristiriitainen lähde** (uhriluvut, rahoitus, aloitusvuodet "noin"; Parthenonin 1687 uhriluku ja Deloksen liiton
+   rahoitus pudotettiin): "noin", alaraja (Trafalgar "ainakin 17") tai pois.
+2. **Maantieto- ja kielivirheet** (Ypres ei ole Ranskassa; pituuspiiri ≠ pituusaste): tarkista paikka ja termi erikseen.
+3. **Lähdettä vahvempi muotoilu** ("vartioi" vs. "kunniavartio", "alle" vs. "peitetty", "portilla"): pehmennä lähteen sanaan.
+4. **"Kaksi kokonaisena seisovaa rakennusta", "alkuperäiset suojassa"** -tyyppiset kokonaisväitteet: tarkista (Ateena: viisi
+   karyatidia suojassa, kuudes Lontoossa).
+5. **Pituus esitetty korkeutena** (`H_m` = kohteen pituus, ei korkeus) ja yhden lähteen mitat: kirjaa.
+6. **Patsaiden tai rakennusten kopio ja alkuperäinen sekoittuvat** (Kaarlensillan patsaat: kopiointi alkoi jo 1900-luvun alussa).
+7. **Kuvan lisenssi:** tekijätön PD-anon-70-EU tai PD-old-80 on riski; Hollarin ja vastaavien kuvauksissa tarkista kuvan sisältö
+   (Petřín on kuvan oikeassa reunassa).
+8. **Historiaosio toistaa pysäkin kertomuksen.**
+9. **Pulun kutsu kuvaa piirteen, jota pelaaja ei näe vapaan lennon alussa.**
+
+## 7. TÄYDENTÄÄ: Linssiseppä (lento ja kamera)
+
+*(kierroksen rakenne ja ajoitus (`docs/kohtaukset/pallokierros/liikesaannot.md`, `suunnitelma.md`), kohteen kerronnan alkaminen
+laskeutumisessa, historiaosioiden paikat reitillä (kukin omassa paikassaan), nimien näyttö, koko reitin karkea esilataus, kori ja
+köydet, kameran korkeus (`H_m`), Pulun kutsun kytkentä. Täydentää Linssiseppä.)*
+
+## 8. TÄYDENTÄÄ: Karttaseppä (kaupunki)
+
+*(kaupungin 3D ja mittaus, kohdelista ja reitti, Q-id:t, sijainnit, `H_m`, avausnäkymän kohde, metrokartan nimet. Täydentää
+Karttaseppä.)*
+
+## 9. TÄYDENTÄÄ: Äänittäjä (kertoja ja musiikki)
+
+*(kertoja William (`eleven_v4_turbo`, tempo 1,10×), merkkimäärä ja ääniportti, "eaa."-lukutarkistus, kestojen korvaus
+`kesto_s`-kenttiin, vienti ja manifestirivit; kierroksen musiikki. Täydentää Äänittäjä; ks. `kertojan-teksti-ja-aani.md`.)*
+
+## 10. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
+
+Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttui pohjassa.
+
+- **15.10.2026, Lontoon historiaosiot A.** Riippumattoman tarkistuksen tulos: 39 OK, 9 KORJAA, 0 POISTA (yksi aito faktavirhe,
+  yksi kielivirhe, loput pehmennyksiä). Muuttuu: tarkistajat hakevat omat lähteet ennen faktaliitteen lukemista (kultainen polku 7).
+- **14.10.2026, Praha ja Ateena (16 historiaosiota, Ateenan avaus, loppu ja 8 pysäkkiä).** Kolme riippumatonta tarkistajaa:
+  Praha 1 virhe, Ateena 2 virhettä pysäkeillä, tarkennuksia yhteensä 46; pudotettiin tai pehmennettiin neljä väitettä.
+  Muuttuu: tarkistus ennen ääntä, ei sen jälkeen (kultainen polku 7 ja 9).
+- **14.10.2026, `H_m`.** Ateenan pysäkeillä 1 ja 4 arvo oli pituus; pysäkeillä 5–7 yhden lähteen luku. Muuttuu: korkeus kirjataan
+  erikseen faktaliitteeseen ja virheet huomioina (kultainen polku 2).
+- **12.10.2026, Lontoo.** Avaus ja loppu olivat yleistietoa ilman erillistä tarkistusta. Muuttuu: avaus ja loppu kuuluvat samaan
+  riippumattomaan tarkistukseen kuin pysäkit.
+- **12.10.2026, Ateena → Praha.** Lakiriski (Kreikka) siirsi kierroksen; Ateena piilotetaan GRC-storefrontissa. Muuttuu: rajaus
+  ennen työtä (Kreikan muistomerkkikohteisiin ei uusia kierroksia).
+- **9.10.2026, Tukholma ja Pariisi.** Kerronta alkoi ennen kuin kohde näkyi; historiaosio venytti pysähdyksen 35–55 sekuntiin.
+  Muuttuu: kohteen ensimmäinen virke päättyy saapumishetkellä; historiaosio omassa paikassaan (`suunnitelma.md` luku 4).
+
+## 11. Lähteet
+
+`docs/kohtaukset/pallokierros/` (`suunnitelma.md`, `liikesaannot.md`, `pallokierros-tarkistus-20261014.md`, `lontoo-*`, `praha-*`,
+`ateena-*`), `docs/moduulit/tuotantopohjat/kertojan-teksti-ja-aani.md`, `docs/moduulit/livia-aani.md`, `docs/moduulit/karttapallo.md`;
+Pulun kutsujen tekstit äänisivun Tekstit-osastossa (`pulu-vapaalento-kutsu-*`); Raamattu: LIIKKUVAT KOHTAUKSET TEHDÄÄN KUIN ELOKUVA,
+KREIKKA, PÄÄKAUPUNKIEN ESITTELYT ARVIOIDAAN ITSE, TUOTANTOPOHJAT, TUOTANTOPOHJIEN SANASTO.
