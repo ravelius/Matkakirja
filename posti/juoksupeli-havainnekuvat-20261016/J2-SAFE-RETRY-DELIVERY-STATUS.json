@@ -1,0 +1,27 @@
+{
+  "taskNumber": 385,
+  "latestSourceCommit": "4f96800137b3742954830e9c01cbb1492de3da49",
+  "latestSourceBlob": "267e9bafcb937ae059098de8205c811ab95ec176",
+  "additionalAuthorizedCalls": 1,
+  "additionalCallsIssued": 1,
+  "nativeImageProduced": true,
+  "nativeSHA256": "177009388a7cefd5dbd2cf45f05b7a199145af4af1c6dabfdac541811e79bc58",
+  "nativeDimensions": [
+    1086,
+    1448
+  ],
+  "nativeFile": "havainne-j2.png",
+  "oldThreeCallResultPreserved": {
+    "callsIssued": 3,
+    "nativeImages": 2,
+    "failedOutputAttempts": 1,
+    "oldReceiptPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/handoff-receipt.json"
+  },
+  "cumulativeCallsIssued": 4,
+  "allThreeRequestedImagesProduced": true,
+  "latestJ2RecipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "noFurtherGenerationAuthorized": true
+}

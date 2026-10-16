@@ -11,3 +11,8 @@ Kesäkorjaus c43bec90 / a3110d6… luettiin kokonaan ja otettiin käyttöön **e
 Keksittyä ovat tilanteet, alkuperäiset henkilökasvot, hahmojen ilmeet/liike, silkkikuviot, valaistuksen yksityiskohdat ja rakennusten pienkoristeet. Näyttelijäkuvia tai elokuvan ruutuja ei käytetty. Historialliseksi valokuvaksi tai koko puvuston/arkkitehtuurin faktatarkaksi rekonstruktioksi kuvia ei väitetä. Pinnoissa on optista vaihtelua, mutta täydellistä luonnonvalokuvan aitoutta tai toistokuviottomuutta ei varmenneta.
 
 FACT-PREFLIGHT.json sisältää ensisijaiset lähdelinkit ja niiden lukurajoitteet:9×9 ei koske jokaista porttia, harjaeläinten senttikoko/ammeen jalustan korkeus eivät varmistuneet, J3:n maantieteellinen yhdistelmä on epävarma. Riippumaton kuva-QA mukana. **Vastaanottajan/PT/KK/omistajan päätökset odottavat.** Ei pelin rakentamista, Peking-mallinnusta, R2:ta, main-muutosta tai julkaisua. J2 on tuottamatta; raportin toimitus ei merkitse sen kuvan valmistumista.
+
+
+## J2 safe scene follow-up - 16.10.2026
+
+Erillinen uusi yhden kutsun lupa (4f968001 / 267e9baf) käytetty: J2:n turvallinen käytäväkohtaus syntyi 1086 × 1448 native-PNG:nä. Lapsi ja rauhalliset aikuiset ovat tasaisella kaiteellisella kivikäytävällä. Kuuden keraamisen hahmon tarkka mitta, lajimääritys ja harjan historiallinen rakenne jäävät avoimiksi; lisätiedot J2-SAFE-RETRY-QA-FI.md:ssä ja riippumattomassa QA:ssa. Aiempi J2-hylkäys ja kolmen kutsun historia säilyvät. Kumulatiivisesti neljä kutsua ja kolme kuvaa. J1/J3 hyväksytty vastaanottajalla vain havainnekuviksi rajoituksin, uusi J2 odottaa arviota. Ei omistajahyväksyntää, pelitoteutusta tai julkaisua.

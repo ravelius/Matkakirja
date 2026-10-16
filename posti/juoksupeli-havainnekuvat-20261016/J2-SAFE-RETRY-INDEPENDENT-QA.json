@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "scope": "j2-safe-retry; task 385; independent visual QA only",
+  "reviewed_at_utc": "2026-10-16T16:16:03.286551+00:00",
+  "source": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/j2-safe-retry/sources/pelikoodari-codex-juoksupeli-arvio-ja-j2-uusinta-20261016.md",
+    "sha256": "d1002acd6ca3ed244148f155477396ea7b1182b4479a7fed00040dad47269d15",
+    "read_full": true
+  },
+  "candidate": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/j2-safe-retry/images/havainne-j2.png",
+    "sha256": "177009388a7cefd5dbd2cf45f05b7a199145af4af1c6dabfdac541811e79bc58",
+    "width": 1086,
+    "height": 1448,
+    "format": "PNG",
+    "native_unmodified": true,
+    "viewed": true,
+    "view_tool": "view_image",
+    "view_detail": "original"
+  },
+  "reviewed_count": 1,
+  "expected_count": 1,
+  "review_complete": true,
+  "observations": {
+    "walkway": "Child has feet on broad level stone paving, beside a separate sloping tiled roof; no child on roof/ridge or visible falling.",
+    "guard": "Masonry guard clearly visible along left side; right walkway boundary partly outside frame, so complete enclosure is not established.",
+    "adults": "Nurse and one adult man on same paved level behind child, calm expressions; no ladders or emergency action visible.",
+    "figurines": "Rider on bird at front, followed by dragon-, bird/phoenix- and lion-like forms and further beasts. Foreground figures appear small relative to child; species identities and complete canonical sequence not certified.",
+    "ridge": "Procession appears near horizontal; correct placement on a historical sloping corner ridge is not established.",
+    "season_costume": "Green summer foliage and warm daylight; yellow robe, round cap and visible braid on child; no snow or autumn scene observed.",
+    "surface": "Paving, glazed ceramics and textiles broadly photographic; ornate figurine and garment details remain idealized/generated in appearance.",
+    "modern_content": "No evident modern objects, text, logos or UI observed."
+  },
+  "limits": [
+    "No verified 30–40 cm figurine dimensions or metric scale.",
+    "No certification of precise historical animal taxonomy/order, ridge location, building geometry or Puyi identity.",
+    "Static view does not establish complete guard enclosure, motion safety or game implementation."
+  ],
+  "disposition": "Qualified illustration candidate for PT/owner review; no formal acceptance or game integration claim.",
+  "approval": {
+    "new_j2_owner_acceptance": "not established",
+    "pt_acceptance": "not established"
+  },
+  "history_boundary": "Separate one-call safe retry. Initial three calls/two images/one output moderation rejection remain separate; rejected output was not sought. Earlier J1/J3 and all existing QA, images, ledgers and post were not modified.",
+  "writes": [
+    "qa/INDEPENDENT-QA-FI.md",
+    "qa/independent-review.json"
+  ]
+}

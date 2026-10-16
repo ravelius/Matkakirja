@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "4f96800137b3742954830e9c01cbb1492de3da49",
+  "sourcePath": "posti/pelikoodari-codex-juoksupeli-arvio-ja-j2-uusinta-20261016.md",
+  "sourceBlob": "267e9bafcb937ae059098de8205c811ab95ec176",
+  "sourceReadInFull": true,
+  "acceptedImageCodes": [
+    "j1",
+    "j3"
+  ],
+  "acceptedAs": "concept illustrations with explicit limitations",
+  "j1Limitations": [
+    "door studs not 9 by 9",
+    "raised gate plinth is not a separate timber threshold; game threshold modeled separately"
+  ],
+  "j3Limitations": [
+    "cinematic parapet form",
+    "composed landmark positions, not cartographically exact",
+    "previous thin roof-line uncertainty remains in original QA"
+  ],
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false
+}

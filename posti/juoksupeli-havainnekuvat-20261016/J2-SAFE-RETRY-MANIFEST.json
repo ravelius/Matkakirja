@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "path": "J1-J3-RECIPIENT-DECISION.json",
+      "bytes": 774,
+      "sha256": "bc089017f12c65dc2ff086050fb86cfb79746e5a29075f30d544bd9f747ddfcb"
+    },
+    {
+      "path": "J2-SAFE-RETRY-DELIVERY-STATUS.json",
+      "bytes": 917,
+      "sha256": "4962810d162c7f86a1dcf2b6506793e7d5637800ba9edc0953aebbdd94d626cd"
+    },
+    {
+      "path": "J2-SAFE-RETRY-GENERATION.json",
+      "bytes": 5274,
+      "sha256": "2f868828e116e622afb6c04fdd993989785201bf5b6b20b81130b34528ea3685"
+    },
+    {
+      "path": "J2-SAFE-RETRY-INDEPENDENT-QA-FI.md",
+      "bytes": 1285,
+      "sha256": "b186543b1feeff512f462495dc995f52ae611427dfd1317a006ae896ea1e4d2e"
+    },
+    {
+      "path": "J2-SAFE-RETRY-INDEPENDENT-QA.json",
+      "bytes": 3034,
+      "sha256": "cfb9cdfd9e67f3ae19a7b7824fcd9740cb2413950bac6f4be9ac9043ee734e74"
+    },
+    {
+      "path": "J2-SAFE-RETRY-PROMPT.txt",
+      "bytes": 3688,
+      "sha256": "97e7c145bd9e4f931fdf13a1f09cd5dcec2b3e67b33a96171abfb88ac947c116"
+    },
+    {
+      "path": "J2-SAFE-RETRY-QA-FI.md",
+      "bytes": 2092,
+      "sha256": "a2c36f404c7fdd6e0cd2ed4cbf23f7842d2c2effa643aa663e31a0fee9e9370b"
+    },
+    {
+      "path": "J2-SAFE-RETRY-SOURCE.md",
+      "bytes": 2527,
+      "sha256": "d1002acd6ca3ed244148f155477396ea7b1182b4479a7fed00040dad47269d15"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 3918,
+      "sha256": "5b5eb2ed9d67ec0ba919376ab7e078461a94765e30105721006e13e6ed70be65"
+    },
+    {
+      "path": "havainne-j2.png",
+      "bytes": 2669831,
+      "sha256": "177009388a7cefd5dbd2cf45f05b7a199145af4af1c6dabfdac541811e79bc58"
+    }
+  ]
+}
