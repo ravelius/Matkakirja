@@ -447,3 +447,7 @@ kun 9fa3b99f1 on juna-196:ssa).
   (ydinäänet ryhmätasolla) ja PeliKomennot (testisini) pohjan apureiksi vai siirtoon? Jatkan isoja: ElavaKaupunki, RakettiAanet, DioraamaAanet,
   KaupunkiAanimaisemaSoitin, OpasSovitin, AjattelijatSovitin, PuluRealtime.
 - 02.1x: siirto 18 **5a7b25000** ElavaKaupunki (lokit, kerta-äänet, 2D-kerta; UusiLahde/OmaKerroin). Lista 10. Kärki 5a7b25000.
+- 02.2x: **b1b64e2cb** PohjaLahde.Tauko/Jatka: näkymän vaihdossa pohjan silmukat pausella ja jatkavat kartalla (kuten vanhat NakymanHaivyttimessä;
+  ilman tätä siirretyt silmukat olisivat jääneet hiljaisiksi). **fd2f26e59** KaupunkiAanimaisemaSoitin (kerrokset, varat, raitiovaunu, suhina,
+  kellot). Lista 9: AjattelijatSovitin, DioraamaAanet, OpasSovitin, RakettiAanet, PuluRealtime + PT:n kysymys (Aanisoitin, Puhe, UI/Aanet,
+  PeliKomennot). Kärki fd2f26e59, Linssit 1935/1935, tarkista.sh 0.
