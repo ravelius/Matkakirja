@@ -647,5 +647,65 @@
    "https://www.rijksmuseum.nl/en/collection/RP-P-1962-40",
    "https://en.wikipedia.org/wiki/The_Three_Crosses"
   ]
+ },
+ {
+  "tunnus": "SK-A-45",
+  "faktat": [
+   "Maalaus tehtiin arviolta Trippenhuisin takan päälle; nyt se on lainassa Hollannin tiedeakatemialla."
+  ],
+  "lahteet": [
+   "https://en.wikipedia.org/wiki/Portrait_of_Johanna_de_Geer_and_her_Children_as_Charity",
+   "https://en.wikipedia.org/wiki/Trippenhuis",
+   "https://www.rijksmuseum.nl/en/collection/SK-A-45"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
+ },
+ {
+  "tunnus": "SK-A-156",
+  "faktat": [
+   "Hobbema maalasi yli 30 kuvaa vesimyllyistä."
+  ],
+  "lahteet": [
+   "https://www.rijksmuseum.nl/en/collection/SK-A-156",
+   "https://www.rijksmuseum.nl/en/collection/SK-C-144",
+   "https://en.wikipedia.org/wiki/Meindert_Hobbema"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
+ },
+ {
+  "tunnus": "SK-A-3957",
+  "faktat": [
+   "Museon mukaan teosta on epäilty 1800-luvun pastissiksi, mutta museo pitää sitä Cuypin kädenjälkenä."
+  ],
+  "lahteet": [
+   "https://id.rijksmuseum.nl/20027732",
+   "https://www.rijksmuseum.nl/en/collection/SK-A-3957"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
+ },
+ {
+  "tunnus": "SK-A-2979",
+  "faktat": [
+   "Museon mukaan maalaus esittää Brouwersgrachtin ja Korte Prinsengrachtin kulmaa.",
+   "Museo sai sen C.D. Reichin testamenttilahjoituksena 1923."
+  ],
+  "lahteet": [
+   "https://www.rijksmuseum.nl/en/collection/SK-A-2979",
+   "https://www.rijksmuseum.nl/en/collection/RP-F-00-5307",
+   "https://www.gallerease.com/en/artworks/the-brouwersgracht-near-the-korte-prinsengracht-amsterdam__cc6261fd5f45"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
+ },
+ {
+  "tunnus": "SK-A-2280",
+  "faktat": [
+   "Scheveningenin satama valmistui 1904, ja museon mukaan kohde on pikemminkin merimerkki kuin majakka."
+  ],
+  "lahteet": [
+   "https://www.rijksmuseum.nl/en/collection/SK-A-2280",
+   "https://id.rijksmuseum.nl/200109477",
+   "https://en.wikipedia.org/wiki/Scheveningen"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
  }
 ]
