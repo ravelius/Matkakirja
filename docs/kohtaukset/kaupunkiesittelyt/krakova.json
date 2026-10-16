@@ -1,0 +1,78 @@
+[
+  {
+    "id": "krakova",
+    "esittely": "Kartan alue on Krakovan vanhakaupunki ja sen eteläpuoli. Mongolit tuhosivat kaupungin 1241, ja vuonna 1257 se sai ruutukaavan, jonka keskellä on noin 200 metriä leveä Rynek Główny -tori. Purettujen muurien paikalle perustettiin 1800-luvun alussa Planty-puisto. Muureista säilyi Barbakaani, joka rakennettiin noin 1498.\n\nWawelin kukkula on kalkkikiveä, ja sen sisällä on Lohikäärmeen luola. Kukkulan katedraalissa Puolan kuninkaat kruunattiin ja haudattiin. Kazimierz perustettiin 1335 kuningas Kasimir III:n käskystä omaksi kaupungikseen, ja se liitettiin Krakovaan noin 1800. Krakovan historiallinen keskusta on Unescon maailmanperintökohde vuodesta 1978. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 710,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Main_Square,_Krak%C3%B3w",
+        "title": "Wikipedia: Main Square, Kraków",
+        "tukee": "tori rakennettiin uudelleen 1257 Magdeburgin oikeuden aikaan; 3,79 ha"
+      },
+      {
+        "url": "https://www.krakow.pl/ccb_en/5774,artykul,the_main_market_square.html",
+        "title": "Krakow.pl: The Main Market Square (hakutulos)",
+        "tukee": "1257 kaupunkikaava; tori sivultaan hieman yli 200 m"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Krak%C3%B3w_Barbican",
+        "title": "Wikipedia: Kraków Barbican",
+        "tukee": "rakennettu noin 1498"
+      },
+      {
+        "url": "https://www.historyhit.com/locations/the-barbakan",
+        "title": "History Hit: The Barbakan (hakutulos)",
+        "tukee": "rakennettu 1498-1499"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Planty_Park",
+        "title": "Wikipedia: Planty Park",
+        "tukee": "perustettu 1822-1830 purettujen muurien paikalle"
+      },
+      {
+        "url": "https://www.inyourpocket.com/poland/krakow/venues/planty-park",
+        "title": "In Your Pocket: Planty Park (hakutulos)",
+        "tukee": "muurien ja vallihaudan paikalle 1820-luvulla; Barbakaani ja Floriańska-portti säästyivät"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Wawel_Castle",
+        "title": "Wikipedia: Wawel Castle",
+        "tukee": "kalkkikivikukkula, Smocza Jama, katedraali, Unesco 1978"
+      },
+      {
+        "url": "https://www.polskieszlaki.pl/en/wawel-castle-in-krakow/",
+        "title": "Polskie Szlaki: Wawel Castle in Kraków (hakutulos)",
+        "tukee": "Wawel, Lohikäärmeen luola, katedraali, monarkkien kruunajaiset ja hautaukset"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Kazimierz",
+        "title": "Wikipedia: Kazimierz",
+        "tukee": "perustettu 27.3.1335 Kasimir III:n toimesta; itsenäinen kaupunki 1800-luvun alkuun"
+      },
+      {
+        "url": "https://przewodnicypokrakowie.pl/en_krakow_christian_kazimierz.php",
+        "title": "Przewodnicy po Krakowie: Christian Kazimierz (hakutulos)",
+        "tukee": "Kazimierz osaksi Krakovaa 1800 (1802)"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Historic_Centre_of_Krak%C3%B3w",
+        "title": "Wikipedia: Historic Centre of Kraków (hakutulos)",
+        "tukee": "Unesco-kohde 1978"
+      }
+    ],
+    "pudotetut": [
+      "Entinen teksti: \"kaupunki paloi\" mongolien hyökkäyksessä: lähteet sanovat tuhoutui, muotoiltu \"tuhosivat\"",
+      "Torin \"Euroopan suurimpia keskiaikaisia\" -väite: lähteissä vain \"sometimes called\", jätetty pois",
+      "Kangashalli Sukiennice ja Mariankirkko: ajoitukset ristiriitaisia, jätetty pois",
+      "Collegium Maiuksen 1364: lähteet ristiriitaisia (hankinta 1400), jätetty pois"
+    ],
+    "ristiriidat": [
+      "Plantyn perustamisaika: 1822-1830 (Wikipedia) vs. 1815-1834 vs. muurien purku 1804-1810: käytetty \"1800-luvun alussa\"",
+      "Kazimierzin liittäminen Krakovaan: 1795 (statuksen menetys) / 1800 / 1802: käytetty \"noin 1800\"",
+      "Torin koko: 3,79 ha ja hieman yli 200 m sivu / 210 x 212 m (puolalainen opas): käytetty \"noin 200 metriä\"",
+      "Barbakaanin rakennusvuosi 1498 vs. 1498-1499: käytetty \"noin 1498\""
+    ],
+    "muutos_sk": "Säilytetty: 1241 hyökkäys, 1257 ruutukaava ja tori, Planty, Wawelin kalkkikivikukkula ja luola, Kazimierz. Poistettu: \"1820-luvulla istutettu\" (ristiriitaiset ajoitukset), tarkka torin mitta (200 m -> noin), kangashalli, Mariankirkko. Lisätty: Barbakaani 1498, Wawelin katedraali, Kazimierz 1335, Unesco 1978. \"Kaupunki paloi\" muutettu muotoon \"tuhosivat\"."
+  }
+]

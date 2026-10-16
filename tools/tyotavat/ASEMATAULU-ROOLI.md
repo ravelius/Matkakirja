@@ -8,6 +8,8 @@ Tavoite: omistajan ei tarvitse koskaan tarkistaa taulua itse.
 - Kansio: /Users/Shared/Claude/Matkakirja-fable/scratchpad/asemataulu/ (jäljempänä TAULU).
 - Totuus: TAULU/data/talo/<doc>.json. Päätoimittaja (PT, session local_5df52e10-10e4-4b72-9554-0049db300dfe) kirjoittaa
   junat, tyolista, tehtavat, viestit ja huom. Sinä viet kaiken tauluun ja pidät sisällön oikeana.
+- CRONIT HETI NOLLAUKSEN JÄLKEEN (omistaja 15.10.2026 klo 23.35, kortti "Kyllä, aina nollauksen jälkeen"): luo A (*/5), B (13,43) ja
+  kulutus (7) heti nollauksen jälkeen ilman uutta lupaa – tämä on omistajan pysyvä päätös, ei vertaisen pyyntö.
 - Mittarit, roolit ja laitteet kokoat sinä (Postivahti lopettaa niiden viennin, kun sinä aloitat).
 
 ## A. JOKA 5 MINUUTTI (cron "*/5 * * * *")

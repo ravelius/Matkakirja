@@ -1197,5 +1197,26 @@ export const MAASTOKOHTEET_FRA = [
       fakta: 'Dune du Pilat mitattiin 106,6 metrin korkuiseksi vuonna 2018 — Euroopan korkein hiekkadyyni.',
     },
   },
+  {
+    id: 'lioninlahti',
+    nimi: 'Lioninlahti',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mikä on mistral-tuuli?',
+      'Mikä Camargue on?',
+    ],
+    nappi: 'Mistralin ja tramontanen lahti',
+    // 4 E / 42.8 N — lahden ulappa Languedocin rannikon edustalla, Sètesta etelään
+    laudat: {
+      maailmankartta: { x: 5966.7, y: 1691.4 },
+      europe: { x: 288, y: 768 },
+    },
+    teksti: 'Lioninlahti on Välimeren laaja lahti Ranskan etelärannikolla; se ulottuu lännessä '
+      + 'Espanjan Katalonian rannikolle ja idässä Toulonin tienoille. Alue tunnetaan kylmistä, '
+      + 'puuskaisista tuulista, mistralista ja tramontanesta. Nimi mainitaan jo keskiajalla, ja '
+      + 'sen arvellaan viittaavan äkillisten, rajujen tuulten leijonamaiseen vaaraan.',
+    lahde: 'en-Wikipedia "Gulf of Lion", johdanto-osa ja Etymology-osio; Store norske leksikon '
+      + '"Løvebukta" (tarkistettu 16.10.2026).',
+  },
 ];
 

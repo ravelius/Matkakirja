@@ -83,6 +83,14 @@
  * -ajon NE_LAND-geodatalla): tools/tarkista-laudan-pisteet.mjs jatkaa
  * siis raportoimatta näitä yhdeksää, kunnes joku uusintaa laudan.
  *
+ * VIIDES KIERROS 15.10.2026 (Karttaseppä): junien 193 ja 193b yksitoista
+ * pääkaupunkipysäkkiä (#4607, #4612) jäivät ilman pistettä. Bern,
+ * Bratislava ja Podgorica siirrettiin laudalla oman maansa sisällä
+ * 75–81 km (minCityDistance) ja Zagreb 23 km, joten pallolauta näytti ne
+ * väärässä paikassa; muut seitsemän ovat laudalla 0 km:n päässä, mutta
+ * vienti tarvitsee pisteen kaikille (23.9.2026). Wikidata P625
+ * tools/tarkista-laudan-pisteet.mjs:llä.
+ *
  * Vartio: tools/tarkista-laudan-pisteet.mjs lukee tämän kentän ja
  * vaatii, että yli 15 km:n poikkeamia jää vain alueille.
  */
@@ -112,13 +120,16 @@ export const PALLON_KAUPUNKIPISTEET = {
   bananal: { lat: -10.801, lon: -50.161 },    // Ilha do Bananal (alue, laudan oma piste — 7.9.2026 linjaus)
   bangkok: { lat: 13.75, lon: 100.517 },      // Bangkok, 6 km
   barcelona: { lat: 41.388, lon: 2.17 },      // Barcelona, 44 km
+  belgrad: { lat: 44.818, lon: 20.457 },      // Belgrad, 0 km — 15.10.
   bergen: { lat: 60.392, lon: 5.323 },        // Bergen, 0 km
   berliini: { lat: 52.517, lon: 13.383 },     // Berliini, 2 km
   bermuda: { lat: 32.32, lon: -64.74 },       // Bermuda, 3 km
+  bern: { lat: 46.948, lon: 7.447 },          // Bern, 78,0 km — 15.10.
   birdsville: { lat: -25.899, lon: 139.352 }, // Birdsville (en-Wikipedia), 5 km
   boavista: { lat: 2.82, lon: -60.672 },      // Boa Vista, 0 km
   bogota: { lat: 4.61, lon: -74.082 },        // Bogotá, 11 km
   borneo: { lat: -1.0, lon: 113.9 },         // Borneo (alue): Keski-Kalimantan, Indonesia — PT 10.10.2026: laudan oma piste oli Kuchingissa (Malesia)
+  bratislava: { lat: 48.152, lon: 17.109 },   // Bratislava, 80,7 km — 15.10.
   brisbane: { lat: -27.468, lon: 153.028 },   // Brisbane, 42,9 km
   broome: { lat: -17.962, lon: 122.236 },     // Broome, 18,5 km
   bryssel: { lat: 50.847, lon: 4.353 },       // Bryssel, 0 km
@@ -132,6 +143,7 @@ export const PALLON_KAUPUNKIPISTEET = {
   cayenne: { lat: 4.939, lon: -52.332 },      // Cayenne, 48,6 km
   chennai: { lat: 13.084, lon: 80.27 },       // Chennai, 53,2 km
   chicago: { lat: 41.882, lon: -87.628 },     // Chicago, 3 km
+  chisinau: { lat: 47.023, lon: 28.835 },     // Chișinău, 0 km — 15.10.
   christchurch: { lat: -43.531, lon: 172.636 }, // Christchurch, 65,4 km
   churchill: { lat: 58.767, lon: -94.167 },   // Churchill, 15,7 km
   colombo: { lat: 6.934, lon: 79.843 },       // Colombo, 96,1 km
@@ -239,6 +251,8 @@ export const PALLON_KAUPUNKIPISTEET = {
   mexico: { lat: 19.411, lon: -99.131 },      // Mexico City, 21,5 km
   miami: { lat: 25.788, lon: -80.224 },       // Miami, 66,1 km
   milfordsound: { lat: -44.617, lon: 167.867 }, // Milford Sound, 81,3 km — 19.9.
+  minsk: { lat: 53.902, lon: 27.562 },        // Minsk, 0 km — 15.10.
+  monaco: { lat: 43.731, lon: 7.42 },         // Monaco, 0 km — 15.10.
   monterrey: { lat: 25.684, lon: -100.318 },  // Monterrey, 3 km
   montevideo: { lat: -34.906, lon: -56.191 }, // Montevideo, 17,8 km
   montreal: { lat: 45.546, lon: -73.639 },    // Montreal, 75,2 km
@@ -271,6 +285,7 @@ export const PALLON_KAUPUNKIPISTEET = {
   perth: { lat: -31.956, lon: 115.86 },       // Perth, 45,1 km
   petra: { lat: 30.329, lon: 35.442 },        // Petra, 86,4 km
   pietari: { lat: 59.95, lon: 30.317 },       // Pietari, 1 km
+  podgorica: { lat: 42.441, lon: 19.263 },    // Podgorica, 74,6 km — 15.10.
   portmoresby: { lat: -9.479, lon: 147.149 }, // Port Moresby, 35,2 km
   portoalegre: { lat: -30.033, lon: -51.23 }, // Porto Alegre, 44,1 km
   portovelho: { lat: -8.762, lon: -63.904 },  // Porto Velho, 0 km
@@ -311,6 +326,7 @@ export const PALLON_KAUPUNKIPISTEET = {
   singapore: { lat: 1.3, lon: 103.8 },        // Singapore, 59,8 km
   sisilia: { lat: 38.123, lon: 13.376 },      // Sisilia (alue, laudan oma piste — 7.9.2026 linjaus)
   sitka: { lat: 57.052, lon: -135.339 },      // Sitka, 89,4 km
+  skopje: { lat: 41.996, lon: 21.432 },       // Skopje, 0 km — 15.10.
   sofia: { lat: 42.698, lon: 23.322 },        // Sofia, 2 km
   soul: { lat: 37.56, lon: 126.99 },          // Soul, 4 km
   sthelena: { lat: -13.76, lon: -4.624 },     // St. Helena (alue, laudan oma piste — 7.9.2026 linjaus)
@@ -327,6 +343,7 @@ export const PALLON_KAUPUNKIPISTEET = {
   tanger: { lat: 35.77, lon: -5.803 },        // Tanger, 10 km
   teheran: { lat: 35.689, lon: 51.39 },       // Teheran, 2 km
   timbuktu: { lat: 16.773, lon: -2.999 },     // Timbuktu, 126,2 km
+  tirana: { lat: 41.328, lon: 19.818 },       // Tirana, 0 km — 15.10.
   titicaca: { lat: -15.825, lon: -69.325 },   // Titicaca, 4 km
   tokio: { lat: 35.689, lon: 139.692 },       // Tokio, 1 km
   toronto: { lat: 43.67, lon: -79.387 },      // Toronto, 3 km
@@ -337,6 +354,7 @@ export const PALLON_KAUPUNKIPISTEET = {
   tukholma: { lat: 59.329, lon: 18.069 },     // Tukholma, 1 km
   ulanbator: { lat: 47.917, lon: 106.917 },   // Ulan Bator, 113 km
   uluru: { lat: -25.345, lon: 131.036 },      // Uluru, 107,7 km — 19.9.
+  vaduz: { lat: 47.141, lon: 9.522 },         // Vaduz, 0 km — 15.10.
   valletta: { lat: 35.898, lon: 14.512 },     // Valletta, 0 km
   valparaiso: { lat: -33.046, lon: -71.62 },  // Valparaíso, 39,5 km
   vancouver: { lat: 49.264, lon: -123.139 },  // Vancouver, 31,4 km
@@ -356,4 +374,5 @@ export const PALLON_KAUPUNKIPISTEET = {
   yellowknife: { lat: 62.442, lon: -114.397 }, // Yellowknife, 6 km
   yellowstone: { lat: 44.6, lon: -110.5 },    // Yellowstone, 0 km
 
+  zagreb: { lat: 45.813, lon: 15.977 },       // Zagreb, 23,4 km — 15.10.
 };

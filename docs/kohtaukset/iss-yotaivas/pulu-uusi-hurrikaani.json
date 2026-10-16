@@ -1,0 +1,104 @@
+[
+ {
+  "kysymys": "Miltä hurrikaanin silmä näyttää avaruudesta?",
+  "vastaus": "Ylhäältä silmä on suunnilleen pyöreä, melkein pilvetön aukko, jota kiertää tiheiden ukkospilvien rengas, silmänseinämä. Syyskuun 12. päivänä 2018 ESA:n astronautti Alexander Gerst kuvasi asemalta voimakkaan hurrikaani Florencen silmää suoraan ylhäältä, noin 400 kilometrin korkeudesta. Toinen tunnettu kuva on Ed Lun 13. syyskuuta 2003 ottama kuva hurrikaani Isabelin silmästä; silloin myrsky oli neljännen tai viidennen luokan hurrikaani. Silmä on tavallisesti noin 30–65 kilometriä leveä. Sen keskellä ilma painuu alas, mikä estää pilvien syntymisen, ja tuuli on heikkoa, kun taas silmänseinämässä puhaltavat myrskyn kovimmat tuulet. Tyven paikka siis syntyy myrskyn voimakkaimman osan keskelle.",
+  "lahteet": [
+   {
+    "url": "https://www.esa.int/ESA_Multimedia/Images/2018/09/Hurricane_Florence_eye",
+    "title": "Hurricane Florence eye - ESA"
+   },
+   {
+    "url": "https://wsvn.com/news/us-world/astronauts-aboard-iss-had-to-use-super-wide-angle-lens-to-photograph-massive-hurricane-florence/",
+    "title": "Astronauts aboard ISS had to use super wide-angle lens to photograph massive Hurricane Florence - WSVN"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Eye_(cyclone)",
+    "title": "Eye (cyclone) - Wikipedia"
+   },
+   {
+    "url": "https://noaa.gov/node/10857",
+    "title": "Hurricane anatomy: eye and eyewall - NOAA"
+   },
+   {
+    "url": "https://www.aoml.noaa.gov/general/graphics/lib/storm.html",
+    "title": "Anatomy of a hurricane - NOAA AOML"
+   },
+   {
+    "url": "https://www.nhc.noaa.gov/aboutgloss.shtml",
+    "title": "Glossary of NHC terms - NOAA National Hurricane Center"
+   },
+   {
+    "url": "https://commons.wikimedia.org/wiki/File:Hurricane_Isabel_eye_from_ISS.jpg",
+    "title": "Hurricane Isabel eye from ISS (NASA, Ed Lu 13.9.2003) - Wikimedia Commons"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Hurricane_Isabel",
+    "title": "Hurricane Isabel - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Alexander Gerst (ESA) kuvasi Florencen silmän ISS:ltä 12.9.2018",
+    "lahde1": "ESA, Hurricane Florence eye: kuvaaja ESA/NASA-A. Gerst, 12.9.2018, ISS noin 400 km korkeudessa, Gerstin sanat 'category 4 hurricane', 'gaping eye'",
+    "lahde2": "WSVN: Gerst, 12.9.2018, Category 4, kuva otettu 400 km suoraan silmän yläpuolelta",
+    "huom": "V. Objektiivia ei mainita vastauksessa (ESA-sivu ei kerro; WSVN ja hakutulos: 'super wide-angle'). Kuvan korkeus 'noin 400 km' on ESA:n arvio. Myrskyn silmän tarkkaa leveyttä Florencella ei löytynyt, joten sitä ei väitetä. NASA Earth Observatory -sivu (92744) ohjautui yleissivulle eikä avautunut; sen hakutuloksen mukaan tuulet 125 mph (205 km/h), keskipaine 948 mb, ei käytetty."
+   },
+   {
+    "vaite": "Silmän tyypillinen leveys noin 30–65 km",
+    "lahde1": "Wikipedia, Eye (cyclone): 'about 30-65 km' (19-40 mailia)",
+    "lahde2": "NOAA (noaa.gov/node/10857): tyypillisesti 20-40 mailia (32-64 km)",
+    "huom": "V. Vaihteluväli on laaja: hakutuloksen mukaan 8 km:stä yli 200 km:iin, ja Wikipedia mainitsee pienimmäksi Wilman 3,7 km ja suurimmaksi Carmenin 370 km (Winnie-luku ristiriitainen). Vastaus sanoo vain 'tavallisesti'."
+   },
+   {
+    "vaite": "Silmän keskellä ilma painuu alas ja haihduttaa pilviä / silmä melkein pilvetön",
+    "lahde1": "NOAA (noaa.gov/node/10857): ilma laskeutuu keskellä, silmä 'mostly cloud-free', laskeutuminen estää pilvien muodostumisen",
+    "lahde2": "NOAA AOML (storm.html): osa ilmasta eyewallin huipulta (n. 50 000 jalkaa) siirtyy sisäänpäin ja laskeutuu silmään, jolloin silmä on pilvetön; Wikipedia: ilma laskeutuu keskellä, 'mostly rain-free area'",
+    "huom": "V. Ilmiön fysiikkaa (pyörimisen aiheuttama alipaine) ei viedä tekstiin. Sana 'haihduttaa' on yksinkertaistus: lähteet sanovat, että laskeutuminen estää/vähentää pilvien muodostumista; AOML-lähteen sanamuoto tarkistettava ennen julkaisua, jos halutaan tiukempi."
+   },
+   {
+    "vaite": "Tuuli silmässä yleensä enintään 24 km/h (15 mph)",
+    "lahde1": "NOAA (noaa.gov/node/10857): 'winds usually do not exceed 15 mph (24 km/h)'",
+    "lahde2": "NHC-sanasto: silmä on 'comparatively light winds' -alue; AOML: 'relatively calm'",
+    "huom": "Heikosti tuettu: luku 24 km/h on vain yhdessä avatussa lähteessä; toinen vahvistaa vain laadullisesti (heikko tuuli). Hakutuloksessa toinen sivu esitti '<20 mph'. Harkitse luvun pudottamista ja sanamuotoa 'tuuli on heikkoa'."
+   },
+   {
+    "vaite": "Silmänseinämä = tiheiden ukkospilvien rengas, jossa myrskyn kovimmat tuulet",
+    "lahde1": "NHC-sanasto: eyewall 'organized band or ring of cumulonimbus clouds that surround the eye'; radius of maximum winds yleensä silmänseinämän sisäreunalla",
+    "lahde2": "NOAA (noaa.gov/node/10857): torni-ukkospilvien rengas, ilma nousee, kova sade ja yleensä voimakkaimmat tuulet; Wikipedia: 'most severe weather and strongest winds'",
+    "huom": "V."
+   },
+   {
+    "vaite": "Silmä näyttää ylhäältä suunnilleen pyöreältä",
+    "lahde1": "Wikipedia, Eye (cyclone): silmänseinämät tyypillisesti ympyränmuotoisia, joskus monikulmioita",
+    "lahde2": "NHC-sanasto: silmä on 'roughly circular area'",
+    "huom": "V."
+   },
+   {
+    "vaite": "Pudotettu: Hurricane Dorian 2019 (Nick Hague, Christina Koch, 2.9.2019)",
+    "lahde1": "ScienceAlert (Futurism, 3.9.2019): Hague twiittasi silmän kuvan 2.9.2019, Koch kuvasi alle kaksi tuntia myöhemmin",
+    "lahde2": "Hakutulokset (WLOS, AIAA, BGR): sama sisältö, ei avattu",
+    "huom": "Kuvaajat ja päivä vahvistuvat, mutta vastaus ei tarvitse Dorianin lukua; jätetty pois pituuden vuoksi. Irma 2017 ei tarkistettu."
+   },
+   {
+    "vaite": "SK-muokkaus",
+    "lahde1": "",
+    "lahde2": "",
+    "huom": "SK: tuulen 24 km/h (yksi lähde) pois, haihduttaa pilviä -> estää pilvien syntymisen"
+   },
+   {
+    "vaite": "Ed Lu kuvasi Isabelin silmän asemalta 13.9.2003; myrsky silloin 4. luokan hurrikaani",
+    "lahde1": "Commons-kuvasivu (NASA-kuvaus: Ed Lu, 11.18 UTC 13.9.2003, heikentynyt Category 4:ksi huipun Category 5 jälkeen)",
+    "lahde2": "en.wikipedia.org/wiki/Hurricane_Isabel (13.9. alkuun heikentyi vahvaksi Category 4:ksi, myöhemmin samana päivänä Category 5 uudelleen)",
+    "huom": "PT 15.10.: Florence 12.9.2018 ei varmasti enää 4. luokka -> \"voimakkaan\"; kortin kuva on Isabel (LS1), lause lisätty. Isabelin silmän leveys (64 km) vain Wikipediassa, ei käytetty.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "Isabelin luokka 13.9.2003",
+    "lahde1": "Commons (NASA-kuvaus): Category 4 kuvaushetkellä",
+    "lahde2": "en.wikipedia.org/wiki/Hurricane_Isabel: 13.9. alussa vahva Category 4, myöhemmin samana päivänä Category 5",
+    "huom": "PT 15.10.: Isabel vaihteli 11.–14.9. 4. ja 5. luokan välillä, lähteestä riippuen kumpi tahansa -> muotoiltu \"neljännen tai viidennen luokan\".",
+    "korjaus": ""
+   }
+  ]
+ }
+]

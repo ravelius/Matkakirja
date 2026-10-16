@@ -574,6 +574,16 @@
   "taytto": 0.252,
   "reuna": 0
  },
+ "giza-pyramidit.webp": {
+  "sha": "d3a3d22f16ea7bd3",
+  "taytto": 0.27,
+  "reuna": 0
+ },
+ "gronlanti-jaavuoret.webp": {
+  "sha": "017a36c8f3e3f7ac",
+  "taytto": 0.225,
+  "reuna": 0
+ },
  "helsinki-johanneksenkirkko.webp": {
   "sha": "227d798d70855402",
   "taytto": 0.198,
@@ -1124,6 +1134,11 @@
   "taytto": 0.305,
   "reuna": 0
  },
+ "marrakech-koutoubia.webp": {
+  "sha": "6a3997566a5cff12",
+  "taytto": 0.217,
+  "reuna": 0
+ },
  "moskova-bolsoi-teatteri.webp": {
   "sha": "ae323eaea3c6474f",
   "taytto": 0.426,
@@ -1527,6 +1542,16 @@
  "rooma-trevin-suihkulahde.webp": {
   "sha": "980622e9522965d1",
   "taytto": 0.546,
+  "reuna": 0
+ },
+ "sahara-karavaani.webp": {
+  "sha": "ad8796920ab6ad92",
+  "taytto": 0.19,
+  "reuna": 0
+ },
+ "samarkand-registan.webp": {
+  "sha": "856240288d14ff50",
+  "taytto": 0.327,
   "reuna": 0
  },
  "sarajevo-bascarsija.webp": {

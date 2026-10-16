@@ -1,0 +1,686 @@
+[
+ {
+  "kysymys": "Mikä oli Kharybdis?",
+  "vastaus": "Kharybdis oli Homeroksen Odysseiassa esiintyvä merihirviö, joka oli oikeastaan valtava vesipyörre. Antiikin kirjoittajat sijoittivat sen Messinansalmeen Sisilian rannikolle, vastapäätä Skyllan kalliota. Kertomusten mukaan se nieli vettä ja sylki sen ulos kolme kertaa päivässä. Salmessa on oikeasti pyörre, jossa virtaukset kohtaavat, mutta se on vaarallinen vain pienille veneille.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Charybdis",
+    "title": "Charybdis - Wikipedia"
+   },
+   {
+    "url": "https://www.theoi.com/Pontios/Kharybdis.html",
+    "title": "Kharybdis - Theoi Greek Mythology"
+   },
+   {
+    "url": "https://www.britannica.com/topic/Scylla-and-Charybdis",
+    "title": "Scylla and Charybdis - Britannica (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Kharybdis on Odysseian merihirviö / pyörre",
+    "lahde1": "Wikipedia: Charybdis",
+    "lahde2": "Theoi: Odysseia kirja 12",
+    "huom": ""
+   },
+   {
+    "vaite": "Sijoitus Messinansalmeen, vastapäätä Skyllan kalliota",
+    "lahde1": "Wikipedia: Charybdis",
+    "lahde2": "Theoi",
+    "huom": "Homeros ei itse nimeä salmea; klassisella ajalla sijoitus vakiintui Messinansalmeen."
+   },
+   {
+    "vaite": "Nielee ja sylkee vettä kolme kertaa päivässä",
+    "lahde1": "Wikipedia: Charybdis",
+    "lahde2": "Theoi",
+    "huom": "Ilmaistu \"kertomusten mukaan\", ei yksiselitteisesti Homeroksen tekstinä."
+   },
+   {
+    "vaite": "Salmessa todellinen pyörre, vaarallinen vain pienille veneille",
+    "lahde1": "Wikipedia: Charybdis",
+    "lahde2": "WebSearch-tiivistelmä (hakutulos)",
+    "huom": "Toinen lähde vain hakutuloksen tiivistelmä."
+   }
+  ],
+  "kohteet": [
+   "ita/messinansalmi"
+  ]
+ },
+ {
+  "kysymys": "Miksi salmen yli ei vieläkään kulje siltaa?",
+  "vastaus": "Koska hanke on yhä jumissa lupa- ja rahoituskiistoissa. Hallitus hyväksyi sillan elokuussa 2025, mutta Italian tilintarkastustuomioistuin kieltäytyi lokakuussa vahvistamasta päätöstä. Hankkeen kustannukset ovat kolminkertaistuneet, ja EU:n hankintasääntöjen mukaan yli 50 prosentin nousu vaatisi uuden kilpailutuksen. Siltaa on suunniteltu, hylätty ja herätetty henkiin jo vuosikymmeniä. Silta yhdistäisi Italian saappaan kärjen Sisiliaan.",
+  "sanoja": 50,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Strait_of_Messina_Bridge",
+    "title": "Strait of Messina Bridge - Wikipedia"
+   },
+   {
+    "url": "https://www.ilpost.it/2025/10/31/rilievi-corte-dei-conti-progetto-ponte-stretto-messina/",
+    "title": "Rilievi della Corte dei conti sul progetto del ponte sullo Stretto - Il Post"
+   },
+   {
+    "url": "https://quifinanza.it/attualita/ponte-stretto-corte-conti-bocciatura-cipess/935458/",
+    "title": "Ponte sullo Stretto bocciato dalla Corte dei Conti - QuiFinanza (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Hallitus (CIPESS) hyväksyi sillan 6.8.2025",
+    "lahde1": "Wikipedia: Strait of Messina Bridge",
+    "lahde2": "Il Post (elokuu 2025)",
+    "huom": ""
+   },
+   {
+    "vaite": "Tilintarkastustuomioistuin kieltäytyi vahvistamasta lokakuussa 2025 (29.10.)",
+    "lahde1": "Wikipedia",
+    "lahde2": "Il Post; QuiFinanza (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Työkustannukset noin 3,8 -> 10,5 mrd euroa",
+    "lahde1": "Il Post",
+    "lahde2": "ei toista itsenäistä lähdettä; Wikipedia antaa muita lukuja (3,9 mrd 2006, 13,5 mrd 2026)",
+    "huom": "Luku kolmannen osapuolen raportoimana Il Postista; toinen lähde ei vahvista juuri tätä lukua. Pidetään, koska suunta (iso nousu) vahvistuu molemmista; vaihtoehtoisesti voi korvata \"kustannukset ovat kolminkertaistuneet\"."
+   },
+   {
+    "vaite": "EU-säännöt: yli 50 % nousu vaatii uuden kilpailutuksen",
+    "lahde1": "Il Post",
+    "lahde2": "Wikipedia (Court of Audit: alleged 50% increase in contract value); QuiFinanza (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Hanke suunniteltu/hylätty/herätetty henkiin vuosikymmeniä",
+    "lahde1": "Wikipedia: aikajana 1997, 2006, 2009, 2013, 2023, 2025",
+    "lahde2": "",
+    "huom": "Aikajana vain Wikipediasta; muotoilu yleinen."
+   }
+  ],
+  "kohteet": [
+   "ita/messinansalmi"
+  ]
+ },
+ {
+  "kysymys": "Mistä limoncellon sitruunat tulevat?",
+  "vastaus": "Pääosin Etelä-Italiasta, erityisesti Campanian Sorrenton ja Amalfin rannikoilta. Perinteisessä limoncellossa käytetään Sorrenton sitruunaa tai Amalfin rannikon sfusato amalfitano -sitruunaa, ja molemmilla on suojattu maantieteellinen merkintä, IGP. Likööriin otetaan vain sitruunan keltainen kuori, ei kitkerää valkoista osaa. Amalfin sitruunat ovat pitkänomaisia ja suippopäisiä, mistä nimi sfusato, ja ne poimitaan jyrkillä rinteillä käsin.",
+  "sanoja": 51,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Limoncello",
+    "title": "Limoncello - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Sorrento_lemon",
+    "title": "Sorrento lemon - Wikipedia"
+   },
+   {
+    "url": "https://www.solosophie.com/amalfi-and-sorrento-lemons/",
+    "title": "Amalfi and Sorrento lemons - Solosophie"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Limoncellon tuotanto keskittyy Napolinlahden, Amalfin rannikon, Sisilian ja Gargano alueille",
+    "lahde1": "Wikipedia: Limoncello",
+    "lahde2": "Solosophie",
+    "huom": "Vastaus rajaa kysymyksen Campaniaan, koska nostokortti koskee Amalfia."
+   },
+   {
+    "vaite": "Perinteinen laji Femminello St. Teresa eli Sorrenton sitruuna; sfusato amalfitano",
+    "lahde1": "Wikipedia: Limoncello / Sorrento lemon",
+    "lahde2": "Solosophie",
+    "huom": ""
+   },
+   {
+    "vaite": "Sfusato amalfitano ja Sorrenton sitruuna ovat IGP-suojattuja",
+    "lahde1": "Solosophie",
+    "lahde2": "WebSearch-tiivistelmä (hakutulos)",
+    "huom": "Wikipedian Limoncello- ja Sorrento lemon -sivut eivät (luetulta osalta) mainitse IGP:tä; jäi kahden toissijaisen lähteen varaan. Heikoin kohta."
+   },
+   {
+    "vaite": "Vain keltainen kuori käytetään",
+    "lahde1": "Wikipedia: Sorrento lemon (kuoren eteeriset öljyt)",
+    "lahde2": "Reseptilähteet (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Sfusato = pitkänomainen, suippopäinen",
+    "lahde1": "Solosophie",
+    "lahde2": "WebSearch-tiivistelmä (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Amalfin sitruunat poimitaan käsin rinteiltä",
+    "lahde1": "Solosophie",
+    "lahde2": "",
+    "huom": "Vain yksi lähde; ei kriittinen luku, mutta kirjataan."
+   }
+  ],
+  "kohteet": [
+   "ita/amalfin-rannikko"
+  ]
+ },
+ {
+  "kysymys": "Kuka ryösti Amalfin vuonna 1137?",
+  "vastaus": "Pisalaiset. Aiemmin Amalfi oli ollut itsenäinen ja vaikutusvaltainen merivalta, tasavalta. Pisa oli sen kauppakilpailija, ja se ryösti kaupungin sekä vuonna 1135 että 1137. Sitä ennen Sisilian normannit olivat jo alistaneet Amalfin vuonna 1131. Näiden iskujen jälkeen Amalfin loiston aika oli ohi, ja kaupunki menetti asemansa Välimeren merkittävänä kauppakaupunkina.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Republic_of_Amalfi",
+    "title": "Republic of Amalfi - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Amalfi",
+    "title": "Amalfi - Wikipedia"
+   },
+   {
+    "url": "https://www.britannica.com/place/Amalfi",
+    "title": "Amalfi - Britannica (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Pisa ryösti Amalfin 1135 ja 1137",
+    "lahde1": "Wikipedia: Republic of Amalfi",
+    "lahde2": "Britannica (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Amalfi alistettiin 1131 (normannit)",
+    "lahde1": "Wikipedia: Republic of Amalfi (kapina 1130, alistettu 1131)",
+    "lahde2": "Britannica (hakutulos): Roger II Sisilialainen",
+    "huom": "Wikipedia ei nimeä Rogeria; sanamuoto \"Sisilian normannit\"."
+   },
+   {
+    "vaite": "Amalfi oli itsenäinen tasavalta/merivalta ennen iskuja",
+    "lahde1": "Wikipedia: Republic of Amalfi",
+    "lahde2": "Britannica (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Pisa oli kauppakilpailija",
+    "lahde1": "Wikipedia: Amalfi (hakutulos)",
+    "lahde2": "Britannica (hakutulos)",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "ita/amalfin-rannikko"
+  ]
+ },
+ {
+  "kysymys": "Millä rannikolla Tropea sijaitsee?",
+  "vastaus": "Tropea on Calabrian länsirannikolla Tyrrhenanmeren äärellä, Sant'Eufemian lahden reunalla. Tämä rannikko tunnetaan nimellä Costa degli Dei eli jumalten rannikko, ja se ulottuu Nicoterasta Pizzoon. Rannikon valkoiset hiekkarannat ja meren yllä kohoavat kalliot ovat sen tunnusmerkkejä. Kaupunki on rakentunut kalliotasanteelle meren yläpuolelle. Sen tunnetuin näkymä on kallionkielekkeellä oleva Santa Maria dell'Isola -kirkko.",
+  "sanoja": 51,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Tropea",
+    "title": "Tropea - Wikipedia"
+   },
+   {
+    "url": "https://www.italia.it/it/calabria/cosa-fare/costa-degli-dei-motivi-per-visitarla-inverno",
+    "title": "Costa degli Dei - Italia.it"
+   },
+   {
+    "url": "https://www.greenme.it/viaggi/italia/tropea-la-sera/",
+    "title": "Tropea la sera - GreenMe (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Tropea Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla",
+    "lahde1": "Wikipedia: Tropea",
+    "lahde2": "Italia.it / matkailulähteet (hakutulos)",
+    "huom": "Italia.it ei nimeä merta, mutta kuvaa Calabrian rannikon."
+   },
+   {
+    "vaite": "Costa degli Dei ulottuu Nicoterasta Pizzo Calabroon",
+    "lahde1": "Italia.it",
+    "lahde2": "GreenMe/Siviaggia (hakutulos): Tropea Costa degli Dein sydämessä",
+    "huom": ""
+   },
+   {
+    "vaite": "Valkoiset hiekkarannat ja kalliot meren yllä",
+    "lahde1": "Italia.it",
+    "lahde2": "GreenMe/Siviaggia (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Kaupunki kalliotasanteella meren yllä",
+    "lahde1": "WebSearch-tiivistelmä (hakutulos)",
+    "lahde2": "Wikipedia: Tropea (asukasluku/kuvaus)",
+    "huom": "Rajattu kuvailevaan sanamuotoon."
+   }
+  ],
+  "kohteet": [
+   "ita/tropea"
+  ]
+ },
+ {
+  "kysymys": "Millaisella kalliolla Santa Maria dell'Isola on?",
+  "vastaus": "Hiekkakivikalliolla. Kirkko seisoo hiekkakivestä koostuvalla kalliolla, joka oli ennen täysin meren ympäröimä ja jota kutsutaan siksi nimellä Isola eli saari. Nykyään kallio on kiinni mantereessa hiekkakannaksella, ja kirkolle noustaan portaita suoraan merenrannalta. Alueen maanjäristykset, erityisesti vuoden 1905 järistys, ovat vaurioittaneet rakennusta, joten sen nykyinen ulkoasu on myöhempää perua.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://it.wikipedia.org/wiki/Santuario_di_Santa_Maria_dell%27Isola",
+    "title": "Santuario di Santa Maria dell'Isola - Wikipedia (italia)"
+   },
+   {
+    "url": "https://www.avygeo.com/it/guida/attivita/88568-santuario-di-santa-maria-dell-isola",
+    "title": "Santuario di Santa Maria dell'Isola - Avygeo"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Kallio on hiekkakiveä (arenaria)",
+    "lahde1": "it.wikipedia: scoglio di arenaria detto Isola",
+    "lahde2": "Avygeo: sperone di arenaria",
+    "huom": "Avygeo on matkailuopas, ei geologinen lähde."
+   },
+   {
+    "vaite": "Kallio oli ennen saari, nyt kiinni mantereessa hiekkakannaksella",
+    "lahde1": "it.wikipedia",
+    "lahde2": "Avygeo",
+    "huom": ""
+   },
+   {
+    "vaite": "Kirkolle portaat merenrannalta",
+    "lahde1": "Italia.it (staircase climbs from the sea)",
+    "lahde2": "it.wikipedia (portaat rakennettu n. 1810)",
+    "huom": ""
+   },
+   {
+    "vaite": "1905 maanjäristys vaurioitti kirkkoa",
+    "lahde1": "it.wikipedia",
+    "lahde2": "Avygeo",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "ita/tropea"
+  ]
+ },
+ {
+  "kysymys": "Kuinka kapea Kotorinlahti on kapeimmillaan?",
+  "vastaus": "Noin 340 metriä. Kapein kohta on Verigen salmi, jossa vastarannat ovat alle puolen kilometrin päässä toisistaan. Luku vaihtelee hieman mittauskohdan mukaan, ja koko lahti on pituudeltaan noin 28 kilometriä. Salmi erottaa lahden sisemmän osan Tivatinlahdesta, joten vuorten ympäröimä sisälahti on ikään kuin ahtaan portin takana. Tämä ahdas kohta tekee Kotorinlahdesta poikkeuksellisen suojaisen.",
+  "sanoja": 52,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Bay_of_Kotor",
+    "title": "Bay of Kotor - Wikipedia"
+   },
+   {
+    "url": "https://seabourn.com/en_US/ports/scenic-cruising-bay-of-kotor.html",
+    "title": "Scenic cruising Bay of Kotor - Seabourn"
+   },
+   {
+    "url": "https://mne.today/?p=10612",
+    "title": "mne.today (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Verigen salmi on kapeimmillaan 340 m",
+    "lahde1": "Wikipedia: Bay of Kotor",
+    "lahde2": "Seabourn",
+    "huom": "Matkailulähde mne.today (hakutulos) mainitsee salmen päässä 283 m, mikä viittaa eri mittauskohtaan; siksi \"noin\" ja maininta mittauskohdasta."
+   },
+   {
+    "vaite": "Salmi erottaa sisälahden Tivatinlahdesta",
+    "lahde1": "Wikipedia: Bay of Kotor",
+    "lahde2": "WebSearch-tiivistelmä (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Suojainen lahti",
+    "lahde1": "",
+    "lahde2": "",
+    "huom": "Päätelmä kapeudesta, ei erillinen faktaväite."
+   },
+   {
+    "vaite": "Lahden pituus noin 28 km",
+    "lahde1": "Wikipedia: Bay of Kotor",
+    "lahde2": "nostokortin nykyinen teksti (ei itsenäinen)",
+    "huom": "Toinen itsenäinen lähde puuttuu; luku noin-muodossa."
+   }
+  ],
+  "kohteet": [
+   "mne/kotorinlahti"
+  ]
+ },
+ {
+  "kysymys": "Minkä vuoristojen väliin lahti jää?",
+  "vastaus": "Kotorinlahti jää Orjenin ja Lovćenin vuoristojen väliin: Orjen on lännessä ja Lovćen idässä. Molemmat kuuluvat Dinaarisiin Alppeihin ja rajaavat lahtea jyrkillä kalkkikiviseinämillä, minkä vuoksi lahti näyttää työntyvän syvälle vuorten sisään. Lahden ympäristö on ollut Unescon maailmanperintökohde vuodesta 1979, ja Kotorin linnoitukset ovat pääosin Venetsian ajalta, sillä Venetsia hallitsi aluetta vuosina 1420-1797.",
+  "sanoja": 51,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Bay_of_Kotor",
+    "title": "Bay of Kotor - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Kotor",
+    "title": "Kotor - Wikipedia"
+   },
+   {
+    "url": "https://seabourn.com/en_US/ports/scenic-cruising-bay-of-kotor.html",
+    "title": "Scenic cruising Bay of Kotor - Seabourn"
+   },
+   {
+    "url": "https://whc.unesco.org/en/list/125/",
+    "title": "Natural and Culturo-Historical Region of Kotor - UNESCO (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Orjen lännessä, Lovćen idässä",
+    "lahde1": "Wikipedia: Bay of Kotor",
+    "lahde2": "Seabourn",
+    "huom": ""
+   },
+   {
+    "vaite": "Dinaarisia Alppeja",
+    "lahde1": "Wikipedia: Bay of Kotor",
+    "lahde2": "Seabourn",
+    "huom": ""
+   },
+   {
+    "vaite": "Kalkkikiviset jyrkänteet",
+    "lahde1": "Wikipedia: Kotor (limestone cliffs of Orjen and Lovćen)",
+    "lahde2": "",
+    "huom": "Vain yksi lähde."
+   },
+   {
+    "vaite": "Venetsian hallinto 1420-1797; linnoitukset pääosin Venetsian ajalta",
+    "lahde1": "Wikipedia: Kotor",
+    "lahde2": "WebSearch-tiivistelmä (hakutulos): Venetsian valta 1420-1797",
+    "huom": ""
+   },
+   {
+    "vaite": "Unescon maailmanperintö vuodesta 1979",
+    "lahde1": "Wikipedia: Bay of Kotor",
+    "lahde2": "UNESCO-hakutulos (3. istunto, 1979)",
+    "huom": "UNESCOn sivu antoi 403 suoraan; tieto hakutuloksen tiivistelmästä."
+   }
+  ],
+  "kohteet": [
+   "mne/kotorinlahti"
+  ]
+ },
+ {
+  "kysymys": "Mikä on lessepsiläinen vaellus?",
+  "vastaus": "Lessepsiläinen vaellus tarkoittaa merieliöiden siirtymistä Suezin kanavan kautta, yleensä Punaisestamerestä Välimereen. Nimi tulee kanavan rakentamista johtaneesta Ferdinand de Lessepsistä, ja kanava avattiin vuonna 1869. Aluksi suolaiset Katkerat järvet pysäyttivät lajeja, mutta este katosi ajan myötä. Sen jälkeen itäiseen Välimereen on asettunut satoja Punaisenmeren ja Intian valtameren lajeja.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Lessepsian_migration",
+    "title": "Lessepsian migration - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Great_Bitter_Lake",
+    "title": "Great Bitter Lake - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Suez_Canal",
+    "title": "Suez Canal - Wikipedia"
+   },
+   {
+    "url": "https://news.mongabay.com/2020/04/for-the-mediterranean-the-suez-is-a-wormhole-bringing-in-alien-invaders/",
+    "title": "For the Mediterranean, the Suez is a wormhole bringing in alien invaders - Mongabay"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Määritelmä: lajien siirtymä Suezin kanavan kautta, yleensä Punaisestamerestä Välimereen",
+    "lahde1": "Wikipedia: Lessepsian migration",
+    "lahde2": "Mongabay",
+    "huom": ""
+   },
+   {
+    "vaite": "Kanava avattu 1869; Lesseps johti rakentamista",
+    "lahde1": "Wikipedia: Suez Canal (17.11.1869)",
+    "lahde2": "Mongabay (1869)",
+    "huom": ""
+   },
+   {
+    "vaite": "Katkerat järvet suolaisuutensa vuoksi este, joka katosi",
+    "lahde1": "Wikipedia: Lessepsian migration",
+    "lahde2": "Mongabay (salty dead zone, disappeared naturally)",
+    "huom": "Mongabay ei nimeä Katkeria järviä."
+   },
+   {
+    "vaite": "Satoja lajeja asettunut",
+    "lahde1": "Mongabay: yli 700 tulokaslajia Välimerellä, valtaosa Suezin kautta, yli 600 vakiintunut (MedECC 2019)",
+    "lahde2": "Wikipedia: yli 1 000 Punaisenmeren lajia löydetty (n. 2010)",
+    "huom": "Lähteiden luvut eroavat, joten vastauksessa vain \"satoja\"."
+   }
+  ],
+  "kohteet": [
+   "cyp/levantinmeri"
+  ]
+ },
+ {
+  "kysymys": "Miten Suezin kanava muutti Välimeren eliöstöä?",
+  "vastaus": "Se avasi Välimerelle uuden reitin, jota pitkin Punaisenmeren ja Intian valtameren lajit ovat levinneet pohjoiseen. Itäisestä Välimerestä on löydetty satoja tulokaslajeja. Esimerkiksi kaniinikalat laiduntavat matalikoilla leväkasvillisuuden paljaaksi ja muuttavat elinympäristöjä. Kaikki vaikutukset eivät ole haitallisia, sillä osa tulokkaista on kalastajille arvokkaita. Muutos on silti niin suuri, että eliöyhteisöt joutuvat sopeutumaan.",
+  "sanoja": 50,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Lessepsian_migration",
+    "title": "Lessepsian migration - Wikipedia"
+   },
+   {
+    "url": "https://news.mongabay.com/2020/04/for-the-mediterranean-the-suez-is-a-wormhole-bringing-in-alien-invaders/",
+    "title": "For the Mediterranean, the Suez is a wormhole bringing in alien invaders - Mongabay"
+   },
+   {
+    "url": "https://www.ciesm.org/atlas/appendix1.html",
+    "title": "CIESM Atlas of exotic species - appendix 1"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Tulokaslajit levinneet Suezin kautta itäiseen Välimereen, satoja",
+    "lahde1": "Wikipedia",
+    "lahde2": "Mongabay; CIESM-atlas (165 vierasta lajia luetteloituna, noin 106 Indo-Pasifin alkuperää - AI-poiminta, ei kirjattu lukuna)",
+    "huom": "Täsmäluku jätetty pois, lähteet ristiriitaisia."
+   },
+   {
+    "vaite": "Kaniinikalat laiduntavat ja muuttavat habitaatteja",
+    "lahde1": "Wikipedia (kaksi Punaisenmeren kaniinikalaa 80 % kasvissyöjäkaloista Libanonin matalikoilla 2004)",
+    "lahde2": "Mongabay (ylilaiduntavat, ruskolevämetsät paljaaksi kallioksi/levämatoksi)",
+    "huom": ""
+   },
+   {
+    "vaite": "Osa lajeista kalastajille arvokkaita",
+    "lahde1": "Mongabay",
+    "lahde2": "Wikipedia (kultaviirakampela osuus Israelin saaliista)",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "cyp/levantinmeri"
+  ]
+ },
+ {
+  "kysymys": "Mikä oli niemen antiikinaikainen nimi?",
+  "vastaus": "Pedalion. Antiikissa Kyproksen kaakkoiskulman niemi tunnettiin tällä nimellä. Nykyään sitä kutsutaan nimellä Kap Greco, ja se sijaitsee Famagustanlahden eteläpäässä. Kreikkalainen maantieteilijä Strabon kuvasi, että sen yllä kohoaa korkea puolisuunnikkaan muotoinen kukkula, joka oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut luolia, ja alue on ollut tunnettu paikka jo yli kaksituhatta vuotta sitten.",
+  "sanoja": 50,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Cape_Greco",
+    "title": "Cape Greco - Wikipedia"
+   },
+   {
+    "url": "https://topostext.org/place/350341LPed",
+    "title": "Pedalion cape (Cyprus) - ToposText"
+   },
+   {
+    "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0198:book=14:chapter=6:section=3",
+    "title": "Strabo, Geography 14.6.3 - Perseus"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Antiikin nimi Pedalion",
+    "lahde1": "Wikipedia: Cape Greco",
+    "lahde2": "ToposText (Pleiades): Pedalion Pr. = Cape Gkreko",
+    "huom": ""
+   },
+   {
+    "vaite": "Kalkkikivijyrkänteisiin kulunut luolia",
+    "lahde1": "Wikipedia: Cape Greco",
+    "lahde2": "Visit Famagusta (limestone cliffs, sea-carved caves)",
+    "huom": ""
+   },
+   {
+    "vaite": "Strabon: puolisuunnikkaan muotoinen kukkula Afroditelle pyhitetty",
+    "lahde1": "Strabon, Geographika 14.6.3 (Perseus)",
+    "lahde2": "Wikipedia: Cape Greco",
+    "huom": "Ei sanatarkkaa lainausta."
+   }
+  ],
+  "kohteet": [
+   "cyp/kapgreco"
+  ]
+ },
+ {
+  "kysymys": "Miten merenalaiset luolat syntyvät kalkkikiveen?",
+  "vastaus": "Useimmiten ensin sade ja pohjavesi liuottavat kalkkikiveä, ja sitten meri laajentaa onkalot. Sadevesi ottaa ilmasta hiilidioksidia ja muuttuu heikoksi hiilihapoksi, joka syö halkeamia suuremmiksi. Rannalla aallot iskevät heikkoihin kohtiin ja leventävät niitä. Kun merenpinta nousi jääkauden jälkeen, osa luolista jäi veden alle. Rannan merelliset luolat ovat tavallisesti noin 5-50 metriä pitkiä, mutta pisimmät ylittävät 300 metriä.",
+  "sanoja": 56,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Speleogenesis",
+    "title": "Speleogenesis - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Sea_cave",
+    "title": "Sea cave - Wikipedia"
+   },
+   {
+    "url": "https://www.nature.scot/landforms-and-geology/scotlands-rocks-landforms-and-soils/landforms/caves-and-karst",
+    "title": "Caves and karst - NatureScot (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Sadevesi + hiilidioksidi = heikko hiilihappo liuottaa kalkkikiveä halkeamissa",
+    "lahde1": "Wikipedia: Speleogenesis",
+    "lahde2": "NatureScot (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Aallot leventävät luolia rannalla",
+    "lahde1": "Wikipedia: Sea cave",
+    "lahde2": "Hakutuloksen tiivistelmä (Adrianmeren tutkimus)",
+    "huom": ""
+   },
+   {
+    "vaite": "Merelliset luolat tavallisesti 5-50 m pitkiä, pisimmät yli 300 m",
+    "lahde1": "Wikipedia: Cave (hakutulos)",
+    "lahde2": "",
+    "huom": "Vain yksi lähde; muotoiltu yleisenä suuruusluokkana."
+   },
+   {
+    "vaite": "Merenpinnan nousu upotti luolia",
+    "lahde1": "Wikipedia: Sea cave (Phang Nga Bay -esimerkki; jääkauden jälkeen noin 12 000 v)",
+    "lahde2": "Hakutulos: Koillis-Adrianmeren tutkimus (myöhäisholoseeninen nousu)",
+    "huom": "Yleinen selitys; Kap Grecon luolien tarkkaa syntyhistoriaa ei tarkistettu, joten vastaus ei väitä siitä muuta."
+   }
+  ],
+  "kohteet": [
+   "cyp/kapgreco"
+  ]
+ },
+ {
+  "kysymys": "Mikä oli Messinan suolakriisi?",
+  "vastaus": "Messinan suolakriisi oli ajanjakso noin 5,96-5,33 miljoonaa vuotta sitten, jolloin Välimeri eristyi Atlantista ja sen vesi haihtui suurelta osin. Merenpinta laski huippuvaiheessa arviolta satoja metrejä, syvimmillä altailla yli kilometrin, ja pohjalle kertyi paksuja suolakerroksia. Kriisi päättyi, kun Gibraltarin kohta aukesi uudelleen. Se osoittaa, miten sulkeutunut merialtaan voi muuttua nopeasti.",
+  "sanoja": 49,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Messinian_salinity_crisis",
+    "title": "Messinian salinity crisis - Wikipedia"
+   },
+   {
+    "url": "https://ciesm.org/news/ciesm/p200208.htm",
+    "title": "New consensus on Messinian Salinity Crisis - CIESM Workshop 331"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Ajoitus noin 5,96-5,33 milj. vuotta sitten",
+    "lahde1": "Wikipedia: Messinian salinity crisis",
+    "lahde2": "CIESM (vaiheet 5,96-5,6; 5,6-5,55; 5,55-5,33 Ma)",
+    "huom": ""
+   },
+   {
+    "vaite": "Merenpinta laski satoja metrejä huippuvaiheessa",
+    "lahde1": "CIESM: \"several hundreds meters\"",
+    "lahde2": "Wikipedia (haihtumisarvio, basiinin kuivuminen)",
+    "huom": "CIESM huomauttaa, ettei syvän altaan täydellinen kuivuminen ole varmaa; siksi \"suurelta osin\" ja \"arviolta\"."
+   },
+   {
+    "vaite": "Pohjalle kertyi suolakerroksia",
+    "lahde1": "Wikipedia (evaporiitit, suola yli miljoona km3)",
+    "lahde2": "CIESM (halite, potash, alemmat ja ylemmät evaporiitit)",
+    "huom": "Paksuusarvio (3 km) pudotettu, koska vain vanha lähde; suolan kokonaismäärää ei esitetty."
+   },
+   {
+    "vaite": "Päättyi Gibraltarin aukeamiseen",
+    "lahde1": "Wikipedia",
+    "lahde2": "CIESM",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "dza/valimeri"
+  ]
+ },
+ {
+  "kysymys": "Miten kuivunut meri täyttyi uudelleen?",
+  "vastaus": "Atlantin vesi syöksyi Gibraltarin kautta takaisin Välimereen noin 5,33 miljoonaa vuotta sitten, tapahtumassa nimeltä Zanclean-tulva. Vuoden 2009 Nature-tutkimuksen mukaan 90 prosenttia vedestä virtasi sisään muutamassa kuukaudessa tai korkeintaan kahdessa vuodessa. Merenpinta nousi parhaimmillaan yli kymmenen metriä päivässä. Luvut perustuvat laskennalliseen malliin, joten ne ovat arvioita.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Messinian_salinity_crisis",
+    "title": "Messinian salinity crisis - Wikipedia"
+   },
+   {
+    "url": "https://www.scientificamerican.com/article/a-megaflood-powered-mile-high-waterfall-refilled-the-mediterranean-video",
+    "title": "A Megaflood-Powered Mile-High Waterfall Refilled the Mediterranean - Scientific American"
+   },
+   {
+    "url": "https://www.isterre.fr/IMG/pdf/16._garcia-castellanosnature_2009_fin_messinien.pdf",
+    "title": "Garcia-Castellanos ym. 2009, Nature 462 (hakutulos/PDF-tiivistelmä)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Täyttyminen 5,33 milj. vuotta sitten Gibraltarin kautta",
+    "lahde1": "Wikipedia",
+    "lahde2": "Nature 2009 (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "90 % vedestä muutamassa kuukaudessa - kahdessa vuodessa",
+    "lahde1": "Nature 2009 -tiivistelmä (hakutulos ja PDF-otsikkotiivistelmä)",
+    "lahde2": "Scientific American: \"refilling in a few years\" (itäallas)",
+    "huom": "Nature-artikkelin suora sivu vaati kirjautumisen; luku tiivistelmästä. SciAm antaa vähän väljemmän \"muutaman vuoden\"."
+   },
+   {
+    "vaite": "Merenpinnan nousu yli 10 m/päivä",
+    "lahde1": "Nature 2009 (hakutulos)",
+    "lahde2": "Scientific American (vähintään 10 m/vrk itäaltaassa)",
+    "huom": ""
+   },
+   {
+    "vaite": "Luvut ovat mallinnuksia",
+    "lahde1": "Nature 2009 (hakutulos): limited data",
+    "lahde2": "",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "dza/valimeri"
+  ]
+ }
+]

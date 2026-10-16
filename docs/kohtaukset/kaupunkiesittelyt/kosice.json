@@ -1,0 +1,39 @@
+[
+  {
+    "id": "kosice",
+    "esittely": "Kartan alue on Košicen vanha keskusta. Kaupunki mainitaan ensi kerran asiakirjassa 1230. Hlavná-katu on keskiaikaisesta toriaukiosta syntynyt, noin 1,2 kilometrin pituinen kävelykatu. Sen varrella on Pyhän Elisabetin tuomiokirkko, Slovakian suurin kirkko, jonka rakentaminen alkoi 1300-luvun lopulla. Valtionteatterin uusbarokkirakennus valmistui 1899.\n\nImmaculata on ruttopylväs vuodelta 1723, ja se pystytettiin kiitokseksi ruton päättymisestä. Jakabin palatsi on uusgoottilainen ja valmistui 1899. Miklušin vankila oli kaupungin vankila 1600-luvulta 1900-luvun alkuun, ja Pyövelin bastioni on nykyisin Itä-Slovakian museon käytössä. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 689,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Ko%C5%A1ice", "title": "Wikipedia: Košice", "tukee": "ensimmäinen maininta 1230 (Villa Cassa); Hlavná kävelyalue; Pyövelin bastioni muurin harvoja jäännöksiä"},
+      {"url": "https://slovakia.travel/en/kosice", "title": "Slovakia Travel: Košice", "tukee": "ensimmäinen kirjallinen maininta 1230; tuomiokirkko Slovakian suurin kirkko"},
+      {"url": "https://en.wikipedia.org/wiki/Hlavn%C3%A1_ulica", "title": "Wikipedia: Hlavná ulica", "tukee": "keskiaikainen toriaukio, noin 1200 m, lähes kokonaan kävelyaluetta"},
+      {"url": "https://www.expedia.ie/Hlavna-Ulica-Kosice-Old-Town.d6117934.Attraction", "title": "Expedia: Hlavna Ulica", "tukee": "reitti noin 1,2 km (heikompi lähde)"},
+      {"url": "https://en.wikipedia.org/wiki/Cathedral_of_St._Elizabeth", "title": "Wikipedia: Cathedral of St. Elizabeth", "tukee": "Slovakian suurin kirkko; rakentaminen alkoi 1300-luvun lopulla (tulipalo n. 1380)"},
+      {"url": "https://slovakia.travel/en/st-elisabeth-minster-kosice", "title": "Slovakia Travel: St Elisabeth Minster", "tukee": "suurin kirkko Slovakiassa; työ alkoi 1380"},
+      {"url": "https://en.wikipedia.org/wiki/National_Theatre_Ko%C5%A1ice", "title": "Wikipedia: National Theatre Košice", "tukee": "uusbarokki, Adolf Lang, 1879-1899"},
+      {"url": "https://www.filmcommission.sk/699-en/state-theatre-kosice/", "title": "Slovak Film Commission: State Theatre Košice", "tukee": "Adolf Lang, 1879-1899, uusbarokki"},
+      {"url": "https://en.wikipedia.org/wiki/Plague_Column,_Ko%C5%A1ice", "title": "Wikipedia: Plague Column, Košice", "tukee": "rakennettu 1723, ruton 1709-1710 päättymisen kiitokseksi"},
+      {"url": "https://hunektar.sk/en/records/immaculata-oszlop-es-szoborcsoport", "title": "Hungaricum/Hunektar: Immaculata", "tukee": "rakennettu 1720-1723, vihitty 3.10.1723; kiitos ruton 1709-1710 jälkeen"},
+      {"url": "https://www.kosice.sk/city/jacabs-palace", "title": "City of Košice: Jakab's Palace", "tukee": "rakennettu 1899, pseudogoottilainen"},
+      {"url": "https://visitkosice.org/en/vidiet-a-zazit/jakabs-palace", "title": "Visit Košice: Jakab's Palace", "tukee": "uusgoottilainen palatsi, Jakabin veljekset"},
+      {"url": "https://www.kosiceregion.com/en/?p=14274", "title": "Košice Region: Dark stories", "tukee": "Miklušin vankila vankilana 1600-luvulta (loppu 1911)"},
+      {"url": "https://medievalheritage.eu/en/main-page/heritage/slovakia/kosice-prison-of-miklusz/", "title": "Medieval Heritage: Košice - Mikluš Prison", "tukee": "muutettu vankilaksi 1600-luvun alussa; vankilakäyttö 1900-luvun alkuun; Itä-Slovakian museo"},
+      {"url": "https://en.wikipedia.org/wiki/Executioner%27s_Bastion", "title": "Wikipedia: Executioner's Bastion", "tukee": "Itä-Slovakian museon käytössä (muutettu 1920-1930)"}
+    ],
+    "pudotetut": [
+      "Urbanin torni (kansallinen kulttuurimonumentti 1970): toinen riippumaton lähde puuttui",
+      "Laulava suihkulähde 1986: vahvistus vain matkailuesitteessä ja Wikipedian tunnisteissa, jätetty pois",
+      "Pyövelin bastionin ikä ja kahdeksan tykkikammiota: ikä ristiriitainen, kammiot vain Wikipediassa",
+      "Entisen tekstin 1873-näkökulma (Kassa, vankila 1909 asti, teatteri ja palatsi vasta myöhemmin): poistettu, ei nykyajan karttaan",
+      "Hlavná-kadun pituus ja kävelykatu: toinen lähde on Expedia (heikompi); tarkista jos tiukka vaatimus"
+    ],
+    "ristiriidat": [
+      "Tuomiokirkon aloitusvuosi: 1378 (Wikipedia infolaatikko) vs. 1380 (Slovakia.travel) -> käytetty vain '1300-luvun lopulla'",
+      "Miklušin vankilan päättymisvuosi: 1909 vs. 1911 -> käytetty '1900-luvun alkuun'",
+      "Pyövelin bastionin ajoitus: n. 1500 (Wikipedia), 1441 (matkablogi), 1400-luvun loppu (SME) -> ajoitusta ei käytetä",
+      "Immaculatan rakennusaika 1720-1723 vs. vihkiäiset 1723 -> käytetty 1723"
+    ],
+    "muutos_sk": "Poistettu entinen 1873-näkökulma ('isoisän matkan aikaan', Kassa, 'ei vielä teatteria'). Lisätty: ensimmäinen maininta 1230, Hlavná ja sen pituus, tuomiokirkko Slovakian suurimpana, Valtionteatteri 1899, Immaculata 1723 ja syy, Jakabin palatsi 1899, Miklušin vankila, Pyövelin bastionin museokäyttö. Urbanin torni jäi pois."
+  }
+]

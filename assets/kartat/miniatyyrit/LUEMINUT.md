@@ -43,6 +43,7 @@ Myöhemmät, jäljitettävät erät:
 | 4 | 21.9.2026 | 97 kohdetta, 12 kaupunkia (erät A+B) | `posti/fable-codexille-miniatyyrit-eurooppa-20260921.md` | `0da998e17` (PR #2669) |
 | 4 lisäys 1 | 21.9.2026 | 7 puuttuvaa kohdetta (Ateena 6, Wien 1) | `docs/raportit/pienoismallit-puuttuvat-7-20260921.md` | `81880b016` (PR #2678) |
 | 4 lisäys 2 | 21.9.2026 | 18 kohdetta, 3 uutta pelikaupunkia (Nikosia, Luxemburg, Valletta) | `posti/fable-codexille-miniatyyrit-18-20260921.md` | `43a5724b4` (PR #2688) |
+| 4 lisäys 3 | 15.10.2026 | 5 aloituskartan vihjettä (Giza, Marrakech, Sahara, Samarkand, Grönlanti; omistaja 19.04, PT hyväksyi arkin #314) | `posti/karttaseppa-codex-aloituskartan-vihjeet-20261015.md` | posti `a31a99a96` (Giza `2c20b2be9`) |
 
 Uusi tilaus jatkaa samalla numerolla ("tilaus 4 lisäys N") ja lisätään
 tähän tauluun toimituksen jälkeen.

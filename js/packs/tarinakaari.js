@@ -85,27 +85,30 @@ export function kaariLuentaSoi(kohde, osa) {
  * osille; natiivi soittaa ne saapumisen tallenteen tavoin, lukijaääni jää
  * varapoluksi. Webin oma soitto ei muutu (natiivi on malli).
  *
- * -v2: Äänittäjän korjatut luennat (−14,4…−14,9 LUFS) uusilla nimillä
- * puhe-kaari-<osa>-<id>-v2.mp3; vanhat −17,1 LUFS -tiedostot jäävät
- * käyttämättä. Kesto sekunteina (afinfo ämpärin tiedostosta 12.10.2026).
+ * -v3 (Äänittäjä 15.10.2026, PT:n tilaus; omistaja 14.10.: isoisän teksti aina
+ * vanhemmalla mallilla eleven_v3): samat tekstit uusina ottoina, −14,6 LUFS,
+ * nimillä puhe-kaari-<osa>-<id>-v3.mp3 (vienti isoisa-v3-uusinta-vienti-20261015).
+ * Entiset -v2 (turbo, 12.10.) ja −17,1 LUFS -tiedostot jäävät ämpäriin
+ * käyttämättä. Kesto sekunteina (afinfo vientipaketin tiedostosta 15.10.2026,
+ * sis. 0,7 s hiljaisen hännän).
  */
-export const KAARI_AANITTEET_V2 = Object.freeze({
-  bryssel: { kohtaaminen: 22.126, aarre: 17.711 },
-  kosice: { kohtaaminen: 20.506, aarre: 15.308 },
-  ljubljana: { kohtaaminen: 18.599, aarre: 16.431 },
-  luxemburg: { kohtaaminen: 23.327, aarre: 20.193 },
-  valletta: { kohtaaminen: 19.148, aarre: 17.006 },
-  bergen: { kohtaaminen: 16.039, aarre: 18.442 },
-  firenze: { kohtaaminen: 19.487, aarre: 14.916 },
-  sevilla: { kohtaaminen: 19.409, aarre: 17.398 },
-  tampere: { kohtaaminen: 17.241, aarre: 16.509 },
+export const KAARI_AANITTEET_V3 = Object.freeze({
+  bryssel: { kohtaaminen: 24.660, aarre: 16.901 },
+  kosice: { kohtaaminen: 23.615, aarre: 15.935 },
+  ljubljana: { kohtaaminen: 19.696, aarre: 17.450 },
+  luxemburg: { kohtaaminen: 23.850, aarre: 19.696 },
+  valletta: { kohtaaminen: 19.775, aarre: 17.528 },
+  bergen: { kohtaaminen: 17.711, aarre: 18.573 },
+  firenze: { kohtaaminen: 21.864, aarre: 15.856 },
+  sevilla: { kohtaaminen: 18.416, aarre: 17.136 },
+  tampere: { kohtaaminen: 19.148, aarre: 18.887 },
 });
 
 /** Kaaren osan ('kohtaaminen' | 'aarre') tallenne { polku, kesto } tai null (mykistetty tai ei generoitu). */
 export function kaariAanite(kohde, osa) {
   if (!kohde || kohde.luennat === false || !kaariLuentaSoi(kohde, osa)) return null;
-  const v2 = KAARI_AANITTEET_V2[kohde.id]?.[osa];
-  return { polku: `assets/audio/puhe-kaari-${osa}-${kohde.id}${v2 ? '-v2' : ''}.mp3`, kesto: v2 ?? null };
+  const v3 = KAARI_AANITTEET_V3[kohde.id]?.[osa];
+  return { polku: `assets/audio/puhe-kaari-${osa}-${kohde.id}${v3 ? '-v3' : ''}.mp3`, kesto: v3 ?? null };
 }
 
 /*

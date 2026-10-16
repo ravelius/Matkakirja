@@ -1,0 +1,375 @@
+{
+ "lahde": "Sisältökirjuri 15.10.2026: ISS-yötaivas, kaksi lähdettä per arvo",
+ "rivit": {
+  "taivas-kuu": [
+   [
+    "ETÄISYYS",
+    "laskettu"
+   ],
+   [
+    "HALKAISIJA",
+    "n. 3 475 km"
+   ],
+   [
+    "KIERTOAIKA",
+    "27,3 vrk"
+   ]
+  ],
+  "taivas-merkurius": [
+   [
+    "ETÄISYYS",
+    "laskettu"
+   ],
+   [
+    "HALKAISIJA",
+    "4 879 km"
+   ],
+   [
+    "VUOSI",
+    "88 vrk"
+   ],
+   [
+    "LÄMPÖTILA",
+    "n. −180…+430 °C"
+   ]
+  ],
+  "taivas-venus": [
+   [
+    "ETÄISYYS",
+    "laskettu"
+   ],
+   [
+    "KANSANNIMI",
+    "Kointähti, Iltatähti"
+   ],
+   [
+    "PYÖRÄHDYS",
+    "243 vrk"
+   ],
+   [
+    "VUOSI",
+    "225 vrk"
+   ]
+  ],
+  "taivas-mars": [
+   [
+    "ETÄISYYS",
+    "laskettu"
+   ],
+   [
+    "HALKAISIJA",
+    "n. 6 800 km"
+   ],
+   [
+    "PÄIVÄ",
+    "24,6 tuntia"
+   ],
+   [
+    "KUUT",
+    "2 (Phobos, Deimos)"
+   ]
+  ],
+  "taivas-jupiter": [
+   [
+    "ETÄISYYS",
+    "laskettu"
+   ],
+   [
+    "KOKO",
+    "11 × Maan halkaisija"
+   ],
+   [
+    "PÄIVÄ",
+    "n. 9,9 tuntia"
+   ],
+   [
+    "VUOSI",
+    "n. 12 vuotta"
+   ]
+  ],
+  "taivas-saturnus": [
+   [
+    "ETÄISYYS",
+    "laskettu"
+   ],
+   [
+    "HALKAISIJA",
+    "n. 120 500 km"
+   ],
+   [
+    "PÄIVÄ",
+    "n. 10,7 tuntia"
+   ],
+   [
+    "VUOSI",
+    "29,4 vuotta"
+   ]
+  ],
+  "taivas-sirius": [
+   [
+    "ETÄISYYS",
+    "8,6 vv"
+   ],
+   [
+    "KIRKKAUS",
+    "−1,46 mag"
+   ],
+   [
+    "LÄMPÖTILA",
+    "n. 9 900 K"
+   ],
+   [
+    "TYYPPI",
+    "Kaksoistähti"
+   ]
+  ],
+  "taivas-pohjantahti": [
+   [
+    "ETÄISYYS",
+    "n. 430 vv"
+   ],
+   [
+    "KIRKKAUS",
+    "2,0 mag"
+   ],
+   [
+    "TYYPPI",
+    "Kolmoistähti"
+   ],
+   [
+    "KANSANNIMI",
+    "Pohjannaula"
+   ]
+  ],
+  "taivas-vega": [
+   [
+    "ETÄISYYS",
+    "25 vv"
+   ],
+   [
+    "KIRKKAUS",
+    "0,03 mag"
+   ],
+   [
+    "TÄHDISTÖ",
+    "Lyyra"
+   ]
+  ],
+  "taivas-arcturus": [
+   [
+    "ETÄISYYS",
+    "36,7 vv"
+   ],
+   [
+    "KIRKKAUS",
+    "−0,05 mag"
+   ],
+   [
+    "TYYPPI",
+    "Punainen jättiläinen"
+   ],
+   [
+    "LÄMPÖTILA",
+    "n. 4 300 K"
+   ]
+  ],
+  "taivas-betelgeuze": [
+   [
+    "ETÄISYYS",
+    "n. 550–700 vv"
+   ],
+   [
+    "TYYPPI",
+    "Punainen ylijättiläinen"
+   ],
+   [
+    "SÄDE",
+    "630–760 × Aurinko"
+   ],
+   [
+    "LÄMPÖTILA",
+    "n. 3 100–3 800 K"
+   ]
+  ],
+  "taivas-capella": [
+   [
+    "ETÄISYYS",
+    "n. 42–43 vv"
+   ],
+   [
+    "KIRKKAUS",
+    "0,08 mag"
+   ],
+   [
+    "TYYPPI",
+    "Nelinkertainen tähti"
+   ],
+   [
+    "TÄHDISTÖ",
+    "Ajomies"
+   ]
+  ],
+  "taivas-otava": [
+   [
+    "TYYPPI",
+    "Ison karhun osa"
+   ],
+   [
+    "TÄHTIÄ",
+    "7"
+   ],
+   [
+    "NIMEN TARU",
+    "Patoverkko"
+   ],
+   [
+    "KANSANNIMI",
+    "Seitsentähtinen"
+   ]
+  ],
+  "taivas-orion": [
+   [
+    "TYYPPI",
+    "Tähdistö"
+   ],
+   [
+    "PÄÄTÄHTIÄ",
+    "7"
+   ],
+   [
+    "KOKO",
+    "594 neliöastetta"
+   ],
+   [
+    "PARAS AIKA",
+    "tammikuu"
+   ]
+  ],
+  "taivas-kalevanmiekka": [
+   [
+    "TYYPPI",
+    "Orionin vyö"
+   ],
+   [
+    "TÄHTIÄ",
+    "3 jonossa"
+   ],
+   [
+    "KANSANNIMI",
+    "Kalevan miekka"
+   ],
+   [
+    "OSANA",
+    "Väinämöisen viikate"
+   ]
+  ],
+  "taivas-seulaset": [
+   [
+    "ETÄISYYS",
+    "n. 440 vv"
+   ],
+   [
+    "NÄKYY",
+    "6–9 tähteä"
+   ],
+   [
+    "IKÄ",
+    "n. 100 milj. vuotta"
+   ],
+   [
+    "TUNNUS",
+    "M45"
+   ]
+  ],
+  "taivas-linnunrata": [
+   [
+    "ETÄISYYS",
+    "n. 26 000 vv"
+   ],
+   [
+    "TÄHTIÄ",
+    "100–400 miljardia"
+   ],
+   [
+    "TYYPPI",
+    "Sauvaspiraaligalaksi"
+   ],
+   [
+    "NIMEN TARU",
+    "Tie Lintukotoon"
+   ]
+  ],
+  "taivas-andromeda": [
+   [
+    "ETÄISYYS",
+    "n. 2,5 milj. vv"
+   ],
+   [
+    "KIRKKAUS",
+    "3,4 mag"
+   ],
+   [
+    "TYYPPI",
+    "Spiraaligalaksi"
+   ],
+   [
+    "TUNNUS",
+    "M31"
+   ]
+  ],
+  "taivas-orioninsumu": [
+   [
+    "ETÄISYYS",
+    "n. 1 300–1 500 vv"
+   ],
+   [
+    "KIRKKAUS",
+    "4,0 mag"
+   ],
+   [
+    "TYYPPI",
+    "Kaasusumu"
+   ],
+   [
+    "TUNNUS",
+    "M42"
+   ]
+  ],
+  "taivas-magellan": [
+   [
+    "ETÄISYYS",
+    "n. 160 000 vv"
+   ],
+   [
+    "TYYPPI",
+    "Kääpiögalaksi"
+   ],
+   [
+    "TÄHTIÄ",
+    "20–30 miljardia"
+   ],
+   [
+    "NÄKYY",
+    "Etelätaivaalla"
+   ]
+  ],
+  "taivas-revontulet": [
+   [
+    "KORKEUS",
+    "n. 80–250 km"
+   ],
+   [
+    "VIHREÄ",
+    "happi, alempana"
+   ],
+   [
+    "PUNAINEN",
+    "happi, ylempänä"
+   ],
+   [
+    "SYY",
+    "aurinkotuuli"
+   ]
+  ]
+ }
+}

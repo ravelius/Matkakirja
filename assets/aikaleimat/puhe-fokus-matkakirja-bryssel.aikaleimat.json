@@ -4,290 +4,290 @@
   "teksti": "Bryssel, kesäkuussa 1873. Kaupunki on juuri haudannut jokensa: Senne katettiin kivellä, ja päälle vedettiin bulevardi, jolla herrasväki kävelee kuin joki ei olisi koskaan haissutkaan. Grand-Placen kullatut kiltatalot kiiltävät sateen jälkeen kuin avattu korulipas. Kulman takana pronssinen poika tekee tarpeensa suihkulähteeseen, ja koko kaupunki pitää sitä pyhänä. Ostin pitsiä, jota täällä kehrätään kuin hämähäkit kilpaa.",
   "tekstiSha256": "db61ee4c059df727b0e1d2d24a583bbc4a7773be0872dddf860bc744934036d3",
   "aani": {
-    "nimi": "puhe-fokus-matkakirja-bryssel.mp3",
+    "nimi": "puhe-fokus-matkakirja-bryssel-v3.mp3",
     "versio": 2,
-    "tavut": 792493,
-    "sha256": "437a45351cbf18126778457a5c9bb94c20992287b0643f3afe8e0d4a813c4930"
+    "tavut": 949855,
+    "sha256": "866898afbc90e3c6ad706d3496d3bf843b58c1244608190b531667ba20b2d111"
   },
-  "kesto": 32960,
+  "kesto": 39500,
   "sanat": [
     {
       "sana": "Bryssel",
-      "alku": 160,
-      "loppu": 800
+      "alku": 260,
+      "loppu": 640
     },
     {
       "sana": "kesäkuussa",
-      "alku": 1200,
-      "loppu": 1840
+      "alku": 1100,
+      "loppu": 1680
     },
     {
       "sana": "1873",
-      "alku": 1920,
-      "loppu": 4320
+      "alku": 1760,
+      "loppu": 4080
     },
     {
       "sana": "Kaupunki",
-      "alku": 5040,
-      "loppu": 5520
+      "alku": 4720,
+      "loppu": 6240
     },
     {
       "sana": "on",
-      "alku": 5600,
-      "loppu": 5680
+      "alku": 6300,
+      "loppu": 6400
     },
     {
       "sana": "juuri",
-      "alku": 5760,
-      "loppu": 6080
+      "alku": 6460,
+      "loppu": 6800
     },
     {
       "sana": "haudannut",
-      "alku": 6160,
-      "loppu": 6720
+      "alku": 6860,
+      "loppu": 7360
     },
     {
       "sana": "jokensa",
-      "alku": 6760,
-      "loppu": 7280
+      "alku": 7400,
+      "loppu": 7920
     },
     {
       "sana": "Senne",
-      "alku": 7960,
-      "loppu": 8160
+      "alku": 8420,
+      "loppu": 9520
     },
     {
       "sana": "katettiin",
-      "alku": 8240,
-      "loppu": 8800
+      "alku": 9580,
+      "loppu": 10080
     },
     {
       "sana": "kivellä",
-      "alku": 8880,
-      "loppu": 9360
-    },
-    {
-      "sana": "ja",
-      "alku": 9760,
-      "loppu": 9840
-    },
-    {
-      "sana": "päälle",
-      "alku": 9880,
-      "loppu": 10160
-    },
-    {
-      "sana": "vedettiin",
-      "alku": 10240,
+      "alku": 10160,
       "loppu": 10640
     },
     {
-      "sana": "bulevardi",
-      "alku": 10720,
-      "loppu": 11440
+      "sana": "ja",
+      "alku": 10900,
+      "loppu": 11040
     },
     {
-      "sana": "jolla",
-      "alku": 11640,
+      "sana": "päälle",
+      "alku": 11100,
+      "loppu": 11360
+    },
+    {
+      "sana": "vedettiin",
+      "alku": 11400,
       "loppu": 11840
     },
     {
-      "sana": "herrasväki",
-      "alku": 11920,
-      "loppu": 12560
+      "sana": "bulevardi",
+      "alku": 11900,
+      "loppu": 12480
     },
     {
-      "sana": "kävelee",
-      "alku": 12600,
+      "sana": "jolla",
+      "alku": 12920,
       "loppu": 13120
     },
     {
-      "sana": "kuin",
+      "sana": "herrasväki",
       "alku": 13160,
-      "loppu": 13360
+      "loppu": 13680
     },
     {
-      "sana": "joki",
-      "alku": 13440,
-      "loppu": 13760
-    },
-    {
-      "sana": "ei",
-      "alku": 13840,
-      "loppu": 13920
-    },
-    {
-      "sana": "olisi",
-      "alku": 14000,
+      "sana": "kävelee",
+      "alku": 13740,
       "loppu": 14240
     },
     {
+      "sana": "kuin",
+      "alku": 14300,
+      "loppu": 14560
+    },
+    {
+      "sana": "joki",
+      "alku": 14640,
+      "loppu": 14880
+    },
+    {
+      "sana": "ei",
+      "alku": 14940,
+      "loppu": 15040
+    },
+    {
+      "sana": "olisi",
+      "alku": 15100,
+      "loppu": 15360
+    },
+    {
       "sana": "koskaan",
-      "alku": 14320,
-      "loppu": 14800
+      "alku": 15420,
+      "loppu": 15840
     },
     {
       "sana": "haissutkaan",
-      "alku": 14880,
-      "loppu": 15680
+      "alku": 15900,
+      "loppu": 16720
     },
     {
       "sana": "Grand-Placen",
-      "alku": 16160,
-      "loppu": 16960
+      "alku": 18840,
+      "loppu": 19600
     },
     {
       "sana": "kullatut",
-      "alku": 17040,
-      "loppu": 17600
+      "alku": 19640,
+      "loppu": 20160
     },
     {
       "sana": "kiltatalot",
-      "alku": 17680,
-      "loppu": 18320
+      "alku": 20200,
+      "loppu": 20960
     },
     {
       "sana": "kiiltävät",
-      "alku": 18400,
-      "loppu": 18880
+      "alku": 21040,
+      "loppu": 21680
     },
     {
       "sana": "sateen",
-      "alku": 18960,
-      "loppu": 19360
+      "alku": 21720,
+      "loppu": 22080
     },
     {
       "sana": "jälkeen",
-      "alku": 19400,
-      "loppu": 19760
+      "alku": 22160,
+      "loppu": 22640
     },
     {
       "sana": "kuin",
-      "alku": 19840,
-      "loppu": 20080
+      "alku": 22720,
+      "loppu": 22960
     },
     {
       "sana": "avattu",
-      "alku": 20240,
-      "loppu": 20880
+      "alku": 23040,
+      "loppu": 23600
     },
     {
       "sana": "korulipas",
-      "alku": 21000,
-      "loppu": 21760
+      "alku": 23660,
+      "loppu": 24400
     },
     {
       "sana": "Kulman",
-      "alku": 22140,
-      "loppu": 22400
+      "alku": 26300,
+      "loppu": 26480
     },
     {
       "sana": "takana",
-      "alku": 22480,
-      "loppu": 22800
+      "alku": 26540,
+      "loppu": 26880
     },
     {
       "sana": "pronssinen",
-      "alku": 22880,
-      "loppu": 23440
-    },
-    {
-      "sana": "poika",
-      "alku": 23520,
-      "loppu": 23760
-    },
-    {
-      "sana": "tekee",
-      "alku": 23840,
-      "loppu": 24160
-    },
-    {
-      "sana": "tarpeensa",
-      "alku": 24240,
-      "loppu": 24720
-    },
-    {
-      "sana": "suihkulähteeseen",
-      "alku": 24760,
-      "loppu": 25840
-    },
-    {
-      "sana": "ja",
-      "alku": 26160,
-      "loppu": 26240
-    },
-    {
-      "sana": "koko",
-      "alku": 26320,
-      "loppu": 26560
-    },
-    {
-      "sana": "kaupunki",
-      "alku": 26720,
-      "loppu": 27280
-    },
-    {
-      "sana": "pitää",
-      "alku": 27400,
+      "alku": 26960,
       "loppu": 27600
     },
     {
-      "sana": "sitä",
+      "sana": "poika",
       "alku": 27680,
-      "loppu": 27920
+      "loppu": 28080
     },
     {
-      "sana": "pyhänä",
-      "alku": 28000,
+      "sana": "tekee",
+      "alku": 28140,
       "loppu": 28480
     },
     {
+      "sana": "tarpeensa",
+      "alku": 28520,
+      "loppu": 28960
+    },
+    {
+      "sana": "suihkulähteeseen",
+      "alku": 29040,
+      "loppu": 30160
+    },
+    {
+      "sana": "ja",
+      "alku": 30920,
+      "loppu": 30960
+    },
+    {
+      "sana": "koko",
+      "alku": 31000,
+      "loppu": 31280
+    },
+    {
+      "sana": "kaupunki",
+      "alku": 31340,
+      "loppu": 31840
+    },
+    {
+      "sana": "pitää",
+      "alku": 31900,
+      "loppu": 32240
+    },
+    {
+      "sana": "sitä",
+      "alku": 32300,
+      "loppu": 32560
+    },
+    {
+      "sana": "pyhänä",
+      "alku": 32620,
+      "loppu": 33040
+    },
+    {
       "sana": "Ostin",
-      "alku": 28960,
-      "loppu": 29280
+      "alku": 34080,
+      "loppu": 35280
     },
     {
       "sana": "pitsiä",
-      "alku": 29360,
-      "loppu": 29840
+      "alku": 35360,
+      "loppu": 35840
     },
     {
       "sana": "jota",
-      "alku": 30040,
-      "loppu": 30240
+      "alku": 36120,
+      "loppu": 36320
     },
     {
       "sana": "täällä",
-      "alku": 30280,
-      "loppu": 30560
+      "alku": 36380,
+      "loppu": 36640
     },
     {
       "sana": "kehrätään",
-      "alku": 30680,
-      "loppu": 31120
+      "alku": 36700,
+      "loppu": 37280
     },
     {
       "sana": "kuin",
-      "alku": 31160,
-      "loppu": 31360
+      "alku": 37340,
+      "loppu": 37600
     },
     {
       "sana": "hämähäkit",
-      "alku": 31440,
-      "loppu": 32160
+      "alku": 37660,
+      "loppu": 38240
     },
     {
       "sana": "kilpaa",
-      "alku": 32320,
-      "loppu": 32800
+      "alku": 38300,
+      "loppu": 38800
     }
   ],
   "lauseet": [
-    160,
-    5040,
-    16160,
-    22140,
-    28960
+    260,
+    4720,
+    18840,
+    26300,
+    34080
   ],
-  "luotu": "2026-10-11T19:36:03.000Z"
+  "luotu": "2026-10-15T12:57:37.000Z"
 }

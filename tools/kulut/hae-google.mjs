@@ -11,7 +11,12 @@ import { writeFileSync } from 'node:fs';
 
 const ulos = process.argv[2] ?? 'google.json';
 const { GOOGLE_BILLING_TOKEN: token, GOOGLE_BILLING_PROJECT: projekti, GOOGLE_BILLING_TAULU: taulu } = process.env;
-if (!token || !projekti || !taulu) { console.error('GOOGLE_BILLING_* puuttuu'); process.exit(1); }
+if (!token || !projekti || !taulu) {
+  // Ei virhettä ennen kuin laskutusvienti on pystytetty: dokumentti kertoo vain odottavansa (sivu näyttää "odottaa laskutusvientiä").
+  writeFileSync(ulos, JSON.stringify({ ts: Date.now(), odottaa: true }));
+  console.log('GOOGLE_BILLING_* puuttuu: odottaa laskutusvientiä');
+  process.exit(0);
+}
 if (!/^[\w.-]+$/.test(taulu)) { console.error('taulun nimi kelpaamaton'); process.exit(1); }
 
 const nyt = new Date();

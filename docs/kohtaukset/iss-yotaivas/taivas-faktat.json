@@ -1,0 +1,26 @@
+{
+ "lahde": "Sisältökirjuri 15.10.2026: ISS-yötaivas, riippumaton Sonnet-tarkistus (skanneri-tarkistus.json)",
+ "faktat": {
+  "taivas-kuu": "Kuu näyttää Maahan aina saman puolensa",
+  "taivas-merkurius": "Merkurius on aurinkokunnan pienin planeetta",
+  "taivas-venus": "Venuksella yksi päivä on pidempi kuin sen vuosi",
+  "taivas-mars": "Marsin punainen väri on peräisin ruostuneesta raudasta",
+  "taivas-jupiter": "Jupiter painaa yli kaksi kertaa muut planeetat yhteensä",
+  "taivas-saturnus": "Saturnuksen keskitiheys on pienempi kuin veden",
+  "taivas-sirius": "Sirius on yötaivaan kirkkain tähti, vain 8,6 vv päässä",
+  "taivas-pohjantahti": "Pohjantähti on taivaannavan lähellä, taivas kiertää sen",
+  "taivas-vega": "Vega on Pohjantähti noin 12 000 vuoden päästä",
+  "taivas-arcturus": "Arcturus löytyy Otavan vartta seuraamalla",
+  "taivas-capella": "Capella näyttää yhdeltä tähdeltä, mutta niitä on neljä",
+  "taivas-betelgeuze": "Betelgeuze himmeni oudosti talvella 2019–2020",
+  "taivas-otava": "Otavan kaksi tähteä osoittavat Pohjantähden luo",
+  "taivas-orion": "Orion näkyy melkein koko maapallolta",
+  "taivas-kalevanmiekka": "Orionin vyötä on kutsuttu myös Kalevan miekaksi",
+  "taivas-seulaset": "Seulaset on nimetty seulan pohjan reikien mukaan",
+  "taivas-linnunrata": "Linnunradan keskusta on Jousimiehen suunnassa",
+  "taivas-andromeda": "Andromedan valo on matkannut 2,5 miljoonaa vuotta",
+  "taivas-orioninsumu": "Orionin sumu on lähin massiivisten tähtien syntyalue",
+  "taivas-magellan": "Suuri Magellanin pilvi on Linnunradan naapurigalaksi",
+  "taivas-revontulet": "Revontulet hehkuvat yleensä ISS:n alapuolella"
+ }
+}

@@ -954,4 +954,25 @@ export const MAASTOKOHTEET_LVA = [
     lahde: 'en-Wikipedia "Ernst Glück", johdanto-osa sekä osiot "Early life and '
       + 'career" ja "Personal life" (tarkistettu 11.9.2026).',
   },
+  {
+    id: 'riianlahti',
+    nimi: 'Riianlahti',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mikä Irbensalmi on?',
+      'Mikä joki tuo eniten vettä Riianlahteen?',
+    ],
+    nappi: 'Itämeren sisäinen lahti',
+    // 23.5 E / 57.6 N — lahden keskiosa Latvian Kuurinmaan ja Viron Ruhnun saaren välissä
+    laudat: {
+      maailmankartta: { x: 6616.7, y: 1043.1 },
+      europe: { x: 662.4, y: 378.7 },
+    },
+    teksti: 'Riianlahti on Itämeren lahti Latvian ja Viron välissä, ja sen läntistä reunaa rajaa '
+      + 'Saarenmaa. Pinta-ala on noin 18 000 neliökilometriä, mutta keskisyvyys vain noin 26 '
+      + 'metriä. Suurimpia lahteen laskevia jokia on Väinäjoki eli Daugava, joka päättyy mereen '
+      + 'Riiassa. Ankarina talvina koko lahti voi jäätyä umpeen.',
+    lahde: 'en-Wikipedia "Gulf of Riga", johdanto-osa ja hydrologia; Store norske leksikon '
+      + '"Rigabukta"; fi-Wikipedia "Riianlahti" (tarkistettu 16.10.2026).',
+  },
 ];

@@ -1,0 +1,850 @@
+{
+ "tarkistaja": "Sonnet 5.5 (riippumaton faktantarkistus, 15.10.2026; ei lukenut faktat-a.md:tä)",
+ "kohteet": {
+  "taivas-kuu": [
+   {
+    "vaite": "Kuu näyttää Maahan aina saman puolensa",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/moon/facts (kiertää samaa tahtia, sama pallonpuolisko)",
+    "lahde2": "fi.wikipedia.org/wiki/Kuu (vuorovesilukkiutuminen)",
+    "huom": "Libraation vuoksi näkyy n. 59 % pinnasta, mutta 'aina sama puoli' on vakiintunut ja oikea yleistys.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "HALKAISIJA n. 3 475 km",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Moon (3 474 km)",
+    "lahde2": "fi.wikipedia.org/wiki/Kuu (3 474 km)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KIERTOAIKA 27,3 vrk",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Moon (27,32 d)",
+    "lahde2": "fi.wikipedia.org/wiki/Kuu (27,32 vrk)",
+    "huom": "Sideerinen kiertoaika; synodinen on 29,5 vrk, joten 'KIERTOAIKA' on oikein vain sideerisenä (NASA: 27 vrk).",
+    "korjaus": ""
+   }
+  ],
+  "taivas-merkurius": [
+   {
+    "vaite": "Merkurius on aurinkokunnan pienin planeetta",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/mercury/facts ('smallest planet')",
+    "lahde2": "fi.wikipedia.org/wiki/Merkurius ('pienin ja Aurinkoa lähin planeetta')",
+    "huom": "Ganymedes ja Titan ovat halkaisijaltaan suurempia, mutta ne ovat kuita; Pluto on kääpiöplaneetta. Lause pitää planeettana paikkansa, lisähuomautusta ei tarvita.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "HALKAISIJA 4 879 km",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Mercury_(planet) (4 878,8 km)",
+    "lahde2": "fi.wikipedia.org/wiki/Merkurius (4 879 km)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "VUOSI 88 vrk",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/mercury/facts (88 vrk)",
+    "lahde2": "fi.wikipedia.org/wiki/Merkurius (87,97 vrk)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "LÄMPÖTILA n. −180…+430 °C",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/mercury/facts (−180 °C ... 430 °C)",
+    "lahde2": "en.wikipedia.org/wiki/Mercury_(planet) (−173...427 °C)",
+    "huom": "Pyöristys sopii; 'n.' kattaa erot.",
+    "korjaus": ""
+   }
+  ],
+  "taivas-venus": [
+   {
+    "vaite": "Venuksella yksi päivä on pidempi kuin sen vuosi",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/venus/venus-facts (päivä 243 vrk, vuosi 225 vrk)",
+    "lahde2": "fi.wikipedia.org/wiki/Venus ('vuorokausi kestää hieman pidempään kuin vuosi')",
+    "huom": "Tarkkaan ottaen kyse on pyörähdysajasta (sideerinen vuorokausi). Auringon mukaan laskettu päivä on n. 117 vrk, joka on lyhyempi kuin vuosi. Lause on NASAn ja Wikipedian vakiomuotoilu, joten OK.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "PÄIVÄN PITUUS 243 vrk",
+    "tulos": "KORJAA",
+    "lahde1": "science.nasa.gov/venus/venus-facts",
+    "lahde2": "en.wikipedia.org/wiki/Venus (sideerinen 243 vrk, aurinkopäivä 116,75 vrk)",
+    "huom": "Arvo on pyörähdysaika, ei aurinkopäivä; 'päivän pituus' voi johtaa harhaan.",
+    "korjaus": "Nimike: PYÖRÄHDYS, arvo: 243 vrk"
+   },
+   {
+    "vaite": "VUOSI 225 vrk",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/venus/venus-facts (225 vrk)",
+    "lahde2": "en.wikipedia.org/wiki/Venus (224,7 vrk)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KANSANNIMI Kointähti, Iltatähti",
+    "tulos": "OK",
+    "lahde1": "Turun yliopisto, 'Tähtiä maailman tappiin asti' (aamutähti, kointähti, ehtootähti, iltatähti)",
+    "lahde2": "fi.wikipedia.org/wiki/Venus (Kointähti = aamutähti, Iltatähti = ehtootähti)",
+    "huom": "Kointähti on aamutähti (koi = aamunkoitto) ja Iltatähti iltataivaan Venus; kaksi eri nimeä samalle planeetalle. Kirjoitusasu 'kointähti' (ei 'koitähti') on lähteiden mukainen.",
+    "korjaus": ""
+   }
+  ],
+  "taivas-mars": [
+   {
+    "vaite": "Marsin punainen väri on peräisin ruostuneesta raudasta",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/mars/facts (rauta ruostuu)",
+    "lahde2": "en.wikipedia.org/wiki/Mars (rauta(III)oksidi)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "HALKAISIJA n. 6 800 km",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Mars (6 792 km)",
+    "lahde2": "en.wikipedia.org/wiki/Mars (6 779 km)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "PÄIVÄ 24,6 tuntia",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/mars/facts (24,6 h)",
+    "lahde2": "fi.wikipedia.org/wiki/Mars (24,62 h)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KUUT 2 (Phobos, Deimos)",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/mars/facts",
+    "lahde2": "fi.wikipedia.org/wiki/Mars",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-jupiter": [
+   {
+    "vaite": "Jupiter painaa yli kaksi kertaa muut planeetat yhteensä",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Jupiter ('nearly 2.5 times')",
+    "lahde2": "fi.wikipedia.org/wiki/Jupiter ('noin 2,5 kertaa')",
+    "huom": "Tosiasia on 2,5-kertainen; 'yli kaksi kertaa' on turvallinen alaraja. NASA: 'more than twice the combined material'.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KOKO 11 × Maan halkaisija",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/jupiter/jupiter-facts (n. 11 × Maa)",
+    "lahde2": "fi.wikipedia.org/wiki/Jupiter (n. 11 × Maan läpimitta)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "PÄIVÄ n. 9,9 tuntia",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/jupiter/jupiter-facts (9,9 h)",
+    "lahde2": "fi.wikipedia.org/wiki/Jupiter (9 h 55 min)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "VUOSI n. 12 vuotta",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/jupiter/jupiter-facts (12 v)",
+    "lahde2": "fi.wikipedia.org/wiki/Jupiter (11 v 315 vrk)",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-saturnus": [
+   {
+    "vaite": "Saturnuksen keskitiheys on pienempi kuin veden",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/saturn/facts (tiheys < vesi)",
+    "lahde2": "fi.wikipedia.org/wiki/Saturnus (0,69 g/cm³)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "HALKAISIJA n. 120 500 km",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/saturn/facts (120 500 km)",
+    "lahde2": "fi.wikipedia.org/wiki/Saturnus (120 536 km)",
+    "huom": "Päiväntasaajan halkaisija; napahalkaisija on pienempi (n. 108 700 km).",
+    "korjaus": ""
+   },
+   {
+    "vaite": "PÄIVÄ n. 10,7 tuntia",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/saturn/facts (10,7 h)",
+    "lahde2": "fi.wikipedia.org/wiki/Saturnus (10 h 39 min)",
+    "huom": "Lähteet vaihtelevat 10,5–10,7 h (en.wikipedia 10 h 33 min), joten 'n.' on välttämätön.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "VUOSI 29,4 vuotta",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov/saturn/facts (29,4 v)",
+    "lahde2": "fi.wikipedia.org/wiki/Saturnus (29,42 v)",
+    "huom": "en.wikipedia 29,45; pyöristys 29,4–29,5.",
+    "korjaus": ""
+   }
+  ],
+  "taivas-sirius": [
+   {
+    "vaite": "Sirius on yötaivaan kirkkain tähti, vain 8,6 vv päässä",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Sirius ('brightest star in the night sky', 8,6 ly)",
+    "lahde2": "fi.wikipedia.org/wiki/Sirius ('taivaan kirkkain tähti', 8,6–8,7 vv)",
+    "huom": "'vv' = valovuotta on käytössä fi-Wikipediassa. 54 merkkiä, mahtuu rajaan.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "ETÄISYYS 8,6 vv",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Sirius (8,61 ly)",
+    "lahde2": "fi.wikipedia.org/wiki/Sirius (8,6–8,7 vv)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KIRKKAUS −1,46 mag",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Sirius (−1,46)",
+    "lahde2": "Sky & Telescope, brightest-star-sky (−1,46)",
+    "huom": "fi-Wikipedia antaa −1,47/−1,42, mutta −1,46 on yleisin.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "LÄMPÖTILA n. 9 900 K",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Sirius (9 845–9 940 K)",
+    "lahde2": "fi.wikipedia.org/wiki/Sirius (n. 9 900 K)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TYYPPI Kaksoistähti",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Sirius (A + valkoinen kääpiö B)",
+    "lahde2": "fi.wikipedia.org/wiki/Sirius",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-pohjantahti": [
+   {
+    "vaite": "Pohjantähti on taivaannavan lähellä, taivas kiertää sen",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Polaris",
+    "lahde2": "fi.wikipedia.org/wiki/Pohjantähti ('taivaannavan lähellä')",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "ETÄISYYS n. 430 vv",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Pohjantähti ('usein arvioitu n. 430 vv', haarukka 323–434)",
+    "lahde2": "en.wikipedia.org/wiki/Polaris (Hipparcos 432, Gaia DR3 446 ly)",
+    "huom": "Arvio vaihtelee 430–450 vv; 'n. 430' sopii, jos 'n.' säilyy.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KIRKKAUS 2,0 mag",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Polaris (1,98)",
+    "lahde2": "fi.wikipedia.org/wiki/Pohjantähti (1,98)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TYYPPI Kolmoistähti",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Polaris (kolmoisjärjestelmä Aa, Ab, B)",
+    "lahde2": "fi.wikipedia.org/wiki/Pohjantähti ('kolmesta tähdestä koostuva järjestelmä')",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KANSANNIMI Pohjannaula",
+    "tulos": "OK",
+    "lahde1": "Turun yliopisto, 'Tähtiä maailman tappiin asti' (Pohjantähti, taivaannapa, napatähti, naulatähti eli pohjannaula)",
+    "lahde2": "fi.wikipedia.org/wiki/Pohjantähti ('naulatähdeksi eli pohjannaulaksi')",
+    "huom": "'Taivaannaula' EI vahvistu kahdesta lähteestä (vain yksi helsinki.fi-esitys puhuu taivaannaulasta myyttinä; fi-Wikipedia ja Turun lähde eivät sitä mainitse). Vahvistetut nimet: taivaannapa, napatähti, naulatähti, pohjannaula, taivaantappi, maailmantappi. Älä käytä 'Taivaannaulaa'.",
+    "korjaus": ""
+   }
+  ],
+  "taivas-vega": [
+   {
+    "vaite": "Vega on Pohjantähti noin 12 000 vuoden päästä",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Vega_(tähti) ('noin 12 000 vuoden kuluttua')",
+    "lahde2": "en.wikipedia.org/wiki/Vega (pohjoisnapatähti n. v. 13 724, eli n. 11 700 v päästä)",
+    "huom": "Täsmällisesti napa osuu lähelle Vegaa v. 13 700 (Vega jää n. 4–6° päähän napaa). Vaihtoehtoinen sujuvampi sanamuoto (49 merk.): 'Vegasta tulee Pohjantähti n. 12 000 vuoden päästä'.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "ETÄISYYS 25 vv",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Vega (25,04 ly)",
+    "lahde2": "fi.wikipedia.org/wiki/Vega_(tähti) (25,05 vv)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KIRKKAUS 0,03 mag",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Vega (+0,026)",
+    "lahde2": "fi.wikipedia.org/wiki/Vega_(tähti) (0,03)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TÄHDISTÖ Lyyra",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Vega",
+    "lahde2": "fi.wikipedia.org/wiki/Vega_(tähti)",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-arcturus": [
+   {
+    "vaite": "Arcturus löytyy Otavan vartta seuraamalla",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Arcturus ('arc to Arcturus')",
+    "lahde2": "fi.wikipedia.org/wiki/Arcturus (seuraa Otavan 'vartta')",
+    "huom": "Kaaren jatkaminen (kaari-Arcturukselle) on oikea; 'seuraamalla' kattaa sen.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "ETÄISYYS 36,7 vv",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Arcturus (36,7 ly)",
+    "lahde2": "fi.wikipedia.org/wiki/Arcturus (36,7 vv)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KIRKKAUS −0,05 mag",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Arcturus (−0,05)",
+    "lahde2": "fi.wikipedia.org/wiki/Arcturus (−0,04)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TYYPPI Punainen jättiläinen",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Arcturus (K1,5 III)",
+    "lahde2": "fi.wikipedia.org/wiki/Arcturus",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "LÄMPÖTILA n. 4 300 K",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Arcturus (4 286 K)",
+    "lahde2": "fi.wikipedia.org/wiki/Arcturus (4 300 K)",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-betelgeuze": [
+   {
+    "vaite": "Betelgeuze himmeni oudosti vuoden 2020 alussa",
+    "tulos": "KORJAA",
+    "lahde1": "science.nasa.gov/missions/hubble-space-telescope/... (himmeneminen lokakuu 2019 – helmikuu 2020, normaali huhtikuussa 2020)",
+    "lahde2": "en.wikipedia.org/wiki/Betelgeuse (Great Dimming, lokakuu 2019 – helmikuu 2020)",
+    "huom": "Himmeneminen alkoi lokakuussa 2019 ja syveni minimiinsä helmikuussa 2020; 'vuoden 2020 alussa' jättää alun pois. Syy (pölypilvi) on selitetty, joten 'oudosti' on ok mutta 'harvinaisen paljon' olisi täsmällisempi.",
+    "korjaus": "Betelgeuze himmeni oudosti talvella 2019–2020"
+   },
+   {
+    "vaite": "ETÄISYYS n. 550–650 vv",
+    "tulos": "KORJAA",
+    "lahde1": "en.wikipedia.org/wiki/Betelgeuse (408–548 ly; parhaat arviot 400–600)",
+    "lahde2": "ESO eso2003 ('yli 700 ly'), NASA Hubble (n. 725 ly), fi-Wikipedia (643 ± 146 vv)",
+    "huom": "Arviot vaihtelevat 550–725 vv; 550–650 ei kata ESO:n ja NASAn lukua.",
+    "korjaus": "n. 550–700 vv"
+   },
+   {
+    "vaite": "TYYPPI Punainen ylijättiläinen",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Betelgeuse (M1–M2 Ia–ab)",
+    "lahde2": "fi.wikipedia.org/wiki/Betelgeuze",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "SÄDE 630–760 × Aurinko",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Betelgeuse (640–764 R☉)",
+    "lahde2": "fi.wikipedia.org/wiki/Betelgeuze (n. 630 R☉)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "LÄMPÖTILA n. 3 100–3 800 K",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Betelgeuse (3 779 K)",
+    "lahde2": "fi.wikipedia.org/wiki/Betelgeuze (n. 3 100 K)",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-capella": [
+   {
+    "vaite": "Capella näyttää yhdeltä tähdeltä, mutta niitä on neljä",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Capella (quadruple system)",
+    "lahde2": "fi.wikipedia.org/wiki/Capella (neljä tähteä, kaksi kaksoistähteä)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "ETÄISYYS n. 42–43 vv",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Capella (42,9 ly)",
+    "lahde2": "fi.wikipedia.org/wiki/Capella (42,2 vv)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KIRKKAUS 0,08 mag",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Capella (+0,08)",
+    "lahde2": "fi.wikipedia.org/wiki/Capella (+0,08)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TYYPPI Nelinkertainen tähti",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Capella",
+    "lahde2": "fi.wikipedia.org/wiki/Capella",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TÄHDISTÖ Ajomies",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Capella (Auriga)",
+    "lahde2": "fi.wikipedia.org/wiki/Capella (Ajomies)",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-otava": [
+   {
+    "vaite": "Otavan kaksi tähteä osoittavat Pohjantähden luo",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Big_Dipper (Dubhe ja Merak osoittavat Polarikseen)",
+    "lahde2": "fi.wikipedia.org/wiki/Otava_(tähdistö)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TYYPPI Ison karhun osa",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Otava_(tähdistö) (Ison karhun seitsemän näkyvintä tähteä)",
+    "lahde2": "en.wikipedia.org/wiki/Big_Dipper (asterismi Ursa Majorissa)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TÄHTIÄ 7",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Big_Dipper",
+    "lahde2": "fi.wikipedia.org/wiki/Otava_(tähdistö)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "NIMEN TARU Patoverkko",
+    "tulos": "OK",
+    "lahde1": "Turun yliopisto ('otavaksi kutsuttua patoverkkoa')",
+    "lahde2": "fi.wikipedia.org/wiki/Otava_(tähdistö) ('avonaisen patoverkon mukaan', otava = lohiverkko)",
+    "huom": "Hieman täsmällisempi: otava = lohenpyyntiin käytetty patoverkko.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KANSANNIMI Seitsentähtinen",
+    "tulos": "OK",
+    "lahde1": "Turun yliopisto ('seitsentähtiseksi tai otavaksi')",
+    "lahde2": "fi.wikipedia.org/wiki/Otava_(tähdistö) ('seitsentähtinen ja toivontähdet')",
+    "huom": "Seitsentähtinen on Otavan (Ison karhun) nimi, EI Seulasten; fi-Wikipedian Seulaset-artikkeli ei sitä mainitse.",
+    "korjaus": ""
+   }
+  ],
+  "taivas-orion": [
+   {
+    "vaite": "Orion näkyy melkein koko maapallolta",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Orion_(tähdistö) ('näkyy leveysasteiden +85° ja −75° välillä')",
+    "lahde2": "en.wikipedia.org/wiki/Orion_(constellation) (leveysasteet n. +80°...−68°..−75°; päiväntasaajalla)",
+    "huom": "Pohjoisen napa-alue ja Etelämantereen sisäosat jäävät pois, joten 'melkein' on oikea sana.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KIRKKAITA 8 tähteä",
+    "tulos": "KORJAA",
+    "lahde1": "fi.wikipedia.org/wiki/Orion_(tähdistö) (infolaatikko 8 alle 3 mag, mutta teksti 'seitsemän kirkkainta')",
+    "lahde2": "en.wikipedia.org/wiki/Orion_(constellation) (7 main stars; 8 brighter than mag 3)",
+    "huom": "8 pitää vain määritelmällä 'kirkkaampi kuin 3 mag' (sisältää Iota Orionisin); pelaajan näkemä tiimalasi on 7 tähteä (Betelgeuze, Bellatrix, Rigel, Saiph, kolme vyön tähteä). Epäselvä, joten käytä 7.",
+    "korjaus": "Nimike: PÄÄTÄHTIÄ, arvo: 7 (vaihtoehto: KIRKKAITA / 8 (alle 3 mag))"
+   },
+   {
+    "vaite": "KOKO 594 neliöastetta",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Orion_(constellation) (594)",
+    "lahde2": "fi.wikipedia.org/wiki/Orion_(tähdistö) (594)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "PARAS AIKA tammikuu",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Orion_(constellation) (best at 21:00 in January)",
+    "lahde2": "fi.wikipedia.org/wiki/Orion_(tähdistö) ('parhaiten tammikuussa')",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-kalevanmiekka": [
+   {
+    "vaite": "Orionin vyötä on kutsuttu myös Kalevan miekaksi",
+    "tulos": "OK",
+    "lahde1": "Turun yliopisto ('Orionin vyö on hahmotettu Kalevan miekaksi')",
+    "lahde2": "fi.wikipedia.org/wiki/Orionin_vyö ('Orionin vyötä on kutsuttu myös tällä nimellä')",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TYYPPI Orionin vyö",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Orion%27s_Belt",
+    "lahde2": "fi.wikipedia.org/wiki/Orionin_vyö",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TÄHTIÄ 3 jonossa",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Orion%27s_Belt (Alnitak, Alnilam, Mintaka)",
+    "lahde2": "fi.wikipedia.org/wiki/Orionin_vyö",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KANSANNIMI Kalevan miekka",
+    "tulos": "OK",
+    "lahde1": "Turun yliopisto",
+    "lahde2": "fi.wikipedia.org/wiki/Orionin_vyö; journal.fi (Kalevan miekka 'Orion')",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TOINEN NIMI Väinämöisen viikate",
+    "tulos": "KORJAA",
+    "lahde1": "Turun yliopisto ('...tai osaksi Väinämöisen viikatetta'); Yle (viikatteen terä = vyön tähdet)",
+    "lahde2": "fi.wikipedia.org/wiki/Orionin_vyö (viikate = vyön alapuoliset tähdet + sumu), helsinki.fi-esitys (viikate = vyö + miekka)",
+    "huom": "Lähteet ovat ristiriitaisia siitä, mikä osa kuviosta on viikate. Vyö on kuitenkin yleensä osa viikatetta, ei sen toinen nimi.",
+    "korjaus": "Nimike: OSANA, arvo: Väinämöisen viikate"
+   }
+  ],
+  "taivas-seulaset": [
+   {
+    "vaite": "Seulaset on nimetty seulan pohjan reikien mukaan",
+    "tulos": "OK",
+    "lahde1": "Turun yliopisto ('toi mieleen seulan pohjassa olevat reiät')",
+    "lahde2": "fi.wikipedia.org/wiki/Seulaset ('seulan nosti taivasta kohti' - valo reikien läpi)",
+    "huom": "Selitys on kansanomainen tulkinta (nimi viittaa seulaan ja sen reikiin), ei kielitieteellisesti todistettu. Varovaisempi sanamuoto (47 merk.): 'Seulaset-nimi viittaa seulan reikiin'.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "ETÄISYYS n. 440 vv",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Seulaset (440 vv)",
+    "lahde2": "en.wikipedia.org/wiki/Pleiades (444 ly)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "NÄKYY 6–9 tähteä",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Seulaset ('ainakin 6–9 tähteä')",
+    "lahde2": "en.wikipedia.org/wiki/Pleiades (6–7 helposti, jopa 14)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "IKÄ n. 100 milj. vuotta",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Seulaset (n. 100 milj. v)",
+    "lahde2": "en.wikipedia.org/wiki/Pleiades (75–150 milj. v)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TUNNUS M45",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Pleiades (Messier 45)",
+    "lahde2": "fi.wikipedia.org/wiki/Seulaset",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-linnunrata": [
+   {
+    "vaite": "Linnunradan keskusta on Jousimiehen suunnassa",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Milky_Way (kohti Jousimiestä)",
+    "lahde2": "fi.wikipedia.org/wiki/Linnunrata ('Jousimiehen tähdistön suunnalla')",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "ETÄISYYS n. 26 000 vv",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Linnunrata (26 000 ± 1 400 vv)",
+    "lahde2": "en.wikipedia.org/wiki/Milky_Way (n. 27 000 ly)",
+    "huom": "Etäisyys keskustaan; toinen lähde antaa 27 000, 'n.' kattaa.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TÄHTIÄ 100–400 miljardia",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Milky_Way (100–400 mrd)",
+    "lahde2": "fi.wikipedia.org/wiki/Linnunrata (100–400 mrd)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TYYPPI Sauvaspiraaligalaksi",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Milky_Way (barred spiral)",
+    "lahde2": "fi.wikipedia.org/wiki/Linnunrata",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "NIMEN TARU Tie Lintukotoon",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Linnunrata ('joutsenen reitti taivaan halki lintukotoon')",
+    "lahde2": "fi.wikipedia.org/wiki/Lintukoto (muuttolinnut seuraavat Linnunrataa lintukotoon)",
+    "huom": "Molemmat lähteet ovat fi-Wikipediaa; kolmas riippumaton lähde puuttui (britannica/UNESCO eivät käytettävissä). Sisältö on vakiintunutta kansanperinnettä, joten OK.",
+    "korjaus": ""
+   }
+  ],
+  "taivas-andromeda": [
+   {
+    "vaite": "Andromedan valo on matkannut 2,5 miljoonaa vuotta",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Andromeda_Galaxy (2,5 milj. ly)",
+    "lahde2": "fi.wikipedia.org/wiki/Andromedan_galaksi (2,5 milj. vv)",
+    "huom": "Sanamuoto 'Andromedan valo' tarkoittaa galaksia; voisi olla 'Andromedan galaksin valo' jos tila sallii (56 merk.).",
+    "korjaus": ""
+   },
+   {
+    "vaite": "ETÄISYYS n. 2,5 milj. vv",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Andromeda_Galaxy",
+    "lahde2": "fi.wikipedia.org/wiki/Andromedan_galaksi (2,5–2,53 milj. vv)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KIRKKAUS 3,4 mag",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Andromeda_Galaxy (3,44)",
+    "lahde2": "fi.wikipedia.org/wiki/Andromedan_galaksi (+3,4)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TYYPPI Spiraaligalaksi",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Andromeda_Galaxy (sauvaspiraali SAB(s)b)",
+    "lahde2": "fi.wikipedia.org/wiki/Andromedan_galaksi (Sb-spiraali)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TUNNUS M31",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Andromeda_Galaxy",
+    "lahde2": "fi.wikipedia.org/wiki/Andromedan_galaksi",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-orioninsumu": [
+   {
+    "vaite": "Orionin sumu on Maata lähin suuri tähtien syntyalue",
+    "tulos": "KORJAA",
+    "lahde1": "en.wikipedia.org/wiki/Orion_Nebula ('closest region of massive star formation')",
+    "lahde2": "fi.wikipedia.org/wiki/Orionin_sumu ('meitä lähinnä oleva uusien tähtien syntyalue'); NASA/ESA 'nearest star-forming region'",
+    "huom": "'Suuri' on epämääräinen: lähempiäkin tähtiä muodostavia pilviä on (Härän ja Käärmeenkantajan pilvet), mutta ne muodostavat vain pieniä tähtiä. Tarkka väite koskee massiivisia tähtiä.",
+    "korjaus": "Orionin sumu on lähin massiivisten tähtien syntyalue"
+   },
+   {
+    "vaite": "ETÄISYYS n. 1 300–1 500 vv",
+    "tulos": "OK",
+    "lahde1": "science.nasa.gov (1 300 vv ja 1 500 vv eri sivuilla); ESA/Hubble (1 500 vv)",
+    "lahde2": "fi.wikipedia.org/wiki/Orionin_sumu (1 500–1 600 vv); en.wikipedia 1 267 ly",
+    "huom": "Tuoreet mittaukset (Gaia/VLBI) ~1 270–1 350 vv, mutta NASA/ESA käyttävät 1 300–1 500, joten haarukka on perusteltu.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KIRKKAUS 4,0 mag",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Orion_Nebula (4,0)",
+    "lahde2": "fi.wikipedia.org/wiki/Orionin_sumu (+4,0)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TYYPPI Kaasusumu",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Orion_Nebula (emissiosumu)",
+    "lahde2": "fi.wikipedia.org/wiki/Orionin_sumu (kirkkain kaasusumu)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TUNNUS M42",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Orion_Nebula",
+    "lahde2": "fi.wikipedia.org/wiki/Orionin_sumu",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-magellan": [
+   {
+    "vaite": "Suuri Magellanin pilvi on Linnunradan naapurigalaksi",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Large_Magellanic_Cloud (satelliittigalaksi)",
+    "lahde2": "fi.wikipedia.org/wiki/Suuri_Magellanin_pilvi",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "ETÄISYYS n. 160 000 vv",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Large_Magellanic_Cloud (163 000 ly)",
+    "lahde2": "science.nasa.gov (n. 168 000 ly; fi-Wikipedia 179 000 vv)",
+    "huom": "Lähteet 160 000–180 000; tuorein geometrinen mittaus ~162 000. 'n. 160 000' sopii.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TYYPPI Kääpiögalaksi",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Large_Magellanic_Cloud (dwarf galaxy)",
+    "lahde2": "fi.wikipedia.org/wiki/Suuri_Magellanin_pilvi ('pieni epäsäännöllinen galaksi, joskus kääpiögalaksi')",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "TÄHTIÄ 20–30 miljardia",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Large_Magellanic_Cloud (n. 20 mrd)",
+    "lahde2": "fi.wikipedia.org/wiki/Suuri_Magellanin_pilvi (n. 30 mrd)",
+    "huom": "",
+    "korjaus": ""
+   },
+   {
+    "vaite": "NÄKYY Etelätaivaalla",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Large_Magellanic_Cloud (etelä, pohjoiseen n. 20° N)",
+    "lahde2": "fi.wikipedia.org/wiki/Suuri_Magellanin_pilvi (ei näy Euroopasta)",
+    "huom": "",
+    "korjaus": ""
+   }
+  ],
+  "taivas-revontulet": [
+   {
+    "vaite": "Revontulet hehkuvat yleensä ISS:n alapuolella",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Revontulet (suurin osa 80–250 km:n korkeudella; koko vaihteluväli 80–600 km)",
+    "lahde2": "en.wikipedia.org/wiki/Aurora (Størmer: ei revontulia alle 70 km, vain 6,5 % yli 150 km, maksimi n. 100 km) + en.wikipedia.org/wiki/International_Space_Station (ISS 370–460 km)",
+    "huom": "fi.wikipedia ISS-sivu antaa vanhentuneen 355–368 km; kumpikin yli 250 km. 'Yleensä', koska ylin reuna ulottuu 600 km:iin (STEVE ym. ei revontulta).",
+    "korjaus": ""
+   },
+   {
+    "vaite": "KORKEUS n. 80–250 km",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Revontulet (80–250 km suurin osa)",
+    "lahde2": "en.wikipedia.org/wiki/Aurora (alle 70 km ei yhtään, 93,5 % alle 150 km, maksimi n. 100 km: yhteensopiva)",
+    "huom": "Linssisepän ehdotus 'n. 100–300 km' ei ole lähteiden mukainen (ei 300:aa); käytetty fi.wikipedian väliä.",
+    "korjaus": "100–300 → 80–250"
+   },
+   {
+    "vaite": "VIHREÄ = happi, alempana; PUNAINEN = happi, ylempänä",
+    "tulos": "OK",
+    "lahde1": "en.wikipedia.org/wiki/Aurora (green 557,7 nm hapen päästö alemmilla korkeuksilla; red 630 nm hapen päästö ylimmillä korkeuksilla)",
+    "lahde2": "spaceplace.nasa.gov/aurora/en/ (happi säteilee vihreää ja punaista, typpi sinistä ja violettia)",
+    "huom": "NASA ei erittele korkeutta; korkeusero Wikipediasta. Ilmatieteen laitos: tyypilliset värit vihreä, punainen, violetti.",
+    "korjaus": ""
+   },
+   {
+    "vaite": "SYY aurinkotuuli",
+    "tulos": "OK",
+    "lahde1": "fi.wikipedia.org/wiki/Revontulet (aurinkotuulen varautuneet hiukkaset osuvat ilmakehään)",
+    "lahde2": "spaceplace.nasa.gov/aurora/en/ (aurinkotuuli ja auringon myrskyt; hiukkaset magneettikentän kautta napojen ilmakehään)",
+    "huom": "Etäisyysriviä ei ole (Linssisepän pyyntö: ei 'laskettu').",
+    "korjaus": ""
+   }
+  ]
+ },
+ "kesayo": [
+  {
+   "vaite": "(1) Kesäpäivänseisauksena keskiyöllä Aurinko on Helsingissä (60,2° N) noin 6,4° horisontin alla, pohjoisempana vähemmän",
+   "tulos": "OK",
+   "lahde1": "Laskettu: korkeus = leveysaste + deklinaatio − 90° = 60,17 + 23,44 − 90 = −6,4°",
+   "lahde2": "Finnair/Ursa-tyyppiset kuvaukset valkeista öistä sekä calendar.center (hämärä 0–6° horisontin alla) - tukevat suuruusluokkaa; timeanddate palautti 403, ei kierretty",
+   "huom": "Oikein geometrisesti (taittuminen ei muuta merkittävästi). Kielihuomio: 'keskiyön Aurinko' tarkoittaa ilmiötä, jossa Aurinko pysyy horisontin yläpuolella (napapiirin pohjoispuolella). Helsingissä oikeampi muoto on 'keskiyöllä Aurinko on noin 6,4° horisontin alla'.",
+   "korjaus": ""
+  },
+  {
+   "vaite": "(1b) Heinäkuun lopussa Helsingissä noin 10–11°",
+   "tulos": "OK",
+   "lahde1": "Laskettu: deklinaatio 25.7. +19,8° → −10,0°; 31.7. +18,5° → −11,4°",
+   "lahde2": "Riippumaton uudelleenlasku (Spencer-sarja auringon deklinaatiolle): 25.7. −10,0°, 31.7. −11,4°",
+   "huom": "Aurinkokeskiyö Helsingissä on n. klo 01.20 kesäaikaa, ei 24.00; kellonaikaan 24.00 syvyys on hieman pienempi, mutta 10–11° on hyvä pyöristys heinäkuun lopulle (25.–31.7.).",
+   "korjaus": ""
+  },
+  {
+   "vaite": "(2) 420 km:n korkeudessa kiertävä asema pääsee Maan varjoon vasta, kun Aurinko on aseman alla maanpinnalla noin 20° horisontin alla",
+   "tulos": "OK",
+   "lahde1": "Geometria: cos α = R/(R+h) = 6371/6791 → α = 20,26°",
+   "lahde2": "Riippumaton uudelleenlasku R = 6378,137 km: α = 20,25° (ei ulkoista lähdettä; geometria on oppikirjakaava)",
+   "huom": "Ilmakehän sironta ja pimennysvyöhykkeen häilyvä reuna (penumbra) tekevät rajasta pehmeän, joten 'noin 20°' on oikea. Pätee myös ISS:n todelliselle 400–420 km:n korkeudelle (20,0–20,3°).",
+   "korjaus": ""
+  },
+  {
+   "vaite": "(3) Astronominen yö (Aurinko yli 18° alhaalla) alkaa Helsingissä noin elokuun lopussa ja päättyy huhtikuun alussa/puolivälissä",
+   "tulos": "KORJAA",
+   "lahde1": "api.sunrise-sunset.org (60,17 N, 24,94 E): 2026-08-21 ei astr. yötä, 08-22 on; 04-20 on, 04-21 ei",
+   "lahde2": "Oma laskenta: deklinaatio ≤ +11,8° ⇒ yö, Auringon deklinaatio ylittää tämän n. 21.4. ja alittaa n. 22.8.",
+   "huom": "Päivämäärät: yö alkaa n. 22.–23.8. (ensimmäiset yöt hyvin lyhyitä) ja päättyy n. 20.–21.4. 'Huhtikuun alussa/puolivälissä' on liian aikaisin: huhtikuun 1.–19. päivinä on vielä täysi pimeys, loppu vasta n. 20.4. timeanddate palautti 403, ei kierretty; päivämäärät perustuvat kahteen laskentalähteeseen (±1 vrk).",
+   "korjaus": "...alkaa Helsingissä noin 22. elokuuta ja päättyy noin 20. huhtikuuta (esim. 'elokuun lopulla ... huhtikuun toisella puoliskolla')"
+  },
+  {
+   "vaite": "(4) Maa peittää 420 km:n korkeudesta noin kolmanneksen taivaasta",
+   "tulos": "OK",
+   "lahde1": "Laskettu: ρ = arcsin(R/(R+h)) = 69,74°; peitto = (1 − cos ρ)/2 = 0,327",
+   "lahde2": "Sama R = 6378,137 km: 0,327 (32,7 %)",
+   "huom": "Kolmannes (32,7 %) täsmää. Tarkemmin 'noin kolmanneksen koko näkökentästä (täyskulmasta)'; pallon pinta-alasta 32,7 %.",
+   "korjaus": ""
+  }
+ ],
+ "revontulet_huom": "Sisältökirjuri 15.10.2026 itse (ei riippumatonta tarkistajaa): faktat luettu suoraan lähdesivuilta, ks. kohteet.taivas-revontulet."
+}

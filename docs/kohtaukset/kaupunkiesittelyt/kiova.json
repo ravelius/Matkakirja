@@ -1,0 +1,80 @@
+[
+  {
+    "id": "kiova",
+    "esittely": "Kartan alue on Kiovan vanha ydin: alakaupunki Podil Dneprin rannalla ja yläkaupunki kukkuloilla. Podilin Kontraktovan aukio on saanut nimensä 1700-luvun lopulla Kiovaan siirretystä kauppamessusta. Yläkaupungissa on Pyhän Sofian katedraali, joka on rakennettu 1000-luvulla ja kuuluu Unescon maailmanperintöön vuodesta 1990.\n\nPyhän Mikaelin kultakupolinen luostari perustettiin 1100-luvun alussa, katedraali purettiin 1930-luvulla ja se rakennettiin uudelleen 1990-luvulla. Rastrellin suunnittelema Andreaksen kirkko rakennettiin 1700-luvun puolivälissä. Kultainen portti oli yksi kaupunginmuurin kolmesta pääportista, ja nykyinen rakennus on vuodelta 1982. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 709,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Saint_Sophia_Cathedral,_Kyiv",
+        "title": "Wikipedia: Saint Sophia Cathedral, Kyiv",
+        "tukee": "Unesco 1990; perustamisvuosi kiistanalainen 1011/1017/1037"
+      },
+      {
+        "url": "https://whc.unesco.org/en/list/527/",
+        "title": "UNESCO: Saint-Sophia Cathedral and Kyiv-Pechersk Lavra (hakutulos)",
+        "tukee": "1000-luku, Unesco 1990, Jaroslav Viisas"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Golden_Gate,_Kyiv",
+        "title": "Wikipedia: Golden Gate, Kyiv",
+        "tukee": "1017-1024 Jaroslav Viisas, yksi kolmesta portista; täysin uudelleenrakennettu 1982"
+      },
+      {
+        "url": "https://via-regia.org.ua/en/sights/zoloti-vorota-1017-1024-rr/",
+        "title": "Via Regia Ukraine: Golden Gate (hakutulos)",
+        "tukee": "uudelleenrakennus valmistui 1982"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/St._Michael%27s_Golden-Domed_Monastery",
+        "title": "Wikipedia: St. Michael's Golden-Domed Monastery",
+        "tukee": "perustettu 1108-1113, purettu 1935-1937, jälleenrakennus 1997-1999"
+      },
+      {
+        "url": "https://risu.ua/en/st-michael-s-golden-domed-church-in-kyiv-marks-900-years_n23101",
+        "title": "RISU: St Michael's (hakutulos)",
+        "tukee": "1108/1113, purettu 1934-1936, uusi 1997-1999"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/St_Andrew%27s_Church,_Kyiv",
+        "title": "Wikipedia: St Andrew's Church, Kyiv",
+        "tukee": "rakennettu 1747-1754, Rastrelli"
+      },
+      {
+        "url": "https://www.readingkyiv.net/en/sights/st-andrews-church/",
+        "title": "Reading Kyiv: St Andrew's Church (hakutulos)",
+        "tukee": "1747-1754 Rastrelli"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Kontraktova_Square",
+        "title": "Wikipedia: Kontraktova Square",
+        "tukee": "Kontrakty-messut siirrettiin Kiovaan 1798, aukio sai nimensä messuista"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Podil",
+        "title": "Wikipedia: Podil",
+        "tukee": "Podil alakaupunki Dneprin rannalla; Kontraktova; messut 1797-1929"
+      },
+      {
+        "url": "https://www.encyclopediaofukraine.com/pages%5CK%5CY%5CKyivContractFair.htm",
+        "title": "Encyclopedia of Ukraine: Kyiv Contract Fair (hakutulos)",
+        "tukee": "messut siirretty Kiovaan 1797/1798"
+      }
+    ],
+    "pudotetut": [
+      "Pyhän Sofian katedraalin valmistumisvuosi 1037 (entinen teksti, 'ilmeisesti'): lähteet 1011/1017/1018/1037, tarkkaa vuotta ei käytetä",
+      "Andreaksen kirkon tarkat vuodet 1747-1754: vahvistettu, mutta valmistumisvuosi epäselvä (1754/1762/1767), käytetty vain 'puolivälissä'",
+      "Kontraktitalo 1817: vahvistettu (Wikipedia + hakutulos), jätetty pois tilan vuoksi",
+      "Itsenäisyyden aukio, nimi 1991: vahvistettu, jätetty pois tilan vuoksi",
+      "'Seudun vilkkain kauppapaikka 1800-luvulla' (entinen teksti): ei vahvistettu sellaisenaan, korvattu messun siirrolla",
+      "Dneprin länsiranta (entinen teksti): ei vahvistettu kahdesta lähteestä, muotoiltu 'Dneprin rannalla'"
+    ],
+    "ristiriidat": [
+      "Kontrakty-messujen siirto Kiovaan: 1797 vs. 1798 -> käytetty 'vuosisadan lopulla'",
+      "Kultaisen portin rakennusvuodet: 1017-1024 vs. 1037 -> vuosilukua ei käytetä, vain uudelleenrakennus 1982",
+      "Pyhän Mikaelin katedraalin purku: 1934-1936 vs. 1935-1937 -> '1930-luvulla'; jälleenrakennus valmistui 1998 tai 1999 -> '1990-luvulla'",
+      "Mikaelin perustaminen: 1108 vs. 1108-1113 -> '1100-luvun alussa'"
+    ],
+    "muutos_sk": "Sofian valmistumisvuosi 1037 pois (lähteet ristiriidassa), tilalle 'rakennettu 1000-luvulla' ja Unesco 1990. Lisätty Kontraktovan nimen alkuperä (messut), Mikaelin luostarin perustaminen, purku ja uudelleenrakennus, Andreaksen kirkko (Rastrelli) ja Kultaisen portin uudelleenrakennus 1982. Poistettu 'seudun vilkkain kauppapaikka 1800-luvulla', Kontraktitalo ja Itsenäisyyden aukio."
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "madrid",
+    "esittely": "Kartan alue on Madridin vanha ydin kuninkaanlinnasta itään. Filip II siirsi hovinsa Madridiin vuonna 1561. Kuninkaanlinna rakennettiin Alcázar-linnan tuhoutuneen vuoden 1734 palon jälkeen, ja siinä on 3 418 huonetta. Plaza Mayor valmistui 1619, ja Puerta del Solin kiveyksessä on nollakilometrin laatta, josta Espanjan tiet mitataan.\n\nPrado-museo avattiin yleisölle 1819 Juan de Villanuevan suunnittelemassa rakennuksessa. Alcalán portti valmistui 1778, ja Gran Vían rakentaminen alkoi 1910. Cibeleen suihkulähteellä Real Madrid juhlii voittojaan. Retiro tuli kaupungin yleiseksi puistoksi 1868. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 649,
+    "kappaleita": 2,
+    "lahteet": [
+      {"url": "https://en.wikipedia.org/wiki/Madrid", "title": "Wikipedia: Madrid", "tukee": "Filip II siirsi hovin Madridiin kesäkuussa 1561"},
+      {"url": "https://releve.erudit.org/en/journals/renref/2020-v43-n4-renref05996/1076825ar/abstract/", "title": "Renaissance and Reformation 2020 (Martínez Hernández), tiivistelmä", "tukee": "Filip II valitsi Madridin kuninkaalliseksi residenssiksi ja hoviksi 1561"},
+      {"url": "https://en.wikipedia.org/wiki/Palacio_Real_de_Madrid", "title": "Wikipedia: Royal Palace of Madrid", "tukee": "Alcázar paloi 24.12.1734; 3 418 huonetta; 135 000 m2"},
+      {"url": "https://theartbog.com/royal-palace-of-madrid-history-art-and-splendor/", "title": "The Art Bog: Royal Palace of Madrid (hakutuloksen yhteenveto)", "tukee": "Alcázar tuhoutui palossa jouluaattona 1734; 3 418 huonetta (molon.de antaa 2 800, hylätty)"},
+      {"url": "https://en.wikipedia.org/wiki/Plaza_Mayor,_Madrid", "title": "Wikipedia: Plaza Mayor, Madrid", "tukee": "rakentaminen alkoi 1617, valmis 1619 Filip III:n aikana, Gómez de Mora"},
+      {"url": "https://theculturetrip.com/europe/spain/articles/a-brief-history-of-the-plaza-mayor", "title": "Culture Trip: A Brief History of the Plaza Mayor (hakutuloksen yhteenveto)", "tukee": "Gómez de Mora valmis 1619 Filip III:n aikana"},
+      {"url": "https://en.wikipedia.org/wiki/Puerta_del_Sol", "title": "Wikipedia: Puerta del Sol", "tukee": "kilometer zero -laatta, josta Espanjan tiemitat luetaan"},
+      {"url": "https://www.visitmadrid.es/en/places-to-visit-in-madrid/madrid-the-capital-of-spain/puerta-sol-madrids-iconic-kilometer-zero-for", "title": "Visit Madrid: Puerta del Sol", "tukee": "kilometer zero -laatta maassa, Espanjan maantieverkon säteittäinen keskus"},
+      {"url": "https://en.wikipedia.org/wiki/Prado_Museum", "title": "Wikipedia: Prado Museum", "tukee": "avattu yleisölle marraskuussa 1819; Juan de Villanueva suunnitteli rakennuksen 1785"},
+      {"url": "https://www.museodelprado.es/en/museum/history-of-the-museum", "title": "Museo del Prado: History of the museum (hakutuloksen yhteenveto)", "tukee": "Villanueva 1785, Royal Museum avattiin yleisölle marraskuussa 1819"},
+      {"url": "https://en.wikipedia.org/wiki/Puerta_de_Alcal%C3%A1", "title": "Wikipedia: Puerta de Alcalá", "tukee": "Sabatini, Kaarle III, vihitty 1778"},
+      {"url": "https://w3.esmadrid.com/en/node/2930", "title": "esmadrid.com: Puerta de Alcalá (hakutuloksen yhteenveto)", "tukee": "valmistui 1778 Kaarle III:n aikana, Sabatini"},
+      {"url": "https://en.wikipedia.org/wiki/Gran_V%C3%ADa_(Madrid)", "title": "Wikipedia: Gran Vía (Madrid)", "tukee": "hyväksytty 1904, rakentaminen alkoi 1910, viimeinen osa 1929"},
+      {"url": "https://www.introducingmadrid.com/gran-via", "title": "Introducing Madrid: Gran Vía (hakutuloksen yhteenveto)", "tukee": "rakentaminen alkoi 1910"},
+      {"url": "https://en.wikipedia.org/wiki/Plaza_de_Cibeles", "title": "Wikipedia: Plaza de Cibeles", "tukee": "Real Madrid juhlii voittojaan perinteisesti suihkulähteellä"},
+      {"url": "https://www.football-espana.net/2022/05/31/why-do-real-madrid-celebrate-their-titles-at-cibeles", "title": "Football Espana: Why do Real Madrid celebrate their titles at Cibeles?", "tukee": "Real Madrid -fanit juhlivat mestaruuksia Cibeles-lähteellä"},
+      {"url": "https://en.wikipedia.org/wiki/Buen_Retiro_Park", "title": "Wikipedia: Buen Retiro Park", "tukee": "yleiseksi 1868 Isabella II:n syrjäyttämisen jälkeen"},
+      {"url": "https://www.themakingofmadrid.com/?p=894", "title": "The Making of Madrid: Retiro (hakutuloksen yhteenveto)", "tukee": "kruunu luovutti Retiron kaupungille 1868"}
+    ],
+    "pudotetut": [
+      "Plaza Mayorin parvekkeiden määrä 237 (yleisin luku) vs. 477 alkuperäisessä rakenteessa (yksi lähde) -> pois; mitat 129 x 94 m vain Wikipedia/hakuyhteenveto -> pois",
+      "Casa de Correosin rakentamisvuodet (Wikipedia 1766-1768, muut vain 1768) ja arkkitehti Jacques Marquet: toista lähdettä ei löytynyt -> pois",
+      "Puerta del Solin laatan perustamisvuosi (Wikipedia 1857, Atlas Obscura 1950, uusinnat 2002 ja 2009) -> ei vuotta",
+      "Kuninkaanlinnan 'virallinen asuinpaikka': Wikipedia sanoo virallinen asuinpaikka, muut kertovat ettei kuninkaallinen perhe asu siellä -> pois; rakentamisvuodet 1735/1738-1755/1764 -> pois",
+      "Pradon kokoelman koko, Goya eniten edustettuna: vain Wikipedia -> pois",
+      "Palacio de Comunicaciones (Cibeles-palatsi) rakennusvuodet (1904/1909/1919) ja nykyinen käyttö kaupungintalona: ei vahvistettu kahdesta lähteestä -> pois",
+      "Retiron pinta-ala (118/125/130/142 ha) ja Palacio de Cristal: ei tekstissä; Retiron perustaminen 1630-luvulla Filip IV:n aikana (kuninkaan nimi vain pääteltävissä) -> pois",
+      "Goyan kansankuvat, chotis, tapaskierros ja muut nosto-kohteet: ei tarkistettu, ei tekstissä (tilanpuute)"
+    ],
+    "ristiriidat": [
+      "Hovin siirto 1561: kaikki lähteet samaa vuotta, mutta eroavat mistä kaupungista hovi tuli (Toledo/Valladolid) -> teksti ei mainitse lähtöpaikkaa",
+      "Gran Vían valmistuminen: Wikipedia 1929 (viimeinen osa), yksi haku 1931 -> teksti sanoo vain, että rakentaminen alkoi 1910",
+      "Puerta de Alcalán tilausvuosi: 1764 vs. 1774 -> ei tekstissä, vain vihkimisvuosi 1778 (yhtäpitävä)",
+      "Kuninkaanlinnan huoneluku: 3 418 (Wikipedia, Patrimonio Nacional-haku) vs. 2 800 (molon.de) -> käytetty 3 418",
+      "Retiro: kaupungin yleiseksi puistoksi 1868 (Wikipedia ja muut), mutta yksi lähde kertoo Kaarle III:n avanneen osan puutarhoista yleisölle jo 1767 -> teksti sanoo 'yleiseksi puistoksi 1868' (kokonaan kaupungin hallintaan)",
+      "Vanha esittely: Retiro 'kaikkien käyttöön vasta 1868' ja 'kilometri nolla'-laatta säilytetty; 'Madrid oli pieni linnoituskaupunki' ja katujen muoto pudotettu (ei lähdettä)"
+    ],
+    "muutos_sk": "Poistettu: katuverkon kuvaus (mutkittelevat ja suorat kadut), 'pieni linnoituskaupunki'. Säilytetty ja tarkistettu: hovi 1561, kilometri nolla, Retiro 1868. Lisätty: kuninkaanlinna 1734/3 418 huonetta, Plaza Mayor 1619, Prado 1819, Alcalán portti 1778, Gran Vía 1910, Cibeles/Real Madrid."
+  }
+]

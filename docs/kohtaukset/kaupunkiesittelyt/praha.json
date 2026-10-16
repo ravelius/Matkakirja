@@ -1,0 +1,82 @@
+[
+  {
+    "id": "praha",
+    "esittely": "Kartan alue on Prahan vanha ydin Vltavan molemmin puolin. Prahan linna on perustettu 800-luvulla, ja Guinnessin mukaan se on maailman suurin muinaislinna: sen pituus on noin 570 metriä. Vanhassakaupungissa maanpintaa nostettiin 1200-luvulla tulvien takia, ja entiset pohjakerrokset jäivät kellareiksi. Kaarlensilta, jonka rakentaminen alkoi 1357, on 516 metriä pitkä ja siinä on 16 kaarta; se oli Vltavan ainoa silta vuoteen 1841.\n\nVanhauusi synagoga valmistui 1270, ja se on Euroopan vanhin edelleen toimiva synagoga. Astronomisen kellon vanhin osa on vuodelta 1410. Petřínin näkötorni valmistui 1891 Eiffel-tornia mukaillen, ja se on 63,5 metriä korkea. Kartan kohteista pääsee lukemaan lisää napauttamalla.",
+    "merkkeja": 709,
+    "kappaleita": 2,
+    "lahteet": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Prague_Castle",
+        "title": "Wikipedia: Prague Castle",
+        "tukee": "Guinness: suurin muinaislinna, noin 570 m; historia alkaa 870"
+      },
+      {
+        "url": "http://www.guinnessworldrecords.com/world-records/69343-largest-ancient-castle",
+        "title": "Guinness World Records: Largest ancient castle",
+        "tukee": "570 m pituus, rakennettu 800-luvulla (879)"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Charles_Bridge",
+        "title": "Wikipedia: Charles Bridge",
+        "tukee": "aloitettu 1357, 516 m, 16 kaarta, ainoa silta Vltavan yli vuoteen 1841"
+      },
+      {
+        "url": "https://www.britannica.com/place/Charles-Bridge",
+        "title": "Britannica: Charles Bridge (hakutulos)",
+        "tukee": "peruskivi 1357, ainoa silta vuoteen 1841"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Old_New_Synagogue",
+        "title": "Wikipedia: Old New Synagogue",
+        "tukee": "valmistui 1270, Euroopan vanhin toimiva synagoga"
+      },
+      {
+        "url": "https://travelcurious.com/czechia/prague/attractions/old-new-synagogue-ACHEG8",
+        "title": "TravelCurious: Old-New Synagogue (hakutulos, matkailusivu, heikko)",
+        "tukee": "1270, Euroopan vanhin toimiva synagoga"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Petřín_Lookout_Tower",
+        "title": "Wikipedia: Petřín Lookout Tower",
+        "tukee": "valmistui 1891, 63,5 m, Eiffel-tornin innoittama"
+      },
+      {
+        "url": "https://praguecitytourism.cz/en/care-for-cultural-heritage-and-operation-of-important-monuments/petrin-tower",
+        "title": "Prague City Tourism: Petřín Tower (hakutulos)",
+        "tukee": "Eiffel-torni esikuvana, 1891"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Prague_astronomical_clock",
+        "title": "Wikipedia: Prague astronomical clock",
+        "tukee": "vanhin osa vuodelta 1410"
+      },
+      {
+        "url": "https://pragitecture.eu/orloj-astronomical-clock/",
+        "title": "Pragitecture: Orloj (hakutulos)",
+        "tukee": "vanhin osa 1410"
+      },
+      {
+        "url": "https://bestpragueguide.com/en/blog/underground-prague-guide",
+        "title": "Best Prague Guide: Underground Prague",
+        "tukee": "tulvien jälkeen maanpintaa nostettiin (1100- ja 1200-luvun tulvat), pohjakerrokset kellareiksi"
+      },
+      {
+        "url": "https://prague.eu/en/2024/03/12/cellars-and-chapel-of-the-old-town-hall",
+        "title": "prague.eu: cellars of the Old Town Hall (hakutulos)",
+        "tukee": "Vltava tulvi, maata nostettiin; 1200-luvulla romaanisten talojen pohjakerrokset kellareiksi"
+      }
+    ],
+    "pudotetut": [
+      "Joki kaartaa jyrkän kallioharjanteen ympäri (entinen teksti): maisemakuvaus, ei tarkistettu",
+      "Kansallismuseo (rakennus 1885-1891, Wenceslas-aukio): vahvistettu, jätetty pois tilan vuoksi",
+      "Tycho Brahe kuoli Prahassa 1601: vahvistettu (Wikipedia + hakutulos), jätetty pois tilan vuoksi; yhteyttä Klementinumiin ei vahvistettu",
+      "Klementinum (jesuiittakollegio 1556, 20 000 m2): vain Wikipedia, jätetty pois"
+    ],
+    "ristiriidat": [
+      "Linnan perustaminen 870 (Wikipedia) vs. 879 (Guinness) -> käytetty 800-lukua",
+      "Maanpinnan nosto: 1200-luku (prague.eu) vs. tulvat 1100- ja 1200-luvuilla (Best Prague Guide) -> käytetty 1200-lukua",
+      "Petřínin tornin korkeus 63,5 m vs. 60 m (Structurae, Numista) -> käytetty 63,5 m (Wikipedia, Radio Prague, Prague City Tourism)"
+    ],
+    "muutos_sk": "Linnan perustaminen 800-luvulla, Guinness-väite ja 570 m säilytetty. Vanhankaupungin maanpinnan nosto ja Kaarlensillan luvut säilytetty. Lisätty synagogan 1270, astronomisen kellon 1410 ja Petřínin tornin 1891 / 63,5 m. Poistettu kansallismuseo, Tycho Brahe ja joen kallioharjannekuvaus."
+  }
+]

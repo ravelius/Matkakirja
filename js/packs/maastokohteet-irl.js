@@ -1042,4 +1042,26 @@ export const MAASTOKOHTEET_IRL = [
       + 'risti.',
     lahde: 'en-Wikipedia "Devil\'s Bit" (tarkistettu 30.9.2026).',
   },
+  {
+    id: 'keltienmeri',
+    nimi: 'Keltienmeri',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mitä Lusitanialle tapahtui vuonna 1915?',
+      'Mikä Fastnet Rock on?',
+    ],
+    nappi: 'Meri Irlannin eteläpuolella',
+    // -7 E / 50.8 N — ulappa Irlannin eteläpuolella, Cornwallin ja Bretagnen välillä
+    laudat: {
+      maailmankartta: { x: 5600, y: 1355.2 },
+      europe: { x: 76.8, y: 557.6 },
+    },
+    teksti: 'Keltienmeri on Atlantin osa Irlannin eteläpuolella, ja sitä rajaavat Irlanti, '
+      + 'Britannia ja Ranska. Pinta-ala on noin 300 000 neliökilometriä, ja meren pohja on osa '
+      + 'Euroopan mannerjalustaa. Nimen ehdotti tutkija E. W. L. Holt vuonna 1921 Dublinin '
+      + 'kalastusasiantuntijoiden kokouksessa; aiemmin pohjoisosaa pidettiin St. George\'s '
+      + 'Channelin osana.',
+    lahde: 'en-Wikipedia "Celtic Sea", johdanto-osa ja nimiosio; WorldAtlas "Celtic Sea"; AM '
+      + 'Nautical "10 Major Facts About the Celtic Sea" (tarkistettu 16.10.2026).',
+  },
 ];

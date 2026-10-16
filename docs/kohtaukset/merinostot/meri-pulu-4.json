@@ -1,0 +1,698 @@
+[
+ {
+  "kysymys": "Kuinka kapea Gibraltarinsalmi todella on?",
+  "vastaus": "Kapeimmillaan salmi on vain noin 14 kilometriä leveä, vaikka se erottaa kaksi maanosaa, Euroopan ja Afrikan. Se on Välimeren ainoa yhteys Atlanttiin. Vesi kulkee salmessa kahdessa kerroksessa: Atlantin vettä virtaa pinnalla sisään ja raskaampaa, suolaisempaa Välimeren vettä syvemmällä ulos. Ahdas portti säätelee siis koko meren veden vaihtoa.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Strait_of_Gibraltar",
+    "title": "Strait of Gibraltar - Wikipedia"
+   },
+   {
+    "url": "https://science.nasa.gov/earth/earth-observatory/the-strait-of-gibraltar-151478/",
+    "title": "The Strait of Gibraltar - NASA Earth Observatory (hakutulos)"
+   },
+   {
+    "url": "https://www.britannica.com/place/Strait-of-Gibraltar",
+    "title": "Strait of Gibraltar - Britannica (hakutulos)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Mediterranean_Sea",
+    "title": "Mediterranean Sea - Wikipedia"
+   },
+   {
+    "url": "https://archimer.ifremer.fr/doc/00977/108829/122504.pdf",
+    "title": "Ocean Science 21, 2069-2083, 2025 (Ifremer Archimer) (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Kapeimmillaan noin 14 km",
+    "lahde1": "Wikipedia: 7,7 meripeninkulmaa eli 14,2 km",
+    "lahde2": "NASA MODIS-kuvateksti 14,2 km (hakutulos)",
+    "huom": "Britannican (hakutulos) mukaan 13 km, joten sanottu 'noin 14'. Britannican sivu antoi 403."
+   },
+   {
+    "vaite": "Ainoa yhteys Atlanttiin",
+    "lahde1": "Wikipedia (Mediterranean Sea): ainoa yhteys Atlanttiin on Gibraltarinsalmi",
+    "lahde2": "Wikipedia (Strait of Gibraltar): yhdistää Atlantin ja Välimeren",
+    "huom": "Vaite on kysymyksen kannalta luonnollinen yhteys; Suezin ja Bosporin kautta on yhteys muihin meriin, ei Atlanttiin."
+   },
+   {
+    "vaite": "Kaksikerroksinen virtaus: Atlantin vesi sisään pinnalla, tiheämpi Välimeren vesi ulos syvällä",
+    "lahde1": "Wikipedia (Mediterranean Sea, oseanografia)",
+    "lahde2": "Ocean Science 2025 -tutkimus (hakutulos): Gibraltarin kahden kerroksen virtaus",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "esp/valimeri",
+   "fra/valimeri",
+   "syr/valimeri",
+   "tur/valimeri"
+  ]
+ },
+ {
+  "kysymys": "Mitä Espanjan Välimeren rannikolla kalastetaan?",
+  "vastaus": "Yleisiä saaliita ovat pienet parvikalat, anjovis ja sardiini, joita pyydetään Välimerellä eniten. Pohjatroolarit hakevat syvältä kummeliturskaa ja punakatkarapua, ja Dénian punakatkarapu on kuuluisa herkku. Välimeren alueella punakatkaravun pyyntiä rajoitetaan saaliskiintiöillä. Pyyntiä ohjataan siis kiintiöillä ja pyyntikielloilla, jotta kalakannat säilyvät. Kalat ja äyriäiset kuuluvat rannikon ruokakulttuuriin.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://www.fao.org/gfcm/publications/somfi/state-of-the-mediterranean-and-black-sea-fisheries-2025/highlights/en/",
+    "title": "State of Mediterranean and Black Sea Fisheries 2025, highlights - FAO/GFCM"
+   },
+   {
+    "url": "https://weareaquaculture.com/news/fisheries/spain-raises-red-shrimp-quotas-to-boost-mediterranean-fishing",
+    "title": "Spain raises red shrimp quotas to boost Mediterranean fishing"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/European_anchovy",
+    "title": "European anchovy - Wikipedia"
+   },
+   {
+    "url": "https://denia.net/en/que-visitar/fishing-port-and-baix-la-mar/",
+    "title": "Fishing port and Baix la Mar - denia.net (hakutulos)"
+   },
+   {
+    "url": "https://ba.ieo.es/ultimas-publicaciones/546-latitudinal-and-interannual-distribution-of-the-european-anchovy-engraulis-encrasicolus-and-sardine-sardina-pilchardus-in-the-western-mediterranean-and-sampling-uncertainty-in-abundance-estimations",
+    "title": "IEO-CSIC: anchovy and sardine in the western Mediterranean (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Anjovis ja sardiini ovat Välimeren pääsaaliita",
+    "lahde1": "FAO/GFCM 2025: saaliit pääosin pieniä parvikaloja, pääasiassa anjovis ja sardiini",
+    "lahde2": "Wikipedia (European anchovy): Välimerellä runsas kalastus, IUCN: täysin hyödynnetty; IEO-CSIC tutkii niitä Espanjan Välimerellä (hakutulos)",
+    "huom": "GFCM-luku koskee koko Välimerta, ei erikseen Espanjaa; Espanjan lajikohtaista saalisjakaumaa ei löytynyt. Muotoilu 'koko Välimeren alueella'. HEIKOSTI TUETTU Espanja-osuus."
+   },
+   {
+    "vaite": "Pohjatroolarit pyytävät kummeliturskaa ja punakatkarapua",
+    "lahde1": "MAPA/weareaquaculture 2025: punakatkarapu ja kummeliturskan (hake) pyyntikiellot Välimeren troolilaivastolle",
+    "lahde2": "FAO/GFCM 2025: kummeliturska ja syvänmeren ruusukatkarapu arvoltaan Välimeren tärkeimpiä",
+    "huom": ""
+   },
+   {
+    "vaite": "Dénian punakatkarapu on tunnettu herkku",
+    "lahde1": "denia.net (hakutulos): kaupungin tunnetuin tuote",
+    "lahde2": "fineandwild.com (hakutulos): Denia red prawns",
+    "huom": "Pyyntisyvyys jätetty pois: lähteet 600 m ja 900 m."
+   },
+   {
+    "vaite": "Espanja nosti vuoden 2025 punakatkaravun kiintiön 45,9 tonniin; 286 troolaria",
+    "lahde1": "weareaquaculture.com (luettu kokonaan)",
+    "lahde2": "Sama uutinen toisessa osoitteessa (hakutulos)",
+    "huom": "Kaksi riippumatonta lähdettä ei löytynyt; tietoa pidettävä yhden uutislähteen varassa. Ei viranomaisen omaa sivua."
+   }
+  ],
+  "kohteet": [
+   "esp/valimeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Välimeri on niin suolainen?",
+  "vastaus": "Koska siellä haihtuu enemmän vettä kuin sateet ja joet tuovat. Haihtuessaan vesi jättää suolan jälkeensä. Välimeren vedessä on noin 3,8 prosenttia suolaa, kun valtamerissä se on yleensä 3,4–3,6 prosenttia. Gibraltarinsalmi on niin kapea, ettei vähäsuolaisempaa Atlantin vettä pääse sisään tarpeeksi laimentamaan merta. Kuuma ja ahdas meri väkevöityy siis hitaasti.",
+  "sanoja": 49,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Mediterranean_Sea",
+    "title": "Mediterranean Sea - Wikipedia"
+   },
+   {
+    "url": "https://archimer.ifremer.fr/doc/00977/108829/122504.pdf",
+    "title": "Ocean Science 21, 2069-2083, 2025 (Ifremer Archimer) (hakutulos)"
+   },
+   {
+    "url": "https://greekreporter.com/2022/03/04/mediterranean-sea-salt/",
+    "title": "Why the Mediterranean is One of the Saltiest Seas in the World - Greek Reporter (hakutulos)"
+   },
+   {
+    "url": "https://content.dodea.edu/VS/HS/Marine_Biology/MB_M1/docs/lessons/sea_salty.pdf",
+    "title": "Why is the sea salty - DoDEA Marine Biology (hakutulos)"
+   },
+   {
+    "url": "https://marine.copernicus.eu/services/user-learning-services/md4-mediterranean-2025-dynamics-sea-surface-salinity",
+    "title": "Dynamics of Sea Surface Salinity - Copernicus Marine (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Haihtuminen ylittää sateen ja jokien tuoman veden",
+    "lahde1": "Wikipedia (Mediterranean Sea)",
+    "lahde2": "Ocean Science 2025 (hakutulos): pintaveden nettohäviö hallitsee suolaisuutta",
+    "huom": ""
+   },
+   {
+    "vaite": "Pintaveden suolaisuus noin 38 (PSU)",
+    "lahde1": "Wikipedia: keskimäärin 38 PSU 5 metrin syvyydessä",
+    "lahde2": "Tutkimukset (hakutulos): Välimeren lähdevesi noin 38,4 PSU",
+    "huom": "Luku vaihtelee alueittain; sanottu 'noin 3,8 prosenttia' (38 PSU on noin 38 g suolaa kilossa vettä) ammattikielen välttämiseksi."
+   },
+   {
+    "vaite": "Valtamerissä yleensä 34–36 (eli 3,4–3,6 prosenttia)",
+    "lahde1": "DoDEA-oppimateriaali (hakutulos)",
+    "lahde2": "Greek Reporter (hakutulos)",
+    "huom": "Toinen lähde ei ole tutkimuslaitos; Wikipedia antaa Biskajanlahdelle 35 g/l, mikä on samaa suuruusluokkaa."
+   },
+   {
+    "vaite": "Gibraltarin kapeus rajoittaa Atlantin veden virtausta",
+    "lahde1": "Wikipedia: nettosisäänvirtaus noin 70 000 m3/s",
+    "lahde2": "Greek Reporter (hakutulos)",
+    "huom": "Vastauksessa ei lukuja."
+   }
+  ],
+  "kohteet": [
+   "fra/valimeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Biskajanlahti on niin pahamaineinen merenkulkijoille?",
+  "vastaus": "Atlantin matalapaineet iskevät lahteen lännestä, etenkin talvella, ja myrskyt kuuluvat Atlantin kovimpiin. Lahti on keskimäärin noin 1 700 metriä syvä, mutta mannerjalusta ulottuu osin matalaksi, ja se tekee aalloista jyrkkiä. Purjelaivat eivät päässeet tuulta vastaan ja ajautuivat rantaan. Maine syntyi siis säästä, merenpohjasta ja rantojen läheisyydestä.",
+  "sanoja": 46,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Bay_of_Biscay",
+    "title": "Bay of Biscay - Wikipedia"
+   },
+   {
+    "url": "https://www.marineinsight.com/?p=14132",
+    "title": "Why the Bay of Biscay is Dangerous for Ships? - Marine Insight"
+   },
+   {
+    "url": "https://www.yachtingmagazine.com/gibraltar-bay-biscay/",
+    "title": "Gibraltar to the Bay of Biscay - Yachting Magazine (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Talvella matalapaineet lännestä, Atlantin kovimpia säitä",
+    "lahde1": "Wikipedia: 'some of the Atlantic Ocean's fiercest weather', depressions from the west",
+    "lahde2": "Marine Insight: sama, talven suuret myrskyt",
+    "huom": ""
+   },
+   {
+    "vaite": "Keskisyvyys noin 1 700 m",
+    "lahde1": "Wikipedia: 1 744 m",
+    "lahde2": "Marine Insight: 1 745 m",
+    "huom": "Suurin syvyys jätetty pois: 4 735 m vs 2 790 m."
+   },
+   {
+    "vaite": "Mannerjalusta tekee merestä matalaa ja aallot jyrkkiä",
+    "lahde1": "Wikipedia: mannerjalusta ulottuu lahteen, matalaa paikoin",
+    "lahde2": "Marine Insight: sama; Yachting Magazine (hakutulos): shelf steepens swell",
+    "huom": "'Aallot jyrkkiä' perustuu purjehduslähteeseen; ei viranomaislähdettä."
+   },
+   {
+    "vaite": "Purjelaivat eivät päässeet tuulta vastaan ja ajautuivat rantaan",
+    "lahde1": "Yachting Magazine (hakutulos): square riggers could not make way to windward; lee shore",
+    "lahde2": "Marine Insight: ahtaat satamat saavuttamattomia Atlantin ruoskimina",
+    "huom": "Merkittävin tukihuomio on purjehduslehdistä; HEIKOMMIN TUETTU osuus. Tuulta vastaan -kohta jätettävissä pois, jos halutaan vain yhden lähteen väitteet."
+   }
+  ],
+  "kohteet": [
+   "fra/biskajanlahti"
+  ]
+ },
+ {
+  "kysymys": "Mitä eläimiä lahdella tapaa?",
+  "vastaus": "Lahdella on paljon valaita ja delfiinejä. Alueella on havaittu 28 valaslajia, joista yhdeksän on tavallisia, kuten delfiinit, pyöriäinen, kaskelotti ja sillivalas. Kesäisin syvillä vesillä kerääntyy arviolta yli 10 000 sillivalasta. Suuret valaat näkyvät parhaiten mannerjalustan reunan takana, syvien kanjonien kohdalla. Lahti on siis merinisäkkäille rikas ruokapaikka.",
+  "sanoja": 46,
+  "lahteet": [
+   {
+    "url": "https://www.ices.dk/advice/ESD/Pages/Bay-of-Biscay-and-the-Iberian-Coast-State-Marine-mammals.aspx",
+    "title": "Bay of Biscay and the Iberian Coast: State, Marine mammals - ICES"
+   },
+   {
+    "url": "https://marinemammalhabitat.org/?p=9451",
+    "title": "Biscay Abyssal Plain IMMA - IUCN Marine Mammal Protected Areas Task Force"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Bay_of_Biscay",
+    "title": "Bay of Biscay - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "28 valaslajia havaittu, 9 tavallista tai säännöllistä, mukana sillivalas ja kaskelotti",
+    "lahde1": "ICES (luettu)",
+    "lahde2": "Hakutuloksen tiivistelmä samasta ICES-sivusta; Wikipedia: monia valas- ja delfiinilajeja",
+    "huom": "Lukua tukee vain ICES, mutta se on viranomaistaso. Wikipedia ei anna lajimääriä."
+   },
+   {
+    "vaite": "Kesäisin yli 10 000 sillivalasta syvällä",
+    "lahde1": "IMMA-tietolehti (luettu): yli 10 000; SCANS-III noin 10 600",
+    "lahde2": "Hakutuloksen tiivistelmä (sama IMMA)",
+    "huom": "Kaksi riippumatonta lähdettä ei löytynyt; 'arviolta' säilytetty. Ei Wikipedia-vahvistusta."
+   },
+   {
+    "vaite": "Syvät kanjonit auttavat näkemään suuria valaita",
+    "lahde1": "Wikipedia: suuret valaat parhaiten syvillä vesillä, Santanderin ja Torrelavegan kanjonit",
+    "lahde2": "ORCA (hakutulos): kanjonit 'mixing bowl'",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "fra/biskajanlahti"
+  ]
+ },
+ {
+  "kysymys": "Miksi juuri portugalilaiset lähtivät Atlantille ensimmäisinä?",
+  "vastaus": "Portugalin koko rannikko on Atlanttia, joten sen merimiehet katsoivat luontevasti länteen ja etelään. Ceutan valtaus vuonna 1415 herätti kiinnostuksen Afrikkaan, ja prinssi Henrik rahoitti retkiä, joilla etsittiin muun muassa kultaa. Karavelli purjehti vastatuuleen, ja Gil Eanes ohitti pelätyn Bojadorin niemen 1434. Etumatka syntyi siis sijainnista, laivoista ja sinnikkyydestä.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Prince_Henry_the_Navigator",
+    "title": "Prince Henry the Navigator - Wikipedia"
+   },
+   {
+    "url": "https://www.worldhistory.org/Prince_Henry_the_Navigator/",
+    "title": "Prince Henry the Navigator - World History Encyclopedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Age_of_Discovery",
+    "title": "Age of Discovery - Wikipedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Ceuta valloitettiin 1415",
+    "lahde1": "Wikipedia (Henry the Navigator)",
+    "lahde2": "World History Encyclopedia (22. elokuuta 1415); Age of Discovery -artikkeli",
+    "huom": ""
+   },
+   {
+    "vaite": "Henrik rahoitti retkiä, motiiveina kulta, Prester John ja merirosvojen torjunta",
+    "lahde1": "Wikipedia (Henry the Navigator)",
+    "lahde2": "World History Encyclopedia: Prester John, Länsi-Afrikan kulta",
+    "huom": "Perinteinen Sagresin merikoulu on Wikipedian mukaan myytti, joten sitä ei mainita; 'Navigator'-lisänimi 1800-luvun."
+   },
+   {
+    "vaite": "Karavelli purjehtii vastatuuleen",
+    "lahde1": "Wikipedia: kevyt, nopea, lateenipurjeet, voi purjehtia 'into the wind'",
+    "lahde2": "World History Encyclopedia: lateenipurjeet, purjehtii tuulta vasten",
+    "huom": "Käytännössä 'lähelle tuulta'; sanamuoto 'vastatuuleen' yleistys."
+   },
+   {
+    "vaite": "Gil Eanes ohitti Bojadorin niemen 1434",
+    "lahde1": "Wikipedia (Henry the Navigator)",
+    "lahde2": "World History Encyclopedia (1434)",
+    "huom": ""
+   },
+   {
+    "vaite": "Portugalin koko rannikko on Atlanttia",
+    "lahde1": "Nostokortin teksti",
+    "lahde2": "Yleistieto",
+    "huom": "Ei erikseen tarkistettu lähteestä; Portugalilla ei ole Välimeren rantaa."
+   }
+  ],
+  "kohteet": [
+   "prt/atlantti"
+  ]
+ },
+ {
+  "kysymys": "Kuinka syvä Atlantti on?",
+  "vastaus": "Keskimäärin noin 3 300–3 650 metriä, riippuen siitä lasketaanko sivumerten pohjat mukaan. Syvin kohta on Puerto Ricon hauta Karibian pohjoispuolella, noin 8 400 metriä merenpinnan alla. Luvut vaihtelevat lähteittäin, koska rajat ja mittaustavat vaihtelevat. Atlantti on siis keskimäärin useiden kilometrien syvyinen, ja syvimmät kohdat ovat harvinaisia kapeita hautoja.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Atlantic_Ocean",
+    "title": "Atlantic Ocean - Wikipedia"
+   },
+   {
+    "url": "https://www.britannica.com/place/Atlantic-Ocean",
+    "title": "Atlantic Ocean - Britannica (hakutulos)"
+   },
+   {
+    "url": "https://www.britannica.com/summary/Atlantic-Ocean",
+    "title": "Atlantic Ocean summary - Britannica (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Keskisyvyys 3 300–3 650 m",
+    "lahde1": "Wikipedia: 3 646 m",
+    "lahde2": "Britannica-tiivistelmä (hakutulos): 3 330 m sivumerineen; pääartikkeli 3 646 m",
+    "huom": "Lähteet ovat ristiriidassa keskenään, siksi haarukka."
+   },
+   {
+    "vaite": "Syvin kohta Puerto Ricon haudassa noin 8 400 m",
+    "lahde1": "Wikipedia: 8 376 m (Milwaukee Deep)",
+    "lahde2": "Britannica (hakutulos): 8 380 m",
+    "huom": "Joissain sivuissa 8 605 m ja 8 742 m (heikkolaatuisia); pyöristetty 'noin 8 400'."
+   },
+   {
+    "vaite": "Haudat kapeita, pohja laaja",
+    "lahde1": "Päätelmä keskiarvosta ja suurimmasta syvyydestä",
+    "lahde2": "-",
+    "huom": "Loppulause on tulkinta, ei lähteen väite; voi poistaa."
+   }
+  ],
+  "kohteet": [
+   "prt/atlantti"
+  ]
+ },
+ {
+  "kysymys": "Miksi maan rannikko on niin lyhyt?",
+  "vastaus": "Rannikko on vain noin 20 kilometriä, koska Dubrovnikin tasavalta luovutti Neumin kohdalla kapean kaistaleen Osmanien valtakunnalle vuoden 1699 rauhan jälkeen. Tavoitteena oli, ettei sen raja koskettaisi Venetsian aluetta. Kaistale jäi Bosnian osaksi, ja Neum on maan ainoa merikaupunki. Pieni rannikko on siis seurausta 1600-luvun suurvaltapolitiikasta.",
+  "sanoja": 45,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Neum",
+    "title": "Neum - Wikipedia"
+   },
+   {
+    "url": "https://www.johnbills.com/dispatches/neum",
+    "title": "Neum // Why Neum is Neum - John Bills"
+   },
+   {
+    "url": "https://www.slate.fr/story/172518/histoire-geographie-meconnue-neum-bosnie-europe",
+    "title": "Neum, le territoire qui échappe aux radars de l'Histoire - Slate.fr (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Rannikko noin 20 km, Neum ainoa kaupunki",
+    "lahde1": "Wikipedia (Neum)",
+    "lahde2": "John Bills (noin 12 mailia)",
+    "huom": ""
+   },
+   {
+    "vaite": "Karlowitzin rauha 1699: Ragusa luovutti kaistaleen Osmaneille puskurina Venetsiaa vastaan",
+    "lahde1": "Wikipedia (Neum)",
+    "lahde2": "John Bills; Slate.fr (hakutulos)",
+    "huom": "Kolmas lähde on blogityyppinen; luotettavin lähde on Wikipedian viitteet. 'Tavoitteena oli' -muotoilu vastaa kaikkia lähteitä. Rauha ei sanatarkasti nimetty vastauksessa, koska Karlowitzin vuosi 1699 riittää."
+   },
+   {
+    "vaite": "Kaistale jäi Bosnian osaksi",
+    "lahde1": "Wikipedia: Osmanien hallinnassa, 1878 Bosnia Itävalta-Unkarille",
+    "lahde2": "John Bills: Osmanit liittivät Bosnian maakuntaan",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "bih/adrianmeri"
+  ]
+ },
+ {
+  "kysymys": "Mikä Otranton salmi on?",
+  "vastaus": "Otranton salmi on kapea vesiväylä Italian ja Albanian välissä, ja se on nimetty Italian puolella sijaitsevan Otranton kaupungin mukaan. Salmi yhdistää Adrianmeren Joonianmereen ja siten muuhun Välimereen. Kapeimmillaan se on noin 72 kilometriä leveä. Ensimmäisessä maailmansodassa liittoutuneet yrittivät sulkea salmen laivoilla ja ajoveneillä, ettei Itävalta-Unkarin laivasto pääsisi Välimerelle.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Strait_of_Otranto",
+    "title": "Strait of Otranto - Wikipedia"
+   },
+   {
+    "url": "https://ciesm.org/online/monographs/CSS-2/CSS_2_117_145.pdf",
+    "title": "CIESM monograph CSS-2: Strait of Otranto (hakutulos)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Otranto_Barrage",
+    "title": "Otranto Barrage - Wikipedia"
+   },
+   {
+    "url": "https://www.anzacmemorial.nsw.gov.au/otranto-barrage",
+    "title": "Otranto Barrage - ANZAC Memorial (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Yhdistää Adrianmeren ja Joonianmeren, Italian ja Albanian välissä",
+    "lahde1": "Wikipedia (Strait of Otranto)",
+    "lahde2": "CIESM-julkaisu (hakutulos)",
+    "huom": ""
+   },
+   {
+    "vaite": "Kapeimmillaan noin 72 km",
+    "lahde1": "Wikipedia: 72 km (Punta Palascìa - Karaburun)",
+    "lahde2": "Hakutulos: CIESM antaa 75 km, sanakirja 71 km",
+    "huom": "Pieni vaihtelu; 'noin 72' säilytetty. Syvyysluvut jätetty pois (18 m vs 325 m)."
+   },
+   {
+    "vaite": "WWI: liittoutuneet sulkivat salmen laivoilla ja ajoveneillä, ettei Itävalta-Unkarin laivasto pääsisi Välimerelle",
+    "lahde1": "Wikipedia (Strait of Otranto, Otranto Barrage)",
+    "lahde2": "ANZAC Memorial / hakutulos Otranto Barragesta",
+    "huom": "Sulku ei pysäyttänyt sukellusveneitä; jätetty pois mahtuakseen sanarajaan. Aloitusvuodesta lähteet ristiriidassa (1915 vs 1917), joten vuotta ei mainita."
+   },
+   {
+    "vaite": "Nimetty Otranton kaupungin mukaan",
+    "lahde1": "Hakutulos (Wikipedia: Strait of Otranto / Otranto)",
+    "lahde2": "Wikipedia (Otranto) (hakutulos)",
+    "huom": "Tiivistelmätason tuki; HEIKOSTI TUETTU, voi poistaa."
+   }
+  ],
+  "kohteet": [
+   "bih/adrianmeri",
+   "ita/adrianmeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi Venetsia rakennettiin juuri tänne?",
+  "vastaus": "Koska laguunin saaret olivat turvallinen pakopaikka. Perimätiedon mukaan kaupunki perustettiin 25. maaliskuuta 421, ja monet asukkaat pakenivat mantereelta hunnien ja germaanien hyökkäyksiä, vaikka saarilla asui kalastajia jo ennenkin. Lisää väkeä tuli, kun langobardit hyökkäsivät Pohjois-Italiaan vuonna 568. Soinen laguuni oli vaikea saavuttaa maitse. Pakopaikasta kasvoi vähitellen merikauppaa käyvä kaupunki.",
+  "sanoja": 49,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/History_of_Venice",
+    "title": "History of Venice - Wikipedia"
+   },
+   {
+    "url": "https://www.historyhit.com/locations/venice-and-its-lagoon/",
+    "title": "Venice and its Lagoon - History Hit"
+   },
+   {
+    "url": "https://www.odysseytraveller.com/articles/rise-of-venice/",
+    "title": "The Rise of Venice - Odyssey Traveller (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Perimätieto: perustettu 25.3.421",
+    "lahde1": "Wikipedia (History of Venice): traditional date, ei dokumentoitu",
+    "lahde2": "History Hit; Odyssey Traveller (hakutulos)",
+    "huom": "Päivämäärä on legenda; vastauksessa 'perimätiedon mukaan'."
+   },
+   {
+    "vaite": "Monet asukkaat pakolaisia hunnien ja germaanien hyökkäyksiä, langobardit 568 toivat lisää",
+    "lahde1": "Wikipedia (History of Venice)",
+    "lahde2": "History Hit; Odyssey Traveller (hakutulos)",
+    "huom": "Lähteiden mukaan laguunissa asui kalastajia jo ennen pakolaisia (hakutulos), joten vastauksessa sanotaan 'monet asukkaat' ja mainitaan kalastajat."
+   },
+   {
+    "vaite": "Soinen laguuni oli vaikea saavuttaa maitse, luonnollinen suoja",
+    "lahde1": "History Hit: 'natural defences'",
+    "lahde2": "Odyssey Traveller (hakutulos): hard to access by land",
+    "huom": "Wikipedia ei sano suoraan, että laguuni valittiin puolustuksen vuoksi. Paaluperustuksia ei mainita, koska kumpikaan luettu lähde ei kata niitä."
+   },
+   {
+    "vaite": "Pakopaikasta kasvoi kauppakaupunki",
+    "lahde1": "Wikipedia: Venice muuttui kalastajakylästä kauppasatamaksi (Domenico Monegario)",
+    "lahde2": "World History Encyclopedia -sivu mainitsee merivallan 900-luvulla",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "ita/adrianmeri"
+  ]
+ },
+ {
+  "kysymys": "Keitä tyrrhenialaiset olivat?",
+  "vastaus": "Tyrrhenialaiset oli kreikkalaisten antama nimi etruskeille, Italian keskiosan muinaiselle kansalle, joka kukoisti noin 700-luvulta 300-luvulle eaa. Roomalaiset muodostivat nimestä merelle nimen Mare Tyrrhenum, ja meri kantaa sitä yhä. Rooma valtasi etruskien kaupungit vähitellen, ja heidän alueensa joutui lopulta kokonaan Rooman vallan alle. Nimi on siis kadonneen kansan muisto.",
+  "sanoja": 48,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Etruscan_civilization",
+    "title": "Etruscan civilization - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Tyrrhenian_Sea",
+    "title": "Tyrrhenian Sea - Wikipedia"
+   },
+   {
+    "url": "https://www.britannica.com/topic/ancient-Italic-people",
+    "title": "Ancient Italic people - Britannica (hakutulos)"
+   },
+   {
+    "url": "https://www.oxfordreference.com/view/10.1093/acref/9780191905636.001.0001/acref-9780191905636-e-7626",
+    "title": "Tyrrhenian Sea - Oxford Reference (hakutulos)"
+   },
+   {
+    "url": "https://www.worldhistory.org/Etruscan_Civilization/",
+    "title": "Etruscan Civilization - World History Encyclopedia"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Kreikkalaiset kutsuivat etruskeja tyrrhenialaisiksi; roomalaiset muodostivat nimestä meren nimen",
+    "lahde1": "Wikipedia (Etruscan civilization, Tyrrhenian Sea)",
+    "lahde2": "Britannica (hakutulos): Greeks called the Etruscans Tyrsenoi/Tyrrhenoi; Oxford Reference (hakutulos): meren nimi tulee Tyrrhenus-sanasta, 'etruskilainen'",
+    "huom": "Britannican verkkosivu antoi 403."
+   },
+   {
+    "vaite": "Etruskit kukoistivat 700-luvulta 200-luvulle eaa",
+    "lahde1": "World History Encyclopedia: 8.-3. vuosisata eaa.",
+    "lahde2": "Wikipedia: noin 900 eaa - 27 eaa, Rooma-sotien alku 300-luvun lopulla eaa",
+    "huom": "Wikipedia laskee varhaisemman alun; käytetty World Historyn haarukkaa 'kukoisti'."
+   },
+   {
+    "vaite": "Rooma valtasi etruskien kaupungit vähitellen; 27 eaa. koko alue Rooman alla",
+    "lahde1": "Wikipedia: Rooma-sodat 300-luvun lopulta eaa., kansalaisuus 90 eaa., 27 eaa. kaikki Rooman alla",
+    "lahde2": "World History Encyclopedia: Rooma valloitti kaupungit vuosikymmenten kuluessa 300-200-luvuilla eaa.",
+    "huom": "Vuosi 27 eaa. vain Wikipediassa; muut lähteet vahvistavat vähittäisen valloituksen. Etruskien oma nimi merelle jätetty pois (vain yksi lähde)."
+   }
+  ],
+  "kohteet": [
+   "ita/tyrrhenanmeri"
+  ]
+ },
+ {
+  "kysymys": "Miksi meren pohjassa on tulivuoria?",
+  "vastaus": "Koska Afrikan laatan reuna painuu Euraasian laatan alle, ja meren pohja venyy ja repeilee, jolloin sula kivi nousee ylös. Marsilin tulivuori on noin 70 kilometriä pitkä ja noin 3 000 metriä korkea, mutta sen huippu on yhä noin 500 metrin syvyydessä. Pinnan yläpuolelle kohoavat Aiolian saaret ja Stromboli. Tyrrhenanmeri on siis laattojen törmäysvyöhykettä.",
+  "sanoja": 53,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Tyrrhenian_Sea",
+    "title": "Tyrrhenian Sea - Wikipedia"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Marsili_Seamount",
+    "title": "Marsili Seamount - Wikipedia (hakutulos; sivu 404, tiedot haettu osoitteesta en.wikipedia.org/wiki/Marsili)"
+   },
+   {
+    "url": "https://link.springer.com/article/10.1007/s00445-020-01425-0",
+    "title": "Marsili Seamount, Bulletin of Volcanology 2020 - Springer (hakutulos)"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Aeolian_Islands",
+    "title": "Aeolian Islands - Wikipedia (hakutulos)"
+   },
+   {
+    "url": "https://iris.cnr.it/handle/20.500.14243/250135",
+    "title": "CNR: Marsili volcano (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Subduktio: Afrikan laatan reuna painuu Euraasian alle, taka-kaarialtaan venytys sulattaa vaippaa",
+    "lahde1": "Wikipedia (Tyrrhenian Sea): back-arc basin, slab rollback, mantle melting",
+    "lahde2": "Hakutulos: tutkimustiivistelmä, northwestward subduction of the African plate; Freiberg: Apulian plate alla",
+    "huom": "Ylempänä oleva laatta kiistanalainen lähteissä (Euraasian vs Apulian); sanottu 'Euraasian alle' Wikipedian mukaan. Springer ja CNR mainitsevat vain Ionian laatan. HEIKOSTI TUETTU tässä yksityiskohdassa."
+   },
+   {
+    "vaite": "Marsili noin 70 km pitkä ja noin 3 000 m korkea",
+    "lahde1": "Wikipedia (Marsili): 70 x 30 km, noin 3 000 m",
+    "lahde2": "CNR (hakutulos): 70 x 30 km; Springer (hakutulos): yli 3 000 m",
+    "huom": ""
+   },
+   {
+    "vaite": "Huippu noin 500 m syvyydessä",
+    "lahde1": "Wikipedia: -450 m",
+    "lahde2": "Springer (hakutulos): vähintään 500 m, CNR 508 m",
+    "huom": "Lähteet vaihtelevat 450-508 m; sanottu 'noin 500'."
+   },
+   {
+    "vaite": "Aiolian saaret ja Stromboli kohoavat pinnalle",
+    "lahde1": "Wikipedia (Tyrrhenian Sea): kahdeksan Aiolian saarta, Stromboli aktiivinen",
+    "lahde2": "Wikipedia (Aeolian Islands) (hakutulos): seitsemän saarta",
+    "huom": "Saarten lukumäärä (7/8) jätetty pois."
+   }
+  ],
+  "kohteet": [
+   "ita/tyrrhenanmeri"
+  ]
+ },
+ {
+  "kysymys": "Keitä liguurit olivat?",
+  "vastaus": "Liguurit olivat muinainen kansa, joka asui Luoteis-Italian rannikolla ja vuoristossa sekä Kaakkois-Ranskan rannikolla. Heidän kielensä tunnetaan lähinnä paikan- ja henkilönnimistä, joten siitä tiedetään vähän. Rooma sotii heitä vastaan 200-luvulta eaa. 100-luvulle eaa. ja valloitti heidät vähitellen, mikä kesti yli sata vuotta. Nimi elää yhä Liguriassa ja Ligurianmeressä.",
+  "sanoja": 47,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Ligures",
+    "title": "Ligures - Wikipedia"
+   },
+   {
+    "url": "https://ebsco.com/research-starters/diplomacy-and-international-relations/liguria-ancient-world",
+    "title": "Liguria (ancient world) - EBSCO Research Starters"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Asuivat Luoteis-Italiassa ja Kaakkois-Ranskan rannikolla",
+    "lahde1": "Wikipedia (Ligures): luoteis-Italia, Kaakkois-Gallian rannikko",
+    "lahde2": "EBSCO: Ligurianlahden rannikko, osin Kaakkois-Ranska",
+    "huom": ""
+   },
+   {
+    "vaite": "Kieli tunnetaan lähinnä paikan- ja henkilönnimistä",
+    "lahde1": "Wikipedia (Ligures)",
+    "lahde2": "EBSCO: kieltä ei voida tunnistaa",
+    "huom": ""
+   },
+   {
+    "vaite": "Rooma sotii heitä vastaan 200-luvulta eaa. 100-luvulle eaa.",
+    "lahde1": "Wikipedia: 230-luku eaa. ensimmäiset kampanjat, viimeinen apuaaneja vastaan 155 eaa.",
+    "lahde2": "EBSCO: 238-117 eaa.",
+    "huom": "Tarkka vuosi (180 eaa. apuaanien karkotus, 40 000 / 47 000) jätetty pois, koska luvut ovat ristiriitaiset."
+   },
+   {
+    "vaite": "Nimi elää Liguriassa ja Ligurianmeressä",
+    "lahde1": "Wikipedia (Ligures), Legacy",
+    "lahde2": "EBSCO",
+    "huom": ""
+   }
+  ],
+  "kohteet": [
+   "ita/ligurianmeri"
+  ]
+ },
+ {
+  "kysymys": "Mikä Välimeren valassuojelualue on?",
+  "vastaus": "Se on Pelagos-suojelualue, jonka Ranska, Italia ja Monaco perustivat sopimuksella: se allekirjoitettiin vuonna 1999 ja tuli voimaan vuonna 2002. Alue on yli 80 000 neliökilometrin kokoinen ja ulottuu myös avomerelle kansallisten aluevesien ulkopuolelle. Valaat ja delfiinit kerääntyvät sinne kesäisin ruokailemaan. Alue osoittaa, että merinisäkkäitä voi suojella yhteistyöllä yli rajojen.",
+  "sanoja": 49,
+  "lahteet": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Pelagos_Sanctuary_for_Mediterranean_Marine_Mammals",
+    "title": "Pelagos Sanctuary for Mediterranean Marine Mammals - Wikipedia"
+   },
+   {
+    "url": "https://www.italia.it/en/liguria/pelagos-marine-mammal-sanctuary",
+    "title": "Pelagos Marine Mammal Sanctuary - Italia.it"
+   },
+   {
+    "url": "https://protectedplanet.net/365015?locale=en",
+    "title": "Pelagos Sanctuary - Protected Planet"
+   },
+   {
+    "url": "https://marineinfo.org/id/publication/216023",
+    "title": "Pelagos Sanctuary publication - MarineInfo (hakutulos)"
+   }
+  ],
+  "tarkistus": [
+   {
+    "vaite": "Ranska, Italia ja Monaco; sopimus 1999",
+    "lahde1": "Wikipedia: 25.11.1999",
+    "lahde2": "Italia.it: perustettu 1999; hakutulos: voimaan 21.2.2002",
+    "huom": "Voimaantulo 2002; vastauksessa 'sopimuksella 1999' tarkoittaa allekirjoitusta."
+   },
+   {
+    "vaite": "Pinta-ala yli 80 000 km2",
+    "lahde1": "Wikipedia: noin 84 000 km2",
+    "lahde2": "Protected Planet: 87 500 km2",
+    "huom": "Lähteet ristiriidassa; sanottu 'yli 80 000'."
+   },
+   {
+    "vaite": "Ulottuu avomerelle",
+    "lahde1": "Wikipedia: ensimmäinen kansainvälinen avomeren suojelualue",
+    "lahde2": "Hakutulos: 53 % avomerta",
+    "huom": ""
+   },
+   {
+    "vaite": "Valaat ja delfiinit kerääntyvät sinne kesäisin ruokailemaan",
+    "lahde1": "Italia.it: eläimet tulevat kesäisin ruokailemaan ravinteikkaisiin vesiin",
+    "lahde2": "Wikipedia: pidetään sillivalaiden pääasiallisena ruokailualueena Välimerellä",
+    "huom": "Wikipedian sillivalasväite on 'believed'; vastauksessa yleinen muotoilu. Sanamäärälukuja (1 000 valasta, 40 000 delfiiniä) ei käytetty, vain yksi lähde."
+   }
+  ],
+  "kohteet": [
+   "ita/ligurianmeri"
+  ]
+ }
+]
