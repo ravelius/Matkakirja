@@ -14,14 +14,15 @@ SIMU A26BC7D0 (iPad) on Valosepällä; kun kaikki alla oleva on ajettu → "SIMU
    → iss-nyt/kelaus-rajaus.out + lokit/todistus-kelaus-rajaus-196-*. TARKISTA: "cupolan kelausesihaku … N laattaa" (satoja, ei 5245),
    "valmis X s" < 4 s, "kevyt pallo ulos … (laatat valmiit)" ennen 4000 ms. Tulos PT:lle + NUI:lle; haara NS:lle PT:n kuittauksella.
 3. Ali-agentit (kuolevat nollauksessa – tarkista tulos, aja uudelleen jos puuttuu):
-   a) Louvre k27 -leivonta + paketti: tulos $D/louvre1/syvyys/LOD0-RAPORTTI-k27.md, $D/louvre1/v6k18-lv2f-k27s, $D/louvre1/kuvat-v2f-k27s.zsh.
+   a) Louvre K28 (LR 05.24: pyramidin länsikiveys omaa + uusi leikkausrengas leikkaus_latlon*.json; rakennukset = k27) -leivonta + paketti:
+      tulos $D/louvre1/syvyys/LOD0-RAPORTTI-k28.md, $D/louvre1/v6k18-lv2f-k28s, $D/louvre1/kuvat-v2f-k28s.zsh; sijainnit.json:n leikkaus UUDESTA renkaasta.
       Puuttuu → sama tehtävä uudelleen (resepti: syvyys/LOD0-RAPORTTI.md, lod1-k21.sh, rakenna-k23s.log; lähde _valmiit/louvre-v1/glb 04.25).
-   b) K3-kierrosten arvio: $D/KIERROKSET-20261016-ARVIO3.md + kunkin k3/k8-kansion ARVIO.md (ARVIO2:n muodossa).
+   b) K3-kierrosten arvio VALMIS: $D/KIERROKSET-20261016-ARVIO3.md (yhteenveto JONO.md:n lopussa).
 
 ## 1. SEURAAJALLE ENSIMMÄISIKSI
-### a) Louvre-pelikuvapari LR:lle (PT 05.3x: ennen muuta; LR vahvisti k27 + Valosepän syvyysleivonta LOD0+LOD1)
-- Kun paketti valmis ja simu vapaa: `zsh $D/louvre1/kuvat-v2f-k27s.zsh` → pari kulma B (kuten louvre-v2f-k23s-pari-kulmaB.jpg) → LR:lle + PT:lle.
-- LR arvioi k23s-parin (01.42) ja voi pyytää muutoksia ennen ajoa – lue LR:n viesti.
+### a) Louvre-pelikuvapari LR:lle (PT 05.3x: ennen muuta; LR: k28 + Valosepän syvyysleivonta LOD0+LOD1)
+- Kun paketti valmis ja simu vapaa: `zsh $D/louvre1/kuvat-v2f-k28s.zsh` → pari kulma B (kuten louvre-v2f-k23s-pari-kulmaB.jpg) → LR:lle + PT:lle.
+- LR arvioi k23s-parin: reunus pois toimii, patsaan alla siisti. Uutta k28:ssa: kiveys pyramidin edessä peittää Googlen tumman sotkun – tarkista se parissa.
 ### b) Peking 1b (haara linssiseppa2/peking-ion-196, wt/proto-linssiseppa2-peking, pohja 2c72c4935 junassa)
 - 3a2212636 ionin palatsimaski (mallit.json "ion_leikkaus" = Codexin KAIKKI 12 osaa; peking284/rakenna.py --ion), efd70bbb4 iltavalo
   (ionin maa IlmakehaLaatat _IonKuva → himmenee illalla; klo 18 katot 81,59,33 vs maa 150,132,97), 343666486 ion-väli lokiin
