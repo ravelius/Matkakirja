@@ -508,7 +508,7 @@ export const RAAMATTU = {
           + 'kertojan alle ja askeleet alustan mukaan; jaetun mikserin kertoimet (worker /mikseri/tasot) säilyvät. VALO- JA KUVAPOHJA: yhteiset valaistus-, varjo-, sävykäsittely- ja '
           + 'materiaaliprofiilit. Omaa liikettä, ääntä tai valoa ei tehdä yksittäiseen linssiin (ei väliaikaisia paikallisia korjauksia); automaattinen tarkistus listaa pohjan ohittavat, '
           + 'ja vanhat siirtyvät pohjiin vuorollaan. Omistajat ja tila: docs/moduulit/yhteiset-pohjat.md. '
-          + 'Loki: docs/raamattu-loki/paatokset-2026-09.md #OMISTAJAN PÄÄTÖS: YHTEISET POHJAT LIIKKEELLE, ÄÄNELLE JA VALOLLE (16.10.2026 klo 20.56), #KARSINTA 0.11 UI-POHJAT JA KOHTAUKSET 14.10.2026 (14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: YKSI YHTEINEN LASIPOHJA KORTEILLE JA '
+          + 'Loki: docs/raamattu-loki/paatokset-2026-10.md #OMISTAJAN PÄÄTÖS: YHTEISET POHJAT LIIKKEELLE, ÄÄNELLE JA VALOLLE (16.10.2026 klo 20.56); docs/raamattu-loki/paatokset-2026-09.md #KARSINTA 0.11 UI-POHJAT JA KOHTAUKSET 14.10.2026 (14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: YKSI YHTEINEN LASIPOHJA KORTEILLE JA '
           + 'PANEELEILLE (14.10.2026 klo 23.34), #KARSINTA 7.1 ANIMAATIOPOIKKEUKSET 14.10.2026 '
           + '(14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: ANIMAATIOT ALLE 250 MS (14.10.2026 klo 22.55).',
         'TYÖSKENTELYTAVAT AINA RAAMATTUUN (omistaja 14.10.2026 klo 20.3x, SITOVA: "tällaiset työskentelytavat on todella tärkeä kirjata, koska muuten seuraava tili ei osaa käyttää tätä '
