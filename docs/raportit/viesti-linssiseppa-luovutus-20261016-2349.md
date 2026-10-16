@@ -54,6 +54,11 @@ se osa pois (git revert), ei väliaikaisia poikkeamia.
   PT 00.07: da98b2e4a junaan 197 vain, koska pelaaja ei pääse Ranskaan (PariisiMuseoAuki=false). ajo-vapaalento197.zsh ajaa perään
   sk-museomaa-197-iphone.txt (Pariisi kiinni; Amsterdamin merkki ja valitsin → maa alankomaat; kuvat a1/a2, era museomaa197-iphone).
 - Ranskan i-kortti (SK #4732/#4736/#4745): valmiina NUI:lla, junassa 197 (museo-juna-197 9f1e78fd6) → minulta ei vientiä.
+- LOUVREN PARITEETTI 82b307ad2 (PT 00.4x; louvre-pariteetti = da98b2e4a + askeleet 857905fce + kohdat dcac520d2 + houkutin 064520a17 + tämä):
+  houkutin pallon viereen Houkuttimet.Kiinni-joukon takana (PariisiMuseoAuki pitää ajan tasalla, oletus kiinni); museon maa avauskohtainen
+  (MuseoSovitin.AvausMaa merkiltä → QA:n museo maa → Alankomaat), joten valitsimesta avattu museo ei enää jää Ranskaksi. Kartta-testit
+  Houkuttimet 6/6, KaupunkiPallot 9/9, Linssit Museo 148/148. EI KÄÄNNETTY: simu sk-louvre-pariteetti-iphone.txt (L1–L5) vapaalento-197:n
+  jälkeen. Avaus pelaajalle = PariisiMuseoAuki true, vasta PT:n pariteettikuittauksella.
 - LOUVREN AVAUS PARITEETIN JÄLKEEN: kun PT ilmoittaa SK:n (kohdat.json + lähestyminen) ja Äänittäjän (askeläänet) valmiiksi ja Ranskan
   museon Alankomaiden tasolle, oletus PariisiMuseoAuki = true (KaupunkiPallot.cs) + houkutin samaan erään, kuvat PT:lle, sitten NS.
 - Pariisin museon houkutin PALLON VIEREEN (avauksen yhteydessä, ei ennen): proto linssiseppa/pariisi-houkutin 7266f0ae1 (8aed785c3:n päällä; worktree wt/proto-linssiseppa-houkutin): vapaa piste
