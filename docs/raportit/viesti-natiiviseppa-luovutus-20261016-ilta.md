@@ -4,6 +4,12 @@ Lue ensin: CLAUDE.md, Raamatun Ydinajatus kohta 2 ja tämä kokonaan. Pysyvät s
 Jonot (lopusta alkuun = uusin tila): natiiviseppa-skriptit/juna197/jono-197.txt ja juna198/jono-198.txt (juna196/jono-196.txt = valmis juna).
 Viestit AINA session id:llä osoitekirjasta /Users/Shared/Claude/osoitekirja.md (PT = local_5df52e10-…). PT:lle ≤ 3 riviä.
 
+## ⚠️ OMISTAJAN PÄÄTÖS 22.24 (PT, PYSYVÄ) – KORVAA ALLA OLEVAN JUNA 198 -JAON
+
+"kerää aina kaikki vain yhteen junaan". Auki vain JUNA 197: kaikki juna198/jono-198.txt:n erät (PT:n kuittauksella) yhdistetään juna 197:n runkoon
+(natiiviseppa/juna-198 = 4b6ef2395 = sama kuin 197-runko, ei omia committeja). Erillistä 198-jonoa ei enää; uudet erät jono-197.txt:hen.
+Lukitus/TF VAIN kun "OMISTAJA PYYSI JULKAISUA" (PT välittää) + PT:n LUKITSE 197.
+
 ## TILA
 
 - **JUNA 196 VALMIS:** BUILD 196 = cbf1d288b (proto master; juna/b24 = runko e3bc359fe, KÄÄNNETTY 49c0f0a3e L2 18.25, Unity 6000.7.0b5).
