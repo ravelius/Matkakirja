@@ -44,6 +44,7 @@ test('liikepohja: nimetyillä liikkeillä kesto ja olemassa oleva käyrä, UI-si
     if (k.startsWith('_')) continue;
     assert.ok(Number.isInteger(v.kesto) && v.kesto > 0, `${k}.kesto`);
     assert.match(tk.liike[v.kayra] || '', /^cubic-bezier\(/, `${k}.kayra ${v.kayra}`);
+    assert.match(tk.liike.uss[v.kayra] || '', /^(ease|linear)/, `${k}: USS-vastine käyrälle ${v.kayra}`);
     if (v.ui) assert.ok(v.kesto <= maksimi, `${k} ${v.kesto} > ${maksimi}`);
   }
 });

@@ -90,7 +90,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 7abc7e26f7da */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 23ffcec670d2 */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -120,11 +120,17 @@ body.paivittyy .app { visibility: hidden; }
   --liike-pehmea: cubic-bezier(0.45, 0, 0.2, 1);
   --liike-ulos: cubic-bezier(0.4, 0, 1, 1);
   --tk-liike-kavely-kesto: 2500ms;
+  --tk-liike-kavely-kayra: cubic-bezier(0.45, 0, 0.2, 1);
   --tk-liike-liuku-kesto: 1200ms;
+  --tk-liike-liuku-kayra: cubic-bezier(0.45, 0, 0.2, 1);
   --tk-liike-suurennus-kesto: 450ms;
+  --tk-liike-suurennus-kayra: cubic-bezier(0.45, 0, 0.2, 1);
   --tk-liike-katseen-kaanto-kesto: 1000ms;
+  --tk-liike-katseen-kaanto-kayra: cubic-bezier(0.45, 0, 0.2, 1);
   --tk-liike-kortti-avaus-kesto: 220ms;
+  --tk-liike-kortti-avaus-kayra: cubic-bezier(0.22, 0.9, 0.24, 1);
   --tk-liike-kortti-sulku-kesto: 200ms;
+  --tk-liike-kortti-sulku-kayra: cubic-bezier(0.4, 0, 1, 1);
   --font-type: "Matkakirja Punta", "American Typewriter", "Courier Prime", "Courier New", Courier, monospace;
   --font-luku: "Matkakirja Punta", "Iowan Old Style", Charter, "Palatino Linotype", Palatino,
     Georgia, "Times New Roman", serif;

@@ -604,8 +604,9 @@
     "sisaan": "cubic-bezier(0.22, 0.9, 0.24, 1)",
     "pehmea": "cubic-bezier(0.45, 0, 0.2, 1)",
     "ulos": "cubic-bezier(0.4, 0, 1, 1)",
+    "uss": { "_selite": "Käyrien lähin UI Toolkitin nimetty käyrä USS-siirtymille (USS ei tue omaa cubic-bezieriä; PT 16.10.2026: UI:ssa USS-transitiot samoilla arvoilla). Koodiliike (Ponnahdus, liikepohja) käyttää tarkkaa käyrää.", "sisaan": "ease-out-cubic", "pehmea": "ease-in-out", "ulos": "ease-in" },
     "liikkeet": {
-      "_selite": "LIIKEPOHJA (omistaja 16.10.2026 klo 20.54 PT:n kautta, 'kaikki yhtä aikaa': pehmeä liike, ääni ja valo yhteisiksi pohjiksi kuten lasikortit). Nimetyt liikkeet: kesto ms ja käyrä (yllä oleva nimetty cubic-bezier). Kortin avaus ja sulku ovat UI-siirtymiä (≤ maksimi); kävely, liuku, suurennus ja katseen käännös ovat näkymän omaa liikettä (ei maksimia). Kävelyn kesto on vähimmäiskesto, matkasta riippuva osa liikepohjassa (Pelikoodari, museo ensimmäinen käyttäjä); katseen käännös = 180°.",
+      "_selite": "LIIKEPOHJA (omistaja 16.10.2026 klo 20.54 PT:n kautta, 'kaikki yhtä aikaa': pehmeä liike, ääni ja valo yhteisiksi pohjiksi kuten lasikortit; docs/moduulit/yhteiset-pohjat.md). Liikemerkit Material 3:n ja SwiftUI:n mallin mukaan: nimi, kesto ms ja käyrä (yllä oleva nimetty cubic-bezier). Kortin avaus ja sulku ovat UI-siirtymiä (≤ maksimi); kävely, liuku, suurennus ja katseen käännös ovat näkymän omaa liikettä (ei maksimia). Kävelyn kesto on vähimmäiskesto, matkasta riippuva osa liikepohjassa (Pelikoodari, museo ensimmäinen käyttäjä); katseen käännös = 180°.",
       "kavely": { "kesto": 2500, "kayra": "pehmea" },
       "liuku": { "kesto": 1200, "kayra": "pehmea" },
       "suurennus": { "kesto": 450, "kayra": "pehmea" },

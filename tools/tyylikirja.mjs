@@ -42,7 +42,11 @@ export function muuttujat(tk) {
     else if (typeof v === 'number') m.push([`tk-kesto-${k}`, `${v}ms`, 'wn']);
   }
   // LIIKEPOHJA (omistaja 16.10.2026): nimettyjen liikkeiden kestot; käyrä webissä --liike-<käyrä>, natiivissa Tyylikirja.Kayrat (USS ei tue cubic-bezieriä).
-  for (const [k, v] of julkiset(tk.liike.liikkeet || {})) m.push([`tk-liike-${k}-kesto`, `${v.kesto}ms`, 'wn']);
+  for (const [k, v] of julkiset(tk.liike.liikkeet || {})) {
+    m.push([`tk-liike-${k}-kesto`, `${v.kesto}ms`, 'wn']);
+    m.push([`tk-liike-${k}-kayra`, tk.liike[v.kayra], 'w']);
+    m.push([`tk-liike-${k}-kayra`, tk.liike.uss[v.kayra], 'n']);
+  }
   for (const [k, v] of julkiset(tk.fontit.web)) m.push([k, v, 'w']);
   for (const [teema, arvot] of julkiset(tk.teemat))
     for (const [k, v] of julkiset(arvot)) m.push([`tk-${teema}-${k}`, v, 'wn']);
