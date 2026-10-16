@@ -433,3 +433,7 @@ kun 9fa3b99f1 on juna-196:ssa).
   UusiLahde korvaa Lahde3D:n; myös RakettiLokit) + uusi **PohjaLahde.OmaKerroin** (siirtymävaihe: kutsuja kertoo mikserin itse, pohja ei toista).
   Lista 21. Linssit 1935/1935, unity 0. HUOM vahti näkee vain AddComponent-rivit: tehtaiden (SeikkailuKuulija.Lahde) kutsujat grepillä.
 - 01.3x: siirto 10 **d67584806** RadioAanet (viritin Id klipin mukaan, kohina, kerta-äänet OmaKerroin). Lista 20.
+- 01.4x: siirrot 11–12: **dfac4b404** SeikkailuHistorian kertoja (PlayDelayed pohjan lähteellä), **e2d823ed5** kappelin keskustelu + ISS-kupolin
+  selostus (puhe/iss, taso 1,0). Lista 17. Linssit 1935/1935, unity 0. Jäljellä: AjattelijatSovitin, PalloKori, SeikkailuKuulija (+5 kutsujaa),
+  AvaruuskavelyNakyma, Paljastus, PeliKomennot (testisini: pohjan apuriksi?), PuluRealtime, Puhe/Aanisoitin/Aanet (ryhmätasolla, PT:n linjaus),
+  PallokisaOhjain, ShakkiNakyma, ElavaKaupunki, RakettiAanet, DioraamaAanet, KaupunkiAanimaisemaSoitin, OpasSovitin.
