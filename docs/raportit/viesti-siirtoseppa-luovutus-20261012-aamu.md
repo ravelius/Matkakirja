@@ -383,3 +383,8 @@ kun 9fa3b99f1 on juna-196:ssa).
   `H=b9d629780 ERA=aanipohja-198c nohup zsh tyokalut/siirtoseppa-ajot/ajo-aanipohja-197.zsh` + pyydä KÄÄNNÖS NYT + SIMU NYT.
   Poistettu omat vanhat: _tyo/siirtoseppa/meri2-196-app, lokit/siirtoseppa-app/raketti-valo-191, lokit/siirtoseppa-raketti-valo/{nyk,uusi} (191-kuvat).
 - 22.2x: OMISTAJAN PÄÄTÖS 22.24 (PT): juna 198 = juna 197 → äänipohja junaan 197 (b9d629780 yhdistyy juna-197 4b6ef2395:een puhtaasti; haaranimet -197 ja -198 samassa).
+- 23.1x: b9d629780-käännös pysähtyi jonon aikarajaan. **PT:N PYYNTÖ 23.06 (omistaja): kaikki ääni pois, kun linssi tai peli käynnistyy** →
+  **9db0288e9** (AaniPohja.NakymaVaihtuu: Linssirekisteri.Avautuu + Mylly/Tavli/Shakki Avaa + kipin kaupungin vaihto KatkaisePuhe; PeliOhjainin
+  katkaisija → AaniPohja.Katkaisija; muut soivat 0,2 s häivytys, silmukat tauolle → kartalla jatkavat). Haarat siirtoseppa/aanipohja-197 ja -198 = 9db0288e9.
+  Ajo 197d odottaa lippuja (loki lokit/siirtoseppa-aanipohja-197d.log; skenaarioon lisätty luenta → kippi → hiljaisuus, luenta → mylly → kartalle).
+  Valmis → SIMU VAPAA, verhokäyrät (museo-pohja.wav, nakyma.wav) → PT 1 rivi + SHA NS:lle junaan 197 (tavoite ennen ~01.45).
