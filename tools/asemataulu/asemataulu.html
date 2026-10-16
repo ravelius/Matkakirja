@@ -794,36 +794,19 @@ section:not(.kiinni) .yhteenveto { display: none; }
       erivi.append(epaa, eura);
       ep.append(erivi);
     }
-    // Google-palkki (omistaja 16.10. 14.02, "pelkkä google"): kuluvan kuukauden kulut (Gemini, Maps, 3D-laatat ym.) laskutusviennistä, haku
-    // kerran päivässä (tools/kulut/hae-google.mjs → dokumentti google); ElevenLabs-palkin pohja. Ilman dokumenttia: "odottaa laskutusvientiä".
+    // Google-rivi (omistaja 16.10. 14.18, "Pelkkä kuun summa"): kuluvan kuun veloitus laskutusviennistä, haku Macilla kerran päivässä
+    // (tools/kulut/hae-google.mjs → dokumentti google {kk, summa, valuutta}); ei rajaa eikä prosenttia. Ennen vientiä "odottaa laskutusvientiä".
     var g = tila.google;
-    var gOk = !!(g && typeof g.kulut_usd === 'number');
+    var gOk = !!(g && typeof g.summa === 'number');
     $('laitteet-osio').hidden = false;
-    var usd = function (x) { return (Math.round(x * 100) / 100).toFixed(2).replace('.', ',') + '\u00a0$'; };
-    var gkr = gOk && g.krediitti && Number(g.krediitti.summa_usd) > 0 ? g.krediitti : null;
-    var gkanta = gkr ? Number(gkr.summa_usd) : (gOk && Number(g.budjetti_usd) > 0 ? Number(g.budjetti_usd) : 0);
-    var gpr = gkanta ? Math.max(0, Math.min(100, (gkr ? Number(gkr.kaytetty_usd) || 0 : g.kulut_usd) / gkanta * 100)) : 0;
+    var KK_NIMET = ['tammikuu', 'helmikuu', 'maaliskuu', 'huhtikuu', 'toukokuu', 'kesäkuu', 'heinäkuu', 'elokuu', 'syyskuu', 'lokakuu', 'marraskuu', 'joulukuu'];
+    var gkk = gOk && /^\d{4}-\d{2}$/.test(String(g.kk || '')) ? KK_NIMET[Number(String(g.kk).slice(5)) - 1] : KK_NIMET[new Date().getMonth()];
+    var gsym = { EUR: '\u20ac', USD: '$' }[g && g.valuutta] || (g && g.valuutta) || '\u20ac';
     var grivi = luo('div', 'palkki koko');
     var gpaa = luo('div', 'paa');
-    var gnimi = luo('span', 'nimi ei-versaali', 'Google');
-    if (gOk && gkr && gkr.nollautuu) {
-      var gn = new Date(gkr.nollautuu);
-      if (!isNaN(gn)) gnimi.append(luo('span', 'aika', ' (nollautuu ' + gn.getDate() + '.' + (gn.getMonth() + 1) + '.)'));
-    }
-    var garvo = luo('span', 'arvo', !gOk ? 'odottaa laskutusvientiä' : gkanta ? Math.round(gpr) + ' %' : usd(g.kulut_usd));
-    if (gOk && gkanta) garvo.append(luo('span', 'muutos', ' (' + usd(g.kulut_usd) + ' tässä kuussa)'));
-    gpaa.append(gnimi, garvo);
-    var gura = luo('div', 'ura');
-    gura.setAttribute('role', 'meter');
-    gura.setAttribute('aria-label', 'Googlen kulut');
-    gura.setAttribute('aria-valuemin', '0');
-    gura.setAttribute('aria-valuemax', '100');
-    gura.setAttribute('aria-valuenow', String(Math.round(gpr)));
-    var gt = luo('div', 'tayte' + (gpr >= 90 ? ' punainen' : gpr >= 70 ? ' kulta' : ''));
-    gt.style.width = gpr + '%';
-    gura.append(gt);
-    grivi.append(gpaa, gura);
-    if (gOk && Array.isArray(g.palvelut) && g.palvelut.length) grivi.append(luo('div', 'kysymykset', g.palvelut.slice(0, 5).map(function (x) { return x.nimi + ' ' + usd(x.usd); }).join(', ') + '.'));
+    gpaa.append(luo('span', 'nimi ei-versaali', 'Google ' + gkk),
+      luo('span', 'arvo', gOk ? g.summa.toFixed(2).replace('.', ',') + '\u00a0' + gsym : 'odottaa laskutusvientiä'));
+    grivi.append(gpaa);
     ep.append(grivi);
     var tehtavatL = (tila.tehtavat && tila.tehtavat.rivit) || {};
     lr.forEach(function (x) {
