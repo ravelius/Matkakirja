@@ -453,3 +453,5 @@ kun 9fa3b99f1 on juna-196:ssa).
   PeliKomennot). Kärki fd2f26e59, Linssit 1935/1935, tarkista.sh 0.
 - 02.4x: siirto 20 **8b0b4c02d** DioraamaAanet (8 lähdettä omiksi pohjaolioiksi; PlayScheduled, tauko, GetOutputData pohjan AudioSourcella). Lista 8:
   AjattelijatSovitin, OpasSovitin, RakettiAanet, PuluRealtime + Aanisoitin, Puhe, UI/Aanet, PeliKomennot (PT:n vastaus kesken). Kärki 8b0b4c02d.
+- 02.4x: siirto 21 **6f10473a8** PuluRealtime (puhe, taso 1,0, striimi ilman kelausta). Lista 7: AjattelijatSovitin, OpasSovitin, RakettiAanet +
+  Aanisoitin, Puhe, UI/Aanet, PeliKomennot (PT). Kärki 6f10473a8.
