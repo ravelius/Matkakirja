@@ -16,3 +16,8 @@ FACT-PREFLIGHT.json sisältää ensisijaiset lähdelinkit ja niiden lukurajoitte
 ## J2 safe scene follow-up - 16.10.2026
 
 Erillinen uusi yhden kutsun lupa (4f968001 / 267e9baf) käytetty: J2:n turvallinen käytäväkohtaus syntyi 1086 × 1448 native-PNG:nä. Lapsi ja rauhalliset aikuiset ovat tasaisella kaiteellisella kivikäytävällä. Kuuden keraamisen hahmon tarkka mitta, lajimääritys ja harjan historiallinen rakenne jäävät avoimiksi; lisätiedot J2-SAFE-RETRY-QA-FI.md:ssä ja riippumattomassa QA:ssa. Aiempi J2-hylkäys ja kolmen kutsun historia säilyvät. Kumulatiivisesti neljä kutsua ja kolme kuvaa. J1/J3 hyväksytty vastaanottajalla vain havainnekuviksi rajoituksin, uusi J2 odottaa arviota. Ei omistajahyväksyntää, pelitoteutusta tai julkaisua.
+
+
+## J4 game camera - 16.10.2026
+
+Erillinen yhden kutsun J4-tilaus (2e6770d5 / 79df3460): yksi uusi muokkaamaton native-PNG 1086 × 1448. Takaa yläviistoinen kamera, molemmat kaiteet ja tulevat puupalkki/lyhty/haarautuma näkyvät. Palvelijan rajaus näyttää pyydettyä enemmän vartaloa; tarkka kameraetäisyys/korkeus, lapsen alakolmannes ja lyhdyn liukukorkeus eivät varmistu. Keksitty pelikenttäsommitelma, ei historiallinen reittidokumentti. Lisää J4-QA-FI.md:ssä ja riippumattomassa QA:ssa. Aiemmat hyväksytyt J1–J3 säilyvät; J4 odottaa vastaanottajan/PT/omistajan arviota. Ei peliä tai julkaisua, ei lisäkutsua.

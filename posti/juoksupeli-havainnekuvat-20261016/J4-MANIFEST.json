@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "path": "J4-DELIVERY-STATUS.json",
+      "bytes": 726,
+      "sha256": "9dd323fb13243a4f2fcdde8c1aad2e3d3747df3243d1fc91d09100df81f23a89"
+    },
+    {
+      "path": "J4-GENERATION.json",
+      "bytes": 5773,
+      "sha256": "ff9a96e6b4b1c0f2fb2059dbc4104cd90052e07bf160694883f01b99c7abf750"
+    },
+    {
+      "path": "J4-INDEPENDENT-QA-FI.md",
+      "bytes": 1289,
+      "sha256": "559b14515af82be3e98a86c8fc664cc744657c54d621cd0610cee0d42245ba5c"
+    },
+    {
+      "path": "J4-INDEPENDENT-QA.json",
+      "bytes": 4241,
+      "sha256": "a1727f5977d848bec6b1b4d3606d334706f74dbce0bf87999b289fed7542acc8"
+    },
+    {
+      "path": "J4-PROMPT.txt",
+      "bytes": 4615,
+      "sha256": "5f4c905f8accea0033f37ffe1612b5ad71bf128a0e8e40633c3ed505f2453148"
+    },
+    {
+      "path": "J4-QA-FI.md",
+      "bytes": 2014,
+      "sha256": "5a02492dbb608af6310f430354327b6b373aaeae4c89b2c06da803cb7e2499d1"
+    },
+    {
+      "path": "J4-SOURCE.json",
+      "bytes": 539,
+      "sha256": "c3e0d65ced52fd956d26ca07b8493d6a04b42ff2d7cdbad39132fc500a0f6c63"
+    },
+    {
+      "path": "J4-SOURCE.md",
+      "bytes": 2115,
+      "sha256": "fd233ca7485a74c477e02a3638a4851e04d32841a624929e68dd8fd57af2a268"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 4552,
+      "sha256": "ce745d496761c9766186fac21f0a28baec0ef51b0a06643102f3bd656811b1b8"
+    },
+    {
+      "path": "havainne-j4.png",
+      "bytes": 2926993,
+      "sha256": "3e435086ac58652d59ec4e4e64362c476d89fe12cc4a7cd6ec3d33e379f995d2"
+    }
+  ]
+}

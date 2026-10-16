@@ -1,0 +1,31 @@
+{
+  "taskNumber": 387,
+  "method": "built-in image_gen; wholly new rear-game-camera concept; native unedited bytes",
+  "authorizedCalls": 1,
+  "callsIssued": 1,
+  "nativeImagesProduced": 1,
+  "call": {
+    "status": "completed",
+    "issuedAt": "2026-10-16T16:54:38.174983+00:00",
+    "attempt": 1,
+    "toolArgs": {
+      "prompt": "Use case: historical-scene, photographic naturalism.\nAsset type: ONE wholly new upright 3:4 cinematic PHOTOGRAPH-like concept frame showing a third-person GAME CAMERA in Beijing's Forbidden City around 1914, bright SUMMER. Original fictional historical game layout, not an archival photograph and no actor likeness or movie-frame recreation.\n\nCAMERA AND MAIN SUBJECT: an elevated trailing camera approximately 2–3 metres BEHIND a small 8-year-old Chinese boy and approximately 1.5–2 metres ABOVE him, looking FORWARD along his route. We see the boy FROM BEHIND, his whole body centred in the LOWER THIRD, already in a natural running stride on FLAT STONE PAVING. The camera shows his back and slightly the top of his cap and shoulders, plus a clear forward view of the route ahead. This is the actual readable rear-follow game viewpoint, NOT a frontal portrait, side view, aerial map or extreme high overhead view. Child-sized bright imperial YELLOW silk robe with restrained embroidered dragon motifs, long sleeves, cloth trousers and soft black cloth shoes. ONE long black braided queue runs down his back and flicks slightly with motion; small plain round Qing cap with modest finial, no spectacles. Robe hem billows naturally. Small believable child proportions, no caricature.\n\nSAFE ROUTE: a broad, LEVEL, STONE-PAVED terrace/wall walkway built beside LOW palace side halls at their roof height. It has continuous sturdy LOW MASONRY PARAPET RAILS clearly visible along BOTH sides of the route near the child. All of the child's steps are on the wide flat stone path, between those rails. Yellow tiled roofs and their little traditional ceramic ridge figures run BESIDE this separate path; no one steps on tiles, slopes, a roof ridge or a parapet. Present a sheltered, enclosed palace walkway, no visible high sheer drop next to the child. Green leafy courtyard trees and adjacent roof masses form the surrounding setting.\n\nTHREE READABLE UPCOMING GAME ELEMENTS, arranged sequentially FORWARD of the boy and not hidden by his body:\n1. Nearest, a LOW CROSSWISE TIMBER BEAM lying across the stone path, visibly wood with square ends and wood grain, only a small low obstacle for a later hop. It does not replace the path or rails. Boy has not reached it yet.\n2. A little farther ahead, ONE RED HANGING LANTERN clearly suspended from the low side hall's projecting eave OVER the walking route, reading as the later duck/slide obstacle. The red lantern is distinct from red walls and has a visible hanging cord and eave attachment. Boy is still well before it.\n3. Beyond the lantern, a clear LEFT / RIGHT FORK in the STONE WALKWAY, two comfortably wide branches bending in opposite directions, protected by masonry rails; both branches visibly connect to the main path. No signposts, labels or UI needed. Give enough visual separation that the beam, lantern and branching geometry are all legible as different upcoming features.\n\nNEAR FOREGROUND: at the VERY BOTTOM EDGE of the frame one adult male Qing palace household attendant in a DARK NAVY robe and round cap, visible ONLY from shoulders UP because the rest of his body continues below frame. He follows the boy on the SAME flat protected path. One natural hand/forearm reaches gently toward the child's fluttering robe hem, almost catching it but not grabbing or hurting him. Keep the hand separate from the child's body and do not obscure the child or obstacles. His turned partial profile and relaxed expression suggest amused breathlessness, never anger, panic or menace; dignified human playfulness. No nurse or extra people in this specific frame. No injury, falling, climbing, ladders or rescue.\n\nDEPTH AND LIGHT: warm clear bright SUMMER daylight, GREEN trees, deep vermilion walls, imperial golden-yellow glazed Chinese tiles, blue-and-green painted eaves. A sea of palace roofs recedes behind the route and one distant GRAND HALL has a clearly DOUBLE-EAVED yellow roof. Realistic palace scale around the small child. Restrained cinematic real-camera optics with enough depth of field to read the boy, nearby attendant, beam, lantern and fork. Authentic-looking silk folds and directional sheen, localized irregular wear in real stone and timber, naturally changing ceramic reflections. No repeated stamped texture, global etched/grain/canvas pattern, plastic 3D surfaces or excessive HDR/sharpening; no orange wash. No autumn leaves or snow. No modern objects, cars, bicycles, tourists, wires, antennas, glasses for the child, labels, text, logos, UI, watermark, vignette or border. A single coherent entirely NEW image, not an edit or collage.\n",
+      "transparent_background": false
+    },
+    "promptSHA256": "5f4c905f8accea0033f37ffe1612b5ad71bf128a0e8e40633c3ed505f2453148",
+    "completedAt": "2026-10-16T16:55:42.075190+00:00",
+    "nativeToolPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-a681737c-ccc0-429e-bd2d-f90cd2964949.png",
+    "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/j4-game-camera/images/havainne-j4.png",
+    "sha256": "3e435086ac58652d59ec4e4e64362c476d89fe12cc4a7cd6ec3d33e379f995d2",
+    "bytes": 2926993,
+    "dimensions": [
+      1086,
+      1448
+    ],
+    "mode": "RGB",
+    "nativeBytesUnedited": true
+  },
+  "priorBatchTasks384to386Unchanged": true,
+  "noPartialRepair": true,
+  "noAutomaticRetry": true
+}

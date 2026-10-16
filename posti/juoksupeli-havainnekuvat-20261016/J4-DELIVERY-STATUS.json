@@ -1,0 +1,21 @@
+{
+  "taskNumber": 387,
+  "nativeFile": "havainne-j4.png",
+  "nativeSHA256": "3e435086ac58652d59ec4e4e64362c476d89fe12cc4a7cd6ec3d33e379f995d2",
+  "nativeDimensions": [
+    1086,
+    1448
+  ],
+  "localDisposition": "requirements partially met; attendant crop is a material deviation; candidate for receiver review",
+  "allBriefRequirementsMet": false,
+  "cameraNumericOffsetsVerified": false,
+  "childExactLowerThirdPlacementVerified": false,
+  "attendantOnlyShouldersUpRequirementMet": false,
+  "lanternSlideClearanceVerified": false,
+  "priorAcceptedJ1J2J3Unchanged": true,
+  "recipientAccepted": false,
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false,
+  "published": false,
+  "noFurtherCallsAuthorized": true
+}

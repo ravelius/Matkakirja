@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "task": "387/J4",
+  "scope": "j4-game-camera; independent visual QA",
+  "reviewed_at_utc": "2026-10-16T16:57:11.092632+00:00",
+  "source": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/j4-game-camera/sources/pelikoodari-codex-juoksupeli-j4-pelikamera-20261016.md",
+    "sha256": "fd233ca7485a74c477e02a3638a4851e04d32841a624929e68dd8fd57af2a268",
+    "read_full": true
+  },
+  "candidate": {
+    "path": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/juoksupeli-havainnekuvat-20261016/j4-game-camera/images/havainne-j4.png",
+    "sha256": "3e435086ac58652d59ec4e4e64362c476d89fe12cc4a7cd6ec3d33e379f995d2",
+    "width": 1086,
+    "height": 1448,
+    "format": "PNG",
+    "native_unmodified": true,
+    "viewed": true,
+    "view_tool": "view_image",
+    "view_detail": "original"
+  },
+  "review_complete": "1/1",
+  "requirements": {
+    "rear_elevated_camera": {
+      "status": "visually_met",
+      "observation": "Camera behind child, elevated and looking forward/down; exact distance and elevation not measured."
+    },
+    "child_position": {
+      "status": "partial",
+      "observation": "Child horizontally central; silhouette spans approximately 46–82% of image height and extends well above lower third. These are visual estimates, not game camera measurements."
+    },
+    "walkway_guards": {
+      "status": "visually_met",
+      "observation": "Broad apparently level stone paving, substantial guards visible on both sides. Child is on walkway, not sloping roof/ridge; running pose rather than depicted fall."
+    },
+    "wooden_beam": {
+      "status": "visible",
+      "observation": "Low transverse timber spans walkway ahead; actual jump height and collider unknown."
+    },
+    "red_lantern": {
+      "status": "partial",
+      "observation": "Red lantern hangs below right eave farther ahead. Visible obstacle cue, but clearance requiring a slide and alignment with runner path cannot be established."
+    },
+    "left_right_branch": {
+      "status": "partial",
+      "observation": "Left/right fork suggested by paving and V-shaped rear guards; full route continuity not visible."
+    },
+    "roofs": {
+      "status": "visually_met",
+      "observation": "Adjacent yellow tiled roofs with ridge figures, roofscape and distant large double-eaved hall visible."
+    },
+    "child_costume": {
+      "status": "visually_met",
+      "observation": "Yellow dragon-pattern robe, round small cap, long braid and running stride visible; identity and age not verified from rear view."
+    },
+    "adult_crop": {
+      "status": "material_deviation",
+      "observation": "Adult at lower left shows substantial back/torso below shoulders, separately from the explicitly allowed extended arm. Requested shoulders-up body crop not met."
+    },
+    "adult_action_expression": {
+      "status": "partial",
+      "observation": "Hand reaches toward fluttering hem without visible grasp. Face largely turned away, so amused/breathless expression not fully assessable; no visible emergency or ladders."
+    },
+    "summer_surface": {
+      "status": "visually_plausible",
+      "observation": "Green trees, clear warm daylight; stone, ceramic and textile surfaces broadly photographic. Decorative detail remains idealized."
+    },
+    "modern_ui": {
+      "status": "none_observed",
+      "observation": "No evident modern objects, tourists, bicycle, overlay text, logos or UI."
+    }
+  },
+  "limitations": [
+    "No verified 2–3 m camera distance or 1.5–2 m camera height.",
+    "No lantern clearance, collision state, gameplay camera or playable fork validation.",
+    "Not a verified historical architecture record.",
+    "Referenced plan section 5 unavailable according to parent source search; not read and no new main fetch performed."
+  ],
+  "disposition": "Requirements partially met; adult body framing is a material deviation. Illustration candidate for PT/owner review only.",
+  "approval": {
+    "owner_or_pt_acceptance": "not established",
+    "game_integration": "not established"
+  },
+  "preservation": "No generation, edits to candidate or older J1–J3/QA, uploads, post or ledger changes performed."
+}
