@@ -692,6 +692,17 @@
       "kuvapino": "uusi elementti (omistaja 4.10.2026 klo 15.2x): vasemmassa alareunassa ohjaamopaneelin yläpuolella 10 pt, pikkukuva 52 × 65 pt (4:5), 2 pt reuna tumma-muste, kulma pieni; uusin päällimmäisenä, kaksi vanhempaa alla vinossa (−7° ja 6°); napautus avaa uusimman isoon ikkunaan",
       "peitto": "paneeli 128 pt (puhelimella noin 15 % korkeudesta), leveys ruutu − 24, enintään 560 pt"
     },
+    "KEHYS-KÄÄRÖ": {
+      "_selite": "Historialinssien kehys kartan ympärille käärönä (PT 17.10.2026 01.3x: KK:n päätös yön valtuutuksella; omistajan 01.25 'Kiinan dynastiat valmiiksi', KK:n referenssi 'kehys käärönä'). Ensimmäinen käyttäjä Kiinan dynastiat; muut historialinssit samalla pohjalla. Vain natiivi: UI/KehysKaaro.cs.",
+      "teemat": ["paperi"],
+      "koostuu": [
+        "ohut puurulla ylä- ja alareunassa (9 pt, pyöreät päät, teema paperi muste-pehmea, valojuova korostus, kapea varjo himmennys.kevyt)",
+        "paperin reuna: kaistale rullan alla (6 pt) ja sivuilla (4 pt), teema paperi pinta, sisäreunassa hiusviiva reunus",
+        "ei koristeita (ei nuppeja, tupsuja eikä kuvioita); kartta näkyy kokonaan kehyksen sisällä"
+      ],
+      "sijainti": "turva-alueen sisällä; rullat 3 pt paperia leveämmät; ei kosketuksia, linssin paneelit kehyksen päällä",
+      "liike": "avaus kuin kääritty kartta: rullat keskeltä reunoille liike.liikkeet kortti-avaus (220 ms), sulku takaisin kortti-sulku (200 ms); alle liike.maksimi"
+    },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)", "LAUTAPELI/merkki": "pelinappula (Mylly, Tavli) ympyränä: pelivälineen muoto, ei UI-pinta, joten EI OVAALEJA ei koske sitä (Päätoimittaja 8.10.2026)", "MUOTOKUVARIVI/kuva": "muotokuva ympyränä: henkilön kuva, ei UI-pinta, joten EI OVAALEJA ei koske sitä (omistaja 16.10.2026 klo 21.54)" }
   }
 }
