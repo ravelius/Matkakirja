@@ -61,6 +61,17 @@ Sisältökirjurin pohjasta).
 - Pystynäyttö on ensisijainen, iPad ja vaakanäyttö sovitetaan. UI käyttää olemassa olevia pohjia (UI-POHJAT): kerättävien
   laskuri ja kokoelma ovat nykyisiä kortti- ja nostopohjia. Jos jotain puuttuu, kysytään PT:ltä.
 
+### Kamera (omistaja 16.10.2026 klo 19.41, Raamattu #4718)
+- **Takaa yläviistosta, Puyi näkyy kuvassa.** Tämä on poikkeus pelin 1. persoonan linjaukseen ja koskee vain juoksupeliä.
+- Kamera on Puyin takana ja yläpuolella, ja se katsoo eteenpäin niin, että pelaaja näkee edessä tulevat esteet
+  (kynnykset, ammeet, räystäät, risteykset) ajoissa ja näkee Puyin hypyt ja liu'ut kokonaan. Kamera seuraa käännöksissä
+  pehmeästi ja nousee katto-osuudella hieman korkeammalle, jotta harjahahmot ja kattojen meri näkyvät.
+- **Hovi kuvan alareunassa:** takaa-ajajia ei näy, kun etumatka on hyvä. Kun eunukki tai hoitaja on saamassa Puyin
+  kiinni, hän ilmestyy kuvan alareunaan kurottamaan. Tämä on pelaajan ainoa uhkamittari, joten erillistä palkkia ei tarvita.
+- **Etukulmat vain välikohtauksina:** havainnekuvan j1 kaltainen etukulma (Puyi hyppää kohti kameraa, hovi perässä) on
+  lyhyt välikohtaus. Sellaisia ovat osuuksien vaihdot, ensimmäinen kynnys, piiloutuminen ammeen taakse ja maali
+  kulmatornilla (j3). Pelaaja ei ohjaa välikohtauksen aikana.
+
 ## 6. Tarkistetut faktat (Sonnet-agentti 16.10.2026, kaksi lähdettä per kohta)
 Varma = kaksi riippumatonta lähdettä. Merkinnät [EPÄVARMA] ja [LEGENDA] eivät mene pelitekstiin faktoina.
 
@@ -112,3 +123,6 @@ Varma = kaksi riippumatonta lähdettä. Merkinnät [EPÄVARMA] ja [LEGENDA] eiv�
 ## Havainnekuvat
 Codex-tilaus (TASAN 3 kuvaa, omistajan lupa 18.18): `posti/pelikoodari-codex-juoksupeli-havainnekuvat-20261016.md`
 haarassa claude/postilaatikko. Kuvat PT:lle ja sieltä KK:lle.
+Valmiit 16.10. klo 19.2x: `posti/juoksupeli-havainnekuvat-20261016/havainne-j1.png` (kynnys, etukulma = välikohtaus),
+`havainne-j2.png` (katot, j2 uusittu turvallisena) ja `havainne-j3.png` (kulmatornin näköala = maali). Kiintiö 3 on
+käytetty. **Takakameran havainnekuvaa ei tilata ilman omistajan uutta lupaa** (PT kysyy).
