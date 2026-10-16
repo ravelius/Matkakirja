@@ -32,10 +32,19 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus -20261016-ilta: tehty (l
    kierroksen alussa ja lähdöissä. **PT hyväksyi kohdistuksen 23.2x** (Louvrelle ei osiota: Pariisin 8:sta yksikään ei kerro kuninkaiden
    Louvresta – tarkistettu). Testi HistoriaosioOmallaPaikallaan. Simussa tarkistamatta: lokirivi "opas: historiaosio <tunnus> pysähdyksen
    lopussa" Notre-Damella; "ei ehtinyt latautua" = esilataus myöhässä.
-3. **Liikepohja + museo** c32cbb200 (pelikoodari/liikepohja-198): KK hyväksyi 23.18, NS:llä. Ennen/jälkeen-video PT:lle lähetetty
+3. **UUSI (PT 23.3x, OMISTAJA 23.22 sanatarkasti): "Miksi taidemuseon kävelyssä tauluja katsotaan alaviistossa. Haluan että kamera on
+   lähestyessä taulun keskipisteen korkeudella".** Syy (KK): KavelyV2 kulkee silmänkorkeudella SilmaY 1,6 m ja katse nousee enintään 12°
+   (KatseKohta), kohtisuoraan vasta suurennuksessa (SilmaAsento(…, SilmaPaino), MuseoKierros.KavelyV2.cs). Tavoite: lähestyessä kamera nousee
+   pehmeästi taulun keskikohdan korkeudelle → taulu suoraan edestä, kehys suorakulmainen jo ennen pysähdystä, katse vaakasuora, ei nykäystä
+   perillä eikä Auto Zoomin alussa; ovista kuten nyt. Toteutus liikepohjalla (abc4accff:n päälle, sama haara tai uusi): V2Kavely-silmän korkeus
+   lähestymisosuudella (wKohde-painolla) kohti TaulunKeskipiste(kohde).Y, Saavu/SilmaAsento(kohde, 0) samaan korkeuteen (muuten hyppy perillä),
+   SilmaPaino-logiikka zoomissa vastaavasti (paino 0 = jo kohtisuora). Testit: KierrosLiikkuuPehmeastiIlmanHyppyja (rajat 4 cm/ruutu, 3 m/s²,
+   300 °/s²) + uusi: perillä katse vaakasuora ja kamera taulun keskikorkeudella. Huom. 6d2043e0c/ad43f2fec (NUI): korkean teoksen nimi
+   seinälle ylimpään 18–23 %:iin – tarkista ettei nimi jää rajalle. Video → PT; junaan 197 jos ehtii.
+4. **Liikepohja + museo** c32cbb200 (pelikoodari/liikepohja-198): KK hyväksyi 23.18, NS:llä. Ennen/jälkeen-video PT:lle lähetetty
    (todistus-museo-pehmea-197-20261016-2233 vs todistus-liikepohja-198-20261016-2310). Tyylikirja liuku 1800 ms main #4735 (mergetty c045e5b5a).
    Liikepohja.cs (Ydin/Kamera), liikevahti (tyokalut/liikevahti.py, tyylikirja/liikevahti.json 226 tiedostoa / 1314 ohitusta, vain pienenee).
-4. **Praha historia-v2** 88a386b12 (pelikoodari/praha-historia-198): JU vei opas/historia-v2/praha.json 22.38.
+5. **Praha historia-v2** 88a386b12 (pelikoodari/praha-historia-198): JU vei opas/historia-v2/praha.json 22.38.
 
 ## Seuraavaksi (juna 198+)
 - Muiden linssien ja pelien siirto liikepohjalle vuorollaan (liikevahdin lista; ensin ne, joihin muutenkin koskee).
