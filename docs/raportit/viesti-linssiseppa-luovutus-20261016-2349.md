@@ -53,6 +53,7 @@ se osa pois (git revert), ei väliaikaisia poikkeamia.
   Alankomaiksi, jos Pariisi avattiin ensin → ratkaise ennen Pariisin avausta (esim. valitsin = Alankomaat).
   PT 00.07: da98b2e4a junaan 197 vain, koska pelaaja ei pääse Ranskaan (PariisiMuseoAuki=false). ajo-vapaalento197.zsh ajaa perään
   sk-museomaa-197-iphone.txt (Pariisi kiinni; Amsterdamin merkki ja valitsin → maa alankomaat; kuvat a1/a2, era museomaa197-iphone).
+- Ranskan i-kortti (SK #4732/#4736/#4745): valmiina NUI:lla, junassa 197 (museo-juna-197 9f1e78fd6) → minulta ei vientiä.
 - LOUVREN AVAUS PARITEETIN JÄLKEEN: kun PT ilmoittaa SK:n (kohdat.json + lähestyminen) ja Äänittäjän (askeläänet) valmiiksi ja Ranskan
   museon Alankomaiden tasolle, oletus PariisiMuseoAuki = true (KaupunkiPallot.cs) + houkutin samaan erään, kuvat PT:lle, sitten NS.
 - Pariisin museon houkutin PALLON VIEREEN (avauksen yhteydessä, ei ennen): proto linssiseppa/pariisi-houkutin 7266f0ae1 (8aed785c3:n päällä; worktree wt/proto-linssiseppa-houkutin): vapaa piste
