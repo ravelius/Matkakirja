@@ -446,5 +446,84 @@
    "https://fr.wikipedia.org/wiki/Église_Notre-Dame-de-l'Assomption_d'Auvers-sur-Oise",
    "https://artsandculture.google.com/asset/6wEjLceQPXkTtA"
   ]
+ },
+ {
+  "tunnus": "louvre-inv-602",
+  "faktat": [
+   "Louvren mukaan taulu on peräisin Ranskan kuninkaallisesta kokoelmasta."
+  ],
+  "lahteet": [
+   "https://collections.louvre.fr/en/ark:/53355/cl010060754",
+   "https://utpictura18.univ-amu.fr/en/notice/18072-virgin-and-child-with-john-the-baptist-known-as-belle-jardiniere-raphael"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
+ },
+ {
+  "tunnus": "louvre-inv-71",
+  "faktat": [
+   "Museon mukaan taulu oli todennäköisesti Arundelin kreivin kokoelmassa 1640-luvulle asti."
+  ],
+  "lahteet": [
+   "https://collections.louvre.fr/en/ark:/53355/cl010062281",
+   "https://www.rct.uk/the-lost-collection-of-charles-i"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
+ },
+ {
+  "tunnus": "louvre-mi-957",
+  "faktat": [
+   "Museon mukaan taulu myytiin Pariisissa 1843 huutokaupassa nimellä Susanna kylvyssä."
+  ],
+  "lahteet": [
+   "https://collections.louvre.fr/en/ark:/53355/cl010060453",
+   "https://utpictura18.univ-amu.fr/en/notice/10453-bathsheba-at-the-bath-holding-a-letter-from-david-rembrandt"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
+ },
+ {
+  "tunnus": "louvre-inv-4885",
+  "faktat": [
+   "Aiheen kerrotaan syntyneen kadulla nähdystä karanneesta kärryhevosesta.",
+   "Museon mukaan Orléansin herttua osti taulun huutokaupassa 1824."
+  ],
+  "lahteet": [
+   "https://collections.louvre.fr/en/ark:/53355/cl010059198",
+   "https://www.napoleon.org/histoire-des-2-empires/tableaux/officier-de-chasseurs-a-cheval-de-la-garde-imperiale-chargeant/",
+   "https://www.larousse.fr/encyclopedie/personnage/G%C3%A9ricault/121215"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
+ },
+ {
+  "tunnus": "orsay-rf-12258",
+  "faktat": [
+   "Museon mukaan teos siirtyi Luxembourgin museosta Louvreen 1929 ja Orsayhin 1986."
+  ],
+  "lahteet": [
+   "https://www.musee-orsay.fr/en/artworks/ballet-2084",
+   "https://www.musee-orsay.fr/fr/oeuvres/2084"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
+ },
+ {
+  "tunnus": "orsay-rf-2735",
+  "faktat": [
+   "Museon mukaan teos tuli Luxembourgin museoon 1896 ja siirtyi Orsayhin 1986."
+  ],
+  "lahteet": [
+   "https://pop.culture.gouv.fr/notice/joconde/000PE004035",
+   "https://www.musee-orsay.fr/en/artworks/les-toits-rouges-coin-de-village-effet-dhiver-379"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
+ },
+ {
+  "tunnus": "orsay-rf-1937-20",
+  "faktat": [
+   "Museon mukaan hahmo on kuvattu ulkona, mikä on tällaisessa muotokuvassa epätavallista."
+  ],
+  "lahteet": [
+   "https://www.musee-orsay.fr/fr/oeuvres/1296",
+   "https://getdailyart.com/en/24893/mary-cassatt/girl-in-the-garden"
+  ],
+  "huom": "pehmennetty: yksi lähde (museo) tai kaksi, ks. raportti"
  }
 ]
