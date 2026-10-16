@@ -2,8 +2,7 @@
 
 *(LUONNOS 17.10.2026, Sisältökirjuri, PT:n toimeksianto. Raamattu, TUOTANTOPOHJAT ja TUOTANTOPOHJIEN SANASTO. Tähän on koottu
 vain nykyisten ohjeiden ja luovutusten opit (Lontoo, Praha, Ateena; Tukholma ja Pariisi suunnitelmina); uusia sääntöjä ei ole.
-PT:n toimeksiannon tiivistykset omistajan päätöksistä 23.16 ja 23.18 on merkitty "(PT)": niiden tarkka sanamuoto ei ollut
-vielä lokissa. Jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa. Sisältö-osuuden omistaa Sisältökirjuri; muut osat
+Jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa. Sisältö-osuuden omistaa Sisältökirjuri; muut osat
 täydentävät tekijänsä otsikoilla "TÄYDENTÄÄ: <rooli>". PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
 
 Kuumailmapallokierros = kaupungin valmis esittelylento: pallo laskeutuu avaukseen, pysähtyy kahdeksalla kohteella, lentää
@@ -18,7 +17,7 @@ kierros piilotetaan Kreikan App Storessa (storefront GRC); Ateenan tilalle tuli 
 
 ```
 Karttaseppä: kaupungin 3D ja kohdelista (8 kohdetta, järjestys, Q-id, sijainti, H_m)
-  → Sisältökirjuri: faktaliite → kertojan käsikirjoitus (avaus, 8 pysäkkiä, loppu) + 8 historiaosiota + metrokartan nimet
+  → Sisältökirjuri: faktaliite → kertojan käsikirjoitus (avaus, 8 pysäkkiä, loppu) + 8 historiaosiota + kartan ja kohdelistan nimet
   → riippumaton tarkistus (3 Sonnet-tarkistajaa) → korjaukset → PT: lista, tyyli ja hyväksyntä
   → Äänittäjä: kertoja William (pysyvä lupa PT:n hyväksymiin teksteihin) + musiikki
   → Linssiseppä: lento, kamera, ajoitus, historiaosioiden paikat → kytkentä → Julkaisija
@@ -53,13 +52,14 @@ Sonnet.
    "Kierros alkaa …"), 8 pysäkkiä, loppu. Pysäkkiteksti on pieni tarina (neljä tai viisi tarkistettua faktaa, tunnistettava piirre
    ensin), lähes puhekielinen mutta ei hehkutusta; isoisän 1873-viittaus vain harvoin ja tosiasiana (Prahan kello). Luvut sanoiksi
    ennen merkkimäärän laskemista; kokonaispituus ilmoitetaan (Praha 8 103, Ateena 7 274 merkkiä).
-4. **Historiaosiot: 8 per kaupunki, kukin omassa paikassaan (PT, omistaja 23.16).** Osio kertoo sen paikan tai alueen
-   historiasta, jonka yllä pallo lentää, eikä satunnaisella lennolla. Pituus 38–56 sanaa (noin 28–46 s). Jokaisella osiolla on
+4. **Historiaosiot: 8 per kaupunki, jokainen soi omassa paikassaan (omistaja 23.16).** Osio kertoo sen paikan tai alueen
+   historiasta, jonka yllä pallo lentää, eikä satunnaisella lennolla. Osio ei kerro asiaa, joka ei kuulu paikkaan (esim. Louvren
+   kohdalla ei Pariisin perustamista). Pituus 38–56 sanaa (noin 28–46 s). Jokaisella osiolla on
    `tunnus`, `otsikko`, `teksti`, `kesto_s` (sanamäärä × 0,70 s, korvataan äänen todellisella kestolla), `lahteet` ja Commons-kuva
    (PD/CC0/CC BY, tarkistettu API:lla). Historiaosio ja pysäkin kerronta eivät toista toisiaan.
-5. **Metrokartan nimet ilman selitettä (PT, omistaja 23.18).** Kierroksen kohdekartalla näkyvät nimet pelkkinä nimiä: `selite`-kenttä
-   ei näy pelaajalle (nimet ovat tarkistettuja Wikidata-nimiä; vakiintunut suomalainen nimi kerronnassa). **AVOIN (PT/LS):**
-   PT:n sana oli "kipin nimet"; tulkittu kohdekartan nimiksi, vahvistetaan ennen kuin kenttä poistetaan tai piilotetaan.
+5. **Kierroksella vain paikan nimi ilman selitettä, kartalla ja kohdelistassa (omistaja 23.18).** Kohdekartalla ja kohdelistassa
+   näkyy pelkkä paikan nimi; `selite`-kenttä ei näy pelaajalle. Nimet ovat tarkistettuja Wikidata-nimiä; vakiintunut suomalainen
+   nimi kerronnassa.
 6. **Pulun kutsu.** Kierroksen jälkeen Pulu kutsuu vapaaseen lentoon: tunnus `pulu-vapaalento-kutsu-<kaupunki>`, kaksi
    virkettä: "<Kaupunki> on nyt sinun, …", sitten viittaus nappiin "Mikä tämä on?" ja pyyntö napauttaa rakennusta. Ensimmäinen virke saa
    kaupungin oman, näkyvän piirteen (Thames, Akropolis); loppu on sanatarkka. Luku sanoiksi, ei ammattikieltä, Pulun tyyli
@@ -82,7 +82,7 @@ Sisältö-osuus ei ole valmis ennen kuin kaikki kohdat täyttyvät:
 - [ ] Faktaliite: kaksi lähdettä per väite, ei-varmistuneet pois, `H_m`-lähteet merkitty.
 - [ ] Käsikirjoitus: avaus, 8 pysäkkiä, loppu; kierroksella kolme muistettavaa asiaa; puhuttu merkkimäärä ilmoitettu.
 - [ ] 8 historiaosiota, kukin omassa paikassaan, 38–56 sanaa, kuvat Commonsista lisenssitarkistettuina.
-- [ ] Metrokartan nimet ilman selitettä (kun tulkinta vahvistettu).
+- [ ] Kartalla ja kohdelistassa vain paikan nimi ilman selitettä.
 - [ ] Pulun kutsu Tekstit-osastossa ja hyväksytty (tai sanatarkka toisinto).
 - [ ] Riippumaton tarkistus tehty (3 tarkistajaa), KORJAA-rivit korjattu, EPÄVARMA-rivit pehmennetty tai pois.
 - [ ] PT:n hyväksyntä listalle, tyylille ja teksteille.
@@ -128,7 +128,7 @@ köydet, kameran korkeus (`H_m`), Pulun kutsun kytkentä. Täydentää Linssisep
 
 ## 8. TÄYDENTÄÄ: Karttaseppä (kaupunki)
 
-*(kaupungin 3D ja mittaus, kohdelista ja reitti, Q-id:t, sijainnit, `H_m`, avausnäkymän kohde, metrokartan nimet. Täydentää
+*(kaupungin 3D ja mittaus, kohdelista ja reitti, Q-id:t, sijainnit, `H_m`, avausnäkymän kohde, kartan ja kohdelistan nimet. Täydentää
 Karttaseppä.)*
 
 ## 9. TÄYDENTÄÄ: Äänittäjä (kertoja ja musiikki)
