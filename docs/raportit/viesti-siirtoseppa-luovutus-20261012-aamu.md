@@ -425,3 +425,4 @@ kun 9fa3b99f1 on juna-196:ssa).
   Lista 27. Linssit 1935/1935, unity 0. Laitemittaus (verhokäyrä) koko erästä kerralla, kun PT/Julkaisija antaa vuoron.
 - 01.2x: siirto 6 **2e47edc13** SeikkailuTyrmaAanet (pohja 2D + ohikulun askeleet 3D) + uusi **SeikkailuKuulija.Pohja** (3D-pohjatehdas
   kuulokehyksessä; vanhat Lahde-kutsujat siirtyvät siihen yksi kerrallaan, Lahde poistetaan viimeisenä → SeikkailuKuulija pois listalta). Lista 26.
+- 01.2x: siirto 7 **36fa2f5a8** PalloAanimaisemaSoitin (kerta-äänet + omat silmukat, pallo; pohjan väistö pois, oppaan väistö tasossa). Lista 25.
