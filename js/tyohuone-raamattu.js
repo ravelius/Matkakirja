@@ -508,6 +508,13 @@ export const RAAMATTU = {
           + 'kertojan alle ja askeleet alustan mukaan; jaetun mikserin kertoimet (worker /mikseri/tasot) säilyvät. VALO- JA KUVAPOHJA: yhteiset valaistus-, varjo-, sävykäsittely- ja '
           + 'materiaaliprofiilit. Omaa liikettä, ääntä tai valoa ei tehdä yksittäiseen linssiin (ei väliaikaisia paikallisia korjauksia); automaattinen tarkistus listaa pohjan ohittavat, '
           + 'ja vanhat siirtyvät pohjiin vuorollaan. Omistajat ja tila: docs/moduulit/yhteiset-pohjat.md. '
+          + 'TUOTANTOPOHJAT (omistaja 16.10.2026 klo 23.38, kortti "Kyllä, seitsemän pohjaa"; sisar YHTEISILLE POHJILLE): jokainen uusi työ aloitetaan tyyppinsä tuotantopohjasta, ja '
+          + 'jokaisen työn opit kirjataan pohjaan, joten seuraava työ käyttää aina uusinta tapaa. Seitsemän pohjaa: 3D-maamerkki, kuumailmapallokierros, taidemuseon maa, pääkaupungin avaus, '
+          + 'uusi linssi, historiapeli sekä kertojan teksti ja ääni; kukin tiedostona docs/moduulit/tuotantopohjat/<tyyppi>.md, jossa työvaiheet ja valmiin työn tarkistuslista (esim. '
+          + '"pelaaja pääsee sisään"). Pohjan omistaa tyypin rakentaja, PT hyväksyy muutokset. PT ei hyväksy uutta pakettia ilman pohjaa; paketti on valmis vasta, kun sen opit on viety '
+          + 'pohjaan; automaattinen tarkistus valvoo pohjat kuten dokumenttikartan. Pohjat kootaan nykyisistä ohjeista (TAVOITELUUPPI, tarinakaari.md, Firenzen resepti, museon monistettava '
+          + 'runko) ja luovutusten opeista; tekijät kirjoittavat ne junan 197 jälkeen. Ensimmäinen oppi: Ranskan museolta puuttui pelaajan reitti sisään (avattiin Pariisista 16.10.). '
+          + 'Loki: docs/raamattu-loki/paatokset-2026-10.md #OMISTAJAN PÄÄTÖS: TUOTANTOPOHJAT UUSIEN ASIOIDEN RAKENTAMISELLE (16.10.2026 klo 23.41). '
           + 'Loki: docs/raamattu-loki/paatokset-2026-10.md #OMISTAJAN PÄÄTÖS: YHTEISET POHJAT LIIKKEELLE, ÄÄNELLE JA VALOLLE (16.10.2026 klo 20.56); docs/raamattu-loki/paatokset-2026-09.md #KARSINTA 0.11 UI-POHJAT JA KOHTAUKSET 14.10.2026 (14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: YKSI YHTEINEN LASIPOHJA KORTEILLE JA '
           + 'PANEELEILLE (14.10.2026 klo 23.34), #KARSINTA 7.1 ANIMAATIOPOIKKEUKSET 14.10.2026 '
           + '(14.10.2026 klo 22.55), #OMISTAJAN PÄÄTÖS: ANIMAATIOT ALLE 250 MS (14.10.2026 klo 22.55).',
