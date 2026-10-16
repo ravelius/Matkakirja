@@ -66,7 +66,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "italia-yolla",
-    "nimi": "Italian saapas yöllä",
+    "nimi": "Italian saapas",
     "seutu": "Italia",
     "selite": "Koko niemimaa kerralla: kaupunkien valot piirtävät rannikon tarkemmin kuin kartta.",
     "lat": 41.3,
@@ -278,7 +278,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "korea",
-    "nimi": "Korean niemimaa yöllä",
+    "nimi": "Korean niemimaa",
     "seutu": "Korea",
     "selite": "Yökuva, jossa valtioiden raja näkyy pelkkänä pimeytenä.",
     "lat": 38.3,
@@ -591,7 +591,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "new-york",
-    "nimi": "New York yöllä",
+    "nimi": "New York",
     "seutu": "Yhdysvallat",
     "selite": "Katuverkko, jonka muodon tunnistaa pelkistä valoista.",
     "lat": 40.71,
@@ -1807,7 +1807,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "tunis",
-    "nimi": "Tunis yöllä",
+    "nimi": "Tunis",
     "seutu": "Tunisia",
     "selite": "Kaupungin valot piirtävät lahden ja laguunin muodon.",
     "lat": 36.8,
@@ -1833,7 +1833,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "kairo-yolla",
-    "nimi": "Kairo yöllä",
+    "nimi": "Kairo",
     "seutu": "Egypti",
     "selite": "Niili halkaisee valomeren ja jatkuu suistoon.",
     "lat": 30.05,
@@ -4350,7 +4350,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "buenos-aires-yolla",
-    "nimi": "Buenos Aires yöllä",
+    "nimi": "Buenos Aires",
     "seutu": "Argentiina",
     "selite": "Argentiinan pääkaupunki levittäytyy miljoonine valoineen Río de la Platan rannalle.",
     "lat": -34.61,
@@ -4376,7 +4376,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "riyadh-yolla",
-    "nimi": "Riad yöllä",
+    "nimi": "Riad",
     "seutu": "Saudi-Arabia",
     "selite": "Aavikon keskelle noussut pääkaupunki hehkuu yöllä laajana ruudukkona ilman ainoatakaan lähijokea.",
     "lat": 24.7136,
@@ -4402,7 +4402,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "casablanca-yolla",
-    "nimi": "Casablanca yöllä",
+    "nimi": "Casablanca",
     "seutu": "Marokko",
     "selite": "Marokon suurin kaupunki ja tärkein satama loistaa Atlantin rannalla.",
     "lat": 33.5731,
@@ -4714,7 +4714,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "baghdad-yolla",
-    "nimi": "Bagdad yöllä",
+    "nimi": "Bagdad",
     "seutu": "Irak",
     "selite": "Tigris-joen mutka kiemurtelee kirkkaana miljoonakaupungin valomeren keskellä.",
     "lat": 33.3152,
@@ -4926,7 +4926,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "lasvegas-yolla",
-    "nimi": "Las Vegas yöllä",
+    "nimi": "Las Vegas",
     "seutu": "Nevada, Yhdysvallat",
     "selite": "Aavikkokaupunki, jonka suorakulmainen katuverkko ja kirkkaasti valaistu Strip erottuvat yöllä selvästi ympäröivästä pimeästä autiomaasta.",
     "lat": 36.17,
@@ -4952,7 +4952,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "iberia-yolla",
-    "nimi": "Iberian niemimaa yöllä",
+    "nimi": "Iberian niemimaa",
     "seutu": "Espanja ja Portugali",
     "selite": "Koko niemimaa yöllä: kaksi pääkaupunkia erottuu kirkkaimpina pisteinä valoverkon keskellä.",
     "lat": 40,
@@ -5357,7 +5357,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "valakian-tasanko",
-    "nimi": "Valakian tasanko yöllä",
+    "nimi": "Valakian tasanko",
     "seutu": "Romania",
     "selite": "Yöllä otetussa kuvassa Karpaateilta Valakian tasangolle laskevat joet erottuvat siitä, miten asutuksen valot seuraavat jokilaaksoja.",
     "lat": 45.3,
@@ -5409,7 +5409,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "englanninkanaali-yolla",
-    "nimi": "Englannin kanaali yöllä",
+    "nimi": "Englannin kanaali",
     "seutu": "Iso-Britannia, Ranska, Belgia ja Alankomaat",
     "selite": "Englannin kanaalin molemmin puolin syttyvät Lontoon, Amsterdamin, Brysselin ja niiden naapurikaupunkien valot yhdeksi Euroopan tiheimmin asutuksi yövyöhykkeeksi.",
     "lat": 51.2,

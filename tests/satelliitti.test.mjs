@@ -1404,3 +1404,10 @@ test('AUTO hiljaa (omistaja 21.3x): napit häipyvät, napautus palauttaa ilman p
   assert.match(lahde, /siirtoAjastin = setTimeout\([\s\S]{0,120}POHJA_AUTO_SIIRTO_MS\);/);
   assert.match(tyyli, /\.satelliitti-auto-hiljaa :is\(\.satelliitti-kulma, \.satelliitti-kohteet, \.satelliitti-pulukulma\),\nbody\.satelliitti-auto-hiljaa \.pollo-nappi \{\n\s*opacity: 0;\n\s*pointer-events: none;\n\s*transition: opacity var\(--tk-kesto-sulku\)/);
 });
+
+test('kohteiden nimissä ei ole sanaa "yöllä" (omistaja 17.10.2026 00.32: Bagdad yöllä → Bagdad)', () => {
+  for (const p of ['../js/linssit/satelliitti-data.js', '../tools/hae-satelliittihavainnot.mjs']) {
+    const t = readFileSync(new URL(p, import.meta.url), 'utf8');
+    assert.doesNotMatch(t, /["']?nimi["']?: ["'][^"'\n]* yöllä["']/, p);
+  }
+});
