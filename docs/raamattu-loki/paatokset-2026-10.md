@@ -292,3 +292,25 @@ Omistaja klo 00.33 (juna 196), sanatarkasti: "Vielä nämä mukaan : lehden skro
 ## PAATOKSET 16.10.2026 klo 00.40 (KK välitti): Pulun merivastaukset valmiit + äänitetyt (16.10.2026 klo 00.40)
 
 Omistaja (kortti KK:ssa) klo 00.40: "Valmiit + äänitetyt (Suositus)". Generointilupa juuri tälle määrälle: 81 vastausta (#4686), noin 30 600 merkkiä Pulun äänellä kuten ISS-vastaukset, yksi otto kustakin, junaan 196. Määrä ylittää pysyvän kertojaluvan (noin 10 000 mrk), joten lupa on tämä kortti; lisäykset (vastaukset 82–103, 11 uutta merinostoa) vaativat uuden luvan. Äänittäjä äänittää, Siirtoseppä kytkee natiivin merinostoihin.
+
+## PAATOKSET 16.10.2026 klo 18.05: CODEXIN TAHTI (Peking) (16.10.2026 klo 18.05)
+
+Omistaja 18.05 (KK:n välittämä): "Pitä huolehtia, että kodeksille ei tule liian pitkiä taukoja ja että se työskentely etenee. Haluan päästä kokeilemaan Pekingiä kipillä heti, kun se on valmis." Pysyvä työtapa: Codexilla on aina 2–3 hyväksyttyä seuraavaa tehtävää jonossa (Peking nyt #361 pintojen toisto ja #362 sävyvaihtelu rinnakkain #360:n arvion kanssa); jokainen Codex-toimitus arvioidaan alle 30 minuutissa vapaalla roolilla (ei odoteta kiireistä roolia); Postivahti tarkistaa kierroksellaan ledger.jsonin ja postilaatikon ja hälyttää PT:lle, jos toimitus on odottanut yli 30 min tai Codexilla ei ole tehtävää. Jokainen arvioitu Peking-paketti viedään ämpäriin ilman junaa omistajan piilotettuun kippiin, ja siitä rivi KK:lle.
+
+## PAATOKSET 16.10.2026 klo 18.14: 7 UUTTA PÄÄKAUPUNKIA PELAAJILLE (16.10.2026 klo 18.14)
+
+Omistaja 18.14 (kortti PAAKAUPUNGIT-7, arkki-kaikki.jpg nähtyään): "Avataan, kun hyväksyn esittelyt (Suositus)". Monaco, Bern, Bratislava, Podgorica, Tirana, Belgrad ja Zagreb OPAS_SALLITUT-listalle heti, kun omistaja hyväksyy niiden 7 esittelyä äänisivulla (3D-mittaus sallitut.js + still 450 m/55° läpäisty 16.10.). Vaduz (raja), Skopje, Chișinău ja Minsk jäävät kehityskaupungeiksi.
+
+## PAATOKSET 16.10.2026 klo 18.18: KIELLETYN KAUPUNGIN JUOKSUPELI (16.10.2026 klo 18.18)
+
+Omistaja 18.18 (KK:n välittämä): uusi juoksupeli Kielletyssä kaupungissa, ei korvaa kesän 1923 seikkailua ("Mietin, että pystyisikö kummankin toteuttamaan"). 1) "Kannatan kaikkia ideoita, mitä kerroit
+juoksupeliin.": pikku-Puyi karkaa hovia, juoksee itse, pelaaja pyyhkäisee hypyt, liu'ut ja käännökset; reitti pihojen, muurien ja kattojen kautta, piiloutuminen (esim. vesiammeet); sävy aikuisillekin
+kelpaava kepposhenki (Untitled Goose Game, kuvasto kuten Viimeinen keisari); kerättävinä kattojen koristehahmot (Korkeimman harmonian sali 10), porttien 81 nastaa, salien nimet; lopussa kulmatornin
+näköala Pekingiin. Ensin lyhyt suunnitelma (reitti, ohjaus, tarkistetut faktat), rakentaminen vasta kun Codexin Peking on valmis. 2) Kortti "Kuka juoksupelin Puyi on?" → "Lapsi, noin 1914": ei
+polkupyörää (tuli 1922), omat lapsihahmot; Sisältökirjurille faktapohja Puyin lapsuudesta 1912–1918. 3) Kortti "Tehdäänkö Codexilla havainnekuvia juoksupelistä?" → "3 kuvaa (Suositus)" = lupa TASAN 3
+kuvaan: noin 8-vuotias Puyi juoksee porttikäytävän korkean kynnyksen yli eunukkien ja hoitajien perässä (ei pyörää); juoksu keltaisilla katoilla koristehahmojen ohi; kulmatornin näköala muurin yli
+Pekingiin. Kuvat omistajalle KK:n kautta.
+
+## PAATOKSET 16.10.2026 klo 18.3x: KIINAN DYNASTIAT -LINSSI (16.10.2026 klo 18.37)
+
+Omistaja 18.3x (sanatarkasti, KK:n välittämä): "Sitten ehdottomasti haluan oman linssin siitä, missä käydään karttamuodossa jollain tavalla läpi Kiinan eri dynastiat ja ulkoiset hallitsijat ja millaisilla alueilla ne toimivat." Toteutus = linssikatalogin M1 (aluemoottorin pilotti) + ulkoiset hallitsijat omana värinään kotiseutuineen (Xiongnut, Pohjois-Wei, Tiibet, Liao, Länsi-Xia, Jin, Yuan, Qing). Kokemus: Kiina laajenee, hajoaa ja yhdistyy, pohjoisen ja lännen kansat tulevat hallitsemaan, pääkaupunki siirtyy, loppu 1912 → Kielletty kaupunki. Työlistalle; ensin suunnitelma ja omat CC0-rajat.
