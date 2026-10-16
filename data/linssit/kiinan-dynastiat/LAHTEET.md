@@ -14,4 +14,4 @@ Omat, käsin piirretyt monikulmiot (suunnitelma `docs/suunnitelmat/linssi-kiinan
 - **Pelin data:** `kiinan-dynastiat.json` (`vie.py`, muoto `MUOTO.md`, Linssiseppä lukitsi 16.10.2026): kaikki vuodet,
   maarajat ilman rannikkoa (luokka 1 valtio, 2 protektoraatti), täytöt, kotiseudut, nimiöt ja pääkaupungit.
   Per-vuosi-GeoJSONit jäävät vertailuun; peli ei käytä niitä.
-- **Tila 16.10.2026 ilta:** kaikki 19 vuotta (18 avainvuotta + loppu 1912). Qingin väri avoin (omistaja).
+- **Tila 16.10.2026 ilta:** kaikki 19 vuotta (18 avainvuotta + loppu 1912). Qing viileä #41709c (omistaja 16.10. 20.35).

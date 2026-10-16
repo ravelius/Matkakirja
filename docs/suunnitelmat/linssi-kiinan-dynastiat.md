@@ -64,10 +64,11 @@ patinaan sopivia vesivärisävyjä, ja lopullisen säädön tekee kuvaputki peli
 - **Kiinalaiset dynastiat: lämmin punaruskea perhe.** Qin musta-ruskea (#4a3a32), Han punainen (#a8432f), Jin ja etelän
   dynastiat ruosteenpunainen (#b4603c), Sui ja Tang kirkas punaoranssi (#c25a2c), Song terrakotta (#b86a4a), Ming
   karmiini (#9e2f36). Hajoamisen ajan rinnakkaiset valtiot erotetaan kirkkaudella saman perheen sisällä (Wei, Shu ja Wu).
-- **Ulkoiset hallitsijat: viileät omat värit.** Xiongnut harmaanvihreä (#6f7d5c), Xianbei ja Pohjois-Wei sinivihreä
+- **Ulkoiset hallitsijat: viileät omat värit.** Xiongnut harmaanvihreä (#5f7b69), Xianbei ja Pohjois-Wei sinivihreä
   (#3f7f7a), Tiibet violetti (#6b4f86), Liao (kitaanit) sininen (#3d6595), Länsi-Xia (tangutit) turkoosi (#2f8f95), Jin
-  (jurchenit) teräksensininen (#4d6c8c), Yuan (mongolit) indigo (#34406f) ja Qing (mantšut) keltainen (#c9a227). Qingin
-  keltainen on keisarillinen väri, joka johdattaa Kielletyn kaupungin keltaisiin kattoihin.
+  (jurchenit) teräksensininen (#4d6c8c), Yuan (mongolit) indigo (#34406f) ja Qing (mantšut) viileä sininen (#41709c,
+  omistaja 16.10.2026 klo 20.35). Sääntö: ulkoiset hallitsijat viileillä, kiinalaiset dynastiat lämpimillä värisävyillä;
+  Jin (jurchenit) ja Qing (mantšut) ovat sukulaisvärejä, koska mantšut polveutuvat jurcheneista.
 - **Kotiseutu:** ulkoisen kansan kotiseutu näkyy aina sen omalla värillä vinoviivoitettuna, myös silloin kun kansa hallitsee
   Kiinaa. Esimerkiksi Yuanin ja Qingin aikana pelaaja näkee, mistä hallitsijat tulivat.
 - **Pääkaupunki:** pieni sinettimerkki. Siirtyessään se liukuu kartalla, ja vanhaan paikkaan jää himmeä piste.

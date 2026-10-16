@@ -35,7 +35,7 @@ ylitetä). Viivat tihennetty ≤ 0,25° välein, täyttöjen reunat ≤ 0,5° (p
   pieni (peli näyttää pienen keskikokoisena, Linssiseppä 16.10.).
 - Kotiseutu on mukana vain, kun se on pääosin kansan omalla alueella, ja se on leikattu siihen.
 - Alueet eivät mene päällekkäin (aiempi voittaa, leikattu Natural Earth 50 m -maahan).
-- Värit ovat suunnitelman (docs/suunnitelmat/linssi-kiinan-dynastiat.md luku 3). **Qingin väri on AVOIN** (omistaja
-  päättää ensimmäisen pallokuvan kanssa): keltainen #c9a227 tai viileä #41709c.
+- Värit ovat suunnitelman (docs/suunnitelmat/linssi-kiinan-dynastiat.md luku 3). Qing viileä #41709c (omistaja
+  16.10.2026 klo 20.35): ulkoiset viileät, kiinalaiset lämpimät, Jin ja Qing sukulaisvärein.
 - Avainvuodet (18 + loppu): -221, -200, -100, 140, 250, 440, 500, 589, 669, 790, 950, 1100, 1142, 1280, 1421, 1644,
   1760, 1873, 1912. Välivuodet interpoloi moottori.

@@ -11,8 +11,8 @@ import os, sys
 VARIT = {
     'qin': '#4a3a32', 'han': '#a8432f', 'jin-etela': '#b4603c', 'tang': '#c25a2c', 'song': '#b86a4a', 'ming': '#9e2f36',
     'wei': '#8f4a34', 'shu': '#b5714d', 'wu': '#c98a5a',
-    'xiongnu': '#6f7d5c', 'xianbei': '#3f7f7a', 'tiibet': '#6b4f86', 'liao': '#3d6595', 'xia': '#2f8f95',
-    'jurchen': '#4d6c8c', 'mongol': '#34406f', 'qing': '#c9a227',
+    'xiongnu': '#5f7b69', 'xianbei': '#3f7f7a', 'tiibet': '#6b4f86', 'liao': '#3d6595', 'xia': '#2f8f95',
+    'jurchen': '#4d6c8c', 'mongol': '#34406f', 'qing': '#41709c',  # omistaja 16.10. 20.35: viileä sininen, Jinin (jurchen) sukulaisväri
 }
 
 # Kotiseudut (suunnitelma luku 4): näkyvät vinoviivoin aina, kun kansa on kartalla.
