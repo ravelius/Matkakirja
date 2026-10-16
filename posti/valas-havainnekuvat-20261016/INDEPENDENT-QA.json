@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "task": "#376–377",
+  "reviewer": "iss_scene_camera_qa",
+  "reviewed_at_utc": "2026-10-16T09:47:30.257058+00:00",
+  "state": "review_complete_2_of_2_with_scale_and_effect_caveats",
+  "brief": {
+    "path": "sources/valoseppa-codex-valas-havainnekuvat-20261016.md",
+    "sha256": "dfd249eea592788810d35667982715ef10bfa2fb7ba9eede692620deb34780f5",
+    "read_completely": true
+  },
+  "references": [
+    {
+      "path": "sources/valas-pelikuva-koko.jpg",
+      "sha256": "bdf853ea80431329864e33f96f219871023da2831653c1c185f981bdc0472805",
+      "width": 2064,
+      "height": 2752,
+      "format": "JPEG",
+      "personally_viewed_with": "view_image"
+    },
+    {
+      "path": "sources/valas-pelikuva-rajaus.jpg",
+      "sha256": "1de533809f430544e7e645358997d95992dd35aeac24d9a16f4cfafe6edcf3d5",
+      "width": 1032,
+      "height": 826,
+      "format": "JPEG",
+      "personally_viewed_with": "view_image"
+    }
+  ],
+  "evidence": {
+    "brief_read_in_full": true,
+    "both_sources_personally_viewed": true,
+    "both_candidates_personally_viewed": true,
+    "view_tool": "view_image",
+    "original_detail_requested": true,
+    "display_notice": "Full source JPEG displayed at1368×1824 from2064×2752; candidates viewed at native1086×1448.",
+    "generation_editing_resizing_in_QA": false
+  },
+  "camera_and_position": {
+    "finding": "Täysi korkea alustakamera, raketin keskitys, tornit, horisontti ja etualan meri säilyvät lähellä lähdettä. Kumpikaan ei muutu valaan lähikuvaksi. Valas/loiske on oikeassa edustameressä, silmämääräisesti hieman lähteen efektikohtaa oikeammalla ja alempana. Tarkka rannikko ja alustan yksityiskohdat on havainnollistettu uudestaan.",
+    "material_closeup_deviation_observed": false,
+    "minor_location_shift_observed": true
+  },
+  "scale": {
+    "target_from_brief": "whale approximately14m, platform approximately100m",
+    "finding": "Valas on pieni osa koko kuvaa. v1:n eväkokonaisuuden leveys näyttää karkeasti noin kolmannekselta näkyvän alustan leveydestä. Valaan sijainti lähempänä kameraa suurentaa projektiota, joten tästä ei voi päätellä suoraa14/100-suhdetta eikä lukita numeerista mittakaavaa.",
+    "numeric_scale_verified": false,
+    "use_as_metric_model_reference": false
+  },
+  "images": [
+    {
+      "id": "v1",
+      "candidate": {
+        "path": "images/havainne-v1.png",
+        "sha256": "f23dbd5a5eb90a45deba3b2e2b2fc618c0ed34f320f121518119b65a888ad6fe",
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "personally_viewed_with": "view_image"
+      },
+      "assessment": "breach_target_readable_with_scale_anatomy_and_surface_limits",
+      "whale": "Vedestä nouseva tumma etuosa, kaksi sivuille avautuvaa rintaevää, vaaleat vatsan pitkittäisuurteet ja märkä kiiltävä pinta erottuvat. Alaosa jää veteen: kuva tukee puoliksi ilmassa olevaa ryhävalasmotiivia, mutta tarkka näkyvä ruumiinosuus ja anatominen lajivarmuus eivät todistu pienestä kuvasta.",
+      "water_and_drops": "Kyljiltä ja evistä putoavat vesiverhot, valuvat säikeet, pisarat ja paikallinen vaahto näkyvät. Osa vesiverhoista näyttää lankamaisen/verkkomaiseen siistiltä; liikkeen suuntaa tai fysikaalista vuotoa ei varmisteta staattisesta kuvasta.",
+      "surface": "Meren aallot ja glintit vaihtelevat, mutta pienaaltojen tekstuuri on paikoin tasatiheä. Selvää identtistä laattatoistoa ei todettu silmämääräisesti; täydellistä valokuvallisuutta tai toistokuviottomuutta ei luvata."
+    },
+    {
+      "id": "v2",
+      "candidate": {
+        "path": "images/havainne-v2.png",
+        "sha256": "584f4aa2f312d1603bfc3fb105f809044cd899a779f43f17dbed4fce4e841348",
+        "width": 1086,
+        "height": 1448,
+        "format": "PNG",
+        "personally_viewed_with": "view_image"
+      },
+      "assessment": "impact_candidate_with_weaker_wall_and_ring_wave_readability",
+      "impact": "Valas on poissa näkyvistä ja pinnassa on epäsäännöllinen valkoinen vaahtokehys sekä korkea keskinen roiskekruunu. Tämä sopii laskeutumisen jälkitilaksi parina v1:n kanssa; yksittäiskuva ei todista juuri tapahtunutta valaan paluuta.",
+      "spray_mist_waves": "Korkeat suihkut ja hienot ilmassa olevat pisarat/usva erottuvat, mutta yhtenäinen korkea roiskeseinä jää keskistä suihkua heikommaksi. Vaahtokehys näkyy; erilliset selkeät renkaana etenevät aallonrintamat eivät erotu vahvasti muun aallokon seasta eikä etenemistä voi todistaa yhdestä kuvasta.",
+      "surface": "Roiskeet ovat edellisen pelisuihkun läpikuultavaa pylvästä monimuotoisemmat. Vaahdon pitkissä ohuissa säikeissä on paikoin verkkomaista/synteettistä järjestystä ja meressä tasatiheää aaltojuovaa."
+    }
+  ],
+  "light_and_clean_image": {
+    "night_observed": true,
+    "pad_floodlights_observed": true,
+    "rocket_flame_observed": false,
+    "daylight_observed": false,
+    "finding": "Molemmissa tumma sinertävä yömeri/tausta, paikalliset alustan valonheittimet, märän betonin heijastukset ja valaistut vesi-/pisarapinnat. Kuuta tai jokaisen pisaran valonlähdettä ei voi varmistaa. Ei havaittua UI:ta, luettavaa tekstiä tai selvää vinjettiä."
+  },
+  "invented_elements": [
+    "Valaan tarkka anatomia, asento, puuttuva vedenalainen osa ja mittakaava.",
+    "Pisaroiden/vaahtoverkkojen muoto, roiskekorkeus ja aaltojen ajallinen vaihe.",
+    "Rannikon yksityiskohdat, valaisimien sijoittelu ja tarkat heijastukset."
+  ],
+  "recommendation": "Vain PT/omistaja-arvioon: v1:n hypyn pääpiirteet luettavia, v2:n roiskeseinä/rengasaallot ja molempien mittakaava/pinnat varauksin. Ei automaattista hyväksyntää.",
+  "acceptance": {
+    "owner": "not_obtained_in_this_review",
+    "recipient": "not_obtained_in_this_review",
+    "game_implementation": "not_verified",
+    "runtime_animation": "not_tested"
+  },
+  "scope_mutations": [
+    "qa/QA-FI.md",
+    "qa/independent-review.json"
+  ],
+  "pending": []
+}

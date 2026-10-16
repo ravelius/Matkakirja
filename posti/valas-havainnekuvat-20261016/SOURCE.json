@@ -1,0 +1,50 @@
+{
+  "sourceCommit": "43066735c82741853fabc10df067048348ea6020",
+  "files": [
+    {
+      "sourceCommit": "43066735c82741853fabc10df067048348ea6020",
+      "sourcePath": "posti/valoseppa-codex-valas-havainnekuvat-20261016.md",
+      "sourceBlob": "2cedc270b72a4966759f0f6ab6a8c8d43c5a78fc",
+      "sha256": "dfd249eea592788810d35667982715ef10bfa2fb7ba9eede692620deb34780f5",
+      "bytes": 2049,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/valas-havainnekuvat-20261016/sources/valoseppa-codex-valas-havainnekuvat-20261016.md",
+      "sourceReadInFull": true,
+      "personallyViewed": false
+    },
+    {
+      "sourceCommit": "43066735c82741853fabc10df067048348ea6020",
+      "sourcePath": "posti/valoseppa-valas-pelikulma/valas-pelikuva-koko.jpg",
+      "sourceBlob": "6647474a20c08b632014ee0ea4522bc2a7e873fb",
+      "sha256": "bdf853ea80431329864e33f96f219871023da2831653c1c185f981bdc0472805",
+      "bytes": 547349,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/valas-havainnekuvat-20261016/sources/valas-pelikuva-koko.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "dimensions": [
+        2064,
+        2752
+      ],
+      "personallyViewedAt": "2026-10-16T09:42:22.677492+00:00"
+    },
+    {
+      "sourceCommit": "43066735c82741853fabc10df067048348ea6020",
+      "sourcePath": "posti/valoseppa-valas-pelikulma/valas-pelikuva-rajaus.jpg",
+      "sourceBlob": "2c26618b3e24f1c21dfd96651f196a4e1b01e157",
+      "sha256": "1de533809f430544e7e645358997d95992dd35aeac24d9a16f4cfafe6edcf3d5",
+      "bytes": 202027,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/valas-havainnekuvat-20261016/sources/valas-pelikuva-rajaus.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "dimensions": [
+        1032,
+        826
+      ],
+      "personallyViewedAt": "2026-10-16T09:42:22.677624+00:00"
+    }
+  ],
+  "referenceRoles": {
+    "valas-pelikuva-koko.jpg": "binding wide camera and composition",
+    "valas-pelikuva-rajaus.jpg": "diagnostic only",
+    "havainne-r1.png": "lighting and material quality only"
+  }
+}

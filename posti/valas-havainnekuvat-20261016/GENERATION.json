@@ -1,0 +1,59 @@
+{
+  "method": "built-in image_gen, complete new images, native unedited bytes",
+  "maximumCalls": 2,
+  "actualCalls": 2,
+  "calls": {
+    "v1": {
+      "status": "completed",
+      "attempt": 1,
+      "issuedAt": "2026-10-16T09:42:30.235988+00:00",
+      "toolArgs": {
+        "prompt": "Use case: photorealistic-natural. Generate one COMPLETELY NEW coherent photograph-like target image, no partial edit or retouch. Upright 3:4 portrait, largest native 3:4 available. This is the same distant elevated oblique aerial camera and exact full composition as REFERENCE 1 (the dark game screenshot); REFERENCE 2 is ONLY a material/lighting-quality reference, NOT its much closer camera.\n\nMatch REFERENCE 1 camera, shoreline, scale and scene layout. Horizon straight at about y12% from top, dark distant coastal hills entering from upper left, dark blue-black sea extending above/right and in the foreground. The low floodlit coastal launch-pad peninsula lies around x10-70%, y52-70%. A slender upright white two-stage rocket stands on its pad at x50%, its tip around y40%, its base around y57%, gantry behind it and the same slender lattice lightning masts around it, small pale service tanks/buildings to the left. Rocket remains SEATED, engines OFF, no exhaust flame, no launch smoke, no lifting. Night before launch. Preserve the wide context, lots of sea, and full rocket; do not zoom in to make the whale a hero subject or move camera to water level. The second brighter photograph reference must NOT dictate pad size in this picture.\n\nThe whale event is in the foreground water below/right of the pad, around x56%, y77% in the FULL picture, matching the screenshot's old flat foam/vertical jet location. Physical scale: humpback about14m long, pad about100m across; visible whale only a small part of the whole picture, roughly5-7% image height while breached. The splash can spread slightly wider. Surrounding sea remains extensive. No gigantic whale, no close-up. Replace the failed ghostly upright jet and flat foam plate with real volumetric water and the requested natural animal event.\n\nIllumination: dark night, practical white/warm-white pad floodlights illuminate wet concrete and reach across the short offshore distance to the animal, weak blue moonlight provides restrained fill. Cinematic but physically credible photographic exposure; broken short white reflections near lights, much darker water farther away. No sunlight, sunrise, aurora, visible moon, sunset, glowing water or added vignette. Maintain readable silhouette while respecting darkness.\n\nNatural real-camera material response, not a game render. Small irregular wind waves at varied scales, some smoother soft areas in water, sparse discontinuous reflections, stochastic nonrepeating detail; wet concrete has restrained imperfect reflectance. Avoid engraved/stippled crosshatch surface, identical repeating ripples, global noise/grain, oversharpened microcontrast or uniform painterly texture. No composited-looking animal, no toy plastic, no illustration or CGI sheen. Droplets have varied size and fine mist, natural localized motion blur from a real camera, never glass rods. No text, numbers, captions, HUD, logos, flags, watermarks, border or panels. OMIT all screenshot overlays. Whole scene newly generated, no image crop or old-pixel repair.\n\nMOMENT v1 — One humpback whale HALF airborne during a breach. Its front half, head, pale ventral throat grooves and both long pectoral flippers have risen above the water; rear half and tail remain in sea. A slightly oblique three-quarter view shows recognizable rounded tubercled head, thick realistic humpback body, wet very dark gray skin and pale underside/ventral grooves and flipper undersides. Not a dolphin, orca or fish. Water drains in thin sheets from flipper edges and body sides, breaking into droplets glinting in the floodlights; irregular foam at entry/base. The small animal remains anatomically readable at its distant scale. No giant vertical fountain behind it. Maintain exact whole-frame camera and event position. Only ONE whale.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/valas-havainnekuvat-20261016/sources/valas-pelikuva-koko.jpg",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/images/havainne-r1.png"
+        ],
+        "transparent_background": false
+      },
+      "promptSHA256": "ebfe25cda766db8eaa748d99e1aca0c50f18e595582e11470c392ae6a9104dea",
+      "completedAt": "2026-10-16T09:43:00.021228+00:00",
+      "nativeToolPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-8ceacf12-1160-4ad0-ad65-ee9652eb00fb.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/valas-havainnekuvat-20261016/images/havainne-v1.png",
+      "sha256": "f23dbd5a5eb90a45deba3b2e2b2fc618c0ed34f320f121518119b65a888ad6fe",
+      "bytes": 2135801,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true
+    },
+    "v2": {
+      "status": "completed",
+      "attempt": 1,
+      "issuedAt": "2026-10-16T09:43:07.883402+00:00",
+      "toolArgs": {
+        "prompt": "Use case: photorealistic-natural. Generate one COMPLETELY NEW coherent photograph-like target image, no partial edit or retouch. Upright 3:4 portrait, largest native 3:4 available. This is the same distant elevated oblique aerial camera and exact full composition as REFERENCE 1 (the dark game screenshot); REFERENCE 2 is ONLY a material/lighting-quality reference, NOT its much closer camera.\n\nMatch REFERENCE 1 camera, shoreline, scale and scene layout. Horizon straight at about y12% from top, dark distant coastal hills entering from upper left, dark blue-black sea extending above/right and in the foreground. The low floodlit coastal launch-pad peninsula lies around x10-70%, y52-70%. A slender upright white two-stage rocket stands on its pad at x50%, its tip around y40%, its base around y57%, gantry behind it and the same slender lattice lightning masts around it, small pale service tanks/buildings to the left. Rocket remains SEATED, engines OFF, no exhaust flame, no launch smoke, no lifting. Night before launch. Preserve the wide context, lots of sea, and full rocket; do not zoom in to make the whale a hero subject or move camera to water level. The second brighter photograph reference must NOT dictate pad size in this picture.\n\nThe whale event is in the foreground water below/right of the pad, around x56%, y77% in the FULL picture, matching the screenshot's old flat foam/vertical jet location. Physical scale: humpback about14m long, pad about100m across; visible whale only a small part of the whole picture, roughly5-7% image height while breached. The splash can spread slightly wider. Surrounding sea remains extensive. No gigantic whale, no close-up. Replace the failed ghostly upright jet and flat foam plate with real volumetric water and the requested natural animal event.\n\nIllumination: dark night, practical white/warm-white pad floodlights illuminate wet concrete and reach across the short offshore distance to the animal, weak blue moonlight provides restrained fill. Cinematic but physically credible photographic exposure; broken short white reflections near lights, much darker water farther away. No sunlight, sunrise, aurora, visible moon, sunset, glowing water or added vignette. Maintain readable silhouette while respecting darkness.\n\nNatural real-camera material response, not a game render. Small irregular wind waves at varied scales, some smoother soft areas in water, sparse discontinuous reflections, stochastic nonrepeating detail; wet concrete has restrained imperfect reflectance. Avoid engraved/stippled crosshatch surface, identical repeating ripples, global noise/grain, oversharpened microcontrast or uniform painterly texture. No composited-looking animal, no toy plastic, no illustration or CGI sheen. Droplets have varied size and fine mist, natural localized motion blur from a real camera, never glass rods. No text, numbers, captions, HUD, logos, flags, watermarks, border or panels. OMIT all screenshot overlays. Whole scene newly generated, no image crop or old-pixel repair.\n\nMOMENT v2 — The SAME humpback has JUST landed back into water at the same foreground location. Animal now largely submerged and obscured by its impact, at most a small dark flank disappearing inside spray. A naturally irregular white foam ring surrounds the impact; a HIGH VOLUMETRIC SPLASH WALL fans outward with varied torn water sheets and droplets, then dissolves into fine hanging mist caught by pad light beams. Concentric spreading ripples extend outward into dark sea. Foamy broken edge has thickness and uneven lobes, not a flat opaque white circular decal. Splash is an impulsive impact, not a straight translucent fountain, geyser, explosion or smoke. No intact airborne whale and no second animal. Keep splash modest relative to100m launch pad, wide same camera.\n",
+        "referenced_image_paths": [
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/valas-havainnekuvat-20261016/sources/valas-pelikuva-koko.jpg",
+          "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/iss-kohtausten-havainnekuvat-20261016/images/havainne-r1.png"
+        ],
+        "transparent_background": false
+      },
+      "promptSHA256": "b31815db2424e04423a731c8a47b30ee75c82a2c19c89cc22ace2024ae186361",
+      "completedAt": "2026-10-16T09:43:41.445611+00:00",
+      "nativeToolPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-4f5b591f-96aa-4c58-9ffd-3e6b619a34ca.png",
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/valas-havainnekuvat-20261016/images/havainne-v2.png",
+      "sha256": "584f4aa2f312d1603bfc3fb105f809044cd899a779f43f17dbed4fce4e841348",
+      "bytes": 2194856,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "nativeBytesUnedited": true
+    }
+  },
+  "ownerAccepted": false,
+  "gameIntegrationVerified": false
+}

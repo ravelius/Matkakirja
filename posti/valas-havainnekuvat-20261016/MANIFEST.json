@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "bytes": 10230,
+      "sha256": "1f67e715fce275b556cd6a7185c3739c4d02f4f9eedcf69e0c77804ac0d8d00c"
+    },
+    {
+      "path": "INDEPENDENT-QA-FI.md",
+      "bytes": 1685,
+      "sha256": "679df575a28abe247703a3ae83397d97ee7ba140299a81bb72eb71f5d4fa98c6"
+    },
+    {
+      "path": "INDEPENDENT-QA.json",
+      "bytes": 5977,
+      "sha256": "345066f21a2f646ba77948b83d116c3181ca0488b484ac1079e9e3e31c37da33"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 7666,
+      "sha256": "48ece994a7cdcbcf511efa3b32a10ad6e3deed9565ae948f0075bc25e7bbda66"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 1773,
+      "sha256": "d646b4ed2ff9823f59699f77486dfd2e069066fbe6c3a0d05ec6134ca69c771f"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 2178,
+      "sha256": "2f3b42c186bc454b762c404fd66b59b577a2e11a09083e6990c90b41ba589ef0"
+    },
+    {
+      "path": "havainne-v1.png",
+      "bytes": 2135801,
+      "sha256": "f23dbd5a5eb90a45deba3b2e2b2fc618c0ed34f320f121518119b65a888ad6fe"
+    },
+    {
+      "path": "havainne-v2.png",
+      "bytes": 2194856,
+      "sha256": "584f4aa2f312d1603bfc3fb105f809044cd899a779f43f17dbed4fce4e841348"
+    }
+  ]
+}
