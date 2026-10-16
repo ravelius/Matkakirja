@@ -375,3 +375,7 @@ kun 9fa3b99f1 on juna-196:ssa).
 - PT 21.1x: suunnitelma hyväksytty (koodimikseri säilyy), PT:n PR #4727 (fable-yhteiset-pohjat) karttarivin kanssa → oma haara jää mergeämättä
   (PT:tä pyydetty ottamaan e3e829b24:n polut). **KYTKENTÄ JUNAAN 198, ei 197**: proto-haara rebase natiiviseppa/juna-198:n päälle, kun NS avaa sen.
   Julkaisija antoi liput 21.1x (L2:ssa ensin 231437410).
+- 21.5x: NS avasi juna-198 = 4b6ef2395 → **siirtoseppa/aanipohja-198 b9d629780** (c4ca8207d + lattia lokiin). Ajot: todistus-aanipohja-197-20261016-2134
+  (askeleet 10–12 dB salin/sellon yli kuten 14.10., sisäänmeno soi; kertoja ei puhunut, lista auki) ja -198b-…-2141 ("museo nayttely kg" ei sulje
+  listaa → kertoja tauolla). 3. ajo (198c, lopullinen SHA, skenaario napauttaa "Punainen kabinetti" → Siirry näyttelyyn) odottaa Julkaisijan lippuja.
+  Verhokäyrä: scratchpadin verho.py (100 ms RMS) → tee uudelleen, jos nollaus. Vahti: sali-belgrad + musa-URL:t rekisteröimättä (Aanisoitin, ei pohjan).
