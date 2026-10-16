@@ -1,0 +1,1149 @@
+{
+  "status": "NO_V6_TO_V7_SOURCE_GEOMETRY_DELETION_OR_HEIGHT_CHANGE_FOUND_RUNTIME_CAUSE_UNPROVEN",
+  "sourceCommit": "f8c3155895f0aede97ff2cf3d283eabeba1a8252",
+  "sourceReviewSHA256": "aa00c76a7d5c59ace9e1718f24c6c5d07b4d6f55aa3315bd3b717653e4aa4903",
+  "receiverBuildReported": "dc48614f",
+  "currentReadSourcesNotProvenAsDc48614f": true,
+  "all10SourcePayloadsHashVerified": true,
+  "viewedImage": "pari-k5-matalavino-13.jpg",
+  "rows": [
+    {
+      "lod": 0,
+      "V6SHA256": "be28e72d4768e1738dfdd956c42c485089b8bf1533f42c5c40b7d7eb3a37c23c",
+      "V7SHA256": "b7fd08dde1ae86bee5b39f2df0baf8ef4d5620cddba0d8b20fff851550ce4846",
+      "V6Primitives": 38,
+      "V7Primitives": 34,
+      "V6BINPrefixExact": true,
+      "oldMaterialsExact": true,
+      "oldEmbeddedImagesExact": true,
+      "nodesAndScenesExact": true,
+      "treesExact": true,
+      "allSourcePrimitivesMappedOnce": true,
+      "allOrderedTriangleCornerAttributesBitExact": true,
+      "rawIndexChangedSourcePrimitives": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        33,
+        36
+      ],
+      "materialBindingChanges": [
+        {
+          "oldPrimitive": 28,
+          "newPrimitive": 27,
+          "oldMaterial": "stage5_paving_owner360_groundAO_probe",
+          "newMaterial": "stage5_paving_owner360_groundAO_probe_owner361_coherentPBR"
+        },
+        {
+          "oldPrimitive": 29,
+          "newPrimitive": 27,
+          "oldMaterial": "stage5_paving_owner360_groundAO_probe",
+          "newMaterial": "stage5_paving_owner360_groundAO_probe_owner361_coherentPBR"
+        }
+      ],
+      "waterOrBasinNamedMaterials": [],
+      "platformSupportCandidates": [
+        {
+          "name": "marmori",
+          "oldPrimitive": 4,
+          "newPrimitive": 4,
+          "triangles": 37300,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              -342.46832275390625,
+              -2.7100000381469727,
+              -258.96600341796875
+            ],
+            [
+              107.58999633789062,
+              9.34000015258789,
+              300.1600036621094
+            ]
+          ]
+        },
+        {
+          "name": "maa",
+          "oldPrimitive": 5,
+          "newPrimitive": 5,
+          "triangles": 6,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              112.75967407226562,
+              -3.3499999046325684,
+              -250.0
+            ],
+            [
+              183.78988647460938,
+              -3.3499999046325684,
+              250.0
+            ]
+          ]
+        },
+        {
+          "name": "owner_ramp_short",
+          "oldPrimitive": 11,
+          "newPrimitive": 11,
+          "triangles": 3072,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              -275.6250305175781,
+              2.744999885559082,
+              59.357940673828125
+            ],
+            [
+              -270.7789306640625,
+              8.164999961853027,
+              76.36778259277344
+            ]
+          ]
+        },
+        {
+          "name": "owner_ramp_long",
+          "oldPrimitive": 12,
+          "newPrimitive": 12,
+          "triangles": 1536,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              -275.17718505859375,
+              0.03500000014901161,
+              76.25118255615234
+            ],
+            [
+              -270.3893737792969,
+              2.744999885559082,
+              91.06189727783203
+            ]
+          ]
+        },
+        {
+          "name": "owner_shore_stone",
+          "oldPrimitive": 17,
+          "newPrimitive": 17,
+          "triangles": 8,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              112.75967407226562,
+              -3.3499999046325684,
+              -250.0
+            ],
+            [
+              183.78988647460938,
+              -2.25,
+              250.0
+            ]
+          ]
+        },
+        {
+          "name": "stage5_footway",
+          "oldPrimitive": 32,
+          "newPrimitive": 30,
+          "triangles": 24,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              126.8011474609375,
+              -1.8894729614257812,
+              219.58970642089844
+            ],
+            [
+              222.59091186523438,
+              -1.7300000190734863,
+              250.0
+            ]
+          ]
+        },
+        {
+          "name": "maa",
+          "oldPrimitive": 37,
+          "newPrimitive": 33,
+          "triangles": 3,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              162.98095703125,
+              -3.370012044906616,
+              -250.10691833496094
+            ],
+            [
+              162.9876708984375,
+              -3.370011806488037,
+              -249.94381713867188
+            ]
+          ]
+        }
+      ],
+      "sourceFaceBlocksAgreeWithActualPrimitiveExtras": true,
+      "currentPort6Errors": [
+        "glb: teksturoitu materiaali stage5_earth 2 primitiivissä",
+        "glb: teksturoitu materiaali stage5_grass 3 primitiivissä",
+        "glb: teksturoitu materiaali stage5_paving_owner360_groundAO_probe 2 primitiivissä"
+      ],
+      "currentPort7Errors": [],
+      "sourceMaterialTextureUploadSlots": 68,
+      "V7MaterialTextureUploadSlots": 61
+    },
+    {
+      "lod": 1,
+      "V6SHA256": "4365493041ef76b1363459f58283abf79dd2f3676fec1f017304992239bc672e",
+      "V7SHA256": "65ec98b55dfe04b2b1b8d7706d8ed544d815bcb60f94f9df86ca14205e4a21e4",
+      "V6Primitives": 37,
+      "V7Primitives": 33,
+      "V6BINPrefixExact": true,
+      "oldMaterialsExact": true,
+      "oldEmbeddedImagesExact": true,
+      "nodesAndScenesExact": true,
+      "treesExact": true,
+      "allSourcePrimitivesMappedOnce": true,
+      "allOrderedTriangleCornerAttributesBitExact": true,
+      "rawIndexChangedSourcePrimitives": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        32,
+        35
+      ],
+      "materialBindingChanges": [
+        {
+          "oldPrimitive": 27,
+          "newPrimitive": 26,
+          "oldMaterial": "stage5_paving_owner360_groundAO_probe",
+          "newMaterial": "stage5_paving_owner360_groundAO_probe_owner361_coherentPBR"
+        },
+        {
+          "oldPrimitive": 28,
+          "newPrimitive": 26,
+          "oldMaterial": "stage5_paving_owner360_groundAO_probe",
+          "newMaterial": "stage5_paving_owner360_groundAO_probe_owner361_coherentPBR"
+        }
+      ],
+      "waterOrBasinNamedMaterials": [],
+      "platformSupportCandidates": [
+        {
+          "name": "marmori",
+          "oldPrimitive": 4,
+          "newPrimitive": 4,
+          "triangles": 5632,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              -342.46832275390625,
+              -2.7100000381469727,
+              -258.96600341796875
+            ],
+            [
+              107.58999633789062,
+              9.199999809265137,
+              300.1600036621094
+            ]
+          ]
+        },
+        {
+          "name": "maa",
+          "oldPrimitive": 5,
+          "newPrimitive": 5,
+          "triangles": 6,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              112.75967407226562,
+              -3.3499999046325684,
+              -250.0
+            ],
+            [
+              183.78988647460938,
+              -3.3499999046325684,
+              250.0
+            ]
+          ]
+        },
+        {
+          "name": "owner_ramp_short",
+          "oldPrimitive": 11,
+          "newPrimitive": 11,
+          "triangles": 3072,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              -275.6250305175781,
+              2.744999885559082,
+              59.357940673828125
+            ],
+            [
+              -270.7789306640625,
+              8.164999961853027,
+              76.36778259277344
+            ]
+          ]
+        },
+        {
+          "name": "owner_ramp_long",
+          "oldPrimitive": 12,
+          "newPrimitive": 12,
+          "triangles": 1536,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              -275.17718505859375,
+              0.03500000014901161,
+              76.25118255615234
+            ],
+            [
+              -270.3893737792969,
+              2.744999885559082,
+              91.06189727783203
+            ]
+          ]
+        },
+        {
+          "name": "owner_shore_stone",
+          "oldPrimitive": 17,
+          "newPrimitive": 17,
+          "triangles": 8,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              112.75967407226562,
+              -3.3499999046325684,
+              -250.0
+            ],
+            [
+              183.78988647460938,
+              -2.25,
+              250.0
+            ]
+          ]
+        },
+        {
+          "name": "stage5_footway",
+          "oldPrimitive": 31,
+          "newPrimitive": 29,
+          "triangles": 24,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              126.8011474609375,
+              -1.8894729614257812,
+              219.58970642089844
+            ],
+            [
+              222.59091186523438,
+              -1.7300000190734863,
+              250.0
+            ]
+          ]
+        },
+        {
+          "name": "maa",
+          "oldPrimitive": 36,
+          "newPrimitive": 32,
+          "triangles": 3,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              162.98095703125,
+              -3.370012044906616,
+              -250.10691833496094
+            ],
+            [
+              162.9876708984375,
+              -3.370011806488037,
+              -249.94381713867188
+            ]
+          ]
+        }
+      ],
+      "sourceFaceBlocksAgreeWithActualPrimitiveExtras": true,
+      "currentPort6Errors": [
+        "glb: teksturoitu materiaali stage5_earth 2 primitiivissä",
+        "glb: teksturoitu materiaali stage5_grass 3 primitiivissä",
+        "glb: teksturoitu materiaali stage5_paving_owner360_groundAO_probe 2 primitiivissä"
+      ],
+      "currentPort7Errors": [],
+      "sourceMaterialTextureUploadSlots": 68,
+      "V7MaterialTextureUploadSlots": 61
+    },
+    {
+      "lod": 2,
+      "V6SHA256": "8f9c06f18509cc31ed11a7c18f55858eb7e1c16a82e8850df8f8c9cb255ae158",
+      "V7SHA256": "26f9858e580e835f28bfcc55855febe78c8deccb7b7641aca7e2a6bf6984f28b",
+      "V6Primitives": 37,
+      "V7Primitives": 33,
+      "V6BINPrefixExact": true,
+      "oldMaterialsExact": true,
+      "oldEmbeddedImagesExact": true,
+      "nodesAndScenesExact": true,
+      "treesExact": true,
+      "allSourcePrimitivesMappedOnce": true,
+      "allOrderedTriangleCornerAttributesBitExact": true,
+      "rawIndexChangedSourcePrimitives": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        32,
+        35
+      ],
+      "materialBindingChanges": [
+        {
+          "oldPrimitive": 27,
+          "newPrimitive": 26,
+          "oldMaterial": "stage5_paving_owner360_groundAO_probe",
+          "newMaterial": "stage5_paving_owner360_groundAO_probe_owner361_coherentPBR"
+        },
+        {
+          "oldPrimitive": 28,
+          "newPrimitive": 26,
+          "oldMaterial": "stage5_paving_owner360_groundAO_probe",
+          "newMaterial": "stage5_paving_owner360_groundAO_probe_owner361_coherentPBR"
+        }
+      ],
+      "waterOrBasinNamedMaterials": [],
+      "platformSupportCandidates": [
+        {
+          "name": "marmori",
+          "oldPrimitive": 4,
+          "newPrimitive": 4,
+          "triangles": 5632,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              -342.46832275390625,
+              -2.7100000381469727,
+              -258.96600341796875
+            ],
+            [
+              107.58999633789062,
+              9.199999809265137,
+              300.1600036621094
+            ]
+          ]
+        },
+        {
+          "name": "maa",
+          "oldPrimitive": 5,
+          "newPrimitive": 5,
+          "triangles": 6,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              112.75967407226562,
+              -3.3499999046325684,
+              -250.0
+            ],
+            [
+              183.78988647460938,
+              -3.3499999046325684,
+              250.0
+            ]
+          ]
+        },
+        {
+          "name": "owner_ramp_short",
+          "oldPrimitive": 11,
+          "newPrimitive": 11,
+          "triangles": 3072,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              -275.6250305175781,
+              2.744999885559082,
+              59.357940673828125
+            ],
+            [
+              -270.7789306640625,
+              8.164999961853027,
+              76.36778259277344
+            ]
+          ]
+        },
+        {
+          "name": "owner_ramp_long",
+          "oldPrimitive": 12,
+          "newPrimitive": 12,
+          "triangles": 1536,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              -275.17718505859375,
+              0.03500000014901161,
+              76.25118255615234
+            ],
+            [
+              -270.3893737792969,
+              2.744999885559082,
+              91.06189727783203
+            ]
+          ]
+        },
+        {
+          "name": "owner_shore_stone",
+          "oldPrimitive": 17,
+          "newPrimitive": 17,
+          "triangles": 8,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              112.75967407226562,
+              -3.3499999046325684,
+              -250.0
+            ],
+            [
+              183.78988647460938,
+              -2.25,
+              250.0
+            ]
+          ]
+        },
+        {
+          "name": "stage5_footway",
+          "oldPrimitive": 31,
+          "newPrimitive": 29,
+          "triangles": 24,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              126.8011474609375,
+              -1.8894729614257812,
+              219.58970642089844
+            ],
+            [
+              222.59091186523438,
+              -1.7300000190734863,
+              250.0
+            ]
+          ]
+        },
+        {
+          "name": "maa",
+          "oldPrimitive": 36,
+          "newPrimitive": 32,
+          "triangles": 3,
+          "primitiveJSONAndRawIndicesAndAllCornerAttributesExact": true,
+          "boundsGLTF": [
+            [
+              162.98095703125,
+              -3.370012044906616,
+              -250.10691833496094
+            ],
+            [
+              162.9876708984375,
+              -3.370011806488037,
+              -249.94381713867188
+            ]
+          ]
+        }
+      ],
+      "sourceFaceBlocksAgreeWithActualPrimitiveExtras": true,
+      "currentPort6Errors": [
+        "glb: teksturoitu materiaali stage5_earth 2 primitiivissä",
+        "glb: teksturoitu materiaali stage5_grass 3 primitiivissä",
+        "glb: teksturoitu materiaali stage5_paving_owner360_groundAO_probe 2 primitiivissä"
+      ],
+      "currentPort7Errors": [],
+      "sourceMaterialTextureUploadSlots": 68,
+      "V7MaterialTextureUploadSlots": 61
+    }
+  ],
+  "cutFiles": [
+    {
+      "file": "palatsialue-leikkaus-wgs84.geojson",
+      "sha256": "77fa13fce4fe61d4dc5014601ccfcc5e6ea0374555d5fbd8c0a47a6ce6ad7ef7",
+      "V6V7ByteIdentical": true,
+      "featureCount": 12,
+      "geometryTypes": {
+        "Polygon": 12
+      },
+      "properties": [
+        {
+          "id": "palace-land336-0",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        },
+        {
+          "id": "palace-land336-1",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        },
+        {
+          "id": "palace-land336-2",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        },
+        {
+          "id": "palace-land336-3",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        },
+        {
+          "id": "palace-land336-4",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        },
+        {
+          "id": "palace-land336-5",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        },
+        {
+          "id": "palace-land336-6",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        },
+        {
+          "id": "palace-land336-7",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        },
+        {
+          "id": "palace-land336-8",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        },
+        {
+          "id": "palace-land336-9",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        },
+        {
+          "id": "palace-land336-10",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        },
+        {
+          "id": "palace-land336-11",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": false,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        }
+      ]
+    },
+    {
+      "file": "palatsialue-leikkaus-wgs84-reikaversio.geojson",
+      "sha256": "145fff606ce775b0262c16324d7109249e500a46edf38e7543ca31a3b22e3e8b",
+      "V6V7ByteIdentical": true,
+      "featureCount": 1,
+      "geometryTypes": {
+        "Polygon": 1
+      },
+      "properties": [
+        {
+          "id": "palace-land336-0",
+          "clipOnlyIonBackground": true,
+          "allFeaturesMustBeLoaded": true,
+          "hasInteriorHoles": true,
+          "technicalLiftRangeM": [
+            0,
+            0.31
+          ],
+          "actualIonClearanceM": null,
+          "requestedIonMinimumClearanceM": 0.3,
+          "waterwayRetentionHalfWidthM": 10.0,
+          "retentionHalfWidthIsNotWaterWidth": true,
+          "sourceOSMIDs": [
+            "relation/9511883",
+            "way/4845030"
+          ],
+          "estimatedMoatSouthClosure": true
+        }
+      ]
+    }
+  ],
+  "unchangedOther69OverlayGLBsHashVerified": true,
+  "currentCodePins": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6/glb-v4/peking_2_3_lod0.glb",
+      "bytes": 9289480,
+      "sha256": "be28e72d4768e1738dfdd956c42c485089b8bf1533f42c5c40b7d7eb3a37c23c"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundpbr-v7/glb-v4/peking_2_3_lod0.glb",
+      "bytes": 13070020,
+      "sha256": "b7fd08dde1ae86bee5b39f2df0baf8ef4d5620cddba0d8b20fff851550ce4846"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundpbr-v7/glb-v4/peking_2_3_lod0-proof.json",
+      "bytes": 291698,
+      "sha256": "0be10d49ee7c88253e9477244eedea3b0bcd5c4de8c6a8e6f90495b5490b0f62"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6/glb-v4/peking_2_3_lod1.glb",
+      "bytes": 4403940,
+      "sha256": "4365493041ef76b1363459f58283abf79dd2f3676fec1f017304992239bc672e"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundpbr-v7/glb-v4/peking_2_3_lod1.glb",
+      "bytes": 5517040,
+      "sha256": "65ec98b55dfe04b2b1b8d7706d8ed544d815bcb60f94f9df86ca14205e4a21e4"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundpbr-v7/glb-v4/peking_2_3_lod1-proof.json",
+      "bytes": 644852,
+      "sha256": "65f8670e62c0165c84ed3b6a3679bc785d735f998c33fb88f184cc23338f21de"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6/glb-v4/peking_2_3_lod2.glb",
+      "bytes": 4034100,
+      "sha256": "8f9c06f18509cc31ed11a7c18f55858eb7e1c16a82e8850df8f8c9cb255ae158"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundpbr-v7/glb-v4/peking_2_3_lod2.glb",
+      "bytes": 4476024,
+      "sha256": "26f9858e580e835f28bfcc55855febe78c8deccb7b7641aca7e2a6bf6984f28b"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundpbr-v7/glb-v4/peking_2_3_lod2-proof.json",
+      "bytes": 637707,
+      "sha256": "c9aa6477a576422fe32c19475686ad4c35efe9c2ed21d1d32ab9a89b401d799c"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6/palatsialue-leikkaus-wgs84.geojson",
+      "bytes": 54729,
+      "sha256": "77fa13fce4fe61d4dc5014601ccfcc5e6ea0374555d5fbd8c0a47a6ce6ad7ef7"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundpbr-v7/palatsialue-leikkaus-wgs84.geojson",
+      "bytes": 54729,
+      "sha256": "77fa13fce4fe61d4dc5014601ccfcc5e6ea0374555d5fbd8c0a47a6ce6ad7ef7"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundao-v6/palatsialue-leikkaus-wgs84-reikaversio.geojson",
+      "bytes": 39570,
+      "sha256": "145fff606ce775b0262c16324d7109249e500a46edf38e7543ca31a3b22e3e8b"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-groundpbr-v7/palatsialue-leikkaus-wgs84-reikaversio.geojson",
+      "bytes": 39570,
+      "sha256": "145fff606ce775b0262c16324d7109249e500a46edf38e7543ca31a3b22e3e8b"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/tyokalut/omat_mallit_instanssit.mjs",
+      "bytes": 6989,
+      "sha256": "507cb23d8e3942cf7e04d13525b518c181cdeb6d366322dc3e7a0e717a4f80f1"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/tyokalut/omat_mallit_ktx2.py",
+      "bytes": 18008,
+      "sha256": "36798f120bc06151da9d183dfc7b3187c9add82e2f20e313dfcd26099e649b21"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/tyokalut/omat_mallit_tileset.py",
+      "bytes": 9798,
+      "sha256": "d3d0b35d088a9a272487aad9105fc2f131eda320661e8bb4a38f3a5afe0af5b6"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/CesiumOmatMallit.cs",
+      "bytes": 36303,
+      "sha256": "dc5d2901744694c4226c7aa9e16e0c0de238a747bfdf814729dc25f9de3a7bde"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/CesiumKaupunki.cs",
+      "bytes": 94279,
+      "sha256": "bfb75abfc208f1c42695261383703680edafda0b8e13ab6c90604adb16e229e7"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Unity/KaupunkiVesi.cs",
+      "bytes": 28917,
+      "sha256": "ffe57849b96e3c857665e1db36941bc4ad815cdb7af310d2ef7a58d9afef39e6"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Ydin/Kierros/OmatMallit.cs",
+      "bytes": 6584,
+      "sha256": "fcfe551959b127d261d9578bb36f87ec9aa13ef363b7f59397c0a7639d8a160d"
+    },
+    {
+      "path": "/Users/Shared/Claude/proto-3d/Matkakirja-proto/Assets/Matkakirja/Linssit/Ydin/Ilmakeha/VesiMaastoPainallus.cs",
+      "bytes": 15728,
+      "sha256": "bcfbe43aa231f17250c3b821bc62dc622c768dd6d31d82900a1c67c11c4d8032"
+    },
+    {
+      "path": "output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/round50/source/lahde/owner_water_support.py",
+      "bytes": 2686,
+      "sha256": "61eb802fb2a1542ff5ca91ebd2ce7a911404be0c7558e7e057cc933a5be946fc"
+    },
+    {
+      "path": "output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/test-export284-work/export-test284-tile-v5-roofdiag.py",
+      "bytes": 21942,
+      "sha256": "78bfc2167c87224e72d0c9de8197d4f5c460d97f5d41a2330ac7237a4b10e577"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/source-review.md",
+      "bytes": 3178,
+      "sha256": "aa00c76a7d5c59ace9e1718f24c6c5d07b4d6f55aa3315bd3b717653e4aa4903"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/source-receipt.json",
+      "bytes": 5934,
+      "sha256": "920aa8d499a435c5ee6d17922421d3b3a79372d30bbfb1ded8bd2f6dcf36c5fa"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/erot.tsv",
+      "bytes": 811,
+      "sha256": "98caf6721fd7da2a9969f5c3a313be81b7029e6d2e4a60ca4d58931148d3962c"
+    }
+  ],
+  "explicitWaterRetentionHoleProbes": [
+    {
+      "hole": 0,
+      "boundsLonLat": [
+        116.38964285071818,
+        39.91300056680416,
+        116.39220845719339,
+        39.91356112826745
+      ],
+      "interiorProbeCount": 370,
+      "interiorProbesOutsideAll12CutParts": 370,
+      "sampleInteriorPoint": [
+        116.39057579852735,
+        39.91301755351517
+      ]
+    },
+    {
+      "hole": 1,
+      "boundsLonLat": [
+        116.38662711758052,
+        39.91322118061179,
+        116.38965714656273,
+        39.919895302734226
+      ],
+      "interiorProbeCount": 102,
+      "interiorProbesOutsideAll12CutParts": 102,
+      "sampleInteriorPoint": [
+        116.38791258442146,
+        39.91342342673671
+      ]
+    },
+    {
+      "hole": 2,
+      "boundsLonLat": [
+        116.3898261,
+        39.9203417,
+        116.3901107,
+        39.9204351
+      ],
+      "interiorProbeCount": 944,
+      "interiorProbesOutsideAll12CutParts": 944,
+      "sampleInteriorPoint": [
+        116.38987784545454,
+        39.92034453030303
+      ]
+    },
+    {
+      "hole": 3,
+      "boundsLonLat": [
+        116.391069,
+        39.9203638,
+        116.3913524,
+        39.9204595
+      ],
+      "interiorProbeCount": 964,
+      "interiorProbesOutsideAll12CutParts": 964,
+      "sampleInteriorPoint": [
+        116.39107758787878,
+        39.920366699999995
+      ]
+    },
+    {
+      "hole": 4,
+      "boundsLonLat": [
+        116.38655834324939,
+        39.920329943964546,
+        116.38721588163065,
+        39.92087518292518
+      ],
+      "interiorProbeCount": 523,
+      "interiorProbesOutsideAll12CutParts": 523,
+      "sampleInteriorPoint": [
+        116.38663804487136,
+        39.920346466357294
+      ]
+    },
+    {
+      "hole": 5,
+      "boundsLonLat": [
+        116.39362666248148,
+        39.912457140298024,
+        116.39495246677957,
+        39.91483879068551
+      ],
+      "interiorProbeCount": 334,
+      "interiorProbesOutsideAll12CutParts": 334,
+      "sampleInteriorPoint": [
+        116.39414894902315,
+        39.91252931152189
+      ]
+    },
+    {
+      "hole": 6,
+      "boundsLonLat": [
+        116.39222978180656,
+        39.913388496861565,
+        116.3927812871165,
+        39.91456950220554
+      ],
+      "interiorProbeCount": 503,
+      "interiorProbesOutsideAll12CutParts": 503,
+      "sampleInteriorPoint": [
+        116.3922632063708,
+        39.91342428490229
+      ]
+    },
+    {
+      "hole": 7,
+      "boundsLonLat": [
+        116.39279949507589,
+        39.91447747993657,
+        116.39339360492411,
+        39.91466612006342
+      ],
+      "interiorProbeCount": 914,
+      "interiorProbesOutsideAll12CutParts": 914,
+      "sampleInteriorPoint": [
+        116.3929075150483,
+        39.914483196304055
+      ]
+    }
+  ],
+  "holeProbeLimit": "Finite grid point-in-polygon probes only; no exact polygon union equivalence or camera-pixel world identification claimed. Shapely unavailable; no installation attempted.",
+  "findings": [
+    {
+      "id": "ALL_SOURCE_GEOMETRY_PRESERVED",
+      "proven": true,
+      "detail": "Every V6 source primitive maps exactly once; every ordered old corner attribute is bit-exact through V7 face blocks. No deleted or lowered platform/support geometry in source GLB."
+    },
+    {
+      "id": "PREVIEW_WATER_NOT_EXPORTED_IN_EITHER",
+      "proven": true,
+      "detail": "No material named vesi/water/basin in either tile2_3 GLB; pinned original adapter excludes owner_water_support.is_preview_water_surface. This native preview surface is not the runtime city-water mesh."
+    },
+    {
+      "id": "SUPPORT_AND_MARBLE_UNCHANGED",
+      "proven": true,
+      "detail": "Marble, maa basin floor, shore stone, ramps and footway preserve primitive JSON, materials, raw index bytes, corner data, old images and node transforms in all3LODs. Screen pale platform not uniquely identified from image alone."
+    },
+    {
+      "id": "CURRENT_PREPROCESS_BRANCH_DIFFERS",
+      "proven": true,
+      "detail": "Current pure port check flags V6 shared earth/grass/paving materials, passes V7. instanssit therefore merges V6 and byte-copies V7 before KTX2; branch not proven as receiver builddc48614f."
+    },
+    {
+      "id": "FACEBLOCKS_NOT_STALE_IN_PRODUCER_V7",
+      "proven": true,
+      "detail": "Current V7 leaf sourcePrimitive→newPrimitive/index-range data and embedded block sourceExtras checked against actual V6/V7. Primitive renumbering is real but lossless; checked receiver scripts do not read these fields."
+    },
+    {
+      "id": "SEPARATE_RUNTIME_WATER_SOURCE_PATH",
+      "proven": true,
+      "detail": "Current CesiumKaupunki opens KaupunkiVesi separately. It loads water index+JSON/bytes, default/forced selection, separate shader and terrain-depression bookkeeping. No direct material/node-name/primitive-ID dependency on own GLB in reviewed calls. Current OletusKohteet excludes peking, so default-null does not by itself open that target; runtime Pakotettu/index state unknown."
+    },
+    {
+      "id": "CUTS_UNCHANGED_WITH_WATER_RETENTION",
+      "proven": true,
+      "detail": "Both 12-part cut file and hole variant are byte-identical V6/V7. Metadata preserves waterways with retentionHalfWidth10m (not measured width). Explicit hole probes recorded; exact camera-pixel correspondence unproved."
+    }
+  ],
+  "boundedHypotheses": [
+    "Receiver transformed/packaged/cache GLB or tileset differs beyond intended KTX2 changes; current preprocessing follows different V6/V7 branches. Need actual outputs and commands before causality.",
+    "Separate KaupunkiVesi forced/default setting, target/index load, water mesh visibility or terrain-depression state differs between comparisons; source snapshot is not proven builddc48614f.",
+    "Ion terrain may occlude water/pale geometry outside clipping; same source positions do not exclude changing loaded terrain or water runtime state. Need matched depth/height/loading evidence.",
+    "A screen pale region may be paving/illumination rather than identified marble; the intended ground material changed, whereas marble/support did not.",
+    "Intended retained-water corridors may coincide with the N-S strip or smaller patch; only parent camera/world cut analysis can identify exact areas."
+  ],
+  "minimumCorrection": "Preserve source water/DEM/heights and proven marble/support geometry. First isolate receiver-preprocessed GLB + tileset/mallit configuration and separate water state. Restore the correct runtime water/terrain handling or exact affected preprocessing if demonstrated; repair only measured unintended cut gaps and the authorized paving boundary in V8. No speculative producer water-plane lift or city expansion.",
+  "receiverEvidenceNeeded": [
+    "Exact V6 and V7 KTX2 GLB outputs for tile2_3 LOD0/1/2 with SHA256, plus preprocessing logs/arguments/tool-version or scriptSHA and intermediate preKTX GLBs if available.",
+    "Actual mallit.json and tile2_3 tileset.json for both runs: all12 ion_leikkaus coordinate arrays, root transforms/height/LOD URIs and file cache resolved hashes.",
+    "For builddc48614f, pinned CesiumKaupunki/KaupunkiVesi/VesiMaastoPainallus/own-loader code or exact source receipt; matched water Pakotettu/Nosto/index/data-JSON+bytes source IDs and hashes.",
+    "Matched k5 water open/load/piece/terrain-depression logs and active/enabled/layer/transform/depth or sampled-height evidence at one exact moat point and one pale-platform point; avoid new geometry assumptions."
+  ],
+  "scopeAndDecisions": {
+    "sourceGeometryIntegrity": "PASS",
+    "runtimeCause": "OPEN_NOT_PROVEN",
+    "pavingDirection": "Receiver accepts direction only",
+    "V8Scope": "Only361 water/platform visibility, boundary and Ion-cut correction; not362",
+    "roofRedCandidate3Revision8NotDeliveredV8": true,
+    "old399c814AOAssessmentStillInvalid": true,
+    "receiverKTXSizeGrowthReportedAcceptable": "151→154MB; not locally remeasured here",
+    "motionLODPerformancePhysicalDeviceOwnerAcceptanceOpen": true,
+    "onlyAssignedMDJSONWrites": true,
+    "noBlenderGitUnityProductionOrMessages": true
+  },
+  "closingAllPinnedHashesUnchanged": true,
+  "finalVerification": "All pinned source and GLB bytes unchanged at report close."
+}

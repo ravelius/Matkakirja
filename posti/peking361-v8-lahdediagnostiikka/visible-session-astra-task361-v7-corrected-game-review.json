@@ -1,0 +1,551 @@
+{
+  "task": 361,
+  "reviewer": "Astra independent corrected-game visual review",
+  "status": "PAVING_DIRECTION_SUPPORTED_V8_CORRECTIONS_REQUIRED_NOT_FINAL_ACCEPTANCE",
+  "source_commit": "f8c3155895f0aede97ff2cf3d283eabeba1a8252",
+  "simulator_layer_app": "dc48614f",
+  "source_review_read_in_full": true,
+  "all_8_images_personally_viewed_native": true,
+  "all_9_attachment_hashes_and_sizes_match_receipt": true,
+  "source_review_hash_matches": true,
+  "positive_paving_assessment": "Readable larger/elongated stones and restrained non-checkerboard tonal mosaic support V7 as direction; not universally sharper than V6; no obvious large periodic grid in supplied stills",
+  "evening": "Both k1-18 panels dark; material-specific darkness cause not established",
+  "whole_frame_metrics": "erot.tsv values are whole-frame differences/brightness summaries, not albedo, AO strength or paving-only measurements",
+  "priorities": [
+    {
+      "rank": 1,
+      "severity": "required_visual_regression_check",
+      "topic": "k5 water and claimed platform change",
+      "roi_ids": [
+        "W6",
+        "W7",
+        "T6",
+        "T7"
+      ],
+      "confirmed": "Water-region appearance changes strongly from smooth dark blue-green to photographic pattern",
+      "unconfirmed": "Cause and total platform disappearance; pale L-platform visibly present in both panels",
+      "technical_owner": "Sol actualGLB/pipeline; parent implementation"
+    },
+    {
+      "rank": 2,
+      "severity": "required_visible_cut_artifact_check",
+      "topic": "k3 long and small imagery remnants",
+      "roi_ids": [
+        "CUT-L6",
+        "CUT-L7",
+        "CUT-L7-CONTEXT",
+        "CUT-S6",
+        "CUT-S7",
+        "CUT-S7-CONTEXT",
+        "HIDE-L6",
+        "HIDE-L7",
+        "HIDE-S6",
+        "HIDE-S7"
+      ],
+      "confirmed": "Both remnants persist in V6/V7 and when 2_3 hidden",
+      "unconfirmed": "Exact clipping topology, geographic footprint, north-south direction from pixels, or whether any hole is intentional",
+      "technical_owner": "Parent examines 12 cut parts and source geometry"
+    },
+    {
+      "rank": 3,
+      "severity": "required_material_boundary_correction",
+      "topic": "old/new paving boundary within pilot",
+      "roi_ids": [
+        "B-CONTEXT",
+        "B-OLD",
+        "B-NEW"
+      ],
+      "target": "Match neighboring stone scale, local mean tone and contrast at edge; preserve V7 interior character; transition stays inside pilot",
+      "trial_transition_width": "About 6–12 visible stone rows as initial local material-transition trial, not a measured world distance or fixed acceptance requirement",
+      "avoid": [
+        "single straight brightness step",
+        "blurring both textures together into doubled joints",
+        "continuous UV scale warping",
+        "checkerboard dithering",
+        "new geometry to disguise the seam",
+        "city-wide retexturing"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    {
+      "id": "A1",
+      "scope": "water",
+      "criterion": "V8:ssa oma vesipinta näkyy W7-alueella yhtenäisenä tarkoitettuun rantaan asti; V7:n ilmakuvatekstuuri ei peitä sitä eikä vuorottele sen kanssa kameraliikkeessä. V6 toimii ulkonäön vertailuna, ei todisteena teknisestä syystä."
+    },
+    {
+      "id": "A2",
+      "scope": "platform",
+      "criterion": "Kohdista vastaanottajan tarkoittama tasanne actualGLB/pipeline-tietoon. Vahvistetun pinnan näkyvyys, vaalea kivimateriaali, reunat ja portaat säilyvät samassa kamerassa; koko näkyvää L-tasannetta ei käsitellä puuttuvana."
+    },
+    {
+      "id": "A3",
+      "scope": "cut",
+      "criterion": "Kun lähdegeometria vahvistaa CUT-L7/CUT-S7-alueiden kuuluvan omaan pihaan, V8:n normaaliin k3-kuvaan ei jää niitä vastaavia ilmakuvakaistaleita eikä piilotuskuvaan uusia tahattomia ilmakuvareikiä. Tarkoitukselliset aukot ja vallihauta säilytetään lähdegeometrian mukaan."
+    },
+    {
+      "id": "A4",
+      "scope": "boundary",
+      "criterion": "K1:n normaalilla katseluetäisyydellä ei erotu suoraa pystyrajaa kiven koon, keskimääräisen sävyn tai kontrastin muutoksena. Lähikuvassa rajalla on yhteensopiva ladontamittakaava; ei kaksoissaumoja, venyneitä kiviä, sumennettua nauhaa tai ruutumaista häivytystä."
+    },
+    {
+      "id": "A5",
+      "scope": "paving preservation",
+      "criterion": "K2:n ja liuku2:n V7-tyyppinen kivien luettavuus ja hillitty mosaiikki säilyvät pilotin sisäosassa. Muutos ei tuo näkyvää suurta toistoruutua tai uusia poikkeavia väriläiskiä."
+    },
+    {
+      "id": "A6",
+      "scope": "matched game comparison",
+      "criterion": "V6/V7-korjatun lähdevertailun ja V8:n samat k1–k5-kamerat, lähikuva, 13/18-valot ja vastaavat piilotuskokeet; paikallinen maan/veden näkyvyys varmistetaan. Klo18 molempien tummaa valaistusta ei kompensoida globaalilla albedon nostolla."
+    },
+    {
+      "id": "A7",
+      "scope": "motion and device separately",
+      "criterion": "Liukujen ajallinen välke, LOD-vaihdot sekä ruutuaika ja muisti mitataan erikseen; nämä kahdeksan stilliä eivät läpäise niitä. Fyysisen laitteen ja omistajan hyväksyntä erikseen."
+    },
+    {
+      "id": "A8",
+      "scope": "delivery scope",
+      "criterion": "V8 vain #361:n vesi-, raja- ja cut-korjaukset. Ei #362 roof/red C3:n sekoitusta, ei koko kaupungin teksturointia; pilotin ulkopuoliset vertailupinnat säilyvät."
+    }
+  ],
+  "image_observations": {
+    "lahikuva-v7-kiveys-ja-raja.jpg": "Yläkuvassa V7-kivet ja saumat erottuvat, sävyt eivät muodosta suurta shakkiruutua. Alaosassa selvä pystysuora mittakaava-/kontrastiraja noin x 520.",
+    "pari-k1-taihedian-13.jpg": "V7:n pihassa vaihtuva tiheys ja pehmeämpi mosaiikki erottuvat; vanha/uusi-raja etualalla näkyy. Tasanteet näkyvät nyt omana mallina.",
+    "pari-k1-taihedian-18.jpg": "Molemmat kuvat hyvin tummia. Ei perusteita syyttää V7-albedoa koko illan tummuudesta; hienot materiaalierot huonosti arvioitavia.",
+    "pari-k2-terassinjalka-13.jpg": "V7 pitkänomaisempi ja pehmeämpi kuvio; V6 on paikoin tiheämpi ja terävämpi. V7:n mosaiikki luettava, mutta ei yksiselitteisesti kaikkialla terävämpi kuin V6.",
+    "pari-k3-piha-13.jpg": "Oma piha näkyy molemmissa. Pitkä tumma ilmakuvakaistale ja pienempi oikeanpuoleinen pala rikkovat yhtenäisyyttä molemmissa versioissa.",
+    "pari-k5-matalavino-13.jpg": "V6:n etualan vallihauta yhtenäinen tumma vesimäinen pinta; V7:ssä selvä ilmakuvamainen kuvio. Vaalea L-tasanne näkyy molemmissa; ilmoitettu tasannepuute tarvitsee kohdistuksen.",
+    "pari-liuku2-13.jpg": "Yksittäinen liukureitin still vahvistaa V7-mosaiikin luettavuuden; se ei todista ajallisen välkkeen puuttumista.",
+    "pari-piilo23-k3-piha-13.jpg": "2_3:n maa ja rakennukset katoavat harmaaksi; molemmat ilmakuvapalat jäävät näkyviin molemmissa versioissa."
+  },
+  "images": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/lahikuva-v7-kiveys-ja-raja.jpg",
+      "sha256": "af28891c73d2276a5b674f0d12d4fbe92483d9b6cdb7e840e15a8d3d84f7010c",
+      "dimensions_px": [
+        1000,
+        1349
+      ],
+      "personally_viewed_native": true,
+      "receipt_hash_and_bytes_match": true
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k1-taihedian-13.jpg",
+      "sha256": "2de39f3cff6fda740a6a64f739e9b021a2d4004c4c14c5adad691490beab8cd6",
+      "dimensions_px": [
+        1804,
+        1230
+      ],
+      "personally_viewed_native": true,
+      "receipt_hash_and_bytes_match": true
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k1-taihedian-18.jpg",
+      "sha256": "409fb9bd366824e4ca86384d1fb174f750a546dfdc6623c6f189a26538fadccb",
+      "dimensions_px": [
+        1804,
+        1230
+      ],
+      "personally_viewed_native": true,
+      "receipt_hash_and_bytes_match": true
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k2-terassinjalka-13.jpg",
+      "sha256": "951e87c4e4fa9f3fd234a4a6d8f2b6f03c0d9f7e7bd8c2ffdac40ae8ef7c3f68",
+      "dimensions_px": [
+        1804,
+        1230
+      ],
+      "personally_viewed_native": true,
+      "receipt_hash_and_bytes_match": true
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k3-piha-13.jpg",
+      "sha256": "93776c2f787f10f8595882da093c00a5420f16af3b566e8562839bac36e9e817",
+      "dimensions_px": [
+        1804,
+        1230
+      ],
+      "personally_viewed_native": true,
+      "receipt_hash_and_bytes_match": true
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k5-matalavino-13.jpg",
+      "sha256": "72bd2ad1073d12c74d360794e1dcff11dd0cb712c7750dbf1a34e0fb272a86f1",
+      "dimensions_px": [
+        1804,
+        1230
+      ],
+      "personally_viewed_native": true,
+      "receipt_hash_and_bytes_match": true
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-liuku2-13.jpg",
+      "sha256": "73a39d9267a0b46419c8a9285f3ac74383d755bb97a3958a58d2257cac06324e",
+      "dimensions_px": [
+        1804,
+        1230
+      ],
+      "personally_viewed_native": true,
+      "receipt_hash_and_bytes_match": true
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-piilo23-k3-piha-13.jpg",
+      "sha256": "396a9b3e19591a02f9d4ac2df8cdeb7a5268776d9d9723f94f63c59ce8ac4aad",
+      "dimensions_px": [
+        1804,
+        1230
+      ],
+      "personally_viewed_native": true,
+      "receipt_hash_and_bytes_match": true
+    }
+  ],
+  "rois": [
+    {
+      "id": "PAVE",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/lahikuva-v7-kiveys-ja-raja.jpg",
+      "xyxy": [
+        200,
+        410,
+        770,
+        730
+      ],
+      "panel": "V7",
+      "observation": "Luettavat pitkänomaiset kivet ja hillitty sävymosaiikki, yläkuva."
+    },
+    {
+      "id": "B-CONTEXT",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/lahikuva-v7-kiveys-ja-raja.jpg",
+      "xyxy": [
+        285,
+        980,
+        810,
+        1235
+      ],
+      "panel": "V7 old/new boundary",
+      "observation": "Alaosan pystyraja suunnilleen x 520; vanha vasen, uusi oikea. Kuvien välisen y 933 vaakaliitoksen ei pidä tulkita olevan mallisauma."
+    },
+    {
+      "id": "B-OLD",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/lahikuva-v7-kiveys-ja-raja.jpg",
+      "xyxy": [
+        300,
+        1000,
+        460,
+        1210
+      ],
+      "panel": "old left within V7 image",
+      "observation": "Tiheämpi, terävämpi ja paikallisesti kontrastikkaampi naapuripinta."
+    },
+    {
+      "id": "B-NEW",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/lahikuva-v7-kiveys-ja-raja.jpg",
+      "xyxy": [
+        630,
+        1000,
+        800,
+        1210
+      ],
+      "panel": "new right within V7 image",
+      "observation": "Suurempana ja pehmeämpänä näkyvä, paikallisesti vaaleampi kuvio."
+    },
+    {
+      "id": "W6",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k5-matalavino-13.jpg",
+      "xyxy": [
+        270,
+        930,
+        720,
+        1020
+      ],
+      "panel": "V6 left",
+      "observation": "Vallihaudan yhtenäinen tumma sinivihreä pinta."
+    },
+    {
+      "id": "W7",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k5-matalavino-13.jpg",
+      "xyxy": [
+        1174,
+        930,
+        1624,
+        1020
+      ],
+      "panel": "V7 right",
+      "observation": "Saman etualan vallihaudan kuvallinen, juovikas ilmakuvavaikutelma."
+    },
+    {
+      "id": "T6",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k5-matalavino-13.jpg",
+      "xyxy": [
+        70,
+        640,
+        420,
+        925
+      ],
+      "panel": "V6 left",
+      "observation": "Vaalean etualan tasanteen laaja konteksti; L-muotoinen rakenne näkyy."
+    },
+    {
+      "id": "T7",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k5-matalavino-13.jpg",
+      "xyxy": [
+        974,
+        640,
+        1324,
+        925
+      ],
+      "panel": "V7 right",
+      "observation": "Vastaava tasannekonteksti; vaalea L-muotoinen rakenne näkyy myös tässä. Koko tasanteen katoamista ei vahvisteta."
+    },
+    {
+      "id": "CUT-L6",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k3-piha-13.jpg",
+      "xyxy": [
+        430,
+        535,
+        755,
+        1035
+      ],
+      "panel": "V6 left",
+      "observation": "Pitkä kuvan alaosaan ulottuva ilmakuvakaistale; osittain puiden peittämä."
+    },
+    {
+      "id": "CUT-L7",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k3-piha-13.jpg",
+      "xyxy": [
+        1334,
+        535,
+        1659,
+        1035
+      ],
+      "panel": "V7 right",
+      "observation": "Pitkän kaistaleen rajaus näkyvässä mallissa; vain ruutukoordinaatit."
+    },
+    {
+      "id": "CUT-L7-CONTEXT",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k3-piha-13.jpg",
+      "xyxy": [
+        1295,
+        490,
+        1690,
+        1040
+      ],
+      "panel": "V7 right",
+      "observation": "Kaistaleen ympäröivät puut, piha ja rakennusraja paikannusta varten."
+    },
+    {
+      "id": "CUT-S6",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k3-piha-13.jpg",
+      "xyxy": [
+        685,
+        490,
+        900,
+        605
+      ],
+      "panel": "V6 left",
+      "observation": "Pienempi oikeanpuoleinen ilmakuvapala, osittain köyden/kuvareunan peittämä."
+    },
+    {
+      "id": "CUT-S7",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k3-piha-13.jpg",
+      "xyxy": [
+        1589,
+        490,
+        1804,
+        605
+      ],
+      "panel": "V7 right",
+      "observation": "Pienempi pala, kuvareunaan ja köyteen rajautuva; ei koko maantieteellisen kohteen rajaus."
+    },
+    {
+      "id": "CUT-S7-CONTEXT",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-k3-piha-13.jpg",
+      "xyxy": [
+        1550,
+        450,
+        1804,
+        640
+      ],
+      "panel": "V7 right",
+      "observation": "Pienemmän palan ja lähirakennusten konteksti."
+    },
+    {
+      "id": "HIDE-L6",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-piilo23-k3-piha-13.jpg",
+      "xyxy": [
+        430,
+        535,
+        755,
+        1035
+      ],
+      "panel": "hidden 2_3, V6 left",
+      "observation": "Pitkä pala säilyy mallin piilotuksessa."
+    },
+    {
+      "id": "HIDE-L7",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-piilo23-k3-piha-13.jpg",
+      "xyxy": [
+        1334,
+        535,
+        1659,
+        1035
+      ],
+      "panel": "hidden 2_3, V7 right",
+      "observation": "Pitkä pala säilyy; ympäröivä oma maa/rakennukset katoavat harmaaksi."
+    },
+    {
+      "id": "HIDE-S6",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-piilo23-k3-piha-13.jpg",
+      "xyxy": [
+        685,
+        490,
+        900,
+        605
+      ],
+      "panel": "hidden 2_3, V6 left",
+      "observation": "Pienempi pala säilyy piilotuksessa."
+    },
+    {
+      "id": "HIDE-S7",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/pari-piilo23-k3-piha-13.jpg",
+      "xyxy": [
+        1589,
+        490,
+        1804,
+        605
+      ],
+      "panel": "hidden 2_3, V7 right",
+      "observation": "Pienempi pala säilyy piilotuksessa, osa peittyy köyteen."
+    }
+  ],
+  "roi_convention": "zero-based whole-native-file [x0,y0,x1,y1), top-left origin; rectangular context only, not cut polygons or geographic coordinates; V6 left / V7 right for paired JPGs; close-up is two stacked V7 views",
+  "sources": [
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/source-review.md",
+      "sha256": "aa00c76a7d5c59ace9e1718f24c6c5d07b4d6f55aa3315bd3b717653e4aa4903"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/erot.tsv",
+      "sha256": "98caf6721fd7da2a9969f5c3a313be81b7029e6d2e4a60ca4d58931148d3962c"
+    },
+    {
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task361-362-work/incoming/v7-corrected-game-review-20261016/source-receipt.json",
+      "sha256": "920aa8d499a435c5ee6d17922421d3b3a79372d30bbfb1ded8bd2f6dcf36c5fa"
+    }
+  ],
+  "prior_AO_evidence": {
+    "invalidated": "399c814e5 old V6 AO game assessment",
+    "new_V6_AO_review": "pending separately",
+    "no_new_AO_verdict": true
+  },
+  "roof_red_scope": {
+    "candidate_C3": "separate undelivered prototype per assignment, not reviewed here",
+    "prior_Astra_cosmetic_assessment": "unchanged historical report; not extended into approval of C3",
+    "included_in_V8": false
+  },
+  "not_accepted": [
+    "final paving",
+    "water result",
+    "runtime",
+    "motion",
+    "LOD",
+    "physical device",
+    "owner",
+    "publication"
+  ],
+  "protected_prior_reports": {
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task360-ground-world-review.md": "ebf48531f5f55d886e5ebde28f3ac7fbae1507c5691a05b72bf5384e055884ed",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native45-full-review.md": "6ccf04c2ff081ea5ada6feb1d72b43c5f12797106e79b96e7c3ad275984a9a32",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-metal46-full1600-review.md": "88dfb726461d2e53985a1f8d1cb8f1684ec1e15494efeb3d3a1817437c275e8d",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task342-baseline-review.md": "0f0d171d0548f7e5fc3b88aabc9748d00249784a85be384bca20966582a61a7c",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-ground-repeat-plan.md": "8be2f545fa55784b02ef5578d358790bcd8171b762c8fec93a1e94a660302511",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task347-seams-only-review.md": "9a38e1d61a0e9c2bbe1462ece515d0efc86c86bafa8c816e95f8b31a754c21ac",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task344-tree-game-baseline-review.md": "aba35575cf4d9dd5392d6ff076cbe90f82a897bee642a4bfd374db9ab9efa580",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361362-material-delta.md": "5580c0167256aff7fd6006bb8a5177f78f2f0ecee3889d5150ee3ce3b48f3e62",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native50-and-neutral-review.md": "87df03536b212359dadfe65c836a94adf29855ea960b8250223df72e5e546fad",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-pbr-candidate6-review.md": "b5027ebac7d3182cdc4675faaa277758b44a02f927a6958fc13eb6249f829223",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-test284-pbr-v2-delta-review.md": "072740544470dff85c65f85e7674536869435dcb28470709811efe200dd6d114",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task344-three-variant-review.md": "e755cb01d64cf3317eac69179895f78378b8389404aa2bc34736660fd9d4b090",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-test284-final72-review.md": "252be258c25730d33478fee0731a18f18376843d3a92986d48e1b8b66d7a408f",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native46-full-review.md": "a924fd55706c39dfaf2b75e7085815d2b0a4ac1624fd9c45d44940d9cb7897c1",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-canopy46-preview-review.md": "de0c321b1110d1bcb7f1dc751bd2015ee803c053535fabb567991ea47b3b9eeb",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-canopy46-v2-review.md": "98b1ec150f592b5a90cac5dd502c1869dd4659e0d54c0f6d47b5412fe62c85e0",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task360370-baseline-review.md": "813633575cac118bb954595c89d99fa265ef8d0570425df528ecc56ab2b5b11c",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task362-visible-game-material-plan.md": "834435e43eb977b65d0531bedfe2b16510e807a6a502500f246ef265e6dda0f7",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native48-and-neutral-review.md": "be9d86f9cbf4489fb2ff2f4c4dced3f1247889fd71c18006ec4a6d941791d414",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native47-full-review.md": "d16d8030179e6d3d91d6b16dfc0cc5f1973636af2ed8d60aea189b7f36704a24",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-package336-global-final-review.md": "cf9c1aa7291e1fb1dd3d5f27996eaeca148e4c267267710edba0645dcc7d06e6",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-ground47-pilot-review.md": "b37268373edd297c18f4466438136832aa79f7fe3f72754cede791d8f5364c67",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task362-roof-red-candidate2-review.md": "57a12294452e9db33fade300db9824991643511d5d1a23af1a2562cf37d4be41",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-metal46-review.md": "08ee4ac6028c7baba4461fdfd35c66128f809ae33169a054d21e5ca3ddfb5438",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-test284-v4-reimport-pilot-review.md": "f16831e364d90de978846461aa633f939fecd2ffc58f4ab97db141e9e8f5e511",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task342-visible2-final-review.md": "80b3e2d8173dc32ba0c13ea0c6b687c7f1ad9e56643c163e3b29c318c4a69b4c",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task347-candidate2-review.md": "1c9277fc075eb5ac37e3a96943983e2992b3f299ccf259c933c7f5301ea71397",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-water49-pilot-review.md": "9f1546c8949605f7788e609f3a77edc306ba193d0cec59ae7760fbd8dfbb9f20",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-package336-water-final-review.md": "1aefe5fd9d4b2573c7f957ff22230055a5d4f66fe0d4aee4db6f3a61b251f867",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native51-and-neutral-review.md": "9cf39c75660bf83473872a80d8ac01cccf454768a2c4190278d8aa59f01c28cc",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-test284-v5-roofdiag-pilot-review.md": "850b29b8670641371f4ebf3ef94503bd83145d09cb8914444ba9a507ec4fb5ef",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-coffer48-pilot-review.md": "39c896577a2c2ccddac6375ddcbb146e6fceacd16c4321d1462144829f71c66d",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-package336-final-review.md": "69489061147242b4f8847b3710303d7b9e1a26102c254b51813738317da4f003",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-canopy46-six-preview-review.md": "58a0dfadd9482ca3715423e63d30d8f0fd9a39c5a8c714d9aff7e25fc1068da3",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-pbr-candidate4-review.md": "578fd0bdd8a3965389a44c5f1619f121038c2d9d7d5aaec16a898517cba47e10",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task346-348-candidate1-review.md": "c296083489a20a28f6a28fb0fa7c3b6fde345a7bb10249998e7f71354e2a00ee",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-metal46-six-review.md": "3d30a3320e089592773122f988e1b1598ef1f2e382253d4f596c8303fc1e09ae",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-square50-native-pilot-review.md": "cc3d7b591a8c467ac0a7eaca6fdae03ba0f44fd84fc90f57c690428bd9671691",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-pbr-candidate3-review.md": "da2460ace11489b713dcce017c82723f9a45da7d277cfd52ab8732558e516281",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-wall-plinth47-two-gates-review.md": "65fcbaefc7ef56f3edeae3ecce4008a32ecdc94954fb7083a9ef62214b4b36d0",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task346-348-baseline-review.md": "e4e1a8cade4d12e85b8c4d258cedb1c9231fd00b6f2aa32e258619e1cd5aa246",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native49-and-neutral-review.md": "821419f6a194fac97a3b948091f0fe44900cae3b7db8f2f3db18f76ec0546848",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task342-pilot-review.md": "629bd2190625444da9c34da4d9037c740be71a491a7d77e873308c9c6a70239a",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task349350-source-review.md": "dd78124711e3c7efc85db11198b829fa9f908b81d252c3afc63590a466d3093d",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-wall-plinth47-two-gates-review.json": "fab09d7d6b01c2017a75c2a6c41aa72cc80f6eb94ab09cf895c8b8ce35532dd5",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native51-and-neutral-review.json": "fa1541967c60522f91ad4e16f36d34f9b86f4d71e7e42ed3d106ca1a3c17b87a",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task360-ground-world-review.json": "80a070912a37a0542214f3c05deee3008f3a97d53639d97d8c04842df697cfff",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-canopy46-v2-review.json": "1be5354a983a3833c37ec351996de5966da93dbeb641f989cfb53d153f7cba0d",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-water49-pilot-review.json": "43a3bded48ae09d832c785305367bc1487dc19d0a7cbbce5705e5b03439fad3b",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-package336-final-review.json": "cf5aa627f8c54f9255473e32a337b4b2a1640941dda51c086c85b4b06ba0d34d",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-test284-v4-reimport-pilot-review.json": "157bc3c23e34cbca46fea483d9c49e743db329d7ec90cd1d9a34501332f4c789",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-coffer48-pilot-review.json": "f01cf2a5d0d50b55f7fa6b993b7a3f503bda5e34df0decedd6827ddf78386160",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native49-and-neutral-review.json": "791008d0c3b89a957ea400863ff53a9b563a0c2e98921a6cbe67fb94940f1957",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-metal46-six-review.json": "99bc22e85ca45cfae8cac97785136e7e8e5947906a43fcfe209553783b417bfb",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-pbr-candidate6-review.json": "cf802600fb5fdaf95916320cb1f907aed1f87d726cb16966e8f8d9b0cf036e67",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-test284-pbr-v2-delta-review.json": "341d9b225a4b2ca1ee5f2338174ac8e0d6df6c9b3789f0647bb2dfa491a94294",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-package336-global-final-review.json": "d758f9f0e6e811f00fd7e020e8309b2c0c71cd966b7d4c846261cfba3368c9dc",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task362-visible-game-material-plan.json": "81109f656d8fa0ca1cd129111297f0b61afc6b0181ef4049717c28108a763dfd",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task342-baseline-review.json": "d849f511a37f41f0b7331107d5b058db54be4ce626c5caa0f72bb8e92864c1be",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native45-full-review.json": "444bada7032066e13d163de344033ca471c8b9d3a542823f7be8a7c4f5184d00",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-test284-v5-roofdiag-pilot-review.json": "77ed9f98d54cd7a645b204a7ce4b1d65f99c9224f863ca9b43ff14a101d8c050",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-pbr-candidate3-review.json": "448cb934266fb5d26ddbf9ca3d681d5f7792acdd081c2a4c9b4cfebab82906fc",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-ground-repeat-plan.json": "b2648bde230d4ca19edf8cc2819a2cb24953deac4b74db62a273477993351b2e",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-pbr-candidate4-review.json": "ae1dca99ad329dfdc9ebdc81a6a05e11938451a3bb59f63d663b53f67131f81f",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native48-and-neutral-review.json": "5c54e6b58c20ab00e5385481b38c6132022b5cfe0dc5919ab531a8e1a85a8cac",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task342-pilot-review.json": "3f6fe2b4242cdbb8efcbe0ead5df3d62e5e8a6e473e1f8bb12ace8ed3bf2c860",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-canopy46-six-preview-review.json": "70b6c3c4937d95dbb95b19e4aa4011104ae62d34caadebaec26f1df4c5d076e5",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task347-candidate2-review.json": "7b278b8802a42a433db78440e8228cb1713878c56e8fcc3d91109d5e9838c939",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task344-three-variant-review.json": "ce2f5bade5d2f55486cc0c4a8c9500ce2c8a00e8b5c3e5c3bb7dcbb0fc7a1e86",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-metal46-full1600-review.json": "6e45d38819f6b94f05f66f7e154a3a4fed4189215e2842e9cfcf6b6422cb1b6d",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-ground47-pilot-review.json": "9f494d10e42bddeac6466729543e90506c79f3a48f873dec87e10265c9f80195",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task360370-baseline-review.json": "9f7203b6060bff544cdd4da0bf5f123fe78dd49ab96fad4a70e89e1844d22fb5",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task349350-source-review.json": "d8830d28fc5cc04c0652904342f00e381957b0409d2057166abee21a4932d480",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native46-full-review.json": "4572d91bf01cf6874a80b791c6a6d252a62f4cac98454d59f476f3700718e5d4",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task346-348-baseline-review.json": "25709151a332f6a70fd2152b0c16a4d62793860b5e80a202b0324fcfe8a87ca5",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native50-and-neutral-review.json": "4d010bdf96439d0b64322b7ee796d6023cb746821463c59e9188d9771e79e5c2",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task362-roof-red-candidate2-review.json": "4c95b8d4bbd9c94caf35af7ad1d17dc0d4f1b2876c5039c06af573de06ca3589",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task347-seams-only-review.json": "528f28db64fdc7599424b3f61b0a939e8493277608e7f37330945d9e31225985",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-metal46-review.json": "08ae6296516445c0e889804aaafdd296c56a5df09a3450ffab473bcfeedcd5c7",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-square50-native-pilot-review.json": "169940fb1c8c8a03f24d562e63f55926f116dba84e2448403c647ae576ceceee",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-canopy46-preview-review.json": "2d587ae74bcb3ad73c13b72e4c850af3f07a485e6d56c76ccd30b1fd98899444",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task344-tree-game-baseline-review.json": "08a07e6a9fee6e5eeefe8d2155add09e203b935b1024323477fd16437441b91a",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-package336-water-final-review.json": "c6163b3afcc6b2b37b2afa27a6c5ababfc612aae465b4c439a4c9478c1e0a7b7",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task342-visible2-final-review.json": "020e271c0ce0bf1043b14cae9ea3771f348d902bcb2ea9f2089218c01defa8b9",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-native47-full-review.json": "6c4a528faee55ae0c11326dbc0c30def87b5cba5474be067fdcb9684c9d302e4",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361362-material-delta.json": "0d3103a6776ed13e9694719d735900a6b1f72b5bea3fa683fc1b6e838802363d",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-test284-final72-review.json": "b34d2a57cc9382df4a1da5b15ba7a58373516b7879a1c92f7793b53e29bffbdc",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task346-348-candidate1-review.json": "68623c750a86cd12cf0cb06bf4973561464d023d2e0e700cf3f7c6bdb909cc63"
+  },
+  "writes_only": [
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-v7-corrected-game-review.md",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task361-v7-corrected-game-review.json"
+  ]
+}
