@@ -41,7 +41,7 @@ taistelut 5, siirrot 8.
 - `siirrot`: pääkaupungin siirrot avainvuosien välissä (esim. Han Chang'an → Luoyang 25, Jin → Jiankang 317, Song
   Kaifeng → Lin'an 1127, Ming Nanjing → Peking 1421); `p` on kaari, jota pitkin "jälki" piirretään.
 
-Lähteet: omat piirrokset (CC0) julkisista koordinaateista; Keltaisen joen nykyuoma Natural Earth 10m (PD); väkiluvut
-historiallisista laskennoista (faktat, ei tekijänoikeutta; lähde `lahteet`-kentässä). Ei OSM:ää (ODbL).
+Lähteet: omat piirrokset (CC0) julkisista koordinaateista (myös Keltaisen joen nykyuoma); väkiluvut
+historiallisista laskennoista (faktat, ei tekijänoikeutta; lähde `kerrokset_lahteet`-kentässä). Ei OSM:ää (ODbL).
 
 TOTEUTETTU 17.10. 01.4x LS:n muodossa (tools/kiinan-dynastiat/kerrokset.py + kerrokset_data.py, +85 kt).
