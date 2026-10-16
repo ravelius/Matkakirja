@@ -45,6 +45,12 @@ rebasettu 4c8f93fd5). Museon maa OK → _valmiit/museomaa-197-20261017/. SEURAAV
 (nohup) → SIMU NYT → touch simu-vapaalento.nyt → kuvat _valmiit/vapaalento-20261017/ → PT.
 PT 01.1x: JUNA 197 LUKITTU ILMAN VAPAALENTOA → vapaalento-197 (9096ff5d2) menee JUNAAN 198: simu OK → sha NS:lle 198:aa varten. Löydös NUI:lle PT:n kautta: otsikko "RIJKSMUSEU/M".
 
+## 1b. KIINAN DYNASTIAT VALMIIKSI (OMISTAJAN PÄÄTÖS 01.25 PT:n kautta; vapaalennon korjauksen jälkeen; juna 198 tai seuraava, KK hyväksyy kuvat)
+KK:n referenssit: Kings and Generals -liike (alueet liikkuvat vuosien välillä), Minardin 1869 virtausnuolet, kehys käärönä, sinettileima
+dynastian vaihtuessa, valta leviää kuin muste, pääkaupungin siirroista jää jälki. Pallo Isoisän 1873-linssin pohjalla; ulkoiset viileät,
+kiinalaiset lämpimät (Qing #41709c). MINÄ: piirto ja kerronta kiinan-dynastiat.json:sta (KiinaKerros, KiinaAlue.shader, KiinanDynastiat).
+KS: kerrokset (muuri, joki, kanava, Silkkitie, Zheng He, väestö, taistelut); SK: tekstit. Puuttuvat pohjat (käärö, sinetti) → kysy PT:ltä.
+
 ## 2. SEURAAVA JUNA
 - LOUVREN PARITEETTIERÄ, ASKELEET (PT 01.1x, EI junaan 197): Äänittäjän sora- ja kivi_hiekka-askeleet ämpärissä aanet/taidemuseo-askeleet-v3/,
   TEHTY 66fb8b7fc (ääniportti 24/24, PT 01.2x "vapaasti"): proto linssiseppa/louvre-pariteetti (vapaalento-197:n päällä, worktree
