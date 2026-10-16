@@ -12,7 +12,7 @@ Simulaattori A26BC7D0 (set "/Volumes/T7 4TB/Simulaattorit/Sarja") on yhteinen. O
 – pelkkä "todistusajo" tarttuu muiden roolien ajoihin muilla simuilla; pelkkä A26BC7D0 ei estä kahta omaa ajoa törmäämästä.
 kuvat-utu-mykistetty.sh EI sammuta simua → omat ajot sammuttavat lopuksi (`xcrun simctl --set "/Volumes/T7 4TB/Simulaattorit/Sarja" shutdown A26BC7D0-…`).
 Orpo simu (ei ohjaavaa skriptiä, oma appi) saa sammuttaa; muiden ajoja ei.
-1) **Louvre k55s** (LR 21.2x): `zsh $D/louvre1/k55-kaikki.zsh` (leivonta lahde-k55 md5 4ef1700d/99ba6bff/27d8a0fb → v6k18-lv2f-k55s →
+1) **Louvre k55s** (LR 21.2x): `zsh $D/louvre1/k55-kaikki.zsh` (leivonta lahde-k55 md5 f74c83fa/99ba6bff/27d8a0fb = LR:n päivitys 21.3x, uudelleenkäynnistetty 21.3x → v6k18-lv2f-k55s →
    k55-kuvat.zsh: L1b/L2/L2lahi × vpA 300° | ats135) → louvre1/lahi-L1-L3/k55s/arkki.jpg + mittaukset k55-kuvat.out → LR (+ PT 135°-arvio).
    Jos leivonta valmis (rakenna-k55s.log VALMIS), aja vain k55-kuvat.zsh.
 2) **Valas k1 VALMIS 21.3x** (agentti päättyi): haara linssiseppa2/valas-197 11a815681, käännös 9dd0409d, 1932/1932, arkki valas-havainne/k1/arkki.jpg +
