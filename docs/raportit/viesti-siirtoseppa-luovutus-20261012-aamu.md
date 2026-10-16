@@ -437,3 +437,5 @@ kun 9fa3b99f1 on juna-196:ssa).
   selostus (puhe/iss, taso 1,0). Lista 17. Linssit 1935/1935, unity 0. Jäljellä: AjattelijatSovitin, PalloKori, SeikkailuKuulija (+5 kutsujaa),
   AvaruuskavelyNakyma, Paljastus, PeliKomennot (testisini: pohjan apuriksi?), PuluRealtime, Puhe/Aanisoitin/Aanet (ryhmätasolla, PT:n linjaus),
   PallokisaOhjain, ShakkiNakyma, ElavaKaupunki, RakettiAanet, DioraamaAanet, KaupunkiAanimaisemaSoitin, OpasSovitin.
+- 01.4x: siirrot 13–15: **42e15a658** PalloKori (kerta-äänet), **4a079c1a7** Paljastus (aarremusiikki), **048f59c4f** AvaruuskavelyNakyma
+  (tehosteet, hengitys, Pulu puhe-ryhmässä). Lista 14. Kärki 048f59c4f.
