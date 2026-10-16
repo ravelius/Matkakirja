@@ -27,7 +27,7 @@ Yhteiset pohjat; museon i-kortti (omistaja 21.51 "Kyllä, teksti ja puhe" + 21.5
 LR k56 (md5 bd4080fb): kivi ×0,65 + Horlogen reliefitaustat tummiksi. PT päätti: 135° (Codex-vastaavuus) + kirkkaus VAIN albedolla, ei EV:tä (Valoseppä tietää). k56s kuvattu 22.0x: kirkkaus oikea (L2 137,120,107 vs Codex 126,110,91), mutta kivi harmaa/viileä → LR:lle k57 lämmin kullanruskea sävy (kirkkaus ennallaan) → Valosepän 135°-kuvaus → PT tarkistaa → yksi pari k57 vs Codex KK:lle.
 
 ## 6. Muut
-- Kiinan dynastiat: v3 pallokuvat 22.0x (proto-3d/_valmiit/kiinan-dynastiat-pallo-20261016/v3/), LS 50ade51e8 → NS JUNA 198 (kehittäjälinssi). Faktavirhe: Taiwan puuttuu Qingistä 1760/1873 (Qing 1683–1895; 1912 Japanin) → Karttaseppä korjaa, LS uusi kuva. Seuraava erä filminauha + kello (UI NUI:lle). Peking V7 ei kippiin → Codex V8 (f8c315589).
+- Kiinan dynastiat: v3 pallokuvat 22.0x (proto-3d/_valmiit/kiinan-dynastiat-pallo-20261016/v3/), LS 50ade51e8 → NS JUNA 198 (kehittäjälinssi). Taiwan-epäily oli PT:n virhe (lähikuvat 13/14: Taiwan on Qingissä) → Karttasepän korjaus peruttu. Seuraava erä filminauha + kello (UI NUI:lle). Peking V7 ei kippiin → Codex V8 (f8c315589).
 - Juoksupeli j4 hyväksytty (aec1ba363), kuva KK:lle 22.0x. Rakentaminen vasta kun Codexin Peking valmis.
 - Valas k1 (linssiseppa2/valas-197 11a815681) EI junaan; jatko Valosepällä (kamera, verhomainen kruunu, vaahto).
 - Sisältökirjuri: äänisivun Tekstit päivitetty; Reykjanes ei löydy (#4729). Nyt museon muotokuvat ja tiedot.
