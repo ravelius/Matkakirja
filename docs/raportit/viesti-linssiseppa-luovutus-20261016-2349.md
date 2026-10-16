@@ -50,6 +50,15 @@ KK:n referenssit: Kings and Generals -liike (alueet liikkuvat vuosien välillä)
 dynastian vaihtuessa, valta leviää kuin muste, pääkaupungin siirroista jää jälki. Pallo Isoisän 1873-linssin pohjalla; ulkoiset viileät,
 kiinalaiset lämpimät (Qing #41709c). MINÄ: piirto ja kerronta kiinan-dynastiat.json:sta (KiinaKerros, KiinaAlue.shader, KiinanDynastiat).
 KS: kerrokset (muuri, joki, kanava, Silkkitie, Zheng He, väestö, taistelut); SK: tekstit. Puuttuvat pohjat (käärö, sinetti) → kysy PT:ltä.
+TEHTY (proto linssiseppa/kiina-valmis-198, worktree wt/proto-linssiseppa-kiinavalmis, fd8e3f769:n päällä; EI KÄÄNNETTY):
+- 07ea1edea Ydin KiinaSiirtyma: musteen ajoitus (jatkuva valtio kasvaa vanhasta reunasta, uusi leviää pääkaupungistaan, vanha vetäytyy),
+  pääkaupunkien siirrot (Kiinan dynastia = tyyppi kiina tai Luoyangin hallitsija: Yuan, Qing), uudet dynastiat sinettiä varten.
+- 19fbfb7d7 KiinaKerros + KiinaAlue.shader: siirtymä 2,6 s (_T/_Tila, märkä reuna, kohinareuna), rajat ja nimet t ≥ 0,8, kynänjälki
+  sinettipunaisella katkoviivana + entiset pääkaupungit renkaina; QA `linssi kiina siirtyma <0…1|pois>`.
+- 20881fe90 Kerrokset (muotoehdotus KS:lle 01.3x: juuren "kerrokset" [{avain, laji viiva|virtaus|piste, alku, loppu, pisteet [[lon,lat]],
+  leveys/leveydet, arvo, vari}]): viiva kynänä, virtaus Minardin nuolena, piste ympyränä. Odottaa KS:n dataa.
+- Kiina-testit 11/11, tarkista.sh 0 virhettä. Simuskenaario sk-kiina-valmis-ipad.txt (S0–S6) valmiina; käännös Julkaisijan vuorolla.
+AVOIN: sinettileima ja käärökehys (kysytty PT:ltä 01.3x; ehdotus: sinetti iss-sinetti-työkalun mallilla, käärö NUI:lle).
 
 ## 2. SEURAAVA JUNA
 - LOUVREN PARITEETTIERÄ, ASKELEET (PT 01.1x, EI junaan 197): Äänittäjän sora- ja kivi_hiekka-askeleet ämpärissä aanet/taidemuseo-askeleet-v3/,
