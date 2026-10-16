@@ -314,3 +314,11 @@ Pekingiin. Kuvat omistajalle KK:n kautta.
 ## PAATOKSET 16.10.2026 klo 18.3x: KIINAN DYNASTIAT -LINSSI (16.10.2026 klo 18.37)
 
 Omistaja 18.3x (sanatarkasti, KK:n välittämä): "Sitten ehdottomasti haluan oman linssin siitä, missä käydään karttamuodossa jollain tavalla läpi Kiinan eri dynastiat ja ulkoiset hallitsijat ja millaisilla alueilla ne toimivat." Toteutus = linssikatalogin M1 (aluemoottorin pilotti) + ulkoiset hallitsijat omana värinään kotiseutuineen (Xiongnut, Pohjois-Wei, Tiibet, Liao, Länsi-Xia, Jin, Yuan, Qing). Kokemus: Kiina laajenee, hajoaa ja yhdistyy, pohjoisen ja lännen kansat tulevat hallitsemaan, pääkaupunki siirtyy, loppu 1912 → Kielletty kaupunki. Työlistalle; ensin suunnitelma ja omat CC0-rajat.
+
+## PAATOKSET 16.10.2026 klo 19.41: JUOKSUPELIN KAMERA TAKAA YLÄVIISTOSTA (16.10.2026 klo 19.42)
+
+Omistaja kysyi 19.3x "pitäisisö Juoksu olla taka yläviistosta kuvattu ennemmin?" ja valitsi kortilta 19.41 "Takaa yläviistosta (Suositus)". Kielletyn kaupungin juoksupeli kuvataan takaa yläviistosta, Puyi näkyy. Poikkeus 7.10.2026 linjaan ensimmäisestä persoonasta: linja koskee perillistä, tässä pelaaja on Puyi. Tavoite (KK): pelaaja näkee edessä olevat esteet ja Puyin hypyt, hovi ilmestyy kuvan alareunaan kun se on saamassa pojan kiinni, porttikuvan kaltaiset etukulmat vain lyhyinä välikohtauksina.
+
+## PAATOKSET 16.10.2026 klo 19.19: KIINAN DYNASTIAT -LINSSI KARTTAPALLOLLE (16.10.2026 klo 19.42)
+
+Omistaja kysyi välikuvasta "Pitäisikö olla nykyisen karttapallon päälle tehty?"; KK vastasi kyllä. Linssi piirretään pelin omalle karttapallolle Isoisän linssin 1873 pohjalla (UI-POHJAT); litteä kuva oli vain rajojen ja värien luonnos. Tiibet ja Mongolia 1760 Qingin vaaleampana sävynä. Qingin väri avoin, kysytään ensimmäisen pallokuvan kanssa. Työnjako: Karttaseppä rajadata (GeoJSON), Linssiseppä pallokuva pelistä.
