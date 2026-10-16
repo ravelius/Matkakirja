@@ -388,3 +388,4 @@ kun 9fa3b99f1 on juna-196:ssa).
   katkaisija → AaniPohja.Katkaisija; muut soivat 0,2 s häivytys, silmukat tauolle → kartalla jatkavat). Haarat siirtoseppa/aanipohja-197 ja -198 = 9db0288e9.
   Ajo 197d odottaa lippuja (loki lokit/siirtoseppa-aanipohja-197d.log; skenaarioon lisätty luenta → kippi → hiljaisuus, luenta → mylly → kartalle).
   Valmis → SIMU VAPAA, verhokäyrät (museo-pohja.wav, nakyma.wav) → PT 1 rivi + SHA NS:lle junaan 197 (tavoite ennen ~01.45).
+- 23.4x: 9db0288e9-käännös keskeytetty levyhätään (Julkaisija jonottaa uudelleen PK:n intron jälkeen; ÄLÄ käynnistä itse). Kun KÄÄNNÖS NYT + SIMU NYT: `H=9db0288e9 ERA=aanipohja-197d nohup zsh tyokalut/siirtoseppa-ajot/ajo-aanipohja-197.zsh`. PT:lle tila kerrottu 23.4x.
