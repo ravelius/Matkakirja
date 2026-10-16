@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "task": "Louvre L1–L3 #378–380",
+  "reviewer": "iss_scene_camera_qa",
+  "reviewed_at_utc": "2026-10-16T09:57:18.313137+00:00",
+  "state": "review_complete_3_of_3_material_deviations_not_approved",
+  "read_in_full": [
+    {
+      "path": "sources/louvre-lahikulmat-codex-tilaus.md",
+      "sha256": "b28e27d5109483fe58bce57d153f914c3033feb59cd491534ed5196a142b7a62"
+    },
+    {
+      "path": "preflight-decisions.json",
+      "sha256": "1d2637816e0e983e43098ab7d9e42294a1a9b34f537e00df4cef1209464e3998"
+    },
+    {
+      "path": "sources/louvre-lahikulmat.json",
+      "sha256": "8960a8e4330b4e881b5a3293cdf328eed151737de2b1b558f3fda64997eb41a3"
+    },
+    {
+      "path": "sources/louvre-codex-tilaus.md",
+      "sha256": "74026ce85d1fed36210aaf23eedf384729d851f6fb8f663c3d1706074f2834c3"
+    },
+    {
+      "path": "sources/louvre-LAHTEET.md",
+      "sha256": "f1320eb51dec60a506301533759685256525c71905780a390304bb778d7f2606"
+    }
+  ],
+  "evidence": {
+    "new_L_brief_and_preflight_read_completely": true,
+    "all_three_mass_images_personally_viewed": true,
+    "all_three_candidates_personally_viewed": true,
+    "three_local_Commons_photos_personally_viewed": true,
+    "view_tool": "view_image",
+    "old_K_image_work_resumed": false,
+    "google_or_game_screenshots_used": false,
+    "masks_created_or_modified": false,
+    "images_created_edited_or_cropped": false
+  },
+  "photographic_references_viewed": [
+    {
+      "path": "sources/louvre-ref-Paris-Louvre-Cour-d-Honneur-Richelieu-Flugel-4.jpg",
+      "sha256": "e1ad6dcb19ec524f5cbdde0cbdbeaf844035268429d8d8d5945ff71475c07b3d",
+      "width": 3840,
+      "height": 2084,
+      "format": "JPEG",
+      "personally_viewed_with": "view_image"
+    },
+    {
+      "path": "sources/louvre-ref-West-facade-of-the-Cour-Carr-e-Louvre-11-February.jpg",
+      "sha256": "4be60c9c4855b0001174e5c0da980bd906df89100e953c4355b24961a7f2f93b",
+      "width": 1920,
+      "height": 1280,
+      "format": "JPEG",
+      "personally_viewed_with": "view_image"
+    },
+    {
+      "path": "sources/louvre-ref-Cour-Napoleon-in-2017.jpg",
+      "sha256": "92b720cbb5dbe276cd37d9a802446108361bbd873d5c95845bb584533a44ceda",
+      "width": 3840,
+      "height": 2564,
+      "format": "JPEG",
+      "personally_viewed_with": "view_image"
+    }
+  ],
+  "images": [
+    {
+      "id": "L1",
+      "candidate": {
+        "path": "images/louvre-L1.png",
+        "sha256": "1835f6b1416d4b53668faeb1b94c563fda70dc4660f22500e54c767cc6bdf9d2",
+        "width": 1536,
+        "height": 1024,
+        "format": "PNG",
+        "personally_viewed_with": "view_image"
+      },
+      "mass_reference": {
+        "path": "sources/louvre-L1-massa.jpg",
+        "sha256": "24a74092f11b928efc3bd0525e1949fdebae7a1b49ca224441768958817bb6b8",
+        "width": 1536,
+        "height": 1024,
+        "format": "JPEG",
+        "personally_viewed_with": "view_image"
+      },
+      "assessment": "material_ground_boundary_and_paving_deviations",
+      "camera_geometry": "Paviljonkien ja siipien järjestys sekä katon yleinen sijoittelu ovat massan lähellä. Julkisivun alareuna/maakohta on silmämääräisesti massaa alempana, joten julkisivun korkeus kuvassa kasvaa. Tarkkaa JSON-kameran toteutumista ei varmenneta kuvasta.",
+      "roof": "Sinertävänharmaa mansardi, dormerit ja savupiiput näkyvät. Vasemman paviljongin katon yläreunassa on massaa seuraavaa epätasaisuutta; yksityiskohtaista todellista kattojäsennystä ei hyväksytä pelkän massan mukaan.",
+      "facade_material": "Hunajanbeige kivi, kerroslistat, pilasterit, arkadit, ikkunakehykset ja veistokset luettavia; paikoin korostunutta mikrokontrastia ja tulkinnanvaraista veistosdetaljia. Ei dokumentaarinen valokuva tai kaikkien reliefien tarkkuuden todiste.",
+      "ground": "Etualassa näkyy tiheä pieni nupukivi-/pikkulaattapinta, joka poikkeaa tehtävänannon suurista vaaleanharmaista graniittilaatoista.",
+      "text": "havainnekuva näkyy alaoikealla. Pääsisäänkäynnin yläpuolella näkyy lisäksi pieni kylttimäinen/pseudokirjoitettu detalji; sen lukukelpoisuutta tai oikeellisuutta ei varmenneta.",
+      "content": "Ei havaittua pyramidia tai allasta tässä kuvassa."
+    },
+    {
+      "id": "L2",
+      "candidate": {
+        "path": "images/louvre-L2.png",
+        "sha256": "971f5cb302ba1d64ad55a91d0c1ffb0568bcfc71d5703c51e673dd107cedcfb5",
+        "width": 1536,
+        "height": 1024,
+        "format": "PNG",
+        "personally_viewed_with": "view_image"
+      },
+      "mass_reference": {
+        "path": "sources/louvre-L2-massa.jpg",
+        "sha256": "6c4c9381ebdd25a15df67ada3b8fffc68cfa91ae07b3dc9b59068dfe7aefd1c7",
+        "width": 1536,
+        "height": 1024,
+        "format": "JPEG",
+        "personally_viewed_with": "view_image"
+      },
+      "assessment": "roof_artifact_and_possible_forbidden_pyramid_hold",
+      "camera_geometry": "Keskipaviljonki, siipien sijainti ja maareuna ovat silmämääräisesti L1/L3:a lähempänä massaa. Tarkkaa kameravastaavuutta tai95%IoU:ta ei väitetä.",
+      "roof": "Katolla näkyy suuria rosoisia epämääräisiä lohkoja samoissa kohoumakohdissa kuin LiDAR-massassa. Vastaava katsottu Commons-länsijulkisivukuva näyttää tavallisia erillisiä savupiippuja eikä tue tällaisia suuria lohkoryhmiä; vahva epäily mittausartefaktin kopioitumisesta arkkitehtuuriksi.",
+      "facade_material": "Karyatidit, kello, päätykolmiot, reliefit, kaaret ja hunajanbeige kivi erottuvat. Yksittäisten veistosten/reliefien täsmällistä vastaavuutta ei tästä synteettisestä detaljista todeta.",
+      "ground": "Vaalea hiekkapiha ja kivireuna näkyvät. Allasta ei havaittu; tämä noudattaa preflightin päätöstä ohittaa taulukon ristiriitainen allasmaininta.",
+      "forbidden_content": {
+        "pyramid_like_structure_suspected": true,
+        "location_approx": "keskimmäisen porttiholvin läpi, x≈49%, y≈70%",
+        "finding": "Pieni kolmionmallinen ruudutettu rakenne näyttää lasipyramidilta. Sen identiteettiä ei voi lopullisesti ratkaista tästä katselusta, joten no-pyramids-ehtoa ei kuitata täyttyneeksi. Ei peitetä raportista pienen koon vuoksi.",
+        "identity_confirmed": false
+      },
+      "text": "havainnekuva näkyy alaoikealla."
+    },
+    {
+      "id": "L3",
+      "candidate": {
+        "path": "images/louvre-L3.png",
+        "sha256": "ab6a7b82746740a884432e0af4625df0dc16defb480164172ddec8d4c7f9c96f",
+        "width": 1536,
+        "height": 1024,
+        "format": "PNG",
+        "personally_viewed_with": "view_image"
+      },
+      "mass_reference": {
+        "path": "sources/louvre-L3-massa.jpg",
+        "sha256": "878940c5080e69a5e584b83005174af1a77110adc9e5058f59bff1b7979b42b3",
+        "width": 1536,
+        "height": 1024,
+        "format": "JPEG",
+        "personally_viewed_with": "view_image"
+      },
+      "assessment": "material_ground_boundary_deviation_statue_identity_unverified",
+      "camera_geometry": "Vasen lähellä oleva siipi ja oikean takajulkisivun paviljonki ovat tunnistettavissa massan järjestyksessä. Maareuna on selvästi massaa alempana kautta kuvan; seinät kasvavat alaspäin ja pihan osuus muuttuu. Preflightin JSON-heading82.95° on dokumentoitu, mutta kuvan geometrinen vastaavuus ei silmämääräisesti ole lukittu.",
+      "roof": "Mansardit, dormerit ja savupiiput ovat luettavia, mutta yksityiskohdat eivät todista täsmälleen lähteen arkkitehtuuria.",
+      "facade_material": "Vaalea beige kivi ja siniharmaa katto ovat pääosin valokuvamaisia. Osa veistos-/listadetaljeista jää generoiduksi tulkinnaksi.",
+      "ground_statue": "Suuret harmaat graniittilaatat, perspektiiviset saumat, sävyvaihtelu ja tummat kuluma-/kuivumisjäljet näkyvät. Jäljet ovat paikoin korostuneita. Tumma ratsastajapatsas jalustoineen näkyy, mutta annetut katsotut referenssit eivät varmista LudvigXIV/Berninin kopion tarkkaa poseerausta, muotoa, materiaalia tai jalustaa; sitä ei hyväksytä sellaisenaan patsaan mallinnusreferenssiksi.",
+      "content": "Ei havaittua pyramidia tai allasta tässä kuvassa; niiden alue jatkuu kiveyksenä.",
+      "text": "havainnekuva näkyy alaoikealla."
+    }
+  ],
+  "geometry_gate": {
+    "iou_measured_by_this_reviewer": false,
+    "iou": null,
+    "ninety_five_percent_gate_verified": false,
+    "method": "Vain silmämääräinen massa–tulosvertailu. Pääagentti tekee aidoista tuloskuvista johdetut maskit ja numeerisenIoU:n erikseen.",
+    "gate_status": "pending_independent_measured_mask_check; L1/L3 visual ground-boundary concerns already present"
+  },
+  "preflight": {
+    "L3_heading": "JSON82.95° prevails over prose89°; documented decision read, numeric image-pose match not proven",
+    "L2_basin": "No basins prevails over contradictory table mention; no basin observed in candidate"
+  },
+  "summary": {
+    "personally_reviewed_candidates": 3,
+    "overall_approved": false,
+    "photo_surface": "Materiaalivaikutelma pääosin valokuvamainen; tämä ei varmista arkkitehtuurin, jokaisen veistoksen tai materiaalipinnan historiallista tarkkuutta.",
+    "label": "havainnekuva näkyy kaikissa kolmessa alaoikealla.",
+    "blockers": [
+      "L1/L3 maareuna poikkeaa näkyvästi massasta.",
+      "L1 pienikivinen etuala poikkeaa suurlaattatavoitteesta.",
+      "L2 katon rosoiset lohkot näyttävät LiDAR-artefaktien kopioilta.",
+      "L2 keskusholvin takainen pyramidimäinen ruudutettu kolmio pitää tarkistaa ennen no-pyramids-kuittausta."
+    ],
+    "L3_statue": "Ratsastajapatsas näkyy, mutta täsmällinen identiteetti/muoto ei varmennettu."
+  },
+  "acceptance": {
+    "owner": "not_obtained",
+    "PT": "not_obtained_in_this_review",
+    "model_loop": "not_authorized_by_this_review",
+    "game": "internal_targets_not_game_assets"
+  },
+  "scope_mutations": [
+    "qa/INDEPENDENT-QA-FI.md",
+    "qa/independent-review.json"
+  ],
+  "pending": [
+    "Numeerinen tulosmaskienIoU ja vastaanottajan/PT:n päätös",
+    "L2:n porttiholvin pienen kolmiorakenteen sisältötarkistus",
+    "L3:n patsaan tarkka referenssivarmistus"
+  ]
+}

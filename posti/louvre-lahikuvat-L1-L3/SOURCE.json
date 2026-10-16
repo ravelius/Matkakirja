@@ -1,0 +1,302 @@
+{
+  "commit": "b8324261442c34a33673c90846cf1a7b030f3358",
+  "files": [
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-lahikulmat-codex-tilaus.md",
+      "sourceBlob": "287689192bc8c2e96240e0f16b02471c1597f8da",
+      "sha256": "b28e27d5109483fe58bce57d153f914c3033feb59cd491534ed5196a142b7a62",
+      "bytes": 3923,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-lahikulmat-codex-tilaus.md",
+      "sourceReadInFull": true,
+      "personallyViewed": false
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-lahikulmat.json",
+      "sourceBlob": "7119f39b2abe11e13b2ee1ddb762e71d5f17b6b6",
+      "sha256": "8960a8e4330b4e881b5a3293cdf328eed151737de2b1b558f3fda64997eb41a3",
+      "bytes": 2451,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-lahikulmat.json",
+      "sourceReadInFull": true,
+      "personallyViewed": false
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-codex-tilaus.md",
+      "sourceBlob": "20ab0bdd25430718d260bcb37f814bf2650d3ebd",
+      "sha256": "74026ce85d1fed36210aaf23eedf384729d851f6fb8f663c3d1706074f2834c3",
+      "bytes": 6900,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-codex-tilaus.md",
+      "sourceReadInFull": true,
+      "personallyViewed": false
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-LAHTEET.md",
+      "sourceBlob": "efbf7b999b267b0bb8c29484c12ce19fb69ff4a0",
+      "sha256": "f1320eb51dec60a506301533759685256525c71905780a390304bb778d7f2606",
+      "bytes": 4473,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-LAHTEET.md",
+      "sourceReadInFull": true,
+      "personallyViewed": false
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-L1-maski.png",
+      "sourceBlob": "d79b1ad8f268f11c67b9d7fffc1ad4f600373c33",
+      "sha256": "58a940c47c044eaf6edf50a7766ae4b69684179514e60d8c6ddc6cb9565e0c0f",
+      "bytes": 27019,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-L1-maski.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289381+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-L1-massa.jpg",
+      "sourceBlob": "472727b698b0239a23f6bf1a134e482708e12258",
+      "sha256": "24a74092f11b928efc3bd0525e1949fdebae7a1b49ca224441768958817bb6b8",
+      "bytes": 121154,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-L1-massa.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289822+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-L1-oma-k36.jpg",
+      "sourceBlob": "28e92d8d551aa45743fca866e6706c3c7c9d30b4",
+      "sha256": "cc87b862120781b7b662bced23dc5fa786cd0ca7e608d031143a3d7244aaa28d",
+      "bytes": 136562,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-L1-oma-k36.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289823+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-L2-maski.png",
+      "sourceBlob": "c187477e0cbe1de04e5d03557153d3d5e8bebe23",
+      "sha256": "ed9b39ba2ec2fe6c860c911da0bac96a280f5800cca850193bcf426d03da0a50",
+      "bytes": 26639,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-L2-maski.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289824+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-L2-massa.jpg",
+      "sourceBlob": "52a8cc35751ac0cb1d7a47bd188b455b71b1dab4",
+      "sha256": "6c4c9381ebdd25a15df67ada3b8fffc68cfa91ae07b3dc9b59068dfe7aefd1c7",
+      "bytes": 118733,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-L2-massa.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289825+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-L2-oma-k36.jpg",
+      "sourceBlob": "680fa8030ae1b6251ce53b9d9f3843332cfefdda",
+      "sha256": "a818a7facc299af64169a7f058fa1f762e87bbae6bd3bfbdbcc01b200607907b",
+      "bytes": 135802,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-L2-oma-k36.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289826+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-L3-maski.png",
+      "sourceBlob": "c86db308ef266a399922cef3b9fea9aa3cbec918",
+      "sha256": "3078e4d8754d7bd927871b763ad03805e7eaf2fcca06a1e120b306f129a20eb0",
+      "bytes": 25402,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-L3-maski.png",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289826+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-L3-massa.jpg",
+      "sourceBlob": "4bea1084830c39946fbbf05a6c1e27e80ed53e45",
+      "sha256": "878940c5080e69a5e584b83005174af1a77110adc9e5058f59bff1b7979b42b3",
+      "bytes": 93537,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-L3-massa.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289827+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-L3-oma-k36.jpg",
+      "sourceBlob": "df0f6da81fd57570d47c7f7979aa9afd402c29eb",
+      "sha256": "de1ed6fdc61ec98ddfbd1405ab040ffa31711097feb55e3e98c246c0ce2c5d9a",
+      "bytes": 115763,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-L3-oma-k36.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289828+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-ref-Cour-Napol-on-Aile-Lemercier-Louvre-23-August-2016.jpg",
+      "sourceBlob": "0e5385d968f6eb75416735ae146a6e7c9f069747",
+      "sha256": "a19c3397e23bc10729f34adec630984f3d7b620d1c984ae163581b275db67618",
+      "bytes": 927125,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-ref-Cour-Napol-on-Aile-Lemercier-Louvre-23-August-2016.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289829+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-ref-Cour-Napol-on-Pavillon-de-l-horloge-Louvre-007-jpg.jpg",
+      "sourceBlob": "0ffd424da64802394ffa82b6f18340e542311985",
+      "sha256": "36734a0b490b35417d7f35d54dfdc42830a774cb6186e706484fa374a4059c6b",
+      "bytes": 1725336,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-ref-Cour-Napol-on-Pavillon-de-l-horloge-Louvre-007-jpg.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289830+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-ref-Cour-Napoleon-in-2017.jpg",
+      "sourceBlob": "988b4900c830dcac08b221f576653c76b468604a",
+      "sha256": "92b720cbb5dbe276cd37d9a802446108361bbd873d5c95845bb584533a44ceda",
+      "bytes": 1042783,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-ref-Cour-Napoleon-in-2017.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289831+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-ref-Facade-Nord-de-l-aile-Richelieu-Louvre.jpg",
+      "sourceBlob": "68f61a8c988879be10b0b67a0736d71f0a2d7927",
+      "sha256": "be3d4ecdbb57293d8e92a336ed0abc2d22b692db4215354874e566a0cd397916",
+      "bytes": 1362811,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-ref-Facade-Nord-de-l-aile-Richelieu-Louvre.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289832+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-ref-North-facade-of-the-Denon-Wing-28184065532.jpg",
+      "sourceBlob": "6325db0004f3adbeab47b61ab871e4cdcfe1a110",
+      "sha256": "9d7f575087563add6cb14e9a4176ee4ebffd9f7e1b00a4d720dd48ad3bf81c54",
+      "bytes": 1518863,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-ref-North-facade-of-the-Denon-Wing-28184065532.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289833+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-ref-Paris-1er-Louvre-Quai-Francois-Mitterrand-Aile-494.jpg",
+      "sourceBlob": "ea50b14ced4c1a10c4b79c2aaf5361fda1d9a514",
+      "sha256": "01b0950a53ad1a4eb94759ab891f1a629dd8025eae645c6ddad17265d46a95cd",
+      "bytes": 2623868,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-ref-Paris-1er-Louvre-Quai-Francois-Mitterrand-Aile-494.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289834+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-ref-Paris-75001-Cour-Napol-on-Louvre-Pavillon-Sully-jp.jpg",
+      "sourceBlob": "6aa6ecc1ce21bfe048e2de14c366f356910c9fec",
+      "sha256": "867119a87a24b8e7b802133c2a2e56b968d4c9f79878d3aba4b85d6a542b60ae",
+      "bytes": 807572,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-ref-Paris-75001-Cour-Napol-on-Louvre-Pavillon-Sully-jp.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289835+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-ref-Paris-Louvre-Cour-d-Honneur-Richelieu-Flugel-4.jpg",
+      "sourceBlob": "0ffbffd536e3a0bca396444a8fdd00a07382ee94",
+      "sha256": "e1ad6dcb19ec524f5cbdde0cbdbeaf844035268429d8d8d5945ff71475c07b3d",
+      "bytes": 1483277,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-ref-Paris-Louvre-Cour-d-Honneur-Richelieu-Flugel-4.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289836+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-ref-Pavillon-Richelieu-27671874174.jpg",
+      "sourceBlob": "9887a313231d74c6278980e48ffdcae7152b4f29",
+      "sha256": "7adee949ac4326c7fd114faa370dc6af4ab4b84b78046f5025457c95e54a8ea2",
+      "bytes": 1837376,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-ref-Pavillon-Richelieu-27671874174.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289837+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-ref-Pediment-Pavillon-Sully-Louvre-jpg.jpg",
+      "sourceBlob": "06e7bb7f6cdd60ed9cf47e57ad95ac745a462b87",
+      "sha256": "04bbccde7ef957b1800538e3688d0c69a21c1cf479c110931d7fb40980bc73ab",
+      "bytes": 820871,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-ref-Pediment-Pavillon-Sully-Louvre-jpg.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289838+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    },
+    {
+      "sourceCommit": "b8324261442c34a33673c90846cf1a7b030f3358",
+      "sourcePath": "posti/louvre-ref-West-facade-of-the-Cour-Carr-e-Louvre-11-February.jpg",
+      "sourceBlob": "5a96d7bc77c91fd07a9eb5921ade47d71e847226",
+      "sha256": "4be60c9c4855b0001174e5c0da980bd906df89100e953c4355b24961a7f2f93b",
+      "bytes": 587958,
+      "savedPath": "/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/kuvatuotanto/louvre-lahikuvat-20261016/sources/louvre-ref-West-facade-of-the-Cour-Carr-e-Louvre-11-February.jpg",
+      "sourceReadInFull": false,
+      "personallyViewed": true,
+      "personallyViewedAt": "2026-10-16T09:48:50.289838+00:00",
+      "viewMethod": "source full view or labelled contact-sheet inspection"
+    }
+  ],
+  "preflightDecisions": {
+    "L3camera": {
+      "proseHeading": 89,
+      "bindingJSONHeading": 82.95,
+      "used": 82.95,
+      "reason": "Task explicitly fixes JSON camera and same-view mass/mask; no new camera inferred"
+    },
+    "L2basin": {
+      "used": false,
+      "reason": "Explicit repeated global no-basins prohibition and JSON description without basin prevail over conflicting table mention"
+    },
+    "oldK2K3": {
+      "resumed": false
+    },
+    "sourceWikidataID": "Retained as supplied metadata only; not used to fetch unrelated geometry",
+    "gameScreenshots": "Not used; source authorizes start from own mass/mask and Commons before later game captures"
+  }
+}

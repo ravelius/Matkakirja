@@ -1,0 +1,175 @@
+{
+  "sourceMasksNotCopied": true,
+  "maskResizingOrWarping": false,
+  "derivations": [
+    {
+      "code": "L1",
+      "nativeImageSHA256": "1835f6b1416d4b53668faeb1b94c563fda70dc4660f22500e54c767cc6bdf9d2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "skyMethod": "top-edge flood fill using blue-sky/white-cloud RGB predicate, per-column visible roof boundary; no source mask input",
+      "groundMethod": "manual photo-derived facade/ground contact polyline, filled building silhouettes with no interior window/arch cutouts",
+      "groundPolylineNativePixels": [
+        [
+          0,
+          800
+        ],
+        [
+          160,
+          805
+        ],
+        [
+          320,
+          809
+        ],
+        [
+          520,
+          812
+        ],
+        [
+          760,
+          811
+        ],
+        [
+          900,
+          810
+        ],
+        [
+          950,
+          809
+        ],
+        [
+          1000,
+          808
+        ],
+        [
+          1140,
+          810
+        ],
+        [
+          1240,
+          810
+        ],
+        [
+          1535,
+          808
+        ]
+      ],
+      "notIncluded": "ground, sky, lamp posts, statue protruding beyond background palace silhouette, lower-right label",
+      "occlusionConvention": "fill palace behind foreground statue/lamps where facade is occluded; solid silhouette, not semantic visible-surface segmentation",
+      "uncertaintyPixels": 3,
+      "sourceMaskUsedForDerivation": false,
+      "sourceMaskSHA256ReadOnlyForLaterComparison": null,
+      "derivedMaskSHA256": "cf6fe01b271b696b700e2ee42e2afeb2c67b6d6b0a5367ad26efc487eb753ef9",
+      "nativeImageBytesUnedited": true
+    },
+    {
+      "code": "L2",
+      "nativeImageSHA256": "971f5cb302ba1d64ad55a91d0c1ffb0568bcfc71d5703c51e673dd107cedcfb5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "skyMethod": "top-edge flood fill using blue-sky/white-cloud RGB predicate, per-column visible roof boundary; no source mask input",
+      "groundMethod": "manual photo-derived facade/ground contact polyline, filled building silhouettes with no interior window/arch cutouts",
+      "groundPolylineNativePixels": [
+        [
+          0,
+          772
+        ],
+        [
+          180,
+          773
+        ],
+        [
+          370,
+          772
+        ],
+        [
+          610,
+          772
+        ],
+        [
+          840,
+          775
+        ],
+        [
+          1040,
+          776
+        ],
+        [
+          1250,
+          777
+        ],
+        [
+          1535,
+          777
+        ]
+      ],
+      "notIncluded": "ground, sky, lamp posts, statue protruding beyond background palace silhouette, lower-right label",
+      "occlusionConvention": "fill palace behind foreground statue/lamps where facade is occluded; solid silhouette, not semantic visible-surface segmentation",
+      "uncertaintyPixels": 3,
+      "sourceMaskUsedForDerivation": false,
+      "sourceMaskSHA256ReadOnlyForLaterComparison": null,
+      "derivedMaskSHA256": "bb2fb001cbaeb1ce675bd7cf1fe629313e3f33bcc9d56fac687100f9c1a745bf",
+      "nativeImageBytesUnedited": true
+    },
+    {
+      "code": "L3",
+      "nativeImageSHA256": "ab6a7b82746740a884432e0af4625df0dc16defb480164172ddec8d4c7f9c96f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "skyMethod": "top-edge flood fill using blue-sky/white-cloud RGB predicate, per-column visible roof boundary; no source mask input",
+      "groundMethod": "manual photo-derived facade/ground contact polyline, filled building silhouettes with no interior window/arch cutouts",
+      "groundPolylineNativePixels": [
+        [
+          0,
+          543
+        ],
+        [
+          130,
+          538
+        ],
+        [
+          300,
+          531
+        ],
+        [
+          450,
+          513
+        ],
+        [
+          650,
+          501
+        ],
+        [
+          820,
+          495
+        ],
+        [
+          950,
+          492
+        ],
+        [
+          1140,
+          494
+        ],
+        [
+          1535,
+          498
+        ]
+      ],
+      "notIncluded": "ground, sky, lamp posts, statue protruding beyond background palace silhouette, lower-right label",
+      "occlusionConvention": "fill palace behind foreground statue/lamps where facade is occluded; solid silhouette, not semantic visible-surface segmentation",
+      "uncertaintyPixels": 3,
+      "sourceMaskUsedForDerivation": false,
+      "sourceMaskSHA256ReadOnlyForLaterComparison": null,
+      "derivedMaskSHA256": "be836f4d1ca43b50dabc846819c40014e4ddc1b8d6cbd302fe03d4b2df0497b5",
+      "nativeImageBytesUnedited": true
+    }
+  ]
+}

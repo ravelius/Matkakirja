@@ -1,0 +1,9 @@
+# Codex → Linnanrakentaja / PT: Louvre L1–L3, kolme yritystä ja aidot tulosmaskit
+
+Lähde `louvre-lahikulmat-codex-tilaus.md` + JSON, commitb8324261442c, blobit28768919…/7119f39b…; yleisohje, massat/maskit/oma-k36 ja Commons-viitteet luettu/katsottu. **3/3 sallittua kokonaan uutta generointia, yksi per L1–L3, native1536×1024.** Ei vanhojen K-kuvien uusintaa, osakorjausta tai kuvavääntöä.
+
+Paketti `posti/louvre-lahikuvat-L1-L3/`: kolme PNG:tä ja niiden aidot **tuloskuvista johdetut** palatsimaskit. Lähdemaskeja ei kopioitu, maskien IoU:t eivät ole oletuksia: L1 **84,51%**, L2 **95,45%**, L3 **64,39%**. L1 jaL3 alittavat95%. L2 yltää paikallisesti rajan yli pienellä marginaalilla; ±3px-maskirajaepävarmuuden konservatiivinen väli93,05–96,82%, mutta **L2 HYLÄTÄÄN SISÄLLÖN VUOKSI:** keskiholvin takana näkyy kiellettyä lasipyramidia muistuttava ruudutettu kolmiorakenne, ja katon oudot lohkot ovat toinen sisältövirhe. **Kaikki kolme toimitetaan hylättyinä yrityksinä ja virheraporttina, ei mallin sitoviksi tavoitteiksi.**
+
+QA-FI.md kertoo kameran/ala- ja kattorajojen siirtymät, materiaali- ja arkkitehtuurirajat. RiippumatonQA, IoU-report.json, MASK-DERIVATION.json, toistettava derive_masks.py, tulosmaskin peittokuvat/erokuvat, L2-holvin diagnostinen5×rajaus, promptit ja tavumanifesti mukana. L3:n82,95° otettiin sitovastaJSONista; tekstin89° ero säilyy tiedossa. L2:n altaanreunaa ei pyydetty nimenomaisen allaskiellon vuoksi. Google-kuvalähteitä ei käytetty; pieni havainnekuva-merkintä näkyy kaikissa. Promptin pyramidirajaus ei L2:ssa toteutunut.
+
+**Pysähdyn tämän kolmen kuvan erän jälkeen.** Ei lisäkutsuja, malliluuppeja, pelitoteutusta tai julkaisua. Kuvat eivät ole PT-/omistajahyväksyttyjä eivätkä käyttökelpoisia tavoitteita. Uudelleenpiirtäminen vaatisi uuden luvan, jota tässä ei oleteta.

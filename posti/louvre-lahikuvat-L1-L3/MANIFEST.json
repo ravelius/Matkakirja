@@ -1,0 +1,119 @@
+{
+  "files": [
+    {
+      "path": "GENERATION.json",
+      "bytes": 17211,
+      "sha256": "6f5ca64d82ab86b6ad02c96b475ea5658ca9703ad5fa3eeed9de7912cb5b012f"
+    },
+    {
+      "path": "INDEPENDENT-QA-FI.md",
+      "bytes": 1685,
+      "sha256": "99331bcd0a443f3e6ca69a619791a607a66148c580ff95d05d8fc2530ee7c7c7"
+    },
+    {
+      "path": "INDEPENDENT-QA.json",
+      "bytes": 10104,
+      "sha256": "e0deed7eb7d161fb7916a920e77294b63f8c99125eba3c15d6adb0c6e80fb434"
+    },
+    {
+      "path": "IoU-report.json",
+      "bytes": 3087,
+      "sha256": "59d594d5dd96d64f95ce81bd0e00d72e08a49dab804c20d4df87fbb770bfd123"
+    },
+    {
+      "path": "L1-photo-mask-overlay.jpg",
+      "bytes": 585316,
+      "sha256": "5d32d21f1c54c1ddbd236bea4e9a956a9d5043833356ce77320ac049582f5bcb"
+    },
+    {
+      "path": "L1-silhouette-difference.png",
+      "bytes": 10637,
+      "sha256": "540e150cbce759a0facc16565cdae367b4b7e325fab254701742512b9352d647"
+    },
+    {
+      "path": "L2-arch-diagnostic-crop-5x.png",
+      "bytes": 252338,
+      "sha256": "bf0622d6a523e0fe76084d23468cd7e44b19f6ef8e7de983cc6f03dbf936ac63"
+    },
+    {
+      "path": "L2-photo-mask-overlay.jpg",
+      "bytes": 615934,
+      "sha256": "919cc9443e544ee2318fada82b52a4cacd50a1cfaa4fe2b052f32bda27bc101a"
+    },
+    {
+      "path": "L2-silhouette-difference.png",
+      "bytes": 10265,
+      "sha256": "7b401d52564ee3fd60b08ab589d5a366257b91b517ff00c10e82b1aaed92421c"
+    },
+    {
+      "path": "L3-photo-mask-overlay.jpg",
+      "bytes": 640230,
+      "sha256": "f81c4241516ce74c7546896d3137f49361100b1eb5216895704f6d17f07ebc60"
+    },
+    {
+      "path": "L3-silhouette-difference.png",
+      "bytes": 9769,
+      "sha256": "ec4c74687ef1cb90f2b6ec6d050024fd58ad49312485f5eaa155c4e43df86b02"
+    },
+    {
+      "path": "LAHTEET.md",
+      "bytes": 4473,
+      "sha256": "f1320eb51dec60a506301533759685256525c71905780a390304bb778d7f2606"
+    },
+    {
+      "path": "MASK-DERIVATION.json",
+      "bytes": 4684,
+      "sha256": "f08baedaa882f3070ac9d3d94d4d5329abedce363ae8aa712b614072643bceaf"
+    },
+    {
+      "path": "PROMPTS.json",
+      "bytes": 12445,
+      "sha256": "774360d772bb727e32e7ed1fff6bd38db0f0dfaf3785b490c8108e04b10ac286"
+    },
+    {
+      "path": "QA-FI.md",
+      "bytes": 3665,
+      "sha256": "44ede33b87d537d5f72e8a78e457408190d00d857378d00b46a2eeddc494afe5"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 16529,
+      "sha256": "e00fecf5bf03feec62140b2bd3d896558fbd31920fc44b273bb0cfccedb8cbc4"
+    },
+    {
+      "path": "derive_masks.py",
+      "bytes": 4872,
+      "sha256": "67ae1b998ac2a2676e45d6e03825966986c0203be58f1bcbed9b4f96416846a3"
+    },
+    {
+      "path": "louvre-L1-maski.png",
+      "bytes": 4721,
+      "sha256": "cf6fe01b271b696b700e2ee42e2afeb2c67b6d6b0a5367ad26efc487eb753ef9"
+    },
+    {
+      "path": "louvre-L1.png",
+      "bytes": 2735789,
+      "sha256": "1835f6b1416d4b53668faeb1b94c563fda70dc4660f22500e54c767cc6bdf9d2"
+    },
+    {
+      "path": "louvre-L2-maski.png",
+      "bytes": 4475,
+      "sha256": "bb2fb001cbaeb1ce675bd7cf1fe629313e3f33bcc9d56fac687100f9c1a745bf"
+    },
+    {
+      "path": "louvre-L2.png",
+      "bytes": 2920678,
+      "sha256": "971f5cb302ba1d64ad55a91d0c1ffb0568bcfc71d5703c51e673dd107cedcfb5"
+    },
+    {
+      "path": "louvre-L3-maski.png",
+      "bytes": 4296,
+      "sha256": "be836f4d1ca43b50dabc846819c40014e4ddc1b8d6cbd302fe03d4b2df0497b5"
+    },
+    {
+      "path": "louvre-L3.png",
+      "bytes": 2953288,
+      "sha256": "ab6a7b82746740a884432e0af4625df0dc16defb480164172ddec8d4c7f9c96f"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "threshold": 0.95,
+  "results": [
+    {
+      "code": "L1",
+      "imageSHA256": "1835f6b1416d4b53668faeb1b94c563fda70dc4660f22500e54c767cc6bdf9d2",
+      "derivedMaskSHA256": "cf6fe01b271b696b700e2ee42e2afeb2c67b6d6b0a5367ad26efc487eb753ef9",
+      "targetMaskSHA256": "58a940c47c044eaf6edf50a7766ae4b69684179514e60d8c6ddc6cb9565e0c0f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 638458,
+      "unionPixels": 755450,
+      "iou": 0.8451360116486862,
+      "requiredIoU": 0.95,
+      "measuredThresholdReached": false,
+      "approximateBoundaryUncertaintyPixels": 3,
+      "conservativeIoURangeFor3PixelMaskBoundary": [
+        0.8243764820363785,
+        0.8588939125421702
+      ],
+      "receiverAcceptance": false,
+      "maskMethod": "genuinely derived from generated photo before source-mask read; no warping or input-mask copy",
+      "noImageTransformations": true,
+      "interpretation": "local silhouette check only; exact architecture and independent receiver decision remain separate"
+    },
+    {
+      "code": "L2",
+      "imageSHA256": "971f5cb302ba1d64ad55a91d0c1ffb0568bcfc71d5703c51e673dd107cedcfb5",
+      "derivedMaskSHA256": "bb2fb001cbaeb1ce675bd7cf1fe629313e3f33bcc9d56fac687100f9c1a745bf",
+      "targetMaskSHA256": "ed9b39ba2ec2fe6c860c911da0bac96a280f5800cca850193bcf426d03da0a50",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 659599,
+      "unionPixels": 691053,
+      "iou": 0.9544839541974349,
+      "requiredIoU": 0.95,
+      "measuredThresholdReached": true,
+      "approximateBoundaryUncertaintyPixels": 3,
+      "conservativeIoURangeFor3PixelMaskBoundary": [
+        0.9305173435369536,
+        0.9681890393253264
+      ],
+      "receiverAcceptance": false,
+      "maskMethod": "genuinely derived from generated photo before source-mask read; no warping or input-mask copy",
+      "noImageTransformations": true,
+      "interpretation": "local silhouette check only; exact architecture and independent receiver decision remain separate"
+    },
+    {
+      "code": "L3",
+      "imageSHA256": "ab6a7b82746740a884432e0af4625df0dc16defb480164172ddec8d4c7f9c96f",
+      "derivedMaskSHA256": "be836f4d1ca43b50dabc846819c40014e4ddc1b8d6cbd302fe03d4b2df0497b5",
+      "targetMaskSHA256": "3078e4d8754d7bd927871b763ad03805e7eaf2fcca06a1e120b306f129a20eb0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "intersectionPixels": 393826,
+      "unionPixels": 611609,
+      "iou": 0.6439179279572407,
+      "requiredIoU": 0.95,
+      "measuredThresholdReached": false,
+      "approximateBoundaryUncertaintyPixels": 3,
+      "conservativeIoURangeFor3PixelMaskBoundary": [
+        0.6273839303784658,
+        0.6600316237369486
+      ],
+      "receiverAcceptance": false,
+      "maskMethod": "genuinely derived from generated photo before source-mask read; no warping or input-mask copy",
+      "noImageTransformations": true,
+      "interpretation": "local silhouette check only; exact architecture and independent receiver decision remain separate"
+    }
+  ]
+}
