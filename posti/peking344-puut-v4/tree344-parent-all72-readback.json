@@ -1,0 +1,1129 @@
+{
+  "task": 344,
+  "status": "SAVED_ALL72_TREE_COLOR_ONLY_READBACK_PASS",
+  "variant": "green-moderate",
+  "actualRGBFactor": [
+    0.7103449104959425,
+    0.7991380243079353,
+    0.5919540920799521
+  ],
+  "GLBCount": 72,
+  "bytesGLB72": 156540688,
+  "trianglesGLB72": 1377183,
+  "allBaseV3BINBytesPreserved": true,
+  "onlyTreePBRBaseColorFactorValuesDiffer": true,
+  "allOtherMaterialsIncludingRoofGoldAndMassesUnchanged": true,
+  "allAlphaNormalImagesUVPositionsIndicesUnchanged": true,
+  "allTintFactorsAndCorePBRValid": true,
+  "actualAlbedoArithmeticByLOD": {
+    "0": {
+      "embeddedAlbedoSHA256": "30d33f5f23113ef5ecfd1d733103af34a25f32e7c62a7607a65ca8c8d9f99f50",
+      "opaquePixels": 99198,
+      "effectiveMeanLinearRGB": [
+        0.13410804508576185,
+        0.19735935099485125,
+        0.0747295017880938
+      ],
+      "effectiveMeanLinearY": 0.17505824824585095,
+      "greenLargest": true,
+      "meanRGBChromaRatio": 0.6213531235718172
+    },
+    "1": {
+      "embeddedAlbedoSHA256": "978f17db957bbe3031dc1313b34ee419106b5743b581f6590fa29ee9e10ec313",
+      "opaquePixels": 25315,
+      "effectiveMeanLinearRGB": [
+        0.1331554153068174,
+        0.1958681859524903,
+        0.07417872820225746
+      ],
+      "effectiveMeanLinearY": 0.17374947206365343,
+      "greenLargest": true,
+      "meanRGBChromaRatio": 0.6212824056059302
+    },
+    "2": {
+      "embeddedAlbedoSHA256": "978f17db957bbe3031dc1313b34ee419106b5743b581f6590fa29ee9e10ec313",
+      "opaquePixels": 25315,
+      "effectiveMeanLinearRGB": [
+        0.1331554153068174,
+        0.1958681859524903,
+        0.07417872820225746
+      ],
+      "effectiveMeanLinearY": 0.17374947206365343,
+      "greenLargest": true,
+      "meanRGBChromaRatio": 0.6212824056059302
+    }
+  },
+  "actualGameBrightnessOrChromaNotMeasured": true,
+  "old343JPEGNotUsedAsRawAlbedo": true,
+  "notGameOrOwnerAcceptance": true,
+  "files": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "sha256": "b239413491465dc51e81d999f29595e930967adbbe3d9f639c72cfc2291a017b",
+      "baseSHA256": "0f1415d1d237251fb93cc7bde487db4845cdafc1c534d89485c68f5dde11ca91",
+      "bytes": 1691640,
+      "triangles": 8361,
+      "changedTreeMaterialIndices": [
+        19,
+        20,
+        21
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_0_lod1.glb",
+      "sha256": "e4990f6f38360f50fbf2f123ac8e6a9d57b170e78153aa19780cc04c3d420da3",
+      "baseSHA256": "000451f919ced76215fd3af944694eee308e9994ff2a9904ac023522450a71c2",
+      "bytes": 883260,
+      "triangles": 7893,
+      "changedTreeMaterialIndices": [
+        19,
+        20,
+        21
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_0_lod2.glb",
+      "sha256": "eaeb7de88dfe216839133b311e5a3fddcffcf5f3392eaa8c8f1caee2581f9ea6",
+      "baseSHA256": "e94219a3d99908b12beaf4e3804f6b29ddb654e646b7dc63b41873b2fcf54007",
+      "bytes": 839092,
+      "triangles": 7893,
+      "changedTreeMaterialIndices": [
+        19,
+        20,
+        21
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "sha256": "2cca4e24ab23dc5e161a5ce7c0223f8afd5752b898271d101cc78e4f5d1f999d",
+      "baseSHA256": "864459537a014fb48fa8efd9bfb4b26badcbc65bff4f20a688d9c2246b02a5b4",
+      "bytes": 2086716,
+      "triangles": 8315,
+      "changedTreeMaterialIndices": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_1_lod1.glb",
+      "sha256": "a7c057c893856955c8385b0589a2daad25307acdc49d13eb295b23c781b03005",
+      "baseSHA256": "fe63071dba06708a29084e62b756faac38e816d87f5a0b9f56814f2760edeff3",
+      "bytes": 926724,
+      "triangles": 6967,
+      "changedTreeMaterialIndices": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_1_lod2.glb",
+      "sha256": "42f4a17b51e5ff62e013670dae8aeabd824633a703bef5726eda3c41a4e527bf",
+      "baseSHA256": "7a86fd8e40127bb7216e72ea1c2c56dc939a9454afa1b6961c52400e18b7efb6",
+      "bytes": 852620,
+      "triangles": 6967,
+      "changedTreeMaterialIndices": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "sha256": "9b1f0df5328bd9d15aa3196708e23058446a2b15fff3664a3952dd5dc1d89a33",
+      "baseSHA256": "5dcd964bd24c4d0d310091bcfb93f01d45e1b19bb2ea0687304678203fde04eb",
+      "bytes": 2539388,
+      "triangles": 11017,
+      "changedTreeMaterialIndices": [
+        35,
+        36,
+        37,
+        38
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_2_lod1.glb",
+      "sha256": "e2c0c81ba9266c602bd1fa959ae2788542b10ae087064e28945c593fbfb86454",
+      "baseSHA256": "a5513581c510118b290b9b04cf2d931bbb2034923d339a5593eda057ea650ef6",
+      "bytes": 1123932,
+      "triangles": 8645,
+      "changedTreeMaterialIndices": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_2_lod2.glb",
+      "sha256": "56fe95eed91443c9aacce04addaad58529072a1ab34a17bd5067e270c7def5b2",
+      "baseSHA256": "4dcc97da9346b8a92c021b56ca46a6947bbb5bb12139ab883ae3bce0d2802587",
+      "bytes": 1034656,
+      "triangles": 8645,
+      "changedTreeMaterialIndices": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "sha256": "5c99505270f0c8e3db353e4447ffc11ab80fe94ee8e3e2b22a699fd816f07a80",
+      "baseSHA256": "77da068b72834104df01255ad3bf037ce8e673206c9d0b020fd3bf3d26c76b4a",
+      "bytes": 2029980,
+      "triangles": 8420,
+      "changedTreeMaterialIndices": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_3_lod1.glb",
+      "sha256": "ca819100f89426d167f2eb6353379e676111567804cd9a442bde28d4a5b2457a",
+      "baseSHA256": "c4b72ccb6ed5e4feecf9ada555a7f5963ef051aa5b510da4683a87bf23108e14",
+      "bytes": 964864,
+      "triangles": 7564,
+      "changedTreeMaterialIndices": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_3_lod2.glb",
+      "sha256": "71d150e7a565b6041c5e75e2248eafda4dba5e2623de6d80c9fbc21183f50512",
+      "baseSHA256": "4706259be1b3f5dd9e798714746a78c32b44ebefe2d1c7554c287cf41fcefc5a",
+      "bytes": 890292,
+      "triangles": 7564,
+      "changedTreeMaterialIndices": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "sha256": "6ba8921d15ce64c711741bcf16f8982b72572ba404f6461c672367895dfda6da",
+      "baseSHA256": "1438d9bf27ffbea0304cff8c4bfa6a171d544e706898486a2cfa819c0e0b3c7b",
+      "bytes": 2187544,
+      "triangles": 8777,
+      "changedTreeMaterialIndices": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_4_lod1.glb",
+      "sha256": "b2956da0a74cd6a88202e16228869d2b6d7e54f8d73e6ea5036b034c6d072bcc",
+      "baseSHA256": "41dbc8d8a289921c1fc7b3766ac220041e8424270ccbd1afac754c3d50f2b4ce",
+      "bytes": 1009932,
+      "triangles": 7825,
+      "changedTreeMaterialIndices": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_4_lod2.glb",
+      "sha256": "030820132fa889087b4e1f2da6ea07cd0d2b674252a16744e2c1bbe85f1cf3b9",
+      "baseSHA256": "5f556a2640ac4d51eb4477cbfaec3b0046eb281407457c0532c473bd51711d58",
+      "bytes": 933684,
+      "triangles": 7825,
+      "changedTreeMaterialIndices": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "sha256": "d431f344d79004027317230c43390ee3b16aee9d09e70e848c6fbce6033dda3d",
+      "baseSHA256": "14ba48b15003201d866ef3ca8f2e460eff1a4307810259a7e489226515939fdb",
+      "bytes": 2347904,
+      "triangles": 14420,
+      "changedTreeMaterialIndices": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_5_lod1.glb",
+      "sha256": "8b90825f484106dee878c0024224dd4a37fe1c9ec2262d78233f9ab0299dbcc6",
+      "baseSHA256": "6c6f5b46cdfe7108297536742140ef700ec8d5bbddb5490284f1928c4f34e3d3",
+      "bytes": 1181336,
+      "triangles": 11568,
+      "changedTreeMaterialIndices": [
+        27,
+        28,
+        29,
+        30
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_0_5_lod2.glb",
+      "sha256": "eb87854e4e362231baf78cc8e60828661d98d16d612412bf83e9d0ef8062b182",
+      "baseSHA256": "defb6173eb5555f7e1d85eba2ce5f79dd375e211ecc4f2e3998ef08569457c72",
+      "bytes": 1114004,
+      "triangles": 11568,
+      "changedTreeMaterialIndices": [
+        27,
+        28,
+        29,
+        30
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "sha256": "53b91b76e9696e19067688af052059bd32810538370d3b8e9c4b3d2cda72f299",
+      "baseSHA256": "8c322d06b1eecb8c971213bda3bdb5e63efcbccd9473528f4a76ef6d416803db",
+      "bytes": 1723724,
+      "triangles": 6176,
+      "changedTreeMaterialIndices": [
+        22,
+        23,
+        24
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_0_lod1.glb",
+      "sha256": "bc391b12fb53a0e4d18a3d38773eae1c9d72df368db1b13192a8c9e6a0585783",
+      "baseSHA256": "1311c15fa58a01496d94a8694bdfe2fe1a3b6a0f6ac0a35322ac0bc944077f6f",
+      "bytes": 831340,
+      "triangles": 5708,
+      "changedTreeMaterialIndices": [
+        22,
+        23,
+        24
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_0_lod2.glb",
+      "sha256": "2cef33fc3349cb27eb2e71d0dbb7053f3647e3c02867fb7cfec7f1d24ec78002",
+      "baseSHA256": "25595748033bb7108a1687eb92b8959f3063d4b0637be4b3380784a27b6904ff",
+      "bytes": 780948,
+      "triangles": 5708,
+      "changedTreeMaterialIndices": [
+        22,
+        23,
+        24
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "sha256": "158325f029f295cd24065d66bff9cd8e203fb531db33db5121797667a98b9d37",
+      "baseSHA256": "e63c93b6d8991da97233b3accbba7e81c0e7e4df53bd2422364509559679374f",
+      "bytes": 2529388,
+      "triangles": 14439,
+      "changedTreeMaterialIndices": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_1_lod1.glb",
+      "sha256": "b0b5b388dc3fc48b836505f39ff91785666885103ec0aa738bc87098e3ce8041",
+      "baseSHA256": "f26a4763dfe941912498a03eb78477852222ffce691341778d6d4392c4380e0f",
+      "bytes": 1341616,
+      "triangles": 12783,
+      "changedTreeMaterialIndices": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_1_lod2.glb",
+      "sha256": "ecdd41c9da92ca77f74fa0bd54c00dc2ec42ab4adee09511b400a34326c30574",
+      "baseSHA256": "db9c3a24ae5577edc175c2adc04a6684e44029207efab784150cda85f01df74b",
+      "bytes": 1266172,
+      "triangles": 12783,
+      "changedTreeMaterialIndices": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "sha256": "e3be346d4244294ccf9ab4a65f694692fbbebd0508239b5d1f8c60114a272043",
+      "baseSHA256": "a244d17aaf729e9e828af19ef4e0555c0d6b593a1c67b9b089e65de9c933902b",
+      "bytes": 2825552,
+      "triangles": 16534,
+      "changedTreeMaterialIndices": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_2_lod1.glb",
+      "sha256": "136269619cbc2962f45264360dfc141431a914814fb471805989948fad0849a0",
+      "baseSHA256": "6b58bf87a135a4fa35f2c0dcedd9e9387d8fbc6629518d8380e2c7b931f80d0d",
+      "bytes": 1451200,
+      "triangles": 13040,
+      "changedTreeMaterialIndices": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_2_lod2.glb",
+      "sha256": "f4a99477b939c64245d0c6f6d50f4a15e5b17d3a86a5c7f129f2f659749c5ac5",
+      "baseSHA256": "3da70d3d7358ff060f2a031b32d43131c1429505d427271d1971d7d19228b415",
+      "bytes": 1366620,
+      "triangles": 13040,
+      "changedTreeMaterialIndices": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "sha256": "93ca2ad7ae59d2fbdc9a737e97aa4e94b7ac6e7f315da90e25236942f2627b82",
+      "baseSHA256": "9919aa5028f5f3babf8e78ab41d521a76cf0bf84958e249f4e8dc2f9f18661f5",
+      "bytes": 5606916,
+      "triangles": 59280,
+      "changedTreeMaterialIndices": [
+        28,
+        29,
+        30
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_3_lod1.glb",
+      "sha256": "aec9c17e969a0e5f90b3ad54b1a00d59388da4ff424f1fda5fce2119a93fae7a",
+      "baseSHA256": "c2ebea3f2be2c2c61930fef6777d53df206c37ccc03b6b6ba150d6e52194ce55",
+      "bytes": 2387764,
+      "triangles": 26842,
+      "changedTreeMaterialIndices": [
+        27,
+        28,
+        29
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_3_lod2.glb",
+      "sha256": "5ea5a99d820824d8c8f46d5481ca424851517492dbe5a9faba849ef012c4c6fb",
+      "baseSHA256": "925554c4aba566bbe5670ad9252b52c3f9a366736354f0857cb505e620b3068e",
+      "bytes": 2316832,
+      "triangles": 26842,
+      "changedTreeMaterialIndices": [
+        27,
+        28,
+        29
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "sha256": "f1c078781e4142de3630484b5fee8a6f6e642059860e8a0717d8ee78ebf24046",
+      "baseSHA256": "07083a9ae652d52bfd8704d3e41e0c623b5f99a21be22efac54a9ddc84b3a918",
+      "bytes": 4618652,
+      "triangles": 47146,
+      "changedTreeMaterialIndices": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_4_lod1.glb",
+      "sha256": "4786a9f1ec9dc11d4c2f681742e2d72d26419f1f560c1933b338776bb082879c",
+      "baseSHA256": "8d45a12f43848628c02011aadd8feac277c3b8b5169d66b33865af8deaf3d754",
+      "bytes": 3132096,
+      "triangles": 38512,
+      "changedTreeMaterialIndices": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_4_lod2.glb",
+      "sha256": "1817a2ed9bffe94024d3d55dedb55c99a09541596d0b1002c66190e76b66db2d",
+      "baseSHA256": "7a74862ab62bcd6fd0e9573b458904a2024b97b9dd3a31fe852f0a1b0e165224",
+      "bytes": 3075448,
+      "triangles": 38512,
+      "changedTreeMaterialIndices": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "sha256": "9e92354161b66485970a6851441ab733bcdae0dcddee343cc1650f1705daf2c4",
+      "baseSHA256": "2d7351f3966efe8bcd3709445bb93735f362ba5afbaf515b1152f49fc1c8ea9a",
+      "bytes": 3214236,
+      "triangles": 26716,
+      "changedTreeMaterialIndices": [
+        26,
+        27,
+        28,
+        29
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_5_lod1.glb",
+      "sha256": "1f0a1866a42a02f7034a74f421b8f5917500ce261f63cf547d9ccfc37239fab7",
+      "baseSHA256": "f3b390f54ee6574a17558968bcd6ca835e23d08e0aa1829a02cfa8f5980243ac",
+      "bytes": 1887212,
+      "triangles": 21184,
+      "changedTreeMaterialIndices": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_1_5_lod2.glb",
+      "sha256": "b06f4431cf90b67f49fa8cab6198998decaa775e9f8c97948b10e59ad5f39c97",
+      "baseSHA256": "2906c3cf12f30f5395a64ffa9d3761fab657bad8df1b4970f981cb61b7cbcf0f",
+      "bytes": 1818332,
+      "triangles": 21184,
+      "changedTreeMaterialIndices": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "sha256": "10a41e23e4b023b17f07beb5050bcfa4159603b5aaa0613952e4cfcb85e18651",
+      "baseSHA256": "4db9f54a4deff9918eb9b5b4441cbaecb4013f5d6e484184efb84e715d3eab6d",
+      "bytes": 2196092,
+      "triangles": 7274,
+      "changedTreeMaterialIndices": [
+        27,
+        28,
+        29,
+        30
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_0_lod1.glb",
+      "sha256": "8f0e48757a6b6647d1154181fc719908ca02f76916c79402927b14a85838f397",
+      "baseSHA256": "1c6ddd410d89287fe1c4a09677119b0330fec8f788ead873ff109480714b43e0",
+      "bytes": 1080280,
+      "triangles": 7014,
+      "changedTreeMaterialIndices": [
+        27,
+        28,
+        29,
+        30
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_0_lod2.glb",
+      "sha256": "15caa6628844a9b921bb76c9e85f86cc3cf85382317a90fdf33e2e290f84a117",
+      "baseSHA256": "55455b99b7aee7a685adadb7fa3bfd6e67e896d25557fdec31a6997cc8334e9c",
+      "bytes": 1012140,
+      "triangles": 7014,
+      "changedTreeMaterialIndices": [
+        27,
+        28,
+        29,
+        30
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "sha256": "465e601e0fbfa0213d8fa1a5e1184e29a4c242add27ce28e35eb35e932c06987",
+      "baseSHA256": "0c0ff10c06d4b49972e2795f3304e954fa3903656df1b33c119f90e43dde4405",
+      "bytes": 2415468,
+      "triangles": 14405,
+      "changedTreeMaterialIndices": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_1_lod1.glb",
+      "sha256": "1c0c2fc799b353b9aa4e9a6b5a4ce598e15092e71ab18abedf6314fa0f04b0f1",
+      "baseSHA256": "5de1ca84006184ceebb4b6334e1a2fa8bb950b9998dd82f7de48a7acc1e2d008",
+      "bytes": 1305156,
+      "triangles": 12917,
+      "changedTreeMaterialIndices": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_1_lod2.glb",
+      "sha256": "876eb4c3107955d38551c55654255f04c060f338bbc33c61a66cfe0954862758",
+      "baseSHA256": "3bb9b2c426cbdf9837c9507637d85cdfc96c606f7f5259068fd2bbcf240e3542",
+      "bytes": 1235096,
+      "triangles": 12917,
+      "changedTreeMaterialIndices": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "sha256": "7056c43e72191f78ae725f0d7d729686398a0e526774d3a73090f70dfb2d8f28",
+      "baseSHA256": "4d21a0075a994220dc4e2494f6d5a220cb9fdcb2b6e3f6d0de6bad8cb04aa7af",
+      "bytes": 2871972,
+      "triangles": 17477,
+      "changedTreeMaterialIndices": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_2_lod1.glb",
+      "sha256": "f264658060c612e28dcc647cc9b9d7f0d9c974b76248801f3c147a7bb5e47947",
+      "baseSHA256": "343d9babaae7c0b94259164017d711b0a49acf6897e56eb60d31bf014678ee54",
+      "bytes": 1565144,
+      "triangles": 14541,
+      "changedTreeMaterialIndices": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_2_lod2.glb",
+      "sha256": "bbeb0b28e234e9739c7b547947c8f21ac36c1033d8ba6dab222c062bd0d9faae",
+      "baseSHA256": "a438f18d43527192e9541cccbdd316182e7235ce462094d222bb7ef08c666646",
+      "bytes": 1486736,
+      "triangles": 14541,
+      "changedTreeMaterialIndices": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "54adf694bb9604fb94ae6268e771a5cb24bbb7b24b2d5833bf5c18fce31221bc",
+      "baseSHA256": "3a2ee3eb49554dea57a01c12088961648dcc954f434a45d3b4087f3808e85d74",
+      "bytes": 8660328,
+      "triangles": 97895,
+      "changedTreeMaterialIndices": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_3_lod1.glb",
+      "sha256": "a930e745f988db3a4299114b8b96fc64b950c313f13a4914a261692b729314f9",
+      "baseSHA256": "60952e0ef3c47374ceef060c95ab67bfae6f8bd52caa295ae50baea350b8c87d",
+      "bytes": 4114820,
+      "triangles": 50491,
+      "changedTreeMaterialIndices": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_3_lod2.glb",
+      "sha256": "806783feec1bca812fdcb22e35745c2a7e3fbf6678aecfa1f8a50d67e490ad45",
+      "baseSHA256": "cd1c2cefae61cb531a1efc7dbb7ea9af8ab1fd00519e88e81f31094f509c653b",
+      "bytes": 3902588,
+      "triangles": 49159,
+      "changedTreeMaterialIndices": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "sha256": "b8c6bc45a480de8d076dbf5bb4e8acf1fa97d68d594101c23a29056247012c68",
+      "baseSHA256": "e0191748f1bfd6ce004a958e8eea14db0a3459ebcc194ebc0a727facb4db53b5",
+      "bytes": 4919012,
+      "triangles": 48515,
+      "changedTreeMaterialIndices": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_4_lod1.glb",
+      "sha256": "6691bbade08d7c481bb630ed79646abca899bc7c61f8cbf33389007c10a8b143",
+      "baseSHA256": "afac94fc11dab2266945aeab22b42157478f6cc48d92732ce10ed5af49c7e05f",
+      "bytes": 3225496,
+      "triangles": 39189,
+      "changedTreeMaterialIndices": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_4_lod2.glb",
+      "sha256": "2f48da39b8aa56cf59e643209477393dbf3060385f7e5771419aa1971ac0a1fa",
+      "baseSHA256": "5210e20f8d9e9a03da3cfa5ef870908abf1e5761eb98d305da83d138040613e6",
+      "bytes": 3152956,
+      "triangles": 39189,
+      "changedTreeMaterialIndices": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "sha256": "2310f3695d209fbc04f63d5e9cefb1303b54d5d123d805b3779c63ab5a69a50d",
+      "baseSHA256": "30d104fe377d07f8e32c1a5f0ade3f520284c6fab7000aa0002f88fd1da8ba66",
+      "bytes": 3967412,
+      "triangles": 33135,
+      "changedTreeMaterialIndices": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_5_lod1.glb",
+      "sha256": "a597e5f51f0798031b9af70c658421cf8e52613c7e93f1042b1481fb445e7dc1",
+      "baseSHA256": "554f35b4fa3736b2d29eca358887af153b9382e1cee05ea65bdb94e964c81655",
+      "bytes": 2633044,
+      "triangles": 30123,
+      "changedTreeMaterialIndices": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_2_5_lod2.glb",
+      "sha256": "7de188d189308475bc038e0d0b172834182dfea873815211908754031b02ec01",
+      "baseSHA256": "4a269ea0ec0284b288d55fc3609c7bfd1d62529b9d5d7f0ecd267040d0d778f7",
+      "bytes": 2541676,
+      "triangles": 30123,
+      "changedTreeMaterialIndices": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "sha256": "ecd57d1e9a078363c9da766a380e2d84f165f9ee0f3300af64e76728dc25f8bc",
+      "baseSHA256": "9b0758c429f806c83214659b7da9a5c3b58f7d9a38251d2d80fca8f5dbee2036",
+      "bytes": 2575568,
+      "triangles": 10525,
+      "changedTreeMaterialIndices": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_0_lod1.glb",
+      "sha256": "1e92d855c623819dc503998ee48fdb3ef31d3d2497dea47208c2a07eb8b812d5",
+      "baseSHA256": "0bf14c99860da690e0a1afbae107c8ec49947a6f08e4ef4418ef8c40bed90e6f",
+      "bytes": 1236072,
+      "triangles": 9361,
+      "changedTreeMaterialIndices": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_0_lod2.glb",
+      "sha256": "9911c6f8895069ac013a1f3716a8970e4ab699cb2c3c19ab0ea98eb96fe53b09",
+      "baseSHA256": "bed0d35cb8e2318867f1175fc60d9158094402e8d757c30fa3331380e4ac868b",
+      "bytes": 1153504,
+      "triangles": 9361,
+      "changedTreeMaterialIndices": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "sha256": "5d0c0b0385b90b1f12d93b1e46c6436a0d0a850bc4901bf5bb69dd3fa6f0cab4",
+      "baseSHA256": "fb9e04dc5c12b2787ffa2844b9952e26a0a1857c706c08963d78022fba5f1a43",
+      "bytes": 2585216,
+      "triangles": 11016,
+      "changedTreeMaterialIndices": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_1_lod1.glb",
+      "sha256": "ea6988533631ff464208b603b987f78476c8a501fbcc5d0a23ca9ebec1f75f79",
+      "baseSHA256": "93339b9efc88a4161a57ea41e2f861366fd18fc1b55d413adf9d4a1f948d5dfb",
+      "bytes": 1249432,
+      "triangles": 10032,
+      "changedTreeMaterialIndices": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_1_lod2.glb",
+      "sha256": "ca88b5f401eb53b2c98f601a21953bc55fd70de1121120c962371662b960ebee",
+      "baseSHA256": "259493d2d83c722c3e5f9280ba5ec5a2d064d28bf6e298f58a05f9f583ef230a",
+      "bytes": 1163856,
+      "triangles": 10032,
+      "changedTreeMaterialIndices": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "sha256": "56652c47458617326d21b4e357085fab2cd91fe6fe19e2da3d9593f1a9930f91",
+      "baseSHA256": "c1a3ee5004e91b48a0a48e4635b38cb783aa19a8e433e28c8adfed1c383d4f37",
+      "bytes": 2841196,
+      "triangles": 18150,
+      "changedTreeMaterialIndices": [
+        32,
+        33,
+        34
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_2_lod1.glb",
+      "sha256": "60803aa25ba1dc9da1aa2ce6f57b2a2e89e2614fb8a8e6f897144c16a45e7b57",
+      "baseSHA256": "a99aafbf17454710b959a13da9010548c2aaebdedeed05ff62287a184f658bf1",
+      "bytes": 1695552,
+      "triangles": 16966,
+      "changedTreeMaterialIndices": [
+        31,
+        32,
+        33
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_2_lod2.glb",
+      "sha256": "058beea454cb76d129346bf803198e36465ec23eb1001c89013573573f9c8d44",
+      "baseSHA256": "9f6e675e8daf57c0136a8c6e4c983e7c89a14d62ac02385b93fcfbd26381d78d",
+      "bytes": 1618784,
+      "triangles": 16966,
+      "changedTreeMaterialIndices": [
+        31,
+        32,
+        33
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "sha256": "9099794d40b5ff1fa8af2e7af28faeeb8377c22ea4cdf2cc6910f5177541b7e2",
+      "baseSHA256": "787659b796d744cf385d74587ee7d180b373c1e20f900c7cf7db0519892cf177",
+      "bytes": 3038952,
+      "triangles": 12604,
+      "changedTreeMaterialIndices": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_3_lod1.glb",
+      "sha256": "fa153f213aafe772775cc100910e4ab02ec4c216702405d44bc6275f81feac45",
+      "baseSHA256": "b64d92c185d0ea46bc1aea1d21b1f79c5dc14ef073261f1f493d3758be629282",
+      "bytes": 1472868,
+      "triangles": 11532,
+      "changedTreeMaterialIndices": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_3_lod2.glb",
+      "sha256": "e0edcfdc450499198a0f206944659c3ce53c8bf3d833c572693b8741d599acee",
+      "baseSHA256": "4bd14233ae5a66332f21720b752990bc033d5fe20beaa10957924550694ad6a4",
+      "bytes": 1363264,
+      "triangles": 11532,
+      "changedTreeMaterialIndices": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "sha256": "6b95254abdf3c7871a6c04b0f72bdac949dcab057da5f087d7a93f0034bee0b9",
+      "baseSHA256": "4f60bb98cc82084540d08391a2e1ac772729cf3467a4fdcee2ab6fc3c8d5be7e",
+      "bytes": 3128256,
+      "triangles": 17671,
+      "changedTreeMaterialIndices": [
+        35,
+        36,
+        37,
+        38
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_4_lod1.glb",
+      "sha256": "7da8b01c0a3039c6210dbacde8aee34eea86924c11af7f9b1bef18b2dc5c6b38",
+      "baseSHA256": "2bd91fd6be02fa5d64b830862cb1ed465335647d9f8290e05d720542c8c49118",
+      "bytes": 1746172,
+      "triangles": 16407,
+      "changedTreeMaterialIndices": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_4_lod2.glb",
+      "sha256": "d3bad069fd5acca4e711f208715edd0e8ec002e9219d4c8fbc1986642fcc36d4",
+      "baseSHA256": "69386a1b0d63a175c0ec91896c2e28fd665f7cc34fa69d92cd849373ef1f28d2",
+      "bytes": 1654396,
+      "triangles": 16407,
+      "changedTreeMaterialIndices": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "6c55a56a50d4e2bd4c6cca6d63cdd4298b7b6aa7d76f2d987aca673d14774d36",
+      "baseSHA256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0",
+      "bytes": 3924608,
+      "triangles": 29533,
+      "changedTreeMaterialIndices": [
+        37,
+        38,
+        39,
+        40
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_5_lod1.glb",
+      "sha256": "243c43abf5e0b4bb4b36b370cfad5edc511c7e0c3d26294212dda908580db36f",
+      "baseSHA256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9",
+      "bytes": 2545052,
+      "triangles": 28253,
+      "changedTreeMaterialIndices": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    },
+    {
+      "file": "peking_3_5_lod2.glb",
+      "sha256": "fc3306fc77d6e508dff179e196bfc6a3d99b9422f5f81f0536313b8a43e8b471",
+      "baseSHA256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9",
+      "bytes": 2450908,
+      "triangles": 28253,
+      "changedTreeMaterialIndices": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "allBINPayloadByteIdentical": true,
+      "allOtherJSONSemanticValuesIdentical": true
+    }
+  ]
+}

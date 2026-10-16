@@ -1,0 +1,19 @@
+{
+  "task": 344,
+  "sourceCanonicalNativeRound": 51,
+  "newCanonicalNativeRoundProduced": false,
+  "sourceNativeSHA256": "0572b74e033361077de63ec10eba5d5194f6cf65da6d63681e21d9bbb84adfc2",
+  "baseV3Root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti",
+  "baseV3ManifestSHA256": "8192a5dc7ee7cc0bf7a729d3d9ea88b22d35e40afc1cdd0aced136b04d0aa277",
+  "selectedVariant": "green-moderate",
+  "selectedVariantSourceRoot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-moderate",
+  "selectedVariantProofSHA256": "31865142a9ce2bbd21b0925d124c4212a2933dc758a8aab498b0c0c382f3c511",
+  "onlyTreePBRBaseColorFactorChanged": true,
+  "allBINAndOriginalImagesAndOtherMaterialsUnchanged": true,
+  "hutong342TrialExcluded": true,
+  "source343Commit": "f0bd280d89a563f9471039b873d4a9025c801b02",
+  "priorV3SimSourceIsNotCurrentV4Test": true,
+  "inheritedQAIsExplicitlyHistoricalV3": true,
+  "sourceWaterMasksAndAll12FeaturesUnchanged": true,
+  "createdAtUTC": "2026-10-16T01:30:33.489099+00:00"
+}

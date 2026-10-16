@@ -1,0 +1,1442 @@
+{
+  "task": 344,
+  "status": "GREEN_MODERATE_RECOMMENDED_FOR_NEXT_V4_SIMULATOR_TEST_PENDING_TECHNICAL_QA_NOT_FINAL_GAME_COLOR_APPROVAL",
+  "recommendedVariant": "green-moderate",
+  "recommendationIsVisualOnly": true,
+  "personallyViewedImages": 24,
+  "newCandidateImages": 18,
+  "baselineImages": 6,
+  "all24PNGHashesVerified": true,
+  "all216VariantGLBAnd72BaseGLBHashesVerified": true,
+  "all72LOD0ImportPinsVerified": true,
+  "frames": [
+    {
+      "variant": "V3",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-ilma.png",
+      "sha256": "13b04dc5ee20e95ae3f8b12e4366d23ed10ee37e3afbbe0104910be59c7f4894",
+      "personallyViewed": true
+    },
+    {
+      "variant": "V3",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-taihedian.png",
+      "sha256": "e812b4ea5e219c1ed3afeec8a0c38c6ae8631c4b4d5e0a212e19062f1b991faf",
+      "personallyViewed": true
+    },
+    {
+      "variant": "V3",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-aukio.png",
+      "sha256": "d91cbb7ad066f335489165a358a982cb9e759719e3b069cf3eef1df5729f3aff",
+      "personallyViewed": true
+    },
+    {
+      "variant": "V3",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-beihai.png",
+      "sha256": "05aef2084cdb1cab00f17e25908fc2c767b823be56926615d2ca31cf0eb3132b",
+      "personallyViewed": true
+    },
+    {
+      "variant": "V3",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-jingshan.png",
+      "sha256": "e0fbd499068da1f501a3084ad57426b2a7d7345752b01a9394d470e55fbf90c8",
+      "personallyViewed": true
+    },
+    {
+      "variant": "V3",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/city-lod0-hutong_ilma.png",
+      "sha256": "1a8a69a12d167092c0f102644a4ad0dbc2515a3c6f1b5397a9228db570946107",
+      "personallyViewed": true
+    },
+    {
+      "variant": "midpoint",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/midpoint/renders/city-lod0-ilma.png",
+      "sha256": "d1ac472b6410c9a861118bc0a5d933624331d4edec035cd09ad83e1bb8dc2d8a",
+      "personallyViewed": true
+    },
+    {
+      "variant": "midpoint",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/midpoint/renders/city-lod0-taihedian.png",
+      "sha256": "636cd921f6d26d4abf9702015100941b35a29130cab8ea3e66b7917cefd2e966",
+      "personallyViewed": true
+    },
+    {
+      "variant": "midpoint",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/midpoint/renders/city-lod0-aukio.png",
+      "sha256": "e8a6c41f1a26778b02e6e248b99e4da734b03ee917d8a4b5de9eac0af2a21fb9",
+      "personallyViewed": true
+    },
+    {
+      "variant": "midpoint",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/midpoint/renders/city-lod0-beihai.png",
+      "sha256": "ecef4b5c239530f36c0f8342c66d847c497306629e742bc4c209ef118ff50631",
+      "personallyViewed": true
+    },
+    {
+      "variant": "midpoint",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/midpoint/renders/city-lod0-jingshan.png",
+      "sha256": "a35a5f58b9209a7a60f6a059b5c0fd30ad1473e16ce75b067fb0545ce3aa69a1",
+      "personallyViewed": true
+    },
+    {
+      "variant": "midpoint",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/midpoint/renders/city-lod0-hutong_ilma.png",
+      "sha256": "ecf4374fb385b5b3bef702af3870f017eef2d181fa477de7f444f52fb320ea31",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-moderate",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-moderate/renders/city-lod0-ilma.png",
+      "sha256": "ab99c7c26bf31c52120e97776195cf85c25a36a14e3b415a2de7f5a357fbe651",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-moderate",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-moderate/renders/city-lod0-taihedian.png",
+      "sha256": "c6d96df6f4d447a52a22a69822e6deec047307479ed97c8066399db9568cce1a",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-moderate",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-moderate/renders/city-lod0-aukio.png",
+      "sha256": "0031453eadb3800e590b4d97d21e2b66d6fd120de03478b6b4dbee7c1fd8db64",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-moderate",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-moderate/renders/city-lod0-beihai.png",
+      "sha256": "86d9a9565e58242d3ac1888d4de3fb80f472d5037bfadabff92c8701e442bb8b",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-moderate",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-moderate/renders/city-lod0-jingshan.png",
+      "sha256": "8aa69507804dceafcf7c30266ed714c4ba2d9fa803086de0d93b61bba8c554fc",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-moderate",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-moderate/renders/city-lod0-hutong_ilma.png",
+      "sha256": "a20108306841ede135d00d059731c2c6fbcf4e8465d3df41c6886477eb99cca4",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-strong",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-strong/renders/city-lod0-ilma.png",
+      "sha256": "7e46ac618e2c8570946bbed2ec63d4a52ed1fb5fb777df973d2b964b11713941",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-strong",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-strong/renders/city-lod0-taihedian.png",
+      "sha256": "b2c34f4a5a1fad0ddeaf84b7b7d231a2b8db267a2af3032433001f26674a7fe0",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-strong",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-strong/renders/city-lod0-aukio.png",
+      "sha256": "ee78064e6746ebc4c40fe90736189c6f50f9f30681e5659af22420c6ef1e9dab",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-strong",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-strong/renders/city-lod0-beihai.png",
+      "sha256": "54d44032f5b76e38c48627a91e792ecc02db59e380cc14c3b1e06e853629755a",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-strong",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-strong/renders/city-lod0-jingshan.png",
+      "sha256": "f1aca5419e28e37bc258a618c7c61c813a8f1aaebdfc03ea8386762b9098a6e4",
+      "personallyViewed": true
+    },
+    {
+      "variant": "green-strong",
+      "file": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-strong/renders/city-lod0-hutong_ilma.png",
+      "sha256": "c63c26ff3e6f993ab2a2fdaab69d900740645dbd12290c764c10a6005f795066",
+      "personallyViewed": true
+    }
+  ],
+  "variants": [
+    {
+      "variant": "midpoint",
+      "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/midpoint",
+      "all72CandidateAndBaseHashesVerified": true,
+      "all24ActualLOD0ImportPinsVerified": true,
+      "filePins": [
+        {
+          "file": "peking_0_0_lod0.glb",
+          "sha256": "215ccde1bcc96cfc6874860d793181202ca5bf6bcb450af84912a547758e812b",
+          "baseV3SHA256": "0f1415d1d237251fb93cc7bde487db4845cdafc1c534d89485c68f5dde11ca91"
+        },
+        {
+          "file": "peking_0_0_lod1.glb",
+          "sha256": "2f59aea4cb2f2adb4f513cd3c0542ba10798a11c6a5186fc1e278b5b45dc638a",
+          "baseV3SHA256": "000451f919ced76215fd3af944694eee308e9994ff2a9904ac023522450a71c2"
+        },
+        {
+          "file": "peking_0_0_lod2.glb",
+          "sha256": "ce47f36b3c5e55465d8ffba7361be13000f62f0415574e658749f9848dbcbcd3",
+          "baseV3SHA256": "e94219a3d99908b12beaf4e3804f6b29ddb654e646b7dc63b41873b2fcf54007"
+        },
+        {
+          "file": "peking_0_1_lod0.glb",
+          "sha256": "47edf2a7f483c38d8d0bb26ca86b6d7e2fca4c369e11f76f7c24d42e6dcc8526",
+          "baseV3SHA256": "864459537a014fb48fa8efd9bfb4b26badcbc65bff4f20a688d9c2246b02a5b4"
+        },
+        {
+          "file": "peking_0_1_lod1.glb",
+          "sha256": "923fad0b821388a9b67756d6a12e65baffd5759f2a53fb0fbd4e074cdccbd73f",
+          "baseV3SHA256": "fe63071dba06708a29084e62b756faac38e816d87f5a0b9f56814f2760edeff3"
+        },
+        {
+          "file": "peking_0_1_lod2.glb",
+          "sha256": "ca8732833ef0d0523c519c85c345153081c25fba29eebce4d9e198c18fe2b93a",
+          "baseV3SHA256": "7a86fd8e40127bb7216e72ea1c2c56dc939a9454afa1b6961c52400e18b7efb6"
+        },
+        {
+          "file": "peking_0_2_lod0.glb",
+          "sha256": "9c1d108ba9b7944d6e2a30efc2dc7539fecd49de5bdbf9c33104e646e60d935d",
+          "baseV3SHA256": "5dcd964bd24c4d0d310091bcfb93f01d45e1b19bb2ea0687304678203fde04eb"
+        },
+        {
+          "file": "peking_0_2_lod1.glb",
+          "sha256": "14be9df6078709cc52035976c2bc710319c10331f140afc6807ad2e5d79cf296",
+          "baseV3SHA256": "a5513581c510118b290b9b04cf2d931bbb2034923d339a5593eda057ea650ef6"
+        },
+        {
+          "file": "peking_0_2_lod2.glb",
+          "sha256": "4ac6f9e3daec49893cb72f8c6aafa7ffce745918365092933f89443a3aca605a",
+          "baseV3SHA256": "4dcc97da9346b8a92c021b56ca46a6947bbb5bb12139ab883ae3bce0d2802587"
+        },
+        {
+          "file": "peking_0_3_lod0.glb",
+          "sha256": "529efbe5dfe5c79822ff5d2436bb58f1296337c00b7bd23a54dff76e26ed3334",
+          "baseV3SHA256": "77da068b72834104df01255ad3bf037ce8e673206c9d0b020fd3bf3d26c76b4a"
+        },
+        {
+          "file": "peking_0_3_lod1.glb",
+          "sha256": "415185a70135d15aee279eed153e626d0c40b369fdb523c6ef263b6058021fc1",
+          "baseV3SHA256": "c4b72ccb6ed5e4feecf9ada555a7f5963ef051aa5b510da4683a87bf23108e14"
+        },
+        {
+          "file": "peking_0_3_lod2.glb",
+          "sha256": "6ed490301fa3d470e299f66c3b3da46c156bacab6c9d5ec54395b2b23f00fc89",
+          "baseV3SHA256": "4706259be1b3f5dd9e798714746a78c32b44ebefe2d1c7554c287cf41fcefc5a"
+        },
+        {
+          "file": "peking_0_4_lod0.glb",
+          "sha256": "d6635a2f685c4e5092f21d8d9f7754f2cbe5b1ec5e08e6f6e5a260154af57851",
+          "baseV3SHA256": "1438d9bf27ffbea0304cff8c4bfa6a171d544e706898486a2cfa819c0e0b3c7b"
+        },
+        {
+          "file": "peking_0_4_lod1.glb",
+          "sha256": "a7d20748b5e5d9f2b238afbef574822a40f241f2279d786ed652546c23237284",
+          "baseV3SHA256": "41dbc8d8a289921c1fc7b3766ac220041e8424270ccbd1afac754c3d50f2b4ce"
+        },
+        {
+          "file": "peking_0_4_lod2.glb",
+          "sha256": "5c6652e8444453e553757df7a06bf060eb48f33e08b0b8ba1f16b0393c522bb9",
+          "baseV3SHA256": "5f556a2640ac4d51eb4477cbfaec3b0046eb281407457c0532c473bd51711d58"
+        },
+        {
+          "file": "peking_0_5_lod0.glb",
+          "sha256": "79979e7808e77efb8a3c3ff0ca2de4d3d6c540e21ebf99cc67803ea27d16896a",
+          "baseV3SHA256": "14ba48b15003201d866ef3ca8f2e460eff1a4307810259a7e489226515939fdb"
+        },
+        {
+          "file": "peking_0_5_lod1.glb",
+          "sha256": "b45d0a3cf01c4e55e013b6e80833401bc97d53f7b66fa11a91160ea58fa02f64",
+          "baseV3SHA256": "6c6f5b46cdfe7108297536742140ef700ec8d5bbddb5490284f1928c4f34e3d3"
+        },
+        {
+          "file": "peking_0_5_lod2.glb",
+          "sha256": "68186f9a3fe2e8a56382d7fe5876f91f822556d0f5d37a73815587d049409549",
+          "baseV3SHA256": "defb6173eb5555f7e1d85eba2ce5f79dd375e211ecc4f2e3998ef08569457c72"
+        },
+        {
+          "file": "peking_1_0_lod0.glb",
+          "sha256": "d3a3cd47c5d6aa70141999a56d031f542fed60599e7e63406328af968e78403c",
+          "baseV3SHA256": "8c322d06b1eecb8c971213bda3bdb5e63efcbccd9473528f4a76ef6d416803db"
+        },
+        {
+          "file": "peking_1_0_lod1.glb",
+          "sha256": "c1c084b3ed1945977e966f2f3d374a51b1887bd0f1b82784084c9fa831d9186c",
+          "baseV3SHA256": "1311c15fa58a01496d94a8694bdfe2fe1a3b6a0f6ac0a35322ac0bc944077f6f"
+        },
+        {
+          "file": "peking_1_0_lod2.glb",
+          "sha256": "2f3eaab238056f7c529efe433ca4e3d445c1d5d587be924d9b7c11d5617cbcd4",
+          "baseV3SHA256": "25595748033bb7108a1687eb92b8959f3063d4b0637be4b3380784a27b6904ff"
+        },
+        {
+          "file": "peking_1_1_lod0.glb",
+          "sha256": "cf1b69c6ca2b90b707f6d1cfbc60109b667fd689c7b2b57f5e7b48fd13f6e32e",
+          "baseV3SHA256": "e63c93b6d8991da97233b3accbba7e81c0e7e4df53bd2422364509559679374f"
+        },
+        {
+          "file": "peking_1_1_lod1.glb",
+          "sha256": "2f6f8a13c9c3d1618865ea7fca791301113dde1445bdfe5fe96d0d78772584fb",
+          "baseV3SHA256": "f26a4763dfe941912498a03eb78477852222ffce691341778d6d4392c4380e0f"
+        },
+        {
+          "file": "peking_1_1_lod2.glb",
+          "sha256": "ab51ee80d312475e477eb08d3c98023605c9f01313db51d213c71fd3e3e1790e",
+          "baseV3SHA256": "db9c3a24ae5577edc175c2adc04a6684e44029207efab784150cda85f01df74b"
+        },
+        {
+          "file": "peking_1_2_lod0.glb",
+          "sha256": "876a1b8cc4dbc51aa48a391844cc7462234da00cbc68e19a68f99857184ebacf",
+          "baseV3SHA256": "a244d17aaf729e9e828af19ef4e0555c0d6b593a1c67b9b089e65de9c933902b"
+        },
+        {
+          "file": "peking_1_2_lod1.glb",
+          "sha256": "b8f7998be7a19dbdea490a9146534a6fd297c58bbd08dbf6f91be584bd022514",
+          "baseV3SHA256": "6b58bf87a135a4fa35f2c0dcedd9e9387d8fbc6629518d8380e2c7b931f80d0d"
+        },
+        {
+          "file": "peking_1_2_lod2.glb",
+          "sha256": "688a304efc90c91ab67d80987300c8b81354ae2e054b589f68a62fd66a178b76",
+          "baseV3SHA256": "3da70d3d7358ff060f2a031b32d43131c1429505d427271d1971d7d19228b415"
+        },
+        {
+          "file": "peking_1_3_lod0.glb",
+          "sha256": "074b4fcef0908b3b43807e0252ab6413c0a0202e7700552017648132ac03276c",
+          "baseV3SHA256": "9919aa5028f5f3babf8e78ab41d521a76cf0bf84958e249f4e8dc2f9f18661f5"
+        },
+        {
+          "file": "peking_1_3_lod1.glb",
+          "sha256": "e49af9505828edf589fe3b729e03a3ae9e666a025a3255c0dcafd29f0b1e8c63",
+          "baseV3SHA256": "c2ebea3f2be2c2c61930fef6777d53df206c37ccc03b6b6ba150d6e52194ce55"
+        },
+        {
+          "file": "peking_1_3_lod2.glb",
+          "sha256": "4f56502a63743e76e36a79c9312b0a17f2e8f1fc965fdfa5ca89a67aa59692a4",
+          "baseV3SHA256": "925554c4aba566bbe5670ad9252b52c3f9a366736354f0857cb505e620b3068e"
+        },
+        {
+          "file": "peking_1_4_lod0.glb",
+          "sha256": "489cc26ac288a23f41caa5e6890d050dc233f9efb57a5363b357d913f7d107a8",
+          "baseV3SHA256": "07083a9ae652d52bfd8704d3e41e0c623b5f99a21be22efac54a9ddc84b3a918"
+        },
+        {
+          "file": "peking_1_4_lod1.glb",
+          "sha256": "01fa796b03c6eeb0d8d32710604ed7f94aec1cdec0ab387a8a5a56d00951166d",
+          "baseV3SHA256": "8d45a12f43848628c02011aadd8feac277c3b8b5169d66b33865af8deaf3d754"
+        },
+        {
+          "file": "peking_1_4_lod2.glb",
+          "sha256": "f7af067e52577f099dd76798111770c27ee43f1261d90a674123c12ab703a5dd",
+          "baseV3SHA256": "7a74862ab62bcd6fd0e9573b458904a2024b97b9dd3a31fe852f0a1b0e165224"
+        },
+        {
+          "file": "peking_1_5_lod0.glb",
+          "sha256": "de5dba451789ff2cfdc89933ba904bbd00b16efcf4db2ea9f8db47d09352aa17",
+          "baseV3SHA256": "2d7351f3966efe8bcd3709445bb93735f362ba5afbaf515b1152f49fc1c8ea9a"
+        },
+        {
+          "file": "peking_1_5_lod1.glb",
+          "sha256": "df0f83e674be51393fcfcee4d1f7acb96ec9c2a66263e25fdb32c4f45d98b4a9",
+          "baseV3SHA256": "f3b390f54ee6574a17558968bcd6ca835e23d08e0aa1829a02cfa8f5980243ac"
+        },
+        {
+          "file": "peking_1_5_lod2.glb",
+          "sha256": "e5e5388bb3368e7c7337f0e364471b14b3a46da845b96f892855e547cdc769c7",
+          "baseV3SHA256": "2906c3cf12f30f5395a64ffa9d3761fab657bad8df1b4970f981cb61b7cbcf0f"
+        },
+        {
+          "file": "peking_2_0_lod0.glb",
+          "sha256": "eb9f36b7b3fd358a155a42d4f75953c6a4a05a1512aaaeb8fcde4c08b2fa795b",
+          "baseV3SHA256": "4db9f54a4deff9918eb9b5b4441cbaecb4013f5d6e484184efb84e715d3eab6d"
+        },
+        {
+          "file": "peking_2_0_lod1.glb",
+          "sha256": "fbac5cf700fbf48c2f169cd56a0b7c184c59e94b90b03c792bc1333ad3509517",
+          "baseV3SHA256": "1c6ddd410d89287fe1c4a09677119b0330fec8f788ead873ff109480714b43e0"
+        },
+        {
+          "file": "peking_2_0_lod2.glb",
+          "sha256": "fbb1a1b82f796b49ef0e1ba676fab0fa36c2e1f0a32aa12abd84796ee5bae8d3",
+          "baseV3SHA256": "55455b99b7aee7a685adadb7fa3bfd6e67e896d25557fdec31a6997cc8334e9c"
+        },
+        {
+          "file": "peking_2_1_lod0.glb",
+          "sha256": "0ce88d480ac2831085919dfbee824928df53d74bff2df289331093213a4ccbaa",
+          "baseV3SHA256": "0c0ff10c06d4b49972e2795f3304e954fa3903656df1b33c119f90e43dde4405"
+        },
+        {
+          "file": "peking_2_1_lod1.glb",
+          "sha256": "088739c863769be9845848cc481d2ca7b4c44cda6644980aad1e20439f874fb6",
+          "baseV3SHA256": "5de1ca84006184ceebb4b6334e1a2fa8bb950b9998dd82f7de48a7acc1e2d008"
+        },
+        {
+          "file": "peking_2_1_lod2.glb",
+          "sha256": "00647416227f6f54d13d034ccd6fc5e135ee1e246f2bcf3bf739b29da2f68ab0",
+          "baseV3SHA256": "3bb9b2c426cbdf9837c9507637d85cdfc96c606f7f5259068fd2bbcf240e3542"
+        },
+        {
+          "file": "peking_2_2_lod0.glb",
+          "sha256": "b7b4b02bb4d0c2f94e3b464c49da7340b6b3b0b83b0c6696d57bf9566fca2758",
+          "baseV3SHA256": "4d21a0075a994220dc4e2494f6d5a220cb9fdcb2b6e3f6d0de6bad8cb04aa7af"
+        },
+        {
+          "file": "peking_2_2_lod1.glb",
+          "sha256": "fa30da14b34db432b1d1987f5da6ca78d29405549189b81d1fb4d1f4cd8bfa0a",
+          "baseV3SHA256": "343d9babaae7c0b94259164017d711b0a49acf6897e56eb60d31bf014678ee54"
+        },
+        {
+          "file": "peking_2_2_lod2.glb",
+          "sha256": "52742e54788a3a14ca7f36f408c545cc8f600bcebada4a6e3d8af511507cb55e",
+          "baseV3SHA256": "a438f18d43527192e9541cccbdd316182e7235ce462094d222bb7ef08c666646"
+        },
+        {
+          "file": "peking_2_3_lod0.glb",
+          "sha256": "052a1ba36e61db49950ca64c4fa5e682dd671b8605affde09bd27e57df9297eb",
+          "baseV3SHA256": "3a2ee3eb49554dea57a01c12088961648dcc954f434a45d3b4087f3808e85d74"
+        },
+        {
+          "file": "peking_2_3_lod1.glb",
+          "sha256": "e812af2db0e1f1fcdd82f834d1d736a4fff1e2dc494645a64f585116ee60a49d",
+          "baseV3SHA256": "60952e0ef3c47374ceef060c95ab67bfae6f8bd52caa295ae50baea350b8c87d"
+        },
+        {
+          "file": "peking_2_3_lod2.glb",
+          "sha256": "88d821ab053ec46f7fbc1a4eeb2a513752d75c424c4a72a01a7afd0a7fecb101",
+          "baseV3SHA256": "cd1c2cefae61cb531a1efc7dbb7ea9af8ab1fd00519e88e81f31094f509c653b"
+        },
+        {
+          "file": "peking_2_4_lod0.glb",
+          "sha256": "c56ef3b77f0b918f26be5b36e0b1c3b9a82ff4e0407c773c682ea56ec732728d",
+          "baseV3SHA256": "e0191748f1bfd6ce004a958e8eea14db0a3459ebcc194ebc0a727facb4db53b5"
+        },
+        {
+          "file": "peking_2_4_lod1.glb",
+          "sha256": "f773a9336a1b5d5531f889a0d2769264958d7b73b62d3d181a79da7ca934fd30",
+          "baseV3SHA256": "afac94fc11dab2266945aeab22b42157478f6cc48d92732ce10ed5af49c7e05f"
+        },
+        {
+          "file": "peking_2_4_lod2.glb",
+          "sha256": "e4fdee0fac717b5a9ba4c3feae714c42122959ca7cf3e1bd27973783f5a1e413",
+          "baseV3SHA256": "5210e20f8d9e9a03da3cfa5ef870908abf1e5761eb98d305da83d138040613e6"
+        },
+        {
+          "file": "peking_2_5_lod0.glb",
+          "sha256": "6d9f1c29ed13d2248e69b9c6444bb706217a896f0de3c47221239c9b1bd49da6",
+          "baseV3SHA256": "30d104fe377d07f8e32c1a5f0ade3f520284c6fab7000aa0002f88fd1da8ba66"
+        },
+        {
+          "file": "peking_2_5_lod1.glb",
+          "sha256": "4d3e6c296905a4087b2a3c8ef2264d7a021251e2aa51cdfdcd107a2f44a816b2",
+          "baseV3SHA256": "554f35b4fa3736b2d29eca358887af153b9382e1cee05ea65bdb94e964c81655"
+        },
+        {
+          "file": "peking_2_5_lod2.glb",
+          "sha256": "5e6187c57dac0e2f8d3a147b18d93024fd5c42163e8c0e953e2187abb8ca49ac",
+          "baseV3SHA256": "4a269ea0ec0284b288d55fc3609c7bfd1d62529b9d5d7f0ecd267040d0d778f7"
+        },
+        {
+          "file": "peking_3_0_lod0.glb",
+          "sha256": "850ffacfa3579af084da30f355d678b833d3da6a60dbf120e0ee39b6e032208b",
+          "baseV3SHA256": "9b0758c429f806c83214659b7da9a5c3b58f7d9a38251d2d80fca8f5dbee2036"
+        },
+        {
+          "file": "peking_3_0_lod1.glb",
+          "sha256": "e924adba2f353d55b56965fb3279731f0f5ce289c60f330fe0e9aa9ee7621a1b",
+          "baseV3SHA256": "0bf14c99860da690e0a1afbae107c8ec49947a6f08e4ef4418ef8c40bed90e6f"
+        },
+        {
+          "file": "peking_3_0_lod2.glb",
+          "sha256": "94baaca5e433bab87ad1183859b0739088cbc044ace805a94aa0d7ef16af9582",
+          "baseV3SHA256": "bed0d35cb8e2318867f1175fc60d9158094402e8d757c30fa3331380e4ac868b"
+        },
+        {
+          "file": "peking_3_1_lod0.glb",
+          "sha256": "bd8a42d87b15749ed7909c11a42e53d62224eef851e95774db03bfe306994043",
+          "baseV3SHA256": "fb9e04dc5c12b2787ffa2844b9952e26a0a1857c706c08963d78022fba5f1a43"
+        },
+        {
+          "file": "peking_3_1_lod1.glb",
+          "sha256": "a2ad866d5bbdbcf1e02659774a1233c783a145765768e830422f1e7c5edf6646",
+          "baseV3SHA256": "93339b9efc88a4161a57ea41e2f861366fd18fc1b55d413adf9d4a1f948d5dfb"
+        },
+        {
+          "file": "peking_3_1_lod2.glb",
+          "sha256": "0ee06cc2fbf54c0c88ad9aaa600667891fdcf3ff53d65bd250d0254d798d15ce",
+          "baseV3SHA256": "259493d2d83c722c3e5f9280ba5ec5a2d064d28bf6e298f58a05f9f583ef230a"
+        },
+        {
+          "file": "peking_3_2_lod0.glb",
+          "sha256": "8d0071e54085b26ba6903815bcee93738a9e825d764799c21d31a3eeeceebfad",
+          "baseV3SHA256": "c1a3ee5004e91b48a0a48e4635b38cb783aa19a8e433e28c8adfed1c383d4f37"
+        },
+        {
+          "file": "peking_3_2_lod1.glb",
+          "sha256": "9d467268176d2229a94513055b9eb581bbece961b0d0449e89a11eb051b0072d",
+          "baseV3SHA256": "a99aafbf17454710b959a13da9010548c2aaebdedeed05ff62287a184f658bf1"
+        },
+        {
+          "file": "peking_3_2_lod2.glb",
+          "sha256": "7794af140cf1ee9d8674c8a3afc818d313238b4ce08cdc138c1b81c49f98bc33",
+          "baseV3SHA256": "9f6e675e8daf57c0136a8c6e4c983e7c89a14d62ac02385b93fcfbd26381d78d"
+        },
+        {
+          "file": "peking_3_3_lod0.glb",
+          "sha256": "503a3ef1cc61984339a93e644e82c596b2112fb67b842083e4f9a6b6bd71d1ce",
+          "baseV3SHA256": "787659b796d744cf385d74587ee7d180b373c1e20f900c7cf7db0519892cf177"
+        },
+        {
+          "file": "peking_3_3_lod1.glb",
+          "sha256": "ad1dcad331e1440f82aec918ca0e07c5c658e9b292526a52bb5aa4028e064ee2",
+          "baseV3SHA256": "b64d92c185d0ea46bc1aea1d21b1f79c5dc14ef073261f1f493d3758be629282"
+        },
+        {
+          "file": "peking_3_3_lod2.glb",
+          "sha256": "0428ac04e77706efaa648f0f00d54baa216045730e5b1c32eeeafa5e2a23f6d2",
+          "baseV3SHA256": "4bd14233ae5a66332f21720b752990bc033d5fe20beaa10957924550694ad6a4"
+        },
+        {
+          "file": "peking_3_4_lod0.glb",
+          "sha256": "6208b536fe89d65e95910ff78790e30d230fd934d2c1a51240338246abd43216",
+          "baseV3SHA256": "4f60bb98cc82084540d08391a2e1ac772729cf3467a4fdcee2ab6fc3c8d5be7e"
+        },
+        {
+          "file": "peking_3_4_lod1.glb",
+          "sha256": "fc4e356a82ab9418a7885c3db3e5e80dad7375308c5bb99825309c4183ae6883",
+          "baseV3SHA256": "2bd91fd6be02fa5d64b830862cb1ed465335647d9f8290e05d720542c8c49118"
+        },
+        {
+          "file": "peking_3_4_lod2.glb",
+          "sha256": "d9c03da488a5c5c79ed95750ef3a055b522bbed31948232929209321b84e6c5e",
+          "baseV3SHA256": "69386a1b0d63a175c0ec91896c2e28fd665f7cc34fa69d92cd849373ef1f28d2"
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "sha256": "03649403821334006c5aab3568018552833adb478c1ae6c9d08f3fe573aa2178",
+          "baseV3SHA256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0"
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "sha256": "4bccb7ca4702790bee50dbd09ee2b3fe56bf7f7b5c807a1fb444664deefa0e1c",
+          "baseV3SHA256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9"
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "sha256": "2fc7e11d22a53f332a4f378fcbf40166d7e7db7c3055fdc6ba31e02e490c062e",
+          "baseV3SHA256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9"
+        }
+      ],
+      "producerSavedReadbackStatus": "SAVED_ALL72_TREE_COLOR_ONLY_READBACK_PASS",
+      "producerGeometryAndBINClaimsNotIndependentlyReaudited": true,
+      "producerImmutableSixCameras": true,
+      "materialRGBFactor": [
+        0.7750000000000002,
+        0.7750000000000002,
+        0.7750000000000002
+      ],
+      "LOD0LinearAlbedoStatisticsNotGamePixels": {
+        "meanLinearRGB": [
+          0.14631446415080512,
+          0.1913980969100671,
+          0.09783759359154898
+        ],
+        "meanLinearY": 0.17505824824585098,
+        "meanRGBChromaRatio": 0.48882671682195317,
+        "notPredictedGamePixelRGB": true
+      }
+    },
+    {
+      "variant": "green-moderate",
+      "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-moderate",
+      "all72CandidateAndBaseHashesVerified": true,
+      "all24ActualLOD0ImportPinsVerified": true,
+      "filePins": [
+        {
+          "file": "peking_0_0_lod0.glb",
+          "sha256": "b239413491465dc51e81d999f29595e930967adbbe3d9f639c72cfc2291a017b",
+          "baseV3SHA256": "0f1415d1d237251fb93cc7bde487db4845cdafc1c534d89485c68f5dde11ca91"
+        },
+        {
+          "file": "peking_0_0_lod1.glb",
+          "sha256": "e4990f6f38360f50fbf2f123ac8e6a9d57b170e78153aa19780cc04c3d420da3",
+          "baseV3SHA256": "000451f919ced76215fd3af944694eee308e9994ff2a9904ac023522450a71c2"
+        },
+        {
+          "file": "peking_0_0_lod2.glb",
+          "sha256": "eaeb7de88dfe216839133b311e5a3fddcffcf5f3392eaa8c8f1caee2581f9ea6",
+          "baseV3SHA256": "e94219a3d99908b12beaf4e3804f6b29ddb654e646b7dc63b41873b2fcf54007"
+        },
+        {
+          "file": "peking_0_1_lod0.glb",
+          "sha256": "2cca4e24ab23dc5e161a5ce7c0223f8afd5752b898271d101cc78e4f5d1f999d",
+          "baseV3SHA256": "864459537a014fb48fa8efd9bfb4b26badcbc65bff4f20a688d9c2246b02a5b4"
+        },
+        {
+          "file": "peking_0_1_lod1.glb",
+          "sha256": "a7c057c893856955c8385b0589a2daad25307acdc49d13eb295b23c781b03005",
+          "baseV3SHA256": "fe63071dba06708a29084e62b756faac38e816d87f5a0b9f56814f2760edeff3"
+        },
+        {
+          "file": "peking_0_1_lod2.glb",
+          "sha256": "42f4a17b51e5ff62e013670dae8aeabd824633a703bef5726eda3c41a4e527bf",
+          "baseV3SHA256": "7a86fd8e40127bb7216e72ea1c2c56dc939a9454afa1b6961c52400e18b7efb6"
+        },
+        {
+          "file": "peking_0_2_lod0.glb",
+          "sha256": "9b1f0df5328bd9d15aa3196708e23058446a2b15fff3664a3952dd5dc1d89a33",
+          "baseV3SHA256": "5dcd964bd24c4d0d310091bcfb93f01d45e1b19bb2ea0687304678203fde04eb"
+        },
+        {
+          "file": "peking_0_2_lod1.glb",
+          "sha256": "e2c0c81ba9266c602bd1fa959ae2788542b10ae087064e28945c593fbfb86454",
+          "baseV3SHA256": "a5513581c510118b290b9b04cf2d931bbb2034923d339a5593eda057ea650ef6"
+        },
+        {
+          "file": "peking_0_2_lod2.glb",
+          "sha256": "56fe95eed91443c9aacce04addaad58529072a1ab34a17bd5067e270c7def5b2",
+          "baseV3SHA256": "4dcc97da9346b8a92c021b56ca46a6947bbb5bb12139ab883ae3bce0d2802587"
+        },
+        {
+          "file": "peking_0_3_lod0.glb",
+          "sha256": "5c99505270f0c8e3db353e4447ffc11ab80fe94ee8e3e2b22a699fd816f07a80",
+          "baseV3SHA256": "77da068b72834104df01255ad3bf037ce8e673206c9d0b020fd3bf3d26c76b4a"
+        },
+        {
+          "file": "peking_0_3_lod1.glb",
+          "sha256": "ca819100f89426d167f2eb6353379e676111567804cd9a442bde28d4a5b2457a",
+          "baseV3SHA256": "c4b72ccb6ed5e4feecf9ada555a7f5963ef051aa5b510da4683a87bf23108e14"
+        },
+        {
+          "file": "peking_0_3_lod2.glb",
+          "sha256": "71d150e7a565b6041c5e75e2248eafda4dba5e2623de6d80c9fbc21183f50512",
+          "baseV3SHA256": "4706259be1b3f5dd9e798714746a78c32b44ebefe2d1c7554c287cf41fcefc5a"
+        },
+        {
+          "file": "peking_0_4_lod0.glb",
+          "sha256": "6ba8921d15ce64c711741bcf16f8982b72572ba404f6461c672367895dfda6da",
+          "baseV3SHA256": "1438d9bf27ffbea0304cff8c4bfa6a171d544e706898486a2cfa819c0e0b3c7b"
+        },
+        {
+          "file": "peking_0_4_lod1.glb",
+          "sha256": "b2956da0a74cd6a88202e16228869d2b6d7e54f8d73e6ea5036b034c6d072bcc",
+          "baseV3SHA256": "41dbc8d8a289921c1fc7b3766ac220041e8424270ccbd1afac754c3d50f2b4ce"
+        },
+        {
+          "file": "peking_0_4_lod2.glb",
+          "sha256": "030820132fa889087b4e1f2da6ea07cd0d2b674252a16744e2c1bbe85f1cf3b9",
+          "baseV3SHA256": "5f556a2640ac4d51eb4477cbfaec3b0046eb281407457c0532c473bd51711d58"
+        },
+        {
+          "file": "peking_0_5_lod0.glb",
+          "sha256": "d431f344d79004027317230c43390ee3b16aee9d09e70e848c6fbce6033dda3d",
+          "baseV3SHA256": "14ba48b15003201d866ef3ca8f2e460eff1a4307810259a7e489226515939fdb"
+        },
+        {
+          "file": "peking_0_5_lod1.glb",
+          "sha256": "8b90825f484106dee878c0024224dd4a37fe1c9ec2262d78233f9ab0299dbcc6",
+          "baseV3SHA256": "6c6f5b46cdfe7108297536742140ef700ec8d5bbddb5490284f1928c4f34e3d3"
+        },
+        {
+          "file": "peking_0_5_lod2.glb",
+          "sha256": "eb87854e4e362231baf78cc8e60828661d98d16d612412bf83e9d0ef8062b182",
+          "baseV3SHA256": "defb6173eb5555f7e1d85eba2ce5f79dd375e211ecc4f2e3998ef08569457c72"
+        },
+        {
+          "file": "peking_1_0_lod0.glb",
+          "sha256": "53b91b76e9696e19067688af052059bd32810538370d3b8e9c4b3d2cda72f299",
+          "baseV3SHA256": "8c322d06b1eecb8c971213bda3bdb5e63efcbccd9473528f4a76ef6d416803db"
+        },
+        {
+          "file": "peking_1_0_lod1.glb",
+          "sha256": "bc391b12fb53a0e4d18a3d38773eae1c9d72df368db1b13192a8c9e6a0585783",
+          "baseV3SHA256": "1311c15fa58a01496d94a8694bdfe2fe1a3b6a0f6ac0a35322ac0bc944077f6f"
+        },
+        {
+          "file": "peking_1_0_lod2.glb",
+          "sha256": "2cef33fc3349cb27eb2e71d0dbb7053f3647e3c02867fb7cfec7f1d24ec78002",
+          "baseV3SHA256": "25595748033bb7108a1687eb92b8959f3063d4b0637be4b3380784a27b6904ff"
+        },
+        {
+          "file": "peking_1_1_lod0.glb",
+          "sha256": "158325f029f295cd24065d66bff9cd8e203fb531db33db5121797667a98b9d37",
+          "baseV3SHA256": "e63c93b6d8991da97233b3accbba7e81c0e7e4df53bd2422364509559679374f"
+        },
+        {
+          "file": "peking_1_1_lod1.glb",
+          "sha256": "b0b5b388dc3fc48b836505f39ff91785666885103ec0aa738bc87098e3ce8041",
+          "baseV3SHA256": "f26a4763dfe941912498a03eb78477852222ffce691341778d6d4392c4380e0f"
+        },
+        {
+          "file": "peking_1_1_lod2.glb",
+          "sha256": "ecdd41c9da92ca77f74fa0bd54c00dc2ec42ab4adee09511b400a34326c30574",
+          "baseV3SHA256": "db9c3a24ae5577edc175c2adc04a6684e44029207efab784150cda85f01df74b"
+        },
+        {
+          "file": "peking_1_2_lod0.glb",
+          "sha256": "e3be346d4244294ccf9ab4a65f694692fbbebd0508239b5d1f8c60114a272043",
+          "baseV3SHA256": "a244d17aaf729e9e828af19ef4e0555c0d6b593a1c67b9b089e65de9c933902b"
+        },
+        {
+          "file": "peking_1_2_lod1.glb",
+          "sha256": "136269619cbc2962f45264360dfc141431a914814fb471805989948fad0849a0",
+          "baseV3SHA256": "6b58bf87a135a4fa35f2c0dcedd9e9387d8fbc6629518d8380e2c7b931f80d0d"
+        },
+        {
+          "file": "peking_1_2_lod2.glb",
+          "sha256": "f4a99477b939c64245d0c6f6d50f4a15e5b17d3a86a5c7f129f2f659749c5ac5",
+          "baseV3SHA256": "3da70d3d7358ff060f2a031b32d43131c1429505d427271d1971d7d19228b415"
+        },
+        {
+          "file": "peking_1_3_lod0.glb",
+          "sha256": "93ca2ad7ae59d2fbdc9a737e97aa4e94b7ac6e7f315da90e25236942f2627b82",
+          "baseV3SHA256": "9919aa5028f5f3babf8e78ab41d521a76cf0bf84958e249f4e8dc2f9f18661f5"
+        },
+        {
+          "file": "peking_1_3_lod1.glb",
+          "sha256": "aec9c17e969a0e5f90b3ad54b1a00d59388da4ff424f1fda5fce2119a93fae7a",
+          "baseV3SHA256": "c2ebea3f2be2c2c61930fef6777d53df206c37ccc03b6b6ba150d6e52194ce55"
+        },
+        {
+          "file": "peking_1_3_lod2.glb",
+          "sha256": "5ea5a99d820824d8c8f46d5481ca424851517492dbe5a9faba849ef012c4c6fb",
+          "baseV3SHA256": "925554c4aba566bbe5670ad9252b52c3f9a366736354f0857cb505e620b3068e"
+        },
+        {
+          "file": "peking_1_4_lod0.glb",
+          "sha256": "f1c078781e4142de3630484b5fee8a6f6e642059860e8a0717d8ee78ebf24046",
+          "baseV3SHA256": "07083a9ae652d52bfd8704d3e41e0c623b5f99a21be22efac54a9ddc84b3a918"
+        },
+        {
+          "file": "peking_1_4_lod1.glb",
+          "sha256": "4786a9f1ec9dc11d4c2f681742e2d72d26419f1f560c1933b338776bb082879c",
+          "baseV3SHA256": "8d45a12f43848628c02011aadd8feac277c3b8b5169d66b33865af8deaf3d754"
+        },
+        {
+          "file": "peking_1_4_lod2.glb",
+          "sha256": "1817a2ed9bffe94024d3d55dedb55c99a09541596d0b1002c66190e76b66db2d",
+          "baseV3SHA256": "7a74862ab62bcd6fd0e9573b458904a2024b97b9dd3a31fe852f0a1b0e165224"
+        },
+        {
+          "file": "peking_1_5_lod0.glb",
+          "sha256": "9e92354161b66485970a6851441ab733bcdae0dcddee343cc1650f1705daf2c4",
+          "baseV3SHA256": "2d7351f3966efe8bcd3709445bb93735f362ba5afbaf515b1152f49fc1c8ea9a"
+        },
+        {
+          "file": "peking_1_5_lod1.glb",
+          "sha256": "1f0a1866a42a02f7034a74f421b8f5917500ce261f63cf547d9ccfc37239fab7",
+          "baseV3SHA256": "f3b390f54ee6574a17558968bcd6ca835e23d08e0aa1829a02cfa8f5980243ac"
+        },
+        {
+          "file": "peking_1_5_lod2.glb",
+          "sha256": "b06f4431cf90b67f49fa8cab6198998decaa775e9f8c97948b10e59ad5f39c97",
+          "baseV3SHA256": "2906c3cf12f30f5395a64ffa9d3761fab657bad8df1b4970f981cb61b7cbcf0f"
+        },
+        {
+          "file": "peking_2_0_lod0.glb",
+          "sha256": "10a41e23e4b023b17f07beb5050bcfa4159603b5aaa0613952e4cfcb85e18651",
+          "baseV3SHA256": "4db9f54a4deff9918eb9b5b4441cbaecb4013f5d6e484184efb84e715d3eab6d"
+        },
+        {
+          "file": "peking_2_0_lod1.glb",
+          "sha256": "8f0e48757a6b6647d1154181fc719908ca02f76916c79402927b14a85838f397",
+          "baseV3SHA256": "1c6ddd410d89287fe1c4a09677119b0330fec8f788ead873ff109480714b43e0"
+        },
+        {
+          "file": "peking_2_0_lod2.glb",
+          "sha256": "15caa6628844a9b921bb76c9e85f86cc3cf85382317a90fdf33e2e290f84a117",
+          "baseV3SHA256": "55455b99b7aee7a685adadb7fa3bfd6e67e896d25557fdec31a6997cc8334e9c"
+        },
+        {
+          "file": "peking_2_1_lod0.glb",
+          "sha256": "465e601e0fbfa0213d8fa1a5e1184e29a4c242add27ce28e35eb35e932c06987",
+          "baseV3SHA256": "0c0ff10c06d4b49972e2795f3304e954fa3903656df1b33c119f90e43dde4405"
+        },
+        {
+          "file": "peking_2_1_lod1.glb",
+          "sha256": "1c0c2fc799b353b9aa4e9a6b5a4ce598e15092e71ab18abedf6314fa0f04b0f1",
+          "baseV3SHA256": "5de1ca84006184ceebb4b6334e1a2fa8bb950b9998dd82f7de48a7acc1e2d008"
+        },
+        {
+          "file": "peking_2_1_lod2.glb",
+          "sha256": "876eb4c3107955d38551c55654255f04c060f338bbc33c61a66cfe0954862758",
+          "baseV3SHA256": "3bb9b2c426cbdf9837c9507637d85cdfc96c606f7f5259068fd2bbcf240e3542"
+        },
+        {
+          "file": "peking_2_2_lod0.glb",
+          "sha256": "7056c43e72191f78ae725f0d7d729686398a0e526774d3a73090f70dfb2d8f28",
+          "baseV3SHA256": "4d21a0075a994220dc4e2494f6d5a220cb9fdcb2b6e3f6d0de6bad8cb04aa7af"
+        },
+        {
+          "file": "peking_2_2_lod1.glb",
+          "sha256": "f264658060c612e28dcc647cc9b9d7f0d9c974b76248801f3c147a7bb5e47947",
+          "baseV3SHA256": "343d9babaae7c0b94259164017d711b0a49acf6897e56eb60d31bf014678ee54"
+        },
+        {
+          "file": "peking_2_2_lod2.glb",
+          "sha256": "bbeb0b28e234e9739c7b547947c8f21ac36c1033d8ba6dab222c062bd0d9faae",
+          "baseV3SHA256": "a438f18d43527192e9541cccbdd316182e7235ce462094d222bb7ef08c666646"
+        },
+        {
+          "file": "peking_2_3_lod0.glb",
+          "sha256": "54adf694bb9604fb94ae6268e771a5cb24bbb7b24b2d5833bf5c18fce31221bc",
+          "baseV3SHA256": "3a2ee3eb49554dea57a01c12088961648dcc954f434a45d3b4087f3808e85d74"
+        },
+        {
+          "file": "peking_2_3_lod1.glb",
+          "sha256": "a930e745f988db3a4299114b8b96fc64b950c313f13a4914a261692b729314f9",
+          "baseV3SHA256": "60952e0ef3c47374ceef060c95ab67bfae6f8bd52caa295ae50baea350b8c87d"
+        },
+        {
+          "file": "peking_2_3_lod2.glb",
+          "sha256": "806783feec1bca812fdcb22e35745c2a7e3fbf6678aecfa1f8a50d67e490ad45",
+          "baseV3SHA256": "cd1c2cefae61cb531a1efc7dbb7ea9af8ab1fd00519e88e81f31094f509c653b"
+        },
+        {
+          "file": "peking_2_4_lod0.glb",
+          "sha256": "b8c6bc45a480de8d076dbf5bb4e8acf1fa97d68d594101c23a29056247012c68",
+          "baseV3SHA256": "e0191748f1bfd6ce004a958e8eea14db0a3459ebcc194ebc0a727facb4db53b5"
+        },
+        {
+          "file": "peking_2_4_lod1.glb",
+          "sha256": "6691bbade08d7c481bb630ed79646abca899bc7c61f8cbf33389007c10a8b143",
+          "baseV3SHA256": "afac94fc11dab2266945aeab22b42157478f6cc48d92732ce10ed5af49c7e05f"
+        },
+        {
+          "file": "peking_2_4_lod2.glb",
+          "sha256": "2f48da39b8aa56cf59e643209477393dbf3060385f7e5771419aa1971ac0a1fa",
+          "baseV3SHA256": "5210e20f8d9e9a03da3cfa5ef870908abf1e5761eb98d305da83d138040613e6"
+        },
+        {
+          "file": "peking_2_5_lod0.glb",
+          "sha256": "2310f3695d209fbc04f63d5e9cefb1303b54d5d123d805b3779c63ab5a69a50d",
+          "baseV3SHA256": "30d104fe377d07f8e32c1a5f0ade3f520284c6fab7000aa0002f88fd1da8ba66"
+        },
+        {
+          "file": "peking_2_5_lod1.glb",
+          "sha256": "a597e5f51f0798031b9af70c658421cf8e52613c7e93f1042b1481fb445e7dc1",
+          "baseV3SHA256": "554f35b4fa3736b2d29eca358887af153b9382e1cee05ea65bdb94e964c81655"
+        },
+        {
+          "file": "peking_2_5_lod2.glb",
+          "sha256": "7de188d189308475bc038e0d0b172834182dfea873815211908754031b02ec01",
+          "baseV3SHA256": "4a269ea0ec0284b288d55fc3609c7bfd1d62529b9d5d7f0ecd267040d0d778f7"
+        },
+        {
+          "file": "peking_3_0_lod0.glb",
+          "sha256": "ecd57d1e9a078363c9da766a380e2d84f165f9ee0f3300af64e76728dc25f8bc",
+          "baseV3SHA256": "9b0758c429f806c83214659b7da9a5c3b58f7d9a38251d2d80fca8f5dbee2036"
+        },
+        {
+          "file": "peking_3_0_lod1.glb",
+          "sha256": "1e92d855c623819dc503998ee48fdb3ef31d3d2497dea47208c2a07eb8b812d5",
+          "baseV3SHA256": "0bf14c99860da690e0a1afbae107c8ec49947a6f08e4ef4418ef8c40bed90e6f"
+        },
+        {
+          "file": "peking_3_0_lod2.glb",
+          "sha256": "9911c6f8895069ac013a1f3716a8970e4ab699cb2c3c19ab0ea98eb96fe53b09",
+          "baseV3SHA256": "bed0d35cb8e2318867f1175fc60d9158094402e8d757c30fa3331380e4ac868b"
+        },
+        {
+          "file": "peking_3_1_lod0.glb",
+          "sha256": "5d0c0b0385b90b1f12d93b1e46c6436a0d0a850bc4901bf5bb69dd3fa6f0cab4",
+          "baseV3SHA256": "fb9e04dc5c12b2787ffa2844b9952e26a0a1857c706c08963d78022fba5f1a43"
+        },
+        {
+          "file": "peking_3_1_lod1.glb",
+          "sha256": "ea6988533631ff464208b603b987f78476c8a501fbcc5d0a23ca9ebec1f75f79",
+          "baseV3SHA256": "93339b9efc88a4161a57ea41e2f861366fd18fc1b55d413adf9d4a1f948d5dfb"
+        },
+        {
+          "file": "peking_3_1_lod2.glb",
+          "sha256": "ca88b5f401eb53b2c98f601a21953bc55fd70de1121120c962371662b960ebee",
+          "baseV3SHA256": "259493d2d83c722c3e5f9280ba5ec5a2d064d28bf6e298f58a05f9f583ef230a"
+        },
+        {
+          "file": "peking_3_2_lod0.glb",
+          "sha256": "56652c47458617326d21b4e357085fab2cd91fe6fe19e2da3d9593f1a9930f91",
+          "baseV3SHA256": "c1a3ee5004e91b48a0a48e4635b38cb783aa19a8e433e28c8adfed1c383d4f37"
+        },
+        {
+          "file": "peking_3_2_lod1.glb",
+          "sha256": "60803aa25ba1dc9da1aa2ce6f57b2a2e89e2614fb8a8e6f897144c16a45e7b57",
+          "baseV3SHA256": "a99aafbf17454710b959a13da9010548c2aaebdedeed05ff62287a184f658bf1"
+        },
+        {
+          "file": "peking_3_2_lod2.glb",
+          "sha256": "058beea454cb76d129346bf803198e36465ec23eb1001c89013573573f9c8d44",
+          "baseV3SHA256": "9f6e675e8daf57c0136a8c6e4c983e7c89a14d62ac02385b93fcfbd26381d78d"
+        },
+        {
+          "file": "peking_3_3_lod0.glb",
+          "sha256": "9099794d40b5ff1fa8af2e7af28faeeb8377c22ea4cdf2cc6910f5177541b7e2",
+          "baseV3SHA256": "787659b796d744cf385d74587ee7d180b373c1e20f900c7cf7db0519892cf177"
+        },
+        {
+          "file": "peking_3_3_lod1.glb",
+          "sha256": "fa153f213aafe772775cc100910e4ab02ec4c216702405d44bc6275f81feac45",
+          "baseV3SHA256": "b64d92c185d0ea46bc1aea1d21b1f79c5dc14ef073261f1f493d3758be629282"
+        },
+        {
+          "file": "peking_3_3_lod2.glb",
+          "sha256": "e0edcfdc450499198a0f206944659c3ce53c8bf3d833c572693b8741d599acee",
+          "baseV3SHA256": "4bd14233ae5a66332f21720b752990bc033d5fe20beaa10957924550694ad6a4"
+        },
+        {
+          "file": "peking_3_4_lod0.glb",
+          "sha256": "6b95254abdf3c7871a6c04b0f72bdac949dcab057da5f087d7a93f0034bee0b9",
+          "baseV3SHA256": "4f60bb98cc82084540d08391a2e1ac772729cf3467a4fdcee2ab6fc3c8d5be7e"
+        },
+        {
+          "file": "peking_3_4_lod1.glb",
+          "sha256": "7da8b01c0a3039c6210dbacde8aee34eea86924c11af7f9b1bef18b2dc5c6b38",
+          "baseV3SHA256": "2bd91fd6be02fa5d64b830862cb1ed465335647d9f8290e05d720542c8c49118"
+        },
+        {
+          "file": "peking_3_4_lod2.glb",
+          "sha256": "d3bad069fd5acca4e711f208715edd0e8ec002e9219d4c8fbc1986642fcc36d4",
+          "baseV3SHA256": "69386a1b0d63a175c0ec91896c2e28fd665f7cc34fa69d92cd849373ef1f28d2"
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "sha256": "6c55a56a50d4e2bd4c6cca6d63cdd4298b7b6aa7d76f2d987aca673d14774d36",
+          "baseV3SHA256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0"
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "sha256": "243c43abf5e0b4bb4b36b370cfad5edc511c7e0c3d26294212dda908580db36f",
+          "baseV3SHA256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9"
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "sha256": "fc3306fc77d6e508dff179e196bfc6a3d99b9422f5f81f0536313b8a43e8b471",
+          "baseV3SHA256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9"
+        }
+      ],
+      "producerSavedReadbackStatus": "SAVED_ALL72_TREE_COLOR_ONLY_READBACK_PASS",
+      "producerGeometryAndBINClaimsNotIndependentlyReaudited": true,
+      "producerImmutableSixCameras": true,
+      "materialRGBFactor": [
+        0.7103449104959425,
+        0.7991380243079353,
+        0.5919540920799521
+      ],
+      "LOD0LinearAlbedoStatisticsNotGamePixels": {
+        "meanLinearRGB": [
+          0.13410804508576185,
+          0.19735935099485125,
+          0.0747295017880938
+        ],
+        "meanLinearY": 0.17505824824585095,
+        "meanRGBChromaRatio": 0.6213531235718172,
+        "notPredictedGamePixelRGB": true
+      }
+    },
+    {
+      "variant": "green-strong",
+      "root": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-strong",
+      "all72CandidateAndBaseHashesVerified": true,
+      "all24ActualLOD0ImportPinsVerified": true,
+      "filePins": [
+        {
+          "file": "peking_0_0_lod0.glb",
+          "sha256": "b93d4b2493944e1e61d75b26334eaf106d1ad7f40d9033d5433a381ebbd7729c",
+          "baseV3SHA256": "0f1415d1d237251fb93cc7bde487db4845cdafc1c534d89485c68f5dde11ca91"
+        },
+        {
+          "file": "peking_0_0_lod1.glb",
+          "sha256": "e389e1cc3c151fba40c8fb6c32b12e55456144d814fcdb26adbf108772e7a41b",
+          "baseV3SHA256": "000451f919ced76215fd3af944694eee308e9994ff2a9904ac023522450a71c2"
+        },
+        {
+          "file": "peking_0_0_lod2.glb",
+          "sha256": "0902786e209651fba57352865d77b7ac75ee210eb3d8255edea519ed93030853",
+          "baseV3SHA256": "e94219a3d99908b12beaf4e3804f6b29ddb654e646b7dc63b41873b2fcf54007"
+        },
+        {
+          "file": "peking_0_1_lod0.glb",
+          "sha256": "b71b67e604378bb8b589a051c38241d553947f80a6a7fd59ed6d6190c21a6a47",
+          "baseV3SHA256": "864459537a014fb48fa8efd9bfb4b26badcbc65bff4f20a688d9c2246b02a5b4"
+        },
+        {
+          "file": "peking_0_1_lod1.glb",
+          "sha256": "f3a34dbe793a2587d33413bd4e005ebae6869274b3420ba0ff89325f6b2b778c",
+          "baseV3SHA256": "fe63071dba06708a29084e62b756faac38e816d87f5a0b9f56814f2760edeff3"
+        },
+        {
+          "file": "peking_0_1_lod2.glb",
+          "sha256": "60d356aabb4de46baddf77ab1808c3c2e8512cd74c8745feef1b46ba43bcfc4a",
+          "baseV3SHA256": "7a86fd8e40127bb7216e72ea1c2c56dc939a9454afa1b6961c52400e18b7efb6"
+        },
+        {
+          "file": "peking_0_2_lod0.glb",
+          "sha256": "f4a26ac3d0ac303d894099c05fa06eadc6216c2d7bdd617af84f6d1849fde197",
+          "baseV3SHA256": "5dcd964bd24c4d0d310091bcfb93f01d45e1b19bb2ea0687304678203fde04eb"
+        },
+        {
+          "file": "peking_0_2_lod1.glb",
+          "sha256": "d4597d910edb22be2c97d350c02e12600e70913e626c54c99cfa2fdf1f0e9f89",
+          "baseV3SHA256": "a5513581c510118b290b9b04cf2d931bbb2034923d339a5593eda057ea650ef6"
+        },
+        {
+          "file": "peking_0_2_lod2.glb",
+          "sha256": "710ac8b6ddf6308a731d3f1f0c8b2dfa8df032045b3423cf7a42d5661c3c03cf",
+          "baseV3SHA256": "4dcc97da9346b8a92c021b56ca46a6947bbb5bb12139ab883ae3bce0d2802587"
+        },
+        {
+          "file": "peking_0_3_lod0.glb",
+          "sha256": "f2ccde8f21c09c1d58f2571a93aebd806d1407801bededacba264efac7f515c7",
+          "baseV3SHA256": "77da068b72834104df01255ad3bf037ce8e673206c9d0b020fd3bf3d26c76b4a"
+        },
+        {
+          "file": "peking_0_3_lod1.glb",
+          "sha256": "c200e6db70ff5b31d44820b7f726cfc4e6fb9d4e3700d544aeead4a09b4048c8",
+          "baseV3SHA256": "c4b72ccb6ed5e4feecf9ada555a7f5963ef051aa5b510da4683a87bf23108e14"
+        },
+        {
+          "file": "peking_0_3_lod2.glb",
+          "sha256": "796e597c2b54f347bfb33d92a4a0154e62614b638c3a95d5b2b27a9c5e8afbb1",
+          "baseV3SHA256": "4706259be1b3f5dd9e798714746a78c32b44ebefe2d1c7554c287cf41fcefc5a"
+        },
+        {
+          "file": "peking_0_4_lod0.glb",
+          "sha256": "1d47a8d0182858664f0944b8d6e718d4b66ce6575004e4abdfed3938c3a42e16",
+          "baseV3SHA256": "1438d9bf27ffbea0304cff8c4bfa6a171d544e706898486a2cfa819c0e0b3c7b"
+        },
+        {
+          "file": "peking_0_4_lod1.glb",
+          "sha256": "a266a55955215f0fbbb9cc4cc0e5b8eb97a6e35e95d5db11cc2e1cf37c8c73ef",
+          "baseV3SHA256": "41dbc8d8a289921c1fc7b3766ac220041e8424270ccbd1afac754c3d50f2b4ce"
+        },
+        {
+          "file": "peking_0_4_lod2.glb",
+          "sha256": "a85e628c167b7b4015af1b1f4fcdb07066bede552d4d0ee9564dd1b19bf3d08f",
+          "baseV3SHA256": "5f556a2640ac4d51eb4477cbfaec3b0046eb281407457c0532c473bd51711d58"
+        },
+        {
+          "file": "peking_0_5_lod0.glb",
+          "sha256": "6cda23cd2f0f67312d47f5eb34be2ea1951d1835f6d39d244731d6780fb79ce9",
+          "baseV3SHA256": "14ba48b15003201d866ef3ca8f2e460eff1a4307810259a7e489226515939fdb"
+        },
+        {
+          "file": "peking_0_5_lod1.glb",
+          "sha256": "d37c68aa2df7ce470d28f4c330895aba890be0782d46236a2cb02ba804c23aeb",
+          "baseV3SHA256": "6c6f5b46cdfe7108297536742140ef700ec8d5bbddb5490284f1928c4f34e3d3"
+        },
+        {
+          "file": "peking_0_5_lod2.glb",
+          "sha256": "5cdaf3f6eeb4f86eb5ff9fbe944bbabced187cbf9a4ec5c236265bff4e4e8b87",
+          "baseV3SHA256": "defb6173eb5555f7e1d85eba2ce5f79dd375e211ecc4f2e3998ef08569457c72"
+        },
+        {
+          "file": "peking_1_0_lod0.glb",
+          "sha256": "60ed926ed7974dc7832a40f512fc32021cc84590ac51d0d3fdf253a69dd0eac0",
+          "baseV3SHA256": "8c322d06b1eecb8c971213bda3bdb5e63efcbccd9473528f4a76ef6d416803db"
+        },
+        {
+          "file": "peking_1_0_lod1.glb",
+          "sha256": "3788fd3d1c4f444ca46187243b4fd69c8269f6c28f58d77c94482dc7bd687fb6",
+          "baseV3SHA256": "1311c15fa58a01496d94a8694bdfe2fe1a3b6a0f6ac0a35322ac0bc944077f6f"
+        },
+        {
+          "file": "peking_1_0_lod2.glb",
+          "sha256": "65aed7fef9616552d015831b60a72be05c64cd76b7b34660ea11e773da2c6dfe",
+          "baseV3SHA256": "25595748033bb7108a1687eb92b8959f3063d4b0637be4b3380784a27b6904ff"
+        },
+        {
+          "file": "peking_1_1_lod0.glb",
+          "sha256": "4636ae6a99275a723fd7a2054144010aa95122a40de9fce3d9aa485386097a8c",
+          "baseV3SHA256": "e63c93b6d8991da97233b3accbba7e81c0e7e4df53bd2422364509559679374f"
+        },
+        {
+          "file": "peking_1_1_lod1.glb",
+          "sha256": "378197dc37b86921e5a211952c20ac3c7e65540b31e206d73de69a3e4308b7b4",
+          "baseV3SHA256": "f26a4763dfe941912498a03eb78477852222ffce691341778d6d4392c4380e0f"
+        },
+        {
+          "file": "peking_1_1_lod2.glb",
+          "sha256": "f4af9e819c60714de441933ce60060cc1927bd48dd897561821dfc76c582ef10",
+          "baseV3SHA256": "db9c3a24ae5577edc175c2adc04a6684e44029207efab784150cda85f01df74b"
+        },
+        {
+          "file": "peking_1_2_lod0.glb",
+          "sha256": "f4e4b8641779e45626d227c8cdc90a3d785c60ca42bfe486f468be9cc7755dfd",
+          "baseV3SHA256": "a244d17aaf729e9e828af19ef4e0555c0d6b593a1c67b9b089e65de9c933902b"
+        },
+        {
+          "file": "peking_1_2_lod1.glb",
+          "sha256": "575833cd5f2cb69adee79a44ca079f683026ce54c12dbffe417e61c2b7f039c2",
+          "baseV3SHA256": "6b58bf87a135a4fa35f2c0dcedd9e9387d8fbc6629518d8380e2c7b931f80d0d"
+        },
+        {
+          "file": "peking_1_2_lod2.glb",
+          "sha256": "62f048bf04ce387d32c0302b30989d80ae3f69bbaeb93f8392d56198210ee7b4",
+          "baseV3SHA256": "3da70d3d7358ff060f2a031b32d43131c1429505d427271d1971d7d19228b415"
+        },
+        {
+          "file": "peking_1_3_lod0.glb",
+          "sha256": "91d854bea1b83083877c7fa799f806724c27370745b001054279ce909fcb7038",
+          "baseV3SHA256": "9919aa5028f5f3babf8e78ab41d521a76cf0bf84958e249f4e8dc2f9f18661f5"
+        },
+        {
+          "file": "peking_1_3_lod1.glb",
+          "sha256": "5f33a373c9a7a64c5a72c43d217e6a982b53cb74a7d128934de5ab63a7a91f05",
+          "baseV3SHA256": "c2ebea3f2be2c2c61930fef6777d53df206c37ccc03b6b6ba150d6e52194ce55"
+        },
+        {
+          "file": "peking_1_3_lod2.glb",
+          "sha256": "60e0f98cf7dfb9d6e0e094e21eaaf1edf5e12ea72bdef953bf36b81cd4c1d614",
+          "baseV3SHA256": "925554c4aba566bbe5670ad9252b52c3f9a366736354f0857cb505e620b3068e"
+        },
+        {
+          "file": "peking_1_4_lod0.glb",
+          "sha256": "afe802441a8b0f1ae1ea0f6d90d60318d59e876268081cd8acb0bcbdead1f9ce",
+          "baseV3SHA256": "07083a9ae652d52bfd8704d3e41e0c623b5f99a21be22efac54a9ddc84b3a918"
+        },
+        {
+          "file": "peking_1_4_lod1.glb",
+          "sha256": "5e72f12d7fcd9bfcc846f609aac9493613eb9d37e602551a3ccc8831d5965b2c",
+          "baseV3SHA256": "8d45a12f43848628c02011aadd8feac277c3b8b5169d66b33865af8deaf3d754"
+        },
+        {
+          "file": "peking_1_4_lod2.glb",
+          "sha256": "06b788c2315813e82b2604b51ec6a329aa620ea898dec8c417f85e2e69f57f27",
+          "baseV3SHA256": "7a74862ab62bcd6fd0e9573b458904a2024b97b9dd3a31fe852f0a1b0e165224"
+        },
+        {
+          "file": "peking_1_5_lod0.glb",
+          "sha256": "d8e9f7e28044b8dda4a35b6725f998c9be9d40bd21b9ff70ba730417db60a68a",
+          "baseV3SHA256": "2d7351f3966efe8bcd3709445bb93735f362ba5afbaf515b1152f49fc1c8ea9a"
+        },
+        {
+          "file": "peking_1_5_lod1.glb",
+          "sha256": "3ee88fadd4133be24d432eba9f11f9db6e58f7d839e892030f2b9067bbbdacb7",
+          "baseV3SHA256": "f3b390f54ee6574a17558968bcd6ca835e23d08e0aa1829a02cfa8f5980243ac"
+        },
+        {
+          "file": "peking_1_5_lod2.glb",
+          "sha256": "cd8b78392822646ed5ce418e6641028d6091757ce1f1d4929ad0e846b6f2700c",
+          "baseV3SHA256": "2906c3cf12f30f5395a64ffa9d3761fab657bad8df1b4970f981cb61b7cbcf0f"
+        },
+        {
+          "file": "peking_2_0_lod0.glb",
+          "sha256": "4a8ac08edb60eabce4da2b1dc4496e9d7a8bd8d1860572141cc4f51a03b56614",
+          "baseV3SHA256": "4db9f54a4deff9918eb9b5b4441cbaecb4013f5d6e484184efb84e715d3eab6d"
+        },
+        {
+          "file": "peking_2_0_lod1.glb",
+          "sha256": "2243be22166806c28e63e298bdbd1f52f9b217dfea44ae8c863d5fc737fee393",
+          "baseV3SHA256": "1c6ddd410d89287fe1c4a09677119b0330fec8f788ead873ff109480714b43e0"
+        },
+        {
+          "file": "peking_2_0_lod2.glb",
+          "sha256": "9f47c6d4ee759071e825fa3f6c7ebb8f37e5736bd4fc75f3b2d5566c5dd5c83a",
+          "baseV3SHA256": "55455b99b7aee7a685adadb7fa3bfd6e67e896d25557fdec31a6997cc8334e9c"
+        },
+        {
+          "file": "peking_2_1_lod0.glb",
+          "sha256": "8bba528d752e5af44f11b150510e69c78841fbdc6d3a669bdd88d3eaabb16883",
+          "baseV3SHA256": "0c0ff10c06d4b49972e2795f3304e954fa3903656df1b33c119f90e43dde4405"
+        },
+        {
+          "file": "peking_2_1_lod1.glb",
+          "sha256": "10df7eed7fe48857f6860818718bdfc1e078bfd40c36dbb14c10c03a405aac61",
+          "baseV3SHA256": "5de1ca84006184ceebb4b6334e1a2fa8bb950b9998dd82f7de48a7acc1e2d008"
+        },
+        {
+          "file": "peking_2_1_lod2.glb",
+          "sha256": "24befd7b59c0b6e740d26af23b66c329c23287737543477ec4800ada39674b0a",
+          "baseV3SHA256": "3bb9b2c426cbdf9837c9507637d85cdfc96c606f7f5259068fd2bbcf240e3542"
+        },
+        {
+          "file": "peking_2_2_lod0.glb",
+          "sha256": "5d3bc3479d27b0c6c054a01dcf5242b2608fe943e2c3f6c2fbdb740e53b104eb",
+          "baseV3SHA256": "4d21a0075a994220dc4e2494f6d5a220cb9fdcb2b6e3f6d0de6bad8cb04aa7af"
+        },
+        {
+          "file": "peking_2_2_lod1.glb",
+          "sha256": "7f1e59cfacfff038fe5181f2d968ed3849bb475f50b8b4749478ecbc084934e3",
+          "baseV3SHA256": "343d9babaae7c0b94259164017d711b0a49acf6897e56eb60d31bf014678ee54"
+        },
+        {
+          "file": "peking_2_2_lod2.glb",
+          "sha256": "c17c95a9b1963b0d009d400be2172e7f8e06891e19d95bec78c123f04a1fc1ec",
+          "baseV3SHA256": "a438f18d43527192e9541cccbdd316182e7235ce462094d222bb7ef08c666646"
+        },
+        {
+          "file": "peking_2_3_lod0.glb",
+          "sha256": "70ac4bf4b62d60f072f6698356f88375d61697170d74b619f11856102cba74c1",
+          "baseV3SHA256": "3a2ee3eb49554dea57a01c12088961648dcc954f434a45d3b4087f3808e85d74"
+        },
+        {
+          "file": "peking_2_3_lod1.glb",
+          "sha256": "cd202ef2548f932ce2f5160056fbe46cb7e461dd409f799ab699e99abea21fb3",
+          "baseV3SHA256": "60952e0ef3c47374ceef060c95ab67bfae6f8bd52caa295ae50baea350b8c87d"
+        },
+        {
+          "file": "peking_2_3_lod2.glb",
+          "sha256": "e0fdf7b844140322016312e39d7024bfc52a6392550d88b473a5e73831b89d10",
+          "baseV3SHA256": "cd1c2cefae61cb531a1efc7dbb7ea9af8ab1fd00519e88e81f31094f509c653b"
+        },
+        {
+          "file": "peking_2_4_lod0.glb",
+          "sha256": "993ccb3df51a1289d96fe6e15cd2372f2cf416d83c95dac91b5db22dabdc7e81",
+          "baseV3SHA256": "e0191748f1bfd6ce004a958e8eea14db0a3459ebcc194ebc0a727facb4db53b5"
+        },
+        {
+          "file": "peking_2_4_lod1.glb",
+          "sha256": "89e2be5bd7a80a1dcac487fd2556fde28467ce9daab0230f0bc63812b7091472",
+          "baseV3SHA256": "afac94fc11dab2266945aeab22b42157478f6cc48d92732ce10ed5af49c7e05f"
+        },
+        {
+          "file": "peking_2_4_lod2.glb",
+          "sha256": "470da9fb9cd10731df495d91fa79bf5d3cb14ef68bc4d8f34e3aad856a539c9b",
+          "baseV3SHA256": "5210e20f8d9e9a03da3cfa5ef870908abf1e5761eb98d305da83d138040613e6"
+        },
+        {
+          "file": "peking_2_5_lod0.glb",
+          "sha256": "b490b8938ad1e8b0845d0c27f55131486781f851a28878c6fe87181f8e53d423",
+          "baseV3SHA256": "30d104fe377d07f8e32c1a5f0ade3f520284c6fab7000aa0002f88fd1da8ba66"
+        },
+        {
+          "file": "peking_2_5_lod1.glb",
+          "sha256": "576a6d4ff7260b2be696e0cca89e811616c86f8be3238526bad627d7c7736952",
+          "baseV3SHA256": "554f35b4fa3736b2d29eca358887af153b9382e1cee05ea65bdb94e964c81655"
+        },
+        {
+          "file": "peking_2_5_lod2.glb",
+          "sha256": "f8477988ffc01507d8612a0bc15314a8932ea949d2429cbb81210ced08b408c6",
+          "baseV3SHA256": "4a269ea0ec0284b288d55fc3609c7bfd1d62529b9d5d7f0ecd267040d0d778f7"
+        },
+        {
+          "file": "peking_3_0_lod0.glb",
+          "sha256": "b32ddd2d582bf0ca87c4e7acffecd8ccc2fa746a2aef15786837299379aef3d8",
+          "baseV3SHA256": "9b0758c429f806c83214659b7da9a5c3b58f7d9a38251d2d80fca8f5dbee2036"
+        },
+        {
+          "file": "peking_3_0_lod1.glb",
+          "sha256": "2327dfff4acb7af14375b9aac0a92f5cc10de717f5ee6e021422f856a5c653be",
+          "baseV3SHA256": "0bf14c99860da690e0a1afbae107c8ec49947a6f08e4ef4418ef8c40bed90e6f"
+        },
+        {
+          "file": "peking_3_0_lod2.glb",
+          "sha256": "4f2fbceadc919eaace404798fccd23dcb16fbfaa638c1879013c45ad3df080d2",
+          "baseV3SHA256": "bed0d35cb8e2318867f1175fc60d9158094402e8d757c30fa3331380e4ac868b"
+        },
+        {
+          "file": "peking_3_1_lod0.glb",
+          "sha256": "ecf7ae7b236ab0158fa0701fea14c177a49ff5d4a540423c10aecd5c89569a0f",
+          "baseV3SHA256": "fb9e04dc5c12b2787ffa2844b9952e26a0a1857c706c08963d78022fba5f1a43"
+        },
+        {
+          "file": "peking_3_1_lod1.glb",
+          "sha256": "04a3fc82d1c3b3170ba85c7d7b0ea2627aff95174bf97285650067d843732850",
+          "baseV3SHA256": "93339b9efc88a4161a57ea41e2f861366fd18fc1b55d413adf9d4a1f948d5dfb"
+        },
+        {
+          "file": "peking_3_1_lod2.glb",
+          "sha256": "b17cd34835f3e8983a8b1bc956ce244e0dc6c572458cd9d70d1e00ec6580f8bb",
+          "baseV3SHA256": "259493d2d83c722c3e5f9280ba5ec5a2d064d28bf6e298f58a05f9f583ef230a"
+        },
+        {
+          "file": "peking_3_2_lod0.glb",
+          "sha256": "b8f0f94259a87fac5961cc1f8b844602559790340aed3c7c95bc7fb408d7ef82",
+          "baseV3SHA256": "c1a3ee5004e91b48a0a48e4635b38cb783aa19a8e433e28c8adfed1c383d4f37"
+        },
+        {
+          "file": "peking_3_2_lod1.glb",
+          "sha256": "7473a20692336316f48c4986910eaf6ff6069cb96850cc2e26bac8f7ea1043cb",
+          "baseV3SHA256": "a99aafbf17454710b959a13da9010548c2aaebdedeed05ff62287a184f658bf1"
+        },
+        {
+          "file": "peking_3_2_lod2.glb",
+          "sha256": "5dd3ca8217ead348a0f6e541aa5dc5ef966811e107d6ec2da424013136a89721",
+          "baseV3SHA256": "9f6e675e8daf57c0136a8c6e4c983e7c89a14d62ac02385b93fcfbd26381d78d"
+        },
+        {
+          "file": "peking_3_3_lod0.glb",
+          "sha256": "1b3c60e843f44a7cf7958fce4d9310fc5c0841c857eae428fb51fe9059b5151f",
+          "baseV3SHA256": "787659b796d744cf385d74587ee7d180b373c1e20f900c7cf7db0519892cf177"
+        },
+        {
+          "file": "peking_3_3_lod1.glb",
+          "sha256": "cc336c9a72144ea73c7e7c86963a4331aa43aff4ebef06c0dd579f3e4e1c2d0d",
+          "baseV3SHA256": "b64d92c185d0ea46bc1aea1d21b1f79c5dc14ef073261f1f493d3758be629282"
+        },
+        {
+          "file": "peking_3_3_lod2.glb",
+          "sha256": "e870355e1e50ece71ec94f0b8e0242abdc7ed47b267aa73275d52eccf5c5ef7b",
+          "baseV3SHA256": "4bd14233ae5a66332f21720b752990bc033d5fe20beaa10957924550694ad6a4"
+        },
+        {
+          "file": "peking_3_4_lod0.glb",
+          "sha256": "396d84ce92a19c88d92fc32377ec8d54cf47e98f20c4feb5b6c7d9d4d70db042",
+          "baseV3SHA256": "4f60bb98cc82084540d08391a2e1ac772729cf3467a4fdcee2ab6fc3c8d5be7e"
+        },
+        {
+          "file": "peking_3_4_lod1.glb",
+          "sha256": "9e87835fb86849498e13defd71ea45e210c619705795178f6d017f4bc1eebba6",
+          "baseV3SHA256": "2bd91fd6be02fa5d64b830862cb1ed465335647d9f8290e05d720542c8c49118"
+        },
+        {
+          "file": "peking_3_4_lod2.glb",
+          "sha256": "179075e10b2aecb105df3dd2fb07f6e31152e60509cf24fa5263427a806b2f62",
+          "baseV3SHA256": "69386a1b0d63a175c0ec91896c2e28fd665f7cc34fa69d92cd849373ef1f28d2"
+        },
+        {
+          "file": "peking_3_5_lod0.glb",
+          "sha256": "9277923d4721b697dacfe8a01560fc7edddbfc58d607e07e89935129f9d6000f",
+          "baseV3SHA256": "2bdbe7b48d319e779eabe834dd9e1a9ad9a2bc978df2cc0c7cf319c559558ed0"
+        },
+        {
+          "file": "peking_3_5_lod1.glb",
+          "sha256": "f1f005610b3ab04ec4a3f973e6bb9df23b55fdf55bfdce4cd9b89de469768700",
+          "baseV3SHA256": "76c178525a5fc531c3919776a8bf45c7dc6a67d2a5e8f9d630c17f3b629f87e9"
+        },
+        {
+          "file": "peking_3_5_lod2.glb",
+          "sha256": "887ed88ff3534a44bfaa09d175c7bac8388e11612f6a836f0ca2fc6744b59871",
+          "baseV3SHA256": "1af8498a817d9f8a97a3c4fa033c31d4be686738051ea8d5b884198ff2218de9"
+        }
+      ],
+      "producerSavedReadbackStatus": "SAVED_ALL72_TREE_COLOR_ONLY_READBACK_PASS",
+      "producerGeometryAndBINClaimsNotIndependentlyReaudited": true,
+      "producerImmutableSixCameras": true,
+      "materialRGBFactor": [
+        0.6278997391577016,
+        0.8241184076444833,
+        0.47092480436827616
+      ],
+      "LOD0LinearAlbedoStatisticsNotGamePixels": {
+        "meanLinearRGB": [
+          0.1185429856455347,
+          0.20352863851833414,
+          0.0594505156412427
+        ],
+        "meanLinearY": 0.17505824824585098,
+        "meanRGBChromaRatio": 0.7079009810411161,
+        "notPredictedGamePixelRGB": true
+      }
+    }
+  ],
+  "viewFindingsFI": {
+    "hutong_ilma": "Moderate lisää näkyvää vihreää latvusten vaaleille pinnoille ja säilyttää vaihtelun. Strong korostaa vaaleiden latvuskerrosten vihreää enemmän; midpoint jää hillitymmäksi harmaanvihreäksi.",
+    "jingshan": "Suuri metsäalue näyttää moderate-versiossa V3:a vihreämmältä ja selkeämmältä. Strong tekee laajasta latvusmassasta voimakkaammin ja tasaisemmin vihreän; moderate on tasapainoisempi. Syvät varjot ja tasokorttien kerroksellisuus jäävät kaikissa.",
+    "beihai": "Moderate vahvistaa saaren kasvillisuuden vihreää ilman että se hallitsee punaisten rakennusten ja valkoisen tornin suhdetta yhtä paljon kuin strong. Strong on käyttökelpoinen voimakkuusvertailu, ei todettu tekninen virhe.",
+    "ilma": "Vihreiden haarojen muutos näkyy puistoissa ja puuriveissä laajassakin kuvassa. Moderate sopii hillitymmin harmaisiin kortteleihin ja kultakattoihin; strong nostaa puualueita enemmän esille.",
+    "taihedian": "Palatsin kattokulta, rakennusmassat ja etualan maa pysyvät silmämääräisesti samoina. Sävyero näkyy erityisesti taustan metsässä. Tämä kuva ei osoita pelin illan kattosävyn korjausta.",
+    "aukio": "Vihreät haarat erottavat aukion reunan puurivit hieman paremmin. Moderate säilyttää aukion ja portin visuaalisen pääosan. Sommittelussa tai maassa ei näy uutta poikkeamaa."
+  },
+  "renderedPixelROIs": [
+    {
+      "view": "hutong_ilma",
+      "box": [
+        916,
+        399,
+        941,
+        415
+      ],
+      "description": "Valoisahko latvuksen sisäalue tien vieressä; ei puun lähdetunniste.",
+      "meanRenderedRGB8": {
+        "V3": [
+          31.3275,
+          42.175,
+          16.6175
+        ],
+        "midpoint": [
+          40.2325,
+          52.59,
+          24.075
+        ],
+        "green-moderate": [
+          40.34,
+          56.575,
+          18.0525
+        ],
+        "green-strong": [
+          38.42,
+          59.75,
+          13.985
+        ]
+      }
+    },
+    {
+      "view": "jingshan",
+      "box": [
+        50,
+        570,
+        550,
+        800
+      ],
+      "description": "Sekoitettu metsäalue; mukana varjoja ja aukkoja, ei puhdas albedo.",
+      "meanRenderedRGB8": {
+        "V3": [
+          20.7994,
+          27.1648,
+          11.7948
+        ],
+        "midpoint": [
+          26.6266,
+          34.5121,
+          15.6031
+        ],
+        "green-moderate": [
+          26.3694,
+          36.9617,
+          12.5314
+        ],
+        "green-strong": [
+          24.8744,
+          38.8749,
+          10.4204
+        ]
+      }
+    }
+  ],
+  "roiLimits": "Original1600x900 pixels [x0,y0,x1,y1), no files cropped or edited. Rendered RGB8, not linear albedo or game screenshots; broad forestROI contains mixed surfaces.",
+  "choiceReasons": [
+    "Both green candidates visibly improve green chroma againstV3 in these renders.",
+    "Moderate provides a clear but restrained green increase with more balanced overall forest/building relationship.",
+    "Strong emphasizes saturated light-facing crown layers and large forest masses more; no proof that stronger tint is needed to fix game evening.",
+    "Uniform midpoint lifts brightness but lacks the requested deliberate green-chroma increase; not selected."
+  ],
+  "technicalScope": "Producer preflight and saved readbacks read; hashes independently verified. Structural/normal/alpha/BIN semantic audit belongs to Sol/parent, not repeated here.",
+  "albedoInterpretation": "LOD0meanLinearY approx0.175058 is equal between candidates; meanRGBchromaRatio .489/.621/.708 is computed on mean linear albedoRGB, not pixel saturation or in-game measurement.",
+  "game343ComparisonKeptSeparate": true,
+  "game13And18StillRequired": true,
+  "remainingGates": [
+    "Sol technicalQA",
+    "one chosen actual72GLB V4 test package pinned afterQA",
+    "same camera/game settings comparisons at13and18",
+    "normal/TBN response and card-side lighting",
+    "Ionmask12/clearance0.30m/water221",
+    "movingLOD/deviceMemoryFPS/ownerquality"
+  ],
+  "lockedScope": [
+    "roofgold303",
+    "sourceheight",
+    "landDEMorigin",
+    "masks",
+    "geometry",
+    "originalRGBalpha",
+    "fixedcameras",
+    "no342hutongmerge"
+  ],
+  "finalGameColorApproval": false,
+  "deliveryOrPublicationClaim": false,
+  "LOD1And2VisualApproval": false,
+  "onlyAssignedReportsWritten": true,
+  "noBlenderImageModelEditsOrDelegation": true,
+  "evidenceSHA256": {
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/midpoint/renders/render-proof.json": "ea81dc26eca407056714e392a39b68521f02ec71cb0e0c4a8e0e74bff986387b",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/midpoint/variant-proof.json": "46da8d5d4ea633d6f1ca3f1169a52c3e82ca929433d8aee6f470ad7b1e410289",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/midpoint/parent-saved72-readback.json": "f3a0dada944f9071785f5dd55ea653b30df64325728e5add4e03a22538484523",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-moderate/renders/render-proof.json": "7b8be966e7b39f9d63fc4e7b45f5f31d61d572142c775fde2b2a2fe6c6ec4c7a",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-moderate/variant-proof.json": "31865142a9ce2bbd21b0925d124c4212a2933dc758a8aab498b0c0c382f3c511",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-moderate/parent-saved72-readback.json": "106ec9c1ea918f39f8e4f71f13cd7435fa84f2a68f3bbe5241249508014c743b",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-strong/renders/render-proof.json": "4ed45132f6ababd69cc114d5a24aa50254492bc81ae998dec81ae6efc55f7da4",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-strong/variant-proof.json": "5842d051451cf51eb962b9bde7f30aaa239d9500b2048e3986919d4e05fb95a2",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/variants/green-strong/parent-saved72-readback.json": "7a3d28a26725bd3e73d6195d53ef0a64d51f9dcf604d2b10ac1b1b542503cb3d",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/tree-tint-preflight.json": "e5f19118a46972c3ba9d2a00c3bc63355122ec9e4f8ed66945349a72e9f165e1",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/all-three-variant-render-index.json": "ea9fc772c259b5a4a4530e5916f0aeda756d0aec8d3e51225f28a20b24f8f260",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/visible-session-astra-task344-tree-game-baseline-review.json": "08a07e6a9fee6e5eeefe8d2155add09e203b935b1024323477fd16437441b91a",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/model-loop-owner-20261015/task344-work/incoming343/source-message.md": "93661b9592144eb48c2cc7764f1023d2c8bd5c48e16e800e28ac8e8ae52bbf93",
+    "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/peking-codex-20261013/production-root/peking/peking-testikaupunki-20261016-native51-v3-lentotesti/QA/actual-glb-reimport/render-proof.json": "9ed0b09ea4fc63b81a966e3b17c516027f258040771e7be53e4376e979b48318"
+  }
+}

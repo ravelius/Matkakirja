@@ -1,0 +1,29 @@
+{
+  "task": 344,
+  "status": "PRIVATE_NEXT_FLIGHT_CANDIDATE_ONLY_OFFLINE_QA",
+  "selectedVariant": "green-moderate",
+  "currentTreeMaterialRGBFactor": [
+    0.7103449104959425,
+    0.7991380243079353,
+    0.5919540920799521
+  ],
+  "GLBCount": 72,
+  "bytesGLB72": 156540688,
+  "trianglesGLB72": 1377183,
+  "allBINPayloadsAndNonTreeJSONPropertiesVerifiedUnchanged": true,
+  "sourceV3AndCanonical51Unchanged": true,
+  "offlineAlbedoLOD0LinearY": 0.17505824824585095,
+  "actualGameBrightnessMidpointNotMeasured": true,
+  "actualGreenInGameDayEveningNotYetVerified": true,
+  "currentV4KTX2PortNotYetVerified": true,
+  "currentV4ReceiverSimulationOrDeviceNotYetVerified": true,
+  "IonAll12MaskFeaturesAnd30cmClearanceAnd221ContactsRemainOpen": true,
+  "movingLODAndMemoryFPSRemainOpen": true,
+  "roofEveningOliveIsReceiverLightingIssueNotModified": true,
+  "independentSolStatus": "ALL216_INDEPENDENT_TREE_PBR_FACTOR_ONLY_TECHNICAL_PASS_NOT_VARIANT_SELECTION_OR_GAME_ACCEPTANCE",
+  "independentAstraStatus": "GREEN_MODERATE_RECOMMENDED_FOR_NEXT_V4_SIMULATOR_TEST_PENDING_TECHNICAL_QA_NOT_FINAL_GAME_COLOR_APPROVAL",
+  "independentPipelineStatus": "READ_ONLY_COLOR_PIPELINE_AUDIT_COMPLETE; ASSET_AND_FACTOR_PATH_VERIFIED; RUNTIME_GRAY_CAUSE_NOT_MEASURED",
+  "ownerQualityGoalReached": false,
+  "notPublicationOrOwnerAcceptance": true,
+  "createdAtUTC": "2026-10-16T01:30:33.489099+00:00"
+}

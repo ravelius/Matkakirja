@@ -1,0 +1,308 @@
+{
+  "task": 344,
+  "variant": "green-moderate",
+  "onlyTreeBaseColorFactorChanged": true,
+  "actualAll24LOD0GLBsReimported": true,
+  "all72StructuralBinaryAuditSeparate": true,
+  "all6ImmutableCameras": true,
+  "originalImagesAndOtherMaterialsUnchanged": true,
+  "BlenderNormalBasisDifferentFromGame": true,
+  "notPredictedOrMeasuredGame13Or18Appearance": true,
+  "notGameAcceptance": true,
+  "samples": 64,
+  "device": "fresh Metal GPU",
+  "frames": [
+    {
+      "group": "city-lod0",
+      "lod": 0,
+      "view": "ilma",
+      "file": "city-lod0-ilma.png",
+      "sha256": "ab99c7c26bf31c52120e97776195cf85c25a36a14e3b415a2de7f5a357fbe651",
+      "seconds": 3.1555888750008307,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "group": "city-lod0",
+      "lod": 0,
+      "view": "taihedian",
+      "file": "city-lod0-taihedian.png",
+      "sha256": "c6d96df6f4d447a52a22a69822e6deec047307479ed97c8066399db9568cce1a",
+      "seconds": 2.5100584580213763,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "group": "city-lod0",
+      "lod": 0,
+      "view": "aukio",
+      "file": "city-lod0-aukio.png",
+      "sha256": "0031453eadb3800e590b4d97d21e2b66d6fd120de03478b6b4dbee7c1fd8db64",
+      "seconds": 2.287281625001924,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "group": "city-lod0",
+      "lod": 0,
+      "view": "beihai",
+      "file": "city-lod0-beihai.png",
+      "sha256": "86d9a9565e58242d3ac1888d4de3fb80f472d5037bfadabff92c8701e442bb8b",
+      "seconds": 2.2609724999929313,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "group": "city-lod0",
+      "lod": 0,
+      "view": "jingshan",
+      "file": "city-lod0-jingshan.png",
+      "sha256": "8aa69507804dceafcf7c30266ed714c4ba2d9fa803086de0d93b61bba8c554fc",
+      "seconds": 2.839072208997095,
+      "resolution": [
+        1600,
+        900
+      ]
+    },
+    {
+      "group": "city-lod0",
+      "lod": 0,
+      "view": "hutong_ilma",
+      "file": "city-lod0-hutong_ilma.png",
+      "sha256": "a20108306841ede135d00d059731c2c6fbcf4e8465d3df41c6886477eb99cca4",
+      "seconds": 2.7675236250215676,
+      "resolution": [
+        1600,
+        900
+      ]
+    }
+  ],
+  "imports": [
+    {
+      "file": "peking_0_0_lod0.glb",
+      "sha256": "b239413491465dc51e81d999f29595e930967adbbe3d9f639c72cfc2291a017b",
+      "triangles": 8361,
+      "centerENU": [
+        -825.0,
+        -1500.0
+      ]
+    },
+    {
+      "file": "peking_0_1_lod0.glb",
+      "sha256": "2cca4e24ab23dc5e161a5ce7c0223f8afd5752b898271d101cc78e4f5d1f999d",
+      "triangles": 8315,
+      "centerENU": [
+        -825.0,
+        -1000.0
+      ]
+    },
+    {
+      "file": "peking_0_2_lod0.glb",
+      "sha256": "9b1f0df5328bd9d15aa3196708e23058446a2b15fff3664a3952dd5dc1d89a33",
+      "triangles": 11017,
+      "centerENU": [
+        -825.0,
+        -500.0
+      ]
+    },
+    {
+      "file": "peking_0_3_lod0.glb",
+      "sha256": "5c99505270f0c8e3db353e4447ffc11ab80fe94ee8e3e2b22a699fd816f07a80",
+      "triangles": 8420,
+      "centerENU": [
+        -825.0,
+        0.0
+      ]
+    },
+    {
+      "file": "peking_0_4_lod0.glb",
+      "sha256": "6ba8921d15ce64c711741bcf16f8982b72572ba404f6461c672367895dfda6da",
+      "triangles": 8777,
+      "centerENU": [
+        -825.0,
+        500.0
+      ]
+    },
+    {
+      "file": "peking_0_5_lod0.glb",
+      "sha256": "d431f344d79004027317230c43390ee3b16aee9d09e70e848c6fbce6033dda3d",
+      "triangles": 14420,
+      "centerENU": [
+        -825.0,
+        1000.0
+      ]
+    },
+    {
+      "file": "peking_1_0_lod0.glb",
+      "sha256": "53b91b76e9696e19067688af052059bd32810538370d3b8e9c4b3d2cda72f299",
+      "triangles": 6176,
+      "centerENU": [
+        -275.0,
+        -1500.0
+      ]
+    },
+    {
+      "file": "peking_1_1_lod0.glb",
+      "sha256": "158325f029f295cd24065d66bff9cd8e203fb531db33db5121797667a98b9d37",
+      "triangles": 14439,
+      "centerENU": [
+        -275.0,
+        -1000.0
+      ]
+    },
+    {
+      "file": "peking_1_2_lod0.glb",
+      "sha256": "e3be346d4244294ccf9ab4a65f694692fbbebd0508239b5d1f8c60114a272043",
+      "triangles": 16534,
+      "centerENU": [
+        -275.0,
+        -500.0
+      ]
+    },
+    {
+      "file": "peking_1_3_lod0.glb",
+      "sha256": "93ca2ad7ae59d2fbdc9a737e97aa4e94b7ac6e7f315da90e25236942f2627b82",
+      "triangles": 59280,
+      "centerENU": [
+        -275.0,
+        0.0
+      ]
+    },
+    {
+      "file": "peking_1_4_lod0.glb",
+      "sha256": "f1c078781e4142de3630484b5fee8a6f6e642059860e8a0717d8ee78ebf24046",
+      "triangles": 47146,
+      "centerENU": [
+        -275.0,
+        500.0
+      ]
+    },
+    {
+      "file": "peking_1_5_lod0.glb",
+      "sha256": "9e92354161b66485970a6851441ab733bcdae0dcddee343cc1650f1705daf2c4",
+      "triangles": 26716,
+      "centerENU": [
+        -275.0,
+        1000.0
+      ]
+    },
+    {
+      "file": "peking_2_0_lod0.glb",
+      "sha256": "10a41e23e4b023b17f07beb5050bcfa4159603b5aaa0613952e4cfcb85e18651",
+      "triangles": 7274,
+      "centerENU": [
+        275.0,
+        -1500.0
+      ]
+    },
+    {
+      "file": "peking_2_1_lod0.glb",
+      "sha256": "465e601e0fbfa0213d8fa1a5e1184e29a4c242add27ce28e35eb35e932c06987",
+      "triangles": 14405,
+      "centerENU": [
+        275.0,
+        -1000.0
+      ]
+    },
+    {
+      "file": "peking_2_2_lod0.glb",
+      "sha256": "7056c43e72191f78ae725f0d7d729686398a0e526774d3a73090f70dfb2d8f28",
+      "triangles": 17477,
+      "centerENU": [
+        275.0,
+        -500.0
+      ]
+    },
+    {
+      "file": "peking_2_3_lod0.glb",
+      "sha256": "54adf694bb9604fb94ae6268e771a5cb24bbb7b24b2d5833bf5c18fce31221bc",
+      "triangles": 97895,
+      "centerENU": [
+        275.0,
+        0.0
+      ]
+    },
+    {
+      "file": "peking_2_4_lod0.glb",
+      "sha256": "b8c6bc45a480de8d076dbf5bb4e8acf1fa97d68d594101c23a29056247012c68",
+      "triangles": 48515,
+      "centerENU": [
+        275.0,
+        500.0
+      ]
+    },
+    {
+      "file": "peking_2_5_lod0.glb",
+      "sha256": "2310f3695d209fbc04f63d5e9cefb1303b54d5d123d805b3779c63ab5a69a50d",
+      "triangles": 33135,
+      "centerENU": [
+        275.0,
+        1000.0
+      ]
+    },
+    {
+      "file": "peking_3_0_lod0.glb",
+      "sha256": "ecd57d1e9a078363c9da766a380e2d84f165f9ee0f3300af64e76728dc25f8bc",
+      "triangles": 10525,
+      "centerENU": [
+        825.0,
+        -1500.0
+      ]
+    },
+    {
+      "file": "peking_3_1_lod0.glb",
+      "sha256": "5d0c0b0385b90b1f12d93b1e46c6436a0d0a850bc4901bf5bb69dd3fa6f0cab4",
+      "triangles": 11016,
+      "centerENU": [
+        825.0,
+        -1000.0
+      ]
+    },
+    {
+      "file": "peking_3_2_lod0.glb",
+      "sha256": "56652c47458617326d21b4e357085fab2cd91fe6fe19e2da3d9593f1a9930f91",
+      "triangles": 18150,
+      "centerENU": [
+        825.0,
+        -500.0
+      ]
+    },
+    {
+      "file": "peking_3_3_lod0.glb",
+      "sha256": "9099794d40b5ff1fa8af2e7af28faeeb8377c22ea4cdf2cc6910f5177541b7e2",
+      "triangles": 12604,
+      "centerENU": [
+        825.0,
+        0.0
+      ]
+    },
+    {
+      "file": "peking_3_4_lod0.glb",
+      "sha256": "6b95254abdf3c7871a6c04b0f72bdac949dcab057da5f087d7a93f0034bee0b9",
+      "triangles": 17671,
+      "centerENU": [
+        825.0,
+        500.0
+      ]
+    },
+    {
+      "file": "peking_3_5_lod0.glb",
+      "sha256": "6c55a56a50d4e2bd4c6cca6d63cdd4298b7b6aa7d76f2d987aca673d14774d36",
+      "triangles": 29533,
+      "centerENU": [
+        825.0,
+        1000.0
+      ]
+    }
+  ],
+  "rendererHelperSHA256": "20845812cfcb55a3a9a002cbcffb744aeefb8356880f76c54d2f411883603f44",
+  "variantProofSHA256": "31865142a9ce2bbd21b0925d124c4212a2933dc758a8aab498b0c0c382f3c511"
+}
