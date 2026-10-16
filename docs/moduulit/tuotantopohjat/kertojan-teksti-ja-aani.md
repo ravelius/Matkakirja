@@ -1,0 +1,119 @@
+# Tuotantopohja: kertojan teksti ja ääni
+
+*(LUONNOS 17.10.2026, Äänittäjä, PT:n toimeksianto. Raamattu, TUOTANTOPOHJAT ja TUOTANTOPOHJIEN SANASTO. Tähän on koottu
+vain nykyisten ohjeiden ja luovutusten opit; uusia sääntöjä ei ole. Jos tämä ja Raamattu ovat ristiriidassa, Raamattu voittaa.
+Pohjan omistaa Äänittäjä (ääni) ja Sisältökirjuri (teksti), PT hyväksyy muutokset. Ei vielä dokumenttikartalla.)*
+
+Tämä pohja kattaa kaiken, minkä pelissä lukee ääneen kertoja (isoisä, William, Pulu): kaaritekstit, kaupunkien ja museoiden
+kertomukset, historiaosiot, selitteet, Pulun vastaukset ja kutsut. Se ei kata musiikkia, tehosteita eikä askelia
+(`aanipohja.md`) eikä pelikytkentöjä (kytkijän oma työ).
+
+## 1. Tuotantoputki ja roolit
+
+```
+Sisältökirjuri: teksti (hyväksytty, faktat tarkistettu)
+  → PT: merkkimäärä + lupapyyntö → KK → omistajan lupa nimetylle erälle
+  → Äänittäjä: otto (ElevenLabs) + mittaus
+  → ääniportti (pakollinen vaihe vie-paketti.sh:ssa)
+  → ämpäri (vie-paketti.sh, ei ylikirjoita)
+  → kytkentä (Pelikoodari / Linssiseppä / Siirtoseppä / Natiivi-UI) + ilmoitus Äänittäjälle
+```
+
+| Vaihe | Rooli | Tulos |
+|---|---|---|
+| 0. Lukutarkistus | Äänittäjä + kytkijä | Selvillä, tarvitaanko tiedostoa lainkaan (ks. kultainen polku 1) |
+| 1. Teksti | Sisältökirjuri (kaanon: PT) | Hyväksytty teksti, pituusbudjetin sisällä, tagit lisätty |
+| 2. Lupapyyntö | PT → KK → omistaja | Sanatarkat tekstit, palvelu, leikemäärä, merkkimäärä; "OMISTAJAN PÄÄTÖS klo …" |
+| 3. Otto | Äänittäjä | Raaka-otot talteen, mp3, aikaleimat |
+| 4. Portti | Äänittäjä | `aaniportti.py` läpi |
+| 5. Vienti | Äänittäjä | Ämpäri + `LAHTEET.md` + SHA256SUMS + manifestirivit |
+| 6. Kytkentä | Kytkijä | Manifestirivit pelissä, mykistykset pois |
+| 7. Retrospektiivi | Äänittäjä | Kirjaus tämän pohjan opit-osioon |
+
+Äänittäjä ei tee pelikytkentöjä eikä kirjoita tarinatekstiä. Kanavat: viestit `send_message` session id:llä
+(osoitekirja), PT:lle enintään 3 riviä; yksityiskohdat tiedostoon (paketin `LAHTEET.md`, luovutus).
+
+## 2. Kultainen polku (oletustapa)
+
+1. **Tarkista ensin, lukeeko peli tekstin jo itse.** Jos `KortinLukija` / `Puhe.Lue` lukee tekstin workerin kautta
+   (kuvaselitteet, nostokortit, lehdet, kaupunkikartan esittelyt, museon ympyrät), esiäänitystä ei tarvita. Älä valmistele
+   tekstejä äläkä pyydä lupaa ennen kuin kytkijä on vahvistanut, että tiedosto todella tarvitaan. (Louvren 152 ympyrää
+   17.10.: lupa 20 800 mrk jäi käyttämättä, koska peli lukee ne suoralla lukijalla.)
+2. **Teksti ensin valmiiksi, ääni viimeisenä.** Kaikki korjaukset ovat ilmaisia ennen ensimmäistä generointierää ja
+   maksullisia sen jälkeen (tarinakaari.md, luku 7). Auditit tehdään tekstivaiheessa.
+3. **Ruututeksti = luentateksti sanasta sanaan.** Lisätään vain tunnetagit ja kirjoitusasun sovitukset (SUURAAKKOSET
+   pienennetään, luvut sanoiksi). Tagit 2–5 per luenta, alku ja loppu eri sävyssä.
+4. **Lupa ennen jokaista generointia.** Uusia ääniä ei generoida ilman omistajan lupaa (Raamattu, UUSIA ÄÄNIÄ EI
+   GENEROIDA). Lupapyynnössä on sanatarkat tekstit, palvelu, tarkka leikemäärä ja merkkimäärä; määrän päättää omistaja,
+   ja jokainen lisäys tai ylitys vaatii uuden luvan. Lupa tulee vain KK:n suoralla "OMISTAJAN PÄÄTÖS klo …" -rivillä;
+   PT:n välittämä ei riitä, vaan Äänittäjä pyytää vahvistuksen KK:lta. Poikkeus: kertojaäänillä on pysyvä lupa
+   PT:n hyväksymiin teksteihin (ei Pulu, ei uudet isoisän tekstit).
+5. **Luvut sanoiksi ENNEN merkkimäärän laskemista.** Numerot kasvattavat tekstin pituutta puhuttuna (esim. +662 merkkiä
+   yhdessä erässä), joten lupapyynnön merkkimäärä lasketaan puhutusta muodosta. Muuten lupa ylittyy ja tarvitaan uusi.
+6. **Ääni ja malli oikein.**
+   - Isoisä: AINA `eleven_v3` (omistaja 14.10.), text-to-dialogue, yksi otto, loppufade 150 ms + hiljaisuus.
+   - Kertoja William (`oae6GCCzwoEbfc5FHdEu`): `eleven_v4_turbo`, tempo 1,10×. Pelin lukijana workerin avaimessa on
+     `eleven_v4` (säilöavain sha256 `malli|ääni|ohje|teksti`).
+   - Pulu (`piI8Kku0DcvcL6TTSeQt`): `eleven_v4_turbo`, stability 0,5, `language_code fi`, −17,2 LUFS, ei ffmpeg-nopeutusta
+     (`livia-aani.md`).
+   - Kahden tai useamman äänen keskustelu yhtenä dialogiottona, ei repliikki kerrallaan.
+   - Kieli aina määritelty suomeksi. Raaka tallennetaan heti: uusintaa ei tehdä, jos raaka kelpaa.
+7. **Ääniportti ennen vientiä** (`proto-3d/tyokalut/aaniportti.py`, ajetaan `vie-paketti.sh`:ssa automaattisesti):
+   true peak enintään 0 dBTP, lyhyiden kertaäänten kovuus. Puheelle ajetaan ilman `--puhe`-valitsinta (Whisper antaa
+   suomelle vääriä hylkäyksiä).
+8. **Vienti uusilla nimillä.** Ämpäri ei ylikirjoita ja objektit ovat muuttumattomia. Korjaus = uusi nimi (`-v2`, `-v3`, `-b`)
+   sekä täysi ajat- ja manifestirivi-tiedosto; ilmoita kytkijälle, mikä rivi vaihtuu. Kansion nimessä on `-vienti-`.
+9. **Mykistys.** Kun hyväksytty tekstimuutos viedään dataan, vanha luenta merkitään `mykistetyt`-kenttään, kunnes uusi
+   on generoitu ja kytketty. Peli ei koskaan soita vanhoilla sanoilla.
+10. **Kuuntelematta saa viedä.** Generoituja ääniä ei tarkisteta kuuntelemalla eikä omistajalta (Raamattu 11.10.);
+    puheentunnistuksen epäilyt eivät pysäytä vientiä. Whisper-vertailu (sanasuhde) on tiedoksi, ei tuomari:
+    vieraat nimet se kirjoittaa suomalaisittain.
+11. **Avaimet.** `source ~/.zshrc` samaan komentoon (ELEVEN_API_KEY); avainta ei koskaan repoon, lokiin eikä viestiin.
+
+## 3. Valmiin määritelmä (tarkistuslista)
+
+Paketti ei ole valmis ennen kuin kaikki kohdat täyttyvät:
+
+- [ ] Varmistettu, ettei peli lue tekstiä jo workerin kautta (`KortinLukija` / `Puhe.Lue`).
+- [ ] Teksti hyväksytty ja pituusbudjetin sisällä (saapuminen ≤ 380, kohtaaminen ≤ 260, aarre ≤ 220, kohde ≤ 800 merkkiä).
+- [ ] Lupa on KK:n suoralla rivillä, ja leikemäärä ja merkkimäärä (puhutussa muodossa) pitävät.
+- [ ] Luvut ja lyhenteet sanoiksi: tarkistettu 100–199 ("sata…", 104 = sataneljä), "eaa./jaa." lauseen lopussa saa pisteen,
+      vuosiluvut yhteen, taivutukset oikein.
+- [ ] Oikea ääni ja malli (isoisä `eleven_v3`, kertoja turbo tempo 1,10×, Pulu oma resepti); kieli `fi`.
+- [ ] Vieraiden nimien ääntämysvihjeet tehty (esim. `orsay-rf-2027b`); Whisper-poikkeamat luettu.
+- [ ] Taso mitattu: kaari −14,6 LUFS, fokus ja Pulu −17 LUFS, muut tyypin mukaan; fade ja hiljainen häntä.
+- [ ] Aikaleimat tehty, jos peli ajoittaa niillä (huudahdukset, tekstin eteneminen).
+- [ ] Ääniportti läpi, vienti ok, `LAHTEET.md` (lisenssi ja tekijä) ja SHA256SUMS mukana.
+- [ ] Manifestirivit toimitettu kytkijälle ja kytkijä kuitannut; `mykistetyt` poistettu.
+- [ ] Raaka-otot talteen `_tyo/<aihe>-<pvm>`-kansioon (ei poisteta).
+- [ ] Retrospektiivi kirjattu tämän pohjan opit-osioon (luku 5).
+
+## 4. Poikkeaminen
+
+Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan joko uudeksi poluksi tai jätetään pois
+(esim. isoisän turbo-teksti uusitaan v3:lla vain PT:n päätöksestä).
+
+## 5. Opit ja retrospektiivi (kirjataan jokaisen työn lopussa)
+
+Muoto: päivä, työ — mikä toimi, mikä hidasti, mikä muuttuu pohjassa.
+
+- **17.10.2026, Louvren ympyrät.** Hidasti: tekstit ja skriptit valmisteltiin ennen kuin tiedettiin, että peli lukee ne
+  suoralla lukijalla. Muuttuu: kultainen polku 1, lukutarkistus ensin.
+- **17.10.2026, luvut sanoiksi.** Hidasti: merkkimäärä kasvoi puhutussa muodossa (+662), joten lupapyyntö olisi ylittynyt.
+  Muuttuu: merkkimäärä lasketaan puhutusta tekstistä (kohdat 5 ja valmiin määritelmä).
+- **16.10.2026, Ateena ja Ranska.** Luvut 100–199 ja "eaa." lauseen lopussa korjattiin jälkikäteen (5 uutta ottoa).
+  Muuttuu: lukutarkistus on valmiin määritelmän kohta. "eaa." korvataan vain sanarajalla (`\beaa\.`), koska "makeaa."
+  rikkoutui kerran.
+- **16.10.2026, Ranskan 51 kertomusta.** Whisper löysi yhden nimen (Orsay), jota ääntämysvihje korjasi; faktakorjaukset
+  maksoivat 6 uutta ottoa. Muuttuu: faktatarkistus ennen lupaa (kultainen polku 2).
+- **15.10.2026, ISS-selitteet.** Pelin säilön avain sisältää mallin, joten vanhat xAI-ajan äänet eivät kelvanneet.
+  Muuttuu: tarkista säilöavain (`malli|ääni|ohje|teksti`) ennen kuin laskee puuttuvat.
+- **14.10.2026, ElevenLabs-aikaleimat.** Sopivat lauseajoitukseen, mutta eivät iskun rytmitykseen. Muuttuu: mittaa
+  energia-alku, kun ajoitus on tarkka.
+- **Ämpärin muuttumattomuus.** Ylikirjoitus samaan nimeen ei onnistu; korjaus aina uudella nimellä ja kytkijälle ilmoitus.
+
+## 6. Lähteet
+
+`docs/moduulit/tarinakaari.md` (luvut 4, 7, 8), `docs/moduulit/livia-aani.md`, `docs/moduulit/aanipohja.md`,
+Raamattu: UUSIA ÄÄNIÄ EI GENEROIDA ILMAN OMISTAJAN LUPAA, ÄÄNIPORTTI, LUKIJAÄÄNI WILLIAM, DIALOGIT YHTENÄ OTTONA,
+TUOTANTOPOHJAT; Äänittäjän luovutukset 14.–17.10.2026 (`docs/raportit/viesti-aanittaja-luovutus-*.md`).
