@@ -415,3 +415,7 @@ kun 9fa3b99f1 on juna-196:ssa).
 - Opit: todistusajon tap-teksti löytää vain näkyvät listarivit (Punainen kabinetti, ei Kunniagalleria); "museo nayttely <id>" ei sulje listaa →
   kertoja jää tauolle. Levyhätä pysäyttää L2:n (Julkaisija jonottaa uudelleen, ÄLÄ käynnistä itse). Odottajan zsh voi kuolla kesken jonon →
   tarkista /tmp/matkakirja-kaannospalvelu-2.lukko/kuka ja lokit/kaannospalvelu/*-<sha>-l2.log.
+- 01.1x: siirto 1 **583e92029** (siirtoseppa/siirto-198-1, fdfb5f6dd päällä; worktree wt/proto-siirtoseppa-aanipohja): LuentaSoitin pohjalle
+  (puhe, id linssi-luenta, taso 1,0 ennallaan, mykistys ennallaan). Lista 31. Seuraavaksi itsenäiset: SeikkailuLoppumusiikki, EsityksenAani,
+  SeikkailuSade, VeneAanet. SeikkailuKuulija EI ole pieni: sen Lahde-tehdasta käyttää 6 tiedostoa (SeikkailuAanet, -Esineet, -Kappeli,
+  -Repliikit, -TyrmaAanet, -Vartijat), jotka asettavat volumen itse → siirto kutsuja kerrallaan, tehdas viimeisenä.
