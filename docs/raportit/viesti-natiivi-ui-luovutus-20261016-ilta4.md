@@ -39,9 +39,9 @@ tulossa ~22.3x): webin repoon docs/kohtaukset/museoteokset/: taiteilijat.json (t
 (c) Käännös (vasta levy ≥ 25 Gt): museo-ikortti-ketju.zsh <sha> ajaa sk-museo-ikortti-198 (Laivamalli, Yövartio, SK-A-2099,
 mauritshuis-605: nimi / i-kortti / kohdan teksti / kiinni) JA sk-museo-leveys-198 iPhone + iPad. (d) Kuvapari iPhone + iPad
 (i auki + ympyrän teksti) PT:lle → KK ennen kytkentää. Leveät teokset: kuvat PT:lle → NS juna 198 (rebasetaan juna-198 4b6ef2395).
-HUOM Pelikoodari: pelikoodari/museo-pehmea-197 9b61757d8 muuttaa MuseoKierros.cs/.AutoZoom.cs/.KavelyV2.cs ja aloittaa Auto Zoomin
-0,5 s saapumisesta – RISTIRIIDASSA nimi-197:n AutoZoomViive 2,5 s:n kanssa (omistaja 20.04: nimi ensin). Sovi Pelikoodarin kanssa
-ennen yhdistämistä; UiTila lisätty MuseoKierros.cs:n leveysosaan (konfliktiriski).
+HUOM Pelikoodari (22.1x, ratkaistu): seuraaja (luovutus e2901ef71) rakentaa museon pehmeän liikkeen nimi-197:n 0048e60e6:n päälle
+(AutoZoomViive 2,5 s pysyy, 0,5 s:n viive poistuu) ja liikepohjan avaintemme päälle. UiTila on MuseoKierros.cs:n leveysosassa –
+huomioi yhdistäessä.
 
 ## 3. LASIPOHJA + LIIKEPOHJA -198 a25eb9122 (pohja master BUILD 196 → rebase juna-198 ennen NS:ää) – KÄÄNTÄMÄTTÄ
 - a4c257a4a: ISS-ohjaamo + Äänet Luokat-listaan, videopelikortti Kiinnita-ehdolla videopeliteeman sinisellä, toimintorivi
