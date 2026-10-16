@@ -1,0 +1,26 @@
+# Äänittäjän luovutus 17.10.2026 klo ~00.30 (Postivahti: kova raja 40 %)
+
+Lue ensin: viesti-aanittaja-luovutus-20261016.md, -20261015.md ja -20261014.md (säännöt, työkalut, tekniset). Osoitteet: /Users/Shared/Claude/osoitekirja.md. PT local_5df52e10-10e4-4b72-9554-0049db300dfe, KK local_dfa7296a-d3d3-41ef-a2b1-dbc42a652589, Postivahti local_a24c43c0-8094-4141-b734-90b9555f5044, PK local_7fcab04b-864c-4ec2-98bd-46e171326701, LS (Linssiseppä) local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4, Sisältökirjuri local_72d15713-eb20-402b-95f7-87bdaaf91b74. Viestit PT:lle ≤ 3 riviä, send_message session_id:llä. Generoinnin lupa vain KK:n suoralla "OMISTAJAN PÄÄTÖS klo …" -rivillä (PT:n välittämä ei riitä; pyydä KK:lta vahvistus). Kertojaäänillä pysyvä lupa PT:n hyväksymiin teksteihin (ei Pulu, ei isoisä-uudet).
+
+## TEHTY 16.–17.10. (kaikki ämpärissä, vienti `julkaisija-tyokalut/vie-paketti.sh`, portti ok; ämpäri EI ylikirjoita → korjaukset uusilla nimillä)
+- Merivastaukset: Pulun 82–103 (22 ottoa, 8 487 mrk, KK:n päätös 07.50) `aanet/pulu/meri-v1/pulu-meri-82…103.mp3` + `manifest-82-103.json` (Siirtoseppä kytkee, juna 196). Whisper ka 0,84. Aiemmat 1–81 ennallaan. Työ `_tyo/pulu-meri2-20261016`.
+- Ranskan 51 kertomuksen Whisper-tarkistus (ka 0,845; `_tyo/ranska51-tarkistus-20261016`). `orsay-rf-2027` uusittu: `ranska/orsay-rf-2027b.mp3` + ajat (ääntämysvihjeet; Lautrec yhä Whisperissä "Lothric", kuuntelematta). 6 faktakorjattua kertomusta uusittu (Sisältökirjuri #4733): `ranska/<id>-v3.mp3` + `ajat/ranska/<id>-v3.json` + `manifest-rivit-ranska-korjaus-v3.json` (louvre-rf-2346, -1938-51, -1158, orsay-rf-2735, -2449, -1976). Kytkijä (LS1/PK) vaihtaa manifestirivit.
+- Prahan historiaosiot: vain 2 muuttui (#4721) → `aanet/pallokierros-praha-v2/historia-heittoikkuna-v3.mp3`, `historia-venceslauksen-aukio-v3.mp3`, `ajat-historia-v3.json`; muut Praha/Ateena sanatarkasti samat, ei uusintaa.
+- ISS: revontulten Pulu-vastaus (KK 13.54, 351 mrk) `aanet/pulu/iss-kysymykset-v1/pulu-iss-kysymys-revontulet-vastaus.mp3` (kytkentä junaan 197); TURHA pelkkä kysymys `pulu-iss-kysymys-revontulet.mp3` on myös ämpärissä – EI kytketä. Telakoinnin ääni `audio/iss-192/telakointi-kolahdus-v1.mp3` (Soundly SND102049, 4,6 s, −23,5 LUFS; PK:lle ilmoitettu). Max Livia -otot polut ja aikaleimat PK:lle (uusin v4 `audio/iss-192/pulu-max-livia-v4.mp3`). ISS-äänet kuitattu valmiiksi (PT).
+- Museon lattia-askeleet: sora + kivi_hiekka `aanet/taidemuseo-askeleet-v3/` (12+12, manifest.json lattiat sora/kivi_hiekka; Soundly SND165093 / SND125978; −32 LUFS kuten v2b; ääniportti läpi). Kytkentä Unity-koodiin (MuseoAskeleet.cs, LS) ohjeella `_tyo/museo-askeleet-lattiat-20261016/KYTKENTA-v3.md`; PT välittää LS:lle. v2b-marmorista PK jo ilmoitettu ja kytketty (4eb11bcbc).
+- Levykierrokset: ei omia .app/worktreeitä/videoita → 0 Gi (Postivahdille kuitattu kahdesti). `_tyo`-kansiot sisältävät maksullisia raakaottoja – ei poisteta.
+
+## KESKEN / AVOINTA
+1. Louvren 152 ympyrän puhe: KK 00.2x: EI generoida (peli lukee suoralla lukijalla kuten Alankomaat; lupa 20 800 mrk jää käyttämättä). Valmistellut tekstit/skriptit `_tyo/ranska-ympyrat-20261017` (ajamaton) – voi poistaa.
+2. Bratislava/Tirana/Zagreb-kaupunkikartan esittelyt: eivät esiäänitetty (pelin lukija hoitaa hashilla, PT 16.10.).
+3. Kuuntelematta: lähes kaikki tämän session otot (marmori/sora/kivi_hiekka-askeleet, telakointi, Lautrec-ääntämys, meri 82–103, Ranskan korjatut). Ranskan 51 nimien Whisper-poikkeamat vain `orsay-rf-2027` (korjattu).
+4. Vanhat avoimet: Kipin v2 ja muut 12.10. äänisivun valinnat odottavat omistajaa; Soundly-lataus vaatii GUI:n; muiden kaupunkien Pulu-kutsut vasta PT:n käskystä; äänipohjan tasot (Siirtoseppä, juna 198) tulossa.
+
+## OPITUT (uusia)
+- ElevenLabs-generointi: ajo `zsh aja.zsh` (`source ~/.zshrc`, ELEVEN_API_KEY) tiedostosta; kertoja: `_tyo/ranska-kohdat-20261014/tee.py + tempo.py` (William oae6GCCzwoEbfc5FHdEu, eleven_v4_turbo, tempo 1,10×); Pulu: `_tyo/pulu-juna195-20261015/pulu.py` (`otto(tyo,id,teksti,mp3)`). Luvut sanoiksi: `_tyo/pulu-meri2-20261016/puhe.py` (järjestysluvut `jarj()`, päivämäärät, EKSTRA-korvaukset) tai kertojan `puhuttu()`. Raaka tallennetaan → ei uusintaa.
+- Whisper: `_tyo/venv-kohdistus/bin/python`; vertaa sanasuhde (luvut numeroina deflatoivat 0,05–0,1). Nimet Whisper kirjoittaa suomalaisittain – ei ratkaise ääntämystä.
+- Askelten teko: `_tyo/museo-askeleet-lattiat-20261016/tee5.py` (lib.py; Soundly-lähde, poiminta ehdokkaat(), alku/häntä-portti, taso −31,7 LUFS). Soundlyn NAS: `/Volumes/NAS-Homes/samireivinen/Matkakirja-arkisto/aanet/soundly/<erä>/<aihe>/`; Sonniss-zipit T7:llä (hakemisto.json vain listaus, tiedostot eivät aina purettuina).
+- Korjatun tekstin vienti: ämpäri ei ylikirjoita → `-v2/-v3/-b`-nimi + täysi ajat-/manifest-rivi-tiedosto, ilmoita kytkijälle.
+- Ääniportti: `proto-3d/_tyo/venv-aaniluokitin/bin/python proto-3d/tyokalut/aaniportti.py <paketti>`; vie-paketti ajaa sen automaattisesti.
+- zsh: `sed -i` vaatii macOSilla `-i.bak`; käytä Pythonia tiedostomuokkaukseen. Pitkät NAS/T7-`find`-haut: aikakatkaisu → rajaa polku.
+- Luvan tarkistus: `search_session_transcripts` löytää KK:n kortit; KK:n vahvistus aina suoraan KK:lta ennen maksullista generointia.
