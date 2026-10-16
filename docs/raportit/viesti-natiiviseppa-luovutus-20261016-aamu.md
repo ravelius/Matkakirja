@@ -9,6 +9,9 @@ Viestit AINA session id:llä osoitekirjasta /Users/Shared/Claude/osoitekirja.md 
 - **Juna 196 -runko** natiiviseppa/juna-196 (wt/proto-natiiviseppa-ehdokas) = **2f731c677** (Valosepän rae + sävytys 35adbb847, PT vahvisti).
   Testit 2f731c677:lle käynnistettiin 09.11 – tulos kesken luovutushetkellä → aja `zsh juna196/testit196.sh` (run_in_background) uudelleen ja
   kerro PT:lle. Edellinen vihreä: 53b46a16e (Linssit 1912/1912, Peli 590/590, Kartta 495/495, tarkista 0).
+- **PT KUITTASI 09.1x, EI VIELÄ YHDISTETTY:** karttaseppa/maasto-normaalit-196 **b8167585d** (pistenormaalit korkeusmallista, peruskartan
+  5,625°:n neliöt pois; yhdistyy puhtaasti 2f731c677:n päälle). Maasto 2026-10-16-maailma on viety (Julkaisija 09.13: 2 263 884/2 263 884,
+  CDN 42/42). → Yhdistä heti 2f731c677:n testien jälkeen ja aja testit196 uudelleen.
 - **Ei lukittu.** Omistaja pyysi julkaisua 00.31 ("kun kaikki pyyntöni valmiina. Ei testejä"); lukitus VAIN PT:n sanalla "LUKITSE 196".
   PT:n mukaan juna odottaa: ISS-havainneluuppi (omistaja 08.10), NUI:n latauskuva, Siirtosepän merivastausten kytkentä, filmiraide, neliöt.
   Muistiajo OHITETTU (julkaisija-tyokalut/muistiajo-196.txt).

@@ -10,6 +10,7 @@ Viestit AINA session id:llä osoitekirjasta (PT local_5df52e10-10e4-4b72-9554-00
 
 ## KÄRKI
 1. HETI: aja `zsh juna196/testit196.sh` (run_in_background) rungolle 2f731c677 ja rivi PT:lle (edellinen vihreä 53b46a16e).
+   Sitten yhdistä PT:n 09.1x kuittaama karttaseppa/maasto-normaalit-196 b8167585d (neliöt pois) ja aja testit uudelleen.
 2. Juna 196 kertyy: yhdistä vain PT:n kuittaamat (toisen roolin "PT kuittasi" → vahvista PT:ltä), `git log HEAD..<sha>` ensin.
    Lukitus VAIN PT:n "LUKITSE 196" (omistaja pyysi julkaisua 00.31, "Ei testejä"; muistiajo ohitettu).
 3. Juna 197 -jono kertyy (juna197/jono-197.txt); runko 197 vasta 196:n lukituksen jälkeen. Unity-beetaseuranta: CronCreate "4 9 * * *".
