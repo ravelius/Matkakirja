@@ -14,7 +14,8 @@ Suunnitelma: `docs/suunnitelmat/juoksupeli-kielletty-kaupunki.md` (main, PR tulo
 - Sävy on kepposhenkinen ja lämmin, ei synkkä eikä sarjakuvamainen. Komiikka tulee tilanteesta (pieni keisari, perässä
   puuskuttava hovi), ei kenenkään pilkkaamisesta. Ei karikatyyrejä eikä liioiteltuja kasvonpiirteitä, eikä eunukeista
   tehdä naurunalaisia.
-- Vuosi on noin 1914 ja vuodenaika myöhäissyksy (selkeä, kirkas valo, joitakin keltaisia lehtiä, ei lunta).
+- Vuosi on noin 1914 ja **vuodenaika kesä** (PT 18.3x: kirkas, lämmin kesävalo, vihreät puut pihoilla, ei lunta eikä
+  syyslehtiä; ammeet ilman täkkejä). Kulmatornin näköala on vuoden 1914 Peking.
 - **Puyi, noin 8 v:** pieni poika, jolla on pitkä letti selässä. Hänellä on lapsen keisarillisen kirkkaankeltainen
   silkkikaapu, jossa on lohikäärmekuvio, ja pieni pyöreä päähine. Ei silmälaseja. Ilme on riemukas ja päättäväinen.
 - **Ei polkupyörää, ei autoja, ei sähköjohtoja näkyvissä, ei turisteja eikä nykyaikaisia esineitä.**
