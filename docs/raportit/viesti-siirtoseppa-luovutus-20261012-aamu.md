@@ -393,3 +393,25 @@ kun 9fa3b99f1 on juna-196:ssa).
 - 01.2x: PT kuittasi → **9db0288e9 NS:lle junaan 197** (yhdistyy f4908018a:han puhtaasti). SEURAAVA ERÄ (juna 198, PT): äänivahdin rekisteröinnit (Aanisoittimen URL-klipit, MatkakirjaPuhe, sali-belgrad, sello) + siirtolista vuorollaan.
 - 01.3x: äänivahti siirtoseppa/aanivahti-198 **fdfb5f6dd** (9db0288e9 päällä, worktree wt/proto-siirtoseppa-aanipohja nyt tällä haaralla): Aanisoitin/Puhe ryhmätasolla. PT:ltä kysytty: siirtolista seuraavaksi?
 - 01.4x: NS: 9db0288e9 rungossa 197 = 40c54d8c8 (tarkista 0).
+
+## PÄIVITYS 17.10. 01.4x — NOLLAUS (Postivahti, kova raja 36 %): SEURAAJAN ENSIMMÄINEN ERÄ = ÄÄNIPOHJAN SIIRTOLISTA
+
+**Valmis:** äänipohja + museo + "kaikki ääni pois linssin/pelin avautuessa" **9db0288e9** junan 197 rungossa 40c54d8c8 (NS). Äänivahti
+**fdfb5f6dd** (siirtoseppa/aanivahti-198) NS:llä junaan 198. Suunnitelma docs/moduulit/aanipohja.md PT:n PR #4727:ssä.
+
+**SEURAAJAN ERÄ (PT 01.4x): siirtolista pieninä erinä, commit + luovutusrivi + push jokaisesta.**
+- Worktree /Users/Shared/Claude/wt/proto-siirtoseppa-aanipohja, nyt haaralla siirtoseppa/aanivahti-198 (fdfb5f6dd). Tee uusi haara
+  siirtoseppa/siirto-198-<n> sen päältä (tai natiiviseppa/juna-198:n, kun NS avaa sen).
+- Lista: Linssit-testit/aanipohja-siirtolista.txt (32). Pienimmät ensin: SeikkailuKuulija (53 riviä), LuentaSoitin (98), SeikkailuLoppumusiikki,
+  EsityksenAani, SeikkailuTyrmaAanet, VeneAanet, SeikkailuSade, PalloAanimaisemaSoitin … AaniKaappaus EI siirretä (kaappaa, ei soita:
+  jätä listalle kommentilla tai lisää AanipohjaVahti.Pohja-poikkeuksiin perustellen).
+- Kaava (museo mallina, Linssit/Unity/MuseoAskeleet.cs): `AaniPohja.Lahde(isanta, ryhma, id, nimi[, kolmeD])` → PohjaLahde; koodi asettaa
+  vain `.Taso`, soittaa `.Soita(klippi, kohta, nousuS, savel)`, lopettaa `.Pysayta(haivytysS)`; omat Voimakkuus/kytkin/mikseri-laskut pois
+  (pohja laskee). 3D-lähteissä aseta spatial-asetukset p.Lahde:sta. Poista rivi siirtolistalta → AanipohjaTestit kaatuu, jos unohtuu.
+- Tarkistus jokaisen jälkeen: `Linssit-testit/kaanna.sh Aanipohja`, `Linssit-testit/unity-tarkistus.sh` (0). Taso ei saa muuttua (paitsi uusi
+  väistö kertojan alla): mittaa simuajossa 100 ms:n verhokäyrällä ennen/jälkeen, kun erä on laitteella (verho.py-malli: wave + array, 0,1 s RMS dB).
+- Ajot: tyokalut/siirtoseppa-ajot/ajo-aanipohja-197.zsh (H, ERA, SK ympäristöstä; liput kaannos-aanipohja.nyt / simu-aanipohja.nyt vain
+  Julkaisijan NYT-viestillä; yöllä simu 1 kerrallaan). Skenaario sk-aanipohja-197.txt (museo + kippi/mylly-katkaisu).
+- Opit: todistusajon tap-teksti löytää vain näkyvät listarivit (Punainen kabinetti, ei Kunniagalleria); "museo nayttely <id>" ei sulje listaa →
+  kertoja jää tauolle. Levyhätä pysäyttää L2:n (Julkaisija jonottaa uudelleen, ÄLÄ käynnistä itse). Odottajan zsh voi kuolla kesken jonon →
+  tarkista /tmp/matkakirja-kaannospalvelu-2.lukko/kuka ja lokit/kaannospalvelu/*-<sha>-l2.log.
