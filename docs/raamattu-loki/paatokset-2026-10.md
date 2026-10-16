@@ -296,3 +296,7 @@ Omistaja (kortti KK:ssa) klo 00.40: "Valmiit + äänitetyt (Suositus)". Generoin
 ## PAATOKSET 16.10.2026 klo 18.05: CODEXIN TAHTI (Peking) (16.10.2026 klo 18.05)
 
 Omistaja 18.05 (KK:n välittämä): "Pitä huolehtia, että kodeksille ei tule liian pitkiä taukoja ja että se työskentely etenee. Haluan päästä kokeilemaan Pekingiä kipillä heti, kun se on valmis." Pysyvä työtapa: Codexilla on aina 2–3 hyväksyttyä seuraavaa tehtävää jonossa (Peking nyt #361 pintojen toisto ja #362 sävyvaihtelu rinnakkain #360:n arvion kanssa); jokainen Codex-toimitus arvioidaan alle 30 minuutissa vapaalla roolilla (ei odoteta kiireistä roolia); Postivahti tarkistaa kierroksellaan ledger.jsonin ja postilaatikon ja hälyttää PT:lle, jos toimitus on odottanut yli 30 min tai Codexilla ei ole tehtävää. Jokainen arvioitu Peking-paketti viedään ämpäriin ilman junaa omistajan piilotettuun kippiin, ja siitä rivi KK:lle.
+
+## PAATOKSET 16.10.2026 klo 18.14: 7 UUTTA PÄÄKAUPUNKIA PELAAJILLE (16.10.2026 klo 18.14)
+
+Omistaja 18.14 (kortti PAAKAUPUNGIT-7, arkki-kaikki.jpg nähtyään): "Avataan, kun hyväksyn esittelyt (Suositus)". Monaco, Bern, Bratislava, Podgorica, Tirana, Belgrad ja Zagreb OPAS_SALLITUT-listalle heti, kun omistaja hyväksyy niiden 7 esittelyä äänisivulla (3D-mittaus sallitut.js + still 450 m/55° läpäisty 16.10.). Vaduz (raja), Skopje, Chișinău ja Minsk jäävät kehityskaupungeiksi.
