@@ -70,10 +70,10 @@ tiedostoon. Agentit vain Opus ja Sonnet.
 7. **Pelaaja on sukupuoleton.** Pelaajaa puhutellaan "sinä"; englanniksi Fogg / you / they, ei he/she missään kohtauskuvauksessa,
    alt-tekstissä, kortissa tai vihjeessä. Sukupuoli vain toisten hahmojen nimikkeissä, joissa kanoni on selvä (vouti, kappalainen).
    Tarkista suomi ja englanninnettavuus erikseen (esim. "pikku vintiö", "varas" ovat sukupuolettomia).
-8. **Pulun osuus.** Vain hyväksytyt Pulun rivit (`livia-aani.md`); Pulun reunakuvaa, vihjelentoja tai äännähdyksiä ei ole
-   Olavinlinnan pelissä (Raamattu, KAMERA JA VIHJEET); tietokerroksen avautuminen ja Pulun osuus selvitetään PT:ltä ennen
-   kuin tekstiä kirjoitetaan (aiempi ehdotus "hehkuva Pulun reunakuva" on vanhentunut). Uudet Pulun tekstit vaativat omistajan
-   rastin Tekstit-osastossa.
+8. **Pulun osuus ja tietokerros.** Vain hyväksytyt Pulun rivit (`livia-aani.md`); Pulun reunakuvaa, vihjelentoja tai äännähdyksiä ei ole
+   Olavinlinnan pelissä (Raamattu, KAMERA JA VIHJEET). Tietokerros (drone-näkymä, lähteet) tarjotaan vasta lopussa tai pyydettäessä,
+   eikä pelin aikana opeteta mitään (Raamattu, HISTORIALLISET KOHTEET 7.10.); pyyntönappia ei ole päätetty, ja nappi kuuluu
+   Pelikoodarin osaan (luku 7). Uudet Pulun tekstit vaativat omistajan rastin Tekstit-osastossa.
 9. **Lähdetarkistus paikallisesti ja alkuperäislähteistä.** Kun verkko tai botinsuoja estää sivun, ei kierretä: lataa vapaa
    PDF tai kokoteksti (esim. arkeologinen selvitys, Project Gutenberg) ja lue se; kirjaa sivunumerot tai rivit. Hakutulos-
    tiivistelmä merkitään "hakutulos". Tekoälyn tuottamia sivuja (esim. "AI-generated"-merkitty wikisivu) ei käytetä todisteena.
@@ -131,10 +131,11 @@ Poikkeus kultaisesta polusta vain PT:n hyväksynnällä; poikkeama kirjataan jok
 9. **Yliveto** (laajuus: "valtaa Silkkitien ja Tarimin", "yksi suurimmista"): käytä lähteen sanaa tai "noin".
 10. **Korjaus äänen jälkeen:** jokainen faktakorjaus äänitetyn rivin jälkeen maksaa uusintaotoksen; tarkista ennen lupaa.
 
-## 7. TÄYDENTÄÄ: Pelikoodari
+## 7. TÄYDENTÄÄ: Pelikoodari (avausnappi; ei reunakuvaa)
 
 *(pelimekaniikka ja ohjaus (esim. juoksupelin pyyhkäisyt, Olavinlinnan hiiviskely), tallennus kynnyksillä, anteeksiantava
-vaikeus, kehittäjätilan aloituskohdat, botin läpäisy ennen läpipeluuta, tietokerroksen kytkentä. Täydentää Pelikoodari.)*
+vaikeus, kehittäjätilan aloituskohdat, botin läpäisy ennen läpipeluuta, tietokerroksen kytkentä. Avausnappi (ei reunakuvaa):
+tietokerros tarjotaan lopussa tai pyydettäessä; nappia ei ole päätetty. Täydentää Pelikoodari.)*
 
 ## 8. TÄYDENTÄÄ: Natiivi-UI
 
