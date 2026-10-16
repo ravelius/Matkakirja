@@ -429,3 +429,6 @@ kun 9fa3b99f1 on juna-196:ssa).
 - 01.2x: **56e469f33** SaumatonSilmukka + AaniKaappaus vahdin apureiksi (AanipohjaVahti.Pohja, perustelu koodissa), pois listalta. Lista 23.
   Haaran siirtoseppa/siirto-198-1 kärki 56e469f33 (fdfb5f6dd + 8 committia), Linssit 1935/1935, unity 0. PT:lle kerrottu; laitemittaus odottaa vuoroa.
   Seuraavaksi: IhmisenMatka2Maisema (209), ElavaAaniPankki, RadioAanet, SeikkailuHistoria; SeikkailuKuulija-kutsujat SeikkailuKuulija.Pohjaan.
+- 01.3x: siirrot 8–9: **ea023355e** IhmisenMatka2Maisema (Id vaihtuu maiseman mukaan), **69ae8d86e** ElavaAaniPankki (ElavaSilmukka + Pooli,
+  UusiLahde korvaa Lahde3D:n; myös RakettiLokit) + uusi **PohjaLahde.OmaKerroin** (siirtymävaihe: kutsuja kertoo mikserin itse, pohja ei toista).
+  Lista 21. Linssit 1935/1935, unity 0. HUOM vahti näkee vain AddComponent-rivit: tehtaiden (SeikkailuKuulija.Lahde) kutsujat grepillä.
