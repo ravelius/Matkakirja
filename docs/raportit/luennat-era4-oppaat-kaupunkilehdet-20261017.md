@@ -22,3 +22,6 @@ nostot 4 062, kohtaamiset 88, nähtävyydet 1 371 täsmäävät kaikki v4:ään 
 - Manifesti **v6** (kumulatiivinen, 8 410 palaa) → `aanet/luennat/v6/manifest.json` (200). Käytössä uusin; vaihto: Siirtoseppä.
 - Kehys: 520 349 / 566 895 mrk. Luentoja yhteensä 1 255 + 256 = **1 511 (kattoa 1 505 ylitetty 6:lla)**: kuivan ajon määrä (246) oli arvio ennen v5-vertailua; mrk-raja piti, lukumäärän tarkistus puuttui ajosta. Ilmoitettu PT:lle.
 - Jäljellä maalehdet 831 palaa / 369 643 mrk (32 maata + GBR 87 palaa): odottavat omistajan päätöstä kehyksen kasvatuksesta.
+
+## Luovutuksen kirjaus (PT 02.3x): lukumäärän katto ajossa
+`vienti-0200/kuiva.py --aja` vaatii nyt ympäristön `KATTO` (luentojen enimmäismäärä) ja pysähtyy ennen ylitystä: `VIETY + uusia <= KATTO`, VIETY oletus 1 511 (v6 jälkeen). Merkkiraja (`RAJA`) ennallaan. Ei uusia luentoja ennen omistajan päätöstä (PT 02.3x).
