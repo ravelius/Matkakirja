@@ -22,7 +22,11 @@ Haara proto linssiseppa/vapaalento-197 = juna-197 + 6 committia, kärki 8aed785c
 - d6a90e813 + 8aed785c3 RANSKAN MUSEO PARIISISTA (omistajan päätös 23.35): KaupunkiPallot toinen museomerkki "taidemuseo-pariisi" (Louvre
   48,8606/2,3376, sama pienoismalli, MaaLouvreM 78) → MuseoMaa.Aseta(ranska) → linssi. Lähestymisteksti Sisältökirjurilta (dd9f85786),
   luonnos true. Houkutin EI tähän junaan (pallo peittää; PT 00.0x hyväksyi, ks. kohta 2).
-TILA 23.49: ajo-vapaalento197.zsh odottaa käännöslukkoa (jonossa PK:n intro ja SS; Julkaisija pitää odottajaa SIGSTOPissa, jatkuu itse).
+- b9acbc66a LOUVREN AVAUS KIINNI (OMISTAJAN PÄÄTÖS 23.53 kumoaa 23.35:n, PT 00.3x): Pariisin museo avataan vasta, kun Ranskan museo on
+  samalla tasolla kuin Alankomaat ("Kun puutteet on korjattu"; puutteet: SK kohdat.json + lähestyminen, Äänittäjä askeläänet). Nimi "Louvre".
+  Reitti (d6a90e813 + 8aed785c3) mukana junassa 197, mutta KaupunkiPallot.PariisiMuseoAuki = false; QA avaa `linssi museo pariisi 1`
+  (sk-pariisimuseo-197-iphone.txt tekee sen). Ajot käynnistetty uudelleen 23.54 tällä kärjellä (edelliset olivat kuolleet jonossa).
+TILA 23.54: ajo-vapaalento197.zsh (kärki b9acbc66a) odottaa käännöslukkoa (jonossa PK:n intro ja SS; Julkaisija pitää odottajaa SIGSTOPissa, jatkuu itse).
 Loki ajo-vapaalento197.log / kaanna-vapaalento.out. Perään odottaa ajo-pariisimuseo197.zsh (ajaa museoskenaarion heti "SIMU ALAS":n jälkeen).
 Jos prosessit puuttuvat (`pgrep -fl vapaalento`), käynnistä nohupilla uudelleen: ensin ajo-vapaalento197.zsh, sitten ajo-pariisimuseo197.zsh.
 Kun lokissa "VAPAALENTO VALMIS <sha>": SIMU NYT Julkaisijalta iPhone BD64C8E4 (kaksi skenaariota, ~15 min) → `touch .../simu-vapaalento.nyt`.
@@ -33,7 +37,9 @@ Kuvat ja videot _valmiit/<aihe>-20261016/ → PT (3 riviä) → PT:n kuittauksel
 se osa pois (git revert), ei väliaikaisia poikkeamia.
 
 ## 2. SEURAAVA JUNA
-- Pariisin museon houkutin: proto linssiseppa/pariisi-houkutin 7266f0ae1 (8aed785c3:n päällä; worktree wt/proto-linssiseppa-houkutin): vapaa piste
+- LOUVREN AVAUS PARITEETIN JÄLKEEN: kun PT ilmoittaa SK:n (kohdat.json + lähestyminen) ja Äänittäjän (askeläänet) valmiiksi ja Ranskan
+  museon Alankomaiden tasolle, oletus PariisiMuseoAuki = true (KaupunkiPallot.cs) + houkutin samaan erään, kuvat PT:lle, sitten NS.
+- Pariisin museon houkutin PALLON VIEREEN (avauksen yhteydessä, ei ennen): proto linssiseppa/pariisi-houkutin 7266f0ae1 (8aed785c3:n päällä; worktree wt/proto-linssiseppa-houkutin): vapaa piste
   1,2° itään Pariisista (0,4–0,8° jää pallon alle), Kartta-testit läpi. Louvren oma pienoismalli LR:n mallista myöhemmin (PT).
 - Peking V8 Codexilta odottaa (V7-arvio f8c315589); V6:n AO-arvio avoin.
 - Kortin lasihäivytys Kiinan nauhassa: NUI:n ja PT:n päätös (yhteinen lasipohja), ei minun.
