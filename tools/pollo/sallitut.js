@@ -54,7 +54,8 @@ export const OPAS_SALLITUT = Object.freeze({
     {"id": "sisilia", "nimi": "Sisilia", "lat": 38.0992, "lon": 13.34633, "r_m": 20000},
     // Pääkaupungit (Karttaseppä 16.10.2026, sama sääntö LS2:n 10.10. mittarilla; omistaja 18.14 "Avataan, kun hyväksyn
     // esittelyt"): mittaus proto-3d/_tyo/karttaseppa/paakaupungit-3d-20261016/. Vaduz (RAJA), Skopje, Chisinau, Minsk (POIS) eivät.
-    {"id": "monaco", "nimi": "Monaco", "lat": 43.7313, "lon": 7.4199, "r_m": 20000},
+    // Monaco: mitattu 20 km, rajattu 3 km:iin (PT 16.10.: vain kaupunki, ei Rivieraa).
+    {"id": "monaco", "nimi": "Monaco", "lat": 43.7313, "lon": 7.4199, "r_m": 3000},
     {"id": "bern", "nimi": "Bern", "lat": 46.94797, "lon": 7.44788, "r_m": 20000},
     {"id": "belgrad", "nimi": "Belgrad", "lat": 44.8163, "lon": 20.46, "r_m": 10000},
     {"id": "zagreb", "nimi": "Zagreb", "lat": 45.81315, "lon": 15.977, "r_m": 10000},
