@@ -1,0 +1,98 @@
+[
+ {
+  "tunnus": "louvre-rf-2346",
+  "kentta": "kertoja",
+  "vanha_osa": " Louvre osti sen 1921 hintaan 800 000 frangia.",
+  "uusi_osa": " Louvre osti sen vasta 1921.",
+  "syy": "Hinta vaihtelee lähteittäin (700 000 / 800 000 frangia): pois.",
+  "aanitys_uudelleen": true
+ },
+ {
+  "tunnus": "louvre-rf-2346",
+  "kentta": "kuvateksti",
+  "vanha_osa": "Delacroix piti taulun itsellään 18 vuotta, ja Louvre osti sen vasta 1921.",
+  "uusi_osa": "Delacroix myi taulun 1846, ja Louvre osti sen vasta 1921.",
+  "syy": "Louvren tietue: myyty Wilsonille 20.7.1846; \"18 vuotta\" ei täsmää (restaurointiartikkeli n. 15 v).",
+  "aanitys_uudelleen": false
+ },
+ {
+  "tunnus": "orsay-rf-2735",
+  "kentta": "kertoja",
+  "vanha_osa": "Orsayn oma nimi tälle maalaukselle on Les toits rouges, coin de village, effet d'hiver, eli Punaiset katot, kylänkulma, talvivaikutelma.",
+  "uusi_osa": "Orsayn luettelossa tämän maalauksen nimi on Côte Saint-Denis à Pontoise, ja vaihtoehtoinen nimi on Les toits rouges, coin de village, effet d'hiver, eli Punaiset katot, kylänkulma, talvivaikutelma.",
+  "syy": "Orsayn nykyinen tietue: Côte Saint-Denis à Pontoise; Punaiset katot on vaihtoehtoinen nimi.",
+  "aanitys_uudelleen": true
+ },
+ {
+  "tunnus": "orsay-rf-2449",
+  "kentta": "kertoja",
+  "vanha_osa": "jakoi Renoirin kanssa vuodesta 1868 toukokuuhun 1870",
+  "uusi_osa": "jakoi Renoirin kanssa vuodesta 1868 vuoteen 1870",
+  "syy": "Orsayn en/fr-tekstit eroavat (15.5. / 15.4.1870): kuukausi pois.",
+  "aanitys_uudelleen": true
+ },
+ {
+  "tunnus": "orsay-rf-1976",
+  "kentta": "kuvateksti",
+  "vanha_osa": "Baletinopettaja Jules Perrot johtaa tuntia. Taulun tilasi baritoni Jean-Baptiste Faure.",
+  "uusi_osa": "Baletinopettaja Jules Perrot johtaa tuntia.",
+  "syy": "Lähteet kiistelevät, kumman version (Orsay/Met) Faure tilasi: väite pois. Miljöö (Hôtel de Choiseul / oopperan harjoitussali) ei ole teksteissä.",
+  "aanitys_uudelleen": false
+ },
+ {
+  "tunnus": "orsay-rf-1976",
+  "kentta": "kertoja",
+  "vanha_osa": "Camondon testamenttilahjoituksena maalaus siirtyi 1911 Louvreen",
+  "uusi_osa": "Camondon testamenttilahjoituksena maalaus siirtyi Louvreen",
+  "syy": "Camondon testamentin vuosi vaihtelee lähteittäin (1908 / 1911): vuosi pois.",
+  "aanitys_uudelleen": true
+ },
+ {
+  "tunnus": "louvre-rf-1938-51",
+  "kentta": "kuvateksti",
+  "vanha_osa": "jonka Géricault maalasi psykiatri Georgetin kokoelmaan",
+  "uusi_osa": "jonka Géricault maalasi 1819–1822 tienoilla ja jonka on arveltu syntyneen psykiatri Georgetin tilauksesta",
+  "syy": "Georget-hypoteesi kiistanalainen (Lyonin museo): \"on arveltu\".",
+  "aanitys_uudelleen": false
+ },
+ {
+  "tunnus": "louvre-rf-1938-51",
+  "kentta": "kertoja",
+  "vanha_osa": "Ensimmäinen omistaja oli lääkäri Étienne-Jean Georget, jonka kanssa Géricault teki yhteistyötä mielenhäiriöiden kuvaamisessa, ja Louvre hankki taulun 1938.",
+  "uusi_osa": "Taulun on arveltu kuuluneen aluksi lääkäri Étienne-Jean Georgetille, jonka kanssa Géricault teki yhteistyötä mielenhäiriöiden kuvaamisessa, ja Louvre hankki taulun 1938.",
+  "syy": "Georget-hypoteesi kiistanalainen: pehmennetty.",
+  "aanitys_uudelleen": true
+ },
+ {
+  "tunnus": "louvre-rf-1158",
+  "kentta": "kertoja",
+  "vanha_osa": "ja Ingres sai sen valmiiksi 1814.",
+  "uusi_osa": "ja Ingres sai sen valmiiksi Roomassa 1814.",
+  "syy": "Louvren tietue: signeeraus \"Pxit 1814 Rom\", eli maalattu Roomassa (museon tietue voittaa).",
+  "aanitys_uudelleen": true
+ },
+ {
+  "tunnus": "RP-P-OB-616",
+  "kentta": "kuvateksti",
+  "vanha_osa": "Rembrandtin dramaattisimpia etsauksia. Valon säteet putoavat Golgatalle ja kuivaneula luo syvät varjot.",
+  "uusi_osa": "Rembrandtin dramaattisimpia grafiikanlehtiä. Valon säteet putoavat Golgatalle, ja kuivaneula ja kaiverrus (burin) luovat syvät varjot.",
+  "syy": "Rijksmuseum: kuivaneula + burin (ei pelkkä etsaus).",
+  "aanitys_uudelleen": false
+ },
+ {
+  "tunnus": "RP-F-00-565",
+  "kentta": "kuvateksti",
+  "vanha_osa": "Oudezijds Achterburgwal sumuisessa valossa, vasemmalla Zeedijkin takapuoli.",
+  "uusi_osa": "Oudezijds Achterburgwal, vasemmalla Zeedijkin takapuoli.",
+  "syy": "\"Sumuisessa valossa\" ei löydy Rijksin tietueesta.",
+  "aanitys_uudelleen": false
+ },
+ {
+  "tunnus": "RP-F-K89497",
+  "kentta": "kuvateksti",
+  "vanha_osa": "Moderni vedos Breitnerin lasinegatiivista.",
+  "uusi_osa": "Moderni vedos Breitnerin negatiivista.",
+  "syy": "Rijksin tietue mainitsee vain negatiivin, ei lasia.",
+  "aanitys_uudelleen": false
+ }
+]
