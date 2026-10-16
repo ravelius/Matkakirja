@@ -330,3 +330,7 @@ Omistaja KK:n chatissa vastauksena TOIMI-kohtaan "pääkaupunkien esittelyt": "�
 ## PAATOKSET 16.10.2026 klo 20.35: QINGIN VÄRI VIILEÄ (16.10.2026 klo 20.45)
 
 Omistaja valitsi KK:n kortilta (pallokuvat 1–3 + vertailu-qing-vari-koko.jpg) "Viileä sininen (Suositus)": Qing #41709c. Värisääntö Kiinan dynastiat -linssissä: ulkoiset hallitsijat viileillä, kiinalaiset dynastiat lämpimillä väreillä; Jin ja Qing sukulaisvärein. Tiibet 1760 Qingin vaaleampana sävynä.
+
+## OMISTAJAN PÄÄTÖS: YHTEISET POHJAT LIIKKEELLE, ÄÄNELLE JA VALOLLE (16.10.2026 klo 20.56)
+
+Omistajan kortti Keskustelukanavassa 16.10.2026 klo 20.54, sanatarkasti: "Kyllä, kaikki yhtä aikaa". Kysymys: "Tehdäänkö pehmeästä liikkeestä, äänistä ja valaistuksesta yhteisiä osia samalla tavalla kuin lasikorteista? Silloin yhteen kohtaan tehty parannus päivittyy kaikkiin linsseihin ja peleihin." Omistajan pyyntö 20.5x: ease in/out, liquid glass -ikkunat, grafiikka ja äänet keskitetyksi linssi- ja pelistandardiksi, jonka uudet toiminnot ottavat käyttöön heti alusta ja jonka parannukset leviävät myös valmiisiin peleihin ja linsseihin. PT:n jako: LIIKE Pelikoodari (+ Natiivi-UI tyylikirjan osa), museon kävely ja auto zoom ensimmäinen käyttäjä; ÄÄNI Siirtoseppä (+ Äänittäjä tasot); VALO JA KUVA Valoseppä. Standardisivu docs/moduulit/yhteiset-pohjat.md.
