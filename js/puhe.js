@@ -560,10 +560,15 @@ export const NOPEUS_MIN = 0.6;
 export const NOPEUS_MAX = 1.6;
 
 /**
- * Lukijaäänen nopeus: AINA oletus (omistaja 16.10.2026 23.58: "poista koko pelistä valinnat lukijan äänestä ja nopeudesta";
- * tallennettu vanha nopeus ohitetaan ja poistetaan, ks. ohitaVanhatLukijavalinnat).
+ * Lukijaäänen nopeus (1 = normaali). Pelaajalla ei ole nopeusvalintaa (omistaja 16.10.2026 23.58): tallennettu nopeus
+ * poistetaan latautuessa (ohitaVanhatLukijavalinnat), joten käytännössä aina NOPEUS_OLETUS. Luku ja rajaus säilyvät
+ * natiivin Lukijaaani-portin kultaisen jäljen vuoksi (natiivi nollaa samoin käynnistyksessä, Puhe.Saadot).
  */
 export function puheenNopeus() {
+  try {
+    const arvo = Number.parseFloat(window.localStorage?.getItem(NOPEUS_AVAIN));
+    if (Number.isFinite(arvo)) return Math.min(NOPEUS_MAX, Math.max(NOPEUS_MIN, arvo));
+  } catch { /* yksityistila estää localStoragen */ }
   return NOPEUS_OLETUS;
 }
 

@@ -583,6 +583,7 @@ test('nostokortin kaiutin: keskeytys, jatko samasta kohdasta, ratas ja VU', () =
   const puhe = readFileSync(new URL('../js/puhe.js', import.meta.url), 'utf8');
   const tyyli = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
   // Kaiuttimen napautus kulkee kortinPainallus-polkua kaikkialla (28.9.2026): tauko ↔ jatka, ei paneelia.
   assert.match(lukija, /tapahtuma\.stopPropagation\(\);\s*\/\/[^\n]*\n\s*kortinPainallus\(nappi, isanta\);/);
   assert.match(lukija, /if \(soitin\.tauolla\(\)\) soitin\.jatka\(\);\s*else soitin\.tauko\(\);/);
@@ -598,8 +599,9 @@ test('nostokortin kaiutin: keskeytys, jatko samasta kohdasta, ratas ja VU', () =
   assert.match(tyyli, /@keyframes lukija-keskeytetty \{\s*0%, 100% \{ opacity: 1; \}\s*50% \{ opacity: 0\.4; \}/);
   // Valikko: EI nopeutta eikä ääntä (omistaja 16.10.2026 23.58); tallennetut valinnat ohitetaan (js/puhe.js).
   assert.doesNotMatch(lukija, /asetaPuheenNopeus|asetaStriimiaani|Lukijan ääni|Luennan nopeus/);
-  assert.match(puhe, /export function puheenNopeus\(\) \{\s*return NOPEUS_OLETUS;/);
+  assert.match(puhe, /removeItem\('matkakirja-puhe-nopeus'\)/);
   assert.match(puhe, /removeItem\('matkakirja-puhe-persoonat'\)/);
+  assert.doesNotMatch(main, /asetaPuheenNopeus/);
   assert.doesNotMatch(html, /id="puhe-nopeus"/);
   assert.doesNotMatch(html, /id="kehittaja-striimiaani"/);
   // VU kaiuttimessa itsessään kuten isoisän luennassa: kolme kaarta, oma mittari, lukijaäänen analysaattori.

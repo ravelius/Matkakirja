@@ -62,8 +62,12 @@ if (JSON.stringify(AANET) !== JSON.stringify(WORKERIN_AANET)) throw new Error('m
 const dialogi = html.slice(html.indexOf('<dialog id="puhe-dialog"'), html.indexOf('</dialog>', html.indexOf('<dialog id="puhe-dialog"')));
 const valinta = dialogi.slice(dialogi.indexOf('<select id="puhe-persoona">'), dialogi.indexOf('</select>'));
 const persoonat = [...valinta.matchAll(/<option value="([^"]+)">([^<]+)<\/option>/g)].map((m) => ({ persoona: m[1], nimi: m[2] }));
+// Nopeusliuku poistettiin dialogista 17.10.2026 (omistaja 16.10. 23.58: ei lukijan nopeusvalintaa); sen viimeiset rajat
+// (index.html min 0.6, max 1.6, step 0.05) pysyvät jäljessä, jotta natiivin portti ja jälki pysyvät ennallaan.
+const POISTETUT_LIUKUT = { 'puhe-nopeus': { min: 0.6, max: 1.6, askel: 0.05 } };
 const liuku = (id) => {
   const m = dialogi.match(new RegExp(`<input id="${id}" type="range" min="([^"]+)" max="([^"]+)" step="([^"]+)"`));
+  if (!m && POISTETUT_LIUKUT[id]) return POISTETUT_LIUKUT[id];
   return { min: Number(m[1]), max: Number(m[2]), askel: Number(m[3]) };
 };
 const vakio = (nimi) => {
