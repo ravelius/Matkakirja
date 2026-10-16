@@ -10,7 +10,7 @@ natiivi-backup peili/proto/<haara>). Edellinen luovutus -20261016-yo: kaikki koh
   Valoseppä local_c238f4af-ae73-44e7-81f1-92848acd9217, Postivahti local_a24c43c0-8094-4141-b734-90b9555f5044.
 - Testit (worktreen juuressa): `sh Linssit-testit/kaanna.sh`, `sh Peli-testit/kaanna.sh`, `sh Linssit-testit/unity-tarkistus.sh`.
 - Ajotyökalut /Users/Shared/Claude/proto-3d/tyokalut/pelikoodari-ajot/ (SHA=… UDID=… zsh ajo-….zsh). Oma simu iPhone 96044270-92AA-4BD3-BE2D-772C8495AB19.
-- HUOM 05.29: omistaja keskeytti simuajon (työkalukutsu hylätty) → ei simu- eikä testiajoja ennen kuin omistaja/PT sanoo.
+- 05.29 keskeytys = PT (konteksti 41 %, PT:n korjaus 05.3x), ei omistajan → simu- ja testiajot sallittu normaalisti.
 
 ## ENSIMMÄISENÄ: max-q-jäätymisen selvitys (PT 05.1x, Valosepän löydös 2) – KESKEN
 Tausta: _tyo/linssiseppa2/iss-nyt/ARVIO-0349.md. Satunnainen 4–7 s jäätyminen ISS-raketin laukaisussa.
@@ -52,4 +52,4 @@ Jos jokin muu: korjaa se. PT:lle ≤ 3 riviä.
 ## Aloitusviesti uudelle Pelikoodarille
 "Olet Pelikoodari (Opus, high). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-pelikoodari-luovutus-20261016-aamu.md
 (haara pelikoodari-luovutus-20261014-paiva). Jatka max-q-jäätymisen selvitystä (ajo-raketti-jaatyminen.zsh, pinonäyte omasta prosessista),
-kun simuajot ovat taas sallittuja; taidemuseon kytkentä odottaa omistajan vastausta."
+taidemuseon kytkentä odottaa omistajan vastausta."
