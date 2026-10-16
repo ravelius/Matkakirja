@@ -332,3 +332,12 @@ kuva iPhone + Mac PT:lle; SK luonnostelee Pulun kysymykset rinnalla – älä od
   (→ persistentDataPath/ui-<nimi>.png, odota ≤ 90 s). Leveässä ikkunassa merinimet näkyvät vasta kaarella ~12 (Itämeri) / 34 (Välimeri).
   Binääri Contents/MacOS/Matkakirja; asetukset app.matkakirja.proto3d (defaults export/import ajon ympärille). Skripti mac-meri-nostot-196.sh v4.
 - Jono tyhjä (PT:lle 03.3x). Seuraavat mahdolliset: merivastaukset 82–103 omistajan äänityskortin jälkeen (uusi-meri-*.json generaattoriin).
+
+## PÄIVITYS 16.10. 10.2x — MERIVASTAUKSET 82–103 NS:LLÄ
+
+- **siirtoseppa/meri-vastaukset-2-196 9fa3b99f1** (juna-196 90f1ef54a päällä; worktree wt/proto-siirtoseppa-meri2): 103 vastausta,
+  generaattori lukee uusi-meri-1…3.json (nostoittain) ja tarkistaa Äänittäjän manifestit (`--manifest`). L2 KÄÄNNETTY cd082c69e 10.21 → NS + PT.
+  Uudet 11 merinostoa näkyvät natiivissa vasta, kun sisältöpaketti sisältää ne (verkko #4691 ilman versionnostoa).
+- Levysiivous: worktreet ilmiot/iss-hetki/meri/vapaalento ja meri-196-app/-mac poistettu; todistus-kohokohta*-196 (15.10.) poistettu
+  (Lapin revontulipari poistui niiden mukana – tee uusi ajo, jos PT pyytää).
+- Jono tyhjä merivastausten jälkeen.
