@@ -18,7 +18,7 @@ Päivitetty: 15.10.2026 klo 12.2x (Päätoimittaja): TILINVAIHTO, kaikki id:t uu
 | Linssiseppä | local_771b401b-80a3-4ada-a0d9-d17c6cb9c2c4 | /Users/Shared/Claude/Matkakirja-linssiseppa | Opus, high | museot ja opas |
 | Valoseppä (ent. Linssiseppä 2) | local_c238f4af-ae73-44e7-81f1-92848acd9217 | /Users/Shared/Claude/Matkakirja-linssiseppa-2 | Opus, high | valo, ilmakehä, materiaalit, avaruuskohtaukset |
 | Karttaseppä | local_eec7f158-d9f3-4b93-9368-c50935bd19ab | /Users/Shared/Claude/Matkakirja-karttaseppa | Opus, high | kartat, maasto, pallokierrosten kaupungit |
-| Linnanrakentaja | local_996d60ab-b4af-4172-ad31-f8e948f141a3 | /Users/Shared/Claude/Matkakirja-linnanrakentaja | Opus, high | 3D-mallit (linnat, raketti, ISS) |
+| Linnanrakentaja | local_996d60ab-b4af-4172-ad31-f8e948f141a3 | /Users/Shared/Claude/Matkakirja-linnanrakentaja | Opus, medium (luupin rakentaja, omistaja 15.10. 17.23) | 3D-mallit (linnat, raketti, ISS) |
 | Siirtoseppä | local_86d0c984-aeeb-430d-bc85-3112f27b9437 | /Users/Shared/Claude/Matkakirja-siirtoseppa | Opus, high | siirrot natiiviin, botti |
 | Sisältökirjuri | local_72d15713-eb20-402b-95f7-87bdaaf91b74 | /Users/Shared/Claude/Matkakirja-sisaltokirjuri | Sonnet 5.5, high | tekstit, esittelyt, kerronta |
 | Äänittäjä | local_16ee69c8-b917-4dcd-9060-3542c5e03e67 | /Users/Shared/Claude/Matkakirja-aanittaja | Sonnet 5.5, high | musiikki ja äänet (auto-tila) |

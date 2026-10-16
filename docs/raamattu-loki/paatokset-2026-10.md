@@ -334,3 +334,15 @@ Omistaja valitsi KK:n kortilta (pallokuvat 1–3 + vertailu-qing-vari-koko.jpg) 
 ## OMISTAJAN PÄÄTÖS: YHTEISET POHJAT LIIKKEELLE, ÄÄNELLE JA VALOLLE (16.10.2026 klo 20.56)
 
 Omistajan kortti Keskustelukanavassa 16.10.2026 klo 20.54, sanatarkasti: "Kyllä, kaikki yhtä aikaa". Kysymys: "Tehdäänkö pehmeästä liikkeestä, äänistä ja valaistuksesta yhteisiä osia samalla tavalla kuin lasikorteista? Silloin yhteen kohtaan tehty parannus päivittyy kaikkiin linsseihin ja peleihin." Omistajan pyyntö 20.5x: ease in/out, liquid glass -ikkunat, grafiikka ja äänet keskitetyksi linssi- ja pelistandardiksi, jonka uudet toiminnot ottavat käyttöön heti alusta ja jonka parannukset leviävät myös valmiisiin peleihin ja linsseihin. PT:n jako: LIIKE Pelikoodari (+ Natiivi-UI tyylikirjan osa), museon kävely ja auto zoom ensimmäinen käyttäjä; ÄÄNI Siirtoseppä (+ Äänittäjä tasot); VALO JA KUVA Valoseppä. Standardisivu docs/moduulit/yhteiset-pohjat.md.
+
+## OMISTAJAN PÄÄTÖS: MUSEON I-KORTTI KEHYKSEN YLÄPUOLELLE JA YMPYRÄN TEKSTI KEHYKSEN ALLE (16.10.2026 klo 21.52)
+
+Omistaja 16.10.2026 klo 21.38 (KK, sanatarkasti): "Millä pohjalla tuo grafiikka ja kuvakabinetti tulee? Siirrä i nappi kehyksen ulkopuolelle". Klo 21.4x: "I nappi voisi näyttää taulun tiedot kehyksen yläpuolella ja siinä voisi olla myös taiteilijan kuva. Sen lisäksi tulisi ne ympyrät. Ja niitä painamalla tulisi tiedot kehyksen alapuolelle. Onko tässä ideaa? Ja tuleeko ympyrän tiedot tällä hetkellä vain puheena?" Kortti klo 21.51: "Kyllä, teksti ja puhe (Suositus)". Kumoaa 13.10. 21.0x:n "vain puhe, ei korttia". PT:n jako: Natiivi-UI kortti ja ympyrän teksti (juna 198; junaan 197 vain i-nappi seinälle ja salin kortti), Sisältökirjuri muotokuvat ja lyhyet tiedot.
+
+## OMISTAJAN PÄÄTÖS: MUSEON I-KORTIN MUOTOKUVARIVI (16.10.2026 klo 21.54)
+
+Omistajan kortti Keskustelukanavassa 16.10.2026 klo 21.54, sanatarkasti: "Pyöreä kuva yläriville (Suositus)". Uusi pohja (UI-POHJAT): i-kortin ylärivillä pieni pyöreä muotokuva kuten linssivalitsimen rivikuva (mk-linssirivi__kuva), vieressä tekijä ja elinvuodet, alla teoksen lyhyet tiedot; tuntemattomalla tekijällä sama rivi ilman kuvaa. Natiivi-UI lisää tyylikirjaan.
+
+## PAATOKSET 16.10.2026 klo 22.24: YKSI JUNA (16.10.2026 klo 22.25)
+
+Omistaja (KK:n chat, sanatarkasti, pysyvä): "kerää aina kaikki vain yhteen junaan". Auki on vain yksi juna kerrallaan; juna 198:n jono (museon liikepohja, i-kortti ja muotokuvat, pienoismallit, yhteiset pohjat, kertojan korjaukset) yhdistetään junaan 197. Juna lähtee vain omistajan julkaisupyynnöstä. Raamattu C) JUNA päivitetty.

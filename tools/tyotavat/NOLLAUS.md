@@ -14,7 +14,7 @@ Kaikki muu on Postivahdin työtä. Osoitteet: /Users/Shared/Claude/osoitekirja.m
 6. `set_remote_control <id> true`.
 7. Rivi Päätoimittajalle (local_5df52e10-10e4-4b72-9554-0049db300dfe): `nollattu <rooli> (<sha>)`.
 
-Keskustelukanavaa (local_dfa7296a) EI nollata koskaan (omistaja nollaa sen kortilla). Päätoimittajan oma nollaus: PT kirjoittaa luovutuksen ja aloitusviestin ja pyytää Postivahtia (sama kulku, aloitusviesti PT:n antamana).
+Keskustelukanavaa (local_dfa7296a) EI nollata koskaan (omistaja nollaa sen kortilla). Päätoimittajan oma nollaus: PT kirjoittaa luovutuksen ja aloitusviestin ja pyytää Postivahtia (sama kulku, aloitusviesti PT:n antamana). PT:n kova raja 40 % = pakkonollaus (KIERROS.md Hälytysrajat). Ennen PT:n clear_sessionia tarkista, että /Users/Shared/Claude/keskustelut/ sisältää alle 15 min vanhan Paatoimittaja-<pvm>-klo-*.md:n; jos ei, pyydä PT:tä ajamaan ensin `python3 tools/tallenna-keskustelu.py <keskustelu-uuid> Paatoimittaja` (15.10. 14.39 tallennus jäi väliin).
 
 ## Vakioaloitusviesti (täytä <…>)
 ```
